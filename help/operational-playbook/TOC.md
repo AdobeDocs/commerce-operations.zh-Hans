@@ -1,15 +1,15 @@
 ---
-user-guide-title: 商务运营手册
+user-guide-title: 操作手册
 user-guide-description: 了解如何让您的企业做好运营准备，以运行成功的电子商务网站。
-source-git-commit: 6eeb6547d06d416c50fcf97cb07cbc94729ebcd0
+source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
 
-# 商务运营手册 {#operational-playbook}
+# 操作手册 {#operational-playbook}
 
 - [概述](overview.md)
 - 商务{#intro}
