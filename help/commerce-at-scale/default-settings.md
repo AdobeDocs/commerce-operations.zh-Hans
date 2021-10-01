@@ -1,15 +1,15 @@
 ---
-title: 优化Adobe商务性能
+title: Adobe商务性能优化
 description: 通过更改某些默认设置，准备Adobe商务项目以将Adobe Experience Manager用作CMS。
-source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
+source-git-commit: 63f153365398c3ae7dc7e6214b67705c8a4c7686
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# 优化Adobe商务性能
+# Adobe商务性能优化
 
 ## AEM和Adobe商务基础架构的地理位置
 
