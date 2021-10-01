@@ -1,9 +1,9 @@
 ---
 title: Adobe商务与Adobe Experience Manager基础架构协调
 description: 调整您的Adobe商务和Adobe Experience Manager基础架构，以设置可接受的超时和连接限制。
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ AEM和Adobe商务以及周围的基础架构（如负载平衡器）存在需要
 
 1. 应审查发布程序运行状况检查，以防止调度程序在不必要的早期停止服务，以免出现负载电涌。 负载平衡器运行状况检查的超时设置应与发布者超时设置保持一致。
 
-   ![显示AEM负载平衡器运行状况检查的屏幕截图](../assets/commerce-at-scale/health-checks.svg)
+   ![显示AEM负载平衡器运行状况检查的屏幕截图](../assets/commerce-at-scale/health-checks.png)
 
 1. 可以禁用调度程序目标组吸引力，并且可以使用轮循负载平衡算法。 这是假设没有AEM特定功能或AEM用户会话需要设置会话吸引力。 本指南假定用户登录和会话管理仅在Adobe商务中通过GraphQL进行。
 
-   ![显示AEM会话粘性属性的屏幕截图](../assets/commerce-at-scale/session-stickiness.svg)
+   ![显示AEM会话粘性属性的屏幕截图](../assets/commerce-at-scale/session-stickiness.png)
 
 1. 请注意，如果您启用了会话粘性，这可能会导致请求无法快速缓存，因为默认情况下，Fastly不会使用Set-Cookie标头来缓存页面。 Adobe商务会在可缓存页面上(TTL > 0)设置Cookie，但默认的Fastly VCL会删除可缓存页面上的这些Cookie，以便快速缓存正常工作。 如果页面没有缓存，请检查您可能使用的任何自定义Cookie，并上传Fastly VCL并重新检查网站。
 
@@ -49,8 +49,8 @@ AEM和Adobe商务以及周围的基础架构（如负载平衡器）存在需要
 
 下图显示了MagentoCIF GraphQL客户端配置工厂。 此处显示的设置仅是示例，需要逐个调整：
 
-![商务集成框架配置设置屏幕截图](../assets/commerce-at-scale/cif-config.svg)
+![商务集成框架配置设置屏幕截图](../assets/commerce-at-scale/cif-config.png)
 
 下图显示了Fastly后端配置。 此处显示的设置仅是示例，需要逐个调整：
 
-![Fastly的“商务管理员”配置设置屏幕截图](../assets/commerce-at-scale/cif-config-advanced.svg)
+![Fastly的“商务管理员”配置设置屏幕截图](../assets/commerce-at-scale/cif-config-advanced.png)

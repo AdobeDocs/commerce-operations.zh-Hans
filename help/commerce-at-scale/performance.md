@@ -1,9 +1,9 @@
 ---
-title: 性能优化
+title: AEM性能优化
 description: 优化默认的Adobe Experience Manager配置以支持Adobe商务的高负载。
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2253'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ content/ecommerce/us/en/products/product-page.html
 
 | 内容(docroot) | 电子商务 | us | en | 产品 | product-page.tml |
 |-------------------|-----------|----|----|----------|------------------|
-| 0 | 1 | 2 | 1 | 4 | - |
+| 0 | 1 | 2 | 3 | 4 | - |
 
 在这种情况下，如果您将statfilelevel属性设置为默认的&quot;0&quot;，并且product-page.html模板已更新并激活，从而触发失效，则从docroot到4级的每个.stat文件都将被处理，并且文件失效，从而导致AEM发布实例对该单次更改提出进一步请求，以用于站点中所有页面（包括其他网站、国家/地区和语言）。
 

@@ -1,15 +1,15 @@
 ---
-title: 准备启动
+title: 性能测试提示
 description: 了解如何设置KPI以启动Adobe商务和Adobe Experience Manager解决方案。
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
 
 
-# 准备启动
+# 性能测试提示
 
 要评估上述所有更改的有效性，应在上线之前和将来对生产环境进行任何主要部署之前，运行彻底的性能测试。 在规划负载测试时，请务必尽可能模拟真实的消费者流量。
 
