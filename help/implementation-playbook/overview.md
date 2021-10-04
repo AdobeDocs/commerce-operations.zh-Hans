@@ -2,9 +2,9 @@
 title: 实施手册
 description: 商务实施手册的目标
 exl-id: 2f82c68c-60c7-4a62-837b-492afc06e0db
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 7bad54402e4698545f3436d4195170adb7b48c15
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 - 单一市场或多市场推广
 - 与中间件进行广泛集成（无论是否有中间件）
 
-我们希望，本手册能够为通常参与电子商务项目计划的各种利益相关者提供洞察和指导，例如：
+我们希望，本手册能够为通常参与电子商务项目计划的各种利益相关者提供洞察和指导，包括：
 
 - CEO和一般管理层，他们应该对电子商务的推广意味着什么有一个扎实的想法
 - CMO和数字经理，他们将在平台本身上与业务用户合作
