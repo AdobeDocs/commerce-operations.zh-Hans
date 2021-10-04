@@ -1,19 +1,19 @@
 ---
 title: AEM性能优化
 description: 优化默认的Adobe Experience Manager配置以支持Adobe商务的高负载。
-source-git-commit: 63f153365398c3ae7dc7e6214b67705c8a4c7686
+exl-id: 923a709f-9048-4e67-a5b0-ece831d2eb91
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
 # AEM性能优化
 
 AEM Dispatcher是一个反向代理，可帮助交付既快速又动态的环境。 它作为静态HTML服务器（如Apache HTTP Server）的一部分使用，其目的是以静态资源的形式尽可能多地存储（或“缓存”）站点内容。 此方法旨在尽可能减少访问AEM页面渲染功能和Adobe商务GraphQL服务的需求。 将大部分页面作为静态HTML、CSS和JS提供的结果，可为用户带来性能优势，并降低环境中的基础架构要求。 缓存时，应考虑用户之间可能重复相同的任何页面或查询。
 
-以下各节在较高级别显示了建议的技术重点领域，这些重点领域有待审核，以便在CIF/Adobe商务环境中对AEM进行有效缓存。
+以下各节在较高级别显示了建议的技术重点领域，以便在CIF/Adobe商务环境中对AEM进行有效缓存。
 
 ## 基于TTL的AEM调度程序缓存
 
@@ -54,7 +54,7 @@ content/ecommerce/us/en/products/product-page.html
 
 | 内容(docroot) | 电子商务 | us | en | 产品 | product-page.tml |
 |-------------------|-----------|----|----|----------|------------------|
-| 0 | 3 | 2 | 3 | 4 | - |
+| 0 | 1 | 2 | 3 | 4 | - |
 
 在这种情况下，如果您将statfilelevel属性设置为默认的&quot;0&quot;，并且product-page.html模板已更新并激活，从而触发失效，则从docroot到4级的每个.stat文件都将被处理，并且文件失效，从而导致AEM发布实例对该单次更改提出进一步请求，以用于站点中所有页面（包括其他网站、国家/地区和语言）。
 

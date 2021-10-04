@@ -1,13 +1,13 @@
 ---
 title: 大规模交付体验
 description: 了解如何通过Adobe商务和Adobe Experience Manager大规模交付体验。
-source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
+exl-id: e3166c46-fc9d-4ff4-a3a9-2cd740a95e9b
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 使用Adobe商务、商务集成框架和Adobe Experience Manager大规模提供体验
 

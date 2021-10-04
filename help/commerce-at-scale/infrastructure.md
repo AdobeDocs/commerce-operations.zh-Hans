@@ -1,13 +1,13 @@
 ---
 title: Adobe商务与Adobe Experience Manager基础架构协调
 description: 调整您的Adobe商务和Adobe Experience Manager基础架构，以设置可接受的超时和连接限制。
-source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
+exl-id: f9cb818f-1461-4b23-b931-e7cee70912fd
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 基础架构对齐（超时和连接限制）
 

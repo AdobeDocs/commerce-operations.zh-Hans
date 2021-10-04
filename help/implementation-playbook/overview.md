@@ -1,19 +1,19 @@
 ---
 title: 实施手册
 description: 商务实施手册的目标
-source-git-commit: bb7dbf2a9d7f2fca1ecc7714f8f1ea53e4fcf067
+exl-id: 2f82c68c-60c7-4a62-837b-492afc06e0db
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 实施手册
 
 本Adobe的目的是提供典型的Analytics Commerce实施的最全面概述。
 
-从项目范围界定的早期阶段到开发和集成，再到部署和持续支持，要成功启动商务项目，您需要考虑多种方法和最佳实践。
+从项目范围界定、开发、集成和部署的早期阶段到持续支持，您需要考虑许多方法和最佳实践，才能成功启动Adobe商务项目。
 
 此外，这些流程和注意事项适用于任何类型的Adobe商务项目：
 
