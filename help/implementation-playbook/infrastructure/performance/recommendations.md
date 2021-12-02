@@ -1,17 +1,17 @@
 ---
 title: 性能优化Recommendations
-description: 通过遵循这些建议，优化Adobe商务实施的效果。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 按照这些建议优化Adobe Commerce实施的效果。
+exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
+source-git-commit: a7ccb83cbcfc2f12882fa8d8a879118db2b20ede
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '1289'
 ht-degree: 0%
 
 ---
 
-
 # 性能优化审查
 
-尽管性能优化可以从许多方面来实现，但在大多数情况下，仍应考虑一些一般建议。 这包括基础架构元素的配置优化、Adobe商务后端配置和架构可扩展性规划。
+尽管性能优化可以从许多方面来实现，但在大多数情况下，仍应考虑一些一般建议。 这包括基础架构元素的配置优化、Adobe Commerce后端配置和架构可扩展性规划。
 
 ## 基础架构
 
@@ -23,7 +23,7 @@ DNS查找是查找域名所属的IP地址的过程。 浏览器必须等到DNS�
 
 ### 内容交付网络(CDN)
 
-使用CDN优化资产下载性能。 Adobe商务使用Fastly。 如果拥有Adobe商务的内部实施，则还应考虑添加CDN层。
+使用CDN优化资产下载性能。 Adobe Commerce使用Fastly。 如果拥有Adobe Commerce的内部实施，则还应当考虑添加CDN层。
 
 ### Web延迟
 
@@ -33,15 +33,15 @@ DNS查找是查找域名所属的IP地址的过程。 浏览器必须等到DNS�
 
 足够的网络带宽是Web节点、数据库、缓存/会话服务器和其他服务之间数据交换的关键要求之一。
 
-由于Adobe商务有效地利用缓存来实现高性能，因此您的系统可以主动与Redis等缓存服务器交换数据。 如果Redis位于远程服务器上，则必须在Web节点和缓存服务器之间提供足够的网络通道，以防止读/写操作出现瓶颈。
+由于Adobe Commerce有效地利用缓存来实现高性能，因此您的系统可以主动与Redis等缓存服务器交换数据。 如果Redis位于远程服务器上，则必须在Web节点和缓存服务器之间提供足够的网络通道，以防止读/写操作出现瓶颈。
 
 ### 操作系统（操作系统）
 
-与其他高负载Web应用程序相比，Adobe商务的操作系统配置和优化相似。 随着服务器处理的并发连接数的增加，可用套接字的数量可能会被完全分配。
+与其他高负载Web应用程序相比，Adobe Commerce的操作系统配置和优化相似。 随着服务器处理的并发连接数的增加，可用套接字的数量可能会被完全分配。
 
 ### Web节点的CPU
 
-一个CPU核心可以在无缓存的情况下提供约2-4个Adobe商务请求。 要确定处理所有传入请求而不将其置于队列中所需的Web节点/核心数量，请使用公式：
+一个CPU核心可以在无缓存的情况下有效提供约2-4个Adobe Commerce请求。 要确定处理所有传入请求而不将其置于队列中所需的Web节点/核心数量，请使用公式：
 
 ```
 N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
@@ -51,15 +51,15 @@ N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
 
 优化这些设置取决于不同项目的性能测试结果。
 
-- **ByteCode** — 要在PHP 7上实现最大速度的Adobe商务，必须激活模 `opcache` 块并正确配置它。
+- **ByteCode** — 要在PHP 7上从Adobe Commerce获得最大速度，必须激活 `opcache` 并正确配置模块。
 
-- **APCU** — 我们建议启用PHP APCu扩展并配置编辑器以优化最高性能。此扩展会缓存已打开文件的文件位置，从而提高Adobe商务服务器调用（包括页面、Ajax调用和端点）的性能。
+- **APCU** — 我们建议启用PHP APCu扩展并配置编辑器以优化性能。 此扩展会缓存已打开文件的文件位置，从而提高Adobe Commerce服务器调用（包括页面、Ajax调用和端点）的性能。
 
-- **Realpath_cacheconfiguration** — 优化 `realpath_cache` 功能允许PHP进程缓存指向文件的路径，而不是每次加载页面时都查找它们。
+- **Realpath_cacheconfiguration** — 优化 `realpath_cache` 允许PHP进程缓存指向文件的路径，而不是每次加载页面时都查找它们。
 
 ### Web服务器
 
-使用nginx作为Web服务器只需稍微进行重新配置。 nginx Web服务器提供了更好的性能，并且使用Adobe商务([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample))中的示例配置文件很容易进行配置。
+使用nginx作为Web服务器只需稍微进行重新配置。 nginx Web服务器提供更好的性能，并且使用Adobe Commerce([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample))。
 
 - 正确设置带有TCP的PHP-FPM
 
@@ -71,9 +71,9 @@ N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
 
 本文档没有提供深入的MySQL优化说明，因为每个存储和环境都不同，但我们可以提出一些一般建议。
 
-Adobe商务数据库（以及任何其他数据库）对可用于存储数据和索引的内存量非常敏感。 要有效利用MySQL数据索引，可用内存量至少应接近数据库中存储的数据大小的一半。
+Adobe Commerce数据库（以及任何其他数据库）对可用于存储数据和索引的内存量非常敏感。 要有效利用MySQL数据索引，可用内存量至少应接近数据库中存储的数据大小的一半。
 
-优化`innodb_buffer_pool_instances`设置，以避免多线程尝试访问同一实例时出现问题。 `max_connections`参数的值应与应用程序服务器中配置的PHP线程总数相关联。 使用以下公式计算`innodb-thread-concurrency`的最佳值：
+优化 `innodb_buffer_pool_instances` 设置以避免多线程尝试访问同一实例时出现的问题。 的值 `max_connections` 参数应与应用程序服务器中配置的PHP线程总数相关联。 使用以下公式计算 `innodb-thread-concurrency`:
 
 ```
 innodb-thread-concurrency = 2 * (NumCPUs+NumDisks)
@@ -87,7 +87,7 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 ### 页面缓存
 
-我们强烈建议在您的Adobe商务商店上将清漆用于完整页面缓存。 代码库中仍存在`PageCache`模块，但应仅将其用于开发目的。
+我们强烈建议在您的Adobe Commerce存储库上将清漆用于完整页面缓存。 的 `PageCache` 模块仍在代码库中，但应仅用于开发目的。
 
 在Web层前面的单独服务器上安装清漆。 它应接受所有传入请求并提供缓存的页面副本。 为了使清漆能够有效地处理安全页面，SSL终止代理可放置在清漆的前面。 Nginx可用于此目的。
 
@@ -95,7 +95,7 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 ### 消息队列
 
-消息队列框架(MQF)是允许模块将消息发布到队列的系统。 它还定义异步接收消息的用户。 Adobe商务支持RabbitMQ作为报文传送代理，它为报文的发送和接收提供了一个可扩展的平台。
+消息队列框架(MQF)是允许模块将消息发布到队列的系统。 它还定义异步接收消息的用户。 Adobe Commerce支持将RabbitMQ作为报文传送代理，该代理为发送和接收报文提供了可扩展的平台。
 
 ### 性能测试和监控
 
@@ -103,11 +103,11 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 >[!NOTE]
 >
-> 云基础架构上的Adobe商务已应用上述所有基础架构和架构优化，但DNS查找除外，因为它不在适用范围之内。
+> 云基础架构上的Adobe Commerce已应用上述所有基础架构和架构优化，但DNS查找除外，因为它不在适用范围内。
 
 ### 搜索
 
-Elasticsearch是自Adobe商务版本2.4起必需的，但是最好将其用于2.4之前的版本。
+从Adobe Commerce版本2.4开始，就需要Elasticsearch，但是对于2.4之前的版本，最好还是启用它。
 
 ## 操作模型
 
@@ -115,13 +115,13 @@ Elasticsearch是自Adobe商务版本2.4起必需的，但是最好将其用于2.
 
 ### 无头架构
 
-我们有一个单独的部分，专门用于详细说明[标题](../../architecture/headless/adobe-commerce.md)是什么以及不同的选项。 综上所述，它将店面层与平台本身分离。 它仍是相同的后端，但Adobe商务不再直接处理请求，而是仅支持通过GraphQL API的自定义店面。
+我们有一个单独的部分，专门用于详细说明 [无头](../../architecture/headless/adobe-commerce.md) 是和不同的选项。 综上所述，它将店面层与平台本身分离开来。 它仍是相同的后端，但Adobe Commerce不再直接处理请求，而是仅支持通过GraphQL API的自定义店面。
 
-### 保持Adobe商务更新
+### 保持Adobe Commerce更新
 
-Adobe商务在运行最新版本时始终具有更好的性能。 即使在发布每个新版本后无法保持Adobe商务处于最新状态，在Adobe商务引入显着性能优化时，仍建议升级。
+Adobe Commerce在运行最新版本时始终具有更好的性能。 即使在每个新版本发布后无法保持Adobe Commerce处于最新状态，仍建议 [升级](../../../assets/upgrade-guide/adobe-commerce-2-4-upgrade-guide.pdf) Adobe Commerce引入了显着的性能优化。
 
-例如，在2020年，Adobe向Redis层发布了优化，修复了大量低效、连接问题以及Redis与Adobe商务之间不必要的数据传输。 2.3到2.4之间的整体性能是夜以继日的，我们看到购物车、结帐和并发用户方面有了显着改进，这正是Redis优化的结果。
+例如，在2020年，Adobe向Redis层发布了优化，修复了大量低效、连接问题以及Redis和Adobe Commerce之间不必要的数据传输。 2.3到2.4之间的整体性能是夜以继日的，我们看到购物车、结帐和并发用户方面有了显着改进，这正是Redis优化的结果。
 
 ### 优化数据模型
 
@@ -131,7 +131,7 @@ Adobe商务在运行最新版本时始终具有更好的性能。 即使在发�
 
 对于那些不影响业务逻辑但仍需出现在店面上的属性，请将它们合并到一些属性（例如，JSON格式）中。
 
-为了优化平台性能，如果从PIM或ERP获取的数据或属性中不需要在店面上使用业务逻辑，则无需将该属性添加到Adobe商务中。
+为了优化平台性能，如果从PIM或ERP获取的数据或属性中不需要在店面上使用业务逻辑，则无需将该属性添加到Adobe Commerce中。
 
 ### 针对可扩展性进行设计
 
