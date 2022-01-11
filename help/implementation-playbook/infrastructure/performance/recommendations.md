@@ -2,7 +2,7 @@
 title: 性能优化Recommendations
 description: 按照这些建议优化Adobe Commerce实施的效果。
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: a7ccb83cbcfc2f12882fa8d8a879118db2b20ede
+source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 ### 保持Adobe Commerce更新
 
-Adobe Commerce在运行最新版本时始终具有更好的性能。 即使在每个新版本发布后无法保持Adobe Commerce处于最新状态，仍建议 [升级](../../../assets/upgrade-guide/adobe-commerce-2-4-upgrade-guide.pdf) Adobe Commerce引入了显着的性能优化。
+Adobe Commerce在运行最新版本时始终具有更好的性能。 即使在每个新版本发布后无法保持Adobe Commerce处于最新状态，仍建议 [升级](../../../upgrade/overview.md) Adobe Commerce引入了显着的性能优化。
 
 例如，在2020年，Adobe向Redis层发布了优化，修复了大量低效、连接问题以及Redis和Adobe Commerce之间不必要的数据传输。 2.3到2.4之间的整体性能是夜以继日的，我们看到购物车、结帐和并发用户方面有了显着改进，这正是Redis优化的结果。
 
