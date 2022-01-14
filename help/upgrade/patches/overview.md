@@ -1,9 +1,9 @@
 ---
 title: 修补程序的工作原理
 description: 了解Adobe Commerce和Magento Open Source的不同类型的修补程序及其工作方式。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 38b054bbae8ba116557ce367c8397c646c837558
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 0%
 要创建自定义修补程序，请执行以下操作：
 
 1. 创建 `patches/composer` 目录访问Advertising Cloud帮助。
-1. 识别要用于修补程序的GitHub提交或拉取请求。 此示例使用 [`2d31571`](https://github.com/magento/magento2/commit/) 提交，链接到GitHub问题 [#6474](https://github.com/magento/magento2/issues/6474).
+1. 识别要用于修补程序的GitHub提交或拉取请求。 此示例使用 [`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede) 提交，链接到GitHub问题 [#6474](https://github.com/magento/magento2/issues/6474).
 1. 附加 `.patch` 或 `.diff` 扩展。 使用 `.diff` 文件更小。 例如： [https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
 1. 将页面另存为 `patches/composer` 目录访问Advertising Cloud的帮助。 例如， `github-issue-6474.diff`.
 1. 编辑文件并删除 `app/code/<VENDOR>/<PACKAGE>` 从所有路径中选择，以便它们相对于 `vendor/<VENDOR>/<PACKAGE>` 目录访问Advertising Cloud的帮助。
@@ -78,11 +78,12 @@ index c8a6fef58d31..7d01c195791e 100644
 +++ b/view/frontend/web/js/view/payment/iframe.js
 @@ -154,6 +154,7 @@ define(
               */
-              clearTimeout: function () {
-                  clearTimeout(this.timeoutId);
-                  this.fail();
-                  return this;
-            },
+             clearTimeout: function () {
+                 clearTimeout(this.timeoutId);
++                this.fail();
+ 
+                 return this;
+             },
 ```
 
 ## 应用修补程序
