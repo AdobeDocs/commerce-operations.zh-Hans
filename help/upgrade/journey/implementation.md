@@ -1,9 +1,9 @@
 ---
 title: 升级实施
 description: 了解Adobe Commerce和Magento Open Source项目的升级实施的不同阶段。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '877'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 - **目标发布的范围** — 有关 [商务开发文档](https://devdocs.magento.com) 合作伙伴版本网络研讨会的信息提供了您必须了解的有关target升级的所有详细信息。
 
-- **升级兼容性工具结果** — 此工具通过将当前代码与目标版本的代码进行比较并生成需要解决的所有问题的报告，可以更快、更轻松地进行任何升级。 请参阅 [升级兼容性工具](../upgrade-compatibility-tool/overview.md). 报表的主要详细信息包括：
+- **[!DNL Upgrade Compatibility Tool]结果** — 此工具通过将当前代码与目标版本的代码进行比较并生成需要解决的所有问题的报告，可以更快、更轻松地进行任何升级。 请参阅 [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md). 报表的主要详细信息包括：
 
    - 当前安装的版本
    - 升级目标版本

@@ -1,17 +1,17 @@
 ---
-title: 升级兼容性工具开发人员信息
-description: 使用API索引集成自定义升级兼容性工具。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: '[!DNL Upgrade Compatibility Tool] 开发人员信息'
+description: 自定义 [!DNL Upgrade Compatibility Tool] 使用API索引集成。
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# 升级兼容性工具开发人员信息
+# [!DNL Upgrade Compatibility Tool] 开发人员信息
 
-本主题包含的信息适用于与Adobe Commerce代码密切合作并希望了解有关升级兼容性工具的详细信息的开发人员。 您可以使用此知识自定义工具的组件。
+本主题包含的信息适用于与Adobe Commerce代码密切合作并希望了解 [!DNL Upgrade Compatibility Tool]. 您可以使用此知识自定义工具的组件。
 
 ## Adobe Commerce API索引集成
 
@@ -29,7 +29,7 @@ Adobe Commerce API索引集成是一个内部集成解决方案，它包含一�
 
 `sut\Domain\MRay\MRayInterface : "@sut_mray_mock"`
 
-在上一个示例中，升级兼容性工具使用 `@sut_mray_mock` 作为 `MRayInterface` 实施。 来自 `api()` 和 `modules()` 方法来自以下文件：
+在上一个示例中， [!DNL Upgrade Compatibility Tool] 使用 `@sut_mray_mock` 作为 `MRayInterface` 实施。 来自 `api()` 和 `modules()` 方法来自以下文件：
 
 - `dev/mray_mock_files/api.json`
 - `dev/mray_mock_files/modules.json`
@@ -117,7 +117,7 @@ Adobe Commerce API索引集成是一个内部集成解决方案，它包含一�
 - 已识别的问题数
 - 已识别问题的严重性
 
-升级兼容性工具根据下面的复杂性得分公式计算此得分。
+的 [!DNL Upgrade Compatibility Tool] 根据下面的复杂度得分公式计算此得分。
 
 ### 复杂度分数公式
 

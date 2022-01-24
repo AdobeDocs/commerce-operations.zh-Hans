@@ -1,19 +1,19 @@
 ---
-title: 运行升级兼容性工具
-description: 请按照以下步骤在您的Adobe Commerce项目上运行升级兼容性工具。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: 运行 [!DNL Upgrade Compatibility Tool]
+description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# 运行升级兼容性工具
+# 运行 [!DNL Upgrade Compatibility Tool]
 
-升级兼容性工具是一个命令行工具，可通过分析其中安装的所有模块，根据特定版本检查Adobe Commerce自定义实例。 它会返回一个关键问题、错误和警告的列表，在升级到最新版本的Adobe Commerce之前，必须解决这些问题。
+的 [!DNL Upgrade Compatibility Tool] 是一个命令行工具，可通过分析Adobe Commerce中安装的所有模块，根据特定版本检查某个特定版本的自定义实例。 它会返回一个关键问题、错误和警告的列表，在升级到最新版本的Adobe Commerce之前，必须解决这些问题。
 
-升级兼容性工具可识别在尝试升级到较新版本的Adobe Commerce之前，必须在代码中修复的潜在问题。
+的 [!DNL Upgrade Compatibility Tool] 确定在尝试升级到较新版本的Adobe Commerce之前，必须在代码中修复的潜在问题。
 
 ## 使用 `upgrade:check` 命令
 
@@ -27,7 +27,7 @@ bin/uct upgrade:check <dir>
 >
 >的 `<dir>` value是Adobe Commerce实例所在的目录。
 
-的 `upgrade:check` 命令会运行升级兼容性工具，并通过分析该工具中安装的所有模块，针对特定版本检查Adobe Commerce自定义实例。 它会返回一个关键问题、错误和警告的列表，在升级到最新版本的Adobe Commerce之前，必须解决这些问题。
+的 `upgrade:check` 命令运行 [!DNL Upgrade Compatibility Tool] 和会通过分析Adobe Commerce中安装的所有模块，针对特定版本检查某个自定义实例。 它会返回一个关键问题、错误和警告的列表，在升级到最新版本的Adobe Commerce之前，必须解决这些问题。
 
 >[!WARNING]
 >
@@ -41,7 +41,7 @@ bin/uct upgrade:check <dir>
 
 ### Recommendations使用 `upgrade:check` 命令
 
-- 升级兼容工具需要至少2GB的RAM才能运行。 建议使用此设置以避免由于内存不足而出现的问题。 如果运行 `upgrade:check` 命令 `memory_limit` 设置。
+- 的 [!DNL Upgrade Compatibility Tool] 需要至少2GB的RAM才能运行。 建议使用此设置以避免由于内存不足而出现的问题。 的 [!DNL Upgrade Compatibility Tool] 如果运行 `upgrade:check` 命令 `memory_limit` 设置。
 - 指定 `-m` 用于针对特定模块运行工具的选项：
 
    ```bash
@@ -55,7 +55,7 @@ bin/uct upgrade:check <dir>
 
 ### 使用 `--help` 选项
 
-要查看升级兼容工具命令的常规选项和帮助，请运行：
+要查看 [!DNL Upgrade Compatibility Tool] 命令常规选项和帮助，运行：
 
 ```bash
 bin/uct --help
@@ -75,7 +75,7 @@ bin/uct upgrade:check --help
 - `--json-output-path[=JSON-OUTPUT-PATH]`:将以json格式导出输出的文件的路径。
 - `--html-output-path[=HTML-OUTPUT-PATH]`:将以HTML格式导出输出的文件的路径。
 - `--min-issue-level`:报表中显示的最小问题级别。 默认为 [警告].
-- `--ignore-current-version-compatibility-issues`:当您不希望在升级兼容性工具报告中包含已知严重问题、错误和警告时，请使用此选项。
+- `--ignore-current-version-compatibility-issues`:当您不希望在 [!DNL Upgrade Compatibility Tool] 报表。
 - `--context=CONTEXT`:执行上下文。 此选项用于集成目的，不会影响执行结果。
 - `-h, --help`:显示该特定命令的帮助。 如果未提供命令， `list` 命令是缺省结果。
 - `-q, --quiet`:执行命令时不输出任何消息。
@@ -86,7 +86,7 @@ bin/uct upgrade:check --help
 
 ### 输出
 
-执行分析后，升级兼容性工具会导出一份报告，其中包含每个文件的问题列表，以指定其严重性、错误代码和错误描述。
+由于所执行之分析， [!DNL Upgrade Compatibility Tool] 导出一个报表，其中包含每个文件的问题列表，以指定其严重性、错误代码和错误描述。
 
 请参阅以下示例：
 
@@ -128,7 +128,7 @@ File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
 
 >[!NOTE]
 >
->默认情况下，升级兼容性工具会将报表导出为2种不同的格式： `json` 和 `html`.
+>默认情况下， [!DNL Upgrade Compatibility Tool] 将报表导出为两种不同的格式： `json` 和 `html`.
 
 #### JSON
 
@@ -190,7 +190,7 @@ bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
 
 ### 使用 `--ignore-current-version-compatibility-issues` 选项
 
-升级兼容性工具允许您运行 `upgrade:check` 命令 `--ignore-current-version-compatibility-issues` 选项，以便仅显示新的或未知的严重问题、错误和警告。 当您不希望在升级兼容性工具报告中包含已知严重问题、错误和警告时，请使用此选项。
+的 [!DNL Upgrade Compatibility Tool] 允许您运行 `upgrade:check` 命令 `--ignore-current-version-compatibility-issues` 选项，以便仅显示新的或未知的严重问题、错误和警告。 当您不希望在 [!DNL Upgrade Compatibility Tool] 报表。
 
 ```bash
 bin/uct upgrade:check --ignore-current-version-compatibility-issues <dir>
@@ -206,13 +206,13 @@ A _香草_ 安装是对特定发行版本的指定版本标记或分支的全新
 
 的 `bin/uct core:code:changes` 命令会检查系统中是否存在vanilla实例。 如果这是首次使用香草版安装，则交互式命令行问题将提示您从 [Adobe Commerce存储库](https://repo.magento.com/).
 
-您可以使用 `--vanilla-dir` 选项以指定Adobe Commerce vanilla安装目录。
+您可以运行 [!DNL Upgrade Compatibility Tool] 命令 `--vanilla-dir` 选项以指定Adobe Commerce vanilla安装目录。
 
 请参阅 [部署原版实例](https://devdocs.magento.com/contributor-guide/contributing.html#vanilla-pr) 主题以了解更多信息。
 
 ## 使用 `list` 命令
 
-要返回升级兼容工具可用命令的列表，请运行：
+返回 [!DNL Upgrade Compatibility Tool] 可用命令，运行：
 
 ```bash
 bin/uct list
@@ -279,7 +279,7 @@ bin/uct upgrade:check <dir> -c 2.4.3
 
 ## GraphQL模式兼容性验证
 
-升级兼容性工具还提供了一个选项，用于检查两个GraphQL端点并比较其架构，以查找它们之间的中断和危险更改：
+的 [!DNL Upgrade Compatibility Tool] 还提供了相关选项，用于检查两个GraphQL端点并比较其架构，以查找它们之间的中断和危险更改：
 
 ```bash
 bin/uct graphql:compare <schema1> <schema2>
@@ -312,7 +312,7 @@ bin/uct graphql:compare <schema1> <schema2>
 
 请参阅 [开发人员信息](../upgrade-compatibility-tool/developer.md) 以了解更多信息。
 
-您可以通过PhpStorm插件通过运行配置来运行升级兼容性工具。 请参阅 [升级兼容性工具运行配置](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html) 主题以了解更多信息。
+您可以运行 [!DNL Upgrade Compatibility Tool] 通过PhpStorm插件运行配置。 请参阅 [[!DNL Upgrade Compatibility Tool] 运行配置](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html) 主题以了解更多信息。
 
 ## 疑难解答
 

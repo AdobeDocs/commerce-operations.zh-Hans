@@ -1,9 +1,9 @@
 ---
 title: 升级建议读取
 description: 查看建议的阅读内容，以规划Adobe Commerce或Magento Open Source升级。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 0%
 - [升级最佳实践](../prepare/best-practices.md)
 - [可下载的2.4.4升级指南](../../assets/upgrade-guide/adobe-commerce-2-4-upgrade-guide.pdf)
 
-## 升级兼容性工具
+## [!DNL Upgrade Compatibility Tool]
 
-- [使用Adobe Commerce升级兼容性工具为下次升级做好准备](https://community.magento.com/t5/Magento-DevBlog/Prepare-for-Your-Next-Upgrade-with-the-Adobe-Commerce-Upgrade/ba-p/483372)
+- [为下次升级使用Adobe Commerce做好准备 [!DNL Upgrade Compatibility Tool]](https://community.magento.com/t5/Magento-DevBlog/Prepare-for-Your-Next-Upgrade-with-the-Adobe-Commerce-Upgrade/ba-p/483372)
 - [概述](../upgrade-compatibility-tool/overview.md)
-- [PHPStorm和升级兼容工具](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html)
+- [PHPStorm和 [!DNL Upgrade Compatibility Tool]](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html)
 
 ## 安全性
 

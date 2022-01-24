@@ -1,17 +1,17 @@
 ---
-title: 升级兼容性工具错误消息
-description: 了解有关在Adobe Commerce项目中使用升级兼容性工具时遇到的错误消息的更多信息。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: '[!DNL Upgrade Compatibility Tool] 错误消息'
+description: 了解有关使用 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3747'
 ht-degree: 0%
 
 ---
 
 
-# 升级兼容性工具错误消息
+# [!DNL Upgrade Compatibility Tool] 错误消息
 
-此错误消息引用提供了有关执行升级兼容性工具时可能发生的错误的信息。
+此错误消息引用提供有关执行 [!DNL Upgrade Compatibility Tool].
 
 错误消息按级别（严重问题、错误和警告）和类型（核心代码、自定义代码和GraphQL架构）进行分类。 每种类型都包含以下信息：
 

@@ -1,9 +1,9 @@
 ---
 title: 最佳实践
 description: 使用Adobe推荐的最佳实践来管理Adobe Commerce和Magento Open Source项目的升级过程。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 - 查看 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html) 以了解新版本的范围和影响。
 
-- 使用 [升级兼容性工具](../upgrade-compatibility-tool/overview.md) 以确定在尝试升级到新版本之前必须在自定义代码中修复的潜在问题。
+- 使用 [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md) 以确定在尝试升级到新版本之前必须在自定义代码中修复的潜在问题。
 
 - 如果您使用的是第三方扩展，请验证它们与计划升级到的目标版本的兼容性。
 

@@ -1,9 +1,9 @@
 ---
 title: 了解升级范围
 description: 了解在发行版中向后进行不兼容的更改，这些更改可能会影响Adobe Commerce、Magento Open Source自定义模块或第三方扩展。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,13 @@ Adobe Commerce Marketplace的新兼容性政策确保 _全部_ 列出的扩展�
 
 应针对您要升级到的目标版本检查所有自定义模块。 这是升级过程中最耗时、最耗资的过程。 在评估自定义模块时，您必须查找向后不兼容的更改，并了解一些新实践，如控制器分解。 您可以在 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). 另外，请确保 [最佳实践](https://devdocs.magento.com/guides/v2.4/ext-best-practices/extension-coding/common-programming-bp.html) 用于模块开发。
 
-## 升级兼容性工具
+## [!DNL Upgrade Compatibility Tool]
 
-升级兼容性工具是一个命令行工具，可分析您的实例以发现潜在的升级问题。 它会检查您安装的当前版本与您尝试升级到的版本之间是否存在问题。
+的 [!DNL Upgrade Compatibility Tool] 是一个命令行工具，用于分析您的实例以发现潜在的升级问题。 它会检查您安装的当前版本与您尝试升级到的版本之间是否存在问题。
 
 使用此工具可减少团队了解升级范围和影响所需的工作量。 它有助于您避免在升级时出现的常见代码问题，并就如何解决已识别的问题提供明确的指导。 它还有助于优先处理确保成功升级所需的最关键问题，从而在升级时节省时间和成本。
 
-请参阅以下部分以开始使用升级兼容性工具。 请参阅升级兼容性工具 [指南](../upgrade-compatibility-tool/overview.md) 以了解更多技术详细信息和高级用例。
+请参阅以下部分以开始使用 [!DNL Upgrade Compatibility Tool]. 请参阅 [!DNL Upgrade Compatibility Tool] [指南](../upgrade-compatibility-tool/overview.md) 以了解更多技术详细信息和高级用例。
 
 ### 下载工具
 
@@ -78,7 +78,7 @@ bin/uct upgrade:check /path/to/magento/ --ignore-current-compatibility-issues �
 
 ### 分析输出
 
-升级兼容性工具会导出一个JSON文件，以标识受影响的代码或模块、严重性以及它遇到的每个问题的问题描述。 它还会输出包含复杂性分数的摘要报表，以便您的团队大致了解升级到最新版本所需的操作。 复杂性分数越低，执行升级就越容易。
+的 [!DNL Upgrade Compatibility Tool] 导出一个JSON文件，以标识受影响的代码或模块、严重性以及它遇到的每个问题的问题描述。 它还会输出包含复杂性分数的摘要报表，以便您的团队大致了解升级到最新版本所需的操作。 复杂性分数越低，执行升级就越容易。
 
 以下输出显示了摘要报表示例：
 
@@ -111,4 +111,4 @@ bin/uct upgrade:check /path/to/magento/ --ignore-current-compatibility-issues �
 
 我们还建议您在进行升级时定期运行该工具，以便查看您的进度。 问题数应在您修复时减少。 这还有助于您的团队确定分发工作的最佳方法。
 
-该工具的未来版本将包含PHP 8.1兼容性测试和自动修复，以帮助您尽快修复问题。
+的 [!DNL Upgrade Compatibility Tool] 以后的版本将继续得到改进，并将包含自动修复等功能，以帮助您尽快解决问题。 2022年1月发布的最新改进包括PHP 8.1兼容性测试和HTML可视化功能，这些功能可帮助您快速识别可能需要更多努力才能升级的区域。

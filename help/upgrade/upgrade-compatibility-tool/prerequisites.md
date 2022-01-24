@@ -1,19 +1,19 @@
 ---
-title: 升级兼容性工具先决条件
-description: '验证您的系统是否满足为您的Adobe Commerce项目运行升级兼容性工具所需的要求。 '
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: '[!DNL Upgrade Compatibility Tool] 先决条件'
+description: '验证您的系统是否满足运行 [!DNL Upgrade Compatibility Tool] 为您的Adobe Commerce项目。 '
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 
-# 升级兼容性工具先决条件
+# [!DNL Upgrade Compatibility Tool] 先决条件
 
-运行升级兼容性工具可帮助您确定必须执行的操作 **之前** 升级Adobe Commerce版本。
+运行 [!DNL Upgrade Compatibility Tool] 帮助您确定必须执行的操作 **之前** 升级Adobe Commerce版本。
 
-运行升级兼容性工具的最低要求是：
+运行 [!DNL Upgrade Compatibility Tool] 为：
 
 | **要求** | **约束** |
 |----------------|-----------------|
@@ -24,6 +24,6 @@ ht-degree: 0%
 | Adobe Commerce Access密钥 | 无 |
 | Adobe Commerce（开源或企业版） | 无 |
 
-您可以在任何操作系统中运行升级兼容性工具。 无需运行Adobe Commerce实例所在的升级兼容性工具。
+您可以运行 [!DNL Upgrade Compatibility Tool] 在任何操作系统中。 无需运行 [!DNL Upgrade Compatibility Tool] Adobe Commerce实例所在的位置。
 
-升级兼容性工具必须能够访问Adobe Commerce实例的源代码。 例如，您可以在一台服务器上安装它，并将其指向另一台服务器上的Adobe Commerce安装。 请参阅 [安装](../upgrade-compatibility-tool/install.md) 主题以了解更多信息。
+对于 [!DNL Upgrade Compatibility Tool] 以访问Adobe Commerce实例的源代码。 例如，您可以在一台服务器上安装它，并将其指向另一台服务器上的Adobe Commerce安装。 请参阅 [安装](../upgrade-compatibility-tool/install.md) 主题以了解更多信息。
