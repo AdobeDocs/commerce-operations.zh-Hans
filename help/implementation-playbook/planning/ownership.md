@@ -1,13 +1,13 @@
 ---
 title: 责任和所有权
-description: 定义项目角色和职责，以确保成功实施Adobe商务。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 定义项目角色和责任，以确保成功实施Adobe Commerce。
+exl-id: 206b6e3b-6dee-442e-a2ba-7867b2494b75
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
 
 ---
-
 
 # 责任和所有权
 
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 ## 我们如何进行集体协作？
 
-责任、负责、咨询和知情(RACI)矩阵（如[项目范围划分](../project-scope/deliverables.md)一节中所述）是一个有用的工具，它定义并记录项目每个阶段的所有权和责任。 在矩阵中，项目中的每项任务、里程碑和决策都会映射到特定的角色或个人。 它通过确保每个团队成员和利益相关方了解其具体角色，帮助项目管理简化流程。 这应在项目规划阶段加以界定，并由每个利益攸关方接受。
+负责、负责、咨询和知情(RACI)矩阵 — 如 [项目范围](../project-scope/deliverables.md) 截面 — 一个有用的工具，用于定义和记录项目每个阶段的所有权和责任。 在矩阵中，项目中的每项任务、里程碑和决策都会映射到特定的角色或个人。 它通过确保每个团队成员和利益相关方了解其具体角色，帮助项目管理简化流程。 这应在项目规划阶段加以界定，并由每个利益攸关方接受。
 
 ![描述RACI框架的表](../../assets/playbooks/raci.svg)

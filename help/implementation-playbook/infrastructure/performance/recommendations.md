@@ -2,7 +2,7 @@
 title: 性能优化Recommendations
 description: 按照这些建议优化Adobe Commerce实施的效果。
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -23,7 +23,7 @@ DNS查找是查找域名所属的IP地址的过程。 浏览器必须等到DNS�
 
 ### 内容交付网络(CDN)
 
-使用CDN优化资产下载性能。 Adobe Commerce使用Fastly。 如果拥有Adobe Commerce的内部实施，则还应当考虑添加CDN层。
+使用CDN优化资产下载性能。 Adobe Commerce使用Fastly。 如果已实施Adobe Commerce的本地实施，则还应考虑添加CDN层。
 
 ### Web延迟
 
@@ -103,7 +103,7 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 >[!NOTE]
 >
-> 云基础架构上的Adobe Commerce已应用上述所有基础架构和架构优化，但DNS查找除外，因为它不在适用范围内。
+> 云基础架构上的Adobe Commerce已应用上述所有基础架构和架构优化，但DNS查找除外，因为它不在适用范围。
 
 ### 搜索
 
@@ -111,11 +111,11 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 ## 操作模型
 
-除了先前提到的常见基础架构优化建议外，还有一些方法可以提高特定业务模式和规模的性能。 本文档并未针对所有这些方案提供深入的调整说明，因为每种方案都不同，但我们可以为您提供一些高级选项供您参考。
+除了前面提到的常见基础架构优化建议之外，还有一些方法可以提高特定业务模式和规模的性能。 本文档并未针对所有这些方案提供深入的调整说明，因为每种方案都不同，但我们可以为您提供一些高级选项供您参考。
 
 ### 无头架构
 
-我们有一个单独的部分，专门用于详细说明 [无头](../../architecture/headless/adobe-commerce.md) 是和不同的选项。 综上所述，它将店面层与平台本身分离开来。 它仍是相同的后端，但Adobe Commerce不再直接处理请求，而是仅支持通过GraphQL API的自定义店面。
+我们有一个单独的部分专门用于详细说明 [无头](../../architecture/headless/adobe-commerce.md) 是和不同的选项。 综上所述，它将店面层与平台本身分离开来。 它仍是相同的后端，但Adobe Commerce不再直接处理请求，而是仅支持通过GraphQL API的自定义店面。
 
 ### 保持Adobe Commerce更新
 

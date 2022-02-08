@@ -1,13 +1,13 @@
 ---
 title: 要求核对表
-description: 使用此全面问题列表，帮助您为Adobe商务实施做好准备。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 使用此全面问题列表，帮助您为Adobe Commerce实施做好准备。
+exl-id: 9ac485c5-d491-4022-9366-5e3a382513b6
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1536'
 ht-degree: 0%
 
 ---
-
 
 # 要求核对表
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 - 将为此项目分配多少个技术分析员？
 
-- 将为此项目分配多少个HTML开发人员？
+- 您有多少HTML开发人员将分配到此项目？
 
 - 当前业务流程有哪些文档？
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 - 上线后将完成哪些培训？
 
-- 上线后，需要哪些Adobe商务支持？
+- 上线后需要哪些Adobe Commerce支持？
 
 - 此项目是否依赖于其他系统开发项目？
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 - 您有哪些品牌/公司可作为您如何发展全渠道业务的参考？
 
-- 推动电子商务战略的团队或个人是哪些？ 描述相关立场。
+- 哪些团队或个人在推动电子商务策略？ 描述相关立场。
 
 ## 当前平台
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 ## 预期平台要求
 
-- 您将使用哪个Adobe商务版本？
+- 您将使用哪个Adobe Commerce版本？
 
 - 将来的平台将如何托管：内部、托管提供商、专用云服务器还是托管云服务器？
 
@@ -139,7 +139,7 @@ ht-degree: 0%
 
 - 这主要是B2C还是B2B站点？ 是否存在B2B2B或B2B2C元素？
 
-- 是否存在可修改的现有设计？还是将平台从头开始设计？
+- 是否存在经过调整的现有设计？还是将从头开始设计平台？
 
 - 是否需要无头商务（单独的前端层和后端层）？
 
@@ -151,7 +151,7 @@ ht-degree: 0%
 
 - 每个前端的语言是什么？ 翻译的内容是否可用或是否需要支持？
 
-- 有多个网站吗？ 如果是，客户能否在所有网站上使用其凭据？
+- 有多个网站吗？ 如果是，客户能否在所有网站中使用其凭据？
 
 - 是否在所有网站之间共享产品数据？
 
@@ -169,25 +169,25 @@ ht-degree: 0%
 
 - 是否已针对此第三方系统集成设计并开发系统错误处理？
 
-- 哪些ERP系统将与Adobe Commerce集成？ (示例：SAP， MS Dynamics NAV)
+- 哪个ERP系统将与Adobe Commerce集成？ (示例：SAP， MS Dynamics NAV)
 
-- 哪些运输运营商系统将与Adobe Commerce集成？
+- 哪个运输承运系统将与Adobe Commerce集成？
 
-- 哪些税务软件系统将与Adobe Commerce集成？ （示例：Taxware）
+- 哪个税务软件系统将与Adobe Commerce集成？ (示例：Taxware)
 
 - 产品数据将从哪个系统导入Adobe Commerce?
 
 - 导入产品数据加载的频率？
 
-- Adobe Commerce将产品数据导出到哪个系统？
+- Adobe Commerce会将产品数据导出到哪个系统？
 
 - 导出产品数据加载的频率？
 
-- 从哪个系统将订单数据导入Adobe Commerce?
+- 将从哪个系统订单数据导入Adobe Commerce?
 
 - 导入订单数据加载的频率？
 
-- Adobe Commerceexport订单数据将发送到哪个系统？
+- Adobe Commerce会将订单数据导出到哪个系统？
 
 - 导出订单数据加载的频率？
 
@@ -203,13 +203,13 @@ ht-degree: 0%
 
 - 您希望您的网站具有哪个付款网关？
 
-- 哪些订单管理系统将与Adobe Commerce集成？ (示例：Microsoft Dynamics、SAP、Retail Pro)
+- 哪些订单管理系统将与Adobe Commerce集成？ (示例：Microsoft Dynamics， SAP， Retail Pro)
 
 - 哪些产品库存管理系统将与Adobe Commerce集成？ (示例：阿克内奥、因里弗、布卢斯托内)
 
 - 哪些客户关系管理系统将与Adobe Commerce集成？ (示例：Hubspot、Salesforce、Klaviyo)
 
-## Adobe商务特定功能
+## Adobe Commerce特定功能
 
 - 您是否需要任何类型的A/B测试？
 
@@ -231,7 +231,7 @@ ht-degree: 0%
 
 - 是否需要内容暂存网站？
 
-- 是否允许客户创建网站帐户
+- 是否应允许客户创建网站帐户？
 
 - 您是否会将独特的优惠券用于促销活动？
 
@@ -257,7 +257,7 @@ ht-degree: 0%
 
 - 是否允许客户启动从网站返回项目的操作？
 
-- Adobe商务是否会发出退货RMA?
+- Adobe Commerce会发出退货RMA吗？
 
 - 是否在Adobe Commerce中捕获退款信息？
 
@@ -285,7 +285,7 @@ ht-degree: 0%
 
 - 奖励积分
 
-- “稍后付账” — 更常被称为“立即购买，稍后付款”，因为它已立即付账，但尚未付账
+- “Bill Me Later”（稍后付费） — 通常称为“Buy Now， Pay Later”（立即付费，但尚未付款）
 
 - 不同网站上的产品定价会不同吗？
 
@@ -307,9 +307,9 @@ ht-degree: 0%
 
 - 购物车：购物车、废弃艺术中的产品
 
-- 产品：最畅销商、订购的产品、查看次数最多、库存较低、下载
+- 产品：最畅销商、订购的产品、查看次数最多、库存较少、下载
 
-- 客户：新帐户、客户按订单总数、客户按订单数、客户区段、客户审核
+- 客户：新帐户、按订单总额划分的客户、按订单数划分的客户、客户区段、客户审核
 
 - 产品评论
 
@@ -319,11 +319,11 @@ ht-degree: 0%
 
 - 邀请：常规、客户、订单转化率
 
-- 是否需要Adobe商务才能根据优惠券使用数据生成报表？
+- 您是否需要Adobe Commerce以根据优惠券使用数据生成报表？
 
-- 是否需要Adobe商务才能根据销售数据生成报表？
+- 您是否需要Adobe Commerce以根据销售数据生成报表？
 
-- 是否需要自定义Adobe商务端口？
+- 是否需要自定义Adobe Commerce报表？
 
 - 您当前的SEO策略是什么？
 
@@ -331,11 +331,11 @@ ht-degree: 0%
 
 - 您对SEO迁移有何要求？
 
-- 在Adobe商务中存储固定费率？
+- 在Adobe Commerce中存储固定费率？
 
 - 是否允许部分运送？
 
-- Adobe Commerce中是否应存储装运跟踪信息？
+- 是否应将装运跟踪信息存储在Adobe Commerce?
 
 - 您是否需要本国地区的计税规则？
 

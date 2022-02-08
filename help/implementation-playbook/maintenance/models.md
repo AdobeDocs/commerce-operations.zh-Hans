@@ -1,13 +1,13 @@
 ---
 title: 维护和支持模型
-description: '使用这些常见的维护和支持模型来保持Adobe商务实施的顺利运行。 '
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 使用这些常见的维护和支持模型来保持Adobe Commerce实施的顺利运行。
+exl-id: 44469b83-a10b-44c2-8721-9a7daa2733d3
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
 
 ---
-
 
 # 维护和支持模型
 
@@ -72,7 +72,7 @@ ht-degree: 0%
    - 内容制作
    - 促销操作
    - 战略咨询
-   - Adobe商务更新
+   - Adobe Commerce更新
 
 交付和服务管理也是支持和增强功能的一个组成部分。 以下是此函数范围中通常包含的活动：
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 - 持续改进
 - 流程审核
 - 文档和报告
-- Adobe商务平台更新
+- Adobe Commerce平台更新
 
 该支持模型可与客户团队和L1、L2、L3团队之间的明确责任机制无缝协作，并具有经过验证的治理和沟通模型。
 

@@ -1,14 +1,14 @@
 ---
 title: 历程到无头
-description: 查看Adobe商务历程的时间表以支持无头架构。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 查看Adobe Commerce支持无头架构的历程。
+exl-id: 9286e6b3-3c29-4428-b353-f66eb4bc382d
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%
 
 ---
 
+# Adobe Commerce历程到Headless
 
-# Adobe商务对Headless的历程
-
-![Adobe商务到无头架构的历程](../../../assets/playbooks/journey-to-headless.svg)
+![Adobe Commerce无头架构旅程的时间轴](../../../assets/playbooks/journey-to-headless.svg)

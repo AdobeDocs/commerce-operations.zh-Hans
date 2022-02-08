@@ -1,13 +1,13 @@
 ---
-title: Adobe商务全局参考架构
-description: 利用全局参考架构，充分利用您的Adobe商务实施。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+title: Adobe Commerce全局参考架构
+description: 利用全局参考架构，充分利用您的Adobe Commerce实施。
+exl-id: a18529a3-da9b-4e1b-8048-0a906e65c740
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
 
 ---
-
 
 # 全局参考架构(GRA)
 
@@ -46,4 +46,3 @@ GRA影响：
 - 如何启用新市场
 
    - 简化了多个渠道和市场的发布，否则，这些渠道和市场将花费大量的时间和资金。
-

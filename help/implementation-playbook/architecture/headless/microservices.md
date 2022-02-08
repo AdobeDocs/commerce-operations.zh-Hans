@@ -1,8 +1,8 @@
 ---
 title: Adobe Commerce微服务
-description: 能够区分医疗和微服务，因为它与Adobe Commerce有关。
+description: 能够区分无头和微型服务，因为它与Adobe Commerce有关。
 exl-id: 078e0e8e-7acc-4913-8b78-585a950f3f5e
-source-git-commit: 4e8f6ce05c14195433e7c46e6090a93a76b8b5f9
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

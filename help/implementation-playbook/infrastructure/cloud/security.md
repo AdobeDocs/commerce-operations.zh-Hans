@@ -1,17 +1,17 @@
 ---
 title: 云基础架构安全
-description: '了解如何确保云基础架构上的Adobe商务的安全。 '
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 了解如何保持Adobe Commerce云基础架构的安全。
+exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 0%
 
 ---
 
-
 # 安全性
 
-Adobe商务专业计划架构旨在提供高度安全的环境。 每个客户都部署到各自的独立服务器环境中，与其他客户分开。 生产环境的安全详细信息如下所述。
+Adobe Commerce Pro计划架构旨在提供高度安全的环境。 每个客户都部署到各自的独立服务器环境中，与其他客户分开。 生产环境的安全详细信息如下所述。
 
 ## Web浏览器
 
@@ -23,33 +23,33 @@ Fastly提供CDN和分布式拒绝服务(DDoS)保护。 Fastly CDN有助于隔离
 
 ## Web应用程序防火墙(WAF)
 
-Fastly Web Application Firewall(WAF)用于提供附加保护。 Fastly的基于云的WAF使用来自商业和开源源（如OWASP核心规则集）的第三方规则。 此外，还采用Adobe商务特定规则。 保护客户免受关键应用程序层攻击，包括注入攻击和恶意输入、跨站点脚本、数据过滤、HTTP协议违规和其他OWASP前10项威胁。
+Fastly Web Application Firewall(WAF)用于提供附加保护。 Fastly的基于云的WAF使用来自商业和开源源（如OWASP核心规则集）的第三方规则。 此外，还采用Adobe Commerce特定规则。 保护客户免受关键应用程序层攻击，包括注入攻击和恶意输入、跨站点脚本、数据过滤、HTTP协议违规和其他OWASP前10项威胁。
 
-如果检测到新的漏洞，允许Managed Services在软件修补程序之前“虚拟修补”安全问题，则Adobe商务会更新WAF规则。 Fastly WAF不提供速率限制或机器人检测服务。 如有需要，客户可以授权与Fastly兼容的第三方机器人检测服务。
+如果检测到新的漏洞，使Managed Services能够在软件修补程序之前“虚拟修补”安全问题，Adobe Commerce会更新WAF规则。 Fastly WAF不提供速率限制或机器人检测服务。 如有需要，客户可以授权与Fastly兼容的第三方机器人检测服务。
 
 ## 虚拟专用云(VPC)
 
-AdobeCommerce Pro计划生产环境配置为虚拟专用云(VPC)，这样生产服务器就会被隔离，并且连接到云环境和从云环境中连接的能力有限。 只允许与云服务器的安全连接。 SFTP或rsync等安全协议可用于文件传输。
+Adobe Commerce Pro计划生产环境配置为虚拟专用云(VPC)，这样生产服务器就会被隔离，并且连接到云环境和从云环境中连接的能力有限。 只允许与云服务器的安全连接。 SFTP或rsync等安全协议可用于文件传输。
 
-客户可以使用SSH隧道来保护与应用程序的通信。 您可以额外付费访问AWS PrivateLink。 与这些服务器的所有连接都使用AWS安全组进行控制，AWS安全组是一个虚拟防火墙，可限制与环境的连接。 客户的技术资源可以使用SSH访问这些服务器。
+客户可以使用SSH隧道来保护与应用程序的通信。 客人可以额外付费访问AWS PrivateLink。 与这些服务器的所有连接都使用AWS安全组进行控制，该虚拟防火墙可限制与环境的连接。 客户的技术资源可以使用SSH访问这些服务器。
 
 ## 加密
 
 Amazon弹性块存储(EBS)用于存储。 所有EBS卷均使用AES-265算法进行加密。 这意味着数据将在静态时被加密。 系统还会对CDN与源服务器之间以及源服务器之间传输的数据进行加密。 客户密码以哈希形式存储。 敏感凭据（包括支付网关的凭据）使用SHA-256算法进行加密。
 
-当Adobe不在静态或在服务器之间传输数据时，Commerce应用程序不支持列或行级加密或加密。 客户可以从应用程序内管理加密密钥。 系统使用的密钥存储在AWS密钥管理系统中，并且必须由Managed Services管理，才能提供部分服务。
+当数据不在服务器之间的静态或传输中时，Adobe Commerce应用程序不支持列或行级加密或加密。 客户可以从应用程序内管理加密密钥。 系统使用的密钥存储在AWS密钥管理系统中，必须由Managed Services管理，才能提供部分服务。
 
 ## 渗透测试
 
-Managed Services使用即装即用应用程序对Adobe商务云系统进行定期渗透测试。 客户负责对其定制应用程序进行任何渗透测试。
+Managed Services通过即装即用应用程序对Adobe Commerce云系统进行定期渗透测试。 客户负责对其定制应用程序进行任何渗透测试。
 
 ## 支付网关
 
-Adobe商务要求使用支付网关集成，其中信用卡数据直接从消费者的浏览器传递到支付网关。 在任何Adobe商务专业计划Managed Services环境中，卡数据从不可用。 使用对来自网关的交易的引用来完成电子商务应用程序对交易的操作。
+Adobe Commerce要求使用支付网关集成，其中信用卡数据直接从消费者的浏览器传递到支付网关。 在任何Adobe Commerce Pro计划Managed Services环境中，卡数据从不可用。 使用对来自网关的交易的引用来完成电子商务应用程序对交易的操作。
 
-## Adobe商务应用程序
+## Adobe Commerce应用程序
 
-Adobe会定期测试核心应用程序代码是否存在安全漏洞。 向客户提供了缺陷和安全问题的修补程序。 产品安全团队将按照OWASP应用程序安全准则验证Adobe商务产品。 使用一些安全漏洞评估工具和外部供应商来测试和验证合规性。 安全工具包括：
+Adobe会定期测试核心应用程序代码是否存在安全漏洞。 向客户提供了缺陷和安全问题的修补程序。 产品安全团队将按照OWASP应用程序安全准则验证Adobe Commerce产品。 使用一些安全漏洞评估工具和外部供应商来测试和验证合规性。 安全工具包括：
 
 - Veracode静态和动态扫描
 - RIPS源代码扫描
@@ -58,15 +58,15 @@ Adobe会定期测试核心应用程序代码是否存在安全漏洞。 向客�
 - 奥瓦斯普扎普
 - 和SqlMap
 
-使用这些工具每两周扫描一次完整的代码库。 客户会通过直接电子邮件、应用程序中的通知以及[安全中心](https://magento.com/security)中的通知，获得安全修补程序的通知。
+使用这些工具每两周扫描一次完整的代码库。 客户会通过直接电子邮件、应用程序中的通知以及 [安全中心](https://magento.com/security).
 
-客户必须确保根据PCI准则，在发布后的30天内将这些修补程序应用于其自定义应用程序。 Adobe还提供[安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html)，允许商家定期监控其网站并接收有关已知安全风险、恶意软件和未授权访问的更新。 安全扫描工具是一项免费服务，可在任何版本的Adobe商务上运行。
+客户必须确保根据PCI准则，在发布后的30天内将这些修补程序应用于其自定义应用程序。 Adobe还提供 [安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html) 允许商家定期监控其网站并接收有关已知安全风险、恶意软件和未经授权访问的更新。 安全扫描工具是一项免费服务，可在任何版本的Adobe Commerce上运行。
 
-为了鼓励安全研究人员识别和报告漏洞，Adobe商务除了进行内部测试外，还有一个[bug-bounty项目](https://hackerone.com/magento)。 此外，如果需要，向客户提供应用程序的完整源代码以供他们自己审阅。
+为鼓励安全研究人员识别和报告漏洞，Adobe Commerce [bug-bounty计划](https://hackerone.com/magento) 内部测试之外的其他功能。 此外，如果需要，向客户提供应用程序的完整源代码以供他们自己审阅。
 
 ## 只读文件系统
 
-所有可执行代码都部署到只读文件系统映像中，这会显着减少可用于攻击的表面。 部署过程会创建Swash-FS映像。 此方法可显着减少将PHP或JavaScript代码注入系统或修改Adobe商务应用程序文件的机会。
+所有可执行代码都部署到只读文件系统映像中，这会显着减少可用于攻击的表面。 部署过程会创建Swash-FS映像。 此方法可显着减少将PHP或JavaScript代码注入系统或修改Adobe Commerce应用程序文件的机会。
 
 ## 远程部署
 
@@ -74,17 +74,17 @@ Adobe会定期测试核心应用程序代码是否存在安全漏洞。 向客�
 
 ## 记录
 
-所有AWS活动都已登录AWS CloudTrail。 Linux、应用程序服务器和数据库日志存储在生产服务器上并存储在备份中。 所有源代码更改都记录在Git存储库中。 部署历史记录可在Adobe商务[项目Web界面](https://devdocs.magento.com/cloud/project/projects.html#login)中找到。 记录所有支持访问，并记录支持会话。
+所有AWS活动都已登录AWS CloudTrail。 Linux、应用程序服务器和数据库日志存储在生产服务器上并存储在备份中。 所有源代码更改都记录在Git存储库中。 部署历史记录在Adobe Commerce中可用 [项目Web界面](https://devdocs.magento.com/cloud/project/projects.html#login). 记录所有支持访问，并记录支持会话。
 
 ## 敏感数据
 
-敏感数据可以涵盖来自消费者的个人信息或来自Managed Services客户的机密数据。 保护敏感的客户和消费者数据是Adobe商务Managed Services的一项关键义务。 Managed Services和我们的客户都对个人身份信息负有法律义务。 除了架构的安全功能外，还有其他控件来限制敏感数据的分发和访问。
+敏感数据可以涵盖来自消费者的个人信息或来自Managed Services客户的机密数据。 保护敏感客户和消费者数据是Adobe Commerce Managed Services的一项关键义务。 Managed Services和我们的客户都对个人身份信息负有法律义务。 除了架构的安全功能外，还有其他控件来限制敏感数据的分发和访问。
 
-客户拥有其数据，并可以控制该数据的位置。 客户指定其生产和开发实例所在的位置。 它们还指定将与Commerce一起用于Magento Business Intelligence(MBI)环境的位置，以及该MBI应用程序是否有权访问个人身份信息。 生产实例可以位于大多数AWS地区，而开发和MBI环境可以在美国或欧盟境内同时创建。
+客户拥有其数据，并可以控制该数据的位置。 客户指定其生产和开发实例所在的位置。 它们还指定将与Commerce一起用于Magento Business Intelligence(MBI)环境的位置，以及该MBI应用程序是否有权访问个人身份信息。 生产实例可以位于大多数AWS地区，而开发和MBI环境可以在美国或欧盟中同时创建。
 
-敏感数据可能会通过Fastly CDN服务器网络，但不会存储在Fastly网络中。 Adobe商务Managed Services产品中包含的所有合作伙伴都有确保敏感数据保护的合同义务。 Managed Services不会从客户指定的位置移动敏感的客户或消费者数据。
+敏感数据可能会通过Fastly CDN服务器网络，但不会存储在Fastly网络中。 包括在Adobe CommerceManaged Services产品中的所有合作伙伴都有确保保护敏感数据的合同义务。 Managed Services不会从客户指定的位置移动敏感的客户或消费者数据。
 
-作为提供Adobe商务Managed Services产品中包含的服务的一部分，Managed Services员工需要访问包含敏感数据的生产系统。 这些员工接受有关保护敏感客户和消费者数据的义务的培训。 对这些系统的访问权限仅限于需要访问权限的员工。 这些员工只能在提供这些服务所需的时间内拥有访问权限。
+作为提供Adobe Commerce Managed Services产品中包含的服务的一部分，Managed Services员工需要访问包含敏感数据的生产系统。 这些员工接受有关保护敏感客户和消费者数据的义务的培训。 对这些系统的访问权限仅限于需要访问权限的员工。 这些员工只能在提供这些服务所需的时间内拥有访问权限。
 
 ## 《通用数据保护条例》(GDPR)
 
@@ -98,7 +98,7 @@ GDPR还要求对收集的任何个人身份信息（例如姓名、种族和出�
 
 >[!NOTE]
 >
-> 本页仅作为GDPR应考虑事项的一般概述。 有关详细信息，请咨询您的法律顾问或参阅[正式文本](https://eur-lex.europa.eu/eli/reg/2016/679/oj)。
+> 本页仅作为GDPR应考虑事项的一般概述。 有关详细信息，请咨询您的法律顾问或参阅[正式文本](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
 
 ## 备份
 
@@ -114,4 +114,4 @@ GDPR还要求对收集的任何个人身份信息（例如姓名、种族和出�
 
 这可在冗余存储上创建独立备份。 由于EBS卷已加密，因此备份也已加密。 此外，Managed Services还根据客户请求执行按需备份。
 
-您的Adobe商务Managed Services备份和恢复方法使用高可用性体系结构与全系统备份相结合。 每个项目都可跨三个单独的AWS可用区复制 — 所有数据、代码和资产；每个区域都有一个单独的数据中心。
+您的Adobe Commerce Managed Services备份和恢复方法使用高可用性体系结构与全系统备份相结合。 每个项目都可跨三个单独的AWS可用区复制 — 所有数据、代码和资产；每个区域都有一个单独的数据中心。
