@@ -2,9 +2,9 @@
 title: Adobe Commerce集成策略
 description: 查看Adobe Commerce实施的集成策略和选项。
 exl-id: af7cc59a-3ee2-461a-8489-a35fe0288277
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 1e545d8d5554e73f522469e526ed098395db9075
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Commerce GraphQL API提供了全面的店面覆盖，您可以使用这些覆盖与其他店面集成，包括：
 
-- 数字体验平台(DXP)，如Experience Manaber和BloomreachAdobe
+- 数字体验平台(DXP)，如Adobe Experience Manager和Bloomreach
 - 内容管理系统(CMS)，如Drupal和WordPress
 - 现代自定义店面应用程序，如Adobe Commerce、PWA Studio和Vue Storefront
 
