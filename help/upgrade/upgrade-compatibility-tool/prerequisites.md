@@ -1,7 +1,7 @@
 ---
-title: '[!DNL Upgrade Compatibility Tool] 先决条件'
+title: '"[!DNL Upgrade Compatibility Tool] 先决条件”'
 description: '验证您的系统是否满足运行 [!DNL Upgrade Compatibility Tool] 为您的Adobe Commerce项目。 '
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: 97295df89fda393c8cf8675f8f4be92ac6f38a6a
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
