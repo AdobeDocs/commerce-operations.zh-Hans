@@ -1,7 +1,7 @@
 ---
 title: 修补程序的工作原理
 description: 了解Adobe Commerce和Magento Open Source的不同类型的修补程序及其工作方式。
-source-git-commit: 38b054bbae8ba116557ce367c8397c646c837558
+source-git-commit: 06ac3169a5e3813e4f50246f54f91998e14b5985
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 0%
@@ -91,8 +91,8 @@ index c8a6fef58d31..7d01c195791e 100644
 您可以使用以下任一方法应用修补程序：
 
 - [质量补丁工具](https://devdocs.magento.com/quality-patches/tool.html)
-- [命令行](../patches/apply.md#command-line)
-- [编辑器](../patches/apply.md#composer)
+- [命令行](/help/upgrade/patches/apply.md#command-line)
+- [编辑器](/help/upgrade/patches/apply.md#composer)
 
 >[!NOTE]
 >
