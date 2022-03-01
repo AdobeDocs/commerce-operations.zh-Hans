@@ -1,15 +1,17 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] 开发人员信息”'
 description: 自定义 [!DNL Upgrade Compatibility Tool] 使用API索引集成。
-source-git-commit: 97295df89fda393c8cf8675f8f4be92ac6f38a6a
+source-git-commit: 317a044e66fe796ff66b9d8cf7b308f741eb82c1
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Upgrade Compatibility Tool] 开发人员信息
+
+{{commerce-only}}
 
 本主题包含的信息适用于与Adobe Commerce代码密切合作并希望了解 [!DNL Upgrade Compatibility Tool]. 您可以使用此知识自定义工具的组件。
 

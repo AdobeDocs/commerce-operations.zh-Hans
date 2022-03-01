@@ -1,9 +1,9 @@
 ---
 title: 管理模块和扩展
 description: 使用命令行界面和编辑器包管理器管理Adobe Commerce和Magento Open Source模块和扩展。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 7bcfbc4483f4b6d4c1a5e852adbd1cd81bc136b7
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,7 @@ ht-degree: 0%
 
 您可以添加 `require` 的 `composer.json` 文件，或者您可以使用 `composer require` 命令：
 
-1. 登录到您的服务器。
-1. 切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. 更改为您克隆应用程序的目录。 例如，
-
-   ```bash
-   cd /var/www/magento2
-   ```
+{{$include /help/_includes/server-login.md}}
 
 您有以下选项：
 
