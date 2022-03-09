@@ -1,9 +1,9 @@
 ---
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: 317a044e66fe796ff66b9d8cf7b308f741eb82c1
+source-git-commit: bcb8fced43c5d9972291f15a5039dbbc2a692a59
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1864'
 ht-degree: 0%
 
 ---
@@ -279,6 +279,20 @@ bin/uct upgrade:check <dir> -c 2.4.3
 - 提供不带任何引号（无单引号或双引号）的标记版本： ~~“2.4.1-develop”~~.
 - 您不应提供比当前安装的版本旧，也不应提供比2.3版本旧，2.3版本是当前支持的最旧版本。
 
+### 使用 `refactor` 命令
+
+的 [!DNL Upgrade Compatibility Tool] 能够自动修复减少的一组问题：
+
+- 允许在不传递参数的情况下使用但现在已弃用此用法的函数。
+- 使用 `$this` 在Magento模板中。
+- 使用PHP关键词 `final` 在专用方法中。
+
+运行：
+
+```bash
+bin/uct refactor <dir>
+```
+
 ## GraphQL模式兼容性验证
 
 的 [!DNL Upgrade Compatibility Tool] 还提供了相关选项，用于检查两个GraphQL端点并比较其架构，以查找它们之间的中断和危险更改：
@@ -316,7 +330,46 @@ bin/uct graphql:compare <schema1> <schema2>
 
 您可以运行 [!DNL Upgrade Compatibility Tool] 通过PhpStorm插件运行配置。 请参阅 [[!DNL Upgrade Compatibility Tool] 运行配置](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html) 主题以了解更多信息。
 
+## 建议的操作
+
+### 优化结果
+
+的 [!DNL Upgrade Compatibility Tool] 提供包含结果的报表，其中默认包含项目中发现的所有问题。 您可以优化结果以重点关注完成升级所必须修复的问题：
+
+- 使用选项 `--ignore-current-version-compatibility-issues`，会针对您当前的Adobe Commerce版本禁止所有已知严重问题、错误和警告。 它仅针对您尝试升级到的版本提供错误。
+- 添加 `--min-issue-level` 选项，此设置允许设置最小问题级别，以帮助只排定升级中最重要问题的优先级。 如果只想分析某个供应商、模块甚至目录，则还可以指定路径作为选项。
+- 运行 `bin` 的命令 `-m`. 这允许 [!DNL Upgrade Compatibility Tool] 独立分析特定模块，并有助于解决在执行时可能出现的内存问题 [!DNL Upgrade Compatibility Tool].
+
+### 遵循Adobe Commerce最佳实践
+
+- 请避免使用两个同名模块。
+- 关注Adobe Commerce [编码标准](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
+
 ## 疑难解答
+
+### 分段错误
+
+当两个模块具有相同的名称时， [!DNL Upgrade Compatibility Tool] 显示分段错误。
+
+为避免出现此错误，建议运行 `bin` 的命令 `-m`:
+
+```bash
+bin/uct upgrade:check /<dir>/<instance-name> --coming-version=2.4.1 -m /vendor/<vendor-name>/<module-name>
+```
+
+>[!NOTE]
+>
+>的 `<dir>` value是Adobe Commerce实例所在的目录。
+
+的 `-m` 选项允许 [!DNL Upgrade Compatibility Tool] 可单独分析每个特定模块，以避免在Adobe Commerce实例中遇到两个同名模块。
+
+此命令选项还允许 [!DNL Upgrade Compatibility Tool] 要分析包含多个模块的文件夹，请执行以下操作：
+
+```bash
+bin/uct upgrade:check /<dir>/<instance-name> --coming-version=2.4.1 -m /vendor/<vendor-name>/
+```
+
+此建议还有助于解决在执行 [!DNL Upgrade Compatibility Tool].
 
 ### 空输出
 
