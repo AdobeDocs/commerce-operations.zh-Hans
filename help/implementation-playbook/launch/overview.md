@@ -1,13 +1,13 @@
 ---
 title: 启动就绪概述
-description: 查看启动就绪对Adobe商务实施意味着什么的摘要。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 查看启动就绪对Adobe Commerce实施意味着什么的摘要。
+exl-id: 87cfcb48-3c0e-4c14-afb4-62bb9fe94c48
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 0%
 
 ---
-
 
 # 启动准备情况概述
 

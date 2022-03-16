@@ -3,7 +3,7 @@ title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
 source-git-commit: ee80753da5327ebf593e007e3b4316e2b01c5a61
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1864'
 ht-degree: 0%
 
 ---

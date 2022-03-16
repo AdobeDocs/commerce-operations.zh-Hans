@@ -1,13 +1,13 @@
 ---
 title: 文化
 description: 注意企业文化，帮助您实现战略目标。
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 455716c6-3efd-4295-a079-4e61df313386
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
 
 ---
-
 
 # 文化
 

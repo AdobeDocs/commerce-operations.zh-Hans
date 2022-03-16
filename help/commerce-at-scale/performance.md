@@ -1,23 +1,23 @@
 ---
 title: AEM性能优化
-description: 优化默认的Adobe Experience Manager配置以支持Adobe商务的高负载。
+description: 优化默认的Adobe Experience Manager配置以支持Adobe Commerce上的高负载。
 exl-id: 923a709f-9048-4e67-a5b0-ece831d2eb91
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2248'
 ht-degree: 0%
 
 ---
 
 # AEM性能优化
 
-AEM Dispatcher是一个反向代理，可帮助交付既快速又动态的环境。 它作为静态HTML服务器（如Apache HTTP Server）的一部分使用，其目的是以静态资源的形式尽可能多地存储（或“缓存”）站点内容。 此方法旨在尽可能减少访问AEM页面渲染功能和Adobe商务GraphQL服务的需求。 将大部分页面作为静态HTML、CSS和JS提供的结果，可为用户带来性能优势，并降低环境中的基础架构要求。 缓存时，应考虑用户之间可能重复相同的任何页面或查询。
+AEM Dispatcher是一个反向代理，可帮助交付既快速又动态的环境。 它作为静态HTML服务器（如Apache HTTP Server）的一部分使用，其目的是以静态资源的形式尽可能多地存储（或“缓存”）站点内容。 此方法旨在尽可能减少访问AEM页面渲染功能和Adobe Commerce GraphQL服务的需求。 将大部分页面作为静态HTML、CSS和JS提供，这为用户带来了性能优势，并降低了环境中的基础架构要求。 缓存时，应考虑用户之间可能重复相同的任何页面或查询。
 
-以下各节在较高级别显示了建议的技术重点领域，以便在CIF/Adobe商务环境中对AEM进行有效缓存。
+以下各节在较高级别显示了建议的技术重点领域，这些领域有待审核，以便在CIF/Adobe Commerce环境中对AEM进行有效缓存。
 
 ## 基于TTL的AEM调度程序缓存
 
-在调度程序上尽可能多地缓存网站是任何AEM项目的最佳做法。 如果使用基于时间的缓存失效，则会在设定的有限时间内缓存服务器端呈现的CIF页面。 设置时间过期后，下一个请求将从AEM发布者和Adobe商务GraphQL中重建页面，并将其再次存储在调度程序缓存中，直到下次失效为止。
+在调度程序上尽可能多地缓存网站是任何AEM项目的最佳做法。 如果使用基于时间的缓存失效，则会在设定的有限时间内缓存服务器端呈现的CIF页面。 设置时间过期后，下一个请求将从AEM发布者和Adobe Commerce GraphQL中重建页面，并将其再次存储在调度程序缓存中，直到下次失效为止。
 
 TTL缓存功能可在AEM中使用ACS AEM Commons包中的“Dispatcher TTL”组件配置，并在dispatcher.any配置文件中设置/enableTTL &quot;1&quot;。
 
@@ -27,12 +27,12 @@ TTL缓存功能可在AEM中使用ACS AEM Commons包中的“Dispatcher TTL”组
 
 上述调度程序TTL方法将大大减少请求和对发布程序的负载，但是有一些资产很不可能更改，因此甚至对调度程序的请求也可以通过在用户浏览器上本地缓存相关文件来减少。 例如，网站的徽标显示在网站模板中网站的每个页面上，无需每次向调度程序请求徽标。 而是可以存储在用户的浏览器缓存中。 每次页面加载的带宽要求降低会对站点响应性和页面加载时间产生重大影响。
 
-浏览器级别的缓存通常通过“Cache-Control:max-age=”响应标头。 最大值设置告知浏览器在尝试“重新验证”或再次从网站请求文件之前，应缓存文件的秒数。 缓存最大时间的这一概念通常称为“缓存过期”或TTL（“存留时间”）。 大规模提供商务体验 — 使用Adobe Experience Manager、Commerce Integration Framework、Commerce 7Adobe
+浏览器级别的缓存通常通过“Cache-Control:max-age=”响应标头。 最大值设置告知浏览器在尝试“重新验证”或再次从网站请求文件之前，应缓存文件的秒数。 缓存最大时间的这一概念通常称为“缓存过期”或TTL（“存留时间”）。 大规模提供商务体验 — 使用Adobe Experience Manager,Commerce Integration Framework，Adobe Commerce 7
 
-AEM/CIF/Adobe商务网站的一些区域（可设置为在客户端的浏览器中缓存）包括：
+AEM/CIF/Adobe Commerce网站的一些区域（可设置为在客户端的浏览器中缓存）包括：
 
-- 图像(在AEM模板本身中，例如网站徽标和模板设计图像 — 目录产品图像将通过Fastly从Adobe商务中调用，稍后将讨论缓存这些图像)
-- HTML文件（适用于不常更改的页面 — 条款和条件页面等）
+- 图像(在AEM模板本身中，例如网站徽标和模板设计图像 — 目录产品图像将通过Fastly从Adobe Commerce中调用，稍后会讨论缓存这些图像)
+- HTML文件（对于不常更改的页面 — 条款和条件页面等）
 - CSS文件
 - 所有网站JavaScript文件 — 包括CIF JavaScript文件
 
@@ -66,12 +66,11 @@ content/ecommerce/us/en/products/product-page.html
 
 >[!NOTE]
 >
-> [aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/gracePeriod) GitHub存储库中提供了有关此主题的更多详细信息。
+> 有关此主题的更详细阅读，请参阅 [aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/gracePeriod) GitHub存储库。
 
 ## CIF — 通过组件进行GraphQL缓存
 
-可以将AEM中的各个组件设置为缓存，这意味着要Adobe的GraphQL请求
-Commerce被调用一次，然后从AEM缓存中检索后续请求（符合配置的时间限制），而不会在AdobeCommerce上进一步加载。 例如，网站导航基于每个页面上显示的类别树以及多面搜索功能中的选项 — 这两个区域只需对Adobe商务进行资源密集型查询即可构建，但不太可能定期更改，因此是缓存的好选项。 例如，即使发布者正在重建PDP或PLP，对导航构建占用大量资源的GraphQL请求也不会命中Adobe商务，并且可以从AEM CIF上的GraphQL缓存中进行检索。
+可以将AEM中的各个组件设置为缓存，这意味着对Adobe Commerce的GraphQL请求调用一次，然后从AEM缓存中检索到符合配置时间限制的后续请求，而不会将进一步加载到Adobe Commerce。 例如，网站导航基于每个页面上显示的类别树以及多面搜索功能中的选项 — 这两个区域只需要对Adobe Commerce进行资源密集型查询即可构建，但不太可能定期更改，因此是缓存的好选项。 例如，即使发布者正在重建PDP或PLP，导航内部版本的资源密集型GraphQL请求也不会命中Adobe Commerce，并且可以从AEM CIF上的GraphQL缓存中进行检索。
 
 以下示例用于缓存导航组件，因为它在站点的所有页面上发送相同的GraphQL查询。 以下请求会缓存导航结构过去100个条目10分钟：
 
@@ -85,10 +84,9 @@ venia/components/structure/navigation:true:100:600
 com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 ```
 
-请求（包括所有自定义http标头和变量）必须完全匹配，才能使缓存“点击”，并防止重复调用Adobe商务。 应当注意，一旦设置，就无法轻松地手动使此缓存失效。 这可能意味着，如果在Adobe商务中添加了新类别，则在上述缓存中设置的到期时间到期并刷新GraphQL请求之前，该类别不会开始显示在导航中。 搜索彩块化的情况相同。 但是，鉴于此缓存可实现的性能优势，这通常是可接受的折中方案。
+请求（包括所有自定义http标头和变量）必须完全匹配，才能使缓存“点击”，并防止重复调用Adobe Commerce。 应当注意，一旦设置，就无法轻松地手动使此缓存失效。 这可能意味着，如果在Adobe Commerce中添加了新类别，则在上述缓存中设置的到期时间到期并刷新GraphQL请求之前，该类别不会开始显示在导航中。 搜索彩块化的情况相同。 但是，鉴于此缓存可实现的性能优势，这通常是可接受的折中方案。
 
-可以使用“GraphQL客户端”中的AEM OSGi配置控制台来设置上述缓存选项
-配置工厂”。 可以使用以下格式指定每个缓存配置条目：
+可以使用“GraphQL客户端配置工厂”中的AEM OSGi配置控制台来设置上述缓存选项。 可以使用以下格式指定每个缓存配置条目：
 
 ```
 • NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
@@ -100,15 +98,15 @@ com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 
 ## 混合缓存 — 缓存的调度程序页面中的客户端GraphQL请求
 
-还可以采用混合方法来缓存页面：CIF页面可能包含组件，组件始终会直接从Adobe的浏览器请求客户商务的最新信息。 这对于模板中页面的特定区域非常有用，因为这些区域需要通过实时信息保持最新：例如，PDP中的产品价格。 当价格因动态价格匹配而频繁更改时，该信息可以配置为不会缓存在调度程序上，而是可以在客户浏览器中通过带有AEM CIF Web组件的GraphQL API直接从Adobe商务中获取价格。
+还可以采用混合方法来缓存页面：CIF页面可能包含始终会直接从客户浏览器请求Adobe Commerce提供最新信息的组件。 这对于模板中页面的特定区域非常有用，因为这些区域需要通过实时信息保持最新：例如，PDP中的产品价格。 如果价格因动态价格匹配而频繁更改，则可以将该信息配置为不缓存在调度程序上，而是可以通过带有AEM CIF Web组件的GraphQL API直接在客户浏览器的Adobe Commerce中从客户端获取价格。
 
 可以通过AEM组件设置进行配置 — 对于产品列表页面上的价格信息，可以在产品列表模板中进行配置，在页面设置中选择产品列表组件并选中“加载价格”选项。 同样的方法也适用于库存水平。
 
-仅当需要实时、不断地更新信息时，才应使用上述方法。 在上例中，与定价一起，可以与业务利益相关方商定，仅在低流量时每天更新价格，然后执行缓存刷新操作。 这样，在构建显示定价信息的每个页面时，就不再需要实时定价信息请求以及Adobe商务的后续额外负载。
+仅当需要实时、不断地更新信息时，才应使用上述方法。 在上例中，与定价一起，可以与业务利益相关方商定，仅在低流量时每天更新价格，然后执行缓存刷新操作。 这样，在构建每个显示定价信息的页面时，就不再需要实时定价信息请求，也无需再额外加载Adobe Commerce。
 
 ## 不可执行的GraphQL请求
 
-页面中的特定动态数据组件不应缓存，且将始终需要GraphQL调用来Adobe商务，例如，对于购物车和整个结帐页面的调用。 此信息是特定于用户的，并且会因客户在网站上的活动而不断更改 — 例如，通过将产品添加到其购物车。
+页面中的特定动态数据组件不应进行缓存，且将始终需要对Adobe Commerce进行GraphQL调用，例如对于购物车和整个结帐页面的调用。 此信息是特定于用户的，并且会因客户在网站上的活动而不断更改 — 例如，通过将产品添加到其购物车。
 
 如果网站的设计根据用户的角色给出不同的响应，则不应为已登录的客户缓存GraphQL查询结果。 例如，您可以创建多个客户群组，并为每个群组设置不同的产品价格或不同的产品类别可见性。 此类缓存结果可能会导致客户查看另一个客户组的价格或显示不正确的类别。
 
@@ -122,13 +120,13 @@ com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 https://www.adobe.com/?gclid=oirhgj34y43yowiahg9u3t
 ```
 
-gclid和fbclid将随每位单击广告的用户而发生更改，这用于跟踪目的，但使用其默认设置，AEM会将每个请求视为唯一页面，绕过调度程序，在发布者和Adobe商务上产生不必要的额外负载。
+gclid和fbclid将随每位单击广告的用户而发生更改，这用于跟踪目的，但使用其默认设置，AEM会将每个请求视为唯一页面，绕过调度程序，在发布者和Adobe Commerce上产生不必要的额外负载。
 
 在剧增事件期间，这甚至可能导致AEM发布者变得过载且无响应。 如果将某个页面的参数设置为忽略，则在首次请求页面时会缓存该页面。 无论请求中的参数值如何，缓存的页面都会提供该页面的后续请求。
 
 >[!NOTE]
 >
->[aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/ignoreUrlParams) GitHub存储库中提供了有关设置`ignoreUrlParams`的重要性的进一步阅读。
+>进一步解读设定 `ignoreUrlParams` 在 [aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/ignoreUrlParams) GitHub存储库。
 
 因此，应将其配置为在默认情况下忽略“ignoreUrlParams”中的所有参数，除非使用了GET参数来更改页面的HTML结构。 例如，搜索页面中的搜索词在URL中作为GET参数显示 — 在这种情况下，您应手动配置ignoreUrlParams以忽略广告渠道所使用的gclid、fbclid和任何其他跟踪参数等参数，从而使正常网站操作所需的GET参数不受影响。
 
@@ -136,4 +134,4 @@ gclid和fbclid将随每位单击广告的用户而发生更改，这用于跟踪
 
 MPM工作程序设置是一种高级Apache HTTP服务器配置，需要进行彻底测试，才能根据Dispatcher的可用CPU和RAM进行优化。 但是，在本白皮书的范围中，我们建议将ServerLimit和MaxRequestWorkers增加到服务器可用CPU和RAM支持的级别，然后将MinSpareThreads和MaxSpareThreads都增加到与MaxRequestWorkers匹配的级别。
 
-此配置会将Apache HTTP保留为“完全就绪设置”，该设置是适用于具有大量RAM和多个CPU核心的服务器的高性能配置。 此配置将通过维护永久开放连接来准备提供请求，从Apache HTTP生成尽可能最佳的响应时间，并消除因突发流量激增（如在闪存销售期间）而生成新进程的任何延迟。
+此配置会将Apache HTTP保留为“完全就绪设置”，该设置是适用于具有大量RAM和多个CPU核心的服务器的高性能配置。 此配置将通过维护永久开放连接来准备提供请求，从Apache HTTP生成尽可能最佳的响应时间，并消除在响应突发流量激增（如在闪速销售期间）时生成新进程的任何延迟。

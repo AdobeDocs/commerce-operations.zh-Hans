@@ -1,13 +1,13 @@
 ---
 title: 启动前步骤
-description: 使用我们的启动前检查列表，确保顺利实施Adobe商务网站。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 使用我们的启动前检查列表确保顺利实施Adobe Commerce网站。
+exl-id: bd10881f-0336-4aa4-82ad-4d635010e2e4
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
 
 ---
-
 
 # 启动前步骤
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 - 邮件服务经过良好配置，可用于事务电子邮件
 - 为暂存/生产环境配置了CDN
 - 为暂存/生产环境设置安全扫描
-   - Adobe商务安全扫描
+   - Adobe Commerce安全扫描
 - 通过
    - JMeter
    - 围攻
@@ -35,11 +35,11 @@ ht-degree: 0%
 
 ![显示启动过程第1阶段的图表](../../assets/playbooks/launch-steps-1.svg)
 
-内部部署Adobe商务与云实施之间的主要区别在于部署脚本和工具，以及SSL、邮件服务和CDN的设置。 但是，这个过程还是一样的。
+Adobe Commerce本地实施和云实施之间的主要区别在于部署脚本和工具，以及SSL、邮件服务和CDN的设置。 但是，这个过程还是一样的。
 
-对于SSL(TLS)证书，云基础架构上的Adobe商务提供Fastly通配符证书。 要开始使用它，您需要通过验证：将Fastly TXT记录添加到DNS设置中的顶点域名。 Fastly TXT记录可在载入电子表格中找到，否则您需要提交支持票证才能获取该记录。 请在此将此文本替换为您的问题/评论。 如果您使用自己的SSL(TLS)证书而不是Fastly通配符证书，请提交支持票证，并将您的证书附加到设置中。
+对于SSL(TLS)证书，云基础架构上的Adobe Commerce提供Fastly通配符证书。 要开始使用它，您需要通过验证：将Fastly TXT记录添加到DNS设置中的顶点域名。 Fastly TXT记录可在载入电子表格中找到，否则您需要提交支持票证才能获取该记录。 请在此将此文本替换为您的问题/评论。 如果您使用自己的SSL(TLS)证书而不是Fastly通配符证书，请提交支持票证，并将您的证书附加到设置中。
 
-云基础架构上的Adobe商务为事务电子邮件提供了SendGrid Mail功能。 对于Pro计划，您需要将SendGrid记录添加到DNS设置。 SendGrid记录可在载入电子表格中找到，否则SI或商家应提交支持票证以获取这些记录。 首先，您无需对DNS进行任何更改；SendGrid已为您预配置。
+云基础架构上的Adobe Commerce为事务电子邮件提供了SendGrid Mail功能。 对于Pro计划，您需要将SendGrid记录添加到DNS设置。 SendGrid记录可在载入电子表格中找到，否则SI或商家应提交支持票证以获取这些记录。 首先，您无需对DNS进行任何更改；SendGrid已为您预配置。
 
 ## 完成启动前检查列表
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 - 提供的域名正确
 - 已测试外发电子邮件
 - 已配置和配置SSL证书
-- 正确更新了Adobe商务应用程序的所有重要配置
+- 正确更新了Adobe Commerce应用程序的所有重要配置
 - 基本URL和基本管理员URL正确设置为最终主机名
 - 管理员密码已更改
 - 不再需要访问应用程序的所有具有访问权限的用户都将被删除

@@ -1,13 +1,13 @@
 ---
 title: 项目实施方法
-description: 了解Adobe商务软件交付的工作方式。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 了解Adobe Commerce软件交付的工作方式。
+exl-id: 579cd083-8b12-49ff-bc8a-8db1ca588d74
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
 
 ---
-
 
 # 项目实施方法
 
@@ -41,7 +41,7 @@ ht-degree: 0%
    - 执行代码编译测试。
    - 执行静态代码扫描（例如，SonarQube）。
 - 所有通过的扫描提交都将与目标分支合并。
-- 新发布的标记将推送到AWS S3，以获取部署就绪包。
+- 已发布的新标记将被推送到AWS S3，以获取部署就绪包。
 - 部署工程团队会触发新部署。
    - 部署作业将新包部署到目标环境。
    - 数据库结构更新需要暂停才能处理客户的新请求。

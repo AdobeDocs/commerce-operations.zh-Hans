@@ -1,13 +1,13 @@
 ---
 title: 项目管理
-description: 将我们的项目管理建议应用于您的Adobe商务实施。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 将我们的项目管理建议应用于您的Adobe Commerce实施。
+exl-id: adf53a2a-1673-441a-84d3-4cdda47d6aa5
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 0%
 
 ---
-
 
 # 项目管理
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 ![冲刺和释放燃耗图示例](../../assets/playbooks/sprint-release-burndown.svg)
 
-在任何项目的整个过程中都会遇到挑战或发生更改。 在遇到挑战时赋予组织内的适当人员跟踪、测量和引导客户群的能力，这将增加您退出项目并实现目标并对结果感到满意的可能性。
+在任何项目的整个过程中都会遇到挑战或发生更改。 在遇到挑战时赋予组织内的正确人员跟踪、测量和引导客户群的能力，这将增加您退出项目并实现目标并对结果感到满意的可能性。
 
 <table>
 <thead>

@@ -1,13 +1,13 @@
 ---
 title: 结帐流程和流程
 description: 通过为客户提供无缝结账体验，提高转化率。
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 692236fd-b909-4061-8038-0db19e0ed72b
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%
 
 ---
-
 
 # 结帐流程和流程
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 零售商应提供不同的送货方式以满足不同客户的需求。
 
-除了支付选项外，零售商还可以提供诸如[click and collect](click-collect.md)等选项。
+除了支付选项，零售商还可以提供 [单击并收集](click-collect.md).
 
 ## 付款详细信息
 

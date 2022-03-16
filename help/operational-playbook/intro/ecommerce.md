@@ -1,13 +1,13 @@
 ---
 title: 什么是电子商务？
 description: 电子商务描述
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: b418d36b-7dc6-49c7-95a8-03a55c69cb6f
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
 
 ---
-
 
 # 什么是电子商务？
 

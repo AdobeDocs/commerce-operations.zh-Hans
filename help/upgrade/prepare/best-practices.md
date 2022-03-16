@@ -3,7 +3,7 @@ title: 最佳实践
 description: 使用Adobe推荐的最佳实践来管理Adobe Commerce和Magento Open Source项目的升级过程。
 source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---

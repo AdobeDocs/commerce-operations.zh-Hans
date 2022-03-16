@@ -1,13 +1,13 @@
 ---
 title: 商务功能
-description: Adobe商务功能列表
-source-git-commit: 1115bbc4f73962f1ebc0c96e9a7026d0b19cd18f
+description: Adobe Commerce功能列表
+exl-id: 58dd813d-e3bd-4a2e-a145-f1c66f849a38
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
-
 
 # 商务功能
 

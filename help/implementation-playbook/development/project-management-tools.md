@@ -1,17 +1,17 @@
 ---
 title: 项目管理工具
-description: 为Adobe商务实施选择推荐的项目管理工具。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 为您的Adobe Commerce实施选择推荐的项目管理工具。
+exl-id: 5c87d762-06ce-4716-946a-f0fe5348fa18
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
-
 # 项目管理工具
 
-走出实际的Adobe商务环境，但同样重要的是，是使协作和整个开发过程尽可能顺畅的工具和解决方案。
+走出实际的Adobe Commerce环境，但同样重要的是，是使协作和整个开发过程尽可能顺畅的工具和解决方案。
 
 下表包括建议的项目管理工具：
 

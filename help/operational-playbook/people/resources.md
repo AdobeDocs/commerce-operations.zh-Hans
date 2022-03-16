@@ -1,13 +1,13 @@
 ---
 title: 资源
 description: 了解可帮助支持您的电子商务团队的内部、外部和混合资源。
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 8c5067ed-6dbe-4306-b825-959606d1b254
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
 
 ---
-
 
 # 资源
 

@@ -1,13 +1,13 @@
 ---
 title: 商业愿景
-description: 通过为您的Adobe商务项目确立愿景，激励您的团队。
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+description: 通过为您的Adobe Commerce项目确立愿景，激励您的团队。
+exl-id: 0eed719a-50fe-4ed7-9838-ec51d9b222b4
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
 
 ---
-
 
 # 视力
 

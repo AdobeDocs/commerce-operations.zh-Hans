@@ -1,13 +1,13 @@
 ---
 title: 质量控制
-description: 了解与实施项目相关的Adobe商务质量控制流程。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 了解与实施项目相关的Adobe Commerce质量控制流程。
+exl-id: 0eb62b24-21f6-4cec-8ef9-eeaa1ee6ae52
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 0%
 
 ---
-
 
 # 质量控制过程和工具
 
@@ -142,12 +142,12 @@ ht-degree: 0%
 </tbody>
 </table>
 
-与我们为开发过程确定的[工具](project-management-tools.md)类似，我们选择了一些我们经常用于质量控制测试的选择解决方案和平台。
+与 [工具](project-management-tools.md) 我们为开发过程确定了，我们选择了一些我们经常用于质量控制测试的选择性解决方案和平台。
 
 | 用途 | 工具 |
 |---------------------------|---------------------------------------------------|
 | 网站性能索引 | Google PageSpeed、Webpagetest、JMeter |
-| 安全性 | Adobe商务安全扫描工具、SonarQube、ZAP |
+| 安全性 | Adobe Commerce安全扫描工具、SonarQube、ZAP |
 | 问题管理系统 | 吉拉 |
 | UI测试 | 完美像素， BrowserStack |
 | API测试 | Postman， SoapUI |
@@ -156,7 +156,7 @@ ht-degree: 0%
 
 ## 网站性能索引
 
-GooglePageSpeed会报告移动设备和桌面设备上页面的性能，并提供有关如何改进该页面的建议。
+GooglePageSpeed报告移动和桌面设备上页面的性能，并提供有关如何改进该页面的建议。
 
 WebPageTest是一款Web性能工具，它使用真正的浏览器访问网页并收集时间量度。
 
@@ -172,7 +172,7 @@ OWASPZAP(Zed Attack Proxy)既适用于应用程序安全性方面的新用户，
 
 ## UI测试
 
-Perfect Pixel允许开发人员和标记设计人员在开发的HTML的顶部放置半透明的图像叠加，并在它们之间执行像素级完美比较。
+完美像素允许开发人员和标记设计人员在开发的HTML的顶部放置半透明的图像叠加，并在它们之间执行像素完美比较。
 
 BrowserStack是一个云Web和移动测试平台，它允许开发人员跨按需浏览器、操作系统和真正的移动设备测试其网站和移动应用程序。
 

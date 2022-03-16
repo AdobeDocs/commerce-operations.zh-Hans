@@ -1,13 +1,13 @@
 ---
 title: 维护和支持概述
-description: 正确维护和支持您新启动的Adobe商务实施。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 妥善维护和支持您新启动的Adobe Commerce实施。
+exl-id: 5a104148-74f1-469b-84ca-9bce740a7865
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
 
 ---
-
 
 # 维护和支持概述
 

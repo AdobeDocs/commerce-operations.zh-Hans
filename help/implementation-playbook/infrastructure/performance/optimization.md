@@ -1,17 +1,17 @@
 ---
 title: 性能优化
-description: 了解有关性能优化的所有信息以及检查Adobe商务实施性能所需执行的步骤。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 了解有关性能优化以及检查Adobe Commerce实施性能所需执行的步骤的所有信息。
+exl-id: 506ef2cc-c6fd-4401-afa5-a71e7b9871e6
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
-
 # 性能优化
 
-表现是一个大话题。 当用户遇到网站缓慢或无响应时，它会影响转化。 我们建议您按照以下步骤来优化Adobe商务在云基础架构实施方面的性能：
+表现是一个大话题。 当用户遇到网站缓慢或无响应时，它会影响转化。 我们建议按照以下步骤来优化您的Adobe Commerce在云基础架构实施方面的性能：
 
 - 评估问题
 - 衡量绩效
@@ -41,9 +41,9 @@ ht-degree: 0%
 
 慢速加载资源通常被视为定义静态资源（CSS、JavaScript、图像、视频、第三方Ajax调用响应）的指示器。
 
-Adobe商务可通过其功能随您的业务一起扩展：
+Adobe Commerce可以通过其功能扩展您的业务：
 
-![显示Adobe商务的可缩放功能的图表](../../../assets/playbooks/scalable-capabilities.svg)
+![显示Adobe Commerce可扩展功能的图表](../../../assets/playbooks/scalable-capabilities.svg)
 
 商业规模的驱动因素也是关键因素，这也影响了整体业绩。
 
@@ -56,4 +56,4 @@ Adobe商务可通过其功能随您的业务一起扩展：
 
 对于为规模而构建的分层且可缓存的体系结构，您可以使用此图作为参考。
 
-![显示如何在可缓存架构中使用Adobe商务GraphQL API的图表](../../../assets/playbooks/cacheable-architecture.svg)
+![显示如何在可缓存架构中使用Adobe Commerce GraphQL API的图表](../../../assets/playbooks/cacheable-architecture.svg)

@@ -1,13 +1,13 @@
 ---
 title: 项目计划
 description: 使用详细的电子商务项目计划监控和管理您的电子商务项目。
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 2d6c8998-925a-4015-b26b-945127cab805
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
 
 ---
-
 
 # 项目计划
 

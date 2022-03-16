@@ -4,8 +4,8 @@ title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
 source-git-commit: 63ceb5bad64a7ed5bce3ad2af76966eb6883d62e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '205'
+ht-degree: 1%
 
 ---
 
@@ -97,7 +97,7 @@ ht-degree: 0%
       <img alt="实施" src="../assets/icons/play.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="../implementation-playbook/overview.md"><strong>实施手册</strong></a>
+      <a href="../implementation-playbook/overview.md"><strong>实施行动手册</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -105,7 +105,7 @@ ht-degree: 0%
        <img alt="操作" src="../assets/icons/refresh.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="../operational-playbook/overview.md"><strong>操作手册</strong></a>
+      <a href="../operational-playbook/overview.md"><strong>运营行动手册</strong></a>
     </div>
   </td>
   <td valign="top">

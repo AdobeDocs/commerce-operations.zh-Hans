@@ -1,17 +1,17 @@
 ---
 title: 主要利益相关方
-description: 查看Adobe商务实施中涉及的主要利益相关方，以及拥有项目不同方面的利益相关方。
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: 审查参与Adobe Commerce实施并拥有项目不同方面权益的主要利益相关者。
+exl-id: 04d8270f-3f68-445a-8e7a-e17905a6f77c
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
 
 ---
 
-
 # 主要利益相关方
 
-2021年，许多企业开始意识到，成为“防大流行病”与组织的数字实力直接相关。 根据Forrester的数据，[McKinsey](https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/five-fifty-the-quickening)发现电子商务在短短3个月内实现了10年的增长，其增长动力是在实体门被锁上的同时，需要与客户进行数字连接。
+2021年，许多企业开始意识到，成为“防大流行病”与组织的数字实力直接相关。 根据Forrester的数据，[麦肯锡](https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/five-fifty-the-quickening)发现电子商务在短短3个月内就实现了10年的增长，其增长的动力是在实体门被锁上的同时，需要与客户进行数字连接。
 
 当决定投资于商业转型时，最重要的步骤之一是确定组织中的哪些人参与该过程。 对于小型企业而言，有时电子商务或数字团队只是一小撮人，因此整个团队都承担着这项任务。 但是，对于大型组织，一种方法是将其分成三个不同的领域，包括：
 
