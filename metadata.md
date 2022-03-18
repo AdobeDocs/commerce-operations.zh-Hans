@@ -1,13 +1,13 @@
 ---
 mini-toc-levels: 2
-git-repo: https://git.corp.adobe.com/AdobeDocs/commerce-operations.zh-Hans
+git-repo: https://github.com/AdobeDocs/commerce-operations.zh-Hans
 index: true
-solution: Adobe Commerce
+solution: Commerce,Adobe Commerce
 product: magento
 type: Documentation
-source-git-commit: 78ae8bb7dfa35fd268e226c4c3181ed5fb781138
+source-git-commit: 4130362ef8fa34b5f7de98fb7823ee533a8f925a
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 供内部使用的元数据
 
-`metadata.md`文件包含存储库级别的元数据，这些元数据会传递到存储库中的用户指南`TOC.md`文件。 如果要更改任何用户指南的metadata.md内容，请在任何`TOC.md`文件中进行更改。
+的 `metadata.md` 文件包含可传递到用户指南的存储库级别元数据 `TOC.md` 文件。 如果要更改任何用户指南的metadata.md内容，请在任意 `TOC.md` 文件。
 
 | 元数据 | 功能 |
 |--- |--- |
