@@ -2,10 +2,10 @@
 title: 关于Adobe Commerce
 description: Adobe Commerce描述
 exl-id: a9ebd4a6-87b4-47b9-8ae8-72d99e1797eb
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 219cbe839e40afa19b3754a9d5929074ed238920
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,9 +26,9 @@ Adobe Commerce赋予商家创造独特而引人入胜的购物体验的能力。
 
 ## 随时随地进行无缝购物
 
-无论客户在何处，都可以满足客户的需求，从而推动商务增长。 扩展您的触及范围并扩展到新渠道、地理位置，并在一个平台中向企业和消费者在线销售。 无论客户喜欢购物，随时随地都可将商业带给客户。
+商务增长的推动力是满足客户的需求。 扩展您的触及范围并扩展到新渠道、地理位置，并在一个平台中向企业和消费者在线销售。 无论客户喜欢购物，随时随地都可将商业带给客户。
 
-- 移动商务
+- Mobile commerce
 - B2B电子商务
 - PWA Studio
 - 全球扩张
@@ -42,7 +42,7 @@ Adobe Commerce赋予商家创造独特而引人入胜的购物体验的能力。
 
 - 商业智能
 - 装运
-- 库存管理
+- Inventory management
 - 订单管理和客户服务
 
 ## 放心操作
