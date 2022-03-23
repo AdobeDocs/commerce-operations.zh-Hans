@@ -1,9 +1,9 @@
 ---
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: ee80753da5327ebf593e007e3b4316e2b01c5a61
+source-git-commit: ba077f5d5429f2971dfbca8edd8ebd5ea44922c8
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1885'
 ht-degree: 0%
 
 ---
@@ -73,10 +73,10 @@ bin/uct upgrade:check --help
 
 - `-m, --module-path[=MODULE-PATH]`:要分析的模块的路径
 - `-a, --current-version[=CURRENT-VERSION]`:当前Adobe Commerce版本，如果忽略，将使用Adobe Commerce安装的版本。
-- `-c, --coming-version[=COMING-VERSION]`:Target Adobe Commerce版本，如果忽略，则将使用最新发布的Adobe Commerce版本。
+- `-c, --coming-version[=COMING-VERSION]`:Target Adobe Commerce版本，如果忽略，则将使用最新发布的Adobe Commerce版本。 提供所有可用Adobe Commerce版本的列表。
 - `--json-output-path[=JSON-OUTPUT-PATH]`:将以json格式导出输出的文件的路径。
 - `--html-output-path[=HTML-OUTPUT-PATH]`:将以HTML格式导出输出的文件的路径。
-- `--min-issue-level`:报表中显示的最小问题级别。 默认为 [警告].
+- `--min-issue-level`:报表中显示的最小问题级别。 默认级别为 [警告].
 - `-i, --ignore-current-version-compatibility-issues`:当您不希望在 [!DNL Upgrade Compatibility Tool] 报表。
 - `--context=CONTEXT`:执行上下文。 此选项用于集成目的，不会影响执行结果。
 - `-h, --help`:显示该特定命令的帮助。 如果未提供命令， `list` 命令是缺省结果。
@@ -267,6 +267,10 @@ bin/uct core:code:changes <dir> <vanilla dir>
 ```bash
 bin/uct upgrade:check <dir> -c 2.4.3
 ```
+
+>[!NOTE]
+>
+>此参数提供所有可用Adobe Commerce版本的列表。
 
 其中：
 
