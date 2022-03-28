@@ -1,7 +1,7 @@
 ---
 title: 完整先决条件
 description: 通过完成这些先决步骤，为升级准备Adobe Commerce或Magento Open Source项目。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: fbe47245623469a93cce5cc5a83baf467a007bc4
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发�
 
 设置打开文件限制(ulimit)有助于避免因多次递归调用长查询字符串而失败或使用 `bin/magento setup:rollback` 命令。 此命令对于不同的UNIX壳不同。 有关 `ulimit` 命令。
 
-Adobe建议设置打开的文件 [ulimit](http://ss64.com/bash/ulimit.html) 值 `65536` 或更多，但您可以根据需要使用更大的值。 您可以在命令行中设置上限，也可以将其设为用户Shell的永久设置。
+Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 值 `65536` 或更多，但您可以根据需要使用更大的值。 您可以在命令行中设置上限，也可以将其设为用户Shell的永久设置。
 
 要从命令行设置上限，请执行以下操作：
 
