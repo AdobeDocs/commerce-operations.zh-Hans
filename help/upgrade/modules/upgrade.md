@@ -1,9 +1,9 @@
 ---
 title: 升级模块和扩展
 description: 使用命令行界面和编辑器升级Adobe Commerce以及Magento Open Source模块和扩展。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 70f1bda91023526fbc0024b6a6fef93c7633ecc2
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -44,3 +44,9 @@ ht-degree: 0%
    ```bash
    bin/magento cache:clean
    ```
+
+## 供应商捆绑的扩展(VBE)
+
+Adobe删除了所有 [VBE](https://devdocs.magento.com/extensions/vendor/) 在2.4.4中，供应商继续在Adobe Commerce Marketplace上支持这些扩展。
+
+如果要继续将这些扩展与Adobe Commerce和Magento Open Source2.4.4及更高版本一起使用，则必须在 `composer.json` 文件 _之前_ 升级到2.4.4。请与供应商联系，获取要使用的包名称和版本。
