@@ -2,10 +2,10 @@
 keywords: Adobe Commerce；主页；热门主题
 title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
-source-git-commit: d3eac6db56f658ead240e8244858d0bd80a43908
+source-git-commit: 29b8d64cd700531f04166ad20694fa342ea0e186
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
@@ -67,11 +67,11 @@ ht-degree: 1%
     </div>
   </td>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/performance-best-practices/introduction.html">
+    <a href="../performance/overview.md">
        <img alt="性能" src="../assets/icons/gauge.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/performance-best-practices/introduction.html"><strong>性能最佳实践</strong></a>
+      <a href="../performance/overview.md"><strong>性能最佳实践</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -79,7 +79,7 @@ ht-degree: 1%
        <img alt="工具" src="../assets/icons/wrench.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://experienceleague.corp.adobe.com/docs/commerce-operations/tools/overview.html?lang=en"><strong>工具</strong></a>
+      <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html?lang=en"><strong>工具</strong></a>
     </div>
   </td>
 </tr>
