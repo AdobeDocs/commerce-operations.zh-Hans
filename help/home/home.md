@@ -2,10 +2,10 @@
 keywords: Adobe Commerce；主页；热门主题
 title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
-source-git-commit: 29b8d64cd700531f04166ad20694fa342ea0e186
+source-git-commit: bca5208cb5a53ac839c666cb42f2124de5d96be2
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 2%
+source-wordcount: '212'
+ht-degree: 1%
 
 ---
 
@@ -127,3 +127,4 @@ ht-degree: 2%
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
 | 添加了 [信息](../upgrade/upgrade-compatibility-tool/overview.md) 关于如何为升级兼容性工具定义规则。 | 主要更新 |
 | 删除了过时的升级兼容工具 [错误代码](../upgrade/upgrade-compatibility-tool/error-messages.md). | 技术 |
+| 已移动 [站点范围分析工具指南](../tools/site-wide-analysis-tool/intro.md) 从 [devdocs.magento.com](https://devdocs.magento.com/tools/site-wide-analysis.html) Experience League。 | 新建 |
