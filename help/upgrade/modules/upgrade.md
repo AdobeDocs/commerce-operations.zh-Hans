@@ -1,7 +1,7 @@
 ---
 title: 升级模块和扩展
 description: 使用命令行界面和编辑器升级Adobe Commerce以及Magento Open Source模块和扩展。
-source-git-commit: 28ce8cca3bb1780ee1466cc2c1b2143e923fe768
+source-git-commit: c619bff9785d22298bc49e2ac9874480ff7a320b
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
