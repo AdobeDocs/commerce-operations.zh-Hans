@@ -1,9 +1,9 @@
 ---
 title: 升级模块和扩展
 description: 使用命令行界面和编辑器升级Adobe Commerce以及Magento Open Source模块和扩展。
-source-git-commit: 70f1bda91023526fbc0024b6a6fef93c7633ecc2
+source-git-commit: 28ce8cca3bb1780ee1466cc2c1b2143e923fe768
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
@@ -50,3 +50,12 @@ ht-degree: 0%
 Adobe删除了所有 [VBE](https://devdocs.magento.com/extensions/vendor/) 在2.4.4中，供应商继续在Adobe Commerce Marketplace上支持这些扩展。
 
 如果要继续将这些扩展与Adobe Commerce和Magento Open Source2.4.4及更高版本一起使用，则必须在 `composer.json` 文件 _之前_ 升级到2.4.4。请与供应商联系，获取要使用的包名称和版本。
+
+有关更多信息，请参阅以下Adobe Commerce Marketplace列表：
+
+- [Amazon Pay](https://marketplace.magento.com/amzn-amazon-pay-magento-2-module.html)
+- [Dotdigital](https://marketplace.magento.com/dotdigital-dotdigital-magento2-os-package.html)
+- [克拉纳](https://marketplace.magento.com/klarna-m2-klarna.html)
+- [顶点](https://marketplace.magento.com/vertexinc-vertex-tax-module.html)
+- [育浦](https://marketplace.magento.com/yotpo-module-yotpo.html)
+
