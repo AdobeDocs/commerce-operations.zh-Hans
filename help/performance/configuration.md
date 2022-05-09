@@ -1,7 +1,7 @@
 ---
 title: 配置最佳实践
 description: 使用这些最佳实践优化Adobe Commerce或Magento Open Source部署的响应时间。
-source-git-commit: 09c4d0e09354230c8779b930f085d8c7c131b85b
+source-git-commit: 20c4f55162b25be8906562c395abf4671437992b
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 配置最佳实践
 
-Commerceo提供了许多设置和工具，您可以使用这些设置和工具缩短页面上的响应时间，并提高吞吐量。
+商务提供了许多设置和工具，您可以使用这些设置和工具缩短页面上的响应时间，并提高吞吐量。
 
 ## Cron作业
 
