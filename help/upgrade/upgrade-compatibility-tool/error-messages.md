@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] 错误消息”'
 description: 了解有关使用 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: 9bdf64177b4cecab5dd3562fef0bcc507a57ccf0
+source-git-commit: d62299d23d73b8566ed1c9b9739ca59fb0535d6f
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3756'
 ht-degree: 4%
 
 ---
@@ -141,16 +141,6 @@ GraphQL如果目标版本中不存在架构项，则会引发架构关键问题�
 | 5026 | 请勿使用 `"text/javascript"` 类型属性 | 仅使用公共成员。 |
 | 5028 | 访问受保护的和私有的 `Block` phtml模板中的类过时 | 仅使用公共成员。 |
 | 5031 | 包含过时的方法 | 使用 `getConnection()` 方法。 |
-| 5032 | `loadLayout` 方法已弃用 | 使用 `\Magento\Framework\View\Layout\Builder::build` 中。 |
-| 5033 | `renderLayout` 方法已弃用 | 使用 `\Magento\Framework\Controller\ResultInterface::renderResult` 中。 |
-| 5034 | `_redirect` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Redirect::render` 中。 |
-| 5035 | `_forward` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Forward::forward` 中。 |
-| 5036 | `_setActiveMenu` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Page::setActiveMenu` 中。 |
-| 5037 | `_addBreadcrumb` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Page::addBreadcrumb` 中。 |
-| 5038 | `_addContent` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Page::addContent` 中。 |
-| 5039 | `_addLeft` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Page::addLeft` 中。 |
-| 5040 | `_addJs` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Page::addJs` 中。 |
-| 5041 | `_moveBlockToContainer` 方法已弃用 | 使用 `\Magento\Backend\Model\View\Result\Page::moveBlockToContainer` 中。 |
 | 5042 | PHP类引用的格式不正确 | 检查仅使用camelCased字母、数字和无前导斜杠引用的类。 |
 | 5043 | 模块引用的格式不正确 | 检查是否仅使用字母、数字、下划线和无前导斜杠引用模块。 |
 | 5044 | 类 `Zend_Db_Select` 受限 | 建议的替换： `\Magento\Framework\DB\Select`. |
