@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] 错误消息”'
 description: 了解有关使用 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: d62299d23d73b8566ed1c9b9739ca59fb0535d6f
+source-git-commit: a13b0ea5aa109ce2f5d33e0966b194d64bad5d0c
 workflow-type: tm+mt
-source-wordcount: '3756'
+source-wordcount: '3782'
 ht-degree: 4%
 
 ---
@@ -233,6 +233,7 @@ GraphQL如果目标版本中不存在架构项，则会引发架构关键问题�
 | 1338 | 已实施Adobe Commerce `@deprecated` 界面 | 在即将发布的版本中，已弃用的界面将被删除。 考虑使用标记为 `@api` 或在实施中引入的界面。 |
 | 1430 | 调用未声明的数据对象方法 | 可以更改未声明的幻方法。 请考虑改用接口方法。 |
 | 1439 | 致电Adobe Commerce `@deprecated` 方法 | 在即将发布的版本中，将删除已弃用的方法。 请考虑改用API接口中声明的方法。 |
+| 1440 | 方法签名不匹配 | 使用与方法签名不匹配的参数、参数或返回类型检测核心方法的调用或覆盖。 |
 | 1534 | 使用Adobe Commerce `@deprecated` 属性 | 在即将发布的版本中，将删除已弃用的方法。 请考虑改用API接口中声明的方法。 |
 | 1535 | 覆盖Adobe Commerce `@deprecated` 属性 | 在即将发布的版本中，将删除已弃用的属性。 请考虑依赖在API接口中声明的方法，或改为使用实施中的私有属性。 |
 | 1536 | Adobe Commerce `@deprecated` 属性 | 在即将发布的版本中，将删除已弃用的方法。 请考虑改用API接口中声明的方法。 |
