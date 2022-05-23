@@ -1,9 +1,9 @@
 ---
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: fbe47245623469a93cce5cc5a83baf467a007bc4
+source-git-commit: d5811225d695c44cc8f67ae01cf688fe6382dc23
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '2030'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,15 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 
 #### HTML
 
-HTML文件还包含已识别问题和分析摘要的列表。 它还包括四个不同的图表：
+HTML文件还包含分析摘要和已识别问题的列表。
+
+![HTML报表 — 摘要](../../assets/upgrade-guide/uct-html-summary.png)
+
+在 [!DNL Upgrade Compatibility Tool] 分析：
+
+![HTML报表 — 详细信息](../../assets/upgrade-guide/uct-html-details.png)
+
+HTML报表还包含四个不同的图表：
 
 - **按问题严重性划分的模块**:显示按模块划分的严重性分布。
 - **按问题严重性列出的文件**:按文件显示严重性分布。
@@ -171,9 +179,21 @@ HTML文件还包含已识别问题和分析摘要的列表。 它还包括四个
 
 通过这些图表，您可以（一目了然地）识别最易损坏的部件以及执行升级需要更多工作的部件。
 
-![HTML报表 — 摘要](../../assets/upgrade-guide/uct-html-summary.png)
+![HTML报表 — 图](../../assets/upgrade-guide/uct-html-diagrams.png)
 
-![HTML报表 — 详细信息](../../assets/upgrade-guide/uct-html-details.png)
+您将能够根据最小问题级别(默认情况下， [警告])。
+
+右上角有一个下拉菜单，允许您根据自己的必需品选择其他选项。 将相应地过滤已识别问题的列表。
+
+![HTML报表 — 下拉列表使用情况](../../assets/upgrade-guide/uct-html-filtered-issues-list.png)
+
+请注意，问题级别较低的问题已清除，但您收到通知，以便始终了解每个模块已识别的问题。
+
+此外，图表也会相应地更新，但 `Modules with relative sizes and issues`，通过 `min-issue-level` 最初设置。
+
+如果要查看不同的结果，则需要重新运行为 `--min-issue-level` 选项。
+
+![HTML报表 — 泡泡图图](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
 
 要将此报表导出到其他输出文件夹，请运行：
 
@@ -341,8 +361,8 @@ bin/uct graphql:compare <schema1> <schema2>
 的 [!DNL Upgrade Compatibility Tool] 提供包含结果的报表，其中默认包含项目中发现的所有问题。 您可以优化结果以重点关注完成升级所必须修复的问题：
 
 - 使用选项 `--ignore-current-version-compatibility-issues`，会针对您当前的Adobe Commerce版本禁止所有已知严重问题、错误和警告。 它仅针对您尝试升级到的版本提供错误。
-- 添加 `--min-issue-level` 选项，此设置允许设置最小问题级别，以帮助只排定升级中最重要问题的优先级。 如果只想分析某个供应商、模块甚至目录，则还可以指定路径作为选项。
-- 运行 `bin` 的命令 `-m`. 这允许 [!DNL Upgrade Compatibility Tool] 独立分析特定模块，并有助于解决在执行时可能出现的内存问题 [!DNL Upgrade Compatibility Tool].
+- 添加 `--min-issue-level` 选项，此设置允许设置最小问题级别，以帮助只排定升级中最重要问题的优先级。
+- 如果只想分析某个供应商、模块甚至目录，则还可以指定路径作为选项。 运行 `bin` 的命令 `-m`. 这允许 [!DNL Upgrade Compatibility Tool] 独立分析特定模块，并有助于解决在执行时可能出现的内存问题 [!DNL Upgrade Compatibility Tool].
 
 ### 遵循Adobe Commerce最佳实践
 
