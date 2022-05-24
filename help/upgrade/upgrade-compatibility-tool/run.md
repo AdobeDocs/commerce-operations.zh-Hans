@@ -1,9 +1,9 @@
 ---
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: d5811225d695c44cc8f67ae01cf688fe6382dc23
+source-git-commit: 64b061f3b2f93827bfdb904a6faddbd21f4da5e6
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2057'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ bin/uct upgrade:check <dir>
 
 您可以运行 `core:code:changes` 命令仅分析该特定Adobe Commerce实例的核心代码更改。 请参阅 [核心代码更改](../upgrade-compatibility-tool/run.md#use-the-core:code:changes-command) 中。
 
-而您可以使用 `graphql:compare` 命令来比较两个GraphQL模式，以检查它们之间是否有任何更改。 请参阅 [GraphQL模式兼容性验证](../upgrade-compatibility-tool/run.md#graphql-schema-compatibility-verification) 中。
+您可以使用 `graphql:compare` 命令来比较两个GraphQL模式，以检查它们之间是否有任何更改。 请参阅 [GraphQL模式兼容性验证](../upgrade-compatibility-tool/run.md#graphql-schema-compatibility-verification) 中。
 
 ### Recommendations使用 `upgrade:check` 命令
 
@@ -317,6 +317,10 @@ bin/uct upgrade:check <dir> -c 2.4.3
 bin/uct refactor <dir>
 ```
 
+其中参数如下所示：
+
+- `<dir>`:Adobe Commerce安装目录。
+
 ## GraphQL模式兼容性验证
 
 的 [!DNL Upgrade Compatibility Tool] 还提供了相关选项，用于检查两个GraphQL端点并比较其架构，以查找它们之间的中断和危险更改：
@@ -350,9 +354,10 @@ bin/uct graphql:compare <schema1> <schema2>
  *   [WARNING] OPTIONAL_INPUT_FIELD_ADDED: An optional field sku on input type ProductAttributeSortInput was added.
 ```
 
-请参阅 [开发人员信息](../upgrade-compatibility-tool/developer.md) 以了解更多信息。
-
 您可以运行 [!DNL Upgrade Compatibility Tool] 通过PhpStorm插件运行配置。 请参阅 [[!DNL Upgrade Compatibility Tool] 运行配置](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html) 主题以了解更多信息。
+
+请参阅 [视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/uct-phpstorm.html?lang=en) (06:30)了解如何使用 [!DNL Upgrade Compatibility Tool] MagentoPHPStorm插件。
+
 
 ## 建议的操作
 

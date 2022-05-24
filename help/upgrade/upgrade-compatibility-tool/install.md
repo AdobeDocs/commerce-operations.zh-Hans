@@ -1,9 +1,9 @@
 ---
-title: 安装 [!DNL Upgrade Compatibility Tool]
-description: 按照以下步骤安装 [!DNL Upgrade Compatibility Tool] 为您的Adobe Commerce项目。
-source-git-commit: 218b099caa883f66ddda48407fb789e51fedc203
+title: 下载 [!DNL Upgrade Compatibility Tool]
+description: 请按照以下步骤下载 [!DNL Upgrade Compatibility Tool] 为您的Adobe Commerce项目。
+source-git-commit: 5ff08d231269ea0bcb69f8c80aa546b171a5e4a0
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 0%
 
 的 [!DNL Upgrade Compatibility Tool] 是一个命令行工具，可通过分析Adobe Commerce中安装的所有模块，根据特定版本检查某个特定版本的自定义实例。 它会返回一个错误和警告列表，在升级到最新版本的Adobe Commerce之前，必须解决这些错误和警告。
 
+## 先决条件
+
+安装 [!DNL Upgrade Compatibility Tool]，则必须安装必要的先决条件。
+
+请参阅 [先决条件](../upgrade-compatibility-tool/prerequisites.md) 以了解更多信息。
+
 ## 下载 [!DNL Upgrade Compatibility Tool]
 
 要下载 [!DNL Upgrade Compatibility Tool]，运行以下命令：
@@ -22,18 +28,6 @@ ht-degree: 0%
 ```bash
 composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
 ```
-
-## 安装
-
-安装 [!DNL Upgrade Compatibility Tool]，则必须安装必要的先决条件：
-
-* Adobe Commerce访问密钥
-* 编辑器
-* Node.js
-
-## 先决条件
-
-请参阅 [先决条件](../upgrade-compatibility-tool/prerequisites.md) 以了解更多信息。
 
 ### Adobe Commerce访问密钥
 
@@ -58,11 +52,11 @@ composer create-project magento/upgrade-compatibility-tool uct --repository http
 
 ### 编辑器
 
-克隆 [!DNL Upgrade Compatibility Tool] 存储库和运行 `composer install` 来安装依赖项。
+下载 [!DNL Upgrade Compatibility Tool] 存储库和运行 `composer install` 来安装依赖项。
 
 >[!WARNING]
 >
->如果 **Adobe Commerce访问密钥** 未正确配置， [!DNL Upgrade Compatibility Tool] 将不安装，并且在运行 `composer install` 命令。
+>如果 **Adobe Commerce访问密钥** 配置不正确，您无法下载 [!DNL Upgrade Compatibility Tool] 运行 `composer create-project` 命令它将失败。
 
 ### Node.js
 
