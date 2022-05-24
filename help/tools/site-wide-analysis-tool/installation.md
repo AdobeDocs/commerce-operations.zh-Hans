@@ -1,9 +1,9 @@
 ---
 title: 安装指南
 description: 使用本指南进行安装 [!DNL Site-Wide Analysis Tool] 用于您的网站
-source-git-commit: de2fb829def2cf94c452a06a219d7f29885c8f9f
+source-git-commit: a694de861fcc681d864ffb2c405b2366b32bba41
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ bin/magento module:status Magento_ServicesConnector
 1. 验证安装。
 
    ```bash
-   scheduler -v
+   ./scheduler -v
    ```
 
    ```bash
@@ -253,7 +253,7 @@ bin/magento module:status Magento_ServicesConnector
 
 ### 服务 {#service}
 
-1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 使用以下配置(替换 `<filesystemowner>` 具有Unix用户（该用户拥有安装代理的目录）。
+1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 使用以下配置(替换 `<filesystemowner>` 拥有安装代理和Adobe Commerce软件的目录的Unix用户)。 如果您以根用户身份下载代理，请更改目录和嵌套文件所有者。
 
    ```config
    [Unit]
