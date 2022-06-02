@@ -1,21 +1,50 @@
 ---
-title: 运行 [!DNL Upgrade Compatibility Tool]
+title: “运行 [!DNL Upgrade Compatibility Tool]"
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: 64b061f3b2f93827bfdb904a6faddbd21f4da5e6
+source-git-commit: ee949c72e42d329fdfb7f4068aeeb3cdc20e1758
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# 运行 [!DNL Upgrade Compatibility Tool]
+# 下载 [!DNL Upgrade Compatibility Tool]
 
 {{commerce-only}}
 
-的 [!DNL Upgrade Compatibility Tool] 是一个命令行工具，可通过分析Adobe Commerce中安装的所有模块，根据特定版本检查某个特定版本的自定义实例。 它会返回一个关键问题、错误和警告的列表，在升级到最新版本的Adobe Commerce之前，必须解决这些问题。
+要开始使用 [!DNL Upgrade Compatibility Tool] 在命令行界面中，通过运行以下命令下载它：
+
+```bash
+composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
+```
+
+>[!NOTE]
+>
+> 请参阅 [先决条件](../upgrade-compatibility-tool/prerequisites.md) 页面以了解有关使用该工具的最低要求的更多信息。
+
+## 运行 [!DNL Upgrade Compatibility Tool]
+
+的 [!DNL Upgrade Compatibility Tool] 是一个工具，可通过分析Adobe Commerce中安装的所有模块，根据特定版本检查该自定义实例。 它会返回一个关键问题、错误和警告的列表，在升级到最新版本的Adobe Commerce之前，必须解决这些问题。
 
 的 [!DNL Upgrade Compatibility Tool] 确定在尝试升级到较新版本的Adobe Commerce之前，必须在代码中修复的潜在问题。
+
+请参阅 [视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=en) (06:02)以进一步了解 [!DNL Upgrade Compatibility Tool].
+
+## 建议的操作
+
+### 优化结果
+
+的 [!DNL Upgrade Compatibility Tool] 提供包含结果的报表，其中默认包含项目中发现的所有问题。 您可以优化结果以重点关注完成升级所必须修复的问题：
+
+- 使用选项 `--ignore-current-version-compatibility-issues`，会针对您当前的Adobe Commerce版本禁止所有已知严重问题、错误和警告。 它仅针对您尝试升级到的版本提供错误。
+- 添加 `--min-issue-level` 选项，此设置允许设置最小问题级别，以帮助只排定升级中最重要问题的优先级。
+- 如果只想分析某个供应商、模块甚至目录，则还可以指定路径作为选项。 运行 `bin` 的命令 `-m`. 这允许 [!DNL Upgrade Compatibility Tool] 独立分析特定模块，并有助于解决在执行时可能出现的内存问题 [!DNL Upgrade Compatibility Tool].
+
+### 遵循Adobe Commerce最佳实践
+
+- 请避免使用两个同名模块。
+- 关注Adobe Commerce [编码标准](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
 
 ## 使用 `upgrade:check` 命令
 
@@ -85,130 +114,6 @@ bin/uct upgrade:check --help
 - `--ansi, --no-ansi`:启用ANSI输出。
 - `-n, --no-interaction`:执行命令时，不要提出任何交互式问题。
 - `-v, --vv, --vvv, --verbose`:增加输出通信的密集度。 1表示正常输出，2表示详细输出，3表示DEBUG输出。
-
-### 输出
-
-由于所执行之分析， [!DNL Upgrade Compatibility Tool] 导出一个报表，其中包含每个文件的问题列表，以指定其严重性、错误代码和错误描述。
-
-请参阅以下示例：
-
-```terminal
-File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
-------------------------------------------------------------------
- * [WARNING][1131] Line 23: Extending from class 'Magento\Framework\App\Action\Action' that is @deprecated on version '2.4.2'
- * [ERROR][1429] Line 103: Call method 'Magento\Framework\Api\SearchCriteriaBuilder::addFilters' that is non API on version '2.4.2'
- * [CRITICAL][1110] Line 60: Instantiating class/interface 'Magento\Catalog\Model\ProductRepository' that does not exist on version '2.4.2'
-```
-
-检查 [错误消息引用](error-messages.md) 主题以了解更多信息。
-
-该报表还包含一个详细的摘要，其中显示：
-
-- *当前版本*:当前安装的版本。
-- *Target版本*:要升级到的版本。
-- *执行时间*:分析构建报表所花费的时间(mm:ss)。
-- *需要更新的模块*:包含兼容性问题和需要更新的模块的百分比。
-- *需要更新的文件*:包含兼容性问题和需要更新的文件的百分比。
-- *严重错误总数*:发现的严重错误数。
-- *错误总数*:找到的错误数。
-- *警告总数*:找到的警告数。
-
-请参阅以下示例：
-
-```terminal
- ----------------------------- ------------------
-  Current version               2.4.2
-  Target version                2.4.3
-  Execution time                1m:10s
-  Modules that require update   78.33% (47/60)
-  Files that require update     21.62% (115/532)
-  Total critical issues         35
-  Total errors                  201
-  Total warnings                103
- ----------------------------- ------------------
-```
-
->[!NOTE]
->
->默认情况下， [!DNL Upgrade Compatibility Tool] 将报表导出为两种不同的格式： `json` 和 `html`.
-
-#### JSON
-
-JSON文件包含的信息与输出中显示的信息完全相同：
-
-- 已识别问题的列表。
-- 分析摘要。
-
-对于每个遇到的问题，报表会提供详细信息，如问题的严重性和描述。
-
->[!NOTE]
->
->输出文件夹的默认路径为 `var/output/[TIME]-results.json`.
-
-要将此报表导出到其他输出文件夹，请运行：
-
-```bash
-bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
-```
-
-其中参数如下所示：
-
-- `<dir>`:Adobe Commerce安装目录。
-- `[=JSON-OUTPUT-PATH]`:导出的路径目录 `.json` 输出文件。
-
->[!NOTE]
->
->输出文件夹的默认路径为 `var/output/[TIME]-results.json`.
-
-#### HTML
-
-HTML文件还包含分析摘要和已识别问题的列表。
-
-![HTML报表 — 摘要](../../assets/upgrade-guide/uct-html-summary.png)
-
-在 [!DNL Upgrade Compatibility Tool] 分析：
-
-![HTML报表 — 详细信息](../../assets/upgrade-guide/uct-html-details.png)
-
-HTML报表还包含四个不同的图表：
-
-- **按问题严重性划分的模块**:显示按模块划分的严重性分布。
-- **按问题严重性列出的文件**:按文件显示严重性分布。
-- **按问题总数排序的模块**:显示10个受损最多的模块，其中考虑了警告、错误和严重错误。
-- **具有相对大小和问题的模块**:模块包含的文件越多，其圆圈就越大。 模块遇到的问题越多，其圆就越红。
-
-通过这些图表，您可以（一目了然地）识别最易损坏的部件以及执行升级需要更多工作的部件。
-
-![HTML报表 — 图](../../assets/upgrade-guide/uct-html-diagrams.png)
-
-您将能够根据最小问题级别(默认情况下， [警告])。
-
-右上角有一个下拉菜单，允许您根据自己的必需品选择其他选项。 将相应地过滤已识别问题的列表。
-
-![HTML报表 — 下拉列表使用情况](../../assets/upgrade-guide/uct-html-filtered-issues-list.png)
-
-请注意，问题级别较低的问题已清除，但您收到通知，以便始终了解每个模块已识别的问题。
-
-此外，图表也会相应地更新，但 `Modules with relative sizes and issues`，通过 `min-issue-level` 最初设置。
-
-如果要查看不同的结果，则需要重新运行为 `--min-issue-level` 选项。
-
-![HTML报表 — 泡泡图图](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
-
-要将此报表导出到其他输出文件夹，请运行：
-
-```bash
-bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
-```
-
-其中参数如下所示：
-
-- `<dir>`:{{site.data.var.ee}}安装目录。
-- `[=HTML-OUTPUT-PATH]`:导出的路径目录 `.html` 输出文件。
-
->[!NOTE]
->
->输出文件夹的默认路径为 `var/output/[TIME]-results.html`.
 
 ### 使用 `--ignore-current-version-compatibility-issues` 选项
 
@@ -353,26 +258,6 @@ bin/uct graphql:compare <schema1> <schema2>
  *   [WARNING] FIELD_CHANGED_KIND: ConfigurableProduct.gender changed type from Int to String.
  *   [WARNING] OPTIONAL_INPUT_FIELD_ADDED: An optional field sku on input type ProductAttributeSortInput was added.
 ```
-
-您可以运行 [!DNL Upgrade Compatibility Tool] 通过PhpStorm插件运行配置。 请参阅 [[!DNL Upgrade Compatibility Tool] 运行配置](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html) 主题以了解更多信息。
-
-请参阅 [视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/uct-phpstorm.html?lang=en) (06:30)了解如何使用 [!DNL Upgrade Compatibility Tool] MagentoPHPStorm插件。
-
-
-## 建议的操作
-
-### 优化结果
-
-的 [!DNL Upgrade Compatibility Tool] 提供包含结果的报表，其中默认包含项目中发现的所有问题。 您可以优化结果以重点关注完成升级所必须修复的问题：
-
-- 使用选项 `--ignore-current-version-compatibility-issues`，会针对您当前的Adobe Commerce版本禁止所有已知严重问题、错误和警告。 它仅针对您尝试升级到的版本提供错误。
-- 添加 `--min-issue-level` 选项，此设置允许设置最小问题级别，以帮助只排定升级中最重要问题的优先级。
-- 如果只想分析某个供应商、模块甚至目录，则还可以指定路径作为选项。 运行 `bin` 的命令 `-m`. 这允许 [!DNL Upgrade Compatibility Tool] 独立分析特定模块，并有助于解决在执行时可能出现的内存问题 [!DNL Upgrade Compatibility Tool].
-
-### 遵循Adobe Commerce最佳实践
-
-- 请避免使用两个同名模块。
-- 关注Adobe Commerce [编码标准](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
 
 ## 疑难解答
 
