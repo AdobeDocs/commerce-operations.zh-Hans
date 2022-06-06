@@ -1,7 +1,7 @@
 ---
 title: 状态属性
 description: 了解 [!DNL Site-Wide Analysis Tool].
-source-git-commit: 1222d1c87de26ce95c4eefaa9d2a9c3731e1b3cf
+source-git-commit: 01d4e800c31615494e6e3f20adfbf3d35fabcce9
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -19,6 +19,3 @@ ht-degree: 0%
 **[!UICONTROL Health Index Bar]**:它测量的站点整体健康从0到100，其中0是最差的，100是完美的健康。 它是根据活动推荐的数量和优先级权重系数计算的。
 
 **[!UICONTROL Download Recommendations Report]**:Recommendations报表提供适用于您的项目的个性化推荐。 您可以单击此部分下载PDF报表。
-
-
-
