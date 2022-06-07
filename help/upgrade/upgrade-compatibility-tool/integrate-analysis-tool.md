@@ -1,9 +1,9 @@
 ---
 title: “集成 [!DNL Site-Wide Analysis Tool]"
 description: 按照以下步骤检索 [!DNL Upgrade Compatibility Tool] 报表 [!DNL Site-Wide Analysis Tool] 功能板。Adobe Commerce项目
-source-git-commit: ee949c72e42d329fdfb7f4068aeeb3cdc20e1758
+source-git-commit: c70e431035f0e0b2c495715563faf6be46aa514e
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -31,4 +31,4 @@ ht-degree: 0%
 
 ![UCT SWAT小组件 — 结果](../../assets/upgrade-guide/uct-swat-results.png)
 
-单击 **[!UICONTROL Download Report]** 检索 [!DNL Upgrade Compatibility Tool] HTML报告并查看详细信息。
+单击 **[!UICONTROL Download Report]** 检索 [!DNL Upgrade Compatibility Tool] [HTML报表](../upgrade-compatibility-tool/reports.md#html-report) 并查看详细信息。

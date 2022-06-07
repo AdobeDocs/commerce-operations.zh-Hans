@@ -1,9 +1,9 @@
 ---
 title: “概述 [!DNL Upgrade Compatibility Tool]"
 description: 了解 [!DNL Upgrade Compatibility Tool] 以及它如何帮助您完成Adobe Commerce项目。
-source-git-commit: ee949c72e42d329fdfb7f4068aeeb3cdc20e1758
+source-git-commit: fd624a97d74c7f6a9e29223227dae425bb6fa68c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 0%
 - 集成 [!DNL Upgrade Compatibility Tool] 和 [[!DNL Site-Wide Analysis Tool]](../upgrade-compatibility-tool/integrate-analysis-tool.md).
 - 中的运行配置 [MagentoPHPStorm插件](../upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md).
 
-### 工作流
+## 工作流
 
 下图显示了运行 [!DNL Upgrade Compatibility Tool]:
 
 ![[!DNL Upgrade Compatibility Tool] 图表](../../assets/upgrade-guide/uct-diagram-v5.png)
 
-### 帮助改进 [!DNL Upgrade Compatibility Tool]
+## 帮助改进 [!DNL Upgrade Compatibility Tool]
 
 如果您需要信息或遇到本指南未涵盖的问题，请使用以下资源：
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 请参阅 [Contribute](https://devdocs.magento.com/guides/v2.4/coding-standards/contributing.html) 主题以了解有关贡献编码标准的更多信息。
 
-### 资源
+## 资源
 
 请参阅以下资源以帮助您了解Adobe Commerce升级：
 
