@@ -1,9 +1,9 @@
 ---
 title: “集成 [!DNL Site-Wide Analysis Tool]"
 description: 按照以下步骤检索 [!DNL Upgrade Compatibility Tool] 报表 [!DNL Site-Wide Analysis Tool] 功能板。Adobe Commerce项目
-source-git-commit: 0d4ccc8c2e1a470b5fb3a7d59e81230e8986c257
+source-git-commit: 1fc12289125a5954243e177a0c21505234eb2e81
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,7 @@ ht-degree: 0%
 
 单击 **[!UICONTROL Download Report]** 检索 [!DNL Upgrade Compatibility Tool] [HTML报表](../upgrade-compatibility-tool/reports.md#html-report) 并查看详细信息。
 
-运行 [!DNL Upgrade Compatibility Tool] 到 [!DNL Site-Wide Analysis Tool] 该报表将显示项目版本与最新版本的比较结果。
+
+>[!NOTE]
+>
+> 运行 [!DNL Upgrade Compatibility Tool] 到 [!DNL Site-Wide Analysis Tool] 可优化结果，并帮助您重点关注对目标升级而言属于新问题且至关重要的问题。 它使用 [`--ignore-current-version-compatibility-errors`](run.md#optimize-your-results) 选项，并始终显示项目版本与最新版本的比较结果。
