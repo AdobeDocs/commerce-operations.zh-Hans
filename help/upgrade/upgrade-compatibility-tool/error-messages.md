@@ -3,7 +3,7 @@ title: '"[!DNL Upgrade Compatibility Tool] 错误消息”'
 description: 了解有关使用 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
 source-git-commit: a13b0ea5aa109ce2f5d33e0966b194d64bad5d0c
 workflow-type: tm+mt
-source-wordcount: '3782'
+source-wordcount: '3781'
 ht-degree: 4%
 
 ---
