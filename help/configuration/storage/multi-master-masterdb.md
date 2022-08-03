@@ -1,7 +1,7 @@
 ---
 title: 自动配置主控数据库
 description: 请参阅有关自动配置拆分数据库解决方案的指南。
-source-git-commit: bda758381d8d1b9209110adb168c36e1d504c4fa
+source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # 自动配置主控数据库
 
-{#ee-only}
+{{ee-only}}
 
 {{deprecate-split-db}}
 
