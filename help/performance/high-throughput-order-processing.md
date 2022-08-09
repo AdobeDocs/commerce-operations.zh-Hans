@@ -1,9 +1,9 @@
 ---
 title: 高吞吐量订单处理
 description: 为您的Adobe Commerce或Magento Open Source部署优化订单投放和结帐体验。
-source-git-commit: 4ce6f01ab6c3e0bb408657727b65bcb2f84dd954
+source-git-commit: 6afdb941ce3753af02bde3dddd4e66414f488957
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
@@ -166,6 +166,21 @@ bin/magento setup:config:set --deferred-total-calculating 0
 禁用后，在将产品添加到购物车时，不会进行库存检查。 如果跳过此库存检查，则某些缺货情景可能会引发其他类型的错误。 清单检查 _always_ 在订单放置步骤中发生，即使处于禁用状态也是如此。
 
 **在购物车加载时启用库存检查** 默认启用（设置为“是”）。 要在加载购物车时禁用库存检查，请设置 **[!UICONTROL Enable Inventory Check On Cart Load]** to `No` 在管理员UI中 **商店** > **配置** > **目录** > **库存** > **股票期权** 中。 请参阅 [配置全局选项][global] 和 [目录库存][inventory] 在 _用户指南_.
+
+## 负载平衡
+
+通过为MySQL数据库和Redis实例启用辅助连接，有助于平衡不同节点间的负载。
+
+Adobe Commerce可以异步读取多个数据库或Redis实例。 如果您在云基础架构上使用Commerce，则可以通过编辑 [MYSQL_USE_SLAVE_CONNECTION](https://devdocs.magento.com/cloud/env/variables-deploy.html#mysql_use_slave_connection) 和 [REDIS_USE_SLAVE_CONNECTION](https://devdocs.magento.com/cloud/env/variables-deploy.html#redis_use_slave_connection) 值 `.magento.env.yaml` 文件。 只需要一个节点来处理读写流量，因此将变量设置为 `true` 导致为只读流量创建次连接。 将值设置为 `false` 从 `env.php` 文件。
+
+示例 `.magento.env.yaml` 文件：
+
+```yaml
+stage:
+  deploy:
+    MYSQL_USE_SLAVE_CONNECTION: true
+    REDIS_USE_SLAVE_CONNECTION: true
+```
 
 <!-- link definitions -->
 
