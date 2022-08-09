@@ -1,9 +1,9 @@
 ---
 title: env.php引用
 description: 请参阅env.php文件的值列表。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 7ecd54b40690ec046e9a3d46a6ef9ad44ffaf4ab
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,7 @@ ht-degree: 0%
 | `cron` | 启用或禁用cron作业 |
 | `crypt` | 加密函数的加密密钥 |
 | `db` | 数据库连接设置 |
+| `default_connection` | 消息队列默认连接 |
 | `directories` | 商务目录映射设置 |
 | `downloadable_domains` | 可下载域列表 |
 | `install` | 安装日期 |
@@ -168,6 +169,19 @@ ht-degree: 0%
   ]
 ]
 ```
+
+## default_connection
+
+为消息队列定义默认连接。 值可以是 `db`, `amqp`，或自定义队列系统，如 `redismq`. 如果您指定 `db`，则必须先安装和配置消息队列软件。 否则，将无法正确处理消息。
+
+```conf
+'queue' => [
+    'default_connection' => 'amqp'
+]
+```
+
+如果 `queue/default_connection` 在系统中指定 `env.php` 文件，此连接将用于系统中所有消息队列，除非在 `queue_topology.xml`, `queue_publisher.xml` 或 `queue_consumer.xml` 文件。
+例如，如果 `queue/default_connection` is `amqp` in `env.php` 但 `db` 连接在模块的队列配置XML文件中指定，模块将使用MySQL作为消息代理。
 
 ## 目录
 
