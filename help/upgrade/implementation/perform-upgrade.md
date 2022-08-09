@@ -1,9 +1,9 @@
 ---
 title: 执行升级
 description: 按照以下步骤升级Adobe Commerce或Magento Open Source项目。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3c3966a904b0568e0255020d8880d348c357ea95
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,28 @@ ht-degree: 0%
    ```
 
    请参阅 [启用或禁用维护模式](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html) 的其他选项。 （可选）您可以创建 [“自定义维护模式”页](https://devdocs.magento.com/guides/v2.4/comp-mgr/trouble/cman/maint-mode.html).
+
+1. 在异步进程（如消息队列消费者）运行时启动升级进程，可能会导致数据损坏。 要防止数据损坏，请禁用所有cron作业。
+
+   _Adobe Commerce云基础架构：_
+
+   ```bash
+   ./vendor/bin/ece-tools cron:disable
+   ```
+
+   _Magento Open Source:_
+
+   ```bash
+   bin/magento cron:remove
+   ```
+
+1. 手动启动所有消息队列使用者，以确保使用所有消息。
+
+   ```bash
+   bin/magento cron:run --group=consumers
+   ```
+
+   等待cron作业完成。 您可以使用进程查看器或通过运行 `ps aux | grep 'bin/magento queue'` 命令多次，直到所有进程完成。
 
 1. 创建备份 `composer.json` 文件。
 
