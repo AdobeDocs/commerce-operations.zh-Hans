@@ -1,9 +1,9 @@
 ---
 title: 安装清漆
 description: 请参阅有关安装清漆的建议。
-source-git-commit: 688db9fcc9cd196d1560e49719b03ef32d13870d
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 安装清漆软件超出本指南的范围。 有关安装清漆的详细信息，请参阅：
 
-- [安装维基](http://wiki.mikejung.biz/Varnish)
+- [安装指南](https://www.varnish-software.com/developers/tutorials/installing-varnish-ubuntu/)
 - [清漆安装导向件](https://www.varnish-cache.org/docs)
-- [如何安装清漆(Tecmint)](http://www.tecmint.com/install-varnish-cache-web-accelerator)
+- [如何安装清漆(Tecmint)](https://www.tecmint.com/install-varnish-cache-web-accelerator/)
 
 >[!INFO]
 >

@@ -1,9 +1,9 @@
 ---
 title: 使用清漆清除缓存
 description: 了解缓存清除如何与Riket配合使用，以及如何将其用作Adobe Commerce应用程序的Web缓存加速器。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ## 配置商务以清除清漆
 
-在使用配置清漆主机后，商务清除清漆主机 [`magento setup:config:set`](https://devdocs.magento.com/guides/2.4/install-gde/install/cli/install-cli-subcommands-deployment.html) 命令。
+在使用配置清漆主机后，商务清除清漆主机 [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset) 命令。
 
 您可以使用可选参数 `--http-cache-hosts` 参数，指定以逗号分隔的清漆主机和侦听端口列表。 配置所有清漆主机，无论您有一个还是多个清漆主机。 （请勿将主机分隔为空格字符。）
 
@@ -57,4 +57,4 @@ bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 
 要使用管理员刷新缓存，请单击 **[!UICONTROL SYSTEM]** >工具> **缓存管理**，然后单击 **刷新Magento缓存** 的双曲余切值。 （您还可以刷新单个缓存类型。）
 
-要使用命令行刷新缓存，通常使用 [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令 [文件系统所有者](https://devdocs.magento.com/guides/2.4/install-gde/prereq/file-sys-perms-over.html).
+要使用命令行刷新缓存，通常使用 [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).

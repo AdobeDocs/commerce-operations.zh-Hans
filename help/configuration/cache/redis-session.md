@@ -1,9 +1,9 @@
 ---
 title: 将Redis用于会话存储
 description: 了解如何配置Redis以用于会话存储。
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '724'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ where
 | session-save-redis-timeout | 超时 | 连接超时，以秒为单位。 | 2.5 |
 | session-save-redist-persistent-id | persistent_identifier | 用于启用永久连接的唯一字符串（例如sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70). |
 | session-save-redis-db | 数据库 | 唯一Redis数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要信息**:如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认缓存数据库编号指定为0，将页缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
-| session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩(建议在 [suhosin.session.encrypt = On](https://suhosin.org/stories/howtos.html))。<br>[字符串大于64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048年 |
+| session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩(建议在 `suhosin.session.encrypt = On`)。<br>[字符串大于64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048年 |
 | session-save-redis-compression-lib | compression_library | 选项：gzip、lzf、lz4或snappy。 | gzip |
 | session-save-redis-log-level | log_level | 设置为以下任意内容，按从最少详细到最详细的顺序列出：<ul><li>0（紧急情况）只有最严重的错误)<li>1(警报：需要立即执行操作)<li>2(关键：应用程序组件不可用)<li>3(错误：运行时错误，非严重但必须监控)<li>4(警告：其他信息，建议)<li>5(通知：正常但重要的条件)<li>6(信息：信息性消息)<li>7（调试）仅用于开发或测试的最多信息)</ul> | 1 |
 | session-save-redis-max-concurrency | max_concurrency | 可等待一个会话锁定的最大进程数。 对于大型生产群集，请将此值设置为PHP进程数的至少10%。 | 6 |

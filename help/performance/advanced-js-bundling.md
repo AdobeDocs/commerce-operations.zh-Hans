@@ -1,9 +1,9 @@
 ---
 title: 高级 [!DNL JavaScript] 捆绑
 description: 了解JavaScript捆绑如何减小服务器请求的大小和频率。
-source-git-commit: 09c4d0e09354230c8779b930f085d8c7c131b85b
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '2137'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 - [nodejs](https://nodejs.org/en/download/)
 - [r.js](http://requirejs.org/docs/optimization.html#download)
-- [[!DNL PhantomJS]](http://phantomjs.org/) （可选）
+- [[!DNL PhantomJS]](https://phantomjs.org/) （可选）
 
 ### 示例代码
 

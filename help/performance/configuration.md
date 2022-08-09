@@ -1,9 +1,9 @@
 ---
 title: 配置最佳实践
 description: 使用这些最佳实践优化Adobe Commerce或Magento Open Source部署的响应时间。
-source-git-commit: 20c4f55162b25be8906562c395abf4671437992b
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 ### 捆绑提示
 
-* 我们建议您使用第三方工具进行缩小和捆绑(例如 [r.js](http://requirejs.org/))。 [!DNL Commerce] 内置机制不是最佳机制，将作为备用替代产品提供。
+* 我们建议您使用第三方工具进行缩小和捆绑(例如 [r.js](https://requirejs.org/))。 [!DNL Commerce] 内置机制不是最佳机制，将作为备用替代产品提供。
 * 激活HTTP2协议是使用JS捆绑的一个好替代方法。 该协议提供了几乎相同的好处。
 * 我们不建议使用已弃用的设置，如合并JS和CSS文件，因为这些设置仅适用于页面HEAD部分中同步加载的JS。 使用此技术可能会导致捆绑和要求JS逻辑无法正确工作。
 

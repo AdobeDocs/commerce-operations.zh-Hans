@@ -1,9 +1,9 @@
 ---
 title: 缓存类型
 description: 将缓存前端与缓存类型关联。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,11 @@ ht-degree: 0%
 
 where
 
-- `<frontend_type>` 是低级前端缓存类型。 指定与兼容的类的名称 [Zend\Cache\Core](https://framework.zend.com/apidoc/1.7/Zend_Cache/Zend_Cache_Core.html).
-
-   如果忽略 `<frontend_type>`, [Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php) 中，将使用。
+- `<frontend_type>` 是低级前端缓存类型。 指定与兼容的类的名称 `Zend\Cache\Core`.
+如果忽略 `<frontend_type>`, [Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php) 中，将使用。
 
 - `<frontend_option>`, `<frontend_option_value>` 是商务框架在创建时将作为关联数组传递到前端缓存的选项的名称和值。
-- `<backend_type>` 是低级后端缓存类型。 指定与兼容的类的名称 [Zend_Cache_Backend](https://framework.zend.com/apidoc/1.7/Zend_Cache/Zend_Cache_Backend/Zend_Cache_Backend.html) 和工具 [Zend_Cache_Backend_Interface](https://framework.zend.com/apidoc/1.6/Zend_Cache/Zend_Cache_Backend/Zend_Cache_Backend_Interface.html).
+- `<backend_type>` 是低级后端缓存类型。 指定与兼容的类的名称 `Zend_Cache_Backend` 和工具 `Zend_Cache_Backend_Interface`.
 - `<backend_option>` 和 `<backend_option_value>` 是商务框架在创建时将作为关联数组传递到后端缓存的选项的名称和值。
+
+请参阅 [Laminas文档](https://docs.laminas.dev/) 了解最新的Zend信息。
