@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] 错误消息”'
 description: 了解有关使用 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: a13b0ea5aa109ce2f5d33e0966b194d64bad5d0c
+source-git-commit: 038cb256cb19c253ae9c0375258a555601428847
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '4140'
 ht-degree: 4%
 
 ---
@@ -64,6 +64,17 @@ ht-degree: 4%
 | 5072 | 可能存在Magento2设计违规。 检测到典型的Magento1.x结构 | 将构建更新为Magento2标准。 |
 | 5076 | 无法在命名空间中使用，因为它是自PHP 7起保留的 | 将命名空间中的保留字替换为非保留关键字。 |
 | 5077 | 无法用作类名称，因为自PHP 7起已保留该名称 | 将保留的类名称替换为非保留的名称。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+### 数据库模式
+
+如果自定义约束引用已删除的核心表或列，则会报告数据库架构关键问题。
+
+| 错误代码 | 错误描述 | 建议的操作 |
+| --- | --- | --- |
+| 7009 | 自定义约束正在引用在目标版本中删除的核心表 | 删除约束或更新referenceTable和referenceColumn属性 |
+| 7010 | 自定义约束正在引用在目标版本中删除的核心列 | 删除约束或更新referenceColumn属性 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -199,6 +210,23 @@ GraphQL如果目标版本中不存在架构项，则会引发架构关键问题�
 | 6009 | `jQuery.isArray()` 已弃用 | 请改用本机Array.isArray方法。 |
 | 6009 | `jQuery.parseJSON()` 已弃用 | 要解析JSON字符串，请改用本机JSON.parse方法。 |
 | 6010 | (`jQuery.expr[":"]`, `jQuery.expr.filters`)已弃用 | 请改用jQuery.expr.pseudos。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+### 数据库模式
+
+如果在目标Adobe Commerce版本中添加或删除的数据库表、列、索引或约束可能与自定义数据库架构冲突，则会引发数据库架构错误。
+
+| 错误代码 | 错误描述 | 建议的操作 |
+| --- | --- | --- |
+| 7001 | 目标核心版本引入了与自定义模块声明的表同名的表 | 使用新的核心表（如果适用）或重命名自定义表 |
+| 7002 | 由自定义模块扩展的核心表已在目标版本中删除 | 所有已删除的核心表引用都应从代码库中删除 |
+| 7003 | 目标核心版本引入了与自定义模块声明的列同名的列 | 使用新的核心列（如果适用）或重命名自定义列 |
+| 7004 | 由自定义模块扩展的核心列已在目标版本中删除 | 所有已删除的核心列引用都应从代码库中删除 |
+| 7005 | 目标核心版本引入了一个索引，该索引与自定义模块声明的索引具有相同的referenceId | 删除（如果复制到引入的核心索引）或重命名自定义索引 |
+| 7006 | 由自定义模块扩展的核心索引已在目标版本中删除 | 所有已删除的核心索引引用都应从代码库中删除 |
+| 7007 | 目标核心版本引入了与自定义模块声明的约束同名的约束 | 删除（如果复制到引入的核心约束）或重命名自定义约束 |
+| 7008 | 已在目标版本中删除由自定义模块扩展的核心约束 | 使用新的核心约束（如果适用）或重命名自定义约束 |
 
 {style=&quot;table-layout:auto&quot;}
 
