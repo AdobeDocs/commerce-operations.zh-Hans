@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] 要求”'
 description: '验证您的系统是否满足运行 [!DNL Upgrade Compatibility Tool] 在命令行界面中。Adobe Commerce项目 '
-source-git-commit: 7ec999f9122eb0707ac6c37b7b49f9c423945318
+source-git-commit: 167e0e7554e912aeef276a34daeaff29d7762009
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,31 @@ ht-degree: 0%
 | 编辑器 | 无已知要求。 |
 | Node.js | Node.js版本 `^12.22.0`, `^14.17.0`或 `>=16.0.0` (请参阅 [安装Node.js](https://nodejs.dev/learn/how-to-install-nodejs)) |
 | 内存限制 | 至少2GB内存。 |
+
+[!DNL Upgrade Compatibility Tool] reamires [PCNTL](https://www.php.net/manual/en/book.pcntl.php) 和其他用于执行的PHP扩展。 使用检查所需的PHP扩展 `composer check-platform-reqs` 命令：
+
+```bash
+# Example output of `composer check-platform-reqs` command for UCT 2.2.6 and PHP 7.4:
+
+$ composer check-platform-reqs
+Checking platform requirements for packages in the vendor dir
+ext-ctype     *         success provided by symfony/polyfill-ctype
+ext-dom       20031129  success
+ext-filter    7.4.30    success
+ext-json      7.4.30    success
+ext-libxml    7.4.30    success
+ext-mbstring  *         success provided by symfony/polyfill-mbstring
+ext-openssl   7.4.30    success
+ext-pcntl     7.4.30    success
+ext-pcre      7.4.30    success
+ext-phar      7.4.30    success
+ext-simplexml 7.4.30    success
+ext-tokenizer 7.4.30    success
+ext-xml       7.4.30    success
+ext-xmlwriter 7.4.30    success
+ext-zip       1.15.6    success
+php           7.4.30    success
+```
 
 Adobe Commerce仅在Linux操作系统上受支持。 您可以运行 [!DNL Upgrade Compatibility Tool] 在Linux操作系统中。 您不必运行 [!DNL Upgrade Compatibility Tool] Adobe Commerce实例所在的位置。
 
