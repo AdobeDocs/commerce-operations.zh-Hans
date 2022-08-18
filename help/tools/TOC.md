@@ -1,9 +1,9 @@
 ---
 user-guide-title: 工具
 user-guide-description: 了解可以在Adobe Commerce中使用的不同工具、其用途、安装过程以及如何获取访问权限。
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: 1b9f57460f5b336c4ccacef01709c696acbc8316
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 0%
    - [RabbitMQ选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Cron选项卡](observation-for-adobe-commerce/cron-tab.md)
    - [“索引”选项卡](observation-for-adobe-commerce/indexing-tab.md)
+   - [概览选项卡](observation-for-adobe-commerce/oac-quickview-tab.md)
    - [“安全”选项卡](observation-for-adobe-commerce/security-tab.md)
+   - [红外选项卡](observation-for-adobe-commerce/oac-infra.md)
    - [如何使用Observation for Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
-
