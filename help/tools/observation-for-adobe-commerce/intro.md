@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Observation for Adobe Commerce]"'
 description: 了解 [!DNL Observation for Adobe Commerce]、其用途、使用时间以及获取访问权限。
-source-git-commit: 0ee158cb33757b33307d0ca669b921a82665cefe
+source-git-commit: e042acac00d9aaa7d2f49beb8ce98e213ae369e7
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -31,3 +31,9 @@ ht-degree: 0%
 * 利用日志中关键错误消息的可视摘要简化数据收集和解析。
 
 * 深入了解各种服务（如IP请求频率、访问的URL、使用的API等）。
+
+## [!DNL Observation for Adobe Commerce] 演示
+
+请观看此视频以了解 [!DNL Observation for Adobe Commerce]:
+
+>[!VIDEO](https://video.tv.adobe.com/v/344444?quality=12)
