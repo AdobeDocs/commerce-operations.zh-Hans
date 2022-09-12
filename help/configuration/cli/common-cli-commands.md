@@ -1,9 +1,9 @@
 ---
 title: 常用命令
 description: 查看常见Commerce CLI命令和用法的采样。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -44,10 +44,10 @@ bin/magento help cache:enable
 | [`magento dev:tests:run`](../cli/unit-tests.md) | 运行自动测试 |
 | [`magento dev:xml:convert`](../cli/convert-layout-files.md) | 更新布局XML文件以匹配新的可扩展样式表语言转换(XSLT)样式表 |
 | [`magento setup:perf:generate-fixtures`](../cli/generate-data.md) | 生成要用于性能测试的数据。 |
-| [`magento sampledata:install`](https://devdocs.magento.com/guides/v2.4/install-gde/install/sample-data.html) | 安装商务应用程序后，安装可选的示例数据。<br><br>有关示例数据的更多详细信息，请参阅 [可选示例数据](https://devdocs.magento.com/guides/v2.4/install-gde/install/sample-data.html). |
+| [`magento sampledata:install`](../../installation/sample-data/overview.md) | 安装商务应用程序后，安装可选的示例数据。<br><br>有关示例数据的更多详细信息，请参阅 [可选示例数据](../../installation/sample-data/overview.md). |
 | [`magento config:{set/sensitive:set/show/}`](../cli/set-configuration-values.md) | 管理后端配置 |
-| [`magento admin:user:{create/unlock}`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-admin.html) | 创建/编辑/解锁管理员用户。 |
-| [`magento dev:template-hints:{enable/disable}`](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/themes/debug-theme.html) | 启用/禁用开发人员模板提示。 |
+| [`magento admin:user:{create/unlock}`](../../installation/tutorials/admin.md#create-edit-or-unloack-an-administrator-account) | 创建/编辑/解锁管理员用户。 |
+| [`magento dev:template-hints:{enable/disable}`](https://developer.adobe.com/commerce/frontend-core/guide/themes/debug/) | 启用/禁用开发人员模板提示。 |
 
 ## 常见参数
 

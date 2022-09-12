@@ -1,9 +1,9 @@
 ---
 title: 完整先决条件
 description: 通过完成这些先决步骤，为升级准备Adobe Commerce或Magento Open Source项目。
-source-git-commit: 0729e84adabcded6d50cf28a7525b97fd50d45f5
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 完成升级先决条件
 
-了解运行Adobe Commerce或Magento Open Source所需的内容非常重要。 您必须先查看 [系统要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) 对于您计划升级到的版本。
+了解运行Adobe Commerce或Magento Open Source所需的内容非常重要。 您必须先查看 [系统要求](../../installation/system-requirements.md) 对于您计划升级到的版本。
 
 在查看系统要求后，您必须先完成以下先决条件，然后才能升级系统：
 
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 ## 更新所有软件
 
-的 [系统要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) 准确描述哪些第三方软件版本已在Adobe Commerce和Magento Open Source版本中进行了测试。
+的 [系统要求](../../installation/system-requirements.md) 准确描述哪些第三方软件版本已在Adobe Commerce和Magento Open Source版本中进行了测试。
 
-确保更新了环境中的所有系统要求和依赖项。 请参阅PHP [7.4](https://www.php.net/manual/en/migration74.php)、PHP [8.0](https://www.php.net/manual/en/migration80.php)、PHP [8.1](https://www.php.net/manual/en/migration81.php)和 [所需的PHP设置](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/php-settings.html#php-required-set).
+确保更新了环境中的所有系统要求和依赖项。 请参阅PHP [7.4](https://www.php.net/manual/en/migration74.php)、PHP [8.0](https://www.php.net/manual/en/migration80.php)、PHP [8.1](https://www.php.net/manual/en/migration81.php)和 [所需的PHP设置](../../installation/prerequisites/php-settings.md#php-settings).
 
 ## 验证是否安装了支持的搜索引擎
 
@@ -50,10 +50,10 @@ Adobe Commerce和Magento Open Source需要安装Elasticsearch或OpenSearch才能
 
 自2.4起，MySQL不再是受支持的目录搜索引擎。 升级前，必须安装并配置Elasticsearch或OpenSearch。 使用以下资源帮助您完成此过程：
 
-- [安装和配置Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/es-overview.html)
+- [安装和配置Elasticsearch](../../configuration/search/overview-search.md)
 - [安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-- 配置 [nginx](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-nginx.html) 或 [Apache](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-apache.html) 与搜索引擎结合使用
-- [配置商务以使用Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) 重新索引
+- 配置 [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) 或 [Apache](../../installation/prerequisites/search-engine/configure-apache.md) 与搜索引擎结合使用
+- [配置商务以使用Elasticsearch](../../configuration/search/configure-search-engine.md) 重新索引
 
 某些第三方目录搜索引擎在Adobe Commerce搜索引擎上运行。 请联系您的供应商以确定是否必须更新扩展。
 
@@ -63,9 +63,9 @@ Adobe Commerce和Magento Open Source需要安装Elasticsearch或OpenSearch才能
 
 请参阅 [升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 有关在部署到生产之前备份数据、检测潜在迁移问题和测试升级的完整说明。 根据您当前版本的Elasticsearch，可能需要或不需要完全重新启动群集。
 
-Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#prereq-java) 以检查安装的JDK版本。
+Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查安装的JDK版本。
 
-[配置Magento以使用Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) 介绍在将Elasticsearch2更新到支持的版本后必须执行的任务。
+[配置Elasticsearch](../../configuration/search/configure-search-engine.md) 介绍在将Elasticsearch2更新到支持的版本后必须执行的任务。
 
 ### OpenSearch
 
@@ -77,9 +77,9 @@ OpenSearch是Elasticsearch7.10.2的开源分支，在Elasticsearch进行许可�
 
 您可以 [从Elasticsearch迁移到OpenSearch](opensearch-migration.md) 仅当您升级到上面列出的Adobe Commerce或Magento Open Source版本（或更高版本）时。
 
-OpenSearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#prereq-java) 以检查安装的JDK版本。
+OpenSearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查安装的JDK版本。
 
-[配置Magento以使用Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) 描述更改搜索引擎后必须执行的任务。
+[配置Magento以使用Elasticsearch](../../configuration/search/configure-search-engine.md) 描述更改搜索引擎后必须执行的任务。
 
 ### 第三方扩展
 
@@ -93,8 +93,8 @@ Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 值
 
 要从命令行设置上限，请执行以下操作：
 
-1. 切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. 将上限设置为65536。
+1. 切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 将ulimit设置为 `65536`.
 
    ```bash
    ulimit -s 65536
@@ -106,7 +106,7 @@ Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 值
 
 要在Bash Shell中设置值，请执行以下操作：
 
-1. 切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 打开 `/home/<username>/.bashrc` 在文本编辑器中。
 1. 添加以下行：
 
@@ -150,7 +150,7 @@ crontab -l
 
 ![](../../assets/upgrade-guide/system-messages.png)
 
-请参阅 [配置并运行cron](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cron.html) 。
+请参阅 [配置并运行cron](../../configuration/cli/configure-cron-jobs.md) 。
 
 ## 设置DATA_CONVERTER_BATCH_SIZE
 
@@ -172,7 +172,7 @@ Adobe Commerce 2.4包含安全增强功能，这些功能要求将一些数据�
 
 要设置环境变量，请执行以下操作：
 
-1. 切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 设置变量：
 
    ```bash
@@ -191,9 +191,9 @@ Adobe Commerce 2.4包含安全增强功能，这些功能要求将一些数据�
 
 ## 验证文件系统权限
 
-出于安全考虑，Adobe Commerce和Magento Open Source需要对文件系统拥有特定权限。 权限与 _[所有权](https://devdocs.magento.com/guides/v2.4/comp-mgr/prereq/prereq_compman-checklist.html#magento-owner-group)_. 所有权决定了谁可以在文件系统上执行操作；权限决定了用户可以执行的操作。
+出于安全考虑，Adobe Commerce和Magento Open Source需要对文件系统拥有特定权限。 权限与 _[所有权](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. 所有权决定了谁可以在文件系统上执行操作；权限决定了用户可以执行的操作。
 
-文件系统中的目录必须由 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html) 群组。
+文件系统中的目录必须由 [文件系统所有者](../../installation/prerequisites/file-system/overview.md) 群组。
 
 要验证文件系统权限设置是否正确，请登录到应用程序服务器，或使用托管提供商的文件管理器应用程序。
 
@@ -254,11 +254,11 @@ ls -la /var/www/html/magento2/pub
 
 因为Adobe Commerce和Magento Open Source会将静态文件资产部署到的子目录 `pub`，则最好也在此处验证权限和所有权。
 
-有关更多信息，请参阅 [文件系统权限和所有权](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+有关更多信息，请参阅 [文件系统权限和所有权](../../installation/prerequisites/file-system/overview.md).
 
 ## 设置 `pub/` 目录根目录
 
-请参阅 [修改docroot以提高安全性](https://devdocs.magento.com/guides/v2.4/install-gde/tutorials/change-docroot-to-pub.html) 以了解更多详细信息。
+请参阅 [修改docroot以提高安全性](../../installation/tutorials/docroot.md) 以了解更多详细信息。
 
 ## 安装编辑器更新插件
 

@@ -1,9 +1,9 @@
 ---
 title: 开发环境Recommendations
 description: 了解有关设置本地Adobe Commerce或Magento Open Source开发环境的性能建议。
-source-git-commit: 87b353b408ecd7f55cea5b4775a0c8523952abc0
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -47,5 +47,5 @@ ht-degree: 0%
 
 <!-- Link definitions -->
 
-[清理缓存]: https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean
-[禁用缓存]: https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-en
+[清理缓存]: ../configuration/cli/manage-cache.md#clean-and-flush-cache-types
+[禁用缓存]: ../configuration/cli/manage-cache.md#enable-or-disable-cache-types

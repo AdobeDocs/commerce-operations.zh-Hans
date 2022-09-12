@@ -1,9 +1,9 @@
 ---
 title: 代码编译器
 description: 了解如何从命令行运行代码编译器。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Generated code and dependency injection configuration successfully.
 
    使用 `[-c|--clear-static-content]` 选项清除 [静态内容](https://glossary.magento.com/static-content). 如果您之前已启用或已禁用模块，并且必须清除之前为这些模块生成的静态内容，则必须执行此操作。
 
-   请参阅 [启用模块](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html).
+   请参阅 [启用模块](../../installation/tutorials/manage-modules.md).
 
 1. 编译代码。
 

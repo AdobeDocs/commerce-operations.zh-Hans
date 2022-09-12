@@ -1,9 +1,9 @@
 ---
 title: 验证拆分数据库
 description: 了解如何验证Commerce Split数据库配置是否正常工作。
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 - 商务 [报价](https://glossary.magento.com/quote) 数据库：11个表
 - 商务销售数据库：55个表
 
-要验证拆分数据库是否正常工作，请执行以下任务，并使用数据库工具(如 [phpmyadmin](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/optional.html#install-optional-phpmyadmin):
+要验证拆分数据库是否正常工作，请执行以下任务，并使用数据库工具(如 [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin):
 
 | 验证内容 | 如何验证 |
 | -------------- | ------------- |
@@ -30,4 +30,4 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->您必须手动备份另外两个数据库实例。 商务仅备份主数据库实例。 的 [`magento setup:backup --db`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html) 命令和管理选项不备份其他表。
+>您必须手动备份另外两个数据库实例。 商务仅备份主数据库实例。 的 [`magento setup:backup --db`](../../installation/tutorials/backup.md) 命令和管理选项不备份其他表。

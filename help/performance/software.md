@@ -1,9 +1,9 @@
 ---
 title: 软件Recommendations
 description: 查看与Adobe Commerce部署和Magento Open Source部署的最佳性能相关的推荐软件列表。
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1415'
 ht-degree: 0%
 
 ---
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 对于的生产实例，我们需要以下软件 [!DNL Commerce]:
 
-* [PHP](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
+* [PHP](../installation/system-requirements.md)
 * Nginx和 [PHP-FPM](https://php-fpm.org/)
-* [[!DNL MySQL]](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/mysql.html)
-* [[!DNL Elasticsearch] 或OpenSearch](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html)
+* [[!DNL MySQL]](../installation/prerequisites/database/mysql.md)
+* [[!DNL Elasticsearch] 或OpenSearch](../installation/prerequisites/search-engine/overview.md)
 
 对于多服务器部署，或者对于计划扩展其业务的商户，我们建议执行以下操作：
 
-* [[!DNL Varnish] 缓存](https://devdocs.magento.com/guides/v2.4/config-guide/varnish/config-varnish.html)
-* [雷迪斯](https://devdocs.magento.com/guides/v2.4/config-guide/redis/redis-session.html) （从2.0.6+版）
-* 作为 [默认缓存](https://devdocs.magento.com/guides/v2.4/config-guide/redis/redis-pg-cache.html) （请勿将此实例用于页面缓存）
+* [[!DNL Varnish] 缓存](../configuration/cache/config-varnish.md)
+* [雷迪斯](../configuration/cache/redis-session.md) （从2.0.6+版）
+* 作为 [默认缓存](../configuration/cache/redis-pg-cache.md) （请勿将此实例用于页面缓存）
 
-请参阅 [系统要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) 有关每种软件类型支持的版本的信息。
+请参阅 [系统要求](../installation/system-requirements.md) 有关每种软件类型支持的版本的信息。
 
 ## 操作系统
 
@@ -157,7 +157,7 @@ opcache.max_accelerated_files=60000
 
 #### APCU
 
-我们建议启用 [PHP APCu扩展](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) 和 [配置 `composer` 支持它](https://devdocs.magento.com/guides/v2.4/performance-best-practices/deployment-flow.html#preprocess-dependency-injection-instructions) 以优化性能。 此扩展会缓存已打开文件的文件位置，这会提高 [!DNL Commerce] 服务器调用，包括页面、Ajax调用和端点。
+我们建议启用 [PHP APCu扩展](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) 和 [配置 `composer` 支持它](../performance/deployment-flow.md#preprocess-dependency-injection-instructions) 以优化性能。 此扩展会缓存已打开文件的文件位置，这会提高 [!DNL Commerce] 服务器调用，包括页面、Ajax调用和端点。
 
 编辑 `apcu.ini` 文件以包含以下内容：
 
@@ -208,7 +208,7 @@ Magento强烈建议使用 [!DNL Varnish] 作为存储的完整页面缓存服务
 * **宽限模式** 允许您指示 [!DNL Varnish] 将缓存中的对象保留在其生存时间(TTL)期限之后，并在 [!DNL Commerce] 不正常，或者尚未获取新内容。
 * **Saint模式** 黑名单不健康 [!DNL Commerce] 服务器的可配置时间。 因此，在使用 [!DNL Varnish] 作为负载平衡器。
 
-请参阅 [高级 [!DNL Varnish] 配置](https://devdocs.magento.com/guides/v2.4/config-guide/varnish/config-varnish-advanced.html) 有关实施这些功能的更多信息。
+请参阅 [高级 [!DNL Varnish] 配置](../configuration/cache/config-varnish-advanced.md) 有关实施这些功能的更多信息。
 
 ### 优化资产性能
 

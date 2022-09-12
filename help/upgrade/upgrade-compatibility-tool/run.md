@@ -1,9 +1,9 @@
 ---
 title: “运行 [!DNL Upgrade Compatibility Tool]"
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在命令行界面中。Adobe Commerce项目
-source-git-commit: c10afb6632fa4e77f46b540c2b89f54b9cab430c
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
@@ -156,7 +156,7 @@ A _香草_ 安装是对特定发行版本的指定版本标记或分支的全新
 
 您可以运行 [!DNL Upgrade Compatibility Tool] 命令 `--vanilla-dir` 选项以指定Adobe Commerce vanilla安装目录。
 
-请参阅 [部署原版实例](https://devdocs.magento.com/contributor-guide/contributing.html#vanilla-pr) 主题以了解更多信息。
+请参阅 [部署原版实例](https://developer.adobe.com/commerce/contributor/guides/code-contributions/#deploy-vanilla-magento-open-source-instance) 主题以了解更多信息。
 
 ## 使用 `refactor` 命令
 
@@ -249,7 +249,7 @@ bin/uct upgrade:check --help
 ## 遵循Adobe Commerce最佳实践
 
 - 请避免使用两个同名模块。
-- 关注Adobe Commerce [编码标准](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
+- 关注Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards/).
 - Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) 最佳实践。
 
 ## 优化结果

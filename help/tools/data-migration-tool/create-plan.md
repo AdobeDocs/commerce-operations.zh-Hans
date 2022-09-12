@@ -1,9 +1,9 @@
 ---
 title: 创建数据迁移计划
 description: 请按照以下步骤创建数据迁移计划，以确保成功从Magento1升级到Magento2。
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,6 @@ ht-degree: 0%
 1. Magento2商店现已准备就绪。 您和您的客户可以恢复所有活动。
 
 <!-- LINK ADDRESSES -->
-[Magento系统要求]: https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html
+[Magento系统要求]: ../../installation/system-requirements.md
 [Commerce Marketplace]: https://marketplace.magento.com
-[配置指南]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html
+[配置指南]: ../../configuration/cli/manage-indexers.md

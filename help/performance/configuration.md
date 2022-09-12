@@ -1,9 +1,9 @@
 ---
 title: 配置最佳实践
 description: 使用这些最佳实践优化Adobe Commerce或Magento Open Source部署的响应时间。
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Cron作业
 
-中的所有异步操作 [!DNL Commerce] 使用Linux执行 `cron` 命令。 请参阅 [配置并运行cron](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cron.html) 才能正确配置。
+中的所有异步操作 [!DNL Commerce] 使用Linux执行 `cron` 命令。 请参阅 [配置并运行cron](../configuration/cli/configure-cron-jobs.md) 才能正确配置。
 
 ## 索引器
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->的 **[!UICONTROL Developer]** 选项卡和选项仅在 [开发人员模式](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-mode.html). [Adobe Commerce云基础架构](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) 不支持 `Developer` 模式。
+>的 **[!UICONTROL Developer]** 选项卡和选项仅在 [开发人员模式](../configuration/cli/set-mode.md). [Adobe Commerce云基础架构](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) 不支持 `Developer` 模式。
 
 ## 延期库存更新
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->的 **[!UICONTROL Developer]** 选项卡和选项仅在 [开发人员模式](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-mode.html). [Adobe [!DNL Commerce] 云基础架构](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) 不支持 `Developer` 模式。
+>的 **[!UICONTROL Developer]** 选项卡和选项仅在 [开发人员模式](../configuration/cli/set-mode.md). [Adobe [!DNL Commerce] 云基础架构](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) 不支持 `Developer` 模式。
 
 激活 **[!UICONTROL Enable [!DNL JavaScript] Bundling]** 选项，则允许Commerce将所有JS资源合并到一个或一组在店面页面中加载的包中。 捆绑JS可减少对服务器的请求，从而提高页面性能。 它还可帮助浏览器在首次调用时缓存JS资源，并重复使用这些资源以供所有进一步浏览。 此选项还会带来延迟评估，因为所有JS都会作为文本加载。 只有在页面上触发特定操作后，它才会启动代码分析和评估。 但是，对于首次页面加载时间极其关键的存储，不建议使用此设置，因为所有JS内容都将在首次调用中加载。
 

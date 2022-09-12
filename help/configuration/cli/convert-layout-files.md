@@ -1,7 +1,7 @@
 ---
 title: 转换布局文件
 description: 转换XML布局文件。
-source-git-commit: 02f02393878d04b4a0fcdae256ac1ac5dd13b7f6
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 如果更新相应的可扩展样式表语言转换(XSLT)样式表，则使用此命令更新布局XML文件。
 
-- [布局说明](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/layouts/xml-instructions.html)
-- [布局文件类型](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/layouts/layout-types.html)
+- [布局说明](https://developer.adobe.com/commerce/frontend-core/guide/layouts/xml-instructions/)
+- [布局文件类型](https://developer.adobe.com/commerce/frontend-core/guide/layouts/types/)
 
 命令选项：
 

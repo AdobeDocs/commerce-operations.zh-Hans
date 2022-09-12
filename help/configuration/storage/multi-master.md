@@ -1,9 +1,9 @@
 ---
 title: 拆分数据库性能解决方案
 description: 阅读有关Adobe Commerce和Magento Open Source的拆分数据库解决方案。
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Adobe Commerce使用三个主控数据库和可配置数量的从数据库进行
 
    >[!WARNING]
    >
-   >您必须手动备份另外两个数据库实例。 商务仅备份主数据库实例。 的 [`magento setup:backup --db`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html) 命令和管理选项不备份其他表。
+   >您必须手动备份另外两个数据库实例。 商务仅备份主数据库实例。 的 [`magento setup:backup --db`](../../installation/tutorials/backup.md) 命令和管理选项不备份其他表。
 
 ## 先决条件
 

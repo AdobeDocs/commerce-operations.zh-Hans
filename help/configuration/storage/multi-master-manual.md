@@ -1,9 +1,9 @@
 ---
 title: 手动配置主控数据库
 description: 请参阅有关手动配置拆分数据库解决方案的指南。
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Adobe强烈建议您备份当前的数据库和文件系统，以便在此过程
 
 **备份系统**:
 
-1. 作为或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 输入以下命令：
 
    ```bash
@@ -476,7 +476,7 @@ SET foreign_key_checks = 1;
 
 要更新部署配置，请执行以下操作：
 
-1. 作为或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 备份部署配置：
 
    ```bash

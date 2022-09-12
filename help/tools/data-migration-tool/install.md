@@ -1,9 +1,9 @@
 ---
 title: 安装 [!DNL Data Migration Tool]
 description: 了解如何安装 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据。
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,10 @@ cd <your Magento 2 clone directory>
 git branch
 ```
 
-如果您当前在 `develop` 分支，必须更改为 <a href="https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/dev_downgrade.html">释放分支</a> 之前。
+如果您当前在 `develop` 分支，必须更改为 [释放分支](https://developer.adobe.com/commerce/contributor/guides/install/change-version/) 之前。
 
-如果您尚未安装Magento软件， [立即安装](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html).
-如果要克隆GitHub存储库，请确保按 [（参与者）克隆Magento存储库](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/dev_install.html).
+如果您尚未安装Adobe Commerce或Magento Open Source软件， [立即安装](../../installation/prerequisites/commerce.md).
+如果要克隆GitHub存储库，请确保按 [（参与者）克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/).
 
 ## 查找的已发布版本 [!DNL Data Migration Tool]
 
@@ -70,8 +70,8 @@ git branch
 
 安装 [!DNL Data Migration Tool]，您必须更新 `composer.json` 在Magento根安装目录中提供 [!DNL Data Migration Tool] 包。
 
-1. 作为或切换到登录Magento服务器 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. 更改为Magento2根目录。
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 更改到应用程序根目录。
 1. 输入以下命令：
 
    ```bash
@@ -94,14 +94,14 @@ git branch
    composer require magento/data-migration-tool:2.2.0
    ```
 
-1. 出现提示时，输入 [身份验证密钥](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html). 您的公钥是您的用户名；您的私钥是您的密码。
+1. 出现提示时，输入 [身份验证密钥](../../installation/prerequisites/authentication-keys.md). 您的公钥是您的用户名；您的私钥是您的密码。
 
 ### 从GitHub安装
 
-如果已从GitHub存储库克隆Magento2，请按照以下步骤安装 [!DNL Data Migration Tool].
+如果已克隆GitHub存储库，请按照以下步骤安装 [!DNL Data Migration Tool].
 
-1. 作为或切换到登录Magento服务器 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. 更改为Magento2根目录。
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 更改到应用程序根目录。
 1. 输入以下命令：
 
    ```bash

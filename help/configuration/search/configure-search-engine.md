@@ -1,9 +1,9 @@
 ---
 title: 搜索引擎配置
 description: 使用Adobe Commerce和Magento Open Source配置搜索引擎。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,8 @@ ht-degree: 0%
 
    继续：
 
-   - [为搜索引擎配置Apache](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-apache.html)
-   - [为搜索引擎配置nginx](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-nginx.html)
+   - [为搜索引擎配置Apache](../../installation/prerequisites/search-engine/configure-apache.md)
+   - [为搜索引擎配置nginx](../../installation/prerequisites/search-engine/configure-nginx.md)
 
    或者您看到：
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 - 确保搜索引擎服务器正在运行。
 - 如果服务器位于与Commerce不同的主机上，请登录到Commerce服务器，并对搜索引擎主机执行Ping操作。 解决网络连接问题并再次测试连接。
 - 检查在其中启动Elasticsearch的命令窗口或OpenSearch查找堆栈跟踪和异常。 您必须先解决这些问题，然后才能继续。 特别是，请确保您以用户身份使用 `root` 权限。
-- 确保 [UNIX防火墙和SELinux](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#firewall-selinux) 都被禁用，或设置规则以使搜索引擎和商务能够相互通信。
+- 确保 [UNIX防火墙和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) 都被禁用，或设置规则以使搜索引擎和商务能够相互通信。
 - 验证 **Elasticsearch服务器主机名** 字段。 确保服务器可用。 您可以尝试使用服务器的IP地址。
 - 使用 `netstat -an | grep <listen-port>` 命令来验证 **Elasticsearch服务器端口** 字段，而不会将其他进程使用。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 要使用命令行重新编入索引，请执行以下操作：
 
-1. 作为或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 输入以下任意命令：
 
    输入以下命令以仅重新索引目录搜索索引：

@@ -1,9 +1,9 @@
 ---
 title: 应用模式
 description: 商务应用程序可以根据您的需求以不同的模式运行。 查看可用应用程序模式的详细列表。
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,6 @@ ht-degree: 0%
 
 在维护模式下运行商务应用程序，以在您完成维护、升级或配置任务时使您的站点脱机。 在维护模式下，网站会将访客重定向到默认 `Service Temporarily Unavailable` 页面。
 
-您可以创建 [自定义维护页面](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/troubleshooting/maintenance-mode-options.html)，手动启用和禁用维护模式，并配置维护模式以允许来自授权IP地址的访客正常查看存储。 请参阅 [启用和禁用维护模式](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html).
+您可以创建 [自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md)，手动启用和禁用维护模式，并配置维护模式以允许来自授权IP地址的访客正常查看存储。 请参阅 [启用和禁用维护模式](../../installation/tutorials/maintenance-mode.md).
 
 如果您在云基础架构上使用商务，则商务应用程序会在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将返回到在生产模式下运行。 请参阅 [部署挂钩](https://devdocs.magento.com/cloud/reference/discover-deploy.html#cloud-deploy-over-phases-hook) 在 _Commerce Cloud指南_.

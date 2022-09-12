@@ -1,9 +1,9 @@
 ---
 title: 更改增量ID
 description: 更改商务数据库实体的增量ID。
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 - Adobe Commerce（内部）：2.x.x
 - Adobe Commerce云基础架构：2.x.x
-- MySQL: [任何受支持的版本]
+- MySQL: [任何受支持的版本](../../installation/prerequisites/database/mysql.md)
 
 ## 您何时需要更改增量ID
 
@@ -75,4 +75,4 @@ ALTER TABLE sequence_order_1 AUTO_INCREMENT = 2000;
 
 [PayPal网关拒绝请求 — 发票重复问题]: https://support.magento.com/hc/en-us/articles/115002457473
 [创建数据库备份]: https://support.magento.com/hc/en-us/articles/360003254334
-[任何受支持的版本]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/mysql.html
+[任何受支持的版本]

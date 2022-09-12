@@ -1,9 +1,9 @@
 ---
 title: 部署流程
-description: '了解在生产环境中部署Adobe Commerce或Magento Open Source所需的步骤。 '
-source-git-commit: 9ab52374e031bd2b0a846dd5f47c89ff788dcafa
+description: 了解在生产环境中部署Adobe Commerce或Magento Open Source所需的步骤。
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ bin/magento setup:di:compile
 
 ## 更新自动加载器
 
-编译完成后，确认 [已启用APCu](https://devdocs.magento.com/guides/v2.4/performance-best-practices/software.html#php-settings) 和更新自动加载器：
+编译完成后，确认 [已启用APCu](../performance/software.md#php-settings) 和更新自动加载器：
 
 要更新自动加载器，请执行以下操作：
 
@@ -82,7 +82,7 @@ bin/magento setup:static-content:deploy
 
 如果未部署静态内容， [!DNL Commerce] 即时执行所有列出的操作，从而显着增加响应时间。
 
-您可以使用各种选项根据存储大小和履行需求自定义部署操作。 最常见的是紧凑部署策略。 请参阅 [静态文件部署策略](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html)
+您可以使用各种选项根据存储大小和履行需求自定义部署操作。 最常见的是紧凑部署策略。 请参阅 [静态文件部署策略](../configuration/cli/static-view-file-strategy.md)
 
 要部署静态内容，请执行以下操作：
 

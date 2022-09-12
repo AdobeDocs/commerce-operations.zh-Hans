@@ -3,9 +3,9 @@ title: 写入自定义日志文件
 description: 了解如何设置自定义日志文件。
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-source-git-commit: 2c12c6ea6e7b6ffeb07bbda17ded34e39de6656a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 0%
 
 ## 在 `di.xml`
 
-此示例说明了如何使用 [虚拟类型](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) 登录 `debug` 消息传入自定义日志文件，而不是标准日志文件 `/var/log/debug.log`.
+此示例说明了如何使用 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 登录 `debug` 消息传入自定义日志文件，而不是标准日志文件 `/var/log/debug.log`.
 
-1. 在 `di.xml` 文件，将自定义日志文件定义为 [虚拟类型](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types).
+1. 在 `di.xml` 文件，将自定义日志文件定义为 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
@@ -46,7 +46,7 @@ ht-degree: 0%
 
    的 `name` 值 `Magento\Payment\Model\Method\MyCustomDebug` 必须是唯一的。
 
-1. 在另一个中定义处理程序 [虚拟类型](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) 具有唯一 `name`:
+1. 在另一个中定义处理程序 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 具有唯一 `name`:
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -58,7 +58,7 @@ ht-degree: 0%
    </virtualType>
    ```
 
-1. 插入 `MyCustomLogger` [虚拟类型](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) 在 `Magento\Payment\Model\Method\Logger` 对象：
+1. 插入 `MyCustomLogger` [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 在 `Magento\Payment\Model\Method\Logger` 对象：
 
    ```xml
    <type name="Magento\Payment\Model\Method\Logger">
@@ -117,7 +117,7 @@ ht-degree: 0%
    }
    ```
 
-1. 将此类的处理程序定义为 [虚拟类型](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) 的 `di.xml` 文件。
+1. 将此类的处理程序定义为 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 的 `di.xml` 文件。
 
    ```xml
    <virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">

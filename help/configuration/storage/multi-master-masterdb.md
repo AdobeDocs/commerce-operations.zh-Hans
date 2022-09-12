@@ -1,9 +1,9 @@
 ---
 title: 自动配置主控数据库
 description: 请参阅有关自动配置拆分数据库解决方案的指南。
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '358'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 安装Adobe Commerce软件
 
-安装Adobe Commerce软件后，您可以随时启用拆分数据库；换言之，您可以将拆分数据库添加到已具有结帐和订购数据的Adobe Commerce系统。 使用Adobe Commerce README或 [安装指南](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html) 使用单个主控数据库安装Adobe Commerce软件。
+安装Adobe Commerce软件后，您可以随时启用拆分数据库；换言之，您可以将拆分数据库添加到已具有结帐和订购数据的Adobe Commerce系统。 使用Adobe Commerce README或 [安装指南](../../installation/overview.md) 使用单个主控数据库安装Adobe Commerce软件。
 
 ## 设置其他主控数据库
 

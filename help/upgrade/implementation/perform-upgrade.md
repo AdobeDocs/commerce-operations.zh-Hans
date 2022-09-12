@@ -1,9 +1,9 @@
 ---
 title: 执行升级
 description: 按照以下步骤升级Adobe Commerce或Magento Open Source项目。
-source-git-commit: 3c3966a904b0568e0255020d8880d348c357ea95
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >如果克隆了GitHub存储库，请勿使用此方法进行升级。 相反，请参阅 [升级基于git的安装](../developer/git-installs.md) ，以了解升级说明。
 
-以下说明将向您展示如何使用编辑器进行升级。 Adobe Commerce 2.4.2引入了对编辑器2的支持。 如果您尝试从&lt;2.4.1升级，则必须首先使用编辑器1升级到与编辑器2兼容的版本（例如，2.4.2） _之前_ 升级到编辑器2以升级超过2.4.2。 此外，您必须运行 [受支持版本](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) PHP的。
+以下说明将向您展示如何使用编辑器进行升级。 Adobe Commerce 2.4.2引入了对编辑器2的支持。 如果您尝试从&lt;2.4.1升级，则必须首先使用编辑器1升级到与编辑器2兼容的版本（例如，2.4.2） _之前_ 升级到编辑器2以升级超过2.4.2。 此外，您必须运行 [受支持版本](../../installation/system-requirements.md) PHP的。
 
 >[!WARNING]
 >
@@ -42,7 +42,7 @@ ht-degree: 0%
    bin/magento maintenance:enable
    ```
 
-   请参阅 [启用或禁用维护模式](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html) 的其他选项。 （可选）您可以创建 [“自定义维护模式”页](https://devdocs.magento.com/guides/v2.4/comp-mgr/trouble/cman/maint-mode.html).
+   请参阅 [启用或禁用维护模式](../../installation/tutorials/maintenance-mode.md) 的其他选项。 （可选）您可以创建 [“自定义维护模式”页](../troubleshooting/maintenance-mode-options.md).
 
 1. 在异步进程（如消息队列消费者）运行时启动升级进程，可能会导致数据损坏。 要防止数据损坏，请禁用所有cron作业。
 
@@ -253,7 +253,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-updat
 
 如果应用程序在  `We're sorry, an error has occurred while generating this email.` 错误：
 
-1. 重置 [文件系统所有权和权限](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html) 用户 `root` 权限。
+1. 重置 [文件系统所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md) 用户 `root` 权限。
 1. 清除以下目录：
    - `var/cache/`
    - `var/page_cache/`

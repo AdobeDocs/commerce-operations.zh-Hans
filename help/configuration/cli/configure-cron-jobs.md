@@ -1,9 +1,9 @@
 ---
 title: 配置和运行cron作业
 description: 了解如何管理cron作业。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ UNIX系统使用 _crontab_，该文件包含对cron守护程序的指令，该�
 
 >[!WARNING]
 >
->- 为避免在安装和升级过程中出现问题，我们强烈建议您将相同的PHP设置应用于PHP命令行配置和PHP Web服务器插件的配置。 有关更多信息，请参阅 [所需的PHP设置](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/php-settings.html).
+>- 为避免在安装和升级过程中出现问题，我们强烈建议您将相同的PHP设置应用于PHP命令行配置和PHP Web服务器插件的配置。 有关更多信息，请参阅 [所需的PHP设置](../../installation/prerequisites/php-settings.md).
 >- 在多节点系统中， crontab只能在一个节点上运行。 仅当您出于与性能或可扩展性相关的原因设置了多个Web节点时，这才适用于您。
 
 
@@ -58,7 +58,7 @@ Commerce crontab位于内部 `#~ MAGENTO START` 和 `#~ MAGENTO END` 评论。
 
 要创建商务crontab，请执行以下操作：
 
-1. 以登录方式登录，或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 以登录方式登录，或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 更改为Commerce安装目录。
 1. 输入以下命令：
 
@@ -100,7 +100,7 @@ crontab -l
 
 要删除Commerce crontab，请执行以下操作：
 
-1. 登录方式或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 登录方式或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 更改为Commerce安装目录。
 1. 输入以下命令：
 

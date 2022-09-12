@@ -1,9 +1,9 @@
 ---
 title: 安装指南
 description: 使用本指南进行安装 [!DNL Site-Wide Analysis Tool] 用于您的网站
-source-git-commit: a694de861fcc681d864ffb2c405b2366b32bba41
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1063'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ bin/magento module:status Magento_ServicesConnector
 
 如果您已安装该扩展并使用其他服务的现有API密钥对其进行配置，则您 **必须重新生成API密钥** 并在Adobe Commerce管理员中为代理更新它。
 
-1. 将您的网站放入 [维护模式](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html).
+1. 将您的网站放入 [维护模式](../../installation/tutorials/maintenance-mode.md).
 
 1. 登录 [accounts.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
 

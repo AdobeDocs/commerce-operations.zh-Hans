@@ -1,9 +1,9 @@
 ---
 title: 搜索引擎概述
 description: Adobe Commerce和Magento Open Source的搜索引擎选项概述。
-source-git-commit: 52c472bf80942339b511292243b5da9babf829d9
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,9 @@ ht-degree: 0%
 
 <!-- Link Definitions -->
 
-[搜索引擎先决条件]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html
-[为搜索引擎配置nginx]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-nginx.html
-[为搜索引擎配置Apache]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-apache.html
+[搜索引擎先决条件]: ../../installation/prerequisites/search-engine/overview.md
+[为搜索引擎配置nginx]: ../../installation/prerequisites/search-engine/configure-nginx.md
+[为搜索引擎配置Apache]: ../../installation/prerequisites/search-engine/configure-apache.md
 [Elasticsearch]: https://www.elastic.co
-[Elasticsearch documentation]: https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
-[安装商务软件]: https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-install.html
+[安装商务软件]: ../../installation/composer.md
 [OpenSearch]: https://opensearch.org/docs/latest/opensearch/install/index/

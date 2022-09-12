@@ -1,9 +1,9 @@
 ---
 title: 管理缓存
 description: 管理缓存类型并查看缓存状态。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Current status:
 
 >[!INFO]
 >
->从版本2.2开始，您只能在生产模式下运行商务时使用命令行启用或禁用缓存类型。 如果在开发人员模式下运行商务，则可以使用命令行或手动启用或禁用缓存类型。 在执行此操作之前，您必须手动 `<magento_root>/app/etc/env.php` 可由写入 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html).
+>从版本2.2开始，您只能在生产模式下运行商务时使用命令行启用或禁用缓存类型。 如果在开发人员模式下运行商务，则可以使用命令行或手动启用或禁用缓存类型。 在执行此操作之前，您必须手动 `<magento_root>/app/etc/env.php` 可由写入 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 
 您可以清理(也称为 _刷新_ 或 _刷新_)缓存类型。
 

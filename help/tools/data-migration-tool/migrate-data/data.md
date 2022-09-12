@@ -1,9 +1,9 @@
 ---
 title: 迁移数据
 description: 了解如何开始将数据从Magento1迁移到Magento2，使用 [!DNL Data Migration Tool].
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 在开始之前，请采取以下步骤进行准备：
 
-1. 以下身份登录到应用程序服务器： [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 以下身份登录到应用程序服务器： [文件系统所有者](../../../installation/prerequisites/file-system/overview.md).
 1. 更改到应用程序安装目录，或确保将其添加到系统 `PATH`.
 
 请参阅 [首要步骤](overview.md#first-steps) 部分以了解更多详细信息。

@@ -1,9 +1,9 @@
 ---
 title: 高级设置
 description: 查看针对大型企业系统的最佳实践和建议，这些系统旨在处理大量数据。
-source-git-commit: 9ab52374e031bd2b0a846dd5f47c89ff788dcafa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 大量产品SKU、网站、客户组或共享目录将影响产品价格和目录规则索引器的运行时间。 这是因为默认情况下，所有网站都会分配给所有客户组（共享目录）。
 
-要缩短索引时间，您可以 [从客户组中排除某些网站（共享目录）](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexer-optimization.html#customer-group-limitations-by-websites).
+要缩短索引时间，您可以 [从客户组中排除某些网站（共享目录）](https://developer.adobe.com/commerce/php/development/components/indexing/optimization/#customer-group-limitations-by-websites).
 
 ## 设置Redis
 
@@ -56,7 +56,7 @@ Magento Open Source和Adobe [!DNL Commerce] 通过 [!DNL RabbitMQ]. [!DNL Commer
 
 >[!WARNING]
 >
->拆分数据库功能是 [已弃用](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) 在版本2.4.2的Adobe Commerce中。 请参阅 [从拆分数据库还原到单个数据库](https://devdocs.magento.com/guides/v2.4/config-guide/revert-split-database.html).
+>拆分数据库功能是 [已弃用](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) 在版本2.4.2的Adobe Commerce中。 请参阅 [从拆分数据库还原到单个数据库](../configuration/storage/revert-split-database.md).
 
 Adobe Commerce允许您配置可扩展的数据库存储，以满足不断增长的业务的需求。 您可以设置三个单独的主控数据库来提供特定域：
 
@@ -95,7 +95,7 @@ bin/magento setup:db-schema:add-slave
 拆分主控数据库并设置从数据库后， [!DNL Commerce] 自动调节与特定数据库的连接，根据请求类型(POST、PUT、GET等)和数据资源做出决策。 如果 [!DNL Commerce] 或者其扩展对GET请求执行写操作，则系统自动将连接从属数据库切换到主控数据库。 它与主控数据库的工作方式相同：一旦您使用与结帐相关的表，系统就会将所有查询重定向到特定的数据库。 同时，所有与目录相关的查询都将转到主数据库。
 
 有关多个主控/从配置的配置和优势的更多详细信息，请参阅
-[拆分数据库性能解决方案](https://devdocs.magento.com/guides/v2.4/config-guide/multi-master/multi-master.html).
+[拆分数据库性能解决方案](../configuration/storage/multi-master.md).
 
 ## 提供媒体内容
 

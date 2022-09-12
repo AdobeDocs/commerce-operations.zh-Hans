@@ -1,9 +1,9 @@
 ---
 title: 修补程序的工作原理
 description: 了解Adobe Commerce和Magento Open Source的不同类型的修补程序及其工作方式。
-source-git-commit: 45a44d98f149b4b9a1fbb4ac0bcea3eb372f49a8
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->我们强烈建议先在暂存或开发环境中测试所有修补程序，然后再部署到生产环境。 我们还强烈建议您在应用修补程序之前先备份数据。 请参阅 [备份和回滚文件系统](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html).
+>我们强烈建议先在暂存或开发环境中测试所有修补程序，然后再部署到生产环境。 我们还强烈建议您在应用修补程序之前先备份数据。 请参阅 [备份和回滚文件系统](../../installation/tutorials/backup.md).
 
 修补程序（或差异）文件是注意以下事项的文本文件：
 

@@ -1,9 +1,9 @@
 ---
 title: 了解升级范围
 description: 了解在发行版中向后进行不兼容的更改，这些更改可能会影响Adobe Commerce、Magento Open Source自定义模块或第三方扩展。
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Commerce Marketplace的新兼容性政策确保 _全部_ 列出的扩展�
 
 ## 自定义模块
 
-应针对您要升级到的目标版本检查所有自定义模块。 这是升级过程中最耗时、最耗资的过程。 在评估自定义模块时，您必须查找向后不兼容的更改，并了解一些新实践，如控制器分解。 您可以在 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). 另外，请确保 [最佳实践](https://devdocs.magento.com/guides/v2.4/ext-best-practices/extension-coding/common-programming-bp.html) 用于模块开发。
+应针对您要升级到的目标版本检查所有自定义模块。 这是升级过程中最耗时、最耗资的过程。 在评估自定义模块时，您必须查找向后不兼容的更改，并了解一些新实践，如控制器分解。 您可以在 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). 另外，请确保 [最佳实践](https://developer.adobe.com/commerce/php/best-practices/extensions/) 用于模块开发。
 
 ## [!DNL Upgrade Compatibility Tool]
 

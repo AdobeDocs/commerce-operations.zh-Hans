@@ -1,9 +1,9 @@
 ---
 title: 配置自定义cron作业和cron组（教程）
 description: 使用此分步教程创建自定义cron作业。
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 - 商务应用程序安装在 `/var/www/html/magento2`
 - 您的商务数据库用户名和密码均为 `magento`
-- 您执行所有操作， [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html)
+- 您执行所有操作， [文件系统所有者](../../installation/prerequisites/file-system/overview.md)
 
 ## 步骤1:获取示例模块
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 **获取示例模块**:
 
-1. 作为或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 更改为Commerce应用程序根目录以外的目录（例如，您的主目录）。
 1. 克隆 [`magento2-samples` 存储库][samples].
 

@@ -1,9 +1,9 @@
 ---
 title: 命令行工具
 description: 使用商务命令行工具运行安装和配置任务。
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,15 @@ Commerce有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 运行�
 - CLI是可扩展的，因此第三方开发人员可以“插入”到它。 这样可消除用户的学习曲线，从而带来额外的好处。
 - 禁用模块的命令不显示。
 
-本主题讨论如何使用CLI配置Adobe Commerce和Magento Open Source软件。 有关安装Commerce的信息，请参阅 [安装流程](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html) 在 _安装指南_.
+本主题讨论如何使用CLI配置Adobe Commerce和Magento Open Source软件。 有关安装Commerce的信息，请参阅 [安装流程](../../installation/overview.md) 在 _安装指南_.
 
 ## 先决条件
 
 在开始使用CLI之前，请确保：
 
-1. 您的系统符合 [系统要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) 在 _安装指南_.
-1. 您已完成 [先决条件](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/prereq-overview.html) 在 _安装指南_.
-1. 登录到商务服务器后，切换到有权写入商务文件系统的用户。 请参阅 [切换到文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html) 在 _安装指南_.
+1. 您的系统符合 [系统要求](../../installation/system-requirements.md) 在 _安装指南_.
+1. 您已完成 [先决条件](../../installation/prerequisites/overview.md) 在 _安装指南_.
+1. 登录到商务服务器后，切换到有权写入商务文件系统的用户。 请参阅 [切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md) 在 _安装指南_.
 
 ## 运行命令
 

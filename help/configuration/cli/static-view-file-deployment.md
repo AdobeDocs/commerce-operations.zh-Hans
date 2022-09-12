@@ -1,9 +1,9 @@
 ---
 title: 部署静态视图文件
 description: 了解如何在生产模式期间将静态文件写入商务文件系统。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
@@ -31,11 +31,11 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->_仅限开发人员模式_:安装或启用新模块时，可能会加载新的JavaScript、CSS、布局等。 要避免静态文件出现问题，您必须清理旧文件，以确保获取新模块的所有更改。 您可以通过多种方式清理生成的静态视图文件。 请参阅 [清除静态文件缓存主题以了解详细信息](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/cache_for_frontdevs.html#clean_static_cache) 以了解更多信息。
+>_仅限开发人员模式_:安装或启用新模块时，可能会加载新的JavaScript、CSS、布局等。 要避免静态文件出现问题，您必须清理旧文件，以确保获取新模块的所有更改。 您可以通过多种方式清理生成的静态视图文件。 请参阅 [清除静态文件缓存主题以了解详细信息](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) 以了解更多信息。
 
 **部署静态视图文件**:
 
-1. 以或的形式登录到商务服务器 [切换到文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 以或的形式登录到商务服务器 [切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 删除 `<magento_root>/pub/static`，但 `.htaccess` 文件。 请勿删除此文件。
 1. 运行静态视图文件部署工具 `<magento_root>/bin/magento setup:static-content:deploy`.
 
@@ -158,7 +158,7 @@ New version of deployed files: 1466711110
 
 ## 静态视图文件部署工具故障诊断
 
-[首先安装商务软件](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html);否则，将无法运行静态视图文件部署工具。
+[首先安装商务软件](../../installation/overview.md);否则，将无法运行静态视图文件部署工具。
 
 **症状**:运行静态视图文件部署工具时，会显示以下错误：
 
@@ -170,9 +170,9 @@ ERROR: You need to install the Commerce application before running this utility.
 
 请执行以下步骤：
 
-1. 使用 [命令行](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli.html).
-1. 以或的形式登录到商务服务器 [切换到](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html)，文件系统所有者。
-1. 删除 `<magento_root>/pub/static` 目录，但 `.htaccess` 文件。 请勿删除此文件。
+1. 使用 [命令行](../../installation/composer.md).
+1. 以或的形式登录到应用程序服务器 [切换到](../../installation/prerequisites/file-system/overview.md)，文件系统所有者。
+1. 删除 `<app_root>/pub/static` 目录，但 `.htaccess` 文件。 请勿删除此文件。
 1. 部署静态视图文件： `bin/magento setup:static-content:deploy`
 
 ## 面向开发人员的自定义静态内容部署工具提示

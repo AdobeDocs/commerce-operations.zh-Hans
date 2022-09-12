@@ -1,9 +1,9 @@
 ---
 title: 最佳实践
 description: 使用Adobe推荐的最佳实践来管理Adobe Commerce和Magento Open Source项目的升级过程。
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,8 @@ ht-degree: 0%
 
 从您开始处理项目之后，您应该考虑当前工作对未来升级的影响。 始终遵循Adobe Commerce开发最佳实践，如下所述：
 
-- [开发最佳实践](https://devdocs.magento.com/guides/v2.4/ext-best-practices/bk-ext-best-practices.html)
-- [编码标准](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html)
+- [开发最佳实践](https://developer.adobe.com/commerce/php/best-practices/)
+- [编码标准](https://developer.adobe.com/commerce/php/coding-standards/)
 
 如果您尚未采用Adobe Commerce扩展性平台，请开始采用该平台。 该平台可让您高效地定制流程、集成系统和部署新功能，同时保持SaaS类升级能力。 其功能包括：
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ### 升级后测试
 
-测试是升级的阶段，需要最多的时间。 因此，此过程应尽可能自动化。 使用核心测试工具可让您受益。 的 [应用程序测试指南](https://devdocs.magento.com/guides/v2.4/test/testing.html) 提供详细信息。
+测试是升级的阶段，需要最多的时间。 因此，此过程应尽可能自动化。 使用核心测试工具可让您受益。 的 [应用程序测试指南](https://developer.adobe.com/commerce/testing/guide/) 提供详细信息。
 
 在转到生产环境之前，请使用暂存环境来测试和验证升级。
 

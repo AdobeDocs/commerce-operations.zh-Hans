@@ -1,9 +1,9 @@
 ---
 title: 升级 [!DNL Data Migration Tool]
 description: 了解如何升级 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据。
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ### 升级Magento软件
 
-如果你还没这么做， [升级Magento软件](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html).
+如果你还没这么做， [升级Magento软件](../../upgrade/overview.md).
 
 ### 备份 `vendor/magento/data-migration-tool` 目录
 
@@ -56,8 +56,8 @@ php <magento_root>/bin/magento setup:backup --code --db
 
 ## 升级 [!DNL Data Migration Tool]
 
-1. 作为或切换到登录Magento服务器， [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. 更改为Magento2根目录。
+1. 作为或切换到，登录到您的应用程序服务器 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 更改到应用程序根目录。
 1. 输入以下命令：
 
    ```bash

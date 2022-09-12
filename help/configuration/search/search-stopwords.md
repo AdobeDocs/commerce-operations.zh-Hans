@@ -1,9 +1,9 @@
 ---
 title: 配置搜索秒词
 description: 了解如何使用CSV文件管理Adobe Commerce的秒数。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 **编辑秒数**:
 
-1. 登录到您的Commerce服务器，或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 登录到您的Commerce服务器，或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 使用文本编辑器在 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录访问Advertising Cloud的帮助。
 
    CSV文件使用命名约定 `stopwords_<locale_code>.csv`. 例如，德语秒词文件名为 `stopwords_de_DE.csv`.
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 **为区域设置添加秒数**:
 
-1. 登录到您的Commerce服务器，或切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 登录到您的Commerce服务器，或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 
 1. 使用文本编辑器创建名为的秒数文件 `stopwords_<locale_code>.csv` 在 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录访问Advertising Cloud的帮助。
 
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 ## 从模块更改目录
 
-1. [创建模块](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/module-file-structure.html)
+1. [创建模块](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
 1. 在您的模块中 `etc/di.xml` 添加说明：
 
    ```xml

@@ -1,9 +1,9 @@
 ---
 title: 生产系统设置
 description: 了解如何为商务应用程序设置生产系统。
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
    创建 `auth.json` 在目录中。
 
-   `auth.json` 必须包含 [身份验证密钥](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html).
+   `auth.json` 必须包含 [身份验证密钥](../../installation/prerequisites/authentication-keys.md).
 
    示例如下：
 

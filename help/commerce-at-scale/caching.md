@@ -2,9 +2,9 @@
 title: 有效的缓存规划
 description: 请参阅推荐的缓存基准，以确保网站在加载时成功运行。
 exl-id: 275eb21d-fa52-4b97-9453-8f8553128b53
-source-git-commit: 87e379aff4ec57f15ce914a13b4e9bc2769e6d1c
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -31,4 +31,4 @@ ht-degree: 0%
 
 在初始规划完成后，技术配置可以开始到位，以根据这些要求配置缓存。
 
-即使内容已更新并且需要在缓存TTL内生存，在大多数情况下，也可以手动清除 [AEM dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) 和 [Adobe Commerce](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean) 会选择性地缓存该内容，这意味着将立即反映紧急更改。 手动缓存清除的过程也应事先进行规划和测试，以便如果需要手动对某些内容强制进行更新，则会将其记录到站点操作Runbook中，并明确操作过程中需要涉及的方式和人员。
+即使内容已更新并且需要在缓存TTL内生存，在大多数情况下，也可以手动清除 [AEM dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) 和 [Adobe Commerce](../configuration//cli/manage-cache.md#clean-and-flush-cache-types) 会选择性地缓存该内容，这意味着将立即反映紧急更改。 手动缓存清除的过程也应事先进行规划和测试，以便如果需要手动对某些内容强制进行更新，则会将其记录到站点操作Runbook中，并明确操作过程中需要涉及的方式和人员。

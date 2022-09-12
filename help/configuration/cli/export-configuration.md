@@ -1,7 +1,7 @@
 ---
 title: 导出配置设置
 description: 将Adobe Commerce配置设置导出到配置文件，也称为配置转储。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -47,6 +47,6 @@ bin/magento app:config:dump scopes themes
 
 设置写入的敏感设置 `env.php`，则使用 [`bin/magento config:sensitive:set`](set-configuration-values.md#set-values) 命令。
 
-通过引用，可将配置值指定为敏感值或特定于系统的值 [`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php) 的 [`di.xml`](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/configuration/sensitive-and-environment-settings.html#how-to-specify-values-as-sensitive-or-system-specific) 文件。
+通过引用，可将配置值指定为敏感值或特定于系统的值 [`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php) 的 [`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/#how-to-specify-values-as-sensitive-or-system-specific) 文件。
 
 在使用 `config_types`，请考虑使用 [`bin/magento config:set`](set-configuration-values.md#set-values) 命令。

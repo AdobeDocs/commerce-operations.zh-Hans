@@ -1,9 +1,9 @@
 ---
-title: '"[!DNL Site-Wide Analysis Tool]"'
+title: "[!DNL Site-Wide Analysis Tool]"
 description: 了解 [!DNL Site-Wide Analysis] 工具、其用途、安装过程以及如何获取访问权限
-source-git-commit: ded2204fe0b3327f72bbce2ec03f8d66aa1b9353
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 - [**[!DNL Security Scan Tool]**](https://docs.magento.com/user-guide/magento/security-scan.html)  — 通过主动检测恶意软件并通知其存储受到破坏，为Adobe Commerce和Magento开源客户提供对其存储安全状态的实时分析。
 
-- [**[!DNL Upgrade Compatability Tool]**](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=en)  — 针对目标升级版本运行Adobe Commerce的自定义实例，并返回必须解决的关键问题、错误和警告的摘要，从而使升级分析过程更简单、更快、更便宜。
+- [**[!DNL Upgrade Compatability Tool]**](../../upgrade/upgrade-compatibility-tool/overview.md)  — 针对目标升级版本运行Adobe Commerce的自定义实例，并返回必须解决的关键问题、错误和警告的摘要，从而使升级分析过程更简单、更快、更便宜。
 
 - [**[!DNL Managed Alerts]**](https://support.magento.com/hc/en-us/sections/360010758472-Managed-alerts-for-Adobe-Commerce)  — 监控多个量度以主动跟踪平台的性能，并提供有关如何排除问题的具体说明，以便商户能够避免严重停机，并随时了解其CPU、应用程序性能、磁盘、内存和数据库。
 

@@ -1,9 +1,9 @@
 ---
 title: 文件系统访问权限
 description: 请参阅如何为开发和生产系统设置商务应用程序文件系统的所有者或所有者。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '866'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # 文件系统访问权限
 
-本节讨论如何为开发和生产系统设置商务文件系统的所有者或所有者。 在继续之前，请查看 [文件系统所有权和权限概述](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+本节讨论如何为开发和生产系统设置商务文件系统的所有者或所有者。 在继续之前，请查看 [文件系统所有权和权限概述](../../installation/prerequisites/file-system/overview.md).
 
-本主题重点介绍商务开发和生产系统。 如果要安装Commerce，请参阅 [设置预安装所有权和权限](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html).
+本主题重点介绍商务开发和生产系统。 如果要安装Commerce，请参阅 [设置预安装所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md).
 
 下面部分讨论了一个或两个文件系统所有者的要求。 这意味着：
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 ### （可选）设置 `magento_umask`
 
-请参阅 [（可选）设置调查](https://devdocs.magento.com/guides/v2.4/install-gde/install/post-install-umask.html) 在 _安装指南_.
+请参阅 [（可选）设置调查](../../installation/next-steps/set-umask.md) 在 _安装指南_.
 
 ## 专用托管的生产文件系统所有权（两个用户）
 
@@ -121,7 +121,7 @@ ht-degree: 0%
    >
    >命令行用户也称为 _文件系统所有者_.
 
-由于这些用户需要访问相同的文件，因此我们建议您创建 [共享组](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html#mage-owner-about-group) 他们都属于的。 以下过程假定您已经执行了此操作。
+由于这些用户需要访问相同的文件，因此我们建议您创建 [共享组](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) 他们都属于的。 以下过程假定您已经执行了此操作。
 
 请参阅以下部分之一：
 

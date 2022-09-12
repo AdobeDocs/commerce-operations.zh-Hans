@@ -1,9 +1,9 @@
 ---
 title: 不支持当前搜索引擎
 description: 在遇到有关不支持的搜索引擎的错误后，对Adobe Commerce或Magento Open Source升级进行故障诊断。
-source-git-commit: 96534d5307062aa4fda8f6433630d2d39e2848e7
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -54,10 +54,10 @@ bin/magento config:show catalog/search/engine
 
 使用以下资源帮助您完成此过程：
 
-- [安装和配置Elasticsearch](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-overview.html)
+- [安装和配置Elasticsearch](../../configuration/search/overview-search.md)
 - [安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-- 配置Elasticsearch以使用 [nginx](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-nginx.html) 或 [Apache](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-apache.html)
-- [配置Magento以使用Elasticsearch](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html)
+- 配置Elasticsearch以使用 [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) 或 [Apache](../../installation/prerequisites/search-engine/configure-apache.md)
+- [配置Elasticsearch](../../configuration/search/configure-search-engine.md)
 
 配置搜索引擎并重新编入索引后，您便可以升级到2.4。
 
@@ -71,8 +71,8 @@ bin/magento config:show catalog/search/engine
 
    >[!NOTE]
    >
-   >Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#prereq-java) 以检查安装的JDK版本。
+   >Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查安装的JDK版本。
 
-1. [配置Magento以使用Elasticsearch](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html) 和重新编入索引。
+1. [配置Elasticsearch](../../configuration/search/configure-search-engine.md) 和重新编入索引。
 
 配置搜索引擎并重新编入索引后，您便可以升级到2.4。

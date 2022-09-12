@@ -1,9 +1,9 @@
 ---
 title: 应用修补程序
 description: 了解将修补程序应用到Adobe Commerce或Magento Open Source项目的方法。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 0%
 要从命令行应用修补程序，请执行以下操作：
 
 1. 将本地文件上传到 `<Magento_root>` 目录。
-1. 以 [管理员用户](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli.html#config-install-cli-first) 并验证文件是否位于正确的目录中。
+1. 以 [管理员用户](../../configuration/cli/config-cli.md#prerequisites) 并验证文件是否位于正确的目录中。
 1. 在命令行界面中，根据修补程序扩展运行以下命令：
 
    ```bash

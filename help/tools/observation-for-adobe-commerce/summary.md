@@ -1,9 +1,9 @@
 ---
 title: “ [!UICONTROL Summary] 选项卡”
 description: 了解 [!UICONTROL Summary] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 22df5b80262fbc98f3dd929ec8fdf6f697734c9b
+source-git-commit: 5bcb834bc563c52cd5b169b9f4f20dab31d404cd
 workflow-type: tm+mt
-source-wordcount: '2650'
+source-wordcount: '2637'
 ht-degree: 0%
 
 ---
@@ -181,7 +181,7 @@ ht-degree: 0%
 * “%selfleave%”)作为“susp_node”
 * “%members = 3/3（已加入/总计）%”)作为“3of3”
 * “%members = 2/3（已加入/总计）%”)作为“2of3”
-* “%members = 2/2%”)作为“2of2”·“%members = 1/2%”)作为“1of2”·“%members = 1/3%”)作为“1of3”
+* “%members = 2/2%”)作为“2of2”*“%members = 1/2%”)作为“1of2”*“%members = 1/3%”)作为“1of3”
 * “%members = 1/1%”)作为“1of1”
 * “%\[注意\] /usr/sbin/mysqld(mysqld 10)。%&#39;)作为“sql_restart”
 * “%Quorum:没有完全状态为“%”的节点)为“no_node_count”
@@ -228,7 +228,7 @@ ht-degree: 0%
 * “%1062 \[\ERROR\] InnoDB:%”)作为“sql_1062_e”
 * “%\[注意\] WSREP:正在刷新内存映射到磁盘……%&#39;)作为“mem_map_flush”
 * “%Internal MariaDB错误代码：1146%”)作为“sql_1146”
-* “%Internal MariaDB错误代码：1062%”)作为“sql_1062”·“%1062 \[Warning\] InnoDB:%”)作为“sql_1062_w”
+* “%Internal MariaDB错误代码：1062%”)作为“sql_1062”*“%1062 \[Warning\] InnoDB:%”)作为“sql_1062_w”
 * “%Internal MariaDB错误代码：1064%”)作为“sql_1064”
 * &#39;%InnoDB:文件%中的断言失败”)作为“assertion_err”
 * “%mysqld_safe当前正在运行的进程数：0%”)作为“mysql_oom”
@@ -289,7 +289,7 @@ PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install
 
 ![php错误](../../assets/tools/php-errors.jpg)
 
-的 **[!UICONTROL PHP errors]** 框架显示选定时间范围内工作程序出现的PHP错误数。 有关更多信息，请参阅 [Adobe Commerce PHP设置](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/php-settings.html).
+的 **[!UICONTROL PHP errors]** 框架显示选定时间范围内工作程序出现的PHP错误数。 有关更多信息，请参阅 [Adobe Commerce PHP设置](../../installation/prerequisites/php-settings.md).
 
 **PHP错误和消息**
 
@@ -309,7 +309,7 @@ PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install
 
 ![php进程](../../assets/tools/php-processes.jpg)
 
-[PHP-FPM](https://php-fpm.org/), a [!UICONTROL FastCGI Process Manager] 使用者 [!DNL Nginx]. 要了解系统要求，请参阅 [映射到Adobe Commerce版本的PHP版本要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html). 的 **[!UICONTROL PHP processes]** 帧显示选定时间轴中特定时间运行的PHP进程数。
+[PHP-FPM](https://php-fpm.org/), a [!UICONTROL FastCGI Process Manager] 使用者 [!DNL Nginx]. 要了解系统要求，请参阅 [映射到Adobe Commerce版本的PHP版本要求](../../installation/system-requirements.md). 的 **[!UICONTROL PHP processes]** 帧显示选定时间轴中特定时间运行的PHP进程数。
 
 ## [!UICONTROL Secondary processes]
 

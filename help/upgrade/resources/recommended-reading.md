@@ -1,10 +1,10 @@
 ---
 title: 升级建议读取
 description: 查看关于规划 Adobe Commerce 或 Magento Open Source 升级推荐的读物
-source-git-commit: 1cecdf89df9a870d57347468ce9220f74d46cd73
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 2%
+source-wordcount: '420'
+ht-degree: 3%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 2%
           <ul>
             <li><a href="https://magento.com/tech-resources/downloads">下载Adobe Commerce版本</li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html?lang=en">升级兼容性工具PhpStorm插件</a> （视频）</li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=en">升级兼容性工具</a></li>
+            <li><a href="../upgrade-compatibility-tool/overview.md">升级兼容性工具</a></li>
             <li><a href="https://magentocommeng.slack.com/archives/C019Y143U9F">#UpgradeCompatibilityToolSlack渠道</a></li>
             <li><a href="https://devdocs.magento.com/quality-patches/usage.html">质量补丁工具</a></li>
           </ul>
@@ -64,15 +64,15 @@ ht-degree: 2%
       <td><strong>升级资源</strong>
         <p>保护店面的安全并高效运行。 通过查看Adobe的丰富技术文档，为Adobe Commerce或Magento Open Source升级做好准备。</p>
           <ul>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/resources/recommended-upgrade-paths-2022.html?lang=en">2022年建议升级路径</a></li>
+            <li><a href="recommended-upgrade-paths-2022.md">2022年建议升级路径</a></li>
             <li><a href="../../assets/upgrade-guide/adobe-commerce-2-4-upgrade-guide.pdf">2.4升级指南</a> (PDF)</li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4技术升级讲习班记录</a></li>
             <li><a href="https://support.magento.com/hc/en-us/articles/360034120932">访问预发行版</a></li>
             <li><a href="https://devdocs.magento.com/release/beta-program.html">测试版计划概述</a></li>
-            <li><a href="https://devdocs.magento.com/contributor-guide/backward-compatible-development/index.html">落后的不兼容开发</a></li>
+            <li><a href="https://developer.adobe.com/commerce/contributor/guides/code-contributions/backward-compatibility-policy/">落后的不兼容开发</a></li>
             <li><a href="https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/index.html">向后不兼容的更改</a></li>
             <li><a href="https://support.magento.com/hc/en-us/articles/360057968951-Upgrade-plan-checklist-for-Adobe-Commerce">升级计划核对清单</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/prepare/best-practices.html?lang=en">升级最佳实践</a></li>
+            <li><a href="../prepare/best-practices.md">升级最佳实践</a></li>
             <li><a href="https://devdocs.magento.com/release/availability.html">软件可用性</a></li>
           </ul>
       </td>

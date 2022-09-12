@@ -1,9 +1,9 @@
 ---
 title: env.php引用
 description: 请参阅env.php文件的值列表。
-source-git-commit: 7ecd54b40690ec046e9a3d46a6ef9ad44ffaf4ab
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
@@ -299,7 +299,6 @@ x-frame-options标头可以使用此节点进行配置。
 
 <!-- Link definitions -->
 
-[change-docroot-to-pub]: https://devdocs.magento.com/guides/v2.4/install-gde/tutorials/change-docroot-to-pub.html
-[encryption-key]: https://docs.magento.com/user-guide/system/encryption-key.html
-[lock-provider-config]: https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-lock.html
+[change-docroot-to-pub]: ../../installation/tutorials/docroot.md
+[lock-provider-config]: ../../installation/tutorials/lock-provider.md
 [message-queue]: https://developer.adobe.com/commerce/php/development/components/message-queues/

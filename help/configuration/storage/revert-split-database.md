@@ -1,9 +1,9 @@
 ---
 title: 还原拆分数据库
 description: 从已弃用的拆分数据库实施还原到单个数据库实施。
-source-git-commit: bda758381d8d1b9209110adb168c36e1d504c4fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ## 验证您的工作
 
-要验证您的单个数据库实施是否正常工作，请执行以下任务并验证数据是否已添加到 `magento_main` 使用数据库工具(如 [phpMyAdmin](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/optional.html#install-optional-phpmyadmin):
+要验证您的单个数据库实施是否正常工作，请执行以下任务并验证数据是否已添加到 `magento_main` 使用数据库工具(如 [phpMyAdmin](../../installation/prerequisites/optional-software.md#phpmyadmin):
 
 1. 验证外键是否已还原。 例如， `QUOTE_STORE_ID_STORE_STORE_ID` 键 `quote` 数据库表。
 1. 确认客户可以从店面下订单。

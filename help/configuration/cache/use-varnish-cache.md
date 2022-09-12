@@ -1,9 +1,9 @@
 ---
 title: 使用清漆清除缓存
 description: 了解缓存清除如何与Riket配合使用，以及如何将其用作Adobe Commerce应用程序的Web缓存加速器。
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -57,4 +57,4 @@ bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 
 要使用管理员刷新缓存，请单击 **[!UICONTROL SYSTEM]** >工具> **缓存管理**，然后单击 **刷新Magento缓存** 的双曲余切值。 （您还可以刷新单个缓存类型。）
 
-要使用命令行刷新缓存，通常使用 [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+要使用命令行刷新缓存，通常使用 [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).

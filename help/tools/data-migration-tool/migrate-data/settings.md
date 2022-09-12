@@ -1,7 +1,7 @@
 ---
 title: 数据迁移设置
 description: 了解如何开始将设置从Magento1迁移到Magento2，使用 [!DNL Data Migration Tool].
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 在开始之前，请采取以下步骤进行准备：
 
-1. 使用您的Magento2实例作为 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 以 [文件系统所有者](../../../installation/prerequisites/file-system/overview.md).
 
-1. 更改Magento2 `/bin` 目录或确保将其添加到系统PATH中。
+1. 更改为 `/bin` 目录，或确保将其添加到系统中 `PATH`.
 
 >[!NOTE]
 >
@@ -53,15 +53,15 @@ bin/magento migrate:settings [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 迁移设置时，您可以忽略、重命名或更改系统配置。 为此，请在 `settings.xml` 文件。
 
-1. 使用您的Magento2实例登录到服务器，或者切换到 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 作为或切换到的应用程序服务器登录 [文件系统所有者](../../../installation/prerequisites/file-system/overview.md).
 
 1. 更改为以下目录：
 
    ```bash
-   cd <your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<edition-to-edition>
+   cd <your application 2 install dir>/vendor/magento/data-migration-tool/etc/<edition-to-edition>
    ```
 
-   例如，如果Magento2安装在 `/var/www/html`, `settings.xml.dist` 文件位于以下目录之一中：
+   例如，如果应用程序安装在 `/var/www/html`, `settings.xml.dist` 文件位于以下目录之一中：
 
    * `/var/www/html/vendor/magento/data-migration-tool/etc/opensource-to-commerce`
 

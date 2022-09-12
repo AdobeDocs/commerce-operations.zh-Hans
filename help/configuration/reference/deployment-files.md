@@ -1,9 +1,9 @@
 ---
 title: 部署的配置文件
 description: 了解配置文件如何用于安装商务应用程序。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,9 @@ Adobe Commerce提供了配置文件，使您能够轻松自定义组件并创建
 
 示例：
 
-- 卸载组件： [`bin/magento setup:uninstall`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-uninstall.html)
+- 卸载组件： [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
 - 检查组件状态： [`bin/magento module:status`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#modulestatus)
-- 启用或禁用组件： [`bin/magento module:disable`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable), [`bin/magento module:enable`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html#instgde-cli-subcommands-enable-disable).
+- 启用或禁用组件： [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md), [`bin/magento module:enable`](../../installation/tutorials/manage-modules.md).
 
 > _config.php_
 

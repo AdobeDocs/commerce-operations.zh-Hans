@@ -1,9 +1,9 @@
 ---
 title: 硬件Recommendations
 description: 查看与Adobe Commerce部署和Magento Open Source部署的最佳性能相关的推荐硬件列表。
-source-git-commit: 9ab52374e031bd2b0a846dd5f47c89ff788dcafa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Magento的PHP内存要求根据系统的部署方式而有所不同。  通常�
 
 * Web节点仅提供店面页面：256 MB
 * 具有大目录的Web节点提供管理页面：1 GB
-* [!DNL Commerce] 创建具有大目录的站点索引：>256 MB(请参阅 [高级设置](https://devdocs.magento.com/guides/v2.4/performance-best-practices/advanced-setup.html) 以优化性能。)
+* [!DNL Commerce] 创建具有大目录的站点索引：>256 MB(请参阅 [高级设置](../performance/advanced-setup.md) 以优化性能。)
 * [!DNL Commerce] 编译和部署静态资产：756兆字节
 * [!DNL Commerce] 性能工具包配置文件生成：>1 GB PHP RAM，>16 MB [!DNL MySQL] TMP_TABLE_SIZE和MAX_HEAP_TABLE_SIZE设置
 

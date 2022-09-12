@@ -1,9 +1,9 @@
 ---
 title: 迁移概述
 description: 了解如何开始将数据从Magento1迁移到Magento2，使用 [!DNL Data Migration Tool].
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### 首要步骤
 
-1. 以有权写入文件系统的用户身份登录到应用程序服务器，或切换到。 请参阅 [切换到文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. 以有权写入文件系统的用户身份登录到应用程序服务器，或切换到。 请参阅 [切换到文件系统所有者](../../../installation/prerequisites/file-system/overview.md).
 
    如果使用bash shell，则可以使用以下语法切换到文件系统所有者并同时输入命令：
 
@@ -58,8 +58,6 @@ ht-degree: 0%
    - `cd <magento_root>/bin` 以 `./magento <command name>`
    - `<magento_root>/bin/magento <command name>`
    - `<magento_root>` 是web服务器docroot的子目录。
-
-除了此处提到的命令参数之外，请参阅 [常见参数](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands.html#instgde-cli-subcommands-common)
 
 ### 命令语法
 

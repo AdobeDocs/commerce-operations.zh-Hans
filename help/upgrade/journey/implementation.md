@@ -1,9 +1,9 @@
 ---
 title: 升级实施
 description: 了解Adobe Commerce和Magento Open Source项目的升级实施的不同阶段。
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '870'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
    - 升级目标版本
    - 发现严重错误的数量和详细信息
 
-- 升级服务以支持目标版本。 使用下表的模板来映射必须升级的服务。 使用 [系统要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) 以确定要添加到 _升级到_ 列。
+- 升级服务以支持目标版本。 使用下表的模板来映射必须升级的服务。 使用 [系统要求](../../installation/system-requirements.md) 以确定要添加到 _升级到_ 列。
 
 
    | 服务 | 当前版本 | 升级到 | 注释 |
@@ -64,7 +64,7 @@ ht-degree: 1%
 
 ## 开发与QA
 
-测试是升级的阶段，需要最多的时间。 因此，此过程应尽可能自动化。 的 _[应用程序测试指南](https://devdocs.magento.com/guides/v2.4/test/testing.html)_ 提供了有关如何设置和使用平台和系统测试工具以加快QA的详细信息。 在转到生产环境之前，请使用暂存环境来测试和验证升级。
+测试是升级的阶段，需要最多的时间。 因此，此过程应尽可能自动化。 的 _[应用程序测试指南](https://developer.adobe.com/commerce/testing/guide/)_ 提供了有关如何设置和使用平台和系统测试工具以加快QA的详细信息。 在转到生产环境之前，请使用暂存环境来测试和验证升级。
 
 ## UAT和准备启动
 

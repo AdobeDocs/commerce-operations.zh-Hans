@@ -1,7 +1,7 @@
 ---
 title: '"[!DNL Data Migration Tool] 技术规范”'
 description: “了解 [!DNL Data Migration Tool] 以及在Magento1和Magento2之间传输数据时如何扩展。”
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 系统要求
 
-的 [系统要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) 对于 [!DNL Data Migration Tool] 与Magento2相同。
+的 [系统要求](../../installation/system-requirements.md) 对于 [!DNL Data Migration Tool] 与Magento2相同。
 
 ## 内部结构
 

@@ -1,9 +1,9 @@
 ---
 title: 设置操作模式
 description: 阅读有关设置Adobe Commerce操作模式的信息。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ pub/static
 
 ## 显示当前模式
 
-要执行此操作，最简单的方法是将此命令作为 [文件系统所有者](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html). 如果您已共享托管，则这是您的提供商授予您登录服务器的用户。 如果您有专用服务器，则它通常是商务服务器上的本地用户帐户。
+要执行此操作，最简单的方法是将此命令作为 [文件系统所有者](../../installation/prerequisites/file-system/overview.md). 如果您已共享托管，则这是您的提供商授予您登录服务器的用户。 如果您有专用服务器，则它通常是商务服务器上的本地用户帐户。
 
 命令用法：
 

@@ -1,9 +1,9 @@
 ---
 title: 使用Nginx设置多个网站
 description: 请按照本教程使用Nginx设置多个网站。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 **创建一个虚拟主机** （简化）：
 
-此配置在 [Nginx配置](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/nginx.html).
+此配置在 [nginx配置](../../installation/prerequisites/web-server/nginx.md).
 
 1. 打开文本编辑器，并将以下内容添加到名为的新文件 `/etc/nginx/sites-available/magento`:
 

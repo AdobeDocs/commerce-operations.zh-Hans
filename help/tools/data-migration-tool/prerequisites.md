@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Data Migration Tool] 先决条件'
 description: “在开始使用 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据。”
-source-git-commit: 87298a6dfd783fed264f275495a3ad72374eb9f6
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## Magento2系统
 
-* 设置Magento2系统，以便满足 [系统要求](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
+* 设置Magento2系统，以便满足 [系统要求](../../installation/system-requirements.md).
 
    使用至少与现有Magento1系统匹配的拓扑和设计。
 
-* [安装Magento2](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html).
+* [安装Magento2](../../installation/overview.md).
 
 ## 克龙
 
