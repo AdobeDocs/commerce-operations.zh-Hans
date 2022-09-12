@@ -1,9 +1,9 @@
 ---
 user-guide-title: 工具
 user-guide-description: 了解可以在Adobe Commerce中使用的不同工具、其用途、安装过程以及如何获取访问权限。
-source-git-commit: 2ad429bf3676055f3ae199450f75906afc6542e5
+source-git-commit: 653e2deb96672625c37ccec2b2022b767b8879bd
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,8 @@ ht-degree: 0%
    - [扩展](site-wide-analysis-tool/extensions.md)
    - [警报](site-wide-analysis-tool/alerts.md)
    - [修补程序](site-wide-analysis-tool/patches.md)
+- 质量补丁工具 {#quality-patches-tool}
+   - [使用情况](quality-patches-tool/usage.md)
 - Adobe Commerce观察 {#observation-for-adobe-commerce}
    - [简介](observation-for-adobe-commerce/intro.md)
    - [如何访问](observation-for-adobe-commerce/access.md)
