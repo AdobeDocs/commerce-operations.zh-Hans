@@ -2,7 +2,7 @@
 keywords: Adobe Commerce；主页；热门主题
 title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 64e697a357e10005d02abeca13bd09c8a823bc00
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -42,10 +42,10 @@ ht-degree: 0%
   </td>
   <td valign="top">
     <a href="../tools/data-migration-tool/how-migration-works.md">
-      <img alt="迁移" src="../assets/icons/move-to.svg" width="40" height="40"/>
+      <img alt="数据迁移" src="../assets/icons/move-to.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="../tools/data-migration-tool/how-migration-works.md"><strong>迁移</strong></a>
+      <a href="../tools/data-migration-tool/how-migration-works.md"><strong>数据迁移</strong></a>
     </div>
   </td>
 </tr>
@@ -117,6 +117,5 @@ ht-degree: 0%
 
 | 更改 | 类型 |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| 添加了 [信息](../upgrade/upgrade-compatibility-tool/overview.md) 关于如何为升级兼容性工具定义规则。 | 主要更新 |
-| 删除了过时的升级兼容工具 [错误代码](../upgrade/upgrade-compatibility-tool/error-messages.md). | 技术 |
-| 已移动 [站点范围分析工具指南](../tools/site-wide-analysis-tool/intro.md) 从 [devdocs.magento.com](https://devdocs.magento.com/tools/site-wide-analysis.html) Experience League。 | 新建 |
+| 将 [本地安装指南](../installation/overview.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html) Experience League。 | 新建 |
+| 将 [Data Migration指南](../tools/data-migration-tool/how-migration-works.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html) Experience League。 | 新建 |
