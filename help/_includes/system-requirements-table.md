@@ -1,20 +1,24 @@
 ---
-source-git-commit: 475dbc056ac3e6a00c8f794259bb0fbf04143687
+source-git-commit: 34c7fca1ee676f1eb96256c55121771370702410
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '226'
+ht-degree: 65%
 
 ---
 # 系统要求
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>
         软件依赖关系
       </th>
+      <th>2.4.5-p1</th>
       <th>2.4.5</th>
+      <th>2.4.4-p2</th>
+      <th>2.4.4-p1</th>
       <th>2.4.4</th>
+      <th>2.4.3-p3</th>
       <th>2.4.3-p2</th>
       <th>2.4.3</th>
       <th>2.4.2</th>
@@ -29,7 +33,19 @@ ht-degree: 0%
             2.2
       </td>
       <td>
+            2.2
+      </td>
+      <td>
             2.1
+      </td>
+      <td>
+            2.1
+      </td>
+      <td>
+            2.1
+      </td>
+      <td>
+            1
       </td>
       <td>
             1
@@ -53,6 +69,18 @@ ht-degree: 0%
             7.17
       </td>
       <td>
+            7.17
+      </td>
+      <td>
+            7.16
+      </td>
+      <td>
+            7.16
+      </td>
+      <td>
+            7.16
+      </td>
+      <td>
             7.16
       </td>
       <td>
@@ -73,6 +101,18 @@ ht-degree: 0%
     </tr>
     <tr>
       <td>OpenSearch</td>
+      <td>
+            1.2
+      </td>
+      <td>
+            1.2
+      </td>
+      <td>
+            1.2
+      </td>
+      <td>
+            1.2
+      </td>
       <td>
             1.2
       </td>
@@ -116,11 +156,35 @@ ht-degree: 0%
             10.4
       </td>
       <td>
+            10.4
+      </td>
+      <td>
+            10.4
+      </td>
+      <td>
+            10.4
+      </td>
+      <td>
+            10.4
+      </td>
+      <td>
             10.2、10.3、10.4
       </td>
     </tr>
     <tr>
       <td>MySQL</td>
+      <td>
+            8.0
+      </td>
+      <td>
+            8.0
+      </td>
+      <td>
+            8.0
+      </td>
+      <td>
+            8.0
+      </td>
       <td>
             8.0
       </td>
@@ -152,6 +216,18 @@ ht-degree: 0%
             8.1
       </td>
       <td>
+            8.1
+      </td>
+      <td>
+            8.1
+      </td>
+      <td>
+            8.1
+      </td>
+      <td>
+            7.4
+      </td>
+      <td>
             7.4
       </td>
       <td>
@@ -174,6 +250,18 @@ ht-degree: 0%
       </td>
       <td>
             3.9
+      </td>
+      <td>
+            3.9
+      </td>
+      <td>
+            3.9
+      </td>
+      <td>
+            3.9
+      </td>
+      <td>
+            3.8
       </td>
       <td>
             3.8
@@ -200,6 +288,18 @@ ht-degree: 0%
             6.2
       </td>
       <td>
+            6.2
+      </td>
+      <td>
+            6.2
+      </td>
+      <td>
+            6.2
+      </td>
+      <td>
+            6.0
+      </td>
+      <td>
             6.0
       </td>
       <td>
@@ -224,6 +324,18 @@ ht-degree: 0%
             7.0
       </td>
       <td>
+            7.0
+      </td>
+      <td>
+            7.0
+      </td>
+      <td>
+            7.0
+      </td>
+      <td>
+            6.5
+      </td>
+      <td>
             6.5
       </td>
       <td>
@@ -241,6 +353,18 @@ ht-degree: 0%
     </tr>
     <tr>
       <td>Apache</td>
+      <td>
+            2.4
+      </td>
+      <td>
+            2.4
+      </td>
+      <td>
+            2.4
+      </td>
+      <td>
+            2.4
+      </td>
       <td>
             2.4
       </td>
@@ -286,11 +410,35 @@ ht-degree: 0%
       <td>
             1.18
       </td>
+      <td>
+            1.18
+      </td>
+      <td>
+            1.18
+      </td>
+      <td>
+            1.18
+      </td>
+      <td>
+            1.18
+      </td>
     </tr>
     <tr>
       <td>AWS Aurora(MySQL)</td>
       <td>
             8.0
+      </td>
+      <td>
+            8.0
+      </td>
+      <td>
+            5.7
+      </td>
+      <td>
+            5.7
+      </td>
+      <td>
+            5.7
       </td>
       <td>
             5.7
@@ -329,6 +477,18 @@ ht-degree: 0%
             ✔️
       </td>
       <td>
+            ✔️
+      </td>
+      <td>
+            ✔️
+      </td>
+      <td>
+            ✔️
+      </td>
+      <td>
+            ✔️
+      </td>
+      <td>
           —
       </td>
       <td>
@@ -339,6 +499,18 @@ ht-degree: 0%
       <td>AWS MQ</td>
       <td>
             3.9.13
+      </td>
+      <td>
+            3.9.13
+      </td>
+      <td>
+            3.8.11
+      </td>
+      <td>
+            3.8.11
+      </td>
+      <td>
+            3.8.11
       </td>
       <td>
             3.8.11
@@ -361,6 +533,18 @@ ht-degree: 0%
     </tr>
     <tr>
       <td>AWS ElastiCache</td>
+      <td>
+            雷迪斯6
+      </td>
+      <td>
+            雷迪斯6
+      </td>
+      <td>
+            雷迪斯6
+      </td>
+      <td>
+            雷迪斯6
+      </td>
       <td>
             雷迪斯6
       </td>
@@ -398,6 +582,18 @@ ht-degree: 0%
             7.9
       </td>
       <td>
+            7.9
+      </td>
+      <td>
+            7.9
+      </td>
+      <td>
+            7.9
+      </td>
+      <td>
+            7.9
+      </td>
+      <td>
           —
       </td>
       <td>
@@ -411,6 +607,18 @@ ht-degree: 0%
       <td>AWS OpenSearch</td>
       <td>
             1.2
+      </td>
+      <td>
+            1.2
+      </td>
+      <td>
+          —
+      </td>
+      <td>
+          —
+      </td>
+      <td>
+          —
       </td>
       <td>
           —
@@ -434,7 +642,6 @@ ht-degree: 0%
   </tbody>
 </table>
 
->[!INFO]
+>[!NOTE]
 >
 >云基础架构上的Adobe Commerce的Elasticsearch版本支持和兼容性取决于云基础架构上部署的服务版本，在极少数情况下可能与Adobe Commerce本地部署所支持的版本有所不同。
-
