@@ -1,8 +1,8 @@
 ---
-source-git-commit: ec60f7f2baecbdfe40971d17abe61aa52e30d1bd
+source-git-commit: b86cd1ee5a46917e383d79c6b5fa4194691dd6d2
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 60%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 # 系统要求
@@ -642,6 +642,6 @@ ht-degree: 60%
   </tbody>
 </table>
 
->[!NOTE]
+>[!IMPORTANT]
 >
->云基础架构上对Adobe Commerce的服务版本和兼容性支持取决于云基础架构上部署的版本，有时与Adobe Commerce本地部署支持的版本有所不同。 有关在云基础架构上部署在Adobe Commerce上的受支持软件和服务的详细信息，请参阅 [支持的软件和服务](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-arch-software).
+>云基础架构上对Adobe Commerce的服务版本和兼容性支持取决于云基础架构上部署的版本，有时与Adobe Commerce本地部署支持的版本有所不同。 请参阅 [支持的软件和服务](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-arch-software) 在 _Cloud指南_.
