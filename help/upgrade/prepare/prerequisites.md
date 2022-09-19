@@ -1,9 +1,9 @@
 ---
 title: 完整先决条件
 description: 通过完成这些先决步骤，为升级准备Adobe Commerce或Magento Open Source项目。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: c2d0c1d46a5f111a245b34ed6bc706dcd52be31c
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -97,12 +97,8 @@ Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 值
 1. 将ulimit设置为 `65536`.
 
    ```bash
-   ulimit -s 65536
+   ulimit -n 65536
    ```
-
-   >[!NOTE]
-   >
-   > 打开文件ulimit的语法取决于您使用的UNIX shell。 上述设置应与CentOS和Ubuntu一起使用，与Bash shell配合使用。 但是，对于Mac OS，正确的设置是ulimit -S 65532。 有关更多信息，请参阅手册页或操作系统参考。
 
 要在Bash Shell中设置值，请执行以下操作：
 
@@ -111,7 +107,7 @@ Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 值
 1. 添加以下行：
 
    ```bash
-   ulimit -s 65536
+   ulimit -n 65536
    ```
 
 1. 保存对 `.bashrc` 并退出文本编辑器。
