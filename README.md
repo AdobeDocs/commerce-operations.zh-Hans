@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5a950079e8b445ef363217c085da92f0991a3a7f
+source-git-commit: 3ba17b62f595e5a02ca56753d81d67166ddbc413
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '538'
 ht-degree: 5%
 
 ---
@@ -62,7 +62,7 @@ If you submit a pull request with significant changes to documentation and code 
 ## 模板
 
 的 `_jekyll` 目录包含模板主题和必需资产。
-使用液体模板语言的模板位于 `_jekyll` 目录作为HTML文件。
+使用液体模板语言的模板位于 `_jekyll/templated` 目录作为HTML文件。
 的 `_jekyll/_data` 目录包含包含用于呈现模板的数据的文件。
 
 要渲染所有模板，请执行以下操作：
@@ -80,7 +80,6 @@ _scripts/render
 > **注意：** 必须从 `_jekyll` 目录访问Advertising Cloud的帮助。
 > **注意：** 必须安装Ruby才能运行此脚本。
 
-脚本运行渲染，将渲染的文件写入 `_jekyll/_rendered` 目录作为HTML文件，并将其复制到 `help/_includes` 目录 `.md` 文件。
-
+脚本运行渲染并将渲染的模板写入 `help/_includes/templated` 目录访问Advertising Cloud的帮助。
 
 有关 [数据文件](https://jekyllrb.com/docs/datafiles) [液体过滤器](https://jekyllrb.com/docs/liquid/filters/)和其他功能。
