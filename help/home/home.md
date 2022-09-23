@@ -2,7 +2,7 @@
 keywords: Adobe Commerce；主页；热门主题
 title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
-source-git-commit: 64e697a357e10005d02abeca13bd09c8a823bc00
+source-git-commit: 8605fa5c791a48c112efa997b14d7bffe5f3028c
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -59,11 +59,11 @@ ht-degree: 0%
     </div>
   </td>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html">
+    <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce.html">
        <img alt="命令行工具引用" src="../assets/icons/page-rule.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html"><strong>命令行工具参考</strong></a>
+      <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce.html"><strong>命令行工具参考</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -117,5 +117,6 @@ ht-degree: 0%
 
 | 更改 | 类型 |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| 将 [本地安装指南](../installation/overview.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html) Experience League。 | 新建 |
-| 将 [Data Migration指南](../tools/data-migration-tool/how-migration-works.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html) Experience League。 | 新建 |
+| 将 [命令行工具参考](../reference/commerce.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-cloud.html). | 新建 |
+| 将 [本地安装指南](../installation/overview.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html). | 新建 |
+| 将 [Data Migration指南](../tools/data-migration-tool/how-migration-works.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html). | 新建 |
