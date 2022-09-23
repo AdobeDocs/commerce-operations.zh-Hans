@@ -1,7 +1,7 @@
 ---
 title: 系统要求
 description: 使用本参考可确定已通过Adobe Commerce和Magento Open Source版本测试的所需软件依赖项。
-source-git-commit: 3ba17b62f595e5a02ca56753d81d67166ddbc413
+source-git-commit: df8240b71efe992bc1c0655aa30c32778297a3c6
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Linux发行版，如RedHat Enterprise Linux(RHEL)、CentOS、Ubuntu、Debian等�
 >
 >的 [PHP安装说明](prerequisites/php-settings.md) 包括安装这些扩展的步骤。
 
-{{$include /help/_includes/php-extensions.md}}
+{{$include /help/_includes/templated/php-extensions.md}}
 
 请参阅 [官方PHP文档](https://php.net/manual/en/extensions.php) 以了解安装详细信息。
 

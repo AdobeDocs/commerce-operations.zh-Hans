@@ -1,7 +1,7 @@
 ---
 title: PHP设置
 description: 请按照以下步骤来安装所需的PHP扩展，并为Adobe Commerce和Magento Open Source的本地安装配置所需的PHP设置。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: df8240b71efe992bc1c0655aa30c32778297a3c6
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Adobe Commerce和Magento Open Source2.4与PHP 7.3兼容，但我们使用PHP 7.4
 
 Adobe Commerce和Magento Open Source需要安装一组扩展。
 
-{{$include /help/_includes/php-extensions.md}}
+{{$include /help/_includes/templated/php-extensions.md}}
 
 要验证已安装的扩展，请执行以下操作：
 
