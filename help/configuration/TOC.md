@@ -1,9 +1,9 @@
 ---
 user-guide-title: 配置指南
 user-guide-description: 配置Adobe Commerce或Magento Open Source应用程序功能和服务。
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d451ea025a6f4fc8a4a9f15ca83896a63058a3a0
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
       - [清漆概述](cache/config-varnish.md)
       - [安装清漆](cache/config-varnish-install.md)
       - [Web服务器](cache/config-varnish-server.md)
-      - [配置商务应用程序](cache/config-varnish-magento.md)
+      - [配置商务应用程序](cache/configure-varnish-commerce.md)
       - [高级清漆配置](cache/config-varnish-advanced.md)
       - [缓存清除](cache/use-varnish-cache.md)
       - [缓存清除多个清漆实例](cache/use-multiple-varnish-cache.md)

@@ -1,7 +1,7 @@
 ---
 title: 高级清漆配置
 description: 配置高级清漆功能，包括运行状况检查、宽限和saint模式。
-source-git-commit: bda758381d8d1b9209110adb168c36e1d504c4fa
+source-git-commit: 974c3480ccf5d1e1a5308e1bd2b27fcfaf3c72b2
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ### 当商务后端运行正常时
 
-当运行状况检查确定商务后端运行正常时，清漆检查时间是否在宽限期内。 默认宽限期为300秒，但商户可以从 [管理员](https://glossary.magento.com/admin) 如 [配置商务以使用清漆](config-varnish-magento.md). 如果宽限期未过期，清漆将提供过时的内容，并从商务服务器异步刷新对象。 如果宽限期已过，清漆将提供过时的内容，并从Commerce后端同步刷新对象。
+当运行状况检查确定商务后端运行正常时，清漆检查时间是否在宽限期内。 默认宽限期为300秒，但商户可以从 [管理员](https://glossary.magento.com/admin) 如 [配置商务以使用清漆](configure-varnish-commerce.md). 如果宽限期未过期，清漆将提供过时的内容，并从商务服务器异步刷新对象。 如果宽限期已过，清漆将提供过时的内容，并从Commerce后端同步刷新对象。
 
 清漆提供过时对象的最大时间是宽限期（默认为300秒）和TTL值(默认为86400秒)的总和。
 

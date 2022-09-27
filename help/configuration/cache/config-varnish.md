@@ -1,9 +1,9 @@
 ---
 title: 配置和使用清漆
 description: 了解清漆如何存储文件并改进HTTP流量。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 974c3480ccf5d1e1a5308e1bd2b27fcfaf3c72b2
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Commerce 2.4.2使用清漆6.4进行测试。 Commerce 2.4.x与清漆6.x兼容
 
 - [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) 从Magento2 GitHub存储库
 - `.htaccess` Commerce提供的Apache的分布式配置文件
-- `default.vcl` 使用生成的清漆的配置 [管理员](../cache/config-varnish-magento.md)
+- `default.vcl` 使用生成的清漆的配置 [管理员](../cache/configure-varnish-commerce.md)
 
 >[!INFO]
 本主题仅涵盖上一列表中的默认选项。 在复杂情景中，有许多其他方法可配置缓存（例如，使用内容交付网络）；这些方法不在本指南的范围之内。
