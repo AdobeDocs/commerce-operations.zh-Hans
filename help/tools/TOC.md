@@ -1,9 +1,9 @@
 ---
 user-guide-title: 工具
 user-guide-description: 了解可以在Adobe Commerce中使用的不同工具、其用途、安装过程以及如何获取访问权限。
-source-git-commit: 5b623d713d8950b362a9fa66ad97e444811d23fa
+source-git-commit: 5edd2839a611fc20b1978b01923a692b21a8dd55
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 0%
    - [修补程序](site-wide-analysis-tool/patches.md)
 - 质量补丁工具 {#quality-patches-tool}
    - [使用情况](quality-patches-tool/usage.md)
+   - [发行说明](quality-patches-tool/release-notes.md)
 - Adobe Commerce观察 {#observation-for-adobe-commerce}
    - [简介](observation-for-adobe-commerce/intro.md)
    - [如何访问](observation-for-adobe-commerce/access.md)
@@ -40,7 +41,6 @@ ht-degree: 0%
    - [“部署”选项卡](observation-for-adobe-commerce/deploy-tab.md)
    - [警报选项卡](observation-for-adobe-commerce/alerts-tab.md)
    - [WAF选项卡](observation-for-adobe-commerce/waf-tab.md)
-   - [“机器人”选项卡](observation-for-adobe-commerce/bots.md)
    - [CDN选项卡](observation-for-adobe-commerce/cdn-tab.md)
    - [RabbitMQ选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Cron选项卡](observation-for-adobe-commerce/cron-tab.md)
