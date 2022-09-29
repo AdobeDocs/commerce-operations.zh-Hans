@@ -1,9 +1,9 @@
 ---
 title: 二级缓存配置
 description: 了解如何配置L2缓存。
-source-git-commit: 02f02393878d04b4a0fcdae256ac1ac5dd13b7f6
+source-git-commit: e5e4cf0b3979a457e706823dd16c88508ec4abd8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -76,8 +76,81 @@ Adobe建议使用 [`cache preload`](redis-pg-cache.md#redis-preload-feature) 功
 
 ## 过时的缓存选项
 
-开始于 [!DNL Commerce] 2.4, `stale_cache` 选项在某些情况下可以提高性能。
+开始于 [!DNL Commerce] 2.4, `use_stale_cache` 选项在某些情况下可以提高性能。
 
 通常，在性能方面可以接受等待锁的取舍，但商家拥有的块或缓存数越多，等待锁的时间就越长。 在某些情况下，您可以 **键数** \* **查找超时** 流程的时间。 在某些极少数情况下，商户在 `Block/Config` 缓存，因此即使锁的查找超时较小，也可能需要几秒。
 
 过时的缓存仅适用于L2缓存。 如果缓存过时，您可以发送过时的缓存，而新缓存将在并行进程中生成。 要启用过时的缓存，请添加 `'use_stale_cache' => true` 到L2缓存的顶部配置。
+
+Adobe建议启用 `use_stale_cache` 选项，该选项仅适用于从中获益最多的缓存类型，包括：
+
+- `block_html`
+- `config_integration_api`
+- `config_integration`
+- `full_page`
+- `layout`
+- `reflection`
+- `translate`
+
+以下代码显示了一个配置示例：
+
+```php
+'cache' => [
+    'frontend' => [
+        'default' => [
+            'backend' => '\\Magento\\Framework\\Cache\\Backend\\RemoteSynchronizedCache',
+            'backend_options' => [
+                'remote_backend' => '\\Magento\\Framework\\Cache\\Backend\\Redis',
+                'remote_backend_options' => [
+                    'persistent' => 0,
+                    'server' => 'localhost',
+                    'database' => '0',
+                    'port' => '6379',
+                    'password' => '',
+                    'compress_data' => '1',
+                ],
+                'local_backend' => 'Cm_Cache_Backend_File',
+                'local_backend_options' => [
+                    'cache_dir' => '/dev/shm/'
+                ],
+                'use_stale_cache' => false,
+            ],
+            'frontend_options' => [
+                'write_control' => false,
+            ],
+        ],
+         'stale_cache_enabled' => [
+            'backend' => '\\Magento\\Framework\\Cache\\Backend\\RemoteSynchronizedCache',
+            'backend_options' => [
+                'remote_backend' => '\\Magento\\Framework\\Cache\\Backend\\Redis',
+                'remote_backend_options' => [
+                    'persistent' => 0,
+                    'server' => 'localhost',
+                    'database' => '0',
+                    'port' => '6379',
+                    'password' => '',
+                    'compress_data' => '1',
+                ],
+                'local_backend' => 'Cm_Cache_Backend_File',
+                'local_backend_options' => [
+                    'cache_dir' => '/dev/shm/'
+                ],
+                'use_stale_cache' => true,
+            ],
+            'frontend_options' => [
+                'write_control' => false,
+            ],
+        ]
+    ],
+    'type' => [
+        'default' => ['frontend' => 'default'],
+        'layout' => ['frontend' => 'stale_cache_enabled'],
+        'block_html' => ['frontend' => 'stale_cache_enabled'],
+        'reflection' => ['frontend' => 'stale_cache_enabled'],
+        'config_integration' => ['frontend' => 'stale_cache_enabled'],
+        'config_integration_api' => ['frontend' => 'stale_cache_enabled'],
+        'full_page' => ['frontend' => 'stale_cache_enabled'],
+        'translate' => ['frontend' => 'stale_cache_enabled']
+    ],
+],
+```
