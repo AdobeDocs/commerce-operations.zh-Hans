@@ -2,7 +2,7 @@
 keywords: Adobe Commerce；主页；热门主题
 title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
-source-git-commit: 8605fa5c791a48c112efa997b14d7bffe5f3028c
+source-git-commit: e247b0bd2765e425da033f32ab99f79cfe6cc0b2
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 <table>
 <tr>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html">
+    <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">
       <img alt="发行信息" src="../assets/icons/promote.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html"><strong>发行信息</strong></a>
+      <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html"><strong>发行信息</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -117,6 +117,7 @@ ht-degree: 0%
 
 | 更改 | 类型 |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| 将 [发行信息指南](../release/roadmap.md) 从 [devdocs.magento.com](https://devdocs.magento.com/release/versions.html). | 新建 |
 | 将 [命令行工具参考](../reference/commerce.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-cloud.html). | 新建 |
 | 将 [本地安装指南](../installation/overview.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html). | 新建 |
 | 将 [Data Migration指南](../tools/data-migration-tool/how-migration-works.md) 从 [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html). | 新建 |
