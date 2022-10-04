@@ -1,7 +1,7 @@
 ---
 title: 使用情况
 description: 了解如何使用 [!DNL Quality Patches Tool].
-source-git-commit: 83fa1c77dd6105f4c97f697fd6636773d94fb5ee
+source-git-commit: 7ce26f10b92632c077d37ae03d68594ba2444098
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 0%
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 
 >[!INFO]
-> 
->请参阅 [应用单个修补程序](#apply-individual-patches) 有关将修补程序应用到Adobe Commerce或Magento Open Source项目的说明。 请参阅 [可用的修补程序](https://devdocs.magento.com/quality-patches/tool.html#patch-grid) 查看已发布修补程序的完整列表。
+>
+>请参阅 [应用单个修补程序](#apply-individual-patches) 有关将修补程序应用到Adobe Commerce或Magento Open Source项目的说明。 请参阅 [可用的修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
 
 >[!WARNING]
 >
@@ -24,7 +24,7 @@ ht-degree: 0%
 ## 安装
 
 >[!INFO]
-> 
+>
 >如果尚未安装，则必须安装 [[!DNL Git]](https://github.com/git-guides/install-git) 或 [修补程序](https://man7.org/linux/man-pages/man1/patch.1.html) 安装之前 [!DNL Quality Patches Tool]. 添加 `magento/quality-patches` 将编辑器包添加到 `composer.json` 文件：
 
 ```bash
@@ -72,7 +72,7 @@ Adobe Commerce 2.3.5。
    - `Recommended replacement`  — 建议替换已弃用修补程序的修补程序。
 
 >[!INFO]
-> 
+>
 >升级到新版Adobe Commerce或Magento Open Source后，如果新版本中未包含修补程序，则必须重新应用修补程序。 请参阅 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
 
 ## 应用单个修补程序 {#apply-individual-patches}

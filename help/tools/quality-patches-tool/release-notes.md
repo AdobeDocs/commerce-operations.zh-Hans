@@ -1,7 +1,7 @@
 ---
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
-source-git-commit: ead062ac2f5dbf07293aef2a5a5d9f1f21255402
+source-git-commit: ea89232bba442add673a0024753f7a5dfdc8d1f8
 workflow-type: tm+mt
 source-wordcount: '9233'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->请参阅 [应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) 有关将修补程序应用到Adobe Commerce或Magento Open Source项目的说明。 请参阅 [可用的修补程序](https://devdocs.magento.com/quality-patches/tool.html#patch-grid) ，以查看已发布修补程序的完整列表。
+>请参阅 [应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) 有关将修补程序应用到Adobe Commerce或Magento Open Source项目的说明。 请参阅 [可用的修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) ，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
@@ -542,4 +542,3 @@ ht-degree: 0%
 * **MDVA-30052** (*(对于Adobe Commerce)>=2.3.2-p2 &lt;2.3.5*) — 修复了私有内容（本地存储）填充不正确导致性能问题的问题。
 * **MDVA-30131** (*for Adobe Commerce >=2.3.4 &lt;2.3.6 || 2.4.0*) — 修复了分层导航的问题，其中 *否* 如果 [!DNL Elasticsearch] 用作搜索引擎。
 * **MDVA-35514** (*(对于Adobe Commerce)>=2.4.0 &lt;2.4.1*) — 修复了在“创建包”模式窗口中创建送货标签并将已订购的产品添加到包时出现的问题。
-
