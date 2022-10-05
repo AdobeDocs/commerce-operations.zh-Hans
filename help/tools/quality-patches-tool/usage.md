@@ -1,9 +1,9 @@
 ---
 title: 使用情况
 description: 了解如何使用 [!DNL Quality Patches Tool].
-source-git-commit: 7ce26f10b92632c077d37ae03d68594ba2444098
+source-git-commit: 9e719cdf888caa3fa34f6416650e62bbf1b81175
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,8 @@ ht-degree: 0%
 
 的 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) 提供由Adobe和Magento Open Source社区开发的各个修补程序。 它允许您应用、还原和查看有关可用于已安装版本的Adobe Commerce或Magento Open Source的所有修补程序的常规信息。 无论谁开发了修补程序，您都可以将修补程序应用于Adobe Commerce和Magento Open Source项目。 例如，您可以将社区开发的修补程序应用到Adobe Commerce项目。
 
+
+看这个 [技术视频](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) 并了解如何使用质量修补工具进行Adobe Commerce和Magento Open Source。
 
 >[!INFO]
 >
