@@ -1,9 +1,9 @@
 ---
 user-guide-title: 工具
 user-guide-description: 了解可以在Adobe Commerce中使用的不同工具、其用途、安装过程以及如何获取访问权限。
-source-git-commit: 3914a9bb185a18fa80497630f8a6e09b58bdec22
+source-git-commit: 5e8e2730a0cc30997365bd70c4409e0eb8923dfb
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 0%
    - [“红色”选项卡](observation-for-adobe-commerce/redis-tab.md)
    - [MySQL选项卡](observation-for-adobe-commerce/mysql-tab.md)
    - [“PHP”选项卡](observation-for-adobe-commerce/php-tab.md)
+   - [“机器人”选项卡](observation-for-adobe-commerce/bots.md)
    - [“部署”选项卡](observation-for-adobe-commerce/deploy-tab.md)
    - [警报选项卡](observation-for-adobe-commerce/alerts-tab.md)
    - [WAF选项卡](observation-for-adobe-commerce/waf-tab.md)
