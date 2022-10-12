@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5b04a064f51426d29fb8adf8659e266aa5f453ec
+source-git-commit: a2747c1d62c4a22179c1177e7c4e76e028f66cea
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '953'
 ht-degree: 9%
 
 ---
@@ -20,9 +20,21 @@ ht-degree: 9%
   </thead>
   <tbody>
     <tr>
+        <td>2.4.5-p1</td>
+        <td>2022年10月11日</td>
+          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-5-p1.html">发行说明</a><br>
+          </td>
+    </tr>
+    <tr>
         <td>2.4.5</td>
         <td>2022年8月9日</td>
           <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-5.html">Adobe Commerce发行说明</a><br><a href="https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-5.html">Magento Open Source发行说明</a><br>
+          </td>
+    </tr>
+    <tr>
+        <td>2.4.4-p2</td>
+        <td>2022年10月11日</td>
+          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-4-p2.html">发行说明</a><br>
           </td>
     </tr>
     <tr>
