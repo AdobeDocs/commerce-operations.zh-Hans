@@ -1,9 +1,9 @@
 ---
 title: “功能”选项卡
 description: 了解 [!DNL Site-Wide Analysis Tool]
-source-git-commit: c4eca6568dc507a7ba746ac059b1959929815a5e
+source-git-commit: 4f34d7db04229ef511cddbedce6ed08b75028831
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 在 [!DNL Site-Wide Analysis Tool] 屏幕。
 
-**[!UICONTROL Dashboard]**:的 [!UICONTROL Dashboard] 页面显示包含当前Recommendations、升级兼容性、安全扫描、扩展和 [!DNL NewRelic Alerts] ，以了解Adobe Commerce网站的当前状态。 还有一个列表 [!UICONTROL External Resources] Adobe Commerce的链接，包括 [Adobe Commerce帮助中心支持知识库（帮助中心）](https://support.magento.com/), [Adobe Commerce开发人员文档(DevDocs)](https://devdocs.magento.com/), [质量补丁工具](https://devdocs.magento.com/quality-patches/tool.html#patch-grid), [安全中心](https://magento.com/security)和 [Adobe Commerce观察](https://support.magento.com/hc/en-us/articles/4402379845901-Use-Observation-for-Adobe-Commerce).
+**[!UICONTROL Dashboard]**:的 [!UICONTROL Dashboard] 页面显示包含当前Recommendations、升级兼容性、安全扫描、扩展和 [!DNL NewRelic Alerts] ，以了解Adobe Commerce网站的当前状态。 还有一个列表 [!UICONTROL External Resources] Adobe Commerce的链接，包括 [Adobe Commerce帮助中心支持知识库（帮助中心）](https://support.magento.com/), [Adobe Commerce开发人员文档(DevDocs)](https://devdocs.magento.com/), [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}, [安全中心](https://magento.com/security)和 [Adobe Commerce观察](https://support.magento.com/hc/en-us/articles/4402379845901-Use-Observation-for-Adobe-Commerce).
 
 **[!UICONTROL Information]**:的 [!UICONTROL Information] 页面显示有关网站的概述信息。
 的 [!UICONTROL General Information] 区域显示商户网站基本数据，显示联系人所有者， [!DNL Jira] 问题（仅限内部使用）和报表票证部分。
@@ -28,5 +28,4 @@ Adobe Commerce区域显示网站详细信息、产品、项目和集成链接、
 
 **[!UICONTROL Alerts]**:的 [!UICONTROL Alerts] 页面显示最新 [!DNL NewRelic Managed Alerts] 例如Adobe Commerce实例。 详细了解 [适用于Adobe Commerce的托管警报](https://support.magento.com/hc/en-us/articles/360045806832) 和如何 [访问NewRelic服务](https://support.magento.com/hc/en-us/articles/360039127712) 在Adobe Commerce支持知识库中。
 
-**[!UICONTROL Patches]**:的 [!UICONTROL Patches] 页面显示 [质量补丁工具](https://devdocs.magento.com/quality-patches/tool.html#patch-grid) 与商户的Adobe Commerce实例版本兼容。 进一步了解 [质量补丁工具](https://support.magento.com/hc/en-us/articles/360047139492) 在Adobe Commerce支持知识库中。
-
+**[!UICONTROL Patches]**:的 [!UICONTROL Patches] 页面显示 [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)与商家的Adobe Commerce实例版本兼容的{target=&quot;_blank&quot;}。 进一步了解 [[!DNL Quality Patches Tool]](https://support.magento.com/hc/en-us/articles/360047139492) 在Adobe Commerce支持知识库中。

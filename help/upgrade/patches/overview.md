@@ -1,7 +1,7 @@
 ---
 title: 修补程序的工作原理
 description: 了解Adobe Commerce和Magento Open Source的不同类型的修补程序及其工作方式。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 1a18a445cb104420dd9b853b7c4d42ce3bddf2ac
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 单个修补程序包含针对特定问题的低影响质量修补程序。 这些修复已应用于最新支持的次要版本（例如2.4.x），但可能在以前支持的次要版本（例如2.3.x）中缺失。 Adobe根据需要发布单个修补程序。
 
-使用 [质量补丁工具](https://devdocs.magento.com/quality-patches/tool.html) 来应用单个修补程序。
+使用 [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}以应用单个修补程序。
 
 >[!NOTE]
 >
@@ -81,7 +81,7 @@ index c8a6fef58d31..7d01c195791e 100644
              clearTimeout: function () {
                  clearTimeout(this.timeoutId);
 +                this.fail();
- 
+
                  return this;
              },
 ```
@@ -90,7 +90,7 @@ index c8a6fef58d31..7d01c195791e 100644
 
 您可以使用以下任一方法应用修补程序：
 
-- [质量补丁工具](https://devdocs.magento.com/quality-patches/tool.html)
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}
 - [命令行](/help/upgrade/patches/apply.md#command-line)
 - [编辑器](/help/upgrade/patches/apply.md#composer)
 
