@@ -1,30 +1,30 @@
 ---
 title: 配置远程存储
 description: 了解如何为本地商务应用程序配置远程存储模块。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 9a5993c9a65ad210f1a9682734730f235bbc3d44
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 # 配置远程存储
 
-远程存储模块提供了一个选项，用于存储媒体文件，并使用存储服务(如AWS S3)在永久的远程存储容器中计划导入/导出。 默认情况下， [!DNL Commerce] 应用程序将媒体文件存储在包含应用程序的同一文件系统中。 对于复杂的多服务器配置而言，这一效率很低，并且在共享资源时可能会导致性能降低。 使用远程存储模块，您可以在 `pub/media` 目录和导入/导出文件(位于 `var` 远程对象存储的目录，以利用服务器端图像大小调整。
+远程存储模块提供了一个选项，用于存储媒体文件，并计划使用存储服务(如AWS S3)在永久性远程存储容器中导入和导出。 默认情况下，Adobe Commerce应用程序将媒体文件存储在包含该应用程序的同一文件系统中。 对于复杂的多服务器配置而言，这一效率很低，并且在共享资源时可能会导致性能降低。 使用远程存储模块，您可以在 `pub/media` 目录和导入/导出文件(位于 `var` 远程对象存储的目录，以利用服务器端图像大小调整。
 
 >[!INFO]
 >
->远程存储仅在版本2.4.2及更高版本中可用。 请参阅 [2.4.2发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html).
+>远程存储仅可用于Commerce版本2.4.2及更高版本。 请参阅 [2.4.2发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html).
 
 >[!INFO]
 >
->远程存储模块具有 _有限_ 在Adobe Commerce上支持云基础架构。 Adobe无法对第三方存储适配器服务进行完全故障诊断。
+>远程存储模块具有 _有限_ 在Adobe Commerce上支持云基础架构。 Adobe无法对第三方存储适配器服务进行完全故障诊断。 请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md) 为云项目实施远程存储提供了指导。
 
 ![模式图像](../../assets/configuration/remote-storage-schema.png)
 
 ## 远程存储选项
 
-您可以使用 `remote-storage` 选项 [`setup` CLI命令][setup]. 的 `remote-storage` 选项使用以下语法：
+您可以使用 `remote-storage` 选项 [`setup` CLI命令](../../installation/tutorials/deployment.md). 的 `remote-storage` 选项使用以下语法：
 
 ```text
 --remote-storage-<parameter-name>="<parameter-value>"
@@ -49,21 +49,23 @@ ht-degree: 0%
 
 ## 启用远程存储
 
-您可以在新 [!DNL Commerce] 安装或添加到现有商务实例 `remote-storage` 参数名称和值对，带有 `setup` CLI命令。 至少，你必须提供存储 `driver`, `bucket`和 `region`.
+您可以在Adobe Commerce安装期间安装远程存储，或将远程存储添加到现有的Commerce实例。 以下示例演示了使用一组 `remote-storage` 具有商务的参数 `setup` CLI命令。 至少，你必须提供存储 `driver`, `bucket`和 `region`.
 
-以下示例使用美国的AWS S3存储适配器启用远程存储：
-
-- 安装新 [!DNL Commerce] 具有远程存储
+- 示例：使用远程存储安装Commerce
 
    ```bash
    bin/magento setup:install --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
    ```
 
-- 在现有存储上启用远程存储 [!DNL Commerce]
+- 示例：在现有商务上启用远程存储
 
    ```bash
    bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
    ```
+
+>[!TIP]
+>
+>有关云基础架构上的Adobe Commerce，请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md).
 
 ## 限制
 
@@ -75,7 +77,7 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 启用远程存储可能会影响您已建立的开发体验。 例如，某些PHP文件函数可能无法按预期工作。 必须对文件操作强制使用商务框架。
 
-禁止使用的PHP本机函数列表可在 [Magento编码标准] 存储库。
+禁止使用的PHP本机函数列表可在 [magento-coding-standard存储库][code-standard].
 
 ## 迁移内容
 
@@ -92,5 +94,4 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 <!-- link definitions -->
 
 [import-export]: https://docs.magento.com/user-guide/system/data-scheduled-import-export.html
-[Magento编码标准]: https://github.com/magento/magento-coding-standard/blob/develop/Magento2/Sniffs/Functions/DiscouragedFunctionSniff.php
-[setup]: ../../installation/tutorials/deployment.md
+[code-standard]: https://github.com/magento/magento-coding-standard/blob/develop/Magento2/Sniffs/Functions/DiscouragedFunctionSniff.php

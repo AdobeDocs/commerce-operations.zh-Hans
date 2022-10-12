@@ -1,24 +1,28 @@
 ---
 title: 为远程存储配置图像大小调整
 description: 通过配置服务器端图像大小调整来优化磁盘资源。
-source-git-commit: 96fe0c5eeaa029347c829c39547ee5e473c8d04d
+source-git-commit: 7fc5d561baa3c2a4aab160a35a1c8a302a62a3b1
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # 为远程存储配置图像大小调整
 
-默认情况下， [!DNL Commerce] 支持在应用程序端调整图像大小。 但是，通过启用远程存储模块，您可以使用Nginx将图像大小调整卸载到服务器端，在服务器端可以保存磁盘资源并优化磁盘使用情况。
+默认情况下，Adobe Commerce支持在应用程序端调整图像大小。 但是，通过启用远程存储模块，您可以使用Nginx将图像大小调整卸载到服务器端，在服务器端可以保存磁盘资源并优化磁盘使用情况。
 
 下图显示了Nginx如何检索、调整图像大小和在缓存中存储图像。 调整大小取决于URL中包含的参数，如高度和宽度。
 
 ![图像大小调整](../../assets/configuration/remote-storage-nginx-image-resize.png)
 
-## 在中配置URL格式 [!DNL Commerce]
+>[!TIP]
+>
+>有关云基础架构项目的Adobe Commerce，请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md)
 
-要在服务器端调整图像大小，必须配置Commerce以提供图像的高度、宽度和位置(URL)参数。
+## 在Adobe Commerce中配置URL格式
+
+要在服务器端调整图像大小，必须配置Adobe Commerce以提供图像的高度、宽度和位置(URL)参数。
 
 **配置商务以调整服务器端图像大小**:
 
