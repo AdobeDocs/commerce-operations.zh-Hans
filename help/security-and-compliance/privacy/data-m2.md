@@ -1,9 +1,9 @@
 ---
 title: 客户个人信息参考（版本2.x）
 description: 了解Adobe Commerce和Magento Open Source2.x中客户个人信息的数据流图和数据库实体映射。
-source-git-commit: 0640b59cc529123911537475bbfc179c917ac258
+source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >这是帮助Adobe Commerce和Magento Open Source商家和开发人员为遵守隐私法规做准备的一系列主题中的一个主题。 请咨询您的法律顾问，以确定您的企业是否以及如何遵守任何法律义务。
 
-在开发隐私法规合规性计划时，请参考以下数据流图和数据库实体映射，例如：
+在开发隐私法规合规性程序时，请参考以下数据流图和数据库实体映射，例如：
 
 - [GDPR](gdpr.md)
 - [CCPA](ccpa.md)

@@ -1,9 +1,9 @@
 ---
 title: 《通用数据保护条例》(GDPR)
 description: 了解《通用数据保护条例》(GDPR)，该法规旨在为欧盟和欧洲经济区的所有个人制定数据保护和隐私法规。
-source-git-commit: 1a608e8a5986026d5a187dc8cbd358fed2db5d9e
+source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---

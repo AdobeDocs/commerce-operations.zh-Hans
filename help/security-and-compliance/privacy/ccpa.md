@@ -1,7 +1,7 @@
 ---
 title: 《加州消费者隐私法案》(CCPA)
 description: 了解《加州消费者隐私法案》(CCPA)，该法案扩展了加州消费者在确定如何收集、存储和使用其个人信息方面的权利。
-source-git-commit: 495dfd515759e4df507479de57118586eac14fda
+source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -24,7 +24,7 @@ CCPA授予消费者以下新权限：
 - **选择退出的权利** 出售他们的个人信息。
 - **不歧视权** 价或服务行使CCPA下的隐私权。
 
-## CCPA合规指南
+## CCPA合规性
 
 制定和实施CCPA合规计划需要协调努力。 我们鼓励商家组建跨职能团队，并遵循 [CCPA合规指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) 使公司遵守条例。 作为开发人员，您可能会受邀以利益相关方的身份参与，重点介绍该过程的步骤2至5。 请参阅 [CCPA合规指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) 以了解更多信息。
 
@@ -48,5 +48,5 @@ CCPA授予消费者以下新权限：
 
 有关技术信息，请参阅“个人信息参考”中适用于您支持的每个Adobe Commerce或Magento Open Source版本的数据流图和数据库实体映射。
 
-- [个人信息参考（版本2.x）](data-m2.md)
-- [个人信息参考（版本1.x）](data-m1.md)
+- [客户个人信息参考（版本2.x）](data-m2.md)
+- [客户个人信息参考（版本）1.x)](data-m1.md)
