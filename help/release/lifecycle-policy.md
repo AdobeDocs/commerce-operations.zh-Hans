@@ -1,10 +1,10 @@
 ---
 title: 软件生命周期策略
 description: 了解终止对Adobe Commerce版本的软件支持的关键日期。
-source-git-commit: 79f36e3728e6bc436e8093bd4051143a48e681d6
+source-git-commit: ffa8b957828833d2c3f9bc79c31dc3fa2c6035a5
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 对于Adobe Commerce 2.4及后续版本：
 
-- 为了更好地简化生命周期策略，Adobe为2.4版本提供了质量修复，直到其所基于的PHP版本的支持日期结束。 客户可以通过联系 [Adobe Commerce支持](https://developer.adobe.com/commerce/contributor/community/support/) 或通过自助服务 [质量补丁工具](https://devdocs.magento.com/quality-patches/tool.html) 如果其版本仍符合质量支持的条件。 请参阅下表，了解Adobe Commerce发行版的软件支持终止日期。
+- 为了更好地简化生命周期策略，Adobe为2.4版本提供了质量修复，直到其所基于的PHP版本的支持日期结束。 客户可以通过联系 [Adobe Commerce支持](https://developer.adobe.com/commerce/contributor/community/support/) 或通过自助服务 [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}（如果其版本仍符合质量支持条件）。 请参阅下表，了解Adobe Commerce发行版的软件支持终止日期。
 
 - Adobe仅通过最新补丁或安全补丁版本提供安全修复，即使客户的版本仍符合质量支持的条件。 与质量修复不同，安全修复不能移植到以前的次要版本，也不能移植到支持的次要版本中的先前修补程序版本。
 

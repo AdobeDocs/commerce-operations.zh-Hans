@@ -1,10 +1,10 @@
 ---
 title: 升级建议读取
 description: 查看关于规划 Adobe Commerce 或 Magento Open Source 升级推荐的读物
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: ffa8b957828833d2c3f9bc79c31dc3fa2c6035a5
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 3%
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html?lang=en">升级兼容性工具PhpStorm插件</a> （视频）</li>
             <li><a href="../upgrade-compatibility-tool/overview.md">升级兼容性工具</a></li>
             <li><a href="https://magentocommeng.slack.com/archives/C019Y143U9F">#UpgradeCompatibilityToolSlack渠道</a></li>
-            <li><a href="https://devdocs.magento.com/quality-patches/usage.html">质量补丁工具</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html">质量补丁工具</a></li>
           </ul>
       </td>
     </tr>
