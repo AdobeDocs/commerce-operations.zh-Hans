@@ -2,9 +2,9 @@
 title: 维护和支持概述
 description: 妥善维护和支持您新启动的Adobe Commerce实施。
 exl-id: 5a104148-74f1-469b-84ca-9bce740a7865
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 514426d622ba47b8a7e517368132c86c9236b63a
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -30,3 +30,7 @@ ht-degree: 0%
 > 请务必组织一份过渡检查表，以帮助项目经理完成成功设置生产后支持团队所需的任务。 此过渡应是整个项目计划的一部分，任务必须列入计划。
 
 为您的企业确定正确的支持模型，以继续增强和优化您的平台（以及作为整体的商务实践），是维护实施过程中所做的所有艰苦工作的关键步骤。 制定全面的持续支持计划后，您的商务网站可以跟上客户的期望，并且您可以继续实现目标。
+
+部署Adobe Commerce时，必须考虑在维护和支持策略中应包含哪些内容。
+专家支持包含在Adobe Commerce许可证中。 有关专家支持和Adobe支持计划的详细信息，请参阅 [Adobe支持计划](https://business.adobe.com/customers/consulting-services/premier-support.html).
+除Adobe支持计划外，还有旧版Magento支持条款。 要了解哪些支持服务适用于您，请参考您的合同，以了解您拥有的支持协议或与您的客户成功经理(CSM)沟通。
