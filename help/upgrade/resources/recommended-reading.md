@@ -3,8 +3,8 @@ title: 升级建议读取
 description: 查看关于规划 Adobe Commerce 或 Magento Open Source 升级推荐的读物
 source-git-commit: ffa8b957828833d2c3f9bc79c31dc3fa2c6035a5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '423'
+ht-degree: 3%
 
 ---
 
