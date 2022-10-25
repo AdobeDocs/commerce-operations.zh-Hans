@@ -1,9 +1,9 @@
 ---
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
-source-git-commit: bb1cb17b75a799409336068967c9d0facefeaf41
+source-git-commit: e9ba2d0ad8568c40335e8643ef0070d9e2bb9b3f
 workflow-type: tm+mt
-source-wordcount: '9467'
+source-wordcount: '9581'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,14 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关 [!DNL quality patches] 由社区创建以用于Magento Open Source，请参阅 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.22 {#v1-1-22}
+
+* **ACSD-47444** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.3) — 修复了 _尝试访问类型为bool的值上的数组偏移_ 在PHP 7.4上访问已知产品的某些非现有类别路径时出错。
+* **ACSD-47332** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了cron失败，并出现仅在运行UTC时才报告的错误的问题。
+* **ACSD-47280** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了无法正确禁用特定范围上的共享目录功能的问题。
+* **ACSD-47106** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了无法在公司创建页面上的新自定义属性中保存值的问题。
+* 更新了修补程序：ACSD-45143。
 
 ## v1.1.21 {#v1-1-21}
 
@@ -443,7 +451,7 @@ ht-degree: 0%
 
 * **MDVA-31399** (*(对于Adobe Commerce)>=2.3.2 &lt;2.4.2*) — 添加 *小计(包括 税)* 选项来为规则条件定价。
 * **MDVA-31236** (*(对于Adobe Commerce)>=2.4.0 &lt;2.4.2*) — 修复了具有自定义资源访问权限的管理员无法设置2FA或登录的问题。
-* **MDVA-30845** (*for Adobe Commerce >=2.3.5 &lt;2.3.7*) — 修复了 *抱歉，此订单目前没有报价* 无法连接到UPS XML/USPS/DHL时显示错误，并且没有其他送货方法可用。
+* **MDVA-30845** (*(对于Adobe Commerce)>=2.3.5 &lt;2.3.7*) — 修复了 *抱歉，此订单目前没有报价* 无法连接到UPS XML/USPS/DHL时显示错误，并且没有其他送货方法可用。
 * **MDVA-32133** (*(对于Adobe Commerce)>=2.4.0 &lt;2.4.1*) — 修复了在某些情况下无法从页面生成器中加载媒体集的问题。
 * **MDVA-12304** (*(对于Adobe Commerce)>=2.3.0 &lt;2.4.2*) — 将Cookie的最大数量从50增加到200。
 * **MDVA-32632** (*(对于Adobe Commerce)>=2.3.2 &lt;2.3.5*) — 修复了订单显示在付款系统中，但不在Adobe Commerce中的问题。
