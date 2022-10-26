@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2c12c6ea6e7b6ffeb07bbda17ded34e39de6656a
+source-git-commit: 74cb55f4552bc1b2dace37d9a6f7e68939d1c262
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
@@ -40,3 +40,15 @@ ht-degree: 0%
 >拆分数据库功能是 [已弃用](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187?_ga=2.128934671.2024864496.1657558157-1596100530.1657558157) 在版本2.4.2的Adobe Commerce中。 请参阅 [从拆分数据库还原到单个数据库](/help/configuration/storage/revert-split-database.md).
 
 <!-- End of Configuration guide snippets -->
+
+## 后向不兼容的更改 {#bics}
+
+>[!NOTE]
+>
+>Adobe Commerce和Magento Open Source版本可能包含不兼容的后向更改(BIC)。 要查看向后不兼容的更改，请参阅 [BIC引用](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). 有关主要的不兼容后向问题，请参见 [BIC亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). 并非所有版本都引入了主要的BIC。
+
+## CVE通知 {#cve-notice}
+
+>[!NOTE]
+>
+>从2.3.2版本开始，我们将分配并发布已编入索引的常见漏洞和暴露(CVE)编号，其中每个安全错误都由外部方向我们报告。 这允许用户更轻松地识别其部署中的未寻址漏洞。 您可以在 [CVE](https://cve.mitre.org/).

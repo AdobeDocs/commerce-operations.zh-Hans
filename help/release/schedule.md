@@ -1,9 +1,9 @@
 ---
 title: 发行计划
 description: 了解Adobe Commerce的特定版本何时计划进行测试版、预发行版和正式发布。
-source-git-commit: 77ef9c276306700a9ff62795d05075e8731f5d5a
+source-git-commit: 261aecd7d217e5c2e22f1a6c97242baa2923af60
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 发行计划
 
-Adobe不断努力在使产品升级变得简单且可预测与更快地为早期采用者提供改进和新功能之间找到正确的平衡。 在过去一年中，我们改进了如何提供软件来支持这种平衡。 有关其他信息，请参阅 [发布策略](policy.md).
+Adobe不断努力在使产品升级变得简单且可预测与更快地为早期采用者提供改进和新功能之间找到正确的平衡。 在过去一年中，我们改进了如何提供软件来支持这种平衡。 有关其他信息，请参阅 [版本控制策略](versioning-policy.md).
 
 Adobe为每个受支持的Adobe Commerce和Magento Open Source发行版发布安全性和功能修补程序。
 
