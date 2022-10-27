@@ -1,9 +1,9 @@
 ---
 title: 二级缓存配置
 description: 了解如何配置L2缓存。
-source-git-commit: e5e4cf0b3979a457e706823dd16c88508ec4abd8
+source-git-commit: 2ef8b48fab84221c8e6423f41126bbee37706809
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Commerce在Redis中存储经过哈希处理的数据版本，并在后缀“：h
 
 >[!INFO]
 >
->对于云基础架构上的Adobe Commerce，请考虑 [扩展Redis缓存实施](https://support.magento.com/hc/en-us/articles/360049292532) 支持文章。
+>对于云基础架构上的Adobe Commerce，您可以使用 [部署变量](https://devdocs.magento.com/cloud/env/variables-deploy.html#redis_backend) ，用于二级缓存配置。
 
 ## 配置示例
 
