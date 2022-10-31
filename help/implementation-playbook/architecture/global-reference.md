@@ -2,7 +2,7 @@
 title: Adobe Commerce全局参考架构
 description: 利用全局参考架构，充分利用您的Adobe Commerce实施。
 exl-id: a18529a3-da9b-4e1b-8048-0a906e65c740
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: f713e07b57705e8720c773f9f762a357c173e29d
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
@@ -10,6 +10,8 @@ ht-degree: 0%
 ---
 
 # 全局参考架构(GRA)
+
+>[!VIDEO](https://video.tv.adobe.com/v/3410528/?quality=12&learn=on)
 
 在多个本地市场中运行具有多个品牌网站（具有本地化的货币、语言、媒体、共享目录和独特购物车）的企业，以及希望避免实施相同功能和集成的不必要成本的企业时，全球参考架构(GRA)始终是一个不错的选择。
 
