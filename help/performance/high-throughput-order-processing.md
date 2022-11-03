@@ -1,9 +1,9 @@
 ---
 title: 高吞吐量订单处理
 description: 为您的Adobe Commerce或Magento Open Source部署优化订单投放和结帐体验。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 45ffa6487d94feba3d6c2a6d5d938108b1fef91d
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ bin/magento setup:config:set --checkout-async 0
 AsyncOrder支持一组有限的 [!DNL Commerce] 功能。
 
 | 类别 | 支持的功能 |
-|---------------- | -----------------------|
+|------------------|--------------------------------------------------------------------------|
 | 结帐类型 | OnePage结账<br>标准结账<br>B2B可转让报价 |
 | 付款方法 | 支票/货币订单<br>交付现金<br>Braintree<br>PayPal PayFlow Pro |
 | 装运方法 | 支持所有装运方法。 |
@@ -184,8 +184,8 @@ stage:
 
 <!-- link definitions -->
 
-[global]: https://docs.magento.com/user-guide/catalog/inventory-options-global.html
-[inventory]: https://docs.magento.com/user-guide/configuration/catalog/inventory.html
+[global]: https://experienceleague.adobe.com/docs/commerce-admin/inventory/configuration/global-options.html
+[inventory]: https://experienceleague.adobe.com/docs/commerce-admin/inventory/guide-overview.html
 [mrg]: https://developer.adobe.com/commerce/php/module-reference/
 [AsyncOrder]: https://developer.adobe.com/commerce/php/module-reference/module-async-order/
 [DereverdTotalCalculating]: https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/
