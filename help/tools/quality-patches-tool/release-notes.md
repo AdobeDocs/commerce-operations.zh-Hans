@@ -1,9 +1,9 @@
 ---
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
-source-git-commit: e9ba2d0ad8568c40335e8643ef0070d9e2bb9b3f
+source-git-commit: 6d0b5515792afe33eab440290413b84d251796cc
 workflow-type: tm+mt
-source-wordcount: '9581'
+source-wordcount: '9752'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,18 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关 [!DNL quality patches] 由社区创建以用于Magento Open Source，请参阅 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.23 {#v1-1-23}
+
+* **ACSD-47179** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了对特定范围具有受限访问权限的管理员无法删除产品评论的问题。
+* **ACSD-47107** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5) — 修复了目录价格规则折扣应用于自定义产品选项的问题。
+* **ACSD-47232** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了无法在管理员中应用具有总权重条件的优惠券的问题。
+* **ACSD-46519** (对于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.6) — 修复了GraphQL categoryList请求为锚点类别返回错误product_count的问题。
+* **ACSD-47027** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了更新CompanyRole GraphQL请求缓慢的问题。
+* **ACSD-47666** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了“管理员”>“系统”>“权限”>“用户角色”>“角色”>“用户角色”网格中无法使用过滤器功能的问题。
+* **ACSD-47497** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了“管理员”下的“配置”中不显示“服务”选项卡的问题。
+* 更新了修补程序：ACSD-47743。
+* 已替换修补程序：MDVA-42807。
 
 ## v1.1.22 {#v1-1-22}
 
