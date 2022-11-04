@@ -1,9 +1,9 @@
 ---
 title: 克隆示例数据Git存储库
 description: 请按照以下步骤操作，通过克隆Git存储库来安装Adobe Commerce并Magento Open Source示例数据。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -73,12 +73,10 @@ ht-degree: 0%
 
    如果您使用 `2.4-develop` Magento Open SourceGitHub存储库的分支，示例数据分支应为 `2.4-develop`.
 
-   如果您使用 `2.4.3` Magento Open SourceGitHub存储库的分支，示例数据分支应为 `2.4.3`.
-
-   要签出正确的分支，请从示例数据存储库的根目录中运行以下命令(假定您需要 `2.4.3` 分支):
+   要签出正确的分支，请从示例数据存储库的根目录中运行以下命令(假定您需要 `2.4-develop` 分支):
 
    ```bash
-   git checkout 2.4.3
+   git checkout 2.4-develop
    ```
 
 1. 更改为 `<app_root>`.
@@ -129,12 +127,10 @@ ht-degree: 0%
 
    如果您使用 `2.4-develop` Magento Open SourceGitHub存储库的分支，示例数据分支应为 `2.4-develop`.
 
-   如果您使用 `2.4.3` Magento Open SourceGitHub存储库的分支，示例数据分支应为 `2.4.3`.
-
-   要签出正确的分支，请从示例数据存储库的根目录中运行以下命令(假定您需要 `2.4.3` 分支):
+   要签出正确的分支，请从示例数据存储库的根目录中运行以下命令(假定您需要 `2.4-develop` 分支):
 
    ```bash
-   git checkout 2.4.3
+   git checkout 2.4-develop
    ```
 
 1. 更改为 `<magento_root>`.

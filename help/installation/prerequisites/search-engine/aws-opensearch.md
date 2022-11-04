@@ -1,7 +1,7 @@
 ---
 title: AWS OpenSearch
 description: 请按照以下步骤为Adobe Commerce和Magento Open Source的本地安装配置AWS OpenSearch Web服务。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # AWS OpenSearch
 
-Adobe Commerce和Magento Open Source2.4.3支持使用Amazon OpenSearch Service群集。 此服务是AmazonElasticsearch服务的后继服务。 本主题介绍如何配置Commerce以使用AWS OpenSearch，以及如何将数据从本地Elasticsearch或OpenSearch实例迁移到AWS OpenSearch群集。
+Adobe Commerce和Magento Open Source2.4.5支持使用Amazon OpenSearch Service群集。 此服务是AmazonElasticsearch服务的后继服务。 本主题介绍如何配置Commerce以使用AWS OpenSearch，以及如何将数据从本地Elasticsearch或OpenSearch实例迁移到AWS OpenSearch群集。
 
 ## 创建AWS OpenSearch服务域
 

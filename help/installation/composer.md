@@ -1,9 +1,9 @@
 ---
 title: 快速启动本地安装
 description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce或Magento Open Source。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -95,32 +95,32 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >Adobe Commerce客户可在正式发布(GA)日期之前的两周内访问2.4.x和2.3.x修补程序。 预发行包仅可通过编辑器使用。 在GA之前，您无法在开发人员门户或GitHub上访问预发行版。 如果在编辑器中找不到这些包，请联系Adobe Commerce支持。
+   >Adobe Commerce客户可以在正式发布(GA)日期前两周访问修补程序。 预发行包仅可通过编辑器使用。 在GA之前，您无法在开发人员门户或GitHub上访问预发行版。 如果在编辑器中找不到这些包，请联系Adobe Commerce支持。
 
 ### 示例 — 次要版本
 
-次要版本包含新增功能、质量修复和安全修复。 使用编辑器指定次要版本。 例如，要指定Adobe Commerce 2.4.3元包，请执行以下操作：
+次要版本包含新增功能、质量修复和安全修复。 使用编辑器指定次要版本。 例如，要指定Adobe Commerce 2.4.5元包，请执行以下操作：
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.3 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
 ```
 
 ### 示例 — 质量修补程序
 
-质量修补程序主要包含功能 _和_ 安全修复。 但是，它们有时也可以包含向后兼容的新功能。 使用编辑器下载质量修补程序。 例如，要指定Adobe Commerce 2.4.3元包，请执行以下操作：
+质量修补程序主要包含功能 _和_ 安全修复。 但是，它们有时也可以包含向后兼容的新功能。 使用编辑器下载质量修补程序。 例如，要指定Adobe Commerce 2.4.5元包，请执行以下操作：
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.3 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
 ```
 
 ### 示例 — 安全修补程序
 
 安全修补程序仅包含安全修补程序。 它们旨在使升级过程更快、更轻松。
 
-安全修补程序使用编辑器命名约定 `2.4.3-px`. 使用编辑器指定修补程序。 例如，要下载Adobe Commerce 2.4.3-p1元数据包，请执行以下操作：
+安全修补程序使用编辑器命名约定 `2.4.5-px`. 使用编辑器指定修补程序。 例如，要下载Adobe Commerce 2.4.5-p1元数据包，请执行以下操作：
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.3-p1 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5-p1 <install-directory-name>
 ```
 
 ## 设置文件权限
