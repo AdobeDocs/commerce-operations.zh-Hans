@@ -1,9 +1,9 @@
 ---
 title: 安装指南
 description: 使用本指南进行安装 [!DNL Site-Wide Analysis Tool] 用于您的网站
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 434fb9eb9570f183d9bf9d4b56b8e56a69e8005d
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 ## [!DNL Commerce Services Connector]
 
-代理需要 [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) 扩展，以及 [已配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) 和API密钥。 要验证是否已安装扩展，请运行以下命令：
+代理需要 [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 扩展，以及 [已配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 和API密钥。 要验证是否已安装扩展，请运行以下命令：
 
 ```bash
 bin/magento module:status Magento_ServicesConnector
@@ -83,7 +83,7 @@ bin/magento module:status Magento_ServicesConnector
 
 1. 单击 **[!UICONTROL Delete]** 现有API密钥旁边。
 
-1. [配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) 新的API密钥。
+1. [配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 新的API密钥。
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ bin/magento module:status Magento_ServicesConnector
    bin/magento setup:upgrade
    ```
 
-1. [配置API密钥](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) 将扩展连接到系统。
+1. [配置API密钥](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 将扩展连接到系统。
 
 ## 安装代理
 
