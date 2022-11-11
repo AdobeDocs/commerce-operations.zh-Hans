@@ -1,9 +1,9 @@
 ---
 title: “ [!UICONTROL Elasticsearch] 选项卡”
 description: 了解 [!UICONTROL Elasticsearch] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 2427a18ea67833bc50912ef78be29d4320b5b205
+source-git-commit: b3cc9033eb9445af3edafd8c7ae9809dbb8174fc
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ![活动主碎片](../../assets/tools/active-primary-shards.jpg)
 
-的 **[!UICONTROL Active Primary Shards]** 框架将根据所选帐户的活动主共享数量显示不同的数量 [!DNL Elasticsearch] 服务。
+的 **[!UICONTROL Active Primary Shards]** 框架根据所选帐户的活动主共享数量显示不同的数量 [!DNL Elasticsearch] 服务。
 
 从 [!DNL Elasticsearch]:最终指南 [2.x]:
 
@@ -33,31 +33,31 @@ ht-degree: 0%
 
 ![群集中的活动碎片](../../assets/tools/active-shards-in-cluster.jpg)
 
-**[!UICONTROL Active Shards in Cluster]** - [!DNL Elasticsearch] 群集。
+的 **[!UICONTROL Active Shards in Cluster]** frame显示 [!DNL Elasticsearch] 群集。
 
 ## [!UICONTROL Index health - this will show the index name and color status]
 
 ![指数运行状况](../../assets/tools/index-health.jpg)
 
-此帧将显示索引名称和索引颜色状态计数。 向下滚动表格时，将看到具有相同的索引名称，其状态为“黄色”和“红色”。 在27个索引名称后面显示的编号是状态颜色的计数。 如果为零，则在这些选定时间范围内没有索引处于该颜色状态的实例。
+此框架显示索引名称和索引颜色状态计数。 向下滚动表格时，将看到具有相同的索引名称，其状态为“黄色”和“红色”。 在27个索引名称后面显示的编号是状态颜色的计数。 如果为零，则在选定的时间范围内没有索引处于该颜色状态的实例。
 
 ## [!UICONTROL Elasticsearch Status by node information]
 
 ![Elasticsearch状态](../../assets/tools/elasticsearch-status-by-node.jpg)
 
-的 **[!UICONTROL Elasticsearch Status by node information]** 框架显示 [!DNL Elasticsearch] 按颜色、按节点划分的群集状态。 这将有助于指示 [!DNL Elasticsearch] 群集在选定的时间范围内返回什么状态。
+的 **[!UICONTROL Elasticsearch Status by node information]** 框架显示 [!DNL Elasticsearch] 按颜色和节点划分的群集状态。 这有助于指示 [!DNL Elasticsearch] 群集在选定的时间范围内返回什么状态。
 
 ## [!UICONTROL Elasticsearch index information]
 
 ![Elasticsearch索引信息](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
-此 **[!UICONTROL Elasticsearch index information]** 表显示索引名称、其所在节点、已索引文档的数量、索引运行状况，以及特定时间的索引大小（以MB为单位）。
+的 **[!UICONTROL Elasticsearch index information]** 表显示索引名称、其所在节点、已索引文档的数量、索引运行状况，以及特定时间的索引大小（以MB为单位）。
 
 ## [!UICONTROL Elasticsearch process CPU %]
 
 ![Elasticsearch进程CPU](../../assets/tools/elasticsearch-process-cpu.jpg)
 
-的 **[!UICONTROL Elasticsearch process CPU %]** 帧显示进程CPU%，按 [!DNL Elasticsearch] 处理时间范围。
+的 **[!UICONTROL Elasticsearch process CPU %]** 帧显示进程CPU百分比，按 [!DNL Elasticsearch] 处理时间范围。
 
 ## [!UICONTROL Elasticsearch Memory garbage collection]
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 ![Elasticsearch错误](../../assets/tools/elasticsearch-tab-elasticsearch-errors.jpg)
 
-的 **[!UICONTROL Elasticsearch Errors]** 帧将显示错误， [!DNL Elasticsearch] 与空间不足一样，当所有分片都失败时、当搜索存在参数问题时、版本错误时以及当所有节点都不可用时，从“黄色”状态切换为“红色”状态。
+的 **[!UICONTROL Elasticsearch Errors]** 框架显示错误 [!DNL Elasticsearch] 与空间不足一样，当所有分片都失败时、当搜索存在参数问题时、版本错误时以及当所有节点都不可用时，从“黄色”状态切换为“红色”状态。
 
 ## [!UICONTROL Elasticsearch Unassigned Shards]:
 

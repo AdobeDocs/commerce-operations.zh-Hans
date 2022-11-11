@@ -1,9 +1,9 @@
 ---
 title: “ [!UICONTROL Summary] 选项卡”
 description: 了解 [!UICONTROL Summary] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 5bcb834bc563c52cd5b169b9f4f20dab31d404cd
+source-git-commit: 5058441eb64d59b3e1aa329603a87f75c826996e
 workflow-type: tm+mt
-source-wordcount: '2637'
+source-wordcount: '2655'
 ht-degree: 0%
 
 ---
@@ -23,29 +23,29 @@ ht-degree: 0%
 
 ### 交易类型：
 
-**Web:** 事务通过HTTP请求启动。 对于大多数组织而言，这些量度代表以客户为中心的交互，因此是要监控的最重要交易。
+**Web:** Web事务通过HTTP请求启动。 对于大多数组织而言，这些量度代表以客户为中心的交互，因此是要监控的最重要交易。
 
 **非Web:** 非Web事务不会通过Web请求启动。 它们可以包括非Web工作进程、后台进程、脚本、消息队列活动和其他任务。
 
-查看 **[!UICONTROL Transaction Overview]** 框架中，有近53,000项交易的APDEX平均分数为。76，其中95%的交易是在2.313秒内发生的。 如果在短时间内发生APDEX点击，则较紧的时间范围可能显示与当前平均值的偏差。
+如果您查看 **[!UICONTROL Transaction Overview]** 在上面的框架中，有近53,000笔交易的APDEX平均分数为。76，其中95%的交易是在2.313秒内发生的。 如果在短时间内发生APDEX点击，则较紧的时间范围可能显示与当前平均值的偏差。
 
 ## [!UICONTROL 404 page errors frame]
 
 ![404页错误框架](../../assets/tools/404-page-errors.jpg)
 
-的 **[!UICONTROL 404 page errors]** 框架列出了 [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) 以及选定时间段内404个页面错误的计数。
+的 **[!UICONTROL 404 page errors]** 框架列出了 [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) 和选定时间范围内404个页面错误的计数。
 
 ## [!UICONTROL % of Storage Free frame]
 
 ![可用存储帧的百分比](../../assets/tools/percent-of-storage-free.jpg)
 
-的 **[!UICONTROL % of Storage Free]** frame显示集群所有节点中存储装载的平均空闲%。 例如，如果您有三个节点群集，则将显示\&lt;mount point=&quot;&quot;>, \&lt;environment name=&quot;&quot;>. 如果三个节点之间存在差异，则此帧可能具有欺骗性。 例如， `/data/mysql` 在三个节点群集中，“装载点空闲”值不同。 下面有一个框架 [!UICONTROL MySQL] 选项卡，按节点名称划分装载点，以便更准确地查看 `/data/mysql` 每个节点上的存储实际上是免费的。
+的 **[!UICONTROL % of Storage Free]** frame显示集群所有节点中存储装载空闲的平均百分比。 例如，如果您有三个节点群集，则该帧将显示\&lt;mount point=&quot;&quot;>, \&lt;environment name=&quot;&quot;>. 如果三个节点之间存在差异，则此帧可能具有欺骗性。 例如， `/data/mysql` 在三个节点群集中，“装载点空闲”值不同。 下面有一个框架 [!UICONTROL MySQL] 选项卡，按节点名称划分装载点，以便更准确地查看 `/data/mysql` 每个节点上的存储实际上是免费的。
 
 ## [!UICONTROL % of system memory that is free frame]
 
 ![空闲帧的系统内存百分比](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
 
-此帧按节点显示每个节点上空闲的系统内存量。
+的 **系统内存中空闲的百分比** 帧按节点显示每个节点上空闲的系统内存量。
 
 ## [!UICONTROL Swap memory free in bytes]
 
@@ -57,19 +57,19 @@ ht-degree: 0%
 
 ![CPU百分比（按主机）](../../assets/tools/cpu-percent-by-host.jpg)
 
-所有环境和节点的聚合显示在 **[!UICONTROL CPU % by host]** 框架。 您应取消选择非生产环境。 您应该注意生产环境的所有节点都不存在的任何实例。 本文就CPU利用率较高提示： [使用Adobe Commerce上的New Relic解决性能问题](https://support.magento.com/hc/en-us/articles/360042149832#high_cpu_usage).
+所有环境和节点的聚合显示在 **[!UICONTROL CPU % by host]** 框架。 您应取消选择非生产环境。 另请注意，生产环境的所有节点都不存在的任何实例。 有关CPU利用率高的更多提示，请参阅 [使用Adobe Commerce上的New Relic解决性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
 
 ## [!UICONTROL Alerts during timeframe]
 
 ![时间范围内的警报](../../assets/tools/alerts-during-timeframe.jpg)
 
-的 **[!UICONTROL Alerts during timeframe]** 显示所有警报，包括 [!UICONTROL Managed Alerts] 由Adobe Commerce支持团队添加。
+的 **[!UICONTROL Alerts during timeframe]** 显示所有警报，包括 [!UICONTROL Managed Alerts] 由Adobe Commerce支持添加。
 
 ## [!UICONTROL CPU Usage]
 
 ![CPU使用率](../../assets/tools/cpu-usage.jpg)
 
-如果 **[!UICONTROL CPU Usage]** 框架为空，表示应用 [!DNL New Relic] 未启用。 如果您的网站位于Starter上，您将看不到此信息。 如果您的网站使用Pro，请打开支持票证以 [!DNL New Relic Infrastructure] 为您的网站启用。
+如果 **[!UICONTROL CPU Usage]** 框架为空，表示应用 [!DNL New Relic] 未启用。 如果您的网站位于Starter上，则您看不到此信息。 如果您的网站位于Pro上，请打开 [支持票证](https://experienceleague.corp.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=en) 必须 [!DNL New Relic Infrastructure] 为您的网站启用。
 
 ## [!UICONTROL Average Response Time]
 
@@ -87,13 +87,13 @@ ht-degree: 0%
 
 ![响应代码](../../assets/tools/response-code.jpg)
 
-的 **[!UICONTROL Response Code]** frame是web流量和请求响应代码的良好指示。 是 [!DNL New Relic] 事务数据，且该数据由 `httpResponseCode` 返回。
+的 **[!UICONTROL Response Code]** frame是web流量和请求响应代码的良好指示。 是 [!DNL New Relic's] 事务数据，且该数据由 `httpResponseCode` 返回。
 
 ## [!UICONTROL Web Traffic volume compared with one week ago Magento Managed Alerts Information]
 
 ![与一周前相比的Web流量](../../assets/tools/web-traffic-volume-compared.jpg)
 
-此帧显示一周前的Web流量与当前流量相比。
+此框架显示过去一周和当前周的Web流量比较。
 
 ## [!UICONTROL Deployment Log Entries]
 
@@ -105,9 +105,9 @@ ht-degree: 0%
 
 ![部署状态](../../assets/tools/deployment-state.jpg)
 
-的 **[!UICONTROL Deployment State]** 从部署日志中获取框架Facet特定部署短语。 以下是日志和Facet名称中计入的短语示例：
+的 **[!UICONTROL Deployment State]** 从部署日志中划分特定部署阶段。 以下是日志和Facet名称中计入的阶段示例：
 
-**部署日志短语：**
+**部署日志阶段：**
 
 * “%正在启动生成命令%”)作为“start_gen”
 * “%git apply /app/vendor/magento/ece-tools/patches%”)作为“apply_patches”
@@ -122,13 +122,13 @@ ht-degree: 0%
 
 ![IP频率](../../assets/tools/ip-frequency.jpg)
 
-的 **[!UICONTROL IP Frequency]** frame会计算来自 [!DNL Fastly] 日志。 具有这些状态的Web请求将到达源服务器并将向服务器添加负载。 它以频度显示排名前20的地址。 此框架可用于检测网站上的IP攻击或重负载源。
+的 **[!UICONTROL IP Frequency]** frame会计算来自 [!DNL Fastly] 日志。 具有这些状态的Web请求将到达源服务器，并将向服务器添加负载。 它以频度显示排名前20的地址。 此框架可用于检测网站上的IP攻击或重负载源。
 
 ## [!UICONTROL IP Response – top 20 URLs in duration]
 
 ![ip响应 — 持续时间前20个url](../../assets/tools/ip-response-top-20-urls.jpg)
 
-此框架显示响应持续时间最长的URL。 它可能指示响应持续时间最长的大图像文件或页面、API或页面。
+的 **[!UICONTROL IP Response – top 20 URLs in duration]** frame显示响应持续时间最长的URL。 它可能指示响应持续时间最长的大图像文件或页面、API或页面。
 
 ## [!UICONTROL API Calls by IP]
 
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 ![潜在机器人](../../assets/tools/potential-bots.jpg)
 
-的 **[!UICONTROL Potential Bots]** frame会查看请求，请求名称为request_user_agent（如NULL或“%bot%”）。 通常，“%bot%”request_user_agent将遵循 `robots.txt` 文件。
+的 **[!UICONTROL Potential Bots]** frame会查看请求，请求名称为request_user_agent（如NULL或“%bot%”）。 通常，“%bot%”request_user_agent遵循 `robots.txt` 文件。
 
 ## [!UICONTROL Transaction Errors]
 
@@ -164,13 +164,13 @@ ht-degree: 0%
 
 ![通过节点进行nginx访问](../../assets/tools/nginx-access-by-node.jpg)
 
-的 **[!UICONTROL Nginx access by node]** 框架从 `access.log` 。 查看负载是否均匀分布是很有帮助的。 它通常显示节点何时停止。 此外，还会显示整个网站的负载情况。
+的 **[!UICONTROL Nginx access by node]** 框架从 `access.log` 。 查看负载是否均匀分布是很有帮助的。 它通常显示节点何时停止。 该框架还显示整个网站的负载情况。
 
 ## [!UICONTROL Galera Log]
 
 ![加勒日志](../../assets/tools/galera-log.jpg)
 
-[加莱拉](https://galeracluster.com/library/galera-documentation.pdf) 用于数据库群集。 此帧聚焦于 [!UICONTROL Galera] 群集。 这些信号主要用于进入和退出群集的节点，这是维护数据库数据完整性的正常行为。 节点将保持同步，因为 [!UICONTROL Galera] 群集状态更改。
+[[!DNL Galera]](https://galeracluster.com/library/galera-documentation.pdf) 用于数据库群集。 此帧聚焦于 [!UICONTROL Galera] 群集。 这些信号集中在进入和退出群集的节点上，这是维护数据库数据完整性的正常行为。 节点将保持同步，因为 [!UICONTROL Galera] 群集状态更改。
 
 **列表 [!UICONTROL Galera] 状态更改：**
 
@@ -256,9 +256,9 @@ ht-degree: 0%
 
 ![从日志中记录同步](../../assets/tools/redis-synchronization-from-log.jpg)
 
-[雷迪斯](https://redis.io/docs/about/) 是内存中用作数据库、缓存和消息代理的开源（BSD已授权）数据结构存储。 如果配置了，它可以执行数据库和会话缓存。 的 **[!UICONTROL Redis synchronization from Log]** 帧聚焦 [Redis同步](https://redis.io/docs/manual/replication/). 越大 [!DNL Redis] 数据集，则同步出现问题的可能性越大（要保持同步的数据越多）。
+[[!DNL Redis]](https://redis.io/docs/about/) 是内存中用作数据库、缓存和消息代理的开源（BSD已授权）数据结构存储。 如果配置了，它可以执行数据库和会话缓存。 的 **[!UICONTROL Redis synchronization from Log]** 帧聚焦 [[!DNL Redis] 同步](https://redis.io/docs/manual/replication/). 越大 [!DNL Redis] 数据集，则同步出现问题的可能性越大（要保持同步的数据越多）。
 
-**[!DNL Redis]错误和消息**
+**[!DNL Redis]错误和消息：**
 
 * “%SLAVE同步：设备%上没有空格)作为“空格”
 * “%服务器已启动，Redis版本%”)作为“serv_start”
@@ -283,7 +283,7 @@ ht-degree: 0%
 
 ![PHP进程状态](../../assets/tools/php-process-states.jpg)
 
-PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install.fpm.configuration.php). 配置非常复杂，有许多变量和选项。 的 **[!UICONTROL PHP process states]** frame有助于了解PHP进程何时终止和重新启动。
+PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install.fpm.configuration.php). 配置非常复杂，有许多变量和选项。 的 **[!UICONTROL PHP process states]** frame可帮助您了解PHP进程何时终止和重新启动。
 
 ### [!UICONTROL PHP errors]
 
@@ -291,7 +291,7 @@ PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install
 
 的 **[!UICONTROL PHP errors]** 框架显示选定时间范围内工作程序出现的PHP错误数。 有关更多信息，请参阅 [Adobe Commerce PHP设置](../../installation/prerequisites/php-settings.md).
 
-**PHP错误和消息**
+**PHP错误和消息：**
 
 * “%worker_connections不够%”)作为“worker”
 * “%PHP错误：允许的内存大小！%&#39;)作为“mem_size”
@@ -309,31 +309,31 @@ PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install
 
 ![php进程](../../assets/tools/php-processes.jpg)
 
-[PHP-FPM](https://php-fpm.org/), a [!UICONTROL FastCGI Process Manager] 使用者 [!DNL Nginx]. 要了解系统要求，请参阅 [映射到Adobe Commerce版本的PHP版本要求](../../installation/system-requirements.md). 的 **[!UICONTROL PHP processes]** 帧显示选定时间轴中特定时间运行的PHP进程数。
+[PHP-FPM](https://php-fpm.org/) 是 [!UICONTROL FastCGI Process Manager] 使用者 [!DNL Nginx]. 要了解系统要求，请参阅 [映射到Adobe Commerce版本的PHP版本要求](../../installation/system-requirements.md). 的 **[!UICONTROL PHP processes]** 帧显示选定时间轴中特定时间运行的PHP进程数。
 
 ## [!UICONTROL Secondary processes]
 
 ![次进程](../../assets/tools/secondary-processes.jpg)
 
-辅助流程可能会影响站点响应。 的 **[!UICONTROL Secondary processes]** 框架可以指示可能向站点添加负载的进程或进程。 数据库运行的次进程最多。
+辅助流程可能会影响站点响应。 的 **[!UICONTROL Secondary processes]** 框架指示可能向站点添加负载的进程或进程。 数据库运行的次进程最多。
 
 ## [!UICONTROL Traffic vs Week Ago]
 
 ![流量与周前](../../assets/tools/traffic-vs-week-ago.jpg)
 
-的 **[!UICONTROL Traffic vs Week Ago]** frame查看 [!DNL Fastly] 具有(“MISS”、“PASS”)缓存状态的日志。 这些请求会向源服务器添加负载。 此框架显示的是同一时间段内与一周前相比的Web请求量。
+的 **[!UICONTROL Traffic vs Week Ago]** frame查看 [!DNL Fastly] 具有(“MISS”、“PASS”)缓存状态的日志。 这些请求会向源服务器添加负载。 此框架显示同一时间段内当前周和上周的比较Web请求量。
 
 ## [!UICONTROL Fastly Cache]
 
 ![快速缓存](../../assets/tools/fastly-cache.jpg)
 
-的 **[!UICONTROL Fastly Cache]** frame显示来自“快速”日志的请求的缓存状态的聚合视图。 如果单击“错误”，则将显示请求中错误的百分比。 当源服务器对页面请求响应不够快时，此数量通常会增加。
+的 **[!UICONTROL Fastly Cache]** 帧显示来自 [!DNL Fastly] 日志。 如果选择“错误”，则将显示请求中的错误百分比。 当源服务器对页面请求的响应速度不够快时，响应速度通常会增加。
 
 ## [!UICONTROL Page Rendering]
 
 ![页面渲染](../../assets/tools/page-rendering.jpg)
 
-的 **[!UICONTROL Page Rendering]** frame显示页面查看源的平均页面渲染持续时间 [!DNL New Relic] 与前一周的相同时间段相比。
+的 **[!UICONTROL Page Rendering]** frame显示从的页面查看源开始的当前周的平均页面渲染持续时间 [!DNL New Relic] 与同一时间段的前一周相比。
 
 ## [!UICONTROL Page loading detail]
 
@@ -359,7 +359,7 @@ PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install
 
 ![订单交易记录默认值](../../assets/tools/order-transactions-default.jpg)
 
-的 **[!UICONTROL Order transactions (default?)]** 框架查找事务 `request.headers.host` 从名称= &#39;WebTransaction/Action/checkout/onepage/success&#39;的交易中。 如果订单成功URL不同，则此框架将没有数据。
+的 **[!UICONTROL Order transactions (default?)]** 框架查找事务 `request.headers.host` 从事务处理，其中名称= `WebTransaction/Action/checkout/onepage/success`. 如果订单成功URL不同，则此框架将没有数据。
 
 ## [!UICONTROL Elasticsearch Index information]
 

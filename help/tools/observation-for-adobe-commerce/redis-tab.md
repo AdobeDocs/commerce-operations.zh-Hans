@@ -1,9 +1,9 @@
 ---
 title: “ [!UICONTROL Redis] 选项卡”
 description: 了解 [!UICONTROL Redis] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: f4379d0b89a6ea6d2f2a5a02c505581d4d54708f
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![Redis节点摘要](../../assets/tools/observation-for-adobe-commerce/redis-tab-1.jpg)
 
-的 **[!UICONTROL Redis Node summary]** 包含环境中的所有节点。 此示例包括用于共享暂存的节点。 生产上有一个主节点和两个副节点，在暂存上有一个主节点和两个副节点。
+的 **[!UICONTROL Redis Node summary]** 包含环境中的所有节点。 上例包括用于共享暂存的节点。 生产上有一个主节点和两个副节点，在暂存上有一个主节点和两个副节点。
 
 ## [!UICONTROL Redis node detail]
 
@@ -56,10 +56,10 @@ ht-degree: 0%
 
 ![自上次保存数据库以来的Redis更改](../../assets/tools/observation-for-adobe-commerce/redis-tab-8.jpg)
 
-[!DNL Redis] 是内存驻留的，并将信息保存到存储中。 的 **[!UICONTROL Redis changes since last db save]** frame指示自将上一个数据库保存到存储后对内存发生的更改数。 [此信息](https://redis.io/docs/manual/persistence/) 解释 [!DNL Redis's] 持久性。
+[!DNL Redis] 是内存驻留的，并将信息保存到存储中。 的 **[!UICONTROL Redis changes since last db save]** frame指示自将上一个数据库保存到存储后对内存发生的更改数。 请参阅 [Redis持久性](https://redis.io/docs/manual/persistence/) 以了解有关 [!DNL Redis's] 持久性。
 
 ## [!UICONTROL Redis synchronization from Log]
 
 ![从日志中进行Redis同步](../../assets/tools/observation-for-adobe-commerce/redis-tab-9.jpg)
 
-的 **[!UICONTROL Redis synchronization from Log]** 框架重点关注在 [!DNL Redis] 同步或由于同步问题而发生的错误。 请参阅 [Redis文档](https://redis.io/docs/).
+的 **[!UICONTROL Redis synchronization from Log]** 框架重点关注在 [!DNL Redis] 同步或由于同步问题而发生的错误。 有关 [!DNL Redis]，请参阅 [[!DNL Redis] 文档](https://redis.io/docs/).

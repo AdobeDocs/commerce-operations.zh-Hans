@@ -1,9 +1,9 @@
 ---
 title: "[!DNL Observation for Adobe Commerce]"
 description: 了解 [!DNL Observation for Adobe Commerce]、其用途、使用时间以及获取访问权限。
-source-git-commit: 6523372cd5fe3219dc582123471cc85f3c47f37d
+source-git-commit: c40d78d37dc37b5ce38f61b46bcfb4d439a51ac2
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 当出现问题时，确定问题的根源所在并掌握解决问题的知识可能非常耗时。 Adobe支持组织积累了部落知识，这些知识建立在多年来对日志和命令行输出进行查看并排除问题的基础上。 该工具利用此类知识根据公共时间线识别重要信号。 时间轴可以扩展或收缩，从而允许您可视化日志数据以帮助进行性能管理和解决问题。
 
-使用 [!DNL Observation]，您可以分析支持团队遇到的复杂问题，以帮助确定根本原因。 您可以花时间关联事件和错误，而不是跟踪不同的数据，以便深入了解性能瓶颈的原因。 该工具旨在更清晰地了解站点遇到的一些问题，以帮助您确定问题的潜在根源并保持站点的最佳性能。 这包括确定是否以及 [!DNL bots] 会导致站点问题。
+使用 [!DNL Observation for Adobe Commerce]，您可以分析支持团队遇到的复杂问题，以帮助确定根本原因。 您可以花时间关联事件和错误，而不是跟踪不同的数据，以便深入了解性能瓶颈的原因。 该工具旨在更清晰地了解站点遇到的一些问题，以帮助您确定问题的潜在根源并保持站点的最佳性能。 这包括确定是否以及 [!DNL bots] 会导致站点问题。
 
 ## 本指南面向谁？
 

@@ -1,18 +1,18 @@
 ---
 title: “开始使用：选择帐户和时间范围”
 description: 了解如何开始使用 [!DNL Observation for Adobe Commerce] 插入，方法是选择帐户和时间范围。
-source-git-commit: 7058d114c31a45a3f66dcff265d1bafc4e01de41
+source-git-commit: 86e990e18955cce8ed0917c72ddbe99d8cb3f333
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 # 选择帐户和时间范围：
 
-单击 [!UICONTROL Observation for Adobe Commerce] 图标， [!DNL Observation for Adobe Commerce] nerdlet将打开。
+当您单击 [!UICONTROL Observation for Adobe Commerce] 图标， [!DNL Observation for Adobe Commerce] nerdlet将打开。
 
-1. 单击 **选择帐户** 下拉列表。 如果您没有看到 **选择帐户** 下拉列表，则您可能无权访问。 请求 [此处](https://adobe.sharepoint.com/sites/MG/it/IT%20Services%20Wiki/Requesting%20access%20to%20Magento%20Commerce%20New%20Relic.aspx):
+1. 单击 **选择帐户** 下拉列表。 如果您没有看到 **选择帐户** 下拉列表，则您可能无权访问。 单击 [此处](https://adobe.sharepoint.com/sites/MG/it/IT%20Services%20Wiki/Requesting%20access%20to%20Magento%20Commerce%20New%20Relic.aspx) 请求访问权限。
 
    ![选择帐户](../../assets/tools/observation-for-adobe-commerce/start-using-1.jpeg)
 

@@ -1,7 +1,7 @@
 ---
 title: “ [!UICONTROL MySQL] 选项卡”
 description: 了解 [!UICONTROL MySQL] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: 8c9753fe5b9038978859cc101d53f897267ecfe9
 workflow-type: tm+mt
 source-wordcount: '2030'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![MySQL%可按节点释放存储](../../assets/tools/observation-for-adobe-commerce/mysql-tab-1.jpg)
 
-许多问题是由分配给MySQL的存储中的MySQL存储耗尽(`datadir` MySQL配置设置，默认值为 `/data/mysql`)或 `tmpdir` 空间不足。 默认 `tmpdir` （MySQL设置）为 `/tmp`. 此框架在 `/, /tmp` （如果定义为单独的装载）和 `/data/mysql` %的可用存储。 从MySQL 5.7版（MariaDB 10.2版）开始，未压缩的tmp表将写入 `/data/mysql` 文件(ibtmp1)中的目录。 默认情况下，此文件会自动无限制地展开。 由于它是表空间，因此不会减小大小，在MySQL重新启动时，它将重置为12MB。
+许多问题是由分配给MySQL的存储中的MySQL存储耗尽(`datadir` MySQL配置设置，默认值为 `/data/mysql`)或 `tmpdir` 空间不足。 默认 `tmpdir` （MySQL设置）为 `/tmp`. 的 **[!UICONTROL MySQL% free storage by node]** 框架看 `/, /tmp` （如果定义为单独的装载）和 `/data/mysql` 可用存储的百分比。 从MySQL 5.7版（MariaDB 10.2版）开始，未压缩 `tmp` 表写入 `tmp` 表空间 `/data/mysql` 文件(ibtmp1)中的目录。 默认情况下，此文件会自动无限制地展开。 由于它是表空间，因此不会减小大小，在MySQL重新启动时，它将重置为12MB。
 
 ## [!UICONTROL MySQL Connections by Node]
 
@@ -38,13 +38,13 @@ ht-degree: 0%
 
 ![MySQL关闭和启动](../../assets/tools/observation-for-adobe-commerce/mysql-tab-5.jpg)
 
-的 **[!UICONTROL MySQL shutdowns and starts]** 帧检测何时关闭节点。 [!DNL Galera] 节点将被逐出，并自行从 [!DNL Galera] 节点。 这通常会导致重新启动MySQL服务。
+的 **[!UICONTROL MySQL shutdowns and starts]** 帧检测何时关闭节点。 的 [!DNL Galera] 节点将被逐出，并自行从 [!DNL Galera] 节点。 这通常会导致重新启动MySQL服务。
 
 ## [!UICONTROL Galera log]
 
 ![加莱拉日志](../../assets/tools/observation-for-adobe-commerce/mysql-tab-6.jpg)
 
-的 **[!UICONTROL Galera log]** 帧显示MySQL日志中与 [!DNL Galera] 节点、其状态以及状态的更改 [!DNL Galera] 群集。
+的 **[!UICONTROL Galera log]** frame显示MySQL日志中与 [!DNL Galera] 节点、其状态以及状态的更改 [!DNL Galera] 群集。
 
 * “%1047 WSREP尚未准备用于应用程序的节点use%”)作为“node_not_prep_for_use”
 * “%\[ERROR\] WSREP:无法从中读取：wsrep_sst_xtrabackup-v2%&#39;)作为“xtrabackup_read_fail”
@@ -114,13 +114,13 @@ ht-degree: 0%
 
 ![Cron表更改](../../assets/tools/observation-for-adobe-commerce/mysql-tab-13.jpg)
 
-的 **[!UICONTROL Cron table change]** frame正在查找“无法获取cron作业的锁：”错误消息，以及涉及特定PHP内存错误和锁的错误 `cron_schedule` 表。 如果 `cron_schedule` 表被锁定(例如， `DELETE` 查询)，则会阻止其他cron运行。
+的 **[!UICONTROL Cron table change]** frame查找“无法获取cron作业的锁：”错误消息，以及涉及特定PHP内存错误和锁的错误 `cron_schedule` 表。 如果 `cron_schedule` 表被锁定(例如， `DELETE` 查询)，则会阻止其他cron运行。
 
 ## [!UICONTROL Deadlocks]
 
 ![死锁](../../assets/tools/observation-for-adobe-commerce/mysql-tab-14.jpg)
 
-的 **[!UICONTROL Deadlocks]** frame正在查看从MySQL日志中解析的以下字符串。
+的 **[!UICONTROL Deadlocks]** frame会查看从MySQL日志解析的以下字符串：
 
 * “%PHP错误：允许的内存大小为%&#39;)，为php_mem_error
 * &#39;%get lock;尝试重新启动事务，查询为：DELETE自\&#39;cron_schedule%&#39;)作为cron_sched_lock_del
@@ -198,7 +198,7 @@ ht-degree: 0%
 
 ![数据库错误](../../assets/tools/observation-for-adobe-commerce/mysql-tab-17.jpg)
 
-的 **[!UICONTROL Database Errors]** 框架显示各种数据库 [警告和错误](https://mariadb.com/kb/en/mariadb-error-codes/).
+的 **[!UICONTROL Database Errors]** 框架显示各种数据库 [警告和错误](https://mariadb.com/kb/en/mariadb-error-codes/):
 
 * “%为临时表分配的内存大小超过innodb_buffer_pool_size%”的20%，为“temp_tbl_buff_pool”
 * “%\[ERROR\] WSREP:rbr write fail%”)作为“rbr_write_fail”
@@ -227,7 +227,7 @@ ht-degree: 0%
 * “%1062 \[ERROR\] InnoDB:%”)作为“sql_1062_e”
 * &quot;%&quot;[注意] WSREP:正在刷新内存映射到磁盘……%&#39;)作为“mem_map_flush”
 * “%Internal MariaDB错误代码：1146%”)作为“sql_1146”
-* “%Internal MariaDB错误代码：1062%”)作为“sql_1062”·“%1062 [警告] InnoDB:%&#39;)作为“sql_1062_w”
+* “%Internal MariaDB错误代码：1062%”)作为“sql_1062”*“%1062” [警告] InnoDB:%&#39;)作为“sql_1062_w”
 * “%Internal MariaDB错误代码：1064%”)作为“sql_1064”
 * &#39;%InnoDB:文件%中的断言失败”)作为“assertion_err”
 * “%mysqld_safe当前正在运行的进程数：0%”)作为“mysql_oom”

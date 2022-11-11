@@ -1,9 +1,9 @@
 ---
 title: “ [!UICONTROL PHP] 选项卡”
-description: 了解 [!UICONTROL PHP] [!DNS Observation for Adobe Commerce]的选项卡。
-source-git-commit: f71fc3b2a66a4cc0b0d7865138184135e4a874e0
+description: 了解 [!UICONTROL PHP] 选项卡 [!DNL Observation for Adobe Commerce].
+source-git-commit: 28055eb09235912c66c637990e2081a70e1c7808
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ![PHP进程加载](../../assets/tools/php-process-load.jpg)
 
-此帧显示选定时间范围内PHP-FPM进程的CPU负载。
+的 **[!UICONTROL PHP process load (# of PHP processes and % of CPU load)]** frame显示在选定时间范围内来自PHP-FPM进程的CPU负载。
 
 ## [!UICONTROL PHP Memory detail]
 
@@ -35,13 +35,13 @@ ht-degree: 0%
 
 ![PHP CPU利用率](../../assets/tools/php-cpu-utilization.jpg)
 
-的 **[!UICONTROL PHP CPU Utilization]** 帧显示了选定时间范围内PHP进程的CPU占用%。
+的 **[!UICONTROL PHP CPU Utilization]** frame显示了在选定时间范围内PHP进程的CPU占用百分比。
 
 ## [!UICONTROL PHP Process states]
 
 ![PHP进程状态](../../assets/tools/php-process-states-image-1.jpg)
 
-的 **[!UICONTROL PHP Process states]** 框架显示选定时间范围内的PHP进程状态。 当PHP进程终止并重新启动时，将显示该ID。 请注意终止的不显示重新启动的PHP进程。
+的 **[!UICONTROL PHP Process states]** 框架显示选定时间范围内的PHP进程状态。 当PHP进程终止并重新启动时，将显示该PHP进程。 请注意终止的不显示重新启动的PHP进程。
 
 * “%NOTICE:正在终止……%&#39;)作为“php_term”
 * “%通知：退出，再见！%&#39;)作为“php_exit”
@@ -106,7 +106,7 @@ ht-degree: 0%
 * “%1062 \[ERROR\] InnoDB:%”)作为“sql_1062_e”
 * &#39;%[注意] WSREP:正在刷新内存映射到磁盘……%&#39;)作为“mem_map_flush”
 * “%Internal MariaDB错误代码：1146%”)作为“sql_1146”
-* “%Internal MariaDB错误代码：1062%”)作为“sql_1062”·“%1062 [警告] InnoDB:%&#39;)作为“sql_1062_w”
+* “%Internal MariaDB错误代码：1062%”)作为“sql_1062”*“%1062” [警告] InnoDB:%&#39;)作为“sql_1062_w”
 * “%Internal MariaDB错误代码：1064%”)作为“sql_1064”
 * &#39;%InnoDB:文件%中的断言失败”)作为“assertion_err”
 * “%mysqld_safe当前正在运行的进程数：0%”)作为“mysql_oom”
