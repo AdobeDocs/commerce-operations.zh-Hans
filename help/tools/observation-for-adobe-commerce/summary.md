@@ -1,7 +1,7 @@
 ---
 title: “ [!UICONTROL Summary] 选项卡”
 description: 了解 [!UICONTROL Summary] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 5058441eb64d59b3e1aa329603a87f75c826996e
+source-git-commit: 808018aca0630f725eebdd279b9314e2ee80eccc
 workflow-type: tm+mt
 source-wordcount: '2655'
 ht-degree: 0%
@@ -363,7 +363,7 @@ PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install
 
 ## [!UICONTROL Elasticsearch Index information]
 
-![elasticsearch索引信息](../../assets/tools/elasticsearch-Index-information.jpg)
+![elasticsearch索引信息](../../assets/tools/elasticsearch-index-information.jpg)
 
 **[Elasticsearch状态：](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
 
