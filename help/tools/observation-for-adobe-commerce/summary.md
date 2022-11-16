@@ -1,9 +1,9 @@
 ---
 title: “ [!UICONTROL Summary] 选项卡”
 description: 了解 [!UICONTROL Summary] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 808018aca0630f725eebdd279b9314e2ee80eccc
+source-git-commit: 61d0de370cbfa02f5fcc7d20ad283c54357294a3
 workflow-type: tm+mt
-source-wordcount: '2655'
+source-wordcount: '2653'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 ![CPU使用率](../../assets/tools/cpu-usage.jpg)
 
-如果 **[!UICONTROL CPU Usage]** 框架为空，表示应用 [!DNL New Relic] 未启用。 如果您的网站位于Starter上，则您看不到此信息。 如果您的网站位于Pro上，请打开 [支持票证](https://experienceleague.corp.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=en) 必须 [!DNL New Relic Infrastructure] 为您的网站启用。
+如果 **[!UICONTROL CPU Usage]** 框架为空，表示应用 [!DNL New Relic] 未启用。 如果您的网站位于Starter上，则您看不到此信息。 如果您的网站位于Pro上，请打开 [支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) 必须 [!DNL New Relic Infrastructure] 为您的网站启用。
 
 ## [!UICONTROL Average Response Time]
 

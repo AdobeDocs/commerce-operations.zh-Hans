@@ -1,7 +1,7 @@
 ---
 title: env.php引用
 description: 请参阅env.php文件的值列表。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: fe5e16d44213d1864a62230029e9e206eecd1717
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 ## 目录
 
-可选目录映射选项，当Web服务器配置为从 `/pub` 目录 [改进安全性][change-docroot-to-pub].
+可选目录映射选项，当Web服务器配置为从 `/pub` 目录 [改进安全性](../../installation/tutorials/docroot.md).
 
 ```conf
 'directories' => [
@@ -219,7 +219,7 @@ Commerce应用程序的安装日期。
 
 使用 `lock` 节点。
 
-详细了解 [锁定提供程序配置][lock-provider-config].
+详细了解 [锁定提供程序配置](../../installation/tutorials/lock-provider.md).
 
 ## MAGE_MODE
 
@@ -299,6 +299,4 @@ x-frame-options标头可以使用此节点进行配置。
 
 <!-- Link definitions -->
 
-[change-docroot-to-pub]: ../../installation/tutorials/docroot.md
-[lock-provider-config]: ../../installation/tutorials/lock-provider.md
 [message-queue]: https://developer.adobe.com/commerce/php/development/components/message-queues/
