@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目规划阶段的实施最佳实践。
 role: Developer, Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+source-git-commit: 78308f9cb3d2ebe8af41c42f9bb146409367ab6c
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -67,13 +67,14 @@ ht-degree: 0%
 
 ## **销售和营销**
 
-- [产品车限制的最佳实践&#x200B;](product-cart.md)
+- [产品车限制的最佳实践](product-cart.md)
 - [配置促销活动的最佳实践](product-cart-promotions.md)
 
 ## **项目范围**
 
 - [合作伙伴升级](partner-escalation.md)
+- [支付存储处理](payment-processing-storage.md)
 
 ## **购买扩展**
 
-- [在Adobe Commerce中使用第三方扩展的最佳实&#x200B;践](extensions.md)
+- [在Adobe Commerce中使用第三方扩展的最佳实践](extensions.md)
