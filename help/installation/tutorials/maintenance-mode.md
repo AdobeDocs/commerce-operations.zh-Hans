@@ -1,9 +1,9 @@
 ---
 title: 启用或禁用维护模式
 description: 按照以下步骤自定义客户在Adobe Commerce或Magento Open Source部署停止以进行维护时看到的内容。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: bc025217ed7bc2195c0a2d919139abe13d184259
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -81,9 +81,10 @@ bin/magento maintenance:allow-ips <ip address> .. <ip address> [--none]
 
 ## 多商店设置
 
-要设置多个商店（每个商店的布局和本地化内容各不相同），请为每个商店创建一个外观并将其放入 `pub/errors/{name}` where `{name}` 是存储代码。 要区分具有相同实例的商店和网站，请使用 `pub/errors/{type}-{name}` where `{type}` 是 `store` 或 `website` 和匹配 `MAGE_RUN_TYPE` 在您的服务器配置中。
+<!-- To set up multiple stores, each with a different layout and localized content, create a skin for each and put it into `pub/errors/{name}` where `{name}` is the store code. To distinguish between stores and websites with the same instance, use `pub/errors/{type}-{name}` where `{type}` is either `store` or `website` and matches the `MAGE_RUN_TYPE` in your server configuration. Another option is to pass the `$_GET['skin']` parameter to the intended processor. This method requires a specific configuration on your server. -->
+<!-- Replace the line below with the commented text after https://github.com/magento/magento2/pull/35095 is merged. -->
 
-另一个选项是 `$_GET['skin']` 参数。 此方法需要在服务器上进行特定配置。
+如果要设置多个商店（每个商店的布局和本地化内容各不相同），请传递 `$_GET['skin']` 参数。
 
 在以下示例中，我们使用 `503` 键入错误模板文件，该文件需要本地化内容。
 
