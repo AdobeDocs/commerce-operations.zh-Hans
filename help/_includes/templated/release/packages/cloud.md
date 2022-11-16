@@ -1,7 +1,7 @@
 ---
-source-git-commit: a3fa25993f365a85307db45ef16f68eeb12604bb
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2425'
 ht-degree: 0%
 
 ---
@@ -439,7 +439,7 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
       <a href="https://github.com/php-amqplib/php-amqplib.git">php-amqplib/php-ampqplib</a>
     </td>
     <td>库</td>
-    <td>以前称为videolalvaro/php-ampqplib。  此库是AMQP协议的纯PHP实现。 它已经用RabbitMQ测试了。</td>
+    <td>以前称为videolalvaro/php-ampqplib。  此库是AMQP协议的纯PHP实现。 它已经被测试了 [!DNL RabbitMQ].</td>
   </tr>
   </tbody>
 </table>

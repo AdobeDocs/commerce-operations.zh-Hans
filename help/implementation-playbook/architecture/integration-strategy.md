@@ -2,9 +2,9 @@
 title: Adobe Commerce集成策略
 description: 查看Adobe Commerce实施的集成策略和选项。
 exl-id: af7cc59a-3ee2-461a-8489-a35fe0288277
-source-git-commit: 1e545d8d5554e73f522469e526ed098395db9075
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -47,4 +47,4 @@ Adobe Commerce提供了三个灵活的集成选项：
 
 ![Adobe Commerce集成选项](../../assets/playbooks/integration-options.svg)
 
-尽管通常需要实时集成，但在某些情况下也不需要。 Adobe Commerce本身支持将RabbitMQ作为消息总线来启用异步进程，对于某些不需要进行实时交换的数据，建议使用批处理文件交换或REST批处理数据进程API进行更新以异步进行处理。
+尽管通常需要实时集成，但在某些情况下也不需要。 Adobe Commerce本地支持 [!DNL RabbitMQ] 作为消息总线启用异步进程，建议对某些不需要实时交换的数据执行此操作，而是使用批处理文件交换或REST批处理数据进程API进行更新以异步处理。

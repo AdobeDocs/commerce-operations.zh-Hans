@@ -2,9 +2,9 @@
 title: 平台开发原则
 description: 了解使用Adobe Commerce时的基本平台开发原则。
 exl-id: 3d822a8c-0e81-4a80-a820-46cf2702e0bf
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,6 @@ Adobe Commerce on cloud基础架构是Adobe Commerce软件的一个托管、自�
 
 ![Adobe Commerce组件信息图](../../assets/playbooks/commerce-cloud.svg)
 
-云基础架构上的Adobe Commerce提供了预配置的基础架构，其中包括PHP、MySQL、Redis、RabbitMQ和Elasticsearch技术；基于Git的工作流，具有自动构建和部署操作，每次在Platform as a Service(PaaS)环境中推送代码更改时，都可进行高效的快速开发和持续部署；高度可定制的环境配置文件和工具；以及AWS托管，为在线销售和零售提供一个可扩展且安全的环境。
+云基础架构上的Adobe Commerce提供了预配置基础架构，其中包括PHP、MySQL、Redis、 [!DNL RabbitMQ]、Elasticsearch技术；基于Git的工作流，具有自动构建和部署操作，每次在Platform as a Service(PaaS)环境中推送代码更改时，都可进行高效的快速开发和持续部署；高度可定制的环境配置文件和工具；以及AWS托管，为在线销售和零售提供一个可扩展且安全的环境。
 
 ![Adobe Commerce组件信息图](../../assets/playbooks/cloud-tech-stack.svg)

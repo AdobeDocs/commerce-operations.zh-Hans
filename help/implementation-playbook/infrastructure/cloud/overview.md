@@ -2,9 +2,9 @@
 title: 云基础架构概述
 description: 了解云基础架构上的Adobe Commerce。
 exl-id: 94cf1505-0853-4e01-ba55-befc1117fbdb
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,6 @@ Adobe Commerce的其他好处包括：
 
 - Git是存储库中的代码。 它允许本地分支、方便的暂存区域和多个工作流，并可自动构建和部署，以实现高效的快速开发和连续部署。
 
-- 平台即服务(PaaS)提供了预配置的基础架构，其中包括PHP、MySQL、Redis、RabbitMQ和Elasticsearch技术。
+- 平台即服务(PaaS)提供预配置的基础架构，包括PHP、MySQL、Redis、 [!DNL RabbitMQ]和Elasticsearch技术。
 
 - AWS或Azure的云托管支持基础架构即服务(IaaS)，它为在线销售和零售提供了可扩展且安全的环境。

@@ -1,9 +1,9 @@
 ---
 user-guide-title: 工具
 user-guide-description: 了解可以在Adobe Commerce中使用的不同工具、其用途、安装过程以及如何获取访问权限。
-source-git-commit: 5e8e2730a0cc30997365bd70c4409e0eb8923dfb
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
    - [警报选项卡](observation-for-adobe-commerce/alerts-tab.md)
    - [WAF选项卡](observation-for-adobe-commerce/waf-tab.md)
    - [CDN选项卡](observation-for-adobe-commerce/cdn-tab.md)
-   - [RabbitMQ选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [的 [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Cron选项卡](observation-for-adobe-commerce/cron-tab.md)
    - [“索引”选项卡](observation-for-adobe-commerce/indexing-tab.md)
    - [概览选项卡](observation-for-adobe-commerce/oac-quickview-tab.md)

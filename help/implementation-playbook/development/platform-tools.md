@@ -2,9 +2,9 @@
 title: 平台工具
 description: 为Adobe Commerce实施选择推荐的平台工具。
 exl-id: 3fc164f9-a0fc-46e7-a54e-08ce101ccae7
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 | Web服务器 | Nginx、Apache |
 | 缓存服务 | 雷迪斯，清漆 |
 | 搜索服务 | Elasticsearch |
-| 消息队列服务 | RabbitMQ |
+| 消息队列服务 | [!DNL RabbitMQ] |
 | 安全扫描工具 | 声纳库布、扎普 |
 
 ## 数据库
@@ -61,7 +61,7 @@ Adobe Commerce提供了许多用于存储缓存和会话数据的选项，包括
 
 ## 消息队列服务
 
-消息队列提供了一种异步通信机制，其中消息的发送者和接收者不会相互联系。 RabbitMQ是一个开源报文代理，提供可靠、高可用、可扩展和可移植的报文传送系统。
+消息队列提供了一种异步通信机制，其中消息的发送者和接收者不会相互联系。 [!DNL RabbitMQ] 是一个开源消息代理，可提供可靠、高可用、可扩展和可移植的消息传送系统。
 
 ## 安全工具
 

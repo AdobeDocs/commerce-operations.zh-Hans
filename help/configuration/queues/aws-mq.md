@@ -1,9 +1,9 @@
 ---
 title: 设置Amazon消息队列
 description: 了解如何配置Commerce以使用AWS MQ服务。
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -65,20 +65,20 @@ async.V1.inventory.bulk-product-source-unassign.POST
 async.V1.inventory.bulk-product-source-transfer.POST
 ```
 
-的默认配置 `InventoryCatalog` 不向RabbitMQ发布消息；默认行为是在同一用户线程中执行该操作。 告诉 `InventoryCatalog` 要发布消息，请启用 `cataloginventory/bulk_operations/async`. 从管理员，转到 **商店** >配置> **目录** > **库存** >管理员批量操作和设置  `Run asynchronously`to **是**.
+的默认配置 `InventoryCatalog` 不会将消息发布到 [!DNL RabbitMQ];默认行为是在同一用户线程中执行该操作。 告诉 `InventoryCatalog` 要发布消息，请启用 `cataloginventory/bulk_operations/async`. 从管理员，转到 **商店** >配置> **目录** > **库存** >管理员批量操作和设置  `Run asynchronously`to **是**.
 
 ## 测试消息队列
 
-要测试从Commerce向RabbitMQ发送的消息，请执行以下操作：
+测试从商务向 [!DNL RabbitMQ]:
 
-1. 登录到AWS中的RabbitMQ Web控制台，以监视队列。
+1. 登录到 [!DNL RabbitMQ] 用于监视队列的Web控制台。
 1. 在管理员中，创建产品。
 1. 创建库存来源。
 1. 启用 **商店** >配置> **目录** > **库存** >管理员批量操作>异步运行。
 1. 转到 **目录** >产品。 从网格中，选择上面创建的产品，然后单击 **分配库存来源**.
 1. 单击 **保存并关闭** 以完成该过程。
 
-   现在，您应会看到消息显示在RabbitMQ Web控制台中。
+   此时，您应会看到 [!DNL RabbitMQ] web控制台。
 
 1. 启动 `async.operations.all` 消息队列使用者。
 
@@ -86,5 +86,5 @@ async.V1.inventory.bulk-product-source-transfer.POST
    bin/magento queue:consumers:start async.operations.all
    ```
 
-此时，您应会看到已排队的消息在RabbitMQ Web控制台中得到处理。
+此时，您应会在 [!DNL RabbitMQ] web控制台。
 在“管理员”中验证产品上的库存源是否已更改。

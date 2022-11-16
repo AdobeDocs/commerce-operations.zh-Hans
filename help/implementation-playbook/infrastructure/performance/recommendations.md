@@ -2,9 +2,9 @@
 title: 性能优化Recommendations
 description: 按照这些建议优化Adobe Commerce实施的效果。
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1288'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 ### 消息队列
 
-消息队列框架(MQF)是允许模块将消息发布到队列的系统。 它还定义异步接收消息的用户。 Adobe Commerce支持将RabbitMQ作为报文传送代理，该代理为发送和接收报文提供了可扩展的平台。
+消息队列框架(MQF)是允许模块将消息发布到队列的系统。 它还定义异步接收消息的用户。 Adobe Commerce支持 [!DNL RabbitMQ] 作为报文传送代理，它为发送和接收报文提供了一个可扩展的平台。
 
 ### 性能测试和监控
 

@@ -1,9 +1,9 @@
 ---
 title: 安装Adobe Commerce
 description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce或Magento Open Source。
-source-git-commit: 46302eb8e8fd9bb7c9e7fbf990abb149bedd0ff4
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
@@ -132,16 +132,16 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 | `--elasticsearch-username` | 要验证的用户ID | 否，除非启用了身份验证 |
 | `--elasticsearch-password` | 验证密码 | 否，除非启用了身份验证 |
 
-**RabbitMQ配置选项：**
+**[!DNL RabbitMQ]配置选项：**
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
-| `--amqp-host` | 请勿使用 `--amqp` 选项，除非您已设置RabbitMQ的安装。 有关安装和配置RabbitMQ的详细信息，请参阅RabbitMQ安装。<br><br>安装RabbitMQ的主机名。 | 否 |
-| `--amqp-port` | 用于连接到RabbitMQ的端口。 默认为5672。 | 否 |
-| `--amqp-user` | 用于连接到RabbitMQ的用户名。 请勿使用默认用户 `guest`. | 否 |
-| `--amqp-password` | 用于连接到RabbitMQ的密码。 请勿使用默认密码 `guest`. | 否 |
-| `--amqp-virtualhost` | 用于连接到RabbitMQ的虚拟主机。 默认值为 `/`. | 否 |
-| `--amqp-ssl` | 指示是否连接到RabbitMQ。 默认值为 `false`. 有关为RabbitMQ设置SSL的信息，请参阅RabbitMQ 。 | 否 |
+| `--amqp-host` | 请勿使用 `--amqp` 选项，除非您已经 [!DNL RabbitMQ]. 请参阅 [!DNL RabbitMQ] 有关安装和配置的详细信息的安装 [!DNL RabbitMQ].<br><br>主机名，其中 [!DNL RabbitMQ] 已安装。 | 否 |
+| `--amqp-port` | 用于连接到的端口 [!DNL RabbitMQ]. 默认为5672。 | 否 |
+| `--amqp-user` | 用于连接到的用户名 [!DNL RabbitMQ]. 请勿使用默认用户 `guest`. | 否 |
+| `--amqp-password` | 用于连接到的密码 [!DNL RabbitMQ]. 请勿使用默认密码 `guest`. | 否 |
+| `--amqp-virtualhost` | 用于连接到的虚拟主机 [!DNL RabbitMQ]. 默认值为 `/`. | 否 |
+| `--amqp-ssl` | 指示是否连接到 [!DNL RabbitMQ]. 默认值为 `false`. 请参阅 [!DNL RabbitMQ] 有关为设置SSL的信息 [!DNL RabbitMQ]. | 否 |
 | `--consumers-wait-for-messages` | 消费者是否应等待队列中的消息？ 1 — 是，0 — 否 | 否 |
 
 **远程存储选项：**
