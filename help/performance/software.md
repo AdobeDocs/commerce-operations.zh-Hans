@@ -1,7 +1,7 @@
 ---
 title: 软件Recommendations
 description: 查看与Adobe Commerce部署和Magento Open Source部署的最佳性能相关的推荐软件列表。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 8572cc8702d6f7e9c40b64110a9ba18aa5784f44
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 0%
@@ -34,13 +34,15 @@ ht-degree: 0%
 >
 >启用net.ipv4.tcp_tw_reuse对传入连接没有影响。
 
-```terminal
+```text
 net.ipv4.tcp_tw_reuse = 1
 ```
 
 内核参数 `net.core.somaxconn` 控制等待连接的打开套接字的最大数量。 此值可以安全地增加到1024，但应与服务器处理此量的能力相关联。 要启用此内核参数，请在 `/etc/sysctl.conf`:
 
-`net.core.somaxconn = 1024`
+```text
+net.core.somaxconn = 1024
+```
 
 ## PHP
 
@@ -121,7 +123,9 @@ Magento Open Source和Adobe Commerce:
 
 确保成功执行所有 [!DNL Commerce] 在不将数据或代码转储到磁盘的情况下，按如下方式设置内存限制：
 
-`memory_limit=1G`
+```text
+memory_limit=1G
+```
 
 对于调试，请将此值增加到2G。
 
