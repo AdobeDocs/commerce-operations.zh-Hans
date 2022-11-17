@@ -1,7 +1,7 @@
 ---
 title: 安装指南
 description: 使用本指南进行安装 [!DNL Site-Wide Analysis Tool] 用于您的网站
-source-git-commit: 434fb9eb9570f183d9bf9d4b56b8e56a69e8005d
+source-git-commit: 23ad424a913c5ee58f4092aae008a47fe37b5382
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -57,13 +57,17 @@ ht-degree: 0%
 
 - Bash/shell实用程序
 
-   - `grep`
+   - `php`
+
+   - `wget`
 
    - `awk`
 
    - `nice`
 
    - `grep`
+
+   - `openssl`
 
 ## [!DNL Commerce Services Connector]
 
@@ -185,7 +189,7 @@ bin/magento module:status Magento_ServicesConnector
       curl -O https://updater.swat.magento.com/launcher/launcher.linux-arm64.tar.gz
       ```
 
-   1. 安装启动器存档。
+   1. 解包启动器存档。
 
       ```bash
       tar -xf launcher.linux-arm64.tar.gz
