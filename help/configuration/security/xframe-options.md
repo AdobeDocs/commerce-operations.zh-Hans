@@ -1,9 +1,9 @@
 ---
 title: X-Frame-Options标题
 description: 使用X-Frame-Options控制页面渲染。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: db696b8ca501d128db655c5ebb161c654c6378a7
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 帮助防止 [Clickjacking](https://owasp.org/www-community/attacks/Clickjacking) 利用漏洞，我们添加了一个选项 [X-Frame-Options](https://datatracker.ietf.org/doc/html/rfc7034) 对您的店面的请求中的HTTP请求标头。
 
-的 `X-Frame-Options` 标题允许您指定是否允许浏览器在 `<frame>`, `<iframe>`或 `<object>` 如下所示：
+的 `X-Frame-Options` 标题允许您指定是否应允许浏览器在 `<frame>`, `<iframe>`或 `<object>` 如下所示：
 
 - `DENY`:页面无法在框架中显示。
 - `SAMEORIGIN`:（默认）页面只能显示在与页面本身位于同一原点的框架中。
@@ -28,11 +28,13 @@ ht-degree: 0%
 
 ## 实施 `X-Frame-Options`
 
-为 `X-Frame-Options` in `<magento_root>/app/etc/env.php`. 默认值如下：
+为 `X-Frame-Options` in `<project-root>/app/etc/env.php`. 默认值设置如下：
 
 ```php
 'x-frame-options' => 'SAMEORIGIN',
 ```
+
+重新部署，以便对 `env.php` 文件生效。
 
 >[!TIP]
 >
@@ -44,10 +46,8 @@ ht-degree: 0%
 
 以下示例使用curl，您可以从任何可以通过HTTP协议连接到商务服务器的计算机中运行curl。
 
-使用以下命令：
-
 ```bash
-curl -I -v --location-trusted '<your storefront URL>'
+curl -I -v --location-trusted '<storefront-URL>'
 ```
 
 查找 `X-Frame-Options` 值。
