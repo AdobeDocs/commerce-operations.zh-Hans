@@ -4,7 +4,7 @@ description: 了解配置产品库存单位(SKU)以最大化网站性能的最�
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+source-git-commit: 3a187ae8c066e56df0d7f4981d26ffb934f64576
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -14,9 +14,11 @@ ht-degree: 0%
 
 # 产品SKU配置的最佳实践
 
-为了最大限度地提高性能，建议有效的产品库存保存件数(SKU)的最大值为1000万。 此有效产品最大值的计算方式为：
+为了最大限度地提高性能，建议有效的产品库存保存件数(SKU)的最大值为2.42亿。 此有效产品最大值的计算方式为：
 
-`Effective SKU = N\[SKUs\] * Stores/Websites * Customer Groups`
+```text
+Effective SKU = N\[SKUs\] * Stores/Websites * Customer Groups
+```
 
 超过最大有效SKU数量会减慢产品数据检索速度，并增加完成管理员操作的时间。
 
