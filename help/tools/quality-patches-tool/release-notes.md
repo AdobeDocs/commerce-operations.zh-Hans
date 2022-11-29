@@ -1,9 +1,9 @@
 ---
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
-source-git-commit: 6d0b5515792afe33eab440290413b84d251796cc
+source-git-commit: aad242e3a458e40fb1977399649ffe3e31696cd3
 workflow-type: tm+mt
-source-wordcount: '9752'
+source-wordcount: '10066'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,22 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关 [!DNL quality patches] 由社区创建以用于Magento Open Source，请参阅 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.24 {#v1-1-24}
+
+* **ACSD-45168** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了以下产品不生成SEO友好URL的问题： *url_key* 在存储视图级别上被覆盖的属性。
+* **ACSD-46865** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了启用异步索引时未填充“发运”和“贷项通知单”网格的问题。
+* **ACSD-47004** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了增值税未应用于没有增值税ID的帐单地址的问题。
+* **ACSD-47803** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了可配置的无现货产品色板显示为可用的问题。
+* **ACSD-47137** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 当pub/media文件夹非常大时，可提高图像库的加载速度。
+* **ACSD-46770** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了即使在 *电子邮件订单确认* 未选中。
+* **ACSD-47955** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了GraphQL无法正确显示购物车折扣的问题。
+* **ACSD-46617** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了 *继续结帐* 即使小计大于配置的值，按钮也会灰显 *最低订单金额*.
+* **ACSD-47079** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了当子产品库存状态通过REST APIPOST/rest/V1/inventory/source-items发生更改时，复合产品（捆绑包、分组和可配置）库存状态未更新的问题。
+* **ACSD-47336** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复 *出了点问题。* 在商务管理员中取消通知时出错。
+* **ACSD-47559** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了“预览电子邮件模板”区域不完全可见的问题。
+* **ACSD-47920** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了即使在 *允许来宾结帐* 关闭。
+* 已替换修补程序：MDVA-39305和MDVA-42855。
 
 ## v1.1.23 {#v1-1-23}
 
@@ -463,9 +479,9 @@ ht-degree: 0%
 
 * **MDVA-31399** (*(对于Adobe Commerce)>=2.3.2 &lt;2.4.2*) — 添加 *小计(包括 税)* 选项来为规则条件定价。
 * **MDVA-31236** (*(对于Adobe Commerce)>=2.4.0 &lt;2.4.2*) — 修复了具有自定义资源访问权限的管理员无法设置2FA或登录的问题。
-* **MDVA-30845** (*(对于Adobe Commerce)>=2.3.5 &lt;2.3.7*) — 修复了 *抱歉，此订单目前没有报价* 无法连接到UPS XML/USPS/DHL时显示错误，并且没有其他送货方法可用。
+* **MDVA-30845** (*for Adobe Commerce >=2.3.5 &lt;2.3.7*) — 修复了 *抱歉，此订单目前没有报价* 无法连接到UPS XML/USPS/DHL时显示错误，并且没有其他送货方法可用。
 * **MDVA-32133** (*(对于Adobe Commerce)>=2.4.0 &lt;2.4.1*) — 修复了在某些情况下无法从页面生成器中加载媒体集的问题。
-* **MDVA-12304** (*(对于Adobe Commerce)>=2.3.0 &lt;2.4.2*) — 将Cookie的最大数量从50增加到200。
+* **MDVA-12304** (*(对于Adobe Commerce)>=2.3.0*) — 将Cookie的最大数量从50增加到200。
 * **MDVA-32632** (*(对于Adobe Commerce)>=2.3.2 &lt;2.3.5*) — 修复了订单显示在付款系统中，但不在Adobe Commerce中的问题。
 * **MDVA-32449** (*(对于Adobe Commerce)>=2.3.0 &lt;2.3.6 || 2.4.0 || >=2.4.1 &lt;2.4.2，带有B2B扩展*) — 修复订单历史记录加载非常缓慢或完全未加载的问题。
 * **MDVA-32739** (*(对于Adobe Commerce)>=2.3.0 &lt;2.4.2*) — 修复了启用异步电子邮件通知会发送旧销售电子邮件的问题。
