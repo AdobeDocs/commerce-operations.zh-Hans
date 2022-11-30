@@ -1,9 +1,9 @@
 ---
 title: 搜索引擎配置
 description: 使用Adobe Commerce和Magento Open Source配置搜索引擎。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 66681f06c15907a5d25e71005c27785f0745ed63
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 本节讨论在测试Elasticsearch或使用Adobe Commerce和Magento Open Source进行OpenSearch时必须选择的最低设置。 从版本2.4.4和2.4.3-p2开始，所有字段均标记为 **Elasticsearch** 也适用于OpenSearch。
 
-有关配置搜索引擎的其他详细信息，请参阅 [用户指南](https://docs.magento.com/user-guide/catalog/search-elasticsearch.html).
+有关配置搜索引擎的其他详细信息，请参阅 [用户指南](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html).
 
 ## 从管理员配置搜索引擎
 
