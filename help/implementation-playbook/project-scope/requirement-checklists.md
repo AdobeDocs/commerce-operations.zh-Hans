@@ -2,9 +2,9 @@
 title: 要求核对表
 description: 使用此全面问题列表，帮助您为Adobe Commerce实施做好准备。
 exl-id: 9ac485c5-d491-4022-9366-5e3a382513b6
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: d18be812626723e203d2308be8c3f9783a19b43b
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -205,7 +205,7 @@ ht-degree: 0%
 
 - 哪些订单管理系统将与Adobe Commerce集成？ (示例：Microsoft Dynamics， SAP， Retail Pro)
 
-- 哪些产品库存管理系统将与Adobe Commerce集成？ (示例：阿克内奥、因里弗、布卢斯托内)
+- 哪些产品信息管理系统将与Adobe Commerce集成？ (示例：阿克内奥、因里弗、布卢斯托内)
 
 - 哪些客户关系管理系统将与Adobe Commerce集成？ (示例：Hubspot、Salesforce、Klaviyo)
 
