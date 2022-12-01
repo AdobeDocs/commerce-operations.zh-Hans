@@ -1,9 +1,9 @@
 ---
 title: “ [!UICONTROL CDN] 选项卡”
 description: 了解 [!UICONTROL CDN] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: 424c832ba7580e5d766dea33e3b776eaca7a0d77
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ![以秒为单位快速缓存选定时间段的平均响应](../../assets/tools/observation-for-adobe-commerce/cdn-tab-9.png)
 
-此帧显示可缓存请求的持续时间（以秒为单位），这意味着如果 `cache_response` 为MISS，则它会显示选定时间内未缓存响应的平均值。
+此帧显示可缓存请求的持续时间（以秒为单位），这意味着如果 `cache_response` 是 [!UICONTROL MISS]，则会显示选定时间内未缓存响应的平均值。
 
 ## [!UICONTROL Fastly Cache Average Response for selected time period in seconds, faceted by POP]
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ![请求 — 自选定的时间范围与一周前相比起](../../assets/tools/observation-for-adobe-commerce/cdn-tab-12.png)
 
-此框架与顶部“总请求”的摘要框类似，但显示了之前的周请求计数。 这些都是请求，而不只是可缓存的请求(其中 `is_cacheable` 为true)。
+此框架类似于 [!UICONTROL Total Requests] ，但会显示前几周的请求计数。 这些都是请求，而不只是可缓存的请求(其中 `is_cacheable` 为true)。
 
 ## [!UICONTROL Response Count]
 
