@@ -1,9 +1,9 @@
 ---
 title: 完整先决条件
 description: 通过完成这些先决步骤，为升级准备Adobe Commerce或Magento Open Source项目。
-source-git-commit: c2d0c1d46a5f111a245b34ed6bc706dcd52be31c
+source-git-commit: 6782498985d4fd6540b0481e2567499f74d04d97
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 0%
 
 - 更新所有软件
 - 验证是否安装了支持的搜索引擎
+- 转换数据库表格式
 - 设置打开的文件限制
 - 验证cron作业是否正在运行
 - 已设置 `DATA_CONVERTER_BATCH_SIZE`
@@ -29,6 +30,10 @@ ht-degree: 0%
 的 [系统要求](../../installation/system-requirements.md) 准确描述哪些第三方软件版本已在Adobe Commerce和Magento Open Source版本中进行了测试。
 
 确保更新了环境中的所有系统要求和依赖项。 请参阅PHP [7.4](https://www.php.net/manual/en/migration74.php)、PHP [8.0](https://www.php.net/manual/en/migration80.php)、PHP [8.1](https://www.php.net/manual/en/migration81.php)和 [所需的PHP设置](../../installation/prerequisites/php-settings.md#php-settings).
+
+>[!NOTE]
+>
+>对于云基础架构Pro项目上的Adobe Commerce，您必须创建 [支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 在暂存和生产环境中安装或更新服务的票证。 指示所需的服务更改并包含更新的 `.magento.app.yaml` 和 `services.yaml` 文件和PHP版本。 云基础架构团队可能需要长达48小时才能更新您的项目。 请参阅 [支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services).
 
 ## 验证是否安装了支持的搜索引擎
 
@@ -63,13 +68,13 @@ Adobe Commerce和Magento Open Source需要安装Elasticsearch或OpenSearch才能
 
 请参阅 [升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 有关在部署到生产之前备份数据、检测潜在迁移问题和测试升级的完整说明。 根据您当前版本的Elasticsearch，可能需要或不需要完全重新启动群集。
 
-Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查安装的JDK版本。
+Elasticsearch需要Java开发工具包(JDK)1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查安装的JDK版本。
 
 [配置Elasticsearch](../../configuration/search/configure-search-engine.md) 介绍在将Elasticsearch2更新到支持的版本后必须执行的任务。
 
 ### OpenSearch
 
-OpenSearch是Elasticsearch7.10.2的开源分支，在Elasticsearch进行许可更改后。 以下版本的Adobe Commerce和Magento Open Source引入了对OpenSearch的支持：
+OpenSearch是Elasticsearch在更改许可证后，开源Elasticsearch7.10.2分支存储库。 以下版本的Adobe Commerce和Magento Open Source引入了对OpenSearch的支持：
 
 - 2.4.4
 - 2.4.3-p2
@@ -79,11 +84,15 @@ OpenSearch是Elasticsearch7.10.2的开源分支，在Elasticsearch进行许可�
 
 OpenSearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查安装的JDK版本。
 
-[配置Magento以使用Elasticsearch](../../configuration/search/configure-search-engine.md) 描述更改搜索引擎后必须执行的任务。
+[搜索引擎配置](../../configuration/search/configure-search-engine.md) 描述更改搜索引擎后必须执行的任务。
 
 ### 第三方扩展
 
 我们建议您联系搜索引擎供应商以确定您的扩展是否与2.4完全兼容。
+
+## 转换数据库表格式
+
+必须转换 `COMPACT` to `DYNAMIC`. 您还必须从 `MyISAM` to `InnoDB`. 请参阅 [最佳实践](../../implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md).
 
 ## 设置打开的文件限制
 
@@ -118,7 +127,7 @@ Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 值
 
 ## 验证cron作业是否正在运行
 
-UNIX任务调度程序 `cron` 对于日常Adobe Commerce和Magento Open Source操作至关重要。 它会计划一些事项，例如重新索引、新闻稿、电子邮件、Sitemap等。 有几项功能需要至少运行一个cron作业作为文件系统所有者。
+UNIX任务调度程序 `cron` 对于日常Adobe Commerce和Magento Open Source操作至关重要。 它会计划一些事项，例如重新索引、新闻稿、电子邮件和Sitemap。 有几项功能需要至少运行一个cron作业作为文件系统所有者。
 
 要验证cron作业是否设置正确，请输入以下命令作为文件系统所有者来检查crontab:
 
@@ -146,7 +155,7 @@ crontab -l
 
 ![](../../assets/upgrade-guide/system-messages.png)
 
-请参阅 [配置并运行cron](../../configuration/cli/configure-cron-jobs.md) 。
+请参阅 [配置并运行cron](../../configuration/cli/configure-cron-jobs.md) 以了解更多信息。
 
 ## 设置DATA_CONVERTER_BATCH_SIZE
 
@@ -191,7 +200,7 @@ Adobe Commerce 2.4包含安全增强功能，这些功能要求将一些数据�
 
 文件系统中的目录必须由 [文件系统所有者](../../installation/prerequisites/file-system/overview.md) 群组。
 
-要验证文件系统权限设置是否正确，请登录到应用程序服务器，或使用托管提供商的文件管理器应用程序。
+要验证文件系统权限设置是否正确，请登录应用程序服务器或使用托管提供商的文件管理器应用程序。
 
 例如，如果应用程序安装在 `/var/www/html/magento2`:
 
