@@ -1,9 +1,9 @@
 ---
 title: 应用模式
 description: 商务应用程序可以根据您的需求以不同的模式运行。 查看可用应用程序模式的详细列表。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->[Adobe Commerce云基础架构](https://devdocs.magento.com/cloud/bk-cloud.html) 仅支持生产和维护模式。
+>[Adobe Commerce云基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) 仅支持生产和维护模式。
 
 ## 默认模式
 
@@ -71,4 +71,4 @@ ht-degree: 0%
 
 您可以创建 [自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md)，手动启用和禁用维护模式，并配置维护模式以允许来自授权IP地址的访客正常查看存储。 请参阅 [启用和禁用维护模式](../../installation/tutorials/maintenance-mode.md).
 
-如果您在云基础架构上使用商务，则商务应用程序会在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将返回到在生产模式下运行。 请参阅 [部署挂钩](https://devdocs.magento.com/cloud/reference/discover-deploy.html#cloud-deploy-over-phases-hook) 在 _Commerce Cloud指南_.
+如果您在云基础架构上使用商务，则商务应用程序会在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将返回到在生产模式下运行。 请参阅 [部署挂钩](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks) 在 _云基础架构上的商务指南_.

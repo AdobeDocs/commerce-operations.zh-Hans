@@ -1,9 +1,9 @@
 ---
 title: 覆盖配置设置
 description: 了解如何使用环境变量覆盖配置设置。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1228'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->查看 [配置环境](https://devdocs.magento.com/cloud/env/variables-intro.html) 主题 _Commerce Cloud指南_ 有关在云基础架构上使用Adobe Commerce中的变量的详细信息。
+>查看 [配置环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html) 主题 _云基础架构上的商务指南_.
 
 ## 环境变量
 
@@ -253,6 +253,6 @@ $_ENV['CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'] = '123
 >
 >- 使用您在 `$_ENV` 数组，必须设置 `variables_order = "EGPCS"`（环境、获取、发布、Cookie和服务器） `php.ini` 文件。 有关详细信息，请参阅 [PHP文档](https://www.php.net/manual/en/ini.core.php).
 >
->- 对于云基础架构上的Adobe Commerce，如果您尝试使用 [项目Web界面](https://devdocs.magento.com/cloud/project/project-webint-basic.html#project-conf-env-var)，则必须在变量名称的前面添加 `env:`. 例如：
+>- 对于云基础架构上的Adobe Commerce，如果您尝试使用 [项目Web界面](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)，则必须在变量名称的前面添加 `env:`. 例如：
 >
->![环境变量示例](https://devdocs.magento.com/common/images/cloud/cloud_env_var_example.png)
+>![环境变量示例](../../assets/configuration/cloud-console-envvariable.png)

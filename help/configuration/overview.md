@@ -1,9 +1,9 @@
 ---
 title: 配置指南概述
 description: 了解您的Adobe Commerce或Magento Open Source应用程序的所有可配置功能和服务。
-source-git-commit: 573b407bf29fd4dea2c0e9a52593f65fa64ffa2d
+source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -29,4 +29,4 @@ ht-degree: 0%
 
 ## 云配置
 
-[!DNL Commerce on cloud infrastructure] 使用 [配置文件集](https://devdocs.magento.com/cloud/env/environments.html) 更新 [!DNL Commerce] 托管环境中的应用程序功能和服务。 由于Adobe云托管环境的独特性，您应始终查看 [Cloud指南](https://devdocs.magento.com/cloud/bk-cloud.html) 以了解其他配置要求。
+[!DNL Commerce on cloud infrastructure] 使用 [配置文件集](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html) 更新托管环境中的Commerce应用程序功能和服务。 由于Adobe云托管环境的独特性，您应始终查看 [Cloud指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) 以了解其他配置要求。

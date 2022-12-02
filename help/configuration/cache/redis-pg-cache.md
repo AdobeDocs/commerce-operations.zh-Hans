@@ -1,9 +1,9 @@
 ---
 title: 默认缓存使用Redis
 description: 了解如何将Redis配置为Adobe Commerce和Magento Open Source的默认缓存。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: 47d513e7ca51ad7dbc149d0f1e076f673452918c
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 默认缓存使用Redis
 
-Commerce提供了命令行选项来配置Redis页面和默认缓存。 尽管您可以通过编辑 `<Commerce install dir>app/etc/env.php` 文件中，建议使用命令行，尤其是对于初始配置。 命令行提供验证，确保配置语法正确。
+Commerce提供了命令行选项来配置Redis页面和默认缓存。 尽管您可以通过编辑 `<Commerce-install-dir>app/etc/env.php` 文件中，建议使用命令行，尤其是对于初始配置。 命令行提供验证，确保配置语法正确。
 
 您必须 [安装Redis](config-redis.md#install-redis) 才能继续。
 
@@ -20,25 +20,25 @@ Commerce提供了命令行选项来配置Redis页面和默认缓存。 尽管您
 运行 `setup:config:set` 命令，并指定特定于Redis默认缓存的参数。
 
 ```bash
-bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-<parameter_name>=<parameter_value>...
+bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-<parameter>=<value>...
 ```
 
-where
+使用以下参数：
 
-`--cache-backend=redis` 启用Redis默认缓存。 如果此功能已启用，请忽略此参数。
+- `--cache-backend=redis` 启用Redis默认缓存。 如果此功能已启用，请忽略此参数。
 
-`--cache-backend-redis-<parameter_name>=<parameter_value>` 是配置默认缓存的键值对列表：
+- `--cache-backend-redis-<parameter>=<value>` 是配置默认缓存的键值对列表：
 
-| 命令行参数 | 参数 | 含义 | 默认值 |
-|--- |--- |--- |--- |
-| cache-backend-redis服务器 | 服务器 | 完全限定的主机名、 IP地址或UNIX套接字的绝对路径。 默认值为127.0.0.1表示商务服务器上已安装Redis。 | 127.0.0.1 |
-| cache-backend-redis-port | 端口 | Redis服务器侦听端口 | 6379 |
-| cache-backend-redis-db | 数据库 | 如果同时使用Redis作为默认和全页缓存，则此为必需字段。 必须指定其中一个缓存的数据库号；默认情况下，其他缓存使用0。<br><br>重要信息：如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认缓存数据库编号指定为0，将页缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
-| cache-backend-redis-password | 密码 | 配置Redis密码可启用其内置安全功能之一：the `auth` 命令，它要求客户端进行身份验证以访问数据库。 密码直接在Redis的配置文件中配置， `/etc/redis/redis.conf`. |  |
+| 命令行参数 | 值 | 含义 | 默认值 |
+| ------------------------------ | --------- | ------- | ------------- |
+| `cache-backend-redis-server` | 服务器 | 完全限定的主机名、 IP地址或UNIX套接字的绝对路径。 默认值为127.0.0.1表示商务服务器上已安装Redis。 | `127.0.0.1` |
+| `cache-backend-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
+| `cache-backend-redis-db` | 数据库 | 如果同时使用Redis作为默认和全页缓存，则此为必需字段。 必须指定其中一个缓存的数据库号；默认情况下，其他缓存使用0。<br><br>**重要信息**:如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认缓存数据库编号指定为0，将页缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
+| `cache-backend-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一：the `auth` 命令，它要求客户端进行身份验证以访问数据库。 密码直接在Redis的配置文件中配置： `/etc/redis/redis.conf` |  |
 
 ### 示例命令
 
-以下示例启用Redis默认缓存，将主机设置为 `127.0.0.1` 并将数据库编号分配给0。 Redis对所有其他参数使用默认值。
+以下示例启用Redis默认缓存，将主机设置为 `127.0.0.1`，并将数据库编号分配给0。 Redis对所有其他参数使用默认值。
 
 ```bash
 bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=127.0.0.1 --cache-backend-redis-db=0
@@ -49,25 +49,25 @@ bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=
 要在商务上配置Redis页面缓存，请运行 `setup:config:set` 命令。
 
 ```bash
-bin/magento setup:config:set --page-cache=redis --page-cache-redis-<parameter_name>=<parameter_value>...
+bin/magento setup:config:set --page-cache=redis --page-cache-redis-<parameter>=<value>...
 ```
 
-where
+使用以下参数：
 
-`--page-cache=redis` 启用Redis页面缓存。 如果此功能已启用，请忽略此参数。
+- `--page-cache=redis` 启用Redis页面缓存。 如果此功能已启用，请忽略此参数。
 
-`--page-cache-redis-<parameter_name>=<parameter_value>` 是配置页面缓存的参数/值对列表：
+- `--page-cache-redis-<parameter>=<value>` 是配置页面缓存的键值对列表：
 
-| 命令行参数 | 参数 | 含义 | 默认值 |
-|--- |--- |--- |--- |
-| page-cache-redis-server | 服务器 | 完全限定的主机名、 IP地址或UNIX套接字的绝对路径。 默认值为127.0.0.1表示商务服务器上已安装Redis。 | 127.0.0.1 |
-| page-cache-redis-port | 端口 | Redis服务器侦听端口 | 6379 |
-| page-cache-redis-db | 数据库 | 如果同时使用Redis作为默认和完整页面缓存，则此为必需字段。 必须指定其中一个缓存的数据库号；默认情况下，其他缓存使用0。<br/>重要信息：如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认缓存数据库编号指定为0，将页缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
-| page-cache-redis-password | 密码 | 配置Redis密码可启用其内置安全功能之一：the `auth` 命令，它要求客户端进行身份验证以访问数据库。 在Redis配置文件/etc/redis/redis.conf中配置密码。 |  |
+| 命令行参数 | 值 | 含义 | 默认值 |
+| ------------------------------ | --------- | ------- | ------------- |
+| `page-cache-redis-server` | 服务器 | 完全限定的主机名、 IP地址或UNIX套接字的绝对路径。 默认值为127.0.0.1表示商务服务器上已安装Redis。 | `127.0.0.1` |
+| `page-cache-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
+| `page-cache-redis-db` | 数据库 | 如果同时使用Redis作为默认和完整页面缓存，则此为必需字段。 必须指定其中一个缓存的数据库号；默认情况下，其他缓存使用0。<br/>**重要信息**:如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认缓存数据库编号指定为0，将页缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
+| `page-cache-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一：the `auth` 命令，它要求客户端进行身份验证以访问数据库。 在Redis配置文件中配置密码： `/etc/redis/redis.conf` |  |
 
 ### 示例命令
 
-以下示例启用Redis页面缓存，将主机设置为 `127.0.0.1` 并将数据库编号分配给1。 所有其他参数都设置为默认值。
+以下示例启用Redis页面缓存，将主机设置为 `127.0.0.1`，并将数据库编号分配给1。 所有其他参数都设置为默认值。
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.0.1 --page-cache-redis-db=1
@@ -75,7 +75,7 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
 
 ## 结果
 
-作为两个示例命令的结果，Commerce会添加如下类似的行： `<Commerce install dir>app/etc/env.php`:
+作为两个示例命令的结果，Commerce会添加如下类似的行： `<Commerce-install-dir>app/etc/env.php`:
 
 ```php
 'cache' => [
@@ -133,23 +133,23 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
 
 ### 配置商务以使用群集
 
-商务支持多种类型的缓存配置。 通常，缓存配置在前端和后端之间进行拆分。 前端缓存被分类为“默认”，用于任何缓存类型。 您可以自定义或拆分为较低级别的缓存，以获得更好的性能。 通用的Redis配置将默认缓存和页面缓存分隔到它们自己的Redis数据库(RDB)中。
+商务支持多种类型的缓存配置。 通常，缓存配置在前端和后端之间进行拆分。 前端缓存被分类为 `default`，用于任何缓存类型。 您可以自定义或拆分为较低级别的缓存，以获得更好的性能。 通用的Redis配置将默认缓存和页面缓存分隔到它们自己的Redis数据库(RDB)中。
 
 运行 `setup` 命令来指定Redis端点。
 
-将Commerce for Redis配置为默认缓存：
+要将Commerce配置为默认缓存，请执行以下操作：
 
 ```bash
 bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=<ElastiCache Primary Endpoint host> --cache-backend-redis-port=<ElastiCache Primary Endpoint port> --cache-backend-redis-db=0
 ```
 
-为Redis页面缓存配置商务：
+要为Redis页面缓存配置商务，请执行以下操作：
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=<ElastiCache Primary Endpoint host> --page-cache-redis-port=<ElastiCache Primary Endpoint port> --page-cache-redis-db=1
 ```
 
-配置商务以将Redis用于会话存储：
+要将Commerce配置为使用Redis进行会话存储，请执行以下操作：
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=<ElastiCache Primary Endpoint host> --session-save-redis-port=<ElastiCache Primary Endpoint port> --session-save-redis-log-level=4 --session-save-redis-db=2
@@ -157,13 +157,13 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=<Ela
 
 ### 验证连接
 
-要验证商务是否与ElasiCache通话，请执行以下操作：
+**验证商务是否与ElastiCache通话**:
 
 1. 打开到Commerce EC2实例的SSH连接。
 1. 启动Redis监视器。
 
    ```bash
-   redis-cli -h <ElastiCache Primary Endpoint host> -p <ElastiCache Primary Endpoint port> monitor
+   redis-cli -h <ElastiCache-Primary-Endpoint-host> -p <ElastiCache-Primary-Endpoint-port> monitor
    ```
 
 1. 在商务UI中打开页面。
@@ -189,10 +189,9 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=<Ela
 
 ## Redis预加载功能
 
-由于Commerce在Redis缓存中存储了大量配置数据，因此我们可以预载页面之间重复使用的数据。
-要查找必须预加载的键，您需要分析从Redis传输到Commerce的数据。 我们建议预加载每个页面上加载的数据，常见示例包括 `SYSTEM_DEFAULT`, `EAV_ENTITY_TYPES`, `DB_IS_UP_TO_DATE`.
-Redis使用 `pipeline` 以便复合加载请求。
-请注意，键应包括数据库前缀，例如，如果数据库前缀为 `061_`，预加载键 `061_SYSTEM_DEFAULT`.
+由于商务将配置数据存储在Redis缓存中，因此我们可以预载页面之间重复使用的数据。 要查找必须预加载的键，请分析从Redis传输到Commerce的数据。 我们建议预加载每个页面上加载的数据，例如 `SYSTEM_DEFAULT`, `EAV_ENTITY_TYPES`, `DB_IS_UP_TO_DATE`.
+
+Redis使用 `pipeline` 以便复合加载请求。 键应包括数据库前缀；例如，如果数据库前缀为 `061_`，预加载键如下所示： `061_SYSTEM_DEFAULT`
 
 ```php
 'cache' => [
@@ -222,7 +221,7 @@ Redis使用 `pipeline` 以便复合加载请求。
 ]
 ```
 
-如果您在L2缓存中使用预加载功能，请不要忘记在键中添加“：hash”后缀，因为L2缓存仅传输数据的哈希，而不是数据本身：
+如果您在L2缓存中使用预加载功能，请不要忘记在 `:hash` 后缀，因为二级缓存只传输数据的哈希，而不是数据本身：
 
 ```php
 'preload_keys' => [
@@ -310,7 +309,7 @@ redis-cli monitor
 redis-cli ping
 ```
 
-`PONG` 应该是回应。
+预期响应为： `PONG`
 
 如果两个命令都成功，则正确设置Redis。
 

@@ -1,9 +1,9 @@
 ---
 title: 管理消息队列
 description: 了解如何从命令行中管理消息队列，以用于Adobe Commerce。
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Cron作业是重新启动消费者的默认机制。 启动的流程 `cron` 使�
 
 >[!INFO]
 >
->如果您的Adobe Commerce商店托管在云平台上，请使用 [`CRON_CONSUMERS_RUNNER`](https://devdocs.magento.com/cloud/env/variables-deploy.html#cron_consumers_runner) 配置 `consumers_runner` 创建作业。
+>如果您的Adobe Commerce商店托管在云平台上，请使用 [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner) 配置 `consumers_runner` 创建作业。
 
 ### 特定配置
 
@@ -82,6 +82,6 @@ Cron作业是重新启动消费者的默认机制。 启动的流程 `cron` 使�
 
    >[!INFO]
    >
-   >如果您的Adobe Commerce商店托管在云平台上，请使用 [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://devdocs.magento.com/cloud/env/variables-deploy.html#consumers_wait_for_max_messages) 配置用户处理来自消息队列的消息的方式。
+   >如果您的Adobe Commerce商店托管在云平台上，请使用 [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) 配置用户处理来自消息队列的消息的方式。
 
 请参阅 [启动消息队列使用者](../cli/start-message-queues.md).
