@@ -1,7 +1,7 @@
 ---
 title: 设置配置值
 description: 了解如何设置配置值和更改管理员中锁定的值。
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: cb8edb8de8f8419e9992b180ea927ba55cbd839b
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 0%
@@ -133,8 +133,8 @@ bin/magento config:sensitive:set [--scope="..."] [--scope-code="..."] path value
 | --- | --- |
 | `--scope` | 配置的范围。 可能的值为 `default`, `website`或 `store`. 默认值为 `default`. |
 | `--scope-code` | 配置的范围代码（网站代码或存储视图代码） |
-| `-le or --lock-env` | 锁定值，以便无法在“管理员”中编辑该值，或者更改已在“管理员”中锁定的设置。 命令会将值写入 `<Commerce base dir>/app/etc/env.php` 文件。 |
-| `-lc or --lock-config` | 锁定值，以便无法在“管理员”中编辑该值，或者更改已在“管理员”中锁定的设置。 命令会将值写入 `<Commerce base dir>/app/etc/config.php` 文件。 的 `--lock-config` 选项覆盖 `--lock-env` 指定两个选项。 |
+| `-e or --lock-env` | 锁定值，以便无法在“管理员”中编辑该值，或者更改已在“管理员”中锁定的设置。 命令会将值写入 `<Commerce base dir>/app/etc/env.php` 文件。 |
+| `-c or --lock-config` | 锁定值，以便无法在“管理员”中编辑该值，或者更改已在“管理员”中锁定的设置。 命令会将值写入 `<Commerce base dir>/app/etc/config.php` 文件。 的 `--lock-config` 选项覆盖 `--lock-env` 指定两个选项。 |
 | `path` | _必需_. 配置路径 |
 | `value` | _必需_. 配置的值 |
 
