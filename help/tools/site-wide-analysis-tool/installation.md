@@ -1,9 +1,9 @@
 ---
 title: 安装指南
 description: “使用本指南安装 [!DNL Site-Wide Analysis Tool] ，“”
-source-git-commit: bfcedda38f91f5dba8880bb1593ad40a6e3f8041
+source-git-commit: 5603d0feee6ec9dd5e8b534a0e64df274d7ab84d
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >学习 [如何启用](../site-wide-analysis-tool/access.md) the [!DNL Site-Wide Analysis Tool] 和生成报表。
 
-如果您在本地安装了Adobe Commerce，则必须在基础架构上安装代理才能使用该工具。 您无需在云基础架构项目上在Adobe Commerce上安装代理。
+如果您在本地安装了Adobe Commerce，请在您的基础架构上安装代理以使用该工具。 您无需在云基础架构项目上在Adobe Commerce上安装代理。
 
 ## 代理
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->代理支持多节点Adobe Commerce安装。 必须在每个节点上安装和配置代理。
+>代理支持多节点Adobe Commerce安装。 在每个节点上安装和配置代理。
 
 ## 系统要求
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 - 操作系统
 
-   - [!DNL Linux x86-64] 分布，如 [!DNL RedHat Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian]，类似
+   - [!DNL Linux x86-64] 分布，如 [!DNL Red Hat® Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian]，类似
    >[!IMPORTANT]
    >
    >Adobe Commerce不支持 [!DNL Microsoft Windows] 或 [!DNL macOS].
@@ -81,7 +81,11 @@ bin/magento module:status Magento_ServicesConnector
 
 1. 将您的网站放入 [维护模式](../../installation/tutorials/maintenance-mode.md).
 
-1. 登录 [accounts.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
+1. 登录 [account.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
+
+   >[!NOTE]
+   >
+   > 如果您在访问帐户时遇到问题，请参阅 [无法登录Adobe Commerce支持或云帐户](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) ，以获取疑难解答帮助。
 
 1. 单击 **[!UICONTROL API Portal]**.
 
@@ -91,7 +95,7 @@ bin/magento module:status Magento_ServicesConnector
 
 >[!IMPORTANT]
 >
-> 如果您在API门户中生成新密钥，请立即更新 [!DNL Admin configuration]. 如果生成新密钥，但不在 [!DNL Admin]，则您的SaaS扩展将不再有效，并且您将丢失有价值的数据。
+> 如果您在API门户中生成新密钥，请立即更新 [!DNL Admin configuration]. 如果生成新密钥，但不更新 [!DNL Admin]，则您的SaaS扩展将不再有效，并且您将丢失有价值的数据。
 
 如果未安装扩展，请按照以下说明进行安装：
 
@@ -146,7 +150,7 @@ bin/magento module:status Magento_ServicesConnector
    Success exit.
    ```
 
-1. 下载并安装代理后，您必须 [将其配置为运行](#run-the-agent) 使用以下方法之一：
+1. 下载并安装代理后， [将其配置为运行](#run-the-agent) 使用以下方法之一：
 
    - [服务](#service) （如果您具有根访问权限，则首选）
 
@@ -257,7 +261,7 @@ bin/magento module:status Magento_ServicesConnector
 
 ### 服务 {#service}
 
-1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 使用以下配置(替换 `<filesystemowner>` 拥有安装代理和Adobe Commerce软件的目录的Unix用户)。 如果您以根用户身份下载代理，请更改目录和嵌套文件所有者。
+1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 使用以下配置(替换 `<filesystemowner>` 拥有安装代理和Adobe Commerce软件的目录的UNIX®用户)。 如果您以根用户身份下载代理，请更改目录和嵌套文件所有者。
 
    ```config
    [Unit]
