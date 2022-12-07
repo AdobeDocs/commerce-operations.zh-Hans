@@ -1,9 +1,9 @@
 ---
 title: 获取您的身份验证密钥
 description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce和Magento Open Source编辑器包。
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: d209d3f7fde55f7495488f2cbeeebf21024875ed
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,15 @@ ht-degree: 0%
 
 的 `repo.magento.com` 存储库是存储Adobe Commerce和Magento Open Source及第三方编辑器包的位置，需要进行身份验证。 使用Commerce Marketplace帐户生成一对32个字符的 *身份验证密钥* 访问存储库。
 
->[!NOTE]
+要获得对Adobe Commerce和Magento Open Source包的访问权限，您必须使用与已获得这些包访问权限的MAGEID关联的密钥。 MAGEID通常是Adobe Commerce帐户上的主要联系人，并且可能并非总是云基础架构项目上Adobe Commerce的项目所有者。
+
+>[!TIP]
 >
->要获得对Adobe Commerce和Magento Open Source包的访问权限，您必须使用与已获得这些包访问权限的MAGEID关联的密钥。 MAGEID通常是 **账单联系人** 在Adobe Commerce账户上，并且可能不总是 **项目所有者** Adobe Commerce云基础架构项目的ID。 如果您遇到 [错误](https://support.magento.com/hc/en-us/articles/360040296392)，则您可能无权访问该包，或者由于帐户上的未清发票，访问权利已过期。 联系人 [Adobe Commerce支持](https://support.magento.com/hc/en-us) 为你的MAGEID提供帮助。
+>如果您遇到 [错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)，则您可能无权访问该包，或者由于您帐户上的未清发票而导致访问权利已过期。
+>
+>* 如果您是帐户上的主要联系人，请确保帐户上没有列出未清发票。
+>* 如果主要联系人提供的密钥无效，且帐户上没有未清发票，请联系 [Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以获取有关使用主要联系人的MAGEID的帮助。
+
 
 要创建身份验证密钥，请执行以下操作：
 
