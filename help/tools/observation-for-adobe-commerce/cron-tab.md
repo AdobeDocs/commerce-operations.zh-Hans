@@ -1,52 +1,52 @@
 ---
-title: “ [!UICONTROL Cron] 选项卡”
-description: 了解 [!UICONTROL Cron] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 3c1e50b3bff1bd2b2760e2e763173275161b0044
+title: “ [!DNL Cron] 选项卡”
+description: 了解 [!DNL Cron] 选项卡 [!DNL Observation for Adobe Commerce].
+source-git-commit: 38467ebd2ec29f9e1679182fb1ee7076d738664b
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
 
-# 的 [!UICONTROL Cron] 选项卡
+# 的 [!DNL Cron] 选项卡
 
-此选项卡旨在快速隔离问题和导致崩溃问题的原因。
+此选项卡旨在快速隔离问题和原因 [!DNL cron] 问题。
 
 ## [!UICONTROL Cron transaction duration in seconds]
 
 ![以秒为单位创建交易持续时间](../../assets/tools/observation-for-adobe-commerce/cron-tab-1.jpg)
 
-的 **[!UICONTROL Cron transaction duration in seconds]** frame以秒为单位显示crons交易持续时间。 这将显示运行时间较长的事务。 更深入地了解APM将显示有关事务/操作可能运行的查询的更多详细信息。
+的 **[!UICONTROL Cron transaction duration in seconds]** 框架显示 [!DNL crons] 事务持续时间（以秒为单位）。 这将显示运行时间较长的事务。 更深入地了解APM将显示有关事务/操作可能运行的查询的更多详细信息。
 
-## [!UICONTROL MySql Non-Sleeping Threads by Node]
+## [!UICONTROL MySQL Non-Sleeping Threads by Node]
 
-![按节点划分的MySql非休眠线程](../../assets/tools/observation-for-adobe-commerce/cron-tab-2.jpg)
+![按节点划分的MySQL非休眠线程](../../assets/tools/observation-for-adobe-commerce/cron-tab-2.jpg)
 
-的 **[!UICONTROL MySql Non-Sleeping Threads by Node]** 框架按节点显示选定时间范围内的MySql非休眠线程。
+的 **[!UICONTROL MySQL Non-Sleeping Threads by Node]** 框架按节点显示选定时间范围内的MySQL非休眠线程。
 
 ## [!UICONTROL SQL Trace count by path]
 
 ![按路径的SQL跟踪计数](../../assets/tools/observation-for-adobe-commerce/cron-tab-3.jpg)
 
-的 **[!UICONTROL SQL Trace count by path]** frame按路径查看MySql跟踪计数，这有助于跟踪选定时间范围内的SQL语句。
+的 **[!UICONTROL SQL Trace count by path]** frame按路径查看MySQL跟踪计数，这有助于跟踪选定时间范围内的SQL语句。
 
 ## [!UICONTROL Cron database call]
 
 ![Cron数据库调用](../../assets/tools/observation-for-adobe-commerce/cron-tab-4.jpg)
 
-的 **[!UICONTROL Cron database call]** frame会查看在选定时间范围内调用数据库的cron数。
+的 **[!UICONTROL Cron database call]** frame查看 [!DNL crons] 在选定的时间范围内调用数据库。
 
 ## [!UICONTROL Cron schedule table locks]
 
 ![Cron计划表锁定](../../assets/tools/observation-for-adobe-commerce/cron-tab-5.jpg)
 
-的 **[!UICONTROL Cron schedule table locks]** frame会查看在选定时间范围内的cron计划表锁定。
+的 **[!UICONTROL Cron schedule table locks]** 框架查看 [!DNL cron] 计划表在选定的时间范围内锁定。
 
 ## [!UICONTROL Cron schedule clean cron fired]
 
 ![Cron计划表锁定](../../assets/tools/observation-for-adobe-commerce/cron-tab-6.jpg)
 
-的 **[!UICONTROL Cron schedule clean cron fired]** frame会查看在选定时间范围内清理的CRON数量。 如果此框架中未显示任何数据，则可能表示Cron运行正确时出现问题。 如果未清理cron作业计划，则cron将无法以最佳方式运行，并且运行可能需要更长的时间。
+的 **[!UICONTROL Cron schedule clean cron fired]** frame查看 [!DNL crons] 已在选定的时间范围内清理。 如果此帧中未显示任何数据，则可能表示 [!DNL crons] 正确运行。 如果 [!DNL cron] 作业计划未清理， [!DNL crons] 运行不会达到最佳状态，运行可能需要较长时间。
 
 ## [!UICONTROL Cron schedule clean records details table]
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ![cron_schedule表更新](../../assets/tools/observation-for-adobe-commerce/cron-tab-8.jpg)
 
-的 **[!UICONTROL cron_schedule table updates]** frame会查看在选定时间范围内cron计划表更新的次数。 删除或更新此表时的活动量较高，可能表示CRON存在问题。 此外，crons会在运行并完成时更新此表，因此，如果此表上没有活动且配置了cron，则crons可能会出现问题。
+的 **[!UICONTROL cron_schedule table updates]** frame查看 [!DNL cron] 计划表会在选定的时间范围内进行更新。 在删除或更新此表时，活动很活跃，这可能表示 [!DNL crons]. 此外， [!DNL crons] 在运行并完成时更新此表，因此，如果此表中没有活动，并且 [!DNL crons] 已配置，可能 [!DNL crons].
 
 ## [!UICONTROL Datastore Operations Tables]
 

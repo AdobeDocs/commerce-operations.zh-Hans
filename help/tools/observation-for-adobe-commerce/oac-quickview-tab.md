@@ -1,15 +1,15 @@
 ---
-title: “ [!UICONTROL QuickView] 选项卡”
-description: “概览”选项卡说明了您可能看到的不同警报类型，包括磁盘空间较慢的警报类型和服务器使用情况。
-source-git-commit: 4d700c04be5cd1ec2dc1c43c627feeed93f0fbee
+title: “ [!DNL QuickView] 选项卡”
+description: 的 [!DNL QuickView] 选项卡说明您可能看到的不同警报类型，包括磁盘空间不足和服务器使用情况。
+source-git-commit: 38467ebd2ec29f9e1679182fb1ee7076d738664b
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
 
-# 的 [!UICONTROL QuickView] 选项卡
+# 的 [!DNL QuickView] 选项卡
 
 的 **[!UICONTROL QuickView]** 选项卡说明您可能看到的不同警报类型，包括磁盘空间不足和服务器使用情况。 此外，还描述了选项卡的框架。
 

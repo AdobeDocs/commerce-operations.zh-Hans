@@ -1,17 +1,17 @@
 ---
-title: “ [!UICONTROL Infra] 选项卡”
-description: 的 [!UICONTROL Infra] tab可隔离问题和导致基础结构问题的原因。
-source-git-commit: b0d80d97f60b24bc801063dc484f3a495cf0a036
+title: “ [!DNL Infra] 选项卡”
+description: 的 [!DNL Infra] tab可隔离问题和导致基础结构问题的原因。
+source-git-commit: 38467ebd2ec29f9e1679182fb1ee7076d738664b
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
 
-# 的 [!UICONTROL Infra] 选项卡
+# 的 [!DNL Infra] 选项卡
 
-的 **[!UICONTROL Infra]** tab可隔离问题和导致基础结构问题的原因。 进一步介绍了您在选项卡上可以看到的帧。
+的 **[!DNL Infra]** tab可隔离问题和导致基础结构问题的原因。 进一步介绍了您在选项卡上可以看到的帧。
 
 ## [!UICONTROL Service Alerts – Infrastructure Alerts by Application name]
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ![按装载使用索引码](../../assets/tools/observation-for-adobe-commerce/inode-usage-mount.jpg)
 
-的 **[!UICONTROL Inode usage by mount]** 该框架通过在选定的时间范围内装载来显示索引节点使用情况。 即使存在大量的可用存储，如果某个节点耗尽inode，它也会显示缺少可用存储。 删除文件（尤其是小文件）将释放空间并使inode可用。
+的 **[!UICONTROL Inode usage by mount]** 帧显示 [!DNL inode] 在选定时间范围内按装入方式使用。 即使存储空间可能很大，但如果某个节点耗尽 [!DNL inodes]，则会显示缺少可用存储。 删除文件（尤其是小文件）将释放空间并创建 [!DNL inodes] 可用。
 
 ## [!UICONTROL vCPU tier view over timeline GREATER 2 weeks]
 
