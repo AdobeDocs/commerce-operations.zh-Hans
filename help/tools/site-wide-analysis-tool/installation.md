@@ -1,9 +1,9 @@
 ---
 title: 安装指南
 description: “使用本指南安装 [!DNL Site-Wide Analysis Tool] ，“”
-source-git-commit: 5603d0feee6ec9dd5e8b534a0e64df274d7ab84d
+source-git-commit: 696f1624fe43fdd637b374b880667d35daca04de
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 0%
 代理需要 [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 扩展，以及 [已配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 和API密钥。 要验证是否已安装扩展，请运行以下命令：
 
 ```bash
-bin/magento module:status Magento_ServicesConnector
+bin/magento module:status Magento_ServicesId
 ```
 
 如果您已安装该扩展并使用其他服务的现有API密钥对其进行配置，则您 **必须重新生成API密钥** 并在Adobe Commerce管理员中为代理更新它。
@@ -102,19 +102,25 @@ bin/magento module:status Magento_ServicesConnector
 1. 将扩展添加到 `composer.json` 文件并安装它。
 
    ```bash
-   composer require magento/services-connector:1.*
+   composer require magento/services-id
    ```
 
 1. 启用扩展。
 
    ```bash
-   bin/magento module:enable Magento_ServicesConnector
+   bin/magento module:enable Magento_ServicesId
    ```
 
 1. 更新数据库模式。
 
    ```bash
    bin/magento setup:upgrade
+   ```
+
+1. 清除缓存。
+
+   ```bash
+   bin/magento cache:clean
    ```
 
 1. [配置API密钥](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 将扩展连接到系统。
