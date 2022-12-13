@@ -1,9 +1,9 @@
 ---
 title: 云基础架构上的商务远程存储
 description: 请参阅有关如何在云基础架构上为Adobe Commerce设置远程存储的指南。
-source-git-commit: 0653d90d92e264b62fcc648f2b1307c013e9be54
+source-git-commit: 2080950852e3c4e6da556733e56f68e0e8005530
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ stage:
 magento-cloud variable:create --level environment --name REMOTE_STORAGE --json true --inheritable false --value '{"driver":"aws-s3","prefix":"uat","config":{"bucket":"aws-bucket-id","region":"eu-west-1","key":"optional-key","secret":"optional-secret"}}'
 ```
 
-这会创建 `REMOTE_STORAGE` 变量。 的 `REMOTE_STORAGE` 变量会采用JSON字符串来配置远程存储。 以下是JSON配置示例。
+这会创建 `REMOTE_STORAGE` 变量。 的 `REMOTE_STORAGE` 变量会采用JSON字符串来配置远程存储。 以下是JSON配置示例：
 
 ```json
 {
