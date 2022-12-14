@@ -2,9 +2,9 @@
 title: 云基础架构安全
 description: 了解如何保持Adobe Commerce云基础架构的安全。
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 50882bebb4712e6cf095a81297684f37e15b1a6b
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1644'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Adobe会定期测试核心应用程序代码是否存在安全漏洞。 向客�
 
 敏感数据可以涵盖来自消费者的个人信息或来自Managed Services客户的机密数据。 保护敏感客户和消费者数据是Adobe Commerce Managed Services的一项关键义务。 Managed Services和我们的客户都对个人身份信息负有法律义务。 除了架构的安全功能外，还有其他控件来限制敏感数据的分发和访问。
 
-客户拥有其数据，并可以控制该数据的位置。 客户指定其生产和开发实例所在的位置。 它们还指定将与Commerce一起用于Magento Business Intelligence(MBI)环境的位置，以及该MBI应用程序是否有权访问个人身份信息。 生产实例可以位于大多数AWS地区，而开发和MBI环境可以在美国或欧盟中同时创建。
+客户拥有其数据，并可以控制该数据的位置。 客户指定其生产和开发实例所在的位置。 它们还指定将哪个位置与Commerce一起用于Adobe Commerce报表环境，以及Adobe Commerce报表应用程序是否有权访问个人身份信息。 生产实例可以位于大多数AWS地区，而开发和Adobe Commerce报表环境则可以在美国或欧盟中找到。
 
 敏感数据可能会通过Fastly CDN服务器网络，但不会存储在Fastly网络中。 包括在Adobe CommerceManaged Services产品中的所有合作伙伴都有确保保护敏感数据的合同义务。 Managed Services不会从客户指定的位置移动敏感的客户或消费者数据。
 

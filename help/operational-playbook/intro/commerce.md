@@ -2,9 +2,9 @@
 title: Adobe Commerce
 description: Adobe Commerce描述
 exl-id: 130bae23-8a22-4523-abe2-8dc97b3881d2
-source-git-commit: 3432ba8640a82269cb725b8b15854f20c270b1e3
+source-git-commit: 1611a8cab95ec24a1420fac31958853e28033af6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Commerce可在内部托管。 因此，您可以在自己的服务器上�
 Adobe Commerce是一款功能齐全的电子商务解决方案，附带以下附加功能：
 
 - B2B功能，如报价、自定义目录，以及管理购买者角色和权限
-- MagentoBI功能板，具有可视化和自定义报表生成器
+- Adobe Commerce报表功能板，具有可视化和自定义报表生成器
 - Magento聊天（由dotdigital提供支持）
 - 高级营销工具
 - [!DNL Product Recommendations] 由Adobe Sensei提供支持
