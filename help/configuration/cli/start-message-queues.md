@@ -1,7 +1,7 @@
 ---
 title: 启动消息队列使用者
 description: 了解如何启动消息队列消费者。
-source-git-commit: 02f02393878d04b4a0fcdae256ac1ac5dd13b7f6
+source-git-commit: 3e3dac0c75622b210cf1168639b8804003f3c538
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-必须启动消息队列使用者才能启用异步操作，如Inventory management批量操作以及REST批量和异步端点。 要启用B2B功能，您必须启动多个用户。 第三方模块可能还要求您启动自定义消费者。
+您必须启动 [消息队列使用者](../queues/consumers.md) 启用异步操作，如Inventory management批量操作以及REST批量和异步端点。 要启用B2B功能，您必须启动多个用户。 第三方模块可能还要求您启动自定义消费者。
 
 要查看所有用户的列表，请执行以下操作：
 
