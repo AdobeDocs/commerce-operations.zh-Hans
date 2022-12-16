@@ -2,9 +2,9 @@
 keywords: Adobe Commerce；主页；热门主题
 title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
-source-git-commit: 80163ec1c40a19ea4eb138c3753b08daa231dc41
+source-git-commit: f66183c3dc01e0f8c049edf767cd6c74aae1a1cf
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '164'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,7 @@ ht-degree: 2%
 了解新文档和现有文档的重要更新。
 
 | 更改 | 类型 |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
-| 将 [安全性和合规性指南](../security-and-compliance/overview.md) 从 [devdocs.magento.com](https://devdocs.magento.com/security/security-and-compliance.html). | 新建 |
-| 将 [发行信息指南](../release/release-notes/overview.md) 从 [devdocs.magento.com](https://devdocs.magento.com/release/released-versions.html). | 新建 |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| 添加了描述所有 [消息队列使用者](../configuration/queues/consumers.md). | 新建 |
+| 添加了 [说明](../implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md) 用于在云基础架构Pro项目上转换Adobe Commerce的数据库表存储格式。 | 已更新 |
+| 添加了 [说明](../configuration/remote-storage/cloud-support.md) 用于在云基础架构项目上为Adobe Commerce启用远程存储。 | 已更新 |
