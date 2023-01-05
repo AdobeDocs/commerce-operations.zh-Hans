@@ -4,9 +4,9 @@ description: 了解如何安全地处理和存储付款详细信息
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 124eaf6e7b465b320d3d7e6a3694130edb93f187
+source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 支付处理和存储的最佳实践
 
-维护 [PCI合规性](https://nam04.safelinks.protection.outlook.com/GetUrlReputation) 正在制定策略，以正确处理和存储信用卡支付。
+维护 [PCI合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) 正在制定策略，以正确处理和存储信用卡支付。
 
 在Adobe Commerce中存储持卡人数据 **严禁** 而这样做可能违反您作为支付卡行业数据安全标准(PCI-DSS)下的商户的义务。 有关我们的商户责任分担模式和准则的更多信息，请参阅 [Adobe Commerce共享责任指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) Adobe信任中心。
 

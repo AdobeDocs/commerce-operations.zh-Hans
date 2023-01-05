@@ -4,7 +4,7 @@ description: 了解如何保持Adobe Commerce在云基础架构技术堆栈上�
 role: Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 48c5666ee9b83bbf8a5c6375ec53762d918bcece
+source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Adobe Commerce on cloud infrastructure 2.4.x及更高版本
 
 入门计划客户可以在服务升级时自助服务。 请参阅 [更改服务版本](https://devdocs.magento.com/cloud/project/services.html#change-service-version) 以了解有关如何执行此操作的详细信息。
 
-专业计划客户只能在其 [集成环境](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.md). 对于生产服务升级，您必须 [提交支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 请求升级。
+专业计划客户只能在其 [集成环境](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html). 对于生产服务升级，您必须 [提交支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 请求升级。
 
 >[!WARNING]
 >

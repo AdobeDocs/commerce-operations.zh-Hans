@@ -1,9 +1,9 @@
 ---
 title: 实施开发阶段
 description: 了解Adobe Commerce项目开发阶段的实施最佳实践。
-source-git-commit: c717d45525c7893fa2c38183326534e0fa4ee0c6
+source-git-commit: ae9573f3766c59887aea177cb85bf889c2161bfc
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -27,18 +27,15 @@ ht-degree: 0%
 
 ### 代码审阅、合并和测试
 
-- 准则和标准
-
 <!--Assets not yet integrated
+- Guidelines and standards
   - [Development best practices](https://wiki.corp.adobe.com/x/nT4ykw)
   - [Code Review](https://wiki.corp.adobe.com/x/qT4ykw)
   - [Debugging Magento 2](https://wiki.corp.adobe.com/x/nz4ykw) (wiki)
 -->
 - [优化CSS和JS文件](optimize-css-js-files.md)
 - [专用内容块的最佳实践](private-content-block-configuration.md)
-
-- 添加自定义代码
-   - [面向扩展开发人员的最佳实践](https://developer.adobe.com/commerce/php/best-practices/)
+- [面向扩展开发人员的最佳实践](https://developer.adobe.com/commerce/php/best-practices/)
 
 <!--Assets not yet integrated
 
@@ -61,13 +58,13 @@ ht-degree: 0%
 
 ### 本地和暂存环境设置
 
-- [云基础架构的开发工作流程](https://devdocs.magento.com/cloud/architecture/pro-develop-deploy-workflow.html)  — 从云指南添加
+- [云基础架构的开发工作流程](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html)
 
 ## 代码、合并、测试
 
-- [构建和部署的最佳实践](https://devdocs.magento.com/cloud/reference/discover-deploy.html#best-practices)
+- [构建和部署的最佳实践](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html)
 - [静态内容部署 — 云](static-content-deployment.md)
 - [优化CSS和JS文件](optimize-css-js-files.md)
 - [优化图像以提供响应更快的网站](image-optimization.md)
-- [Adobe Commerce云基础架构最佳实践疑难解&#x200B;答](troubleshooting.md)
-- [了解何时以及如何修改数据库表&#x200B;](modifying-core-and-third-party-tables.md)
+- [Adobe Commerce云基础架构最佳实践疑难解答](troubleshooting.md)
+- [了解何时以及如何修改数据库表](modifying-core-and-third-party-tables.md)

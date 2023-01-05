@@ -4,9 +4,9 @@ description: 了解在云基础架构上部署Adobe Commerce时，如何配置�
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,6 @@ Adobe建议您始终在云基础架构项目上为Adobe Commerce设置Elasticsea
 
 ## 其他信息
 
-- [InnoDB与MYISAM之间的主要区别是什么](http://www.expertphp.in/article/what-are-the-main-differences-between-innodb-and-myisam)
+- [MySQL存储引擎](https://dev.mysql.com/doc/refman/8.0/en/storage-engines.html)
 - [Adobe Commerce 2.3.5升级MariaDB先决条件](../maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
 - [解决数据库性能问题的最佳实践](../maintenance/resolve-database-performance-issues.md)
