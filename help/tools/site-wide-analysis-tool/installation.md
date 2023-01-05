@@ -1,9 +1,9 @@
 ---
 title: 安装指南
 description: “使用本指南安装 [!DNL Site-Wide Analysis Tool] ，“”
-source-git-commit: 696f1624fe43fdd637b374b880667d35daca04de
+source-git-commit: 0c27d4cf5854161e14a482912941cd144ca654f7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -267,7 +267,7 @@ bin/magento module:status Magento_ServicesId
 
 ### 服务 {#service}
 
-1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 使用以下配置(替换 `<filesystemowner>` 拥有安装代理和Adobe Commerce软件的目录的UNIX®用户)。 如果您以根用户身份下载代理，请更改目录和嵌套文件所有者。
+1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 使用以下配置(替换 `<filesystemowner>` 拥有安装代理和Adobe Commerce软件的目录的UNIX®用户)。 如果您以根用户的身份下载代理，请更改目录和嵌套文件的所有者。
 
    ```config
    [Unit]
@@ -381,27 +381,27 @@ bin/magento module:status Magento_ServicesId
    rm -rf swat-agent
    ```
 
-## 覆盖配置文件
+## 疑难解答
 
-您可以使用环境变量覆盖安装期间在配置文件中指定的值。 这样可以保持与代理早期版本的向后兼容性。 有关推荐值，请参阅下表：
+### 访问密钥未正确解析
 
-| 属性 | 描述 |
-| --- | --- |
-| `SWAT_AGENT_APP_NAME` | 安装代理时提供的公司或站点名称 |
-| `SWAT_AGENT_APPLICATION_PHP_PATH` | PHP CLI解释器的路径(通常 `/usr/bin/php`) |
-| `SWAT_AGENT_APPLICATION_MAGENTO_PATH` | 安装Adobe Commerce应用程序的根目录(通常 `/var/www/html`) |
-| `SWAT_AGENT_APPLICATION_DB_USER` | 用于Adobe Commerce安装的数据库用户 |
-| `SWAT_AGENT_APPLICATION_DB_PASSWORD` | 为Adobe Commerce安装指定用户的数据库密码 |
-| `SWAT_AGENT_APPLICATION_DB_HOST` | 用于Adobe Commerce安装的数据库主机 |
-| `SWAT_AGENT_APPLICATION_DB_NAME` | Adobe Commerce安装的数据库名称 |
-| `SWAT_AGENT_APPLICATION_DB_PORT` | 用于Adobe Commerce安装的数据库端口(通常 `3306`) |
-| `SWAT_AGENT_APPLICATION_DB_TABLE_PREFIX` | 表Adobe Commerce安装的前缀(默认值： `empty`) |
-| `SWAT_AGENT_APPLICATION_DB_REPLICATED` | Adobe Commerce安装是否具有辅助数据库实例(通常 `false`) |
-| `SWAT_AGENT_APPLICATION_CHECK_REGISTRY_PATH` | 代理的临时目录(通常 `/usr/local/swat-agent/tmp`) |
-| `SWAT_AGENT_RUN_CHECKS_ON_START` | 在首次运行时收集数据(通常 `1`) |
-| `SWAT_AGENT_LOG_LEVEL` | 根据严重性(通常为 `error`) |
-| `SWAT_AGENT_ENABLE_AUTO_UPGRADE` | 启用自动升级(升级后需要重新启动；如果禁用了选项，则代理不会检查升级情况； `true` 或 `false`) |
-| `SWAT_AGENT_IS_SANDBOX=false` | 启用沙盒模式以在暂存环境中使用代理 |
+如果访问密钥未正确解析，您可能会看到以下错误：
+
+```terminal
+ERRO[2022-10-10 00:01:41] Error while refreshing token: error while getting jwt from magento: invalid character 'M' looking for beginning of value
+FATA[2022-12-10 20:38:44] bad http status from https://updater.swat.magento.com/linux-amd64.json: 403 Forbidden
+```
+
+要解决此错误，请尝试执行以下步骤：
+
+1. 执行 [脚本安装](#scripted)，保存输出，并查看输出是否有错误。
+1. 查看生成的 `config.yaml` ，并验证您的Commerce实例和PHP的路径是否正确。
+1. 确保运行调度程序的用户位于 [文件系统所有者](../../installation/prerequisites/file-system/overview.md) Unix组或与文件系统所有者相同的用户。
+1. 确保 [Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 密钥安装正确，并尝试更新它们以将扩展连接到系统。
+1. [卸载](#uninstall) 更新密钥后，使用 [安装脚本](#scripted).
+1. 运行调度程序并查看您是否仍收到相同的错误。
+1. 如果仍然收到相同的错误，请在 `config.yaml` 调试和打开支持票证。
+
 
 >[!INFO]
 >
