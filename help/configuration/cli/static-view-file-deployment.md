@@ -1,7 +1,7 @@
 ---
 title: 部署静态视图文件
 description: 了解如何在生产模式期间将静态文件写入商务文件系统。
-source-git-commit: 4fe6d6a76a5d4849d4f96b61b95a9a3dae7fc76a
+source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 | 选项 | 描述 | 必需？ |
 | ------ | ----------- | --------- |
-| `<languages>` | 空格分隔列表 [ISO-639](http://www.loc.gov/standards/iso639-2/php/code_list.php) 要输出静态视图文件的语言代码。 (默认值为 `en_US`.)<br>通过运行以查找列表： `bin/magento info:language:list` | 否 |
+| `<languages>` | 空格分隔列表 [ISO-639](https://www.loc.gov/standards/iso639-2/php/code_list.php) 要输出静态视图文件的语言代码。 (默认值为 `en_US`.)<br>通过运行以查找列表： `bin/magento info:language:list` | 否 |
 | `--language (-l)` | 仅为指定语言生成文件。 缺省设置（未指定选项）是为所有ISO-639语言代码生成文件。 您一次可以指定一个语言代码的名称。 默认值为 **全部**.<br>例如： `--language en_US --language es_ES` | 否 |
 | `--exclude-language` | 为指定的语言代码生成文件。 未指定任何选项的默认值是不排除任何内容。 您可以指定一种语言代码的名称或以逗号分隔的语言代码列表。 默认值为 **无**. | 否 |
 | `--theme <theme>` | 要为其部署静态内容的主题。 默认值为 **全部**.<br>例如： `--theme Magento/blank --theme Magento/luma` | 否 |

@@ -1,9 +1,9 @@
 ---
 title: 管理消息队列
 description: 了解如何从命令行中管理消息队列，以用于Adobe Commerce。
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---

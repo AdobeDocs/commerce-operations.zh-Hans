@@ -1,9 +1,9 @@
 ---
 title: 配置Redi
 description: 获取Redis功能的概述并启动Redis配置。
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Redis功能包括：
 
 对于缓存实例，请设置该实例，使其足够大，可存储整个Commerce缓存。 大小要求取决于不同的因素，如产品数和商店查看次数。 作为起点，您可以使用文件系统上缓存文件夹的大小。 例如，如果 `var/cache` 文件系统上的文件夹为5 GB，请设置至少为5 GB的Redis实例。 缓存实例不需要持久性，因为可以还原商务缓存。 请参阅 [Redis缓存指南](https://redis.io/docs/manual/eviction/).
 
-为了进行性能调整，您还可以启用以下用于异步删除的设置。 这些设置不会更改Redis的行为。 另请参阅 [雷迪新闻](http://antirez.com/news/93) 有关异步删除的详细信息。
+要进行性能调整，您可以启用以下用于异步删除的设置。 这些设置不会更改Redis的行为。
 
 ```ini
 lazyfree-lazy-eviction yes
