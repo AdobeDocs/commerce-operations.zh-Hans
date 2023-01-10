@@ -1,10 +1,10 @@
 ---
 user-guide-title: 发行信息
 user-guide-description: 了解Adobe Commerce和Magento Open Source版本。
-source-git-commit: e7c38fd6b7588963039d7dd40c59c8b567054428
+source-git-commit: eeb8eb96cc0b2e4db03f64a7d90e64b3c53b9676
 workflow-type: tm+mt
-source-wordcount: '76'
-ht-degree: 15%
+source-wordcount: '77'
+ht-degree: 16%
 
 ---
 
@@ -15,12 +15,13 @@ ht-degree: 15%
    - [概述](release-notes/overview.md)
    - [后向不兼容的更改](backward-incompatible-changes.md)
    - Adobe Commerce {#adobe-commerce}
-      - [2.4.5](release-notes/commerce/2-4-5.md)
-      - [2.4.4](release-notes/commerce/2-4-4.md)
-      - [2.4.3](release-notes/commerce/2-4-3.md)
-      - [2.4.2](release-notes/commerce/2-4-2.md)
-      - [2.4.1](release-notes/commerce/2-4-1.md)
-      - [2.4.0](release-notes/commerce/2-4-0.md)
+   - [2.4.6](release-notes/commerce/2-4-6.md)
+   - [2.4.5](release-notes/commerce/2-4-5.md)
+   - [2.4.4](release-notes/commerce/2-4-4.md)
+   - [2.4.3](release-notes/commerce/2-4-3.md)
+   - [2.4.2](release-notes/commerce/2-4-2.md)
+   - [2.4.1](release-notes/commerce/2-4-1.md)
+   - [2.4.0](release-notes/commerce/2-4-0.md)
    - Magento Open Source {#magento-open-source}
       - [2.4.5](release-notes/open-source/2-4-5.md)
       - [2.4.4](release-notes/open-source/2-4-4.md)
