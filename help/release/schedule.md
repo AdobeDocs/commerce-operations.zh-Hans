@@ -1,10 +1,10 @@
 ---
 title: 发行计划
-description: 了解Adobe Commerce的特定版本何时计划进行测试版、预发行版和正式发布。
+description: 了解特定版本的 Adobe Commerce 计划何时推出测试版、预发行版和公开发行版。
 source-git-commit: 261aecd7d217e5c2e22f1a6c97242baa2923af60
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 

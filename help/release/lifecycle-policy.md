@@ -1,10 +1,10 @@
 ---
 title: 软件生命周期策略
-description: 了解终止对Adobe Commerce版本的软件支持的关键日期。
+description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
 source-git-commit: ffa8b957828833d2c3f9bc79c31dc3fa2c6035a5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '368'
+ht-degree: 8%
 
 ---
 
@@ -39,9 +39,9 @@ ht-degree: 0%
 <thead>
   <tr>
     <th colspan="2"></th>
-    <th colspan="4">2022年</th>
-    <th colspan="4">2023年</th>
-    <th colspan="4">2024年</th>
+    <th colspan="4">2022</th>
+    <th colspan="4">2023</th>
+    <th colspan="4">2024</th>
   </tr>
 </thead>
 <tbody>
@@ -49,17 +49,17 @@ ht-degree: 0%
     <td>商务</td>
     <td>PHP</td>
     <td>Q1</td>
-    <td>第2季度</td>
-    <td>第3季度</td>
-    <td>第4季度</td>
+    <td>Q2</td>
+    <td>Q3</td>
+    <td>Q4</td>
     <td>Q1</td>
-    <td>第2季度</td>
-    <td>第3季度</td>
-    <td>第4季度</td>
+    <td>Q2</td>
+    <td>Q3</td>
+    <td>Q4</td>
     <td>Q1</td>
-    <td>第2季度</td>
-    <td>第3季度</td>
-    <td>第4季度</td>
+    <td>Q2</td>
+    <td>Q3</td>
+    <td>Q4</td>
   </tr>
   <tr>
     <td>2.4.0 - 2.4.3</td>
