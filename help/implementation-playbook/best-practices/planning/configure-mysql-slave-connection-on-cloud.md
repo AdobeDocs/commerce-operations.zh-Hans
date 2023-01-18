@@ -4,7 +4,7 @@ description: 了解如何为部署在云基础架构上的Adobe Commerce站点�
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 0866272e02a7a223d35e14842bfb42a827e0468d
+source-git-commit: a5a6e25e3fd303e07a07110b85aa1d460f53cd54
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%
@@ -14,8 +14,9 @@ ht-degree: 0%
 
 # 配置MySQL从连接的最佳实践
 
->!![NOTE]
-我们知道，本文仍包含一些行业标准软件术语，有些术语可能会发现带有种族主义、性别歧视或压迫性，并可能会让读者感到受伤、受到创伤或不受欢迎。 Adobe正在努力从我们的代码、文档和用户体验中删除这些术语。
+>[!NOTE]
+>
+>我们知道，本文仍包含一些行业标准软件术语，有些术语可能会发现带有种族主义、性别歧视或压迫性，并可能会让读者感到受伤、受到创伤或不受欢迎。 Adobe正在努力从我们的代码、文档和用户体验中删除这些术语。
 
 对于在云基础架构Pro架构上部署的Adobe Commerce站点，Adobe建议默认启用数据库的MYSQL从连接。
 
