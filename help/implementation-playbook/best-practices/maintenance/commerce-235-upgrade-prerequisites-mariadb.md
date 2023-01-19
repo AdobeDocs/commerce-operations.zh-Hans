@@ -4,7 +4,7 @@ description: 了解如何准备Adobe Commerce数据库以从Adobe Commerce 2.3.5
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 071e88c6a07df0f74b6d4b09cce858710c9332cc
+source-git-commit: 35efea20181b112e97bfae803c8d0168cfc88dfc
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Adobe Commerce on cloud infrastructure，其中包含Adobe Commerce版本2.3.4�
 1. 识别要从压缩格式转换为动态格式的表。
 
    ```mysql
-   SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format 'Compact';
+   SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
    ```
 
 1. 确定表大小，以便您可以计划转换工作。
