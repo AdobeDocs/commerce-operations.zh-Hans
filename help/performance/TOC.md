@@ -1,9 +1,9 @@
 ---
 user-guide-title: 性能最佳实践
 user-guide-description: 使用我们的建议优化Adobe Commerce或Magento Open Source生产部署的性能。
-source-git-commit: 4baa58b440eab0d33a86388198670292a4119381
+source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
 workflow-type: tm+mt
-source-wordcount: '46'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -22,3 +22,4 @@ ht-degree: 0%
 - 高级概念 {#performance-best-practices}
    - [高级设置](advanced-setup.md)
    - [高级 [!DNL JavaScript] 捆绑](advanced-js-bundling.md)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

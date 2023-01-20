@@ -1,9 +1,9 @@
 ---
 user-guide-title: 安装指南
 user-guide-description: 了解如何安装Adobe Commerce和Magento Open Source以进行内部部署。
-source-git-commit: 949ef8d2036ceeef3cc892a5063ddecc2586a6a9
+source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
@@ -66,3 +66,4 @@ ht-degree: 0%
    - [卸载或重新安装Commerce](tutorials/uninstall.md)
    - [卸载主题](tutorials/themes.md)
    - [升级数据库模式](tutorials/database-upgrade.md)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

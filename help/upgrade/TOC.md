@@ -1,10 +1,10 @@
 ---
 user-guide-title: 升级指南
 user-guide-description: 了解为什么升级 Adobe Commerce 或 Magento Open Source 应用程序如此重要，以及如何成功地规划和执行升级。
-source-git-commit: fd624a97d74c7f6a9e29223227dae425bb6fa68c
+source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 19%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -53,3 +53,4 @@ ht-degree: 19%
    - [推荐阅读](resources/recommended-reading.md)
    - [使用Adobe Commerce 2.4.4+实现平台现代化](resources/recommended-upgrade-paths-2022.md)
    - [升级计划核对清单](https://support.magento.com/hc/en-us/articles/360057968951)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
