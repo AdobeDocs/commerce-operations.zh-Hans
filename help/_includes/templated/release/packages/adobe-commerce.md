@@ -1,7 +1,7 @@
 ---
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 4391091cce32618dc02b0bddb62ff9d16dd12f10
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2193'
 ht-degree: 0%
 
 ---
@@ -605,7 +605,7 @@ wikimedia/less.php: ^3.0.0
       <a href="https://github.com/php-amqplib/php-amqplib.git">php-amqplib/php-ampqplib</a>
     </td>
     <td>库</td>
-    <td>以前称为videolalvaro/php-ampqplib。  此库是AMQP协议的纯PHP实现。 它已经被测试了 [!DNL RabbitMQ].</td>
+    <td>以前称为videolalvaro/php-ampqplib。  此库是AMQP协议的纯PHP实现。 它已经测试过RabbitMQ。</td>
   </tr>
   </tbody>
 </table>
@@ -1158,7 +1158,7 @@ wikimedia/less.php: ^3.0.0
       <a href="https://github.com/webonyx/graphql-php.git">webonyx/graphql-php</a>
     </td>
     <td>库</td>
-    <td>GraphQL引用实现的PHP端口</td>
+    <td>GraphQL参考实施的PHP端口</td>
   </tr>
   </tbody>
 </table>

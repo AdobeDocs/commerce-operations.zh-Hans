@@ -1,5 +1,5 @@
 ---
-source-git-commit: a2747c1d62c4a22179c1177e7c4e76e028f66cea
+source-git-commit: 4391091cce32618dc02b0bddb62ff9d16dd12f10
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 9%
@@ -54,7 +54,7 @@ ht-degree: 9%
 
 ## 2.4.0-2.4.3
 
-对2.4.0-2.4.3版本行的支持将于2022年11月28日终止。
+2.4.0-2.4.3版本行的支持已于2022年11月28日终止。
 
 <table>
   <thead>
