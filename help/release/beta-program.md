@@ -1,9 +1,9 @@
 ---
 title: 测试版计划
 description: 了解Adobe Commerce测试版计划以及如何参与。
-source-git-commit: 79f36e3728e6bc436e8093bd4051143a48e681d6
+source-git-commit: b92053ae4b5454a686d314bdbbad97a212082046
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,11 @@ ht-degree: 0%
 
 欢迎参加Adobe Commerce测试版计划，并感谢您对参与计划的兴趣。
 
-此计划可供所有Adobe Commerce合作伙伴和客户使用。
-要注册测试版计划，请阅读并遵循下面概述的步骤。
+此计划可供所有Adobe Commerce合作伙伴和客户使用。 要注册测试版计划，请阅读并遵循下面概述的步骤。
+
+>[!IMPORTANT]
+>
+>Adobe Commerce 2.4.6是此程序支持的最后一个版本。 从2023年6月开始至今，Adobe将发布Adobe Commerce和Magento Open Source的公共测试版。 请参阅 [发布计划](schedule.md) 以获取公开测试版发行日期列表。
 
 ## 为何参与
 
