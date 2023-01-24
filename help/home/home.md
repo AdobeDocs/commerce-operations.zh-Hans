@@ -2,10 +2,10 @@
 keywords: Adobe Commerce；主页；热门主题
 title: 主页
 description: 浏览Adobe Commerce操作产品文档的索引。
-source-git-commit: f66183c3dc01e0f8c049edf767cd6c74aae1a1cf
+source-git-commit: a1e74edb232b818dea9a2723bf506fac49acbd9f
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -119,12 +119,4 @@ ht-degree: 2%
 </tr>
 </table>
 
-## 新增功能
-
-了解新文档和现有文档的重要更新。
-
-| 更改 | 类型 |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| 添加了描述所有 [消息队列使用者](../configuration/queues/consumers.md). | 新建 |
-| 添加了 [说明](../implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md) 用于在云基础架构Pro项目上转换Adobe Commerce的数据库表存储格式。 | 已更新 |
-| 添加了 [说明](../configuration/remote-storage/cloud-support.md) 用于在云基础架构项目上为Adobe Commerce启用远程存储。 | 已更新 |
+{{$include /help/_includes/templated/whats-new.md}}
