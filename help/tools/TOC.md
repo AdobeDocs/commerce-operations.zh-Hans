@@ -1,9 +1,9 @@
 ---
 user-guide-title: 工具
 user-guide-description: 了解可以在Adobe Commerce中使用的不同工具、其用途、安装过程以及如何获取访问权限。
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+source-git-commit: 67ec373cde21db066d3c0675c9ff479912ae229c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [疑难解答](https://support.magento.com/hc/en-us/articles/360033020451)
+      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
 - [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
