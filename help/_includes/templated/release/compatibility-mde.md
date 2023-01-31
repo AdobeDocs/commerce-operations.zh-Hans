@@ -1,7 +1,7 @@
 ---
-source-git-commit: da1cbeba30059be1b71c18ef08dd1f7ab4674a78
+source-git-commit: a72453e2d16932be7fb84232f584231b8584239e
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '2173'
 ht-degree: 0%
 
 ---
@@ -1969,18 +1969,297 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="15">支付服务</th>
     </tr>
     <tr>
+      <td>支付服务1.5.4</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.5.3</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.5.2</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.5.1</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.5.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.4.1</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.4.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.3.1</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
       <td>支付服务1.3.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
       </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>支付服务1.2.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
       </td>
       <td>不支持</span>
       </td>
@@ -2005,13 +2284,13 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
       <td>不支持</span>
       </td>
@@ -2036,13 +2315,13 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
       <td>不支持</span>
       </td>
