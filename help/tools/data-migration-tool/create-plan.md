@@ -1,9 +1,9 @@
 ---
 title: 创建数据迁移计划
 description: 请按照以下步骤创建数据迁移计划，以确保成功从Magento1升级到Magento2。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 * 使用拓扑和设计来设置Magento2硬件系统，至少与您现有的Magento1系统相匹配
 
-* 安装Magento2.x（包含此版本的所有模块）和 [!DNL Data Migration Tool] 在符合 [Magento系统要求]
+* 安装Magento2.x（包含此版本的所有模块）和 [!DNL Data Migration Tool] 在符合 [系统要求](../../installation/system-requirements.md)
 
 * 对 [!DNL Data Migration Tool] 代码，以防您不需要迁移某些数据（如CMS页面、销售规则），或希望在迁移期间转换Magento自定义。 阅读 [!DNL Data Migration Tool]&#39;s [技术规范](technical-specification.md) 更好地了解从内部迁移的方式
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
    如果某些扩展包含要迁移的数据，您可能需要安装适用于Magento2的这些扩展。 如果扩展在Magento2数据库中具有不同的结构，请使用随 [!DNL Data Migration Tool].
 
-1. 重新编入所有Magento2.x索引器的索引。 有关详细信息，请参阅 [配置指南].
+1. 重新编入所有Magento2.x索引器的索引。 有关详细信息，请参阅 [管理索引器](../../configuration/cli/manage-indexers.md) 在 _配置指南_.
 
 ## 步骤5:对迁移的数据进行更改（如果需要）
 
@@ -116,6 +116,5 @@ ht-degree: 0%
 1. Magento2商店现已准备就绪。 您和您的客户可以恢复所有活动。
 
 <!-- LINK ADDRESSES -->
-[Magento系统要求]: ../../installation/system-requirements.md
+
 [Commerce Marketplace]: https://marketplace.magento.com
-[配置指南]: ../../configuration/cli/manage-indexers.md

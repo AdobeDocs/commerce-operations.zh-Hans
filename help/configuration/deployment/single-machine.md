@@ -1,9 +1,9 @@
 ---
 title: 单机部署
 description: 了解如何使用命令行在生产服务器上部署商务更新。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 假设
 
-- 您使用 [编辑器].
+- 您使用 [编辑器](../../installation/composer.md).
 - 您将直接将更新应用到服务器。
 
 >[!WARNING]
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 部署步骤
 
-1. 作为或切换到 [文件系统所有者][file-owner].
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 
 1. 将目录更改为Commerce基目录：
 
@@ -92,5 +92,3 @@ ht-degree: 0%
 <!-- link definitions -->
 
 [install]: https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/
-[composer]: ../../installation/composer.md
-[file-owner]: ../../installation/prerequisites/file-system/overview.md
