@@ -1,9 +1,9 @@
 ---
 title: 数据迁移的工作原理
 description: 了解Magento1和Magento2之间的数据迁移过程，包括术语、工作流图和步骤。
-source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
+source-git-commit: be2f924728853236bba786e7611b2a368c9f3054
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 ![迁移流程](../../assets/data-migration/migration_flow.png)
 
-[[!DNL Data Migration Tool] 技术规范]:technical-specification.md
+[[!DNL Data Migration Tool] 技术规范](technical-specification.md)
 
 我们很高兴您考虑从世界#1商平台(Magento1.x)转移到未来平台(Magento2)。 我们很高兴能够分享有关此过程的详细信息，我们称之为迁移。
 
