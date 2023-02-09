@@ -1,9 +1,9 @@
 ---
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
-source-git-commit: 230e457a783707c2447fab046a6d139ac97a20c5
+source-git-commit: 76ff1bbcc3a1ca8f73dfdd2ba4f516a201986f62
 workflow-type: tm+mt
-source-wordcount: '10584'
+source-wordcount: '10848'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,21 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关 [!DNL quality patches] 由社区创建以用于Magento Open Source，请参阅 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.27 {#v1-1-27}
+
+* **ACSD-48362** (对于Adobe Commerce >=2.4.1 &lt;2.4.7) — 修复了在使用可转让报价下单时使用默认送货地址而不是新地址的问题。
+* **ACSD-48059** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了商户无法保存“[!UICONTROL Match product by rule]”。
+* **ACSD-48216** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.3.8) || >=2.4.0 &lt;2.4.7) — 修复了 [!UICONTROL AUTO_INCREMENT] 的 [!UICONTROL inventory_source_item] 表格在 [!UICONTROL UPDATE] 操作。
+* **ACSD-47908** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.3.8) || >=2.4.0 &lt;2.4.7) — 修复了在结帐期间在发运步骤中选择来源和数量时出现的错误“值小于或等于0”。
+* **ACSD-49497** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了订单在发运后仍处于处理状态且应用部分退款的问题。
+* **ACSD-48694** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.3.8) || >=2.4.1 &lt;2.4.7) — 修复了错误“请求的状态更改无效”阻止客户下订单的问题。
+* **ACSD-49013** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了在使用批量API创建客户时，电子邮件确认未翻译为网站区域设置的问题。
+* **ACSD-48164** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了受限管理员无法保存网站级别值的问题。
+* **ACSD-48404** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4) — 修复了按浏览器的返回按钮时，“记住类别分页=是”导致错误的问题。
+* **ACSD-48634** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了测试更新页面上的JS错误，当“[!UICONTROL Google Analytics Content Experiments]已启用。
+* **ACSD-49042** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了无限延交订单的产品无法从Storefront订购的问题。
+* 更新的修补程序：ACSD-48366和ACSD-48661。
 
 ## v1.1.26 {#v1-1-26}
 
@@ -145,7 +160,7 @@ ht-degree: 0%
 
 * **MDVA-44703** (*(对于Adobe Commerce和Magento Open Source)>=2.4.3 &lt;2.4.4*) — 修复了受限管理员用户的订单总数计算错误的问题。
 * **MDVA-44940** (*(对于Adobe Commerce和Magento Open Source)>=2.4.3 &lt;2.4.4*) — 修复从管理员保存类别时发生的SQL错误。
-* **MDVA-44562** (*(对于Adobe Commerce和Magento Open Source)>=2.4.0 &lt;2.4.2-p2*) — 修复了尽管GraphQL请求源自非默认存储视图，但引用项目的非默认存储ID仍会被默认存储ID覆盖的问题。
+* **MDVA-44562** (*(对于Adobe Commerce和Magento Open Source)>=2.4.0 &lt;2.4.2-p2*) — 修复了尽管GraphQL请求源自非默认商店视图，但引用项目的非默认商店ID仍会被默认商店ID覆盖的问题。
 * **MDVA-43167** (*(对于Adobe Commerce和Magento Open Source)>=2.4.2 &lt;2.4.4*) — 修复了当管理员用户选择所有订单时，管理员订单网格批量操作不适用于多页面的问题。
 * **MDVA-44044** (*(对于Adobe Commerce和Magento Open Source)>=2.3.0 &lt;2.4.2-p2*) — 修复了将产品分配到新网站后，产品未显示在类别页面上的问题。
 * **MDVA-42509** (*(对于Adobe Commerce和Magento Open Source)>=2.3.3 &lt;2.4.4*) — 修复了无法上传CSV以快速排序，从而导致 *无法发送Cookie* 错误。
@@ -362,7 +377,7 @@ ht-degree: 0%
 * **MDVA-37082** (*(对于Adobe Commerce)>=2.3.0 &lt;2.4.3*) — 修复了保存已分组产品的自定义库存时导致产品在前端显示无库存的问题。
 * **MDVA-36572** (*for Adobe Commerce >=2.3.5 &lt;2.4.3*) — 修复了贷项通知单更新不再导致数据库中重复的产品预订更新的问题。
 * **MDVA-38132** (*for Adobe Commerce >=2.3.3 &lt;2.4.3*) — 修复了由于 *重定向过多* 错误。
-* **MDVA-38270** (*for Adobe Commerce >=2.4.1 &lt;2.4.3*) — 修复了GraphQL中订单总计中缺少礼品卡信息的问题。
+* **MDVA-38270** (*for Adobe Commerce >=2.4.1 &lt;2.4.3*) — 修复了GraphQL中订单总数中缺少礼品卡信息的问题。
 
 ## v1.0.24 {#v1-0-24}
 
@@ -402,7 +417,7 @@ ht-degree: 0%
 
 ## v1.0.20 {#v1-0-20}
 
-* **MDVA-36170** (*for Adobe Commerce >=2.3.4 &lt;2.4.2*) — 这修复了GraphQL查询不使用类别缓存标记进行缓存的问题。
+* **MDVA-36170** (*for Adobe Commerce >=2.3.4 &lt;2.4.2*) — 这修复了GraphQL查询未使用类别缓存标记进行缓存的问题。
 * **MDVA-33168** (*(对于Adobe Commerce)>=2.3.3 &lt;2.4.2*) — 修复了通过API更新产品属性时，所有其他属性都更改为空值的问题。
 * **MDVA-19640** (*(对于Adobe Commerce)>=2.3.0*) — 修复了 [!DNL Advanced Reporting] 不显示任何数据。
 * **MDVA-11189** (*(对于Adobe Commerce)>=2.3.0 &lt;2.3.5*) — 修复了在导入CSV文件以更新产品库存后， `cataloginventory_stock` 表格。
@@ -505,7 +520,7 @@ ht-degree: 0%
 
 * **MDVA-31399** (*(对于Adobe Commerce)>=2.3.2 &lt;2.4.2*) — 添加 *小计(包括 税)* 选项来为规则条件定价。
 * **MDVA-31236** (*(对于Adobe Commerce)>=2.4.0 &lt;2.4.2*) — 修复了具有自定义资源访问权限的管理员无法设置2FA或登录的问题。
-* **MDVA-30845** (*(对于Adobe Commerce)>=2.3.5 &lt;2.3.7*) — 修复了 *抱歉，此订单目前没有报价* 无法连接到UPS XML/USPS/DHL时显示错误，并且没有其他送货方法可用。
+* **MDVA-30845** (*for Adobe Commerce >=2.3.5 &lt;2.3.7*) — 修复了 *抱歉，此订单目前没有报价* 无法连接到UPS XML/USPS/DHL时显示错误，并且没有其他送货方法可用。
 * **MDVA-32133** (*(对于Adobe Commerce)>=2.4.0 &lt;2.4.1*) — 修复了在某些情况下无法从页面生成器中加载媒体集的问题。
 * **MDVA-12304** (*(对于Adobe Commerce)>=2.3.0*) — 将Cookie的最大数量从50增加到200。
 * **MDVA-32632** (*(对于Adobe Commerce)>=2.3.2 &lt;2.3.5*) — 修复了订单显示在付款系统中，但不在Adobe Commerce中的问题。
