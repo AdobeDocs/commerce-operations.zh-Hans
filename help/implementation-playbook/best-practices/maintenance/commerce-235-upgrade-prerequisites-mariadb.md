@@ -4,19 +4,19 @@ description: 了解如何准备Adobe Commerce数据库以从Adobe Commerce 2.3.5
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 35efea20181b112e97bfae803c8d0168cfc88dfc
+source-git-commit: bc38dd658401d3cd4c64159b1b2b2efe89979a93
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Commerce 2.3.5升级先决条件
+# MariaDB升级先决条件
 
-本文介绍在从版本2.3.4或更低版本升级到Adobe Commerce 2.3.5时，如何准备数据库。
+从Adobe Commerce 2.3.4或更低版本升级到任何较新版本时，需要将云基础架构上的MariaDB服务从版本10.0或10.2升级到版本10.3或10.4。MariaDB版本10.3及更高版本要求数据库使用动态表行格式，而Adobe Commerce要求使用表的InnoDB存储引擎。 本文介绍如何更新数据库以符合这些MariaDB要求。
 
-此升级要求支持团队将云基础架构上的MariaDB从MariaDB 10.0升级到10.2，以满足Adobe Commerce版本2.3.5及更高版本的要求。
+在准备数据库后，请提交Adobe Commerce支持票证，以更新云基础架构上的MariaDB服务版本，然后再继续执行Adobe Commerce升级过程。
 
 ## 受影响的产品和版本
 
@@ -137,6 +137,12 @@ Adobe Commerce on cloud infrastructure，其中包含Adobe Commerce版本2.3.4�
 
 1. 如果有任何表已还原，请重复这些步骤以更改表行格式和存储引擎。
 
+## 更改存储引擎
+
+请参阅 [将MyISAM表转换为InnoDB](../planning/database-on-cloud.md).
+
 ## 其他信息
 
-[云基础架构上的Adobe Commerce数据库最佳实践](../planning/database-on-cloud.md)
+- [云基础架构上的Adobe Commerce数据库最佳实践](../planning/database-on-cloud.md)
+- [在云上将适用于Adobe Commerce的MariaDB从10.0更新为12.0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/upgrade-mariadb-10.0-to-10.2-for-magento-commerce-cloud.html)
+

@@ -1,16 +1,16 @@
 ---
-user-guide-title: 实施行动手册
-user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
+user-guide-title: 实施手册
+user-guide-description: 了解规划和实施成功的Adobe Commerce站点的策略。
 mini-toc-levels: 3
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+source-git-commit: 5559d412ab58d392098cfff7a4cabb473c38cb0d
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 6%
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
 
-# 实施行动手册 {#implementation-playbook}
+# 实施手册 {#implementation-playbook}
 
 - [概述](overview.md)
 - 商务 {#intro}
@@ -110,6 +110,6 @@ ht-degree: 6%
       - [在生产站点上计划管理员更新](best-practices/maintenance/scheduling-admin-updates-in-production.md)
       - [更新服务](best-practices/maintenance/update-services.md)
       - [升级核对清单](best-practices/maintenance/upgrade-checklist.md)
-      - [解决数据库性能问&#x200B;题](best-practices/maintenance/resolve-database-performance-issues.md)
-      - [Adobe Commerce 2.3.5 MariaDB升级先决条件&#x200B;](best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
+      - [解决数据库性能问题](best-practices/maintenance/resolve-database-performance-issues.md)
+      - [MariaDB升级先决条件](best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
 - [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
