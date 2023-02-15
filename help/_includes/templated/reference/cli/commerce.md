@@ -1,7 +1,7 @@
 ---
-source-git-commit: 23d55385046de18b238c90f6a99be692f1ce7561
+source-git-commit: 27e7a262fd1d8092045f5ebe2f88caaec37a6b0d
 workflow-type: tm+mt
-source-wordcount: '19853'
+source-wordcount: '29783'
 ht-degree: 0%
 
 ---
@@ -10,9 +10,9 @@ ht-degree: 0%
 <!-- All the assigned and captured content is used in the included template -->
 
 <!-- The template to render with above values -->
-**版本**:1.40.0
+**版本**:1.42.0
 
-此参考包含129个通过 `magento-cloud` 命令行工具。
+此参考包含134个可通过 `magento-cloud` 命令行工具。
 初始列表是使用 `magento-cloud list` 命令。
 
 >[!NOTE]
@@ -83,13 +83,6 @@ magento-cloud bot [--party] [--parrot]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -106,14 +99,42 @@ magento-cloud bot [--party] [--parrot]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -144,13 +165,6 @@ cc
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -167,14 +181,42 @@ cc
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -208,13 +250,6 @@ magento-cloud decode [-P|--property PROPERTY] [--] <value>
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -231,14 +266,42 @@ magento-cloud decode [-P|--property PROPERTY] [--] <value>
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -281,13 +344,6 @@ magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -304,14 +360,42 @@ magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -322,7 +406,7 @@ magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 显示命令的帮助
 
 ```bash
-help [--format FORMAT] [--raw] [--] [<command_name>]
+magento-cloud help [--format FORMAT] [--raw] [--] [<command_name>]
 ```
 
 
@@ -354,13 +438,6 @@ help [--format FORMAT] [--raw] [--] [<command_name>]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -377,14 +454,42 @@ help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -412,13 +517,6 @@ magento-cloud legacy-migrate [--no-backup]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -435,14 +533,42 @@ magento-cloud legacy-migrate [--no-backup]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -453,9 +579,15 @@ magento-cloud legacy-migrate [--no-backup]
 列表命令
 
 ```bash
-list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
+magento-cloud list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
 ```
 
+
+### `command`
+
+要执行的命令
+
+- 必需
 
 ### `namespace`
 
@@ -476,13 +608,83 @@ list [--raw] [--format FORMAT] [--all] [--] [<namespace>]
 - 默认： `txt`
 - 需要值
 
+### `--all`
+
+显示所有命令，包括隐藏的命令
+
+- 默认： `false`
+- 不接受值
+
+### `--help`, `-h`
+
+显示此帮助消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的密集度
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--yes`, `-y`
+
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no`, `-n`
+
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
 
 ## `multi`
 
 对多个项目执行命令
 
 ```bash
-magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--reverse] [--] <cmd>
+magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--reverse] [--] <cmd> (<cmd>)...
 ```
 
 
@@ -490,7 +692,10 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 要执行的命令
 
+- 默认： `[]`
+
 - 必需
+- 数组
 
 ### `--projects`, `-p`
 
@@ -526,13 +731,6 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -549,14 +747,42 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -567,7 +793,7 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 打开Web UI
 
 ```bash
-magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT]
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 ### `--browser`
@@ -591,7 +817,7 @@ magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [--host HO
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -604,13 +830,6 @@ magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [--host HO
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -631,14 +850,42 @@ magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [--host HO
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -659,13 +906,6 @@ magento-cloud welcome
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -682,14 +922,42 @@ magento-cloud welcome
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -710,13 +978,6 @@ magento-cloud winky
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -733,14 +994,42 @@ magento-cloud winky
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -751,7 +1040,7 @@ magento-cloud winky
 取消活动
 
 ```bash
-magento-cloud activity:cancel [--type TYPE] [--exclude-type EXCLUDE-TYPE] [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud activity:cancel [--type TYPE] [--exclude-type EXCLUDE-TYPE] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 
@@ -762,14 +1051,14 @@ magento-cloud activity:cancel [--type TYPE] [--exclude-type EXCLUDE-TYPE] [-a|--
 
 ### `--type`
 
-按类型过滤（选择默认活动时）。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型过滤（选择默认活动时）。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作类型的通配符，例如“%var%”来选择与变量相关的活动。
 
 - 默认： `[]`
 - 需要值
 
 ### `--exclude-type`
 
-按类型排除（选择默认活动时）。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型排除（选择默认活动时）。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作通配符以排除类型。
 
 - 默认： `[]`
 - 需要值
@@ -789,7 +1078,7 @@ magento-cloud activity:cancel [--type TYPE] [--exclude-type EXCLUDE-TYPE] [-a|--
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -802,13 +1091,6 @@ magento-cloud activity:cancel [--type TYPE] [--exclude-type EXCLUDE-TYPE] [-a|--
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -829,14 +1111,42 @@ magento-cloud activity:cancel [--type TYPE] [--exclude-type EXCLUDE-TYPE] [-a|--
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -847,7 +1157,7 @@ magento-cloud activity:cancel [--type TYPE] [--exclude-type EXCLUDE-TYPE] [-a|--
 查看有关单个活动的详细信息
 
 ```bash
-magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<id>]
+magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<id>]
 ```
 
 
@@ -864,21 +1174,21 @@ magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-typ
 
 ### `--type`
 
-按类型过滤（选择默认活动时）。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型过滤（选择默认活动时）。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作类型的通配符，例如“%var%”来选择与变量相关的活动。
 
 - 默认： `[]`
 - 需要值
 
 ### `--exclude-type`
 
-按类型排除（选择默认活动时）。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型排除（选择默认活动时）。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作通配符以排除类型。
 
 - 默认： `[]`
 - 需要值
 
 ### `--state`
 
-按状态过滤（选择默认活动时）：in_progress、pending、complete或cancelled。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按状态过滤（选择默认活动时）：in_progress、pending、complete或cancelled。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -911,7 +1221,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-typ
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -923,14 +1233,14 @@ magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-typ
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -956,13 +1266,6 @@ magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-typ
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -979,14 +1282,42 @@ magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-typ
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -997,7 +1328,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [--type TYPE] [--exclude-typ
 获取环境或项目的活动列表
 
 ```bash
-magento-cloud activity:list [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT]
+magento-cloud activity:list [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 
@@ -1012,14 +1343,14 @@ act
 
 ### `--type`, `-t`
 
-按类型筛选活动如果指定了单个值，则会用逗号或空格将其拆分。
+按类型筛选活动如果将列表指定为单个值(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作类型的通配符，例如“%var%”来选择与变量相关的活动。
 
 - 默认： `[]`
 - 需要值
 
 ### `--exclude-type`, `-x`
 
-按类型排除活动。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型排除活动。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作通配符以排除类型。
 
 - 默认： `[]`
 - 需要值
@@ -1039,7 +1370,7 @@ act
 
 ### `--state`
 
-按状态筛选活动：in_progress、pending、complete或cancelled。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按状态筛选活动：in_progress、pending、complete或cancelled。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -1066,14 +1397,14 @@ act
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：id*、created*、description*、progress*、state*、result*、completed、environments、type(* = default columns)。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -1100,7 +1431,7 @@ act
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -1113,13 +1444,6 @@ act
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1140,14 +1464,42 @@ act
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1158,7 +1510,7 @@ act
 显示活动的日志
 
 ```bash
-magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [--exclude-type EXCLUDE-TYPE] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 
@@ -1183,21 +1535,21 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### `--type`
 
-按类型过滤（选择默认活动时）。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型过滤（选择默认活动时）。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作类型的通配符，例如“%var%”来选择与变量相关的活动。
 
 - 默认： `[]`
 - 需要值
 
 ### `--exclude-type`
 
-按类型排除（选择默认活动时）。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型排除（选择默认活动时）。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作通配符以排除类型。
 
 - 默认： `[]`
 - 需要值
 
 ### `--state`
 
-按状态过滤（选择默认活动时）：in_progress、pending、complete或cancelled。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按状态过滤（选择默认活动时）：in_progress、pending、complete或cancelled。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -1237,7 +1589,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -1250,13 +1602,6 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1277,14 +1622,42 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1295,7 +1668,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 在Magento云API中运行经过验证的cURL请求
 
 ```bash
-magento-cloud api:curl [-X|--request REQUEST] [-d|--data DATA] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [--] [<path>]
+magento-cloud api:curl [-X|--request REQUEST] [-d|--data DATA] [--json JSON] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [--] [<path>]
 ```
 
 
@@ -1313,6 +1686,12 @@ API路径
 ### `--data`, `-d`
 
 要发送的数据
+
+- 需要值
+
+### `--json`
+
+要发送的JSON数据
 
 - 需要值
 
@@ -1365,13 +1744,6 @@ API路径
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -1388,14 +1760,42 @@ API路径
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1406,7 +1806,7 @@ API路径
 查看应用程序的配置
 
 ```bash
-magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 ### `--property`, `-P`
@@ -1430,7 +1830,7 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -1459,13 +1859,6 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -1482,14 +1875,42 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1500,7 +1921,7 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 在项目中列出应用程序
 
 ```bash
-magento-cloud apps [--refresh] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--format FORMAT] [--columns COLUMNS] [--no-header]
+magento-cloud apps [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 
@@ -1523,7 +1944,7 @@ apps
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -1535,14 +1956,14 @@ apps
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：名称*、类型*、磁盘、路径、大小（* =默认列）。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -1557,13 +1978,6 @@ apps
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1584,14 +1998,42 @@ apps
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1612,13 +2054,6 @@ magento-cloud auth:api-token-login
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -1635,14 +2070,42 @@ magento-cloud auth:api-token-login
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1688,13 +2151,6 @@ login
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -1711,14 +2167,42 @@ login
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1729,7 +2213,7 @@ login
 显示您的帐户信息
 
 ```bash
-magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [--format FORMAT] [--columns COLUMNS] [--no-header] [--] [<property>]
+magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--] [<property>]
 ```
 
 
@@ -1760,14 +2244,14 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -1782,13 +2266,6 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1809,14 +2286,42 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1856,13 +2361,6 @@ logout
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -1879,14 +2377,42 @@ logout
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1912,13 +2438,6 @@ auth:login
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -1935,14 +2454,42 @@ auth:login
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -1953,19 +2500,26 @@ auth:login
 为Magento云API的请求获取OAuth 2访问令牌
 
 ```bash
-magento-cloud auth:token
+magento-cloud auth:token [-H|--header] [-W|--no-warn]
 ```
 
-### `--help`, `-h`
+### `--header`, `-H`
 
-显示此帮助消息
+为令牌添加前缀“Authorization:载体“ ”，用于生成RFC 6750标头
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
+### `--no-warn`, `-W`
 
-不输出任何消息
+默认情况下，禁止打印为stderr的警告。 与重定向标记相比，此选项更可取，因为这会隐藏其他可能有用的消息。
+
+- 默认： `false`
+- 不接受值
+
+### `--help`, `-h`
+
+显示此帮助消息
 
 - 默认： `false`
 - 不接受值
@@ -1986,14 +2540,42 @@ magento-cloud auth:token
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2004,7 +2586,7 @@ magento-cloud auth:token
 为项目设置Blackfire.io集成
 
 ```bash
-magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOKEN] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait]
+magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOKEN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 ### `--server_id`
@@ -2027,7 +2609,7 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -2052,9 +2634,92 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 - 默认： `false`
 - 不接受值
 
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的密集度
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--yes`, `-y`
+
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no`, `-n`
+
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
 ### `--quiet`, `-q`
 
 不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+
+## `blue-green:conclude`
+
+&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALPHA ]&lt;/>结束蓝色/绿色部署
+
+```bash
+magento-cloud blue-green:conclude [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+### `--project`, `-p`
+
+项目ID或URL
+
+- 需要值
+
+### `--host`
+
+已弃用选项，不再使用
+
+- 需要值
+
+### `--environment`, `-e`
+
+环境ID
+
+- 需要值
+
+### `--help`, `-h`
+
+显示此帮助消息
 
 - 默认： `false`
 - 不接受值
@@ -2075,14 +2740,236 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+
+## `blue-green:deploy`
+
+&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALPHA ]&lt;/>执行蓝色/绿色部署
+
+```bash
+magento-cloud blue-green:deploy [--routing-percentage ROUTING-PERCENTAGE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+### `--routing-percentage`
+
+设置最新版本的路由百分比
+
+- 默认： `100`
+- 需要值
+
+### `--project`, `-p`
+
+项目ID或URL
+
+- 需要值
+
+### `--host`
+
+已弃用选项，不再使用
+
+- 需要值
+
+### `--environment`, `-e`
+
+环境ID
+
+- 需要值
+
+### `--help`, `-h`
+
+显示此帮助消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的密集度
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--yes`, `-y`
+
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no`, `-n`
+
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+
+## `blue-green:enable`
+
+&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALPHA ]&lt;/>启用蓝色/绿色部署
+
+```bash
+magento-cloud blue-green:enable [-%|--routing-percentage ROUTING-PERCENTAGE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+### `--routing-percentage`, `-%`
+
+设置最新版本的路由百分比
+
+- 默认： `100`
+- 需要值
+
+### `--project`, `-p`
+
+项目ID或URL
+
+- 需要值
+
+### `--host`
+
+已弃用选项，不再使用
+
+- 需要值
+
+### `--environment`, `-e`
+
+环境ID
+
+- 需要值
+
+### `--help`, `-h`
+
+显示此帮助消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的密集度
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--yes`, `-y`
+
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no`, `-n`
+
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2093,7 +2980,7 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 向项目添加SSL证书
 
 ```bash
-magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait]
+magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 ### `--cert`
@@ -2123,7 +3010,7 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -2148,13 +3035,6 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -2171,14 +3051,42 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2189,7 +3097,7 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 从项目中删除证书
 
 ```bash
-magento-cloud certificate:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] <id>
+magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <id>
 ```
 
 
@@ -2207,7 +3115,7 @@ magento-cloud certificate:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -2232,13 +3140,6 @@ magento-cloud certificate:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -2255,14 +3156,42 @@ magento-cloud certificate:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2273,7 +3202,7 @@ magento-cloud certificate:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 查看证书
 
 ```bash
-magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [--] <id>
+magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--] <id>
 ```
 
 
@@ -2304,20 +3233,13 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2338,14 +3260,42 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2356,7 +3306,7 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 列出项目证书
 
 ```bash
-magento-cloud certificate:list [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [--issuer ISSUER] [--only-auto] [--no-auto] [--ignore-expiry] [--only-expired] [--no-expired] [--pipe-domains] [--date-fmt DATE-FMT] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST]
+magento-cloud certificate:list [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [--issuer ISSUER] [--only-auto] [--no-auto] [--ignore-expiry] [--only-expired] [--no-expired] [--pipe-domains] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 
@@ -2438,14 +3388,14 @@ certs
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：已创建，域，过期， id，颁发者。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -2465,20 +3415,13 @@ certs
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2499,14 +3442,42 @@ certs
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2517,7 +3488,7 @@ certs
 显示提交详细信息
 
 ```bash
-magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--] [<commit>]
+magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<commit>]
 ```
 
 
@@ -2542,7 +3513,7 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [--host
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -2586,13 +3557,6 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [--host
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -2609,14 +3573,42 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [--host
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2627,7 +3619,7 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [--host
 列表提交
 
 ```bash
-magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
+magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
 ```
 
 
@@ -2656,7 +3648,7 @@ commits
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -2668,14 +3660,14 @@ commits
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：作者，日期，沙，摘要。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -2701,13 +3693,6 @@ commits
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -2724,14 +3709,42 @@ commits
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2742,7 +3755,7 @@ commits
 创建远程数据库的本地转储
 
 ```bash
-magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 
@@ -2829,7 +3842,7 @@ environment:sql-dump
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -2864,13 +3877,6 @@ environment:sql-dump
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -2887,14 +3893,42 @@ environment:sql-dump
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -2905,7 +3939,7 @@ environment:sql-dump
 估计数据库的磁盘使用情况
 
 ```bash
-magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
 ```
 
 ### `--bytes`, `-B`
@@ -2930,7 +3964,7 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [--host
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -2954,14 +3988,14 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [--host
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：max， percent_used， used。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -2986,13 +4020,6 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [--host
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3009,14 +4036,42 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [--host
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3027,7 +4082,7 @@ magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [--host
 在远程数据库上运行SQL
 
 ```bash
-magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
 ```
 
 
@@ -3067,7 +4122,7 @@ environment:sql
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -3102,13 +4157,6 @@ environment:sql
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3125,14 +4173,42 @@ environment:sql
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3143,7 +4219,7 @@ environment:sql
 向项目添加新域
 
 ```bash
-magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -3180,7 +4256,7 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -3205,13 +4281,6 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3228,14 +4297,42 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3246,7 +4343,7 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project
 从项目中删除域
 
 ```bash
-magento-cloud domain:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -3264,7 +4361,7 @@ magento-cloud domain:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] 
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -3289,13 +4386,6 @@ magento-cloud domain:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3312,14 +4402,42 @@ magento-cloud domain:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] 
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3330,7 +4448,7 @@ magento-cloud domain:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] 
 显示域的详细信息
 
 ```bash
-magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [--] [<name>]
+magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--] [<name>]
 ```
 
 
@@ -3347,14 +4465,14 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [--columns C
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -3381,20 +4499,13 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [--columns C
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3415,14 +4526,42 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [--columns C
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3433,7 +4572,7 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [--columns C
 获取所有域的列表
 
 ```bash
-magento-cloud domains [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST]
+magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 
@@ -3443,14 +4582,14 @@ domains
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：name*、ssl*、createdat*、updatedat（* =默认列）。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -3470,20 +4609,13 @@ domains
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3504,14 +4636,42 @@ domains
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3522,7 +4682,7 @@ domains
 更新域
 
 ```bash
-magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -3559,7 +4719,7 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -3584,13 +4744,6 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3607,14 +4760,42 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3625,7 +4806,7 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 激活环境
 
 ```bash
-magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 
@@ -3651,7 +4832,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [--h
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -3682,13 +4863,6 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [--h
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3705,14 +4879,42 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [--h
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3723,7 +4925,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [--h
 分支环境
 
 ```bash
-magento-cloud branch [--title TITLE] [--type TYPE] [--force] [--no-clone-parent] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-i|--identity-file IDENTITY-FILE] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--force] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-i|--identity-file IDENTITY-FILE] [--] [<id>] [<parent>]
 ```
 
 
@@ -3776,7 +4978,7 @@ branch
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -3813,13 +5015,6 @@ branch
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3836,14 +5031,42 @@ branch
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3881,13 +5104,6 @@ checkout
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -3904,14 +5120,42 @@ checkout
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -3922,7 +5166,7 @@ checkout
 在环境的API中运行经过验证的cURL请求
 
 ```bash
-magento-cloud environment:curl [-X|--request REQUEST] [-d|--data DATA] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<path>]
+magento-cloud environment:curl [-X|--request REQUEST] [-d|--data DATA] [--json JSON] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 
@@ -3940,6 +5184,12 @@ API路径
 ### `--data`, `-d`
 
 要发送的数据
+
+- 需要值
+
+### `--json`
+
+要发送的JSON数据
 
 - 需要值
 
@@ -3993,7 +5243,7 @@ API路径
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4006,13 +5256,6 @@ API路径
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4033,14 +5276,42 @@ API路径
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4048,10 +5319,10 @@ API路径
 
 ## `environment:delete`
 
-删除环境
+删除一个或多个环境
 
 ```bash
-magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--inactive] [--merged] [--type TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 
@@ -4062,7 +5333,7 @@ environment:deactivate
 
 ### `environment`
 
-要删除的环境。 %字符可用作通配符。 如果指定了单个值，则它将用逗号或空格进行拆分。
+要删除的环境。 %字符可用作通配符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 
@@ -4070,52 +5341,59 @@ environment:deactivate
 
 ### `--delete-branch`
 
-删除远程Git分支
+删除Git分支（不活动的环境）
 
 - 默认： `false`
 - 不接受值
 
 ### `--no-delete-branch`
 
-请勿删除远程Git分支
-
-- 默认： `false`
-- 不接受值
-
-### `--inactive`
-
-删除所有不活动的环境
-
-- 默认： `false`
-- 不接受值
-
-### `--merged`
-
-删除所有合并的环境
+请勿删除Git分支（不活动的环境）
 
 - 默认： `false`
 - 不接受值
 
 ### `--type`
 
-要删除的环境类型如果指定了单个值，则会用逗号或空格将其拆分。
+删除所有类型的环境（添加到任何其他选定的环境）如果将列表指定为单个值(例如，“a，b，c”)，它将用逗号分隔和/或空格。
+
+- 默认： `[]`
+- 需要值
+
+### `--only-type`, `-t`
+
+仅删除特定类型的环境如果将列表指定为单个值(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
 
 ### `--exclude`
 
-不要删除的环境。 %字符可用作通配符。 如果指定了单个值，则它将用逗号或空格进行拆分。
+不要删除的环境。 %字符可用作通配符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
 
 ### `--exclude-type`
 
-不要删除的环境类型如果指定了单个值，则将用逗号或空格进行拆分。
+不要删除的环境类型如果将列表指定为单个值(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
+
+### `--inactive`
+
+删除所有不活动的环境（添加到任何其他选定的环境）
+
+- 默认： `false`
+- 不接受值
+
+### `--merged`
+
+删除所有合并的环境（添加到任何其他选定的环境）
+
+- 默认： `false`
+- 不接受值
 
 ### `--project`, `-p`
 
@@ -4125,7 +5403,7 @@ environment:deactivate
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4156,13 +5434,6 @@ environment:deactivate
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -4179,14 +5450,42 @@ environment:deactivate
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4197,7 +5496,7 @@ environment:deactivate
 更新环境的HTTP访问设置
 
 ```bash
-magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 
@@ -4233,7 +5532,7 @@ HTTP Basic身份验证凭据格式为“username:password”。 使用0清除所
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4264,13 +5563,6 @@ HTTP Basic身份验证凭据格式为“username:password”。 使用0清除所
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -4287,14 +5579,42 @@ HTTP Basic身份验证凭据格式为“username:password”。 使用0清除所
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4305,7 +5625,7 @@ HTTP Basic身份验证凭据格式为“username:password”。 使用0清除所
 读取或设置环境的属性
 
 ```bash
-magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
+magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
 ```
 
 
@@ -4340,14 +5660,14 @@ environment:metadata
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -4367,7 +5687,7 @@ environment:metadata
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4398,13 +5718,6 @@ environment:metadata
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -4421,14 +5734,42 @@ environment:metadata
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4439,7 +5780,7 @@ environment:metadata
 从公共Git存储库初始化环境
 
 ```bash
-magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <url>
+magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <url>
 ```
 
 
@@ -4463,7 +5804,7 @@ magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [--hos
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4494,13 +5835,6 @@ magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [--hos
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -4517,14 +5851,42 @@ magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [--hos
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4535,7 +5897,7 @@ magento-cloud environment:init [--profile PROFILE] [-p|--project PROJECT] [--hos
 获取环境列表
 
 ```bash
-magento-cloud environment:list [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST]
+magento-cloud environment:list [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 
@@ -4585,21 +5947,21 @@ env
 
 ### `--type`
 
-按环境类型过滤列表。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按环境类型过滤列表。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：id*、title*、status*、type*、created、machine_name、已更新（* =默认列）。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -4619,20 +5981,13 @@ env
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4653,14 +6008,42 @@ env
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4671,7 +6054,7 @@ env
 读取环境的日志
 
 ```bash
-magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--] [<type>]
+magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<type>]
 ```
 
 
@@ -4712,7 +6095,7 @@ logs
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4734,16 +6117,15 @@ logs
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4764,14 +6146,42 @@ logs
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4782,7 +6192,7 @@ logs
 合并环境
 
 ```bash
-magento-cloud merge [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
+magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 
@@ -4804,7 +6214,7 @@ merge
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4835,16 +6245,9 @@ merge
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度
+增加消息的详细程度
 
 - 默认： `false`
 - 不接受值
@@ -4858,14 +6261,42 @@ merge
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+回答 &quot;是&quot; 以确认问题;接受其他问题的默认值;禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -4876,7 +6307,7 @@ merge
 将代码推送到环境
 
 ```bash
-magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--branch] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
 ```
 
 
@@ -4974,7 +6405,7 @@ push
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -4997,13 +6428,6 @@ push
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -5020,14 +6444,42 @@ push
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5038,7 +6490,7 @@ push
 重新部署环境
 
 ```bash
-magento-cloud redeploy [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 
@@ -5054,7 +6506,7 @@ redeploy
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5085,13 +6537,6 @@ redeploy
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -5108,14 +6553,42 @@ redeploy
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5126,7 +6599,7 @@ redeploy
 显示环境的关系
 
 ```bash
-magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
 ```
 
 
@@ -5161,7 +6634,7 @@ relationships
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5190,13 +6663,6 @@ relationships
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -5213,14 +6679,42 @@ relationships
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5231,7 +6725,7 @@ relationships
 使用scp将文件复制到当前环境或从当前环境复制文件
 
 ```bash
-magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
 ```
 
 
@@ -5263,7 +6757,7 @@ scp
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5285,6 +6779,12 @@ scp
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--identity-file`, `-i`
 
 要使用的SSH标识（私钥）
@@ -5294,13 +6794,6 @@ scp
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5321,14 +6814,42 @@ scp
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5361,13 +6882,6 @@ magento-cloud environment:set-remote <environment> [<branch>]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -5384,14 +6898,42 @@ magento-cloud environment:set-remote <environment> [<branch>]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5402,7 +6944,7 @@ magento-cloud environment:set-remote <environment> [<branch>]
 将SSH连接到当前环境
 
 ```bash
-magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
 ```
 
 
@@ -5441,7 +6983,7 @@ ssh
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5463,6 +7005,12 @@ ssh
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--identity-file`, `-i`
 
 要使用的SSH标识（私钥）
@@ -5472,13 +7020,6 @@ ssh
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5499,14 +7040,42 @@ ssh
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5517,7 +7086,7 @@ ssh
 同步环境的代码和/或其父级数据
 
 ```bash
-magento-cloud sync [--rebase] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
+magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
 ```
 
 
@@ -5549,7 +7118,7 @@ sync
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5580,13 +7149,6 @@ sync
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -5603,14 +7165,42 @@ sync
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5621,7 +7211,7 @@ sync
 获取环境的公共URL
 
 ```bash
-magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT]
+magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 
@@ -5657,7 +7247,7 @@ url
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5670,13 +7260,6 @@ url
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5697,14 +7280,42 @@ url
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5715,7 +7326,7 @@ url
 在环境中打开到Xdebug的通道
 
 ```bash
-magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 
@@ -5738,7 +7349,7 @@ xdebug
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5760,6 +7371,12 @@ xdebug
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--identity-file`, `-i`
 
 要使用的SSH标识（私钥）
@@ -5769,13 +7386,6 @@ xdebug
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5796,14 +7406,42 @@ xdebug
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5814,7 +7452,7 @@ xdebug
 查看有关单个集成活动的详细信息
 
 ```bash
-magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<integration>] [<activity>]
+magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<integration>] [<activity>]
 ```
 
 
@@ -5842,7 +7480,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -5854,14 +7492,14 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -5887,13 +7525,6 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -5910,14 +7541,42 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -5928,7 +7587,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 获取集成的活动列表
 
 ```bash
-magento-cloud i:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud i:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 
@@ -5949,14 +7608,14 @@ integration:activities
 
 ### `--type`
 
-按类型筛选活动。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型筛选活动。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
 
 ### `--exclude-type`, `-x`
 
-按类型排除活动。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按类型排除活动。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。 %字符可用作通配符以排除类型。
 
 - 默认： `[]`
 - 需要值
@@ -5976,7 +7635,7 @@ integration:activities
 
 ### `--state`
 
-按州筛选活动。 如果指定了单个值，则它将用逗号或空格进行拆分。
+按州筛选活动。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -5987,16 +7646,23 @@ integration:activities
 
 - 需要值
 
+### `--incomplete`, `-i`
+
+仅列出未完成的活动
+
+- 默认： `false`
+- 不接受值
+
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：id*、created*、description*、type*、state*、result*、completed(* = default columns)。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -6023,7 +7689,7 @@ integration:activities
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -6036,13 +7702,6 @@ integration:activities
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6063,14 +7722,42 @@ integration:activities
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6081,7 +7768,7 @@ integration:activities
 显示集成活动的日志
 
 ```bash
-magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<integration>] [<activity>]
+magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<integration>] [<activity>]
 ```
 
 
@@ -6117,7 +7804,7 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -6134,13 +7821,6 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -6157,14 +7837,42 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6175,12 +7883,12 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 将集成添加到项目
 
 ```bash
-magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait]
+magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 ### `--type`
 
-集成类型(“bitbucket”、“bitbucket_server”、“github”、“gitlab”、“webhook”、“health.email”、“health.pagerduy”、“health.slack”、“health.webhook”、“script”)
+集成类型(“bitbucket”、“bitbucket_server”、“github”、“gitlab”、“webhook”、“health.email”、“health.pagerduy”、“health.slack”、“health.webhook”、“script”、“newrelic”、“splunk”、“sumologic”、“syslog”)
 
 - 需要值
 
@@ -6198,7 +7906,7 @@ Bitbucket服务器用户名
 
 ### `--token`
 
-集成的访问令牌
+集成的身份验证或访问令牌
 
 - 需要值
 
@@ -6211,6 +7919,12 @@ Bitbucket OAuth使用者密钥
 ### `--secret`
 
 Bitbucket OAuth用户密钥
+
+- 需要值
+
+### `--license-key`
+
+New Relic日志许可证密钥
 
 - 需要值
 
@@ -6298,7 +8012,7 @@ GitLab:合并请求的克隆数据
 
 ### `--url`
 
-Webhook:用于接收JSON数据的URL
+集成的URL或API端点
 
 - 需要值
 
@@ -6367,6 +8081,77 @@ PagerDuty路由键
 
 - 需要值
 
+### `--category`
+
+用于筛选的相扑逻辑类别
+
+- 需要值
+
+### `--index`
+
+Splunk索引
+
+- 需要值
+
+### `--sourcetype`
+
+Splunk事件源类型
+
+- 需要值
+
+### `--protocol`
+
+Syslog传输协议(“tcp”、“udp”、“tls”)
+
+- 默认： `tls`
+- 需要值
+
+### `--syslog-host`
+
+Syslog中继/收集器主机
+
+- 需要值
+
+### `--syslog-port`
+
+Syslog中继/收集器端口
+
+- 需要值
+
+### `--facility`
+
+Syslog工具
+
+- 默认： `1`
+- 需要值
+
+### `--message-format`
+
+Syslog消息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
+
+- 默认： `rfc5424`
+- 需要值
+
+### `--auth-mode`
+
+身份验证模式（“prefix”或“structured_data”）
+
+- 默认： `prefix`
+- 需要值
+
+### `--auth-token`
+
+身份验证令牌
+
+- 需要值
+
+### `--verify-tls`
+
+是否应启用HTTPS证书验证（推荐）
+
+- 默认： `true`
+- 需要值
+
 ### `--project`, `-p`
 
 项目ID或URL
@@ -6375,7 +8160,7 @@ PagerDuty路由键
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -6400,13 +8185,6 @@ PagerDuty路由键
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -6423,14 +8201,42 @@ PagerDuty路由键
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6441,7 +8247,7 @@ PagerDuty路由键
 从项目中删除集成
 
 ```bash
-magento-cloud integration:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 
@@ -6458,7 +8264,7 @@ magento-cloud integration:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -6483,13 +8289,6 @@ magento-cloud integration:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -6506,14 +8305,42 @@ magento-cloud integration:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6524,7 +8351,7 @@ magento-cloud integration:delete [-p|--project PROJECT] [--host HOST] [-W|--no-w
 查看集成的详细信息
 
 ```bash
-magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [--] [<id>]
+magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<id>]
 ```
 
 
@@ -6541,14 +8368,14 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [--co
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -6568,20 +8395,13 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [--co
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6602,14 +8422,42 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [--co
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6620,7 +8468,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [--co
 查看项目集成列表
 
 ```bash
-magento-cloud integrations [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST]
+magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 
@@ -6630,14 +8478,14 @@ integrations
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：id，摘要，类型。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -6657,20 +8505,13 @@ integrations
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6691,14 +8532,42 @@ integrations
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6709,7 +8578,7 @@ integrations
 更新集成
 
 ```bash
-magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 
@@ -6720,7 +8589,7 @@ magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--username
 
 ### `--type`
 
-集成类型(“bitbucket”、“bitbucket_server”、“github”、“gitlab”、“webhook”、“health.email”、“health.pagerduy”、“health.slack”、“health.webhook”、“script”)
+集成类型(“bitbucket”、“bitbucket_server”、“github”、“gitlab”、“webhook”、“health.email”、“health.pagerduy”、“health.slack”、“health.webhook”、“script”、“newrelic”、“splunk”、“sumologic”、“syslog”)
 
 - 需要值
 
@@ -6738,7 +8607,7 @@ Bitbucket服务器用户名
 
 ### `--token`
 
-集成的访问令牌
+集成的身份验证或访问令牌
 
 - 需要值
 
@@ -6751,6 +8620,12 @@ Bitbucket OAuth使用者密钥
 ### `--secret`
 
 Bitbucket OAuth用户密钥
+
+- 需要值
+
+### `--license-key`
+
+New Relic日志许可证密钥
 
 - 需要值
 
@@ -6838,7 +8713,7 @@ GitLab:合并请求的克隆数据
 
 ### `--url`
 
-Webhook:用于接收JSON数据的URL
+集成的URL或API端点
 
 - 需要值
 
@@ -6907,6 +8782,77 @@ PagerDuty路由键
 
 - 需要值
 
+### `--category`
+
+用于筛选的相扑逻辑类别
+
+- 需要值
+
+### `--index`
+
+Splunk索引
+
+- 需要值
+
+### `--sourcetype`
+
+Splunk事件源类型
+
+- 需要值
+
+### `--protocol`
+
+Syslog传输协议(“tcp”、“udp”、“tls”)
+
+- 默认： `tls`
+- 需要值
+
+### `--syslog-host`
+
+Syslog中继/收集器主机
+
+- 需要值
+
+### `--syslog-port`
+
+Syslog中继/收集器端口
+
+- 需要值
+
+### `--facility`
+
+Syslog工具
+
+- 默认： `1`
+- 需要值
+
+### `--message-format`
+
+Syslog消息格式（&#39;rfc3164&#39;或&#39;rfc5424&#39;）
+
+- 默认： `rfc5424`
+- 需要值
+
+### `--auth-mode`
+
+身份验证模式（“prefix”或“structured_data”）
+
+- 默认： `prefix`
+- 需要值
+
+### `--auth-token`
+
+身份验证令牌
+
+- 需要值
+
+### `--verify-tls`
+
+是否应启用HTTPS证书验证（推荐）
+
+- 默认： `true`
+- 需要值
+
 ### `--project`, `-p`
 
 项目ID或URL
@@ -6915,7 +8861,7 @@ PagerDuty路由键
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -6940,13 +8886,6 @@ PagerDuty路由键
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -6963,14 +8902,42 @@ PagerDuty路由键
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -6981,7 +8948,7 @@ PagerDuty路由键
 验证现有集成
 
 ```bash
-magento-cloud integration:validate [-p|--project PROJECT] [--host HOST] [--] [<id>]
+magento-cloud integration:validate [-p|--project PROJECT] [--] [<id>]
 ```
 
 
@@ -6998,20 +8965,13 @@ magento-cloud integration:validate [-p|--project PROJECT] [--host HOST] [--] [<i
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7032,14 +8992,42 @@ magento-cloud integration:validate [-p|--project PROJECT] [--host HOST] [--] [<i
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7177,13 +9165,6 @@ build
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -7200,14 +9181,42 @@ build
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7253,13 +9262,6 @@ clean
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -7276,14 +9278,42 @@ clean
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7315,9 +9345,169 @@ dir
 - 默认： `false`
 - 不接受值
 
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的密集度
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--yes`, `-y`
+
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no`, `-n`
+
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
 ### `--quiet`, `-q`
 
 不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+
+## `metrics:disk-usage`
+
+显示服务上的磁盘使用情况
+
+```bash
+magento-cloud disk [-s|--service SERVICE] [--type TYPE] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-B|--bytes] [-1|--latest] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+```
+
+
+```bash
+disk
+```
+
+### `--service`, `-s`
+
+服务名称
+
+- 需要值
+
+### `--type`
+
+服务类型（如果未提供服务名称），例如mysql、pgsql、mongodb等。 类型版本不是必需的。
+
+- 需要值
+
+### `--range`, `-r`
+
+时间范围。 将在此持续时间内加载量度，直到结束时间（ — 到）。 您可以指定单位：小时(h)、分钟(m)或秒(s)。 最小 &lt;comment>5米&lt;/comment>，最大值 &lt;comment>8小时&lt;/comment> 或更多（取决于项目），默认 &lt;comment>10米&lt;/comment>.
+
+- 需要值
+
+### `--interval`, `-i`
+
+时间间隔。 默认为范围的分数。 您可以指定单位：小时(h)、分钟(m)或秒(s)。 最小 &lt;comment>1米&lt;/comment>，最大值 &lt;comment>1小时&lt;/comment>.
+
+- 需要值
+
+### `--to`
+
+结束时间。 默认为现在。
+
+- 需要值
+
+### `--bytes`, `-B`
+
+显示大小（以字节为单位）
+
+- 默认： `false`
+- 不接受值
+
+### `--latest`, `-1`
+
+仅显示最新的单个数据点
+
+- 默认： `false`
+- 不接受值
+
+### `--project`, `-p`
+
+项目ID或URL
+
+- 需要值
+
+### `--host`
+
+已弃用选项，不再使用
+
+- 需要值
+
+### `--environment`, `-e`
+
+环境ID
+
+- 需要值
+
+### `--format`
+
+输出格式：表、csv、tsv或纯
+
+- 默认： `table`
+- 需要值
+
+### `--columns`, `-c`
+
+要显示的列。 可用列：timestamp*、used*、limit*、%*、ipercent*、ilimit、interval、iused(* = default columns)。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
+
+- 默认： `[]`
+- 需要值
+
+### `--no-header`
+
+不输出表标题
+
+- 默认： `false`
+- 不接受值
+
+### `--date-fmt`
+
+日期格式（作为PHP日期格式字符串）
+
+- 默认： `c`
+- 需要值
+
+### `--help`, `-h`
+
+显示此帮助消息
 
 - 默认： `false`
 - 不接受值
@@ -7338,14 +9528,42 @@ dir
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7356,7 +9574,7 @@ dir
 使用rsync从装载下载文件
 
 ```bash
-magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 ### `--all`, `-a`
@@ -7421,7 +9639,7 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -7443,6 +9661,12 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--identity-file`, `-i`
 
 要使用的SSH标识（私钥）
@@ -7452,13 +9676,6 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7479,14 +9696,42 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7497,7 +9742,7 @@ magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--
 获取装载列表
 
 ```bash
-magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER]
+magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 
@@ -7521,14 +9766,14 @@ mounts
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：定义、路径。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -7548,7 +9793,7 @@ mounts
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -7570,16 +9815,15 @@ mounts
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7600,14 +9844,42 @@ mounts
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7618,7 +9890,7 @@ mounts
 检查装载的磁盘使用情况
 
 ```bash
-magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER]
+magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 ### `--bytes`, `-B`
@@ -7637,14 +9909,14 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [--columns C
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：可用，最大，装载，使用百分比，大小，使用。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -7670,7 +9942,7 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [--columns C
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -7692,16 +9964,15 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [--columns C
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7722,14 +9993,42 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [--columns C
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7740,7 +10039,7 @@ magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [--columns C
 使用rsync将文件上传到装载
 
 ```bash
-magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 ### `--source`
@@ -7791,7 +10090,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -7813,6 +10112,12 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 - 需要值
 
+### `--instance`, `-I`
+
+实例ID
+
+- 需要值
+
 ### `--identity-file`, `-i`
 
 要使用的SSH标识（私钥）
@@ -7826,13 +10131,6 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -7849,14 +10147,42 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7867,7 +10193,7 @@ magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--ex
 清除项目的生成缓存
 
 ```bash
-magento-cloud project:clear-build-cache [-p|--project PROJECT] [--host HOST]
+magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ```
 
 ### `--project`, `-p`
@@ -7878,20 +10204,13 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT] [--host HOST]
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7912,14 +10231,42 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT] [--host HOST]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -7930,7 +10277,7 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT] [--host HOST]
 在项目的API上运行经过验证的cURL请求
 
 ```bash
-magento-cloud project:curl [-X|--request REQUEST] [-d|--data DATA] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [-p|--project PROJECT] [--host HOST] [--] [<path>]
+magento-cloud project:curl [-X|--request REQUEST] [-d|--data DATA] [--json JSON] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [-p|--project PROJECT] [--] [<path>]
 ```
 
 
@@ -7948,6 +10295,12 @@ API路径
 ### `--data`, `-d`
 
 要发送的数据
+
+- 需要值
+
+### `--json`
+
+要发送的JSON数据
 
 - 需要值
 
@@ -8001,20 +10354,13 @@ API路径
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8035,14 +10381,42 @@ API路径
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8053,7 +10427,7 @@ API路径
 在本地克隆项目
 
 ```bash
-magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--host HOST] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
 ```
 
 
@@ -8099,7 +10473,7 @@ get
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -8112,13 +10486,6 @@ get
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8139,14 +10506,42 @@ get
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8157,7 +10552,7 @@ get
 读取或设置项目的属性
 
 ```bash
-magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
+magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
 ```
 
 
@@ -8192,14 +10587,14 @@ project:metadata
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -8219,7 +10614,7 @@ project:metadata
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -8244,13 +10639,6 @@ project:metadata
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -8267,14 +10655,42 @@ project:metadata
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8285,7 +10701,7 @@ project:metadata
 获取所有活动项目的列表
 
 ```bash
-magento-cloud project:list [--pipe] [--host HOST] [--title TITLE] [--my] [--refresh REFRESH] [--sort SORT] [--reverse] [--page PAGE] [--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud project:list [--pipe] [--host HOST] [--title TITLE] [--my] [--refresh REFRESH] [--sort SORT] [--reverse] [--page PAGE] [-c|--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
 
@@ -8300,7 +10716,7 @@ pro
 
 ### `--pipe`
 
-输出项目ID的简单列表。 这将禁用分页。
+输出项目ID的简单列表。 禁用分页。
 
 - 默认： `false`
 - 不接受值
@@ -8347,27 +10763,26 @@ pro
 
 ### `--page`
 
-页码（从1开始）
+页码。 这会启用分页功能，而不考虑配置或 — count。 如果指定了管道，则忽略。
 
-- 默认： `1`
 - 需要值
 
-### `--count`
+### `--count`, `-c`
 
-每页要显示的项目数。 默认值基于终端高度。 使用0禁用分页。
+每页要显示的项目数。 使用0禁用分页。 如果指定了 — page，则忽略。
 
 - 需要值
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
 ### `--columns`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：id*、title*、region*、createdat、endpoint、organizationid、organizationlabel、organizationname、regionlabel、status、uiurl（* =默认列）。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -8393,13 +10808,6 @@ pro
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -8416,14 +10824,42 @@ pro
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8450,13 +10886,6 @@ magento-cloud project:set-remote [<project>]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -8473,14 +10902,42 @@ magento-cloud project:set-remote [<project>]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8491,7 +10948,7 @@ magento-cloud project:set-remote [<project>]
 &lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ 已弃用 ]&lt;/>从项目中删除变量
 
 ```bash
-magento-cloud project:variable:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud project:variable:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -8509,7 +10966,7 @@ magento-cloud project:variable:delete [-p|--project PROJECT] [--host HOST] [-W|-
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -8534,13 +10991,6 @@ magento-cloud project:variable:delete [-p|--project PROJECT] [--host HOST] [-W|-
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -8557,14 +11007,42 @@ magento-cloud project:variable:delete [-p|--project PROJECT] [--host HOST] [-W|-
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8575,7 +11053,7 @@ magento-cloud project:variable:delete [-p|--project PROJECT] [--host HOST] [-W|-
 &lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ 已弃用 ]&lt;/>查看项目的变量
 
 ```bash
-magento-cloud project:variable:get [--pipe] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [--] [<name>]
+magento-cloud project:variable:get [--pipe] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<name>]
 ```
 
 
@@ -8608,14 +11086,14 @@ project:variable:list
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -8635,20 +11113,13 @@ project:variable:list
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8669,14 +11140,42 @@ project:variable:list
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8687,7 +11186,7 @@ project:variable:list
 &lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ 已弃用 ]&lt;/>为项目设置变量
 
 ```bash
-magento-cloud pvset [--json] [--no-visible-build] [--no-visible-runtime] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] <name> <value>
+magento-cloud pvset [--json] [--no-visible-build] [--no-visible-runtime] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name> <value>
 ```
 
 
@@ -8737,7 +11236,7 @@ pvset
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -8762,13 +11261,6 @@ pvset
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -8785,14 +11277,42 @@ pvset
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8803,7 +11323,7 @@ pvset
 在项目存储库中读取文件
 
 ```bash
-magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] <path>
+magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] <path>
 ```
 
 
@@ -8827,7 +11347,7 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [--host HOST]
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -8840,13 +11360,6 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [--host HOST]
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8867,14 +11380,42 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [--host HOST]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+回答 &quot;是&quot; 以确认问题;接受其他问题的默认值;禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要询问任何交互式问题;接受默认值。 等效于使用环境变量： &lt;comment>MAGENTO_CLOUD_CLI_NO_INTERACTION = 1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8885,7 +11426,7 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [--host HOST]
 在项目存储库中列出文件
 
 ```bash
-magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit COMMIT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<path>]
+magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 
@@ -8929,7 +11470,7 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -8942,13 +11483,6 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8969,14 +11503,42 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -8987,7 +11549,7 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 读取项目存储库中的目录或文件
 
 ```bash
-magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<path>]
+magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 
@@ -9015,7 +11577,7 @@ read
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -9028,13 +11590,6 @@ read
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9055,14 +11610,42 @@ read
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9073,7 +11656,7 @@ read
 查看有关路线的详细信息
 
 ```bash
-magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--refresh] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<route>]
+magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--refresh] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<route>]
 ```
 
 
@@ -9123,7 +11706,7 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -9152,13 +11735,6 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -9175,14 +11751,42 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9193,7 +11797,7 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 列出环境的所有路由
 
 ```bash
-magento-cloud routes [--refresh] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--] [<environment>]
+magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<environment>]
 ```
 
 
@@ -9221,14 +11825,14 @@ environment:routes
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：route*、type*、to*、url（* =默认列）。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -9248,7 +11852,7 @@ environment:routes
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -9261,13 +11865,6 @@ environment:routes
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9288,14 +11885,42 @@ environment:routes
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9327,13 +11952,6 @@ local:install
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -9350,14 +11968,42 @@ local:install
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9387,14 +12033,14 @@ magento-cloud self:stats [-p|--page PAGE] [-c|--count COUNT] [--format FORMAT] [
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
 ### `--columns`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：资产、日期、下载、发行。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -9420,13 +12066,6 @@ magento-cloud self:stats [-p|--page PAGE] [-c|--count COUNT] [--format FORMAT] [
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -9443,14 +12082,42 @@ magento-cloud self:stats [-p|--page PAGE] [-c|--count COUNT] [--format FORMAT] [
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9514,13 +12181,6 @@ update
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -9537,14 +12197,42 @@ update
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9555,7 +12243,7 @@ update
 列出项目中的服务
 
 ```bash
-magento-cloud services [--refresh] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--format FORMAT] [--columns COLUMNS] [--no-header]
+magento-cloud services [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 
@@ -9578,7 +12266,7 @@ services
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -9590,14 +12278,14 @@ services
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：磁盘、名称、大小、类型。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -9612,13 +12300,6 @@ services
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9639,14 +12320,42 @@ services
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9657,7 +12366,7 @@ services
 从MongoDB创建数据的二进制归档转储
 
 ```bash
-magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 
@@ -9705,7 +12414,7 @@ mongodump
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -9728,13 +12437,6 @@ mongodump
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -9751,14 +12453,42 @@ mongodump
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9769,7 +12499,7 @@ mongodump
 从MongoDB导出数据
 
 ```bash
-magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 
@@ -9823,7 +12553,7 @@ mongoexport
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -9846,13 +12576,6 @@ mongoexport
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -9869,14 +12592,42 @@ mongoexport
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9887,7 +12638,7 @@ mongoexport
 将数据的二进制归档转储还原到MongoDB中
 
 ```bash
-magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 
@@ -9921,7 +12672,7 @@ mongorestore
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -9944,13 +12695,6 @@ mongorestore
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -9967,14 +12711,42 @@ mongorestore
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -9985,7 +12757,7 @@ mongorestore
 使用MongoDB外壳
 
 ```bash
-magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 
@@ -10019,7 +12791,7 @@ mongo
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -10042,13 +12814,6 @@ mongo
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10065,14 +12830,42 @@ mongo
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10083,7 +12876,7 @@ mongo
 访问Redis CLI
 
 ```bash
-magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
 ```
 
 
@@ -10117,7 +12910,7 @@ redis
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -10140,13 +12933,6 @@ redis
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10163,14 +12949,42 @@ redis
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10197,13 +13011,6 @@ magento-cloud session:switch [<id>]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10220,14 +13027,42 @@ magento-cloud session:switch [<id>]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10238,7 +13073,7 @@ magento-cloud session:switch [<id>]
 创建环境快照
 
 ```bash
-magento-cloud backup [--live] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
+magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 
@@ -10277,7 +13112,7 @@ environment:backup
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -10301,16 +13136,16 @@ environment:backup
 - 默认： `false`
 - 不接受值
 
-### `--help`, `-h`
+### `--unsafe`
 
-显示此帮助消息
+已弃用选项：使用，改为live
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
+### `--help`, `-h`
 
-不输出任何消息
+显示此帮助消息
 
 - 默认： `false`
 - 不接受值
@@ -10331,14 +13166,42 @@ environment:backup
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10349,7 +13212,7 @@ environment:backup
 列出环境的可用快照
 
 ```bash
-magento-cloud snapshots [--limit LIMIT] [--start START] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT]
+magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 
@@ -10369,7 +13232,7 @@ backup:list
 
 ### `--limit`
 
-限制要列出的快照数量
+[已弃用]  — 此选项未使用
 
 - 需要值
 
@@ -10381,14 +13244,14 @@ backup:list
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -10415,7 +13278,7 @@ backup:list
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -10428,13 +13291,6 @@ backup:list
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10455,14 +13311,42 @@ backup:list
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10473,7 +13357,7 @@ backup:list
 恢复环境快照
 
 ```bash
-magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 
@@ -10512,7 +13396,7 @@ backup:restore
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -10543,13 +13427,6 @@ backup:restore
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10566,14 +13443,42 @@ backup:restore
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10584,7 +13489,7 @@ backup:restore
 &lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ 测试版 ]&lt;/>运行源操作
 
 ```bash
-magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <operation>
+magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <operation>
 ```
 
 
@@ -10609,7 +13514,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -10640,13 +13545,6 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10663,14 +13561,42 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10711,13 +13637,6 @@ magento-cloud ssh-cert:info [--no-refresh] [-P|--property PROPERTY] [--date-fmt 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10734,14 +13653,42 @@ magento-cloud ssh-cert:info [--no-refresh] [-P|--property PROPERTY] [--date-fmt 
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10783,13 +13730,6 @@ magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10806,14 +13746,42 @@ magento-cloud ssh-cert:load [--refresh-only] [--new] [--new-key]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10846,13 +13814,6 @@ magento-cloud ssh-key:add [--name NAME] [--] [<path>]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10869,14 +13830,42 @@ magento-cloud ssh-key:add [--name NAME] [--] [<path>]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10903,13 +13892,6 @@ magento-cloud ssh-key:delete [<id>]
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -10926,14 +13908,42 @@ magento-cloud ssh-key:delete [<id>]
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -10944,7 +13954,7 @@ magento-cloud ssh-key:delete [<id>]
 在帐户中获取SSH密钥列表
 
 ```bash
-magento-cloud ssh-keys [--format FORMAT] [--columns COLUMNS] [--no-header]
+magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 
@@ -10954,14 +13964,14 @@ ssh-keys
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：id*、title*、path*、指纹（* =默认列）。 字符“+”可用作默认列的占位符。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -10980,13 +13990,6 @@ ssh-keys
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -11003,14 +14006,42 @@ ssh-keys
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11021,7 +14052,7 @@ ssh-keys
 读取或修改订阅属性
 
 ```bash
-magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [--] [<property>] [<value>]
+magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<property>] [<value>]
 ```
 
 
@@ -11050,14 +14081,14 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -11077,20 +14108,13 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11111,14 +14135,42 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11129,7 +14181,7 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 关闭SSH隧道
 
 ```bash
-magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 ### `--all`, `-a`
@@ -11147,7 +14199,7 @@ magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|-
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11170,13 +14222,6 @@ magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|-
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -11193,14 +14238,42 @@ magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|-
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11211,7 +14284,7 @@ magento-cloud tunnel:close [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|-
 查看SSH隧道的关系信息
 
 ```bash
-magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [--columns COLUMNS] [--no-header]
+magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [--columns COLUMNS] [--no-header]
 ```
 
 ### `--property`, `-P`
@@ -11235,7 +14308,7 @@ magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project P
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11253,14 +14326,14 @@ magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project P
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
 ### `--columns`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -11275,13 +14348,6 @@ magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project P
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11302,14 +14368,42 @@ magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project P
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11320,7 +14414,7 @@ magento-cloud tunnel:info [-P|--property PROPERTY] [-c|--encode] [-p|--project P
 列出SSH隧道
 
 ```bash
-magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [--columns COLUMNS] [--no-header]
+magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 
@@ -11343,7 +14437,7 @@ tunnels
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11361,14 +14455,14 @@ tunnels
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -11383,13 +14477,6 @@ tunnels
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11410,14 +14497,42 @@ tunnels
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11428,7 +14543,7 @@ tunnels
 打开指向应用程序关系的SSH隧道
 
 ```bash
-magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 ### `--gateway-ports`, `-g`
@@ -11446,7 +14561,7 @@ magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [--host HO
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11475,13 +14590,6 @@ magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [--host HO
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -11498,14 +14606,42 @@ magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [--host HO
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11516,7 +14652,7 @@ magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [--host HO
 打开单个SSH隧道以建立应用程序关系
 
 ```bash
-magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
 ```
 
 ### `--port`
@@ -11540,7 +14676,7 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11575,13 +14711,6 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -11598,14 +14727,42 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11616,7 +14773,7 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 将用户添加到项目
 
 ```bash
-magento-cloud user:add [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] [<email>]
+magento-cloud user:add [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
 ```
 
 
@@ -11640,7 +14797,7 @@ magento-cloud user:add [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] [-W
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11665,13 +14822,6 @@ magento-cloud user:add [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] [-W
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -11688,14 +14838,42 @@ magento-cloud user:add [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] [-W
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11706,7 +14884,7 @@ magento-cloud user:add [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] [-W
 从项目中删除用户
 
 ```bash
-magento-cloud user:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] <email>
+magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <email>
 ```
 
 
@@ -11724,7 +14902,7 @@ magento-cloud user:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [-
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11749,13 +14927,6 @@ magento-cloud user:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [-
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -11772,14 +14943,42 @@ magento-cloud user:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [-
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11790,7 +14989,7 @@ magento-cloud user:delete [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [-
 查看用户的角色
 
 ```bash
-magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-r|--role ROLE] [--] [<email>]
+magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-r|--role ROLE] [--] [<email>]
 ```
 
 
@@ -11825,7 +15024,7 @@ user:role
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -11862,13 +15061,6 @@ user:role
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -11885,14 +15077,42 @@ user:role
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11903,7 +15123,7 @@ user:role
 列出项目用户
 
 ```bash
-magento-cloud users [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST]
+magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 
@@ -11913,14 +15133,14 @@ users
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：电子邮件、id、名称、角色。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -11940,20 +15160,13 @@ users
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11974,14 +15187,42 @@ users
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -11992,7 +15233,7 @@ users
 更新项目上的用户角色
 
 ```bash
-magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] [-W|--no-wait] [--wait] [--] [<email>]
+magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
 ```
 
 
@@ -12016,7 +15257,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] 
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12041,13 +15282,6 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -12064,14 +15298,42 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] 
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12082,7 +15344,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [--host HOST] 
 创建变量
 
 ```bash
-magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
+magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
 ```
 
 
@@ -12165,7 +15427,7 @@ magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12196,13 +15458,6 @@ magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -12219,14 +15474,42 @@ magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12237,7 +15520,7 @@ magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [
 删除变量
 
 ```bash
-magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -12261,7 +15544,7 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [--host 
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12292,13 +15575,6 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [--host 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -12315,14 +15591,42 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [--host 
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12333,7 +15637,7 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [--host 
 &lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ 已弃用 ]&lt;/>禁用已启用的环境级别变量
 
 ```bash
-magento-cloud variable:disable [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:disable [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -12351,7 +15655,7 @@ magento-cloud variable:disable [-p|--project PROJECT] [--host HOST] [-e|--enviro
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12382,13 +15686,6 @@ magento-cloud variable:disable [-p|--project PROJECT] [--host HOST] [-e|--enviro
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -12405,14 +15702,42 @@ magento-cloud variable:disable [-p|--project PROJECT] [--host HOST] [-e|--enviro
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12423,7 +15748,7 @@ magento-cloud variable:disable [-p|--project PROJECT] [--host HOST] [-e|--enviro
 &lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ 已弃用 ]&lt;/>启用禁用的环境级别变量
 
 ```bash
-magento-cloud variable:enable [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:enable [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -12441,7 +15766,7 @@ magento-cloud variable:enable [-p|--project PROJECT] [--host HOST] [-e|--environ
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12472,13 +15797,6 @@ magento-cloud variable:enable [-p|--project PROJECT] [--host HOST] [-e|--environ
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -12495,14 +15813,42 @@ magento-cloud variable:enable [-p|--project PROJECT] [--host HOST] [-e|--environ
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12513,7 +15859,7 @@ magento-cloud variable:enable [-p|--project PROJECT] [--host HOST] [-e|--environ
 查看变量
 
 ```bash
-magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
+magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
 ```
 
 
@@ -12541,14 +15887,14 @@ vget
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -12568,7 +15914,7 @@ vget
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12592,13 +15938,6 @@ vget
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -12615,14 +15954,42 @@ vget
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12633,7 +16000,7 @@ vget
 列表变量
 
 ```bash
-magento-cloud variable:list [-l|--level LEVEL] [--format FORMAT] [--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT]
+magento-cloud variable:list [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 
@@ -12654,14 +16021,14 @@ var
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：is_enabled、level、name、value。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -12681,7 +16048,7 @@ var
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12694,13 +16061,6 @@ var
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12721,14 +16081,42 @@ var
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12739,7 +16127,7 @@ var
 &lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ 已弃用 ]&lt;/>为环境设置变量
 
 ```bash
-magento-cloud vset [--json] [--disabled] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name> <value>
+magento-cloud vset [--json] [--disabled] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name> <value>
 ```
 
 
@@ -12782,7 +16170,7 @@ vset
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12813,13 +16201,6 @@ vset
 - 默认： `false`
 - 不接受值
 
-### `--quiet`, `-q`
-
-不输出任何消息
-
-- 默认： `false`
-- 不接受值
-
 ### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的密集度
@@ -12836,14 +16217,42 @@ vset
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12854,7 +16263,7 @@ vset
 更新变量
 
 ```bash
-magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -12925,7 +16334,7 @@ magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -12956,9 +16365,118 @@ magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [
 - 默认： `false`
 - 不接受值
 
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的密集度
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--yes`, `-y`
+
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no`, `-n`
+
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
 ### `--quiet`, `-q`
 
 不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+
+## `version:list`
+
+&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALPHA ]&lt;/>列出环境版本
+
+```bash
+magento-cloud versions [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+
+```bash
+versions
+```
+
+### `--project`, `-p`
+
+项目ID或URL
+
+- 需要值
+
+### `--host`
+
+已弃用选项，不再使用
+
+- 需要值
+
+### `--environment`, `-e`
+
+环境ID
+
+- 需要值
+
+### `--format`
+
+输出格式：表、csv、tsv或纯
+
+- 默认： `table`
+- 需要值
+
+### `--columns`, `-c`
+
+要显示的列。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
+
+- 默认： `[]`
+- 需要值
+
+### `--no-header`
+
+不输出表标题
+
+- 默认： `false`
+- 不接受值
+
+### `--help`, `-h`
+
+显示此帮助消息
 
 - 默认： `false`
 - 不接受值
@@ -12979,14 +16497,42 @@ magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -12997,7 +16543,7 @@ magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [
 获取所有已部署工作程序的列表
 
 ```bash
-magento-cloud workers [--refresh] [-p|--project PROJECT] [--host HOST] [-e|--environment ENVIRONMENT] [--format FORMAT] [--columns COLUMNS] [--no-header]
+magento-cloud workers [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 
@@ -13020,7 +16566,7 @@ workers
 
 ### `--host`
 
-项目的API主机名
+已弃用选项，不再使用
 
 - 需要值
 
@@ -13032,14 +16578,14 @@ workers
 
 ### `--format`
 
-输出格式（“table”、“csv”、“tsv”或“plain”）
+输出格式：表、csv、tsv或纯
 
 - 默认： `table`
 - 需要值
 
-### `--columns`
+### `--columns`, `-c`
 
-要显示的列（以逗号分隔的列表或多个值）
+要显示的列。 可用列：命令、名称、类型。 如果列表是作为单个值提供(例如，“a，b，c”)，它将用逗号分隔和/或空格。
 
 - 默认： `[]`
 - 需要值
@@ -13054,13 +16600,6 @@ workers
 ### `--help`, `-h`
 
 显示此帮助消息
-
-- 默认： `false`
-- 不接受值
-
-### `--quiet`, `-q`
-
-不输出任何消息
 
 - 默认： `false`
 - 不接受值
@@ -13081,14 +16620,42 @@ workers
 
 ### `--yes`, `-y`
 
-对任何是/否问题回答“是”；禁用交互
+对确认问题回答“是”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`
+
+不要提出任何交互式问题；接受默认值。 等同于使用环境变量： &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制ANSI输出
+
+- 默认： `false`
+- 不接受值
+
+### `--no-ansi`
+
+禁用ANSI输出
 
 - 默认： `false`
 - 不接受值
 
 ### `--no`, `-n`
 
-对任何是/否问题回答“否”；禁用交互
+对确认问题回答“否”；接受其他问题的默认值；禁用交互
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
 
 - 默认： `false`
 - 不接受值
