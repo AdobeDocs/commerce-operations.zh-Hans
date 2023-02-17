@@ -1,11 +1,10 @@
 ---
 title: 清漆ESI块
 description: 了解边缘端包含以及如何使用它们嵌入网页。
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/magento-optimization-service
-source-git-commit: 2c12c6ea6e7b6ffeb07bbda17ded34e39de6656a
+badge: label="Konstantin G供稿。" type="Informative" url="https://github.com/goivvy" tooltip="Konstantin G."
+source-git-commit: 90544452f5f0834e096ead6ea3df64dcb5eaea11
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
