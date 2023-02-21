@@ -2,7 +2,7 @@
 title: 性能优化Recommendations
 description: 按照这些建议优化Adobe Commerce实施的效果。
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 065c56f20ba5b1eef8c331c5c2f5649902f1442b
 workflow-type: tm+mt
 source-wordcount: '1288'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 >
 > 云基础架构上的Adobe Commerce已应用上述所有基础架构和架构优化，但DNS查找除外，因为它不在适用范围。
 
-### 搜索
+### 搜索 {#search-heading}
 
 从Adobe Commerce版本2.4开始，就需要Elasticsearch，但是对于2.4之前的版本，最好还是启用它。
 
@@ -115,13 +115,13 @@ Redis应该有足够的内存来存储内存中的所有其他缓存，以获得
 
 ### 无头架构
 
-我们有一个单独的部分专门用于详细说明 [无头](../../architecture/headless/adobe-commerce.md) 是和不同的选项。 综上所述，它将店面层与平台本身分离开来。 它仍是相同的后端，但Adobe Commerce不再直接处理请求，而是仅支持通过GraphQL API的自定义店面。
+我们有一个单独的部分专门用于详细说明 [无头](../../architecture/headless/adobe-commerce.md) 是和不同的选项。 综上所述，它将店面层与平台本身分离开来。 它仍是相同的后端，但Adobe Commerce不再直接处理请求，而是仅支持通过GraphQL API自定义店面。
 
 ### 保持Adobe Commerce更新
 
 Adobe Commerce在运行最新版本时始终具有更好的性能。 即使在每个新版本发布后无法保持Adobe Commerce处于最新状态，仍建议 [升级](../../../upgrade/overview.md) Adobe Commerce引入了显着的性能优化。
 
-例如，在2020年，Adobe向Redis层发布了优化，修复了大量低效、连接问题以及Redis和Adobe Commerce之间不必要的数据传输。 2.3到2.4之间的整体性能是夜以继日的，我们看到购物车、结帐和并发用户方面有了显着改进，这正是Redis优化的结果。
+例如，在2020年，Adobe向Redis层发布了优化，修复了大量低效、连接问题以及Redis和Adobe Commerce之间不必要的数据传输。 2.3到2.4之间的整体性能是夜以继日的，我们看到购物车、结帐、并行用户方面有了显着改进，这正是Redis优化的结果。
 
 ### 优化数据模型
 

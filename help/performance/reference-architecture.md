@@ -1,7 +1,7 @@
 ---
 title: 参考架构
 description: 查看推荐的Adobe Commerce参考架构和Magento Open Source部署的图表。
-source-git-commit: 9ab52374e031bd2b0a846dd5f47c89ff788dcafa
+source-git-commit: 065c56f20ba5b1eef8c331c5c2f5649902f1442b
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 * 考虑使用从数据库来实现快速恢复和数据备份
 * 低流量站点可以在数据库中存储图像
 
-### 搜索
+### 搜索 {#search-heading}
 
 * 根据搜索流量调整实例数
 
