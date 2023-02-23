@@ -1,7 +1,7 @@
 ---
-source-git-commit: 608c98818243557fe9c1f7dffceb23641b858fa5
+source-git-commit: 9b27ce148570b9480c4a1373c6b82c401742fd88
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2484'
 ht-degree: 0%
 
 ---
@@ -828,18 +828,80 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="15">目录服务</th>
     </tr>
     <tr>
+      <td>目录服务1.4</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>目录服务1.3</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
       <td>目录服务1.1</td>
       <td>支持</span>
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
       <td>不支持</span>
       </td>
@@ -864,13 +926,13 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
       <td>不支持</span>
       </td>
@@ -1401,18 +1463,80 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="15">实时搜索</th>
     </tr>
     <tr>
+      <td>实时搜索2.0.5</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>实时搜索2.0.4</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
       <td>实时搜索2.0.3</td>
       <td>支持</span>
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
       <td>不支持</span>
       </td>
@@ -1437,13 +1561,13 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
       <td>不支持</span>
       </td>
@@ -2377,18 +2501,173 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="15">快速结帐</th>
     </tr>
     <tr>
+      <td>快速结帐1.7.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>快速结帐1.6.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>快速结帐1.5.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>快速结帐1.4.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>快速结帐1.3.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
       <td>快速结帐1.2.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>支持</span>
+      <td>兼容</span>
       </td>
-      <td>不支持</span>
+      <td>兼容</span>
       </td>
       <td>不支持</span>
       </td>
@@ -2511,34 +2790,65 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="15">产品Recommendations</th>
     </tr>
     <tr>
+      <td>产品Recommendations 4.0.1</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
       <td>产品Recommendations 4.0.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
-      <td>支持</span>
+      <td>不支持</span>
       </td>
     </tr>
     <tr>
