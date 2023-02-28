@@ -1,10 +1,10 @@
 ---
 user-guide-title: 操作指南
-user-guide-description: 了解维护 Adobe Commerce 或 Magento Open Source 应用程序的操作指南。
+user-guide-description: 了解维护Adobe Commerce或Magento Open Source应用程序的操作方面。
 source-git-commit: 035c60de7234e15c0ace3ffbf60aa771587c432c
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 17%
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 17%
 - [性能最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/overview.html)
 - [工具](https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html)
 - [命令行工具](https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce.html)
-- [实施行动手册](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/overview.html)
-- [运营行动手册](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html)
+- [实施手册](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/overview.html)
+- [操作手册](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html)
 - [大规模商务](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html)
 - [安全性和合规性](https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html)

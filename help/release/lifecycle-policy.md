@@ -1,10 +1,10 @@
 ---
 title: 软件生命周期策略
-description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
+description: 了解终止对Adobe Commerce版本的软件支持的关键日期。
 source-git-commit: 2612405bed470c4b0e0d501ab36bcfb09ac50e92
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 14%
+ht-degree: 10%
 
 ---
 
