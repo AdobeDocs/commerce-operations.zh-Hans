@@ -1,74 +1,80 @@
 ---
-title: 应用模式
-description: 商务应用程序可以根据您的需求以不同的模式运行。 查看可用应用程序模式的详细列表。
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+title: 应用程序模式
+description: Commerce应用程序可以根据您的需求以不同的模式运行。 查看可用的应用程序模式的详细列表。
+source-git-commit: e7c325aef90d4135218b984cc57df2c8d1d921d2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
 
 
-# 应用模式
+# 应用程序模式
 
-您可以在以下任意位置运行Commerce应用程序 _模式_:
+您可以通过以下任意方式运行Commerce应用程序 _模式_：
 
-| 模块名称 | 描述 |
-| ----------- | ----------- |
-| 默认 | 允许您在单台服务器上部署商务应用程序，而无需更改任何设置。 但是，默认模式未针对生产进行优化。<br>要在多台服务器上部署商务应用程序或优化其生产，请更改为其他模式之一。<ul><li>已启用静态视图文件缓存</li><li>不会向用户显示异常；而是会将例外写入日志文件。</li><li>隐藏自定义 `X-Magento-*` HTTP请求和响应头</li></ul> |
-| 开发人员 | 此模式仅供开发使用：<ul><li>禁用静态视图文件缓存</li><li>提供详细日志记录</li><li>启用 [自动代码编译](../cli/code-compiler.md)</li><li>启用增强的调试功能</li><li>显示自定义 `X-Magento-*` HTTP请求和响应头</li><li>结果性能最慢</li><li>在前端显示错误</li></ul> |
-| 生产 | 此模式旨在用于在生产系统上部署：<ul><li>不向用户显示异常（例外仅写入日志）。</li><li>仅从缓存中提供静态视图文件。</li><li>阻止自动代码文件编译。 新文件或更新的文件不会写入文件系统。</li><li>**不允许在管理员中启用或禁用缓存类型。** 请参阅 [启用和禁用缓存](../cli/manage-cache.md#enable-or-disable-cache-types).</li><li>某些字段（如“管理员”中的“高级”和“开发人员”系统配置部分）在生产模式下不可用。</li></ul> |
-| 维护 | 此模式旨在防止在站点更新或重新配置时对其进行访问：<ul><li>将网站访客重定向到默认 `Service Temporarily Unavailable` 页面。</li><li>当站点处于维护模式时， `var/` 目录包含 `.maintenance.flag` 文件。</li><li>您可以配置维护模式，以允许访客从指定的IP地址列表访问。</li></ul> |
+| 模式名称 | 描述 | 云支持 |
+| ------------------------ | ------------------- | ------------- |
+| [默认](#default-mode) | 在单个服务器上部署和运行Commerce应用程序，而不更改设置。 _非_ 针对生产进行了优化。 | 否 |
+| [开发人员](#developer-mode) | 非常适合在扩展或自定义Commerce应用程序时进行开发。 | 否 |
+| [生产](#production-mode) | 将Commerce应用程序部署并运行到生产系统。 | 是 |
+| [维护](#maintenance-mode) | 在执行更新和配置时阻止对站点的访问。 | 是 |
 
->[!INFO]
->
->[Adobe Commerce云基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) 仅支持生产和维护模式。
+参见 [设置操作模式](../cli/set-mode.md) 了解如何手动更改Adobe Commerce操作模式。
+
+## 云支持
+
+无需管理云基础架构项目的应用程序模式。 由于只读文件系统，您不能更改远程云环境中的模式。 云基础架构上的Adobe Commerce会在中自动运行应用程序 _维护_ 模式，可使网站离线，直到部署完成。 否则，应用程序将保留在 _生产_ 模式。 参见 [部署过程](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase) 在 _云基础架构上的Commerce指南_.
+
+如果您使用Cloud Docker for Commerce作为开发工具，则可以在以下位置在Docker环境中部署云基础架构项目： _开发人员_ 模式，但由于额外的文件同步操作而降低性能。 参见 [部署Docker环境](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode) 在 _Cloud Docker for Commerce指南_.
 
 ## 默认模式
 
-由于其名称暗示，默认模式是在未指定其他模式时商务的操作方式。 默认模式允许您在单台服务器上部署商务应用程序，而无需更改任何设置。 但是，默认模式没有生产模式那样优化。
-
-要在多台服务器上部署商务应用程序或优化其生产，请更改为其他模式之一。
+此 _默认_ 模式允许您在单个服务器上部署Commerce应用程序，而无需更改任何设置。 但是，由于静态文件对性能的不利影响，默认模式未针对生产进行优化。 与使用静态文件创建工具生成静态文件相比，创建静态文件并缓存这些文件对性能的影响更大。
 
 在默认模式下：
 
-- 错误记录到服务器上的文件报表，从不向用户显示
+- 异常将写入日志文件而不是显示
 - 静态视图文件已缓存
-- 默认模式未针对生产环境进行优化，这主要是因为 [静态文件](https://glossary.magento.com/static-files) 是动态生成的，而不是实现的。 换言之，创建静态文件并缓存它们比使用静态文件创建工具生成它们对性能的影响更大。
+- 隐藏自定义 `X-Magento-*` HTTP请求和响应标头
 
-请参阅 [设置操作模式](../cli/set-mode.md).
+如果未指定其他模式，则Commerce在默认模式下运行。
 
 ## 开发人员模式
 
-扩展或自定义商务应用程序时，请在开发人员模式下运行该应用程序。
+此 _开发人员_ 建议使用模式来扩展和自定义Commerce应用程序。 静态视图文件不缓存，而是写入 `pub/static` 按需目录。
 
 在开发人员模式下：
 
-- 静态视图文件不会缓存；写给 `pub/static` 目录
-- 未捕获的异常显示在浏览器中
-- 系统登录 `var/report` 表示verbose
-- 安 [例外](https://glossary.magento.com/exception) 在错误处理程序中引发，而不是被记录
-- 当 [事件](https://glossary.magento.com/event) 无法调用订阅者
-
-请参阅 [设置操作模式](../cli/set-mode.md).
+- 启用 [自动代码编译](../cli/code-compiler.md) 和增强型调试
+- 浏览器中显示未捕获的异常
+- 系统登录 `var/report` 冗长
+- 错误处理程序中会引发异常，而不是被记录
+- 当无法调用事件订阅者时，将引发异常
+- 显示自定义 `X-Magento-*` HTTP请求和响应标头
 
 ## 生产模式
 
-将商务部署到生产服务器后，在生产模式下运行该商务。 优化服务器环境（如数据库和Web服务器）后，应运行 [静态视图文件部署工具](../cli/static-view-file-deployment.md) 将静态视图文件写入 `pub/static` 目录访问Advertising Cloud的帮助。
+此 _生产_ 模式最适合在生产系统上部署Commerce应用程序。 优化服务器环境（如数据库和Web服务器）后，您应该运行 [静态视图文件部署工具](../cli/static-view-file-deployment.md) 将静态视图文件写入 `pub/static` 目录。 通过在部署时提供所有必要的静态文件而不是强制Commerce应用程序在运行时动态查找和复制（具体化）静态文件，从而提高性能。
 
-这通过在部署时提供所有必需的静态文件，而不是强制Commerce在运行期间根据需要动态查找和复制（实体化）静态文件，从而提高性能。
+一些字段在生产模式下不可用，例如“管理员”中的“高级”和“开发人员”系统配置部分。 例如，您 _无法_ 使用Admin启用或禁用缓存类型。 您可以启用和禁用缓存类型 _仅限_ 使用 [命令行](../cli/manage-cache.md#config-cli-subcommands-cache-en).
 
 在生产模式下：
 
-- 静态视图文件不会实现，并且会动态构建它们的URL。 静态视图文件从 [缓存](https://glossary.magento.com/cache) 仅。
-- 错误记录到文件系统，从不向用户显示。
-- 您可以启用和禁用缓存类型 _仅_ 使用 [命令行](../cli/manage-cache.md#config-cli-subcommands-cache-en).
-- 您 _无法_ 使用“管理员”启用或禁用缓存类型。
+- 静态视图文件仅从缓存中提供
+- 错误和异常会记录到文件系统，并且永远不会向用户显示
+- 管理员中的一些配置字段不可用
 
 ## 维护模式
 
-在维护模式下运行商务应用程序，以在您完成维护、升级或配置任务时使您的站点脱机。 在维护模式下，网站会将访客重定向到默认 `Service Temporarily Unavailable` 页面。
+此 _维护_ 在改进、更新和配置任务期间，模式会限制或阻止对站点的访问。 默认情况下，网站会将访客重定向到默认位置 `Service Temporarily Unavailable` 页面。
 
-您可以创建 [自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md)，手动启用和禁用维护模式，并配置维护模式以允许来自授权IP地址的访客正常查看存储。 请参阅 [启用和禁用维护模式](../../installation/tutorials/maintenance-mode.md).
+您可以创建 [自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md)，手动启用和禁用维护模式，并配置维护模式以允许来自授权IP地址的访客正常查看存储区。 参见 [启用和禁用维护模式](../../installation/tutorials/maintenance-mode.md) 在 _安装指南_.
 
-如果您在云基础架构上使用商务，则商务应用程序会在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将返回到在生产模式下运行。 请参阅 [部署挂钩](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks) 在 _云基础架构上的商务指南_.
+如果您在云基础架构上使用Commerce，则Commerce应用程序在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将返回到生产模式下运行。 参见 [部署挂接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks) 在 _云基础架构上的Commerce指南_.
+
+在维护模式下：
+
+- 网站访客将被重定向到默认值 `Service Temporarily Unavailable` 页面
+- 此 `var/` 目录包含 `.maintenance.flag` 文件
+- 您可以根据IP地址限制访客访问
