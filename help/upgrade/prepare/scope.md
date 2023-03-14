@@ -1,9 +1,9 @@
 ---
 title: 了解升级范围
-description: 了解在发行版中向后进行不兼容的更改，这些更改可能会影响Adobe Commerce、Magento Open Source自定义模块或第三方扩展。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+description: 了解版本中可能影响Adobe Commerce或Magento Open Source自定义模块或第三方扩展的向后不兼容更改。
+source-git-commit: 682963fb66519097e54f14f2b84ed71528030054
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
@@ -11,34 +11,34 @@ ht-degree: 0%
 
 # 了解升级范围
 
-查看 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html) 以了解版本的范围，包括增强功能、错误修复以及可能影响第三方和自定义模块的已知问题。
+查看 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html) 了解版本的范围，包括增强功能、错误修复以及可能影响第三方和自定义模块的已知问题。
 
-## 后向不兼容的更改
+## 向后不兼容的更改
 
-Adobe Commerce和Magento Open Source版本可能包含不兼容的后向更改。 请查看我们的后向不兼容更改文档，请参阅以下内容：
+Adobe Commerce和Magento Open Source版本可能包含与向后兼容的更改。 查看我们向后不兼容的更改文档，请参阅以下内容：
 
-- **[主要变化亮点](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/index.html)** — 具有重大影响的更改，需要详细说明和特殊说明以确保第三方模块继续工作。
-- **[次要更改引用](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/reference.html)** — 从代码库生成的引用文档，该文档描述对类、API成员资格、数据库、依赖项注入、接口、布局、系统和XSD的细微更改。
+- **[主要更改亮点](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/index.html)** — 有重大影响并需要详细解释和特殊说明以确保第三方模块继续工作的更改。
+- **[次要更改引用](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/reference.html)** — 参考从代码库生成的文档，该文档介绍了对类、API成员资格、数据库、依赖项注入、接口、布局、系统和XSD所做的细微更改。
 
 ## 第三方扩展
 
-Adobe Commerce Marketplace的新兼容性政策确保 _全部_ 列出的扩展在GA日期后30天内与最新发布的版本兼容。 因此，必须尽可能通过Marketplace获取第三方扩展。
+Adobe Commerce Marketplace的新兼容性策略可确保 _所有_ 列出的扩展与GA发布日期起30天内的最新版本兼容。 因此，请务必尽可能通过Marketplace获取第三方扩展。
 
 ## 自定义模块
 
-应针对您要升级到的目标版本检查所有自定义模块。 这是升级过程中最耗时、最耗资的过程。 在评估自定义模块时，您必须查找向后不兼容的更改，并了解一些新实践，如控制器分解。 您可以在 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). 另外，请确保 [最佳实践](https://developer.adobe.com/commerce/php/best-practices/extensions/) 用于模块开发。
+所有自定义模块都应根据您想要升级到的目标版本进行检查。 这是最耗时、最耗资源的升级过程。 在评估自定义模块时，您必须查找与向后不兼容的更改并了解新实践，例如控制器分解。 有关此类内容的更多信息，请参阅 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). 此外，请确保您正在关注 [最佳实践](https://developer.adobe.com/commerce/php/best-practices/extensions/) 用于模块开发。
 
 ## [!DNL Upgrade Compatibility Tool]
 
-的 [!DNL Upgrade Compatibility Tool] 是一个命令行工具，用于分析您的实例以发现潜在的升级问题。 它会检查您安装的当前版本与您尝试升级到的版本之间是否存在问题。
+此 [!DNL Upgrade Compatibility Tool] 是一个命令行工具，用于分析实例是否存在潜在升级问题。 它检查您安装的当前版本与尝试升级到的版本之间是否存在问题。
 
-使用此工具可减少团队了解升级范围和影响所需的工作量。 它有助于您避免在升级时出现的常见代码问题，并就如何解决已识别的问题提供明确的指导。 它还有助于优先处理确保成功升级所需的最关键问题，从而在升级时节省时间和成本。
+使用此工具可减少团队了解升级范围和影响所需的工作量。 它有助于您在升级时避免出现常见的代码问题，并提供了有关如何解决已识别问题的明确指导。 它还有助于对确保成功升级所需的最关键问题进行优先处理，从而在升级时节省时间和成本。
 
-请参阅以下部分以开始使用 [!DNL Upgrade Compatibility Tool]. 请参阅 [!DNL Upgrade Compatibility Tool] [指南](../upgrade-compatibility-tool/overview.md) 以了解更多技术详细信息和高级用例。
+请参阅以下部分以开始使用 [!DNL Upgrade Compatibility Tool]. 请参阅 [!DNL Upgrade Compatibility Tool] [指南](../upgrade-compatibility-tool/overview.md) 了解更多技术细节和高级用例。
 
-### 下载工具
+### 下载该工具
 
-使用编辑器下载工具。 它需要PHP 7.3或更高版本、至少2GB的RAM、Node.js（如果您正在检查GraphQL兼容性）以及Adobe Commerce许可证。
+使用编辑器下载该工具。 它需要PHP 7.3或更高版本、至少2 GB的RAM、Node.js(如果您正在检查GraphQL兼容性)以及Adobe Commerce许可证。
 
 ```bash
 composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
@@ -54,33 +54,33 @@ bin/uct upgrade:check <dir> -c <coming version>
 
 >[!NOTE]
 >
-> 的 `<dir>` 参数是存储代码库的目录。 的 `-c` 选项会将您的代码库与指定的版本（例如，2.4.4）进行比较。
+> 此 `<dir>` 参数是存储代码库的目录。 此 `-c` 选项将您的代码库与指定的版本进行比较。
 
-要确定团队要解决的最关键问题，请执行以下操作：
+确定团队需要解决的最关键问题：
 
 ```bash
 bin/uct upgrade:check /path/to/magento/ --ignore-current-compatibility-issues –min-issue-level critical --vanilla-dir /path/to/vanilla/code/ /path/to/magento/app/code/Vendor/
 ```
 
-要与此命令一起使用的其他选项有：
+可以使用此命令的其他选项包括：
 
-- `--ignore-current-version-compatibility-issues` — 禁止针对当前版本的所有已知严重问题、错误和警告。 它仅针对您尝试升级的版本提供错误。
+- `--ignore-current-version-compatibility-issues` — 禁止显示当前版本的所有已知严重问题、错误和警告。 它仅提供针对您尝试升级的版本的错误。
 
-- `--min-issue-level` — 允许您设置最小问题级别，以帮助仅排定升级中最重要问题的优先级。 选项以严重性的升序顺序显示警告、错误和严重。
+- `--min-issue-level` — 允许您设置最低问题级别，以帮助仅优先考虑升级过程中最重要的问题。 这些选项包括警告、错误和严重（按严重性升序）。
 
-- `-m | [=MODULE-PATH]` — 如果只想分析某个供应商、模块甚至目录，则还可以指定路径作为选项。
+- `-m | [=MODULE-PATH]` — 如果只想分析某个供应商、模块甚至目录，也可以将路径指定为选项。
 
-- `--vanilla-dir` — 允许您检查核心代码，以了解任何非标准功能或自定义实施。 必须事先清理。 系统会自动下载您版本的香草实例以供参考。
+- `--vanilla-dir` — 允许您检查核心代码，以了解功能或自定义项的任何非标准实施。 这些东西一定要事先清理干净。 系统会自动下载您版本的vanilla实例以供参考。
 
    >[!NOTE]
    >
-   > 这也可以通过 `core:code:changes` 命令)。
+   > 这也可以使用 `core:code:changes` 命令)。
 
 ### 分析输出
 
-的 [!DNL Upgrade Compatibility Tool] 导出一个JSON文件，以标识受影响的代码或模块、严重性以及它遇到的每个问题的问题描述。 它还会输出包含复杂性分数的摘要报表，以便您的团队大致了解升级到最新版本所需的操作。 复杂性分数越低，执行升级就越容易。
+此 [!DNL Upgrade Compatibility Tool] 导出一个JSON文件，该文件可识别受影响的代码或模块、严重程度以及它所遇到的每个问题的描述。 它还输出一个带有复杂性分数的摘要报告，这使您的团队能够大致了解升级到最新版本需要什么。 复杂性分数越低，执行升级就越容易。
 
-以下输出显示了摘要报表示例：
+以下输出显示了示例摘要报告：
 
 ```console
  ------------------------ --------
@@ -103,12 +103,12 @@ bin/uct upgrade:check /path/to/magento/ --ignore-current-compatibility-issues �
 
 ### 提示和建议
 
-已识别工具的所有问题都会列在报表中，并带有特定的错误代码。 使用 [错误消息引用](../upgrade-compatibility-tool/error-messages.md) 以获取有关每个问题的更多详细信息。 Adobe还提供了修复每个问题类型的建议，以便您可以规划修正步骤。
+报告中列出了该工具识别的所有问题，并带有特定的错误代码。 使用 [错误消息引用](../upgrade-compatibility-tool/error-messages.md) 以获取有关每个问题的更多详细信息。 Adobe还提供了修复每种问题类型的建议，以便您规划修正步骤。
 
-使用此报表可估算更新升级代码所需的工作量。 根据您的经验，您可以根据已识别的问题总数和问题的严重性，估计升级所需的工作量。 由于这是一个命令行工具，因此您可以将它合并到自动测试和代码检查包中，并使用JSON输出来生成报表。
+使用该报表可估计更新您的升级代码所需的工作量。 根据您的经验，您可以根据已识别的问题总数和问题的严重性来估计升级所需的工作。 由于这是命令行工具，因此可将其并入自动测试和代码检查包，并使用JSON输出生成报告。
 
-我们建议保存每个升级项目的结果，以便您能够将将来的升级结果与以前的结果进行比较。 通过持续使用，您将开始充分了解从工具提供的摘要报告升级到下一版本需要付出的工作量。
+我们建议保存每个升级项目的结果，以便您可以将未来的升级结果与以前的结果进行比较。 通过继续使用，您将会开始清楚地了解仅从该工具提供的摘要报告中升级到下一个版本所需花费的工作量。
 
-我们还建议您在进行升级时定期运行该工具，以便查看您的进度。 问题数应在您修复时减少。 这还有助于您的团队确定分发工作的最佳方法。
+我们还建议您在处理升级时定期运行该工具，以便了解进度。 问题数量应随着您的修复而减少。 这还可以帮助您的团队确定分发工作的最佳方法。
 
-的 [!DNL Upgrade Compatibility Tool] 以后的版本将继续得到改进，并将包含自动修复等功能，以帮助您尽快解决问题。 2022年1月发布的最新改进包括PHP 8.1兼容性测试和HTML可视化功能，这些功能可帮助您快速识别可能需要更多努力才能升级的区域。
+此 [!DNL Upgrade Compatibility Tool] 将继续改进，并且未来的版本将包括自动修复等功能，以帮助您尽快修复问题。 2022年1月发布的最新改进包括PHP 8.1兼容性测试和HTML可视化功能，可帮助您快速识别可能需要更多升级工作的领域。

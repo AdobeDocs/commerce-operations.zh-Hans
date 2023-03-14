@@ -1,40 +1,42 @@
 ---
 title: 云基础架构技术
-description: 深入了解我们在云基础架构上用于Adobe Commerce的技术集合。
+description: 更详细地了解我们在云基础架构上用于Adobe Commerce的技术集合。
 exl-id: de1b3a64-d32b-455f-bdb0-ad883dedd6d4
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 683ce0a72aca0319ade2e4ccfd7a8e541a228156
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
 # 技术
 
-正如我们前面提到的，Adobe Commerce利用许多软件解决方案来支持该平台。 具体来说，就生产而言，我们已对云基础架构上的Adobe Commerce中包含的一些技术解决方案和功能进行了划分，这些解决方案和功能有助于充分利用您的生产环境。
+如前所述，Adobe Commerce利用许多软件解决方案来支持该平台。 具体而言，由于涉及到生产，我们详细介绍了Adobe Commerce on cloud infrastructure中包含的一些技术解决方案和功能，这些解决方案和功能有助于充分利用您的生产环境。
 
-![显示Adobe Commerce云基础架构技术的图表](../../../assets/playbooks/infrastructure-technology.svg)
+![显示Adobe Commerce on cloud infrastructure技术的图表](../../../assets/playbooks/infrastructure-technology.svg)
 
 ## 软件解决方案
 
-- **Nginx** — 使用PHP-FPM的Web服务器。 有一个实例具有多个工作程序。
+- **恩金克斯** — 使用PHP-FPM的Web服务器。 有一个实例具有多个工作程序。
 
-- **GlusterFS** — 用于管理所有静态文件部署和与四个目录装载的同步的文件服务器：
+- **GlusterFS** — 用于管理所有静态文件部署和使用四个目录装载进行同步的文件服务器：
    - `var`
    - `pub/media`
    - `pub/static`
    - `app/etc`
 
-- **雷迪斯** — 每个VM一台服务器，其中只有一个活动服务器，另外两台作为副本。
+- **Redis** — 每个虚拟机一个服务器，只有一个活动，另外两个作为复制副本。
 
 - **Elasticsearch** — 搜索Adobe Commerce版本2.2.x及更高版本。
 
-- **加莱拉** — 数据库群集，每个节点具有一个MariaDB MySQL数据库，每个数据库中的唯一ID自动递增设置为3。
+- **OpenSearch** — 搜索Adobe Commerce版本2.4.6及更高版本。
 
-## 功能和优点
+- **加莱拉** — 数据库集群，每个节点有一个MariaDB MySQL数据库，每个数据库的唯一ID的自动增量设置为3。
 
-- 在VPC中，有三个专用实例，在三个单独的可用区或数据中心之间有一个弹性负载平衡器。
+## 功能和优势
 
-- 针对可能导致单个实例失败的事件提供更高的可复原性。 例如，整个AWS可用区或数据中心发生停机。
+- 在VPC中有三个专用实例，在三个独立的可用区或数据中心之间有一个弹性负载均衡器。
 
-- 在不到15分钟的时间内，在整个堆栈（包括Web、缓存、搜索和数据库）中实现零停机时间扩展。
+- 对于可能导致单个实例失败的事件，提供了更高的恢复能力。 例如，整个AWS可用区或数据中心的中断。
+
+- 在不到15分钟的时间内跨整个栈栈（包括Web 、缓存、搜索和数据库）实现零停机扩展。

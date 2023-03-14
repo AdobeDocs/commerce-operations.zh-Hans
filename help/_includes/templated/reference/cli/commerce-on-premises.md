@@ -1,33 +1,185 @@
 ---
-source-git-commit: 23d55385046de18b238c90f6a99be692f1ce7561
+source-git-commit: 177f301802e1ab1d0560ee98594b8128440efa7c
 workflow-type: tm+mt
-source-wordcount: '15643'
+source-wordcount: '19444'
 ht-degree: 0%
 
 ---
-# bin/magento(Adobe Commerce本地版)
+# bin/magento(Adobe Commerce内部部署)
 
 <!-- All the assigned and captured content is used in the included template -->
 
 <!-- The template to render with above values -->
 
-**版本**:2.4.5
+**版本**：2.4.6-beta2
 
-此参考包含118个通过 `bin/magento` 命令行工具。
-初始列表是使用 `bin/magento list` 命令。
-使用 [&quot;添加CLI命令&quot;](https://developer.adobe.com/commerce/php/development/cli-commands/) 添加自定义CLI命令的指南。
-
->[!NOTE]
->
->您可以调用 `bin/magento` CLI命令使用快捷键，而不是完整命令名称。 例如，您可以调用 `bin/magento setup:upgrade` 使用 `bin/magento s:up`, `bin/magento s:upg`. 请参阅 [快捷键语法](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) 了解如何将快捷键与任何CLI命令一起使用。
+此参考包含130个命令，这些命令可通过 `bin/magento` 命令行工具。
+初始列表是使用 `bin/magento list` 编辑时显示的命令。
+使用 [添加CLI命令](https://developer.adobe.com/commerce/php/development/cli-commands/) 指南添加自定义CLI命令。
 
 >[!NOTE]
 >
->此引用是从应用程序代码库生成的。 要更改内容，您可以在 [代码库](https://github.com/magento) 存储库并提交您的更改以供审核。 另一种方法是 _给我们反馈_ （在右上方查找链接）。 有关贡献准则，请参阅 [代码贡献](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+>您可以调用 `bin/magento` CLI命令使用快捷方式，而不是完整的命令名称。 例如，您可以调用 `bin/magento setup:upgrade` 使用 `bin/magento s:up`， `bin/magento s:upg`. 参见 [快捷语法](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) 了解如何使用任何CLI命令的快捷方式。
+
+>[!NOTE]
+>
+>此引用从应用程序代码库生成。 要更改内容，您可以更新中相应命令实施的源代码 [代码库](https://github.com/magento) 存储库并提交更改以供审核。 另一种方法是 _向我们提供反馈_ （在右上角找到链接）。 有关贡献准则，请参阅 [代码投稿](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+
+## `_complete`
+
+用于提供外壳完成建议的内部命令
+
+```bash
+bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-S|--symfony SYMFONY]
+```
+
+### `--shell`, `-s`
+
+shell类型(“bash”)
+
+- 需要一个值
+
+### `--input`, `-i`
+
+输入令牌的数组（例如COMP_WORDS或argv）
+
+- 默认： `[]`
+- 需要一个值
+
+### `--current`, `-c`
+
+光标所在的“input”数组的索引（例如COMP_CWORD）
+
+- 需要一个值
+
+### `--symfony`, `-S`
+
+完成脚本的版本
+
+- 需要一个值
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `completion`
+
+转储shell完成脚本
+
+```bash
+bin/magento completion [--debug] [--] [<shell>]
+```
+
+
+### `shell`
+
+如果未提供shell类型（例如“bash”），则将使用“$SHELL”环境变量的值
+
+
+### `--debug`
+
+跟踪完成调试日志
+
+- 默认： `false`
+- 不接受值
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
 
 ## `help`
 
-显示命令帮助
+显示命令的帮助
 
 ```bash
 bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
@@ -46,7 +198,7 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 输出格式（txt、xml、json或md）
 
 - 默认： `txt`
-- 需要值
+- 需要一个值
 
 ### `--raw`
 
@@ -57,7 +209,7 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -71,7 +223,7 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -85,14 +237,13 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -107,10 +258,10 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ## `list`
 
-列表命令
+列出命令
 
 ```bash
-bin/magento list [--raw] [--format FORMAT] [--] [<namespace>]
+bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```
 
 
@@ -131,20 +282,18 @@ bin/magento list [--raw] [--format FORMAT] [--] [<namespace>]
 输出格式（txt、xml、json或md）
 
 - 默认： `txt`
-- 需要值
+- 需要一个值
 
+### `--short`
 
-## `admin:adobe-ims:disable`
+跳过描述命令的参数
 
-禁用Adobe IMS模块
-
-```bash
-bin/magento admin:adobe-ims:disable
-```
+- 默认： `false`
+- 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -158,7 +307,7 @@ bin/magento admin:adobe-ims:disable
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -172,14 +321,70 @@ bin/magento admin:adobe-ims:disable
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `admin:adobe-ims:disable`
+
+禁用Adobe IMS模块
+
+```bash
+bin/magento admin:adobe-ims:disable
+```
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -202,31 +407,31 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 ### `--organization-id`, `-o`
 
-为Adobe IMS配置设置组织ID。 启用模块时需要
+为Adobe IMS配置设置组织ID 。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--client-id`, `-c`
 
-为Adobe IMS配置设置客户端ID。 启用模块时需要
+为Adobe IMS配置设置客户端ID。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--client-secret`, `-s`
 
-为Adobe IMS配置设置客户端密钥。 启用模块时需要
+为Adobe IMS配置设置客户端密钥。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--2fa`, `-t`
 
-检查是否在Adobe Admin Console中为组织启用了2FA。 启用模块时需要
+检查Adobe Admin Console中是否为“组织”启用了2FA。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -240,7 +445,7 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -254,14 +459,13 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -284,7 +488,7 @@ bin/magento admin:adobe-ims:info
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -298,7 +502,7 @@ bin/magento admin:adobe-ims:info
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -312,14 +516,13 @@ bin/magento admin:adobe-ims:info
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -342,7 +545,7 @@ bin/magento admin:adobe-ims:status
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -356,7 +559,7 @@ bin/magento admin:adobe-ims:status
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -370,14 +573,13 @@ bin/magento admin:adobe-ims:status
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -402,41 +604,41 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 （必需）管理员用户
 
-- 需要值
+- 需要一个值
 
 ### `--admin-password`
 
 （必需）管理员密码
 
-- 需要值
+- 需要一个值
 
 ### `--admin-email`
 
 （必需）管理员电子邮件
 
-- 需要值
+- 需要一个值
 
 ### `--admin-firstname`
 
 （必需）管理员名字
 
-- 需要值
+- 需要一个值
 
 ### `--admin-lastname`
 
 （必需）管理员姓氏
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -450,7 +652,7 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -464,14 +666,13 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -501,7 +702,7 @@ bin/magento admin:user:unlock <username>
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -515,7 +716,7 @@ bin/magento admin:user:unlock <username>
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -529,14 +730,13 @@ bin/magento admin:user:unlock <username>
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -560,7 +760,7 @@ bin/magento app:config:dump [<config-types>...]
 
 ### `config-types`
 
-配置类型的以空格分隔的列表，或者忽略转储所有 [范围、主题、系统、i18n]
+以空格分隔的配置类型列表或省略以转储所有 [范围，系统，主题， i18n]
 
 - 默认： `[]`
 
@@ -568,7 +768,7 @@ bin/magento app:config:dump [<config-types>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -582,7 +782,7 @@ bin/magento app:config:dump [<config-types>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -596,14 +796,13 @@ bin/magento app:config:dump [<config-types>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -618,7 +817,7 @@ bin/magento app:config:dump [<config-types>...]
 
 ## `app:config:import`
 
-将数据从共享配置文件导入相应的数据存储
+将数据从共享配置文件导入到适当的数据存储
 
 ```bash
 bin/magento app:config:import
@@ -626,7 +825,7 @@ bin/magento app:config:import
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -640,7 +839,7 @@ bin/magento app:config:import
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -654,14 +853,13 @@ bin/magento app:config:import
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -684,7 +882,7 @@ bin/magento app:config:status
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -698,7 +896,7 @@ bin/magento app:config:status
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -712,14 +910,13 @@ bin/magento app:config:status
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -734,7 +931,7 @@ bin/magento app:config:status
 
 ## `braintree:migrate`
 
-从Magento1数据库迁移存储的信息卡
+从Magento1数据库迁移存储的卡片
 
 ```bash
 bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password PASSWORD]
@@ -744,29 +941,29 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 主机名/IP。 端口是可选的
 
-- 需要值
+- 需要一个值
 
 ### `--dbname`
 
 数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--username`
 
 数据库用户名。 必须具有读取权限
 
-- 需要值
+- 需要一个值
 
 ### `--password`
 
 密码
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -780,7 +977,7 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -794,14 +991,13 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -816,7 +1012,7 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 ## `cache:clean`
 
-清除缓存类型
+清理缓存类型
 
 ```bash
 bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
@@ -825,7 +1021,7 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的高速缓存类型列表，或省略以应用于所有高速缓存类型。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
 - 默认： `[]`
 
@@ -835,11 +1031,11 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -853,7 +1049,7 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -867,14 +1063,13 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -898,7 +1093,7 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的高速缓存类型列表，或省略以应用于所有高速缓存类型。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
 - 默认： `[]`
 
@@ -908,11 +1103,11 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -926,7 +1121,7 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -940,14 +1135,13 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -971,7 +1165,7 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的高速缓存类型列表，或省略以应用于所有高速缓存类型。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
 - 默认： `[]`
 
@@ -981,11 +1175,11 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -999,7 +1193,7 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1013,14 +1207,13 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1035,7 +1228,7 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ## `cache:flush`
 
-刷新缓存类型使用的缓存存储
+刷新由缓存类型使用的缓存存储
 
 ```bash
 bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
@@ -1044,7 +1237,7 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的高速缓存类型列表，或省略以应用于所有高速缓存类型。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
 - 默认： `[]`
 
@@ -1054,11 +1247,11 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1072,7 +1265,7 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1086,14 +1279,13 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1118,11 +1310,11 @@ bin/magento cache:status [--bootstrap BOOTSTRAP]
 
 添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1136,7 +1328,7 @@ bin/magento cache:status [--bootstrap BOOTSTRAP]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1150,14 +1342,13 @@ bin/magento cache:status [--bootstrap BOOTSTRAP]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1187,14 +1378,14 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 ### `--skip_hidden_images`
 
-请勿处理在产品页面中标记为隐藏的图像
+不处理在产品页面中标记为隐藏的图像
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1208,7 +1399,7 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1222,14 +1413,13 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1252,7 +1442,7 @@ bin/magento catalog:product:attributes:cleanup
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1266,7 +1456,7 @@ bin/magento catalog:product:attributes:cleanup
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1280,14 +1470,13 @@ bin/magento catalog:product:attributes:cleanup
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1302,7 +1491,7 @@ bin/magento catalog:product:attributes:cleanup
 
 ## `cms:wysiwyg:restrict`
 
-设置是强制用户HTML内容验证还是改为显示警告
+设置是强制执行用户HTML内容验证还是显示警告
 
 ```bash
 bin/magento cms:wysiwyg:restrict <restrict>
@@ -1317,7 +1506,7 @@ y\n
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1331,7 +1520,7 @@ y\n
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1345,14 +1534,13 @@ y\n
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1393,21 +1581,21 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 ### `--scope`
 
-配置范围（如果未设置）使用“default”
+配置范围（如果未设置），请使用“default”
 
 - 默认： `default`
-- 接受值
+- 接受一个值
 
 ### `--scope-code`
 
-配置的范围代码，默认为空字符串
+配置的范围代码，默认情况下为空字符串
 
-- 默认：&quot;
-- 接受值
+- 默认：“
+- 接受一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1421,7 +1609,7 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1435,14 +1623,13 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1466,7 +1653,7 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `path`
 
-格式为section/group/field_name的配置路径
+格式为节/组/字段名的配置路径
 
 - 必需
 
@@ -1478,16 +1665,16 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `--scope`
 
-配置范围（默认、网站或存储）
+配置范围（默认、网站或商店）
 
 - 默认： `default`
-- 需要值
+- 需要一个值
 
 ### `--scope-code`
 
-范围代码（仅当范围不是“默认”时才需要）
+范围代码（仅当范围不是“default”时才需要）
 
-- 需要值
+- 需要一个值
 
 ### `--lock-env`, `-e`
 
@@ -1498,7 +1685,7 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `--lock-config`, `-c`
 
-锁定值并与其他安装共享值，阻止在管理员中进行修改(将保存在app/etc/config.php中)
+锁定并与其他安装共享值，防止在管理员中进行修改(将保存在app/etc/config.php中)
 
 - 默认： `false`
 - 不接受值
@@ -1512,7 +1699,7 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1526,7 +1713,7 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1540,14 +1727,13 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1562,7 +1748,7 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ## `config:show`
 
-显示给定路径的配置值。 如果未指定路径，则将显示所有保存的值
+显示给定路径的配置值。 如果未指定路径，将显示所有保存的值
 
 ```bash
 bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<path>]
@@ -1576,21 +1762,21 @@ bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<pat
 
 ### `--scope`
 
-配置范围（如果未指定），则将使用“default”范围
+配置范围（如果未指定），则将使用“默认”范围
 
 - 默认： `default`
-- 接受值
+- 接受一个值
 
 ### `--scope-code`
 
-范围代码（仅当范围不在时才需要） `default`)
+范围代码（仅当范围不是时才需要） `default`)
 
-- 默认：&quot;
-- 接受值
+- 默认：“
+- 接受一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1604,7 +1790,7 @@ bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<pat
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1618,14 +1804,13 @@ bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<pat
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1662,7 +1847,7 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1676,7 +1861,7 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1690,14 +1875,13 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1720,7 +1904,7 @@ bin/magento cron:remove
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1734,7 +1918,7 @@ bin/magento cron:remove
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1748,14 +1932,13 @@ bin/magento cron:remove
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1778,19 +1961,19 @@ bin/magento cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
 
 ### `--group`
 
-仅从指定的组运行作业
+仅运行来自指定组的作业
 
-- 需要值
+- 需要一个值
 
 ### `--bootstrap`
 
 添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1804,7 +1987,7 @@ bin/magento cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1818,14 +2001,13 @@ bin/magento cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1848,7 +2030,7 @@ bin/magento customer:hash:upgrade
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1862,7 +2044,7 @@ bin/magento customer:hash:upgrade
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1876,14 +2058,13 @@ bin/magento customer:hash:upgrade
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1907,20 +2088,20 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 ### `mode`
 
-要设置的应用程序模式。 可用选项包括“开发人员”或“生产”
+要设置的应用程序模式。 可用选项为“开发人员”或“生产”
 
 - 必需
 
 ### `--skip-compilation`, `-s`
 
-跳过静态内容（生成的代码、预处理的CSS以及pub/static/中的资产）的清除和重新生成
+跳过静态内容（生成的代码、预处理的CSS和pub/static/中的资产）的清除和重新生成
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1934,7 +2115,7 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -1948,14 +2129,13 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -1978,7 +2158,7 @@ bin/magento deploy:mode:show
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -1992,7 +2172,7 @@ bin/magento deploy:mode:show
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2006,14 +2186,13 @@ bin/magento deploy:mode:show
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2037,13 +2216,13 @@ bin/magento dev:di:info <class>
 
 ### `class`
 
-类名称
+类名
 
 - 必需
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2057,7 +2236,7 @@ bin/magento dev:di:info <class>
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2071,14 +2250,13 @@ bin/magento dev:di:info <class>
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2093,7 +2271,7 @@ bin/magento dev:di:info <class>
 
 ## `dev:email:newsletter-compatibility-check`
 
-扫描新闻稿模板以了解潜在的变量使用兼容性问题
+扫描新闻稿模板以查找潜在的变量使用兼容性问题
 
 ```bash
 bin/magento dev:email:newsletter-compatibility-check
@@ -2101,7 +2279,7 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2115,7 +2293,7 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2129,14 +2307,13 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2151,7 +2328,7 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ## `dev:email:override-compatibility-check`
 
-扫描电子邮件模板覆盖，以查找潜在的变量使用兼容性问题
+扫描电子邮件模板覆盖以查找潜在的变量使用兼容性问题
 
 ```bash
 bin/magento dev:email:override-compatibility-check
@@ -2159,7 +2336,7 @@ bin/magento dev:email:override-compatibility-check
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2173,7 +2350,7 @@ bin/magento dev:email:override-compatibility-check
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2187,14 +2364,13 @@ bin/magento dev:email:override-compatibility-check
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2209,7 +2385,7 @@ bin/magento dev:email:override-compatibility-check
 
 ## `dev:profiler:disable`
 
-禁用探查器。
+禁用Profiler。
 
 ```bash
 bin/magento dev:profiler:disable
@@ -2217,7 +2393,7 @@ bin/magento dev:profiler:disable
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2231,7 +2407,7 @@ bin/magento dev:profiler:disable
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2245,14 +2421,13 @@ bin/magento dev:profiler:disable
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2267,7 +2442,7 @@ bin/magento dev:profiler:disable
 
 ## `dev:profiler:enable`
 
-启用探查器。
+启用Profiler。
 
 ```bash
 bin/magento dev:profiler:enable [<type>]
@@ -2281,7 +2456,7 @@ bin/magento dev:profiler:enable [<type>]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2295,7 +2470,7 @@ bin/magento dev:profiler:enable [<type>]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2309,14 +2484,13 @@ bin/magento dev:profiler:enable [<type>]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2339,7 +2513,7 @@ bin/magento dev:query-log:disable
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2353,7 +2527,7 @@ bin/magento dev:query-log:disable
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2367,14 +2541,13 @@ bin/magento dev:query-log:disable
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2400,25 +2573,25 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 记录所有查询。 [true\|false]
 
 - 默认： `true`
-- 接受值
+- 接受一个值
 
 ### `--query-time-threshold`
 
 查询时间阈值。
 
 - 默认： `0.001`
-- 接受值
+- 接受一个值
 
 ### `--include-call-stack`
 
-包括调用堆栈。 [true\|false]
+包括调用栈栈。 [true\|false]
 
 - 默认： `true`
-- 接受值
+- 接受一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2432,7 +2605,7 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2446,14 +2619,13 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2468,7 +2640,7 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 
 ## `dev:source-theme:deploy`
 
-收集并发布主题的源文件。
+收集和发布主题的源文件。
 
 ```bash
 bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA] [--theme THEME] [--] [<file>...]
@@ -2477,7 +2649,7 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 ### `file`
 
-要预处理的文件（文件应指定为不带扩展名）
+要预处理的文件（指定文件时应不带扩展名）
 
 - 默认： `css/styles-mcss/styles-l`
 
@@ -2485,35 +2657,35 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 ### `--type`
 
-源文件类型： [减少]
+源文件的类型： [更少]
 
 - 默认： `less`
-- 需要值
+- 需要一个值
 
 ### `--locale`
 
 区域设置： [en_US]
 
 - 默认： `en_US`
-- 需要值
+- 需要一个值
 
 ### `--area`
 
-区域： [前端\|adminhtml]
+区域： [frontend\|adminhtml]
 
 - 默认： `frontend`
-- 需要值
+- 需要一个值
 
 ### `--theme`
 
 主题： [供应商/主题]
 
 - 默认： `Magento/luma`
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2527,7 +2699,7 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2541,14 +2713,13 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2571,7 +2742,7 @@ bin/magento dev:template-hints:disable
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2585,7 +2756,7 @@ bin/magento dev:template-hints:disable
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2599,14 +2770,13 @@ bin/magento dev:template-hints:disable
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2629,7 +2799,7 @@ bin/magento dev:template-hints:enable
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2643,7 +2813,7 @@ bin/magento dev:template-hints:enable
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2657,14 +2827,13 @@ bin/magento dev:template-hints:enable
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2687,7 +2856,7 @@ bin/magento dev:template-hints:status
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2701,7 +2870,7 @@ bin/magento dev:template-hints:status
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2715,14 +2884,13 @@ bin/magento dev:template-hints:status
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2746,21 +2914,21 @@ bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
 
 ### `type`
 
-要运行的测试类型。 可用类型：全部，单元，集成，全部集成，静态，静态，全部，完整性，旧版，默认
+要运行的测试类型。 可用类型：all、unit、integration、integration-all、static、static-all、integrity、legacy、default
 
 - 默认： `default`
 
 
 ### `--arguments`, `-c`
 
-PHPUnit的其他参数。 示例：&quot;-c&#39;—filter=MyTest&#39;&quot;（无空格）
+PHPUnit的其他参数。 示例：“ — c” — filter=MyTest&#39;”（无空格）
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2774,7 +2942,7 @@ PHPUnit的其他参数。 示例：&quot;-c&#39;—filter=MyTest&#39;&quot;（�
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2788,14 +2956,13 @@ PHPUnit的其他参数。 示例：&quot;-c&#39;—filter=MyTest&#39;&quot;（�
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2810,7 +2977,7 @@ PHPUnit的其他参数。 示例：&quot;-c&#39;—filter=MyTest&#39;&quot;（�
 
 ## `dev:urn-catalog:generate`
 
-为IDE生成URN到*.xsd映射的目录以突出显示xml。
+为IDE生成*.xsd映射的URN目录以高亮显示xml。
 
 ```bash
 bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
@@ -2819,20 +2986,20 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 ### `path`
 
-用于输出目录的文件路径。 对于PhpStorm，请使用。idea/misc.xml
+输出目录文件的路径。 对于PhpStorm，使用。idea/misc.xml
 
 - 必需
 
 ### `--ide`
 
-将在其中生成目录的格式。 支持： [弗斯托姆、弗斯科德]
+将生成目录的格式。 支持： [phpstorm， vscode]
 
 - 默认： `phpstorm`
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2846,7 +3013,7 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2860,14 +3027,13 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2897,7 +3063,7 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ### `processor`
 
-要应用于XML文件的XSL样式表的路径
+将应用于XML文件的XSL样式表的路径
 
 - 必需
 
@@ -2910,7 +3076,7 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2924,7 +3090,7 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -2938,14 +3104,13 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -2960,7 +3125,7 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ## `downloadable:domains:add`
 
-将域添加到可下载的域白名单中
+将域添加到可下载的域白名单
 
 ```bash
 bin/magento downloadable:domains:add [<domains>...]
@@ -2969,7 +3134,7 @@ bin/magento downloadable:domains:add [<domains>...]
 
 ### `domains`
 
-域名
+域名称
 
 - 默认： `[]`
 
@@ -2977,7 +3142,7 @@ bin/magento downloadable:domains:add [<domains>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -2991,7 +3156,7 @@ bin/magento downloadable:domains:add [<domains>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3005,14 +3170,13 @@ bin/magento downloadable:domains:add [<domains>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3044,7 +3208,7 @@ bin/magento downloadable:domains:remove [<domains>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3058,7 +3222,7 @@ bin/magento downloadable:domains:remove [<domains>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3072,14 +3236,13 @@ bin/magento downloadable:domains:remove [<domains>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3102,7 +3265,7 @@ bin/magento downloadable:domains:show
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3116,7 +3279,7 @@ bin/magento downloadable:domains:show
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3130,14 +3293,13 @@ bin/magento downloadable:domains:show
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3152,7 +3314,7 @@ bin/magento downloadable:domains:show
 
 ## `encryption:payment-data:update`
 
-使用最新加密密码重新加密加密的信用卡数据。
+使用最新的加密密码重新加密已加密的信用卡数据。
 
 ```bash
 bin/magento encryption:payment-data:update
@@ -3160,7 +3322,7 @@ bin/magento encryption:payment-data:update
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3174,7 +3336,7 @@ bin/magento encryption:payment-data:update
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3188,14 +3350,612 @@ bin/magento encryption:payment-data:update
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:create-event-provider`
+
+在此实例的Adobe I/O事件中创建自定义事件提供程序。 如果不指定label和description选项，则必须在system app/etc/event-types.json文件中定义它们。
+
+```bash
+bin/magento events:create-event-provider [--label [LABEL]] [--description [DESCRIPTION]]
+```
+
+
+```bash
+bin/magento events:provider:create 
+```
+
+### `--label`
+
+用于定义自定义提供商的标签。
+
+- 接受一个值
+
+### `--description`
+
+提供商的说明。
+
+- 接受一个值
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:generate:module`
+
+根据插件列表生成模块
+
+```bash
+bin/magento events:generate:module
+```
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:info`
+
+返回指定事件的有效负载。
+
+```bash
+bin/magento events:info [--depth [DEPTH]] [--] <event-code>
+```
+
+
+### `event-code`
+
+事件代码
+
+- 必需
+
+### `--depth`
+
+要返回的事件有效负载中的级别数
+
+- 默认： `2`
+- 接受一个值
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:list`
+
+显示订阅事件的列表
+
+```bash
+bin/magento events:list
+```
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:list:all`
+
+返回在指定模块中定义的可订阅事件的列表
+
+```bash
+bin/magento events:list:all <module_name>
+```
+
+
+### `module_name`
+
+模块名称
+
+- 必需
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:metadata:populate`
+
+从配置列表（XML和应用程序配置）创建Adobe I/O元数据
+
+```bash
+bin/magento events:metadata:populate
+```
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:subscribe`
+
+订阅事件
+
+```bash
+bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [--] <event-code>
+```
+
+
+### `event-code`
+
+事件代码
+
+- 必需
+
+### `--force`, `-f`
+
+强制订阅指定的事件，即使它尚未在本地定义。
+
+- 默认： `false`
+- 不接受值
+
+### `--fields`
+
+事件数据有效负载中的字段列表。
+
+- 默认： `[]`
+- 需要一个值
+
+### `--parent`
+
+具有规则的事件订阅的父事件代码。
+
+- 需要一个值
+
+### `--rules`
+
+事件订阅的规则列表，其中每个规则的格式为“field\|operator\|value”。
+
+- 默认： `[]`
+- 需要一个值
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:sync-events-metadata`
+
+同步此实例的事件元数据
+
+```bash
+bin/magento events:sync-events-metadata [-d|--delete]
+```
+
+### `--delete`, `-d`
+
+删除事件元数据不再需要
+
+- 默认： `false`
+- 不接受值
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:unsubscribe`
+
+删除对提供的事件的订阅
+
+```bash
+bin/magento events:unsubscribe <event-code>
+```
+
+
+### `event-code`
+
+要取消订阅的事件代码
+
+- 必需
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3219,25 +3979,25 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 ### `directory`
 
-要解析的目录路径。 如果设置了 — magento标记，则不需要
+要分析的目录路径。 如果设置了 — magento标志，则不需要
 
 
 ### `--output`, `-o`
 
-输出文件的路径（包括文件名）。 未指定文件时，默认为stdout。
+输出文件的路径（包括文件名）。 未指定文件，将默认为stdout。
 
-- 需要值
+- 需要一个值
 
 ### `--magento`, `-m`
 
-使用 — magento参数解析当前Magento代码库。 如果指定了目录，请忽略参数。
+使用 — magento参数解析当前Magento代码库。 如果指定了目录，则省略参数。
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3251,7 +4011,7 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3265,14 +4025,13 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3302,27 +4061,27 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 ### `locale`
 
-字典的目标区域设置，例如“de_DE”
+词典的目标区域设置，例如“de_DE”
 
 - 必需
 
 ### `--mode`, `-m`
 
-字典的保存模式 — “replace” — 将语言包替换为新的语言包 — “merge” — 合并语言包，默认情况下为“replace”
+词典的存储模式 — “替换” — 用新语言包替换语言包 — “合并” — 合并语言包，默认为“替换”
 
 - 默认： `replace`
-- 需要值
+- 需要一个值
 
 ### `--allow-duplicates`, `-d`
 
-使用 — allow-duplicates参数可保存转换的重复项。 否则，请忽略参数。
+使用 — allow-duplicates参数可允许保存翻译的重复项。 否则，忽略参数。
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3336,7 +4095,7 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3350,14 +4109,13 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3390,14 +4148,14 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 ### `--backup-code`, `-b`
 
-备份代码和配置文件（不包括临时文件）
+进行代码和配置文件备份（不包括临时文件）
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3411,7 +4169,7 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3425,14 +4183,13 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3455,7 +4212,7 @@ bin/magento indexer:info
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3469,7 +4226,7 @@ bin/magento indexer:info
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3483,14 +4240,13 @@ bin/magento indexer:info
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3514,7 +4270,7 @@ bin/magento indexer:reindex [<index>...]
 
 ### `index`
 
-索引类型的空格分隔列表，或省略以应用于所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
 - 默认： `[]`
 
@@ -3522,7 +4278,7 @@ bin/magento indexer:reindex [<index>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3536,7 +4292,7 @@ bin/magento indexer:reindex [<index>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3550,14 +4306,13 @@ bin/magento indexer:reindex [<index>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3581,7 +4336,7 @@ bin/magento indexer:reset [<index>...]
 
 ### `index`
 
-索引类型的空格分隔列表，或省略以应用于所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
 - 默认： `[]`
 
@@ -3589,7 +4344,7 @@ bin/magento indexer:reset [<index>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3603,7 +4358,7 @@ bin/magento indexer:reset [<index>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3617,14 +4372,13 @@ bin/magento indexer:reset [<index>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3653,12 +4407,12 @@ bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 
 ### `mode`
 
-索引器维模式catalog_product_price none，website，customer_group，website_and_customer_group catalogpermissions_category none，customer_group
+索引器维度模式catalog_product_price none，website，customer_group，website_and_customer_group目录permissions_category none，customer_group
 
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3672,7 +4426,7 @@ bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3686,14 +4440,13 @@ bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3722,7 +4475,7 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 ### `index`
 
-索引类型的空格分隔列表，或省略以应用于所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
 - 默认： `[]`
 
@@ -3730,7 +4483,7 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3744,7 +4497,7 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3758,14 +4511,13 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3789,7 +4541,7 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 ### `indexer`
 
-索引类型的空格分隔列表或省略项以应用于所有索引(catalog_product_price，catalogpermissions_category)
+以空格分隔的索引类型列表，或省略以应用于所有索引(catalog_product_price、catalogpermissions_category)
 
 - 默认： `[]`
 
@@ -3797,7 +4549,7 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3811,7 +4563,7 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3825,14 +4577,13 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3856,7 +4607,7 @@ bin/magento indexer:show-mode [<index>...]
 
 ### `index`
 
-索引类型的空格分隔列表，或省略以应用于所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
 - 默认： `[]`
 
@@ -3864,7 +4615,7 @@ bin/magento indexer:show-mode [<index>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3878,7 +4629,7 @@ bin/magento indexer:show-mode [<index>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3892,14 +4643,13 @@ bin/magento indexer:show-mode [<index>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3923,7 +4673,7 @@ bin/magento indexer:status [<index>...]
 
 ### `index`
 
-索引类型的空格分隔列表，或省略以应用于所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
 - 默认： `[]`
 
@@ -3931,7 +4681,7 @@ bin/magento indexer:status [<index>...]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -3945,7 +4695,7 @@ bin/magento indexer:status [<index>...]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -3959,14 +4709,13 @@ bin/magento indexer:status [<index>...]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -3989,7 +4738,7 @@ bin/magento info:adminuri
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4003,7 +4752,7 @@ bin/magento info:adminuri
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4017,14 +4766,13 @@ bin/magento info:adminuri
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4039,7 +4787,7 @@ bin/magento info:adminuri
 
 ## `info:backups:list`
 
-打印可用备份文件的列表
+打印可用备份文件列表
 
 ```bash
 bin/magento info:backups:list
@@ -4047,7 +4795,7 @@ bin/magento info:backups:list
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4061,7 +4809,7 @@ bin/magento info:backups:list
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4075,14 +4823,13 @@ bin/magento info:backups:list
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4097,7 +4844,7 @@ bin/magento info:backups:list
 
 ## `info:currency:list`
 
-显示可用货币列表
+显示可用货币的列表
 
 ```bash
 bin/magento info:currency:list
@@ -4105,7 +4852,7 @@ bin/magento info:currency:list
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4119,7 +4866,7 @@ bin/magento info:currency:list
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4133,14 +4880,13 @@ bin/magento info:currency:list
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4155,7 +4901,7 @@ bin/magento info:currency:list
 
 ## `info:dependencies:show-framework`
 
-显示对Magento框架的依赖项数
+显示Magento框架的依赖项数量
 
 ```bash
 bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
@@ -4166,11 +4912,11 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 报表文件名
 
 - 默认： `framework-dependencies.csv`
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4184,7 +4930,7 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4198,14 +4944,13 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4231,11 +4976,11 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 报表文件名
 
 - 默认： `modules-dependencies.csv`
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4249,7 +4994,7 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4263,14 +5008,13 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4296,11 +5040,11 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 报表文件名
 
 - 默认： `modules-circular-dependencies.csv`
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4314,7 +5058,7 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4328,14 +5072,13 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4350,7 +5093,7 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 ## `info:language:list`
 
-显示可用语言区域设置列表
+显示可用语言区域设置的列表
 
 ```bash
 bin/magento info:language:list
@@ -4358,7 +5101,7 @@ bin/magento info:language:list
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4372,7 +5115,7 @@ bin/magento info:language:list
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4386,14 +5129,13 @@ bin/magento info:language:list
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4408,7 +5150,7 @@ bin/magento info:language:list
 
 ## `info:timezone:list`
 
-显示可用时区列表
+显示可用时区的列表
 
 ```bash
 bin/magento info:timezone:list
@@ -4416,7 +5158,7 @@ bin/magento info:timezone:list
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4430,7 +5172,7 @@ bin/magento info:timezone:list
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4444,14 +5186,13 @@ bin/magento info:timezone:list
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4475,7 +5216,7 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ### `compensations`
 
-格式为“”的报酬参数列表&lt;order_increment_id>:&lt;sku>:&lt;quantity>:&lt;stock-id>&quot;
+格式为“”的报酬参数列表&lt;order_increment_id>：&lt;sku>：&lt;quantity>：&lt;stock-id>”
 
 - 默认： `[]`
 
@@ -4490,7 +5231,7 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4504,7 +5245,7 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4518,14 +5259,13 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4540,7 +5280,7 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ## `inventory:reservation:list-inconsistencies`
 
-显示所有订单和产品，且符合可售数量不一致
+显示所有具有可销售数量不一致的订单和产品
 
 ```bash
 bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-i|--incomplete-orders] [-b|--bunch-size [BUNCH-SIZE]] [-r|--raw]
@@ -4548,24 +5288,24 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ### `--complete-orders`, `-c`
 
-仅显示完整订单的不一致情况
+仅显示完整订单的不一致
 
 - 默认： `false`
 - 不接受值
 
 ### `--incomplete-orders`, `-i`
 
-仅显示未完成订单的不一致情况
+仅显示不完整订单的不一致
 
 - 默认： `false`
 - 不接受值
 
 ### `--bunch-size`, `-b`
 
-定义一次加载的订单数
+定义将一次加载多少订单
 
 - 默认： `50`
-- 接受值
+- 接受一个值
 
 ### `--raw`, `-r`
 
@@ -4576,7 +5316,7 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4590,7 +5330,7 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4604,14 +5344,13 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4626,7 +5365,7 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ## `inventory-geonames:import`
 
-为源选择算法下载和导入地理名称
+下载并导入源选择算法的地理名称
 
 ```bash
 bin/magento inventory-geonames:import <countries>...
@@ -4635,7 +5374,7 @@ bin/magento inventory-geonames:import <countries>...
 
 ### `countries`
 
-要导入的国家/地区代码列表
+要导入的国家代码列表
 
 - 默认： `[]`
 
@@ -4644,7 +5383,7 @@ bin/magento inventory-geonames:import <countries>...
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4658,7 +5397,7 @@ bin/magento inventory-geonames:import <countries>...
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4672,14 +5411,13 @@ bin/magento inventory-geonames:import <countries>...
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4694,7 +5432,7 @@ bin/magento inventory-geonames:import <countries>...
 
 ## `maintenance:allow-ips`
 
-设置维护模式豁免IP
+设置维护模式免除IP
 
 ```bash
 bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<ip>...]
@@ -4725,13 +5463,13 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4745,7 +5483,7 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4759,14 +5497,13 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4792,17 +5529,17 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 允许的IP地址（使用“无”清除允许的IP列表）
 
 - 默认： `[]`
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4816,7 +5553,7 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4830,14 +5567,13 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4863,17 +5599,17 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 允许的IP地址（使用“无”清除允许的IP列表）
 
 - 默认： `[]`
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4887,7 +5623,7 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4901,14 +5637,13 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4931,13 +5666,13 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -4951,7 +5686,7 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -4965,14 +5700,13 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -4995,7 +5729,7 @@ bin/magento media-content:sync
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5009,7 +5743,7 @@ bin/magento media-content:sync
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5023,14 +5757,13 @@ bin/magento media-content:sync
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5053,7 +5786,7 @@ bin/magento media-gallery:sync
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5067,7 +5800,7 @@ bin/magento media-gallery:sync
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5081,14 +5814,13 @@ bin/magento media-gallery:sync
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5103,7 +5835,7 @@ bin/magento media-gallery:sync
 
 ## `module:config:status`
 
-检查“app/etc/config.php”文件和报告中的模块配置是否为最新
+检查“app/etc/config.php”文件中的模块配置，并报告它们是否为最新版本
 
 ```bash
 bin/magento module:config:status
@@ -5111,7 +5843,7 @@ bin/magento module:config:status
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5125,7 +5857,7 @@ bin/magento module:config:status
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5139,14 +5871,13 @@ bin/magento module:config:status
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5170,7 +5901,7 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 ### `module`
 
-模块的名称
+模块名称
 
 - 默认： `[]`
 
@@ -5192,20 +5923,20 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 ### `--clear-static-content`, `-c`
 
-清除生成的静态视图文件。 如果模块具有静态视图文件，则需要
+清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
 - 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5219,7 +5950,7 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5233,14 +5964,13 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5264,7 +5994,7 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 ### `module`
 
-模块的名称
+模块名称
 
 - 默认： `[]`
 
@@ -5286,20 +6016,20 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 ### `--clear-static-content`, `-c`
 
-清除生成的静态视图文件。 如果模块具有静态视图文件，则需要
+清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
 - 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5313,7 +6043,7 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5327,14 +6057,13 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5380,13 +6109,13 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5400,7 +6129,7 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5414,14 +6143,13 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5445,7 +6173,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ### `module`
 
-模块的名称
+模块名称
 
 - 默认： `[]`
 
@@ -5461,7 +6189,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ### `--backup-code`
 
-备份代码和配置文件（不包括临时文件）
+进行代码和配置文件备份（不包括临时文件）
 
 - 默认： `false`
 - 不接受值
@@ -5475,34 +6203,34 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ### `--backup-db`
 
-完成数据库备份
+进行完整的数据库备份
 
 - 默认： `false`
 - 不接受值
 
 ### `--non-composer`
 
-所有将在此过去的模块都将基于非编辑器
+此处过去的所有模块都将基于非编辑器
 
 - 默认： `false`
 - 不接受值
 
 ### `--clear-static-content`, `-c`
 
-清除生成的静态视图文件。 如果模块具有静态视图文件，则需要
+清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
 - 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5516,7 +6244,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5530,14 +6258,13 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5552,7 +6279,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ## `newrelic:create:deploy-marker`
 
-检查部署队列中的条目，并创建相应的部署标记。
+检查部署队列中的条目，并创建适当的部署标记。
 
 ```bash
 bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revision>]]
@@ -5578,12 +6305,12 @@ bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revis
 
 ### `revision`
 
-修订
+修订版
 
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5597,7 +6324,7 @@ bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revis
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5611,14 +6338,13 @@ bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revis
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5641,7 +6367,7 @@ bin/magento queue:consumers:list
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5655,7 +6381,7 @@ bin/magento queue:consumers:list
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5669,14 +6395,70 @@ bin/magento queue:consumers:list
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `queue:consumers:restart`
+
+重新启动MessageQueue使用者
+
+```bash
+bin/magento queue:consumers:restart
+```
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5706,21 +6488,21 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 
 ### `--max-messages`
 
-用户在处理结束前要处理的消息数。 如果未指定 — 在处理所有排队的消息后终止。
+进程终止前使用者要处理的消息数。 如果未指定 — 在处理所有排队消息后终止。
 
-- 需要值
+- 需要一个值
 
 ### `--batch-size`
 
-每批消息的数量。 仅适用于批量客户。
+每批次的消息数。 仅适用于批处理消费者。
 
-- 需要值
+- 需要一个值
 
 ### `--area-code`
 
-首选区域（全局、管理员等）默认为全局。
+首选区域（global、adminhtml等）的默认值为global。
 
-- 需要值
+- 需要一个值
 
 ### `--single-thread`
 
@@ -5731,19 +6513,19 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 
 ### `--multi-process`
 
-每个消费者的进程数。
+每个使用者的进程数。
 
-- 接受值
+- 接受一个值
 
 ### `--pid-file-path`
 
-用于保存PID的文件路径（此选项已弃用，请改用单线程）
+用于保存PID的文件路径（此选项已弃用，请改用 — 单线程）
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5757,7 +6539,7 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5771,14 +6553,13 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5801,7 +6582,7 @@ bin/magento remote-storage:sync
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5815,7 +6596,7 @@ bin/magento remote-storage:sync
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5829,14 +6610,13 @@ bin/magento remote-storage:sync
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5866,7 +6646,7 @@ bin/magento sampledata:deploy [--no-update]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5880,7 +6660,7 @@ bin/magento sampledata:deploy [--no-update]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5894,14 +6674,13 @@ bin/magento sampledata:deploy [--no-update]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5931,7 +6710,7 @@ bin/magento sampledata:remove [--no-update]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -5945,7 +6724,7 @@ bin/magento sampledata:remove [--no-update]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -5959,14 +6738,13 @@ bin/magento sampledata:remove [--no-update]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -5989,7 +6767,7 @@ bin/magento sampledata:reset
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6003,7 +6781,7 @@ bin/magento sampledata:reset
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6017,14 +6795,13 @@ bin/magento sampledata:reset
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -6039,7 +6816,7 @@ bin/magento sampledata:reset
 
 ## `security:recaptcha:disable-for-user-forgot-password`
 
-为管理员用户禁用reCAPTCHA忘记密码表单
+禁用管理员用户忘记密码表单的reCAPTCHA
 
 ```bash
 bin/magento security:recaptcha:disable-for-user-forgot-password
@@ -6047,7 +6824,7 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6061,7 +6838,7 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6075,14 +6852,13 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -6097,7 +6873,7 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ## `security:recaptcha:disable-for-user-login`
 
-为管理员用户登录表单禁用reCAPTCHA
+禁用管理员用户登录表单的reCAPTCHA
 
 ```bash
 bin/magento security:recaptcha:disable-for-user-login
@@ -6105,7 +6881,7 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6119,7 +6895,7 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6133,14 +6909,13 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -6155,7 +6930,7 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ## `security:tfa:google:set-secret`
 
-设置用于Google OTP生成的密钥。
+设置用于生成Google OTP的密码。
 
 ```bash
 bin/magento security:tfa:google:set-secret <user> <secret>
@@ -6176,7 +6951,7 @@ bin/magento security:tfa:google:set-secret <user> <secret>
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6190,7 +6965,7 @@ bin/magento security:tfa:google:set-secret <user> <secret>
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6204,14 +6979,13 @@ bin/magento security:tfa:google:set-secret <user> <secret>
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -6234,7 +7008,7 @@ bin/magento security:tfa:providers
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6248,7 +7022,7 @@ bin/magento security:tfa:providers
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6262,14 +7036,13 @@ bin/magento security:tfa:providers
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -6284,7 +7057,7 @@ bin/magento security:tfa:providers
 
 ## `security:tfa:reset`
 
-为一个用户重置配置
+重置一个用户的配置
 
 ```bash
 bin/magento security:tfa:reset <user> <provider>
@@ -6305,7 +7078,7 @@ bin/magento security:tfa:reset <user> <provider>
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6319,7 +7092,7 @@ bin/magento security:tfa:reset <user> <provider>
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6333,14 +7106,13 @@ bin/magento security:tfa:reset <user> <provider>
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -6355,7 +7127,7 @@ bin/magento security:tfa:reset <user> <provider>
 
 ## `setup:backup`
 
-备份Magento应用程序代码库、媒体和数据库
+对Magento应用程序代码库、介质和数据库进行备份
 
 ```bash
 bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -6363,7 +7135,7 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 ### `--code`
 
-备份代码和配置文件（不包括临时文件）
+进行代码和配置文件备份（不包括临时文件）
 
 - 默认： `false`
 - 不接受值
@@ -6377,20 +7149,20 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 ### `--db`
 
-完成数据库备份
+进行完整的数据库备份
 
 - 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6404,7 +7176,7 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6418,14 +7190,13 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -6443,209 +7214,215 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 创建或修改部署配置
 
 ```bash
-bin/magento setup:config:set [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--magento-init-params MAGENTO-INIT-PARAMS]
+bin/magento setup:config:set [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--id_salt ID_SALT] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
 
 ### `--backend-frontname`
 
-后端Frontname（如果缺少，将自动生成）
+后端前端名称（如果缺少，将自动生成）
 
-- 需要值
+- 需要一个值
 
 ### `--enable-debug-logging`
 
 启用调试日志记录
 
-- 需要值
+- 需要一个值
 
 ### `--enable-syslog-logging`
 
-启用Syslog日志记录
+启用syslog日志记录
 
-- 需要值
+- 需要一个值
+
+### `--id_salt`
+
+GraphQl盐
+
+- 需要一个值
 
 ### `--remote-storage-driver`
 
 远程存储驱动程序
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-prefix`
 
 远程存储前缀
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-endpoint`
 
 远程存储端点
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-bucket`
 
 远程存储段
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-region`
 
 远程存储区域
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-key`
 
 远程存储访问密钥
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-secret`
 
 远程存储密钥
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-path-style`
 
 远程存储路径样式
 
 - 默认： `0`
-- 需要值
+- 需要一个值
 
 ### `--checkout-async`
 
 是否启用异步订单处理？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--amqp-host`
 
 Amqp服务器主机
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-port`
 
 Amqp服务器端口
 
 - 默认： `5672`
-- 需要值
+- 需要一个值
 
 ### `--amqp-user`
 
 Amqp服务器用户名
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-password`
 
 Amqp服务器密码
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-virtualhost`
 
 Amqp virtualhost
 
 - 默认： `/`
-- 需要值
+- 需要一个值
 
 ### `--amqp-ssl`
 
 Amqp SSL
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-ssl-options`
 
 Amqp SSL选项(JSON)
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--consumers-wait-for-messages`
 
-消费者是否应等待队列中的消息？ 1 — 是，0 — 否
+消费者是否应该等待队列中的消息？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--queue-default-connection`
 
-消息队列默认连接。 可以是“db”、“amqp”或自定义队列系统。必须安装和配置队列系统，否则无法正确处理消息。
+消息队列默认连接。 可以是“db”、“amqp”或自定义队列系统。必须安装和配置队列系统，否则将无法正确处理消息。
 
-- 需要值
+- 需要一个值
 
 ### `--deferred-total-calculating`
 
-是否启用延期总计计算？ 1 — 是，0 — 否
+是否启用延迟总计计算？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--key`
 
 加密密钥
 
-- 需要值
+- 需要一个值
 
 ### `--db-host`
 
 数据库服务器主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-name`
 
 数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--db-user`
 
 数据库服务器用户名
 
-- 需要值
+- 需要一个值
 
 ### `--db-engine`
 
 数据库服务器引擎
 
-- 需要值
+- 需要一个值
 
 ### `--db-password`
 
 数据库服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--db-prefix`
 
 数据库表前缀
 
-- 需要值
+- 需要一个值
 
 ### `--db-model`
 
 数据库类型
 
-- 需要值
+- 需要一个值
 
 ### `--db-init-statements`
 
 数据库初始命令集
 
-- 需要值
+- 需要一个值
 
 ### `--skip-db-validation`, `-s`
 
-如果已指定，则会跳过数据库连接验证
+如果已指定，则将跳过数据库连接验证
 
 - 默认： `false`
 - 不接受值
@@ -6654,28 +7431,28 @@ Amqp SSL选项(JSON)
 
 http缓存主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-ssl-key`
 
-客户端密钥文件的完整路径，以通过SSL建立数据库连接
+用于通过SSL建立数据库连接的客户端密钥文件的完整路径
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-cert`
 
-客户端证书文件的完整路径，以通过SSL建立数据库连接
+客户端证书文件的完整路径，用于通过SSL建立数据库连接
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-ca`
 
-服务器证书文件的完整路径，以通过SSL建立数据库连接
+用于通过SSL建立数据库连接的服务器证书文件的完整路径
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-verify`
 
@@ -6688,187 +7465,187 @@ http缓存主机
 
 会话保存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-host`
 
-完全限定的主机名、 IP地址或绝对路径（如果使用UNIX套接字）
+完全限定主机名、IP地址或绝对路径（如果使用UNIX套接字）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-port`
 
 Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-password`
 
-密文服务器密码
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-timeout`
 
 连接超时（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-persistent-id`
 
 用于启用永久连接的唯一字符串
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-db`
 
 Redis数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-threshold`
 
 Redis压缩阈值
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-lib`
 
 Redis压缩库。 值：gzip（默认）、lzf、lz4、snappy
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-log-level`
 
-红色日志级别。 值：0（最少详细）到7（最详细）
+Redis日志级别。 值： 0（最少详细）到7（最详细）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-concurrency`
 
 可等待一个会话锁定的最大进程数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-frontend`
 
-尝试为前端会话断开锁定之前需要等待的秒数
+尝试破解前端会话锁定之前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-adminhtml`
 
-尝试为管理员会话断开锁定之前需要等待的秒数
+尝试解除管理员会话锁定前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-first-lifetime`
 
-首次写入时非机器人会话的生命周期（以秒为单位）（使用0表示禁用）
+非机器人在首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-first-lifetime`
 
-首次写入时的机器人会话的生命周期（以秒为单位）（使用0禁用）
+机器人首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-lifetime`
 
-后续写入时机器人的会话生命周期（使用0禁用）
+机器人后续写入会话的生命周期（使用0禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-disable-locking`
 
-雷迪斯禁用锁定。 值：false（默认），true
+Redis禁用锁定。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-min-lifetime`
 
 Redis最小会话生命周期，以秒为单位
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-lifetime`
 
-Redis最大会话生命周期，以秒为单位
+Redis最长会话生命周期（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-master`
 
-雷迪斯哨兵主控
+Redis Sentinel主控
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-servers`
 
-Redis Sentinel服务器，以逗号分隔
+Redis Sentinel服务器，逗号分隔
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-verify-master`
 
-雷迪斯哨兵确认主控。 值：false（默认）， true
+雷迪斯·森蒂纳尔确认主控。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-connect-retries`
 
 Redis Sentinel连接重试。
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend`
 
 默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-server`
 
 Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-db`
 
 高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-port`
 
 Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-password`
 
-密文服务器密码
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compress-data`
 
-设置为0可禁用压缩（默认为1，已启用）
+设置为0可禁用压缩（默认值为1，已启用）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compression-lib`
 
-要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空以自动确定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-id-prefix`
 
 缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--allow-parallel-generation`
 
@@ -6881,95 +7658,95 @@ Redis服务器侦听端口
 
 默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-server`
 
 Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-db`
 
 高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-port`
 
 Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-password`
 
-密文服务器密码
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compress-data`
 
-设置为1可压缩完整页面缓存（使用0可禁用）
+设置为1可压缩全页缓存（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compression-lib`
 
-要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空以自动确定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-id-prefix`
 
 缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--lock-provider`
 
 锁定提供程序名称
 
-- 需要值
+- 需要一个值
 
 ### `--lock-db-prefix`
 
 安装特定的锁定前缀以避免锁定冲突
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-host`
 
-用于连接到Zookeeper群集的主机和端口。 例如：127.0.0.1:2181
+用于连接到Zookeeper群集的主机和端口。 例如： 127.0.0.1:2181
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-path`
 
-Zookeeper将保存锁的路径。 默认路径为：/magento/locks
+Zookeeper将保存锁的路径。 默认路径为： /magento/locks
 
-- 需要值
+- 需要一个值
 
 ### `--lock-file-path`
 
-保存文件锁定的路径。
+将保存文件锁定的路径。
 
-- 需要值
+- 需要一个值
 
 ### `--document-root-is-pub`
 
-显示为Pub的标志位于根上，只能为true或false
+要显示的标志是Pub位于根目录下，只能为true或false
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -6983,7 +7760,7 @@ Zookeeper将保存锁的路径。 默认路径为：/magento/locks
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -6997,14 +7774,13 @@ Zookeeper将保存锁的路径。 默认路径为：/magento/locks
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7027,13 +7803,13 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7047,7 +7823,7 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7061,14 +7837,13 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7107,18 +7882,18 @@ bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--t
 检查修补程序是否可还原。
 
 - 默认： `false`
-- 接受值
+- 接受一个值
 
 ### `--type`
 
-了解应生成哪种类型的修补程序。 可用值： `data`, `schema`.
+了解应生成的修补程序类型。 可用值： `data`， `schema`.
 
 - 默认： `data`
-- 接受值
+- 接受一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7132,7 +7907,7 @@ bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--t
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7146,14 +7921,13 @@ bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--t
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7176,14 +7950,14 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 ### `--module-name`
 
-将在其中生成白名单的模块的名称
+将生成白名单的模块的名称
 
 - 默认： `all`
-- 接受值
+- 接受一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7197,7 +7971,7 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7211,14 +7985,13 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7233,7 +8006,7 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 ## `setup:db-schema:add-slave`
 
-将结帐报价相关表移动到单独的数据库服务器
+将与签出引号相关的表移动到单独的数据库服务器
 
 ```bash
 bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--maxAllowedLag [MAXALLOWEDLAG]] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -7241,60 +8014,60 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 ### `--host`
 
-从数据库服务器主机
+从属数据库服务器主机
 
 - 默认： `localhost`
-- 需要值
+- 需要一个值
 
 ### `--dbname`
 
-从数据库名称
+从属数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--username`
 
-从数据库用户名
+从属数据库用户名
 
 - 默认： `root`
-- 需要值
+- 需要一个值
 
 ### `--password`
 
-从数据库用户密码
+从属数据库用户密码
 
-- 接受值
+- 接受一个值
 
 ### `--connection`
 
-从连接名称
+从属连接名称
 
 - 默认： `default`
-- 接受值
+- 接受一个值
 
 ### `--resource`
 
-从资源名称
+从属资源名称
 
 - 默认： `default`
-- 接受值
+- 接受一个值
 
 ### `--maxAllowedLag`
 
-允许的最大延迟从连接（以秒为单位）
+允许的最大滞后从连接（以秒为单位）
 
-- 默认：&quot;
-- 接受值
+- 默认：“
+- 接受一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7308,7 +8081,7 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7322,14 +8095,13 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7344,7 +8116,7 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 ## `setup:db-schema:split-quote`
 
-将结帐报价相关表移动到单独的数据库服务器。 自2.4.2起已弃用，将删除
+将与签出引号相关的表移动到单独的DB服务器。 自2.4.2起已弃用，将删除
 
 ```bash
 bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -7352,51 +8124,51 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 ### `--host`
 
-结帐数据库服务器主机
+签出数据库服务器主机
 
-- 需要值
+- 需要一个值
 
 ### `--dbname`
 
-结帐数据库名称
+签出数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--username`
 
-结帐数据库用户名
+签出数据库用户名
 
-- 需要值
+- 需要一个值
 
 ### `--password`
 
-结帐数据库用户密码
+签出数据库用户密码
 
-- 接受值
+- 接受一个值
 
 ### `--connection`
 
-结帐连接名称
+签出连接名称
 
 - 默认： `checkout`
-- 接受值
+- 接受一个值
 
 ### `--resource`
 
-结帐资源名称
+签出资源名称
 
 - 默认： `checkout`
-- 接受值
+- 接受一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7410,7 +8182,7 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7424,14 +8196,13 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7456,49 +8227,49 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 销售数据库服务器主机
 
-- 需要值
+- 需要一个值
 
 ### `--dbname`
 
 销售数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--username`
 
 销售数据库用户名
 
-- 需要值
+- 需要一个值
 
 ### `--password`
 
 销售数据库用户密码
 
-- 接受值
+- 接受一个值
 
 ### `--connection`
 
 销售连接名称
 
 - 默认： `sales`
-- 接受值
+- 接受一个值
 
 ### `--resource`
 
 销售资源名称
 
 - 默认： `sales`
-- 接受值
+- 接受一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7512,7 +8283,7 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7526,14 +8297,13 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7559,17 +8329,17 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 允许将旧脚本(InstallSchema、UpgradeSchema)转换为db_schema.xml格式
 
 - 默认： `false`
-- 接受值
+- 接受一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7583,7 +8353,7 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7597,14 +8367,13 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7627,13 +8396,13 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7647,7 +8416,7 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7661,14 +8430,13 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7691,7 +8459,7 @@ bin/magento setup:di:compile
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -7705,7 +8473,7 @@ bin/magento setup:di:compile
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -7719,14 +8487,13 @@ bin/magento setup:di:compile
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -7744,209 +8511,215 @@ bin/magento setup:di:compile
 安装Magento应用程序
 
 ```bash
-bin/magento setup:install [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--admin-user [ADMIN-USER]] [--admin-password [ADMIN-PASSWORD]] [--admin-email [ADMIN-EMAIL]] [--admin-firstname [ADMIN-FIRSTNAME]] [--admin-lastname [ADMIN-LASTNAME]] [--search-engine SEARCH-ENGINE] [--elasticsearch-host ELASTICSEARCH-HOST] [--elasticsearch-port ELASTICSEARCH-PORT] [--elasticsearch-enable-auth ELASTICSEARCH-ENABLE-AUTH] [--elasticsearch-username ELASTICSEARCH-USERNAME] [--elasticsearch-password ELASTICSEARCH-PASSWORD] [--elasticsearch-index-prefix ELASTICSEARCH-INDEX-PREFIX] [--elasticsearch-timeout ELASTICSEARCH-TIMEOUT] [--cleanup-database] [--sales-order-increment-prefix SALES-ORDER-INCREMENT-PREFIX] [--use-sample-data] [--enable-modules [ENABLE-MODULES]] [--disable-modules [DISABLE-MODULES]] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [-i|--interactive] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
+bin/magento setup:install [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--id_salt ID_SALT] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--admin-user [ADMIN-USER]] [--admin-password [ADMIN-PASSWORD]] [--admin-email [ADMIN-EMAIL]] [--admin-firstname [ADMIN-FIRSTNAME]] [--admin-lastname [ADMIN-LASTNAME]] [--search-engine SEARCH-ENGINE] [--elasticsearch-host ELASTICSEARCH-HOST] [--elasticsearch-port ELASTICSEARCH-PORT] [--elasticsearch-enable-auth ELASTICSEARCH-ENABLE-AUTH] [--elasticsearch-username ELASTICSEARCH-USERNAME] [--elasticsearch-password ELASTICSEARCH-PASSWORD] [--elasticsearch-index-prefix ELASTICSEARCH-INDEX-PREFIX] [--elasticsearch-timeout ELASTICSEARCH-TIMEOUT] [--opensearch-host OPENSEARCH-HOST] [--opensearch-port OPENSEARCH-PORT] [--opensearch-enable-auth OPENSEARCH-ENABLE-AUTH] [--opensearch-username OPENSEARCH-USERNAME] [--opensearch-password OPENSEARCH-PASSWORD] [--opensearch-index-prefix OPENSEARCH-INDEX-PREFIX] [--opensearch-timeout OPENSEARCH-TIMEOUT] [--cleanup-database] [--sales-order-increment-prefix SALES-ORDER-INCREMENT-PREFIX] [--use-sample-data] [--enable-modules [ENABLE-MODULES]] [--disable-modules [DISABLE-MODULES]] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [-i|--interactive] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
 
 ### `--backend-frontname`
 
-后端Frontname（如果缺少，将自动生成）
+后端前端名称（如果缺少，将自动生成）
 
-- 需要值
+- 需要一个值
 
 ### `--enable-debug-logging`
 
 启用调试日志记录
 
-- 需要值
+- 需要一个值
 
 ### `--enable-syslog-logging`
 
-启用Syslog日志记录
+启用syslog日志记录
 
-- 需要值
+- 需要一个值
+
+### `--id_salt`
+
+GraphQl盐
+
+- 需要一个值
 
 ### `--remote-storage-driver`
 
 远程存储驱动程序
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-prefix`
 
 远程存储前缀
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-endpoint`
 
 远程存储端点
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-bucket`
 
 远程存储段
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-region`
 
 远程存储区域
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-key`
 
 远程存储访问密钥
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-secret`
 
 远程存储密钥
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-path-style`
 
 远程存储路径样式
 
 - 默认： `0`
-- 需要值
+- 需要一个值
 
 ### `--checkout-async`
 
 是否启用异步订单处理？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--amqp-host`
 
 Amqp服务器主机
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-port`
 
 Amqp服务器端口
 
 - 默认： `5672`
-- 需要值
+- 需要一个值
 
 ### `--amqp-user`
 
 Amqp服务器用户名
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-password`
 
 Amqp服务器密码
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-virtualhost`
 
 Amqp virtualhost
 
 - 默认： `/`
-- 需要值
+- 需要一个值
 
 ### `--amqp-ssl`
 
 Amqp SSL
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-ssl-options`
 
 Amqp SSL选项(JSON)
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--consumers-wait-for-messages`
 
-消费者是否应等待队列中的消息？ 1 — 是，0 — 否
+消费者是否应该等待队列中的消息？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--queue-default-connection`
 
-消息队列默认连接。 可以是“db”、“amqp”或自定义队列系统。必须安装和配置队列系统，否则无法正确处理消息。
+消息队列默认连接。 可以是“db”、“amqp”或自定义队列系统。必须安装和配置队列系统，否则将无法正确处理消息。
 
-- 需要值
+- 需要一个值
 
 ### `--deferred-total-calculating`
 
-是否启用延期总计计算？ 1 — 是，0 — 否
+是否启用延迟总计计算？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--key`
 
 加密密钥
 
-- 需要值
+- 需要一个值
 
 ### `--db-host`
 
 数据库服务器主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-name`
 
 数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--db-user`
 
 数据库服务器用户名
 
-- 需要值
+- 需要一个值
 
 ### `--db-engine`
 
 数据库服务器引擎
 
-- 需要值
+- 需要一个值
 
 ### `--db-password`
 
 数据库服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--db-prefix`
 
 数据库表前缀
 
-- 需要值
+- 需要一个值
 
 ### `--db-model`
 
 数据库类型
 
-- 需要值
+- 需要一个值
 
 ### `--db-init-statements`
 
 数据库初始命令集
 
-- 需要值
+- 需要一个值
 
 ### `--skip-db-validation`, `-s`
 
-如果已指定，则会跳过数据库连接验证
+如果已指定，则将跳过数据库连接验证
 
 - 默认： `false`
 - 不接受值
@@ -7955,28 +8728,28 @@ Amqp SSL选项(JSON)
 
 http缓存主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-ssl-key`
 
-客户端密钥文件的完整路径，以通过SSL建立数据库连接
+用于通过SSL建立数据库连接的客户端密钥文件的完整路径
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-cert`
 
-客户端证书文件的完整路径，以通过SSL建立数据库连接
+客户端证书文件的完整路径，用于通过SSL建立数据库连接
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-ca`
 
-服务器证书文件的完整路径，以通过SSL建立数据库连接
+用于通过SSL建立数据库连接的服务器证书文件的完整路径
 
-- 默认：&quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-verify`
 
@@ -7989,187 +8762,187 @@ http缓存主机
 
 会话保存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-host`
 
-完全限定的主机名、 IP地址或绝对路径（如果使用UNIX套接字）
+完全限定主机名、IP地址或绝对路径（如果使用UNIX套接字）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-port`
 
 Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-password`
 
-密文服务器密码
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-timeout`
 
 连接超时（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-persistent-id`
 
 用于启用永久连接的唯一字符串
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-db`
 
 Redis数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-threshold`
 
 Redis压缩阈值
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-lib`
 
 Redis压缩库。 值：gzip（默认）、lzf、lz4、snappy
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-log-level`
 
-红色日志级别。 值：0（最少详细）到7（最详细）
+Redis日志级别。 值： 0（最少详细）到7（最详细）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-concurrency`
 
 可等待一个会话锁定的最大进程数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-frontend`
 
-尝试为前端会话断开锁定之前需要等待的秒数
+尝试破解前端会话锁定之前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-adminhtml`
 
-尝试为管理员会话断开锁定之前需要等待的秒数
+尝试解除管理员会话锁定前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-first-lifetime`
 
-首次写入时非机器人会话的生命周期（以秒为单位）（使用0表示禁用）
+非机器人在首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-first-lifetime`
 
-首次写入时的机器人会话的生命周期（以秒为单位）（使用0禁用）
+机器人首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-lifetime`
 
-后续写入时机器人的会话生命周期（使用0禁用）
+机器人后续写入会话的生命周期（使用0禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-disable-locking`
 
-雷迪斯禁用锁定。 值：false（默认），true
+Redis禁用锁定。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-min-lifetime`
 
 Redis最小会话生命周期，以秒为单位
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-lifetime`
 
-Redis最大会话生命周期，以秒为单位
+Redis最长会话生命周期（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-master`
 
-雷迪斯哨兵主控
+Redis Sentinel主控
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-servers`
 
-Redis Sentinel服务器，以逗号分隔
+Redis Sentinel服务器，逗号分隔
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-verify-master`
 
-雷迪斯哨兵确认主控。 值：false（默认）， true
+雷迪斯·森蒂纳尔确认主控。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-connect-retries`
 
 Redis Sentinel连接重试。
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend`
 
 默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-server`
 
 Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-db`
 
 高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-port`
 
 Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-password`
 
-密文服务器密码
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compress-data`
 
-设置为0可禁用压缩（默认为1，已启用）
+设置为0可禁用压缩（默认值为1，已启用）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compression-lib`
 
-要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空以自动确定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-id-prefix`
 
 缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--allow-parallel-generation`
 
@@ -8182,221 +8955,263 @@ Redis服务器侦听端口
 
 默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-server`
 
 Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-db`
 
 高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-port`
 
 Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-password`
 
-密文服务器密码
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compress-data`
 
-设置为1可压缩完整页面缓存（使用0可禁用）
+设置为1可压缩全页缓存（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compression-lib`
 
-要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空以自动确定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-id-prefix`
 
 缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--lock-provider`
 
 锁定提供程序名称
 
-- 需要值
+- 需要一个值
 
 ### `--lock-db-prefix`
 
 安装特定的锁定前缀以避免锁定冲突
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-host`
 
-用于连接到Zookeeper群集的主机和端口。 例如：127.0.0.1:2181
+用于连接到Zookeeper群集的主机和端口。 例如： 127.0.0.1:2181
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-path`
 
-Zookeeper将保存锁的路径。 默认路径为：/magento/locks
+Zookeeper将保存锁的路径。 默认路径为： /magento/locks
 
-- 需要值
+- 需要一个值
 
 ### `--lock-file-path`
 
-保存文件锁定的路径。
+将保存文件锁定的路径。
 
-- 需要值
+- 需要一个值
 
 ### `--document-root-is-pub`
 
-显示为Pub的标志位于根上，只能为true或false
+要显示的标志是Pub位于根目录下，只能为true或false
 
-- 需要值
+- 需要一个值
 
 ### `--base-url`
 
-应在上提供商店的URL。 已弃用，请使用config:set中包含路径web/unsecure/base_url
+商店应位于的URL。 已弃用，请使用config：set以及路径web/unsecure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--language`
 
-默认语言代码。 已弃用，请使用config:set中包含路径常规/区域设置/代码
+默认语言代码。 已弃用，请使用config：set以及路径general/locale/code
 
-- 需要值
+- 需要一个值
 
 ### `--timezone`
 
-默认时区代码。 已弃用，请使用config:set（包含路径常规/区域设置/时区）
+默认时区代码。 已弃用，请使用config：set和path general/locale/timezone
 
-- 需要值
+- 需要一个值
 
 ### `--currency`
 
-默认货币代码。 已弃用，请使用config:set with path currency/options/base、currency/options/default和currency/options/allow
+默认货币代码。 已弃用，请使用config：set以及路径currency/options/base、currency/options/default和currency/options/allow
 
-- 需要值
+- 需要一个值
 
 ### `--use-rewrites`
 
-使用重写。 已弃用，请使用config:set中包含路径web/seo/use_rewrites
+使用重写。 已弃用，请使用config：set以及路径web/seo/use_rewrites
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure`
 
-使用安全URL。 仅当SSL可用时，才启用此选项。 已弃用，请使用config:set（路径为web/secure/use_in_frontend）
+使用安全URL。 仅当SSL可用时启用此选项。 已弃用，请使用config：set以及路径web/secure/use_in_frontend
 
-- 需要值
+- 需要一个值
 
 ### `--base-url-secure`
 
-SSL连接的基本URL。 已弃用，请使用config:set与路径web/secure/base_url一起使用
+SSL连接的基本URL。 已弃用，请使用config：set以及路径web/secure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure-admin`
 
-使用SSL运行管理界面。 已弃用，请使用config:set并路径web/secure/use_in_adminhtml
+使用SSL运行管理界面。 已弃用，请使用config：set以及路径web/secure/use_in_adminhtml
 
-- 需要值
+- 需要一个值
 
 ### `--admin-use-security-key`
 
-是否在Magento管理URL和表单中使用“安全密钥”功能。 已弃用，请使用config:set和路径admin/security/use_form_key
+是否在Magento管理员URL和表单中使用“安全密钥”功能。 已弃用，请使用config：set和path admin/security/use_form_key
 
-- 需要值
+- 需要一个值
 
 ### `--admin-user`
 
 管理员用户
 
-- 接受值
+- 接受一个值
 
 ### `--admin-password`
 
 管理员密码
 
-- 接受值
+- 接受一个值
 
 ### `--admin-email`
 
 管理员电子邮件
 
-- 接受值
+- 接受一个值
 
 ### `--admin-firstname`
 
 管理员名字
 
-- 接受值
+- 接受一个值
 
 ### `--admin-lastname`
 
 管理员姓氏
 
-- 接受值
+- 接受一个值
 
 ### `--search-engine`
 
-搜索引擎。 值：elasticsearch5, elasticsearch6, elasticsearch7
+搜索引擎。 值：elasticsearch5、elasticsearch7、elasticsearch8、opensearch
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-host`
 
 Elasticsearch服务器主机。
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-port`
 
-Elasticsearch服务器端口。
+服务器端口Elasticsearch。
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-enable-auth`
 
-设置为1可启用身份验证。 （默认为0，禁用）
+设置为1可启用身份验证。 （默认值为0，已禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-username`
 
-Elasticsearch用户名。 仅在启用HTTP身份验证时适用
+用户名Elasticsearch。 仅在启用HTTP身份验证时适用
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-password`
 
-Elasticsearch密码。 仅在启用HTTP身份验证时适用
+密码Elasticsearch。 仅在启用HTTP身份验证时适用
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-index-prefix`
 
-Elasticsearch索引前缀。
+索引前缀Elasticsearch。
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-timeout`
 
 Elasticsearch服务器超时。
 
-- 需要值
+- 需要一个值
+
+### `--opensearch-host`
+
+OpenSearch服务器主机。
+
+- 需要一个值
+
+### `--opensearch-port`
+
+OpenSearch服务器端口。
+
+- 需要一个值
+
+### `--opensearch-enable-auth`
+
+设置为1可启用身份验证。 （默认值为0，已禁用）
+
+- 需要一个值
+
+### `--opensearch-username`
+
+OpenSearch用户名。 仅在启用HTTP身份验证时适用
+
+- 需要一个值
+
+### `--opensearch-password`
+
+OpenSearch密码。 仅在启用HTTP身份验证时适用
+
+- 需要一个值
+
+### `--opensearch-index-prefix`
+
+OpenSearch索引前缀。
+
+- 需要一个值
+
+### `--opensearch-timeout`
+
+OpenSearch服务器超时。
+
+- 需要一个值
 
 ### `--cleanup-database`
 
-在安装前清理数据库
+在安装之前清理数据库
 
 - 默认： `false`
 - 不接受值
@@ -8405,7 +9220,7 @@ Elasticsearch服务器超时。
 
 销售订单编号前缀
 
-- 需要值
+- 需要一个值
 
 ### `--use-sample-data`
 
@@ -8416,22 +9231,22 @@ Elasticsearch服务器超时。
 
 ### `--enable-modules`
 
-以逗号分隔的模块名称列表。 必须在安装过程中包含该参数。 可用的魔术参数“all”。
+以逗号分隔的模块名称列表。 安装过程中必须包括此项。 可用的魔法参数“all”。
 
-- 接受值
+- 接受一个值
 
 ### `--disable-modules`
 
-以逗号分隔的模块名称列表。 在安装过程中必须避免出现这种情况。 可用的魔术参数“all”。
+以逗号分隔的模块名称列表。 在安装过程中必须避免出现这种情况。 可用的魔法参数“all”。
 
-- 接受值
+- 接受一个值
 
 ### `--convert-old-scripts`
 
 允许将旧脚本(InstallSchema、UpgradeSchema)转换为db_schema.xml格式
 
 - 默认： `false`
-- 接受值
+- 接受一个值
 
 ### `--interactive`, `-i`
 
@@ -8442,32 +9257,32 @@ Elasticsearch服务器超时。
 
 ### `--safe-mode`
 
-在破坏性操作（如删除列）上安全安装包含转储的Magento
+在破坏性操作（如删除列）中安全安装带有转储的Magento
 
-- 接受值
+- 接受一个值
 
 ### `--data-restore`
 
 从转储中恢复已删除的数据
 
-- 接受值
+- 接受一个值
 
 ### `--dry-run`
 
-Magento安装将以干式运行模式运行
+Magento安装将在模拟运行模式下运行
 
 - 默认： `false`
-- 接受值
+- 接受一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -8481,7 +9296,7 @@ Magento安装将以干式运行模式运行
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -8495,14 +9310,13 @@ Magento安装将以干式运行模式运行
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -8539,7 +9353,7 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -8553,7 +9367,7 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -8567,14 +9381,13 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -8597,31 +9410,31 @@ bin/magento setup:rollback [-c|--code-file CODE-FILE] [-m|--media-file MEDIA-FIL
 
 ### `--code-file`, `-c`
 
-var/backups中代码备份文件的基名
+var/backups中的代码备份文件的基本名称
 
-- 需要值
+- 需要一个值
 
 ### `--media-file`, `-m`
 
-var/backups中介质备份文件的基名
+var/备份中的媒体备份文件的基本名称
 
-- 需要值
+- 需要一个值
 
 ### `--db-file`, `-d`
 
-var/backups中数据库备份文件的基名
+var/备份中的db备份文件的基本名称
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -8635,7 +9448,7 @@ var/backups中数据库备份文件的基名
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -8649,14 +9462,13 @@ var/backups中数据库备份文件的基名
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -8680,7 +9492,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `languages`
 
-输出静态视图文件的ISO-639语言代码的空格分隔列表。
+要为其输出静态视图文件的ISO-639语言代码列表（以空格分隔）。
 
 - 默认： `[]`
 
@@ -8688,7 +9500,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--force`, `-f`
 
-以任何模式部署文件。
+以任意模式部署文件。
 
 - 默认： `false`
 - 不接受值
@@ -8698,18 +9510,18 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 使用指定的策略部署文件。
 
 - 默认： `quick`
-- 接受值
+- 接受一个值
 
 ### `--area`, `-a`
 
-仅为指定区域生成文件。
+仅为指定的区域生成文件。
 
 - 默认： `all`
 - 接受多个值
 
 ### `--exclude-area`
 
-请勿为指定区域生成文件。
+不要为指定的区域生成文件。
 
 - 默认： `none`
 - 接受多个值
@@ -8723,51 +9535,51 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--exclude-theme`
 
-请勿为指定的主题生成文件。
+不为指定的主题生成文件。
 
 - 默认： `none`
 - 接受多个值
 
 ### `--language`, `-l`
 
-仅为指定语言生成文件。
+仅生成指定语言的文件。
 
 - 默认： `all`
 - 接受多个值
 
 ### `--exclude-language`
 
-请勿为指定语言生成文件。
+不生成指定语言的文件。
 
 - 默认： `none`
 - 接受多个值
 
 ### `--jobs`, `-j`
 
-使用指定数量的作业启用并行处理。
+使用指定的作业数启用并行处理。
 
 - 默认： `0`
-- 接受值
+- 接受一个值
 
 ### `--max-execution-time`
 
-部署静态进程的预期最长执行时间（以秒为单位）。
+部署静态进程的最大预期执行时间（秒）。
 
 - 默认： `900`
-- 接受值
+- 接受一个值
 
 ### `--symlink-locale`
 
-为这些区域设置的文件创建符号链接，这些文件将传递用于部署，但没有自定义设置。
+为那些区域设置的文件创建符号链接，这些区域设置传递用于部署，但没有进行自定义。
 
 - 默认： `false`
 - 不接受值
 
 ### `--content-version`
 
-如果在多个节点上运行部署，则可以使用静态内容的自定义版本，以确保静态内容版本相同且缓存工作正常。
+如果在多个节点上运行部署，可以使用静态内容的自定义版本，以确保静态内容版本相同且缓存正常工作。
 
-- 需要值
+- 需要一个值
 
 ### `--refresh-content-version-only`
 
@@ -8778,21 +9590,21 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--no-javascript`
 
-请勿部署JavaScript文件。
+不要部署JavaScript文件。
 
 - 默认： `false`
 - 不接受值
 
 ### `--no-js-bundle`
 
-请勿部署JavaScript包文件。
+不部署JavaScript捆绑包文件。
 
 - 默认： `false`
 - 不接受值
 
 ### `--no-css`
 
-请勿部署CSS文件。
+不部署CSS文件。
 
 - 默认： `false`
 - 不接受值
@@ -8806,21 +9618,21 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--no-images`
 
-请勿部署图像。
+不要部署映像。
 
 - 默认： `false`
 - 不接受值
 
 ### `--no-fonts`
 
-请勿部署字体文件。
+不部署字体文件。
 
 - 默认： `false`
 - 不接受值
 
 ### `--no-html`
 
-请勿部署HTML文件。
+不部署HTML文件。
 
 - 默认： `false`
 - 不接受值
@@ -8834,21 +9646,21 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--no-html-minify`
 
-请勿缩小HTML文件。
+不要缩小HTML文件。
 
 - 默认： `false`
 - 不接受值
 
 ### `--no-parent`
 
-请勿编译父主题。 仅在快速和标准策略中受支持。
+不编译父主题。 仅在快速和标准策略中受支持。
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -8862,7 +9674,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -8876,14 +9688,13 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -8898,7 +9709,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ## `setup:store-config:set`
 
-安装存储配置。 自2.2.0起已弃用。请改用config:set
+安装存储配置。 从2.2.0开始已弃用。请改用config：set
 
 ```bash
 bin/magento setup:store-config:set [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -8906,67 +9717,67 @@ bin/magento setup:store-config:set [--base-url BASE-URL] [--language LANGUAGE] [
 
 ### `--base-url`
 
-应在上提供商店的URL。 已弃用，请使用config:set中包含路径web/unsecure/base_url
+商店应位于的URL。 已弃用，请使用config：set以及路径web/unsecure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--language`
 
-默认语言代码。 已弃用，请使用config:set中包含路径常规/区域设置/代码
+默认语言代码。 已弃用，请使用config：set以及路径general/locale/code
 
-- 需要值
+- 需要一个值
 
 ### `--timezone`
 
-默认时区代码。 已弃用，请使用config:set（包含路径常规/区域设置/时区）
+默认时区代码。 已弃用，请使用config：set和path general/locale/timezone
 
-- 需要值
+- 需要一个值
 
 ### `--currency`
 
-默认货币代码。 已弃用，请使用config:set with path currency/options/base、currency/options/default和currency/options/allow
+默认货币代码。 已弃用，请使用config：set以及路径currency/options/base、currency/options/default和currency/options/allow
 
-- 需要值
+- 需要一个值
 
 ### `--use-rewrites`
 
-使用重写。 已弃用，请使用config:set中包含路径web/seo/use_rewrites
+使用重写。 已弃用，请使用config：set以及路径web/seo/use_rewrites
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure`
 
-使用安全URL。 仅当SSL可用时，才启用此选项。 已弃用，请使用config:set（路径为web/secure/use_in_frontend）
+使用安全URL。 仅当SSL可用时启用此选项。 已弃用，请使用config：set以及路径web/secure/use_in_frontend
 
-- 需要值
+- 需要一个值
 
 ### `--base-url-secure`
 
-SSL连接的基本URL。 已弃用，请使用config:set与路径web/secure/base_url一起使用
+SSL连接的基本URL。 已弃用，请使用config：set以及路径web/secure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure-admin`
 
-使用SSL运行管理界面。 已弃用，请使用config:set并路径web/secure/use_in_adminhtml
+使用SSL运行管理界面。 已弃用，请使用config：set以及路径web/secure/use_in_adminhtml
 
-- 需要值
+- 需要一个值
 
 ### `--admin-use-security-key`
 
-是否在Magento管理URL和表单中使用“安全密钥”功能。 已弃用，请使用config:set和路径admin/security/use_form_key
+是否在Magento管理员URL和表单中使用“安全密钥”功能。 已弃用，请使用config：set和path admin/security/use_form_key
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -8980,7 +9791,7 @@ SSL连接的基本URL。 已弃用，请使用config:set与路径web/secure/base
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -8994,14 +9805,13 @@ SSL连接的基本URL。 已弃用，请使用config:set与路径web/secure/base
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9024,13 +9834,13 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9044,7 +9854,7 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9058,14 +9868,13 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9088,7 +9897,7 @@ bin/magento setup:upgrade [--keep-generated] [--convert-old-scripts [CONVERT-OLD
 
 ### `--keep-generated`
 
-阻止删除生成的文件。 除了部署到生产外，我们不鼓励使用此选项。 有关详细信息，请咨询系统集成商或管理员。
+阻止删除生成的文件。 我们建议不要使用此选项，除非部署到生产环境。 有关更多信息，请咨询系统集成商或管理员。
 
 - 默认： `false`
 - 不接受值
@@ -9098,36 +9907,36 @@ bin/magento setup:upgrade [--keep-generated] [--convert-old-scripts [CONVERT-OLD
 允许将旧脚本(InstallSchema、UpgradeSchema)转换为db_schema.xml格式
 
 - 默认： `false`
-- 接受值
+- 接受一个值
 
 ### `--safe-mode`
 
-在破坏性操作（如删除列）上安全安装包含转储的Magento
+在破坏性操作（如删除列）中安全安装带有转储的Magento
 
-- 接受值
+- 接受一个值
 
 ### `--data-restore`
 
 从转储中恢复已删除的数据
 
-- 接受值
+- 接受一个值
 
 ### `--dry-run`
 
-Magento安装将以干式运行模式运行
+Magento安装将在模拟运行模式下运行
 
 - 默认： `false`
-- 接受值
+- 接受一个值
 
 ### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache”
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9141,7 +9950,7 @@ Magento安装将以干式运行模式运行
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9155,14 +9964,13 @@ Magento安装将以干式运行模式运行
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9185,7 +9993,7 @@ bin/magento store:list
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9199,7 +10007,7 @@ bin/magento store:list
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9213,14 +10021,13 @@ bin/magento store:list
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9243,7 +10050,7 @@ bin/magento store:website:list
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9257,7 +10064,7 @@ bin/magento store:website:list
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9271,14 +10078,13 @@ bin/magento store:website:list
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9303,13 +10109,13 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 转储名称
 
-- 接受值
+- 接受一个值
 
 ### `--output`, `-o`
 
 输出路径
 
-- 接受值
+- 接受一个值
 
 ### `--logs`, `-l`
 
@@ -9320,7 +10126,7 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9334,7 +10140,7 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9348,14 +10154,13 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9380,13 +10185,13 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 转储名称
 
-- 接受值
+- 接受一个值
 
 ### `--output`, `-o`
 
 输出路径
 
-- 接受值
+- 接受一个值
 
 ### `--logs`, `-l`
 
@@ -9397,14 +10202,14 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 ### `--ignore-sanitize`, `-i`
 
-忽略整理
+忽略清理
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9418,7 +10223,7 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9432,14 +10237,13 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9469,7 +10273,7 @@ bin/magento support:utility:check [--hide-paths]
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9483,7 +10287,7 @@ bin/magento support:utility:check [--hide-paths]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9497,14 +10301,13 @@ bin/magento support:utility:check [--hide-paths]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9527,14 +10330,14 @@ bin/magento support:utility:paths [-f|--force]
 
 ### `--force`, `-f`
 
-力
+强制
 
 - 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9548,7 +10351,7 @@ bin/magento support:utility:paths [-f|--force]
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9562,14 +10365,13 @@ bin/magento support:utility:paths [-f|--force]
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9593,7 +10395,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ### `theme`
 
-主题路径。 主题路径应指定为完整路径，即区域/供应商/名称。 例如，前端/Magento/空白
+主题的路径。 主题路径应指定为完整路径，即area/vendor/name。 例如，前端/Magento/空白
 
 - 默认： `[]`
 
@@ -9602,7 +10404,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ### `--backup-code`
 
-执行代码备份（不包括临时文件）
+进行代码备份（不包括临时文件）
 
 - 默认： `false`
 - 不接受值
@@ -9616,7 +10418,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9630,7 +10432,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9644,14 +10446,13 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值
@@ -9666,7 +10467,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ## `varnish:vcl:generate`
 
-生成清漆VCL并回声到命令行
+生成清漆VCL并将其回显到命令行
 
 ```bash
 bin/magento varnish:vcl:generate [--access-list ACCESS-LIST] [--backend-host BACKEND-HOST] [--backend-port BACKEND-PORT] [--export-version EXPORT-VERSION] [--grace-period GRACE-PERIOD] [--output-file OUTPUT-FILE]
@@ -9677,45 +10478,45 @@ bin/magento varnish:vcl:generate [--access-list ACCESS-LIST] [--backend-host BAC
 可清除清漆的IP访问列表
 
 - 默认： `localhost`
-- 需要值
+- 需要一个值
 
 ### `--backend-host`
 
 Web后端的主机
 
 - 默认： `localhost`
-- 需要值
+- 需要一个值
 
 ### `--backend-port`
 
 Web后端的端口
 
 - 默认： `8080`
-- 需要值
+- 需要一个值
 
 ### `--export-version`
 
 清漆文件的版本
 
 - 默认： `4`
-- 需要值
+- 需要一个值
 
 ### `--grace-period`
 
 宽限期（以秒为单位）
 
 - 默认： `300`
-- 需要值
+- 需要一个值
 
 ### `--output-file`
 
-要写入vcl的文件路径
+要写入vcl的文件的路径
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-显示此帮助消息
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -9729,7 +10530,7 @@ Web后端的端口
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加消息的密集度：正常输出为1，较详细输出为2，调试为3
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
@@ -9743,14 +10544,13 @@ Web后端的端口
 
 ### `--ansi`
 
-强制ANSI输出
+强制（或禁用 — no-ansi） ANSI输出
 
-- 默认： `false`
 - 不接受值
 
 ### `--no-ansi`
 
-禁用ANSI输出
+否定“ — ansi”选项
 
 - 默认： `false`
 - 不接受值

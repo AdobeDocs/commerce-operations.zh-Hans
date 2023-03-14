@@ -1,11 +1,11 @@
 ---
-source-git-commit: c6b2c0715ae7ddd1a5f64facba6fbd2919875850
+source-git-commit: d1af1ffe584b18cbc6c664cab31283c13f36c25e
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 9%
+source-wordcount: '184'
+ht-degree: 8%
 
 ---
-# 商务功能
+# Commerce功能
 
 <!--This include content is automatically generated using the features.html template and the "_data/release/features.yml" data file. To update the content, add new information to the data file. Follow the instructions in the README instructions to generate the updated content: 
 https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#templates -->
@@ -13,7 +13,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
 <table style="table-layout:auto">
   <tbody>
     <tr style="background:lightgray;">
-      <th style="border-style:none;">最大化转化和销售</th>
+      <th style="border-style:none;">最大限度地提高转化率和销售额</th>
       <th style="border-style:none;">2.0</th>
       <th style="border-style:none;">2.1</th>
       <th style="border-style:none;">2.2</th>
@@ -21,7 +21,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <th style="border-style:none;">2.4</th>
     </tr>
     <tr>
-      <td>卖家辅助购物</td>
+      <td>由Adobe Sensei提供支持的实时搜索（B2C和B2B）</td>
       <td></td>
       <td></td>
       <td></td>
@@ -29,7 +29,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>由Adobe Sensei提供支持的Live Search</td>
+      <td>卖方辅助购物</td>
       <td></td>
       <td></td>
       <td></td>
@@ -37,7 +37,15 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>由Adobe Sensei提供支持的产品Recommendations</td>
+      <td>Adobe Commerce渠道管理器</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>由Adobe Sensei提供支持的产品Recommendations （B2C和B2B）</td>
       <td></td>
       <td></td>
       <td></td>
@@ -45,7 +53,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>页面生成器拖放内容管理</td>
+      <td>Page Builder拖放内容管理</td>
       <td></td>
       <td></td>
       <td></td>
@@ -61,14 +69,6 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>支付服务灵活支付选项</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>+</td>
-    </tr>
-    <tr>
       <td>AmazonSales Channel</td>
       <td></td>
       <td></td>
@@ -77,15 +77,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>渠道经理(Walmart Marketplace)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>+</td>
-    </tr>
-    <tr>
-      <td>B2B就绪功能和API（有关更多信息，请查看B2B的信息表）</td>
+      <td>支持B2B的功能和API（有关更多信息，请查看B2B的信息表）</td>
       <td></td>
       <td></td>
       <td>+</td>
@@ -101,15 +93,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>支付集成Braintree</td>
-      <td></td>
-      <td></td>
-      <td>+</td>
-      <td>+</td>
-      <td>+</td>
-    </tr>
-    <tr>
-      <td>PayPal在上下文结账</td>
+      <td>PayPal上下文结帐</td>
       <td></td>
       <td>+</td>
       <td>+</td>
@@ -119,12 +103,20 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
   </tbody>
   <tbody>
     <tr style="background:lightgray;">
-      <th style="border-style:none;">更智能、更快的操作</th>
+      <th style="border-style:none;">更智能、更快速的操作</th>
       <th style="border-style:none;">2.0</th>
       <th style="border-style:none;">2.1</th>
       <th style="border-style:none;">2.2</th>
       <th style="border-style:none;">2.3</th>
       <th style="border-style:none;">2.4</th>
+    </tr>
+    <tr>
+      <td>支付服务</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+</td>
     </tr>
     <tr>
       <td>增强的媒体集和资产管理</td>
@@ -135,7 +127,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>购买在线皮卡店内装货(BOPI)</td>
+      <td>沃尔玛科技为Adobe Commerce提供门店履行</td>
       <td></td>
       <td></td>
       <td></td>
@@ -143,7 +135,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>存储履行（高级全渠道履行）</td>
+      <td>在店内购买在线提货(BOPIS)</td>
       <td></td>
       <td></td>
       <td></td>
@@ -151,7 +143,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>B2B订单批准工作流</td>
+      <td>B2B订单审批工作流</td>
       <td></td>
       <td></td>
       <td></td>
@@ -175,11 +167,19 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>Adobe Commerce报表</td>
+      <td>Business Intelligence</td>
       <td></td>
       <td>+</td>
       <td>+</td>
       <td>+</td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>Adobe Commerce的目录服务</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       <td>+</td>
     </tr>
     <tr>
@@ -188,14 +188,6 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
       <td>+</td>
       <td>+</td>
-      <td>+</td>
-    </tr>
-    <tr>
-      <td>Payment Services报告和对帐仪表板</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
       <td>+</td>
     </tr>
   </tbody>
@@ -217,7 +209,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>编辑器更新插件</td>
+      <td>Composer更新插件</td>
       <td></td>
       <td></td>
       <td></td>
@@ -237,19 +229,11 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>+</td>
       <td>+</td>
     </tr>
     <tr>
-      <td>8.1菲律宾比索</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>+</td>
-    </tr>
-    <tr>
-      <td>七点四菲律宾比索</td>
+      <td>异步订单处理</td>
       <td></td>
       <td></td>
       <td></td>
@@ -257,7 +241,15 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>七点三菲律宾比索</td>
+      <td>PHP 8.1 (2.4.4+)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>技术栈栈更新已继续</td>
       <td></td>
       <td></td>
       <td></td>
@@ -265,15 +257,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>持续更新技术堆栈</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>+</td>
-      <td>+</td>
-    </tr>
-    <tr>
-      <td>持续的性能、质量和安全性改进</td>
+      <td>持续改进性能、质量和安全性</td>
       <td></td>
       <td></td>
       <td></td>
@@ -297,14 +281,6 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>声明式模式，更便于安装和升级</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>+</td>
-      <td>+</td>
-    </tr>
-    <tr>
       <td>安全工具：/ 2FA、ReCAPTCHA、ACL、WAF</td>
       <td></td>
       <td></td>
@@ -313,7 +289,31 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>商务优化云</td>
+      <td>Adobe Commerce的Adobe I/O事件</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>适用于Adobe Commerce的Adobe Developer App Builder</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>Adobe Commerce优化云</td>
+      <td></td>
+      <td>+</td>
+      <td>+</td>
+      <td>+</td>
+      <td>+</td>
+    </tr>
+    <tr>
+      <td>在云基础架构上观察Adobe Commerce</td>
       <td></td>
       <td>+</td>
       <td>+</td>

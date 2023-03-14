@@ -1,5 +1,5 @@
 ---
-source-git-commit: 9f6110d359ffb31b04ebef369b82c25d4d0b9058
+source-git-commit: 0feb0124cfa375a8ebfd17ad88b1b1eaec99e0e5
 workflow-type: tm+mt
 source-wordcount: '15'
 ht-degree: 0%
@@ -14,6 +14,7 @@ Adobe Commerce要求：
 - `ext-curl`
 - `ext-dom`
 - `ext-fileinfo`
+- `ext-filter`
 - `ext-gd`
 - `ext-hash`
 - `ext-iconv`
@@ -33,16 +34,17 @@ Adobe Commerce要求：
 - `ext-xmlwriter`
 - `ext-xsl`
 - `ext-zip`
+- `ext-zlib`
 - `lib-libxml`
-- `lib-openssl`
 
-Adobe Commerce的B2B要求：
+Adobe Commerce的B2B需要：
 
 - `ext-bcmath`
 - `ext-ctype`
 - `ext-curl`
 - `ext-dom`
 - `ext-fileinfo`
+- `ext-filter`
 - `ext-gd`
 - `ext-hash`
 - `ext-iconv`
@@ -62,8 +64,8 @@ Adobe Commerce的B2B要求：
 - `ext-xmlwriter`
 - `ext-xsl`
 - `ext-zip`
+- `ext-zlib`
 - `lib-libxml`
-- `lib-openssl`
 
 Magento Open Source要求：
 
@@ -72,6 +74,7 @@ Magento Open Source要求：
 - `ext-curl`
 - `ext-dom`
 - `ext-fileinfo`
+- `ext-filter`
 - `ext-gd`
 - `ext-hash`
 - `ext-iconv`
@@ -90,5 +93,5 @@ Magento Open Source要求：
 - `ext-xmlwriter`
 - `ext-xsl`
 - `ext-zip`
+- `ext-zlib`
 - `lib-libxml`
-- `lib-openssl`

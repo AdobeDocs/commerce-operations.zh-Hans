@@ -1,9 +1,9 @@
 ---
 user-guide-title: 发行信息
-user-guide-description: 了解Adobe Commerce和Magento Open Source版本。
-source-git-commit: 841c6861c6b7a7341f334ba449b6270b31a34e94
+user-guide-description: 在一个位置访问Adobe Commerce修补程序和服务的所有发行信息。
+source-git-commit: 1ca3d530051b0f59084bf370951f8f0b03dcfc28
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '92'
 ht-degree: 15%
 
 ---
@@ -43,8 +43,7 @@ ht-degree: 15%
 - [已发布版本](versions.md)
 - [按版本显示的功能](features.md)
 - [产品可用性](product-availability.md)
-- [产品路线图](product-roadmap.md)
-- [测试版计划](beta-program.md)
+- [测试版](beta.md)
 - 规划和策略 {#planning}
    - [生命周期策略](lifecycle-policy.md)
    - [版本控制策略](versioning-policy.md)
