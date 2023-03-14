@@ -1,7 +1,7 @@
 ---
-source-git-commit: 177f301802e1ab1d0560ee98594b8128440efa7c
+source-git-commit: a1f99f839f11ab42356b87a69398999bb03cd544
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2460'
 ht-degree: 0%
 
 ---
@@ -23,20 +23,20 @@ Adobe Commerce使用Composer管理PHP包。
 
 此 `composer.json` 文件声明包的列表，而 `composer.lock` file存储用于构建Adobe Commerce或Magento Open Source安装的软件包（每个软件包及其依赖项的完整版本）的完整列表。
 
-以下参考文档是从 `composer.lock` 它涵盖Adobe Commerce 2.4.6-beta2中包含的必需包。
+以下参考文档是从 `composer.lock` 文件中，它涵盖Adobe Commerce 2.4.6中包含的必需包。
 
 ## 依赖关系
 
-`magento/product-enterprise-edition 2.4.6-beta2` 具有以下依赖关系：
+`magento/product-enterprise-edition 2.4.6` 具有以下依赖关系：
 
 ```config
-adobe-commerce/saas-metapackage: ~1.0
+adobe-commerce/extensions-metapackage: ~1.0
 colinmollenhour/cache-backend-file: ^1.4
 colinmollenhour/cache-backend-redis: ^1.14
 colinmollenhour/credis: ^1.13
 colinmollenhour/php-redis-session-abstract: ^1.5
 composer/composer: ^2.0, !=2.2.16
-elasticsearch/elasticsearch: ^7.17||^8.5
+elasticsearch/elasticsearch: ~7.17.0 || ~8.5.0
 ext-bcmath: *
 ext-ctype: *
 ext-curl: *
@@ -54,7 +54,7 @@ ext-sodium: *
 ext-spl: *
 ext-xsl: *
 ext-zip: *
-ezyang/htmlpurifier: ^4.14
+ezyang/htmlpurifier: ^4.16
 guzzlehttp/guzzle: ^7.5
 laminas/laminas-captcha: ^2.12
 laminas/laminas-code: ^4.5
@@ -82,123 +82,123 @@ laminas/laminas-validator: ^2.23
 league/flysystem: ^2.4
 league/flysystem-aws-s3-v3: ^2.4
 lib-libxml: *
-magento/composer: ^1.9.0-beta2
+magento/composer: ^1.9.0
 magento/composer-dependency-version-audit-plugin: ^0.1
-magento/framework-foreign-key: 100.4.5-beta2
-magento/magento-composer-installer: >=0.4.0-beta1
-magento/magento2-ee-base: 2.4.6-beta2
-magento/module-admin-gws: 100.4.6-beta2
-magento/module-admin-gws-configurable-product: 100.4.3-beta2
-magento/module-admin-gws-staging: 100.4.3-beta2
-magento/module-advanced-catalog: 100.4.3-beta2
-magento/module-advanced-checkout: 100.4.6-beta2
-magento/module-advanced-rule: 100.4.3-beta2
-magento/module-advanced-sales-rule: 100.4.3-beta2
-magento/module-async-order: 100.4.2-beta2
-magento/module-async-order-graph-ql: 100.4.1-beta2
-magento/module-aws-s3-customer-custom-attributes: 100.4.3-beta2
-magento/module-aws-s3-gift-card-import-export: 100.4.3-beta2
-magento/module-aws-s3-scheduled-import-export: 100.4.3-beta2
-magento/module-banner: 101.2.6-beta2
-magento/module-banner-customer-segment: 100.4.4-beta2
-magento/module-banner-graph-ql: 100.4.2-beta2
-magento/module-banner-staging: 100.4.0-beta2
-magento/module-bundle-import-export-staging: 100.4.3-beta2
-magento/module-bundle-staging: 100.4.6-beta2
-magento/module-catalog-event: 101.1.5-beta2
-magento/module-catalog-import-export-staging: 100.4.3-beta2
-magento/module-catalog-inventory-staging: 100.4.4-beta2
-magento/module-catalog-permissions: 100.4.6-beta2
-magento/module-catalog-permissions-graph-ql: 100.4.4-beta2
-magento/module-catalog-rule-staging: 100.4.6-beta2
-magento/module-catalog-staging: 100.4.6-beta2
-magento/module-catalog-staging-graph-ql: 100.4.5-beta2
-magento/module-catalog-url-rewrite-staging: 100.4.5-beta2
-magento/module-checkout-address-search: 100.4.5-beta2
-magento/module-checkout-address-search-gift-registry: 100.4.2-beta2
-magento/module-checkout-staging: 100.4.5-beta2
-magento/module-cms-staging: 100.4.6-beta2
-magento/module-configurable-product-staging: 100.4.5-beta2
-magento/module-custom-attribute-management: 100.4.5-beta2
-magento/module-customer-balance: 100.4.6-beta2
-magento/module-customer-balance-graph-ql: 100.4.3-beta2
-magento/module-customer-custom-attributes: 100.4.6-beta2
-magento/module-customer-finance: 100.4.3-beta2
-magento/module-customer-segment: 102.1.6-beta2
-magento/module-deferred-total-calculating: 100.4.1-beta2
-magento/module-downloadable-staging: 100.4.5-beta2
-magento/module-elasticsearch-catalog-permissions: 100.4.2-beta2
-magento/module-elasticsearch-catalog-permissions-graph-ql: 100.4.1-beta2
-magento/module-enterprise: 100.4.4-beta2
-magento/module-gift-card: 101.3.6-beta2
-magento/module-gift-card-account: 101.2.6-beta2
-magento/module-gift-card-account-graph-ql: 100.4.4-beta2
-magento/module-gift-card-graph-ql: 100.4.6-beta2
-magento/module-gift-card-import-export: 100.4.3-beta2
-magento/module-gift-card-staging: 100.4.3-beta2
-magento/module-gift-message-staging: 100.4.3-beta2
-magento/module-gift-registry: 101.2.6-beta2
-magento/module-gift-registry-graph-ql: 100.4.2-beta2
-magento/module-gift-wrapping: 101.2.5-beta2
-magento/module-gift-wrapping-graph-ql: 100.4.3-beta2
-magento/module-gift-wrapping-staging: 100.4.3-beta2
-magento/module-google-optimizer-staging: 100.4.3-beta2
-magento/module-google-tag-manager: 100.4.6-beta2
-magento/module-grouped-product-staging: 100.4.4-beta2
-magento/module-import-csv: 100.4.0-beta2
-magento/module-import-csv-api: 100.4.0-beta2
-magento/module-invitation: 100.4.5-beta2
-magento/module-layered-navigation-staging: 100.4.3-beta2
-magento/module-logging: 101.2.6-beta2
-magento/module-login-as-customer-logging: 100.4.6-beta2
-magento/module-login-as-customer-website-restriction: 100.4.4-beta2
-magento/module-media-content-catalog-staging: 100.4.3-beta2
-magento/module-msrp-staging: 100.4.4-beta2
-magento/module-multiple-wishlist: 100.4.6-beta2
-magento/module-multiple-wishlist-graph-ql: 100.4.2-beta2
-magento/module-payment-staging: 100.4.3-beta2
-magento/module-persistent-history: 100.4.3-beta2
-magento/module-price-permissions: 100.4.2-beta2
-magento/module-product-video-staging: 100.4.3-beta2
-magento/module-promotion-permissions: 100.4.3-beta2
-magento/module-quote-gift-card-options: 100.4.3-beta2
-magento/module-quote-staging: 100.4.3-beta2
-magento/module-reminder: 101.2.5-beta2
-magento/module-remote-storage-commerce: 100.4.2-beta2
-magento/module-resource-connections: 100.4.3-beta2
-magento/module-review-staging: 100.4.3-beta2
-magento/module-reward: 101.2.6-beta2
-magento/module-reward-graph-ql: 100.4.5-beta2
-magento/module-reward-staging: 100.4.3-beta2
-magento/module-rma: 101.2.6-beta2
-magento/module-rma-graph-ql: 100.4.5-beta2
-magento/module-rma-staging: 100.4.3-beta2
-magento/module-sales-archive: 101.0.4-beta2
-magento/module-sales-rule-staging: 100.4.5-beta2
-magento/module-scalable-checkout: 100.4.5-beta2
-magento/module-scalable-inventory: 100.4.4-beta2
-magento/module-scalable-oms: 100.4.4-beta2
-magento/module-scheduled-import-export: 101.2.6-beta2
-magento/module-search-staging: 100.4.4-beta2
-magento/module-staging: 101.2.6-beta2
-magento/module-staging-graph-ql: 100.4.3-beta2
-magento/module-support: 101.2.5-beta2
-magento/module-swat: 100.4.4-beta2
-magento/module-target-rule: 101.2.6-beta2
-magento/module-target-rule-graph-ql: 100.4.3-beta2
-magento/module-versions-cms: 101.2.6-beta2
-magento/module-versions-cms-page-cache: 100.4.2-beta2
-magento/module-versions-cms-url-rewrite: 100.4.4-beta2
-magento/module-versions-cms-url-rewrite-graph-ql: 100.4.2-beta2
-magento/module-visual-merchandiser: 100.4.6-beta2
-magento/module-website-restriction: 100.4.5-beta2
-magento/module-weee-staging: 100.4.3-beta2
-magento/module-wishlist-gift-card: 100.4.2-beta2
-magento/module-wishlist-gift-card-graph-ql: 100.4.2-beta2
-magento/page-builder-commerce: 1.7.3-beta2
-magento/product-community-edition: 2.4.6-beta2
-magento/security-package-ee: 1.0.1-beta2
-magento/theme-adminhtml-spectrum: 100.4.1-beta2
+magento/framework-foreign-key: 100.4.5
+magento/magento-composer-installer: >=0.4.0
+magento/magento2-ee-base: 2.4.6
+magento/module-admin-gws: 100.4.6
+magento/module-admin-gws-configurable-product: 100.4.3
+magento/module-admin-gws-staging: 100.4.3
+magento/module-advanced-catalog: 100.4.3
+magento/module-advanced-checkout: 100.4.6
+magento/module-advanced-rule: 100.4.3
+magento/module-advanced-sales-rule: 100.4.3
+magento/module-async-order: 100.4.2
+magento/module-async-order-graph-ql: 100.4.1
+magento/module-aws-s3-customer-custom-attributes: 100.4.3
+magento/module-aws-s3-gift-card-import-export: 100.4.3
+magento/module-aws-s3-scheduled-import-export: 100.4.3
+magento/module-banner: 101.2.6
+magento/module-banner-customer-segment: 100.4.4
+magento/module-banner-graph-ql: 100.4.2
+magento/module-banner-staging: 100.4.0
+magento/module-bundle-import-export-staging: 100.4.3
+magento/module-bundle-staging: 100.4.6
+magento/module-catalog-event: 101.1.5
+magento/module-catalog-import-export-staging: 100.4.3
+magento/module-catalog-inventory-staging: 100.4.4
+magento/module-catalog-permissions: 100.4.6
+magento/module-catalog-permissions-graph-ql: 100.4.4
+magento/module-catalog-rule-staging: 100.4.6
+magento/module-catalog-staging: 100.4.6
+magento/module-catalog-staging-graph-ql: 100.4.5
+magento/module-catalog-url-rewrite-staging: 100.4.5
+magento/module-checkout-address-search: 100.4.5
+magento/module-checkout-address-search-gift-registry: 100.4.2
+magento/module-checkout-staging: 100.4.5
+magento/module-cms-staging: 100.4.6
+magento/module-configurable-product-staging: 100.4.5
+magento/module-custom-attribute-management: 100.4.5
+magento/module-customer-balance: 100.4.6
+magento/module-customer-balance-graph-ql: 100.4.3
+magento/module-customer-custom-attributes: 100.4.6
+magento/module-customer-finance: 100.4.3
+magento/module-customer-segment: 102.1.6
+magento/module-deferred-total-calculating: 100.4.1
+magento/module-downloadable-staging: 100.4.5
+magento/module-elasticsearch-catalog-permissions: 100.4.2
+magento/module-elasticsearch-catalog-permissions-graph-ql: 100.4.1
+magento/module-enterprise: 100.4.4
+magento/module-gift-card: 101.3.6
+magento/module-gift-card-account: 101.2.6
+magento/module-gift-card-account-graph-ql: 100.4.4
+magento/module-gift-card-graph-ql: 100.4.6
+magento/module-gift-card-import-export: 100.4.3
+magento/module-gift-card-staging: 100.4.3
+magento/module-gift-message-staging: 100.4.3
+magento/module-gift-registry: 101.2.6
+magento/module-gift-registry-graph-ql: 100.4.2
+magento/module-gift-wrapping: 101.2.5
+magento/module-gift-wrapping-graph-ql: 100.4.3
+magento/module-gift-wrapping-staging: 100.4.3
+magento/module-google-optimizer-staging: 100.4.3
+magento/module-google-tag-manager: 100.4.6
+magento/module-grouped-product-staging: 100.4.4
+magento/module-import-csv: 100.4.0
+magento/module-import-csv-api: 100.4.0
+magento/module-invitation: 100.4.5
+magento/module-layered-navigation-staging: 100.4.3
+magento/module-logging: 101.2.6
+magento/module-login-as-customer-logging: 100.4.6
+magento/module-login-as-customer-website-restriction: 100.4.4
+magento/module-media-content-catalog-staging: 100.4.3
+magento/module-msrp-staging: 100.4.4
+magento/module-multiple-wishlist: 100.4.6
+magento/module-multiple-wishlist-graph-ql: 100.4.2
+magento/module-payment-staging: 100.4.3
+magento/module-persistent-history: 100.4.3
+magento/module-price-permissions: 100.4.2
+magento/module-product-video-staging: 100.4.3
+magento/module-promotion-permissions: 100.4.3
+magento/module-quote-gift-card-options: 100.4.3
+magento/module-quote-staging: 100.4.3
+magento/module-reminder: 101.2.5
+magento/module-remote-storage-commerce: 100.4.2
+magento/module-resource-connections: 100.4.3
+magento/module-review-staging: 100.4.3
+magento/module-reward: 101.2.6
+magento/module-reward-graph-ql: 100.4.5
+magento/module-reward-staging: 100.4.3
+magento/module-rma: 101.2.6
+magento/module-rma-graph-ql: 100.4.5
+magento/module-rma-staging: 100.4.3
+magento/module-sales-archive: 101.0.4
+magento/module-sales-rule-staging: 100.4.5
+magento/module-scalable-checkout: 100.4.5
+magento/module-scalable-inventory: 100.4.4
+magento/module-scalable-oms: 100.4.4
+magento/module-scheduled-import-export: 101.2.6
+magento/module-search-staging: 100.4.4
+magento/module-staging: 101.2.6
+magento/module-staging-graph-ql: 100.4.3
+magento/module-support: 101.2.5
+magento/module-swat: 100.4.4
+magento/module-target-rule: 101.2.6
+magento/module-target-rule-graph-ql: 100.4.3
+magento/module-versions-cms: 101.2.6
+magento/module-versions-cms-page-cache: 100.4.2
+magento/module-versions-cms-url-rewrite: 100.4.4
+magento/module-versions-cms-url-rewrite-graph-ql: 100.4.2
+magento/module-visual-merchandiser: 100.4.6
+magento/module-website-restriction: 100.4.5
+magento/module-weee-staging: 100.4.3
+magento/module-wishlist-gift-card: 100.4.2
+magento/module-wishlist-gift-card-graph-ql: 100.4.2
+magento/page-builder-commerce: 1.7.3
+magento/product-community-edition: 2.4.6
+magento/security-package-ee: 1.0.1
+magento/theme-adminhtml-spectrum: 100.4.1
 magento/zend-cache: ^1.16
 magento/zend-db: ^1.16
 magento/zend-pdf: ^1.16
@@ -366,6 +366,13 @@ wikimedia/less.php: ^3.2
     </td>
     <td>库</td>
     <td>具有乐观锁定的基于Redis的会话处理程序</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
+    </td>
+    <td>库</td>
+    <td>在PHP中对JSON Web令牌(JWT)进行编码和解码的简单库。 应符合当前规范。</td>
   </tr>
   <tr>
     <td>
@@ -633,13 +640,6 @@ wikimedia/less.php: ^3.2
     <td>库</td>
     <td>YUI CSS压缩器的PHP端口</td>
   </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/twigphp/Twig.git">树枝/树枝</a>
-    </td>
-    <td>库</td>
-    <td>Twig，一种灵活、快速且安全的PHP模板语言</td>
-  </tr>
   </tbody>
 </table>
 
@@ -796,6 +796,27 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/doctrine/annotations.git">原则/注释</a>
+    </td>
+    <td>库</td>
+    <td>Docblock注释解析器</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/doctrine/deprecations.git">理论/弃用</a>
+    </td>
+    <td>库</td>
+    <td>位于trigger_error(E_USER_DEPRECATED)或PSR-3日志记录之上的小层，可选择禁用所有弃用内容或选择禁用包。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/doctrine/lexer.git">doctrine/lexer</a>
+    </td>
+    <td>库</td>
+    <td>PHP Doctrine Lexer解析器库，可在自上而下的递归后代解析器中使用。</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
     <td>库</td>
@@ -926,6 +947,13 @@ wikimedia/less.php: ^3.2
     </td>
     <td>库</td>
     <td>PHP安全通信库 — RSA、AES、SSH2、SFTP、X.509等的纯PHP实施。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-fig/cache.git">psr/cache</a>
+    </td>
+    <td>库</td>
+    <td>缓存库的通用接口</td>
   </tr>
   <tr>
     <td>
