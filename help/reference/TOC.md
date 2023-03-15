@@ -3,7 +3,7 @@ user-guide-title: 命令行工具引用
 user-guide-description: 了解Adobe Commerce和Magento Open Source命令行工具的所有可用命令、参数和选项。
 source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '44'
 ht-degree: 0%
 
 ---

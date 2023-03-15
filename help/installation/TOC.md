@@ -46,7 +46,7 @@ ht-degree: 0%
       - [下载编辑器包](sample-data/composer-packages.md)
       - [克隆Git存储库](sample-data/git-repositories.md)
       - [删除或更新模块](sample-data/remove-or-update.md)
-- 教程 {#tutorials}
+- Tutorials {#tutorials}
    - [备份和回滚文件系统、介质和数据库](tutorials/backup.md)
    - [检查数据库状态](tutorials/database-status.md)
    - [配置消息使用者行为](tutorials/message-consumers.md)
