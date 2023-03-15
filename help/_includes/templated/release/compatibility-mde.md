@@ -1,7 +1,7 @@
 ---
-source-git-commit: dbfb4dadf5033eb580d3d47e9b2055ddeb316461
+source-git-commit: f918da5f205b23a2e11faaa06fb0572ca72cdaa4
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -12,9 +12,9 @@ template and the "_data/release/mde.yml" data file. To update the content,
 add new information to the data file. Follow the instructions in the README instructions to generate
 the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#templates -->
 
-**支持**  — 已由Adobe全面测试并受支持的版本。
+**支持**  — 已通过Adobe完全测试且受支持的版本。
 
-**兼容**  — 已确认与Adobe Commerce或Magento Open Source兼容，但不支持的版本。
+**兼容**  — 确认与Adobe Commerce或Magento Open Source兼容但不受支持的版本。
 
 **不支持**  — 与Adobe Commerce或Magento Open Source版本不兼容的版本。
 
@@ -432,7 +432,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="9">渠道管理器</th>
     </tr>
     <tr>
-      <td>渠道管理器1.4.0</td>
+      <td>Channel Manager 1.4.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -451,7 +451,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>渠道管理器1.1.0</td>
+      <td>Channel Manager 1.1.0</td>
       <td>不支持</span>
       </td>
       <td>支持</span>
@@ -470,7 +470,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>渠道管理器1.0.0</td>
+      <td>Channel Manager 1.0.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -651,7 +651,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="9">实时搜索</th>
     </tr>
     <tr>
-      <td>Live Search 3.0.1</td>
+      <td>实时搜索3.0.1</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -670,7 +670,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Live Search 2.0.5</td>
+      <td>实时搜索2.0.5</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -689,7 +689,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Live Search 2.0.4</td>
+      <td>实时搜索2.0.4</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -708,7 +708,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Live Search 2.0.3</td>
+      <td>实时搜索2.0.3</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -727,7 +727,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Live Search 2.0.0</td>
+      <td>实时搜索2.0.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -746,7 +746,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Live Search 1.3.0</td>
+      <td>实时搜索1.3.0</td>
       <td>兼容</span>
       </td>
       <td>兼容</span>
@@ -765,7 +765,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Live Search 1.2.0</td>
+      <td>实时搜索1.2.0</td>
       <td>兼容</span>
       </td>
       <td>兼容</span>
@@ -784,7 +784,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Live Search 1.1.0</td>
+      <td>实时搜索1.1.0</td>
       <td>兼容</span>
       </td>
       <td>兼容</span>
@@ -965,7 +965,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <th colspan="9">支付服务</th>
     </tr>
     <tr>
-      <td>Payment Services 2.0.0</td>
+      <td>支付服务2.0.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -984,7 +984,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.6.0</td>
+      <td>支付服务1.6.0</td>
       <td>不支持</span>
       </td>
       <td>支持</span>
@@ -1003,7 +1003,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.5.4</td>
+      <td>支付服务1.5.4</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1022,7 +1022,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.5.3</td>
+      <td>支付服务1.5.3</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1041,7 +1041,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.5.2</td>
+      <td>支付服务1.5.2</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1060,7 +1060,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.5.1</td>
+      <td>支付服务1.5.1</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1079,7 +1079,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.5.0</td>
+      <td>支付服务1.5.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1098,7 +1098,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.4.1</td>
+      <td>支付服务1.4.1</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1117,7 +1117,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Payment Services 1.4.0</td>
+      <td>支付服务1.4.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1138,10 +1138,10 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
   </tbody>
   <tbody>
     <tr>
-      <th colspan="9">快速签出</th>
+      <th colspan="9">快速结帐</th>
     </tr>
     <tr>
-      <td>Quick Checkout 1.7.0</td>
+      <td>快速结帐1.8.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1160,7 +1160,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Quick Checkout 1.6.0</td>
+      <td>快速结帐1.7.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1179,7 +1179,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Quick Checkout 1.5.0</td>
+      <td>快速结帐1.6.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1198,7 +1198,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Quick Checkout 1.4.0</td>
+      <td>快速结帐1.5.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1217,7 +1217,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Quick Checkout 1.3.0</td>
+      <td>快速结帐1.4.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1236,7 +1236,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Quick Checkout 1.2.0</td>
+      <td>快速结帐1.3.0</td>
       <td>支持</span>
       </td>
       <td>支持</span>
@@ -1255,7 +1255,26 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Quick Checkout 1.1.0</td>
+      <td>快速结帐1.2.0</td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>支持</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>兼容</span>
+      </td>
+      <td>不支持</span>
+      </td>
+    </tr>
+    <tr>
+      <td>快速结帐1.1.0</td>
       <td>支持</span>
       </td>
       <td>兼容</span>
@@ -1274,7 +1293,7 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       </td>
     </tr>
     <tr>
-      <td>Quick Checkout 1.0.0</td>
+      <td>快速结帐1.0.0</td>
       <td>支持</span>
       </td>
       <td>兼容</span>
