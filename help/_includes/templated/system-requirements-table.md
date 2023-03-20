@@ -1,5 +1,5 @@
 ---
-source-git-commit: 1ca3d530051b0f59084bf370951f8f0b03dcfc28
+source-git-commit: 4117662e4b3686388d578ae3e620ee6478216a98
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 70%
@@ -11,13 +11,13 @@ ht-degree: 70%
   <thead>
     <tr>
       <th>
-        软件依赖项
+        软件依赖关系
       </th>
       <th>2.4.6</th>
       <th>2.4.5-p2</th>
       <th>2.4.5-p1</th>
       <th>2.4.5</th>
-      <th>2.4.4 - p3</th>
+      <th>2.4.4-p3</th>
       <th>2.4.4-p2</th>
       <th>2.4.4-p1</th>
       <th>2.4.4</th>
@@ -78,7 +78,7 @@ ht-degree: 70%
     <tr>
       <td><span class="uicontrol">[!DNL Elasticsearch]</span></td>
       <td>
-            8.4
+            8.4, 7.17
       </td>
       <td>
             7.17
@@ -258,7 +258,7 @@ ht-degree: 70%
     <tr>
       <td><span class="uicontrol">[!DNL PHP]</span></td>
       <td>
-            8.1
+            8.1, 8.2
       </td>
       <td>
             8.1
@@ -663,37 +663,37 @@ ht-degree: 70%
     <tr>
       <td><span class="uicontrol">[!DNL AWS ElastiCache]</span></td>
       <td>
-            Redis 6.2
+            雷迪斯6.2
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
-            Redis 6
+            雷迪斯6
       </td>
       <td>
           --
@@ -800,7 +800,7 @@ ht-degree: 70%
 
 >[!IMPORTANT]
 >
->云基础架构上Adobe Commerce的服务版本和兼容性支持取决于云基础架构上部署的版本，并且有时与Adobe Commerce内部部署支持的版本不同。 参见 [支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) 在 _云指南_.
+>云基础架构上对Adobe Commerce的服务版本和兼容性支持取决于云基础架构上部署的版本，有时与Adobe Commerce本地部署支持的版本有所不同。 请参阅 [支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) 在 _Cloud指南_.
 
 >[!NOTE]
 >
