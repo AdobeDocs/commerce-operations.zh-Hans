@@ -1,9 +1,9 @@
 ---
 title: 目录配置路径引用
 description: 请参阅目录配置值列表。
-source-git-commit: bd1bf6edd131ec93902246e95ce857b509f2a619
+source-git-commit: e4b7ea70b96143629b245409537459ad259393e0
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,7 @@ ht-degree: 0%
 | 搜索Recommendations计数 | `catalog/search/search_recommendations_count` | ![仅限商务](/help/assets/configuration/cloud-ee.png) |
 | 显示每个推荐的结果计数 | `catalog/search/search_recommendations_count_results_enabled` | ![仅限商务](/help/assets/configuration/cloud-ee.png) |
 | 要匹配的最小术语数 | `catalog/search/minimum_should_match` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| 生成“类别/产品”URL重写 | `catalog/seo/generate_category_product_rewrites` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 热门搜索词 | `catalog/seo/search_terms` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 产品URL后缀 | `catalog/seo/product_url_suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 类别URL后缀 | `catalog/seo/category_url_suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -115,7 +116,7 @@ ht-degree: 0%
 | 显示追加销售产品 | `catalog/magento_targetrule/upsell_position_behavior` | ![仅限商务](/help/assets/configuration/cloud-ee.png) |
 | 追加销售产品清单中产品的轮换模式 | `catalog/magento_targetrule/upsell_rotation_mode` | ![仅限商务](/help/assets/configuration/cloud-ee.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 库存路径
 
@@ -145,7 +146,7 @@ ht-degree: 0%
 | 计算模式 | `cataloginventory/source_selection_distance_based_google/mode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 值 | `cataloginventory/source_selection_distance_based_google/value` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Visual Sticler路径
 
@@ -158,7 +159,7 @@ ht-degree: 0%
 | 颜色属性代码 | `visualmerchandiser/options/color_attribute_code` | ![仅限商务](/help/assets/configuration/cloud-ee.png) |
 | 颜色顺序 | `visualmerchandiser/options/color_order` | ![仅限商务](/help/assets/configuration/cloud-ee.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## XML站点地图路径
 
@@ -182,7 +183,7 @@ ht-degree: 0%
 | 最大文件大小 | `sitemap/limit/max_file_size` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 启用提交到Robots.txt | `sitemap/search_engines/submission_robots` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## RSS馈送路径
 
@@ -198,7 +199,7 @@ ht-degree: 0%
 | 顶级类别 | `rss/catalog/category` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 客户订单状态通知 | `rss/order/status` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 通过电子邮件发送给好友路径
 
@@ -213,4 +214,4 @@ ht-degree: 0%
 | 1小时内发送的最大产品数 | `sendfriend/email/max_per_hour` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 发送方限制 | `sendfriend/email/check_by` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
