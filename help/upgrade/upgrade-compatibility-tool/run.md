@@ -1,9 +1,9 @@
 ---
 title: “运行 [!DNL Upgrade Compatibility Tool]"
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在命令行界面中。Adobe Commerce项目
-source-git-commit: e704748a7ceaa58a5a8d7004c81ac766dec4e7f1
+source-git-commit: 653d755023f96c0a6acc312f74fd4a0292f13a73
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ bin/uct refactor <dir>
 
 ## 使用 `graphql:compare` 命令
 
-此命令为 [!DNL Upgrade Compatibility Tool] 要检查两个GraphQL端点并比较其架构，以查找它们之间的中断和危险更改：
+此命令为 [!DNL Upgrade Compatibility Tool] 要检查两个GraphQL端点并比较其架构，以在它们之间寻求突破和危险的更改：
 
 ```bash
 bin/uct graphql:compare <schema1> <schema2>
@@ -207,7 +207,7 @@ bin/uct graphql:compare <schema1> <schema2>
 bin/uct list
 ```
 
-## 使用 `--help` 命令
+## 使用 `help` 命令
 
 要查看 [!DNL Upgrade Compatibility Tool] 命令常规选项和帮助，运行：
 
@@ -260,6 +260,7 @@ bin/uct upgrade:check --help
 - 请避免使用两个同名模块。
 - 关注Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards/).
 - Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) 最佳实践。
+- 运行 [!DNL Upgrade Compatibility Tool] 从 [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) 表示 [Adobe Commerce云基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank} 项目。
 
 ## 优化结果
 
