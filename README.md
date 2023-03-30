@@ -1,17 +1,17 @@
 ---
-source-git-commit: d17847a7151c5e88f763b334e1ee659ca3ca6bcf
+source-git-commit: 4b767014f325bef7e07cea11d01089206bf44caf
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 5%
+source-wordcount: '475'
+ht-degree: 0%
 
 ---
-# Adobe Commerce用户文档
+# Adobe Commerce技术文档
 
 我们欢迎社区成员以及文档团队外的Adobe员工踊跃参与。
 
 ## Adobe开源行为准则
 
-本项目已采用 [Adobe 开源行为准则](code-of-conduct.md)或 [.NET Foundation 行为准则](https://dotnetfoundation.org/code-of-conduct)。有关更多信息，请参阅[贡献](contributing.md)文章。
+该项目已通过 [Adobe开源行为准则](code-of-conduct.md) 或 [.NET Foundation行为准则](https://dotnetfoundation.org/code-of-conduct). 有关更多信息，请参阅 [参与](contributing.md) 文章。
 
 ## 关于您对Adobe内容的贡献
 
@@ -33,7 +33,7 @@ ht-degree: 5%
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). We need you to complete the online form before we can review your pull request.
 -->
 
-### 来自Adobe员工的主要更改
+### Adobe员工的重大变更
 
 如果您是来自Adobe Experience Cloud解决方案产品团队的技术文档撰稿人、项目经理或开发人员，并且您的工作是撰写或创作技术文章，则应使用位于 `https://git.corp.adobe.com/AdobeDocs`.
 
@@ -51,13 +51,6 @@ If you submit a pull request with significant changes to documentation and code 
 
 * [Markdown基础知识](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [可打印的Markdown速查表](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
-
-## 标签
-
-在公共存储库中，会为拉取请求分配自动标签，以帮助我们管理拉取请求工作流，并帮助您了解拉取请求的进展情况：
-
-* **已发送给作者的更改**:已通知作者拉取请求处于待处理状态。
-* **准备合并**:准备由我们的拉取请求审阅团队进行审阅。
 
 ## 模板
 
