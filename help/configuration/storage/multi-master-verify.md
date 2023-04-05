@@ -1,9 +1,9 @@
 ---
 title: 验证拆分数据库
 description: 了解如何验证Commerce Split数据库配置是否正常工作。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 配置后，主控数据库的配置如下所示：
 
 - 主商务数据库：369个表
-- 商务 [报价](https://glossary.magento.com/quote) 数据库：11个表
+- 商务报价数据库：11个表
 - 商务销售数据库：55个表
 
 要验证拆分数据库是否正常工作，请执行以下任务，并使用数据库工具(如 [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin):

@@ -1,9 +1,9 @@
 ---
 title: 需要手动迁移的数据
-description: '了解在Magento1中必须手动迁移才能Magento2数据迁移的数据，以及如何执行迁移。 '
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+description: 了解在Magento1中必须手动迁移才能Magento2数据迁移的数据，以及如何执行迁移。
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 * 媒体
 
-* [店面](https://glossary.magento.com/storefront) 设计
+* 店面设计
 
-* [管理员](https://glossary.magento.com/admin) 用户帐户
+* 管理员用户帐户
 
 * 访问控制列表(ACL)
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 1. 在右侧窗格中，滚动到 **介质的存储配置**.
 
-1. 从 **选择媒体数据库** 列表，单击 [媒体存储](https://glossary.magento.com/media-storage) 数据库。
+1. 从 **选择媒体数据库** 列表，单击媒体存储数据库的名称。
 
 1. 单击 **同步**.
 
@@ -48,15 +48,15 @@ ht-degree: 0%
 
 ### 文件系统中的媒体文件
 
-所有媒体文件(产品、类别、 [怀西威格](https://glossary.magento.com/wysiwyg) 编辑者等)应从 `<your Magento 1 install dir>/media` to `<your Magento 2 install dir>/pub/media`.
+所有媒体文件(产品、类别、所见即所得(WYSIWYG)编辑器等的图像)都应从 `<your Magento 1 install dir>/media` to `<your Magento 2 install dir>/pub/media`.
 
 但是，请 *not* 复制 `.htaccess` 位于Magento1中的文件 `media` 文件夹。 Magento2有它自己的 `.htaccess` 应该保留。
 
 ## 店面设计
 
-* 在文件(CSS、JS、模板、 [XML](https://glossary.magento.com/xml) 布局)更改了其位置和格式
+* 文件中的设计（CSS、JS、模板、XML布局）更改了其位置和格式
 
-* [布局](https://glossary.magento.com/layout) 数据库中存储的更新。 通过Magento1管理员 [CMS](https://glossary.magento.com/cms) 页面、CMS小组件、 [类别](https://glossary.magento.com/category) 页面和产品页面
+* 布局数据库中存储的更新。 在CMS页面、CMS小组件、类别页面和产品页面中通过Magento1管理
 
 ## 访问控制列表(ACL)
 

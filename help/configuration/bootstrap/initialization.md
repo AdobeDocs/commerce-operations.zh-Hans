@@ -1,9 +1,9 @@
 ---
 title: 应用程序初始化和引导
 description: 请阅读有关商务应用程序的初始化和引导逻辑。
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 ### 媒体资源入口点
 
-[Magento\MediaStorage\App\Media][media] 从数据库中检索媒体资源（即上传到媒体存储的任何文件）。 每当将数据库配置为 [媒体存储](https://glossary.magento.com/media-storage).
+[Magento\MediaStorage\App\Media][media] 从数据库中检索媒体资源（即上传到媒体存储的任何文件）。 每当将数据库配置为媒体存储时，都会使用它。
 
 `\Magento\Core\App\Media` 尝试在配置的数据库存储中查找媒体文件，并将其写入 `pub/static` 目录，然后返回其内容。 出错时，它会在标头中返回一个HTTP 404（未找到）状态代码，其中不包含任何内容。
 

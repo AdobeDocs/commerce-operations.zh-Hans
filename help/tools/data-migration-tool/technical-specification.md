@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Data Migration Tool] 技术规范”'
 description: “了解 [!DNL Data Migration Tool] 以及在Magento1和Magento2之间传输数据时如何扩展。”
-source-git-commit: c56cc6d97f69770aa718333c02514ab3cfce774c
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
 │       │   ├── Data.php
 │       │   ├── Delta.php
 │       │   └── Settings.php
-│       ├── ResourceModel                   --- contains [adapter](https://glossary.magento.com/adapter) for connection to data storage and classes to work with structured data
+│       ├── ResourceModel                   --- contains adapter for connection to data storage and classes to work with structured data
 │       │   ├── Adapter
 │       │   │   └── Mysql.php
 │       │   ├── AbstractCollection.php
@@ -75,7 +75,7 @@ ht-degree: 0%
 │       │   ├── Source.php
 │       │   └── Structure.php
 │       ├── Config.php
-│       ├── [Exception](https://glossary.magento.com/exception).php
+│       ├── Exception.php
 │       └── Step                            --- functionality for migrating specific data
 │           ├── Eav
 │           │   ├── Data.php
@@ -342,7 +342,7 @@ $this->progress->finish();
 
 #### 映射步骤
 
-映射步骤负责将大多数数据从Magento1传输到Magento2。 此步骤从map.xml文件(位于 `etc/` 目录)。 该文件描述了源(Magento1)和目标(Magento2)的数据结构之间的差异。 如果Magento1包含属于某些 [扩展](https://glossary.magento.com/extension) Magento2中不存在的实体，则可以将这些实体放置在此处，以通过映射步骤忽略它们。 否则，将显示一条错误消息。
+映射步骤负责将大多数数据从Magento1传输到Magento2。 此步骤从map.xml文件(位于 `etc/` 目录)。 该文件描述了源(Magento1)和目标(Magento2)的数据结构之间的差异。 如果Magento1包含属于Magento2中不存在的某些扩展的表或字段，则可以将这些实体放置在此处，以按“映射步骤”忽略它们。 否则，将显示一条错误消息。
 
 映射文件具有下一种格式：
 
@@ -464,7 +464,7 @@ $this->progress->finish();
 
 ## 记录
 
-为了实现迁移过程的输出，并控制所有可能级别的PSR记录器，该记录器用于Magento中。 `\Migration\Logger\Logger` 类用于提供日志记录功能。 要使用该日志记录器，应通过构造函数将其注入 [依赖注入](https://glossary.magento.com/dependency-injection).
+为了实现迁移过程的输出，并控制所有可能级别的PSR记录器，该记录器用于Magento中。 `\Migration\Logger\Logger` 类用于提供日志记录功能。 要使用日志记录器，应通过构造函数依赖项注入进行注入。
 
 ```php
 class SomeClass

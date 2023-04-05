@@ -1,9 +1,9 @@
 ---
 title: 数据迁移跟进
 description: 了解如何验证您的Magento1到Magento2数据迁移是否成功，以及所有功能是否按预期运行。
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ### 重新保存客户区段 [仅Adobe Commerce]
 
-迁移后，必须从 [管理员](https://glossary.magento.com/admin) 启动并运行的面板。
+迁移后，必须从管理面板中恢复客户区段，才能使其启动并运行。
 
 ### 配置时区
 

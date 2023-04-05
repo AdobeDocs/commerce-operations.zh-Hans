@@ -1,9 +1,9 @@
 ---
 title: 从配置文件导入数据
 description: 从配置文件导入Adobe Commerce配置设置。
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Nothing to import
 
 商务直接使用 `system` 数组 `config.php` 或 `env.php` 文件，而不是将它们导入数据库，因为它们需要一些预处理和后处理操作。
 
-例如，配置路径的值 `web/secure/base_url` 必须通过验证 [后端](https://glossary.magento.com/backend) 模型。
+例如，配置路径的值 `web/secure/base_url` 必须使用后端模型进行验证。
 
 #### 后端模型
 
@@ -94,7 +94,7 @@ Nothing to import
 
 >[!INFO]
 >
->我们不导入根 [类别](https://glossary.magento.com/category) 与存储关联。 您必须使用商务将根类别与商店关联 [管理员](https://glossary.magento.com/admin).
+>我们不导入与存储关联的根类别。 您必须使用商务管理员将根类别与商店关联。
 
 ### 主题配置
 
@@ -105,7 +105,7 @@ Nothing to import
 数组的键是完整主题路径： `area` + `theme path`
 
 例如， `frontend/Magento/luma`.
-`frontend` 为面积和 `Magento/luma` is [主题](https://glossary.magento.com/theme) 路径。
+`frontend` 为面积和 `Magento/luma` 是主题路径。
 
 数组的值是有关主题的数据：代码，标题，路径，父id
 

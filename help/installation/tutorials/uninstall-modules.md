@@ -1,9 +1,9 @@
 ---
 title: 卸载模块
 description: 按照以下步骤卸载Adobe Commerce或Magento Open Source模块。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此命令仅检查 `composer.json` 文件。 如果卸载 [模块](https://glossary.magento.com/module) 表示 _not_ 在 `composer.json` 文件中，此命令将卸载模块，而不检查依赖关系。 此命令可以 _not_&#x200B;但是，请从文件系统中删除模块的代码。 必须使用文件系统工具删除模块的代码(例如， `rm -rf <path to module>`)。 作为替代方法，您可以 [禁用](manage-modules.md) 非编辑器模块。
+>此命令仅检查 `composer.json` 文件。 如果卸载的模块 _not_ 在 `composer.json` 文件中，此命令将卸载模块，而不检查依赖关系。 此命令可以 _not_&#x200B;但是，请从文件系统中删除模块的代码。 必须使用文件系统工具删除模块的代码(例如， `rm -rf <path to module>`)。 作为替代方法，您可以 [禁用](manage-modules.md) 非编辑器模块。
 
 命令用法：
 
@@ -30,7 +30,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 模块卸载命令执行以下任务：
 
-1. 验证指定的模块是否存在于代码库中，并且是由 [编辑器](https://glossary.magento.com/composer).
+1. 验证指定的模块是否存在于代码库中，以及是否是由编辑器安装的包。
 
    此命令有效 _仅_ 具有定义为编辑器包的模块。
 
@@ -60,7 +60,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
    >
    >卸载模块 _always_ 运行 `composer remove`. 的 `--remove-data` 选项会删除由模块 `Uninstall` 类。
 
-1. 清除 [缓存](https://glossary.magento.com/cache).
+1. 清除缓存。
 1. 更新生成的类。
 1. 如果 `--clear-static-content` 已指定，已清理 [生成的静态视图文件](../../configuration/cli/static-view-file-deployment.md).
 1. 使存储退出维护模式。
@@ -73,7 +73,7 @@ magento module:uninstall Magento_SampleMinimal
         Magento_SampleModifyContent
 ```
 
-一种选择是在备份模块文件系统后卸载这两个模块， `pub/media` 文件和数据库表，但 _not_ 删除模块的 [数据库模式](https://glossary.magento.com/database-schema) 或数据：
+一种选择是在备份模块文件系统后卸载这两个模块， `pub/media` 文件和数据库表，但 _not_ 删除模块的数据库架构或数据：
 
 ```bash
 bin/magento module:uninstall Magento_SampleMinimal Magento_SampleModifyContent --backup-code --backup-media --backup-db

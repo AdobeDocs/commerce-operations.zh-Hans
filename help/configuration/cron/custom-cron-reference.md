@@ -1,9 +1,9 @@
 ---
 title: 自定义cron作业和cron组引用
 description: 了解如何使用cron组自定义cron。
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 自定义转码参考
 
-本主题可帮助您为自定义模块设置crontab和（可选）cron组。 如果您的自定义 [模块](https://glossary.magento.com/module) 需要定期计划任务，您必须为该模块设置一个crontab。 A _crontab_ 是cron作业配置。
+本主题可帮助您为自定义模块设置crontab和（可选）cron组。 如果您的自定义模块需要定期计划任务，则必须为该模块设置crontab。 A _crontab_ 是cron作业配置。
 
 （可选）您可以设置一个自定义组，该组可让您独立于其他cron作业运行该组中定义的cron作业。
 
@@ -38,7 +38,8 @@ A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程�
 对于一个组，文件应具有以下内容：
 
 ```xml
-<config>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="<group_name>">
         <job name="<job_name>" instance="<classpath>" method="<method>">
             <schedule><time></schedule>
@@ -60,7 +61,8 @@ A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程�
 结果 `crontab.xml` 两个组可能如下所示：
 
 ```xml
-<config>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
         <job name="<job_1_name>" instance="<classpath>" method="<method_name>">
             <schedule>* * * * *</schedule>
@@ -84,7 +86,7 @@ A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程�
 
 ### 指定Cron组选项
 
-您可以声明新组并指定其配置选项（所有这些选项均在中运行） [商店视图](https://glossary.magento.com/store-view) 范围) `cron_groups.xml` 文件，位于：
+您可以声明一个新组，并通过 `cron_groups.xml` 文件，位于：
 
 ```text
 <your component base dir>/<vendorname>/module-<name>/etc/cron_groups.xml
@@ -93,7 +95,8 @@ A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程�
 以下是 `cron_groups.xml` 文件：
 
 ```xml
-<config>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/cron_groups.xsd">
     <group id="<group_name>">
         <schedule_generate_every>1</schedule_generate_every>
         <schedule_ahead_for>4</schedule_ahead_for>

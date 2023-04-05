@@ -1,9 +1,9 @@
 ---
 title: PHP设置
 description: 请按照以下步骤来安装所需的PHP扩展，并为Adobe Commerce和Magento Open Source的本地安装配置所需的PHP设置。
-source-git-commit: df8240b71efe992bc1c0655aa30c32778297a3c6
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # PHP设置
 
-本主题讨论如何设置必需项 [PHP](https://glossary.magento.com/php) 选项。
+本主题讨论如何设置所需的PHP选项。
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ ht-degree: 0%
 php -v
 ```
 
-如果 [PHP](https://glossary.magento.com/php) ，将显示一条与以下内容类似的消息：
+如果安装了PHP，则会显示一条与以下内容类似的消息：
 
 ```terminal
 PHP 7.4.0 (cli) (built: Aug 14 2019 16:42:46) ( NTS )

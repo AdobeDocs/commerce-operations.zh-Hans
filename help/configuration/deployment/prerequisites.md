@@ -1,9 +1,9 @@
 ---
 title: 部署先决条件
 description: 请参阅将商务部署到开发、构建或生产系统的先决条件列表。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 - 以下所有内容：
 
-   - 设置相同 [文件系统所有者](https://glossary.magento.com/magento-file-system-owner) 所有系统的用户名
+   - 在所有系统上设置相同的文件系统所有者用户名
    - 确保Web服务器在所有系统上以同一用户的身份运行
    - 确保文件系统所有者位于所有系统的Web服务器组中
 

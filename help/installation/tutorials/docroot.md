@@ -1,9 +1,9 @@
 ---
 title: 修改docroot以提高安全性
 description: 防止未经授权的基于浏览器的访问Adobe Commerce或Magento Open Source本地文件系统。
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ server {
 
 ## 5.验证店面
 
-转到 [店面](https://glossary.magento.com/storefront) 来验证一切是否正常。
+转到Web浏览器中的店面，以验证一切正常。
 
 1. 打开Web浏览器，然后在地址栏中输入服务器的主机名或IP地址。 例如， `http://192.168.33.10`.
 

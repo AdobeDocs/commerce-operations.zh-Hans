@@ -1,9 +1,9 @@
 ---
 title: 设置配置值
 description: 了解如何设置配置值和更改管理员中锁定的值。
-source-git-commit: cb8edb8de8f8419e9992b180ea927ba55cbd839b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 - 在安装Commerce之前，您只能为默认范围设置配置值，因为它是唯一有效范围。
 
-- 安装Commerce后，可以为任何网站或 [商店视图](https://glossary.magento.com/store-view) 范围。
+- 安装Commerce后，可以为任何网站或存储视图范围设置配置值。
 
 使用以下命令：
 

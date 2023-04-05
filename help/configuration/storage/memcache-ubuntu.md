@@ -1,9 +1,9 @@
 ---
 title: 在Ubuntu上设置memcached
 description: 在Ubuntu上安装和配置memcached。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Adobe建议先测试memcached，以确保它在安装Commerce之前可正常工�
 
 ### 验证memcached是否可以缓存数据
 
-此测试使用PHP脚本来验证memcached是否可以存储和检索 [缓存](https://glossary.magento.com/cache) 数据。
+此测试使用PHP脚本来验证memcached是否可以存储和检索缓存数据。
 
 有关此测试的更多信息，请参阅 [如何在Ubuntu教程中安装和使用Memcache](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04).
 

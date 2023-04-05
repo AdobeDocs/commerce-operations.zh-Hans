@@ -1,9 +1,9 @@
 ---
 title: 静态内容缓存
 description: 了解静态内容签名以及如何启用或禁用该功能。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 这是常见的 [最佳实践](https://developer.yahoo.com/performance/rules.html#expires=) 用于缓存静态资源。
 
 当浏览器缓存静态资源并且该资源在服务器上发生更改时，必须清除浏览器缓存，以便它能够下载新版本。
-如果您是 [网站](https://glossary.magento.com/website) 管理员，但是当您希望用户下载静态资源的新版本时，这不是向用户发出的合适请求。
+如果您是网站管理员，则可以手动清除浏览器缓存，但是当您希望用户下载静态资源的新版本时，这不是向用户发出的合适请求。
 
 ## 静态内容签名
 
-[静态内容](https://glossary.magento.com/static-content) 签名是一项商务功能，允许您使静态资源的浏览器缓存失效。
-Commerce通过向的URL添加部署版本来完成此操作 [静态文件](https://glossary.magento.com/static-files).
+静态内容签名是一项商务功能，允许您使静态资源的浏览器缓存失效。
+Commerce通过向静态文件的URL添加部署版本来完成此操作。
 
 以下是一个使用版本签名的URL示例：
 

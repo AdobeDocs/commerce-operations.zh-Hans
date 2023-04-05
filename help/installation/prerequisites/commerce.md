@@ -1,9 +1,9 @@
 ---
 title: 获取Adobe Commerce软件
 description: 了解如何下载Adobe Commerce和Magento Open Source软件。
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -62,4 +62,4 @@ UNIX系统需要 `root` 安装和配置软件（如Web服务器PHP）的权限�
 
 做 *not* 在web服务器docroot中安装应用程序，作为 `root` 用户，因为web服务器可能无法与这些文件进行交互。
 
-您需要 `root` 创建权限 [文件系统所有者](file-system/overview.md) 并将该所有者添加到Web服务器的组。 您使用 [文件系统所有者](https://glossary.magento.com/magento-file-system-owner) 运行 `bin/magento` 命令行中的命令和设置cron作业（为您安排任务）。
+您需要 `root` 创建权限 [文件系统所有者](file-system/overview.md) 并将该所有者添加到Web服务器的组。 使用文件系统所有者运行 `bin/magento` 命令行中的命令和设置cron作业（为您安排任务）。

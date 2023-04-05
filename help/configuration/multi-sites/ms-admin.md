@@ -1,9 +1,9 @@
 ---
 title: 在管理员中设置多个网站、商店和存储视图
 description: 在商务管理员中配置其他网站、商店和存储视图。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 步骤1:创建根类别
 
-创建根类别是可选的，但在本教程中，我们将在 [事件](https://glossary.magento.com/event) 您希望每个网站具有唯一的根类别。 您可以选择创建其他类别。
+创建根类别是可选的，但在您希望每个网站都具有唯一的根类别的情况下，我们在本教程中演示了如何创建根类别。 您可以选择创建其他类别。
 
 要创建根类别，请执行以下操作：
 

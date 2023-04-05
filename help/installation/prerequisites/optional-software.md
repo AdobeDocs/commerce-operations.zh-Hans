@@ -1,9 +1,9 @@
 ---
 title: 可选软件
 description: 进一步了解可安装的可选软件，以支持在本地安装Adobe Commerce和Magento Open Source。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ apt-get install ntp
 
 ## 创建phpinfo.php
 
-的 [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) 文件显示有关 [PHP](https://glossary.magento.com/php) 及其扩展。
+的 [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) 文件会显示有关PHP及其扩展的大量信息。
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ phpinfo();
 
 有关更多信息，请参阅 [phpinfo手册页](https://www.php.net/manual/en/function.phpinfo.php).
 
-要查看结果，请输入以下 [URL](https://glossary.magento.com/url) 在浏览器的位置或地址字段中：
+要查看结果，请在浏览器的位置或地址字段中输入以下URL:
 
 ```http
 http://<web server host or IP>/phpinfo.php

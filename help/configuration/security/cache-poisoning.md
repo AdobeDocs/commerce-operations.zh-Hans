@@ -1,9 +1,9 @@
 ---
 title: 防止缓存中毒
 description: 了解如何防止Commerce店面的页面缓存中毒。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 防止缓存中毒
 
-本主题讨论如何防止 [缓存](https://glossary.magento.com/cache) 中毒(如果您使用Microsoft Internet Information Server(IIS)Web服务器)。 _缓存中毒_ 是一种更改缓存内容以包含来自同一站点的不同页面的方法。 例如，可以插入HTTP 404（未找到）错误页面来代替某些良性页面(例如， [店面](https://glossary.magento.com/storefront) 主页)，这可能导致潜在的拒绝服务(DoS)。 恶意页面URL被Rikest或Redis缓存，因此名称 _页面缓存中毒_.
+本主题讨论在使用Microsoft Internet Information Server(IIS)Web服务器时如何防止缓存中毒。 _缓存中毒_ 是一种更改缓存内容以包含来自同一站点的不同页面的方法。 例如，可以插入HTTP 404（未找到）错误页面来代替某些良性页面（例如，店面主页），这可能会导致潜在的拒绝服务(DoS)。 恶意页面URL被Rikest或Redis缓存，因此名称 _页面缓存中毒_.
 
 这些类型的攻击可能很难检测，因为它们不会导致Web服务器日志中的错误。
 

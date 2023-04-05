@@ -1,9 +1,9 @@
 ---
 title: 创建、编辑或解锁管理员帐户
 description: 按照以下步骤管理Adobe Commerce或Magento Open Source管理应用程序的管理员帐户。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 - [创建部署配置](deployment.md)
 - [至少启用Magento授权和Magento用户模块](manage-modules.md)
-- 创建 [数据库模式](https://glossary.magento.com/database-schema)
+- 创建数据库模式
 
 >[!NOTE]
 >

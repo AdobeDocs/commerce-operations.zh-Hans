@@ -1,9 +1,9 @@
 ---
 title: 使用Apache设置多个网站
 description: 请按照本教程使用Apache设置多个网站。
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 我们假定：
 
-如有必要，请复制现有 `index.php` 网站或 [商店视图](https://glossary.magento.com/store-view) 并添加以下内容：
+如有必要，请复制现有 `index.php` 登入点脚本（用于网站或存储视图），并添加到其中：
 
 - 您正在使用开发计算机（笔记本电脑、虚拟机等）
 

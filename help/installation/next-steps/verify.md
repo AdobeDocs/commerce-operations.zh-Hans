@@ -1,9 +1,9 @@
 ---
 title: 验证安装
 description: 按照以下步骤确认您的本地Adobe Commerce或Magento Open Source安装成功。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 验证安装
 
-转到 [店面](https://glossary.magento.com/storefront) 在Web浏览器中。 例如，如果您的安装基础 [URL](https://glossary.magento.com/url) is `http://www.example.com`，请在浏览器的地址或位置栏中输入。
+在Web浏览器中转到店面。 例如，如果您的安装基本URL为 `http://www.example.com`，请在浏览器的地址或位置栏中输入。
 
 下图显示了一个示例店面页面。 如果按如下方式显示，则表明安装成功！
 
@@ -29,9 +29,9 @@ ht-degree: 0%
 
 ## 验证管理员
 
-转到 [管理员](https://glossary.magento.com/magento-admin) 在Web浏览器中。 例如，如果您的安装基本URL为 `http://www.example.com`，且管理员URI为 `admin_au1nT`，输入 `http://www.example.com/admin_au1nT` 地址栏或位置栏。
+在Web浏览器中转到管理员。 例如，如果您的安装基本URL为 `http://www.example.com`，且管理员URI为 `admin_au1nT`，输入 `http://www.example.com/admin_au1nT` 地址栏或位置栏。
 
-( [管理员](https://glossary.magento.com/admin) URI由 `backend-frontname` 安装参数。)
+(管理员URI由 `backend-frontname` 安装参数。)
 
 出现提示时，以管理员身份登录。
 

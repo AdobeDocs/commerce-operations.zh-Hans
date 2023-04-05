@@ -1,9 +1,9 @@
 ---
 title: 使用Nginx设置多个网站
 description: 请按照本教程使用Nginx设置多个网站。
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 ## 步骤2:创建原始虚拟主机
 
-此步骤讨论如何在 [店面](https://glossary.magento.com/storefront). 您可以使用网站或存储视图；如果使用商店视图，则必须相应地调整参数值。 您必须以用户身份通过 `sudo` 权限。
+此步骤讨论如何在店面上加载网站。 您可以使用网站或存储视图；如果使用商店视图，则必须相应地调整参数值。 您必须以用户身份通过 `sudo` 权限。
 
 只需使用一个 [nginx虚拟主机文件](#step-2-create-nginx-virtual-hosts)，则可以使nginx配置简单而干净。 通过使用多个虚拟主机文件，您可以自定义每个存储(以使用 `french.mysite.mg` 例如)。
 

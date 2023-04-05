@@ -1,9 +1,9 @@
 ---
 title: 最终验证
 description: 验证是否已正确设置清漆配置以与Adobe Commerce应用程序配合使用。
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ X-Magento-Cache-Debug: MISS
 
 ## 检查页面加载时间
 
-如果清漆正常工作，则任何具有可缓存块的商务页面都应在150毫秒内加载。 例如，前门和 [店面](https://glossary.magento.com/storefront) [类别](https://glossary.magento.com/category) 页面。
+如果清漆正常工作，则任何具有可缓存块的商务页面都应在150毫秒内加载。 此类页面的示例包括前门和店面类别页面。
 
 使用浏览器检查器测量页面加载时间。
 
@@ -66,7 +66,7 @@ X-Magento-Cache-Debug: MISS
 
 确保 `<magento_root>/var/page_cache` 目录为空：
 
-1. 登录到您的Commerce服务器，或切换到 [文件系统所有者](https://glossary.magento.com/magento-file-system-owner).
+1. 登录到您的商务服务器，或切换到文件系统所有者。
 1. 输入以下命令：
 
    ```bash

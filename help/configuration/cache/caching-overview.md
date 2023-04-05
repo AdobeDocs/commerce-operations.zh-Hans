@@ -1,9 +1,9 @@
 ---
 title: 配置缓存
 description: 了解缓存以及如何为Adobe Commerce和Magento Open Source应用程序配置缓存机制。
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 [!DNL Commerce] 允许您配置默认文件系统缓存的替代选项。 本指南讨论了其中一些备选方案；即
 
-- 设置以下内容 [缓存](https://glossary.magento.com/cache) 机制 [!DNL Commerce] 配置：
+- 在 [!DNL Commerce] 配置：
 
    - [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)
    - [雷迪斯](config-redis.md)
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 - 修改提供的 `default` 缓存前端 — 
 
-   您仅修改 `<magento_root>/app/etc/di.xml` 文件，商务应用程序的全局 [依赖注入](https://glossary.magento.com/dependency-injection) 配置。
+   您仅修改 `<magento_root>/app/etc/di.xml` 文件，则商务应用程序的全局依赖项注入配置。
 
 - 配置您自己的自定义缓存前端 — 
 

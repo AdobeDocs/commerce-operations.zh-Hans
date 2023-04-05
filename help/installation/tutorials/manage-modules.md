@@ -1,9 +1,9 @@
 ---
 title: 启用或禁用模块
 description: 按照以下步骤管理Adobe Commerce或Magento Open Source模块。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ bin/magento module:status [--enabled] [--disabled] <module-list>
 
 * `--enabled` 列出所有已启用的模块。
 * `--disabled` 列出所有禁用的模块。
-* `<module-list>` 是用于检查状态的以空格分隔的模块列表。 如果有 [模块](https://glossary.magento.com/module) 名称包含特殊字符，请用单引号或双引号引住名称。
+* `<module-list>` 是用于检查状态的以空格分隔的模块列表。 如果任何模块名称包含特殊字符，请用单引号或双引号引住该名称。
 
 ## 模块启用、禁用
 
@@ -41,7 +41,7 @@ bin/magento module:disable [-c|--clear-static-content] [-f|--force] [--all] <mod
 
 其中
 
-* `<module-list>` 是要启用或禁用的模块列表，以空格分隔。 如果有 [模块](https://glossary.magento.com/module) 名称包含特殊字符，请用单引号或双引号引住名称。
+* `<module-list>` 是要启用或禁用的模块列表，以空格分隔。 如果任何模块名称包含特殊字符，请用单引号或双引号引住该名称。
 * `--all` 可同时启用或禁用所有模块。
 * `-f` 或 `--force` 强制启用或禁用模块（尽管存在依赖关系）。 在使用此选项之前，请参阅 [关于启用和禁用模块](#about-enabling-and-disabling-modules).
 * `-c` 或 `--clear-static-content` 清理 [生成的静态视图文件](../../configuration/cli/static-view-file-deployment.md).

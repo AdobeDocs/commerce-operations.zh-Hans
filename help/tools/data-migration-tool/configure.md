@@ -1,9 +1,9 @@
 ---
 title: 配置 [!DNL Data Migration Tool]
 description: 了解配置 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -203,7 +203,7 @@ ht-degree: 0%
 
 要使用映射文件，请执行以下操作：
 
-1. 复制 `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` to `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` 并删除 `.dist` [扩展](https://glossary.magento.com/extension).
+1. 复制 `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` to `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` 并删除 `.dist` 扩展。
 
 1. 在 `<options>` 节点 `config.xml`. 更新的路径应为以下路径之一：
 

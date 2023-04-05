@@ -1,10 +1,10 @@
 ---
 title: 生成数据以进行性能测试
 description: 了解如何生成大量数据以用于性能测试。
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 9%
+source-wordcount: '749'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 9%
 
 您可以使用 _用户档案_ （小、中、大和超大）。 用户档案位于 `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` 目录访问Advertising Cloud的帮助。
 
-例如，`/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
+例如， `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
 下图显示了如何使用 _小_ 用户档案：
 
@@ -32,18 +32,18 @@ ht-degree: 9%
 | `websites` | 1 | 3 | 25 | 5 | 5 |
 | `store_groups` | 1 | 3 | 25 | 5 | 5 |
 | `store_views` | 1 | 3 | 50 | 5 | 5 |
-| `simple_products` | 800 | 2万4千 | 零点四万 | 三十万 | 六十万 |
+| `simple_products` | 800 | 24,000 | 4,000 | 300,000 | 600,000 |
 | `configurable_products` | 16个，24个选项 | 640，含24个选项 | 800（含24个选项）和79（含200个选项） | 8,000，含24个选项 | 16,000，含24个选项 |
 | `product_images` | 每个产品100张图像/3张图像 | 每产品1000张图像/3张图像 | 每产品1000张图像/3张图像 | 2000年图片/每产品3张图片 | 2000年图片/每产品3张图片 |
-| `categories` | 30 | 300 | 100 | 零点三万 | 零点六万 |
+| `categories` | 30 | 300 | 100 | 3,000 | 6,000 |
 | `categories_nesting_level` | 3 | 3 | 3 | 5 | 5 |
 | `catalog_price_rules` | 20 | 20 | 20 | 20 | 20 |
 | `catalog_target_rules` | 5 | 5 | 5 | 5 | 5 |
 | `cart_price_rules` | 20 | 20 | 20 | 20 | 20 |
 | `cart_price_rules_floor` | 2 | 2 | 2 | 2 | 2 |
-| `customers` | 200 | 零点二万 | 零点二万 | 零点五万 | 一万 |
-| `tax rates` | 130 | 四万 | 四万 | 四万 | 四万 |
-| `orders` | 80 | 五万 | 五万 | 十万 | 十五万 |
+| `customers` | 200 | 2,000 | 2,000 | 5,000 | 10,000 |
+| `tax rates` | 130 | 40,000 | 40,000 | 40,000 | 40,000 |
+| `orders` | 80 | 50,000 | 50,000 | 100,000 | 150,000 |
 
 ### 运行数据生成器
 
@@ -100,7 +100,7 @@ Generating simple products...  done in <time>
 
 ### 管理员用户
 
-生成 [管理员](https://glossary.magento.com/admin) 用户。 [XML](https://glossary.magento.com/xml) 配置文件节点：
+生成管理员用户。 XML配置文件节点：
 
 ```xml
 <!-- Number of admin users -->
@@ -124,7 +124,7 @@ Generating simple products...  done in <time>
 
 ### 捆绑产品
 
-生成捆绑产品。 生成的包选择不会单独显示在 [目录](https://glossary.magento.com/catalog). 产品按类别和网站统一分发。 如果  `assign_entities_to_all_websites` 从配置文件设置为 `1`. 产品会分配给所有网站。
+生成捆绑产品。 生成的束选择不会单独显示在目录中。 产品按类别和网站统一分发。 如果  `assign_entities_to_all_websites` 从配置文件设置为 `1`. 产品会分配给所有网站。
 
 XML配置文件节点：
 
@@ -162,7 +162,7 @@ XML配置文件节点：
 
 ### 类别
 
-生成类别。 如果 `assign_entities_to_all_websites` 设置为 `0`，所有类别按根类别统一分布；否则，所有类别都将分配给一个根 [类别](https://glossary.magento.com/category).
+生成类别。 如果 `assign_entities_to_all_websites` 设置为 `0`，所有类别按根类别统一分布；否则，所有类别都将分配给一个根类别。
 
 XML配置文件节点：
 
@@ -231,7 +231,7 @@ XML配置文件节点：
    </configurable_products>
    ```
 
-- 根据动态创建的 [属性集](https://glossary.magento.com/attribute-set) 具有指定数量的属性和选项：
+- 根据动态创建的具有指定数量的属性和选项的属性集生成产品：
 
    ```xml
    <configurable_products>

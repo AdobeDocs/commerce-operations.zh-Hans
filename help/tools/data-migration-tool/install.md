@@ -1,9 +1,9 @@
 ---
 title: 安装 [!DNL Data Migration Tool]
 description: 了解如何安装 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ### 编辑器元包
 
-如果您使用 [编辑器](https://glossary.magento.com/composer) metapackage，输入以下命令：
+如果您使用编辑器元包下载Magento软件，请输入以下命令：
 
 ```bash
 php <magento_root>/bin/magento --version

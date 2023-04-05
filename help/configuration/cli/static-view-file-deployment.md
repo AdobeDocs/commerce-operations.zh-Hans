@@ -1,9 +1,9 @@
 ---
 title: 部署静态视图文件
 description: 了解如何在生产模式期间将静态文件写入商务文件系统。
-source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-使用静态视图文件部署命令可以写入 [静态文件](https://glossary.magento.com/static-files) 当为 [生产模式](../bootstrap/application-modes.md#production-mode).
+当为 [生产模式](../bootstrap/application-modes.md#production-mode).
 
 术语 _静态视图文件_ 是指：
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 | `--language (-l)` | 仅为指定语言生成文件。 缺省设置（未指定选项）是为所有ISO-639语言代码生成文件。 您一次可以指定一个语言代码的名称。 默认值为 **全部**.<br>例如： `--language en_US --language es_ES` | 否 |
 | `--exclude-language` | 为指定的语言代码生成文件。 未指定任何选项的默认值是不排除任何内容。 您可以指定一种语言代码的名称或以逗号分隔的语言代码列表。 默认值为 **无**. | 否 |
 | `--theme <theme>` | 要为其部署静态内容的主题。 默认值为 **全部**.<br>例如： `--theme Magento/blank --theme Magento/luma` | 否 |
-| `--exclude-theme <theme>` | 部署静态内容时要排除的主题。 默认值为 **无**.<br>例如，`--exclude-theme Magento/blank` | 否 |
+| `--exclude-theme <theme>` | 部署静态内容时要排除的主题。 默认值为 **无**.<br>例如， `--exclude-theme Magento/blank` | 否 |
 | `--area (-a)` | 仅为指定区域生成文件。 默认值（未指定选项）是为所有区域生成文件。 有效值为 `adminhtml` 和 `frontend`. 默认值为 **全部**.<br>例如： `--area adminhtml` | 否 |
 | `--exclude-area` | 请勿为指定区域生成文件。 未指定任何选项的默认值是不排除任何内容。 默认值为 **无**. | 否 |
 | `--jobs (-j)` | 使用指定数量的作业启用并行处理。 默认值为0（不在并行进程中运行）。 默认值为 **0**. | 否 |

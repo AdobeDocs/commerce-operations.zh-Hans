@@ -1,9 +1,9 @@
 ---
 title: 拆分数据库性能解决方案
 description: 阅读有关Adobe Commerce和Magento Open Source的拆分数据库解决方案。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Adobe Commerce使用三个主控数据库和可配置数量的从数据库进行
 由于拆分数据库性能解决方案的设计方式，您的自定义代码和安装的组件 _无法_ 执行以下任一操作：
 
 - 直接写入数据库(而必须使用Adobe Commerce数据库接口)
-- 使用影响销售或 [报价](https://glossary.magento.com/quote) 数据库
+- 使用影响销售或报价数据库的JOIN
 - 在结帐、销售或主数据库中使用表的外键
 
 >[!WARNING]
@@ -76,7 +76,7 @@ Adobe Commerce使用三个主控数据库和可配置数量的从数据库进行
 
 拆分数据库要求您在任何主机上设置三个MySQL主控数据库（商务服务器上的所有三个数据库，单独服务器上的每个数据库，等等）。 这些是 _主控_ 数据库和数据库的使用方式如下：
 
-- 一个主控的数据库 [结账](https://glossary.magento.com/checkout) 表
+- 一个用于结帐表的主控数据库
 - 一个主控的销售表数据库(也称为 _订单管理系统_&#x200B;或 _OMS。_，表格)
 - 一个主控数据库，用于Commerce 2应用程序表的其余部分
 

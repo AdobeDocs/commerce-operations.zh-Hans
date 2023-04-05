@@ -1,9 +1,9 @@
 ---
 title: 设置远程MySQL数据库连接
 description: 请按照以下步骤为Adobe Commerce和Magento Open Source的本地安装配置远程数据库连接。
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 安装Adobe Commerce或Magento Open Source时，必须指定以下内容：
 
-* 基地 [URL](https://glossary.magento.com/url) (也称为 *存储地址*)指定的主机名或IP地址 *Web节点*
+* 基本URL(也称为 *存储地址*)指定的主机名或IP地址 *Web节点*
 * 数据库主机是 *远程数据库服务器* IP地址（或者，如果数据库服务器已群集化，则负载平衡器）
 * 数据库用户名是 *本地Web节点* 您向其授予访问权限的数据库用户
 * 数据库密码是本地Web节点用户的密码

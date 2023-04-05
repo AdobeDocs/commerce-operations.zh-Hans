@@ -1,9 +1,9 @@
 ---
 title: 配置应用程序
 description: 了解Adobe Commerce和Magento Open Source内部部署所需的安装后配置。
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ UNIX任务调度程序cron对应用程序的日常操作至关重要。 它会�
 
 如果您有多个Web节点，则 *无法* 使用应用程序的默认文件缓存，因为web节点之间没有同步。 换句话说，一个Web节点上的活动仅被写入该Web节点的文件系统。 如果在其他Web节点上执行后续活动，则可能会写入不必要的文件，或导致错误。
 
-请改为使用 [雷迪斯](../../configuration/cache/config-redis.md) （默认） [缓存](https://glossary.magento.com/cache) 和页面缓存。
+请改为使用 [雷迪斯](../../configuration/cache/config-redis.md) 默认缓存和页面缓存。
 
 ## 服务器设置
 

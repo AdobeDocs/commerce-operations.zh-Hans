@@ -1,9 +1,9 @@
 ---
 title: 安装扩展
 description: 按照以下步骤安装Adobe Commerce或Magento Open Source扩展。
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -16,12 +16,12 @@ ht-degree: 0%
 扩展包括：
 
 - 模块(扩展Adobe Commerce和Magento Open Source功能)
-- 主题(更改您的 [店面](https://glossary.magento.com/storefront) 和管理员)
+- 主题（更改店面和管理员的外观）
 - 语言包（将店面和管理员本地化）
 
 >[!TIP]
 >
->本主题介绍如何使用命令行安装从Commerce Marketplace购买的扩展。 可以使用相同的过程进行安装 _any_ 扩展；您只需要扩展的 [编辑器](https://glossary.magento.com/composer) 名称和版本。 要查找该扩展，请打开 `composer.json` ，并记下 `"name"` 和 `"version"`.
+>本主题介绍如何使用命令行安装从Commerce Marketplace购买的扩展。 可以使用相同的过程进行安装 _any_ 扩展；您只需要扩展的编辑器名称和版本。 要查找该扩展，请打开 `composer.json` ，并记下 `"name"` 和 `"version"`.
 
 在安装之前，您可能希望：
 

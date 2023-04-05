@@ -1,9 +1,9 @@
 ---
 title: 配置类型
 description: 创建或扩展配置类型。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 扩展配置类型
 
-要扩展现有配置类型，您只需在 [模块](https://glossary.magento.com/module).
+要扩展现有配置类型，您只需在模块中创建配置文件即可。
 
 例如，要添加事件观察者，可创建 `app/code/{VendorName}/{ModuleName}/etc/events.xml` 并宣布新的观察员。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 - XSD验证架构
 - XML配置文件
 
-例如，要引入 [适配器](https://glossary.magento.com/adapter) 对于新的搜索服务器，如果扩展能够配置其实体在该服务器中的索引方式，请创建：
+例如，要为新搜索服务器引入一个适配器，以便扩展能够配置其实体在该服务器中的索引方式，请创建：
 
 - 加载器
 - XSD架构文件

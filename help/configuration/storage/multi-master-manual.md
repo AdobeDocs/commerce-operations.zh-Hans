@@ -1,9 +1,9 @@
 ---
 title: 手动配置主控数据库
 description: 请参阅有关手动配置拆分数据库解决方案的指南。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 手动拆分数据库涉及：
 
-- 创建 [结账](https://glossary.magento.com/checkout) 和订单管理系统(OMS)数据库
+- 创建结帐和订单管理系统(OMS)数据库
 - 运行一系列SQL脚本，这些脚本：
 
    - 删除外键
@@ -62,7 +62,7 @@ Adobe强烈建议您备份当前的数据库和文件系统，以便在此过程
 
 ## 设置其他主控数据库
 
-本节将讨论如何为销售和 [报价](https://glossary.magento.com/quote) 表格。
+本节讨论如何为销售表和报价表创建数据库实例。
 
 **创建销售和OMS报价数据库**:
 
@@ -549,7 +549,7 @@ SET foreign_key_checks = 1;
 
 ## 引用脚本
 
-此部分提供了脚本，您可以运行这些脚本来打印受影响表的完整列表，而无需对它们执行任何操作。 在手动拆分数据库之前，可以使用它们查看哪些表受到了影响，如果您使用自定义 [数据库模式](https://glossary.magento.com/database-schema).
+此部分提供了脚本，您可以运行这些脚本来打印受影响表的完整列表，而无需对它们执行任何操作。 在手动拆分数据库之前，可以使用它们查看哪些表受到影响，如果使用自定义数据库架构的扩展，这将非常有用。
 
 要使用这些脚本，请执行以下操作：
 

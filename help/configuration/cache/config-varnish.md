@@ -1,9 +1,9 @@
 ---
 title: 配置和使用清漆
 description: 了解清漆如何存储文件并改进HTTP流量。
-source-git-commit: 974c3480ccf5d1e1a5308e1bd2b27fcfaf3c72b2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1079'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Commerce 2.4.2使用清漆6.4进行测试。 Commerce 2.4.x与清漆6.x兼容
 
 当Web服务器返回资产时，可缓存的资产将存储在清漆中。 这些资产的任何后续请求都将通过清漆（这意味着请求不会到达Web服务器）来完成。 清漆可以极快地返回缓存的内容。 结果是，将内容返回给用户的响应时间更快，并且商务必须满足的请求数量也减少了。
 
-通过清漆缓存的资产会以可配置的间隔过期，或者会被相同资产的较新版本所替换。 您还可以使用 [管理员](https://glossary.magento.com/magento-admin) 或 [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令。
+通过清漆缓存的资产会以可配置的间隔过期，或者会被相同资产的较新版本所替换。 您还可以使用管理员或 [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令。
 
 ## 流程概述
 
@@ -97,7 +97,7 @@ Commerce 2.4.2使用清漆6.4进行测试。 Commerce 2.4.x与清漆6.x兼容
 
 在第一个浏览器请求中，可缓存的资产会从清漆传送到客户端浏览器，并缓存在浏览器上。
 
-此外，清漆使用 [实体](https://glossary.magento.com/entity) 静态资产的标记(ETag)。 ETag提供了确定何时 [静态文件](https://glossary.magento.com/static-files) 更改服务器。 因此，静态资产在服务器上发生更改时（无论是在来自浏览器的新请求中，还是在客户端刷新浏览器缓存时），都会发送给客户端，通常是按F5或Control+F5。
+此外，清漆还对静态资产使用实体标记(ETag)。 ETag提供了一种方法来确定静态文件在服务器上何时发生更改。 因此，静态资产在服务器上发生更改时（无论是在来自浏览器的新请求中，还是在客户端刷新浏览器缓存时），都会发送给客户端，通常是按F5或Control+F5。
 
 以下各节提供了更多详细信息。
 

@@ -1,9 +1,9 @@
 ---
 title: 显示或更改管理员URI
 description: 按照以下步骤查看和修改Adobe Commerce或Magento Open Source管理应用程序的URI。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '103'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 显示管理员URI
 
-本节讨论如何使用命令行来显示 [管理员](https://glossary.magento.com/admin) 统一资源标识符([URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2))。
+本节讨论如何使用命令行显示管理统一资源标识符([URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2))。
 
 命令选项：
 

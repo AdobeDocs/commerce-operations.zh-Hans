@@ -1,9 +1,9 @@
 ---
 title: 升级数据库模式和数据
 description: 按照以下步骤升级您的Adobe Commerce或Magento Open Source数据库模式。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 升级数据库模式和数据
 
-无论您何时执行导致 [数据库模式](https://glossary.magento.com/database-schema) 或要更改的数据，必须运行本节中讨论的命令来更新它们。 部分原因如下：
+无论您何时执行导致数据库模式或数据更改的操作，都必须运行本节中讨论的命令来更新它们。 部分原因如下：
 
 * 使用命令行升级了应用程序
 * 您使用命令行安装或更新了组件

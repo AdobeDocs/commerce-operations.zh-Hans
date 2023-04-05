@@ -1,9 +1,9 @@
 ---
 title: 覆盖配置设置
 description: 了解如何使用环境变量覆盖配置设置。
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1225'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 要从数据库获取这些值，请执行以下操作：
 
-1. 登录到您的开发系统，作为 [文件系统所有者](https://glossary.magento.com/magento-file-system-owner) 如果您尚未这样做，请执行此操作。
+1. 如果尚未以文件系统所有者身份登录开发系统，请登录到。
 1. 输入以下命令：
 
    ```bash

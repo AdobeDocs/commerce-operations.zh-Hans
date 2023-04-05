@@ -1,9 +1,9 @@
 ---
 title: 配置Web服务器
 description: 了解如何配置Web服务器以使用清漆。
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ backend default {
 
 ## 验证HTTP响应头
 
-现在，您可以通过查看 [HTML](https://glossary.magento.com/html) 从任何页面返回的响应标头。
+现在，您可以通过查看从任何页面返回的HTML响应标头来验证清漆是否正在提供页面。
 
 在查看标题之前，必须先为开发人员模式设置商务。 可以通过多种方法来执行此操作，其中最简单的方法就是修改 `.htaccess` （在商务应用程序根目录中）。 您还可以使用 [`magento deploy:mode:set`](../cli/set-mode.md) 命令。
 
@@ -235,7 +235,7 @@ varnishlog
 
 ### 查看HTML响应标头
 
-有多种方法可查看响应标头，包括使用浏览器 [插件](https://glossary.magento.com/plug-in) 或浏览器检查器。
+有多种方法可查看响应标头，包括使用浏览器插件或浏览器检查器。
 
 以下示例使用 `curl`. 您可以从任何能够使用HTTP访问商务服务器的计算机中输入此命令。
 

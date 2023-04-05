@@ -1,9 +1,9 @@
 ---
 title: 数据迁移后步骤
 description: 了解使用 [!DNL Data Migration Tool] 将数据从Magento1迁移到Magento2。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 完成迁移并对新的Magento2站点进行全面测试后，请执行以下任务：
 
-* 将Magento1置于维护模式并永久停止所有 [管理员](https://glossary.magento.com/admin) 活动
+* 将Magento1置于维护模式并永久停止所有管理员活动
 
 * 开始Magento2 cron作业
 

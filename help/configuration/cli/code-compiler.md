@@ -1,9 +1,9 @@
 ---
 title: 代码编译器
 description: 了解如何从命令行运行代码编译器。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 代码编译包括以下内容（无特定顺序）：
 
 - 应用程序代码生成（工厂、代理）
-- 区域配置聚合（已优化） [依赖注入](https://glossary.magento.com/dependency-injection) 每区域配置)
+- 区域配置聚合（优化的每区域依赖项注入配置）
 - 拦截器生成（拦截器优化代码生成）
 - 侦听缓存生成
 - 存储库代码生成（为API生成的代码）
-- 服务数据属性生成（生成） [扩展](https://glossary.magento.com/extension) 数据对象的类)
+- 服务数据属性生成（为数据对象生成的扩展类）
 
 您可以在 [\Magento\Setup\Module\Di\App\Task\Operation][operation] 命名空间。
 
@@ -44,7 +44,7 @@ Generated code and dependency injection configuration successfully.
    bin/magento module:enable --all [-c|--clear-static-content]
    ```
 
-   使用 `[-c|--clear-static-content]` 选项清除 [静态内容](https://glossary.magento.com/static-content). 如果您之前已启用或已禁用模块，并且必须清除之前为这些模块生成的静态内容，则必须执行此操作。
+   使用 `[-c|--clear-static-content]` 选项来清除静态内容。 如果您之前已启用或已禁用模块，并且必须清除之前为这些模块生成的静态内容，则必须执行此操作。
 
    请参阅 [启用模块](../../installation/tutorials/manage-modules.md).
 

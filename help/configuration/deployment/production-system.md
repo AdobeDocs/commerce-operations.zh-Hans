@@ -1,9 +1,9 @@
 ---
 title: 生产系统设置
 description: 了解如何为商务应用程序设置生产系统。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 要设置生产计算机，请执行以下操作：
 
-1. 安装Commerce或从源代码管理中提取它后，作为或切换到 [文件系统所有者](https://glossary.magento.com/magento-file-system-owner).
+1. 安装Commerce或从源代码管理中提取它后，以文件系统所有者的身份登录到生产服务器，或切换到。
 1. 创建 `~/.ssh/.composer/auth.json` 如果您尚未执行此操作，请执行以下操作。
 
    创建目录：

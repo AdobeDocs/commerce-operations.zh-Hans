@@ -1,10 +1,10 @@
 ---
 title: 检查数据库状态
 description: 请按照以下步骤检查您的Adobe Commerce或Magento Open Source数据库状态。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '108'
+ht-degree: 2%
 
 ---
 
@@ -35,4 +35,4 @@ All modules are up to date.
 |--------------|--------------|---------------|
 | 0 | 正常 | 无 |
 | 1 | 某些模块使用比数据库更新或更早的代码版本 | 运行 [`magento setup:upgrade`](database-upgrade.md) 更新数据库模式并运行 `composer update` 从应用程序根目录更新组件依赖项 |
-| 2 | `magento setup:upgrade` 必需 | [`magento setup:upgrade`](database-upgrade.md) 更新 [数据库模式](https://glossary.magento.com/database-schema) |
+| 2 | `magento setup:upgrade` 必需 | [`magento setup:upgrade`](database-upgrade.md) 更新数据库模式 |

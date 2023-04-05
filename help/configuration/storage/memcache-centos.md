@@ -1,9 +1,9 @@
 ---
 title: 在CentOS上设置memcached
 description: 在CentOS上安装和配置memcached。
-source-git-commit: 65060d067bbbfe139736df3800688ce897cb17be
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Adobe建议先测试memcached，以确保它在安装Commerce之前可正常工�
 
 1. 在Web浏览器中转到该页面。
 
-   例如，`http://192.0.2.1/phpinfo.php`
+   例如， `http://192.0.2.1/phpinfo.php`
 
 1. 确保memcache显示如下：
 
@@ -113,7 +113,7 @@ Adobe建议先测试memcached，以确保它在安装Commerce之前可正常工�
 
 ### 创建由MySQL数据库和PHP脚本组成的memcache测试
 
-测试使用MySQL数据库、表和数据来验证是否可以检索数据库数据并将其存储在内存缓存中。 PHP脚本首先会搜索 [缓存](https://glossary.magento.com/cache). 如果结果不存在，脚本将查询数据库。 在原始数据库完成查询后，脚本使用 `set` 命令。
+测试使用MySQL数据库、表和数据来验证是否可以检索数据库数据并将其存储在内存缓存中。 PHP脚本首先搜索缓存。 如果结果不存在，脚本将查询数据库。 在原始数据库完成查询后，脚本使用 `set` 命令。
 
 [有关此测试的更多详细信息](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-12-04)
 

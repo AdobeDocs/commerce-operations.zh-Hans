@@ -1,9 +1,9 @@
 ---
 title: 卸载或重新安装Adobe Commerce
 description: 按照以下步骤卸载并重新安装Adobe Commerce和Magento Open Source的内部安装。
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ bin/magento setup:uninstall
 
 默认情况下， `bin/magento setup:upgrade` 清除编译的代码和缓存。 通常，您使用 `bin/magento setup:upgrade` 要更新组件和每个组件可能需要不同的编译类。
 
-但是，在某些情况下（特别是部署到生产），您可能希望避免清除已编译的代码，因为这可能需要一些时间。 ( [缓存](https://glossary.magento.com/cache) 仍清除。) 要更新 [数据库模式](https://glossary.magento.com/database-schema) 和数据 *无* 清除编译代码，输入：
+但是，在某些情况下（特别是部署到生产），您可能希望避免清除已编译的代码，因为这可能需要一些时间。 （缓存仍被清除。） 更新数据库模式和数据 *无* 清除编译代码，输入：
 
 ```bash
 bin/magento setup:upgrade --keep-generated

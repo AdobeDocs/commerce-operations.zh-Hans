@@ -1,9 +1,9 @@
 ---
 title: 使用清漆清除缓存
 description: 了解缓存清除如何与Riket配合使用，以及如何将其用作Adobe Commerce应用程序的Web缓存加速器。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ## 清漆清洗
 
-根据 [清漆文档](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html), &quot;A *清除* 当你从 [缓存](https://glossary.magento.com/cache) 并随变体一起丢弃。” 清漆清除类似于缓存清除命令(或单击 **刷新Magento缓存** )。
+根据 [清漆文档](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html), &quot;A *清除* 是当您从缓存中选取一个对象并丢弃该对象及其变体时发生的情况。” 清漆清除类似于缓存清除命令(或单击 **刷新Magento缓存** )。
 
 事实上，当您清理、刷新或刷新商务缓存时，清漆也会清除。
 
 安装并配置清漆以与Commerce一起使用后，以下操作可能会导致清漆清除：
 
-- 维护 [网站](https://glossary.magento.com/website).
+- 维护网站。
 
    例如，您在的“管理员”中执行的任何操作：
 

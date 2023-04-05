@@ -1,9 +1,9 @@
 ---
 title: 执行升级
 description: 按照以下步骤升级Adobe Commerce或Magento Open Source项目。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 如果通过以下方式安装了软件，则可以从命令行升级您的Adobe Commerce或Magento Open Source应用程序：
 
-- 下载 [元包](https://glossary.magento.com/metapackage) 使用 `composer create-project` 命令。
+- 使用下载元包 `composer create-project` 命令。
 - 安装压缩的存档。
 
 >[!NOTE]

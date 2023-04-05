@@ -1,9 +1,9 @@
 ---
 title: 迁移更改
 description: 了解如何使用 [!DNL Data Migration Tool].
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 增量迁移工具会安装deltalog表（带前缀） `m2_cl_*`)和触发器(用于跟踪Magento1数据库中的更改) [数据迁移](data.md). 这些delog表和触发器对于确保自上次迁移Magento以来仅迁移在迁移1中所做的更改至关重要。 这些更改包括：
 
-* 客户通过 [店面](https://glossary.magento.com/storefront) （创建订单、审核和客户配置文件的更改）
+* 客户通过storefront添加的数据（创建的订单、审核和客户配置文件的更改）
 
-* 所有包含订单、产品和类别的操作 [管理员](https://glossary.magento.com/magento-admin) 面板
+* 管理面板中包含订单、产品和类别的所有操作
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ bin/magento migrate:delta [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 在 `Delta` 模式， [!DNL Data Migration Tool] 迁移仅由Magento自己的模块创建的数据，并且不负责由第三方开发人员创建的代码或扩展。 如果这些扩展在storefront数据库中创建了数据，并且商户希望在Magento2（配置文件）中包含此数据 [!DNL Data Migration Tool] 应创建并相应地修改。
 
-如果 [扩展](https://glossary.magento.com/extension) 具有自己的表，您需要跟踪其对增量迁移的更改，请执行以下步骤：
+如果扩展有其自己的表，并且您需要跟踪其更改以进行增量迁移，请执行以下步骤：
 
 1. 将要跟踪的表添加到 `deltalog.xml` 文件
 1. 创建一个附加的增量类，该增量类将 `Migration\App\Step\AbstractDelta`

@@ -1,9 +1,9 @@
 ---
 title: 翻译字典和语言包
 description: 了解如何生成翻译字典和构建语言包。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1503'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 生成翻译字典
 
-您可以生成 [翻译词典] 要自定义现有字符串、在自定义模块中翻译单词和短语、将主题本地化或创建 [语言包](https://glossary.magento.com/language-package).
+您可以生成 [翻译词典] 要自定义现有字符串、在自定义模块中翻译单词和短语、将主题本地化或创建语言包，请执行以下操作：
 
 要开始翻译，请使用命令生成一个包含所有现有短语和单词的收集列表的字典CSV文件。
 
@@ -139,7 +139,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 在 `language.xml` 配置文件中，必须指定此包的语言继承顺序。
 
-语言继承允许您创建名为 _孩子_ 基于称为 _父项_. 子翻译将覆盖父翻译。 但是，如果子翻译无法上传或显示，或者缺少短语或单词，则Commerce会使用父翻译 [语言](https://glossary.magento.com/locale). [语言包继承示例](#example-of-language-inheritance).
+语言继承允许您创建名为 _孩子_ 基于称为 _父项_. 子翻译将覆盖父翻译。 但是，如果子翻译无法上传或显示，或者缺少短语或单词，则商务将使用父区域设置。 [语言包继承示例](#example-of-language-inheritance).
 
 要声明资源包，请指定以下信息：
 
@@ -247,7 +247,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 1. 为语言包创建目录。
 
-   例如，`/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
+   例如， `/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
 
 1. 在该目录中，添加以下所有内容：
 

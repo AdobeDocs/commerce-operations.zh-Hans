@@ -1,9 +1,9 @@
 ---
 title: 部署的配置文件
 description: 了解配置文件如何用于安装商务应用程序。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Adobe Commerce提供了配置文件，使您能够轻松自定义组件并创建
 
 [Magento\Framework\App\DeploymentConfig](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/DeploymentConfig.php) 仅提供对这些部分的访问权限，但不允许您扩展这些部分。
 
-在下一层次结构中，每个区段中的项目会根据 [模块](https://glossary.magento.com/module) 序列定义，通过合并所有模块的配置文件来获取，但禁用模块除外。
+在下一层级上，每个区段中的项目根据模块顺序定义进行排序，该定义通过合并所有模块的配置文件来获取，但禁用模块除外。
 
 以下各节将讨论部署配置的结构和内容：
 
@@ -78,6 +78,6 @@ return array (
 
 值 `1` 或 `0` 指示模块是已启用还是已禁用。
 
-Commerce应用程序无法识别禁用的模块；换言之，他们不会参与合并配置、依赖关系注入、事件、插件等。 已禁用的模块不会修改 [店面](https://glossary.magento.com/storefront) 或 [管理员](https://glossary.magento.com/admin) 和不影响路由。
+Commerce应用程序无法识别禁用的模块；换言之，他们不会参与合并配置、依赖关系注入、事件、插件等。 禁用的模块不会修改店面或管理员，也不会影响路由。
 
 在代码库中，禁用模块和缺失模块的唯一实际区别在于，自动加载器找到了禁用模块，其类和常量可在其他代码中重复使用。

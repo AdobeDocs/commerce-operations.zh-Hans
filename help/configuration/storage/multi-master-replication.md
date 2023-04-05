@@ -1,9 +1,9 @@
 ---
 title: 数据库复制
 description: 请参阅配置数据库复制的好处。
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ MySQL数据库以异步方式复制，这意味着从服务器无需永久连接
 
 ## 性能改进
 
-为了提高主控从复制的性能，您可以在从实例上过滤一些表。 我们建议过滤所有具有名称模式的临时表 `search\_tmp\_%` 用于 [目录](https://glossary.magento.com/catalog) 搜索。
+为了提高主控从复制的性能，您可以在从实例上过滤一些表。 我们建议过滤所有具有名称模式的临时表 `search\_tmp\_%` 用于目录搜索的ID和ID。
 
 为此，请将以下行添加到 `my.cnf` 文件：
 

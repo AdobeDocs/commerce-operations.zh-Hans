@@ -1,9 +1,9 @@
 ---
 title: 配置搜索秒词
 description: 了解如何使用CSV文件管理Adobe Commerce的秒数。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 停止字位于 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录访问Advertising Cloud的帮助。 Adobe Commerce和Magento Open Source附带一个CSV文件，其中包含默认区域设置的停止语言，并且还附加一个文件： `stopwords.csv`，该字段包含任何不由其他CSV文件表示的区域设置的秒数。
 
-秒词文件的默认生命周期 [缓存](https://glossary.magento.com/cache) 15分钟。
+秒词文件缓存的默认生命周期为15分钟。
 
 ### 编辑现有区域设置的秒数
 
@@ -54,7 +54,7 @@ ht-degree: 0%
       php <magento_root>/bin/magento cache:clean config
       ```
 
-1. 通过在 [店面](https://glossary.magento.com/storefront).
+1. 通过在店面上搜索词来检查结果。
 
 ### 为新区域设置创建秒数
 

@@ -1,9 +1,9 @@
 ---
 title: 升级的维护模式选项
-description: '创建自定义维护模式页面，在您执行升级时，您的客户将在Adobe Commerce或Magento Open Source店面上看到该页面。 '
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+description: 创建自定义维护模式页面，在您执行升级时，您的客户将在Adobe Commerce或Magento Open Source店面上看到该页面。
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ body
 
 要将流量重定向到自定义维护页面，请执行以下操作：
 
-1. 使用文本编辑器打开 [nginx](https://glossary.magento.com/nginx) 包含服务器块的配置文件。
+1. 使用文本编辑器打开包含服务器块的初始配置文件。
 1. 将以下内容添加到服务器块(`server` 仅为清晰起见而显示；不添加第二个服务器块)。
 
    以下允许列表在安装Magento的系统上的IP地址192.0.2.110和192.0.2.115 `/var/www/html/magento2`:

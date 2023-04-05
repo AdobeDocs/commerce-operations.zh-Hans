@@ -1,16 +1,16 @@
 ---
 title: 缓存选项
 description: 配置对低级缓存存储的访问。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
 # 低级缓存选项
 
-商务应用程序使用低级 [缓存](https://glossary.magento.com/cache) [前端](https://glossary.magento.com/frontend) 和 [后端](https://glossary.magento.com/backend) 提供对缓存存储的访问。
+商务应用程序使用低级缓存前端和后端来提供对缓存存储的访问权限。
 
 ## 低级前端缓存
 

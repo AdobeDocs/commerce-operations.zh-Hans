@@ -1,15 +1,15 @@
 ---
-user-guide-title: 运营行动手册
-user-guide-description: 了解如何让您的企业做好运营准备以便运营成功的电子商务网站。
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+user-guide-title: 操作手册
+user-guide-description: 了解如何让您的企业做好运营准备，以运行成功的电子商务网站。
+source-git-commit: ed6b9cb5acd35ce8213fafddcd00be1c32127a86
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
 
-# 运营行动手册 {#operational-playbook}
+# 操作手册 {#operational-playbook}
 
 - [概述](overview.md)
 - 商务 {#intro}
@@ -72,4 +72,5 @@ ht-degree: 0%
    - [单击并收集](product/click-collect.md)
    - [PWA](product/progressive-web-app.md)
 - [检查列表和模板](checklists-templates/home.md)
+- [术语表](glossary.md)
 - [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
