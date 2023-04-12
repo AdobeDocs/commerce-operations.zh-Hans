@@ -1,9 +1,9 @@
 ---
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
-source-git-commit: b71819d123856d03dab872a1652b325ffe7178a6
+source-git-commit: ef501b34947f24f8028bd5876bd4a167551e03ec
 workflow-type: tm+mt
-source-wordcount: '11561'
+source-wordcount: '11914'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,25 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关 [!DNL quality patches] 由社区创建以用于Magento Open Source，请参阅 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.30 {#v1-1-30}
+
+* **ACSD-50336** (对于Adobe Commerce和Magento Open Source>=2.4.4-p1 &lt;2.4.4-p3) — 修复了当产品重新库存或价格发生更改时，未发送产品警报电子邮件的问题。
+* **ACSD-50367** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了在创建多选客户地址属性（不含值）时，无法导出客户地址的问题。
+* **ACSD-49877** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了视频自动播放在移动设备上不起作用的问题 [!DNL Safari] 视频直接链接到远程视频文件而不是流服务时。
+* **ACSD-50165** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了错误 *无法删除文件。 警告！取消链接：没有此类文件或目录* 从管理员刷新JS/CSS缓存时。
+* **ACSD-49737** (对于Adobe Commerce和Magento Open Source>=2.4.1-p1 &lt;2.4.7) — 修复了在信用卡付款失败后，优惠券被错误标记为使用的问题。
+* **ACSD-50814** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了管理员用户无法创建贷项通知单的问题。
+* **ACSD-50116** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了管理员用户无法为子类别级别3或更低级别创建URL重写的问题。
+* **ACSD-49513** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5) — 修复了由于0字节文件导致远程存储同步失败的问题。
+* **ACSD-46683** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了发运价格显示的问题 *尚未计算*.
+* **ACSD-49129** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了 *[!UICONTROL content]* 属性（base64图像代码）未在 `rest/V1/products/sku/media` 产品媒体API响应。
+* **ACSD-50276** (对于Adobe Commerce >=2.4.0 &lt;2.4.7) — 修复了在创建多选客户属性时，客户注册表单在店面上不起作用的问题。
+* **ACSD-50527** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了使用空动态块保存页面时出现的错误。
+* **ACSD-49973** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 改进了通过GraphQL获取捆绑产品的性能。
+* **BB2B-2598** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 将缓存功能添加到 [!UICONTROL availableStores], [!UICONTROL countries], [!UICONTROL country], [!UICONTROL currency]和 [!UICONTROL storeConfig] GraphQL查询。
+* 添加了MDVA-42806、ACSD-48627和ACSD-46815的新版本。
+* 更新了ACSD-49773、ACSD-47179、ACSD-48300的修补程序元数据。
 
 ## v1.1.29 {#v1-1-29}
 
