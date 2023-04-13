@@ -1,9 +1,9 @@
 ---
 title: 管理索引器
 description: 请参阅有关如何查看和管理商务索引器的示例。
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: a7ead687c681914d90e9ed2680c8f7494eba74d4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -120,6 +120,10 @@ Catalog Search index has been rebuilt successfully in <time>
 - `Category Product` 可以用商店的景观来并行。
 - `Catalog Price` 网站和客户群可以并行进行。
 - `Catalog Permissions` 可以由客户团队来并行处理。
+
+>[!INFO]
+>
+>默认情况下，“目录搜索全文”和“类别产品”的并行化处于启用状态。
 
 要使用并行化，请为产品价格索引器设置一个可用的维度模式：
 
