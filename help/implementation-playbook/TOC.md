@@ -2,9 +2,9 @@
 user-guide-title: 实施手册
 user-guide-description: 了解规划和实施成功的Adobe Commerce站点的策略。
 mini-toc-levels: 3
-source-git-commit: 5559d412ab58d392098cfff7a4cabb473c38cb0d
+source-git-commit: 5aa1669e556e5b7bf5ed3777db0f026ccfff5e70
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,13 @@ ht-degree: 0%
       - [无头架构](architecture/headless/adobe-commerce.md)
 - 基础架构和部署 {#infrastructure}
    - [概述](infrastructure/overview.md)
-   - [内部基础设施](infrastructure/on-premises.md)
+   - 自托管 {#self-hosting}
+      - [概述](infrastructure/self-hosting/overview.md)
+      - [内部基础设施](infrastructure/self-hosting/on-premises.md)
+      - [安全概念](infrastructure/self-hosting/security-concepts.md)
+      - [监测遥测和工具](infrastructure/self-hosting/monitoring-tools.md)
+      - [灾难恢复思想](infrastructure/self-hosting/disaster-recovery-ideas.md)
+      - [性能提示](infrastructure/self-hosting/performance-tips.md)
    - 云基础架构 {#cloud}
       - [概述](infrastructure/cloud/overview.md)
       - [地区](infrastructure/cloud/regions.md)
