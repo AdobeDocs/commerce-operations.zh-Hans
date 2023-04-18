@@ -7,9 +7,9 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 66abe9f234aa44f7e07cc024607eeb6591a99d07
+source-git-commit: ab099b2a8a353c2462424831cf8100e7e281b1be
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ CDN为Adobe Commerce项目提供了优化且安全的交付内容。 如果您�
 
 ## 要求对每个拉取请求都遵循Adobe Commerce和PHP编码标准
 
-Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards/){target="_blank"}. 这些功能有助于确保无论何种软件开发类型，都遵循相似的模式、样式和预期设计。 如果要满足这一基本要求，请在参与Adobe Commerce代码库时执行。 但是，遵循此自定义开发方法也为所有开发人员（当前和未来）奠定了坚实的基础。 当要求所有拉取请求传递代码标准时，有助于确保每个人都能够了解和期待相同的一致开发模式。
+Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards/){target="_blank"}. 这些功能有助于确保无论何种软件开发类型，都遵循相似的模式、样式和预期设计。 在参与Adobe Commerce代码库时，这是一项要求。 但是，如果您选择遵循此方法进行自定义开发，则会为所有开发人员（包括当前和未来）奠定坚实的基石。 当要求所有拉取请求传递代码标准时，有助于确保每个人都能够了解和期待相同的一致开发模式。
 
 为了配合Adobe Commerce编码标准，采用的另一个基础是PHP基本编码标准。 在开发人员指南中应明确定义需要遵循的标准以及可接受的任何偏差。 但是，回退应该是位于 [PHP-FIG](https://www.php-fig.org){target="_blank"}.
 

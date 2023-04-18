@@ -7,7 +7,7 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 0d5c2d3ae44008142797c7ac91530a9df98ae004
+source-git-commit: cca195c20ddcba634a8fc39c0867e0ae28f43683
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 只读文件系统
 
-只读文件系统概念借用自 [Adobe Commerce在云基础设施方面](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}. 这完全删除了坏演员使用的一个主要区域。 许多漏洞利用了更改Commerce应用程序中预期会出现的文件来避免检测。 坏操作程序不会创建一个文件，而是会更改现有文件的内容以执行意外操作。 使文件系统为只读，可显着减少此攻击矢量。
+只读文件系统概念借用自 [Adobe Commerce云基础架构](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}. 这完全删除了坏演员使用的一个主要区域。 许多漏洞利用了更改Commerce应用程序中预期会出现的文件来避免检测。 坏操作程序不会创建一个文件，而是会更改现有文件的内容以执行意外操作。 使文件系统为只读，可显着减少此攻击矢量。
 
 ## 使用双因素身份验证和密码管理器
 
