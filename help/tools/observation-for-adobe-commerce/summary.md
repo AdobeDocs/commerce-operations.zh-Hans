@@ -1,7 +1,7 @@
 ---
 title: “ [!UICONTROL Summary] 选项卡”
 description: 了解 [!UICONTROL Summary] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: 61d0de370cbfa02f5fcc7d20ad283c54357294a3
+source-git-commit: 1d4e6ee745b656f0bc291a479e1d5bac5c8504e3
 workflow-type: tm+mt
 source-wordcount: '2653'
 ht-degree: 0%
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ![CPU百分比（按主机）](../../assets/tools/cpu-percent-by-host.jpg)
 
-所有环境和节点的聚合显示在 **[!UICONTROL CPU % by host]** 框架。 您应取消选择非生产环境。 另请注意，生产环境的所有节点都不存在的任何实例。 有关CPU利用率高的更多提示，请参阅 [使用Adobe Commerce上的New Relic解决性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
+所有环境和节点的聚合显示在 **[!UICONTROL CPU % by host]** 框架。 您应取消选择非生产环境。 另请注意，生产环境的所有节点都不存在的任何实例。 有关CPU利用率高的更多提示，请参阅 [在Adobe Commerce上使用New Relic解决性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
 
 ## [!UICONTROL Alerts during timeframe]
 
@@ -359,11 +359,11 @@ PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install
 
 ![订单交易记录默认值](../../assets/tools/order-transactions-default.jpg)
 
-的 **[!UICONTROL Order transactions (default?)]** 框架查找事务 `request.headers.host` 从事务处理，其中名称= `WebTransaction/Action/checkout/onepage/success`. 如果订单成功URL不同，则此框架将没有数据。
+的 **[!UICONTROL Order transactions (default?)]** 框架查找事务 `request.headers.host` 从事务处理中，其中名称= `WebTransaction/Action/checkout/onepage/success`. 如果订单成功URL不同，则此框架将没有数据。
 
 ## [!UICONTROL Elasticsearch Index information]
 
-![elasticsearch索引信息](../../assets/tools/elasticsearch-index-information.jpg)
+![elasticsearch索引信息](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
 **[Elasticsearch状态：](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
 
