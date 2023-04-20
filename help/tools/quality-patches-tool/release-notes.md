@@ -1,7 +1,7 @@
 ---
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
-source-git-commit: ab9d80140833e2d21feffe04a73fcd8ac5f1e980
+source-git-commit: 760f7f5e2e27dba8e77e564230ab3f1cf374dac2
 workflow-type: tm+mt
 source-wordcount: '11946'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 * **ACSD-50527** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了使用空动态块保存页面时出现的错误。
 * **ACSD-49973** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 改进了通过GraphQL获取捆绑产品的性能。
 * **ACSD-51114** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了启用异步索引后，随机产品从大目录中消失的问题。 改进了大型目录异步重新索引的性能。
-* **BB2B-2598** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 将缓存功能添加到 [!UICONTROL availableStores], [!UICONTROL countries], [!UICONTROL country], [!UICONTROL currency]和 [!UICONTROL storeConfig] GraphQL查询。
+* **B2B-2598** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 将缓存功能添加到 [!UICONTROL availableStores], [!UICONTROL countries], [!UICONTROL country], [!UICONTROL currency]和 [!UICONTROL storeConfig] GraphQL查询。
 * 添加了MDVA-42806、ACSD-48627和ACSD-46815的新版本。
 * 更新了ACSD-49773、ACSD-47179、ACSD-48300的修补程序元数据。
 
