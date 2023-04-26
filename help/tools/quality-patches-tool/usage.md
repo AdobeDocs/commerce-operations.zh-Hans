@@ -1,9 +1,10 @@
 ---
 title: 使用情况
 description: 了解如何使用 [!DNL Quality Patches Tool].
-source-git-commit: e35469adb1b3278cf787416e1bc829fae9979efc
+exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
+source-git-commit: 786be8bfa915fe82d9316f51662b20bde71abbaa
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->请参阅 [应用单个修补程序](#apply-individual-patches) 有关将修补程序应用到Adobe Commerce或Magento Open Source项目的说明。 请参阅 [可用的修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
+>请参阅 [应用单个修补程序](#apply-individual-patches) 有关将修补程序应用到Adobe Commerce或Magento Open Source项目的说明。 请参阅 [[!DNL Quality Patches Tool]:搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
 
 >[!WARNING]
 >
@@ -60,7 +61,7 @@ Adobe Commerce 2.3.5。
 状态表包括：
 
 - **类型**:
-   - `Optional`  — 所有来自 [!DNL Quality Patches Tool] 和 [云修补程序](https://devdocs.magento.com/cloud/project/project-patch.html) 包对于Adobe Commerce和Magento Open Source安装是可选的。
+   - `Optional`  — 所有来自 [!DNL Quality Patches Tool] 和 [云基础架构上的商务指南>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) 包对于Adobe Commerce和Magento Open Source安装是可选的。
    - `Deprecated` —Adobe已弃用单个修补程序。 如果已应用修补程序，我们建议您还原该修补程序。 还原操作还会从状态表中删除修补程序。
 
 - **状态**:
@@ -81,7 +82,7 @@ Adobe Commerce 2.3.5。
 
 >[!WARNING]
 >
->最佳做法是在部署到生产之前，在暂存或开发环境中测试所有修补程序。 此外，还建议在应用修补程序之前先备份数据。 请参阅 [备份和回滚文件系统](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html).
+>最佳做法是在部署到生产之前，在暂存或开发环境中测试所有修补程序。 此外，还建议在应用修补程序之前先备份数据。 请参阅 [备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
 要应用单个修补程序，请运行以下命令，其中 `MAGETWO-XXXX` 是状态表中指定的修补程序ID:
 
@@ -109,7 +110,7 @@ Adobe Commerce 2.3.5。
 
 >[!WARNING]
 >
->最佳做法是在部署到生产之前，在暂存或开发环境中测试所有修补程序。 此外，还建议在应用修补程序之前先备份数据。 请参阅 [备份和回滚文件系统](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html).
+>最佳做法是在部署到生产之前，在暂存或开发环境中测试所有修补程序。 此外，还建议在应用修补程序之前先备份数据。 请参阅 [备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
 要还原单个修补程序，请运行以下命令，其中 `MAGETWO-XXXX` 是状态表中指定的修补程序ID:
 
