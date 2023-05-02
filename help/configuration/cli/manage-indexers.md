@@ -1,13 +1,13 @@
 ---
 title: 管理索引器
 description: 请参阅有关如何查看和管理商务索引器的示例。
-source-git-commit: a7ead687c681914d90e9ed2680c8f7494eba74d4
+exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
+source-git-commit: beee479caeb4145d759c105012ffc8b6b55a6e39
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 管理索引器
 
@@ -37,6 +37,9 @@ catalog_product_price                    Product Price
 catalogsearch_fulltext                   Catalog Search
 salesrule_rule                           Sales Rule
 ```
+
+>[!NOTE]
+> 使用实时搜索、目录服务或产品Recommendations的Adobe Commerce商户可以选择使用 [基于SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-index/index.html).
 
 ## 查看索引器状态
 
