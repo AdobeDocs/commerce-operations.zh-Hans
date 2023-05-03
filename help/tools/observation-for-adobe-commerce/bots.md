@@ -1,9 +1,10 @@
 ---
-title: “ [!UICONTROL bots] 选项卡”
+title: 的 [!UICONTROL bots] 选项卡
 description: 了解 [!UICONTROL bots] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: e135b8ab8b4f13de614299dd3c41c0cab52fefb2
+exl-id: 741310ca-28fb-4b08-95c7-e8d1fb952018
+source-git-commit: 043389dc6d86228e459ac2c3592f391e85aa8f68
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -150,3 +151,11 @@ ht-degree: 0%
 ![页面查看延迟将在此图表上显示为尖峰：](../../assets/tools/observation-for-adobe-commerce/pageview-latency.png)
 
 * 的 **[!UICONTROL Pageview Latency will show as spikes on this graph:]** frame显示页面加载/API响应延迟，该滞后可能与 [!DNL bot] 流量。
+
+## [!UICONTROL Experimental Potential Malicious Bots] 框架
+
+![实验潜在的恶意机器人框架](../../assets/tools/observation-for-adobe-commerce/experimental-potential-malicious-bots-frame.jpg)
+
+的 **[!UICONTROL Experimental Potential Malicious Bots]** frame运行十个单独的复杂查询。 它会检测恶意IP请求签名，然后对结果进行聚合，按计数的降序进行总和和排序。 这些查询包含CVE漏洞和其他恶意请求的大量数据签名。 即使安全修复/修补程序阻止了利用漏洞的攻击，并且该漏洞对站点没有威胁，仍然必须由网站处理该请求。 在很短的时间内，请求数量可能会变得相当显着。 此帧不显示来自IP地址的请求总数，而是显示具有指示请求有可疑意图的信号的请求。
+
+确保验证流量是否可疑，且流量不是来自可能也传递有效请求的内容分布式网络(CDN)地址。 如果确定请求来自CDN IP地址，请联系该服务供应商以帮助阻止通过其网络的可疑流量。 如果您需要阻止地址或请求URL，请参阅 [阻止上Adobe Commerce的恶意流量 [!DNL Fastly] 级别](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html) Adobe Commerce支持知识库。
