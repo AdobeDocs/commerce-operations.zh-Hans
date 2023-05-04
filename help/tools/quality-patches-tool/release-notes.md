@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 786be8bfa915fe82d9316f51662b20bde71abbaa
+source-git-commit: 205a0b67fab14a313d28355eed668d60ce477e64
 workflow-type: tm+mt
-source-wordcount: '11947'
+source-wordcount: '12066'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,16 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关 [!DNL quality patches] 由社区创建以用于Magento Open Source，请参阅 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.31 {#v1-1-31}
+
+* **ACSD-50345** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4 || >=2.4.4-p1 &lt;2.4.6) — 修复了在提交付款失败后，Recaptcha v2不重新加载的问题。
+* **ACSD-50817** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 优化Cron作业 `sales_clean_quotes` 跑得更快。
+* **ACSD-49392** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.0) || >= 2.4.1 &lt;2.4.7) — 修复了捆绑产品在获得部分退款后，订单状态变为已关闭的问题。
+* **ACSD-51036** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了并发REST API调用期间的争用条件导致中的发运状态信息覆盖的问题 [!UICONTROL Items Ordered] 表。
+* **ACSD-50858** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 改进了加载横幅内容的性能。
+* 添加了MDVA-39305-v2、ACSD-45169的新版本。
+* 更新了修补程序ACSD-50260-v2。
 
 ## v1.1.30 {#v1-1-30}
 
