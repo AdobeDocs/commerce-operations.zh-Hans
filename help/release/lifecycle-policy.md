@@ -1,13 +1,13 @@
 ---
 title: 软件生命周期策略
 description: 了解终止对Adobe Commerce版本的软件支持的关键日期。
-source-git-commit: 2612405bed470c4b0e0d501ab36bcfb09ac50e92
+exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '315'
 ht-degree: 10%
 
 ---
-
 
 # Adobe Commerce生命周期策略
 
@@ -27,7 +27,7 @@ ht-degree: 10%
 | Adobe Commerce 2.4.5 | 2022年8月9日 | 2025年8月9日 | 8.1菲律宾比索 |
 | Adobe Commerce 2.4.6 | 2023年3月14日 | 2026年3月14日 | 8.1菲律宾比索和8.2菲律宾比索 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <sup>1终止软件支持包括终止质量修复和安全修复。</sup><br>
 

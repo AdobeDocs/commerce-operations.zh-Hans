@@ -1,13 +1,13 @@
 ---
 title: Adobe Commerce和Magento Open Source发行说明
 description: 了解在何处查找特定Adobe Commerce版本和Magento Open Source版本的信息。
-source-git-commit: 14724592f7dbc116b0fa71b755d7f4f711d94fb2
+exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Commerce和Magento Open Source的发行说明
 
