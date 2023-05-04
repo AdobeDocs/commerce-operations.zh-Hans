@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8bf5cb032671bbb1cd6ff05d4a26c699592d33db
+source-git-commit: 0b9213db01cce14938e560ae576cf8ea543e4da7
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## 新增功能
 
 了解新文档和现有文档的重要更新。
+
+### 2023年4月20日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了 <code class="language-plaintext highlighter-rouge">commerce.eventing.event.publish</code> 消息队列使用者 <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/consumers.html">参考表</a>.</p>
+</td>
+      <td>技术</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/2f9bfcf9a8232cbe659062a9b1bc88eda3d9158c">2f9bfc</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2023年4月19日
 
