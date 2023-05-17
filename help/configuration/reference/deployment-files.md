@@ -1,13 +1,13 @@
 ---
 title: 部署的配置文件
 description: 了解配置文件如何用于安装商务应用程序。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 772a6814-6b18-4f8f-b31e-72faf790ff37
+source-git-commit: dd990800551dd2ba35ebc7d2bc04edeb1b183d6f
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
-
 
 # 部署的配置文件
 
@@ -17,9 +17,6 @@ Adobe Commerce提供了配置文件，使您能够轻松自定义组件并创建
 该文件包含已安装的模块、主题和语言包的列表；和共享配置设置。
 
    将此文件签入到源代码管理中，并将其用在您的开发、暂存和生产系统中。
-
-   自2.2版本起， `app/etc/config.php` 文件不再是 `.gitignore` 文件。
-这样做是为了方便 [管道部署](../deployment/technical-details.md).
 
 - `app/etc/env.php` 包含特定于安装环境的设置。
 
