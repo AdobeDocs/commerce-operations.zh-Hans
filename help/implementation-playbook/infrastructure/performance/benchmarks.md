@@ -2,9 +2,9 @@
 title: 性能基准
 description: 查看在Adobe云基础架构上托管的Adobe Commerce实施的性能基准结果。
 exl-id: cc9b090a-a504-4df3-aa32-81882f431dd9
-source-git-commit: 09a42dc68836b34eab2c9d90879b897729cd1b09
+source-git-commit: eeb7146a8051e8692ebf974d65db75a4999cf2e6
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,7 @@ Adobe Commerce 2.4.5性能基准结果反映了在使用以下基础架构和其
    - vCPU 216（72 x 3节点）
    - 内存432 GiB（144 x 3节点）
    - 网络带宽768 Gbps（256 x 3节点）
+   - EBS带宽57000 Mbps(19000 x 3节点)
    - 已配置的存储100 GB
 
 - **服务节点规范**
