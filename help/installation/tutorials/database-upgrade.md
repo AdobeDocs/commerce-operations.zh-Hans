@@ -1,39 +1,39 @@
 ---
-title: 升级数据库模式和数据
-description: 按照以下步骤升级您的Adobe Commerce或Magento Open Source数据库模式。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 升級資料庫結構和資料
+description: 請依照下列步驟升級Adobe Commerce或Magento Open Source資料庫架構。
+exl-id: bef04561-6c6b-4636-a8ab-a1ade44f5a8f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
+# 升級資料庫結構和資料
 
-# 升级数据库模式和数据
+使用此指令之前，您必須 [安裝應用程式](../advanced.md).
 
-在使用此命令之前，您必须 [安装应用程序](../advanced.md).
+## 升級資料庫結構和資料
 
-## 升级数据库模式和数据
+每當您執行導致資料庫結構描述或資料變更的動作時，都必須執行本節中討論的命令來更新它們。 原因的部份清單如下：
 
-无论您何时执行导致数据库模式或数据更改的操作，都必须运行本节中讨论的命令来更新它们。 部分原因如下：
-
-* 使用命令行升级了应用程序
-* 您使用命令行安装或更新了组件
-* 您可以使用命令行启用或禁用组件
+* 您使用命令列升級應用程式
+* 您使用命令列安裝或更新了元件
+* 您使用命令列啟用或停用元件
 
 >[!NOTE]
 >
->A *组件* 可以是模块、主题或语言包；组件是否来自Commerce Marketplace无关紧要。
+>A *元件* 可以是模組、主題或語言套件；元件是否來自Commerce Marketplace並不重要。
 
-1. 开始升级：
+1. 開始升級：
 
    ```bash
    bin/magento setup:upgrade [--keep-generated]
    ```
 
-   其中 `--keep-generated` 是不更新的可选参数 [静态视图文件](../../configuration/cli/static-view-file-deployment.md). 此可选参数可供使用 *仅* 在有限的情况下由经验丰富的系统集成商进行。 应使用 *仅* in [生产模式](../../configuration/bootstrap/application-modes.md#production-mode). 它应该 *not* 在 [开发人员模式](../../configuration/bootstrap/application-modes.md#developer-mode).
+   位置 `--keep-generated` 是不會更新的選用引數 [靜態檢視檔案](../../configuration/cli/static-view-file-deployment.md). 此選用引數可供使用 *僅限* 在有限的情況下，由經驗豐富的系統整合經銷商提供。 該使用 *僅限* 在 [生產模式](../../configuration/bootstrap/application-modes.md#production-mode). 它應該 *not* 用於 [開發人員模式](../../configuration/bootstrap/application-modes.md#developer-mode).
 
-1. 清除缓存：
+1. 清除快取：
 
    ```bash
    bin/magento cache:clean

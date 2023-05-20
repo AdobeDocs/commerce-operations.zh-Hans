@@ -1,30 +1,30 @@
 ---
-title: 消息队列概述
-description: 阅读有关消息队列框架及其如何与Adobe Commerce和Magento Open Source应用程序配合使用的信息。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 訊息佇列總覽
+description: 閱讀訊息佇列架構，以及它如何搭配Adobe Commerce和Magento Open Source應用程式使用。
+exl-id: 21e7bc3e-6265-4399-9d47-d3b9f03dfef6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
 
+# 訊息佇列總覽
 
-# 消息队列概述
+Message Queue Framework (MQF)是一種允許模組將訊息發佈到佇列的系統。 它也會定義 [消費者](consumers.md) 將會以非同步方式接收訊息。 MQF使用 [[!DNL RabbitMQ]](https://www.rabbitmq.com) 作為傳訊代理人，提供可擴充的平台以傳送及接收訊息。 它也包括儲存未傳遞訊息的機制。 [!DNL RabbitMQ] 是以進階訊息佇列通訊協定(AMQP) 0.9.1規格為基礎。
 
-消息队列框架(MQF)是允许模块将消息发布到队列的系统。 它还定义了 [消费者](consumers.md) 将异步接收消息的ID。 MQF使用 [[!DNL RabbitMQ]](https://www.rabbitmq.com) 作为报文传送代理，它为发送和接收报文提供了一个可扩展的平台。 它还包括用于存储未传送消息的机构。 [!DNL RabbitMQ] 基于高级消息队列协议(AMQP)0.9.1规范。
+下圖說明Message Queue Framework：
 
-下图说明了消息队列框架：
+![訊息佇列架構](../../assets/configuration/mq-framework.png)
 
-![消息队列框架](../../assets/configuration/mq-framework.png)
+- 發佈者是將訊息傳送至交換的元件。 它知道要發佈到的交換以及它傳送的訊息格式。
 
-- 发布者是向Exchange发送消息的组件。 它知道要发布到的交换机及其发送的消息格式。
+- 交換會接收來自發佈者的訊息，並將其傳送至佇列。 雖然 [!DNL RabbitMQ] 支援多種型別的交換，Commerce僅使用主題交換。 主題包含路由金鑰，其中包含以點分隔的文字字串。 主題名稱的格式為 `string1.string2`：例如， `customer.created` 或 `customer.sent.email`.
 
-- Exchange接收来自发布者的消息，并将其发送到队列。 尽管 [!DNL RabbitMQ] 支持多种类型的交换，商务仅使用主题交换。 主题包括路由键，其中包含以点分隔的文本字符串。 主题名称的格式为 `string1.string2`:例如， `customer.created` 或 `customer.sent.email`.
+   代理人可讓您在設定轉送訊息的規則時使用萬用字元。 您可以使用星號(`*`)以取代 _一_ 字串或井字型大小(`#`)取代0或多個字串。 例如， `customer.*` 將篩選於 `customer.create` 和 `customer.delete`，但不是 `customer.sent.email`. 但是 `customer.#` 將篩選於 `customer.create`，  `customer.delete`、和 `customer.sent.email`.
 
-   代理允许您在设置用于转发消息的规则时使用通配符。 您可以使用星号(`*`)替换 _one_ 字符串或井号(`#`)来替换0个或多个字符串。 例如， `customer.*` 过滤 `customer.create` 和 `customer.delete`，但不是 `customer.sent.email`. 但是 `customer.#` 过滤 `customer.create`,  `customer.delete`和 `customer.sent.email`.
+- 佇列是儲存訊息的緩衝區。
 
-- 队列是用于存储消息的缓冲区。
+- 消費者會接收訊息。 它知道要使用哪個佇列。 它可以將訊息的處理者對應至特定佇列。
 
-- 消费者接收消息。 它知道要消耗哪个队列。 它可以将消息的处理器映射到特定队列。
-
-也可以不使用而设置基本消息队列系统 [!DNL RabbitMQ]. 在此系统中， MySQL适配器将消息存储在数据库中。 三个数据库表(`queue`, `queue_message`和 `queue_message_status`)管理消息队列工作量。 Cron作业可确保用户能够接收消息。 此解决方案的扩展性不强。 [!DNL RabbitMQ] 应尽可能使用。
+您也可以設定基本訊息佇列系統，而不需使用 [!DNL RabbitMQ]. 在此系統中，MySQL配接器會將訊息儲存在資料庫中。 三個資料庫表格(`queue`， `queue_message`、和 `queue_message_status`)管理訊息佇列工作負載。 Cron工作可確保消費者能夠接收訊息。 此解決方案的可擴充性不是很強。 [!DNL RabbitMQ] 應儘可能使用。

@@ -1,41 +1,41 @@
 ---
-title: 优化图像以提供响应更快的网站
-description: 了解优化图像和使用Fastly图像优化来优化Adobe Commerce网站响应时间的步骤。
+title: 最佳化影像，以建立回應速度更快的網站
+description: 瞭解最佳化影像的步驟，並使用Fastly影像最佳化來最佳化Adobe Commerce網站上的回應時間。
 role: Developer, Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: e156fcafc5792036b37d9b199b870f1888c3f1ff
+exl-id: ada8b987-97ed-4232-9e1b-7e0a791a0807
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# 最佳化影像，以建立回應速度更快的網站
 
-# 优化图像以提供响应更快的网站
+針對雲端基礎結構部署的Adobe Commerce，請先最佳化影像再上傳檔案，即可縮短網站回應時間。 然後，使用Fastly影像最佳化來加速影像傳送並簡化影像來源集的維護。
 
-对于云基础架构部署中的Adobe Commerce，请在上传图像之前优化图像，以缩短站点响应时间。 然后，利用Fastly图像优化技术来加快图像传输速度，简化图像源集的维护。
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+[所有支援的版本](../../../release/versions.md) 之：
 
-[所有受支持的版本](../../../release/versions.md) 共：
-
-Adobe Commerce云基础架构
+雲端基礎結構上的Adobe Commerce
 
 
-## 优化和压缩图像
+## 最佳化和壓縮影像
 
-在将图像上传到您的商务网站之前，请优化并压缩图像，以在性能与查看质量之间取得平衡。 这有助于增加空间并缩短页面加载时间。
+在將影像上傳到您的Commerce網站之前，請最佳化和壓縮影像，以平衡效能和檢視品質。 這有助於增加空間並減少頁面載入時間。
 
-- PNG格式可为具有较大纯色区域的图像提供较小大小的图像。
+- PNG格式可針對具有大面積純色區域的影像提供較小大小的影像。
 
-- JPEG格式可为所有其他图像类型提供较小的图像大小。 使用最高的压缩（没有明显的降级）。 通常为60%到80%。
+- JPEG格式可為所有其他影像型別提供較小大小的影像。 使用最高壓縮率（不會明顯降低）。 這通常是60%到80%。
 
-## 启用并配置Fastly图像优化
+## 啟用和設定Fastly影像最佳化
 
-为Adobe Commerce Cloud项目设置Fastly服务后，请参阅 [快速图像优化](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html) 以了解有关启用和配置图像优化的说明。
+在您為Adobe Commerce Cloud專案設定Fastly服務後，請參閱 [Fastly影像最佳化](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html) 以取得啟用和設定影像最佳化的指示。
 
-## 其他信息
+## 其他資訊
 
-- [设置Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
-- [优化不当的图像可能会导致性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html)
+- [設定Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
+- [最佳化不良的影像可能會導致效能問題](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html)

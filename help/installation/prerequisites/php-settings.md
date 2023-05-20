@@ -1,31 +1,31 @@
 ---
-title: PHP设置
-description: 请按照以下步骤来安装所需的PHP扩展，并为Adobe Commerce和Magento Open Source的本地安装配置所需的PHP设置。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: PHP設定
+description: 請依照下列步驟安裝必要的PHP擴充功能，並為Adobe Commerce和Magento Open Source的內部部署設定必要的PHP設定。
+exl-id: 84064442-7053-42ab-a8a6-9b313e5efc78
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 0%
 
 ---
 
+# PHP設定
 
-# PHP设置
-
-本主题讨论如何设置所需的PHP选项。
+本主題討論如何設定必要的PHP選項。
 
 >[!NOTE]
 >
->请参阅 [系统要求](../system-requirements.md) ，以了解支持的PHP版本。
+>另請參閱 [系統需求](../system-requirements.md) 支援的PHP版本。
 
-## 验证PHP是否已安装
+## 驗證是否已安裝PHP
 
-大多数版本的Linux默认安装PHP。 本主题假定您已安装PHP。 要验证PHP是否已安装，请在命令行中键入：
+大部分的Linux版本預設會安裝PHP。 本主題假設您已安裝PHP。 若要驗證是否已安裝PHP，請在指令行中鍵入：
 
 ```bash
 php -v
 ```
 
-如果安装了PHP，则会显示一条与以下内容类似的消息：
+如果已安裝PHP，則會顯示類似於以下內容的訊息：
 
 ```terminal
 PHP 7.4.0 (cli) (built: Aug 14 2019 16:42:46) ( NTS )
@@ -33,82 +33,82 @@ Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies with Zend OPcache v7.1.6, Copyright (c) 1999-2018, by Zend Technologies
 ```
 
-Adobe Commerce和Magento Open Source2.4与PHP 7.3兼容，但我们使用PHP 7.4进行测试，并建议使用。
+Adobe Commerce和Magento Open Source2.4與PHP 7.3相容，但我們使用PHP 7.4進行測試，並建議使用。
 
-如果未安装PHP，或需要升级版本，请按照特定Linux版本的说明进行安装。
-在CentOS上， [可能需要其他步骤](https://wiki.centos.org/HowTos/php7).
+如果未安裝PHP，或需要版本升級，請按照針對您的特定Linux風格的說明進行安裝。
+在CentOS上， [可能需要其他步驟](https://wiki.centos.org/HowTos/php7).
 
-## 验证已安装的扩展
+## 驗證已安裝的擴充功能
 
-Adobe Commerce和Magento Open Source需要安装一组扩展。
+Adobe Commerce和Magento Open Source需要安裝一組擴充功能。
 
 {{$include /help/_includes/templated/php-extensions.md}}
 
-要验证已安装的扩展，请执行以下操作：
+若要驗證已安裝的擴充功能：
 
-1. 列出已安装的模块。
+1. 列出已安裝的模組。
 
    ```bash
    php -m
    ```
 
-1. 验证是否已安装所有必需的扩展。
-1. 使用与安装PHP相同的工作流添加任何缺失的模块。 例如，如果您使用 `yum` 要安装PHP，可添加PHP 7.4模块，具有：
+1. 確認已安裝所有必要的擴充功能。
+1. 使用用於安裝PHP的相同工作流程來新增任何缺少的模組。 例如，如果您使用 `yum` 若要安裝PHP，可將PHP 7.4模組加入以下程式碼：
 
    ```bash
     yum -y install php74u-pdo php74u-mysqlnd php74u-opcache php74u-xml php74u-gd php74u-devel php74u-mysql php74u-intl php74u-mbstring php74u-bcmath php74u-json php74u-iconv php74u-soap
    ```
 
-## 检查PHP设置
+## 檢查PHP設定
 
 >[!WARNING]
 >
->如果您使用的是PHP 7.4.20，请设置 `pcre.jit=0` 在 `php.ini` 文件。 这是一个PHP [错误](https://bugs.php.net/bug.php?id=81101) 来阻止加载CSS。
+>如果您使用PHP 7.4.20，請設定 `pcre.jit=0` 在您的 `php.ini` 檔案。 這會繞過PHP [錯誤](https://bugs.php.net/bug.php?id=81101) 可防止CSS載入。
 
-- 为PHP设置系统时区；否则，在安装期间显示以下错误以及cron等与时间相关的操作可能无法正常工作：
+- 設定PHP的系統時區；否則，在安裝期間顯示以下錯誤，以及cron等時間相關操作可能無法運作：
 
 ```terminal
 PHP Warning:  date(): It is not safe to rely on the system's timezone settings. [more messages follow]
 ```
 
-- 设置PHP内存限制。
+- 設定PHP記憶體限制。
 
-   我们的详细建议包括：
+   我們的詳細建議包括：
 
-   - 编译代码或部署静态资产， `1G`
-   - 调试、 `2G`
-   - 测试， `~3-4G`
+   - 編譯程式碼或部署靜態資產， `1G`
+   - 偵錯， `2G`
+   - 測試， `~3-4G`
 
-- 增加PHP的值 `realpath_cache_size` 和 `realpath_cache_ttl` 在推荐的设置中：
+- 增加PHP的值 `realpath_cache_size` 和 `realpath_cache_ttl` 至建議的設定：
 
    ```conf
    realpath_cache_size=10M
    realpath_cache_ttl=7200
    ```
 
-   这些设置允许PHP进程缓存指向文件的路径，而不是每次加载页面时都查找它们。 请参阅 [性能优化](https://www.php.net/manual/en/ini.core.php) （在PHP文档中）。
+   這些設定可讓PHP處理序快取檔案的路徑，而不是在每次頁面載入時查詢它們。 另請參閱 [效能調整](https://www.php.net/manual/en/ini.core.php) PHP檔案中。
 
-- 启用 [`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments)，这是Adobe Commerce和Magento Open Source2.1及更高版本的必需函数。
+- 啟用 [`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments)，此為Adobe Commerce和Magento Open Source 2.1及更新版本的必要專案。
 
-   我们建议您启用 [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) 出于性能原因。 在许多PHP分发中已启用OPcache。
+   建議您啟用 [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) 基於效能考量。 OPcache已在許多PHP發行版本中啟用。
 
-   Adobe Commerce和Magento Open Source2.1及更高版本使用PHP代码注释生成代码。
+   Adobe Commerce和Magento Open Source2.1及更高版本使用PHP程式碼註解來產生程式碼。
 
 >[!NOTE]
 >
->为避免在安装和升级过程中出现问题，我们强烈建议您将相同的PHP设置应用于PHP命令行配置和PHP Web服务器插件配置。 有关更多信息，请参阅下一节。
+>為避免在安裝和升級期間出現問題，強烈建議您對PHP命令列配置和PHP Web伺服器外掛程式配置都套用相同的PHP設定。 如需詳細資訊，請參閱下一節。
 
-## 查找PHP配置文件
+## 尋找PHP組態檔
 
-本节将讨论如何查找更新所需设置所需的配置文件。
+本節將討論如何找到更新所需設定所需的組態檔。
 
-### 查找 `php.ini` 配置文件
+### 尋找 `php.ini` 設定檔
 
-要查找Web服务器配置，请运行 [`phpinfo.php` 文件](optional-software.md#create-phpinfophp) 并查找 `Loaded Configuration File` 如下所示：
+若要尋找網頁伺服器組態，請執行 [`phpinfo.php` 檔案](optional-software.md#create-phpinfophp) 在網頁瀏覽器中尋找 `Loaded Configuration File` 如下所示：
 
-![PHP信息页](../../assets/installation/config_phpini-webserver.png)
+![PHP資訊頁](../../assets/installation/config_phpini-webserver.png)
 
-要找到PHP命令行配置，请输入
+若要找到PHP命令列組態，請輸入
 
 ```bash
 php --ini | grep "Loaded Configuration File"
@@ -116,45 +116,45 @@ php --ini | grep "Loaded Configuration File"
 
 >[!NOTE]
 >
->如果您只有一个 `php.ini` 文件中进行更改。 如果你有两个 `php.ini` 文件，请在 *全部* 文件。 如果不这样做，可能会导致无法预知的性能。
+>如果您只有一個 `php.ini` 檔案中，在該檔案中進行變更。 如果您有兩種 `php.ini` 檔案，變更於 *全部* 檔案。 若未這麼做，可能會導致無法預測的效能。
 
-### 查找OPcache配置设置
+### 尋找OPcache組態設定
 
-PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 位置可能取决于您的操作系统和PHP版本。 OPcache配置文件可能具有 `opcache` 或 `opcache.enable`.
+PHP OPcache設定通常位於 `php.ini` 或 `opcache.ini`. 位置可能取決於您的作業系統和PHP版本。 OPcache設定檔可能有 `opcache` 區段或設定，例如 `opcache.enable`.
 
-请遵循以下准则来查找：
+請使用下列准則來尋找它：
 
-- Apache Web服务器：
+- Apache Web Server：
 
-   对于具有Apache的Ubuntu，OPcache设置通常位于 `php.ini` 文件。
+   對於具有Apache的Ubuntu，OPcache設定通常位於 `php.ini` 檔案。
 
-   对于具有Apache或nginx的CentOS，OPcache设置通常位于 `/etc/php.d/opcache.ini`
+   對於具有Apache或nginx的CentOS，OPcache設定通常位於 `/etc/php.d/opcache.ini`
 
-   如果没有，请使用以下命令找到它：
+   如果沒有，請使用以下命令來尋找它：
 
    ```bash
    sudo find / -name 'opcache.ini'
    ```
 
-- 带有PHP-FPM的nginx Web服务器： `/etc/php/7.2/fpm/php.ini`
+- 使用PHP-FPM的nginx網頁伺服器： `/etc/php/7.2/fpm/php.ini`
 
-如果您有多个 `opcache.ini`，请修改所有这些变量。
+如果您有多個 `opcache.ini`，修改所有變數。
 
-## 如何设置PHP选项
+## 如何設定PHP選項
 
-要设置PHP选项，请执行以下操作：
+若要設定PHP選項：
 
-1. 打开 `php.ini` 在文本编辑器中。
-1. 在 [时区设置](https://www.php.net/manual/en/timezones.php)
-1. 找到以下设置，并在必要时取消注释：
+1. 開啟 `php.ini` 在文字編輯器中。
+1. 在可用的中找到伺服器的時區 [時區設定](https://www.php.net/manual/en/timezones.php)
+1. 找到下列設定，並視需要取消註解：
 
    ```conf
    date.timezone =
    ```
 
-1. 添加您在步骤2中找到的时区设置。
+1. 新增您在步驟2中找到的時區設定。
 
-1. 更改 `memory_limit` 到此部分开头建议的值之一。
+1. 變更值 `memory_limit` 變更為本節開頭建議的其中一個值。
 
    例如，
 
@@ -162,7 +162,7 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 位置可能取决于
    memory_limit=2G
    ```
 
-1. 添加或更新 `realpath_cache` 配置以匹配以下值：
+1. 新增或更新 `realpath_cache` 設定以符合下列值：
 
    ```conf
    ;
@@ -176,35 +176,35 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 位置可能取决于
    realpath_cache_ttl = 7200
    ```
 
-1. 保存更改并退出文本编辑器。
+1. 儲存變更並退出文字編輯器。
 
-1. 打开另一个 `php.ini` （如果它们不同），并在其中进行相同的更改。
+1. 開啟另一個 `php.ini` （如果兩者不同）並在其中進行相同的變更。
 
-## 设置OPcache选项
+## 設定OPcache選項
 
-要设置 `opcache.ini` 选项：
+要設定 `opcache.ini` 選項：
 
-1. 在文本编辑器中打开OPcache配置文件：
+1. 在文字編輯器中開啟OPcache設定檔案：
 
    - `opcache.ini` (CentOS)
-   - `php.ini` （乌本图）
-   - `/etc/php/7.2/fpm/php.ini` (nginx Web服务器（CentOS或Ubuntu）)
+   - `php.ini` （烏班圖）
+   - `/etc/php/7.2/fpm/php.ini` (nginx網頁伺服器（CentOS或Ubuntu）)
 
-1. 定位 `opcache.save_comments` 并在必要时取消注释。
-1. 确保将其值设置为 `1`.
-1. 保存更改并退出文本编辑器。
-1. 重新启动Web服务器：
+1. 尋找 `opcache.save_comments` 並視需要取消註解。
+1. 確保其值設定為 `1`.
+1. 儲存變更並退出文字編輯器。
+1. 重新啟動網頁伺服器：
 
-   - 阿帕奇、乌本图： `service apache2 restart`
-   - Apache、CentOS: `service httpd restart`
-   - nginx、Ubuntu和CentOS: `service nginx restart`
+   - Apache、Ubuntu： `service apache2 restart`
+   - Apache、CentOS： `service httpd restart`
+   - Nginx、Ubuntu和CentOS： `service nginx restart`
 
-## 疑难解答
+## 疑難排除
 
-请参阅以下Adobe Commerce支持文章，以获取PHP问题疑难解答帮助：
+請參閱下列Adobe Commerce支援文章，以取得疑難排解PHP問題的說明：
 
-- [在浏览器中访问Adobe Commerce时出现PHP版本错误或404错误](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
-- [PHP设置错误](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)
-- [未正确安装PHP mcrypt扩展](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
-- [PHP版本准备情况检查问题](https://support.magento.com/hc/en-us/articles/360033546411)
-- [常见PHP致命错误及解决方案](https://support.magento.com/hc/en-us/articles/360030568432)
+- [在瀏覽器中存取Adobe Commerce時發生PHP版本錯誤或404錯誤](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
+- [PHP設定錯誤](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)
+- [PHP Mcrypt擴充功能未正確安裝](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
+- [PHP版本整備檢查問題](https://support.magento.com/hc/en-us/articles/360033546411)
+- [常見PHP嚴重錯誤與解決方案](https://support.magento.com/hc/en-us/articles/360030568432)

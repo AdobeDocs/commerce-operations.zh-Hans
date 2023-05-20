@@ -1,20 +1,20 @@
 ---
-title: system.xml引用
-description: 了解系统XML文件如何管理商务应用程序配置。
+title: system.xml參考
+description: 瞭解系統XML檔案如何管理Commerce應用程式設定。
 badge: label="Contributed by David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="David Lambauer"
-source-git-commit: d7f32690b25c61fa31a99e6d02f9f1025de2bb99
+exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '2685'
 ht-degree: 0%
 
 ---
 
+# system.xml參考
 
-# system.xml引用
+此 `system.xml` 檔案可讓您管理Commerce系統設定。 使用此主題作為 `system.xml` 檔案。 此 `system.xml` 檔案位於 `etc/adminhtml/system.xml` 在指定的Commerce 2擴充功能中。
 
-的 `system.xml` 文件，用于管理商务系统配置。 使用此主题作为 `system.xml` 文件。 的 `system.xml` 文件位于 `etc/adminhtml/system.xml` 在给定的Commerce 2扩展中。
-
-以下代码片段显示了文件的裸机骨架：
+下列程式碼片段顯示檔案的裸骨架：
 
 ```xml
 <?xml version="1.0" ?>
@@ -27,45 +27,45 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果希望在IDE中执行即时*XSD验证，则可以运行 `bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>`.
+>如果您想要在IDE中立即進行*XSD驗證，可以執行 `bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>`.
 
-## 制表符//节/组//字段
+## 索引標籤//區段//群組//欄位
 
-在 `system.xml` 文件中，可以定义四种不同类型的图元，它们彼此相关。 以下部分介绍选项卡、部分、组和字段之间的关系。 以下屏幕截图在管理员后端显示Commerce 2系统配置。
-红色的正方形标记在 `system.xml` 文件：
+在 `system.xml` 檔案中，可以定義四個彼此相關的不同型別的圖元。 下節說明標籤、區段、群組和欄位之間的關係。 以下熒幕擷圖顯示Admin後端的Commerce 2系統設定。
+紅色方塊會標籤中定義的不同型別 `system.xml` 檔案：
 
-![屏幕截图显示了“管理员”中配置的部分。](../../assets/configuration/magento2-system-configuration.png)
+![在「管理員」中顯示已設定區段的熒幕擷圖。](../../assets/configuration/magento2-system-configuration.png)
 
-在语义上，使用制表符拆分不同的配置区域。 每个选项卡可以包含一个或多个部分，也可以作为子菜单引用这些部分。 部分包含一个或多个组。
-每个组都列出一个或多个字段。 您还可以使用群组为以下字段添加常规说明。 如前所述，每个组可以有一个或多个字段。 字段是系统配置上下文中的最小实体。
+標籤可用來以語義方式分割不同的組態區域。 每個標籤可包含一或多個區段，這些區段也可作為子選單參照。 區段包含一或多個群組。
+每個群組會列出一或多個欄位。 您也可以使用群組來新增下列欄位的一般說明。 如前所述，每個群組可以有一或多個欄位。 欄位是系統設定內容中的最小實體。
 
-## 选项卡
+## 索引標籤
 
-A `<tab>` — 标记对系统配置中现有或新选项卡的引用。
+A `<tab>` — 標籤系統配置中現有或新標籤的參考。
 
-### 选项卡属性引用
+### 索引標籤屬性參考
 
-A `<tab>`-Tag可以具有以下属性：
+A `<tab>`-Tag可以有下列屬性：
 
-| 属性 | 描述 | 类型 | 必需 |
+| 屬性 | 說明 | 型別 | 必填 |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------|----------|----------|
-| `id` | 定义引用节的标识符。 | `typeId` | 必需 |
-| `translate` | 定义应可翻译的字段。 提供 `label` 使标签可翻译。 | `string` | 可选 |
-| `type` | 定义渲染的HTML元素的输入类型 — 默认为 `text`. | `string` | 可选 |
-| `sortOrder` | 定义部分的排序顺序。 高数字会将部分推送到页面底部；低数将部分推至顶部。 | `float` | 可选 |
-| `class` | 将定义的CSS类添加到已呈现的选项卡HTML元素。 | `string` | 可选 |
+| `id` | 定義用於引用區段的識別碼。 | `typeId` | 必填 |
+| `translate` | 定義應可翻譯的欄位。 提供 `label` 讓標籤可翻譯。 | `string` | 可選 |
+| `type` | 定義演算HTML元素的輸入型別 — 預設為 `text`. | `string` | 可選 |
+| `sortOrder` | 定義區段的排序順序。 高數字會將區段推送至頁面底部；低數字會將區段推送至頁面頂部。 | `float` | 可選 |
+| `class` | 將定義的CSS類別新增至轉譯的TabHTML元素。 | `string` | 可選 |
 
-### 制表符节点引用
+### 索引標籤節點參考
 
-A `<tab>` — 标记可以具有以下子项：
+A `<tab>`-Tag可以有下列子系：
 
-| 节点 | 描述 | 类型 |
+| 節點 | 說明 | 型別 |
 |---------|------------------------------------------------------|----------|
-| `label` | 定义在前端显示的标签。 | `string` |
+| `label` | 定義顯示在前端中的標籤。 | `string` |
 
-### 示例：创建选项卡
+### 範例：建立索引標籤
 
-以下代码片段演示了如何使用示例数据创建新选项卡。
+下列程式碼片段示範如何使用範例資料建立新標籤。
 
 ```xml
 <?xml version="1.0" ?>
@@ -78,48 +78,48 @@ A `<tab>` — 标记可以具有以下子项：
 </config>
 ```
 
-以上代码片段会创建一个包含标识符的新选项卡 `A_UNIQUE_ID`. 作为 `translate`-attribute已定义并引用标签、 `label` — 节点可转换。 在渲染过程中，CSS类 `a-custom-css-class-to-style-this-tab` 将应用于为此选项卡创建的HTML元素。
-的 `sortOrder`-attribute，其值为 `10` 定义选项卡在呈现时在所有选项卡列表中的位置。
+上述程式碼片段會建立具有識別碼的新標籤 `A_UNIQUE_ID`. 作為 `translate`-attribute已定義，並參照標籤、 `label`-node是可翻譯的。 在轉譯過程中，CSS類別 `a-custom-css-class-to-style-this-tab` 將套用至為此標籤建立的HTML元素。
+此 `sortOrder`-attribute的值為 `10` 在轉譯時定義標籤在所有標籤清單中的位置。
 
-## 部分
+## 區段
 
-A `<section>` — 标记对系统配置中现有部分或新部分的引用。
+A `<section>` — 標籤系統組態中現有或新區段的參照。
 
-### 节属性引用
+### 區段屬性參考
 
-A `<section>`-Tag可以具有以下属性：
+A `<section>`-Tag可以有下列屬性：
 
-| 属性 | 描述 | 类型 | 必需 |
+| 屬性 | 說明 | 型別 | 必填 |
 |:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|:---------|:---------|
-| `id` | 定义引用节的标识符。 | `typeId` | 必需 |
-| `translate` | 定义应可翻译的字段。 提供 `label` 使标签可翻译。 | `string` | 可选 |
-| `type` | 定义呈现的HTML元素的输入类型。 默认为 `text`. | `string` | 可选 |
-| `sortOrder` | 定义部分的排序顺序。 高数字会将部分推送到页面底部；低数字会将部分推至顶部。 | `float` | 可选 |
-| `showInDefault` | 定义部分是否显示在默认配置范围中。 指定 `1` 显示部分和 `0` 来隐藏部分。 | `int` | 可选 |
-| `showInStore` | 定义是否在存储级别显示部分。 指定 `1` 显示部分和 `0` 来隐藏部分。 | `int` | 可选 |
-| `showInWebsite` | 定义是否在网站级别显示该部分。 指定 `1` 显示部分和 `0` 来隐藏部分。 | `int` | 可选 |
-| `canRestore` | 定义能否将部分还原为默认值。 | `int` | 可选 |
-| `advanced` | 自100.0.2起已弃用。 | `bool` | 可选 |
-| `extends` | 通过提供其他部分的标识符，此节点的内容将扩展您引用的部分。 | `string` | 可选 |
+| `id` | 定義用於引用區段的識別碼。 | `typeId` | 必填 |
+| `translate` | 定義應可翻譯的欄位。 提供 `label` 讓標籤可翻譯。 | `string` | 可選 |
+| `type` | 定義轉譯HTML元素的輸入型別。 預設為 `text`. | `string` | 可選 |
+| `sortOrder` | 定義區段的排序順序。 高數字會將區段推送至頁面底部；低數字會將區段推送至頁面頂部。 | `float` | 可選 |
+| `showInDefault` | 定義區段是否顯示在預設設定範圍中。 指定 `1` 顯示區段和 `0` 以隱藏區段。 | `int` | 可選 |
+| `showInStore` | 定義區段是否顯示在存放區層級。 指定 `1` 顯示區段和 `0` 以隱藏區段。 | `int` | 可選 |
+| `showInWebsite` | 定義區段是否顯示在網站層級。 指定 `1` 顯示區段和 `0` 以隱藏區段。 | `int` | 可選 |
+| `canRestore` | 定義區段是否可還原成預設值。 | `int` | 可選 |
+| `advanced` | 自100.0.2起已棄用。 | `bool` | 可選 |
+| `extends` | 透過提供另一個區段的識別碼，此節點的內容將擴充您參考的區段。 | `string` | 可選 |
 
-### 节点引用
+### 區段節點參考
 
-A `<section>`-Tag可以具有以下子项：
+A `<section>`-Tag可以有下列子系：
 
-| 节点 | 描述 | 类型 |
+| 節點 | 說明 | 型別 |
 |------------------|-----------------------------------------------------------------------------------------------------------------------|---------------------|
-| `label` | 定义在前端显示的标签。 | `string` |
-| `class` | 将定义的CSS类添加到呈现的节HTML元素。 | `string` |
-| `tab` | 引用关联的选项卡。 应为选项卡的ID。 | `typeTabId` |
-| `header_css` | 在编写本文时，未使用或评估。 | `string` |
-| `resource` | 引用ACL资源以提供此部分的权限设置。 | `typeAclResourceId` |
-| `group` | 定义一个或多个子组。 | `typeGroup` |
-| `frontend_model` | 指定一个不同的前端模型来更改渲染并修改输出。 | `typeModel` |
-| `include` | 用于包含其他 `system_include.xsd` 兼容文件。 通常用于构造大型 `system.xml` 文件。 | `includeType` |
+| `label` | 定義顯示在前端中的標籤。 | `string` |
+| `class` | 將定義的CSS類別新增至演算的區段HTML元素。 | `string` |
+| `tab` | 參考關聯的索引標籤。 必須是索引標籤的ID。 | `typeTabId` |
+| `header_css` | 撰寫本文時既未使用也未評估。 | `string` |
+| `resource` | 參考ACL資源以提供此區段的許可權設定。 | `typeAclResourceId` |
+| `group` | 定義一或多個子群組。 | `typeGroup` |
+| `frontend_model` | 指定不同的前端模型來變更彩現並修改輸出。 | `typeModel` |
+| `include` | 用於包含其他 `system_include.xsd` 相容的檔案。 通常用於建構大型 `system.xml` 檔案。 | `includeType` |
 
-### 示例：创建一个部分并将其分配给选项卡
+### 範例：建立區段並將其指派給標籤
 
-以下代码片段演示了创建新部分的基本用法。
+下列程式碼片段示範建立新區段的基本用法。
 
 ```xml
 <?xml version="1.0" ?>
@@ -138,58 +138,58 @@ A `<section>`-Tag可以具有以下子项：
 </config>
 ```
 
-上述部分定义了ID `A_UNIQUE_SECTION_ID`，在默认配置视图和存储上下文中可见。 的 `label` — 节点可转换。 部分与具有ID的选项卡关联 `A_UNIQUE_ID`. 只有具有ACL中所定义权限的用户才能访问该部分 `VENDOR_MODULE::path_to_the_acl_resource`.
+上述章節會定義ID `A_UNIQUE_SECTION_ID`，會顯示在預設設定檢視和商店內容中。 此 `label`-node是可翻譯的。 區段與具有ID的標籤相關聯 `A_UNIQUE_ID`. 只有具有ACL中定義許可權的使用者才能存取區段 `VENDOR_MODULE::path_to_the_acl_resource`.
 
-## 群组
+## 群組
 
-的 `<group>` — 标记用于将字段分组在一起。
+此 `<group>`-Tag用於將欄位分組。
 
-### 组属性引用
+### 群組屬性參考
 
-A `<group>`-Tag可以具有以下属性：
+A `<group>`-Tag可以有下列屬性：
 
-| 属性 | 描述 | 类型 | 必需 |
+| 屬性 | 說明 | 型別 | 必填 |
 |:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|:---------|:---------|
-| `id` | 定义引用组时使用的标识符。 | `typeId` | 必需 |
-| `translate` | 定义应可翻译的字段。 提供 `label` 使标签可翻译。 多个字段应以空格分隔。 | `string` | 可选 |
-| `type` | 定义呈现的HTML元素的输入类型。 默认为 `text`. | `string` | 可选 |
-| `sortOrder` | 定义部分的排序顺序。 高数字会将部分推送到页面底部；低数字会将部分推至顶部。 | `float` | 可选 |
-| `showInDefault` | 定义组是否显示在默认配置范围中。 指定 `1` 显示组和 `0` 来隐藏群组。 | `int` | 可选 |
-| `showInStore` | 定义是否在存储级别显示组。 指定 `1` 显示组和 `0` 来隐藏群组。 | `int` | 可选 |
-| `showInWebsite` | 定义群组是否在网站级别显示。 指定 `1` 显示组和 `0` 来隐藏群组。 | `int` | 可选 |
-| `canRestore` | 定义是否可将组还原为默认组。 | `int` | 可选 |
-| `advanced` | 自100.0.2起已弃用。 | `bool` | 可选 |
-| `extends` | 通过提供其他组的标识符，此节点的内容将扩展您引用的部分。 | `string` | 可选 |
+| `id` | 定義用於參考群組的識別碼。 | `typeId` | 必填 |
+| `translate` | 定義應可翻譯的欄位。 提供 `label` 讓標籤可翻譯。 多個欄位應以空格分隔。 | `string` | 可選 |
+| `type` | 定義轉譯HTML元素的輸入型別。 預設為 `text`. | `string` | 可選 |
+| `sortOrder` | 定義區段的排序順序。 高數字會將區段推送至頁面底部；低數字會將區段推送至頁面頂部。 | `float` | 可選 |
+| `showInDefault` | 定義群組是否顯示在預設設定範圍中。 指定 `1` 顯示群組和 `0` 以隱藏群組。 | `int` | 可選 |
+| `showInStore` | 定義群組是否顯示在存放區層級。 指定 `1` 顯示群組和 `0` 以隱藏群組。 | `int` | 可選 |
+| `showInWebsite` | 定義群組是否顯示在網站層級。 指定 `1` 顯示群組和 `0` 以隱藏群組。 | `int` | 可選 |
+| `canRestore` | 定義群組是否可還原成預設值。 | `int` | 可選 |
+| `advanced` | 自100.0.2起已棄用。 | `bool` | 可選 |
+| `extends` | 藉由提供另一個群組的識別碼，此節點的內容將會擴充您參考的區段。 | `string` | 可選 |
 
-### 组节点引用
+### 群組節點參考
 
-A `<group>`-Tag可以具有以下子项：
+A `<group>`-Tag可以有下列子系：
 
-| 节点 | 描述 | 类型 |
+| 節點 | 說明 | 型別 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| `label` | 定义在前端显示的标签。 | `string` |
-| `fieldset_css` | 向组字段集添加一个或多个CSS类。 | `string` |
-| `frontend_model` | 指定一个不同的前端模型来更改渲染并修改输出。 | `typeModel` |
-| `clone_model` | 指定克隆字段的给定模型。 | `typeModel` |
-| `clone_fields` | 启用或禁用字段的克隆。 | `int` |
-| `help_url` | 不可扩展。 请参阅下文。 | `typeUrl` |
-| `more_url` | 不可扩展。 请参阅下文。 | `typeUrl` |
-| `demo_link` | 不可扩展。 请参阅下文。 | `typeUrl` |
-| `comment` | 在群组标签下添加评论。 使用 `<![CDATA[//]]>` HTML。 | `string` |
-| `hide_in_single_store_mode` | 群组是否应在单存储模式下可见。 `1` 藏起群体； `0` 显示群组。 | `int` |
-| `field` | 定义此组下应可用的一个或多个字段。 | `field` |
-| `group` | 定义一个或多个子组。 | `unbounded` |
-| `depends` | 可用于声明对其他字段的依赖关系。 仅当给定字段的值为 `1`. 此节点需要 `section/group/field`-string。 | `depends` |
-| `attribute` | 前端模型可以使用自定义属性。 通常用于使给定前端模型更具动态性。 | `attribute` |
-| `include` | 用于包含其他 `system_include.xsd` 兼容文件。 通常用于构造大型 `system.xml` 文件。 | `includeType` |
+| `label` | 定義顯示在前端中的標籤。 | `string` |
+| `fieldset_css` | 將一或多個CSS類別新增至群組欄位集。 | `string` |
+| `frontend_model` | 指定不同的前端模型來變更彩現並修改輸出。 | `typeModel` |
+| `clone_model` | 指定要複製欄位的指定模型。 | `typeModel` |
+| `clone_fields` | 啟用或停用欄位複製。 | `int` |
+| `help_url` | 不可擴充。 請參閱下文。 | `typeUrl` |
+| `more_url` | 不可擴充。 請參閱下文。 | `typeUrl` |
+| `demo_link` | 不可擴充。 請參閱下文。 | `typeUrl` |
+| `comment` | 在群組標籤下方新增註解。 透過使用 `<![CDATA[//]]>` 可套用HTML。 | `string` |
+| `hide_in_single_store_mode` | 群組是否應該在單一存放區模式下可見。 `1` 隱藏群組； `0` 顯示群組。 | `int` |
+| `field` | 定義此群組下應可使用的一或多個欄位。 | `field` |
+| `group` | 定義一或多個子群組。 | `unbounded` |
+| `depends` | 可用於宣告對其他欄位的相依性。 僅當指定欄位的值為時才用於顯示特定欄位/群組 `1`. 此節點預期一個 `section/group/field`-string。 | `depends` |
+| `attribute` | 前端模型可使用自訂屬性。 通常用於讓指定的前端模型更動態。 | `attribute` |
+| `include` | 用於包含其他 `system_include.xsd` 相容的檔案。 通常用於建構大型 `system.xml` 檔案。 | `includeType` |
 
 >[!WARNING]
 >
->节点 `more_url`, `demo_url` 和 `help_url` 由仅使用一次的PayPal前端模型定义。 这些节点不可重复使用。
+>節點 `more_url`， `demo_url` 和 `help_url` 由只使用一次的PayPal前端模型定義。 這些節點無法重複使用。
 
-### 示例：为给定部分创建组
+### 範例：為指定區段建立群組
 
-以下代码片段演示了创建新组的基本用法。
+下列程式碼片段示範建立新群組的基本用法。
 
 ```xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
@@ -213,57 +213,57 @@ A `<group>`-Tag可以具有以下子项：
 </config>
 ```
 
-上述组定义了ID `A_UNIQUE_GROUP_ID`，在默认配置视图和存储上下文中可见。 两者， `label` 和 `comment` 标记为可翻译。
+上述群組會定義ID `A_UNIQUE_GROUP_ID`，會顯示在預設設定檢視和商店內容中。 兩者都是， `label` 和 `comment` 標籤為可翻譯。
 
-## 字段
+## 欄位
 
-的 `<field>` — 标记在 `<group>` — 用于定义特定配置值的标记。
+此 `<field>` — 標籤使用在內部 `<group>` — 標籤以定義特定的設定值。
 
-### 字段属性引用
+### 欄位屬性參考
 
-A `<field>`-Tag可以具有以下属性：
+A `<field>`-Tag可以有下列屬性：
 
-| 属性 | 描述 | 类型 | 必需 |
+| 屬性 | 說明 | 型別 | 必填 |
 |:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|:---------|:---------|
-| `id` | 定义引用字段的标识符。 | `typeId` | 必需 |
-| `translate` | 定义应可翻译的字段。 提供 `label` 使标签可翻译。 多个字段应以空格分隔。 | `string` | 可选 |
-| `type` | 定义呈现的HTML元素的输入类型。 默认为 `text`. | `string` | 可选 |
-| `sortOrder` | 定义部分的排序顺序。 高数字会将部分推送到页面底部；低数将部分推至顶部。 | `float` | 可选 |
-| `showInDefault` | 定义字段是否显示在默认配置范围中。 指定 `1` 显示字段和 `0` 来隐藏字段。 | `int` | 可选 |
-| `showInStore` | 定义字段是否在存储级别显示。 指定 `1` 显示字段和 `0` 来隐藏字段。 | `int` | 可选 |
-| `showInWebsite` | 定义字段是否显示在网站级别。 指定 `1` 显示字段和 `0` 来隐藏字段。 | `int` | 可选 |
-| `canRestore` | 定义字段是否可恢复为默认值。 | `int` | 可选 |
-| `advanced` | 自100.0.2起已弃用。 | `bool` | 可选 |
-| `extends` | 通过提供其他字段的标识符，此节点的内容将扩展您引用的部分。 | `string` | 可选 |
+| `id` | 定義用於參考欄位的識別碼。 | `typeId` | 必填 |
+| `translate` | 定義應可翻譯的欄位。 提供 `label` 讓標籤可翻譯。 多個欄位應以空格分隔。 | `string` | 可選 |
+| `type` | 定義轉譯HTML元素的輸入型別。 預設為 `text`. | `string` | 可選 |
+| `sortOrder` | 定義區段的排序順序。 高數字會將區段推送至頁面底部；低數字會將區段推送至頁面頂部。 | `float` | 可選 |
+| `showInDefault` | 定義欄位是否顯示在預設設定範圍中。 指定 `1` 顯示欄位和 `0` 以隱藏欄位。 | `int` | 可選 |
+| `showInStore` | 定義欄位是否顯示在存放區層級。 指定 `1` 顯示欄位和 `0` 以隱藏欄位。 | `int` | 可選 |
+| `showInWebsite` | 定義欄位是否顯示在網站層級。 指定 `1` 顯示欄位和 `0` 以隱藏欄位。 | `int` | 可選 |
+| `canRestore` | 定義欄位是否可還原成預設值。 | `int` | 可選 |
+| `advanced` | 自100.0.2起已棄用。 | `bool` | 可選 |
+| `extends` | 藉由提供其他欄位的識別碼，此節點的內容將擴充您參考的區段。 | `string` | 可選 |
 
-### 字段类型引用
+### 欄位型別參考
 
-A `<field>` — 标记可以具有 `type=""` 属性：
+A `<field>`-Tag可以具有以下值 `type=""` 屬性：
 
-| 类型 | 描述 |
+| 型別 | 說明 |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `text` | 标准，单行文本字段 |
-| `textarea` | 文本块 |
-| `select` | 普通下拉菜单，可能需要自定义 `source_model`. 也用于 `Yes/No` 选项。 请参阅 `Magento\Search\Model\Adminhtml\System\Config\Source\Engine` 例如。 |
-| `multiselect` | 赞 `select` 但多个选项有效。 |
-| `button` | 触发即时事件的按钮。 需要自定义前端模型来定义按钮文本和操作。 请参阅 `Magento\ScheduledImportExport\Block\Adminhtml\System\Config\Clean` 例如。 |
-| `obscure` | 值加密并显示为 `****`. 在浏览器中使用“Inspect元素”更改类型时，不会显示该值。 |
-| `password` | 赞 `obscure` 但是，隐藏值未加密，并且在浏览器中使用“Inspect元素”强制更改类型确实会显示该值。 |
-| `file` | 允许上传文件以进行处理。 |
-| `label` | 显示标签，而不是可编辑的字段。 当字段仅在特定范围（例如“仅存储视图”级别）上可编辑时，可使用此类型。 |
-| `time` | 使用“小时”、“分钟”和“秒”三个下拉菜单来设置时间的控制。 |
-| `allowspecific` | 特定国家/地区的多选列表。 需要 `source_model` 例如 `Magento\Shipping\Model\Config\Source\Allspecificcountries` |
-| `image` | 允许上传图像。 |
-| `note` | 用于向页面添加信息性注释。 此类型需要 `frontend_model` 来渲染注释。 |
+| `text` | 標準、單列文字欄位 |
+| `textarea` | 文字區塊 |
+| `select` | 一般下拉式清單，可能需要自訂 `source_model`. 也用於 `Yes/No` 選取範圍。 另請參閱 `Magento\Search\Model\Adminhtml\System\Config\Source\Engine` 例如。 |
+| `multiselect` | 按讚 `select` 但多個選項有效。 |
+| `button` | 觸發立即事件的按鈕。 需要自訂前端模型來定義按鈕文字和動作。 另請參閱 `Magento\ScheduledImportExport\Block\Adminhtml\System\Config\Clean` 例如。 |
+| `obscure` | 一個文字欄位，其值已加密並顯示為 `****`. 在瀏覽器中使用「Inspect元素」變更型別不會顯示值。 |
+| `password` | 按讚 `obscure` 但隱藏值不會加密，且在瀏覽器中使用「Inspect元素」強制變更型別時會顯示值。 |
+| `file` | 允許上傳檔案以供處理。 |
+| `label` | 顯示標籤，而非可編輯的欄位。 當欄位僅可在特定範圍上編輯時（例如，僅存放區檢視層級），使用此型別。 |
+| `time` | 控制項使用三個下拉式清單來設定時間：小時、分鐘和秒。 |
+| `allowspecific` | 特定國家/地區的多重選取清單。 需要 `source_model` 例如 `Magento\Shipping\Model\Config\Source\Allspecificcountries` |
+| `image` | 允許上傳影像。 |
+| `note` | 允許將資訊性備註新增至頁面。 此型別需要 `frontend_model` 以轉譯註解。 |
 
-也可以创建自定义字段类型。 通常，当需要使用带有操作的特殊按钮时，才会执行此操作。 要执行此操作，需要两个主要元素：
+您也可以建立自訂欄位型別。 這通常在需要特殊按鈕及動作時完成。 要執行此操作，需要兩個主要元素：
 
-- 在中创建块 `adminhtml` 面积
-- 设置 `type=""` 到此块的路径
+- 在中建立區塊 `adminhtml` 區域
+- 設定 `type=""` 至此區塊的路徑
 
-块本身至少需要 `__construct` 方法和 `getElementHtml()` 方法。 的 [Magento_OfflineShipping](https://github.com/magento/magento2/blob/2.4/app/code/Magento/OfflineShipping) 是自定义类型的一个简单示例。
+區塊本身至少需要 `__construct` 方法與 `getElementHtml()` 方法。 此 [Magento_OfflineShipping](https://github.com/magento/magento2/blob/2.4/app/code/Magento/OfflineShipping) 是自訂型別的簡單範例。
 
-例如，在OfflineShipping模块中，导出按钮在 `Magento\OfflineShipping\Block\Adminhtml\Form\Field\Export` 字段定义如下所示：
+例如，在OfflineShipping模組中，「匯出」按鈕定義於 `Magento\OfflineShipping\Block\Adminhtml\Form\Field\Export` 欄位定義如下所示：
 
 ```xml
 <field id="export" translate="label" type="Magento\OfflineShipping\Block\Adminhtml\Form\Field\Export" sortOrder="5" showInDefault="0" showInWebsite="1" showInStore="0">
@@ -271,42 +271,42 @@ A `<field>` — 标记可以具有 `type=""` 属性：
 </field>
 ```
 
-### 字段节点引用
+### 欄位節點參考
 
-A `<field>`-Tag可以具有以下子项：
+A `<field>`-Tag可以有下列子系：
 
-| 节点 | 描述 | 类型 |
+| 節點 | 說明 | 型別 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
-| `label` | 定义在前端显示的标签。 | `string` |
-| `comment` | 在字段标签下添加注释。 使用 `<![CDATA[//]]>` HTML。 | `string` |
-| `tooltip` | 可用于描述此字段含义的另一个可能的前端元素。 显示为字段旁的小图标。 | `string` |
-| `hint` | 显示其他信息。 仅适用于特定 `frontend_model`. | `string` |
-| `frontend_class` | 将定义的CSS类添加到呈现的节HTML元素。 | `string` |
-| `frontend_model` | 指定一个不同的前端模型来更改渲染并修改输出。 | `typeModel` |
-| `backend_model` | 指定其他后端模型以修改配置的值。 | `typeModel` |
-| `source_model` | 指定提供一组特定值的不同源模型。 | `typeModel` |
-| `config_path` | 可用于覆盖字段的常规配置路径。 | `typeConfigPath` |
-| `validate` | 定义不同的验证规则（空格分隔）。 可用验证规则的完整参考列表如下所示。 | `string` |
-| `can_be_empty` | 在 `type` is `multiselect` ，以指定字段可为空。 | `int` |
-| `if_module_enabled` | 仅在启用给定模块时才用于显示字段。 | `typeModule` |
-| `base_url` | 与 `upload_dir` 文件上传。 | `typeUrl` |
-| `upload_dir` | 指定上传的目标目录。 此节点具有其他属性和节点。 在使用之前先查找它们。 | `typeUploadDir` |
-| `button_url` | 在 `button_url` 和 `button_label` 指定。 通常与自定义前端模型结合使用。 | `typeUrl` |
-| `button_label` | 在 `button_label` 和 `button_url` 指定。 通常与自定义前端模型结合使用。 | `string` |
-| `more_url` | 不可扩展。 请参阅下文。 | `typeUrl` |
-| `demo_url` | 不可扩展。 请参阅下文。 | `typeUrl` |
-| `hide_in_single_store_mode` | 群组是否应在单存储模式下可见。 `1` 藏起群体； `0` 显示群组。 | `int` |
-| `source_service` | 用于填充选定选项的服务。 | `complexType` |
-| `options` | 未使用。 可能已弃用。 | `complexType` |
-| `depends` | 可用于声明对其他字段的依赖关系。 当给定字段的值为 `1`. 此节点需要 `section/group/field`-string。 | `complexType` |
-| `attribute` | 前端模型可以使用自定义属性。 通常用于使给定前端模型更具动态性。 | `complexType` |
-| `requires` | 不可扩展。 请参阅下文。 | `complexType` |
+| `label` | 定義顯示在前端中的標籤。 | `string` |
+| `comment` | 在欄位標籤下方新增註解。 透過使用 `<![CDATA[//]]>` 可套用HTML。 | `string` |
+| `tooltip` | 另一個可用於描述此欄位含義的可能前端元素。 在欄位旁邊顯示為小型圖示。 | `string` |
+| `hint` | 顯示其他資訊。 僅適用於特定的 `frontend_model`. | `string` |
+| `frontend_class` | 將定義的CSS類別新增至演算的區段HTML元素。 | `string` |
+| `frontend_model` | 指定不同的前端模型來變更彩現並修改輸出。 | `typeModel` |
+| `backend_model` | 指定不同的後端模型，以修改設定的值。 | `typeModel` |
+| `source_model` | 指定提供一組特定值的不同來源模型。 | `typeModel` |
+| `config_path` | 可用來覆寫欄位的一般設定路徑。 | `typeConfigPath` |
+| `validate` | 定義不同的驗證規則（以空格分隔）。 以下列出可用驗證規則的完整參考清單。 | `string` |
+| `can_be_empty` | 使用時機 `type` 是 `multiselect` 以指定欄位可以為空白。 | `int` |
+| `if_module_enabled` | 僅在啟用指定模組時用於顯示欄位。 | `typeModule` |
+| `base_url` | 搭配使用 `upload_dir` 用於檔案上傳。 | `typeUrl` |
+| `upload_dir` | 指定上傳的目標目錄。 此節點具有其他屬性和節點。 使用此項之前請先查閱這些檔案。 | `typeUploadDir` |
+| `button_url` | 顯示按鈕，如果 `button_url` 和 `button_label` 已指定。 通常與自訂前端模型結合使用。 | `typeUrl` |
+| `button_label` | 顯示按鈕，如果 `button_label` 和 `button_url` 已指定。 通常與自訂前端模型結合使用。 | `string` |
+| `more_url` | 不可擴充。 請參閱下文。 | `typeUrl` |
+| `demo_url` | 不可擴充。 請參閱下文。 | `typeUrl` |
+| `hide_in_single_store_mode` | 群組是否應該在單一存放區模式下可見。 `1` 隱藏群組； `0` 顯示群組。 | `int` |
+| `source_service` | 用來填入選取選項的服務。 | `complexType` |
+| `options` | 未使用。 可能已被取代。 | `complexType` |
+| `depends` | 可用於向其他欄位宣告相依性。 當指定欄位的值為時，僅用於顯示特定欄位/群組 `1`. 此節點預期一個 `section/group/field`-string。 | `complexType` |
+| `attribute` | 前端模型可使用自訂屬性。 通常用於讓指定的前端模型更動態。 | `complexType` |
+| `requires` | 不可擴充。 請參閱下文。 | `complexType` |
 
 >[!WARNING]
 >
->节点 `more_url`, `demo_url`, `requires` 和 `options` 由不同的核心支付模式定义，且仅使用一次。 这些节点不可重复使用。
+>節點 `more_url`， `demo_url`， `requires` 和 `options` 由不同的核心付款模式定義，且僅使用一次。 這些節點無法重複使用。
 
-### 示例：在给定组中创建两个字段
+### 範例：在指定群組中建立兩個欄位
 
 ```xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
@@ -347,28 +347,28 @@ A `<field>`-Tag可以具有以下子项：
 </config>
 ```
 
-以上示例创建了两个字段，它们在默认和存储视图中均可见/配置。 这两个字段都带有注释和工具提示，用于描述它们对用户的用途。 的 `label` — 节点可转换。
-具有标识符的字段 `ANOTHER_UNIQUE_FIELD_ID` 在 `if_module_enabled` 全局启用。 该字段还会根据规则验证其值 `required-entry` 和 `no-whitespace`.
-具有标识符的字段 `A_UNIQUE_FIELD_ID` 定义提供这些值的不同源模型 `Yes` 和 `No`.
+上述範例會建立兩個欄位，在預設和存放區檢視中均為可見/可設定。 這兩個欄位都有註解和工具提示，可向使用者說明其用途。 此 `label`-node是可翻譯的。
+具有識別碼的欄位 `ANOTHER_UNIQUE_FIELD_ID` 在中指定模組時可見 `if_module_enabled` 會在全域啟用。 欄位也會依據規則驗證其值 `required-entry` 和 `no-whitespace`.
+具有識別碼的欄位 `A_UNIQUE_FIELD_ID` 會定義提供該值的不同來源模型 `Yes` 和 `No`.
 
-### 常见源模型
+### 常見來源模型
 
-商务2核心提供了以下源模型。 一般来说，源模型还有很多；下表介绍了最常见的列表。 请注意，这些源模型需要字段属性 `type` 设置为 `select` 才能正常工作。
+下列來源模型由Commerce 2核心提供。 一般而言，來源模型要多得多；以下清單說明最常見的模型。 請注意，這些來源模型需要欄位屬性 `type` 將設為 `select` 才能正常運作。
 
-| 源模型 | 描述 |
+| 來源模型 | 說明 |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| `Magento\Config\Model\Config\Source\Yesnocustom` | 提供值 `Yes`, `No` 和 `Specified`. |
-| `Magento\Config\Model\Config\Source\Enabledisable` | 提供值 `Enable`, `Disable`. 将值另存为 `0` 和 `1` 在数据库中。 |
-| `Magento\AdminNotification\Model\Config\Source\Frequency` | 提供值 `1 Hour`,`2 Hours`,`6 Hours`,`12 Hours` 和 `24 Hours`. 值将另存为整数。 |
-| `Magento\Catalog\Model\Config\Source\TimeFormat` | 提供时间格式(12 h/24 h)的值。 |
-| `Magento\Cron\Model\Config\Source\Frequency` | 提供值 `Daily`, `Weekly` 和 `Monthly`. 值在数据库中保存为 `D`, `W` 和 `M`. |
-| `Magento\GoogleAdwords\Model\Config\Source\Language` | 提供ISO 639-1格式（例如en）中给定语言的双字母代码的值。 |
-| `Magento\Config\Model\Config\Source\Locale` | 提供与上述值类似的值，但属于区域设置代码（例如en_US）。 |
+| `Magento\Config\Model\Config\Source\Yesnocustom` | 提供值 `Yes`， `No` 和 `Specified`. |
+| `Magento\Config\Model\Config\Source\Enabledisable` | 提供值 `Enable`， `Disable`. 將值儲存為 `0` 和 `1` 在資料庫中。 |
+| `Magento\AdminNotification\Model\Config\Source\Frequency` | 提供值 `1 Hour`，`2 Hours`，`6 Hours`，`12 Hours` 和 `24 Hours`. 值會儲存為整數。 |
+| `Magento\Catalog\Model\Config\Source\TimeFormat` | 提供時間格式的值（12小時/24小時）。 |
+| `Magento\Cron\Model\Config\Source\Frequency` | 提供值 `Daily`， `Weekly` 和 `Monthly`. 值在資料庫中儲存為 `D`， `W` 和 `M`. |
+| `Magento\GoogleAdwords\Model\Config\Source\Language` | 以ISO 639-1格式提供指定語言的2個字母的程式碼值（例如en）。 |
+| `Magento\Config\Model\Config\Source\Locale` | 提供與上述值類似的值，但屬於地區設定代碼（例如en_US）。 |
 
-### 字段验证
+### 欄位驗證
 
-可以为字段分配一个或多个验证器类，以确保用户的输入满足扩展的要求。 验证规则可与 `<validate>` — 标记。
-以下示例将验证一个字段并添加多个不同的验证规则。
+欄位可以指派一或多個驗證器類別，以確保使用者的輸入符合擴充功能的需求。 驗證規則可套用 `<validate>` — 標籤。
+下列範例會驗證欄位並新增數個不同的驗證規則。
 
 ```xml
 <field id="A_CUSTOM_IDENTIFIER" showInDefault="1" showInWebsite="0" showInStore="1">
@@ -376,51 +376,51 @@ A `<field>`-Tag可以具有以下子项：
 </field>
 ```
 
-可以使用以下验证规则：
+可使用下列驗證規則：
 
-| 规则 | 描述 |
+| 規則 | 說明 |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| `alphanumeric` | 仅允许字母、数字、空格或下划线。 |
-| `integer` | 允许非小数为正数或负数。 |
-| `ipv4` | 允许有效的IP v4地址。 |
-| `ipv6` | 允许有效的IP v6地址。 |
-| `letters-only` | 仅允许字母。 例如， `abcABC`. |
-| `letters-with-basic-punc` | 仅允许字母或标点符号。<br>必须传递以下表达式： `/^[a-z\-.,()\u0027\u0022\s]+$/i`. |
-| `mobileUK` | 允许（英国）手机号码。 |
-| `no-marginal-whitespace` | 不允许在值的开始或结束处出现空格。 |
-| `no-whitespace` | 不允许有空格。 |
-| `phoneUK` | 允许（英国）电话号码。 |
-| `phoneUS` | 允许（美国）电话号码。 |
-| `required-entry` | 不允许空值(等同于 `validate-no-empty`)。<br>验证失败消息：“这是必填字段。” |
-| `time` | 允许以24小时格式在00:00到23:59之间有效。 例如 `15`, `15:05` 或 `15:05:48`. |
-| `time12h` | 允许以12小时格式在午夜12:00到11之间生效:59:下午59点。 例如 `3 am`, `11:30 pm`, `02:15:00 pm`. |
-| `validate-admin-password` | 允许使用数字和字母的7个或更多字符。 |
-| `validate-alphanum-with-spaces` | 仅允许使用字母（a-z或A-Z）、数字(0-9)或空格。 |
-| `validate-clean-url` | 允许有效的URL。 例如， `https://www.example.com` 或 `www.example.com`. |
-| `validate-currency-dollar` | 允许有效（美元）金额。 例如，100.00美元。 |
-| `validate-data` | 仅允许使用字母（a-z或A-Z）、数字(0-9)或下划线(\_)。<br>第一个字符必须是字母。<br>(必须匹配表达式： `/^[A-Za-z]+[A-Za-z0-9_]+$/`)<br>验证失败消息：&quot;请在此字段中仅使用字母（a-z或A-Z）、数字(0-9)或下划线(\_)，第一个字符应为字母。&quot; |
-| `validate-date-au` | 强制使用以下日期格式：dd/mm/yyyy。 例如，2006年3月17日的17/03/2006。 |
-| `validate-email` | 允许有效的电子邮件地址。 例如， johndoe@domain.com。 |
-| `validate-emailSender` | 允许有效的电子邮件地址。 例如， johndoe@domain.com。 |
-| `validate-fax` | 允许有效的传真号码。 例如，123-456-7890。 |
-| `validate-no-empty` | 不允许空值(等同于 `requried-entry`)。<br>验证失败消息：&quot;空值。&quot; |
-| `validate-no-html-tags` | 不允许使用HTML标记。 |
-| `validate-password` | 允许6个或更多字符。 将忽略前导和尾随空格。 |
-| `validate-phoneLax` | 允许有效的电话号码。 例如，(123)456-7890或123-456-7890。 |
-| `validate-phoneStrict` | 允许有效的电话号码。 例如，(123)456-7890或123-456-7890。 |
-| `validate-select` | 强制选择的选项不具有 `null` 值，字符串值 `none` 或字符串长度为0。 |
-| `validate-ssn` | 允许使用有效的（美国）社会保险号。 例如，123-45-6789。 |
-| `validate-street` | 仅允许使用字母（a-z或A-Z）、数字(0-9)、空格和“#”。 |
-| `validate-url` | 允许有效的URL。 协议是必需的(http://、https://或ftp://)。 |
-| `validate-xml-identifier` | 允许有效的XML标识符。 例如，something_1、block5、id-4。 |
-| `validate-zip-us` | 允许有效的（美国）邮政编码。 例如，90602或90602-1234。 |
-| `vinUS` | 允许（美国）车辆识别号(VIN)值。 |
+| `alphanumeric` | 僅允許使用字母、數字、空格或底線。 |
+| `integer` | 允許正數或負數非小數。 |
+| `ipv4` | 允許有效的IP v4位址。 |
+| `ipv6` | 允許有效的IP v6位址。 |
+| `letters-only` | 僅允許字母。 例如， `abcABC`. |
+| `letters-with-basic-punc` | 僅允許字母或標點符號。<br>必須傳遞下列運算式： `/^[a-z\-.,()\u0027\u0022\s]+$/i`. |
+| `mobileUK` | 允許（英國）行動電話號碼。 |
+| `no-marginal-whitespace` | 不允許在值的開頭或結尾使用空格。 |
+| `no-whitespace` | 不允許空格。 |
+| `phoneUK` | 允許（英國）電話號碼。 |
+| `phoneUS` | 允許（美國）電話號碼。 |
+| `required-entry` | 不允許空值(等效驗證為 `validate-no-empty`)。<br>驗證失敗訊息：「此為必填欄位。」 |
+| `time` | 允許以24小時格式顯示有效時間，介於00:00到23:59之間。 例如 `15`， `15:05` 或 `15:05:48`. |
+| `time12h` | 允許以半夜12:00到11之間的12小時格式顯示有效時間:59:下午59點 例如 `3 am`， `11:30 pm`， `02:15:00 pm`. |
+| `validate-admin-password` | 允許7個或更多字元，使用數字和字母。 |
+| `validate-alphanum-with-spaces` | 僅允許使用字母（a-z或A-Z）、數字(0-9)或空格。 |
+| `validate-clean-url` | 允許有效的URL。 例如， `https://www.example.com` 或 `www.example.com`. |
+| `validate-currency-dollar` | 允許有效的（美元）金額。 例如$100.00。 |
+| `validate-data` | 僅允許使用字母（a-z或A-Z）、數字(0-9)或底線(\_)。<br>第一個字元必須是字母。<br>(必須符合運算式： `/^[A-Za-z]+[A-Za-z0-9_]+$/`)<br>驗證失敗訊息：「在此欄位中請只使用字母（a-z或A-Z）、數字(0-9)或底線(\_)，第一個字元應為字母。」 |
+| `validate-date-au` | 強制下列日期格式： dd/mm/yyyy。 例如，2006年3月17日的17/03/2006。 |
+| `validate-email` | 允許有效的電子郵件地址。 例如，johndoe@domain.com。 |
+| `validate-emailSender` | 允許有效的電子郵件地址。 例如，johndoe@domain.com。 |
+| `validate-fax` | 允許有效的傳真號碼。 例如，123-456-7890。 |
+| `validate-no-empty` | 不允許空值(等效驗證為 `requried-entry`)。<br>驗證失敗訊息：「空值。」 |
+| `validate-no-html-tags` | 不允許使用HTML標籤。 |
+| `validate-password` | 允許6個或更多字元。 將忽略開頭和結尾的空格。 |
+| `validate-phoneLax` | 允許有效的電話號碼。 例如，(123) 456-7890或123-456-7890。 |
+| `validate-phoneStrict` | 允許有效的電話號碼。 例如，(123) 456-7890或123-456-7890。 |
+| `validate-select` | 強制所選的選取選項不具有 `null` 值，字串值 `none` 或字串長度0。 |
+| `validate-ssn` | 允許有效的（美國）社會保險號碼。 例如，123-45-6789。 |
+| `validate-street` | 僅允許使用字母（a-z或A-Z）、數字(0-9)、空格和「#」。 |
+| `validate-url` | 允許有效的URL。 需要通訊協定(http://、https://或ftp://)。 |
+| `validate-xml-identifier` | 允許有效的XML識別碼。 例如，something_1、block5、id-4。 |
+| `validate-zip-us` | 允許有效的（美國）郵遞區號。 例如，90602或90602-1234。 |
+| `vinUS` | 允許（美國）車輛識別碼(VIN)值。 |
 
-### 默认值
+### 預設值
 
-字段的默认值可以在模块的 `etc/config.xml` 文件，方法是指定 `section/group/field_ID` 节点。
+欄位的預設值可在模組的 `etc/config.xml` 檔案的預設值，在 `section/group/field_ID` 節點。
 
-#### 示例：设置的默认值 `ANOTHER_UNIQUE_FIELD_ID` （默认范围）
+#### 範例：設定預設值 `ANOTHER_UNIQUE_FIELD_ID` （預設範圍）
 
 ```xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
@@ -434,9 +434,9 @@ A `<field>`-Tag可以具有以下子项：
 </config>
 ```
 
-#### 示例：设置的默认值 `ANOTHER_UNIQUE_FIELD_ID` （网站范围）
+#### 範例：設定預設值 `ANOTHER_UNIQUE_FIELD_ID` （網站範圍）
 
-使用 `websites` 标记时，请指定特定网站的默认值。
+使用 `websites` 標籤中，指定特定網站的預設值。
 
 ```xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">

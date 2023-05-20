@@ -1,7 +1,8 @@
 ---
-title: '"[!DNL Exceptions]"'
-description: 了解 [!UICONTROL Exceptions] 选项卡 [!DNL Site-Wide Analysis Tool]、何时使用、其好处和最佳实践。
-source-git-commit: 6cbb4b4fef5e1ccc06803b5a3af5dd9f4d0e7df8
+title: '[!DNL Exceptions]'
+description: 瞭解 [!UICONTROL Exceptions] 索引標籤中的 [!DNL Site-Wide Analysis Tool]，以及何時使用、其好處和最佳實務。
+exl-id: bd793536-b95c-47db-9372-33c00be8e144
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -10,20 +11,20 @@ ht-degree: 0%
 
 # [!DNL Exceptions]
 
-的 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] 页面显示站点日志文件错误/例外。 例外是异常情况，可能或可能没有已知解决方案。
+此 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] 頁面顯示網站記錄檔錯誤/例外。 例外情況是可能有或沒有已知解決方案的異常狀況。
 
-此页面上显示的信息包括 [!UICONTROL Last Detected] (日期/时间(UTC), [!UICONTROL Exception Detail]和 [!UICONTROL Count] （发生次数）。
+此頁面上顯示的資訊包括 [!UICONTROL Last Detected] （UTC日期/時間）， [!UICONTROL Exception Detail]、和 [!UICONTROL Count] （發生次數）該日期發生例外狀況。
 
-## 何时使用
+## 使用時機
 
-使用 [!UICONTROL Exceptions] 页面以查看Adobe Commerce项目的日志文件错误/例外日志。 它们有助于解决与Adobe Commerce构建和部署挂接、云服务和Adobe Commerce应用程序相关的问题。
+使用 [!UICONTROL Exceptions] 頁面以檢視Adobe Commerce專案的記錄檔錯誤/例外記錄。 在疑難排解Adobe Commerce建置和部署鉤點、雲端服務和Adobe Commerce應用程式的相關問題時，這些維度非常有用。
 
-## 优点
+## 優點
 
-* 了解网站上可能发生的异常及其频度。
+* 瞭解網站上可能發生的例外狀況及其頻率。
 
-* 跟踪例外日志问题，并在需要时实施适当的纠正措施以提高网站性能。
+* 追蹤例外記錄問題，並視需要實施適當的修正動作以改善網站效能。
 
-## 最佳实践
+## 最佳實務
 
-监控 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] 页面以查看发生了哪些异常。 有关更多信息，请参阅 [查看和管理日志](https://devdocs.magento.com/cloud/project/log-locations.html) ，请参阅我们的开发人员文档。
+監視 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] 頁面以檢視發生哪些例外狀況。 如需詳細資訊，請參閱 [檢視和管理記錄檔](https://devdocs.magento.com/cloud/project/log-locations.html) （位於我們的開發人員檔案中）。

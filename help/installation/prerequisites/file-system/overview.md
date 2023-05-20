@@ -1,67 +1,67 @@
 ---
-title: 文件所有权和权限
-description: 了解使用Adobe Commerce和Magento Open Source的本地安装时文件系统权限的重要性。
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+title: 檔案擁有權和許可權
+description: 瞭解使用Adobe Commerce和Magento Open Source的內部安裝時，檔案系統許可權的重要性。
+exl-id: a84784bf-afd6-4dba-9745-3fefc0ecafcb
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
+# 檔案擁有權和許可權
 
-# 文件所有权和权限
+在開發環境中保護Adobe Commerce或Magento Open Source安裝安全，以協助防止未經授權人員或程式存取（並可能傷害）您的系統相關問題，這點很重要。 使用下列檔案系統擁有權和許可權准則來保護您的安裝。
 
-在开发环境中保护您的Adobe Commerce或Magento Open Source安装，以帮助防止与未经授权的人员或进程访问您的系统（并可能对您的系统造成伤害）相关的问题，这一点非常重要。 使用以下文件系统所有权和权限准则来保护您的安装。
+## 檔案系統擁有者
 
-## 文件系统所有者
+檔案系統擁有者是擁有並保留檔案系統中檔案寫入許可權的使用者。
 
-文件系统所有者是拥有和拥有文件系统中文件的写入权限的用户。
+檔案系統擁有者有兩種型別：
 
-文件系统所有者有两种类型：
+- **與單一使用者共用託管**
 
-- **与单个用户共享托管**
+   共用託管提供者可讓您以單一使用者身分登入應用程式伺服器。 您可以透過單一使用者身分登入、使用FTP傳輸檔案，以及執行網頁伺服器。 您可以選擇設定 [`umask`](#restrict-access-with-a-umask) 以進一步限制存取，尤其是在生產環境中。
 
-   共享托管提供程序允许您以一个用户身份登录应用程序服务器。 作为单个用户，您可以登录、使用FTP传输文件，并运行Web服务器。 您可以选择将 [`umask`](#restrict-access-with-a-umask) 以进一步限制访问，特别是在生产环境中。
+- **由兩個使用者進行私人託管**
 
-- **由两个用户进行私有托管**
+   如果您管理應用程式伺服器，私人託管會很有用。 每位使用者都有特定的職責：
 
-   如果您管理应用程序服务器，则专用托管会非常有用。 每个用户都有特定的责任：
+   - 此 _網頁伺服器使用者_ 執行管理員和店面。
 
-   - 的 _Web服务器用户_ 运行管理员和店面。
+   - 此 _命令列使用者_ 執行cron作業和命令列公用程式。
+   兩位使用者都需要相同的檔案系統許可權，因此最好使用 [共用群組](configure-permissions.md#set-ownership-and-permissions-for-two-users) 並設定 [`umask`](#restrict-access-with-a-umask).
 
-   - 的 _命令行用户_ 运行cron作业和命令行实用程序。
-   两个用户都需要对文件系统拥有相同的权限，因此最好使用 [共享组](configure-permissions.md#set-ownership-and-permissions-for-two-users) 并设置 [`umask`](#restrict-access-with-a-umask).
+### 使用umask限制存取
 
-### 使用umask限制访问
-
-要加强安全性，特别是在共享托管系统上的生产环境中，您可以使用 `umask` 以限制访问。 A `umask` — 也称为a _文件系统创建掩码_ — 一组位，用于控制如何为新创建的文件设置文件权限。
+若要加強安全性，尤其是在共用託管系統的生產環境中，您可以使用 `umask` 以限制存取。 A `umask` — 也稱為 _檔案系統建立遮罩_ — 是一組位元，可控制如何為新建立的檔案設定檔案許可權。
 
 >[!WARNING]
 >
->文件系统安全性是复杂而重要的。 我们强烈建议您先咨询经验丰富的系统管理员或网络管理员，然后再确定要设置的权限级别。 我们为您提供了一种机制供您使用，但您有责任创建权限策略。
+>檔案系統安全性既複雜又重要。 強烈建議您先洽詢經驗豐富的系統管理員或網路管理員，再決定要設定的許可權層級。 我們提供您可使用的機制，但建立許可權策略是您的責任。
 
-Adobe Commerce和Magento Open Source使用三位默认掩码： `002`. 从UNIX默认值中减去默认掩码：文件为666，目录为777。
+Adobe Commerce和Magento Open Source使用三位元預設遮色片： `002`. 從UNIX預設值（檔案為666，目錄為777）中減去預設遮色片。
 
 例如：
 
-- **目录775** — 由用户完全控制，由组完全控制，并允许每个人遍历目录。 共享托管提供程序通常需要这些权限。
+- **775用於目錄** — 由使用者完全控制、由群組完全控制，並讓每個人都能周遊目錄。 共用託管提供者通常需要這些許可權。
 
-- **文件为664** — 用户可写，组可写，其他所有人只读。
+- **664 （檔案）** — 使用者可寫入、群組可寫入，其他所有人皆為唯讀。
 
-有关创建 `magento_umask` 文件，请参阅 [设置变音](../../next-steps/set-umask.md).
+如需有關建立 `magento_umask` 檔案，請參閱 [設定umask](../../next-steps/set-umask.md).
 
-## 权限、所有权和应用程序模式
+## 許可權、擁有權和應用程式模式
 
-当您使用不同的Adobe Commerce和Magento Open Source应用程序模式时，我们建议您使用不同的权限和所有权：
+建議您在使用不同的Adobe Commerce和Magento Open Source應用程式模式時，使用不同的許可權和擁有權：
 
-- 默认
-- 开发人员
-- 生产
+- 預設
+- 開發人員
+- 生產
 
-请参阅 [关于模式](../../../configuration/bootstrap/application-modes.md) 在 _配置指南_.
+另請參閱 [關於模式](../../../configuration/bootstrap/application-modes.md) 在 _設定指南_.
 
-我们在 [文件系统访问权限](../../../configuration/deployment/file-system-permissions.md) 在 _配置指南_.
+我們將在中進一步討論許可權建議 [檔案系統存取許可權](../../../configuration/deployment/file-system-permissions.md) 在 _設定指南_.
 
 >[!TIP]
 >
->在安装Adobe Commerce或Magento Open Source之前，请查看 [配置文件所有权和权限](configure-permissions.md).
+>安裝Adobe Commerce或Magento Open Source之前，請先檢閱 [設定檔案所有權與許可權](configure-permissions.md).

@@ -1,51 +1,51 @@
 ---
-title: 使用清漆清除缓存
-description: 了解缓存清除如何与Riket配合使用，以及如何将其用作Adobe Commerce应用程序的Web缓存加速器。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 使用清漆清除快取
+description: 瞭解快取清除如何與Varnish搭配使用，以及如何將其用作Adobe Commerce應用程式的網頁快取加速器。
+exl-id: 866da415-c428-4092-a045-c3079493cdc4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
+# 使用清漆清除快取
 
-# 使用清漆清除缓存
+本主題說明使用Varnish做為Adobe Commerce和Magento Open Source的網頁快取加速器的基本知識。
 
-本主题讨论了将Quiset用作Adobe Commerce和Magento Open Source的Web缓存加速器的基础知识。
+## 清漆清除
 
-## 清漆清洗
+根據 [塗漆檔案](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html)， &quot;A *清除* 是當您從快取中挑選物件並捨棄它及其變體時所發生的情況。」 清漆清除類似於快取清除指令(或按一下 **排清Magento快取** （在「管理員」中）。
 
-根据 [清漆文档](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html), &quot;A *清除* 是当您从缓存中选取一个对象并丢弃该对象及其变体时发生的情况。” 清漆清除类似于缓存清除命令(或单击 **刷新Magento缓存** )。
+事實上，當您清除、排清或重新整理Commerce快取時，清漆也會清除。
 
-事实上，当您清理、刷新或刷新商务缓存时，清漆也会清除。
+安裝並設定Varnish以搭配Commerce使用後，下列動作可能會導致Varnish清除：
 
-安装并配置清漆以与Commerce一起使用后，以下操作可能会导致清漆清除：
+- 維護網站。
 
-- 维护网站。
+   例如，您在管理員中執行的任何操作：
 
-   例如，您在的“管理员”中执行的任何操作：
+   - **商店** > **設定** > **設定** >一般> **一般**
+   - **商店** > **設定** > **設定** >一般> **貨幣設定**
+   - **商店** > **設定** > **設定** >一般> **存放區電子郵件地址**
 
-   - **商店** > **设置** > **配置** >常规> **常规**
-   - **商店** > **设置** > **配置** >常规> **货币设置**
-   - **商店** > **设置** > **配置** >常规> **存储电子邮件地址**
+   當Commerce偵測到此類變更時，會顯示一則訊息，通知您重新整理快取。
 
-   当商务检测到此类更改时，将显示一条消息，通知您刷新缓存。
+- 維護商店（例如，新增或編輯類別、價格、產品和促銷定價規則）。
 
-- 维护商店（例如，添加或编辑类别、价格、产品和促销定价规则）。
+   當您執行任何這些工作時，會自動清除清漆。
 
-   在执行任何这些任务时，清漆会自动清除。
+- 維護原始程式碼。
 
-- 维护源代码。
+   您應重新整理快取，並定期刪除 `generated/code` 和 `generated/metadata` 目錄。 如需重新整理快取的詳細資訊，請參閱下一節。
 
-   您应该刷新缓存，并定期删除 `generated/code` 和 `generated/metadata` 目录。 有关刷新缓存的信息，请参阅下一节。
+## 設定Commerce清除清漆
 
-## 配置商务以清除清漆
+使用設定清漆主機後，Commerce會清除清漆主機 [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset) 命令。
 
-在使用配置清漆主机后，商务清除清漆主机 [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset) 命令。
+您可以使用選用引數 `--http-cache-hosts` 引數，用來指定清漆主機和接聽連線埠的逗號分隔清單。 設定所有Varnish主機，無論您有一台或多台。 （請勿以空格字元分隔主機。）
 
-您可以使用可选参数 `--http-cache-hosts` 参数，指定以逗号分隔的清漆主机和侦听端口列表。 配置所有清漆主机，无论您有一个还是多个清漆主机。 （请勿将主机分隔为空格字符。）
-
-参数格式必须为 `<hostname or ip>:<listen port>`，在这里 `<listen port>` 如果是端口80。
+引數格式必須是 `<hostname or ip>:<listen port>`，您可在此省略 `<listen port>` 如果是連線埠80。
 
 例如，
 
@@ -53,8 +53,8 @@ ht-degree: 0%
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 ```
 
-然后，在刷新商务缓存时，您可以清除清漆主机(也称为 *清洁* 缓存)或使用命令行。
+當您重新整理Commerce快取時，可以清除Varnish主機(也稱為 *清理* （例如快取）或使用命令列。
 
-要使用管理员刷新缓存，请单击 **[!UICONTROL SYSTEM]** >工具> **缓存管理**，然后单击 **刷新Magento缓存** 的双曲余切值。 （您还可以刷新单个缓存类型。）
+若要使用管理員重新整理快取，請按一下 **[!UICONTROL SYSTEM]** >工具> **快取管理**，然後按一下 **排清Magento快取** ，位於頁面頂端。 （您也可以重新整理個別快取型別。）
 
-要使用命令行刷新缓存，通常使用 [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+若要使用命令列重新整理快取，您通常會使用 [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令作為 [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).

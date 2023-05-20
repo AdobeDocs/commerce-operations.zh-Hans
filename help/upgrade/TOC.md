@@ -1,6 +1,6 @@
 ---
-user-guide-title: 升级指南
-user-guide-description: 了解升级Adobe Commerce应用程序为何如此重要，以及如何成功规划和执行升级。
+user-guide-title: 升級指南
+user-guide-description: 瞭解為什麼升級您的Adobe Commerce應用程式如此重要，以及如何成功規劃和執行升級。
 feature: Upgrade
 source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
 workflow-type: tm+mt
@@ -10,47 +10,47 @@ ht-degree: 0%
 ---
 
 
-# 升级指南 {#upgrade-guide}
+# 升級指南 {#upgrade-guide}
 
-- [升级过程概述](overview.md)
-- 升级历程 {#journey}
-   - [历程阶段](journey/phases.md)
-   - [项目启动](journey/project-launch.md)
-   - [年度计划](journey/annual-planning.md)
-   - [实施](journey/implementation.md)
-- 准备 {#prepare}
-   - [最佳实践](prepare/best-practices.md)
-   - [查看平台更改](prepare/platform-changes.md)
-   - [完成升级先决条件](prepare/prerequisites.md)
-   - [从Elasticsearch迁移到OpenSearch](prepare/opensearch-migration.md)
-   - [了解升级范围](prepare/scope.md)
-- 实施 {#implementation}
-   - [执行升级](implementation/perform-upgrade.md)
-- 模块和扩展 {#modules}
-   - [升级模块](modules/upgrade.md)
-   - [管理模块](modules/manage.md)
-- 修补程序 {#patches}
-   - [修补程序的工作方式](patches/overview.md)
-   - [应用修补程序](patches/apply.md)
+- [升級程式概觀](overview.md)
+- 升級歷程 {#journey}
+   - [歷程階段](journey/phases.md)
+   - [專案啟動](journey/project-launch.md)
+   - [年度計畫](journey/annual-planning.md)
+   - [實作](journey/implementation.md)
+- 準備 {#prepare}
+   - [最佳實務](prepare/best-practices.md)
+   - [檢閱平台變更](prepare/platform-changes.md)
+   - [完成升級必備條件](prepare/prerequisites.md)
+   - [從Elasticsearch移轉至OpenSearch](prepare/opensearch-migration.md)
+   - [瞭解升級範圍](prepare/scope.md)
+- 實作 {#implementation}
+   - [執行升級](implementation/perform-upgrade.md)
+- 模組和擴充功能 {#modules}
+   - [升級模組](modules/upgrade.md)
+   - [管理模組](modules/manage.md)
+- 修補程式 {#patches}
+   - [修補程式的運作方式](patches/overview.md)
+   - [套用修補程式](patches/apply.md)
 - [!DNL Upgrade Compatibility Tool] {#upgrade-compatibility-tool}
-   - [概述](upgrade-compatibility-tool/overview.md)
-   - [系统要求](upgrade-compatibility-tool/prerequisites.md)
+   - [概觀](upgrade-compatibility-tool/overview.md)
+   - [系統需求](upgrade-compatibility-tool/prerequisites.md)
    - 使用 [!DNL Upgrade Compatibility Tool] {#use-upgrade-compatibility-tool}
-      - [在命令行界面中运行该工具](upgrade-compatibility-tool/run.md)
-      - [与集成 [!DNL Site-Wide Analysis Tool]](upgrade-compatibility-tool/integrate-analysis-tool.md)
-      - [在MagentoPHPStorm插件中运行该工具](upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md)
-   - 报表 {#reporting}
-      - [报表](upgrade-compatibility-tool/reports.md)
-      - [错误消息](upgrade-compatibility-tool/error-messages.md)
-   - [相关工具](upgrade-compatibility-tool/related-tools.md)
-- 参与开发人员 {#developer}
-   - [升级基于git的安装](developer/git-installs.md)
-   - [管理模块](developer/manage-modules.md)
-- 疑难解答 {#troubleshooting}
-   - [不支持当前搜索引擎](troubleshooting/search-engine-not-supported.md)
-   - [模块更新失败后回滚](troubleshooting/roll-back-after-update-failure.md)
-   - [升级的维护模式选项](troubleshooting/maintenance-mode-options.md)
-- 资源 {#resources}
-   - [推荐阅读](resources/recommended-reading.md)
-   - [使用Adobe Commerce实现您的平台现代化](resources/recommended-upgrade-paths.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+      - [在命令列介面中執行工具](upgrade-compatibility-tool/run.md)
+      - [將與整合 [!DNL Site-Wide Analysis Tool]](upgrade-compatibility-tool/integrate-analysis-tool.md)
+      - [在MagentoPHPStorm外掛程式中執行此工具](upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md)
+   - 報告 {#reporting}
+      - [報表](upgrade-compatibility-tool/reports.md)
+      - [錯誤訊息](upgrade-compatibility-tool/error-messages.md)
+   - [相關工具](upgrade-compatibility-tool/related-tools.md)
+- 貢獻開發人員 {#developer}
+   - [升級Git安裝](developer/git-installs.md)
+   - [管理模組](developer/manage-modules.md)
+- 疑難排除 {#troubleshooting}
+   - [不支援目前的搜尋引擎](troubleshooting/search-engine-not-supported.md)
+   - [模組更新失敗後回覆](troubleshooting/roll-back-after-update-failure.md)
+   - [升級的維護模式選項](troubleshooting/maintenance-mode-options.md)
+- 資源 {#resources}
+   - [建議閱讀](resources/recommended-reading.md)
+   - [使用Adobe Commerce匯入最新的平台](resources/recommended-upgrade-paths.md)
+- [返回作業指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

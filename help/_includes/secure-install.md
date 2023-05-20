@@ -5,12 +5,12 @@ source-wordcount: '53'
 ht-degree: 0%
 
 ---
-# 安全安装
+# 安全安裝
 
-要对管理员和店面使用安全套接字层(SSL)（也称为HTTPS），您必须设置以下所有参数：
+若要針對管理員和店面使用安全通訊端層(SSL) （也稱為HTTPS），您必須設定下列所有引數：
 
-* `--use-secure`:设置为 `1`
-* `--base-url-secure`:设置为安全URL(即，从 `https://`)
-* `--use-secure-admin` 设置为 `1`
+* `--use-secure`：設定為 `1`
+* `--base-url-secure`：設定為安全URL (亦即，從 `https://`)
+* `--use-secure-admin` 設定為 `1`
 
-有关这些参数的更多详细信息，请参阅本主题的后面部分。
+有關這些引數的更多詳細資訊，請參閱本主題稍後的章節。

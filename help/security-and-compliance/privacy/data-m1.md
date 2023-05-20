@@ -1,100 +1,100 @@
 ---
-title: 客户个人信息参考（版本1.x）
-description: 了解Magento1.x中客户个人信息的数据流和数据库实体映射。
-source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
+title: 客戶個人資訊參考（1.x版）
+description: 瞭解Magento1.x中客戶個人資訊的資料流和資料庫實體對應。
+exl-id: 8b01418d-8ca1-48fc-9577-a324ed3109d1
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
 
 ---
 
-
-# 客户个人信息参考（版本1.x）
+# 客戶個人資訊參考（1.x版）
 
 >[!NOTE]
 >
->这是帮助Adobe Commerce和Magento Open Source商家和开发人员为遵守隐私法规做准备的一系列主题中的一个主题。 请咨询您的法律顾问，以确定您的企业是否以及如何遵守任何法律义务。
+>這是一系列主題中的一個，可協助Adobe Commerce和Magento Open Source商家及開發人員為遵守隱私權法規做好準備。 請洽詢您的法律顧問，判斷您的企業是否及如何遵守任何法律義務。
 
-在开发隐私法规合规性程序时，请参考以下数据流图和数据库实体映射，例如：
+開發隱私權法規的規範遵循程式時，請參考下列資料流圖表和資料庫實體對應，例如：
 
 - [GDPR](gdpr.md)
 - [CCPA](ccpa.md)
 
-## 数据流图
+## 資料流圖表
 
-数据流图显示了客户和管理员可以在店面和管理员上输入和检索的数据类型。
+資料流圖表顯示客戶和管理員可以在店面和管理員上輸入和擷取的資料型別。
 
-### 前端数据入口点
+### 前端資料輸入點
 
-用户在注册帐户、结帐期间和类似事件时可以输入客户、地址和付款信息。
+註冊帳戶時、結帳期間和類似事件時，使用者可以輸入客戶、地址和付款資訊。
 
-![前端数据入口点](../../assets/security-compliance/frontend-data-entry-points.svg)
+![前端資料輸入點](../../assets/security-compliance/frontend-data-entry-points.svg)
 
-### 前端数据接入点
+### 前端資料存取點
 
-当客户登录并查看多个不同页面或签出时，Commerce会加载客户信息。
+客戶登入並檢視數個不同頁面或簽出時，Commerce會載入客戶資訊。
 
-![前端数据接入点](../../assets/security-compliance/frontend-data-access-points.svg)
+![前端資料存取點](../../assets/security-compliance/frontend-data-access-points.svg)
 
-### 后端数据输入点
+### 後端資料輸入點
 
-商家可以从管理员输入客户、地址和付款信息以创建客户或订单。
+商家可以輸入來自管理員的客戶、地址及付款資訊，以建立客戶或訂單。
 
-![后端数据输入点](../../assets/security-compliance/backend-data-entry-points.svg)
+![後端資料輸入點](../../assets/security-compliance/backend-data-entry-points.svg)
 
-### 后端数据访问点
+### 後端資料存取點
 
-当商户查看多种类型的网格时，商务会加载客户信息，单击网格可查看详细信息，并执行各种其他任务。
+當商家檢視幾種型別的網格、按一下網格以檢視詳細資訊時，Commerce會載入客戶資訊，並執行各種其他工作。
 
-![后端数据访问点](../../assets/security-compliance/backend-data-access-points.svg)
+![後端資料存取點](../../assets/security-compliance/backend-data-access-points.svg)
 
-## 数据库实体
+## 資料庫實體
 
-Magento1将客户信息存储在客户、销售和其他数据库表中。
+Magento1會將客戶資訊儲存在客戶、銷售和其他資料庫表格中。
 
-### 客户数据
+### 客戶資料
 
-Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个表都有几个可包含自定义客户属性的参考表。
+Magento1會將客戶資訊儲存在 `customer_entity` 和 `customer_address_entity` 表格。 這兩個表格都有數個參考表格，可包含自訂客戶屬性。
 
-#### `customer_entity` 和引用表
+#### `customer_entity` 和參考表格
 
-中的以下列 `customer_entity`表包含客户信息：
+下列欄位位於 `customer_entity`表格包含客戶資訊：
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `email` | varchar(255) |
 
-这些表引用 `customer_entity` 和可以包含自定义客户属性：
+這些表格參考 `customer_entity` 並且可以包含自訂客戶屬性：
 
-| 表 | 列 | 数据类型 |
+| 表格 | 欄 | 資料型別 |
 | --- | --- | --- |
-| `customer_entity_datetime` | `value` | date |
-| `customer_entity_decimal` | `value` | 小数(12,4) |
+| `customer_entity_datetime` | `value` | 日期時間 |
+| `customer_entity_decimal` | `value` | decimal(12,4) |
 | `customer_entity_int` | `value` | int(11) |
-| `customer_entity_text` | `value` | 文本 |
+| `customer_entity_text` | `value` | 文字 |
 | `customer_entity_varchar` | `value` | varchar(255) |
 
-#### `customer_address_entity` 和引用表
+#### `customer_address_entity` 和參考表格
 
-下表引用 `customer_address_entity` 和可以包含自定义客户属性：
+下清單格參考 `customer_address_entity` 並且可以包含自訂客戶屬性：
 
-| 表 | 列 | 数据类型 |
+| 表格 | 欄 | 資料型別 |
 | --- | --- | --- |
-| `customer_address_entity_datetime` | `value` | date |
-| `customer_address_entity_decimal` | `value` | 小数(12,4) |
+| `customer_address_entity_datetime` | `value` | 日期時間 |
+| `customer_address_entity_decimal` | `value` | decimal(12,4) |
 | `customer_address_entity_int` | `value` | int(11) |
-| `customer_address_entity_text` | `value` | 文本 |
+| `customer_address_entity_text` | `value` | 文字 |
 | `customer_address_entity_varchar` | `value` | varchar(255) |
 
-### 订单数据
+### 訂單資料
 
-的 `sales_flat_order` 和相关表包含客户的名称、帐单和送货地址以及相关信息。
+此 `sales_flat_order` 和相關表格包含客戶名稱、帳單和送貨地址及相關資訊。
 
-#### `sales_flat_order` 表
+#### `sales_flat_order` 表格
 
-中的以下列 `sales_order` 表包含客户信息：
+下列欄位位於 `sales_order` 表格包含客戶資訊：
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `customer_id` | int(10) |
 | `customer_email` | varchar(128) |
@@ -107,11 +107,11 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `customer_taxvat` | varchar(32) |
 | `remote_ip` | varchar(32) |
 
-#### `sales_flat_order_address` 表
+#### `sales_flat_order_address` 表格
 
-的 `sales_flat_order_address` 表包含客户的地址。
+此 `sales_flat_order_address` 表格包含客戶的地址。
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `customer_id` | int(10) |
 | `fax` | varchar(255) |
@@ -127,23 +127,23 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `suffix` | varchar(255) |
 | `middlename` | varchar(255) |
 | `company` | varchar(255) |
-| `vat_id` | 文本 |
+| `vat_id` | 文字 |
 
-#### `sales_flat_order_grid` 表
+#### `sales_flat_order_grid` 表格
 
-中的以下列 `sales_flat_order_grid` 表包含客户信息：
+下列欄位位於 `sales_flat_order_grid` 表格包含客戶資訊：
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `customer_id` | int(10) |
 | `shipping_name` | varchar(255) |
 | `billing_name` | varchar(255) |
 
-#### `sales_flat_order_payment` 表
+#### `sales_flat_order_payment` 表格
 
-中的以下列 `sales_flat_order_payment` 表包含客户信息：
+下列欄位位於 `sales_flat_order_payment` 表格包含客戶資訊：
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `cc_exp_month` | varchar(255) |
 | `cc_ss_start_year` | varchar(255) |
@@ -155,15 +155,15 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `echeck_routing_number` | varchar(255) |
 | `echeck_account_name` | varchar(255) |
 
-### 报价数据
+### 報價資料
 
-报价包含客户的名称、电子邮件、地址和相关信息。
+引號包含客戶名稱、電子郵件、地址及相關資訊。
 
-#### `sales_flat_quote` 表
+#### `sales_flat_quote` 表格
 
-中的以下列 `sales_flat_quote` 表包含客户信息：
+下列欄位位於 `sales_flat_quote` 表格包含客戶資訊：
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `customer_id` | int(10) |
 | `customer_tax_class_id` | int(10) |
@@ -174,16 +174,16 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `customer_middlename` | varchar(40) |
 | `customer_lastname` | varchar(255) |
 | `customer_suffix` | varchar(40) |
-| `customer_dob` | date |
+| `customer_dob` | 日期時間 |
 | `customer_note` | varchar(255) |
 | `remote_ip` | varchar(255) |
 | `customer_gender` | varchar(255) |
 
-#### `sales_flat_quote_address` 表
+#### `sales_flat_quote_address` 表格
 
-中的以下列 `sales_flat_quote_address` 表包含客户信息：
+下列欄位位於 `sales_flat_quote_address` 表格包含客戶資訊：
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `email` | varchar(255) |
 | `prefix` | varchar(40) |
@@ -198,11 +198,11 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `postcode` | varchar(255) |
 | `fax` | varchar(255) |
 
-#### `sales_flat_quote_payment` 表
+#### `sales_flat_quote_payment` 表格
 
-的 `sales_flat_quote_payment` 表包括信用卡信息和其他交易信息。
+此 `sales_flat_quote_payment` 表格包含信用卡資訊和其他交易資訊。
 
-| 列 | 数据类型 |
+| 欄 | 資料型別 |
 | --- | --- |
 | `cc_last_4` | varchar(255) |
 | `cc_owner` | varchar(255) |
@@ -212,11 +212,11 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `cc_ss_start_month` | smallint(5) |
 | `cc_ss_start_year` | smallint(5) |
 
-### 存档数据
+### 封存資料
 
-下表和列包含客户信息：
+下清單格和欄位包含客戶資訊：
 
-| 表 | 列 | 数据类型 |
+| 表格 | 欄 | 資料型別 |
 | --- | --- | --- |
 | `enterprise_sales_creditmemo_grid_archive` | `billing_name` | varchar(255) |
 | `enterprise_sales_invoice_grid_archive` | `billing_name` | varchar(255) |
@@ -225,30 +225,30 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `enterprise_sales_order_grid_archive` | `shipping_name` | varchar(255) |
 | `enterprise_sales_shipment_grid_archive` | `shipping_name` | varchar(255) |
 
-### 销售数据
+### 銷售資料
 
-下表和列包含客户信息：
+下清單格和欄位包含客戶資訊：
 
-| 表 | 列 | 数据类型 |
+| 表格 | 欄 | 資料型別 |
 | --- | --- | --- |
 | `sales_flat_creditmemo_grid` | `billing_name` | varchar(255) |
 | `sales_flat_invoice_grid` | `billing_name` | varchar(255) |
 
-### RMA数据
+### RMA資料
 
-以下RMA表和列包含客户信息：
+下列RMA表格與欄位包含客戶資訊：
 
-| 表 | 列 | 数据类型 |
+| 表格 | 欄 | 資料型別 |
 | --- | --- | --- |
 | `enterprise_rma` | `customer_custom_email` | varchar(255) |
 | `enterprise_rma_grid` | `customer_id` | int(10) |
 | `enterprise_rma_grid` | `customer_name` | varchar(255) |
 
-### 其他数据
+### 其他資料
 
-下表和列包含客户信息：
+下清單格和欄位包含客戶資訊：
 
-| 表 | 列 | 数据类型 |
+| 表格 | 欄 | 資料型別 |
 | --- | --- | --- |
 | `core_email_queue_recipients` | `recipient_email` | varchar(128) |
 | `core_email_queue_recipients` | `recipient_name` | varchar(255) |
@@ -257,7 +257,7 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `enterprise_giftregistry_person` | `email` | varchar(150) |
 | `enterprise_giftregistry_person` | `firstname` | varchar(100) |
 | `enterprise_giftregistry_person` | `lastname` | varchar(100) |
-| `enterprise_giftregistry_person` | `middlename` | 文本 |
+| `enterprise_giftregistry_person` | `middlename` | 文字 |
 | `enterprise_invitation` | `customer_id` | int(10) |
 | `enterprise_invitation` | `email` | varchar(255) |
 | `enterprise_invitation` | `referral_id` | int(10) |
@@ -271,7 +271,7 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `newsletter_subscriber` | `customer_id` | int(10) |
 | `newsletter_subscriber` | `subscriber_email` | varchar(150) |
 | `persistent_session` | `customer_id` | int(10) |
-| `persistent_session` | `info` | 文本 |
+| `persistent_session` | `info` | 文字 |
 | `poll_vote` | `customer_id` | int(10) |
 | `poll_vote` | `ip_address` | varbinary(16) |
 | `rating_option_vote` | `customer_id` | int(10) |
@@ -279,7 +279,7 @@ Magento1在 `customer_entity` 和 `customer_address_entity` 表格。 这两个�
 | `rating_option_vote` | `remote_ip_long` | varbinary(516) |
 | `send_friend_log` | `ip` | varbinary(16) |
 
-引用客户的其他表：
+參考客戶的其他表格：
 
 - `catalog_compare_item`
 - `downloadable_link_purchased`

@@ -1,37 +1,37 @@
 ---
-title: 使用Adobe Commerce实现平台现代化
-description: 查看有关规划Adobe Commerce升级的建议。
-source-git-commit: 4a78c2d2a215d1b58b2f07b7a961849321f82318
+title: 使用Adobe Commerce匯入最新的平台
+description: 檢閱規劃Adobe Commerce升級的建議。
+exl-id: f776b000-0085-4b77-860f-623837c3c902
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
+# 建議的升級路徑
 
-# 建议的升级路径
+電子商務實作是一種進化，但從未真正完成。 您的企業必須藉由引進最新的功能與功能，讓客戶保持參與，保持領先於趨勢一步。 升級至最新的Adobe Commerce版本，可讓您透過同級最佳創新與符合未來需求的技術，在業界保持領先地位：
 
-电子商务实施是一种演变 — 它从未真正完成。 您的企业必须通过引入使客户保持参与的最新功能和功能，保持领先于趋势。 升级到最新的Adobe Commerce版本，可让您凭借一流的创新技术和经得起未来考验的业务，保持领先地位：
+- 更快速地存取以SaaS服務形式提供的創新功能
+- 更輕鬆且更具成本效益的維護與升級
+- 持續彈性與客製化，滿足獨特的業務需求
+- 大幅提升效能與擴充能力
+- 更好的開發人員體驗和工具
+- 能夠與其他Adobe Experience Cloud應用程式更深入整合
 
-- 更快地访问作为SaaS服务提供的创新功能
-- 更轻松、更经济高效的维护和升级
-- 持续的灵活性和定制，以满足独特的业务需求
-- 显着提高了性能和可扩展性
-- 更好的开发人员体验和工具
-- 能够与其他Adobe Experience Cloud应用程序更深入地集成
+為了提供商戶在規劃升級時更大的彈性，我們最近更新了Adobe Commerce [發行排程](../../release/schedule.md)延長了2.3版支援終止(EOS)的日期，並宣佈為特定軟體版本提供新的延長支援選項。 如需這些更新的詳細資訊，請參閱 [擴大對Adobe Commerce的支援](https://business.adobe.com/blog/the-latest/adobe-announces-expanded-support).
 
-为了给我们的商户在规划升级时提供更大的灵活性，我们最近更新了Adobe Commerce [发布计划](../../release/schedule.md)，延长了2.3支持终止(EOS)日期，并宣布为我们的软件选定版本提供新的扩展支持选项。 有关这些更新的更多信息，请参阅 [扩展了对Adobe Commerce的支持](https://business.adobe.com/blog/the-latest/adobe-announces-expanded-support).
+以下是Adobe Commerce建議的升級路徑，可在升級至其中一個最新版本時，確保網站的安全性及效能。
 
-以下是Adobe Commerce推荐的升级路径，可在升级到某个最新版本时确保网站的安全性和性能。
+## 從2.3.7升級
 
-## 从2.3.7升级
+![從2.3.7升級路徑](../../assets/upgrade-guide/2.3.7.png)
 
-![从2.3.7升级的路径](../../assets/upgrade-guide/2.3.7.png)
+## 從2.4.0升級至2.4.3
 
-## 从2.4.0升级到2.4.3
+![從2.4.0升級至2.4.3的路徑](../../assets/upgrade-guide/2.4.0-2.4.3.png)
 
-![从2.4.0到2.4.3的升级路径](../../assets/upgrade-guide/2.4.0-2.4.3.png)
+## 從2.4.4和2.4.5升級
 
-## 从2.4.4和2.4.5升级
-
-![从2.4.4到2.4.5的升级路径](../../assets/upgrade-guide/2.4.4-and-2.4.5.png)
+![從2.4.4升級至2.4.5的路徑](../../assets/upgrade-guide/2.4.4-and-2.4.5.png)

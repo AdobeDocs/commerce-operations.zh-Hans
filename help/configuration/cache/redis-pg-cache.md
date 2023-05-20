@@ -1,81 +1,81 @@
 ---
-title: 默认缓存使用Redis
-description: 了解如何将Redis配置为Adobe Commerce和Magento Open Source的默认缓存。
-source-git-commit: 47d513e7ca51ad7dbc149d0f1e076f673452918c
+title: 預設快取使用Redis
+description: 瞭解如何將Redis設定為Adobe Commerce和Magento Open Source的預設快取。
+exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
 
+# 預設快取使用Redis
 
-# 默认缓存使用Redis
+Commerce提供命令列選項來設定Redis頁面和預設快取。 雖然您可以透過編輯 `<Commerce-install-dir>app/etc/env.php` 檔案，使用命令列是建議的方法，尤其是對於初始配置。 命令列會提供驗證，確保設定的語法正確。
 
-Commerce提供了命令行选项来配置Redis页面和默认缓存。 尽管您可以通过编辑 `<Commerce-install-dir>app/etc/env.php` 文件中，建议使用命令行，尤其是对于初始配置。 命令行提供验证，确保配置语法正确。
+您必須 [安裝Redis](config-redis.md#install-redis) 然後再繼續。
 
-您必须 [安装Redis](config-redis.md#install-redis) 才能继续。
+## 設定Redis預設快取
 
-## 配置Redis默认缓存
-
-运行 `setup:config:set` 命令，并指定特定于Redis默认缓存的参数。
+執行 `setup:config:set` 命令並指定Redis預設快取的特定引數。
 
 ```bash
 bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-<parameter>=<value>...
 ```
 
-使用以下参数：
+包含下列引數：
 
-- `--cache-backend=redis` 启用Redis默认缓存。 如果此功能已启用，请忽略此参数。
+- `--cache-backend=redis` 啟用Redis預設快取。 如果已啟用此功能，請省略此引數。
 
-- `--cache-backend-redis-<parameter>=<value>` 是配置默认缓存的键值对列表：
+- `--cache-backend-redis-<parameter>=<value>` 是設定預設快取的機碼和值組清單：
 
-| 命令行参数 | 值 | 含义 | 默认值 |
+| 命令列引數 | 值 | 含義 | 預設值 |
 | ------------------------------ | --------- | ------- | ------------- |
-| `cache-backend-redis-server` | 服务器 | 完全限定的主机名、 IP地址或UNIX套接字的绝对路径。 默认值为127.0.0.1表示商务服务器上已安装Redis。 | `127.0.0.1` |
-| `cache-backend-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
-| `cache-backend-redis-db` | 数据库 | 如果同时使用Redis作为默认和全页缓存，则此为必需字段。 必须指定其中一个缓存的数据库号；默认情况下，其他缓存使用0。<br><br>**重要信息**:如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认缓存数据库编号指定为0，将页缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
-| `cache-backend-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一：the `auth` 命令，它要求客户端进行身份验证以访问数据库。 密码直接在Redis的配置文件中配置： `/etc/redis/redis.conf` |  |
+| `cache-backend-redis-server` | 伺服器 | 完整的主機名稱、IP位址或UNIX通訊端的絕對路徑。 預設值127.0.0.1表示Commerce伺服器上已安裝Redis。 | `127.0.0.1` |
+| `cache-backend-redis-port` | 連線埠 | Redis伺服器接聽連線埠 | `6379` |
+| `cache-backend-redis-db` | 資料庫 | 如果您對預設和全頁快取都使用Redis，則此為必要專案。 您必須指定其中一個快取的資料庫編號；另一個快取預設使用0。<br><br>**重要**：如果您將Redis用於多種型別的快取，則資料庫編號必須不同。 建議您將預設快取資料庫編號指派為0，將分頁快取資料庫編號指派為1，並將工作階段儲存資料庫編號指派為2。 | `0` |
+| `cache-backend-redis-password` | 密碼 | 設定Redis密碼可啟用其中一項內建的安全性功能： `auth` 命令，要求使用者端驗證以存取資料庫。 密碼直接在Redis的設定檔案中設定： `/etc/redis/redis.conf` |  |
 
-### 示例命令
+### 命令範例
 
-以下示例启用Redis默认缓存，将主机设置为 `127.0.0.1`，并将数据库编号分配给0。 Redis对所有其他参数使用默认值。
+下列範例會啟用Redis預設快取，並將主機設定為 `127.0.0.1`，並將資料庫編號指派為0。 Redis會使用所有其他引數的預設值。
 
 ```bash
 bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=127.0.0.1 --cache-backend-redis-db=0
 ```
 
-## 配置Redis页面缓存
+## 設定Redis頁面快取
 
-要在商务上配置Redis页面缓存，请运行 `setup:config:set` 命令。
+若要在Commerce上設定Redis頁面快取，請執行 `setup:config:set` 命令與其他引數。
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-<parameter>=<value>...
 ```
 
-使用以下参数：
+包含下列引數：
 
-- `--page-cache=redis` 启用Redis页面缓存。 如果此功能已启用，请忽略此参数。
+- `--page-cache=redis` 啟用Redis頁面快取。 如果已啟用此功能，請省略此引數。
 
-- `--page-cache-redis-<parameter>=<value>` 是配置页面缓存的键值对列表：
+- `--page-cache-redis-<parameter>=<value>` 是設定頁面快取的機碼和值組清單：
 
-| 命令行参数 | 值 | 含义 | 默认值 |
+| 命令列引數 | 值 | 含義 | 預設值 |
 | ------------------------------ | --------- | ------- | ------------- |
-| `page-cache-redis-server` | 服务器 | 完全限定的主机名、 IP地址或UNIX套接字的绝对路径。 默认值为127.0.0.1表示商务服务器上已安装Redis。 | `127.0.0.1` |
-| `page-cache-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
-| `page-cache-redis-db` | 数据库 | 如果同时使用Redis作为默认和完整页面缓存，则此为必需字段。 必须指定其中一个缓存的数据库号；默认情况下，其他缓存使用0。<br/>**重要信息**:如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认缓存数据库编号指定为0，将页缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
-| `page-cache-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一：the `auth` 命令，它要求客户端进行身份验证以访问数据库。 在Redis配置文件中配置密码： `/etc/redis/redis.conf` |  |
+| `page-cache-redis-server` | 伺服器 | 完整的主機名稱、IP位址或UNIX通訊端的絕對路徑。 預設值127.0.0.1表示Commerce伺服器上已安裝Redis。 | `127.0.0.1` |
+| `page-cache-redis-port` | 連線埠 | Redis伺服器接聽連線埠 | `6379` |
+| `page-cache-redis-db` | 資料庫 | 如果您對預設和完整頁面快取都使用Redis，則此為必要專案。 您必須指定其中一個快取的資料庫編號；另一個快取預設使用0。<br/>**重要**：如果您將Redis用於多種型別的快取，則資料庫編號必須不同。 建議您將預設快取資料庫編號指派為0，將分頁快取資料庫編號指派為1，並將工作階段儲存資料庫編號指派為2。 | `0` |
+| `page-cache-redis-password` | 密碼 | 設定Redis密碼可啟用其中一項內建的安全性功能： `auth` 命令，要求使用者端驗證以存取資料庫。 在Redis設定檔案中設定密碼： `/etc/redis/redis.conf` |  |
 
-### 示例命令
+### 命令範例
 
-以下示例启用Redis页面缓存，将主机设置为 `127.0.0.1`，并将数据库编号分配给1。 所有其他参数都设置为默认值。
+下列範例會啟用Redis頁面快取，並將主機設定為 `127.0.0.1`，並將資料庫編號指派給1。 所有其他引數都會設定為預設值。
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.0.1 --page-cache-redis-db=1
 ```
 
-## 结果
+## 結果
 
-作为两个示例命令的结果，Commerce会添加如下类似的行： `<Commerce-install-dir>app/etc/env.php`:
+由於這兩個範例命令的結果，Commerce會將類似下列的行新增至 `<Commerce-install-dir>app/etc/env.php`：
 
 ```php
 'cache' => [
@@ -101,77 +101,77 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
 ],
 ```
 
-## 将AWS ElastiCache与EC2实例结合使用
+## 搭配您的EC2執行個體使用AWS ElastiCache
 
-从Commerce 2.4.3开始，在Amazon EC2上托管的实例可能使用AWS ElastiCache代替本地Redis实例。
+自Commerce 2.4.3起，在Amazon EC2上託管的執行個體可使用AWS ElastiCache來取代本機Redis執行個體。
 
 >[!WARNING]
 >
->此部分仅适用于在Amazon EC2 VPC上运行的Commerce实例。 它不适用于本地安装。
+>本節僅適用於在Amazon EC2 VPC上執行的Commerce執行個體。 它不適用於內部部署安裝。
 
-### 配置Redis群集
+### 設定Redis叢集
 
-之后 [在AWS上设置Redis群集](https://aws.amazon.com/getting-started/hands-on/setting-up-a-redis-cluster-with-amazon-elasticache/)，配置EC2实例以使用ElastiCache。
+晚於 [在AWS上設定Redis群集](https://aws.amazon.com/getting-started/hands-on/setting-up-a-redis-cluster-with-amazon-elasticache/)，設定EC2執行個體以使用ElastiCache。
 
-1. [创建ElastiCache群集](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/set-up.html) 和EC2实例的VPC中。
-1. 验证连接。
+1. [建立ElastiCache群集](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/set-up.html) 與EC2執行個體的VPC位於相同區域。
+1. 驗證連線。
 
-   - 打开到EC2实例的SSH连接
-   - 在EC2实例上，安装Redis客户端：
+   - 開啟EC2執行個體的SSH連線
+   - 在EC2執行個體上，安裝Redis使用者端：
 
       ```bash
       sudo apt-get install redis
       ```
 
-   - 向EC2安全组添加入站规则：类型 `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
-   - 向ElastiCache集群安全组添加入站规则：类型 `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
-   - 连接到Redis CLI:
+   - 將輸入規則新增至EC2安全性群組：型別 `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
+   - 將輸入規則新增至ElastiCache叢集安全性群組：型別 `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
+   - 連線至Redis CLI：
 
       ```bash
       redis-cli -h <ElastiCache Primary Endpoint host> -p <ElastiCache Primary Endpoint port>
       ```
 
-### 配置商务以使用群集
+### 設定Commerce使用叢集
 
-商务支持多种类型的缓存配置。 通常，缓存配置在前端和后端之间进行拆分。 前端缓存被分类为 `default`，用于任何缓存类型。 您可以自定义或拆分为较低级别的缓存，以获得更好的性能。 通用的Redis配置将默认缓存和页面缓存分隔到它们自己的Redis数据库(RDB)中。
+Commerce支援多種型別的快取設定。 一般而言，快取設定會在前端和後端之間分割。 前端快取分類為 `default`，用於任何快取型別。 您可以自訂或分割為較低層級的快取，以獲得更好的效能。 常見的Redis設定是將預設快取和頁面快取分隔到各自的Redis資料庫(RDB)。
 
-运行 `setup` 命令来指定Redis端点。
+執行 `setup` 指定Redis端點的命令。
 
-要将Commerce配置为默认缓存，请执行以下操作：
+若要將Commerce for Redis設定為預設快取：
 
 ```bash
 bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=<ElastiCache Primary Endpoint host> --cache-backend-redis-port=<ElastiCache Primary Endpoint port> --cache-backend-redis-db=0
 ```
 
-要为Redis页面缓存配置商务，请执行以下操作：
+若要設定Commerce以進行Redis頁面快取：
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=<ElastiCache Primary Endpoint host> --page-cache-redis-port=<ElastiCache Primary Endpoint port> --page-cache-redis-db=1
 ```
 
-要将Commerce配置为使用Redis进行会话存储，请执行以下操作：
+若要設定Commerce以將Redis用於工作階段儲存：
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=<ElastiCache Primary Endpoint host> --session-save-redis-port=<ElastiCache Primary Endpoint port> --session-save-redis-log-level=4 --session-save-redis-db=2
 ```
 
-### 验证连接
+### 驗證連線能力
 
-**验证商务是否与ElastiCache通话**:
+**驗證Commerce正在與ElastiCache通話的方式**：
 
-1. 打开到Commerce EC2实例的SSH连接。
-1. 启动Redis监视器。
+1. 開啟與Commerce EC2執行個體的SSH連線。
+1. 啟動Redis監視器。
 
    ```bash
    redis-cli -h <ElastiCache-Primary-Endpoint-host> -p <ElastiCache-Primary-Endpoint-port> monitor
    ```
 
-1. 在商务UI中打开页面。
-1. 验证 [缓存输出](#verify-redis-connection) 在你的终端上。
+1. 在Commerce UI中開啟頁面。
+1. 驗證 [快取輸出](#verify-redis-connection) 在您的終端機中。
 
-## 新的Redis缓存实施
+## 全新Redis快取實作
 
-从Commerce 2.3.5开始，建议使用扩展的Redis缓存实施： `\Magento\Framework\Cache\Backend\Redis`.
+自Commerce 2.3.5起，建議使用擴充的Redis快取實施： `\Magento\Framework\Cache\Backend\Redis`.
 
 ```php
 'cache' => [
@@ -187,11 +187,11 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=<Ela
 ],
 ```
 
-## Redis预加载功能
+## Redis預先載入功能
 
-由于商务将配置数据存储在Redis缓存中，因此我们可以预载页面之间重复使用的数据。 要查找必须预加载的键，请分析从Redis传输到Commerce的数据。 我们建议预加载每个页面上加载的数据，例如 `SYSTEM_DEFAULT`, `EAV_ENTITY_TYPES`, `DB_IS_UP_TO_DATE`.
+由於Commerce會將設定資料儲存在Redis快取中，因此我們可以預先載入在頁面之間重複使用的資料。 若要尋找必須預先載入的金鑰，請分析從Redis傳輸到Commerce的資料。 我們建議預先載入每個頁面上載入的資料，例如 `SYSTEM_DEFAULT`， `EAV_ENTITY_TYPES`， `DB_IS_UP_TO_DATE`.
 
-Redis使用 `pipeline` 以便复合加载请求。 键应包括数据库前缀；例如，如果数据库前缀为 `061_`，预加载键如下所示： `061_SYSTEM_DEFAULT`
+Redis使用 `pipeline` 以便複合載入請求。 金鑰應包含資料庫首碼；例如，如果資料庫首碼為 `061_`，預先載入金鑰看起來像這樣： `061_SYSTEM_DEFAULT`
 
 ```php
 'cache' => [
@@ -221,7 +221,7 @@ Redis使用 `pipeline` 以便复合加载请求。 键应包括数据库前缀�
 ]
 ```
 
-如果您在L2缓存中使用预加载功能，请不要忘记在 `:hash` 后缀，因为二级缓存只传输数据的哈希，而不是数据本身：
+如果您搭配L2快取使用預先載入功能，別忘了新增 `:hash` 尾碼至您的金鑰，因為L2快取只會傳輸資料的雜湊，而非資料本身：
 
 ```php
 'preload_keys' => [
@@ -232,18 +232,18 @@ Redis使用 `pipeline` 以便复合加载请求。 键应包括数据库前缀�
 ],
 ```
 
-## 并行生成
+## 平行產生
 
-从2.4.0版本开始，我们引入了 `allow_parallel_generation` 选项。
-默认情况下，该选项处于禁用状态，我们建议在您配置和/或块过多之前将其禁用。
+從2.4.0版開始，我們推出了 `allow_parallel_generation` 使用者不想等待鎖定的選項。
+預設會停用，建議您先停用它，直到設定和/或區塊過多為止。
 
-**启用并行生成**:
+**啟用平行產生**：
 
 ```bash
 bin/magento setup:config:set --allow-parallel-generation
 ```
 
-由于它是标记，因此不能使用命令禁用它。 您必须手动将配置值设置为 `false`:
+由於它是標幟，因此不能使用命令將其停用。 您必須手動將設定值設為 `false`：
 
 ```php
     'cache' => [
@@ -268,17 +268,17 @@ bin/magento setup:config:set --allow-parallel-generation
     ],
 ```
 
-## 验证Redis连接
+## 驗證Redis連線
 
-要验证Redis和Commerce是否一起工作，请登录到运行Redis的服务器，打开终端，然后使用Redis监视器命令或ping命令。
+若要確認Redis與Commerce是否共同運作，請登入執行Redis的伺服器、開啟終端機，並使用Redis監視命令或ping命令。
 
-### Redis监视器命令
+### Redis監視命令
 
 ```bash
 redis-cli monitor
 ```
 
-页面缓存输出示例：
+範例頁面快取輸出：
 
 ```terminal
 1476826133.810090 [0 127.0.0.1:52366] "select" "1"
@@ -303,16 +303,16 @@ redis-cli monitor
 ... more ...
 ```
 
-### Redis ping命令
+### Redis ping指令
 
 ```bash
 redis-cli ping
 ```
 
-预期响应为： `PONG`
+預期的回應為： `PONG`
 
-如果两个命令都成功，则正确设置Redis。
+如果兩個命令都成功，Redis就會正確設定。
 
-### 检查压缩数据
+### 檢查壓縮資料
 
-要检查压缩的会话数据和页面缓存，请 [RESP.app](https://flathub.org/apps/details/app.resp.RESP) 支持Commerce 2 Session和Page缓存的自动解压，并以人类可读的形式显示PHP会话数据。
+若要檢查壓縮的工作階段資料和頁面快取，請 [RESP.app](https://flathub.org/apps/details/app.resp.RESP) 支援自動解壓縮Commerce 2工作階段和頁面快取，並以人類可讀的格式顯示PHP工作階段資料。

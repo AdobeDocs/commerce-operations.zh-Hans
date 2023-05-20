@@ -1,21 +1,21 @@
 ---
 title: Apache
-description: 请按照以下步骤安装和配置Apache Web服务器，以在本地安装Adobe Commerce和Magento Open Source。
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+description: 請依照下列步驟安裝和設定Apache Web Server，以供Adobe Commerce和Magento Open Source的內部部署使用。
+exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '844'
 ht-degree: 0%
 
 ---
 
-
 # Apache
 
-Adobe Commerce支持Apache 2.4.x。
+Adobe Commerce支援Apache 2.4.x。
 
-## Apache必需指令
+## Apache必要指示
 
-1. 已设置 `AllowEncodedSlashes` 在服务器配置（全局）或虚拟主机配置中，以避免解码可能导致URL问题的编码斜杠。 例如，在通过API检索SKU中带有斜杠的产品时，您不希望进行转换。 示例块不完整，需要其他指令。
+1. 設定 `AllowEncodedSlashes` 在伺服器設定（全域）或虛擬主機設定中，以避免解碼可能導致URL問題的編碼斜線。 例如，透過API在SKU中擷取斜線產品時，您不想要轉換該斜線。 範例區塊不完整，需要其他指令。
 
    ```conf
    <VirtualHost *:443>
@@ -24,33 +24,33 @@ Adobe Commerce支持Apache 2.4.x。
    </VirtualHost>
    ```
 
-## Apache重写和htaccess
+## Apache重寫和htaccess
 
-本主题讨论如何启用Apache 2.4重写，并为 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
+本主題說明如何啟用Apache 2.4重新寫入，並指定 [分散式組態檔， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
 
-Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 提供Apache的目录级说明。 本主题的所有其他部分也包含以下说明。
+Adobe Commerce和Magento Open Source使用伺服器重寫和 `.htaccess` 以提供Apache的目錄層級指示。 以下指示也包含在本主題的所有其他章節中。
 
-使用此部分可启用Apache 2.4重写，并为 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
+使用此區段來啟用Apache 2.4重新寫入，並指定 [分散式組態檔， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
 
-Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 提供Apache的目录级说明。
+Adobe Commerce和Magento Open Source使用伺服器重寫和 `.htaccess` 以提供Apache的目錄層級指示。
 
 >[!NOTE]
 >
->如果未能启用这些设置，通常会导致店面或管理员上不显示样式。
+>無法啟用這些設定通常會導致您的店面或管理員上沒有顯示任何樣式。
 
-1. 启用Apache重写模块：
+1. 啟用Apache重寫模組：
 
    ```bash
    a2enmod rewrite
    ```
 
-1. 使应用程序能够使用 `.htaccess` 配置文件，请参阅 [Apache 2.4文档](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
+1. 啟用應用程式以使用分散式 `.htaccess` 設定檔案，請參閱 [Apache 2.4檔案](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
 
    >[!TIP]
    >
-   >在Apache 2.4中，服务器的默认站点配置文件为 `/etc/apache2/sites-available/000-default.conf`.
+   >在Apache 2.4中，伺服器的預設網站設定檔案為 `/etc/apache2/sites-available/000-default.conf`.
 
-   例如，您可以在的 `000-default.conf`:
+   例如，您可以新增下列內容至 `000-default.conf`：
 
    ```terminal
    <Directory "/var/www/html">
@@ -60,9 +60,9 @@ Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 提供A
 
    >[!NOTE]
    >
-   >有时，可能需要其他参数。 有关更多信息，请参阅 [Apache 2.4文档](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
+   >有時可能需要其他引數。 如需詳細資訊，請參閱 [Apache 2.4檔案](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
 
-1. 如果更改了Apache设置，请重新启动Apache:
+1. 如果您已變更Apache設定，請重新啟動Apache：
 
    ```bash
    service apache2 restart
@@ -70,17 +70,17 @@ Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 提供A
 
    >[!NOTE]
    >
-   >- 如果您从早期的Apache版本升级，请首先查找 `<Directory "/var/www/html">` 或 `<Directory "/var/www">` in `000-default.conf`.
-   >- 您必须更改 `AllowOverride` 在指令中，您希望将Adobe Commerce或Magento Open Source软件安装到的目录。 例如，要在Web服务器Docroot中安装，请在 `<Directory /var/www>`.
+   >- 如果您從舊版Apache升級，請先尋找 `<Directory "/var/www/html">` 或 `<Directory "/var/www">` 在 `000-default.conf`.
+   >- 您必須變更以下專案的值： `AllowOverride` 在您要安裝Adobe Commerce或Magento Open Source軟體之目錄的指示詞中。 例如，若要安裝在Web伺服器docroot中，請編輯 `<Directory /var/www>`.
 
 
 >[!NOTE]
 >
->如果未能启用这些设置，通常会导致样式无法在店面或管理员中显示。
+>若未啟用這些設定，通常會導致樣式無法顯示在店面或管理員中。
 
-## Apache所需模块
+## Apache必要模組
 
-Adobe Commerce和Magento Open Source需要安装以下Apache模块：
+Adobe Commerce和Magento Open Source需要安裝以下Apache模組：
 
 - [mod_deflate.c](https://httpd.apache.org/docs/2.4/mod/mod_deflate.html)
 - [mod_expires.c](https://httpd.apache.org/docs/2.4/mod/mod_expires.html)
@@ -89,62 +89,62 @@ Adobe Commerce和Magento Open Source需要安装以下Apache模块：
 - [mod_security.c](https://modsecurity.org)
 - [mod_ssl.c](https://httpd.apache.org/docs/2.4/mod/mod_ssl.html)
 
-## 验证Apache版本
+## 驗證Apache版本
 
-要验证您当前运行的Apache版本，请输入：
+若要驗證您目前執行的Apache版本，請輸入：
 
 ```bash
 apache2 -v
 ```
 
-结果显示如下所示：
+結果顯示類似以下內容：
 
 ```terminal
 Server version: Apache/2.4.04 (Ubuntu)
 Server built: Jul 22 2020 14:35:32
 ```
 
-- 如果Apache为 *not* 已安装，请参阅：
-   - [在Ubuntu上安装或升级Apache](#installing-apache-on-ubuntu)
-   - [在CentOS上安装Apache](#installing-apache-on-centos)
+- 如果Apache是 *not* 已安裝，請參閱：
+   - [在Ubuntu上安裝或升級Apache](#installing-apache-on-ubuntu)
+   - [在CentOS上安裝Apache](#installing-apache-on-centos)
 
-## 在Ubuntu上安装或升级Apache
+## 在Ubuntu上安裝或升級Apache
 
-以下各节将讨论如何安装或升级Apache:
+以下小節討論如何安裝或升級Apache：
 
-- 安装Apache
-- 在Ubuntu上升级到Apache 2.4以使用PHP 7.4。
+- 安裝Apache
+- 升級至Ubuntu上的Apache 2.4以使用PHP 7.4。
 
-### 在Ubuntu上安装Apache
+### 在Ubuntu上安裝Apache
 
-要安装默认版本的Apache，请执行以下操作：
+若要安裝預設版本的Apache：
 
-1. 安装Apache
+1. 安裝Apache
 
    ```bash
    apt-get -y install apache2
    ```
 
-1. 验证安装。
+1. 驗證安裝。
 
    ```bash
    apache2 -v
    ```
 
-   结果显示如下所示：
+   結果顯示類似以下內容：
 
    ```terminal
    Server version: Apache/2.4.18 (Ubuntu)
    Server built: 2020-04-15T18:00:57
    ```
 
-1. 启用 [重写和 `.htaccess`](#apache-rewrites-and-htaccess).
+1. 啟用 [重寫和 `.htaccess`](#apache-rewrites-and-htaccess).
 
-### 在Ubuntu上升级Apache
+### 在Ubuntu上升級Apache
 
-要升级到Apache 2.4，请执行以下操作：
+若要升級至Apache 2.4：
 
-1. 添加 `ppa:ondrej` 存储库，其中包含Apache 2.4:
+1. 新增 `ppa:ondrej` 存放庫，其中具有Apache 2.4：
 
    ```bash
    apt-get -y update
@@ -158,7 +158,7 @@ Server built: Jul 22 2020 14:35:32
    apt-get -y update
    ```
 
-1. 安装Apache 2.4:
+1. 安裝Apache 2.4：
 
    ```bash
    apt-get install -y apache2
@@ -166,71 +166,71 @@ Server built: Jul 22 2020 14:35:32
 
    >[!NOTE]
    >
-   >如果“apt-get install”命令因未满足依赖项而失败，请咨询资源，如 [https://askubuntu.com/](https://askubuntu.com/questions/140246/how-do-i-resolve-unmet-dependencies-after-adding-a-ppa).
+   >如果&#39;apt-get install&#39;命令因未滿足的相依性而失敗，請查閱資源，例如 [https://askubuntu.com/](https://askubuntu.com/questions/140246/how-do-i-resolve-unmet-dependencies-after-adding-a-ppa).
 
-1. 验证安装。
+1. 驗證安裝。
 
    ```bash
    apache2 -v
    ```
 
-   应显示与以下内容类似的消息：
+   類似下列的訊息應會顯示：
 
    ```terminal
    Server version: Apache/2.4.10 (Ubuntu)
    Server built: Jul 22 2020 22:46:25
    ```
 
-1. 启用 [重写和 `.htaccess`](#apache-rewrites-and-htaccess).
+1. 啟用 [重寫和 `.htaccess`](#apache-rewrites-and-htaccess).
 
-## 在CentOS上安装Apache
+## 在CentOS上安裝Apache
 
-Adobe Commerce和Magento Open Source需要Apache使用服务器重写。 您还必须指定可以在 `.htaccess`，应用程序使用它指定重写规则。
+Adobe Commerce和Magento Open Source需要Apache使用伺服器重寫。 您也必須指定可以在下列專案中使用的指令型別： `.htaccess`，應用程式會使用它來指定重寫規則。
 
-安装和配置Apache基本上是三步流程：安装软件、启用重写并指定 `.htaccess` 指令。
+安裝和設定Apache基本上是三個步驟的過程：安裝軟體、啟用重寫並指定 `.htaccess` 指令。
 
-### 安装Apache
+### 安裝Apache
 
-1. 安装Apache 2.4（如果尚未安装）。
+1. 安裝Apache 2.4 （如果尚未安裝）。
 
    ```bash
    yum -y install httpd
    ```
 
-1. 验证安装：
+1. 驗證安裝：
 
    ```bash
    httpd -v
    ```
 
-   与以下显示类似的消息，用于确认安装成功：
+   類似下列的訊息會顯示以確認安裝成功：
 
    ```terminal
    Server version: Apache/2.4.40 (Unix)
    Server built: Oct 16 2020 14:48:21
    ```
 
-1. 继续下一节。
+1. 繼續下一節。
 
    >[!NOTE]
    >
-   >即使Apache 2.4默认随CentOS一起提供，请参阅以下部分对其进行配置。
+   >即使Apache 2.4預設隨CentOS提供，請參閱下一節以設定它。
 
-### 为CentOS启用重写和.htaccess
+### 啟用CentOS的重寫和.htaccess
 
-1. 打开 `/etc/httpd/conf/httpd.conf` 要编辑的文件：
+1. 開啟 `/etc/httpd/conf/httpd.conf` 要編輯的檔案：
 
    ```bash
    vim /etc/httpd/conf/httpd.conf`
    ```
 
-1. 找到以下内容开头的块：
+1. 找出開頭為的區塊：
 
    ```conf
    <Directory "/var/www/html">
    ```
 
-1. 更改 `AllowOverride` to `All`.
+1. 變更值 `AllowOverride` 至 `All`.
 
    例如，
 
@@ -245,11 +245,11 @@ Adobe Commerce和Magento Open Source需要Apache使用服务器重写。 您还�
 
    >[!NOTE]
    >
-   >的上一个值 `Order` 可能并非在所有情况下都有效。 有关更多信息，请参阅Apache文档([2.4](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order))。
+   >以下專案的先前值： `Order` 可能無法在所有情況下運作。 如需詳細資訊，請參閱Apache檔案([2.4](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order))。
 
-1. 保存文件并退出文本编辑器。
+1. 儲存檔案並退出文字編輯器。
 
-1. 要应用Apache设置，请重新启动Apache。
+1. 若要套用Apache設定，請重新啟動Apache。
 
    ```bash
    service apache2 restart
@@ -257,21 +257,21 @@ Adobe Commerce和Magento Open Source需要Apache使用服务器重写。 您还�
 
 >[!NOTE]
 >
->如果未能启用这些设置，通常会导致店面或管理员上不显示样式。
+>無法啟用這些設定通常會導致您的店面或管理員上沒有顯示任何樣式。
 
-### 为Ubuntu启用重写和.htaccess
+### 啟用Ubuntu的重寫和.htaccess
 
-1. 打开 `/etc/apache2/sites-available/default` 要编辑的文件：
+1. 開啟 `/etc/apache2/sites-available/default` 要編輯的檔案：
 
    ```bash
    vim /etc/apache2/sites-available/default
    ```
 
-1. 找到以下内容开头的块：
+1. 找出開頭為的區塊：
 
    `<Directory "/var/www/html">`
 
-1. 更改 `AllowOverride` to `All`.
+1. 變更值 `AllowOverride` 至 `All`.
 
    例如：
 
@@ -284,9 +284,9 @@ Adobe Commerce和Magento Open Source需要Apache使用服务器重写。 您还�
    </Directory>
    ```
 
-1. 保存文件并退出文本编辑器。
+1. 儲存檔案並退出文字編輯器。
 
-1. 配置Apache以使用 `mod_rewrite` 模块：
+1. 設定Apache以使用 `mod_rewrite` 模組：
 
    ```bash
    cd /etc/apache2/mods-enabled
@@ -296,19 +296,19 @@ Adobe Commerce和Magento Open Source需要Apache使用服务器重写。 您还�
    ln -s ../mods-available/rewrite.load
    ```
 
-1. 重新启动Apache以应用更改：
+1. 重新啟動Apache套用變更：
 
    ```bash
    service apache2 restart
    ```
 
-## 解决403（禁止）错误
+## 解決403 （禁止）錯誤
 
-如果在尝试访问站点时遇到403禁止错误，则可以更新Apache配置或虚拟主机配置，以使访客能够访问站点：
+如果您在嘗試存取網站時遇到403禁止錯誤，您可以更新Apache設定或虛擬主機設定，以啟用網站的訪客：
 
-### 解决Apache 2.4的403禁止错误
+### 解決Apache 2.4的403禁止錯誤
 
-要使网站访客能够访问您的网站，请使用 [需要指令](https://httpd.apache.org/docs/2.4/howto/access.html).
+若要讓網站訪客能夠存取您的網站，請使用 [Require指示](https://httpd.apache.org/docs/2.4/howto/access.html).
 
 例如：
 
@@ -323,4 +323,4 @@ Adobe Commerce和Magento Open Source需要Apache使用服务器重写。 您还�
 
 >[!NOTE]
 >
->的上一个值 `Order` 可能并非在所有情况下都有效。 有关更多信息，请参阅 [Apache文档](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
+>以下專案的先前值： `Order` 可能無法在所有情況下運作。 如需詳細資訊，請參閱 [Apache檔案](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).

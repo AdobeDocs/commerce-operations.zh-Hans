@@ -1,48 +1,48 @@
 ---
-title: 为搜索引擎配置Apache
-description: 按照以下步骤使用Apache Web Server配置搜索引擎，以进行Adobe Commerce和Magento Open Source的内部安装。
-source-git-commit: d3cfd97450164d38fd340b538099739601573d64
+title: 為您的搜尋引擎設定Apache
+description: 請依照下列步驟，使用Apache Web Server設定搜尋引擎，以供Adobe Commerce和Magento Open Source的內部部署使用。
+exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
 
 ---
 
-
-# 为搜索引擎配置Apache
+# 為您的搜尋引擎設定Apache
 
 {{$include /help/_includes/web-server-communication.md}}
 
-## 设置代理
+## 設定Proxy
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 参见 [将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 了解更多信息。
+>2.4.4版新增OpenSearch支援。OpenSearch是相容的Elasticsearch復本。 另請參閱 [將Elasticsearch移轉至OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 以取得詳細資訊。
 
-本节讨论如何将Apache配置为 *不安全* 代理服务器，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；将在中讨论 [与Apache的安全通信](#secure-communication-with-apache).
+本節探討如何將Apache設定為 *不安全* Proxy，讓Adobe Commerce能夠使用在此伺服器上執行的搜尋引擎。 本節不討論設定HTTP基本驗證；這將在中討論 [與Apache的安全通訊](#secure-communication-with-apache).
 
 >[!NOTE]
 >
->在此示例中，代理不安全的原因是它更易于设置和验证。 您可以将TLS与此代理一起使用。 如果要这样做，请确保将代理信息添加到安全虚拟主机配置中。
+>在此範例中，Proxy不受保護的原因是它更容易設定和驗證。 您可以透過此Proxy使用TLS。 如果您想要這麼做，請務必將Proxy資訊新增至您的安全虛擬主機設定。
 
-### 为Apache 2.4设置代理
+### 設定Apache 2.4的Proxy
 
-本节讨论如何使用虚拟主机配置代理。
+本節探討如何使用虛擬主機設定Proxy。
 
-1. 启用 `mod_proxy` 如下所示：
+1. 啟用 `mod_proxy` 如下所示：
 
    ```bash
    a2enmod proxy_http
    ```
 
-1. 使用文本编辑器打开 `/etc/apache2/sites-available/000-default.conf`
-1. 在文件的顶部添加以下指令：
+1. 使用文字編輯器開啟 `/etc/apache2/sites-available/000-default.conf`
+1. 在檔案頂端新增下列指令：
 
    ```conf
    Listen 8080
    ```
 
-1. 在文件底部添加以下内容：
+1. 在檔案底部新增下列內容：
 
    ```conf
    <VirtualHost *:8080>
@@ -51,25 +51,25 @@ ht-degree: 0%
    </VirtualHost>
    ```
 
-1. 重新启动Apache：
+1. 重新啟動Apache：
 
    ```bash
    service apache2 restart
    ```
 
-1. 通过输入以下命令验证代理是否正常工作：
+1. 輸入下列命令來驗證Proxy是否運作：
 
    ```bash
    curl -i http://localhost:<proxy port>/_cluster/health
    ```
 
-   例如，如果您使用Elasticsearch，而您的代理使用的是端口8080：
+   例如，如果您使用Elasticsearch，而Proxy使用連線埠8080：
 
    ```bash
    curl -i http://localhost:8080/_cluster/health
    ```
 
-   类似于以下内容的消息显示指示成功：
+   類似下列的訊息會顯示以指示成功：
 
    ```terminal
    HTTP/1.1 200 OK
@@ -81,41 +81,41 @@ ht-degree: 0%
    {"cluster_name":"elasticsearch","status":"yellow","timed_out":false,"number_of_nodes":1,"number_of_data_nodes":1,"active_primary_shards":5,"active_shards":5,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":5,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":50.0}
    ```
 
-## 与Apache的安全通信
+## 與Apache的安全通訊
 
-本节讨论如何使用保护Apache与搜索引擎之间的通信 [HTTP基本](https://datatracker.ietf.org/doc/html/rfc2617) 使用Apache进行身份验证。 有关更多选项，请参阅以下资源之一：
+本節探討如何使用，保護Apache與搜尋引擎之間的通訊 [HTTP基本](https://datatracker.ietf.org/doc/html/rfc2617) 使用Apache進行驗證。 如需更多選項，請參閱下列資源之一：
 
-* [Apache 2.4身份验证和授权教程](https://httpd.apache.org/docs/2.4/howto/auth.html)
+* [Apache 2.4驗證和授權教學課程](https://httpd.apache.org/docs/2.4/howto/auth.html)
 
-请参阅以下部分之一：
+請參閱下列其中一節：
 
-* [创建密码文件](#create-a-password)
-* [配置安全虚拟主机](#secure-communication-with-apache)
+* [建立密碼檔案](#create-a-password)
+* [設定安全的虛擬主機](#secure-communication-with-apache)
 
-### 创建密码
+### 建立密碼
 
-出于安全原因，您可以在Web服务器docroot以外的任何位置找到口令文件。 在本例中，我们将说明如何将密码文件存储在新目录中。
+基於安全理由，您可以在網頁伺服器docroot以外的任何地方找到密碼檔案。 在此範例中，我們說明如何將密碼檔案儲存在新目錄中。
 
-#### 安装htpasswd（如有必要）
+#### 安裝htpasswd （如有必要）
 
-首先，查看您是否拥有Apache `htpasswd` 实用程序安装如下：
+首先，檢視您是否擁有Apache `htpasswd` 公用程式的安裝方式如下：
 
-1. 输入以下命令以确定是否 `htpasswd` 已安装：
+1. 輸入下列命令以判斷是否 `htpasswd` 已安裝：
 
    ```bash
    which htpasswd
    ```
 
-   如果显示路径，则表明已安装；如果命令未返回任何输出， `htpasswd` 未安装。
+   如果路徑顯示，則會安裝該路徑；如果命令未傳回任何輸出， `htpasswd` 未安裝。
 
-1. 如有必要，请安装 `htpasswd`：
+1. 如有必要，請安裝 `htpasswd`：
 
    * Ubuntu： `apt-get -y install apache2-utils`
    * CentOS： `yum -y install httpd-tools`
 
-#### 创建密码文件
+#### 建立密碼檔案
 
-以用户身份输入以下命令 `root` 权限：
+以使用者身分輸入以下命令，並附上 `root` 許可權：
 
 ```bash
 mkdir -p /usr/local/apache/password
@@ -129,21 +129,21 @@ htpasswd -c /usr/local/apache/password/.<password file name> <username>
 
 * `<username>` 可以是：
 
-   * 设置cron：Web服务器用户或其他用户。
+   * 設定cron：網頁伺服器使用者或其他使用者。
 
-   在本例中，我们使用Web服务器用户，但用户的选择取决于您。
+   在此範例中，我們使用Web伺服器使用者，但使用者的選擇由您決定。
 
-   * 设置Elasticsearch：用户已命名 `magento_elasticsearch` 在此示例中
+   * 設定Elasticsearch：使用者已命名 `magento_elasticsearch` 在此範例中
 
 
-* `<password file name>` 必须为隐藏文件(开头为 `.`)，并且应该反映用户的名称。 有关详细信息，请参阅此部分后面的示例。
+* `<password file name>` 必須為隱藏的檔案(開頭為 `.`)，且應反映使用者名稱。 如需詳細資訊，請參閱本節稍後的範例。
 
-按照屏幕上的提示为用户创建密码。
+依照熒幕上的提示為使用者建立密碼。
 
-#### 示例
+#### 範例
 
-**示例1：cron**
-您必须为cron仅设置一个用户的身份验证；在本例中，我们使用Web服务器用户。 要为Web服务器用户创建密码文件，请输入以下命令：
+**範例1： cron**
+您必須為cron僅設定一個使用者的驗證；在此範例中，我們使用Web伺服器使用者。 若要為Web伺服器使用者建立密碼檔案，請輸入下列命令：
 
 ```bash
 mkdir -p /usr/local/apache/password
@@ -153,8 +153,8 @@ mkdir -p /usr/local/apache/password
 htpasswd -c /usr/local/apache/password/.htpasswd apache
 ```
 
-**示例2：Elasticsearch**
-您必须为两个用户设置身份验证：一个具有对nginx的访问权限，另一个具有对Elasticsearch的访问权限。 要为这些用户创建密码文件，请输入以下命令：
+**範例2：Elasticsearch**
+您必須為兩個使用者設定驗證：一個具有nginx存取權，另一個具有Elasticsearch存取權。 若要為這些使用者建立密碼檔案，請輸入下列命令：
 
 ```bash
 mkdir -p /usr/local/apache/password
@@ -164,23 +164,23 @@ mkdir -p /usr/local/apache/password
 htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticsearch
 ```
 
-#### 添加其他用户
+#### 新增其他使用者
 
-要将另一个用户添加到您的密码文件，请以用户身份输入以下命令 `root` 权限：
+若要將另一個使用者新增至您的密碼檔案，請輸入以下命令作為使用者 `root` 許可權：
 
 ```bash
 htpasswd /usr/local/apache/password/.htpasswd <username>
 ```
 
-### 与Apache的安全通信
+### 與Apache的安全通訊
 
-本节讨论如何设置 [HTTP基本身份验证](https://httpd.apache.org/docs/2.2/howto/auth.html). 将TLS和HTTP Basic身份验证结合使用可防止任何人拦截与Elasticsearch、OpenSearch或您的应用服务器的通信。
+本節探討如何設定 [HTTP基本驗證](https://httpd.apache.org/docs/2.2/howto/auth.html). 同時使用TLS和HTTP基本驗證可防止任何人攔截與Elasticsearch、OpenSearch或您的應用程式伺服器的通訊。
 
-本节讨论如何指定谁可以访问Apache Server。
+本節探討如何指定可以存取Apache Server的使用者。
 
-1. 使用文本编辑器将以下内容添加到您的安全虚拟主机。
+1. 使用文字編輯器將下列內容新增至您的安全虛擬主機。
 
-   * Apache 2.4：编辑 `/etc/apache2/sites-available/default-ssl.conf`
+   * Apache 2.4：編輯 `/etc/apache2/sites-available/default-ssl.conf`
 
    ```conf
    <Proxy *>
@@ -200,13 +200,13 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
    </Proxy>
    ```
 
-1. 如果您已将上述内容添加到安全虚拟主机，请删除 `Listen 8080` 和 `<VirtualHost *:8080>` 您之前添加到不安全的虚拟主机的指令。
+1. 如果您已將前述新增至安全虛擬主機，請移除 `Listen 8080` 和 `<VirtualHost *:8080>` 您先前新增至不安全的虛擬主機的指示。
 
-1. 保存更改，退出文本编辑器，然后重新启动Apache：
+1. 儲存變更、退出文字編輯器，然後重新啟動Apache：
 
    * CentOS： `service httpd restart`
    * Ubuntu： `service apache2 restart`
 
-#### 验证
+#### 驗證
 
 {{$include /help/_includes/verify-secure-communication.md}}

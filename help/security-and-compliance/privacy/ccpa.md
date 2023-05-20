@@ -1,52 +1,52 @@
 ---
-title: 《加州消费者隐私法案》(CCPA)
-description: 了解《加州消费者隐私法案》(CCPA)，该法案扩展了加州消费者在确定如何收集、存储和使用其个人信息方面的权利。
-source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
+title: 加州消費者隱私法(CCPA)
+description: 瞭解加州消費者隱私法(CCPA)，該法擴展了加州消費者的權利，以決定如何收集、儲存和使用其個人資訊。
+exl-id: 5df0e745-fb2c-438e-aedd-17fb72be1350
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
 
 ---
 
-
-# 《加州消费者隐私法案》(CCPA)
+# 加州消費者隱私法(CCPA)
 
 >[!NOTE]
 >
->这是帮助Adobe Commerce、Magento Open Source商户和开发人员了解《加州消费者隐私法案》(CCPA)影响的一系列主题中的一个主题。 该信息仅供参考，不应被解释为法律建议。 请咨询您的法律顾问，以确定您的企业是否以及如何遵守任何法律义务。
+>本主題是協助Adobe Commerce和Magento Open Source商家及開發人員瞭解加州消費者隱私法(CCPA)含義的一系列主題之一。 此資訊僅供參考，不應理解為法律建議。 請洽詢您的法律顧問，判斷您的企業是否及如何遵守任何法律義務。
 
-的 [CCPA](https://oag.ca.gov/privacy/ccpa) 扩展了加州消费者的权利，以确定如何收集、存储和使用他们的个人信息，重点是保护消费者免遭未经授权的销售、交换或其个人信息。 CCPA于2018年颁布，自2020年1月1日起生效。
+此 [CCPA](https://oag.ca.gov/privacy/ccpa) 擴展加州消費者的權利，以決定如何收集、儲存和使用其個人資訊，強調保護消費者免受未經授權的銷售、交換或其個人資訊。 CCPA於2018年頒佈，自2020年1月1日起生效。
 
-CCPA授予消费者以下新权限：
+CCPA會授予消費者下列新權利：
 
-- **知情权** 过去12个月中收集、使用、共享或出售的关于这些用户的个人信息类别。
-- **删除权** 由企业和/或其服务提供商持有的某些类型的个人信息。
-- **选择退出的权利** 出售他们的个人信息。
-- **不歧视权** 价或服务行使CCPA下的隐私权。
+- **知情權** 過去12個月內收集、使用、共用或銷售之相關個人資訊的類別。
+- **刪除權** 企業及/或其服務提供者所擁有的某些型別的個人資訊。
+- **選擇退出的權利** 銷售其個人資訊的資訊。
+- **不受歧視的權利** 適用於根據CCPA行使隱私權的價格或服務條款。
 
-## CCPA合规性
+## CCPA法規遵循
 
-制定和实施CCPA合规计划需要协调努力。 我们鼓励商家组建跨职能团队，并遵循 [CCPA合规指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) 使公司遵守条例。 作为开发人员，您可能会受邀以利益相关方的身份参与，重点介绍该过程的步骤2至5。 请参阅 [CCPA合规指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) 以了解更多信息。
+制定和實施CCPA合規性計畫需要協調一致的努力。 我們鼓勵商戶建立跨職能團隊，並遵循中概述的藍圖 [CCPA合規性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) 使公司符合法規。 身為開發人員，您可能會受邀以利害關係人的身分參與，重點放在程式的步驟2到5。 請參閱 [CCPA合規性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) 以取得詳細資訊。
 
-1. 组建跨职能团队以解决CCPA合规性问题。
+1. 組建跨職能團隊以符合CCPA規定。
 
-1. **盘点数字资产。**
+1. **取得數位財產的詳細目錄。**
 
-1. **映射客户历程和数据收集流程。**
+1. **對應客戶歷程和資料收集流程。**
 
-1. **建立应对客户请求的程序和机制。**
+1. **建立程式和機制以回應客戶請求。**
 
-1. **编写所需CCPA客户通知的内容。**
+1. **撰寫所需CCPA客戶通知的內容。**
 
-1. 审查与服务提供商的协议。
+1. 檢閱與服務提供者的合約。
 
-1. 更新隐私政策。
+1. 更新隱私權原則。
 
-1. 记录所有与CCPA相关的程序并维护记录。
+1. 記錄所有與CCPA相關的程式並維護記錄。
 
-## 个人信息参考
+## 個人資訊參考資料
 
-有关技术信息，请参阅“个人信息参考”中适用于您支持的每个Adobe Commerce或Magento Open Source版本的数据流图和数据库实体映射。
+如需技術資訊，請參閱「個人資訊參考」中的資料流圖表和資料庫實體對應，其適用於您支援的每個Adobe Commerce或Magento Open Source版本。
 
-- [客户个人信息参考（版本2.x）](data-m2.md)
-- [客户个人信息参考（版本）1.x)](data-m1.md)
+- [客戶個人資訊參考（2.x版）](data-m2.md)
+- [客戶個人資訊參考（版本） 1.x)](data-m1.md)

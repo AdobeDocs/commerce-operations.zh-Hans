@@ -1,89 +1,90 @@
 ---
-title: 单机部署
-description: 了解如何使用命令行在生产服务器上部署商务更新。
-source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
+title: 單一電腦部署
+description: 瞭解如何使用命令列在生產伺服器上將Commerce的更新部署。
+exl-id: ca73309c-7584-4506-99de-dd933651eeb6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-# 单机部署
+# 單一電腦部署
 
-本主题提供了使用命令行在生产服务器上部署商务更新的说明。 此过程适用于负责在安装了某些主题和区域设置的单个计算机上运行存储的技术用户。
+本主題提供使用命令列在生產伺服器上部署Commerce更新的指示。 此程式適用於負責在已安裝某些主題和區域設定的單一機器上執行商店的技術使用者。
 
-## 假设
+## 假設
 
-- 您使用 [编辑器](../../installation/composer.md).
-- 您将直接将更新应用到服务器。
+- 您已使用安裝Commerce [Composer](../../installation/composer.md).
+- 您正在將更新直接套用至伺服器。
 
 >[!WARNING]
 >
->如果您使用 `git clone` 来安装Commerce。
->参与开发人员应使用 [本指南][install] 以更新其Commerce安装。
+>若您使用，本指南不適用 `git clone` 以安裝Commerce。
+>投稿開發人員應使用 [本指南][install] 更新其Commerce安裝。
 
-## 部署步骤
+## 部署步驟
 
-1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以或切換至身分登入您的生產伺服器， [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
 
-1. 将目录更改为Commerce基目录：
+1. 將目錄變更為Commerce基底目錄：
 
    ```bash
    cd <Commerce base directory>
    ```
 
-1. 使用命令启用维护模式：
+1. 使用命令啟用維護模式：
 
    ```bash
    bin/magento maintenance:enable
    ```
 
-1. 使用以下命令模式将更新应用于商务或其组件：
+1. 使用以下命令模式將更新套用至Commerce或其元件：
 
    ```bash
    composer require-commerce <package> <version> --no-update
    ```
 
-   **软件包**:要更新的包的名称。
+   **封裝**：您要更新的套件名稱。
 
    例如：
 
    - `magento/product-community-edition`
    - `magento/product-enterprise-edition`
 
-   **版本**:要更新的包的目标版本。
+   **版本**：您要更新的套裝軟體的目標版本。
 
-1. 使用编辑器更新组件：
+1. 使用Composer更新元件：
 
    ```bash
    composer update
    ```
 
-1. 更新数据库模式和数据：
+1. 更新資料庫結構和資料：
 
    ```bash
    bin/magento setup:upgrade
    ```
 
-1. 编译代码：
+1. 編譯程式碼：
 
    ```bash
    bin/magento setup:di:compile
    ```
 
-1. 部署静态内容：
+1. 部署靜態內容：
 
    ```bash
    bin/magento setup:static-content:deploy
    ```
 
-1. 清除缓存：
+1. 清除快取：
 
    ```bash
    bin/magento cache:clean
    ```
 
-1. 退出维护模式：
+1. 結束維護模式：
 
    ```bash
    bin/magento maintenance:disable

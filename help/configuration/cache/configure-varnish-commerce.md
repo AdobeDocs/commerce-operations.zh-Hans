@@ -1,52 +1,52 @@
 ---
-title: 为商务配置清漆
-description: 了解如何更新和管理商务应用程序的清漆配置文件。
-source-git-commit: d451ea025a6f4fc8a4a9f15ca83896a63058a3a0
+title: 設定Commerce專用清漆
+description: 瞭解如何更新和管理Commerce應用程式的Varnish設定檔案。
+exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
 
 ---
 
+# 設定Commerce應用程式以使用Varnish
 
-# 配置商务应用程序以使用清漆
+若要設定Commerce使用清漆：
 
-要将商务配置为使用清漆，请执行以下操作：
+1. 以管理員身分登入管理員。
+1. 按一下 **[!UICONTROL Stores]** >設定> **設定** > **進階** > **系統** > **完整頁面快取**.
+1. 從 **[!UICONTROL Caching Application]** 清單，按一下 **清漆快取**.
+1. 在 **[!UICONTROL TTL for public content]** 欄位。
+1. 展開 **[!UICONTROL Varnish Configuration]** 並輸入下列資訊：
 
-1. 以管理员身份登录。
-1. 单击 **[!UICONTROL Stores]** >设置> **配置** > **高级** > **系统** > **全页缓存**.
-1. 从 **[!UICONTROL Caching Application]** 列表，单击 **清漆缓存**.
-1. 在 **[!UICONTROL TTL for public content]** 字段。
-1. 展开 **[!UICONTROL Varnish Configuration]** 并输入以下信息：
-
-   | 字段 | 描述 |
+   | 欄位 | 說明 |
    | ----- | ----------- |
-   | 访问列表 | 输入完全限定的主机名、IP地址或 [无类域间路由(CIDR)](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) 表示无效内容的IP地址范围。 请参阅 [清漆缓存清除](https://varnish-cache.org/docs/3.0/tutorial/purging.html). |
-   | 后端主机 | 输入清漆的完全限定的主机名或IP地址和侦听端口 _后端_ 或 _源服务器_;也就是说，提供清漆内容的服务器会加速。 通常，这是您的Web服务器。 请参阅 [清漆缓存后端服务器](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
-   | 后端端口 | 源服务器的侦听端口。 |
-   | 宽限期 | 如果后端无响应，则宽限期可确定清漆提供过时内容的时长。 默认值为300秒。 |
+   | 存取清單 | 輸入完整的主機名稱、IP位址，或 [無類別網域間路由(CIDR)](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) 表示法IP位址範圍，用於讓內容失效。 另請參閱 [清漆快取清除](https://varnish-cache.org/docs/3.0/tutorial/purging.html). |
+   | 後端主機 | 輸入完整的主機名稱或IP位址，並接聽清漆的連線埠 _後端_ 或 _原始伺服器_；也就是說，提供內容清漆的伺服器會加速。 通常這是您的Web伺服器。 另請參閱 [清漆快取後端伺服器](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
+   | 後端連線埠 | 原始伺服器的接聽連線埠。 |
+   | 寬限期 | 寬限期會決定Varnish在後端無回應時提供過時內容的時間長度。 預設值為300秒。 |
 
-1. 单击 **保存配置**.
+1. 按一下 **儲存設定**.
 
-您还可以使用C命令行界面工具从命令行中激活清漆（而不是登录到管理员）：
+您也可以使用C命令列介面工具，從命令列啟動Varnish （而不是登入Admin）：
 
 ```bash
 bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/caching_application 2
 ```
 
-## 导出清漆配置文件
+## 匯出Varnish組態檔
 
-要从管理员导出清漆配置文件，请执行以下操作：
+若要從Admin匯出Varnish設定檔：
 
-1. 单击其中一个导出按钮可创建 `varnish.vcl` 你可以用清漆。
+1. 按一下其中一個匯出按鈕以建立 `varnish.vcl` 您可以搭配Varnish使用。
 
-   例如，如果有清漆4，请单击 **用于清漆4的导出VCL**
+   例如，如果您有Varnish 4，請按一下 **匯出清漆4的VCL**
 
-   下图显示了一个示例：
+   下圖顯示一個範例：
 
-   ![在管理员中配置商务以使用清漆](../../assets/configuration/varnish-admin-22.png)
+   ![設定Commerce以在管理員中使用塗漆](../../assets/configuration/varnish-admin-22.png)
 
-1. 备份现有 `default.vcl`. 然后，重命名 `varnish.vcl` 您刚刚导出到的文件 `default.vcl`. 然后，将文件复制到 `/etc/varnish/` 目录访问Advertising Cloud的帮助。
+1. 備份您現有的 `default.vcl`. 然後重新命名 `varnish.vcl` 您剛剛匯出的檔案 `default.vcl`. 然後將檔案複製到 `/etc/varnish/` 目錄。
 
    ```bash
    cp /etc/varnish/default.vcl /etc/varnish/default.vcl.bak2
@@ -60,7 +60,7 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
    cp <download_directory>/default.vcl /etc/varnish/default.vcl
    ```
 
-1. Adobe建议您打开 `default.vcl` 并更改 `acl purge` 到清漆主机的IP地址。 （您可以在单独的行上指定多个主机，也可以使用CIDR表示法。）
+1. Adobe建議您開啟 `default.vcl` 並變更以下專案的值： `acl purge` 到Varnish主機的IP位址。 （您可以在不同的行上指定多個主機，也可以使用CIDR標籤法。）
 
    例如，
 
@@ -70,9 +70,9 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
     }
    ```
 
-1. 如果要自定义流浪健康检查或宽限模式或saint模式配置，请参阅 [高级清漆配置](config-varnish-advanced.md).
+1. 如果您想自訂Vagrant健康情況檢查或寬限模式或saint模式設定，請參閱 [進階清漆設定](config-varnish-advanced.md).
 
-1. 重新启动清漆和Web服务器：
+1. 重新啟動Varnish和您的網頁伺服器：
 
    ```bash
    service varnish restart
@@ -82,9 +82,9 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
    service httpd restart
    ```
 
-## 缓存静态文件
+## 快取靜態檔案
 
-默认情况下不应缓存静态文件，但如果要缓存静态文件，可以编辑部分 `Static files caching` （在VCL中）具有以下内容：
+預設不應快取靜態檔案，但如果您想要快取它們，可以編輯區段 `Static files caching` 在VCL中有以下內容：
 
 ```conf
 # Static files should not be cached by default
@@ -96,4 +96,4 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
   #unset req.http.Cookie;
 ```
 
-在将“商务”配置为使用清漆之前，您必须进行这些更改。
+您必須進行這些變更，才能設定Commerce使用Varnish。

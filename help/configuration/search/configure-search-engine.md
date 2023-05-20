@@ -1,117 +1,116 @@
 ---
-title: 搜索引擎配置
-description: 为Adobe Commerce和Magento Open Source的内部部署配置搜索引擎。
-source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
+title: 搜尋引擎設定
+description: 設定Adobe Commerce和Magento Open Source內部部署的搜尋引擎。
+exl-id: 61fbe0c2-bdd5-4f57-a518-23e180401804
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
 
 ---
 
+# 搜尋引擎設定
 
-# 搜索引擎配置
-
-本节讨论使用Adobe Commerce和Magento Open Source的内部部署测试Elasticsearch或OpenSearch时必须选择的最低设置。
-
->[!TIP]
->
->在版本2.4.4和2.4.3-p2中，所有字段都标有 **Elasticsearch** 也适用于OpenSearch。
->当版本2.4.6中引入对Elasticsearch8.x的支持时，创建了新标签以区分Elasticsearch配置和OpenSearch配置。
-
-有关配置搜索引擎的其他详细信息，请参阅 [用户指南](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html).
-
-## 从管理员配置搜索引擎
+本節討論測試Elasticsearch或OpenSearch與Adobe Commerce和Magento Open Source內部部署所需的最低設定。
 
 >[!TIP]
 >
->有关升级到新搜索引擎版本的说明，请参阅 [升级先决条件](../../upgrade/prepare/prerequisites.md).
+>在2.4.4版和2.4.3-p2版中，所有欄位都標示為 **Elasticsearch** 也適用於OpenSearch。
+>當版本2.4.6中引入Elasticsearch8.x支援時，已建立新標籤以區分Elasticsearch和OpenSearch設定。
 
-要将系统配置为使用Elasticsearch或OpenSearch，请执行以下操作：
+如需設定搜尋引擎的詳細資訊，請參閱 [使用手冊](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html).
 
-1. 以管理员身份登录到管理员。
-1. 单击 **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
-1. 从 **[!UICONTROL Search Engine]** 列表中，选择搜索引擎的相应版本。
+## 從管理員設定搜尋引擎
 
-   下表列出了配置和测试与Commerce的连接所需的选项。 除非您更改了搜索引擎的服务器设置，否则默认设置应该有效。 跳至下一步。
+>[!TIP]
+>
+>如需升級至新搜尋引擎版本的指示，請參閱 [升級必備條件](../../upgrade/prepare/prerequisites.md).
 
-   | Option | 描述 |
+若要設定您的系統以使用Elasticsearch或OpenSearch：
+
+1. 以管理員身分登入管理員。
+1. 按一下 **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
+1. 從 **[!UICONTROL Search Engine]** 清單中，選取搜尋引擎的對應版本。
+
+   下表列出設定和測試與Commerce的連線所需的選項。 除非您變更搜尋引擎的伺服器設定，否則預設值應該有效。 跳至下一個步驟。
+
+   | 選項 | 說明 |
    |--- |--- |
-   | **[!UICONTROL Server Hostname]** | 输入运行Elasticsearch或OpenSearch的计算机的完全限定主机名或IP地址。<br>云基础架构上的Adobe Commerce：从集成系统中获取此价值。 |
-   | **[!UICONTROL Server Port]** | 输入Web服务器代理端口。 默认值为9200<br>云基础架构上的Adobe Commerce：从集成系统中获取此价值。 |
-   | **[!UICONTROL Index Prefix]** | 输入搜索引擎索引前缀。 如果为多个Commerce安装（暂存和生产环境）使用单个实例，则必须为每个安装指定一个唯一的前缀。 否则，您可以使用默认前缀magento2。 |
-   | **[!UICONTROL Enable HTTP Auth]** | 单击 **[!UICONTROL Yes]** 仅当为搜索引擎服务器启用了身份验证时。 如果是这样，请在提供的字段中提供用户名和密码。 |
-   | **[!UICONTROL Server Timeout]** | 输入尝试建立与Elasticsearch或OpenSearch服务器的连接时要等待的时间（以秒为单位）。 |
+   | **[!UICONTROL Server Hostname]** | 輸入執行Elasticsearch或OpenSearch之電腦的完整主機名稱或IP位址。<br>雲端基礎結構上的Adobe Commerce：從您的整合系統中取得此價值。 |
+   | **[!UICONTROL Server Port]** | 輸入Web伺服器Proxy連線埠。 預設值為9200<br>雲端基礎結構上的Adobe Commerce：從您的整合系統中取得此價值。 |
+   | **[!UICONTROL Index Prefix]** | 輸入搜尋引擎索引前置詞。 如果您對多個Commerce安裝（測試和生產環境）使用單一執行個體，則必須為每次安裝指定唯一的前置詞。 否則，您可以使用預設首碼magento2。 |
+   | **[!UICONTROL Enable HTTP Auth]** | 按一下 **[!UICONTROL Yes]** 只有在您已啟用搜尋引擎伺服器的驗證時。 若是如此，請在提供的欄位中提供使用者名稱和密碼。 |
+   | **[!UICONTROL Server Timeout]** | 輸入嘗試建立與Elasticsearch或OpenSearch伺服器的連線時等待的時間長度（以秒為單位）。 |
 
-1. 单击 **[!UICONTROL Test Connection]**.
+1. 按一下 **[!UICONTROL Test Connection]**.
 
-   示例响应：
+   範例回應：
 
-   ![success](../../assets/configuration/elastic_test-success.png)
+   ![成功](../../assets/configuration/elastic_test-success.png)
 
-   继续：
+   繼續使用：
 
-   - [为搜索引擎配置Apache](../../installation/prerequisites/search-engine/configure-apache.md)
-   - [为您的搜索引擎配置nginx](../../installation/prerequisites/search-engine/configure-nginx.md)
+   - [為您的搜尋引擎設定Apache](../../installation/prerequisites/search-engine/configure-apache.md)
+   - [為您的搜尋引擎設定nginx](../../installation/prerequisites/search-engine/configure-nginx.md)
 
-   或者您会看到：
+   或者您會看到：
 
-   ![失败](../../assets/configuration/elastic_test-fail.png)
+   ![失敗](../../assets/configuration/elastic_test-fail.png)
 
-如果是这样，请尝试以下操作：
+若是如此，請嘗試下列步驟：
 
-- 确保搜索引擎服务器正在运行。
-- 如果服务器与Commerce位于不同的主机上，请登录Commerce服务器并ping搜索引擎主机。 解决网络连接问题并再次测试连接。
-- 检查启动Elasticsearch或OpenSearch的命令窗口，查找栈栈跟踪和异常。 您必须先解决这些问题，然后才能继续。 特别是，确保您作为用户启动搜索引擎时具有 `root` 权限。
-- 确保 [UNIX防火墙和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) 都被禁用，或者设置了规则以使搜索引擎和商务能够相互通信。
-- 验证 **[!UICONTROL Server Hostname]** 字段。 确保服务器可用。 您可以改为尝试服务器的IP地址。
-- 使用 `netstat -an | grep <listen-port>` 命令来验证 **[!UICONTROL Server Port]** 字段未被其他进程使用。
+- 確定搜尋引擎伺服器執行中。
+- 如果伺服器與Commerce位於不同的主機上，請登入Commerce伺服器並Ping搜尋引擎主機。 解決網路連線問題，並再次測試連線。
+- 檢查您開始Elasticsearch或OpenSearch的命令視窗，找出棧疊追蹤和例外。 您必須先解決這些問題，才能繼續。 請特別確定您是以使用者的身分啟動搜尋引擎， `root` 許可權。
+- 請確定 [UNIX防火牆和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) 都會停用，或設定規則以讓您的搜尋引擎和商務能夠相互通訊。
+- 驗證 **[!UICONTROL Server Hostname]** 欄位。 確定伺服器可供使用。 您可以改為嘗試伺服器的IP位址。
+- 使用 `netstat -an | grep <listen-port>` 命令來驗證 **[!UICONTROL Server Port]** 欄位未由另一個處理序使用。
 
-   例如，要查看您的搜索引擎是否在其默认端口上运行，请使用以下命令：
+   例如，若要檢視搜尋引擎是否在其預設連線埠上執行，請使用以下命令：
 
    ```bash
    netstat -an | grep 9200
    ```
 
-   如果它在端口9200上运行，则显示类似于以下内容：
+   如果它在連線埠9200上執行，則會顯示類似下列的內容：
 
    ```terminal
    `tcp        0      0 :::9200            :::-         LISTEN`
    ```
 
-## 重新索引目录搜索并刷新整页缓存
+## 重新索引目錄搜尋並重新整理整頁快取
 
-更改搜索引擎配置后，必须重新索引目录搜索索引，然后使用管理或命令行刷新全页缓存。
+變更搜尋引擎組態之後，您必須重新索引目錄搜尋索引，並使用[管理]或[命令列]重新整理整頁快取。
 
-要使用“管理员”刷新缓存，请执行以下操作：
+若要使用「管理員」重新整理快取：
 
-1. 在“管理员”中，单击 **[!UICONTROL System]** > **[!UICONTROL Cache Management]**.
-1. 选中旁边的复选框 **[!UICONTROL Page Cache]**.
-1. 从 **[!UICONTROL Actions]** 列表内，单击 **刷新**.
+1. 在「管理員」中，按一下 **[!UICONTROL System]** > **[!UICONTROL Cache Management]**.
+1. 選取旁邊的核取方塊 **[!UICONTROL Page Cache]**.
+1. 從 **[!UICONTROL Actions]** 清單中，按一下 **重新整理**.
 
-   ![缓存管理](../../assets/configuration/refresh-cache.png)
+   ![快取管理](../../assets/configuration/refresh-cache.png)
 
-要使用命令行清理缓存，请执行以下操作： [`bin/magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types)
+使用命令列清除快取： [`bin/magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types)
 
-使用命令行重新索引：
+使用命令列重新索引：
 
-1. 以或切换为登录到您的Commerce服务器 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
-1. 输入以下任一命令：
+1. 以或切換為身分登入您的Commerce伺服器， [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
+1. 輸入下列任一命令：
 
-   输入以下命令以仅重新索引目录搜索索引：
+   輸入以下命令，只重新索引目錄搜尋索引：
 
    ```bash
    bin/magento indexer:reindex catalogsearch_fulltext
    ```
 
-   输入以下命令以重新索引所有索引器：
+   輸入下列命令以重新索引所有索引子：
 
    ```bash
    bin/magento indexer:reindex
    ```
 
-1. 等待重新索引完成。
+1. 等候重新索引完成。
 
    >[!INFO]
    >
-   >与缓存不同，索引器由cron作业更新。 确保 [cron已启用](../cli/configure-cron-jobs.md) 开始使用搜索引擎之前。
-
+   >與快取不同，索引器會由cron工作更新。 確定 [cron已啟用](../cli/configure-cron-jobs.md) 開始使用搜尋引擎之前。

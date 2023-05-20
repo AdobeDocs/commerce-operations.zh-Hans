@@ -1,6 +1,6 @@
 ---
-title: 质量控制
-description: 了解与实施项目相关的Adobe Commerce质量控制流程。
+title: 品質控制
+description: 瞭解與實作專案相關的Adobe Commerce品質控制流程。
 exl-id: 0eb62b24-21f6-4cec-8ef9-eeaa1ee6ae52
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -9,179 +9,179 @@ ht-degree: 0%
 
 ---
 
-# 质量控制过程和工具
+# 品質控制流程和工具
 
-![质量控制流程图](../../assets/playbooks/quality-control-diagram.svg)
+![品質控制程式圖](../../assets/playbooks/quality-control-diagram.svg)
 
-上图中的质量控制过程可简要描述如下。
+上圖中的品質控制流程可簡述如下。
 
 <table>
 <thead>
   <tr>
-    <th>软件开发过程</th>
-    <th>QC工作流</th>
+    <th>軟體開發程式</th>
+    <th>QC工作流程</th>
     <th>QC</th>
-    <th>QC领导</th>
+    <th>QC領導者</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>开发</td>
-    <td>规划</td>
+    <td>開發</td>
+    <td>規劃</td>
     <td></td>
-    <td>审核并参与测试计划</td>
+    <td>檢閱並貢獻測試計畫</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
     <td></td>
-    <td>创建测试规范（测试用例/测试方案）</td>
+    <td>建立測試規格（測試案例/測試案例）</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
     <td></td>
-    <td>准备和获取测试数据</td>
+    <td>準備和取得測試資料</td>
   </tr>
   <tr>
     <td></td>
-    <td>测试分析与设计</td>
-    <td>审核并参与测试计划</td>
-    <td>开始准备，规范</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>创建测试规范（测试用例/测试方案）</td>
-    <td>为项目编写或查看测试策略</td>
+    <td>測試分析和設計</td>
+    <td>檢閱並貢獻測試計畫</td>
+    <td>啟動準備作業、規格</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>准备和获取测试数据</td>
-    <td> 指导、指导和监控分析、设计</td>
-  </tr>
-  <tr>
-    <td>内部测试</td>
-    <td>测试实施和执行</td>
-    <td>实施测试、执行和记录测试</td>
-    <td>监控测试的实施和执行</td>
+    <td>建立測試規格（測試案例/測試案例）</td>
+    <td>撰寫或檢閱專案的測試策略</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>检查性能和扫描安全性 — 评估结果和与预期结果的偏差</td>
-    <td>确保测试的可跟踪性至测试基础，并跟踪Bug跟踪系统上的错误</td>
+    <td>準備和取得測試資料</td>
+    <td> 領導、指導及監控分析、設計</td>
+  </tr>
+  <tr>
+    <td>內部測試</td>
+    <td>測試實作與執行</td>
+    <td>實作測試、執行及記錄測試</td>
+    <td>監控測試的實作與執行</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>将错误发布到错误跟踪系统(Jira/Redmine/Trello)</td>
-    <td>排定测试的优先级/计划，以便与PM定义的项目计划保持一致</td>
+    <td>檢查效能和掃描安全性 — 評估結果和預期結果的偏差</td>
+    <td>確保測試可追蹤至測試基礎，並追蹤Bug追蹤系統上的錯誤</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>修复错误后进行重新测试（确认测试）</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>评估和报告</td>
-    <td>向QC潜在客户和PM报告测试进度</td>
-    <td>评估测试结果和进度</td>
+    <td>將錯誤發佈到錯誤追蹤系統(Jira/Redmine/Trello)</td>
+    <td>排定測試的優先順序/排程以符合PM定義的專案計畫</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
+    <td>修正錯誤後重新測試（確認測試）</td>
     <td></td>
-    <td>根据测试期间收集的信息编写测试摘要报告</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>評估與報告</td>
+    <td>向QC銷售機會與PM報告測試進度</td>
+    <td>評估測試結果和進度</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>根據測試期間收集的資訊編寫測試摘要報告</td>
   </tr>
   <tr>
     <td>UAT</td>
     <td>UAT</td>
-    <td>验证客户反馈或更改请求(CR)</td>
-    <td>随访</td>
+    <td>驗證客戶回饋或變更請求(CR)</td>
+    <td>後續追蹤</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>在更改源代码后执行重新测试和回归测试</td>
+    <td>變更原始程式碼後，執行重新測試和回歸測試</td>
     <td>控制</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>更新测试规范</td>
+    <td>更新測試規格</td>
     <td></td>
   </tr>
   <tr>
-    <td>维护</td>
-    <td>维护</td>
-    <td>审核并参与任务</td>
-    <td>检查和评估任务的时间</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>创建/更新测试规范</td>
-    <td>后续测试进度</td>
+    <td>維護</td>
+    <td>維護</td>
+    <td>檢閱和貢獻任務</td>
+    <td>檢閱和估計任務所需時間</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>为这些任务执行测试</td>
+    <td>建立/更新測試規格</td>
+    <td>後續測試進度</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>執行這些工作的測試</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>执行回归测试</td>
+    <td>執行回歸測試</td>
     <td></td>
   </tr>
 </tbody>
 </table>
 
-与 [工具](project-management-tools.md) 我们为开发过程确定了，我们选择了一些我们经常用于质量控制测试的选择性解决方案和平台。
+類似於 [工具](project-management-tools.md) 我們針對開發流程確定了幾項可供選擇的解決方案和平台，並經常將其用於品質控制測試。
 
 | 用途 | 工具 |
 |---------------------------|---------------------------------------------------|
-| 网站性能索引 | Google PageSpeed、Webpagetest、JMeter |
-| 安全性 | Adobe Commerce安全扫描工具、SonarQube、ZAP |
-| 问题管理系统 | 吉拉 |
-| UI测试 | 完美像素， BrowserStack |
-| API测试 | Postman， SoapUI |
-| 自动测试 | 硒 |
+| 網站績效指數 | Google PageSpeed， Webpagetest， JMeter |
+| 安全性 | Adobe Commerce安全性掃描工具、SonarQube、ZAP |
+| 問題管理系統 | JIRA |
+| UI測試 | 完美畫素，BrowserStack |
+| API測試 | Postman、SoapUI |
+| 自動化測試 | Selenium |
 
 
-## 网站性能索引
+## 網站績效指數
 
-GooglePageSpeed报告移动和桌面设备上页面的性能，并提供有关如何改进该页面的建议。
+GooglePageSpeed會報告行動裝置和桌上型裝置上頁面的效能，並提供如何改善該頁面的建議。
 
-WebPageTest是一款Web性能工具，它使用真正的浏览器访问网页并收集时间量度。
+WebPageTest是一種網頁效能工具，使用真正的瀏覽器來存取網頁並收集計時測量結果。
 
-JMeter是一个Apache项目，可用作负载测试工具，用于分析和测量各种服务的性能，重点关注Web应用程序。
+JMeter是Apache專案，可作為負載測試工具，用於分析和測量各種服務的效能，專注於Web應用程式。
 
 ## 安全性
 
-SonarQube和ZAP在开发过程中引入，但我们也在这里介绍它如何参与QC过程。
+在開發過程中引入了SonarQube和ZAP，但我們也在此處加入有關它如何參與QC過程的更多資訊。
 
-SonarQube还用于持续检查代码质量，以通过对代码的静态分析来进行自动审查，以检测错误、代码气味和安全漏洞。
+SonarQube也用於持續檢查計畫碼品質，透過計畫碼的靜態分析執行自動審查，以偵測錯誤、計畫碼異味和安全性漏洞。
 
-OWASPZAP(Zed Attack Proxy)既适用于应用程序安全性方面的新用户，也适用于专业的渗透测试人员。 某些内置功能包括拦截代理服务器、传统和AJAX Web爬网程序、自动扫描程序、被动扫描程序、强制浏览、模糊器、WebSocket支持、脚本语言和Plug-n-Hack支持。
+OWASPZAP (Zed Attack Proxy)旨在供應用程式安全性新手以及專業滲透測試人員使用。 部分內建功能包括攔截Proxy伺服器、傳統和AJAX Web編目程式、自動化掃描器、被動掃描器、強制瀏覽、Fuzzer、WebSocket支援、指令碼語言和Plug-n-Hack支援。
 
-## UI测试
+## UI測試
 
-完美像素允许开发人员和标记设计人员在开发的HTML的顶部放置半透明的图像叠加，并在它们之间执行像素完美比较。
+Perfect Pixel可讓開發人員和標籤設計人員將半透明影像覆蓋放在開發HTML上方，並在兩者之間執行畫素完美比較。
 
-BrowserStack是一个云Web和移动测试平台，它允许开发人员跨按需浏览器、操作系统和真正的移动设备测试其网站和移动应用程序。
+BrowserStack是雲端網頁和行動測試平台，可讓開發人員透過隨選瀏覽器、作業系統和真實行動裝置，測試其網站和行動應用程式。
 
-## API测试
+## API測試
 
-Postman是用于API开发的协作平台。 Postman简化了构建API的每个步骤并简化了协作，以便您能够创建更好的API。
+Postman是API開發的共同作業平台。 Postman簡化建立API的每個步驟，並簡化共同作業，讓您能建立更好的API。
 
-SoapUI是用于简单对象访问协议(SOAP)和表示状态传输(REST)的开源Web服务测试应用程序。 其功能包括Web服务检查；调用、开发、模拟和嘲弄；功能测试；负载和合规性测试。
+SoapUI是簡單物件存取通訊協定(SOAP)和代表性狀態傳輸(REST)的開放原始碼Web服務測試應用程式。 其功能涵蓋網站服務檢查；叫用、開發、模擬和模擬；功能測試；載入和合規性測試。
 
-## 自动测试
+## 自動化測試
 
-Selenium由多个组件（Selenium客户端API、Selenium WebDriver）组成，每个组件在帮助开发Web应用程序测试自动化方面起着特定的作用。
+Selenium由數個元件（Selenium使用者端API、Selenium WebDriver）組成，每個元件都承擔特定角色，協助開發Web應用程式測試自動化。

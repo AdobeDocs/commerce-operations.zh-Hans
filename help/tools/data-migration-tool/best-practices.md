@@ -1,27 +1,27 @@
 ---
-title: 数据迁移最佳实践
-description: 请遵循这些数据迁移最佳实践，以确保成功从Magento1升级到Magento2。
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+title: 資料移轉最佳實務
+description: 請依照這些資料移轉最佳實務，確保成功從Magento1升級至Magento2。
+exl-id: 0cd51987-a514-434d-b21e-2739ada2ce85
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
+# 資料移轉最佳實務
 
-# 数据迁移最佳实践
+本節提供加速及簡化移轉的最佳建議，以及可能需要多少時間的指引。
 
-本节提供了加速和简化迁移的最佳建议，以及有关可能需要多长时间的指导。
+* **使用Magento1執行處理的資料庫復本** 執行移轉測試時。 請勿使用Magento1存放區資料庫的生產執行個體。
 
-* **从Magento1实例中使用数据库的副本** 执行迁移测试时。 请勿使用Magento1存储数据库的生产实例。
+* **移除過時和備援的資料** 移轉前從您的Magento1資料庫匯入。
 
-* **删除过时和冗余的数据** 从Magento1数据库迁移。
+這類資料可能包括記錄、訂單報價、最近檢視或比較的產品、訪客、活動特定類別和促銷規則。
 
-此类数据可能包括日志、订单报价、最近查看或比较的产品、访客、特定于事件的类别和促销规则。
+* **請遵循 [成功移轉的一般規則](migrate-data/overview.md#migration-overview)**.
 
-* **关注 [成功迁移的一般规则](migrate-data/overview.md#migration-overview)**.
-
-* 为了提高性能， **启用 `direct_document_copy` 选项** 在 `config.xml` 文件：
+* 若要提升效能， **啟用 `direct_document_copy` option** 在您的 `config.xml` 檔案：
 
    ```xml
    <direct_document_copy>1</direct_document_copy>
@@ -29,17 +29,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Magento1和Magento2数据库必须位于同一MySQL服务器上，并且数据库帐户必须具有对这两个数据库的访问权限。
+>Magento1和Magento2資料庫必須位於相同的MySQL伺服器上，而且資料庫帳戶必須能夠存取這兩個資料庫。
 
-## 基准评估
+## 基準估算
 
-Adobe已在以下系统上测试了数据迁移：
+Adobe已在下列系統上測試資料移轉：
 
-* 虚拟盒VM、CentOS 6、2.5 GB RAM、CPU 1核心2.6 GHz
-* 数据库，拥有177,000个产品、355,000个订单和214,000个客户
+* Virtual Box VM、CentOS 6、2.5 GB RAM、CPU 1核心2.6 GHz
+* 擁有177,000種產品、355,000筆訂單和214,000名客戶的資料庫
 
-## 性能结果
+## 效能結果
 
-* 设置迁移时间：~10分钟
-* 数据迁移时间：~9小时（除URL外的所有数据都会重写，约占总数据的85%）
-* 站点停机时间估计：重新编入索引并更改DNS设置需要几分钟。 预热页面缓存所需的其他时间。
+* 設定移轉時間：約10分鐘
+* 資料移轉時間：約9小時（URL重寫以外的所有資料，佔總資料約85%）
+* 網站停機時間預估值：需要幾分鐘的時間來重新索引和變更DNS設定。 預熱頁面快取所需的額外時間。

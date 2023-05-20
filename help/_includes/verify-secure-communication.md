@@ -5,28 +5,28 @@ source-wordcount: '146'
 ht-degree: 0%
 
 ---
-# 验证通信是否安全
+# 驗證通訊是否安全
 
-本节将讨论验证HTTP基本身份验证是否正常工作的两种方法：
+本節將討論驗證HTTP基本驗證是否正常運作的兩種方式：
 
-* 使用 `curl` 命令来验证必须输入用户名和密码才能获取群集状态
-* 在管理员中配置HTTP基本身份验证
+* 使用 `curl` 命令驗證您必須輸入使用者名稱和密碼才能取得叢集狀態
+* 在Admin中設定HTTP基本驗證
 
-## 使用 `curl` 用于验证群集状态的命令
+## 使用 `curl` 驗證叢集狀態的命令
 
-输入以下命令：
+輸入下列命令：
 
 ```bash
 curl -i http://<hostname, ip, or localhost>:<proxy port>/_cluster/health
 ```
 
-例如，如果在搜索引擎服务器上输入命令，而您的代理使用的是端口8080：
+例如，如果您在搜尋引擎伺服器上輸入命令，而您的Proxy使用連線埠8080：
 
 ```bash
 curl -i http://localhost:8080/_cluster/health
 ```
 
-将显示以下消息以指示身份验证失败：
+以下訊息顯示以指出驗證失敗：
 
 ```terminal
 HTTP/1.1 401 Unauthorized
@@ -43,7 +43,7 @@ WWW-Authenticate: Basic realm="Restricted"
 </html>
 ```
 
-现在尝试以下命令：
+現在嘗試下列命令：
 
 ```bash
 curl -i -u <username>:<password> http://<hostname, ip, or localhost>:<proxy port>/_cluster/health
@@ -55,7 +55,7 @@ curl -i -u <username>:<password> http://<hostname, ip, or localhost>:<proxy port
 curl -i -u magento_elasticsearch:mypassword http://localhost:8080/_cluster/health
 ```
 
-此时，该命令会成功，并显示一条类似于以下内容的消息：
+這次命令會成功，並出現類似下列的訊息：
 
 ```terminal
 HTTP/1.1 200 OK
@@ -66,10 +66,10 @@ Connection: keep-alive
 {"cluster_name":"elasticsearch","status":"yellow","timed_out":false,"number_of_nodes":1,"number_of_data_nodes":1,"active_primary_shards":5,"active_shards":5,"relocating_shards":0,"initializing_shards":0,"unassigned_shards":5,"delayed_unassigned_shards":0,"number_of_pending_tasks":0,"number_of_in_flight_fetch":0,"task_max_waiting_in_queue_millis":0,"active_shards_percent_as_number":50.0}
 ```
 
-## 在Admin中配置HTTP基本身份验证
+## 在Admin中設定HTTP基本驗證
 
-执行中讨论的相同任务 [搜索引擎配置](../configuration/search/configure-search-engine.md) *排除* 点击 **[!UICONTROL Yes]** 从 **[!UICONTROL Enable HTTP Auth]** 在提供的字段中列出并输入用户名和密码。
+執行中討論的相同工作 [搜尋引擎設定](../configuration/search/configure-search-engine.md) *例外* 按一下 **[!UICONTROL Yes]** 從 **[!UICONTROL Enable HTTP Auth]** 清單並在提供的欄位中輸入您的使用者名稱和密碼。
 
-单击 **[!UICONTROL Test Connection]** 以确保它正常工作，然后单击 **[!UICONTROL Save Config]**.
+按一下 **[!UICONTROL Test Connection]** 以確定其運作正常，然後按一下 **[!UICONTROL Save Config]**.
 
-您必须刷新缓存并重新编入索引，然后才能继续。
+您必須先清除快取並重新索引，才能繼續。

@@ -1,35 +1,35 @@
 ---
-title: 《通用数据保护条例》(GDPR)
-description: 了解《通用数据保护条例》(GDPR)，该法规旨在为欧盟和欧洲经济区的所有个人制定数据保护和隐私法规。
-source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
+title: 一般資料保護規範(GDPR)
+description: 瞭解一般資料保護規範(GDPR)，這是規範歐盟和歐洲經濟區所有個人資料保護和隱私權的法規。
+exl-id: 30e60601-f4f7-419e-b2dd-8c82c8a2ed33
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
-
-# 《通用数据保护条例》(GDPR)
+# 一般資料保護規範(GDPR)
 
 >[!NOTE]
 >
->这是Adobe Commerce、Magento Open Source商户和开发人员了解《通用数据保护条例》(GDPR)含义的一系列主题中的一个主题。 该信息仅供参考，不应被解释为法律建议。 请咨询您的法律顾问，以确定您的企业是否以及如何遵守任何法律义务。
+>本主題是協助Adobe Commerce和Magento Open Source商家及開發人員瞭解一般資料保護規範(GDPR)含義的一系列主題之一。 此資訊僅供參考，不應理解為法律建議。 請洽詢您的法律顧問，判斷您的企業是否及如何遵守任何法律義務。
 
-欧盟（欧盟）颁布 [《通用数据保护条例》](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR)，以便公民能够更好地控制其个人数据。 GDPR适用于在欧盟境内运营的任何组织。 它还适用于欧盟以外的组织，向欧盟的客户或企业提供商品或服务。
+歐盟(EU)頒佈 [一般資料保護規範](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR)賦予公民更多掌控個人資料的權利。 GDPR適用於歐盟內營運的任何組織。 也適用於歐盟以外向歐盟客戶或企業提供商品或服務的組織。
 
-系统集成商可以使用“个人信息参考”中的数据流图和数据库信息来构建脚本，以解决与以下类似的用例：
+系統整合商可以使用Personal Information Reference中的資料流圖表和資料庫資訊來建置指令碼，以解決類似下列的使用案例：
 
-- 购物者要求获取商家存储的与他们有关的数据副本
-- 购物者请求删除其信息
+- 購物者要求商店儲存的資料復本
+- 購物者要求刪除其資訊
 
-## 个人信息参考
+## 個人資訊參考資料
 
-有关技术信息，请参阅“个人信息参考”中适用于您支持的每个Adobe Commerce或Magento Open Source版本的数据流图和数据库实体映射。
+如需技術資訊，請參閱「個人資訊參考」中的資料流圖表和資料庫實體對應，其適用於您支援的每個Adobe Commerce或Magento Open Source版本。
 
-- [客户个人信息参考（版本2.x）](data-m2.md)
-- [客户个人信息参考（版本）1.x)](data-m1.md)
+- [客戶個人資訊參考（2.x版）](data-m2.md)
+- [客戶個人資訊參考（版本） 1.x)](data-m1.md)
 
-有关Adobe Commerce和Magento Open Source如何帮助商户遵守GDPR的更多信息，请参阅以下内容：
+如需Adobe Commerce和Magento Open Source如何協助商家遵守GDPR的詳細資訊，請參閱下列內容：
 
-- [GDPR合规](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
-- [Adobe Commerce已为GDPR做好准备](https://business.adobe.com/privacy/general-data-protection-regulation.html)
+- [GDPR法規遵循](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
+- [Adobe Commerce已準備好遵循GDPR](https://business.adobe.com/privacy/general-data-protection-regulation.html)

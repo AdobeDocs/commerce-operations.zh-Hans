@@ -1,33 +1,34 @@
 ---
-title: 云部署的数据库配置最佳实践
-description: 了解在云基础架构上部署Adobe Commerce时，如何配置数据库和应用程序设置以提高性能。
+title: 雲端部署的資料庫設定最佳實務
+description: 瞭解如何在雲端基礎結構上部署Adobe Commerce時，設定資料庫和應用程式設定以改善效能。
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
+exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
-# 数据库配置的最佳实践
+# 資料庫組態的最佳實務
 
-了解在云基础架构上部署Adobe Commerce时提高数据库性能并高效使用数据库的最佳实践。
+瞭解在雲端基礎結構上部署Adobe Commerce時，改善資料庫效能和有效使用資料庫的最佳實務。
 
-## 受影响的产品
+## 受影響的產品
 
-Adobe Commerce云基础架构
+雲端基礎結構上的Adobe Commerce
 
-## 将所有MyISAM表转换为InnoDB
+## 將所有MyISAM表格轉換為InnoDB
 
-Adobe建议使用InnoDB数据库引擎。 在默认的Adobe Commerce安装中，数据库中的所有表都使用InnoDB引擎进行存储。 但是，某些第三方模块（扩展）可以引入MyISAM格式的表。 安装第三方模块后，请检查数据库以标识 `myisam` 设置格式并将其转换为 `innodb` 格式。
+Adobe建議使用InnoDB資料庫引擎。 在預設的Adobe Commerce安裝中，資料庫中的所有表格都是使用InnoDB引擎儲存的。 不過，某些協力廠商模組（擴充功能）可能會引入MyISAM格式的表格。 安裝協力廠商模組後，請檢查資料庫以識別中的任何表格 `myisam` 格式化並轉換為 `innodb` 格式。
 
-### 确定模块是否包含MyISAM表
+### 判斷模組是否包含MyISAM表格
 
-您可以在安装第三方模块代码之前对其进行分析，以确定它是否使用MyISAM表。
+您可以先分析協力廠商模組程式碼，再進行安裝，以判斷其是否使用MyISAM表格。
 
-如果已安装扩展，请运行以下查询以确定数据库是否具有任何MyISAM表：
+如果您已安裝擴充功能，請執行以下查詢來判斷資料庫是否有任何MyISAM表格：
 
 ```sql
 SELECT table_schema, CONCAT(ROUND((index_length+data_length)/1024/1024),'MB')
@@ -35,70 +36,70 @@ SELECT table_schema, CONCAT(ROUND((index_length+data_length)/1024/1024),'MB')
     NOT IN ('mysql', 'information_schema', 'performance_schema', 'sys');
 ```
 
-### 将存储引擎更改为InnoDB
+### 將儲存引擎變更為InnoDB
 
-在 `db_schema.xml` 文件声明表，设置 `engine` 属性值 `table` 节点到 `innodb`. 有关参考，请参阅 [配置声明性架构>表节点](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) ，请参阅我们的开发人员文档。
+在 `db_schema.xml` 檔案宣告表格，設定 `engine` 對應專案的屬性值 `table` 節點至 `innodb`. 如需參考資訊，請參閱 [設定宣告式結構描述>表格節點](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) （位於我們的開發人員檔案中）。
 
-在云基础架构版本2.3的Adobe Commerce中引入了声明性方案。
+宣告式配置是在Adobe Commerce的雲端基礎結構2.3版中引入。
 
-## 为本机MySQL搜索配置推荐的搜索引擎
+## 設定原生MySQL搜尋的建議搜尋引擎
 
-Adobe建议您始终在云基础架构项目上为Adobe Commerce设置Elasticsearch或OpenSearch，即使您计划为Adobe Commerce应用程序配置第三方搜索工具也是如此。 此配置提供了一个回退选项，以防第三方搜索工具失败。
+Adobe建議您一律在雲端基礎結構專案中為您的Adobe Commerce設定Elasticsearch或OpenSearch，即使您計畫為您的Adobe Commerce應用程式設定協力廠商搜尋工具亦然。 此設定會提供後援選項，以防協力廠商搜尋工具失敗。
 
-您使用的搜索引擎取决于安装的云版本上的Adobe Commerce:
+您使用的搜尋引擎取決於所安裝的雲端版本Adobe Commerce：
 
-- 对于Adobe Commerce 2.4.4及更高版本，请使用OpenSearch服务进行本机MySQL搜索。
+- 若是Adobe Commerce 2.4.4和更新版本，請使用OpenSearch服務進行原生MySQL搜尋。
 
-- 对于早期的Adobe Commerce版本，请使用Elasticsearch。
+- 若是較舊的Adobe Commerce版本，請使用Elasticsearch。
 
-要确定当前使用的搜索引擎，请运行以下命令：
+若要判斷目前使用中的搜尋引擎，請執行以下命令：
 
 ```bash
 ./bin/magento config:show catalog/search/engine
 ```
 
-有关配置说明，请参阅云上Adobe Commerce开发人员指南：
+如需設定指示，請參閱雲端上Adobe Commerce的開發人員指南：
 
-- [设置OpenSearch服务](https://devdocs.magento.com/cloud/project/services-opensearch.html)
+- [設定OpenSearch服務](https://devdocs.magento.com/cloud/project/services-opensearch.html)
 
-- [设置Elasticsearch服务](https://devdocs.magento.com/cloud/project/services-elastic.html)
+- [設定Elasticsearch服務](https://devdocs.magento.com/cloud/project/services-elastic.html)
 
-## 避免自定义触发器
+## 避免自訂觸發器
 
-尽量避免使用自定义触发器。
+儘可能避免使用自訂觸發器。
 
-触发器用于将更改记录到审核表中。 Adobe建议将应用程序配置为直接写入审核表，而不是使用触发器功能，原因如下：
+觸發器用於將變更記錄到稽核表中。 Adobe建議將應用程式設定為直接寫入稽核表格，而非使用觸發功能，原因如下：
 
-- 触发器将解释为代码，MySQL不会预编译它们。 关联到查询的事务空间后，它们会为通过表执行的每个查询向解析器和解释器添加开销。
-- 触发器与原始查询共享相同的事务空间，并且当这些查询争用表上的锁时，触发器独立地竞争另一表上的锁。
+- 觸發器會解譯為程式碼，而MySQL不會預先編譯它們。 掛接至查詢的交易空間時，會為使用表格執行的每個查詢新增剖析器和解譯器的額外負荷。
+- 觸發程式與原始查詢共用相同的交易空間，當這些查詢爭奪表格上的鎖定時，觸發程式會獨立爭奪其他表格上的鎖定。
 
-要了解使用自定义触发器的替代方法，请参阅 [有效使用MySQL触发器](mysql-triggers-usage.md) 在我们的支持知识库中。
+若要瞭解使用自訂觸發器的替代方案，請參閱 [有效使用MySQL觸發程式](mysql-triggers-usage.md) 在我們的支援知識庫中。
 
-## 升级 [!DNL ECE-Tools] 到2002.0.21或更高版本 {#ece-tools-version}
+## 升級 [!DNL ECE-Tools] 至2002.0.21版或更新版本 {#ece-tools-version}
 
-为避免CRON死锁的潜在问题，请将ECE-Tools升级到版本2002.0.21或更高版本。 有关说明，请参阅 [更新 `ece-tools` 版本](https://devdocs.magento.com/cloud/project/ece-tools-update.html) ，请参阅我们的开发人员文档。
+若要避免cron死鎖的潛在問題，請將ECE-Tools升級至2002.0.21版或更新版本。 如需指示，請參閱 [更新 `ece-tools` 版本](https://devdocs.magento.com/cloud/project/ece-tools-update.html) （位於我們的開發人員檔案中）。
 
-## 安全切换索引器模式
+## 安全地切換索引器模式
 
 <!--This best practice might belong in the Maintenance phase. Database lock prevention might be consolidated under a single heading-->
 
-切换索引器生成 [!DNL data definition language] (DDL)语句，以创建可导致数据库锁定的触发器。 您可以通过将网站置于维护模式并在更改配置之前禁用cron作业来防止此问题。
-有关说明，请参阅 [配置索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) 在 *Adobe Commerce配置指南*.
+切換索引器會產生 [!DNL data definition language] (DDL)陳述式來建立可能導致資料庫鎖定的觸發器。 您可以在變更設定前，先將網站置於維護模式並停用cron工作，即可避免此問題。
+如需指示，請參閱 [設定索引子](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) 在 *Adobe Commerce設定指南*.
 
-## 不在生产中运行DDL语句
+## 請勿在生產環境中執行DDL陳述式
 
-避免在生产环境中运行DDL语句以防止冲突（如表的修改和创建）。 的 `setup:upgrade` 进程是例外。
+請避免在生產環境中執行DDL陳述式，以避免衝突（例如表格修改和建立）。 此 `setup:upgrade` 程式是個例外。
 
-如果需要运行DDL语句，请将网站置于维护模式并禁用cron（请参阅上一节中有关安全切换索引的说明）。
+如果您需要執行DDL陳述式，請將網站置於維護模式並停用cron （請參閱上一節中有關安全切換索引的說明）。
 
-## 启用订单存档
+## 啟用訂單封存
 
-允许管理员对订单进行归档，以在订单数据增长时减少销售表所需的空间。 存档可节省MySQL磁盘空间并提高签出性能。
+啟用管理員的訂單封存，以隨著訂單資料成長，減少銷售表格所需的空間。 封存可節省MySQL磁碟空間並改善簽出效能。
 
-请参阅 [启用存档](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html) ，位于Adobe Commerce Merchant文档中。
+另請參閱 [啟用封存](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html) Adobe Commerce商家檔案內。
 
-## 其他信息
+## 其他資訊
 
-- [MySQL存储引擎](https://dev.mysql.com/doc/refman/8.0/en/storage-engines.html)
-- [Adobe Commerce 2.3.5升级MariaDB先决条件](../maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
-- [解决数据库性能问题的最佳实践](../maintenance/resolve-database-performance-issues.md)
+- [MySQL儲存引擎](https://dev.mysql.com/doc/refman/8.0/en/storage-engines.html)
+- [MariaDB的Adobe Commerce 2.3.5升級先決條件](../maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
+- [解決資料庫效能問題的最佳實務](../maintenance/resolve-database-performance-issues.md)

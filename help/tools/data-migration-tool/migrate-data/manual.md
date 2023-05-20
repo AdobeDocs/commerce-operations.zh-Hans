@@ -1,71 +1,71 @@
 ---
-title: 需要手动迁移的数据
-description: 了解在Magento1中必须手动迁移才能Magento2数据迁移的数据，以及如何执行迁移。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 需要手動移轉的資料
+description: 瞭解在Magento1到Magento2資料移轉期間必須手動移轉的資料，以及如何進行移轉。
+exl-id: 830abd81-4c6d-418b-9da4-b6acd95f5ec8
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
+# 需要手動移轉的資料
 
-# 需要手动迁移的数据
+有四種資料需要手動移轉：
 
-需要手动迁移四种类型的数据：
+* 媒體
 
-* 媒体
+* 店面設計
 
-* 店面设计
+* 管理員使用者帳戶
 
-* 管理员用户帐户
+* 存取控制清單(ACL)
 
-* 访问控制列表(ACL)
+## 媒體
 
-## 媒体
+本節討論如何手動移轉媒體檔案。
 
-本节将讨论如何手动迁移媒体文件。
-
-### 存储在数据库中的媒体文件
+### 儲存在資料庫中的媒體檔案
 
 >[!WARNING]
 >
->数据库媒体存储方法自Magento2.4.3起被弃用。
+>自Magento2.4.3起，資料庫媒體儲存方法已過時。
 
 
-本节适用于您 *仅* 如果将媒体文件存储在Magento数据库中。 此步骤应在 [数据迁移](data.md):
+本節適用於您 *僅限* 如果您將媒體檔案儲存在Magento資料庫中。 此步驟應在之前執行 [資料移轉](data.md)：
 
-1. 以管理员身份登录到Magento1管理面板。
+1. 以管理員身分登入Magento1管理面板。
 
-1. 单击 **系统** > **配置** >高级> **系统**.
+1. 按一下 **系統** > **設定** >進階> **系統**.
 
-1. 在右侧窗格中，滚动到 **介质的存储配置**.
+1. 在右窗格中，捲動至 **媒體的儲存設定**.
 
-1. 从 **选择媒体数据库** 列表，单击媒体存储数据库的名称。
+1. 從 **選取媒體資料庫** 清單中，按一下您的媒體儲存資料庫名稱。
 
-1. 单击 **同步**.
+1. 按一下 **同步**.
 
-然后，在“Magento2管理员”面板中重复相同的步骤。
+然後，在您的Magento2管理面板中重複相同的步驟。
 
-### 文件系统中的媒体文件
+### 檔案系統中的媒體檔案
 
-所有媒体文件(产品、类别、所见即所得(WYSIWYG)编辑器等的图像)都应从 `<your Magento 1 install dir>/media` to `<your Magento 2 install dir>/pub/media`.
+所有媒體檔案（產品、類別、所見即所得編輯器等的影像）都應從手動複製 `<your Magento 1 install dir>/media` 至 `<your Magento 2 install dir>/pub/media`.
 
-但是，请 *not* 复制 `.htaccess` 位于Magento1中的文件 `media` 文件夹。 Magento2有它自己的 `.htaccess` 应该保留。
+不過，可以 *not* 複製 `.htaccess` 位於Magento1中的檔案 `media` 資料夾。 Magento2有其專屬的 `.htaccess` 應該保留的。
 
-## 店面设计
+## 店面設計
 
-* 文件中的设计（CSS、JS、模板、XML布局）更改了其位置和格式
+* 以檔案（CSS、JS、範本、XML版面）設計會變更其位置和格式
 
-* 布局数据库中存储的更新。 在CMS页面、CMS小组件、类别页面和产品页面中通过Magento1管理
+* 配置更新儲存在資料庫中。 透過CMS頁面、CMS Widget、類別頁面和產品頁面中的Magento1管理員放置
 
-## 访问控制列表(ACL)
+## 存取控制清單(ACL)
 
-您必须手动重新创建所有：
+您必須手動重新建立全部：
 
-* Web服务API（SOAP、XML-RPC和REST）的凭据
+* Web服務API （SOAP、XML-RPC和REST）的認證
 
-* 管理用户帐户，将其与访问权限关联
+* 管理使用者帳戶並將其與存取許可權建立關聯
 
 >[!NOTE]
 >
->您可以使用 `\Migration\Handler\Timezone` 处理程序。 请参阅 [随访](follow-up.md) 部分以了解更多详细信息。
+>您可以使用調整資料庫實體的時區 `\Migration\Handler\Timezone` 處理常式。 請參閱 [後續追蹤](follow-up.md) 區段以取得更多詳細資料。

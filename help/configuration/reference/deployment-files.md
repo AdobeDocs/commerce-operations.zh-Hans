@@ -1,6 +1,6 @@
 ---
-title: 部署的配置文件
-description: 了解配置文件如何用于安装商务应用程序。
+title: 用於部署的組態檔
+description: 瞭解設定檔案如何用於安裝Commerce應用程式。
 exl-id: 772a6814-6b18-4f8f-b31e-72faf790ff37
 source-git-commit: dd990800551dd2ba35ebc7d2bc04edeb1b183d6f
 workflow-type: tm+mt
@@ -9,49 +9,49 @@ ht-degree: 0%
 
 ---
 
-# 部署的配置文件
+# 用於部署的組態檔
 
-Adobe Commerce提供了配置文件，使您能够轻松自定义组件并创建配置类型以扩展默认功能。 部署配置过程包括安装的共享配置和特定于系统的配置。 商务的部署配置分为 [`app/etc/config.php`](../reference/config-reference-configphp.md) 和 [`app/etc/env.php`](../reference/config-reference-envphp.md).
+Adobe Commerce提供組態檔，可讓您輕鬆自訂元件及建立組態型別以擴充預設功能。 部署組態程式包含安裝的共用及系統特定組態。 Commerce的部署設定會分為 [`app/etc/config.php`](../reference/config-reference-configphp.md) 和 [`app/etc/env.php`](../reference/config-reference-envphp.md).
 
-- `app/etc/config.php` 是 _共享_ 配置文件。
-该文件包含已安装的模块、主题和语言包的列表；和共享配置设置。
+- `app/etc/config.php` 是 _已共用_ 設定檔。
+此檔案包含已安裝模組、主題和語言套件的清單，以及共用組態設定。
 
-   将此文件签入到源代码管理中，并将其用在您的开发、暂存和生产系统中。
+   將此檔案簽入至原始檔控制，並將其用於您的開發、測試和生產系統。
 
-- `app/etc/env.php` 包含特定于安装环境的设置。
+- `app/etc/env.php` 包含安裝環境專屬的設定。
 
-一起， `config.php` 和 `env.php` 称为“商务” _部署配置_ 因为文件是在安装期间创建的，并且需要启动商务应用程序。
+一起， `config.php` 和 `env.php` 稱為商務 _部署設定_ 因為檔案是在安裝期間建立的，且是啟動Commerce應用程式所需。
 
 >[!INFO]
 >
->的 [!DNL Commerce 2] 部署配置替换 `local.xml` in [!DNL Magento 1.x].
+>此 [!DNL Commerce 2] 部署設定取代 `local.xml` 在 [!DNL Magento 1.x].
 
-与其他 [模块配置文件](../reference/module-files.md)，则在初始化期间，Commerce部署配置将加载到内存中，未与任何其他文件合并，且无法扩展。 (`config.php` 和 `env.php` 但是会相互合并。)
+與其他不同 [模組組態檔](../reference/module-files.md)時，Commerce部署設定會在初始化期間載入記憶體、不會與任何其他檔案合併，且無法擴充。 (`config.php` 和 `env.php` 但會相互合併。)
 
-## 有关部署配置的详细信息
+## 有關部署設定的詳細資訊
 
-`config.php` 和 `env.php` 是返回 [多维关联阵列](https://www.w3schools.com:443/php/php_arrays.asp)，这基本上是配置参数和值的层次结构。
+`config.php` 和 `env.php` 是傳回 [多維度關聯陣列](https://www.w3schools.com:443/php/php_arrays.asp)，這基本上是設定引數和值的階層式排列。
 
-此数组的顶级为 _配置区段_. 区段具有由任意键区分的任意内容（标量值或嵌套数组），其中键和值对都由商务框架定义。
+在這個陣列的最上層有 _設定區段_. 區段具有由任意索引鍵區分的任意內容（純量值或巢狀陣列），其中索引鍵和值配對均由Commerce架構定義。
 
-[Magento\Framework\App\DeploymentConfig](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/DeploymentConfig.php) 仅提供对这些部分的访问权限，但不允许您扩展这些部分。
+[Magento\Framework\App\DeploymentConfig](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/DeploymentConfig.php) 僅提供這些區段的存取權，但不允許您延伸它們。
 
-在下一层级上，每个区段中的项目根据模块顺序定义进行排序，该定义通过合并所有模块的配置文件来获取，但禁用模块除外。
+在下一個階層層級中，每個區段中的專案會根據模組順序定義排序，此定義是透過合併所有模組的組態檔案（已停用的模組除外）而取得。
 
-以下各节将讨论部署配置的结构和内容：
+以下各節討論部署設定的結構和內容：
 
-- 管理已安装的模块
-- 特定于系统的配置
+- 管理已安裝的模組
+- 系統特定設定
 
-## 管理已安装的模块
+## 管理已安裝的模組
 
-的 `config.php` 文件包含已安装模块的列表。 Adobe Commerce提供了命令行和基于web的实用程序来管理模块（安装、卸载、启用、禁用或升级）。
+此 `config.php` 檔案包含已安裝模組的清單。 Adobe Commerce提供命令列和網頁型公用程式來管理模組（安裝、解除安裝、啟用、停用或升級）。
 
-示例：
+範例：
 
-- 卸载组件： [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
-- 检查组件状态： [`bin/magento module:status`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#modulestatus)
-- 启用或禁用组件： [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md), [`bin/magento module:enable`](../../installation/tutorials/manage-modules.md).
+- 解除安裝元件： [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
+- 檢查元件的狀態： [`bin/magento module:status`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#modulestatus)
+- 啟用或停用元件： [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md)， [`bin/magento module:enable`](../../installation/tutorials/manage-modules.md).
 
 > _config.php_
 
@@ -73,8 +73,8 @@ return array (
 );
 ```
 
-值 `1` 或 `0` 指示模块是已启用还是已禁用。
+值 `1` 或 `0` 指示模組是啟用還是停用。
 
-Commerce应用程序无法识别禁用的模块；换言之，他们不会参与合并配置、依赖关系注入、事件、插件等。 禁用的模块不会修改店面或管理员，也不会影响路由。
+Commerce應用程式無法辨識已停用的模組；換言之，它們不會參與合併設定、相依性插入、事件、外掛程式等。 停用的模組不會修改店面或管理員，也不會影響路由。
 
-在代码库中，禁用模块和缺失模块的唯一实际区别在于，自动加载器找到了禁用模块，其类和常量可在其他代码中重复使用。
+已停用的模組與程式碼庫中缺少模組的唯一實際差異在於，自動載入器找到已停用的模組，且其類別和常數可用於在其他程式碼中重複使用。

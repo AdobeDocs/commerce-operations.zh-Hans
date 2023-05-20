@@ -1,80 +1,80 @@
 ---
-title: 应用程序模式
-description: Commerce应用程序可以根据您的需求以不同的模式运行。 查看可用的应用程序模式的详细列表。
-source-git-commit: e7c325aef90d4135218b984cc57df2c8d1d921d2
+title: 應用程式模式
+description: Commerce應用程式可以根據您的需求以不同的模式運作。 檢視可用的應用程式模式詳細清單。
+exl-id: a2a71f43-682f-4fa4-940a-1f6a4d441c41
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 0%
 
 ---
 
+# 應用程式模式
 
-# 应用程序模式
+您可以在下列任一項中執行Commerce應用程式 _模式_：
 
-您可以通过以下任意方式运行Commerce应用程序 _模式_：
-
-| 模式名称 | 描述 | 云支持 |
+| 模式名稱 | 說明 | 雲端支援 |
 | ------------------------ | ------------------- | ------------- |
-| [默认](#default-mode) | 在单个服务器上部署和运行Commerce应用程序，而不更改设置。 _非_ 针对生产进行了优化。 | 否 |
-| [开发人员](#developer-mode) | 非常适合在扩展或自定义Commerce应用程序时进行开发。 | 否 |
-| [生产](#production-mode) | 将Commerce应用程序部署并运行到生产系统。 | 是 |
-| [维护](#maintenance-mode) | 在执行更新和配置时阻止对站点的访问。 | 是 |
+| [預設](#default-mode) | 在單一伺服器上部署及執行Commerce應用程式，而不變更設定。 _Not_ 針對生產環境最佳化。 | 否 |
+| [開發人員](#developer-mode) | 適用於擴充或自訂Commerce應用程式時的開發。 | 否 |
+| [生產](#production-mode) | 將Commerce應用程式部署並執行至生產系統。 | 是 |
+| [維護](#maintenance-mode) | 執行更新和設定時防止存取網站。 | 是 |
 
-参见 [设置操作模式](../cli/set-mode.md) 了解如何手动更改Adobe Commerce操作模式。
+另請參閱 [設定操作模式](../cli/set-mode.md) 以瞭解如何手動變更Adobe Commerce操作模式。
 
-## 云支持
+## 雲端支援
 
-无需管理云基础架构项目的应用程序模式。 由于只读文件系统，您不能更改远程云环境中的模式。 云基础架构上的Adobe Commerce会在中自动运行应用程序 _维护_ 模式，可使网站离线，直到部署完成。 否则，应用程序将保留在 _生产_ 模式。 参见 [部署过程](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase) 在 _云基础架构上的Commerce指南_.
+不需要管理雲端基礎結構專案的應用程式模式。 由於唯讀檔案系統，您無法變更遠端雲端環境中的模式。 雲端基礎結構上的Adobe Commerce會自動在中執行應用程式 _維護_ 部署期間模式，讓您的網站離線，直到部署完成。 否則，應用程式會保留在 _生產_ 模式。 另請參閱 [部署程式](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase) 在 _雲端基礎結構上的Commerce指南_.
 
-如果您使用Cloud Docker for Commerce作为开发工具，则可以在以下位置在Docker环境中部署云基础架构项目： _开发人员_ 模式，但由于额外的文件同步操作而降低性能。 参见 [部署Docker环境](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode) 在 _Cloud Docker for Commerce指南_.
+如果您使用Cloud Docker for Commerce作為開發工具，您可以在以下位置將您的雲端基礎結構專案部署到Docker環境中： _開發人員_ 模式，但效能會因為額外的檔案同步作業而變慢。 另請參閱 [部署Docker環境](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode) 在 _Cloud Docker for Commerce指南_.
 
-## 默认模式
+## 預設模式
 
-此 _默认_ 模式允许您在单个服务器上部署Commerce应用程序，而无需更改任何设置。 但是，由于静态文件对性能的不利影响，默认模式未针对生产进行优化。 与使用静态文件创建工具生成静态文件相比，创建静态文件并缓存这些文件对性能的影响更大。
+此 _預設_ 模式可讓您在單一伺服器上部署Commerce應用程式，而不變更任何設定。 不過，由於靜態檔案對效能的不利影響，預設模式並未針對生產進行最佳化。 建立靜態檔案並快取這些檔案比使用靜態檔案建立工具產生這些檔案對效能的影響更大。
 
-在默认模式下：
+在預設模式中：
 
-- 异常将写入日志文件而不是显示
-- 静态视图文件已缓存
-- 隐藏自定义 `X-Magento-*` HTTP请求和响应标头
+- 例外狀況會寫入記錄檔而非顯示
+- 靜態檢視檔案已快取
+- 隱藏自訂 `X-Magento-*` HTTP要求與回應標頭
 
-如果未指定其他模式，则Commerce在默认模式下运行。
+如果未指定其他模式，Commerce會在預設模式下運作。
 
-## 开发人员模式
+## 開發人員模式
 
-此 _开发人员_ 建议使用模式来扩展和自定义Commerce应用程序。 静态视图文件不缓存，而是写入 `pub/static` 按需目录。
+此 _開發人員_ 建議使用模式來延伸及自訂Commerce應用程式。 靜態檢視檔案不會快取，但會寫入 `pub/static` 隨選目錄。
 
-在开发人员模式下：
+在開發人員模式中：
 
-- 启用 [自动代码编译](../cli/code-compiler.md) 和增强型调试
-- 浏览器中显示未捕获的异常
-- 系统登录 `var/report` 冗长
-- 错误处理程序中会引发异常，而不是被记录
-- 当无法调用事件订阅者时，将引发异常
-- 显示自定义 `X-Magento-*` HTTP请求和响应标头
+- 啟用 [自動程式碼編譯](../cli/code-compiler.md) 和增強型除錯
+- 瀏覽器中顯示未攔截到的例外狀況
+- 系統登入 `var/report` 冗長
+- 錯誤處理常式中會擲回例外狀況，而非加以記錄
+- 無法叫用事件訂閱者時擲回例外狀況
+- 顯示自訂 `X-Magento-*` HTTP要求與回應標頭
 
-## 生产模式
+## 生產模式
 
-此 _生产_ 模式最适合在生产系统上部署Commerce应用程序。 优化服务器环境（如数据库和Web服务器）后，您应该运行 [静态视图文件部署工具](../cli/static-view-file-deployment.md) 将静态视图文件写入 `pub/static` 目录。 通过在部署时提供所有必要的静态文件而不是强制Commerce应用程序在运行时动态查找和复制（具体化）静态文件，从而提高性能。
+此 _生產_ 模式最適合將Commerce應用程式部署在生產系統上。 最佳化伺服器環境（例如資料庫和網頁伺服器）後，您應執行 [靜態檢視檔案部署工具](../cli/static-view-file-deployment.md) 將靜態檢視檔案寫入 `pub/static` 目錄。 這可透過在部署時提供所有必要的靜態檔案來改善效能，而不是強制Commerce應用程式在執行階段期間動態尋找和隨選複製（具體化）靜態檔案。
 
-一些字段在生产模式下不可用，例如“管理员”中的“高级”和“开发人员”系统配置部分。 例如，您 _无法_ 使用Admin启用或禁用缓存类型。 您可以启用和禁用缓存类型 _仅限_ 使用 [命令行](../cli/manage-cache.md#config-cli-subcommands-cache-en).
+某些欄位（例如管理員中的進階和開發人員系統設定區段）在生產模式中無法使用。 例如，您 _無法_ 使用Admin啟用或停用快取型別。 您可以啟用和停用快取型別 _僅限_ 使用 [命令列](../cli/manage-cache.md#config-cli-subcommands-cache-en).
 
-在生产模式下：
+在生產模式中：
 
-- 静态视图文件仅从缓存中提供
-- 错误和异常会记录到文件系统，并且永远不会向用户显示
-- 管理员中的一些配置字段不可用
+- 靜態檢視檔案僅從快取中提供
+- 錯誤和例外狀況會記錄到檔案系統，且永遠不會顯示給使用者
+- 管理員中的某些設定欄位無法使用
 
-## 维护模式
+## 維護模式
 
-此 _维护_ 在改进、更新和配置任务期间，模式会限制或阻止对站点的访问。 默认情况下，网站会将访客重定向到默认位置 `Service Temporarily Unavailable` 页面。
+此 _維護_ 在改良、更新和設定任務期間，模式會限制或阻止對網站的存取。 依預設，網站會將訪客重新導向至預設值 `Service Temporarily Unavailable` 頁面。
 
-您可以创建 [自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md)，手动启用和禁用维护模式，并配置维护模式以允许来自授权IP地址的访客正常查看存储区。 参见 [启用和禁用维护模式](../../installation/tutorials/maintenance-mode.md) 在 _安装指南_.
+您可以建立 [自訂維護頁面](../../upgrade/troubleshooting/maintenance-mode-options.md)，手動啟用和停用維護模式，並設定維護模式以允許來自授權IP位址的訪客正常檢視存放區。 另請參閱 [啟用和停用維護模式](../../installation/tutorials/maintenance-mode.md) 在 _安裝指南_.
 
-如果您在云基础架构上使用Commerce，则Commerce应用程序在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将返回到生产模式下运行。 参见 [部署挂接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks) 在 _云基础架构上的Commerce指南_.
+如果您在雲端基礎結構上使用Commerce，Commerce應用程式會在部署階段以維護模式執行。 部署成功完成時，商務應用程式會返回以生產模式執行。 另請參閱 [部署鉤點](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks) 在 _雲端基礎結構上的Commerce指南_.
 
-在维护模式下：
+在維護模式中：
 
-- 网站访客将被重定向到默认值 `Service Temporarily Unavailable` 页面
-- 此 `var/` 目录包含 `.maintenance.flag` 文件
-- 您可以根据IP地址限制访客访问
+- 網站訪客會重新導向至預設值 `Service Temporarily Unavailable` 頁面
+- 此 `var/` 目錄包含 `.maintenance.flag` 檔案
+- 您可以根據IP位址限制訪客存取

@@ -5,9 +5,9 @@ source-wordcount: '15'
 ht-degree: 0%
 
 ---
-# PHP扩展
+# PHP擴充功能
 
-Adobe Commerce要求：
+Adobe Commerce需要：
 
 - `ext-bcmath`
 - `ext-ctype`
@@ -67,7 +67,7 @@ Adobe Commerce的B2B需要：
 - `ext-zlib`
 - `lib-libxml`
 
-Magento Open Source要求：
+Magento Open Source需要：
 
 - `ext-bcmath`
 - `ext-ctype`

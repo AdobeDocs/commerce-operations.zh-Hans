@@ -1,40 +1,40 @@
 ---
-title: 从配置文件导入数据
-description: 从配置文件导入Adobe Commerce配置设置。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 從組態檔匯入資料
+description: 從組態檔匯入Adobe Commerce組態設定。
+exl-id: 7d9f156c-e8d3-4888-b359-5d9aa8c4ea05
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
 
 ---
 
-
-# 导入配置设置
+# 匯入組態設定
 
 {{file-system-owner}}
 
-使用Commerce 2.2设置生产系统时 [管道部署模型](../deployment/technical-details.md)，您必须 _导入_ 配置设置 `config.php` 和 `env.php` 进入数据库。
-这些设置包括配置路径和值、网站、存储、存储视图和主题。
+當您使用Commerce 2.2設定生產系統時 [管道部署模型](../deployment/technical-details.md)，您必須 _匯入_ 組態設定來自 `config.php` 和 `env.php` 到資料庫中。
+這些設定包括設定路徑和值、網站、商店、商店檢視和主題。
 
-在导入网站、存储、存储视图和主题后，您可以创建产品属性，并将其应用到生产系统上的网站、存储和存储视图。
+匯入網站、商店、商店檢視和主題後，您可以在生產系統上建立產品屬性，並將其套用至網站、商店和商店檢視。
 
 >[!INFO]
 >
->的 `bin/magento app:config:import` 命令不处理存储在环境变量中的配置。
+>此 `bin/magento app:config:import` 命令不會處理儲存在環境變數中的設定。
 
-## 导入命令
+## 匯入命令
 
-在生产系统上，运行以下命令以从配置文件导入数据(`config.php` 和 `env.php`)到数据库：
+在您的生產系統上，執行下列命令以從組態檔案匯入資料(`config.php` 和 `env.php`)至資料庫：
 
 ```bash
 bin/magento app:config:import [-n, --no-interaction]
 ```
 
-使用可选 `[-n, --no-interaction]` 标记以导入数据，而无需进行任何交互。
+使用選填的 `[-n, --no-interaction]` 標幟以匯入資料而不進行任何互動。
 
-如果输入 `bin/magento app:config:import` 如果没有可选标记，则需要确认更改。
+如果您輸入 `bin/magento app:config:import` 若沒有選用標幟，您必須確認變更。
 
-例如，如果配置文件包含一个新网站和一个新商店，则会显示以下消息：
+例如，如果設定檔案包含一個新網站和一個新商店，則會顯示以下訊息：
 
 ```terminal
 These Websites will be created: New Website
@@ -42,74 +42,74 @@ These Groups will be created: New Store
 Do you want to continue [yes/no]?
 ```
 
-要继续导入，请输入 `yes`.
+若要繼續匯入，請輸入 `yes`.
 
-如果部署配置文件包含要导入的某些数据，则会显示与以下内容类似的消息：
+如果部署組態檔包含要匯入的一些資料，則會顯示類似下列的訊息：
 
 ```terminal
 Start import:
 Some information about importing
 ```
 
-如果部署配置文件不包含任何要导入的数据，则会显示类似以下消息：
+如果部署組態檔不包含任何要匯入的資料，則會顯示類似下列的訊息：
 
 ```terminal
 Start import:
 Nothing to import
 ```
 
-## 我们导入的内容
+## 我們匯入的內容
 
-以下各节详细讨论了我们导入的数据。
+以下各節將詳細討論我們匯入的資料。
 
-### 系统配置
+### 系統設定
 
-商务直接使用 `system` 数组 `config.php` 或 `env.php` 文件，而不是将它们导入数据库，因为它们需要一些预处理和后处理操作。
+Commerce直接使用中的值 `system` 中的陣列 `config.php` 或 `env.php` 檔案，而非匯入資料庫中，因為它們需要一些前置和後置處理動作。
 
-例如，配置路径的值 `web/secure/base_url` 必须使用后端模型进行验证。
+例如，設定路徑的值 `web/secure/base_url` 必須透過後端模型驗證。
 
-#### 后端模型
+#### 後端模型
 
-后端模型是处理系统配置更改的机制。
-您可以在 `<module_name>/adminhtml/system.xml`.
+後端模型是處理系統組態變更的機制。
+您在中定義後端模組 `<module_name>/adminhtml/system.xml`.
 
-所有后端模型必须 [`Magento\Framework\App\Config\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config/Value.php) 类。
+所有後端模型都必須擴充 [`Magento\Framework\App\Config\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config/Value.php) 類別。
 
-导入后端模型时，不会保存配置值。
+當我們匯入後端模型時，不會儲存設定值。
 
-### 网站、商店和商店组配置
+### 網站、商店和商店群組設定
 
-我们会导入以下类型的配置。
-(这些配置位于 `scopes` 阵列 `config.php`.)
+我們匯入下列型別的設定。
+(這些設定位於 `scopes` 中的陣列 `config.php`.)
 
-- `websites`:网站相关配置
-- `groups`:存储相关配置
-- `stores`:存储视图相关配置
+- `websites`：網站相關設定
+- `groups`：儲存相關設定
+- `stores`：存放區檢視相關設定
 
-以下模式可导入上述配置：
+上述設定可透過下列模式匯入：
 
-- `create`: `config.php` 包含新实体(`websites`, `groups`, `stores`)
-- `update`: `config.php` 包含实体(`websites`, `groups`, `stores`)与生产环境不同
-- `delete`: `config.php` does _not_ 包含实体(`websites`, `groups`, `stores`)
+- `create`： `config.php` 包含新實體(`websites`， `groups`， `stores`)中不存在的URL。
+- `update`： `config.php` 包含實體(`websites`， `groups`， `stores`)與生產環境不同的
+- `delete`： `config.php` 會 _not_ 包含實體(`websites`， `groups`， `stores`)時，才會變更生產環境
 
 >[!INFO]
 >
->我们不导入与存储关联的根类别。 您必须使用商务管理员将根类别与商店关联。
+>我們不會匯入與存放區相關聯的根類別。 您必須使用Commerce管理員將根類別與商店相關聯。
 
-### 主题配置
+### 主題設定
 
-主题配置包括在您的商务系统中注册的所有主题；数据直接来自 `theme` 数据库表。 (主题配置位于 `themes` 阵列 `config.php`.)
+主題設定包含您在Commerce系統中註冊的所有主題；資料直接來自 `theme` 資料庫表格。 (主題設定位於 `themes` 中的陣列 `config.php`.)
 
-#### 主题数据的结构
+#### 主題資料的結構
 
-数组的键是完整主题路径： `area` + `theme path`
+陣列索引鍵是完整主題路徑： `area` + `theme path`
 
 例如， `frontend/Magento/luma`.
-`frontend` 为面积和 `Magento/luma` 是主题路径。
+`frontend` 為區域和 `Magento/luma` 是主題路徑。
 
-数组的值是有关主题的数据：代码，标题，路径，父id
+陣列的值是有關佈景主題的資料：程式碼、標題、路徑、父系ID
 
-完整示例：
+完整範例：
 
 ```php?start_inline=1
 'frontend/Magento/luma' =>
@@ -126,6 +126,6 @@ Nothing to import
 
 >[!INFO]
 >
->- _主题注册_. 如果在 `config.php` 但是该主题的源代码在文件系统中不存在，该主题将被忽略（即，未注册）。
->- _主题移除_. 如果主题不存在 `config.php` 但是，源代码存在于文件系统中，不会删除主题。
+>- _主題註冊_. 如果主題資料定義於 `config.php` 但佈景主題的原始程式碼不存在於檔案系統中，佈景主題會遭忽略（亦即，未註冊）。
+>- _主題移除_. 如果主題不存在於 `config.php` 但原始程式碼存在於檔案系統上，主題並未移除。
 

@@ -1,48 +1,48 @@
 ---
-title: 产品变量配置最佳实践
-description: 了解如何通过限制已配置的产品变体的数量来优化Adobe Commerce性能。
+title: 產品變數設定最佳實務
+description: 瞭解如何透過限制已設定的產品變數數目來最佳化Adobe Commerce效能。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+exl-id: a19dd8b4-23b8-498f-be51-a0adfcd12a11
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
+# 設定產品變數的最佳實務
 
-# 配置产品变体的最佳实践
+為獲得最佳效能，請為每個產品設定最多50個變數。
 
-为获得最佳性能，每个产品最多配置50个变体。
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+[所有支援的版本](../../../release/versions.md) 之：
 
-[所有受支持的版本](../../../release/versions.md) 共：
+- 雲端基礎結構上的Adobe Commerce
+- Adobe Commerce內部部署
 
-- Adobe Commerce云基础架构
-- Adobe Commerce内部
+## 減少產品變數數量
 
-## 减少产品变体的数量
+為獲得最佳網站效能，請使用以下策略來減少產品變異數：
 
-为获得最佳网站性能，请使用以下策略来减少产品变体的数量：
+- 透過分佈不同產品的變異數來重新建構目錄。
+- 移除沒有庫存的可設定屬性選項。
+- 透過自訂選項、類別、相關、分組和套裝產品等替代功能管理變體。
 
-- 通过在不同产品中分发变体数量来调整目录。
-- 删除非库存的可配置属性选项。
-- 通过自定义选项、类别、相关、分组和捆绑产品等替代功能管理变体。
+## 對效能的潛在影響
 
-## 潜在的性能影响
+超過建議的產品變數數目可能會透過下列方式影響網站效能：
 
-如果超出建议的产品变体数量，可能会通过以下方式影响网站性能：
+- 產品詳細資料和包含複雜產品的類別頁面上的長請求和呈現時間。
+- 增加在管理員中完成儲存作業的回應時間。
+- 增加呈現產品編輯表單的時間。
+- 結帳緩慢。
 
-- 包含复杂产品的产品详细信息和类别页面上的请求和渲染时间较长。
-- 缩短了在管理员中完成保存操作的响应时间。
-- 增加了渲染产品编辑表单的时间。
-- 结帐缓慢。
+## 其他資訊
 
-## 其他信息
+- [建立可設定的產品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html)
+- [建立產品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
 
-- [创建可配置产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html)
-- [创建产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
-
-- 培训 — [使用Adobe Commerce管理目录和产品](https://learning.adobe.com/catalog/adobe_commerce/cours000000000098643.html)
+- 訓練 — [使用Adobe Commerce管理目錄和產品](https://learning.adobe.com/catalog/adobe_commerce/cours000000000098643.html)

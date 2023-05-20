@@ -1,47 +1,48 @@
 ---
-title: “如何使用 [!DNL Observation for Adobe Commerce] nerdlet”
-description: 了解如何使用 [!DNL Observation for Adobe Commerce] 内德莱特。
-source-git-commit: e6038d6f0add9d01d650914b35a1daba885fa7f8
+title: 如何使用 [!DNL Observation for Adobe Commerce] Nerdlet
+description: 瞭解如何使用 [!DNL Observation for Adobe Commerce] Nerdlet。
+exl-id: 3c368814-0786-4e8f-ac81-9a77cec94677
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
 
-# 如何使用 [!DNL Observation for Adobe Commerce] 内尔特
+# 如何使用 [!DNL Observation for Adobe Commerce] Nerdlet
 
-## 一般的问题处理方法
+## 檢視問題的一般方法
 
-检查环境资源状态：
+檢查環境資源狀態：
 
-* 检查% **[!UICONTROL Storage Free and MySQL % free storage by node]** 框架。
+* 檢查% **[!UICONTROL Storage Free and MySQL % free storage by node]** 影格。
 
-   * 如果看到存储空间不足，请按照框架标题中的链接操作。
+   * 如果您發現儲存空間不足，請依照框架標頭中的連結操作。
 
-* 检查% **[!UICONTROL free system memory and Swap memory free in bytes]** 框架。
+* 檢查% **[!UICONTROL free system memory and Swap memory free in bytes]** 影格。
 
-   * 如果这些显示的内存非常低，则它们可能会导致问题。
+   * 如果這些顯示非常低的記憶體狀態，則可能是問題的原因。
 
-* 检查 **[!UICONTROL Alerts during the timeframe]** 框架。
+* 檢查 **[!UICONTROL Alerts during the timeframe]** 框架。
 
-   * 云基础架构提供的Adobe Commerce [!DNL Managed alerts]. 您可以单击标题中的链接以查看 [!DNL Support Knowledge Base] 可帮助确定您对特定警报的操作的文章。
+   * 雲端基礎結構上的Adobe Commerce提供 [!DNL Managed alerts]. 您可以按一下標題中的連結來檢視 [!DNL Support Knowledge Base] 協助判斷特定警示之您動作的相關文章。
 
-* 检查 **[!UICONTROL CPU % by host]** 框架：如果CPU利用率很高，请检查 [!DNL Support Knowledge Base] 框架标题中的文章。 此外，检查以确保数据库导入/导出或备份在流量高峰期不执行。
+* 檢查 **[!UICONTROL CPU % by host]** 框架：如果顯示有高的CPU使用率，請檢查 [!DNL Support Knowledge Base] 框架標題中的文章。 此外，檢查以確保資料庫匯入/匯出或備份未在尖峰流量期間完成。
 
-* 检查 **[!UICONTROL Web Traffic volume compared to one week ago]** 框架：如果同一时段的流量比前一周高得多，是否可以解释（例如销售活动或已营销的新产品）？
-   * 如果流量增长无法解释，请查看生产环境的平均响应时间（毫秒）。 导致响应时间的较高流量是否与正常流量不同？ 展开时间范围以查看它是否是异常。
-   * 流量的增加是否会影响Web交易？ 检查 **[!UICONTROL Response Code]** 错误的框架。 如果网站关闭，您可以单击 `Site Down?` 链接。 该帧将识别发生的任何错误及其频度。
-   * 有人对您的网站进行了更改吗？ 的 **[!UICONTROL Deployment Log Entries]** 框架将指示在问题时间范围内是否进行了任何部署。 如果问题在部署后立即出现，则可能是部署活动正在向站点添加额外的负载（缓存清除、服务重新启动等）。
-   * 是否发生了大小调整或大小调整？ 如果您的网站已临时调整大小，则可能已返回到其原始群集大小。 如果请求增加站点容量，则可能会发生更大。 检查 **[!UICONTROL Upsize/Downsize – vCPU view over the timeline]** 框架。 此帧有时会检测到某个特定节点发生中断。 如果看到大小减小，则可能表示一个或多个节点出现问题。
+* 檢查 **[!UICONTROL Web Traffic volume compared to one week ago]** 框架：如果流量遠高於同一期間的上週，可以解釋嗎（例如，促銷活動或已經行銷的新產品）？
+   * 如果無法解釋流量增加，請檢視生產環境的平均回應時間（毫秒）。 對回應時間貢獻較高的流量與正常情況不同嗎？ 展開時間範圍以檢視是否為異常。
+   * 流量的增加是否會影響Web交易？ 檢查 **[!UICONTROL Response Code]** 錯誤框架。 如果網站關閉，您可以按一下 `Site Down?` 框架標頭中的連結。 此框架會識別發生的任何錯誤及其頻率。
+   * 有人將變更部署至您的網站嗎？ 此 **[!UICONTROL Deployment Log Entries]** 框架會指出是否在問題時間範圍內完成任何部署。 如果部署後立即出現問題，可能是部署活動增加了站台的額外負載（快取已清除、服務已重新啟動等）。
+   * 是否發生大小調整或縮減的情況？ 如果您的網站是暫時升級，它可能已恢復為原始叢集大小。 如果提出增加網站容量的請求，可能會發生向上調整。 檢查 **[!UICONTROL Upsize/Downsize – vCPU view over the timeline]** 框架。 此框架有時會偵測到某個特定節點上的中斷。 如果您看到大小減少，表示一或多個節點可能有問題。
 
-* 的 **[!UICONTROL IP Frequency]** 选项卡标识针对源服务器发出的IP地址的请求频率(这意味着无法从 [!DNL Fastly] 从74开始，没有缓存)。
+* 此 **[!UICONTROL IP Frequency]** tab會識別來自對原始伺服器發出的IP位址的請求頻率（這表示無法從提供請求）。 [!DNL Fastly] as 74 it not cached)。
 
-   * 对于任意 [!DNL Fastly] 相关问题，请检查 **[!UICONTROL Fastly Cache]** 框，然后选择“错误”方面以查看错误请求的百分比。 如果后端问题与非Web加载相一致，则它们可能会指示后端问题。
-   * 如果加载似乎不是由于Web流量所致，则可能会出现错误或生成非Web请求，如慢速查询或 [!DNL crons].
+   * 針對任何 [!DNL Fastly] 相關問題，請檢視 **[!UICONTROL Fastly Cache]** 框架，並選取錯誤面向以檢視錯誤的請求百分比。 如果與非網頁載入一致，則可能會指出後端問題。
+   * 如果載入似乎不是由於網路流量，則可能是錯誤或非Web請求的累積，例如查詢緩慢或 [!DNL crons].
 
-* 检查 **[!UICONTROL Database Errors]** 与问题/问题时间轴一致的错误的帧。
-* 检查 **[!UICONTROL Database mysql-slow.log]** 用于标识正在发生的SQL语句的框架。 `INSERT`, `UPDATE`和 `DELETE` 如果查询未优化，则可能需要一些时间。 均等 `SELECT` 如果对大型表执行语句，则会非常低效。
-* **[!UICONTROL PHP States]** 和 **[!UICONTROL PHP Errors]** 帧将显示PHP的潜在问题。 的 **[!UICONTROL PHP States]** 帧将显示PHP进程终止、开始和服务到达节点就绪状态时。 的 **[!UICONTROL PHP Errors]** frame可能有助于隔离PHP问题所在的位置，如内存大小、工作程序或服务器数量。
-* 为了查看事务中的延迟，可以按列对“事务 — 平均、最大、最小”表进行排序，以显示运行最长的事务持续时间。 过载的集群将在事务中具有潜在的持续时间，但它也会显示异常，这些异常可能会用方法或 [!DNL cron].
-* 的 **[!UICONTROL Cron error]** 帧将显示 [!DNL cron] 锁定，可能与 [!DNL cron] 日志和共享暂存 [!DNL crons] 当存在专用暂存环境时可能在生产环境中运行的暂存环境。
-* 的 [!UICONTROL ElasticSearch Errors] 框显示可能表示 [!DNL Elasticsearch] 查询、数据或索引。
+* 檢查 **[!UICONTROL Database Errors]** 與問題/問題時間表可能一致的錯誤影格。
+* 檢查 **[!UICONTROL Database mysql-slow.log]** 用來識別正在發生的SQL敘述句的框架。 `INSERT`， `UPDATE`、和 `DELETE` 如果查詢未最佳化，命令可能需要一些時間。 平均 `SELECT` 如果針對大型表格執行陳述式，可能會非常低效。
+* **[!UICONTROL PHP States]** 和 **[!UICONTROL PHP Errors]** 框架會顯示PHP的潛在問題。 此 **[!UICONTROL PHP States]** frame會顯示PHP處理序終止、啟動以及服務依節點到達就緒狀態時的情況。 此 **[!UICONTROL PHP Errors]** 框架可協助隔離問題出在PHP上的位置，例如記憶體大小、背景工作程式或伺服器數目。
+* 若要檢視交易中的延遲，可依欄排序「交易 — 平均、最大、最小值」表格，以顯示執行時間最長的交易持續時間。 多載的叢集在交易中將具有潛在持續時間，但也會顯示可能指出方法或問題的異常 [!DNL cron].
+* 此 **[!UICONTROL Cron error]** 框架將會顯示 [!DNL cron] 鎖定，可能有關聯的SQL錯誤 [!DNL cron] 記錄檔和共用測試 [!DNL crons] 當有專用的中繼環境時，這些環境可能會在生產環境中執行。
+* 此 [!UICONTROL ElasticSearch Errors] 框架顯示可能表示重大問題的錯誤 [!DNL Elasticsearch] 查詢、資料或索引。

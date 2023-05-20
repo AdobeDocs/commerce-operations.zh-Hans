@@ -1,24 +1,24 @@
 ---
-title: 年度升级计划
-description: 查看有关为Adobe Commerce或Magento Open Source项目创建年度升级计划的提示。
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: 年度升級計畫
+description: 檢閱為您的Adobe Commerce或Magento Open Source專案建立年度升級計畫的提示。
+exl-id: f28e5ad1-28ac-4419-a507-63d79dbd6376
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
+# 升級年度計畫
 
-# 年度升级计划
+許多公司使用年度預算與藍圖。 在這些年度討論中，您必須談論平台的狀況、方向以及當年的升級策略，並說明其如何配合企業的整體目標與關鍵績效指標(KPI)。
 
-许多公司从年度预算和路线图中开展工作。 在这些年度讨论中，您必须介绍本年度的平台运行状况、方向和升级策略，以及该策略如何融入业务的整体目标和关键绩效指标(KPI)中。
+遵循 [發行排程](https://devdocs.magento.com/release/)，指派預算與版本更新時段，避免假日、公司關門與高峰時段。 瞭解Adobe發行排程，並透過 [發行說明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)，您就能更妥善地規劃年份。
 
-关注 [发布计划](https://devdocs.magento.com/release/)，为升级分配预算和发布时间窗口，避免节假日、关闭公司和高峰时间。 通过了解Adobe发布计划，并通过 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)，你可以更好地规划一年。
+在規劃期間，您可能想要問自己：
 
-在规划期间，您可能想问自己：
+- 是否有任何必須建置以符合我的業務目標的自訂或擴充功能？
+- 我是否正在檢查這些自訂專案和擴充功能是否未由Adobe原生提供，且不在即將發行的版本中？ 如果有的話，我或許可以節省公司的安裝時間和金錢。
+- 我是否有任何第三方整合需要在來年進行維護？
 
-- 是否必须构建任何自定义或扩展才能实现我的业务目标？
-- 我是否会检查这些自定义和扩展是否不是由Adobe本地提供的，并且不是在即将发布的版本中提供的？ 如果是，我或许能省下公司安装时间和金钱。
-- 我是否有任何第三方集成在即将到来的一年中可能需要维护？
-
-为确保您的团队处于正确的轨道上，请计划一年中的升级检查点，以审核您的计划、预算、时间表和团队的能力。
+為確保您的團隊走在正確的軌道上，請規劃年中段的升級查核點，以審查您的計畫、預算、時間表以及團隊的容量。

@@ -1,42 +1,42 @@
 ---
-title: env.php引用
-description: 请参阅env.php文件的值列表。
-source-git-commit: fe5e16d44213d1864a62230029e9e206eecd1717
+title: env.php參考
+description: 請參閱env.php檔案的值清單。
+exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
 
 ---
 
+# env.php參考
 
-# env.php引用
+此 `env.php` 檔案包含下列區段：
 
-的 `env.php` 文件包含以下部分：
-
-| 名称 | 描述 |
+| 名稱 | 說明 |
 |-------------------------------|-----------------------------------------------------------------|
-| `backend` | “管理员”区域的设置 |
-| `cache` | 配置密文页面和默认缓存 |
-| `cache_types` | 缓存存储设置 |
-| `consumers_wait_for_messages` | 配置用户处理来自消息队列的消息的方式 |
-| `cron` | 启用或禁用cron作业 |
-| `crypt` | 加密函数的加密密钥 |
-| `db` | 数据库连接设置 |
-| `default_connection` | 消息队列默认连接 |
-| `directories` | 商务目录映射设置 |
-| `downloadable_domains` | 可下载域列表 |
-| `install` | 安装日期 |
-| `lock` | 锁定提供程序设置 |
-| `MAGE_MODE` | 的 [应用程序模式](../bootstrap/application-modes.md) |
-| `queue` | [消息队列](../queues/manage-message-queues.md) 设置 |
-| `resource` | 将资源名称映射到连接 |
-| `session` | 会话存储数据 |
-| `system` | 禁用在管理员中编辑的字段 |
-| `x-frame-options` | 设置 [x-frame-options][x-frame-options] |
+| `backend` | 管理區域的設定 |
+| `cache` | 設定Redis頁面和預設快取 |
+| `cache_types` | 快取儲存設定 |
+| `consumers_wait_for_messages` | 設定使用者如何處理來自訊息佇列的訊息 |
+| `cron` | 啟用或停用cron工作 |
+| `crypt` | 密碼編譯功能的加密金鑰 |
+| `db` | 資料庫連線設定 |
+| `default_connection` | 訊息佇列預設連線 |
+| `directories` | Commerce目錄對應設定 |
+| `downloadable_domains` | 可下載網域清單 |
+| `install` | 安裝日期 |
+| `lock` | 鎖定提供者設定 |
+| `MAGE_MODE` | 此 [應用程式模式](../bootstrap/application-modes.md) |
+| `queue` | [訊息佇列](../queues/manage-message-queues.md) 設定 |
+| `resource` | 將資源名稱對應到連線 |
+| `session` | 工作階段儲存資料 |
+| `system` | 停用「 」欄位以在「管理員」中編輯 |
+| `x-frame-options` | 設定 [x-frame-options][x-frame-options] |
 
-## 后端
+## 後端
 
-配置 **frontName** 对于商务管理员url，使用 `backend` env.php中的节点。
+設定 **frontName** 的Commerce管理員url，使用 `backend` env.php中的節點。
 
 ```conf
 'backend' => [
@@ -44,9 +44,9 @@ ht-degree: 0%
 ]
 ```
 
-## 缓存
+## 快取
 
-使用配置Redis页面和默认缓存 `cache` 节点 `env.php` 文件。
+使用設定redis頁面和預設快取 `cache` 中的節點 `env.php` 檔案。
 
 ```conf
 'cache' => [
@@ -72,11 +72,11 @@ ht-degree: 0%
 ]
 ```
 
-在 [Redis配置](../cache/redis-pg-cache.md).
+進一步瞭解 [Redis設定](../cache/redis-pg-cache.md).
 
-## cache_types
+## cache_type
 
-所有缓存类型配置都可从此节点使用。
+此節點提供所有快取型別設定。
 
 ```conf
 'cache_types' => [
@@ -98,11 +98,11 @@ ht-degree: 0%
 ]
 ```
 
-进一步了解不同 [缓存类型](../cli/manage-cache.md).
+深入瞭解不同 [快取型別](../cli/manage-cache.md).
 
 ## consumers_wait_for_messages
 
-指定如果已处理的消息数小于 `max_messages` 值。 默认值为 `1`.
+指定如果處理的訊息數少於，消費者是否應繼續輪詢訊息 `max_messages` 值。 預設值為 `1`.
 
 ```conf
 'queue' => [
@@ -110,19 +110,19 @@ ht-degree: 0%
 ]
 ```
 
-以下选项可供使用：
+下列選項可供使用：
 
-- `1` — 用户继续处理来自消息队列的消息，直到到达 `max_messages` 在 `env.php` 文件，然后关闭TCP连接并终止使用者进程。 如果队列在到达 `max_messages` 值时，消费者会等待更多消息到达。
+- `1` — 消費者會繼續處理來自訊息佇列的訊息，直到到達 `max_messages` 中指定的值 `env.php` 關閉TCP連線並終止使用者處理序之前的檔案。 如果佇列在到達之前排空 `max_messages` 值，消費者會等待更多訊息到達。
 
-   我们建议大型商户使用此设置，因为预计会有持续的消息流，并且处理的延迟不是理想的。
+   我們建議大型商戶使用此設定，因為預期訊息流程會持續不變，且不希望處理延遲。
 
-- `0` — 用户处理队列中的可用消息，关闭TCP连接并终止。 即使已处理的消息数少于 `max_messages` 在 `env.php` 文件。 这有助于防止因消息队列处理中的较长延迟而导致的cron作业问题。
+- `0` — 消費者處理佇列中的可用訊息、關閉TCP連線並終止。 即使已處理的訊息數量少於 `max_messages` 中指定的值 `env.php` 檔案。 這有助於防止因訊息佇列處理長時間延遲而導致cron工作發生問題。
 
-   我们建议较小的商户不要求持续的消息流，并且希望节省计算资源，以换取在几天内没有消息时出现轻微的处理延迟。
+   我們建議將此設定用於預期訊息流程不會持續不變且偏好節省運算資源以換取輕微處理延遲的小型商家（因為幾天內沒有訊息）。
 
 ## cron
 
-为商务应用程序启用或禁用cron作业。 默认情况下，将启用cron作业。 要禁用这些功能，请将 `cron` 配置 `env.php` 并将值设置为 `0`.
+啟用或停用Commerce應用程式的cron工作。 預設會啟用cron工作。 若要停用這些功能，請新增 `cron` 的設定 `env.php` 檔案並將值設定為 `0`.
 
 ```conf
 'cron' => [
@@ -132,13 +132,13 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->禁用cron作业时要小心。 禁用后，将不运行商务应用程序所需的基本流程。
+>當您停用cron工作時，請小心。 當這些變數停用時，Commerce應用程式所需的基本流程將不會執行。
 
-详细了解 [克龙](../cli/configure-cron-jobs.md).
+進一步瞭解 [Crons](../cli/configure-cron-jobs.md).
 
 ## 加密
 
-商务使用加密密钥来保护密码和其他敏感数据。 此键值在安装过程中生成。
+Commerce使用加密金鑰來保護密碼和其他敏感資料。 此金鑰會在安裝過程中產生。
 
 ```conf
 'crypt' => [
@@ -146,11 +146,11 @@ ht-degree: 0%
 ]
 ```
 
-详细了解 [加密密钥](https://docs.magento.com/user-guide/system/encryption-key.html) 在 _Commerce用户指南_.
+進一步瞭解 [加密金鑰](https://docs.magento.com/user-guide/system/encryption-key.html) 在 _Commerce使用手冊_.
 
 ## db
 
-此节点中提供了所有数据库配置。
+此節點提供所有資料庫組態。
 
 ```conf
 'db' => [
@@ -172,7 +172,7 @@ ht-degree: 0%
 
 ## default_connection
 
-为消息队列定义默认连接。 值可以是 `db`, `amqp`，或自定义队列系统，如 `redismq`. 如果您指定 `db`，则必须先安装和配置消息队列软件。 否则，将无法正确处理消息。
+定義訊息佇列的預設連線。 值可以是 `db`， `amqp`或自訂佇列系統，例如 `redismq`. 如果您指定任何值，而不是 `db`，必須先安裝並設定message queue軟體。 否則，訊息將無法正確處理。
 
 ```conf
 'queue' => [
@@ -180,12 +180,12 @@ ht-degree: 0%
 ]
 ```
 
-如果 `queue/default_connection` 在系统中指定 `env.php` 文件，此连接将用于系统中所有消息队列，除非在 `queue_topology.xml`, `queue_publisher.xml` 或 `queue_consumer.xml` 文件。
-例如，如果 `queue/default_connection` is `amqp` in `env.php` 但 `db` 连接在模块的队列配置XML文件中指定，模块将使用MySQL作为消息代理。
+若 `queue/default_connection` 已在系統中指定 `env.php` 檔案，此連線用於透過系統的所有訊息佇列，除非已定義特定連線 `queue_topology.xml`， `queue_publisher.xml` 或 `queue_consumer.xml` 檔案。
+例如，如果 `queue/default_connection` 是 `amqp` 在 `env.php` 但 `db` 連線是在模組的佇列組態XML檔案中指定的，模組將使用MySQL做為訊息代理人。
 
-## 目录
+## 目錄
 
-可选目录映射选项，当Web服务器配置为从 `/pub` 目录 [改进安全性](../../installation/tutorials/docroot.md).
+選用的目錄對應選項，在網頁伺服器設定為從提供Commerce應用程式時 `/pub` 目錄 [提升安全性](../../installation/tutorials/docroot.md).
 
 ```conf
 'directories' => [
@@ -193,9 +193,9 @@ ht-degree: 0%
 ]
 ```
 
-## 可下载域
+## downloadable_domains
 
-此节点中可用的可下载域的列表。 可以使用CLI命令添加、删除或列出其他域。
+此節點中可用的可下載網域清單。 您可以使用CLI指令來新增、移除或列出其他網域。
 
 ```conf
 'downloadable_domains' => [
@@ -203,11 +203,11 @@ ht-degree: 0%
 ]
 ```
 
-详细了解 [可下载的域](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#downloadabledomainsadd).
+進一步瞭解 [可下載的網域](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#downloadabledomainsadd).
 
-## 安装
+## 安裝
 
-Commerce应用程序的安装日期。
+Commerce應用程式的安裝日期。
 
 ```conf
 'install' => [
@@ -215,25 +215,25 @@ Commerce应用程序的安装日期。
 ]
 ```
 
-## 锁
+## 鎖定
 
-使用 `lock` 节点。
+鎖定提供者設定是使用 `lock` 節點。
 
-详细了解 [锁定提供程序配置](../../installation/tutorials/lock-provider.md).
+進一步瞭解 [鎖定提供者設定](../../installation/tutorials/lock-provider.md).
 
-## MAGE_MODE
+## 影像模式
 
-可以在此节点中配置部署模式。
+可在此節點中設定部署模式。
 
 ```conf
 'MAGE_MODE' => 'developer'
 ```
 
-详细了解 [应用程序模式](../cli/set-mode.md).
+進一步瞭解 [應用程式模式](../cli/set-mode.md).
 
-## 队列
+## 佇列
 
-此节点中提供了消息队列配置。
+此節點提供訊息佇列設定。
 
 ```conf
 'queue' => [
@@ -244,11 +244,11 @@ Commerce应用程序的安装日期。
 ]
 ```
 
-详细了解 [消息队列][message-queue].
+進一步瞭解 [訊息佇列][message-queue].
 
-## 资源
+## 資源
 
-此节点中提供了资源配置设置。
+資源組態設定可在此節點中使用。
 
 ```conf
 'resource' => [
@@ -258,9 +258,9 @@ Commerce应用程序的安装日期。
 ]
 ```
 
-## 会话
+## 工作階段
 
-会话配置存储在 `session` 节点。
+工作階段設定會儲存在 `session` 節點。
 
 ```conf
 'session' => [
@@ -268,21 +268,21 @@ Commerce应用程序的安装日期。
 ],
 ```
 
-详细了解 [会话](../storage/sessions.md).
+進一步瞭解 [工作階段](../storage/sessions.md).
 
 ## x-frame-options
 
-x-frame-options标头可以使用此节点进行配置。
+x-frame-options標頭可使用此節點進行設定。
 
 ```conf
 'x-frame-options' => 'SAMEORIGIN'
 ```
 
-详细了解 [x-frame-options](../security/xframe-options.md).
+進一步瞭解 [x-frame-options](../security/xframe-options.md).
 
-## 系统
+## 系統
 
-使用此节点，Commerce会锁定 `env.php` ，然后在管理员中禁用该字段。
+使用此節點，Commerce會鎖定 `env.php` 然後停用「管理員」中的欄位。
 
 ```conf
 'system' => [
@@ -295,7 +295,7 @@ x-frame-options标头可以使用此节点进行配置。
   ]
 ```
 
-在 [env-php-config-set](../cli/set-configuration-values.md).
+進一步瞭解 [env-php-config-set](../cli/set-configuration-values.md).
 
 <!-- Link definitions -->
 

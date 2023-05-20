@@ -1,55 +1,56 @@
 ---
-title: “ [!DNL WAF] 选项卡”
-description: 了解 [!DNL WAF] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: d3d178c333e6f1436a96993611930cb12cd66a71
+title: 此 [!DNL WAF] 標籤
+description: 瞭解 [!DNL WAF] 索引標籤/ [!DNL Observation for Adobe Commerce].
+exl-id: e36986d7-d903-4154-bb09-6962b99ae35f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
-# 的 [!DNL WAF] 选项卡
+# 此 [!DNL WAF] 標籤
 
-的 **[!DNL WAF]** 选项卡，显示被 [!DNL firewall].
+此 **[!DNL WAF]** 索引標籤顯示由以下專案傳遞和封鎖的流量： [!DNL firewall].
 
 ## [!DNL WAF traffic summary]
 
 ![WAF流量摘要](../../assets/tools/observation-for-adobe-commerce/waf-1.png)
 
-的 **[!DNL WAF traffic summary]** frame显示通过、记录、阻止和失败的流量计数 [!DNL firewall].
+此 **[!DNL WAF traffic summary]** frame顯示由「 」透過、記錄、封鎖及失敗的流量計數。 [!DNL firewall].
 
 ## [!DNL WAF Top 10 blocked IP Addresses]
 
-![WAF前10个被阻止的IP地址](../../assets/tools/observation-for-adobe-commerce/waf-2.png)
+![waf前10個封鎖的IP位址](../../assets/tools/observation-for-adobe-commerce/waf-2.png)
 
-的 **[!DNL WAF Top 10 blocked IP Addresses]** 帧中显示了 [!DNL firewall].
+此 **[!DNL WAF Top 10 blocked IP Addresses]** frame顯示前10個最遭封鎖的IP位址 [!DNL firewall].
 
 ## [!DNL WAF Top 10 countries for blocked requests]
 
-![WAF被阻止请求的前10个国家/地区](../../assets/tools/observation-for-adobe-commerce/waf-3.jpg)
+![封鎖請求的WAF前10個國家/地區](../../assets/tools/observation-for-adobe-commerce/waf-3.jpg)
 
-的 **[!DNL WAF Top 10 countries for blocked requests]** frame显示前10个国家/地区针对被阻止请求的阻止请求的计数，该数据包括 [!DNL firewall].
+此 **[!DNL WAF Top 10 countries for blocked requests]** frame顯示前10個國家/地區的已封鎖請求計數，這些已封鎖請求由 [!DNL firewall].
 
 ## [!DNL WAF Top 10 logged IP Addresses]
 
-![WAF前10个已记录的IP地址](../../assets/tools/observation-for-adobe-commerce/waf-4.jpg)
+![waf前10個記錄的IP位址](../../assets/tools/observation-for-adobe-commerce/waf-4.jpg)
 
-的 **[!DNL WAF Top 10 logged IP Addresses]** frame显示前10个记录的IP地址(按 [!DNL firewall].
+此 **[!DNL WAF Top 10 logged IP Addresses]** frame顯示前10個記錄的IP位址中的IP位址 [!DNL firewall].
 
 ## [!DNL Top 10 WAF Rules Executed and Logged by IP address]
 
-![按IP地址执行和记录的前10个WAF规则](../../assets/tools/observation-for-adobe-commerce/waf-5.jpg)
+![由IP位址執行和記錄的前10項WAF規則](../../assets/tools/observation-for-adobe-commerce/waf-5.jpg)
 
-的 **[!DNL Top 10 WAF Rules Executed and Logged by IP address]** frame显示前10个中最常匹配的IP地址 [!DNL firewall] 规则。
+此 **[!DNL Top 10 WAF Rules Executed and Logged by IP address]** 框架顯示前10個最符合的IP位址 [!DNL firewall] 規則。
 
 ## [!DNL WAF Logged Details]
 
-![WAF记录的详细信息](../../assets/tools/observation-for-adobe-commerce/waf-6.jpg)
+![WAF記錄的詳細資料](../../assets/tools/observation-for-adobe-commerce/waf-6.jpg)
 
-的 **[!DNL WAF Logged Details]** frame显示由 [!DNL firewall]，包括时间戳、城市、地区和数据中心等详细信息。
+此 **[!DNL WAF Logged Details]** 框架顯示由以下專案記錄的請求： [!DNL firewall]，包括時間戳記、城市、地區和資料中心等詳細資訊。
 
 ## [!DNL WAF Blocked Details]
 
-![WAF阻止的详细信息](../../assets/tools/observation-for-adobe-commerce/waf-7.jpg)
+![WAF封鎖的詳細資料](../../assets/tools/observation-for-adobe-commerce/waf-7.jpg)
 
-的 **[!DNL WAF Blocked Details]** frame显示被阻止的请求 [!DNL firewall]，包括时间戳、城市、地区和数据中心等详细信息。
+此 **[!DNL WAF Blocked Details]** 框架顯示被封鎖的請求 [!DNL firewall]，包括時間戳記、城市、地區和資料中心等詳細資訊。

@@ -5,50 +5,50 @@ source-wordcount: '197'
 ht-degree: 0%
 
 ---
-# 代码片段
+# 代碼片段
 
-## 仅限商务 {#commerce-only}
+## 僅限Commerce {#commerce-only}
 
 >[!NOTE]
 >
->的 [!DNL Upgrade Compatibility Tool] 仅适用于Adobe Commerce实例。
+>此 [!DNL Upgrade Compatibility Tool] 僅適用於Adobe Commerce執行個體。
 
 <!-- Configuration guide snippets -->
 
-## 文件系统所有者 {#file-system-owner}
+## 檔案系統擁有者 {#file-system-owner}
 
 >[!WARNING]
 >
->所有MagentoCLI命令都必须由 [文件系统所有者](/help/configuration/cli/config-cli.md#prerequisites).
+>所有MagentoCLI命令都必須由 [檔案系統擁有者](/help/configuration/cli/config-cli.md#prerequisites).
 
-## 备份命令 {#tip-backup-command}
+## 備份命令 {#tip-backup-command}
 
 >[!TIP]
 >
->的 `support:backup` 命令为 _not_ 执行的相同代码备份 `setup:backup` 命令。 的 `support:backup` 命令用于备份代码以供Adobe Commerce支持部门检查。
+>此 `support:backup` 命令為 _not_ 執行的相同程式碼備份 `setup:backup` 命令。 此 `support:backup` 命令旨在備份程式碼，以供Adobe Commerce支援人員檢查。
 
-## 仅Adobe Commerce {#ee-only}
+## 僅限Adobe Commerce {#ee-only}
 
 >[!NOTE]
 >
->此功能仅适用于Adobe Commerce实例。
+>此功能僅適用於Adobe Commerce執行個體。
 
-## 已弃用拆分数据库 {#deprecate-split-db}
+## 已棄用分割資料庫 {#deprecate-split-db}
 
 >[!IMPORTANT]
 >
->拆分数据库功能是 [已弃用](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187?_ga=2.128934671.2024864496.1657558157-1596100530.1657558157) 在版本2.4.2的Adobe Commerce中。 请参阅 [从拆分数据库还原到单个数据库](/help/configuration/storage/revert-split-database.md).
+>分割資料庫功能為 [已棄用](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187?_ga=2.128934671.2024864496.1657558157-1596100530.1657558157) 在Adobe Commerce 2.4.2版中。 另請參閱 [從分割資料庫還原為單一資料庫](/help/configuration/storage/revert-split-database.md).
 
 <!-- End of Configuration guide snippets -->
 
-## 后向不兼容的更改 {#bics}
+## 與舊版不相容的變更 {#bics}
 
 >[!NOTE]
 >
->Adobe Commerce和Magento Open Source版本可能包含不兼容的后向更改(BIC)。 要查看向后不兼容的更改，请参阅 [BIC引用](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). 有关主要的不兼容后向问题，请参见 [BIC亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). 并非所有版本都引入了主要的BIC。
+>Adobe Commerce和Magento Open Source版本可能包含與舊版不相容的變更(BIC)。 若要檢閱與回溯不相容的變更，請參閱 [BIC參考](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). 主要與回溯不相容的問題說明於 [BIC重點提示](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). 並非所有發行版本都會推出主要BIC。
 
 ## CVE通知 {#cve-notice}
 
 >[!NOTE]
 >
->从2.3.2版本开始，我们将分配并发布已编入索引的常见漏洞和暴露(CVE)编号，其中每个安全错误都由外部方向我们报告。 这允许用户更轻松地识别其部署中的未寻址漏洞。 您可以在 [CVE](https://cve.mitre.org/).
+>從2.3.2版開始，我們將指派並發佈索引式常見漏洞與暴露(CVE)編號，以及外部各方回報給我們的每個安全性錯誤。 這可讓使用者更輕鬆地識別其部署中未解決的漏洞。 若要進一步瞭解CVE識別碼，請前往 [CVE](https://cve.mitre.org/).

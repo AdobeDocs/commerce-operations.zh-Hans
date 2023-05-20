@@ -1,48 +1,49 @@
 ---
-title: 为远程存储配置AWS S3存储段
-description: 将您的Commerce项目配置为使用AWS S3存储服务进行远程存储。
-source-git-commit: 31078c836fb088a10712c8c4cf4430a38d1962f2
+title: 設定遠端儲存的AWS S3貯體
+description: 設定您的Commerce專案以使用AWS S3儲存服務進行遠端儲存。
+exl-id: e8aeade8-2ec4-4844-bd6c-ab9489d10436
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-# 为远程存储配置AWS S3存储段
+# 設定遠端儲存的AWS S3貯體
 
-的 [Amazon Simple Storage Service(Amazon S3)][AWS S3] 是一项对象存储服务，可提供业界领先的可扩展性、数据可用性、安全性和性能。 AWS S3服务使用存储段或容器进行数据存储。 此配置要求您创建 _私人_ 存储段。 有关云基础架构上的Adobe Commerce，请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md).
+此 [Amazon Simple Storage Service (Amazon S3)][AWS S3] 是物件儲存服務，提供領先業界的可擴充性、資料可用性、安全性及效能。 AWS S3服務使用貯體或容器來儲存資料。 此設定需要您建立 _私人_ 貯體。 如需雲端基礎結構上的Adobe Commerce，請參閱 [在雲端基礎結構上設定Commerce的遠端儲存](cloud-support.md).
 
 >[!WARNING]
 >
->Adobe极不鼓励使用公共存款，因为这会带来严重的安全风险。
+>Adobe強烈建議不要使用公用儲存貯體，因為它有嚴重的安全風險。
 
-**使用AWS S3适配器启用远程存储**:
+**使用AWS S3配接卡啟用遠端儲存的功能**：
 
-1. 登录到Amazon S3功能板，并创建 _私人_ 存储段。
+1. 登入您的Amazon S3控制面板並建立 _私人_ 貯體。
 
-1. 设置 [AWS IAM] 角色。 或者，生成访问密钥和密钥。
+1. 設定 [AWS IAM] 角色。 或者，產生存取和秘密金鑰。
 
-1. 禁用默认数据库存储。
+1. 停用預設資料庫儲存體。
 
    ```bash
    bin/magento config:set system/media_storage_configuration/media_database 0
    ```
 
-1. 配置商务以使用专用存储段。 请参阅 [远程存储选项](remote-storage.md#remote-storage-options) ，以获取参数的完整列表。
+1. 設定Commerce使用私人貯體。 另請參閱 [遠端儲存選項](remote-storage.md#remote-storage-options) 以取得完整的引數清單。
 
    ```bash
    bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="<bucket-name>" --remote-storage-region="<region-name>" --remote-storage-prefix="<optional-prefix>" --remote-storage-key=<optional-access-key> --remote-storage-secret=<optional-secret-key> -n
    ```
 
-1. 将媒体文件与远程存储同步。
+1. 將媒體檔案與遠端儲存裝置同步。
 
    ```bash
    bin/magento remote-storage:sync
    ```
 
-## 配置Nginx
+## 設定Nginx
 
-Nginx需要其他配置才能使用 `proxy_pass` 指令。 将以下代理信息添加到 `nginx.conf` 文件：
+Nginx需要額外的設定，才能使用 `proxy_pass` 指令。 將下列Proxy資訊新增至 `nginx.conf` 檔案：
 
 >nginx.conf
 
@@ -63,17 +64,17 @@ location ~* \.(ico|jpg|jpeg|png|gif|svg|js|css|swf|eot|ttf|otf|woff|woff2)$ {
 }
 ```
 
-### 身份验证
+### 驗證
 
-如果您使用访问密钥和密钥，而不是 [AWS IAM] 角色，则必须包含 [`ngx_aws_auth` Nginx模块][ngx repo].
+如果您使用存取金鑰和秘密金鑰，而不是 [AWS IAM] 角色，您必須包含 [`ngx_aws_auth` Nginx模組][ngx repo].
 
-### 权限
+### 許可權
 
-S3集成依赖于在本地文件系统上生成和存储缓存图像的功能。 因此， `pub/media` S3的类似目录与使用本地存储时的目录相同。
+S3整合依賴在本機檔案系統上產生和儲存快取影像的能力。 因此，的檔案夾許可權 `pub/media` S3的和類似目錄與使用本機儲存時相同。
 
-### 文件操作
+### 檔案作業
 
-强烈建议您使用 [!DNL Commerce] 在编码或扩展开发中使用文件适配器方法，而不考虑文件存储类型。 使用S3进行存储时，请勿使用本机PHP文件I/O操作，例如 `copy`, `rename`或 `file_put_contents`，因为S3文件不在文件系统中。 请参阅 [DriverInterface.php](https://github.com/magento/magento2/blob/2.4-develop/lib/internal/Magento/Framework/Filesystem/DriverInterface.php#L18) ，以了解代码示例。
+強烈建議您使用 [!DNL Commerce] 無論檔案儲存型別為何，編碼或擴充功能開發中的檔案配接器方法。 使用S3進行儲存時，請勿使用原生PHP檔案I/O操作，例如 `copy`， `rename`，或 `file_put_contents`，因為S3檔案不在檔案系統內。 另請參閱 [DriverInterface.php](https://github.com/magento/magento2/blob/2.4-develop/lib/internal/Magento/Framework/Filesystem/DriverInterface.php#L18) 以取得程式碼範例。
 
 <!-- link definitions -->
 

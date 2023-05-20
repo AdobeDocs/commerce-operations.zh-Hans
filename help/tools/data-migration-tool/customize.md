@@ -1,33 +1,33 @@
 ---
-title: 自定义 [!DNL Data Migration Tool]
-description: 了解如何自定义 [!DNL Data Migration Tool] 用于在Magento1和Magento2之间传输由扩展创建的数据。
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+title: 自訂 [!DNL Data Migration Tool]
+description: 瞭解如何自訂 [!DNL Data Migration Tool] 以在Magento1和Magento2之間傳輸擴充功能建立的資料。
+exl-id: a5c1575f-9d77-416e-91fe-a82905ef2e1c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
+# 設定 [!DNL Data Migration Tool]
 
-# 配置 [!DNL Data Migration Tool]
+有時建立的資料格式和結構 [擴充功能](https://marketplace.magento.com/extensions.html) 或自訂程式碼在Magento1和Magento2之間不同。 使用內的擴充點 [!DNL Data Migration Tool] 以移轉此資料。 如果資料格式和結構相同，工具可以自動移轉資料，無需使用者介入。
 
-有时，创建的数据格式和结构 [扩展](https://marketplace.magento.com/extensions.html) 或者，自定义代码在Magento1和Magento2中不同。 在 [!DNL Data Migration Tool] 迁移此数据。 如果数据格式和结构相同，则该工具可以自动迁移数据，而无需用户干预。
-
-在迁移期间， [映射步骤](technical-specification.md#map-step) 扫描并比较所有Magento1和Magento2表，包括由扩展创建的表。 如果表相同，则该工具会自动迁移数据。 如果表不同，该工具将终止并通知用户。
+在移轉期間， [地圖步驟](technical-specification.md#map-step) 會掃描並比較所有Magento1和Magento2表格，包括由擴充功能建立的表格。 如果表格相同，工具會自動移轉資料。 如果表格不同，工具會終止並通知使用者。
 
 >[!NOTE]
 >
->阅读 [技术规范](technical-specification.md) 在尝试扩展 [!DNL Data Migration Tool]. 另外，请查看 [迁移指南](../overview.md) 以了解有关使用迁移工具的常规信息。
+>閱讀 [技術規格](technical-specification.md) 在嘗試延伸 [!DNL Data Migration Tool]. 此外，請檢閱 [移轉指南](../overview.md) 以取得使用移轉工具的一般資訊。
 
 
-## 次要数据格式和结构更改
+## 微幅資料格式和結構變更
 
-在大多数情况下， [映射步骤](technical-specification.md#map-step) 使用 `map.xml` 文件：
+在大多數情況下， [地圖步驟](technical-specification.md#map-step) 使用下列方法，足以解析細微的資料格式和結構變更： `map.xml` 檔案：
 
-- 使用映射规则更改表或字段名称
-- 使用现有处理程序或自定义处理程序转换数据格式
+- 使用對應規則變更表格或欄位名稱
+- 使用現有處理常式或自訂處理常式轉換資料格式
 
-以下示例显示了如何同时使用映射规则和处理程序。 此示例使用一个名为“GreatBlog”的假设Magento1扩展，该扩展已对Magento2进行了改进。
+以下同時使用對應規則和處理常式的範例。 此範例使用名為「GreatBlog」的假設Magento1擴充功能，此擴充功能已針對Magento2進行改善。
 
 ```xml
 <source>
@@ -70,36 +70,36 @@ ht-degree: 0%
 </destination>
 ```
 
-- 请勿从 `great_blog_index` 索引表。
-- 表格 `great_blog_publication` 已重命名为 `great_blog_post` 在Magento2中，因此数据会迁移到新表。
-   - 的 `summary` 字段已重命名为 `title`，因此数据将迁移到新字段。
-   - 的 `priority` 字段，且该字段在Magento2中不再存在。
-   - 中的数据 `body` 字段的格式已更改，且应由自定义处理程序处理： `\Migration\Handler\GreatBlog\NewFormat`.
-- 在Magento2中为“GreatBlog”扩展开发了新的评级功能。
-   - 新 `great_blog_rating` 表。
-   - 新 `great_blog_post.rating` 字段。
+- 請勿從移轉不必要的資料 `great_blog_index` 索引資料表。
+- 表格 `great_blog_publication` 已重新命名為 `great_blog_post` 在Magento2中，因此資料會移轉至新表格。
+   - 此 `summary` 欄位已重新命名為 `title`，因此資料會移轉至新欄位。
+   - 此 `priority` 欄位已移除，不再存在於Magento2中。
+   - 中的資料 `body` 欄位已變更格式，應由自訂處理常式處理： `\Migration\Handler\GreatBlog\NewFormat`.
+- Magento2已為「GreatBlog」擴充功能開發新的評等功能。
+   - 新 `great_blog_rating` 已建立表格。
+   - 新 `great_blog_post.rating` 欄位已建立。
 
-### 在其他步骤中扩展映射
+### 在其他步驟中擴充對應
 
-其他步骤支持映射，例如 [EAV步骤](technical-specification.md#eav-step) 和客户属性步骤。 这些步骤可迁移预定义的Magento表列表。 例如，假定“GreatBlog”扩展在 `eav_attribute` 表和Magento2中更改的名称。 由于表由 [EAV步骤](technical-specification.md#eav-step)，则应为 `map-eav.xml` 文件。 的 `map.xml` 和 `map-eav.xml` 文件使用相同的 `map.xsd` 架构，因此映射规则保持不变。
+其他步驟支援對應，例如 [EAV步驟](technical-specification.md#eav-step) 以及客戶屬性步驟。 這些步驟會移轉預先定義的Magento表格清單。 例如，假設「GreatBlog」擴充功能在 `eav_attribute` 表格和名稱在Magento2中變更。 因為表格是由 [EAV步驟](technical-specification.md#eav-step)，對應規則應該針對 `map-eav.xml` 檔案。 此 `map.xml` 和 `map-eav.xml` 檔案使用相同的 `map.xsd` 結構描述，因此對應規則會維持不變。
 
-## 主要数据格式和结构更改
+## 重大資料格式和結構變更
 
-除了映射步骤之外， `config.xml` 数据迁移的文件，主要格式和结构变化包括：
+除了「地圖步驟」，還有其他步驟 `config.xml` 以主要格式和結構變更移轉資料的檔案，包括：
 
-- [Url重写步骤](technical-specification.md#url-rewrite-step)
-- 顺序网格步骤
-- [EAV步骤](technical-specification.md#eav-step)
+- [Url重寫步驟](technical-specification.md#url-rewrite-step)
+- OrderGrid步驟
+- [EAV步驟](technical-specification.md#eav-step)
 
-与 [映射步骤](technical-specification.md#map-step)，这些步骤将扫描预定义的表列表，而不是所有表。
+不喜歡 [地圖步驟](technical-specification.md#map-step)，這些步驟會掃描預先定義的表格清單，而非所有表格。
 
-对于主要数据格式和结构更改，请创建自定义步骤。
+如需重大資料格式和結構變更，請建立自訂步驟。
 
-### 创建自定义步骤
+### 建立自訂步驟
 
-使用相同的“GreatBlog”示例，假设扩展在Magento1中有一个表，但经过重新设计，在Magento2中有两个表。
+使用相同的「GreatBlog」範例，假設擴充功能在Magento1中有一個表格，但重新設計後在Magento2中有兩個表格。
 
-在Magento1中，有一个 `greatblog_post` 表：
+在Magento1中，有一個 `greatblog_post` 表格：
 
 ```text
 | Field     | Type     |
@@ -111,7 +111,7 @@ ht-degree: 0%
 | tags      | TEXT     |
 ```
 
-在Magento2中，新增了标记表 `greatblog_post_tags` 引入：
+在Magento2中，為標籤新增了表格 `greatblog_post_tags` 推出了：
 
 ```text
 | Field      | Type     |
@@ -121,7 +121,7 @@ ht-degree: 0%
 | sort_order | SMALLINT |
 ```
 
-Magento2 `greatblog_post` 表格现在如下所示：
+MAGENTO2 `greatblog_post` 表格現在看起來像這樣：
 
 ```text
 | Field     | Type     |
@@ -132,7 +132,7 @@ Magento2 `greatblog_post` 表格现在如下所示：
 | author_id | SMALLINT |
 ```
 
-要将所有数据从旧表结构迁移到新表结构，您可以在 `config.xml` 文件。 例如：
+若要將所有資料從舊表格結構移轉到新表格結構，您可以在 `config.xml` 檔案。 例如：
 
 ```xml
 <steps mode="data">
@@ -152,23 +152,23 @@ Magento2 `greatblog_post` 表格现在如下所示：
 </steps>
 ```
 
-该工具根据步骤在 `config.xml` 文件；从上到下。 在本例中， `GreatBlog Step` 最后运行。
+此工具會根據步驟在中的位置執行步驟 `config.xml` 檔案；從上到下。 在我們的範例中， `GreatBlog Step` 最後執行。
 
-步骤可以包括四种类型的类：
+步驟可包含四種類別：
 
-- 完整性检查
-- 数据传送
-- 卷检查
-- 增量传送
+- 完整性檢查
+- 資料傳遞
+- 音量檢查
+- Delta傳遞
 
 >[!NOTE]
 >
->请参阅 [配置](technical-specification.md#configuration), [步骤内部](technical-specification.md#step-internals), [阶段](technical-specification.md#step-stages)和 [运行模式](technical-specification.md#running-modes) 以了解更多信息。
+>請參閱 [設定](technical-specification.md#configuration)， [步驟內部](technical-specification.md#step-internals)， [階段](technical-specification.md#step-stages)、和 [執行模式](technical-specification.md#running-modes) 以取得詳細資訊。
 
 
-复杂的SQL查询可以组合在这些类中以获取和迁移数据。 此外，在 [映射步骤](technical-specification.md#map-step) 因为它会扫描所有现有表并尝试迁移数据，除非它位于 `<ignore>` 标记 `map.xml` 文件。
+可以在這些類別中組合複雜的SQL查詢，以擷取和移轉資料。 此外，這些表格在下列位置中應被「忽略」： [地圖步驟](technical-specification.md#map-step) 因為它會掃描所有現有表格並嘗試移轉資料，除非資料位於 `<ignore>` 的標籤 `map.xml` 檔案。
 
-对于完整性检查，请在 `config.xml` 文件来验证表结构是否与预期一致。
+對於完整性檢查，請在 `config.xml` 檔案來驗證資料表結構是否如我們所預期。
 
 ```xml
 <config xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
@@ -182,7 +182,7 @@ Magento2 `greatblog_post` 表格现在如下所示：
 </config>
 ```
 
-映射文件 `map-greatblog.xml`:
+對應檔案 `map-greatblog.xml`：
 
 ```xml
 <map xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
@@ -204,7 +204,7 @@ Magento2 `greatblog_post` 表格现在如下所示：
 </map>
 ```
 
-完整性检查类 `Vendor\Migration\Step\GreatBlog\Integrity` 扩展 `Migration\App\Step\AbstractIntegrity` 和包含 `perform` 验证表结构的方法：
+完整性檢查類別 `Vendor\Migration\Step\GreatBlog\Integrity` 延伸 `Migration\App\Step\AbstractIntegrity` 並包含 `perform` 我們驗證表格結構的方法：
 
 ```php
 class Integrity extends \Migration\App\Step\AbstractIntegrity
@@ -247,7 +247,7 @@ class Integrity extends \Migration\App\Step\AbstractIntegrity
 }
 ```
 
-接下来，必须创建一个类以处理数据并将其保存到Magento2数据库 `Vendor\Migration\Step\GreatBlog\Data`:
+接下來，您必須建立一個類別，以便處理和儲存資料至Magento2資料庫 `Vendor\Migration\Step\GreatBlog\Data`：
 
 ```php
 class Data implements \Migration\App\Step\StageInterface
@@ -325,7 +325,7 @@ class Data implements \Migration\App\Step\StageInterface
 }
 ```
 
-在卷类中 `Vendor\Migration\Step\GreatBlog\Volume`，我们会检查数据是否已完全迁移：
+在磁碟區類別中 `Vendor\Migration\Step\GreatBlog\Volume`，我們會檢查資料是否已完全移轉：
 
 ```php
 class Volume extends \Migration\App\Step\AbstractVolume
@@ -354,7 +354,7 @@ class Volume extends \Migration\App\Step\AbstractVolume
 }
 ```
 
-要添加增量迁移功能，请在 `deltalog.xml` 文件。 在 `group`，指定必须检查以进行更改的表的名称：
+若要新增差異移轉功能，請將新群組新增至 `deltalog.xml` 檔案。 在 `group`，指定必須檢查變更的資料表名稱：
 
 ```xml
 <groups>
@@ -365,7 +365,7 @@ class Volume extends \Migration\App\Step\AbstractVolume
 </groups>
 ```
 
-然后，创建 `Delta` 类 `Vendor\Migration\Step\GreatBlog\Delta` 延伸 `Migration\App\Step\AbstractDelta`:
+然後，建立 `Delta` 類別 `Vendor\Migration\Step\GreatBlog\Delta` 延伸功能 `Migration\App\Step\AbstractDelta`：
 
 ```php
 class Delta extends \Migration\App\Step\AbstractDelta
@@ -405,10 +405,10 @@ class Delta extends \Migration\App\Step\AbstractDelta
 }
 ```
 
-在示例中提供的自定义步骤实施之后，系统会从单个Magento1表中获取数据，并使用 `Vendor\Migration\Step\GreatBlog\Data` 类并将数据存储在两个Magento2表中。 在增量迁移中，使用 `Vendor\Migration\Step\GreatBlog\Delta` 类。
+在範例中提供的自訂步驟實作後，系統會從單一Magento1表格中取得資料，並使用進行處理 `Vendor\Migration\Step\GreatBlog\Data` 將資料分類並儲存在兩個Magento2表格中。 新記錄和變更記錄會在差異遷移時使用 `Vendor\Migration\Step\GreatBlog\Delta` 類別。
 
-## 禁止的扩展方法
+## 禁止的擴充功能方法
 
-自 [!DNL Data Migration Tool] 而Magento2不断演变，现有步骤和处理程序都会发生更改。 我们强烈建议不要覆盖诸如 [映射步骤](technical-specification.md#map-step), [URL重写步骤](technical-specification.md#url-rewrite-step)、和处理程序之间的映射。
+由於 [!DNL Data Migration Tool] 和Magento2不斷演化，現有步驟和處理常式可能會有所變更。 我們強烈建議您不要覆寫此類步驟的行為 [地圖步驟](technical-specification.md#map-step)， [URL重寫步驟](technical-specification.md#url-rewrite-step)、和處理程式。
 
-某些步骤不支持映射，因此不更改代码便无法更改。 您可以编写一个额外的步骤来在迁移结束时更改数据，也可以创建 [GitHub问题](https://github.com/magento/data-migration-tool/issues) 并在现有步骤中请求新的扩展点。
+某些步驟不支援對應，且無法在未變更程式碼的情況下變更。 您可以撰寫在移轉結束時變更資料的額外步驟，或建立 [GitHub問題](https://github.com/magento/data-migration-tool/issues) 並詢問現有步驟上的新擴充點。

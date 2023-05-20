@@ -1,6 +1,6 @@
 ---
-title: 商务核对表
-description: 查找有用的核对表，以帮助组织您的电子商务项目。
+title: Commerce檢查清單
+description: 尋找有用的檢查清單以協助組織您的電子商務專案。
 exl-id: 4b5e5bca-7b5b-46e7-b3eb-ef6289d238ed
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 0%
 
 ---
 
-# 商务核对表和模板
+# Commerce檢查清單和範本
 
-使用此页面上的模板和复选框列表来组织您的商务项目。
+使用此頁面上的範本和檢查清單來組織您的商務專案。
 
-## 商务核对表
+## Commerce檢查清單
 
-单击链接以下载核对清单：
+按一下連結以下載檢查清單：
 
-- [期限](../../assets/playbooks/checklists/maturity.pptx)
-- [上线](../../assets/playbooks/checklists/go-live.pptx)
-- [性能](../../assets/playbooks/checklists/performance.pptx)
-- [商务平台迁移](../../assets/playbooks/checklists/commerce-platform-migration.pptx)
+- [成熟度](../../assets/playbooks/checklists/maturity.pptx)
+- [上線](../../assets/playbooks/checklists/go-live.pptx)
+- [效能](../../assets/playbooks/checklists/performance.pptx)
+- [Commerce平台移轉](../../assets/playbooks/checklists/commerce-platform-migration.pptx)
 
-## 商务模板
+## 商務範本
 
-单击链接以下载模板：
+按一下連結以下載範本：
 
-- [研讨会前需求调查表](../../assets/playbooks/templates/requirements-questionnaire.pptx)
-- [商务策略文档](../../assets/playbooks/templates/commerce-strategy-document.pptx)
-- [电子商务运营就绪性](../../assets/playbooks/templates/ecommerce-operational-readiness.pptx)
-- [电子商务平台功能](../../assets/playbooks/templates/ecommerce-platform-features.pptx)
-- [商户自站点评估](../../assets/playbooks/templates/merchant-self-site-assessment.pptx)
-- [用例](../../assets/playbooks/templates/use-case.pptx)
+- [需求研討會前問卷](../../assets/playbooks/templates/requirements-questionnaire.pptx)
+- [Commerce策略檔案](../../assets/playbooks/templates/commerce-strategy-document.pptx)
+- [電子商務營運整備](../../assets/playbooks/templates/ecommerce-operational-readiness.pptx)
+- [電子商務平台功能](../../assets/playbooks/templates/ecommerce-platform-features.pptx)
+- [商戶自我網站評估](../../assets/playbooks/templates/merchant-self-site-assessment.pptx)
+- [使用案例](../../assets/playbooks/templates/use-case.pptx)

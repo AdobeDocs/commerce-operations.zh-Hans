@@ -1,63 +1,64 @@
 ---
-title: 配置远程存储
-description: 了解如何为本地商务应用程序配置远程存储模块。
-source-git-commit: 9a5993c9a65ad210f1a9682734730f235bbc3d44
+title: 設定遠端儲存
+description: 瞭解如何為內部部署Commerce應用程式設定遠端儲存模組。
+exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
-# 配置远程存储
+# 設定遠端儲存
 
-远程存储模块提供了一个选项，用于存储媒体文件，并计划使用存储服务(如AWS S3)在永久性远程存储容器中导入和导出。 默认情况下，Adobe Commerce应用程序将媒体文件存储在包含该应用程序的同一文件系统中。 对于复杂的多服务器配置而言，这一效率很低，并且在共享资源时可能会导致性能降低。 使用远程存储模块，您可以在 `pub/media` 目录和导入/导出文件(位于 `var` 远程对象存储的目录，以利用服务器端图像大小调整。
-
->[!INFO]
->
->远程存储仅可用于Commerce版本2.4.2及更高版本。 请参阅 [2.4.2发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html).
+「遠端儲存」模組提供選項，讓您使用儲存服務(例如AWS S3)在永久性的遠端儲存容器中儲存媒體檔案及排程匯入和匯出。 依預設，Adobe Commerce應用程式會將媒體檔案儲存在包含應用程式的相同檔案系統中。 這對於複雜的多伺服器設定而言效率很低，並可能導致共用資源時效能降低。 使用遠端儲存模組，您可以將媒體檔案儲存在 `pub/media` 目錄和匯入/匯出檔案 `var` 遠端物件儲存的目錄，以利用伺服器端影像調整大小的功能。
 
 >[!INFO]
 >
->远程存储模块具有 _有限_ 在Adobe Commerce上支持云基础架构。 Adobe无法对第三方存储适配器服务进行完全故障诊断。 请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md) 为云项目实施远程存储提供了指导。
+>遠端儲存僅適用於Commerce 2.4.2版及更新版本。 請參閱 [2.4.2發行說明](https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html).
 
-![模式图像](../../assets/configuration/remote-storage-schema.png)
+>[!INFO]
+>
+>遠端儲存模組具有 _受限_ 在雲端基礎結構上支援Adobe Commerce。 Adobe無法完全疑難排解協力廠商儲存配接卡服務。 另請參閱 [在雲端基礎結構上設定Commerce的遠端儲存](cloud-support.md) 以取得為雲端專案實作遠端儲存裝置的指南。
 
-## 远程存储选项
+![結構描述影像](../../assets/configuration/remote-storage-schema.png)
 
-您可以使用 `remote-storage` 选项 [`setup` CLI命令](../../installation/tutorials/deployment.md). 的 `remote-storage` 选项使用以下语法：
+## 遠端儲存選項
+
+您可以使用 `remote-storage` 選項搭配 [`setup` CLI命令](../../installation/tutorials/deployment.md). 此 `remote-storage` option會使用以下語法：
 
 ```text
 --remote-storage-<parameter-name>="<parameter-value>"
 ```
 
-的 `parameter-name` 是指特定的远程存储参数名称。 下表列出了可用于配置远程存储的参数：
+此 `parameter-name` 是指特定的遠端儲存體引數名稱。 下表列出可用於設定遠端儲存的引數：
 
-| 命令行参数 | 参数名称 | 描述 | 默认值 |
+| 命令列引數 | 引數名稱 | 說明 | 預設值 |
 |--- |--- |--- |--- |
-| `remote-storage-driver` | 驱动程序 | 适配器名称<br>可能值：<br>**文件**:禁用远程存储并使用本地文件系统&#x200B;<br>**aws-s3**:使用 [Amazon Simple Storage Service(Amazon S3)](remote-storage-aws-s3.md) | 无 |
-| `remote-storage-bucket` | 桶 | 对象存储或容器名称 | 无 |
-| `remote-storage-prefix` | 前缀 | 可选前缀（对象存储内的位置） | 空 |
-| `remote-storage-region` | 地区 | 区域名称 | 无 |
-| `remote-storage-key` | 访问密钥 | 可选访问密钥 | 空 |
-| `remote-storage-secret` | 密钥 | 可选密钥 | 空 |
+| `remote-storage-driver` | 驅動程式 | 介面卡名稱<br>可能的值：<br>**檔案**：停用遠端儲存並使用本機檔案系統&#x200B;<br>**aws-s3**：使用 [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md) | 無 |
+| `remote-storage-bucket` | 貯體 | 物件儲存空間或容器名稱 | 無 |
+| `remote-storage-prefix` | 前置詞 | 選擇性首碼（物件儲存體內的位置） | 空白 |
+| `remote-storage-region` | 區域 | 區域名稱 | 無 |
+| `remote-storage-key` | 存取金鑰 | 選擇性存取金鑰 | 空白 |
+| `remote-storage-secret` | 秘密金鑰 | 選擇性秘密金鑰 | 空白 |
 
-### 存储适配器
+### 儲存配接卡
 
-默认存储位置位于本地文件系统中。 A _存储适配器_ 使您能够连接到存储服务并将文件存储到任何位置。 [!DNL Commerce] 支持配置以下存储服务：
+預設儲存位置在本機檔案系統中。 A _儲存配接卡_ 可讓您連線至儲存服務，並將您的檔案存放於任何地方。 [!DNL Commerce] 支援設定下列儲存服務：
 
-- [Amazon Simple Storage Service(Amazon S3)](remote-storage-aws-s3.md)
+- [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md)
 
-## 启用远程存储
+## 啟用遠端儲存
 
-您可以在Adobe Commerce安装期间安装远程存储，或将远程存储添加到现有的Commerce实例。 以下示例演示了使用一组 `remote-storage` 具有商务的参数 `setup` CLI命令。 至少，你必须提供存储 `driver`, `bucket`和 `region`.
+您可以在Adobe Commerce安裝期間安裝遠端儲存體，或將遠端儲存體新增至現有的Commerce執行個體。 下列範例示範使用一組的每種方法 `remote-storage` 引數和Commerce `setup` CLI命令。 至少您必須提供儲存空間 `driver`， `bucket`、和 `region`.
 
-- 示例：使用远程存储安装Commerce
+- 範例：使用遠端儲存體安裝Commerce
 
    ```bash
    bin/magento setup:install --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
    ```
 
-- 示例：在现有商务上启用远程存储
+- 範例：在現有商務上啟用遠端儲存
 
    ```bash
    bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
@@ -65,23 +66,23 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关云基础架构上的Adobe Commerce，请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md).
+>如需雲端基礎結構上的Adobe Commerce，請參閱 [在雲端基礎結構上設定Commerce的遠端儲存](cloud-support.md).
 
 ## 限制
 
-不能同时启用远程存储和数据库存储。 如果使用远程存储，请禁用数据库存储。
+您無法同時啟用遠端儲存裝置和資料庫儲存裝置。 如果您使用遠端儲存，請停用資料庫儲存。
 
 ```bash
 bin/magento config:set system/media_storage_configuration/media_database 0
 ```
 
-启用远程存储可能会影响您已建立的开发体验。 例如，某些PHP文件函数可能无法按预期工作。 必须对文件操作强制使用商务框架。
+啟用遠端儲存可能會影響您既定的開發體驗。 例如，某些PHP檔案函式可能無法如預期運作。 必須強制使用Commerce Framework進行檔案作業。
 
-禁止使用的PHP本机函数列表可在 [magento-coding-standard存储库][code-standard].
+禁止的PHP原生函式清單可在 [magento-coding-standard存放庫][code-standard].
 
-## 迁移内容
+## 移轉內容
 
-为特定适配器启用远程存储后，可以使用CLI迁移现有 _媒体_ 文件到远程存储。
+為特定介面卡啟用遠端儲存後，您可以使用CLI移轉現有的 _媒體_ 檔案至遠端儲存空間。
 
 ```bash
 ./magento2ce/bin/magento remote-storage:sync
@@ -89,7 +90,7 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 >[!INFO]
 >
->sync命令只迁移 `pub/media` 目录， _not_ 在 `var` 目录访问Advertising Cloud的帮助。 请参阅 [计划导入/导出][import-export] 在 _Commerce 2.4用户指南_.
+>sync指令只會移轉 `pub/media` 目錄， _not_ 匯入/匯出檔案於 `var` 目錄。 另請參閱 [排定的匯入/匯出][import-export] 在 _Commerce 2.4使用手冊_.
 
 <!-- link definitions -->
 

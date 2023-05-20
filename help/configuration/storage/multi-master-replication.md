@@ -1,38 +1,38 @@
 ---
-title: 数据库复制
-description: 请参阅配置数据库复制的好处。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 資料庫復寫
+description: 瞭解設定資料庫復寫的好處。
+exl-id: 0e41dca0-5a23-4d12-96fe-241c511ae366
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
-
-# 数据库复制
+# 資料庫復寫
 
 {{ee-only}}
 
 {{deprecate-split-db}}
 
-设置数据库复制具有以下好处：
+設定資料庫復寫可提供下列優點：
 
-- 提供数据备份
-- 在不影响主控数据库的情况下支持数据分析
-- 可扩展性
+- 提供資料備份
+- 在不影響master資料庫的情況下啟用資料分析
+- 擴充性
 
-MySQL数据库以异步方式复制，这意味着从服务器无需永久连接即可从主控接收更新。
+MySQL資料庫會以非同步方式復寫，這表示從屬端不需要永久連線即可接收主端的更新。
 
-## 配置数据库复制
+## 設定資料庫復寫
 
-对数据库复制的深入讨论不在本指南的范围之内。 要进行设置，您可以查阅资源，如：
+本指南不涵蓋有關資料庫復寫的深入討論。 若要進行設定，您可以查詢資源，例如：
 
-- [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/replication.html)
-- [如何在MySQL(digitalocean)中设置主控从复制](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
+- [MySQL檔案](https://dev.mysql.com/doc/refman/5.6/en/replication.html)
+- [如何在MySQL (digitalocean)中設定主從複製](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
 
-商务为从数据库提供MySQL配置示例。 提供了简单的配置 `ResourceConnections` 类 `README.md`.
+Commerce提供從屬資料庫的MySQL設定範例。 簡單的設定可搭配 `ResourceConnections` 類別 `README.md`.
 
-以下更高级，仅供参考：
+以下為較進階的資訊，僅供您參考：
 
 ```php
    return array (
@@ -119,11 +119,11 @@ MySQL数据库以异步方式复制，这意味着从服务器无需永久连接
    //.......
 ```
 
-## 性能改进
+## 效能提升
 
-为了提高主控从复制的性能，您可以在从实例上过滤一些表。 我们建议过滤所有具有名称模式的临时表 `search\_tmp\_%` 用于目录搜索的ID和ID。
+若要改善主從式復寫的效能，您可以篩選從屬執行個體上的某些表格。 我們建議使用名稱模式篩選所有暫存表格 `search\_tmp\_%` 用於目錄搜尋。
 
-为此，请将以下行添加到 `my.cnf` 文件：
+若要這麼做，請將下列行新增至 `my.cnf` 從屬執行個體上的檔案：
 
 ```conf
 replicate-wild-ignore-table=%.search\_tmp\_%

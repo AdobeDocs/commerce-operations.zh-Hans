@@ -1,53 +1,53 @@
 ---
-title: 卸载或重新安装Adobe Commerce
-description: 按照以下步骤卸载并重新安装Adobe Commerce和Magento Open Source的内部安装。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 解除安裝或重新安裝Adobe Commerce
+description: 請依照下列步驟，解除安裝並重新安裝Adobe Commerce和Magento Open Source的內部部署。
+exl-id: fbaeee2c-8da0-4c89-a6d1-882a65014520
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 0%
 
 ---
 
+# 解除安裝或重新安裝Adobe Commerce
 
-# 卸载或重新安装Adobe Commerce
+在使用這些指令之前，您必須 [安裝應用程式](../tutorials/install.md).
 
-在使用这些命令之前，您必须 [安装应用程序](../tutorials/install.md).
+## 更新應用程式
 
-## 更新应用程序
+若要更新應用程式：
 
-要更新应用程序，请执行以下操作：
+* 如果您是從封存安裝軟體，或是使用「composer-create-project」，請參閱 [升級指南](../../upgrade/overview.md).
+* 如果您是參與開發人員(也就是說，您使用的是 `git clone`)，請參閱 [更新應用程式](../../upgrade/developer/git-installs.md).
 
-* 如果您通过存档安装了软件，或者如果您使用了“composer-create-project”，请参阅 [升级指南](../../upgrade/overview.md).
-* 如果您是参与开发人员(即，使用 `git clone`)，请参阅 [更新应用程序](../../upgrade/developer/git-installs.md).
+## 重新安裝應用程式
 
-## 重新安装应用程序
+從命令列重新安裝應用程式的方式取決於您的角色：
 
-从命令行重新安装应用程序的方式取决于您的角色：
+* 如果您是從封存安裝軟體，或如果您使用「composer-create-project」，請參閱 [更新安裝相依性](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
+* 如果您是參與開發人員(也就是說，您已開始使用 `git clone`)，請參閱 [更新安裝相依性](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
 
-* 如果您通过存档安装了软件，或者使用了“composer-create-project”，请参阅 [更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
-* 如果您是参与开发人员(即，您开始使用 `git clone`)，请参阅 [更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
+## 解除安裝應用程式
 
-## 卸载应用程序
+解除安裝應用程式會刪除及還原資料庫、移除部署設定，並清除以下目錄： `var`.
 
-卸载应用程序会丢弃并还原数据库，删除部署配置，并清除下面的目录 `var`.
-
-要卸载应用程序，请输入以下命令：
+若要解除安裝應用程式，請輸入下列命令：
 
 ```bash
 bin/magento setup:uninstall
 ```
 
-将显示以下消息以确认卸载成功：
+系統會顯示下列訊息，確認解除安裝成功：
 
 ```terminal
 [SUCCESS]: Magento uninstallation complete.
 ```
 
-## （可选）保留生成的文件
+## 選擇性地保留產生的檔案
 
-默认情况下， `bin/magento setup:upgrade` 清除编译的代码和缓存。 通常，您使用 `bin/magento setup:upgrade` 要更新组件和每个组件可能需要不同的编译类。
+依預設， `bin/magento setup:upgrade` 清除編譯的程式碼和快取。 通常您會使用 `bin/magento setup:upgrade` 更新元件，每個元件可能需要不同的編譯類別。
 
-但是，在某些情况下（特别是部署到生产），您可能希望避免清除已编译的代码，因为这可能需要一些时间。 （缓存仍被清除。） 更新数据库模式和数据 *无* 清除编译代码，输入：
+但是，在某些情況下（特別是部署到生產環境），您可能希望避免清除編譯的程式碼，因為這可能需要一些時間。 （快取仍會清除。） 更新資料庫架構和資料 *不含* 清除編譯的程式碼，請輸入：
 
 ```bash
 bin/magento setup:upgrade --keep-generated
@@ -55,8 +55,8 @@ bin/magento setup:upgrade --keep-generated
 
 >[!WARNING]
 >
->可选 `--keep-generated` 选项应在有限情况下由经验丰富的系统集成商使用 *仅*. 此选项应 *从* 用于开发环境。 如果不正确使用此可选参数，则可能会在代码执行期间导致错误。
+>選填 `--keep-generated` 選項應由經驗豐富的系統整合經銷商在有限的情況下使用 *僅限*. 此選項應 *從不* 用於開發環境中。 不當使用此選用引數可能會在程式碼執行期間導致錯誤。
 
-## 安装应用程序
+## 安裝應用程式
 
-* [使用命令行进行安装](../advanced.md)
+* [使用命令列安裝](../advanced.md)

@@ -1,38 +1,38 @@
 ---
-title: 在CentOS上设置memcached
-description: 在CentOS上安装和配置memcached。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 在CentOS上設定記憶體快取
+description: 在CentOS上安裝並設定memcached。
+exl-id: fc4ad18b-7e99-496e-aebc-1d7640d8716c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
 
 ---
 
+# 在CentOS上設定記憶體快取
 
-# 在CentOS上设置memcached
-
-本节提供了在CentOS上安装Memcached的说明。 有关其他信息，请参阅 [memcachedwiki](https://github.com/memcached/old-wiki).
+本節提供在CentOS上安裝memcached的說明。 如需詳細資訊，請參閱 [memcached wiki](https://github.com/memcached/old-wiki).
 
 >[!INFO]
 >
->Adobe建议使用最新的稳定memcached版本（目前为memcached 3.1.3）。
+>Adobe建議使用最新的穩定memcached版本（目前memcached為3.1.3）。
 
-由于PHP不支持内存缓存，因此必须安装PHP的扩展才能使用它。 有两个PHP扩展可用，对要使用的进行解码很重要：
+由於PHP對memcache沒有原生支援，因此您必須安裝PHP擴充功能才能使用它。 有兩個可用的PHP擴充功能，請務必解碼要使用哪個：
 
-- `memcache` (_no d_) — 旧的常用扩展，不会定期维护。
-的 `memcache` 当前扩展 _不_ 使用7菲律宾比索。 请参阅 [内存缓存的PHP文档](https://www.php.net/manual/en/book.memcache.php).
+- `memcache` (_否d_) — 舊版但常用的擴充功能，不會定期維護。
+此 `memcache` 目前為擴充功能 _不會_ 使用PHP 7。 另請參閱 [memcache的PHP檔案](https://www.php.net/manual/en/book.memcache.php).
 
-   确切的名称是 `php-pecl-memcache` 的URL。
+   確切的名稱為 `php-pecl-memcache` 適用於CentOS。
 
-- `memcached` (_带有`d`_) — 与PHP 7兼容的较新且维护的扩展。 请参阅 [Memcached的PHP文档](https://www.php.net/manual/en/book.memcached.php).
+- `memcached` (_搭配`d`_) — 與PHP 7相容的更新和維護的擴充功能。 另請參閱 [memcached的PHP檔案](https://www.php.net/manual/en/book.memcached.php).
 
-   确切的名称是 `php-pecl-memcached` 的URL。
+   確切的名稱為 `php-pecl-memcached` 適用於CentOS。
 
-## 在CentOS上安装和配置memcached
+## 在CentOS上安裝並設定記憶體快取
 
-要在CentOS上安装Memcached，请以用户身份执行以下任务 `root` 权限：
+若要在CentOS上安裝memcached，請以使用者身分執行以下工作 `root` 許可權：
 
-1. 安装memcached及其依赖项：
+1. 安裝memcached及其相依性：
 
    ```bash
    yum -y update
@@ -52,46 +52,46 @@ ht-degree: 0%
 
    >[!INFO]
    >
-   >上述命令的语法可能取决于您使用的包存储库。 例如，如果您使用WebTatic和PHP 5.6，请输入 `yum install -y php56w-pecl-memcache`. 使用 `yum search memcache|grep php` 以查找相应的包名称。
+   >上述命令的語法可能取決於您使用的套裝程式儲存區域。 例如，如果您使用網路和PHP 5.6，請輸入 `yum install -y php56w-pecl-memcache`. 使用 `yum search memcache|grep php` 以尋找適當的封裝名稱。
 
 
-1. 更改的memcached配置设置 `CACHESIZE` 和 `OPTIONS`:
+1. 變更的memcached組態設定 `CACHESIZE` 和 `OPTIONS`：
 
-   1. 打开 `/etc/sysconfig/memcached` 在文本编辑器中。
-   1. 找到的值 `CACHESIZE` 并将其更改为至少1 GB。 例如：
+   1. 開啟 `/etc/sysconfig/memcached` 在文字編輯器中。
+   1. 找到「 」的值 `CACHESIZE` 並將其變更為至少1 GB。 例如：
 
       ```config
       CACHESIZE="1GB"
       ```
 
-   1. 找到的值 `OPTIONS` 并将其更改为 `localhost` 或 `127.0.0.1`
+   1. 找到「 」的值 `OPTIONS` 並將其變更為 `localhost` 或 `127.0.0.1`
 
-1. 将更改保存到 `memcached` 并退出文本编辑器。
-1. 重新启动memcached。
+1. 將變更儲存至 `memcached` 並退出文字編輯器。
+1. 重新啟動memcached。
 
    ```bash
    service memcached restart
    ```
 
-1. 重新启动Web服务器。
+1. 重新啟動網頁伺服器。
 
-   对于Apache:
+   若為Apache：
 
    ```bash
    service httpd restart
    ```
 
-1. 继续下一节。
+1. 繼續下一節。
 
-## 在安装Commerce之前验证Memcached的工作
+## 在安裝Commerce之前驗證memcached是否有效
 
-Adobe建议先测试memcached，以确保它在安装Commerce之前可正常工作。 这样做只需几分钟时间，并且以后可以简化故障排除。
+Adobe建議先測試memcached以確保其可運作，然後再安裝Commerce。 只需幾分鐘即可完成，並可簡化後續的疑難排解。
 
-### 验证Web服务器是否识别了memcached
+### 確認網頁伺服器可辨識成員快取
 
-要验证Web服务器是否识别Memcached，请执行以下操作：
+若要確認網頁伺服器可辨識成員快取：
 
-1. 创建 `phpinfo.php` 文件：
+1. 建立 `phpinfo.php` 網頁伺服器docroot中的檔案：
 
    ```php
    <?php
@@ -99,31 +99,31 @@ Adobe建议先测试memcached，以确保它在安装Commerce之前可正常工�
    phpinfo();
    ```
 
-1. 在Web浏览器中转到该页面。
+1. 前往網頁瀏覽器中的該頁面。
 
    例如， `http://192.0.2.1/phpinfo.php`
 
-1. 确保memcache显示如下：
+1. 請確定memcache顯示如下：
 
-![确认Web服务器识别内存缓存](../../assets/configuration/memcache.png)
+![確認網頁伺服器可辨識成員快取](../../assets/configuration/memcache.png)
 
-验证您使用的是Memcached 3.0.5或更高版本。
+確認您使用的是memcached 3.0.5版或更新版本。
 
-如果内存缓存未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍未显示，请验证您是否安装了 `php-pecl-memcache` 扩展。
+如果memcache未顯示，請重新啟動網頁伺服器並重新整理瀏覽器頁面。 如果仍然沒有顯示，請確認您已安裝 `php-pecl-memcache` 副檔名。
 
-### 创建由MySQL数据库和PHP脚本组成的memcache测试
+### 建立由MySQL資料庫和PHP指令碼組成的成員快取測試
 
-测试使用MySQL数据库、表和数据来验证是否可以检索数据库数据并将其存储在内存缓存中。 PHP脚本首先搜索缓存。 如果结果不存在，脚本将查询数据库。 在原始数据库完成查询后，脚本使用 `set` 命令。
+此測試會使用MySQL資料庫、表格和資料，以確認您可以擷取資料庫資料並將其儲存在memcache中。 PHP指令碼會先搜尋快取。 如果結果不存在，指令碼會查詢資料庫。 原始資料庫完成查詢後，指令碼會使用 `set` 命令。
 
-[有关此测试的更多详细信息](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-12-04)
+[此測試的更多詳細資料](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-12-04)
 
-创建MySQL数据库：
+建立MySQL資料庫：
 
 ```bash
 mysql -u root -p
 ```
 
-在 `mysql` 提示，输入以下命令：
+在 `mysql` 提示，輸入下列命令：
 
 ```sql
 create database memcache_test;
@@ -134,7 +134,7 @@ insert into example values (1, "new_data");
 exit
 ```
 
-创建 `cache-test.php` 在web服务器的docroot中：
+建立 `cache-test.php` 在網頁伺服器的docroot中：
 
 ```php
 $meminstance = new Memcached();
@@ -162,9 +162,9 @@ print "got result from memcached\n";
 return 0;
 ```
 
-其中 `<memcached hostname or ip>` 是 `localhost`, `127.0.0.1`，或memcache主机名或IP地址。 的 `<memcached port>` 是监听端口；默认情况下， `11211`.
+位置 `<memcached hostname or ip>` 為 `localhost`， `127.0.0.1`，或成員快取主機名稱或IP位址。 此 `<memcached port>` 是監聽連線埠；依預設， `11211`.
 
-从命令行中运行脚本。
+從命令列執行指令碼。
 
 ```bash
 cd <web server docroot>
@@ -174,23 +174,23 @@ cd <web server docroot>
 php cache-test.php
 ```
 
-第一个结果是 `got result from mysql`. 这意味着密钥在Memcached中不存在，但是从MySQL中检索。
+第一個結果為 `got result from mysql`. 這表示該索引鍵不存在於memcached中，但它是從MySQL擷取的。
 
-第二个结果是 `got result from memcached`，用于验证值是否已成功存储在memcached中。
+第二個結果為 `got result from memcached`，會驗證值是否已成功儲存在memcached中。
 
-最后，您可以使用Telnet查看内存缓存密钥：
+最後，您可以使用Telnet檢視memcache金鑰：
 
 ```bash
 telnet localhost <memcache port>
 ```
 
-在提示时，输入
+出現提示時，輸入
 
 ```bash
 stats items
 ```
 
-结果类似于以下内容：
+結果類似下列：
 
 ```terminal
 STAT items:3:number 1
@@ -202,7 +202,7 @@ STAT items:3:outofmemory 0
 STAT items:3:tailrepairs 0
 ```
 
-刷新内存缓存并退出Telnet:
+清除memcache儲存體並結束Telnet：
 
 ```bash
 flush_all
@@ -212,4 +212,4 @@ flush_all
 quit
 ```
 
-[有关Telnet测试的其他信息](https://darkcoding.net/software/memcached-list-all-keys/)
+[Telnet測試的其他資訊](https://darkcoding.net/software/memcached-list-all-keys/)

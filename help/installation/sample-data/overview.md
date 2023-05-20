@@ -1,27 +1,27 @@
 ---
-title: 示例数据概述
-description: 了解如何为Adobe Commerce和Magento Open Source项目使用示例数据。
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+title: 範例資料概述
+description: 瞭解如何針對Adobe Commerce和Magento Open Source專案使用範例資料。
+exl-id: 828b009d-a6ff-4db2-aa1a-838f6f55a194
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
 
 ---
 
+# 範例資料概述
 
-# 示例数据概述
+範例資料提供以Luma主題為基礎的店面，並搭配產品、類別、客戶註冊等。 它的功能就像一個Commerce店面，您可以使用管理員來控制價格、庫存和促銷定價規則。
 
-示例数据基于Luma主题提供了一个店面，内容包括产品、类别、客户注册等。 它的功能与商业店面类似，您可以使用管理员来处理价格、库存和促销定价规则。
-
-您可以在安装商务软件之前或之后安装示例数据。 完成采样数据后，您可以删除该数据，也可以按照 [删除示例数据模块或更新示例数据](remove-or-update.md).
+您可以在安裝Commerce軟體之前或之後安裝範例資料。 使用完範例資料後，您可以將其移除或全新安裝，如中所述 [移除範例資料模組或更新範例資料](remove-or-update.md).
 
 >[!WARNING]
 >
->无法卸载示例数据。 我们建议您仅使用示例数据来了解Adobe Commerce和Magento Open Source的工作方式。 避免在安装了示例数据的系统中进行任何开发。
+>您無法解除安裝範例資料。 建議您只使用範例資料，以瞭解Adobe Commerce和Magento Open Source的運作方式。 請避免在您已安裝範例資料的系統中進行任何開發。
 
-您可以通过以下任一方式安装可选示例数据：
+您可以透過下列任何方式安裝選用的範例資料：
 
-| 安装方法 | 描述 | 所需技能水平 |
+| 安裝方法 | 說明 | 所需技能等級 |
 |--- |--- |--- |
-| 使用编辑器 | [运行 `magento sampledata:deploy` 修改应用程序的根 `composer.json`](composer-packages.md) 启用示例数据模块。 | 需要编辑器知识并有权访问商务文件系统。 |
-| 克隆存储库 | [克隆GitHub存储库](git-repositories.md) 和示例数据存储库，然后将它们链接在一起。 | 仅供参与开发人员使用。 其他每个人都应使用上述方法之一。 |
+| 使用撰寫器 | [執行 `magento sampledata:deploy` 修改應用程式的根目錄 `composer.json`](composer-packages.md) 以啟用範例資料模組。 | 需要Composer知識以及商務檔案系統的存取權。 |
+| 複製存放庫 | [複製GitHub存放庫](git-repositories.md) 和範例資料存放庫建立連結，然後將兩者連結在一起。 | 僅供貢獻開發人員使用。 其他所有人都應使用上述其中一種方法。 |

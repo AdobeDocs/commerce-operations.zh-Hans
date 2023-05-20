@@ -5,17 +5,17 @@ source-wordcount: '72'
 ht-degree: 0%
 
 ---
-# 敏感数据
+# 敏感資料
 
-Adobe Commerce和Magento Open Source使用您的加密密钥加密以下内容：
+Adobe Commerce和Magento Open Source會使用您的加密金鑰來加密下列專案：
 
-* 信用卡信息
-* 在“管理员”配置中指定的用户名和密码（例如，登录支付网关）
-* 通过网络发送的验证码值
+* 信用卡資訊
+* 在管理員設定中指定的使用者名稱和密碼（例如，登入付款閘道）
+* 透過網路傳送的驗證碼值
 
-Adobe Commerce和Magento Open Sourcedo *not* 加密：
+Adobe Commerce和Magento Open Source do *not* encrypt：
 
-* 管理用户名和客户用户名和密码（这些密码经过哈希处理）
+* 管理和客戶使用者名稱及密碼（這些密碼會經過雜湊處理）
 * 地址
-* 电话号码
-* 除信用卡号码外的其他个人身份信息类型
+* 電話號碼
+* 除信用卡號碼以外的其他個人識別資訊

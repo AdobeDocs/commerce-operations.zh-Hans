@@ -1,7 +1,8 @@
 ---
-title: '"[!DNL Information]"'
-description: 了解 [!UICONTROL Information] 选项卡 [!DNL Site-Wide Analysis Tool]、何时使用、其好处和最佳实践。
-source-git-commit: 6cbb4b4fef5e1ccc06803b5a3af5dd9f4d0e7df8
+title: '[!DNL Information]'
+description: 瞭解 [!UICONTROL Information] 索引標籤中的 [!DNL Site-Wide Analysis Tool]，以及何時使用、其好處和最佳實務。
+exl-id: 5f18b4c1-1812-4e9d-8b81-88cf6b9af860
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 0%
@@ -10,22 +11,22 @@ ht-degree: 0%
 
 # [!DNL Information]
 
-的 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Information] 页面显示有关您网站的概述信息。 此页面在左侧导航中还显示了两个产品区域： **[!UICONTROL General Information]** 和 **Adobe Commerce**.
+此 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Information] 頁面會顯示有關您網站的概觀資訊。 此頁面在左側導覽中進一步顯示兩個產品區域： **[!UICONTROL General Information]** 和 **Adobe Commerce**.
 
-的 [!UICONTROL General Information] 区域显示商户网站基本数据，联系所有者， [!DNL Jira] 问题（仅限内部使用）和报表票证部分。
+此 [!UICONTROL General Information] 區域顯示商家網站基本資料、聯絡擁有者、 [!DNL Jira] 問題（僅限內部使用）及報表票證區段。
 
-此时将显示Adobe Commerce区域 [!UICONTROL Site Details], [!UICONTROL Products], [!UICONTROL Project] &amp; [!UICONTROL Integration links], [!UICONTROL Account]和 [!UICONTROL Service and Components] 中。
+Adobe Commerce區域隨即顯示 [!UICONTROL Site Details]， [!UICONTROL Products]， [!UICONTROL Project] 和 [!UICONTROL Integration links]， [!UICONTROL Account]、和 [!UICONTROL Service and Components] 區段。
 
-## 何时使用
+## 使用時機
 
-使用 [!UICONTROL Information] 页面查看上述所有详细信息。
+使用 [!UICONTROL Information] 頁面，以一目瞭然地檢視上述所有詳細資訊。
 
-## 优点
+## 優點
 
-* 快速、轻松地访问帐户和存储信息。
+* 快速輕鬆地存取帳戶和存放區資訊。
 
-* 在一个位置查找并检查存储详细信息、设置、服务和组件的版本。
+* 在一個位置尋找並檢查商店詳細資訊、設定、服務和元件的版本。
 
-## 最佳实践
+## 最佳實務
 
-自 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Information] 页面列出了您网站的概述信息，请记住此页面，以便快速访问您的信息，以便规划、维护或支持您的商店或帐户。
+由於 [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Information] 頁面列出您網站的概觀資訊，請記住此頁面以快速存取您的資訊，以便規劃、維護或支援您的商店或帳戶。

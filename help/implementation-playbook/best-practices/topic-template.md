@@ -1,13 +1,13 @@
 ---
-title: 最佳实践主题标题
-description: 了解如何……
+title: 最佳實務主題標題
+description: 瞭解如何……
 role: Developer
 feature: Best Practices
 hide: true
 hidefromtoc: true
 source-git-commit: 4360a3436f013c1b2a8b95a876d2037a6987acac
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Available roles: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/met
 
 Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/metadata-values/feature.yml  -->
 
-# 标题
+# 標題
 
 <!--Template instruction:  Add one or two sentences to summarize the overall contents of this best practice topic-->
 
-## 受影响的产品和版本
+## 受影響的產品和版本
 
 <!-- Template comment: When we have the ability to tag content by versions, we might be able to remove this explicit header in favor of using tags for versions and editions.-->
 
@@ -34,30 +34,30 @@ Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/
 
 <!-- Example 1: -->
 
-[所有受支持的版本](../../../release/versions.md) 共：
+[所有支援的版本](../../../release/versions.md) 之：
 
-- Adobe Commerce云基础架构
-- Adobe Commerce
+- 雲端基礎結構上的Adobe Commerce
+- Adobe Commerce內部部署
 
 <!-- Example 2: -->
 
-Adobe Commerce on cloud infrastructure，其中包含Adobe Commerce版本2.3.4或更低版本以及MariaDB版本10.0或更低版本。
+使用Adobe Commerce 2.3.4版或更早版本以及MariaDB 10.0版或更早版本在雲端基礎結構上使用Adobe Commerce。
 
-<!-- Business type: B2C and B2B -- specify only if needed/)-->
+&lt;! — 業務型別：B2C和B2B — 僅在需要時指定/)—>
 
-## 标题……
+## 頁首……
 
-将内容分块到部分中，以便更轻松地阅读。 内容应当包括行动动员和示例（好与坏），以及指向文档（如果适用）的链接
+將內容區塊化為區段以方便閱讀。 內容應包含行動號召的範例（好與壞）和檔案連結（如適用）
 
-## 标题……
+## 頁首……
 
-只使用所需数量的部分
+視需要使用儘可能多的區段
 
-## 其他信息
+## 其他資訊
 
 <!-- If applicable, add links to additional, more detailed documentation that provides more context about this best practices content.-->
 
-- 主题1
-- 主题2
+- 主題1
+- 主題2
 
 <!-- Template instruction:  Remove all template comments and instructions from the best practices article before committing your changes. -->

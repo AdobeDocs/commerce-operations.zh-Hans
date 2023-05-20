@@ -1,22 +1,22 @@
 ---
-title: 配置数据库探查器
-description: 请参阅如何为数据库探查器配置输出的示例。
-badge: label="Contributed by Atish Goswami" type="Informative" url="https://github.com/atishgoswami" tooltip="Atish Goswami"
-source-git-commit: bcb995ea417423b0cbc59c035ba5fdedbce3310e
+title: 設定資料庫分析工具
+description: 請參閱如何設定資料庫效能分析工具輸出的範例。
+badge: label="Contributed by Atish Goswami" type="Informational" url="https://github.com/atishgoswami" tooltip="Atish Goswami"
+exl-id: 87780db5-6e50-4ebb-9591-0cf22ab39af5
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
+# 設定資料庫分析工具
 
-# 配置数据库探查器
+Commerce資料庫分析工具會顯示頁面上實作的所有查詢，包括每個查詢的時間以及套用的引數。
 
-商务数据库探查器显示页面上实现的所有查询，包括每个查询的时间和应用的参数。
+## 步驟1：修改部署組態
 
-## 步骤1:修改部署配置
-
-修改 `<magento_root>/app/etc/env.php` 将以下引用添加到 [数据库探查器类](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php):
+修改 `<magento_root>/app/etc/env.php` 將下列參照新增至 [資料庫效能分析工具類別](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php)：
 
 ```php?start_inline=1
         'profiler' => [
@@ -25,7 +25,7 @@ ht-degree: 0%
         ],
 ```
 
-示例如下：
+範例如下：
 
 ```php?start_inline=1
  'db' =>
@@ -52,17 +52,17 @@ ht-degree: 0%
   ),
 ```
 
-## 步骤2:配置输出
+## 步驟2：設定輸出
 
-在商务应用程序引导文件中配置输出；这可能 `<magento_root>/pub/index.php` 或者，它可以位于web服务器虚拟主机配置中。
+在Commerce應用程式啟動程式檔案中設定輸出；這可能是 `<magento_root>/pub/index.php` 或者，它可以位於Web伺服器虛擬主機設定中。
 
-以下示例在三列表中显示结果：
+下列範例會在三欄表格中顯示結果：
 
-- 总时间（显示在页面上运行所有查询的总时间）
-- SQL(显示所有SQL查询；行标题显示查询计数)
-- 查询参数（显示每个SQL查询的参数）
+- 總時間（顯示頁面上執行所有查詢的總時間）
+- SQL （顯示所有SQL查詢；列標題顯示查詢計數）
+- 查詢引數（顯示每個SQL查詢的引數）
 
-要配置输出，请在 `$bootstrap->run($app);` 引导文件中的行：
+若要設定輸出，請在 `$bootstrap->run($app);` 在您的bootstrap檔案中的行：
 
 ```php?start_inline=1
 /** @var \Magento\Framework\App\ResourceConnection $res */
@@ -86,8 +86,8 @@ foreach ($profiler->getQueryProfiles() as $query) {
 echo "</table>";
 ```
 
-## 步骤3:查看结果
+## 步驟3：檢視結果
 
-转到店面或管理员中的任意页面以查看结果。 示例如下：
+前往店面或管理員中的任何頁面檢視結果。 範例如下：
 
-![数据库探查器结果示例](../../assets/configuration/db-profiler-results.png)
+![範例資料庫效能分析工具結果](../../assets/configuration/db-profiler-results.png)

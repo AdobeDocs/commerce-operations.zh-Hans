@@ -1,47 +1,47 @@
 ---
-title: 自动配置主控数据库
-description: 请参阅有关自动配置拆分数据库解决方案的指南。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 自動設定主資料庫
+description: 請參閱自動設定分割資料庫解決方案的指南。
+exl-id: a27ad097-de60-4cdd-81f9-eb1ae84587e4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
 
 ---
 
-
-# 自动配置主控数据库
+# 自動設定主資料庫
 
 {{ee-only}}
 
 {{deprecate-split-db}}
 
-本主题讨论如何通过以下方式开始使用拆分数据库解决方案：
+本主題說明如何透過下列方式開始使用分割資料庫解決方案：
 
-1. 使用单个主控数据库安装Adobe Commerce(名为 `magento`)
-1. 为结帐和OMS创建另外两个主控数据库(名为 `magento_quote` 和 `magento_sales`)
-1. 配置Adobe Commerce以使用结帐和销售数据库
+1. 使用單一master資料庫安裝Adobe Commerce （已命名） `magento`)
+1. 建立兩個額外的主資料庫以用於簽出和OMS （已命名） `magento_quote` 和 `magento_sales`)
+1. 設定Adobe Commerce以使用結帳與銷售資料庫
 
 >[!INFO]
 >
->本指南假定所有三个数据库都与Commerce应用程序位于同一台主机上，并且它们名为 `magento`, `magento_quote`和 `magento_sales`. 但是，数据库的位置及其名称的选择取决于您。 我们希望这些示例能够更方便地遵循相关说明。
+>本指南假設所有三個資料庫與Commerce應用程式位於相同主機上，且已將它們命名為 `magento`， `magento_quote`、和 `magento_sales`. 不過，您可以自行選擇資料庫的所在位置及其命名名稱。 我們希望我們的範例能讓指示更容易遵循。
 
-## 安装Adobe Commerce软件
+## 安裝Adobe Commerce軟體
 
-安装Adobe Commerce软件后，您可以随时启用拆分数据库；换言之，您可以将拆分数据库添加到已具有结帐和订购数据的Adobe Commerce系统。 使用Adobe Commerce README或 [安装指南](../../installation/overview.md) 使用单个主控数据库安装Adobe Commerce软件。
+您可以在安裝Adobe Commerce軟體後隨時啟用分割資料庫；換言之，您可以將分割資料庫新增至已具有結帳和訂購資料的Adobe Commerce系統。 使用Adobe Commerce README中的指示或 [安裝指南](../../installation/overview.md) 使用單一master資料庫安裝Adobe Commerce軟體。
 
-## 设置其他主控数据库
+## 設定其他主要資料庫
 
-按如下方式创建结帐和OMS主控数据库：
+建立簽出和OMS主資料庫，如下所示：
 
-1. 以任何用户身份登录数据库服务器。
-1. 输入以下命令以转到MySQL命令提示符：
+1. 以任何使用者身分登入您的資料庫伺服器。
+1. 輸入下列命令以進入MySQL命令提示字元：
 
    ```bash
    mysql -u root -p
    ```
 
-1. 输入MySQL `root` 用户的密码。
-1. 按照创建名为的数据库实例的顺序输入以下命令 `magento_quote` 和 `magento_sales` 使用相同的用户名和密码：
+1. 輸入MySQL `root` 提示時的使用者密碼。
+1. 按照顯示的順序輸入以下命令，以建立名為的資料庫執行處理 `magento_quote` 和 `magento_sales` 相同的使用者名稱和密碼：
 
    ```shell
    create database magento_quote;
@@ -59,11 +59,11 @@ ht-degree: 0%
    GRANT ALL ON magento_sales.* TO magento_sales@localhost IDENTIFIED BY 'magento_sales';
    ```
 
-1. 输入 `exit` 退出命令提示符。
+1. 輸入 `exit` 結束命令提示字元。
 
-1. 每次验证一个数据库：
+1. 逐一驗證資料庫：
 
-   结帐数据库：
+   簽出資料庫：
 
    ```bash
    mysql -u magento_quote -p
@@ -73,7 +73,7 @@ ht-degree: 0%
    exit
    ```
 
-   订单管理系统数据库：
+   訂單管理系統資料庫：
 
    ```bash
    mysql -u magento_sales -p
@@ -83,19 +83,19 @@ ht-degree: 0%
    exit
    ```
 
-   如果显示MySQL监视器，则表示您已正确创建了数据库。 如果显示错误，请重复上述命令。
+   如果顯示MySQL監督器，表示您已正確建立資料庫。 如果顯示錯誤，請重複上述命令。
 
-## 配置Commerce以使用主控数据库
+## 設定Commerce以使用主資料庫
 
-在设置了总共三个主控数据库之后，使用命令行配置Commerce以使用它们。 (该命令设置数据库连接并在主控数据库之间分发表。)
+在設定總共三個主要資料庫之後，請使用命令列來設定Commerce以使用它們。 （此指令會設定資料庫連線，並將表格分散到主要資料庫中。）
 
-### 首要步骤
+### 首要步驟
 
-请参阅 [运行命令](../cli/config-cli.md#running-commands) 登录并运行CLI命令。
+另請參閱 [正在執行命令](../cli/config-cli.md#running-commands) 以登入並執行CLI命令。
 
-### 配置签出数据库
+### 設定簽出資料庫
 
-命令语法：
+命令語法：
 
 ```bash
 bin/magento setup:db-schema:split-quote --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
@@ -107,15 +107,15 @@ bin/magento setup:db-schema:split-quote --host="<checkout db host or ip>" --dbna
 bin/magento setup:db-schema:split-quote --host="localhost" --dbname="magento_quote" --username="magento_quote" --password="magento_quote"
 ```
 
-将显示以下消息以确认设置成功：
+系統會顯示下列訊息，確認設定成功：
 
 ```terminal
 Migration has been finished successfully!
 ```
 
-### 配置OMS数据库
+### 設定OMS資料庫
 
-命令语法：
+命令語法：
 
 ```bash
 bin/magento setup:db-schema:split-sales --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
@@ -131,7 +131,7 @@ bin/magento setup:db-schema:split-sales --host="localhost" --dbname="magento_sal
 bin/magento setup:upgrade
 ```
 
-将显示以下消息以确认设置成功：
+系統會顯示下列訊息，確認設定成功：
 
 ```terminal
 Migration has been finished successfully!

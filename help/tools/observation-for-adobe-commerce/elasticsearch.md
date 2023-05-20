@@ -1,90 +1,90 @@
 ---
-title: “ [!UICONTROL Elasticsearch] 选项卡”
-description: 了解 [!UICONTROL Elasticsearch] 选项卡 [!DNL Observation for Adobe Commerce].
-source-git-commit: b3cc9033eb9445af3edafd8c7ae9809dbb8174fc
+title: 此 [!UICONTROL Elasticsearch] 標籤
+description: 瞭解 [!UICONTROL Elasticsearch] 索引標籤/ [!DNL Observation for Adobe Commerce].
+exl-id: e98d351d-b3b1-47bc-bc0d-f96ba9ec2b80
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
 
 ---
 
-
-# 的 [!UICONTROL Elasticsearch] 选项卡
+# 此 [!UICONTROL Elasticsearch] 標籤
 
 ## [!UICONTROL Cluster Status Summary]:
 
-![群集状态摘要](../../assets/tools/cluster-status-summary.jpg)
+![叢集狀態摘要](../../assets/tools/cluster-status-summary.jpg)
 
-在选定的时间范围内， **[!UICONTROL Cluster Status Summary]** 框架显示 [!DNL Elasticsearch] 群集已通过。 在此示例中，在选定的时间范围内，群集在选定时间范围内处于“绿色”状态一次，在“黄色”状态下一次。
+在選取的時間範圍內， **[!UICONTROL Cluster Status Summary]** 框架顯示顏色狀態 [!DNL Elasticsearch] 叢集已通過。 在此範例中，在選取的時間範圍內，叢集在選取的時間範圍內分別處於綠色和黃色狀態一次。
 
 ## [!UICONTROL Active Primary Shards]
 
-![活动主碎片](../../assets/tools/active-primary-shards.jpg)
+![使用中的主要分片](../../assets/tools/active-primary-shards.jpg)
 
-的 **[!UICONTROL Active Primary Shards]** 框架根据所选帐户的活动主共享数量显示不同的数量 [!DNL Elasticsearch] 服务。
+此 **[!UICONTROL Active Primary Shards]** frame會根據所選帳戶的使用中主要分片的數量，顯示不同的數字 [!DNL Elasticsearch] 服務。
 
-从 [!DNL Elasticsearch]:最终指南 [2.x]:
+從 [!DNL Elasticsearch]：最終指南 [2.x]：
 
-“在 [可动态更新的索引](https://www.elastic.co/guide/en/elasticsearch/guide/2.x/dynamic-indices.html)，我们解释说，碎片是卢塞内指数，而且 [!DNL Elasticsearch] index是碎片的集合。 您的应用程序会与索引进行对话，并且 [!DNL Elasticsearch] 将请求路由到相应的碎片。 碎片是比例单位。 您可以拥有的最小索引是包含单个分片的索引。 这可能足以满足您的需求 — 单个分片可以保存大量数据 — 但它限制了您扩展的能力。”
+&quot;In [可動態更新的索引](https://www.elastic.co/guide/en/elasticsearch/guide/2.x/dynamic-indices.html)，我們說明分片是一種Lucene索引，並且 [!DNL Elasticsearch] index是分片的集合。 您的應用程式與索引對話，並且 [!DNL Elasticsearch] 將您的要求傳送至適當的分片。 分片是比例單位。 您可以擁有的最小索引是具有單一分片的索引。 這或許足以滿足您的需求 — 單一分割可以儲存大量資料 — 但限制了您的擴充能力。」
 
-创建索引后，会使用该索引创建多个分片。 默认情况下，每个新索引将分配五个主要分片，这意味着一个索引可以跨五个节点分布（每个节点一个分片）。 还有复制品碎片。 这些主要用于故障转移。 副本碎片可以提供读取请求。
+建立索引時，會使用該索引建立多個分片。 依預設，每個新索引會分配五個主要分片，這表示一個索引可以分散到五個節點（每個節點一個分片）。 也有復本分片。 這些主要用於容錯移轉。 復本分片可提供讀取要求。
 
 ## [!UICONTROL Active Shards in Cluster]
 
-![群集中的活动碎片](../../assets/tools/active-shards-in-cluster.jpg)
+![叢集中的作用中分片](../../assets/tools/active-shards-in-cluster.jpg)
 
-的 **[!UICONTROL Active Shards in Cluster]** frame显示 [!DNL Elasticsearch] 群集。
+此 **[!UICONTROL Active Shards in Cluster]** frame會顯示「 」中主要和復本分割的總數。 [!DNL Elasticsearch] 叢集。
 
 ## [!UICONTROL Index health - this will show the index name and color status]
 
-![指数运行状况](../../assets/tools/index-health.jpg)
+![索引健康狀況](../../assets/tools/index-health.jpg)
 
-此框架显示索引名称和索引颜色状态计数。 向下滚动表格时，将看到具有相同的索引名称，其状态为“黄色”和“红色”。 在27个索引名称后面显示的编号是状态颜色的计数。 如果为零，则在选定的时间范围内没有索引处于该颜色状态的实例。
+此框架顯示索引名稱和索引色彩狀態計數。 向下捲動表格，您會看到相同的索引名稱具有黃色和紅色顏色狀態。 27索引名稱之後的數字是狀態顏色的計數。 如果為零，則在選取的時間範圍內，沒有處於該色彩狀態的索引執行個體。
 
 ## [!UICONTROL Elasticsearch Status by node information]
 
-![Elasticsearch状态](../../assets/tools/elasticsearch-status-by-node.jpg)
+![Elasticsearch狀態](../../assets/tools/elasticsearch-status-by-node.jpg)
 
-的 **[!UICONTROL Elasticsearch Status by node information]** 框架显示 [!DNL Elasticsearch] 按颜色和节点划分的群集状态。 这有助于指示 [!DNL Elasticsearch] 群集在选定的时间范围内返回什么状态。
+此 **[!UICONTROL Elasticsearch Status by node information]** 框架顯示 [!DNL Elasticsearch] 依顏色和節點區分的叢集狀態。 這有助於指示中的哪個節點 [!DNL Elasticsearch] 叢集在選取的時間範圍內傳回什麼狀態。
 
 ## [!UICONTROL Elasticsearch index information]
 
-![Elasticsearch索引信息](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
+![Elasticsearch索引資訊](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
-的 **[!UICONTROL Elasticsearch index information]** 表显示索引名称、其所在节点、已索引文档的数量、索引运行状况，以及特定时间的索引大小（以MB为单位）。
+此 **[!UICONTROL Elasticsearch index information]** 表格會顯示索引名稱、索引所在的節點、已編制索引的檔案數目、索引健康狀況，以及在特定時間的索引大小（以MB為單位）。
 
 ## [!UICONTROL Elasticsearch process CPU %]
 
-![Elasticsearch进程CPU](../../assets/tools/elasticsearch-process-cpu.jpg)
+![Elasticsearch處理CPU](../../assets/tools/elasticsearch-process-cpu.jpg)
 
-的 **[!UICONTROL Elasticsearch process CPU %]** 帧显示进程CPU百分比，按 [!DNL Elasticsearch] 处理时间范围。
+此 **[!UICONTROL Elasticsearch process CPU %]** frame顯示處理CPU百分比，方法是 [!DNL Elasticsearch] 在選取的時間範圍內處理。
 
 ## [!UICONTROL Elasticsearch Memory garbage collection]
 
-![Elasticsearch内存垃圾](../../assets/tools/elasticsearch-memory-garbage.jpg)
+![Elasticsearch記憶體垃圾桶](../../assets/tools/elasticsearch-memory-garbage.jpg)
 
-[!DNL Elasticsearch] 是一个Java进程。 如果它在已分配的内存上运行低，则它将启动垃圾收集以释放内存。 如果垃圾收集频繁，则表示已分配内存可能存在过多的索引或碎片。 或许有机会清理指数和碎片，或 [!DNL Elasticsearch] 可能需要更多内存。
+[!DNL Elasticsearch] 是Java程式。 如果配置的記憶體不足，它會啟動記憶體回收以釋放記憶體。 如果垃圾收集頻繁，則表示配置的記憶體可能有太多索引或分片。 可能有機會清除索引和分片，或 [!DNL Elasticsearch] 可能需要更多記憶體。
 
 ## [!UICONTROL Elasticsearch Index information]
 
-![Elasticsearch索引信息](../../assets/tools/elasticsearch-index-information-2.jpg)
+![Elasticsearch索引資訊](../../assets/tools/elasticsearch-index-information-2.jpg)
 
-创建和更新索引后，索引运行状况可能会发生更改。
+建立及更新索引時，索引狀況可能會變更。
 
 ## [!UICONTROL Elasticsearch Index Size]
 
 ![Elasticsearch索引大小](../../assets/tools/elasticsearch-index-size.jpg)
 
-的 **[!UICONTROL Elasticsearch Index Size]** frame表示选定时间范围内的索引名称和大小。 它可能表示网站的索引方式存在问题。
+此 **[!UICONTROL Elasticsearch Index Size]** frame會指出所選時間範圍內的索引名稱和大小。 這可能表示網站索引的方式有問題。
 
 ## [!UICONTROL Elasticsearch Errors]
 
-![Elasticsearch错误](../../assets/tools/elasticsearch-tab-elasticsearch-errors.jpg)
+![Elasticsearch錯誤](../../assets/tools/elasticsearch-tab-elasticsearch-errors.jpg)
 
-的 **[!UICONTROL Elasticsearch Errors]** 框架显示错误 [!DNL Elasticsearch] 与空间不足一样，当所有分片都失败时、当搜索存在参数问题时、版本错误时以及当所有节点都不可用时，从“黄色”状态切换为“红色”状态。
+此 **[!UICONTROL Elasticsearch Errors]** 框架顯示錯誤 [!DNL Elasticsearch] 例如空間不足，當所有分片都失敗時、當搜尋有引數問題、版本錯誤和所有節點都不可用時，從黃色切換到紅色狀態。
 
 ## [!UICONTROL Elasticsearch Unassigned Shards]:
 
-![Elasticsearch未分配分片](../../assets/tools/elasticsearch-unassigned-shards.jpg)
+![Elasticsearch未指派的分片](../../assets/tools/elasticsearch-unassigned-shards.jpg)
 
-未分配的分片将导致群集从绿色状态变为黄色状态。
+未指派的分割會導致叢集從綠色狀態移至黃色狀態。

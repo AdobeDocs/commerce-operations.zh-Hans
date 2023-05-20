@@ -1,33 +1,33 @@
 ---
-title: 验证拆分数据库
-description: 了解如何验证Commerce Split数据库配置是否正常工作。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 驗證分割資料庫
+description: 瞭解如何驗證Commerce分割資料庫設定是否正常運作。
+exl-id: 36295240-6521-4f3e-9ea3-f35b73de672d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
-# 验证拆分数据库
+# 驗證分割資料庫
 
 {{ee-only}}
 
 {{deprecate-split-db}}
 
-配置后，主控数据库的配置如下所示：
+組態之後，主要資料庫的設定如下：
 
-- 主商务数据库：369个表
-- 商务报价数据库：11个表
-- 商务销售数据库：55个表
+- 主要Commerce資料庫： 369個表格
+- Commerce報價資料庫： 11個表格
+- Commerce銷售資料庫： 55個資料表
 
-要验证拆分数据库是否正常工作，请执行以下任务，并使用数据库工具(如 [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin):
+若要驗證分割資料庫是否正常運作，請執行以下工作，並使用資料庫工具(例如 [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin)：
 
-| 验证内容 | 如何验证 |
+| 要驗證的內容 | 如何驗證 |
 | -------------- | ------------- |
-| 报价数据库正在工作 | 将项目添加到购物车。 验证行是否已添加到报价数据库的 `quote`, `quote_address`和 `quote_item` 表格。 |
-| 销售数据库正在工作 | 完成订单（任何付款方式，包括支票/货币订单）。 验证行是否已添加到您销售数据库的 `sales_order_address`, `sales_order_item`和 `sales_order_payment` 表格。 |
+| 報價資料庫運作中 | 新增專案至購物車。 確認已將列新增至報價資料庫的 `quote`， `quote_address`、和 `quote_item` 表格。 |
+| 銷售資料庫運作中 | 完成訂單（任何付款方式，包括支票/匯票）。 確認已將資料列新增至銷售資料庫的 `sales_order_address`， `sales_order_item`、和 `sales_order_payment` 表格。 |
 
 >[!WARNING]
 >
->您必须手动备份另外两个数据库实例。 商务仅备份主数据库实例。 的 [`magento setup:backup --db`](../../installation/tutorials/backup.md) 命令和管理选项不备份其他表。
+>您必須手動備份另外兩個資料庫執行處理。 Commerce只會備份主要資料庫執行個體。 此 [`magento setup:backup --db`](../../installation/tutorials/backup.md) 命令和管理選項不會備份其他表格。

@@ -5,28 +5,28 @@ source-wordcount: '336'
 ht-degree: 0%
 
 ---
-# 新模板功能
+# 新增功能範本
 
 ## 新增功能
 
-了解新文档和现有文档的重要更新。
+瞭解新檔案和現有檔案的重要更新。
 
 ### 2023年5月12日
 
 <table style="table-layout:auto;">
   <thead>
     <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
+      <th>說明</th>
+      <th>型別</th>
+      <th>來源</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>在 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/performance/benchmarks.html">性能基准</a>.</p>
+      <td><p>已將基礎結構詳細資料新增至 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/performance/benchmarks.html">效能標竿</a>.</p>
 </td>
-      <td>主更新</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/762bc2b9bdd19d92707525044a4178b6e89e4a3d">762bc2</a> （提交）</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/762bc2b9bdd19d92707525044a4178b6e89e4a3d">762bc2</a> （認可）</td>
     </tr>
   </tbody>
 </table>
@@ -36,17 +36,17 @@ ht-degree: 0%
 <table style="table-layout:auto;">
   <thead>
     <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
+      <th>說明</th>
+      <th>型別</th>
+      <th>來源</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>已发布 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">发行说明</a> 适用于1.1.31质量修补程序工具(QPT)包版本。</p>
+      <td><p>已發佈 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">發行說明</a> 適用於1.1.31 Quality Patches Tool (QPT)套件發行。</p>
 </td>
-      <td>主更新</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7f30857b612d027dfce26fac1f947006f28ecfa6">7f3085</a> （提交）</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7f30857b612d027dfce26fac1f947006f28ecfa6">7f3085</a> （認可）</td>
     </tr>
   </tbody>
 </table><!-- date_group -->
@@ -56,17 +56,17 @@ ht-degree: 0%
 <table style="table-layout:auto;">
   <thead>
     <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
+      <th>說明</th>
+      <th>型別</th>
+      <th>來源</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了 <code class="language-plaintext highlighter-rouge">commerce.eventing.event.publish</code> 消息队列使用者 <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/consumers.html">参考表</a>.</p>
+      <td><p>已新增 <code class="language-plaintext highlighter-rouge">commerce.eventing.event.publish</code> 訊息佇列取用者至 <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/consumers.html">參考資料表</a>.</p>
 </td>
-      <td>技术</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/2f9bfcf9a8232cbe659062a9b1bc88eda3d9158c">2f9bfc</a> （提交）</td>
+      <td>技術</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/2f9bfcf9a8232cbe659062a9b1bc88eda3d9158c">2f9bfc</a> （認可）</td>
     </tr>
   </tbody>
 </table>
@@ -76,23 +76,23 @@ ht-degree: 0%
 <table style="table-layout:auto;">
   <thead>
     <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
+      <th>說明</th>
+      <th>型別</th>
+      <th>來源</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关新发布的2.4.6已知问题修补程序的信息。 请参阅 <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Adobe Commerce和Magento Open Source的发行说明</a>.</p>
+      <td><p>新增有關2.4.6已知問題新發行修補程式的資訊。 另請參閱 <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Adobe Commerce和Magento Open Source的發行說明</a>.</p>
 </td>
-      <td>技术</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fdbb0959b615689eba3068bc93c4c9876c7a7972">fdbb09</a> （提交）</td>
+      <td>技術</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fdbb0959b615689eba3068bc93c4c9876c7a7972">fdbb09</a> （認可）</td>
     </tr>
     <tr>
-      <td><p>添加了有关 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard.html">安全中心小组件</a> （在站点范围评估工具功能板中）。</p>
+      <td><p>已新增關於 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard.html">安全中心Widget</a> 「全網站評估工具」控制面板中的。</p>
 </td>
-      <td>主更新</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1e84ee6db07ec9080971de22a24fe8a7d8705916">1e84ee</a> （提交）</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1e84ee6db07ec9080971de22a24fe8a7d8705916">1e84ee</a> （認可）</td>
     </tr>
   </tbody>
 </table>
@@ -102,17 +102,17 @@ ht-degree: 0%
 <table style="table-layout:auto;">
   <thead>
     <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
+      <th>說明</th>
+      <th>型別</th>
+      <th>來源</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/self-hosting/overview.html">新章节</a> 关于自托管概念（包括性能、安全性、监控和灾难恢复）。</p>
+      <td><p>已新增 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/self-hosting/overview.html">新區段</a> 自行託管概念，包括效能、安全性、監控及災難回覆。</p>
 </td>
-      <td>新主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/699c512de9c6d28ba354f02b4db76975eb5410a9">699c51</a> （提交）</td>
+      <td>新主題</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/699c512de9c6d28ba354f02b4db76975eb5410a9">699c51</a> （認可）</td>
     </tr>
   </tbody>
 </table>
@@ -122,17 +122,17 @@ ht-degree: 0%
 <table style="table-layout:auto;">
   <thead>
     <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
+      <th>說明</th>
+      <th>型別</th>
+      <th>來源</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>已发布 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">发行说明</a> 适用于1.1.30质量修补程序工具(QPT)包版本。</p>
+      <td><p>已發佈 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">發行說明</a> 適用於1.1.30 Quality Patches Tool (QPT)套件發行。</p>
 </td>
-      <td>主更新</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/84ed7dd2c24eef437d6719d9758da43423347eeb">84ed7d</a> （提交）</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/84ed7dd2c24eef437d6719d9758da43423347eeb">84ed7d</a> （認可）</td>
     </tr>
   </tbody>
 </table>
@@ -142,17 +142,17 @@ ht-degree: 0%
 <table style="table-layout:auto;">
   <thead>
     <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
+      <th>說明</th>
+      <th>型別</th>
+      <th>來源</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了 <a href="https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html">术语表</a>. 已从https://glossary.magento.com迁移。</p>
+      <td><p>已新增 <a href="https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html">字彙表</a>. 已從https://glossary.magento.com移轉。</p>
 </td>
-      <td>新主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d9b7659e5d4c3770956f0c2a96e5c97a3dc2af19">d9b765</a> （提交）</td>
+      <td>新主題</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d9b7659e5d4c3770956f0c2a96e5c97a3dc2af19">d9b765</a> （認可）</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->

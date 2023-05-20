@@ -1,28 +1,28 @@
 ---
-title: '"[!DNL Upgrade Compatibility Tool] 相关工具”'
-description: 了解有关 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
-source-git-commit: e2ddb30da8dd86236e1dcf33a3f911b67384a6d7
+title: '''[!DNL Upgrade Compatibility Tool] 相關工具'
+description: 進一步瞭解的相關工具 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce專案上。
+exl-id: a8cebb74-fba9-42ce-914b-b8fb6c7f53bf
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
-
-# [!DNL Upgrade Compatibility Tool] 相关工具
+# [!DNL Upgrade Compatibility Tool] 相關工具
 
 {{commerce-only}}
 
-有一些与 [!DNL Upgrade Compatibility Tool]，可用于获得类似结果，或者可以触发执行 [!DNL Upgrade Compatibility Tool].
+有些工具與 [!DNL Upgrade Compatibility Tool]，可用於類似結果，或可觸發 [!DNL Upgrade Compatibility Tool].
 
-- **[!DNL Security scanner]**:通过主动检测恶意软件并通知其存储受到攻击，为Adobe Commerce和Magento Open Source客户提供对其存储安全状态的实时分析。 请参阅 [[!DNL Security scan] 用户指南](https://docs.magento.com/user-guide/magento/security-scan.html) 以了解更多信息。
+- **[!DNL Security scanner]**：主動偵測惡意軟體，並在其存放區受到侵害時通知客戶，藉此為Adobe Commerce和Magento Open Source客戶提供其存放區安全性狀態的即時深入分析。 請參閱 [[!DNL Security scan] 使用手冊](https://docs.magento.com/user-guide/magento/security-scan.html) 以取得詳細資訊。
 
-- **[!DNL Site-Wide Analysis Tool]**:主动式自助服务工具和中央存储库，包括详细的系统分析和建议，可确保Adobe Commerce安装的安全性和可操作性。 它提供24/7实时性能监控、报告和建议，以识别潜在问题，并更好地了解站点运行状况、安全和应用程序配置。 请参阅 [[!DNL Site-Wide Analysis Tool] 指南](../../tools/site-wide-analysis-tool/intro.md) 以了解更多信息。
+- **[!DNL Site-Wide Analysis Tool]**：主動式自助服務工具和中央存放庫，其中包含詳細的系統分析和建議，以確保Adobe Commerce安裝的安全性和可操作性。 它提供全天候的即時效能監控、報告和建議，以找出潛在問題，並提供對網站健康狀況、安全性和應用程式設定的更佳可見度。 請參閱 [[!DNL Site-Wide Analysis Tool] 指南](../../tools/site-wide-analysis-tool/intro.md) 以取得詳細資訊。
 
-- **[!DNL AmpersandHQ]**:查找在升级中已修改的文件，并尝试查看您的网站中是否有任何覆盖。 这样，您就可以专注于已更改且特定于您网站的内容。 请参阅 [[!DNL AmpersandHQ] 存储库指南](https://github.com/AmpersandHQ) 以了解更多信息。
+- **[!DNL AmpersandHQ]**：尋找在升級過程中修改的檔案，並嘗試檢視您的網站中是否有任何覆寫。 這可讓您專注在已變更的事物上，而且是您的網站專屬的事物。 請參閱 [[!DNL AmpersandHQ] 存放庫指南](https://github.com/AmpersandHQ) 以取得詳細資訊。
 
    >[!WARNING]
    >
    >[!DNL AmpersandHQ] 不是Adobe官方工具。
 
-- **[!DNL Quality Patches Tool]**:一种命令行工具，可为Adobe Commerce和Magento Open Source提供高质量修补程序。 请参阅 [[!DNL Quality patches tool] 用户指南](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}以了解详细信息。
+- **[!DNL Quality Patches Tool]**：命令列工具，可為Adobe Commerce和Magento Open Source提供高品質的修補程式。 請參閱 [[!DNL Quality patches tool] 使用手冊](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} 以取得詳細資訊。

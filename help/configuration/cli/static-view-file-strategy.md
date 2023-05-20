@@ -1,75 +1,75 @@
 ---
-title: 静态视图文件的部署策略
-description: 请阅读有关商务应用程序的部署策略。
-source-git-commit: 96fe0c5eeaa029347c829c39547ee5e473c8d04d
+title: 靜態檢視檔案的部署策略
+description: 閱讀Commerce應用程式的部署策略。
+exl-id: 12ebbd36-f813-494f-9515-54ce697ca2e4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
 
 ---
 
+# 靜態檢視檔案的部署策略
 
-# 静态视图文件的部署策略
+部署靜態檢視檔案時，您可以選擇三種可用策略之一。 其中每個選項都針對不同使用案例提供最佳部署結果：
 
-部署静态视图文件时，您可以选择三种可用策略之一。 其中每个组件可为不同用例提供最佳部署结果：
+- [標準](#standard-strategy)：一般部署程式。
+- [快速](#quick-strategy) (_預設_)：在部署多個地區設定的檔案時，將部署所需的時間減到最少。
+- [壓縮](#compact-strategy)：將發佈檢視檔案所佔用的空間減到最少。
 
-- [标准](#standard-strategy):常规部署过程。
-- [快速](#quick-strategy) (_默认_):在部署多个区域设置的文件时，最大限度地缩短部署所需的时间。
-- [紧凑](#compact-strategy):最大限度地减少已发布视图文件占用的空间。
+以下各節說明每個策略的實作詳細資訊和功能。
 
-以下各节介绍了每个策略的实施详细信息和功能。
+## 標準策略
 
-## 标准策略
+使用標準策略時，會部署所有套件的所有靜態檢視檔案，也就是由處理 [`\Magento\Framework\App\View\Asset\Publisher`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/View/Asset/Publisher.php).
 
-使用标准策略时，将部署所有包的所有静态视图文件，即，由 [`\Magento\Framework\App\View\Asset\Publisher`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/View/Asset/Publisher.php).
-
-有关更多信息，请参阅 [部署静态视图文件](../cli/static-view-file-deployment.md).
+如需詳細資訊，請參閱 [部署靜態檢視檔案](../cli/static-view-file-deployment.md).
 
 ## 快速策略
 
-快速策略会执行以下操作：
+快速策略會執行下列動作：
 
-1. 对于每个主题，都会选择一个任意区域设置，并部署此区域设置的所有文件，如在标准策略中。
-1. 对于主题的所有其他区域设置：
+1. 對於每個主題，選擇一個任意語言環境，並部署此語言環境的所有檔案，例如在標準策略中。
+1. 對於主題的所有其他區域設定：
 
-   1. 定义并部署覆盖已部署区域设置的文件。
-   1. 所有其他文件在所有区域设置中都被视为相似文件，并从已部署的区域设置复制。
+   1. 會定義並部署覆寫已部署地區設定的檔案。
+   1. 所有其他檔案在所有地區設定中都被視為類似，並從部署的地區設定中複製。
 
 >[!INFO]
 >
->按 _相似_，是指与区域设置、主题或区域无关的文件。 这些文件可能包含CSS、图像和字体。
+>作者： _相似_，是指與地區、主題或區域無關的檔案。 這些檔案可能包含CSS、影像和字型。
 
-虽然大量文件都是重复的，但这种方法可以最大限度地缩短多个区域设置所需的部署时间。
+雖然有許多檔案重複，但此方法可將多個地區設定所需的部署時間減到最少。
 
-## 紧凑策略
+## 壓縮策略
 
-该紧凑策略通过在 `base` 子目录。
+壓縮策略可藉由將類似檔案儲存在中來避免檔案重複 `base` 子目錄。
 
-对于最优化的结果，会分配三个可能的相似范围：区域、主题和区域设置。 的 `base` 将为这些作用域的所有组合创建子目录。
+為獲得最佳化結果，已分配了三個可能相似性的範圍：區域、主題和地區。 此 `base` 系統會為這些範圍的所有組合建立子目錄。
 
-这些文件将按照以下模式部署到这些子目录。
+檔案會根據下列模式部署至這些子目錄。
 
-| 图案 | 描述 |
+| 圖樣 | 說明 |
 | ------- | ----------- |
-| `<area>/<theme>/<locale>` | 特定于特定区域、主题和区域设置的文件 |
-| `<area>/<theme>/default` | 特定区域特定主题的所有区域设置都类似的文件。 |
-| `<area>/Magento/base/<locale>` | 特定于特定区域和区域设置的文件，但所有主题都类似。 |
-| `<area>/Magento/base/default` | 特定于特定区域的文件，但所有主题和区域设置都类似。 |
-| `base/Magento/base/<locale>` | 所有区域和主题的文件都相似，但特定于特定区域设置。 |
-| `base/Magento/base/default` | 所有区域、主题和区域设置都类似。 |
+| `<area>/<theme>/<locale>` | 特定區域、佈景主題和區域設定的特定檔案 |
+| `<area>/<theme>/default` | 特定區域特定主題的所有區域設定類似的檔案。 |
+| `<area>/Magento/base/<locale>` | 特定區域和地區設定的特定檔案，但所有主題都類似。 |
+| `<area>/Magento/base/default` | 特定區域的特定檔案，但所有主題和區域設定都類似。 |
+| `base/Magento/base/<locale>` | 所有區域和主題都相似的檔案，但特定於特定地區設定。 |
+| `base/Magento/base/default` | 所有區域、主題和區域設定都類似。 |
 
-### 映射已部署的文件
+### 對應已部署的檔案
 
-紧凑策略中使用的部署方法意味着文件继承自基本主题和区域设置。 这些继承关系存储在区域、主题和区域设置的每个组合的映射文件中。 PHP和JS有单独的映射文件：
+壓縮策略中使用的部署方法表示檔案繼承自基本主題和區域設定。 這些繼承關係會儲存在區域、主題和區域設定的每個組合的地圖檔案中。 PHP和JS有單獨的對應檔案：
 
 - `map.php`
 - `requirejs-map.js`
 
-的 `map.php` 文件使用者 [`Magento\Framework\View\Asset\Repository`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php) 以生成正确的URL。
+此 `map.php` 檔案使用者 [`Magento\Framework\View\Asset\Repository`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php) 以建置正確的URL。
 
-的 `requirejs-map.js` 的 `baseUrlResolver` 插件。
+此 `requirejs-map.js` 由使用 `baseUrlResolver` RequireJS的外掛程式。
 
-示例 `map.php`:
+範例： `map.php`：
 
 ```php?start_inline=1
 return [
@@ -86,7 +86,7 @@ return [
 ];
 ```
 
-示例 `requirejs-map.js`:
+範例： `requirejs-map.js`：
 
 ```js
 require.config({
@@ -98,8 +98,8 @@ require.config({
 });
 ```
 
-## 面向扩展开发人员的提示
+## 擴充功能開發人員的提示
 
-要生成静态视图文件的URL，请使用 [`\Magento\Framework\View\Asset\Repository::createAsset()`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php#L211-L244).
+若要建置靜態檢視檔案的URL，請使用 [`\Magento\Framework\View\Asset\Repository::createAsset()`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php#L211-L244).
 
-请勿使用URL连接来避免在页面渲染期间找不到或未显示静态文件的问题。
+請勿使用URL串連，以避免在頁面轉譯期間找不到靜態檔案且未顯示靜態檔案的問題。

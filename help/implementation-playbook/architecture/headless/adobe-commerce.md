@@ -1,6 +1,6 @@
 ---
-title: 无外设Adobe Commerce架构
-description: 了解Adobe Commerce无头架构方法的独特之处。
+title: Headless Adobe Commerce架構
+description: 瞭解Adobe Commerce的Headless架構方法有何獨特之處。
 exl-id: eac9d5b1-4917-4d2a-a8af-7f85c825fa0d
 source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
@@ -9,44 +9,44 @@ ht-degree: 0%
 
 ---
 
-# 无外设Adobe Commerce架构
+# Headless Adobe Commerce架構
 
-Adobe Commerce架构的好处是它不是一无是处的建议，商家可以为其业务找到合适的解决方案组合。 他们可以构建基于PWA Studio的PWA，以便获得主要站点体验，或将Adobe Experience Manager用作复杂客户旅程中的层，同时构建自定义前端以试验新的接触点。 没有其他平台能够与Adobe Commerce在其无外设架构上提供的上市时间和灵活性相匹配。
+Adobe Commerce架構的優點在於，它不是全有或全無的主張，商家可以為他們的企業找到合適的解決方案組合。 他們可以針對其主要網站體驗建置PWA Studio支援的PWA，或使用Adobe Experience Manager作為複雜客戶歷程中的圖層，同時建置自訂前端以實驗新的接觸點。 Adobe Commerce的Headless架構提供的上市時間優勢和靈活性，是其他任何平台都無法比擬的。
 
-![显示无头Adobe Commerce店面架构的图表](../../../assets/playbooks/headless-storefront-architecture.svg)
+![顯示Headless Adobe Commerce店面架構的圖表](../../../assets/playbooks/headless-storefront-architecture.svg)
 
-每种方法并不互斥。 客户可以构建自己的前端（头部）、使用PWA Studio提供Web/移动体验，和/或使用Adobe Experience Manager来提供玻璃（在完整部署或混合部署中）。
+每種方法並非互斥。 客戶可以建立自己的前端（頭部）、將PWA Studio用於網路/行動體驗，和/或將Adobe Experience Manager用於玻璃（在完整或混合部署中）。
 
-Adobe Commerce始终允许使用REST API进行无头部署。 尽管REST功能强大（尤其是对于批量处理而言），但GraphQL API通过直观的开发人员体验实现了更快的开发速度，允许不影响现有API的更改实现更大的灵活性，并且通过将检索到的数据量减至仅需要的数据量，从而提高性能。
+Adobe Commerce一律允許使用REST API進行Headless部署。 雖然REST功能強大（尤其是針對大量處理），但就Headless而言，GraphQL API可透過直覺式的開發人員體驗實現更快速的開發，並允許不會影響現有API的變更而提供更大的彈性，以及透過將擷取的資料量減至僅需精確提供所需內容而提供更好的效能。
 
-GraphQL是性能API的行业标准，许多顶级电子商务平台都使用该标准。 这是件好事，因为这意味着它是一个经过验证的解决方案，而且市场上有着丰富的专业知识。
+GraphQL是效能API的產業標準，許多頂級的電子商務平台都使用它。 這是好事，因為這表示這是經驗證的解決方案，而且市場上有專門技術。
 
-虽然Adobe Commerce的店面是耦合的，但商家不必使用Adobe Commerce的传统门面。 商家可以利用Adobe Commerce同类最佳的商务服务来处理后端业务流程，并且使用我们的店面API，集成他们自己的去耦店面以推动前端体验。
+雖然Adobe Commerce確實提供搭配店面選項，但商家絕不需要使用Adobe Commerce舊版店面。 商家可以利用Adobe Commerce同級最佳的商務服務來處理後端業務流程，並使用我們的店面API整合他們自己的分離式店面，以產生前端體驗。
 
-现在，让我们看看各种无头选项。
+現在，讓我們來看看各種Headless選項。
 
 ## PWA Studio
 
-第一个是使用PWA Studio构建的渐进式Web应用程序。 部分原因在于PWA是与商务后端分离的无头店面。 借助PWA Studio，商家可以在Adobe Commerce之上构建高性能、可靠且经济实惠的PWA，从而在移动和桌面上提供一流的Web体验。 随着时间的推移，此选项将超过耦合的店面作为默认选项。
+第一個是以PWA Studio建置的漸進式網頁應用程式。 部分之所以能夠這麼做，是因為PWA是與商務後端分離的Headless店面。 透過PWA Studio，商戶可以在Adobe Commerce之上建立高效能、可靠且符合成本效益的PWA，在行動裝置和桌上型電腦上提供同級最佳的網頁體驗。 隨著時間推移，這會取代耦合的店面作為預設選項。
 
-大多数商家都明白行业在PWA方面正朝着什么方向发展，许多潜在的拦截器正在迅速拆除。
+大多數商家瞭解產業在PWA方面的發展方向，許多潛在的封鎖程式正在被快速移除。
 
-一周又一周，在PWA Studio领域积累专业技能的合作伙伴数量不断增加，而且我们的客户发布数量也在不断增加。 PWA Studio的最新更新包括可扩展性，这将有助于在与Adobe Commerce Marketplace扩展的兼容性方面取得重大进展。
+一週又一週，建立PWA Studio專業知識的合作夥伴數量不斷增長，而客戶推出產品的數量也在不斷加快。 PWA Studio的最新更新包含擴充功能，可協助您在與Adobe Commerce Marketplace擴充功能的相容性方面取得重大進展。
 
-许多商家可能觉得，他们还没有准备好迎接无头和PWA，因为他们需要严重依赖开发商。 既拥有商务应用程序，又拥有Adobe Commerce开发的主管，其巨大好处之一是它有助于确保跨商务功能的兼容性。
+許多商戶可能會覺得他們還沒有準備好進行Headless和PWA，因為他們需要嚴重依賴開發人員。 同時擁有Adobe Commerce開發的商務應用程式和Head的其中一項巨大優點，就是它有助於確保各種商務功能的相容性。
 
-为了使PWA更易于访问并更便于商户管理，我们使业务用户能够使用页面生成器管理日常内容更改、创建新登陆页面等。 这两项强大的功能共同使所有设备和体验都能快速上市。
+為了讓我們的商戶更容易存取及管理PWA，我們賦予業務使用者管理日常內容變更、建立新登陸頁面等內容的許可權，並使用頁面產生器。 這兩項強大功能結合在一起，加速了所有裝置和體驗的上市速度。
 
 ## Adobe Experience Manager
 
-作为满足您的内容和数字资产管理需求的强大组合，Adobe Experience Manager可帮助商家更快地将以内容为导向的个性化体验推向市场，从而将数字资产管理与机器学习、Adobe Sensei支持的内容和客户历程管理的强大功能相结合。
+Adobe Experience Manager結合內容與數位資產管理需求，將數位資產管理與機器學習、Adobe Sensei支援的內容和客戶歷程管理的強大功能相結合，協助商戶更快將內容導向的個人化體驗推向市場。
 
-Adobe Commerce + Adobe Experience Manager是一个强大的故事，因为商务引擎允许企业通过由Adobe Experience Manager提供支持的客户界面启用商务。
+Adobe Commerce plus Adobe Experience Manager的強大優勢在於其商務引擎可讓企業透過Adobe Experience Manager所支援的客戶介面來啟用商務。
 
-## 自定义标题
+## 自訂標頭
 
-这里讨论的最后一个选项是构建自定义前端的选项。 此选项适用于拥有现有专业知识的企业以及熟练掌握特定前端堆栈（如React）的内部开发人员。 如果他们不具备Adobe Commerce传统前端开发的技能，他们可以决定构建自己的自定义React前端更具成本效益。
+這裡討論的最後一個選項是建立自訂前端。 此選項適用於具備現有專業知識的企業以及擅長特定前端棧疊（例如React）的內部開發人員。 如果他們沒有Adobe Commerce傳統前端開發的技能，他們可以認定建立自己的自訂React前端更符合成本效益。
 
-当然，此模型需要强大的客户或系统集成在前端开发技能和资源，并且您无法从与Page Builder等通过PWA Studio获得的内容的本机兼容性中受益。 任何时候，商家在打造一种完全定制的东西，他们都可能失去上市时间的优势。
+自然，此模式需要強大的客戶或系統整合前端開發技能和資源，並且您無法獲得與Page Builder等內容原生相容性的好處(例如PWA Studio時所獲得的)。 每當商家建立完全自訂的商品時，他們可能會失去上市時間的優勢。
 
-自定义前端还支持创新和实验。 关于AR/VR或语音商务有很多的讨论，像Adobe Commerce这样的架构让商家能够探索这些选项而不会影响他们现有的网店。
+自訂前端也支援創新和實驗。 關於AR/VR或語音商務，有許多討論，而類似Adobe Commerce的架構可讓商家探索這些選項，而不影響他們現有的網路商店。

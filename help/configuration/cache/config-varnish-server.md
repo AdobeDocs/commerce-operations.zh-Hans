@@ -1,45 +1,45 @@
 ---
-title: 配置Web服务器
-description: 了解如何配置Web服务器以使用清漆。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 設定網頁伺服器
+description: 瞭解如何設定網頁伺服器以使用Varnish。
+exl-id: b31179ef-3c0e-4a6b-a118-d3be1830ba4e
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 0%
 
 ---
 
+# 設定網頁伺服器
 
-# 配置Web服务器
+將網頁伺服器設定成在預設連線埠80以外的連線埠上接聽，因為Varnish會直接回應傳入的HTTP要求，而不是網頁伺服器。
 
-将Web服务器配置为监听默认端口80以外的端口，因为Quest直接响应传入的HTTP请求，而不是Web服务器。
+以下各節以連線埠8080為例。
 
-以下部分以端口8080为例。
+**變更Apache 2.4接聽連線埠**：
 
-**更改Apache 2.4侦听端口**:
-
-1. 打开 `/etc/httpd/conf/httpd.conf` 在文本编辑器中。
+1. 開啟 `/etc/httpd/conf/httpd.conf` 在文字編輯器中。
 1. 找到 `Listen` 指令。
-1. 将侦听端口的值更改为 `8080`. （您可以使用任何可用的监听端口。）
-1. 将更改保存到 `httpd.conf` 并退出文本编辑器。
+1. 將監聽連線埠的值變更為 `8080`. （您可以使用任何可用的接聽連線埠。）
+1. 將變更儲存至 `httpd.conf` 並退出文字編輯器。
 
-## 修改清漆系统配置
+## 修改Varnish系統設定
 
-要修改清漆系统配置，请执行以下操作：
+若要修改Varnish系統組態：
 
-1. 作为用户， `root` 权限，请在文本编辑器中打开您的“消失”配置文件：
+1. 作為使用者，具有 `root` 許可權，在文字編輯器中開啟您的「消失」設定檔案：
 
-   - CentOS 6: `/etc/sysconfig/varnish`
-   - CentOS 7: `/etc/varnish/varnish.params`
-   - Debian: `/etc/default/varnish`
-   - 乌本图： `/etc/default/varnish`
+   - CentOS 6： `/etc/sysconfig/varnish`
+   - CentOS 7： `/etc/varnish/varnish.params`
+   - Debian： `/etc/default/varnish`
+   - Ubuntu： `/etc/default/varnish`
 
-1. 将清漆侦听端口设置为80:
+1. 將Varnish接聽連線埠設定為80：
 
    ```conf
    VARNISH_LISTEN_PORT=80
    ```
 
-   对于Imest 4.x，请确保DAEMON_OPTS包含正确的侦听端口 `-a` 参数（即使将RIKEST_LISTEN_PORT设置为正确的值）：
+   對於Varnish 4.x，請確定DAEMON_OPTS包含正確的監聽連線埠 `-a` 引數（即使VARNISH_LISTEN_PORT設定為正確的值）：
 
    ```conf
    DAEMON_OPTS="-a :80 \
@@ -49,22 +49,22 @@ ht-degree: 0%
       -s malloc,256m"
    ```
 
-1. 保存对清漆配置文件所做的更改并退出文本编辑器。
+1. 將變更儲存至Varnish設定檔案並退出文字編輯器。
 
-### 修改默认VCL
+### 修改預設VCL
 
-本节讨论如何提供最小的配置，以便Quiset返回HTTP响应标头。 这样，您就可以在配置 [!DNL Commerce] 使用清漆的应用程序。
+本節討論如何提供最低設定，讓Varnish傳回HTTP回應標題。 這可讓您在設定 [!DNL Commerce] 使用Varnish的應用程式。
 
-要最小化配置清漆，请执行以下操作：
+若要將清漆設定為最少：
 
-1. 备份 `default.vcl`:
+1. 備份 `default.vcl`：
 
    ```bash
    cp /etc/varnish/default.vcl /etc/varnish/default.vcl.bak
    ```
 
-1. 打开 `/etc/varnish/default.vcl` 在文本编辑器中。
-1. 找到以下标准：
+1. 開啟 `/etc/varnish/default.vcl` 在文字編輯器中。
+1. 找到下列區段：
 
    ```conf
    backend default {
@@ -73,13 +73,13 @@ ht-degree: 0%
    }
    ```
 
-1. 替换 `.host` 具有完全限定的主机名或IP地址和清漆的侦听端口 _后端_ 或 _源服务器_;即，提供内容清漆的服务器将加速。
+1. 取代的值 `.host` 具有完整的主機名稱或IP位址，以及Varnish的接聽連線埠 _後端_ 或 _原始伺服器_；也就是說，提供內容Varnish的伺服器將會加速。
 
-   通常，这是您的Web服务器。 请参阅 [后端服务器](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) 在 _清漆引导器_.
+   通常這是您的Web伺服器。 另請參閱 [後端伺服器](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) 在 _清漆指南_.
 
-1. 替换 `.port` 使用web服务器的监听端口（本示例中为8080）。
+1. 取代的值 `.port` 網頁伺服器的監聽連線埠（此範例中為8080）。
 
-   示例：Apache安装在主机192.0.2.55上，Apache在端口8080上侦听：
+   範例： Apache安裝在主機192.0.2.55上，而Apache正在連線埠8080上接聽：
 
    ```conf
    backend default {
@@ -90,55 +90,55 @@ ht-degree: 0%
 
    >[!INFO]
    >
-   >如果清漆和Apache在同一主机上运行，则Adobe建议您使用IP地址或主机名，而不是 `localhost`.
+   >如果Varnish和Apache在相同主機上執行，Adobe建議您使用IP位址或主機名稱，而不要使用 `localhost`.
 
-1. 将更改保存到 `default.vcl` 并退出文本编辑器。
+1. 將變更儲存至 `default.vcl` 並退出文字編輯器。
 
-1. 重新启动清漆：
+1. 重新啟動清漆：
 
    ```bash
    service varnish restart
    ```
 
-如果清漆无法启动，请尝试从命令行中运行它，如下所示：
+如果Varnish無法啟動，請嘗試從命令列執行，如下所示：
 
 ```bash
 varnishd -d -f /etc/varnish/default.vcl
 ```
 
-这应会显示错误消息。
+這應該會顯示錯誤訊息。
 
 
 >[!INFO]
 >
->如果清漆不作为服务启动，则必须配置SELinux规则以允许它运行。
+>如果Varnish不是以服務啟動，您必須設定SELinux規則以允許其執行。
 
-## 验证清漆是否正常工作
+## 驗證清漆是否正常運作
 
-以下各节讨论如何验证清漆是否正常工作，但 _无_ 配置商务以使用它。 您应该在配置Commerce之前先尝试此操作。
+以下小節討論如何驗證Varnish是否正常運作，但是 _不含_ 設定Commerce以使用它。 在設定Commerce之前，請先嘗試此做法。
 
-按照显示的顺序执行以下各节中讨论的任务：
+依照顯示的順序，執行下列各節中討論的工作：
 
-- [启动清漆](#start-varnish)
-- [“netstat”](#netstat)
+- [開始塗漆](#start-varnish)
+- [&#39;netstat&#39;](#netstat)
 
-### 启动清漆
+### 開始塗漆
 
-输入： `service varnish start`
+輸入： `service varnish start`
 
-如果清漆作为服务启动失败，请从命令行启动它，如下所示：
+如果Varnish無法作為服務啟動，請從命令列啟動，如下所示：
 
-1. 启动清漆CLI:
+1. 啟動Varnish CLI：
 
    ```bash
    varnishd -d -f /etc/varnish/default.vcl
    ```
 
-1. 启动清漆子进程：
+1. 啟動Varnish子程式：
 
-   出现提示时，输入 `start`
+   出現提示時，輸入 `start`
 
-   将显示以下消息以确认启动成功：
+   系統會顯示下列訊息，確認啟動成功：
 
    ```terminal
    child (29805) Started
@@ -150,13 +150,13 @@ varnishd -d -f /etc/varnish/default.vcl
 
 ### netstat
 
-登录到清漆服务器并输入以下命令：
+登入Varnish伺服器並輸入下列命令：
 
 ```bash
 netstat -tulpn
 ```
 
-请特别查找以下输出：
+請特別尋找以下輸出：
 
 ```terminal
 tcp        0      0 0.0.0.0:80                  0.0.0.0:*                   LISTEN      32614/varnishd
@@ -165,17 +165,17 @@ tcp        0      0 :::8080                     :::*                        LIST
 tcp        0      0 ::1:48509                   :::*                        LISTEN      32604/varnishd
 ```
 
-前面显示在端口80上运行清漆，在端口8080上运行Apache。
+前文顯示了在連線埠80上執行的Varnish和在連線埠8080上執行的Apache。
 
-如果看不到的输出 `varnishd`，确保清漆正在运行。
+如果您沒有看到輸出 `varnishd`，確認Varnish正在執行。
 
-请参阅 [`netstat` 选项](https://tldp.org/LDP/nag2/x-087-2-iface.netstat.html).
+另請參閱 [`netstat` 選項](https://tldp.org/LDP/nag2/x-087-2-iface.netstat.html).
 
-## 安装商务软件
+## 安裝Commerce軟
 
-安装商务软件（如果尚未安装）。 提示输入基本URL时，请使用清漆主机和端口80（对于清漆），因为清漆接收所有传入的HTTP请求。
+安裝Commerce軟體（如果尚未安裝）。 提示輸入基本URL時，請使用Varnish主機和連線埠80 （針對Varnish），因為Varnish會接收所有傳入的HTTP請求。
 
-安装商务时可能出错：
+安裝Commerce時可能發生錯誤：
 
 ```terminal
 Error 503 Service Unavailable
@@ -184,7 +184,7 @@ XID: 303394517
 Varnish cache server
 ```
 
-如果您遇到此错误，请编辑 `default.vcl` 并向 `backend` 斯坦扎如下：
+如果您遇到此錯誤，請編輯 `default.vcl` 並將逾時新增至 `backend` 區段如下：
 
 ```conf
 backend default {
@@ -194,27 +194,27 @@ backend default {
 }
 ```
 
-## 验证HTTP响应头
+## 驗證HTTP回應標頭
 
-现在，您可以通过查看从任何页面返回的HTML响应标头来验证清漆是否正在提供页面。
+現在，您可以檢視從任何頁面傳回的HTML回應標題，以確認Varnish正在為頁面提供服務。
 
-在查看标题之前，必须先为开发人员模式设置商务。 可以通过多种方法来执行此操作，其中最简单的方法就是修改 `.htaccess` （在商务应用程序根目录中）。 您还可以使用 [`magento deploy:mode:set`](../cli/set-mode.md) 命令。
+檢視標題之前，您必須先為開發人員模式設定Commerce 。 有幾種方法可以做到，最簡單的方法就是進行修改 `.htaccess` 商務應用程式根目錄中的。 您也可以使用 [`magento deploy:mode:set`](../cli/set-mode.md) 命令。
 
-### 为开发人员模式设置商务
+### 為開發人員模式設定Commerce
 
-要为开发人员模式设置商务，请使用 [`magento deploy:mode:set`](../cli/set-mode.md#change-to-developer-mode) 命令。
+若要針對開發人員模式設定Commerce，請使用 [`magento deploy:mode:set`](../cli/set-mode.md#change-to-developer-mode) 命令。
 
-### 看清漆日志
+### 檢視清漆記錄
 
-确保清漆正在运行，然后在清漆服务器上输入以下命令：
+請確定Varnish正在執行，然後在Varnish伺服器上輸入下列命令：
 
 ```bash
 varnishlog
 ```
 
-在Web浏览器中，转到任何商务页面。
+在網頁瀏覽器中，前往任何Commerce頁面。
 
-在命令提示符窗口中将显示响应标头的长列表。 查找如下所示的标头：
+命令提示字元視窗中會顯示一長串回應標頭。 尋找類似以下內容的標頭：
 
 ```terminal
 -   BereqHeader    X-Varnish: 3
@@ -231,13 +231,13 @@ varnishlog
 -   ReqHeader      Origin: http://10.249.151.10
 ```
 
-如果此类标头有 _not_ 显示，停止清漆，检查 `default.vcl`，然后重试。
+如果這類標題有 _not_ 顯示，停止塗漆，檢查您的 `default.vcl`，然後重試。
 
-### 查看HTML响应标头
+### 檢視HTML回應標頭
 
-有多种方法可查看响应标头，包括使用浏览器插件或浏览器检查器。
+有數種方式可檢視回應標題，包括使用瀏覽器外掛程式或瀏覽器檢測器。
 
-以下示例使用 `curl`. 您可以从任何能够使用HTTP访问商务服务器的计算机中输入此命令。
+以下範例使用 `curl`. 您可以從任何可以使用HTTP存取Commerce伺服器的電腦輸入此命令。
 
 ```bash
 curl -I -v --location-trusted '<your Commerce base URL>'
@@ -249,7 +249,7 @@ curl -I -v --location-trusted '<your Commerce base URL>'
 curl -I -v --location-trusted 'http://192.0.2.55/magento2'
 ```
 
-查找如下所示的标头：
+尋找類似以下內容的標頭：
 
 ```terminal
 Content-Type: text/html; charset=iso-8859-1

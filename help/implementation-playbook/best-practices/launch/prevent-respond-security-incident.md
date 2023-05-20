@@ -1,72 +1,72 @@
 ---
-title: 防止和响应安全事件
-description: 了解在云基础架构项目中避免和响应Adobe Commerce安全事件的最佳实践。
+title: 預防並回應安全性事件
+description: 瞭解避免和回應雲端基礎結構專案中Adobe Commerce安全性事件的最佳做法。
 role: Admin, Developer, Leader, User
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: bb9b8cc9993a70ea50667f08c8260759ab0f91dc
+exl-id: 77275d37-4f1d-462d-ba11-29432791da6a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 0%
 
 ---
 
+# 協助預防及回應安全性事件的最佳實務
 
-# 帮助防止和响应安全事件的最佳实践
+Adobe Commerce安全性在下 [共擔責任](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) 模型。 瞭解Adobe和您的技術團隊的職責至關重要。 以下為摘要 [安全性最佳實務](https://www.adobe.com/content/dam/cc/en/security/pdfs/Adobe-Magento-Commerce-Best-Practices-Guide.pdf) 以確保您的專案具備最佳安全性控制項，以及如何對安全性事件作出最佳回應。
 
-Adobe Commerce安全机构在 [分担责任](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) 模型。 了解Adobe和您的技术团队应负责哪些工作至关重要。 下面我们总结一下 [安全最佳实践](https://www.adobe.com/content/dam/cc/en/security/pdfs/Adobe-Magento-Commerce-Best-Practices-Guide.pdf) 以确保项目具有最佳的安全控制，以及如何对安全事件做出最佳响应。
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+[所有支援的版本](../../../release/versions.md) 之：
 
-[所有受支持的版本](../../../release/versions.md) 共：
+- 雲端基礎結構上的Adobe Commerce
 
-- Adobe Commerce云基础架构
+## 回應事件
 
-## 响应事件
+當您回應安全性事件時，有許多考量事項。 如果您懷疑在雲端基礎結構專案中遇到Adobe Commerce最近的安全事件，請務必稽核所有管理員使用者帳戶存取權、啟用進階多重驗證(MFA)控制、保留重要記錄，以及檢閱您Adobe Commerce版本的安全升級。
 
-在对安全事件做出响应时，有许多注意事项。 如果您怀疑在云基础架构项目上遇到了Adobe Commerce的最近安全事件，则务必要审核所有管理员用户帐户访问权限，启用高级多重身份验证(MFA)控制，保留关键日志，并查看Adobe Commerce版本的安全升级。
+更多建議詳見下文。 它們有助於防止未經授權的存取，並啟動進一步事件分析的程式。
 
-下面详细介绍了更多建议。 它们有助于防止未经授权的访问，并开始进一步的事件分析过程。
+## 如何防止安全性事件
 
-## 如何预防安全事件
+遵循這些安全性最佳實務，主動預防影響Adobe Commerce網站和店面的安全性事件：
 
-遵循以下安全最佳实践，主动防止影响您的Adobe Commerce站点和店面的安全事件：
-
-- [启用2FA以进行管理员访问](https://docs.magento.com/user-guide/stores/security-two-factor-authentication.html).
-双重身份验证被广泛使用，在同一应用程序上为不同网站生成访问代码是常见的做法。 这可确保只有您才能登录到您的用户帐户。 如果您丢失了密码或机器人猜测了密码，则双重身份验证会添加一层保护。
-- [为SSH访问启用MFA](https://devdocs.magento.com/cloud/project/project-enable-mfa-enforcement.html).
-在项目上启用MFA后，具有SSH访问权限的云基础架构帐户上的所有Adobe Commerce都必须遵循一个身份验证工作流程，该工作流程需要双重身份验证(2FA)代码或API令牌和SSH证书才能访问环境。
-- 升级到最新版本的Adobe Commerce。
-Adobe为每个受支持版本发布安全性和功能修补程序Adobe Commerce。
-- 设置和使用 [非默认管理员URL](https://docs.magento.com/user-guide/stores/store-urls-custom-admin.html).
-Adobe建议您使用唯一的自定义管理员URL，而不是默认URL `admin` 或常用术语，例如 *后端*. 尽管此配置更改不会直接保护您的网站免受已确定的坏主体的侵害，但它可以减少尝试获取未经授权访问权限的脚本的暴露。
-- 使用  [`bin/magento config:set` 使用 `lock env` 配置选项](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html#set-configuration-values-that-cannot-be-edited-in-the-admin). 此选项会锁定配置值，以便无法在管理员中对其进行编辑，或者阻止对已锁定的设置进行更改。 使用此选项时，配置更改将写入 `<Commerce base dir>/app/etc/env.php` 文件。
-- 设置并运行 [Adobe Commerce安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html).
-增强的安全扫描功能允许您监视包括PWA在内的每个Adobe Commerce站点，以发现已知的安全风险和恶意软件，并接收补丁更新和安全通知。
-- [查看和更新管理员用户访问权限](https://docs.magento.com/user-guide/system/permissions-users-all.html) 和 [安全设置](https://docs.magento.com/user-guide/stores/security-admin.html).
-   - 我们建议删除任何旧帐户、未使用帐户或可疑帐户，并为所有管理员用户轮换密码。
-   - 查看并更新项目的高级安全设置&lt;。 通过管理员安全配置，您能够向URL添加密钥，要求密码区分大小写，并限制管理员会话的长度，包括密码的生命周期以及在锁定管理员用户帐户之前可进行的登录尝试次数。 为了提高安全性，您可以配置当前会话过期前键盘不活动状态的时长，并要求用户名和密码区分大小写。
-- 审核Adobe Commerce [云项目用户](https://devdocs.magento.com/cloud/project/user-admin.html).
-我们建议删除任何旧帐户、未使用帐户或可疑帐户，并请用户更改其密码。
-- 审核 [SSH密钥](https://devdocs.magento.com/cloud/before/before-workspace-ssh.html) 适用于云基础架构上的Adobe Commerce。
-我们建议查看、删除和旋转SSH密钥。
-- 为管理员实施访问控制列表(ACL)。
-您可以结合自定义的Fastly Edge ACL列表 [VCL代码段](https://devdocs.magento.com/cloud/cdn/fastly-vcl-allowlist.html#vcl) 过滤传入请求并允许按IP地址向管理员访问。
+- [啟用2FA以取得管理員存取權](https://docs.magento.com/user-guide/stores/security-two-factor-authentication.html).
+雙因素驗證被廣泛使用，通常會在相同應用程式上產生不同網站的存取代碼。 這可確保只有您可以登入使用者帳戶。 如果您遺失密碼或機器人猜到密碼，則雙因素驗證會增加一層保護。
+- [為SSH存取啟用MFA](https://devdocs.magento.com/cloud/project/project-enable-mfa-enforcement.html).
+在專案上啟用MFA時，雲端基礎結構上所有具有SSH存取權的Adobe Commerce帳戶都必須遵循驗證工作流程，該工作流程需要雙重驗證(2FA)代碼，或API權杖和SSH憑證才能存取環境。
+- 升級至最新版Adobe Commerce。
+Adobe會針對每個支援的Adobe Commerce發行安全性與功能修補程式。
+- 設定和使用 [非預設管理員URL](https://docs.magento.com/user-guide/stores/store-urls-custom-admin.html).
+Adobe建議您使用唯一的自訂管理員URL，而非預設值 `admin` 或常用辭彙，例如 *後端*. 雖然此設定變更不會直接保護您的網站免受已判定的不良執行者的傷害，但可減少嘗試獲得未經授權存取的指令碼暴露。
+- 防止在Admin中使用編輯或更新設定值  [`bin/magento config:set` 具有的CLI命令 `lock env` 設定選項](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html#set-configuration-values-that-cannot-be-edited-in-the-admin). 此選項會鎖定組態值，使其無法在Admin中編輯，或防止變更已鎖定的設定。 使用此選項時，組態變更會寫入 `<Commerce base dir>/app/etc/env.php` 檔案。
+- 設定並執行 [Adobe Commerce安全性掃描工具](https://docs.magento.com/user-guide/magento/security-scan.html).
+增強式安全性掃描可讓您監視每個Adobe Commerce網站(包括PWA)，以找出已知的安全性風險和惡意程式，並接收修補程式更新和安全通知。
+- [檢閱和更新管理員使用者存取權](https://docs.magento.com/user-guide/system/permissions-users-all.html) 和 [安全性設定](https://docs.magento.com/user-guide/stores/security-admin.html).
+   - 建議移除任何舊的、未使用的或可疑的帳戶，並輪換所有管理員使用者的密碼。
+   - 檢閱並更新專案的「進階安全性設定」&lt;。 Admin安全性設定可讓您將秘密金鑰新增至URL、要求密碼須區分大小寫，以及限制管理員工作階段的長度，包括密碼的存留期，以及在Admin使用者帳戶鎖定前可以嘗試登入的次數。 為了提高安全性，您可以設定目前工作階段過期前鍵盤閒置的長度，並要求使用者名稱和密碼區分大小寫。
+- 稽核Adobe Commerce於 [雲端專案使用者](https://devdocs.magento.com/cloud/project/user-admin.html).
+建議移除任何舊的、未使用的或可疑的帳戶，並要求使用者變更密碼。
+- 稽核 [ssh金鑰](https://devdocs.magento.com/cloud/before/before-workspace-ssh.html) 適用於Adobe Commerce的雲端基礎結構。
+我們建議檢閱、刪除和輪換SSH金鑰。
+- 對管理員實作存取控制清單(ACL)。
+您可以將Fastly Edge ACL清單與自訂結合使用 [VCL程式碼片段](https://devdocs.magento.com/cloud/cdn/fastly-vcl-allowlist.html#vcl) 篩選傳入的請求，並允許管理員依IP位址進行存取。
 
 ## 分析事件
 
-事件分析的第一步是尽可能快地收集尽可能多的事实。 收集有关事件的信息可能有助于确定事件的潜在原因。 Adobe Commerce提供了以下工具来协助您进行事件分析。
+事件分析的第一步是儘可能快速地收集儘可能多的事實。 收集事件相關資訊可協助您判斷事件的可能原因。 Adobe Commerce提供下列工具，協助您進行事件分析。
 
-- [审核管理员操作日志](https://docs.magento.com/user-guide/system/action-log-report.html).
-操作日志报告显示为日志记录启用的所有管理员操作的详细记录。 每条记录都加盖时间戳，并注册用户的IP地址和名称。 日志详细信息包括管理员用户数据以及在操作期间进行的相关更改。
-- 使用 [Adobe Commerce工具观察](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html?lang=en).
-Adobe Commerce观察工具允许您分析复杂问题，以帮助确定根本原因。 您可以花时间关联事件和错误，而不是跟踪不同的数据，以便更深入地了解性能瓶颈的原因。
-该工具旨在明确显示一些潜在的站点问题，以帮助您确定根本原因并保持站点的最佳性能。 单击上面Adobe Commerce工具文档的观察链接以访问该工具文档。 文档中有一个部分详细介绍了 **安全性** 选项卡。
-- 分析日志 [新旧日志](https://devdocs.magento.com/cloud/project/new-relic.html#new-relic-logs). Adobe Commerce on cloud infrastructure Pro项目包括 [新旧日志](https://docs.newrelic.com/docs/logs/new-relic-logs/get-started/introduction-new-relic-logs) 服务。 该服务已预配置为聚合暂存和生产环境中的所有日志数据，以将其显示在集中的日志管理仪表板中。
-您可以使用New Relic Logs服务完成以下任务：
-   - 使用 [新旧查询](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) 搜索聚合的日志数据。
-   - 通过New Relic Logs应用程序可视化日志数据。
+- [稽核管理員動作記錄](https://docs.magento.com/user-guide/system/action-log-report.html).
+「動作記錄報表」會顯示所有已啟用記錄功能的管理員動作的詳細記錄。 每個記錄都加蓋時間戳記，並註冊使用者的IP位址和名稱。 記錄檔詳細資料包括管理員使用者資料，以及在動作期間所做的相關變更。
+- 使用分析事件 [Adobe Commerce工具的觀察](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html?lang=en).
+Adobe Commerce觀察工具可讓您分析複雜的問題，以協助找出根本原因。 與其追蹤不同的資料，您可以將時間花在關聯事件和錯誤上，以更深入地瞭解效能瓶頸的原因。
+此工具旨在讓您清楚瞭解部分潛在的網站問題，協助您找出根本原因，並讓網站維持最佳效能。 按一下上方Adobe Commerce觀察工具檔案的連結，存取工具檔案。 檔案中有一節詳細介紹可在以下網址找到的所有資訊： **安全性** 標籤。
+- 分析記錄檔，使用 [New Relic記錄](https://devdocs.magento.com/cloud/project/new-relic.html#new-relic-logs). 雲端基礎結構上的Adobe Commerce Pro專案包括 [New Relic記錄](https://docs.newrelic.com/docs/logs/new-relic-logs/get-started/introduction-new-relic-logs) 服務。 此服務已預先設定為彙總中繼和生產環境的所有記錄資料，以便在集中式記錄管理儀表板中顯示。
+您可以使用New Relic記錄檔服務來完成下列工作：
+   - 使用 [New Relic查詢](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) 以搜尋彙總記錄檔資料。
+   - 透過New Relic記錄檔應用程式以視覺效果呈現記錄檔資料。
 
-## 其他信息
+## 其他資訊
 
 - [根本原因分析框架](https://sansec.io/kb/incident-response/magento-root-cause-analysis).

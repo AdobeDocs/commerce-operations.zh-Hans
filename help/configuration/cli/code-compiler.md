@@ -1,30 +1,30 @@
 ---
-title: 代码编译器
-description: 了解如何从命令行运行代码编译器。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 程式碼編譯器
+description: 瞭解如何從命令列執行程式碼編譯器。
+exl-id: 08dbf808-ea79-4956-a0bc-f464bb80eee7
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
-
-# 代码编译器
+# 程式碼編譯器
 
 {{file-system-owner}}
 
-代码编译包括以下内容（无特定顺序）：
+程式碼編譯包含下列內容（並無特定順序）：
 
-- 应用程序代码生成（工厂、代理）
-- 区域配置聚合（优化的每区域依赖项注入配置）
-- 拦截器生成（拦截器优化代码生成）
-- 侦听缓存生成
-- 存储库代码生成（为API生成的代码）
-- 服务数据属性生成（为数据对象生成的扩展类）
+- 應用程式程式碼產生（工廠、代理）
+- 區域設定彙總（每個區域最佳化的相依性插入設定）
+- 攔截器產生（最佳化的攔截器程式碼產生）
+- 攔截快取產生
+- 存放庫程式碼產生（為API產生的程式碼）
+- 服務資料屬性產生（為資料物件產生的擴充功能類別）
 
-您可以在 [\Magento\Setup\Module\Di\App\Task\Operation][operation] 命名空间。
+您可以在下列位置找到程式碼編譯類別： [\Magento\Setup\Module\Di\App\Task\Operation][operation] 名稱空間。
 
-要运行单租户编译器，请执行以下操作：
+若要執行單一租使用者編譯器：
 
 ```bash
 bin/magento setup:di:compile
@@ -34,21 +34,21 @@ bin/magento setup:di:compile
 Generated code and dependency injection configuration successfully.
 ```
 
-要在安装商务应用程序之前编译代码，请执行以下操作：
+若要在安裝Commerce應用程式之前編譯程式碼：
 
-在某些情况下，您可能需要先编译代码，然后再安装商务应用程序。
+在某些情況下，您可能需要在安裝Commerce應用程式之前編譯程式碼。
 
-1. 启用模块。
+1. 啟用模組。
 
    ```bash
    bin/magento module:enable --all [-c|--clear-static-content]
    ```
 
-   使用 `[-c|--clear-static-content]` 选项来清除静态内容。 如果您之前已启用或已禁用模块，并且必须清除之前为这些模块生成的静态内容，则必须执行此操作。
+   使用 `[-c|--clear-static-content]` 清除靜態內容的選項。 如果您先前已啟用或停用模組，且必須清除先前為其產生的靜態內容，則必須執行此動作。
 
-   请参阅 [启用模块](../../installation/tutorials/manage-modules.md).
+   另請參閱 [啟用模組](../../installation/tutorials/manage-modules.md).
 
-1. 编译代码。
+1. 編譯程式碼。
 
    ```bash
    bin/magento setup:di:compile
@@ -58,7 +58,7 @@ Generated code and dependency injection configuration successfully.
    Generated code and dependency injection configuration successfully.
    ```
 
-要编译没有数据库的代码，请参阅 [部署静态视图文件，而无需安装Magento](../cli/static-view-file-deployment.md).
+若要在不使用資料庫的情況下編譯程式碼，請參閱 [部署靜態檢視檔案而不安裝Magento](../cli/static-view-file-deployment.md).
 
 <!-- link definitions -->
 

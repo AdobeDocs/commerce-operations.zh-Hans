@@ -5,33 +5,33 @@ source-wordcount: '94'
 ht-degree: 0%
 
 ---
-# 更新共享配置
+# 更新共用設定
 
-**更新配置**:
+**更新設定的方式**：
 
-1. 以文件系统所有者的身份登录到开发系统，或切换到。
+1. 以檔案系統擁有者的身分登入或切換到您的開發系統。
 
-1. 更改为应用程序根并运行dump命令。
+1. 變更至應用程式根目錄，然後執行傾印命令。
 
    ```bash
    cd <Magento root dir>
    php bin/magento app:config:dump
    ```
 
-   例如，如果Commerce安装在 `/var/www/html/magento2`，输入：
+   例如，如果商務安裝在中 `/var/www/html/magento2`，輸入：
 
    ```bash
    cd /var/www/html/magento2
    php bin/magento app:config:dump
    ```
 
-1. 确认 `app/etc/config.php` 已更新。
+1. 確認 `app/etc/config.php` 已更新。
 
    ```bash
    git status
    ```
 
-   示例响应：
+   範例回應：
 
    ```terminal
    On branch m2.2_deploy
@@ -43,9 +43,9 @@ ht-degree: 0%
 
    >[!WARNING]
    >
-   >做 _not_ 将更改提交到 `generated`, `pub/media`或 `pub/static` 目录到源代码管理。 在生成系统上生成这些文件。 开发系统可能具有代码、主题等，这些代码、主题等尚未准备好在生产系统上使用。
+   >執行 _not_ 將變更提交至 `generated`， `pub/media`，或 `pub/static` 目錄至原始檔控制。 您會在組建系統上產生這些檔案。 開發系統可能有程式碼、主題等尚未準備好用於生產系統的專案。
 
-1. 签入对 `app/etc/config.php` 仅发送至源控件。
+1. 將變更籤入 `app/etc/config.php` 僅限原始檔控制。
 
    ```bash
    git add app/etc/config.php && git commit -m "Updated shared configuration" && git push mconfig m2.2_deploy

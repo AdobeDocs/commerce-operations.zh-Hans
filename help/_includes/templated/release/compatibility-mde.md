@@ -5,18 +5,18 @@ source-wordcount: '1062'
 ht-degree: 0%
 
 ---
-# 兼容性
+# 相容性
 
 <!--This include content is automatically generated using the compatibility-mde.html
 template and the "_data/release/mde.yml" data file. To update the content,
 add new information to the data file. Follow the instructions in the README instructions to generate
 the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#templates -->
 
-**支持**  — 已通过Adobe完全测试且受支持的版本。
+**支援**  — 已經過Adobe完整測試且受支援的版本。
 
-**兼容**  — 确认与Adobe Commerce或Magento Open Source兼容但不受支持的版本。
+**相容**  — 已確認與Adobe Commerce或Magento Open Source相容但不支援的版本。
 
-**不支持**  — 与Adobe Commerce或Magento Open Source版本不兼容的版本。
+**不支援**  — 與Adobe Commerce或Magento Open Source版本不相容的版本。
 
 <table style="table-layout:auto">
   <thead>
@@ -38,154 +38,154 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
     </tr>
     <tr>
       <td>AmazonSales Channel4.4.4</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>AmazonSales Channel4.4.3</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>AmazonSales Channel4.4.2</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>AmazonSales Channel4.4.1</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>AmazonSales Channel4.4.0</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>AmazonSales Channel4.3.0</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>AmazonSales Channel4.2.0</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>AmazonSales Channel4.1.0</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
   </tbody>
@@ -195,354 +195,354 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
     </tr>
     <tr>
       <td>B2B 1.3.5</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>B2B 1.3.4</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>B2B 1.3.3</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>B2B 1.3.2</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>B2B 1.3.1</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>B2B 1.3.0</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>B2B 1.2.0</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>B2B 1.1.7</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th colspan="9">目录服务</th>
-    </tr>
-    <tr>
-      <td>目录服务1.7</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>目录服务1.6</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>目录服务1.5</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>目录服务1.4</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>目录服务1.3</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>目录服务1.1</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>目录服务1.0</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>支援</span>
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr>
-      <th colspan="9">渠道管理器</th>
+      <th colspan="9">目錄服務</th>
     </tr>
     <tr>
-      <td>Channel Manager 2.0.0</td>
-      <td>支持</span>
+      <td>目錄服務1.7</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>Channel Manager 1.1.0</td>
-      <td>不支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>Channel Manager 1.0.0</td>
-      <td>支持</span>
+      <td>目錄服務1.6</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>目錄服務1.5</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>目錄服務1.4</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>目錄服務1.3</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>目錄服務1.1</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>目錄服務1.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th colspan="9">頻道管理員</th>
+    </tr>
+    <tr>
+      <td>頻道管理員2.0.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頻道管理員1.1.0</td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頻道管理員1.0.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
       </td>
     </tr>
   </tbody>
@@ -552,1120 +552,1120 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
     </tr>
     <tr>
       <td>Inventory management 1.2.6</td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>Inventory management 1.2.5</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>Inventory management 1.2.4</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>Inventory management 1.2.3</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>Inventory management 1.2.2</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>Inventory management 1.2.1</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>Inventory management 1.2.0</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
       <td>Inventory management 1.1.7</td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr>
-      <th colspan="9">实时搜索</th>
+      <th colspan="9">即時搜尋</th>
     </tr>
     <tr>
-      <td>实时搜索3.0.1</td>
-      <td>支持</span>
+      <td>Live Search 3.0.1</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>实时搜索2.0.5</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>实时搜索2.0.4</td>
-      <td>支持</span>
+      <td>Live Search 2.0.5</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>实时搜索2.0.3</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>实时搜索2.0.0</td>
-      <td>支持</span>
+      <td>Live Search 2.0.4</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>实时搜索1.3.0</td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>实时搜索1.2.0</td>
-      <td>兼容</span>
+      <td>Live Search 2.0.3</td>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>实时搜索1.1.0</td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th colspan="9">页面生成器</th>
-    </tr>
-    <tr>
-      <td>页面生成器1.7.3</td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>页面生成器1.7.2</td>
-      <td>不支持</span>
+      <td>Live Search 2.0.0</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>页面生成器1.7.1</td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>页面生成器1.7.0</td>
-      <td>不支持</span>
+      <td>Live Search 1.3.0</td>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>页面生成器1.6.0</td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>页面生成器1.5.0</td>
-      <td>不支持</span>
+      <td>Live Search 1.2.0</td>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>页面生成器1.4.0</td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>页面生成器1.3.6</td>
-      <td>不支持</span>
+      <td>Live Search 1.1.0</td>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr>
-      <th colspan="9">支付服务</th>
+      <th colspan="9">頁面產生器</th>
     </tr>
     <tr>
-      <td>支付服务2.0.0</td>
-      <td>支持</span>
+      <td>頁面產生器1.7.3</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>不支援</span>
       </td>
-      <td>支持</span>
+      <td>不支援</span>
       </td>
-      <td>不兼容</span>
+      <td>不支援</span>
       </td>
-      <td>不兼容</span>
+      <td>不支援</span>
       </td>
-      <td>不兼容</span>
+      <td>不支援</span>
       </td>
-      <td>不兼容</span>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頁面產生器1.7.2</td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頁面產生器1.7.1</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頁面產生器1.7.0</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頁面產生器1.6.0</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頁面產生器1.5.0</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頁面產生器1.4.0</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>頁面產生器1.3.6</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th colspan="9">付款服務</th>
+    </tr>
+    <tr>
+      <td>Payment Services 2.0.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不相容</span>
+      </td>
+      <td>不相容</span>
+      </td>
+      <td>不相容</span>
+      </td>
+      <td>不相容</span>
       </td>
       <td></span>
       </td>
     </tr>
     <tr>
-      <td>支付服务1.6.0</td>
-      <td>不支持</span>
+      <td>Payment Services 1.6.0</td>
+      <td>不支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>支付服务1.5.4</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>支付服务1.5.3</td>
-      <td>支持</span>
+      <td>Payment Services 1.5.4</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>支付服务1.5.2</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>支付服务1.5.1</td>
-      <td>支持</span>
+      <td>Payment Services 1.5.3</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>支付服务1.5.0</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>支付服务1.4.1</td>
-      <td>支持</span>
+      <td>Payment Services 1.5.2</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>支付服务1.4.0</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th colspan="9">快速结帐</th>
-    </tr>
-    <tr>
-      <td>快速结帐1.8.0</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>快速结帐1.7.0</td>
-      <td>支持</span>
+      <td>Payment Services 1.5.1</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>快速结帐1.6.0</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>快速结帐1.5.0</td>
-      <td>支持</span>
+      <td>Payment Services 1.5.0</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>快速结帐1.4.0</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>快速结帐1.3.0</td>
-      <td>支持</span>
+      <td>Payment Services 1.4.1</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>快速结帐1.2.0</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>快速结帐1.1.0</td>
-      <td>支持</span>
+      <td>Payment Services 1.4.0</td>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>快速结帐1.0.0</td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr>
-      <th colspan="9">用于Adobe Commerce的商店履行</th>
+      <th colspan="9">快速簽出</th>
     </tr>
     <tr>
-      <td>适用于Adobe Commerce 1.4.0的商店履行</td>
-      <td>支持</span>
+      <td>Quick Checkout 1.8.0</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>适用于Adobe Commerce 1.3.0的商店履行</td>
-      <td>不支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>适用于Adobe Commerce 1.2.0的商店履行</td>
-      <td>不支持</span>
+      <td>Quick Checkout 1.7.0</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>适用于Adobe Commerce 1.1.0的商店履行</td>
-      <td>不支持</span>
-      </td>
-      <td>不支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>适用于Adobe Commerce 1.1.0的商店履行</td>
-      <td>不支持</span>
+      <td>Quick Checkout 1.6.0</td>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>支持</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Quick Checkout 1.5.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Quick Checkout 1.4.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Quick Checkout 1.3.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Quick Checkout 1.2.0</td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Quick Checkout 1.1.0</td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Quick Checkout 1.0.0</td>
+      <td>支援</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr>
-      <th colspan="9">Experience Platform连接器</th>
+      <th colspan="9">適用於Adobe Commerce的商店履行</th>
     </tr>
     <tr>
-      <td>Experience Platform连接器1.0.0</td>
-      <td>支持</span>
+      <td>Adobe Commerce 1.4.0的商店履行</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>支援</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Adobe Commerce 1.3.0的商店履行</td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Adobe Commerce 1.2.0的Store Fulfillment</td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Adobe Commerce 1.1.0的Store Fulfillment</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Adobe Commerce 1.1.0的Store Fulfillment</td>
+      <td>不支援</span>
+      </td>
+      <td>不支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>支援</span>
+      </td>
+      <td>不支援</span>
       </td>
     </tr>
   </tbody>
   <tbody>
     <tr>
-      <th colspan="9">产品Recommendations</th>
+      <th colspan="9">Experience Platform聯結器</th>
     </tr>
     <tr>
-      <td>产品Recommendations 5.0</td>
-      <td>支持</span>
+      <td>Experience Platform聯結器1.0.0</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>不支援</span>
       </td>
-      <td>兼容</span>
+      <td>不支援</span>
       </td>
-      <td>兼容</span>
+      <td>不支援</span>
       </td>
-      <td>不支持</span>
-      </td>
-    </tr>
-    <tr>
-      <td>产品Recommendations 4.0.1</td>
-      <td>支持</span>
-      </td>
-      <td>支持</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
+  </tbody>
+  <tbody>
     <tr>
-      <td>产品Recommendations 4.0.0</td>
-      <td>支持</span>
+      <th colspan="9">產品Recommendations</th>
+    </tr>
+    <tr>
+      <td>產品Recommendations 5.0</td>
+      <td>支援</span>
       </td>
-      <td>支持</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>不支持</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>产品Recommendations 3.3.7</td>
-      <td>兼容</span>
+      <td>產品Recommendations 4.0.1</td>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
-      </td>
-    </tr>
-    <tr>
-      <td>产品Recommendations 3.3.6</td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>产品Recommendations 3.3.5</td>
-      <td>兼容</span>
+      <td>產品Recommendations 4.0.0</td>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>支援</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
-      </td>
-    </tr>
-    <tr>
-      <td>产品Recommendations 3.3.3</td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
-      </td>
-      <td>兼容</span>
+      <td>不支援</span>
       </td>
     </tr>
     <tr>
-      <td>产品Recommendations 3.3.2</td>
-      <td>兼容</span>
+      <td>產品Recommendations 3.3.7</td>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
     </tr>
     <tr>
-      <td>产品Recommendations 3.3.1</td>
-      <td>兼容</span>
+      <td>產品Recommendations 3.3.6</td>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
       </td>
-      <td>兼容</span>
+      <td>相容</span>
+      </td>
+    </tr>
+    <tr>
+      <td>產品Recommendations 3.3.5</td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+    </tr>
+    <tr>
+      <td>產品Recommendations 3.3.3</td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+    </tr>
+    <tr>
+      <td>產品Recommendations 3.3.2</td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+    </tr>
+    <tr>
+      <td>產品Recommendations 3.3.1</td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
+      </td>
+      <td>相容</span>
       </td>
     </tr>
   </tbody>

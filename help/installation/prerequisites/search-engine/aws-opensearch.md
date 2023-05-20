@@ -1,55 +1,55 @@
 ---
 title: AWS OpenSearch
-description: 请按照以下步骤为Adobe Commerce和Magento Open Source的本地安装配置AWS OpenSearch Web服务。
-source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
+description: 請依照下列步驟，為Adobe Commerce和Magento Open Source的內部部署設定AWS OpenSearch Web服務。
+exl-id: 39ca7fd0-e21f-4f14-bda6-ff00a61a1a4d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '343'
 ht-degree: 0%
 
 ---
 
-
 # AWS OpenSearch
 
-Adobe Commerce和Magento Open Source2.4.5支持使用Amazon OpenSearch Service群集。 此服务是AmazonElasticsearch服务的后继服务。 本主题介绍如何配置Commerce以使用AWS OpenSearch，以及如何将数据从本地Elasticsearch或OpenSearch实例迁移到AWS OpenSearch群集。
+Adobe Commerce和Magento Open Source 2.4.5支援使用Amazon OpenSearch Service叢集。 此服務是AmazonElasticsearch服務的後續服務。 本主題說明如何設定Commerce以使用AWS OpenSearch，以及如何將資料從本機Elasticsearch或OpenSearch執行個體移轉至AWS OpenSearch叢集。
 
-## 创建AWS OpenSearch服务域
+## 建立AWS OpenSearch服務網域
 
-您必须先在AWS中建立OpenSearch实例。
-读取 [创建和管理Amazon OpenSearch服务域](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html) 以了解详细说明。
+您必須先在AWS中建立OpenSearch執行個體。
+讀取 [建立和管理Amazon OpenSearch Service網域](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html) 以取得詳細指示。
 
-## 将数据获取到AWS OpenSearch
+## 將資料傳入AWS OpenSearch
 
-在AWS上做好一切准备后，便应使用数据填充数据。
+在AWS上完成所有準備工作後，就可以將資料填入當中了。
 
-对于较小的安装，我们建议您直接在AWS实例上创建索引，原因如下：
+對於較小的安裝，我們建議您直接在AWS執行個體上建立索引，原因如下：
 
-* 重新创建索引是一个快速操作。
-* 旧实例与AWS实例之间可能存在版本不兼容问题，直接在AWS实例上构建可以避免这些不兼容问题。
+* 重新建立索引是一項快速操作。
+* 舊執行個體和AWS執行個體之間可能存在版本不相容問題，直接在AWS執行個體上建立可以避免這些不相容問題。
 
-较大的安装可能希望考虑将其数据索引从现有实例迁移到AWS。 虽然这可能减少停机时间，但由于旧Elasticsearch服务器与AWS之间的版本不同，仍然存在出现不兼容问题的小风险。
+較大型的安裝單位可能會想要考慮將其資料索引從現有執行個體移轉至AWS。 雖然這樣可以減少停機時間，但由於舊版Elasticsearch伺服器與AWS之間的版本不同，因此出現不相容問題的風險仍然很小。
 
-无需迁移索引，因为可以轻松地在AWS实例上重新创建索引。
-但是，在迁移数据索引时，请确保Elasticsearch/OpenSearch的版本兼容。
+無需移轉索引，因為這些索引可在AWS執行個體上輕鬆重新建立。
+不過，移轉資料索引時，請確保Elasticsearch/OpenSearch的版本相容。
 
-请参阅Amazon [迁移到Amazon OpenSearch Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html) 有关详细信息的说明。
+請參閱Amazon [移轉至Amazon OpenSearch服務](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html) 指示以取得詳細資訊。
 
-### 为OpenSearch配置商务
+### 為OpenSearch設定Commerce
 
-有关配置OpenSearch的步骤，请参阅 [高级安装](../../advanced.md) 主题。
+有關設定OpenSearch的步驟，請參見 [進階安裝](../../advanced.md) 主題。
 
-要测试新配置是否正常工作，请直接测试OpenSearch端点：
+若要測試新設定是否正常運作，請直接測試OpenSearch端點：
 
-1. 在管理员中创建产品(例如：sku=&quot;testproduct1&quot;)。
-1. 通过管理员重新编入索引。
-1. 查询OpenSearch端点(可在AWS UI中找到):
+1. 在「管理員」中建立產品（例如：sku=&quot;testproduct1&quot;）。
+1. 透過管理員重新索引。
+1. 查詢OpenSearch端點(可在AWS UI中找到)：
 
-   要获取索引，请附加： `/_cat/indices/*?v=true` 到URL:
+   若要取得索引，請附加： `/_cat/indices/*?v=true` 前往URL：
    `<AWS OS endpoint>/_cat/indices/*?v=true`
 
-要从索引获取产品，请附加： `/magento2docker_product_1/_search?q=*` 到URL:
+若要從索引取得產品，請附加： `/magento2docker_product_1/_search?q=*` 前往URL：
 `<AWS OS endpoint>/magento2docker_product_1/_search?q=testproduct1`
 
-## 其他资源
+## 其他資源
 
-有关其他信息，请参阅 [OpenSearch AWS文档](https://docs.aws.amazon.com/opensearch-service/index.html).
+如需詳細資訊，請參閱 [OpenSearch AWS檔案](https://docs.aws.amazon.com/opensearch-service/index.html).

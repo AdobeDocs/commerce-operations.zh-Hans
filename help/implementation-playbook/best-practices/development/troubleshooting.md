@@ -1,36 +1,36 @@
 ---
-title: 疑难解答最佳实践
-description: 了解如何对Adobe Commerce实施问题进行故障诊断。
+title: 疑難排解最佳實務
+description: 瞭解如何疑難排解Adobe Commerce實作問題。
 role: Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 754051c98d2c5265398f1f0806cb34128fe03c36
+exl-id: 6690eccf-d58d-4cbd-b278-90d020ee7c63
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 0%
 
 ---
 
+# 疑難排解最佳實務
 
-# 疑难解答最佳实践
+請遵循這些最佳實務，以針對雲端基礎結構問題有效疑難排解Adobe Commerce。
 
-请遵循以下最佳实践，对Adobe Commerce云基础架构问题进行有效故障诊断。
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+雲端基礎結構上的Adobe Commerce
 
-Adobe Commerce云基础架构
+## 最佳實務
 
-## 最佳实践
-
-| 问题类型 | 最佳实践 | 资源 |
+| 問題型別 | 最佳實務 | 資源 |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 部署问题 | **遵循部署最佳实践。** 13%的支持票证涉及部署问题。 最佳实践已更新，其中包括防止其中许多原因的方法。 | [构建和部署的最佳实践](https://devdocs.magento.com/cloud/reference/discover-deploy.html#best-practices) ，请参阅我们的开发人员文档。 |
-| 网站关闭问题 | **使用“Site Down（站点关闭）” “Troubleshooter（疑难解答）”。** Cron可能会长时间运行，并且会相互溢出。 它们是许多中断和性能问题的根源。 | [站点关闭疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/site-down-or-unresponsive/magento-site-down-troubleshooter.html?lang=en) 和 [如何重置cron作业](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-job-is-stuck-in-running-status.html?lang=en) 在我们的支持知识库中。 |
-| 性能问题 | **如果您没有使用Adobe Commerce横幅，请将其禁用。** 在启用但未使用横幅时，会使用资源在不需要时对数据库进行查找，这将导致性能问题。 | [禁用Adobe Commerce横幅输出以提高性能](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/disable-magento-banner-output-to-improve-site-performance.html) 在我们的支持知识库中。 |
-| 搜索问题 | **MySQL目录搜索引擎已在Adobe Commerce 2.4.0中删除。** 在安装版本2.4.0之前，您必须安装并配置Elasticsearch主机。请参阅我们的开发人员文档中的安装和配置Elasticsearch。 | [设置Elasticsearch服务](https://devdocs.magento.com/cloud/project/services-elastic.html) ，请参阅我们的开发人员文档。 |
-| 自定义错误 | **在高峰时段请勿部署。** 添加和删除用户将触发部署。 | [零停机部署](https://devdocs.magento.com/cloud/deploy/reduce-downtime.html) ，请参阅我们的开发人员文档。 |
-| 数据库错误和问题 | **数据库问题导致部署（挂接后问题）、性能和站点关闭情况。** 许多问题涉及错误或数据库空间分配不足。 | [MariaDB错误代码](https://mariadb.com/kb/en/library/mariadb-error-codes/#mariadb-specific-error-codes); [管理存储空间](https://devdocs.magento.com/cloud/project/manage-disk-space.html) （包括数据库）。 |
-| 配置问题 | **在保存时按计划而不是索引进行索引。** 这是最有效的索引配置。 保存时的索引将导致完全重新索引。 | [配置索引器](../../../configuration/cli/manage-indexers.md#configure-indexers) ，请参阅我们的开发人员文档。 |
-| 自定义代码问题 | **检查您缓慢的查询日志，以发现确定流程的机会，并可能终止需要过多时间才能完成的流程。** 缓慢的查询可能会导致数据库死锁，从而导致站点停机和性能问题。 | [在MySQL中检查缓慢的查询和进程需要过长的时间](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html) |
-| 扩展问题 | **仅在Commerce Marketplace上当前使用已验证的扩展。** | [Adobe Commerce扩展](https://marketplace.magento.com/extensions.html) |
-| 资源问题 | **监控可用内存和空间并优化存储。** 在执行占用大量资源的操作（例如，部署）之前，您可能会拥有可用空间。 文件存储优化不佳（例如，过大的富图像）也会导致空间不足。 资源不足会导致性能问题、站点停机、部署卡住和部署失败。 | [管理磁盘空间](https://devdocs.magento.com/cloud/project/manage-disk-space.html) 在我们的开发人员文档中； [文件存储容量低/用尽，特定页面加载速度缓慢](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html?lang=en) 在我们的支持知识库中。 |
+| 部署問題 | **遵循部署最佳實務。** 13%的支援票證涉及部署問題。 已更新最佳實務，納入預防上述許多原因的方法。 | [建置和部署的最佳實務](https://devdocs.magento.com/cloud/reference/discover-deploy.html#best-practices) （位於我們的開發人員檔案中）。 |
+| 網站停止服務問題 | **使用「網站停機疑難排解員」。** Cron可能長時間執行且會相互超載。 這是許多中斷和效能問題的根源。 | [Site Down疑難排解員](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/site-down-or-unresponsive/magento-site-down-troubleshooter.html?lang=en) 和 [如何重設cron工作](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-job-is-stuck-in-running-status.html?lang=en) 在我們的支援知識庫中。 |
+| 效能問題 | **如果您沒有使用Adobe Commerce橫幅，請將其停用。** 當橫幅已啟用但未使用時，資源會在不需要時用來對資料庫進行查閱，這會導致效能問題。 | [停用Adobe Commerce橫幅輸出以改善效能](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/disable-magento-banner-output-to-improve-site-performance.html) 在我們的支援知識庫中。 |
+| 搜尋問題 | **Adobe Commerce 2.4.0中已移除MySQL目錄搜尋引擎。** 您必須先設定Elasticsearch主機，然後再安裝2.4.0版。請參閱開發人員檔案中的安裝與設定Elasticsearch。 | [設定Elasticsearch服務](https://devdocs.magento.com/cloud/project/services-elastic.html) （位於我們的開發人員檔案中）。 |
+| 自訂錯誤 | **請勿在尖峰時段部署。** 新增和移除使用者將會觸發部署。 | [零停機部署](https://devdocs.magento.com/cloud/deploy/reduce-downtime.html) （位於我們的開發人員檔案中）。 |
+| 資料庫錯誤和問題 | **資料庫問題會導致部署（連結後問題）、效能和網站停止運作的情況。** 許多都涉及錯誤或資料庫空間配置不足。 | [MariaDB錯誤代碼](https://mariadb.com/kb/en/library/mariadb-error-codes/#mariadb-specific-error-codes)； [管理儲存空間](https://devdocs.magento.com/cloud/project/manage-disk-space.html) （包括資料庫）。 |
+| 設定問題 | **依排程建立索引，而非儲存時建立索引。** 這是最有效的索引設定。 「儲存時建立索引」將導致完全重新建立索引。 | [設定索引子](../../../configuration/cli/manage-indexers.md#configure-indexers) （位於我們的開發人員檔案中）。 |
+| 自訂程式碼問題 | **檢查您的緩慢查詢記錄，找出找出需要花費太多時間才能完成且可能終止流程的機會。** 緩慢的查詢可能會導致資料庫死結，導致網站故障和效能問題。 | [在MySQL中檢查緩慢的查詢和程式耗時過長](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html) |
+| 擴充功能問題 | **僅使用Commerce Marketplace上目前已驗證的擴充功能。** | [Adobe Commerce的擴充功能](https://marketplace.magento.com/extensions.html) |
+| 資源問題 | **監視可用的記憶體與空間，並最佳化儲存空間。** 在耗用大量資源的動作（例如部署）之前，您可能會有可用空間。 檔案儲存最佳化不佳（例如，過多的大型豐富影像）也會造成空間不足。 資源不足會導致效能問題、網站無法使用、部署停滯和部署失敗。 | [管理磁碟空間](https://devdocs.magento.com/cloud/project/manage-disk-space.html) （在開發人員檔案中）； [檔案儲存空間不足/耗盡，特定頁面載入緩慢](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html?lang=en) 在我們的支援知識庫中。 |

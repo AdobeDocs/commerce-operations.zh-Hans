@@ -1,7 +1,8 @@
 ---
-title: '"[!DNL Alerts]"'
-description: 了解 [!UICONTROL Alerts] 选项卡 [!DNL Site-Wide Analysis Tool]、何时使用及其好处。
-source-git-commit: 3efc01fb1f376514ebbfb1dd29b42c764a9fd4d5
+title: '[!DNL Alerts]'
+description: 瞭解 [!UICONTROL Alerts] 索引標籤中的 [!DNL Site-Wide Analysis Tool]，以及何時使用它所帶來的好處。
+exl-id: 0d7dacfe-f66a-440b-89cc-bce5eda2a230
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -10,13 +11,12 @@ ht-degree: 0%
 
 # [!DNL Alerts]
 
-的 [!DNL Site-Wide Analysis Tool's] [!UICONTROL Alerts] 页面显示面向商户的Adobe Commerce托管警报修补程序。 Adobe提供 [!DNL Managed Alerts] 以使用行业最佳实践跟踪性能量度。 引用 [Adobe Commerce的托管警报](https://support.magento.com/hc/en-us/articles/360045806832-Managed-alerts-for-Adobe-Commerce) 我们的文章 [!DNL support knowledge base].
+此 [!DNL Site-Wide Analysis Tool's] [!UICONTROL Alerts] 頁面會顯示商戶的Adobe Commerce Managed Alerts修補程式。 Adobe提供 [!DNL Managed Alerts] 以使用業界最佳實務來追蹤績效量度。 參考 [Adobe Commerce的管理式警報](https://support.magento.com/hc/en-us/articles/360045806832-Managed-alerts-for-Adobe-Commerce) 文章於 [!DNL support knowledge base].
 
-## 何时使用
+## 使用時機
 
-[!UICONTROL Managed Alerts] 选项卡显示最新的20个 [!DNL New Relic Alerts]、其状态、事件URL以及指向 [!DNL support knowledge base] 文章。 您可以使用此选项卡保持最新 [!DNL Alerts].
+[!UICONTROL Managed Alerts] 索引標籤顯示最新的20個 [!DNL New Relic Alerts]、其狀態、事件URL和連結至 [!DNL support knowledge base] 文章。 您可以使用此索引標籤來保持最新狀態 [!DNL Alerts].
 
-## 优点
+## 優點
 
-通过在 [!DNL Alerts] 并根据需要更新网站。
-
+透過持續更新網站效能提升您的網站效能 [!DNL Alerts] 並視需要更新網站。

@@ -1,41 +1,41 @@
 ---
-title: 应用修补程序
-description: 了解将修补程序应用到Adobe Commerce或Magento Open Source项目的方法。
-source-git-commit: e2ddb30da8dd86236e1dcf33a3f911b67384a6d7
+title: 套用修補程式
+description: 瞭解將修補程式套用至Adobe Commerce或Magento Open Source專案的方法。
+exl-id: 1d5d81ad-0115-4575-adfd-dde7c2826d85
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
 
+# 套用修補程式
 
-# 应用修补程序
+您可以使用下列任一方法來套用修補程式：
 
-您可以使用以下任一方法应用修补程序：
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
+- [命令列](../patches/apply.md#command-line)
+- [Composer](../patches/apply.md#composer)
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}
-- [命令行](../patches/apply.md#command-line)
-- [编辑器](../patches/apply.md#composer)
-
-## 编辑器
+## Composer
 
 >[!IMPORTANT]
 >
->要应用正式的质量修补程序，请使用 [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}。 在部署任何自定义修补程序之前，请务必先执行全面测试。
+>若要套用正式的品質修補程式，請使用 [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}. 在部署任何自訂修補程式之前，請務必執行全面的測試。
 
-要使用编辑器应用自定义修补程序，请执行以下操作：
+若要使用Composer套用自訂修補程式：
 
-1. 打开命令行应用程序并导航到项目目录。
-1. 添加 `cweagans/composer-patches` 插件 `composer.json` 文件。
+1. 開啟命令列應用程式，並導覽至您的專案目錄。
+1. 新增 `cweagans/composer-patches` 外掛程式至 `composer.json` 檔案。
 
    ```bash
    composer require cweagans/composer-patches
    ```
 
-1. 编辑 `composer.json` 并添加以下部分以指定：
-   - **模块：** *\&quot;magento/module-payment\&quot;*
-   - **标题：** *\&quot;MAGETWO-56934:使用无效信用卡进行Authorize.net订购时，结帐页面冻结\&quot;*
-   - **修补程序路径：** *\&quot;patches/composer/github-issue-6474.diff\&quot;*
+1. 編輯 `composer.json` 檔案並新增以下區段以指定：
+   - **模組：** *\&quot;magento/module-payment\&quot;*
+   - **標題：** *\&quot;MAGETWO-56934：使用Authorize.net訂購信用卡無效時，結帳頁面會凍結\&quot;*
+   - **修補程式路徑：** *\&quot;patches/composer/github-issue-6474.diff\&quot;*
 
    例如：
 
@@ -50,38 +50,38 @@ ht-degree: 0%
    }
    ```
 
-   如果修补程序影响多个模块，则必须创建多个针对多个模块的修补程序文件。
+   如果修補程式會影響多個模組，您必須建立以多個模組為目標的多個修補程式檔案。
 
-1. 应用修补程序。 使用 `-v` 选项。
+1. 套用修補程式。 使用 `-v` 選項。
 
    ```bash
    composer -v install
    ```
 
-1. 更新 `composer.lock` 文件。 锁定文件跟踪对象中已将哪些修补程序应用于每个编辑器包。
+1. 更新 `composer.lock` 檔案。 鎖定檔案會追蹤哪些修補程式已套用至物件中的每個Composer套件。
 
    ```bash
    composer update --lock
    ```
 
-## 命令行
+## 命令列
 
-要从命令行应用修补程序，请执行以下操作：
+若要從命令列套用修補程式：
 
-1. 将本地文件上传到 `<Magento_root>` 目录。
-1. 以 [管理员用户](../../configuration/cli/config-cli.md#prerequisites) 并验证文件是否位于正确的目录中。
-1. 在命令行界面中，根据修补程序扩展运行以下命令：
+1. 將本機檔案上傳至 `<Magento_root>` 目錄時使用FTP、SFTP、SSH或您一般的傳輸方法。
+1. 以以下身分登入伺服器 [管理員使用者](../../configuration/cli/config-cli.md#prerequisites) 並驗證檔案是否位於正確的目錄中。
+1. 在命令列介面中，根據修補程式副檔名執行下列命令：
 
    ```bash
    patch < patch_file_name.patch
    ```
 
-   该命令假定要修补的文件相对于修补程序文件的位置。
+   該命令假定要修補的檔案相對於修補檔案定位。
 
    >[!NOTE]
    >
-   >如果命令行显示： `File to patch:`，则意味着即使路径正确，也无法找到目标文件。 在命令行终端中显示的框中，第一行显示要打补丁的文件。 复制文件路径，并将其粘贴到 `File to patch:` 提示和按 `Enter` 并且补丁应该完成。
+   >如果命令列顯示： `File to patch:`，這表示它找不到預期的檔案，即使路徑看起來正確。 在命令列終端機中顯示的方塊中，第一行顯示要修補的檔案。 複製檔案路徑並將其貼到 `File to patch:` 提示並按下 `Enter` 而且修補程式應該會完成。
 
-1. 要反映更改，请在 **系统** >工具> **缓存管理**.
+1. 若要反映變更，請重新整理「 Admin 」下方的快取 **系統** >工具> **快取管理**.
 
-   或者，可以使用同一命令在本地应用修补程序，然后正常提交并推送。
+   或者，您也可以使用相同的指令在本機套用修補程式，然後正常確認並推送。

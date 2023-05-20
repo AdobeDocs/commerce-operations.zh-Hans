@@ -1,56 +1,56 @@
 ---
-title: “ [!DNL Infra] 选项卡”
-description: 的 [!DNL Infra] tab可隔离问题和导致基础结构问题的原因。
-source-git-commit: 5e4ab9e62f395b0967c3a632659c70a22770e9db
+title: 此 [!DNL Infra] 標籤
+description: 此 [!DNL Infra] 索引標籤可隔離基礎架構問題的問題和原因。
+exl-id: 45f24177-3264-4848-99bc-951be32c1f7b
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
+# 此 [!DNL Infra] 標籤
 
-# 的 [!DNL Infra] 选项卡
-
-的 **[!DNL Infra]** tab可隔离问题和导致基础结构问题的原因。 进一步介绍了您在选项卡上可以看到的帧。
+此 **[!DNL Infra]** 索引標籤可隔離基礎架構問題的問題和原因。 進一步說明您可以在標籤上看到的影格。
 
 ## [!UICONTROL Service Alerts – Infrastructure Alerts by Application name]
 
-![服务警报](../../assets/tools/observation-for-adobe-commerce/service-alerts.jpg)
+![服務警示](../../assets/tools/observation-for-adobe-commerce/service-alerts.jpg)
 
-的 **[!UICONTROL Service Alerts – Infrastructure Alerts by Application name]** 图表显示由 [!DNL New Relic] 基础设施代理。 这将显示服务重新启动，其中许多与部署相关。
+此 **[!UICONTROL Service Alerts – Infrastructure Alerts by Application name]** 圖表顯示由收集的服務警示 [!DNL New Relic] 基礎結構代理程式。 這會顯示服務重新啟動，其中許多與部署有關。
 
 ## [!UICONTROL Inode usage by mount]
 
-![按装载使用索引码](../../assets/tools/observation-for-adobe-commerce/inode-usage-mount.jpg)
+![依掛載區分的資訊節點使用狀況](../../assets/tools/observation-for-adobe-commerce/inode-usage-mount.jpg)
 
-的 **[!UICONTROL Inode usage by mount]** 帧显示 [!DNL inode] 在选定时间范围内按装入方式使用。 即使存储空间可能很大，但如果某个节点耗尽 [!DNL inodes]，则会显示缺少可用存储。 删除文件（尤其是小文件）将释放空间并创建 [!DNL inodes] 可用。
+此 **[!UICONTROL Inode usage by mount]** 影格顯示 [!DNL inode] 在選取的時間範圍內透過掛載的使用量。 即使節點用完後可能有大量可用儲存空間 [!DNL inodes]，則會顯示缺少可用的儲存空間。 移除檔案（尤其是小型檔案）會釋放空間並讓 [!DNL inodes] 可用。
 
 ## [!UICONTROL vCPU tier view over timeline GREATER 2 weeks]
 
-![时间线上的vCPU层视图超过2周](../../assets/tools/observation-for-adobe-commerce/vCPU-tier.jpg)
+![vCPU層級檢視時間軸大於2週](../../assets/tools/observation-for-adobe-commerce/vCPU-tier.jpg)
 
-的 **[!UICONTROL vCPU tier view over timeline GREATER 2 weeks]** 此框架显示超过两周的选定时间范围内的vCPU层视图。 此帧查看分配给的vCPU数 [!DNL New Relic] 显示应用程序名称。
+此 **[!UICONTROL vCPU tier view over timeline GREATER 2 weeks]** 影格會顯示選取超過兩週的時間範圍內的vCPU層檢視。 此框架會檢視指派給的vCPU數量 [!DNL New Relic] 顯示應用程式名稱。
 
 ## [!UICONTROL vCPU tier view over timeline]
 
-![时间轴上的vCPU层视图](../../assets/tools/observation-for-adobe-commerce/vcpu-tier-24.jpg)
+![vCPU層檢視時間表](../../assets/tools/observation-for-adobe-commerce/vcpu-tier-24.jpg)
 
-的 **[!UICONTROL vCPU tier view over timeline]** 此框架显示在超过24小时的选定时间范围内的vCPU层视图。 此帧查看分配给的vCPU数 [!DNL New Relic] 显示应用程序名称。 它将同时显示群集的上升大小和缩减大小。
+此 **[!UICONTROL vCPU tier view over timeline]** 影格會顯示所選時間範圍內超過24小時的vCPU層檢視。 此框架會檢視指派給的vCPU數量 [!DNL New Relic] 顯示應用程式名稱。 它會顯示叢集向上和向下移動。
 
 ## [!UICONTROL vCPU tier view over timeline BY NODE]
 
-![按节点显示时间轴的vCPU层视图](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)
+![依節點的vCPU層檢視時間軸](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)
 
-的 **[!UICONTROL vCPU tier view over timeline BY NODE]** 帧按节点显示选定时间范围内的vCPU层视图。 此帧有助于检测节点丢失或节点大小调整或缩小时。 按节点显示时间轴的vCPU层视图，应查看时间轴少于24小时。
+此 **[!UICONTROL vCPU tier view over timeline BY NODE]** 框架會依節點顯示所選時間範圍內的vCPU層檢視。 此框架有助於偵測節點遺失，或節點已放大或縮小時。 依節點的vCPU層級檢視時間軸，應檢視少於24小時的時間軸。
 
 ## [!UICONTROL Instance details]
 
-![实例详细信息](../../assets/tools/observation-for-adobe-commerce/instance-details.jpg)
+![執行個體詳細資訊](../../assets/tools/observation-for-adobe-commerce/instance-details.jpg)
 
-的 **[!UICONTROL Instance details]** 表显示了每个 [!DNL New Relic] 应用程序。
+此 **[!UICONTROL Instance details]** 表格顯示每個執行處理的詳細資訊 [!DNL New Relic] 應用程式。
 
 ## [!UICONTROL Logging, if there is a broken line for a node, it indicates non-responsive node during that time period]
 
-![非响应节点](../../assets/tools/observation-for-adobe-commerce/non-responsive-node.jpg)
+![無回應節點](../../assets/tools/observation-for-adobe-commerce/non-responsive-node.jpg)
 
-的 **[!UICONTROL Logging, if there is a broken line for a node, it indicates non-responsive node during that time period]** 框架显示某个时间段内的非响应节点。
+此 **[!UICONTROL Logging, if there is a broken line for a node, it indicates non-responsive node during that time period]** 框架顯示一段時間內無回應的節點。

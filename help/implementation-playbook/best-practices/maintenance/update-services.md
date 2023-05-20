@@ -1,43 +1,43 @@
 ---
-title: 更新服务最佳实践
-description: 了解如何保持Adobe Commerce在云基础架构技术堆栈上更新。
+title: 更新服務最佳實務
+description: 瞭解如何保持雲端基礎結構技術棧疊上的Adobe Commerce更新。
 role: Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
+exl-id: 62aeffe3-b5a6-49f8-a39b-3219b46cd486
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
+# 更新服務最佳實務
 
-# 更新服务最佳实践
+本文提供建議讓雲端基礎結構技術棧疊上的Adobe Commerce保持更新，並提供實用資源的連結。
 
-本文提供了使您的Adobe Commerce保持云基础架构技术堆栈更新的建议，并提供了指向有用资源的链接。
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+雲端基礎結構上的Adobe Commerce 2.4.x和更新版本
 
-Adobe Commerce on cloud infrastructure 2.4.x及更高版本
+## 更新服務
 
-## 更新服务
+在Adobe Commerce使用的服務和元件達到或接近其生命週期結束日期之前，請升級這些服務和元件。 這有助於遵循PCI法規並減少安全性漏洞。
 
-在Adobe Commerce使用的服务和组件到达或接近生命周期终止日期之前，请对其进行升级。 这有助于跟上PCI合规性并减少安全漏洞。
+入門計畫客戶可自助服務升級。 請參閱 [變更服務版本](https://devdocs.magento.com/cloud/project/services.html#change-service-version) 以取得如何執行此動作的詳細資訊。
 
-入门计划客户可以在服务升级时自助服务。 请参阅 [更改服务版本](https://devdocs.magento.com/cloud/project/services.html#change-service-version) 以了解有关如何执行此操作的详细信息。
-
-专业计划客户只能在其 [集成环境](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html). 对于生产服务升级，您必须 [提交支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 请求升级。
+Pro計畫的客戶只能自助服務升級其服務 [整合環境](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html). 若要在生產環境中升級服務，您必須 [提交支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 要求升級。
 
 >[!WARNING]
 >
->如果没有向基础架构团队发出48个工作小时的通知，服务升级就无法推送到生产环境。 这是必需的，因为我们需要确保我们有基础架构支持工程师来在所需的时间范围内更新您的配置，同时将生产环境的停机时间降到最低。
+>若未提前48個營業時間通知我們的基礎建設團隊，服務升級便無法推送至生產環境。 由於我們需要確保我們提供基礎架構支援工程師，以在所需時間範圍內更新您的設定，並將生產環境的停機時間降至最低，因此我們有必要採取此做法。
 
-您可以在以下文件中查看服务版本和终止日期的列表： [https://github.com/magento/ece-tools/blob/develop/config/eol.yaml](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+您可以在下列檔案中檢視服務版本和生命週期結束日期的清單： [https://github.com/magento/ece-tools/blob/develop/config/eol.yaml](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 >[!NOTE]
 >
->此文件不能被视为一个真相来源。 如有疑问，请参阅官方供应商网站以了解这些技术。
+>此檔案不可以視為單一信任來源。 如有疑問，請參閱官方廠商網站以瞭解這些技術。
 
-## 其他信息
+## 其他資訊
 
-[系统要求](../../../installation/system-requirements.md)
+[系統需求](../../../installation/system-requirements.md)

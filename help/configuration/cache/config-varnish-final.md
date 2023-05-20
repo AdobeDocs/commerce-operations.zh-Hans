@@ -1,23 +1,23 @@
 ---
-title: 最终验证
-description: 验证是否已正确设置清漆配置以与Adobe Commerce应用程序配合使用。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 最終驗證
+description: 確認您的Varnish設定已正確設定為可與Adobe Commerce應用程式搭配使用。
+exl-id: 01f28c93-75cd-4969-9142-b8dac0aa2adb
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 0%
 
 ---
 
+# 清漆組態的最終驗證
 
-# 清漆结构的最终验证
+現在您已使用 `default.vcl` 由Commerce為您產生，您可以執行一些最終驗證，以確保Varnish正常運作。
 
-现在，您正在使用 `default.vcl` Commerce为您生成的清漆，您可以执行一些最终验证以确保清漆正常工作。
+## 驗證HTTP回應標頭
 
-## 验证HTTP响应头
+使用 `curl` 或其他公用程式，可在您瀏覽網頁瀏覽器中的任何Commerce頁面時檢視HTTP回應標題。
 
-使用 `curl` 或其他实用程序来查看HTTP响应标头。
-
-首先，确保您使用 [开发人员模式](../cli/set-mode.md#change-to-developer-mode);否则，您将看不到标头。
+首先，請確定您使用 [開發人員模式](../cli/set-mode.md#change-to-developer-mode)；否則，您將看不到標頭。
 
 例如，
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 curl -I -v --location-trusted 'http://192.0.2.55/magento2'
 ```
 
-重要标题：
+重要標題：
 
 ```terminal
 X-Magento-Cache-Control: max-age=86400, public, s-maxage=86400
@@ -35,51 +35,51 @@ X-Magento-Cache-Debug: MISS
 
 >[!INFO]
 >
->此值也可接受： `X-Magento-Cache-Debug: HIT`.
+>此值也可以接受： `X-Magento-Cache-Debug: HIT`.
 
-## 检查页面加载时间
+## 檢查頁面載入時間
 
-如果清漆正常工作，则任何具有可缓存块的商务页面都应在150毫秒内加载。 此类页面的示例包括前门和店面类别页面。
+如果Varnish正常運作，則任何具有可快取區塊的商務頁面應在150毫秒內載入。 此類頁面的範例為前門和店麵類別頁面。
 
-使用浏览器检查器测量页面加载时间。
+使用瀏覽器檢測器來測量頁面載入時間。
 
-例如，要使用Chrome检查器，请执行以下操作：
+例如，若要使用Chrome檢測器：
 
-1. 在Chrome中访问任何可缓存的商务页面。
-1. 右键单击页面上的任意位置。
-1. 在弹出菜单中，单击 **[!UICONTROL Inspect Element]**
-1. 在检查器窗格中，单击 **[!UICONTROL Network]** 选项卡。
-1. 刷新页面。
-1. 滚动到检查器窗格的顶部，以便您能够看到所查看页面的URL。
+1. 存取Chrome中任何可快取的Commerce頁面。
+1. 以滑鼠右鍵按一下頁面上的任何位置。
+1. 在快顯功能表中，按一下 **[!UICONTROL Inspect Element]**
+1. 在檢視窗窗格中，按一下 **[!UICONTROL Network]** 標籤。
+1. 重新整理頁面。
+1. 捲動至檢視窗窗窗格的頂端，以便檢視所檢視頁面的URL。
 
-   下图显示了加载 `magento2` 索引页。
+   下圖顯示載入 `magento2` 索引頁面。
 
-   ![单击您正在查看的页面](../../assets/configuration/varnish-inspector.png)
+   ![按一下您正在檢視的頁面](../../assets/configuration/varnish-inspector.png)
 
-   页面URL旁边会显示页面加载时间。 在这种情况下，加载时间为5毫秒。 这有助于确认清漆是否已缓存页面。
+   頁面載入時間會顯示在頁面URL旁邊。 在此情況下，載入時間為5毫秒。 這有助於確認Varnish已快取頁面。
 
-1. 要查看HTTP响应标头，请单击页面URL（在“名称”列中）。
+1. 若要檢視HTTP回應標題，請按一下頁面URL （在「名稱」欄中）。
 
-   您可以查看HTTP标头，有关这些标头的详细信息，请参阅验证HTTP响应标头一节。
+   您可以檢視HTTP標頭，驗證HTTP回應標頭一節中會詳細說明這些標頭。
 
-## 验证商务缓存
+## 驗證商務快取
 
-确保 `<magento_root>/var/page_cache` 目录为空：
+確定 `<magento_root>/var/page_cache` 目錄是空的：
 
-1. 登录到您的商务服务器，或切换到文件系统所有者。
-1. 输入以下命令：
+1. 登入您的Commerce伺服器或切換到檔案系統擁有者。
+1. 輸入下列命令：
 
    ```bash
    rm -rf <magento_root>/var/page_cache/*
    ```
 
-1. 访问一个或多个可缓存的商务页面。
-1. 检查 `var/page_cache/` 目录访问Advertising Cloud的帮助。
+1. 存取一或多個可快取的Commerce頁面。
+1. 檢查 `var/page_cache/` 目錄。
 
-   如果目录为空，恭喜！ 您已成功将清漆和商务配置为一起工作！
+   如果目錄是空的，恭喜您！ 您已成功將Varnish and Commerce設定為搭配使用！
 
-1. 如果清除了 `var/page_cache/` 目录，重新启动清漆。
+1. 如果您已清除 `var/page_cache/` 目錄，重新啟動Varnish。
 
 >[!TIP]
 >
->如果您遇到503（后端获取失败）错误，请参阅 [对503（服务不可用）错误进行故障诊断](https://support.magento.com/hc/en-us/articles/360034631211) 在 _Adobe Commerce帮助中心_.
+>如果您遇到503 （後端擷取失敗）錯誤，請參閱 [疑難排解503 （服務無法使用）錯誤](https://support.magento.com/hc/en-us/articles/360034631211) 在 _Adobe Commerce說明中心_.

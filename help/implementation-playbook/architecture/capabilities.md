@@ -1,6 +1,6 @@
 ---
 title: Adobe Commerce功能
-description: 了解Adobe Commerce功能如何使我们与竞争对手区分开来。
+description: 瞭解Adobe Commerce功能如何將我們與競爭對手區分開來。
 exl-id: 6d2196b4-56ee-4048-b5e5-930811e7e50b
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -11,27 +11,27 @@ ht-degree: 0%
 
 # Adobe Commerce功能
 
-Adobe Commerce是市场上最受信任、最可靠的电子商务平台之一。 这种信任和可靠性已经在使用这种信任和可靠性的企业的增长中得到证明。 根据[托管法庭](https://hostingtribunal.com/blog/magento-statistics/#gref)，与其他平台上的品牌相比，利用Adobe Commerce作为电子商务平台的品牌增长速度快了三倍。
+Adobe Commerce是市面上最值得信賴且可靠的電子商務平台之一。 使用這項技術的企業成長已證明這種信任和可靠性。 根據[託管法庭](https://hostingtribunal.com/blog/magento-statistics/#gref)，各品牌運用Adobe Commerce作為其電子商務平台，其增長速度比其他平台上的品牌快三倍。
 
-Adobe Commerce能够应对贵品牌可能面临的任何复杂性，这已成为一个热门选择，因为各公司都在提高自己的成熟度。 无论各大品牌将重点放在一个地区的单个网站上，还是需要连接全球的多个网站或商店，Adobe Commerce都具备创建无缝且连接的体验的基础架构。 作为合作伙伴，我们随后将利用我们的专业知识来定制网站，以满足您的独特需求。
+Adobe Commerce能夠處理品牌可能遇到的任何複雜問題，因此隨著企業提高自身的複雜程度，這已成為一種受歡迎的選擇。 無論品牌聚焦於一個地區的單一網站，或需要連線全球各地的多個網站或商店，Adobe Commerce都具備基礎架構，可打造順暢且連線的體驗。 作為合作夥伴，我們隨後會運用我們的專業知識來自訂網站，以符合您獨特的需求。
 
-Adobe在创意产品中广为人知，但它也拥有重要的数字业务，提供内容管理、分析、活动编排、基于帐户的营销个性化功能，当然还提供商务。
+Adobe雖然在創意產品中已為人所熟知，但它也有重要的數位業務，提供內容管理、分析、行銷活動協調、帳戶式行銷個人化功能，當然還有商業。
 
-但是，是什么让体验变得好，与竞争对手有所不同？
+但是什麼讓體驗變得良好並與競爭者有所區別？
 
-- 它必须富有且富有吸引力
-- 它应由访客的数据和上下文信息驱动
-- 它需要智能
-- 它需要在接触点之间以及访客所在的位置实现无缝
+- 它需要豐富且引人入勝
+- 它應由訪客的資料和情境驅動
+- 它需要智慧型
+- 無論您的訪客身在何處，都需要在接觸點之間保持順暢
 
-要构建出色的购物体验，企业需要功能强大、现代化的平台，这些平台具有开放性、可扩展性、安全性，更不用说现代化的工具来实现灵活开发。 Adobe Commerce是满足所有这些需求的完美平台。
+為了建立絕佳的購物體驗，企業需要強大、現代的平台，這些平台必須開放、可擴充、可擴充且安全，更不用說用於敏捷開發的現代工具了。 Adobe Commerce是滿足上述所有需求的完美平台。
 
-Adobe Commerce是一个功能齐全、经过市场测试的电子商务平台，旨在为每个渠道和业务模型提供丰富的个性化商务体验。 Adobe Commerce可以作为端到端商务应用程序或更大业务范围内的参考应用程序。 它采用模块化且灵活的方式，具有在REST和GraphQL中构建的广泛API，可与各种头部使用，从WordPress和Drupal到Adobe Experience Manager等等。
+Adobe Commerce是功能齊全、經過市場測試的電子商務平台，專為跨每個管道和業務模式提供豐富、個人化的商業體驗而打造。 Adobe Commerce可作為端對端商務應用程式，或作為大型企業環境中的參考應用程式。 它模組化且有彈性，具備內建於REST和GraphQL的廣泛API，可與各種標頭搭配使用，從WordPress和Drupal到Adobe Experience Manager和其他任何版本。
 
-## 功能图
+## 功能對應
 
-Adobe Commerce应用程序由一系列功能组成，这些功能是自包含模块。
+Adobe Commerce應用程式由獨立模組的功能集合所組成。
 
-![Adobe Commerce功能图](../../assets/playbooks/capabilities-map.svg)
+![Adobe Commerce功能對應](../../assets/playbooks/capabilities-map.svg)
 
-![Adobe Commerce功能图](../../assets/playbooks/capabilities-modules.svg)
+![Adobe Commerce功能對應](../../assets/playbooks/capabilities-modules.svg)

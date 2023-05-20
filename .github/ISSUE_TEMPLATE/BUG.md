@@ -1,22 +1,22 @@
 ---
 name: Bug report
 about: Create an issue about a bug on the Experience League website
-title: 错误报告
+title: 錯誤報告
 labels: bug
 assignees: dshevtsov
 source-git-commit: b0f4671b8c214397af77cbd316e489dac1ce8601
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '17'
 ht-degree: 0%
 
 ---
 
 
-## 描述
+## 說明
 
 <!-- (REQUIRED) What is the issue or current behavior? -->
 
-### 重现问题的步骤
+### 重現問題的步驟
 
 <!-- (OPTIONAL) What needs to be done to replicate this issue? You can provide your scenario in a Gist. -->
 
@@ -24,15 +24,15 @@ ht-degree: 0%
 1. 第二步
 1. 等等
 
-## 预期结果
+## 預期結果
 
 <!-- (REQUIRED) What is the expected result or behavior after resolving this issue? -->
 
-## 可能的解决方案
+## 可能的解決方案
 
 <!-- (OPTIONAL) What would a solution for this issue look like? -->
 
-## 其他信息
+## 其他資訊
 
 <!-- (OPTIONAL) What other information can you provide about this issue? -->
 

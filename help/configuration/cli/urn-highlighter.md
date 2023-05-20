@@ -1,44 +1,44 @@
 ---
-title: URN高亮
-description: 了解如何在IDE中设置URN突出显示。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+title: URN熒光筆
+description: 瞭解如何在IDE中設定URN反白顯示。
+exl-id: 6389ab58-af70-4b33-800e-be3191c5a4cc
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
-
-# URN高亮显示器概述
+# URN熒光筆概述
 
 {{file-system-owner}}
 
-商务代码将所有XSD架构作为 [统一资源名称(URN)](https://www.ietf.org/rfc/rfc2141.txt). 如果您正在开发代码并且需要引用XSD，则此命令会配置集成开发人员环境(IDE)以识别和高亮显示URN。 这使开发更轻松。
+Commerce程式碼參考所有XSD結構描述為 [統一資源名稱(URN)](https://www.ietf.org/rfc/rfc2141.txt). 如果您正在開發程式碼並需要參考XSD，這個命令會設定您的整合式開發人員環境(IDE)來識別和強調URN。 如此可讓開發更輕鬆。
 
-默认情况下，像PhpStorm这样的IDE未配置为识别URN，因此它们以红色文本显示，如下所示：
+依預設，像PhpStorm這樣的IDE未設定為識別URN，因此它們會以紅色文字顯示，如下所示：
 
-![PhpStorm未配置为识别URN](../../assets/configuration/urn-before.png)
+![PhpStorm未設定為識別URN](../../assets/configuration/urn-before.png)
 
-的 `bin/magento dev:urn-catalog:generate` 命令允许IDE（当前仅PhpStorm和Visual Studio代码）识别并高亮显示URN，如下所示：
+此 `bin/magento dev:urn-catalog:generate` command可讓您的IDE （目前只有PhpStorm和Visual Studio Code）識別並反白下列URN：
 
-![使IDE能够识别URN](../../assets/configuration/urn-after.png)
+![啟用IDE以辨識URN](../../assets/configuration/urn-after.png)
 
-具体而言，此命令将创建以下PhpStorm配置：
+具體而言，這個指令會建立下列PhpStorm組態：
 
-![PhpStorm配置示例](../../assets/configuration/urn-settings.png)
+![PhpStorm設定範例](../../assets/configuration/urn-settings.png)
 
-## 配置IDE
+## 設定IDE
 
-目前，仅支持PhpStorm和Visual Studio代码。
+目前僅支援PhpStorm和Visual Studio Code。
 
-命令语法：
+命令語法：
 
 ```bash
 bin/magento dev:urn-catalog:generate <path>
 ```
 
-其中 `<path>` 是通往PhpStorm的路 `misc.xml` 文件，它相对于您的项目根目录位置。 通常， `<path>` is `.idea/misc.xml`.
+位置 `<path>` 是PhpStorm的路徑 `misc.xml` 檔案，此檔案位於專案根目錄的相對位置。 通常， `<path>` 是 `.idea/misc.xml`.
 
 >[!INFO]
 >
->要保持“架构和DTD”为最新，请运行 `dev:urn-catalog:generate` 命令 `*.xsd` 文件。
+>若要讓您的「結構描述和DTD」保持最新狀態，請執行 `dev:urn-catalog:generate` command ，每次新增、修改或移除包含的Commerce 2模組時 `*.xsd` 檔案。

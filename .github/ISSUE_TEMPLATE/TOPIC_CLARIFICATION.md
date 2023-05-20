@@ -1,30 +1,30 @@
 ---
 name: Topic clarification/correction
 about: Create a request to clarify or correct a documentation topic
-title: “请求主题更新”
+title: '請求主題更新'
 labels: ''
 assignees: ''
 source-git-commit: b0f4671b8c214397af77cbd316e489dac1ce8601
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '12'
 ht-degree: 0%
 
 ---
 
 
-## 主题链接
+## 主題連結
 
 <!-- (REQUIRED) A link to the topic that needs clarification or correction -->
 
-## 描述
+## 說明
 
 <!-- (REQUIRED) What needs to be clarified or corrected in this topic? -->
 
-## 可能的解决方案
+## 可能的解決方案
 
 <!-- (OPTIONAL) What would a solution for this issue look like? -->
 
-## 其他信息
+## 其他資訊
 
 <!-- (OPTIONAL) What other information can you provide about this issue? -->
 

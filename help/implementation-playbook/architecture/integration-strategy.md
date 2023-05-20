@@ -1,6 +1,6 @@
 ---
-title: Adobe Commerce集成策略
-description: 查看Adobe Commerce实施的集成策略和选项。
+title: Adobe Commerce整合策略
+description: 檢閱Adobe Commerce實作的整合策略和選項。
 exl-id: af7cc59a-3ee2-461a-8489-a35fe0288277
 source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
@@ -9,42 +9,42 @@ ht-degree: 0%
 
 ---
 
-# Adobe Commerce集成策略
+# Adobe Commerce整合策略
 
-集成平台的功能是“不容商量的”。 公司希望从各种接触点访问其电子商务平台，并将其无缝地集成到其技术系统中，特别是其ERP中。 可定制性、全球可扩展性和经济性也在最终平台购买中起着重要作用。
+整合平台的能力是「不可商量」的。 企業希望他們的電子商務平台可以從各種接觸點進行存取，並順暢地整合到他們的技術系統中，尤其是他們的ERP。 客製化、全球擴充能力及經濟實惠，也是最終購買平台的重要一環。
 
-性能优化的GraphQL API、全面的REST API，以及Adobe Commerce与其他系统或服务之间的批量文件导入，均支持店面和后端系统的整体集成方法。
+高效能的GraphQL API、全面的REST API，以及Adobe Commerce與其他系統或服務之間的批次檔案匯入，都支援適用於店面和後端系統的整體整合方法。
 
-Adobe Commerce GraphQL API提供了全面的店面覆盖，您可以使用这些覆盖与其他店面集成，包括：
+Adobe Commerce GraphQL API提供全方位的店面覆蓋範圍，可用來與其他店面整合，包括：
 
-- 数字体验平台(DXP)，如Adobe Experience Manager和Bloomreach
-- 内容管理系统(CMS)，如Drupal和WordPress
-- 现代自定义店面应用程序，如Adobe Commerce、PWA Studio和Vue Storefront
+- Adobe Experience Manager和Bloomreach等數位體驗平台(DXP)
+- Drupal和WordPress等內容管理系統(CMS)
+- Adobe Commerce、PWA Studio和Vue Storefront等現代自訂店面應用程式
 
-GraphQL提供了高效、特定于渠道的响应，无需过度获取数据，并可灵活部署新的接触点功能。 它还通常选择与销售渠道集成，例如移动设备本机应用程序、POS、IoT、社交渠道以及实时流商务渠道(如Facebook、Google、Instagram、微信和TikTok)。
+GraphQL提供高效率、通道專屬的回應、避免過度擷取資料，以及敏捷部署新接觸點功能。 它通常也可以與行動原生應用程式、POS、IoT、社交頻道和直播串流商業頻道(例如Facebook、Google、Instagram、微信和TikTok)等銷售頻道整合。
 
-Adobe Commerce REST API提供全面的系统配置覆盖和数据管理功能，包括产品和目录；购物车、报价和结账；客户、帐户和公司；订单和退货。 REST API支持批量操作、多种身份验证模式和粒度授权，因此通常选择REST API与企业系统集成，包括：
+Adobe Commerce REST API提供完整的系統設定涵蓋範圍和資料管理功能，包括產品和目錄、購物車、報價和結帳、客戶、帳戶和公司，以及訂單和退貨。 REST API支援大量作業、多種驗證模式和精細授權，因此REST API通常選擇與企業系統整合，包括：
 
-- 企业资源规划(ERP)系统，如SAP
-- 产品信息管理(PIM)系统，如Akeneo
-- 客户关系管理(CRM)系统，如Salesforce
-- 订单管理系统(OMS)，如MOM、Manhattan和SAP
-- 仓库管理系统(WMS)或第三方物流(3PL)，如Oracle、 NetSuite和SAP WM
-- 配置、价格、报价(CPQ)，如SalesforceCPQ
-- 数字资产管理(DAM)，如AdobeDAM。
+- SAP等企業資源規劃(ERP)系統
+- Akeneo等產品資訊管理(PIM)系統
+- Salesforce等客戶關係管理(CRM)系統
+- 訂單管理系統(OMS)，例如MOM、Manhattan和SAP
+- 倉儲管理系統(WMS)或第三方物流(3PL)，例如Oracle、NetSuite和SAP WM
+- 設定、定價、報價(CPQ)，如SalesforceCPQ
+- AdobeDAM等數位資產管理(DAM)。
 
-批量文件导入也被视为集成企业系统（如ERP和PIM）的一个好选项，因为数据不会经常更改，而且您通常通过计划文件导入获得更好的性能。 因此，通常选择批量文件导入来进行每日/每周和每月的完全数据同步，而选择REST API进行增量数据更改同步，以获得更好的性能。 这也只被视为一项计划工作，但可以频繁执行，可能每15分钟到1小时执行一次，具体取决于业务需求。
+批次檔案匯入也被視為整合企業系統（例如ERP和PIM）的好選擇，因為這類資料不會經常變更，而且您通常在排程檔案匯入時會有更好的效能。 因此，批次檔案匯入通常選擇每日/每週和每月完整資料同步進行大量資料同步，而REST API則選擇用於增量資料變更同步，以獲得更好的效能。 這也只會被視為排程工作，但可視業務需求經常進行（可能每15分鐘至1小時一次）。
 
-## 集成选项
+## 整合選項
 
-Adobe Commerce提供了三个灵活的集成选项：
+Adobe Commerce提供三種彈性的整合選項：
 
-- 与预建连接器的直接系统到系统集成。 某些系统可能已在Adobe Commerce Marketplace或其自己的网站上拥有Adobe Commerce扩展。
+- 透過預先建立的聯結器進行直接的系統對系統整合。 有些系統可能在Adobe Commerce Marketplace或自己的網站上已有Adobe Commerce擴充功能。
 
-- 通过自定义中间件实现系统到系统的集成。 部署的自定义中间件解决方案将用于处理数据映射、转换和管理。
+- 透過自訂中介進行系統間整合。 所部署的自訂中介軟體解決方案將用於流程資料對應、翻譯和管理。
 
-- 通过iPaaS（集成平台即服务）进行系统到系统的集成，也称为EAI（企业应用程序集成平台），如Mulesoft、Boomi和Software AG。
+- 透過iPaaS (Integration Platform-as-a-Service，也稱為EAI (Enterprise Application Integration Platform)，例如Mulesoft、Boomi和Software AG，進行系統到系統的整合。
 
-![Adobe Commerce集成选项](../../assets/playbooks/integration-options.svg)
+![Adobe Commerce整合選項](../../assets/playbooks/integration-options.svg)
 
-尽管通常需要实时集成，但在某些情况下也不需要。 Adobe Commerce本地支持 [!DNL RabbitMQ] 作为消息总线启用异步进程，建议对某些不需要实时交换的数据执行此操作，而是使用批处理文件交换或REST批处理数据进程API进行更新以异步处理。
+雖然通常需要即時整合，但在某些情況下並不需要。 Adobe Commerce原生支援 [!DNL RabbitMQ] 作為訊息匯流排來啟用非同步處理，建議用於某些不需要即時交換的資料，而是使用批次檔案交換或REST批次資料處理API進行更新以非同步處理。

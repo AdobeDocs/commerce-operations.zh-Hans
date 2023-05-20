@@ -1,41 +1,41 @@
 ---
-title: 自定义cron作业和cron组引用
-description: 了解如何使用cron组自定义cron。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 自訂cron工作和cron群組參考
+description: 瞭解如何使用cron群組自訂cron。
+exl-id: 16e342ff-aa94-4e31-8c75-dfea1ef02706
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
+# 自訂crons參考
 
-# 自定义转码参考
+此主題可協助您為自訂模組設定crontab和選擇性cron群組。 如果您的自訂模組需要定期排程工作，您必須為該模組設定crontab。 A _crontab_ 是cron工作設定。
 
-本主题可帮助您为自定义模块设置crontab和（可选）cron组。 如果您的自定义模块需要定期计划任务，则必须为该模块设置crontab。 A _crontab_ 是cron作业配置。
+您可以視需要設定自訂群組，讓您可以獨立於其他cron工作，執行在該群組中定義的cron工作。
 
-（可选）您可以设置一个自定义组，该组可让您独立于其他cron作业运行该组中定义的cron作业。
+如需逐步教學課程，請參閱 [設定自訂cron作業和cron群組（教學課程）](custom-cron-tutorial.md).
 
-有关分步教程，请参阅 [配置自定义cron作业和cron组（教程）](custom-cron-tutorial.md).
+如需cron作業的概觀，請參閱 [設定cron工作](../cli/configure-cron-jobs.md).
 
-有关cron作业的概述，请参阅 [配置cron作业](../cli/configure-cron-jobs.md).
+## 設定cron群組
 
-## 配置Cron组
+本節探討如何選擇為自訂模組建立cron群組。 如果您不需要這樣做，請繼續下一節。
 
-本节将讨论如何（可选）为自定义模块创建cron组。 如果您不需要执行此操作，请继续下一节。
+A _cron組_ 是一個邏輯群組，可讓您一次輕鬆執行多個處理程式的cron。 大部分的Commerce模組都使用 `default` cron群組；有些模組會使用 `index` 群組。
 
-A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程运行cron。 大多数商务模块都使用 `default` 康隆集团；某些模块使用 `index` 群组。
+如果您要為自訂模組實作cron，則可以選擇使用 `default` 群組或其他群組。
 
-如果要为自定义模块实施cron，则可以选择使用 `default` 组或其他组。
+**若要為模組設定cron群組**：
 
-**为模块配置CRON组**:
-
-创建 `crontab.xml` 文件：
+建立 `crontab.xml` 模組目錄中的檔案：
 
 ```text
 <your component base dir>/<vendorname>/module-<name>/etc/crontab.xml
 ```
 
-对于一个组，文件应具有以下内容：
+對於一個群組，檔案應具有以下內容：
 
 ```xml
 <?xml version="1.0"?>
@@ -50,15 +50,15 @@ A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程�
 
 其中：
 
-| 值 | 描述 |
+| 值 | 說明 |
 |---|---|
-| `group_name` | cron组的名称。 组名称不必唯一。 您一次可以为一个组运行cron。 |
-| `job_name` | 此Cron作业的唯一ID。 |
-| `classpath` | 要实例化的类（类路径）。 |
-| `method` | 方法 `classpath` 呼叫。 |
-| `time` | 以cron格式计划。 如果在Commerce数据库或其他存储中定义了计划，请忽略此参数。 |
+| `group_name` | cron群組的名稱。 群組名稱不必是唯一的。 您可以一次為一個群組執行cron。 |
+| `job_name` | 此cron作業的唯一ID。 |
+| `classpath` | 要具現化的類別（類別路徑）。 |
+| `method` | 中的方法 `classpath` 以呼叫。 |
+| `time` | 以cron格式排程。 如果排程定義於Commerce資料庫或其他儲存體中，請省略此引數。 |
 
-结果 `crontab.xml` 两个组可能如下所示：
+產生的結果 `crontab.xml` 有兩個群組，看起來可能像這樣：
 
 ```xml
 <?xml version="1.0"?>
@@ -82,17 +82,17 @@ A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程�
 </config>
 ```
 
-例如，请参阅 [Magento_Customer crontab.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/crontab.xml).
+如需範例，請參閱 [Magento_客戶crontab.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/crontab.xml).
 
-### 指定Cron组选项
+### 指定Cron群組選項
 
-您可以声明一个新组，并通过 `cron_groups.xml` 文件，位于：
+您可以透過以下方式宣告新群組並指定其設定選項（所有選項都會在存放區檢視範圍內執行）： `cron_groups.xml` 檔案，位於：
 
 ```text
 <your component base dir>/<vendorname>/module-<name>/etc/cron_groups.xml
 ```
 
-以下是 `cron_groups.xml` 文件：
+以下範例說明 `cron_groups.xml` 檔案：
 
 ```xml
 <?xml version="1.0"?>
@@ -111,21 +111,21 @@ A _cron组_ 是一个逻辑组，通过它可以一次轻松地为多个进程�
 
 其中：
 
-| 选项 | 描述 |
+| 選項 | 說明 |
 | -------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `schedule_generate_every` | 将计划写入的频率（以分钟为单位） `cron_schedule` 表。 |
-| `schedule_ahead_for` | 将计划写入 `cron_schedule` 表。 |
-| `schedule_lifetime` | 必须启动cron作业或认为cron作业已错过（“太晚”，无法运行）的时间范围（以分钟为单位）。 |
-| `history_cleanup_every` | 在数据库中保留该cron历史记录的时间（以分钟为单位）。 |
-| `history_success_lifetime` | 成功完成的cron作业记录保留在数据库中的时间（以分钟为单位）。 |
-| `history_failure_lifetime` | 在数据库中保留失败cron作业记录的时间（以分钟为单位）。 |
-| `use_separate_process` | 在单独的php流程中运行此cron组的作业 |
+| `schedule_generate_every` | 排程寫入的頻率（以分鐘為單位） `cron_schedule` 表格。 |
+| `schedule_ahead_for` | 將排程寫入「 」的提前時間（以分鐘為單位） `cron_schedule` 表格。 |
+| `schedule_lifetime` | cron工作必須開始或認為cron工作已錯過的時間範圍（以分鐘為單位）（「太晚了」而無法執行）。 |
+| `history_cleanup_every` | cron記錄保留在資料庫中的時間（分鐘）。 |
+| `history_success_lifetime` | 成功完成的cron工作記錄保留在資料庫中的時間（分鐘）。 |
+| `history_failure_lifetime` | 失敗的cron作業記錄保留在資料庫中的時間（以分鐘為單位）。 |
+| `use_separate_process` | 在單獨的php程式中執行此cron群組的工作 |
 
-## 禁用cron作业
+## 停用cron工作
 
-Cron作业没有 `disable` 功能 [观察](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers). 但是，可以使用以下技术来禁用cron作业： `schedule` 包含永远不会发生的日期的时间。
+Cron工作沒有 `disable` 功能與我們的相同， [觀察者](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers). 但是，可以使用以下技術停用cron作業： `schedule` 包含永不發生之日期的時間。
 
-例如，禁用 `visitor_clean` cron作业在 `Magento_Customer` 模块：
+例如，停用 `visitor_clean` cron工作，定義於 `Magento_Customer` 模組：
 
 ```xml
 ...
@@ -137,7 +137,7 @@ Cron作业没有 `disable` 功能 [观察](https://developer.adobe.com/commerce/
 ...
 ```
 
-禁用 `visitor_clean` cron作业，创建自定义模块并重写 `visitor_clean` cron作业 `schedule`:
+若要停用 `visitor_clean` cron工作，建立自訂模組並重寫 `visitor_clean` cron工作 `schedule`：
 
 ```xml
 ...
@@ -149,4 +149,4 @@ Cron作业没有 `disable` 功能 [观察](https://developer.adobe.com/commerce/
 ...
 ```
 
-现在， `visitor_clean` cron作业已设置为在2月30日00:00运行，该日期永远不会发生。
+現在， `visitor_clean` cron工作已設定在2月30日的00:00執行 — 絕不會發生的日期。

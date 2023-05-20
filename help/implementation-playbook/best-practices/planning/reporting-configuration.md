@@ -1,37 +1,37 @@
 ---
-title: 报表配置的最佳实践
-description: 如果您没有使用报表模块，请通过删除该模块来优化网站性能。
+title: 報告設定的最佳實務
+description: 如果您未使用報表模組，請移除報表模組以最佳化網站效能。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+exl-id: 8c991b8a-affb-4a9e-9383-671f595ff89e
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
+# 報告設定的最佳實務
 
-# 报表配置的最佳实践
+如果您的企業不需要報告或動態客戶區段功能，請停用 [報表功能](https://docs.magento.com/user-guide/configuration/general/reports.html) 以提升商店效能。
 
-如果您的企业不需要报告或动态客户区段功能，请禁用 [报表功能](https://docs.magento.com/user-guide/configuration/general/reports.html) 以提高存储性能。
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+[所有支援的版本](../../../release/versions.md) 之：
 
-[所有受支持的版本](../../../release/versions.md) 共：
+- 雲端基礎結構上的Adobe Commerce
+- Adobe Commerce內部部署
 
-- Adobe Commerce云基础架构
-- Adobe Commerce内部
+## 停用報告
 
-## 禁用报告
+如果您未使用報表或動態客戶區段，請停用「報表」功能。
 
-如果不使用报表或动态客户区段，请禁用报表功能。
+1. 在管理員中，瀏覽至 **商店** > **設定** > **設定** > **一般** > **報表**.
+1. 下 **一般選項**，設定 **啟用報表** 至 *否*.
+1. 執行以排清快取 `php bin/magento cache:flush` 或在「管理員」中的 **系統** > **工具** > **快取管理**.
 
-1. 在管理员中，导航到 **商店** > **设置** > **配置** > **常规** > **报表**.
-1. 在 **常规选项**，设置 **启用报表** to *否*.
-1. 通过运行刷新缓存 `php bin/magento cache:flush` 或 **系统** > **工具** > **缓存管理**.
+## 其他資訊
 
-## 其他信息
-
-- [在Adobe Commerce中生成报表](https://docs.magento.com/user-guide/reports.html)
-- [客户动态区段](https://docs.magento.com/user-guide/marketing/customer-segments.html)
+- [在Adobe Commerce中產生報表](https://docs.magento.com/user-guide/reports.html)
+- [客戶動態區段](https://docs.magento.com/user-guide/marketing/customer-segments.html)

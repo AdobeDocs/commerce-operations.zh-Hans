@@ -1,52 +1,52 @@
 ---
-title: 类别配置最佳实践
-description: 了解最佳实践，通过限制目录中的类别数量来最大化网站性能。
+title: 類別設定最佳實務
+description: 瞭解最佳實務，以透過限制目錄中的類別數量來最大化網站效能。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: e156fcafc5792036b37d9b199b870f1888c3f1ff
+exl-id: c6834b32-9ee8-4a4a-932c-9726f3feee3f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
+# 類別設定的最佳實務
 
-# 类别配置的最佳实践
+為獲得最佳效能，請勿為Adobe Commerce網站設定超過建議的最大類別數量。
 
-为获得最佳性能，请勿为Adobe Commerce网站配置超出最大建议类别数。
+- 若是Adobe Commerce 2.4.2版或更新版本，最多可設定6000個類別
+- 若為Adobe Commerce 2.3.x版和2.4.0至2.4.1-p1，請設定最多3000個類別
 
-- 对于Adobe Commerce版本2.4.2及更高版本，最多配置6000个类别
-- 对于Adobe Commerce版本2.3.x和2.4.0到2.4.1-p1，最多配置3000个类别
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+[所有支援的版本](../../../release/versions.md) 之：
 
-[所有受支持的版本](../../../release/versions.md) 共：
+- 雲端基礎結構上的Adobe Commerce
+- Adobe Commerce內部部署
 
-- Adobe Commerce云基础架构
-- Adobe Commerce内部
+## 減少產品數量
 
-## 减少产品数量
+使用下列策略來減少類別數量：
 
-使用以下策略减少类别数：
+- 透過屬性和自訂選項管理獨特的產品功能
+- 移除非使用中類別
+- 最佳化導覽中的目錄深度
 
-- 通过属性和自定义选项管理独特的产品功能
-- 删除不活动的类别
-- 在导航中优化目录深度
+## 對效能的潛在影響
 
-## 潜在的性能影响
+擁有超過建議的最大類別數可能會透過下列方式影響網站效能：
 
-超过建议的最大类别数可能会通过以下方式影响网站性能：
+- 非快取目錄頁面的回應時間明顯增加
+- 從管理員管理類別時的長時間執行和逾時
+- 增加對應資料庫表格的大小
+- 較大的索引表格會增加完成索引操作所需的時間 `[category/product relation index\]`
+- 增加處理時間，以完成類別樹狀結構建立、功能表擷取和類別規則管理作業
 
-- 非缓存目录页面响应时间的显着增加
-- 从管理员管理类别时执行时间过长和超时过长
-- 相应数据库表的大小增加
-- 较大的索引表可增加完成对 `[category/product relation index\]`
-- 增加了处理时间，以完成类别树构建、菜单检索和类别规则管理操作
+## 其他資訊
 
-## 其他信息
-
-- [类别概述](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/categories.html)
-- [导航概述](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation.html)
-- [产品分配](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/products-in-category/categories-product-assignments.html)
-- [Adobe Commerce云基础架构：存储配置最佳实践](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)
+- [類別概觀](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/categories.html)
+- [導覽概述](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation.html)
+- [產品指派](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/products-in-category/categories-product-assignments.html)
+- [雲端基礎結構上的Adobe Commerce：商店設定的最佳實務](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)

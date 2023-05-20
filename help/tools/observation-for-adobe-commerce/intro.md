@@ -1,7 +1,8 @@
 ---
-title: "[!DNL Observation for Adobe Commerce]"
-description: 了解 [!DNL Observation for Adobe Commerce]、其用途、使用时间以及获取访问权限。
-source-git-commit: c40d78d37dc37b5ce38f61b46bcfb4d439a51ac2
+title: '[!DNL Observation for Adobe Commerce]'
+description: 瞭解 [!DNL Observation for Adobe Commerce]，其用途、使用時間及存取方式。
+exl-id: a787be0f-5dd8-4acc-adbf-5cedd96b08d6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -10,30 +11,30 @@ ht-degree: 0%
 
 # [!DNL Observation for Adobe Commerce]
 
-本指南提供了 [!DNL Observation for Adobe Commerce]. 它介绍了其用途、使用时间、使用方式、解决问题的一般方法以及如何访问该工具。
+本指南提供以下專案的整體概述 [!DNL Observation for Adobe Commerce]. 其說明其用途、使用時機、使用方式、檢視問題的一般方法，以及如何存取工具。
 
-## 什么是 [!DNL Observation for Adobe Commerce]?
+## 什麼是 [!DNL Observation for Adobe Commerce]？
 
-[!DNL Observation for Adobe Commerce] 是一个工具，可将来自多个源的日志数据组合在一起，以帮助您更好地管理Adobe Commerce网站的性能并诊断问题。 它可以直观地显示应用程序日志数据，并结合来自 [!DNL New Relic observability] 平台，带有易于理解的仪表板。 解决方案基于 [!DNL New Relic Nerdlets]，这些是通过 [!DNL New Relic One] 可编程性接口。
+[!DNL Observation for Adobe Commerce] 此工具結合來自多個來源的記錄資料，協助您更好地管理Adobe Commerce網站效能和診斷問題。 它以視覺化方式呈現應用程式記錄檔資料，並結合來自 [!DNL New Relic observability] 平台放在單一玻璃板上，控制面板簡單易懂。 解決方案是根據 [!DNL New Relic Nerdlets]，這些是自訂應用程式 [!DNL New Relic One] 程式設計介面。
 
-当出现问题时，确定问题的根源所在并掌握解决问题的知识可能非常耗时。 Adobe支持组织积累了部落知识，这些知识建立在多年来对日志和命令行输出进行查看并排除问题的基础上。 该工具利用此类知识根据公共时间线识别重要信号。 时间轴可以扩展或收缩，从而允许您可视化日志数据以帮助进行性能管理和解决问题。
+當問題出現時，找出問題的根源和具備修正問題的知識可能會很費時。 Adobe支援組織累積了部落知識，這些知識是多年來在疑難排解問題的同時檢視日誌和命令列輸出。 此工具會運用這類知識，根據通用時間表來識別重要訊號。 您可以擴充或縮短時間表，讓您將記錄資料視覺化，以協助進行效能管理和解決問題。
 
-使用 [!DNL Observation for Adobe Commerce]，您可以分析支持团队遇到的复杂问题，以帮助确定根本原因。 您可以花时间关联事件和错误，而不是跟踪不同的数据，以便深入了解性能瓶颈的原因。 该工具旨在更清晰地了解站点遇到的一些问题，以帮助您确定问题的潜在根源并保持站点的最佳性能。 这包括确定是否以及 [!DNL bots] 会导致站点问题。
+使用 [!DNL Observation for Adobe Commerce]，即可分析支援所遇到的複雜問題，協助找出根本原因。 與其追蹤不同的資料，您可以將時間花在關聯事件和錯誤上，深入瞭解效能瓶頸的成因。 此工具旨在更清楚瞭解網站所遇到的一些問題，協助您找出問題的潛在根本原因，並讓網站維持最佳效能。 這包括識別是否和內容 [!DNL bots] 造成網站問題。
 
-## 本指南面向谁？
+## 本指南的對象為誰？
 
-希望优化Adobe Commerce网站性能并诊断问题的商家和合作伙伴。 [!DNL Observation for Adobe Commerce] 可用于：
+想要最佳化Adobe Commerce網站效能並診斷問題的商家和合作夥伴。 [!DNL Observation for Adobe Commerce] 可用於：
 
-* 将信息与网站出现问题之前的常见时间轴进行比较，以便您查看导致性能降低的原因。
+* 比較網站發生問題前的資訊與常見時間表，讓您檢視導致效能降低的原因。
 
-* 了解在中断期间，在数百万条日志消息中要查找的内容和要查找的位置。
+* 瞭解在中斷期間數百萬則記錄檔訊息中要尋找什麼以及在何處尋找。
 
-* 利用日志中关键错误消息的可视摘要简化数据收集和解析。
+* 透過紀錄中關鍵錯誤訊息的視覺化摘要，簡化資料收集和剖析。
 
-* 深入了解各种服务（如IP请求频率、访问的URL、使用的API等）。
+* 獲得各種服務的觀點，例如IP請求頻率、存取的URL、使用的API等。
 
-## [!DNL Observation for Adobe Commerce] 演示
+## [!DNL Observation for Adobe Commerce] 示範
 
-请观看此视频以了解 [!DNL Observation for Adobe Commerce]:
+觀看此影片以瞭解 [!DNL Observation for Adobe Commerce]：
 
 >[!VIDEO](https://video.tv.adobe.com/v/344444?quality=12)

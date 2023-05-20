@@ -1,61 +1,61 @@
 ---
-title: 启用日志记录
-description: 了解如何启用和禁用日志记录类型。
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+title: 啟用記錄
+description: 瞭解如何啟用和停用記錄型別。
+exl-id: 78b0416a-5bad-42a9-a918-603600e98928
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
-
-# 启用日志记录
+# 啟用記錄
 
 {{file-system-owner}}
 
-## 调试日志记录
+## 偵錯記錄
 
-默认情况下，商务会写入调试日志(`<install_directory>/var/log/debug.log`)，但在生产模式下则不会。 使用 `bin/magento setup:config:set --enable-debug-logging` 命令来更改默认值。
+依預設，Commerce會寫入除錯記錄(`<install_directory>/var/log/debug.log`)處於預設或開發模式時，但處於生產模式時則不會。 使用 `bin/magento setup:config:set --enable-debug-logging` 命令來變更預設值。
 
 >[!INFO]
 >
->自Commerce 2.3.1起，您将无法再使用 `bin/magento config:set dev/debug/debug_logging` 命令启用或禁用当前模式的调试日志记录。
+>自Commerce 2.3.1起，您無法再使用 `bin/magento config:set dev/debug/debug_logging` 命令來啟用或停用目前模式的偵錯記錄。
 
-### 启用调试日志记录
+### 啟用偵錯記錄
 
-1. 使用 `setup:config:set` 命令启用当前模式的调试日志记录。
+1. 使用 `setup:config:set` 命令以啟用目前模式的偵錯記錄。
 
    ```bash
    bin/magento setup:config:set --enable-debug-logging=true
    ```
 
-1. 刷新缓存。
+1. 清除快取。
 
    ```bash
    bin/magento cache:flush
    ```
 
-### 禁用调试日志记录
+### 停用偵錯記錄
 
-1. 使用 `setup:config:set` 命令禁用当前模式的调试日志记录。
+1. 使用 `setup:config:set` 命令停用目前模式的偵錯記錄。
 
    ```bash
    bin/magento setup:config:set --enable-debug-logging=false
    ```
 
-1. 刷新缓存。
+1. 清除快取。
 
    ```bash
    bin/magento cache:flush
    ```
 
-## 数据库日志记录
+## 資料庫記錄
 
-默认情况下，商务会将数据库活动日志写入 `<install-dir>/var/debug/db.log` 文件。
+根據預設，Commerce會將資料庫活動記錄檔寫入 `<install-dir>/var/debug/db.log` 檔案。
 
-### 启用数据库日志记录
+### 啟用資料庫記錄
 
-1. 使用 `dev:query-log` 命令启用或禁用数据库日志记录。
+1. 使用 `dev:query-log` 啟用或停用資料庫記錄的命令。
 
    ```bash
    bin/magento dev:query-log:enable
@@ -65,51 +65,51 @@ ht-degree: 0%
    bin/magento dev:query-log:disable
    ```
 
-1. 刷新缓存。
+1. 清除快取。
 
    ```bash
    bin/magento cache:flush
    ```
 
-## Cron日志记录
+## Cron記錄
 
-现在，在版本2.3.1中，Commerce会创建一个单独的 `cron` 日志。 \
-Commerce最近使cron日志记录更为详细，提供了更多信息，但将 `system.log` 相当大。
-移动 `cron` 指向专用日志的信息使这两个日志更易于读取。
+在版本2.3.1中，Commerce現在會建立個別的 `cron` 記錄。 \
+Commerce最近讓cron記錄更詳細，這提供了更多資訊，但延長了 `system.log` 相當大。
+移動 `cron` 將資訊放入專用記錄檔可使兩個記錄檔更易於讀取。
 
-默认情况下，商务会写入 `cron` 信息 `<install-directory>/var/log/cron.log` 文件。
+依預設，Commerce會寫入 `cron` 的資訊 `<install-directory>/var/log/cron.log` 檔案。
 
-## Syslog日志记录
+## Syslog記錄
 
-默认情况下，商务会写入 _syslog_ 登录到操作系统 `syslog` 文件。
-自Commerce 2.3.1起，您必须使用 `magento` 命令启用或禁用syslog。
-管理员中的设置已被删除。
+依預設，Commerce會寫入 _syslog_ 作業系統的記錄檔 `syslog` 檔案。
+自Commerce 2.3.1起，您必須使用 `magento` 啟用或停用syslog的命令。
+管理員中的設定已移除。
 
-### 启用系统日志记录
+### 啟用syslog記錄
 
-正在登录 `syslog` 默认情况下处于禁用状态。
+登入 `syslog` 預設為停用。
 
-1. 使用 `setup:config:set` 命令更改 `dev/syslog/syslog_logging` 数据库值到 `true`.
+1. 使用 `setup:config:set` 命令以變更 `dev/syslog/syslog_logging` 資料庫值至 `true`.
 
    ```bash
    bin/magento setup:config:set --enable-syslog-logging=true
    ```
 
-1. 刷新缓存。
+1. 清除快取。
 
    ```bash
    bin/magento cache:flush
    ```
 
-### 禁用syslog日志记录
+### 停用syslog記錄
 
-1. 使用 `setup:config:set` 命令更改 `dev/syslog/syslog_logging` 数据库值到 `false`.
+1. 使用 `setup:config:set` 命令以變更 `dev/syslog/syslog_logging` 資料庫值至 `false`.
 
    ```bash
    bin/magento setup:config:set --enable-syslog-logging=false
    ```
 
-1. 刷新缓存。
+1. 清除快取。
 
    ```bash
    bin/magento cache:flush

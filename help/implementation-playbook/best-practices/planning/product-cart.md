@@ -1,54 +1,54 @@
 ---
-title: 产品车最佳实践
-description: 了解如何通过限制购物车中的产品数量来优化Adobe Commerce性能。
+title: 產品購物車最佳實務
+description: 瞭解如何透過限制購物車中的產品數量來最佳化Adobe Commerce效能。
 role: User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+exl-id: 7ea5acc2-f6b2-4244-8c07-c71fd54a18a0
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
 
 ---
 
+# 產品購物車管理的最佳實務
 
-# 产品车管理最佳实践
+為獲得最佳效能，請使用下列准則來管理Adobe Commerce和Magento Open Source的購物車限制：
 
-为获得最佳性能，请使用以下准则来管理Adobe Commerce和Magento Open Source的购物车限制：
-
-- 对于版本2.3.x - 2.4.2，购物车中最多允许100个产品。
-- 对于版本2.4.3及更高版本，对销售规则功能的增强将购物车最大数量增加到750。
+- 若為版本2.3.x - 2.4.2，購物車中最多可容納100種產品。
+- 若是2.4.3版或更新版本，銷售規則功能的增強功能會將購物車數量上限增加到750個。
 
 
-对于版本2.3.x - 2.4.2，基于购物车项目限制的预期性能为：
+若為版本2.3.x - 2.4.2，根據購物車專案限制的預期效能為：
 
-- 最高 **100** 购物车中的产品 — 产品可正常工作，满足响应时间的性能目标。
-- 最高 **300** 购物车中的产品 — 产品有效，但响应时间会增长到高于目标。
-- 以上 **500** 购物车中的产品 — 购物车和结账流程无法保证有效
+- 最多 **100** 購物車中的產品 — 產品運作正常，符合回應時間的效能目標。
+- 最多 **300** 購物車中的產品 — 產品有效，但回應時間增加到超過目標。
+- 以上 **500** 購物車中的產品 — 無法保證購物車和結帳流程正常運作
 
-## 受影响的产品和版本
+## 受影響的產品和版本
 
-[所有受支持的版本](../../../release/versions.md) 共：
+[所有支援的版本](../../../release/versions.md) 之：
 
-- Adobe Commerce云基础架构
-- Adobe Commerce内部
+- 雲端基礎結構上的Adobe Commerce
+- Adobe Commerce內部部署
 
-## 减少购物车项目数
+## 減少購物車專案數量
 
-使用以下策略来管理购物车项目的数量
+使用下列策略管理購物車專案數量
 
-- 使用 [!UICONTROL Add Item by SKU] 功能。
-- 仅添加加载项目列表所需的自定义逻辑和购物车自定义。
+- 使用「 」，將訂單分割為數筆較小的訂單（列數較少）。 [!UICONTROL Add Item by SKU] 功能。
+- 僅新增載入專案清單所需的自訂邏輯和購物車自訂。
 
-## 潜在的性能影响
+## 對效能的潛在影響
 
-购物车中产品数量超过建议的最大数量可能会通过以下方式影响网站性能：
+購物車中產品數量超過建議的最大數量可能會透過以下方式影響網站效能：
 
-- 增加了数据检索操作、验证购物车项目、检查是否应用价格规则以及税和总计计算的响应时间。
-- 增加了小型图表渲染的响应时间，包括渲染购物车视图、结帐流程和执行。
-- 缩短了所有存在小型机的网站页面的加载时间。
+- 增加資料擷取作業、驗證購物車專案、檢查是否套用價格規則，以及稅捐和總計計算的回應時間。
+- 增加Minicart轉譯的回應時間，包括轉譯購物車檢視、結帳流程及執行。
+- 增加所有出現minicart的網站頁面的載入時間。
 
-## 其他信息
+## 其他資訊
 
-- [配置产品选项](https://experienceleague.adobe.com/docs/commerce-admin/inventory/configuration/product-options.html)
-- [管理购物车](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/point-of-purchase/assist/shopping-assisted-cart-manage.html)
+- [設定產品選項](https://experienceleague.adobe.com/docs/commerce-admin/inventory/configuration/product-options.html)
+- [管理購物車](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/point-of-purchase/assist/shopping-assisted-cart-manage.html)

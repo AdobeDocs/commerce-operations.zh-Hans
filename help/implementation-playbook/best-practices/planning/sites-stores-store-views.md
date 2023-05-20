@@ -1,51 +1,50 @@
 ---
-title: 配置站点、商店和商店视图的最佳实践
-description: 了解配置网站、商店和商店视图以最大化网站性能的最佳实践。
+title: 設定網站、商店和商店檢視的最佳實務
+description: 瞭解設定網站、商店和商店檢視的最佳實務，以最大化網站效能。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+exl-id: 3ea0c6c5-15a9-4e77-b4d0-ce15721c7167
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
+# 設定網站、商店和商店檢視的最佳實務
 
-# 配置站点、商店和商店视图的最佳实践
-
-为获得最佳站点性能，在云基础架构项目上为Adobe Commerce最多配置50个站点、50个商店和50个商店视图。
+為獲得最佳網站效能，請在雲端基礎結構專案上為Adobe Commerce設定最多50個網站、50個商店和50個商店檢視。
 
 >[!NOTE]
 >
->对于云基础架构上的Adobe Commerce，最佳实践专门适用于生产环境（可能适用于受资源限制的专业架构上的暂存环境），该环境的资源会多于集成和开发环境。 对于集成（专业和入门）和暂存环境（入门），请将商店查看次数减少到5次或10次以下（需经过技术审查）。
+>針對雲端基礎結構上的Adobe Commerce，最佳實務尤其適用於生產環境（並可能適用於Staging on Pro架構，但受資源限制），其擁有的資源會比整合和開發環境多。 對於整合（Pro和Starter）和測試環境(Starter)，將商店檢視次數減少到5或10次以下（取決於技術審查）。
 
-## 受影响的产品和版本
+## 受影響的產品和版本
 
-[所有受支持的版本](../../../release/versions.md) 共：
+[所有支援的版本](../../../release/versions.md) 之：
 
-- Adobe Commerce云基础架构
-- Adobe Commerce内部
+- 雲端基礎結構上的Adobe Commerce
+- Adobe Commerce內部部署
 
-## 提高绩效的战略
+## 改善效能的策略
 
-如果您的项目需要许多网站、商店或商店视图，则可以使用以下策略来提高性能：
+如果您的專案需要許多網站、商店或商店檢視，您可以使用以下策略來改善效能：
 
-- 通过将逻辑转换为类别来重构目录
-- 使用外部价格和价格管理系统(PMS)将价目表与目录数据分开。
-- 使用替代的noSQL数据存储，如Elasticsearch
+- 將邏輯切換至類別以重新建構目錄
+- 使用外部價格與價格管理系統(PMS)，將價目表與目錄資料分開。
+- 使用替代noSQL資料儲存，例如Elasticsearch
 
-## 潜在的性能影响
+## 對效能的潛在影響
 
-网站和存储是目录数据的乘数，因此拥有多个网站和存储可能会在以下方面对网站性能产生负面影响：
+網站和商店是目錄資料的倍數，因此擁有許多網站和商店可能會以下列方式負面影響網站效能：
 
-- 较大的索引表可增加完成索引操作所需的时间 [价格指数].
-- 增加的检索应用程序配置时间会降低非缓存目录页面的前端响应时间。
-- 由于每个网站单独保存数据，因此在管理员中完成保存操作所需的时间会显着增加。
+- 較大的索引表格會增加完成索引作業所需的時間 [價格指數].
+- 擷取應用程式設定的時間增加，會降低非快取目錄頁面的店面回應時間。
+- 因為每個網站的資料會個別儲存，在管理員中完成「儲存」作業所需的時間會大幅增加。
 
 
-## 其他信息
+## 其他資訊
 
-- [了解网站、商店和商店视图](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
-- [设置多个网站或商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html)
-
+- [瞭解網站、商店和商店檢視](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
+- [設定多個網站或商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html)

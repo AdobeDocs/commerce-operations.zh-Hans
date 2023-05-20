@@ -1,48 +1,48 @@
 ---
-title: 生产系统设置
-description: 了解如何为商务应用程序设置生产系统。
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: 生產系統設定
+description: 瞭解如何為Commerce應用程式設定生產系統。
+exl-id: e678e97e-d9f2-4f24-bb6b-1994a2a1167c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
 
 ---
 
+# 生產系統設定
 
-# 生产系统设置
+您可以有一個生產系統。 下列所有專案都必須為true：
 
-您可以有一个生产系统。 以下所有内容必须为true:
-
-- 所有商务代码都位于与开发和构建系统相同的存储库中的源代码控制中
-- 确保以下所有内容均 _包含_ 在源代码管理中：
+- 所有Commerce程式碼都在與開發和建置系統相同的存放庫中的原始檔控制中
+- 請確定下列所有專案皆為 _已包含_ 在原始檔控制中：
 
    - `app/etc/config.php`
-   - `generated` 目录（和子目录）
-   - `pub/media` 目录
-   - `pub/media/wysiwyg` 目录（和子目录）
-   - `pub/static` 目录（和子目录）
+   - `generated` 目錄（和子目錄）
+   - `pub/media` 目錄
+   - `pub/media/wysiwyg` 目錄（和子目錄）
+   - `pub/static` 目錄（和子目錄）
 
-- 必须安装Commerce 2.2或更高版本，并为 [生产模式](../bootstrap/application-modes.md#production-mode)
-- 它具有文件系统所有权和权限集，如 [开发、构建和生产系统的先决条件](../deployment/prerequisites.md).
+- 必須安裝並設定Commerce 2.2或更新版本 [生產模式](../bootstrap/application-modes.md#production-mode)
+- 它有檔案系統所有權和許可權設定，如中所述 [開發、建置和生產系統的先決條件](../deployment/prerequisites.md).
 
-## 设置生产机器
+## 設定生產機器
 
-要设置生产计算机，请执行以下操作：
+若要設定生產機器，請執行下列動作：
 
-1. 安装Commerce或从源代码管理中提取它后，以文件系统所有者的身份登录到生产服务器，或切换到。
-1. 创建 `~/.ssh/.composer/auth.json` 如果您尚未执行此操作，请执行以下操作。
+1. 安裝Commerce或從原始檔控制提取後，以檔案系統擁有者的身分登入生產伺服器，或切換至該擁有者。
+1. 建立 `~/.ssh/.composer/auth.json` 如果您尚未這麼做。
 
-   创建目录：
+   建立目錄：
 
    ```bash
    mkdir -p ~/.ssh/.composer
    ```
 
-   创建 `auth.json` 在目录中。
+   建立 `auth.json` 在該目錄中。
 
-   `auth.json` 必须包含 [身份验证密钥](../../installation/prerequisites/authentication-keys.md).
+   `auth.json` 必須包含您的 [驗證金鑰](../../installation/prerequisites/authentication-keys.md).
 
-   示例如下：
+   範例如下：
 
    ```json
    {
@@ -55,48 +55,48 @@ ht-degree: 0%
    }
    ```
 
-1. 将更改保存到 `auth.json`.
-1. 复制 `<Commerce root dir>/app/etc/env.php` 从开发系统到生产系统。
-1. 打开 `env.php` 在文本编辑器中，更改任何必需的值（例如，数据库连接信息）。
-1. 运行 [`magento config:set`](../cli/set-configuration-values.md) 或 [`magento config:set-sensitive`](../cli/set-configuration-values.md) 命令分别设置任何系统特定或敏感配置值的值。
+1. 將變更儲存至 `auth.json`.
+1. 複製 `<Commerce root dir>/app/etc/env.php` 從開發系統到生產系統。
+1. 開啟 `env.php` 並變更任何必要的值（例如資料庫連線資訊）。
+1. 執行 [`magento config:set`](../cli/set-configuration-values.md) 或 [`magento config:set-sensitive`](../cli/set-configuration-values.md) 指令，分別設定任何系統特定或敏感組態值。
 
-   以下部分显示一个示例。
+   下節顯示一個範例。
 
-## 在生产系统上设置配置值
+## 在您的生產系統上設定設定值
 
-本节将讨论如何使用 `magento config:sensitive:set` 命令。
+本節探討如何使用在您的生產系統上設定敏感值。 `magento config:sensitive:set` 命令。
 
-要设置敏感值，请执行以下操作：
+若要設定敏感值：
 
-1. 查找要使用 [敏感值引用](../reference/config-reference-sens.md).
-1. 请注意设置的配置路径。
-1. 以文件系统所有者的身份登录到生产系统，或切换到。
-1. 更改为Commerce安装目录。
-1. 输入以下命令：
+1. 使用尋找要設定的值 [敏感值參考](../reference/config-reference-sens.md).
+1. 記下設定的設定路徑。
+1. 以檔案系統擁有者的身分登入生產系統，或切換到檔案系統擁有者。
+1. 變更至Commerce安裝目錄。
+1. 輸入下列命令：
 
    ```bash
    bin/magento config:sensitive:set {configuration path} {value}
    ```
 
-   例如，将YouTube API密钥的值设置为 `1234`，输入
+   例如，若要將YouTube API金鑰的值設為 `1234`，輸入
 
    ```bash
    bin/magento config:sensitive:set catalog/product_video/youtube_api_key 1234
    ```
 
-   您还可以按如下方式以交互方式设置一个或多个值：
+   您也可以以互動方式設定一或多個值，如下所示：
 
    ```bash
    bin/magento config:sensitive:set -i
    ```
 
-   出现提示时，为每个敏感设置输入一个值，或按Enter键跳过一个值并移到下一个值。
+   出現提示時，請為每個敏感設定輸入值，或按Enter跳過值並移至下一個值。
 
-1. 要验证是否已设置该值，请登录到管理员。
-1. 在管理员中找到设置。
+1. 若要確認值已設定，請登入「管理員」。
+1. 在「管理員」中找出設定。
 
-   例如，YouTube API密钥设置位于 **商店** >设置> **配置** > **目录** > **目录** > **产品视频**.
+   例如，YouTube API金鑰設定位於 **商店** >設定> **設定** > **目錄** > **目錄** > **產品影片**.
 
-   设置显示在管理员中，无法编辑。 下图显示了一个示例。
+   設定會顯示在「管理員」中，且無法編輯。 下圖顯示一個範例。
 
-   ![管理员中的敏感设置](../../assets/configuration/sensitive-set.png)
+   ![管理員中的敏感設定](../../assets/configuration/sensitive-set.png)

@@ -1,42 +1,42 @@
 ---
-title: 管理缓存
-description: 管理缓存类型并查看缓存状态。
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+title: 管理快取
+description: 管理快取型別和檢視快取狀態。
+exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
 
-
-# 管理缓存
+# 管理快取
 
 {{file-system-owner}}
 
-## 缓存类型
+## 快取型別
 
-商务2具有以下缓存类型：
+Commerce 2具有以下快取型別：
 
-| 缓存类型“友好”名称 | 缓存类型代码名称 | 描述 |
+| 快取型別「易記」名稱 | 快取型別代碼名稱 | 說明 |
 |--- |--- |--- |
-| 配置 | 配置 | Commerce从所有模块收集配置、合并该配置，并将合并结果保存到缓存中。 此缓存还包含存储在文件系统和数据库中的特定存储设置。 修改配置文件后，清除或刷新此缓存类型。 |
-| 布局 | 布局 | 编译的页面布局（即，所有组件的布局组件）。 修改布局文件后，清除或刷新此缓存类型。 |
-| 块HTML输出 | block_html | HTML每个块的页面片段。 修改视图层后，清除或刷新此缓存类型。 |
-| 集合数据 | 收藏集 | 数据库查询的结果。 如有必要，商务会自动清理此缓存，但第三方开发人员可以将任何数据放入缓存的任何区段中。 如果您的自定义模块使用导致Commerce无法清除的缓存条目的逻辑，则清除或刷新此缓存类型。 |
-| DDL | db_ddl | 数据库模式。 如有必要，商务会自动清理此缓存，但第三方开发人员可以将任何数据放入缓存的任何区段中。 在对数据库架构进行自定义更改后，清除或刷新此缓存类型。 （换言之，Commerce不会自行更新。） 自动更新数据库模式的一种方法是使用 `magento setup:db-schema:upgrade` 命令。 |
-| 编译的配置 | compiled_config | 编译配置 |
-| 实体属性值(EAV) | eav | 与EAV属性相关的元数据（例如，存储标签、指向相关PHP代码的链接、属性渲染、搜索设置等）。 通常不应该清除或刷新此缓存类型。 |
-| 页面缓存 | full_page | 生成的HTML页面。 如有必要，商务会自动清理此缓存，但第三方开发人员可以将任何数据放入缓存的任何区段中。 修改影响HTML输出的代码级别后，清除或刷新此缓存类型。 建议保持此缓存处于启用状态，因为缓存HTML可显着提高性能。 |
-| 反射 | 反射 | 删除Webapi模块与客户模块之间的依赖关系。 |
-| 翻译 | 翻译 | 从所有模块合并转换后，将清理合并缓存。 |
-| 集成配置 | config_integration | 编译集成。 更改或添加集成后，清除或刷新此缓存。 |
-| 集成API配置 | config_integration_api | 对商店集成的编译集成API配置。 |
-| Web服务配置 | config_webservice | 缓存Web API结构。 |
-| 客户通知 | customer_notification | 用户界面中显示的临时通知。 |
+| 設定 | 設定 | Commerce會從所有模組收集設定、合併設定，並將合併的結果儲存至快取。 此快取也包含儲存在檔案系統和資料庫中的儲存區特定設定。 修改組態檔後，請清除或清除此快取型別。 |
+| 版面 | 版面 | 編譯的頁面配置（也就是來自所有元件的配置元件）。 修改版面配置檔案後，清除或清除此快取型別。 |
+| 封鎖HTML輸出 | block_html | 每個區塊的頁面片段HTML。 修改檢視圖層後，請清除或排清此快取型別。 |
+| 集合資料 | 集合 | 資料庫查詢的結果。 如有必要，Commerce會自動清理此快取，但第三方開發人員可以將任何資料放入快取的任何區段中。 如果您的自訂模組使用的邏輯導致Commerce無法清除的快取專案，請清除或清除此快取型別。 |
+| DDL | db_ddl | 資料庫結構描述。 如有必要，Commerce會自動清理此快取，但第三方開發人員可以將任何資料放入快取的任何區段中。 在對資料庫結構描述進行自訂變更後，清除或清除此快取型別。 （換言之，此更新不屬於Commerce本身。） 自動更新資料庫架構的一種方法是使用 `magento setup:db-schema:upgrade` 命令。 |
+| 編譯的設定 | compiled_config | 編譯設定 |
+| 實體屬性值(EAV) | eav | 與EAV屬性相關的中繼資料（例如，儲存標籤、相關PHP程式碼的連結、屬性呈現、搜尋設定等）。 您通常不需要清除或排清此快取型別。 |
+| 頁面快取 | full_page | 產生的HTML頁面。 如有必要，Commerce會自動清理此快取，但第三方開發人員可以將任何資料放入快取的任何區段中。 修改影響HTML輸出的程式碼層級後，清除或排清此快取型別。 建議啟用此快取，因為快取HTML可大幅改善效能。 |
+| 反射 | 反射 | 移除Webapi模組與客戶模組之間的相依性。 |
+| 翻譯 | 轉換 | 合併來自所有模組的翻譯後，合併快取將會被清除。 |
+| 整合設定 | config_integration | 編譯的整合。 變更或新增整合後，請清除或清除此快取。 |
+| 整合API設定 | config_integration_api | 商店整合的編譯整合API設定。 |
+| Web服務設定 | config_webservice | 快取Web API結構。 |
+| 客戶通知 | customer_notification | 顯示在使用者介面中的臨時通知。 |
 
-## 查看缓存状态
+## 檢視快取狀態
 
-要查看缓存的状态，请输入
+若要檢視快取的狀態，請輸入
 
 ```bash
    bin/magento cache:status
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 <!-- where `--bootstrap=` is a URL-encoded associative array of Commerce [application bootstrap parameters](../bootstrap/set-parameters.md) and values. -->
 
-示例如下：
+範例如下：
 
 ```terminal
 Current status:
@@ -65,17 +65,17 @@ Current status:
                      translate: 1
 ```
 
-## 启用或禁用缓存类型
+## 啟用或停用快取型別
 
-此命令允许您启用或禁用所有缓存类型或您指定的缓存类型。 禁用缓存类型在开发过程中非常有用，因为您无需刷新缓存即可看到更改的结果；但是，禁用缓存类型会对性能产生不利影响。
+這個命令可讓您啟用或停用所有快取型別，或僅停用您指定的快取型別。 在開發期間，停用快取型別很有用，因為您不必清除快取即可看到變更的結果；但是，停用快取型別會對效能造成不良影響。
 
 >[!INFO]
 >
->从版本2.2开始，您只能在生产模式下运行商务时使用命令行启用或禁用缓存类型。 如果在开发人员模式下运行商务，则可以使用命令行或手动启用或禁用缓存类型。 在执行此操作之前，您必须手动 `<magento_root>/app/etc/env.php` 可由写入 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+>從2.2版開始，您在生產模式下執行Commerce時，只能使用命令列啟用或停用快取型別。 如果在開發人員模式下執行Commerce，您可以使用命令列或手動啟用或停用快取型別。 在執行此操作之前，您必須手動進行 `<magento_root>/app/etc/env.php` 可由 [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
 
-您可以清理(也称为 _刷新_ 或 _刷新_)缓存类型。
+您可以清除(也稱為 _排清_ 或 _重新整理_)快取型別。
 
-命令选项：
+命令選項：
 
 ```bash
 bin/magento cache:enable [type] ... [type]
@@ -85,23 +85,23 @@ bin/magento cache:enable [type] ... [type]
 bin/magento cache:disable [type] ... [type]
 ```
 
-省略 `[type]` 同时启用或禁用所有缓存类型。 的 `type` 选项是以空格分隔的缓存类型列表。
+省略 `[type]` 同時啟用或停用所有快取型別。 此 `type` option是以空格分隔的快取型別清單。
 
 <!-- `--bootstrap=` is a URL-encoded associative array of Commerce [application bootstrap parameters](../bootstrap/set-parameters.md#bootstrap-parameters) and values. -->
 
-要列出缓存类型及其状态，请执行以下操作：
+若要列出快取型別及其狀態：
 
 ```bash
 bin/magento cache:status
 ```
 
-例如，要禁用完整页缓存和DDL缓存，请执行以下操作：
+例如，若要停用完整頁面快取和DDL快取：
 
 ```bash
 bin/magento cache:disable db_ddl full_page
 ```
 
-示例结果：
+範例結果：
 
 ```terminal
    Changed cache status:
@@ -111,29 +111,29 @@ bin/magento cache:disable db_ddl full_page
 
 >[!INFO]
 >
->启用缓存类型会自动清除该缓存类型。
+>啟用快取型別會自動清除該快取型別。
 
 >[!INFO]
 >
->自版本2.3.4起，Commerce在检索到所有系统EAV属性时会缓存这些属性。 以这种方式缓存EAV属性会提高性能，因为它会减少对数据库的插入/选择请求数量。 但是，它也会增加缓存网络大小。 开发人员可以通过运行 `bin/magento config:set dev/caching/cache_user_defined_attributes 1` 命令。 也可以在 [开发人员模式](../bootstrap/application-modes.md) 通过设置 **商店** >设置 **配置** > **高级** > **开发人员** > **缓存设置** > **缓存用户定义的属性** to **是**.
+>自2.3.4版起，Commerce會在擷取所有系統EAV屬性時加以快取。 以此方式快取EAV屬性可改善效能，因為它會減少對DB的插入/選取要求數量。 不過，它也會增加快取網路大小。 開發人員可藉由執行 `bin/magento config:set dev/caching/cache_user_defined_attributes 1` 命令。 這也可以從管理員完成，當在 [開發人員模式](../bootstrap/application-modes.md) 透過設定 **商店** >設定 **設定** > **進階** > **開發人員** > **快取設定** > **快取使用者定義的屬性** 至 **是**.
 
-## 清理和刷新缓存类型
+## 清除和排清快取型別
 
-要从缓存中清除过期项目，您可以 _清洁_ 或 _刷新_ 缓存类型：
+若要從快取中永久刪除過期的專案，您可以 _clean_ 或 _排清_ 快取型別：
 
-- 清除缓存类型仅会从已启用的商务缓存类型中删除所有项目。 换句话说，此选项不会影响其他进程或应用程序，因为它只清理Commerce使用的缓存。
+- 清除快取型別只會從已啟用的Commerce快取型別中刪除所有專案。 換言之，此選項不會影響其他程式或應用程式，因為它只會清除Commerce使用的快取。
 
-   未清除禁用的缓存类型。
+   停用的快取型別不會清除。
 
    >[!TIP]
    >
-   >升级Magento Open Source或Adobe Commerce版本、从Magento Open Source升级到Adobe Commerce，或为Adobe Commerce或任何模块安装B2B后，应始终清除缓存。
+   >升級Magento Open Source或Adobe Commerce版本、從Magento Open Source升級至Adobe Commerce，或安裝Adobe Commerce或任何模組適用的B2B後，請務必清理快取。
 
-- 刷新缓存类型会清除缓存存储，这可能会影响使用相同存储的其他进程应用程序。
+- 清除快取型別會清除快取儲存體，這可能會影響使用相同儲存體的其他程式應用程式。
 
-如果您已尝试清除缓存，但仍然遇到无法隔离的问题，则刷新缓存类型。
+如果您已嘗試清除快取，但仍有無法隔離的問題，請清除快取型別。
 
-命令用法：
+命令使用方式：
 
 ```bash
    bin/magento cache:clean [type] ... [type]
@@ -143,13 +143,13 @@ bin/magento cache:disable db_ddl full_page
    bin/magento cache:flush [type] ... [type]
 ```
 
-其中 `[type]` 是以空格分隔的缓存类型列表。 省略 `[type]` 同时清除或刷新所有缓存类型。 例如，要刷新所有缓存类型，请输入
+位置 `[type]` 是以空格分隔的快取型別清單。 省略 `[type]` 同時清除或排清所有快取型別。 例如，若要排清所有快取型別，請輸入
 
 ```bash
    bin/magento cache:flush
 ```
 
-示例结果：
+範例結果：
 
 ```terminal
    Flushed cache types:
@@ -171,4 +171,4 @@ bin/magento cache:disable db_ddl full_page
 
 >[!TIP]
 >
->您还可以在管理员中清除和刷新缓存类型。 转到 **系统** > **工具** > **缓存管理**. **刷新缓存存储** 等于 `bin/magento cache:flush`. **刷新Magento缓存** 等于 `bin/magento cache:clean`.
+>您也可以在Admin中清理和排清快取型別。 前往 **系統** > **工具** > **快取管理**. **排清快取儲存體** 相當於 `bin/magento cache:flush`. **排清Magento快取** 相當於 `bin/magento cache:clean`.

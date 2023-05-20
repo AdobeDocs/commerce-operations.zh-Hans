@@ -1,31 +1,31 @@
 ---
-title: 实施开发阶段
-description: 了解Adobe Commerce项目开发阶段的实施最佳实践。
-source-git-commit: ae9573f3766c59887aea177cb85bf889c2161bfc
+title: 實作開發階段
+description: 瞭解Adobe Commerce專案開發階段的實作最佳實務。
+exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
+# 開發階段
 
-# 开发阶段
+開發階段包含下列活動：
 
-开发阶段包括以下活动：
+- 本機和中繼環境設定
+- 衝刺計畫
+- 票證執行
+- 疑難排除
+- 程式碼審查、合併和測試
+- 衝刺稽核
+- 客戶簽署
 
-- 本地和暂存环境设置
-- 冲刺计划
-- 票证执行
-- 疑难解答
-- 代码审阅、合并和测试
-- Sprint review
-- 客户注销
+以下章節包含開發階段的最佳實務資訊。
 
-以下各节包括开发阶段的最佳做法信息。
+## 應用程式開發
 
-## 应用程序开发
-
-### 代码审阅、合并和测试
+### 程式碼審查、合併和測試
 
 <!--Assets not yet integrated
 - Guidelines and standards
@@ -33,9 +33,9 @@ ht-degree: 0%
   - [Code Review](https://wiki.corp.adobe.com/x/qT4ykw)
   - [Debugging Magento 2](https://wiki.corp.adobe.com/x/nz4ykw) (wiki)
 -->
-- [优化CSS和JS文件](optimize-css-js-files.md)
-- [专用内容块的最佳实践](private-content-block-configuration.md)
-- [面向扩展开发人员的最佳实践](https://developer.adobe.com/commerce/php/best-practices/)
+- [最佳化CSS和JS檔案](optimize-css-js-files.md)
+- [私人內容區塊的最佳實務](private-content-block-configuration.md)
+- [擴充功能開發人員的最佳作法](https://developer.adobe.com/commerce/php/best-practices/)
 
 <!--Assets not yet integrated
 
@@ -52,19 +52,19 @@ ht-degree: 0%
   - [Composer tips and tricks](https://wiki.corp.adobe.com/x/lz4ykw)
 -->
 
-## 平台和服务
+## 平台和服務
 
-- [快速用于图像优化](image-optimization.md)
+- [使用Fastly進行影像最佳化](image-optimization.md)
 
-### 本地和暂存环境设置
+### 本機和中繼環境設定
 
-- [云基础架构的开发工作流程](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html)
+- [雲端基礎結構上的開發工作流程](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html)
 
-## 代码、合并、测试
+## 程式碼、合併、測試
 
-- [构建和部署的最佳实践](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html)
-- [静态内容部署 — 云](static-content-deployment.md)
-- [优化CSS和JS文件](optimize-css-js-files.md)
-- [优化图像以提供响应更快的网站](image-optimization.md)
-- [Adobe Commerce云基础架构最佳实践疑难解答](troubleshooting.md)
-- [了解何时以及如何修改数据库表](modifying-core-and-third-party-tables.md)
+- [建置和部署的最佳實務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html)
+- [靜態內容部署 — 雲端](static-content-deployment.md)
+- [最佳化CSS和JS檔案](optimize-css-js-files.md)
+- [最佳化影像，以建立回應速度更快的網站](image-optimization.md)
+- [雲端基礎結構上Adobe Commerce的疑難排解最佳實務](troubleshooting.md)
+- [瞭解何時及如何修改資料庫表格](modifying-core-and-third-party-tables.md)

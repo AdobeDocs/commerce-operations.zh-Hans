@@ -1,26 +1,26 @@
 ---
-title: 迁移数据
-description: 了解如何开始将数据从Magento1迁移到Magento2，使用 [!DNL Data Migration Tool].
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+title: 移轉資料
+description: 瞭解如何透過開始將資料從Magento1移轉至Magento2 [!DNL Data Migration Tool].
+exl-id: f4ea8f6a-21f8-4db6-b598-c5efecec254f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
+# 移轉資料
 
-# 迁移数据
+開始之前，請採取下列步驟進行準備：
 
-在开始之前，请采取以下步骤进行准备：
+1. 以下列身分登入您的應用程式伺服器： [檔案系統擁有者](../../../installation/prerequisites/file-system/overview.md).
+1. 變更至應用程式安裝目錄，或確認已將其新增至您的系統 `PATH`.
 
-1. 以下身份登录到应用程序服务器： [文件系统所有者](../../../installation/prerequisites/file-system/overview.md).
-1. 更改到应用程序安装目录，或确保将其添加到系统 `PATH`.
+請參閱 [首要步驟](overview.md#first-steps) 區段以取得更多詳細資料。
 
-请参阅 [首要步骤](overview.md#first-steps) 部分以了解更多详细信息。
+## 執行資料移轉命令
 
-## 运行数据迁移命令
-
-要开始迁移数据，请运行：
+若要開始移轉資料，請執行：
 
 ```bash
 bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
@@ -28,22 +28,22 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 其中：
 
-* `[-a|--auto]` 是一个可选参数，可阻止迁移在遇到完整性检查错误时停止。
+* `[-a|--auto]` 是選用引數，可防止移轉在遇到完整性檢查錯誤時停止。
 
-* `[-r|--reset]` 是从头开始迁移的可选参数。 您可以使用此参数测试迁移。
+* `[-r|--reset]` 是從頭開始移轉的可選引數。 您可以使用此引數來測試移轉。
 
-* `{<path to config.xml>}` 是 `config.xml`;此参数是必需的
+* `{<path to config.xml>}` 為的絕對檔案系統路徑 `config.xml`；此引數為必要項
 
-在此步骤中， [!DNL Data Migration Tool] 为Magento1数据库中的迁移表创建其他表和触发器。 在 [增量/增量](delta.md) 迁移步骤。 其他表包含有关最终迁移执行后更改记录的信息。 数据库触发器用于填充这些额外表，因此，如果正在对特定表执行新操作（添加/修改/删除记录），则这些数据库触发器会将有关此操作的信息保存到额外表。 运行增量迁移过程时， [!DNL Data Migration Tool] 检查这些表是否有未处理的记录，并将必要的内容迁移到Magento2数据库。
+在此步驟中， [!DNL Data Migration Tool] 為Magento1資料庫中的移轉表格建立其他表格和觸發程式。 它們用於 [增量/差異](delta.md) 移轉步驟。 其他表格包含最終移轉執行後變更記錄的相關資訊。 資料庫觸發程式用於填入這些額外表格，因此，如果正在特定表格上執行新作業（新增/修改/移除記錄），這些資料庫觸發程式會將此作業的相關資訊儲存至額外表格。 當我們執行差異移轉程式時， [!DNL Data Migration Tool] 檢查這些表格中是否有未處理的記錄，並將必要的內容移轉到Magento2資料庫。
 
-每个新表都包含：
+每個新表格都包含：
 
-* `m2_cl` 前缀
-* `INSERT`, `UPDATE`, `DELETE` 事件触发器。
+* `m2_cl` 前置詞
+* `INSERT`， `UPDATE`， `DELETE` 事件觸發程式。
 
-例如，对于 `sales_flat_order` the [!DNL Data Migration Tool] 创建：
+例如，對於 `sales_flat_order` 此 [!DNL Data Migration Tool] 建立：
 
-* `m2_cl_sales_flat_order` 表：
+* `m2_cl_sales_flat_order` 表格：
 
    ```sql
    CREATE TABLE `m2_cl_sales_flat_order` (
@@ -54,7 +54,7 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
    ) COMMENT='m2_cl_sales_flat_order';
    ```
 
-* `trg_sales_flat_order_after_insert`, `trg_sales_flat_order_after_update`, `trg_sales_flat_order_after_delete` 触发器：
+* `trg_sales_flat_order_after_insert`， `trg_sales_flat_order_after_update`， `trg_sales_flat_order_after_delete` 觸發器：
 
    ```sql
    DELIMITER ;;
@@ -84,12 +84,12 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 >[!NOTE]
 >
->的 [!DNL Data Migration Tool] 在运行时保存其当前进度。 如果错误或用户干预阻止该工具运行，则该工具将恢复上次已知正常状态的进度。 强制 [!DNL Data Migration Tool] 要从头开始运行，请使用 `--reset` 参数。 在这种情况下，我们建议您恢复Magento2数据库转储，以防止复制以前迁移的数据。
+>此 [!DNL Data Migration Tool] 在執行時儲存目前的進度。 如果錯誤或使用者介入導致其停止執行，則工具會在最後已知的良好狀態繼續進度。 強制執行 [!DNL Data Migration Tool] 若要從頭開始執行，請使用 `--reset` 引數。 在這種情況下，建議您還原Magento2資料庫傾印，以防止複製先前移轉的資料。
 
 
-## 可能的一致性错误
+## 可能的一致性錯誤
 
-运行时， [!DNL Data Migration Tool] 可能报告Magento1和Magento2数据库之间的不一致，并显示如下消息：
+執行時， [!DNL Data Migration Tool] 可能會報告Magento1和Magento2資料庫之間的不一致，並顯示如下訊息：
 
 * `Source documents are missing: <EXTENSION_TABLE_1>,<EXTENSION_TABLE_2>,...<EXTENSION_TABLE_N>`
 * `Destination documents are missing: <EXTENSION_TABLE_1>,<EXTENSION_TABLE_2>,...<EXTENSION_TABLE_N>`
@@ -104,8 +104,8 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 * `Incompatibility in data. Source document: <EXTENSION_TABLE>. Field: <FIELD>. Error: <ERROR_MESSAGE>`
 * `Incompatibility in data. Destination document: <EXTENSION_TABLE>. Field: <FIELD>. Error: <ERROR_MESSAGE>`
 
-请参阅 [疑难解答](https://support.magento.com/hc/en-us/articles/360033020451) 部分以了解更多信息和建议。
+請參閱 [疑難排除](https://support.magento.com/hc/en-us/articles/360033020451) 區段，以取得詳細資訊和建議。
 
-## 下一迁移步骤
+## 下一個移轉步驟
 
-[迁移更改](delta.md)
+[移轉變更](delta.md)

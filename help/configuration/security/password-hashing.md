@@ -1,44 +1,44 @@
 ---
-title: 密码哈希处理
-description: 请阅读有关密码哈希策略和实施的信息。
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+title: 密碼雜湊
+description: 閱讀密碼雜湊策略與實作的相關資訊。
+exl-id: 2865d041-950a-4d96-869c-b4b35f5c4120
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
 
 ---
 
+# 密碼雜湊
 
-# 密码哈希处理
+目前，Commerce根據不同的原生PHP雜湊演演算法，使用自己的密碼雜湊策略。 Commerce支援多種演演算法，例如 `MD5`， `SHA256`，或 `Argon 2ID13`. 如果已安裝Na延伸模組（預設安裝在PHP 7.3中），則 `Argon 2ID13` 被選為預設的雜湊演演算法。 否則， `SHA256` 為預設值。 Commerce可以使用原生PHP `password_hash` 函式搭配Argin 2i演演算法支援。
 
-目前，Commerce基于不同的本机PHP哈希算法，使用其自己的密码哈希策略。 商务支持多种算法，例如 `MD5`, `SHA256`或 `Argon 2ID13`. 如果安装了Nade扩展（默认情况下在PHP 7.3中安装），则 `Argon 2ID13` 选择作为默认的哈希算法。 否则， `SHA256` 为默认值。 商务可以使用本机PHP `password_hash` 函数。
-
-为了避免破坏使用过时算法(如 `MD5`，当前实施提供了一种无需更改原始密码即可升级哈希的方法。 通常，密码哈希的格式如下：
+為了避免損害已使用過時演演算法(例如 `MD5`，目前的實作提供升級雜湊而不變更原始密碼的方法。 一般而言，密碼雜湊的格式如下：
 
 ```text
 password_hash:salt:version<n>:version<n>
 ```
 
-其中 `version<n>`...`version<n>` 表示密码上使用的所有哈希算法版本。 同时，盐总是与口令哈希一起存储，这样我们就可以恢复整个算法链。 示例如下所示：
+位置 `version<n>`...`version<n>` 代表密碼上使用的所有雜湊演演算法版本。 此外，Salt一律與密碼雜湊一起儲存，因此我們可以還原整個演演算法鏈。 範例如下所示：
 
 ```text
 a853b06f077b686f8a3af80c98acfca763cf10c0e03597c67e756f1c782d1ab0:8qnyO4H1OYIfGCUb:1:2
 ```
 
-第一部分表示密码哈希。 第二， `8qnyO4H1OYIfGCUb` 盐。 最后两个是不同的哈希算法：1表示 `SHA256` 2表示 `Argon 2ID13`. 这意味着客户的密码最初是经过哈希处理的 `SHA256` 之后，算法将更新为 `Argon 2ID13` 哈希用氩气重新哈希处理。
+第一部分代表密碼雜湊。 第二， `8qnyO4H1OYIfGCUb` 是鹽。 最後兩個是不同的雜湊演演算法：1是 `SHA256` 而2是 `Argon 2ID13`. 這表示客戶的密碼原本是透過雜湊處理 `SHA256` 之後，演演算法更新為 `Argon 2ID13` 然後用Argon重新整理雜湊。
 
-## 升级哈希策略
+## 升級雜湊策略
 
-请考虑哈希升级机制的外观。 假设最初，密码经过哈希处理 `MD5` 然后用Ar2ID13对算法进行多次更新。 下图显示了哈希升级流程。
+請考量雜湊升級機制的外觀。 假設密碼原本是透過雜湊處理 `MD5` 然後使用Argin 2ID13多次更新演演算法。 下圖顯示雜湊升級流程。
 
-![哈希升级工作流](../../assets/configuration/hash-upgrade-algorithm.png)
+![雜湊升級工作流程](../../assets/configuration/hash-upgrade-algorithm.png)
 
-每个哈希算法都使用以前的密码哈希来生成一个新的哈希。 商务不存储原始原始密码。
+每個雜湊演演算法都會使用先前的密碼雜湊來產生新的雜湊。 Commerce不會儲存原始密碼。
 
-![哈希升级策略](../../assets/configuration/hash-upgrade-strategy.png)
+![雜湊升級策略](../../assets/configuration/hash-upgrade-strategy.png)
 
-如上所述，密码哈希可能对原始密码应用了多个哈希版本。
-以下是客户身份验证期间密码验证机制的工作方式。
+如上所述，密碼雜湊可能會套用多個雜湊版本至原始密碼。
+以下說明密碼驗證機制在客戶驗證期間的運作方式。
 
 ```php
 def verify(password, hash):
@@ -56,8 +56,8 @@ def verify(password, hash):
     return compare(restored, hash)
 ```
 
-由于商务将所有使用的密码哈希版本与密码哈希一起存储，所以在密码验证过程中可以恢复整个哈希链。 哈希验证机制与哈希升级策略类似：该算法根据与口令散列一起存储的版本，从提供的口令中生成哈希，并返回哈希口令与数据库存储的哈希之间的比较结果。
+由於Commerce會將所有使用的密碼雜湊版本與密碼雜湊一起儲存，因此我們可以在密碼驗證期間還原整個雜湊鏈。 雜湊驗證機制類似於雜湊升級策略：演演算法會根據與密碼雜湊一起儲存的版本，從提供的密碼產生雜湊，並傳回雜湊密碼與資料庫儲存雜湊的比較結果。
 
-## 实施
+## 實作
 
-的 `\Magento\Framework\Encryption\Encryptor` 类负责密码散列的生成和验证。 的 [`bin/magento customer:hash:upgrade`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#customerhashupgrade) 命令会将客户密码哈希升级为最新的哈希算法。
+此 `\Magento\Framework\Encryption\Encryptor` 類別負責密碼雜湊產生和驗證。 此 [`bin/magento customer:hash:upgrade`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#customerhashupgrade) 命令會將客戶密碼雜湊升級為最新的雜湊演演算法。

@@ -1,57 +1,57 @@
 ---
-title: 支付处理和存储的最佳实践
-description: 了解如何安全地处理和存储付款详细信息
+title: 付款處理與儲存的最佳實務
+description: 瞭解如何安全地處理和儲存付款詳細資料
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
+exl-id: 635f38d3-0199-4d96-ba75-9edd0cb94b5c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
+# 付款處理與儲存的最佳實務
 
-# 支付处理和存储的最佳实践
+維護的重要原則之一 [PCI法規遵循](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) 有適當處理和儲存信用卡付款的策略。
 
-维护 [PCI合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) 正在制定策略，以正确处理和存储信用卡支付。
+在Adobe Commerce中儲存持卡人資料是 **嚴禁** 這麼做可能會違反您身為商家的義務，違反支付卡產業資料安全標準(PCI-DSS)。 有關我們共同責任模式及商戶義務指引的更多資訊，請參閱我們的 [Adobe Commerce的共用責任指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) 於Adobe信任中心。
 
-在Adobe Commerce中存储持卡人数据 **严禁** 而这样做可能违反您作为支付卡行业数据安全标准(PCI-DSS)下的商户的义务。 有关我们的商户责任分担模式和准则的更多信息，请参阅 [Adobe Commerce共享责任指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) Adobe信任中心。
+我們建議您遵循下列最佳實務，以協助確保您正確處理電子商務網站上的付款資訊。 有關整體安全性最佳實務的其他指引，請參閱我們的 [Adobe Commerce安全性最佳實務指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-best-practices-guide.pdf) 在Adobe信任中心
 
-我们建议遵循以下最佳实践，以帮助您正确处理电子商务网站上的付款信息。 有关整体安全最佳实践的其他指导，请参阅 [《Adobe Commerce安全最佳实践指南》](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-best-practices-guide.pdf) Adobe信任中心
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+[所有支援的版本](../../../release/versions.md) 之：
 
-[所有受支持的版本](../../../release/versions.md) 共：
+* 雲端基礎結構上的Adobe Commerce
+* Adobe Commerce內部部署
 
-* Adobe Commerce云基础架构
-* Adobe Commerce内部
+## 保護持卡人資料
 
-## 保护持卡人数据
+如果需要儲存持卡人資料，則持卡人資料應透過儲存安全措施，儲存在Adobe Commerce外部。 針對信用卡持卡人資料等付款詳細資料制定儲存保障措施，有助於防止欺詐和其他潛在安全性問題。 與其他PCI標準一致，建立保護是第一道防線。 增強儲存資料保護的一些慣用方法包括加密、截斷、代碼化、單向雜湊和遮罩。
 
-如果需要存储持卡人数据，则持卡人数据应存储在Adobe Commerce外部，并提供存储保障。 为支付详细信息（如信用卡持卡人数据）设置存储保护，有助于防止欺诈和其他潜在安全问题。 与其他PCI标准相一致，保护到位是第一道防线。 增强存储数据保护的一些首选方法包括加密、截断、令牌化、单向哈希处理和掩码。
+密碼編譯金鑰的保護對資料保護策略至關重要。 由技術高超且值得信賴的託管人來監管這些金鑰至關重要。
 
-对加密密钥的保护对于数据保护策略至关重要。 拥有技能娴熟且值得信赖的托管机构来监督这些密钥至关重要。
+最後，主要帳號(PAN)在儲存期間必須無法讀取（例如，XXX等被遮罩）。 這包括可攜式儲存和備份媒體，例如快閃磁碟機、USB和外部硬碟，甚至稽核記錄。
 
-最后，主帐号(PAN)在存储期间必须不可读（例如，XXX等被屏蔽）。 这包括可移植的存储和备份介质（如闪存驱动器、 USB和外置硬盘），甚至包括审核日志。
+## 加密持卡人資料的傳輸
 
-## 持卡人数据的加密传输
+在傳輸期間保護資料是保護付款資訊（例如持卡人資料）的關鍵。 當這些資訊透過開放網路傳輸時，可能會更容易受到安全性問題的攻擊。
 
-在传输过程中保护数据是保护支付信息（如持卡人数据）的关键。 当此信息通过开放网络传输时，它可能更容易受到安全问题的影响。
+### 使用安全傳輸通訊協定
 
-### 使用安全传输协议
+使用安全的傳輸通訊協定和實務來傳輸持卡人資料，包括：
 
-使用安全传输协议和做法传输持卡人数据，包括：
+* 信任的金鑰和憑證
+* TLS、SSH或VPN等安全傳輸通訊協定
+* 加密中的非對稱演演算法
+* 透過傳輸和顯示PAN進行Tokenization、遮罩和滲透測試
+* 限制對持卡人資料的存取
+* 敏感資訊的存取權應依需求知曉加以限制，並僅提供給具有業務需求的授權人員
 
-* 受信任的密钥和证书
-* 安全传输协议，如TLS、SSH或VPN
-* 非对称加密算法
-* 具有发射和显示PAN的Tokenizaton、掩蔽和渗透测试
-* 限制对持卡人数据的访问
-* 对敏感信息的访问应限制在知情需要的基础上，并仅提供给那些有业务需要的授权人员
+處理持卡人資料的建議方法不是儲存主要帳號(PAN)，而是將信用卡與特定的付款處理提供者記號，並儲存代號、信用卡型別和加密的到期日。 您可以將權杖用作檔案上的認證，以供日後使用，因為此權杖僅供每個商家使用。 由於Token是唯一的，因此若發生安全性問題，Token就會失效，有助於防止詐騙活動
 
-处理持卡人数据的建议方法是，不存储主帐号(PAN)，而是与特定支付处理提供商对卡进行标记，并存储令牌、卡类型和加密的过期日期。 您可以将令牌用作文件上的凭据以供将来使用，因为令牌仅适用于每个商家。 由于令牌是唯一的，因此如果存在安全问题，则中的令牌将失效，这有助于防止欺诈活动
+## 其他資訊
 
-## 其他信息
-
-如果您正在按Adobe查找推荐的支付解决方案，请考虑 [Adobe支付服务](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/overview.html).
+如果您正在尋找按Adobe列出的建議支付解決方案，請考慮 [Adobe付款服務](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/overview.html).

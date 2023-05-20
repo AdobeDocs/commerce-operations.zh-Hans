@@ -1,39 +1,38 @@
 ---
-title: 在生产站点上计划管理员更新
-description: 了解计划对Adobe Commerce进行关键更新以防止性能缓慢和中断的最佳实践。
+title: 在生產網站上排程管理員更新
+description: 瞭解排程Adobe Commerce關鍵更新以防止效能緩慢和中斷的最佳實務。
 role: Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+exl-id: 41c0cb87-3371-48a7-9913-264f3eea8d8d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
 
 ---
 
+# 在生產網站上排程管理員更新的最佳實務
 
-# 在生产站点上计划管理员更新的最佳实践
+在非尖峰時間排程Adobe Commerce網站上的關鍵更新和操作，以防止生產網站上的效能緩慢和中斷。
 
-安排在非高峰时间对Adobe Commerce站点进行关键更新和操作，以防止生产站点的性能缓慢和停机。
+重要動作範例：
 
-关键操作示例：
+- 管理員設定變更，例如更新產品屬性，或將產品子類別移至另一個類別
+- 資料匯入或匯出作業
 
-- 管理员配置更改，例如更新产品属性或将产品子类别移动到其他类别
-- 数据导入或导出操作
+關鍵動作會導致快取失效和重新索引作業，大幅增加回應時間，進而可能導致網站中斷。
 
-关键操作会导致缓存失效和重新索引操作，这会显着增加响应时间，从而可能导致站点停机。
+## 受影響的產品和版本
 
-## 受影响的产品和版本
+[所有支援的版本](../../../release/versions.md) 之：
 
-[所有受支持的版本](../../../release/versions.md) 共：
+- 雲端基礎結構上的Adobe Commerce
+- Adobe Commerce內部部署
 
-- Adobe Commerce云基础架构
-- Adobe Commerce内部
+## 其他資訊
 
-## 其他信息
-
-- [缓存的最佳实践](https://docs.magento.com/user-guide/system/cache-management.html#best-practices-for-caching)
-- [专用内容：使私有内容失效](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
-- [硬件建议：缓存](../../../performance/hardware.md#caches)
-- [高级设置：设置Redis](../../../performance/advanced-setup.md#set-up-redis)
-
+- [快取的最佳實務](https://docs.magento.com/user-guide/system/cache-management.html#best-practices-for-caching)
+- [私人內容：讓私人內容失效](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
+- [硬體建議：快取](../../../performance/hardware.md#caches)
+- [進階設定：設定Redis](../../../performance/advanced-setup.md#set-up-redis)

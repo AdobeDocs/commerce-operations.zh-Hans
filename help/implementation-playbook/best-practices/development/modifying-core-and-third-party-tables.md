@@ -1,117 +1,118 @@
 ---
-title: 修改数据库表的最佳实践
-description: 了解如何以及何时修改Adobe Commerce和第三方数据库表。
+title: 修改資料庫表格的最佳作法
+description: 瞭解如何以及何時修改Adobe Commerce和協力廠商資料庫表格。
 role: Developer, Architect
 feature: Best Practices
 feature-set: Commerce
 last-substantial-update: 2022-11-15T00:00:00Z
-source-git-commit: 570fa4877f578f636736f0404169ed215fd06b24
+exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
 
-# 修改数据库表的最佳实践
+# 修改資料庫表格的最佳作法
 
-本文提供了修改由创建的数据库表的最佳实践 [!DNL Adobe Commerce] 或第三方模块。 了解何时以及如何有效地修改表有助于确保商务平台的长期可行性和稳定性。
+本文提供修改由建立的資料庫表格的最佳實務 [!DNL Adobe Commerce] 或協力廠商模組。 瞭解何時以及如何有效修改表格，有助於確保商務平台的長期可行性和穩定性。
 
-从迁移 [!DNL Magento 1] 和其他电子商务平台，或使用 [!DNL Adobe Commerce] Marketplace可能需要添加和保存额外数据。 您的第一反应可能是向数据库表中添加列，或调整现有列。 但是，您只应修改核心 [!DNL Adobe Commerce] 表（或第三方供应商表）。
+從移轉 [!DNL Magento 1] 和其他電子商務平台，或使用來自的模組 [!DNL Adobe Commerce] Marketplace可能需要新增和儲存額外資料。 您的第一反應可能是將一欄新增至資料庫表格，或調整現有資料欄。 不過，您應該只修改核心 [!DNL Adobe Commerce] 表格（或協力廠商表格）。
 
-## 为何Adobe建议避免修改
+## 為什麼Adobe建議避免修改
 
-避免修改核心表的主要原因是，Adobe Commerce包含包含原始SQL查询的基础逻辑。 更改表的结构可能会导致意外的副作用，这些副作用很难进行故障诊断。 此更改还会影响DDL（数据定义语言）操作，从而对性能造成意外和不可预知的影响。
+避免修改核心資料表的主要原因在於Adobe Commerce包含包含原始SQL查詢的基礎邏輯。 變更表格結構可能會造成難以疑難排解的意外副作用。 此變更也會影響DDL （資料定義語言）作業，對效能造成非預期和無法預測的影響。
 
-避免更改数据库表结构的另一个原因是，如果核心开发团队或第三方开发人员更改其数据库表结构，则所做的更改可能会导致问题。 例如，有一些核心数据库表具有一个名为 `additional_data`. 这一直是 `text` 列类型。 但是，出于性能原因，核心团队可能会将列更改为 `longtext`. 此类列是JSON的别名。 通过转换为此列类型，向该列添加了性能提升和可搜索性，但该列不存在 `text` 类型。 您可以在 [JSON数据类型](https://mariadb.com/kb/en/json-data-type/){target=&quot;_blank&quot;}。
+避免變更資料庫表格結構的另一個原因是，如果核心開發團隊或第三方開發人員變更其資料庫表格的結構，則您的變更可能會導致問題。 例如，有些核心資料庫表格有一個名為的欄 `additional_data`. 此專案一直 `text` 欄型別。 然而，基於效能考量，核心團隊可能會將欄變更為 `longtext`. 此型別的欄是JSON的別名。 透過轉換為此欄型別，該欄的效能會提高，而且可搜尋性也會增加，不過該欄並不以 `text` 型別。 有關此主題的詳細資訊，請參閱 [JSON資料型別](https://mariadb.com/kb/en/json-data-type/){target="_blank"}.
 
-## 了解何时保存或删除数据
+## 知道何時儲存或移除資料
 
-Adobe建议您首先确定是否需要保存此数据。 如果您从旧版系统移动数据，则可以删除的任何数据都会在迁移过程中节省您的时间和精力。 （如果以后需要访问数据，可以使用多种方法对其进行存档。） 为了更好地管理应用程序和性能，可以质疑保存额外数据的请求。 您的目标是确保保存数据是满足无法以其他方式填写的业务需求的一项要求。
+Adobe建議您先決定是否需要儲存此資料。 如果您要從舊版系統行動資料，可以移除的任何資料都會在移轉期間為您節省時間和精力。 （如果需要稍後存取資料，可以透過多種方式加以封存。） 為了妥善管理應用程式和效能，您可以質疑儲存額外資料的要求。 您的目標是確保儲存資料是滿足企業需求（無法透過其他方式滿足）的需求。
 
-### 旧版数据
+### 舊資料
 
-如果您的项目包含旧数据（如旧订单或客户记录），请考虑使用替代查找方法。 例如，如果业务需要访问数据仅供偶尔参考，请考虑对商务平台外托管的旧数据库实施外部搜索，而不是将旧数据迁移到 [!DNL Adobe Commerce].
+如果您的專案包含舊有資料（例如舊訂單或客戶記錄），請考慮其他查閱方法。 例如，如果企業需要存取資料以供偶爾參考，請考慮對託管在商務平台以外的舊資料庫實作外部搜尋，而不是將舊資料移轉至 [!DNL Adobe Commerce].
 
-这种情况需要将数据库迁移到服务器，提供用于读取数据的Web界面，或者培训MySQL Workbench或类似工具的使用。 将此数据从新数据库中排除会加快迁移速度，因为开发团队可以专注于新站点，而不是对数据迁移问题进行故障排除。
+這種情況需要資料庫移轉至伺服器，提供網頁介面來讀取資料，或培訓如何使用MySQL Workbench或類似工具。 從新資料庫排除這些資料，可讓開發團隊專注於新網站，而非疑難排解資料移轉問題，進而加快移轉速度。
 
-另一个用于将数据保留在商务外部但允许您实时使用的相关选项是利用其他工具，如GraphQL网格。 此选项将不同的数据源组合在一起，并作为单个响应返回它们。
+另一個將資料保留在商業外部，但可讓您即時使用的相關選項是運用其他工具，例如GraphQL網狀。 此選項會結合不同的資料來源，並以單一回應的形式傳回。
 
-例如，您可以 `stitch` 将外部数据库的旧订单(可能是已停用的旧Magento1站点)合起来。 然后，使用GraphQL网格，将它们显示为客户订单历史记录的一部分。 这些旧订单可以与您当前的订单组合 [!DNL Adobe Commerce] 环境。
+例如，您可以 `stitch` 將來自外部資料庫的舊訂單(可能是已停止支援的舊Magento1網站)整合在一起。 然後使用GraphQL網格，將其顯示為客戶訂單歷史記錄的一部分。 這些舊訂單可與目前訂單合併 [!DNL Adobe Commerce] 環境。
 
-有关将API网格与GraphQL结合使用的更多信息，请参阅 [什么是API Mesh](https://developer.adobe.com/graphql-mesh-gateway/gateway/overview/){target=&quot;_blank&quot;})和 [GraphQL Mesh网关](https://developer.adobe.com/graphql-mesh-gateway/){target=&quot;_blank&quot;}。
+如需搭配GraphQL使用API網狀架構的詳細資訊，請參閱 [什麼是API網格](https://developer.adobe.com/graphql-mesh-gateway/gateway/overview/){target="_blank"}) and [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}.
 
-## 使用扩展属性迁移旧版数据
+## 使用擴充功能屬性移轉舊版資料
 
-如果您确定旧数据需要迁移，或新数据需要保存在 [!DNL Adobe Commerce],Adobe建议使用 [扩展属性](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target=&quot;_blank&quot;}。 使用扩展属性保存其他数据具有以下优势：
+如果您判斷舊資料需要移轉，或新資料需要儲存在 [!DNL Adobe Commerce]，Adobe建議使用 [擴充功能屬性](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target="_blank"}. 使用擴充功能屬性來儲存其他資料具備下列優點：
 
-- 您可以控制要保留的数据和数据库结构，这可确保使用正确的列类型和适当的索引来保存数据。
-- 中的大多数实体 [!DNL Adobe Commerce] 和 [!DNL Magento Open Source] 支持使用扩展属性。
-- 扩展属性是一种与存储无关的机制，它允许灵活地将数据保存在项目的最佳位置。
+- 您可以控制要保留的資料和資料庫結構，以確保資料以正確的欄型別和正確的索引儲存。
+- 中的大部分實體 [!DNL Adobe Commerce] 和 [!DNL Magento Open Source] 支援使用擴充功能屬性。
+- 擴充功能屬性是一種不受儲存影響的機制，可讓您靈活地將資料儲存在專案的最佳位置。
 
-存储位置的两个示例是数据库表和 [!DNL Redis]. 选择位置时需要考虑的关键因素是位置是否会带来额外的复杂性或影响性能。
+儲存位置的兩個範例是資料庫表格和 [!DNL Redis]. 選擇位置時需要考慮的關鍵事項是，位置是否會帶來額外的複雜性，或影響效能。
 
-### 考虑其他替代方案
+### 考慮其他替代方案
 
-作为开发人员，务必始终考虑在 [!DNL Adobe Commerce] 环境，如GraphQL网格和Adobe应用程序生成器。 这些工具可帮助您保留对数据的访问权，但对核心商务应用程序或其基础数据库表没有影响。 使用此方法，您可以通过API公开数据。 然后，向应用程序生成器配置中添加数据源。 使用GraphQL网格，您可以合并这些数据源并生成单个响应，如 [旧数据](#legacy-data).
+作為開發人員，請務必考慮使用您以外的工具， [!DNL Adobe Commerce] 環境，例如GraphQL網格和Adobe App Builder。 這些工具可協助您保留資料的存取權，但對核心商務應用程式或其基礎資料庫表格沒有影響。 透過此方法，您可以透過API公開您的資料。 接著，將資料來源新增至App Builder設定。 使用GraphQL Mesh，您可以結合這些資料來源並產生單一回應，如中所述 [舊資料](#legacy-data).
 
-有关GraphQL网格的其他详细信息，请参阅 [GraphQL Mesh网关](https://developer.adobe.com/graphql-mesh-gateway/){target=&quot;_blank&quot;}。 有关Adobe应用程序生成器的信息，请参阅 [应用程序生成器简介](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=en){target=&quot;_blank&quot;}。
+如需GraphQL網狀架構的其他詳細資訊，請參閱 [GraphQL Mesh閘道](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}. For information about the Adobe App Builder,  see [Introducing App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=en){target="_blank"}.
 
-## 修改核心表或第三方表
+## 修改核心表格或協力廠商表格
 
-如果您决定通过修改核心来存储数据 [!DNL Adobe Commerce] 或第三方模块数据库表，请使用以下指南来最大限度地减少对稳定性和性能的影响。
+如果您決定透過修改核心來儲存資料 [!DNL Adobe Commerce] 或協力廠商模組資料庫表格時，請遵循下列准則，以將對穩定性和效能的影響降至最低。
 
-- 仅添加新列。
-- 切勿修改 _type_ 现有列的值。 例如，请勿更改 `integer` 至 `varchar` 以满足您的独特用例。
-- 避免向EAV属性表添加列。 这些表已经过载了逻辑和责任。
-- 在调整表之前，请确定其大小。 更改大表会影响部署，在应用更改时，这可能会导致数分钟或数小时的延迟。
+- 僅新增欄。
+- 切勿修改 _type_ 現有欄的值。 例如，請勿變更 `integer` 至 `varchar` 以滿足您獨特的使用案例。
+- 避免將欄新增至EAV屬性表格。 這些資料表已因邏輯和職責而超載。
+- 調整表格之前，請先決定表格的大小。 變更大型表格會影響部署，這可能會導致套用變更時出現幾分鐘或幾小時的延遲。
 
-## 修改外部数据库表的最佳实践
+## 修改外部資料庫表格的最佳作法
 
-Adobe建议在向核心数据库表或第三方表添加列时执行以下步骤：
+當您將欄新增至核心資料庫表格或協力廠商表格時，Adobe建議遵循下列步驟：
 
-1. 在命名空间中创建一个名称代表要更新内容的模块。
+1. 在名稱空間中建立一個模組，其名稱代表您正在更新的內容。
 
    例如： `app/code/YourCompany/Customer`
 
-1. 创建相应的文件以启用模块(请参阅 [创建模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target=&quot;_blank&quot;}。
+1. 建立適當的檔案以啟用模組(請參閱 [建立模組](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}.
 
-1. 创建一个名为 `db_schema.xml` 在 `etc` ，并进行相应的更改。
+1. 建立名為的檔案 `db_schema.xml` 在 `etc` 資料夾，並進行適當的變更。
 
-   如果适用，请生成 `db_schema_whitelist.json` 文件。 请参阅 [声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/){target=&quot;_blank&quot;}以了解详细信息。
+   如果適用，請產生 `db_schema_whitelist.json` 檔案。 另請參閱 [宣告式結構描述](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/){target="_blank"} 以取得詳細資訊。
 
-### 潜在影响
+### 潛在影響
 
-向外部数据库添加列可能会通过以下方式影响Adobe Commerce项目：
+將欄新增至外部資料庫可能會以下列方式影響您的Adobe Commerce專案：
 
-- 升级可能会更加复杂。
-- 如果修改的表较大，则部署会受到影响。
-- 迁移到新平台可能会更加复杂。
+- 升級可能會更複雜。
+- 如果修改的表格很大，則會影響部署。
+- 移轉至新平台可能會更複雜。
 
-## 避免修改核心表的方法
+## 避免修改核心表格的方法
 
-您可以避免使用 [扩展属性](#migrate-legacy-data-with-extension-attributes). 另一种方法是使用特殊列(`additional_data`)以存储数据并以JSON编码格式进行保存。
+您可以避免修改Adobe Commerce資料庫表格，方法是使用 [擴充功能屬性](#migrate-legacy-data-with-extension-attributes). 另一種選擇是使用特殊欄(`additional_data`)來儲存資料，並以JSON編碼格式儲存。
 
-### 将数据保存在JSON编码的数据列中
+### 將資料儲存在JSON編碼的資料欄中
 
-某些核心表具有 `additional_data` 包含JSON编码数据的列。 此列提供了在一个字段中映射附加数据的本机方式。 使用此方法可避免为存储用于数据检索的信息的简单、小的数据元素添加表，而无需搜索。 的 `additional_data` 列通常仅在项目级别可用，而不适用于整个报价或订单。
+部分核心表格具有 `additional_data` 儲存JSON編碼資料的欄。 此欄提供將其他資料對應到一個欄位中的原生方式。 使用此方法可避免為小型簡單資料元素新增表格，這些元素儲存資料擷取的資訊，而不需要搜尋。 此 `additional_data` 欄位通常只適用於料號層次，不適用於整個報價單或訂單。
 
-- 使用的优势 `additional_data` 字段
+- 使用「 」的優點 `additional_data` 欄位
 
-   - 无需其他字段，这样可保持最少列数。 在销售流程中，这非常有用，因为在销售流程中已涉及许多表。 最好不要给这个本已复杂的过程增加更多的复杂性。 此方法满足许多用例，但并非全部。
+   - 不需要其他欄位，可讓欄數維持在最小。 這在銷售流程中很有幫助，因為其中已經涉及許多表格。 最好不要對這個已經複雜的程式增加更多複雜性。 此方法可滿足許多使用案例，但並非全部。
 
-- 缺点
+- 缺點
 
-   - 此方法仅适用于存储只读数据。 出现此问题的原因是需要取消序列化我们的代码以修改和构建对象以添加依赖关系或数据库关系。
+   - 此方法僅適用於儲存唯讀資料。 發生此問題是因為需要取消序列化我們的程式碼才能修改和建立物件以新增相依性或資料庫關係。
 
-   - 很难使用数据库操作来搜索这些字段。 使用此方法搜索速度较慢。
+   - 很難使用資料庫作業來搜尋這些欄位。 使用此方法搜尋時速度很慢。
 
-   - 在 `additional_data` 列，以避免触发序列化或取消序列化操作，这些操作可能会通过创建无效JSON或在运行时导致读取错误来破坏代码。
+   - 將資料儲存在時，必須格外小心 `additional_data` 欄，以避免觸發序列化或非序列化作業，這類作業可能會建立無效的JSON來中斷程式碼，或在執行期間造成讀取錯誤。
 
-   - 必须在代码中明确声明这些字段，以便开发人员可以轻松找到它们。
+   - 這些欄位必須在程式碼中清楚宣告，讓開發人員可以輕鬆找到。
 
-   - 可能出现的其他可能很难诊断的问题。 例如，如果不使用 [!DNL Adobe Commerce] 由核心应用提供的包装方法，转换数据的最终结果可以不同于预期的格式。 请始终使用包装函数来确保保存或检索的数据的一致性和可预测性。
+   - 其他可能發生且很難診斷的問題。 例如，如果您不使用某些原生PHP函式 [!DNL Adobe Commerce] 核心應用程式所提供的包裝函式方法，轉換後資料的結束結果可能與預期格式不同。 請一律使用包裝函式，以確保所儲存或擷取資料的一致性和可預測性。
 
-以下是具有 `additional_data` 列。
+以下是表格範例，這些表格的欄和結構為 `additional_data` 欄。
 
 ```mysql
 MariaDB [main]> DESCRIBE quote_item additional_data;
@@ -132,7 +133,7 @@ MariaDB [main]> DESCRIBE sales_order_item additional_data;
 1 row in set (0.001 sec)
 ```
 
-在版本2.4.3、2.4.4和2.4.5中，有十个表具有列 `additional_data`.
+在2.4.3、2.4.4和2.4.5版中，有10個表格有欄 `additional_data`.
 
 ```mysql
 MariaDB [magento]> SELECT DISTINCT TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME IN ('additional_data') AND TABLE_SCHEMA='main';

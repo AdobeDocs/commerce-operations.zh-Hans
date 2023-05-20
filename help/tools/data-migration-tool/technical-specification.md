@@ -1,31 +1,31 @@
 ---
-title: '"[!DNL Data Migration Tool] 技术规范”'
-description: “了解 [!DNL Data Migration Tool] 以及在Magento1和Magento2之间传输数据时如何扩展。”
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: '''[!DNL Data Migration Tool] 技術規格'
+description: 瞭解的實作詳細資料 [!DNL Data Migration Tool] 以及在Magento1和Magento2之間傳輸資料時如何擴充。
+exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 0%
 
 ---
 
+# [!DNL Data Migration Tool] 技術規格
 
-# [!DNL Data Migration Tool] 技术规范
+本節將說明 [!DNL Data Migration Tool] 實作詳細資料，以及如何擴充其功能。
 
-本节将介绍 [!DNL Data Migration Tool] 实施详细信息以及如何扩展其功能。
+## 存放庫
 
-## 存储库
+若要存取 [!DNL Data Migration Tool] 原始碼，請參閱GitHub [存放庫](https://github.com/magento/data-migration-tool).
 
-访问 [!DNL Data Migration Tool] 源代码，请参阅GitHub [存储库](https://github.com/magento/data-migration-tool).
+## 系統需求
 
-## 系统要求
+此 [系統需求](../../installation/system-requirements.md) 的 [!DNL Data Migration Tool] 與Magento2相同。
 
-的 [系统要求](../../installation/system-requirements.md) 对于 [!DNL Data Migration Tool] 与Magento2相同。
+## 內部結構
 
-## 内部结构
+### 目錄結構
 
-### 目录结构
-
-下图表示 [!DNL Data Migration Tool]:
+下圖代表目錄結構 [!DNL Data Migration Tool]：
 
 ```terminal
 ├── etc                                    --- all configuration files
@@ -100,17 +100,17 @@ ht-degree: 0%
     └── unit
 ```
 
-## 入口点
+## 進入點
 
-运行迁移过程的脚本位于： `magento-root/bin/magento`.
+執行移轉程式的指令碼位於： `magento-root/bin/magento`.
 
-## 配置
+## 設定
 
-配置的架构 `config.xsd` 文件位于 `etc/` 目录访问Advertising Cloud的帮助。 默认配置文件(`config.xml.dist`)会为每个版本的Magento1.x创建。它位于 `etc/`.
+設定的結構描述 `config.xsd` 檔案位於 `etc/` 目錄。 預設組態檔(`config.xml.dist`)會針對Magento1.x的每個版本建立。它位在 `etc/`.
 
-默认配置文件可替换为自定义配置文件(请参阅 [命令语法](migrate-data/overview.md#command-syntax))。
+預設設定檔案可由自訂設定檔案取代(請參閱 [命令語法](migrate-data/overview.md#command-syntax))。
 
-配置文件具有以下结构：
+組態檔案具有下列結構：
 
 ```xml
 <config xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="config.xsd">
@@ -153,57 +153,57 @@ ht-degree: 0%
 </config>
 ```
 
-* 步骤 — 描述迁移过程中处理的所有步骤
+* 步驟 — 說明移轉期間處理的所有步驟
 
-* 源 — 数据源配置。 可用源类型：数据库
+* source — 資料來源的設定。 可用的來源型別：資料庫
 
-* 目标 — 数据目标的配置。 可用目标类型：数据库
+* destination — 資料目的地的設定。 可用的目的地型別：資料庫
 
-* options — 参数列表。 包含必选(map_file、settings_map_file、bulk_size)参数和可选(custom_option、resource_adapter_class_name、prefix_source、prefix_dest、log_file)参数
+* options — 引數清單。 包含必要(map_file、settings_map_file、bulk_size)和選用(custom_option、resource_adapter_class_name、prefix_source、prefix_dest、log_file)引數
 
-如果Magento在数据库表中安装了前缀，请更改前缀选项。 它可以为Magento1和Magento2数据库设置。 请相应地使用“source_prefix”和“dest_prefix”配置选项。
+變更前置詞選項，以備在資料庫表格中安裝了帶有前置詞的Magento時使用。 可以為Magento1和Magento2資料庫設定它。 請相應地使用「source_prefix」和「dest_prefix」組態選項。
 
-配置数据可通过 `\Migration\Config` 类。
+設定資料可透過以下方式存取： `\Migration\Config` 類別。
 
-## 可用操作的步骤
+## 可用的步驟作業
 
-| 文档 | 字段 |
+| 檔案 | 欄位 |
 |---|---|
-| `step` | 步骤节点内的二级节点。 必须在 `title` 属性。 |
-| `integrity` | 指定负责完整性检查的PHP类。 比较表字段名称、类型和其他信息，以验证Magento1和2数据结构之间的兼容性。 |
-| `data` | 指定负责数据检查的PHP类。 将数据（按表）从Magento1传输到Magento2。 |
-| `volume` | 指定负责卷检查的PHP类。 比较表之间的记录数以验证传输是否成功。 |
-| `delta` | 指定负责增量检查的PHP类。 在完全Magento迁移后，将增量从Magento1传输到客户2。 |
+| `step` | 「步驟」節點內的第二層節點。 相關步驟的說明必須指定於 `title` 屬性。 |
+| `integrity` | 指定負責完整性檢查的PHP類別。 比較表格欄位名稱、型別和其他資訊，以驗證Magento1和2資料結構之間的相容性。 |
+| `data` | 指定負責資料檢查的PHP類別。 將資料、表格從Magento1傳輸至Magento2。 |
+| `volume` | 指定負責體積塊檢查的PHP類別。 比較表格之間的記錄數，以驗證傳輸是否成功。 |
+| `delta` | 指定負責增量檢查的PHP類別。 完整資料移轉後，將差異從Magento1傳輸至Magento2。 |
 
-## 源数据库信息属性
+## 來源資料庫資訊屬性
 
-| 文档 | 字段 | 必需？ |
+| 檔案 | 欄位 | 必填？ |
 |---|---|---|
-| `name` | Magento1服务器的数据库名称。 | 是 |
-| `host` | Magento1服务器的主机IP地址。 | 是 |
-| `port` | Magento1服务器的端口号。 | 否 |
-| `user` | Magento1数据库服务器的用户名。 | 是 |
-| `password` | Magento1数据库服务器的密码。 | 是 |
-| `ssl_ca` | SSL证书颁发机构文件的路径。 | 否 |
-| `ssl_cert` | SSL证书文件的路径。 | 否 |
-| `ssl_key` | SSL密钥文件的路径。 | 否 |
+| `name` | Magento1伺服器的資料庫名稱。 | 是 |
+| `host` | Magento1伺服器的主機IP位址。 | 是 |
+| `port` | Magento1伺服器的連線埠號碼。 | 否 |
+| `user` | Magento1資料庫伺服器的使用者名稱。 | 是 |
+| `password` | Magento1資料庫伺服器的密碼。 | 是 |
+| `ssl_ca` | SSL憑證授權單位檔案的路徑。 | 否 |
+| `ssl_cert` | SSL憑證檔案的路徑。 | 否 |
+| `ssl_key` | SSL金鑰檔案的路徑。 | 否 |
 
-## 目标数据库信息属性
+## 目的地資料庫資訊屬性
 
-| 文档 | 字段 | 必需？ |
+| 檔案 | 欄位 | 必填？ |
 |---|---|---|
-| `name` | Magento2服务器的数据库名称。 | 是 |
-| `host` | Magento2服务器的主机IP地址。 | 是 |
-| `port` | Magento2服务器的端口号。 | 否 |
-| `user` | Magento2数据库服务器的用户名。 | 是 |
-| `password` | Magento2数据库服务器的密码。 | 是 |
-| `ssl_ca` | SSL证书颁发机构文件的路径。 | 否 |
-| `ssl_cert` | SSL证书文件的路径。 | 否 |
-| `ssl_key` | SSL密钥文件的路径。 | 否 |
+| `name` | Magento2伺服器的資料庫名稱。 | 是 |
+| `host` | Magento2伺服器的主機IP位址。 | 是 |
+| `port` | Magento2伺服器的連線埠號碼。 | 否 |
+| `user` | Magento2資料庫伺服器的使用者名稱。 | 是 |
+| `password` | Magento2資料庫伺服器的密碼。 | 是 |
+| `ssl_ca` | SSL憑證授權單位檔案的路徑。 | 否 |
+| `ssl_cert` | SSL憑證檔案的路徑。 | 否 |
+| `ssl_key` | SSL金鑰檔案的路徑。 | 否 |
 
-## 使用TLS协议进行连接
+## 使用TLS通訊協定連線
 
-您还可以使用TLS协议（即，使用公共/专用加密密钥）连接到数据库。 将以下可选属性添加到 `database` 元素：
+您也可以使用TLS通訊協定（亦即使用公開/私用密碼編譯金鑰）連線到資料庫。 將下列選擇性屬性新增至 `database` 元素：
 
 * `ssl_ca`
 * `ssl_cert`
@@ -220,17 +220,17 @@ ht-degree: 0%
 </destination>
 ```
 
-## 步骤内部
+## 步驟內部
 
-迁移过程由步骤组成。
+移轉程式包含多個步驟。
 
-步骤是一个单元，提供迁移某些分离数据所需的功能。 步骤可以包含一个或多个阶段（完整性检查、数据、卷检查和增量）。
+步驟是一個單位，提供移轉一些分隔資料所需的功能。 步驟可以包含一個或多個階段（完整性檢查、資料、磁碟區檢查以及差異）。
 
-默认情况下，需执行以下几个步骤([地图](#map-step), [EAV](#eav), [URL重写](#url-rewrite-step)，等等)。 您也可以选择添加自己的步骤。
+依預設，有幾個步驟([地圖](#map-step)， [EAV](#eav)， [URL重寫](#url-rewrite-step)、等等)。 您也可以選擇新增自己的步驟。
 
-与步骤相关的类位于src/Migration/Step目录中。
+步驟相關類別位於src/Migration/Step目錄中。
 
-要执行Step类，必须在config.xml文件中定义该类。
+若要執行Step類別，必須在config.xml檔案中定義類別。
 
 ```xml
 <config xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="config.xsd">
@@ -246,7 +246,7 @@ ht-degree: 0%
 </config>
 ```
 
-每个阶段类都必须实现StageInterface。
+每個階段類別都必須實作StageInterface。
 
 ```php
 class StageClass implements StageInterface
@@ -262,11 +262,11 @@ class StageClass implements StageInterface
 }
 ```
 
-如果数据阶段支持回滚，则它应该实施 `RollbackInterface` 界面。
+如果資料階段支援回覆，則應實作 `RollbackInterface` 介面。
 
-运行步骤的可视化由Symfony的ProgressBar组件提供(请参阅 [进度栏](https://symfony.com/doc/current/components/console/helpers/progressbar.html))。 以LogLevelProcessor的形式在步骤中访问此组件。
+執行步驟的視覺效果由Symfony的ProgressBar元件提供(請參閱 [進度列](https://symfony.com/doc/current/components/console/helpers/progressbar.html))。 在步驟中以LogLevelProcessor存取此元件。
 
-主要使用方法包括：
+主要使用方法如下：
 
 ```xml
 $this->progress->start();
@@ -274,42 +274,42 @@ $this->progress->advance();
 $this->progress->finish();
 ```
 
-## 步骤阶段
+## 步驟階段
 
-### 完整性检查
+### 完整性檢查
 
-每个步骤都必须检查数据源结构(默认为Magento1)和数据目标结构(Magento2)是否兼容。 如果不兼容，则会显示一个错误，其中包含不兼容的实体。 当字段具有不同的数据类型(同一字段在Magento1中具有十进制数据类型，在Magento2中具有整数)时，将显示一条警告消息（在映射文件中涵盖该消息时除外）。
+每個步驟都必須檢查資料來源的結構(預設為Magento1)和資料目的地的結構(Magento2)是否相容。 如果沒有 — 發生不相容的實體時會顯示錯誤。 如果欄位有不同的資料型別(相同的欄位在Magento1有十進位資料型別，在Magento2有整數)，則會顯示警告訊息（除非該訊息涵蓋在Map檔案中）。
 
-### 数据传输
+### 資料傳輸
 
-如果通过完整性检查，则传输数据正在运行。 如果出现错误，则运行回滚以还原到Magento2的先前状态。 如果步骤类实现 `RollbackInterface` 接口，则在出错时执行回滚方法。
+如果完整性檢查通過，則傳輸資料正在執行。 如果出現錯誤，則復原執行以恢復Magento2的上一個狀態。 如果步驟類別實作 `RollbackInterface` 介面，然後在發生錯誤時執行復原方法。
 
-### 卷检查
+### 磁碟區檢查
 
-迁移数据后，卷检查会提供额外的检查，以确认所有数据均正确传输。
+資料移轉後，「磁碟區檢查」會額外檢查所有資料是否已正確傳輸。
 
-### 增量交付
+### 差異傳遞
 
-增量功能负责提供主迁移后添加的其余数据。
+Delta功能負責傳遞主要移轉後新增的其餘資料。
 
-## 运行模式
+## 執行模式
 
-该工具应以三种不同模式运行，具体顺序为：
+工具應依特定順序以三種不同的模式執行：
 
-1. 设置 — 迁移系统设置
-1. 数据 — 主要迁移数据
-1. 增量 — 迁移主迁移后添加的其余数据
+1. 設定 — 移轉系統設定
+1. 資料 — 主要資料移轉
+1. delta — 移轉主要移轉後新增的其餘資料
 
-每个模式都有其自己的待执行步骤列表。 请参阅config.xml
+每個模式都有各自要執行的步驟清單。 請參閱config.xml
 
-### 设置迁移模式
+### 設定移轉模式
 
-此工具的设置迁移模式用于传输以下实体：
+此工具的設定移轉模式用於轉移以下實體：
 
-1. 网站、商店、商店视图。
-1. 存储配置（主要是M2中的Stores->Configuration或M1中的System->Configuration）
+1. 網站、商店、商店檢視。
+1. 存放區組態（主要是在M2中儲存 — >組態或在M1中系統 — >組態）
 
-所有存储配置都将其数据保留在数据库的core_config_data表中。 settings.xml文件包含在迁移过程中应用的此表规则。 此文件介绍了应忽略、重命名或应更改其值的设置。 settings.xml文件具有以下结构：
+所有存放區設定都會將其資料儲存在資料庫的core_config_data表格中。 settings.xml檔案包含此資料表的規則，這些規則會在移轉程式期間套用。 此檔案說明應該忽略、重新命名或應該變更其值的設定。 settings.xml檔案具有以下結構：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -332,19 +332,19 @@ $this->progress->finish();
 </settings>
 ```
 
-在节点下 `<key>` 在 `core_config_data` 表。 `<ignore>` 规则会阻止工具传输某些设置。 此节点中可以使用通配符。 未在 `<ignore>` 节点已迁移。 如果Magento2中设置的路径发生更改，则应将其添加到 `//key/rename` 节点，旧路径指示在 `//key/rename/path` 节点和新路径指示于 `//key/rename/to` 节点。
+在節點下 `<key>` 有一些規則可搭配中的「path」欄使用 `core_config_data` 表格。 `<ignore>` 規則會阻止工具傳輸某些設定。 此節點中可以使用萬用字元。 所有其他設定未列於 `<ignore>` 節點已移轉。 如果設定的路徑在Magento2中變更，則應將其新增至 `//key/rename` 節點，其中舊路徑為 `//key/rename/path` 節點和新路徑指示於 `//key/rename/to` 節點。
 
-在节点下 `<value>`，则中有一些规则与 `core_config_data` 表。 这些规则旨在由处理程序（实施的类）转换设置的值 `Migration\Handler\HandlerInterface`)并将其适用于Magento2。
+在節點下 `<value>`中，有些規則可搭配「value」欄使用 `core_config_data` 表格。 這些規則旨在透過處理常式（實作的類別）轉換設定的值 `Migration\Handler\HandlerInterface`)並根據Magento2進行調整。
 
-### 数据迁移模式
+### 資料移轉模式
 
-在此模式下，大多数数据都会迁移。 在数据迁移之前，针对每个步骤运行完整性检查阶段。 如果完整性检查通过，则 [!DNL Data Migration Tool] 安装deltalog表（带前缀） `m2_cl_*`)和相应的触发器，并运行Magento1数据库的数据迁移阶段。 在迁移完成且未出现错误时，卷检查数据一致性。 如果迁移实时存储，则会显示警告消息。 不用担心，增量迁移会处理此增量数据。 最有价值的迁移步骤是映射、URL重写和EAV。
+在此模式中，大部分資料都會移轉。 在資料移轉之前，系統會針對每個步驟執行完整性檢查階段。 如果完整性檢查通過， [!DNL Data Migration Tool] 安裝deltalog表格（含前置詞） `m2_cl_*`)和對應觸發器至Magento1資料庫，並執行資料移轉階段的步驟。 移轉完成且無錯誤時，磁碟區檢查會檢查資料的一致性。 如果您移轉即時存放區，它會顯示警告訊息。 別擔心，增量移轉會處理這些增量資料。 最有價值的移轉步驟包括地圖、URL重寫和EAV。
 
-#### 映射步骤
+#### 地圖步驟
 
-映射步骤负责将大多数数据从Magento1传输到Magento2。 此步骤从map.xml文件(位于 `etc/` 目录)。 该文件描述了源(Magento1)和目标(Magento2)的数据结构之间的差异。 如果Magento1包含属于Magento2中不存在的某些扩展的表或字段，则可以将这些实体放置在此处，以按“映射步骤”忽略它们。 否则，将显示一条错误消息。
+對應步驟負責將大部分資料從Magento1傳輸到Magento2。 此步驟會從map.xml檔案(位於 `etc/` 目錄)。 此檔案說明來源(Magento1)和目的地(Magento2)的資料結構之間的差異。 如果Magento1包含屬於Magento2中不存在之某些擴充功能的表格或欄位，則可以將這些實體放置在此處，以透過「對應步驟」忽略它們。 否則，它會顯示錯誤訊息。
 
-映射文件具有下一种格式：
+對應檔案的格式如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -398,49 +398,49 @@ $this->progress->finish();
 </map>
 ```
 
-区域：
+區域：
 
-* *来源*  — 包含源数据库规则
+* *source*  — 包含來源資料庫的規則
 
-* *目标*  — 包含目标数据库规则
+* *目的地*  — 包含目的地資料庫的規則
 
-选项：
+選項：
 
-* *忽略*  — 忽略使用此选项标记的文档、字段或数据类型
+* *忽略*  — 略過標示為此選項的檔案、欄位或資料型別
 
-* *重命名*  — 描述具有不同名称的文档之间的名称关系。 如果目标文档名称与源文档名称不同，则可以使用重命名选项设置与目标表名称类似的源文档名称
+* *重新命名*  — 說明不同名稱的檔案之間的名稱關係。 如果目的地檔名稱與來原始檔不同，您可以使用重新命名選項來設定與目的地表格名稱相似的來源檔名稱
 
-* *移动*  — 设置规则，将指定字段从源文档移动到目标文档。 注意：目标文档名称应与源文档名称相同。 如果源文档和目标文档名称不同，则需要对包含已移动字段的文档使用重命名选项
+* *移動*  — 設定將指定欄位從來原始檔移動到目的地檔案的規則。 附註：目的檔名稱應與來源檔名稱相同。 如果來源和目的地檔名稱不同 — 您需要對包含移動欄位的檔案使用重新命名選項
 
-* *转换*  — 是一个选项，允许用户根据处理程序中描述的行为迁移字段
+* *轉換*  — 是一個選項，可讓使用者根據處理常式中所述的行為遷移欄位
 
-* *处理程序*  — 描述字段的转换行为。 要调用处理程序，您需要在 `<handler>` 标记。 使用 `<param>` 标记，其中包含参数名称和值数据以将其传递到处理程序
+* *處理常式*  — 說明欄位的轉換行為。 若要呼叫處理常式，您必須在 `<handler>` 標籤之間。 使用 `<param>` 標籤以傳遞引數名稱和值資料給處理常式
 
-**来源** 可用操作：
+**來源** 可用操作：
 
-| 文档 | 字段 |
+| 檔案 | 欄位 |
 |--- |--- |
-| 忽略重命名 | 忽略移动转换 |
+| 忽略重新命名 | 忽略移動轉換 |
 
-**目标** 可用操作：
+**目的地** 可用操作：
 
-| 文档 | 字段 |
+| 檔案 | 欄位 |
 |--- |--- |
-| 忽略 | 忽略转换 |
+| 忽略 | 忽略轉換 |
 
-#### 通配符
+#### 萬用字元
 
-忽略具有相似部分的文档(`document_name_1`, `document_name_2`)，则可以使用通配符功能。 Put `*` 符号而不是重复部分(`document_name_*`)，并且此掩码涵盖所有符合此掩码的源文档或目标文档。
+忽略具有類似零件的檔案(`document_name_1`， `document_name_2`)，則可以使用萬用字元功能。 Put `*` 符號而非重複部分(`document_name_*`)，此遮罩涵蓋符合此遮罩的所有來源或目的地檔案。
 
-#### URL重写步骤
+#### URL重寫步驟
 
-此步骤非常复杂，因为Magento1中开发了许多与Magento2不兼容的算法。 对于Magento1的不同版本，可以使用不同的算法。 因此，在Step/UrlRewrite文件夹下，有一些类是为某些特定版本的Magento和Migration\Step\UrlRewrite\Version191to2000 is one of them开发的。 它可以将URL重写Magento1.9.1中的数据传输到Magento2。
+此步驟很複雜，因為在Magento1中開發的許多不同演演算法與Magento2不相容。 對於Magento1的不同版本，可能有不同的演演算法。 因此，在Step/UrlRewrite資料夾下，有一些針對某些特定Magento版本開發的類別，Migration\Step\UrlRewrite\Version191to2000就是其中之一。 它可以將URL重寫資料從Magento1.9.1傳輸至Magento2。
 
-#### EAV步骤
+#### EAV步驟
 
-此步骤将所有属性（产品、客户、RMA）从Magento1转移到Magento2。 它使用map-eav.xml文件，该文件包含与map.xml文件中的规则类似的规则，以用于处理数据的特定情况。
+此步驟會將所有屬性（產品、客戶、RMA）從Magento1移轉至Magento2。 它使用map-eav.xml檔案，其中包含處理資料的特定案例，與map.xml檔案中的規則相似的規則。
 
-在步骤中处理的一些表：
+在步驟中處理的一些表格：
 
 * `eav_attribute`
 * `eav_attribute_group`
@@ -450,21 +450,21 @@ $this->progress->finish();
 * `customer_eav_attribute`
 * `eav_entity_type`
 
-### 增量迁移模式
+### 差異移轉模式
 
-在主迁移后，可以将附加数据添加到Magento1数据库（例如，由店面上的客户添加）。 要跟踪此数据，该工具会在迁移过程开始时为表设置数据库触发器。 有关更多信息，请参阅 [迁移由第三方扩展创建的数据](migrate-data/delta.md#migrate-data-created-by-third-party-extensions).
+主要移轉後，其他資料可能已新增至Magento1資料庫（例如店面的客戶）。 若要追蹤此資料，工具會在移轉程式開始時設定資料表的資料庫觸發程式。 如需詳細資訊，請參閱 [移轉由協力廠商擴充功能建立的資料](migrate-data/delta.md#migrate-data-created-by-third-party-extensions).
 
-## 数据源
+## 資料來源
 
-要访问Magento1和Magento2的数据源并使用其数据（选择、更新、插入、删除）进行操作，Resource文件夹中有许多类。 Migration\ResourceModel\Source和Migration\ResourceModel\Destination是主类。 所有迁移步骤都使用它来操作数据。 此数据包含在Migration\ResourceModel\Document、Migration\ResourceModel\Record、Migration\ResourceModel\Structure等类中。
+若要存取Magento1和Magento2的資料來源，並運用其資料（選取、更新、插入、刪除），Resource資料夾中有許多類別。 Migration\ResourceModel\Source和Migration\ResourceModel\Destination是主要類別。 所有移轉步驟都會使用它來操作資料。 這些資料包含在Migration\ResourceModel\Document、Migration\ResourceModel\Record、Migration\ResourceModel\Structure等類別中。
 
-以下是这些类的类图：
+以下是這些類別的類別圖表：
 
-![迁移工具数据结构](../../assets/data-migration/MmigrationToolDataStructure.png)
+![移轉工具資料結構](../../assets/data-migration/MmigrationToolDataStructure.png)
 
-## 记录
+## 記錄
 
-为了实现迁移过程的输出，并控制所有可能级别的PSR记录器，该记录器用于Magento中。 `\Migration\Logger\Logger` 类用于提供日志记录功能。 要使用日志记录器，应通过构造函数依赖项注入进行注入。
+為了實作移轉程式的輸出並控制所有可能的層級，套用了Magento中使用的PSR記錄器。 `\Migration\Logger\Logger` 類別已實作以提供記錄功能。 若要使用記錄器，您應透過建構函式相依性插入來插入記錄器。
 
 ```php
 class SomeClass
@@ -480,7 +480,7 @@ class SomeClass
 }
 ```
 
-之后，您可以使用此类记录某些事件：
+之後，您可以使用此類別來記錄某些事件：
 
 ```php
 $this->logger->info("Some information message");
@@ -489,13 +489,13 @@ $this->logger->error("Message about error operation");
 $this->logger->warning("Some warning message");
 ```
 
-可以自定义日志信息应写入的位置。 为此，可以使用日志记录器的pushHandler()方法将处理程序添加到日志记录器。 每个处理程序都应实施 `\Monolog\Handler\HandlerInterface` 界面。 目前有两个处理程序：
+可以自訂記錄資訊的寫入位置。 您可以透過使用記錄器的pushHandler()方法將處理常式新增到記錄器來執行此操作。 每個處理常式都應該實作 `\Monolog\Handler\HandlerInterface` 介面。 目前有兩個處理常式：
 
-* ConsoleHandler:将消息写入控制台
+* ConsoleHandler：將訊息寫入主控台
 
-* FileHandler:将消息写入“log_file”配置选项中设置的日志文件
+* FileHandler：將訊息寫入已在「log_file」組態選項中設定的記錄檔
 
-此外，还可以实施任何其他处理程序。 Magento框架中有一组处理程序。 将处理程序添加到日志记录器的示例：
+您也可以實作任何其他處理常式。 Magento架構中有一組處理常式。 將處理常式新增至記錄器的範例：
 
 ```php
 // $this->consoleHandler is the object of Migration\Logger\ConsoleHandler class
@@ -503,7 +503,7 @@ $this->logger->warning("Some warning message");
 $this->logger->pushHandler($this->consoleHandler);
 ```
 
-要为日志记录器（当前模式、表名）设置其他数据，您可以使用日志记录器处理器。 现有处理器(MessageProcessor)。 它的创建目的是为日志消息添加“额外”数据，每次执行日志方法时都会调用。 MessageProcessor已保护$extra var，该变量包含“mode”、“stage”、“step”和“table”的空值。 额外数据可作为日志方法的第二个参数（上下文）传递给处理器。 AbstractStep->runStage（传递当前模式、阶段和步骤到处理器）方法中当前向处理器提供的附加数据集以及使用日志记录器 — >调试方法（传递迁移表名）的数据类。 向记录器添加处理器的示例：
+若要為記錄器設定其他資料（目前模式、表格名稱），您可以使用記錄器處理器。 有一個現有的處理器(MessageProcessor)。 建立它是為了新增記錄訊息的「額外」資料，並在每次執行記錄方法時呼叫。 MessageProcessor已保護$extra var，其中包含&#39;mode&#39;、&#39;stage&#39;、&#39;step&#39;和&#39;table&#39;的空白值。 額外的資料可作為記錄方法的第二個引數（內容）傳遞給處理器。 目前在AbstractStep->runStage （傳遞目前模式、階段和步驟到處理器）方法和資料類別中使用了記錄器 — >偵錯方法（傳遞移轉表格名稱）的處理器中會有額外的資料集。 將處理器新增至記錄器的範例：
 
 ```php
 // $this->processoris the object of Migration\Logger\messageProcessor class
@@ -512,27 +512,27 @@ $this->logger->pushProcessor([$this->processor, 'setExtra']);
 // As a second array value you need to pass method that should be executed when processor called
 ```
 
-可以设置详细程度。 至今，这里有三个级别：
+您可以設定詳細程度的等級。 目前分為三個層級：
 
-* `ERROR` （仅将错误写入日志）
-* `INFO` （只将重要信息写入日志，默认值）
-* `DEBUG` （所有内容都写成）
+* `ERROR` （只將錯誤寫入記錄檔）
+* `INFO` （只有重要資訊會寫入記錄檔，預設值）
+* `DEBUG` （所有內容都會寫入）
 
-可通过调用，分别为每个处理程序设置详细性日志级别 `setLevel()` 方法。 如果要通过命令行参数设置详细程度级别，则应在应用程序启动时更改“verbose”选项。
+您可以呼叫，個別為每個處理常式設定詳細記錄層級 `setLevel()` 方法。 如果您想要透過命令列引數設定詳細等級，您應在應用程式啟動時變更「詳細」選項。
 
-您可以使用专写格式化程序格式化日志消息。 要使格式设置程序功能正常工作，您必须使用 `setFormatter()` 方法。 目前，我们有一个格式化程序类(`MessageFormatter`)，以在消息处理(通过 `format()` 方法)。
+您可以使用單色格式化程式來格式化記錄訊息。 若要讓格式化程式功能發揮作用，您必須使用 `setFormatter()` 方法。 目前，我們有一個格式化程式類別(`MessageFormatter`)在訊息處理期間設定特定格式（取決於詳細程度等級） (透過 `format()` 方法)。
 
-在 `process()` 方法 `Migration\Logger\Manager` 类。 应用程序启动时调用方法。
+在詳細模式中操作記錄器（新增處理常式與處理器）與處理是在下列專案中執行： `process()` 方法 `Migration\Logger\Manager` 類別。 當應用程式啟動時，就會呼叫方法。
 
-## 自动测试
+## 自動測試
 
-在 [!DNL Data Migration Tool]:
+中有三種型別的測試 [!DNL Data Migration Tool]：
 
-* 静态
-* 单位
-* 集成
+* 靜態
+* 單位
+* 整合
 
-它们位于工具的 `tests/` 目录，与测试类型相同(设备测试位于 `tests/unit` 目录)。 要启动测试，您应该安装了phpunit。 将当前目录更改为测试目录并启动phpunit。 例如：
+它們位於工具的 `tests/` 目錄，與測試型別相同(單元測試位於 `tests/unit` 目錄)。 若要啟動測試，您應該已安裝phpunit。 將目前目錄切換到測試目錄並啟動phpunit。 例如：
 
 ```bash
 [10:32 AM]-[vagrant@debian-70rc1-x64-vbox4210]-[/var/www/magento2/vendor/magento/data-migration-tool]-[git master]

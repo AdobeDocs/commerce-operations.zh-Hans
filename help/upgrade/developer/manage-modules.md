@@ -1,27 +1,27 @@
 ---
-title: 管理模块和扩展（开发人员）
-description: 使用命令行界面和编辑器包管理器管理Adobe Commerce和Magento Open Source模块和扩展。
-source-git-commit: 3432ba8640a82269cb725b8b15854f20c270b1e3
+title: 管理模組和擴充功能（開發人員）
+description: 使用命令列介面和撰寫器封裝管理員來管理Adobe Commerce和Magento Open Source模組及擴充功能。
+exl-id: 447eb317-83e1-4900-83a5-9ac1a008e752
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# 管理模組和擴充功能
 
-# 管理模块和扩展
+貢獻者開發人員透過在Adobe Commerce或Magento Open Source中指定其版本來升級模組和擴充功能 `composer.json` 檔案。 如果您不是參與開發人員，請參閱 [執行升級](../implementation/perform-upgrade.md).
 
-供稿开发人员通过在Adobe Commerce或Magento Open Source中指定其版本来升级模块和扩展 `composer.json` 文件。 如果您不是参与开发人员，请参阅 [执行升级](../implementation/perform-upgrade.md).
-
-您可以添加 `require` 的 `composer.json` 文件，或者您可以使用 `composer require` 命令：
+您可以新增 `require` 區段至 `composer.json` 檔案或您可以使用 `composer require` 命令，如下所示：
 
 {{$include /help/_includes/server-login.md}}
 
-您有以下选项：
+您有以下選項：
 
-## 获取可用的模块版本
+## 取得可用的模組版本
 
-命令用法：
+命令使用方式：
 
 ```bash
 composer show --all <vendor>/<name>
@@ -35,7 +35,7 @@ composer show --all example/module
 
 ## 使用 `composer require` 命令
 
-命令用法：
+命令使用方式：
 
 ```bash
 composer require <vendor>/<name>:<version>
@@ -47,13 +47,13 @@ composer require <vendor>/<name>:<version>
 composer require example/module:1.0.0
 ```
 
-编辑器更新依赖项并安装模块时等待。
+Composer正在更新相依性並安裝模組，請稍候。
 
-## 添加 `require` 部分到composer.json文件
+## 新增 `require` composer.json檔案的區段
 
-1. 打开 `composer.json` 在文本编辑器中。
+1. 開啟 `composer.json` 在文字編輯器中。
 
-1. 添加 `require` 中。
+1. 新增 `require` 區段。
 
    ```json
    "require": {
@@ -62,9 +62,9 @@ composer require example/module:1.0.0
    }
    ```
 
-1. 保存对 `composer.json` 并退出文本编辑器。
+1. 將變更儲存至 `composer.json` 檔案並退出文字編輯器。
 
-1. 解决依赖关系，并将确切的版本写入 `composer.lock` 文件。
+1. 解決相依性並將確切版本寫入 `composer.lock` 檔案。
 
    ```bash
    composer update
