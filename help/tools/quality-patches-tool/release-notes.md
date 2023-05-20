@@ -68,7 +68,7 @@ ht-degree: 0%
 * **ACSD-49960** (適用於Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修正客戶訂單格線無法依日期篩選的問題。
 * **ACSD-49849** (適用於Adobe Commerce和Magento Open Source >=2.3.7 &lt;2.4.6) — 修正客戶電子郵件被取代的問題 [!DNL PayPal] 使用以下方式下訂單時傳送電子郵件： [!DNL PayPal Express] 透過GraphQL。
 * **ACSD-49839** (適用於Adobe Commerce >=2.3.7 &lt;2.4.7) — 修正當產品在SKU中有單引號或雙引號時，共用目錄定價和結構會在「管理員」中擲回錯誤的問題。
-* **ACSD-49970** (適用於Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修正以下情況下對GraphQL錯誤的不正確處理： [!DNL New Relic] 報告功能已開啟。
+* **ACSD-49970** (適用於Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修正下列情況下對GraphQL錯誤的不正確處理： [!DNL New Relic] 報告功能已開啟。
 * **ACSD-50260** (適用於Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修正GraphQL產品搜尋結果限製為僅限10,000個結果的問題。
 * **ACSD-48813** (適用於Adobe Commerce和Magento Open Source >=2.4.3 &lt;2.4.7) — 修正搜尋未根據屬性的搜尋權重顯示相關結果的問題。
 

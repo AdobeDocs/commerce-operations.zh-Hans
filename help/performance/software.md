@@ -197,7 +197,7 @@ Magento完全支援Nginx和Apache網頁伺服器。 [!DNL Commerce] 提供中建
 |--- | --- | ---|
 | `innodb_buffer_pool_instances` | 8 | 預設值設為8，以避免多個執行緒嘗試存取相同執行個體時發生問題。 |
 | `innodb_buffer_pool_size` | 128MB | 結合上述多個集區執行個體，這表示預設的記憶體配置為1024MB。 總大小會分配到所有緩衝集區。 為達到最佳效率，請指定 `innodb_buffer_pool_instances` 和 `innodb_buffer_pool_size` 讓每個緩衝集區執行個體至少有1 GB。 |
-| `max_connections` | 150 | 的值 `max_connections` 引數應與應用程式伺服器中設定的PHP執行緒總數相關。 一般建議是小型環境為300，中型環境為1,000。 |
+| `max_connections` | 150 | 的值 `max_connections` 引數應該與應用程式伺服器中設定的PHP執行緒總數相關。 一般建議是小型環境為300，中型環境為1,000。 |
 | `innodb_thread_concurrency` | 0 | 此設定的最佳值應透過下列公式計算： `innodb_thread_concurrency = 2 * (NumCPUs + NumDisks)` |
 
 ## [!DNL Varnish]

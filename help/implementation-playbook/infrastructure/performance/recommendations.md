@@ -73,7 +73,7 @@ N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
 
 Adobe Commerce資料庫（以及任何其他資料庫）對可用於儲存資料和索引的記憶體量很敏感。 為了有效運用MySQL資料索引，可用的記憶體量至少應接近資料庫中儲存資料大小的一半。
 
-最佳化 `innodb_buffer_pool_instances` 設定，以避免多個執行緒嘗試存取相同執行個體時發生問題。 的值 `max_connections` 引數應與應用程式伺服器中設定的PHP執行緒總數相關。 使用下列公式計算的最佳值 `innodb-thread-concurrency`：
+最佳化 `innodb_buffer_pool_instances` 設定，以避免多個執行緒嘗試存取相同執行個體時發生問題。 的值 `max_connections` 引數應該與應用程式伺服器中設定的PHP執行緒總數相關。 使用下列公式計算的最佳值 `innodb-thread-concurrency`：
 
 ```
 innodb-thread-concurrency = 2 * (NumCPUs+NumDisks)

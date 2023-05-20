@@ -58,7 +58,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ### 已移除整數型別（內距）的寬度
 
-MySQL 8.0.17已棄用整數資料型別(TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT)的顯示寬度規格。在輸出中包含資料型別定義的陳述式不再顯示整數型別的顯示寬度，TINYINT(1)除外。 MySQL聯結器假設TINYINT(1)欄是以BOOLEAN欄起源。 此例外狀況可讓他們繼續做出該假設。
+MySQL 8.0.17已棄用整數資料型別(TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT)的顯示寬度規格。在輸出中包含資料型別定義的陳述式不再顯示整數型別的顯示寬度，TINYINT(1)除外。 MySQL聯結器假設TINYINT(1)資料行是以BOOLEAN資料行起源。 此例外狀況可讓他們繼續做出該假設。
 
 #### 範例
 

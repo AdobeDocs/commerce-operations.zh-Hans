@@ -49,7 +49,7 @@ http連線逾時和http通訊端逾時應該設定為符合Fastly逾時的值。
 
 下圖顯示MagentoCIF GraphQL Client Configuration Factory。 此處顯示的設定僅供範例使用，需逐一調整：
 
-![Commerce Integration Framework組態設定熒幕擷圖](../assets/commerce-at-scale/cif-config.png)
+![Commerce整合框架組態設定熒幕擷圖](../assets/commerce-at-scale/cif-config.png)
 
 下圖顯示Fastly後端設定。 此處顯示的設定僅供範例使用，需逐一調整：
 
