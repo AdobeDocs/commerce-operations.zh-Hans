@@ -1,8 +1,9 @@
 ---
 title: 建置系統設定
 description: 瞭解如何將Commerce部署至組建系統。
+feature: Configuration, Build, Deploy
 exl-id: f6daf5c6-6d12-46b0-b775-76791bacea53
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%

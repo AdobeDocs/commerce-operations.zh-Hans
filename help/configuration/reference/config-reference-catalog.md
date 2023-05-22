@@ -1,8 +1,9 @@
 ---
 title: 目錄設定路徑參考
 description: 檢視目錄設定值清單。
+feature: Configuration, Catalogs
 exl-id: 19451443-228e-437d-a3eb-7dc968b9fb0d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 0%

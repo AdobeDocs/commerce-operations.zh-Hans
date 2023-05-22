@@ -1,8 +1,9 @@
 ---
 title: 記錄器介面
 description: 開始使用記錄器介面。
+feature: Configuration, Logs
 exl-id: fdb1b431-405a-4c32-aff1-9e50bf0a2c90
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%

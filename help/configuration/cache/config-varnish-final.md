@@ -1,10 +1,11 @@
 ---
 title: 最終驗證
 description: 確認您的Varnish設定已正確設定為可與Adobe Commerce應用程式搭配使用。
+feature: Configuration, Cache
 exl-id: 01f28c93-75cd-4969-9142-b8dac0aa2adb
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -82,4 +83,4 @@ X-Magento-Cache-Debug: MISS
 
 >[!TIP]
 >
->如果您遇到503 （後端擷取失敗）錯誤，請參閱 [疑難排解503 （服務無法使用）錯誤](https://support.magento.com/hc/en-us/articles/360034631211) 在 _Adobe Commerce說明中心_.
+>如果您遇到503 （後端擷取失敗）錯誤，請參閱 [疑難排解503 （服務無法使用）錯誤](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html) 在 _Adobe Commerce說明中心_.

@@ -1,8 +1,9 @@
 ---
 title: 啟用記錄
 description: 瞭解如何啟用和停用記錄型別。
+feature: Configuration, Logs
 exl-id: 78b0416a-5bad-42a9-a918-603600e98928
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%

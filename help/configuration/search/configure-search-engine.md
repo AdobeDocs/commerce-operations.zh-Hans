@@ -1,8 +1,9 @@
 ---
 title: 搜尋引擎設定
 description: 設定Adobe Commerce和Magento Open Source內部部署的搜尋引擎。
+feature: Configuration, Search
 exl-id: 61fbe0c2-bdd5-4f57-a518-23e180401804
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%

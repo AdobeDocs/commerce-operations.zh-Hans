@@ -1,8 +1,9 @@
 ---
 title: 還原分割資料庫
 description: 從已棄用的分割資料庫實作還原為單一資料庫實作。
+feature: Configuration, Storage
 exl-id: 2ece24e0-1f85-445a-8e22-fb10611403ff
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%

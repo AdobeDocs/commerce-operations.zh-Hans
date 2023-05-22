@@ -1,8 +1,9 @@
 ---
 title: 設定Redis
 description: 取得Redis功能的概觀並開始您的Redis設定。
+feature: Configuration, Cache
 exl-id: e037c382-334a-4096-a417-a25fdb61a9ce
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%

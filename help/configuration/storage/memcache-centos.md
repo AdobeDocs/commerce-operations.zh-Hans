@@ -1,8 +1,9 @@
 ---
 title: 在CentOS上設定記憶體快取
 description: 在CentOS上安裝並設定memcached。
+feature: Configuration, Cache, Storage
 exl-id: fc4ad18b-7e99-496e-aebc-1d7640d8716c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%

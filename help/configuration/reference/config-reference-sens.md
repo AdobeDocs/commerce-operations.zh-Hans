@@ -1,8 +1,9 @@
 ---
 title: 敏感路徑和系統特定路徑
 description: 請參閱系統專屬和敏感設定值清單。
+feature: Configuration, System
 exl-id: 127880ab-7507-4e53-8b51-dfa6557d0b18
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 0%

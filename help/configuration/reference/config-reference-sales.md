@@ -1,8 +1,9 @@
 ---
 title: 銷售設定路徑參考
 description: 檢視銷售組態值清單。
+feature: Configuration, Checkout, Gift, Shipping/Delivery, Taxes
 exl-id: 7981f78a-5e5f-422c-9bff-54022e1fb9f3
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 0%

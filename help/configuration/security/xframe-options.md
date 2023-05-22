@@ -1,8 +1,9 @@
 ---
 title: X-Frame-Options標頭
 description: 使用X-Frame-Options來控制頁面轉譯。
+feature: Configuration, Security
 exl-id: 83cf5fd2-3eb8-4bd9-99e2-1c701dcd1382
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%

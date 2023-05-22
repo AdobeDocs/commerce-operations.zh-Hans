@@ -1,8 +1,9 @@
 ---
 title: 手動設定主資料庫
 description: 請參閱手動設定分割資料庫解決方案的指南。
+recommendations: noCatalog
 exl-id: 2c357486-4a8a-4a36-9e13-b53c83f69456
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%

@@ -1,8 +1,9 @@
 ---
 title: L2快取設定
 description: 瞭解如何設定L2快取。
+feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%

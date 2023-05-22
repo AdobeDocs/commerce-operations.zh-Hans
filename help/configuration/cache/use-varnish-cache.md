@@ -1,8 +1,9 @@
 ---
 title: 使用清漆清除快取
 description: 瞭解快取清除如何與Varnish搭配使用，以及如何將其用作Adobe Commerce應用程式的網頁快取加速器。
+feature: Configuration, Cache
 exl-id: 866da415-c428-4092-a045-c3079493cdc4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%

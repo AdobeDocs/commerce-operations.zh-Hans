@@ -1,9 +1,10 @@
 ---
 title: Security.txt
 description: 瞭解如何提供資訊以協助安全性研究人員報告漏洞。
+feature: Configuration, Security
 badge: label="Contributed by Kalpesh Mehta from Corra" type="Informational" url="https://solutionpartners.adobe.com/s/directory/detail/corra" tooltip="Kalpesh Mehta"
 exl-id: ddafd03c-77b2-42e8-b593-7d655d08e9c3
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 商家可以輸入他們的聯絡資訊 [安全性問題報告](https://docs.magento.com/user-guide/stores/security-issue-reporting.html) 來自Commerce _管理員_. 對於開發人員而言， `Magento_Securitytxt` 模組提供下列功能：
 
 - 允許從儲存安全性設定 _管理員_.
-- 包含路由器，以將要求的應用程式動作類別與 `.well-known/security.txt` 和 `.well-known/security.txt.sig` 檔案。
+- 包含路由器，以將請求的應用程式動作類別與 `.well-known/security.txt` 和 `.well-known/security.txt.sig` 檔案。
 - 提供以下專案的內容： `.well-known/security.txt` 和 `.well-known/security.txt.sig` 檔案。
 
 有效的 `security.txt` 檔案可能如下所示：

@@ -1,8 +1,9 @@
 ---
 title: 自訂記錄
 description: 瞭解如何使用自訂記錄來調查錯誤。
+feature: Configuration, Logs
 exl-id: 6c94ebcf-70df-4818-a17b-32512eba516d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

@@ -1,8 +1,9 @@
 ---
 title: 產生資料以進行效能測試
 description: 瞭解如何產生大量資料以用於效能測試。
+feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 8%

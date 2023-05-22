@@ -1,8 +1,9 @@
 ---
 title: 安全cron PHP
 description: 限制誰能在瀏覽器中執行cron.php檔案。
+feature: Configuration, Security
 exl-id: c81fcab2-1ee3-4ec7-a300-0a416db98614
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 0%

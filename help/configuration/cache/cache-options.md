@@ -1,8 +1,9 @@
 ---
 title: 快取選項
 description: 設定對低階快取儲存體的存取權。
+feature: Configuration, Cache
 exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%

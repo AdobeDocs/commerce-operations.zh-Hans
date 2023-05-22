@@ -1,8 +1,9 @@
 ---
 title: 使用多個Varnish例項清除快取
 description: 瞭解快取清除如何與多個Varnish執行個體搭配運作。
+feature: Configuration, Cache
 exl-id: 289a4e54-9e73-454c-bfb9-e78e405af56c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
