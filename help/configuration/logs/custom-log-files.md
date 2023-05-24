@@ -1,6 +1,6 @@
 ---
-title: 寫入自訂記錄檔
-description: 瞭解如何設定自訂記錄檔。
+title: 写入自定义日志文件
+description: 了解如何设置自定义日志文件。
 feature: Configuration, Logs
 badge: label="Contributed by Atwix" type="Informational" url="https://www.atwix.com/" tooltip="Atwix"
 exl-id: 875f45e7-30c9-4b1b-afe9-d1a8d51ccdf0
@@ -11,11 +11,11 @@ ht-degree: 0%
 
 ---
 
-# 寫入自訂記錄檔
+# 写入自定义日志文件
 
-此 `Magento\Framework\Logger` 模組包含下列處理常式類別：
+此 `Magento\Framework\Logger` 模块包含以下处理程序类：
 
-| 類別 | 記錄檔 |
+| 类 | 日志文件 |
 | ----- | -------- |
 | [Magento\Framework\Logger\Handler\Base][base] | - |
 | [Magento\Framework\Logger\Handler\Debug][debug] | `/var/log/debug.log` |
@@ -23,18 +23,18 @@ ht-degree: 0%
 | [Magento\Framework\Logger\Handler\Syslog][syslog] | - |
 | [Magento\Framework\Logger\Handler\System][system] | `/var/log/system.log` |
 
-您可在以下連結中找到它們： `lib/internal/Magento/Framework/Logger/Handler` 目錄。
+您可以在 `lib/internal/Magento/Framework/Logger/Handler` 目录。
 
-您可以使用下列其中一種方式登入自訂檔案：
+您可以使用以下方法之一登录到自定义文件：
 
-- 在中設定自訂記錄檔 `di.xml`
-- 在自訂記錄器處理常式類別中設定自訂檔案
+- 在中设置自定义日志文件 `di.xml`
+- 在自定义记录器处理程序类中设置自定义文件
 
-## 在中設定自訂記錄檔 `di.xml`
+## 在中设置自定义日志文件 `di.xml`
 
-此範例說明如何使用 [虛擬型別](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 以記錄 `debug` 將訊息放入自訂記錄檔而非標準記錄檔 `/var/log/debug.log`.
+此示例说明如何使用 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 以记录 `debug` 消息放入自定义日志文件而不是标准日志文件 `/var/log/debug.log`.
 
-1. 在 `di.xml` 模組的檔案，將自訂記錄檔定義為 [虛擬型別](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
+1. 在 `di.xml` 文件，将自定义日志文件定义为 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
@@ -44,9 +44,9 @@ ht-degree: 0%
    </virtualType>
    ```
 
-   此 `name` 值 `Magento\Payment\Model\Method\MyCustomDebug` 必須是唯一的。
+   此 `name` 值 `Magento\Payment\Model\Method\MyCustomDebug` 必须是唯一的。
 
-1. 在另一個中定義處理常式 [虛擬型別](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 具有唯一 `name`：
+1. 在另一个中定义处理程序 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 具有唯一 `name`：
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -58,7 +58,7 @@ ht-degree: 0%
    </virtualType>
    ```
 
-1. 插入 `MyCustomLogger` [虛擬型別](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 在 `Magento\Payment\Model\Method\Logger` 物件：
+1. 插入 `MyCustomLogger` [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 在 `Magento\Payment\Model\Method\Logger` 对象：
 
    ```xml
    <type name="Magento\Payment\Model\Method\Logger">
@@ -68,7 +68,7 @@ ht-degree: 0%
    </type>
    ```
 
-1. 虛擬類別 `Magento\Payment\Model\Method\MyCustomDebug` 會插入至 `debug` 的處理常式 `$logger` 中的屬性 `Magento\Payment\Model\Method\Logger` 類別。
+1. 虚拟类 `Magento\Payment\Model\Method\MyCustomDebug` 被注入到 `debug` 的处理程序 `$logger` 中的属性 `Magento\Payment\Model\Method\Logger` 类。
 
    ```xml
    ...
@@ -77,13 +77,13 @@ ht-degree: 0%
    </argument>
    ```
 
-例外狀況訊息會記錄到 `/var/log/payment.log` 檔案。
+异常消息将记录到 `/var/log/payment.log` 文件。
 
-## 在記錄器處理常式類別中設定自訂記錄檔
+## 在记录器处理程序类中设置自定义日志文件
 
-此範例顯示如何使用自訂記錄器處理常式類別來記錄 `error` 訊息放入特定記錄檔。
+此示例说明如何使用自定义记录器处理程序类进行记录 `error` 将消息写入特定日志文件。
 
-1. 建立記錄資料的類別。 在此範例中，類別定義於 `app/code/Vendor/ModuleName/Logger/Handler/ErrorHandler.php`.
+1. 创建记录数据的类。 在此示例中，类定义于 `app/code/Vendor/ModuleName/Logger/Handler/ErrorHandler.php`.
 
    ```php
    <?php
@@ -117,7 +117,7 @@ ht-degree: 0%
    }
    ```
 
-1. 將此類別的處理常式定義為 [虛擬型別](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 在模組的 `di.xml` 檔案。
+1. 将此类的处理程序定义为 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 在模块的 `di.xml` 文件。
 
    ```xml
    <virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -129,9 +129,9 @@ ht-degree: 0%
    </virtualType>
    ```
 
-   `MyCustomLogger` 是唯一識別碼。
+   `MyCustomLogger` 是唯一标识符。
 
-1. 在 `type` 定義，指定插入自訂記錄器處理常式的類別名稱。 使用上一個步驟的虛擬型別名稱作為此型別的引數。
+1. 在 `type` 定义，指定插入自定义记录器处理程序的类名。 使用上一步中的虚拟类型名称作为此类型的参数。
 
    ```xml
    <type name="Vendor\ModuleName\Observer\MyObserver">
@@ -141,7 +141,7 @@ ht-degree: 0%
    </type>
    ```
 
-   原始碼： `Vendor\ModuleName\Observer\MyObserver` 類別：
+   的源代码 `Vendor\ModuleName\Observer\MyObserver` 类：
 
    ```php
    <?php
@@ -193,7 +193,7 @@ ht-degree: 0%
    }
    ```
 
-1. 類別 `Vendor\ModuleName\Logger\Handler\ErrorHandler` 會插入至 `error` 的處理常式 `$logger` 中的屬性 `Vendor\ModuleName\Observer\MyObserver`.
+1. 类 `Vendor\ModuleName\Logger\Handler\ErrorHandler` 被注入到 `error` 的处理程序 `$logger` 中的属性 `Vendor\ModuleName\Observer\MyObserver`.
 
    ```xml
    ...
@@ -203,7 +203,7 @@ ht-degree: 0%
    ...
    ```
 
-例外狀況訊息會記錄在 `/var/log/my_custom_logger/error.log` 檔案。
+异常消息记录在 `/var/log/my_custom_logger/error.log` 文件。
 
 <!-- link definitions -->
 

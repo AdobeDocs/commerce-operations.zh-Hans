@@ -1,6 +1,6 @@
 ---
-title: 進階 [!DNL JavaScript] 套裝
-description: 瞭解JavaScript套件組合如何減少伺服器請求的大小和頻率。
+title: 高级 [!DNL JavaScript] 捆绑
+description: 了解JavaScript捆绑包如何减少服务器请求的大小和频率。
 exl-id: 81a313f8-e541-4da6-801b-8bbd892d6252
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,100 +9,100 @@ ht-degree: 0%
 
 ---
 
-# 進階 [!DNL JavaScript] 套裝
+# 高级 [!DNL JavaScript] 捆绑
 
-套裝 [!DNL JavaScript] 改善效能的模組需要減少兩件事：
+捆绑 [!DNL JavaScript] 提高性能的模块涉及减少以下两点：
 
-1. 伺服器要求的數目。
-1. 這些伺服器要求的大小。
+1. 服务器请求的数量。
+1. 这些服务器请求的大小。
 
-在模組化應用程式中，伺服器要求的數量可能高達數百個。 例如，下列熒幕擷取畫面只會顯示 [!DNL JavaScript] 在全新安裝的首頁上載入的模組。
+在模块化应用程序中，服务器请求的数量可能高达数百个。 例如，以下屏幕快照仅显示列表的开头 [!DNL JavaScript] 全新安装的主页上加载的模块。
 
-![無套件組合](../assets/performance/images/noBundling.png)
+![无捆绑](../assets/performance/images/noBundling.png)
 
-## 合併和捆綁
+## 合并和捆绑
 
-開箱即用 [!DNL Commerce] 提供兩種減少伺服器請求數的方法：合併和捆綁。 這些設定預設為關閉。 您可以在下列位置的管理員UI中將其開啟： **[!UICONTROL Stores]** > **設定** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]** > **[!UICONTROL [!DNL JavaScript] Settings]**，或從命令列。
+开箱即用， [!DNL Commerce] 提供了两种减少服务器请求数的方法：合并和捆绑。 这些设置默认处于关闭状态。 您可以在中的管理员UI中打开它们 **[!UICONTROL Stores]** > **设置** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]** > **[!UICONTROL [!DNL JavaScript] Settings]**，或从命令行访问。
 
-![套裝](../assets/performance/images/bundlingImage.png)
+![捆绑](../assets/performance/images/bundlingImage.png)
 
-### 基本組合
+### 基本捆绑
 
-若要從命令列啟用內建組合：
+要从命令行启用内置捆绑，请执行以下操作：
 
 ```bash
 php -f bin/magento config:set dev/js/enable_js_bundling 1
 ```
 
-這是原生檔案 [!DNL Commerce] 此機制結合系統中存在的所有資產，並將它們分散在大小相同的組合(bundle_0.js、bundle_1.js ... bundle_x.js)中：
+这是本机 [!DNL Commerce] 一种机制，用于组合系统中存在的所有资产并将它们分发到大小相同的包(bundle_0.js、bundle_1.js ... bundle_x.js)中：
 
-![[!DNL Commerce] 套裝](../assets/performance/images/magentoBundling.png)
+![[!DNL Commerce] 捆绑](../assets/performance/images/magentoBundling.png)
 
-雖然更好，但瀏覽器仍會載入 [!DNL JavaScript] 套件組合，而不只是需要的套件組合。
+更好，但浏览器仍加载 [!DNL JavaScript] 捆绑包，而不仅仅是所需的捆绑包。
 
-[!DNL Commerce] 套件組合可減少每頁的連線數量，但對於每個頁面請求，它會載入所有套件，即使請求的頁面可能僅取決於一或兩個套件組合中的檔案。 在瀏覽器快取套件組合後，效能得以改善。 但是，由於瀏覽器會同步載入這些套件組合，因此使用者的第一次造訪會是 [!DNL Commerce] storefront可能需要一些時間才能呈現，並損害使用者體驗。
+[!DNL Commerce] 捆绑可减少每个页面的连接数，但对于每个页面请求，它会加载所有捆绑包，即使请求的页面可能仅依赖于一个或两个捆绑包中的文件。 在浏览器缓存捆绑包后，性能得以提高。 但是，由于浏览器同步加载这些捆绑包，因此用户第一次访问 [!DNL Commerce] storefront可能需要一段时间才能呈现，并且会损害用户体验。
 
-### 基本合併
+### 基本合并
 
-若要從命令列啟用內建合併：
+要从命令行启用内置合并，请执行以下操作：
 
 ```bash
 php -f bin/magento config:set dev/js/merge_files 1
 ```
 
-此命令會合併所有同步 [!DNL JavaScript] 檔案合併為一個檔案。 啟用合併而不啟用繫結沒有用處，因為 [!DNL Commerce] 使用RequireJS。 如果您未啟用套件組合， [!DNL Commerce] 僅合併RequireJS及其設定。 當您同時啟用套件和合併時， [!DNL Commerce] 建立單一 [!DNL JavaScript] 檔案：
+此命令合并所有同步 [!DNL JavaScript] 文件合并为一个文件。 在不启用捆绑的情况下启用合并没有用，因为 [!DNL Commerce] 使用RequireJS。 如果不启用捆绑， [!DNL Commerce] 仅合并RequireJS及其配置。 当您同时启用捆绑和合并时， [!DNL Commerce] 创建单个 [!DNL JavaScript] 文件：
 
-![真實世界合併](../assets/performance/images/magentoMergingDevWorld.png)
+![现实世界中的融合](../assets/performance/images/magentoMergingDevWorld.png)
 
-## 真實世界轉譯時間
+## 真实世界渲染时间
 
-之前的套件和合併載入時間在開發環境中看起來很棒。 但在現實世界中，許多因素都會拖慢呈現速度：連線緩慢、連線臨界值大、網路有限。 此外，行動裝置的呈現速度不如桌上型電腦。
+在开发环境中，之前的捆绑和合并加载时间看起来很棒。 但在现实世界中，很多事情会减慢渲染速度：连接速度慢，连接阈值大，网络有限。 此外，移动设备的呈现速度不如台式机。
 
-為了測試和準備您的店面部署以進行現實世界的測試，我們建議您使用Chrome的原生節流設定檔「慢3G」進行測試。 透過Slow 3G，我們先前提供的輸出時間能反映許多使用者的連線實際情況：
+为了测试和准备您的店面部署，以便适应现实情况，我们建议您使用Chrome的本机节流配置文件“慢3G”进行测试。 通过Slow 3G，我们以前捆绑的输出时间现在反映了许多用户的连接现实：
 
-![現實世界的套裝](../assets/performance/images/magentoBundlingRealWorld.png)
+![现实世界的捆绑](../assets/performance/images/magentoBundlingRealWorld.png)
 
-在3G連線速度緩慢的情況下，載入全新首頁的所有套件組合大約需要44秒 [!DNL Commerce] 安裝。
+在3G连接速度较慢的情况下，大约需要44秒才能加载干净的主页的所有捆绑包 [!DNL Commerce] 安装。
 
-將套件組合合併至單一檔案時，亦是如此。 使用者仍可等待約42秒才開始載入頁面，如下所示：
+将捆绑包合并到单个文件中时也是如此。 用户仍然可以等待约42秒的时间进行初始页面加载，如下所示：
 
-![真實世界合併](../assets/performance/images/magentoMergingRealWorld.png)
+![现实世界中的融合](../assets/performance/images/magentoMergingRealWorld.png)
 
-透過更進階的方法 [!DNL JavaScript] 套裝，我們可以縮短載入時間。
+使用更高级的方法实现 [!DNL JavaScript] 捆绑时，我们可以缩短这些加载时间。
 
-## 進階套裝
+## 高级捆绑
 
-記住，目標 [!DNL JavaScript] 套件組合可針對瀏覽器中載入的每個頁面，減少請求資產的數量和大小。 為此，我們希望建立套件組合，讓商店中的每個頁面只需要下載通用的套件組合，以及每個存取頁面的頁面專屬套件組合。
+请记住，目标 [!DNL JavaScript] 捆绑是为了减少浏览器中加载的每个页面所请求的资产的数量和大小。 为此，我们希望构建捆绑包，以便商店中的每个页面只需要下载一个通用捆绑包和一个特定于页面的捆绑包，即可访问每个页面。
 
-達成此目標的一種方式是依頁面型別定義您的組合。 您可以分類 [!DNL Commerce]的頁面分為數種頁面型別，包括類別、產品、CMS、客戶、購物車和結帳。 分類為其中一種頁面型別的每個頁面都有一組不同的RequireJS模組相依性。 當您依頁面型別來捆綁RequireJS模組時，您最後只會看到少數幾個捆綁包，這些捆綁包涵蓋存放區中任何頁面的相依性。
+实现此目标的一种方法是按页面类型定义包。 您可以分类 [!DNL Commerce]的页面分为多种页面类型，包括类别、产品、CMS、客户、购物车和结账。 分类为其中一种页面类型的每个页面都有一组不同的RequireJS模块依赖项。 当按页面类型捆绑您的RequireJS模块时，最终将只有少数捆绑包覆盖存储中任何页面的依赖项。
 
-例如，您最終可能會得到一個用於所有頁面通用的相依性的套件、一個用於僅CMS頁面的套件、一個用於僅目錄頁面的套件、另一個用於僅搜尋頁面的套件和一個「出庫」頁面的套件。
+例如，您最终可能会得到一个捆绑包，用于所有页面通用的依赖项，一个捆绑包用于仅CMS页面，一个捆绑包用于仅目录页面，另一个捆绑包用于仅搜索页面，以及一个捆绑包用于签出页面。
 
-您也可以依用途建立套件組合：針對常見功能、產品相關功能、送貨功能、結帳功能、稅金及表單驗證。 如何定義您的套件組合取決於您和商店的結構。 您可能會發現某些套件組合策略會比其他策略更有效。
+您还可以按用途创建包：用于常见功能、产品相关功能、配送功能、结帐功能、税费和表单验证。 如何定义捆绑包取决于您以及商店的结构。 您可能会发现某些捆绑策略将比其他策略效果更好。
 
-乾淨 [!DNL Commerce] 安裝可讓您透過按頁面型別分割套件組合來達到足夠的良好效能，但某些自訂可能需要更深入的分析和其他資產分佈。
+干净 [!DNL Commerce] 安装可通过按页面类型拆分捆绑包来实现足够的良好性能，但某些自定义可能需要更深入的分析和其他资产分发。
 
-### 必要工具
+### 所需工具
 
-下列步驟需要您安裝並熟悉下列工具：
+以下步骤需要您安装并熟悉以下工具：
 
-- [nodejs](https://nodejs.org/en/download/)
+- [节点集](https://nodejs.org/en/download/)
 - [r.js](http://requirejs.org/docs/optimization.html#download)
-- [[!DNL PhantomJS]](https://phantomjs.org/) （選擇性）
+- [[!DNL PhantomJS]](https://phantomjs.org/) （可选）
 
-### 程式碼範例
+### 示例代码
 
-本文中使用的範常式式碼完整版本可在此處取得：
+可在此处找到本文中使用的示例代码的完整版本：
 
 - [build.js](../assets/performance/code-samples/build.js)
 - [deps.js](../assets/performance/code-samples/deps.js)
 - [deps-map.sh](../assets/performance/code-samples/deps-map.sh.txt)
 
-### 第1部分：建立套件組合設定
+### 第1部分：创建捆绑配置
 
-#### 1\. 新增build.js檔案
+#### 1\. 添加build.js文件
 
-建立 `build.js` 中的檔案 [!DNL Commerce] 根目錄。 此檔案將包含您套件組合的完整組建設定。
+创建 `build.js` 中的文件 [!DNL Commerce] 根目录。 此文件将包含捆绑包的整个生成配置。
 
 ```javascript
 ({
@@ -111,11 +111,11 @@ php -f bin/magento config:set dev/js/merge_files 1
 })
 ```
 
-稍後，我們將變更 `optimize:` 從_設定 `none` 至 `uglify2` 以縮小組合輸出。 但就目前而言，在開發期間，您可以將其保留為 `none` 以確保更快的建置。
+稍后，我们将更改 `optimize:` 从_设置 `none` 到 `uglify2` 以缩小捆绑包输出。 但现在，在开发过程中，您可以将其保留为 `none` 以确保更快的构建。
 
-#### 2\. 新增RequireJS相依性、墊片、路徑和對應
+#### 2\. 添加RequireJS依赖项、垫片、路径和映射
 
-新增下列RequireJS組建設定節點， `deps`， `shim`， `paths`、和 `map`，至您的建置檔案：
+添加以下RequireJS内部版本配置节点， `deps`， `shim`， `paths`、和 `map`，到您的构建文件：
 
 ```javascript
 ({
@@ -129,15 +129,15 @@ php -f bin/magento config:set dev/js/merge_files 1
 })
 ```
 
-#### 3\. 彙總requirejs-config.js例項值
+#### 3\. 聚合requirejs-config.js实例值
 
-在此步驟中，您需要彙總所有多個 `deps`， `shim`， `paths`、和 `map` 來自您商店的設定節點 `requirejs-config.js` 檔案放入中的對應節點 `build.js` 檔案。 若要這麼做，您可以開啟 **[!UICONTROL Network]** 在瀏覽器的「開發人員工具」面板中按Tab鍵，然後導覽至商店中的任何頁面，例如首頁。 在「網路」標籤中，您會看到商店的執行個體 `requirejs-config.js` 頂部附近的檔案，在這裡反白顯示：
+在此步骤中，您将需要聚合所有多个 `deps`， `shim`， `paths`、和 `map` 来自存储中的配置节点 `requirejs-config.js` 文件放入中的相应节点 `build.js` 文件。 为此，您可以打开 **[!UICONTROL Network]** 在浏览器的“开发人员工具”面板中按Tab键，然后导航到商店中的任何页面，例如主页。 在“网络”选项卡中，您将看到您商店的 `requirejs-config.js` 文件顶部附近，在此处突出显示：
 
-![RequireJS設定](../assets/performance/images/RequireJSConfig.png)
+![需要JS配置](../assets/performance/images/RequireJSConfig.png)
 
-在此檔案中，您會找到每個設定節點的多個專案(`deps`， `shim`， `paths`， `map`)。 您需要將這些多個節點值彙總到您的build.js檔案的單一設定節點中。 例如，若您的商店在 `requirejs-config.js` 執行個體有15個獨立專案 `map` 節點，您需要將所有15個節點的專案合併為單一 `map` 節點於 `build.js` 檔案。 同樣的情況也適用於 `deps`， `shim`、和 `paths` 節點。 如果沒有指令碼來自動化此程式，則可能需要一段時間。
+在此文件中，您将找到每个配置节点的多个条目(`deps`， `shim`， `paths`， `map`)。 您需要将这些多个节点值聚合到build.js文件的单个配置节点中。 例如，如果您的商店 `requirejs-config.js` 实例具有15个单独的条目 `map` 节点中，您需要将所有15个节点的条目合并到单个节点中 `map` 节点的位置 `build.js` 文件。 同样的情况也适用于 `deps`， `shim`、和 `paths` 节点。 如果没有脚本来自动化此过程，则可能需要一些时间。
 
-您需要變更路徑 `mage/requirejs/text` 至 `requirejs/text` 在 `paths` 設定節點如下：
+您需要更改路径 `mage/requirejs/text` 到 `requirejs/text` 在 `paths` 配置节点如下所示：
 
 ```javascript
 ({
@@ -149,9 +149,9 @@ php -f bin/magento config:set dev/js/merge_files 1
 })
 ```
 
-#### 4\. 新增模組節點
+#### 4\. 添加模块节点
 
-在 `build.js` 檔案，新增模組[] 陣列，作為您稍後為店面定義的套件組合的預留位置。
+在 `build.js` 文件，添加模块[] 数组，作为您稍后为店面定义的捆绑包的占位符。
 
 ```javascript
 ({
@@ -167,16 +167,16 @@ php -f bin/magento config:set dev/js/merge_files 1
 })
 ```
 
-#### 5\. 擷取RequireJS相依性
+#### 5\. 检索RequireJS依赖项
 
-您可以擷取所有 [!DNL RequireJS] 使用下列方式，從存放區的頁面型別取得模組相依性：
+您可以检索所有 [!DNL RequireJS] 使用以下方式从存储区的页面类型中依赖模块：
 
-1. [!DNL PhantomJS] 從命令列(假設您有 [!DNL PhantomJS] 已安裝)。
-1. 瀏覽器主控台中的RequireJS命令。
+1. [!DNL PhantomJS] 从命令行(假设您拥有 [!DNL PhantomJS] 已安装)。
+1. 在浏览器的控制台中需要JS命令。
 
 #### 使用 [!DNL PhantomJS]：
 
-在 [!DNL Commerce] 根目錄，建立名為的新檔案 `deps.js` 並複製下列程式碼。 此程式碼使用[！DNL [!DNL PhantomJS]]開啟頁面並等待瀏覽器載入所有頁面資產。 然後輸出所有 [!DNL RequireJS] 指定頁面的相依性。
+在 [!DNL Commerce] 根目录，创建一个名为 `deps.js` 并复制下面的代码。 此代码使用[！DNL [!DNL PhantomJS]]打开一个页面，然后等待浏览器加载所有页面资产。 然后，输出所有 [!DNL RequireJS] 指定页面的依赖关系。
 
 ```javascript
 "use strict";
@@ -204,13 +204,13 @@ if (system.args.length === 1) {
 }
 ```
 
-開啟內的終端機 [!DNL Commerce] 根目錄，並對存放區中代表特定頁面型別的每個頁面執行指令碼：
+打开内部的终端 [!DNL Commerce] 根目录并对存储中表示特定页面类型的每个页面运行脚本：
 
 <pre>
-phantomjs deps.js <i>url-to-specific-page</i> &gt; <i>text-file-representing-pagetype-dependencies</i>
+phantomjs deps.js <i>URL到特定页面</i> &gt; <i>text-file-representing-pagetype-dependencies</i>
 </pre>
 
-例如，以下是Luma主題範例商店中的四個頁面，代表我們將用來建立四個組合（首頁、類別、產品、購物車）的四個頁面型別：
+例如，下面是Luma主题示例存储中的四个页面，这些页面表示我们将用于创建四个包（主页、类别、产品、购物车）的四种页面类型：
 
 ```terminal
 phantomjs deps.js http://m2.loc/ > bundle/homepage.txt
@@ -220,19 +220,19 @@ phantomjs deps.js http://m2.loc/checkout/cart/?SID=m2tjdt7ipvep9g0h8pmsgie975 > 
 ..............
 ```
 
-#### 若要使用瀏覽器主控台：
+#### 要使用浏览器控制台，请执行以下操作：
 
-如果您不想使用 [!DNL PhantomJS]時，您可以從瀏覽器的主控台執行下列命令，同時檢視店面中的每個頁面型別：
+如果您不想使用 [!DNL PhantomJS]时，您可以从浏览器的控制台运行以下命令，同时查看店面中的每种页面类型：
 
 ```shell
 Object.keys(window.require.s.contexts._.defined)
 ```
 
-此命令(用於 [!DNL PhantomJS] script)建立相同的 [!DNL RequireJS] 相依性並在瀏覽器的主控台中顯示它們。 此方法的缺點在於您必須建立自己的套件/頁面型別文字檔案。
+此命令(用于 [!DNL PhantomJS] script)创建相同的列表 [!DNL RequireJS] 依赖关系并在浏览器的控制台中显示它们。 此方法的缺点是，您必须创建自己的包/页面类型文本文件。
 
-#### 6\. 格式化並篩選輸出
+#### 6\. 设置输出格式并筛选
 
-合併之後 [!DNL RequireJS] 相依性轉換為頁面型別文字檔案，您可在每個頁面型別相依性檔案上使用下列指令，以換行來取代檔案中的逗號：
+合并之后 [!DNL RequireJS] 将依赖关系转换为页面类型文本文件，可以在每个页面类型依赖关系文件上使用以下命令，将文件中的逗号替换为换行符：
 
 ```terminal
 sed -i -e $'s/,/\\\n/g' bundle/category.txt
@@ -241,7 +241,7 @@ sed -i -e $'s/,/\\\n/g' bundle/product.txt
 ....
 ```
 
-您也應該移除每個檔案的所有mixin，因為mixin重複相依性。 對每個相依性檔案使用以下命令：
+您还应该删除每个文件的所有mixin，因为mixin重复依赖关系。 对每个依赖项文件使用以下命令：
 
 ```terminal
 sed -i -e 's/mixins\!.*$//g' bundle/homepage.txt
@@ -250,17 +250,17 @@ sed -i -e 's/mixins\!.*$//g' bundle/product.txt
 ...
 ```
 
-#### 7\. 識別唯一和常見的組合
+#### 7\. 确定独特和常见的捆绑包
 
-目標是建立下列專案的通用組合： [!DNL JavaScript] 所有頁面所需的檔案。 如此一來，瀏覽器只需要載入通用套件組合以及一個或多個特定頁面型別。
+目标是创建一组通用的 [!DNL JavaScript] 所有页面所需的文件。 这样，浏览器只需加载通用捆绑包以及一个或多个特定页面类型。
 
-在中開啟終端機 [!DNL Commerce] 根目錄，並使用下列指令來驗證您是否有相依性可以分割成個別的組合：
+在中打开终端 [!DNL Commerce] 根目录，并使用以下命令验证是否具有可以拆分为单独捆绑的依赖项：
 
 ```bash
 sort bundle/*.txt |uniq -c |sort -n
 ```
 
-此命令合併和排序在 `bundle/*.txt` 檔案。  輸出也會顯示包含每個相依性的檔案數：
+此命令合并和排序在 `bundle/*.txt` 文件。  输出还显示包含每个依赖项的文件数：
 
 ```terminal
 1 buildTools,
@@ -275,19 +275,19 @@ sort bundle/*.txt |uniq -c |sort -n
 ...
 ```
 
-此輸出會顯示 `buildTools` 只在bundle/*.txt檔案的其中一個檔案中有相依性。 此 `jquery/jquery.metadata` 相依性位於兩(2)個檔案中，且 `es6-collections` 位於三(3)個檔案中。
+此输出显示 `buildTools` 仅在bundle/*.txt文件中的一个文件中为依赖项。 此 `jquery/jquery.metadata` 依赖关系位于两(2)个文件中，并且 `es6-collections` 在三(3)个文件中。
 
-我們的輸出僅顯示三種頁面型別（首頁、類別和產品），這會告訴我們：
+我们的输出仅显示三种页面类型（主页、类别和产品），它们告诉我们：
 
-- 只有一種頁面型別有三種相依性（由數字1顯示）。
-- 兩種頁面型別上還有三種相依性（如數字2所示）。
-- 最後三個相依性對於我們所有的三種頁面型別都是共同的（由數字3顯示）。
+- 三个依赖项仅对一种页面类型具有唯一性（由数字1显示）。
+- 两种页面类型（如数字2所示）上存在另外三种依赖关系。
+- 最后三个依赖项对于我们所有的三种页面类型都是通用的（如数字3所示）。
 
-這告訴我們，一旦我們知道哪些頁面型別需要哪些相依性，就可以將相依性分割成不同的套件，藉此提高市集的頁面載入速度。
+这告诉我们，一旦我们知道哪些页面类型需要哪些依赖项，就可以将依赖项拆分为不同的捆绑包，从而有可能提高商店的页面加载速度。
 
-#### 8\. 建立相依性散發檔案
+#### 8\. 创建依赖项分发文件
 
-若要瞭解哪些頁面型別需要哪些相依性，請在 [!DNL Commerce] 呼叫的根目錄 `deps-map.sh` 並複製下列程式碼中的：
+要了解哪些页面类型需要哪些依赖项，请在 [!DNL Commerce] 已调用根目录 `deps-map.sh` 并复制以下代码：
 
 ```shell
 awk 'END {
@@ -307,15 +307,15 @@ awk 'END {
 }' bundle/*.txt
 ```
 
-您也可以在此找到指令碼 [https://www.unix.com/shell-programming-and-scripting/140390-get-common-lines-multiple-files.html](https://www.unix.com/shell-programming-and-scripting/140390-get-common-lines-multiple-files.html)
+您还可以在中找到脚本 [https://www.unix.com/shell-programming-and-scripting/140390-get-common-lines-multiple-files.html](https://www.unix.com/shell-programming-and-scripting/140390-get-common-lines-multiple-files.html)
 
-在中開啟終端機 [!DNL Commerce] 根目錄並執行檔案：
+在中打开终端 [!DNL Commerce] 根目录并运行文件：
 
 ```bash
 bash deps-map.sh
 ```
 
-此指令碼的輸出套用至我們的三個範例頁面型別，看起來應該像這樣（但時間更長）：
+此脚本的输出应用于我们的三个示例页面类型，应当类似于以下内容（但时间更长）：
 
 ```terminal
 bundle/product.txt   -->   buildTools,
@@ -331,19 +331,19 @@ bundle/category.txt/bundle/homepage.txt/bundle/product.txt --> jquery/ui,
 bundle/category.txt/bundle/homepage.txt/bundle/product.txt --> knockoutjs/knockout,
 ```
 
-這些資訊足以建置套件組合設定。
+此信息足以构建捆绑包配置。
 
-#### 9\. 在您的build.js檔案中建立套件組合
+#### 9\. 在build.js文件中创建包
 
-開啟 `build.js` 設定檔案並將您的套件組合新增至 `modules` 節點。 每個束都應該定義以下屬性：
+打开 `build.js` 配置文件并将您的捆绑包添加到 `modules` 节点。 每个包应定义以下属性：
 
-- `name` — 束的名稱。 例如，名稱 `bundles/cart` 產生 `cart.js` 中的組合 `bundles` 子目錄。
+- `name` — 包的名称。 例如，名称 `bundles/cart` 生成 `cart.js` 中的捆绑包 `bundles` 子目录。
 
-- `create` — 建立套件組合的布林值標幟(值： `true` 或 `false`)。
+- `create` — 用于创建捆绑包的布尔标记(值： `true` 或 `false`)。
 
-- `include` — 包含作為頁面相依性的一組資產（字串）。 RequireJS會追蹤所有相依性，並將它們包含在套件中（除非排除）。
+- `include` — 作为页面的依赖项包含的资产（字符串）数组。 RequireJS跟踪所有依赖项并将它们包含在包中，除非将其排除。
 
-- `exclude` — 要從套件組合中排除的套件組合或資產陣列。
+- `exclude` — 要从捆绑包中排除的捆绑包或资源的数组。
 
 ```javascript
 {
@@ -366,40 +366,40 @@ bundle/category.txt/bundle/homepage.txt/bundle/product.txt --> knockoutjs/knocko
 }
 ```
 
-此範例會重複使用 `mage/bootstrap` 和 `requirejs/require` 資產，對於必須同步載入的最重要元件和元件設定較高的優先順序。 呈現的套件組合為：
+此示例重用 `mage/bootstrap` 和 `requirejs/require` 资产，对其必须同步加载的最重要的组件和组件赋予更高的优先级。 存在的捆绑包包括：
 
-- `requirejs/require` — 唯一同步載入的組合
-- `mage/bootstrap` — 具有UI元件的啟動程式套件
-- `bundles/default` — 所有頁面都需要預設套件組合
-- `bundles/cart` — 購物車頁面所需的套件組合
-- `bundles/shipping` — 購物車和結帳頁面的通用套件組合（假設從未直接開啟結帳，如果先前已開啟購物車頁面且已載入送貨套件組合，則結帳頁面載入速度會更快）
-- `bundles/checkout` — 結帳所需的一切
-- `bundles/catalog` — 產品和類別頁面的一切
+- `requirejs/require` — 唯一同步加载的捆绑包
+- `mage/bootstrap` — 带UI组件的引导程序捆绑包
+- `bundles/default` — 所有页面都需要默认捆绑包
+- `bundles/cart` — 购物车页面所需的捆绑包
+- `bundles/shipping` — 购物车和结帐页面的通用捆绑包（假设从未直接打开结帐，则如果以前打开了购物车页面并且已加载配送捆绑包，则结帐页面的加载速度会更快）
+- `bundles/checkout` — 结账所需的一切
+- `bundles/catalog` — 产品和类别页面所需的一切
 
-### 第2部分：產生組合
+### 第2部分：生成包
 
-以下步驟說明提高效率的基本程式 [!DNL Commerce] 套件組合。 您可以透過任何所需方式自動化此程式，但您仍需使用 `nodejs` 和 `r.js` 以實際產生您的組合。 如果您的主題有 [!DNL JavaScript] — 相關的自訂專案且無法重複使用 `build.js` 檔案，您可能需要建立多個 `build.js` 每個主題的設定。
+以下步骤描述了提高效率的基本过程 [!DNL Commerce] 捆绑包。 您可以按照所需的任何方式自动执行此过程，但您仍需要使用 `nodejs` 和 `r.js` 以实际生成您的包。 如果你的主题有 [!DNL JavaScript] — 相关的自定义项，无法重复使用 `build.js` 文件，您可能需要创建多个 `build.js` 每个主题的配置。
 
-#### 1.產生靜態存放區網站
+#### 1.生成静态存储站点
 
-在產生套件組合之前，請執行靜態部署命令：
+在生成捆绑包之前，请运行静态部署命令：
 
 ```bash
 php -f bin/magento setup:static-content:deploy -f -a frontend
 ```
 
-此命令會為您已設定的每個主題和區域設定產生靜態存放區部署。 例如，如果您使用Luma主題和含有英文及法文地區設定的自訂主題，則會產生四個靜態部署：
+此命令为您设置的每个主题和区域设置生成静态存储部署。 例如，如果您使用Luma主题和具有英语和法语区域设置的自定义主题，则会生成四个静态部署：
 
 - ...luma/en_US
 - ...luma/fr_FR
 - ...custom/en_US
 - ...custom/fr_FR
 
-若要產生所有商店主題和區域設定的組合，請對每個商店主題和區域設定重複下列步驟。
+要生成所有商店主题和区域设置的包，请对每个商店主题和区域设置重复以下步骤。
 
-#### 2.將靜態存放區內容移至暫存目錄
+#### 2.将静态存储内容移动到临时目录
 
-首先，您必須將靜態內容從目標目錄移至某個暫存目錄，因為RequireJS會取代目標目錄中的所有內容。
+首先，需要将静态内容从目标目录移动到某个临时目录，因为RequireJS会替换目标目录中的所有内容。
 
 ```bash
 mv pub/static/frontend/Magento/{theme}/{locale} pub/static/frontend/Magento/{theme}/{locale}_tmp
@@ -411,17 +411,17 @@ mv pub/static/frontend/Magento/{theme}/{locale} pub/static/frontend/Magento/{the
 mv pub/static/frontend/Magento/luma/en_US pub/static/frontend/Magento/luma/en_US_tmp
 ```
 
-#### 3.執行r.js最佳化程式
+#### 3.运行r.js优化器
 
-接著在「 」上執行r.js最佳化程式 `build.js` 檔案來源 [!DNL Commerce]的根目錄。 所有目錄和檔案的路徑均相對於工作目錄。
+然后，在上运行r.js优化器 `build.js` 文件来源 [!DNL Commerce]的根目录。 所有目录和文件的路径均相对于工作目录。
 
 ```bash
 r.js -o build.js baseUrl=pub/static/frontend/Magento/luma/en_US_tmp dir=pub/static/frontend/Magento/luma/en_US
 ```
 
-這個指令會在以下專案產生組合： `bundles` 目標目錄的子目錄，在此例中會產生 `pub/static/frontend/Magento/luma/en_US/bundles`.
+此命令在 `bundles` 目标目录的子目录，在本例中会导致 `pub/static/frontend/Magento/luma/en_US/bundles`.
 
-列出新套件目錄的內容看起來可能像這樣：
+列出新包目录的内容可能如下所示：
 
 ```bash
 ll pub/static/frontend/Magento/luma/en_US/bundles
@@ -438,9 +438,9 @@ drwxr-xr-x 70 root root    4096 Mar 28 11:24 ../
 -rw-r--r--  1 root root   74233 Mar 28 11:24 shipping.js
 ```
 
-#### 4.設定RequireJS使用套件組合
+#### 4.配置RequireJS以使用包
 
-若要讓RequireJS使用您的套件組合，請新增 `onModuleBundleComplete` 回呼晚於 `modules` 中的節點 `build.js` 檔案：
+要让RequireJS使用您的包，请添加 `onModuleBundleComplete` 回调晚于 `modules` 中的节点 `build.js` 文件：
 
 ```javascript
 [
@@ -474,15 +474,15 @@ require.config({});
 }
 ```
 
-#### 5.重新執行部署命令
+#### 5.重新运行部署命令
 
-執行以下命令以部署：
+运行以下命令进行部署：
 
 ```bash
 r.js -o app/design/frontend/Magento/luma/build.js baseUrl=pub/static/frontend/Magento/luma/en_US_tmp dir=pub/static/frontend/Magento/luma/en_US
 ```
 
-開啟 `requirejs-config.js` 在 `pub/static/frontend/Magento/luma/en_US` 目錄，以驗證RequireJS是否已附加具有套件組合設定呼叫的檔案：
+打开 `requirejs-config.js` 在 `pub/static/frontend/Magento/luma/en_US` 目录，以验证RequireJS是否将该文件附加到捆绑配置调用：
 
 ```javascript
 require.config({
@@ -495,21 +495,21 @@ require.config({
 
 >[!NOTE]
 >
->設定套件組合時，請務必將 `requirejs.config()` 呼叫的執行順序，因為呼叫是以其出現的順序執行。
+>配置捆绑包时，请确保将 `requirejs.config()` 调用，因为调用是按其显示的顺序执行的。
 
-#### 6.測試結果
+#### 6.测试结果
 
-頁面載入後，請注意瀏覽器載入了不同的相依性和套件組合。 例如，以下是「慢3G」設定檔的結果：
+加载页面后，请注意浏览器加载了不同的依赖项和捆绑包。 例如，以下是“慢3G”配置文件的结果：
 
-![快兩倍](../assets/performance/images/TwiceAsFast.png)
+![快两倍](../assets/performance/images/TwiceAsFast.png)
 
-空白首頁的頁面載入時間現在比使用原生快一倍 [!DNL Commerce] 套裝。 但是我們可以做得更好。
+现在，空主页的页面加载时间比使用本机页面的加载时间快一倍 [!DNL Commerce] 捆绑销售。 但是我们可以做得更好。
 
-#### 7.最佳化組合
+#### 7.优化包
 
-即使gzipped， [!DNL JavaScript] 檔案仍然很大。 使用RequireJS來縮制這些引數，後者會使用精簡符號來縮制 [!DNL JavaScript] 以取得良好的結果。
+即使压缩了， [!DNL JavaScript] 文件仍然很大。 使用RequireJS来缩小它们，后者使用修饰符进行缩小 [!DNL JavaScript] 以取得良好的效果。
 
-若要在中啟用最佳化程式 `build.js` 檔案，新增 `uglify2` 作為optimize屬性的值，在 `build.js` 檔案：
+要在中启用优化器，请执行以下操作 `build.js` 文件，添加 `uglify2` 作为optimize属性的值，该属性位于 `build.js` 文件：
 
 ```javascript
 ({
@@ -518,7 +518,7 @@ require.config({
 })
 ```
 
-結果可能相當可觀：
+结果可能非常显着：
 ![快三倍](../assets/performance/images/ThreeTimesFaster.png)
 
-載入時間現在比原生快三倍 [!DNL Commerce] 套裝。
+现在，加载时间比本机快三倍 [!DNL Commerce] 捆绑销售。

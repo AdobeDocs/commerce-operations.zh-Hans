@@ -1,6 +1,6 @@
 ---
-title: 將Redis用於工作階段儲存
-description: 瞭解如何為工作階段儲存設定Redis。
+title: 将Redis用于会话存储
+description: 了解如何为会话存储配置Redis。
 feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
@@ -10,16 +10,16 @@ ht-degree: 1%
 
 ---
 
-# 將Redis用於工作階段儲存
+# 将Redis用于会话存储
 
 >[!IMPORTANT]
 >
->您必須 [安裝Redis](config-redis.md#install-redis) 然後再繼續。
+>您必须 [安装Redis](config-redis.md#install-redis) 然后再继续。
 
 
-Commerce現在提供命令列選項來設定Redis工作階段存放區。 在舊版中，您已編輯 `<Commerce install dir>app/etc/env.php` 檔案。 命令列會提供驗證，且是建議的設定方法，但您仍可編輯 `env.php` 檔案。
+Commerce现在提供命令行选项来配置Redis会话存储。 在以前的版本中，您编辑了 `<Commerce install dir>app/etc/env.php` 文件。 命令行提供验证，是推荐的配置方法，但您仍可以编辑 `env.php` 文件。
 
-執行 `setup:config:set` 命令並指定Redis特定引數。
+运行 `setup:config:set` 命令并指定特定于Redis的参数。
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
@@ -27,46 +27,46 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 
 位置
 
-`--session-save=redis` 啟用Redis工作階段儲存。 如果已啟用此功能，請省略此引數。
+`--session-save=redis` 启用Redis会话存储。 如果已启用此功能，请忽略此参数。
 
-`--session-save-redis-<parameter_name>=<parameter_value>` 是設定工作階段存放區的引數/值組清單：
+`--session-save-redis-<parameter_name>=<parameter_value>` 是配置会话存储的参数/值对列表：
 
-| 命令列引數 | 引數名稱 | 含義 | 預設值 |
+| 命令行参数 | 参数名称 | 含义 | 默认值 |
 |--- |--- |--- |--- |
-| session-save-redis-host | 主機 | 完整的主機名稱、IP位址或絕對路徑（如果使用UNIX通訊端）。 | localhost |
-| session-save-redis-port | 連線埠 | Redis伺服器接聽連線埠。 | 6379 |
-| session-save-redis-password | 密碼 | 如果Redis伺服器需要驗證，請指定密碼。 | 空白 |
-| session-save-redis-timeout | 逾時 | 連線逾時（秒）。 | 2.5 |
-| session-save-redis-persistent-id | persistent_identifier | 啟用持續連線的唯一字串（例如sess-db0）。<br>[phpredis和php-fpm的已知問題](https://github.com/phpredis/phpredis/issues/70). |
-| session-save-redis-db | 資料庫 | 唯一的Redis資料庫編號，建議用來防止資料遺失。<br><br>**重要**：如果您將Redis用於多種型別的快取，則資料庫編號必須不同。 建議您將預設快取資料庫編號指派為0，將分頁快取資料庫編號指派為1，並將工作階段儲存資料庫編號指派為2。 | 0 |
-| session-save-redis-compression-threshold | compression_threshold | 設為0可停用壓縮(建議在 `suhosin.session.encrypt = On`)。<br>[字串超過64 KB的已知問題](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
-| session-save-redis-compression-lib | compression_library | 選項： gzip、lzf、lz4或snappy。 | gzip |
-| session-save-redis-log-level | log_level | 設定為下列任一專案，依從最詳細到最詳細順序列出：<ul><li>0 （緊急：只有最嚴重的錯誤）<li>1 （警示：需要立即動作）<li>2 （嚴重：應用程式元件無法使用）<li>3 （錯誤：執行階段錯誤，非嚴重，但必須監控）<li>4 （警告：其他資訊，建議使用）<li>5 （注意：正常但重要的條件）<li>6 （資訊：資訊訊息）<li>7 （除錯：僅供開發或測試使用的最多資訊）</ul> | 1 |
-| session-save-redis-max-concurrency | max_concurrency | 可等待鎖定一個工作階段的最大處理序數目。 對於大型生產叢集，請將此項設定為至少PHP流程數量的10%。 | 6 |
-| session-save-redis-break-after-frontend | break_after_frontend | 嘗試解除前端（亦即storefront）工作階段鎖定之前的等待秒數。 | 5 |
-| session-save-redis-break-after-adminhtml | break_after_adminhtml | 嘗試解除對Admin HTML （即管理員）工作階段的鎖定前等待的秒數。 | 30 |
-| session-save-redis-first-lifetime | first_lifetime | 非機器人在第一次寫入時的工作階段期限（以秒為單位），或使用0來停用。 | 600 |
-| session-save-redis-bot-first-lifetime | bot_first_lifetime | 機器人第一次寫入工作階段的期限（以秒為單位），或使用0來停用。 | 60 |
-| session-save-redis-bot-lifetime | bot_lifetime | 機器人後續寫入作業的工作階段期限（以秒為單位），或使用0加以停用。 | 7200 |
-| session-save-redis-disable-locking | disable_locking | 完全停用工作階段鎖定。 | 0 （假） |
-| session-save-redis-min-lifetime | min_lifetime | 工作階段存留期下限（以秒為單位）。 | 60 |
-| session-save-redis-max-lifetime | max_lifetime | 工作階段期限上限（以秒為單位）。 | 2592000 （720小時） |
-| session-save-redis-sentinel-master | sentinel_master | Redis Sentinel主名稱 | 空白 |
-| session-save-redis-sentinel-servers | sentinel_servers | Redis Sentinel伺服器清單（以逗號分隔） | 空白 |
-| session-save-redis-sentinel-verify-master | sentinel_verify_master | 驗證Redis Sentinel主要狀態旗標 | 0 （假） |
-| session-save-redis-sentinel-connect-retries | sentinel_connect_retries | Sentinels的連線重試 | 5 |
+| session-save-redis-host | 主机 | 完全限定的主机名、IP地址或绝对路径（如果使用UNIX套接字）。 | localhost |
+| session-save-redis-port | 端口 | Redis服务器侦听端口。 | 6379 |
+| session-save-redis-password | 密码 | 如果Redis服务器要求身份验证，请指定密码。 | 空 |
+| session-save-redis-timeout | timeout | 连接超时（秒）。 | 2.5 |
+| session-save-redis-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70). |
+| session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用它来防止数据丢失。<br><br>**重要**：如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
+| session-save-redis-compression-threshold | compress_threshold | 设置为0可禁用压缩(建议在 `suhosin.session.encrypt = On`)。<br>[超过64 KB的字符串的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
+| session-save-redis-compression-lib | compression_library | 选项：gzip、lzf、lz4或snappy。 | gzip |
+| session-save-redis-log-level | log_level | 设置为以下任一项，按从少到多的顺序列出：<ul><li>0（紧急：仅最严重的错误）<li>1（警报：需要立即采取措施）<li>2（严重：应用程序组件不可用）<li>3 （错误：运行时错误，不严重，但必须监控）<li>4（警告：其他信息，建议）<li>5（注意：正常但重要的情况）<li>6（信息：信息性消息）<li>7（调试：仅供开发或测试使用的信息最多）</ul> | 1 |
+| session-save-redis-max-concurrency | max_concurrency | 可等待一个会话锁定的最大进程数。 对于大型生产群集，请将此参数至少设置为PHP进程数的10%。 | 6 |
+| session-save-redis-break-after-frontend | break_after_frontend | 在尝试解除前端（即storefront）会话锁定之前等待的秒数。 | 5 |
+| session-save-redis-break-after-adminhtml | break_after_adminhtml | 尝试解除对Admin HTML（即管理员）会话的锁定之前等待的秒数。 | 30 |
+| session-save-redis-first-lifetime | first_lifetime | 非机器人首次写入时会话的生命周期（以秒为单位），或使用0禁用。 | 600 |
+| session-save-redis-bot-first-lifetime | bot_first_lifetime | 机器人首次写入时会话的生命周期（以秒为单位），或使用0禁用。 | 60 |
+| session-save-redis-bot-lifetime | bot_lifetime | 机器人后续写入会话的生命周期（以秒为单位），或使用0禁用。 | 7200 |
+| session-save-redis-disable-locking | disable_locking | 完全禁用会话锁定。 | 0（假） |
+| session-save-redis-min-lifetime | min_lifetime | 最短会话生命周期（以秒为单位）。 | 60 |
+| session-save-redis-max-lifetime | max_lifetime | 最长会话生命周期（以秒为单位）。 | 2592000 （720小时） |
+| session-save-redis-sentinel-主控 | sentinel_主控 | Redis Sentinel主控名称 | 空 |
+| session-save-redis-sentinel-servers | sentinel_servers | Redis Sentinel服务器列表，逗号分隔 | 空 |
+| session-save-redis-sentinel-verify-主控 | sentinel_verify_主控 | 验证Redis Sentinel主控状态标志 | 0（假） |
+| session-save-redis-sentinel-connect-retries | sentinel_connect_retries | Sentinels的连接重试 | 5 |
 
-## 範例
+## 示例
 
-下列範例會將Redis設為工作階段資料存放區，並將主機設為 `127.0.0.1`，將記錄層級設為4，並將資料庫編號設為2。 所有其他引數都會設定為預設值。
+以下示例将Redis设置为会话数据存储，将主机设置为 `127.0.0.1`，将日志级别设置为4 ，将数据库编号设置为2。 所有其他参数均设置为默认值。
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
 ```
 
-### 結果
+### 结果
 
-Commerce會將類似下列的行新增至 `<magento_root>app/etc/env.php`：
+Commerce会将类似于以下内容的行添加到 `<magento_root>app/etc/env.php`：
 
 ```php
     'session' =>
@@ -98,19 +98,19 @@ Commerce會將類似下列的行新增至 `<magento_root>app/etc/env.php`：
 
 >[!INFO]
 >
->工作階段記錄的TTL會使用Cookie期限的值，此值是在Admin中設定。 如果「Cookie期限」設為0 （預設為3600），則Redis工作階段會在min_lifetime中指定的秒數內到期（預設為60）。 這種差異是因為Redis和工作階段Cookie解讀期限值0的方式有所差異。 如果不需要該行為，請增加min_lifetime的值。
+>会话记录的TTL使用管理员中配置的Cookie生命周期值。 如果Cookie Lifetime设置为0（默认值为3600），则Redis会话将在min_lifetime中指定的秒数内过期（默认值为60）。 此差异是由于Redis和会话Cookie对生命周期值0的解释方式不同造成的。 如果不希望出现该行为，请增加min_lifetime的值。
 
-## 驗證Redis連線
+## 验证Redis连接
 
-若要確認Redis與Commerce是否共同運作，請登入執行Redis的伺服器、開啟終端機，並使用Redis監視命令或ping命令。
+要验证Redis和Commerce是否协同工作，请登录到运行Redis的服务器，打开终端，然后使用Redis monitor命令或ping命令。
 
-### Redis監視命令
+### Redis监视器命令
 
 ```bash
 redis-cli monitor
 ```
 
-工作階段儲存輸出範例：
+会话存储输出示例：
 
 ```terminal
 1476824834.187250 [0 127.0.0.1:52353] "select" "0"
@@ -121,16 +121,16 @@ redis-cli monitor
 ... more ...
 ```
 
-### Redis ping指令
+### Redis ping命令
 
 ```bash
 redis-cli ping
 ```
 
-`PONG` 應為回應。
+`PONG` 应该作为回应。
 
-如果兩個命令都成功，Redis就會正確設定。
+如果两个命令都成功，则Redis设置正确。
 
-### 檢查壓縮資料
+### 检查压缩数据
 
-若要檢查壓縮的工作階段資料和頁面快取，請 [RESP.app](https://flathub.org/apps/details/app.resp.RESP) 支援自動解壓縮Commerce 2工作階段和頁面快取，並以人類可讀的格式顯示PHP工作階段資料。
+要检查压缩的会话数据和页面缓存，请 [RESP.app](https://flathub.org/apps/details/app.resp.RESP) 支持Commerce 2会话和页面缓存的自动解压缩，并以易于用户阅读的形式显示PHP会话数据。

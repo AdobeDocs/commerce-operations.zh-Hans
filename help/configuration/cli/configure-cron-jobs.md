@@ -1,6 +1,6 @@
 ---
-title: 設定並執行cron工作
-description: 瞭解如何管理cron工作。
+title: 配置和运行cron作业
+description: 了解如何管理cron作业。
 exl-id: 8ba2b2f9-5200-4e96-9799-1b00d7d23ce1
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,78 +9,78 @@ ht-degree: 0%
 
 ---
 
-# 設定cron工作
+# 配置cron作业
 
 {{file-system-owner}}
 
-有些Commerce功能至少需要一個cron工作，這會安排未來發生的活動。 以下是這些活動的部分清單：
+多个Commerce功能至少需要一个cron作业，以安排未来开展的活动。 以下是这些活动的部分列表：
 
-- 目錄價格規則
-- 電子報
-- 產生Google Sitemap
-- 客戶警示/通知（產品價格變更、產品補貨）
+- 目录价格规则
+- 快讯
+- 生成Google站点地图
+- 客户警报/通知（产品价格变动，产品重新上架）
 - 重新索引
-- 私人銷售(僅限Adobe Commerce)
-- 自動更新匯率
-- 所有Commerce電子郵件（包括訂單確認和異動）
+- 私人销售(仅限Adobe Commerce)
+- 自动更新汇率
+- 所有Commerce电子邮件（包括订单确认和事务性）
 
 >[!WARNING]
 >
->您無法再執行 `dev/tools/cron.sh` 因為指令碼已移除。
+>您无法再运行 `dev/tools/cron.sh` 因为脚本已被删除。
 
 >[!INFO]
 >
->Commerce仰賴許多重要系統功能的正確cron工作設定，包括編制索引。 若未正確設定，表示Commerce將無法如預期運作。
+>Commerce依赖于许多重要系统功能的正确cron作业配置，包括索引。 如果未正确设置，则意味着Commerce将无法按预期工作。
 
-UNIX系統使用 _crontab_，此檔案包含對cron精靈的指示，指示精靈在「這個日期這個時間執行此命令」。 每個使用者都有自己的crontab，而且任何指定crontab中的命令都會以擁有該命令的使用者身分執行。
+UNIX系统使用 _crontab_，该文件包含对cron守护程序的说明，指示该守护程序实际上“在此日期运行此命令”。 每个用户都有自己的crontab，并且任何给定crontab中的命令都将作为拥有它的用户执行。
 
-若要在網頁瀏覽器中執行cron，請參閱 [在瀏覽器中執行安全的cron.php](../security/secure-cron-php.md).
+要在Web浏览器中运行cron，请参阅 [在浏览器中运行的安全cron.php](../security/secure-cron-php.md).
 
-## 建立或移除Commerce crontab
+## 创建或删除Commerce crontab
 
-本節討論如何建立或移除您的Commerce crontab （即Commerce cron作業的設定）。
+本节讨论如何创建或删除Commerce crontab（即Commerce cron作业的配置）。
 
-此 _crontab_ 是用於執行cron作業的設定。
+此 _crontab_ 是用于运行cron作业的配置。
 
-Commerce應用程式使用能以不同設定執行的cron任務。 PHP命令列配置控制一般cron作業，該作業會重新索引索引器、產生電子郵件、產生Sitemap等等。
+Commerce应用程序使用可以使用不同配置运行的cron任务。 PHP命令行配置控制常规cron作业，该作业可重新索引索引器、生成电子邮件、生成站点地图等。
 
 >[!WARNING]
 >
->- 為避免在安裝和升級期間出現問題，強烈建議您將相同的PHP設定套用到PHP命令列配置和PHP Web伺服器外掛程式的配置。 如需詳細資訊，請參閱 [必要的PHP設定](../../installation/prerequisites/php-settings.md).
->- 在多節點系統中，crontab只能在一個節點上執行。 唯有因效能或擴充性相關原因而設定多個Webnode時，才能使用此功能。
+>- 为避免在安装和升级过程中出现问题，我们强烈建议您将相同的PHP设置同时应用于PHP命令行配置和PHP Web服务器插件的配置。 有关更多信息，请参阅 [必需的PHP设置](../../installation/prerequisites/php-settings.md).
+>- 在多节点系统中，crontab只能在一个节点上运行。 仅当出于与性能或可扩展性相关的原因设置多个Web节点时，此规则才适用。
 
 
-### 建立Commerce crontab
+### 创建Commerce crontab
 
-從2.2版開始，Commerce會為您建立crontab。 我們會將Commerce crontab新增至Commerce檔案系統擁有者的任何已設定crontab。 換言之，如果您已設定其他擴充功能或應用程式的crontab，我們會將Commerce crontab新增至擴充功能或應用程式。
+从版本2.2开始，Commerce会为您创建一个crontab。 我们将Commerce crontab添加到Commerce文件系统所有者的任何已配置crontab。 换言之，如果您已经为其他扩展或应用程序设置了crontab，我们会向其中添加Commerce crontab。
 
-商務crontab在裡面 `#~ MAGENTO START` 和 `#~ MAGENTO END` 評論您的簡訊。
+Commerce crontab位于 `#~ MAGENTO START` 和 `#~ MAGENTO END` 在您的crontab中进行评论。
 
-若要建立Commerce crontab：
+要创建Commerce crontab，请执行以下操作：
 
-1. 登入為，或切換至 [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
-1. 變更至Commerce安裝目錄。
-1. 輸入下列命令：
+1. 作为或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 转到Commerce安装目录。
+1. 输入以下命令：
 
    ```bash
    bin/magento cron:install [--force]
    ```
 
-使用 `--force` 重寫現有的crontab。
+使用 `--force` 重写现有的crontab。
 
 >[!INFO]
 >
->- `magento cron:install` 不會重寫內部的現有crontab `#~ MAGENTO START` 和 `#~ MAGENTO END` 評論您的簡訊。
->- `magento cron:install --force` 對Commerce評論以外的任何cron工作沒有影響。
+>- `magento cron:install` 不会重写内的现有crontab `#~ MAGENTO START` 和 `#~ MAGENTO END` 在您的crontab中进行评论。
+>- `magento cron:install --force` 对Commerce注释以外的任何cron作业没有影响。
 
 
-若要檢視crontab，請輸入下列命令作為檔案系統擁有者：
+要查看crontab ，请输入以下命令作为文件系统所有者：
 
 ```bash
 crontab -l
 ```
 
-範例如下：
+下面是一个示例：
 
 ```terminal
 #~ MAGENTO START c5f9e5ed71cceaabc4d4fd9b3e827a2b
@@ -90,19 +90,19 @@ crontab -l
 
 >[!INFO]
 >
->此 `update/cron.php` 檔案已在Commerce 2.4.0中移除，若此檔案存在於您的安裝中，則可安全地將其移除。
+>此 `update/cron.php` 文件已在Commerce 2.4.0中删除，如果该文件存在于您的安装中，则可以安全地将其删除。
 >
->任何參考 `update/cron.php` 和 `bin/magento setup:cron:run` 應該也會從crontab中移除&#39;
+>任何引用 `update/cron.php` 和 `bin/magento setup:cron:run` 也应当从crontab中删除&#39;
 
-### 移除Commerce crontab
+### 删除Commerce crontab
 
-您應僅在解除安裝Commerce應用程式之前移除Commerce crontab。
+只有在卸载Commerce应用程序之前，才应删除Commerce crontab。
 
-移除Commerce crontab：
+要删除Commerce crontab，请执行以下操作：
 
-1. 以身分登入或切換至 [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
-1. 變更至Commerce安裝目錄。
-1. 輸入下列命令：
+1. 以身份登录或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 转到Commerce安装目录。
+1. 输入以下命令：
 
    ```bash
    bin/magento cron:remove
@@ -110,59 +110,59 @@ crontab -l
 
 >[!INFO]
 >
->這個命令對外部的cron工作沒有影響 `#~ MAGENTO START` 和 `#~ MAGENTO END` 評論您的簡訊。
+>此命令对外部的cron作业无效 `#~ MAGENTO START` 和 `#~ MAGENTO END` 在您的crontab中进行评论。
 
-## 從命令列執行cron
+## 从命令行运行cron
 
-命令選項：
+命令选项：
 
 ```bash
 bin/magento cron:run [--group="<cron group name>"]
 ```
 
-位置 `--group` 指定要執行的cron群組（省略此選項即可為所有群組執行cron）
+位置 `--group` 指定要运行的cron组（省略此选项以为所有组运行cron）
 
-若要執行索引cron工作，請輸入：
+要运行索引编制cron作业，请输入：
 
 ```bash
 bin/magento cron:run --group index
 ```
 
-若要執行預設的cron工作，請輸入：
+要运行默认cron作业，请输入：
 
 ```bash
 bin/magento cron:run --group default
 ```
 
-若要設定自訂cron作業和群組，請參閱 [設定自訂cron作業和cron群組](../cron/custom-cron.md).
+要设置自定义cron作业和组，请参阅 [配置自定义cron作业和cron组](../cron/custom-cron.md).
 
 >[!INFO]
 >
->您必須執行兩次cron：第一次探索要執行的任務，第二次執行任務本身。 第二個cron回合必須發生在或晚於 `scheduled_at` 每個任務所需的時間。
+>必须运行两次cron：第一次发现要运行的任务，第二次运行任务本身。 第二次cron运行必须发生在或晚于 `scheduled_at` 每一项任务都花时间。
 
-## 記錄
+## 日志记录
 
-全部 `cron` 工作資訊已移出 `system.log` 放入個別 `cron.log`.
-根據預設，cron資訊可在以下網址找到： `<install_directory>/var/log/cron.log`.
-cron工作的所有例外狀況記錄者 `\Magento\Cron\Observer\ProcessCronQueueObserver::execute`.
+全部 `cron` 作业信息已移出 `system.log` 放入单独的 `cron.log`.
+默认情况下，cron信息可在 `<install_directory>/var/log/cron.log`.
+cron作业的所有异常均由记录 `\Magento\Cron\Observer\ProcessCronQueueObserver::execute`.
 
-除了登入之外 `cron.log`：
+除了登录 `cron.log`：
 
-- 失敗的工作具有 `ERROR` 和 `MISSED` 狀態會記錄到 `<install_directory>/var/log/support_report.log`.
+- 失败的作业 `ERROR` 和 `MISSED` 状态将记录到 `<install_directory>/var/log/support_report.log`.
 
-- 具有「 」的工作 `ERROR` 狀態一律記錄為 `CRITICAL` 在 `<install_directory>/var/log/exception.log`.
+- 具有的作业 `ERROR` 状态始终记录为 `CRITICAL` 在 `<install_directory>/var/log/exception.log`.
 
-- 具有的工作 `MISSED` 狀態記錄為 `INFO` 在 `<install_directory>/var/log/debug.log` 目錄（僅限開發人員模式）。
+- 具有的作业 `MISSED` 状态将记录为 `INFO` 在 `<install_directory>/var/log/debug.log` 目录（仅限开发人员模式）。
 
 >[!INFO]
 >
->所有cron資料也會寫入 `cron_schedule` 表格。 此表格提供cron工作的歷史記錄，包括：
+>所有cron数据也将写入 `cron_schedule` 表。 该表提供了cron作业的历史记录，包括：
 >
->- 工作ID和代碼
->- 狀態
->- 建立日期
->- 排程日期
->- 執行日期
+>- 作业ID和代码
+>- 状态
+>- 创建日期
+>- 计划日期
+>- 执行日期
 >- 完成日期
 >
->若要檢視表格中的記錄，請在命令列上登入Commerce資料庫並輸入 `SELECT * from cron_schedule;`.
+>要查看表中的记录，请在命令行上登录到Commerce数据库，然后输入 `SELECT * from cron_schedule;`.

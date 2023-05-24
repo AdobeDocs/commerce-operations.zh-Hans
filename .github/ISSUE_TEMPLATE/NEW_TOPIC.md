@@ -1,7 +1,7 @@
 ---
 name: New topic
 about: Create a request to add missing information
-title: '請求新主題'
+title: '请求新主题'
 labels: New Topic
 assignees: ''
 source-git-commit: b0f4671b8c214397af77cbd316e489dac1ce8601
@@ -12,22 +12,22 @@ ht-degree: 0%
 ---
 
 
-## 說明
+## 描述
 
 <!-- (REQUIRED) What topic is missing? -->
 
-## 內容檢查清單
+## 内容核对清单
 
 <!-- (REQUIRED) List specific information or details to include in this topic. -->
 
 <!-- Use the following checklist template as a starting point -->
 
-- [ ] 本主題說明____的運作方式。
-- [ ] 本主題提供____的步驟。
-- [ ] 本主題包含顯示____的程式碼範例。
-- [ ] 其他（請說明）
+- [ ] 本主题说明了____的工作原理。
+- [ ] 本主题介绍了____的步骤。
+- [ ] 本主题包含显示____的代码示例。
+- [ ] 其他（请说明）
 
-## 其他資訊
+## 其他信息
 
 <!-- (OPTIONAL) Any information you already know or other online resources that cover this topic -->
 

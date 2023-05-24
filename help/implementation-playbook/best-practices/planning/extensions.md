@@ -1,6 +1,6 @@
 ---
-title: 擴充功能最佳實務
-description: 瞭解如何避免由協力廠商Adobe Commerce擴充功能造成的效能問題。
+title: 扩展最佳实践
+description: 了解如何避免由第三方Adobe Commerce扩展引起的性能问题。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
@@ -12,29 +12,29 @@ ht-degree: 0%
 
 ---
 
-# 擴充功能最佳實務
+# 扩展最佳实践
 
-Adobe Commerce協力廠商擴充功能（模組）可能會造成各種問題，對店面效能造成負面影響。 您可以遵循下列最佳實務來避免這些問題：
+Adobe Commerce第三方扩展（模块）可能会导致各种问题，从而对店面性能产生负面影响。 您可以按照以下最佳实践来避免这些问题：
 
-- 從信任的來源(例如 [Commerce Marketplace](https://marketplace.magento.com/extensions.html).
-- 將所有協力廠商擴充功能更新至最新版本。
-- 如果您無法保持更新協力廠商擴充功能，請考慮使用不同的擴充功能。
-- 規劃升級至新版Adobe Commerce時，請確認安裝的協力廠商擴充功能與新版本相容，並視需要升級擴充功能。
+- 从可靠来源(如 [Commerce Marketplace](https://marketplace.magento.com/extensions.html).
+- 将所有第三方扩展更新至最新版本。
+- 如果无法保持更新第三方扩展，请考虑使用不同的扩展。
+- 在计划升级到新版本的Adobe Commerce时，请验证安装的第三方扩展是否与新版本兼容，并根据需要升级扩展。
 
 >[!NOTE]
 >
-> Adobe Commerce Marketplace中提供的所有擴充功能都必須保持與新Commerce版本的相容性。 另請參閱 [版本相容性](https://developer.adobe.com/commerce/marketplace/guides/sellers/compatibility/releases/).
+> 需要使用Adobe Commerce Marketplace中提供的所有扩展来保持与新Commerce版本的兼容性。 参见 [版本兼容性](https://developer.adobe.com/commerce/marketplace/guides/sellers/compatibility/releases/).
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 其他資訊
+## 其他信息
 
-- [規劃升級的最佳實務](../../../upgrade/prepare/best-practices.md)
-- 在雲端基礎結構上將協力廠商擴充功能與Adobe Commerce搭配使用
-   - [技術與需求 — 開發與測試](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-devtest)
-   - [為何要在整合與測試中完整測試？](https://devdocs.magento.com/cloud/live/live.html#whytest)
+- [规划升级的最佳实践](../../../upgrade/prepare/best-practices.md)
+- 在云基础架构上将第三方扩展与Adobe Commerce结合使用
+   - [技术和要求 — 开发和测试](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-devtest)
+   - [为何要在集成和暂存环境中完全进行测试？](https://devdocs.magento.com/cloud/live/live.html#whytest)

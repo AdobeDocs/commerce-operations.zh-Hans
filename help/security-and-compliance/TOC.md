@@ -1,6 +1,6 @@
 ---
-user-guide-title: 安全性與合規性
-user-guide-description: 瞭解Adobe Commerce和Magento Open Source商戶如何負責維護安全的環境，以及符合其管轄區內線上商戶的法律要求和最佳實務。
+user-guide-title: 安全性和合规性
+user-guide-description: 了解Adobe Commerce和Magento Open Source商户如何负责维护安全环境，以及符合其管辖范围内网络商户的法律要求和最佳实践。
 feature: Security
 source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
 workflow-type: tm+mt
@@ -10,16 +10,16 @@ ht-degree: 0%
 ---
 
 
-# 安全性與合規性 {#security-and-compliance}
+# 安全性和合规性 {#security-and-compliance}
 
-- [概觀](overview.md)
-- [內容安全性原則](content-security-policy.md)
-- 隱私權法規 {#privacy}
+- [概述](overview.md)
+- [内容安全策略](content-security-policy.md)
+- 隐私法规 {#privacy}
    - [CCPA](privacy/ccpa.md)
    - [GDPR](privacy/gdpr.md)
-   - [Adobe隱私權JavaScript程式庫](privacy/adobe-javascript-library.md)
-   - [隱私權JavaScript程式庫](privacy/javascript-library.md)
-- 參考資料 {#reference}
-   - [客戶個人資訊（2.x版）](privacy/data-m2.md)
-   - [客戶個人資訊（1.x版）](privacy/data-m1.md)
-- [返回作業指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+   - [Adobe隐私JavaScript库](privacy/adobe-javascript-library.md)
+   - [隐私JavaScript库](privacy/javascript-library.md)
+- 引用 {#reference}
+   - [客户个人信息（版本2.x）](privacy/data-m2.md)
+   - [客户个人信息（版本1.x）](privacy/data-m1.md)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

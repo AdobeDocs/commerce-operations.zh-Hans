@@ -1,6 +1,6 @@
 ---
-title: 不支援目前的搜尋引擎
-description: 在遇到有關不支援的搜尋引擎的錯誤後，疑難排解Adobe Commerce或Magento Open Source升級。
+title: 当前搜索引擎不受支持
+description: 遇到有关不受支持的Magento Open Source引擎的错误后，对您的Adobe Commerce或搜索引擎升级进行故障排除。
 exl-id: 11479d23-53a5-4086-9f9a-c3420ccad073
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 0%
 
 ---
 
-# 不支援目前的搜尋引擎
+# 当前搜索引擎不受支持
 
-以下錯誤訊息指出您要升級的Adobe Commerce或Magento Open Source版本已設定為使用您升級至的版本不支援的目錄搜尋引擎：
+以下错误消息指示您从中升级的Adobe Commerce或Magento Open Source版本配置为使用您升级到的版本不支持的目录搜索引擎：
 
 ```terminal
 Your current search engine, <Engine Name>, is not supported. You must install a supported search engine before upgrading. See the System Upgrade Guide for more information.
 ```
 
-此錯誤表示下列其中一個條件在Adobe Commerce或Magento Open Source的舊版上為true：
+此错误表示以下条件之一在Adobe Commerce或Magento Open Source的较低级别版本上为true：
 
-- 搜尋引擎設定為MySQL。
-- 搜尋引擎設定為不再支援的Elasticsearch版本。
+- 搜索引擎设置为MySQL。
+- 搜索引擎设置为不再支持的Elasticsearch版本。
 
-使用以下命令來檢查目前的搜尋引擎：
+使用以下命令检查当前搜索引擎：
 
 ```bash
 bin/magento config:show catalog/search/engine
 ```
 
-如果傳回的值是 `mysql`， `elasticsearch`，或 `elasticsearch6`.
+如果返回值为 `mysql`， `elasticsearch`，或 `elasticsearch6`.
 
 >[!WARNING]
 >
->如果您收到此錯誤，表示您的安裝狀態不一致，且您無法存取Admin。 建議您解決此錯誤後，還原至先前的版本。 要執行此操作，請執行以下命令之一：
+>如果您收到此错误，则表明您的安装处于不一致状态，并且无法访问管理员。 我们建议您在解决此错误时还原到之前的版本。 为此，请运行以下命令之一：
 >
 >
 ```bash
@@ -44,35 +44,35 @@ bin/magento config:show catalog/search/engine
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->位置 `<version>` 是您正在執行的Magento版本 **早於** 升級。 例如， `2.3.5`.
+>位置 `<version>` 是您运行的Magento的版本 **早于** 升级。 例如， `2.3.5`.
 
-請依照下列各節所述的准則，從不一致的狀態復原。
+按照以下各节中所述的准则从不一致状态中恢复。
 
-## 如果您的搜尋引擎為 `mysql`
+## 如果您的搜索引擎为 `mysql`
 
-在2.4之前，MySQL是預設的目錄搜尋引擎，但此容量已不再支援MySQL。 現在，您必須先安裝並設定Elasticsearch或OpenSearch作為搜尋引擎，才能升級至2.4。
+在2.4之前，MySQL是默认的目录搜索引擎，但不再支持MySQL这种功能。 现在，在升级到2.4之前，您必须安装和配置Elasticsearch或OpenSearch作为搜索引擎。
 
-使用下列資源來協助引導您完成此程式：
+使用以下资源可以帮助您完成此过程：
 
-- [安裝並設定搜尋引擎](../../configuration/search/overview-search.md)
-- [搜尋引擎設定](../../configuration/search/configure-search-engine.md)
+- [安装和配置搜索引擎](../../configuration/search/overview-search.md)
+- [搜索引擎配置](../../configuration/search/configure-search-engine.md)
 
-設定搜尋引擎並重新索引後，您就可以升級至2.4了。
+配置搜索引擎并重新索引后，即可升级到2.4。
 
-## 如果您的搜尋引擎為 `elasticsearch`
+## 如果您的搜索引擎为 `elasticsearch`
 
-不再支援Elasticsearch6及舊版。
+不再支持Elasticsearch6及更早版本。
 
-值 `elasticsearch` 表示您的Adobe Commerce低階版本或Magento Open Source已設定為使用Elasticsearch2.x。不再支援此版本的Elasticsearch。
+值 `elasticsearch` 指示您的Adobe Commerce或Magento Open Source低级版本配置为使用Elasticsearch2.x。不再支持此版本的Elasticsearch。
 
-升級至2.4之前，您必須執行下列工作：
+升级到2.4之前必须执行以下任务：
 
-1. 更新至Commerce支援的Elasticsearch版本。 請參閱 [升級Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 取得有關備份資料、偵測潛在移轉問題，以及在部署到生產環境之前測試升級的完整指示。 視您目前的Elasticsearch版本而定，不一定需要完全重新啟動叢集。
+1. 更新到Commerce支持的Elasticsearch版本。 请参阅 [升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 有关备份数据、检测潜在的迁移问题以及测试升级以便部署到生产环境之前的完整说明。 根据您当前版本的Elasticsearch，可能需要也可能不需要完全重新启动群集。
 
    >[!NOTE]
    >
-   >Elasticsearch需要JDK 1.8或更新版本。 另請參閱 [安裝Java軟體開發套件(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以檢查已安裝的JDK版本。
+   >Elasticsearch需要JDK 1.8或更高版本。 参见 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查已安装的JDK版本。
 
-1. [設定Elasticsearch](../../configuration/search/configure-search-engine.md) 並重新索引。
+1. [配置Elasticsearch](../../configuration/search/configure-search-engine.md) 并重新索引。
 
-設定搜尋引擎並重新索引後，您就可以升級至2.4了。
+配置搜索引擎并重新索引后，即可升级到2.4。

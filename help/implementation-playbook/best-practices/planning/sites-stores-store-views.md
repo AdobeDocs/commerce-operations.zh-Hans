@@ -1,6 +1,6 @@
 ---
-title: 設定網站、商店和商店檢視的最佳實務
-description: 瞭解設定網站、商店和商店檢視的最佳實務，以最大化網站效能。
+title: 配置站点、商店和存储视图的最佳实践
+description: 了解配置站点、商店和存储视图的最佳实践，以最大限度地提高站点性能。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
@@ -12,39 +12,39 @@ ht-degree: 0%
 
 ---
 
-# 設定網站、商店和商店檢視的最佳實務
+# 配置站点、商店和存储视图的最佳实践
 
-為獲得最佳網站效能，請在雲端基礎結構專案上為Adobe Commerce設定最多50個網站、50個商店和50個商店檢視。
+为获得最佳站点性能，请在云基础架构项目中为Adobe Commerce配置最多50个站点、50个存储和50个存储视图。
 
 >[!NOTE]
 >
->針對雲端基礎結構上的Adobe Commerce，最佳實務尤其適用於生產環境（並可能適用於Staging on Pro架構，但受資源限制），其擁有的資源會比整合和開發環境多。 對於整合（Pro和Starter）和測試環境(Starter)，將商店檢視次數減少到5或10次以下（取決於技術審查）。
+>对于云基础架构上的Adobe Commerce，最佳实践尤其适用于生产环境（并可能适用于Pro架构上的暂存，取决于资源限制），生产环境将拥有比集成和开发环境更多的资源。 对于集成（专业版和入门版）和暂存环境（入门版），将存储查看次数减少到5或10次以下（取决于技术审查）。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 改善效能的策略
+## 提高性能的策略
 
-如果您的專案需要許多網站、商店或商店檢視，您可以使用以下策略來改善效能：
+如果您的项目需要多个网站、商店或商店视图，则可以使用以下策略来提高性能：
 
-- 將邏輯切換至類別以重新建構目錄
-- 使用外部價格與價格管理系統(PMS)，將價目表與目錄資料分開。
-- 使用替代noSQL資料儲存，例如Elasticsearch
+- 通过将逻辑移动到类别来重构目录
+- 通过使用外部价格和价格管理系统(PMS)，将价目表与目录数据分开。
+- 使用替代noSQL数据存储，如Elasticsearch
 
-## 對效能的潛在影響
+## 潜在的性能影响
 
-網站和商店是目錄資料的倍數，因此擁有許多網站和商店可能會以下列方式負面影響網站效能：
+网站和商店是目录数据的倍数，因此拥有多个网站和商店可能会以下列方式负面影响网站性能：
 
-- 較大的索引表格會增加完成索引作業所需的時間 [價格指數].
-- 擷取應用程式設定的時間增加，會降低非快取目錄頁面的店面回應時間。
-- 因為每個網站的資料會個別儲存，在管理員中完成「儲存」作業所需的時間會大幅增加。
+- 较大的索引表会增加完成索引操作所需的时间 [价格指数].
+- 检索应用程序配置的时间增加会降低非缓存目录页面的店面响应时间。
+- 显着增加了在管理员中完成“保存”操作所需的时间，因为每个网站的数据都单独保存。
 
 
-## 其他資訊
+## 其他信息
 
-- [瞭解網站、商店和商店檢視](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
-- [設定多個網站或商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html)
+- [了解网站、商店和商店视图](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
+- [设置多个网站或商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html)

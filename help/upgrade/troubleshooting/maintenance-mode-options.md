@@ -1,6 +1,6 @@
 ---
-title: 升級的維護模式選項
-description: 建立自訂維護模式頁面，供您的客戶在執行升級時於您的Adobe Commerce或Magento Open Source店面檢視。
+title: 用于升级的维护模式选项
+description: 创建自定义维护模式页面，以便客户在执行升级时在Adobe Commerce或Magento Open Source店面中看到该页面。
 exl-id: 77e6d82d-5cc6-4d14-8b5c-1d2108f27b29
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,24 +9,24 @@ ht-degree: 0%
 
 ---
 
-# 升級的維護模式選項
+# 用于升级的维护模式选项
 
-本主題說明如何建立自訂維護頁面，以在升級Magento應用程式時顯示給使用者。 建立自訂頁面為選用，但建議使用，因為您的網站在升級期間可供存取。
+本主题讨论如何在升级Magento应用程序时创建自定义维护页以向用户显示。 创建自定义页面是可选的，但建议创建自定义页面，因为您的网站在升级过程中可访问。
 
-建立自訂頁面，將使用者重新導向至該頁面，會阻止對該網站的任何存取，並會通知您的使用者該網站正在進行維護。
+创建一个自定义页面，用户将重定向到该页面，这会阻止对该网站的任何访问，并会通知用户该网站正在进行维护。
 
 >[!NOTE]
 >
->您必須以使用者身分執行本節中的工作， `root` 許可權。 在開發人員模式中無法設定自訂維護頁面。
+>您必须以用户身份执行本节中的任务， `root` 权限。 在开发人员模式下无法设置自定义维护页面。
 
-## 建立自訂維護頁面
+## 创建自定义维护页面
 
-若要建立維護頁面並重新導向至該頁面，請先建立維護頁面，命名為：
+要创建维护页面并重定向到该页面，请首先创建一个名为的维护页面：
 
 - Apache： `<web server docroot>/maintenance.html`
-- Nginx： `<magento_root>/maintenance.html`
+- 恩金克斯： `<magento_root>/maintenance.html`
 
-新增下列內容：
+添加以下内容：
 
 ```html
 <!DOCTYPE html>
@@ -52,25 +52,25 @@ body
 </html>
 ```
 
-## Apache的自訂維護頁面
+## Apache的自定义维护页面
 
-本節探討如何建立自訂維護頁面，以及如何將流量重新導向至該頁面。
+本节讨论如何创建自定义维护页面以及如何将流量重定向到该页面。
 
-本節中的範例說明如何修改下列檔案，這是設定維護頁面的一種方式：
+此部分中的示例说明如何修改以下文件，这是设置维护页面的一种方法：
 
 - Apache 2.4： `/etc/apache2/sites-available/000-default.conf`
-- Apache 2.2： `/etc/apache2/sites-available/default` (Ubuntu)、 `/etc/httpd/conf/httpd.conf` (CentOS)
+- Apache 2.2： `/etc/apache2/sites-available/default` (Ubuntu)， `/etc/httpd/conf/httpd.conf` (CentOS)
 
-若要將流量重新導向至自訂維護頁面：
+要将流量重定向到自定义维护页面，请执行以下操作：
 
-1. 更新您的Apache設定以執行下列操作：
+1. 更新Apache配置以执行以下操作：
 
-   - 將所有流量重新導向至維護頁面
-   - 允許列出某些IP，以便管理員可以升級Magento軟體。
+   - 将所有流量重定向到维护页面
+   - 允许列表特定IP，以便管理员可以升级Magento软件。
 
-   以下範例允許清單192.0.2.110。
+   以下示例列入允许列表192.0.2.110。
 
-   在Apache設定檔案的結尾新增下列內容：
+   在Apache配置文件的末尾添加以下内容：
 
    ```terminal
    RewriteEngine On
@@ -83,31 +83,31 @@ body
    Header Set Cache-Control "max-age=0, no-store"
    ```
 
-1. 重新啟動Apache：
+1. 重新启动Apache：
 
    - CentOS： `service httpd restart`
    - Ubuntu： `service apache2 restart`
 
-1. 輸入下列命令：
+1. 输入以下命令：
 
    ```bash
    touch <web server docroot>/maintenance.enable
    ```
 
-1. [升級您的系統](../implementation/perform-upgrade.md).
-1. 測試您的網站以確保其正常運作。
-1. 升級完成後，刪除 `maintenance.enable`.
+1. [升级系统](../implementation/perform-upgrade.md).
+1. 测试您的网站以确保其正常运行。
+1. 升级完成后，删除 `maintenance.enable`.
 
-## Nginx的自訂維護頁面
+## nginx的自定义维护页面
 
-本節探討如何建立自訂維護頁面，以及如何將流量重新導向至該頁面。
+本节讨论如何创建自定义维护页面以及如何将流量重定向到该页面。
 
-若要將流量重新導向至自訂維護頁面：
+要将流量重定向到自定义维护页面，请执行以下操作：
 
-1. 使用文字編輯器開啟包含伺服器區塊的nginx組態檔。
-1. 將下列專案新增至伺服器區塊(`server` 僅供清楚說明之用；請勿新增第二個伺服器區塊)。
+1. 使用文本编辑器打开包含服务器块的nginx配置文件。
+1. 将以下内容添加到服务器块(`server` 仅为了清楚起见而显示；不要添加第二个服务器块)。
 
-   以下允許清單列出Magento安裝所在系統上的IP位址192.0.2.110和192.0.2.115 `/var/www/html/magento2`：
+   以下允许列表在安装了Magento的系统上IP地址192.0.2.110和192.0.2.115。 `/var/www/html/magento2`：
 
    ```conf
    server {
@@ -142,22 +142,22 @@ body
    }
    ```
 
-1. 輸入下列命令：
+1. 输入以下命令：
 
    ```bash
    touch <magento_root>/maintenance.enable
    ```
 
-1. 重新載入nginx設定：
+1. 重新加载nginx配置：
 
    ```bash
    service nginx reload
    ```
 
-1. [升級您的系統](../implementation/perform-upgrade.md).
-1. 測試您的網站以確保其正常運作。
-1. 升級完成後，請刪除或重新命名 `maintenance.enable`
-1. 重新載入nginx設定：
+1. [升级系统](../implementation/perform-upgrade.md).
+1. 测试您的网站以确保其正常运行。
+1. 升级完成后，删除或重命名 `maintenance.enable`
+1. 重新加载nginx配置：
 
    ```bash
    service nginx reload

@@ -1,6 +1,6 @@
 ---
-title: 發行原則
-description: 瞭解不同型別的Adobe Commerce版本，包括次要、修補程式、安全性修補程式、功能、Hotfix、個別修補程式和自訂修補程式。
+title: 发布策略
+description: 了解不同类型的Adobe Commerce发行版，包括次要发行版、修补程序发行版、安全修补程序发行版、功能发行版、修补程序发行版、单个修补程序发行版和自定义修补程序发行版。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,85 +9,85 @@ ht-degree: 0%
 
 ---
 
-# Adobe Commerce發行原則
+# Adobe Commerce发布策略
 
-Adobe Commerce和Magento Open Source使用 [語意版本設定](https://semver.org/) 在個別模組層級(例如 `magento/framework 101.1.1`)，但不適用於行銷版本號碼。 例如：
+Adobe Commerce和Magento Open Source使用 [语义版本控制](https://semver.org/) 在单个模块级别(例如， `magento/framework 101.1.1`)，但不适用于营销版本号。 例如：
 
 - **主要版本**—2
 - **次要版本**—2.4
 - **PATCH版本**—2.4.5
-   - **安全性修補程式發行版本**—2.4.5-p1
-      - 安全性錯誤修正
-      - 安全性增強功能
-- **BETA修補程式版本**—2.4.7-beta1
-- **功能發行**
-- **Hotfix**
-- **個別修補程式**
-- **自訂修補程式**
+   - **SECURITY补丁发行版**—2.4.5-p1
+      - 安全错误修复
+      - 安全性增强
+- **BETA补丁发布**—2.4.7-beta1
+- **功能发布**
+- **修补程序**
+- **单个修补程序**
+- **自定义修补程序**
 
 ## 次要版本
 
-以下准則適用於次要版本：
+以下准则适用于次要版本：
 
-- 可進行重大變更；針對Adobe Commerce 2.2.x撰寫的程式碼可能無法再搭配Adobe Commerce 2.3.x使用。例如，次要發行版本可能會引入對主要系統需求和相依性的支援，例如PHP。
-- 模組版本可能有所不同。 例如，新修補程式中會引入一些模組變更，而次要發行版本中則會引入其他模組變更。
-- 次要發行版本可能包括新功能，在升級期間您可能需要或您的解決方案合作夥伴進行額外的工作，以確保相容性。
-- 次要發行版本可能包括安全性和品質問題的修正。
+- 可以进行重大更改；为Adobe Commerce 2.2.x编写的代码可能不再适用于Adobe Commerce 2.3.x。例如，次要版本可能会引入对主要系统要求和依赖项（如PHP）的支持。
+- 模块版本可能有所不同。 例如，一些模块更改是在新补丁中引入的，而其他模块更改是在次要版本中引入的。
+- 次要版本可能包括新功能，在升级期间，这些功能可能需要您或您的解决方案合作伙伴执行其他操作以确保兼容性。
+- 次要版本可能包括对安全和质量问题的修复。
 
 ## PATCH版本
 
-修補程式發行主要著重於提供安全性、效能、法規遵循以及高優先順序的品質修正，協助您維持網站在尖峰時的效能。
+补丁发行主要侧重于提供安全性、性能、合规性和高优先级的质量修复，帮助您保持网站的运行处于最佳状态。
 
-下列准則適用於修補程式發行版本：
+以下准则适用于修补程序版本：
 
-- 最新支援的次要版本會收到完整功能品質修正和增強功能。
-- 避免進行可能破壞擴充功能或程式碼相容性的變更。 例如，針對2.2.0版撰寫的程式碼仍應適用於2.2.7版。
-- 在例外情況下，可能會發行重大變更或額外的修補程式或Hotfix，以解決安全性或法規遵循問題以及高影響力的品質問題。 在模組層級，這些變更主要是PATCH層級的變更；有時是「次要」層級的變更。
+- 最新支持的次要版本将获得完整的功能质量修复和增强功能。
+- 避免进行可能破坏扩展或代码兼容性的更改。 例如，为版本2.2.0编写的代码在版本2.2.7上仍然有效。
+- 在特殊情况下，可能会发布重大更改或附加修补程序或修补程序，以解决安全性或合规性问题以及影响重大的质量问题。 在模块级别，这些更改主要是PATCH级别的更改；有时是“次要”级别的更改。
 
-### 安全性修補程式發行版本
+### SECURITY补丁发行版
 
-**安全性錯誤修正**：解決已識別的安全性問題並在受影響的產品區域提供預期結果的軟體程式碼變更。 這些修正通常可回溯相容。
+**安全错误修复**：一种软件代码更改，可解决已识别的安全问题，并在受影响的产品领域提供预期的结果。 这些修复通常向后兼容。
 
-**安全性增強功能**：軟體改進或設定變更，以主動改善應用程式內的安全性。 這些安全性增強功能有助於解決安全性風險，這些風險會影響Adobe Commerce應用程式的安全性狀態，但可能回溯不相容。
+**安全性增强**：软件改进或配置更改，以主动提高应用程序中的安全性。 这些安全增强功能有助于解决会影响Adobe Commerce应用程序的安全状态但可能向后不兼容的安全风险。
 
-使用安全性修補程式發行版本，您無需套用完整修補程式發行版本中包含的其他品質修正和增強功能，即可確保網站更加安全。 安全性修補程式發行版本會附加&#39;-pN&#39;，其中N是從1開始的增量修補程式版本（例如2.3.5-p1）。 安全性修補程式發行版本也可包含解決影響Adobe Commerce應用程式的重大問題所需的Hotfix。
+使用安全修补程序版本，您可以使站点更加安全，而无需应用完整修补程序版本中包含的其他质量修复和增强功能。 安全补丁发行版本会附加“ — pN”，其中N是以1开头的增量补丁版本（例如2.3.5-p1）。 安全补丁发行版本还可以包含解决影响Adobe Commerce应用程序的严重问题所需的修补程序。
 
-每個安全性修補程式版本都是以之前的完整修補程式版本為基礎。 此版本包含先前修補程式版本的品質和安全修正，以及先前完整修補程式版本和安全修補程式版本之間建立的安全性修正。
+每个安全补丁发行版本都基于以前的完整补丁发行版本。 它包含先前补丁发行版中的质量和安全修复，以及在先前完整补丁发行版和安全补丁发行版之间创建的安全修复。
 
-如需下載和套用安全性修補程式的說明，請參閱 [快速開始安裝](../installation/composer.md#example---security-patch).
+有关下载和应用安全修补程序的说明，请参见 [快速入门安装](../installation/composer.md#example---security-patch).
 
-## BETA修補程式版本
+## BETA补丁发布
 
-Adobe Commerce功能正式發行前的版本已開放所有Adobe Commerce客戶和Adobe合作夥伴使用。 它可讓您在「一般可用性」之前有額外時間檢閱程式碼和受影響的元件。
+Adobe Commerce功能的正式发布前版本已公开提供给所有Adobe Commerce客户和Adobe合作伙伴。 在正式发布之前，它留出了额外的时间来查看代码和受影响的组件。
 
-Beta版可能包含瑕疵，並依「原樣」提供，不提供任何型別的保固。 Adobe沒有義務維護、更正、更新、變更、修改或以其他方式支援(透過Adobe支援服務或其他方式) Beta版。 建議客戶謹慎使用，切勿依賴Beta版及/或任何隨附檔案或資料的正確運作或效能。 因此，客戶自行承擔使用測試版的風險。
+Beta版可能包含缺陷，并“按原样”提供，不提供任何形式的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)Beta版。 建议客户谨慎使用，并且不要以任何方式依赖测试版和/或任何随附文档或材料的正确功能或性能。 因此，任何使用测试版均由客户自行承担风险。
 
-## 功能發行
+## 功能发布
 
-功能發行包含新功能和功能更新，這些功能和更新以獨立服務的形式提供，與修補程式發行版本分開。 範例包括產品Recommendations和Live Search等服務、PWA Studio和Inventory management (MSI)等獨立模組，以及雲端服務和基礎結構的更新。
+功能版本包含作为独立服务交付的新功能和功能更新，与修补程序版本不同。 示例包括产品Recommendations和Live Search等服务、PWA Studio和Inventory management (MSI)等独立模块以及对我们的云服务和基础架构的更新。
 
-## Hotfix
+## 修补程序
 
-Hotfix是包含高影響力安全性或品質修正的修補程式，例如影響許多商家的零日漏洞修正。 Adobe Commerce版本的Adobe發行hotfix，目前仍受關鍵安全性或品質問題所支援和影響（視需要）。 Hotfix會發佈至 [已知問題區段](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) 我們的知識庫。 這些修正包含在下一個計畫的修補程式發行版本中。
-
->[!NOTE]
->
->Hotfix可能包含回溯不相容的變更。
-
-## 個別修補程式
-
-個別修補程式包含特定問題的低影響品質修正。 這些修正已套用至支援的Adobe Commerce次要版本。 AdobeAdobe Commerce會視需要，根據 [軟體生命週期原則](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
+修补程序是包含影响许多商家的高影响力安全或质量修补程序的修补程序，例如针对零天漏洞的修补程序。 Adobe会根据需要发布仍受关键安全或质量问题支持和影响的Adobe Commerce版本的修补程序。 修补程序将发布到 [“已知问题”部分](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) 我们的知识库。 这些修复包括在下一个计划的修补程序版本中。
 
 >[!NOTE]
 >
->個別修補程式不包含回溯不相容的變更。
+>修补程序可能包含向后不兼容的更改。
 
-## 自訂修補程式
+## 单个修补程序
 
-由非Adobe人員建立，用於修正問題或因各種原因修改Adobe Commerce程式碼。 自訂修補程式會透過 [品質修補工具](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html).
+单个修补程序包含对特定问题的低影响质量修复。 这些修复适用于支持的Adobe Commerce次要版本。 AdobeAdobe Commerce会根据 [软件生命周期策略](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
 
-## 相關主題
+>[!NOTE]
+>
+>单个修补程序不包含向后不兼容的更改。
 
-- [版本設定](https://developer.adobe.com/commerce/php/development/versioning/)
-- [即將發行的版本](schedule.md)
-- [軟體生命週期原則](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf)
+## 自定义修补程序
+
+由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序是通过 [质量修补工具](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html).
+
+## 相关主题
+
+- [版本控制](https://developer.adobe.com/commerce/php/development/versioning/)
+- [即将发行的版本](schedule.md)
+- [软件生命周期策略](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf)

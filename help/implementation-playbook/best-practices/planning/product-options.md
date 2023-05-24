@@ -1,6 +1,6 @@
 ---
-title: 產品選項設定最佳實務
-description: 透過限制產品選項的數量來最佳化Adobe Commerce效能。
+title: 产品选项配置最佳实践
+description: 通过限制产品选项的数量来优化Adobe Commerce性能。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
@@ -12,42 +12,42 @@ ht-degree: 0%
 
 ---
 
-# 產品選項最佳實務
+# 产品选项最佳实践
 
-為獲得最佳效能，每個產品最多可設定100個產品選項。
+为获得最佳性能，每个产品最多可配置100个产品选项。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 減少產品選項
+## 减少产品选项
 
-為獲得最佳網站效能，請使用以下策略來減少產品選項的數量：
+为获得最佳站点性能，请使用以下策略来减少产品选项的数量：
 
-- 設定複雜產品和自訂選項，作為產品變異的來源。
-- 使用屬性集來建置具有目標屬性和選項的特定產品範本，而不是建立套用至所有產品的全域產品範本和選項容器。
-- 透過外部產品管理系統(PMS)管理產品資訊。
+- 配置复杂产品和自定义选项作为产品变体的来源。
+- 使用属性集构建具有目标属性和选项的特定产品模板，而不是创建适用于所有产品的全局产品模板和选项容器。
+- 通过外部产品管理系统(PMS)管理产品信息。
 
-## 對效能的潛在影響
+## 潜在的性能影响
 
-設定許多產品選項會增加所有讀取和寫入作業中每個產品擷取的資料量，進而產生：
+配置多个产品选项会增加所有读取和写入操作中为每个产品检索的数据量，从而导致：
 
-- 增加SQL查詢流量和負載 `JOIN` 作業會增加資料庫輸送量。
-- 增加Adobe Commerce索引和全文檢索搜尋索引的大小。
+- 增加了SQL查询流量和更重 `JOIN` 操作提高了数据库吞吐量。
+- 增加了Adobe Commerce索引和全文搜索索引的大小。
 
-以上列出的增加可能會以下列方式影響網站效能：
+上面列出的增加可能会以下列方式影响站点性能：
 
-- 與屬性中包含許多選項的產品相關的大多數店面情境的回應時間更長。
-- 在「管理員」中完成「產品」管理作業所需的時間大幅增加，這可能會導致逾時，尤其是與屬性清單和樹狀結構擷取（包括促銷規則管理）相關的案例。
-- 可以封鎖完成非同步大量作業的大量動作，例如匯入和匯出，以及將自訂價格指派給共用目錄中的多個產品。
+- 与属性中包含许多选项的产品相关的大多数店面方案的响应时间更长。
+- 显着增加了在“管理员”中完成产品管理操作所需的时间，这可能会导致超时，尤其是对于与属性列表和树检索（包括升级规则管理）相关的方案。
+- 可以阻止完成异步批量操作的批量操作，例如导入和导出以及将自定义价格分配给共享目录中的多个产品。
 
-## 其他資訊
+## 其他信息
 
-- [建立產品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
-- [產品屬性設定的最佳實務](product-attributes-and-options.md)
-- [大量動作記錄](https://docs.magento.com/user-guide/system/action-log-bulk-actions.html)
-- [存貨整批作業API](https://developer.adobe.com/commerce/webapi/rest/inventory/bulk-inventory/)
-- [培訓：使用Adobe Commerce管理目錄和產品](https://learning.adobe.com/catalog/adobe_commerce/cours000000000098643.html)
+- [创建产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
+- [产品属性配置的最佳实践](product-attributes-and-options.md)
+- [批量操作日志](https://docs.magento.com/user-guide/system/action-log-bulk-actions.html)
+- [库存成批活动API](https://developer.adobe.com/commerce/webapi/rest/inventory/bulk-inventory/)
+- [培训：使用Adobe Commerce管理目录和产品](https://learning.adobe.com/catalog/adobe_commerce/cours000000000098643.html)

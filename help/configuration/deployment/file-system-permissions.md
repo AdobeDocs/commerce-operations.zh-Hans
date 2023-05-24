@@ -1,6 +1,6 @@
 ---
-title: 檔案系統存取許可權
-description: 瞭解如何為開發和生產系統設定Commerce應用程式檔案系統的擁有者或擁有者。
+title: 文件系统访问权限
+description: 了解如何为开发和生产系统设置Commerce应用程序文件系统的所有者或所有者。
 feature: Configuration, Roles/Permissions
 exl-id: 95b27db9-5247-4f58-a9af-1590897d73db
 source-git-commit: dcc283b901917e3681863370516771763ae87462
@@ -10,128 +10,128 @@ ht-degree: 0%
 
 ---
 
-# 檔案系統存取許可權
+# 文件系统访问权限
 
-本節討論如何為開發和生產系統設定Commerce檔案系統的擁有者或擁有者。 在繼續之前，請檢閱中討論的概念 [檔案系統擁有權和許可權概觀](../../installation/prerequisites/file-system/overview.md).
+本节讨论如何为开发和生产系统设置Commerce文件系统的所有者或所有者。 在继续之前，请查看中讨论的概念 [文件系统所有权和权限概述](../../installation/prerequisites/file-system/overview.md).
 
-本主題著重於Commerce開發和生產系統。 如果您正在安裝Commerce，請參閱 [設定安裝前的擁有權和許可權](../../installation/prerequisites/file-system/configure-permissions.md).
+本主题侧重于商务开发和生产系统。 如果要安装Commerce，请参阅 [设置安装前的所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md).
 
-以下各節討論一或兩個檔案系統擁有者的需求。 這表示：
+接下来的部分讨论了对一个或两个文件系统所有者的要求。 这意味着：
 
-- **一位使用者** — 通常在共用託管提供者上需要，可讓您僅存取伺服器上的一名使用者。此使用者可以使用FTP登入、傳輸檔案，而且此使用者也會執行網頁伺服器。
+- **一个用户** — 通常在共享托管提供程序上需要，它允许您仅访问服务器上的一个用户。此用户可以登录，使用FTP传输文件，并且此用户还运行Web服务器。
 
-- **兩個使用者** — 如果您執行自己的Commerce伺服器，建議您使用兩個使用者：一個用來傳輸檔案和執行命令列公用程式，另一個則是用於Web伺服器軟體的個別使用者。 如果可能的話，這會比較好，因為它比較安全。
+- **两个用户** — 如果您运行自己的Commerce服务器，我们建议两个用户：一个用于传输文件和运行命令行实用程序，另一个用于Web服务器软件。 如果可能，这是最好的，因为它更安全。
 
-   相反地，您有不同的使用者：
+   相反，您拥有单独的用户：
 
-   - 執行管理員和店面的網頁伺服器使用者。
+   - Web服务器用户，用于运行管理员和店面。
 
-   - A _命令列使用者_，此為本機使用者帳戶，可用來登入伺服器。 此使用者會執行Commerce cron作業和命令列公用程式。
+   - A _命令行用户_，这是可用于登录到服务器的本地用户帐户。 此用户运行Commerce cron作业和命令行实用程序。
 
-## 共用託管的生產檔案系統所有權（一名使用者）
+## 共享托管的生产文件系统所有权（一个用户）
 
-若要使用單一擁有者設定，您必須以執行網頁伺服器的相同使用者身分登入您的Commerce伺服器。 這是共用託管的典型做法。
+要使用单一所有者设置，您必须以运行Web服务器的相同用户身份登录到Commerce服务器。 这是典型的共享托管方式。
 
-因為有一個檔案系統擁有者不太安全，建議您儘可能將Commerce部署在生產環境中於私人伺服器，而非共用託管。
+由于拥有一位文件系统所有者不太安全，因此我们建议您尽可能将Commerce部署在专用服务器上的生产环境中，而不是共享主机上。
 
-### 為預設或開發人員模式設定一個擁有者
+### 为默认或开发人员模式设置一个所有者
 
-在預設或開發人員模式中，使用者必須可寫入下列目錄：
+在默认或开发人员模式下，用户必须可写入以下目录：
 
 - `vendor`
 - `app/etc`
 - `pub/static`
 - `var`
-- 任何其他靜態資源
+- 任何其他静态资源
 - `generated/code`
 - `generated/metadata`
 - `var/view_preprocessed`
 
-您可以使用命令列或共用託管提供者提供的檔案管理員應用程式來設定這些許可權。
+您可以使用命令行或共享托管提供程序提供的文件管理器应用程序来设置这些权限。
 
-### 為生產模式設定一個擁有者
+### 为生产模式设置一个所有者
 
-當您準備好將網站部署到生產環境時，您應該從以下目錄中的檔案移除寫入許可權，以提高安全性：
+当您准备好将站点部署到生产环境时，您应该从以下目录中的文件删除写访问权限，以提高安全性：
 
 - `vendor`
 - `app/code`
 - `app/etc`
 - `pub/static`
-- 任何其他靜態資源
+- 任何其他静态资源
 - `generated/code`
 - `generated/metadata`
 - `var/view_preprocessed`
 
-若要更新元件、安裝新元件或升級Commerce軟體，上述所有目錄必須為讀寫目錄。
+要更新组件、安装新组件或升级Commerce软件，上述所有目录都必须是读写目录。
 
-#### 將程式碼檔案和目錄設為唯讀
+#### 将代码文件和目录设为只读
 
-若要移除網頁伺服器使用者群組中檔案與目錄的寫入許可權：
+要从Web服务器用户组中删除对文件和目录的写入权限，请执行以下操作：
 
-1. 登入您的Commerce伺服器。
+1. 登录到您的Commerce服务器。
 
-1. 變更至Commerce安裝目錄。
+1. 转到Commerce安装目录。
 
-1. 變更為生產模式。
+1. 更改为生产模式。
 
    ```bash
    bin/magento deploy:mode:set production
    ```
 
-1. 移除下列目錄的寫入許可權。
+1. 删除对以下目录的写入权限。
 
    ```bash
    find app/code var/view_preprocessed vendor pub/static app/etc generated/code generated/metadata \( -type f -or -type d \) -exec chmod u-w {} + && chmod o-rwx app/etc/env.php
    ```
 
-1. 使命令列工具可執行。
+1. 使命令行工具可执行。
 
    ```bash
    chmod u+x bin/magento
    ```
 
-#### 將程式碼檔案和目錄設為可寫入
+#### 使代码文件和目录可写
 
-若要讓檔案和目錄可寫入，以便更新元件和升級Commerce軟體：
+要使文件和目录可写，以便更新组件并升级Commerce软件，请执行以下操作：
 
-1. 登入您的Commerce伺服器。
-1. 變更至Commerce安裝目錄。
-1. 輸入下列命令：
+1. 登录到您的Commerce服务器。
+1. 转到Commerce安装目录。
+1. 输入以下命令：
 
    ```bash
    chmod -R u+w .
    ```
 
-### 選擇性設定 `magento_umask`
+### （可选）设置 `magento_umask`
 
-另請參閱 [選擇性設定收件者](../../installation/next-steps/set-umask.md) 在 _安裝指南_.
+参见 [（可选）设置umask](../../installation/next-steps/set-umask.md) 在 _安装指南_.
 
-## 私人託管的生產檔案系統所有權（兩個使用者）
+## 专用托管的生产文件系统所有权（两个用户）
 
-如果您使用自己的伺服器（包括託管提供者的私人伺服器設定），則有兩個使用者：
+如果您使用自己的服务器（包括托管提供商的专用服务器设置），则有两个用户：
 
-- 此 **網頁伺服器使用者**，會執行管理員和店面。
+- 此 **Web服务器用户**，用于运行管理员和店面。
 
-   Linux系統通常不會為此使用者提供Shell；您無法以Web伺服器使用者的身分登入Commerce伺服器或切換至該使用者。
+   Linux系统通常不为此用户提供Shell；您无法以Web服务器用户身份登录Commerce服务器或切换到该用户。
 
-- 此 **命令列使用者**，您可在此登入或切換至您的Commerce伺服器。
+- 此 **命令行用户**，以或切换身份登录到Commerce服务器。
 
-   Commerce會使用此使用者執行CLI命令和cron。
+   Commerce使用此用户运行CLI命令和cron。
 
    >[!INFO]
    >
-   >命令列使用者也稱為 _檔案系統擁有者_.
+   >命令行用户也称为 _文件系统所有者_.
 
-由於這些使用者需要存取相同的檔案，因此建議您建立 [共用群組](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) 兩者都屬於哪一個。 下列程式假設您已完成此操作。
+由于这些用户需要访问相同的文件，因此我们建议您创建 [共享组](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) 他们俩都属于的。 以下过程假定您已完成此操作。
 
-請參閱下列其中一節：
+请参阅以下部分之一：
 
-- 處於開發人員或預設模式的兩個檔案系統擁有者
-- 兩個檔案系統擁有者處於生產模式
+- 开发人员或默认模式下的两个文件系统所有者
+- 生产模式下的两个文件系统所有者
 
-### 設定預設或開發人員模式的兩個擁有者
+### 为默认模式或开发人员模式设置两个所有者
 
-開發人員與預設模式下的使用者都必須可寫入下列目錄中的檔案：
+在开发人员和默认模式下，以下目录中的文件必须可以由用户同时写入：
 
 - `var`
 - `generated`
@@ -139,20 +139,20 @@ ht-degree: 0%
 - `pub/media`
 - `app/etc`
 
-設定 [`setgid`](https://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/) 位元在目錄中，因此許可權一律繼承自父目錄。
+设置 [`setgid`](https://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/) 位，因此权限始终从父目录继承。
 
 >[!INFO]
 >
->`setgid` 僅適用於目錄， _not_ 至檔案。
+>`setgid` 仅适用于目录， _非_ 到文件。
 
-此外，網頁伺服器群組應可寫入這些目錄。 由於這些目錄中可能存在內容，因此請遞回新增許可權。
+此外，这些目录应可由Web服务器组写入。 由于这些目录中可能存在内容，因此应递归添加权限。
 
-#### 設定許可權和 `setgid`
+#### 设置权限和 `setgid`
 
-要設定 `setgid` 開發人員模式的和許可權：
+要设置 `setgid` 和权限（开发人员模式）：
 
-1. 以檔案系統擁有者的身分登入或切換到您的Commerce伺服器。
-1. 依照顯示的順序輸入下列命令：
+1. 以文件系统所有者的身份登录或切换到您的Commerce服务器。
+1. 按照显示的顺序输入以下命令：
 
    ```bash
    cd <magento_root>
@@ -166,45 +166,45 @@ ht-degree: 0%
    find var generated pub/static pub/media app/etc -type d -exec chmod g+ws {} +
    ```
 
-### 兩個檔案系統擁有者處於生產模式
+### 生产模式下的两个文件系统所有者
 
-當您準備好將網站部署到生產環境時，您應該從以下目錄中的檔案移除寫入許可權，以提高安全性：
+当您准备好将站点部署到生产环境时，您应该从以下目录中的文件删除写访问权限，以提高安全性：
 
 - `vendor`
 - `app/code`
 - `app/etc`
 - `lib`
 - `pub/static`
-- 任何其他靜態資源
+- 任何其他静态资源
 - `generated/code`
 - `generated/metadata`
 - `var/view_preprocessed`
 
-#### 將程式碼檔案和目錄設為唯讀
+#### 将代码文件和目录设为只读
 
-若要移除網頁伺服器使用者群組中檔案與目錄的可寫入許可權：
+要从Web服务器用户组中删除对文件和目录的可写权限，请执行以下操作：
 
-1. 登入您的Commerce伺服器。
-1. 變更至Commerce安裝目錄。
-1. 以檔案系統擁有者的身分，輸入以下命令以變更至生產模式：
+1. 登录到您的Commerce服务器。
+1. 转到Commerce安装目录。
+1. 作为文件系统所有者，输入以下命令以更改为生产模式：
 
    ```bash
    bin/magento deploy:mode:set production
    ```
 
-1. 以使用者身分輸入以下命令，具有 `root` 許可權：
+1. 以用户身份输入以下命令 `root` 权限：
 
    ```bash
    find app/code lib pub/static app/etc generated/code generated/metadata var/view_preprocessed \( -type d -or -type f \) -exec chmod g-w {} + && chmod o-rwx app/etc/env.php
    ```
 
-#### 將程式碼檔案和目錄設為可寫入
+#### 使代码文件和目录可写
 
-若要讓檔案和目錄可寫入，以便更新元件和升級Commerce軟體：
+要使文件和目录可写，以便更新组件并升级Commerce软件，请执行以下操作：
 
-1. 登入您的Commerce伺服器。
-1. 變更至Commerce安裝目錄。
-1. 輸入下列命令：
+1. 登录到您的Commerce服务器。
+1. 转到Commerce安装目录。
+1. 输入以下命令：
 
    ```bash
    find app/code lib var generated vendor pub/static pub/media app/etc \( -type d -or -type f \) -exec chmod g+w {} + && chmod o+rwx app/etc/env.php

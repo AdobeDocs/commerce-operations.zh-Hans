@@ -5,23 +5,23 @@ source-wordcount: '271'
 ht-degree: 70%
 
 ---
-# 系統需求
+# 系统要求
 
 <table style="table-layout:auto">
   <thead>
     <tr>
       <th>
-        軟體相依性
+        软件依赖项
       </th>
       <th>2.4.6</th>
-      <th>2.4.5 - p2</th>
-      <th>2.4.5 - p1</th>
+      <th>2.4.5-p2</th>
+      <th>2.4.5-p1</th>
       <th>2.4.5</th>
       <th>2.4.4 - p3</th>
-      <th>2.4.4 - p2</th>
+      <th>2.4.4-p2</th>
       <th>2.4.4-p1</th>
       <th>2.4.4</th>
-      <th>2.4.3 - p3</th>
+      <th>2.4.3-p3</th>
       <th>2.4.3-p2</th>
       <th>2.4.3</th>
       <th>2.4.2</th>
@@ -800,8 +800,8 @@ ht-degree: 70%
 
 >[!IMPORTANT]
 >
->雲端基礎結構上Adobe Commerce的服務版本和相容性支援取決於雲端基礎結構上部署的版本，有時與Adobe Commerce內部部署支援的版本不同。 另請參閱 [支援的軟體與服務](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) 在 _雲端指南_.
+>云基础架构上Adobe Commerce的服务版本和兼容性支持取决于云基础架构上部署的版本，并且有时与Adobe Commerce内部部署支持的版本不同。 参见 [支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) 在 _云指南_.
 
 >[!NOTE]
 >
-><sup>*</sup>Adobe Commerce 2.4.5及舊版僅支援MySQL 8.0.28及舊版。
+><sup>*</sup>Adobe Commerce 2.4.5及更早版本仅支持MySQL 8.0.28及更早版本。

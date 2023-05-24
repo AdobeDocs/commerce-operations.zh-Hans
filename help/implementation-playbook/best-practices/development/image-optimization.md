@@ -1,6 +1,6 @@
 ---
-title: 最佳化影像，以建立回應速度更快的網站
-description: 瞭解最佳化影像的步驟，並使用Fastly影像最佳化來最佳化Adobe Commerce網站上的回應時間。
+title: 优化图像以实现响应更快速的网站
+description: 了解优化图像的步骤，并使用Fastly图像优化来优化Adobe Commerce网站上的响应时间。
 role: Developer, Admin
 feature: Best Practices
 feature-set: Commerce
@@ -12,30 +12,30 @@ ht-degree: 0%
 
 ---
 
-# 最佳化影像，以建立回應速度更快的網站
+# 优化图像以实现响应更快速的网站
 
-針對雲端基礎結構部署的Adobe Commerce，請先最佳化影像再上傳檔案，即可縮短網站回應時間。 然後，使用Fastly影像最佳化來加速影像傳送並簡化影像來源集的維護。
+对于Adobe Commerce on cloud infrastructure部署，可通过在上传图像之前优化图像来缩短站点响应时间。 然后，使用Fastly图像优化加快图像投放并简化图像源集的维护。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-雲端基礎結構上的Adobe Commerce
+云基础架构上的Adobe Commerce
 
 
-## 最佳化和壓縮影像
+## 优化和压缩图像
 
-在將影像上傳到您的Commerce網站之前，請最佳化和壓縮影像，以平衡效能和檢視品質。 這有助於增加空間並減少頁面載入時間。
+在将图像上传到Commerce网站之前，请优化并压缩图像以在性能和观看质量之间取得平衡。 这有助于增加空间并减少页面加载时间。
 
-- PNG格式可針對具有大面積純色區域的影像提供較小大小的影像。
+- PNG格式为具有大面积纯色区域的图像提供较小大小的图像。
 
-- JPEG格式可為所有其他影像型別提供較小大小的影像。 使用最高壓縮率（不會明顯降低）。 這通常是60%到80%。
+- JPEG格式可为所有其他图像类型提供较小大小的图像。 使用最高的压缩率（无明显降级）。 通常为60%至80%。
 
-## 啟用和設定Fastly影像最佳化
+## 启用和配置Fastly图像优化
 
-在您為Adobe Commerce Cloud專案設定Fastly服務後，請參閱 [Fastly影像最佳化](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html) 以取得啟用和設定影像最佳化的指示。
+为Adobe Commerce Cloud项目设置Fastly服务后，请参阅 [Fastly图像优化](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html) 有关启用和配置图像优化的说明。
 
-## 其他資訊
+## 其他信息
 
-- [設定Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
-- [最佳化不良的影像可能會導致效能問題](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html)
+- [设置Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
+- [优化不佳的映像可能会导致性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html)

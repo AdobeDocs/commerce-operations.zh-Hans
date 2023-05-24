@@ -1,6 +1,6 @@
 ---
-title: 設定操作模式
-description: 閱讀設定Adobe Commerce操作模式的相關資訊。
+title: 设置操作模式
+description: 阅读有关设置Adobe Commerce操作模式的信息。
 exl-id: 62d183fa-d4ff-441d-b8bd-64ef5ae10978
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# 設定操作模式
+# 设置操作模式
 
 {{file-system-owner}}
 
-為了提高安全性和易用性，我們新增了切換命令 [應用程式模式](../bootstrap/application-modes.md) 從開發人員到生產環境，反之亦然。
+为了提高安全性和易用性，我们添加了一个命令来切换 [应用程序模式](../bootstrap/application-modes.md) 从开发人员到生产环境，反之亦然。
 
-生產模式的效能較佳，因為靜態檢視檔案會填入 `pub/static` 目錄和，因為程式碼編譯。
+生产模式的性能更好，因为静态视图文件填充在 `pub/static` 目录和由于代码编译。
 
 >[!INFO]
 >
->在2.0.6版及更新版本中，當您在預設、開發和生產模式之間切換時，Commerce不會明確設定檔案或目錄許可權。 與其他模式不同，開發人員和生產模式設定在 `env.php` 檔案。 雲端基礎結構上的Adobe Commerce僅支援生產和維護模式。
+>在2.0.6版及更高版本中，当您在默认、开发和生产模式之间切换时，Commerce不会明确设置文件或目录权限。 与其他模式不同，开发人员和生产模式设置在 `env.php` 文件。 云基础架构上的Adobe Commerce仅支持生产和维护模式。
 >
->另請參閱 [開發和生產中的商務擁有權和許可權](../deployment/file-system-permissions.md).
+>参见 [开发和生产中的商业所有权和权限](../deployment/file-system-permissions.md).
 
-當您變更為開發人員或生產模式時，我們會清除以下目錄的內容：
+当您更改为开发人员或生产模式时，我们将清除以下目录的内容：
 
 ```terminal
 var/cache
@@ -35,24 +35,24 @@ pub/static
 
 例外：
 
-- `.htaccess` 未移除檔案
-- `pub/static` 包含指定靜態內容版本的檔案；此檔案未移除
+- `.htaccess` 未删除文件
+- `pub/static` 包含指定静态内容版本的文件；未删除此文件
 
 >[!INFO]
 >
->依預設，Commerce會使用 `var` 目錄以儲存快取、記錄檔和編譯的程式碼。 您可以自訂此目錄，但在本指南中，假設為 `var`.
+>默认情况下，Commerce使用 `var` 目录来存储缓存、日志和编译的代码。 您可以自定义此目录，但在本指南中，假定为 `var`.
 
-## 顯示目前模式
+## 显示当前模式
 
-最簡單的方法是執行此命令，做為 [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md). 如果您有共用託管，這是提供者可讓您登入伺服器的使用者。 如果您有私人伺服器，它通常是Commerce伺服器上的本機使用者帳戶。
+最简单的方法是运行此命令，作为 [文件系统所有者](../../installation/prerequisites/file-system/overview.md). 如果您具有共享托管，则这是您的提供商为您提供的用于登录到服务器的用户。 如果您有专用服务器，它通常是Commerce服务器上的本地用户帐户。
 
-命令使用方式：
+命令用法：
 
 ```bash
 bin/magento deploy:mode:show
 ```
 
-系統會顯示類似下列的訊息：
+将显示一条类似于以下内容的消息：
 
 ```terminal
 Current application mode: {mode}. (Note: Environment variables may override this value.)
@@ -62,9 +62,9 @@ Current application mode: {mode}. (Note: Environment variables may override this
 
 - **`{mode}`** 可以是 `default`， `developer`，或 `production`
 
-## 變更模式
+## 更改模式
 
-命令使用方式：
+命令用法：
 
 ```bash
 bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
@@ -72,19 +72,19 @@ bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
 
 其中：
 
-- **`{mode}`** 為必填，可以是 `developer` 或 `production`
+- **`{mode}`** 必需；可以是 `developer` 或 `production`
 
-- **`--skip-compilation`** 是您可用來略過的選用引數 [程式碼編譯](../cli/code-compiler.md) 當您變更為生產模式時。
+- **`--skip-compilation`** 是一个可用于跳过的参数 [代码编译](../cli/code-compiler.md) 当您更改为生产模式时。
 
-範例如下。
+示例如下。
 
-### 變更為生產模式
+### 更改为生产模式
 
 ```bash
 bin/magento deploy:mode:set production
 ```
 
-類似下列顯示的訊息：
+显示类似于以下内容的消息：
 
 ```terminal
 Enabled maintenance mode
@@ -125,42 +125,42 @@ Disabled maintenance mode
 Enabled production mode.
 ```
 
-### 變更為開發人員模式
+### 更改为开发人员模式
 
-當您從生產模式變更為開發人員模式時，應清除產生的類別和物件管理員實體（如代理），以避免意外的錯誤。 之後，您可以變更模式。 使用下列步驟：
+从生产模式更改为开发人员模式时，应清除生成的类和Object Manager实体（如代理）以防止意外错误。 完成此操作后，您可以更改模式。 使用以下步骤：
 
-1. 如果您要從生產模式變更為開發人員模式，請刪除 `generated/code` 和 `generated/metadata` 目錄：
+1. 如果您要从生产模式更改为开发人员模式，请删除 `generated/code` 和 `generated/metadata` 目录：
 
    ```bash
    rm -rf <magento_root>/generated/metadata/* <magento_root>/generated/code/*
    ```
 
-1. 設定模式：
+1. 设置模式：
 
    ```bash
    bin/magento deploy:mode:set developer
    ```
 
-   系統會顯示下列訊息：
+   将显示以下消息：
 
    ```terminal
    Enabled developer mode.
    ```
 
-### 變更為預設模式
+### 更改为默认模式
 
 ```bash
 bin/magento deploy:mode:set default
 ```
 
-系統會顯示下列訊息：
+将显示以下消息：
 
 ```terminal
 Enabled default mode.
 ```
 
-### 隨處執行CLI命令
+### 从任何位置运行CLI命令
 
-[隨處執行CLI命令](../cli/config-cli.md#config-install-cli-first).
+[从任何位置运行CLI命令](../cli/config-cli.md#config-install-cli-first).
 
-如果您尚未新增 `<Commerce-install-directory>/bin` 至您的系統 `PATH`，則單獨執行命令時可能會發生錯誤。
+如果您尚未添加 `<Commerce-install-directory>/bin` 到您的系统 `PATH`，则单独运行命令时可能会出错。

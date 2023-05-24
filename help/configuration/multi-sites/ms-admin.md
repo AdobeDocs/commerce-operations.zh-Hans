@@ -1,6 +1,6 @@
 ---
-title: 在「管理員」中設定多個網站、商店和商店檢視
-description: 在Commerce Admin中設定其他網站、商店和商店檢視。
+title: 在“管理员”中设置多个网站、商店和商店视图
+description: 在Commerce Admin中配置其他网站、商店和商店视图。
 exl-id: e6b4d14d-7504-48f9-a2e1-7e9a1bc76ab9
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,166 +9,166 @@ ht-degree: 0%
 
 ---
 
-# 在管理員中設定多個檢視
+# 在管理员中设置多个视图
 
-此工作需要您為每個商店建立根類別(以及其他類別（如有需要）)。 本主題中討論的任務提供設定多個存放區的方法。 如需詳細資訊，請參閱Commerce使用手冊中的下列資源：
+此任务要求您为每个存储创建一个根类别（如果需要，还可以创建其他类别）。 本主题中讨论的任务提供了一种设置多个存储区的方法。 有关其他信息，请参阅《Commerce用户指南》中的以下资源：
 
-- [類別](https://docs.magento.com/user-guide/catalog/categories.html)
-- [新增網站](https://docs.magento.com/user-guide/stores/stores-all-create-website.html)
-- [儲存URL](https://docs.magento.com/user-guide/stores/store-urls.html)
-- [內容](https://docs.magento.com/user-guide/cms/content-menu.html)
+- [类别](https://docs.magento.com/user-guide/catalog/categories.html)
+- [添加网站](https://docs.magento.com/user-guide/stores/stores-all-create-website.html)
+- [存储URL](https://docs.magento.com/user-guide/stores/store-urls.html)
+- [内容](https://docs.magento.com/user-guide/cms/content-menu.html)
 
 >[!INFO]
 >
->僅供範例用途，我們使用法文網站搭配網站程式碼 `french` 在本主題中。 如需逐步教學課程，請參閱 [教學課程：使用Apache設定多個網站](ms-apache.md) 和 [教學課程：使用nginx設定多個網站](ms-nginx.md)
+>仅出于示例目的，我们使用带有网站代码的法语网站 `french` 在本主题中。 有关分步教程，请参阅 [教程：使用Apache设置多个网站](ms-apache.md) 和 [教程：使用nginx设置多个网站](ms-nginx.md)
 
-## 步驟1：建立根類別
+## 步骤1：创建根类别
 
-建立根目錄類別為選用，但我們會在教學課程中說明如何在您希望每個網站都有唯一根目錄類別時執行此操作。 您可以選擇建立其他類別。
+创建根类别是可选的，但我们会在您希望每个网站都有一个唯一的根类别的情况下，在本教程中介绍如何创建根类别。 您可以选择创建其他类别。
 
-若要建立根類別，請執行下列動作：
+要创建根类别，请执行以下操作：
 
-1. 以獲授權建立類別的使用者身分登入管理員。
-1. 按一下 **目錄** > **類別**.
-1. 按一下 **新增根類別**.
-1. 在 **類別名稱** 欄位，輸入唯一名稱以識別此類別。
-1. 請確定「啟用類別」設為 **是**.
+1. 以有权创建类别的用户身份登录到管理员。
+1. 单击 **目录** > **类别**.
+1. 单击 **添加根类别**.
+1. 在 **类别名称** 字段，输入唯一名称以标识此类别。
+1. 确保启用类别设置为 **是**.
 
-   如需此頁面上其他選項的相關資訊，請參閱 [根類別](https://docs.magento.com/user-guide/catalog/category-root.html).
+   有关此页面上其他选项的信息，请参见 [根类别](https://docs.magento.com/user-guide/catalog/category-root.html).
 
-   下圖顯示一個範例。
+   下图显示了一个示例。
 
-   ![建立和啟用根類別](../../assets/configuration/add-root-category.png)
+   ![创建和启用根类别](../../assets/configuration/add-root-category.png)
 
-1. 按一下 **儲存**.
-1. 視需要重複這些工作多次，以建立存放區的根類別。
+1. 单击 **保存**.
+1. 根据需要重复这些任务多次，以便为存储区创建根类别。
 
-## 步驟2：建立網站
+## 步骤2：创建网站
 
-若要建立網站：
+要创建网站，请执行以下操作：
 
-1. 以獲授權建立網站、商店和商店檢視的使用者身分登入「管理員」。
-1. 按一下 **商店** > **設定** > **所有商店**.
-1. 於 _商店_ 頁面，按一下 **建立網站**.
+1. 以有权创建网站、商店和商店视图的用户身份登录到管理员。
+1. 单击 **商店** > **设置** > **所有商店**.
+1. 在 _商店_ 页面，单击 **创建网站**.
 
-   - **名稱** — 輸入名稱以識別網站。
-   - **程式碼** — 輸入唯一代碼；例如，如果您有法式商店，您可以輸入 `french`
-   - **排序順序** — 輸入選用的數字排序順序。
+   - **名称** — 输入用于标识网站的名称。
+   - **代码** — 输入唯一代码；例如，如果您有一个法式商店，则可以输入 `french`
+   - **排序顺序** — 输入可选的数字排序顺序。
 
-   下圖顯示一個範例。
+   下图显示了一个示例。
 
-   ![新增網站](../../assets/configuration/multi-site-website.png)
+   ![添加网站](../../assets/configuration/multi-site-website.png)
 
-1. 按一下 **儲存網站**.
-1. 視需要多次重複這些工作，以建立您的網站。
+1. 单击 **保存网站**.
+1. 创建网站时，根据需要重复这些任务多次。
 
-## 步驟3：建立存放區
+## 步骤3：创建存储
 
-若要建立存放區：
+要创建存储，请执行以下操作：
 
-1. 在 _管理員_ 面板，按一下 **商店** > **設定** > **所有商店**.
-1. 於 _商店_ 頁面，按一下 **建立存放區**.
+1. 在 _管理员_ 面板，单击 **商店** > **设置** > **所有商店**.
+1. 在 _商店_ 页面，单击 **创建商店**.
 
-   - **網站** — 按一下要與此商店關聯的網站名稱。
-   - **名稱** — 輸入名稱以識別存放區。
-   - **程式碼** — 輸入唯一代碼以識別商店。
-   - **根類別** — 按一下此存放區的根類別名稱。
+   - **网站** — 单击要与此商店关联的网站的名称。
+   - **名称** — 输入名称以标识存储。
+   - **代码** — 输入唯一代码以标识商店。
+   - **根类别** — 单击此存储的根类别的名称。
 
-   下圖顯示一個範例。
+   下图显示了一个示例。
 
-   ![新增商店](../../assets/configuration/multi-site-store.png)
+   ![添加商店](../../assets/configuration/multi-site-store.png)
 
-1. 按一下 **儲存存放區**.
-1. 視需要多次重複這些工作，以建立您的存放區。
+1. 单击 **保存存储**.
+1. 根据需要重复这些任务多次创建存储区。
 
-## 步驟4：建立商店檢視
+## 步骤4：创建商店视图
 
-若要建立商店檢視：
+要创建商店视图，请执行以下操作：
 
-1. 在 _管理員_ 面板，按一下 **商店** > **設定** > **所有商店**.
-1. 在「商店」頁面上，按一下 **建立存放區檢視**.
+1. 在 _管理员_ 面板，单击 **商店** > **设置** > **所有商店**.
+1. 在“商店”页面上，单击 **创建商店视图**.
 
-   - **儲存** — 按一下要與此存放區檢視產生關聯的存放區名稱。
-   - **名稱** — 輸入名稱以識別此存放區檢視。
-   - **程式碼** — 輸入唯一名稱以識別此存放區檢視。
-   - **狀態** — 選取 **已啟用**.
+   - **存储** — 单击要与此存储视图关联的存储的名称。
+   - **名称** — 输入用于标识此存储视图的名称。
+   - **代码** — 输入唯一名称以标识此存储视图。
+   - **状态** — 选择 **已启用**.
 
-   下圖顯示一個範例。
+   下图显示了一个示例。
 
-   ![新增商店](../../assets/configuration/multi-site-storeview.png)
+   ![添加商店](../../assets/configuration/multi-site-storeview.png)
 
-1. 按一下 **儲存存放區檢視**.
-1. 視需要重複這些工作多次，以建立您的商店檢視。
+1. 单击 **保存存储视图**.
+1. 根据需要重复这些任务多次以创建存储视图。
 
-## 步驟5：變更網站基底URL
+## 步骤5：更改网站基本URL
 
-若要使用類似以下的唯一URL存取網站 `http://french.magento.mg`，您必須變更Admin中每個網站的基本URL。
+使用唯一URL访问网站，例如 `http://french.magento.mg`中，您必须在“管理员”中更改每个站点的基本URL。
 
-若要變更網站基底URL：
+要更改网站基本URL，请执行以下操作：
 
-1. 在 _管理員_ 面板，按一下 **商店** > **設定** > **設定** > **一般** > **Web**.
-1. 從 **存放區檢視** 清單中，按一下其中一個網站的名稱，如下圖所示。
+1. 在 _管理员_ 面板，单击 **商店** > **设置** > **配置** > **常规** > **Web**.
+1. 从 **商店视图** 列表时，单击其中一个网站的名称，如下图所示。
 
-   ![選取範圍](../../assets/configuration/multi-site-scope.png)
+   ![选择范围](../../assets/configuration/multi-site-scope.png)
 
-1. 在右窗格中，展開 **基本URL**.
-1. 在 _基本URL_ 部分，清除 **使用系統值**.
-1. 輸入 `http://french.magento.mg` 中的URL **基本URL** 和 **基本連結URL** 欄位。
+1. 在右窗格中，展开 **基本URL**.
+1. 在 _基本URL_ 部分，清除 **使用系统值**.
+1. 输入 `http://french.magento.mg` 中的URL **基本URL** 和 **基本链接URL** 字段。
 
-1. 在中重複上一步驟 _基本URL （安全）_ 區段。
-
-   >[!INFO]
-   >
-   >如果您正在設定雲端基礎結構上部署Adobe Commerce的基礎URL，則必須將第一個句號取代為三個破折號。 例如，如果您的基本URL為 `french.branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`，輸入 `http://french---branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`. 如果您設定基本URL以進行本機測試，請使用句點。
-
-1. 按一下 **儲存設定**.
-
-1. 對其他網站重複這些工作。
-
-## 步驟6：將商店程式碼新增至基底URL
-
-Commerce可讓您選擇將商店程式碼新增至網站基底URL，簡化設定多個商店的程式。 使用此選項，您不需要在Commerce檔案系統上建立目錄來儲存 `index.php` 和 `.htaccess`.
-
-這可防止 `index.php` 和 `.htaccess` 避免在未來的升級中與Commerce程式碼基底不同步。
-
-請參閱 [Commerce使用手冊](https://docs.magento.com/user-guide/stores/store-urls.html).
-
-若要將商店程式碼新增至基底URL：
-
-1. 在 _管理員_ 面板，按一下 **商店** > **設定** > **設定** > **一般** > **Web**.
-1. 從 **存放區檢視** 清單中，按一下 **預設設定** 如下圖所示。
-
-   ![選取預設設定範圍](../../assets/configuration/multi-site-default.png)
-
-1. 在右窗格中，展開 **Url選項**.
-1. 清除 **使用系統值** 旁邊的核取方塊 _將存放區代碼新增至Url_.
-1. 從 _將存放區代碼新增至Url_ 清單，按一下 **是**.
-
-   ![將商店程式碼新增至商店基底URL](../../assets/configuration/multi-site-add-store-url.png)
-
-1. 按一下 **儲存設定**.
-1. 如果出現提示，請排清快取。 (**系統** > **快取管理**)。
-
-## 步驟7：變更預設商店檢視基底URL
-
-您必須在最後執行此步驟，因為您將失去管理員的存取權；您的存取權會在您設定虛擬主機後傳回，如網頁伺服器特定主題中所述。
-
-若要變更預設商店檢視基底URL：
-
-1. 在 _管理員_ 面板，按一下 **商店** > **設定** > **設定** > **一般** > **Web**.
-
-1. 從 _存放區檢視_ 清單中，按一下 **預設設定**.
-
-   ![選取預設設定範圍](../../assets/configuration/multi-site-default.png)
-
-1. 在右窗格中，展開 **基本URL**.
-1. 在 _基本URL_ 部分，清除 **使用系統值**.
-1. 輸入 `http://magento.mg` 中的URL **基本URL** 和 **基本連結URL** 欄位。
-
-1. 在中重複上一步驟 **基本URL （安全）** 區段。
+1. 在中重复上一步骤 _基本URL（安全）_ 部分。
 
    >[!INFO]
    >
-   >如果您在雲端基礎結構上設定Adobe Commerce的基礎URL，則必須將第一個句號取代為三個破折號。 例如，如果您的基本URL為 `french.branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`，輸入 `http://french---branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`
+   >如果要为云基础架构上的Adobe Commerce部署设置基本URL，则必须将第一个时段替换为三个短划线。 例如，如果您的基本URL为 `french.branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`，输入 `http://french---branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`. 如果要设置基本URL以进行本地测试，请使用句点。
 
-1. 按一下 **儲存設定**.
+1. 单击 **保存配置**.
+
+1. 对其他网站重复这些任务。
+
+## 步骤6：将存储代码添加到基本URL
+
+Commerce为您提供了将商店代码添加到网站基础URL的选项，这简化了设置多个商店的过程。 使用此选项，您无需在Commerce文件系统上创建目录即可存储 `index.php` 和 `.htaccess`.
+
+这样可防止 `index.php` 和 `.htaccess` 在以后的升级中不再与Commerce代码库同步。
+
+请参阅 [Commerce用户指南](https://docs.magento.com/user-guide/stores/store-urls.html).
+
+要将存储代码添加到基本URL，请执行以下操作：
+
+1. 在 _管理员_ 面板，单击 **商店** > **设置** > **配置** > **常规** > **Web**.
+1. 从 **商店视图** 列表时，单击 **默认配置** 如下图所示。
+
+   ![选择默认配置范围](../../assets/configuration/multi-site-default.png)
+
+1. 在右窗格中，展开 **Url选项**.
+1. 清除 **使用系统值** 旁边的复选框 _将存储代码添加到Url_.
+1. 从 _将存储代码添加到Url_ 列表，单击 **是**.
+
+   ![将商店代码添加到商店基本URL](../../assets/configuration/multi-site-add-store-url.png)
+
+1. 单击 **保存配置**.
+1. 如果出现提示，请刷新缓存。 (**系统** > **缓存管理**)。
+
+## 步骤7：更改默认存储视图基本URL
+
+您必须在最后执行此步骤，因为您将失去对管理员的访问权限；在您设置虚拟主机后，您的访问权限将返回，如特定于Web服务器的主题中所述。
+
+要更改默认存储视图基本URL，请执行以下操作：
+
+1. 在 _管理员_ 面板，单击 **商店** > **设置** > **配置** > **常规** > **Web**.
+
+1. 从 _商店视图_ 列表时，单击 **默认配置**.
+
+   ![选择默认配置范围](../../assets/configuration/multi-site-default.png)
+
+1. 在右窗格中，展开 **基本URL**.
+1. 在 _基本URL_ 部分，清除 **使用系统值**.
+1. 输入 `http://magento.mg` 中的URL **基本URL** 和 **基本链接URL** 字段。
+
+1. 在中重复上一步骤 **基本URL（安全）** 部分。
+
+   >[!INFO]
+   >
+   >如果您在云基础架构上为Adobe Commerce设置基本URL，则必须将第一个句点替换为三个短划线。 例如，如果您的基本URL为 `french.branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`，输入 `http://french---branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`
+
+1. 单击 **保存配置**.

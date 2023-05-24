@@ -1,6 +1,6 @@
 ---
-title: 記錄器介面
-description: 開始使用記錄器介面。
+title: 记录器界面
+description: 开始使用记录器界面。
 feature: Configuration, Logs
 exl-id: fdb1b431-405a-4c32-aff1-9e50bf0a2c90
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# 記錄器介面
+# 记录器界面
 
-若要開始使用記錄器，您必須建立 `\Psr\Log\LoggerInterface`. 透過此介面，您可以呼叫下列函式以將資料寫入記錄檔：
+要开始使用日志程序，您必须创建实例 `\Psr\Log\LoggerInterface`. 通过此界面，您可以调用以下函数将数据写入日志文件：
 
 - [alert()](https://github.com/php-fig/log/blob/master/src/LoggerInterface.php#L43)
 - [critical()](https://github.com/php-fig/log/blob/master/src/LoggerInterface.php#L55)
@@ -24,9 +24,9 @@ ht-degree: 0%
 - [notice()](https://github.com/php-fig/log/blob/master/src/LoggerInterface.php#L89)
 - [warning()](https://github.com/php-fig/log/blob/master/src/LoggerInterface.php#L79)
 
-其中一個方法會在以下章節說明： [記錄資料庫活動](../logs/database-activity.md) 範例。
+实现该目标的一种方法在 [记录数据库活动](../logs/database-activity.md) 示例。
 
-另一種方式如下：
+另一种方式如下：
 
 ```php
 class SomeModel
@@ -49,6 +49,6 @@ class SomeModel
  }
 ```
 
-前面的範例顯示 `SomeModel` 接收 `\Psr\Log\LoggerInterface` 物件使用建構子插入。 在方法中 `doSomething`，如果發生一些錯誤，則會記錄到方法 `critical` (`$this->logger->critical($e);`)。
+上例显示 `SomeModel` 接收 `\Psr\Log\LoggerInterface` 对象使用构造函数注入。 在方法中 `doSomething`，如果出现错误，则会记录到方法 `critical` (`$this->logger->critical($e);`)。
 
-[RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424) 會定義8個記錄層級（偵錯、資訊、通知、警告、錯誤、嚴重、警示和緊急）。
+[RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424) 定义了八个日志级别（调试、信息、通知、警告、错误、严重、警报和紧急）。

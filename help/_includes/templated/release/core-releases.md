@@ -5,17 +5,17 @@ source-wordcount: '501'
 ht-degree: 14%
 
 ---
-# 發行版本
+# 已发布版本
 
 ## 2.4.6
 
-對2.4.6版本系列的支援將於2026年3月14日終止。
+对2.4.6版本线的支持将于2026年3月14日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
@@ -30,25 +30,25 @@ ht-degree: 14%
 
 ## 2.4.5
 
-對2.4.5版本的支援將於2025年8月9日終止。
+对2.4.5版本线的支持将于2025年8月9日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p2.html">2.4.5 - p2</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p2.html">2.4.5-p2</a>
         </td>
         <td>2023年3月14日</td>
     </tr>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p1.html">2.4.5 - p1</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p1.html">2.4.5-p1</a>
         </td>
         <td>2022年10月11日</td>
     </tr>
@@ -63,13 +63,13 @@ ht-degree: 14%
 
 ## 2.4.4
 
-對2.4.4版本系列的支援將於2025年4月12日終止。
+对2.4.4版本线的支持将于2025年4月12日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
@@ -81,7 +81,7 @@ ht-degree: 14%
     </tr>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p2.html">2.4.4 - p2</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p2.html">2.4.4-p2</a>
         </td>
         <td>2022年10月11日</td>
     </tr>
@@ -102,19 +102,19 @@ ht-degree: 14%
 
 ## 2.4.0-2.4.3
 
-對2.4.0-2.4.3版本系列的支援已於2022年11月28日終止。
+对2.4.0-2.4.3版本线的支持于2022年11月28日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-3-p3.html">2.4.3 - p3</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-3-p3.html">2.4.3-p3</a>
         </td>
         <td>2022年8月9日</td>
     </tr>
@@ -138,7 +138,7 @@ ht-degree: 14%
     </tr>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-2-p2.html">2.4.2 - p2</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-2-p2.html">2.4.2-p2</a>
         </td>
         <td>2021年8月10日</td>
     </tr>
@@ -183,13 +183,13 @@ ht-degree: 14%
 
 ## 2.3
 
-對2.3版本系列的支援已於2022年9月8日終止。
+对2.3版本线的支持于2022年9月8日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
@@ -213,7 +213,7 @@ ht-degree: 14%
     </tr>
     <tr>
         <td>
-          <a href="https://devdocs.magento.com/guides/v2.3/release-notes/2-3-7-p1.html">2.3.7 - p1</a>
+          <a href="https://devdocs.magento.com/guides/v2.3/release-notes/2-3-7-p1.html">2.3.7-p1</a>
         </td>
         <td>2021年8月10日</td>
     </tr>
@@ -225,7 +225,7 @@ ht-degree: 14%
     </tr>
     <tr>
         <td>
-          2.3.6 - p1
+          2.3.6-p1
         </td>
         <td>2021年2月9日</td>
     </tr>
@@ -237,7 +237,7 @@ ht-degree: 14%
     </tr>
     <tr>
         <td>
-          2.3.5 - p2
+          2.3.5-p2
         </td>
         <td>2020年7月28日</td>
     </tr>
@@ -249,7 +249,7 @@ ht-degree: 14%
     </tr>
     <tr>
         <td>
-          2.3.4 - p2
+          2.3.4-p2
         </td>
         <td>2020年4月28日</td>
     </tr>
@@ -273,7 +273,7 @@ ht-degree: 14%
     </tr>
     <tr>
         <td>
-          2.3.2 - p2
+          2.3.2-p2
         </td>
         <td>2019年10月9日</td>
     </tr>
@@ -281,7 +281,7 @@ ht-degree: 14%
         <td>
           <a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-3-commerce.html">2.3.3</a>
         </td>
-        <td>2019年10月8</td>
+        <td>2019年10月8日</td>
     </tr>
     <tr>
         <td>
@@ -293,7 +293,7 @@ ht-degree: 14%
         <td>
           <a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.1Commerce.html">2.3.1</a>
         </td>
-        <td>2019年3月26</td>
+        <td>2019年3月26日</td>
     </tr>
     <tr>
         <td>
@@ -306,13 +306,13 @@ ht-degree: 14%
 
 ## 2.2
 
-對2.2版本的支援已於2019年12月1日終止。
+对2.2版本线的支持于2019年12月1日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
@@ -326,7 +326,7 @@ ht-degree: 14%
         <td>
           2.2.10
         </td>
-        <td>2019年10月8</td>
+        <td>2019年10月8日</td>
     </tr>
     <tr>
         <td>
@@ -338,7 +338,7 @@ ht-degree: 14%
         <td>
           2.2.8
         </td>
-        <td>2019年3月26</td>
+        <td>2019年3月26日</td>
     </tr>
     <tr>
         <td>
@@ -380,26 +380,26 @@ ht-degree: 14%
         <td>
           2.2.1
         </td>
-        <td>2017年11月7</td>
+        <td>2017年11月7日</td>
     </tr>
     <tr>
         <td>
           2.2.0
         </td>
-        <td>2017年9月26</td>
+        <td>2017年9月26日</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>
 
 ## 2.1
 
-對2.1版本的支援已於2019年6月30日終止。
+对2.1版本线的支持于2019年6月30日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
@@ -413,7 +413,7 @@ ht-degree: 14%
         <td>
           2.1.17
         </td>
-        <td>2019年3月26</td>
+        <td>2019年3月26日</td>
     </tr>
     <tr>
         <td>
@@ -455,13 +455,13 @@ ht-degree: 14%
         <td>
           2.1.10
         </td>
-        <td>2017年11月7</td>
+        <td>2017年11月7日</td>
     </tr>
     <tr>
         <td>
           2.1.9
         </td>
-        <td>2017年9月14</td>
+        <td>2017年9月14日</td>
     </tr>
     <tr>
         <td>
@@ -479,7 +479,7 @@ ht-degree: 14%
         <td>
           2.1.6
         </td>
-        <td>2017年4月11日</td>
+        <td>2017年4月11</td>
     </tr>
     <tr>
         <td>
@@ -509,26 +509,26 @@ ht-degree: 14%
         <td>
           2.1.1
         </td>
-        <td>2016年8月30</td>
+        <td>2016年8月30日</td>
     </tr>
     <tr>
         <td>
           2.1.0
         </td>
-        <td>2016年6月23</td>
+        <td>二零一六年六月二十三日</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>
 
 ## 2.0
 
-對2.0版本的支援已於2018年3月31日終止。
+对2.0版本行的支持于2018年3月31日终止。
 
 <table>
   <thead>
     <tr>
-      <th>修補程式版本</th>
-      <th>發行日期</th>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
     </tr>
   </thead>
   <tbody>
@@ -542,13 +542,13 @@ ht-degree: 14%
         <td>
           2.0.17
         </td>
-        <td>2017年11月7</td>
+        <td>2017年11月7日</td>
     </tr>
     <tr>
         <td>
           2.0.16
         </td>
-        <td>2017年9月14</td>
+        <td>2017年9月14日</td>
     </tr>
     <tr>
         <td>
@@ -590,13 +590,13 @@ ht-degree: 14%
         <td>
           2.0.9
         </td>
-        <td>2016年8月10</td>
+        <td>2016年8月10日</td>
     </tr>
     <tr>
         <td>
           2.0.8
         </td>
-        <td>2016年7月19</td>
+        <td>二零一六年七月十九日</td>
     </tr>
     <tr>
         <td>
@@ -608,13 +608,13 @@ ht-degree: 14%
         <td>
           2.0.6
         </td>
-        <td>2016年5月17</td>
+        <td>2016年5月17日</td>
     </tr>
     <tr>
         <td>
           2.0.5
         </td>
-        <td>2016年4月28</td>
+        <td>2016年4月28日</td>
     </tr>
     <tr>
         <td>
@@ -626,13 +626,13 @@ ht-degree: 14%
         <td>
           2.0.3
         </td>
-        <td>2016年3月30</td>
+        <td>2016年3月30日</td>
     </tr>
     <tr>
         <td>
           2.0.2
         </td>
-        <td>2016年1月28</td>
+        <td>2016年1月28日</td>
     </tr>
     <tr>
         <td>
@@ -644,7 +644,7 @@ ht-degree: 14%
         <td>
           2.0.0
         </td>
-        <td>2015年117月</td>
+        <td>二零一五年十一月十七日</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table> <!-- minor_releases -->

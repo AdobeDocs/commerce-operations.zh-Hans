@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Site-Wide Analysis Tool]'
-description: 瞭解 [!DNL Site-Wide Analysis] 工具、其用途、安裝過程以及如何取得存取權
+description: 了解 [!DNL Site-Wide Analysis] 工具、其用途、安装过程以及如何获得访问权限
 exl-id: 32774040-d322-43d6-9c26-c340a0ab58a9
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,53 +11,53 @@ ht-degree: 0%
 
 # [!DNL Site-Wide Analysis Tool]
 
-本指南提供 [!DNL Site-Wide Analysis Tool]. 其說明使用、安裝的逐步指示以及如何存取工具。
+本指南提供了 [!DNL Site-Wide Analysis Tool]. 它介绍了该工具的用途、安装分步说明以及访问该工具的方法。
 
-## 什麼是 [!DNL Site-Wide Analysis Tool]？
+## 什么是 [!DNL Site-Wide Analysis Tool]？
 
-此 [!DNL Site-Wide Analysis Tool] 是主動式自助服務工具和中央存放庫，其中包含詳細的系統分析和建議，以確保您的Adobe Commerce安裝的安全性和可操作性。 它提供全天候的即時效能監控、報告和建議，以找出潛在問題，並更好地瞭解網站健康狀況、安全性和應用程式設定。 它有助於縮短解析時間，並改善網站穩定性和效能。
+此 [!DNL Site-Wide Analysis Tool] 是一个主动式自助服务工具和中央存储库，其中包含详细的系统分析和建议，以确保Adobe Commerce安装的安全性和可操作性。 它提供全天候的实时性能监控、报告和建议，以确定潜在问题，并更好地了解站点运行状况、安全和应用程序配置。 它有助于缩短解决时间并改进站点稳定性和性能。
 
-檢視此 [簡介影片](https://www.youtube.com/watch?v=KW2R8ki_RG4) 以深入瞭解。
+查看此 [简介视频](https://www.youtube.com/watch?v=KW2R8ki_RG4) 了解更多信息。
 
 ## 工具概述
 
-- **儀表板**
-   - 顯示系統整體健康狀況，包含偵測到的問題通知和依優先順序的特定建議。<br>
-其中也包含歷史圖表，以追蹤您網站健康情況在一段時間內的變化。
-   - 顯示 **[!UICONTROL Security Center Widget]** 可讓您存取：
-      - [技術 [!DNL Stack] 版本法規遵循 [!DNL end of life (EOL)]](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
-      - [Adobe安全性公告](https://helpx.adobe.com/security/security-bulletin.html)
-      - [來自的Recommendations [!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html)
-      - [[!DNL Site-Wide Analysis Tool] 安全性最佳實務Recommendations](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations.html)
+- **仪表板**
+   - 显示系统的整体运行状况，以及检测到的问题的通知和按优先级列出的特定建议。<br>
+它还包含一个历史图表，用于跟踪您网站的运行状况随时间的变化。
+   - 显示 **[!UICONTROL Security Center Widget]** 允许您访问：
+      - [技术 [!DNL Stack] 版本符合性 [!DNL end of life (EOL)]](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
+      - [Adobe安全公告](https://helpx.adobe.com/security/security-bulletin.html)
+      - [Recommendations来自 [!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html)
+      - [[!DNL Site-Wide Analysis Tool] 最佳实践安全性Recommendations](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations.html)
 
-- **資訊**  — 提供客戶聯絡資訊和目前票證的摘要，以及安裝的每個Adobe Commerce產品的詳細資訊。
+- **信息**  — 提供客户联系信息和当前票证摘要，以及有关每个已安装的Adobe Commerce产品的详细信息。
 
-- **Recommendations**  — 根據最佳實務列出建議，以解決在您的網站上偵測到的問題。
+- **Recommendations**  — 根据最佳实践列出建议，以解决在您的网站上检测到的问题。
 
-- **例外**  — 列出應用程式因無錯誤處理常式的異常狀況所引發的錯誤。
+- **例外**  — 列出由无错误处理程序的异常条件导致的应用程序引发的错误。
 
-- **擴充功能**  — 列出所有協力廠商擴充功能和協力廠商程式庫。
+- **扩展**  — 列出所有第三方扩展和第三方库。
 
-- **修補程式**  — 與 [!DNL Quality Patches Tool]，它會提供您Adobe Commerce執行個體專屬的所有可用修補程式清單。
+- **补丁程序**  — 与 [!DNL Quality Patches Tool]，它提供特定于Adobe Commerce实例的所有可用修补程序的列表。
 
-## 與其他Adobe Commerce支援工具的整合
+## 与其他Adobe Commerce支持工具的集成
 
-在一個位置檢視有關您網站的所有重要深入分析。 [!DNL Site-Wide Analysis Tool] 可讓您直接存取 [!UICONTROL Security Center Widget]， [!DNL Upgrade Compatability Tool]、和 [!DNL Managed Alerts].
+在一个位置查看有关您网站的所有重要见解。 [!DNL Site-Wide Analysis Tool] 允许您直接访问，并从 [!UICONTROL Security Center Widget]， [!DNL Upgrade Compatability Tool]、和 [!DNL Managed Alerts].
 
-- [**[!UICONTROL Security Center Widget]**] — 顯示網站的安全性深入分析。<br>
-顯示的安全性資訊包括 [技術 [!DNL Stack] 版本法規遵循 [!DNL end of life (EOL)]](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html), [Adobe Security Bulletin](https://helpx.adobe.com/security/security-bulletin.html), [Recommendations from the [!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html), and [[!DNL Site-Wide Analysis Tool] 安全性最佳實務Recommendations](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations.html).<br>
-此 [[!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html) 主動偵測惡意軟體，並在其存放區受到侵害時通知客戶，藉此為Adobe Commerce和Magento開放原始碼客戶提供其存放區安全性狀態的即時深入分析。
+- [**[!UICONTROL Security Center Widget]**] — 显示网站的安全分析。<br>
+显示的安全信息包括 [技术 [!DNL Stack] 版本符合性 [!DNL end of life (EOL)]](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html), [Adobe Security Bulletin](https://helpx.adobe.com/security/security-bulletin.html), [Recommendations from the [!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html), and [[!DNL Site-Wide Analysis Tool] 最佳实践安全性Recommendations](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations.html).<br>
+此 [[!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html) 通过主动检测恶意软件并在其存储遭到破坏时通知他们，为Adobe Commerce和Magento开源客户实时了解其存储的安全状态。
 
-- [**[!DNL Upgrade Compatability Tool]**](../../upgrade/upgrade-compatibility-tool/overview.md)  — 針對目標升級版本執行Adobe Commerce的自訂執行個體，並傳回必須解決的嚴重問題、錯誤和警告摘要，使升級分析程式更容易、更快、更便宜。
+- [**[!DNL Upgrade Compatability Tool]**](../../upgrade/upgrade-compatibility-tool/overview.md)  — 针对目标升级版本运行Adobe Commerce的自定义实例，并返回必须解决的关键问题、错误和警告的摘要，从而使升级分析过程变得更轻松、更快和更便宜。
 
-- [**[!DNL Managed Alerts]**](https://support.magento.com/hc/en-us/sections/360010758472-Managed-alerts-for-Adobe-Commerce)  — 監控多個量度，主動追蹤平台的效能，並提供疑難排解問題的特定指示，讓商戶可避免嚴重停機時間，並隨時瞭解其CPU、應用程式效能、磁碟、記憶體和資料庫。
+- [**[!DNL Managed Alerts]**](https://support.magento.com/hc/en-us/sections/360010758472-Managed-alerts-for-Adobe-Commerce)  — 监控多个量度以主动跟踪平台的性能，并提供有关如何排查问题的具体说明，以便商家避免严重停机并及时了解其CPU、应用程序性能、磁盘、内存和数据库。
 
-## 本指南的對象為誰？
+## 本指南面向谁？
 
-想要更深入瞭解其Adobe Commerce網站的商家和合作夥伴。 它可讓商戶改善其客戶體驗，並在最佳實務建議和基本問題上更緊密地保持一致。
+希望提高其Adobe Commerce网站可见度的商家和合作伙伴。 它使商家能够改善其客户体验，并在最佳实践建议和基本问题上更紧密地保持一致。
 
-## [!DNL Site-Wide Analysis Tool] 示範
+## [!DNL Site-Wide Analysis Tool] 演示
 
-觀看此影片以瞭解 [!DNL Site-Wide Analysis Tool]：
+观看本视频，了解 [!DNL Site-Wide Analysis Tool]：
 
 >[!VIDEO](https://video.tv.adobe.com/v/344001?quality=12)

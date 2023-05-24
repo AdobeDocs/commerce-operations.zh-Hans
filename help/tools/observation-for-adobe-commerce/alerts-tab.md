@@ -1,6 +1,6 @@
 ---
-title: 此 [!UICONTROL Alerts] 標籤
-description: 瞭解 [!UICONTROL Alerts] 索引標籤/ [!DNL Observation for Adobe Commerce].
+title: 此 [!UICONTROL Alerts] 选项卡
+description: 了解 [!UICONTROL Alerts] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: e9305576-6ed2-48f3-baec-36e081b0d04b
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 0%
 
 ---
 
-# 此 [!UICONTROL Alerts] 標籤
+# 此 [!UICONTROL Alerts] 选项卡
 
-此 [!UICONTROL Alerts] 索引標籤提供一系列警示，包括未結和關閉嚴重警示。
+此 [!UICONTROL Alerts] 选项卡提供了一系列警报，其中包括打开和关闭严重警报。
 
 ## [!UICONTROL Open Alert Details]
 
-![開啟嚴重警示](../../assets/tools/observation-for-adobe-commerce/alerts-tab-1.jpg)
+![打开严重警报](../../assets/tools/observation-for-adobe-commerce/alerts-tab-1.jpg)
 
-此 **[!UICONTROL Open Alert Details]** 影格會顯示所選時間範圍內未解決的嚴重性警示計數。 警報將包含Adobe建立的警報，以及合作夥伴或商家建立的任何警報。
+此 **[!UICONTROL Open Alert Details]** 框架显示选定时间范围内未解决的严重警报的计数。 这些警报将包括Adobe创建的警报以及合作伙伴或商家创建的任何警报。
 
 ## [!UICONTROL Closed Critical Alerts]
 
-![已關閉的嚴重警示](../../assets/tools/observation-for-adobe-commerce/alerts-tab-2.jpg)
+![关闭的严重警报](../../assets/tools/observation-for-adobe-commerce/alerts-tab-2.jpg)
 
-此 **[!UICONTROL Closed Critical Alerts]** 影格會顯示所選時間範圍內已關閉嚴重性警示的計數。 警報將包含Adobe建立的警報，以及合作夥伴或商家建立的任何警報。
+此 **[!UICONTROL Closed Critical Alerts]** 框架显示选定时间范围内已关闭的严重警报的计数。 这些警报将包括Adobe创建的警报以及合作伙伴或商家创建的任何警报。
 
 ## [!UICONTROL Critical Alert Details]
 
-![嚴重警示詳細資料](../../assets/tools/observation-for-adobe-commerce/alerts-tab-3.jpg)
+![严重预警详细信息](../../assets/tools/observation-for-adobe-commerce/alerts-tab-3.jpg)
 
-此 **[!UICONTROL Critical Alert Details]** frame會顯示所選時間範圍內嚴重警示詳細資料的計數，包括時間戳記、條件名稱，以及警示事件是開啟還是關閉。
+此 **[!UICONTROL Critical Alert Details]** 框架显示选定时间范围内关键警报详细信息的计数，包括时间戳、条件名称以及警报事件是打开还是关闭。
 
 ## [!UICONTROL Infrastructure Alert Details]
 
-![基礎結構警示詳細資料](../../assets/tools/observation-for-adobe-commerce/alerts-tab-4.jpg)
+![基础架构警报详细信息](../../assets/tools/observation-for-adobe-commerce/alerts-tab-4.jpg)
 
-此 **[!UICONTROL Infrastructure Alert Details]** 影格會顯示所選時間範圍內的應用程式、主機和其他基礎結構事件。
+此 **[!UICONTROL Infrastructure Alert Details]** 此框架显示选定时间范围内的应用程序、主机和其他基础架构事件。

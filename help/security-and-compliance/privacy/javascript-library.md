@@ -1,6 +1,6 @@
 ---
-title: 隱私權JavaScript程式庫
-description: 瞭解如何使用自訂工具來存取和刪除Adobe Commerce和Magento Open Source收集的客戶個人資訊。
+title: 隐私JavaScript库
+description: 了解如何使用自定义工具访问和删除Adobe Commerce和Magento Open Source收集的客户个人信息。
 exl-id: bcfea656-2cf0-48ae-9049-d91679166d05
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,29 +11,29 @@ ht-degree: 0%
 
 <!-- TODO: Remove this topic and redirect to the adobe-privacy-javascript-library.md when the Adobe privacy library has been integrated with Commerce. -->
 
-# 隱私權JavaScript程式庫
+# 隐私JavaScript库
 
-隱私權JavaScript程式庫是一組工具，可協助建立存取和刪除Adobe Commerce和Magento Open Source所收集私人資料的程式。
+隐私JavaScript库是一组工具，可帮助创建用于访问和删除Adobe Commerce和Magento Open Source收集的私有数据的流程。
 
-Commerce資料追蹤服務可儲存適用於隱私權法規的私人資訊，例如 [一般資料保護規範(GDPR)](gdpr.md) 和 [加州消費者隱私法(CCPA)](ccpa.md).
+Commerce数据跟踪服务可以存储适用于隐私法规的隐私信息，例如 [通用数据保护条例(GDPR)](gdpr.md) 和 [《加州消费者隐私法案》(CCPA)](ccpa.md).
 
-此程式庫提供一組功能，用於建立隱私權資料請求及收集其回應。 使用此資料庫可擷取和移除Adobe Commerce和Magento Open Source資料追蹤服務儲存在瀏覽器中的資料。
+此库提供了一组用于创建隐私数据请求和收集其响应的功能。 使用此库可检索和删除Adobe Commerce和Magento Open Source数据跟踪服务存储在浏览器中的数据。
 
 >[!NOTE]
 >
->若 [Cookie限制模式](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) 已啟用，在購物者同意之前，Commerce不會收集行為資料。 若 [!UICONTROL **Cookie限制模式**] 停用，Commerce會依預設收集行為資料。
+>如果 [Cookie限制模式](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) 启用，在购物者同意之前，Commerce不会收集行为数据。 如果 [!UICONTROL **Cookie限制模式**] 禁用，默认情况下，Commerce会收集行为数据。
 
-## 安裝
+## 安装
 
-隱私權JavaScript程式庫可在下列CDN位置取得： `commerce.adobe.net/magentoprivacy.js`
+隐私JavaScript库在以下位置提供： `commerce.adobe.net/magentoprivacy.js`
 
-取得檔案後，您需要將其新增到安裝在Adobe Commerce或Magento Open Source執行個體中的自訂模組或主題。 請依照以下說明操作： [使用自訂JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) 完成此任務的主題。
+获得文件后，您需要将其添加到Adobe Commerce或Magento Open Source实例中安装的自定义模块或主题。 按照 [使用自定义JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) 完成此任务的主题。
 
 ### 初始化
 
-匯入並例項化新的 `MagentoPrivacy` 物件或使用 `window` 物件以存取隱私權JavaScript函式。
+导入并实例化新的 `MagentoPrivacy` 对象或使用 `window` 用于访问隐私JavaScript函数的对象。
 
-使用的範例 `import`：
+示例使用 `import`：
 
 ```js
 import MagentoPrivacy from "./MagentoPrivacy"
@@ -41,18 +41,18 @@ import MagentoPrivacy from "./MagentoPrivacy"
 const magePriv = new MagentoPrivacy()
 ```
 
-使用的範例 `window`：
+示例使用 `window`：
 
 ```js
 const magePriv = new window.MagentoPrivacy()
 ```
 
-## 使用狀況
+## 使用情况
 
-隱私權JS資料庫提供多種功能，可管理儲存在瀏覽器中的身分資料。
+隐私JS库提供了多种功能，用于管理存储在浏览器中的身份数据。
 
 `retrieveIdentity()`
-：從瀏覽器中的服務傳回身分物件的JavaScript Promise。
+：从浏览器中的服务返回标识对象的JavaScript promise。
 
 ```js
 magePriv.retrieveIdentity().then((ids)=>console.log(ids))
@@ -60,8 +60,8 @@ magePriv.retrieveIdentity().then((ids)=>console.log(ids))
 ```
 
 `removeIdentity()`
-：從瀏覽器中的服務移除身分資料。
-此函式傳回身分物件的JavaScript Promise，其中包含 `isDeleted` 指示資料是否已刪除的布林屬性。
+：从浏览器中的服务删除身份数据。
+此函数返回一个标识对象的JavaScript promise，其中包含 `isDeleted` 指示数据是否已删除的布尔属性。
 
 ```js
 magePriv.removeIdentity().then((ids)=>console.log(ids))

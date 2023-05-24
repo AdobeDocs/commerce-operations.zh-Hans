@@ -1,6 +1,6 @@
 ---
 title: Adobe Commerce
-description: Adobe Commerce說明
+description: Adobe Commerce描述
 exl-id: 130bae23-8a22-4523-abe2-8dc97b3881d2
 source-git-commit: 1611a8cab95ec24a1420fac31958853e28033af6
 workflow-type: tm+mt
@@ -9,29 +9,29 @@ ht-degree: 0%
 
 ---
 
-# 關於Adobe Commerce
+# 关于Adobe Commerce
 
-Adobe Commerce是開放商業創新的領導平台。 Adobe Commerce每年處理的商品總值超過1,000億美元。 Adobe Commerce可讓客戶建立獨特、魅力十足的購物體驗、現成可用的功能、無限制的自訂功能、彈性的Headless架構，以及順暢的協力廠商整合。
+Adobe Commerce是开放商业创新的领先平台。 每年，Adobe Commerce的商品交易总额超过1000亿美元。 Adobe Commerce使客户能够创建独特、引人入胜的购物体验、开箱即用功能、无限量的自定义能力、灵活的Headless架构以及无缝的第三方集成。
 
-有兩種版本的 [!DNL Commerce]：
+有两种版本的 [!DNL Commerce]：
 
-_Magento Open Source_ 是免費版本，先前稱為Magento社群。 您可以在自己的伺服器或您選擇的託管提供者上下載、自訂和執行平台。
+_Magento Open Source_ 是免费版本，以前称为Magento社区。 您可以在自己的服务器或所选托管提供商上下载、自定义和运行平台。
 
-由於低成本和開放性，大多數商家都使用Magento Open Source。 對於開發人員而言，他們在Magento Open Source或Adobe Commerce上進行開發其實並不重要。 不過，Adobe Commerce有較多開箱即用的內建功能。
+大多数商户都使用Magento Open Source是因为其低成本和开放性。 对于开发人员而言，他们在Magento Open Source或Adobe Commerce上进行开发其实并不重要。 但是，Adobe Commerce具有更多可开箱即用的内置功能。
 
-_Adobe Commerce_ 是付費版本，先前稱為Magento企業。 由於是進階版本，因此還有許多額外功能。
+_Adobe Commerce_ 是付费版本，以前称为Magento企业。 作为高级版本，还有许多附加功能。
 
-Adobe Commerce可於內部部署進行託管。 因此，您可在自己的伺服器上自行託管及開發，或選擇託管提供者。 或者，雲端基礎結構上也有Adobe Commerce，這是Adobe的雲端託管解決方案。 在解決方案區段中，我們會深入瞭解託管（例如SaaS、內部部署）和PaaS託管解決方案之間的差異。
+可以在本地托管Adobe Commerce。 因此，您可以在自己的服务器上本地托管和开发，也可以选择托管提供商。 或者，在云基础架构上还有Adobe Commerce，它是Adobe提供的云托管解决方案。 在解决方案部分中，我们将深入了解托管（例如SaaS、内部部署）与PaaS托管解决方案之间的区别。
 
-Adobe Commerce是功能齊全的電子商務解決方案，提供下列額外功能：
+Adobe Commerce是一款功能齐全的电子商务解决方案，具有下列附加功能：
 
-- B2B功能（例如報價、自訂目錄）以及管理購買者角色和許可權
-- Adobe Commerce報告控制面板，搭配視覺效果和自訂Report Builder
-- Magento聊天（由dotdigital提供技術支援）
-- 進階行銷工具
-- [!DNL Product Recommendations] 由Adobe Sensei提供
-- 所見即所得頁面產生器
-- 客戶細分
-- 客戶忠誠度工具，例如易於兌換的優惠券
-- 用於託管的內容測試和預覽
-- 視覺化銷售
+- B2B功能（如报价、自定义目录）以及管理购买者角色和权限
+- 带有可视化和自定义Report Builder的Adobe Commerce Reporting功能板
+- Magento聊天（由dotdigital提供支持）
+- 高级营销工具
+- [!DNL Product Recommendations] 由Adobe Sensei提供支持
+- 所见即所得页面生成器
+- 客户分段
+- 客户忠诚度工具，如易于兑换的优惠券
+- 用于托管的内容暂存和预览
+- 可视化促销

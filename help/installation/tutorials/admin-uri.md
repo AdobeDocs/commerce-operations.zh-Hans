@@ -1,6 +1,6 @@
 ---
-title: 顯示或變更管理員URI
-description: 請依照下列步驟檢視和修改Adobe Commerce或Magento Open Source管理員應用程式的URI。
+title: 显示或更改管理员URI
+description: 按照以下步骤查看和修改Adobe Commerce或Magento Open Source管理应用程序的URI。
 exl-id: 768f9ab4-7123-4460-9df8-a6c98ae55d95
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 0%
 
 ---
 
-# 顯示或變更管理員URI
+# 显示或更改管理员URI
 
-在執行這個命令之前，您必須 [建立或更新部署設定](deployment.md).
+在运行此命令之前，必须 [创建或更新部署配置](deployment.md).
 
-## 顯示管理員URI
+## 显示管理员URI
 
-本節討論如何使用命令列來顯示管理員統一資源識別碼([URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2))。
+本节讨论如何使用命令行显示管理员统一资源标识符([URI](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2))。
 
-命令選項：
+命令选项：
 
 ```bash
 bin/magento info:adminuri
 ```
 
-範例結果如下：
+以下是示例结果：
 
 ```terminal
 Admin Panel URI: /admin_1wgrah
 ```
 
-您也可以檢視管理員URI，位置如下： `<magento_root>/app/etc/env.php`. 以下是程式碼片段：
+您还可以在中查看管理员URI `<magento_root>/app/etc/env.php`. 以下是一个代码片段：
 
 ```php?start_inline=1
   'backend' =>
@@ -38,6 +38,6 @@ Admin Panel URI: /admin_1wgrah
   ),
 ```
 
-## 變更管理員URL
+## 更改管理员URL
 
-若要變更管理員URI，請使用 [`magento setup:config:set`](deployment.md) 命令。
+要更改管理员URI，请使用 [`magento setup:config:set`](deployment.md) 命令。

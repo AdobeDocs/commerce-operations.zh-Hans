@@ -1,6 +1,6 @@
 ---
-title: 參考架構
-description: 檢閱Adobe Commerce和Magento Open Source部署的建議參考架構圖表。
+title: 参考架构
+description: 查看Adobe Commerce和Magento Open Source部署中推荐的参考架构的示意图。
 exl-id: 85a6d3d6-f47f-4806-97bd-fa7a73605f4c
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,67 +9,67 @@ ht-degree: 0%
 
 ---
 
-# 參考架構
+# 参考架构
 
-本主題說明一般建議設定，適用於Adobe Commerce和Magento Open Source執行個體，使用實體託管於資料中心（非虛擬化）的普通伺服器，資源不會與其他使用者共用。 您的託管提供者（尤其是專長於Commerce高效能託管的提供者）可能會建議採取對您的需求相同或更有效率的不同設定。
+本主题介绍了一般性建议设置，适用于Adobe Commerce和Magento Open Source实例，这些实例使用在数据中心物理托管（非虚拟化）的普通服务器，其中资源不与其他用户共享。 您的托管提供商（尤其是专门从事Commerce高性能托管业务的提供商）可能建议采用对您的要求同样有效或更为有效的其他设置。
 
-如需雲端基礎結構環境上的Adobe Commerce，請參閱 [入門架構](https://devdocs.magento.com/cloud/architecture/starter-architecture.html).
+有关云基础架构环境上的Adobe Commerce，请参阅 [入门级架构](https://devdocs.magento.com/cloud/architecture/starter-architecture.html).
 
-## [!DNL Commerce] 參考架構圖
+## [!DNL Commerce] 参考架构图
 
-此 [!DNL Commerce] 參考架構圖表代表設定可擴充架構的最佳作法 [!DNL Commerce] 網站。
+此 [!DNL Commerce] 参考体系结构图代表了设置可扩展架构的最佳实践方法 [!DNL Commerce] 站点。
 
-圖表中每個元素的顏色會指出該元素是否為Magento Open Source或Adobe Commerce的一部分，以及是否需要。
+图中每个元素的颜色指示该元素是Magento Open Source还是Adobe Commerce的一部分，以及是否必需。
 
-* Magento Open Source需要橘色元素
-* 灰色元素是Magento Open Source的選用元素
-* 藍色元素是Adobe Commerce的選用元素
+* Magento Open Source需要橙色元素
+* 灰色元素对于Magento Open Source是可选的
+* 蓝色元素是Adobe Commerce的可选元素
 
-![Commerce參考架構圖](../assets/performance/images/ref-architecture-2.3.png)
+![Commerce参考架构图](../assets/performance/images/ref-architecture-2.3.png)
 
-以下章節提供Commerce參考架構圖表中每個區段的建議和考量事項。
+以下部分提供了有关Commerce参考架构图每个部分的建议和注意事项。
 
 ### [!DNL Varnish]
 
-* A [!DNL Varnish] 叢集可擴充至網站的流量
-* 根據所需的快取頁數調整執行處理大小
-* 在高流量的網站上，使用 [!DNL Varnish] Master可確保快取上排清每個網頁層級一個請求（最多）
+* A [!DNL Varnish] 群集可以根据站点的流量进行扩展
+* 根据所需的缓存页数优化实例大小
+* 在高流量网站上，使用 [!DNL Varnish] 主控确保每个Web层缓存刷新一个请求（最多）
 
 ### Web
 
-* 啟用節點規模以提供流量和備援
-* 一個節點為主節點並執行cron
-* 或者，使用專屬的管理員和工作者節點
+* 为流量和冗余启用节点扩展
+* 一个节点主控并运行cron
+* 或者，使用专用的管理员和工作者节点
 
-### 快取
+### 缓存
 
-* 請考慮為工作階段實作個別的Redis例項
-* 您可以為每個快取有一個Redis執行個體
-* 調整執行個體大小，使其包含預期的最大快取大小
+* 考虑为会话实施单独的Redis实例
+* 每个缓存可以有一个Redis实例
+* 将实例大小设置为包含预期的最大缓存大小
 
-### 資料庫和佇列
+### 数据库和队列
 
-* 高流量的網站可以使用從屬資料庫調整資料庫效能，並針對訂單/購物車分割資料庫(在Adobe Commerce中)
-* 請考慮使用從屬資料庫來啟用快速復原及資料備份
-* 低流量網站可以將影像儲存在DB中
+* 高流量站点可以使用从属数据库调整数据库性能，并为订单/购物车拆分数据库(在Adobe Commerce中)
+* 考虑使用从数据库实现快速恢复并用于数据备份
+* 低流量站点可以将图像存储在数据库中
 
-### 搜尋 {#search-heading}
+### 搜索 {#search-heading}
 
-* 根據搜尋流量調整執行個體數量
+* 根据搜索流量调整实例数
 
-### 儲存
+### 存储
 
-* 請考慮使用GFS或GlusterFS來儲存pub/media
-* 或者，將DB儲存空間用於低流量的網站
+* 考虑将GFS或GlusterFS用于发布/媒体存储
+* 或者，将数据库存储用于低流量站点
 
-### 建議 [!DNL Varnish] 參考架構
+### 推荐 [!DNL Varnish] 参考体系结构
 
-Magento支援數個完整頁面快取引擎(檔案、Memcache、Redis、 [!DNL Varnish])立即可用，並透過擴充功能擴大涵蓋範圍。 [!DNL Varnish] 是建議的完整頁面快取引擎。  [!DNL Commerce] 支援許多不同的功能 [!DNL Varnish] 設定。
+Magento支持多个全页缓存引擎(文件、Memcache、Redis、 [!DNL Varnish])的开箱即用，并通过扩展扩展扩大了覆盖范围。 [!DNL Varnish] 是推荐的全页缓存引擎。  [!DNL Commerce] 支持多种不同的 [!DNL Varnish] 配置。
 
-針對不需要高可用性的網站，我們建議使用簡單的 [!DNL Varnish] 設定Nginx SSL終止。
+对于不要求高可用性的网站，我们建议使用简单的 [!DNL Varnish] 设置Nginx SSL终止。
 
-![簡單 [!DNL Varnish] 使用SSL終止進行設定](../assets/performance/images/single-varnish-with-ssl-termination.png)
+![简单 [!DNL Varnish] 使用SSL终止进行配置](../assets/performance/images/single-varnish-with-ssl-termination.png)
 
-對於需要高可用性的網站，我們建議使用2層級 [!DNL Varnish] 使用SSL終止負載平衡器的設定。
+对于需要高可用性的站点，我们建议使用两层 [!DNL Varnish] 使用SSL终止负载平衡器的配置。
 
-![高可用性雙階層 [!DNL Varnish] 使用SSL終止負載平衡器的設定](../assets/performance/images/ha-2-tier-varnish-with-ssl-term-load-balancer.png)
+![高可用性两层 [!DNL Varnish] 使用SSL终止负载平衡器的配置](../assets/performance/images/ha-2-tier-varnish-with-ssl-term-load-balancer.png)

@@ -1,6 +1,6 @@
 ---
-user-guide-title: 安裝指南
-user-guide-description: 瞭解如何安裝Adobe Commerce和內部部署的Magento Open Source。
+user-guide-title: 安装指南
+user-guide-description: 了解如何安装Adobe Commerce和用于内部部署的Magento Open Source。
 feature: Install
 source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
 workflow-type: tm+mt
@@ -10,61 +10,61 @@ ht-degree: 0%
 ---
 
 
-# 安裝指南 {#installation-guide}
+# 安装指南 {#installation-guide}
 
-- [概觀](overview.md)
-- [系統需求](system-requirements.md)
-- 必要條件 {#prerequisites}
-   - [概觀](prerequisites/overview.md)
-   - 檔案系統 {#file-system}
-      - [概觀](prerequisites/file-system/overview.md)
-      - [設定許可權](prerequisites/file-system/configure-permissions.md)
-   - 網頁伺服器 {#web-server}
-      - [Nginx](prerequisites/web-server/nginx.md)
+- [概述](overview.md)
+- [系统要求](system-requirements.md)
+- 先决条件 {#prerequisites}
+   - [概述](prerequisites/overview.md)
+   - 文件系统 {#file-system}
+      - [概述](prerequisites/file-system/overview.md)
+      - [配置权限](prerequisites/file-system/configure-permissions.md)
+   - Web服务器 {#web-server}
+      - [恩金克斯](prerequisites/web-server/nginx.md)
       - [Apache](prerequisites/web-server/apache.md)
-   - 資料庫伺服器 {#database-server}
+   - 数据库服务器 {#database-server}
       - [MySQL](prerequisites/database/mysql.md)
-      - [遠端連線](prerequisites/database/mysql-remote.md)
-   - 搜尋引擎 {#search-engine}
-      - [概觀](prerequisites/search-engine/overview.md)
+      - [远程连接](prerequisites/database/mysql-remote.md)
+   - 搜索引擎 {#search-engine}
+      - [概述](prerequisites/search-engine/overview.md)
       - [AWS OpenSearch](prerequisites/search-engine/aws-opensearch.md)
-      - [設定Nginx](prerequisites/search-engine/configure-nginx.md)
-      - [設定Apache](prerequisites/search-engine/configure-apache.md)
+      - [配置Nginx](prerequisites/search-engine/configure-nginx.md)
+      - [配置Apache](prerequisites/search-engine/configure-apache.md)
    - [PHP](prerequisites/php-settings.md)
-   - [訊息代理人](prerequisites/rabbitmq.md)
+   - [消息代理](prerequisites/rabbitmq.md)
    - [安全性](prerequisites/security.md)
-   - [驗證金鑰](prerequisites/authentication-keys.md)
+   - [身份验证密钥](prerequisites/authentication-keys.md)
    - [Adobe Commerce](prerequisites/commerce.md)
-   - [選購軟體](prerequisites/optional-software.md)
-- [快速入門安裝](composer.md)
-- [進階安裝](advanced.md)
-- 安裝後步驟 {#next-steps}
-   - [驗證安裝](next-steps/verify.md)
-   - [設定應用程式](next-steps/configuration.md)
-   - [設定umask （選擇性）](next-steps/set-umask.md)
-   - 安裝範例資料（選擇性） {#sample-data}
-      - [概觀](sample-data/overview.md)
-      - [下載撰寫器套件](sample-data/composer-packages.md)
-      - [複製Git存放庫](sample-data/git-repositories.md)
-      - [移除或更新模組](sample-data/remove-or-update.md)
+   - [可选软件](prerequisites/optional-software.md)
+- [快速入门安装](composer.md)
+- [高级安装](advanced.md)
+- 安装后步骤 {#next-steps}
+   - [验证安装](next-steps/verify.md)
+   - [配置应用程序](next-steps/configuration.md)
+   - [设置umask（可选）](next-steps/set-umask.md)
+   - 安装示例数据（可选） {#sample-data}
+      - [概述](sample-data/overview.md)
+      - [下载编辑器包](sample-data/composer-packages.md)
+      - [克隆Git存储库](sample-data/git-repositories.md)
+      - [删除或更新模块](sample-data/remove-or-update.md)
 - Tutorials {#tutorials}
-   - [備份及復原檔案系統、媒體及資料庫](tutorials/backup.md)
-   - [檢查資料庫狀態](tutorials/database-status.md)
-   - [設定訊息消費者行為](tutorials/message-consumers.md)
-   - [設定鎖定提供者](tutorials/lock-provider.md)
-   - [設定存放區](tutorials/store.md)
-   - [建立、編輯或解除鎖定管理員帳戶](tutorials/admin.md)
-   - [建立或更新部署設定](tutorials/deployment.md)
-   - [建立資料庫綱要](tutorials/database.md)
-   - [顯示或變更管理員URI](tutorials/admin-uri.md)
-   - [啟用或停用維護模式](tutorials/maintenance-mode.md)
-   - [啟用或停用模組](tutorials/manage-modules.md)
-   - [安裝擴充功能](tutorials/extensions.md)
-   - [安裝商務](tutorials/install.md)
+   - [备份和回滚文件系统、介质和数据库](tutorials/backup.md)
+   - [检查数据库状态](tutorials/database-status.md)
+   - [配置消息使用者行为](tutorials/message-consumers.md)
+   - [配置锁定提供程序](tutorials/lock-provider.md)
+   - [配置存储](tutorials/store.md)
+   - [创建、编辑或解锁管理员帐户](tutorials/admin.md)
+   - [创建或更新部署配置](tutorials/deployment.md)
+   - [创建数据库模式](tutorials/database.md)
+   - [显示或更改管理员URI](tutorials/admin-uri.md)
+   - [启用或禁用维护模式](tutorials/maintenance-mode.md)
+   - [启用或禁用模块](tutorials/manage-modules.md)
+   - [安装扩展](tutorials/extensions.md)
+   - [安装商务](tutorials/install.md)
    - [修改docroot以提高安全性](tutorials/docroot.md)
-   - [解除安裝語言套件](tutorials/language-packages.md)
-   - [解除安裝模組](tutorials/uninstall-modules.md)
-   - [解除安裝或重新安裝Commerce](tutorials/uninstall.md)
-   - [解除安裝主題](tutorials/themes.md)
-   - [升級資料庫結構描述](tutorials/database-upgrade.md)
-- [返回作業指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+   - [卸载语言包](tutorials/language-packages.md)
+   - [卸载模块](tutorials/uninstall-modules.md)
+   - [卸载或重新安装Commerce](tutorials/uninstall.md)
+   - [卸载主题](tutorials/themes.md)
+   - [升级数据库模式](tutorials/database-upgrade.md)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

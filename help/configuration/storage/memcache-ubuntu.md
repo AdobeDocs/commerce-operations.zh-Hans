@@ -1,6 +1,6 @@
 ---
-title: 在Ubuntu上設定memcached
-description: 在Ubuntu上安裝並設定memcached。
+title: 在Ubuntu上设置memcached
+description: 在Ubuntu上安装和配置内存缓存。
 feature: Configuration, Cache, Storage
 exl-id: 831193d2-3e81-472c-9b87-78a8d52959b4
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
@@ -10,30 +10,30 @@ ht-degree: 0%
 
 ---
 
-# 在Ubuntu上設定memcached
+# 在Ubuntu上设置memcached
 
-本節提供在Ubuntu上安裝memcached的說明。
+本节提供在Ubuntu上安装memcached的说明。
 
 >[!INFO]
 >
->Adobe建議使用memcached 3.0.5版或更新版本。
+>Adobe建议使用memcached版本3.0.5或更高版本。
 
-由於PHP對memcache沒有原生支援，因此您必須安裝PHP擴充功能才能使用它。 有兩個可用的PHP擴充功能，請務必解碼要使用哪個：
+由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
-- `memcache` (_否d_) — 舊版但常用的擴充功能，不會定期維護。
-此 `memcache` 目前為擴充功能 _不會_ 使用PHP 7。 另請參閱 [memcache的PHP檔案](https://www.php.net/manual/en/book.memcache.php).
+- `memcache` (_否d_) — 一种较旧但较受欢迎的扩展，不会定期维护。
+此 `memcache` 当前扩展 _不会_ 使用PHP 7。 参见 [memcache的PHP文档](https://www.php.net/manual/en/book.memcache.php).
 
-   確切的名稱為 `php5-memcache` 適用於Ubuntu。
+   确切的名称为 `php5-memcache` Ubuntu的。
 
-- `memcached` (_搭配`d`_) — 與PHP 7相容的更新和維護的擴充功能。 另請參閱 [memcached的PHP檔案](https://www.php.net/manual/en/book.memcached.php).
+- `memcached` (_带有`d`_) — 与PHP 7兼容的更新和维护的扩展。 参见 [memcached的PHP文档](https://www.php.net/manual/en/book.memcached.php).
 
-   確切的名稱為 `php5-memcached` 適用於Ubuntu。
+   确切的名称为 `php5-memcached` Ubuntu的。
 
-## 在Ubuntu上安裝及設定記憶體
+## 在Ubuntu上安装和配置内存缓存
 
-**若要在Ubuntu上安裝和設定記憶體**：
+**在Ubuntu上安装和配置内存缓存**：
 
-1. 作為使用者，具有 `root` 許可權，請輸入以下命令：
+1. 作为用户，具有 `root` 权限，请输入以下命令：
 
    ```bash
    apt-get -y update
@@ -43,35 +43,35 @@ ht-degree: 0%
    apt-get -y install php5-memcached memcached
    ```
 
-1. 變更的memcached組態設定 `CACHESIZE` 和 `-l`：
+1. 更改的memcached配置设置 `CACHESIZE` 和 `-l`：
 
-   1. 開啟 `/etc/memcached.conf` 在文字編輯器中。
-   1. 找到 `-m` 引數。
-   1. 至少將其值變更為 `1GB`
-   1. 找到 `-l` 引數。
-   1. 將其值變更為 `127.0.0.1` 或 `localhost`
-   1. 將變更儲存至 `memcached.conf` 並退出文字編輯器。
-   1. 重新啟動memcached。
+   1. 打开 `/etc/memcached.conf` 在文本编辑器中。
+   1. 找到 `-m` 参数。
+   1. 至少将其值更改为 `1GB`
+   1. 找到 `-l` 参数。
+   1. 将其值更改为 `127.0.0.1` 或 `localhost`
+   1. 将更改保存到 `memcached.conf` 并退出文本编辑器。
+   1. 重新启动memcached。
 
       ```bash
       service memcached restart
       ```
 
-1. 重新啟動網頁伺服器。
+1. 重新启动Web服务器。
 
-   對於Apache， `service apache2 restart`
+   对于Apache， `service apache2 restart`
 
-1. 繼續下一節。
+1. 继续下一部分。
 
-## 在安裝Magento之前驗證memcached是否有效
+## 在安装Magento之前验证memcached是否有效
 
-Adobe建議先測試memcached以確保其可運作，然後再安裝Commerce。 只需幾分鐘即可完成，並可簡化後續的疑難排解。
+Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟，并且以后可以简化故障排除。
 
-### 確認網頁伺服器可辨識成員快取
+### 验证Web服务器是否可识别memcached
 
-若要確認網頁伺服器可辨識memcached：
+要验证Web服务器是否能够识别memcached，请执行以下操作：
 
-1. 建立 `phpinfo.php` 網頁伺服器docroot中的檔案：
+1. 创建 `phpinfo.php` 文件（位于Web服务器的docroot中）：
 
    ```php
    <?php
@@ -79,27 +79,27 @@ Adobe建議先測試memcached以確保其可運作，然後再安裝Commerce。 
    phpinfo();
    ```
 
-1. 前往網頁瀏覽器中的該頁面。 例如：
+1. 在Web浏览器中转到该页面。 例如：
 
    ```http
    http://192.0.2.1/phpinfo.php
    ```
 
-1. 請確定memcached顯示如下：
+1. 确保memcached按以下方式显示：
 
-   ![確認網頁伺服器可辨識成員快取](../../assets/configuration/memcache.png)
+   ![确认Web服务器可识别memcached](../../assets/configuration/memcache.png)
 
-   確認您使用的是memcached 3.0.5版或更新版本。
+   验证您是否使用memcached版本3.0.5或更高版本。
 
-   如果memcached未顯示，請重新啟動網頁伺服器並重新整理瀏覽器頁面。 如果仍然沒有顯示，請確認您已安裝 `php-pecl-memcached` 副檔名。
+   如果memcached未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍然不显示，请确认您已安装 `php-pecl-memcached` 扩展。
 
-### 驗證memcached可以快取資料
+### 验证memcached是否可以缓存数据
 
-此測試使用PHP指令碼來驗證memcached是否可以儲存和擷取快取資料。
+此测试使用PHP脚本来验证memcached是否可以存储和检索缓存数据。
 
-如需此測試的詳細資訊，請參閱 [如何在Ubuntu教學課程上安裝和使用Memcache](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04).
+有关此测试的详细信息，请参阅 [如何在Ubuntu上安装和使用内存缓存教程](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04).
 
-建立 `cache-test.php` 網頁伺服器的docroot中包含下列內容：
+创建 `cache-test.php` 在Web服务器的docroot中，包含以下内容：
 
 ```php
 $meminstance = new Memcached();
@@ -116,31 +116,31 @@ if ($result) {
 }
 ```
 
-位置 `<memcached hostname or ip>` 為 `localhost`， `127.0.0.1`，或成員快取主機名稱或IP位址。 此 `<memcached port>` 是監聽連線埠；依預設， `11211`.
+位置 `<memcached hostname or ip>` 是 `localhost`， `127.0.0.1`或内存缓存主机名或IP地址。 此 `<memcached port>` 是监听端口；默认情况下， `11211`.
 
-在網頁瀏覽器中前往該頁面。 例如
+在Web浏览器中转到该页面。 例如
 
 ```http
 http://192.0.2.1/cache-test.php
 ```
 
-第一次前往頁面時，會顯示下列內容： `No matching key found. Refresh the browser to add it!`
+首次转到该页面时，会显示以下内容： `No matching key found. Refresh the browser to add it!`
 
-重新整理瀏覽器。 訊息將變更為 `Successfully retrieved the data!`
+刷新浏览器。 消息将更改为 `Successfully retrieved the data!`
 
-最後，您可以使用Telnet檢視memcache金鑰：
+最后，您可以使用Telnet查看memcache密钥：
 
 ```bash
 telnet localhost <memcache port>
 ```
 
-出現提示時，輸入
+出现提示时，输入
 
 ```shell
 stats items
 ```
 
-結果類似下列：
+结果类似于以下内容：
 
 ```terminal
 STAT items:2:number 1
@@ -155,7 +155,7 @@ STAT items:2:expired_unfetched 0
 STAT items:2:evicted_unfetched 0
 ```
 
-排清記憶體快取儲存體並結束Telnet：
+刷新内存缓存存储并退出Telnet：
 
 ```shell
 flush_all
@@ -165,4 +165,4 @@ flush_all
 quit
 ```
 
-[Telnet測試的其他資訊](https://darkcoding.net/software/memcached-list-all-keys/)
+[有关Telnet测试的其他信息](https://darkcoding.net/software/memcached-list-all-keys/)

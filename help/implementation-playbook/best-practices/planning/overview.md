@@ -1,6 +1,6 @@
 ---
-title: 實作規劃階段
-description: 瞭解Adobe Commerce專案規劃階段的實作最佳實務。
+title: 实施规划阶段
+description: 了解Adobe Commerce项目规划阶段的实施最佳实践。
 role: Developer, Admin, User
 feature: Best Practices
 feature-set: Commerce
@@ -12,69 +12,69 @@ ht-degree: 0%
 
 ---
 
-# 規劃階段
+# 规划阶段
 
-計畫階段包含下列作業：
+规划阶段包括以下活动：
 
-- 需求收集
-- 架構設計
-- 目錄設計
-- 專案範圍
-- 帳戶布建
-- 使用者存取
-- 擴充功能採購
+- 要求收集
+- 架构设计
+- 目录设计
+- 项目范围
+- 帐户设置
+- 用户访问权限
+- 扩展购买
 
-以下小節包含規劃階段的最佳實務資訊。
+以下部分包含规划阶段的最佳实践信息。
 
-## 需求收集
+## 要求收集
 
-- **應用程式設定**
-   - [設定網站、商店和商店檢視的最佳實務（雲端基礎結構）](sites-stores-store-views.md)
-   - [如何防止及修正Adobe Commerce網站最常見的五個設定問題](https://business.adobe.com/blog/how-to/usual-suspects-five-configuration-fixes-maximize-your-peak-sales)
-   - [快取的最佳實務](https://docs.magento.com/user-guide/system/cache-management.html#best-practices-for-caching)
-   - [全頁快取](https://developer.adobe.com/commerce/php/development/cache/page/public-content/)
-   - [OPcache記憶體大小](opcache-memory-size.md)
-   - [報告設定](reporting-configuration.md)
+- **应用程序配置**
+   - [配置站点、商店和存储视图的最佳实践（云基础架构）](sites-stores-store-views.md)
+   - [如何防止和修复Adobe Commerce站点最常见的五个配置问题](https://business.adobe.com/blog/how-to/usual-suspects-five-configuration-fixes-maximize-your-peak-sales)
+   - [缓存最佳实践](https://docs.magento.com/user-guide/system/cache-management.html#best-practices-for-caching)
+   - [全页缓存](https://developer.adobe.com/commerce/php/development/cache/page/public-content/)
+   - [OPcache内存大小](opcache-memory-size.md)
+   - [报告配置](reporting-configuration.md)
 
-- **資料庫設定**
-   - [雲端部署的資料庫設定最佳實務&#x200B;。](database-on-cloud.md)
-   - [MySQL從屬連線組態&#x200B;](configure-mysql-slave-connection-on-cloud.md)
-   - [MySQL觸發程式使用狀況](mysql-triggers-usage.md)
+- **数据库配置**
+   - [云部署的数据库配置最佳实践&#x200B;](database-on-cloud.md)
+   - [MySQL从属连接配置&#x200B;](configure-mysql-slave-connection-on-cloud.md)
+   - [MySQL触发器使用情况](mysql-triggers-usage.md)
 
-- **服務設定**
-   - [設定Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
-   - [New Relic — 設定通知通道](https://devdocs.magento.com/cloud/project/new-relic.html#configure-notification-channels)
-   - [Redis服務設定的最佳實務&#x200B;。](redis-service-configuration.md)
-   - [Realpath快取大小最佳實務](realpath-cache-size.md)
+- **服务配置**
+   - [设置Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
+   - [New Relic — 配置通知渠道](https://devdocs.magento.com/cloud/project/new-relic.html#configure-notification-channels)
+   - [Redis服务配置的最佳实践&#x200B;。](redis-service-configuration.md)
+   - [Realpath缓存大小最佳实践](realpath-cache-size.md)
 
-## **架構設計**
+## **架构设计**
 
 <!--Asset not yet integrated
 - [GRA Architecture examples](https://wiki.corp.adobe.com/x/kD4ykw)
 -->
-- [瞭解全球參考架構](../../../implementation-playbook/architecture/global-reference.md)
+- [了解全球参考体系结构](../../../implementation-playbook/architecture/global-reference.md)
 
-## **目錄設計**
+## **目录设计**
 
-下列主題說明設定Adobe Commerce目錄的效能最佳化最佳實務，包括類別數量、產品有效SKU、產品變化、產品屬性和選項等建議的最大值。
+以下主题介绍了配置Adobe Commerce目录的性能优化最佳实践，包括类别数、产品有效SKU、产品变体、产品属性和选项等的建议最大值。
 
-- [類別設定](category-limits.md)
-- [產品設定&#x200B;](product-sku-limits.md)
-- [產品變數設定](product-variations.md)
-- [產品選項設定](product-options.md)
-- [產品屬性設定&#x200B;](product-attributes-and-options.md)
-- [產品清單的分頁設定](product-listing-pagination.md)
+- [类别配置](category-limits.md)
+- [产品配置&#x200B;](product-sku-limits.md)
+- [产品变体配置](product-variations.md)
+- [产品选项配置](product-options.md)
+- [产品属性配置&#x200B;](product-attributes-and-options.md)
+- [产品列表的分页配置](product-listing-pagination.md)
 
-## **銷售與行銷**
+## **销售和营销**
 
-- [有關產品購物車限制的最佳實務](product-cart.md)
-- [設定促銷活動的最佳作法](product-cart-promotions.md)
+- [有关产品购物车限制的最佳实践](product-cart.md)
+- [配置促销活动的最佳实践](product-cart-promotions.md)
 
-## **專案範圍**
+## **项目范围**
 
-- [合作夥伴呈報](partner-escalation.md)
-- [付款儲存處理](payment-processing-storage.md)
+- [合作伙伴呈报](partner-escalation.md)
+- [支付存储处理](payment-processing-storage.md)
 
-## **購買延長保固期**
+## **购买扩展**
 
-- [在Adobe Commerce中使用協力廠商擴充功能的最佳作法](extensions.md)
+- [在Adobe Commerce中使用第三方扩展的最佳实践](extensions.md)

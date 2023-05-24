@@ -1,6 +1,6 @@
 ---
-title: 產品購物車最佳實務
-description: 瞭解如何透過限制購物車中的產品數量來最佳化Adobe Commerce效能。
+title: 产品购物车最佳实践
+description: 了解如何通过限制购物车中的产品数量来优化Adobe Commerce性能。
 role: User
 feature: Best Practices
 feature-set: Commerce
@@ -12,43 +12,43 @@ ht-degree: 0%
 
 ---
 
-# 產品購物車管理的最佳實務
+# 产品购物车管理的最佳实践
 
-為獲得最佳效能，請使用下列准則來管理Adobe Commerce和Magento Open Source的購物車限制：
+为获得最佳性能，请使用以下准则来管理Adobe Commerce和Magento Open Source的购物车限制：
 
-- 若為版本2.3.x - 2.4.2，購物車中最多可容納100種產品。
-- 若是2.4.3版或更新版本，銷售規則功能的增強功能會將購物車數量上限增加到750個。
+- 对于版本2.3.x - 2.4.2，购物车中最多允许100个产品。
+- 对于版本2.4.3及更高版本，对销售规则功能的增强将购物车数量上限增加到750个。
 
 
-若為版本2.3.x - 2.4.2，根據購物車專案限制的預期效能為：
+对于版本2.3.x - 2.4.2，基于购物车项目限制的预期性能为：
 
-- 最多 **100** 購物車中的產品 — 產品運作正常，符合回應時間的效能目標。
-- 最多 **300** 購物車中的產品 — 產品有效，但回應時間增加到超過目標。
-- 以上 **500** 購物車中的產品 — 無法保證購物車和結帳流程正常運作
+- 最多 **100** 购物车中的产品 — 产品可工作，满足响应时间的性能目标。
+- 最多 **300** 购物车中的产品 — 产品有效，但响应时间超过目标。
+- 以上 **500** 购物车中的产品 — 不能保证购物车和结帐流程正常工作
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 減少購物車專案數量
+## 减少购物车项目数量
 
-使用下列策略管理購物車專案數量
+使用以下策略管理购物车项目的数量
 
-- 使用「 」，將訂單分割為數筆較小的訂單（列數較少）。 [!UICONTROL Add Item by SKU] 功能。
-- 僅新增載入專案清單所需的自訂邏輯和購物車自訂。
+- 通过使用 [!UICONTROL Add Item by SKU] 功能。
+- 仅添加加载项目列表所需的自定义逻辑和购物车自定义。
 
-## 對效能的潛在影響
+## 潜在的性能影响
 
-購物車中產品數量超過建議的最大數量可能會透過以下方式影響網站效能：
+购物车中产品数量超过建议的最大数量可能会以下列方式影响网站性能：
 
-- 增加資料擷取作業、驗證購物車專案、檢查是否套用價格規則，以及稅捐和總計計算的回應時間。
-- 增加Minicart轉譯的回應時間，包括轉譯購物車檢視、結帳流程及執行。
-- 增加所有出現minicart的網站頁面的載入時間。
+- 缩短了数据检索操作、验证购物车商品、检查是否应用价格规则以及计税和总计计算的响应时间。
+- 提高了微型画呈现的响应时间，包括呈现购物车视图、结帐流程和执行等。
+- 增加了所有存在微型艺术品的网站页面的加载时间。
 
-## 其他資訊
+## 其他信息
 
-- [設定產品選項](https://experienceleague.adobe.com/docs/commerce-admin/inventory/configuration/product-options.html)
-- [管理購物車](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/point-of-purchase/assist/shopping-assisted-cart-manage.html)
+- [配置产品选项](https://experienceleague.adobe.com/docs/commerce-admin/inventory/configuration/product-options.html)
+- [管理购物车](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/point-of-purchase/assist/shopping-assisted-cart-manage.html)

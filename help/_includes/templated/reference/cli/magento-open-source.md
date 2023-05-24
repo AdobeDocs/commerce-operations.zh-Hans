@@ -5,28 +5,28 @@ source-wordcount: '17238'
 ht-degree: 0%
 
 ---
-# bin/magento (Magento Open Source)
+# bin/magento(Magento Open Source)
 
 <!-- All the assigned and captured content is used in the included template -->
 
 <!-- The template to render with above values -->
-**版本**： 2.4.6
+**版本**：2.4.6
 
-此參照包含114個指令，這些指令可透過 `bin/magento` 命令列工具。
-初始清單會使用 `bin/magento list` 版本中的命令。
-使用 [新增CLI命令](https://developer.adobe.com/commerce/php/development/cli-commands/) 新增自訂CLI命令的指南。
-
->[!NOTE]
->
->您可以呼叫 `bin/magento` CLI命令使用快速鍵而不是完整的命令名稱。 例如，您可以呼叫 `bin/magento setup:upgrade` 使用 `bin/magento s:up`， `bin/magento s:upg`. 另請參閱 [捷徑語法](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) 瞭解如何使用任何CLI命令的捷徑。
+此参考包含114个命令，这些命令可通过 `bin/magento` 命令行工具。
+初始列表是使用 `bin/magento list` 编辑时显示的命令。
+使用 [添加CLI命令](https://developer.adobe.com/commerce/php/development/cli-commands/) 指南添加自定义CLI命令。
 
 >[!NOTE]
 >
->此參考是從應用程式程式碼基底產生的。 若要變更內容，您可以更新中對應命令實作的原始程式碼 [程式碼基底](https://github.com/magento) 存放庫並提交您的變更以供檢閱。 另一種方式是 _提供我們意見反應_ （尋找右上方的連結）。 如需貢獻准則，請參閱 [程式碼協助撰寫](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+>您可以调用 `bin/magento` CLI命令使用快捷方式，而不是完整的命令名称。 例如，您可以调用 `bin/magento setup:upgrade` 使用 `bin/magento s:up`， `bin/magento s:upg`. 参见 [快捷语法](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) 了解如何使用任何CLI命令的快捷方式。
+
+>[!NOTE]
+>
+>此引用从应用程序代码库生成。 要更改内容，您可以更新中相应命令实施的源代码 [代码库](https://github.com/magento) 存储库并提交更改以供审核。 另一种方法是 _向我们提供反馈_ （在右上角找到链接）。 有关贡献准则，请参阅 [代码投稿](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
 
 ## `_complete`
 
-提供殼層完成建議的內部命令
+用于提供外壳完成建议的内部命令
 
 ```bash
 bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-S|--symfony SYMFONY]
@@ -34,81 +34,81 @@ bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURREN
 
 ### `--shell`, `-s`
 
-殼層型別(「bash」)
+shell类型(“bash”)
 
-- 需要值
+- 需要一个值
 
 ### `--input`, `-i`
 
-輸入權杖陣列（例如COMP_WORDS或argv）
+输入令牌的数组（例如COMP_WORDS或argv）
 
-- 預設： `[]`
-- 需要值
+- 默认： `[]`
+- 需要一个值
 
 ### `--current`, `-c`
 
-游標所在的「輸入」陣列索引（例如COMP_CWORD）
+光标所在的“input”数组的索引（例如COMP_CWORD）
 
-- 需要值
+- 需要一个值
 
 ### `--symfony`, `-S`
 
-完成指令碼的版本
+完成脚本的版本
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `completion`
 
-傾印殼層完成指令碼
+转储shell完成脚本
 
 ```bash
 bin/magento completion [--debug] [--] [<shell>]
@@ -117,68 +117,68 @@ bin/magento completion [--debug] [--] [<shell>]
 
 ### `shell`
 
-如果未提供殼層型別（例如「bash」），則會使用「$SHELL」環境變數的值
+如果未提供shell类型（例如“bash”），则将使用“$SHELL”环境变量的值
 
 
 ### `--debug`
 
-追蹤完成偵錯記錄
+跟踪完成调试日志
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `help`
 
-顯示命令的說明
+显示命令的帮助
 
 ```bash
 bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
@@ -187,77 +187,77 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `command_name`
 
-命令名稱
+命令名称
 
-- 預設： `help`
+- 默认： `help`
 
 
 ### `--format`
 
-輸出格式（txt、xml、json或md）
+输出格式（txt、xml、json或md）
 
-- 預設： `txt`
-- 需要值
+- 默认： `txt`
+- 需要一个值
 
 ### `--raw`
 
-輸出原始命令說明
+输出原始命令帮助
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `list`
 
-清單命令
+列出命令
 
 ```bash
 bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
@@ -266,82 +266,82 @@ bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 
 ### `namespace`
 
-名稱空間名稱
+命名空间名称
 
 
 ### `--raw`
 
-要輸出原始命令清單
+输出原始命令列表
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--format`
 
-輸出格式（txt、xml、json或md）
+输出格式（txt、xml、json或md）
 
-- 預設： `txt`
-- 需要值
+- 默认： `txt`
+- 需要一个值
 
 ### `--short`
 
-略過描述命令引數的方式
+跳过描述命令的参数
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `admin:adobe-ims:disable`
 
-停用Adobe IMS模組
+禁用Adobe IMS模块
 
 ```bash
 bin/magento admin:adobe-ims:disable
@@ -349,56 +349,56 @@ bin/magento admin:adobe-ims:disable
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `admin:adobe-ims:enable`
 
-啟用Adobe IMS模組。
+启用Adobe IMS模块。
 
 ```bash
 bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|--client-id [CLIENT-ID]] [-s|--client-secret [CLIENT-SECRET]] [-t|--2fa [2FA]]
@@ -406,80 +406,80 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 ### `--organization-id`, `-o`
 
-設定Adobe IMS設定的組織ID 。 啟用模組時需要
+为Adobe IMS配置设置组织ID 。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--client-id`, `-c`
 
-設定Adobe IMS設定的使用者端ID。 啟用模組時需要
+为Adobe IMS配置设置客户端ID。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--client-secret`, `-s`
 
-設定Adobe IMS設定的使用者端密碼。 啟用模組時需要
+为Adobe IMS配置设置客户端密钥。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--2fa`, `-t`
 
-檢查Adobe Admin Console中是否為「組織」啟用2FA。 啟用模組時需要
+检查Adobe Admin Console中是否为“组织”启用了2FA。 启用模块时必需
 
-- 接受值
+- 接受一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `admin:adobe-ims:info`
 
-Adobe IMS模組設定資訊
+Adobe IMS模块配置信息
 
 ```bash
 bin/magento admin:adobe-ims:info
@@ -487,56 +487,56 @@ bin/magento admin:adobe-ims:info
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `admin:adobe-ims:status`
 
-Adobe IMS模組的狀態
+Adobe IMS模块的状态
 
 ```bash
 bin/magento admin:adobe-ims:status
@@ -544,56 +544,56 @@ bin/magento admin:adobe-ims:status
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `admin:user:create`
 
-建立管理員
+创建管理员
 
 ```bash
 bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-PASSWORD] [--admin-email ADMIN-EMAIL] [--admin-firstname ADMIN-FIRSTNAME] [--admin-lastname ADMIN-LASTNAME] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -601,92 +601,92 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 ### `--admin-user`
 
-（必要）管理員使用者
+（必需）管理员用户
 
-- 需要值
+- 需要一个值
 
 ### `--admin-password`
 
-（必要）管理員密碼
+（必需）管理员密码
 
-- 需要值
+- 需要一个值
 
 ### `--admin-email`
 
-（必要）管理員電子郵件
+（必需）管理员电子邮件
 
-- 需要值
+- 需要一个值
 
 ### `--admin-firstname`
 
-（必要）管理員名字
+（必需）管理员名字
 
-- 需要值
+- 需要一个值
 
 ### `--admin-lastname`
 
-（必要）管理員姓氏
+（必需）管理员姓氏
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `admin:user:unlock`
 
-解除鎖定管理員帳戶
+解锁管理员帐户
 
 ```bash
 bin/magento admin:user:unlock <username>
@@ -695,62 +695,62 @@ bin/magento admin:user:unlock <username>
 
 ### `username`
 
-要解除鎖定的管理員使用者名稱
+要解锁的管理员用户名
 
-- 必填
+- 必需
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `app:config:dump`
 
-建立應用程式的傾印
+创建应用程序转储
 
 ```bash
 bin/magento app:config:dump [<config-types>...]
@@ -759,64 +759,64 @@ bin/magento app:config:dump [<config-types>...]
 
 ### `config-types`
 
-以空格分隔的設定型別清單或省略以傾印所有 [範圍，系統，主題， i18n]
+以空格分隔的配置类型列表或省略以转储所有 [范围，系统，主题， i18n]
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `app:config:import`
 
-從共用組態檔匯入資料至適當的資料儲存體
+将数据从共享配置文件导入到适当的数据存储
 
 ```bash
 bin/magento app:config:import
@@ -824,56 +824,56 @@ bin/magento app:config:import
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `app:config:status`
 
-檢查設定傳播是否需要更新
+检查配置传播是否需要更新
 
 ```bash
 bin/magento app:config:status
@@ -881,56 +881,56 @@ bin/magento app:config:status
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `braintree:migrate`
 
-從Magento1資料庫移轉儲存的卡片
+从Magento1数据库迁移存储的卡片
 
 ```bash
 bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password PASSWORD]
@@ -938,80 +938,80 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 ### `--host`
 
-主機名稱/IP。 連線埠是選用的
+主机名/IP。 端口是可选的
 
-- 需要值
+- 需要一个值
 
 ### `--dbname`
 
-資料庫名稱
+数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--username`
 
-資料庫使用者名稱。 必須有讀取存取權
+数据库用户名。 必须具有读取权限
 
-- 需要值
+- 需要一个值
 
 ### `--password`
 
-密碼
+密码
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cache:clean`
 
-清除快取型別
+清理缓存类型
 
 ```bash
 bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
@@ -1020,70 +1020,70 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的快取型別清單，或省略以套用至所有快取型別。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--bootstrap`
 
-新增或覆寫啟動程式的引數
+添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cache:disable`
 
-停用快取型別
+禁用缓存类型
 
 ```bash
 bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
@@ -1092,70 +1092,70 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的快取型別清單，或省略以套用至所有快取型別。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--bootstrap`
 
-新增或覆寫啟動程式的引數
+添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cache:enable`
 
-啟用快取型別
+启用缓存类型
 
 ```bash
 bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
@@ -1164,70 +1164,70 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的快取型別清單，或省略以套用至所有快取型別。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--bootstrap`
 
-新增或覆寫啟動程式的引數
+添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cache:flush`
 
-清除快取型別使用的快取儲存空間
+刷新由缓存类型使用的缓存存储
 
 ```bash
 bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
@@ -1236,70 +1236,70 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `types`
 
-以空格分隔的快取型別清單，或省略以套用至所有快取型別。
+以空格分隔的缓存类型列表，或省略以应用于所有缓存类型。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--bootstrap`
 
-新增或覆寫啟動程式的引數
+添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cache:status`
 
-檢查快取狀態
+检查缓存状态
 
 ```bash
 bin/magento cache:status [--bootstrap BOOTSTRAP]
@@ -1307,62 +1307,62 @@ bin/magento cache:status [--bootstrap BOOTSTRAP]
 
 ### `--bootstrap`
 
-新增或覆寫啟動程式的引數
+添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `catalog:images:resize`
 
-建立調整大小的產品影像
+创建调整大小的产品图像
 
 ```bash
 bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
@@ -1370,70 +1370,70 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 ### `--async`, `-a`
 
-在非同步模式下調整影像大小
+在异步模式下调整图像大小
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--skip_hidden_images`
 
-不要處理產品頁面中標籤為隱藏的影像
+不处理在产品页面中标记为隐藏的图像
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `catalog:product:attributes:cleanup`
 
-移除未使用的產品屬性。
+删除未使用的产品属性。
 
 ```bash
 bin/magento catalog:product:attributes:cleanup
@@ -1441,56 +1441,56 @@ bin/magento catalog:product:attributes:cleanup
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cms:wysiwyg:restrict`
 
-設定是強制使用者HTML內容驗證，還是改為顯示警告
+设置是强制执行用户HTML内容验证还是显示警告
 
 ```bash
 bin/magento cms:wysiwyg:restrict <restrict>
@@ -1501,60 +1501,60 @@ bin/magento cms:wysiwyg:restrict <restrict>
 
 y\n
 
-- 必填
+- 必需
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `config:sensitive:set`
 
-設定敏感設定值
+设置敏感配置值
 
 ```bash
 bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<path> [<value>]]
@@ -1563,87 +1563,87 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 ### `path`
 
-設定路徑，例如group/section/field_name
+配置路径，例如group/section/field_name
 
 
 ### `value`
 
-設定值
+配置值
 
 
 ### `--interactive`, `-i`
 
-啟用互動模式以設定所有敏感變數
+启用交互模式以设置所有敏感变量
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--scope`
 
-設定範圍（若未設定）請使用「預設」
+配置范围（如果未设置），请使用“default”
 
-- 預設： `default`
-- 接受值
+- 默认： `default`
+- 接受一个值
 
 ### `--scope-code`
 
-設定的範圍代碼，預設為空字串
+配置的范围代码，默认情况下为空字符串
 
-- 預設： &quot;
-- 接受值
+- 默认：“
+- 接受一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `config:set`
 
-變更系統設定
+更改系统配置
 
 ```bash
 bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env] [-c|--lock-config] [-l|--lock] [--] <path> <value>
@@ -1652,102 +1652,102 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `path`
 
-區段/群組/欄位名稱格式的設定路徑
+格式为节/组/字段名的配置路径
 
-- 必填
+- 必需
 
 ### `value`
 
-設定值
+配置值
 
-- 必填
+- 必需
 
 ### `--scope`
 
-設定範圍（預設、網站或商店）
+配置范围（默认、网站或商店）
 
-- 預設： `default`
-- 需要值
+- 默认： `default`
+- 需要一个值
 
 ### `--scope-code`
 
-範圍代碼（只有在範圍不是「預設」時才需要）
+范围代码（仅当范围不是“default”时才需要）
 
-- 需要值
+- 需要一个值
 
 ### `--lock-env`, `-e`
 
-鎖定值，防止在Admin中進行修改(將儲存於app/etc/env.php)
+阻止在管理员中进行修改的锁定值(将保存在app/etc/env.php中)
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--lock-config`, `-c`
 
-鎖定並與其他安裝專案共用值，防止在Admin中進行修改(將儲存在app/etc/config.php中)
+锁定并与其他安装共享值，防止在管理员中进行修改(将保存在app/etc/config.php中)
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--lock`, `-l`
 
-已棄用，請改用 — lock-env選項。
+已弃用，请改用 — lock-env选项。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `config:show`
 
-顯示指定路徑的設定值。 如果未指定路徑，則會顯示所有儲存的值
+显示给定路径的配置值。 如果未指定路径，将显示所有保存的值
 
 ```bash
 bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<path>]
@@ -1756,75 +1756,75 @@ bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<pat
 
 ### `path`
 
-設定路徑，例如section_id/group_id/field_id
+配置路径，例如section_id/group_id/field_id
 
 
 ### `--scope`
 
-設定範圍（若未指定），則會使用「預設」範圍
+配置范围（如果未指定），则将使用“默认”范围
 
-- 預設： `default`
-- 接受值
+- 默认： `default`
+- 接受一个值
 
 ### `--scope-code`
 
-範圍代碼（只有在範圍不是時才需要） `default`)
+范围代码（仅当范围不是时才需要） `default`)
 
-- 預設： &quot;
-- 接受值
+- 默认：“
+- 接受一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cron:install`
 
-產生並安裝目前使用者的crontab
+为当前用户生成并安装crontab
 
 ```bash
 bin/magento cron:install [-f|--force] [-d|--non-optional]
@@ -1832,70 +1832,70 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 ### `--force`, `-f`
 
-強制安裝任務
+强制安装任务
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--non-optional`, `-d`
 
-僅安裝非選擇性（預設）工作
+仅安装非可选（默认）任务
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cron:remove`
 
-從crontab移除任務
+从crontab中删除任务
 
 ```bash
 bin/magento cron:remove
@@ -1903,56 +1903,56 @@ bin/magento cron:remove
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `cron:run`
 
-依排程執行工作
+按计划运行作业
 
 ```bash
 bin/magento cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
@@ -1960,68 +1960,68 @@ bin/magento cron:run [--group GROUP] [--bootstrap BOOTSTRAP]
 
 ### `--group`
 
-僅從指定的群組執行工作
+仅运行来自指定组的作业
 
-- 需要值
+- 需要一个值
 
 ### `--bootstrap`
 
-新增或覆寫啟動程式的引數
+添加或覆盖引导的参数
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `customer:hash:upgrade`
 
-根據最新演演算法升級客戶的雜湊
+根据最新算法升级客户的哈希
 
 ```bash
 bin/magento customer:hash:upgrade
@@ -2029,56 +2029,56 @@ bin/magento customer:hash:upgrade
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `deploy:mode:set`
 
-設定應用程式模式。
+设置应用程序模式。
 
 ```bash
 bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
@@ -2087,69 +2087,69 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 ### `mode`
 
-要設定的應用程式模式。 可用選項為「開發人員」或「生產」
+要设置的应用程序模式。 可用选项为“开发人员”或“生产”
 
-- 必填
+- 必需
 
 ### `--skip-compilation`, `-s`
 
-略過清除及重新產生靜態內容（產生的程式碼、預先處理的CSS和pub/static/中的資產）
+跳过静态内容（生成的代码、预处理的CSS和pub/static/中的资产）的清除和重新生成
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `deploy:mode:show`
 
-顯示目前的應用程式模式。
+显示当前应用程序模式。
 
 ```bash
 bin/magento deploy:mode:show
@@ -2157,56 +2157,56 @@ bin/magento deploy:mode:show
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:di:info`
 
-提供指令的相依性插入組態的資訊。
+提供有关命令的依赖项注入配置的信息。
 
 ```bash
 bin/magento dev:di:info <class>
@@ -2215,62 +2215,62 @@ bin/magento dev:di:info <class>
 
 ### `class`
 
-類別名稱
+类名
 
-- 必填
+- 必需
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:email:newsletter-compatibility-check`
 
-掃描Newsletter範本，找出可能的變數使用相容性問題
+扫描新闻稿模板以查找潜在的变量使用兼容性问题
 
 ```bash
 bin/magento dev:email:newsletter-compatibility-check
@@ -2278,56 +2278,56 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:email:override-compatibility-check`
 
-掃描電子郵件範本覆寫以確定潛在的變數使用相容性問題
+扫描电子邮件模板覆盖以查找潜在的变量使用兼容性问题
 
 ```bash
 bin/magento dev:email:override-compatibility-check
@@ -2335,56 +2335,56 @@ bin/magento dev:email:override-compatibility-check
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:profiler:disable`
 
-停用效能分析工具。
+禁用Profiler。
 
 ```bash
 bin/magento dev:profiler:disable
@@ -2392,56 +2392,56 @@ bin/magento dev:profiler:disable
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:profiler:enable`
 
-啟用效能分析工具。
+启用Profiler。
 
 ```bash
 bin/magento dev:profiler:enable [<type>]
@@ -2450,61 +2450,61 @@ bin/magento dev:profiler:enable [<type>]
 
 ### `type`
 
-效能分析工具型別
+探查器类型
 
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:query-log:disable`
 
-停用DB查詢記錄
+禁用数据库查询日志记录
 
 ```bash
 bin/magento dev:query-log:disable
@@ -2512,56 +2512,56 @@ bin/magento dev:query-log:disable
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:query-log:enable`
 
-啟用DB查詢記錄
+启用数据库查询日志记录
 
 ```bash
 bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [--query-time-threshold [QUERY-TIME-THRESHOLD]] [--include-call-stack [INCLUDE-CALL-STACK]]
@@ -2569,77 +2569,77 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 
 ### `--include-all-queries`
 
-記錄所有查詢。 [true\|false]
+记录所有查询。 [true\|false]
 
-- 預設： `true`
-- 接受值
+- 默认： `true`
+- 接受一个值
 
 ### `--query-time-threshold`
 
-查詢時間臨界值。
+查询时间阈值。
 
-- 預設： `0.001`
-- 接受值
+- 默认： `0.001`
+- 接受一个值
 
 ### `--include-call-stack`
 
-包含呼叫棧疊。 [true\|false]
+包括调用栈栈。 [true\|false]
 
-- 預設： `true`
-- 接受值
+- 默认： `true`
+- 接受一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:source-theme:deploy`
 
-收集和發佈佈景主題的來源檔案。
+收集和发布主题的源文件。
 
 ```bash
 bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA] [--theme THEME] [--] [<file>...]
@@ -2648,92 +2648,92 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 ### `file`
 
-要預先處理的檔案（請指定沒有副檔名的檔案）
+要预处理的文件（指定文件时应不带扩展名）
 
-- 預設： `css/styles-mcss/styles-l`
+- 默认： `css/styles-mcss/styles-l`
 
-- 陣列
+- 数组
 
 ### `--type`
 
-來源檔案型別： [更少]
+源文件的类型： [更少]
 
-- 預設： `less`
-- 需要值
+- 默认： `less`
+- 需要一个值
 
 ### `--locale`
 
-地區設定： [en_US]
+区域设置： [en_US]
 
-- 預設： `en_US`
-- 需要值
+- 默认： `en_US`
+- 需要一个值
 
 ### `--area`
 
-區域： [frontend\|adminhtml]
+区域： [frontend\|adminhtml]
 
-- 預設： `frontend`
-- 需要值
+- 默认： `frontend`
+- 需要一个值
 
 ### `--theme`
 
-主題： [廠商/主題]
+主题： [供应商/主题]
 
-- 預設： `Magento/luma`
-- 需要值
+- 默认： `Magento/luma`
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:template-hints:disable`
 
-停用前端範本提示。 可能需要快取排清。
+禁用前端模板提示。 可能需要缓存刷新。
 
 ```bash
 bin/magento dev:template-hints:disable
@@ -2741,56 +2741,56 @@ bin/magento dev:template-hints:disable
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:template-hints:enable`
 
-啟用前端範本提示。 可能需要快取排清。
+启用前端模板提示。 可能需要缓存刷新。
 
 ```bash
 bin/magento dev:template-hints:enable
@@ -2798,56 +2798,56 @@ bin/magento dev:template-hints:enable
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:template-hints:status`
 
-顯示前端範本提示狀態。
+显示前端模板提示状态。
 
 ```bash
 bin/magento dev:template-hints:status
@@ -2855,56 +2855,56 @@ bin/magento dev:template-hints:status
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:tests:run`
 
-執行測試
+运行测试
 
 ```bash
 bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
@@ -2913,70 +2913,70 @@ bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
 
 ### `type`
 
-要執行的測試型別。 可用型別：全部、單位、整合、整合 — 全部、靜態、靜態 — 全部、完整性、舊版、預設
+要运行的测试类型。 可用类型：all、unit、integration、integration-all、static、static-all、integrity、legacy、default
 
-- 預設： `default`
+- 默认： `default`
 
 
 ### `--arguments`, `-c`
 
-PHPUnit的其他引數。 範例：「 — c」 — filter=MyTest&#39;」（無空格）
+PHPUnit的其他参数。 示例：“ — c” — filter=MyTest&#39;”（无空格）
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:urn-catalog:generate`
 
-產生URN到*.xsd對映的目錄，以便IDE反白顯示xml。
+为IDE生成*.xsd映射的URN目录以高亮显示xml。
 
 ```bash
 bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
@@ -2985,69 +2985,69 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 ### `path`
 
-輸出目錄的檔案路徑。 若為PhpStorm，請使用。idea/misc.xml
+输出目录文件的路径。 对于PhpStorm，使用。idea/misc.xml
 
-- 必填
+- 必需
 
 ### `--ide`
 
-產生目錄時所用的格式。 支援： [phpstorm， vscode]
+将生成目录的格式。 支持： [phpstorm， vscode]
 
-- 預設： `phpstorm`
-- 需要值
+- 默认： `phpstorm`
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `dev:xml:convert`
 
-使用XSL樣式表轉換XML檔案
+使用XSL样式表转换XML文件
 
 ```bash
 bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
@@ -3056,75 +3056,75 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ### `xml-file`
 
-要轉換的XML檔案的路徑
+要转换的XML文件的路径
 
-- 必填
+- 必需
 
 ### `processor`
 
-將套用至XML檔案的XSL樣式表路徑
+将应用于XML文件的XSL样式表的路径
 
-- 必填
+- 必需
 
 ### `--overwrite`, `-o`
 
-覆寫XML檔案
+覆盖XML文件
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `downloadable:domains:add`
 
-將網域新增至可下載的網域白名單
+将域添加到可下载的域白名单
 
 ```bash
 bin/magento downloadable:domains:add [<domains>...]
@@ -3133,64 +3133,64 @@ bin/magento downloadable:domains:add [<domains>...]
 
 ### `domains`
 
-網域名稱
+域名称
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `downloadable:domains:remove`
 
-從可下載的網域白名單中移除網域
+从可下载的域白名单中删除域
 
 ```bash
 bin/magento downloadable:domains:remove [<domains>...]
@@ -3199,64 +3199,64 @@ bin/magento downloadable:domains:remove [<domains>...]
 
 ### `domains`
 
-網域名稱
+域名
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `downloadable:domains:show`
 
-顯示可下載的網域白名單
+显示可下载域白名单
 
 ```bash
 bin/magento downloadable:domains:show
@@ -3264,56 +3264,56 @@ bin/magento downloadable:domains:show
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `encryption:payment-data:update`
 
-使用最新的加密密碼重新加密加密信用卡資料。
+使用最新的加密密码重新加密已加密的信用卡数据。
 
 ```bash
 bin/magento encryption:payment-data:update
@@ -3321,56 +3321,56 @@ bin/magento encryption:payment-data:update
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `i18n:collect-phrases`
 
-探索程式碼基底中的片語
+发现代码库中的短语
 
 ```bash
 bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<directory>]
@@ -3379,74 +3379,74 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 ### `directory`
 
-要剖析的目錄路徑。 若已設定 — magento旗標，則不需要
+要分析的目录路径。 如果设置了 — magento标志，则不需要
 
 
 ### `--output`, `-o`
 
-輸出檔案的路徑（包括檔案名稱）。 未指定檔案時，預設值為stdout。
+输出文件的路径（包括文件名）。 未指定文件，将默认为stdout。
 
-- 需要值
+- 需要一个值
 
 ### `--magento`, `-m`
 
-使用 — magento引數來剖析目前的Magento程式碼基底。 若指定目錄，則省略引數。
+使用 — magento参数解析当前Magento代码库。 如果指定了目录，则省略参数。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `i18n:pack`
 
-儲存語言套件
+保存语言包
 
 ```bash
 bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <locale>
@@ -3455,82 +3455,82 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 ### `source`
 
-包含翻譯的來源字典檔案路徑
+包含翻译的源字典文件的路径
 
-- 必填
+- 必需
 
 ### `locale`
 
-字典的目標地區設定，例如&quot;de_DE&quot;
+词典的目标区域设置，例如“de_DE”
 
-- 必填
+- 必需
 
 ### `--mode`, `-m`
 
-字典儲存模式 — 「取代」 — 以新語言套件取代語言套件 — 「合併」 — 合併語言套件，預設為「取代」
+词典的存储模式 — “替换” — 用新语言包替换语言包 — “合并” — 合并语言包，默认为“替换”
 
-- 預設： `replace`
-- 需要值
+- 默认： `replace`
+- 需要一个值
 
 ### `--allow-duplicates`, `-d`
 
-使用 — allow-duplicates引數可允許儲存翻譯的重複專案。 否則請省略引數。
+使用 — allow-duplicates参数可允许保存翻译的重复项。 否则，忽略参数。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `i18n:uninstall`
 
-解除安裝語言套件
+卸载语言包
 
 ```bash
 bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
@@ -3539,72 +3539,72 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 ### `package`
 
-語言套件名稱
+语言包名称
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 必填
-- 陣列
+- 必需
+- 数组
 
 ### `--backup-code`, `-b`
 
-進行程式碼和組態檔備份（不包括暫存檔）
+进行代码和配置文件备份（不包括临时文件）
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:info`
 
-顯示允許的索引子
+显示允许的索引器
 
 ```bash
 bin/magento indexer:info
@@ -3612,56 +3612,56 @@ bin/magento indexer:info
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:reindex`
 
-重新索引資料
+重新索引数据
 
 ```bash
 bin/magento indexer:reindex [<index>...]
@@ -3670,64 +3670,64 @@ bin/magento indexer:reindex [<index>...]
 
 ### `index`
 
-以空格分隔的索引型別清單，或省略以套用至所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:reset`
 
-將索引器狀態重設為無效
+将索引器状态重置为无效
 
 ```bash
 bin/magento indexer:reset [<index>...]
@@ -3736,64 +3736,64 @@ bin/magento indexer:reset [<index>...]
 
 ### `index`
 
-以空格分隔的索引型別清單，或省略以套用至所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:set-dimensions-mode`
 
-設定索引子Dimension模式
+设置索引器Dimension模式
 
 ```bash
 bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
@@ -3802,66 +3802,66 @@ bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 
 ### `indexer`
 
-索引子名稱 [catalog_product_price]
+索引器名称 [catalog_product_price]
 
 
 ### `mode`
 
-索引器維度模式catalog_product_price none、website、customer_group、website_and_customer_group
+索引器维度模式catalog_product_price none、website、customer_group、website_and_customer_group
 
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:set-mode`
 
-設定索引模式型別
+设置索引模式类型
 
 ```bash
 bin/magento indexer:set-mode [<mode> [<index>...]]
@@ -3870,69 +3870,69 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 ### `mode`
 
-索引器模式型別 [即時|排程]
+索引器模式类型 [实时|计划]
 
 
 ### `index`
 
-以空格分隔的索引型別清單，或省略以套用至所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:show-dimensions-mode`
 
-顯示索引子Dimension模式
+显示索引器Dimension模式
 
 ```bash
 bin/magento indexer:show-dimensions-mode [<indexer>...]
@@ -3941,64 +3941,64 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 ### `indexer`
 
-以空格分隔的索引型別清單，或省略以套用至所有索引(catalog_product_price)
+以空格分隔的索引类型列表或省略以应用于所有索引(catalog_product_price)
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:show-mode`
 
-顯示索引模式
+显示索引模式
 
 ```bash
 bin/magento indexer:show-mode [<index>...]
@@ -4007,64 +4007,64 @@ bin/magento indexer:show-mode [<index>...]
 
 ### `index`
 
-以空格分隔的索引型別清單，或省略以套用至所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `indexer:status`
 
-顯示索引器的狀態
+显示索引器的状态
 
 ```bash
 bin/magento indexer:status [<index>...]
@@ -4073,64 +4073,64 @@ bin/magento indexer:status [<index>...]
 
 ### `index`
 
-以空格分隔的索引型別清單，或省略以套用至所有索引。
+以空格分隔的索引类型列表，或省略以应用于所有索引。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:adminuri`
 
-顯示Magento管理員URI
+显示Magento管理员URI
 
 ```bash
 bin/magento info:adminuri
@@ -4138,56 +4138,56 @@ bin/magento info:adminuri
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:backups:list`
 
-列印可用備份檔案的清單
+打印可用备份文件列表
 
 ```bash
 bin/magento info:backups:list
@@ -4195,56 +4195,56 @@ bin/magento info:backups:list
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:currency:list`
 
-顯示可用貨幣的清單
+显示可用货币的列表
 
 ```bash
 bin/magento info:currency:list
@@ -4252,56 +4252,56 @@ bin/magento info:currency:list
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:dependencies:show-framework`
 
-顯示Magento架構的相依性數目
+显示Magento框架的依赖项数量
 
 ```bash
 bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
@@ -4309,63 +4309,63 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 
 ### `--output`, `-o`
 
-報表檔案名稱
+报表文件名
 
-- 預設： `framework-dependencies.csv`
-- 需要值
+- 默认： `framework-dependencies.csv`
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:dependencies:show-modules`
 
-顯示模組之間的相依性數目
+显示模块之间的依赖关系数
 
 ```bash
 bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
@@ -4373,63 +4373,63 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 
 ### `--output`, `-o`
 
-報表檔案名稱
+报表文件名
 
-- 預設： `modules-dependencies.csv`
-- 需要值
+- 默认： `modules-dependencies.csv`
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:dependencies:show-modules-circular`
 
-顯示模組之間的循環相依性數目
+显示模块之间的循环依赖关系数
 
 ```bash
 bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
@@ -4437,63 +4437,63 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 ### `--output`, `-o`
 
-報表檔案名稱
+报表文件名
 
-- 預設： `modules-circular-dependencies.csv`
-- 需要值
+- 默认： `modules-circular-dependencies.csv`
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:language:list`
 
-顯示可用語言地區設定的清單
+显示可用语言区域设置的列表
 
 ```bash
 bin/magento info:language:list
@@ -4501,56 +4501,56 @@ bin/magento info:language:list
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `info:timezone:list`
 
-顯示可用時區清單
+显示可用时区的列表
 
 ```bash
 bin/magento info:timezone:list
@@ -4558,56 +4558,56 @@ bin/magento info:timezone:list
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `inventory:reservation:create-compensations`
 
-依據提供的報酬引數建立預留
+通过提供的报酬参数创建保留
 
 ```bash
 bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compensations>...]
@@ -4616,71 +4616,71 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ### `compensations`
 
-「 」格式的薪酬引數清單&lt;order_increment_id>：&lt;sku>：&lt;quantity>：&lt;stock-id>&quot;
+格式为“”的报酬参数列表&lt;order_increment_id>：&lt;sku>：&lt;quantity>：&lt;stock-id>”
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--raw`, `-r`
 
-原始輸出
+原始输出
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `inventory:reservation:list-inconsistencies`
 
-顯示所有可銷售數量不一致的訂單與產品
+显示所有具有可销售数量不一致的订单和产品
 
 ```bash
 bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-i|--incomplete-orders] [-b|--bunch-size [BUNCH-SIZE]] [-r|--raw]
@@ -4688,84 +4688,84 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ### `--complete-orders`, `-c`
 
-僅顯示完整訂單的不一致
+仅显示完整订单的不一致
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--incomplete-orders`, `-i`
 
-僅顯示不完整訂單的不一致
+仅显示不完整订单的不一致
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--bunch-size`, `-b`
 
-定義將同時載入多少訂單
+定义将一次加载多少订单
 
-- 預設： `50`
-- 接受值
+- 默认： `50`
+- 接受一个值
 
 ### `--raw`, `-r`
 
-原始輸出
+原始输出
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `inventory-geonames:import`
 
-下載並匯入來源選擇演演算法的地理名稱
+下载并导入源选择算法的地理名称
 
 ```bash
 bin/magento inventory-geonames:import <countries>...
@@ -4774,65 +4774,65 @@ bin/magento inventory-geonames:import <countries>...
 
 ### `countries`
 
-要匯入的國家代碼清單
+要导入的国家代码列表
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 必填
-- 陣列
+- 必需
+- 数组
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `maintenance:allow-ips`
 
-設定維護模式劐免IP
+设置维护模式免除IP
 
 ```bash
 bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<ip>...]
@@ -4841,84 +4841,84 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 ### `ip`
 
-允許的IP位址
+允许的IP地址
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--none`
 
-清除允許的IP位址
+清除允许的IP地址
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--add`
 
-將IP位址新增至現有清單
+将IP地址添加到现有列表
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `maintenance:disable`
 
-停用維護模式
+禁用维护模式
 
 ```bash
 bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -4926,69 +4926,69 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 ### `--ip`
 
-允許的IP位址（使用「無」清除允許的IP清單）
+允许的IP地址（使用“无”清除允许的IP列表）
 
-- 預設： `[]`
-- 需要值
+- 默认： `[]`
+- 需要一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `maintenance:enable`
 
-啟用維護模式
+启用维护模式
 
 ```bash
 bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -4996,69 +4996,69 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 ### `--ip`
 
-允許的IP位址（使用「無」清除允許的IP清單）
+允许的IP地址（使用“无”清除允许的IP列表）
 
-- 預設： `[]`
-- 需要值
+- 默认： `[]`
+- 需要一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `maintenance:status`
 
-顯示維護模式狀態
+显示维护模式状态
 
 ```bash
 bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -5066,62 +5066,62 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `media-content:sync`
 
-將內容與資產同步
+将内容与资产同步
 
 ```bash
 bin/magento media-content:sync
@@ -5129,56 +5129,56 @@ bin/magento media-content:sync
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `media-gallery:sync`
 
-同步資料庫中的媒體儲存和媒體資產
+同步数据库中的媒体存储和媒体资产
 
 ```bash
 bin/magento media-gallery:sync
@@ -5186,56 +5186,56 @@ bin/magento media-gallery:sync
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `module:config:status`
 
-檢查「app/etc/config.php」檔案中的模組設定，並報告它們是否為最新狀態
+检查“app/etc/config.php”文件中的模块配置，并报告它们是否为最新版本
 
 ```bash
 bin/magento module:config:status
@@ -5243,56 +5243,56 @@ bin/magento module:config:status
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `module:disable`
 
-停用指定的模組
+禁用指定的模块
 
 ```bash
 bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module>...]
@@ -5301,91 +5301,91 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 ### `module`
 
-模組名稱
+模块名称
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--force`, `-f`
 
-略過相依性檢查
+绕过依赖项检查
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--all`
 
-停用所有模組
+禁用所有模块
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--clear-static-content`, `-c`
 
-清除產生的靜態檢視檔案。 如果模組有靜態檢視檔案，則為必要
+清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `module:enable`
 
-啟用指定的模組
+启用指定的模块
 
 ```bash
 bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module>...]
@@ -5394,91 +5394,91 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 ### `module`
 
-模組名稱
+模块名称
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--force`, `-f`
 
-略過相依性檢查
+绕过依赖项检查
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--all`
 
-啟用所有模組
+启用所有模块
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--clear-static-content`, `-c`
 
-清除產生的靜態檢視檔案。 如果模組有靜態檢視檔案，則為必要
+清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `module:status`
 
-顯示模組的狀態
+显示模块的状态
 
 ```bash
 bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module-names>...]
@@ -5487,84 +5487,84 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 ### `module-names`
 
-選用的模組名稱
+可选模块名称
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--enabled`
 
-僅列印啟用的模組
+仅打印已启用的模块
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--disabled`
 
-僅列印已停用的模組
+仅打印禁用的模块
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `module:uninstall`
 
-解除安裝撰寫器安裝的模組
+卸载由编辑器安装的模块
 
 ```bash
 bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media] [--backup-db] [--non-composer] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] <module>...
@@ -5573,113 +5573,113 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ### `module`
 
-模組名稱
+模块名称
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 必填
-- 陣列
+- 必需
+- 数组
 
 ### `--remove-data`, `-r`
 
-移除模組安裝的資料
+删除模块安装的数据
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--backup-code`
 
-進行程式碼和組態檔備份（不包括暫存檔）
+进行代码和配置文件备份（不包括临时文件）
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--backup-media`
 
-進行媒體備份
+进行媒体备份
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--backup-db`
 
-進行完整的資料庫備份
+进行完整的数据库备份
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--non-composer`
 
-所有過去在此的模組都將以非撰寫器為基礎
+此处过去的所有模块都将基于非编辑器
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--clear-static-content`, `-c`
 
-清除產生的靜態檢視檔案。 如果模組有靜態檢視檔案，則為必要
+清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `newrelic:create:deploy-marker`
 
-檢查部署佇列中是否有專案，並建立適當的部署標籤。
+检查部署队列中的条目，并创建适当的部署标记。
 
 ```bash
 bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revision>]]
@@ -5688,78 +5688,78 @@ bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revis
 
 ### `message`
 
-部署訊息？
+部署消息？
 
-- 必填
+- 必需
 
 ### `change_log`
 
-變更記錄？
+更改日志？
 
-- 必填
+- 必需
 
 ### `user`
 
-部署使用者
+部署用户
 
 
 ### `revision`
 
-修訂
+修订版
 
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `queue:consumers:list`
 
-MessageQueue使用者清單
+MessageQueue使用者列表
 
 ```bash
 bin/magento queue:consumers:list
@@ -5767,56 +5767,56 @@ bin/magento queue:consumers:list
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `queue:consumers:restart`
 
-重新啟動MessageQueue使用者
+重新启动MessageQueue使用者
 
 ```bash
 bin/magento queue:consumers:restart
@@ -5824,56 +5824,56 @@ bin/magento queue:consumers:restart
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `queue:consumers:start`
 
-啟動MessageQueue取用者
+启动MessageQueue使用者
 
 ```bash
 bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BATCH-SIZE] [--area-code AREA-CODE] [--single-thread] [--multi-process [MULTI-PROCESS]] [--pid-file-path PID-FILE-PATH] [--] <consumer>
@@ -5882,99 +5882,99 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 
 ### `consumer`
 
-要啟動的消費者名稱。
+要启动的消费者的名称。
 
-- 必填
+- 必需
 
 ### `--max-messages`
 
-處理序終止前消費者要處理的訊息數。 如果未指定 — 在處理所有佇列的訊息後終止。
+进程终止前使用者要处理的消息数。 如果未指定 — 在处理所有排队消息后终止。
 
-- 需要值
+- 需要一个值
 
 ### `--batch-size`
 
-每批次的訊息數。 僅適用於批次消費者。
+每批次的消息数。 仅适用于批处理消费者。
 
-- 需要值
+- 需要一个值
 
 ### `--area-code`
 
-慣用區域（全域、管理ML等）預設為全域。
+首选区域（global、adminhtml等）的默认值为global。
 
-- 需要值
+- 需要一个值
 
 ### `--single-thread`
 
-此選項可防止同時執行一個消費者的多個復本。
+此选项可防止同时运行一个使用者的多个副本。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--multi-process`
 
-每個使用者的處理序數目。
+每个使用者的进程数。
 
-- 接受值
+- 接受一个值
 
 ### `--pid-file-path`
 
-儲存PID的檔案路徑（此選項已過時，請改用 — 單一執行緒）
+用于保存PID的文件路径（此选项已弃用，请改用 — 单线程）
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `remote-storage:sync`
 
-將媒體檔案與遠端儲存裝置同步。
+将媒体文件与远程存储同步。
 
 ```bash
 bin/magento remote-storage:sync
@@ -5982,56 +5982,56 @@ bin/magento remote-storage:sync
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `sampledata:deploy`
 
-部署範例資料模組以進行Composer型Magento安裝
+为基于编辑器的Magento安装部署示例数据模块
 
 ```bash
 bin/magento sampledata:deploy [--no-update]
@@ -6039,63 +6039,63 @@ bin/magento sampledata:deploy [--no-update]
 
 ### `--no-update`
 
-在不執行編輯器更新的情況下更新composer.json
+在不执行编辑器更新的情况下更新composer.json
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `sampledata:remove`
 
-從composer.json移除所有範例資料套件
+从composer.json中删除所有示例数据包
 
 ```bash
 bin/magento sampledata:remove [--no-update]
@@ -6103,63 +6103,63 @@ bin/magento sampledata:remove [--no-update]
 
 ### `--no-update`
 
-在不執行編輯器更新的情況下更新composer.json
+在不执行编辑器更新的情况下更新composer.json
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `sampledata:reset`
 
-重設所有範例資料模組以重新安裝
+重置所有示例数据模块以重新安装
 
 ```bash
 bin/magento sampledata:reset
@@ -6167,56 +6167,56 @@ bin/magento sampledata:reset
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `security:recaptcha:disable-for-user-forgot-password`
 
-停用管理員使用者忘記密碼表單的reCAPTCHA
+禁用管理员用户忘记密码表单的reCAPTCHA
 
 ```bash
 bin/magento security:recaptcha:disable-for-user-forgot-password
@@ -6224,56 +6224,56 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `security:recaptcha:disable-for-user-login`
 
-停用管理員使用者登入表單的reCAPTCHA
+禁用管理员用户登录表单的reCAPTCHA
 
 ```bash
 bin/magento security:recaptcha:disable-for-user-login
@@ -6281,56 +6281,56 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `security:tfa:google:set-secret`
 
-設定用於產生Google OTP的密碼。
+设置用于生成Google OTP的密码。
 
 ```bash
 bin/magento security:tfa:google:set-secret <user> <secret>
@@ -6339,68 +6339,68 @@ bin/magento security:tfa:google:set-secret <user> <secret>
 
 ### `user`
 
-使用者名稱
+用户名
 
-- 必填
+- 必需
 
 ### `secret`
 
-密碼
+密码
 
-- 必填
+- 必需
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `security:tfa:providers`
 
-列出所有可用的提供者
+列出所有可用的提供程序
 
 ```bash
 bin/magento security:tfa:providers
@@ -6408,56 +6408,56 @@ bin/magento security:tfa:providers
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `security:tfa:reset`
 
-重設一位使用者的設定
+重置一个用户的配置
 
 ```bash
 bin/magento security:tfa:reset <user> <provider>
@@ -6466,68 +6466,68 @@ bin/magento security:tfa:reset <user> <provider>
 
 ### `user`
 
-使用者名稱
+用户名
 
-- 必填
+- 必需
 
 ### `provider`
 
-提供者代碼
+提供程序代码
 
-- 必填
+- 必需
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:backup`
 
-備份Magento應用程式程式碼基底、媒體和資料庫
+对Magento应用程序代码库、介质和数据库进行备份
 
 ```bash
 bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -6535,83 +6535,83 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 ### `--code`
 
-進行程式碼和組態檔備份（不包括暫存檔）
+进行代码和配置文件备份（不包括临时文件）
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--media`
 
-進行媒體備份
+进行媒体备份
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--db`
 
-進行完整的資料庫備份
+进行完整的数据库备份
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:config:set`
 
-建立或修改部署設定
+创建或修改部署配置
 
 ```bash
 bin/magento setup:config:set [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--backend-frontname BACKEND-FRONTNAME] [--id_salt ID_SALT] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -6619,571 +6619,571 @@ bin/magento setup:config:set [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--en
 
 ### `--enable-debug-logging`
 
-啟用偵錯記錄
+启用调试日志记录
 
-- 需要值
+- 需要一个值
 
 ### `--enable-syslog-logging`
 
-啟用syslog記錄
+启用syslog日志记录
 
-- 需要值
+- 需要一个值
 
 ### `--backend-frontname`
 
-後端frontname （如果遺失，將自動產生）
+后端前端名称（如果缺少，将自动生成）
 
-- 需要值
+- 需要一个值
 
 ### `--id_salt`
 
-GraphQl Salt
+GraphQl盐
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-driver`
 
-遠端儲存驅動程式
+远程存储驱动程序
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-prefix`
 
-遠端儲存首碼
+远程存储前缀
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-endpoint`
 
-遠端儲存端點
+远程存储端点
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-bucket`
 
-遠端儲存貯體
+远程存储段
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-region`
 
-遠端儲存區域
+远程存储区域
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-key`
 
-遠端儲存存取金鑰
+远程存储访问密钥
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-secret`
 
-遠端儲存秘密金鑰
+远程存储密钥
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-path-style`
 
-遠端儲存路徑樣式
+远程存储路径样式
 
-- 預設： `0`
-- 需要值
+- 默认： `0`
+- 需要一个值
 
 ### `--amqp-host`
 
-Amqp伺服器主機
+Amqp服务器主机
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-port`
 
-Amqp伺服器連線埠
+Amqp服务器端口
 
-- 預設： `5672`
-- 需要值
+- 默认： `5672`
+- 需要一个值
 
 ### `--amqp-user`
 
-Amqp伺服器使用者名稱
+Amqp服务器用户名
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-password`
 
-Amqp伺服器密碼
+Amqp服务器密码
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-virtualhost`
 
 Amqp virtualhost
 
-- 預設： `/`
-- 需要值
+- 默认： `/`
+- 需要一个值
 
 ### `--amqp-ssl`
 
 Amqp SSL
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-ssl-options`
 
-Amqp SSL選項(JSON)
+Amqp SSL选项(JSON)
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--consumers-wait-for-messages`
 
-消費者是否應該等候佇列中的訊息？ 1 — 是，0 — 否
+消费者是否应该等待队列中的消息？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--queue-default-connection`
 
-訊息佇列預設連線。 可以是&#39;db&#39;、&#39;amqp&#39;或自訂佇列系統。必須安裝並設定佇列系統，否則將無法正確處理訊息。
+消息队列默认连接。 可以是“db”、“amqp”或自定义队列系统。必须安装和配置队列系统，否则将无法正确处理消息。
 
-- 需要值
+- 需要一个值
 
 ### `--key`
 
-加密金鑰
+加密密钥
 
-- 需要值
+- 需要一个值
 
 ### `--db-host`
 
-資料庫伺服器主機
+数据库服务器主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-name`
 
-資料庫名稱
+数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--db-user`
 
-資料庫伺服器使用者名稱
+数据库服务器用户名
 
-- 需要值
+- 需要一个值
 
 ### `--db-engine`
 
-資料庫伺服器引擎
+数据库服务器引擎
 
-- 需要值
+- 需要一个值
 
 ### `--db-password`
 
-資料庫伺服器密碼
+数据库服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--db-prefix`
 
-資料庫表格前置詞
+数据库表前缀
 
-- 需要值
+- 需要一个值
 
 ### `--db-model`
 
-資料庫型別
+数据库类型
 
-- 需要值
+- 需要一个值
 
 ### `--db-init-statements`
 
-資料庫初始命令集
+数据库初始命令集
 
-- 需要值
+- 需要一个值
 
 ### `--skip-db-validation`, `-s`
 
-如果已指定，則會略過db連線驗證
+如果已指定，则将跳过数据库连接验证
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--http-cache-hosts`
 
-http快取主機
+http缓存主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-ssl-key`
 
-使用者端金鑰檔案的完整路徑，以透過SSL建立資料庫連線
+用于通过SSL建立数据库连接的客户端密钥文件的完整路径
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-cert`
 
-使用者端憑證檔案的完整路徑，以便透過SSL建立DB連線
+客户端证书文件的完整路径，用于通过SSL建立数据库连接
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-ca`
 
-伺服器憑證檔案的完整路徑，以便透過SSL建立DB連線
+用于通过SSL建立数据库连接的服务器证书文件的完整路径
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-verify`
 
-驗證伺服器憑證
+验证服务器认证
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--session-save`
 
-工作階段儲存處理常式
+会话保存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-host`
 
-使用UNIX通訊端時為完整的主機名稱、IP位址或絕對路徑
+完全限定主机名、IP地址或绝对路径（如果使用UNIX套接字）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-port`
 
-Redis伺服器接聽連線埠
+Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-password`
 
-Redis伺服器密碼
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-timeout`
 
-連線逾時（以秒為單位）
+连接超时（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-persistent-id`
 
-啟用持續連線的唯一字串
+用于启用永久连接的唯一字符串
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-db`
 
-Redis資料庫編號
+Redis数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-threshold`
 
-Redis壓縮臨界值
+Redis压缩阈值
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-lib`
 
-Redis壓縮程式庫。 值： gzip （預設）、lzf、lz4、snappy
+Redis压缩库。 值：gzip（默认）、lzf、lz4、snappy
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-log-level`
 
-Redis記錄層級。 值： 0 （最少詳細）至7 （最詳細）
+Redis日志级别。 值： 0（最少详细）到7（最详细）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-concurrency`
 
-可等待鎖定一個工作階段的最大處理序數目
+可等待一个会话锁定的最大进程数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-frontend`
 
-嘗試中斷前端工作階段的鎖定前等待的秒數
+尝试破解前端会话锁定之前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-adminhtml`
 
-嘗試解除管理員工作階段鎖定之前的等待秒數
+尝试解除管理员会话锁定前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-first-lifetime`
 
-非機器人在第一次寫入時的工作階段期限（以秒為單位） （使用0可停用）
+非机器人在首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-first-lifetime`
 
-機器人第一次寫入的工作階段期限（以秒為單位） （使用0可停用）
+机器人首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-lifetime`
 
-機器人後續寫入作業的工作階段期限（使用0可停用）
+机器人后续写入会话的生命周期（使用0禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-disable-locking`
 
-Redis會停用鎖定。 值： false （預設）， true
+Redis禁用锁定。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-min-lifetime`
 
-Redis最小工作階段存留期（以秒為單位）
+Redis最小会话生命周期，以秒为单位
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-lifetime`
 
-Redis最長工作階段存留期（以秒為單位）
+Redis最长会话生命周期（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-master`
 
-Redis Sentinel主版
+Redis Sentinel主控
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-servers`
 
-Redis Sentinel伺服器，以逗號分隔
+Redis Sentinel服务器，逗号分隔
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-verify-master`
 
-Redis Sentinel驗證主版。 值： false （預設）， true
+雷迪斯·森蒂纳尔确认主控。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-connect-retries`
 
-Redis Sentinel連線重試。
+Redis Sentinel连接重试。
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend`
 
-預設快取處理常式
+默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-server`
 
-Redis伺服器
+Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-db`
 
-快取的資料庫編號
+高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-port`
 
-Redis伺服器接聽連線埠
+Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-password`
 
-Redis伺服器密碼
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compress-data`
 
-設為0可停用壓縮（預設為1，已啟用）
+设置为0可禁用压缩（默认值为1，已启用）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compression-lib`
 
-要使用的壓縮程式庫 [snappy，lzf，l4z，zstd，gzip] （留空將自動決定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-id-prefix`
 
-快取金鑰的ID首碼
+缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--allow-parallel-generation`
 
-允許以非封鎖方式產生快取
+允许以非阻塞方式生成缓存
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--page-cache`
 
-預設快取處理常式
+默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-server`
 
-Redis伺服器
+Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-db`
 
-快取的資料庫編號
+高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-port`
 
-Redis伺服器接聽連線埠
+Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-password`
 
-Redis伺服器密碼
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compress-data`
 
-設定為1可壓縮完整頁面快取（使用0可停用）
+设置为1可压缩全页缓存（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compression-lib`
 
-要使用的壓縮程式庫 [snappy，lzf，l4z，zstd，gzip] （留空將自動決定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-id-prefix`
 
-快取金鑰的ID首碼
+缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--lock-provider`
 
-鎖定提供者名稱
+锁定提供程序名称
 
-- 需要值
+- 需要一个值
 
 ### `--lock-db-prefix`
 
-安裝特定的鎖定首碼以避免鎖定衝突
+安装特定的锁定前缀以避免锁定冲突
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-host`
 
-要連線至Zookeeper叢集的主機與連線埠。 例如： 127.0.0.1:2181
+用于连接到Zookeeper群集的主机和端口。 例如： 127.0.0.1:2181
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-path`
 
-Zookeeper儲存鎖定的路徑。 預設路徑為： /magento/locks
+Zookeeper将保存锁的路径。 默认路径为： /magento/locks
 
-- 需要值
+- 需要一个值
 
 ### `--lock-file-path`
 
-檔案鎖定的儲存路徑。
+将保存文件锁定的路径。
 
-- 需要值
+- 需要一个值
 
 ### `--document-root-is-pub`
 
-要顯示的旗標為Pub位於根目錄上，只能為true或false
+要显示的标志是Pub位于根目录下，只能为true或false
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:db-data:upgrade`
 
-在資料庫中安裝和升級資料
+在数据库中安装和升级数据
 
 ```bash
 bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -7191,62 +7191,62 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:db-declaration:generate-patch`
 
-產生修補程式並將其放在特定資料夾中。
+生成修补程序并将其放在特定文件夹中。
 
 ```bash
 bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--type [TYPE]] [--] <module> <patch>
@@ -7255,82 +7255,82 @@ bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--t
 
 ### `module`
 
-模組名稱
+模块名称
 
-- 必填
+- 必需
 
 ### `patch`
 
-修補程式名稱
+修补程序名称
 
-- 必填
+- 必需
 
 ### `--revertable`
 
-檢查修補程式是否可回覆。
+检查修补程序是否可还原。
 
-- 預設： `false`
-- 接受值
+- 默认： `false`
+- 接受一个值
 
 ### `--type`
 
-找出應產生的修補程式型別。 可用值： `data`， `schema`.
+了解应生成的修补程序类型。 可用值： `data`， `schema`.
 
-- 預設： `data`
-- 接受值
+- 默认： `data`
+- 接受一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:db-declaration:generate-whitelist`
 
-產生允許宣告安裝程式編輯的表格和欄的白名單
+生成允许由声明安装程序编辑的表和列的白名单
 
 ```bash
 bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]]
@@ -7338,63 +7338,63 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 ### `--module-name`
 
-產生白名單的模組名稱
+将生成白名单的模块的名称
 
-- 預設： `all`
-- 接受值
+- 默认： `all`
+- 接受一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:db-schema:upgrade`
 
-安裝及升級DB結構
+安装和升级数据库架构
 
 ```bash
 bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -7402,69 +7402,69 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 ### `--convert-old-scripts`
 
-允許將舊指令碼(InstallSchema、UpgradeSchema)轉換為db_schema.xml格式
+允许将旧脚本(InstallSchema、UpgradeSchema)转换为db_schema.xml格式
 
-- 預設： `false`
-- 接受值
+- 默认： `false`
+- 接受一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:db:status`
 
-檢查資料庫結構描述或資料是否需要升級
+检查数据库架构或数据是否需要升级
 
 ```bash
 bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -7472,62 +7472,62 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:di:compile`
 
-產生DI設定及所有可自動產生的遺漏類別
+生成DI配置和所有可自动生成的缺失类
 
 ```bash
 bin/magento setup:di:compile
@@ -7535,56 +7535,56 @@ bin/magento setup:di:compile
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:install`
 
-安裝Magento應用程式
+安装Magento应用程序
 
 ```bash
 bin/magento setup:install [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--backend-frontname BACKEND-FRONTNAME] [--id_salt ID_SALT] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--admin-user [ADMIN-USER]] [--admin-password [ADMIN-PASSWORD]] [--admin-email [ADMIN-EMAIL]] [--admin-firstname [ADMIN-FIRSTNAME]] [--admin-lastname [ADMIN-LASTNAME]] [--search-engine SEARCH-ENGINE] [--elasticsearch-host ELASTICSEARCH-HOST] [--elasticsearch-port ELASTICSEARCH-PORT] [--elasticsearch-enable-auth ELASTICSEARCH-ENABLE-AUTH] [--elasticsearch-username ELASTICSEARCH-USERNAME] [--elasticsearch-password ELASTICSEARCH-PASSWORD] [--elasticsearch-index-prefix ELASTICSEARCH-INDEX-PREFIX] [--elasticsearch-timeout ELASTICSEARCH-TIMEOUT] [--opensearch-host OPENSEARCH-HOST] [--opensearch-port OPENSEARCH-PORT] [--opensearch-enable-auth OPENSEARCH-ENABLE-AUTH] [--opensearch-username OPENSEARCH-USERNAME] [--opensearch-password OPENSEARCH-PASSWORD] [--opensearch-index-prefix OPENSEARCH-INDEX-PREFIX] [--opensearch-timeout OPENSEARCH-TIMEOUT] [--cleanup-database] [--sales-order-increment-prefix SALES-ORDER-INCREMENT-PREFIX] [--use-sample-data] [--enable-modules [ENABLE-MODULES]] [--disable-modules [DISABLE-MODULES]] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [-i|--interactive] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -7592,810 +7592,810 @@ bin/magento setup:install [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enabl
 
 ### `--enable-debug-logging`
 
-啟用偵錯記錄
+启用调试日志记录
 
-- 需要值
+- 需要一个值
 
 ### `--enable-syslog-logging`
 
-啟用syslog記錄
+启用syslog日志记录
 
-- 需要值
+- 需要一个值
 
 ### `--backend-frontname`
 
-後端frontname （如果遺失，將自動產生）
+后端前端名称（如果缺少，将自动生成）
 
-- 需要值
+- 需要一个值
 
 ### `--id_salt`
 
-GraphQl Salt
+GraphQl盐
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-driver`
 
-遠端儲存驅動程式
+远程存储驱动程序
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-prefix`
 
-遠端儲存首碼
+远程存储前缀
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-endpoint`
 
-遠端儲存端點
+远程存储端点
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-bucket`
 
-遠端儲存貯體
+远程存储段
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-region`
 
-遠端儲存區域
+远程存储区域
 
-- 需要值
+- 需要一个值
 
 ### `--remote-storage-key`
 
-遠端儲存存取金鑰
+远程存储访问密钥
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-secret`
 
-遠端儲存秘密金鑰
+远程存储密钥
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--remote-storage-path-style`
 
-遠端儲存路徑樣式
+远程存储路径样式
 
-- 預設： `0`
-- 需要值
+- 默认： `0`
+- 需要一个值
 
 ### `--amqp-host`
 
-Amqp伺服器主機
+Amqp服务器主机
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-port`
 
-Amqp伺服器連線埠
+Amqp服务器端口
 
-- 預設： `5672`
-- 需要值
+- 默认： `5672`
+- 需要一个值
 
 ### `--amqp-user`
 
-Amqp伺服器使用者名稱
+Amqp服务器用户名
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-password`
 
-Amqp伺服器密碼
+Amqp服务器密码
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-virtualhost`
 
 Amqp virtualhost
 
-- 預設： `/`
-- 需要值
+- 默认： `/`
+- 需要一个值
 
 ### `--amqp-ssl`
 
 Amqp SSL
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--amqp-ssl-options`
 
-Amqp SSL選項(JSON)
+Amqp SSL选项(JSON)
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--consumers-wait-for-messages`
 
-消費者是否應該等候佇列中的訊息？ 1 — 是，0 — 否
+消费者是否应该等待队列中的消息？ 1 — 是，0 — 否
 
-- 需要值
+- 需要一个值
 
 ### `--queue-default-connection`
 
-訊息佇列預設連線。 可以是&#39;db&#39;、&#39;amqp&#39;或自訂佇列系統。必須安裝並設定佇列系統，否則將無法正確處理訊息。
+消息队列默认连接。 可以是“db”、“amqp”或自定义队列系统。必须安装和配置队列系统，否则将无法正确处理消息。
 
-- 需要值
+- 需要一个值
 
 ### `--key`
 
-加密金鑰
+加密密钥
 
-- 需要值
+- 需要一个值
 
 ### `--db-host`
 
-資料庫伺服器主機
+数据库服务器主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-name`
 
-資料庫名稱
+数据库名称
 
-- 需要值
+- 需要一个值
 
 ### `--db-user`
 
-資料庫伺服器使用者名稱
+数据库服务器用户名
 
-- 需要值
+- 需要一个值
 
 ### `--db-engine`
 
-資料庫伺服器引擎
+数据库服务器引擎
 
-- 需要值
+- 需要一个值
 
 ### `--db-password`
 
-資料庫伺服器密碼
+数据库服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--db-prefix`
 
-資料庫表格前置詞
+数据库表前缀
 
-- 需要值
+- 需要一个值
 
 ### `--db-model`
 
-資料庫型別
+数据库类型
 
-- 需要值
+- 需要一个值
 
 ### `--db-init-statements`
 
-資料庫初始命令集
+数据库初始命令集
 
-- 需要值
+- 需要一个值
 
 ### `--skip-db-validation`, `-s`
 
-如果已指定，則會略過db連線驗證
+如果已指定，则将跳过数据库连接验证
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--http-cache-hosts`
 
-http快取主機
+http缓存主机
 
-- 需要值
+- 需要一个值
 
 ### `--db-ssl-key`
 
-使用者端金鑰檔案的完整路徑，以透過SSL建立資料庫連線
+用于通过SSL建立数据库连接的客户端密钥文件的完整路径
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-cert`
 
-使用者端憑證檔案的完整路徑，以便透過SSL建立DB連線
+客户端证书文件的完整路径，用于通过SSL建立数据库连接
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-ca`
 
-伺服器憑證檔案的完整路徑，以便透過SSL建立DB連線
+用于通过SSL建立数据库连接的服务器证书文件的完整路径
 
-- 預設： &quot;
-- 需要值
+- 默认：“
+- 需要一个值
 
 ### `--db-ssl-verify`
 
-驗證伺服器憑證
+验证服务器认证
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--session-save`
 
-工作階段儲存處理常式
+会话保存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-host`
 
-使用UNIX通訊端時為完整的主機名稱、IP位址或絕對路徑
+完全限定主机名、IP地址或绝对路径（如果使用UNIX套接字）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-port`
 
-Redis伺服器接聽連線埠
+Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-password`
 
-Redis伺服器密碼
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-timeout`
 
-連線逾時（以秒為單位）
+连接超时（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-persistent-id`
 
-啟用持續連線的唯一字串
+用于启用永久连接的唯一字符串
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-db`
 
-Redis資料庫編號
+Redis数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-threshold`
 
-Redis壓縮臨界值
+Redis压缩阈值
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-compression-lib`
 
-Redis壓縮程式庫。 值： gzip （預設）、lzf、lz4、snappy
+Redis压缩库。 值：gzip（默认）、lzf、lz4、snappy
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-log-level`
 
-Redis記錄層級。 值： 0 （最少詳細）至7 （最詳細）
+Redis日志级别。 值： 0（最少详细）到7（最详细）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-concurrency`
 
-可等待鎖定一個工作階段的最大處理序數目
+可等待一个会话锁定的最大进程数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-frontend`
 
-嘗試中斷前端工作階段的鎖定前等待的秒數
+尝试破解前端会话锁定之前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-break-after-adminhtml`
 
-嘗試解除管理員工作階段鎖定之前的等待秒數
+尝试解除管理员会话锁定前等待的秒数
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-first-lifetime`
 
-非機器人在第一次寫入時的工作階段期限（以秒為單位） （使用0可停用）
+非机器人在首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-first-lifetime`
 
-機器人第一次寫入的工作階段期限（以秒為單位） （使用0可停用）
+机器人首次写入时会话的生命周期（以秒为单位）（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-bot-lifetime`
 
-機器人後續寫入作業的工作階段期限（使用0可停用）
+机器人后续写入会话的生命周期（使用0禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-disable-locking`
 
-Redis會停用鎖定。 值： false （預設）， true
+Redis禁用锁定。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-min-lifetime`
 
-Redis最小工作階段存留期（以秒為單位）
+Redis最小会话生命周期，以秒为单位
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-max-lifetime`
 
-Redis最長工作階段存留期（以秒為單位）
+Redis最长会话生命周期（以秒为单位）
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-master`
 
-Redis Sentinel主版
+Redis Sentinel主控
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-servers`
 
-Redis Sentinel伺服器，以逗號分隔
+Redis Sentinel服务器，逗号分隔
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-verify-master`
 
-Redis Sentinel驗證主版。 值： false （預設）， true
+雷迪斯·森蒂纳尔确认主控。 值： false（默认）、true
 
-- 需要值
+- 需要一个值
 
 ### `--session-save-redis-sentinel-connect-retries`
 
-Redis Sentinel連線重試。
+Redis Sentinel连接重试。
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend`
 
-預設快取處理常式
+默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-server`
 
-Redis伺服器
+Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-db`
 
-快取的資料庫編號
+高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-port`
 
-Redis伺服器接聽連線埠
+Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-password`
 
-Redis伺服器密碼
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compress-data`
 
-設為0可停用壓縮（預設為1，已啟用）
+设置为0可禁用压缩（默认值为1，已启用）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-backend-redis-compression-lib`
 
-要使用的壓縮程式庫 [snappy，lzf，l4z，zstd，gzip] （留空將自動決定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--cache-id-prefix`
 
-快取金鑰的ID首碼
+缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--allow-parallel-generation`
 
-允許以非封鎖方式產生快取
+允许以非阻塞方式生成缓存
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--page-cache`
 
-預設快取處理常式
+默认缓存处理程序
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-server`
 
-Redis伺服器
+Redis服务器
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-db`
 
-快取的資料庫編號
+高速缓存的数据库编号
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-port`
 
-Redis伺服器接聽連線埠
+Redis服务器侦听端口
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-password`
 
-Redis伺服器密碼
+Redis服务器密码
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compress-data`
 
-設定為1可壓縮完整頁面快取（使用0可停用）
+设置为1可压缩全页缓存（使用0可禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-redis-compression-lib`
 
-要使用的壓縮程式庫 [snappy，lzf，l4z，zstd，gzip] （留空將自動決定）
+要使用的压缩库 [snappy，lzf，l4z，zstd，gzip] （留空将自动确定）
 
-- 需要值
+- 需要一个值
 
 ### `--page-cache-id-prefix`
 
-快取金鑰的ID首碼
+缓存键的ID前缀
 
-- 需要值
+- 需要一个值
 
 ### `--lock-provider`
 
-鎖定提供者名稱
+锁定提供程序名称
 
-- 需要值
+- 需要一个值
 
 ### `--lock-db-prefix`
 
-安裝特定的鎖定首碼以避免鎖定衝突
+安装特定的锁定前缀以避免锁定冲突
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-host`
 
-要連線至Zookeeper叢集的主機與連線埠。 例如： 127.0.0.1:2181
+用于连接到Zookeeper群集的主机和端口。 例如： 127.0.0.1:2181
 
-- 需要值
+- 需要一个值
 
 ### `--lock-zookeeper-path`
 
-Zookeeper儲存鎖定的路徑。 預設路徑為： /magento/locks
+Zookeeper将保存锁的路径。 默认路径为： /magento/locks
 
-- 需要值
+- 需要一个值
 
 ### `--lock-file-path`
 
-檔案鎖定的儲存路徑。
+将保存文件锁定的路径。
 
-- 需要值
+- 需要一个值
 
 ### `--document-root-is-pub`
 
-要顯示的旗標為Pub位於根目錄上，只能為true或false
+要显示的标志是Pub位于根目录下，只能为true或false
 
-- 需要值
+- 需要一个值
 
 ### `--base-url`
 
-商店應於的URL提供。 已棄用，請使用config：set以及路徑web/unsecure/base_url
+商店应位于的URL。 已弃用，请使用config：set以及路径web/unsecure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--language`
 
-預設語言代碼。 已棄用，請使用config：set以及路徑general/locale/code
+默认语言代码。 已弃用，请使用config：set以及路径general/locale/code
 
-- 需要值
+- 需要一个值
 
 ### `--timezone`
 
-預設時區代碼。 已棄用，請使用config：set以及路徑general/locale/timezone
+默认时区代码。 已弃用，请使用config：set和path general/locale/timezone
 
-- 需要值
+- 需要一个值
 
 ### `--currency`
 
-預設貨幣代碼。 已棄用，請使用config：set以及路徑currency/options/base、currency/options/default和currency/options/allow
+默认货币代码。 已弃用，请使用config：set以及路径currency/options/base、currency/options/default和currency/options/allow
 
-- 需要值
+- 需要一个值
 
 ### `--use-rewrites`
 
-使用重寫。 已棄用，請使用config：set搭配路徑web/seo/use_rewrites
+使用重写。 已弃用，请使用config：set以及路径web/seo/use_rewrites
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure`
 
-使用安全URL。 只有在SSL可用時才啟用此選項。 已棄用，請使用config：set以及路徑web/secure/use_in_frontend
+使用安全URL。 仅当SSL可用时启用此选项。 已弃用，请使用config：set以及路径web/secure/use_in_frontend
 
-- 需要值
+- 需要一个值
 
 ### `--base-url-secure`
 
-SSL連線的基礎URL。 已棄用，請使用config：set以及路徑web/secure/base_url
+SSL连接的基本URL。 已弃用，请使用config：set以及路径web/secure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure-admin`
 
-使用SSL執行管理介面。 已棄用，請使用config：set以及路徑web/secure/use_in_adminhtml
+使用SSL运行管理界面。 已弃用，请使用config：set以及路径web/secure/use_in_adminhtml
 
-- 需要值
+- 需要一个值
 
 ### `--admin-use-security-key`
 
-是否在Magento管理員URL和表單中使用「安全性金鑰」功能。 已棄用，請使用config：set以及路徑admin/security/use_form_key
+是否在Magento管理员URL和表单中使用“安全密钥”功能。 已弃用，请使用config：set和path admin/security/use_form_key
 
-- 需要值
+- 需要一个值
 
 ### `--admin-user`
 
-管理員使用者
+管理员用户
 
-- 接受值
+- 接受一个值
 
 ### `--admin-password`
 
-管理員密碼
+管理员密码
 
-- 接受值
+- 接受一个值
 
 ### `--admin-email`
 
-管理員電子郵件
+管理员电子邮件
 
-- 接受值
+- 接受一个值
 
 ### `--admin-firstname`
 
-管理員名字
+管理员名字
 
-- 接受值
+- 接受一个值
 
 ### `--admin-lastname`
 
-管理員姓氏
+管理员姓氏
 
-- 接受值
+- 接受一个值
 
 ### `--search-engine`
 
-搜尋引擎。 值： elasticsearch5、elasticsearch7、elasticsearch8、opensearch
+搜索引擎。 值：elasticsearch5、elasticsearch7、elasticsearch8、opensearch
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-host`
 
-Elasticsearch伺服器主機。
+Elasticsearch服务器主机。
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-port`
 
-Elasticsearch伺服器連線埠。
+服务器端口Elasticsearch。
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-enable-auth`
 
-設為1可啟用驗證。 （預設值為0，已停用）
+设置为1可启用身份验证。 （默认值为0，已禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-username`
 
-使用者名稱Elasticsearch。 僅在啟用HTTP驗證時適用
+用户名Elasticsearch。 仅在启用HTTP身份验证时适用
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-password`
 
-密碼Elasticsearch。 僅在啟用HTTP驗證時適用
+密码Elasticsearch。 仅在启用HTTP身份验证时适用
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-index-prefix`
 
-索引首碼Elasticsearch。
+索引前缀Elasticsearch。
 
-- 需要值
+- 需要一个值
 
 ### `--elasticsearch-timeout`
 
-Elasticsearch伺服器逾時。
+Elasticsearch服务器超时。
 
-- 需要值
+- 需要一个值
 
 ### `--opensearch-host`
 
-OpenSearch伺服器主機。
+OpenSearch服务器主机。
 
-- 需要值
+- 需要一个值
 
 ### `--opensearch-port`
 
-OpenSearch伺服器連線埠。
+OpenSearch服务器端口。
 
-- 需要值
+- 需要一个值
 
 ### `--opensearch-enable-auth`
 
-設為1可啟用驗證。 （預設值為0，已停用）
+设置为1可启用身份验证。 （默认值为0，已禁用）
 
-- 需要值
+- 需要一个值
 
 ### `--opensearch-username`
 
-OpenSearch使用者名稱。 僅在啟用HTTP驗證時適用
+OpenSearch用户名。 仅在启用HTTP身份验证时适用
 
-- 需要值
+- 需要一个值
 
 ### `--opensearch-password`
 
-OpenSearch密碼。 僅在啟用HTTP驗證時適用
+OpenSearch密码。 仅在启用HTTP身份验证时适用
 
-- 需要值
+- 需要一个值
 
 ### `--opensearch-index-prefix`
 
-OpenSearch索引前置詞。
+OpenSearch索引前缀。
 
-- 需要值
+- 需要一个值
 
 ### `--opensearch-timeout`
 
-OpenSearch伺服器逾時。
+OpenSearch服务器超时。
 
-- 需要值
+- 需要一个值
 
 ### `--cleanup-database`
 
-在安裝之前清理資料庫
+在安装之前清理数据库
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--sales-order-increment-prefix`
 
-銷售訂單編號前置詞
+销售订单编号前缀
 
-- 需要值
+- 需要一个值
 
 ### `--use-sample-data`
 
-使用範例資料
+使用示例数据
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--enable-modules`
 
-逗號分隔模組名稱清單。 安裝期間必須包含此專案。 可用的魔術引數「all」。
+以逗号分隔的模块名称列表。 安装过程中必须包括此项。 可用的魔法参数“all”。
 
-- 接受值
+- 接受一个值
 
 ### `--disable-modules`
 
-逗號分隔模組名稱清單。 安裝期間必須避免此情況。 可用的魔術引數「all」。
+以逗号分隔的模块名称列表。 在安装过程中必须避免出现这种情况。 可用的魔法参数“all”。
 
-- 接受值
+- 接受一个值
 
 ### `--convert-old-scripts`
 
-允許將舊指令碼(InstallSchema、UpgradeSchema)轉換為db_schema.xml格式
+允许将旧脚本(InstallSchema、UpgradeSchema)转换为db_schema.xml格式
 
-- 預設： `false`
-- 接受值
+- 默认： `false`
+- 接受一个值
 
 ### `--interactive`, `-i`
 
-互動式Magento安裝
+交互式Magento安装
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--safe-mode`
 
-在破壞性作業（例如移除欄）上安全安裝包含傾印的Magento
+在破坏性操作（如删除列）中安全安装带有转储的Magento
 
-- 接受值
+- 接受一个值
 
 ### `--data-restore`
 
-從傾印還原移除的資料
+从转储中恢复已删除的数据
 
-- 接受值
+- 接受一个值
 
 ### `--dry-run`
 
-Magento安裝將在試執行模式下執行
+Magento安装将在模拟运行模式下运行
 
-- 預設： `false`
-- 接受值
+- 默认： `false`
+- 接受一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:performance:generate-fixtures`
 
-產生夾具
+生成夹具
 
 ```bash
 bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profile>
@@ -8404,69 +8404,69 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 ### `profile`
 
-設定檔設定檔的路徑
+配置文件配置文件的路径
 
-- 必填
+- 必需
 
 ### `--skip-reindex`, `-s`
 
-略過重新索引
+跳过重新索引
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:rollback`
 
-回覆Magento應用程式程式碼基底、媒體與資料庫
+回滚Magento应用程序代码库、媒体和数据库
 
 ```bash
 bin/magento setup:rollback [-c|--code-file CODE-FILE] [-m|--media-file MEDIA-FILE] [-d|--db-file DB-FILE] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -8474,80 +8474,80 @@ bin/magento setup:rollback [-c|--code-file CODE-FILE] [-m|--media-file MEDIA-FIL
 
 ### `--code-file`, `-c`
 
-var/backups中程式碼備份檔案的基本名稱
+var/backups中的代码备份文件的基本名称
 
-- 需要值
+- 需要一个值
 
 ### `--media-file`, `-m`
 
-var/backups中媒體備份檔案的基本名稱
+var/备份中的媒体备份文件的基本名称
 
-- 需要值
+- 需要一个值
 
 ### `--db-file`, `-d`
 
-var/backups中db備份檔案的基本名稱
+var/备份中的db备份文件的基本名称
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:static-content:deploy`
 
-部署靜態檢視檔案
+部署静态视图文件
 
 ```bash
 bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] [-a|--area [AREA]] [--exclude-area [EXCLUDE-AREA]] [-t|--theme [THEME]] [--exclude-theme [EXCLUDE-THEME]] [-l|--language [LANGUAGE]] [--exclude-language [EXCLUDE-LANGUAGE]] [-j|--jobs [JOBS]] [--max-execution-time [MAX-EXECUTION-TIME]] [--symlink-locale] [--content-version CONTENT-VERSION] [--refresh-content-version-only] [--no-javascript] [--no-js-bundle] [--no-css] [--no-less] [--no-images] [--no-fonts] [--no-html] [--no-misc] [--no-html-minify] [--no-parent] [--] [<languages>...]
@@ -8556,224 +8556,224 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `languages`
 
-要輸出靜態檢視檔案的ISO-639語言代碼清單（以空格分隔）。
+要为其输出静态视图文件的ISO-639语言代码列表（以空格分隔）。
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 陣列
+- 数组
 
 ### `--force`, `-f`
 
-以任何模式部署檔案。
+以任意模式部署文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--strategy`, `-s`
 
-使用指定的策略部署檔案。
+使用指定的策略部署文件。
 
-- 預設： `quick`
-- 接受值
+- 默认： `quick`
+- 接受一个值
 
 ### `--area`, `-a`
 
-只產生指定區域的檔案。
+仅为指定的区域生成文件。
 
-- 預設： `all`
-- 接受多個值
+- 默认： `all`
+- 接受多个值
 
 ### `--exclude-area`
 
-不要產生指定區域的檔案。
+不要为指定的区域生成文件。
 
-- 預設： `none`
-- 接受多個值
+- 默认： `none`
+- 接受多个值
 
 ### `--theme`, `-t`
 
-只為指定的主題產生靜態檢視檔案。
+仅为指定的主题生成静态视图文件。
 
-- 預設： `all`
-- 接受多個值
+- 默认： `all`
+- 接受多个值
 
 ### `--exclude-theme`
 
-不要為指定的主題產生檔案。
+不为指定的主题生成文件。
 
-- 預設： `none`
-- 接受多個值
+- 默认： `none`
+- 接受多个值
 
 ### `--language`, `-l`
 
-只產生指定語言的檔案。
+仅生成指定语言的文件。
 
-- 預設： `all`
-- 接受多個值
+- 默认： `all`
+- 接受多个值
 
 ### `--exclude-language`
 
-不要產生指定語言的檔案。
+不生成指定语言的文件。
 
-- 預設： `none`
-- 接受多個值
+- 默认： `none`
+- 接受多个值
 
 ### `--jobs`, `-j`
 
-使用指定的作業數目啟用平行處理。
+使用指定的作业数启用并行处理。
 
-- 預設： `0`
-- 接受值
+- 默认： `0`
+- 接受一个值
 
 ### `--max-execution-time`
 
-部署靜態處理序的最大預期執行時間（以秒為單位）。
+部署静态进程的最大预期执行时间（秒）。
 
-- 預設： `900`
-- 接受值
+- 默认： `900`
+- 接受一个值
 
 ### `--symlink-locale`
 
-為這些區域設定的檔案建立符號連結，這些檔案會傳遞以進行部署，但沒有自訂。
+为那些区域设置的文件创建符号链接，这些区域设置传递用于部署，但没有进行自定义。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--content-version`
 
-如果在多個節點上執行部署，可以使用靜態內容的自訂版本，以確保靜態內容版本相同且快取可正常運作。
+如果在多个节点上运行部署，可以使用静态内容的自定义版本，以确保静态内容版本相同且缓存正常工作。
 
-- 需要值
+- 需要一个值
 
 ### `--refresh-content-version-only`
 
-重新整理靜態內容的版本只能用於重新整理瀏覽器快取和CDN快取中的靜態內容。
+刷新静态内容的版本只能用于刷新浏览器缓存和CDN缓存中的静态内容。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-javascript`
 
-請勿部署JavaScript檔案。
+不要部署JavaScript文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-js-bundle`
 
-請勿部署JavaScript套件組合檔案。
+不部署JavaScript捆绑包文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-css`
 
-請勿部署CSS檔案。
+不部署CSS文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-less`
 
-請勿部署LESS檔案。
+请勿部署LESS文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-images`
 
-不要部署影像。
+不要部署映像。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-fonts`
 
-不要部署字型檔案。
+不部署字体文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-html`
 
-請勿部署HTML檔案。
+不部署HTML文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-misc`
 
-請勿部署其他型別的檔案（.md、.jbf、.csv等）。
+请勿部署其他类型的文件（.md、.jbf、.csv等）。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-html-minify`
 
-請勿將HTML檔案縮制。
+不要缩小HTML文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-parent`
 
-請勿編譯父系主題。 僅在快速和標準策略中支援。
+不编译父主题。 仅在快速和标准策略中受支持。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:store-config:set`
 
-安裝存放區設定。 自2.2.0起已棄用。請改用config：set
+安装存储配置。 从2.2.0开始已弃用。请改用config：set
 
 ```bash
 bin/magento setup:store-config:set [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -8781,116 +8781,116 @@ bin/magento setup:store-config:set [--base-url BASE-URL] [--language LANGUAGE] [
 
 ### `--base-url`
 
-商店應於的URL提供。 已棄用，請使用config：set以及路徑web/unsecure/base_url
+商店应位于的URL。 已弃用，请使用config：set以及路径web/unsecure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--language`
 
-預設語言代碼。 已棄用，請使用config：set以及路徑general/locale/code
+默认语言代码。 已弃用，请使用config：set以及路径general/locale/code
 
-- 需要值
+- 需要一个值
 
 ### `--timezone`
 
-預設時區代碼。 已棄用，請使用config：set以及路徑general/locale/timezone
+默认时区代码。 已弃用，请使用config：set和path general/locale/timezone
 
-- 需要值
+- 需要一个值
 
 ### `--currency`
 
-預設貨幣代碼。 已棄用，請使用config：set以及路徑currency/options/base、currency/options/default和currency/options/allow
+默认货币代码。 已弃用，请使用config：set以及路径currency/options/base、currency/options/default和currency/options/allow
 
-- 需要值
+- 需要一个值
 
 ### `--use-rewrites`
 
-使用重寫。 已棄用，請使用config：set搭配路徑web/seo/use_rewrites
+使用重写。 已弃用，请使用config：set以及路径web/seo/use_rewrites
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure`
 
-使用安全URL。 只有在SSL可用時才啟用此選項。 已棄用，請使用config：set以及路徑web/secure/use_in_frontend
+使用安全URL。 仅当SSL可用时启用此选项。 已弃用，请使用config：set以及路径web/secure/use_in_frontend
 
-- 需要值
+- 需要一个值
 
 ### `--base-url-secure`
 
-SSL連線的基礎URL。 已棄用，請使用config：set以及路徑web/secure/base_url
+SSL连接的基本URL。 已弃用，请使用config：set以及路径web/secure/base_url
 
-- 需要值
+- 需要一个值
 
 ### `--use-secure-admin`
 
-使用SSL執行管理介面。 已棄用，請使用config：set以及路徑web/secure/use_in_adminhtml
+使用SSL运行管理界面。 已弃用，请使用config：set以及路径web/secure/use_in_adminhtml
 
-- 需要值
+- 需要一个值
 
 ### `--admin-use-security-key`
 
-是否在Magento管理員URL和表單中使用「安全性金鑰」功能。 已棄用，請使用config：set以及路徑admin/security/use_form_key
+是否在Magento管理员URL和表单中使用“安全密钥”功能。 已弃用，请使用config：set和path admin/security/use_form_key
 
-- 需要值
+- 需要一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:uninstall`
 
-解除安裝Magento應用程式
+卸载Magento应用程序
 
 ```bash
 bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -8898,62 +8898,62 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `setup:upgrade`
 
-升級Magento應用程式、DB資料和結構
+升级Magento应用程序、数据库数据和模式
 
 ```bash
 bin/magento setup:upgrade [--keep-generated] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
@@ -8961,95 +8961,95 @@ bin/magento setup:upgrade [--keep-generated] [--convert-old-scripts [CONVERT-OLD
 
 ### `--keep-generated`
 
-防止刪除產生的檔案。 我們不建議使用此選項，除非是部署至生產環境。 如需詳細資訊，請洽詢您的系統整合商或管理員。
+阻止删除生成的文件。 我们建议不要使用此选项，除非部署到生产环境。 有关更多信息，请咨询系统集成商或管理员。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--convert-old-scripts`
 
-允許將舊指令碼(InstallSchema、UpgradeSchema)轉換為db_schema.xml格式
+允许将旧脚本(InstallSchema、UpgradeSchema)转换为db_schema.xml格式
 
-- 預設： `false`
-- 接受值
+- 默认： `false`
+- 接受一个值
 
 ### `--safe-mode`
 
-在破壞性作業（例如移除欄）上安全安裝包含傾印的Magento
+在破坏性操作（如删除列）中安全安装带有转储的Magento
 
-- 接受值
+- 接受一个值
 
 ### `--data-restore`
 
-從傾印還原移除的資料
+从转储中恢复已删除的数据
 
-- 接受值
+- 接受一个值
 
 ### `--dry-run`
 
-Magento安裝將在試執行模式下執行
+Magento安装将在模拟运行模式下运行
 
-- 預設： `false`
-- 接受值
+- 默认： `false`
+- 接受一个值
 
 ### `--magento-init-params`
 
-新增至任何命令以自訂Magento初始化引數例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基底][path]=/var/www/example.com&amp;MAGE_DIRS[快取][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[基础][path]=/var/www/example.com&amp;MAGE_DIRS[缓存][path]=/var/tmp/cache&quot;
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `store:list`
 
-顯示商店清單
+显示商店列表
 
 ```bash
 bin/magento store:list
@@ -9057,56 +9057,56 @@ bin/magento store:list
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `store:website:list`
 
-顯示網站清單
+显示网站列表
 
 ```bash
 bin/magento store:website:list
@@ -9114,56 +9114,56 @@ bin/magento store:website:list
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `theme:uninstall`
 
-解除安裝主題
+卸载主题
 
 ```bash
 bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <theme>...
@@ -9172,79 +9172,79 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ### `theme`
 
-主題的路徑。 主題路徑應指定為完整路徑，即area/vendor/name。 例如，前端/Magento/空白
+主题的路径。 主题路径应指定为完整路径，即area/vendor/name。 例如，前端/Magento/空白
 
-- 預設： `[]`
+- 默认： `[]`
 
-- 必填
-- 陣列
+- 必需
+- 数组
 
 ### `--backup-code`
 
-進行程式碼備份（暫存檔除外）
+进行代码备份（不包括临时文件）
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--clear-static-content`, `-c`
 
-清除產生的靜態檢視檔案。
+清除生成的静态视图文件。
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 
 ## `varnish:vcl:generate`
 
-產生清漆VCL並將其回溯至命令列
+生成清漆VCL并将其回显到命令行
 
 ```bash
 bin/magento varnish:vcl:generate [--access-list ACCESS-LIST] [--backend-host BACKEND-HOST] [--backend-port BACKEND-PORT] [--export-version EXPORT-VERSION] [--grace-period GRACE-PERIOD] [--output-file OUTPUT-FILE]
@@ -9252,89 +9252,89 @@ bin/magento varnish:vcl:generate [--access-list ACCESS-LIST] [--backend-host BAC
 
 ### `--access-list`
 
-可清除清漆的IP存取清單
+可清除清漆的IP访问列表
 
-- 預設： `localhost`
-- 需要值
+- 默认： `localhost`
+- 需要一个值
 
 ### `--backend-host`
 
-Web後端的主機
+Web后端的主机
 
-- 預設： `localhost`
-- 需要值
+- 默认： `localhost`
+- 需要一个值
 
 ### `--backend-port`
 
-Web後端的連線埠
+Web后端的端口
 
-- 預設： `8080`
-- 需要值
+- 默认： `8080`
+- 需要一个值
 
 ### `--export-version`
 
-清漆檔案的版本
+清漆文件的版本
 
-- 預設： `4`
-- 需要值
+- 默认： `4`
+- 需要一个值
 
 ### `--grace-period`
 
-寬限期（以秒為單位）
+宽限期（以秒为单位）
 
-- 預設： `300`
-- 需要值
+- 默认： `300`
+- 需要一个值
 
 ### `--output-file`
 
-要寫入vcl的檔案路徑
+要写入vcl的文件的路径
 
-- 需要值
+- 需要一个值
 
 ### `--help`, `-h`
 
-顯示指定命令的說明。 當未提供命令時，顯示說明 &lt;info>清單&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--quiet`, `-q`
 
-不輸出任何訊息
+不输出任何消息
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-增加訊息的詳細程度：1代表一般輸出，2代表較詳細輸出，3代表偵錯
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--version`, `-V`
 
-顯示此應用程式版本
+显示此应用程序版本
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--ansi`
 
-強制（或停用 — no-ansi） ANSI輸出
+强制（或禁用 — no-ansi） ANSI输出
 
 - 不接受值
 
 ### `--no-ansi`
 
-否定「 — ansi」選項
+否定“ — ansi”选项
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值
 
 ### `--no-interaction`, `-n`
 
-請勿詢問任何互動式問題
+不要问任何交互式问题
 
-- 預設： `false`
+- 默认： `false`
 - 不接受值

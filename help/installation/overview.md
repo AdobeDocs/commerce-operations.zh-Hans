@@ -1,6 +1,6 @@
 ---
-title: 內部部署安裝概觀
-description: 瞭解Adobe Commerce和Magento Open Source內部部署的安裝程式。
+title: 内部部署安装概述
+description: 了解Adobe Commerce和Magento Open Source的内部部署的安装过程。
 exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 0%
 
 ---
 
-# 內部部署安裝概觀
+# 内部部署安装概述
 
 >[!NOTE]
 >
->下圖提供下列專案的概觀 _**內部部署**_ Adobe Commerce和Magento Open Source的安裝：
+>下图简要概述了 _**内部部署**_ Adobe Commerce和Magento Open Source的安装：
 
-![安裝如何運作](../assets/installation/install-diagram-24.svg)
+![安装的工作原理](../assets/installation/install-diagram-24.svg)
 
-一般安裝流程如下：
+一般安装流程如下：
 
-1. 設定您的伺服器環境。
+1. 设置服务器环境。
 
-   安裝先決條件軟體，包括PHP、Apache、MySQL和搜尋引擎。 請參閱 [系統需求](system-requirements.md) 以取得詳細資訊。
+   安装必备软件，包括PHP、Apache、MySQL和搜索引擎。 请参阅 [系统要求](system-requirements.md) 了解更多信息。
 
-1. 取得 [驗證金鑰](prerequisites/authentication-keys.md) 至Commerce Composer存放庫。
+1. Get [身份验证密钥](prerequisites/authentication-keys.md) 商务编辑器存储库。
 
-1. 取得Adobe Commerce或Magento Open Source軟體。
+1. 获取Adobe Commerce或Magento Open Source软件。
 
-   * （建議）取得 [Composer中繼套件](composer.md) 管理模組及其相依性。
+   * （推荐）获取 [Composer中继包](composer.md) 管理模块及其依赖关系。
 
-   * 如果您想為Magento Open Source程式碼基底貢獻內容或自訂應用程式， [原地複製](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) GitHub存放庫。 此方法需要熟悉GitHub和Composer。
+   * 如果要向Magento Open Source代码库贡献内容或自定义应用程序， [克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) github存储库。 此方法需要熟悉GitHub和Composer。
 
-1. 使用命令列安裝應用程式。
+1. 使用命令行安装应用程序。
 
-   如果步驟因必要條件軟體未正確設定而失敗，請檢閱 [必備條件](prerequisites/overview.md).
+   如果由于必备软件未正确设置而使步骤失败，请查看 [先决条件](prerequisites/overview.md).
 
-1. [驗證](next-steps/verify.md) 檢視您的店面和管理員以進行安裝。
+1. [验证](next-steps/verify.md) 通过查看您的店面和管理员进行安装。

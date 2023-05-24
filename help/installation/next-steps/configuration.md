@@ -1,6 +1,6 @@
 ---
-title: 設定應用程式
-description: 瞭解Adobe Commerce和Magento Open Source內部部署所需的安裝後設定。
+title: 配置应用程序
+description: 了解Adobe Commerce和Magento Open Source内部部署所需的安装后配置。
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,94 +9,94 @@ ht-degree: 0%
 
 ---
 
-# 設定應用程式
+# 配置应用程序
 
-現在您已安裝Adobe Commerce或Magento Open Source，您需要進行設定。 本主題提供一些建議的組態設定。
+现在您已安装Adobe Commerce或Magento Open Source，您需要对其进行配置。 本主题提供了一些推荐的配置设置。
 
-## 設定cron
+## 设置cron
 
-UNIX工作排程器cron對應用程式的日常作業至關重要。 它會排程重新索引、電子報、電子郵件和網站地圖。 A *crontab* 是cron設定。
+UNIX任务调度程序cron对应用程序的日常操作至关重要。 它安排重新索引、新闻稿、电子邮件和站点地图等内容。 A *crontab* 是cron配置。
 
-您必須安裝Adobe Commerce和Magento Open Source服務，於 *crontab*&#x200B;或某些核心功能（以及某些協力廠商擴充功能）無法正常運作。
+您必须在中安装Adobe Commerce和Magento Open Source服务 *crontab*&#x200B;或某些核心功能（以及一些第三方扩展）无法正常运行。
 
-如需cron的詳細資訊，包括如何從命令列移除crontab及執行cron，請參閱 [設定並執行cron](../../configuration/cli/configure-cron-jobs.md).
+有关cron的更多信息，包括如何删除crontab并从命令行运行cron，请参见 [配置和运行cron](../../configuration/cli/configure-cron-jobs.md).
 
-## 安全性設定和建議
+## 安全设置和建议
 
-安裝後，我們建議使用下列專案：
+安装后，我们建议执行以下操作：
 
-* 請確定您的檔案擁有權和許可權已正確設定
-* 我們強烈建議 [變更預設管理員URI](../tutorials/admin-uri.md) 從 `admin` 至其他內容
-* 確定 [`X-Frame-Option` HTTP標頭](../../configuration/security/xframe-options.md) 已正確設定。
-* 針對跨網站指令碼(XSS)採取預防措施，措施如下： [保護範本](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)
+* 确保正确设置了您的文件所有权和权限
+* 我们强烈建议 [更改默认管理员URI](../tutorials/admin-uri.md) 起始日期 `admin` 到其他东西
+* 确保 [`X-Frame-Option` HTTP标头](../../configuration/security/xframe-options.md) 设置正确。
+* 针对跨站点脚本(XSS)采取预防措施，方法是 [保护模板](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)
 
-若您由以下人員安裝： [複製GitHub存放庫](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)，請確定在部署應用程式時，您僅包含生產環境所需的檔案和資料夾。 不需要的檔案和資料夾可能會帶來安全性風險。
+如果安装者 [克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)，确保在部署应用程序时，仅包含生产环境所需的文件和文件夹。 不需要的文件和文件夹可能会带来安全风险。
 
-## 啟用Apache伺服器重寫
+## 启用Apache Server重写
 
-如果您使用Apache Web Server，則必須啟用伺服器重新寫入，才能正確顯示頁面。 否則，您會看到沒有樣式和其他問題的頁面。
+如果使用Apache Web Server，则必须启用服务器重写以便正确显示页面。 否则，您将看到没有样式和其他问题的页面。
 
-[有關Apache伺服器重寫的區段](../prerequisites/web-server/apache.md#apache-rewrites-and-htaccess)
+[有关Apache Server重写的部分](../prerequisites/web-server/apache.md#apache-rewrites-and-htaccess)
 
-## 多Webnode環境中的快取
+## 多webnode环境中的缓存
 
-如果您有多個網頁節點，您可以 *無法* 使用應用程式的預設檔案快取，因為Web節點之間沒有同步化。 換言之，一個Web節點上的活動只會寫入該Web節點的檔案系統。 如果在其他網頁節點上執行後續活動，可能會導致寫入不必要的檔案，或導致錯誤。
+如果您有多个Web节点， *无法* 使用应用程序的默认文件缓存，因为Web节点之间没有同步。 换句话说，一个Web节点上的活动仅写入该Web节点的文件系统。 如果在另一个Web节点上执行后续活动，可能会导致写入不必要的文件，也可能会导致错误。
 
-請改用 [Redis](../../configuration/cache/config-redis.md) 預設快取和頁面快取的。
+请改用 [Redis](../../configuration/cache/config-redis.md) 缺省高速缓存和页面高速缓存的缺省值。
 
-## 伺服器設定
+## 服务器设置
 
-本節簡要討論建議您在應用程式執行所在的伺服器上考慮的設定。 其中有些設定並未與應用程式直接相關；這些僅以建議形式提供。
+本节简要讨论了我们建议您考虑为运行应用程序的服务器进行的设置。 其中一些设置与应用程序没有直接关系；这些设置仅作为建议提供。
 
-### 記錄輪換
+### 日志轮换
 
-UNIX `logrotate` 公用程式可讓您管理產生大量記錄檔的系統。 它允許自動旋轉、壓縮、移除和郵寄記錄檔。 每個記錄檔都可每日、每週、每月或當記錄檔超過指定大小時處理。
+UNIX `logrotate` 实用程序使您能够管理生成大量日志文件的系统。 它允许自动旋转、压缩、删除和邮寄日志文件。 每个日志文件都可以每日、每周、每月或当日志文件超过指定大小时进行处理。
 
-如需詳細資訊，請參閱下列其中一項：
+有关更多信息，请参阅以下内容之一：
 
-* [HowTo： ultimate log rotate命令教學課程，包含10個範例](https://www.thegeekstuff.com/2010/07/logrotate-examples)
-* [棧疊交換](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
-* [`logrotate` 線上手冊](https://linuxconfig.org/logrotate-8-manual-page)
+* [HowTo： Ultimate log rotate命令教程包含十个示例](https://www.thegeekstuff.com/2010/07/logrotate-examples)
+* [栈栈交换](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
+* [`logrotate` 手册页](https://linuxconfig.org/logrotate-8-manual-page)
 
-### 設定iptables規則以啟用各種服務通訊
+### 设置iptables规则以启用各种服务进行通信
 
-無論您有一台或多台伺服器，您都必須開啟防火牆中的連線埠，才能讓服務能夠通訊。 例如，如果您將Solr搜尋引擎與Adobe Commerce搭配使用，則必須啟用它以與網頁伺服器通訊。 如果您有多個Web節點，則必須啟用它們來彼此通訊。
+无论您拥有一台服务器还是多台服务器，都必须打开防火墙中的端口，以使服务能够通信。 例如，如果将Solr搜索引擎与Adobe Commerce一起使用，则必须启用该搜索引擎以与Web服务器通信。 如果您有多个Web节点，则必须启用它们来相互通信。
 
-更多資訊：
+更多信息：
 
-* Ubuntu： [Ubuntu檔案頁面](https://help.ubuntu.com/community/IptablesHowTo).
-* CentOS： [CentOS操作說明](https://wiki.centos.org/HowTos/Network/IPTables).
+* Ubuntu： [Ubuntu文档页面](https://help.ubuntu.com/community/IptablesHowTo).
+* CentOS： [CentOS操作说明](https://wiki.centos.org/HowTos/Network/IPTables).
 
-### 安全性增強的Linux (SELinux)規則
+### Security Enhanced Linux (SELinux)规则
 
-我們沒有關於是否使用SELinux的建議；但是，如果您確實使用它，則必須設定服務以便彼此通訊，類似於設定iptables。
+我们没有关于是否使用SELinux的建议；但是，如果确实使用它，则必须配置服务，以便与配置iptables类似，彼此通信。
 
-更多資訊：
+更多信息：
 
-* Ubuntu： [Debian手冊](https://debian-handbook.info/browse/stable/sect.selinux.html)
-* CentOS： [CentOS wiki](https://wiki.centos.org/HowTos/SELinux)
+* Ubuntu： [Debian手册](https://debian-handbook.info/browse/stable/sect.selinux.html)
+* CentOS： [CentOS维客](https://wiki.centos.org/HowTos/SELinux)
 
-### 設定電子郵件伺服器
+### 设置电子邮件服务器
 
-Adobe Commerce和Magento Open Source需要電子郵件伺服器。 我們不建議使用特定伺服器，但您可以嘗試下列任何一項：
+Adobe Commerce和Magento Open Source需要电子邮件服务器。 我们不建议使用特定的服务器，但您可以尝试以下任一操作：
 
-* CentOS的字尾([數位海洋教學課程](https://www.digitalocean.com/community/tutorials/how-to-install-postfix-on-centos-6)， [CentOS檔案](https://www.centos.org))
-* Ubuntu的字尾([數位海洋教學課程](https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04)， [Ubuntu檔案](https://help.ubuntu.com/community/MailServer))
+* CentOS的后缀([数字海洋教程](https://www.digitalocean.com/community/tutorials/how-to-install-postfix-on-centos-6)， [CentOS文档](https://www.centos.org))
+* Ubuntu的后缀([数字海洋教程](https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04)， [Ubuntu文档](https://help.ubuntu.com/community/MailServer))
 
-### 調整搜尋引擎以提升效能：
+### 优化搜索引擎以提高性能：
 
-自2.4.0版起，所有安裝都需要Elasticsearch或OpenSearch。
+从2.4.0开始的所有安装都需要Elasticsearch或OpenSearch。
 
-* [安裝及設定搜尋引擎](../../configuration/search/overview-search.md)
+* [安装和配置搜索引擎](../../configuration/search/overview-search.md)
 
-### 設定訊息佇列
+### 设置消息队列
 
-自2.3.0版開始，Adobe Commerce和Magento Open Source都包含訊息佇列功能。 在舊版中，它僅適用於Adobe Commerce。
+从版本2.3.0开始，Adobe Commerce和Magento Open Source包含消息队列功能。 在早期版本中，它仅适用于Adobe Commerce。
 
 * [[!DNL RabbitMQ]](../../configuration/queues/message-queue-framework.md)
 
-## 僅適用於Adobe Commerce的設定
+## 仅适用于Adobe Commerce的设置
 
-只有在使用Adobe Commerce時才能設定下列專案：
+只有在使用Adobe Commerce时，才能配置以下内容：
 
-* [分割用於簽出、訂單管理和其他資料庫表格的資料庫](../../configuration/storage/multi-master.md)
+* [拆分数据库，用于结帐、订单管理和其他数据库表](../../configuration/storage/multi-master.md)

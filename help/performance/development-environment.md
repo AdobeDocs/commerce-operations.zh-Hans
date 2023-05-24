@@ -1,6 +1,6 @@
 ---
-title: 開發環境Recommendations
-description: 瞭解設定本機Adobe Commerce或Magento Open Source開發環境的效能建議。
+title: 开发环境Recommendations
+description: 了解关于设置本地Adobe Commerce或Magento Open Source开发环境的性能建议。
 exl-id: f57396c0-86be-4933-8066-eb51c42fb9e4
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,38 +9,38 @@ ht-degree: 0%
 
 ---
 
-# 開發環境建議
+# 开发环境建议
 
-此頁面提供Commerce開發環境的建議。
+此页面为Commerce开发环境提供建议。
 
-## 清除快取而非停用
+## 清理缓存而不是禁用
 
-許多開發人員傾向於在其開發人員執行個體上停用所有快取。 我們建議只清除快取，不要停用所有快取。 [!DNL Commerce] 執行效率更高，當您 [清除快取](../configuration/cli/manage-cache.md#clean-and-flush-cache-types) 而不是完全停用。 大多數型別的快取在開發期間很少會失效。
+许多开发人员倾向于在其开发人员实例上禁用所有缓存。 我们建议只清理缓存，而不禁用所有缓存。 [!DNL Commerce] 在以下情况下运行效率更高 [清理缓存](../configuration/cli/manage-cache.md#clean-and-flush-cache-types) 而不是完全禁用它们。 大多数类型的缓存在开发过程中很少失效。
 
-若您 [停用快取](../configuration/cli/manage-cache.md#enable-or-disable-cache-types)，我們建議僅在開發執行個體中停用頁面和區塊快取。 請記得在測試期間啟用所有快取。
+如果您 [禁用缓存](../configuration/cli/manage-cache.md#enable-or-disable-cache-types)，我们建议仅在开发实例中禁用页面缓存和块缓存。 切记在测试期间启用所有缓存。
 
-## 在開發模式中要避免的命令
+## 在开发模式下要避免的命令
 
-在開發模式中，請勿執行編譯、程式碼產生和靜態內容部署的命令。 這些指令僅用於生產模式。
+在开发模式下，请勿运行用于编译、代码生成和静态内容部署的命令。 这些命令仅用于生产模式。
 
-**不要執行** 開發模式下的生產命令：
+**不要运行** 开发模式下的生产命令：
 
-* `setup:di:compile` 產生自動產生的類別和最佳化的設定快取。
+* `setup:di:compile` 生成自动生成类和优化配置缓存。
 
    ```bash
    bin/magento setup:di:compile
    ```
 
-   在開發模式中，Magento會依需求執行產生；您不需要執行。 如果您修改了類別的簽章，並且需要重新產生其自動產生的 `factories/proxies/interceptors`，移除這些類別或 _已產生_ 資料夾。
+   在开发模式下，Magento会按需执行生成；您无需运行生成。 如果修改了类的签名并需要重新生成其自动生成的签名 `factories/proxies/interceptors`，删除这些类或 _已生成_ 文件夹。
 
-* `setup:static-content:deploy` 為存放區部署靜態內容。
+* `setup:static-content:deploy` 为存储部署静态内容。
 
    ```bash
    bin/magento setup:static-content:deploy
    ```
 
-   在開發模式中，Magento會視需要執行；您不需要執行。
+   在开发模式中，Magento可按需执行；您无需运行它。
 
-## 虛擬機器器上的正常頁面載入時間
+## 虚拟机上的正常页面加载时间
 
-如果您在VM上進行開發，且載入Magento頁面需要超過2秒的時間，請檢閱環境設定。
+如果您在VM上进行开发，并且加载Magento页面需要超过2秒的时间，请查看环境设置。

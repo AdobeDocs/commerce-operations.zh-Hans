@@ -1,6 +1,6 @@
 ---
-title: 資料移轉後續追蹤
-description: 瞭解如何驗證您的Magento1到Magento2資料移轉是否成功，以及所有功能是否如預期般運作。
+title: 数据迁移跟进
+description: 了解如何验证Magento1到Magento2的数据迁移是否成功，以及所有功能是否均可按预期工作。
 exl-id: a55f357b-6c95-49d6-b2f1-c2e403a8c85f
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,43 +9,43 @@ ht-degree: 0%
 
 ---
 
-# 資料移轉後續追蹤
+# 数据迁移跟进
 
-Magento1的某些行為和邏輯在Magento2中的實施方式不同。 此 [!DNL Data Migration Tool] 會妥善處理。 有些移轉方面您需有所瞭解，有時您必須採取次要步驟，才能讓某些功能在移轉後順暢運作。
+Magento1的某些行为和逻辑在Magento2中的实现方式不同。 此 [!DNL Data Migration Tool] 搞定它。 您应了解一些迁移方面，有时您必须执行一些次要步骤，以便某些功能在迁移后能够顺利工作。
 
-## 資訊
+## 信息
 
-### 不支援分割資料庫
+### 不支持拆分数据库
 
-此 [!DNL Data Migration Tool] 不支援分割資料庫。
+此 [!DNL Data Migration Tool] 不支持拆分数据库。
 
-### 群組價格已轉換為層級價格
+### 组价格转换为层价格
 
-所有群組價格都會在移轉期間自動轉換為層級價格。
+在迁移期间，所有组价格都会自动转换为层价格。
 
-### 銷售實體的新編號
+### 销售实体的新编号
 
-訂單、商業發票、出貨、銷退折讓單及RMA的參考編號依原樣移轉。 移轉後，將套用新的Magento2編號指派規則。 新銷售實體的數字不同。
+按原样迁移订单、发票、发运、贷项通知单和RMA的参考编号。 迁移后，将应用新的Magento2编号分配规则。 新销售实体的数字不同。
 
-## 步驟
+## 步骤
 
-### 重新儲存客戶區段 [僅限Adobe Commerce]
+### 重新保存客户区段 [仅限Adobe Commerce]
 
-移轉後，必須從「管理面板」重新儲存客戶區段，才能使其啟動並執行。
+迁移后，必须从“管理面板”中重新保存客户区段，才能使其启动并运行。
 
-### 設定時區
+### 配置时区
 
-工具不會移轉時區設定，因此您必須在移轉後手動設定時區。 **商店** > **設定** > **地區設定選項** > **時區**.
+该工具不会迁移时区设置，因此您必须在迁移后手动配置时区 **商店** > **配置** > **区域设置选项** > **时区**.
 
-根據預設，Magento會將時間資料儲存在資料庫的UTC-0區域中，並根據目前的時區設定加以顯示。 如果時間資料已儲存在資料庫中UTC-0以外的區域，您必須使用將現有時間轉換為UTC-0 [!DNL Data Migration Tool]的 `\Migration\Handler\Timezone` 處理常式。
+默认情况下，Magento将时间数据存储在数据库的UTC-0区域中，并根据当前时区设置显示它。 如果时间数据已保存在数据库的UTC-0以外的区域中，则必须使用 [!DNL Data Migration Tool]的 `\Migration\Handler\Timezone` 处理程序。
 
-在下列範例中，Magento1在資料庫的UTC-7區域中不正確地節省時間（例如，由於錯誤的第三方擴充功能）。 若要在移轉時正確地將客戶帳戶建立時間轉換為UTC-0區域，請遵循下列步驟：
+在以下示例中，Magento1在数据库的UTC-7区域中错误地节省了时间（例如，由于第三方扩展出错）。 要在迁移时将客户帐户创建时间正确转换为UTC-0区域，请执行以下步骤：
 
-1. 複製 `map-customer.xml.dist` 從的適當目錄中的組態檔 [!DNL Data Migration Tool] (`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>`)到 `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/map-customer.xml` 檔案。
+1. 复制 `map-customer.xml.dist` 配置文件从的相应目录 [!DNL Data Migration Tool] (`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>`)到 `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/map-customer.xml` 文件。
 
-1. 更新 `<customer_map_file>` 中的節點 `config.xml` 並移除 `.dist` 擴充功能開始於 `map-customer.xml.dist`
+1. 更新 `<customer_map_file>` 中的节点 `config.xml` 并删除 `.dist` 扩展自 `map-customer.xml.dist`
 
-1. 將下列規則新增至 `map-customer.xml` 檔案：
+1. 将以下规则添加到 `map-customer.xml` 文件：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

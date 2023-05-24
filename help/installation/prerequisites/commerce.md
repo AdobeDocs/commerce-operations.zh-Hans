@@ -1,6 +1,6 @@
 ---
-title: 取得Adobe Commerce軟體
-description: 瞭解如何下載Adobe Commerce和Magento Open Source軟體。
+title: 获取Adobe Commerce软件
+description: 了解如何下载Adobe Commerce和Magento Open Source软件。
 exl-id: 7a769d5b-5397-4572-8db5-7602068e6aad
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,57 +9,57 @@ ht-degree: 0%
 
 ---
 
-# 取得Adobe Commerce軟體
+# 获取Adobe Commerce软件
 
-全世界24萬名商戶信任我們的電子商務軟體，而您正是其中之一。 我們已收集一些資訊，以協助您開始安裝。
+全世界有24万商家信任我们的电子商务软件，你们就是其中之一。 我们收集了一些信息以帮助您开始安装。
 
-## 如何取得軟體
+## 如何获取软件
 
-檢查是否有令人興奮的新功能和發行版本，並瞭解如何透過我們的 [產品可用性頁面](https://devdocs.magento.com/release/availability.html).
+查看令人兴奋的新增功能和版本的可用性，并了解如何将其添加到我们的 [产品可用性页面](https://devdocs.magento.com/release/availability.html).
 
-請參閱下表以取得安裝Adobe Commerce或Magento Open Source的快速入門。
+请参阅下表，了解如何开始安装Adobe Commerce或Magento Open Source。
 
 <table>
     <tbody>
         <tr>
-            <th>使用者需求</th>
-            <th>說明</th>
-            <th>高階安裝和升級步驟</th>
-            <th>開始使用連結</th>
+            <th>用户需求</th>
+            <th>描述</th>
+            <th>高级安装和升级步骤</th>
+            <th>开始使用链接</th>
         </tr>
     <tr>
         <td><p>Integrator， packager</p></td>
-        <td><p>想要完整控制所有安裝的元件、具有應用程式伺服器的存取權、高度技術性，可能會將Magento Open Source與其他元件重新封裝。</p>
+        <td><p>希望完全控制已安装的所有组件，有权访问应用程序服务器，技术含量高，可能会将Magento Open Source与其他组件重新打包。</p>
         </td>
-        <td><ol><li>建立撰寫器 <em>專案</em> 其中包含要使用的元件清單。</li>
-            <li>使用撰寫器更新套件相依性；使用 <code>composer create-project</code> 以取得Composer中繼資料。</li>
-            <li>使用安裝應用程式 <a href="../advanced.md">命令列</a>.</li>
-        <li>使用升級應用程式和擴充功能  <a href="../../upgrade/implementation/perform-upgrade.md">命令列</a>.</li></ol></td>
-        <td><p><a href="../composer.md">取得中繼資料</a></p></td>
+        <td><ol><li>创建编辑器 <em>项目</em> ，其中包含要使用的组件列表。</li>
+            <li>使用编辑器更新包依赖项；使用 <code>composer create-project</code> 以获取Composer的比喻。</li>
+            <li>使用安装应用程序 <a href="../advanced.md">命令行</a>.</li>
+        <li>使用升级应用程序和扩展  <a href="../../upgrade/implementation/perform-upgrade.md">命令行</a>.</li></ol></td>
+        <td><p><a href="../composer.md">获取暗喻</a></p></td>
     </tr>
     <tr>
-        <td><p>參與開發人員</p></td>
-        <td><p>會導致Magento Open Source程式碼基底、檔案錯誤和自訂應用程式。 技術含量高，擁有自己的開發伺服器，瞭解Composer和GitHub。</p>
-            <p>您 <em>無法</em> 在生產環境中使用應用程式。</p>
-      <p>您必須使用升級 <a href="../../upgrade/developer/git-installs.md">Composer和Git命令</a>.</p></td>
-        <td><ol><li>複製GitHub存放庫。</li>
-            <li>使用撰寫器更新套件相依性。</li>
-            <li>安裝應用程式，使用 <a href="../advanced.md">命令列</a>.</li>
-            <li>升級應用程式，使用 <a href="../../upgrade/developer/git-installs.md">Composer和Git命令</a>.</li>
-            <li>自訂下的程式碼 <code>app/code</code> 目錄。</li></ol></td>
-        <td><p><a href="https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/">複製GitHub存放庫</a></p></td>
+        <td><p>参与开发人员</p></td>
+        <td><p>提供Magento Open Source代码库、文件错误和自定义应用程序。 技术含量高，拥有自己的开发服务器，了解Composer和GitHub。</p>
+            <p>您 <em>无法</em> 在生产环境中使用应用程序。</p>
+      <p>您必须使用进行升级 <a href="../../upgrade/developer/git-installs.md">Composer和Git命令</a>.</p></td>
+        <td><ol><li>克隆GitHub存储库。</li>
+            <li>使用编辑器更新包依赖关系。</li>
+            <li>使用以下方式安装应用程序 <a href="../advanced.md">命令行</a>.</li>
+            <li>使用升级应用程序 <a href="../../upgrade/developer/git-installs.md">Composer和Git命令</a>.</li>
+            <li>自定义下的代码 <code>app/code</code> 目录。</li></ol></td>
+        <td><p><a href="https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/">克隆GitHub存储库</a></p></td>
     </tr>
     </tbody>
 </table>
 
-## 有用的資訊
+## 有用信息
 
-使用頁面左側的連結，導覽安裝每個部分的主題。
+使用页面左侧的链接可浏览安装各个部分的主题。
 
-## 必要的伺服器許可權
+## 所需的服务器权限
 
-UNIX系統需要 `root` 安裝及設定軟體（如Web伺服器PHP）的許可權。 如果您需要安裝此軟體，請確定 `root` 存取。
+UNIX系统需要 `root` 安装和配置软件（如Web服务器PHP）的权限。 如果需要安装此软件，请确保您拥有 `root` 访问权限。
 
-執行 *not* 將應用程式安裝在網頁伺服器docroot中作為 `root` 使用者，因為網頁伺服器可能無法與這些檔案互動。
+Do *非* 在web服务器docroot中安装应用程序，作为 `root` 用户，因为Web服务器可能无法与这些文件交互。
 
-您需要 `root` 建立下列專案的許可權： [檔案系統擁有者](file-system/overview.md) 並將該擁有者新增至網頁伺服器的群組。 您使用檔案系統擁有者來執行 `bin/magento` 命令列的指令和設定cron工作，為您排程工作。
+您需要 `root` 创建 [文件系统所有者](file-system/overview.md) 并将该所有者添加到Web服务器的组中。 使用文件系统所有者运行 `bin/magento` 命令行中的命令，用于设置cron作业，从而为您安排任务。

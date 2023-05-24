@@ -1,6 +1,6 @@
 ---
-title: 產品清單分頁的最佳實務
-description: 瞭解如何透過管理店面目錄每個頁面上顯示的產品數量來最佳化Adobe Commerce效能。
+title: 产品列表分页的最佳实践
+description: 了解如何通过管理店面目录每个页面上显示的产品数量来优化Adobe Commerce性能。
 role: User, Admin
 feature: Best Practices
 feature-set: Commerce
@@ -12,25 +12,25 @@ ht-degree: 0%
 
 ---
 
-# 產品清單分頁的最佳實務
+# 产品列表分页的最佳实践
 
-為獲得最佳效能，每頁最多可顯示48種產品。
+为获得最佳性能，每页最多可显示48个产品。
 
-您可以設定Adobe Commerce，讓購物者可以在單一頁面上檢視所有類別產品。 如果類別產品的數量大幅超過48種產品，請更新店面分頁控制的類別目錄設定。
+您可以将Adobe Commerce配置为允许购物者在一个页面上查看所有类别的产品。 如果类别产品的数量明显超过48个产品，请更新店面分页控制的目录配置。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 更新產品清單設定
+## 更新产品列表配置
 
-如果您在任何類別中有超過48種產品，請更新店面目錄設定以停用選項 **允許每頁所有產品**.
+如果您在任何类别中有超过48种产品，请更新店面目录配置以禁用该选项 **允许每页所有产品**.
 
-停用此選項後，Adobe Commerce會使用列出店面分頁控制項的產品清單，來管理顯示在店面元件中的產品數量。 如需指示，請參閱 [設定分頁控制項](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
+禁用此选项后，Adobe Commerce会使用产品列表店面分页控件来管理店面组件中显示的产品数量。 有关说明，请参阅 [配置分页控件](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
 
-## 其他資訊
+## 其他信息
 
-- [設定產品清單](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html)
+- [配置产品列表](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html)

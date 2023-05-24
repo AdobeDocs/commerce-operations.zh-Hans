@@ -1,6 +1,6 @@
 ---
-user-guide-title: 營運Playbook
-user-guide-description: 瞭解如何讓您的企業做好營運準備，以便經營成功的電子商務網站。
+user-guide-title: 运营行动手册
+user-guide-description: 了解如何让您的企业做好运营准备，以便运营成功的电子商务网站。
 source-git-commit: ed6b9cb5acd35ce8213fafddcd00be1c32127a86
 workflow-type: tm+mt
 source-wordcount: '143'
@@ -9,68 +9,68 @@ ht-degree: 0%
 ---
 
 
-# 營運Playbook {#operational-playbook}
+# 运营行动手册 {#operational-playbook}
 
-- [概觀](overview.md)
-- 商務 {#intro}
+- [概述](overview.md)
+- 商务 {#intro}
    - [Adobe Commerce](intro/commerce.md)
-   - [什麼是電子商務？](intro/ecommerce.md)
-   - [商業模式](intro/business-model.md)
-   - [商務操作](intro/operations.md)
+   - [什么是电子商务？](intro/ecommerce.md)
+   - [商业模式](intro/business-model.md)
+   - [商业操作](intro/operations.md)
    - [Commerce功能](intro/features.md)
-- 領導力 {#leadership}
-   - [原則](leadership/principles.md)
-   - [目標](leadership/goals.md)
+- 领导力 {#leadership}
+   - [原则](leadership/principles.md)
+   - [目标](leadership/goals.md)
    - [Vision](leadership/vision.md)
-   - [規劃](leadership/planning.md)
-- 解決方案 {#solution}
-   - [軟體即服務(SaaS)](solution/software-service.md)
+   - [规划](leadership/planning.md)
+- 解决方案 {#solution}
+   - [软件即服务(SaaS)](solution/software-service.md)
    - [Platform-as-a-service (PaaS)](solution/platform-service.md)
-   - [內部部署託管](solution/on-premises.md)
-   - [雲端與內部部署](solution/hosting-comparison.md)
-   - [協力廠商整合](solution/integrations.md)
-   - [升級、備份及維護](solution/maintenance.md)
+   - [内部部署托管](solution/on-premises.md)
+   - [云与内部部署](solution/hosting-comparison.md)
+   - [第三方集成](solution/integrations.md)
+   - [升级、备份和维护](solution/maintenance.md)
 - 策略 {#strategy}
-   - [Commerce策略](strategy/commerce.md)
-   - [焦點](strategy/focus.md)
-   - [內容策略](strategy/content.md)
+   - [商务策略](strategy/commerce.md)
+   - [聚焦](strategy/focus.md)
+   - [内容策略](strategy/content.md)
    - [成熟度](strategy/maturity.md)
-- 程式 {#process}
-   - [Order management](process/order-management.md)
-   - [專案計畫](process/project-plan.md)
-   - [專案範圍](process/project-scope.md)
-   - [專案管理](process/project-management.md)
+- 进程 {#process}
+   - [订单管理](process/order-management.md)
+   - [项目计划](process/project-plan.md)
+   - [项目范围](process/project-scope.md)
+   - [项目管理](process/project-management.md)
    - [DACI模型](process/project-management-framework.md)
    - [敏捷Scrum方法](process/agile-scrum.md)
-   - [常見專案研討會](process/project-workshops.md)
-   - [測試](process/testing.md)
-- 人員 {#people}
-   - [團隊](people/teams.md)
-   - [團隊結構](people/team-structure.md)
-   - [組織結構](people/organizational-structure.md)
-   - [通訊](people/communication.md)
-   - [角色與責任](people/roles-responsibilities.md)
-   - [資源](people/resources.md)
-   - [文化特性](people/culture.md)
-   - [專案團隊](people/project-teams.md)
-- 產品 {#product}
-   - [訂單管理系統](product/order-management-systems.md)
-   - [送貨與履行](product/shipping-fulfillment.md)
-   - [付款閘道](product/payment-gateways.md)
-   - [定價](product/pricing.md)
-   - [產品影像](product/images.md)
-   - [結帳流程和程式](product/checkout.md)
-   - [動態定價管理](product/dynamic-pricing.md)
-   - [促銷活動](product/promotions.md)
-   - [行銷活動管理](product/campaign-management.md)
-   - [銷售機會開發](product/lead-generation.md)
-   - [報告和儀表板](product/reporting.md)
-   - [線上客戶服務](product/customer-service.md)
+   - [共同项目讲习班](process/project-workshops.md)
+   - [测试](process/testing.md)
+- 人员 {#people}
+   - [团队](people/teams.md)
+   - [团队结构](people/team-structure.md)
+   - [组织结构](people/organizational-structure.md)
+   - [通信](people/communication.md)
+   - [角色和职责](people/roles-responsibilities.md)
+   - [资源](people/resources.md)
+   - [文化](people/culture.md)
+   - [项目团队](people/project-teams.md)
+- 产品 {#product}
+   - [订单管理系统](product/order-management-systems.md)
+   - [配送和配送](product/shipping-fulfillment.md)
+   - [支付网关](product/payment-gateways.md)
+   - [定价](product/pricing.md)
+   - [产品图像](product/images.md)
+   - [结账流程和流程](product/checkout.md)
+   - [动态定价管理](product/dynamic-pricing.md)
+   - [促销活动](product/promotions.md)
+   - [营销活动管理](product/campaign-management.md)
+   - [商机开发](product/lead-generation.md)
+   - [报告和仪表板](product/reporting.md)
+   - [在线客户服务](product/customer-service.md)
    - [SEO](product/search-engine-optimization.md)
-   - [電子郵件行銷](product/marketing.md)
-   - [個人化](product/personalization.md)
-   - [按一下並收集](product/click-collect.md)
+   - [电子邮件营销](product/marketing.md)
+   - [个性化](product/personalization.md)
+   - [单击并收集](product/click-collect.md)
    - [PWA](product/progressive-web-app.md)
-- [檢查清單和範本](checklists-templates/home.md)
-- [字彙表](glossary.md)
-- [返回作業指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [核对清单和模板](checklists-templates/home.md)
+- [术语表](glossary.md)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

@@ -1,6 +1,6 @@
 ---
-title: 平台開發原則
-description: 瞭解使用Adobe Commerce時的基本平台開發原則。
+title: 平台开发原则
+description: 了解使用Adobe Commerce时的基本平台开发原则。
 exl-id: 3d822a8c-0e81-4a80-a820-46cf2702e0bf
 source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
@@ -9,29 +9,29 @@ ht-degree: 0%
 
 ---
 
-# 平台開發原則
+# 平台开发原则
 
-在本行動手冊中，我們深入探討Adobe Commerce開發的一些主要標準，包括：
+在本行动手册中，我们深入探讨了Adobe Commerce开发的一些主要标准，包括：
 
-- 符合開發程式的功能和技術範圍
-- 符合MVC架構的開發最佳實務
-- 架構考量，包括GRA
-- 針對指令碼和漏洞的安全性標準
-- 擴充功能開發最佳實務
-- Web API與REST、SOAP和GraphQL的整合
-- 針對編碼和基礎建設的效能改善
-- 測試工具、策略和方法
+- 符合开发过程的功能和技术范围
+- 与MVC架构相一致的开发最佳实践
+- 体系结构注意事项，包括GRA
+- 针对脚本和漏洞的安全标准
+- 扩展开发最佳实践
+- Web API与REST、SOAP和GraphQL的集成
+- 编码和基础架构的性能改进
+- 测试工具、策略和方法
 
-雖然某些解決方案實作者在實施專案中使用的方法、流程和工具方面可能有自己的偏好，但本行動手冊專注於可在大多數實作中分享的公認最佳實務和方法。
+虽然一些解决方案实施者在实施项目中使用的方法、流程和工具方面可能具有自己的偏好，但本行动手册的重点内容是可在大多数实施中共享的公认的最佳实践和方法。
 
-像任何大型IT專案一樣，Adobe Commerce建置在編碼標準上，這些標準利用基礎技術(例如PHP/Zend、Symfony、JavaScript、jQuery和HTML)的最佳實務和標準化，以及Adobe Commerce編碼標準中建立的標準。 遵守這些標準絕對是消除錯誤並改善自訂建置計畫碼的品質和可維護性的必要條件。
+与任何大型IT项目一样，Adobe Commerce构建于编码标准之上，这些标准利用底层技术(例如，PHP/Zend、Symfony、JavaScript、jQuery和HTML)的最佳实践和标准化，以及在Adobe Commerce编码标准中制定的标准。 遵守这些标准绝对是消除错误并提高自定义代码质量和可维护性的必要条件。
 
-## 雲端基礎結構上的Adobe Commerce
+## 云基础架构上的Adobe Commerce
 
-雲端基礎結構上的Adobe Commerce是適用於Adobe Commerce軟體的受管理、自動化託管平台。 雲端基礎結構上的Adobe Commerce提供多種其他功能，使其有別於內部部署Adobe Commerce和Magento Open Source實施：
+云基础架构上的Adobe Commerce是适用于Adobe Commerce软件的托管、自动托管平台。 云基础架构上的Adobe Commerce附带了各种其他功能，这些功能使其有别于内部部署Adobe Commerce和Magento Open Source实施：
 
-![Adobe Commerce元件infographics](../../assets/playbooks/commerce-cloud.svg)
+![Adobe Commerce组件infographics](../../assets/playbooks/commerce-cloud.svg)
 
-雲端基礎結構上的Adobe Commerce提供預先布建的基礎結構，包括PHP、MySQL、Redis、 [!DNL RabbitMQ]和Elasticsearch技術；以Git為基礎的工作流程，具有自動建置和部署作業，每當在Platform as a Service (PaaS)環境中推送程式碼變更時，都能有效率地進行快速開發和持續部署；可高度自訂的環境設定檔案和工具；以及AWS託管，可為線上銷售和零售提供可擴充且安全的環境。
+云基础架构上的Adobe Commerce提供了一个预配置的基础架构，包括PHP、MySQL、Redis、 [!DNL RabbitMQ]、和Elasticsearch技术；基于Git的工作流，具有自动构建和部署操作，可实现高效的快速开发和连续部署(每次在Platform as a Service (PaaS)环境中推送代码更改时)；高度可自定义的环境配置文件和工具；以及AWS托管，可为在线销售和零售提供可扩展且安全的环境。
 
-![Adobe Commerce元件infographics](../../assets/playbooks/cloud-tech-stack.svg)
+![Adobe Commerce组件infographics](../../assets/playbooks/cloud-tech-stack.svg)

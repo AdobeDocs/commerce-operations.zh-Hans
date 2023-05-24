@@ -1,6 +1,6 @@
 ---
-title: 產品限制最佳實務
-description: 瞭解設定產品庫存單位(SKU)的最佳實務，以最大化網站效能。
+title: 产品限制最佳实践
+description: 了解配置产品库存单位(SKU)以最大化网站性能的最佳实践。
 role: Admin
 feature: Best Practices
 feature-set: Commerce
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 ---
 
-# 產品SKU設定的最佳實務
+# 产品SKU配置的最佳实践
 
-為了最大化效能，建議的有效產品庫存單位(SKU)最大值為2.42億。 此有效產品SKU上限的計算方式為：
+为了最大化性能，建议的有效产品库存单位(SKU)的最大值为2.42亿。 此有效产品SKU最大值计算如下：
 
 ```text
 Effective SKU = N[SKUs] x N[Stores] x N[Customer groups]
@@ -22,39 +22,39 @@ Effective SKU = N[SKUs] x N[Stores] x N[Customer groups]
 
 其中：
 
-- N代表該類別的專案數
-- 客戶群組包含共用目錄，因為它會建立額外的客戶群組。
+- N表示该类别的项目数
+- 客户组包括共享目录，因为它会创建一个额外的客户组。
 
-有效SKU的數量超過上限，會減慢產品資料擷取的速度，並增加完成管理員面板操作或索引的時間。
+有效SKU的数量超过最大数量会减慢产品数据检索的速度，并增加完成管理员面板操作或索引的时间。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 減少產品數量
+## 减少产品数量
 
-使用下列策略來減少產品數量(SKU)：
+使用以下策略减少产品数量(SKU)：
 
-- 最小化乘數 — 
-   - 整合網站可減少乘數。 如果您有50,000個SKU、10個網站和10個客戶群組，SKU的有效數量為500萬。 移除五個客戶群組，將有效SKU減少至250萬。
-   - 使用自訂定價的替代產品功能來取代共用目錄和客戶群組乘數。
-   - 客戶群組和共用目錄兩者都是商店中有效SKU數目的乘數。
-- 重新建構目錄 — 
-   - 減少指派給類別的產品數量。
-   - 減少網站、客戶群組、共用目錄、產品數量或可設定產品選項的數量，以減少SKU的數量
-- 使用自訂選項而非建立個別產品，以提供更多產品變體。
-- 考慮到有效SKU可能包含價格的多重排列，因為每個商店或客戶群組的價格可以有不同的指定。
-- 停用或移除未使用的系統元件，例如模組。 (請參閱  [解除安裝模組](../../../installation/tutorials/uninstall-modules.md).)
-- 在外部平台管理系統(PMS)中管理產品。
+- 最小化乘数 — 
+   - 整合网站会降低乘数。 如果您有50,000个SKU、10个网站和10个客户组，则有效SKU数为500万。 删除五个客户组将有效SKU减少到250万。
+   - 使用自定义定价的替代产品功能替换共享目录和客户组乘数。
+   - 客户组和共享目录均用作商店中有效SKU数量的乘数。
+- 重构目录 — 
+   - 减少分配给类别的产品数量。
+   - 通过减少网站、客户组、共享目录、产品数量或可配置产品选项的数量来减少SKU的数量
+- 通过使用自定义选项而不是创建单独的产品来提供更多产品变体。
+- 考虑到有效的SKU可能包括价格的一些潜在排列，因为每个商店或客户群的价格可以有不同的指定。
+- 停用或删除未使用的系统组件，如模块。 (请参阅  [卸载模块](../../../installation/tutorials/uninstall-modules.md).)
+- 在外部平台管理系统(PMS)中管理产品。
 
-## 其他資訊
+## 其他信息
 
-- [建立產品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
-- [產品指派](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/products-in-category/categories-product-assignments.html)
-- [使用共用目錄](https://experienceleague.adobe.com/docs/commerce-admin/b2b/shared-catalogs/catalog-shared.html)
-- 雲端基礎結構： [設定多個網站和商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html)
-- 內部部署： [多個網站或商店](../../../configuration/multi-sites/ms-overview.md)
-- [雲端基礎結構上的Adobe Commerce：商店設定的最佳實務](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)
+- [创建产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
+- [产品分配](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/products-in-category/categories-product-assignments.html)
+- [使用共享目录](https://experienceleague.adobe.com/docs/commerce-admin/b2b/shared-catalogs/catalog-shared.html)
+- 云基础架构： [设置多个网站和商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html)
+- 内部部署： [多个网站或商店](../../../configuration/multi-sites/ms-overview.md)
+- [云基础架构上的Adobe Commerce：存储配置的最佳实践](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)

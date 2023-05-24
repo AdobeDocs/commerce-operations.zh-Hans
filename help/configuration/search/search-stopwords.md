@@ -1,6 +1,6 @@
 ---
-title: 設定搜尋停用詞
-description: 瞭解如何使用CSV檔案管理Adobe Commerce的停用詞。
+title: 配置搜索停用词
+description: 了解如何使用CSV文件管理Adobe Commerce的停用词。
 feature: Configuration, Search
 exl-id: 75320868-9939-4a6e-8dbb-73ca68c9f0ee
 source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
@@ -10,109 +10,109 @@ ht-degree: 0%
 
 ---
 
-# 設定搜尋停用詞
+# 配置搜索停用词
 
-一般而言， _停用詞_ 是搜尋引擎在處理文字後篩選掉的常見字詞。 最初，當磁碟空間和記憶體非常有限時，每儲存KB就意味著效能大幅提升。 因此，搜尋引擎透過忽略特定字詞並維持較小的索引而獲得效能提升。
+一般来说， _停用词_ 是搜索引擎在处理文本后过滤掉的常用词。 最初，当磁盘空间和内存极其有限时，每节省1 KB的内存就意味着显着提高了性能。 因此，搜索引擎通过忽略某些词语和保持较小的索引来达到性能提升。
 
-雖然我們目前擁有更多儲存空間，但效能仍很重要。 Elasticsearch和OpenSearch與其他搜尋引擎一樣，仍使用停用字詞來改善效能。
+尽管我们如今拥有更多存储，但性能仍然很重要。 与其他搜索引擎一样，Elasticsearch和OpenSearch仍使用停用词来提高性能。
 
-您必須使用位於以下位置的CSV檔案管理停用詞： `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目錄或 `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/` 目錄（視您安裝Commerce軟體的方式而定）。
+您必须使用位于以下位置的CSV文件管理停用词： `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录或 `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/` 目录，具体取决于您安装Commerce软件的方式。
 
-如需Elasticsearch和OpenSearch如何使用停用字詞的詳細資訊，請參閱下列資源：
+有关Elasticsearch和OpenSearch如何使用非索引字的更多信息，请参阅以下资源：
 
-- [停用詞：效能與精確度](https://www.elastic.co/guide/en/elasticsearch/guide/current/stopwords.html)
-- [停用字詞的利弊](https://www.elastic.co/guide/en/elasticsearch/guide/current/pros-cons-stopwords.html)
-- [使用停用詞](https://www.elastic.co/guide/en/elasticsearch/guide/current/using-stopwords.html)
-- [停用字詞和效能](https://www.elastic.co/guide/en/elasticsearch/guide/current/stopwords-performance.html)
+- [停用词：性能与精度](https://www.elastic.co/guide/en/elasticsearch/guide/current/stopwords.html)
+- [非索引字的利弊](https://www.elastic.co/guide/en/elasticsearch/guide/current/pros-cons-stopwords.html)
+- [使用停用词](https://www.elastic.co/guide/en/elasticsearch/guide/current/using-stopwords.html)
+- [停用词和性能](https://www.elastic.co/guide/en/elasticsearch/guide/current/stopwords-performance.html)
 
-## 設定停用詞
+## 配置停用词
 
-停用字詞位於 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目錄。 Adobe Commerce和Magento Open Source隨附一個CSV檔案，其中包含預設地區設定的停用詞，以及另一個檔案 `stopwords.csv`，其中包含其他CSV檔案所未代表之任何地區設定的停用詞。
+停用词位于 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录。 Adobe Commerce和Magento Open Source附带一个CSV文件，其中包含默认区域设置的停用词，另外还有一个文件， `stopwords.csv`，其中包含任何未由其他CSV文件表示的区域设置的停用词。
 
-停用字檔案快取的預設存留期為15分鐘。
+非索引字文件缓存的默认生命周期为15分钟。
 
-### 編輯現有地區設定的停用詞
+### 编辑现有区域设置的停用词
 
-**若要編輯停用詞**：
+**编辑非索引字**：
 
-1. 登入您的Commerce伺服器，或切換至 [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
-1. 使用文字編輯器開啟中的停用字檔案 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目錄。
+1. 登录到Commerce服务器或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 使用文本编辑器在中打开停用词文件 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录。
 
-   CSV檔案使用命名慣例 `stopwords_<locale_code>.csv`. 例如，德文停用字檔案命名為 `stopwords_de_DE.csv`.
+   CSV文件使用命名约定 `stopwords_<locale_code>.csv`. 例如，德语停用词文件名为 `stopwords_de_DE.csv`.
 
-1. 在檔案中新增單字、移除單字或變更單字。
+1. 在文件中添加单词、删除单词或更改单词。
 
-   （檔案中的每個停用字都會從新行開始。）
+   （文件中的每个停用词都从新行开始。）
 
-1. 儲存變更並退出文字編輯器。
-1. 清除設定快取。
+1. 保存更改并退出文本编辑器。
+1. 清除配置缓存。
 
-   - 管理員： **系統** >工具> **快取管理**. 選取 **設定** 核取方塊，並在上方清單中按一下 **重新整理**. 按一下 **提交** 以完成動作。
+   - 管理员： **系统** >工具> **缓存管理**. 选择 **配置** 复选框，并从其上方的列表中，单击 **刷新**. 单击 **提交** 以完成操作。
 
-   - 命令列：以檔案系統擁有者的身分，輸入下列命令：
+   - 命令行：作为文件系统所有者，输入以下命令：
 
       ```bash
       php <magento_root>/bin/magento cache:clean config
       ```
 
-1. 在您的店面搜尋辭彙以檢查結果。
+1. 在您的店面中搜索词语以检查结果。
 
-### 建立新地區設定的停用詞
+### 为新区域设置创建停用词
 
-**為地區設定新增停用詞**：
+**为区域设置添加停用词**：
 
-1. 登入您的Commerce伺服器，或切換至 [檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
+1. 登录到Commerce服务器或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 
-1. 使用文字編輯器建立名為的停用字檔案 `stopwords_<locale_code>.csv` 在 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目錄。
+1. 使用文本编辑器创建名为的停用词文件 `stopwords_<locale_code>.csv` 在 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录。
 
-   例如，若要建立義大利語地區設定的停用詞，請為檔案命名 `stopwords_it_IT.csv`.
+   例如，要为意大利语区域设置创建非索引字，请将文件命名为 `stopwords_it_IT.csv`.
 
-1. 在非索引字檔案中，確定每個非索引字都位於單獨的行上。
-1. 儲存變更並退出文字編輯器。
-1. 在同一目錄中，開啟 `esconfig.xml` 在文字編輯器中。
-1. 新增行至 `esconfig.xml` 如下所示：
+1. 在停用词文件中，确保每个停用词都位于单独的行上。
+1. 保存更改并退出文本编辑器。
+1. 在同一目录中，打开 `esconfig.xml` 在文本编辑器中。
+1. 添加行到 `esconfig.xml` 如下所示：
 
    ```xml
    <LOCALE_CODE>stopwords_LOCALE_CODE.csv</LOCALE_CODE>
    ```
 
-   例如，若要新增義大利語停用字檔案，請新增下列行：
+   例如，要添加意大利语非索引字文件，请添加以下行：
 
    ```xml
    <it_IT>stopwords_it_IT.csv</it_IT>
    ```
 
-1. 將變更儲存至 `esconfig.xml` 並退出文字編輯器。
-1. 清除設定快取。
+1. 将更改保存到 `esconfig.xml` 并退出文本编辑器。
+1. 清除配置缓存。
 
-   - 管理員： **系統** >工具> **快取管理**. 選取 **設定** 核取方塊，並在上方清單中按一下 **重新整理**. 按一下 **提交** 以完成動作。
+   - 管理员： **系统** >工具> **缓存管理**. 选择 **配置** 复选框，并从其上方的列表中，单击 **刷新**. 单击 **提交** 以完成操作。
 
-   - 命令列：以檔案系統擁有者的身分，輸入下列命令：
+   - 命令行：作为文件系统所有者，输入以下命令：
 
       ```bash
       php <magento_root>/bin/magento magento cache:clean config
       ```
 
-1. 在您的店面搜尋辭彙以檢查結果。
+1. 在您的店面中搜索词语以检查结果。
 
-## 變更停用字目錄
+## 更改非索引字目录
 
-本節討論如何選擇性地從下列其中一項變更預設停用字目錄：
+本节讨论如何从以下选项之一更改默认非索引字目录（可选）：
 
 - `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`
 - `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`
 
-位置取決於您安裝Commerce軟體的方式。 如果您複製Magento2 GitHub存放庫，路徑位於 `app/code`. 如果您已安裝壓縮封存或中繼資料，路徑會位於 `vendor`.
+位置取决于您安装Commerce软件的方式。 如果克隆Magento2 GitHub存储库，则路径位于 `app/code`. 如果安装了压缩的归档文件或元包，则路径位于 `vendor`.
 
-**變更目錄**：
+**更改目录**：
 
-1. 以檔案系統擁有者的身分，開啟Elasticsearch `di.xml` 在文字編輯器中。
+1. 作为文件系统所有者，打开Elasticsearch `di.xml` 在文本编辑器中。
 
-   如果您複製存放庫，則該存放庫位於 `app/code/Magento/Elasticsearch/etc/di.xml`
+   如果您克隆了存储库，则该存储库位于 `app/code/Magento/Elasticsearch/etc/di.xml`
 
-   如果您有封存或中繼資料，則位於 `vendor/magento/module-elasticsearch/etc/di.xml`
+   如果您有存档或隐喻，则它位于 `vendor/magento/module-elasticsearch/etc/di.xml`
 
-1. 變更值 `stopwordsDirectory` 至所需的目錄：
+1. 更改值 `stopwordsDirectory` 到所需的目录：
 
    ```xml
    <type name="Magento\Elasticsearch\SearchAdapter\Query\Preprocessor\Stopwords">
@@ -122,12 +122,12 @@ ht-degree: 0%
    </type>
    ```
 
-1. 將變更儲存至 `di.xml` 並退出文字編輯器。
+1. 将更改保存到 `di.xml` 并退出文本编辑器。
 
-## 若要從模組變更目錄
+## 从模块中更改目录
 
-1. [建立模組](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
-1. 在您的模組中 `etc/di.xml` 新增指示：
+1. [创建模块](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
+1. 在您的模块中 `etc/di.xml` 添加说明：
 
    ```xml
    <type name="Magento\Elasticsearch\SearchAdapter\Query\Preprocessor\Stopwords">
@@ -138,6 +138,6 @@ ht-degree: 0%
    </type>
    ```
 
-1. 在您的模組中，建立目錄 `etc/stopwords`，以及對應的CSV檔案。
+1. 在模块中创建目录 `etc/stopwords`，以及相应的CSV文件。
 
-1. 將變更儲存至 `di.xml` 並退出文字編輯器。
+1. 将更改保存到 `di.xml` 并退出文本编辑器。

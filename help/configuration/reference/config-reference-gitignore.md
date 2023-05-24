@@ -1,6 +1,6 @@
 ---
-title: .gitignore參考
-description: 瞭解如何新增包含在忽略清單中的檔案。
+title: .gitignore引用
+description: 请参阅如何添加包含在忽略列表中的文件。
 exl-id: 7c53b50a-7bdf-433b-bebb-0129f792a1a4
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# .gitignore參考
+# .gitignore引用
 
-Magento Open Source包含基底 `.gitignore` 檔案。 另請參閱 [最新的Commerce `.gitignore`](https://raw.githubusercontent.com/magento/magento2/2.4/.gitignore) 檔案。 如果您必須新增的檔案位於 `.gitignore` 清單中，您可以使用 `-f` 暫存認可時（強制）選項：
+Magento Open Source包括基底 `.gitignore` 文件。 参见 [最新的Commerce `.gitignore`](https://raw.githubusercontent.com/magento/magento2/2.4/.gitignore) 文件。 如果您必须添加一个文件，该文件位于 `.gitignore` 列表，您可以使用 `-f` 暂存提交时的（强制）选项：
 
 ```bash
 git add <path/filename> -f

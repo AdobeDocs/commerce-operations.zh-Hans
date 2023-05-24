@@ -1,6 +1,6 @@
 ---
-title: MySQL觸發程式使用狀況
-description: 瞭解如何透過Adobe Commerce有效使用MySQL觸發程式。
+title: MySQL触发器使用情况
+description: 了解如何通过Adobe Commerce有效使用MySQL触发器。
 role: Developer
 feature-set: Commerce
 feature: Best Practices
@@ -12,40 +12,40 @@ ht-degree: 0%
 
 ---
 
-# MySQL觸發程式使用的最佳實務
+# MySQL触发器使用的最佳实践
 
-本文說明在使用MySQL觸發程式時如何避免效能問題。 觸發器用於將變更記錄到稽核表中。
+本文介绍了在使用MySQL触发器时如何避免出现性能问题。 触发器用于将更改记录到审核表中。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-- Adobe Commerce內部部署
-- 雲端基礎結構上的Adobe Commerce
-
->[!WARNING]
->
->對於雲端專案上的Adobe Commerce，在變更生產環境的設定之前，請一律在中繼環境中測試設定變更。
-
-## 瞭解效能影響
-
-觸發器會解譯為程式碼，表示MySQL不會預先編譯它們。
-
-掛接到查詢的交易空間時，觸發器會為使用表格執行的每個查詢向剖析器和解譯器增加額外負荷。 觸發程式與原始查詢共用相同的交易空間，當這些查詢爭奪表格上的鎖定時，觸發程式會獨立爭奪其他表格上的鎖定。
-
-如果使用許多觸發程式，此額外額外開銷可能會對網站上的網站效能造成負面影響。
+- Adobe Commerce内部部署
+- 云基础架构上的Adobe Commerce
 
 >[!WARNING]
 >
->Adobe Commerce不支援Adobe Commerce資料庫中的任何自訂觸發器，因為自訂觸發器可能會與未來Adobe Commerce版本不相容。 如需最佳實務，請參閱 [一般MySQL准則](../../../installation/prerequisites/database/mysql.md) (位於Adobe Commerce檔案中)。
+>对于云项目上的Adobe Commerce，在更改生产环境的配置之前，请始终在暂存环境中测试配置更改。
 
-## 有效使用觸發程式
+## 了解性能影响
 
-若要防止使用觸發程式時發生效能問題，請遵循下列准則：
+触发器被解释为代码，这意味着MySQL不会预编译它们。
 
-- 如果您有在執行觸發程式時寫入某些資料的自訂觸發程式，請移動此邏輯以直接寫入稽核表格。 例如，在應用程式程式碼中新增其他查詢，然後在您要為其建立觸發器的查詢後執行。
-- 檢閱現有的自訂觸發程式，並考慮移除這些觸發程式，然後直接從應用程式端寫入表格。 使用檢查資料庫中現有的觸發程式 [`SHOW TRIGGERS` SQL陳述式](https://dev.mysql.com/doc/refman/8.0/en/show-triggers.html).
-- 如需其他協助、疑問或顧慮， [提交Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?#submit-ticket).
+挂接到查询的事务空间时，触发器会为使用表执行的每个查询向解析器和解释器添加开销。 触发器与原始查询共享相同的事务空间，当这些查询争夺表上的锁时，触发器会独立地争夺另一个表上的锁。
 
-## 其他資訊
+如果使用许多触发器，这种额外的开销可能会对站点性能产生负面影响。
 
-- [MySQL必要條件](../../../installation/prerequisites/database/mysql.md)
-- [雲端基礎結構上Adobe Commerce的資料庫最佳實務](database-on-cloud.md)
+>[!WARNING]
+>
+>Adobe Commerce不支持Adobe Commerce数据库中的任何自定义触发器，因为自定义触发器可能会与将来的Adobe Commerce版本不兼容。 有关最佳实践，请参阅 [常规MySQL准则](../../../installation/prerequisites/database/mysql.md) 在Adobe Commerce文档中。
+
+## 有效地使用触发器
+
+要防止在使用触发器时出现性能问题，请遵循以下准则：
+
+- 如果您有在执行触发器时写入某些数据的自定义触发器，请将此逻辑移动到直接写入审计表。 例如，通过在应用程序代码中添加其他查询，在要为其创建触发器的查询之后。
+- 查看现有自定义触发器，并考虑删除它们并直接从应用程序端写入表。 通过使用，检查数据库中的现有触发器 [`SHOW TRIGGERS` SQL语句](https://dev.mysql.com/doc/refman/8.0/en/show-triggers.html).
+- 如需要更多帮助、疑问或顾虑， [提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?#submit-ticket).
+
+## 其他信息
+
+- [MySQL先决条件](../../../installation/prerequisites/database/mysql.md)
+- [云基础架构上Adobe Commerce的数据库最佳实践](database-on-cloud.md)

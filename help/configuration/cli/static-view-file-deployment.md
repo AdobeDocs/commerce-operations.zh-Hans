@@ -1,6 +1,6 @@
 ---
-title: 部署靜態檢視檔案
-description: 瞭解在生產模式期間將靜態檔案寫入Commerce檔案系統。
+title: 部署静态视图文件
+description: 了解在生产模式期间将静态文件写入Commerce文件系统。
 exl-id: 51954738-b999-4982-954b-70f7a70c5a17
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,89 +9,89 @@ ht-degree: 0%
 
 ---
 
-# 部署靜態檢視檔案
+# 部署静态视图文件
 
 {{file-system-owner}}
 
-靜態檢視檔案部署命令可讓您在設定Commerce軟體時，將靜態檔案寫入Commerce檔案系統 [生產模式](../bootstrap/application-modes.md#production-mode).
+通过static view files deployment命令，您可以在为Commerce软件设置时，将静态文件写入Commerce文件系统 [生产模式](../bootstrap/application-modes.md#production-mode).
 
-詞語 _靜態檢視檔案_ 參考以下內容：
+术语 _静态视图文件_ 是指以下内容：
 
-- 「靜態」表示它可以針對網站進行快取（也就是說，檔案不會動態產生）。 範例包括從LESS產生的影像和CSS。
-- 「檢視」是指表示層（來自MVC）。
+- “静态”表示可以为站点缓存它（即，文件不是动态生成的）。 示例包括从LESS生成的图像和CSS。
+- “视图”是指表示层（来自MVC）。
 
-靜態檢視檔案位於 `<magento_root>/pub/static` 目錄，有些快取在 `<magento_root>/var/view_preprocessed` 目錄。
+静态视图文件位于 `<magento_root>/pub/static` 目录，其中一些缓存在 `<magento_root>/var/view_preprocessed` 目录。
 
-靜態檢視檔案部署會受應用程式模式影響，如下所示：
+静态视图文件部署受应用程序模式影响，如下所示：
 
-- [預設](../bootstrap/application-modes.md#default-mode) 和 [開發人員](../bootstrap/application-modes.md#developer-mode) 模式：Commerce會視需要產生模式，但其餘的會快取在檔案中，以提高存取速度。
-- [生產](../bootstrap/application-modes.md#production-mode) 模式：靜態檔案為 _not_ 產生或快取。
+- [默认](../bootstrap/application-modes.md#default-mode) 和 [开发人员](../bootstrap/application-modes.md#developer-mode) 模式：Commerce会按需生成模式，但其余的会缓存到文件中，以提高访问速度。
+- [生产](../bootstrap/application-modes.md#production-mode) 模式：静态文件为 _非_ 生成或缓存。
 
-您必須使用本主題中討論的命令，手動將靜態檢視檔案寫入Commerce檔案系統；之後，您可以限制許可權以限制漏洞，並防止意外或惡意覆寫檔案。
+您必须使用本主题中讨论的命令手动将静态视图文件写入Commerce文件系统；之后，您可以限制权限以限制漏洞，并防止意外或恶意覆盖文件。
 
 >[!WARNING]
 >
->_僅限開發人員模式_：安裝或啟用新模組時，可能會載入新的JavaScript、CSS、版面配置等。 若要避免靜態檔案發生問題，您必須清除舊檔案，以確保取得新模組的所有變更。 您可以用數種方式清除產生的靜態檢視檔案。 請參閱 [清除靜態檔案快取主題以取得詳細資料](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) 以取得詳細資訊。
+>_仅开发人员模式_：安装或启用新模块时，它可能会加载新的JavaScript、CSS、布局等。 为避免静态文件出现问题，您必须清除旧文件，以确保您获取新模块的所有更改。 您可以通过多种方式清理生成的静态视图文件。 请参阅 [清除静态文件缓存主题以了解详细信息](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) 了解更多信息。
 
-**若要部署靜態檢視檔案**：
+**部署静态视图文件**：
 
-1. 以或身分登入Commerce伺服器 [切換到檔案系統擁有者](../../installation/prerequisites/file-system/overview.md).
-1. 刪除以下專案的內容 `<magento_root>/pub/static`，但以下專案除外： `.htaccess` 檔案。 請勿刪除此檔案。
-1. 執行靜態檢視檔案部署工具 `<magento_root>/bin/magento setup:static-content:deploy`.
+1. 以或身份登录Commerce服务器 [切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 删除内容 `<magento_root>/pub/static`，但 `.htaccess` 文件。 请勿删除此文件。
+1. 运行静态视图文件部署工具 `<magento_root>/bin/magento setup:static-content:deploy`.
 
    >[!INFO]
    >
-   >如果您在「管理員」中啟用靜態檢視檔案合併， `pub/static` 目錄系統必須是可寫入的。
+   >如果在“管理员”中启用静态视图文件合并，则 `pub/static` 目录系统必须是可写的。
 
-   命令選項：
+   命令选项：
 
    ```bash
    bin/magento setup:static-content:deploy [<languages>] [-t|--theme[="<theme>"]] [--exclude-theme[="<theme>"]] [-l|--language[="<language>"]] [--exclude-language[="<language>"]] [-a|--area[="<area>"]] [--exclude-area[="<area>"]] [-j|--jobs[="<number>"]]  [--no-javascript] [--no-css] [--no-less] [--no-images] [--no-fonts] [--no-html] [--no-misc] [--no-html-minify] [--no-parent] [-f|--force]
    ```
 
-下表說明此命令的引數和值。
+下表说明了此命令的参数和值。
 
-| 選項 | 說明 | 必填？ |
+| Option | 描述 | 必需？ |
 | ------ | ----------- | --------- |
-| `<languages>` | 以空格分隔的 [ISO-639](https://www.loc.gov/standards/iso639-2/php/code_list.php) 要輸出靜態檢視檔案的語言代碼。 (預設為 `en_US`.)<br>執行以尋找清單： `bin/magento info:language:list` | 否 |
-| `--language (-l)` | 只產生指定語言的檔案。 未指定選項的預設值是產生所有ISO-639語言代碼的檔案。 您可以一次指定一個語言代碼的名稱。 預設值為 **全部**.<br>例如： `--language en_US --language es_ES` | 否 |
-| `--exclude-language` | 產生指定語言代碼的檔案。 預設為不排除任何專案，但未指定選項。 您可以指定一個語言代碼的名稱，或以逗號分隔的語言代碼清單。 預設值為 **無**. | 否 |
-| `--theme <theme>` | 要部署靜態內容的主題。 預設值為 **全部**.<br>例如： `--theme Magento/blank --theme Magento/luma` | 否 |
-| `--exclude-theme <theme>` | 部署靜態內容時要排除的主題。 預設值為 **無**.<br>例如， `--exclude-theme Magento/blank` | 否 |
-| `--area (-a)` | 只產生指定區域的檔案。 未指定選項的預設值是為所有區域產生檔案。 有效值為 `adminhtml` 和 `frontend`. 預設值為 **全部**.<br>例如： `--area adminhtml` | 否 |
-| `--exclude-area` | 不要產生指定區域的檔案。 預設為不排除任何專案，但未指定選項。 預設值為 **無**. | 否 |
-| `--jobs (-j)` | 使用指定的作業數目啟用平行處理。 預設值為0 （不要在平行處理程式中執行）。 預設值為 **0**. | 否 |
-| `--symlink-locale` | 為這些區域設定的檔案建立符號連結，這些檔案會傳遞以進行部署，但沒有自訂。 | 否 |
-| `--content-version=CONTENT-VERSION` | 如果在多個節點上執行部署，可以使用靜態內容的自訂版本，以確保靜態內容版本相同且快取可正常運作。 | 否 |
-| `--no-javascript` | 不要部署JavaScript檔案 | 否 |
-| `--no-css` | 請勿部署CSS檔案。 | 否 |
-| `--no-less` | 請勿部署LESS檔案。 | 否 |
-| `--no-images` | 不要部署影像。 | 否 |
-| `--no-fonts` | 不要部署字型檔案。 | 否 |
-| `--no-html` | 請勿部署HTML檔案。 | 否 |
-| `--no-misc` | 請勿部署其他型別的檔案：MD、JBF、CSV、JSON、TXT、HTC、SWF | 否 |
-| `--no-html-minify` | 請勿將HTML檔案縮制。 | 否 |
-| `-s <quick\|standard\|compact>` | 定義部署策略。 只有當您有多個本機時，才使用這些選項。<ul><li>使用 [快速策略](static-view-file-strategy.md#quick-strategy) 將部署時間縮到最短。 如果未指定，則這是預設的命令選項。</li><li>使用 [標準策略](static-view-file-strategy.md#standard-strategy) 以部署所有封裝的所有靜態檢視檔案。</li><li>使用 [壓縮策略](static-view-file-strategy.md#compact-strategy) 以節省伺服器上的磁碟空間。</li></ul> | 否 |
-| `--no-parent` | 不要為目前主題的父主題產生檔案。 如果您未明確使用嘗試部署的目前主題的父主題，強烈建議您使用此標幟。 如此可大幅提升處理速度。 此標幟可在Commerce 2.4.2中使用 | 否 |
-| `--force (-f)` | 以任何模式部署檔案。 (根據預設，靜態內容部署工具只能在生產模式下執行。 使用此選項可在預設或開發人員模式下執行)。 | 否 |
+| `<languages>` | 以空格分隔的列表 [ISO-639](https://www.loc.gov/standards/iso639-2/php/code_list.php) 要输出静态视图文件的语言代码。 (默认为 `en_US`.)<br>通过运行以下命令查找列表： `bin/magento info:language:list` | 否 |
+| `--language (-l)` | 仅生成指定语言的文件。 缺省情况下，不指定任何选项，生成所有ISO-639语言代码的文件。 您可以一次指定一个语言代码的名称。 默认值为 **所有**.<br>例如： `--language en_US --language es_ES` | 否 |
+| `--exclude-language` | 为指定的语言代码生成文件。 未指定选项的缺省值是不排除任何内容。 您可以指定一个语言代码的名称，也可以指定以逗号分隔的语言代码列表。 默认值为 **无**. | 否 |
+| `--theme <theme>` | 要部署静态内容的主题。 默认值为 **所有**.<br>例如： `--theme Magento/blank --theme Magento/luma` | 否 |
+| `--exclude-theme <theme>` | 部署静态内容时要排除的主题。 默认值为 **无**.<br>例如， `--exclude-theme Magento/blank` | 否 |
+| `--area (-a)` | 仅为指定的区域生成文件。 缺省情况下，未指定选项，将为所有区域生成文件。 有效值为 `adminhtml` 和 `frontend`. 默认值为 **所有**.<br>例如： `--area adminhtml` | 否 |
+| `--exclude-area` | 不要为指定的区域生成文件。 未指定选项的缺省值是不排除任何内容。 默认值为 **无**. | 否 |
+| `--jobs (-j)` | 使用指定的作业数启用并行处理。 缺省值为0（不在并行进程中运行）。 默认值为 **0**. | 否 |
+| `--symlink-locale` | 为那些区域设置的文件创建符号链接，这些区域设置传递用于部署，但没有进行自定义。 | 否 |
+| `--content-version=CONTENT-VERSION` | 如果在多个节点上运行部署，可以使用静态内容的自定义版本，以确保静态内容版本相同且缓存正常工作。 | 否 |
+| `--no-javascript` | 不部署JavaScript文件 | 否 |
+| `--no-css` | 不部署CSS文件。 | 否 |
+| `--no-less` | 请勿部署LESS文件。 | 否 |
+| `--no-images` | 不要部署映像。 | 否 |
+| `--no-fonts` | 不部署字体文件。 | 否 |
+| `--no-html` | 不部署HTML文件。 | 否 |
+| `--no-misc` | 请勿部署其他类型的文件：MD、JBF、CSV、JSON、TXT、HTC、SWF | 否 |
+| `--no-html-minify` | 不要缩小HTML文件。 | 否 |
+| `-s <quick\|standard\|compact>` | 定义部署策略。 仅当有多个本地时，才使用这些选项。<ul><li>使用 [快速策略](static-view-file-strategy.md#quick-strategy) 以最大限度地缩短部署时间。 如果未指定，则这是缺省命令选项。</li><li>使用 [标准策略](static-view-file-strategy.md#standard-strategy) 以部署所有包的所有静态视图文件。</li><li>使用 [压缩策略](static-view-file-strategy.md#compact-strategy) 以节省服务器上的磁盘空间。</li></ul> | 否 |
+| `--no-parent` | 不为当前主题的父主题生成文件。 如果您未明确使用尝试部署的当前主题的父主题，强烈建议您使用此标记。 这显着提高了该过程的速度。 此标记在Commerce 2.4.2中可用 | 否 |
+| `--force (-f)` | 以任意模式部署文件。 (默认情况下，静态内容部署工具只能在生产模式下运行。 使用此选项可在默认或开发人员模式下运行它)。 | 否 |
 
 >[!INFO]
 >
->如果您同時指定兩個值 `<languages>` 和 `--language`， `<languages>` 優先。
+>如果同时指定这两个值 `<languages>` 和 `--language`， `<languages>` 优先。
 
-## 範例
+## 示例
 
-以下是一些命令範例。
+以下是一些示例命令。
 
-### 排除主題和HTML縮制
+### 排除主题和HTML缩小
 
-以下命令會為美式英文部署靜態內容(`en_US`)語言，排除Commerce提供的Luma主題，且不會縮制HTML檔案。
+以下命令为美式英语(`en_US`)语言，排除Commerce提供的Luma主题，并且不会缩小HTML文件。
 
 ```bash
 bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
 ```
 
-範例輸出：
+示例输出：
 
 ```terminal
 Requested languages: en_US
@@ -110,27 +110,27 @@ Successful: 1993 files; errors: 0
 ---
 ```
 
-下列命令只會使用標準部署策略部署JavaScript （含4個工作）：
+以下命令仅使用标准部署策略部署JavaScript，其中4个作业：
 
 ```bash
 bin/magento setup:static-content:deploy -s standard --no-misc --no-html --no-fonts --no-images --no-less --no-css -j 4
 ```
 
-以下命令只會部署CSS和LESS，並包含3個工作和快速部署策略：
+以下命令仅部署CSS和LESS，包含3个作业和一个快速部署策略：
 
 ```bash
 bin/magento setup:static-content:deploy -s quick --no-misc --no-html --no-fonts --no-images --no-javascript -j 3
 ```
 
-### 產生一個主題和一個區域的靜態檢視檔案
+### 为一个主题和一个区域生成静态视图文件
 
-以下命令為所有語言生成靜態檢視檔案，僅前端區域，僅Commerce Luma主題，不生成字型：
+以下命令为所有语言生成静态视图文件，仅前端区域，仅Commerce Luma主题，不生成字体：
 
 ```bash
 bin/magento setup:static-content:deploy --area frontend --no-fonts --theme Magento/luma
 ```
 
-範例輸出：
+示例输出：
 
 ```terminal
 Requested languages: en_US
@@ -146,37 +146,37 @@ Successful: 2092 files; errors: 0
 New version of deployed files: 1466711110
 ```
 
-## 部署靜態檢視檔案而不安裝Commerce
+## 在不安装Commerce的情况下部署静态视图文件
 
-您可能想要在單獨的非生產環境中執行部署流程，以避免在敏感的生產機器上執行任何建置流程。
+您可能希望在单独的非生产环境中运行部署过程，以避免在敏感的生产计算机上执行任何构建过程。
 
-若要這麼做，請執行下列步驟：
+为此，请执行以下步骤：
 
-1. 執行 [`bin/magento app:config:dump`](../cli/export-configuration.md) 以從您的生產系統匯出設定。
-1. 將匯出的檔案複製到非生產程式碼基底。
-1. 部署靜態檢視檔案： `bin/magento setup:static-content:deploy`
+1. 运行 [`bin/magento app:config:dump`](../cli/export-configuration.md) 以从生产系统导出配置。
+1. 将导出的文件复制到非生产代码库。
+1. 部署静态视图文件： `bin/magento setup:static-content:deploy`
 
-## 疑難排解靜態檢視檔案部署工具
+## 静态视图文件部署工具疑难解答
 
-[請先安裝Commerce軟體](../../installation/overview.md)；否則，您將無法執行靜態檢視檔案部署工具。
+[首先安装Commerce软件](../../installation/overview.md)；否则，将无法运行静态视图文件部署工具。
 
-**症狀**：當您執行靜態檢視檔案部署工具時，會顯示下列錯誤：
+**症状**：运行静态视图文件部署工具时显示以下错误：
 
 ```terminal
 ERROR: You need to install the Commerce application before running this utility.
 ```
 
-**解決方案**：
+**解决方案**：
 
-使用下列步驟：
+使用以下步骤：
 
-1. 使用安裝Commerce軟體 [命令列](../../installation/composer.md).
-1. 以或身分登入應用程式伺服器 [切換至](../../installation/prerequisites/file-system/overview.md)，即檔案系統擁有者。
-1. 刪除以下專案的內容 `<app_root>/pub/static` 目錄，但不包括 `.htaccess` 檔案。 請勿刪除此檔案。
-1. 部署靜態檢視檔案： `bin/magento setup:static-content:deploy`
+1. 使用安装Commerce软件 [命令行](../../installation/composer.md).
+1. 以或身份登录到应用程序服务器 [切换到](../../installation/prerequisites/file-system/overview.md)，即文件系统所有者。
+1. 删除内容 `<app_root>/pub/static` 目录，但 `.htaccess` 文件。 请勿删除此文件。
+1. 部署静态视图文件： `bin/magento setup:static-content:deploy`
 
-## 開發人員自訂靜態內容部署工具的秘訣
+## 开发人员自定义静态内容部署工具的提示
 
-建立靜態內容部署工具的自訂實作時，請只使用使用者端上可用檔案的原子檔案寫入。 如果您使用非原子檔案寫入，這些檔案可能會載入含有部分內容的使用者端。
+创建静态内容部署工具的自定义实施时，请仅对客户端上应可用的文件使用原子文件写入。 如果使用非原子文件写入，则这些文件可能会加载到包含部分内容的客户端上。
 
-使其成為原子化的一個選項是寫入儲存在暫存目錄中的檔案，並在寫入結束後複製或移動它們到目的地目錄（從載入到使用者端的目錄）。 如需有關寫入檔案的詳細資訊，請參閱 [php fwrite](https://www.php.net/manual/en/function.fwrite.php).
+使其成为原子文件的选项之一是，写入存储在临时目录中的文件，并在写入结束后将其复制或移动到目标目录（从目标目录将其加载到客户端）。 有关写入文件的详细信息，请参阅 [php fwrite](https://www.php.net/manual/en/function.fwrite.php).

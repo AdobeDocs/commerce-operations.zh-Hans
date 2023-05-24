@@ -1,6 +1,6 @@
 ---
-title: MariaDB的Adobe Commerce 2.3.5升級先決條件
-description: 瞭解如何準備Adobe Commerce資料庫，以從Adobe Commerce 2.3.5升級。
+title: Adobe Commerce 2.3.5 MariaDB升级先决条件
+description: 了解如何准备Adobe Commerce数据库以从Adobe Commerce 2.3.5升级。
 role: Developer
 feature-set: Commerce
 feature: Best Practices
@@ -12,136 +12,136 @@ ht-degree: 0%
 
 ---
 
-# 升級MariaDB的必要條件
+# 升级MariaDB的先决条件
 
-從Adobe Commerce 2.3.4或更早版本升級至任何更新版本，需要雲端基礎結構上的MariaDB服務從10.0或10.2版升級至10.3或10.4版。MariaDB 10.3版及更新版本要求資料庫使用動態表格列格式，而Adobe Commerce要求使用InnoDB表格儲存引擎。 本文說明如何更新資料庫以符合這些MariaDB要求。
+从Adobe Commerce 2.3.4或更早版本升级到任何更新版本要求将云基础架构上的MariaDB服务从版本10.0或10.2升级到版本10.3或10.4。MariaDB版本10.3及更高版本要求数据库使用动态表行格式，而Adobe Commerce要求为表使用InnoDB存储引擎。 本文介绍如何更新数据库以符合这些MariaDB要求。
 
-準備資料庫後，請先提交Adobe Commerce支援票證以更新雲端基礎結構上的MariaDB服務版本，然後再繼續進行Adobe Commerce升級程式。
+准备数据库后，请提交Adobe Commerce支持工单以更新云基础架构上的MariaDB服务版本，然后再继续Adobe Commerce升级过程。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-使用Adobe Commerce 2.3.4版或更早版本以及MariaDB 10.0版或更早版本在雲端基礎結構上使用Adobe Commerce。
+使用Adobe Commerce版本2.3.4或更早版本以及MariaDB版本10.0或更早版本在云基础架构上部署Adobe Commerce。
 
-## 準備資料庫以進行升級
+## 准备数据库以进行升级
 
-在Adobe Commerce支援團隊開始升級程式之前，請先轉換資料庫表格以準備資料庫：
+在Adobe Commerce支持团队开始升级过程之前，请通过转换数据库表来准备数据库：
 
-- 轉換資料列格式 `COMPACT` 至 `DYNAMIC`
-- 變更儲存引擎 `MyISAM` 至 `InnoDB`
+- 转换行格式 `COMPACT` 到 `DYNAMIC`
+- 更改存储引擎 `MyISAM` 到 `InnoDB`
 
-在計畫和排程轉換時，請謹記下列考量事項：
+在计划和计划转换时，请牢记以下注意事项：
 
-- 轉換自 `COMPACT` 至 `DYNAMIC` 使用大型資料庫可能需要數小時的資料表。
+- 转换自 `COMPACT` 到 `DYNAMIC` 使用大型数据库时，表可能需要几个小时。
 
-- 為避免資料損毀，請勿在已上線的網站上完成轉換工作。
+- 为防止数据损坏，请勿在实时网站上完成转换工作。
 
-- 在網站上的低流量期間完成轉換工作。
+- 在网站上的低流量期间完成转化工作。
 
-- 切換您的網站至 [維護模式](../../../installation/tutorials/maintenance-mode.md) 執行命令以轉換資料庫表格之前。
+- 将您的站点切换到 [维护模式](../../../installation/tutorials/maintenance-mode.md) 运行命令转换数据库表之前。
 
-### 轉換資料庫表格列格式
+### 转换数据库表行格式
 
-您可以在叢集中的單一節點上轉換表格。 變更會自動復寫到其他服務節點。
+您可以在群集中的一个节点上转换表。 更改会自动复制到其他服务节点。
 
-1. 在雲端基礎結構環境中，從您的Adobe Commerce使用SSH連線到節點1。
+1. 在云基础架构环境上的Adobe Commerce中，使用SSH连接到节点1。
 
-1. 登入MariaDB。
+1. 登录MariaDB。
 
-1. 識別要從壓縮格式轉換為動態格式的表格。
+1. 标识要从压缩格式转换为动态格式的表。
 
    ```mysql
    SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
    ```
 
-1. 決定表格大小，以便排程轉換工作。
+1. 确定表大小，以便您可以安排转换工作。
 
    ```mysql
    SELECT table_schema as 'Database', table_name AS 'Table', round(((data_length + index_length) / 1024 / 1024), 2) 'Size in MB' FROM information_schema.TABLES ORDER BY (data_length + index_length) DESC;
    ```
 
-   較大的表格需要較長時間才能轉換。 檢閱表格並按優先順序和表格大小批次化轉換工作，以協助規劃所需的維護視窗。
+   较大的表需要较长时间才能转换。 查看表并按优先级和表大小对转换工作进行批处理，以帮助计划所需的维护窗口。
 
-1. 將所有表格一次轉換一個動態格式。
+1. 将所有表逐个转换为动态格式。
 
    ```mysql
    ALTER TABLE [ table name here ] ROW_FORMAT=DYNAMIC;
    ```
 
-### 轉換資料庫表格儲存體格式
+### 转换数据库表存储格式
 
-您可以在叢集中的單一節點上轉換表格。 變更會自動復寫到其他服務節點。
+您可以在群集中的一个节点上转换表。 更改会自动复制到其他服务节点。
 
-Adobe Commerce Starter和Adobe Commerce Pro專案的儲存格式轉換程式不同。
+对于Adobe Commerce Starter和Adobe Commerce Pro项目，存储格式的转换过程不同。
 
-- 對於入門架構，請使用MySQL `ALTER` 命令轉換格式。
-- 在Pro架構上，使用MySQL `CREATE` 和 `SELECT` 用來建立資料庫表格的命令 `InnoDB` 儲存並將現有表格的資料複製到新表格中。 此方法可確保將變更復寫到叢集中的所有節點。
+- 对于入门体系结构，请使用MySQL `ALTER` 命令转换格式。
+- 在Pro体系结构上，使用MySQL `CREATE` 和 `SELECT` 用于创建数据库表的命令 `InnoDB` 存储数据并将现有表中的数据复制到新表中。 此方法可确保将更改复制到群集中的所有节点。
 
-**轉換Adobe Commerce Pro專案的表格儲存格式**
+**转换Adobe Commerce Pro项目的表存储格式**
 
-1. 識別使用的表格 `MyISAM` 儲存。
+1. 标识使用的表 `MyISAM` 存储。
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. 將所有表格轉換為 `InnoDB` 一次一個儲存格式。
+1. 将所有表转换为 `InnoDB` 存储格式，一次一个。
 
-   - 重新命名現有表格以避免名稱衝突。
+   - 重命名现有表以防止名称冲突。
 
       ```mysql
       RENAME TABLE <existing_table> <table_old>;
       ```
 
-   - 建立使用的表格 `InnoDB` 使用現有表格中的資料進行儲存。
+   - 创建使用 `InnoDB` 使用现有表中的数据进行存储。
 
       ```mysql
       CREATE TABLE <existing_table> ENGINE=InnoDB SELECT * from <table_old>;
       ```
 
-   - 確認新表格具有所有必要資料。
+   - 验证新表是否具有所有必需的数据。
 
-   - 刪除您重新命名的原始表格。
+   - 删除重命名的原始表。
 
 
-**轉換Adobe Commerce Starter專案的表格儲存格式**
+**为Adobe Commerce Starter项目转换表存储格式**
 
-1. 識別使用的表格 `MyISAM` 儲存。
+1. 标识使用的表 `MyISAM` 存储。
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. 轉換使用的表格 `MyISAM` 儲存至 `InnoDB` 儲存。
+1. 转换使用的表 `MyISAM` 存储到 `InnoDB` 存储。
 
    ```mysql
    ALTER TABLE [ table name here ] ENGINE=InnoDB;
    ```
 
-### 驗證資料庫轉換
+### 验证数据库转换
 
-在排程升級至MariaDB 10.2版的前一天，請確認所有表格都具有正確的列格式和儲存引擎。 需要進行驗證，因為完成轉換後進行的程式碼部署可能會導致某些表格恢復為原始設定。
+在计划升级到MariaDB版本10.2的前一天，请确认所有表都具有正确的行格式和存储引擎。 需要进行验证，因为完成转换后进行的代码部署可能会导致某些表还原为其原始配置。
 
-1. 登入您的資料庫。
+1. 登录到数据库。
 
-1. 檢查是否有任何表格仍具有 `COMPACT` 列格式。
+1. 检查任何仍具有 `COMPACT` 行格式。
 
    ```mysql
    SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
    ```
 
-1. 檢查是否有任何表格仍使用 `MyISAM` 儲存格式
+1. 检查任何仍使用 `MyISAM` 存储格式
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. 如果有任何表格已還原，請重複變更表格列格式和儲存引擎的步驟。
+1. 如果有任何表已还原，请重复这些步骤以更改表行格式和存储引擎。
 
-## 變更儲存引擎
+## 更改存储引擎
 
-另請參閱 [將MyISAM表格轉換為InnoDB](../planning/database-on-cloud.md).
+参见 [将MyISAM表转换为InnoDB](../planning/database-on-cloud.md).
 
-## 其他資訊
+## 其他信息
 
-- [雲端基礎結構上Adobe Commerce的資料庫最佳實務](../planning/database-on-cloud.md)
-- [針對Adobe Commerce on Cloud將MariaDB從10.0更新至12.0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/upgrade-mariadb-10.0-to-10.2-for-magento-commerce-cloud.html)
+- [云基础架构上Adobe Commerce的数据库最佳实践](../planning/database-on-cloud.md)
+- [将Adobe Commerce on Cloud的MariaDB从10.0更新到12.0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/upgrade-mariadb-10.0-to-10.2-for-magento-commerce-cloud.html)

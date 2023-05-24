@@ -1,6 +1,6 @@
 ---
 title: 修改docroot以提高安全性
-description: 防止未經授權的瀏覽器式存取Adobe Commerce或Magento Open Source內部部署檔案系統。
+description: 防止对Adobe Commerce或Magento Open Source本地文件系统的未经授权的基于浏览器的访问。
 exl-id: aabe148d-00c8-4011-a629-aa5abfa6c682
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 0%
 
 # 修改docroot以提高安全性
 
-在使用Apache Web Server的標準安裝中，Adobe Commerce和Magento Open Source會安裝到預設的網頁根目錄： `/var/www/html/magento2`.
+在使用Apache Web Server的标准安装中，Adobe Commerce和Magento Open Source安装到默认的Web根目录： `/var/www/html/magento2`.
 
-此 `magento2/` 目錄包含下列專案：
+此 `magento2/` 目录包含以下内容：
 
 - `pub/`
 - `setup/`
 - `var/`
 
-應用程式服務來源： `/var/www/html/magento2/pub`. 檔案系統的其餘部分很容易受到攻擊，因為可從瀏覽器存取。
-將webroot設定為 `pub/` 目錄可防止網站訪客從瀏覽器存取檔案系統的敏感區域。
+应用程序服务源自 `/var/www/html/magento2/pub`. 由于可从浏览器访问，因此文件系统的其余部分易受攻击。
+将webroot设置为 `pub/` 目录阻止站点访客从浏览器访问文件系统的敏感区域。
 
-本主題說明如何變更現有執行個體上的Apache docroot，以從提供檔案 `pub/` 目錄，這樣會更安全。
+本主题介绍如何更改现有实例上的Apache docroot以从提供文件 `pub/` 目录，这样更加安全。
 
-## 關於nginx的注意事項
+## 关于nginx的注释
 
-如果您使用 [nginx](../prerequisites/web-server/nginx.md) 和 [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) 檔案包含在安裝目錄中，而您可能已經從 `pub/` 目錄。
+如果您使用 [恩金克斯](../prerequisites/web-server/nginx.md) 和 [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) 文件包含在安装目录中，您可能已经从 `pub/` 目录。
 
-在定義網站的伺服器區塊中使用時， `nginx.conf.sample` 設定會覆寫伺服器的docroot設定，以從 `pub/` 目錄。 例如，請參閱下列組態中的最後一行：
+在用于定义站点的服务器块中时， `nginx.conf.sample` 配置会覆盖服务器的docroot设置，以便从提供文件 `pub/` 目录。 例如，请参见以下配置中的最后一行：
 
 ```conf
 # /etc/nginx/sites-available/magento
@@ -46,33 +46,33 @@ server {
 }
 ```
 
-## 開始之前
+## 开始之前
 
-若要完成本教學課程，您需要存取上執行的有效安裝 [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) 棧疊：
+要完成本教程，您需要对上运行的工作安装的访问权限 [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) 栈叠：
 
 - Linux
 - Apache (2.4+)
-- MySQL (5.7+)
+- MySQL （5.7及更高版本）
 - PHP (7.4)
-- Elasticsearch (7.x)或OpenSearch (1.2)
-- Adobe Commerce或Magento Open Source (2.4+)
+- Elasticsearch(7.x)或OpenSearch (1.2)
+- Adobe Commerce或Magento Open Source(2.4+)
 
 >[!NOTE]
 >
->請參閱 [必要條件](../prerequisites/overview.md) 和 [安裝指南](../overview.md) 以取得詳細資訊。
+>请参阅 [先决条件](../prerequisites/overview.md) 和 [安装指南](../overview.md) 了解更多信息。
 
-## 1.編輯伺服器設定
+## 1.编辑服务器配置
 
-虛擬主機檔案的名稱和位置取決於您所執行的Apache版本。 此範例顯示Apache v2.4上虛擬主機檔案的名稱和位置。
+虚拟主机文件的名称和位置取决于您运行的Apache版本。 此示例显示Apache v2.4上虚拟主机文件的名称和位置。
 
-1. 登入您的應用程式伺服器。
-1. 編輯您的虛擬主機檔案：
+1. 登录到应用程序服务器。
+1. 编辑虚拟主机文件：
 
    ```bash
    vim /etc/apache2/sites-available/000-default.conf
    ```
 
-1. 將路徑新增至 `pub/` 目錄到 `DocumentRoot` 指令：
+1. 将路径添加到 `pub/` 目录到 `DocumentRoot` 指令：
 
    ```conf
    <VirtualHost *:80>
@@ -89,41 +89,41 @@ server {
     </VirtualHost>
    ```
 
-1. 重新啟動Apache：
+1. 重新启动Apache：
 
    ```bash
    systemctl restart apache2
    ```
 
-## 2.更新您的基底URL
+## 2.更新您的基本URL
 
-如果您在伺服器的主機名稱或IP位址後附加目錄名稱，可在安裝應用程式時建立基礎URL (例如 `http://192.168.33.10/magento2`)，您需要將其移除。
+如果在安装应用程序时，将目录名称附加到服务器的主机名或IP地址以创建基本URL(例如 `http://192.168.33.10/magento2`)，您需要删除它。
 
 >[!NOTE]
 >
->Replace `192.168.33.10` 與您的伺服器主機名稱搭配使用。
+>Replace `192.168.33.10` 使用服务器的主机名。
 
-1. 登入資料庫：
+1. 登录到数据库：
 
    ```bash
    mysql -u <user> -p
    ```
 
-1. 指定您在安裝應用程式時所建立的資料庫：
+1. 指定安装应用程序时创建的数据库：
 
    ```shell
    use <database-name>
    ```
 
-1. 更新基底URL：
+1. 更新基本URL：
 
    ```shell
    UPDATE core_config_data SET value='http://192.168.33.10' WHERE path='web/unsecure/base_url';
    ```
 
-## 3.更新env.php檔案
+## 3.更新环境文件php
 
-將下列節點附加至 `env.php` 檔案。
+将以下节点附加到 `env.php` 文件。
 
 ```conf
 'directories' => [
@@ -131,16 +131,16 @@ server {
 ]
 ```
 
-請參閱 [env.php參考](../../configuration/reference/config-reference-envphp.md) 以取得詳細資訊。
+请参阅 [env.php参考](../../configuration/reference/config-reference-envphp.md) 了解更多信息。
 
-## 4.切換模式
+## 4.切换模式
 
-[應用程式模式](../../configuration/bootstrap/application-modes.md)，其中包括 `production` 和 `developer`，旨在改善安全性並簡化開發工作。 如名稱所建議，您應切換至 `developer` 在延伸或自訂應用程式時模式並切換至 `production` 在即時環境中執行時的模式。
+[应用程序模式](../../configuration/bootstrap/application-modes.md)，其中包括 `production` 和 `developer`，旨在提高安全性并使开发更轻松。 顾名思义，您应切换到 `developer` 扩展或自定义应用程序并切换到的模式 `production` 模式。
 
-在模式之間切換是驗證伺服器設定是否正常運作的重要步驟。 您可以使用CLI工具在模式之間切換：
+在模式之间切换是验证服务器配置是否正常工作的重要步骤。 您可以使用CLI工具在模式之间切换：
 
-1. 前往您的安裝目錄。
-1. 切換至 `production` 模式。
+1. 转到安装目录。
+1. 切换到 `production` 模式。
 
    ```bash
    bin/magento deploy:mode:set production
@@ -150,8 +150,8 @@ server {
    bin/magento cache:flush
    ```
 
-1. 重新整理瀏覽器，並確認店面是否正確顯示。
-1. 切換至 `developer` 模式。
+1. 刷新浏览器并验证店面是否正确显示。
+1. 切换到 `developer` 模式。
 
    ```bash
    bin/magento deploy:mode:set developer
@@ -161,22 +161,22 @@ server {
    bin/magento cache:flush
    ```
 
-1. 重新整理瀏覽器，並確認店面是否正確顯示。
+1. 刷新浏览器并验证店面是否正确显示。
 
-## 5.確認店面
+## 5.验证店面
 
-使用網頁瀏覽器前往店面，確認一切都正常運作。
+在Web浏览器中转到店面以验证一切正常。
 
-1. 開啟網頁瀏覽器，並在網址列中輸入伺服器的主機名稱或IP位址。 例如， `http://192.168.33.10`.
+1. 打开Web浏览器，然后在地址栏中输入服务器的主机名或IP地址。 例如， `http://192.168.33.10`.
 
-   下圖顯示店面頁面的範例。 如果它顯示如下，表示您的安裝成功！
+   下图显示了一个店面页面的示例。 如果它显示如下，则表示您的安装成功！
 
-   ![驗證安裝成功的店面](../../assets/installation/install-success_store.png)
+   ![验证安装成功的店面](../../assets/installation/install-success_store.png)
 
-   請參閱 [疑難排解章節](https://support.magento.com/hc/en-us/articles/360032994352) 頁面顯示404 （找不到）或無法載入影像、CSS和JS等其他資產。
+   请参阅 [疑难解答部分](https://support.magento.com/hc/en-us/articles/360032994352) 页面显示404（未找到）或无法加载图像、CSS和JS等其他资产。
 
-1. 請嘗試從瀏覽器存取應用程式目錄。 在位址列中，將目錄名稱附加至伺服器的主機名稱或IP位址：
+1. 尝试从浏览器访问应用程序目录。 在地址栏中将目录名称附加到服务器的主机名或IP地址：
 
-   如果您看到404或「存取遭拒」訊息，表示您已成功限制檔案系統的存取。
+   如果您看到404或“访问被拒绝”消息，则表示您已成功限制对文件系统的访问。
 
-   ![存取遭拒](../../assets/installation/access-denied.png)
+   ![访问被拒绝](../../assets/installation/access-denied.png)

@@ -1,6 +1,6 @@
 ---
-title: 複製範例資料Git存放庫
-description: 請依照下列步驟，複製Git存放庫以安裝Adobe Commerce並Magento Open Source範例資料。
+title: 克隆示例数据Git存储库
+description: 按照以下步骤安装Adobe Commerce，并通过克隆Git存储库来Magento Open Source示例数据。
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,57 +9,57 @@ ht-degree: 0%
 
 ---
 
-# 複製範例資料Git存放庫
+# 克隆示例数据Git存储库
 
-本主題說明如何在複製Magento Open SourceGitHub存放庫時複製和新增範例資料。 此方法僅適用於投稿開發人員(即計畫投稿至Magento Open Source程式碼基底的開發人員)。
+本主题讨论如何在克隆Magento Open SourceGitHub存储库时克隆和添加示例数据。 此方法仅适用于投稿开发人员(即计划投稿到Magento Open Source代码库的开发人员)。
 
-如果您不是貢獻開發人員，請選擇頁面左側目錄中所顯示的其他選項之一。
+如果您不是参与开发人员，请选择页面左侧目录中显示的其他选项之一。
 
-投稿開發人員可以使用此方法來安裝範例資料 *僅限* 如果下列為true：
+参与开发的开发人员可以使用此方法来安装示例数据 *仅限* 如果满足以下条件：
 
 * 您使用Magento Open Source
-* 您 [克隆GitHub存放庫](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* 您 [已克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
 >[!WARNING]
 >
->您可以將範例資料與以下任一專案搭配使用： `develop` 分支（較新）或已發行分支(例如 `2.4` （較穩定）。 建議您使用已發行分支，因為其較穩定。 如果您要貢獻程式碼到存放庫並且需要最新的程式碼，請使用 `develop` 分支。 無論您選擇哪個分支，您都必須 [原地複製](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) Magento Open SourceGitHub存放庫的對應分支。 例如，的範例資料 `develop` 分支可以使用 *僅限* 使用Magento Open Source `develop` 分支。
+>可以将示例数据与 `develop` 分支（更当前）或已发布的分支(例如 `2.4` （更稳定）。 我们建议您使用已发布的分支，因为它更稳定。 如果您要向存储库贡献代码，并且需要最新的代码，请使用 `develop` 分支。 无论选择哪个分支，您都必须 [克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) Magento Open SourceGitHub存储库的相应分支。 例如，的示例数据 `develop` 可以使用branch *仅限* 使用Magento Open Source `develop` 分支。
 
-## 複製範例資料存放庫
+## 克隆示例数据存储库
 
-本節說明如何藉由複製範例資料存放庫來安裝範例資料。 您可以透過下列任何方式複製範例資料存放庫：
+本节讨论如何通过克隆示例数据存储库来安装示例数据。 您可以通过以下任一方式克隆示例数据存储库：
 
-* 使用原地複製 [SSH通訊協定](#clone-with-ssh)
-* 使用原地複製 [HTTPS通訊協定](#clone-with-https)
+* 使用进行克隆 [SSH协议](#clone-with-ssh)
+* 使用进行克隆 [HTTPS协议](#clone-with-https)
 
-### 使用SSH複製
+### 使用SSH进行克隆
 
-若要使用SSH通訊協定複製範例資料GitHub存放庫：
+要使用SSH协议克隆示例数据GitHub存储库，请执行以下操作：
 
-1. 在網頁瀏覽器中，前往 [範例資料存放庫](https://github.com/magento/magento2-sample-data).
-1. 在分支名稱旁邊，按一下 **SSH** 從清單中。
-1. 按一下 **複製到剪貼簿**
+1. 在Web浏览器中，转到 [示例数据存储库](https://github.com/magento/magento2-sample-data).
+1. 在分支名称旁边，单击 **SSH** 从名单上。
+1. 单击 **复制到剪贴板**
 
-   下圖顯示一個範例。
+   下图显示了一个示例。
 
-   ![使用SSH複製GitHub存放庫](../../assets/installation/install_mage2_clone-ssh.png)
+   ![使用SSH克隆GitHub存储库](../../assets/installation/install_mage2_clone-ssh.png)
 
-1. 變更至網頁伺服器的docroot目錄。
+1. 转到Web服务器的docroot目录。
 
-   通常，對於Ubuntu，它會 `/var/www` 而對於CentOS，則是 `/var/www/html`.
+   通常，对于Ubuntu，它是 `/var/www` 对于CentOS来说 `/var/www/html`.
 
-1. 輸入 `git clone` 並貼上您先前取得的值。
+1. 输入 `git clone` 并粘贴您之前获得的值。
 
-   範例如下：
+   下面是一个示例：
 
    ```bash
    git clone git@github.com:magento/magento2-sample-data.git
    ```
 
-1. 等候存放庫在伺服器上複製。
+1. 等待存储库在您的服务器上克隆。
 
    >[!NOTE]
    >
-   >如果顯示下列錯誤，請確定 [已共用您的SSH金鑰](https://docs.github.com/articles/generating-ssh-keys/) 使用GitHub：<br>
+   >如果显示以下错误，请确保 [已共享您的SSH密钥](https://docs.github.com/articles/generating-ssh-keys/) 使用GitHub：<br>
 
    ```terminal
    Cloning into 'magento2'...
@@ -67,20 +67,20 @@ ht-degree: 0%
    fatal: The remote end hung up unexpectedly
    ```
 
-1. 請確定您簽出與您在主要存放庫中使用的分支對應的範例資料存放庫分支 `magento2` 存放庫。
+1. 确保从主存储库中签出与所使用分支对应的示例数据存储库分支 `magento2` 存储库。
 
    例如：
 
-   如果您使用 `2.4-develop` Magento Open SourceGitHub存放庫的分支，範例資料分支應為 `2.4-develop`.
+   如果您使用 `2.4-develop` Magento Open SourceGitHub存储库的分支，示例数据分支应为 `2.4-develop`.
 
-   若要簽出正確的分支，請從範例資料存放庫的根目錄執行以下命令(假設您需要 `2.4-develop` 分支)：
+   要检查正确的分支，请从示例数据存储库的根目录中运行以下命令(假设您需要 `2.4-develop` 分支)：
 
    ```bash
    git checkout 2.4-develop
    ```
 
-1. 變更為 `<app_root>`.
-1. 輸入下列命令，在您複製的檔案之間建立符號連結，讓範例資料正常運作：
+1. 更改为 `<app_root>`.
+1. 输入以下命令，在您克隆的文件之间创建符号链接，以使示例数据正常工作：
 
    ```bash
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
@@ -88,53 +88,53 @@ ht-degree: 0%
 
 1. 等待命令完成。
 
-1. 另請參閱 [設定檔案系統許可權和擁有權](#set-file-system-ownership-and-permissions).
+1. 参见 [设置文件系统权限和所有权](#set-file-system-ownership-and-permissions).
 
-1. 執行以下命令：
+1. 运行以下命令：
 
    ```bash
    bin/magento setup:upgrade
    ```
 
-### 使用HTTPS原地複製
+### 使用HTTPS进行克隆
 
-若要使用HTTPS通訊協定複製範例資料GitHub存放庫：
+要使用HTTPS协议克隆示例数据GitHub存储库，请执行以下操作：
 
-1. 在網頁瀏覽器中，前往 [範例資料存放庫](https://github.com/magento/magento2-sample-data).
-1. 在頁面右側的 **原地複製URL** 欄位，按一下 **HTTPS**.
-1. 按一下 **複製到剪貼簿**.
+1. 在Web浏览器中，转到 [示例数据存储库](https://github.com/magento/magento2-sample-data).
+1. 在页面的右侧，在 **克隆URL** 字段，请单击 **HTTPS**.
+1. 单击 **复制到剪贴板**.
 
-   下圖顯示一個範例。
+   下图显示了一个示例。
 
-   ![使用HTTPS複製GitHub存放庫](../../assets/installation/install_mage2_clone-https.png)
+   ![使用HTTPS克隆GitHub存储库](../../assets/installation/install_mage2_clone-https.png)
 
-1. 變更至網頁伺服器的docroot目錄。
+1. 转到Web服务器的docroot目录。
 
-   通常，對於Ubuntu，它會 `/var/www` 而對於CentOS，則是 `/var/www/html`.
+   通常，对于Ubuntu，它是 `/var/www` 对于CentOS来说 `/var/www/html`.
 
-1. 輸入 `git clone` 並貼上您先前取得的值。
+1. 输入 `git clone` 并粘贴您之前获得的值。
 
-   範例如下：
+   下面是一个示例：
 
    ```bash
    git clone https://github.com/magento/magento2-sample-data.git
    ```
 
-1. 等候存放庫在伺服器上複製。
-1. 請確定您簽出與您在主要存放庫中使用的分支對應的範例資料存放庫分支 `magento2` 存放庫。
+1. 等待存储库在您的服务器上克隆。
+1. 确保从主存储库中签出与所使用分支对应的示例数据存储库分支 `magento2` 存储库。
 
    例如：
 
-   如果您使用 `2.4-develop` Magento Open SourceGitHub存放庫的分支，範例資料分支應為 `2.4-develop`.
+   如果您使用 `2.4-develop` Magento Open SourceGitHub存储库的分支，示例数据分支应为 `2.4-develop`.
 
-   若要簽出正確的分支，請從範例資料存放庫的根目錄執行以下命令(假設您需要 `2.4-develop` 分支)：
+   要检查正确的分支，请从示例数据存储库的根目录中运行以下命令(假设您需要 `2.4-develop` 分支)：
 
    ```bash
    git checkout 2.4-develop
    ```
 
-1. 變更為 `<magento_root>`.
-1. 輸入下列命令，在您複製的檔案之間建立符號連結，讓範例資料正常運作：
+1. 更改为 `<magento_root>`.
+1. 输入以下命令，在您克隆的文件之间创建符号链接，以使示例数据正常工作：
 
    ```bash
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
@@ -147,43 +147,43 @@ ht-degree: 0%
    ```
 
 1. 等待命令完成。
-1. 請參閱下一節。
+1. 请参阅下一部分。
 
 >[!WARNING]
 >
->如果您正在安裝範例資料 *晚於* 安裝Adobe Commerce或Magento Open Source時，您也必須執行下列命令來更新資料庫和結構描述：
+>如果您正在安装示例数据 *之后* 安装Adobe Commerce或Magento Open Source时，还必须运行以下命令来更新数据库和架构：
 >
 >
 ```bash
 ><magento_root>/bin/magento setup:upgrade
 >```
 
-## 設定檔案系統擁有權和許可權
+## 设置文件系统所有权和权限
 
-因為 `php build-sample-data.php` 指令碼會在範例資料存放庫和Magento Open Source存放庫之間建立符號連結，您必須在範例資料存放庫中設定檔案系統許可權和擁有權。 若未這麼做，會導致存取店面時發生錯誤。
+因为 `php build-sample-data.php` script在示例数据存储库和Magento Open Source存储库之间创建符号链接，您必须在示例数据存储库中设置文件系统权限和所有权。 否则，会导致访问店面时出现错误。
 
-若要設定範例資料存放庫的檔案系統許可權和擁有權：
+要对示例数据存储库设置文件系统权限和所有权，请执行以下操作：
 
-1. 變更為範例資料複製目錄。
-1. 設定擁有權：
+1. 切换到示例数据克隆目录。
+1. 设置所有权：
 
    ```bash
    chown -R :<your web server group name> .
    ```
 
-   典型範例：
+   典型示例：
 
    * CentOS： `chown -R :apache .`
 
    * Ubuntu： `chown -R :www-data .`
 
-1. 設定許可權：
+1. 设置权限：
 
    ```bash
    find . -type d -exec chmod g+ws {} +
    ```
 
-1. 清除靜態檔案：
+1. 清除静态文件：
 
    ```bash
    cd <your Magento Open Source install dir>
@@ -193,6 +193,6 @@ ht-degree: 0%
    rm -rf var/cache/* var/page_cache/* generated/*
    ```
 
-## 完成範例資料安裝
+## 完成示例数据安装
 
 {{$include /help/_includes/sample-data-complete.md}}

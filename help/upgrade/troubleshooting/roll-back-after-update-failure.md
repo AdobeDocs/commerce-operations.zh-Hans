@@ -1,6 +1,6 @@
 ---
-title: 模組更新失敗後回覆
-description: 在遇到模組更新錯誤後，疑難排解Adobe Commerce或Magento Open Source升級。
+title: 模块更新失败后回滚
+description: 解决Adobe Commerce或Magento Open Source升级中出现的模块更新错误问题。
 exl-id: 1537a6b1-b450-4f90-bffb-73359fa71598
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# 模組更新失敗後回覆
+# 模块更新失败后回滚
 
-如果您的模組更新失敗，控制檯記錄中會顯示類似下列的訊息：
+如果模块更新失败，控制台日志中会显示类似于以下内容的消息：
 
 ```terminal
 [2015-08-14 12:12:02 CDT] Job "update {"components":[{"name":"example/module","version":"1.1.0"}]}" has been started
@@ -21,6 +21,6 @@ ht-degree: 0%
 [{"name":"example/module","version":"1.1.0"}]} successfully: Cannot find component to update
 ```
 
-在上一個範例中，沒有要復原的元件版本。 請連絡元件廠商，或嘗試自行解決問題。
+在上例中，没有要回滚的组件版本。 请与组件供应商联系，或尝试自行解决此问题。
 
-同時，您可以按一下「 」，將版本復原到先前的版本 **復原**，可復原資料，即使您先前未備份亦然。
+同时，您可以通过单击 **回滚**，它可以恢复您的数据，即使您以前未备份过。

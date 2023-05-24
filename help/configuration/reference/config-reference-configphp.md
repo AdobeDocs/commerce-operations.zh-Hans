@@ -1,6 +1,6 @@
 ---
-title: config.php參考
-description: 請參閱config.php檔案中的值清單。
+title: config.php引用
+description: 请参见config.php文件中的值列表。
 exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# config.php參考
+# config.php引用
 
-此 `config.php` 檔案包含下列區段：
+此 `config.php` 文件包含以下部分：
 
-| 名稱 | 說明 |
+| 名称 | 描述 |
 | --------- | -------------------|
-| `i18n` | 所有內嵌翻譯資料。 不支援讀取此區段。 |
-| `modules` | 啟用和停用模組的清單。 |
-| `scopes` | 包含相關資訊的商店、商店群組和網站清單。 |
-| `system` | 靜態內容部署所需的系統設定。 |
-| `themes` | 已安裝主題的設定。 |
+| `i18n` | 所有内联翻译数据。 不支持读取此部分。 |
+| `modules` | 已启用和已禁用的模块的列表。 |
+| `scopes` | 包含相关信息的商店、商店组和网站的列表。 |
+| `system` | 静态内容部署所需的系统配置。 |
+| `themes` | 已安装主题的配置。 |
 
-## 模組
+## 模块
 
-包含模組的陣列及其狀態。 如果已啟用模組，則值為1。 否則，值為0。
+包含一系列模块及其状态。 如果启用了模块，则值为1。 否则，值为0。
 
 ```conf
 'modules' => [
@@ -34,17 +34,17 @@ ht-degree: 0%
 ]
 ```
 
-進一步瞭解 [模組].
+详细了解 [模块].
 
-## 範圍
+## 范围
 
-包含範圍設定值的陣列。 它有下列子節點：
+包含作用域配置值的数组。 它包含以下子节点：
 
-| 名稱 | 說明 |
+| 名称 | 描述 |
 | ---------- | -----------------------------------|
-| `websites` | 網站設定 |
-| `groups` | 存放區設定 |
-| `stores` | 存放區檢視設定 |
+| `websites` | 网站配置 |
+| `groups` | 存储配置 |
+| `stores` | 存储视图配置 |
 
 ```conf
 'scopes' => [
@@ -82,11 +82,11 @@ ht-degree: 0%
 ]
 ```
 
-進一步瞭解 [商業範圍][scopes].
+详细了解 [商业范围][scopes].
 
-## 系統
+## 系统
 
-包含系統欄位設定值的陣列。
+包含系统字段配置值的数组。
 
 ```conf
 'system'=> [
@@ -100,11 +100,11 @@ ht-degree: 0%
 ]
 ```
 
-進一步瞭解 [系統特定設定](config-reference-sens.md).
+详细了解 [系统特定的配置](config-reference-sens.md).
 
-## 主題
+## 主题
 
-包含用於佈景主題設定的值陣列。
+包含主题配置的值的数组。
 
 ```conf
 'themes' => [
@@ -120,10 +120,10 @@ ht-degree: 0%
 ]
 ```
 
-進一步瞭解 [主題].
+详细了解 [主题].
 
 <!-- link definitions -->
 
-[模組]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html
+[模块]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html
 [scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings
-[主題]: https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/
+[主题]: https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/

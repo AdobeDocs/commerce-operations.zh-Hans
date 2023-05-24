@@ -5,42 +5,42 @@ source-wordcount: '345'
 ht-degree: 0%
 
 ---
-# 安全的Web伺服器通訊
+# 安全的Web服务器通信
 
-Elasticsearch本主題說明如何結合使用傳輸層安全性(TLS)加密與 [HTTP基本驗證](https://datatracker.ietf.org/doc/html/rfc2617). 您也可以選擇設定其他型別的驗證；我們提供該資訊的參考。
+本主题将讨论使用传输层安全性(TLS)加密和以下内容的组合来保护Web服务器和搜索引擎(Elasticsearch或OpenSearch)之间通信的示例 [HTTP基本身份验证](https://datatracker.ietf.org/doc/html/rfc2617). 您还可以选择配置其他类型的身份验证；我们提供该信息的参考。
 
-(舊稱Secure Sockets Layer (SSL)，經常與TLS互換使用。 在本主題中，我們參照 *TLS*.)
+(旧称安全套接字层(SSL)经常与TLS互换使用。 在本主题中，我们参考 *TLS*.)
 
 >[!WARNING]
 >
->除非另有說明，否則本主題中的所有命令都必須以使用者身分輸入， `root` 許可權。
+>除非另有说明，否则本主题中的所有命令都必须以用户身份输入， `root` 权限。
 
 ## Recommendations
 
-我們建議採取下列步驟：
+我们建议执行以下操作：
 
-* 您的網頁伺服器使用TLS。
+* 您的Web服务器使用TLS。
 
-   TLS不在本主題的討論範圍內；不過，強烈建議您使用實際憑證，而非自行簽署憑證。
+   TLS超出了本主题的范围；但是，我们强烈建议您在生产中使用真正的证书，而不是自签名证书。
 
-* 您的搜尋引擎會在與網頁伺服器相同的主機上執行。 在不同主機上執行搜尋引擎和網頁伺服器不在本主題的討論範圍內。
+* 您的搜索引擎与Web服务器在同一主机上运行。 在不同主机上运行搜索引擎和Web服务器超出了本主题的范围。
 
-   將搜尋引擎和網頁伺服器放在同一台主機上的好處是，它無法攔截加密的通訊。 搜尋引擎網頁伺服器不必與Adobe Commerce或Magento Open Source網頁伺服器相同；例如，Adobe Commerce可以執行Apache，而Elasticsearch/OpenSearch可以執行nginx。
+   将搜索引擎和Web服务器放在同一台主机上的优点是，它使得加密通信无法被拦截。 搜索引擎Web服务器不必与Adobe Commerce或Magento Open SourceWeb服务器相同；例如，Adobe Commerce可以运行Apache，Elasticsearch/OpenSearch可以运行nginx。
 
-   如果搜尋引擎公開於公用網路，您應設定驗證。 如果您的搜尋引擎執行個體在網路上受到保護，則可能不需要這樣做。 請與您的託管提供者合作，決定您應實作哪些安全性措施來保護執行個體。
+   如果搜索引擎对公共Web公开，则应配置身份验证。 如果您的搜索引擎实例在您的网络中受到保护，则可能没有必要。 与您的托管提供商合作，确定应实施哪些安全措施以保护您的实例。
 
-## 有關TLS的更多資訊
+## 有关TLS的更多信息
 
-請參閱下列資源之一：
+请参阅以下资源之一：
 
 * Apache
 
-   * [Apache 2.4高度加密做法](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
-   * [如何在Apache for Ubuntu 14.04上建立SSL憑證（數位海洋教學課程）](https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04)
-   * [使用CentOS (CentOS wiki)設定SSL安全Web伺服器](https://wiki.centos.org/HowTos/Https)
+   * [Apache 2.4高度加密操作说明](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
+   * [如何在Apache for Ubuntu 14.04上创建SSL证书（数字海洋教程）](https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04)
+   * [使用CentOS (CentOS wiki)设置SSL安全Web服务器](https://wiki.centos.org/HowTos/Https)
 
-* Nginx
+* 恩金克斯
 
-   * [Nginx SSL終止](https://www.nginx.com/resources/admin-guide/nginx-ssl-termination/)
-   * [如何在Nginx for Ubuntu 14.04上建立SSL憑證（Digitalocean教學課程）](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04)
-   * [Nginx SSL憑證安裝(digicert)](https://www.digicert.com/ssl-certificate-installation-nginx.htm)
+   * [Nginx SSL终止](https://www.nginx.com/resources/admin-guide/nginx-ssl-termination/)
+   * [如何在Nginx上为Ubuntu 14.04创建SSL证书（数字海洋教程）](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04)
+   * [Nginx SSL证书安装(digicert)](https://www.digicert.com/ssl-certificate-installation-nginx.htm)

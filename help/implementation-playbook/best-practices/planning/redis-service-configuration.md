@@ -1,6 +1,6 @@
 ---
-title: Redis服務設定的最佳實務
-description: 瞭解如何使用Adobe Commerce的延伸Redis快取實作來改善快取效能。
+title: Redis服务配置的最佳实践
+description: 了解如何通过使用适用于Adobe Commerce的扩展Redis缓存实现来提高缓存性能。
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
@@ -12,22 +12,22 @@ ht-degree: 0%
 
 ---
 
-# Redis服務設定的最佳實務
+# Redis服务配置的最佳实践
 
-- 使用延伸的Redis快取實作，其中包括下列最佳化，以將對來自Adobe Commerce的每個請求執行的Redis查詢數量降至最低：
-   - 減少Redis和Adobe Commerce之間的網路資料傳輸大小
-   - 改善介面卡自動判斷需要載入哪些內容的能力，以降低CPU週期的Redis耗用量
-   - 減少Redis寫入作業的競爭條件
-- 將Redis快取與Redis工作階段分開
-- 壓縮Redis快取並使用 `gzip` 提升效能
+- 使用扩展的Redis缓存实施，该实施包括以下优化，以最大限度地减少对Adobe Commerce的每个请求执行的Redis查询数量：
+   - 缩小Redis和Adobe Commerce之间的网络数据传输大小
+   - 通过提高适配器自动确定需要加载内容的能力，降低CPU周期的Redis消耗
+   - 减少Redis写入操作的竞争条件
+- 将Redis缓存与Redis会话分离
+- 压缩Redis缓存并使用 `gzip` 提高性能
 
-## 延伸的Redis快取實作
+## 扩展的Redis缓存实施
 
-更新您的設定以使用延伸的Redis快取實作 `\Magento\Framework\Cache\Backend\Redis`.
+更新您的配置以使用扩展Redis缓存实施 `\Magento\Framework\Cache\Backend\Redis`.
 
-### 設定雲端部署
+### 配置云部署
 
-設定Redis快取，方法是 `REDIS_BACKEND` 中的部署變數 `.magento.env.yaml` 設定檔。
+通过设置 `REDIS_BACKEND` 中的部署变量 `.magento.env.yaml` 配置文件。
 
 ```yaml
 stage:
@@ -35,25 +35,25 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\Redis'
 ```
 
-如需詳細資訊，請參閱 [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) 中的變數說明 _雲端基礎結構上的Commerce指南_.
+有关详细信息，请参见 [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) 中的变量描述 _云基础架构上的Commerce指南_.
 
 >[!NOTE]
 >
-> 檢查 `ece-tools` 版本，從命令列安裝到您的本機環境中，使用 `composer show magento/ece-tools` 命令。 如有需要， [更新至最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
+> 查看 `ece-tools` 版本，从命令行安装，使用 `composer show magento/ece-tools` 命令。 如有必要， [更新到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
 
 >[!WARNING]
 >
->執行 _not_ 使用設定雲端基礎結構專案的Redis從屬連線 [縮放架構](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). 這會導致Redis連線錯誤。 另請參閱 [Redis設定指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) 在 _雲端基礎結構上的Commerce_ 指南。
+>Do _非_ 使用为云基础架构项目配置Redis从属连接 [扩展体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). 这会导致Redis连接错误。 参见 [redis配置指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) 在 _云基础架构上的Commerce_ 指南。
 
-### 設定內部部署
+### 配置内部部署
 
-針對Adobe Commerce內部部署，請使用設定新的Redis快取實作 `bin/magento:setup` 命令。 如需指示，請參閱 [預設快取使用Redis](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching).
+对于Adobe Commerce内部部署，请使用配置新的Redis缓存实施 `bin/magento:setup` 命令。 有关说明，请参阅 [将Redis用于默认缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching).
 
-## 分隔快取與工作階段執行個體
+## 分开缓存和会话实例
 
-將Redis快取與Redis工作階段分開可讓您獨立管理快取和工作階段，以防止快取問題影響工作階段。
+通过将Redis缓存与Redis会话分离，您可以单独管理缓存和会话，以防止缓存问题影响会话。
 
-1. 更新 `.magento/services.yaml` 設定檔。
+1. 更新 `.magento/services.yaml` 配置文件。
 
    ```yaml
    mysql:
@@ -75,7 +75,7 @@ stage:
       disk: 2048
    ```
 
-1. 更新 `.magento.app.yaml` 設定檔。
+1. 更新 `.magento.app.yaml` 配置文件。
 
    ```yaml
    relationships:
@@ -86,18 +86,18 @@ stage:
        rabbitmq: "rabbitmq:rabbitmq"
    ```
 
-1. 提交 [Adobe Commerce支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 變更Pro生產和中繼環境上的Redis服務設定。 包含更新的 `.magento/services.yaml` 和 `.magento.app.yaml` 組態檔。
+1. 提交 [Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 更改Pro生产和暂存环境上的Redis服务配置。 包括已更新的 `.magento/services.yaml` 和 `.magento.app.yaml` 配置文件。
 
-1. 確認新執行個體正在執行，並記下連線埠號碼。
+1. 验证新实例是否正在运行，并记下端口号。
 
    ```bash
    echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
    ```
 
-1. 將連線埠號碼新增至 `.magento.env.yaml` 設定檔。
+1. 将端口号添加到 `.magento.env.yaml` 配置文件。
 
    >[!NOTE]
-   >`disable_locking` 必須設定為 `1`.
+   >`disable_locking` 必须设置为 `1`.
 
    ```yaml
    SESSION_CONFIGURATION:
@@ -112,13 +112,13 @@ stage:
        min_lifetime: 60
    ```
 
-1. 從移除工作階段 [預設資料庫](../../../configuration/cache/redis-pg-cache.md) (`db 0`)。
+1. 从删除会话 [默认数据库](../../../configuration/cache/redis-pg-cache.md) (`db 0`)。
 
    ```bash
    redis-cli -h 127.0.0.1 -p 6374 -n 0 FLUSHDB
    ```
 
-部署期間，您應該會在 [建置和部署記錄](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html#build-and-deploy-logs)：
+在部署期间，您应会在 [生成和部署日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html#build-and-deploy-logs)：
 
 ```terminal
 W:   - Downloading colinmollenhour/credis (1.11.1)
@@ -132,9 +132,9 @@ W:   - Installing colinmollenhour/php-redis-session-abstract (v1.4.5): Extractin
 [2022-08-17 01:13:40] INFO: redis-session will be used for session if it was not override by SESSION_CONFIGURATION
 ```
 
-## 快取壓縮
+## 缓存压缩
 
-使用快取壓縮，但請注意，使用者端效能是有代價的。 如果您有備用CPU，請啟用它。 另請參閱 [將Redis用於工作階段儲存](../../../configuration/cache/redis-session.md).
+使用缓存压缩，但请注意，需要权衡客户端性能。 如果您有备用CPU，请启用它。 参见 [将Redis用于会话存储](../../../configuration/cache/redis-session.md).
 
 ```yaml
 stage:
@@ -151,7 +151,7 @@ stage:
             compression_lib: 'gzip'       # snappy and lzf for performance, gzip for high compression (~69%)
 ```
 
-## 其他資訊
+## 其他信息
 
-- [Redis頁面快取](../../../configuration/cache/redis-pg-cache.md)
-- [將Redis用於工作階段儲存](../../../configuration/cache/redis-session.md)
+- [Redis页面缓存](../../../configuration/cache/redis-pg-cache.md)
+- [将Redis用于会话存储](../../../configuration/cache/redis-session.md)

@@ -1,6 +1,6 @@
 ---
-title: 設定指南總覽
-description: 瞭解您的Adobe Commerce或Magento Open Source應用程式的所有可設定功能和服務。
+title: 配置指南概述
+description: 了解Adobe Commerce或Magento Open Source应用程序的所有可配置功能和服务。
 exl-id: c4997792-5a47-4ae5-903a-7e5d7235e42e
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,24 +9,24 @@ ht-degree: 0%
 
 ---
 
-# 設定指南
+# 配置指南
 
-此 _設定_ 指南提供管理可設定Commerce應用程式功能和服務的參考資料和有限指南。 負責設定Commerce應用程式的技術使用者可以找到以下領域的指引：
+此 _配置_ 该指南提供了用于管理可配置的Commerce应用程序功能和服务的参考材料和有限指导。 负责配置Commerce应用程序的技术用户可以找到以下方面的指导：
 
-- [安裝](../configuration/bootstrap/initialization.md)
+- [安装](../configuration/bootstrap/initialization.md)
 - [部署方法](../configuration/deployment/overview.md)
-- [快取選項](../configuration/cache/caching-overview.md)
-- [Cron工作管理](../configuration/cron/custom-cron.md)
-- [命令列使用方式](../configuration/cli/config-cli.md)
-- [記錄自訂](../configuration/logs/custom-logging.md)
-- [安全性選項](../configuration/security/overview.md)
-- [搜尋引擎設定](../configuration/search/configure-search-engine.md)
-- [儲存方法](../configuration/storage/memcached.md)
+- [缓存选项](../configuration/cache/caching-overview.md)
+- [Cron作业管理](../configuration/cron/custom-cron.md)
+- [命令行用法](../configuration/cli/config-cli.md)
+- [日志自定义](../configuration/logs/custom-logging.md)
+- [安全选项](../configuration/security/overview.md)
+- [搜索引擎设置](../configuration/search/configure-search-engine.md)
+- [存储方法](../configuration/storage/memcached.md)
 
-## Commerce管理員設定
+## Commerce管理员配置
 
-以下為中的對應主題： [Commerce使用手冊](https://docs.magento.com/user-guide/stores/configuration.html) 可協助您瞭解Commerce Admin中每個設定之欄位說明。
+以下内容中包含相应的主题 [Commerce用户指南](https://docs.magento.com/user-guide/stores/configuration.html) 这可以帮助您了解Commerce Admin中每个配置设置的字段描述。
 
-## 雲端設定
+## 云配置
 
-[!DNL Commerce on cloud infrastructure] 使用 [組態檔集](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html) 更新託管環境中的Commerce應用程式功能與服務。 由於Adobe雲端託管環境的獨特性質，您應一律檢閱 [雲端指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) 以取得其他設定需求。
+[!DNL Commerce on cloud infrastructure] 使用 [配置文件集](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html) 在托管环境中更新Commerce应用程序功能和服务。 由于Adobe云托管的环境的独特性质，您应始终查看 [云指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) 以了解其他配置要求。

@@ -1,6 +1,6 @@
 ---
-title: 設定設定值
-description: 瞭解如何設定設定值，以及變更在Admin中鎖定的值。
+title: 设置配置值
+description: 了解如何设置配置值并更改管理员中锁定的值。
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,80 +9,80 @@ ht-degree: 0%
 
 ---
 
-# 設定設定值
+# 设置配置值
 
 {{file-system-owner}}
 
-本主題討論可用來執行下列作業的進階組態命令：
+本主题讨论可用于以下操作的高级配置命令：
 
-- 從命令列設定任何組態選項
-- 可選擇鎖定任何設定選項，使其值無法在Admin中變更
-- 變更在管理員中鎖定的設定選項
+- 从命令行设置任何配置选项
+- （可选）锁定任何配置选项，使其值无法在Admin中更改
+- 更改在Admin中锁定的配置选项
 
-您可以使用這些命令來手動或使用指令碼設定Commerce設定。 您使用 _設定路徑_，亦即 `/` — 分隔的字串，可唯一識別該組態選項。 您可以在下列參照中找到組態路徑：
+您可以使用这些命令手动或使用脚本设置Commerce配置。 使用设置配置选项 _配置路径_，即 `/`唯一标识该配置选项的分隔字符串。 您可以在以下引用中找到配置路径：
 
-- [敏感和系統專屬設定路徑參考](../reference/config-reference-sens.md)
-- [付款設定路徑參考](../reference/config-reference-payment.md)
-- [一般設定路徑參考](../reference/config-reference-general.md)
-- [Commerce Enterprise B2B擴充功能設定路徑參考](../reference/config-reference-b2b.md)
+- [敏感和系统特定的配置路径引用](../reference/config-reference-sens.md)
+- [支付配置路径参考](../reference/config-reference-payment.md)
+- [常规配置路径参考](../reference/config-reference-general.md)
+- [Commerce Enterprise B2B扩展配置路径参考](../reference/config-reference-b2b.md)
 
-您可以在下列時間設定值：
+可以在以下时间设置值：
 
-- 安裝Commerce之前，您只能設定預設範圍的設定值，因為它是唯一的有效範圍。
+- 在安装Commerce之前，您可以仅为默认范围设置配置值，因为它是唯一的有效范围。
 
-- 安裝Commerce後，您可以設定任何網站或商店檢視範圍的設定值。
+- 安装Commerce后，您可以为任何网站或商店视图范围设置配置值。
 
-使用下列命令：
+使用以下命令：
 
-- `bin/magento config:set` 依其設定路徑設定任何非敏感設定值
-- `bin/magento config:sensitive:set` 依其設定路徑設定任何敏感設定值
-- `bin/magento config:show` 顯示儲存的組態值；加密設定的值顯示為星號
+- `bin/magento config:set` 按其配置路径设置任何非敏感配置值
+- `bin/magento config:sensitive:set` 按其配置路径设置任何敏感配置值
+- `bin/magento config:show` 显示已保存的配置值；加密设置的值显示为星号
 
-## 必要條件
+## 先决条件
 
-若要設定組態值，您必須至少知道下列其中一項：
+要设置配置值，您必须至少知道以下内容之一：
 
-- 設定路徑
-- 若要設定特定範圍的組態值，您必須知道範圍代碼。
+- 配置路径
+- 要设置特定范围的配置值，您必须知道范围代码。
 
-   若要設定預設範圍的設定值，您不需要執行任何動作。
+   要设置默认范围的配置值，您无需执行任何操作。
 
-### 尋找設定路徑
+### 查找配置路径
 
-請參閱下列參考資料：
+请参阅以下引用：
 
-- [敏感和系統專屬設定路徑參考](../reference/config-reference-sens.md)
-- [付款設定路徑參考](../reference/config-reference-payment.md)
-- [其他設定路徑參考](../reference/config-reference-general.md)
-- [Commerce Enterprise B2B擴充功能設定路徑參考](../reference/config-reference-b2b.md)
+- [敏感和系统特定的配置路径引用](../reference/config-reference-sens.md)
+- [支付配置路径参考](../reference/config-reference-payment.md)
+- [其他配置路径参考](../reference/config-reference-general.md)
+- [Commerce Enterprise B2B扩展配置路径参考](../reference/config-reference-b2b.md)
 
-### 尋找範圍代碼
+### 查找范围代码
 
-您可以在Commerce資料庫或Commerce管理員中找到範圍代碼。
+您可以在Commerce数据库或Commerce管理员中找到范围代码。
 
-**若要在管理員中尋找範圍代碼**：
+**在“管理员”中查找范围代码**：
 
-1. 以可檢視網站和商店檢視的使用者身分登入管理員。
-1. 按一下 **[!UICONTROL Stores]** >設定> **[!UICONTROL All Stores]**.
-1. 在右窗格中，按一下網站或商店檢視的名稱以檢視其代碼。
+1. 以可以查看网站和商店查看的用户身份登录到管理员。
+1. 单击 **[!UICONTROL Stores]** >设置> **[!UICONTROL All Stores]**.
+1. 在右侧窗格中，单击网站或商店视图的名称以查看其代码。
 
-   下圖顯示範例網站程式碼。
+   下图显示了一个示例网站代码。
 
-   ![從管理員取得網站或商店檢視代碼](../../assets/configuration/website-code.png)
+   ![从管理员获取网站或商店视图代码](../../assets/configuration/website-code.png)
 
-1. 繼續使用 [設定值](#set-values).
+1. 继续使用 [设置值](#set-values).
 
-**在資料庫中尋找範圍代碼**：
+**在数据库中查找范围代码**：
 
-網站和商店檢視的範圍程式碼會儲存在的Commerce資料庫中 `store_website` 和 `store` 表格。
+网站和商店视图的范围代码存储在Commerce数据库中的 `store_website` 和 `store` 表。
 
-1. 連線至Commerce資料庫。
+1. 连接到Commerce数据库。
 
    ```bash
    mysql -u <Commerce database username> -p
    ```
 
-1. 輸入下列命令：
+1. 输入以下命令：
 
    ```shell
    use <Commerce database name>;
@@ -96,7 +96,7 @@ ht-degree: 0%
    SELECT * FROM store_website;
    ```
 
-   範例結果如下：
+   以下是示例结果：
 
    ```terminal
    [mysql]> SELECT * FROM store_website;
@@ -109,105 +109,105 @@ ht-degree: 0%
    +------------+-------+--------------+------------+------------------+------------+
    ```
 
-   使用中的值 `code` 欄。
+   使用中的值 `code` 列。
 
-1. 繼續下一節。
+1. 继续下一部分。
 
-## 設定值
+## 设置值
 
-**設定系統特定組態值**：
+**设置系统特定的配置值**：
 
 ```bash
 bin/magento config:set [--scope="..."] [--scope-code="..."] [-le | --lock-env] [-lc | --lock-config] path value
 ```
 
-**設定敏感組態值**：
+**设置敏感配置值**：
 
 ```bash
 bin/magento config:sensitive:set [--scope="..."] [--scope-code="..."] path value
 ```
 
-下表說明 `set` 命令引數：
+下表描述了 `set` 命令参数：
 
-| 引數 | 說明 |
+| 参数 | 描述 |
 | --- | --- |
-| `--scope` | 設定的範圍。 可能的值包括 `default`， `website`，或 `store`. 預設值為 `default`. |
-| `--scope-code` | 設定的範圍代碼（網站代碼或商店檢視代碼） |
-| `-e or --lock-env` | 鎖定值，使其無法在管理員中編輯，或變更已在管理員中鎖定的設定。 命令會將值寫入 `<Commerce base dir>/app/etc/env.php` 檔案。 |
-| `-c or --lock-config` | 鎖定值，使其無法在管理員中編輯，或變更已在管理員中鎖定的設定。 命令會將值寫入 `<Commerce base dir>/app/etc/config.php` 檔案。 此 `--lock-config` 選項覆寫 `--lock-env` 如果您同時指定兩個選項。 |
-| `path` | _必填_. 設定路徑 |
-| `value` | _必填_. 設定的值 |
+| `--scope` | 配置的范围。 可能的值包括 `default`， `website`，或 `store`. 默认为 `default`. |
+| `--scope-code` | 配置的范围代码（网站代码或商店视图代码） |
+| `-e or --lock-env` | 锁定值以便无法在管理员中编辑它，或者更改已在管理员中锁定的设置。 该命令将该值写入 `<Commerce base dir>/app/etc/env.php` 文件。 |
+| `-c or --lock-config` | 锁定值以便无法在管理员中编辑它，或者更改已在管理员中锁定的设置。 该命令将该值写入 `<Commerce base dir>/app/etc/config.php` 文件。 此 `--lock-config` 选项覆盖 `--lock-env` 如果同时指定这两个选项，则不会出现这种情况。 |
+| `path` | _必需_. 配置路径 |
+| `value` | _必需_. 配置的值 |
 
 >[!INFO]
 >
->截至Commerce 2.2.4， `--lock-env` 和 `--lock-config` 選項會取代 `--lock` 選項。
+>从Commerce 2.2.4开始， `--lock-env` 和 `--lock-config` 选项替换 `--lock` 选项。
 >
->如果您使用 `--lock-env` 或 `--lock-config` 選項來設定或變更值，您必須使用 [`bin/magento app:config:import` 命令](../cli/import-configuration.md) 以在存取「管理員」或「店面」之前匯入設定。
+>如果您使用 `--lock-env` 或 `--lock-config` 选项来设置或更改值，您必须使用 [`bin/magento app:config:import` 命令](../cli/import-configuration.md) 以在访问管理员或店面之前导入设置。
 
-如果您輸入不正確的設定路徑，此命令會傳回錯誤
+如果输入的配置路径不正确，此命令将返回错误
 
 ```text
 The "wrong/config/path" does not exist
 ```
 
-如需詳細資訊，請參閱下列其中一節：
+有关更多信息，请参阅以下部分之一：
 
-- [設定可在管理員中編輯的設定值](#set-configuration-values-that-can-be-edited-in-the-admin)
-- [設定無法在管理員中編輯的設定值](#set-configuration-values-that-cannot-be-edited-in-the-admin)
+- [设置可在管理员中编辑的配置值](#set-configuration-values-that-can-be-edited-in-the-admin)
+- [设置无法在管理员中编辑的配置值](#set-configuration-values-that-cannot-be-edited-in-the-admin)
 
-### 設定可在管理員中編輯的設定值
+### 设置可在管理员中编辑的配置值
 
-使用 `bin/magento config:set` _不含_ `--lock-env` 或 `--lock-config` 將值寫入資料庫。 您透過此方式設定的值可在Admin中編輯。
+使用 `bin/magento config:set` _不含_ `--lock-env` 或 `--lock-config` 将值写入数据库。 您通过这种方式设置的值可以在管理员中进行编辑。
 
-以下是設定存放區基底URL的一些範例：
+下面是一些设置存储基本URL的示例：
 
-設定預設範圍的基底URL：
+设置默认范围的基本URL：
 
 ```bash
 bin/magento config:set web/unsecure/base_url http://example.com/
 ```
 
-設定基礎URL `base` 網站：
+设置基本URL `base` 网站：
 
 ```bash
 bin/magento config:set --scope=websites --scope-code=base web/unsecure/base_url http://example2.com/
 ```
 
-設定基礎URL `test` 存放區檢視：
+设置基本URL `test` 存储视图：
 
 ```bash
 bin/magento config:set --scope=stores --scope-code=test web/unsecure/base_url http://example3.com/
 ```
 
-### 設定無法在管理員中編輯的設定值
+### 设置无法在管理员中编辑的配置值
 
-如果您使用 `--lock-env`  選項如下所示，該命令會將組態值儲存在 `<Commerce base dir>/app/etc/env.php` 和會停用「管理員」中用於編輯此值的欄位。
+如果您使用 `--lock-env`  选项，该命令将配置值保存在 `<Commerce base dir>/app/etc/env.php` 和禁用字段以在管理员中编辑此值。
 
 ```bash
 bin/magento config:set --lock-env --scope=stores --scope-code=default web/unsecure/base_url http://example3.com
 ```
 
-您可以使用 `--lock-env` 在未安裝Commerce時用來設定設定值的選項。 不過，您只能設定預設範圍的值。
+您可以使用 `--lock-env` 如果未安装Commerce，则用于设置配置值的选项。 但是，只能为缺省范围设置值。
 
 >[!INFO]
 >
->此 `env.php` 檔案是系統專屬的。 您不應該將它轉移給其他系統。 您可以使用它來覆寫資料庫中的組態值。 例如，您可以從另一個系統取得資料庫傾印並覆寫 `base_url` 和其他值，因此您不必修改資料庫。
+>此 `env.php` 文件特定于系统。 您不应将其传输到其他系统。 您可以使用它覆盖数据库中的配置值。 例如，您可以从另一个系统中获取数据库转储并覆盖 `base_url` 和其他值，因此您不必修改数据库。
 
-如果您使用 `--lock-config` 選項，組態值會儲存在 `<Commerce base dir>/app/etc/config.php`. 在管理員中編輯此值的欄位已停用。
+如果您使用 `--lock-config` 选项，配置值将保存在 `<Commerce base dir>/app/etc/config.php`. 管理员中用于编辑此值的字段已禁用。
 
 ```bash
 bin/magento config:set --lock-config --scope=stores --scope-code=default web/url/use_store 1
 ```
 
-您可以使用 `--lock-config` 以設定未安裝Commerce時的設定值。 不過，您只能設定預設範圍的值。
+您可以使用 `--lock-config` 以设置配置值（如果未安装Commerce）。 但是，只能为缺省范围设置值。
 
 >[!INFO]
 >
->您可以轉移 `config.php` 至另一個系統，以使用相同的組態值。 例如，如果您有測試系統，則使用相同的 `config.php` 表示您不必再次設定相同的設定值。
+>您可以传输 `config.php` 到另一个系统以使用相同的配置值。 例如，如果您有一个测试系统，则使用相同的 `config.php` 意味着您不必再次设置相同的配置值。
 
-## 顯示組態設定的值
+## 显示配置设置的值
 
-命令選項：
+命令选项：
 
 ```bash
 bin/magento config:show [--scope[="..."]] [--scope-code[="..."]] path
@@ -215,23 +215,23 @@ bin/magento config:show [--scope[="..."]] [--scope-code[="..."]] path
 
 位置
 
-- `--scope` 是設定的範圍（預設、網站、商店）。 預設值為 `default`
-- `--scope-code` 是設定的範圍代碼（網站代碼或商店檢視代碼）
-- `path` 是格式為first_part/second_part/third_part/etc (_必填_)
+- `--scope` 是配置的范围（默认、网站、商店）。 默认值为 `default`
+- `--scope-code` 是配置的范围代码（网站代码或商店视图代码）
+- `path` 是格式为first_part/second_part/third_part/etc的配置路径(_必需_)
 
 >[!INFO]
 >
->此 `bin/magento config:show` 命令會顯示下列專案的值 [加密的值](../reference/config-reference-sens.md) 以一連串星號表示： `******`.
+>此 `bin/magento config:show` 命令显示任意值 [加密值](../reference/config-reference-sens.md) 以星号表示： `******`.
 
-### 範例
+### 示例
 
-**顯示所有儲存的組態**：
+**显示所有保存的配置**：
 
 ```bash
 bin/magento config:show
 ```
 
-結果：
+结果：
 
 ```terminal
 web/unsecure/base_url - http://example.com/
@@ -241,50 +241,50 @@ catalog/category/root_id - 2
 analytics/subscription/enabled - 1
 ```
 
-**顯示「 」的所有已儲存組態 `base` 網站**：
+**要显示的所有已保存配置，请执行以下操作 `base` 网站**：
 
 ```bash
 bin/magento config:show --scope=websites --scope-code=base
 ```
 
-結果：
+结果：
 
 ```terminal
 web/unsecure/base_url - http://example-for-website.com/
 general/region/state_required - AT,BR,CA
 ```
 
-**顯示預設範圍的基底URL**：
+**显示默认范围的基本URL**：
 
 ```bash
 bin/magento config:show web/unsecure/base_url
 ```
 
-結果：
+结果：
 
 ```terminal
 web/unsecure/base_url - http://example.com/
 ```
 
-**若要顯示的基礎URL `base` 網站**：
+**显示基本URL `base` 网站**：
 
 ```bash
 bin/magento config:show --scope=websites --scope-code=base web/unsecure/base_url
 ```
 
-結果：
+结果：
 
 ```terminal
 web/unsecure/base_url - http://example-for-website.com/
 ```
 
-**若要顯示的基礎URL `default` 儲存**：
+**显示基本URL `default` 存储**：
 
 ```bash
 bin/magento config:show --scope=stores --scope-code=default web/unsecure/base_url
 ```
 
-結果：
+结果：
 
 ```terminal
 web/unsecure/base_url - http://example-for-store.com/

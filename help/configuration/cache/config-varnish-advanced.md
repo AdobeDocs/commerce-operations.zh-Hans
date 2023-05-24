@@ -1,6 +1,6 @@
 ---
-title: 進階清漆設定
-description: 設定進階Varnish功能，包括健康狀態檢查、寬限和聖人模式。
+title: 高级清漆配置
+description: 配置高级清漆功能，包括运行状况检查、宽限和圣漆模式。
 feature: Configuration, Cache
 exl-id: 178bd675-6ed0-40cc-9455-08a11b32c054
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# 進階清漆設定
+# 高级清漆配置
 
-Varnish提供數項功能，可防止客戶在Commerce伺服器無法正常運作時遭遇長時間延遲和逾時。 這些功能可在以下位置設定： `default.vcl` 檔案。 本主題說明Commerce在您從Admin下載的VCL （清漆組態語言）檔案中提供的新增功能。
+Varnish提供了几项功能，可防止客户在Commerce服务器无法正常运行时经历长时间延迟和超时。 这些功能可在 `default.vcl` 文件。 本主题介绍从管理员下载的VCL（清漆配置语言）文件中Commerce提供的添加内容。
 
-請參閱 [清漆參考手冊](https://varnish-cache.org/docs/6.3/reference/index.html) 以取得有關使用清漆組態語言的詳細資訊。
+请参阅 [清漆参考手册](https://varnish-cache.org/docs/6.3/reference/index.html) 有关使用清漆配置语言的详细信息。
 
-## 健康情況檢查
+## 运行状况检查
 
-Varnish健康情況檢查功能會輪詢Commerce伺服器，判斷伺服器是否及時回應。 如果正常回應，新內容會在存留時間(TTL)期間過期後重新產生。 否則，Varnish一律會提供過時的內容。
+Varnish运行状况检查功能可轮询Commerce服务器以确定它是否及时响应。 如果它响应正常，则会在生存时间(TTL)时段过期后重新生成新内容。 如果没有，Varnish总是会提供过时的内容。
 
-Commerce會定義下列預設健康情況檢查：
+Commerce定义以下默认运行状况检查：
 
 ```conf
 .probe = {
@@ -32,68 +32,68 @@ Commerce會定義下列預設健康情況檢查：
     }
 ```
 
-此健康情況檢查每5秒會呼叫 `pub/health_check.php` 指令碼。 此指令碼會檢查伺服器、每個資料庫和Redis （如果已安裝）的可用性。 指令碼必須在2秒內傳回回應。 如果指令碼判斷這些資源中有任何資源停用，則會傳回500 HTTP錯誤代碼。 如果在10次嘗試中，有6次收到此錯誤代碼，則會將後端視為不健康。
+此运行状况检查每5秒调用 `pub/health_check.php` 脚本。 此脚本检查服务器、每个数据库和Redis（如果已安装）的可用性。 脚本必须在2秒内返回响应。 如果脚本确定这些资源中有任何资源已关闭，则会返回500 HTTP错误代码。 如果在十次尝试中六次收到此错误代码，则后端被视为不正常。
 
-此 `health_check.php` 指令碼位於 `pub` 目錄。 如果您的Commerce根目錄為 `pub`，然後請務必在 `url` 引數來源 `/pub/health_check.php` 至 `health_check.php`.
+此 `health_check.php` 脚本位于 `pub` 目录。 如果您的Commerce根目录为 `pub`，然后请务必在 `url` 参数来源 `/pub/health_check.php` 到 `health_check.php`.
 
-如需詳細資訊，請參閱 [清漆健康情況檢查](https://varnish-cache.org/docs/6.3/users-guide/vcl-backends.html?highlight=health%20check#health-checks) 說明檔案。
+欲了解更多信息，请参见 [清漆运行状况检查](https://varnish-cache.org/docs/6.3/users-guide/vcl-backends.html?highlight=health%20check#health-checks) 文档。
 
-## 寬限模式
+## 宽限模式
 
-寬限模式可讓Varnish將快取中的物件保持在超過其TTL值的位置。 然後，清漆可在擷取新版本時提供過期（過時）的內容。 這能改善流量並縮短載入時間。 它用於以下情況：
+宽限模式允许Varnish将缓存中的对象保留在超出其TTL值的范围内。 然后，清漆可以在获取新版本时提供过期（过时）的内容。 这样可以改善流量并减少加载时间。 在以下情况下会使用它：
 
-- 當Commerce後端狀況良好，但請求所花的時間比正常情況長
-- 當Commerce後端不正常時。
+- 当Commerce后端运行状况良好，但请求所花费的时间比正常情况长
+- 当Commerce后端不正常时。
 
-此 `vcl_hit` 副程式會定義Varnish如何回應已快取之物件的要求。
+此 `vcl_hit` 子例程定义Varnish如何响应已缓存对象的请求。
 
-### 當Commerce後端正常時
+### 当Commerce后端正常时
 
-健康情況檢查確定Commerce後端健康時，Varnish會檢查時間是否仍在寬限期內。 預設寬限期為300秒，但商家可以從管理員設定值，如所述 [設定Commerce使用清漆](configure-varnish-commerce.md). 如果寬限期尚未過期，Varnish會傳送過時內容，並從Commerce伺服器非同步重新整理物件。 如果寬限期已過，Varnish會提供過時內容，並從Commerce後端同步重新整理物件。
+当运行状况检查确定Commerce后端运行状况良好时，Varnish检查时间是否仍在宽限期内。 默认宽限期为300秒，但商家可以从管理员中设置值，如中所述 [配置Commerce以使用清漆](configure-varnish-commerce.md). 如果宽限期未过期，则Varnish会提供过时的内容，并从Commerce服务器异步刷新对象。 如果宽限期已过，则Varnish会提供过时内容，并从Commerce后端同步刷新对象。
 
-Varnish提供過時物件的時間長度上限是寬限期（預設為300秒）和TTL值(預設為86400秒)的總和。
+Varnish为陈旧对象提供的最长时间是宽限期（默认为300秒）和TTL值(默认为86400秒)的总和。
 
-若要從變更預設寬限期 `default.vcl` 檔案，編輯 `vcl_hit` 副程式：
+要更改中的默认宽限期，请执行以下操作 `default.vcl` 文件，编辑 `vcl_hit` 子例程：
 
 ```conf
 if (obj.ttl + 300s > 0s) {
 ```
 
-### 當Commerce後端不正常時
+### 当Commerce后端不正常时
 
-如果Commerce後端無回應，Varnish會從快取中提供三天過時的內容（或如中的定義） `beresp.grace`)加上剩餘TTL （預設為一天），除非手動清除快取內容。
+如果Commerce后端无响应，则Varnish会从缓存中提供三天的过时内容(或如 `beresp.grace`)加上剩余TTL（默认情况下为一天），除非手动清除缓存的内容。
 
 ## Saint模式
 
-Saint模式會在可設定的時間內排除不健康的後端。 因此，當使用Varnish作為負載平衡器時，不健康的後端無法提供流量。 Saint模式可與寬限模式搭配使用，以允許複雜處理不健全的後端伺服器。 例如，如果一個後端伺服器狀況不良，重試可以路由到另一個伺服器。 如果所有其他伺服器都停止運作，則提供過時的快取物件。 saint模式後端主機和中斷期間定義於 `default.vcl` 檔案。
+Saint模式在可配置的时间段内排除不正常的后端。 因此，当使用Varnish作为负载平衡器时，不正常的后端无法提供流量。 Saint模式可与宽限模式一起使用，以允许复杂处理不正常的后端服务器。 例如，如果一个后端服务器运行不正常，可以将重试路由到另一个服务器。 如果所有其他服务器都停机，则提供过时的缓存对象。 saint模式后端主机和封锁期是在 `default.vcl` 文件。
 
-Saint模式也可以用於商務執行個體個別離線以執行維護和升級任務，而不會影響Commerce網站的可用性。
+单独将Commerce实例离线以执行维护和升级任务而不影响Commerce网站的可用性时，也可以使用Saint模式。
 
-### Saint模式先決條件
+### Saint模式先决条件
 
-指定一個電腦作為主要安裝。 在此電腦上安裝Commerce、mySQL資料庫和Varnish的主要執行個體。
+指定一个计算机作为主安装。 在此计算机上，安装Commerce、mySQL数据库和Varnish的主实例。
 
-在所有其他電腦上，Commerce執行個體必須能夠存取主要電腦的mySQL資料庫。 次要電腦也應具有主要商務執行個體檔案的存取權。
+在所有其他计算机上，Commerce实例必须可以访问主计算机的mySQL数据库。 辅助计算机还应具有对主商务实例文件的访问权限。
 
-或者，可以在所有機器上關閉靜態檔案版本設定。 您可從「 Admin 」底下的「 」存取此專案 **商店** >設定> **設定** > **進階** > **開發人員** > **靜態檔案設定** > **簽署靜態檔案** = **否**.
+或者，可以在所有计算机上关闭静态文件版本控制。 这可以从管理员的以下位置访问： **商店** >设置> **配置** > **高级** > **开发人员** > **静态文件设置** > **签署静态文件** = **否**.
 
-最後，所有Commerce執行個體都必須處於生產模式。 在Varnish開始之前，清除每個執行個體上的快取。 在Admin中，前往 **系統** >工具> **快取管理** 並按一下 **排清Magento快取**. 您也可以執行下列命令來清除快取：
+最后，所有Commerce实例都必须处于生产模式。 在Varnish启动之前，清除每个实例上的缓存。 在“管理员”中，转到 **系统** >工具> **缓存管理** 并单击 **刷新Magento缓存**. 您还可以运行以下命令来清除缓存：
 
 ```bash
 bin/magento cache:flush
 ```
 
-### 安裝
+### 安装
 
-Saint模式不是主要Varnish套件的一部分。 它是獨立版本設定 `vmod` 必須下載並安裝該軟體。 因此，您應該從來源重新編譯Varnish，如下列文章所述：
+Saint模式不是主Varnish包的一部分。 它是一个单独版本控制 `vmod` 必须下载并安装的软件。 因此，您应该从源重新编译Varnish，如以下文章中所述：
 
-- [安裝Varnish 6.4](https://varnish-cache.org/docs/6.4/installation/install.html)
-- [安裝Varnish 6.0](https://varnish-cache.org/docs/6.0/installation/install.html) (LTS)
+- [安装清漆6.4](https://varnish-cache.org/docs/6.4/installation/install.html)
+- [安装Varnish 6.0](https://varnish-cache.org/docs/6.0/installation/install.html) (LTS)
 
-重新編譯之後，您可以安裝Saint模式模組。 一般而言，請遵循下列步驟：
+重新编译后，可以安装Saint模式模块。 一般来说，请按照以下步骤操作：
 
-1. 從取得原始程式碼 [塗漆模組](https://github.com/varnish/varnish-modules). 複製Git版本（主要版本），因為0.9.x版本包含原始程式碼錯誤。
-1. 使用autotools建置原始程式碼：
+1. 从获取源代码 [涂漆模块](https://github.com/varnish/varnish-modules). 克隆Git版本(主控版本)，因为0.9.x版本包含源代码错误。
+1. 使用autotools生成源代码：
 
    ```bash
    sudo apt-get install libvarnishapi-dev || sudo yum install varnish-libs-devel
@@ -104,11 +104,11 @@ Saint模式不是主要Varnish套件的一部分。 它是獨立版本設定 `vm
    sudo make install
    ```
 
-另請參閱 [清漆模組集合](https://github.com/varnish/varnish-modules) 瞭解安裝Saint模式模組的相關資訊。
+参见 [清漆模块集合](https://github.com/varnish/varnish-modules) 有关安装Saint模式模块的信息。
 
-### 範例VCL檔案
+### 示例VCL文件
 
-下列程式碼範例顯示必須新增至VCL檔案才能啟用saint模式的程式碼。 放置 `import` 陳述式和 `backend` 檔案頂端的定義。
+以下代码示例显示了要启用saint模式必须添加到VCL文件中的代码。 放置 `import` 语句和 `backend` 文件顶部的定义。
 
 ```cpp
 import saintmode;

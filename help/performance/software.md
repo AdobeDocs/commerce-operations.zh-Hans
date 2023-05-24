@@ -1,6 +1,6 @@
 ---
-title: 軟體Recommendations
-description: 檢閱與Adobe Commerce最佳效能和Magento Open Source部署相關的建議軟體清單。
+title: 软件Recommendations
+description: 查看与Adobe Commerce和Magento Open Source部署的最佳性能相关的推荐软件列表。
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,36 +9,36 @@ ht-degree: 0%
 
 ---
 
-# 軟體建議
+# 软件推荐
 
-我們需要下列軟體用於生產執行個體 [!DNL Commerce]：
+我们需要以下软件用于的生产实例 [!DNL Commerce]：
 
 * [PHP](../installation/system-requirements.md)
 * Nginx和 [PHP-FPM](https://php-fpm.org/)
 * [[!DNL MySQL]](../installation/prerequisites/database/mysql.md)
 * [[!DNL Elasticsearch] 或OpenSearch](../installation/prerequisites/search-engine/overview.md)
 
-針對多伺服器部署或計畫擴充業務的商家，我們建議下列專案：
+对于多服务器部署或计划扩展其业务的商家，我们建议执行以下操作：
 
-* [[!DNL Varnish] 快取](../configuration/cache/config-varnish.md)
-* [Redis](../configuration/cache/redis-session.md) 適用於工作階段（2.0.6+版）
-* 單獨的Redis執行個體，作為您的 [預設快取](../configuration/cache/redis-pg-cache.md) （請勿將此執行個體用於頁面快取）
+* [[!DNL Varnish] 缓存](../configuration/cache/config-varnish.md)
+* [Redis](../configuration/cache/redis-session.md) 用于会话（从2.0.6+开始）
+* 单独的Redis实例，作为 [默认缓存](../configuration/cache/redis-pg-cache.md) （不要将此实例用于页面缓存）
 
-另請參閱 [系統需求](../installation/system-requirements.md) 瞭解各種軟體型別支援版本的相關資訊。
+参见 [系统要求](../installation/system-requirements.md) 有关每种软件类型的受支持版本的信息。
 
-## 作業系統
+## 操作系统
 
-作業系統設定和最佳化與類似 [!DNL Commerce] 相較於其他高負載Web應用程式。 隨著伺服器處理的同時連線數目增加，可用的通訊端數目可以完全配置。 Linux核心支援「重複使用」TCP連線的機制。 若要啟用此機制，請設定以下值： `/etc/sysctl.conf`：
+操作系统配置和优化对于 [!DNL Commerce] 与其他高负载Web应用程序相比。 随着服务器处理的并发连接数的增加，可用套接字的数量可以完全分配。 Linux内核支持“重用”TCP连接的机制。 要启用此机制，请将以下值设置为 `/etc/sysctl.conf`：
 
 >[!INFO]
 >
->啟用net.ipv4.tcp_tw_reuse對連入連線沒有影響。
+>启用net.ipv4.tcp_tw_reuse对传入连接没有影响。
 
 ```text
 net.ipv4.tcp_tw_reuse = 1
 ```
 
-核心引數 `net.core.somaxconn` 控制等待連線的開啟通訊端數目上限。 此值可以安全地增加至1024，但應與伺服器處理此數量的能力相關聯。 若要啟用此核心引數，請設定下列值： `/etc/sysctl.conf`：
+内核参数 `net.core.somaxconn` 控制等待连接的最大开放套接字数。 可以安全地将此值增加到1024，但应该将其与服务器处理此数量的能力相关联。 要启用此内核参数，请将以下值设置为 `/etc/sysctl.conf`：
 
 ```text
 net.core.somaxconn = 1024
@@ -46,11 +46,11 @@ net.core.somaxconn = 1024
 
 ## PHP
 
-Magento完全支援PHP 7.3和7.4。在設定PHP以取得處理請求的最大速度和效率時，有幾個因素需要考慮。
+Magento完全支持PHP 7.3和7.4。在配置PHP以获得最大处理请求的速度和效率时，需要考虑以下几个因素。
 
-### PHP擴充功能
+### PHP扩展
 
-我們建議將作用中PHP擴充功能的清單限製為 [!DNL Commerce] 功能。
+我们建议将活动PHP扩展的列表限制为以下所需的扩展： [!DNL Commerce] 功能。
 
 Magento Open Source和Adobe Commerce：
 
@@ -71,8 +71,8 @@ Magento Open Source和Adobe Commerce：
 * ext-pdo_mysql
 * ext-simplexml
 * ext-soap
-* 外部通訊端
-* ext-na
+* 分插座
+* 外钠
 * ext-tokenizer
 * ext-xmlwriter
 * ext-xsl
@@ -80,7 +80,7 @@ Magento Open Source和Adobe Commerce：
 * lib-libxml
 * lib-openssl
 
-此外，Adobe Commerce還需要：
+此外，Adobe Commerce还需要：
 
 * ext-bcmath
 * ext-ctype
@@ -99,8 +99,8 @@ Magento Open Source和Adobe Commerce：
 * ext-pdo_mysql
 * ext-simplexml
 * ext-soap
-* 外部通訊端
-* ext-na
+* 分插座
+* 外钠
 * ext-spl
 * ext-tokenizer
 * ext-xmlwriter
@@ -109,38 +109,38 @@ Magento Open Source和Adobe Commerce：
 * lib-libxml
 * lib-openssl
 
-新增更多擴充功能會增加程式庫的載入時間。
+添加更多扩展会增加库加载时间。
 
 >[!INFO]
 >
->`php-mcrypt` 已從PHP 7.2中移除，並取代為 [`sodium` 資料庫](https://www.php.net/manual/en/book.sodium.php). 確定 [鈉](https://www.php.net/manual/en/sodium.installation.php) 在升級PHP時已正確啟用。
+>`php-mcrypt` 已从PHP 7.2中移除并替换为 [`sodium` 库](https://www.php.net/manual/en/book.sodium.php). 确保 [钠](https://www.php.net/manual/en/sodium.installation.php) 在升级PHP时正确启用。
 
 >[!INFO]
 >
->任何設定檔和偵錯擴充功能的存在，都可能對頁面的回應時間造成負面影響。 例如，沒有任何偵錯工作階段的使用中xDebug模組最多可將頁面回應時間增加30%。
+>任何分析和调试扩展的存在都可能会对页面的响应时间产生负面影响。 例如，没有任何调试会话的活动xDebug模块可将页面响应时间最多增加30%。
 
-### PHP設定
+### PHP设置
 
-保證成功執行所有 [!DNL Commerce] 在不將資料或程式碼傾印至磁碟的例項中，請依照以下方式設定記憶體限制：
+确保成功执行所有 [!DNL Commerce] 在不将数据或代码转储到磁盘的情况下，按如下方式设置内存限制：
 
 ```text
 memory_limit=1G
 ```
 
-針對偵錯，請將此值增加到2G。
+对于调试，请将此值增加到2G。
 
-#### Realpath_cache設定
+#### Realpath_cache配置
 
-改善 [!DNL Commerce] 效能，建議新增或更新下列專案 `realpath_cache` 中的設定 `php.ini` 檔案。 此設定允許PHP處理序快取檔案的路徑，而不是在每次頁面載入時查詢它們。 另請參閱 [效能調整](https://www.php.net/manual/en/ini.core.php) PHP檔案中。
+改进 [!DNL Commerce] 性能，建议添加或更新以下内容 `realpath_cache` 中的设置 `php.ini` 文件。 此配置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找它们。 参见 [性能调整](https://www.php.net/manual/en/ini.core.php) 在PHP文档中。
 
 ```text
 realpath_cache_size=10M
 realpath_cache_ttl=7200
 ```
 
-#### ByteCode
+#### 字节代码
 
-以發揮最大速度 [!DNL Commerce] 在PHP 7上，您必須啟動OpCache模組並正確加以設定。 建議將下列設定用於模組：
+获得最大速度 [!DNL Commerce] 在PHP 7上，必须激活OpCache模块并对其进行正确配置。 建议为模块设置以下设置：
 
 ```text
 opcache.memory_consumption=512
@@ -150,9 +150,9 @@ opcache.validate_timestamps=0
 opcache.enable_cli=1
 ```
 
-當您微調opcache的記憶體配置時，請考慮Magento程式碼庫的大小和所有擴充功能。 Magento的效能團隊會使用上述範例中的值進行測試，因為它在opcache中提供的空間足以容納平均已安裝的擴充功能數目。
+在微调opcache的内存分配时，请考虑Magento代码库和所有扩展的大小。 Magento的性能团队使用前面的示例中的值进行测试，因为它在opcache中提供了足够的空间来容纳平均已安装的扩展数量。
 
-如果您的電腦記憶體不足，但未安裝許多擴充功能或自訂功能，請使用下列設定來取得類似結果：
+如果您的计算机内存不足，并且没有安装许多扩展或自定义设置，请使用以下设置获得类似结果：
 
 ```text
 opcache.memory_consumption=64
@@ -161,9 +161,9 @@ opcache.max_accelerated_files=60000
 
 #### APCU
 
-我們建議啟用 [PHP APCu擴充功能](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) 和 [設定 `composer` 以支援](../performance/deployment-flow.md#preprocess-dependency-injection-instructions) 以最佳化效能。 此擴充功能會快取已開啟檔案的檔案位置，以提升 [!DNL Commerce] 伺服器呼叫，包括頁面、Ajax呼叫和端點。
+我们建议启用 [PHP APCu扩展](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) 和 [配置 `composer` 支持它](../performance/deployment-flow.md#preprocess-dependency-injection-instructions) 优化以获得最佳性能。 此扩展可缓存已打开文件的文件位置，从而提高 [!DNL Commerce] 服务器调用，包括页面、Ajax调用和端点。
 
-編輯您的 `apcu.ini` 檔案包含以下專案：
+编辑您的 `apcu.ini` 文件，以包含以下内容：
 
 ```text
 extension=apcu.so
@@ -171,58 +171,58 @@ extension=apcu.so
 apc.enabled = 1
 ```
 
-## 網頁伺服器
+## Web服务器
 
-Magento完全支援Nginx和Apache網頁伺服器。 [!DNL Commerce] 提供中建議的設定檔範例  `<magento_home>/nginx.conf.sample` (Nginx)和  `<magento_home>.htaccess.sample` (Apache)檔案。  Nginx範例包含改善效能的設定，因此不需要重新配置。 範例檔案中定義的一些主要設定最佳實務包括：
+Magento完全支持Nginx和Apache Web Server。 [!DNL Commerce] 在中提供了示例推荐配置文件  `<magento_home>/nginx.conf.sample` (Nginx)及  `<magento_home>.htaccess.sample` (Apache)文件。  Nginx示例包含用于提高性能的设置，并且设计为只需很少重新配置。 示例文件中定义的一些主要配置最佳实践包括：
 
-* 在瀏覽器中快取靜態內容的設定
-* PHP的記憶體和執行時間設定
-* 內容壓縮設定
+* 用于在浏览器中缓存静态内容的设置
+* PHP的内存和执行时间设置
+* 内容压缩设置
 
-您也應該設定用於輸入請求處理的執行緒數量，如下所示：
+您还应该配置用于输入请求处理的线程数，如下所示：
 
-| 網頁伺服器 | 屬性名稱 | 位置 | 相關資訊 |
+| Web服务器 | 属性名称 | 位置 | 相关信息 |
 |--- | --- | --- | ---|
-| Nginx | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [調整NGINX的效能](https://www.nginx.com/blog/tuning-nginx/) |
-| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache效能調整](https://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
-| Apache 2.4 | `MaxRequestWorkers` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache MPM常用指示詞](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#maxrequestworkers) |
+| 恩金克斯 | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [调整NGINX的性能](https://www.nginx.com/blog/tuning-nginx/) |
+| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache性能调整](https://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
+| Apache 2.4 | `MaxRequestWorkers` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache MPM常用指令](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#maxrequestworkers) |
 
 ## [!DNL MySQL]
 
-本檔案未提供深入資訊 [!DNL MySQL] 調整指示，因為每個商店和環境都不同，但我們可以提出一些一般建議。
+本文档未提供深入信息 [!DNL MySQL] 调整说明，因为每个商店和环境各不相同，但我们可以提出一些一般建议。
 
-已進行許多改良 [!DNL MySQL] 5.7.9我們確信 [!DNL MySQL] 會以良好的預設設定發佈。 最關鍵的設定為：
+在以下方面做出了许多改进： [!DNL MySQL] 5.7.9我们确信 [!DNL MySQL] 均使用良好的默认设置分发。 最关键的设置是：
 
-| 引數 | 預設 | 說明 |
+| 参数 | 默认 | 描述 |
 |--- | --- | ---|
-| `innodb_buffer_pool_instances` | 8 | 預設值設為8，以避免多個執行緒嘗試存取相同執行個體時發生問題。 |
-| `innodb_buffer_pool_size` | 128MB | 結合上述多個集區執行個體，這表示預設的記憶體配置為1024MB。 總大小會分配到所有緩衝集區。 為達到最佳效率，請指定 `innodb_buffer_pool_instances` 和 `innodb_buffer_pool_size` 讓每個緩衝集區執行個體至少有1 GB。 |
-| `max_connections` | 150 | 的值 `max_connections` 引數應該與應用程式伺服器中設定的PHP執行緒總數相關。 一般建議是小型環境為300，中型環境為1,000。 |
-| `innodb_thread_concurrency` | 0 | 此設定的最佳值應透過下列公式計算： `innodb_thread_concurrency = 2 * (NumCPUs + NumDisks)` |
+| `innodb_buffer_pool_instances` | 8 | 默认值为8，以避免多个线程尝试访问同一实例时出现问题。 |
+| `innodb_buffer_pool_size` | 128MB | 结合上述多个池实例，这意味着默认内存分配为1024 MB。 总大小在所有缓冲池中分配。 为获得最佳效率，请指定 `innodb_buffer_pool_instances` 和 `innodb_buffer_pool_size` 以使每个缓冲池实例至少1 GB。 |
+| `max_connections` | 150 | 的值 `max_connections` 参数应与应用程序服务器中配置的PHP线程总数相关。 一项一般性建议是，小环境为300个，中环境为1,000个。 |
+| `innodb_thread_concurrency` | 0 | 此配置的最佳值应按以下公式计算： `innodb_thread_concurrency = 2 * (NumCPUs + NumDisks)` |
 
 ## [!DNL Varnish]
 
-Magento強烈建議使用 [!DNL Varnish] 作為商店的完整頁面快取伺服器。 PageCache模組仍存在於程式碼基底中，但應僅用於開發目的。 不應將其與（或）搭配使用， [!DNL Varnish].
+Magento强烈建议使用 [!DNL Varnish] 作为商店的完整页面缓存服务器。 PageCache模块仍然存在于代码库中，但应仅将其用于开发目的。 它不应与一起使用，也不应代替， [!DNL Varnish].
 
-安裝 [!DNL Varnish] 位於網頁層前面的獨立伺服器上。 它應接受所有傳入請求並提供快取頁面副本。 允許 [!DNL Varnish] 為了有效使用安全頁面，可以將SSL終止Proxy放在頁面前面 [!DNL Varnish]. Nginx可用於此用途。
+安装 [!DNL Varnish] 在Web层前面的单独服务器上。 它应接受所有传入请求并提供缓存的页面副本。 允许 [!DNL Varnish] 为了有效地处理安全页面，可以将SSL终止代理放置在 [!DNL Varnish]. Nginx可用于此目的。
 
-[!DNL Commerce] 為以下專案分發範例設定檔案： [!DNL Varnish] （版本4和5），其中包含所有建議的效能設定。 其中最關鍵的效能包括：
+[!DNL Commerce] 分发样例配置文件 [!DNL Varnish] （版本4和5），其中包含所有推荐的性能设置。 其中性能方面最关键的是：
 
-* **後端健康情況檢查** 輪詢 [!DNL Commerce] 伺服器以判斷它是否及時回應。
-* **寬限模式** 可讓您指示 [!DNL Varnish] 將物件保留在快取中超過其存留時間(TTL)期間，並在下列情況下提供此過時內容： [!DNL Commerce] 狀況不佳或尚未擷取最新內容。
-* **Saint模式** 黑名單狀況不良 [!DNL Commerce] 可設定時間長度的伺服器。 因此，不良後端在使用時無法提供流量 [!DNL Varnish] 作為負載平衡器。
+* **后端运行状况检查** 轮询 [!DNL Commerce] 服务器确定它是否及时响应。
+* **宽限模式** 允许您指示 [!DNL Varnish] 使缓存中的对象超过其生存时间(TTL)时段并提供此过时内容，如果 [!DNL Commerce] 不健康或尚未获取最新内容。
+* **Saint模式** 黑名单状况不正常 [!DNL Commerce] 可配置的时间段内的服务器。 因此，不正常的后端在使用时无法提供流量 [!DNL Varnish] 作为负载平衡器。
 
-另請參閱 [進階 [!DNL Varnish] 設定](../configuration/cache/config-varnish-advanced.md) 以取得關於實作這些功能的詳細資訊。
+参见 [高级 [!DNL Varnish] 配置](../configuration/cache/config-varnish-advanced.md) 以了解有关实施这些功能的更多信息。
 
-### 最佳化資產效能
+### 优化资源性能
 
-一般而言，我們建議您將資產（影像、JS、CSS等）儲存在CDN上以獲得最佳效能。
+通常，我们建议将您的资产（图像、JS、CSS等）存储在CDN上以获得最佳性能。
 
-如果您的網站不需要部署大量地區設定，而您的伺服器位於與大多數客戶相同的區域，您可以將資產儲存在，以較低的成本獲得顯著的效能提升。 [!DNL Varnish] 而不使用CDN。
+如果您的站点不需要部署大量区域设置，并且您的服务器与大多数客户位于同一区域，则可以通过将资产存储在 [!DNL Varnish] 而不是使用CDN。
 
-若要將您的資產儲存在 [!DNL Varnish]，將下列VCL專案新增至 `default.vcl` 檔案產生者 [!DNL Commerce] 的 [!DNL Varnish] 5.
+要将您的资产存储在 [!DNL Varnish]，将以下VCL条目添加到 `default.vcl` 文件生成者 [!DNL Commerce] 对象 [!DNL Varnish] 5.
 
-在 `if` 中針對PURGE請求的陳述式 `vcl_recv` 副程式，新增：
+在 `if` PURGE请求的语句 `vcl_recv` 副例程，添加：
 
 ```javascript
 # static files are cacheable. remove SSL flag and cookie
@@ -234,8 +234,8 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 }
 ```
 
-在 `vcl_backend_response` 副程式，尋找 `if` 取消設定Cookie的陳述式 `GET` 或 `HEAD` 要求。
-已更新 `if` 區塊應如下所示：
+在 `vcl_backend_response` 副程式，查找 `if` 语句，用于取消设置的Cookie `GET` 或 `HEAD` 请求。
+已更新 `if` 块应如下所示：
 
 ```javascript
 # validate if we need to cache it and prevent from setting cookie
@@ -251,20 +251,20 @@ if (bereq.url !~ "\.(ico|css|js|jpg|jpeg|png|gif|tiff|bmp|gz|tgz|bz2|tbz|mp3|ogg
 }
 ```
 
-重新啟動 [!DNL Varnish] 伺服器可在您升級網站或部署/更新資產時清除快取的資產。
+重新启动 [!DNL Varnish] 服务器刷新缓存的资产，无论何时升级网站或部署/更新资产。
 
-## 快取與工作階段伺服器
+## 缓存和会话服务器
 
-Magento提供一些儲存您的快取和工作階段資料的選項，包括Redis、Memcache、檔案系統和資料庫。 這些選項中的部分內容將於下文討論。
+Magento提供了一些用于存储缓存和会话数据的选项，包括Redis、Memcache、文件系统和数据库。 下面将讨论其中一些选项。
 
-### 單一Web節點設定
+### 单个Web节点设置
 
-如果您只打算使用一個Web節點來提供所有流量，將快取放在遠端Redis伺服器上沒有任何意義。 請改用檔案系統或本機Redis伺服器。 如果要使用檔案系統，請將快取資料夾放在RAM檔案系統上掛載的磁碟區上。 如果您想要使用本機Redis伺服器，強烈建議設定Redis，使其使用通訊端進行直接連線，而不是透過HTTP交換資料。
+如果您计划只使用一个Web节点来提供所有流量，则将缓存放在远程Redis服务器上没有任何意义。 而是使用文件系统或本地Redis服务器。 如果要使用文件系统，请将缓存文件夹放在RAM文件系统上装载的卷上。 如果要使用本地Redis服务器，我们强烈建议配置Redis，使其使用套接字进行直接连接，而不是通过HTTP交换数据。
 
-### 多重Web節點設定
+### 多个Web节点设置
 
-若是設定多個Web節點，Redis是最佳選項。 因為 [!DNL Commerce] 主動快取大量資料以提升效能，請留意Web節點與Redis伺服器之間的網路通道。 您不希望該管道成為請求處理的瓶頸。
+对于多Web节点设置，Redis是最佳选项。 因为 [!DNL Commerce] 主动缓存大量数据以获得更好的性能，请关注Web节点和Redis服务器之间的网络通道。 您不希望该渠道成为请求处理的瓶颈。
 
 >[!INFO]
 >
->如果您需要同時處理數百及數千個請求，則可能需要一個最多1 Gb （甚至更寬）的通道連線您的Redis伺服器。
+>如果您需要同时处理成百上千个请求，则可能需要一个高达1 GB（甚至更宽）的通道来连接Redis服务器。

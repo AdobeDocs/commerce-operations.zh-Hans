@@ -1,6 +1,6 @@
 ---
-title: 產品屬性設定最佳實務
-description: 瞭解如何透過限制產品屬性、屬性選項和屬性集的數量來最佳化Adobe Commerce效能
+title: 产品属性配置最佳实践
+description: 了解如何通过限制产品属性、属性选项和属性集的数量来优化Adobe Commerce性能
 role: User, Admin
 feature: Best Practices
 feature-set: Commerce
@@ -12,87 +12,87 @@ ht-degree: 0%
 
 ---
 
-# 產品屬性設定的最佳實務
+# 产品属性配置的最佳实践
 
-- 為獲得最佳效能，請勿設定超過建議的最大產品屬性或產品屬性選項數量。
+- 为获得最佳性能，配置的产品属性或产品属性选项数量不能超过建议的最大值。
 
-- **產品屬性**—
-   - 若為Adobe Commerce 2.3.x版和2.4.0至2.4.1-p1版，請設定不超過500個屬性
-   - 若是Adobe Commerce 2.4.2版或更新版本，請設定最多1500個產品屬性
-- **產品屬性選項** — 為每個屬性設定最多100個屬性選項
-- **產品屬性集** — 設定最多1000個屬性集_
+- **产品属性**—
+   - 对于Adobe Commerce版本2.3.x和2.4.0到2.4.1-p1，请配置不超过500个属性
+   - 对于Adobe Commerce版本2.4.2及更高版本，最多配置1500个产品属性
+- **产品属性选项** — 为每个属性配置最多100个属性选项
+- **产品属性集** — 配置最多1000个属性集_
 
 >[!NOTE]
 >
->產品屬性會指定全域套用至所有產品的功能。 產品屬性選項是自訂，用於指定適用於特定產品的功能。
+>产品属性指定全局应用于所有产品的功能。 产品属性选项是用于指定适用于特定产品的功能的定制设置。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 減少產品屬性數量
+## 减少产品属性的数量
 
-若要從管理員管理產品並擷取店面中的產品資料時獲得最佳效能：
+为了在管理员管理产品和检索店面中的产品数据时获得最佳性能：
 
-- 針對不同的產品使用不同的產品範本（屬性集）。
-- 運用自訂選項和複雜產品進行變數管理
-- 將可搜尋屬性的數量減到最少。
-- 移除未使用的產品屬性。
-- 在外部產品管理系統(PMS)中儲存和管理非商務相關屬性。
+- 为不同的产品使用不同的产品模板（属性集）。
+- 利用自定义选项和复杂产品进行变体管理
+- 最大限度地减少可搜索属性的数量。
+- 删除未使用的产品属性。
+- 在外部产品管理系统(PMS)中存储和管理非商业相关属性。
 
-## 減少產品屬性選項的數量
+## 减少产品属性选项的数量
 
-若要從管理員管理產品並擷取店面中的產品資料時獲得最佳效能：
+为了在管理员管理产品和检索店面中的产品数据时获得最佳性能：
 
-- 使用不同的變異機制來建立產品：複雜的產品、作為產品變異來源的自訂選項。
-- 使用目標屬性和選項建置特定的產品範本，以避免一般化的產品範本和選項容器。
-- 維護實際屬性選項的清單。
-- 透過外部產品管理系統(PMS)管理產品資訊。
+- 使用不同的变体机制创建产品：复杂的产品，自定义选项作为产品变体的来源。
+- 使用定位属性和选项构建特定的产品模板，以避免广义的产品模板和选项容器。
+- 维护实际属性选项的列表。
+- 通过外部产品管理系统(PMS)管理产品信息。
 
-## 減少產品屬性集數目
+## 减少产品属性集的数量
 
-使用MySQL移除未使用的產品屬性集。
+使用MySQL删除未使用的产品属性集。
 
-### 檢閱屬性集組態
+### 查看属性集配置
 
-1. [連線到站台資料庫](https://devdocs.magento.com/cloud/project/services-mysql.html#connect-to-the-database).
+1. [连接到站点数据库](https://devdocs.magento.com/cloud/project/services-mysql.html#connect-to-the-database).
 
-1. 使用MySQL尋找屬性集數目
+1. 使用MySQL查找属性集的数量
 
    ```sql
    SELECT COUNT(*) AS 'attribute_set' FROM *${TABLE_PREFIX}*eav_attribute_set;
    ```
 
-1. 移除任何未使用的屬性集。
+1. 删除任何未使用的属性集。
 
-## 對效能的潛在影響
+## 潜在的性能影响
 
-設定多個 **產品屬性** 增加每個產品的產品範本大小（EAV結構），以及必須擷取的資料量。 此增加會以下列方式影響作業：
+配置多个 **产品属性** 增加每个产品（EAV结构）的产品模板大小以及必须检索的数据量。 此增长会以下列方式影响运营：
 
-- 增加與EAV資料擷取相關的SQL查詢流量，以及處理的資料量，進而降低DB傳輸量
-- Adobe Commerce索引和全文檢索搜尋索引的大小大幅增加
-- 為超大產品範本建立FLAT索引且無法使用時，達到嚴格的MySQL限制
+- 与EAV数据检索和处理的数据量相关的SQL查询流量增加，从而导致DB吞吐量降低
+- 显着增加Adobe Commerce索引和全文搜索索引的大小
+- 在为超大产品模板构建FLAT索引时达到严格的MySQL限制，并且无法使用
 
-產品資料和索引大小的增加可能會以下列方式影響網站效能：
+产品数据和索引大小的增加可能会以下列方式影响网站性能：
 
-- 針對與目錄瀏覽、搜尋（快速和進階）和分層導覽相關的大多數店面案例，增加回應時間。
-- 管理員中的產品管理作業大幅減慢，這可能導致逾時。
-- 可以封鎖「產品整批作業」功能。
-- 由於執行時間較長，無法每天執行中型和大型目錄的索引重新建置時間。
+- 提高了大多数与目录浏览、搜索（快速和高级）和分层导航相关的店面方案的响应时间。
+- 管理员中的产品管理操作显着缓慢，这可能导致超时。
+- 可以阻止“产品成批活动”功能。
+- 由于执行时间较长，无法每天为大中型目录执行索引重新构建时间。
 
-設定多個 **屬性選項** 會以下列方式影響網站效能：
+配置多个 **属性选项** 会以下列方式影响站点性能：
 
-- 產品詳細資料(PDP)和包含複雜產品的類別頁面上的請求和呈現時間過長。
-- 管理產品儲存作業回應時間會超過最佳效能目標。
-- 增加「產品編輯」表單轉譯時間。
-- 結帳緩慢。
+- 在包含复杂产品的产品详细信息(PDP)和类别页面上请求和渲染的时间较长。
+- 管理产品保存操作响应时间超过最佳性能目标。
+- 增加了“产品编辑”表单渲染时间。
+- 结账缓慢。
 
-## 其他資訊
+## 其他信息
 
-- [產品屬性概述](https://experienceleague.adobe.com/docs/commerce-admin/catalog/product-attributes/product-attributes.html)
-- [屬性集](https://experienceleague.adobe.com/docs/commerce-admin/catalog/product-attributes/create/attribute-sets.html)
-- [建立產品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
-- [自訂教學課程>自訂產品建立表單](https://developer.adobe.com/commerce/php/tutorials/admin/custom-product-creation-form/)
+- [产品属性概述](https://experienceleague.adobe.com/docs/commerce-admin/catalog/product-attributes/product-attributes.html)
+- [属性集](https://experienceleague.adobe.com/docs/commerce-admin/catalog/product-attributes/create/attribute-sets.html)
+- [创建产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
+- [自定义教程>自定义产品创建表单](https://developer.adobe.com/commerce/php/tutorials/admin/custom-product-creation-form/)

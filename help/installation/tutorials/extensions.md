@@ -1,6 +1,6 @@
 ---
-title: 安裝擴充功能
-description: 請依照下列步驟安裝Adobe Commerce或Magento Open Source擴充功能。
+title: 安装扩展
+description: 按照以下步骤安装Adobe Commerce或Magento Open Source扩展。
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,33 +9,33 @@ ht-degree: 0%
 
 ---
 
-# 安裝擴充功能
+# 安装扩展
 
-擴充或自訂Adobe Commerce和Magento Open Source行為的程式碼稱為擴充功能。 您可以選擇性地封裝和散發擴充功能於 [Commerce Marketplace](https://marketplace.magento.com) 或其他擴充功能發佈系統。
+扩展或自定义Adobe Commerce和Magento Open Source行为的代码称为扩展。 您可以选择将扩展打包并分发到 [Commerce Marketplace](https://marketplace.magento.com) 或者另一个扩展分发系统。
 
-擴充功能包括：
+扩展包括：
 
-- 模組(擴充Adobe Commerce和Magento Open Source功能)
-- 主題（變更店面和管理員的外觀）
-- 語言套件（將店面和管理員本地化）
+- 模块(扩展Adobe Commerce和Magento Open Source功能)
+- 主题（更改店面和管理员的外观）
+- 语言包（将店面和管理员本地化）
 
 >[!TIP]
 >
->本主題說明如何使用命令列來安裝您從Commerce Marketplace購買的擴充功能。 您可以使用相同的程式進行安裝 _任何_ 擴充功能；您只需要擴充功能的撰寫器名稱和版本。 若要尋找該擴充功能，請開啟 `composer.json` 檔案並記下以下專案的值： `"name"` 和 `"version"`.
+>本主题介绍如何使用命令行安装从Commerce Marketplace购买的扩展。 您可以使用相同的过程来安装 _任意_ 扩展；您只需要扩展的编辑器名称和版本。 要找到它，请打开扩展的 `composer.json` 文件并记下 `"name"` 和 `"version"`.
 
-在安裝之前，您可能需要：
+在安装之前，您可能需要：
 
-1. 備份您的資料庫。
-1. 啟用維護模式：
+1. 备份数据库。
+1. 启用维护模式：
 
    ```bash
    bin/magento maintenance:enable
    ```
 
-若要安裝擴充功能，您必須：
+要安装扩展，您必须：
 
-1. 從Commerce Marketplace或其他擴充功能開發人員取得擴充功能。
-1. 如果您從Commerce Marketplace安裝擴充功能，請確定 `repo.magento.com` 存放庫存在於您的 `composer.json` 檔案：
+1. 从Commerce Marketplace或其他扩展开发人员处获取扩展。
+1. 如果从Commerce Marketplace安装扩展，请确保 `repo.magento.com` 存储库存在于您的 `composer.json` 文件：
 
    ```bash
    "repositories": [
@@ -46,40 +46,40 @@ ht-degree: 0%
    ]
    ```
 
-1. 取得擴充功能的撰寫器名稱和版本。
-1. 更新 `composer.json` 副檔名為且版本為的檔案。
-1. 確認擴充功能已正確安裝。
-1. 啟用並設定擴充功能。
+1. 获取扩展的编辑器名称和版本。
+1. 更新 `composer.json` 文件中包含扩展的名称和版本。
+1. 验证扩展是否正确安装。
+1. 启用并配置该扩展。
 
-## 取得擴充功能撰寫器名稱和版本
+## 获取扩展编辑器名称和版本
 
-如果您已知道擴充功能的撰寫器名稱和版本，請略過此步驟，然後繼續 [更新您的 `composer.json` 檔案](#update-your-composer-file).
+如果您已经知道扩展的编辑器名称和版本，请跳过此步骤并继续操作 [更新您的 `composer.json` 文件](#update-your-composer-file).
 
-若要從Commerce Marketplace取得擴充功能的撰寫器名稱和版本：
+要从Commerce Marketplace中获取扩展的编辑器名称和版本，请执行以下操作：
 
-1. 登入 [Commerce Marketplace](https://marketplace.magento.com) 使用您購買擴充功能所用的使用者名稱和密碼。
+1. 登录 [Commerce Marketplace](https://marketplace.magento.com) 以及购买扩展时所用的用户名和密码。
 
-1. 在右上角，按一下 **您的姓名** > **我的設定檔**.
+1. 在右上角，单击 **您的姓名** > **我的个人资料**.
 
-   ![存取您的市集帳戶](../../assets/installation/marketplace-my-profile.png)
+   ![访问您的Marketplace帐户](../../assets/installation/marketplace-my-profile.png)
 
-1. 按一下 **我的購買**.
+1. 单击 **我的购买**.
 
-   ![Marketplace購買記錄](../../assets/installation//marketplace-my-purchases.png)
+   ![Marketplace购买历史记录](../../assets/installation//marketplace-my-purchases.png)
 
-1. 找到您要安裝的擴充功能，然後按一下 **技術細節**.
+1. 找到要安装的扩展，然后单击 **技术详细信息**.
 
-   ![技術詳細資訊會顯示擴充功能的撰寫器名稱](../../assets/installation/marketplace-extension-technical-details.png)
+   ![技术详细信息显示扩展的编辑器名称](../../assets/installation/marketplace-extension-technical-details.png)
 
 >[!TIP]
 >
->或者，您也可以找到Composer名稱和版本 _任何_ 擴充功能(無論您是在Commerce Marketplace或其他地方購買)中的 `composer.json` 檔案。
+>或者，您也可以找到的Composer名称和版本 _任意_ 扩展(无论您是在Commerce Marketplace上还是在其他位置购买的) `composer.json` 文件。
 
-## 更新您的撰寫器檔案
+## 更新您的编辑器文件
 
-將擴充功能的名稱和版本新增至 `composer.json` 檔案：
+将扩展的名称和版本添加到 `composer.json` 文件：
 
-1. 導覽至您的專案目錄並更新 `composer.json` 檔案。
+1. 导航到项目目录并更新 `composer.json` 文件。
 
    ```bash
    composer require <component-name>:<version>
@@ -91,9 +91,9 @@ ht-degree: 0%
    composer require j2t/module-payplug:2.0.2
    ```
 
-1. 輸入您的 [驗證金鑰](../prerequisites/authentication-keys.md). 您的公開金鑰是您的使用者名稱；您的私密金鑰是您的密碼。
+1. 输入您的 [身份验证密钥](../prerequisites/authentication-keys.md). 您的公钥是您的用户名；您的私钥是您的密码。
 
-1. 請等候Composer完成更新您的專案相依性，並確定沒有任何錯誤：
+1. 等待Composer完成项目依赖项的更新，并确保没有任何错误：
 
    ```terminal
    Updating dependencies (including require-dev)
@@ -103,39 +103,39 @@ ht-degree: 0%
    Generating autoload files
    ```
 
-## 驗證擴充功能
+## 验证扩展
 
-若要確認擴充功能是否已正確安裝，請執行以下命令：
+要验证扩展是否正确安装，请运行以下命令：
 
 ```bash
 bin/magento module:status J2t_Payplug
 ```
 
-依預設，擴充功能可能已停用：
+默认情况下，该扩展可能处于禁用状态：
 
 ```terminal
 Module is disabled
 ```
 
-副檔名採用格式 `<VendorName>_<ComponentName>`；這是與撰寫器名稱不同的格式。 使用此格式可啟用副檔名。 如果您不確定擴充功能名稱，請執行：
+扩展名采用格式 `<VendorName>_<ComponentName>`；这是与编辑器名称不同的格式。 使用此格式可启用该扩展。 如果不确定扩展名称，请运行：
 
 ```bash
 bin/magento module:status
 ```
 
-並在「已停用模組清單」下尋找擴充功能。
+并在“已禁用的模块列表”下查找扩展。
 
-## 啟用擴充功能
+## 启用扩展
 
-除非您先清除產生的靜態檢視檔案，否則部分副檔名無法正常運作。 使用 `--clear-static-content` 啟用副檔名時用來清除靜態檢視檔案的選項。
+除非先清除生成的静态视图文件，否则某些扩展名无法正常工作。 使用 `--clear-static-content` 启用扩展时用于清除静态视图文件的选项。
 
-1. 啟用擴充功能並清除靜態檢視檔案：
+1. 启用扩展并清除静态视图文件：
 
    ```bash
    bin/magento module:enable J2t_Payplug --clear-static-content
    ```
 
-   您應該會看到下列輸出：
+   您应会看到以下输出：
 
    ```terminal
    The following modules have been enabled:
@@ -147,65 +147,65 @@ bin/magento module:status
    Generated static view files cleared successfully.
    ```
 
-1. 註冊擴充功能：
+1. 注册扩展：
 
    ```bash
    bin/magento setup:upgrade
    ```
 
-1. 重新編譯專案：在生產模式中，您可能會收到「請重新執行Magento編譯命令」的訊息。 應用程式不會提示您以開發人員模式執行compile命令。
+1. 重新编译项目：在生产模式下，您可能会收到一条消息，显示“请重新运行Magento编译命令”。 应用程序不会提示您在“开发人员”模式下运行compile命令。
 
    ```bash
    bin/magento setup:di:compile
    ```
 
-1. 確認擴充功能已啟用：
+1. 验证扩展是否已启用：
 
    ```bash
    bin/magento module:status J2t_Payplug
    ```
 
-   您應該會看到驗證擴充功能是否不再停用的輸出：
+   您应该会看到验证扩展是否不再禁用的输出：
 
    ```terminal
    Module is enabled
    ```
 
-1. 清除快取：
+1. 清理缓存：
 
    ```bash
    bin/magento cache:clean
    ```
 
-1. 視需要在「管理員」中設定擴充功能。
+1. 根据需要在Admin中配置该扩展。
 
 >[!TIP]
 >
->如果您在瀏覽器中載入店面時發生錯誤，請使用以下命令清除快取： `bin/magento cache:flush`.
+>如果在浏览器中加载店面时遇到错误，请使用以下命令清除缓存： `bin/magento cache:flush`.
 
-## 升級擴充功能
+## 升级扩展
 
-若要更新或升級模組或擴充功能：
+要更新或升级模块或扩展，请执行以下操作：
 
-1. 從Marketplace或其他擴充功能開發人員下載更新的檔案。 記下模組名稱和版本。
+1. 从Marketplace或其他扩展开发人员下载更新的文件。 记下模块名称和版本。
 
-1. 將內容匯出至應用程式根目錄。
+1. 将内容导出到应用程序根目录。
 
-1. 如果模組存在撰寫器套件，請執行以下其中一項作業。
+1. 如果模块存在编辑器包，请运行以下任一操作。
 
-   依據模組名稱更新：
+   按模块名称更新：
 
    ```bash
    composer update vendor/module-name
    ```
 
-   每個版本的更新：
+   每个版本更新：
 
    ```bash
    composer require vendor/module-name ^x.x.x
    ```
 
-1. 執行以下命令以升級、部署和清除快取。
+1. 运行以下命令升级、部署和清理缓存。
 
    ```bash
    bin/magento setup:upgrade --keep-generated

@@ -1,6 +1,6 @@
 ---
-title: 自訂基底目錄路徑
-description: 使用MAGE_DIRS變數來設定絕對路徑的陣列。
+title: 自定义基本目录路径
+description: 使用MAGE_DIRS变量可设置绝对路径数组。
 exl-id: ee8e1a3a-f1d4-412c-8767-16447113f0cd
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,18 +9,18 @@ ht-degree: 0%
 
 ---
 
-# 基底目錄路徑
+# 基本目录路径
 
-此 `MAGE_DIRS` 環境變數可讓您指定自訂基本目錄路徑和基本URL的片段，商務應用程式會使用這些路徑建立各種檔案的絕對路徑或產生URL。
+此 `MAGE_DIRS` 环境变量允许您指定自定义基本目录路径和基本URL的片段，商务应用程序使用这些路径构建各种文件的绝对路径或生成URL。
 
-## 設定MAGE_DIRS
+## 设置MAGE_DIRS
 
-指定索引鍵為常數的關聯陣列 [\\Magento\\App\\Filesystem\\DirectoryList][directory-list] 和值分別是目錄的絕對路徑或其URL路徑。
+指定一个关联数组，其中的键是来自的常量 [\\Magento\\App\\Filesystem\\DirectoryList][directory-list] 和值分别是目录的绝对路径或其URL路径。
 
-您可以設定 `MAGE_DIRS` 下列任一種方式：
+您可以设置 `MAGE_DIRS` 通过下列任意方式执行：
 
-- [設定啟動程式引數的值](../bootstrap/set-parameters.md)
-- 使用自訂進入點指令碼，如下所示：
+- [设置引导参数值](../bootstrap/set-parameters.md)
+- 使用自定义入口点脚本，如下所示：
 
    ```php
    <?php
@@ -48,7 +48,7 @@ ht-degree: 0%
    $bootstrap->run($app);
    ```
 
-上述範例會設定 `[cache]` 和 `[media]` 目錄 `/mnt/nfs/cache` 和 `/mnt/nfs/media`（分別）。
+上例为以下对象设置路径： `[cache]` 和 `[media]` 目录 `/mnt/nfs/cache` 和 `/mnt/nfs/media`，则不会显示任何内容。
 
 <!-- link definitions -->
 

@@ -1,6 +1,6 @@
 ---
-title: Adobe安全性通知服務
-description: 瞭解如何取得有關Adobe產品的最新安全性更新。
+title: Adobe安全通知服务
+description: 了解如何获取有关Adobe产品的最新安全更新。
 role: User
 feature: Best Practices
 feature-set: Commerce
@@ -12,18 +12,18 @@ ht-degree: 0%
 
 ---
 
-# 安全性通知最佳實務
+# 安全通知最佳实践
 
-安全性是我們的首要任務之一，而Adobe也瞭解安全性對客戶來說也很重要。
+安全性是我们的最高优先事项之一，Adobe也知道安全性对客户也很重要。
 
-此 [!DNL Adobe Security Notification Service] 是免費的電子郵件通知服務，Adobe會使用此服務向客戶傳送有關Adobe產品安全性的資訊。
+此 [!DNL Adobe Security Notification Service] 是一种免费的电子邮件通知服务，Adobe使用该服务向客户发送有关Adobe产品安全性的信息。
 
-任何人都可以訂閱服務，而您隨時可以取消訂閱。
+任何人都可以订阅该服务，您随时可以取消订阅。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
 全部
 
-## 其他資訊
+## 其他信息
 
-[訂閱](https://www.adobe.com/subscription/adbeSecurityNotifications.html) 至Adobe安全性通知服務。
+[订阅](https://www.adobe.com/subscription/adbeSecurityNotifications.html) Adobe安全通知服务。

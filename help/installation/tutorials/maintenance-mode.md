@@ -1,6 +1,6 @@
 ---
-title: 啟用或停用維護模式
-description: 請依照下列步驟，自訂當您的Adobe Commerce或Magento Open Source部署因維護而停止時，客戶會看到的內容。
+title: 启用或禁用维护模式
+description: 按照以下步骤自定义客户在Adobe Commerce或Magento Open Source部署因维护而停止时看到的内容。
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 0%
 
 ---
 
-# 啟用或停用維護模式
+# 启用或禁用维护模式
 
-下列指南參考標準維護模式頁面。 如果您需要使用自訂維護頁面，請參閱 [建立自訂維護頁面](../../upgrade/troubleshooting/maintenance-mode-options.md) 主題。
+以下指南参考了标准维护模式页面。 如果您需要使用自定义维护页面，请参阅 [创建自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md) 主题。
 
-Adobe Commerce和Magento Open Source使用 [維護模式](../../configuration/bootstrap/application-modes.md#maintenance-mode) 以停用啟動程式。 在維護、升級或重新設定網站時，停用啟動載入功能會很有幫助。
+Adobe Commerce和Magento Open Source使用 [维护模式](../../configuration/bootstrap/application-modes.md#maintenance-mode) 以禁用引导。 在维护、升级或重新配置站点时，禁用引导很有用。
 
-應用程式會偵測維護模式，如下所示：
+应用程序检测维护模式，如下所示：
 
-* 若 `var/.maintenance.flag` 不存在，維護模式為關閉且應用程式正常運作。
-* 否則，維護模式會開啟，除非 `var/.maintenance.ip` 已存在。
+* 如果 `var/.maintenance.flag` 不存在，维护模式处于关闭状态，应用程序运行正常。
+* 否则，维护模式将开启，除非 `var/.maintenance.ip` 存在。
 
-   `var/.maintenance.ip` 可以包含IP位址清單。 如果使用HTTP存取進入點，且使用者端IP位址對應至該清單中的其中一個專案，則維護模式會關閉。
+   `var/.maintenance.ip` 可以包含IP地址列表。 如果使用HTTP访问入口点，并且客户端IP地址与该列表中的某个条目相对应，则维护模式将关闭。
 
-## 安裝應用程式
+## 安装应用程序
 
-使用此命令來啟用或停用維護模式之前，您必須 [安裝應用程式](../advanced.md).
+使用此命令启用或禁用维护模式之前，必须 [安装应用程序](../advanced.md).
 
-## 啟用或停用維護模式
+## 启用或禁用维护模式
 
-使用 `magento maintenance` 啟用或停用維護模式的CLI命令。
+使用 `magento maintenance` 用于启用或禁用维护模式的CLI命令。
 
-命令使用方式：
+命令用法：
 
 ```bash
 bin/magento maintenance:enable [--ip=<ip address> ... --ip=<ip address>] | [ip=none]
@@ -44,51 +44,51 @@ bin/magento maintenance:disable [--ip=<ip address> ... --ip=<ip address>] | [ip=
 bin/magento maintenance:status
 ```
 
-此 `--ip=<ip address>` 選項是劐免於維護模式的IP位址（例如，進行維護的開發人員）。 若要在同一命令中免除多個IP位址，請多次使用選項。
+此 `--ip=<ip address>` 选项是一个免除维护模式的IP地址（例如，执行维护的开发人员）。 要在同一命令中免除多个IP地址，请多次使用选项。
 
 >[!NOTE]
 >
->使用 `--ip=<ip address>` 替換為 `magento maintenance:disable` 儲存IP清單以供稍後使用。 若要清除劐免IP清單，請使用 `magento maintenance:enable --ip=none` 或參閱 [維護劐免IP位址清單](#maintain-the-list-of-exempt-ip-addresses).
+>使用 `--ip=<ip address>` 替换为 `magento maintenance:disable` 保存IP列表供以后使用。 要清除免除IP列表，请使用 `magento maintenance:enable --ip=none` 或参阅 [维护免除IP地址列表](#maintain-the-list-of-exempt-ip-addresses).
 
-此 `bin/magento maintenance:status` 命令會顯示維護模式的狀態。
+此 `bin/magento maintenance:status` 命令显示维护模式的状态。
 
-例如，啟用沒有IP位址劐免的維護模式：
+例如，启用没有IP地址劐免的维护模式：
 
 ```bash
 bin/magento maintenance:enable
 ```
 
-若要為192.0.2.10和192.0.2.11以外的所有使用者端啟用維護模式：
+要为除192.0.2.10和192.0.2.11之外的所有客户端启用维护模式，请执行以下操作：
 
 ```bash
 bin/magento maintenance:enable --ip=192.0.2.10 --ip=192.0.2.11
 ```
 
-將應用程式置於維護模式後，您必須停止所有訊息佇列消費者程式。
-尋找這些處理程式的一種方式是執行 `ps -ef | grep queue:consumers:start` 命令，然後執行 `kill <process_id>` 每個消費者的命令。 在多節點環境中，請在每個節點上重複此工作。
+将应用程序置于维护模式后，必须停止所有消息队列使用者进程。
+查找这些流程的一种方法是运行 `ps -ef | grep queue:consumers:start` 命令，然后运行 `kill <process_id>` 命令。 在多节点环境中，对每个节点重复此任务。
 
-## 維護劐免IP位址清單
+## 维护免除IP地址列表
 
-若要維護劐免IP位址清單，您可以使用 `[--ip=<ip list>]` 選項，或者您可以使用下列選項：
+要维护免除IP地址列表，您可以使用 `[--ip=<ip list>]` 选项，或者可以使用以下命令：
 
 ```bash
 bin/magento maintenance:allow-ips <ip address> .. <ip address> [--none]
 ```
 
-此 `<ip address> .. <ip address>` 語法是選用的空格分隔清單，列出要劐免的IP位址。
+此 `<ip address> .. <ip address>` 语法是要免除的IP地址的可选列表（以空格分隔）。
 
-此 `--none` 選項會清除清單。
+此 `--none` 选项清除列表。
 
-## 多商店設定
+## 多存储设置
 
 <!-- To set up multiple stores, each with a different layout and localized content, create a skin for each and put it into `pub/errors/{name}` where `{name}` is the store code. To distinguish between stores and websites with the same instance, use `pub/errors/{type}-{name}` where `{type}` is either `store` or `website` and matches the `MAGE_RUN_TYPE` in your server configuration. Another option is to pass the `$_GET['skin']` parameter to the intended processor. This method requires a specific configuration on your server. -->
 <!-- Replace the line below with the commented text after https://github.com/magento/magento2/pull/35095 is merged. -->
 
-如果您想要設定多個商店，每個商店都有不同的版面和當地語系化內容，請傳遞 `$_GET['skin']` 指定處理器的引數。
+如果要设置多个商店，且每个商店都具有不同的布局和本地化内容，请传递 `$_GET['skin']` 参数到目标处理器。
 
-在以下範例中，我們使用 `503` 輸入錯誤範本檔案，這需要當地語系化的內容。
+在以下示例中，我们使用 `503` 键入错误模板文件，此文件需要本地化的内容。
 
-的建構函式 `Error_Processor` 類別接受 `skin` GET引數以變更版面：
+的构造函数 `Error_Processor` 类接受 `skin` 用于更改布局的GET参数：
 
 ```php
 if (isset($_GET['skin'])) {
@@ -96,33 +96,33 @@ if (isset($_GET['skin'])) {
 }
 ```
 
-這也可以新增到中的重寫規則 `.htaccess` 附加檔案的 `skin` URL的引數。
+这还可以添加到中的重写规则 `.htaccess` 附加文件 `skin` URL参数。
 
-### $_GET[&#39;外觀&#39;] 引數
+### $_GET[&#39;外观&#39;] 参数
 
-若要使用 `skin` 引數：
+要使用 `skin` 参数：
 
-1. 檢查 `.maintenance.flag` 已存在。
-1. 記下主機位址，該位址指 `HTTP_HOST`或任何其他變數（例如ENV變數）。
-1. 檢查 `skin` 引數存在。
-1. 使用以下重寫規則設定引數。
+1. 检查 `.maintenance.flag` 存在。
+1. 记下主机地址，该地址指 `HTTP_HOST`或任何其他变量（例如ENV变量）。
+1. 检查 `skin` 参数存在。
+1. 使用下面的重写规则设置参数。
 
-   以下是重寫規則的一些範例：
+   以下是重写规则的一些示例：
 
-   * RewriteCond `%{DOCUMENT_ROOT}/var/.maintenance.flag -f`
-   * RewriteCond `%{HTTP_HOST} ^sub.example.com$`
-   * RewriteCond `%{QUERY_STRING} !(^|&)skin=sub(&|$)` [NC]
-   * 重寫規則 `^ %{REQUEST_URI}?skin=sub` [L]
+   * Rewritecond `%{DOCUMENT_ROOT}/var/.maintenance.flag -f`
+   * Rewritecond `%{HTTP_HOST} ^sub.example.com$`
+   * Rewritecond `%{QUERY_STRING} !(^|&)skin=sub(&|$)` [NC]
+   * 重写规则 `^ %{REQUEST_URI}?skin=sub` [L]
 
-1. 複製下列檔案：
+1. 复制以下文件：
 
-   * `pub/errors/default/503.phtml` 至 `pub/errors/sub/503.phtml`
-   * `pub/errors/default/css/styles.css` 至 `pub/errors/sub/styles.css`
+   * `pub/errors/default/503.phtml` 到 `pub/errors/sub/503.phtml`
+   * `pub/errors/default/css/styles.css` 到 `pub/errors/sub/styles.css`
 
-1. 編輯這些檔案，以在 `503.phtml` 中的檔案和自訂樣式 `styles.css` 檔案。
+1. 编辑这些文件以在 `503.phtml` 中的文件和自定义样式 `styles.css` 文件。
 
-   確保您的路徑指向 `errors` 目錄。 目錄名稱必須符合URL引數，如 `RewriteRule`. 在上一個範例中， `sub` 使用directory，它在 `RewriteRule` (`skin=sub`)
+   确保您的路径指向 `errors` 目录。 目录名称必须与 `RewriteRule`. 在上一个示例中， `sub` 使用directory ，它在 `RewriteRule` (`skin=sub`)
 
 >[!NOTE]
 >
->此 [nginx](../../configuration/multi-sites/ms-nginx.md) 必須為多存放區設定新增設定。
+>此 [恩金克斯](../../configuration/multi-sites/ms-nginx.md) 必须为多存储设置添加设置。

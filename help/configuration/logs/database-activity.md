@@ -1,6 +1,6 @@
 ---
-title: 記錄資料庫活動
-description: 設定Commerce以使用記錄器介面記錄資料庫活動。
+title: 记录数据库活动
+description: 配置Commerce以使用记录器界面记录数据库活动。
 feature: Configuration, Logs, Storage
 exl-id: 2487c5ec-a01e-4d87-bc5e-c33643b032df
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
@@ -10,20 +10,20 @@ ht-degree: 0%
 
 ---
 
-# 記錄資料庫活動
+# 记录数据库活动
 
-以下範例說明如何使用 [`Magento\Framework\DB\LoggerInterface`][interface]，有兩個實作：
+以下示例显示如何使用记录数据库活动 [`Magento\Framework\DB\LoggerInterface`][interface]，有两种实施：
 
-- 不記錄任何內容（預設）： [`Magento\Framework\DB\Logger\Quiet`][quiet]
-- 記錄到 `var/log` 目錄： [`Magento\Framework\DB\Logger\File`][file]
+- 不记录任何内容（默认）： [`Magento\Framework\DB\Logger\Quiet`][quiet]
+- 日志记录到 `var/log` 目录： [`Magento\Framework\DB\Logger\File`][file]
 
 >[!TIP]
 >
->您可以使用Commerce CLI來 [啟用和停用資料庫記錄](../cli/enable-logging.md#database-logging).
+>您可以使用Commerce CLI执行以下操作 [启用和禁用数据库日志记录](../cli/enable-logging.md#database-logging).
 
-若要變更的預設組態 `\Magento\Framework\DB\Logger\LoggerProxy`，編輯您的 `app/etc/di.xml`.
+要更改的默认配置，请 `\Magento\Framework\DB\Logger\LoggerProxy`，编辑您的 `app/etc/di.xml`.
 
-首先，變更預設值 `loggerAlias` 和 `logCallStack` 引數至：
+首先，更改默认值 `loggerAlias` 和 `logCallStack` 参数：
 
 ```xml
 <type name="Magento\Framework\DB\Logger\LoggerProxy">
@@ -36,7 +36,7 @@ ht-degree: 0%
 </type>
 ```
 
-之後，提供檔案路徑 `Magento\Framework\DB\Logger\File`：
+之后，提供文件路径 `Magento\Framework\DB\Logger\File`：
 
 ```xml
 <type name="Magento\Framework\DB\Logger\File">
@@ -46,13 +46,13 @@ ht-degree: 0%
 </type>
 ```
 
-最後，編譯程式碼使用：
+最后，使用以下代码进行编译：
 
 ```bash
 bin/magento setup:di:compile
 ```
 
-並使用以下方法清除快取：
+并通过以下方式清理缓存：
 
 ```bash
 bin/magento cache:clean

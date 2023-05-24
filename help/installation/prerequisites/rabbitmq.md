@@ -1,6 +1,6 @@
 ---
-title: 訊息代理人
-description: 請依照下列步驟安裝和設定必要的訊息代理程式軟體(例如 [!DNL RabbitMQ])進行內部部署，以安裝Adobe Commerce和Magento Open Source。
+title: 消息代理
+description: 按照以下步骤安装和配置所需的消息代理软件(例如 [!DNL RabbitMQ])，以进行Adobe Commerce和Magento Open Source的内部安装。
 exl-id: ae6200d6-540f-46b3-92ba-7df7f6bb6fae
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,69 +9,69 @@ ht-degree: 0%
 
 ---
 
-# 訊息代理人
+# 消息代理
 
-Adobe Commerce使用 [!DNL RabbitMQ] 開放原始碼訊息代理人。 它提供可靠、高可用性、可擴充且可攜式的傳訊系統。
+Adobe Commerce使用 [!DNL RabbitMQ] 开源消息代理。 它提供可靠、高可用性、可扩展且便携的消息传递系统。
 
-訊息佇列提供非同步通訊機制，讓訊息的傳送者與接收者不會相互聯絡。 他們也不需要同時與訊息佇列通訊。 當寄件者將郵件放入佇列時，郵件會儲存到收件者收到郵件為止。
+消息队列提供了一种异步通信机制，在这种机制中，消息的发送者和接收者不会相互联系。 它们也不需要同时与消息队列通信。 当发件人将邮件放入队列时，邮件将一直存储到收件人收到邮件为止。
 
-安裝Adobe Commerce或Magento Open Source之前，必須先建立訊息佇列系統。 基本順序為：
+必须先建立消息队列系统，然后才能安装Adobe Commerce或Magento Open Source。 基本顺序为：
 
-1. 安裝 [!DNL RabbitMQ] 以及任何必要條件。
+1. 安装 [!DNL RabbitMQ] 以及任何先决条件。
 1. Connect [!DNL RabbitMQ] Adobe Commerce或Magento Open Source。
 
 >[!NOTE]
 >
->您可以使用MySQL或 [!DNL RabbitMQ] 用於訊息佇列處理。 如需設定訊息佇列系統的詳細資訊，請參閱 [訊息佇列總覽](https://developer.adobe.com/commerce/php/development/components/message-queues/). 如果您搭配Adobe Commerce使用大量API，訊息佇列系統設定預設為使用 [!DNL RabbitMQ] 作為訊息代理人。 另請參閱 [啟動訊息佇列消費者](../../configuration/cli/start-message-queues.md) 以取得詳細資訊。
+>您可以使用MySQL或 [!DNL RabbitMQ] 用于消息队列处理。 有关设置消息队列系统的详细信息，请参阅 [消息队列概述](https://developer.adobe.com/commerce/php/development/components/message-queues/). 如果将Bulk API与Adobe Commerce一起使用，则消息队列系统配置默认为使用 [!DNL RabbitMQ] 作为消息代理。 参见 [启动消息队列使用者](../../configuration/cli/start-message-queues.md) 了解更多信息。
 
-## 安裝 [!DNL RabbitMQ] 在Ubuntu上
+## 安装 [!DNL RabbitMQ] 在Ubuntu上
 
-若要安裝 [!DNL RabbitMQ] 在Ubuntu 16上，輸入下列指令：
+安装 [!DNL RabbitMQ] 在Ubuntu 16上，输入以下命令：
 
 ```bash
 sudo apt install -y rabbitmq-server
 ```
 
-此命令也會安裝必要的Erlang套裝程式。
+此命令还会安装所需的Erlang软件包。
 
-如果您有舊版Ubuntu， [!DNL RabbitMQ] 建議從他們的網站安裝套件。
+如果您有旧版Ubuntu， [!DNL RabbitMQ] 建议从其网站安装包。
 
-1. 從下載.deb套件 [rabbitmq-server](https://www.rabbitmq.com/download.html).
-1. 使用安裝套件 `dpkg`.
+1. 从下载.deb包 [rabbitmq-server](https://www.rabbitmq.com/download.html).
+1. 使用安装包 `dpkg`.
 
-請參閱 [在Debian/Ubuntu上安裝](https://www.rabbitmq.com/install-debian.html) 以取得詳細資訊。
+请参阅 [在Debian/Ubuntu上安装](https://www.rabbitmq.com/install-debian.html) 了解更多信息。
 
-## 安裝 [!DNL RabbitMQ] 在CentOS上
+## 安装 [!DNL RabbitMQ] 在CentOS上
 
-### 安裝Erlang
+### 安装Erlang
 
-[!DNL RabbitMQ] 是使用Erlang程式設計語言撰寫的，必須安裝在與 [!DNL RabbitMQ].
+[!DNL RabbitMQ] 使用Erlang编程语言编写，该语言必须安装在与相同的系统上 [!DNL RabbitMQ].
 
-另請參閱 [手動安裝](https://www.erlang-solutions.com/downloads/) 以取得詳細資訊。
+参见 [手动安装](https://www.erlang-solutions.com/downloads/) 了解更多信息。
 
-請參閱 [[!DNL RabbitMQ]/Erlang版本對照表](https://www.rabbitmq.com/which-erlang.html) 以安裝正確的版本。
+请参阅 [[!DNL RabbitMQ]/Erlang版本列表](https://www.rabbitmq.com/which-erlang.html) 以安装正确的版本。
 
-### 安裝 [!DNL RabbitMQ]
+### 安装 [!DNL RabbitMQ]
 
-此 [!DNL RabbitMQ] 伺服器包含在CentOS上，但版本通常較舊。 [!DNL RabbitMQ] 建議從他們的網站安裝套件。
+此 [!DNL RabbitMQ] 服务器包含在CentOS中，但版本通常较旧。 [!DNL RabbitMQ] 建议从其网站安装包。
 
-請參閱 [!DNL RabbitMQ] 安裝頁面以取得最新支援的版本。 Adobe Commerce和Magento Open Source2.3和2.4支援 [!DNL RabbitMQ] 3.8.x.
+请参阅 [!DNL RabbitMQ] 安装页面以获取支持的最新版本。 Adobe Commerce和Magento Open Source2.3及2.4支持 [!DNL RabbitMQ] 3.8.x.
 
-請參閱 [在RPM Linux上進行安裝](https://www.rabbitmq.com/install-rpm.html) 以取得詳細資訊。
+请参阅 [在基于rpm的Linux上安装](https://www.rabbitmq.com/install-rpm.html) 了解更多信息。
 
-## 設定 [!DNL RabbitMQ]
+## 配置 [!DNL RabbitMQ]
 
-檢閱正式檔案 [!DNL RabbitMQ] 設定和管理檔案 [!DNL RabbitMQ]. 請注意下列專案：
+查看官方网站 [!DNL RabbitMQ] 配置和管理文档 [!DNL RabbitMQ]. 请注意以下项目：
 
-* 環境變數
-* 連線埠存取
-* 預設使用者帳戶
-* 啟動和停止代理人
-* 系統限制
+* 环境变量
+* 端口访问
+* 默认用户帐户
+* 启动和停止代理
+* 系统限制
 
-## 安裝方式 [!DNL RabbitMQ] 並連線
+## 安装方式 [!DNL RabbitMQ] 并连接
 
-如果您安裝Adobe Commerce或Magento Open Source _晚於_ 您安裝 [!DNL RabbitMQ]，請在安裝期間新增下列命令列引數：
+如果您安装Adobe Commerce或Magento Open Source _之后_ 您安装 [!DNL RabbitMQ]，在安装期间添加以下命令行参数：
 
 ```bash
 --amqp-host="<hostname>" --amqp-port="5672" --amqp-user="<user_name>" --amqp-password="<password>" --amqp-virtualhost="/"
@@ -79,18 +79,18 @@ sudo apt install -y rabbitmq-server
 
 其中：
 
-| 引數 | 說明 |
+| 参数 | 描述 |
 |--- |--- |
-| `--amqp-host` | 主機名稱，其中 [!DNL RabbitMQ] 已安裝。 |
-| `--amqp-port` | 用來連線的連線埠 [!DNL RabbitMQ]. 預設值為 `5672`. |
-| `--amqp-user` | 用於連線到的使用者名稱 [!DNL RabbitMQ]. 不要使用預設使用者 `guest`. |
-| `--amqp-password` | 用於連線的密碼 [!DNL RabbitMQ]. 不要使用預設密碼 `guest`. |
-| `--amqp-virtualhost` | 用於連線的虛擬主機 [!DNL RabbitMQ]. 預設值為 `/`. |
-| `--amqp-ssl` | 指示是否連線到 [!DNL RabbitMQ]. 預設值為 `false`. 如果您將值設為true，請參閱設定SSL以取得詳細資訊。 |
+| `--amqp-host` | 主机名，其中 [!DNL RabbitMQ] 已安装。 |
+| `--amqp-port` | 用于连接的端口 [!DNL RabbitMQ]. 默认为 `5672`. |
+| `--amqp-user` | 用于连接到的用户名 [!DNL RabbitMQ]. 不使用默认用户 `guest`. |
+| `--amqp-password` | 用于连接的密码 [!DNL RabbitMQ]. 不使用默认密码 `guest`. |
+| `--amqp-virtualhost` | 用于连接的虚拟主机 [!DNL RabbitMQ]. 默认为 `/`. |
+| `--amqp-ssl` | 指示是否连接到 [!DNL RabbitMQ]. 默认为 `false`. 如果将该值设置为true，请参阅配置SSL以了解更多信息。 |
 
 ## Connect [!DNL RabbitMQ]
 
-如果您已安裝Adobe Commerce或Magento Open Source，而且您想要將其連線至 [!DNL RabbitMQ]，新增 `queue` 中的區段 `<install_directory>/app/etc/env.php` 檔案，使其類似於以下內容：
+如果已安装Adobe Commerce或Magento Open Source，并且要将其连接到 [!DNL RabbitMQ]，添加 `queue` 中的部分 `<install_directory>/app/etc/env.php` 文件，以便它类似于以下内容：
 
 ```php
 'queue' =>
@@ -106,17 +106,17 @@ sudo apt install -y rabbitmq-server
   ),
 ```
 
-您也可以設定 [!DNL RabbitMQ] 設定值使用 `bin/magento setup:config:set` 命令：
+您还可以设置 [!DNL RabbitMQ] 配置值使用 `bin/magento setup:config:set` 命令：
 
 ```bash
 bin/magento setup:config:set --amqp-host="rabbitmq.example.com" --amqp-port="11213" --amqp-user="magento" --amqp-password="magento" --amqp-virtualhost="/"
 ```
 
-執行命令或更新 `<install_directory>/app/etc/env.php` 具有AMQP設定值的檔案，執行 `bin/magento setup:upgrade` 以套用變更，並建立所需的佇列和交換 [!DNL RabbitMQ].
+运行命令或更新 `<install_directory>/app/etc/env.php` 文件和AMQP配置值，运行 `bin/magento setup:upgrade` 以应用更改并在中创建所需的队列和交换 [!DNL RabbitMQ].
 
-## 設定SSL
+## 配置SSL
 
-若要設定SSL支援，請編輯 `ssl` 和 `ssl_options` 中的引數 `<install_directory>/app/etc/env.php` 檔案，以便它們類似於以下內容：
+要配置对SSL的支持，请编辑 `ssl` 和 `ssl_options` 中的参数 `<install_directory>/app/etc/env.php` 文件，以便它们类似于以下内容：
 
 ```php
 'queue' =>
@@ -138,6 +138,6 @@ bin/magento setup:config:set --amqp-host="rabbitmq.example.com" --amqp-port="112
   ),
 ```
 
-## 啟動訊息佇列消費者
+## 启动消息队列使用者
 
-連線Adobe Commerce和之後 [!DNL RabbitMQ]，您必須啟動訊息佇列取用者。 另請參閱 [設定訊息佇列](../../configuration/cli/start-message-queues.md) 以取得詳細資訊。
+在连接Adobe Commerce和之后 [!DNL RabbitMQ]，则必须启动消息队列使用者。 参见 [配置消息队列](../../configuration/cli/start-message-queues.md) 了解详细信息。

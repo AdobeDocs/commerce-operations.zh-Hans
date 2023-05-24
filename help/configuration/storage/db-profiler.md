@@ -1,6 +1,6 @@
 ---
-title: 設定資料庫分析工具
-description: 請參閱如何設定資料庫效能分析工具輸出的範例。
+title: 配置数据库探查器
+description: 请参阅有关如何为数据库探查器配置输出的示例。
 feature: Configuration, Storage
 badge: label="Contributed by Atish Goswami" type="Informational" url="https://github.com/atishgoswami" tooltip="Atish Goswami"
 exl-id: 87780db5-6e50-4ebb-9591-0cf22ab39af5
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 ---
 
-# 設定資料庫分析工具
+# 配置数据库探查器
 
-Commerce資料庫分析工具會顯示頁面上實作的所有查詢，包括每個查詢的時間以及套用的引數。
+Commerce数据库探查器显示页面上实施的所有查询，包括每个查询的时间以及应用了哪些参数。
 
-## 步驟1：修改部署組態
+## 步骤1：修改部署配置
 
-修改 `<magento_root>/app/etc/env.php` 將下列參照新增至 [資料庫效能分析工具類別](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php)：
+修改 `<magento_root>/app/etc/env.php` 将以下引用添加到 [数据库探查器类](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php)：
 
 ```php?start_inline=1
         'profiler' => [
@@ -26,7 +26,7 @@ Commerce資料庫分析工具會顯示頁面上實作的所有查詢，包括每
         ],
 ```
 
-範例如下：
+下面是一个示例：
 
 ```php?start_inline=1
  'db' =>
@@ -53,17 +53,17 @@ Commerce資料庫分析工具會顯示頁面上實作的所有查詢，包括每
   ),
 ```
 
-## 步驟2：設定輸出
+## 步骤2：配置输出
 
-在Commerce應用程式啟動程式檔案中設定輸出；這可能是 `<magento_root>/pub/index.php` 或者，它可以位於Web伺服器虛擬主機設定中。
+在Commerce应用程序引导文件中配置输出；这可能是 `<magento_root>/pub/index.php` 或者，它可以位于Web服务器虚拟主机配置中。
 
-下列範例會在三欄表格中顯示結果：
+以下示例在三列表中显示结果：
 
-- 總時間（顯示頁面上執行所有查詢的總時間）
-- SQL （顯示所有SQL查詢；列標題顯示查詢計數）
-- 查詢引數（顯示每個SQL查詢的引數）
+- 总时间（显示运行页面上所有查询的总时间）
+- SQL （显示所有SQL查询；行标题显示查询计数）
+- 查询参数（显示每个SQL查询的参数）
 
-若要設定輸出，請在 `$bootstrap->run($app);` 在您的bootstrap檔案中的行：
+要配置输出，请将以下内容添加到 `$bootstrap->run($app);` bootstrap文件中的行：
 
 ```php?start_inline=1
 /** @var \Magento\Framework\App\ResourceConnection $res */
@@ -87,8 +87,8 @@ foreach ($profiler->getQueryProfiles() as $query) {
 echo "</table>";
 ```
 
-## 步驟3：檢視結果
+## 步骤3：查看结果
 
-前往店面或管理員中的任何頁面檢視結果。 範例如下：
+转到店面或管理员中的任何页面以查看结果。 下面是一个示例：
 
-![範例資料庫效能分析工具結果](../../assets/configuration/db-profiler-results.png)
+![示例数据库分析器结果](../../assets/configuration/db-profiler-results.png)

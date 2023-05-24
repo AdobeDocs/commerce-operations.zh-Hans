@@ -1,6 +1,6 @@
 ---
-title: 整合 [!DNL Site-Wide Analysis Tool]
-description: 請依照下列步驟擷取 [!DNL Upgrade Compatibility Tool] 報告來源： [!DNL Site-Wide Analysis Tool] 您的Adobe Commerce專案儀表板。
+title: 集成 [!DNL Site-Wide Analysis Tool]
+description: 按照以下步骤检索 [!DNL Upgrade Compatibility Tool] 报告来源 [!DNL Site-Wide Analysis Tool] 您的Adobe Commerce项目上的仪表板。
 exl-id: 1ef37294-a837-47a4-841c-4027087acf12
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,31 +9,31 @@ ht-degree: 0%
 
 ---
 
-# 整合 [!DNL Site-Wide Analysis Tool]
+# 集成 [!DNL Site-Wide Analysis Tool]
 
-此 [!DNL Site-Wide Analysis Tool] 提供24小時全年無休的即時效能監控、報告和建議，以確保Adobe Commerce執行個體的安全性和可操作性。
+此 [!DNL Site-Wide Analysis Tool] 提供7天24小时的实时性能监控、报告和建议，以确保Adobe Commerce实例的安全性和可操作性。
 
-此 [!DNL Upgrade Compatibility Tool] 現已與 [!DNL Site-Wide Analysis Tool] 以便讓非技術人員能夠執行 [!DNL Upgrade Compatibility Tool] 並取得 [報告](../upgrade-compatibility-tool/reports.md) 包含每個檔案的問題清單。
+此 [!DNL Upgrade Compatibility Tool] 现已与 [!DNL Site-Wide Analysis Tool] 以便让非技术人员能够运行 [!DNL Upgrade Compatibility Tool] 并获取 [报告](../upgrade-compatibility-tool/reports.md) 包含每个文件的问题列表。
 
-請參閱 [[!DNL Site-Wide Analysis Tool] 使用手冊](https://docs.magento.com/user-guide/reports/site-wide-analysis-tool.html) 以取得詳細資訊。
+请参阅 [[!DNL Site-Wide Analysis Tool] 用户指南](https://docs.magento.com/user-guide/reports/site-wide-analysis-tool.html) 了解更多信息。
 
-## 執行 [!DNL Upgrade Compatibility Tool] 從 [!DNL Site-Wide Analysis Tool]
+## 运行 [!DNL Upgrade Compatibility Tool] 从 [!DNL Site-Wide Analysis Tool]
 
-導覽至 [!DNL Site-Wide Analysis Tool] 專案的控制面板，並找到 [!DNL Upgrade Compatibility Tool] Widget.
+导航到 [!DNL Site-Wide Analysis Tool] 您的项目的仪表板，并找到 [!DNL Upgrade Compatibility Tool] 构件。
 
-![UCT SWAT Widget — 初始](../../assets/upgrade-guide/uct-swat-initial.png)
+![UCT SWAT小组件 — 初始](../../assets/upgrade-guide/uct-swat-initial.png)
 
-按一下 **[!UICONTROL Run Upgrade Scan]**. 掃描可能需要一些時間，視專案大小而定。 旋轉圖表示掃描正在進行中。
+单击 **[!UICONTROL Run Upgrade Scan]**. 扫描可能需要一些时间，具体取决于项目大小。 旋转图标表示扫描正在进行中。
 
-![UCT SWAT Widget — 進行中](../../assets/upgrade-guide/uct-swat-progress.png)
+![UCT SWAT小组件 — 进行中](../../assets/upgrade-guide/uct-swat-progress.png)
 
-掃描完成後，高階結果會顯示在Widget中。
+扫描完成后，将在Widget中显示高级结果。
 
-![UCT SWAT Widget — 結果](../../assets/upgrade-guide/uct-swat-results.png)
+![UCT SWAT小组件 — 结果](../../assets/upgrade-guide/uct-swat-results.png)
 
-按一下 **[!UICONTROL Download Report]** 以擷取 [!DNL Upgrade Compatibility Tool] [HTML報告](../upgrade-compatibility-tool/reports.md#html-report) 並檢閱詳細資訊。
+单击 **[!UICONTROL Download Report]** 以检索 [!DNL Upgrade Compatibility Tool] [HTML报告](../upgrade-compatibility-tool/reports.md#html-report) 并查看详细信息。
 
 
 >[!NOTE]
 >
-> 執行 [!DNL Upgrade Compatibility Tool] 透過 [!DNL Site-Wide Analysis Tool] 可最佳化您的結果，並協助您專注於target升級的新問題和重要問題。 它會使用 [`--ignore-current-version-compatibility-errors`](run.md#optimize-your-results) 選項並一律顯示比較您專案版本與最新發行版本的結果。
+> 运行 [!DNL Upgrade Compatibility Tool] 通过 [!DNL Site-Wide Analysis Tool] 优化结果，并帮助您重点解决对Target升级来说是新的和关键的问题。 它使用 [`--ignore-current-version-compatibility-errors`](run.md#optimize-your-results) 选项并始终显示将项目版本与最新发布版本进行比较的结果。

@@ -1,6 +1,6 @@
 ---
-title: Realpath快取大小
-description: 瞭解如何透過更新PHP Readlpath快取設定以使用建議的設定來最佳化Adobe Commerce效能。
+title: Realpath缓存大小
+description: 了解如何通过更新PHP readlpath缓存配置以使用推荐的设置来优化Adobe Commerce性能。
 role: Developer
 feature: Best Practices
 feature-set: Commerce
@@ -12,30 +12,30 @@ ht-degree: 0%
 
 ---
 
-# Realpath快取設定最佳實務
+# Realpath缓存配置最佳实践
 
-Realpath快取會快取參照之檔案名稱的真實檔案系統路徑，而非每次都查詢。 每次執行各種檔案功能或需要檔案並使用相對路徑時，PHP都必須查詢該檔案真正存在的位置。
+Realpath缓存缓存所引用文件名的实际文件系统路径，而不是每次都查找它们。 每次执行各种文件功能或需要某个文件并使用相对路径时，PHP都必须查找该文件确实存在的位置。
 
-若要改善Commerce效能，請使用以下建議的設定來設定 `realpath_cache` 中的設定 `php.ini` 檔案：
+要提高Commerce性能，请使用以下推荐的设置来配置 `realpath_cache` 中的设置 `php.ini` 文件：
 
-- 將快取大小設定為10 MB (`realpath cache_size=10M`)
-- 將存留時間(ttl)設為7200秒(`realpath_cache_ttl=7200`)
+- 将缓存大小设置为10 MB (`realpath cache_size=10M`)
+- 将生存时间(ttl)设置为7200秒(`realpath_cache_ttl=7200`)
 
-如需設定指示，請參閱 [如何設定PHP選項](../../../installation/prerequisites/php-settings.md#how-to-set-php-options).
+有关配置说明，请参阅 [如何设置PHP选项](../../../installation/prerequisites/php-settings.md#how-to-set-php-options).
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-- Adobe Commerce內部部署，所有2.3.x版及更高版本
-- 雲端基礎結構上的Adobe Commerce，所有2.3.x版及更新版本
+- Adobe Commerce内部部署，所有版本2.3.x及更高版本
+- 云基础架构上的Adobe Commerce，所有版本2.3.x及更高版本
 
-## 對效能的潛在影響
+## 潜在的性能影响
 
-如果Realpath快取設定值太低或太高，它會在產生快取時增加額外的負荷，而這會降低效能。
+如果Realpath缓存配置值太低或太高，则会在缓存生成期间增加额外的开销，这会降低性能。
 
-## 其他資訊
+## 其他信息
 
-- [內部部署： PHP設定](../../../performance/software.md#php-settings)
-- 在雲端基礎結構上：
-   - [資料庫最佳實務](database-on-cloud.md)
-   - [Magento Commerce Cloud中最常見的資料庫問題](../maintenance/resolve-database-performance-issues.md)
-- [索引器「依排程更新」可最佳化Magento效能](../maintenance/indexer-configuration.md)
+- [内部部署： PHP设置](../../../performance/software.md#php-settings)
+- 在云基础架构上：
+   - [数据库最佳实践](database-on-cloud.md)
+   - [Magento Commerce Cloud中最常见的数据库问题](../maintenance/resolve-database-performance-issues.md)
+- [索引器“按计划更新”可优化Magento性能](../maintenance/indexer-configuration.md)

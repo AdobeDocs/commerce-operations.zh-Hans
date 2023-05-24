@@ -1,6 +1,6 @@
 ---
-title: 從Elasticsearch移轉至OpenSearch
-description: 瞭解如何取代用於內部部署Adobe Commerce和Magento Open Source的搜尋引擎。
+title: 从Elasticsearch迁移到OpenSearch
+description: 了解如何替换用于Adobe Commerce和Magento Open Source本地安装的搜索引擎。
 exl-id: 56f1e609-83d2-4705-99d8-b395bb511411
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,24 +9,24 @@ ht-degree: 0%
 
 ---
 
-# 移轉至OpenSearch
+# 迁移到OpenSearch
 
-OpenSearch是在Elasticsearch授權變更後建立的Elasticsearch7.10.2的開放原始碼復本。
+OpenSearch是在Elasticsearch的许可更改之后创建的Elasticsearch7.10.2的开源分支。
 
-截至2.4.4、2.4.3-p2和2.3.7-p3，Adobe Commerce和Magento Open Source支援OpenSearch。 雖然雲端基礎結構上的Adobe Commerce已不再支援內部部署安裝，但仍繼續支援Elasticsearch。 從2.4.6版開始，OpenSearch在管理員組態設定中有自己的模組和欄位。
+从2.4.4、2.4.3-p2和2.3.7-p3开始，Adobe Commerce和Magento Open Source支持OpenSearch。 尽管云基础架构上的Adobe Commerce不再支持内部部署，但内部部署仍继续支持Elasticsearch。 从版本2.4.6开始，OpenSearch在管理员配置设置中拥有自己的模块和字段。
 
-## 移轉路徑
+## 迁移路径
 
-移轉至OpenSearch的步驟非常簡單，並且基本上遵循Elasticsearch設定的步驟。 這些步驟假設Adobe Commerce是唯一使用搜尋引擎的應用程式。 如果有多個應用程式使用搜尋引擎，請遵循正式移轉指南 [從開放原始碼Elasticsearch移至OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/).
+迁移到OpenSearch的步骤非常简单，并且基本上遵循Elasticsearch配置的步骤。 这些步骤假定Adobe Commerce是唯一使用搜索引擎的应用程序。 如果有多个应用程序使用搜索引擎，请遵循官方的迁移指南 [从开源Elasticsearch移动到OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/).
 
-1. 確保您的安裝符合 [搜尋引擎必要條件](../../installation/prerequisites/search-engine/overview.md).
+1. 确保您的安装符合 [搜索引擎先决条件](../../installation/prerequisites/search-engine/overview.md).
 
-1. 將網站置於 [維護模式](../../installation/tutorials/maintenance-mode.md).
+1. 将站点放入 [维护模式](../../installation/tutorials/maintenance-mode.md).
 
-1. 選擇性地解除安裝Elasticsearch。
+1. （可选）卸载Elasticsearch。
 
-1. [安裝OpenSearch](https://opensearch.org/docs/latest/opensearch/install/important-settings/).
+1. [安装OpenSearch](https://opensearch.org/docs/latest/opensearch/install/important-settings/).
 
-1. [設定搜尋引擎](../../configuration/search/configure-search-engine.md) 並執行相關工作，例如排清快取和重新索引目錄搜尋索引。
+1. [配置搜索引擎](../../configuration/search/configure-search-engine.md) 并执行相关任务，例如刷新缓存和重新索引目录搜索索引。
 
-不需要進一步變更設定值。
+无需进一步更改配置值。

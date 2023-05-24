@@ -1,6 +1,6 @@
 ---
-title: 存取 [!DNL Observation for Adobe Commerce] Nerdlet
-description: 瞭解如何存取 [!DNL Observation for Adobe Commerce] Nerdlet。
+title: 访问 [!DNL Observation for Adobe Commerce] Nerdlet
+description: 了解如何访问 [!DNL Observation for Adobe Commerce] 书呆子。
 exl-id: 4b6f554e-685b-465d-8676-b70e790606c6
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,16 +9,16 @@ ht-degree: 0%
 
 ---
 
-# 存取 [!DNL Observation for Adobe Commerce] Nerdlet
+# 访问 [!DNL Observation for Adobe Commerce] Nerdlet
 
-若要使用 [!DNL New Relic Observation for Adobe Commerce] Nerdlet，確保您擁有 [!DNL New Relic].
+要使用 [!DNL New Relic Observation for Adobe Commerce] nerdlet，确保您有权访问 [!DNL New Relic].
 
-1. 前往 [!UICONTROL Okta] 首頁(僅供內部Adobe使用者使用)。
-1. 選取 [!UICONTROL New Relic applet] (僅適用於內部Adobe使用者)。
+1. 转到 [!UICONTROL Okta] 主页(仅适用于内部Adobe用户)。
+1. 选择 [!UICONTROL New Relic applet] (仅适用于内部Adobe用户)。
 
    ![New Relic applet](../../assets/tools/observation-for-adobe-commerce/new-relic-applet.jpeg)
 
-1. 驗證透過 [!UICONTROL Okta] (僅適用於內部Adobe使用者)。
-1. 從 [!DNL New Relic] 首頁，選取「應用程式」功能表專案。
+1. 通过身份验证 [!UICONTROL Okta] (仅适用于内部Adobe用户)。
+1. 从 [!DNL New Relic] 在主页上，选择应用程序菜单项。
 
-   ![New Relic首頁](../../assets/tools/observation-for-adobe-commerce/new-relic-homepage.jpeg)
+   ![New Relic主页](../../assets/tools/observation-for-adobe-commerce/new-relic-homepage.jpeg)

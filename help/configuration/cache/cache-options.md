@@ -1,6 +1,6 @@
 ---
-title: 快取選項
-description: 設定對低階快取儲存體的存取權。
+title: 缓存选项
+description: 配置对低级缓存存储的访问。
 feature: Configuration, Cache
 exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
@@ -10,20 +10,20 @@ ht-degree: 0%
 
 ---
 
-# 低階快取選項
+# 低级缓存选项
 
-Commerce應用程式會使用低階快取前端和後端來提供對快取儲存區的存取權。
+Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的访问。
 
-## 低階前端快取
+## 低级前端缓存
 
-商務延伸 [Zend_Cache_Core](https://framework.zend.com/manual/1.12/en/zend.cache.frontends.html) 透過實作 [Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php) 前端快取。
+商务扩展 [Zend_Cache_Core](https://framework.zend.com/manual/1.12/en/zend.cache.frontends.html) 通过实施 [Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php) 前端缓存。
 
-## 低階後端快取
+## 低级后端缓存
 
-一般而言，Commerce應用程式適用於具有下列條件的任何後端快取： [Zend_Cache後端](https://framework.zend.com/manual/1.12/en/zend.cache.backends.html) 支援。 不過，本指南僅涵蓋下列低階後端快取：
+通常，Commerce应用程序可与任何后端缓存配合使用，后端 [Zend_Cache后端](https://framework.zend.com/manual/1.12/en/zend.cache.backends.html) 支持。 但是，本指南仅涵盖以下低级后端缓存：
 
 - [Redis](config-redis.md)
-- [資料庫](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)
-- 檔案系統（預設）：不需要設定即可使用檔案系統快取。
+- [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)
+- 文件系统（默认）：无需配置即可使用文件系统缓存。
 
-[清漆](config-varnish.md) 不需要設定低階快取後端。
+[清漆](config-varnish.md) 不需要设置低级缓存后端。

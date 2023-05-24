@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Extensions]'
-description: 瞭解 [!DNL Extensions] 索引標籤中的 [!DNL Site-Wide Analysis Tool]，以及何時使用、其好處和最佳實務。
+description: 了解 [!DNL Extensions] 在中选项卡 [!DNL Site-Wide Analysis Tool]，以及何时使用它、它的好处和最佳实践。
 exl-id: e0ddc158-b268-44cc-8998-6b853d92b835
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 0%
 
 # [!DNL Extensions]
 
-一個 [!DNL extension] 是自訂模組、語言套件，或是將新功能新增至核心Adobe Commerce產品的自訂模組和語言套件組合。 [Commerce Marketplace](https://marketplace.magento.com/extensions.html) 提供以下精選 [!DNL extensions] 免費提供和限量銷售。 您可以找到 [!DNL extensions] 安裝在您的Adobe Commerce執行個體上 [!DNL Site-Wide Analysis Tool].
+An [!DNL extension] 是一个自定义模块、语言包，或者是自定义模块和语言包的组合，为核心的Adobe Commerce产品添加了新功能。 [Commerce Marketplace](https://marketplace.magento.com/extensions.html) 提供一系列选项 [!DNL extensions] 免费和限量出售。 您可以找到 [!DNL extensions] 安装在您的Adobe Commerce实例上 [!DNL Site-Wide Analysis Tool].
 
-## 使用時機
+## 何时使用
 
-此 [!DNL Extensions] 索引標籤中的 [!DNL Site-Wide Analysis Tool] 提供以下資訊： [!DNL extensions] 已安裝在Adobe Commerce執行個體上的版本。 您可以使用此索引標籤來檢查 [!DNL extensions] 您正在使用、其版本和其他詳細資訊，例如說明、功能和使用。
+此 [!DNL Extensions] 在中选项卡 [!DNL Site-Wide Analysis Tool] 提供有关 [!DNL extensions] 安装在您的Adobe Commerce实例上的版本。 您可以使用此选项卡检查 [!DNL extensions] 您正在使用、其版本以及其他详细信息，如描述、功能和使用。
 
-## 優點
+## 优点
 
-* 快速瀏覽所有內容，節省時間 [!DNL extensions] 已安裝在您的Adobe Commerce執行個體上。
+* 通过快速概述全部内容节省时间 [!DNL extensions] 安装在您的Adobe Commerce实例上。
 
-* 取得已安裝版本的相關資訊 [!DNL extensions] 並將其更新至最新版本。
+* 获取有关已安装版本的信息 [!DNL extensions] 并将其更新到最新版本。
 
-## 最佳實務
+## 最佳实践
 
-* 保留您的協力廠商 [!DNL extensions] 更新至其最新版本。
+* 保留您的第三方 [!DNL extensions] 更新至其最新版本。
 
-* 確定 [!DNL extensions] 您選擇的「與您的Adobe Commerce執行個體相容」。
+* 确保 [!DNL extensions] 您选择的“与您的Adobe Commerce实例兼容”。
 
-* 如果您無法保留協力廠商 [!DNL extensions] 更新至其最新版本，請考慮使用不同的 [!DNL extensions].
+* 如果您无法保留您的第三方 [!DNL extensions] 更新到最新版本，请考虑使用不同的 [!DNL extensions].
 
-* 為避免潛在問題，請下載/購買協力廠商 [!DNL extensions] 來自信任的來源，例如 [Commerce Marketplace](https://marketplace.magento.com/extensions.html).
+* 为避免潜在问题，请下载/购买第三方 [!DNL extensions] 来自可靠来源，例如 [Commerce Marketplace](https://marketplace.magento.com/extensions.html).

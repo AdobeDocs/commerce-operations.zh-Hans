@@ -1,6 +1,6 @@
 ---
-title: 資料後移轉步驟
-description: 瞭解使用後需要採取哪些步驟 [!DNL Data Migration Tool] 將資料從Magento1移轉至Magento2。
+title: 数据迁移后的步骤
+description: 了解在使用后应采取哪些步骤 [!DNL Data Migration Tool] 将数据从Magento1迁移到Magento2。
 exl-id: 00171c41-ccea-4ebe-8958-becb9aa09973
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,16 +9,16 @@ ht-degree: 0%
 
 ---
 
-# 資料後移轉步驟
+# 数据迁移后的步骤
 
-完成移轉並徹底測試新的Magento2網站後，請執行以下工作：
+完成迁移并彻底测试新的Magento2站点后，请执行以下任务：
 
-* 將Magento1置於維護模式，並永久停止所有管理員活動
+* 将Magento1置于维护模式并永久停止所有管理员活动
 
-* 開始Magento2 cron工作
+* 启动Magento2 cron作业
 
-* [排清所有Magento2快取型別](../../../configuration/cli/manage-cache.md#clean-and-flush-cache-types)
+* [刷新所有Magento2缓存类型](../../../configuration/cli/manage-cache.md#clean-and-flush-cache-types)
 
 * [重新索引所有Magento2索引器](../../../configuration/cli/manage-indexers.md#reindex)
 
-* 變更DNS和負載平衡器以指向Magento2生產硬體
+* 更改DNS和负载平衡器以指向Magento2生产硬件

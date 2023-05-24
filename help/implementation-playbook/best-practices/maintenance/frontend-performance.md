@@ -1,6 +1,6 @@
 ---
-title: 稽核前端效能
-description: 透過使用網站效能工具稽核Adobe Commerce店面作業，找出並解決對網站效能有負面影響的問題。
+title: 审核前端性能
+description: 通过使用Web性能工具审核Adobe Commerce店面操作，识别并解决对网站性能产生负面影响的问题。
 role: Admin, User, Developer
 feature: Best Practices
 feature-set: Commerce
@@ -12,31 +12,31 @@ ht-degree: 0%
 
 ---
 
-# 前端效能的最佳實務
+# 前端性能最佳实践
 
-使用網頁效能工具來檢查Adobe Commerce商店的前端效能。
-這些工具會使用各種量度，提供強大的分析和建議，以改善線上商店的效能。
+使用Web性能工具检查Adobe Commerce商店的前端性能。
+这些工具使用各种量度提供强大的见解和建议以提高在线商店的性能。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
-## 檢查前端效能
+## 检查前端性能
 
-若要檢查網站商店的前端效能：
+要检查网站商店的前端性能，请执行以下操作：
 
-1. 使用Web效能工具稽核前端效能，例如：
+1. 使用Web性能工具审核前端性能，例如：
 
-   - **[Google燈塔](https://web.dev/measure/)**— Lighthouse針對效能、協助工具、漸進式網頁應用程式、SEO等專案進行稽核。 如需執行Lighthouse的不同方式的詳細資訊，請參閱 [Lighthouse概述](https://developer.chrome.com/docs/lighthouse/overview).)
-   - **[Google PageSpeed深入分析](https://pagespeed.web.dev/)**— PageSpeed Insights可快速傳送詳細報告，說明網頁效能緩慢的原因，並提供修正建議。
+   - **[Google灯塔](https://web.dev/measure/)**— Lighthouse对性能、可访问性、渐进式Web应用程序、SEO等进行了审核。 欲了解灯塔运行方式的详情，请参见 [Lighthouse概述](https://developer.chrome.com/docs/lighthouse/overview).)
+   - **[Google PageSpeed Insights](https://pagespeed.web.dev/)**— PageSpeed Insights可快速提交关于网页性能缓慢原因的详细报告，以及有关如何修复该问题的建议。
 
-1. 檢閱稽核報告並實作所提出的建議以改善商店效能。
+1. 审查审计报告，落实为改善商店业绩而提出的建议。
 
-## 其他資訊
+## 其他信息
 
-- [管理員使用者的索引管理](../../../configuration/cli/manage-indexers.md#configure-indexers)
-- [使用CLI進行索引管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
-- [適用於開發人員的索引概觀](https://developer.adobe.com/commerce/php/development/components/indexing/)
+- [管理员用户的索引管理](../../../configuration/cli/manage-indexers.md#configure-indexers)
+- [使用CLI进行索引管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
+- [面向开发人员的索引概述](https://developer.adobe.com/commerce/php/development/components/indexing/)

@@ -1,6 +1,6 @@
 ---
-title: 啟用設定檔分析
-description: 進一步瞭解如何讓MAGE Profiler搭配您的分析工具使用。
+title: 启用分析
+description: 了解有关使MAGE Profiler能够与您的分析工具一起使用的更多信息。
 exl-id: a46289ed-16dc-4a72-84ff-85fe825dac11
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,73 +9,73 @@ ht-degree: 0%
 
 ---
 
-# 啟用設定檔分析
+# 启用分析
 
-使用Commerce設定檔分析，您可以：
+通过Commerce分析，您可以：
 
-- 啟用內建分析工具。
+- 启用内置探查器。
 
-   您可以使用內建的效能分析工具搭配Commerce來執行分析效能等工作。 輪廓分析的性質取決於您使用的分析工具。 我們支援多種格式，包括HTML。 當您啟用效能分析工具時， `var/profiler.flag` 檔案會產生，指出效能評測器已啟用且已進行設定。 停用時，會刪除此檔案。
+   您可以使用带有Commerce的内置探查器来执行分析性能等任务。 分析的性质取决于您使用的分析工具。 我们支持多种格式，包括HTML。 启用Profiler时， `var/profiler.flag` 文件生成，指示已启用探查器并配置。 禁用后，此文件将被删除。
 
-- 在Commerce頁面上顯示相依性圖表。
+- 在Commerce页面上显示依赖关系图。
 
-   A _相依圖_ 是物件相依性及其所有相依性的清單，以及這些相依性的所有相依性等等。
+   A _依赖关系图_ 是一个列表，其中列出了对象依赖项及其所有依赖项，以及这些依赖项的所有依赖项，等等。
 
-   您應該對以下清單特別感興趣 _未使用的相依性_，這些物件之所以建立，是因為某些建構函式要求建立這些物件，但從未使用過（也就是說，沒有呼叫它們的方法）。 因此，建立這些相依性所花費的處理器時間和記憶體會被浪費。
+   您应该对以下列表特别感兴趣： _未使用的依赖关系_，这些对象之所以创建，是因为某些构造函数中请求了这些对象，但从未使用过（即，未调用任何它们的方法）。 因此，用于创建这些依赖项的处理器时间和内存被浪费了。
 
-Commerce提供下列基本功能： [`Magento\Framework\Profiler`][profiler].
+Commerce提供以下基本功能： [`Magento\Framework\Profiler`][profiler].
 
-您可以使用MAGE_PROFILER變數或命令列來啟用和設定效能評測器。
+可以使用MAGE_PROFILER变量或命令行来启用和配置Profiler。
 
-## 設定MAGE_PROFILER
+## 设置MAGE_PROFILER
 
-您可以設定 `MAGE_PROFILER` 以中討論的任何方式進行 [設定啟動程式引數的值](../bootstrap/set-parameters.md).
+您可以设置 `MAGE_PROFILER` 以中讨论的任何方式 [设置引导参数值](../bootstrap/set-parameters.md).
 
-`MAGE_PROFILER` 支援下列值：
+`MAGE_PROFILER` 支持以下值：
 
-- `1` 以啟用特定分析工具的輸出。
+- `1` 以启用特定分析工具的输出。
 
-   您可以使用下列其中一個值來啟用特定的效能評測器：
+   您可以使用以下值之一来启用特定的Profiler：
 
    - `csvfile` 使用 [`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`][csvfile]
-   - 任何其他值(不包括 `2`)，包括空白值，此值 [`Magento\Framework\Profiler\Driver\Standard\Output\Html`][html]
+   - 任何其他值(不包括 `2`)，包括一个空值，它使用 [`Magento\Framework\Profiler\Driver\Standard\Output\Html`][html]
 
-- `2` 以啟用相依性圖形。
+- `2` 启用依赖关系图。
 
-   相依性圖表通常顯示在頁面底部。 下圖顯示部分輸出：
+   依赖关系图通常显示在页面底部。 下图显示了输出的部分：
 
-   ![相依關係圖](../../assets/configuration/depend-graphs.png)
+   ![依赖关系图](../../assets/configuration/depend-graphs.png)
 
 ## CLI命令
 
-您可以使用CLI命令啟用或停用效能分析工具：
+您可以使用CLI命令启用或禁用Profiler：
 
-- `dev:profiler:enable <type>` 啟用效能分析工具，並設定 `type` 之 `html` （預設）或 `csvfile`. 啟用時，會顯示flagfile `var/profiler.flag` 「 」已建立。
-- `dev:profiler:disable` 停用效能分析工具。 停用時， flagfile `var/profiler.flag` 「 」已移除。
+- `dev:profiler:enable <type>` 使探查器能够 `type` 之 `html` （默认）或 `csvfile`. 启用后，将显示一个标志文件 `var/profiler.flag` 创建。
+- `dev:profiler:disable` 禁用Profiler。 禁用后，flagfile `var/profiler.flag` 将被删除。
 
-若要啟用相依性圖形，請使用變數選項。
+要启用依赖关系图，请使用变量选项。
 
-**啟用或停用效能分析工具**：
+**启用或禁用探查器**：
 
-1. 登入您的Commerce伺服器。
-1. 變更至Commerce安裝目錄。
-1. 以檔案系統擁有者的身分，啟用效能分析工具：
+1. 登录到您的Commerce服务器。
+1. 转到Commerce安装目录。
+1. 作为文件系统所有者，启用探查器：
 
-   若要使用型別啟用效能分析工具 `html` 並建立flagfile：
+   使用类型启用探查器 `html` 并创建一个flagfile ：
 
    ```bash
    bin/magento dev:profiler:enable html
    ```
 
-   若要使用型別啟用效能分析工具 `csvfile` 並建立flagfile：
+   使用类型启用探查器 `csvfile` 并创建一个flagfile ：
 
    ```bash
    bin/magento dev:profiler:enable csvfile
    ```
 
-   輸出已儲存到 `<project-root>/var/log/profiler.csv`. 此 `profiler.csv` 會在每次頁面重新整理時覆寫。
+   输出保存到 `<project-root>/var/log/profiler.csv`. 此 `profiler.csv` 将在每次页面刷新时覆盖。
 
-   若要停用效能分析工具並移除flagfile：
+   要禁用Profiler并删除Flagfile，请执行以下操作：
 
    ```bash
    bin/magento dev:profiler:disable

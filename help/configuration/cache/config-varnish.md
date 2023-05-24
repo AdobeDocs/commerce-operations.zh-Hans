@@ -1,6 +1,6 @@
 ---
-title: 設定及使用清漆
-description: 瞭解Varnish如何儲存檔案並改善HTTP流量。
+title: 配置和使用清漆
+description: 了解Varnish如何存储文件并改进HTTP流量。
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
@@ -10,63 +10,63 @@ ht-degree: 0%
 
 ---
 
-# 設定清漆
+# 配置清漆
 
-[清漆快取] 是開放原始碼網頁應用程式加速器(也稱為 _HTTP加速器_ 或 _快取HTTP反向Proxy_)。 Varnish會將（或快取）檔案或檔案片段儲存在記憶體中，這讓Varnish能夠縮短回應時間，並減少未來同等要求的網路頻寬消耗。 與Apache和nginx等網頁伺服器不同，Varnish是專為搭配HTTP通訊協定使用而設計。
+[清漆缓存] 是一个开源Web应用程序加速器(也称为 _HTTP加速器_ 或 _缓存HTTP反向代理_)。 Varnish在内存中存储（或缓存）文件或文件片段，这使得Varnish能够减少响应时间和未来对等请求的网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专门设计为与HTTP协议一起使用。
 
-Commerce 2.4.2已使用Varnish 6.4進行測試。Commerce 2.4.x與Varnish 6.x相容
+Commerce 2.4.2通过Varnish 6.4进行测试。Commerce 2.4.x与Varnish 6.x兼容
 
 >[!WARNING]
 >
->三 _強烈建議_ 您會在生產環境中使用Varnish。 內建的全頁快取 — 至檔案系統或 [資料庫] — 比Varnish慢得多，Varnish的設計目的是加速HTTP流量。
+>三 _强烈推荐_ 生产的时候用清漆。 内置全页缓存 — 用于文件系统或 [数据库] — 比Varnish慢得多，并且Varnish旨在加速HTTP流量。
 
-如需清漆的詳細資訊，請參閱：
+有关Varnish的详细信息，请参阅：
 
-- [亮閃閃的圖片]
-- [清漆啟動選項]
-- [塗漆與網站效能]
+- [大油漆画]
+- [清漆启动选项]
+- [涂漆和网站性能]
 
-## 塗漆拓朴圖
+## 清漆拓扑图
 
-下圖顯示您的Commerce拓撲中清漆的基本檢視。
+下图显示了Commerce拓扑中清漆的基本视图。
 
-![基本塗漆圖](../../assets/configuration/varnish-basic.png)
+![基本清漆图](../../assets/configuration/varnish-basic.png)
 
-在上圖中，使用者透過網際網路發出的HTTP請求會導致大量的CSS、HTML、JavaScript和影像請求(統稱為 _資產_)。 清漆位於網頁伺服器前，並代理這些要求至網頁伺服器。
+在上图中，用户通过Internet发出的HTTP请求会导致CSS、HTML、JavaScript和图像的大量请求(统称为 _资产_)。 清漆位于Web服务器前面，并将这些请求代理到Web服务器。
 
-當網頁伺服器傳回資產時，可快取的資產會儲存在Varnish中。 對這些資產的任何後續請求由Varnish完成（這表示請求無法連線到網頁伺服器）。 清漆會非常快速地傳回快取的內容。 如此一來，將內容傳回使用者的回應時間就會變快，而Commerce必須完成的請求數量也會減少。
+当Web服务器返回资产时，可缓存的资产将存储在Varnish中。 对这些资产的任何后续请求由Varnish完成（即，请求不会到达Web服务器）。 清漆可以非常快速地返回缓存的内容。 结果是，将内容返回给用户的响应速度更快，并且Commerce必须完成的请求数也减少了。
 
-透過Varnish快取的資產會以可設定的間隔過期，或是被相同資產的較新版本取代。 您也可以使用管理員或 [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令。
+通过Varnish缓存的资产会以可配置的间隔过期，或被相同资产的较新版本替换。 您还可以使用管理员或 [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令。
 
-## 程式概述
+## 流程概述
 
-本主題說明如何以最少的引數集開始安裝Varnish，並測試其運作方式。 然後從Commerce管理員匯出清漆設定，並再次測試。
+本主题讨论如何以最少的参数集开始安装Varnish并测试其是否正常工作。 然后，从Commerce管理员导出清漆配置并再次进行测试。
 
-此程式可歸納如下：
+该过程可概括如下：
 
-1. 安裝Varnish並存取任何Commerce頁面進行測試，以檢視您是否取得表示Varnish正常運作的HTTP回應標題。
-1. 安裝Commerce軟體並使用Admin建立Varnish設定檔。
-1. 將您現有的Varnish設定檔案取代為管理員產生的檔案。
-1. 再次測試所有內容。
+1. 安装Varnish并通过访问任何Commerce页面对其进行测试，以查看您是否获得表示Varnish正在工作的HTTP响应标头。
+1. 安装Commerce软件并使用管理员创建Varnish配置文件。
+1. 将您现有的Varnish配置文件替换为管理员生成的配置文件。
+1. 再次测试所有内容。
 
-   如果您的檔案中沒有任何檔案 `<magento_root>/var/page_cache` 目錄，您已成功使用Commerce設定Varnish！
+   如果你的帐户中没有任何内容， `<magento_root>/var/page_cache` 目录，您已成功使用Commerce配置清漆！
 
 >[!NOTE]
-- 除非另有說明，否則您必須以使用者身分輸入本主題中討論的所有指令 `root` 許可權。
-- 本主題是為CentOS和Apache 2.4上的Varnish所撰寫。如果您是在不同的環境中設定Varnish，有些指令可能會不同。 如需詳細資訊，請參閱Varnish檔案。
+- 除非另有说明，否则您必须以用户身份输入本主题中讨论的所有命令， `root` 权限。
+- 本主题为CentOS和Apache 2.4上的Varnish编写。如果在不同的环境中设置Varnish，某些命令可能会不同。 有关更多信息，请参阅Varnish文档。
 
 
-## 已知問題
+## 已知问题
 
-我們知道下列有關Varnish的問題：
+我们知道以下有关Varnish的问题：
 
-- [清漆不支援SSL]
+- [清漆不支持SSL]
 
-   或者，使用SSL終止或SSL終止Proxy。
+   作为替代方法，请使用SSL终止或SSL终止代理。
 
-- 如果您手動刪除 `<magento_root>/var/cache` 目錄，您必須重新啟動Varnish。
+- 如果您手动删除 `<magento_root>/var/cache` 目录，必须重新启动Varnish。
 
-- 安裝Commerce時可能發生錯誤：
+- 安装Commerce时可能出错：
 
    ```terminal
    Error 503 Service Unavailable
@@ -75,7 +75,7 @@ Commerce 2.4.2已使用Varnish 6.4進行測試。Commerce 2.4.x與Varnish 6.x相
    Varnish cache server
    ```
 
-   如果您遇到此錯誤，請編輯 `default.vcl` 並將逾時新增至 `backend` 區段如下：
+   如果遇到此错误，请编辑 `default.vcl` 并将超时添加到 `backend` 节如下：
 
    ```conf
    backend default {
@@ -85,69 +85,69 @@ Commerce 2.4.2已使用Varnish 6.4進行測試。Commerce 2.4.x與Varnish 6.x相
    }
    ```
 
-## 清漆快取概觀
+## 清漆缓存概述
 
-清漆快取可與Commerce搭配使用，使用：
+清漆缓存可与Commerce结合使用，使用：
 
-- [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) 從Magento2 GitHub存放庫
-- `.htaccess` Commerce提供的Apache分散式設定檔案
-- `default.vcl` 使用產生的清漆的設定 [管理員](../cache/configure-varnish-commerce.md)
+- [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) 从Magento2 GitHub存储库中
+- `.htaccess` Commerce提供的Apache分布式配置文件
+- `default.vcl` 使用生成的清漆的配置 [管理员](../cache/configure-varnish-commerce.md)
 
 >[!INFO]
-本主題僅涵蓋前述清單中的預設選項。 有許多其他方法可在複雜情況下設定快取（例如，使用內容傳遞網路）；這些方法不在本指南的涵蓋範圍內。
+本主题仅介绍上述列表中的默认选项。 在复杂场景中配置缓存有许多其他方法（例如，使用内容交付网络）；这些方法不在本指南的涵盖范围内。
 
-在第一次瀏覽器請求時，可快取的資產會從Varnish傳送至使用者端瀏覽器，並在瀏覽器上快取。
+在第一次浏览器请求时，可缓存的资产会从Varnish传送到客户端浏览器，并在浏览器上缓存。
 
-此外，Varnish會將實體標籤(ETag)用於靜態資產。 ETag提供一種方法，可判斷伺服器上的靜態檔案何時變更。 因此，靜態資產在伺服器上變更時會傳送給使用者端 — 或是根據瀏覽器的新請求，或是當使用者端重新整理瀏覽器快取時（通常透過按F5或Control+F5）。
+此外，Varnish将实体标记(ETag)用于静态资产。 通过ETag可以确定服务器上的静态文件何时发生更改。 因此，当静态资产在服务器上发生更改时（根据来自浏览器的新请求或客户端刷新浏览器缓存时，通常通过按F5或Control+F5），这些资产将被发送到客户端。
 
-後續章節將提供更多詳細資料。
+更多详情见以下各节。
 
-## 依瀏覽器要求快取
+## 按浏览器请求缓存
 
-本節使用瀏覽器檢測器來顯示如何在第一個請求中傳遞資產給瀏覽器，以及之後如何從本機瀏覽器快取中載入資產。
+此部分使用浏览器检查器来显示如何在第一个请求中将资产交付给浏览器，以及之后如何从本地浏览器缓存加载资产。
 
-### 第一個瀏覽器請求
+### 第一个浏览器请求
 
-`nginx.conf.sample` 和 `.htaccess` 提供使用者端快取的選項。 當第一次從瀏覽器請求可快取物件時，Varnish會將其傳送給使用者端。
+`nginx.conf.sample` 和 `.htaccess` 提供客户端缓存选项。 当浏览器第一次请求可缓存的对象时，Varnish会将其提供给客户端。
 
-下圖顯示使用瀏覽器檢測器的範例：
+下图显示了使用浏览器检查器的示例：
 
-![第一次請求可快取物件時，Varnish會將其傳送給瀏覽器](../../assets/configuration/varnish-apache-first-visit.png)
+![首次请求可缓存对象时，Varnish会将其提供给浏览器](../../assets/configuration/varnish-apache-first-visit.png)
 
-上例顯示對店面首頁的請求(`m2_ce_my`)。 使用者端瀏覽器會快取CSS和JavaScript資產。
+上例显示了对店面主页的请求(`m2_ce_my`)。 CSS和JavaScript资产会缓存在客户端浏览器上。
 
 >[!NOTE]
-大多數靜態資產都有HTTP 200 （確定）狀態代碼，表示資產是從伺服器擷取的。
+大多数静态资产都有一个HTTP 200 (OK)状态代码，表示已从服务器检索资产。
 
-### 第二個瀏覽器請求
+### 第二个浏览器请求
 
-如果相同的瀏覽器再次要求相同的頁面，這些資產會從本機瀏覽器快取中傳送，如下圖所示。
+如果同一浏览器再次请求同一页面，则这些资产将从本地浏览器缓存中交付，如下图所示。
 
-![下次請求相同物件時，資產會從本機瀏覽器快取中載入](../../assets/configuration/varnish-apache-second-visit.png)
+![下次请求同一对象时，将从本地浏览器缓存中加载资产](../../assets/configuration/varnish-apache-second-visit.png)
 
-請注意第一個請求和第二個請求之間的回應時間差異。 同樣地，靜態資產有200 （確定）回應代碼，因為它們是首次從本機快取傳遞。
+请注意第一个请求和第二个请求之间的响应时间差异。 同样，静态资产具有200 (OK)响应代码，因为它们是首次从本地缓存中投放的。
 
 ## Commerce如何使用Etag
 
-以下範例顯示特定靜態資產的回應標頭。
+以下示例显示特定静态资源的响应标头。
 
-![ETag可讓您更容易判斷靜態資產是否已變更](../../assets/configuration/varnish-etag.png)
+![通过ETag，可以更轻松地确定静态资产是否已更改](../../assets/configuration/varnish-etag.png)
 
-`calendar.css` 具有ETag回應標頭，這表示使用者端瀏覽器上的CSS檔案可與伺服器上的檔案比較。
+`calendar.css` 具有ETag响应标头，这意味着客户端浏览器上的CSS文件可以与服务器上的文件进行比较。
 
-此外，靜態資產會以304 （未修改） HTTP狀態代碼傳回，如下圖所示。
+此外，静态资产会以304（未修改）HTTP状态代码返回，如下图所示。
 
-![HTTP 304 （未修改）回應代碼會指出本機快取中的靜態資產與伺服器上的相同](../../assets/configuration/varnish-304.png)
+![HTTP 304（未修改）响应代码指示本地缓存中的静态资产与服务器上的相同](../../assets/configuration/varnish-304.png)
 
-304狀態碼是因為使用者使其本機快取失效，而伺服器上的內容未變更。 由於304狀態代碼，靜態資產 _內容_ 不會傳輸，只會將HTTP標頭下載到瀏覽器。
+出现304状态代码是因为用户使其本地缓存失效，并且服务器上的内容未更改。 由于304状态代码，静态资产 _内容_ 不会传输；只有HTTP标头会下载到浏览器。
 
-如果伺服器上的內容變更，使用者端會下載包含HTTP 200 （確定）狀態碼和新ETag的靜態資產。
+如果服务器上的内容发生更改，则客户端将下载静态资产，其中包含HTTP 200 （确定）状态代码和新的ETag。
 
 <!-- Link Definitions -->
 
-[資料庫]: https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/
-[亮閃閃的圖片]: https://www.varnish-cache.org/docs/trunk/users-guide/intro.html
-[清漆快取]: https://varnish-cache.org
-[清漆啟動選項]: https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options
-[塗漆與網站效能]: https://www.varnish-cache.org/docs/trunk/users-guide/performance.html#users-performance
-[清漆不支援SSL]: https://www.varnish-cache.org/docs/3.0/phk/ssl.html
+[数据库]: https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/
+[大油漆画]: https://www.varnish-cache.org/docs/trunk/users-guide/intro.html
+[清漆缓存]: https://varnish-cache.org
+[清漆启动选项]: https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options
+[涂漆和网站性能]: https://www.varnish-cache.org/docs/trunk/users-guide/performance.html#users-performance
+[清漆不支持SSL]: https://www.varnish-cache.org/docs/3.0/phk/ssl.html

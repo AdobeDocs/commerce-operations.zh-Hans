@@ -1,6 +1,6 @@
 ---
-title: 啟用或停用模組
-description: 請依照下列步驟管理Adobe Commerce或Magento Open Source模組。
+title: 启用或禁用模块
+description: 按照以下步骤管理Adobe Commerce或Magento Open Source模块。
 exl-id: 7155950a-a66a-4254-a71c-1a9aeab47606
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 0%
 
 ---
 
-# 啟用或停用模組
+# 启用或禁用模块
 
-這個命令沒有先決條件。
+此命令没有先决条件。
 
-## 模組狀態
+## 模块状态
 
-使用下列命令列出已啟用和已停用的模組：
+使用以下命令列出已启用和禁用的模块：
 
 ```bash
 bin/magento module:status [--enabled] [--disabled] <module-list>
@@ -23,13 +23,13 @@ bin/magento module:status [--enabled] [--disabled] <module-list>
 
 位置
 
-* `--enabled` 列出所有已啟用的模組。
-* `--disabled` 列出所有已停用的模組。
-* `<module-list>` 是以空格分隔的模組清單，用於檢查狀態。 如果任何模組名稱包含特殊字元，請以單引號或雙引號將名稱括住。
+* `--enabled` 列出了所有已启用的模块。
+* `--disabled` 列出了所有禁用的模块。
+* `<module-list>` 是以空格分隔的模块列表，用于检查状态。 如果任何模块名称包含特殊字符，请用单引号或双引号将名称括起来。
 
-## 啟用、停用模組
+## 模块启用、禁用
 
-若要啟用或停用可用的模組，請使用下列命令：
+要启用或禁用可用模块，请使用以下命令：
 
 ```bash
 bin/magento module:enable [-c|--clear-static-content] [-f|--force] [--all] <module-list>
@@ -41,65 +41,65 @@ bin/magento module:disable [-c|--clear-static-content] [-f|--force] [--all] <mod
 
 位置
 
-* `<module-list>` 是以空格分隔的模組清單，可啟用或停用。 如果任何模組名稱包含特殊字元，請以單引號或雙引號將名稱括住。
-* `--all` 以同時啟用或停用所有模組。
-* `-f` 或 `--force` 以強制啟用或停用模組，無論是否有相依性。 使用此選項之前，請參閱 [關於啟用和停用模組](#about-enabling-and-disabling-modules).
-* `-c` 或 `--clear-static-content` 清除 [產生的靜態檢視檔案](../../configuration/cli/static-view-file-deployment.md).
+* `<module-list>` 是要启用或禁用的模块的以空格分隔的列表。 如果任何模块名称包含特殊字符，请用单引号或双引号将名称括起来。
+* `--all` 以同时启用或禁用所有模块。
+* `-f` 或 `--force` 强制启用或禁用模块，而不考虑依赖关系。 在使用此选项之前，请参阅 [关于启用和禁用模块](#about-enabling-and-disabling-modules).
+* `-c` 或 `--clear-static-content` 清理 [生成的静态视图文件](../../configuration/cli/static-view-file-deployment.md).
 
-   如果存在多個同名檔案，但未全部清除，則無法清除靜態檢視檔案可能會導致問題。
+   如果存在多个同名文件，并且您未全部清除，则无法清除静态视图文件可能会导致问题。
 
-   換言之，由於 [靜態檔案遞補](../../configuration/cli/static-view-file-deployment.md) 規則（如果未清除靜態檔案，且有多個名為的檔案） `logo.svg` 不同，後援可能會導致顯示錯誤的檔案。
+   换句话说，因为 [静态文件回退](../../configuration/cli/static-view-file-deployment.md) 规则（如果不清除静态文件并且有多个名为的文件） `logo.svg` 不同，回退可能会导致显示错误的文件。
 
-例如，若要停用 `Magento_Weee` 模組，輸入：
+例如，要禁用 `Magento_Weee` 模块，输入：
 
 ```bash
 bin/magento module:disable Magento_Weee
 ```
 
-如需啟用和停用模組的重要資訊，請參閱 [關於啟用和停用模組](#about-enabling-and-disabling-modules).
+有关启用和禁用模块的重要信息，请参见 [关于启用和禁用模块](#about-enabling-and-disabling-modules).
 
-## 更新資料庫
+## 更新数据库
 
-如果您啟用一或多個模組，請執行以下命令來更新資料庫：
+如果启用了一个或多个模块，请运行以下命令来更新数据库：
 
 ```bash
 bin/magento setup:upgrade
 ```
 
-然後清除快取：
+然后清理缓存：
 
 ```bash
 bin/magento cache:clean
 ```
 
-## 關於啟用和停用模組
+## 关于启用和禁用模块
 
-Adobe Commerce和Magento Open Source可讓您啟用或停用目前可用的模組；換言之，可啟用或停用任何Adobe提供的模組或任何目前可用的協力廠商模組。
+通过Adobe Commerce和Magento Open Source，您可以启用或禁用当前可用的模块；换言之，启用或禁用任何Adobe提供的模块或任何当前可用的第三方模块。
 
-某些模組具有對其他模組的相依性，在這種情況下，您可能無法啟用或停用模組，因為它有對其他模組的相依性。
+某些模块对其他模块具有依赖关系，在这种情况下，您可能无法启用或禁用模块，因为它与其他模块具有依赖关系。
 
-此外，可能會 *衝突* 無法同時啟用的模組。
+此外，可能会 *冲突* 无法同时启用这两个模块的属性。
 
-範例：
+示例：
 
-* 模組A相依於模組B。除非先停用模組A，否則無法停用模組B。
+* 模块A依赖于模块B。除非首先禁用模块A，否则无法禁用模块B。
 
-* 模組A相依於模組B，兩者皆已停用。 您必須先啟用模組B，才能啟用模組A。
+* 模块A依赖于模块B，二者均被禁用。 在启用模块A之前，必须启用模块B。
 
-* 模組A與模組B衝突。您可以停用模組A和模組B，也可以停用任一模組，但您可以 *無法* 同時啟用模組A和模組B。
+* 模块A与模块B冲突。您可以禁用模块A和模块B，也可以禁用任一模块，但您可以 *无法* 同时启用模块A和模块B。
 
-* 相依性在 `require` Adobe Commerce和Magento Open Source中的欄位 `composer.json` 每個模組的檔案。 衝突宣告於 `conflict` 模組中的欄位 `composer.json` 檔案。 我們使用該資訊來建立相依性圖表： `A->B` 表示模組A相依於模組B。
+* 依赖关系声明于 `require` Adobe Commerce和Magento Open Source中的字段 `composer.json` 每个模块的文件。 冲突声明于 `conflict` 模块中的字段 `composer.json` 文件。 我们使用该信息构建依赖关系图： `A->B` 表示模块A依赖于模块B。
 
-* A *相依性鏈結* 是從模組到另一個模組的路徑。 例如，如果模組A相依於模組B，而模組B相依於模組C，則相依性鏈為 `A->B->C`.
+* A *依赖关系链* 是从模块到另一个模块的路径。 例如，如果模块A依赖于模块B，而模块B依赖于模块C，则依赖链为 `A->B->C`.
 
-如果您嘗試啟用或停用相依於其他模組的模組，相依性圖表會顯示在錯誤訊息中。
-
->[!NOTE]
->
->模組A有可能是 `composer.json` 會宣告與模組B的衝突，但不會反過來。
-
-*僅限命令列：* 若要強制啟用或停用模組（無論其相依性為何），請使用選填的 `--force` 引數。
+如果尝试启用或禁用依赖于其他模块的模块，则依赖关系图将显示在错误消息中。
 
 >[!NOTE]
 >
->使用 `--force` 可能會停用您的存放區，並導致存取管理員時發生問題。
+>A模块有可能是 `composer.json` 声明与模块B冲突，但不声明相反的冲突。
+
+*仅命令行：* 要强制启用或禁用模块，而不考虑其依赖关系，请使用可选的 `--force` 参数。
+
+>[!NOTE]
+>
+>使用 `--force` 可能会禁用您的存储并导致访问管理员时出现问题。

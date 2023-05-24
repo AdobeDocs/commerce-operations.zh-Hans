@@ -1,6 +1,6 @@
 ---
-title: 此 [!UICONTROL Summary] 標籤
-description: 瞭解 [!UICONTROL Summary] 索引標籤/ [!DNL Observation for Adobe Commerce].
+title: 此 [!UICONTROL Summary] 选项卡
+description: 了解 [!UICONTROL Summary] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,430 +9,430 @@ ht-degree: 0%
 
 ---
 
-# 此 [!UICONTROL Summary] 標籤
+# 此 [!UICONTROL Summary] 选项卡
 
-此 [!UICONTROL Summary] 索引標籤/ [!DNL Observation for Adobe Commerce] 旨在快速瞭解網站所遇到的一些問題，協助您自動解決或找出網站問題的可能根本原因。 其他標籤提供有關元件服務、資料庫、基礎架構和程式狀態的更深入層級資訊。
+此 [!UICONTROL Summary] 选项卡/ [!DNL Observation for Adobe Commerce] 旨在快速查看站点遇到的一些问题，以帮助您自动解决或识别站点问题的潜在根本原因。 其他选项卡提供有关组件服务、数据库、基础架构和流程状态的更深入的信息。
 
 ## [!UICONTROL Transaction Overview]
 
-![交易概要](../../assets/tools/transaction-overview.jpg)
+![事务处理概览](../../assets/tools/transaction-overview.jpg)
 
-### [什麼是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-，What%20is%20a%20transaction%3F，work%20in%20a%20software%20application。&amp;text=For%20APM%2C%20it%20will%20overly，當%20the%20response%20is%20sent)
+### [什么是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-，What%20is%20a%20transaction%3F，work%20in%20a%20software%20application。&amp;text=For%20APM%2C%20it%20will%20overly，当%20the%20response%20is%20sent)
 
-&quot;於 [!DNL New Relic]，交易被定義為軟體應用程式中一個邏輯工作單位。 具體來說，它是指組成該工作單位的函式呼叫和方法呼叫。 這通常指的是Web交易，代表從應用程式收到Web請求到傳送回應時所發生的活動。」
+“在 [!DNL New Relic]，事务被定义为软件应用程序中的一个逻辑工作单元。 具体来说，它是指构成该工作单元的函数调用和方法调用。 它通常指的是Web交易，代表一种活动，从应用程序收到Web请求时到响应发送时发生的活动。”
 
-### 交易型別：
+### 交易类型：
 
-**網頁：** Web交易是以HTTP要求起始。 對於大多陣列織而言，這些代表以客戶為中心的互動，因此是最重要的要監控的交易。
+**Web：** Web事务通过HTTP请求启动。 对于大多数组织而言，这些表示以客户为中心的交互，因此是需要监控的最重要的事务。
 
-**非網頁：** 非Web交易並非透過Web請求起始。 它們可以包括非Web工作者處理序、背景處理序、指令碼、訊息佇列活動和其他工作。
+**非Web：** 非Web事务不是通过Web请求发起的。 它们可以包括非Web工作进程、后台进程、脚本、消息队列活动和其他任务。
 
-如果您檢視 **[!UICONTROL Transaction Overview]** 框架上，有將近53,000筆交易，平均APDEX分數為。76，而其中95%的交易發生在2.313秒內。 如果在較短時間範圍內有APDEX點選，則較短時間範圍可能會顯示與目前平均值的偏離。
+如果您查看 **[!UICONTROL Transaction Overview]** 在上图中，有将近53,000笔交易，其APDEX平均分数为。76，其中95%的交易发生在2.313秒内。 这将是一个帧，如果在短时间帧内存在APDEX点击，则较紧时间帧可能显示与当前平均值的偏离。
 
 ## [!UICONTROL 404 page errors frame]
 
-![404頁錯誤框架](../../assets/tools/404-page-errors.jpg)
+![404页错误帧](../../assets/tools/404-page-errors.jpg)
 
-此 **[!UICONTROL 404 page errors]** 框架列出 [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) 以及所選時間範圍內的404頁錯誤計數。
+此 **[!UICONTROL 404 page errors]** 框架列出 [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) 和选定时间范围内的404页错误计数。
 
 ## [!UICONTROL % of Storage Free frame]
 
-![可用儲存空間影格的百分比](../../assets/tools/percent-of-storage-free.jpg)
+![可用存储帧百分比](../../assets/tools/percent-of-storage-free.jpg)
 
-此 **[!UICONTROL % of Storage Free]** frame會顯示叢集所有節點之儲存裝載的平均可用百分比。 例如，如果您有三節點叢集，框架會顯示\&lt;mount point=&quot;&quot;>， \&lt;environment name=&quot;&quot;>. 如果三個節點之間有變數，則此框架可能是欺騙性的。 一個變異的範例是如果 `/data/mysql` 掛接點free是三個節點叢集上的不同值。 下方有一個框架 [!UICONTROL MySQL] 標籤可依節點名稱對掛載點進行多面處理，以更精確地檢視 `/data/mysql` 每個節點上的可用儲存空間實際上都是。
+此 **[!UICONTROL % of Storage Free]** frame显示群集所有节点中存储挂载的平均可用百分比。 例如，如果您有一个三节点集群，则框架会显示\&lt;mount point=&quot;&quot;>， \&lt;environment name=&quot;&quot;>. 如果三个节点之间存在差异，则此帧可能具有欺骗性。 变量的一个示例是如果 `/data/mysql` mount point free是三个节点群集中的不同值。 下面有一个框架 [!UICONTROL MySQL] 选项卡，按节点名称面向装载点，以便更准确地了解 `/data/mysql` 每个节点上的可用存储实际上是。
 
 ## [!UICONTROL % of system memory that is free frame]
 
-![可用框架的系統記憶體百分比](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
+![可用帧的系统内存百分比](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
 
-此 **可用系統記憶體的%** frame會依節點顯示每個節點上可用的系統記憶體數量。
+此 **可用系统内存的%** 帧按节点显示每个节点上可用的系统内存量。
 
 ## [!UICONTROL Swap memory free in bytes]
 
-![交換可用記憶體（以位元組為單位）](../../assets/tools/swap-memory-free-in-bytes.jpg)
+![交换可用内存（以字节为单位）](../../assets/tools/swap-memory-free-in-bytes.jpg)
 
-此 **[!UICONTROL Swap memory free in bytes]** 框架會依節點顯示節點上可用的SWAP記憶體數量。
+此 **[!UICONTROL Swap memory free in bytes]** 帧按节点显示节点上可用的SWAP内存量。
 
 ## [!UICONTROL CPU % by host]
 
-![依主機的CPU百分比](../../assets/tools/cpu-percent-by-host.jpg)
+![按主机列出的CPU百分比](../../assets/tools/cpu-percent-by-host.jpg)
 
-所有環境和節點的彙總會顯示在 **[!UICONTROL CPU % by host]** 框架。 您應取消選取非生產環境。 也請注意生產環境的所有節點不存在的任何例項。 有關高CPU使用率的更多提示，請參閱 [在Adobe Commerce上使用New Relic進行效能疑難排解](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
+所有环境和节点的聚合会显示在 **[!UICONTROL CPU % by host]** 框架。 您应取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU使用率的更多提示，请参阅 [使用Adobe Commerce上的New Relic排除性能故障](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
 
 ## [!UICONTROL Alerts during timeframe]
 
-![時間範圍內的警報](../../assets/tools/alerts-during-timeframe.jpg)
+![时间范围内的警报](../../assets/tools/alerts-during-timeframe.jpg)
 
-此 **[!UICONTROL Alerts during timeframe]** 顯示所有警示，包括 [!UICONTROL Managed Alerts] 由Adobe Commerce支援新增。
+此 **[!UICONTROL Alerts during timeframe]** 显示所有警报，包括 [!UICONTROL Managed Alerts] 由Adobe Commerce支持团队添加。
 
 ## [!UICONTROL CPU Usage]
 
-![CPU使用量](../../assets/tools/cpu-usage.jpg)
+![CPU使用率](../../assets/tools/cpu-usage.jpg)
 
-如果 **[!UICONTROL CPU Usage]** 框架是空白的，這表示基礎建設應用程式 [!DNL New Relic] 未啟用。 如果您的網站在入門版，您不會看到此資訊。 如果您的網站位於Pro，請開啟 [支援票證](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) 擁有 [!DNL New Relic Infrastructure] 已為您的網站啟用。
+如果 **[!UICONTROL CPU Usage]** 帧为空，这表明 [!DNL New Relic] 未启用。 如果您的网站位于入门版，则不会看到此信息。 如果您的站点在Pro上，请打开 [支持服务单](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) 拥有 [!DNL New Relic Infrastructure] 已为您的站点启用。
 
 ## [!UICONTROL Average Response Time]
 
-![平均回應時間](../../assets/tools/average-response-time.jpg)
+![平均响应时间](../../assets/tools/average-response-time.jpg)
 
-此 **[!UICONTROL Average Response Time]** 圖表顯示交易的平均回應時間（網頁和其他專案）。
+此 **[!UICONTROL Average Response Time]** 该图显示了事务（Web和其他事务）的平均响应时间。
 
 ## [!UICONTROL Long duration cron_schedule updates]
 
-![長時間的cron_schedule更新](../../assets/tools/long-duration-cron-schedule-updates.jpg)
+![长持续时间cron_schedule更新](../../assets/tools/long-duration-cron-schedule-updates.jpg)
 
-此 **[!UICONTROL cron_schedule]** 表格會在cron工作的開始和完成時寫入。 長時間的cron作業可能表示更新此表格時的延遲，這可能表示cron棧疊或cron排程方式的問題。
+此 **[!UICONTROL cron_schedule]** 在cron作业开始和完成时写入表。 长持续时间cron作业可能表示更新此表时的延迟，这可能表示cron栈栈或cron计划方式存在问题。
 
 ## [!UICONTROL Response Code]
 
-![回應代碼](../../assets/tools/response-code.jpg)
+![响应代码](../../assets/tools/response-code.jpg)
 
-此 **[!UICONTROL Response Code]** 框架能很好地顯示網路流量和請求的回應代碼。 它是 [!DNL New Relic's] 交易資料，並以 `httpResponseCode` 已傳回。
+此 **[!UICONTROL Response Code]** 帧是Web流量和请求的响应代码的良好指示。 它是 [!DNL New Relic's] 交易数据，并且它由 `httpResponseCode` 已返回。
 
 ## [!UICONTROL Web Traffic volume compared with one week ago Magento Managed Alerts Information]
 
-![網站流量與一星期前比較](../../assets/tools/web-traffic-volume-compared.jpg)
+![网络流量与一周前相比](../../assets/tools/web-traffic-volume-compared.jpg)
 
-此框架顯示過去一週與本週的比較Web流量。
+此框架显示过去一周和本周的比较Web流量。
 
 ## [!UICONTROL Deployment Log Entries]
 
-![部署記錄專案](../../assets/tools/deployment-log-entries.jpg)
+![部署日志条目](../../assets/tools/deployment-log-entries.jpg)
 
-此 **[!UICONTROL Deployment Log Entries]** frame會顯示部署和雲端記錄專案的計數，並根據部署記錄名稱多面向計數。
+此 **[!UICONTROL Deployment Log Entries]** 框架显示部署和云日志条目的计数，并按部署日志名称彩块化计数。
 
 ## [!UICONTROL Deployment State]
 
-![部署狀態](../../assets/tools/deployment-state.jpg)
+![部署状态](../../assets/tools/deployment-state.jpg)
 
-此 **[!UICONTROL Deployment State]** 框架會從部署記錄檔中多面向特定的部署階段。 以下是記錄檔和Facet名稱中計算的一些階段範例：
+此 **[!UICONTROL Deployment State]** 从部署日志中获取框架面向特定的部署阶段。 以下是日志和Facet名称中计入的阶段的一些示例：
 
-**部署記錄階段：**
+**部署日志阶段：**
 
-* &#39;%Start產生命令%&#39;)為&#39;start_gen&#39;
-* &#39;%git將/app/vendor/magento/ece-tools/patches%&#39;)套用為&#39;apply_patches&#39;
-* &#39;%Set flag： .static_content_deploy%&#39;)設為&#39;SCD&#39;
-* &#39;%NOTICE： Generate command completed%&#39;)為&#39;gen_compl&#39;
-* &#39;%NOTICE： Deployment completed%&#39;)為&#39;deploy_compl&#39;
-* &#39;%NOTICE：正在啟動後部署。%&#39;)作為&#39;start_pdeploy&#39;
-* &#39;%NOTICE： Post-deploy is complete%&#39;)為&#39;pdeploy&#39;
-* &#39;%deploy-complete%&#39;)作為&#39;cl_deploy_compl&#39;
+* “%Start生成命令%”)作为“start_gen”
+* “%git应用/app/vendor/magento/ece-tools/patches%”)作为“apply_patches”
+* “%Set flag： .static_content_deploy%”)设置为“SCD”
+* &#39;%NOTICE： Generate command completed%&#39;)作为&#39;gen_compl&#39;
+* “%NOTICE： Deployment completed%”)作为“deploy_compl”
+* &#39;%NOTICE：正在启动后部署。%&#39;)作为“start_pdeploy”
+* “%NOTICE： Post-deploy is complete%”)作为“pdeploy”
+* “%deploy-complete%”)作为“cl_deploy_compl”
 
 ## [!UICONTROL IP Frequency]
 
-![IP頻率](../../assets/tools/ip-frequency.jpg)
+![IP频率](../../assets/tools/ip-frequency.jpg)
 
-此 **[!UICONTROL IP Frequency]** frame會計算（&#39;MISS&#39;和&#39;PASS&#39;）中每個IP的狀態， [!DNL Fastly] 記錄。 具有這些狀態的網頁請求會連線至原始伺服器，並將新增負載至伺服器。 它會顯示頻率排名前20的地址。 此框架可用來偵測網站上的IP攻擊或大量負載來源。
+此 **[!UICONTROL IP Frequency]** frame计算每个IP的（&#39;MISS&#39;和&#39;PASS&#39;）状态，从 [!DNL Fastly] 日志。 具有这些状态的Web请求将访问原始服务器，并将向服务器添加负载。 它显示频率排名前20的地址。 此帧可用于检测网站上的IP攻击或重负载源。
 
 ## [!UICONTROL IP Response – top 20 URLs in duration]
 
-![ip回應 — 持續時間內前20個url](../../assets/tools/ip-response-top-20-urls.jpg)
+![ip响应 — 持续时间内前20个url](../../assets/tools/ip-response-top-20-urls.jpg)
 
-此 **[!UICONTROL IP Response – top 20 URLs in duration]** 框架會顯示回應持續時間最長的URL。 這可能表示大型影像檔案或頁面、API或回應持續時間最長的頁面。
+此 **[!UICONTROL IP Response – top 20 URLs in duration]** 框架显示响应持续时间最长的URL。 它可能会指示响应持续时间最长的图像文件或页面、API或页面。
 
 ## [!UICONTROL API Calls by IP]
 
-![依ip的api呼叫](../../assets/tools/api-calls-by-ip.jpg)
+![按ip进行的api调用](../../assets/tools/api-calls-by-ip.jpg)
 
-此 **[!UICONTROL API Calls by IP]** frame有助於識別針對API和IP位址的大量流量，以從API URL提出請求。
+此 **[!UICONTROL API Calls by IP]** 帧可帮助识别针对API和IP地址的大量流量，从而从API URL发出请求。
 
 ## [!UICONTROL API Calls by IP, details by URL]
 
-![依ip依url的api呼叫詳細資料](../../assets/tools/api-calls-by-ip-details-by-url.jpg)
+![按ip按url显示的api调用详细信息](../../assets/tools/api-calls-by-ip-details-by-url.jpg)
 
-此 **[!UICONTROL API Calls by IP, details by URL]** frame會針對API提供大量流量的詳細資訊，以及提出請求的URL的詳細資訊。
+此 **[!UICONTROL API Calls by IP, details by URL]** frame提供针对API的高流量详细信息以及发出请求的URL的详细信息。
 
 ## [!UICONTROL IP Frequency Rate per minute]
 
-![每分鐘的ip頻率速率](../../assets/tools/ip-frequency-rate-per-minute.jpg)
+![每分钟的IP频率](../../assets/tools/ip-frequency-rate-per-minute.jpg)
 
-有時很難分辨哪個IP位址在其他影格上的請求最多。 此 **[!UICONTROL IP Frequency Rate per minute]** frame顯示每個IP位址的每分鐘速率。
+有时很难分辨哪个IP地址在其他帧中的请求最多。 此 **[!UICONTROL IP Frequency Rate per minute]** 帧显示每个IP地址的每分钟速率。
 
 ## [!UICONTROL Potential Bots]
 
-![潛在的機器人](../../assets/tools/potential-bots.jpg)
+![潜在机器人](../../assets/tools/potential-bots.jpg)
 
-此 **[!UICONTROL Potential Bots]** frame會檢視具有request_user_agent名稱（例如NULL或&#39;%bot%&#39;）的請求。 通常&#39;%bot%&#39; request_user_agent會遵循中的原則設定 `robots.txt` 檔案。
+此 **[!UICONTROL Potential Bots]** frame会查找具有request_user_agent名称（如NULL或“%bot%”）的请求。 通常，“%bot%”request_user_agent遵循中的策略设置 `robots.txt` 文件。
 
 ## [!UICONTROL Transaction Errors]
 
-![交易錯誤](../../assets/tools/transaction-errors.jpg)
+![事务错误](../../assets/tools/transaction-errors.jpg)
 
-此 **[!UICONTROL Transaction Errors]** frame顯示來自的異動錯誤計數 [!DNL New Relic].
+此 **[!UICONTROL Transaction Errors]** 框架显示事务处理错误计数 [!DNL New Relic].
 
 ## [!UICONTROL Nginx access by node]
 
-![依節點的nginx存取](../../assets/tools/nginx-access-by-node.jpg)
+![按节点进行的nginx访问](../../assets/tools/nginx-access-by-node.jpg)
 
-此 **[!UICONTROL Nginx access by node]** 框架會從 `access.log` 依節點。 檢視負載是否均勻分佈很有幫助。 它通常會顯示節點何時中斷。 框架也會顯示整個網站的負載。
+此 **[!UICONTROL Nginx access by node]** 帧查看计数 `access.log` 按节点。 了解负载是否均匀分布很有帮助。 它通常显示节点何时丢弃。 该框架还显示整个站点的载荷。
 
 ## [!UICONTROL Galera Log]
 
-![galera記錄](../../assets/tools/galera-log.jpg)
+![galera日志](../../assets/tools/galera-log.jpg)
 
-[[!DNL Galera]](https://galeracluster.com/library/galera-documentation.pdf) 用於資料庫叢集。 此框架著重於來自以下專案的特定訊號： [!UICONTROL Galera] 叢集。 訊號著重於進入和退出叢集的節點，這是維護資料庫資料完整性的正常行為。 節點會保持同步化為 [!UICONTROL Galera] 叢集狀態變更。
+[[!DNL Galera]](https://galeracluster.com/library/galera-documentation.pdf) 用于数据库群集。 此帧侧重于来自以下位置的特定信号： [!UICONTROL Galera] 群集。 这些信号侧重于进入和退出集群的节点，这是维护数据库数据完整性的正常行为。 节点将保持同步 [!UICONTROL Galera] 群集状态更改。
 
-**以下專案清單： [!UICONTROL Galera] 狀態變更：**
+**列表 [!UICONTROL Galera] 状态更改：**
 
-* &#39;%1047 WSREP尚未準備應用程式use%&#39;的節點)為&#39;node_not_prep_for_use&#39;
-* &#39;%\[ERROR\] WSREP：無法從wsrep_sst_xtrabackup-v2%&#39;讀取為&#39;xtrabackup_read_fail&#39;
-* &#39;%\[ERROR\] WSREP：處理程式已完成，但發生錯誤： wsrep_sst_xtrabackup-v2 %&#39;)為&#39;xtrabackup_compl_w_err&#39;
-* &#39;%\[ERROR\] WSREP： rbr write fail%&#39;)作為&#39;rbr_write_fail&#39;
-* &#39;%self-leave%&#39;)作為&#39;susp_node&#39;
-* &#39;%members = 3/3 （已加入/總計）%&#39;)作為&#39;3of3&#39;
-* &#39;%members = 2/3 （已加入/總計）%&#39;)作為&#39;2of3&#39;
-* &#39;%members = 2/2%&#39;) as &#39;2of2&#39; * &#39;%members = 1/2%&#39;) as &#39;1of2&#39; * &#39;%members = 1/3%&#39;) as &#39;1of3&#39;
-* &#39;%members = 1/1%&#39;)作為&#39;1of1&#39;
-* &#39;%\[注意\] /usr/sbin/mysqld (mysqld 10.%&#39;)作為&#39;sql_restart&#39;
-* &#39;%Quorum：沒有具有完整狀態的節點：%&#39;)為&#39;no_node_count&#39;
-* &#39;%WSREP： Member 0%&#39;)作為&#39;mem_0&#39;
-* &#39;%WSREP： Member 1.0%&#39;)作為&#39;mem_1&#39;
-* &#39;%WSREP：成員2%&#39;)為&#39;mem2&#39;
-* &#39;%WSREP：與群組同步，已準備好連線%&#39;)為&#39;ready&#39;
-* &#39;%/usr/sbin/mysqld，版本：%&#39;)為&#39;mysql_restart_mysql.slow&#39;
-* &#39;%\[Note\] WSREP：新叢集檢視：全域狀態：%&#39;)為&#39;galera_cluster_view_chng&#39;
+* “%1047 WSREP尚未为应用程序使用%”准备节点)，作为“node_not_prep_for_use”
+* “%\[ERROR\] WSREP：无法从wsrep_sst_xtrabackup-v2%”中读取为“xtrabackup_read_fail”
+* “%\[ERROR\] WSREP：进程已完成，但出现错误：wsrep_sst_xtrabackup-v2 %&#39;)为“xtrabackup_compl_w_err”
+* “%\[ERROR\] WSREP： rbr write fail%”)作为“rbr_write_fail”
+* &#39;%self-leave%&#39;)作为&#39;susp_node&#39;
+* “%members = 3/3 （已连接/总计）%”)作为“3of3”
+* “%members = 2/3 （已加入/总计）%”)作为“2of3”
+* “%members = 2/2%”)，作为“2of2”*“%members = 1/2%”)，作为“1of2”*“%members = 1/3%”，作为“1of3”
+* “%members = 1/1%”)作为“1of1”
+* “%\[注意\] /usr/sbin/mysqld (mysqld 10.%&#39;)作为&#39;sql_restart&#39;
+* “%Quorum：没有节点具有完整状态：%”)为“no_node_count”
+* “%WSREP：成员0%”)作为“mem_0”
+* “%WSREP：成员1.0%”)作为“mem_1”
+* “%WSREP：成员2%”)作为“mem2”
+* “%WSREP：与组同步，已准备好连接%”)为“就绪”
+* “%/usr/sbin/mysqld，版本：%”)作为“mysql_restart_mysql.slow”
+* “%\[Note\] WSREP：新群集视图：全局状态：%&#39;)作为“galera_cluster_view_chng”
 
-如果狀態頻繁變更，這些訊號可能表示儲存、記憶體或查詢問題。
+如果状态频繁更改，这些信号可能指示存储、内存或查询问题。
 
 ## [!UICONTROL Database errors]
 
-![資料庫錯誤](../../assets/tools/database-errors.jpg)
+![数据库错误](../../assets/tools/database-errors.jpg)
 
-**偵測到資料庫錯誤或訊息的清單：**
+**检测到的数据库错误或消息列表：**
 
-* &#39;%配置給暫存資料表的記憶體大小超過innodb_buffer_pool_size%&#39;的20%)為&#39;temp_tbl_buff_pool&#39;
-* &#39;%\[ERROR\] WSREP： rbr write fail%&#39;)作為&#39;rbr_write_fail&#39;
-* &#39;%mysqld：磁碟已滿%&#39;)做為&#39;disk_full&#39;
-* &#39;%Error number 28%&#39;)作為&#39;err_28&#39;
-* &#39;%rollback%&#39;)作為&#39;rollback&#39;
-* &#39;%Foreign key constraint對資料表%&#39;失敗)，因為&#39;foreign_key_constraint&#39;
-* &#39;%Error_code： 1114%&#39;)作為&#39;sql_1114_full&#39;
-* &#39;%CRITICAL： SQLSTATE\[HY000\] \[2006\] MySQL伺服器已消失%&#39;)為&#39;sql_gone&#39;
-* &#39;%SQLSTATE\[HY000\] \[1040\]太多連線%&#39;)為&#39;sql_1040&#39;
-* &#39;%CRITICAL： SQLSTATE\[HY000\] \[2002\]%&#39;)為&#39;sql_2002&#39;
-* &#39;%SQLSTATE\[08S01\]：%&#39;)作為&#39;sql_1047&#39;
-* &#39;%\[Warning\]已中止連線%&#39;)為&#39;aborted_conn&#39;
-* &#39;%SQLSTATE\[23000\]：完整性條件約束違規：%&#39;)為&#39;sql_23000&#39;
-* &#39;%1205 Lock等待逾時%&#39;)為&#39;sql_1205&#39;
-* &#39;%SQLSTATE\[HY000\] \[1049\]未知的資料庫%&#39;)為&#39;sql_1049&#39;
-* &#39;%SQLSTATE\[42S02\]：找不到基底資料表或檢視：%&#39;)為&#39;sql_42S02&#39;
-* &#39;%General error： 1114%&#39;)作為&#39;sql_1114&#39;
-* &#39;%SQLSTATE\[40001\]%&#39;)為&#39;sql_1213&#39;
-* &#39;%SQLSTATE\[42S22\]：找不到資料行： 1054 Unknown column%&#39;)為&#39;sq1_1054&#39;
-* &#39;%SQLSTATE\[42000\]：語法錯誤或存取違規：%&#39;)為&#39;sql_42000&#39;
-* &#39;%SQLSTATE\[21000\]：基數違規：%&#39;)為&#39;sql_1241&#39;
-* &#39;%SQLSTATE\[22003\]：%&#39;)為&#39;sql_22003&#39;
-* &#39;%SQLSTATE\[HY000\] \[9000\]具有IP位址%的使用者端)為&#39;sql_9000&#39;
-* &#39;%SQLSTATE\[HY000\]：一般錯誤： 2014%&#39;)為&#39;sql_2014&#39;
-* &#39;%1927連線已終止%&#39;)為&#39;sql_1927&#39;
-* &#39;%1062 \[\ERROR\] InnoDB：%&#39;)作為&#39;sql_1062_e&#39;
-* &#39;%\[Note\] WSREP：正在將記憶體對應排清至磁碟……%&#39;)做為&#39;mem_map_flush&#39;
-* &#39;%Internal MariaDB錯誤碼： 1146%&#39;)為&#39;sql_1146&#39;
-* &#39;%Internal MariaDB錯誤碼： 1062%&#39;)為&#39;sql_1062&#39; * &#39;%1062 \[Warning\] InnoDB：%&#39;)為&#39;sql_1062_w&#39;
-* &#39;%Internal MariaDB錯誤碼： 1064%&#39;)為&#39;sql_1064&#39;
-* &#39;%InnoDB：檔案中的宣告失敗%&#39;)為&#39;assertion_err&#39;
-* &#39;%mysqld_safe目前執行的處理序數目： 0%&#39;)為&#39;mysql_oom&#39;
-* &#39;%\[ERROR\] mysqld取得signal%&#39;)為&#39;mysql_sigterm&#39;
-* &#39;%1452 Cannot add%&#39;)為&#39;sql_1452&#39;
-* &#39;%ERROR 1698%&#39;)作為&#39;sql_1698&#39;
-* &#39;%SQLSTATE\[HY000\]：一般錯誤： 3%&#39;)為&#39;cnt_wrt_tmp&#39;
-* &#39;%General error： 1 %&#39;)作為&#39;sql_syntax&#39;
-* &#39;%42S22%&#39;)做為&#39;sql_42S22&#39;
-* &#39;%InnoDB：錯誤（索引鍵重複）%&#39;)，因為&#39;innodb_dup_key&#39;
+* &#39;%为临时表分配的内存大小超过innodb_buffer_pool_size%&#39;（例如，&#39;temp_tbl_buff_pool&#39;）的20%
+* “%\[ERROR\] WSREP： rbr write fail%”)作为“rbr_write_fail”
+* “%mysqld：磁盘已满%”)作为“disk_full”
+* “%Error number 28%”)，作为“err_28”
+* “%rollback%”)作为“rollback”
+* “%Foreign key constraint对表%”失败)作为“foreign_key_constraint”
+* “%Error_code： 1114%”)作为“sql_1114_full”
+* &#39;%CRITICAL： SQLSTATE\[HY000\] \[2006\] MySQL服务器已消失%&#39;)为&#39;sql_gone&#39;
+* “%SQLSTATE\[HY000\] \[1040\]连接数%&#39;)为“sql_1040”
+* &#39;%CRITICAL： SQLSTATE\[HY000\] \[2002\]%&#39;)作为&#39;sql_2002&#39;
+* “%SQLSTATE\[08S01\]：%”)作为“sql_1047”
+* “%\[Warning\]已中止连接%”)为“aborted_conn”
+* “%SQLSTATE\[23000\]：完整性约束违规：%&#39;)为“sql_23000”
+* “%1205 Lock wait timeout%”)作为“sql_1205”
+* “%SQLSTATE\[HY000\] \[1049\]未知数据库%”)作为“sql_1049”
+* “%SQLSTATE\[42S02\]：找不到基表或视图：%&#39;)作为“sql_42S02”
+* &#39;%General error： 1114%&#39;)作为&#39;sql_1114&#39;
+* “%SQLSTATE\[40001\]%”)作为“sql_1213”
+* “%SQLSTATE\[42S22\]：找不到列： 1054未知列%”)为“sq1_1054”
+* “%SQLSTATE\[42000\]：语法错误或访问冲突：%”)为“sql_42000”
+* “%SQLSTATE\[21000\]：基数违规：%&#39;)为“sql_1241”
+* “%SQLSTATE\[22003\]：%”)作为“sql_22003”
+* “%SQLSTATE\[HY000\] \[9000\]客户端，IP地址为%&#39;)作为“sql_9000”
+* “%SQLSTATE\[HY000\]：一般错误： 2014%”)，作为“sql_2014”
+* “%1927连接已终止%”)为“sql_1927”
+* “%1062 \[\ERROR\] InnoDB：%”)作为“sql_1062_e”
+* “%\[Note\] WSREP：正在刷新内存映射到磁盘……%”)作为“mem_map_flush”
+* &#39;%Internal MariaDB错误代码： 1146%&#39;)，作为&#39;sql_1146&#39;
+* &#39;%Internal MariaDB错误代码： 1062%&#39;)，作为&#39;sql_1062&#39; * &#39;%1062 \[Warning\] InnoDB：%&#39;)，作为&#39;sql_1062_w&#39;
+* &#39;%Internal MariaDB错误代码： 1064%&#39;)，作为&#39;sql_1064&#39;
+* “%InnoDB：文件%”中的断言失败)为“assertion_err”
+* &#39;%mysqld_safe现在运行的进程数： 0%&#39;)作为&#39;mysql_oom&#39;
+* “%\[ERROR\] mysqld得到signal%&#39;)为“mysql_sigterm”
+* “%1452 Cannot add%”)作为“sql_1452”
+* “%ERROR 1698%”)作为“sql_1698”
+* “%SQLSTATE\[HY000\]：常规错误： 3%”)，作为“cnt_wrt_tmp”
+* &#39;%General error： 1 %&#39;)作为&#39;sql_syntax&#39;
+* “%42S22%”)作为“sql_42S22”
+* “%InnoDB：错误（重复键）%”，因为“innodb_dup_key”
 
 ## [!UICONTROL Database traces]
 
-![資料庫追蹤](../../assets/tools/database-traces.jpg)
+![数据库跟踪](../../assets/tools/database-traces.jpg)
 
-此 **[!UICONTROL Database traces]** 框架會檢視以下專案的資料： [sql追蹤](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/) 實體 [!DNL New Relic] 和會傳回追蹤的路徑。
+此 **[!UICONTROL Database traces]** 帧查看来自 [sql跟踪](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/) 实体 [!DNL New Relic] 并返回跟踪的路径。
 
 ## [!UICONTROL Database mysql-slow.log]
 
-![資料庫mysql-slow.log](../../assets/tools/database-mysql-slow-log.jpg)
+![数据库mysql-slow.log](../../assets/tools/database-mysql-slow-log.jpg)
 
-此 **[!UICONTROL Database mysql-slow.log]** frame會計算 [mysql-slow.log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html) 依查詢要求型別。 它會以視覺化方式隔離可能與mysql-slow.log （緩慢查詢記錄）有關的時間範圍。 查詢沒有索引的表格或更新大型表格的查詢可能會封鎖其他查詢。
+此 **[!UICONTROL Database mysql-slow.log]** frame对 [mysql-slow.log](https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html) 按查询请求类型。 它以可视方式隔离可能与mysql-slow.log（慢查询日志）相关的时间范围。 查询没有索引的表或更新大型表的查询可能会阻止其他查询。
 
 ## [!UICONTROL Redis synchronization from Log]
 
-![記錄檔的redis同步](../../assets/tools/redis-synchronization-from-log.jpg)
+![redis从日志同步](../../assets/tools/redis-synchronization-from-log.jpg)
 
-[[!DNL Redis]](https://redis.io/docs/about/) 是開放原始碼（BSD授權）的記憶體內資料結構存放區，用於資料庫、快取和訊息代理人。 如果已設定，它可以執行資料庫和工作階段快取。 此 **[!UICONTROL Redis synchronization from Log]** 影格焦點在 [[!DNL Redis] 同步](https://redis.io/docs/manual/replication/). 越大 [!DNL Redis] 資料集，同步化發生問題的可能性就越大（需要保持同步的資料更多）。
+[[!DNL Redis]](https://redis.io/docs/about/) 是用作数据库、缓存和消息代理的开源（BSD许可）内存中数据结构存储。 如果已配置，它可以执行数据库和会话缓存。 此 **[!UICONTROL Redis synchronization from Log]** 帧聚焦 [[!DNL Redis] 同步](https://redis.io/docs/manual/replication/). 值越大 [!DNL Redis] 数据集，则同步更有可能出现问题（需要保持同步的数据更多）。
 
-**[!DNL Redis]錯誤和訊息：**
+**[!DNL Redis]错误和消息：**
 
-* &#39;%SLAVE同步處理：裝置%&#39;上沒有剩餘的空間)作為&#39;space&#39;
-* &#39;%Server started， Redis version%&#39;)作為&#39;serv_start&#39;
-* &#39;%伺服器現在已準備好接受連線%&#39;)為&#39;ready&#39;
-* 與主要的&#39;%Connection遺失。%&#39;)，作為&#39;mstr_lost&#39;
-* &#39;%+sdown sentinel%&#39;)做為&#39;+sentinal&#39;
-* &#39;%-sdown sentinel%&#39;)做為&#39;-sentinal&#39;
-* &#39;%-sdown slave%&#39;)為&#39;-slave&#39;，&#39;%+sdown slave%&#39;)為&#39;+slave&#39;
-* &#39;%-failover-abort-not-selected master%&#39;)作為&#39;-failover&#39;
-* &#39;%+failover-abort-not-selected master%&#39;)作為&#39;+failover&#39;
-* &#39;%無法部分重新同步化（無快取的主版）%&#39;)為&#39;part_sync_err&#39;
-* &#39;%MASTER已中止復寫，錯誤為： ERR Can%&#39;)為&#39;mstr_sync_err&#39;
-* &#39;%Master不支援PSYNC或處於錯誤狀態%&#39;)作為&#39;mstr_psync_err&#39;
-* &#39;%SLAVE同步：已完成，成功%&#39;)為&#39; slv_sync_suc&#39;
-* &#39;%MASTER已中止復寫，錯誤為： ERR Can%&#39;)為&#39;mstr_sync_err，coun&#39;
-* &#39;%OOM命令在使用記憶體%&#39;時不允許使用)作為&#39; max_mem_err&#39;
-* &#39;%CredisException（代碼： 0）：連線%&#39;發生讀取錯誤)為&#39;credis_read_error&#39;
-* &#39;%Uncaught RedisException：%&#39;)作為&#39;redis_excp_err&#39;
-* &#39;%psync已排定在ASAP關閉，以克服輸出緩衝區%&#39;)作為&#39;output_buf_err&#39;
+* “%SLAVE同步：设备%”上没有剩余空间)作为“空间”
+* “%Server已启动，Redis版本%”)作为“serv_start”
+* &#39;%服务器现在已准备好接受连接%&#39;)作为&#39;ready&#39;
+* 与主控的“%Connection丢失。%&#39;)，作为“mstr_lost”
+* “%+sdown sentinel%”)作为“+sentinal”
+* “%-sdown sentinel%”)作为“ — sentinal”
+* “%-sdown slave%”)，作为“ — slave”，“%+sdown slave%”)，作为“+slave”
+* “%-failover-abort-not-selected主控mymaster%”)作为“ — failover”
+* “%+failover-abort-not-selected主控mymaster%”)作为“+failover”
+* “%Partial无法重新同步(没有缓存的主控)%”，因为“part_sync_err”
+* “%主控”已中止复制，并返回错误： ERR Can%”)，作为“mstr_sync_err”
+* “%主控”不支持PSYNC或处于错误状态%&#39;)作为“mstr_psync_err”
+* “%SLAVE同步：已完成，成功%”)，作为“ slv_sync_suc”
+* “%主控”已中止复制，错误为： ERR Can%”)，作为“mstr_sync_err，coun”
+* “%OOM命令（使用memory%”时不允许使用）作为“ max_mem_err”
+* “%CredisException（代码： 0）：连接%”上出现读取错误)为“credis_read_error”
+* “%Uncaught RedisException：%”)作为“redis_excp_err”
+* “%psync已计划为克服输出缓冲区%而尽快关闭”)作为“output_buf_err”
 
 ## [!UICONTROL PHP process states]
 
-![PHP處理狀態](../../assets/tools/php-process-states.jpg)
+![PHP进程状态](../../assets/tools/php-process-states.jpg)
 
-PHP流程的行為方式取決於 [設定](https://www.php.net/manual/en/install.fpm.configuration.php). 設定很複雜，有許多變數和選項。 此 **[!UICONTROL PHP process states]** 框架可協助您瞭解PHP處理序何時終止和重新啟動。
+PHP进程的行为方式取决于 [配置](https://www.php.net/manual/en/install.fpm.configuration.php). 配置非常复杂，包含许多变量和选项。 此 **[!UICONTROL PHP process states]** 框架可帮助您了解PHP进程何时终止和重新启动。
 
 ### [!UICONTROL PHP errors]
 
-![php錯誤](../../assets/tools/php-errors.jpg)
+![php错误](../../assets/tools/php-errors.jpg)
 
-此 **[!UICONTROL PHP errors]** 框架顯示所選時間範圍內背景程式的PHP錯誤數目。 如需詳細資訊，請參閱 [Adobe Commerce PHP設定](../../installation/prerequisites/php-settings.md).
+此 **[!UICONTROL PHP errors]** 框架显示选定时间范围内工作进程的PHP错误数。 有关更多信息，请参阅 [Adobe Commerce PHP设置](../../installation/prerequisites/php-settings.md).
 
-**PHP錯誤和訊息：**
+**PHP错误和消息：**
 
-* &#39;%worker_connections不足%&#39;)做為&#39;worker&#39;
-* &#39;%PHP嚴重錯誤：允許的記憶體大小！%&#39;)，作為&#39;mem_size&#39;
-* &#39;%exited on signal 11 (SIGSEGV)%&#39;)為&#39;sig_11&#39;
-* &#39;%exited on signal 7 (SIGBUS)%&#39;)為&#39;sig_7&#39;
-* &#39;%increase pm.start_servers%&#39;)作為&#39;pmstart_serv&#39;
-* &#39;%max_children%&#39;)做為&#39;max_children_cnt&#39;
-* &#39;%PHP嚴重錯誤：允許的記憶體大小為%&#39;)為&#39;mem_exhst_coun&#39;
-* &#39;%無法為集區%配置記憶體&#39;)做為&#39;opc_mem_count&#39;
-* &#39;%Warning Interned string buffer overflow%&#39;)作為&#39;opc_str_buf&#39;
-* &#39;%Illegal string offsetl%&#39;)做為&#39;opc_sv_comments&#39;
-* &#39;%PHP嚴重錯誤：未攔截到的RedisException：連線%&#39;上的讀取錯誤)為&#39;php_exc&#39;
+* “%worker_connections不足%”)作为“worker”
+* &#39;%PHP严重错误：允许的内存大小！%&#39;)作为“mem_size”
+* “%exited on signal 11 (SIGSEGV)%”)为“sig_11”
+* &#39;%exited on signal 7 (SIGBUS)%&#39;)为&#39;sig_7&#39;
+* “%increase pm.start_servers%”)作为“pmstart_serv”
+* “%max_children%”)作为“max_children_cnt”
+* “%PHP致命错误：允许的内存大小为%”)作为“mem_exhst_coun”
+* “%Unable allocate memory for pool%”)，作为“opc_mem_count”
+* &#39;%Warning Interned string buffer overflow%&#39;)作为&#39;opc_str_buf&#39;
+* “%Illegal string offsetl%”)作为“opc_sv_comments”
+* “%PHP致命错误：未捕获的RedisException：连接%”上出现读取错误)作为“php_exc”
 
 ## [!UICONTROL PHP processes]
 
-![php程式](../../assets/tools/php-processes.jpg)
+![php进程](../../assets/tools/php-processes.jpg)
 
-[PHP-FPM](https://php-fpm.org/) 是 [!UICONTROL FastCGI Process Manager] 使用者 [!DNL Nginx]. 若要瞭解系統需求，請參閱 [對應至Adobe Commerce版本的PHP版本要求](../../installation/system-requirements.md). 此 **[!UICONTROL PHP processes]** frame顯示在所選時間軸中特定時間執行的PHP處理序數目。
+[PHP-FPM](https://php-fpm.org/) 是 [!UICONTROL FastCGI Process Manager] 使用者 [!DNL Nginx]. 要了解系统要求，请参阅 [映射到Adobe Commerce版本的PHP版本要求](../../installation/system-requirements.md). 此 **[!UICONTROL PHP processes]** frame显示在所选时间轴中特定时间运行的PHP进程数。
 
 ## [!UICONTROL Secondary processes]
 
-![次要程式](../../assets/tools/secondary-processes.jpg)
+![辅助进程](../../assets/tools/secondary-processes.jpg)
 
-次要程式可能會影響網站回應。 此 **[!UICONTROL Secondary processes]** 框架表示可能增加網站負載的一或多個程式。 資料庫的主要次要處理序執行次數最多。
+辅助流程可能会影响站点响应。 此 **[!UICONTROL Secondary processes]** 框架指示可能向站点添加负载的一个或多个进程。 数据库主要运行着大多数辅助进程。
 
 ## [!UICONTROL Traffic vs Week Ago]
 
-![流量與周前](../../assets/tools/traffic-vs-week-ago.jpg)
+![流量与周前](../../assets/tools/traffic-vs-week-ago.jpg)
 
-此 **[!UICONTROL Traffic vs Week Ago]** frame會檢視來自的網站流量（請求）。 [!DNL Fastly] (&#39;MISS&#39;， &#39;PASS&#39;)快取狀態的記錄。 這些要求會將負載新增至原始伺服器。 此影格顯示本週與上週前同一時間範圍內的比較Web請求量。
+此 **[!UICONTROL Traffic vs Week Ago]** frame查看网站流量（请求）， [!DNL Fastly] （“未命中”、“通过”）缓存状态的日志。 这些请求会将负载添加到原始服务器。 此框架显示了同一时间范围内本周和上周的比较Web请求量。
 
 ## [!UICONTROL Fastly Cache]
 
-![fastly快取](../../assets/tools/fastly-cache.jpg)
+![快速缓存](../../assets/tools/fastly-cache.jpg)
 
-此 **[!UICONTROL Fastly Cache]** frame顯示來自的請求之快取狀態的彙總檢視。 [!DNL Fastly] 記錄。 如果您選取ERROR，它會顯示請求中的錯誤百分比。 當原始伺服器對頁面要求的回應速度不夠快時，這個數字通常會增加。
+此 **[!UICONTROL Fastly Cache]** 帧显示来自的请求的缓存状态的汇总视图 [!DNL Fastly] 日志。 如果选择ERROR，将显示请求中的错误百分比。 当源服务器对页面请求的响应速度不够快时，这种情况通常会增加。
 
 ## [!UICONTROL Page Rendering]
 
-![頁面呈現](../../assets/tools/page-rendering.jpg)
+![页面渲染](../../assets/tools/page-rendering.jpg)
 
-此 **[!UICONTROL Page Rendering]** frame顯示當週頁面檢視來源的平均頁面轉譯持續時間： [!DNL New Relic] 與相同時段的前一週比較。
+此 **[!UICONTROL Page Rendering]** 框架显示页面查看源中当前周的平均页面渲染持续时间 [!DNL New Relic] 与前一周同期相比。
 
 ## [!UICONTROL Page loading detail]
 
-![頁面載入詳細資料](../../assets/tools/page-loading-detail.png)
+![页面加载详细信息](../../assets/tools/page-loading-detail.png)
 
-此 **[!UICONTROL Page loading detail]** 框架說明頁面載入事件。 它詳細說明這些Facet的意義。 以下是為此框架執行的查詢：
+此 **[!UICONTROL Page loading detail]** 框架描述页面加载事件。 它详细说明了这些方面的含义。 以下是为此帧运行的查询：
 
 `SELECT percentile(timeToResponseStart, 50) AS 'first byte', percentile(firstPaint, 50) as 'First paint', percentile(firstContentfulPaint, 50) as 'First contentful paint', percentile(timeToDomContentLoadedEventEnd, 50) AS 'DOM content loaded', percentile(duration, 50) AS 'Window load + AJAX' FROM BrowserInteraction TIMESERIES`
 
 ## [!UICONTROL Transactions – Avg, Max, Min]
 
-![交易 — 平均、最大、最小](../../assets/tools/transactions-avg-max-min.jpg)
+![事务 — 平均、最大、最小值](../../assets/tools/transactions-avg-max-min.jpg)
 
-交易持續時間以秒為單位。 視交易而定，如果交易長時間執行，可能會影響其他交易。 列在名稱和持續時間下方的交易是針對特定時段的。 如果問題時間範圍很簡潔，請調整 [!DNL Observation for Adobe Commerce] 該狹窄時間範圍的日期/時間選擇器。
+交易持续时间以秒为单位。 根据事务的不同，如果它长时间运行，则可能影响其他事务。 列在名称和持续时间下的交易属于特定时段。 如果问题时间范围很简洁，请调整 [!DNL Observation for Adobe Commerce] 该狭窄时间范围的日期/时间选择器。
 
 ## [!UICONTROL Admin Activities]
 
-![管理員活動](../../assets/tools/admin-activities.jpg)
+![管理员活动](../../assets/tools/admin-activities.jpg)
 
-此 **[!UICONTROL Admin Activities]** frame會識別與管理員使用者的交易。
+此 **[!UICONTROL Admin Activities]** frame标识与管理员用户的交易。
 
 ## [!UICONTROL Order transactions (default?)]
 
-![訂單異動預設值](../../assets/tools/order-transactions-default.jpg)
+![订单交易记录默认值](../../assets/tools/order-transactions-default.jpg)
 
-此 **[!UICONTROL Order transactions (default?)]** 框架尋找交易 `request.headers.host` 來自交易，名稱= `WebTransaction/Action/checkout/onepage/success`. 如果訂單成功URL不同，此框架將沒有資料。
+此 **[!UICONTROL Order transactions (default?)]** 框架查找事务 `request.headers.host` 来自事务，名称= `WebTransaction/Action/checkout/onepage/success`. 如果订单成功URL不同，则此帧将没有数据。
 
 ## [!UICONTROL Elasticsearch Index information]
 
-![elasticsearch索引資訊](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
+![elasticsearch索引信息](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
-**[Elasticsearch狀態：](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
+**[Elasticsearch状态：](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
 
-* 綠色：指派所有分片。
-* 黃色：會指派所有主要分片，但會取消指派一或多個復本分片。 如果叢集中的某個節點失敗，則修復該節點之前，某些資料可能無法使用。
-* 紅色：有一或多個主要分片未指派，因此無法取得部分資料。 在叢集啟動期間，當指派主要分片時，可能會短暫發生這種情況。
+* 绿色：分配所有分片。
+* 黄色：已分配所有主分片，但未分配一个或多个副本分片。 如果群集中的某个节点出现故障，则某些数据可能不可用，直到修复该节点。
+* 红色：一个或多个主分区未分配，因此某些数据不可用。 在群集启动过程中，当分配了主分区时，可能会短暂发生这种情况。
 
 ## [!UICONTROL Elasticsearch Errors]
 
-![elasticsearch錯誤](../../assets/tools/elasticsearch-errors.jpg)
+![elasticsearch错误](../../assets/tools/elasticsearch-errors.jpg)
 
-**[!DNL Elasticsearch]錯誤：**
+**[!DNL Elasticsearch]错误：**
 
-* &#39;%all shards failed%&#39;為&#39;all_shards_failed&#39;
-* &#39;%NoNodesAvailableException%&#39;做為&#39;no_alive_nodes&#39;
-* &#39;%PHP嚴重錯誤：未攔截到的錯誤：Elasticsearch%&#39;的引數錯誤，為&#39;wrong_param&#39;
-* &#39;%您可以修正此問題，方法是將Magento雲端基礎結構上的Elasticsearch服務升級為&#39;ver_err&#39;版本%&#39;
-* &#39;%cluster健全狀態從\[YELLOW\]變更為\[RED\] (原因：%&#39;為&#39;yel_red&#39;
-* &#39;%device%&#39;上沒有剩餘的空間，因為&#39;no_space&#39;
-* &#39;%無法執行[SearchRequest{searchType=%&#39;，因為&#39;failed_query&#39;
+* “%all shards failed%”为“all_shards_failed”
+* “%NoNodesAvailableException%”作为“no_alive_nodes”
+* “%PHP严重错误：未捕获错误：Elasticsearch%”的参数错误，为“wrong_param”
+* &#39;%您可以通过将您的Magento云基础架构上的Elasticsearch服务升级到“ver_err”版本%来解决此问题
+* “%cluster运行状况状态已从\[YELLOW\]更改为\[RED\]（原因：%）为“yel_red”
+* “%No space”作为“no_space”，在device%上已无剩余空间
+* “%”无法执行[SearchRequest{searchType=%&#39;，因为“failed_query”
 
 ## [!UICONTROL Cron view]
 
-![cron檢視](../../assets/tools/cron-view.jpg)
+![cron视图](../../assets/tools/cron-view.jpg)
 
-此 **[!UICONTROL Cron view]** frame會檢視cron記錄，以取得開始的cron數目與cron完成數目之間的平衡。
+此 **[!UICONTROL Cron view]** frame将查看cron日志，以平衡开始的cron数量与结束的cron数量。
 
 
 ## [!UICONTROL Cron error]
 
-![cron錯誤](../../assets/tools/cron-error.png)
+![cron错误](../../assets/tools/cron-error.png)
 
-**cron.log中的Cron錯誤：**
+**cron.log中的cron错误：**
 
-* &#39;%_stg%&#39;做為&#39;stg_crons&#39;
-* &#39;%Could not acquire lock for cron job%&#39; as &#39;cron_lock&#39;
-* &#39;%一般錯誤： 2006 MySQL伺服器已經離開%&#39;為&#39;mysql_has_gone_away&#39;
-* &#39;%error%&#39;為&#39;error&#39;
-* &#39;%一般錯誤： 1205 Lock等待逾時%&#39; as sql_1205_cron
+* “%_stg%”作为“stg_crons”
+* “%Could not acquire lock for cron job%”为“cron_lock”
+* &#39;%一般错误： 2006 MySQL服务器已消失%&#39;为&#39;mysql_has_gone_away&#39;
+* “%error%”作为“error”
+* “%General error： 1205 Lock wait timeout exceeded%”，因为sql_1205_cron
 
 ## [!UICONTROL cron_schedule table updates]
 
-![cron_schedule表格更新](../../assets/tools/cron-schedule-table-updates.jpg)
+![cron_schedule表更新](../../assets/tools/cron-schedule-table-updates.jpg)
 
-此 **[!UICONTROL cron_schedule table updates]** frame會檢視資料存放區作業更新涉及cron_schedule表格的最長持續時間（以秒為單位）。 它以SQL要求型別為分面。
+此 **[!UICONTROL cron_schedule table updates]** frame查看数据存储操作更新涉及cron_schedule表的最长持续时间（以秒为单位）。 它在SQL请求类型上刻面。
 
 ## [!UICONTROL Datastore Operations Tables]
 
-![資料存放區操作表格](../../assets/tools/datastore-operations-tables.jpg)
+![数据存储操作表](../../assets/tools/datastore-operations-tables.jpg)
 
-此 **[!UICONTROL Datastore Operations Tables]** frame會依持續時間、表格名稱和SQL要求型別顯示前25個作業。 暫留在尖峰上，可檢視正在存取哪個表格以及按哪個請求型別存取的詳細資訊。
+此 **[!UICONTROL Datastore Operations Tables]** 框架按持续时间时间、表名和SQL请求类型显示前25项操作。 将鼠标悬停在尖峰上可查看有关正在访问哪个表以及按哪个请求类型访问的详细信息。
 
 ## [!UICONTROL Cache Flush]
 
-![快取排清](../../assets/tools/cache-flush.jpg)
+![缓存刷新](../../assets/tools/cache-flush.jpg)
 
-**偵測到快取排清：**
+**检测到缓存刷新：**
 
-* &#39;%config%&#39;為&#39;config_cache_flushed&#39;
-* &#39;%layout%&#39;作為&#39;layout_cache_flush&#39;
-* &#39;%block_html%&#39;做為&#39;block_html_cache_flush&#39;
-* &#39;%collections%&#39;作為&#39;collections_cache_flush&#39;
-* &#39;%reflection%&#39;做為&#39;reflection_cache_flush&#39;
-* &#39;%db_ddl%&#39;做為&#39;db_ddl_cache_flush&#39;
-* &#39;%compiled_config%&#39;做為&#39;compiled_config_cache_flush&#39;
-* &#39;%eav%&#39;為&#39;eav_cache_flush&#39;
-* &#39;%customer_notification%&#39;作為&#39;cust_notif_cache_flush&#39;
-* &#39;%config_integration%&#39;作為&#39;config_intege_cache_flush&#39;
-* &#39;%config_integration_api%&#39;，作為&#39;config_integg_api_cache_flush&#39;
-* &#39;%full_page%&#39;作為&#39;full_page_cache_flush&#39;
-* &#39;%config_webservice%&#39;作為&#39;config_webserv_cache_flush&#39;
-* &#39;%translate%&#39;作為&#39;translate_cache_flush&#39;
+* “%config%”作为“config_cache_flushed”
+* “%layout%”作为“layout_cache_flush”
+* “%block_html%”作为“block_html_cache_flush”
+* “%collections%”作为“collections_cache_flush”
+* “%reflection%”作为“reflection_cache_flush”
+* “%db_ddl%”作为“db_ddl_cache_flush”
+* “%compiled_config%”作为“compiled_config_cache_flush”
+* “%eav%”作为“eav_cache_flush”
+* “%customer_notification%”作为“cust_notif_cache_flush”
+* “%config_integration%”作为“config_intege_cache_flush”
+* “%config_integration_api%”作为“config_integration_api_cache_flush”
+* “%full_page%”作为“full_page_cache_flush”
+* “%config_webservice%”作为“config_webserv_cache_flush”
+* “%translate%”作为“translate_cache_flush”

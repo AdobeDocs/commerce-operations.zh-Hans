@@ -5,7 +5,7 @@ source-wordcount: '2674'
 ht-degree: 0%
 
 ---
-# Adobe Commerce的雲端套件
+# Adobe Commerce云包
 
 <!-- The 'packages' variable contains the 'packages' node of the '_data/codebase/cloud/composer_lock.json' file
  -->
@@ -19,15 +19,15 @@ ht-degree: 0%
 <!-- The edition variable contains `cloud` value from the _data/names.yml file
  -->
 
-雲端基礎結構上的Adobe Commerce使用Composer來管理PHP套件。
+云基础架构上的Adobe Commerce使用Composer管理PHP包。
 
-此 `composer.json` 檔案會宣告套件清單，而 `composer.lock` file會儲存用來建置Adobe Commerce或Magento Open Source安裝的套件完整清單（每個套件及其相依性的完整版本）。
+此 `composer.json` 文件声明包的列表，而 `composer.lock` file存储用于构建Adobe Commerce或Magento Open Source安装的软件包（每个软件包及其依赖项的完整版本）的完整列表。
 
-下列參考檔案產生自 `composer.lock` 檔案，並涵蓋Adobe Commerce on cloud infrastructure 2.4.6中包含的必要套件。
+以下参考文档是从 `composer.lock` 文件，它涵盖Adobe Commerce on cloud infrastructure 2.4.6中包含的必需包。
 
-## 相依性
+## 依赖关系
 
-`magento/magento-cloud-metapackage 2.4.6` 具有下列相依性：
+`magento/magento-cloud-metapackage 2.4.6` 具有以下依赖关系：
 
 ```config
 fastly/magento2: ^1.2.34
@@ -36,16 +36,16 @@ magento/module-paypal-on-boarding: ~100.5.0
 magento/product-enterprise-edition: >=2.4.6 <2.4.7
 ```
 
-## 協力廠商授權
+## 第三方许可证
 
-### Apache-2.0、LGPL-2.1-only
+### Apache-2.0，仅LGPL-2.1
 
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -53,15 +53,15 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     <td>
       elasticsearch/elasticsearch
     </td>
-    <td>資料庫</td>
-    <td>Elasticsearch的PHP使用者端</td>
+    <td>库</td>
+    <td>用于Elasticsearch的PHP客户端</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/opensearch-project/opensearch-php.git">opensearch-project/opensearch-php</a>
     </td>
-    <td>資料庫</td>
-    <td>OpenSearch的PHP使用者端</td>
+    <td>库</td>
+    <td>适用于OpenSearch的PHP客户端</td>
   </tr>
   </tbody>
 </table>
@@ -71,9 +71,9 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -81,36 +81,36 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     <td>
       <a href="https://github.com/adobe/stock-api-libphp.git">astock/stock-api-libphp</a>
     </td>
-    <td>資料庫</td>
-    <td>Adobe Stock API程式庫</td>
+    <td>库</td>
+    <td>Adobe Stock API库</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/awslabs/aws-crt-php.git">aws/aws-crt-php</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP的AWS通用執行階段</td>
+    <td>库</td>
+    <td>适用于PHP的AWS公共运行时</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/aws/aws-sdk-php.git">aws/aws-sdk-php</a>
     </td>
-    <td>資料庫</td>
-    <td>適用於PHP的AWS SDK — 在PHP專案中使用Amazon Web Services</td>
+    <td>库</td>
+    <td>适用于PHP的AWS SDK — 在PHP项目中使用Amazon Web Services</td>
   </tr>
   <tr>
     <td>
       paypal/module-braintree
     </td>
-    <td>中繼封裝</td>
+    <td>隐含</td>
     <td>BraintreeMagento</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/wikimedia/less.php.git">wikimedia/less.php</a>
     </td>
-    <td>資料庫</td>
-    <td>較少處理器的PHP連線埠</td>
+    <td>库</td>
+    <td>LESS处理器的PHP端口</td>
   </tr>
   </tbody>
 </table>
@@ -120,39 +120,39 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/Bacon/BaconQrCode.git">培根/培根 — qr-code</a>
+      <a href="https://github.com/Bacon/BaconQrCode.git">培根/培根 — 二维码</a>
     </td>
-    <td>資料庫</td>
-    <td>BaconQrCode是PHP的QR程式碼產生器。</td>
+    <td>库</td>
+    <td>BaconQrCode是PHP的二维码生成器。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/beberlei/assert.git">beberlei/assert</a>
+      <a href="https://github.com/beberlei/assert.git">贝贝雷/阿瑟特</a>
     </td>
-    <td>資料庫</td>
-    <td>業務模型中用於輸入驗證的精簡宣告庫。</td>
+    <td>库</td>
+    <td>业务模型中用于输入验证的精简断言库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/DASPRiD/Enum.git">dasprid/enum</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP 7.1列舉實作</td>
+    <td>库</td>
+    <td>PHP 7.1枚举实现</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/webimpress/safe-writer.git">webimpress/safe-writer</a>
     </td>
-    <td>資料庫</td>
-    <td>安全寫入檔案的工具，以避免競爭情況</td>
+    <td>库</td>
+    <td>安全写入文件的工具，以避免竞争情况</td>
   </tr>
   </tbody>
 </table>
@@ -162,9 +162,9 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -173,306 +173,306 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
       <a href="https://github.com/colinmollenhour/Cm_Cache_Backend_File.git">colimollenhour/cache-backend-file</a>
     </td>
     <td>magento-module</td>
-    <td>坯件Zend_Cache_Backend_File後端的標籤清除效能極差，導致隨著快取專案數的增加無法使用。 此後端進行許多變更，大幅提升效能，尤其是標籤清理方面。</td>
+    <td>库存Zend_Cache_Backend_File后端对于标记清除的性能极差，导致其随着缓存项目数的增加而变得不可用。 此后端做出了许多更改，从而极大地提高了性能，尤其是标签清理方面。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/colinmollenhour/php-redis-session-abstract.git">colimollenhour/php-redis-session-abstract</a>
     </td>
-    <td>資料庫</td>
-    <td>具有樂觀鎖定的Redis型工作階段處理常式</td>
+    <td>库</td>
+    <td>具有乐观锁定的基于Redis的会话处理程序</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/fastly/fastly-magento2.git">fastly/magento2</a>
     </td>
-    <td>magento2-module</td>
-    <td>適用於Magento2.4.x的Fastly CDN模組</td>
+    <td>magento2模块</td>
+    <td>适用于Magento2.4.x的Fastly CDN模块</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
     </td>
-    <td>資料庫</td>
-    <td>在PHP中編碼和解碼JSON Web權杖(JWT)的簡單程式庫。 應符合目前的規格。</td>
+    <td>库</td>
+    <td>在PHP中对JSON Web令牌(JWT)进行编码和解码的简单库。 应符合当前规范。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/google/recaptcha.git">google/recaptcha</a>
     </td>
-    <td>資料庫</td>
-    <td>reCAPTCHA的使用者端資料庫，此免費服務可保護網站免受垃圾郵件和濫用。</td>
+    <td>库</td>
+    <td>reCAPTCHA客户端库，这是一种保护网站抵御垃圾邮件和滥用的免费服务。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-captcha.git">laminas/laminas-captcha</a>
+      <a href="https://github.com/laminas/laminas-captcha.git">拉米纳斯/拉米纳斯验证码</a>
     </td>
-    <td>資料庫</td>
-    <td>使用Figlet、影像、ReCaptcha等產生及驗證碼等</td>
+    <td>库</td>
+    <td>使用Figlet、图像、ReCaptcha等生成和验证CAPTCHA</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-code.git">laminas/laminas-code</a>
+      <a href="https://github.com/laminas/laminas-code.git">层叠/层叠 — 编码</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP Reflection API、靜態程式碼掃描和程式碼產生的擴充功能</td>
+    <td>库</td>
+    <td>PHP Reflection API、静态代码扫描和代码生成的扩展</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-config.git">層板/層板 — 組態</a>
+      <a href="https://github.com/laminas/laminas-config.git">层合板/层合板</a>
     </td>
-    <td>資料庫</td>
-    <td>提供巢狀物件屬性型使用者介面，用於存取應用程式程式碼中的此設定資料</td>
+    <td>库</td>
+    <td>提供了基于嵌套对象属性的用户界面，用于访问应用程序代码中的此配置数据</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">層板/層板 — 加密</a>
+      <a href="https://github.com/laminas/laminas-crypt.git">层膜/层膜 — 加密</a>
     </td>
-    <td>資料庫</td>
-    <td>強大的加密工具和密碼雜湊</td>
+    <td>库</td>
+    <td>强大的加密工具和密码散列</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-db.git">laminas/laminas-db</a>
     </td>
-    <td>資料庫</td>
-    <td>資料庫抽象層、SQL抽象化、結果集抽象化，以及RowDataGateway和TableDataGateway實作</td>
+    <td>库</td>
+    <td>数据库抽象层、SQL抽象、结果集抽象，以及RowDataGateway和TableDataGateway实现</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
+      <a href="https://github.com/laminas/laminas-di.git">拉米纳斯/拉米纳斯 — 迪</a>
     </td>
-    <td>資料庫</td>
-    <td>PSR-11容器的自動化相依性插入</td>
+    <td>库</td>
+    <td>PSR-11容器的自动依赖项注入</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-escaper.git">層疊/層疊 — 逸出</a>
+      <a href="https://github.com/laminas/laminas-escaper.git">拉米纳斯/拉米纳斯逸出者</a>
     </td>
-    <td>資料庫</td>
-    <td>安全地逸出HTML、HTML屬性、JavaScript、CSS和URL</td>
+    <td>库</td>
+    <td>安全可靠地转义HTML、HTML属性、JavaScript、CSS和URL</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-eventmanager.git">laminas/laminas-eventmanager</a>
     </td>
-    <td>資料庫</td>
-    <td>在PHP應用程式中觸發和監聽事件</td>
+    <td>库</td>
+    <td>触发和侦听PHP应用程序中的事件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-feed.git">層合板/層合板饋送</a>
+      <a href="https://github.com/laminas/laminas-feed.git">层合板/馈送</a>
     </td>
-    <td>資料庫</td>
-    <td>提供建立和使用RSS和Atom摘要的功能</td>
+    <td>库</td>
+    <td>提供创建和使用RSS和Atom馈送的功能</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-file.git">層疊/層疊 — 檔案</a>
+      <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
     </td>
-    <td>資料庫</td>
-    <td>找到PHP類別檔案</td>
+    <td>库</td>
+    <td>找到PHP类文件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-filter.git">圖層/圖層濾鏡</a>
+      <a href="https://github.com/laminas/laminas-filter.git">层合板/层合板滤镜</a>
     </td>
-    <td>資料庫</td>
-    <td>以程式設計方式篩選及標準化資料和檔案</td>
+    <td>库</td>
+    <td>以编程方式筛选和标准化数据和文件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-http.git">laminas/laminas-http</a>
+      <a href="https://github.com/laminas/laminas-http.git">层合板/层合板 — http</a>
     </td>
-    <td>資料庫</td>
-    <td>提供執行超文字傳輸通訊協定(HTTP)要求的簡易介面</td>
+    <td>库</td>
+    <td>提供用于执行超文本传输协议(HTTP)请求的轻松界面</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-i18n.git">層粘連體/層粘連體 — i18n</a>
+      <a href="https://github.com/laminas/laminas-i18n.git">laminas/laminas-i18n</a>
     </td>
-    <td>資料庫</td>
-    <td>為您的應用程式提供翻譯，並篩選及驗證國際化值</td>
+    <td>库</td>
+    <td>为您的应用程序提供翻译，并筛选和验证国际化值</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-json.git">laminas/laminas-json</a>
     </td>
-    <td>資料庫</td>
-    <td>提供將原生PHP序列化為JSON並將JSON解碼為原生PHP的便利方法</td>
+    <td>库</td>
+    <td>提供了将本机PHP序列化为JSON并将JSON解码为本机PHP的简便方法</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-loader.git">層疊/層疊 — 載入器</a>
+      <a href="https://github.com/laminas/laminas-loader.git">层合板/层合板加载器</a>
     </td>
-    <td>資料庫</td>
-    <td>自動載入和外掛程式載入策略</td>
+    <td>库</td>
+    <td>自动加载和插件加载策略</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">層疊/層疊</a>
+      <a href="https://github.com/laminas/laminas-mail.git">层叠/层叠 — 邮件</a>
     </td>
-    <td>資料庫</td>
-    <td>提供撰寫和傳送文字及MIME相容多部分電子郵件訊息的通用功能</td>
+    <td>库</td>
+    <td>提供通用功能，用于撰写和发送文本以及MIME兼容的多部分电子邮件</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-math.git">laminas/laminas-math</a>
     </td>
-    <td>資料庫</td>
-    <td>建立加密安全的偽隨機數，並管理大整數</td>
+    <td>库</td>
+    <td>创建加密安全的伪随机数，并管理大整数</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mime.git">層疊/層疊 — mime</a>
+      <a href="https://github.com/laminas/laminas-mime.git">层粘连蛋白/层粘连蛋白</a>
     </td>
-    <td>資料庫</td>
-    <td>建立和剖析MIME訊息和部分</td>
+    <td>库</td>
+    <td>创建和解析MIME消息和部分</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-modulemanager.git">laminas/laminas-modulemanager</a>
+      <a href="https://github.com/laminas/laminas-modulemanager.git">层合板/层合板 — 模块管理器</a>
     </td>
-    <td>資料庫</td>
-    <td>適用於Laminas-mvc應用程式的模組化應用程式系統</td>
+    <td>库</td>
+    <td>用于层板MVC应用的模块化应用系统</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-mvc.git">laminas/laminas-mvc</a>
     </td>
-    <td>資料庫</td>
-    <td>Laminas的事件導向MVC層，包括MVC應用程式、控制器和外掛程式</td>
+    <td>库</td>
+    <td>Laminas的事件驱动MVC层，包括MVC应用程序、控制器和插件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-oauth.git">雷米納斯/雷米納斯 — 奧auth</a>
+      <a href="https://github.com/laminas/laminas-oauth.git">拉米纳斯/拉米纳斯奥auth</a>
     </td>
-    <td>資料庫</td>
+    <td>库</td>
     <td></td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-permissions-acl.git">laminas/laminas-permissions-acl</a>
     </td>
-    <td>資料庫</td>
-    <td>提供輕量且有彈性的存取控制清單(ACL)實作，以進行許可權管理</td>
+    <td>库</td>
+    <td>为权限管理提供轻量级和灵活的访问控制列表(ACL)实施</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-recaptcha.git">laminas/laminas-recaptcha</a>
+      <a href="https://github.com/laminas/laminas-recaptcha.git">拉米纳斯/拉米纳斯 — 雷卡普查</a>
     </td>
-    <td>資料庫</td>
-    <td>ReCaptcha Web服務的OOP包裝函式</td>
+    <td>库</td>
+    <td>ReCaptcha Web服务的OOP包装器</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-router.git">laminas/laminas-route</a>
+      <a href="https://github.com/laminas/laminas-router.git">层合板/层合板路由器</a>
     </td>
-    <td>資料庫</td>
-    <td>適用於HTTP和主控台應用程式的彈性路由系統</td>
+    <td>库</td>
+    <td>适用于HTTP和控制台应用程序的灵活路由系统</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-server.git">laminas/laminas-server</a>
     </td>
-    <td>資料庫</td>
-    <td>建立反射式RPC伺服器</td>
+    <td>库</td>
+    <td>创建基于反射的RPC服务器</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-servicemanager.git">laminas/laminas-servicemanager</a>
     </td>
-    <td>資料庫</td>
-    <td>工廠導向的相依性插入容器</td>
+    <td>库</td>
+    <td>工厂驱动的依赖项注入容器</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-session.git">laminas/laminas-session</a>
+      <a href="https://github.com/laminas/laminas-session.git">层合板/层合板 — 会话</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP工作階段和儲存的物件導向介面</td>
+    <td>库</td>
+    <td>面向PHP会话和存储的面向对象接口</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-soap.git">羊層肉/羊層肉</a>
+      <a href="https://github.com/laminas/laminas-soap.git">层粘连蛋白/层粘连蛋白</a>
     </td>
-    <td>資料庫</td>
+    <td>库</td>
     <td></td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-stdlib.git">laminas/laminas-stdlib</a>
+      <a href="https://github.com/laminas/laminas-stdlib.git">层粘连蛋白/层粘连蛋白</a>
     </td>
-    <td>資料庫</td>
-    <td>SPL擴充功能、陣列公用程式、錯誤處理常式等</td>
+    <td>库</td>
+    <td>SPL扩展、数组实用程序、错误处理程序等</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-text.git">層疊/層疊 — 文字</a>
+      <a href="https://github.com/laminas/laminas-text.git">层叠/层叠 — 文本</a>
     </td>
-    <td>資料庫</td>
-    <td>建立FIGlet和文字型表格</td>
+    <td>库</td>
+    <td>创建FIGlet和基于文本的表</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-uri.git">laminas/laminas-uri</a>
     </td>
-    <td>資料庫</td>
-    <td>協助操控和驗證「統一資源識別碼(URI)」的元件</td>
+    <td>库</td>
+    <td>帮助操作和验证“统一资源标识符(URI)”的组件</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-validator.git">laminas/laminas-validator</a>
     </td>
-    <td>資料庫</td>
-    <td>適用於多種網域的驗證類別，以及鏈結驗證器以建立複雜驗證條件的功能</td>
+    <td>库</td>
+    <td>适用于各种域的验证类，以及链结验证器以创建复杂验证标准的功能</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-view.git">laminas/laminas-view</a>
+      <a href="https://github.com/laminas/laminas-view.git">拉米纳斯/拉米纳斯维尤</a>
     </td>
-    <td>資料庫</td>
-    <td>彈性檢視層可支援並提供多個檢視層、協助程式等</td>
+    <td>库</td>
+    <td>支持并提供多个视图层、辅助器等的柔性视图层</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-zendframework-bridge.git">laminas/laminas-zendframework-bridge</a>
     </td>
-    <td>資料庫</td>
-    <td>將舊版ZF類別名稱別名變更為Laminas專案的對等名稱。</td>
+    <td>库</td>
+    <td>将旧版ZF类名别名更改为Laminas项目等效项。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/nikic/PHP-Parser.git">nikic/php-parser</a>
     </td>
-    <td>資料庫</td>
-    <td>以PHP撰寫的PHP剖析器</td>
+    <td>库</td>
+    <td>用PHP编写的PHP解析器</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/tedious/JShrink.git">tedivm/jshrink</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP內建的Javascript縮制器</td>
+    <td>库</td>
+    <td>PHP中内置的Javascript微型器</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git">tubalmartin/cssmin</a>
+      <a href="https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git">tubalmartin/csmin</a>
     </td>
-    <td>資料庫</td>
-    <td>YUI CSS壓縮器的PHP連線埠</td>
+    <td>库</td>
+    <td>YUI CSS压缩器的PHP端口</td>
   </tr>
   </tbody>
 </table>
 
-### BSD-3 — 條款 — 修改
+### BSD-3 — 子句修改
 
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -481,35 +481,35 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
       <a href="https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git">colimollenhour/cache-backend-redis</a>
     </td>
     <td>magento-module</td>
-    <td>使用Redis的Zend_Cache後端，完全支援標籤。</td>
+    <td>使用Redis的Zend_Cache后端，完全支持标记。</td>
   </tr>
   </tbody>
 </table>
 
-### LGPL-2.1或更新版本
+### LGPL-2.1或更高版本
 
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/ezyang/htmlpurifier.git">額澤洋/htmlpurifier</a>
+      <a href="https://github.com/ezyang/htmlpurifier.git">鄂孜阳/htmlpurifier</a>
     </td>
-    <td>資料庫</td>
-    <td>以PHP撰寫的符合標準的HTML篩選器</td>
+    <td>库</td>
+    <td>使用PHP编写的符合标准的HTML过滤器</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-amqplib/php-amqplib.git">php-amqplib/php-amqplib</a>
     </td>
-    <td>資料庫</td>
-    <td>先前稱為videlalvaro/php-amqplib。  此程式庫是AMQP通訊協定的純PHP實作。 已針對RabbitMQ進行測試。</td>
+    <td>库</td>
+    <td>以前称为videlalvaro/php-amqplib。  此库是AMQP协议的纯PHP实现。 它通过RabbitMQ测试。</td>
   </tr>
   </tbody>
 </table>
@@ -519,9 +519,9 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -529,680 +529,680 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     <td>
       <a href="https://github.com/braintree/braintree_php.git">braintree/braintree_php</a>
     </td>
-    <td>資料庫</td>
-    <td>BraintreePHP使用者端程式庫</td>
+    <td>库</td>
+    <td>PHP客户端库Braintree</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/brick/math.git">磚/數學</a>
+      <a href="https://github.com/brick/math.git">积木/数学</a>
     </td>
-    <td>資料庫</td>
-    <td>任意精確度算術程式庫</td>
+    <td>库</td>
+    <td>任意精度算术库</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/brick/varexporter.git">磚/varexporter</a>
+      <a href="https://github.com/brick/varexporter.git">brick/varexporter</a>
     </td>
-    <td>資料庫</td>
-    <td>var_export()的強大替代方法，可以在不使用__set_state()的情況下匯出封閉點和物件</td>
+    <td>库</td>
+    <td>var_export()的强大替代方法，它可以在不使用__set_state()的情况下导出关闭项和对象</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/ChristianRiesen/base32.git">christian-riesen/base32</a>
     </td>
-    <td>資料庫</td>
-    <td>根據RFC 4648的Base32編碼器/解碼器</td>
+    <td>库</td>
+    <td>根据RFC 4648的Base32编码器/解码器</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/colinmollenhour/credis.git">colimollenhour/credis</a>
     </td>
-    <td>資料庫</td>
-    <td>Credis是Redis索引鍵值存放區的輕量型介面，可在取得phpredis資料庫時將其換行，以獲得更優異的效能。</td>
+    <td>库</td>
+    <td>Credis是Redis键值存储的轻量级接口，当可用时它会封装phpredis库以提高性能。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/ca-bundle.git">composer/ca-bundle</a>
     </td>
-    <td>資料庫</td>
-    <td>可讓您尋找系統CA套件的路徑，並包含Mozilla CA套件的備援。</td>
+    <td>库</td>
+    <td>用于查找系统CA捆绑包的路径，并包含对Mozilla CA捆绑包的回退。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/class-map-generator.git">composer/class-map-generator</a>
     </td>
-    <td>資料庫</td>
-    <td>用來掃描PHP程式碼和產生類別對映的公用程式。</td>
+    <td>库</td>
+    <td>用于扫描PHP代码和生成类映射的实用程序。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/composer.git">composer/composer</a>
     </td>
-    <td>資料庫</td>
-    <td>Composer可協助您宣告、管理和安裝PHP專案的相依性。 它可確保您在任何地方都有正確的棧疊。</td>
+    <td>库</td>
+    <td>Composer可帮助您声明、管理和安装PHP项目的依赖项。 它可确保您在所有地方都拥有正确的栈栈。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/metadata-minifier.git">composer/metadata-minifier</a>
     </td>
-    <td>資料庫</td>
-    <td>處理中繼資料縮制和擴充的小型公用程式庫。</td>
+    <td>库</td>
+    <td>处理元数据缩小和扩展的小型实用工具库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/pcre.git">composer/pcre</a>
     </td>
-    <td>資料庫</td>
-    <td>PCRE包裝程式庫，提供型別安全的預浸料_*取代物。</td>
+    <td>库</td>
+    <td>PCRE包装库，提供类型安全的预浸料_*替换件。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/semver.git">composer/semver</a>
     </td>
-    <td>資料庫</td>
-    <td>提供公用程式、版本限制剖析和驗證的伺服器程式庫。</td>
+    <td>库</td>
+    <td>提供实用程序、版本约束解析和验证的服务器库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/spdx-licenses.git">composer/spdx-licenses</a>
     </td>
-    <td>資料庫</td>
-    <td>SPDX授權清單和驗證程式庫。</td>
+    <td>库</td>
+    <td>SPDX许可证列表和验证库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/xdebug-handler.git">composer/xdebug-handler</a>
     </td>
-    <td>資料庫</td>
-    <td>在不使用Xdebug的情況下重新啟動程式。</td>
+    <td>库</td>
+    <td>在不使用Xdebug的情况下重新启动进程。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/doctrine/annotations.git">doctrine/annotations</a>
+      <a href="https://github.com/doctrine/annotations.git">原则/注释</a>
     </td>
-    <td>資料庫</td>
-    <td>Docblock註解剖析器</td>
+    <td>库</td>
+    <td>Docblock注释解析器</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/doctrine/deprecations.git">doctrine/deprecations</a>
+      <a href="https://github.com/doctrine/deprecations.git">理论/弃用</a>
     </td>
-    <td>資料庫</td>
-    <td>在trigger_error(E_USER_DEPRECATED)或PSR-3記錄之上的小層，提供選項以停用所有過時專案或選擇性地針對套件使用。</td>
+    <td>库</td>
+    <td>位于trigger_error(E_USER_DEPRECATED)或PSR-3日志记录之上的小层，可选择禁用所有弃用内容或选择禁用包。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/doctrine/lexer.git">doctrine/lexer</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP Doctrine Lexer剖析器程式庫，可用於自上而下的遞回下降剖析器。</td>
+    <td>库</td>
+    <td>PHP Doctrine Lexer解析器库，可在自上而下的递归后代解析器中使用。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
-    <td>資料庫</td>
-    <td>Endroid QR碼</td>
+    <td>库</td>
+    <td>Endroid QR代码</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/ezimuel/guzzlestreams.git">ezimuel/guzzlestreams</a>
     </td>
-    <td>資料庫</td>
-    <td>要與elasticsearch-php一起使用的插銷/串流（已捨棄）復本</td>
+    <td>库</td>
+    <td>与elasticsearch-php一起使用的guzzle/streams（已放弃）分支</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/ezimuel/ringphp.git">ezimuel/ringphp</a>
     </td>
-    <td>資料庫</td>
-    <td>與elasticsearch-php一起使用的guzzle/RingPHP （已放棄）分支</td>
+    <td>库</td>
+    <td>与elasticsearch-php一起使用的guzzle/RingPHP（已放弃）分支</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/FriendsOfPHP/proxy-manager-lts.git">friendsofphp/proxy-manager-lts</a>
     </td>
-    <td>資料庫</td>
-    <td>新增對更廣泛的PHP版本的支援到ocramius/proxy-manager</td>
+    <td>库</td>
+    <td>向ocramius/proxy-manager添加对更广泛的PHP版本的支持</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/bzikarsky/gelf-php.git">graylog2/gelf-php</a>
     </td>
-    <td>資料庫</td>
-    <td>將記錄訊息傳送至GELF相容後端（例如Graylog2）的php實作。</td>
+    <td>库</td>
+    <td>一种php实现，用于将日志消息发送到与GELF兼容的后端，如Graylog2。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/guzzle/guzzle.git">guzzlehttp/guzzle</a>
     </td>
-    <td>資料庫</td>
-    <td>Guzzle是PHP HTTP使用者端程式庫</td>
+    <td>库</td>
+    <td>Guzzle是一个PHP HTTP客户端库</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/guzzle/promises.git">guzzlehttp/promise</a>
     </td>
-    <td>資料庫</td>
-    <td>Guzzle promise程式庫</td>
+    <td>库</td>
+    <td>Guzzle promise库</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/guzzle/psr7.git">guzzlehttp/psr7</a>
     </td>
-    <td>資料庫</td>
-    <td>PSR-7訊息實作，也提供常見的公用程式方法</td>
+    <td>库</td>
+    <td>还提供常用实用程序方法的PSR-7消息实施</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/illuminate/collections.git">照明/集合</a>
+      <a href="https://github.com/illuminate/collections.git">照明/收藏集</a>
     </td>
-    <td>資料庫</td>
-    <td>Illuminate Collections套件。</td>
+    <td>库</td>
+    <td>照明收藏集包。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/illuminate/config.git">illuminate/config</a>
     </td>
-    <td>資料庫</td>
-    <td>Illuminate設定套件。</td>
+    <td>库</td>
+    <td>Illuminate配置包。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/illuminate/contracts.git">照明/合約</a>
+      <a href="https://github.com/illuminate/contracts.git">照明/合同</a>
     </td>
-    <td>資料庫</td>
-    <td>Illuminate Contracts套件。</td>
+    <td>库</td>
+    <td>照明合同包。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/illuminate/macroable.git">照明/可巨型</a>
+      <a href="https://github.com/illuminate/macroable.git">可照明/可放大</a>
     </td>
-    <td>資料庫</td>
-    <td>可照明的大型套件。</td>
+    <td>库</td>
+    <td>照明可宏封装。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/justinrainbow/json-schema.git">justinrainbow/json-schema</a>
     </td>
-    <td>資料庫</td>
-    <td>驗證json結構描述的程式庫。</td>
+    <td>库</td>
+    <td>用于验证json架构的库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/thephpleague/flysystem.git">league/flysystem</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP的檔案儲存擷取</td>
+    <td>库</td>
+    <td>PHP的文件存储抽象</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/thephpleague/flysystem-aws-s3-v3.git">league/flysystem-aws-s3-v3</a>
     </td>
-    <td>資料庫</td>
-    <td>適用於Flysystem的AWS S3檔案系統配接卡。</td>
+    <td>库</td>
+    <td>适用于Flysystem的AWS S3文件系统适配器。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/thephpleague/mime-type-detection.git">league/mime-type-detection</a>
     </td>
-    <td>資料庫</td>
-    <td>Flysystem的MIME型別偵測</td>
+    <td>库</td>
+    <td>用于飞行系统的MIME类型检测</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Seldaek/monolog.git">monolog/monolog</a>
     </td>
-    <td>資料庫</td>
-    <td>將您的記錄檔傳送至檔案、通訊端、收件匣、資料庫和各種網路服務</td>
+    <td>库</td>
+    <td>将日志发送到文件、套接字、收件箱、数据库和各种Web服务</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/jmespath/jmespath.php.git">mtdowling/jmespath.php</a>
     </td>
-    <td>資料庫</td>
-    <td>以宣告方式指定如何從JSON檔案中擷取元素</td>
+    <td>库</td>
+    <td>以声明方式指定如何从JSON文档中提取元素</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/briannesbitt/Carbon.git">nesbot/carbon</a>
     </td>
-    <td>資料庫</td>
-    <td>DateTime的API擴充功能可支援281種不同的語言。</td>
+    <td>库</td>
+    <td>适用于DateTime的API扩展，支持281种不同的语言。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/paragonie/constant_time_encoding.git">paragonie/constant_time_encoding</a>
     </td>
-    <td>資料庫</td>
-    <td>RFC 4648編碼的固定時間實作(Base-64、Base-32、Base-16)</td>
+    <td>库</td>
+    <td>RFC 4648编码的恒定时间实施(Base-64、Base-32、Base-16)</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/paragonie/random_compat.git">paragonie/random_compat</a>
     </td>
-    <td>資料庫</td>
+    <td>库</td>
     <td>PHP 7中的random_bytes()和random_int()的PHP 5.x polyfill</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/MyIntervals/emogrifier.git">pelago/emogrifier</a>
+      <a href="https://github.com/MyIntervals/emogrifier.git">佩拉戈/表情符号</a>
     </td>
-    <td>資料庫</td>
-    <td>將CSS樣式轉換為HTML程式碼中的內嵌樣式屬性</td>
+    <td>库</td>
+    <td>将CSS样式转换为HTML代码中的内联样式属性</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/PhpGt/CssXPath.git">phpgt/cssxpath</a>
     </td>
-    <td>資料庫</td>
-    <td>將CSS選取器轉換為XPath查詢。</td>
+    <td>库</td>
+    <td>将CSS选择器转换为XPath查询。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/PhpGt/Dom.git">phpgt/dom</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP專案的現代DOM API。</td>
+    <td>库</td>
+    <td>适用于PHP项目的现代DOM API。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/phpseclib/mcrypt_compat.git">phpseclib/mcrypt_compat</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP 5.x-8.x polyfill for mcrypt extension</td>
+    <td>库</td>
+    <td>用于加密扩展的PHP 5.x-8.x polyfill</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/phpseclib/phpseclib.git">phpseclib/phpseclib</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP Secure Communications Library - RSA、AES、SSH2、SFTP、X.509等的純PHP實作。</td>
+    <td>库</td>
+    <td>PHP安全通信库 — RSA、AES、SSH2、SFTP、X.509等的纯PHP实施。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/cache.git">psr/cache</a>
     </td>
-    <td>資料庫</td>
-    <td>快取程式庫的通用介面</td>
+    <td>库</td>
+    <td>缓存库的通用接口</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/container.git">psr/container</a>
     </td>
-    <td>資料庫</td>
-    <td>通用容器介面（PHP圖PSR-11）</td>
+    <td>库</td>
+    <td>公共容器接口（PHP图PSR-11）</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/event-dispatcher.git">psr/event-dispatcher</a>
     </td>
-    <td>資料庫</td>
-    <td>用於事件處理的標準介面。</td>
+    <td>库</td>
+    <td>用于事件处理的标准接口。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/http-client.git">psr/http-client</a>
     </td>
-    <td>資料庫</td>
-    <td>HTTP使用者端的通用介面</td>
+    <td>库</td>
+    <td>HTTP客户端的通用接口</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/http-factory.git">psr/http-factory</a>
     </td>
-    <td>資料庫</td>
-    <td>PSR-7 HTTP訊息處理站的通用介面</td>
+    <td>库</td>
+    <td>PSR-7 HTTP消息工厂的通用接口</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/http-message.git">psr/http-message</a>
     </td>
-    <td>資料庫</td>
-    <td>HTTP訊息的通用介面</td>
+    <td>库</td>
+    <td>HTTP消息的通用接口</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/log.git">psr/log</a>
     </td>
-    <td>資料庫</td>
-    <td>記錄程式庫的通用介面</td>
+    <td>库</td>
+    <td>用于记录库的通用界面</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/php-fig/simple-cache.git">psr/simple-cache</a>
     </td>
-    <td>資料庫</td>
-    <td>簡易快取的通用介面</td>
+    <td>库</td>
+    <td>用于简单缓存的通用接口</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/ralouphie/getallheaders.git">ralouphie/getallheaders</a>
     </td>
-    <td>資料庫</td>
-    <td>getallheaders的polyfill。</td>
+    <td>库</td>
+    <td>getallheaders的聚合填充。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/ramsey/collection.git">ramsey/collection</a>
     </td>
-    <td>資料庫</td>
-    <td>用於表示和處理集合的PHP程式庫。</td>
+    <td>库</td>
+    <td>用于表示和处理收藏集的PHP库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/ramsey/uuid.git">ramsey/uuid</a>
     </td>
-    <td>資料庫</td>
-    <td>用於產生和使用通用唯一識別碼(UUID)的PHP程式庫。</td>
+    <td>库</td>
+    <td>用于生成和使用通用唯一标识符(UUID)的PHP库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/reactphp/promise.git">react/promise</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP的CommonJS Promise/A的輕量型實作</td>
+    <td>库</td>
+    <td>适用于PHP的CommonJS Promise/A的轻量级实施</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/sabberworm/PHP-CSS-Parser.git">sabberworm/php-css-parser</a>
     </td>
-    <td>資料庫</td>
-    <td>以PHP寫入之CSS檔案的剖析器</td>
+    <td>库</td>
+    <td>以PHP编写的CSS文件的解析器</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Seldaek/jsonlint.git">seld/jsonlint</a>
     </td>
-    <td>資料庫</td>
+    <td>库</td>
     <td>JSON Linter</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Seldaek/phar-utils.git">seld/phar-utils</a>
     </td>
-    <td>資料庫</td>
-    <td>PHAR檔案格式公用程式，當PHP朝上時適用</td>
+    <td>库</td>
+    <td>PHAR文件格式实用程序，用于当PHP向上</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Seldaek/signal-handler.git">seld/signal-handler</a>
     </td>
-    <td>資料庫</td>
-    <td>簡單的Unix訊號處理常式，在訊號不支援輕鬆跨平台開發時無訊息失敗</td>
+    <td>库</td>
+    <td>简单的unix信号处理程序在信号不受支持时静默失败，从而易于进行跨平台开发</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Spomky-Labs/aes-key-wrap.git">spomky-labs/aes-key-wrap</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP的AES金鑰換行。</td>
+    <td>库</td>
+    <td>PHP的AES密钥换行。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Spomky-Labs/otphp.git">spomky-labs/otphp</a>
     </td>
-    <td>資料庫</td>
-    <td>根據RFC 4226 （HOTP演演算法）和RFC 6238 （TOTP演演算法）產生一次性密碼且與Google Authenticator相容的PHP程式庫</td>
+    <td>库</td>
+    <td>用于根据RFC 4226（HOTP算法）和RFC 6238（TOTP算法）生成一次性密码并与Google Authenticator兼容的PHP库</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/Spomky-Labs/pki-framework.git">spomky-labs/pki-framework</a>
     </td>
-    <td>資料庫</td>
-    <td>用於管理公開金鑰基礎結構的PHP架構。 它包含X.509公開金鑰憑證、屬性憑證、憑證請求和憑證路徑驗證。</td>
+    <td>库</td>
+    <td>用于管理公钥基础结构的PHP框架。 它包括X.509公钥证书、属性证书、证书请求和证书路径验证。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/config.git">symfony/config</a>
     </td>
-    <td>資料庫</td>
-    <td>協助您尋找、載入、合併、自動填寫及驗證任何型別的設定值</td>
+    <td>库</td>
+    <td>帮助您查找、加载、组合、自动填写和验证任何类型的配置值</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/console.git">symfony/主控台</a>
+      <a href="https://github.com/symfony/console.git">交响乐/控制台</a>
     </td>
-    <td>資料庫</td>
-    <td>輕鬆建立美觀且可測試的命令列介面</td>
+    <td>库</td>
+    <td>轻松创建美观且可测试的命令行界面</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/css-selector.git">symfony/css-selector</a>
     </td>
-    <td>資料庫</td>
-    <td>將CSS選取器轉換為XPath運算式</td>
+    <td>库</td>
+    <td>将CSS选择器转换为XPath表达式</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/dependency-injection.git">symfony/相依性插入</a>
+      <a href="https://github.com/symfony/dependency-injection.git">symfony/dependency-injection</a>
     </td>
-    <td>資料庫</td>
-    <td>可讓您標準化並集中處理應用程式中建構物件的方式</td>
+    <td>库</td>
+    <td>允许您标准化并集中处理应用程序中构建对象的方式</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/deprecation-contracts.git">symfony/deprecation-contracts</a>
+      <a href="https://github.com/symfony/deprecation-contracts.git">交响曲/弃用合同</a>
     </td>
-    <td>資料庫</td>
-    <td>觸發淘汰通知的一般函式和慣例</td>
+    <td>库</td>
+    <td>用于触发弃用通知的通用函数和约定</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/error-handler.git">symfony/error-handler</a>
     </td>
-    <td>資料庫</td>
-    <td>提供管理錯誤和輕鬆偵錯PHP程式碼的工具</td>
+    <td>库</td>
+    <td>提供用于管理错误和轻松调试PHP代码的工具</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/event-dispatcher.git">symfony/event-dispatcher</a>
     </td>
-    <td>資料庫</td>
-    <td>提供可讓您的應用程式元件透過傳送事件並聆聽它們而彼此通訊的工具</td>
+    <td>库</td>
+    <td>提供一些工具，允许应用程序组件通过调度事件并监听事件来相互通信</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/event-dispatcher-contracts.git">symfony/event-dispatcher-contracts</a>
+      <a href="https://github.com/symfony/event-dispatcher-contracts.git">symfony/event-dispatcher合同</a>
     </td>
-    <td>資料庫</td>
-    <td>與分派事件相關的一般抽象概念</td>
+    <td>库</td>
+    <td>与调度事件相关的一般抽象</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/filesystem.git">symfony/檔案系統</a>
+      <a href="https://github.com/symfony/filesystem.git">symfony/文件系统</a>
     </td>
-    <td>資料庫</td>
-    <td>提供檔案系統的基本公用程式</td>
+    <td>库</td>
+    <td>为文件系统提供基本实用程序</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/finder.git">symfony/finder</a>
+      <a href="https://github.com/symfony/finder.git">交响曲/寻找器</a>
     </td>
-    <td>資料庫</td>
-    <td>透過直覺式的流暢介面尋找檔案和目錄</td>
+    <td>库</td>
+    <td>通过直观的流畅界面查找文件和目录</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/http-foundation.git">symfony/http-foundation</a>
     </td>
-    <td>資料庫</td>
-    <td>定義HTTP規格的物件導向圖層</td>
+    <td>库</td>
+    <td>为HTTP规范定义面向对象层</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/http-kernel.git">symfony/http-kernel</a>
     </td>
-    <td>資料庫</td>
-    <td>提供將請求轉換為回應的結構化程式</td>
+    <td>库</td>
+    <td>提供将请求转换为响应的结构化流程</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/intl.git">symfony/intl</a>
+      <a href="https://github.com/symfony/intl.git">交响曲/国际号码</a>
     </td>
-    <td>資料庫</td>
-    <td>提供C intl擴充功能的PHP取代層，其中包含來自ICU程式庫的其他資料</td>
+    <td>库</td>
+    <td>为C intl扩展提供一个PHP替换层，其中包括来自ICU库的附加数据</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-ctype</a>
     </td>
-    <td>資料庫</td>
-    <td>用於Ctype函式的Symfony Polyfill</td>
+    <td>库</td>
+    <td>用于CTYPE功能的交调聚合填料</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-intl-grapheme.git">symfony/polyfill-intl-grapheme</a>
     </td>
-    <td>資料庫</td>
-    <td>用於intl的grapheme_*函式的Symfony polyfill</td>
+    <td>库</td>
+    <td>用于intl的grapheme_*函数的Symfony polyfill</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-intl-idn.git">symfony/polyfill-intl-idn</a>
     </td>
-    <td>資料庫</td>
-    <td>intl的idn_to_ascii和idn_to_utf8函式的Symfony Polyfill</td>
+    <td>库</td>
+    <td>用于intl的idn_to_ascii和idn_to_utf8函数的Symfony Polyfill</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-intl-normalizer.git">symfony/polyfill-intl-normalizer</a>
+      <a href="https://github.com/symfony/polyfill-intl-normalizer.git">symfony/polyfill-intl — 正规化</a>
     </td>
-    <td>資料庫</td>
-    <td>intl的Normalizer類別和相關函式的Symfony polyfill</td>
+    <td>库</td>
+    <td>Intl的Normalizer类和相关函数的Symfony polyfill</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-mbstring.git">symfony/polyfill-mbstring</a>
     </td>
-    <td>資料庫</td>
-    <td>Mbstring延伸的Symfony polyfill</td>
+    <td>库</td>
+    <td>Mbstring扩展的Symfony polyfill</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-php72.git">symfony/polyfill-php72</a>
     </td>
-    <td>資料庫</td>
-    <td>Symfony polyfill將一些PHP 7.2+功能回移植到較低的PHP版本</td>
+    <td>库</td>
+    <td>Symfony polyfill将一些PHP 7.2+功能回移植到较低的PHP版本</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-php73.git">symfony/polyfill-php73</a>
     </td>
-    <td>資料庫</td>
-    <td>Symfony polyfill將一些PHP 7.3+功能回移植到較低的PHP版本</td>
+    <td>库</td>
+    <td>Symfony polyfill将一些PHP 7.3+功能回移植到较低的PHP版本</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-php80.git">symfony/polyfill-php80</a>
     </td>
-    <td>資料庫</td>
-    <td>Symfony polyfill將某些PHP 8.0+功能回移植到較低的PHP版本</td>
+    <td>库</td>
+    <td>Symfony polyfill将某些PHP 8.0及更高功能回移植到较低的PHP版本</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-php81.git">symfony/polyfill-php81</a>
     </td>
-    <td>資料庫</td>
-    <td>Symfony polyfill將一些PHP 8.1+功能回移植到較低的PHP版本</td>
+    <td>库</td>
+    <td>Symfony polyfill将一些PHP 8.1+功能回移植到较低的PHP版本</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/process.git">symfony/process</a>
+      <a href="https://github.com/symfony/process.git">交响乐/过程</a>
     </td>
-    <td>資料庫</td>
-    <td>執行子處理序中的命令</td>
+    <td>库</td>
+    <td>执行子进程中的命令</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/proxy-manager-bridge.git">symfony/proxy-manager-bridge</a>
     </td>
-    <td>symfony-bridge</td>
-    <td>提供ProxyManager與各種Symfony元件的整合</td>
+    <td>交响桥</td>
+    <td>提供ProxyManager与各种Symfony组件的集成</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/serializer.git">symfony/序列化程式</a>
+      <a href="https://github.com/symfony/serializer.git">symfony/serializer</a>
     </td>
-    <td>資料庫</td>
-    <td>處理將資料結構（包括物件圖形）序列化和還原序列化成陣列結構或其他格式（例如XML和JSON）的過程。</td>
+    <td>库</td>
+    <td>处理将数据结构（包括对象图）序列化和反序列化为数组结构或其他格式（如XML和JSON）。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/service-contracts.git">交響曲/服務合約</a>
+      <a href="https://github.com/symfony/service-contracts.git">交响曲/服务合同</a>
     </td>
-    <td>資料庫</td>
-    <td>與撰寫服務相關的一般抽象概念</td>
+    <td>库</td>
+    <td>与书写服务相关的一般抽象</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/string.git">symfony/string</a>
     </td>
-    <td>資料庫</td>
-    <td>為字串提供物件導向的API，並以統一的方式處理位元組、UTF-8程式碼點和字形叢集</td>
+    <td>库</td>
+    <td>为字符串提供面向对象的API，并以统一的方式处理字节、UTF-8代码点和字形聚类</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/translation.git">交響曲/翻譯</a>
+      <a href="https://github.com/symfony/translation.git">交响曲/翻译</a>
     </td>
-    <td>資料庫</td>
-    <td>提供工具，讓您的應用程式國際化</td>
+    <td>库</td>
+    <td>提供使应用程序国际化的工具</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/translation-contracts.git">交響曲/翻譯合約</a>
+      <a href="https://github.com/symfony/translation-contracts.git">交响曲/翻译合同</a>
     </td>
-    <td>資料庫</td>
-    <td>與翻譯相關的一般抽象概念</td>
+    <td>库</td>
+    <td>与翻译相关的一般抽象</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/var-dumper.git">symfony/var-dumper</a>
     </td>
-    <td>資料庫</td>
-    <td>提供用於瀏覽任何任意PHP變數的機制</td>
+    <td>库</td>
+    <td>提供用于浏览任何任意PHP变量的机制</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/yaml.git">symfony/yaml</a>
     </td>
-    <td>資料庫</td>
-    <td>載入和傾印YAML檔案</td>
+    <td>库</td>
+    <td>加载和转储YAML文件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/thecodingmachine/safe.git">編碼機器/保險箱</a>
+      <a href="https://github.com/thecodingmachine/safe.git">编码机/保险箱</a>
     </td>
-    <td>資料庫</td>
-    <td>擲回例外狀況而不是在錯誤時傳回FALSE的PHP核心函式</td>
+    <td>库</td>
+    <td>引发异常而不是出错时返回FALSE的PHP核心函数</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/web-token/jwt-framework.git">web-token/jwt-framework</a>
     </td>
     <td>symfony-bundle</td>
-    <td>PHP和Symfony套件組合的JSON物件簽署和加密程式庫。</td>
+    <td>PHP和Symfony包的JSON对象签名和加密库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/webmozarts/assert.git">webmozart/assert</a>
     </td>
-    <td>資料庫</td>
-    <td>驗證方法輸入/輸出的斷言，帶有不錯的錯誤訊息。</td>
+    <td>库</td>
+    <td>验证方法输入/输出的断言，带有很好的错误消息。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/webonyx/graphql-php.git">webonyx/graphql-php</a>
     </td>
-    <td>資料庫</td>
-    <td>GraphQL參考實作的PHP連線埠</td>
+    <td>库</td>
+    <td>GraphQL参考实现的PHP端口</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/zordius/lightncandy.git">佐迪烏斯/光糖果</a>
+      <a href="https://github.com/zordius/lightncandy.git">佐第乌斯/光糖果</a>
     </td>
-    <td>資料庫</td>
-    <td>handlebars ( http://handlebarsjs.com/ )和mustache ( http://mustache.github.io/ )的超快PHP實作。</td>
+    <td>库</td>
+    <td>handlebars ( http://handlebarsjs.com/ )和mustache ( http://mustache.github.io/ )的超快PHP实现。</td>
   </tr>
   </tbody>
 </table>
@@ -1212,9 +1212,9 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -1222,15 +1222,15 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     <td>
       paypal/module-braintree-graph-ql
     </td>
-    <td>magento2-module</td>
-    <td>不適用</td>
+    <td>magento2模块</td>
+    <td>不适用</td>
   </tr>
   <tr>
     <td>
-      Temando/module-shipping-remover
+      temando/module-shipping-remover
     </td>
-    <td>magento2-module</td>
-    <td>從Magento2移除Temando多承運商送貨擴充功能</td>
+    <td>magento2模块</td>
+    <td>从Magento2中删除Temando多承运人运输分机</td>
   </tr>
   </tbody>
 </table>
@@ -1240,9 +1240,9 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -1250,8 +1250,8 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     <td>
       temando/module-shipping
     </td>
-    <td>中繼封裝</td>
-    <td>Magento2的Temando多承運商延長運送期</td>
+    <td>隐含</td>
+    <td>适用于Magento2的Temando多承运人运输扩展</td>
   </tr>
   </tbody>
 </table>
@@ -1261,9 +1261,9 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -1271,20 +1271,20 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     <td>
       <a href="https://github.com/2tvenom/CBOREncode.git">2tvenom/cborencode</a>
     </td>
-    <td>資料庫</td>
-    <td>PHP的CBOR編碼器</td>
+    <td>库</td>
+    <td>PHP的CBOR编码器</td>
   </tr>
   </tbody>
 </table>
 
-### Proprietary
+### 专有
 
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -1296,9 +1296,9 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
 <table>
   <thead>
     <tr>
-      <th>名稱</th>
-      <th>型別</th>
-      <th>說明</th>
+      <th>名称</th>
+      <th>类型</th>
+      <th>描述</th>
     </tr>
   </thead>
   <tbody>
@@ -1306,8 +1306,8 @@ magento/product-enterprise-edition: >=2.4.6 <2.4.7
     <td>
       paypal/module-braintree-core
     </td>
-    <td>magento2-module</td>
-    <td>取自Gene Commerce for PayPal的MagentoBraintree2.2.0模組。</td>
+    <td>magento2模块</td>
+    <td>从Gene Commerce for PayPal的MagentoBraintree2.2.0模块创建分支。</td>
   </tr>
   </tbody>
 </table>

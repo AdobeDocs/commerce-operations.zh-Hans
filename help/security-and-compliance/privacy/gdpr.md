@@ -1,6 +1,6 @@
 ---
-title: 一般資料保護規範(GDPR)
-description: 瞭解一般資料保護規範(GDPR)，這是規範歐盟和歐洲經濟區所有個人資料保護和隱私權的法規。
+title: 通用数据保护条例(GDPR)
+description: 了解《通用数据保护条例》(GDPR)，该法规可为欧盟和欧洲经济区的所有个人规范数据保护和隐私。
 exl-id: 30e60601-f4f7-419e-b2dd-8c82c8a2ed33
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 0%
 
 ---
 
-# 一般資料保護規範(GDPR)
+# 通用数据保护条例(GDPR)
 
 >[!NOTE]
 >
->本主題是協助Adobe Commerce和Magento Open Source商家及開發人員瞭解一般資料保護規範(GDPR)含義的一系列主題之一。 此資訊僅供參考，不應理解為法律建議。 請洽詢您的法律顧問，判斷您的企業是否及如何遵守任何法律義務。
+>本主题是帮助Adobe Commerce和Magento Open Source商家及开发人员了解《通用数据保护条例》(GDPR)含义的一系列主题中的一个。 该信息仅供参考，不应理解为法律建议。 请咨询您的法律顾问，以确定您的企业是否以及如何遵守任何法律义务。
 
-歐盟(EU)頒佈 [一般資料保護規範](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR)賦予公民更多掌控個人資料的權利。 GDPR適用於歐盟內營運的任何組織。 也適用於歐盟以外向歐盟客戶或企業提供商品或服務的組織。
+欧洲联盟（欧盟）颁布 [通用数据保护条例](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR)加强公民对其个人数据的控制。 GDPR适用于在欧盟境内运营的任何组织。 该条款也适用于欧盟以外向欧盟客户或企业提供商品或服务的组织。
 
-系統整合商可以使用Personal Information Reference中的資料流圖表和資料庫資訊來建置指令碼，以解決類似下列的使用案例：
+系统集成商可以使用“个人信息参考”中的数据流图和数据库信息构建脚本，以解决类似于以下用例的问题：
 
-- 購物者要求商店儲存的資料復本
-- 購物者要求刪除其資訊
+- 一位购物者要求商店提供一份他们存储的有关他们的数据的副本
+- 购物者请求删除其信息
 
-## 個人資訊參考資料
+## 个人信息参考
 
-如需技術資訊，請參閱「個人資訊參考」中的資料流圖表和資料庫實體對應，其適用於您支援的每個Adobe Commerce或Magento Open Source版本。
+有关技术信息，请参阅“个人信息参考”中的数据流图和数据库实体映射，这些映射适用于您支持的每个Adobe Commerce版本或Magento Open Source。
 
-- [客戶個人資訊參考（2.x版）](data-m2.md)
-- [客戶個人資訊參考（版本） 1.x)](data-m1.md)
+- [客户个人信息参考（2.x版）](data-m2.md)
+- [客户个人信息参考（版本） 1.x)](data-m1.md)
 
-如需Adobe Commerce和Magento Open Source如何協助商家遵守GDPR的詳細資訊，請參閱下列內容：
+有关Adobe Commerce和Magento Open Source如何帮助商家遵守GDPR的更多信息，请参阅以下内容：
 
-- [GDPR法規遵循](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
-- [Adobe Commerce已準備好遵循GDPR](https://business.adobe.com/privacy/general-data-protection-regulation.html)
+- [GDPR合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
+- [Adobe Commerce已为GDPR做好准备](https://business.adobe.com/privacy/general-data-protection-regulation.html)

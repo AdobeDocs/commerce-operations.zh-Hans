@@ -1,6 +1,6 @@
 ---
-title: MySQL准則
-description: 請依照下列步驟安裝和設定MySQL和MariaDB，以內部部署Adobe Commerce和Magento Open Source。
+title: MySQL准则
+description: 按照以下步骤安装和配置MySQL和MariaDB，以进行Adobe Commerce和Magento Open Source的内部安装。
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,62 +9,62 @@ ht-degree: 0%
 
 ---
 
-# 一般MySQL准則
+# 常规MySQL准则
 
-另請參閱 [系統需求](../../system-requirements.md) 支援的MySQL版本。
+参见 [系统要求](../../system-requirements.md) 支持的MySQL版本。
 
-Adobe _強烈_ 建議您在設定資料庫時，遵循下列標準：
+Adobe _强烈_ 建议您在设置数据库时遵循以下标准：
 
-* Adobe Commerce和Magento Open Source使用 [MySQL資料庫觸發程式](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) 以改進重新索引期間的資料庫存取。 當索引器模式設定為時，就會建立這些模式 [排程](../../../configuration/cli/manage-indexers.md#configure-indexers). 應用程式不支援資料庫中的任何自訂觸發器，因為自訂觸發器可能會造成與未來Adobe Commerce和Magento Open Source版本不相容。
-* 熟悉以下內容 [這些潛在的MySQL觸發條件限制](https://dev.mysql.com/doc/mysql-reslimits-excerpt/8.0/en/stored-program-restrictions.html) 然後再繼續。
-* 若要增強您的資料庫安全性狀態，請啟用 [`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_strict_all_tables) SQL模式可防止儲存無效的資料值，這可能會造成不必要的資料庫互動。
-* Adobe Commerce和Magento Open Source do _not_ 支援以MySQL陳述式為基礎的復寫。 請務必使用 _僅限_ [列式復寫](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
+* Adobe Commerce和Magento Open Source使用 [MySQL数据库触发器](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) 以改进重新索引期间的数据库访问。 当索引器模式设置为时，将创建这些项 [计划](../../../configuration/cli/manage-indexers.md#configure-indexers). 应用程序不支持数据库中的任何自定义触发器，因为自定义触发器可能会与将来的Adobe Commerce和Magento Open Source版本不兼容。
+* 熟悉以下内容 [这些潜在的MySQL触发器限制](https://dev.mysql.com/doc/mysql-reslimits-excerpt/8.0/en/stored-program-restrictions.html) 然后再继续。
+* 要增强数据库安全状态，请启用 [`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_strict_all_tables) SQL模式，以防止存储无效的数据值，这可能会造成不需要的数据库交互。
+* Adobe Commerce和Magento Open Source do _非_ 支持基于MySQL语句的复制。 确保使用 _仅限_ [基于行的复制](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
 
 >[!WARNING]
 >
->Adobe Commerce目前使用 `CREATE TEMPORARY TABLE` 交易內的陳述式，這些陳述式 [不相容](https://dev.mysql.com/doc/refman/5.7/en/replication-gtids-restrictions.html) 對於資料庫實作，會使用以GTID為基礎的複製，例如 [Google Cloud SQL第二代執行個體](https://cloud.google.com/sql/docs/features#differences). 請考慮使用MySQL for Cloud SQL 8.0作為替代方案。
+>Adobe Commerce当前使用 `CREATE TEMPORARY TABLE` 事务内的语句，这些语句 [不兼容](https://dev.mysql.com/doc/refman/5.7/en/replication-gtids-restrictions.html) 对于数据库实施，使用基于GTID的复制，例如 [Google Cloud SQL第二代实例](https://cloud.google.com/sql/docs/features#differences). 考虑使用MySQL for Cloud SQL 8.0作为替代方法。
 
 >[!NOTE]
 >
->如果您的Web伺服器和資料庫伺服器位於不同的主機上，請在資料庫伺服器主機上執行本主題中討論的工作，然後請參閱 [設定遠端MySQL資料庫連線](mysql-remote.md).
+>如果Web服务器和数据库服务器位于不同的主机上，请在数据库服务器主机上执行本主题中讨论的任务，然后请参见 [设置远程MySQL数据库连接](mysql-remote.md).
 
-## 在Ubuntu上安裝MySQL
+## 在Ubuntu上安装MySQL
 
-Adobe Commerce和Magento Open Source2.4需要全新安裝MySQL 8.0。請依照下列連結取得在您的電腦上安裝MySQL的說明。
+Adobe Commerce和Magento Open Source2.4要求全新安装MySQL 8.0。有关在计算机上安装MySQL的说明，请按照下面的链接操作。
 
-* [Ubuntu](https://ubuntu.com/server/docs/databases-mysql)
+* [乌本图](https://ubuntu.com/server/docs/databases-mysql)
 * [CentOS](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html)
 
-如果您預計會匯入大量產品，您可以將 [`max_allowed_packet`](https://dev.mysql.com/doc/refman/5.6/en/program-variables.html) 大於預設值16 MB。
+如果您预计会导入大量产品，则可以增加 [`max_allowed_packet`](https://dev.mysql.com/doc/refman/5.6/en/program-variables.html) 大于默认值16 MB。
 
 >[!NOTE]
 >
->預設值適用於雲端基礎結構上的Adobe Commerce _和_ 內部部署專案。 雲端基礎結構上的Adobe Commerce Pro客戶必須開立支援工單，以增加 `max_allowed_packet` 值。 雲端基礎結構上的Adobe Commerce入門客戶可以更新 `/etc/mysql/mysql.cnf` 檔案。
+>默认值适用于云基础架构上的Adobe Commerce _和_ 内部部署项目。 Adobe Commerce on cloud infrastructure Pro客户必须开立支持工单以增加 `max_allowed_packet` 值。 云基础架构上的Adobe Commerce入门客户可以通过更新 `/etc/mysql/mysql.cnf` 文件。
 
-若要增加值，請開啟 `/etc/mysql/mysql.cnf` 在文字編輯器中的檔案並找到 `max_allowed_packet`. 將變更儲存至 `mysql.cnf` 檔案，關閉文字編輯器，然後重新啟動MySQL (`service mysql restart`)。
+要增加值，请打开 `/etc/mysql/mysql.cnf` 文件，并找到值 `max_allowed_packet`. 将更改保存到 `mysql.cnf` 文件，关闭文本编辑器，然后重新启动MySQL (`service mysql restart`)。
 
-若要選擇性地驗證您設定的值，請在 `mysql>` 提示：
+要验证设置的值（可选），请在 `mysql>` 提示：
 
 ```sql
 SHOW VARIABLES LIKE 'max_allowed_packet';
 ```
 
-然後， [設定資料庫執行處理](#configuring-the-database-instance).
+那么， [配置数据库实例](#configuring-the-database-instance).
 
-## MySQL 8變更
+## MySQL 8更改
 
-針對Adobe Commerce和Magento Open Source2.4，我們新增對MySQL 8的支援。
-本節說明開發人員應注意的MySQL 8重大變更。
+对于Adobe Commerce和Magento Open Source2.4，我们添加了对MySQL 8的支持。
+本节介绍开发人员应了解的对MySQL 8的主要更改。
 
-### 已移除整數型別（內距）的寬度
+### 已移除整数类型（填充）的宽度
 
-MySQL 8.0.17已棄用整數資料型別(TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT)的顯示寬度規格。在輸出中包含資料型別定義的陳述式不再顯示整數型別的顯示寬度，TINYINT(1)除外。 MySQL聯結器假設TINYINT(1)資料行是以BOOLEAN資料行起源。 此例外狀況可讓他們繼續做出該假設。
+在MySQL 8.0.17中，已弃用整数数据类型(TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT)的显示宽度规范。在输出中包含数据类型定义的语句不再显示整数类型的显示宽度，TINYINT(1)除外。 MySQL连接器假定TINYINT(1)列源自BOOLEAN列。 这一例外使他们能够继续作出这一假设。
 
-#### 範例
+#### 示例
 
-在mysql 8.19上說明admin_user
+在mysql 8.19中描述admin_user
 
-| 欄位 | 型別 | 空 | 金鑰 | 預設 | 額外 |
+| 字段 | 类型 | 空 | 键 | 默认 | 额外的 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | user\_id | `int unsigned` | 否 | PRI | `NULL` | `auto_increment` |
 | `firstname` | `varchar(32)` | 是 |  | `NULL` |  |
@@ -73,77 +73,77 @@ MySQL 8.0.17已棄用整數資料型別(TINYINT、SMALLINT、MEDIUMINT、INT、B
 | `username` | `varchar(40)` | 是 | UNI | `NULL` |  |
 | `password` | `varchar(255)` | 否 |  | `NULL` |  |
 | `created` | `timestamp` | 否 |  | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` |
-| `modified` | `timestamp` | 否 |  | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` 更新時 `CURRENT_TIMESTAMP` |
+| `modified` | `timestamp` | 否 |  | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` 更新时 `CURRENT_TIMESTAMP` |
 | `logdate` | `timestamp` | 是 |  | `NULL` |  |
 | `lognum` | `smallint unsigned` | 否 |  | `0` |  |
 
-除了 _TINYINT(1)_，所有整數內距(TINYINT > 1、SMALLINT、MEDIUMINT、INT、BIGINT)應從 `db_schema.xml` 檔案。
+除了 _TINYINT(1)_，所有整数填充(TINYINT > 1、SMALLINT、MEDIUMINT、INT、BIGINT)应从 `db_schema.xml` 文件。
 
-如需詳細資訊，請參閱 [https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-19.html#mysqld-8-0-19-feature](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-19.html#mysqld-8-0-19-feature).
+有关更多信息，请参阅 [https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-19.html#mysqld-8-0-19-feature](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-19.html#mysqld-8-0-19-feature).
 
-### 預設ORDER BY行為
+### 默认ORDER BY行为
 
-在8.0之前，專案都是依外部索引鍵排序。 預設排序順序取決於使用的引擎。
-如果您的程式碼取決於特定排序，請一律指定排序順序。
+在8.0之前，条目按外键排序。 默认排序顺序取决于使用的引擎。
+如果您的代码依赖于特定排序，则始终指定排序顺序。
 
-### GROUP BY的已過時ASC和DESC限定詞
+### GROUP BY的已弃用ASC和DESC限定符
 
-自MySQL 8.0.13起，已棄用 `ASC` 或 `DESC` 的限定詞 `GROUP BY` 子句已移除。 先前依賴的查詢 `GROUP BY` 排序可能會產生與先前MySQL版本不同的結果。 若要產生指定的排序順序，請提供 `ORDER BY` 子句。
+自MySQL 8.0.13起，已弃用 `ASC` 或 `DESC` 限定符 `GROUP BY` 已删除子句。 以前依赖的查询 `GROUP BY` 排序可能会产生与以前的MySQL版本不同的结果。 要生成给定的排序顺序，请提供 `ORDER BY` 子句。
 
 ## Commerce和MySQL 8
 
-Adobe Commerce和Magento Open Source已進行一些變更，以正確支援MySQL 8。
+为了正确支持MySQL 8，对Adobe Commerce和Magento Open Source进行了一些更改。
 
-### 查詢和插入行為
+### 查询和插入行为
 
-Adobe Commerce和Magento Open Source已透過在中設定SET SQL_MODE=&quot; ，停用一般驗證行為 `/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php:424.`. 停用驗證時，MySQL可能會截斷資料。 在MySQL中，查詢行為已變更： `Select * on my_table where IP='127.0.0.1'` 不再傳回結果，因為IP位址現在可正確視為字串而非整數。
+Adobe Commerce和Magento Open Source通过在以下位置设置SET SQL_MODE=&quot; ，禁用了常规验证行为 `/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php:424.`. 禁用验证后，MySQL可能会截断数据。 在MySQL中，查询行为已更改： `Select * on my_table where IP='127.0.0.1'` 不再返回结果，因为IP地址现在被正确视为字符串而不是整数。
 
-## 從MySQL 5.7升級至MySQL 8
+## 从MySQL 5.7升级到MySQL 8
 
-若要將MySQL從5.7版正確更新為8版，您必須依照下列順序執行步驟：
+要将MySQL从版本5.7正确更新到版本8，您必须按顺序执行以下步骤：
 
-1. 將Adobe Commerce或Magento Open Source升級至2.4.0。測試所有內容，並確定您的系統可如預期般運作。
-1. 啟用維護模式：
+1. 将Adobe Commerce或Magento Open Source升级到2.4.0。测试所有内容，并确保系统按预期工作。
+1. 启用维护模式：
 
    ```bash
    bin/magento maintenance:enable
    ```
 
-1. 進行資料庫備份：
+1. 进行数据库备份：
 
    ```bash
    bin/magento setup:backup --db
    ```
 
-1. 將MySQL更新至版本8。
-1. 將備份資料匯入MySQL。
-1. 清除快取：
+1. 将MySQL更新到版本8。
+1. 将备份的数据导入MySQL。
+1. 清理缓存：
 
    ```bash
    bin/magento cache:clean
    ```
 
-1. 停用維護模式：
+1. 禁用维护模式：
 
    ```bash
    bin/magento maintenance:disable
    ```
 
-## 設定資料庫執行處理
+## 配置数据库实例
 
-本節說明如何建立Adobe Commerce或Magento Open Source的資料庫執行個體。 雖然建議使用新資料庫執行個體，但您可以選擇安裝Adobe Commerce或與現有資料庫執行個體進行Magento Open Source。
+本节讨论如何为Adobe Commerce或Magento Open Source创建数据库实例。 尽管建议使用新数据库实例，但您可以选择安装Adobe Commerce或与现有数据库实例Magento Open Source。
 
-設定MySQL資料庫執行處理：
+配置MySQL数据库实例：
 
-1. 以任何使用者身分登入您的資料庫伺服器。
-1. 前往MySQL命令提示字元：
+1. 以任意用户身份登录到数据库服务器。
+1. 转到MySQL命令提示符：
 
    ```bash
    mysql -u root -p
    ```
 
-1. 輸入MySQL `root` 提示時的使用者密碼。
-1. 按照顯示的順序輸入以下命令，以建立名為的資料庫執行處理 `magento` 使用使用者名稱 `magento`：
+1. 输入MySQL `root` 提示时的用户密码。
+1. 按照显示的顺序输入以下命令，以创建名为的数据库实例 `magento` 使用用户名 `magento`：
 
    ```sql
    create database magento;
@@ -161,41 +161,41 @@ Adobe Commerce和Magento Open Source已透過在中設定SET SQL_MODE=&quot; ，
    flush privileges;
    ```
 
-1. 輸入 `exit` 結束命令提示字元。
+1. 输入 `exit` 退出命令提示符。
 
-1. 驗證資料庫：
+1. 验证数据库：
 
    ```bash
    mysql -u magento -p
    ```
 
-   如果顯示MySQL監督器，表示您已正確建立資料庫。 如果顯示錯誤，請重複上述命令。
+   如果显示MySQL监视器，则表示您正确创建了数据库。 如果显示错误，请重复上述命令。
 
-1. 如果您的Web伺服器和資料庫伺服器位於不同的主機上，請在資料庫伺服器主機上執行本主題中討論的工作，然後請參閱 [設定遠端MySQL資料庫連線](mysql-remote.md).
+1. 如果Web服务器和数据库服务器位于不同的主机上，请在数据库服务器主机上执行本主题中讨论的任务，然后请参见 [设置远程MySQL数据库连接](mysql-remote.md).
 
-   建議您根據業務需要設定適當的資料庫執行個體。 設定資料庫時，請記住下列事項：
+   我们建议您根据业务需要配置数据库实例。 配置数据库时，请记住以下事项：
 
-   * 索引器需要較高的值 `tmp_table_size` 和 `max_heap_table_size` 值（例如64 M）。 如果您設定 `batch_size` 引數，您可以隨著表格大小設定調整該值，以改善索引器效能。 請參閱 [Optimization指南](../../../performance/configuration.md) 以取得詳細資訊。
+   * 索引器要求更高 `tmp_table_size` 和 `max_heap_table_size` 值（例如，64 M）。 如果您配置 `batch_size` 参数，可以调整该值以及表大小设置以提高索引器性能。 请参阅 [Optimization指南](../../../performance/configuration.md) 了解更多信息。
 
-   * 為獲得最佳效能，請確定所有MySQL和Adobe Commerce或Magento Open Source索引表都可以儲存在記憶體中(例如，設定 `innodb_buffer_pool_size`)。
+   * 为获得最佳性能，请确保所有MySQL和Adobe Commerce或Magento Open Source索引表都可以保存在内存中(例如，配置 `innodb_buffer_pool_size`)。
 
-   * 與其他MariaDB或MySQL版本相比，在MariaDB 10.4上重新索引需要更多時間。 另請參閱 [設定最佳實務](../../../performance/configuration.md#indexers).
+   * 与其他MariaDB或MySQL版本相比，对MariaDB 10.4重新编制索引需要更多时间。 参见 [配置最佳实践](../../../performance/configuration.md#indexers).
 
-1. 適用於MySQL `TIMESTAMP` 依應用程式的宣告式結構描述架構（系統變數）所預期的偏好設定和構成來遵循的欄位 `explicit_defaults_for_timestamp` 必須設定為 `on`.
+1. 对于MySQL `TIMESTAMP` 遵循应用程序的声明性架构架构（系统变量）所期望的首选项和组合的字段 `explicit_defaults_for_timestamp` 必须设置为 `on`.
 
    引用：
 
    * [MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp)
    * [MariaDB](https://mariadb.com/kb/en/server-system-variables/#explicit_defaults_for_timestamp)
 
-   如果未啟用此設定， `bin/magento setup:db:status` 一律會報告 `Declarative Schema is not up to date`.
+   如果未启用此设置， `bin/magento setup:db:status` 始终报告 `Declarative Schema is not up to date`.
 
 >[!NOTE]
 >
->此 `explicit_defaults_for_timestamp` 設定已過時。 此設定可控制將在未來MySQL發行版本中移除的已棄用TIMESTAMP行為。 移除這些行為時， `explicit_defaults_for_timestamp` 設定也會移除。
+>此 `explicit_defaults_for_timestamp` 设置已弃用。 此设置控制将在未来的MySQL版本中删除的已弃用TIMESTAMP行为。 当这些行为被移除后， `explicit_defaults_for_timestamp` 设置也会被删除。
 
 >[!WARNING]
 >
->對於雲端基礎結構專案的Adobe Commerce， `explicit_defaults_for_timestamp` MySQL (MariaDB)的設定預設為 _關閉_.
+>对于云基础架构项目上的Adobe Commerce， `explicit_defaults_for_timestamp` MySQL (MariaDB)的设置默认为 _关闭_.
 
 {{$include /help/_includes/maria-db-config.md}}

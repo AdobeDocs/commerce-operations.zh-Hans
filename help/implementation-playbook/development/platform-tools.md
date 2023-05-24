@@ -1,6 +1,6 @@
 ---
 title: 平台工具
-description: 選擇建議的Adobe Commerce實作平台工具。
+description: 为Adobe Commerce实施选择推荐的平台工具。
 exl-id: 3fc164f9-a0fc-46e7-a54e-08ce101ccae7
 source-git-commit: ea912c48176fb060e48654d05ae6b533436a2432
 workflow-type: tm+mt
@@ -11,62 +11,62 @@ ht-degree: 0%
 
 # 平台工具
 
-要確保電子商務網站不受干擾地運作，必須深入思考並嚴格測試各方面。 您不僅必須找出正確的解決方案來處理網站的各個層面（從資料儲存和程式設計，到快取和安全性），而且還需要正確的流程來確保交付的平台既能順暢執行，又能有效率地建置和最佳化。
+要确保电子商务网站不受干扰地运行，必须仔细考虑并严格测试这些方面，不乏这方面的不足。 您不仅必须确定适当的解决方案来处理站点的各个方面（从数据存储和编程到缓存和安全性），而且还需要适当的流程来确保提供一个既可以顺利运行又可以高效构建和优化的平台。
 
-本節不僅說明在多項Adobe Commerce實作中經過測試和完善的工具、解決方案、流程和方法，也提供我們對於哪些解決方案最符合特定業務需求和目標的建議。
+本节不仅介绍在多种Adobe Commerce实施中经过测试和完善的工具、解决方案、流程和方法，还介绍我们对于哪些解决方案最符合特定业务需求和目标的建议。
 
-下表包含我們建議的解決方案，可以在Adobe Commerce中使用，藉此提高平台的效能：
+下表包含我们推荐的解决方案，可以在Adobe Commerce中使用这些解决方案来提高平台性能：
 
 | 用途 | 工具 |
 |------------------------------------------|-------------------------|
-| 資料庫 | MySQL、MariaDB、Percona |
-| 程式語言 | PHP、JS、HTML、較少CSS |
-| 整合式開發環境(IDE) | Eclipse， PHPStorm |
-| 網頁伺服器 | Nginx、Apache |
-| 快取服務 | Redis， Varnish |
-| 搜尋服務 | Elasticsearch |
-| 訊息佇列服務 | [!DNL RabbitMQ] |
-| 安全性掃描工具 | SonarQube， ZAP |
+| 数据库 | MySQL、MariaDB、Percona |
+| 编程语言 | PHP、JS、HTML、更少CSS |
+| 集成开发环境(IDE) | Eclipse、PHPStorm |
+| Web服务器 | Nginx、Apache |
+| 缓存服务 | 雷迪斯，清漆 |
+| 搜索服务 | Elasticsearch |
+| 消息队列服务 | [!DNL RabbitMQ] |
+| 安全扫描工具 | SonarQube， ZAP |
 
-## 資料庫
+## 数据库
 
-我們根據品牌需求來使用三種不同的工具。 如果您不希望您的存放區處理極端負載，MySQL是Adobe Commerce資料庫的絕佳基準解決方案。
+我们根据品牌的需求使用三种不同的工具。 如果您不希望存储处理极端负载，MySQL是作为Adobe Commerce数据库的绝佳基线解决方案。
 
-MariaDB以社群為中心，最適合更關注功能（而非純粹效能）的使用者。 MariaDB支援大量資料庫引擎、磁碟加密、複雜的水準互連，以及擴充功能，這些對於大型Adobe Commerce商店來說可能很有趣。
+MariaDB更注重社区，更适合那些更关注功能而不是单纯性能的用户。 MariaDB支持大量数据库引擎、磁盘加密、复杂的水平互连和扩展功能，这些功能对于大型Adobe Commerce存储可能很有用。
 
-Percona是MySQL的復本，以效能和尖峰負載處理為中心。 如果您需要更優質的生活和DevOps功能，請選擇MariaDB。 如果您的目標是在大型資料集中獲得高負載效能，請改用Percona。
+Percona是MySQL的一个分支，以性能和峰值负载处理为中心。 如果您需要更高的生活质量和DevOps功能，请选择MariaDB。 如果您的目标是在大规模数据集中获得高负载性能，请转到Percona。
 
-## 程式語言
+## 编程语言
 
-Adobe Commerce是以PHP為基礎的應用程式，而最新發行版本一律與最新穩定PHP版本相容(例如，Adobe Commerce 2.4版建議使用PHP 7.4)。 為了獲得更高的安全性和效能，在設定PHP以取得請求處理的最大速度和效率時，需要考慮幾個因素。 Adobe Commerce網頁店面是以HTML、JavaScript和LESS CSS前置處理器建置。
+Adobe Commerce是一个基于PHP的应用程序，并且最新版本始终与最新的稳定PHP版本兼容(例如，Adobe Commerce版本2.4建议使用PHP 7.4)。 为了获得更高的安全性和性能，在配置PHP以获得最大请求处理速度和效率时，需要考虑几个因素。 Adobe Commerce Web店面是使用HTML、JavaScript和LESS CSS预处理程序构建的。
 
-## Web伺服器
+## Web服务器
 
-Adobe Commerce完全支援Nginx和Apache網頁伺服器。 Adobe Commerce提供兩種設定檔的建議設定檔範例：
+Adobe Commerce完全支持Nginx和Apache Web Server。 Adobe Commerce为以下两种工具提供了示例推荐配置文件：
 
-- **Nginx**—`<magento_home>/nginx.conf.sample`
+- **恩金克斯**—`<magento_home>/nginx.conf.sample`
 - **Apache**—`<magento_home>.htaccess.sample`
 
-Nginx範例包含改善效能的設定，因此不需要重新配置。
+Nginx示例包含用于提高性能的设置，并且设计为只需很少重新配置。
 
-## 快取服務
+## 缓存服务
 
-Adobe Commerce提供多種選項來儲存您的快取和工作階段資料，包括Redis、Memcache、檔案系統和資料庫。 若是設定包含多個網頁節點，Redis是最佳選項。
+Adobe Commerce提供了多种选项来存储缓存和会话数据，包括Redis、Memcache、文件系统和数据库。 对于具有多个Web节点的设置， Redis是最佳选项。
 
-強烈建議您使用Varnish做為商店的全頁快取伺服器。 Adobe Commerce會散發Varnish的設定檔範例，其中包含所有建議的效能設定。
+我们强烈建议使用Varnish作为商店的全页缓存服务器。 Adobe Commerce分发一个用于Varnish的示例配置文件，其中包含所有推荐的性能设置。
 
-## 搜尋服務
+## 搜索服务
 
-對於Adobe Commerce 2.4版和更新版本，所有安裝都必須設定為使用Elasticsearch或OpenSearch作為目錄搜尋解決方案。 Elasticsearch提供對目錄中產品的快速和進階搜尋。 對於2.4之前的版本，Elasticsearch是選用專案，但建議使用。
+对于Adobe Commerce版本2.4及更高版本，必须将所有安装配置为使用Elasticsearch或OpenSearch作为目录搜索解决方案。 Elasticsearch提供对目录中的产品的快速和高级搜索。 对于2.4之前的版本，Elasticsearch是可选的，但建议使用。
 
-## 訊息佇列服務
+## 消息队列服务
 
-訊息佇列提供非同步通訊機制，讓訊息的傳送者與接收者不會相互聯絡。 [!DNL RabbitMQ] 是開放原始碼的訊息代理人，提供可靠、高可用性、可擴充且可攜式的訊息系統。
+消息队列提供了一种异步通信机制，在这种机制中，消息的发送者和接收者不会相互联系。 [!DNL RabbitMQ] 是一个开源消息代理商，它提供可靠、高可用性、可扩展且便携的消息传递系统。
 
-## 安全性工具
+## 安全工具
 
-此 [Adobe Commerce安全性掃描工具](https://docs.magento.com/user-guide/magento/security-scan.html) 可讓您定期監視商店網站，並接收已知安全性風險、惡意程式碼和過時軟體的更新。 通常，您會在開始使用者驗收測試(UAT)時開始使用此工具。 Adobe Commerce安全性掃描工具是免費的，適用於Adobe Commerce的所有實作和版本，除此之外，您也可以在CI/CD程式期間和每次發行前使用其他選項。
+此 [Adobe Commerce安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html) 使您能够定期监视商店网站，并接收已知安全风险、恶意软件和过时软件的更新。 通常，在开始用户验收测试(UAT)时即开始使用此工具。 Adobe Commerce安全扫描工具免费提供给Adobe Commerce的所有实施和版本，除此之外，您还可以在CI/CD过程中和每个版本之前使用其他选项。
 
-SonarQube是開放原始碼品質管理平台，專為分析和測量程式碼的技術品質而設計。 SonarQube不僅提供程式碼錯誤、語法錯誤和弱點的完整報告，還提供修正程式碼的建議與範例。 SonarQube非常適合在CI/CD環境中使用，作為能夠在部署前分析程式碼的工具。
+SonarQube是一个开源质量管理平台，旨在分析和衡量代码的技术质量。 SonarQube不仅提供了代码错误、语法错误和漏洞的完整报告，还提供了修复代码的建议与示例。 SonarQube非常适合在CI/CD环境中用作能够在部署它之前分析代码的工具。
 
-Zed Attack Proxy (ZAP)是免費的安全性測試工具，全球有數千名筆型測試人員使用。 ZAP由OWASP開發，是手動安全性測試最常用的工具之一。
+Zed Attack Proxy (ZAP)是一种免费的安全测试工具，由全球成千上万的笔测试人员使用。 ZAP是由OWASP开发的，是手动安全测试中最常用的工具之一。

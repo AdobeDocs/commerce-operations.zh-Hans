@@ -1,6 +1,6 @@
 ---
-title: Headless商務
-description: 瞭解Headless商業的意義，以及Adobe Commerce如何支援Headless架構。
+title: Headless商务
+description: 了解Headless商业的含义以及Adobe Commerce如何支持Headless架构。
 exl-id: acf66714-c10e-4c8b-b7ca-04cb2ca2fcf9
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# Headless商務
+# Headless商务
 
-## 為何選擇Headless？
+## 为什么选择Headless？
 
-首先，舊版企業商務由於孤立而成本高昂，且難以擴展；舊版架構因平台限制而得到強化；而創新則充滿挑戰。
+首先，传统企业商业成本高昂，并且由于孤岛而难以扩展；传统结构因平台限制而得到强化；创新也变得具有挑战性。
 
-客戶期望企業能與其互動，並透過所有管道與他們互動。 以客戶為中心的組織正尋求建立經得起未來考驗的平台，以因應不斷變化的客戶期望。
+客户期望企业能够与其进行交互，并在所有渠道中与他们互动。 以客户为中心的组织希望构建经得起未来考验的平台，以适应不断变化的客户期望。
 
-Headless商務是以API為基礎的商務。 它將商業邏輯、商務的交易和資料方面與簡報分離。 Headless是整合式架構，為所有管道和接觸點提供完全的彈性，並具備與平台本身分開的前端體驗層。 這可讓品牌靈活地傳遞產品、資料和訂單等內容至任何現在和未來的接觸點，同時能夠以他們喜歡的任何方式顯示。
+Headless商务是基于API的商务。 它将商业逻辑、商务的事务性和数据方面与表示法分离开来。 Headless是一个集成框架，为所有渠道和接触点提供了完全的灵活性，并有一个与平台本身分离的前端体验层。 这允许品牌灵活地将产品、数据和订单等内容投放到当前和未来的任何接触点，同时能够以他们喜欢的任何方式显示这些内容。
 
-Headless架構是將head與商業應用程式的其餘部分在技術上分離。 Adobe Commerce採用分離式架構，可透過GraphQL API層提供所有Commerce服務和資料，完全提供Headless。 此架構可讓前端團隊獨立於Adobe Commerce開發其前端，提供使用新興技術快速建立及測試新接觸點的靈活性。
+Headless架构是在技术上将head与商业应用程序的其余部分分离。 Adobe Commerce采用分离式架构，实现了完全的headless。该架构通过GraphQL API层提供所有Commerce服务和数据。 此架构允许前端团队独立于Adobe Commerce开发其前端，从而提供使用新兴技术快速构建和测试新接触点的灵活性。
 
-Adobe Commerce GraphQL API也可以透過部署在Adobe I/O Runtime上的微服務進行擴充。 如此一來，整合、擴充及自訂全通路業務流程的靈活性無人能及，且後端不需要自訂程式碼，可確保核心平台可輕鬆升級，而不會影響前端接觸點。 Adobe Commerce GraphQL API是開放原始碼，也是我們社群工程計畫的一部分，我們的開發人員社群對此有重大貢獻和監督。
+Adobe Commerce GraphQL API还可以通过部署在Adobe I/O运行时上的微服务进行扩展。 这提供了无与伦比的灵活性，可以集成、扩展和自定义全渠道业务流程，而无需对后端进行代码自定义，从而确保核心平台可以轻松升级，而不会影响前端接触点。 Adobe Commerce GraphQL API是开源的，并且是我们社区工程计划的一部分，我们的开发人员社区做出了重大贡献并提供了大量监督。
 
-![Headless商務架構圖](../../../assets/playbooks/headless-diagram.svg)
+![Headless商务架构图](../../../assets/playbooks/headless-diagram.svg)
 
-![Headless商務架構圖的優勢](../../../assets/playbooks/headless-benefits.svg)
+![Headless商务架构图的优势](../../../assets/playbooks/headless-benefits.svg)

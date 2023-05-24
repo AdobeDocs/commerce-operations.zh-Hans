@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Patches]'
-description: 瞭解 [!UICONTROL Patches] 索引標籤中的 [!DNL Site-Wide Analysis Tool]，以及何時使用它所帶來的好處。
+description: 了解 [!UICONTROL Patches] 在中选项卡 [!DNL Site-Wide Analysis Tool]、何时使用它以及它的好处。
 exl-id: 40bc9b38-2a70-40ec-8278-231c78193248
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,18 +11,18 @@ ht-degree: 0%
 
 # [!DNL Patches]
 
-此 [!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches] 頁面會顯示Adobe Commerce市集可用的所有修補程式。 這些修補程式可協助解決您在Adobe Commerce中可能遇到的問題。 請參閱 [已發行品質修補程式工具：自助式品質修補程式的新工具](https://support.magento.com/hc/en-us/articles/360047139492) 文章於 [!DNL support knowledge base].
+此 [!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches] 此页显示Adobe Commerce存储区可用的所有修补程序。 这些修补程序有助于解决您在使用Adobe Commerce时可能遇到的问题。 请参阅 [质量修补程序工具发布：用于自助提供质量修补程序的新工具](https://support.magento.com/hc/en-us/articles/360047139492) 文章位于 [!DNL support knowledge base].
 
 >[!NOTE]
 >
->某些建議的修補程式是選用的，需要您調查是否需要套用特定修補程式。
+>某些推荐的修补程序是可选的，需要您调查是否需要应用特定的修补程序。
 
-## 使用時機
+## 何时使用
 
-使用 [!UICONTROL Patches] 索引標籤來檢視Adobe Commerce執行個體的可用修補程式。 此標籤會顯示所有修正程式、其詳細資訊及其狀態。
+使用 [!UICONTROL Patches] 选项卡中提供的修补程序，以查看Adobe Commerce实例的可用修补程序。 此选项卡显示所有补丁程序、其详细信息和状态。
 
-## 優點
+## 优点
 
-* 在一個位置取得修補程式的所有相關資訊。
+* 在一个位置获取有关修补程序的所有相关信息。
 
-* 使用中提供的修補程式來修正問題 [!UICONTROL Patches] 標籤。
+* 使用中提供的修补程序修复问题 [!UICONTROL Patches] 选项卡。

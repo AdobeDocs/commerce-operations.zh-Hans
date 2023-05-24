@@ -1,6 +1,6 @@
 ---
 title: 常用命令
-description: 檢視常見Commerce CLI命令和用法的取樣。
+description: 查看常见Commerce CLI命令和用法的取样。
 exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # 常用命令
 
-以下摘要說明一些可用的命令。
+下面总结了一些可用的命令。
 
-**顯示完整的命令清單**：
+**显示命令的完整列表**：
 
 ```bash
 bin/magento list
 ```
 
-說明命令範例：
+帮助命令示例：
 
 ```bash
 bin/magento help <command>
@@ -29,36 +29,36 @@ bin/magento help <command>
 bin/magento help cache:enable
 ```
 
-命令僅以摘要形式顯示；如需命令的詳細資訊，請按一下「命令」欄中的連結。
+命令仅以摘要形式显示；有关命令的详细信息，请单击“命令”列中的链接。
 
-| 命令 | 說明 |
+| 命令 | 描述 |
 |--- |--- |
-| [`magento cache:{enable/disable/clean/flush/status}`](../cli/manage-cache.md) | 管理快取 |
+| [`magento cache:{enable/disable/clean/flush/status}`](../cli/manage-cache.md) | 管理缓存 |
 | [`magento indexer:{status/show-mode/set-mode/reindex/info/reset/show-dimensions-mode/set-dimensions-mode}`](../cli/manage-indexers.md) | 管理索引器 |
-| [`magento cron:run`](../cli/configure-cron-jobs.md) | 執行Commerce cron工作 |
-| [`magento setup:di:compile`](../cli/code-compiler.md) | 編譯所有不存在的代理程式和工廠；並預先編譯一個商店和網站的類別定義、繼承資訊和外掛程式定義。 |
-| [`magento info:dependencies:{show-modules/show-modules-circular/show-framework}`](../cli/dependency-reports.md) | 模組相依性、循環相依性和Commerce框架相依性。 |
-| [`magento i18n:{collect-phrases/pack/uninstall}`](../cli/localization.md) | 建立翻譯字典或翻譯套件 |
-| [`magento setup:static-content:deploy`](../cli/static-view-file-deployment.md) | 部署靜態檢視檔案 |
-| [`magento dev:source-theme:deploy`](../cli/create-symlinks.md) | 從較少專案建立CSS |
-| [`magento dev:tests:run`](../cli/unit-tests.md) | 執行自動化測試 |
-| [`magento dev:xml:convert`](../cli/convert-layout-files.md) | 更新您的版面XML檔案，以符合新的可延伸樣式表語言轉換(XSLT)樣式表 |
-| [`magento setup:perf:generate-fixtures`](../cli/generate-data.md) | 產生資料以用於效能測試。 |
-| [`magento sampledata:install`](../../installation/sample-data/overview.md) | 安裝Commerce應用程式後安裝選用的範例資料。<br><br>如需有關範例資料的詳細資訊，請參閱 [選擇性範例資料](../../installation/sample-data/overview.md). |
-| [`magento config:{set/sensitive:set/show/}`](../cli/set-configuration-values.md) | 管理後端設定 |
-| [`magento admin:user:{create/unlock}`](../../installation/tutorials/admin.md#create-edit-or-unloack-an-administrator-account) | 建立/編輯/解除鎖定管理員使用者。 |
-| [`magento dev:template-hints:{enable/disable}`](https://developer.adobe.com/commerce/frontend-core/guide/themes/debug/) | 啟用/停用開發人員範本提示。 |
+| [`magento cron:run`](../cli/configure-cron-jobs.md) | 运行Commerce cron作业 |
+| [`magento setup:di:compile`](../cli/code-compiler.md) | 编译所有不存在的代理和工厂；并预编译一个商店和网站的类定义、继承信息和插件定义。 |
+| [`magento info:dependencies:{show-modules/show-modules-circular/show-framework}`](../cli/dependency-reports.md) | 模块依赖关系、循环依赖关系和Commerce框架依赖关系。 |
+| [`magento i18n:{collect-phrases/pack/uninstall}`](../cli/localization.md) | 创建翻译字典或翻译包 |
+| [`magento setup:static-content:deploy`](../cli/static-view-file-deployment.md) | 部署静态视图文件 |
+| [`magento dev:source-theme:deploy`](../cli/create-symlinks.md) | 从更少内容创建CSS |
+| [`magento dev:tests:run`](../cli/unit-tests.md) | 运行自动化测试 |
+| [`magento dev:xml:convert`](../cli/convert-layout-files.md) | 更新布局XML文件以匹配新的可扩展样式表语言转换(XSLT)样式表 |
+| [`magento setup:perf:generate-fixtures`](../cli/generate-data.md) | 生成数据以用于性能测试。 |
+| [`magento sampledata:install`](../../installation/sample-data/overview.md) | 在安装Commerce应用程序后安装可选的示例数据。<br><br>有关示例数据的更多详细信息，请参见 [可选的示例数据](../../installation/sample-data/overview.md). |
+| [`magento config:{set/sensitive:set/show/}`](../cli/set-configuration-values.md) | 管理后端配置 |
+| [`magento admin:user:{create/unlock}`](../../installation/tutorials/admin.md#create-edit-or-unloack-an-administrator-account) | 创建/编辑/解锁管理员用户。 |
+| [`magento dev:template-hints:{enable/disable}`](https://developer.adobe.com/commerce/frontend-core/guide/themes/debug/) | 启用/禁用开发人员模板提示。 |
 
-## 通用引數
+## 常用参数
 
-以下引數是所有命令通用的引數。 這些命令可以在安裝Commerce軟體之前或之後執行：
+以下参数对所有命令都是通用的。 这些命令可以在安装Commerce软件之前或之后运行：
 
-| 詳細版本 | 簡短版本 | 含義 |
+| 长版本 | 简短版本 | 含义 |
 |--- |--- |--- |
-| `--help` | `-h` | 取得任何命令的說明。 例如， `./magento help setup:install` 或 `./magento help setup:config:set`. |
-| `--quiet` | `-q` | 安靜模式；無輸出。 |
-| `--no-interaction` | `-n` | 無互動式問題。 |
-| `--verbose=1,2,3` | `-v, -vv, -vvv` | 詳細程度。 例如， `--verbose=3` 或 `-vvv` 顯示除錯詳細資訊，這是最詳細的輸出。 預設為 `--verbose=1` 或 `-v`. |
-| `--version` | `-V` | 顯示此應用程式版本 |
-| `--ansi` | 不適用 | 強制ANSI輸出 |
-| `--no-ansi` | 不適用 | 停用ANSI輸出 |
+| `--help` | `-h` | 获取任何命令的帮助。 例如， `./magento help setup:install` 或 `./magento help setup:config:set`. |
+| `--quiet` | `-q` | 安静模式；无输出。 |
+| `--no-interaction` | `-n` | 无交互式问题。 |
+| `--verbose=1,2,3` | `-v, -vv, -vvv` | 详细级别。 例如， `--verbose=3` 或 `-vvv` 显示调试详细程度，这是最详细的输出。 默认为 `--verbose=1` 或 `-v`. |
+| `--version` | `-V` | 显示此应用程序版本 |
+| `--ansi` | 不适用 | 强制ANSI输出 |
+| `--no-ansi` | 不适用 | 禁用ANSI输出 |

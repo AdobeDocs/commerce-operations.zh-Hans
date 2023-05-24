@@ -1,6 +1,6 @@
 ---
-title: 自訂記錄
-description: 瞭解如何使用自訂記錄來調查錯誤。
+title: 自定义日志记录
+description: 了解如何使用自定义日志记录调查错误。
 feature: Configuration, Logs
 exl-id: 6c94ebcf-70df-4818-a17b-32512eba516d
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
@@ -10,53 +10,53 @@ ht-degree: 0%
 
 ---
 
-# 自訂記錄概觀
+# 自定义日志记录概述
 
-記錄提供系統程式的可見度；例如，偵錯資訊可協助您瞭解何時發生錯誤或導致錯誤的原因。
+日志提供系统进程的可见性；例如，调试信息可帮助您了解何时发生错误或导致错误的原因。
 
-雖然Commerce也提供了在資料庫中儲存記錄檔的靈活性，但本主題著重於檔案型記錄。
+本主题侧重于基于文件的日志记录，尽管Commerce还提供了在数据库中存储日志的灵活性。
 
-Adobe建議使用集中式應用程式記錄，原因如下：
+Adobe建议使用集中式应用程序日志记录，原因如下：
 
-- 它允許在應用程式伺服器以外的伺服器上儲存記錄檔，並減少磁碟I/O作業，簡化對應用程式伺服器的支援。
+- 它允许在除应用程序服务器之外的服务器上存储日志，并减少磁盘I/O操作，从而简化对应用程序服务器的支持。
 
-- 它使用特殊工具(例如 [Logstash]， [Logplex]，或 [已流失] — 不影響生產伺服器。
+- 它通过使用特殊工具(例如 [Logstash]， [Logplex]，或 [fluentd] — 不影响生产服务器。
 
    >[!INFO]
    >
-   >Adobe不建議或認可任何特定的記錄解決方案。
+   >Adobe不建议或认可任何特定的日志记录解决方案。
 
-## PSR-3合規性
+## PSR-3合规性
 
-此 [PSR-3標準][laminas] 定義記錄程式庫的通用PHP介面。 PSR-3的主要目標是允許程式庫接收 `Psr\Log\LoggerInterface` 物件並以簡單且通用的方式將記錄寫入其中。
+此 [PSR-3标准][laminas] 为日志库定义一个通用的PHP接口。 PSR-3的主要目标是允许库接收 `Psr\Log\LoggerInterface` 以简单且通用的方式将日志写入其中。
 
-如此一來，實施便可輕鬆更換，不必擔心更換會破壞應用程式程式碼。 此外，即使日後系統版本中的記錄實作有所變更，也能確保自訂元件正常運作。
+这样即可轻松地替换实施，而无需担心此类替换可能会破坏应用程序代码。 它还确保即使将来系统的版本中更改了日志实施，自定义组件也能正常工作。
 
-## 獨白
+## 独白
 
-Commerce 2符合PSR-3標準。 依預設，Commerce會使用 [獨白]. 實作作為偏好設定的獨白 `Psr\Log\LoggerInterface` 在商務應用程式中 [`di.xml`][di].
+Commerce 2符合PSR-3标准。 默认情况下，Commerce使用 [独白]. 作为偏好设置实施的单一日志 `Psr\Log\LoggerInterface` 在Commerce应用程序中 [`di.xml`][di].
 
-Monolog是一種常用的PHP記錄解決方案，具有廣泛的處理常式，可讓您建置進階記錄策略。 以下是Monolog運作方式的摘要。
+Monolog是一种流行的PHP日志记录解决方案，具有大量使您能够构建高级日志记录策略的处理程序。 以下是Monolog工作方式的摘要。
 
-獨白 _logger_ 是擁有自己一套的管道 _處理常式_. Monolog有許多處理常式，包括：
+独白 _logger_ 是一个拥有自己的一组内容的渠道 _处理程序_. Monolog有许多处理程序，包括：
 
-- 記錄至檔案與系統記錄檔
-- 傳送警報和電子郵件
-- 記錄特定的伺服器和網路記錄
-- 登入開發（與FireBug和Chrome Logger等整合）
-- 登入資料庫
+- 记录到文件和syslog
+- 发送警报和电子邮件
+- 记录特定的服务器和网络日志记录
+- 登录开发（与FireBug和Chrome Logger等集成）
+- 登录到数据库
 
-每個處理常式都可以處理輸入訊息並停止傳輸，或將控制項傳遞至鏈結中的下一個處理常式。
+每个处理程序可以处理输入消息并停止传播，也可以将控件传递到链中的下一个处理程序。
 
-記錄訊息的處理方式有很多種。 例如，您可以將所有除錯資訊儲存在磁碟上的檔案中，將記錄層級較高的訊息放入資料庫中，最後透過電子郵件傳送記錄層級為「嚴重」的訊息。
+可以通过多种不同的方式处理日志消息。 例如，可以将所有调试信息存储在磁盘上的文件中，将日志级别较高的消息放入数据库中，最后通过电子邮件发送日志级别为“严重”的消息。
 
-其他管道可以有不同的處理常式和邏輯集。
+其他渠道可以具有一组不同的处理程序和逻辑。
 
 <!-- link definitions -->
 
 [di]: https://github.com/magento/magento2/blob/2.4/app/etc/di.xml#L9
-[已流失]: https://www.fluentd.org/
+[fluentd]: https://www.fluentd.org/
 [laminas]: https://docs.laminas.dev/laminas-log/
 [Logplex]: https://devcenter.heroku.com/articles/logplex
 [Logstash]: https://www.elastic.co/products/logstash
-[獨白]: https://github.com/Seldaek/monolog
+[独白]: https://github.com/Seldaek/monolog

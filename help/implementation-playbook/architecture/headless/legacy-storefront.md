@@ -1,6 +1,6 @@
 ---
-title: 耦合式店面架構
-description: 瞭解在Headless Adobe Commerce架構中，耦合店面意味著什麼。
+title: 耦合店面体系结构
+description: 了解在Headless Adobe Commerce架构中，耦合的店面意味着什么。
 exl-id: 978e6853-4fbe-45b8-8e46-f491c6724fc6
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 0%
 
 ---
 
-# 耦合（舊版） Adobe Commerce店面架構
+# 耦合（旧版）Adobe Commerce店面架构
 
-目前大多數商業客戶的預設部署選項包括：
+大多数商业客户的当前默认部署选项包括：
 
-- 100%功能支援B2B和B2C
-- 可快速部署/自訂的成熟參考主題(Luma)
-- 成熟的SI合作夥伴實作專業知識
-- 與商業功能完全相容，例如頁面產生器或測試與預覽
-- 與Adobe Commerce Marketplace中的擴充功能廣泛相容
+- 跨B2B和B2C 100%功能支持
+- 可快速部署/自定义的成熟参考主题(Luma)
+- 成熟的SI合作伙伴实施专业知识
+- 与页面生成器或暂存和预览等商业功能完全兼容
+- 与Adobe Commerce Marketplace中的扩展广泛兼容
 
-![顯示耦合Adobe Commerce店面架構的圖表](../../../assets/playbooks/coupled-storefront-architecture.svg)
+![显示耦合的Adobe Commerce店面架构的示意图](../../../assets/playbooks/coupled-storefront-architecture.svg)
 
-## 舊式店面的缺點
+## 旧式店面的缺点
 
-- **非Headless** — 整體式Adobe Commerce應用程式的所有部分。 前端和後端之間沒有業務邏輯和流程分離。
+- **非Headless** — 整体式Adobe Commerce应用程序的所有部分。 前端和后端之间没有业务逻辑和流程分离。
 
-- **不PWA** — 雖然佈景主題反應靈敏，但網站效能遠遠落後於同級最佳PWA。
+- **不PWA** — 尽管主题响应式较快，但网站性能远远落后于同类最佳PWA。
 
-- **前端架構(Adobe Commerce UI元件)**—Adobe Commerce/PHP專家，在舊版店面基礎上進行構建。
+- **前端架构(Adobe Commerce UI组件)**—Adobe Commerce/PHP专家，在旧式店面的基础上进行构建。
 
-在介紹Headless選項之前，讓我們先從更熟悉的店面架構開始。 如果Headless是分離的，這將會是耦合的店面架構，最常見的是我們的Luma示範。
+在介绍Headless选项之前，让我们先从更熟悉的店面架构开始。 如果Headless是分离的，则这将是耦合的店面架构，最常见的是我们的Luma演示。
 
-這是店面功能與核心商務服務緊密整合的位置，不會由該GraphQL API層分隔。 因此，該主題結合了大量商業邏輯。 此方法不是Headless，也不是PWA。
+这是店面功能与核心商务服务紧密集成的地方，而不是由该GraphQL API层分开。 所以，有很多商业逻辑被结合到这个主题中。 这种方法不是headless，也不是PWA。
 
-這是商家目前最常使用的選項，因為它透過B2B和B2C Commerce功能提供100%功能支援。 社群對此很熟悉，周圍有成熟的專業生態系統，而且與Adobe Commerce Marketplace擴充功能有廣泛的相容性。
+这是目前商家最常使用的选项，因为它对B2B和B2C Commerce功能具有100%的功能支持。 社区对此非常熟悉，围绕IT有一个成熟的专业生态系统，并且与Adobe Commerce Marketplace扩展具有广泛的兼容性。
 
-然而，它缺乏我們先前所談到的優點。 若不分離圖層，進行變更時，會有許多相依性和可能的失敗點。 它不如實作良好的PWA來得好，如果商家沒有在Adobe Commerce或PHP開發方面的專業知識，他們就必須去尋找這些資源。
+然而，它缺乏我们之前谈到的好处。 如果不分离层，在进行更改时会有许多依赖关系和潜在的故障点。 它不如一个实施良好的PWA性能优异，如果商家不具备Adobe Commerce或PHP开发方面的专业知识，他们将不得不去寻找那些资源。

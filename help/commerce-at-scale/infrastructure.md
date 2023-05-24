@@ -1,6 +1,6 @@
 ---
-title: Adobe Commerce與Adobe Experience Manager基礎架構校準
-description: 調整您的Adobe Commerce和Adobe Experience Manager基礎建設，以設定可接受的逾時和連線限制。
+title: Adobe Commerce和Adobe Experience Manager基础架构协调
+description: 调整您的Adobe Commerce和Adobe Experience Manager基础架构，以设置可接受的超时和连接限制。
 exl-id: f9cb818f-1461-4b23-b931-e7cee70912fd
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -9,48 +9,48 @@ ht-degree: 0%
 
 ---
 
-# 基礎架構配置（逾時和連線限制）
+# 基础架构调整（超时和连接限制）
 
-有需要對齊的AEM和Adobe Commerce設定以及周邊基礎架構（例如負載平衡器），這些設定與連線限制和逾時設定有關。
+有些设置与AEM和Adobe Commerce以及周围的基础架构（如负载平衡器）需要保持一致，这些设置与连接限制和超时设置有关。
 
-這些限制之間的未對齊狀態可能表示連線最終在AEM端受到節流，而Adobe Commerce能夠處理更多連線。 同樣地，對於逾時設定，未對齊可能表示逾時錯誤發生在AEM端，而Adobe Commerce仍在處理請求。
+这些限制之间的不一致意味着连接最终可能会在AEM端被限制，而Adobe Commerce能够处理更多连接。 同样，对于超时设置，未对齐可能意味着AEM端发生超时错误，而Adobe Commerce仍在处理请求。
 
-對於逾時設定，應檢閱設定並對齊，以防止在載入下出現503逾時錯誤。 有幾個基礎架構和應用程式逾時設定需要檢閱：
+对于超时设置，应查看设置并对齐，以防止在加载下出现503超时错误。 有几个基础架构和应用程序超时设置需要审查：
 
-![說明AEM逾時和連線限制的編號圖表](../assets/commerce-at-scale/timeout-settings.svg)
+![描述AEM超时和连接限制的编号图表](../assets/commerce-at-scale/timeout-settings.svg)
 
-## AEM負載平衡器
+## AEM负载平衡器
 
-假設基礎結構中有一個AWS應用程式負載平衡器以及多個Dispatcher/發佈者 — 應該考慮對負載平衡器使用下列設定：
+假设基础架构中有一个AWS应用程序负载平衡器和多个Dispatcher/发布者 — 应考虑对负载平衡器进行以下设置：
 
-1. 應檢閱發佈者健康情況檢查，以防止Dispatcher因載入激增而無謂地提早退出服務。 負載平衡器健康情況檢查的逾時設定應與發行者逾時設定對齊。
+1. 应审查发布服务器运行状况检查，以防止Dispatcher过早地退出服务，避免负载激增。 负载平衡器运行状况检查的超时设置应与发布服务器超时设置一致。
 
-   ![顯示AEM負載平衡器健康情況檢查的熒幕擷圖](../assets/commerce-at-scale/health-checks.png)
+   ![显示AEM负载平衡器运行状况检查的屏幕快照](../assets/commerce-at-scale/health-checks.png)
 
-1. 可以停用Dispatcher目標群組粘著性，也可以使用Round Robin負載平衡演演算法。 這是假設沒有使用的AEM特定功能或AEM使用者工作階段需要設定工作階段粘著度。 並假設使用者登入和工作階段管理僅透過GraphQL在Adobe Commerce上進行。
+1. 可以禁用Dispatcher目标组粘性，并且可以使用Round Robin负载平衡算法。 这是假设没有使用需要设置会话粘性的AEM特定功能或AEM用户会话。 它假定用户登录和会话管理仅通过GraphQL在Adobe Commerce上进行。
 
-   ![顯示AEM工作階段粘著度屬性的熒幕擷圖](../assets/commerce-at-scale/session-stickiness.png)
+   ![显示AEM会话粘性属性的屏幕快照](../assets/commerce-at-scale/session-stickiness.png)
 
-1. 請注意，如果您啟用工作階段粘著度，這可能會導致Fastly請求不會被快取，因為依預設，Fastly不會使用Set-Cookie標頭快取頁面。 Adobe Commerce甚至會在可快取頁面上設定Cookie (TTL > 0)，但預設Fastly VCL會移除可快取頁面上的這些Cookie，以便Fastly快取能夠運作。 如果頁面未快取，請檢查您可能使用的任何自訂Cookie，同時上傳Fastly VCL並重新檢查網站。
+1. 请注意，如果您启用了会话粘性，这可能会导致不缓存Fastly请求，因为默认情况下，Fastly不会使用Set-Cookie标头缓存页面。 Adobe Commerce甚至可以在可缓存页面上设置Cookie(TTL > 0)，但默认的Fastly VCL会删除可缓存页面上的这些Cookie，以便Fastly缓存正常工作。 如果页面未缓存，请检查您可能使用的任何自定义Cookie，还可上传Fastly VCL并重新检查站点。
 
-## Dispatcher逾時設定
+## Dispatcher超时设置
 
-Dispatcher「renders」選項中的/timeout可指定存取AEM發佈執行個體的連線逾時時間（以毫秒為單位）。 請仔細檢視此設定，並在有個別負載平衡器處理逾時設定時，使用預設設定「0」（無限逾時）。
+Dispatcher“renders”选项中的/timeout指定访问AEM发布实例的连接超时（以毫秒为单位）。 应查看此项，如果存在单独的负载平衡器来处理超时设置，则应使用默认设置“0”（无限超时）。
 
-如果基礎結構中沒有負載平衡器，則應該在Dispatcher /timeout設定中指定逾時設定，並使用符合發佈者中GraphQL逾時設定的值。
+如果基础结构中没有负载平衡器，则应在Dispatcher /timeout设置中指定超时设置，并且其值与发布服务器中的GraphQL超时设置匹配。
 
-## 發佈者
+## 发布者
 
-Publisher GraphQL連線限制和逾時：最初，Adobe Commerce CIF GraphQL Client Configuration Factory OSGI設定中的HTTP連線數目上限應該設定為預設的Fastly連線數目上限，目前則設定為200。 即使AEM陣列中有多個發佈者，每個發佈者的限制都應設定相同，並符合Fastly設定。 原因是在某些情況下，例如，如果從陣列中取出關聯的Dispatcher，則一個發佈程式可能會處理比其他發佈程式更多的流量。 這表示所有流量都將透過單一剩餘的Dispatcher和發佈程式進行路由，在此情況下，單一發佈程式可能需要所有HTTP連線。
+发布者GraphQL连接限制和超时：最初，Adobe Commerce CIF GraphQL客户端配置工厂OSGI中的最大HTTP连接数应设置为默认的Fastly最大连接数限制，当前设置为200。 即使AEM场中有多个发布者，也应针对每个发布者将限制设置为相同，并匹配Fastly设置。 原因在于，在某些情况下，例如，如果从场中取出关联的Dispatcher，则一个发布者可能会处理比其他发布者更多的流量。 这意味着所有流量都将通过剩余的单个Dispatcher和发布者路由，在这种情况下，单个发布者可能需要所有HTTP连接。
 
-「預設HTTP方法」應從POST設定為GET。 Adobe Commerce GraphQL快取中只會快取GET請求，因此預設方法應一律設為GET。
+应将“默认HTTP方法”从POST设置为GET。 Adobe Commerce GraphQL缓存中仅缓存GET请求，因此默认方法应始终设置为GET。
 
-http連線逾時和http通訊端逾時應該設定為符合Fastly逾時的值。
+应将http连接超时和http套接字超时设置为与Fastly超时匹配的值。
 
-下圖顯示MagentoCIF GraphQL Client Configuration Factory。 此處顯示的設定僅供範例使用，需逐一調整：
+下图显示了MagentoCIF GraphQL Client Configuration Factory。 此处显示的设置仅为示例，需要根据具体情况进行调整：
 
-![Commerce整合框架組態設定熒幕擷圖](../assets/commerce-at-scale/cif-config.png)
+![Commerce集成框架配置设置的屏幕截图](../assets/commerce-at-scale/cif-config.png)
 
-下圖顯示Fastly後端設定。 此處顯示的設定僅供範例使用，需逐一調整：
+下图显示了Fastly后端配置。 此处显示的设置仅为示例，需要根据具体情况进行调整：
 
-![Fastly的Commerce管理員設定熒幕擷圖](../assets/commerce-at-scale/cif-config-advanced.png)
+![Fastly的Commerce管理员配置设置屏幕截图](../assets/commerce-at-scale/cif-config-advanced.png)

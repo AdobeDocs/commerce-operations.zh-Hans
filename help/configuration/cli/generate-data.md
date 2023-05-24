@@ -1,6 +1,6 @@
 ---
-title: 產生資料以進行效能測試
-description: 瞭解如何產生大量資料以用於效能測試。
+title: 生成用于性能测试的数据
+description: 了解如何生成大量数据以用于性能测试。
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
 source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
@@ -10,32 +10,32 @@ ht-degree: 8%
 
 ---
 
-# 效能測試資料
+# 性能测试数据
 
-若要使用 [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) 或其他效能測試工具，您必須產生大量資料，例如商店、類別和產品。
+要使用 [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) 或者用于性能测试的另一个工具，您必须生成大量数据，如商店、类别和产品。
 
 {{file-system-owner}}
 
-## 設定檔
+## 配置文件
 
-您可以調整您使用建立的資料量 _設定檔_ （小、中、大和特大）。 設定檔位於 `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` 目錄。
+您可以使用调整创建的数据量 _用户档案_ （小、中、大和特大）。 配置文件位于 `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` 目录。
 
 例如， `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
-下圖說明如何使用將產品顯示在店面上。 _小_ 設定檔：
+下图显示了在店面上如何使用 _小_ 个人资料：
 
-![使用產生的資料取樣店面](../../assets/configuration/generate-data.png)
+![使用生成的数据对店面进行示例](../../assets/configuration/generate-data.png)
 
-下表提供有關資料產生器設定檔的詳細資訊：小、中、大和特大。
+下表提供有关数据生成器配置文件的详细信息：小、中、大和特大。
 
-| 引數 | 小型設定檔 | 中型設定檔 | 中型多網站設定檔 | 大型設定檔 | 超大型設定檔 |
+| 参数 | 小型配置文件 | 中型用户档案 | 中型多站点用户档案 | 大型配置文件 | 超大型配置文件 |
 | --- | --- | --- | --- | --- | --- |
 | `websites` | 1 | 3 | 25 | 5 | 5 |
 | `store_groups` | 1 | 3 | 25 | 5 | 5 |
 | `store_views` | 1 | 3 | 50 | 5 | 5 |
 | `simple_products` | 800 | 24,000 | 4,000 | 300,000 | 600,000 |
-| `configurable_products` | 16個，24個選項 | 640搭配24個選項 | 800配備24種選項，79配備200種選項 | 8,000個，含24個選項 | 16,000個，含24個選項 |
-| `product_images` | 100個影像/每個產品3個影像 | 1000個影像/每個產品3個影像 | 1000個影像/每個產品3個影像 | 2000個影像/每個產品3個影像 | 2000個影像/每個產品3個影像 |
+| `configurable_products` | 16个，24个选项 | 640，带24个选项 | 800（24个选项）和79（200个选项） | 8,000个，带24个选项 | 16,000个，带24个选项 |
+| `product_images` | 100张图像/每个产品3张图像 | 1000张图像/每个产品3张图像 | 1000张图像/每个产品3张图像 | 2000个图像/每个产品3个图像 | 2000个图像/每个产品3个图像 |
 | `categories` | 30 | 300 | 100 | 3,000 | 6,000 |
 | `categories_nesting_level` | 3 | 3 | 3 | 5 | 5 |
 | `catalog_price_rules` | 20 | 20 | 20 | 20 | 20 |
@@ -46,21 +46,21 @@ ht-degree: 8%
 | `tax rates` | 130 | 40,000 | 40,000 | 40,000 | 40,000 |
 | `orders` | 80 | 50,000 | 50,000 | 100,000 | 150,000 |
 
-### 執行資料產生器
+### 运行数据生成器
 
 >[!WARNING]
 >
->在執行資料產生器之前，請停用伺服器上執行的所有cron工作。 停用cron作業可防止資料產生器執行與作用中cron作業衝突的動作，並避免不必要的錯誤。
+>在运行数据生成器之前，请禁用服务器上运行的所有cron作业。 禁用cron作业会阻止数据生成器执行与活动cron作业冲突的操作，并避免不必要的错误。
 
-依照本節所述執行命令。 命令執行後，您必須 [重新索引所有索引子](../cli/manage-indexers.md).
+按照本节所述运行命令。 命令运行后，您必须 [重新索引所有索引器](../cli/manage-indexers.md).
 
-命令選項：
+命令选项：
 
 ```bash
 bin/magento setup:perf:generate-fixtures <path-to-profile>
 ```
 
-位置 `<path-to-profile>` 指定設定檔的絕對檔案系統路徑和名稱。
+位置 `<path-to-profile>` 指定配置文件的绝对文件系统路径和名称。
 
 例如，
 
@@ -68,7 +68,7 @@ bin/magento setup:perf:generate-fixtures <path-to-profile>
 bin/magento setup:perf:generate-fixtures /var/www/html/magento2/setup/performance-toolkit/profiles/ce/small.xml
 ```
 
-小型設定檔的範例輸出：
+小配置文件的示例输出：
 
 ```terminal
 Generating profile with following params:
@@ -97,20 +97,20 @@ Generating simple products...  done in <time>
 ... more ...
 ```
 
-## 效能夾具
+## 性能夹具
 
-### 管理員使用者
+### 管理员用户
 
-產生管理員使用者。 XML設定檔節點：
+生成管理员用户。 XML配置文件节点：
 
 ```xml
 <!-- Number of admin users -->
 <admin_users>{int}</admin_users>
 ```
 
-### 屬性集
+### 属性集
 
-使用指定的組態產生屬性集。 XML設定檔節點：
+生成具有指定配置的属性集。 XML配置文件节点：
 
 ```xml
 <!-- Number of product attribute sets -->
@@ -123,11 +123,11 @@ Generating simple products...  done in <time>
 <product_attribute_sets_attributes_values>{int}</product_attribute_sets_attributes_values>
 ```
 
-### 套裝產品
+### 捆绑产品
 
-產生套件組合產品。 產生的束選取範圍不會單獨顯示在目錄中。 產品會依類別和網站統一發佈。 若  `assign_entities_to_all_websites` 從設定檔設定為 `1`. 產品會指派給所有網站。
+生成捆绑包产品。 生成的捆绑选择不会单独显示在目录中。 产品按类别和网站统一分发。 如果  `assign_entities_to_all_websites` 从配置文件设置为 `1`. 产品会分配到所有网站。
 
-XML設定檔節點：
+XML配置文件节点：
 
 ```xml
 <!-- Number of products -->
@@ -140,9 +140,9 @@ XML設定檔節點：
 <bundle_products_variation>{int}</bundle_products_variation>
 ```
 
-### 購物車價格規則
+### 购物车价格规则
 
-產生購物車價格規則。 XML設定檔節點：
+生成购物车价格规则。 XML配置文件节点：
 
 ```xml
 <!-- Number of cart price rules -->
@@ -152,20 +152,20 @@ XML設定檔節點：
 <cart_price_rules_floor>{int}</cart_price_rules_floor>
 ```
 
-### 目錄價格規則
+### 目录价格规则
 
-產生型錄價格規則。 XML設定檔節點：
+生成目录价格规则。 XML配置文件节点：
 
 ```xml
 <!-- Number of catalog price rules -->
 <catalog_price_rules>{int}</catalog_price_rules>
 ```
 
-### 類別
+### 类别
 
-產生類別。 若 `assign_entities_to_all_websites` 設為 `0`，所有類別會依根類別均勻分佈；否則，所有類別都會指派給一個根類別。
+生成类别。 如果 `assign_entities_to_all_websites` 设置为 `0`，则所有类别均按根类别分布；否则，所有类别都分配到一个根类别。
 
-XML設定檔節點：
+XML配置文件节点：
 
 ```xml
 <!-- Number of categories to generate -->
@@ -175,9 +175,9 @@ XML設定檔節點：
 <categories_nesting_level>{int}</categories_nesting_level>
 ```
 
-### 設定
+### 配置
 
-設定欄位的值。 XML設定檔節點：
+设置配置字段的值。 XML配置文件节点：
 
 ```xml
 <!-- Config variables and values for change -->
@@ -193,20 +193,20 @@ XML設定檔節點：
 </configs>
 ```
 
-### 可設定的產品
+### 可配置产品
 
-產生可設定的產品。 產生的可設定選項不會在目錄中單獨顯示。 產品會依類別和網站統一發佈。 若 `assign_entities_to_all_websites` 設為 `1`，產品會指派至所有網站。
+生成可配置产品。 生成的可配置选项不会单独显示在目录中。 产品按类别和网站统一分发。 如果 `assign_entities_to_all_websites` 设置为 `1`，则产品会分配到所有网站。
 
-支援下列XML節點格式：
+支持以下XML节点格式：
 
-- 依預設和預先定義屬性集的分佈：
+- 按默认属性集和预定义属性集的分布：
 
    ```xml
    <!-- Number of configurable products -->
    <configurable_products>{int}</configurable_products>
    ```
 
-- 根據現有屬性集產生產品：
+- 基于现有属性集生成产品：
 
    ```xml
    <configurable_products>
@@ -232,7 +232,7 @@ XML設定檔節點：
    </configurable_products>
    ```
 
-- 根據以指定數量的屬性和選項動態建立的屬性集來產生產品：
+- 根据动态创建的具有指定数量的属性和选项的属性集生成产品：
 
    ```xml
    <configurable_products>
@@ -261,7 +261,7 @@ XML設定檔節點：
    </configurable_products>
    ```
 
-- 根據每個屬性各自指定組態的動態建立屬性集來產生產品：
+- 根据动态创建的属性集生成产品，每个属性均具有指定的配置：
 
    ```xml
    <configurable_products>
@@ -298,18 +298,18 @@ XML設定檔節點：
    </configurable_products>
    ```
 
-### 客戶
+### 客户
 
-產生客戶。 客戶在所有可用網站上皆為正常分佈。 除了客戶電子郵件、客戶群組和客戶地址以外，每個客戶都有相同的資料。
+生成客户。 客户在所有可用网站上都按正态分布。 每个客户都有相同的数据，但客户电子邮件、客户组和客户地址除外。
 
-XML設定檔節點：
+XML配置文件节点：
 
 ```xml
 <!-- Number of customers to generate -->
 <customers>{int}</customers>
 ```
 
-您可以使用下列XML來變更客戶組態：
+您可以使用以下XML更改客户配置：
 
 ```xml
 <customer-config>
@@ -318,11 +318,11 @@ XML設定檔節點：
 </customer-config>
 ```
 
-### 產品影像
+### 产品图像
 
-產生產品影像。 產生不包括調整大小。
+生成产品图像。 生成时不包括调整大小。
 
-XML設定檔節點：
+XML配置文件节点：
 
 ```xml
 <product-images>
@@ -334,9 +334,9 @@ XML設定檔節點：
 </product-images>
 ```
 
-### 索引器狀態
+### 索引器状态
 
-更新索引器的狀態。 XML設定檔節點：
+更新索引器的状态。 XML配置文件节点：
 
 ```xml
 <indexer>
@@ -346,11 +346,11 @@ XML設定檔節點：
 </indexer>
 ```
 
-### 訂購
+### 订单
 
-產生具有不同訂單料號型態的可設定數量之訂單。 選擇性地為產生的訂單產生無效報價。
+生成具有不同订单物料类型的可配置数量的订单。 （可选）为生成的订单生成无效报价。
 
-XML設定檔節點：
+XML配置文件节点：
 
 ```xml
 <!-- It is necessary to enable quotes for orders -->
@@ -378,42 +378,42 @@ XML設定檔節點：
 <orders>{int}</orders>
 ```
 
-### 簡單產品
+### 简单产品
 
-產生簡單產品。 產品會依預設和預先定義的屬性集分發。 如果在設定檔中指定額外的屬性集為： `<product_attribute_sets>{int}</product_attribute_sets>`，產品也會依其他屬性集分發。
+生成简单产品。 产品按默认属性和预定义属性集分发。 如果在配置文件中指定了额外的属性集，如下所示： `<product_attribute_sets>{int}</product_attribute_sets>`，产品也根据其他属性集分发。
 
-產品會依類別和網站統一發佈。 若 `assign_entities_to_all_websites` 設為 `1`，產品會指派至所有網站。
+产品按类别和网站统一分发。 如果 `assign_entities_to_all_websites` 设置为 `1`，则产品会分配到所有网站。
 
-XML設定檔節點：
+XML配置文件节点：
 
 ```xml
 <!-- Number of simple products to generate -->
 <simple_products>{int}</simple_products>
 ```
 
-### 網站
+### 网站
 
-產生網站。 XML設定檔節點：
+生成网站。 XML配置文件节点：
 
 ```xml
 <!-- Number of websites to be generated -->
 <websites>{int}</websites>
 ```
 
-### 存放區群組
+### 商店组
 
-產生存放區群組(在管理員中稱為 _商店_)。 商店群組通常在網站之間分配。
+生成商店组(在管理员中称为 _存储_)。 商店组在网站之间正常分布。
 
-XML設定檔節點：
+XML配置文件节点：
 
 ```xml
 <!-- Number of store groups to be generated -->
 <store_groups>{int}</store_groups>
 ```
 
-### 存放區檢視
+### 商店视图
 
-產生存放區檢視。 存放區檢視通常在存放區群組之間分配。 XML設定檔節點：
+生成存储视图。 存储视图在存储组之间正常分布。 XML配置文件节点：
 
 ```xml
 <!-- Number of store views to be generated -->
@@ -423,27 +423,27 @@ XML設定檔節點：
 <assign_entities_to_all_websites>{0|1}<assign_entities_to_all_websites/>
 ```
 
-### 稅率
+### 税率
 
-產生稅率。 XML設定檔節點：
+生成税率。 XML配置文件节点：
 
 ```xml
 <!-- Accepts name of CSV file with tax rates (<path to Commerce folder>/setup/src/Magento/Setup/Fixtures/_files) -->
 <tax_rates_file>{CSV file name}</tax_rates_file>
 ```
 
-## 其他設定資訊：
+## 其他配置信息：
 
-- `<Commerce root dir>/setup/performance-toolkit/config/attributeSets.xml` — 預設屬性集
+- `<Commerce root dir>/setup/performance-toolkit/config/attributeSets.xml` — 默认属性集
 
-- `<Commerce root dir>/setup/performance-toolkit/config/customerConfig.xml` — 客戶設定
+- `<Commerce root dir>/setup/performance-toolkit/config/customerConfig.xml` — 客户配置
 
-- `<Commerce root dir>/setup/performance-toolkit/config/description.xml` — 產品完整說明設定
+- `<Commerce root dir>/setup/performance-toolkit/config/description.xml` — 产品完整描述配置
 
-- `<Commerce root dir>/setup/performance-toolkit/config/shortDescription.xml` — 產品簡短說明設定
+- `<Commerce root dir>/setup/performance-toolkit/config/shortDescription.xml` — 产品简要说明配置
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml` — 產品簡短及完整說明的設定。 提供此舊版實作是為了提供回溯相容性。
+- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml` — 产品配置简短和完整描述。 提供此旧版实施是为了实现向后兼容性。
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml` — 提供簡短的完整說明以取得少量搜尋字詞
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml` — 搜索词很少，简略且完整地说明
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml` — 在簡短和完整說明中使用的搜尋字詞數目較多。
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml` — 要用于简短和完整描述的搜索词更多。

@@ -1,6 +1,6 @@
 ---
-title: 防止快取中毒
-description: 瞭解如何防止您的Commerce店面出現頁面快取中毒。
+title: 防止缓存中毒
+description: 了解如何防止您的Commerce店面出现页面缓存中毒。
 feature: Configuration, Cache, Security
 exl-id: 947024dd-d59d-480d-bb6c-8e0065054bb6
 source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
@@ -10,24 +10,24 @@ ht-degree: 0%
 
 ---
 
-# 防止快取中毒
+# 防止缓存中毒
 
-本主題說明使用Microsoft Internet Information Server (IIS)網頁伺服器時，如何防止快取中毒。 _快取中毒_ 是一種變更快取內容以包含相同網站中不同頁面的方法。 例如，可以插入HTTP 404 （找不到）錯誤頁面來取代某些良性頁面（例如店面首頁），這可能會導致潛在的拒絕服務(DoS)。 惡意頁面URL會由Varnish或Redis快取，因此命名為 _頁面快取中毒_.
+本主题讨论在使用Microsoft Internet Information Server (IIS) Web服务器时如何防止缓存中毒。 _缓存中毒_ 是一种更改缓存内容以包含来自同一站点的不同页面的方法。 例如，可以注入HTTP 404（未找到）错误页面来代替某些良性页面（例如，店面主页），这可能会导致潜在的拒绝服务(DoS)。 恶意页面URL由Varnish或Redis缓存，因此名称为 _页面缓存中毒_.
 
-這些型別的攻擊可能難以偵測，因為它們不會導致網頁伺服器記錄錯誤。
+这些类型的攻击可能难以检测，因为它们不会导致Web服务器日志中出现错误。
 
-此解決方案適用於下列Commerce版本：
+此解决方案适用于以下Commerce版本：
 
-- 2.0.10和更新版本
-- 2.1.2和更新版本
+- 2.0.10及更高版本
+- 2.1.2及更高版本
 
 >[!INFO]
 >
->本主題適用於經驗豐富的IIS管理員。
+>本主题适用于经验丰富的IIS管理员。
 
-## 說明
+## 描述
 
-如果IIS伺服器上啟用了URL重寫，且在請求到達Varnish或Redis快取服務之前變更了以下任何HTTP標頭，則會導致此問題：
+如果在IIS服务器上启用了URL重写，并且在请求到达Varnish或Redis缓存服务之前更改了以下任何HTTP标头，则会导致此问题：
 
 - `X-Rewrite-Url`
 - `X-Original-Url`
@@ -35,15 +35,15 @@ ht-degree: 0%
 - `Unencoded-URL`
 - `Orig-path-info`
 
-如果變更這些標頭，則會快取產生的URL和內容，導致潛在的漏洞。
+如果更改这些标头，则会缓存生成的URL和内容，从而导致潜在漏洞。
 
-## 解決方案
+## 解决方案
 
-我們提供的選項會根據的IIS伺服器設定移除所有先前標題的值 `Enable_IIS_Rewrites`.
+我们提供相应选项，以根据 `Enable_IIS_Rewrites`.
 
-- 若 `Enable_IIS_Rewrites` 設為 `0`，則會移除標題的值。
-- 若 `Enable_IIS_Rewrites` 設為 `1`，標題的值保持不變。
+- 如果 `Enable_IIS_Rewrites` 设置为 `0`，则标头的值将被删除。
+- 如果 `Enable_IIS_Rewrites` 设置为 `1`，标头的值将保持不变。
 
 >[!WARNING]
 >
->如果您設定 `Enable_IIS_Rewrites` 至 `1`，您不得在要求送達IIS網頁伺服器之前變更前述標頭的值。
+>如果您设置 `Enable_IIS_Rewrites` 到 `1`中，在请求到达IIS Web服务器之前，不得允许更改上述标头的值。

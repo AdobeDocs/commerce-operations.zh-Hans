@@ -1,6 +1,6 @@
 ---
-title: OPcache記憶體大小的最佳實務
-description: 說明如何避免Adobe Commerce專案中OPcache記憶體消耗的特定設定導致效能下降。
+title: OPcache内存大小的最佳实践
+description: 描述如何通过Adobe Commerce项目上的OPcache内存消耗的特定设置避免性能下降。
 role: Developer
 feature: Best Practices
 feature-set: Commerce
@@ -12,23 +12,23 @@ ht-degree: 0%
 
 ---
 
-# Adobe Commerce中OPcache記憶體大小的最佳實務
+# Adobe Commerce中OPcache内存大小的最佳实践
 
-針對雲端基礎結構上的Adobe Commerce Pro計畫架構2.3.x，建議設定 `opcache.memory_consumption` 至至少2 GB，以避免效能降低。
+对于Adobe Commerce on cloud infrastructure Pro计划架构2.3.x，建议设置 `opcache.memory_consumption` 到至少2 GB，以避免性能下降。
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
-* 雲端基礎結構上的Adobe Commerce Pro計畫架構2.3.x
+* Adobe Commerce on cloud infrastructure Pro计划架构2.3.x
 * PHP 7.0及更高版本
 
-## 設定記憶體
+## 配置内存
 
-至少分配 **2GB** 的記憶體 [Opcache PHP模組](https://www.php.net/manual/en/book.opcache.php). OPcache模組設定於 `php.ini` 檔案。 若要配置2048 MB的記憶體，請設定 `opcache.memory_consumption = 2048`.
+至少分配 **2GB** 内存的 [OPcache PHP模块](https://www.php.net/manual/en/book.opcache.php). OPcache模块配置于 `php.ini` 文件。 要分配2048 MB的内存，请设置 `opcache.memory_consumption = 2048`.
 
-## 其他資訊
+## 其他信息
 
-* [效能最佳實務 — PHP設定](../../../performance/software.md#php-settings)
-* [設定PHP選項](https://devdocs.magento.com/cloud/project/project-conf-files_magento-app.html#customize-phpini-settings)
-* [雲端基礎結構上Adobe Commerce的資料庫最佳實務](database-on-cloud.md)
-* [Adobe Commerce中雲端基礎結構最常見的資料庫問題](../maintenance/resolve-database-performance-issues.md)
-* [索引器「依排程更新」可最佳化Adobe Commerce效能](../maintenance/indexer-configuration.md)
+* [性能最佳实践 — PHP设置](../../../performance/software.md#php-settings)
+* [配置PHP选项](https://devdocs.magento.com/cloud/project/project-conf-files_magento-app.html#customize-phpini-settings)
+* [云基础架构上Adobe Commerce的数据库最佳实践](database-on-cloud.md)
+* [Adobe Commerce中有关云基础架构的最常见数据库问题](../maintenance/resolve-database-performance-issues.md)
+* [索引器“按计划更新”可优化Adobe Commerce性能](../maintenance/indexer-configuration.md)

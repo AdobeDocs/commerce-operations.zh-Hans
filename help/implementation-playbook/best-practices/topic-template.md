@@ -1,6 +1,6 @@
 ---
-title: 最佳實務主題標題
-description: 瞭解如何……
+title: 最佳实践主题标题
+description: 了解如何……
 role: Developer
 feature: Best Practices
 hide: true
@@ -22,11 +22,11 @@ Available roles: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/met
 
 Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/metadata-values/feature.yml  -->
 
-# 標題
+# 标题
 
 <!--Template instruction:  Add one or two sentences to summarize the overall contents of this best practice topic-->
 
-## 受影響的產品和版本
+## 受影响的产品和版本
 
 <!-- Template comment: When we have the ability to tag content by versions, we might be able to remove this explicit header in favor of using tags for versions and editions.-->
 
@@ -34,30 +34,30 @@ Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/
 
 <!-- Example 1: -->
 
-[所有支援的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md) 之：
 
-- 雲端基礎結構上的Adobe Commerce
-- Adobe Commerce內部部署
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
 
 <!-- Example 2: -->
 
-使用Adobe Commerce 2.3.4版或更早版本以及MariaDB 10.0版或更早版本在雲端基礎結構上使用Adobe Commerce。
+使用Adobe Commerce版本2.3.4或更早版本以及MariaDB版本10.0或更早版本在云基础架构上部署Adobe Commerce。
 
-&lt;! — 業務型別：B2C和B2B — 僅在需要時指定/)—>
+&lt;! — 业务类型：B2C和B2B — 仅在需要时指定/)—>
 
-## 頁首……
+## 标题……
 
-將內容區塊化為區段以方便閱讀。 內容應包含行動號召的範例（好與壞）和檔案連結（如適用）
+将内容分块，以便于阅读。 内容应包括带有示例（好与坏）的行动号召以及指向适用的文档的链接
 
-## 頁首……
+## 标题……
 
-視需要使用儘可能多的區段
+仅使用所需数量的部分
 
-## 其他資訊
+## 其他信息
 
 <!-- If applicable, add links to additional, more detailed documentation that provides more context about this best practices content.-->
 
-- 主題1
-- 主題2
+- 主题1
+- 主题2
 
 <!-- Template instruction:  Remove all template comments and instructions from the best practices article before committing your changes. -->

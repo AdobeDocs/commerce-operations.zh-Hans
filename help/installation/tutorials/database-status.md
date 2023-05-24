@@ -1,6 +1,6 @@
 ---
-title: 檢查資料庫狀態
-description: 請依照下列步驟檢查Adobe Commerce或Magento Open Source資料庫狀態。
+title: 检查数据库状态
+description: 按照以下步骤检查Adobe Commerce或Magento Open Source数据库状态。
 exl-id: 33d9b30a-4504-4955-b11a-0a642f23209b
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,30 +9,30 @@ ht-degree: 2%
 
 ---
 
-# 檢查資料庫狀態
+# 检查数据库状态
 
-在執行這個命令之前，您必須 [建立或更新部署設定](deployment.md).
+在运行此命令之前，必须 [创建或更新部署配置](deployment.md).
 
-## 命令使用方式
+## 命令用法
 
-檢查資料庫的狀態。
+检查数据库的状态。
 
 ```bash
 bin/magento setup:db:status
 ```
 
-這個命令沒有引數或選項。
+此命令没有参数或选项。
 
-範例輸出如下：
+示例输出如下：
 
 ```terminal
 All modules are up to date.
 ```
 
-該命令會傳回下列其中一個退出代碼：
+该命令返回以下退出代码之一：
 
-| 退出代碼 | 說明 | 建議的動作 |
+| 退出代码 | 描述 | 建议的操作 |
 |--------------|--------------|---------------|
-| 0 | 一般 | 無 |
-| 1 | 某些模組使用比資料庫更新或舊的程式碼版本 | 執行 [`magento setup:upgrade`](database-upgrade.md) 更新資料庫結構描述並執行 `composer update` 從應用程式根目錄更新元件相依性 |
-| 2 | `magento setup:upgrade` 為必填 | [`magento setup:upgrade`](database-upgrade.md) 更新資料庫綱要 |
+| 0 | 普通 | 无 |
+| 1 | 某些模块使用的代码版本比数据库新或更旧 | 运行 [`magento setup:upgrade`](database-upgrade.md) 更新数据库模式并运行 `composer update` 从应用程序根目录更新组件依赖关系 |
+| 2 | `magento setup:upgrade` 为必填项 | [`magento setup:upgrade`](database-upgrade.md) 更新数据库模式 |
