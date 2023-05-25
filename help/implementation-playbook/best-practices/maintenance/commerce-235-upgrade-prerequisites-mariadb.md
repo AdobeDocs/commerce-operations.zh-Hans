@@ -1,26 +1,26 @@
 ---
-title: Adobe Commerce 2.3.5 MariaDB升级先决条件
-description: 了解如何准备Adobe Commerce数据库以从Adobe Commerce 2.3.5升级。
+title: MariaDB的Adobe Commerce升级先决条件
+description: 了解如何准备Adobe Commerce数据库以从以前的版本升级MariaDB。
 role: Developer
 feature-set: Commerce
 feature: Best Practices
 exl-id: b86e471f-e81f-416b-a321-7aa1ac73d27c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 73663659dd1b3305bf8c9a167852b24dc1016e7d
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
 
 # 升级MariaDB的先决条件
 
-从Adobe Commerce 2.3.4或更早版本升级到任何更新版本要求将云基础架构上的MariaDB服务从版本10.0或10.2升级到版本10.3或10.4。MariaDB版本10.3及更高版本要求数据库使用动态表行格式，而Adobe Commerce要求为表使用InnoDB存储引擎。 本文介绍如何更新数据库以符合这些MariaDB要求。
+将云基础架构上的MariaDB服务从版本10.0或10.2升级到版本10.3、10.4或10.5。MariaDB版本10.3及更高版本要求数据库使用动态表行格式，而Adobe Commerce要求为表使用InnoDB存储引擎。 本文介绍如何更新数据库以符合这些MariaDB要求。
 
 准备数据库后，请提交Adobe Commerce支持工单以更新云基础架构上的MariaDB服务版本，然后再继续Adobe Commerce升级过程。
 
 ## 受影响的产品和版本
 
-使用Adobe Commerce版本2.3.4或更早版本以及MariaDB版本10.0或更早版本在云基础架构上部署Adobe Commerce。
+使用MariaDB版本10.3或更早版本在云基础架构上部署Adobe Commerce。
 
 ## 准备数据库以进行升级
 
@@ -119,7 +119,7 @@ ht-degree: 0%
 
 ### 验证数据库转换
 
-在计划升级到MariaDB版本10.2的前一天，请确认所有表都具有正确的行格式和存储引擎。 需要进行验证，因为完成转换后进行的代码部署可能会导致某些表还原为其原始配置。
+在计划升级到MariaDB版本10.3、10.4或10.6的前一天，请确认所有表都具有正确的行格式和存储引擎。 需要进行验证，因为完成转换后进行的代码部署可能会导致某些表还原为其原始配置。
 
 1. 登录到数据库。
 
