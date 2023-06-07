@@ -2,9 +2,9 @@
 title: 安装指南
 description: 使用本指南安装 [!DNL Site-Wide Analysis Tool] （适用于您的网站）
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 4210746509be99bb3c943906c99f70ea420ba74a
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -184,7 +184,7 @@ bin/magento module:status Magento_ServicesId
    1. 下载启动器存档。
 
       ```bash
-      curl -O https://updater.swat.magento.com/launcher/launcher.linux-amd64.tar.gz
+      curl -O https://updater.supportinsights.adobe.com/launcher/launcher.linux-amd64.tar.gz
       ```
 
    1. 解压缩启动器存档。
@@ -197,7 +197,7 @@ bin/magento module:status Magento_ServicesId
    1. 下载启动器存档。
 
       ```bash
-      curl -O https://updater.swat.magento.com/launcher/launcher.linux-arm64.tar.gz
+      curl -O https://updater.supportinsights.adobe.com/launcher/launcher.linux-arm64.tar.gz
       ```
 
    1. 解压缩启动器存档。
@@ -390,7 +390,7 @@ bin/magento module:status Magento_ServicesId
 
 ```terminal
 ERRO[2022-10-10 00:01:41] Error while refreshing token: error while getting jwt from magento: invalid character 'M' looking for beginning of value
-FATA[2022-12-10 20:38:44] bad http status from https://updater.swat.magento.com/linux-amd64.json: 403 Forbidden
+FATA[2022-12-10 20:38:44] bad http status from https://updater.supportinsights.adobe.com/linux-amd64.json: 403 Forbidden
 ```
 
 要解决此错误，请尝试以下步骤：
@@ -403,6 +403,12 @@ FATA[2022-12-10 20:38:44] bad http status from https://updater.swat.magento.com/
 1. 运行调度程序并查看是否仍收到相同的错误。
 1. 如果您仍收到相同的错误，请提高 `config.yaml` 调试和打开支持票证。
 
+### *SIGFAULT* 错误
+
+如果您看到 *SIGFAULT* 运行二进制文件时出错，您可能没有以Adobe Commerce和Agent文件的所有者的身份运行此文件。
+要解决此问题，请检查代理目录中所有与Adobe Commerce文件拥有者具有相同用户的文件，以及二进制文件是否也应该在该用户下运行。
+您可以使用 `chown` 命令更改文件所有者并切换到适当的用户。
+确保您的守护程序化机制（Cron或System.d）在相应的用户下运行该过程。
 
 >[!INFO]
 >
