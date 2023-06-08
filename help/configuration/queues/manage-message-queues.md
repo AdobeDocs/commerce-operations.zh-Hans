@@ -2,9 +2,9 @@
 title: 管理消息队列
 description: 了解如何通过Adobe Commerce的命令行管理消息队列。
 exl-id: 619e5df1-39cb-49b6-b636-618b12682d32
-source-git-commit: caca8df48c498977f830082ef27d9afb6220ae92
+source-git-commit: 8dce1f1e961ec02d7783a7423a51a7d4567dce79
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Cron作业是重新启动使用者的默认机制。 进程启动者 `cron` 使�
 >
 >参见 [配置和运行cron](../cli/configure-cron-jobs.md) 有关使用的更多信息 `cron` 使用Commerce。
 
-也可以使用进程管理器，例如 [主管](http://supervisord.org/index.html) 以监视进程状态。 管理员可以使用命令行根据需要重新启动进程。
+也可以使用进程管理器，例如 [主管](https://supervisord.readthedocs.io/en/latest/) 以监视进程状态。 管理员可以使用命令行根据需要重新启动进程。
 
 ## 配置
 
@@ -76,12 +76,12 @@ Cron作业是重新启动使用者的默认机制。 进程启动者 `cron` 使�
 - `consumers`  — 一个字符串数组，指定要运行的使用者。 空数组运行 *所有* 消费者。
 - `multiple_processes`  — 一个键值对数组，指定要在多少个进程中运行的使用者。 在Commerce 2.4.4或更高版本中支持。
 
-   >[!INFO]
-   >
-   >不建议在MySQL操作的队列上运行多个使用者。 参见 [将消息队列从MySQL更改为AMQP](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-amqp) 了解更多信息。
+  >[!INFO]
+  >
+  >不建议在MySQL操作的队列上运行多个使用者。 参见 [将消息队列从MySQL更改为AMQP](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-amqp) 了解更多信息。
 
-   >[!INFO]
-   >
-   >如果您的Adobe Commerce商店托管在Cloud平台上，请使用 [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) 配置使用者处理消息队列中消息的方式。
+  >[!INFO]
+  >
+  >如果您的Adobe Commerce商店托管在Cloud平台上，请使用 [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) 配置使用者处理消息队列中消息的方式。
 
 参见 [启动消息队列使用者](../cli/start-message-queues.md).
