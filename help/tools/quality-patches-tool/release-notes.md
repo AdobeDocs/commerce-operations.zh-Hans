@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 205a0b67fab14a313d28355eed668d60ce477e64
+source-git-commit: 86f95d8fff53ab0857a3a276ba785ad26eb71241
 workflow-type: tm+mt
-source-wordcount: '12066'
+source-wordcount: '12426'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,25 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由Community为Magento Open Source创建，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.32 {#v1-1-32}
+
+* **ACSD-49628** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了以下问题： [!UICONTROL Page Builder's] 多个错误导致管理员无法保存没有内容权限的产品。
+* **ACSD-51305** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了缺货可配置子产品在GraphQL响应中不可用的问题。
+* **ACSD-50621** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了以下问题： [!UICONTROL Tier Prices] 对于共享目录中的不同网站，尝试在多网站环境中编辑它们时不可见。
+* **ACSD-51041** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.0 || >=2.4.1 &lt;2.4.6) — 改进了价格索引器的性能。
+* **ACSD-51379** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了以下对页面文本内容进行更改的问题： [!UICONTROL Page Builder] 未保存。
+* **ACSD-49480** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了仅将一个购物车价格规则应用于购物车的问题。
+* **ACSD-51230** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了在订单中处理简单产品的部分退款时删除礼品卡帐户的问题。
+* **ACSD-51238** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了在更新可配置产品和编辑价格时删除库存来源的问题。
+* **ACSD-50794** (对于Adobe Commerce >=2.4.1 &lt;2.4.7) — 修复了通过GraphQL删除礼品消息或礼品包装时，数据库中未更新礼品消息或礼品包装详细信息的问题。
+* **ACSD-51528** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了以下问题： *x_forwarded_for* 列在 *sales_order* 表格。
+* **ACSD-50849** (对于Adobe Commerce >=2.4.4 &lt;2.4.6) — 修复了在清除缓存后将新产品添加到类别导致现有产品的位置和选择不匹配的问题。
+* **ACSD-51294** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了GTM/GA价格、数量、税、运费和收入作为字符串发送到的问题 [!DNL Google Analytics] 和GTM。
+* **ACSD-51204** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了在创建贷项通知单后，完全销售的产品未返回库存的问题。
+* **ACSD-51291** (对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.4-p4 || >=2.4.5 &lt;2.4.5-p3) — 修复了限制管理员只能访问一个网站的问题，即管理员可以将图像/视频添加到分配给多个网站的产品。
+* 添加了ACSD-50336的新版本。
+* 已更换ACSD-49970修补程序。
 
 ## v1.1.31 {#v1-1-31}
 
@@ -186,7 +205,7 @@ ht-degree: 0%
 * **ACSD-46703** (*对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6*) — 修复了无法在产品编辑页面上拖放自定义选项的问题。
 * **ACSD-44851** (*对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6*) — 修复了包含子类别的类别无法打开或展开的问题。
 * **ACSD-46815** (*对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6*) — 修复了类别树请求限制为20个类别的问题。
-* **ACSD-45675** (*对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6*) — 修复了产品导出使用来自 *默认存储视图* 范围。
+* **ACSD-45675** (*对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6*) — 修复了产品导出使用 *默认存储视图* 范围。
 * **ACSD-46869** (*对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6*) — 修复了购物车中的可配置产品未通过 *PUTREST API* 请求而不更改产品数量。
 * **MDVA-42768-V2** (*对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3*) — 修复了可配置产品将正常价格显示为 *0* 时间 *显示缺货* 是 *是*.
 * 更新了修补程序：MDVA-44562、ACSD-46213、MDVA-41305、MDVA-38346、MDVA-13203。
