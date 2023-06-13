@@ -2,9 +2,9 @@
 title: 配置最佳实践
 description: 使用这些最佳实践优化Adobe Commerce或Magento Open Source部署的响应时间。
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 1d7f5f58f8c21013c2ab0d68ab93a125ba0f3764
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,31 @@ Commerce提供了许多设置和工具，可用于改善页面上的响应时间
 >[!WARNING]
 >
 >此 **[!UICONTROL Developer]** 选项卡和选项仅在 [开发人员模式](../configuration/cli/set-mode.md). [云基础架构上的Adobe Commerce](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) 不支持 `Developer` 模式。
+
+## 异步配置保存 [!BADGE 2.4.7-beta1]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="仅在2.4.7-beta1中提供"}
+
+对于具有大量存储级别配置的项目，保存存储配置可能需要花费过多的时间或导致超时。 此 _异步配置_ 模块通过运行使用使用者处理消息队列中的保存的cron作业来启用异步配置保存。 AsyncConfig **已禁用** 默认情况下。
+
+可以使用命令行界面启用AsyncConfig：
+
+```bash
+bin/magento setup:config:set --config-async 1
+```
+
+此 `set` 命令将以下内容写入 `app/etc/env.php` 文件：
+
+```conf
+...
+   'config' => [
+       'async' => 1
+   ]
+```
+
+启动以下使用者，开始按先进先出原则处理队列中的消息：
+
+```bash
+bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
+```
 
 ## 延期库存更新
 

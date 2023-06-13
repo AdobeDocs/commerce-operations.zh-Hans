@@ -2,16 +2,16 @@
 title: 恩金克斯
 description: 按照以下步骤安装和配置Nginx Web服务器，以便内部部署Adobe Commerce和Magento Open Source。
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 9ebf10bd3296495e33c91d930be023ea0124ff62
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1181'
 ht-degree: 0%
 
 ---
 
 # 恩金克斯
 
-Adobe Commerce支持nginx 1.18(或 [最新主行版本](https://nginx.org/en/linux_packages.html#mainline))。 您还必须安装最新版本的 `php-fpm`.
+Adobe Commerce支持nginx 1.x(或 [最新主行版本](https://nginx.org/en/linux_packages.html#mainline))。 您还必须安装最新版本的 `php-fpm`.
 
 安装说明因您使用的操作系统而异。 参见 [PHP](../php-settings.md) 以获取信息。
 
