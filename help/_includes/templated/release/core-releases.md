@@ -1,11 +1,32 @@
 ---
-source-git-commit: 89c3b0bf5e70ef10708ace403c073a64dadf9903
+source-git-commit: 14f4346f4b0bfd1fa0fa44bd62c7d3611a7ffdea
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 14%
+source-wordcount: '563'
+ht-degree: 13%
 
 ---
 # 已发布版本
+
+## 2.4.7
+
+尚未设置对2.4.7版本行支持的结束日期。
+
+<table>
+  <thead>
+    <tr>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html">2.4.7-beta1</a>
+        </td>
+        <td>2023年6月13日</td>
+    </tr><!-- patch_releases -->
+  </tbody>
+</table>
 
 ## 2.4.6
 
@@ -19,6 +40,12 @@ ht-degree: 14%
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p1.html">2.4.6-p1</a>
+        </td>
+        <td>2023年6月13日</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-6.html">2.4.6</a>
@@ -40,6 +67,12 @@ ht-degree: 14%
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p3.html">2.4.5-p3</a>
+        </td>
+        <td>2023年6月13日</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p2.html">2.4.5-p2</a>
@@ -73,6 +106,12 @@ ht-degree: 14%
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p4.html">2.4.4-p4</a>
+        </td>
+        <td>2023年6月13日</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-3-p3.html">2.4.4 - p3</a>
