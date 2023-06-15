@@ -1,8 +1,9 @@
 ---
 title: 管理模块和扩展（开发人员）
 description: 使用命令行界面和编辑器包管理器管理Adobe Commerce和Magento Open Source模块及扩展。
+feature: Upgrade, Extensions
 exl-id: 447eb317-83e1-4900-83a5-9ac1a008e752
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%

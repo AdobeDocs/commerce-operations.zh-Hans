@@ -1,8 +1,9 @@
 ---
 title: 高吞吐量订单处理
 description: 为您的Adobe Commerce或Magento Open Source部署优化订单投放和结账体验。
+feature: Best Practices, Orders
 exl-id: dc2d0399-0d7f-42d8-a6cf-ce126e0b052d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 0%

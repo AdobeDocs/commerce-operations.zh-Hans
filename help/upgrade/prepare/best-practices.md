@@ -1,8 +1,9 @@
 ---
 title: 最佳实践
 description: 使用Adobe推荐的最佳实践来管理您的Adobe Commerce和Magento Open Source项目的升级过程。
+feature: Upgrade, Best Practices
 exl-id: 53c505a3-8b99-4fc3-b1b4-f2f75208a51b
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%

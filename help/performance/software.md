@@ -1,8 +1,9 @@
 ---
 title: 软件Recommendations
 description: 查看与Adobe Commerce和Magento Open Source部署的最佳性能相关的推荐软件列表。
+feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 0%

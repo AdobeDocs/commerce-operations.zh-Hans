@@ -1,8 +1,9 @@
 ---
 title: 配置最佳实践
 description: 使用这些最佳实践优化Adobe Commerce或Magento Open Source部署的响应时间。
+feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 1d7f5f58f8c21013c2ab0d68ab93a125ba0f3764
+source-git-commit: 62a37d5f83b4cc6efef8bddba16e44151e91a8d0
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 0%

@@ -1,8 +1,9 @@
 ---
 title: 当前搜索引擎不受支持
 description: 遇到有关不受支持的Magento Open Source引擎的错误后，对您的Adobe Commerce或搜索引擎升级进行故障排除。
+feature: Upgrade, Search
 exl-id: 11479d23-53a5-4086-9f9a-c3420ccad073
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -34,13 +35,11 @@ bin/magento config:show catalog/search/engine
 >
 >如果您收到此错误，则表明您的安装处于不一致状态，并且无法访问管理员。 我们建议您在解决此错误时还原到之前的版本。 为此，请运行以下命令之一：
 >
->
-```bash
+>```bash
 >composer require-commerce magento/product-enterprise-edition=<version>
 >```
 >
->
-```bash
+>```bash
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
