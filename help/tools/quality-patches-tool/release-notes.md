@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 86f95d8fff53ab0857a3a276ba785ad26eb71241
+source-git-commit: 28358ee2ebadfcbf12c67e667cbbd27599a28a80
 workflow-type: tm+mt
-source-wordcount: '12426'
+source-wordcount: '12912'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,29 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由Community为Magento Open Source创建，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.33 {#v1-1-33}
+
+* **ACSD-50478** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.5) — 修复了数据库回滚命令是否适用于数据库转储包含触发器和一个 *分隔符* SQL命令。
+* **ACSD-50512** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复 *错误：可下载的链接与产品无关。 请验证链接并重试。* 更新可下载产品暂存更新的开始日期时出错。
+* **ACSD-50949** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了高级搜索中的价格过滤器在与SKU过滤器一起使用时未返回正确结果的问题。
+* **ACSD-51645** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在保存新的Cart Price Rule（如果扩展）时引发的错误 `Magento_OfflineShipping` 已禁用。
+* **ACSD-50895** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了以下问题： [!DNL Google Analytics] 3如果 [!DNL Google Analytics] 4 GTM未配置。
+* **ACSD-51102** (对于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了以下问题：当计划更新启用了目录规则时，应用于大量产品的目录规则无法正确编制索引。
+* **ACSD-50368** (对于Adobe Commerce和Magento Open Source>= 2.4.3 &lt;2.4.5) — 修复了以下问题： `group_id` 在通过Async REST API或Async Bulk REST API创建客户时，被忽略。
+* **ACSD-51497** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.0 || >= 2.4.1 &lt;2.4.7) — 修复了客户无法按下拉列表类型的自定义属性对目录页面进行排序的问题。
+* **ACSD-51408** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt; 2.4.7) — 修复了将订单项目状态错误设置为的问题 *[!UICONTROL Backordered]*.
+* **ACSD-51735** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了将订单项目状态错误设置为的问题 *[!UICONTROL Ordered]* 当产品库存为 *0*.
+* **ACSD-51792** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了以下情况下页面没有展示事件的问题： [!DNL Google Tag Manager] 4已启用。
+* **ACSD-51471** (对于Adobe Commerce >=2.4.3 &lt;2.4.7) — 修复了以下问题：对于使用本身具有计划更新的简单产品的捆绑产品，管理员用户无法保存其计划更新。
+* **ACSD-51700** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了在管理员的可下载产品编辑页面上切换商店视图时发生的错误。
+* **ACSD-51120** (对于Adobe Commerce >=2.3.7 &lt;2.4.3) — 修复了包含通过暂存更新更新的CMS块的CMS页面未清除GraphQLGET请求缓存的问题。
+* **ACSD-51240** (对于Adobe Commerce >=2.4.4 &lt;2.4.6) — 修复了通过公司注册表进行注册时上传文件缺失的问题。
+* **ACSD-51907** (对于Adobe Commerce >=2.4.2 &lt;2.4.3) — 修复了受限管理员用户无法创建具有离线退款的贷项通知单的问题。
+* **ACSD-52148** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4) — 修复了以下问题： [!DNL Google V3 reCAPTCHA] 管理员登录偶尔会失败。
+* **ACSD-51431** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复索引器状态为的问题 *工作* 即使changelog中没有新条目。
+* **ACSD-51892** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在部署期间配置文件加载多次的性能问题。
+* 已弃用ACSD-51114。
 
 ## v1.1.32 {#v1-1-32}
 
