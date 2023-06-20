@@ -1,5 +1,5 @@
 ---
-source-git-commit: adb585771fb1353614ea600117f18ba8b55b65f0
+source-git-commit: 64c453adabb092075854b2c20bf7da73c4a5146e
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -56,7 +56,7 @@ shell类型(“bash”)
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -126,7 +126,7 @@ bin/uct completion [--debug] [--] [<shell>]
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -205,7 +205,7 @@ bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -289,7 +289,7 @@ bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -353,7 +353,7 @@ bin/uct refactor <path>
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -428,7 +428,7 @@ Adobe Commerce vanilla安装目录。
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -499,7 +499,7 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -575,7 +575,7 @@ bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -683,7 +683,7 @@ Adobe Commerce安装目录。
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助 &lt;info>列表&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
