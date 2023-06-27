@@ -2,7 +2,8 @@
 title: 术语表
 description: Adobe Commerce中的术语和定义
 exl-id: 82abd8c3-fb5a-4599-8435-f1f2f6122397
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+recommendations: noDisplay, noCatalog
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '8'
 ht-degree: 0%

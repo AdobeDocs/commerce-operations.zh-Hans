@@ -2,7 +2,8 @@
 title: 迁移数据
 description: 了解如何使用，开始将数据从Magento1迁移到Magento2 [!DNL Data Migration Tool].
 exl-id: f4ea8f6a-21f8-4db6-b598-c5efecec254f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+topic: Commerce, Migration
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -45,42 +46,42 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 * `m2_cl_sales_flat_order` 表：
 
-   ```sql
-   CREATE TABLE `m2_cl_sales_flat_order` (
-     `entity_id` int(11) NOT NULL COMMENT 'Entity_id',
-     `operation` text COMMENT 'Operation',
-     `processed` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'Processed',
-     PRIMARY KEY (`entity_id`)
-   ) COMMENT='m2_cl_sales_flat_order';
-   ```
+  ```sql
+  CREATE TABLE `m2_cl_sales_flat_order` (
+    `entity_id` int(11) NOT NULL COMMENT 'Entity_id',
+    `operation` text COMMENT 'Operation',
+    `processed` tinyint(1) NOT NULL DEFAULT '0' COMMENT 'Processed',
+    PRIMARY KEY (`entity_id`)
+  ) COMMENT='m2_cl_sales_flat_order';
+  ```
 
 * `trg_sales_flat_order_after_insert`， `trg_sales_flat_order_after_update`， `trg_sales_flat_order_after_delete` 触发器：
 
-   ```sql
-   DELIMITER ;;
-   CREATE TRIGGER `trg_sales_flat_order_after_insert` AFTER INSERT ON `sales_flat_order`
-     FOR EACH ROW
-     BEGIN
-      INSERT INTO m2_cl_sales_flat_order (`entity_id`, `operation`) VALUES (NEW.entity_id, 'INSERT')ON DUPLICATE KEY UPDATE operation = 'INSERT';
-     END
-   ;;
-   
-   DELIMITER ;;
-   CREATE TRIGGER `trg_sales_flat_order_after_update` AFTER UPDATE ON `sales_flat_order`
-     FOR EACH ROW
-     BEGIN
-      INSERT INTO m2_cl_sales_flat_order (`entity_id`, `operation`) VALUES (NEW.entity_id, 'UPDATE') ON DUPLICATE KEY UPDATE operation = 'UPDATE';
-     END
-   ;;
-   
-   DELIMITER ;;
-   CREATE TRIGGER `trg_sales_flat_order_after_delete` AFTER DELETE ON `sales_flat_order`
-     FOR EACH ROW
-     BEGIN
-      INSERT INTO m2_cl_sales_flat_order (`entity_id`, `operation`) VALUES (OLD.entity_id, 'DELETE')ON DUPLICATE KEY UPDATE operation = 'DELETE';
-     END
-   ;;
-   ```
+  ```sql
+  DELIMITER ;;
+  CREATE TRIGGER `trg_sales_flat_order_after_insert` AFTER INSERT ON `sales_flat_order`
+    FOR EACH ROW
+    BEGIN
+     INSERT INTO m2_cl_sales_flat_order (`entity_id`, `operation`) VALUES (NEW.entity_id, 'INSERT')ON DUPLICATE KEY UPDATE operation = 'INSERT';
+    END
+  ;;
+  
+  DELIMITER ;;
+  CREATE TRIGGER `trg_sales_flat_order_after_update` AFTER UPDATE ON `sales_flat_order`
+    FOR EACH ROW
+    BEGIN
+     INSERT INTO m2_cl_sales_flat_order (`entity_id`, `operation`) VALUES (NEW.entity_id, 'UPDATE') ON DUPLICATE KEY UPDATE operation = 'UPDATE';
+    END
+  ;;
+  
+  DELIMITER ;;
+  CREATE TRIGGER `trg_sales_flat_order_after_delete` AFTER DELETE ON `sales_flat_order`
+    FOR EACH ROW
+    BEGIN
+     INSERT INTO m2_cl_sales_flat_order (`entity_id`, `operation`) VALUES (OLD.entity_id, 'DELETE')ON DUPLICATE KEY UPDATE operation = 'DELETE';
+    END
+  ;;
+  ```
 
 >[!NOTE]
 >

@@ -2,7 +2,8 @@
 title: 此 [!UICONTROL Indexing] 选项卡
 description: 了解 [!UICONTROL Indexing] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: c7e123b7-2d0c-49d4-9f76-128939dc02a8
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%

@@ -2,7 +2,8 @@
 title: 选择 [!UICONTROL focus] 选项卡
 description: 了解如何选择 [!UICONTROL focus] 选项卡以观察导致问题的区域。
 exl-id: 6c0a7d81-09cf-49ce-888a-9ecaaad2b7ae
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

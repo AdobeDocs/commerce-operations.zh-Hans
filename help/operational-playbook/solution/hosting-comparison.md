@@ -2,7 +2,8 @@
 title: Commerce托管比较
 description: 通过查看此比较表，为您的电子商务项目做出有关托管的最佳决策。
 exl-id: 8d1f0b85-2874-4a4b-9fae-1fb367a7f85e
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Cloud, Paas
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%

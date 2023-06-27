@@ -2,7 +2,8 @@
 title: 个性化
 description: 了解个性化应该为客户提供哪种体验。
 exl-id: ea829c53-1f98-4e23-90ee-5424a4ef0324
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Personalization
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%

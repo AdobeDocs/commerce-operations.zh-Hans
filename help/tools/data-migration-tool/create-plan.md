@@ -2,7 +2,8 @@
 title: 创建数据迁移计划
 description: 按照以下步骤创建数据迁移计划，以确保成功从Magento1升级到Magento2。
 exl-id: a14237f3-c5fe-4f5f-86eb-ed4c39507bff
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+topic: Commerce, Migration
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 0%

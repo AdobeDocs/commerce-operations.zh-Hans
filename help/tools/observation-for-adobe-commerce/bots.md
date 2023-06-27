@@ -2,7 +2,8 @@
 title: 此 [!UICONTROL bots] 选项卡
 description: 了解 [!UICONTROL bots] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: 741310ca-28fb-4b08-95c7-e8d1fb952018
-source-git-commit: 6c0607713231393ec0d7e190398518f7cd9559a4
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 0%
@@ -151,7 +152,7 @@ ht-degree: 0%
 
 ![具有非200状态错误的IP — 没有403状态](../../assets/tools/observation-for-adobe-commerce/ip-non-200-status-errors.png)
 
-此 **[!UICONTROL IP with non-200 status errors – without 403 status]** frame显示IP地址在选定时间范围内的分布，HTTP状态代码不是200。 如果单个IP或一组IP地址的值较高，则需要进一步调查。
+此 **[!UICONTROL IP with non-200 status errors – without 403 status]** frame显示IP地址在选定时间范围内的分布，HTTP状态代码不是200。 如果单个IP地址或一组IP地址的值较高，则需要进一步调查。
 
 ## [!UICONTROL IP with 403 status codes:]
 

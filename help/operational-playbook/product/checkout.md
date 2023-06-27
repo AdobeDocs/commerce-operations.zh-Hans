@@ -2,7 +2,8 @@
 title: 结账流程和流程
 description: 通过为客户提供无缝结账体验来提高转化率。
 exl-id: 692236fd-b909-4061-8038-0db19e0ed72b
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Checkout
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%

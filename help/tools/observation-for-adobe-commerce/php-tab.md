@@ -2,7 +2,8 @@
 title: 此 [!UICONTROL PHP] 选项卡
 description: 了解 [!UICONTROL PHP] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: 0989a7f5-75b0-4fb5-ac5e-2618603bf548
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%

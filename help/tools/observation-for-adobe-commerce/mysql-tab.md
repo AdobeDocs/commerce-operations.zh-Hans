@@ -2,7 +2,8 @@
 title: 此 [!UICONTROL MySQL] 选项卡
 description: 了解 [!UICONTROL MySQL] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: 1d8dd07c-15fd-4ffd-ad10-0d886bf1579e
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '2030'
 ht-degree: 0%

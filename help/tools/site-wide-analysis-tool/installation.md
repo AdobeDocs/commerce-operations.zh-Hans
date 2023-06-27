@@ -2,7 +2,8 @@
 title: 安装指南
 description: 使用本指南安装 [!DNL Site-Wide Analysis Tool] （适用于您的网站）
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
-source-git-commit: 4210746509be99bb3c943906c99f70ea420ba74a
+feature: Configuration, Install
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 0%
@@ -46,9 +47,10 @@ ht-degree: 0%
 - 操作系统
 
    - [!DNL Linux x86-64] 分发，例如 [!DNL Red Hat® Enterprise Linux (RHEL)]， [!DNL CentOS]， [!DNL Ubuntu]， [!DNL Debian]，和类似项
-   >[!IMPORTANT]
-   >
-   >Adobe Commerce在上不受支持 [!DNL Microsoft Windows] 或 [!DNL macOS].
+
+  >[!IMPORTANT]
+  >
+  >Adobe Commerce在上不受支持 [!DNL Microsoft Windows] 或 [!DNL macOS].
 
 - Adobe Commerce 2.4.1或更高版本
 
@@ -192,6 +194,7 @@ bin/magento module:status Magento_ServicesId
       ```bash
       tar -xf launcher.linux-amd64.tar.gz
       ```
+
    对于 **ARM64** 架构：
 
    1. 下载启动器存档。
@@ -205,7 +208,6 @@ bin/magento module:status Magento_ServicesId
       ```bash
       tar -xf launcher.linux-arm64.tar.gz
       ```
-
 
 1. *（可选）* 验证校验和文件的签名。
 

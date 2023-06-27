@@ -2,7 +2,9 @@
 title: AEM性能优化
 description: 优化默认Adobe Experience Manager配置以支持Adobe Commerce上的高负载。
 exl-id: 923a709f-9048-4e67-a5b0-ece831d2eb91
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Integration, Cache
+topic: Commerce, Performance
+source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 0%
@@ -89,7 +91,7 @@ com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 上述缓存选项可以使用“GraphQL客户端配置工厂”中的AEM OSGi配置控制台进行设置。 可以使用以下格式指定每个缓存配置条目：
 
 ```
-• NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
+* NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
     › NAME (String): name of the cache
     › ENABLE (true|false): enables or disables that cache entry
     › MAXSIZE (Integer): maximum size of the cache (in number of entries)

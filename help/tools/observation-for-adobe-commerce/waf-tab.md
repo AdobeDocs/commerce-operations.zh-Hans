@@ -2,7 +2,8 @@
 title: 此 [!DNL WAF] 选项卡
 description: 了解 [!DNL WAF] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: e36986d7-d903-4154-bb09-6962b99ae35f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%

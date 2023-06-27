@@ -2,7 +2,8 @@
 title: '[!DNL Observation for Adobe Commerce]'
 description: 了解 [!DNL Observation for Adobe Commerce]、其用途、使用时间和访问方式。
 exl-id: a787be0f-5dd8-4acc-adbf-5cedd96b08d6
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%

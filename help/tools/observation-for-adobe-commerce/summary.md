@@ -2,7 +2,8 @@
 title: 此 [!UICONTROL Summary] 选项卡
 description: 了解 [!UICONTROL Summary] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '2653'
 ht-degree: 0%

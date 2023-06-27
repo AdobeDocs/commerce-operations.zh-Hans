@@ -2,7 +2,8 @@
 title: 支持的数据迁移版本
 description: 了解Magento1和Magento2的哪些版本可以 [!DNL Data Migration Tool] 支持。
 exl-id: ba6398b4-66be-4d33-a4d3-a9f0aaa0fa81
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+topic: Commerce, Migration
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%

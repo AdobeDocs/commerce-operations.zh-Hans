@@ -2,7 +2,8 @@
 title: 此 [!UICONTROL Alerts] 选项卡
 description: 了解 [!UICONTROL Alerts] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: e9305576-6ed2-48f3-baec-36e081b0d04b
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
