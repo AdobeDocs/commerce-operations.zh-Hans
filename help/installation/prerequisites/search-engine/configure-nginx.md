@@ -1,8 +1,9 @@
 ---
 title: 为搜索引擎配置Nginx
 description: 按照以下步骤使用Nginx Web Server配置搜索引擎，以进行Adobe Commerce和Magento Open Source的内部安装。
+feature: Install, Search
 exl-id: 8d2f8695-e30a-4acc-bba3-d122212b0a53
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%

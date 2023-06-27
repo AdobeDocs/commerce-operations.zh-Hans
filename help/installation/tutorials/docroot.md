@@ -1,8 +1,9 @@
 ---
 title: 修改docroot以提高安全性
 description: 防止对Adobe Commerce或Magento Open Source本地文件系统的未经授权的基于浏览器的访问。
+feature: Install, Security
 exl-id: aabe148d-00c8-4011-a629-aa5abfa6c682
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%

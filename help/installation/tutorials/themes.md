@@ -1,8 +1,9 @@
 ---
 title: 卸载主题
 description: 按照以下步骤卸载Adobe Commerce或Magento Open Source主题。
+feature: Install, Themes
 exl-id: 73150e8c-2d83-4479-b96b-75f41fd9c842
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -26,7 +27,7 @@ ht-degree: 0%
 * 更新 `parent` 中的节点信息 `theme.xml` 以移除对主题的引用。
 * 正在从文件系统删除主题代码。
 
-   [有关主题继承的更多信息](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
+  [有关主题继承的更多信息](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
 
 ## 卸载主题
 

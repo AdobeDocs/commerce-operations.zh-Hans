@@ -1,8 +1,9 @@
 ---
 title: 搜索引擎先决条件
 description: 按照以下步骤安装和配置受支持的Adobe Commerce和Magento Open Source本地安装的搜索引擎软件。
+feature: Install, Search
 exl-id: 44ea638a-7200-4269-be1b-b0851de2c4f4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -40,15 +41,15 @@ ht-degree: 0%
 
 * Commerce应用程序和搜索引擎安装在不同的主机上。
 
-   在单独的主机上运行需要代理才能正常工作。 (搜索引擎聚类不在本指南的涵盖范围内，但是您可以在 [Elasticsearch群集文档](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
+  在单独的主机上运行需要代理才能正常工作。 (搜索引擎聚类不在本指南的涵盖范围内，但是您可以在 [Elasticsearch群集文档](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
 
 * 每台主机都有自己的Web服务器；Web服务器不必相同。
 
-   例如，Commerce应用程序可以运行Apache，而搜索引擎可以运行nginx。
+  例如，Commerce应用程序可以运行Apache，而搜索引擎可以运行nginx。
 
 * 这两个Web服务器都使用传输层安全性(TLS)。
 
-   设置TLS超出了我们文档的范围。
+  设置TLS超出了我们文档的范围。
 
 搜索请求的处理方式如下：
 

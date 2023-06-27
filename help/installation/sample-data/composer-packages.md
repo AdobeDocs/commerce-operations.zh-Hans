@@ -1,8 +1,9 @@
 ---
 title: 下载示例数据编辑器包
 description: 按照以下步骤使用Composer PHP包管理器安装Adobe Commerce并Magento Open Source示例数据。
+feature: Install, Deploy
 exl-id: 735591af-a152-4476-9fa6-e31c4bab3ba8
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 * 从以下位置下载压缩存档 `https://magento.com/tech-resources/download`.
 
-   如果您从GitHub下载了存档，则此方法不起作用，因为 `composer.json` 文件不包含 `repo.magento.com` URL。
+  如果您从GitHub下载了存档，则此方法不起作用，因为 `composer.json` 文件不包含 `repo.magento.com` URL。
 
 * 已使用 `composer create-project`
 

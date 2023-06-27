@@ -1,8 +1,9 @@
 ---
 title: AWS OpenSearch
 description: 按照以下步骤为Adobe Commerce和Magento Open Source的内部安装配置AWS OpenSearch Web服务。
+feature: Install, Search
 exl-id: 39ca7fd0-e21f-4f14-bda6-ff00a61a1a4d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%

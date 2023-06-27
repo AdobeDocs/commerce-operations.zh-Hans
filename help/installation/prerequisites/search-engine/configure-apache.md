@@ -1,8 +1,9 @@
 ---
 title: 为搜索引擎配置Apache
 description: 按照以下步骤使用Apache Web Server配置搜索引擎，以进行Adobe Commerce和Magento Open Source的内部安装。
+feature: Install, Search
 exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -131,10 +132,9 @@ htpasswd -c /usr/local/apache/password/.<password file name> <username>
 
    * 设置cron：Web服务器用户或其他用户。
 
-   在本例中，我们使用Web服务器用户，但用户的选择取决于您。
+  在本例中，我们使用Web服务器用户，但用户的选择取决于您。
 
    * 设置Elasticsearch：用户已命名 `magento_elasticsearch` 在此示例中
-
 
 * `<password file name>` 必须为隐藏文件(开头为 `.`)，并且应该反映用户的名称。 有关详细信息，请参阅此部分后面的示例。
 
