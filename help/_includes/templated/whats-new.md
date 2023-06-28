@@ -1,7 +1,7 @@
 ---
-source-git-commit: 36ebf825705e3ffb26d595d39df8339ab1ca3c6f
+source-git-commit: 79293c564f9fcded146916e9e3bfd27a28424940
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## 新增功能
 
 了解新文档和现有文档的重要更新。
+
+### 2023年6月23日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已更新 <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html">系统要求</a> 中的页面 <em>安装指南</em> 通过选项卡，可在Cloud和内部部署依赖项之间切换。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3d56a01b91a71b1c615a28588e726f0b9e58abb0">3d56a0</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2023年6月13日
 
@@ -22,6 +42,12 @@ ht-degree: 0%
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><p>将2023年6月版添加到 <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">已发布版本</a>.</p>
+</td>
+      <td>技术</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8d7329c2496f4d322a83ec6bcf71ef956f4284c3">8d7329</a> （提交）</td>
+    </tr>
     <tr>
       <td><p>添加了以下测试版文档：<br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises-beta.html">Adobe Commerce CLI（内部部署，测试版）</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/magento-open-source-beta.html">Magento Open SourceCLI（测试版）</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/adobe-commerce-beta.html">Adobe Commerce包（测试版）</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/cloud-beta.html">Adobe Commerce云包（测试版）</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/magento-open-source-beta.html">Magento Open Source包（测试版）</a></p>
 </td>
