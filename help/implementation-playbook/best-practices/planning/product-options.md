@@ -2,10 +2,9 @@
 title: 产品选项配置最佳实践
 description: 通过限制产品选项的数量来优化Adobe Commerce性能。
 role: Admin
-feature: Best Practices
-feature-set: Commerce
+feature: Best Practices, Catalogs
 exl-id: 7571a163-798a-40be-b26f-4a184bceb809
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

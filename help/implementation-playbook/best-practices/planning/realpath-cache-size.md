@@ -2,10 +2,9 @@
 title: Realpath缓存大小
 description: 了解如何通过更新PHP readlpath缓存配置以使用推荐的设置来优化Adobe Commerce性能。
 role: Developer
-feature: Best Practices
-feature-set: Commerce
+feature: Best Practices, Cache
 exl-id: 1cd48155-5d60-48b2-b07b-9b5784b81681
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%

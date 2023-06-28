@@ -2,7 +2,8 @@
 title: 质量控制
 description: 了解与实施项目相关的Adobe Commerce质量控制流程。
 exl-id: 0eb62b24-21f6-4cec-8ef9-eeaa1ee6ae52
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Build
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 0%
@@ -184,4 +185,4 @@ SoapUI是用于简单对象访问协议(SOAP)和表示状态传输(REST)的开�
 
 ## 自动化测试
 
-Selenium由几个组件（Selenium客户端API、Selenium WebDriver）组成，每个组件在帮助开发Web应用程序测试自动化方面承担特定角色。
+Selenium由若干组件（Selenium客户端API、Selenium WebDriver）组成，每个组件在帮助开发Web应用程序测试自动化方面承担特定角色。

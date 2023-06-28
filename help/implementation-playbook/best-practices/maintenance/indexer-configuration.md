@@ -3,9 +3,8 @@ title: 索引器的配置最佳实践
 description: 通过遵循索引器配置的最佳实践来维护和优化站点性能。
 role: Admin, User
 feature: Best Practices
-feature-set: Commerce
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%

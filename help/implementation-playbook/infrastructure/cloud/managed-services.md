@@ -2,7 +2,8 @@
 title: Managed Services
 description: 查看Adobe Managed Services、客户和云服务提供商在云基础架构实施方面为您的Adobe Commerce承担的责任。
 exl-id: b1442e31-06f4-4aa6-b24a-b6cda630d52f
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+feature: Cloud, Services
+source-git-commit: 7c2e2bdabf47e1367ffb6761230d3d43f0f9d0cf
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%

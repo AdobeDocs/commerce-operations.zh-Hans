@@ -2,7 +2,8 @@
 title: 性能指标评测
 description: 查看在Adobe云基础架构上托管的Adobe Commerce实施的性能基准结果。
 exl-id: cc9b090a-a504-4df3-aa32-81882f431dd9
-source-git-commit: eeb7146a8051e8692ebf974d65db75a4999cf2e6
+feature: Cloud
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
@@ -49,13 +50,13 @@ Adobe Commerce 2.4.5性能基准结果反映了在使用以下基础架构和其
    - 店面有3000个并发用户
    - 设置为30% CDN缓存命中率
 
-      缓存层的有效使用增加了每小时的页面查看次数。
+     缓存层的有效使用增加了每小时的页面查看次数。
 
 - **GRAPHQL API**
    - 250个并发线程
    - 设置为0% CDN缓存命中率
 
-      通过GraphQL前面的缓存层，可显着缩短响应时间。
+     通过GraphQL前面的缓存层，可显着缩短响应时间。
 
 - **管理Web**
    - 500个并发用户

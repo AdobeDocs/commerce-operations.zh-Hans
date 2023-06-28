@@ -2,7 +2,8 @@
 title: 实施行动手册
 description: Commerce实施行动手册的目标
 exl-id: 2f82c68c-60c7-4a62-837b-492afc06e0db
-source-git-commit: 7bad54402e4698545f3436d4195170adb7b48c15
+feature: Best Practices, Cloud, Integration
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%

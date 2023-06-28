@@ -3,9 +3,8 @@ title: 优化图像以实现响应更快速的网站
 description: 了解优化图像的步骤，并使用Fastly图像优化来优化Adobe Commerce网站上的响应时间。
 role: Developer, Admin
 feature: Best Practices
-feature-set: Commerce
 exl-id: ada8b987-97ed-4232-9e1b-7e0a791a0807
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%

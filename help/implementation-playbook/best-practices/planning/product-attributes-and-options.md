@@ -2,10 +2,9 @@
 title: 产品属性配置最佳实践
 description: 了解如何通过限制产品属性、属性选项和属性集的数量来优化Adobe Commerce性能
 role: User, Admin
-feature: Best Practices
-feature-set: Commerce
+feature: Best Practices, Catalogs
 exl-id: 81783a4c-bc82-4733-bee3-0154cf03079a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -21,7 +20,6 @@ ht-degree: 0%
    - 对于Adobe Commerce版本2.4.2及更高版本，最多配置1500个产品属性
 - **产品属性选项** — 为每个属性配置最多100个属性选项
 - **产品属性集** — 配置最多1000个属性集_
-
 >[!NOTE]
 >
 >产品属性指定全局应用于所有产品的功能。 产品属性选项是用于指定适用于特定产品的功能的定制设置。

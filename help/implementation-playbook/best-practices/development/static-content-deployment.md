@@ -3,9 +3,8 @@ title: 静态内容部署最佳实践
 description: 了解如何避免静态内容未出现在Adobe Commerce或Magento Open Source店面中的问题。
 role: Developer
 feature: Best Practices
-feature-set: Commerce
 exl-id: 9f521963-6fe4-4844-b2d1-fd457b706900
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%

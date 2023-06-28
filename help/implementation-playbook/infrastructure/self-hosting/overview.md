@@ -8,7 +8,8 @@ doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 63f552f3-836c-4a07-96c3-c0e00614fe39
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Install
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 0%
@@ -45,6 +46,6 @@ ht-degree: 0%
 
 ## 接下来呢？
 
-这些主题没有任何特殊顺序或顺序。 它们旨在向DevOps工程师、商务架构师以及参与此重要决策(确定托管Adobe Commerce的位置和方式)的其他任何人员提供谈话要点。
+这些主题没有任何特殊顺序或顺序。 它们旨在向DevOps工程师、商务架构师以及参与此重要决策(确定托管Adobe Commerce的位置和方式)的任何其他人员提供谈话要点。
 
 {{$include /help/_includes/hosting-related-links.md}}

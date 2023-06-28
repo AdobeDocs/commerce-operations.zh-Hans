@@ -2,10 +2,9 @@
 title: 产品限制最佳实践
 description: 了解配置产品库存单位(SKU)以最大化网站性能的最佳实践。
 role: Admin
-feature: Best Practices
-feature-set: Commerce
+feature: Best Practices, Catalogs
 exl-id: 37af7b92-05ac-4a4f-9009-11e8d9f95c2f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%

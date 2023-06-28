@@ -2,7 +2,8 @@
 title: 实施启动阶段
 description: 了解Adobe Commerce项目启动阶段的实施最佳实践。
 exl-id: 2e85346c-2063-49c9-9b8d-1b5fdd3f1cef
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Best Practices
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%

@@ -2,7 +2,8 @@
 title: 性能优化
 description: 了解有关性能优化的所有信息，以及查看Adobe Commerce实施性能时应采取的步骤。
 exl-id: 506ef2cc-c6fd-4401-afa5-a71e7b9871e6
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Cloud
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%

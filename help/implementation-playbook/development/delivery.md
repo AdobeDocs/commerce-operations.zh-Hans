@@ -2,7 +2,8 @@
 title: 项目实施方法
 description: 熟悉Adobe Commerce软件投放的工作方式。
 exl-id: 579cd083-8b12-49ff-bc8a-8db1ca588d74
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Build, Deploy
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%

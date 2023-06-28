@@ -2,10 +2,9 @@
 title: 产品列表分页的最佳实践
 description: 了解如何通过管理店面目录每个页面上显示的产品数量来优化Adobe Commerce性能。
 role: User, Admin
-feature: Best Practices
-feature-set: Commerce
+feature: Best Practices, Catalogs
 exl-id: 473f23a9-53fb-41a6-9b3a-af7bd1208be0
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%

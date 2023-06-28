@@ -3,9 +3,8 @@ title: 订单处理的配置最佳实践
 description: 了解提高结帐和订单处理性能的配置最佳实践。
 role: Admin, User
 feature: Best Practices
-feature-set: Commerce
 exl-id: d15fe845-670f-4f7e-9645-7e111e6e809f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -33,17 +32,17 @@ ht-degree: 0%
 
 - 对于云基础架构上的Adobe Commerce和生产模式下的本地站点，请使用以下MagentoCLI命令启用异步索引：
 
-   ```php
-   php bin/magento config:set dev/grid/async_indexing 1
-   ```
+  ```php
+  php bin/magento config:set dev/grid/async_indexing 1
+  ```
 
 - 对于处于默认或生产模式的Adobe Commerce本地站点，可通过更新管理员中的网格设置配置来启用异步索引。
 
-   参见 [启用计划的网格更新和重新索引](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html#enable-scheduled-grid-updates-and-reindexing)
+  参见 [启用计划的网格更新和重新索引](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html#enable-scheduled-grid-updates-and-reindexing)
 
-   >[!WARNING]
-   >
-   >在更新生产环境之前，请始终在暂存环境中测试配置更改。
+  >[!WARNING]
+  >
+  >在更新生产环境之前，请始终在暂存环境中测试配置更改。
 
 ## 其他信息
 

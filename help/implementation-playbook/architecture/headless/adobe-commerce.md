@@ -2,7 +2,8 @@
 title: Headless Adobe Commerce架构
 description: 了解是什么使Adobe Commerce的Headless架构方法独树一帜。
 exl-id: eac9d5b1-4917-4d2a-a8af-7f85c825fa0d
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+feature: Integration
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%

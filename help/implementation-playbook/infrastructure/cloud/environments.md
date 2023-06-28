@@ -2,7 +2,8 @@
 title: 云基础架构环境
 description: 在适当的用例中使用适当的环境。
 exl-id: 0c36145f-8de2-45e5-9050-9acbc9fb6100
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Cloud
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

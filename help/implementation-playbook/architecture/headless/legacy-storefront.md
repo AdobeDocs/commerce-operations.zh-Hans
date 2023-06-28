@@ -2,7 +2,8 @@
 title: 耦合店面体系结构
 description: 了解在Headless Adobe Commerce架构中，耦合的店面意味着什么。
 exl-id: 978e6853-4fbe-45b8-8e46-f491c6724fc6
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Integration
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%

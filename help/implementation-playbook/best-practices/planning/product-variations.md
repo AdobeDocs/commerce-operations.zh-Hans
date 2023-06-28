@@ -2,10 +2,9 @@
 title: 产品变体配置最佳实践
 description: 了解如何通过限制配置的产品变体的数量来优化Adobe Commerce性能。
 role: Admin
-feature: Best Practices
-feature-set: Commerce
+feature: Best Practices, Catalogs
 exl-id: a19dd8b4-23b8-498f-be51-a0adfcd12a11
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%

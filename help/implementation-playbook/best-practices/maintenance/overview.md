@@ -2,7 +2,8 @@
 title: 实施维护阶段
 description: 了解Adobe Commerce项目维护阶段的实施最佳实践。
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Best Practices
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -51,7 +52,6 @@ ht-degree: 0%
 - [如何重新索引](https://developer.adobe.com/commerce/php/development/components/indexing/#how-to-reindex)
 - [索引器的配置最佳实践&#x200B;](indexer-configuration.md)
 - [订单处理的配置最佳实践](order-processing-configuration.md)
-
 <!-- Asset not yet integrated from CTAG deck:
 - Plan upsizing for planned traffic increases during promotions or holidays -->
 

@@ -3,9 +3,8 @@ title: 类别配置最佳实践
 description: 了解通过限制目录中的类别数量来最大化站点性能的最佳实践。
 role: Admin
 feature: Best Practices
-feature-set: Commerce
 exl-id: c6834b32-9ee8-4a4a-932c-9726f3feee3f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%

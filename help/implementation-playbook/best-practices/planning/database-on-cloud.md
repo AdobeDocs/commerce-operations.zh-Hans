@@ -2,10 +2,9 @@
 title: 云部署的数据库配置最佳实践
 description: 了解如何在云基础架构上部署Adobe Commerce时配置数据库和应用程序设置以提高性能。
 role: Developer, Admin
-feature-set: Commerce
 feature: Best Practices
 exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%

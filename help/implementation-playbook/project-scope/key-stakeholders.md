@@ -2,7 +2,8 @@
 title: 关键利益相关者
 description: 审查Adobe Commerce实施中涉及的主要利益相关者以及负责项目各个方面的人员。
 exl-id: 04d8270f-3f68-445a-8e7a-e17905a6f77c
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
