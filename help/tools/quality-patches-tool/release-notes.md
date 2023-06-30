@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 28358ee2ebadfcbf12c67e667cbbd27599a28a80
+source-git-commit: 6299aa825c04a5afd31728e763269cee46cfe513
 workflow-type: tm+mt
-source-wordcount: '12912'
+source-wordcount: '13230'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,22 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由Community为Magento Open Source创建，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.34 {#v1-1-34}
+
+* **ACSD-52277** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了在“管理员”中创建新订单时，管理员用户在选择商店视图后未正确重定向的问题。
+* **ACSD-50813** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了以下问题：管理员无法在SKU中添加包含斜杠的捆绑产品 [!UICONTROL Add Products by SKU] 管理订单的功能。
+* **ACSD-51630** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了大量系统消息导致下载管理页变慢的问题。
+* **ACSD-51853** (对于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.7) — 修复了在使用时，未应用复制的文本样式的问题 [!UICONTROL Page Builder].
+* **ACSD-52160** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了以下问题：根据购物车价格规则，产品验证结果未根据规则条件“如果在购物车中找到/未找到项目，且所有/任何这些条件均为true”来正确评估。
+* **ACSD-51636** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了以下问题：公司管理员尽管拥有所有必要的角色和权限，但无法从客户帐户部分添加新用户。
+* **ACSD-51739** (对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了以下情况下返回错误的问题： `structure_id` 在CompanyTeam GraphQL请求中查找。
+* **ACSD-51857** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了性能缓慢的问题 `aggregate_sales_report_bestsellers_data` 大型销售订单和的cron报告 `sales_order_item` 数据库表是由于写入主数据查询的方式造成的。
+* **ACSD-48448** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了在订单取消期间发生竞争条件问题，从而导致 `inventory_reservation` 表格。
+* **ACSD-52689** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.6) — 修复了无法使用REST API将图像上传到Amazon S3存储的问题。
+* **B2B-2674** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 将缓存功能添加到1customAttributeMetadata1 GraphQL查询。
+* 添加了ACSD-44938的新版本。
+* 添加了ACSD-46988的要求。
 
 ## v1.1.33 {#v1-1-33}
 
