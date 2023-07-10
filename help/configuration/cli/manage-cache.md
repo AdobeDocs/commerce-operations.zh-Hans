@@ -2,9 +2,9 @@
 title: 管理缓存
 description: 管理缓存类型和查看缓存状态。
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 5c316ade0619603eafa7ece8a7cd8c1595dee713
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -119,15 +119,19 @@ bin/magento cache:disable db_ddl full_page
 
 ## 清理和刷新缓存类型
 
+>[!NOTE]
+>
+>可以同时自动使多个页面缓存失效 **_不含_** 这些实体进行编辑。 例如，当目录中的任何产品被分配给任何类别时，或者当任何 [!UICONTROL related product rule] 已修改。
+
 要从缓存中清除过期的项目，您可以 _clean_ 或 _刷新_ 缓存类型：
 
 - 清理缓存类型只会从启用的Commerce缓存类型中删除所有项目。 换言之，此选项不会影响其他进程或应用程序，因为它仅清理Commerce使用的缓存。
 
-   禁用的缓存类型不会清除。
+  禁用的缓存类型不会清除。
 
-   >[!TIP]
-   >
-   >在升级Magento Open Source或Adobe Commerce版本、从Magento Open Source升级到Adobe Commerce，或安装B2B for Adobe Commerce或任何模块后，请始终清理缓存。
+  >[!TIP]
+  >
+  >在升级Magento Open Source或Adobe Commerce版本、从Magento Open Source升级到Adobe Commerce，或安装B2B for Adobe Commerce或任何模块后，请始终清理缓存。
 
 - 刷新缓存类型会清除缓存存储，这可能会影响使用相同存储的其他进程应用程序。
 
