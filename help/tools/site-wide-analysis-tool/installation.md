@@ -3,9 +3,9 @@ title: 安装指南
 description: 使用本指南安装 [!DNL Site-Wide Analysis Tool] （适用于您的网站）
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
 feature: Configuration, Install
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 163d12b1f30a3098932c62e11f24784422002c67
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
   >
   >Adobe Commerce在上不受支持 [!DNL Microsoft Windows] 或 [!DNL macOS].
 
-- Adobe Commerce 2.4.1或更高版本
+- Adobe Commerce 2.4.5-p1或更高版本（由于依赖于Service Connector）
 
 - [!DNL Commerce Services Connector extension]
 
