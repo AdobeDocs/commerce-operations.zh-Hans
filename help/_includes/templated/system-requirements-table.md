@@ -1,15 +1,15 @@
 ---
-source-git-commit: 835978334ed5b481744b8eb8d28716e3b41826db
+source-git-commit: 760e03cbeebbd7b457703e224093c233f7b6bab3
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 86%
+source-wordcount: '284'
+ht-degree: 87%
 
 ---
 # 系统要求
 
 >[!NOTE]
 >
-><sup>*</sup>版本2.4.5及更早版本仅支持MySQL 8.0.28及更早版本。
+><sup>*</sup>版本2.4.4和2.4.5仅支持MySQL 8.0.0到8.0.28。
 
 <table style="table-layout:auto">
   <thead>
@@ -278,9 +278,6 @@ ht-degree: 86%
             8.0
       </td>
       <td>
-            8.0
-      </td>
-      <td>
             8.0*
       </td>
       <td>
@@ -290,7 +287,10 @@ ht-degree: 86%
             8.0*
       </td>
       <td>
-            8.0
+            8.0*
+      </td>
+      <td>
+            8.0*
       </td>
       <td>
             8.0*
