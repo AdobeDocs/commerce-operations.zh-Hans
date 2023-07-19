@@ -2,9 +2,9 @@
 title: 设置配置值
 description: 了解如何设置配置值并更改管理员中锁定的值。
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 064be78a16142fc18bf64256eafde4b14c3ad529
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 - 配置路径
 - 要设置特定范围的配置值，您必须知道范围代码。
 
-   要设置默认范围的配置值，您无需执行任何操作。
+  要设置默认范围的配置值，您无需执行任何操作。
 
 ### 查找配置路径
 
@@ -289,3 +289,8 @@ bin/magento config:show --scope=stores --scope-code=default web/unsecure/base_ur
 ```terminal
 web/unsecure/base_url - http://example-for-store.com/
 ```
+
+>[!INFO]
+>
+>范围代码只能包含字母（a-z或A-Z）、数字(0-9)和下划线(_)。 此外，第一个字符必须是字母。 如果在创建新网站或商店视图时使用了大写或驼峰式大小写，则内部匹配将不区分大小写，以通过环境变量覆盖配置设置。 参见 [使用环境变量覆盖配置设置](../reference/override-config-settings.md#environment-variables).
+

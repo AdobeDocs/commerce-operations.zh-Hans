@@ -2,9 +2,9 @@
 title: 在“管理员”中设置多个网站、商店和商店视图
 description: 在Commerce Admin中配置其他网站、商店和商店视图。
 exl-id: e6b4d14d-7504-48f9-a2e1-7e9a1bc76ab9
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 5860f5327003372909c425c13c6d03166288d903
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -172,3 +172,8 @@ Commerce为您提供了将商店代码添加到网站基础URL的选项，这简
    >如果您在云基础架构上为Adobe Commerce设置基本URL，则必须将第一个句点替换为三个短划线。 例如，如果您的基本URL为 `french.branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`，输入 `http://french---branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`
 
 1. 单击 **保存配置**.
+
+
+>[!INFO]
+>
+>网站、商店和商店视图代码只能包含字母（a-z或A-Z）、数字(0-9)和下划线(_)。 此外，第一个字符必须是字母。 如果使用大写或驼峰式大小写，则内部匹配将不区分大小写，以适应通过环境变量覆盖配置设置。 参见 [使用环境变量覆盖配置设置](../reference/override-config-settings.md#environment-variables).
