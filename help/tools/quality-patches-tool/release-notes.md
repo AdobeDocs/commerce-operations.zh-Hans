@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序及其解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 6299aa825c04a5afd31728e763269cee46cfe513
+source-git-commit: 7649f4ffb0a04053d9a674aae7c29eb09ed02006
 workflow-type: tm+mt
-source-wordcount: '13230'
+source-wordcount: '13737'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,32 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由Community为Magento Open Source创建，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.35 {#v1-1-35}
+
+* **ACSD-51899** (对于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.7) — 修复了以下问题：结账配送步骤中的默认配送地址会自动填充为之前选择的店内提货地址。
+* **ACSD-52041** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了错误消息的问题： *[错误] [!DNL Page Builder] 渲染了5秒钟，没有释放锁定。* 保存编辑内容时在Chrome浏览器中显示 [!DNL Page Builder].
+* **ACSD-52095** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了以下问题： `manage_stock` 产品导出后，CSV文件中的值未正确设置为0。
+* **ACSD-51358** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了在删除没有结束日期的计划更新时，会导致为同一实体删除其他计划更新的问题。
+* **ACSD-48070** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了编辑计划更新会触发异常的问题。
+* **ACSD-51890** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了以下问题： [!UICONTROL Submit review] 按钮点击多次，不需要 [!DNL Google reCAPTCHA] v3验证。
+* **ACSD-51984** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复未选中的问题 *[!UICONTROL Use Default Value]* 和 *[!UICONTROL non-default product field]* 不会保存第二个网站、商店和商店视图的值。
+* **ACSD-52398** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复错误 *请求的数量不可用* 在尝试更新店面购物车中捆绑产品的数量时会发生这种情况。
+* **ACSD-52786** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了目录规则条件的问题 *SKU是* 适用于从给定SKU开始的所有产品。
+* **ACSD-52921** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了当购物车中存在缺货的可配置产品时，从GraphQL请求购物车详细信息时出现内部错误的问题。
+* **ACSD-51683** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了使用GraphQL时无法将可自定义选项添加到购物车的问题。
+* **ACSD-52133** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在升级后无法保存客户帐户的问题。
+* **ACSD-52202** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了在订单履行中，当非默认库存数量更改为0数量时，默认库存的可销售数量错误地更改为0的问题。
+* **ACSD-51265** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复的问题 `catalog_product_price` 当系统中捆绑的产品过多时，重新索引性能。
+* **ACSD-52831** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了以下情况下客户无法下可转让报价单的问题 [!DNL Google reCAPTCHA v3 Invisible] 已启用。
+* **ACSD-51845** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了无法通过异步批量REST API更新具有层价格和其他属性集的后续产品的问题。
+* **ACSD-52815** (对于Adobe Commerce和Magento Open Source >=2.3.7 &lt;2.4.7) — 修复了非默认来源的quantity字段输入最多仅支持6位数的问题，不同于默认库存的8位。
+* **ACSD-51149** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了启用了目录权限的计划导入导出使索引器无效，然后通过cron缓存刷新的问题。
+* **ACSD-50815** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了简单产品的小数数量不能用于新的捆绑产品选项的问题。
+* ACSD-47803的更新版本。
+* 更新了ACSD-51892的标题。
+* 更新了ACSD-51379。
+* 更新了ACSD-49970-v2。
 
 ## v1.1.34 {#v1-1-34}
 
