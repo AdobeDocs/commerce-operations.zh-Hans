@@ -1,41 +1,53 @@
 ---
 title: 产品可用性
-description: 了解当前可用的Adobe Commerce功能、如何访问这些功能，并检查它们与特定Adobe Commerce版本的兼容性。
+description: 了解当前支持哪些Adobe Commerce功能，并检查它们与特定Adobe Commerce版本的兼容性。
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
-source-git-commit: dc5a36dc9bc6cee0e9708bb24d3c5ab4b8be5186
+source-git-commit: ca9b786cdaa8b2122d94c24b9edad02d43128c42
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 0%
+source-wordcount: '517'
+ht-degree: 10%
 
 ---
 
 # 产品可用性
 
-下表描述了Adobe Commerce软件的可用性状态以及在何处获得该软件，尤其是对于在常规Adobe Commerce编辑器软件包之外可用的软件。
+下表介绍了Adobe Commerce软件的可用性状态以及获取该可用软件的位置，尤其是对于在常规Adobe Commerce编辑器包之外可用的软件。
 
-| 产品 | 可用性 | 如何获取 |
-|-|-|-|
-| **Adobe Commerce 2.4.7-beta1** | 现在可用 | [Composer](../installation/composer.md) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html) |
-| **Adobe Commerce on cloud infrastructure Tools （又称ECE-Tools）** | 现在可用 | [Composer](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html) |
-| **Adobe Commerce的Adobe I/O事件** | 现在可用 | [Composer](https://developer.adobe.com/commerce/events/get-started/installation/) \| [发行说明](https://developer.adobe.com/commerce/events/get-started/release-notes/) |
-| **AmazonSales Channel** | 现在可用于Adobe Commerce版本2.4.x和2.3.x（美国、加拿大、墨西哥和英国） | [Commerce Marketplace](https://marketplace.magento.com/magento-module-amazon.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-channels/amazon/overview.html) |
-| **Adobe Developer App Builder的API网格** | 现在可用 | [Node.js](https://developer.adobe.com/graphql-mesh-gateway/gateway/getting-started/) \| [发行说明](https://developer.adobe.com/graphql-mesh-gateway/gateway/release-notes/) |
-| **Audience Activation** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/magento-audiences.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-admin/customers/audience-activation.html) |
-| **Adobe Commerce的目录服务** | 现在可用 | [概述](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html?lang=en) |
-| **渠道管理器** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/magento-channel-manager.html) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/intro-to-channel-manager/overview.html) |
-| **Experience Platform连接器** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/magento-experience-platform-connector.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html?lang=en) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/overview.html?lang=en) |
-| **实时搜索** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/magento-live-search.html) \| [开发人员文档](https://developer.adobe.com/commerce/services/live-search/) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/overview.html) |
-| **支付服务** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/magento-payment-services.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/release-notes.html) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) |
-| **产品Recommendations** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/magento-product-recommendations.html) \| [开发人员文档](https://devdocs.magento.com/recommendations/product-recs.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/overview.html) |
-| **PWA Studio** | 现在可用 | [GitHub](https://github.com/magento/pwa-studio) \| [发行说明](https://github.com/magento/pwa-studio/releases) \| [开发人员文档](https://developer.adobe.com/commerce/pwa-studio/) |
-| **快速签出** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/magento-quick-checkout.html) \| [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/quick-checkout/release-notes.html) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-merchant-services/quick-checkout/overview.html) |
-| **SaaS价格索引** | 现在可用 | [Composer](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html#modules) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html) |
-| **适用于Adobe Commerce的Store Fulfillment** | 现在可用 | [Commerce Marketplace](https://marketplace.magento.com/store-fulfillment-magento-walmart.html) \| [用户指南](https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/introduction.html) |
+在产品发布时，服务和扩展会在最新发布的Commerce版本上进行测试。
 
-## 兼容性
+Adobe已对支持的版本进行了全面测试。 客户支持部门可提供支持的版本以寻求帮助。 较旧的版本可能会正常工作，但官方并不支持该版本。
 
-使用本节了解已与核心发布过程分离的Adobe Commerce模块。 这使得Adobe可以更快地向愿意承担较小风险以换取新功能更早访问的商家发布这些模块的迭代。
+## Adobe创作的扩展
 
-下表显示了相对于Adobe Commerce的扩展版本的发行状态。
+这些Adobe Commerce扩展已与核心Adobe Commerce代码库分离。 这使得Adobe可以更快地向愿意承担小风险以换取新功能早期访问的商家发布这些扩展的迭代版本。
 
-{{$include /help/_includes/templated/release/compatibility-mde.md}}
+下表显示了每个扩展相对于Adobe Commerce版本的版本支持。
+
+| **Adobe Commerce版本** | 2.4.7-beta1 | 2.4.6 | 2.4.5 | 2.4.4 | 2.4.3 | |
+|-|-|-|-|-|-|-|
+| _Adobe Commerce的Adobe I/O事件_ | 1.2.2 | 1.2.2 | 1.2.2 | 1.2.2 | - | [Composer](https://developer.adobe.com/commerce/events/get-started/installation/) <br/>[发行说明](https://developer.adobe.com/commerce/events/get-started/release-notes/) |
+| _B2B_ | 1.3.5 | 1.4.0 | 1.3.4 | 1.3.3 | 1.3.2 | [Composer](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html) |
+| _渠道管理器_ | - | 2.0.0 | 1.0.0+ | 1.0.0+ | 1.0.0+ | [市场](https://commercemarketplace.adobe.com/magento-channel-manager.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html) |
+| _AmazonSales Channel_ | - | 4.1.0+ | 4.3.0+ | 4.3.0+ | 4.3.0+ | [市场](https://commercemarketplace.adobe.com/magento-module-amazon.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html) |
+| _Experience Platform连接器_ | 3.0.0-beta1 | 1.0.0+ | 1.0.0+ | 1.0.0+ | 1.0.0+ | [市场](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html)<br/>[发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html) |
+| _适用于Adobe Commerce的Store Fulfillment_ | - | 1.4.0 | 1.2.0+ | 1.2.0+ | 1.2.0+ | [市场](https://commercemarketplace.adobe.com/store-fulfillment-magento-walmart.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html) |
+
+## Commerce服务
+
+[Commerce服务](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/home.html) 是一套Adobe托管功能，可与您的Commerce实例一起提供强大的功能和快速的响应时间。
+
+建议商家使用最新版本的服务，以确保最高的稳定性和功能。 本文档介绍了当前发布的版本。
+
+* Adobe Commerce服务当前与Commerce 2.4.4及更高版本兼容。 建议商家使用最新版本的服务。
+* 认为服务与以前版本的Commerce 2.4.x兼容，但官方不支持这些服务。
+* 服务与Commerce 2.3.x不兼容，但产品Recommendations 3.3.7及更低版本除外。
+
+下表显示了相对于Adobe Commerce版本的每个服务的版本支持。
+
+| **Adobe Commerce版本** | 2.4.7-beta1 | 2.4.6 | 2.4.5 | 2.4.4 | 2.4.3 | |
+|-|-|-|-|-|-|-|
+| _Adobe Commerce的目录服务_ | 1.9 | 1.9 | 1.9 | 1.9 | - | [概述](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html) |
+| _实时搜索_ | 3.01 | 3.01 | 3.01 | 3.01 | - | [市场](https://commercemarketplace.adobe.com/magento-live-search.html)<br/>[发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html) |
+| _支付服务_ | 2.10 | 2.10 | 2.10 | 2.10 | - | [市场](https://commercemarketplace.adobe.com/magento-payment-services.html)<br/> [发行说明](https://commercemarketplace.adobe.com/magento-payment-services.html) |
+| _产品Recommendations_ | 5.0 | 5.0 | 5.0 | 5.0 | - | [市场](https://commercemarketplace.adobe.com/magento-product-recommendations.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) |
+| _快速签出_ | - | 1.0.0+ | 1.2.0+ | 1.0.0+ | 1.2.0+ | [市场](https://commercemarketplace.adobe.com/magento-quick-checkout.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) |
