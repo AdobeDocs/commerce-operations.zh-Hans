@@ -3,9 +3,9 @@ title: 修改docroot以提高安全性
 description: 防止对Adobe Commerce或Magento Open Source本地文件系统的未经授权的基于浏览器的访问。
 feature: Install, Security
 exl-id: aabe148d-00c8-4011-a629-aa5abfa6c682
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 32dd5005422b98923ce1bdf6c3fb3f55c2ec15bd
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ ht-degree: 0%
 
 本主题介绍如何更改现有实例上的Apache docroot以从提供文件 `pub/` 目录，这样更加安全。
 
-## 关于nginx的注释
+## 关于nginx的说明
 
 如果您使用 [恩金克斯](../prerequisites/web-server/nginx.md) 和 [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) 文件包含在安装目录中，您可能已经从 `pub/` 目录。
 
-在用于定义站点的服务器块中时， `nginx.conf.sample` 配置会覆盖服务器的docroot设置，以便从提供文件 `pub/` 目录。 例如，请参见以下配置中的最后一行：
+在用于定义站点的服务器块中时， `nginx.conf.sample` 配置将覆盖服务器的docroot设置，以便从提供文件 `pub/` 目录。 例如，请参见以下配置中的最后一行：
 
 ```conf
 # /etc/nginx/sites-available/magento
@@ -49,25 +49,25 @@ server {
 
 ## 开始之前
 
-要完成本教程，您需要对上运行的工作安装的访问权限 [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) 栈叠：
+要完成本教程，您需要访问在LAMP栈栈上运行的工作安装：
 
 - Linux
 - Apache (2.4+)
 - MySQL （5.7及更高版本）
 - PHP (7.4)
 - Elasticsearch(7.x)或OpenSearch (1.2)
-- Adobe Commerce或Magento Open Source(2.4+)
+- Adobe Commerce或Magento Open Source (2.4+)
 
 >[!NOTE]
 >
->请参阅 [先决条件](../prerequisites/overview.md) 和 [安装指南](../overview.md) 了解更多信息。
+>请参阅 [先决条件](../prerequisites/overview.md) 和 [安装指南](../overview.md) 以了解更多信息。
 
 ## 1.编辑服务器配置
 
-虚拟主机文件的名称和位置取决于您运行的Apache版本。 此示例显示Apache v2.4上虚拟主机文件的名称和位置。
+虚拟主机文件的名称和位置取决于您运行的Apache版本。 此示例显示了Apache v2.4上虚拟主机文件的名称和位置。
 
 1. 登录到应用程序服务器。
-1. 编辑虚拟主机文件：
+1. 编辑您的虚拟主机文件：
 
    ```bash
    vim /etc/apache2/sites-available/000-default.conf
@@ -98,11 +98,11 @@ server {
 
 ## 2.更新您的基本URL
 
-如果在安装应用程序时，将目录名称附加到服务器的主机名或IP地址以创建基本URL(例如 `http://192.168.33.10/magento2`)，您需要删除它。
+如果在服务器的主机名或IP地址后附加目录名称，则可在安装应用程序时创建基本URL(例如 `http://192.168.33.10/magento2`)，您需要将其删除。
 
 >[!NOTE]
 >
->Replace `192.168.33.10` 使用服务器的主机名。
+>替换 `192.168.33.10` 使用服务器的主机名。
 
 1. 登录到数据库：
 
@@ -132,13 +132,13 @@ server {
 ]
 ```
 
-请参阅 [env.php参考](../../configuration/reference/config-reference-envphp.md) 了解更多信息。
+请参阅 [env.php参考](../../configuration/reference/config-reference-envphp.md) 以了解更多信息。
 
 ## 4.切换模式
 
-[应用程序模式](../../configuration/bootstrap/application-modes.md)，其中包括 `production` 和 `developer`，旨在提高安全性并使开发更轻松。 顾名思义，您应切换到 `developer` 扩展或自定义应用程序并切换到的模式 `production` 模式。
+[应用程序模式](../../configuration/bootstrap/application-modes.md)，其中包括 `production` 和 `developer`，旨在提高安全性并使开发更轻松。 根据名字的指示，您应切换到 `developer` 扩展或自定义应用程序时模式并切换到 `production` 模式。
 
-在模式之间切换是验证服务器配置是否正常工作的重要步骤。 您可以使用CLI工具在模式之间切换：
+在模式之间切换是验证服务器配置是否正常运行的重要步骤。 您可以使用CLI工具在模式之间切换：
 
 1. 转到安装目录。
 1. 切换到 `production` 模式。
@@ -168,7 +168,7 @@ server {
 
 在Web浏览器中转到店面以验证一切正常。
 
-1. 打开Web浏览器，然后在地址栏中输入服务器的主机名或IP地址。 例如， `http://192.168.33.10`.
+1. 打开Web浏览器，并在地址栏中输入服务器的主机名或IP地址。 例如， `http://192.168.33.10`.
 
    下图显示了一个店面页面的示例。 如果它显示如下，则表示您的安装成功！
 
