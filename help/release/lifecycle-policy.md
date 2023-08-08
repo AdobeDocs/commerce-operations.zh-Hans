@@ -2,7 +2,7 @@
 title: 软件生命周期政策
 description: 了解Adobe Commerce版本的软件支持终止关键日期。
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
-source-git-commit: f5ab11a43bb90fa96c20cea8d8c85eb2a4c98826
+source-git-commit: c1f490d98dd74bd5f33f35c5ff7bedeeb0e6f7e4
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 12%
@@ -23,7 +23,7 @@ ht-degree: 12%
 
 | 版本 | 正式发布 | 软件支持终止<sup>1</sup> | 依赖的PHP版本 |
 |----------------------|----------------------|-------------------------------------|-----------------------|
-| Adobe Commerce 2.4.7 | 2024年4月19日 | 2027年4月19日 | 8.2和8.3 |
+| Adobe Commerce 2.4.7 | 2024年4月9日 | 2027年4月9日 | 8.2和8.3 |
 | Adobe Commerce 2.4.6 | 2023年3月14日 | 2026年3月14日 | 8.1和8.2 |
 | Adobe Commerce 2.4.5 | 2022年8月9日 | 2025年8月9日 | 8.1 |
 | Adobe Commerce 2.4.4 | 2022年4月12日 | 2025年4月24日 | 8.1 |
