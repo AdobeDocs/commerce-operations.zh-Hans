@@ -1,15 +1,15 @@
 ---
-source-git-commit: 14f4346f4b0bfd1fa0fa44bd62c7d3611a7ffdea
+source-git-commit: 0ef5d741cf718a36f11850e3dd8a81e1f09f5bc2
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 13%
+source-wordcount: '590'
+ht-degree: 12%
 
 ---
 # 已发布版本
 
 ## 2.4.7
 
-尚未设置对2.4.7版本行支持的结束日期。
+对2.4.7版本行的支持将于2027年4月19日终止。
 
 <table>
   <thead>
@@ -30,7 +30,7 @@ ht-degree: 13%
 
 ## 2.4.6
 
-对2.4.6版本线的支持将于2026年3月14日终止。
+对2.4.6版本行的支持将于2026年3月14日终止。
 
 <table>
   <thead>
@@ -40,6 +40,12 @@ ht-degree: 13%
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p2.html">2.4.6 - p2</a>
+        </td>
+        <td>2023年8月8日</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p1.html">2.4.6-p1</a>
@@ -69,13 +75,19 @@ ht-degree: 13%
   <tbody>
     <tr>
         <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p4.html">2.4.5-p4</a>
+        </td>
+        <td>2023年8月8日</td>
+    </tr>
+    <tr>
+        <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p3.html">2.4.5-p3</a>
         </td>
         <td>2023年6月13日</td>
     </tr>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p2.html">2.4.5-p2</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p2.html">2.4.5 - p2</a>
         </td>
         <td>2023年3月14日</td>
     </tr>
@@ -96,7 +108,7 @@ ht-degree: 13%
 
 ## 2.4.4
 
-对2.4.4版本线的支持将于2025年4月12日终止。
+对2.4.4版本行的支持将于2025年4月12日终止。
 
 <table>
   <thead>
@@ -106,6 +118,12 @@ ht-degree: 13%
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p5.html">2.4.4 - p5</a>
+        </td>
+        <td>2023年8月8日</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p4.html">2.4.4-p4</a>
@@ -120,7 +138,7 @@ ht-degree: 13%
     </tr>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p2.html">2.4.4-p2</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p2.html">2.4.4 - p2</a>
         </td>
         <td>2022年10月11日</td>
     </tr>
@@ -177,7 +195,7 @@ ht-degree: 13%
     </tr>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-2-p2.html">2.4.2-p2</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-2-p2.html">2.4.2 - p2</a>
         </td>
         <td>2021年8月10日</td>
     </tr>
@@ -234,7 +252,7 @@ ht-degree: 13%
   <tbody>
     <tr>
         <td>
-          <a href="https://devdocs.magento.com/guides/v2.3/release-notes/2-3-7-p4.html">2.3.7 - p4</a>
+          <a href="https://devdocs.magento.com/guides/v2.3/release-notes/2-3-7-p4.html">2.3.7-p4</a>
         </td>
         <td>2022年8月9日</td>
     </tr>
@@ -276,7 +294,7 @@ ht-degree: 13%
     </tr>
     <tr>
         <td>
-          2.3.5-p2
+          2.3.5 - p2
         </td>
         <td>2020年7月28日</td>
     </tr>
@@ -288,7 +306,7 @@ ht-degree: 13%
     </tr>
     <tr>
         <td>
-          2.3.4-p2
+          2.3.4 - p2
         </td>
         <td>2020年4月28日</td>
     </tr>
@@ -320,7 +338,7 @@ ht-degree: 13%
         <td>
           <a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-3-commerce.html">2.3.3</a>
         </td>
-        <td>2019年10月8日</td>
+        <td>2019年10月8</td>
     </tr>
     <tr>
         <td>
@@ -365,7 +383,7 @@ ht-degree: 13%
         <td>
           2.2.10
         </td>
-        <td>2019年10月8日</td>
+        <td>2019年10月8</td>
     </tr>
     <tr>
         <td>
@@ -389,7 +407,7 @@ ht-degree: 13%
         <td>
           2.2.6
         </td>
-        <td>2018年9月18日</td>
+        <td>2018年9月18</td>
     </tr>
     <tr>
         <td>
@@ -419,7 +437,7 @@ ht-degree: 13%
         <td>
           2.2.1
         </td>
-        <td>2017年11月7日</td>
+        <td>2017年11</td>
     </tr>
     <tr>
         <td>
@@ -464,7 +482,7 @@ ht-degree: 13%
         <td>
           2.1.15
         </td>
-        <td>2018年9月18日</td>
+        <td>2018年9月18</td>
     </tr>
     <tr>
         <td>
@@ -494,7 +512,7 @@ ht-degree: 13%
         <td>
           2.1.10
         </td>
-        <td>2017年11月7日</td>
+        <td>2017年11</td>
     </tr>
     <tr>
         <td>
@@ -530,7 +548,7 @@ ht-degree: 13%
         <td>
           2.1.4
         </td>
-        <td>2017年2月7日</td>
+        <td>2017年2</td>
     </tr>
     <tr>
         <td>
@@ -554,7 +572,7 @@ ht-degree: 13%
         <td>
           2.1.0
         </td>
-        <td>二零一六年六月二十三日</td>
+        <td>2016年6月23</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>
@@ -581,7 +599,7 @@ ht-degree: 13%
         <td>
           2.0.17
         </td>
-        <td>2017年11月7日</td>
+        <td>2017年11</td>
     </tr>
     <tr>
         <td>
@@ -611,7 +629,7 @@ ht-degree: 13%
         <td>
           2.0.12
         </td>
-        <td>2017年2月7日</td>
+        <td>2017年2</td>
     </tr>
     <tr>
         <td>
@@ -635,7 +653,7 @@ ht-degree: 13%
         <td>
           2.0.8
         </td>
-        <td>二零一六年七月十九日</td>
+        <td>2016年7月19</td>
     </tr>
     <tr>
         <td>
@@ -647,7 +665,7 @@ ht-degree: 13%
         <td>
           2.0.6
         </td>
-        <td>2016年5月17日</td>
+        <td>2016年5月17</td>
     </tr>
     <tr>
         <td>
@@ -665,7 +683,7 @@ ht-degree: 13%
         <td>
           2.0.3
         </td>
-        <td>2016年3月30日</td>
+        <td>2016年3月30</td>
     </tr>
     <tr>
         <td>
@@ -683,7 +701,7 @@ ht-degree: 13%
         <td>
           2.0.0
         </td>
-        <td>二零一五年十一月十七日</td>
+        <td>2015年117月</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table> <!-- minor_releases -->
