@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: aa52895b45363ca0fb3585f603bfe66a73803427
+source-git-commit: da0c85a9f1b0ac0a3176ca5f6ef5904834e8d37e
 workflow-type: tm+mt
-source-wordcount: '13735'
+source-wordcount: '13965'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,19 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.36 {#v1-1-36}
+
+* **ACSD-53239** (对于Adobe Commerce和Magento Open Source >=2.4.3 &lt; 2.4.6) — 修复了清单索引器在“按计划更新”模式下清理所有缓存的问题。
+* **ACSD-50887** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了产品属性的问题 *[!UICONTROL Use in Search Results Layered Navigation]* 可以设置为 *是* 不使用 *[!UICONTROL Use in search]* 选项设置为 *是*.
+* **ACSD-51846** (对于Adobe Commerce和Magento Open Source>=2.4.3-p2 &lt;2.4.6) — 修复 *内部错误* 由于未验证所有级别的REST API有效负载而发生的问题。
+* **ACSD-52906** (对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了为属于同一客户区段的已登录客户错误设置XMagento差异Cookie而导致某些页面缓存不正确的问题。
+* **ACSD-52736** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了以下问题： *购物车价格规则* 可配置产品数量的要求无法按预期工作。
+* **ACSD-47875** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了以下问题：对于具有库存管理的特定商店视图范围，管理员用户无法从管理员将产品添加到客户购物车。
+* **ACSD-53176** (对于Adobe Commerce >=2.3.7 &lt;2.4.5) — 修复了以下问题： *相关产品规则* 替换为 *是其中之一* 条件与产品不匹配。
+* **ACSD-51666** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复错误 *会话已过期，请重新登录。* 这种情况会在客户尝试登录后发生。
+* 添加了MDVA-39305-v2的新版本。
+* 更新了ACSD-19640的要求。
 
 ## v1.1.35 {#v1-1-35}
 
