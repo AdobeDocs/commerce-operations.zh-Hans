@@ -33,7 +33,7 @@ ht-degree: 0%
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html">升级兼容性工具PhpStorm插件</a> （视频）</li>
             <li><a href="../upgrade-compatibility-tool/overview.md">升级兼容性工具</a></li>
             <li><a href="https://magentocommeng.slack.com/archives/C019Y143U9F">#UpgradeCompatibilityToolSlack渠道</a></li>
-            <li><a href="../../tools/quality-patches-tool/usage.md">质量修补工具</a></li>
+            <li><a href="../../tools/quality-patches-tool/usage.md">Quality Patches工具</a></li>
           </ul>
       </td>
     </tr>
@@ -43,13 +43,13 @@ ht-degree: 0%
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-eos-policy-faq.html">Adobe Commerce软件终止支持常见问题解答</a></li>
             <li><a href="https://marketplacesupport.magento.com/hc/en-us/articles/4413722432653">Commerce Marketplace策略</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-release-strategy-lifecycle-policy.html">有关新的Adobe Commerce发布策略、更新的生命周期策略和扩展支持的常见问题解答</a></li>
-            <li><a href="https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf">生命周期策略</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-release-strategy-lifecycle-policy.html">新Adobe Commerce发布策略、更新的生命周期策略和扩展支持的常见问题解答</a></li>
+            <li><a href="https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf">生命周期政策</a></li>
             <li><a href="../../release/schedule.md">发布计划</a></li>
             <li><a href="../../release/versioning-policy.md">版本类型</a></li>
           </ul>
         </td>
-      <td><strong>功能和独立服务</strong>
+      <td><strong>功能和独立的服务</strong>
         <p>探索作为Adobe Commerce和Magento Open Source扩展提供的创新Commerce服务以及获取这些服务的位置。</p>
           <ul>
             <li><a href="https://marketplace.magento.com/">Commerce Marketplace</a></li>
@@ -61,10 +61,10 @@ ht-degree: 0%
     </tr>
     <tr>
       <td><strong>升级资源</strong>
-        <p>确保您的店面安全和高效运行。 通过查看Adobe丰富的技术文档，为您的Adobe Commerce或Magento Open Source升级做好准备。</p>
+        <p>确保店面安全和高效运行。 通过查看Adobe丰富的技术文档，为您的Adobe Commerce或Magento Open Source升级做好准备。</p>
           <ul>
             <li><a href="recommended-upgrade-paths.md">建议的升级路径</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4技术升级研讨会记录</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4技术升级讲习班录音</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cannot-access-the-latest-magento-commerce-pre-release.html">访问预发行版</a></li>
             <li><a href="../../release/beta.md">Beta版概述</a></li>
             <li><a href="https://developer.adobe.com/commerce/contributor/guides/code-contributions/backward-compatibility-policy/">向后不兼容的开发</a></li>
