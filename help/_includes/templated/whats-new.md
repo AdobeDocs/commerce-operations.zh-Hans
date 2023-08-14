@@ -1,7 +1,7 @@
 ---
-source-git-commit: e3d65a1dcb377d9bed9b27d16e057cfbb1522644
+source-git-commit: 34a0a124aeacce6cc905f979cf3f18cb2405f76e
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## 新增功能
 
 了解新文档和现有文档的重要更新。
+
+### 2023年8月10日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已发布 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">发行说明</a> 适用于1.1.36 Quality Patches Tool (QPT)软件包版本。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/778890d5840669df958e84381c2aade70a492454">778890</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2023年8月8日
 
@@ -22,6 +42,18 @@ ht-degree: 0%
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><p>已更新 <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">已发布版本</a> 2023年8月的安全补丁。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c9abed3c6ca156cdc19e7231f97cf2a8bd8ab100">c9abed</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>在Adobe Commerce 2.4.4-p4、2.4.4-p5、2.4.5-p3、2.4.5-p4、2.4.6-p1和2.4.6-p2的发行说明中添加了有关Adobe Commerce 2023年8月8日安全修补程序的信息。  请参阅 <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Adobe Commerce和Magento Open Source的发行说明</a>.</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/623ada901bad9f766451d9c9166e82f1cee85c0d">623ada</a> （提交）</td>
+    </tr>
     <tr>
       <td><p>添加了Adobe Commerce 2.4.6-p2、2.4.5-p4和2.4.4-p5的发行说明。 请参阅 <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Adobe Commerce和Magento Open Source的发行说明</a>.</p>
 </td>
@@ -39,6 +71,26 @@ ht-degree: 0%
 </td>
       <td>major-update</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7373980a0648be5e0f7dc4a307074d934f646b24">737398</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2023年8月7日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了关于以下内容的信息 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/security.html">端点检测和响应</a> 在云基础架构上。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fd3b93aaa79e84d356217b6adfe7181895e84f07">fd3b93</a> （提交）</td>
     </tr>
   </tbody>
 </table><!-- date_group -->
