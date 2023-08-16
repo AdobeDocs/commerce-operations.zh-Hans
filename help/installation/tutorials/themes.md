@@ -22,9 +22,9 @@ ht-degree: 0%
 
 本节讨论如何卸载一个或多个主题，可以选择从文件系统卸载主题的代码。 您可以先创建备份，以便以后恢复数据。
 
-此命令卸载 *仅限* 中指定的主题 `composer.json`；换言之，作为编辑器包提供的主题。 如果您的主题不是编辑器包，则必须通过以下方式手动卸载它：
+此命令卸载 *仅限* 中指定的主题 `composer.json`；换句话说，作为编辑器包提供的主题。 如果您的主题不是编辑器包，则必须通过以下方式手动卸载它：
 
-* 更新 `parent` 中的节点信息 `theme.xml` 以移除对主题的引用。
+* 正在更新 `parent` 中的节点信息 `theme.xml` 移除对主题的引用。
 * 正在从文件系统删除主题代码。
 
   [有关主题继承的更多信息](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
@@ -41,24 +41,24 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] {theme p
 
 * `{theme path}` 是主题的相对路径，从区域名称开始。 例如，Adobe Commerce和Magento Open Source提供的空白主题的路径为 `frontend/Magento/blank`.
 * `--backup-code` 备份代码库，如下面的段落所述。
-* `--clear-static-content` 已生成清理 [静态视图文件](../../configuration/cli/static-view-file-deployment.md)，这是正确显示静态视图文件所必需的。
+* `--clear-static-content` 已生成的清理 [静态视图文件](../../configuration/cli/static-view-file-deployment.md)，这是正确显示静态视图文件所必需的。
 
 该命令执行以下任务：
 
 1. 验证指定的主题路径是否存在；如果不存在，命令将终止。
-1. 验证主题是否为Composer包；如果不是，命令将终止。
+1. 验证主题是否为Composer包；如果不是，该命令将终止。
 1. 检查依赖关系，如果存在任何未满足的依赖关系，则终止该命令。
 
    要解决此问题，您可以同时卸载所有主题，也可以先根据主题卸载。
 
-1. 验证主题是否未被使用；如果正在使用它，则命令终止。
+1. 验证该主题是否未被使用；如果正在使用它，则命令终止。
 1. 验证主题是否不是虚拟主题的基础；如果它是虚拟主题的基础，则命令终止。
 1. 将商店置于维护模式。
-1. 如果 `--backup-code` 指定时，备份代码库，但不包括 `pub/static`， `pub/media`、和 `var` 目录。
+1. 如果 `--backup-code` 指定，备份代码库，不包括 `pub/static`， `pub/media`、和 `var` 目录。
 
    备份文件名为 `var/backups/<timestamp>_filesystem.tgz`
 
-   您可以随时使用恢复备份 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
+   您可以随时使用 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
 
 1. 从删除主题 `theme` 数据库表。
 1. 使用以下方式从代码库中移除主题 `composer remove`.
@@ -79,7 +79,7 @@ Cannot uninstall frontend/ExampleCorp/SampleModuleTheme because the following pa
 bin/magento theme:uninstall frontend/ExampleCorp/SampleModuleTheme frontend/ExampleCorp/SampleModuleThemeDepend --backup-code
 ```
 
-显示类似于以下内容的消息：
+与以下内容类似的消息：
 
 ```terminal
 Code backup is starting...

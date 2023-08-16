@@ -17,16 +17,16 @@ Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 运�
 - 清除缓存
 - 管理索引，包括重新编制索引
 - 创建翻译词典和翻译包
-- 为插件生成不存在的类（如工厂和拦截器），为对象管理器生成依赖项注入配置
+- 为插件生成不存在的类（如工厂和侦听器），为对象管理器生成依赖项注入配置
 - 部署静态视图文件
-- 从更少资源创建CSS
+- 从更少内容创建CSS
 
 其他优势包括：
 
 - 单个命令(`<magento_root>/bin/magento list`)列出了所有可用的安装和配置命令。
 - 基于Symfony的一致用户界面。
-- CLI可扩展，因此第三方开发人员可以“插入”到其中。 这样做还有一个好处，即消除了用户的学习曲线。
-- 未显示已禁用模块的命令。
+- CLI是可扩展的，因此第三方开发人员可以“插入”到其中。 这还有消除用户学习曲线的额外好处。
+- 禁用模块的命令不显示。
 
 本主题讨论如何使用CLI配置Adobe Commerce和Magento Open Source软件。 有关安装Commerce的信息，请参阅 [安装流程](../../installation/overview.md) 在 _安装指南_.
 
@@ -35,8 +35,8 @@ Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 运�
 在开始使用CLI之前，请确保：
 
 1. 您的系统符合中讨论的要求 [系统要求](../../installation/system-requirements.md) 在 _安装指南_.
-1. 您已完成中讨论的所有先决条件任务 [先决条件](../../installation/prerequisites/overview.md) 在 _安装指南_.
-1. 登录到Commerce服务器后，切换到有权写入Commerce文件系统的用户。 参见 [切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md) 在 _安装指南_.
+1. 您已完成中讨论的所有先决任务 [先决条件](../../installation/prerequisites/overview.md) 在 _安装指南_.
+1. 登录到Commerce服务器后，切换到有权写入Commerce文件系统的用户。 请参阅 [切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md) 在 _安装指南_.
 
 ## 正在运行命令
 
@@ -46,7 +46,7 @@ Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 运�
 su <file system owner> -s /bin/bash -c <command>
 ```
 
-如果文件系统所有者不允许登录，您可以使用以下选项：
+如果文件系统所有者不允许登录，您可以使用以下方法：
 
 ```bash
 sudo -u <file system owner> <command>

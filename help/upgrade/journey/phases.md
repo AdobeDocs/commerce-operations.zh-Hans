@@ -1,6 +1,6 @@
 ---
 title: 升级历程阶段
-description: 了解Adobe Commerce和Magento Open Source项目的升级历程的各个阶段。
+description: 了解Adobe Commerce和Magento Open Source项目升级历程的各个阶段。
 exl-id: c0e39102-5f37-47cb-9792-9eeb50707ec8
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt

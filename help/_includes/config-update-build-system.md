@@ -16,7 +16,7 @@ ht-degree: 0%
    cd <Magento root dir>
    ```
 
-1. 将更改提取到 `app/etc/config.php` 源代码管理中的。
+1. 将更改提取到 `app/etc/config.php` 源控件中的。
 
    ```bash
    git pull mconfig m2.2_deploy
@@ -34,7 +34,7 @@ ht-degree: 0%
    bin/magento setup:static-content:deploy -f
    ```
 
-1. 将更改签入源代码管理。
+1. 检查源代码控制中的更改。
 
    ```bash
    git add -A && git commit -m "Updated files on build system" && git push mconfig m2.2_deploy

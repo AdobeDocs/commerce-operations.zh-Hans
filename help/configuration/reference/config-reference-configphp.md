@@ -5,7 +5,7 @@ exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 | 名称 | 描述 |
 | --------- | -------------------|
 | `i18n` | 所有内联翻译数据。 不支持读取此部分。 |
-| `modules` | 已启用和已禁用的模块的列表。 |
+| `modules` | 已启用和已禁用的模块列表。 |
 | `scopes` | 包含相关信息的商店、商店组和网站的列表。 |
 | `system` | 静态内容部署所需的系统配置。 |
 | `themes` | 已安装主题的配置。 |
@@ -34,7 +34,7 @@ ht-degree: 0%
 ]
 ```
 
-详细了解 [模块].
+了解有关 [模块].
 
 ## 范围
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 ]
 ```
 
-详细了解 [商业范围][scopes].
+了解有关 [商业范围][scopes].
 
 ## 系统
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 ]
 ```
 
-详细了解 [系统特定的配置](config-reference-sens.md).
+了解有关 [特定于系统的配置](config-reference-sens.md).
 
 ## 主题
 
@@ -120,7 +120,7 @@ ht-degree: 0%
 ]
 ```
 
-详细了解 [主题].
+了解有关 [主题].
 
 <!-- link definitions -->
 

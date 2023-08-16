@@ -7,10 +7,10 @@ ht-degree: 0%
 ---
 # 敏感数据
 
-Adobe Commerce和Magento Open Source使用您的加密密钥加密以下内容：
+Adobe Commerce和Magento Open Source使用您的加密密钥来加密以下内容：
 
 * 信用卡信息
-* 管理员配置中指定的用户名和密码（例如，登录到付款网关）
+* 在管理员配置中指定的用户名和密码（例如，登录到付款网关）
 * 通过网络发送的验证码值
 
 Adobe Commerce和Magento Open Source do *非* 加密：

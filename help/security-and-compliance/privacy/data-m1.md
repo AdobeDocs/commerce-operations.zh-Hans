@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本主题是帮助Adobe Commerce和Magento Open Source商家及开发人员为遵守隐私法规做准备的一系列主题中的一个。 请咨询您的法律顾问，以确定您的企业是否以及如何遵守任何法律义务。
+>这是一系列主题中的一个，旨在帮助Adobe Commerce和Magento Open Source商家及开发人员为遵守隐私法规做好准备。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
 
 在开发隐私法规的合规性程序时，请参考以下数据流图和数据库实体映射，例如：
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 ### 前端数据访问点
 
-客户登录并查看多个不同的页面或签出时，Commerce会加载客户信息。
+客户登录并查看多个不同的页面或结帐时，Commerce会加载客户信息。
 
 ![前端数据访问点](../../assets/security-compliance/frontend-data-access-points.svg)
 
 ### 后端数据入口点
 
-商家可以输入管理员提供的客户、地址和付款信息，以创建客户或订单。
+商家可以从管理员输入客户、地址和付款信息，以创建客户或订单。
 
 ![后端数据入口点](../../assets/security-compliance/backend-data-entry-points.svg)
 
@@ -50,15 +50,15 @@ ht-degree: 0%
 
 ## 数据库实体
 
-Magento1将客户信息存储在客户、销售和其他数据库表中。
+Magento1将客户信息存储在customer 、 sales和其他数据库表中。
 
 ### 客户数据
 
-Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity` 表格。 这两个表都有多个引用表，这些引用表可以包含自定义客户属性。
+Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity` 表格。 这两个表都有多个引用表，它们可以包含自定义客户属性。
 
-#### `customer_entity` 和引用表
+#### `customer_entity` 和参考表
 
-中的以下列 `customer_entity`表包含客户信息：
+中的以下列 `customer_entity`该表包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -68,31 +68,31 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 
 | 表 | 列 | 数据类型 |
 | --- | --- | --- |
-| `customer_entity_datetime` | `value` | datetime |
+| `customer_entity_datetime` | `value` | 日期时间 |
 | `customer_entity_decimal` | `value` | decimal(12,4) |
 | `customer_entity_int` | `value` | int(11) |
-| `customer_entity_text` | `value` | text |
+| `customer_entity_text` | `value` | 文本 |
 | `customer_entity_varchar` | `value` | varchar(255) |
 
-#### `customer_address_entity` 和引用表
+#### `customer_address_entity` 和参考表
 
 下表参考 `customer_address_entity` 并且可以包含自定义客户属性：
 
 | 表 | 列 | 数据类型 |
 | --- | --- | --- |
-| `customer_address_entity_datetime` | `value` | datetime |
+| `customer_address_entity_datetime` | `value` | 日期时间 |
 | `customer_address_entity_decimal` | `value` | decimal(12,4) |
 | `customer_address_entity_int` | `value` | int(11) |
-| `customer_address_entity_text` | `value` | text |
+| `customer_address_entity_text` | `value` | 文本 |
 | `customer_address_entity_varchar` | `value` | varchar(255) |
 
 ### 订单数据
 
-此 `sales_flat_order` 和相关表格包含客户名称、帐单和运送地址及相关信息。
+此 `sales_flat_order` 和相关表包含客户名称、账单和运送地址以及相关信息。
 
 #### `sales_flat_order` 表
 
-中的以下列 `sales_order` 表包含客户信息：
+中的以下列 `sales_order` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -127,11 +127,11 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `suffix` | varchar(255) |
 | `middlename` | varchar(255) |
 | `company` | varchar(255) |
-| `vat_id` | text |
+| `vat_id` | 文本 |
 
 #### `sales_flat_order_grid` 表
 
-中的以下列 `sales_flat_order_grid` 表包含客户信息：
+中的以下列 `sales_flat_order_grid` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -141,7 +141,7 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 
 #### `sales_flat_order_payment` 表
 
-中的以下列 `sales_flat_order_payment` 表包含客户信息：
+中的以下列 `sales_flat_order_payment` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -161,7 +161,7 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 
 #### `sales_flat_quote` 表
 
-中的以下列 `sales_flat_quote` 表包含客户信息：
+中的以下列 `sales_flat_quote` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -174,14 +174,14 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `customer_middlename` | varchar(40) |
 | `customer_lastname` | varchar(255) |
 | `customer_suffix` | varchar(40) |
-| `customer_dob` | datetime |
+| `customer_dob` | 日期时间 |
 | `customer_note` | varchar(255) |
 | `remote_ip` | varchar(255) |
 | `customer_gender` | varchar(255) |
 
 #### `sales_flat_quote_address` 表
 
-中的以下列 `sales_flat_quote_address` 表包含客户信息：
+中的以下列 `sales_flat_quote_address` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -257,7 +257,7 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `enterprise_giftregistry_person` | `email` | varchar(150) |
 | `enterprise_giftregistry_person` | `firstname` | varchar(100) |
 | `enterprise_giftregistry_person` | `lastname` | varchar(100) |
-| `enterprise_giftregistry_person` | `middlename` | text |
+| `enterprise_giftregistry_person` | `middlename` | 文本 |
 | `enterprise_invitation` | `customer_id` | int(10) |
 | `enterprise_invitation` | `email` | varchar(255) |
 | `enterprise_invitation` | `referral_id` | int(10) |
@@ -271,7 +271,7 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `newsletter_subscriber` | `customer_id` | int(10) |
 | `newsletter_subscriber` | `subscriber_email` | varchar(150) |
 | `persistent_session` | `customer_id` | int(10) |
-| `persistent_session` | `info` | text |
+| `persistent_session` | `info` | 文本 |
 | `poll_vote` | `customer_id` | int(10) |
 | `poll_vote` | `ip_address` | varbinary(16) |
 | `rating_option_vote` | `customer_id` | int(10) |

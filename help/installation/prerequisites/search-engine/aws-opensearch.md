@@ -19,21 +19,21 @@ Adobe Commerce和Magento Open Source2.4.5支持使用Amazon OpenSearch Service�
 您必须首先在AWS中建立OpenSearch实例。
 读取 [创建和管理Amazon OpenSearch服务域](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html) 以获取详细说明。
 
-## 将数据发送到AWS OpenSearch
+## 将数据获取到AWS OpenSearch
 
-在AWS上完成所有准备工作后，便应该使用数据填充该功能。
+在AWS上完成所有准备工作后，便应该使用数据来填充该数据。
 
 对于较小的安装，我们建议您直接在AWS实例上创建索引，原因如下：
 
 * 重新创建索引是一项快速操作。
-* 旧实例和AWS实例之间可能存在版本不兼容，可直接在AWS实例上构建来避免这些不兼容情况。
+* 旧实例和AWS实例之间可能存在版本不兼容性，可以通过直接在AWS实例上构建来避免这些情况。
 
-大型安装可能需要考虑将其数据索引从现有实例迁移到AWS。 虽然这可以减少停机时间，但由于旧Elasticsearch服务器和AWS之间的版本不同，出现不兼容问题的风险仍然很小。
+大型安装可能希望考虑将其数据索引从现有实例迁移到AWS。 虽然这可以减少停机时间，但由于旧Elasticsearch服务器和AWS之间的版本不同，仍然存在出现不兼容问题的较小风险。
 
-无需迁移索引，因为这些索引可以在AWS实例上轻松重新创建。
+无需迁移索引，因为这些索引可以在AWS实例中轻松重新创建。
 但是，在迁移数据索引时，请确保Elasticsearch/OpenSearch的版本兼容。
 
-请参阅Amazon [迁移到Amazon OpenSearch服务](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html) 说明，以了解更多信息。
+请参阅Amazon的 [迁移到Amazon OpenSearch服务](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html) 说明以了解更多信息。
 
 ### 为OpenSearch配置Commerce
 

@@ -21,7 +21,7 @@ ht-degree: 0%
    + [基本目录路径](bootstrap/mage-directory.md)
 + 部署 {#deployment}
    + [部署概述](deployment/overview.md)
-   + [单机部署](deployment/single-machine.md)
+   + [单个计算机部署](deployment/single-machine.md)
    + [管道部署](deployment/technical-details.md)
    + [先决条件](deployment/prerequisites.md)
    + [开发系统设置](deployment/development-system.md)
@@ -30,17 +30,17 @@ ht-degree: 0%
    + [文件系统访问权限](deployment/file-system-permissions.md)
    + 示例 {#examples}
       + [使用共享配置](deployment/example-shared-configuration.md)
-      + [使用CLI](deployment/example-using-cli.md)
+      + [使用命令行界面命令](deployment/example-using-cli.md)
       + [使用环境变量](deployment/example-environment-variables.md)
 + 缓存 {#cache}
    + [缓存概述](cache/caching-overview.md)
    + [缓存类型](cache/cache-types.md)
    + [缓存选项](cache/cache-options.md)
-   + [二级缓存](cache/level-two-cache.md)
+   + [二级高速缓存](cache/level-two-cache.md)
    + Redis {#redis}
       + [配置Redis](cache/config-redis.md)
       + [将Redis用于默认缓存](cache/redis-pg-cache.md)
-      + [将Redis用于会话存储](cache/redis-session.md)
+      + [使用Redis进行会话存储](cache/redis-session.md)
    + 清漆 {#varnish}
       + [涂漆概述](cache/config-varnish.md)
       + [安装清漆](cache/config-varnish-install.md)
@@ -48,7 +48,7 @@ ht-degree: 0%
    + [配置Commerce应用程序](cache/configure-varnish-commerce.md)
    + [高级清漆配置](cache/config-varnish-advanced.md)
    + [缓存清除](cache/use-varnish-cache.md)
-   + [缓存清除多个Varnish实例](cache/use-multiple-varnish-cache.md)
+   + [缓存清除多个清漆实例](cache/use-multiple-varnish-cache.md)
    + [验证清漆配置](cache/config-varnish-final.md)
    + [清漆ESI块](cache/use-varnish-esi.md)
    + [静态内容缓存](cache/static-content-signing.md)
@@ -75,7 +75,7 @@ ht-degree: 0%
    + [创建符号链接](cli/create-symlinks.md)
    + [运行单元测试](cli/unit-tests.md)
    + [转换布局文件](cli/convert-layout-files.md)
-   + [生成用于性能测试的数据](cli/generate-data.md)
+   + [生成性能测试数据](cli/generate-data.md)
    + [运行支持实用程序（仅限Commerce）](cli/run-support-utilities.md)
 + 配置文件 {#files}
    + [用于部署的配置文件](reference/deployment-files.md)
@@ -102,7 +102,7 @@ ht-degree: 0%
    + [配置自定义cron作业](cron/custom-cron-tutorial.md)
 + 日志 {#logs}
    + [自定义日志](logs/custom-logging.md)
-   + [记录器界面](logs/logger-interface.md)
+   + [Logger界面](logs/logger-interface.md)
    + [记录数据库活动](logs/database-activity.md)
    + [写入自定义日志文件](logs/custom-log-files.md)
 + 消息队列 {#message-queues}
@@ -114,7 +114,7 @@ ht-degree: 0%
    + [多个网站和视图](multi-sites/ms-overview.md)
    + [数据库实体增量ID](multi-sites/change-increment-id.md)
    + [在管理员中设置](multi-sites/ms-admin.md)
-   + [使用Nginx进行设置](multi-sites/ms-nginx.md)
+   + [使用Nginx设置](multi-sites/ms-nginx.md)
    + [使用Apache设置](multi-sites/ms-apache.md)
 + 搜索引擎 {#search}
    + [搜索引擎概述](search/overview-search.md)

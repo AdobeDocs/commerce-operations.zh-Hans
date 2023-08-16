@@ -1,11 +1,11 @@
 ---
 user-guide-title: 工具
-user-guide-description: 了解您可以与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
+user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 0%
    - [扩展](site-wide-analysis-tool/extensions.md)
    - [警报](site-wide-analysis-tool/alerts.md)
    - [补丁程序](site-wide-analysis-tool/patches.md)
-- 质量修补工具 {#quality-patches-tool}
+- Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
-- 对Adobe Commerce的观察 {#observation-for-adobe-commerce}
+- Adobe Commerce观察 {#observation-for-adobe-commerce}
    - [介绍](observation-for-adobe-commerce/intro.md)
    - [如何访问](observation-for-adobe-commerce/access.md)
    - [选择帐户和时间范围](observation-for-adobe-commerce/selecting-the-account.md)
@@ -50,10 +50,10 @@ ht-degree: 0%
    - [索引选项卡](observation-for-adobe-commerce/indexing-tab.md)
    - [QuickView选项卡](observation-for-adobe-commerce/oac-quickview-tab.md)
    - [“安全”选项卡](observation-for-adobe-commerce/security-tab.md)
-   - [“基础架构”选项卡](observation-for-adobe-commerce/oac-infra.md)
+   - [“底层”选项卡](observation-for-adobe-commerce/oac-infra.md)
    - [如何将观察用于Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
 - Data Migration Tool {#data-migration}
-   - [迁移的工作原理](data-migration-tool/how-migration-works.md)
+   - [迁移的工作方式](data-migration-tool/how-migration-works.md)
    - [最佳实践](data-migration-tool/best-practices.md)
    - [支持的版本](data-migration-tool/supported-versions.md)
    - 基础知识 {#basics}
@@ -73,6 +73,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
 - [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 此 [!UICONTROL Alerts] 选项卡
 
-此 [!UICONTROL Alerts] 选项卡提供了一系列警报，其中包括打开和关闭严重警报。
+此 [!UICONTROL Alerts] 选项卡提供了一系列警报，包括打开和关闭严重警报。
 
 ## [!UICONTROL Open Alert Details]
 
@@ -28,12 +28,12 @@ ht-degree: 0%
 
 ## [!UICONTROL Critical Alert Details]
 
-![严重预警详细信息](../../assets/tools/observation-for-adobe-commerce/alerts-tab-3.jpg)
+![严重警报详细信息](../../assets/tools/observation-for-adobe-commerce/alerts-tab-3.jpg)
 
-此 **[!UICONTROL Critical Alert Details]** 框架显示选定时间范围内关键警报详细信息的计数，包括时间戳、条件名称以及警报事件是打开还是关闭。
+此 **[!UICONTROL Critical Alert Details]** 帧显示选定时间范围内严重预警详细信息的计数，包括时间戳、条件名称以及预警事件是打开还是关闭。
 
 ## [!UICONTROL Infrastructure Alert Details]
 
 ![基础架构警报详细信息](../../assets/tools/observation-for-adobe-commerce/alerts-tab-4.jpg)
 
-此 **[!UICONTROL Infrastructure Alert Details]** 此框架显示选定时间范围内的应用程序、主机和其他基础架构事件。
+此 **[!UICONTROL Infrastructure Alert Details]** 此框架显示所选时间范围内的应用程序、主机和其他基础架构事件。

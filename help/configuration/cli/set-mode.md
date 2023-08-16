@@ -15,15 +15,15 @@ ht-degree: 0%
 
 为了提高安全性和易用性，我们添加了一个命令来切换 [应用程序模式](../bootstrap/application-modes.md) 从开发人员到生产环境，反之亦然。
 
-生产模式的性能更好，因为静态视图文件填充在 `pub/static` 目录和由于代码编译。
+生产模式具有更好的性能，因为静态视图文件填充在 `pub/static` 目录和由于代码编译而产生。
 
 >[!INFO]
 >
->在2.0.6版及更高版本中，当您在默认、开发和生产模式之间切换时，Commerce不会明确设置文件或目录权限。 与其他模式不同，开发人员和生产模式设置在 `env.php` 文件。 云基础架构上的Adobe Commerce仅支持生产和维护模式。
+>在2.0.6版及更高版本中，在默认、开发和生产模式之间切换时，Commerce不会明确设置文件或目录权限。 与其他模式不同，开发人员和生产模式在 `env.php` 文件。 云基础架构上的Adobe Commerce仅支持生产和维护模式。
 >
->参见 [开发和生产中的商业所有权和权限](../deployment/file-system-permissions.md).
+>请参阅 [开发和生产中的商业所有权和权限](../deployment/file-system-permissions.md).
 
-当您更改为开发人员或生产模式时，我们将清除以下目录的内容：
+当您更改为开发人员模式或生产模式时，我们将清除以下目录的内容：
 
 ```terminal
 var/cache
@@ -44,7 +44,7 @@ pub/static
 
 ## 显示当前模式
 
-最简单的方法是运行此命令，作为 [文件系统所有者](../../installation/prerequisites/file-system/overview.md). 如果您具有共享托管，则这是您的提供商为您提供的用于登录到服务器的用户。 如果您有专用服务器，它通常是Commerce服务器上的本地用户帐户。
+最简单的方法是以 [文件系统所有者](../../installation/prerequisites/file-system/overview.md). 如果您共享了主机，则这是您的提供商为您提供的用于登录到服务器的用户。 如果您有专用服务器，它通常是Commerce服务器上的本地用户帐户。
 
 命令用法：
 
@@ -52,7 +52,7 @@ pub/static
 bin/magento deploy:mode:show
 ```
 
-将显示一条类似于以下内容的消息：
+此时将显示一条与以下内容类似的消息：
 
 ```terminal
 Current application mode: {mode}. (Note: Environment variables may override this value.)
@@ -72,9 +72,9 @@ bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
 
 其中：
 
-- **`{mode}`** 必需；可以是 `developer` 或 `production`
+- **`{mode}`** 必需；它可以 `developer` 或 `production`
 
-- **`--skip-compilation`** 是一个可用于跳过的参数 [代码编译](../cli/code-compiler.md) 当您更改为生产模式时。
+- **`--skip-compilation`** 是可用于跳过的可选参数 [代码编译](../cli/code-compiler.md) 当您更改为生产模式时。
 
 示例如下。
 
@@ -84,7 +84,7 @@ bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
 bin/magento deploy:mode:set production
 ```
 
-显示类似于以下内容的消息：
+与以下内容类似的消息：
 
 ```terminal
 Enabled maintenance mode
@@ -127,7 +127,7 @@ Enabled production mode.
 
 ### 更改为开发人员模式
 
-从生产模式更改为开发人员模式时，应清除生成的类和Object Manager实体（如代理）以防止意外错误。 完成此操作后，您可以更改模式。 使用以下步骤：
+从生产模式更改为开发人员模式时，应清除生成的类和Object Manager实体（如代理）以防止意外错误。 完成此操作后，您可以更改模式。 请使用以下步骤：
 
 1. 如果您要从生产模式更改为开发人员模式，请删除 `generated/code` 和 `generated/metadata` 目录：
 

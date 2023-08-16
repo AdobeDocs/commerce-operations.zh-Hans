@@ -15,7 +15,7 @@ ht-degree: 0%
 您可以有一个符合以下要求的构建系统：
 
 - 所有Commerce代码都在与开发和生产系统相同的存储库中受源代码控制
-- 确保以下所有选项均可用 _已包括_ 在源代码管理中：
+- 确保以下所有各项均可用 _已包括_ 在源代码管理中：
 
    - `app/etc/config.php`
    - `generated` 目录（和子目录）
@@ -24,27 +24,27 @@ ht-degree: 0%
    - `pub/static` 目录（和子目录）
 
 - 必须安装兼容的PHP版本
-- 必须安装Composer
+- 必须已安装Composer
 - 它具有文件系统所有权和权限集，如中所述 [开发、构建和生产系统的先决条件](../deployment/technical-details.md).
 - 构建系统不需要安装Commerce，但代码必须可供使用。
 
 >[!WARNING]
 >
->如果数据库连接已包含在，则不需要该连接 `config.php`；请参阅 [导出配置](../cli/export-configuration.md). 否则，需要数据库连接。
+>如果数据库连接已包含在，则不需要该连接 `config.php`；请参见 [导出配置](../cli/export-configuration.md). 否则，需要数据库连接。
 
 >[!INFO]
 >
->构建计算机可以位于其自身的主机上，也可以位于与已安装的Commerce系统相同的主机上。
+>构建计算机可以位于其自身的主机上，也可以与安装的Commerce系统位于同一主机上。
 
 ## 配置生成计算机
 
-以下部分讨论如何配置构建计算机。
+以下部分将讨论如何配置生成计算机。
 
 ### 安装编辑器
 
 首先，检查是否已安装Composer：
 
-在命令提示符下，输入以下任意命令：
+在命令提示符下，输入以下任一命令：
 
 - `composer --help`
 - `composer list --help`
@@ -71,14 +71,14 @@ ht-degree: 0%
 
 ### 安装PHP
 
-在上安装PHP [CentOS] 或 [乌本图].
+在上安装PHP [CentOS] 或 [乌班图].
 
 ### 设置构建系统
 
 要设置构建系统，请执行以下操作：
 
 1. 以文件系统所有者的身份登录构建系统，或切换到文件系统所有者。
-1. 从源代码管理中检索Commerce代码。
+1. 从源代码控制中检索Commerce代码。
 
    如果使用Git，请使用以下命令：
 
@@ -124,9 +124,9 @@ ht-degree: 0%
    git add .gitignore && git commit -m "Modify .gitignore for build and production"
    ```
 
-   请参阅 [`.gitignore` 引用](../reference/config-reference-gitignore.md) 了解更多信息。
+   请参阅 [`.gitignore` 引用](../reference/config-reference-gitignore.md) 以了解更多信息。
 
-1. 构建系统应使用 [默认模式](../bootstrap/application-modes.md#default-mode) 或 [开发人员模式](../bootstrap/application-modes.md#developer-mode)：
+1. 构建系统应使用 [默认模式](../bootstrap/application-modes.md#default-mode) 或 [开发者模式](../bootstrap/application-modes.md#developer-mode)：
 
    ```bash
    bin/magento deploy:mode:set <mode>
@@ -138,4 +138,4 @@ ht-degree: 0%
 
 [CentOS]: https://wiki.centos.org/HowTos/php7
 [composer]: https://getcomposer.org/download/
-[乌本图]: https://help.ubuntu.com/lts/serverguide/php.html
+[乌班图]: https://help.ubuntu.com/lts/serverguide/php.html

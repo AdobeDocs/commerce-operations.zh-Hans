@@ -16,7 +16,7 @@ ht-degree: 0%
 规划阶段包括以下活动：
 
 - 要求收集
-- 架构设计
+- 建筑设计
 - 目录设计
 - 项目范围
 - 帐户设置
@@ -29,16 +29,16 @@ ht-degree: 0%
 
 - **应用程序配置**
    - [配置站点、商店和存储视图的最佳实践（云基础架构）](sites-stores-store-views.md)
-   - [如何防止和修复Adobe Commerce站点最常见的五个配置问题](https://business.adobe.com/blog/how-to/usual-suspects-five-configuration-fixes-maximize-your-peak-sales)
+   - [如何防止和修复Adobe Commerce Sites最常见的五个配置问题](https://business.adobe.com/blog/how-to/usual-suspects-five-configuration-fixes-maximize-your-peak-sales)
    - [缓存最佳实践](https://docs.magento.com/user-guide/system/cache-management.html#best-practices-for-caching)
    - [全页缓存](https://developer.adobe.com/commerce/php/development/cache/page/public-content/)
    - [OPcache内存大小](opcache-memory-size.md)
    - [报告配置](reporting-configuration.md)
 
 - **数据库配置**
-   - [云部署的数据库配置最佳实践&#x200B;](database-on-cloud.md)
+   - [适用于云部署的数据库配置最佳实践&#x200B;。](database-on-cloud.md)
    - [MySQL从属连接配置&#x200B;](configure-mysql-slave-connection-on-cloud.md)
-   - [MySQL触发器使用情况](mysql-triggers-usage.md)
+   - [MySQL触发器使用](mysql-triggers-usage.md)
 
 - **服务配置**
    - [设置Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
@@ -46,7 +46,7 @@ ht-degree: 0%
    - [Redis服务配置的最佳实践&#x200B;。](redis-service-configuration.md)
    - [Realpath缓存大小最佳实践](realpath-cache-size.md)
 
-## **架构设计**
+## **建筑设计**
 
 <!--Asset not yet integrated
 - [GRA Architecture examples](https://wiki.corp.adobe.com/x/kD4ykw)
@@ -55,13 +55,13 @@ ht-degree: 0%
 
 ## **目录设计**
 
-以下主题介绍了配置Adobe Commerce目录的性能优化最佳实践，包括类别数、产品有效SKU、产品变体、产品属性和选项等的建议最大值。
+以下主题描述了配置Adobe Commerce目录的性能优化最佳实践，包括类别数、产品有效SKU、产品变体、产品属性和选项等的建议最大值。
 
 - [类别配置](category-limits.md)
 - [产品配置&#x200B;](product-sku-limits.md)
 - [产品变体配置](product-variations.md)
 - [产品选项配置](product-options.md)
-- [产品属性配置&#x200B;](product-attributes-and-options.md)
+- [产品属性配置&#x200B;。](product-attributes-and-options.md)
 - [产品列表的分页配置](product-listing-pagination.md)
 
 ## **销售和营销**
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## **项目范围**
 
-- [合作伙伴呈报](partner-escalation.md)
+- [合作伙伴升级](partner-escalation.md)
 - [支付存储处理](payment-processing-storage.md)
 
 ## **购买扩展**

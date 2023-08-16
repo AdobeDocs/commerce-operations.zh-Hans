@@ -19,7 +19,7 @@ ht-degree: 0%
 
 1. 如果模块存在编辑器包，请运行以下任一操作。
 
-   按模块名称更新：
+   每个模块名称更新：
 
    ```bash
    composer update vendor/module-name
@@ -31,7 +31,7 @@ ht-degree: 0%
    composer require vendor/module-name ^x.x.x
    ```
 
-1. 运行以下命令升级、部署和清理缓存。
+1. 运行以下命令以升级、部署和清理缓存。
 
    ```bash
    bin/magento setup:upgrade --keep-generated
@@ -45,7 +45,7 @@ ht-degree: 0%
    bin/magento cache:clean
    ```
 
-## 供应商捆绑的扩展(VBE)
+## 供应商捆绑扩展(VBE)
 
 Adobe已全部删除 [VBE](https://devdocs.magento.com/extensions/vendor/) 在2.4.4中。供应商将继续在Adobe Commerce Marketplace上支持这些扩展。
 
@@ -57,4 +57,4 @@ Adobe已全部删除 [VBE](https://devdocs.magento.com/extensions/vendor/) 在2.
 - [Dotdigital](https://marketplace.magento.com/dotdigital-dotdigital-magento2-os-package.html)
 - [克拉尔纳](https://marketplace.magento.com/klarna-m2-klarna.html)
 - [顶点](https://marketplace.magento.com/vertexinc-vertex-tax-module.html)
-- [约特波](https://marketplace.magento.com/yotpo-module-yotpo.html)
+- [Yotpo](https://marketplace.magento.com/yotpo-module-yotpo.html)

@@ -37,7 +37,7 @@ ht-degree: 0%
                 soap<br>
                 套接字<br>
                 sysvmsg<br>
-                sysvsem<br>
+                系统<br>
                 sysvshm<br>
                 opcache<br>
                 zip<br>
@@ -48,7 +48,7 @@ ht-degree: 0%
                 日期<br>
                 dom<br>
                 文件信息<br>
-                过滤器<br>
+                筛选<br>
                 ftp<br>
                 哈希<br>
                 iconv<br>
@@ -56,7 +56,7 @@ ht-degree: 0%
                 mbstring<br>
                 mysqlnd<br>
                 openssl<br>
-                pcre<br>
+                密码<br>
                 pdo<br>
                 pdo_sqlite<br>
                 phar<br>
@@ -75,7 +75,7 @@ ht-degree: 0%
                 igbinary<br>
                 imagick<br>
                 imap<br>
-                Ioncube<br>
+                ioncube<br>
                 ldap<br>
                 mailparse<br>
                 mcrypt<br>

@@ -1,6 +1,6 @@
 ---
 title: 安装指南
-description: 使用本指南安装 [!DNL Site-Wide Analysis Tool] （适用于您的网站）
+description: 使用本指南进行安装 [!DNL Site-Wide Analysis Tool] （适用于您的网站）
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
 feature: Configuration, Install
 source-git-commit: 163d12b1f30a3098932c62e11f24784422002c67
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 >[!INFO]
 >
->了解 [如何启用](../site-wide-analysis-tool/access.md) 此 [!DNL Site-Wide Analysis Tool] 并生成报表。
+>学习 [如何启用](../site-wide-analysis-tool/access.md) 该 [!DNL Site-Wide Analysis Tool] 并生成报表。
 
-如果您内部安装了Adobe Commerce，请在您的基础架构上安装代理以使用该工具。 您无需在云基础架构项目上在Adobe Commerce上安装代理。
+如果您内部安装了Adobe Commerce，请在您的基础架构上安装代理以使用该工具。 您不需要在云基础架构项目上的Adobe Commerce上安装代理。
 
 ## 代理
 
-此 [!DNL Site-Wide Analysis Tool] Agent允许您使用 [!DNL Site-Wide Analysis Tool] 用于Adobe Commerce的内部安装。
+此 [!DNL Site-Wide Analysis Tool] 代理程序允许您使用 [!DNL Site-Wide Analysis Tool] Adobe Commerce的内部安装。
 
-此 [!DNL Site-Wide Analysis Tool] 代理会收集应用程序和业务数据，对其进行分析，并提供有关安装运行状况的其他见解，以便您改善客户体验。 它监视您的应用程序，并帮助您识别性能、安全性、可用性和应用程序问题。
+此 [!DNL Site-Wide Analysis Tool] 代理会收集应用程序和业务数据，对其进行分析，并提供有关安装运行状况的其他见解，以便您改善客户体验。 它可以监视您的应用程序，并帮助您识别性能、安全性、可用性和应用程序问题。
 
 安装代理程序需要以下步骤：
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 - 操作系统
 
-   - [!DNL Linux x86-64] 分发，例如 [!DNL Red Hat® Enterprise Linux (RHEL)]， [!DNL CentOS]， [!DNL Ubuntu]， [!DNL Debian]，和类似项
+   - [!DNL Linux x86-64] 分配，例如 [!DNL Red Hat® Enterprise Linux (RHEL)]， [!DNL CentOS]， [!DNL Ubuntu]， [!DNL Debian]，和类似项
 
   >[!IMPORTANT]
   >
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## [!DNL Commerce Services Connector]
 
-代理需要 [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 要安装在系统上的扩展和 [已配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 使用API密钥。 要验证是否安装了扩展，请运行以下命令：
+代理需要 [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 要安装在系统上的扩展和 [已配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 使用API密钥。 要验证是否已安装扩展，请运行以下命令：
 
 ```bash
 bin/magento module:status Magento_ServicesId
@@ -88,19 +88,19 @@ bin/magento module:status Magento_ServicesId
 
    >[!NOTE]
    >
-   > 如果您在访问帐户时遇到问题，请参阅 [无法登录Adobe Commerce支持或云帐户](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) 以获取故障排除帮助。
+   > 如果访问帐户时遇到问题，请参阅 [无法登录Adobe Commerce支持或云帐户](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) 以获取故障排除帮助。
 
 1. 单击 **[!UICONTROL API Portal]**.
 
-1. 单击 **[!UICONTROL Delete]** 在现有API密钥旁边。
+1. 单击 **[!UICONTROL Delete]** 位于现有API密钥旁。
 
 1. [配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 新的API密钥。
 
 >[!IMPORTANT]
 >
-> 如果您在API门户中生成新密钥，请立即更新中的API密钥 [!DNL Admin configuration]. 如果您生成新密钥但未更新 [!DNL Admin]，您的SaaS扩展将不再有效，并且您将丢失有价值的数据。
+> 如果您在API Portal中生成新密钥，请立即更新中的API密钥 [!DNL Admin configuration]. 如果您生成新的密钥，但不更新中的密钥 [!DNL Admin]，您的SaaS扩展将无法再正常使用，并且您将丢失宝贵的数据。
 
-如果未安装扩展，请按照以下说明进行安装：
+如果未安装该扩展，请按照以下说明进行安装：
 
 1. 将扩展添加到 `composer.json` 文件并进行安装。
 
@@ -130,7 +130,7 @@ bin/magento module:status Magento_ServicesId
 
 ## 安装代理
 
-我们已经创建了一个 [shell脚本](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh) 以简化安装。 我们建议使用shell脚本，但您可以遵循 [手动安装](#manual) 方法（如有必要）。
+我们已经创建了 [shell脚本](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh) 以简化安装。 我们建议使用shell脚本，但您可以遵循 [手动安装](#manual) 方法（如有必要）。
 
 >[!INFO]
 >
@@ -169,7 +169,7 @@ bin/magento module:status Magento_ServicesId
 
 如果您不想使用我们的 [shell脚本](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh) 要安装代理，则必须按照以下步骤手动安装：
 
-1. 创建一个要下载代理的目录。
+1. 创建要下载代理的目录。
 
    >[!TIP]
    >
@@ -179,31 +179,31 @@ bin/magento module:status Magento_ServicesId
 
    >[!INFO]
    >
-   >要使用 [!DNL Site-Wide Analysis Tool]中，您必须首先阅读并接受在从Adobe Commerce管理员访问功能板时显示的使用条款。
+   >要使用 [!DNL Site-Wide Analysis Tool]中，您必须先阅读并接受在从Adobe Commerce管理员访问功能板时显示的使用条款。
 
-   对于 **AMD64** 架构：
+   对于 **AMD64** 体系结构：
 
-   1. 下载启动器存档。
+   1. 下载启动器档案。
 
       ```bash
       curl -O https://updater.supportinsights.adobe.com/launcher/launcher.linux-amd64.tar.gz
       ```
 
-   1. 解压缩启动器存档。
+   1. 解压缩启动器档案。
 
       ```bash
       tar -xf launcher.linux-amd64.tar.gz
       ```
 
-   对于 **ARM64** 架构：
+   对于 **ARM64** 体系结构：
 
-   1. 下载启动器存档。
+   1. 下载启动器档案。
 
       ```bash
       curl -O https://updater.supportinsights.adobe.com/launcher/launcher.linux-arm64.tar.gz
       ```
 
-   1. 解压缩启动器存档。
+   1. 解压缩启动器档案。
 
       ```bash
       tar -xf launcher.linux-arm64.tar.gz
@@ -270,7 +270,7 @@ bin/magento module:status Magento_ServicesId
 
 ### 服务 {#service}
 
-1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 替换为 `<filesystemowner>` 拥有代理和Adobe Commerce软件安装目录的UNIX®用户)。 如果您以root用户身份下载代理，请更改目录和嵌套文件所有者。
+1. 创建系统单元文件 `(/etc/systemd/system/scheduler.service)` 替换为 `<filesystemowner>` ® ，该用户拥有代理和Adobe Commerce软件的安装目录)。 如果以root用户身份下载代理，请更改目录和嵌套文件所有者。
 
    ```config
    [Unit]
@@ -322,13 +322,13 @@ bin/magento module:status Magento_ServicesId
 
 运行以下命令从系统中卸载服务并删除所有生成的文件：
 
-1. 停止调度程序。
+1. 停止计划程序。
 
    ```bash
    systemctl stop scheduler
    ```
 
-1. 禁用调度程序。
+1. 禁用计划程序。
 
    ```bash
    systemctl disable scheduler
@@ -340,7 +340,7 @@ bin/magento module:status Magento_ServicesId
    rm /etc/systemd/system/scheduler.service
    ```
 
-1. 重新加载 `systemd` 管理器配置。
+1. 重新加载 `systemd` manager配置。
 
    ```bash
    systemctl daemon-reload
@@ -352,7 +352,7 @@ bin/magento module:status Magento_ServicesId
    systemctl reset-failed
    ```
 
-1. 删除调度程序服务目录。
+1. 删除计划程序服务目录。
 
    ```bash
    rm -rf <CHECK_REGISTRY_PATH> #see SWAT_AGENT_APPLICATION_CHECK_REGISTRY_PATH in /etc/systemd/system/scheduler.service
@@ -384,34 +384,34 @@ bin/magento module:status Magento_ServicesId
    rm -rf swat-agent
    ```
 
-## 疑难解答
+## 故障排除
 
 ### 访问密钥未正确解析
 
-如果访问密钥解析不正确，您可能会看到以下错误：
+如果未正确解析访问密钥，您可能会看到以下错误：
 
 ```terminal
 ERRO[2022-10-10 00:01:41] Error while refreshing token: error while getting jwt from magento: invalid character 'M' looking for beginning of value
 FATA[2022-12-10 20:38:44] bad http status from https://updater.supportinsights.adobe.com/linux-amd64.json: 403 Forbidden
 ```
 
-要解决此错误，请尝试以下步骤：
+要解决此错误，请尝试执行以下步骤：
 
-1. 执行 [脚本安装](#scripted)，保存输出，然后查看输出中是否有错误。
+1. 执行 [脚本安装](#scripted)，保存输出，并查看输出中是否有错误。
 1. 查看生成的 `config.yaml` 文件并验证Commerce实例和PHP的路径是否正确。
-1. 确保运行调度程序的用户位于 [文件系统所有者](../../installation/prerequisites/file-system/overview.md) Unix组或与文件系统所有者是同一个用户。
-1. 确保 [商务服务连接器](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 密钥安装正确，请尝试更新密钥以将扩展连接到系统。
+1. 确保运行计划程序的用户位于 [文件系统所有者](../../installation/prerequisites/file-system/overview.md) Unix组或与文件系统所有者是同一个用户。
+1. 确保 [Commerce服务连接器](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) 已正确安装密钥，请尝试更新密钥以将扩展连接到系统。
 1. [卸载](#uninstall) 代理在更新密钥后使用 [安装脚本](#scripted).
-1. 运行调度程序并查看是否仍收到相同的错误。
-1. 如果您仍收到相同的错误，请提高 `config.yaml` 调试和打开支持票证。
+1. 运行调度程序并查看您是否仍收到相同的错误。
+1. 如果您仍收到相同的错误，请提高 `config.yaml` 以调试和打开支持工单。
 
-### *SIGFAULT* 错误
+### *SIGFAUL* 错误
 
-如果您看到 *SIGFAULT* 运行二进制文件时出错，您可能没有以Adobe Commerce和Agent文件的所有者的身份运行此文件。
-要解决此问题，请检查代理目录中所有与Adobe Commerce文件拥有者具有相同用户的文件，以及二进制文件是否也应该在该用户下运行。
+如果您看到 *SIGFAUL* 运行二进制文件时出错，您可能没有以Adobe Commerce和代理文件的文件所有者身份运行此文件。
+要解决此问题，请检查代理目录中的所有文件(这些文件的用户与Adobe Commerce文件拥有的文件所有者相同)是否也应该在该用户下运行二进制文件。
 您可以使用 `chown` 命令更改文件所有者并切换到适当的用户。
-确保您的守护程序化机制（Cron或System.d）在相应的用户下运行该过程。
+确保您的守护程序机制（Cron或System.d）在适当的用户下运行该过程。
 
 >[!INFO]
 >
->参见 [如何访问 [!DNL Site-Wide Analysis Tool] 并生成报告](../site-wide-analysis-tool/access.md).
+>请参阅 [如何访问 [!DNL Site-Wide Analysis Tool] 并生成报表](../site-wide-analysis-tool/access.md).

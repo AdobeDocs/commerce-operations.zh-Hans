@@ -12,14 +12,14 @@ ht-degree: 0%
 
 # 使用情况
 
-此 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) 提供由Adobe和Magento Open Source群体开发的各个修补程序。 它允许您应用、还原和查看所有适用于已安装的Adobe Commerce版本或Magento Open Source的个别修补程序的一般信息。 无论谁开发了修补程序，您都可以将修补程序应用到Adobe Commerce和Magento Open Source项目。 例如，您可以将社区开发的修补程序应用到Adobe Commerce项目。
+此 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) 提供由Adobe和Magento Open Source团体开发的各个修补程序。 它允许您应用、还原和查看有关已安装Adobe Commerce或Magento Open Source版本可用的所有单个修补程序的一般信息。 无论谁开发了修补程序，您都可以将修补程序应用到Adobe Commerce和Magento Open Source项目。 例如，您可以将社区开发的修补程序应用于Adobe Commerce项目。
 
 
-观看此内容 [技术视频](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) 并了解如何使用Quality Patches Tool for Adobe Commerce和Magento Open Source。
+观看此内容 [技术视频](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) 并了解如何使用适用于Adobe Commerce和Magento Open Source的Quality Patches Tool。
 
 >[!INFO]
 >
->参见 [应用单个修补程序](#apply-individual-patches) 有关将修补程序应用于Adobe Commerce或Magento Open Source项目的说明。 参见 [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
+>请参阅 [应用单个修补程序](#apply-individual-patches) 以获取有关将修补程序应用于Adobe Commerce或Magento Open Source项目的说明。 请参阅 [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
 
 >[!WARNING]
 >
@@ -43,17 +43,17 @@ composer require magento/quality-patches
 ./vendor/bin/magento-patches status
 ```
 
-您将看到类似于以下内容的输出：
+您会看到类似于以下内容的输出：
 
 | Id | 标题 | 类型 | 状态 | 详细信息 |
 |--- |--- |--- |--- |--- |
-| MAGECLOUD-5069 | FPC在部署期间被禁用 | 可选 | 未应用 | 受影响的组件：<br> - magento/module-page-cache |
+| MAGECLOUD-5069 | 部署期间将禁用FPC | 可选 | 未应用 | 受影响的组件：<br> - magento/module-page-cache |
 | MCLOUD-5650 | 从文件读取后保留部署配置 | 可选 | 未应用 | 受影响的组件：<br> - magento/框架 |
 | MCLOUD-5684 | 分页不起作用 — product_list_limit=all | 可选 | 未应用 | 受影响的组件： - magento/module-elasticsearch |
-| MCLOUD-5837 | 修复负载平衡器问题 | 已弃用 | 已应用 | 推荐更换：MC-1 <br> 受影响的组件： - magento/framework |
+| MCLOUD-5837 | 修复负载平衡器问题 | 已弃用 | 已应用 | 推荐的替换产品：MC-1 <br> 受影响的组件： - magento/framework |
 | BUNDLE-2554 | 设置付款信息错误 | 可选 | 未应用 | 受影响的组件： <br>- amzn/amazon-pay-module |
 | MC-1 | 修复问题1 | 可选 | 已应用 | 受影响的组件： <br> - magento/module-cms |
-| MC-2 | 修复问题2 | 可选 | 未应用 | 受影响的组件： <br> - magento/module-cms |
+| MC-2 | 修复了问题2 | 可选 | 未应用 | 受影响的组件： <br> - magento/module-cms |
 | MC-3 | 修复问题3 | 可选 | 未应用 | 所需的修补程序：<br> - MC-2 <br>受影响的组件： <br>- magento/module-cms |
 | MC-3-V2 | 更新了问题3的修复，取代了MC-3修补程序 | 可选 | 不适用 | 受影响的组件：  <br>- magento/module-cms |
 
@@ -63,7 +63,7 @@ Adobe Commerce 2.3.5。
 
 - **类型**：
    - `Optional`  — 所有修补程序来自 [!DNL Quality Patches Tool] 和 [云基础架构上的Commerce指南>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) 软件包对于Adobe Commerce和Magento Open Source安装是可选的。
-   - `Deprecated` —Adobe已弃用单个修补程序。 如果您已应用修补程序，我们建议您还原它。 还原操作还会从状态表中删除修补程序。
+   - `Deprecated` —Adobe已弃用单个修补程序。 如果您已应用修补程序，我们建议您恢复它。 还原操作还会从状态表中删除修补程序。
 
 - **状态**：
    - `Applied`  — 已应用修补程序。
@@ -77,15 +77,15 @@ Adobe Commerce 2.3.5。
 
 >[!INFO]
 >
->升级到Adobe Commerce或Magento Open Source的新版本后，如果修补程序未包含在新版本中，则必须重新应用修补程序。 参见 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
+>升级到Adobe Commerce或Magento Open Source的新版本后，如果修补程序未包含在新版本中，则必须重新应用修补程序。 请参阅 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
 
 ## 应用单个修补程序 {#apply-individual-patches}
 
 >[!WARNING]
 >
->在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 此外，还建议在应用修补程序之前备份数据。 参见 [备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
+>在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 还建议在应用修补程序之前备份数据。 请参阅 [备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
-要应用单个修补程序，请运行以下命令： `MAGETWO-XXXX` 是状态表中指定的修补程序ID：
+要应用单个修补程序，请运行以下命令，其中 `MAGETWO-XXXX` 是状态表中指定的修补程序ID：
 
 ```bash
 ./vendor/bin/magento-patches apply MAGETWO-XXXX
@@ -105,13 +105,13 @@ Adobe Commerce 2.3.5。
 
 >[!INFO]
 >
->请考虑将已应用修补程序的列表保存在单独的位置。 升级到新版本的Adobe Commerce或Magento Open Source后，您可能需要重新应用其中一些插件。 参见 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
+>请考虑将已应用修补程序的列表保留在单独的位置。 升级到新版Adobe Commerce或Magento Open Source后，您可能需要重新应用其中的一些插件。 请参阅 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
 
 ## 还原单个修补程序
 
 >[!WARNING]
 >
->在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 此外，还建议在应用修补程序之前备份数据。 参见 [备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
+>在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 还建议在应用修补程序之前备份数据。 请参阅 [备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
 要还原单个修补程序，请运行以下命令，其中 `MAGETWO-XXXX` 是状态表中指定的修补程序ID：
 
@@ -119,13 +119,13 @@ Adobe Commerce 2.3.5。
 ./vendor/bin/magento-patches revert MAGETWO-XXXX
 ```
 
-此外，还可以通过用空格分隔每个附加修补程序ID来同时还原多个修补程序：
+此外，还可以通过用空格分隔每个附加的修补程序ID来同时还原多个修补程序：
 
 ```bash
 ./vendor/bin/magento-patches revert MAGETWO-XXXX MAGETWO-YYYY
 ```
 
-要还原所有应用的修补程序，请执行以下操作：
+还原所有应用的修补程序：
 
 ```bash
 ./vendor/bin/magento-patches revert --all
@@ -157,7 +157,7 @@ composer update magento/quality-patches
 
 ## 升级后重新应用修补程序 {#re-apply-patches-after-an-upgrade}
 
-升级到Adobe Commerce或Magento Open Source的新版本时，如果修补程序未包含在新版本中，则必须重新应用修补程序。
+升级到新版本的Adobe Commerce或Magento Open Source时，如果修补程序未包含在新版本中，则必须重新应用修补程序。
 
 要重新应用修补程序，请执行以下操作：
 
@@ -187,6 +187,6 @@ composer update magento/quality-patches
    >
    >当您运行 `status` 命令，新版本中包含的修补程序将不再显示在可用修补程序表中。
 
-## 日志记录
+## 记录
 
-此 [!DNL Quality Patches Tool] 记录中的所有操作 `<Magento_root>/var/log/patch.log` 文件。
+此 [!DNL Quality Patches Tool] 将所有操作记录在 `<Magento_root>/var/log/patch.log` 文件。

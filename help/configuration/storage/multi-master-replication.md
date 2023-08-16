@@ -19,19 +19,19 @@ ht-degree: 0%
 设置数据库复制具有以下优点：
 
 - 提供数据备份
-- 在不影响主控数据库的情况下启用数据分析
+- 在不影响master数据库的情况下启用数据分析
 - 可扩展性
 
-MySQL数据库异步复制，这意味着无需永久连接从属进程即可从主控接收更新。
+MySQL数据库以异步方式复制，这意味着无需永久连接从属进程即可从主数据库接收更新。
 
 ## 配置数据库复制
 
-有关数据库复制的深入讨论超出了本指南的范围。 要设置此功能，您可以查阅如下资源：
+有关数据库复制的深入讨论超出了本指南的范围。 要设置此功能，您可以咨询以下资源：
 
 - [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/replication.html)
-- [如何在MySQL (digitalocean)中设置主控从属复制](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
+- [如何在MySQL (digitalocean)中设置主从复制](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
 
-Commerce为从属数据库提供了示例MySQL配置。 简单配置包括 `ResourceConnections` 类 `README.md`.
+Commerce为从属数据库提供了示例MySQL配置。 简单的配置提供了 `ResourceConnections` 类 `README.md`.
 
 下面是更高级的描述，仅供您参考：
 
@@ -122,7 +122,7 @@ Commerce为从属数据库提供了示例MySQL配置。 简单配置包括 `Reso
 
 ## 性能改进
 
-要提高主控从复制的性能，可以在从实例上筛选某些表。 我们建议使用名称模式筛选所有临时表 `search\_tmp\_%` 用于目录搜索的内容。
+为了提高主从复制的性能，可以过滤从实例上的某些表。 我们建议使用名称模式筛选所有临时表 `search\_tmp\_%` 用于目录搜索的内容。
 
 为此，请将以下行添加到 `my.cnf` 从实例上的文件：
 

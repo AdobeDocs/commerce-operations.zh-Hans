@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 配置远程存储
 
-“远程存储”模块提供了使用存储服务(如AWS S3)将媒体文件存储到永久性的远程存储容器中并安排导入和导出的选项。 默认情况下，Adobe Commerce应用程序会将媒体文件存储在包含该应用程序的同一文件系统中。 这对于复杂的多服务器配置而言效率很低，并且可能导致在共享资源时性能下降。 使用远程存储模块，您可以将媒体文件存储在 `pub/media` 目录和导入/导出文件 `var` 远程对象存储的目录，以利用服务器端图像大小调整功能。
+“远程存储”模块提供了使用存储服务(如AWS S3)将媒体文件存储到永久性的远程存储容器中并安排导入和导出的选项。 默认情况下，Adobe Commerce应用程序会将媒体文件存储在包含该应用程序的同一文件系统中。 这对于复杂的多服务器配置而言效率低下，并可能导致在共享资源时性能降低。 使用远程存储模块，您可以将媒体文件存储在 `pub/media` 目录和导入/导出文件 `var` 远程对象存储的目录，以利用服务器端图像大小调整功能。
 
 >[!INFO]
 >
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 >[!INFO]
 >
->远程存储模块具有 _有限_ 在云基础架构上支持Adobe Commerce。 Adobe无法完全排除第三方存储适配器服务的故障。 参见 [在云基础架构上为Commerce配置远程存储](cloud-support.md) 以获取有关为云项目实施远程存储的指导。
+>远程存储模块具有 _有限_ 在云基础架构上支持Adobe Commerce。 Adobe无法完全排除第三方storage adapter服务的故障。 请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md) 以获取有关为云项目实施远程存储的指导。
 
 ![架构图像](../../assets/configuration/remote-storage-schema.png)
 
 ## 远程存储选项
 
-您可以使用配置远程存储 `remote-storage` 选项及 [`setup` CLI命令](../../installation/tutorials/deployment.md). 此 `remote-storage` option使用以下语法：
+您可以使用配置远程存储 `remote-storage` 选项及 [`setup` CLI命令](../../installation/tutorials/deployment.md). 此 `remote-storage` 选项使用以下语法：
 
 ```text
 --remote-storage-<parameter-name>="<parameter-value>"
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 | 命令行参数 | 参数名称 | 描述 | 默认值 |
 |--- |--- |--- |--- |
-| `remote-storage-driver` | 驱动程序 | 适配器名称<br>可能的值：<br>**文件**：禁用远程存储并使用本地文件系统&#x200B;<br>**aws-s3**：使用 [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md) | 无 |
+| `remote-storage-driver` | 驱动因素 | 适配器名称<br>可能的值：<br>**文件**：禁用远程存储并使用本地文件系统&#x200B;<br>**aws-s3**：使用 [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md) | 无 |
 | `remote-storage-bucket` | 分段 | 对象存储或容器名称 | 无 |
 | `remote-storage-prefix` | 前缀 | 可选前缀（对象存储内的位置） | 空 |
 | `remote-storage-region` | 区域 | 区域名称 | 无 |
@@ -45,25 +45,25 @@ ht-degree: 0%
 
 ### 存储适配器
 
-默认存储位置位于本地文件系统中。 A _存储适配器_ 使您能够连接到存储服务并将文件存储到任何位置。 [!DNL Commerce] 支持配置以下存储服务：
+默认存储位置位于本地文件系统中。 A _存储适配器_ 使您能够连接到存储服务并将文件存储在任何位置。 [!DNL Commerce] 支持配置以下存储服务：
 
 - [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md)
 
 ## 启用远程存储
 
-您可以在Adobe Commerce安装期间安装远程存储，也可以将远程存储添加到现有Commerce实例。 以下示例使用一组来演示每种方法 `remote-storage` 带有Commerce的参数 `setup` cli命令。 最低限度，您必须提供存储 `driver`， `bucket`、和 `region`.
+您可以在Adobe Commerce安装期间安装远程存储，或将远程存储添加到现有Commerce实例。 以下示例使用一组示例演示了每种方法 `remote-storage` 带有Commerce的参数 `setup` cli命令。 最低限度，您必须提供存储 `driver`， `bucket`、和 `region`.
 
 - 示例：使用远程存储安装Commerce
 
-   ```bash
-   bin/magento setup:install --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
-   ```
+  ```bash
+  bin/magento setup:install --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
+  ```
 
-- 示例：在现有商务上启用远程存储
+- 示例：在现有Commerce上启用远程存储
 
-   ```bash
-   bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
-   ```
+  ```bash
+  bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
+  ```
 
 >[!TIP]
 >
@@ -91,7 +91,7 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 >[!INFO]
 >
->sync命令只迁移 `pub/media` 目录， _非_ 中的导入/导出文件 `var` 目录。 参见 [计划的导入/导出][import-export] 在 _Commerce 2.4用户指南_.
+>sync命令只迁移 `pub/media` 目录， _非_ 中的导入/导出文件 `var` 目录。 请参阅 [计划的导入/导出][import-export] 在 _Commerce 2.4用户指南_.
 
 <!-- link definitions -->
 

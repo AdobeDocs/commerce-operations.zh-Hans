@@ -1,6 +1,6 @@
 ---
 title: 配置 [!DNL Data Migration Tool]
-description: 了解配置 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据。
+description: 了解用于配置 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据。
 exl-id: 273be997-8085-4488-a455-f6005a85b406
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -25,17 +25,17 @@ ht-degree: 0%
 
 ## 配置迁移
 
-有两种方法可配置 [!DNL Data Migration Tool]：
+可通过两种方式配置 [!DNL Data Migration Tool]：
 
-* 配置 [!DNL Data Migration Tool] 在单独的模块中（推荐）
+* 配置 [!DNL Data Migration Tool] 在另一个模块中（推荐）
 * 更改 [!DNL Data Migration Tool] 中的配置 `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/` 目录。
 
 要使用源代码管理迁移配置并将其用于部署，您必须创建一个单独的模块。
-如果您计划运行 [!DNL Data Migration Tool] 仅在本机中，您可以编辑文件 `<your Magento 2 install dir>/vendor/magento/data-migration-tool/` 目录。
+如果您计划运行 [!DNL Data Migration Tool] 仅在本地，您可以在 `<your Magento 2 install dir>/vendor/magento/data-migration-tool/` 目录。
 
 ### 在单独的模块中配置迁移
 
-在迁移任何数据之前，必须创建一个Magento2模块。
+在迁移任何数据之前，必须创建Magento2模块。
 
 1. 创建Magento2模块。
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 1. 复制 `config.xml.dist` 配置文件从的相应目录 [!DNL Data Migration Tool] (`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>`)到 `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/config.xml` 文件。
 
-   例如，如果您迁移 `Magento 1.9.3.6 Community Edition` 到 `Magento 2 Open Source`：
+   例如，如果迁移 `Magento 1.9.3.6 Community Edition` 到 `Magento 2 Open Source`：
 
    ```bash
    cd <your Magento 2 install dir>
@@ -106,15 +106,15 @@ ht-degree: 0%
 
 1. 在 `config.xml` 文件，必须设置M1和M2数据库的访问详细信息以及加密密钥。
 
-1. 如果M1存储区有自定义更改，则应将其余配置文件映射到Magento1存储区自定义设置。 参见 [使用配置和映射文件](#migration-config).
+1. 如果M1存储区有自定义更改，则应将其余配置文件映射到Magento1存储区自定义设置。 请参阅 [使用配置和映射文件](#migration-config).
 
 ### 在中配置迁移 `vendor` 文件夹
 
 在迁移任何数据之前，必须创建 `config.xml` 配置文件。
 
-要配置 [!DNL Data Migration Tool] 对于迁移：
+配置 [!DNL Data Migration Tool] 对于迁移：
 
-1. 以或切换至以下身份登录到应用程序服务器： [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以以下身份登录到您的应用程序服务器，或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 
 1. 切换到以下目录：
 
@@ -122,7 +122,7 @@ ht-degree: 0%
    <your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>
    ```
 
-1. 输入以下命令以创建 `config.xml` 在提供的示例中：
+1. 输入以下命令以创建 `config.xml` 从提供的示例：
 
    ```bash
    cp config.xml.dist config.xml
@@ -144,7 +144,7 @@ ht-degree: 0%
    </options>
    ```
 
-   此 &lt;crypt_key> 标记必须包含一个值。 您可以在 `<key>` 标签中，该文件位于Magento1实例上的app/etc/local.xml文件中。
+   此 &lt;crypt_key> 标记必须包含值。 您可以在 `<key>` 标记，该文件位于Magento1实例上的app/etc/local.xml文件中。
 
    可选参数：
 
@@ -152,7 +152,7 @@ ht-degree: 0%
    * 数据库自定义端口： `port=<port>`
    * 表前缀： `<source_prefix>`， `<dest_prefix>`
 
-   例如，如果数据库所有者的用户名是 `root` 使用密码 `pass` 而你使用前缀 `magento1` 在Magento1数据库中，在下列位置使用 `config.xml`：
+   例如，如果数据库所有者的用户名是 `root` 包含密码 `pass` 而你使用前缀 `magento1` 在Magento1数据库中，在 `config.xml`：
 
    ```xml
    <source>
@@ -171,7 +171,7 @@ ht-degree: 0%
 
 ### 使用TLS协议连接
 
-您还可以使用TLS协议（即，使用公钥/私钥）连接到数据库。 将以下可选属性添加到 `database` 元素：
+您还可以使用TLS协议（即使用公共/专用加密密钥）连接到数据库。 将以下可选属性添加到 `database` 元素：
 
 * `ssl_ca`
 * `ssl_cert`
@@ -204,9 +204,9 @@ ht-degree: 0%
 
 要使用映射文件，请执行以下操作：
 
-1. 从以下来源复制它们 `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` 到 `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` 并删除 `.dist` 扩展。
+1. 从以下位置复制它们 `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` 到 `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` 并移除 `.dist` 扩展。
 
-1. 更新中新复制文件的路径 `<options>` 节点 `config.xml`. 更新后的路径应为以下路径之一：
+1. 更新中新复制文件的路径 `<options>` 节点 `config.xml`. 更新的路径应为以下路径之一：
 
    1. 绝对文件路径，例如 `/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. magento/data-migration-tool模块相对文件路径： `etc/opensource-to-opensource/1.9.4.1/map.xml`
@@ -218,28 +218,28 @@ ht-degree: 0%
 
 | 映射文件名 | 描述 |
 | --- | --- |
-| `class-map.xml.dist` | Magento1和Magento2之间的类映射的字典 |
+| `class-map.xml.dist` | Magento1和Magento2之间类映射的字典 |
 | `config.xml.dist` | 指定Magento1和Magento2数据库配置、步骤配置以及映射到文件的链接的主配置文件 |
 | *仅限Adobe Commerce*. `customer-attr-document-groups.xml.dist` | 自定义客户属性步骤中使用的表的列表。 |
 | *仅限Adobe Commerce*. `customer-attr-map.xml.dist` | 在自定义客户属性步骤中使用的映射文件。 |
 | `deltalog.xml.dist` | 包含数据库例程设置所需的表列表。 |
-| `eav-attribute-groups.xml.dist` | 包含在“简化步骤”中使用的属性列表。 |
-| `eav-document-groups.xml.dist` | 包含在执行步骤中使用的表的列表。 |
+| `eav-attribute-groups.xml.dist` | 包含在Eav步骤中使用的属性列表。 |
+| `eav-document-groups.xml.dist` | 包含在Eav步骤中使用的表的列表。 |
 | `log-document-groups.xml.dist` | 包含日志步骤中使用的表的列表。 |
 | `map-eav.xml.dist` | EAV步骤中使用的映射文件。 |
 | `map-log.xml.dist` | 日志映射文件。 |
 | *仅限Adobe Commerce*. `map-sales.xml.dist` | SalesOrder Step中使用的映射文件。 |
 | `map.xml.dist` | 映射步骤所需的映射文件。 |
-| `settings.xml.dist` | 设置迁移配置文件，该文件指定迁移所需的规则 `core_config_data` 表格。 |
+| `settings.xml.dist` | 设置迁移配置文件，该文件指定迁移 `core_config_data` 表格。 |
 | `customer-attribute-groups.xml.dist` | 包含客户属性步骤中使用的属性列表。 |
 | `customer-document-groups.xml.dist` | 包含客户属性步骤中使用的表的列表。 |
-| `map-customer.xml.dist` | 在客户属性步骤中使用的映射文件。 |
-| `order-grids-document-groups.xml.dist` | 包含在OrderGrid步骤中使用的表的列表。 |
-| `map-document-groups.xml.dist` | 定义在数据插入时发生重复时更新的字段 |
+| `map-customer.xml.dist` | 映射在客户属性步骤中使用的文件。 |
+| `order-grids-document-groups.xml.dist` | 包含在OrderGrids步骤中使用的表的列表。 |
+| `map-document-groups.xml.dist` | 定义在数据插入时出现重复时更新哪些字段 |
 | `map-stores.xml.dist` | 在存储步骤中使用的映射文件。 |
 | `map-tier-price.xml.dist` | 在层价格步骤中使用的映射文件。 |
 | *仅限Adobe Commerce*. `visual_merchandiser_map.xml.dist` | VisualMerchandiser步骤中使用的映射文件。 |
 | *仅限Adobe Commerce*. `visual_merchandiser_attribute_groups.xml.dist` | 包含在VisualMerchandiser步骤中使用的属性列表。 |
 | *仅限Adobe Commerce*. `visual_merchandiser_document_groups.xml.dist` | 包含在VisualMerchandiser步骤中使用的表的列表。 |
 
-您可以引用 [[!DNL Data Migration Tool] 技术规范](technical-specification.md) 了解更多详细信息。
+您可以引用 [[!DNL Data Migration Tool] 技术规范](technical-specification.md) 以了解更多详细信息。

@@ -1,5 +1,5 @@
 ---
-title: 在Ubuntu上设置memcached
+title: 设置Ubuntu上的内存缓存
 description: 在Ubuntu上安装和配置内存缓存。
 feature: Configuration, Cache, Storage
 exl-id: 831193d2-3e81-472c-9b87-78a8d52959b4
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# 在Ubuntu上设置memcached
+# 设置Ubuntu上的内存缓存
 
-本节提供在Ubuntu上安装memcached的说明。
+本节提供在Ubuntu上安装内存缓存的说明。
 
 >[!INFO]
 >
@@ -20,14 +20,14 @@ ht-degree: 0%
 
 由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
-- `memcache` (_否d_) — 一种较旧但较受欢迎的扩展，不会定期维护。
-此 `memcache` 当前扩展 _不会_ 使用PHP 7。 参见 [memcache的PHP文档](https://www.php.net/manual/en/book.memcache.php).
+- `memcache` (_否d_) — 旧版但很受欢迎的扩展，不会定期维护。
+此 `memcache` 当前扩展 _不会_ 使用PHP 7。 请参阅 [memcache的PHP文档](https://www.php.net/manual/en/book.memcache.php).
 
-   确切的名称为 `php5-memcache` Ubuntu的。
+  确切名称为 `php5-memcache` 为了乌本图。
 
-- `memcached` (_带有`d`_) — 与PHP 7兼容的更新和维护的扩展。 参见 [memcached的PHP文档](https://www.php.net/manual/en/book.memcached.php).
+- `memcached` (_带有`d`_) — 与PHP 7兼容的更新和维护的扩展。 请参阅 [memcached的PHP文档](https://www.php.net/manual/en/book.memcached.php).
 
-   确切的名称为 `php5-memcached` Ubuntu的。
+  确切名称为 `php5-memcached` 为了乌本图。
 
 ## 在Ubuntu上安装和配置内存缓存
 
@@ -65,13 +65,13 @@ ht-degree: 0%
 
 ## 在安装Magento之前验证memcached是否有效
 
-Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟，并且以后可以简化故障排除。
+Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟的时间，并且以后可以简化故障排除。
 
-### 验证Web服务器是否可识别memcached
+### 验证Web服务器是否识别memcached
 
-要验证Web服务器是否能够识别memcached，请执行以下操作：
+要验证Web服务器是否能够识别memcached：
 
-1. 创建 `phpinfo.php` 文件（位于Web服务器的docroot中）：
+1. 创建 `phpinfo.php` Web服务器的docroot中的文件：
 
    ```php
    <?php
@@ -79,19 +79,19 @@ Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工�
    phpinfo();
    ```
 
-1. 在Web浏览器中转到该页面。 例如：
+1. 转到Web浏览器中的该页面。 例如：
 
    ```http
    http://192.0.2.1/phpinfo.php
    ```
 
-1. 确保memcached按以下方式显示：
+1. 确保memcached按如下方式显示：
 
-   ![确认Web服务器可识别memcached](../../assets/configuration/memcache.png)
+   ![确认Web服务器能够识别memcached](../../assets/configuration/memcache.png)
 
    验证您是否使用memcached版本3.0.5或更高版本。
 
-   如果memcached未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍然不显示，请确认您已安装 `php-pecl-memcached` 扩展。
+   如果memcached未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍然不显示，请验证是否已安装 `php-pecl-memcached` 扩展。
 
 ### 验证memcached是否可以缓存数据
 
@@ -116,7 +116,7 @@ if ($result) {
 }
 ```
 
-位置 `<memcached hostname or ip>` 是 `localhost`， `127.0.0.1`或内存缓存主机名或IP地址。 此 `<memcached port>` 是监听端口；默认情况下， `11211`.
+位置 `<memcached hostname or ip>` 是 `localhost`， `127.0.0.1`或内存缓存主机名或IP地址。 此 `<memcached port>` 是侦听端口；默认情况下， `11211`.
 
 在Web浏览器中转到该页面。 例如
 
@@ -134,7 +134,7 @@ http://192.0.2.1/cache-test.php
 telnet localhost <memcache port>
 ```
 
-出现提示时，输入
+在提示下，输入
 
 ```shell
 stats items

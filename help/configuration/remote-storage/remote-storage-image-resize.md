@@ -6,15 +6,15 @@ exl-id: 51c2b9b3-0f5f-4868-9191-911d5df341ec
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 为远程存储配置图像大小调整
 
-默认情况下，Adobe Commerce支持在应用程序端调整图像大小。 但是，通过启用“远程存储”模块，您可以使用Nginx将图像大小调整功能卸载到服务器端，从而节省磁盘资源并优化磁盘使用。
+默认情况下，Adobe Commerce支持在应用程序端调整图像大小。 但是，通过启用“远程存储”模块，您可以使用Nginx将调整映像大小的功能卸载到服务器端，从而节省磁盘资源并优化磁盘使用。
 
-下图显示了Nginx如何在缓存中检索、调整大小以及存储图像。 调整大小取决于URL中包含的参数，如高度和宽度。
+下图显示了Nginx如何在缓存中检索、调整大小和存储图像。 调整大小取决于URL中包含的参数，如高度和宽度。
 
 ![调整图像大小](../../assets/configuration/remote-storage-nginx-image-resize.png)
 
@@ -38,13 +38,13 @@ ht-degree: 0%
 
 1. 单击 **[!UICONTROL Save Config]**.
 
-1. 继续访问 [Nginx配置](#configure-nginx).
+1. 继续访问 [恩金克斯配置](#configure-nginx).
 
 ## 配置Nginx
 
-要继续配置服务器端图像大小调整，您必须准备 `nginx.conf` 文件并提供 `proxy_pass` 选定适配器的值。
+要继续配置服务器端图像大小调整，您必须准备 `nginx.conf` 文件并提供 `proxy_pass` 所选适配器的值。
 
-**要使Nginx能够调整图像大小**：
+**启用Nginx调整图像大小**：
 
 1. 安装 [Nginx图像滤镜模块][nginx-module].
 
@@ -69,7 +69,7 @@ ht-degree: 0%
    }
    ```
 
-1. [_可选_] 配置 `proxy_pass` 指定适配器的值。
+1. [_可选_] 配置 `proxy_pass` 特定适配器的值。
 
    - [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md)
 

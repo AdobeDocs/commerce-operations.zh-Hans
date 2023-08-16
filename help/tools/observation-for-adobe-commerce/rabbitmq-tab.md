@@ -1,6 +1,6 @@
 ---
 title: 此 [!UICONTROL [!DNL RabbitMQ]]选项卡
-description: 了解 [!UICONTROL [!DNL RabbitMQ]]选项卡，共个 [!DNL Observation for Adobe Commerce].
+description: 了解 [!UICONTROL [!DNL RabbitMQ]]选项卡，属于 [!DNL Observation for Adobe Commerce].
 exl-id: c5370c30-fed8-4f45-89c3-ef0d6ad41a89
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # 此 [!UICONTROL [!DNL RabbitMQ]] 选项卡
 
-此 **[!UICONTROL [!DNL RabbitMQ]]** 选项卡包含的信息主要关注 [!DNL RabbitMQ] 信号。
+此 **[!UICONTROL [!DNL RabbitMQ]]** 选项卡包含的信息重点在于 [!DNL RabbitMQ] 信号。
 
 ## [!UICONTROL [!DNL RabbitMQ] Infrastructure events]
 
 ![[!DNL RabbitMQ] 基础架构事件](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-1.jpeg)
 
-此 **[!UICONTROL [!DNL RabbitMQ] Infrastructure events]** 此框架显示涉及以下内容的基础结构事件： [!DNL RabbitMQ] 在选定时间范围内发生的更改：
+此 **[!UICONTROL [!DNL RabbitMQ] Infrastructure events]** 此框架显示了涉及以下内容的基础结构事件： [!DNL RabbitMQ] 在选定时间范围内发生的更改：
 
 * `%Response [error] for node [rabbit@host1]: unexpected http response from%`)作为 `unexpected_resp_node1`
 * `%Response [error] for node [rabbit@host2]: unexpected http response from%`)作为 `unexpected_resp_node2`
@@ -73,9 +73,9 @@ ht-degree: 0%
 
 ## [!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]
 
-![[!DNL RabbitMQ] 按队列显示的消息概要摘要状态](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-5.jpeg)
+![[!DNL RabbitMQ] 按队列显示的消息高级摘要状态](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-5.jpeg)
 
-此 **[!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]** 图表显示已发布的消息数量，按照 [!DNL RabbitMQ] 选定时间范围的队列。
+此 **[!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]** 图表显示按以下方式发布的消息数： [!DNL RabbitMQ] 已选择时间范围的队列。
 
 ## [!UICONTROL [!DNL RabbitMQ] Message Detail Summary]
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 ## [!UICONTROL [!DNL RabbitMQ] Queue Consumption MB]
 
-![[!DNL RabbitMQ] 队列消耗量MB](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-7.jpeg)
+![[!DNL RabbitMQ] 队列消耗MB](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-7.jpeg)
 
 此 **[!UICONTROL [!DNL RabbitMQ] Queue Consumption MB]** 图形显示每个字节使用的字节数 [!DNL RabbitMQ] 在选定的时间范围内排队。
 
@@ -100,15 +100,15 @@ ht-degree: 0%
 
 ## [!UICONTROL [!DNL RabbitMQ] Published Message Throughput by Queue]
 
-![[!DNL RabbitMQ] 按队列显示的已发布消息吞吐量](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-9.jpeg)
+![[!DNL RabbitMQ] 已发布的消息吞吐量（按队列）](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-9.jpeg)
 
-此 **[!UICONTROL [!DNL RabbitMQ] Published Message Throughput by Queue]** 图表显示每个消息每秒的平均已发布消息数 [!DNL RabbitMQ] 在选定的时间范围内排队。
+此 **[!UICONTROL [!DNL RabbitMQ] Published Message Throughput by Queue]** 图表显示每个报表每秒发布的消息的平均数 [!DNL RabbitMQ] 在选定的时间范围内排队。
 
 ## [!UICONTROL [!DNL RabbitMQ] Total Message Throughput by Queue]
 
 ![[!DNL RabbitMQ] 按队列的总消息吞吐量](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-10.jpeg)
 
-此 **[!UICONTROL [!DNL RabbitMQ] Total Message Throughput by Queue]** 图表显示每个报表包每秒的平均消息总数 [!DNL RabbitMQ] 在选定的时间范围内排队。
+此 **[!UICONTROL [!DNL RabbitMQ] Total Message Throughput by Queue]** 图表显示每个报表的每秒平均消息总数 [!DNL RabbitMQ] 在选定的时间范围内排队。
 
 ## [!UICONTROL [!DNL RabbitMQ] Consumers by Queue]
 

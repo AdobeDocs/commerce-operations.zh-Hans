@@ -1,6 +1,6 @@
 ---
 title: 验证安装
-description: 按照以下步骤确认已成功安装内部部署Adobe Commerce或Magento Open Source。
+description: 执行以下步骤，确认本地Adobe Commerce或Magento Open Source安装成功。
 exl-id: 0bd7ec01-c616-4384-ae26-db2ce3668caf
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 验证安装
 
-在Web浏览器中转到店面。 例如，如果您的安装基础URL是 `http://www.example.com`，请在浏览器的地址栏或位置栏中输入。
+在Web浏览器中转到店面。 例如，如果您的安装基础URL为 `http://www.example.com`，请在浏览器的地址栏或位置栏中输入该变量。
 
 下图显示了一个店面页面的示例。 如果它显示如下，则表示您的安装成功！
 
@@ -19,23 +19,23 @@ ht-degree: 0%
 
 ## 验证店面（无示例数据）
 
-在Web浏览器中转到店面。 例如，如果您的安装基础URL是 `http://www.example.com`，请在浏览器的地址栏或位置栏中输入。
+在Web浏览器中转到店面。 例如，如果您的安装基础URL为 `http://www.example.com`，请在浏览器的地址栏或位置栏中输入该变量。
 
 下图显示了一个店面页面的示例。 如果它显示如下，则表示您的安装成功！
 
 ![验证安装成功的店面](../../assets/installation/install-success_store.png)
 
-如果页面显示 `404 (Not Found)` 错误或不显示样式，请参阅 [故障排除](https://support.magento.com/hc/en-us/articles/360032994352).
+如果页面显示 `404 (Not Found)` 错误或不显示样式，请参阅 [疑难解答](https://support.magento.com/hc/en-us/articles/360032994352).
 
 ## 验证管理员
 
-在Web浏览器中转到“管理员”。 例如，如果您的安装基础URL是 `http://www.example.com`，并且管理员URI为 `admin_au1nT`，输入 `http://www.example.com/admin_au1nT` 在浏览器的地址栏或位置栏中。
+在Web浏览器中转到“管理员”。 例如，如果您的安装基础URL为 `http://www.example.com`，管理员URI为 `admin_au1nT`，输入 `http://www.example.com/admin_au1nT` 在浏览器的地址栏或位置栏中。
 
 (管理员URI由 `backend-frontname` 安装参数。)
 
 出现提示时，以管理员身份登录。
 
-下图显示了一个“管理员”页面示例。 如果它显示如下，则表示您的安装成功！
+下图显示了一个管理页面示例。 如果它显示如下，则表示您的安装成功！
 
 ![验证安装是否成功的管理员](../../assets/installation/install_success_admin.png)
 

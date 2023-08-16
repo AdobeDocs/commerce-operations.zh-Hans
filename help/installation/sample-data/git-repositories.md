@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # 克隆示例数据Git存储库
 
-本主题讨论如何在克隆Magento Open SourceGitHub存储库时克隆和添加示例数据。 此方法仅适用于投稿开发人员(即计划投稿到Magento Open Source代码库的开发人员)。
+本主题讨论如何在克隆Magento Open SourceGitHub存储库时克隆和添加示例数据。 此方法仅适用于参与开发的开发人员(即计划参与Magento Open Source代码库的开发人员)。
 
 如果您不是参与开发人员，请选择页面左侧目录中显示的其他选项之一。
 
 参与开发的开发人员可以使用此方法来安装示例数据 *仅限* 如果满足以下条件：
 
 * 您使用Magento Open Source
-* 您 [已克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* 您 [克隆了GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
 >[!WARNING]
 >
->可以将示例数据与 `develop` 分支（更当前）或已发布的分支(例如 `2.4` （更稳定）。 我们建议您使用已发布的分支，因为它更稳定。 如果您要向存储库贡献代码，并且需要最新的代码，请使用 `develop` 分支。 无论选择哪个分支，您都必须 [克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) Magento Open SourceGitHub存储库的相应分支。 例如，的示例数据 `develop` 可以使用branch *仅限* 使用Magento Open Source `develop` 分支。
+>您可以将示例数据与 `develop` 分支（更新）或已发布的分支(例如 `2.4` （更稳定）。 我们建议您使用已发布的分支，因为它更稳定。 如果您要向存储库贡献代码，并且需要最新的代码，请使用 `develop` 分支。 无论您选择哪个分支，您都必须 [克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) Magento Open SourceGitHub存储库的相应分支。 例如，的示例数据 `develop` 分支可使用 *仅限* 使用Magento Open Source `develop` 分支。
 
 ## 克隆示例数据存储库
 
 本节讨论如何通过克隆示例数据存储库来安装示例数据。 您可以通过以下任一方式克隆示例数据存储库：
 
-* 使用进行克隆 [SSH协议](#clone-with-ssh)
-* 使用进行克隆 [HTTPS协议](#clone-with-https)
+* 克隆 [SSH协议](#clone-with-ssh)
+* 克隆 [HTTPS协议](#clone-with-https)
 
 ### 使用SSH进行克隆
 
@@ -67,7 +67,7 @@ ht-degree: 0%
    fatal: The remote end hung up unexpectedly
    ```
 
-1. 确保从主存储库中签出与所使用分支对应的示例数据存储库分支 `magento2` 存储库。
+1. 确保您从主存储库中签出与所用分支对应的示例数据存储库分支。 `magento2` 存储库。
 
    例如：
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 
 1. 等待命令完成。
 
-1. 参见 [设置文件系统权限和所有权](#set-file-system-ownership-and-permissions).
+1. 请参阅 [设置文件系统权限和所有权](#set-file-system-ownership-and-permissions).
 
 1. 运行以下命令：
 
@@ -121,7 +121,7 @@ ht-degree: 0%
    ```
 
 1. 等待存储库在您的服务器上克隆。
-1. 确保从主存储库中签出与所使用分支对应的示例数据存储库分支 `magento2` 存储库。
+1. 确保您从主存储库中签出与所用分支对应的示例数据存储库分支。 `magento2` 存储库。
 
    例如：
 
@@ -153,8 +153,7 @@ ht-degree: 0%
 >
 >如果您正在安装示例数据 *之后* 安装Adobe Commerce或Magento Open Source时，还必须运行以下命令来更新数据库和架构：
 >
->
-```bash
+>```bash
 ><magento_root>/bin/magento setup:upgrade
 >```
 

@@ -1,11 +1,11 @@
 ---
 user-guide-title: 运营行动手册
-user-guide-description: 了解如何让您的企业做好运营准备，以便运营成功的电子商务网站。
+user-guide-description: 了解如何让您的企业做好运营准备以便运营成功的电子商务网站。
 feature: Best Practices
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 0%
+ht-degree: 13%
 
 ---
 
@@ -27,13 +27,13 @@ ht-degree: 0%
 - 解决方案 {#solution}
    - [软件即服务(SaaS)](solution/software-service.md)
    - [Platform-as-a-service (PaaS)](solution/platform-service.md)
-   - [内部部署托管](solution/on-premises.md)
+   - [本地托管](solution/on-premises.md)
    - [云与内部部署](solution/hosting-comparison.md)
    - [第三方集成](solution/integrations.md)
    - [升级、备份和维护](solution/maintenance.md)
 - 策略 {#strategy}
    - [商务策略](strategy/commerce.md)
-   - [聚焦](strategy/focus.md)
+   - [焦点](strategy/focus.md)
    - [内容策略](strategy/content.md)
    - [成熟度](strategy/maturity.md)
 - 进程 {#process}
@@ -43,7 +43,7 @@ ht-degree: 0%
    - [项目管理](process/project-management.md)
    - [DACI模型](process/project-management-framework.md)
    - [敏捷Scrum方法](process/agile-scrum.md)
-   - [共同项目讲习班](process/project-workshops.md)
+   - [共同项目研讨会](process/project-workshops.md)
    - [测试](process/testing.md)
 - 人员 {#people}
    - [团队](people/teams.md)

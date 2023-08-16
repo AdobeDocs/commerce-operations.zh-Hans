@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 安装扩展
 
-扩展或自定义Adobe Commerce和Magento Open Source行为的代码称为扩展。 您可以选择将扩展打包并分发到 [Commerce Marketplace](https://marketplace.magento.com) 或者另一个扩展分发系统。
+扩展或自定义Adobe Commerce和Magento Open Source行为的代码称为扩展。 您可以选择在上打包和分发扩展 [Commerce Marketplace](https://marketplace.magento.com) 或者另一个扩展分发系统。
 
 扩展包括：
 
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->本主题介绍如何使用命令行安装从Commerce Marketplace购买的扩展。 您可以使用相同的过程来安装 _任意_ 扩展；您只需要扩展的编辑器名称和版本。 要找到它，请打开扩展的 `composer.json` 文件并记下 `"name"` 和 `"version"`.
+>本主题介绍如何使用命令行安装您从Commerce Marketplace购买的扩展。 您可以使用相同的过程来安装 _任意_ 扩展；您只需要扩展的编辑器名称和版本。 要找到它，请打开扩展的 `composer.json` 文件并记下 `"name"` 和 `"version"`.
 
-在安装之前，您可能需要：
+安装之前，您可能需要：
 
 1. 备份数据库。
 1. 启用维护模式：
@@ -47,8 +47,8 @@ ht-degree: 0%
    ```
 
 1. 获取扩展的编辑器名称和版本。
-1. 更新 `composer.json` 文件中包含扩展的名称和版本。
-1. 验证扩展是否正确安装。
+1. 更新 `composer.json` 使用扩展名的名称和版本创建文件。
+1. 验证扩展是否已正确安装。
 1. 启用并配置该扩展。
 
 ## 获取扩展编辑器名称和版本
@@ -73,13 +73,13 @@ ht-degree: 0%
 
 >[!TIP]
 >
->或者，您也可以找到的Composer名称和版本 _任意_ 扩展(无论您是在Commerce Marketplace上还是在其他位置购买的) `composer.json` 文件。
+>或者，您也可以找到的“编辑器”名称和版本 _任意_ 扩展(无论您是在Commerce Marketplace上还是在其他位置购买的) `composer.json` 文件。
 
 ## 更新您的编辑器文件
 
 将扩展的名称和版本添加到 `composer.json` 文件：
 
-1. 导航到项目目录并更新 `composer.json` 文件。
+1. 导航到项目目录并更新您的 `composer.json` 文件。
 
    ```bash
    composer require <component-name>:<version>
@@ -111,13 +111,13 @@ ht-degree: 0%
 bin/magento module:status J2t_Payplug
 ```
 
-默认情况下，该扩展可能处于禁用状态：
+默认情况下，该扩展可能已禁用：
 
 ```terminal
 Module is disabled
 ```
 
-扩展名采用格式 `<VendorName>_<ComponentName>`；这是与编辑器名称不同的格式。 使用此格式可启用该扩展。 如果不确定扩展名称，请运行：
+扩展名采用格式 `<VendorName>_<ComponentName>`；这与编辑器名称格式不同。 使用此格式启用扩展。 如果不确定扩展名称，请运行：
 
 ```bash
 bin/magento module:status
@@ -127,7 +127,7 @@ bin/magento module:status
 
 ## 启用扩展
 
-除非先清除生成的静态视图文件，否则某些扩展名无法正常工作。 使用 `--clear-static-content` 启用扩展时用于清除静态视图文件的选项。
+除非先清除生成的静态视图文件，否则某些扩展无法正常工作。 使用 `--clear-static-content` 启用扩展时用于清除静态视图文件的选项。
 
 1. 启用扩展并清除静态视图文件：
 
@@ -135,7 +135,7 @@ bin/magento module:status
    bin/magento module:enable J2t_Payplug --clear-static-content
    ```
 
-   您应会看到以下输出：
+   您应该会看到以下输出：
 
    ```terminal
    The following modules have been enabled:
@@ -153,7 +153,7 @@ bin/magento module:status
    bin/magento setup:upgrade
    ```
 
-1. 重新编译项目：在生产模式下，您可能会收到一条消息，显示“请重新运行Magento编译命令”。 应用程序不会提示您在“开发人员”模式下运行compile命令。
+1. 重新编译项目：在生产模式下，您可能会收到一条消息“请重新运行Magento编译命令”。 应用程序不会提示您以开发人员模式运行compile命令。
 
    ```bash
    bin/magento setup:di:compile
@@ -165,7 +165,7 @@ bin/magento module:status
    bin/magento module:status J2t_Payplug
    ```
 
-   您应该会看到验证扩展是否不再禁用的输出：
+   您应该会看到验证扩展是否已不再禁用的输出：
 
    ```terminal
    Module is enabled
@@ -193,7 +193,7 @@ bin/magento module:status
 
 1. 如果模块存在编辑器包，请运行以下任一操作。
 
-   按模块名称更新：
+   每个模块名称更新：
 
    ```bash
    composer update vendor/module-name
@@ -205,7 +205,7 @@ bin/magento module:status
    composer require vendor/module-name ^x.x.x
    ```
 
-1. 运行以下命令升级、部署和清理缓存。
+1. 运行以下命令以升级、部署和清理缓存。
 
    ```bash
    bin/magento setup:upgrade --keep-generated

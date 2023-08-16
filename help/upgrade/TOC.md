@@ -1,12 +1,12 @@
 ---
 user-guide-title: 升级指南
-user-guide-description: 了解为什么升级您的Adobe Commerce应用程序如此重要，以及如何成功规划和执行升级。
+user-guide-description: 了解为什么升级Adobe Commerce应用程序如此重要，以及如何成功规划和执行升级。
 feature: Upgrade
 topic: Administration, Commerce, Development, Upgrade
 source-git-commit: ee69fcec4986fc85f93e336dc654a9bfff486d8b
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -40,14 +40,14 @@ ht-degree: 0%
       - [在命令行界面中运行该工具](upgrade-compatibility-tool/run.md)
       - [与集成 [!DNL Site-Wide Analysis Tool]](upgrade-compatibility-tool/integrate-analysis-tool.md)
       - [在MagentoPHPStorm插件中运行该工具](upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md)
-   - 报告 {#reporting}
-      - [报告](upgrade-compatibility-tool/reports.md)
+   - 报表 {#reporting}
+      - [报表](upgrade-compatibility-tool/reports.md)
       - [错误消息](upgrade-compatibility-tool/error-messages.md)
    - [相关工具](upgrade-compatibility-tool/related-tools.md)
 - 参与开发人员 {#developer}
    - [升级基于Git的安装](developer/git-installs.md)
    - [管理模块](developer/manage-modules.md)
-- 疑难解答 {#troubleshooting}
+- 故障排除 {#troubleshooting}
    - [当前搜索引擎不受支持](troubleshooting/search-engine-not-supported.md)
    - [模块更新失败后回滚](troubleshooting/roll-back-after-update-failure.md)
    - [用于升级的维护模式选项](troubleshooting/maintenance-mode-options.md)

@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # 可选软件
 
-我们强烈建议您安装NTP以确保与cron相关的任务正确执行。 （例如，服务器日期可以是过去或未来。）
+我们强烈建议您安装NTP，以确保与cron相关的任务正确执行。 （例如，服务器日期可以是过去或未来。）
 
-本主题中讨论的其他可选实用程序可能会帮助您进行安装；但是，安装或使用Adobe Commerce或Magento Open Source并不需要这些实用程序。
+本主题中讨论的其他可选实用程序可能会帮助您进行安装；但是，安装或使用Adobe Commerce或Magento Open Source时并不需要这些实用程序。
 
 ## 安装和配置网络时间协议(NTP)
 
 [NTP](https://www.ntp.org/) 使服务器能够使用同步其系统时钟 [全局可用的池服务器](https://www.ntppool.org/en/). 我们建议您使用您信任的NTP服务器，无论它们是您内部网络的专用硬件解决方案，还是外部的公共服务器。
 
-如果您在多台主机上部署Adobe Commerce或Magento Open Source ，NTP是一种简单的方法，可以保证无论服务器处于哪个时区，它们的时钟都保持同步。 此外，cron相关任务（如索引和事务性电子邮件）依赖于服务器时钟的准确性。
+如果您在多台主机上部署Adobe Commerce或Magento Open Source，则无论服务器处于哪个时区，NTP都是一种保证其时钟完全同步的简单方法。 此外，cron相关任务（如索引和事务性电子邮件）取决于服务器时钟的准确性。
 
 ### 在Ubuntu上安装和配置NTP
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 apt-get install ntp
 ```
 
-继续使用 [使用NTP池服务器](#use-ntp-pool-servers).
+继续 [使用NTP池服务器](#use-ntp-pool-servers).
 
 ### 在CentOS上安装和配置NTP
 
@@ -59,11 +59,11 @@ apt-get install ntp
 
 ### 使用NTP池服务器
 
-选择池服务器取决于您。 如果您使用NTP池服务器，ntp.org建议您使用 [池服务器](https://www.ntppool.org/en/) 接近服务器时区的时区，如上所述的 [NTP池项目页](https://www.ntppool.org/en/use.html). 如果您的专用NTP服务器对部署中的所有主机都可用，则可以使用该服务器。
+您可以选择池服务器。 如果您使用NTP池服务器，ntp.org建议您使用 [池服务器](https://www.ntppool.org/en/) 接近服务器时区的时区，如上所述 [NTP池项目页](https://www.ntppool.org/en/use.html). 如果您的专用NTP服务器可用于部署中的所有主机，则可以改用该服务器。
 
 1. 打开 `/etc/ntp.conf` 在文本编辑器中。
 
-1. 查找类似于以下内容的行：
+1. 查找与以下内容类似的行：
 
    ```conf
    server 0.centos.pool.ntp.org
@@ -71,7 +71,7 @@ apt-get install ntp
    server 2.centos.pool.ntp.org
    ```
 
-1. 替换这些行或添加指定您的NTP池服务器或其他NTP服务器的其他行。 指定多个规则是个好主意。
+1. 替换这些行，或者添加指定您的NTP池服务器或其他NTP服务器的其它行。 最好指定多个。
 
 1. 以下是使用三个基于美国的NTP服务器的示例：
 
@@ -99,7 +99,7 @@ apt-get install ntp
 
 ## 创建phpinfo.php
 
-此 [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) 文件显示大量有关PHP及其扩展名的信息。
+此 [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) 文件显示了有关PHP及其扩展名的大量信息。
 
 >[!NOTE]
 >
@@ -121,18 +121,18 @@ phpinfo();
 http://<web server host or IP>/phpinfo.php
 ```
 
-如果显示404 （未找到）错误，请检查以下各项：
+如果显示404（未找到）错误，请检查以下各项：
 
-* 必要时启动Web服务器。
+* 如有必要，请启动Web服务器。
 * 确保防火墙允许端口80上的通信。
 
-   [Ubuntu帮助](https://help.ubuntu.com/community/UFW)
+  [Ubuntu帮助](https://help.ubuntu.com/community/UFW)
 
-   [CentOS帮助](https://wiki.centos.org/HowTos/Network/IPTables)
+  [CentOS帮助](https://wiki.centos.org/HowTos/Network/IPTables)
 
 ## phpMyAdmin
 
-phpMyAdmin应用程序是一个易于使用的免费数据库管理实用程序。 您可以使用它来检查和处理数据库的内容。 您必须以MySQL数据库管理用户的身份登录到phpMyAdmin。
+phpMyAdmin应用程序是一个易于使用、免费的数据库管理实用程序。 您可以使用它来检查和处理数据库的内容。 您必须以MySQL数据库管理用户的身份登录到phpMyAdmin。
 
 有关phpMyAdmin的详细信息，请参见 [phpMyAdmin主页](https://www.phpmyadmin.net/).
 
@@ -148,4 +148,4 @@ phpMyAdmin应用程序是一个易于使用的免费数据库管理实用程序�
    http://<web server host or IP>/phpmyadmin
    ```
 
-1. 出现提示时，使用您的MySQL数据库登录 `root` 或管理用户的用户名和密码。
+1. 出现提示时，使用MySQL数据库登录 `root` 或管理用户的用户名和密码。

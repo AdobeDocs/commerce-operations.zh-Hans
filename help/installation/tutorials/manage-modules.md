@@ -46,9 +46,9 @@ bin/magento module:disable [-c|--clear-static-content] [-f|--force] [--all] <mod
 * `-f` 或 `--force` 强制启用或禁用模块，而不考虑依赖关系。 在使用此选项之前，请参阅 [关于启用和禁用模块](#about-enabling-and-disabling-modules).
 * `-c` 或 `--clear-static-content` 清理 [生成的静态视图文件](../../configuration/cli/static-view-file-deployment.md).
 
-   如果存在多个同名文件，并且您未全部清除，则无法清除静态视图文件可能会导致问题。
+  如果存在多个同名文件并且您未全部清除，则无法清除静态视图文件可能会导致问题。
 
-   换句话说，因为 [静态文件回退](../../configuration/cli/static-view-file-deployment.md) 规则（如果不清除静态文件并且有多个名为的文件） `logo.svg` 不同，回退可能会导致显示错误的文件。
+  换句话说，因为 [静态文件回退](../../configuration/cli/static-view-file-deployment.md) 规则（如果未清除静态文件并且存在多个名为的文件） `logo.svg` 不同，回退可能会导致显示错误的文件。
 
 例如，要禁用 `Magento_Weee` 模块，输入：
 
@@ -56,7 +56,7 @@ bin/magento module:disable [-c|--clear-static-content] [-f|--force] [--all] <mod
 bin/magento module:disable Magento_Weee
 ```
 
-有关启用和禁用模块的重要信息，请参见 [关于启用和禁用模块](#about-enabling-and-disabling-modules).
+有关启用和禁用模块的重要信息，请参阅 [关于启用和禁用模块](#about-enabling-and-disabling-modules).
 
 ## 更新数据库
 
@@ -74,32 +74,32 @@ bin/magento cache:clean
 
 ## 关于启用和禁用模块
 
-通过Adobe Commerce和Magento Open Source，您可以启用或禁用当前可用的模块；换言之，启用或禁用任何Adobe提供的模块或任何当前可用的第三方模块。
+Adobe Commerce和Magento Open Source允许您启用或禁用当前可用的模块；换言之，启用或禁用任何Adobe提供的模块或任何当前可用的第三方模块。
 
-某些模块对其他模块具有依赖关系，在这种情况下，您可能无法启用或禁用模块，因为它与其他模块具有依赖关系。
+某些模块具有对其他模块的依赖关系，在这种情况下，您可能无法启用或禁用模块，因为它具有对其他模块的依赖关系。
 
-此外，可能会 *冲突* 无法同时启用这两个模块的属性。
+此外，可能会 *冲突* 无法同时启用的模块。
 
 示例：
 
-* 模块A依赖于模块B。除非首先禁用模块A，否则无法禁用模块B。
+* 模块A依赖于模块B。除非先禁用模块A，否则不能禁用模块B。
 
 * 模块A依赖于模块B，二者均被禁用。 在启用模块A之前，必须启用模块B。
 
 * 模块A与模块B冲突。您可以禁用模块A和模块B，也可以禁用任一模块，但您可以 *无法* 同时启用模块A和模块B。
 
-* 依赖关系声明于 `require` Adobe Commerce和Magento Open Source中的字段 `composer.json` 每个模块的文件。 冲突声明于 `conflict` 模块中的字段 `composer.json` 文件。 我们使用该信息构建依赖关系图： `A->B` 表示模块A依赖于模块B。
+* 依赖关系在 `require` Adobe Commerce和Magento Open Source中的字段 `composer.json` 每个模块的文件。 冲突在 `conflict` 模块中的字段 `composer.json` 文件。 我们使用这些信息来构建依赖关系图： `A->B` 表示模块A依赖于模块B。
 
 * A *依赖关系链* 是从模块到另一个模块的路径。 例如，如果模块A依赖于模块B，而模块B依赖于模块C，则依赖链为 `A->B->C`.
 
-如果尝试启用或禁用依赖于其他模块的模块，则依赖关系图将显示在错误消息中。
+如果尝试启用或禁用依赖其他模块的模块，则依赖关系图将显示在错误消息中。
 
 >[!NOTE]
 >
->A模块有可能是 `composer.json` 声明与模块B冲突，但不声明相反的冲突。
+>可能是A模块 `composer.json` 声明与模块B冲突，但不声明相反冲突。
 
 *仅命令行：* 要强制启用或禁用模块，而不考虑其依赖关系，请使用可选的 `--force` 参数。
 
 >[!NOTE]
 >
->使用 `--force` 可能会禁用您的存储并导致访问管理员时出现问题。
+>使用 `--force` 可能会禁用您的商店，并导致访问管理员时出现问题。

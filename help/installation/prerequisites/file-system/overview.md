@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 文件所有权和权限
 
-在开发环境中保护您的Adobe Commerce或Magento Open Source安装非常重要，这有助于防止与未经授权的人员或流程访问（并可能损害）您的系统相关的问题。 使用以下文件系统所有权和权限指南来保护您的安装。
+在开发环境中保护您的Adobe Commerce或Magento Open Source安装非常重要，这样有助于防止出现与未经授权的人员或流程访问（并可能损害）您的系统相关的问题。 使用以下文件系统所有权和权限指南来保护您的安装。
 
 ## 文件系统所有者
 
@@ -21,16 +21,17 @@ ht-degree: 0%
 
 - **与单个用户共享托管**
 
-   通过共享托管提供程序，您可以以一个用户身份登录到应用程序服务器。 作为单个用户，您可以登录、使用FTP传输文件并运行Web服务器。 您可以选择设置 [`umask`](#restrict-access-with-a-umask) 以进一步限制访问，尤其是在生产环境中。
+  通过共享托管提供程序，您可以作为一位用户登录到应用程序服务器。 作为单个用户，您可以登录、使用FTP传输文件以及运行Web服务器。 您可以选择设置 [`umask`](#restrict-access-with-a-umask) 以进一步限制访问，尤其是在生产环境中。
 
 - **由两个用户进行私有托管**
 
-   如果管理应用程序服务器，则专用托管会很有用。 每个用户都有特定的职责：
+  如果管理应用程序服务器，则专用托管会很有用。 每个用户都有特定的责任：
 
    - 此 _Web服务器用户_ 运行管理员和店面。
 
    - 此 _命令行用户_ 运行cron作业和命令行实用程序。
-   两个用户都需要具有相同的文件系统权限，因此最好使用 [共享组](configure-permissions.md#set-ownership-and-permissions-for-two-users) 并设置 [`umask`](#restrict-access-with-a-umask).
+
+  两个用户都需要具有文件系统相同的权限，因此最好使用 [共享组](configure-permissions.md#set-ownership-and-permissions-for-two-users) 并设置 [`umask`](#restrict-access-with-a-umask).
 
 ### 使用umask限制访问
 
@@ -38,15 +39,15 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->文件系统安全是复杂而重要的。 我们强烈建议您在决定要设置的权限级别之前，咨询经验丰富的系统管理员或网络管理员。 我们为您提供使用机制，但创建权限策略是您的责任。
+>文件系统安全是复杂而重要的。 我们强烈建议您在决定要设置的权限级别之前，咨询经验丰富的系统管理员或网络管理员。 我们为您提供了一种可供使用的机制，但创建权限策略是您的责任。
 
-Adobe Commerce和Magento Open Source使用三位默认掩码： `002`. 从UNIX缺省值666（文件）和777（目录）中减去缺省蒙版。
+Adobe Commerce和Magento Open Source使用三位默认掩码： `002`. 从UNIX缺省值666（文件）和777（目录）中减去缺省掩码。
 
 例如：
 
-- **775目录** — 用户可完全控制，组可完全控制，使每个人都能遍历目录。 共享托管提供程序通常需要这些权限。
+- **775目录** — 用户可完全控制，组可完全控制，并使每个人都能遍历目录。 共享托管提供程序通常需要这些权限。
 
-- **664（文件）** — 用户可写，组可写，其他所有人只读。
+- **664（文件）** — 用户可写，组可写，其他所有人可只读。
 
 有关创建的详细信息 `magento_umask` 文件，请参见 [设置umask](../../next-steps/set-umask.md).
 
@@ -58,7 +59,7 @@ Adobe Commerce和Magento Open Source使用三位默认掩码： `002`. 从UNIX�
 - 开发人员
 - 生产
 
-参见 [关于模式](../../../configuration/bootstrap/application-modes.md) 在 _配置指南_.
+请参阅 [关于模式](../../../configuration/bootstrap/application-modes.md) 在 _配置指南_.
 
 我们将在中进一步讨论权限建议 [文件系统访问权限](../../../configuration/deployment/file-system-permissions.md) 在 _配置指南_.
 

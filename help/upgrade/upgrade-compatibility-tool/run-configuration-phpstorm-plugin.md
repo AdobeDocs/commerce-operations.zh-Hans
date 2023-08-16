@@ -1,6 +1,6 @@
 ---
 title: 在中运行配置 [!DNL Magento PHPStorm plugin]
-description: 按照本指南使用 [!DNL Upgrade Compatibility Tool] 在 [!DNL Magento PHPStorm plugin].
+description: 按照本指南使用 [!DNL Upgrade Compatibility Tool] 内部 [!DNL Magento PHPStorm plugin].
 exl-id: 8d5a0666-83c0-4249-8601-7d081acb9009
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 ## [!DNL Magento PHPStorm plugin] 演示
 
-观看本视频，了解 [!DNL Magento PHPStorm plugin]：
+观看本视频以了解 [!DNL Magento PHPStorm plugin]：
 
 >[!VIDEO](https://video.tv.adobe.com/v/340150?quality=12)

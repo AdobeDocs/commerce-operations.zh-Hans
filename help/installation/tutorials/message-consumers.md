@@ -11,14 +11,14 @@ ht-degree: 0%
 
 # 配置消息使用者
 
-在运行此命令之前，必须执行以下操作 *或* 您必须 [安装应用程序](../advanced.md)：
+运行此命令之前，必须执行以下操作 *或* 您必须 [安装应用程序](../advanced.md)：
 
 * [创建或更新部署配置](deployment.md)
 * [创建数据库模式](database.md)
 
 ## 配置使用者行为
 
-通过在设置函数中发送键/值对，可配置使用者行为：
+通过在设置函数中发送键/值对，可配置消费者行为：
 
 ```bash
 bin/magento setup:config:set [--<parameter_name>=<value>, ...]

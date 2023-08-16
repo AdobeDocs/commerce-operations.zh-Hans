@@ -14,7 +14,7 @@ ht-degree: 0%
 
 如果您在升级到MariaDB 10.6后遇到与索引无关的性能下降，请考虑启用 [`--query-cache-type`](https://mariadb.com/kb/en/server-system-variables/#query_cache_type) 设置。 例如， `--query-cache-type=ON`.
 
-除了这些建议之外，您还应咨询数据库管理员以配置以下参数：
+除了这些建议之外，您还应咨询数据库管理员配置以下参数：
 
 >[!NOTE]
 >

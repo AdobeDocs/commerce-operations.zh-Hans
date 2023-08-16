@@ -1,5 +1,5 @@
 ---
-title: 云基础架构区域
+title: 云基础架构地区
 description: 查看显示可用于Adobe Commerce的AWS和Azure区域的图表。
 exl-id: d8f59845-8281-4c9f-8101-51f9c35a0455
 feature: Cloud
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 云区域
 
-以下部分提供了有关云基础架构上Adobe Commerce可用的不同AWS和Azure区域的详细信息。
+以下部分提供了有关云基础架构上可用于Adobe Commerce的各种AWS和Azure区域的详细信息。
 
 ## AWS地区
 

@@ -2,11 +2,11 @@
 title: 写入自定义日志文件
 description: 了解如何设置自定义日志文件。
 feature: Configuration, Logs
-badge: label="Contributed by Atwix" type="Informational" url="https://www.atwix.com/" tooltip="Atwix"
+badge: label="由Atwix提供" type="Informative" url="https://www.atwix.com/" tooltip="阿特维克斯"
 exl-id: 875f45e7-30c9-4b1b-afe9-d1a8d51ccdf0
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## 在中设置自定义日志文件 `di.xml`
 
-此示例说明如何使用 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 以记录 `debug` 消息放入自定义日志文件而不是标准日志文件 `/var/log/debug.log`.
+此示例说明如何使用 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 到日志 `debug` 消息放入自定义日志文件而不是标准日志文件 `/var/log/debug.log`.
 
 1. 在 `di.xml` 文件，将自定义日志文件定义为 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
 
@@ -131,7 +131,7 @@ ht-degree: 0%
 
    `MyCustomLogger` 是唯一标识符。
 
-1. 在 `type` 定义，指定插入自定义记录器处理程序的类名。 使用上一步中的虚拟类型名称作为此类型的参数。
+1. 在 `type` 定义，指定插入自定义记录器处理程序的类名称。 使用上一步中的虚拟类型名称作为此类型的参数。
 
    ```xml
    <type name="Vendor\ModuleName\Observer\MyObserver">
@@ -141,7 +141,7 @@ ht-degree: 0%
    </type>
    ```
 
-   的源代码 `Vendor\ModuleName\Observer\MyObserver` 类：
+   的源代码 `Vendor\ModuleName\Observer\MyObserver` class：
 
    ```php
    <?php
@@ -203,7 +203,7 @@ ht-degree: 0%
    ...
    ```
 
-异常消息记录在 `/var/log/my_custom_logger/error.log` 文件。
+例外消息记录在 `/var/log/my_custom_logger/error.log` 文件。
 
 <!-- link definitions -->
 

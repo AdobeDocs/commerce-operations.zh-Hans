@@ -11,10 +11,10 @@ ht-degree: 0%
 
 # 执行升级
 
-如果通过以下方式安装了软件，则可以从命令行升级Adobe Commerce或Magento Open Source应用程序：
+如果您通过以下方式安装了Adobe Commerce或Magento Open Source应用程序，则可以从命令行对其进行升级：
 
-- 使用下载元包 `composer create-project` 命令。
-- 安装压缩的归档文件。
+- 使用下载中继包 `composer create-project` 命令。
+- 正在安装压缩的归档文件。
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->升级Adobe Commerce和Magento Open Source的过程已更改。 您必须安装新版本的 `magento/composer-root-update-plugin` 包(请参阅 [先决条件](../prepare/prerequisites.md))。 此外，升级命令已从 `composer require magento/<package_name>` 到 `composer require-commerce magento/<package_name>`.
+>升级Adobe Commerce和Magento Open Source的过程已更改。 您必须安装新版本的 `magento/composer-root-update-plugin` 包(请参阅 [先决条件](../prepare/prerequisites.md))。 此外，用于升级的命令已从 `composer require magento/<package_name>` 到 `composer require-commerce magento/<package_name>`.
 
 ## 开始之前
 
@@ -34,15 +34,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->请参阅本节末尾的示例，以获取指定不同版本级别的帮助。 例如，次要版本、质量补丁和安全补丁程序。 Adobe Commerce客户可以在正式发布(GA)日期的两周前访问修补程序。 预发行版软件包只能通过Composer获得。 在GA之前，您无法在下载门户或GitHub上找到它们。 如果您在编辑器中找不到这些包，请联系Adobe Commerce支持。
+>请参阅本节末尾的示例，以获取指定不同版本级别的帮助。 例如，次要版本、质量补丁和安全补丁。 Adobe Commerce客户可以在正式发布(GA)日期两周前访问修补程序。 预发行版包只能通过Composer使用。 在GA发布之前，您无法在下载门户或GitHub上找到它们。 如果您在编辑器中找不到这些包，请联系Adobe Commerce支持。
 
-1. 切换到维护模式，以防止在升级过程中访问存储区。
+1. 切换到维护模式以防止在升级过程中访问存储区。
 
    ```bash
    bin/magento maintenance:enable
    ```
 
-   参见 [启用或禁用维护模式](../../installation/tutorials/maintenance-mode.md) 以获取其他选项。 （可选）您可以创建 [自定义维护模式页面](../troubleshooting/maintenance-mode-options.md).
+   请参阅 [启用或禁用维护模式](../../installation/tutorials/maintenance-mode.md) 以获取其他选项。 或者，您可以创建 [自定义维护模式页面](../troubleshooting/maintenance-mode-options.md).
 
 1. 在异步进程（如消息队列使用者）运行时启动升级过程可能会导致数据损坏。 要防止数据损坏，请禁用所有cron作业。
 
@@ -88,17 +88,17 @@ ht-degree: 0%
 
    - _Adobe Commerce：_
 
-      ```bash
-      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* magento/module-gift-card-sample-data:100.4.* magento/module-customer-balance-sample-data:100.4.* magento/module-target-rule-sample-data:100.4.* magento/module-gift-registry-sample-data:100.4.* magento/module-multiple-wishlist-sample-data:100.4.* --no-update
-      ```
+     ```bash
+     composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* magento/module-gift-card-sample-data:100.4.* magento/module-customer-balance-sample-data:100.4.* magento/module-target-rule-sample-data:100.4.* magento/module-gift-registry-sample-data:100.4.* magento/module-multiple-wishlist-sample-data:100.4.* --no-update
+     ```
 
    - _Magento Open Source：_
 
-      ```bash
-      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* --no-update
-      ```
+     ```bash
+     composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* --no-update
+     ```
 
-1. 使用以下项目升级您的实例 `composer require-commerce` 命令语法：
+1. 使用以下方式升级您的实例 `composer require-commerce` 命令语法：
 
    ```bash
    composer require-commerce magento/<product> <version> --no-update [--interactive-root-conflicts] [--force-root-updates] [--help]
@@ -106,18 +106,19 @@ ht-degree: 0%
 
    命令选项包括：
 
-   - `<product>`  — （必需）要升级的包。 对于内部部署，该值必须为 `product-community-edition` 或 `product-enterprise-edition`.
+   - `<product>`  — （必需）要升级的包。 对于内部部署，此值必须为 `product-community-edition` 或 `product-enterprise-edition`.
 
    - `<version>`  — （必需）要升级到的Adobe Commerce或Magento Open Source的版本。 例如， `2.4.3`.
 
    - `--no-update`  — （必需）禁用依赖关系的自动更新。
 
-   - `--interactive-root-conflicts`  — （可选）允许您以交互方式查看和更新以前版本中的任何过期值，或与要升级到的版本不匹配的任何自定义值。
+   - `--interactive-root-conflicts`  — （可选）允许您以交互方式查看和更新先前版本的任何过期值，或与要升级到的版本不匹配的任何自定义值。
 
    - `--force-root-updates`  — （可选）使用预期的Magento值覆盖所有冲突的自定义值。
 
-   - `--help`  — （可选）提供有关插件的使用情况详细信息。
-   如果两者都不 `--interactive-root-conflicts` 也不 `--force-root-updates` 指定时，该命令将保留冲突的现有值并显示一条警告消息。 要了解有关插件的更多信息，请参阅 [插件使用情况自述文件](https://github.com/magento/composer-root-update-plugin/blob/develop/src/Magento/ComposerRootUpdatePlugin/README.md).
+   - `--help`  — （可选）提供有关插件的使用详细信息。
+
+   如果两者均不 `--interactive-root-conflicts` 也不 `--force-root-updates` 指定时，该命令将保留冲突的现有值并显示警告消息。 要了解有关插件的更多信息，请参阅 [插件使用情况自述文件](https://github.com/magento/composer-root-update-plugin/blob/develop/src/Magento/ComposerRootUpdatePlugin/README.md).
 
 1. 更新依赖关系。
 
@@ -143,7 +144,7 @@ composer show magento/product-enterprise-edition 2.4.* --available | grep -m 1 v
 
 ### 示例 — 次要版本
 
-次要版本包含新功能、质量修复和安全修复。 使用Composer指定次要版本。 例如，要指定Magento Open Source2.4.3元包，请执行以下操作：
+次发行版本包含新功能、质量修复和安全修复。 使用编辑器指定次要版本。 例如，要指定Magento Open Source2.4.3元包，请执行以下操作：
 
 _Magento Open Source_：
 
@@ -159,7 +160,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.0 --no-update
 
 ### 示例 — 质量修补程序
 
-质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时可以包含向后兼容的新功能。 使用Composer下载高质量的修补程序。 例如，要指定Magento Open Source2.4.1元包，请执行以下操作：
+质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时可以包含向后兼容的新功能。 使用Composer下载质量修补程序。 例如，要指定Magento Open Source2.4.1元包，请执行以下操作：
 
 ```bash
 composer require-commerce magento/product-community-edition 2.4.3 --no-update
@@ -201,7 +202,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-updat
 
    >[!NOTE]
    >
-   >更新中的元数据 `composer.json` 文件完全是表面的，无法正常运行。
+   >在中更新元数据 `composer.json` 文件完全是表面的，无法正常运行。
 
 1. 应用更新。
 
@@ -225,7 +226,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-updat
 
    >[!NOTE]
    >
-   >如果您使用文件系统以外的缓存存储（如Redis或Memcached ），则也必须手动清除其中的缓存。
+   >如果您使用文件系统以外的缓存存储，如Redis或Memcached，则也必须手动清除其中的缓存。
 
 1. 更新数据库架构和数据。
 
@@ -249,9 +250,9 @@ composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-updat
 
 ## 检查您的工作
 
-在Web浏览器中打开店面URL以检查升级是否成功。 如果升级不成功，您的店面将无法正确加载。
+在Web浏览器中打开店面URL，检查升级是否成功。 如果升级不成功，您的店面将无法正确加载。
 
-如果应用程序失败，并且  `We're sorry, an error has occurred while generating this email.` 错误：
+如果应用程序失败，  `We're sorry, an error has occurred while generating this email.` 错误：
 
 1. 重置 [文件系统所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md) 作为用户，具有 `root` 权限。
 1. 清除以下目录：

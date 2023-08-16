@@ -312,7 +312,7 @@ ht-degree: 0%
 ## v1.1.17 {#v1-1-17}
 
 * **ACSD-45241** (*对于Adobe Commerce和Magento Open Source>=2.3.5 &lt;2.4.4*) — 修复了在创建贷项通知单后虚拟产品的库存数量计算错误的问题。
-* **ACSD-43887** (*对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了在启用公司的采购订单时，在结账付款页面上显示不正确详细信息的问题。
+* **ACSD-43887** (*对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了在启用公司的采购订单时，在结帐付款页面上显示不正确详细信息的问题。
 * **ACSD-45143** (*对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.5*) — 修复了 `setShippingAddressesOnCart` 突变不允许将数字区域代码设置为 *区域*.
 * **ACSD-44591** (*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.6*) — 修复了在未进行验证码确认的情况下下达订单时发生的错误。
 * **ACSD-45520** (*对于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.6*) — 修复了当用户从购物车编辑可配置产品时，未在产品详细信息页面上预先选择样本选项的问题。
@@ -602,7 +602,7 @@ ht-degree: 0%
 * **MDVA-35982** (*对于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了仅限特定网站的管理员用户无法为同一网站上的订单创建装运的问题。
 * **MDVA-35155** (*对于Adobe Commerce >=2.3.0 &lt;2.3.6*) — 修复了在选项标题更改时无法购买捆绑产品的问题。
 * **MDVA-35910** (*对于Adobe Commerce >=2.4.1 &lt;2.4.3*) — 修复了在禁用“作为客户登录”功能后无法创建新客户帐户的问题。
-* **MDVA-34474** (*对于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了使用API将产品添加到申请列表的问题。
+* **MDVA-34474** (*对于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了使用API将产品添加到申请列表时出现的问题。
 * **MDVA-34591** (*对于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了计算购物车规则折扣不正确的问题 *最大数量折扣应用于* 和 *折扣数量步骤（购买X）*.
 * **MDVA-33704** (*对于Adobe Commerce >=2.4.0 &lt;2.4.3*) — 修复了 *店内提货* 虽然已将配送选项配置为可用，但不会显示。
 * **MDVA-34928** (*对于Adobe Commerce >=2.3.5 &lt;2.3.5-p2*) — 修复了从付款中删除商店积分后无限期显示页面加载程序的问题。

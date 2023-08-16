@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## 验证HTTP响应标头
 
-使用 `curl` 或另一个实用程序，用于在您访问Web浏览器中的任何Commerce页面时查看HTTP响应标头。
+使用 `curl` 或者另一个实用程序，当您在Web浏览器中访问任何Commerce页面时查看HTTP响应标头。
 
-首先，确保使用 [开发人员模式](../cli/set-mode.md#change-to-developer-mode)；否则，您将看不到标头。
+首先，确保使用 [开发者模式](../cli/set-mode.md#change-to-developer-mode)；否则，您将看不到标头。
 
 例如，
 
@@ -40,18 +40,18 @@ X-Magento-Cache-Debug: MISS
 
 ## 检查页面加载时间
 
-如果Varnish运行正常，则任何包含可缓存块的Commerce页面都应在150毫秒内加载。 此类页面的示例是前门和店面类别页面。
+如果Varnish运行正常，则任何包含可缓存块的Commerce页面都应在150毫秒内加载。 此类页面的示例包括前门和店面类别页面。
 
 使用浏览器检查器测量页面加载时间。
 
-例如，要使用Chrome检查器：
+例如，使用Chrome检查器：
 
-1. 访问Chrome中任何可缓存的Commerce页面。
+1. 在Chrome中访问任何可缓存的Commerce页面。
 1. 右键单击页面上的任意位置。
-1. 从弹出菜单中，单击 **[!UICONTROL Inspect Element]**
+1. 在弹出菜单中，单击 **[!UICONTROL Inspect Element]**
 1. 在检查器窗格中，单击 **[!UICONTROL Network]** 选项卡。
 1. 刷新页面。
-1. 滚动到检查器窗格的顶部，以便查看所查看页面的URL。
+1. 滚动到检查器窗格的顶部，以便查看正在查看的页面的URL。
 
    下图显示了一个加载 `magento2` 索引页。
 
@@ -63,7 +63,7 @@ X-Magento-Cache-Debug: MISS
 
    您可以查看HTTP标头，有关更多详细信息，请参阅验证HTTP响应标头一节。
 
-## 验证Commerce缓存
+## 验证商务缓存
 
 确保 `<magento_root>/var/page_cache` 目录为空：
 

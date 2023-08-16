@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # 此 [!UICONTROL CDN] 选项卡
 
-此选项卡包含的信息主要关注 [!DNL content delivery network (CDN)]. 对于Adobe Commerce Cloud，这是 [!DNL Fastly] 服务。
+此选项卡包含的信息重点在于 [!DNL content delivery network (CDN)]. 对于Adobe Commerce Cloud，这是 [!DNL Fastly] 服务。
 
 ## [!UICONTROL HIT rate]
 
-![点击率](../../assets/tools/observation-for-adobe-commerce/cdn-tab-1.png)
+![命中率](../../assets/tools/observation-for-adobe-commerce/cdn-tab-1.png)
 
-此 **[!UICONTROL HIT rate]** frame显示导致以下问题的可缓存请求数 [!UICONTROL HITS] 在最后一刻。 这表示缓存成功。 右箭头将显示一周前同一时间的上方或下方百分比。
+此 **[!UICONTROL HIT rate]** 帧显示导致的可缓存请求数 [!UICONTROL HITS] 在最后一刻。 这表示缓存成功。 右箭头将显示一周前同一时间的上方或下方百分比。
 
 ## [!UICONTROL HIT Processing]
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ![未命中率](../../assets/tools/observation-for-adobe-commerce/cdn-tab-3.png)
 
-此 **[!UICONTROL MISS rate]** 框显示最后一分钟未命中可缓存请求的次数。 未命中是指未缓存请求，并且请求必须传递到源服务器才能提供内容。 右边的值是一周前增加/减少与每分钟数之比较。
+此 **[!UICONTROL MISS rate]** 框显示最后一分钟未命中可缓存请求的次数。 未命中是指未缓存请求，并且请求必须传递到源服务器才能提供内容。 右边的值是一周前每分钟增加/减少的分钟数对比。
 
 ## [!UICONTROL MISS time]
 
@@ -56,13 +56,13 @@ ht-degree: 0%
 
 ## [!UICONTROL Fastly Cache Average Response for selected time period in seconds]
 
-![所选时间段的快速缓存平均响应（以秒为单位）](../../assets/tools/observation-for-adobe-commerce/cdn-tab-9.png)
+![所选时段的快速缓存平均响应（以秒为单位）](../../assets/tools/observation-for-adobe-commerce/cdn-tab-9.png)
 
-此帧显示可缓存请求的持续时间（以秒为单位），这意味着 `cache_response` 是 [!UICONTROL MISS]，它显示选定时间内未命中的缓存响应的平均值。
+此帧以秒为单位显示可缓存请求的持续时间，这意味着 `cache_response` 是 [!UICONTROL MISS]，它显示选定时间内错过的缓存响应的平均值。
 
 ## [!UICONTROL Fastly Cache Average Response for selected time period in seconds, faceted by POP]
 
-![POP面向的选定时间段的快速缓存平均响应（以秒为单位）](../../assets/tools/observation-for-adobe-commerce/cdn-tab-10.png)
+![POP分方面的选定时间段的快速缓存平均响应（以秒为单位）](../../assets/tools/observation-for-adobe-commerce/cdn-tab-10.png)
 
 ## [!UICONTROL Total Bandwidth (All POPs) during the selected timeframe, compared with 1 week ago (% increase/decrease)]
 
@@ -70,9 +70,9 @@ ht-degree: 0%
 
 ## [!UICONTROL Requests – Since selected timeframe compared with one week ago]
 
-![请求 — 自选定的时间范围与一周前相比](../../assets/tools/observation-for-adobe-commerce/cdn-tab-12.png)
+![请求 — 自选定时间范围与一周前相比](../../assets/tools/observation-for-adobe-commerce/cdn-tab-12.png)
 
-此框架类似于的摘要框 [!UICONTROL Total Requests] ，但显示前几周的请求计数。 所有这些都是请求，而不仅仅是可缓存的请求(其中 `is_cacheable` 为true)。
+此框架类似于的摘要框 [!UICONTROL Total Requests] ，但显示前几周的请求计数。 所有这些都是请求，而不仅仅是可缓存的请求(其中 `is_cacheable` 为真)。
 
 ## [!UICONTROL Response Count]
 
@@ -86,13 +86,13 @@ ht-degree: 0%
 
 ![前5个URL（5xx或3xx状态代码）](../../assets/tools/observation-for-adobe-commerce/cdn-tab-15.gif)
 
-此 **[!UICONTROL Top 5 URLs]** 视图显示出现5xx或3xx错误响应的前5个URL。 由于空间限制，您需要将鼠标悬停在该URL上才能查看与该URL关联的特定错误代码。 （上图红色框中的示例）。
+此 **[!UICONTROL Top 5 URLs]** 视图显示出现5xx或3xx错误响应的前5个URL。 由于空间限制，您需要将鼠标悬停在该URL上才能查看与该URL关联的特定错误代码。 （以上图红色框中的示例）。
 
 ## [!UICONTROL Top 25 URLs (200 status)]
 
-![前25个URL （200状态）](../../assets/tools/observation-for-adobe-commerce/cdn-tab-16.gif)
+![前25个URL（200状态）](../../assets/tools/observation-for-adobe-commerce/cdn-tab-16.gif)
 
-此 **[!UICONTROL Top 25 URLs]** 框架显示在所选时间范围内按计数返回200状态的URL。
+此 **[!UICONTROL Top 25 URLs]** 此框架显示在所选时间范围内按计数返回200状态的URL。
 
 ## [!UICONTROL Duration by Response Status]
 
@@ -102,21 +102,21 @@ ht-degree: 0%
 
 ## [!UICONTROL Duration by Response Status, top 25 urls]
 
-![按响应状态显示的持续时间，前25个URL](../../assets/tools/observation-for-adobe-commerce/cdn-tab-18.gif)
+![按响应状态排列的持续时间，前25个URL](../../assets/tools/observation-for-adobe-commerce/cdn-tab-18.gif)
 
-此 **[!UICONTROL Duration by Response Status, top 25 URLs]** 该图按响应持续时间显示前25个URL（以秒为单位）。 您可能需要将鼠标悬停在URL上才能查看整个路径。 此外，要删除除一个URL之外的所有其他URL，请单击该URL。 然后，您可以通过分别单击其他URL来重新添加它们。 如果要删除单个URL，可以按住键并单击每个URL以将其从图形中删除。
+此 **[!UICONTROL Duration by Response Status, top 25 URLs]** 该图按响应持续时间显示前25个URL（以秒为单位）。 您可能需要将鼠标悬停在URL上才能查看整个路径。 此外，要删除除一个URL之外的所有其他URL，请单击该URL。 然后，您可以通过分别单击其他URL来重新添加它们。 如果要删除单个URL，可以按住键并单击每个URL以从图形中将其删除。
 
 ## [!UICONTROL Duration by Response Status, top 25 non-200 status]
 
 ![按响应状态显示的持续时间，前25个非200个状态](../../assets/tools/observation-for-adobe-commerce/cdn-tab-19.gif)
 
-此 **[!UICONTROL Duration by Response Status, top 25 non-200 status]** 图表与上一个图表类似，不同之处在于图表侧重于非200状态代码或错误状态代码。 它将显示错误代码，然后显示URL。 您可能需要将鼠标悬停在URL上才能查看整个路径。 此外，要删除除一个URL之外的所有其他URL，请单击该URL。 然后，您可以通过分别单击其他URL来重新添加它们。 如果要删除单个URL，可以按住键并单击每个URL以将其从图形中删除。
+此 **[!UICONTROL Duration by Response Status, top 25 non-200 status]** 图表与上一个图表类似，不同之处在于图表侧重于非200状态代码或错误状态代码。 它将显示错误代码，然后显示URL。 您可能需要将鼠标悬停在URL上才能查看整个路径。 此外，要删除除一个URL之外的所有其他URL，请单击该URL。 然后，您可以通过分别单击其他URL来重新添加它们。 如果要删除单个URL，可以按住键并单击每个URL以从图形中将其删除。
 
 ## [!UICONTROL Error Count by POP timeline]
 
 ![按POP时间轴显示的错误计数](../../assets/tools/observation-for-adobe-commerce/cdn-tab-20.png)
 
-此 **[!UICONTROL Error Count by POP timeline]** 图形沿选定的时间范围时间轴显示错误状态的计数，以错误代码分面。
+此 **[!UICONTROL Error Count by POP timeline]** 图形可显示选定时间范围时间轴上的错误状态计数，并以错误代码分面。
 
 ## [!UICONTROL Duration by Response status, top 25 client IP, non-200 status]
 
@@ -128,4 +128,4 @@ ht-degree: 0%
 
 ![IP频率](../../assets/tools/observation-for-adobe-commerce/cdn-tab-22.jpeg)
 
-此 **[!UICONTROL IP Frequency]** frame计算每个IP的（&#39;MISS&#39;和&#39;PASS&#39;）状态，从 [!DNL Fastly] 日志。 具有这些状态的Web请求将访问原始服务器，并将向服务器添加负载。 它显示频率排名前20的地址。 此帧可用于检测网站上的IP攻击或重负载源。 此图表也会显示在“摘要”选项卡中，并放置在此处，以便与 [!DNL Fastly] 此选项卡上显示的日志信息。
+此 **[!UICONTROL IP Frequency]** 帧计算（&#39;MISS&#39;和&#39;PASS&#39;）状态，每个IP来自 [!DNL Fastly] 日志。 具有这些状态的Web请求将访问原始服务器，并将向服务器添加负载。 它显示频率排名前20的地址。 此帧可用于检测网站上的IP攻击或重负载源。 此图表也会显示在摘要选项卡中，放置在此处可轻松与的更多详细信息进行比较。 [!DNL Fastly] 此选项卡上显示的日志信息。

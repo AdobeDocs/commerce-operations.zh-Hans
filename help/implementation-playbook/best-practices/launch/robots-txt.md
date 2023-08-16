@@ -1,6 +1,6 @@
 ---
 title: 配置“robots.txt”和“sitemap.xml”文件的最佳实践
-description: 了解如何将有关Adobe Commerce站点的说明传递给Web爬网程序。
+description: 了解如何将有关您的Adobe Commerce网站的说明传递给Web爬网程序。
 role: Developer
 feature: Best Practices
 exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
@@ -28,20 +28,20 @@ ht-degree: 0%
 
 ## 云基础架构上的Adobe Commerce
 
-默认的Adobe Commerce项目包含一个层级，其中包含单个网站、商店和商店视图。 对于更复杂的实施，您可以为创建其他网站、商店和存储视图 _多站点_ 店面。
+默认的Adobe Commerce项目包含一个层级，其中包括单个网站、商店和商店视图。 对于更复杂的实施，您可以为创建其他网站、商店和存储视图 _多站点_ 店面。
 
 ### 单站点店面
 
-在配置 `robots.txt` 和 `sitemap.xml` 单站点存储前面的文件：
+配置时，请遵循以下最佳实践 `robots.txt` 和 `sitemap.xml` 单站点店面的文件：
 
 - 确保您的项目正在使用 [`ece-tools`](https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html) 版本2002.0.12或更高版本
-- 使用管理应用程序将内容添加到 `robots.txt` 文件。
+- 使用管理员应用程序将内容添加到 `robots.txt` 文件。
 
   >[!TIP]
   >
-  >查看自动生成的 `robots.txt` 您商店的文件： `<domain.your.project>/robots.txt`.
+  >查看自动生成的 `robots.txt` 您商店的文件，位于 `<domain.your.project>/robots.txt`.
 
-- 使用管理应用程序生成 `sitemap.xml` 文件。
+- 使用Admin应用程序生成 `sitemap.xml` 文件。
 
   >[!IMPORTANT]
   >
@@ -63,14 +63,14 @@ ht-degree: 0%
 
 >[!INFO]
 >
->参见 [添加站点地图和搜索引擎自动机](https://devdocs.magento.com/cloud/trouble/robots-sitemap.html) 以获取详细说明。
+>请参阅 [添加站点地图和搜索引擎机器人](https://devdocs.magento.com/cloud/trouble/robots-sitemap.html) 以获取详细说明。
 
 
 ### 多站点店面
 
-只需在云基础架构上实施一次Adobe Commerce，即可设置和运行多个商店。 参见 [设置多个网站或商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html).
+您可以在云基础架构上通过一次实施Adobe Commerce来设置和运行多个商店。 请参阅 [设置多个网站或商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html).
 
-配置配置体验的相同最佳实践 `robots.txt` 和 `sitemap.xml` 文件 [单站点店面](#single-site-storefronts) 适用于多站点商店，但有两个重要区别：
+配置的最佳实践也相同 `robots.txt` 和 `sitemap.xml` 文件 [单站点店面](#single-site-storefronts) 适用于具有两个重要区别的多站点商店：
 
 - 确保 `robots.txt` 和 `sitemap.xml` 文件名包含相应站点的名称。 例如：
    - `domaineone_robots.txt`
@@ -92,17 +92,17 @@ ht-degree: 0%
 
 ## Adobe Commerce内部部署
 
-使用管理应用程序配置 `robots.txt` 和 `sitemap.xml` 文件以防止机器人扫描和索引不必要的内容(请参阅 [搜索引擎机器人](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots))。
+使用管理员应用程序配置 `robots.txt` 和 `sitemap.xml` 用于阻止机器人扫描和索引不必要内容的文件(请参阅 [搜索引擎机器人](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots))。
 
 >[!TIP]
 >
->对于内部部署，文件编写位置取决于安装Adobe Commerce的方式。 将文件写入 `/path/to/commerce/pub/media/` 或 `/path/to/commerce/media`，以适合您的安装为准。
+>对于内部部署，文件编写位置取决于您安装Adobe Commerce的方式。 将文件写入 `/path/to/commerce/pub/media/` 或 `/path/to/commerce/media`，以适合您的安装为准。
 
 ## 安全性
 
-请勿在下列位置公开您的管理员路径： `robots.txt` 文件。 暴露管理路径是网站黑客攻击和潜在数据丢失的漏洞。 从删除管理员路径 `robots.txt` 文件。
+不要在您的网站中公开您的管理员路径， `robots.txt` 文件。 暴露管理员路径是网站黑客攻击和潜在数据丢失的漏洞。 从删除管理员路径 `robots.txt` 文件。
 
-有关编辑 `robots.txt` 文件并删除管理员路径的所有条目，请参见 [《营销用户指南》 > “SEO和搜索” > “搜索引擎机器人”](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots).
+有关编辑 `robots.txt` 文件并删除管理员路径的所有条目，请参见 [《营销用户指南》 > “SEO”和“搜索” > “搜索引擎机器人”](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots).
 
 >[!TIP]
 >
@@ -113,4 +113,4 @@ ht-degree: 0%
 - [了解网站、商店和商店视图](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
 - [添加网站](https://docs.magento.com/user-guide/stores/stores-all-create-website.html)
 - [使用Fastly阻止Adobe Commerce网站的恶意流量](https://devdocs.magento.com/cloud/cdn/fastly-vcl-blocking.html)
-- [robots.txt在云基础架构2.3.x上的Adobe Commerce中出现404错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html)
+- [robots.txt在Adobe Commerce on cloud infrastructure 2.3.x中出现404错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html)

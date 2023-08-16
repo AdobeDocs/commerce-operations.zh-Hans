@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 模块更新失败后回滚
 
-如果模块更新失败，控制台日志中会显示类似于以下内容的消息：
+如果模块更新失败，控制台日志中会显示与以下内容类似的消息：
 
 ```terminal
 [2015-08-14 12:12:02 CDT] Job "update {"components":[{"name":"example/module","version":"1.1.0"}]}" has been started
@@ -21,6 +21,6 @@ ht-degree: 0%
 [{"name":"example/module","version":"1.1.0"}]} successfully: Cannot find component to update
 ```
 
-在上例中，没有要回滚的组件版本。 请与组件供应商联系，或尝试自行解决此问题。
+在上例中，没有要回滚的组件版本。 请联系组件供应商或尝试自行解决问题。
 
-同时，您可以通过单击 **回滚**，它可以恢复您的数据，即使您以前未备份过。
+同时，您可以通过单击以回退到以前的版本 **回滚**，它可以恢复您的数据，即使您以前未备份。

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Adobe Commerce中OPcache内存大小的最佳实践
 
-对于Adobe Commerce on cloud infrastructure Pro计划架构2.3.x，建议设置 `opcache.memory_consumption` 到至少2 GB，以避免性能下降。
+对于云基础架构上的Adobe Commerce Pro计划架构2.3.x，建议设置 `opcache.memory_consumption` 到至少2 GB，以避免性能下降。
 
 ## 受影响的产品和版本
 

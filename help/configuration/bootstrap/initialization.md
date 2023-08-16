@@ -1,6 +1,6 @@
 ---
 title: 应用程序初始化和引导
-description: 阅读有关Commerce应用程序的初始化和引导逻辑。
+description: 阅读Commerce应用程序的初始化和引导逻辑。
 feature: Configuration, Install, Media
 exl-id: 46d1ffc0-7870-4dd1-beec-0a9ff858ab62
 source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
@@ -12,33 +12,33 @@ ht-degree: 0%
 
 # 初始化和引导概述
 
-要运行Commerce应用程序，将在中实施以下操作 [pub/index.php][index]：
+要运行Commerce应用程序，在中实施了以下操作 [pub/index.php][index]：
 
 - 包括 [app/bootstrap.php][bootinitial]，执行基本初始化例程，如错误处理、初始化自动加载程序、设置性能分析选项和设置默认时区。
 - 创建实例 [\Magento\Framework\App\Bootstrap.php][bootstrap] <!-- It requires initialization parameters to be specified in constructor. Normally, the $_SERVER super-global variable is supposed to be passed there. -->
 - 创建Commerce应用程序实例： [\Magento\Framework\AppInterface][app-face]
-- 运行Commerce
+- 运行商务
 
 ## Bootstrap运行逻辑
 
 [bootstrap对象][bootinitial] 使用以下算法运行Commerce应用程序：
 
 1. 初始化错误处理程序。
-1. 创建 [对象管理器][object] 以及基本共享服务，这些服务随处使用，并受环境影响。 将环境参数正确插入这些对象中。
-1. 声明维护模式为 _非_ 已启用；否则，将终止。
+1. 创建 [对象管理器][object] 以及基本共享服务，这些服务随处使用并受环境影响。 环境参数将被正确地插入这些对象中。
+1. 断言维护模式为 _非_ 已启用；否则，将终止。
 1. 声明已安装Commerce应用程序；否则，将终止。
 1. 启动商务应用程序。
 
-   应用程序启动期间的任何未捕获异常都会自动传递回Commerce的 `catchException()` 可用于处理异常的方法。 后者必须返回 `true` 或 `false`：
+   应用程序启动期间任何未捕获的异常都会自动传递回 `catchException()` 可用于处理异常的方法。 后者要么必须返回 `true` 或 `false`：
 
-   - 如果 `true`：Commerce已成功处理异常。 不需要做别的事。
+   - 如果 `true`：Commerce已成功处理异常。 没必要做别的事。
    - 如果 `false`：（或任何其他空结果）Commerce未处理异常。 bootstrap对象执行缺省的异常处理子例程。
 
 1. 发送由应用程序对象提供的响应。
 
    >[!INFO]
    >
-   >断言Commerce应用程序已安装且未处于维护模式，是 `\Magento\Framework\App\Bootstrap` 类。 在创建引导对象时，可以使用入口点脚本来修改它。
+   >断言已安装Commerce应用程序且未处于维护模式，这是 `\Magento\Framework\App\Bootstrap` 类。 创建引导对象时，可以使用入口点脚本对其进行修改。
 
    修改引导数据库对象的入口点脚本示例：
 
@@ -61,9 +61,9 @@ ht-degree: 0%
 
 bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下所示：
 
-- In [开发人员模式](../bootstrap/application-modes.md#developer-mode)，按原样显示异常。
+- 在 [开发者模式](../bootstrap/application-modes.md#developer-mode)，按原样显示异常。
 - 在任何其他模式下，会尝试记录异常并显示一般错误消息。
-- 用错误代码终止Commerce `1`
+- 使用错误代码终止Commerce `1`
 
 ## 入口点应用程序
 
@@ -71,18 +71,18 @@ bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下
 
 ### HTTP入口点
 
-[\Magento\Framework\App\Http][http] 的运作方式如下：
+[\Magento\Framework\App\Http][http] 如下所示：
 
 1. 确定 [应用区域](https://developer.adobe.com/commerce/php/architecture/modules/areas/).
-1. 启动前端控制器和路由系统，以查找并执行控制器操作。
+1. 启动前端控制器和路由系统，以便查找并执行控制器操作。
 1. 使用HTTP响应对象返回从控制器操作获得的结果。
-1. 错误处理（按照以下优先级顺序）：
+1. 错误处理（按以下优先级顺序）：
 
-   1. 如果您使用 [开发人员模式](../bootstrap/application-modes.md#developer-mode)：
+   1. 如果您使用 [开发者模式](../bootstrap/application-modes.md#developer-mode)：
       - 如果未安装Commerce应用程序，请重定向到安装向导。
       - 如果已安装Commerce应用程序，则显示错误和HTTP状态代码500（内部服务器错误）。
    1. 如果Commerce应用程序处于维护模式，则显示用户友好的“服务不可用”登陆页面，其中HTTP状态代码为503（服务不可用）。
-   1. 如果Commerce应用程序为 _非_ 已安装，重定向到“安装向导”。
+   1. 如果商务应用程序为 _非_ 已安装，请重定向至“安装向导”。
    1. 如果会话无效，请重定向到主页。
    1. 如果存在任何其他应用程序初始化错误，则显示用户友好的“页面未找到”页面，其中HTTP状态代码为404（未找到）。
    1. 出现任何其他错误时，显示包含HTTP响应503的用户友好的“服务不可用”页面，并生成错误报告并在该页面上显示其ID。
@@ -93,21 +93,21 @@ bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下
 
 >[!INFO]
 >
->静态视图文件的入口点未用于 [生产模式](application-modes.md#production-mode) 以避免在服务器上发生潜在攻击。 在生产模式下，Commerce应用程序期望所有必要的资源都存在于 `<your Commerce install dir>/pub/static` 目录。
+>静态视图文件的入口点未用于 [生产模式](application-modes.md#production-mode) 以避免服务器上潜在的攻击。 在生产模式下，Commerce应用程序希望所有必要的资源都存在于 `<your Commerce install dir>/pub/static` 目录。
 
 在默认或开发人员模式下，对不存在的静态资源的请求将根据相应的指定的重写规则重定向到静态入口点 `.htaccess`.
-当请求被重定向到入口点时，商务应用程序根据检索的参数解析请求的URL并查找请求的资源。
+当请求被重定向到入口点时，商务应用程序根据检索到的参数解析请求的URL并查找请求的资源。
 
-- In [开发人员](application-modes.md#developer-mode) 模式，则会返回文件的内容，以便每次请求资源时，返回的内容都是最新的。
-- In [默认](application-modes.md#default-mode) 模式)下，将发布检索到的资源，以便之前请求的URL可访问该资源。
+- 在 [开发人员](application-modes.md#developer-mode) 模式，则会返回文件的内容，以便每次请求资源时，返回的内容都是最新的。
+- 在 [默认](application-modes.md#default-mode) 模式)下，将发布检索到的资源，以便之前请求的URL可访问该资源。
 
-   服务器处理所有未来对静态资源的请求的方式与处理静态文件的方式相同；即，不涉及入口点。 如果需要将已发布的文件与原始文件同步，则 `pub/static` 应删除目录；因此，文件会在下次请求时自动重新发布。
+  服务器处理所有未来对静态资源的请求的方式与处理静态文件的方式相同；即，不涉及入口点。 如果必须将已发布的文件与原始文件同步，则 `pub/static` 目录；因此，会在下次请求时自动重新发布文件。
 
 ### 媒体资源入口点
 
-[Magento\MediaStorage\App\Media][media] 从数据库中检索媒体资源（即上载到媒体存储的任何文件）。 只要将数据库配置为媒体存储区，就会使用它。
+[Magento\MediaStorage\App\Media][media] 从数据库中检索介质资源（即上载到介质存储的所有文件）。 只要将数据库配置为介质存储，就会使用它。
 
-`\Magento\Core\App\Media` 尝试在配置的数据库存储中找到媒体文件，并将其写入 `pub/static` 目录，然后返回其内容。 出错时，它会在标头中返回一个HTTP 404 （未找到）状态代码，并且不包含任何内容。
+`\Magento\Core\App\Media` 尝试在配置的数据库存储中找到媒体文件并将其写入 `pub/static` 目录，然后返回其内容。 出错时，它会在标头中返回HTTP 404（未找到）状态代码，并且不含内容。
 
 <!-- Link Definitions -->
 

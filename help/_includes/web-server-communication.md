@@ -7,13 +7,13 @@ ht-degree: 0%
 ---
 # 安全的Web服务器通信
 
-本主题将讨论使用传输层安全性(TLS)加密和以下内容的组合来保护Web服务器和搜索引擎(Elasticsearch或OpenSearch)之间通信的示例 [HTTP基本身份验证](https://datatracker.ietf.org/doc/html/rfc2617). 您还可以选择配置其他类型的身份验证；我们提供该信息的参考。
+本主题将讨论使用传输层安全性(TLS)加密和以下内容的组合来保护Web服务器和搜索引擎(Elasticsearch或OpenSearch)之间通信的示例 [HTTP基本身份验证](https://datatracker.ietf.org/doc/html/rfc2617). 您也可以选择配置其他类型的身份验证；我们会提供该信息的参考。
 
-(旧称安全套接字层(SSL)经常与TLS互换使用。 在本主题中，我们参考 *TLS*.)
+(旧称安全套接字层(SSL)经常与TLS互换使用。 在本主题中，我们称为 *TLS*.)
 
 >[!WARNING]
 >
->除非另有说明，否则本主题中的所有命令都必须以用户身份输入， `root` 权限。
+>除非另有说明，否则本主题中的所有命令必须以用户身份输入， `root` 权限。
 
 ## Recommendations
 
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 * 您的Web服务器使用TLS。
 
-   TLS超出了本主题的范围；但是，我们强烈建议您在生产中使用真正的证书，而不是自签名证书。
+  TLS超出了本主题的范围；但是，我们强烈建议您在生产中使用真正的证书，而不是自签名证书。
 
 * 您的搜索引擎与Web服务器在同一主机上运行。 在不同主机上运行搜索引擎和Web服务器超出了本主题的范围。
 
-   将搜索引擎和Web服务器放在同一台主机上的优点是，它使得加密通信无法被拦截。 搜索引擎Web服务器不必与Adobe Commerce或Magento Open SourceWeb服务器相同；例如，Adobe Commerce可以运行Apache，Elasticsearch/OpenSearch可以运行nginx。
+  将搜索引擎和Web服务器放在同一台主机上的优点是，它使得拦截加密通信变得不可能。 搜索引擎Web服务器不必与Adobe Commerce或Magento Open SourceWeb服务器相同；例如，Adobe Commerce可以运行Apache，Elasticsearch/OpenSearch可以运行nginx。
 
-   如果搜索引擎对公共Web公开，则应配置身份验证。 如果您的搜索引擎实例在您的网络中受到保护，则可能没有必要。 与您的托管提供商合作，确定应实施哪些安全措施以保护您的实例。
+  如果搜索引擎向公共Web公开，则应当配置身份验证。 如果您的搜索引擎实例在网络内受到保护，则可能没有必要。 与您的托管提供商合作，确定您应当实施哪些安全措施来保护实例。
 
 ## 有关TLS的更多信息
 

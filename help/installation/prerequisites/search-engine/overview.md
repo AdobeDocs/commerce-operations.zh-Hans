@@ -22,18 +22,18 @@ ht-degree: 0%
 
 在安装Adobe Commerce 2.4.4及更高版本之前，必须安装和配置Elasticsearch或OpenSearch。
 
-请参阅 [系统要求](../../system-requirements.md) 了解特定版本信息。
+请参阅 [系统要求](../../system-requirements.md) 以了解特定版本信息。
 
 ## 推荐的配置
 
 我们建议执行以下操作：
 
-* [为您的搜索引擎配置nginx](configure-nginx.md)
+* [为搜索引擎配置nginx](configure-nginx.md)
 * [为搜索引擎配置Apache](configure-apache.md)
 
 ## 安装位置
 
-以下任务假定您已根据下图配置了系统：
+以下任务假定您已根据下图配置系统：
 
 ![搜索引擎图表](../../../assets/installation/search-engine-config.svg)
 
@@ -41,13 +41,13 @@ ht-degree: 0%
 
 * Commerce应用程序和搜索引擎安装在不同的主机上。
 
-  在单独的主机上运行需要代理才能正常工作。 (搜索引擎聚类不在本指南的涵盖范围内，但是您可以在 [Elasticsearch群集文档](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
+  在单独的主机上运行需要代理才能正常工作。 (搜索引擎聚类超出了本指南的范围，但您可以在 [Elasticsearch聚类文档](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
 
 * 每台主机都有自己的Web服务器；Web服务器不必相同。
 
-  例如，Commerce应用程序可以运行Apache，而搜索引擎可以运行nginx。
+  例如，商务应用程序可以运行Apache，搜索引擎可以运行nginx。
 
-* 这两个Web服务器都使用传输层安全性(TLS)。
+* 两个Web服务器都使用传输层安全性(TLS)。
 
   设置TLS超出了我们文档的范围。
 
@@ -55,13 +55,13 @@ ht-degree: 0%
 
 1. Commerce Web服务器接收来自用户的搜索请求，该服务器将其转发到搜索引擎服务器。
 
-   您可以配置搜索引擎以连接到代理的主机和端口。 我们建议Web服务器的SSL端口（默认情况下，为443）。
+   您可以配置搜索引擎以连接到代理的主机和端口。 我们建议Web服务器的SSL端口（默认情况下，443）。
 
 1. 搜索引擎Web服务器（在端口443上侦听）将请求代理到搜索引擎服务器（默认情况下，在端口9200上侦听）。
 
 1. HTTP基本身份验证进一步保护对搜索引擎的访问。 对于到达搜索引擎的请求，必须通过SSL传输 *和* 提供有效的用户名和密码。
 
-1. 搜索引擎处理该请求。
+1. 搜索引擎处理请求。
 
 1. 通信沿同一路径返回，ElasticsearchWeb服务器充当安全反向代理。
 
@@ -76,16 +76,16 @@ ht-degree: 0%
 
 ### 防火墙和SELinux
 
-默认情况下，可以配置安全相关软件(iptables、SELinux、AppArmor)以阻止子系统之间的通信。 检查它们是否存在问题可能是一个好主意。
+默认情况下，可以将安全相关软件(iptables、SELinux、AppArmor)配置为阻止子系统之间的通信。 检查他们是否有问题可能是一个好主意。
 
 #### 为iptables和SELinux设置规则
 
-要设置规则以允许与启用防火墙或SELinux的通信，请查阅以下资源：
+要设置规则以允许与启用防火墙或SELinux进行通信，请查阅以下资源：
 
-* [iptables操作方法](https://help.ubuntu.com/community/IptablesHowTo)
+* [iptables操作说明](https://help.ubuntu.com/community/IptablesHowTo)
 * [如何编辑iptables规则（fedora项目）](https://fedoraproject.org/wiki/How_to_edit_iptables_rules)
 * [SELinux简介(CentOS.org)](https://www.centos.org)
-* [SELinux操作方法Wiki (CentOS.org)](https://wiki.centos.org/HowTos/SELinux)
+* [SELinux操作方法维客(CentOS.org)](https://wiki.centos.org/HowTos/SELinux)
 
 ### 安装Java软件开发工具包
 
@@ -106,7 +106,7 @@ java -version
 
 查看此 [数字海洋教程](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-centos-and-fedora#install-oracle-java-8).
 
-确保安装JDK和 *非* JRE。
+请务必安装JDK和 *非* JRE。
 
 ```bash
 yum -y install java-1.8.0-openjdk
@@ -118,7 +118,7 @@ yum -y install java-1.8.0-openjdk
 
 #### 在Ubuntu上安装JDK
 
-要在Ubuntu上安装JDK 1.8，请以用户身份输入以下命令 `root` 权限：
+要在Ubuntu上安装JDK 1.8，请以用户身份输入以下命令， `root` 权限：
 
 ```bash
 apt-get -y update
@@ -132,7 +132,7 @@ apt-get install -y openjdk-8-jdk
 
 ### 安装搜索引擎
 
-关注 [安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) 或 [安装和配置OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/) ，以了解特定于您的平台的步骤。
+关注 [安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) 或 [安装和配置OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/) 执行特定于平台的步骤。
 
 要验证Elasticsearch是否正常工作，请在运行该服务器的服务器上输入以下命令：
 
@@ -159,9 +159,9 @@ curl -XGET https://<host>:9200/_cat/plugins?v -u 'admin:admin' --insecure
 
 ## 升级Elasticsearch
 
-请参阅 [升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 有关备份数据、检测潜在的迁移问题以及测试升级以便部署到生产环境之前的完整说明。 根据您当前版本的Elasticsearch，可能需要也可能不需要完全重新启动群集。
+请参阅 [升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 有关备份数据、检测潜在迁移问题以及测试升级以便部署到生产环境之前的完整说明。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
 
-Elasticsearch需要JDK 1.8或更高版本。 参见 [安装Java软件开发工具包](#install-the-java-software-development-kit) 以检查已安装的JDK版本。
+Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包](#install-the-java-software-development-kit) 以检查已安装的JDK版本。
 
 ## 其他资源
 

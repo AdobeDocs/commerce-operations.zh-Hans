@@ -1,32 +1,32 @@
 ---
-title: 单机部署
+title: 单个计算机部署
 description: 了解如何使用命令行将更新部署到生产服务器上的Commerce。
 feature: Configuration, Deploy
 exl-id: ca73309c-7584-4506-99de-dd933651eeb6
 source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
 source-wordcount: '186'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 单机部署
 
-本主题提供有关使用命令行在生产服务器上部署Commerce更新的说明。 此过程适用于负责在安装了某些主题和区域设置的单一计算机上运行的商店的技术用户。
+本主题提供有关使用命令行在生产服务器上部署对Commerce的更新的说明。 此过程适用于负责在安装了某些主题和区域设置的单个计算机上运行的商店的技术用户。
 
 ## 假设
 
-- 您使用以下方式安装了Commerce [Composer](../../installation/composer.md).
+- 您已使用安装Commerce [Composer](../../installation/composer.md).
 - 您正在将更新直接应用到服务器。
 
 >[!WARNING]
 >
 >本指南不适用，如果您使用 `git clone` 以安装Commerce。
->投稿开发人员应使用 [本指南][install] 以更新其Commerce安装。
+>参与开发的开发人员应使用 [本指南][install] 以更新其Commerce安装。
 
 ## 部署步骤
 
-1. 以或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以或切换至的生产服务器身份登录 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 
 1. 将目录更改为Commerce基目录：
 
@@ -40,20 +40,20 @@ ht-degree: 0%
    bin/magento maintenance:enable
    ```
 
-1. 使用以下命令模式将更新应用于Commerce或其组件：
+1. 使用以下命令模式将更新应用到Commerce或其组件：
 
    ```bash
    composer require-commerce <package> <version> --no-update
    ```
 
-   **包**：要更新的程序包的名称。
+   **包**：要更新的包的名称。
 
    例如：
 
    - `magento/product-community-edition`
    - `magento/product-enterprise-edition`
 
-   **version**：要更新的包的目标版本。
+   **版本**：要更新的包的目标版本。
 
 1. 使用编辑器更新组件：
 

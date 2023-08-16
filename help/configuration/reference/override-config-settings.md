@@ -26,7 +26,7 @@ ht-degree: 0%
 您可以将变量用于以下任何一项：
 
 - [敏感值](config-reference-sens.md) 必须使用环境变量或 [`magento config:sensitive:set`](../cli/set-configuration-values.md) 命令。
-- 系统特定的值必须使用以下方式设置：
+- 必须使用以下方式设置系统特定的值：
 
    - 环境变量
    - 此 [`magento config:set`](../cli/set-configuration-values.md) 命令
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 可在以下位置找到配置路径：
 
-- [敏感和系统特定的配置路径引用](config-reference-sens.md)
+- [敏感且特定于系统的配置路径参考](config-reference-sens.md)
 - [支付配置路径参考](config-reference-payment.md)
 - [Commerce B2B扩展配置路径参考](config-reference-b2b.md)
 - [其他配置路径参考](config-reference-general.md)
@@ -49,47 +49,47 @@ ht-degree: 0%
 
 - 全局范围(即 _所有_ 范围)
 
-   全局范围变量的格式如下：
+  全局范围变量的格式如下：
 
-   `CONFIG__DEFAULT__<SYSTEM__VARIABLE__NAME>`
+  `CONFIG__DEFAULT__<SYSTEM__VARIABLE__NAME>`
 
 - 特定范围（即，设置仅影响指定的商店视图或网站）
 
-   例如，存储视图范围变量的格式如下：
+  例如，存储视图范围变量的格式如下：
 
-   `CONFIG__STORES__ <STORE_VIEW_CODE>__<SYSTEM__VARIABLE__NAME>`
+  `CONFIG__STORES__ <STORE_VIEW_CODE>__<SYSTEM__VARIABLE__NAME>`
 
-   有关范围的详细信息，请参见：
+  有关作用域的详细信息，请参阅：
 
    - [步骤1：查找网站或商店视图范围值](#step-1-find-the-website-or-store-view-scope-value)
    - [有关范围的Commerce用户指南主题](https://docs.magento.com/user-guide/configuration/scope.html)
    - [范围快速参考](https://docs.magento.com/user-guide/stores/store-scope-reference.html)
 
-`<SYSTEM__VARIABLE__NAME>` 是用双下划线字符替换的配置路径 `/`. 有关更多信息，请参阅 [步骤2：设置系统变量](#step-2-set-global-website-or-store-view-variables).
+`<SYSTEM__VARIABLE__NAME>` 是双下划线字符被替换的配置路径 `/`. 有关更多信息，请参阅 [步骤2：设置系统变量](#step-2-set-global-website-or-store-view-variables).
 
 ### 变量格式
 
-`<SCOPE>` 分隔自 `<SYSTEM__VARIABLE__NAME>` 两个下划线字符。
+`<SCOPE>` 分隔自 `<SYSTEM__VARIABLE__NAME>` 用两个下划线字符进行标记。
 
-`<SYSTEM__VARIABLE__NAME>` 派生自配置设置的 _配置路径_，即 `/` 唯一标识特定设置的分隔字符串。 替换每个 `/` 字符（带有两个下划线字符）来创建系统变量。
+`<SYSTEM__VARIABLE__NAME>` 派生自配置设置的 _配置路径_，即 `/` 唯一标识特定设置的分隔字符串。 替换每个 `/` 字符（带有两个下划线字符）以创建系统变量。
 
 如果配置路径包含下划线字符，则下划线字符将保留在变量中。
 
-可在以下位置找到配置路径的完整列表：
+配置路径的完整列表可在以下位置找到：
 
-- [敏感和系统特定的配置路径引用](config-reference-sens.md)
+- [敏感且特定于系统的配置路径参考](config-reference-sens.md)
 - [支付配置路径参考](config-reference-payment.md)
 - [Commerce Enterprise B2B扩展配置路径参考](config-reference-b2b.md)
 - [其他配置路径参考](config-reference-general.md)
 
 ## 步骤1：查找网站或商店视图范围值
 
-本节讨论如何查找和设置系统配置值，根据 _范围_ （商店视图或网站）。 要设置全局范围变量，请参阅 [步骤2：设置全局、网站或商店视图变量](#step-2-set-global-website-or-store-view-variables).
+本节讨论如何查找和设置系统配置值 _范围_ （商店视图或网站）。 要设置全局范围变量，请参阅 [步骤2：设置全局、网站或商店视图变量](#step-2-set-global-website-or-store-view-variables).
 
 范围值来自 `store`， `store_group`、和 `store_website` 表格。
 
-- 此 `store` table指定存储视图名称和代码
-- 此 `store_website` 表指定网站名称和代码
+- 此 `store` 表指定存储视图名称和代码
+- 此 `store_website` 表指定了网站名称和代码
 
 您还可以使用“管理员”查找代码值。
 
@@ -97,29 +97,29 @@ ht-degree: 0%
 
 - `Path in Admin` 列
 
-   逗号之前的值是管理员导航中的路径。 逗号后的值是右窗格中的选项。
+  逗号之前的值是管理员导航中的路径。 逗号后的值是右窗格中的选项。
 
 - `Variable name` 列是相应环境变量的名称。
 
-   如果需要，可以选择将这些配置参数的系统值指定为环境变量。
+  如果需要，可以选择将这些配置参数的系统值指定为环境变量。
 
-   - 整个变量名称始终为全大写
-   - 变量名称的开头为 `CONFIG__` （注意两个下划线字符）
+   - 整个变量名称始终为大写字母
+   - 以开始变量名称 `CONFIG__` （注意两个下划线字符）
    - 您可以找到 `<STORE_VIEW_CODE>` 或 `<WEBSITE_CODE>` Admin或Commerce数据库中变量名称的一部分，如以下部分所示。
    - 您可以找到 `<SYSTEM__VARIABLE__NAME>` 如中所述 [步骤2：设置全局、网站或商店视图变量](#step-2-set-global-website-or-store-view-variables).
 
 ### 在管理员中查找网站或商店视图范围
 
-下表汇总了如何在“管理员”中查找网站或存储视图值。
+下表总结了如何在“管理员”中查找网站或存储视图值。
 
-| 描述 | 管理员中的路径 | 变量名称 |
+| 描述 | Admin中的路径 | 变量名称 |
 |--------------|--------------|----------------------|
 | 创建、编辑、删除商店视图 | **[!UICONTROL Stores]** > **[!UICONTROL All Stores]** | `CONFIG__STORES__<STORE_VIEW_CODE>__<SYSTEM__VARIABLE__NAME>` |
 | 创建、编辑和删除网站 | **[!UICONTROL Stores]** > **[!UICONTROL All Store]s** | `CONFIG__WEBSITES__<WEBSITE_CODE>__<SYSTEM__VARIABLE__NAME>` |
 
 例如，要在“管理员”中查找网站或存储视图范围值，请执行以下操作：
 
-1. 以有权查看网站的用户身份登录到管理员。
+1. 以有权查看网站的用户身份登录到Admin。
 1. 单击 **[!UICONTROL Stores]** > **[!UICONTROL All Store]s**.
 1. 单击网站或商店视图的名称。
 
@@ -128,11 +128,11 @@ ht-degree: 0%
    ![查找网站代码](../../assets/configuration/website-code.png)
 
 1. 作用域名称显示在 **[!UICONTROL Code]** 字段。
-1. 继续使用 [步骤2：设置全局、网站或商店视图变量](#step-2-set-global-website-or-store-view-variables).
+1. 继续 [步骤2：设置全局、网站或商店视图变量](#step-2-set-global-website-or-store-view-variables).
 
 ### 在数据库中查找网站或商店视图范围
 
-要从数据库中获取这些值，请执行以下操作：
+要从数据库获取这些值，请执行以下操作：
 
 1. 以文件系统所有者的身份登录开发系统（如果尚未登录）。
 1. 输入以下命令：
@@ -141,7 +141,7 @@ ht-degree: 0%
    mysql -u <database-username> -p
    ```
 
-1. 在 `mysql>` 提示符下，按所示顺序输入以下命令：
+1. 在 `mysql>` 提示符，请按照显示的顺序输入以下命令：
 
    ```shell
    use <database-name>;
@@ -167,7 +167,7 @@ ht-degree: 0%
    +------------+-------+--------------+------------+------------------+------------+
    ```
 
-1. 使用来自以下各项的值： `code` 列作为作用域名称，而不是 `name` 值。
+1. 使用来自以下位置的值： `code` 列作为作用域名称，而不是 `name` 值。
 
    例如，要为测试网站设置配置变量，请使用以下格式：
 
@@ -181,9 +181,9 @@ ht-degree: 0%
 
 本节讨论如何设置系统变量。
 
-- 要设置全局范围（即所有网站、商店和存储视图）的值，请在变量名称开头使用 `CONFIG__DEFAULT__`.
+- 要设置全局范围（即所有网站、商店和商店视图）的值，请在变量名称的开头使用 `CONFIG__DEFAULT__`.
 
-- 要为特定的商店视图或网站设置值，请按照中所述启动变量名称 [步骤1：查找范围值](#step-1-find-the-website-or-store-view-scope-value)：
+- 要为特定商店视图或网站设置值，请启动变量名称，如中所述 [步骤1：查找范围值](#step-1-find-the-website-or-store-view-scope-value)：
 
    - `CONFIG__WEBSITES`
    - `CONFIG__STORES`
@@ -194,11 +194,11 @@ ht-degree: 0%
 
 下表显示了几个示例变量。
 
-| 描述 | 管理中的路径（省略） **商店** > **设置** > **配置**) | 变量名称 |
+| 描述 | 管理员中的路径（省略） **商店** > **设置** > **配置**) | 变量名称 |
 |--------------|--------------|----------------------|
-| Elasticsearch服务器主机名 | 目录> **目录**， **Elasticsearch服务器主机名** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME` |
+| Elasticsearch的服务器主机名 | 目录> **目录**， **Elasticsearch服务器主机名** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME` |
 | Elasticsearch服务器端口 | 目录> **目录**， **Elasticsearch服务器端口** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_PORT` |
-| 装运国家/地区来源 | 销售> **配送设置** | `<SCOPE>__SHIPPING__ORIGIN__COUNTRY_ID` |
+| 装运国家/地区 | 销售> **配送设置** | `<SCOPE>__SHIPPING__ORIGIN__COUNTRY_ID` |
 | 自定义管理员URL | 高级> **管理员** | `<SCOPE>__ADMIN__URL__CUSTOM` |
 | 自定义管理路径 | 高级> **管理员** | `<SCOPE>__ADMIN__URL__CUSTOM_PATH` |
 
@@ -206,9 +206,9 @@ ht-degree: 0%
 
 本节介绍如何查找某些示例变量的值。
 
-### Elasticsearch服务器主机名
+### Elasticsearch的服务器主机名
 
-要查找用于全局HTML缩小的变量名称，请执行以下操作：
+要查找全局HTML缩小的变量名称，请执行以下操作：
 
 1. 确定范围。
 
@@ -218,13 +218,13 @@ ht-degree: 0%
 
    **结果**：变量名称为 `CONFIG__DEFAULT__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME`
 
-### 装运国家/地区来源
+### 装运国家/地区
 
-要查找发运国家（地区）来源的变量名称，请执行以下操作：
+要查找发运国家/地区的变量名称，请执行以下操作：
 
 1. 确定范围。
 
-   在中查找范围 [数据库](#find-a-website-or-store-view-scope-in-the-database) 如步骤1：查找网站或商店视图范围值中所述。 (您还可以在“管理员”中找到值，如中所示 [步骤2中的表：设置全局、网站或商店视图变量](#step-2-set-global-website-or-store-view-variables。
+   在中查找范围 [数据库](#find-a-website-or-store-view-scope-in-the-database) 如步骤1中所述：查找网站或商店视图范围值。 (您还可以在“管理员”中找到值，如中所示 [步骤2中的表：设置全局、网站或商店视图变量](#step-2-set-global-website-or-store-view-variables。
 
    例如，范围可以是 `CONFIG__WEBSITES__DEFAULT`.
 
@@ -234,7 +234,7 @@ ht-degree: 0%
 
 ## 如何使用环境变量
 
-使用PHP的配置值设置为变量 [`$_ENV`](https://php.net/manual/en/reserved.variables.environment.php) 关联数组。 您可以在Commerce运行时运行的任何PHP脚本中设置值。
+使用PHP的将配置值设置为变量 [`$_ENV`](https://php.net/manual/en/reserved.variables.environment.php) 关联数组。 可以在Commerce运行时运行的任何PHP脚本中设置值。
 
 >[!TIP]
 >
@@ -253,6 +253,6 @@ $_ENV['CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'] = '123
 >
 >- 要使用您在 `$_ENV` 数组，您必须设置 `variables_order = "EGPCS"`（Environment、Get、Post、Cookie和服务器） `php.ini` 文件。 有关详细信息，请参阅 [PHP文档](https://www.php.net/manual/en/ini.core.php).
 >
->- 对于云基础架构上的Adobe Commerce，如果您尝试使用 [Project Web界面](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)，您必须在变量名称前加上 `env:`. 例如：
+>- 对于云基础架构上的Adobe Commerce，如果您尝试使用 [Project Web界面](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)，您必须在变量名称前面加上 `env:`. 例如：
 >
 >![环境变量示例](../../assets/configuration/cloud-console-envvariable.png)

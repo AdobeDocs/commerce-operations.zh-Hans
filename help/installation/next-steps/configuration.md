@@ -16,32 +16,32 @@ ht-degree: 0%
 
 ## 设置cron
 
-UNIX任务调度程序cron对应用程序的日常操作至关重要。 它安排重新索引、新闻稿、电子邮件和站点地图等内容。 A *crontab* 是cron配置。
+UNIX任务计划程序cron对应用程序的日常操作至关重要。 它计划重新索引、新闻稿、电子邮件和站点地图等内容。 A *crontab* 是cron配置。
 
-您必须在中安装Adobe Commerce和Magento Open Source服务 *crontab*&#x200B;或某些核心功能（以及一些第三方扩展）无法正常运行。
+您必须在中安装Adobe Commerce和Magento Open Source服务 *crontab*&#x200B;或者某些核心功能（以及某些第三方扩展）无法正常运行。
 
 有关cron的更多信息，包括如何删除crontab并从命令行运行cron，请参见 [配置和运行cron](../../configuration/cli/configure-cron-jobs.md).
 
-## 安全设置和建议
+## 安全设置和推荐
 
 安装后，我们建议执行以下操作：
 
-* 确保正确设置了您的文件所有权和权限
-* 我们强烈建议 [更改默认管理员URI](../tutorials/admin-uri.md) 起始日期 `admin` 到其他东西
+* 确保正确设置文件所有权和权限
+* 我们强烈建议 [更改默认管理员URI](../tutorials/admin-uri.md) 从 `admin` 到别的地方
 * 确保 [`X-Frame-Option` HTTP标头](../../configuration/security/xframe-options.md) 设置正确。
-* 针对跨站点脚本(XSS)采取预防措施，方法是 [保护模板](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)
+* 针对跨站点脚本(XSS)采取预防措施，方法是 [保护您的模板](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)
 
-如果安装者 [克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)，确保在部署应用程序时，仅包含生产环境所需的文件和文件夹。 不需要的文件和文件夹可能会带来安全风险。
+如果您由安装 [克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)，确保在部署应用程序时，只包含生产环境所需的文件和文件夹。 不需要的文件和文件夹可能会暴露安全风险。
 
-## 启用Apache Server重写
+## 启用Apache服务器重写
 
-如果使用Apache Web Server，则必须启用服务器重写以便正确显示页面。 否则，您将看到没有样式和其他问题的页面。
+如果使用Apache Web Server，则必须启用服务器重写以便正确显示页面。 否则，您会看到没有样式和其他问题的页面。
 
-[有关Apache Server重写的部分](../prerequisites/web-server/apache.md#apache-rewrites-and-htaccess)
+[关于Apache Server重写的部分](../prerequisites/web-server/apache.md#apache-rewrites-and-htaccess)
 
-## 多webnode环境中的缓存
+## 多Webnode环境中的缓存
 
-如果您有多个Web节点， *无法* 使用应用程序的默认文件缓存，因为Web节点之间没有同步。 换句话说，一个Web节点上的活动仅写入该Web节点的文件系统。 如果在另一个Web节点上执行后续活动，可能会导致写入不必要的文件，也可能会导致错误。
+如果您有多个Web节点， *无法* 使用应用程序的默认文件缓存，因为Web节点之间没有同步。 换句话说，一个Web节点上的活动仅写入该Web节点的文件系统。 如果在另一个Web节点上执行后续活动，则可能会导致写入不必要的文件，也可能会导致出现错误。
 
 请改用 [Redis](../../configuration/cache/config-redis.md) 缺省高速缓存和页面高速缓存的缺省值。
 
@@ -51,17 +51,17 @@ UNIX任务调度程序cron对应用程序的日常操作至关重要。 它安�
 
 ### 日志轮换
 
-UNIX `logrotate` 实用程序使您能够管理生成大量日志文件的系统。 它允许自动旋转、压缩、删除和邮寄日志文件。 每个日志文件都可以每日、每周、每月或当日志文件超过指定大小时进行处理。
+UNIX `logrotate` 实用程序使您可以管理生成大量日志文件的系统。 它允许自动旋转、压缩、删除和邮寄日志文件。 每个日志文件都可以每日、每周、每月或当日志文件超过指定大小时进行处理。
 
 有关更多信息，请参阅以下内容之一：
 
-* [HowTo： Ultimate log rotate命令教程包含十个示例](https://www.thegeekstuff.com/2010/07/logrotate-examples)
+* [HowTo：包含十个示例的终极日志旋转命令教程](https://www.thegeekstuff.com/2010/07/logrotate-examples)
 * [栈栈交换](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
 * [`logrotate` 手册页](https://linuxconfig.org/logrotate-8-manual-page)
 
 ### 设置iptables规则以启用各种服务进行通信
 
-无论您拥有一台服务器还是多台服务器，都必须打开防火墙中的端口，以使服务能够通信。 例如，如果将Solr搜索引擎与Adobe Commerce一起使用，则必须启用该搜索引擎以与Web服务器通信。 如果您有多个Web节点，则必须启用它们来相互通信。
+无论您拥有一台服务器还是多台服务器，都必须在防火墙中打开端口以启用服务通信。 例如，如果将Solr搜索引擎与Adobe Commerce一起使用，则必须启用该搜索引擎以与Web服务器通信。 如果您有多个Web节点，则必须使它们能够相互通信。
 
 更多信息：
 
@@ -70,7 +70,7 @@ UNIX `logrotate` 实用程序使您能够管理生成大量日志文件的系统
 
 ### Security Enhanced Linux (SELinux)规则
 
-我们没有关于是否使用SELinux的建议；但是，如果确实使用它，则必须配置服务，以便与配置iptables类似，彼此通信。
+我们没有关于是否使用SELinux的建议；但是，如果确实使用它，则必须配置服务，使其像配置iptables一样相互通信。
 
 更多信息：
 
@@ -86,7 +86,7 @@ Adobe Commerce和Magento Open Source需要电子邮件服务器。 我们不建�
 
 ### 优化搜索引擎以提高性能：
 
-从2.4.0开始的所有安装都需要Elasticsearch或OpenSearch。
+从2.4.0开始的所有安装均需要Elasticsearch或OpenSearch。
 
 * [安装和配置搜索引擎](../../configuration/search/overview-search.md)
 
@@ -100,4 +100,4 @@ Adobe Commerce和Magento Open Source需要电子邮件服务器。 我们不建�
 
 只有在使用Adobe Commerce时，才能配置以下内容：
 
-* [拆分数据库，用于结帐、订单管理和其他数据库表](../../configuration/storage/multi-master.md)
+* [拆分用于签出、订单管理和其他数据库表的数据库](../../configuration/storage/multi-master.md)

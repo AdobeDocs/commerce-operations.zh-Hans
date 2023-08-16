@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 安装依赖项
 
-此 `composer.json` 和 `composer.lock` 文件管理 [!DNL Commerce] 依赖项并为每个包安装适当的版本。 必须先安装依赖项，然后才能安装 [预处理依赖项注入指令](#preprocess-dependency-injection-instructions) 如果您计划更新 [自动加载机](#update-the-autoloader).
+此 `composer.json` 和 `composer.lock` 文件管理 [!DNL Commerce] 依赖关系，并为每个包安装适当的版本。 必须先安装依赖项，然后才能安装 [预处理依赖项注入指令](#preprocess-dependency-injection-instructions) 如果您计划更新 [自动加载机](#update-the-autoloader).
 
 安装 [!DNL Commerce] 依赖关系：
 
@@ -31,7 +31,7 @@ composer install --no-dev
 * 读取和处理所有当前配置
 * 分析类之间的依赖关系
 * 创建自动生成的文件（包括代理、工厂等）
-* 将编译后的数据和配置存储在缓存中，这样在处理请求时最多可节省25%的时间
+* 将编译后的数据和配置存储在缓存中，最多可节省25%的请求处理时间
 
 要预处理和编译DI指令，请执行以下操作：
 
@@ -53,7 +53,7 @@ bin/magento setup:di:compile
 composer dump-autoload -o --apcu
 ```
 
-如果计划更新自动加载机，则必须按顺序运行以下命令：
+如果计划更新自动加载程序，则必须按顺序运行以下命令：
 
 ```bash
 composer install --no-dev
@@ -81,9 +81,9 @@ bin/magento setup:static-content:deploy
 * 分析主题回退
 * 将所有已处理和实例化内容存储到特定文件夹以供进一步使用
 
-如果未部署静态内容， [!DNL Commerce] 会动态执行列出的所有操作，从而显着增加响应时间。
+如果未部署静态内容， [!DNL Commerce] 会动态执行所有列出的操作，从而显着增加响应时间。
 
-您可以使用多种选项，根据存储大小和履行需求自定义部署操作。 最常见的是紧凑部署策略。 参见 [静态文件部署策略](../configuration/cli/static-view-file-strategy.md)
+您可以使用多种选项，根据存储大小和履行需求自定义部署操作。 最常见的是紧凑部署策略。 请参阅 [静态文件部署策略](../configuration/cli/static-view-file-strategy.md)
 
 要部署静态内容，请执行以下操作：
 
@@ -91,7 +91,7 @@ bin/magento setup:static-content:deploy
 bin/magento setup:static-content:deploy
 ```
 
-此命令允许Composer重新生成到项目文件的映射，以便更快地加载。
+此命令允许Composer重新生成到项目文件的映射，以便更快地加载这些文件。
 
 ## 设置生产模式
 
@@ -99,7 +99,7 @@ bin/magento setup:static-content:deploy
 >
 >将模式设置为生产模式会自动运行 `setup:di:compile` 和 `setup:static-content:deploy`.
 
-最后，您需要将商店置于生产模式。 生产模式经过专门优化，以实现存储的最大性能。 它还停用了所有特定于开发人员的功能。 这可以在以下位置完成： `.htaccess` 或 `nginx.conf` 文件：
+最后，您需要将商店置于生产模式。 生产模式经过专门优化，可提供存储的最大性能。 它还停用了所有特定于开发人员的功能。 这可以在以下位置完成： `.htaccess` 或 `nginx.conf` 文件：
 
 `SetEnv MAGE_MODE production`
 
@@ -109,12 +109,12 @@ bin/magento setup:static-content:deploy
 bin/magento deploy:mode:set production
 ```
 
-该命令在后台运行，不允许在每个特定步骤上设置其他选项。
+命令在后台运行，不允许在每个特定步骤上设置其他选项。
 
 ## 其他启动前操作
 
-建议执行这些步骤，但不是强制性的。 您可以在以生产模式启动存储之前立即执行这些操作。 该列表包括：
+建议执行这些步骤，但并非强制性的。 您可以在以生产模式启动存储之前立即执行这些操作。 该列表包括：
 
-* 重新索引数据以避免索引中出现任何不一致的数据。
-* 刷新缓存以确保缓存中没有留下旧数据或不正确数据。
-* 预热缓存，以提前调用最受欢迎或最关键的存储页面，从而生成并存储这些页面的缓存。 此操作可以使用任何Internet Crawler执行，也可以手动执行（如果存储空间较小）。
+* 重新编入数据索引，以避免索引中出现任何不一致的数据。
+* 刷新缓存以确保缓存中没有留下旧的或不正确的数据。
+* 预热缓存，提前调出最受欢迎或最关键的存储页面，以便生成并存储这些页面的缓存。 此操作可以使用任何Internet Crawler执行，或者手动执行（如果存储空间较小）。

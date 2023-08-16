@@ -1,6 +1,6 @@
 ---
 title: 审核前端性能
-description: 通过使用Web性能工具审核Adobe Commerce店面操作，识别并解决对网站性能产生负面影响的问题。
+description: 通过使用Web性能工具审核Adobe Commerce店面操作，发现并解决对网站性能产生负面影响的问题。
 role: Admin, User, Developer
 feature: Best Practices
 exl-id: bafae565-9d09-4cc0-8507-e89a11dbd915
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 前端性能最佳实践
 
-使用Web性能工具检查Adobe Commerce商店的前端性能。
+使用Web性能工具检查Adobe Commerce存储的前端性能。
 这些工具使用各种量度提供强大的见解和建议以提高在线商店的性能。
 
 ## 受影响的产品和版本
@@ -29,8 +29,8 @@ ht-degree: 0%
 
 1. 使用Web性能工具审核前端性能，例如：
 
-   - **[Google灯塔](https://web.dev/measure/)**— Lighthouse对性能、可访问性、渐进式Web应用程序、SEO等进行了审核。 欲了解灯塔运行方式的详情，请参见 [Lighthouse概述](https://developer.chrome.com/docs/lighthouse/overview).)
-   - **[Google PageSpeed Insights](https://pagespeed.web.dev/)**— PageSpeed Insights可快速提交关于网页性能缓慢原因的详细报告，以及有关如何修复该问题的建议。
+   - **[Google灯塔](https://web.dev/measure/)**— Lighthouse对性能、可访问性、渐进式Web应用程序、SEO等进行了审核。 欲了解灯塔不同运行方式的详情，请参见 [灯塔概述](https://developer.chrome.com/docs/lighthouse/overview).)
+   - **[Google PageSpeed Insights](https://pagespeed.web.dev/)**—PageSpeed Insights可快速提交关于网页性能缓慢原因的详细报告以及修复建议。
 
 1. 审查审计报告，落实为改善商店业绩而提出的建议。
 
@@ -38,4 +38,4 @@ ht-degree: 0%
 
 - [管理员用户的索引管理](../../../configuration/cli/manage-indexers.md#configure-indexers)
 - [使用CLI进行索引管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
-- [面向开发人员的索引概述](https://developer.adobe.com/commerce/php/development/components/indexing/)
+- [适用于开发人员的索引概述](https://developer.adobe.com/commerce/php/development/components/indexing/)

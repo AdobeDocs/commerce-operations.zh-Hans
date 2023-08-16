@@ -1,6 +1,6 @@
 ---
 title: 为搜索引擎配置Nginx
-description: 按照以下步骤使用Nginx Web Server配置搜索引擎，以进行Adobe Commerce和Magento Open Source的内部安装。
+description: 按照以下步骤使用Nginx Web服务器配置搜索引擎，以进行Adobe Commerce和Magento Open Source的内部安装。
 feature: Install, Search
 exl-id: 8d2f8695-e30a-4acc-bba3-d122212b0a53
 source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 参见 [将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 了解更多信息。
+>2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 请参阅 [将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 以了解更多信息。
 
-本节讨论如何将nginx配置为 *不安全* 代理服务器，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；将在中讨论 [与nginx的安全通信](#secure-communication-with-nginx).
+本节讨论如何将nginx配置为 *不安全* 代理服务器，以便Adobe Commerce能够使用此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；将在中讨论 [与nginx的安全通信](#secure-communication-with-nginx).
 
 >[!NOTE]
 >
->在此示例中，代理不安全的原因是它更易于设置和验证。 如果需要，可以将TLS与此代理一起使用；要执行此操作，请确保将代理信息添加到安全服务器块配置中。
+>在此示例中，代理不受保护的原因是它更容易设置和验证。 如果需要，可以将TLS与此代理一起使用；要这样做，请确保将代理信息添加到安全服务器块配置中。
 
 ### 在全局配置中指定其他配置文件
 
@@ -38,7 +38,7 @@ include /etc/nginx/conf.d/*.conf;
 
 本节讨论如何指定谁可以访问nginx服务器。
 
-1. 使用文本编辑器创建文件 `/etc/nginx/conf.d/magento_es_auth.conf` ，内容如下：
+1. 使用文本编辑器创建文件 `/etc/nginx/conf.d/magento_es_auth.conf` 包含以下内容：
 
    ```conf
    server {
@@ -67,7 +67,7 @@ include /etc/nginx/conf.d/*.conf;
    curl -i http://localhost:8080/_cluster/health
    ```
 
-   类似于以下内容的消息显示指示成功：
+   类似于以下内容的消息显示成功：
 
    ```terminal
    HTTP/1.1 200 OK
@@ -81,13 +81,13 @@ include /etc/nginx/conf.d/*.conf;
 
 ## 与nginx的安全通信
 
-本节讨论如何设置 [HTTP基本身份验证](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html) 使用安全代理。 将TLS和HTTP Basic身份验证结合使用可防止任何人拦截与Elasticsearch、OpenSearch或您的应用服务器的通信。
+本节讨论如何设置 [HTTP基本身份验证](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html) 与您的安全代理进行交互。 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
 
 由于nginx本身支持HTTP基本身份验证，因此我们建议将其覆盖，例如 [摘要式身份验证](https://www.nginx.com/resources/wiki/modules/auth_digest/)，在生产环境中不建议使用该选项。
 
 其他资源：
 
-* [如何在Ubuntu 14.04（数字海洋）上使用Nginx设置密码身份验证](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
+* [如何在Ubuntu 14.04(Digital Ocean)上使用Nginx设置密码身份验证](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
 * [使用Nginx进行基本HTTP身份验证(HowtoForge)](https://www.howtoforge.com/basic-http-authentication-with-nginx)
 * [Elasticsearch的Nginx配置示例](https://gist.github.com/karmi/b0a9b4c111ed3023a52d)
 
@@ -104,20 +104,20 @@ include /etc/nginx/conf.d/*.conf;
 
 要创建密码，请执行以下操作：
 
-1. 输入以下命令以确定是否 `htpasswd` 已安装：
+1. 输入以下命令以确定 `htpasswd` 已安装：
 
    ```bash
    which htpasswd
    ```
 
-   如果显示路径，则表明已安装；如果命令未返回任何输出， `htpasswd` 未安装。
+   如果显示了路径，则表明已安装了路径；如果命令未返回任何输出， `htpasswd` 未安装。
 
 1. 如有必要，请安装 `htpasswd`：
 
    * Ubuntu： `apt-get -y install apache2-utils`
    * CentOS： `yum -y install httpd-tools`
 
-1. 创建 `/etc/nginx/passwd` 存储密码的目录：
+1. 创建 `/etc/nginx/passwd` 要存储密码的目录：
 
    ```bash
    mkdir -p /etc/nginx/passwd
@@ -184,15 +184,15 @@ server {
 
 ### 为搜索引擎设置受限制的上下文
 
-此部分讨论如何指定可以访问搜索引擎服务器的用户。
+本节将讨论如何指定可以访问搜索引擎服务器的用户。
 
-1. 输入以下命令来创建用于存储身份验证配置的目录：
+1. 输入以下命令创建用于存储身份验证配置的目录：
 
    ```bash
    mkdir /etc/nginx/auth/
    ```
 
-1. 使用文本编辑器创建文件 `/etc/nginx/auth/magento_elasticsearch.conf` ，内容如下：
+1. 使用文本编辑器创建文件 `/etc/nginx/auth/magento_elasticsearch.conf` 包含以下内容：
 
    ```conf
    location /elasticsearch {
@@ -206,7 +206,7 @@ server {
    }
    ```
 
-1. 如果设置安全代理，请删除 `/etc/nginx/conf.d/magento_es_auth.conf`.
+1. 如果设置了安全代理，请删除 `/etc/nginx/conf.d/magento_es_auth.conf`.
 1. 重新启动nginx并继续下一部分：
 
    ```bash

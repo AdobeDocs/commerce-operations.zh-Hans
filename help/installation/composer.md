@@ -1,6 +1,6 @@
 ---
 title: 快速启动内部部署
-description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce或Magento Open Source。
+description: 按照以下步骤在您拥有的基础设施上安装Adobe Commerce或Magento Open Source。
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 - 重用第三方库，而无需将它们与源代码捆绑在一起
 - 通过使用基于组件的架构和强大的依赖关系管理，减少扩展冲突和兼容性问题
-- 遵守 [PHP框架互操作性小组(FIG)](https://www.php-fig.org/) 标准
-- 将Magento Open Source与其他组件重新打包
+- 遵守 [PHP-Framework互操作性组(FIG)](https://www.php-fig.org/) 标准
+- 使用其他组件重新打包Magento Open Source
 - 在生产环境中使用Adobe Commerce或Magento Open Source软件
 
 >[!NOTE]
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 先决条件
 
-在继续之前，您必须执行以下操作：
+在继续之前，必须执行以下操作：
 
 - 全部完成 [先决任务](system-requirements.md).
 - [安装编辑器](https://getcomposer.org/download/).
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 1. 要从任何目录运行CLI命令，请添加 `<app_root>/bin` 到您的系统 `PATH`.
 
-   由于外壳的语法不同，请查阅参考资料，如 [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
+   由于shell的语法不同，请查阅之类的引用 [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
 
    CentOS的bash shell示例：
 
@@ -61,17 +61,17 @@ ht-degree: 0%
    export PATH=$PATH:/var/www/html/magento2/bin
    ```
 
-   或者，也可以以下列方式运行命令：
+   或者，也可以通过以下方式运行命令：
 
    - `cd <app_root>/bin` 并运行它们 `./magento <command name>`
    - `app_root>/bin/magento <command name>`
    - `<app_root>` 是Web服务器docroot的子目录
 
-## 获取暗喻
+## 获取隐喻
 
-要获取Adobe Commerce或Magento Open Source隐喻，请执行以下操作：
+要获取Adobe Commerce或Magento Open Source隐含，请执行以下操作：
 
-1. 以或切换至以下身份登录到应用程序服务器： [文件系统所有者](prerequisites/file-system/overview.md).
+1. 以以下身份登录到您的应用程序服务器，或切换到 [文件系统所有者](prerequisites/file-system/overview.md).
 1. 转到Web服务器docroot目录或您已配置为虚拟主机docroot的目录。
 1. 使用Adobe Commerce或Magento Open Source元包创建编辑器项目。
 
@@ -87,19 +87,19 @@ ht-degree: 0%
    composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   出现提示时，输入您的身份验证密钥。 可在中创建和配置公钥和私钥 [Commerce Marketplace](https://marketplace.magento.com/customer/account/login/).
+   出现提示时，输入您的身份验证密钥。 可在中创建和配置公钥和私钥， [Commerce Marketplace](https://marketplace.magento.com/customer/account/login/).
 
-   如果您遇到错误，例如 `Could not find package...` 或 `...no matching package found`，确保命令中没有拼写错误。 如果您仍然遇到错误，则可能无权下载Adobe Commerce。 联系人 [Adobe Commerce支持](https://support.magento.com/hc/en-us) 以寻求帮助。
+   如果您遇到错误，例如 `Could not find package...` 或 `...no matching package found`，确保命令中没有拼写错误。 如果仍遇到错误，则可能无权下载Adobe Commerce。 联系人 [Adobe Commerce支持](https://support.magento.com/hc/en-us) 以寻求帮助。
 
-   参见 [疑难解答](https://support.magento.com/hc/en-us/articles/360033818091) 以获取有关更多错误的帮助。
+   请参阅 [疑难解答](https://support.magento.com/hc/en-us/articles/360033818091) 以获取有关更多错误的帮助。
 
    >[!NOTE]
    >
-   >Adobe Commerce客户可以在正式发布(GA)日期的两周前访问修补程序。 预发行版软件包只能通过Composer获得。 在GA之前，您无法在开发人员门户或GitHub上访问预发行版。 如果您在编辑器中找不到这些包，请联系Adobe Commerce支持。
+   >Adobe Commerce客户可以在正式发布(GA)日期两周前访问修补程序。 预发行版包只能通过Composer使用。 在GA之前，您无法在开发人员门户或GitHub上访问预发行版。 如果您在编辑器中找不到这些包，请联系Adobe Commerce支持。
 
 ### 示例 — 次要版本
 
-次要版本包含新功能、质量修复和安全修复。 使用Composer指定次要版本。 例如，要指定Adobe Commerce 2.4.5元包，请执行以下操作：
+次发行版本包含新功能、质量修复和安全修复。 使用编辑器指定次要版本。 例如，要指定Adobe Commerce 2.4.5metapackage，请执行以下操作：
 
 ```bash
 composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
@@ -107,7 +107,7 @@ composer create-project --repository-url=https://repo.magento.com/ magento/proje
 
 ### 示例 — 质量修补程序
 
-质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时也可以包含向后兼容的新功能。 使用Composer下载高质量的修补程序。 例如，要指定Adobe Commerce 2.4.5元包，请执行以下操作：
+质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时也可以包含向后兼容的新功能。 使用Composer下载质量修补程序。 例如，要指定Adobe Commerce 2.4.5metapackage，请执行以下操作：
 
 ```bash
 composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
@@ -117,7 +117,7 @@ composer create-project --repository-url=https://repo.magento.com/ magento/proje
 
 安全修补程序仅包含安全修补程序。 它们旨在使升级过程更快、更轻松。
 
-安全修补程序使用编辑器命名约定 `2.4.5-px`. 使用Composer指定修补程序。 例如，要下载Adobe Commerce 2.4.5-p1中继，请执行以下操作：
+安全修补程序使用编辑器命名约定 `2.4.5-px`. 使用Composer指定修补程序。 例如，要下载Adobe Commerce 2.4.5-p1中继包，请执行以下操作：
 
 ```bash
 composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5-p1 <install-directory-name>
@@ -139,7 +139,7 @@ chmod u+x bin/magento
 
 您必须使用命令行安装Adobe Commerce或Magento Open Source。
 
-此示例假定安装目录名为 `magento2ee`，则 `db-host` 在同一台计算机上(`localhost`)，并且 `db-name`， `db-user`、和 `db-password` 全部 `magento`：
+此示例假定安装目录名为 `magento2ee`， `db-host` 在同一台计算机上(`localhost`)，并且 `db-name`， `db-user`、和 `db-password` 全部 `magento`：
 
 ```bash
 bin/magento setup:install \
@@ -206,7 +206,7 @@ bin/magento help cache:enable
 | `magento maintenance:{enable/disable}` | 启用或禁用维护模式（在维护模式下，只有免费IP地址才能访问管理员或店面）。 | 已安装应用程序 |
 | `magento setup:config:set` | 创建或更新部署配置。 | 无 |
 | `magento module:{enable/disable}` | 启用或禁用模块。 | 无 |
-| `magento setup:store-config:set` | 设置与店面相关的选项，如基本URL、语言、时区。 | 部署配置 |
+| `magento setup:store-config:set` | 设置店面相关选项，如基本URL、语言、时区。 | 部署配置 |
 | `magento setup:db-schema:upgrade` | 更新数据库模式。 | 部署配置 |
 | `magento setup:db-data:upgrade` | 更新数据库数据。 | 部署配置 |
 | `magento setup:db:status` | 检查数据库是否使用代码保持最新。 | 部署配置 |
@@ -230,4 +230,4 @@ bin/magento help cache:enable
 
 >[!NOTE]
 >
->恭喜！ 您已完成快速安装。 是否需要更多高级帮助？ 查看我们的 [高级安装](advanced.md) 指南。
+>恭喜！您已完成快速安装。 需要更多高级帮助？ 查看我们的 [高级安装](advanced.md) 指南。

@@ -1,5 +1,5 @@
 ---
-title: 用于升级的维护模式选项
+title: 升级的维护模式选项
 description: 创建自定义维护模式页面，以便客户在执行升级时在Adobe Commerce或Magento Open Source店面中看到该页面。
 exl-id: 77e6d82d-5cc6-4d14-8b5c-1d2108f27b29
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 用于升级的维护模式选项
 
-本主题讨论如何在升级Magento应用程序时创建自定义维护页以向用户显示。 创建自定义页面是可选的，但建议创建自定义页面，因为您的网站在升级过程中可访问。
+本主题讨论如何创建自定义维护页，以便在升级Magento应用程序时向用户显示。 创建自定义页面是可选的，但建议创建自定义页面，因为您的网站在升级过程中可访问。
 
 创建一个自定义页面，用户将重定向到该页面，这会阻止对该网站的任何访问，并会通知用户该网站正在进行维护。
 
@@ -54,7 +54,7 @@ body
 
 ## Apache的自定义维护页面
 
-本节讨论如何创建自定义维护页面以及如何将流量重定向到该页面。
+此部分讨论如何创建自定义维护页面以及如何将流量重定向到该页面。
 
 此部分中的示例说明如何修改以下文件，这是设置维护页面的一种方法：
 
@@ -94,20 +94,20 @@ body
    touch <web server docroot>/maintenance.enable
    ```
 
-1. [升级系统](../implementation/perform-upgrade.md).
+1. [升级您的系统](../implementation/perform-upgrade.md).
 1. 测试您的网站以确保其正常运行。
 1. 升级完成后，删除 `maintenance.enable`.
 
 ## nginx的自定义维护页面
 
-本节讨论如何创建自定义维护页面以及如何将流量重定向到该页面。
+此部分讨论如何创建自定义维护页面以及如何将流量重定向到该页面。
 
 要将流量重定向到自定义维护页面，请执行以下操作：
 
 1. 使用文本编辑器打开包含服务器块的nginx配置文件。
 1. 将以下内容添加到服务器块(`server` 仅为了清楚起见而显示；不要添加第二个服务器块)。
 
-   以下允许列表在安装了Magento的系统上IP地址192.0.2.110和192.0.2.115。 `/var/www/html/magento2`：
+   以下允许列表在安装了Magento的系统上IP地址192.0.2.110和192.0.2.115 `/var/www/html/magento2`：
 
    ```conf
    server {
@@ -154,7 +154,7 @@ body
    service nginx reload
    ```
 
-1. [升级系统](../implementation/perform-upgrade.md).
+1. [升级您的系统](../implementation/perform-upgrade.md).
 1. 测试您的网站以确保其正常运行。
 1. 升级完成后，删除或重命名 `maintenance.enable`
 1. 重新加载nginx配置：

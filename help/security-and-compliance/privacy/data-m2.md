@@ -1,6 +1,6 @@
 ---
-title: 客户个人信息参考（2.x版）
-description: 了解Adobe Commerce和Magento Open Source2.x中客户个人信息的数据流图和数据库实体映射。
+title: 客户个人信息参考（版本2.x）
+description: 了解Adobe Commerce和Magento Open Source 2.x中客户个人信息的数据流图和数据库实体映射。
 exl-id: f08f4f93-a7b6-4c43-bc07-f159822dc528
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# 客户个人信息参考（2.x版）
+# 客户个人信息参考（版本2.x）
 
 >[!NOTE]
 >
->本主题是帮助Adobe Commerce和Magento Open Source商家及开发人员为遵守隐私法规做准备的一系列主题中的一个。 请咨询您的法律顾问，以确定您的企业是否以及如何遵守任何法律义务。
+>这是一系列主题中的一个，旨在帮助Adobe Commerce和Magento Open Source商家及开发人员为遵守隐私法规做好准备。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
 
 在开发隐私法规的合规性程序时，请参考以下数据流图和数据库实体映射，例如：
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 数据流图
 
-数据流图显示了客户和管理员可以输入的数据类型，以及从店面和管理员中检索的数据类型。
+数据流图显示了客户和管理员可以从店面和管理员输入和检索的数据类型。
 
 ### 前端数据入口点
 
@@ -50,11 +50,11 @@ ht-degree: 0%
 
 ## 数据库实体
 
-Adobe Commerce和Magento Open Source主要将客户特定的信息存储在客户、地址、订单、报价和付款表中。 其他表包含对客户ID的引用。
+Adobe Commerce和Magento Open Source主要存储客户、地址、订单、报价和付款表中特定于客户的信息。 其他表包含对客户ID的引用。
 
 ### 客户数据
 
-可以将Adobe Commerce和Magento Open Source配置为存储以下客户属性：
+Adobe Commerce和Magento Open Source可以配置为存储以下客户属性：
 
 - 出生日期
 - 电子邮件
@@ -67,11 +67,11 @@ Adobe Commerce和Magento Open Source主要将客户特定的信息存储在客�
 
 >[!NOTE]
 >
->为遵循最新的安全和隐私最佳实践，在收集或处理此类数据之前，请确保您了解任何与客户的完整出生日期（月、日、年）以及其他个人标识符（如全名）的存储相关的潜在法律和安全风险。
+>为遵循最新的安全和隐私最佳实践，在收集或处理客户完整出生日期（月、日、年）及其他个人标识符（如全名）之前，请确保您了解任何与此类存储相关的潜在法律和安全风险。
 
 #### `customer_entity` 和“customer_entity”引用
 
-中的以下列 `customer_entity` 表包含客户信息：
+中的以下列 `customer_entity` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | ------------ | ------------ |
@@ -88,24 +88,24 @@ Adobe Commerce和Magento Open Source主要将客户特定的信息存储在客�
 
 | 表 | 列 | 数据类型 |
 | -------------------------- | ------- | ------------- |
-| `customer_entity_datetime` | `value` | datetime |
+| `customer_entity_datetime` | `value` | 日期时间 |
 | `customer_entity_decimal` | `value` | decimal(12,4) |
 | `customer_entity_int` | `value` | int(11) |
-| `customer_entity_text` | `value` | text |
+| `customer_entity_text` | `value` | 文本 |
 | `customer_entity_varchar` | `value` | varchar(255) |
 
 #### `customer_grid_flat` 表
 
-中的以下列 `customer_grid_flat` 表包含客户信息：
+中的以下列 `customer_grid_flat` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | -------------------- | ------------ |
-| `name` | text |
+| `name` | 文本 |
 | `email` | varchar(255) |
 | `dob` | 日期 |
 | `gender` | int(11) |
-| `shipping_full` | text |
-| `billing_full` | text |
+| `shipping_full` | 文本 |
+| `billing_full` | 文本 |
 | `billing_firstname` | varchar(255) |
 | `billing_lastname` | varchar(255) |
 | `billing_telephone` | varchar(255) |
@@ -139,7 +139,7 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 
 #### `customer_address_entity` 和 `customer_address_entity` 引用
 
-中的以下列 `customer_address_entity` 表包含客户信息：
+中的以下列 `customer_address_entity` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | ------------ | ------------ |
@@ -153,7 +153,7 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 | `postcode` | varchar(255) |
 | `region` | varchar(255) |
 | `region_id` | int(10) |
-| `street` | text |
+| `street` | 文本 |
 | `suffix` | varchar(40) |
 | `telephone` | varchar(255) |
 | `vat_id` | varchar(255) |
@@ -162,23 +162,23 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 
 | 表 | 列 | 数据类型 |
 | ---------------------------------- | ------- | ------------- |
-| `customer_address_entity_datetime` | `value` | datetime |
+| `customer_address_entity_datetime` | `value` | 日期时间 |
 | `customer_address_entity_decimal` | `value` | decimal(12,4) |
 | `customer_address_entity_int` | `value` | int(11) |
-| `customer_address_entity_text` | `value` | text |
+| `customer_address_entity_text` | `value` | 文本 |
 | `customer_address_entity_varchar` | `value` | varchar(255) |
 
 ### 订单数据
 
-此 `sales_order` 和相关表包含客户名称、帐单和送货地址以及相关数据。
+此 `sales_order` 和相关表包含客户名称、账单和运送地址以及相关数据。
 
 #### `sales_order` 表
 
-中的以下列 `sales_order` 表包含客户信息：
+中的以下列 `sales_order` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | --------------------- | ------------ |
-| `customer_dob` | datetime |
+| `customer_dob` | 日期时间 |
 | `customer_email` | varchar(128) |
 | `customer_firstname` | varchar(128) |
 | `customer_gender` | int(11) |
@@ -218,7 +218,7 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 
 #### `sales_order_grid` 表
 
-中的以下列 `sales_order_grid` 表包含客户信息：
+中的以下列 `sales_order_grid` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | ---------------------- | ------------ |
@@ -237,7 +237,7 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 
 #### `quote` 表
 
-中的以下列 `quote` 表包含客户信息：
+中的以下列 `quote` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | --------------------- | ------------ |
@@ -247,14 +247,14 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 | `customer_firstname` | varchar(255) |
 | `customer_middlename` | varchar(40) |
 | `customer_lastname` | varchar(255) |
-| `customer_dob` | datetime |
+| `customer_dob` | 日期时间 |
 | `remote_ip` | varchar(32) |
 | `customer_taxvat` | varchar(255) |
 | `customer_gender` | varchar(255) |
 
 #### `quote_address` 表
 
-中的以下列 `quote_address` 表包含客户信息：
+中的以下列 `quote_address` 该表包含客户信息：
 
 | 列 | 数据类型 |
 | ------------- | ------------ |
@@ -291,11 +291,11 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 | `cc_debug_response_body` | varchar(32) |
 | `echeck_account_name` | varchar(32) |
 | `cc_number_enc` | varchar(128) |
-| `additional_information` | text |
+| `additional_information` | 文本 |
 
 ### 邀请数据
 
-可以配置Adobe Commerce和Magento Open Source，以便客户可以发送邀请函给私人销售和活动。
+可以配置Adobe Commerce和Magento Open Source，以便客户能够向私人销售和活动发送邀请。
 
 #### `magento_invitation` 表
 
@@ -309,7 +309,7 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 
 #### `magento_invitation_track` 表
 
-此 `magento_invitation_track` 表格中还包含客户信息。
+此 `magento_invitation_track` 该表还包含客户信息。
 
 | 列 | 数据类型 |
 | ------------- | --------- |

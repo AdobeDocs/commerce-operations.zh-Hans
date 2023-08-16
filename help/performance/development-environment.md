@@ -21,25 +21,25 @@ ht-degree: 0%
 
 ## 在开发模式下要避免的命令
 
-在开发模式下，请勿运行用于编译、代码生成和静态内容部署的命令。 这些命令仅用于生产模式。
+在开发模式下，请勿运行用于编译、代码生成和静态内容部署的命令。 这些命令仅构建用于生产模式。
 
 **不要运行** 开发模式下的生产命令：
 
 * `setup:di:compile` 生成自动生成类和优化配置缓存。
 
-   ```bash
-   bin/magento setup:di:compile
-   ```
+  ```bash
+  bin/magento setup:di:compile
+  ```
 
-   在开发模式下，Magento会按需执行生成；您无需运行生成。 如果修改了类的签名并需要重新生成其自动生成的签名 `factories/proxies/interceptors`，删除这些类或 _已生成_ 文件夹。
+  在开发模式下，Magento会按需执行生成；您无需运行生成。 如果修改了类的签名并需要重新生成其自动生成的签名 `factories/proxies/interceptors`，删除这些类或 _已生成_ 文件夹。
 
 * `setup:static-content:deploy` 为存储部署静态内容。
 
-   ```bash
-   bin/magento setup:static-content:deploy
-   ```
+  ```bash
+  bin/magento setup:static-content:deploy
+  ```
 
-   在开发模式中，Magento可按需执行；您无需运行它。
+  在开发模式下，Magento可按需执行操作；您无需运行它。
 
 ## 虚拟机上的正常页面加载时间
 

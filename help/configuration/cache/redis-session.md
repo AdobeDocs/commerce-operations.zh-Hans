@@ -1,5 +1,5 @@
 ---
-title: 将Redis用于会话存储
+title: 使用Redis进行会话存储
 description: 了解如何为会话存储配置Redis。
 feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
@@ -10,16 +10,16 @@ ht-degree: 1%
 
 ---
 
-# 将Redis用于会话存储
+# 使用Redis进行会话存储
 
 >[!IMPORTANT]
 >
 >您必须 [安装Redis](config-redis.md#install-redis) 然后再继续。
 
 
-Commerce现在提供命令行选项来配置Redis会话存储。 在以前的版本中，您编辑了 `<Commerce install dir>app/etc/env.php` 文件。 命令行提供验证，是推荐的配置方法，但您仍可以编辑 `env.php` 文件。
+Commerce现在提供命令行选项来配置Redis会话存储。 在以前的版本中，您编辑了 `<Commerce install dir>app/etc/env.php` 文件。 命令行提供验证功能，是推荐的配置方法，但您仍可以编辑 `env.php` 文件。
 
-运行 `setup:config:set` 命令并指定特定于Redis的参数。
+运行 `setup:config:set` 命令并指定Redis特定的参数。
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
@@ -38,27 +38,27 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 | session-save-redis-password | 密码 | 如果Redis服务器要求身份验证，请指定密码。 | 空 |
 | session-save-redis-timeout | timeout | 连接超时（秒）。 | 2.5 |
 | session-save-redis-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70). |
-| session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用它来防止数据丢失。<br><br>**重要**：如果将Redis用于多种类型的缓存，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
-| session-save-redis-compression-threshold | compress_threshold | 设置为0可禁用压缩(建议在 `suhosin.session.encrypt = On`)。<br>[超过64 KB的字符串的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
-| session-save-redis-compression-lib | compression_library | 选项：gzip、lzf、lz4或snappy。 | gzip |
-| session-save-redis-log-level | log_level | 设置为以下任一项，按从少到多的顺序列出：<ul><li>0（紧急：仅最严重的错误）<li>1（警报：需要立即采取措施）<li>2（严重：应用程序组件不可用）<li>3 （错误：运行时错误，不严重，但必须监控）<li>4（警告：其他信息，建议）<li>5（注意：正常但重要的情况）<li>6（信息：信息性消息）<li>7（调试：仅供开发或测试使用的信息最多）</ul> | 1 |
-| session-save-redis-max-concurrency | max_concurrency | 可等待一个会话锁定的最大进程数。 对于大型生产群集，请将此参数至少设置为PHP进程数的10%。 | 6 |
-| session-save-redis-break-after-frontend | break_after_frontend | 在尝试解除前端（即storefront）会话锁定之前等待的秒数。 | 5 |
-| session-save-redis-break-after-adminhtml | break_after_adminhtml | 尝试解除对Admin HTML（即管理员）会话的锁定之前等待的秒数。 | 30 |
+| session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要**：如果对多种类型的缓存使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
+| session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩(建议在 `suhosin.session.encrypt = On`)。<br>[字符串超过64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
+| session-save-redis-compression-lib | compress_library | 选项： gzip、lzf、lz4或snappy。 | gzip |
+| session-save-redis-log-level | log_level | 设置为以下任意值，按从少到多的顺序列出：<ul><li>0（紧急：仅最严重的错误）<li>1（警报：需要立即执行操作）<li>2（严重：应用程序组件不可用）<li>3 （错误：运行时错误，不严重，但必须监控）<li>4（警告：其他信息，推荐）<li>5（注意：正常但重要的情况）<li>6（信息：信息性消息）<li>7（调试：仅供开发或测试使用的信息最多）</ul> | 1 |
+| session-save-redis-max-concurrency | max_concurrency | 可以等待一个会话锁定的最大进程数。 对于大型生产群集，请将此参数至少设置为PHP进程数的10%。 | 6 |
+| session-save-redis-break-after-frontend | break_after_frontend | 在尝试中断前端（即storefront）会话锁定之前等待的秒数。 | 5 |
+| session-save-redis-break-after-adminhtml | break_after_adminhtml | 在尝试中断Admin HTML（即管理员）会话锁定之前等待的秒数。 | 30 |
 | session-save-redis-first-lifetime | first_lifetime | 非机器人首次写入时会话的生命周期（以秒为单位），或使用0禁用。 | 600 |
 | session-save-redis-bot-first-lifetime | bot_first_lifetime | 机器人首次写入时会话的生命周期（以秒为单位），或使用0禁用。 | 60 |
 | session-save-redis-bot-lifetime | bot_lifetime | 机器人后续写入会话的生命周期（以秒为单位），或使用0禁用。 | 7200 |
 | session-save-redis-disable-locking | disable_locking | 完全禁用会话锁定。 | 0（假） |
 | session-save-redis-min-lifetime | min_lifetime | 最短会话生命周期（以秒为单位）。 | 60 |
 | session-save-redis-max-lifetime | max_lifetime | 最长会话生命周期（以秒为单位）。 | 2592000 （720小时） |
-| session-save-redis-sentinel-主控 | sentinel_主控 | Redis Sentinel主控名称 | 空 |
+| session-save-redis-sentinel-master | sentinel_master | Redis Sentinel主名称 | 空 |
 | session-save-redis-sentinel-servers | sentinel_servers | Redis Sentinel服务器列表，逗号分隔 | 空 |
-| session-save-redis-sentinel-verify-主控 | sentinel_verify_主控 | 验证Redis Sentinel主控状态标志 | 0（假） |
+| session-save-redis-sentinel-verify-master | sentinel_verify_master | 验证Redis Sentinel主状态标志 | 0（假） |
 | session-save-redis-sentinel-connect-retries | sentinel_connect_retries | Sentinels的连接重试 | 5 |
 
 ## 示例
 
-以下示例将Redis设置为会话数据存储，将主机设置为 `127.0.0.1`，将日志级别设置为4 ，将数据库编号设置为2。 所有其他参数均设置为默认值。
+以下示例将Redis设置为会话数据存储，将主机设置为 `127.0.0.1`，将日志级别设置为4 ，并将数据库编号设置为2。 所有其他参数均设置为默认值。
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
@@ -66,7 +66,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.
 
 ### 结果
 
-Commerce会将类似于以下内容的行添加到 `<magento_root>app/etc/env.php`：
+Commerce将类似于以下内容的行添加到 `<magento_root>app/etc/env.php`：
 
 ```php
     'session' =>
@@ -98,13 +98,13 @@ Commerce会将类似于以下内容的行添加到 `<magento_root>app/etc/env.ph
 
 >[!INFO]
 >
->会话记录的TTL使用管理员中配置的Cookie生命周期值。 如果Cookie Lifetime设置为0（默认值为3600），则Redis会话将在min_lifetime中指定的秒数内过期（默认值为60）。 此差异是由于Redis和会话Cookie对生命周期值0的解释方式不同造成的。 如果不希望出现该行为，请增加min_lifetime的值。
+>会话记录的TTL使用Cookie生命周期的值，该值可在管理员中进行配置。 如果Cookie Lifetime设置为0（默认值为3600），则Redis会话将在min_lifetime中指定的秒数内过期（默认值为60）。 此差异是由于Redis和会话Cookie对生命周期值0的解释方式不同所致。 如果不希望出现这种行为，请增加min_lifetime的值。
 
 ## 验证Redis连接
 
 要验证Redis和Commerce是否协同工作，请登录到运行Redis的服务器，打开终端，然后使用Redis monitor命令或ping命令。
 
-### Redis监视器命令
+### Redis监视命令
 
 ```bash
 redis-cli monitor
@@ -127,7 +127,7 @@ redis-cli monitor
 redis-cli ping
 ```
 
-`PONG` 应该作为回应。
+`PONG` 应该是回应。
 
 如果两个命令都成功，则Redis设置正确。
 

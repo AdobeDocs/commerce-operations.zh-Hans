@@ -2,11 +2,11 @@
 title: 配置数据库探查器
 description: 请参阅有关如何为数据库探查器配置输出的示例。
 feature: Configuration, Storage
-badge: label="Contributed by Atish Goswami" type="Informational" url="https://github.com/atishgoswami" tooltip="Atish Goswami"
+badge: label="作者：阿提什·戈斯瓦米" type="Informative" url="https://github.com/atishgoswami" tooltip="阿提什·戈斯瓦米"
 exl-id: 87780db5-6e50-4ebb-9591-0cf22ab39af5
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Commerce数据库探查器显示页面上实施的所有查询，包括每个查
 
 ## 步骤1：修改部署配置
 
-修改 `<magento_root>/app/etc/env.php` 将以下引用添加到 [数据库探查器类](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php)：
+修改 `<magento_root>/app/etc/env.php` 将以下引用添加到 [database profiler类](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php)：
 
 ```php?start_inline=1
         'profiler' => [
@@ -63,7 +63,7 @@ Commerce数据库探查器显示页面上实施的所有查询，包括每个查
 - SQL （显示所有SQL查询；行标题显示查询计数）
 - 查询参数（显示每个SQL查询的参数）
 
-要配置输出，请将以下内容添加到 `$bootstrap->run($app);` bootstrap文件中的行：
+要配置输出，请在以下内容之后添加 `$bootstrap->run($app);` bootstrap文件中的行：
 
 ```php?start_inline=1
 /** @var \Magento\Framework\App\ResourceConnection $res */
@@ -87,7 +87,7 @@ foreach ($profiler->getQueryProfiles() as $query) {
 echo "</table>";
 ```
 
-## 步骤3：查看结果
+## 第3步：查看结果
 
 转到店面或管理员中的任何页面以查看结果。 下面是一个示例：
 

@@ -1,6 +1,6 @@
 ---
 title: 备份和回滚文件系统、介质和数据库
-description: 按照以下步骤备份和恢复Adobe Commerce或Magento Open Source应用程序。
+description: 请按照以下步骤备份和恢复Adobe Commerce或Magento Open Source应用程序。
 exl-id: b9925198-37b4-4456-aa82-7c55d060c9eb
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 备份和回滚文件系统、介质和数据库
 
-此命令允许您备份：
+使用此命令可以备份：
 
 * 文件系统(不包括 `var` 和 `pub/static` 目录)
 * 此 `pub/media` 目录
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 备份存储在 `var/backups` 目录，并可随时使用 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
 
-备份后，您可以 [回滚](#rollback) 稍后。
+备份之后，您可以 [回滚](#rollback) 稍后。
 
 >[!TIP]
 >
@@ -35,14 +35,14 @@ bin/magento config:set system/backup/functionality_enabled 1
 
 >[!WARNING]
 >
->**弃用通知：**
->备份功能自2.1.16、2.2.7和2.3.0起已被弃用。我们建议调查其他备份技术和二进制备份工具（如Percona XtraBackup）。
+>**弃用说明：**
+>备份功能自2.1.16、2.2.7和2.3.0起已弃用。我们建议研究其他备份技术和二进制备份工具（如Percona XtraBackup）。
 
 ## 设置打开文件限制
 
 回滚到以前的备份可能会以静默方式失败，导致使用写入文件系统或数据库的数据不完整。 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
 
-有时，较长的查询字符串会导致用户分配的内存空间因递归调用过多而耗尽内存。
+有时，较长的查询字符串会导致用户分配的内存空间因太多递归调用而耗尽内存。
 
 ## 如何设置打开的文件 `ulimit`
 
@@ -58,13 +58,13 @@ bin/magento config:set system/backup/functionality_enabled 1
 ulimit -s 65536
 ```
 
-如果需要，可以将其更改为更大的值。
+如果需要，可将其更改为更大的值。
 
 >[!NOTE]
 >
 >打开文件的语法 `ulimit` 取决于您使用的UNIX shell。 前面的设置应适用于CentOS和Ubuntu以及Bash shell。 但是，对于macOS，正确的设置是 `ulimit -S 65532`. 有关更多信息，请参阅手册页或操作系统参考。
 
-要在用户的Bash shell中设置值（可选），请执行以下操作：
+要在用户的Bash shell中可选地设置值，请执行以下操作：
 
 1. 如果您尚未这样做，请切换到 [文件系统所有者](../prerequisites/file-system/overview.md).
 1. 打开 `/home/<username>/.bashrc` 在文本编辑器中。
@@ -93,7 +93,7 @@ bin/magento setup:backup [--code] [--media] [--db]
 1. 将商店置于维护模式。
 1. 执行以下命令选项之一。
 
-   | Option | 含义 | 备份文件名和位置 |
+   | 选项 | 含义 | 备份文件名和位置 |
    |--- |--- |--- |
    | `--code` | 备份文件系统（var和pub/static目录除外）。 | `var/backups/<timestamp>/_filesystem.tgz` |
    | `--media` | 备份pub/media目录 | `var/backups/<timestamp>/_filesystem_media.tgz` |
@@ -107,7 +107,7 @@ bin/magento setup:backup [--code] [--media] [--db]
 bin/magento setup:backup --code --db
 ```
 
-显示类似于以下内容的消息：
+与以下内容类似的消息：
 
 ```terminal
 Enabling maintenance mode
@@ -124,7 +124,7 @@ Disabling maintenance mode
 
 ## 回滚
 
-本节讨论如何回滚到您之前创建的备份。 您必须知道要还原的备份文件的文件名。
+本节将讨论如何回滚到您之前创建的备份。 您必须知道要还原的备份文件的文件名。
 
 要查找备份的名称，请输入：
 
@@ -140,13 +140,13 @@ bin/magento info:backups:list
 bin/magento setup:rollback [-c|--code-file="<name>"] [-m|--media-file="<name>"] [-d|--db-file="<name>"]
 ```
 
-例如，要恢复名为的媒体备份，请 `1440611839_filesystem_media.tgz`，输入
+例如，要恢复名为的介质备份 `1440611839_filesystem_media.tgz`，输入
 
 ```bash
 bin/magento setup:rollback -m 1440611839_filesystem_media.tgz
 ```
 
-显示类似于以下内容的消息：
+与以下内容类似的消息：
 
 ```terminal
 [SUCCESS]: Media rollback completed successfully.

@@ -13,16 +13,16 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-代码编译包括以下内容（没有特定的顺序）：
+代码编译包括以下内容（没有特定顺序）：
 
 - 应用程序代码生成（工厂、代理）
-- 区域配置聚合（每区域优化的依赖项注入配置）
+- 区域配置聚合（优化了每区域的依赖项注入配置）
 - 拦截器生成（优化拦截器代码生成）
 - 拦截缓存生成
 - 存储库代码生成（为API生成的代码）
 - 服务数据属性生成（为数据对象生成的扩展类）
 
-您可以在代码编译类中找到 [\Magento\Setup\Module\Di\App\Task\Operation][operation] 命名空间。
+您可以在 [\Magento\Setup\Module\Di\App\Task\Operation][operation] 命名空间。
 
 要运行单租户编译器，请执行以下操作：
 
@@ -46,7 +46,7 @@ Generated code and dependency injection configuration successfully.
 
    使用 `[-c|--clear-static-content]` 用于清除静态内容的选项。 如果您之前已启用或禁用了模块，并且必须清除之前为其生成的静态内容，则必须执行此操作。
 
-   参见 [启用模块](../../installation/tutorials/manage-modules.md).
+   请参阅 [启用模块](../../installation/tutorials/manage-modules.md).
 
 1. 编译代码。
 
@@ -58,7 +58,7 @@ Generated code and dependency injection configuration successfully.
    Generated code and dependency injection configuration successfully.
    ```
 
-要在没有数据库的情况下编译代码，请参见 [部署静态视图文件而不安装Magento](../cli/static-view-file-deployment.md).
+要在没有数据库的情况下编译代码，请参见 [在不安装Magento的情况下部署静态视图文件](../cli/static-view-file-deployment.md).
 
 <!-- link definitions -->
 

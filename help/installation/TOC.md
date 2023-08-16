@@ -5,7 +5,7 @@ feature: Install
 source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 0%
       - [下载编辑器包](sample-data/composer-packages.md)
       - [克隆Git存储库](sample-data/git-repositories.md)
       - [删除或更新模块](sample-data/remove-or-update.md)
-- Tutorials {#tutorials}
+- 教程 {#tutorials}
    - [备份和回滚文件系统、介质和数据库](tutorials/backup.md)
    - [检查数据库状态](tutorials/database-status.md)
    - [配置消息使用者行为](tutorials/message-consumers.md)
@@ -60,7 +60,7 @@ ht-degree: 0%
    - [启用或禁用维护模式](tutorials/maintenance-mode.md)
    - [启用或禁用模块](tutorials/manage-modules.md)
    - [安装扩展](tutorials/extensions.md)
-   - [安装商务](tutorials/install.md)
+   - [安装Commer](tutorials/install.md)
    - [修改docroot以提高安全性](tutorials/docroot.md)
    - [卸载语言包](tutorials/language-packages.md)
    - [卸载模块](tutorials/uninstall-modules.md)

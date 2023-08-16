@@ -11,14 +11,14 @@ ht-degree: 0%
 
 1. 以文件系统所有者的身份登录开发系统，或切换到文件系统所有者。
 
-1. 更改为应用程序根并运行转储命令。
+1. 更改为应用程序根并运行dump命令。
 
    ```bash
    cd <Magento root dir>
    php bin/magento app:config:dump
    ```
 
-   例如，如果商务安装在中 `/var/www/html/magento2`，输入：
+   例如，如果Commerce安装在中 `/var/www/html/magento2`，输入：
 
    ```bash
    cd /var/www/html/magento2
@@ -43,7 +43,7 @@ ht-degree: 0%
 
    >[!WARNING]
    >
-   >Do _非_ 将更改提交到 `generated`， `pub/media`，或 `pub/static` 目录到源代码管理。 您可在构建系统上生成这些文件。 开发系统可能具有代码、主题等，尚未准备好用于生产系统。
+   >Do _非_ 将更改提交到 `generated`， `pub/media`，或 `pub/static` 目录到源代码管理。 您可以在生成系统上生成这些文件。 开发系统可能具有代码、主题等，尚未准备好用于生产系统。
 
 1. 将更改签入 `app/etc/config.php` 仅用于源代码管理。
 

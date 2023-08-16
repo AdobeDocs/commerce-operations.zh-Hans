@@ -17,7 +17,7 @@ ht-degree: 0%
 
 - **销售规则（购物车价格规则）** — 为所有网站配置不超过1000个购物车价格规则
    - 管理和删除未使用的规则。
-   - 为最有效的匹配添加严格的规则条件（如属性或类别过滤器）。
+   - 添加严格的规则条件（如属性或类别过滤器）以实现最有效的匹配。
 - **优惠券**—
    - 验证数据库中的优惠券总数是否小于250,000。
    - 删除未使用和过期的优惠券。
@@ -32,17 +32,17 @@ ht-degree: 0%
 
 ## 潜在的性能影响
 
-如果购物车价格规则或优惠券的数量超过建议的最大数量，可能会以下列方式影响网站性能：
+如果购物车价格规则或优惠券的数量超过建议的最大数量，则会以下列方式影响网站性能：
 
-- 将产品添加到购物车后响应时间延长。
+- 将产品添加到购物车时增加的响应时间。
 - 增加了加载和渲染微型艺术品的时间。
-- 增加了渲染购物车页面的时间。
-- 渲染的时间增加 **总计** 在“结帐”页面上阻止。
+- 增加了呈现购物车页面的时间。
+- 增加了呈现的时间 **总计** 在“结帐”页面上阻止。
 - 应用优惠券可能需要超过2秒的时间。
 
 ## 其他信息
 
-- [了解营销活动和促销](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#campaigns)
+- [了解营销活动和促销活动](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#campaigns)
 - [购物车价格规则](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html)
 - [教程：创建购物车价格规则](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/marketing/cart-price-rules.html)
 - [优惠券代码](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon.html)

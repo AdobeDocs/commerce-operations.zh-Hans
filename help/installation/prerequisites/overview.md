@@ -5,7 +5,7 @@ exl-id: dd4694e7-5437-440c-bb67-804ae36149de
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '334'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -13,37 +13,37 @@ ht-degree: 0%
 
 在安装Adobe Commerce或Magento Open Source之前，必须执行以下操作：
 
-* 设置符合以下条件的一个或多个主机： [系统要求](../system-requirements.md).
+* 设置一个或多个符合条件的主机 [系统要求](../system-requirements.md).
 * 如果要设置多个具有负载平衡的Web节点，请设置并测试系统的该部分 _早于_ 安装应用程序。
-* 确保您可以在安装过程中的不同时间点备份整个系统，以便在出现问题时将其回滚。
+* 确保您可以在安装过程中的不同时刻备份整个系统，以便在出现问题时回滚系统。
 
 >[!NOTE]
 >
->我们假定您要在中安装Adobe Commerce或Magento Open Source **开发环境**，您具有计算机的超级用户访问权限， **和** 机器不需要高度安全。 如果您正在设置更安全的计算机，我们强烈建议您向网络管理员寻求其他帮助。
+>我们假设您要在以下位置安装Adobe Commerce或Magento Open Source： **开发环境**，您具有计算机的超级用户访问权限， **和** 机器不需要高度安全。 如果您正在设置更安全的计算机，我们强烈建议您向网络管理员寻求其他帮助。
 
-我们强烈建议您更新并升级操作系统软件。 这些升级可以提供安全和软件修复，以防止将来出现问题。 不知道这些是什么意思吗？ 查看我们的 [安装概述页面](../overview.md).
+我们强烈建议您更新和升级操作系统软件。 这些升级可提供安全和软件修复，以防止将来出现问题。 不知道这些是什么意思吗？ 查看我们的 [安装概述页面](../overview.md).
 
 以用户身份输入以下命令 `root` 权限：
 
-* 乌本图
+* 乌班图
 
-   ```bash
-   apt-get update
-   ```
+  ```bash
+  apt-get update
+  ```
 
-   ```bash
-   apt-get upgrade
-   ```
+  ```bash
+  apt-get upgrade
+  ```
 
 * CentOS
 
-   ```bash
-   yum -y update
-   ```
+  ```bash
+  yum -y update
+  ```
 
-   ```bash
-   yum -y upgrade
-   ```
+  ```bash
+  yum -y upgrade
+  ```
 
 ## 先决条件检查
 
@@ -55,7 +55,7 @@ CentOS： `httpd -v`
 
 Ubuntu： `apache2 -v`
 
-Adobe Commerce和Magento Open Source支持Apache版本2.4，因为以下结果表示：
+Adobe Commerce和Magento Open Source支持Apache版本2.4，因为以下结果显示：
 
 ```terminal
 Server version: Apache/2.4.0 (Unix)
@@ -66,7 +66,7 @@ Server built:   Jul 23 2017 14:17:29
 
 ### PHP
 
-参见 [系统要求](../system-requirements.md) 支持的PHP和版本的信息 [PHP] 有关PHP要求的信息。
+请参阅 [系统要求](../system-requirements.md) 支持的PHP和版本 [PHP] PHP要求。
 
 ### MySQL
 
@@ -80,7 +80,7 @@ mysql -u <database root user or database owner name> -p
 mysql -u magento -p
 ```
 
-检查您所安装的Adobe Commerce或Magento Open Source的版本是否具有正确的MySQL版本([查看此处以了解支持的版本](../system-requirements.md). 以下结果表示您运行的版本。)
+检查您所安装的Adobe Commerce或Magento Open Source的MySQL版本是否正确([查看此处以了解支持的版本](../system-requirements.md). 以下结果指示您正在运行的版本。)
 
 ```terminal
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -102,13 +102,13 @@ owners.
 
 ### 搜索引擎
 
-验证OpenSearch安装：
+要验证OpenSearch安装，请执行以下操作：
 
 ```bash
 curl -XGET '<opensearch-hostname>:<opensearch-port>'
 ```
 
-验证Elasticsearch安装：
+要验证Elasticsearch安装，请执行以下操作：
 
 ```bash
 curl -XGET '<elasticsearch-hostname>:<elasticsearch-port>'

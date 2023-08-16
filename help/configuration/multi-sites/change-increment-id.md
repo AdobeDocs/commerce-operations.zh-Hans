@@ -21,16 +21,16 @@ ht-degree: 0%
 
 ## 何时需要更改增量ID
 
-在以下情况下，您可能需要更改新DB实体的增量ID：
+在以下情况下，您可能需要更改新数据库实体的增量ID：
 
-- 在实时站点上进行硬备份还原后
-- 某些订单记录已丢失，但其ID已被支付网关（如PayPal）用于您当前的Merchant帐户。 在这种情况下，付款网关将停止处理具有相同ID的新订单，并返回“重复发票ID”错误
+- 在Live站点上进行硬备份还原之后
+- 某些订单记录已丢失，但支付网关（如PayPal）已使用其ID作为您的当前商家帐户。 在这种情况下，付款网关将停止处理具有相同ID的新订单，并返回“重复发票ID”错误
 
 >[!INFO]
 >
->您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID进行多项付款，来修复PayPal的付款网关问题。 参见 [PayPal网关已拒绝请求 — 重复发票问题] 在 _知识库_.
+>您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 请参阅 [PayPal网关已拒绝请求 — 重复发票问题] 在 _知识库_.
 
-## 先决条件步骤
+## 必备步骤
 
 1. 查找应更改新增量ID的存储和实体。
 1. 连接到MySQL数据库。
@@ -54,6 +54,7 @@ ALTER TABLE sequence_{entity_type}_{store_id} AUTO_INCREMENT = {new_increment_va
 ```
 
 >[!INFO]
+>
 重要信息：新增量值必须大于当前增量值。
 
 执行以下查询后：
@@ -62,7 +63,7 @@ ALTER TABLE sequence_{entity_type}_{store_id} AUTO_INCREMENT = {new_increment_va
 ALTER TABLE sequence_order_1 AUTO_INCREMENT = 2000;
 ```
 
-下个订单在商店中下单 `ID=1` ID将为“#100002000”。
+在商店的下一次订单 `ID=1` ID将为“#100002000”。
 
 ## 关于云生产环境的其他建议步骤
 

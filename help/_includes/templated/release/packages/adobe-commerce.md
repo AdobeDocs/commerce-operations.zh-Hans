@@ -19,11 +19,11 @@ ht-degree: 0%
 <!-- The edition variable contains `commerce` value from the _data/names.yml file
  -->
 
-Adobe Commerce使用Composer管理PHP包。
+Adobe Commerce使用编辑器管理PHP包。
 
-此 `composer.json` 文件声明包的列表，而 `composer.lock` file存储用于构建Adobe Commerce或Magento Open Source安装的软件包（每个软件包及其依赖项的完整版本）的完整列表。
+此 `composer.json` 文件声明文件包列表，而 `composer.lock` 文件存储用于构建Adobe Commerce或Magento Open Source安装的软件包（每个软件包及其依赖项的完整版本）的完整列表。
 
-以下参考文档是从 `composer.lock` 文件中，它涵盖Adobe Commerce 2.4.6中包含的必需包。
+以下参考文档是从生成的 `composer.lock` 文件中，它涵盖Adobe Commerce 2.4.6中包含的必需包。
 
 ## 依赖关系
 
@@ -287,7 +287,7 @@ wikimedia/less.php: ^3.2
     <td>
       paypal/module-braintree
     </td>
-    <td>隐含</td>
+    <td>中继</td>
     <td>BraintreeMagento</td>
   </tr>
   <tr>
@@ -300,7 +300,7 @@ wikimedia/less.php: ^3.2
   </tbody>
 </table>
 
-### BSD-2 — 子句
+### BSD-2子句
 
 <table>
   <thead>
@@ -313,14 +313,14 @@ wikimedia/less.php: ^3.2
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/Bacon/BaconQrCode.git">培根/培根 — 二维码</a>
+      <a href="https://github.com/Bacon/BaconQrCode.git">培根/培根qr码</a>
     </td>
     <td>库</td>
     <td>BaconQrCode是PHP的二维码生成器。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/beberlei/assert.git">贝贝雷/阿瑟特</a>
+      <a href="https://github.com/beberlei/assert.git">贝伯莱/阿瑟特</a>
     </td>
     <td>库</td>
     <td>业务模型中用于输入验证的精简断言库。</td>
@@ -337,7 +337,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/webimpress/safe-writer.git">webimpress/safe-writer</a>
     </td>
     <td>库</td>
-    <td>安全写入文件的工具，以避免竞争情况</td>
+    <td>用于安全写入文件的工具，以避免出现争用情况</td>
   </tr>
   </tbody>
 </table>
@@ -358,7 +358,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/colinmollenhour/Cm_Cache_Backend_File.git">colimollenhour/cache-backend-file</a>
     </td>
     <td>magento-module</td>
-    <td>库存Zend_Cache_Backend_File后端对于标记清除的性能极差，导致其随着缓存项目数的增加而变得不可用。 此后端做出了许多更改，从而极大地提高了性能，尤其是标签清理方面。</td>
+    <td>库存Zend_Cache_Backend_File后端在标记清理方面的性能非常差，导致其随着缓存项目数的增加而变得不可用。 此后端进行了许多更改，从而极大地提高了性能，尤其是在标签清理方面。</td>
   </tr>
   <tr>
     <td>
@@ -372,39 +372,39 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
     </td>
     <td>库</td>
-    <td>在PHP中对JSON Web令牌(JWT)进行编码和解码的简单库。 应符合当前规范。</td>
+    <td>在PHP中编码和解码JSON Web令牌(JWT)的简单库。 应符合当前规范。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/google/recaptcha.git">google/recaptcha</a>
     </td>
     <td>库</td>
-    <td>reCAPTCHA客户端库，这是一种保护网站抵御垃圾邮件和滥用的免费服务。</td>
+    <td>Client Library for reCAPTCHA，这是一种保护网站抵御垃圾邮件和滥用的免费服务。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-captcha.git">拉米纳斯/拉米纳斯验证码</a>
+      <a href="https://github.com/laminas/laminas-captcha.git">拉米纳斯/拉米纳斯 — 卡普查</a>
     </td>
     <td>库</td>
     <td>使用Figlet、图像、ReCaptcha等生成和验证CAPTCHA</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-code.git">层叠/层叠 — 编码</a>
+      <a href="https://github.com/laminas/laminas-code.git">laminas/laminas-code</a>
     </td>
     <td>库</td>
     <td>PHP Reflection API、静态代码扫描和代码生成的扩展</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-config.git">层合板/层合板</a>
+      <a href="https://github.com/laminas/laminas-config.git">laminas/laminas-config</a>
     </td>
     <td>库</td>
     <td>提供了基于嵌套对象属性的用户界面，用于访问应用程序代码中的此配置数据</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">层膜/层膜 — 加密</a>
+      <a href="https://github.com/laminas/laminas-crypt.git">层粘连体/层粘连体</a>
     </td>
     <td>库</td>
     <td>强大的加密工具和密码散列</td>
@@ -425,7 +425,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-escaper.git">拉米纳斯/拉米纳斯逸出者</a>
+      <a href="https://github.com/laminas/laminas-escaper.git">拉米纳斯/拉米纳斯逸出器</a>
     </td>
     <td>库</td>
     <td>安全可靠地转义HTML、HTML属性、JavaScript、CSS和URL</td>
@@ -439,7 +439,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-feed.git">层合板/馈送</a>
+      <a href="https://github.com/laminas/laminas-feed.git">层合板/层合板</a>
     </td>
     <td>库</td>
     <td>提供创建和使用RSS和Atom馈送的功能</td>
@@ -449,18 +449,18 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
     </td>
     <td>库</td>
-    <td>找到PHP类文件</td>
+    <td>查找PHP类文件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-filter.git">层合板/层合板滤镜</a>
+      <a href="https://github.com/laminas/laminas-filter.git">层叠/层叠 — 滤镜</a>
     </td>
     <td>库</td>
-    <td>以编程方式筛选和标准化数据和文件</td>
+    <td>以编程方式过滤和标准化数据和文件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-http.git">层合板/层合板 — http</a>
+      <a href="https://github.com/laminas/laminas-http.git">laminas/laminas-http</a>
     </td>
     <td>库</td>
     <td>提供用于执行超文本传输协议(HTTP)请求的轻松界面</td>
@@ -477,21 +477,21 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-json.git">laminas/laminas-json</a>
     </td>
     <td>库</td>
-    <td>提供了将本机PHP序列化为JSON并将JSON解码为本机PHP的简便方法</td>
+    <td>提供了将本机PHP序列化为JSON并将JSON解码为本机PHP的方便方法</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-loader.git">层合板/层合板加载器</a>
+      <a href="https://github.com/laminas/laminas-loader.git">层粘连体/层粘连体加载器</a>
     </td>
     <td>库</td>
     <td>自动加载和插件加载策略</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">层叠/层叠 — 邮件</a>
+      <a href="https://github.com/laminas/laminas-mail.git">laminas/laminas-mail</a>
     </td>
     <td>库</td>
-    <td>提供通用功能，用于撰写和发送文本以及MIME兼容的多部分电子邮件</td>
+    <td>提供通用功能，用于撰写和发送文本以及符合MIME的多部分电子邮件</td>
   </tr>
   <tr>
     <td>
@@ -502,14 +502,14 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mime.git">层粘连蛋白/层粘连蛋白</a>
+      <a href="https://github.com/laminas/laminas-mime.git">拉米纳斯/拉米纳斯 — 米姆</a>
     </td>
     <td>库</td>
-    <td>创建和解析MIME消息和部分</td>
+    <td>创建和解析MIME消息和部件</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-modulemanager.git">层合板/层合板 — 模块管理器</a>
+      <a href="https://github.com/laminas/laminas-modulemanager.git">laminas/laminas模块管理器</a>
     </td>
     <td>库</td>
     <td>用于层板MVC应用的模块化应用系统</td>
@@ -523,7 +523,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-oauth.git">拉米纳斯/拉米纳斯奥auth</a>
+      <a href="https://github.com/laminas/laminas-oauth.git">拉米纳斯/拉米纳斯 — 奥auth</a>
     </td>
     <td>库</td>
     <td></td>
@@ -544,7 +544,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-router.git">层合板/层合板路由器</a>
+      <a href="https://github.com/laminas/laminas-router.git">laminas/laminas路由器</a>
     </td>
     <td>库</td>
     <td>适用于HTTP和控制台应用程序的灵活路由系统</td>
@@ -565,10 +565,10 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-session.git">层合板/层合板 — 会话</a>
+      <a href="https://github.com/laminas/laminas-session.git">拉米纳斯/拉米纳斯 — 塞申</a>
     </td>
     <td>库</td>
-    <td>面向PHP会话和存储的面向对象接口</td>
+    <td>面向PHP会话和存储对象的接口</td>
   </tr>
   <tr>
     <td>
@@ -579,14 +579,14 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-stdlib.git">层粘连蛋白/层粘连蛋白</a>
+      <a href="https://github.com/laminas/laminas-stdlib.git">laminas/laminas-stdlib</a>
     </td>
     <td>库</td>
     <td>SPL扩展、数组实用程序、错误处理程序等</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-text.git">层叠/层叠 — 文本</a>
+      <a href="https://github.com/laminas/laminas-text.git">laminas/laminas-text</a>
     </td>
     <td>库</td>
     <td>创建FIGlet和基于文本的表</td>
@@ -596,14 +596,14 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-uri.git">laminas/laminas-uri</a>
     </td>
     <td>库</td>
-    <td>帮助操作和验证“统一资源标识符(URI)”的组件</td>
+    <td>帮助处理和验证“统一资源标识符(URI)”的组件</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/laminas/laminas-validator.git">laminas/laminas-validator</a>
     </td>
     <td>库</td>
-    <td>适用于各种域的验证类，以及链结验证器以创建复杂验证标准的功能</td>
+    <td>适用于多种域的验证类，以及链式验证器以创建复杂验证标准的功能</td>
   </tr>
   <tr>
     <td>
@@ -631,11 +631,11 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/tedious/JShrink.git">tedivm/jshrink</a>
     </td>
     <td>库</td>
-    <td>PHP中内置的Javascript微型器</td>
+    <td>PHP中内置的Javascript小型器</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git">tubalmartin/csmin</a>
+      <a href="https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git">图巴马丁/cssmin</a>
     </td>
     <td>库</td>
     <td>YUI CSS压缩器的PHP端口</td>
@@ -687,7 +687,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/php-amqplib/php-amqplib.git">php-amqplib/php-amqplib</a>
     </td>
     <td>库</td>
-    <td>以前称为videlalvaro/php-amqplib。  此库是AMQP协议的纯PHP实现。 它通过RabbitMQ测试。</td>
+    <td>以前称为videlalvaro/php-amqplib。  此库是AMQP协议的纯PHP实现。 它已经过针对RabbitMQ的测试。</td>
   </tr>
   </tbody>
 </table>
@@ -712,17 +712,17 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/brick/math.git">积木/数学</a>
+      <a href="https://github.com/brick/math.git">砖块/数学</a>
     </td>
     <td>库</td>
     <td>任意精度算术库</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/brick/varexporter.git">brick/varexporter</a>
+      <a href="https://github.com/brick/varexporter.git">程序块/varexporter</a>
     </td>
     <td>库</td>
-    <td>var_export()的强大替代方法，它可以在不使用__set_state()的情况下导出关闭项和对象</td>
+    <td>var_export()的强大替代函数可以导出不带__set_state()的关闭项和对象</td>
   </tr>
   <tr>
     <td>
@@ -736,28 +736,28 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/colinmollenhour/credis.git">colimollenhour/credis</a>
     </td>
     <td>库</td>
-    <td>Credis是Redis键值存储的轻量级接口，当可用时它会封装phpredis库以提高性能。</td>
+    <td>Credis是Redis键值存储的轻型接口，当可用时它会封装phpredis库以提高性能。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/ca-bundle.git">composer/ca-bundle</a>
     </td>
     <td>库</td>
-    <td>用于查找系统CA捆绑包的路径，并包含对Mozilla CA捆绑包的回退。</td>
+    <td>允许您查找系统CA捆绑包的路径，并包括对Mozilla CA捆绑包的回退。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/composer/class-map-generator.git">composer/class-map-generator</a>
     </td>
     <td>库</td>
-    <td>用于扫描PHP代码和生成类映射的实用程序。</td>
+    <td>用于扫描PHP代码并生成类映射的实用程序。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/composer.git">composer/composer</a>
+      <a href="https://github.com/composer/composer.git">作曲家/作曲家</a>
     </td>
     <td>库</td>
-    <td>Composer可帮助您声明、管理和安装PHP项目的依赖项。 它可确保您在所有地方都拥有正确的栈栈。</td>
+    <td>Composer可帮助您声明、管理和安装PHP项目的依赖项。 它可确保您随时随地拥有正确的栈栈。</td>
   </tr>
   <tr>
     <td>
@@ -771,7 +771,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/composer/pcre.git">composer/pcre</a>
     </td>
     <td>库</td>
-    <td>PCRE包装库，提供类型安全的预浸料_*替换件。</td>
+    <td>提供类型安全预浸料_*替换的PCRE包装库。</td>
   </tr>
   <tr>
     <td>
@@ -796,42 +796,42 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/doctrine/annotations.git">原则/注释</a>
+      <a href="https://github.com/doctrine/annotations.git">准则/注释</a>
     </td>
     <td>库</td>
-    <td>Docblock注释解析器</td>
+    <td>Docblock注释分析器</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/doctrine/deprecations.git">理论/弃用</a>
     </td>
     <td>库</td>
-    <td>位于trigger_error(E_USER_DEPRECATED)或PSR-3日志记录之上的小层，可选择禁用所有弃用内容或选择禁用包。</td>
+    <td>位于trigger_error(E_USER_DEPRECATED)或PSR-3日志记录之上的小层，可选择禁用所有弃用或选择性地禁用包。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/doctrine/lexer.git">doctrine/lexer</a>
     </td>
     <td>库</td>
-    <td>PHP Doctrine Lexer解析器库，可在自上而下的递归后代解析器中使用。</td>
+    <td>PHP Doctrine Lexer分析器库，可在自上而下的递归后代分析器中使用。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
     <td>库</td>
-    <td>Endroid QR代码</td>
+    <td>Endroid二维码</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/ezimuel/guzzlestreams.git">ezimuel/guzzlestreams</a>
     </td>
     <td>库</td>
-    <td>与elasticsearch-php一起使用的guzzle/streams（已放弃）分支</td>
+    <td>用于elasticsearch-php的guzzle/streams（已放弃）分支</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ezimuel/ringphp.git">ezimuel/ringphp</a>
+      <a href="https://github.com/ezimuel/ringphp.git">埃齐米尔/林php</a>
     </td>
     <td>库</td>
     <td>与elasticsearch-php一起使用的guzzle/RingPHP（已放弃）分支</td>
@@ -845,7 +845,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/guzzle/promises.git">guzzlehttp/promise</a>
+      <a href="https://github.com/guzzle/promises.git">guzzlehttp/promises</a>
     </td>
     <td>库</td>
     <td>Guzzle promise库</td>
@@ -855,7 +855,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/guzzle/psr7.git">guzzlehttp/psr7</a>
     </td>
     <td>库</td>
-    <td>还提供常用实用程序方法的PSR-7消息实施</td>
+    <td>PSR-7消息实施，其中也提供常用实用工具方法</td>
   </tr>
   <tr>
     <td>
@@ -887,7 +887,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/Seldaek/monolog.git">monolog/monolog</a>
+      <a href="https://github.com/Seldaek/monolog.git">独白/独白</a>
     </td>
     <td>库</td>
     <td>将日志发送到文件、套接字、收件箱、数据库和各种Web服务</td>
@@ -939,14 +939,14 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/phpseclib/mcrypt_compat.git">phpseclib/mcrypt_compat</a>
     </td>
     <td>库</td>
-    <td>用于加密扩展的PHP 5.x-8.x polyfill</td>
+    <td>用于mcrypt扩展的PHP 5.x-8.x polyfill</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/phpseclib/phpseclib.git">phpseclib/phpseclib</a>
     </td>
     <td>库</td>
-    <td>PHP安全通信库 — RSA、AES、SSH2、SFTP、X.509等的纯PHP实施。</td>
+    <td>PHP安全通信库 — RSA、AES、SSH2、SFTP、X.509等的纯PHP实现。</td>
   </tr>
   <tr>
     <td>
@@ -999,14 +999,14 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ralouphie/getallheaders.git">ralouphie/getallheaders</a>
+      <a href="https://github.com/ralouphie/getallheaders.git">拉卢菲/getallheaders</a>
     </td>
     <td>库</td>
-    <td>getallheaders的聚合填充。</td>
+    <td>getalleaders的polyfill。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/ramsey/collection.git">ramsey/collection</a>
+      <a href="https://github.com/ramsey/collection.git">拉姆齐/收藏集</a>
     </td>
     <td>库</td>
     <td>用于表示和处理收藏集的PHP库。</td>
@@ -1023,7 +1023,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/reactphp/promise.git">react/promise</a>
     </td>
     <td>库</td>
-    <td>适用于PHP的CommonJS Promise/A的轻量级实施</td>
+    <td>CommonJS Promise/A for PHP的轻量级实现</td>
   </tr>
   <tr>
     <td>
@@ -1051,7 +1051,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/Seldaek/signal-handler.git">seld/signal-handler</a>
     </td>
     <td>库</td>
-    <td>简单的unix信号处理程序在信号不受支持时静默失败，从而易于进行跨平台开发</td>
+    <td>简单的unix信号处理程序在信号不受支持时静默失败，从而易于跨平台开发</td>
   </tr>
   <tr>
     <td>
@@ -1065,7 +1065,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/Spomky-Labs/otphp.git">spomky-labs/otphp</a>
     </td>
     <td>库</td>
-    <td>用于根据RFC 4226（HOTP算法）和RFC 6238（TOTP算法）生成一次性密码并与Google Authenticator兼容的PHP库</td>
+    <td>用于根据RFC 4226（HOTP算法）和RFC 6238（TOTP算法）生成一次性密码并与Google身份验证器兼容的PHP库</td>
   </tr>
   <tr>
     <td>
@@ -1083,7 +1083,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/console.git">交响乐/控制台</a>
+      <a href="https://github.com/symfony/console.git">交响曲/控制台</a>
     </td>
     <td>库</td>
     <td>轻松创建美观且可测试的命令行界面</td>
@@ -1097,7 +1097,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/dependency-injection.git">symfony/dependency-injection</a>
+      <a href="https://github.com/symfony/dependency-injection.git">Symfony/依赖项注入</a>
     </td>
     <td>库</td>
     <td>允许您标准化并集中处理应用程序中构建对象的方式</td>
@@ -1121,11 +1121,11 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/symfony/event-dispatcher.git">symfony/event-dispatcher</a>
     </td>
     <td>库</td>
-    <td>提供一些工具，允许应用程序组件通过调度事件并监听事件来相互通信</td>
+    <td>提供一些工具，这些工具允许应用程序组件通过调度事件并监听事件来相互通信</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/event-dispatcher-contracts.git">symfony/event-dispatcher合同</a>
+      <a href="https://github.com/symfony/event-dispatcher-contracts.git">交响曲/事件调度程序合同</a>
     </td>
     <td>库</td>
     <td>与调度事件相关的一般抽象</td>
@@ -1149,7 +1149,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/symfony/http-foundation.git">symfony/http-foundation</a>
     </td>
     <td>库</td>
-    <td>为HTTP规范定义面向对象层</td>
+    <td>为HTTP规范定义面向对象的层</td>
   </tr>
   <tr>
     <td>
@@ -1160,24 +1160,24 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/intl.git">交响曲/国际号码</a>
+      <a href="https://github.com/symfony/intl.git">symfony/intl</a>
     </td>
     <td>库</td>
-    <td>为C intl扩展提供一个PHP替换层，其中包括来自ICU库的附加数据</td>
+    <td>为C intl扩展提供一个PHP替换层，其中包含来自ICU库的附加数据</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-ctype</a>
     </td>
     <td>库</td>
-    <td>用于CTYPE功能的交调聚合填料</td>
+    <td>用于CTYPE函数的交感聚合填料</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-intl-grapheme.git">symfony/polyfill-intl-grapheme</a>
     </td>
     <td>库</td>
-    <td>用于intl的grapheme_*函数的Symfony polyfill</td>
+    <td>用于Intl的图形素_*函数的Symfony Polyfill</td>
   </tr>
   <tr>
     <td>
@@ -1188,17 +1188,17 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-intl-normalizer.git">symfony/polyfill-intl — 正规化</a>
+      <a href="https://github.com/symfony/polyfill-intl-normalizer.git">symfony/polyfill-intl-normalizer</a>
     </td>
     <td>库</td>
-    <td>Intl的Normalizer类和相关函数的Symfony polyfill</td>
+    <td>Intl的Normalizer类和相关函数的Symfony Polyfill</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/polyfill-mbstring.git">symfony/polyfill-mbstring</a>
     </td>
     <td>库</td>
-    <td>Mbstring扩展的Symfony polyfill</td>
+    <td>Mbstring扩展的Symfony Polyfill</td>
   </tr>
   <tr>
     <td>
@@ -1219,7 +1219,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/symfony/polyfill-php80.git">symfony/polyfill-php80</a>
     </td>
     <td>库</td>
-    <td>Symfony polyfill将某些PHP 8.0及更高功能回移植到较低的PHP版本</td>
+    <td>Symfony polyfill将一些PHP 8.0及更高版本功能回移植到较低的PHP版本</td>
   </tr>
   <tr>
     <td>
@@ -1240,21 +1240,21 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/symfony/service-contracts.git">交响曲/服务合同</a>
     </td>
     <td>库</td>
-    <td>与书写服务相关的一般抽象</td>
+    <td>与写入服务相关的一般抽象</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/string.git">symfony/string</a>
     </td>
     <td>库</td>
-    <td>为字符串提供面向对象的API，并以统一的方式处理字节、UTF-8代码点和字形聚类</td>
+    <td>为字符串提供面向对象的API，并以统一的方式处理字节、UTF-8代码点和图形集群</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/symfony/var-dumper.git">symfony/var-dumper</a>
     </td>
     <td>库</td>
-    <td>提供用于浏览任何任意PHP变量的机制</td>
+    <td>提供用于浏览任意PHP变量的机制</td>
   </tr>
   <tr>
     <td>
@@ -1275,14 +1275,14 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/web-token/jwt-framework.git">web-token/jwt-framework</a>
     </td>
     <td>symfony-bundle</td>
-    <td>PHP和Symfony包的JSON对象签名和加密库。</td>
+    <td>PHP和Symfony捆绑包的JSON对象签名和加密库。</td>
   </tr>
   <tr>
     <td>
       <a href="https://github.com/webmozarts/assert.git">webmozart/assert</a>
     </td>
     <td>库</td>
-    <td>验证方法输入/输出的断言，带有很好的错误消息。</td>
+    <td>用于验证方法输入/输出的断言，带有很好的错误消息。</td>
   </tr>
   <tr>
     <td>
@@ -1314,10 +1314,10 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      temando/module-shipping-remover
+      Temando/module-shipping-remover
     </td>
     <td>magento2模块</td>
-    <td>从Magento2中删除Temando多承运人运输分机</td>
+    <td>从Magento2中删除Temando多承运人运输扩展</td>
   </tr>
   </tbody>
 </table>
@@ -1335,9 +1335,9 @@ wikimedia/less.php: ^3.2
   <tbody>
   <tr>
     <td>
-      temando/module-shipping
+      Temando/module-shipping
     </td>
-    <td>隐含</td>
+    <td>中继</td>
     <td>适用于Magento2的Temando多承运人运输扩展</td>
   </tr>
   </tbody>
@@ -1394,7 +1394,7 @@ wikimedia/less.php: ^3.2
       paypal/module-braintree-core
     </td>
     <td>magento2模块</td>
-    <td>从Gene Commerce for PayPal的MagentoBraintree2.2.0模块创建分支。</td>
+    <td>从Gene Commerce为PayPal提供的MagentoBraintree2.2.0模块创建分支。</td>
   </tr>
   </tbody>
 </table>

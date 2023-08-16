@@ -27,7 +27,7 @@ Commerce数据跟踪服务可以存储适用于隐私法规的隐私信息，例
 
 隐私JavaScript库在以下位置提供： `commerce.adobe.net/magentoprivacy.js`
 
-获得文件后，您需要将其添加到Adobe Commerce或Magento Open Source实例中安装的自定义模块或主题。 按照 [使用自定义JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) 完成此任务的主题。
+获得文件后，您需要将其添加到Adobe Commerce或Magento Open Source实例中安装的自定义模块或主题。 请按照 [使用自定义JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) 完成此任务的主题。
 
 ### 初始化
 
@@ -61,7 +61,7 @@ magePriv.retrieveIdentity().then((ids)=>console.log(ids))
 
 `removeIdentity()`
 ：从浏览器中的服务删除身份数据。
-此函数返回一个标识对象的JavaScript promise，其中包含 `isDeleted` 指示数据是否已删除的布尔属性。
+此函数返回一个标识对象的JavaScript promise，其中包含 `isDeleted` 布尔属性，指示数据是否已删除。
 
 ```js
 magePriv.removeIdentity().then((ids)=>console.log(ids))

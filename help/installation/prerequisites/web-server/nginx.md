@@ -1,6 +1,6 @@
 ---
 title: 恩金克斯
-description: 按照以下步骤安装和配置Nginx Web服务器，以便内部部署Adobe Commerce和Magento Open Source。
+description: 按照以下步骤安装和配置Nginx Web服务器，以便在Adobe Commerce和Magento Open Source中进行本地安装。
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
 source-git-commit: 9ebf10bd3296495e33c91d930be023ea0124ff62
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Adobe Commerce支持nginx 1.x(或 [最新主行版本](https://nginx.org/en/linux_packages.html#mainline))。 您还必须安装最新版本的 `php-fpm`.
 
-安装说明因您使用的操作系统而异。 参见 [PHP](../php-settings.md) 以获取信息。
+安装说明因您使用的操作系统而异。 请参阅 [PHP](../php-settings.md) 了解相关信息。
 
-## 乌本图
+## 乌班图
 
 以下部分介绍了如何使用nginx、PHP和MySQL在Ubuntu上安装Adobe Commerce和Magento Open Source2.x。
 
@@ -31,7 +31,7 @@ sudo apt -y install nginx
 
 ### 安装和配置php-fpm
 
-Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md) 才能正常运行。 除了这些扩展之外，您还必须安装和配置 `php-fpm` 扩展。
+Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md) 才能正常运行。 除了这些扩展之外，您还必须安装和配置 `php-fpm` 扩展名一起使用。
 
 安装和配置 `php-fpm`：
 
@@ -43,7 +43,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
 
    >[!NOTE]
    >
-   >此命令安装最新可用版本的PHP 7.2.X。参见 [系统要求](../../system-requirements.md) 支持的PHP版本。
+   >此命令安装最新可用版本的PHP 7.2.X。请参阅 [系统要求](../../system-requirements.md) 支持的PHP版本。
 
 1. 打开 `php.ini` 编辑器中的文件：
 
@@ -65,7 +65,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
 
    >[!NOTE]
    >
-   >测试Adobe Commerce和Magento Open Source时，我们建议将内存限制设置为2 G。 请参阅 [必需的PHP设置](../php-settings.md) 了解更多信息。
+   >在测试Adobe Commerce和Magento Open Source时，我们建议将内存限制设置为2 G。 请参阅 [必需的PHP设置](../php-settings.md) 以了解更多信息。
 
 1. 保存并退出编辑器。
 
@@ -77,13 +77,13 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
 
 ### 安装和配置MySQL
 
-请参阅 [MySQL](../database/mysql.md) 了解更多信息。
+请参阅 [MySQL](../database/mysql.md) 以了解更多信息。
 
 ### 安装和配置
 
-有多种下载Adobe Commerce和Magento Open Source的方法，包括：
+可通过多种方式下载Adobe Commerce和Magento Open Source，包括：
 
-* [获取Composer隐喻](../../composer.md)
+* [获取Composer隐含](../../composer.md)
 
 * [克隆Git存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
@@ -117,7 +117,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
    composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   出现提示时，输入您的 [身份验证密钥](../authentication-keys.md). 您的 _公钥_ 是您的用户名；您的 _私钥_ 是您的密码。
+   出现提示时，输入 [身份验证密钥](../authentication-keys.md). 您的 _公钥_ 是您的用户名；您的 _私钥_ 是您的密码。
 
 1. 在安装应用程序之前，为Web服务器组设置读写权限。 这是必要的，以便命令行可以将文件写入文件系统。
 
@@ -141,7 +141,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
    chmod u+x bin/magento
    ```
 
-1. 从安装 [命令行](../../advanced.md). 此示例假定安装目录名为 `magento2ee`，则 `db-host` 在同一台计算机上(`localhost`)，并且 `db-name`， `db-user`、和 `db-password` 全部 `magento`：
+1. 从安装 [命令行](../../advanced.md). 此示例假定安装目录名为 `magento2ee`， `db-host` 在同一台计算机上(`localhost`)，并且 `db-name`， `db-user`、和 `db-password` 全部 `magento`：
 
    ```bash
    bin/magento setup:install \
@@ -179,7 +179,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
 
 我们建议使用 `nginx.conf.sample` 安装目录和nginx虚拟主机中提供的配置文件。
 
-以下说明假定您使用的是nginx虚拟主机的Ubuntu默认位置(例如， `/etc/nginx/sites-available`)和Ubuntu默认docroot(例如， `/var/www/html`)但是，您可以更改这些位置以适合您的环境。
+这些说明假定您使用的是nginx虚拟主机的Ubuntu默认位置(例如， `/etc/nginx/sites-available`)和Ubuntu默认docroot(例如， `/var/www/html`)但是，您可以更改这些位置以适合您的环境。
 
 1. 为您的站点创建新的虚拟主机：
 
@@ -207,7 +207,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
    >
    >此 `include` 指令必须指向安装目录中的示例nginx配置文件。
 
-1. Replace `www.magento-dev.com` 使用您的域名。 此名称必须与在安装Adobe Commerce或Magento Open Source时指定的基本URL匹配。
+1. 替换 `www.magento-dev.com` 使用您的域名。 此名称必须与在安装Adobe Commerce或Magento Open Source时指定的基本URL匹配。
 
 1. 保存并退出编辑器。
 
@@ -231,11 +231,11 @@ Adobe Commerce和Magento Open Source需要多个 [PHP扩展](../php-settings.md)
 
 ### 验证安装
 
-打开Web浏览器，然后导航到您网站的基本URL，以访问 [验证安装](../../next-steps/verify.md).
+打开Web浏览器，然后导航到您站点的基本URL，以访问 [验证安装](../../next-steps/verify.md).
 
 ## CentOS 7
 
-以下部分介绍了如何使用nginx、PHP和MySQL在CentOS 7上安装Adobe Commerce和Magento Open Source2.x。
+以下部分介绍如何使用nginx、PHP和MySQL在CentOS 7上安装Adobe Commerce和Magento Open Source2.x。
 
 ### 安装nginx
 
@@ -261,7 +261,7 @@ systemctl enable nginx
 
 ### 安装和配置php-fpm
 
-Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩展才能正常运行。 除了这些扩展之外，您还必须安装和配置 `php-fpm` 扩展名中指定是否使用nginx。
+Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩展才能正常运行。 除了这些扩展之外，您还必须安装和配置 `php-fpm` 扩展名来表示您使用的是nginx。
 
 1. 安装 `php-fpm`：
 
@@ -283,7 +283,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
 
    >[!NOTE]
    >
-   >测试Adobe Commerce或Magento Open Source时，我们建议将内存限制设置为2 G。 请参阅 [必需的PHP设置](../php-settings.md) 了解更多信息。
+   >测试Adobe Commerce或Magento Open Source时，我们建议将内存限制设置为2 G。 请参阅 [必需的PHP设置](../php-settings.md) 以了解更多信息。
 
 1. 取消注释会话路径目录并设置路径：
 
@@ -356,13 +356,13 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
 
 ### 安装和配置MySQL
 
-请参阅 [MySQL](..//database/mysql.md) 了解更多信息。
+请参阅 [MySQL](..//database/mysql.md) 以了解更多信息。
 
 ### 安装和配置
 
-有多种下载Adobe Commerce和Magento Open Source的方法，包括：
+可通过多种方式下载Adobe Commerce和Magento Open Source，包括：
 
-* [获取Composer隐喻](../../composer.md)
+* [获取Composer隐含](../../composer.md)
 
 * [克隆Git存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
@@ -396,7 +396,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
    composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   出现提示时，输入您的 [身份验证密钥](../authentication-keys.md). 您的 _公钥_ 是您的用户名；您的 _私钥_ 是您的密码。
+   出现提示时，输入 [身份验证密钥](../authentication-keys.md). 您的 _公钥_ 是您的用户名；您的 _私钥_ 是您的密码。
 
 1. 在安装应用程序之前，为Web服务器组设置读写权限。 这是必要的，以便命令行可以将文件写入文件系统。
 
@@ -420,7 +420,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
    chmod u+x bin/magento
    ```
 
-1. 从安装 [命令行](../../advanced.md). 此示例假定安装目录名为 `magento2ee`，则 `db-host` 在同一台计算机上(`localhost`)，并且 `db-name`， `db-user`、和 `db-password` 全部 `magento`：
+1. 从安装 [命令行](../../advanced.md). 此示例假定安装目录名为 `magento2ee`， `db-host` 在同一台计算机上(`localhost`)，并且 `db-name`， `db-user`、和 `db-password` 全部 `magento`：
 
    ```bash
    bin/magento setup:install \
@@ -455,7 +455,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
 
 我们建议使用 `nginx.conf.sample` 安装目录和nginx虚拟主机中提供的配置文件。
 
-以下说明假定您使用的是nginx虚拟主机的CentOS默认位置(例如， `/etc/nginx/conf.d`)和默认docroot(例如， `/usr/share/nginx/html`)但是，您可以更改这些位置以适合您的环境。
+这些说明假定您正在使用nginx虚拟主机的CentOS默认位置(例如， `/etc/nginx/conf.d`)和默认docroot(例如， `/usr/share/nginx/html`)但是，您可以更改这些位置以适合您的环境。
 
 1. 为您的站点创建新的虚拟主机：
 
@@ -483,7 +483,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
    >
    >此 `include` 指令必须指向安装目录中的示例nginx配置文件。
 
-1. Replace `www.magento-dev.com` 使用您的域名。
+1. 替换 `www.magento-dev.com` 使用您的域名。
 
 1. 保存并退出编辑器。
 
@@ -499,7 +499,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
    systemctl restart nginx
    ```
 
-### 配置SELinux和Firewalld
+### 配置SELinux和Firewald
 
 在CentOS 7上，SELinux默认处于启用状态。 使用以下命令查看它是否正在运行：
 
@@ -507,7 +507,7 @@ Adobe Commerce和Magento Open Source需要多个 [PHP](../php-settings.md) 扩�
 sestatus
 ```
 
-要配置SELinux和firewalld，请执行以下操作：
+要配置SELinux和firewald：
 
 1. 安装SELinux管理工具：
 
@@ -569,4 +569,4 @@ sestatus
 
 ### 验证安装
 
-打开Web浏览器，然后导航到您网站的基本URL，以访问 [验证安装](../../next-steps/verify.md).
+打开Web浏览器，然后导航到您站点的基本URL，以访问 [验证安装](../../next-steps/verify.md).

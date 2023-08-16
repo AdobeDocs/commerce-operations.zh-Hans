@@ -41,7 +41,7 @@ ht-degree: 0%
 
 1. 在右窗格中，滚动到 **媒体的存储配置**.
 
-1. 从 **选择媒体数据库** 列表中，单击媒体存储数据库的名称。
+1. 从 **选择媒体数据库** 列表，单击媒体存储数据库的名称。
 
 1. 单击 **同步**.
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ### 文件系统中的媒体文件
 
-所有媒体文件（产品、类别、 WYSIWYG编辑器等的图像）应手动从 `<your Magento 1 install dir>/media` 到 `<your Magento 2 install dir>/pub/media`.
+所有媒体文件（产品、类别、WYSIWYG编辑器等的图像）应手动从 `<your Magento 1 install dir>/media` 到 `<your Magento 2 install dir>/pub/media`.
 
 但是，可以 *非* 复制 `.htaccess` Magento1中的文件 `media` 文件夹。 Magento2具有自己的 `.htaccess` 应该保留下来。
 
@@ -63,10 +63,10 @@ ht-degree: 0%
 
 您必须手动重新创建所有：
 
-* Web服务API（SOAP、XML-RPC和REST）的凭据
+* web服务API（SOAP、XML-RPC和REST）的凭据
 
-* 管理用户帐户并将其与访问权限相关联
+* 管理用户帐户并将其与访问权限关联
 
 >[!NOTE]
 >
->您可以使用调整数据库实体的时区 `\Migration\Handler\Timezone` 处理程序。 请参阅 [后续活动](follow-up.md) 部分以了解更多详细信息。
+>您可以使用以下方式调整数据库实体的时区 `\Migration\Handler\Timezone` 处理程序。 请参阅 [后续活动](follow-up.md) 部分以了解更多详细信息。

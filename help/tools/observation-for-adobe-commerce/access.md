@@ -19,7 +19,7 @@ ht-degree: 0%
 
    ![New Relic applet](../../assets/tools/observation-for-adobe-commerce/new-relic-applet.jpeg)
 
-1. 通过身份验证 [!UICONTROL Okta] (仅适用于内部Adobe用户)。
+1. 通过进行身份验证 [!UICONTROL Okta] (仅适用于内部Adobe用户)。
 1. 从 [!DNL New Relic] 在主页上，选择应用程序菜单项。
 
    ![New Relic主页](../../assets/tools/observation-for-adobe-commerce/new-relic-homepage.jpeg)

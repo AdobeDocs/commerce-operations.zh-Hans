@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 防止缓存中毒
 
-本主题讨论在使用Microsoft Internet Information Server (IIS) Web服务器时如何防止缓存中毒。 _缓存中毒_ 是一种更改缓存内容以包含来自同一站点的不同页面的方法。 例如，可以注入HTTP 404（未找到）错误页面来代替某些良性页面（例如，店面主页），这可能会导致潜在的拒绝服务(DoS)。 恶意页面URL由Varnish或Redis缓存，因此名称为 _页面缓存中毒_.
+本主题讨论在使用Microsoft Internet Information Server (IIS) Web服务器时如何防止缓存中毒。 _缓存中毒_ 是一种更改缓存内容以包含来自同一站点的不同页面的方法。 例如，可以注入HTTP 404（未找到）错误页面来代替某些良性的页面（例如，店面主页），这可能导致潜在的拒绝服务(DoS)。 恶意页面URL由Varnish或Redis缓存，因此名称为 _页面缓存中毒_.
 
 这些类型的攻击可能难以检测，因为它们不会导致Web服务器日志中出现错误。
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 - `Unencoded-URL`
 - `Orig-path-info`
 
-如果更改这些标头，则会缓存生成的URL和内容，从而导致潜在漏洞。
+如果更改这些标头，则生成的URL和内容将缓存，从而导致潜在漏洞。
 
 ## 解决方案
 
-我们提供相应选项，以根据 `Enable_IIS_Rewrites`.
+我们提供相应的选项，以根据的IIS服务器设置删除所有上述标头的值 `Enable_IIS_Rewrites`.
 
 - 如果 `Enable_IIS_Rewrites` 设置为 `0`，则标头的值将被删除。
 - 如果 `Enable_IIS_Rewrites` 设置为 `1`，标头的值将保持不变。

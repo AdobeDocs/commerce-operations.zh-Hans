@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## 升级数据库架构和数据
 
-无论何时执行导致数据库模式或数据发生更改的操作，都必须通过运行本节中讨论的命令来更新它们。 部分原因如下：
+无论何时执行导致数据库模式或数据更改的操作，都必须通过运行本节中介绍的命令来更新它们。 部分原因如下：
 
 * 您使用命令行升级了应用程序
 * 您使用命令行安装或更新了组件
-* 您使用命令行启用或禁用了组件
+* 使用命令行启用或禁用组件
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ ht-degree: 0%
    bin/magento setup:upgrade [--keep-generated]
    ```
 
-   位置 `--keep-generated` 是一个可选参数，不会更新 [静态视图文件](../../configuration/cli/static-view-file-deployment.md). 此可选参数可供使用 *仅限* 由经验丰富的系统集成商在有限的情况下提供。 应该使用它 *仅限* 在 [生产模式](../../configuration/bootstrap/application-modes.md#production-mode). 它应该 *非* 用于 [开发人员模式](../../configuration/bootstrap/application-modes.md#developer-mode).
+   位置 `--keep-generated` 是一个可选参数，不会更新 [静态视图文件](../../configuration/cli/static-view-file-deployment.md). 此可选参数可供使用 *仅限* 由经验丰富的系统集成商在有限的情况下提供。 应该使用它 *仅限* 在 [生产模式](../../configuration/bootstrap/application-modes.md#production-mode). 它应该 *非* 使用位置 [开发者模式](../../configuration/bootstrap/application-modes.md#developer-mode).
 
 1. 清理缓存：
 

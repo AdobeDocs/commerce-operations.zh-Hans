@@ -1,6 +1,6 @@
 ---
 title: 开发系统设置
-description: 了解如何设置Commerce应用程序的开发系统。
+description: 了解如何为Commerce应用程序设置开发系统。
 exl-id: 242e9a38-2eb2-4090-8f59-3fd588f7ad3a
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # 开发系统设置
 
-您可以拥有任意数量的开发系统，但前提是所有这些系统都满足以下条件：
+您可以拥有任意数量的开发系统，但前提是以下条件适用于所有系统：
 
 - 它们都运行Commerce 2.2或更高版本
 - 所有Commerce代码都在与构建和生产系统相同的存储库中受源代码控制
-- 每个开发系统应使用 [默认模式](../bootstrap/application-modes.md#default-mode) 或 [开发人员模式](../bootstrap/application-modes.md#developer-mode)
+- 每个开发系统应使用 [默认模式](../bootstrap/application-modes.md#default-mode) 或 [开发者模式](../bootstrap/application-modes.md#developer-mode)
 - 它具有文件系统所有权和权限集，如中所述 [开发、构建和生产系统的先决条件](../deployment/technical-details.md).
-- 确保以下所有选项均可用 _已排除_ 从源代码管理：
+- 确保以下所有各项均可用 _已排除_ 从源代码管理：
 
    - `vendor` 目录（和子目录）
    - `generated` 目录（和子目录）

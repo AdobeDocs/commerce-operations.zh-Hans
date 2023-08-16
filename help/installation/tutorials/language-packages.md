@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # 卸载语言包
 
-本节讨论如何卸载一个或多个语言包，可以选择从文件系统卸载语言包的代码。 您可以先创建备份，以便以后恢复数据。
+本节讨论如何从文件系统卸载一个或多个语言包，或者包括语言包的代码。 您可以先创建备份，以便以后恢复数据。
 
-此命令卸载 *仅限* 中指定的语言包 `composer.json`：换句话说，就是作为编辑器包提供的语言包。 如果您的语言包不是Composer包，则必须通过从文件系统删除语言包代码来手动卸载它。
+此命令卸载 *仅限* 中指定的语言包 `composer.json`；换言之，即作为编辑器包提供的语言包。 如果您的语言包不是编辑器包，则必须通过从文件系统删除语言包代码来手动卸载它。
 
-您可以随时使用恢复备份 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
+您可以随时使用 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
 
 命令用法：
 
@@ -33,20 +33,20 @@ bin/magento i18n:uninstall [-b|--backup-code] {language package name} ... {langu
 1. 使用以下方式从代码库中移除语言包文件 `composer remove`.
 1. 清理缓存。
 
-例如，如果尝试卸载其他语言包所依赖的语言包，则会显示以下消息：
+例如，如果您尝试卸载其他语言包所依赖的语言包，则会显示以下消息：
 
 ```terminal
 Cannot uninstall vendorname/language-en_us because the following package(s) depend on it:
       vendorname/language-en_gb
 ```
 
-一种选择是在备份代码库后卸载两种语言包：
+另一种选择是在备份代码库后卸载两种语言包：
 
 ```bash
 bin/magento i18n:uninstall vendorname/language-en_us vendorname/language-en_gb --backup-code
 ```
 
-显示类似于以下内容的消息：
+与以下内容类似的消息：
 
 ```terminal
 Code backup is starting...

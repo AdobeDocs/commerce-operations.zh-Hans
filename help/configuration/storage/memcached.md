@@ -1,5 +1,5 @@
 ---
-title: 将内存缓存用于会话存储
+title: 使用内存缓存进行会话存储
 description: 了解如何将memcached用于Commerce会话存储。
 feature: Configuration, Cache, Storage
 exl-id: 24077929-e732-4579-8d7d-717a4902fc64
@@ -10,11 +10,11 @@ ht-degree: 0%
 
 ---
 
-# 将内存缓存用于会话存储
+# 使用内存缓存进行会话存储
 
-Memcached是一种通用分布式内存缓存系统。 它通常用于通过在RAM中缓存数据和对象来减少必须读取外部数据源（如数据库或API）的次数，从而加快动态数据库驱动的网站的速度。
+Memcached是一种通用分布式内存缓存系统。 它通常用于通过在RAM中缓存数据和对象来加快动态数据库驱动网站的速度，以减少必须读取外部数据源（如数据库或API）的次数。
 
-Memcached提供了一个可在多台计算机上分发的大型哈希表。 当表已满时，后续插入会导致按最近最少使用(LRU)顺序清除旧数据。 此哈希表的大小通常非常大。 (来源： [memcached.org](https://www.memcached.org/))
+Memcached提供了一个可在多台计算机上分发的大型哈希表。 当表已满时，后续插入会导致按最近使用最少(LRU)的顺序清除旧数据。 此哈希表的大小通常非常大。 (来源： [memcached.org](https://www.memcached.org/))
 
 Commerce将memcached用于会话存储，但不用于页面缓存。 对于页面缓存，我们建议 [Redis](../cache/redis-pg-cache.md) 或 [清漆](../cache/config-varnish.md).
 
@@ -40,7 +40,7 @@ Commerce将memcached用于会话存储，但不用于页面缓存。 对于页�
    ),
    ```
 
-   memcached具有本指南范围之外的可选启动参数。 欲知关于它们的更多信息，请参见 [memcached](https://www.php.net/manual/en/memcached.sessions.php) 文档、源代码和更改日志。
+   memcached具有本指南范围之外的启动参数。 有关它们的更多信息，请参见 [memcached](https://www.php.net/manual/en/memcached.sessions.php) 文档、源代码和更改日志。
 
 1. 继续下一部分。
 
@@ -56,9 +56,9 @@ Commerce将memcached用于会话存储，但不用于页面缓存。 对于页�
 
 1. 登录到管理员并浏览多个页面。
 
-   如果没有显示错误，恭喜您！ memcached工作正常！ 您可以选择查看内存缓存存储，如下一步中所讨论。
+   如果没有显示错误，恭喜您！ memcached正在工作！ 您可以选择查看内存缓存存储，如下一步骤中所述。
 
-   如果显示错误(如HTTP 500（内部服务器错误）)，请启用开发人员模式并诊断问题。 确保memcached正在运行、配置正确，并且 `env.php` 没有语法错误。
+   如果显示错误(如HTTP 500（内部服务器错误）)，请启用开发人员模式并诊断问题。 确保memcached正在运行，配置正确，并且 `env.php` 没有语法错误。
 
 1. （可选。） 使用Telnet查看内存缓存存储。
 
@@ -70,7 +70,7 @@ Commerce将memcached用于会话存储，但不用于页面缓存。 对于页�
    stats items
    ```
 
-   显示的结果类似于以下内容：
+   结果显示类似以下内容：
 
    ```terminal
    STAT items:3:number 1

@@ -17,10 +17,10 @@ Adobe Commerce和Magento Open Source使用 [维护模式](../../configuration/bo
 
 应用程序检测维护模式，如下所示：
 
-* 如果 `var/.maintenance.flag` 不存在，维护模式处于关闭状态，应用程序运行正常。
-* 否则，维护模式将开启，除非 `var/.maintenance.ip` 存在。
+* 如果 `var/.maintenance.flag` 不存在，维护模式已关闭且应用程序运行正常。
+* 否则，维护模式将开启，除非 `var/.maintenance.ip` 已存在。
 
-   `var/.maintenance.ip` 可以包含IP地址列表。 如果使用HTTP访问入口点，并且客户端IP地址与该列表中的某个条目相对应，则维护模式将关闭。
+  `var/.maintenance.ip` 可以包含IP地址列表。 如果使用HTTP访问入口点，并且客户端IP地址与该列表中的某个条目相对应，则维护模式将关闭。
 
 ## 安装应用程序
 
@@ -28,7 +28,7 @@ Adobe Commerce和Magento Open Source使用 [维护模式](../../configuration/bo
 
 ## 启用或禁用维护模式
 
-使用 `magento maintenance` 用于启用或禁用维护模式的CLI命令。
+使用 `magento maintenance` CLI命令启用或禁用维护模式。
 
 命令用法：
 
@@ -48,7 +48,7 @@ bin/magento maintenance:status
 
 >[!NOTE]
 >
->使用 `--ip=<ip address>` 替换为 `magento maintenance:disable` 保存IP列表供以后使用。 要清除免除IP列表，请使用 `magento maintenance:enable --ip=none` 或参阅 [维护免除IP地址列表](#maintain-the-list-of-exempt-ip-addresses).
+>使用 `--ip=<ip address>` 替换为 `magento maintenance:disable` 保存IP列表供以后使用。 要清除免除IP列表，请使用 `magento maintenance:enable --ip=none` 或查看 [维护免除IP地址列表](#maintain-the-list-of-exempt-ip-addresses).
 
 此 `bin/magento maintenance:status` 命令显示维护模式的状态。
 
@@ -75,7 +75,7 @@ bin/magento maintenance:enable --ip=192.0.2.10 --ip=192.0.2.11
 bin/magento maintenance:allow-ips <ip address> .. <ip address> [--none]
 ```
 
-此 `<ip address> .. <ip address>` 语法是要免除的IP地址的可选列表（以空格分隔）。
+此 `<ip address> .. <ip address>` 语法是可免除的IP地址的可选列表（以空格分隔）。
 
 此 `--none` 选项清除列表。
 
@@ -84,7 +84,7 @@ bin/magento maintenance:allow-ips <ip address> .. <ip address> [--none]
 <!-- To set up multiple stores, each with a different layout and localized content, create a skin for each and put it into `pub/errors/{name}` where `{name}` is the store code. To distinguish between stores and websites with the same instance, use `pub/errors/{type}-{name}` where `{type}` is either `store` or `website` and matches the `MAGE_RUN_TYPE` in your server configuration. Another option is to pass the `$_GET['skin']` parameter to the intended processor. This method requires a specific configuration on your server. -->
 <!-- Replace the line below with the commented text after https://github.com/magento/magento2/pull/35095 is merged. -->
 
-如果要设置多个商店，且每个商店都具有不同的布局和本地化内容，请传递 `$_GET['skin']` 参数到目标处理器。
+如果要设置多个商店，且每个商店具有不同的布局和本地化内容，请传递 `$_GET['skin']` 参数到目标处理器。
 
 在以下示例中，我们使用 `503` 键入错误模板文件，此文件需要本地化的内容。
 
@@ -102,10 +102,10 @@ if (isset($_GET['skin'])) {
 
 要使用 `skin` 参数：
 
-1. 检查 `.maintenance.flag` 存在。
+1. 检查 `.maintenance.flag` 已存在。
 1. 记下主机地址，该地址指 `HTTP_HOST`或任何其他变量（例如ENV变量）。
 1. 检查 `skin` 参数存在。
-1. 使用下面的重写规则设置参数。
+1. 使用以下重写规则设置参数。
 
    以下是重写规则的一些示例：
 

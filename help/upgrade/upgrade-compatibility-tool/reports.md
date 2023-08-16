@@ -1,5 +1,5 @@
 ---
-title: ‘[!DNL Upgrade Compatibility Tool] 报告
+title: ’[!DNL Upgrade Compatibility Tool] 报告
 description: 按照以下步骤运行 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
 exl-id: a2272339-46d6-443b-bd53-286b72f13d4e
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
@@ -9,14 +9,14 @@ ht-degree: 0%
 
 ---
 
-# 报告
+# 报表
 
 {{commerce-only}}
 
-根据分析结果， [!DNL Upgrade Compatibility Tool] 可以导出一个报告，其中包含每个文件的问题列表，并指定其严重性、错误代码和错误说明。 此 [!DNL Upgrade Compatibility Tool] 将报告导出为两种不同的格式：
+经过分析， [!DNL Upgrade Compatibility Tool] 可以导出一个报告，其中包含每个文件的问题列表，指定其严重性、错误代码和错误说明。 此 [!DNL Upgrade Compatibility Tool] 将报告导出为两种不同的格式：
 
 - A [JSON文件](reports.md#json-file).
-- An [HTML报告](reports.md#html-report).
+- An [HTML报表](reports.md#html-report).
 
 请参阅以下报告的命令行界面示例：
 
@@ -27,13 +27,13 @@ File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
  * [ERROR][1328] Line 10: Implemented interface 'Magento\Framework\App\Action\HttpGetActionInterface' that is non API on version '2.4.4'
 ```
 
-查看 [错误消息引用](../upgrade-compatibility-tool/error-messages.md) 主题以了解有关此报告可以产生的不同错误的更多信息。
+查看 [错误消息引用](../upgrade-compatibility-tool/error-messages.md) 主题以了解有关此报告可产生的不同错误的更多信息。
 
 此报表还包括一个详细的摘要，其中显示：
 
 - *当前版本*：当前安装的版本。
 - *目标版本*：要升级到的版本。
-- *执行时间*：分析构建报表所用的时间(mm：ss)。
+- *执行时间*：分析构建报告所用的时间(mm：ss)。
 - *需要更新的模块*：包含兼容性问题并需要更新的模块的百分比。
 - *需要更新的文件*：包含兼容性问题并需要更新的文件的百分比。
 - *严重错误总数*：找到的严重错误数。
@@ -75,13 +75,13 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 其中参数如下：
 
 - `<dir>`：Adobe Commerce安装目录。
-- `[=JSON-OUTPUT-PATH]`：用于导出的Path目录 `JSON` 输出文件。
+- `[=JSON-OUTPUT-PATH]`：用于导出 `JSON` 输出文件。
 
 >[!NOTE]
 >
 > 输出文件夹的默认路径为 `var/output/[TIME]-results.json`.
 
-## HTML报告
+## HTML报表
 
 在命令行界面上运行HTML时，或通过 [!DNL Site-Wide Analysis Tool]. HTML报表还包含：
 
@@ -90,7 +90,7 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 
 ![HTML报表 — 摘要](../../assets/upgrade-guide/uct-html-summary.png)
 
-您可以轻松地在中浏览已识别的问题 [!DNL Upgrade Compatibility Tool] 分析。
+您可以轻松地在以下期间浏览已识别的问题： [!DNL Upgrade Compatibility Tool] 分析。
 
 您可以根据最低问题级别(默认值为 `WARNING`)。
 
@@ -100,24 +100,24 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 
 >[!NOTE]
 >
-> 较低问题级别的问题会被排除，但您会收到通知，这样您始终能够了解每个模块中识别的问题。
+> 较低问题级别的问题会被剔除，但您会收到通知，这样您就始终能够了解每个模块识别的问题。
 
 HTML报表还包括四个不同的图表：
 
-- **按问题严重程度显示的模块**：按模块显示严重性分布。
-- **按问题严重程度列出的文件**：按文件显示严重性分布。
-- **按问题总数排序的模块**：显示10个最易受到攻击的模块，并会考虑警告、错误和严重错误。
-- **具有相对大小和问题的模块**：模块包含的文件越多，其圆圈越大。 模块的问题越多，其圆圈显示的红色就越多。
+- **按问题严重性显示的模块**：按模块显示严重性分布。
+- **按问题严重性列出的文件**：按文件显示严重性分布。
+- **按问题总数排序的模块**：显示10个危害最大的模块，并计入警告、错误和严重错误。
+- **具有相对大小和问题的模块**：模块包含的文件越多，其圆圈越大。 模块出现的问题越多，其圆圈显示的红色就越多。
 
-利用这些图表，可确定最容易损坏的模块以及执行升级需要更多工作的模块。
+利用这些图表，可识别最容易损坏的模块以及需要更多工作才能执行升级的模块。
 
 ![HTML报表 — 图表](../../assets/upgrade-guide/uct-html-diagrams.png)
 
-HTML报表图也会相应地更新，但 `Modules with relative sizes and issues`，此代码是使用 `min-issue-level` 这是最初设置的。
+HTML报表图也会相应地更新，但 `Modules with relative sizes and issues`，使用生成 `min-issue-level` 那是原始设置的。
 
-如果您想查看以下项目的不同结果 `Modules with relative sizes and issues` 图，则必须重新运行命令，为 `--min-issue-level` 选项。
+如果您想查看以下项目的不同结果 `Modules with relative sizes and issues` 图，必须重新运行命令，为 `--min-issue-level` 选项。
 
-![HTML报告 — 气泡图](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
+![HTML报表 — 气泡图](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
 
 要将此HTML报表导出到其他输出文件夹，请执行以下操作：
 
@@ -128,7 +128,7 @@ bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
 其中参数如下：
 
 - `<dir>`：Adobe Commerce安装目录。
-- `[=HTML-OUTPUT-PATH]`：用于导出的Path目录 `.html` 输出文件。
+- `[=HTML-OUTPUT-PATH]`：用于导出 `.html` 输出文件。
 
 >[!NOTE]
 >

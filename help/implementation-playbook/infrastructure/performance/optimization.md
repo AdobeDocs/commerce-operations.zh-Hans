@@ -1,6 +1,6 @@
 ---
 title: 性能优化
-description: 了解有关性能优化的所有信息，以及查看Adobe Commerce实施性能时应采取的步骤。
+description: 了解有关性能优化的所有信息，以及查看Adobe Commerce实施性能所需执行的步骤。
 exl-id: 506ef2cc-c6fd-4401-afa5-a71e7b9871e6
 feature: Cloud
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
@@ -12,23 +12,23 @@ ht-degree: 0%
 
 # 性能优化
 
-性能是一个大主题。 当用户遇到网站速度缓慢或无响应时，它会影响转化。 我们建议执行以下步骤，以优化Adobe Commerce在云基础架构实施中的性能：
+性能是一个大主题。 当用户遇到网站速度缓慢或无响应时，它会影响转化。 我们建议执行以下步骤，在云基础架构实施上优化Adobe Commerce的性能：
 
 - 评估问题
 - 衡量绩效
 - 确定提高性能的关键系统部分
-- 修改部分系统以移除瓶颈
+- 修改系统部分以移除瓶颈
 - 衡量修改后的性能
-- 如果效果更好，请采用它或恢复
+- 如果更好的话，采用它或恢复
 
 ## 典型性能问题
 
-慢速体验的影响通常由两个指标定义，每个因素都可能由于大量原因而产生。
+慢速体验的影响通常由两个指标定义，每个因素都可能由于大量原因而引起。
 
-高首字节时间(TTFB)通常被视为定义服务器响应速度的指标。 时间不仅来自处理请求的源代码执行，而且还可能受以下因素的影响：
+高首字节时间(TTFB)通常被视为服务器响应速度的指标。 时间不仅来自处理请求的源代码执行，而且还可能受以下因素的影响：
 
 - DNS查找
-- 来自DB层的查询速度缓慢
+- 来自DB层的查询速度慢
 - 每个应用层的CPU时间
 - 内存限制
 - I/O等待可能会影响文件读取和写入，通过套接字连接服务
@@ -44,9 +44,9 @@ ht-degree: 0%
 
 Adobe Commerce可以通过其功能随您的业务进行扩展：
 
-![显示Adobe Commerce的可扩展功能的示意图](../../../assets/playbooks/scalable-capabilities.svg)
+![显示Adobe Commerce可伸缩功能的示意图](../../../assets/playbooks/scalable-capabilities.svg)
 
-在商业运作中，也有一些推动规模的关键因素，这也会影响整体表现。
+此外，商业活动的规模还受到一些关键因素的推动，这些因素也影响了整体性能。
 
 - 复杂而庞大的产品目录
 - 大量管理员
@@ -55,6 +55,6 @@ Adobe Commerce可以通过其功能随您的业务进行扩展：
 - 扩展接触点
 - 大流量事务
 
-对于针对规模而构建的分层和可缓存体系结构，您可以使用此图作为参考。
+对于针对规模而构建的分层式可缓存体系结构，您可以使用此图作为参考。
 
-![显示如何在可缓存架构中使用Adobe Commerce GraphQL API的图表](../../../assets/playbooks/cacheable-architecture.svg)
+![示意图显示如何在可缓存的架构中使用Adobe Commerce GraphQL API](../../../assets/playbooks/cacheable-architecture.svg)

@@ -16,19 +16,19 @@ ht-degree: 0%
 
 {{deprecate-split-db}}
 
-配置后，主控数据库的配置如下所示：
+配置后，master数据库的配置如下：
 
-- Commerce主数据库：369个表
+- 主Commerce数据库：369个表
 - Commerce报价数据库：11个表
 - Commerce销售数据库：55个表
 
-要验证拆分数据库是否正常工作，请执行以下任务并使用数据库工具（如）验证数据是否已添加到数据库表中 [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin)：
+要验证拆分数据库是否正常工作，请执行以下任务，并使用数据库工具（如）验证数据是否已添加到数据库表中 [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin)：
 
-| 要验证的内容 | 如何验证 |
+| 验证内容 | 如何验证 |
 | -------------- | ------------- |
-| 报价数据库正在工作 | 将项目添加到购物车。 验证行是否已添加到报价数据库的 `quote`， `quote_address`、和 `quote_item` 表格。 |
-| 销售数据库正在工作 | 完成订单（任何支付方式，包括支票/汇票）。 验证行是否已添加到您的销售数据库的 `sales_order_address`， `sales_order_item`、和 `sales_order_payment` 表格。 |
+| 报价数据库正在工作 | 将项目添加到购物车。 验证是否已向您的报价数据库的 `quote`， `quote_address`、和 `quote_item` 表格。 |
+| 销售数据库正在工作 | 完成订单（任何支付方式，包括支票/汇票）。 验证是否已将行添加到您的销售数据库的 `sales_order_address`， `sales_order_item`、和 `sales_order_payment` 表格。 |
 
 >[!WARNING]
 >
->必须手动备份另外两个数据库实例。 Commerce仅备份主数据库实例。 此 [`magento setup:backup --db`](../../installation/tutorials/backup.md) 命令选项和管理选项不会备份其他表。
+>必须手动备份另外两个数据库实例。 Commerce仅备份主数据库实例。 此 [`magento setup:backup --db`](../../installation/tutorials/backup.md) 命令和管理选项不会备份其他表。

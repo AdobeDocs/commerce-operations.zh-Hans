@@ -47,7 +47,7 @@ Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/
 
 ## 标题……
 
-将内容分块，以便于阅读。 内容应包括带有示例（好与坏）的行动号召以及指向适用的文档的链接
+将内容分块，以便于阅读。 内容应包括带有示例（好与坏）的行动号召以及适用的文档链接
 
 ## 标题……
 

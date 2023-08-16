@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 搜索引擎配置
 
-本节讨论使用Adobe Commerce和Magento Open Source的内部部署测试Elasticsearch或OpenSearch时必须选择的最低设置。
+此部分讨论使用Adobe Commerce和OpenSearch的内部部署测试Elasticsearch或Magento Open Source时必须选择的最低设置。
 
 >[!TIP]
 >
@@ -27,7 +27,7 @@ ht-degree: 0%
 >
 >有关升级到新搜索引擎版本的说明，请参阅 [升级先决条件](../../upgrade/prepare/prerequisites.md).
 
-要将系统配置为使用Elasticsearch或OpenSearch，请执行以下操作：
+要将系统配置为使用Elasticsearch或OpenSearch：
 
 1. 以管理员身份登录到管理员。
 1. 单击 **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
@@ -35,13 +35,13 @@ ht-degree: 0%
 
    下表列出了配置和测试与Commerce的连接所需的选项。 除非您更改了搜索引擎的服务器设置，否则默认设置应该有效。 跳至下一步。
 
-   | Option | 描述 |
+   | 选项 | 描述 |
    |--- |--- |
    | **[!UICONTROL Server Hostname]** | 输入运行Elasticsearch或OpenSearch的计算机的完全限定主机名或IP地址。<br>云基础架构上的Adobe Commerce：从集成系统中获取此价值。 |
    | **[!UICONTROL Server Port]** | 输入Web服务器代理端口。 默认值为9200<br>云基础架构上的Adobe Commerce：从集成系统中获取此价值。 |
-   | **[!UICONTROL Index Prefix]** | 输入搜索引擎索引前缀。 如果为多个Commerce安装（暂存和生产环境）使用单个实例，则必须为每个安装指定一个唯一的前缀。 否则，您可以使用默认前缀magento2。 |
-   | **[!UICONTROL Enable HTTP Auth]** | 单击 **[!UICONTROL Yes]** 仅当为搜索引擎服务器启用了身份验证时。 如果是这样，请在提供的字段中提供用户名和密码。 |
-   | **[!UICONTROL Server Timeout]** | 输入尝试建立与Elasticsearch或OpenSearch服务器的连接时要等待的时间（以秒为单位）。 |
+   | **[!UICONTROL Index Prefix]** | 输入搜索引擎索引前缀。 如果为多个Commerce安装（暂存环境和生产环境）使用单个实例，则必须为每个安装指定唯一的前缀。 否则，您可以使用默认前缀magento2。 |
+   | **[!UICONTROL Enable HTTP Auth]** | 单击 **[!UICONTROL Yes]** 仅当为搜索引擎服务器启用了身份验证时。 如果存在，请在提供的字段中提供用户名和密码。 |
+   | **[!UICONTROL Server Timeout]** | 输入尝试建立与Elasticsearch或OpenSearch服务器的连接时等待的时间（以秒为单位）。 |
 
 1. 单击 **[!UICONTROL Test Connection]**.
 
@@ -52,7 +52,7 @@ ht-degree: 0%
    继续：
 
    - [为搜索引擎配置Apache](../../installation/prerequisites/search-engine/configure-apache.md)
-   - [为您的搜索引擎配置nginx](../../installation/prerequisites/search-engine/configure-nginx.md)
+   - [为搜索引擎配置nginx](../../installation/prerequisites/search-engine/configure-nginx.md)
 
    或者您会看到：
 
@@ -61,42 +61,42 @@ ht-degree: 0%
 如果是这样，请尝试以下操作：
 
 - 确保搜索引擎服务器正在运行。
-- 如果服务器与Commerce位于不同的主机上，请登录Commerce服务器并ping搜索引擎主机。 解决网络连接问题并再次测试连接。
-- 检查启动Elasticsearch或OpenSearch的命令窗口，查找栈栈跟踪和异常。 您必须先解决这些问题，然后才能继续。 特别是，确保您作为用户启动搜索引擎时具有 `root` 权限。
-- 确保 [UNIX防火墙和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) 都被禁用，或者设置了规则以使搜索引擎和商务能够相互通信。
+- 如果服务器与Commerce位于不同的主机上，请登录到Commerce服务器并ping搜索引擎主机。 解决网络连接问题并再次测试连接。
+- 检查启动Elasticsearch的命令窗口或OpenSearch以查找栈栈跟踪和异常。 您必须先解决这些问题，然后才能继续。 特别是，请确保您以用户的身份启动了搜索引擎， `root` 权限。
+- 确保 [UNIX防火墙和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) 都会被禁用，或者会设置规则以使搜索引擎和商务能够相互通信。
 - 验证 **[!UICONTROL Server Hostname]** 字段。 确保服务器可用。 您可以改为尝试服务器的IP地址。
 - 使用 `netstat -an | grep <listen-port>` 命令来验证 **[!UICONTROL Server Port]** 字段未被其他进程使用。
 
-   例如，要查看您的搜索引擎是否在其默认端口上运行，请使用以下命令：
+  例如，要查看您的搜索引擎是否在其默认端口上运行，请使用以下命令：
 
-   ```bash
-   netstat -an | grep 9200
-   ```
+  ```bash
+  netstat -an | grep 9200
+  ```
 
-   如果它在端口9200上运行，则显示类似于以下内容：
+  如果它在端口9200上运行，则显示类似以下内容：
 
-   ```terminal
-   `tcp        0      0 :::9200            :::-         LISTEN`
-   ```
+  ```terminal
+  `tcp        0      0 :::9200            :::-         LISTEN`
+  ```
 
-## 重新索引目录搜索并刷新整页缓存
+## 重新索引目录搜索并刷新全页缓存
 
-更改搜索引擎配置后，必须重新索引目录搜索索引，然后使用管理或命令行刷新全页缓存。
+更改搜索引擎配置后，必须重新索引目录搜索索引，并使用管理或命令行刷新全页缓存。
 
-要使用“管理员”刷新缓存，请执行以下操作：
+使用Admin刷新缓存：
 
 1. 在“管理员”中，单击 **[!UICONTROL System]** > **[!UICONTROL Cache Management]**.
 1. 选中旁边的复选框 **[!UICONTROL Page Cache]**.
-1. 从 **[!UICONTROL Actions]** 列表内，单击 **刷新**.
+1. 从 **[!UICONTROL Actions]** 列表上，单击 **刷新**.
 
    ![缓存管理](../../assets/configuration/refresh-cache.png)
 
-要使用命令行清理缓存，请执行以下操作： [`bin/magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types)
+使用命令行清理缓存： [`bin/magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types)
 
 使用命令行重新索引：
 
-1. 以或切换为登录到您的Commerce服务器 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
-1. 输入以下任一命令：
+1. 以或切换身份登录到Commerce服务器， [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 输入以下任何命令：
 
    输入以下命令以仅重新索引目录搜索索引：
 

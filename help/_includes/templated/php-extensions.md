@@ -37,7 +37,7 @@ Adobe Commerce要求：
 - `ext-zlib`
 - `lib-libxml`
 
-Adobe Commerce的B2B需要：
+Adobe Commerce的B2B要求：
 
 - `ext-bcmath`
 - `ext-ctype`
@@ -67,7 +67,7 @@ Adobe Commerce的B2B需要：
 - `ext-zlib`
 - `lib-libxml`
 
-Magento Open Source要求：
+Magento Open Source需要：
 
 - `ext-bcmath`
 - `ext-ctype`

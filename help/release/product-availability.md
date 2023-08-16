@@ -5,7 +5,7 @@ exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
 source-git-commit: aadccd57794e5e1b07f6d863c2627f2a771509fc
 workflow-type: tm+mt
 source-wordcount: '517'
-ht-degree: 10%
+ht-degree: 14%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe已对支持的版本进行了全面测试。 客户支持部门可提供�
 | _渠道管理器_ | - | 2.0.0 | 1.0.0+ | 1.0.0+ | 1.0.0+ | [市场](https://commercemarketplace.adobe.com/magento-channel-manager.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html) |
 | _AmazonSales Channel_ | - | 4.1.0+ | 4.3.0+ | 4.3.0+ | 4.3.0+ | [市场](https://commercemarketplace.adobe.com/magento-module-amazon.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html) |
 | _Experience Platform连接器_ | 3.0.0-beta1 | 1.0.0+ | 1.0.0+ | 1.0.0+ | 1.0.0+ | [市场](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html)<br/>[发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html) |
-| _适用于Adobe Commerce的Store Fulfillment_ | - | 1.4.0 | 1.2.0+ | 1.2.0+ | 1.2.0+ | [市场](https://commercemarketplace.adobe.com/store-fulfillment-magento-walmart.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html) |
+| _Adobe Commerce 的商店履行情况_ | - | 1.4.0 | 1.2.0+ | 1.2.0+ | 1.2.0+ | [市场](https://commercemarketplace.adobe.com/store-fulfillment-magento-walmart.html)<br/> [发行说明](https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html) |
 
 ## Commerce服务
 

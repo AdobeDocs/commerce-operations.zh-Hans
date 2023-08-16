@@ -13,13 +13,13 @@ ht-degree: 0%
 
 有时，您可能希望将数据库托管在单独的服务器上，而不是在同一台计算机上运行数据库服务器和Web服务器。
 
-Adobe提供了连接到其他计算机上的MySQL服务器的方法。 从Adobe Commerce和Magento Open Source2.4.3开始，您还可以将应用程序配置为使用Amazon Web Services (AWS) Aurora数据库，而不更改代码。
+Adobe提供了连接到其他计算机上的MySQL服务器的方法。 从Adobe Commerce和Magento Open Source2.4.3开始，您还可以将应用程序配置为使用Amazon Web Services (AWS) Aurora数据库，而无需更改代码。
 
 Aurora是托管在AWS上的高性能、完全兼容的MySQL服务器。
 
 ## 连接到AWS Aurora数据库
 
-使用Aurora作为数据库与使用缺省数据库连接器在常规Adobe Commerce和Magento Open Source设置配置中指定数据库一样简单。
+使用Aurora作为数据库与使用默认数据库连接器在一般Adobe Commerce和Magento Open Source设置配置中指定数据库一样简单。
 
 运行时 `bin/magento setup:install`中，使用Aurora信息 `db-` 字段：
 
@@ -27,7 +27,7 @@ Aurora是托管在AWS上的高性能、完全兼容的MySQL服务器。
 bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws.com' --db-name='magento2' --db-user='username' --db-password='password' ...
 ```
 
-此 `db-host` value是包含 `https://` 和结尾 `:portnumber`  已删除。
+此 `db-host` value是带有 `https://` 和结尾 `:portnumber`  已删除。
 
 ## 设置远程数据库连接
 
@@ -45,22 +45,22 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 
 ### 高可用性
 
-如果Web服务器或数据库服务器已群集化，请使用以下准则来配置远程数据库连接：
+如果Web服务器或数据库服务器是群集的，请使用以下准则来配置远程数据库连接：
 
-* 必须为每个Web服务器节点配置连接。
-* 通常，配置到数据库负载平衡器的数据库连接；但是，数据库群集可能很复杂，具体配置取决于您。 Adobe没有对数据库聚类提出具体的建议。
+* 必须为每个Web服务器节点配置一个连接。
+* 通常，可以配置到数据库负载平衡器的数据库连接；但是，数据库群集可能会很复杂，具体配置取决于您。 Adobe没有对数据库聚类提出具体的建议。
 
-   有关更多信息，请参阅 [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html).
+  有关更多信息，请参阅 [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html).
 
 ### 解决连接问题
 
-如果在连接到任一主机时遇到问题，请先ping另一台主机，以确保该主机可访问。 可能需要通过修改防火墙和SELinux规则（如果使用SELinux）来允许从一台主机到另一台主机的连接。
+如果在连接到任一主机时出现问题，请先ping另一台主机以确保其可访问。 可能需要通过修改防火墙和SELinux规则（如果使用SELinux）来允许从一台主机到另一台主机的连接。
 
 ## 创建远程连接
 
 要创建远程连接，请执行以下操作：
 
-1. 在您的数据库服务器上，作为具有 `root` 权限，打开您的MySQL配置文件。
+1. 在数据库服务器上，作为具有 `root` 权限，打开您的MySQL配置文件。
 
    要找到它，请输入以下命令：
 
@@ -68,7 +68,7 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
    mysql --help
    ```
 
-   位置显示如下：
+   该位置显示如下：
 
    ```terminal
    Default options are read from the following files in the given order:
@@ -81,36 +81,37 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 
 1. 在配置文件中搜索 `bind-address`.
 
-   如果存在，则按如下方式更改值。
+   如果存在，请按如下方式更改值。
 
-   如果该文件不存在，则将其添加到 `[mysqld]` 部分。
+   如果该规则不存在，则将其添加到 `[mysqld]` 部分。
 
    ```conf
    bind-address = <ip address of your web node>
    ```
 
-   参见 [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/server-options.html)，特别是如果您有群集化Web服务器。
+   请参阅 [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/server-options.html)，尤其是如果您有群集化的Web服务器。
 
-1. 将更改保存到配置文件并退出文本编辑器。
+1. 保存对配置文件所做的更改并退出文本编辑器。
 1. 重新启动MySQL服务：
 
    * CentOS： `service mysqld restart`
 
    * Ubuntu： `service mysql restart`
+
    >[!NOTE]
    >
-   >如果MySQL无法启动，请在syslog中查找问题的源。 使用解决问题 [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/server-options.html#option_mysqld_bind-address) 或是另一个权威来源。
+   >如果MySQL无法启动，请在syslog中查找问题的来源。 使用解决问题 [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/server-options.html#option_mysqld_bind-address) 或其他权威来源。
 
 ## 向数据库用户授予访问权限
 
-要使Web节点能够连接到数据库服务器，必须授予Web节点数据库用户访问远程服务器上的数据库的权限。
+要使Web节点能够连接到数据库服务器，必须授予Web节点数据库用户访问远程服务器上数据库的权限。
 
 此示例授予 `root` 数据库用户对远程主机上数据库的完全访问权限。
 
 要向数据库用户授予访问权限，请执行以下操作：
 
 1. 登录到数据库服务器。
-1. 连接到MySQL数据库作为 `root` 用户。
+1. 连接到MySQL数据库，作为 `root` 用户。
 1. 输入以下命令：
 
    ```shell
@@ -125,7 +126,7 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 
    >[!NOTE]
    >
-   >如果Web服务器已群集化，请在每个Web服务器上输入相同的命令。 每个Web服务器必须使用相同的用户名。
+   >如果Web服务器是群集的，请在每个Web服务器上输入相同的命令。 对于每个Web服务器，必须使用相同的用户名。
 
 ## 验证数据库访问权限
 
@@ -154,8 +155,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 安装Adobe Commerce或Magento Open Source时，必须指定以下内容：
 
-* 基本URL(也称为 *商店地址*)指定以下对象的主机名或IP地址： *Web节点*
+* 基本URL(也称为 *商店地址*)指定 *Web节点*
 * 数据库主机是 *远程数据库服务器* IP地址（如果数据库服务器是群集的，则使用负载平衡器）
 * 数据库用户名是 *本地Web节点* 您授予访问权限的数据库用户
 * 数据库口令是本地Web节点用户的口令
-* Database name是远程服务器上的数据库的名称
+* Database name是远程服务器上数据库的名称

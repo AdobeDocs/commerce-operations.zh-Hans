@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # .gitignore引用
 
-Magento Open Source包括基底 `.gitignore` 文件。 参见 [最新的Commerce `.gitignore`](https://raw.githubusercontent.com/magento/magento2/2.4/.gitignore) 文件。 如果您必须添加一个文件，该文件位于 `.gitignore` 列表，您可以使用 `-f` 暂存提交时的（强制）选项：
+Magento Open Source包括基底 `.gitignore` 文件。 请参阅 [最新商务 `.gitignore`](https://raw.githubusercontent.com/magento/magento2/2.4/.gitignore) 文件。 如果您必须添加一个文件，该文件位于 `.gitignore` 列表，您可以使用 `-f` 暂存提交时的（强制）选项：
 
 ```bash
 git add <path/filename> -f

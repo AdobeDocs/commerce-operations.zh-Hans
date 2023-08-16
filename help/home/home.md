@@ -6,13 +6,13 @@ exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
 source-git-commit: 2b1fa24471cda7cc01ef5fdafeedbec0315d68c7
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 0%
+ht-degree: 18%
 
 ---
 
 # Adobe Commerce操作指南
 
-获取有关开发、部署和维护Adobe Commerce项目的概念、流程、工具和最佳实践的实用信息。
+获取有关概念、流程、工具和最佳实践的实用信息，以开发、部署和维护Adobe Commerce项目。
 
 <table>
 <tr>
@@ -22,7 +22,7 @@ ht-degree: 0%
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html"><strong>发行信息</strong></a>
-      <p>查看Adobe Commerce补丁和服务的所有发行信息。</p>
+      <p>查看Adobe Commerce修补程序和服务的所有发行信息。</p>
     </div>
   </td>
   <td valign="top">
@@ -60,12 +60,12 @@ ht-degree: 0%
     </a>
     <div>
       <a href="../upgrade/overview.md"><strong>升级</strong></a>
-      <p>了解如何升级您的Adobe Commerce项目以保持店面安全和高效运行。</p>
+      <p>了解如何升级您的Adobe Commerce项目以确保店面安全和高效运行。</p>
     </div>
   </td>
   <td valign="top">
     <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html">
-       <img alt="命令行工具参考" src="../assets/icons/page-rule.svg" width="40" height="40"/>
+       <img alt="命令行工具引用" src="../assets/icons/page-rule.svg" width="40" height="40"/>
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html"><strong>命令行工具参考</strong></a>
@@ -98,7 +98,7 @@ ht-degree: 0%
     </a>
     <div>
       <a href="../implementation-playbook/overview.md"><strong>实施行动手册</strong></a>
-      <p>了解规划和实施成功的Adobe Commerce站点的策略。</p>
+      <p>了解规划和实施成功的 Adobe Commerce 网站的策略。</p>
     </div>
   </td>
   <td valign="top">
@@ -107,7 +107,7 @@ ht-degree: 0%
     </a>
     <div>
       <a href="../operational-playbook/overview.md"><strong>运营行动手册</strong></a>
-      <p>了解如何让您的企业做好运营准备，以便运营成功的电子商务网站。</p>
+      <p>了解如何让您的企业做好运营准备以便运营成功的电子商务网站。</p>
     </div>
   </td>
   <td valign="top">
@@ -116,7 +116,7 @@ ht-degree: 0%
     </a>
     <div>
       <a href="../commerce-at-scale/overview.md"><strong>大规模商务</strong></a>
-      <p>了解如何使用Adobe Commerce和Adobe Experience Manager大规模交付体验。</p>
+      <p>了解如何结合使用 Adobe Commerce 和 Adobe Experience Manager 大规模交付体验。</p>
     </div>
   </td>
   <td valign="top">

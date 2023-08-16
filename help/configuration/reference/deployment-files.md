@@ -12,32 +12,32 @@ ht-degree: 0%
 
 # 用于部署的配置文件
 
-Adobe Commerce提供了配置文件，使您能够轻松自定义组件并创建配置类型以扩展默认功能。 部署配置过程包括安装的共享配置和特定于系统的配置。 Commerce的部署配置分为 [`app/etc/config.php`](../reference/config-reference-configphp.md) 和 [`app/etc/env.php`](../reference/config-reference-envphp.md).
+Adobe Commerce提供了配置文件，使您能够轻松自定义组件和创建配置类型以扩展默认功能。 部署配置过程包含用于安装的共享配置和特定于系统的配置。 Commerce的部署配置分为 [`app/etc/config.php`](../reference/config-reference-configphp.md) 和 [`app/etc/env.php`](../reference/config-reference-envphp.md).
 
-- `app/etc/config.php` 是 _已共享_ 配置文件。
+- `app/etc/config.php` 是 _共享_ 配置文件。
 此文件包含已安装的模块、主题和语言包的列表；以及共享的配置设置。
 
-   将此文件签入到源代码管理，并将其用于开发、暂存和生产系统。
+  将此文件签入到源代码管理，并将其用于开发、暂存和生产系统。
 
 - `app/etc/env.php` 包含特定于安装环境的设置。
 
-一起， `config.php` 和 `env.php` 称为商务 _部署配置_ 因为这些文件是在安装期间创建的，并且是启动Commerce应用程序所必需的。
+一起， `config.php` 和 `env.php` 称为商务 _部署配置_ 因为该文件是在安装期间创建的，并且是启动Commerce应用程序所必需的。
 
 >[!INFO]
 >
->此 [!DNL Commerce 2] 部署配置替换 `local.xml` 在 [!DNL Magento 1.x].
+>此 [!DNL Commerce 2] 部署配置取代 `local.xml` 在 [!DNL Magento 1.x].
 
-与其他不同 [模块配置文件](../reference/module-files.md)时，Commerce部署配置会在初始化期间加载到内存中，不会与任何其他文件合并，并且无法扩展。 (`config.php` 和 `env.php` 但是，它们会相互合并。)
+不喜欢 [模块配置文件](../reference/module-files.md)中，Commerce部署配置在初始化期间加载到内存中，不会与任何其他文件合并，并且无法扩展。 (`config.php` 和 `env.php` 但会相互合并。)
 
 ## 有关部署配置的详细信息
 
-`config.php` 和 `env.php` 是返回 [多维关联数组](https://www.w3schools.com:443/php/php_arrays.asp)，这基本上是配置参数和值的分层排列。
+`config.php` 和 `env.php` 是返回 [多维关联阵列](https://www.w3schools.com:443/php/php_arrays.asp)，这基本上是配置参数和值的分层排列。
 
 此数组的顶层为 _配置区段_. 区段具有由任意键区分的任意内容（标量值或嵌套数组），其中键和值对均由Commerce框架定义。
 
-[Magento\Framework\App\DeploymentConfig](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/DeploymentConfig.php) 仅提供对这些部分的访问，但不允许您扩展它们。
+[Magento\Framework\App\DeploymentConfig](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/DeploymentConfig.php) 仅提供对这些部分的访问，不允许您扩展它们。
 
-在下一个层次中，每个区段中的项目按照模块顺序定义排序，该顺序是通过合并所有模块的配置文件得到的，禁用模块除外。
+在下一个层次上，每个模块中的项目按照模块顺序定义排序，该顺序是通过合并所有模块的配置文件得到的，禁用模块除外。
 
 以下部分讨论了部署配置的结构和内容：
 
@@ -76,6 +76,6 @@ return array (
 
 值 `1` 或 `0` 指示模块是启用还是禁用。
 
-Commerce应用程序无法识别禁用的模块；换言之，它们不参与合并配置、依赖注入、事件、插件等。 禁用的模块不会修改店面或管理员，也不会影响路由。
+Commerce应用程序无法识别禁用的模块；换言之，它们不参与合并配置、依赖项注入、事件、插件等。 禁用的模块不会修改店面或管理员，也不会影响路由。
 
-代码库中禁用模块和缺失模块的唯一实际区别是，禁用模块由自动加载器找到，其类和常量可用于在其他代码中重用。
+代码库中禁用模块和缺失模块的唯一实际区别是，禁用模块由自动加载器找到，其类和常量可在其他代码中重用。

@@ -16,7 +16,7 @@ ht-degree: 0%
 使用Commerce 2.2设置生产系统时 [管道部署模型](../deployment/technical-details.md)，您必须 _导入_ 配置设置来自 `config.php` 和 `env.php` 到数据库中。
 这些设置包括配置路径和值、网站、商店、商店视图和主题。
 
-导入网站、商店、商店视图和主题后，您可以创建产品属性，并将它们应用于生产系统上的网站、商店和商店视图。
+导入网站、商店、商店视图和主题后，您可以创建产品属性，并在生产系统上将其应用于网站、商店和商店视图。
 
 >[!INFO]
 >
@@ -30,7 +30,7 @@ ht-degree: 0%
 bin/magento app:config:import [-n, --no-interaction]
 ```
 
-使用可选 `[-n, --no-interaction]` 标记以在没有任何交互的情况下导入数据。
+使用可选 `[-n, --no-interaction]` 标记表示导入数据而不进行任何交互。
 
 如果您输入 `bin/magento app:config:import` 如果没有可选标记，则需要确认更改。
 
@@ -44,14 +44,14 @@ Do you want to continue [yes/no]?
 
 要继续导入，请输入 `yes`.
 
-如果部署配置文件包含一些要导入的数据，则会显示一条类似于以下内容的消息：
+如果部署配置文件包含要导入的一些数据，则会显示一条与以下内容类似的消息：
 
 ```terminal
 Start import:
 Some information about importing
 ```
 
-如果部署配置文件不包含任何要导入的数据，则会显示一条类似于以下内容的消息：
+如果部署配置文件不包含任何要导入的数据，则会显示一条与以下内容类似的消息：
 
 ```terminal
 Start import:
@@ -64,9 +64,9 @@ Nothing to import
 
 ### 系统配置
 
-Commerce直接使用以下文件中的值： `system` 中的数组 `config.php` 或 `env.php` 文件，而不是将它们导入数据库，因为它们需要一些预处理和后处理操作。
+Commerce直接使用中的值 `system` 中的数组 `config.php` 或 `env.php` 文件，而不是将它们导入数据库，因为它们需要一些预处理和后处理操作。
 
-例如，配置路径的值 `web/secure/base_url` 必须经过后端模型的验证。
+例如，配置路径的值 `web/secure/base_url` 必须使用后端模型进行验证。
 
 #### 后端模型
 
@@ -86,11 +86,11 @@ Commerce直接使用以下文件中的值： `system` 中的数组 `config.php` 
 - `groups`：存储相关配置
 - `stores`：存储视图相关配置
 
-以下模式可以导入上述配置：
+上述配置可在以下模式下导入：
 
-- `create`： `config.php` 包含新实体(`websites`， `groups`， `stores`)中，不存在于生产环境中
-- `update`： `config.php` 包含实体(`websites`， `groups`， `stores`)与生产环境不同的
-- `delete`： `config.php` 是 _非_ 包含实体(`websites`， `groups`， `stores`)中存在
+- `create`： `config.php` 包含新实体(`websites`， `groups`， `stores`)中不存在的
+- `update`： `config.php` 包含实体(`websites`， `groups`， `stores`)不同于生产环境
+- `delete`： `config.php` 是 _非_ 包含实体(`websites`， `groups`， `stores`)，这些变量在生产环境中存在
 
 >[!INFO]
 >
@@ -107,7 +107,7 @@ Commerce直接使用以下文件中的值： `system` 中的数组 `config.php` 
 例如， `frontend/Magento/luma`.
 `frontend` 为区域和 `Magento/luma` 是主题路径。
 
-数组的值是关于主题的数据：代码、标题、路径、父ID
+数组的值是有关主题的数据：代码、标题、路径、父ID
 
 完整示例：
 
@@ -126,6 +126,5 @@ Commerce直接使用以下文件中的值： `system` 中的数组 `config.php` 
 
 >[!INFO]
 >
->- _主题注册_. 如果在中定义了主题数据 `config.php` 但主题源代码不存在于文件系统中，主题被忽略（即，未注册）。
+>- _主题注册_. 如果在中定义了主题数据 `config.php` 但主题的源代码不在文件系统中，主题被忽略（即未注册）。
 >- _主题移除_. 如果主题不存在于 `config.php` 但源代码存在于文件系统中，主题未被删除。
-

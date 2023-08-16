@@ -15,7 +15,7 @@ ht-degree: 0%
 在开始之前，请执行以下步骤进行准备：
 
 1. 以以下身份登录到您的应用程序服务器 [文件系统所有者](../../../installation/prerequisites/file-system/overview.md).
-1. 切换到应用程序安装目录，或确保将其添加到系统中 `PATH`.
+1. 更改到应用程序安装目录，或确保将其添加到系统中 `PATH`.
 
 请参阅 [首要步骤](overview.md#first-steps) 部分以了解更多详细信息。
 
@@ -29,20 +29,20 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 其中：
 
-* `[-a|--auto]` 是一个可选参数，可在遇到完整性检查错误时阻止停止迁移。
+* `[-a|--auto]` 是一个可选参数，可防止在遇到完整性检查错误时停止迁移。
 
 * `[-r|--reset]` 是一个可选参数，可从头开始迁移。 可以使用此参数测试迁移。
 
-* `{<path to config.xml>}` 是绝对文件系统路径 `config.xml`；此参数是必需的
+* `{<path to config.xml>}` 是绝对的文件系统路径 `config.xml`；此参数是必需的
 
-在此步骤中， [!DNL Data Migration Tool] 为Magento1数据库中的迁移表创建其他表和触发器。 它们用于 [增量/增量](delta.md) 迁移步骤。 其他表包含有关最终迁移执行后更改的记录的信息。 数据库触发器用于填充这些额外的表，因此，如果正在对特定表执行新操作（添加/修改/删除记录），这些数据库触发器会将有关此操作的信息保存到额外的表中。 当我们运行增量迁移流程时， [!DNL Data Migration Tool] 检查这些表中是否有未处理的记录，并将必要的内容迁移到Magento2数据库中。
+在此步骤中， [!DNL Data Migration Tool] 为Magento1数据库中的迁移表创建其他表和触发器。 它们用于 [增量/增量](delta.md) 迁移步骤。 其他表包含有关最终迁移执行后更改的记录的信息。 数据库触发器用于填充这些额外的表，因此，如果正在对特定表执行新操作（添加/修改/删除记录），这些数据库触发器会将有关此操作的信息保存到额外的表中。 当我们运行增量迁移流程时， [!DNL Data Migration Tool] 检查这些表中的未处理记录，并将必要的内容迁移到Magento2数据库中。
 
 每个新表都包含：
 
 * `m2_cl` 前缀
 * `INSERT`， `UPDATE`， `DELETE` 事件触发器。
 
-例如，对于 `sales_flat_order` 此 [!DNL Data Migration Tool] 创建：
+例如，对于 `sales_flat_order` 该 [!DNL Data Migration Tool] 创建：
 
 * `m2_cl_sales_flat_order` 表：
 
@@ -85,7 +85,7 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 >[!NOTE]
 >
->此 [!DNL Data Migration Tool] 在运行时保存其当前进度。 如果出现错误或用户干预导致其停止运行，则工具会在上一次已知良好状态时恢复进度。 强制 [!DNL Data Migration Tool] 要从头开始运行，请使用 `--reset` 参数。 在这种情况下，我们建议您恢复Magento2数据库转储，以防止复制以前迁移的数据。
+>此 [!DNL Data Migration Tool] 在运行时保存其当前进度。 如果出现错误或用户干预导致其停止运行，则工具会在上一次确认工作正常时恢复进度。 强制 [!DNL Data Migration Tool] 要从头开始运行，请使用 `--reset` 参数。 在这种情况下，建议您恢复Magento2数据库转储，以防止复制以前迁移的数据。
 
 
 ## 可能的一致性错误

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 低级缓存选项
 
-Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的访问。
+Commerce应用程序使用低级缓存前端和后端提供对缓存存储的访问。
 
 ## 低级前端缓存
 
@@ -20,10 +20,10 @@ Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的
 
 ## 低级后端缓存
 
-通常，Commerce应用程序可与任何后端缓存配合使用，后端 [Zend_Cache后端](https://framework.zend.com/manual/1.12/en/zend.cache.backends.html) 支持。 但是，本指南仅涵盖以下低级后端缓存：
+通常，Commerce应用程序可与满足以下条件的任何后端缓存配合使用 [Zend_Cache后端](https://framework.zend.com/manual/1.12/en/zend.cache.backends.html) 支持。 但是，本指南仅涵盖以下低级后端缓存：
 
 - [Redis](config-redis.md)
 - [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)
 - 文件系统（默认）：无需配置即可使用文件系统缓存。
 
-[清漆](config-varnish.md) 不需要设置低级缓存后端。
+[清漆](config-varnish.md) 无需设置低级缓存后端。

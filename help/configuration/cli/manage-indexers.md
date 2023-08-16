@@ -39,7 +39,7 @@ salesrule_rule                           Sales Rule
 ```
 
 >[!NOTE]
-> 使用Live Search、目录服务或产品Recommendations的Adobe Commerce商家可以选择使用 [基于SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html).
+> 使用Live Search、Catalog Service或Product Recommendations的Adobe Commerce商家可以选择使用 [基于SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html).
 
 ## 查看索引器状态
 
@@ -109,24 +109,24 @@ Catalog Search index has been rebuilt successfully in <time>
 >
 >对于具有大量产品、客户、类别和促销规则的商店，重新索引所有索引器可能需要很长时间。
 
-### 在并行模式下重新索引
+### 以并行模式重新索引
 
-索引器具有作用域和多线程，以支持在并行模式下重新索引。 它通过索引器的维度进行并行处理，并在多个线程中执行，从而缩短处理时间。
+索引器具有作用域和多线程，以支持在并行模式下重新索引。 它通过索引器的维度进行并行，并在多个线程中执行，从而缩短处理时间。
 
 在这种情况下， `dimension` 是重新索引的范围，例如 `website` 或只是特定的 `customer_group`.
 
-索引并行化仅影响作用域的索引器，这意味着Commerce使用该索引器作为其作用域将数据拆分为多个表，而不是将所有数据保留在一个表中。
+索引并行化仅影响作用域的索引器，这意味着Commerce使用索引器作为其作用域将数据拆分为多个表，而不是将所有数据保留在一个表中。
 
 您可以在并行模式下运行以下索引：
 
-- `Catalog Search Fulltext` 可并行使用商店视图。
-- `Category Product` 可并行使用商店视图。
-- `Catalog Price` 可按网站和客户组进行并行。
-- `Catalog Permissions` 可由客户组并行。
+- `Catalog Search Fulltext` 可按商店查看次数并行。
+- `Category Product` 可按商店查看次数并行。
+- `Catalog Price` 可由网站和客户组并行。
+- `Catalog Permissions` 可以由客户组并行。
 
 >[!INFO]
 >
->默认情况下，启用了目录搜索全文和类别产品的并行化。
+>默认情况下，目录搜索全文和类别产品的并行处于启用状态。
 
 要使用并行化，请为产品价格索引器设置一种可用的维度模式：
 
@@ -162,7 +162,7 @@ MAGE_INDEXER_THREADS_COUNT=3 php -f bin/magento indexer:reindex catalogsearch_fu
 
 ## 重置索引器
 
-使用此命令可使所有索引器或特定索引器的状态无效。
+使用此命令可使所有索引器或特定索引器的状态失效。
 
 命令选项：
 
@@ -192,7 +192,7 @@ Catalog Search indexer has been invalidated.
 
 使用此命令可设置以下索引器选项：
 
-- **保存时更新(`realtime`)**：在管理员中进行更改后，索引数据会更新。 （例如，将产品添加到管理员中的类别后，类别产品索引会重新索引。） 这是默认设置。
+- **保存时更新(`realtime`)**：在管理员中进行更改后，索引数据会更新。 （例如，将产品添加到管理员中的类别后，会重新索引类别产品索引。） 这是默认设置。
 - **按计划更新(`schedule`)**：根据cron作业设置的时间表为数据编制索引。
 
 [了解有关索引的更多信息](https://developer.adobe.com/commerce/php/development/components/indexing/).
@@ -227,7 +227,7 @@ Catalog Search:                                    Update on Save
 
 >[!INFO]
 >
->在切换索引器模式之前，我们建议将您的网站放在 [维护](../../installation/tutorials/maintenance-mode.md) 模式和 [禁用cron作业](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). 这可以确保您不会遭受数据库锁定。
+>在切换索引器模式之前，我们建议将您的网站放在 [维护](../../installation/tutorials/maintenance-mode.md) 模式和 [禁用cron作业](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). 这可以确保您不会遇到数据库锁定的问题。
 
 要指定索引器配置，请执行以下操作：
 
@@ -241,7 +241,7 @@ bin/magento indexer:set-mode {realtime|schedule} [indexer]
 - `schedule` — 根据cron计划设置要保存的指定索引器。
 - `indexer` — 以空格分隔的索引器列表。 省略 `indexer` 以相同方式配置所有索引器。
 
-例如，要仅更改要按计划更新的类别产品和产品类别索引器，请输入：
+例如，要仅更改按计划更新的类别产品和产品类别索引器，请输入：
 
 ```bash
 bin/magento indexer:set-mode schedule catalog_category_product catalog_product_category
@@ -254,4 +254,4 @@ Index mode for Indexer Category Products was changed from 'Update on Save' to 'U
 Index mode for Indexer Product Categories was changed from 'Update on Save' to 'Update by Schedule'
 ```
 
-当索引器模式设置为时，将添加与索引器相关的数据库触发器 `schedule` 当索引器模式设置为时，和移除 `realtime`. 如果索引器设置为时，数据库中缺少触发器 `schedule`，将索引器更改为 `realtime` 然后改回 `schedule`. 这将重置触发器。
+当索引器模式设置为时，将添加与索引器相关的数据库触发器 `schedule` 并将索引器模式设置为时删除 `realtime`. 当索引器设置为时，如果数据库中缺少触发器 `schedule`，将索引器更改为 `realtime` 然后改回 `schedule`. 这将重置触发器。

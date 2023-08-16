@@ -14,13 +14,13 @@ ht-degree: 0%
 
 将Web服务器配置为在默认端口80以外的端口上侦听，因为Varnish直接响应传入的HTTP请求，而不是Web服务器。
 
-以下部分以端口8080为例。
+以下部分使用端口8080作为示例。
 
 **更改Apache 2.4侦听端口**：
 
 1. 打开 `/etc/httpd/conf/httpd.conf` 在文本编辑器中。
 1. 找到 `Listen` 指令。
-1. 将侦听端口的值更改为 `8080`. （您可以使用任何可用的侦听端口。）
+1. 将侦听端口的值更改为 `8080`. （可以使用任何可用的侦听端口。）
 1. 将更改保存到 `httpd.conf` 并退出文本编辑器。
 
 ## 修改Varnish系统配置
@@ -40,7 +40,7 @@ ht-degree: 0%
    VARNISH_LISTEN_PORT=80
    ```
 
-   对于Varnish 4.x，确保DAEMON_OPTS包含正确的监听端口 `-a` 参数（即使VARNISH_LISTEN_PORT设置为正确的值）：
+   对于Varnish 4.x，请确保DAEMON_OPTS包含正确的侦听端口 `-a` 参数（即使VARNISH_LISTEN_PORT设置为正确的值）：
 
    ```conf
    DAEMON_OPTS="-a :80 \
@@ -76,11 +76,11 @@ ht-degree: 0%
 
 1. 替换的值 `.host` 完全限定的主机名或IP地址，以及Varnish的侦听端口 _后端_ 或 _原始服务器_；也就是说，提供内容Varnish的服务器将加速。
 
-   通常，这是您的Web服务器。 参见 [后端服务器](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) 在 _清漆指南_.
+   通常，这是您的Web服务器。 请参阅 [后端服务器](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) 在 _清漆指南_.
 
-1. 替换的值 `.port` 使用Web服务器的侦听端口（本例中为8080）。
+1. 替换的值 `.port` Web服务器的侦听端口（本例中为8080）。
 
-   示例： Apache安装在主机192.0.2.55上，Apache在端口8080上侦听：
+   示例： Apache安装在主机192.0.2.55上，Apache在端口8080上监听：
 
    ```conf
    backend default {
@@ -107,7 +107,7 @@ ht-degree: 0%
 varnishd -d -f /etc/varnish/default.vcl
 ```
 
-此时应显示错误消息。
+这应显示错误消息。
 
 
 >[!INFO]
@@ -116,7 +116,7 @@ varnishd -d -f /etc/varnish/default.vcl
 
 ## 验证清漆是否正常工作
 
-以下部分讨论如何验证Varnish是否正常工作， _不含_ 配置Commerce以使用它。 您应在配置Commerce之前尝试此操作。
+以下各节将讨论如何验证清漆是否正常工作， _不含_ 配置Commerce以使用它。 您应在配置Commerce之前尝试此操作。
 
 按照显示的顺序执行以下各节中讨论的任务：
 
@@ -166,17 +166,17 @@ tcp        0      0 :::8080                     :::*                        LIST
 tcp        0      0 ::1:48509                   :::*                        LISTEN      32604/varnishd
 ```
 
-上图显示了在端口80上运行的Varnish和在端口8080上运行的Apache。
+前文显示了在端口80上运行的Varnish和在端口8080上运行的Apache。
 
-如果您看不到以下项的输出 `varnishd`，确保Varnish正在运行。
+如果您看不到以下项的输出： `varnishd`，确保Varnish正在运行。
 
-参见 [`netstat` options](https://tldp.org/LDP/nag2/x-087-2-iface.netstat.html).
+请参阅 [`netstat` options](https://tldp.org/LDP/nag2/x-087-2-iface.netstat.html).
 
 ## 安装Commerce软件
 
-安装Commerce软件（如果尚未安装）。 当提示输入基本URL时，请使用Varnish主机和端口80（用于Varnish），因为Varnish会接收所有传入的HTTP请求。
+安装Commerce软件（如果尚未安装）。 当提示输入基本URL时，请使用Varnish主机和端口80（用于Varnish），因为Varnish接收所有传入的HTTP请求。
 
-安装Commerce时可能出错：
+安装Commerce时可能出现错误：
 
 ```terminal
 Error 503 Service Unavailable
@@ -199,13 +199,13 @@ backend default {
 
 现在，您可以通过查看从任何页面返回的HTML响应标头来验证Varnish是否正在为页面提供服务。
 
-在查看标头之前，您必须先将Commerce设置为开发人员模式。 有几种方法可以做到这一点，其中最简单的方法是修改 `.htaccess` 在Commerce应用程序根目录下。 您还可以使用 [`magento deploy:mode:set`](../cli/set-mode.md) 命令。
+在查看标头之前，必须为开发人员模式设置Commerce 。 有多种方法可以做到这一点，最简单的方法是进行修改 `.htaccess` 在Commerce应用程序的根中。 您也可以使用 [`magento deploy:mode:set`](../cli/set-mode.md) 命令。
 
 ### 为开发人员模式设置Commerce
 
 要将Commerce设置为开发人员模式，请使用 [`magento deploy:mode:set`](../cli/set-mode.md#change-to-developer-mode) 命令。
 
-### 看看清漆日志
+### 看看光泽的日志
 
 确保Varnish正在运行，然后在Varnish服务器上输入以下命令：
 
@@ -215,7 +215,7 @@ varnishlog
 
 在Web浏览器中，转到任何Commerce页面。
 
-命令提示符窗口中会显示响应标头的长列表。 查找类似于以下内容的标头：
+命令提示符窗口中会显示一个响应标头的长列表。 查找类似于以下内容的标头：
 
 ```terminal
 -   BereqHeader    X-Varnish: 3
@@ -232,7 +232,7 @@ varnishlog
 -   ReqHeader      Origin: http://10.249.151.10
 ```
 
-如果此类标头可以 _非_ 显示，停止Varnish，检查您的 `default.vcl`，然后重试。
+如果此类标头可以 _非_ 显示，停止Varnish，查看 `default.vcl`，然后重试。
 
 ### 查看HTML响应标头
 

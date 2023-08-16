@@ -5,13 +5,13 @@ exl-id: 33d9b30a-4504-4955-b11a-0a642f23209b
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 # 检查数据库状态
 
-在运行此命令之前，必须 [创建或更新部署配置](deployment.md).
+运行此命令之前，必须 [创建或更新部署配置](deployment.md).
 
 ## 命令用法
 
@@ -34,5 +34,5 @@ All modules are up to date.
 | 退出代码 | 描述 | 建议的操作 |
 |--------------|--------------|---------------|
 | 0 | 普通 | 无 |
-| 1 | 某些模块使用的代码版本比数据库新或更旧 | 运行 [`magento setup:upgrade`](database-upgrade.md) 更新数据库模式并运行 `composer update` 从应用程序根目录更新组件依赖关系 |
+| 1 | 某些模块使用比数据库更新或更旧的代码版本 | 运行 [`magento setup:upgrade`](database-upgrade.md) 更新数据库模式并运行 `composer update` 从应用程序根目录更新组件依赖关系 |
 | 2 | `magento setup:upgrade` 为必填项 | [`magento setup:upgrade`](database-upgrade.md) 更新数据库模式 |

@@ -1,6 +1,6 @@
 ---
 title: 技术详细信息
-description: 阅读有关管道部署、配置类型和推荐工作流程的技术详细信息。
+description: 阅读有关管道部署、配置类型和推荐的工作流的技术详细信息。
 exl-id: a396d241-f895-4414-92af-3abf3511e62a
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -31,20 +31,20 @@ ht-degree: 0%
 
 1. 环境变量（如果存在）将覆盖所有其他值。
 1. 从共享配置文件 `env.php` 和 `config.php`. 中的值 `env.php` 覆盖中的值 `config.php`.
-1. 从数据库中存储的值。
-1. 如果这些源的任何一个中都不存在值，则使用默认值或NULL。
+1. 从存储在数据库中的值。
+1. 如果这些源中的任何一个都不存在值，则使用默认值或NULL。
 
 ### 管理共享配置
 
-共享配置存储在中 `app/etc/config.php`，它应位于源代码控制中。
+共享配置存储在中 `app/etc/config.php`，它应该在源代码控制中。
 
-在开发的管理员(或云基础架构上的Adobe Commerce)中设置共享配置 _集成_)系统并将配置写入 `config.php` 使用 [`magento app:config:dump` 命令](../cli/export-configuration.md).
+在开发环境的管理员(或云基础架构上的Adobe Commerce)中设置共享配置 _集成_)系统并将配置写入 `config.php` 使用 [`magento app:config:dump` 命令](../cli/export-configuration.md).
 
 ### 管理特定于系统的配置
 
-系统特定的配置存储在中 `app/etc/env.php`，应 _非_ 在源代码管理中。
+特定于系统的配置存储在中 `app/etc/env.php`，应该 _非_ 在源代码管理中。
 
-在开发系统的管理员(或Adobe Commerce on cloud infrastructure集成)中设置系统特定的配置，并将配置写入 `env.php` 使用 [`magento app:config:dump` 命令](../cli/export-configuration.md).
+在开发系统(或Adobe Commerce on cloud infrastructure集成)的管理系统中设置特定于系统的配置，并将配置写入 `env.php` 使用 [`magento app:config:dump` 命令](../cli/export-configuration.md).
 
 此命令还会将敏感设置写入 `env.php`.
 
@@ -57,9 +57,9 @@ ht-degree: 0%
 - 环境变量
 - 将敏感配置保存在 `env.php` 在生产系统上使用 [`magento config:set:sensitive` 命令](../cli/set-configuration-values.md)
 
-### 配置设置已在Admin中锁定
+### 已在Admin中锁定配置设置
 
-中的任何配置设置 `config.php` 或 `env.php` 在Admin中锁定；也就是说，无法在Admin中更改这些设置。
+中的任何配置设置 `config.php` 或 `env.php` 在管理员中锁定；也就是说，无法在管理员中更改这些设置。
 使用 [`magento config:set` 或 `magento config:set --lock`](../cli/export-configuration.md#config-cli-config-set) 命令以更改 `config.php` 或 `env.php` 文件。
 
 ## 商务管理员
@@ -73,18 +73,18 @@ ht-degree: 0%
    - 合并CSS和JavaScript
    - 服务器端或客户端LESS编译
    - 内联翻译
-   - 如前所述，中的任意配置设置 `config.php` 或 `env.php` 已锁定，无法在管理员中进行编辑。
+   - 如前所述，中的任意配置设置 `config.php` 或 `env.php` 已锁定，无法在管理员中编辑。
    - 您只能将管理员区域设置更改为已部署主题使用的语言
 
-      下图显示了 **帐户设置** > **界面区域设置** 管理员中的列表，仅显示两个已部署的区域设置：
+     下图显示了 **帐户设置** > **界面区域设置** 管理员中的列表只显示两个已部署的区域设置：
 
-      ![您只能将“管理员”区域设置更改为已部署的区域设置](../../assets/configuration/split-deploy-admin-locale.png)
+     ![您只能将管理员区域设置更改为已部署的区域设置](../../assets/configuration/split-deploy-admin-locale.png)
 
-- 不能使用Admin更改任何范围的区域设置配置。
+- 无法使用“管理员”更改任何范围的区域设置配置。
 
-   我们建议在切换到生产模式之前进行这些更改。
+  我们建议在切换到生产模式之前进行这些更改。
 
-   您仍然可以使用环境变量或 `config:set` 带有路径的CLI命令 `general/locale/code`.
+  您仍然可以使用环境变量或 `config:set` 带有路径的CLI命令 `general/locale/code`.
 
 ## 安装和删除cron
 
@@ -94,15 +94,15 @@ ht-degree: 0%
 
 ## 建议的管道部署工作流
 
-下图显示了我们建议您如何使用管道部署来管理配置。
+下图显示了我们建议您使用管道部署管理配置的方式。
 
 ![建议的管道部署工作流](../../assets/configuration/split-deploy-workflow.png)
 
 ### 开发系统
 
-在开发系统中，您可在管理员中进行配置更改并生成共享配置， `app/etc/config.php` 以及系统特定的配置， `app/etc/env.php`. 将Commerce代码和共享配置检查到源代码管理中，并将其推送到构建服务器。
+在开发系统上，您在管理员中进行配置更改并生成共享配置， `app/etc/config.php` 以及系统特定的配置， `app/etc/env.php`. 将Commerce代码和共享配置检查到源控件中，并将其推送到构建服务器。
 
-您还应在开发系统上安装扩展和自定义Commerce代码。
+您还应在开发系统上安装扩展并自定义Commerce代码。
 
 在您的开发系统上：
 
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 1. 使用 `magento app:config:dump` 命令将配置写入文件系统。
 
-   - `app/etc/config.php` 是共享配置，包含所有设置 _排除_ 敏感和系统特定的设置。 此文件应在源代码管理中。
+   - `app/etc/config.php` 是共享配置，包含所有设置 _排除_ 敏感和特定于系统的设置。 此文件应在源代码管理中。
    - `app/etc/env.php` 是特定于系统的配置，其中包含特定系统特有的设置（例如，主机名和端口号）。 此文件应 _非_ 在源代码管理中。
 
 1. 将修改后的代码和共享配置添加到源代码管理。
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->谨慎使用上述方法。 正在删除 `.htacces`s文件位于 `generated` 或 `pub` 文件夹可能会导致问题。
+>要小心上述方法。 删除 `.htacces`s文件位于 `generated` 或 `pub` 文件夹可能会导致问题。
 
 ### 构建系统
 
@@ -136,19 +136,19 @@ ht-degree: 0%
 在您的构建系统上：
 
 1. 从源代码管理中提取共享配置文件。
-1. 使用 `magento setup:di:compile` 编译代码的命令。
+1. 使用 `magento setup:di:compile` 命令编译代码。
 1. 使用 `magento setup:static-content:deploy -f` 用于更新静态文件视图文件的命令。
 1. 将更新签入源代码管理。
 
 >[!INFO]
 >
->参见 [静态视图文件的部署策略](../cli/static-view-file-strategy.md).
+>请参阅 [静态视图文件的部署策略](../cli/static-view-file-strategy.md).
 
 ### 生产系统
 
-在生产系统（即实时商店）中，您可以从源代码管理中提取生成的资源和代码更新，并使用命令行或环境变量设置系统特定的敏感配置设置。
+在生产系统（即实时商店）中，您可以从源代码管理中提取生成的资源和代码更新，并使用命令行或环境变量设置特定于系统的敏感配置设置。
 
-在您的生产系统上：
+在生产系统上：
 
 1. 启动维护模式。
 1. 从源代码管理中获取代码和配置更新。
@@ -165,22 +165,22 @@ ht-degree: 0%
 我们提供以下命令帮助您管理配置：
 
 - [`magento app:config:dump`](../cli/export-configuration.md) 将管理员配置设置写入 `config.php` 和 `env.php` （敏感设置除外）
-- [`magento config:set`](../cli/set-configuration-values.md) 在生产系统上设置系统特定的设置的值。
+- [`magento config:set`](../cli/set-configuration-values.md) 在生产系统上设置系统特定设置的值。
 
-   使用可选 `--lock` 选项来锁定管理员中的选项（即，使设置不可编辑）。 如果设置已锁定，请使用 `--lock` 选项更改设置。
+  使用可选 `--lock` 选项，以在Admin中锁定该选项（即使该设置不可编辑）。 如果设置已被锁定，请使用 `--lock` 选项更改设置。
 
 - [`magento config:sensitive:set`](../cli/set-configuration-values.md) 在生产系统上设置敏感设置的值。
-- [`magento app:config:import`](../cli/import-configuration.md) 要从中导入配置更改 `config.php` 和 `env.php` 到生产系统。
+- [`magento app:config:import`](../cli/import-configuration.md) 从导入配置更改 `config.php` 和 `env.php` 到生产系统。
 
 ## 配置管理示例
 
-此部分显示管理配置的示例，以便您查看如何对进行更改 `config.php` 和 `env.php`.
+此部分显示了管理配置的示例，以便您查看如何对进行更改 `config.php` 和 `env.php`.
 
 ### 更改默认区域设置
 
 此部分显示对所做的更改 `config.php` 当您使用管理员(**商店** >设置> **配置** >常规> **常规** > **区域设置选项**)。
 
-在“管理员”中进行更改后，运行 `bin/magento app:config:dump` 将值写入 `config.php`. 该值会写入 `general` 数组位于 `locale` 作为以下代码片段 `config.php` 显示：
+在管理员中进行更改后，运行 `bin/magento app:config:dump` 将值写入 `config.php`. 该值会写入 `general` 数组位于 `locale` 作为以下代码片段 `config.php` 显示：
 
 ```php
 'general' =>
@@ -202,7 +202,7 @@ ht-degree: 0%
 - 更改默认电子邮件域(**商店** >设置> **配置** >客户> **客户配置**)
 - 设置PayPal API用户名和API密码(**商店** >设置> **配置** >销售> **支付方式** > **PayPal** > **必需的PayPal设置**)
 
-在“管理员”中进行更改后，运行 `bin/magento app:config:dump` 在您的开发系统上。 这次，并非您的所有更改都写入 `config.php`；实际上，只有网站、商店和商店视图会写入该文件，如下面的代码段所示。
+在管理员中进行更改后，运行 `bin/magento app:config:dump` 在开发系统上。 这一次，您所做的更改并非全部写入 `config.php`；实际上，只有网站、商店和商店视图会写入该文件，如以下代码片段所示。
 
 ### config.php
 
@@ -283,7 +283,7 @@ ht-degree: 0%
 
 ### env.php
 
-默认电子邮件域系统特定的配置设置会写入 `app/etc/env.php`.
+系统特定的默认电子邮件域配置设置会写入 `app/etc/env.php`.
 
 PayPal设置不会写入这两个文件，因为 `bin/magento app:config:dump` 命令不写入敏感设置。 您必须使用以下命令在生产系统上设置PayPal设置：
 

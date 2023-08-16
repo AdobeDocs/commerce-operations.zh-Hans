@@ -18,13 +18,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 参见 [将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 了解更多信息。
+>2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 请参阅 [将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 以了解更多信息。
 
-本节讨论如何将Apache配置为 *不安全* 代理服务器，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；将在中讨论 [与Apache的安全通信](#secure-communication-with-apache).
+本节讨论如何将Apache配置为 *不安全* 代理服务器，以便Adobe Commerce能够使用此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；将在中讨论 [与Apache的安全通信](#secure-communication-with-apache).
 
 >[!NOTE]
 >
->在此示例中，代理不安全的原因是它更易于设置和验证。 您可以将TLS与此代理一起使用。 如果要这样做，请确保将代理信息添加到安全虚拟主机配置中。
+>在此示例中，代理不受保护的原因是它更容易设置和验证。 可以将TLS与此代理一起使用。 如果要这样做，请确保将代理信息添加到安全虚拟主机配置中。
 
 ### 为Apache 2.4设置代理
 
@@ -70,7 +70,7 @@ ht-degree: 0%
    curl -i http://localhost:8080/_cluster/health
    ```
 
-   类似于以下内容的消息显示指示成功：
+   类似于以下内容的消息显示成功：
 
    ```terminal
    HTTP/1.1 200 OK
@@ -95,19 +95,19 @@ ht-degree: 0%
 
 ### 创建密码
 
-出于安全原因，您可以在Web服务器docroot以外的任何位置找到口令文件。 在本例中，我们将说明如何将密码文件存储在新目录中。
+出于安全原因，您可以在Web服务器docroot以外的任何位置查找密码文件。 在本例中，我们将说明如何将密码文件存储在新目录中。
 
 #### 安装htpasswd（如有必要）
 
 首先，查看您是否拥有Apache `htpasswd` 实用程序安装如下：
 
-1. 输入以下命令以确定是否 `htpasswd` 已安装：
+1. 输入以下命令以确定 `htpasswd` 已安装：
 
    ```bash
    which htpasswd
    ```
 
-   如果显示路径，则表明已安装；如果命令未返回任何输出， `htpasswd` 未安装。
+   如果显示了路径，则表明已安装了路径；如果命令未返回任何输出， `htpasswd` 未安装。
 
 1. 如有必要，请安装 `htpasswd`：
 
@@ -166,7 +166,7 @@ htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticse
 
 #### 添加其他用户
 
-要将另一个用户添加到您的密码文件，请以用户身份输入以下命令 `root` 权限：
+要将另一个用户添加到密码文件，请输入以下命令作为用户 `root` 权限：
 
 ```bash
 htpasswd /usr/local/apache/password/.htpasswd <username>
@@ -174,9 +174,9 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
 
 ### 与Apache的安全通信
 
-本节讨论如何设置 [HTTP基本身份验证](https://httpd.apache.org/docs/2.2/howto/auth.html). 将TLS和HTTP Basic身份验证结合使用可防止任何人拦截与Elasticsearch、OpenSearch或您的应用服务器的通信。
+本节讨论如何设置 [HTTP基本身份验证](https://httpd.apache.org/docs/2.2/howto/auth.html). 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
 
-本节讨论如何指定谁可以访问Apache Server。
+本节将讨论如何指定谁可以访问Apache Server。
 
 1. 使用文本编辑器将以下内容添加到您的安全虚拟主机。
 
@@ -200,7 +200,7 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
    </Proxy>
    ```
 
-1. 如果您已将上述内容添加到安全虚拟主机，请删除 `Listen 8080` 和 `<VirtualHost *:8080>` 您之前添加到不安全的虚拟主机的指令。
+1. 如果您将前面的内容添加到安全虚拟主机中，请删除 `Listen 8080` 和 `<VirtualHost *:8080>` 您之前添加到不安全的虚拟主机中的指令。
 
 1. 保存更改，退出文本编辑器，然后重新启动Apache：
 

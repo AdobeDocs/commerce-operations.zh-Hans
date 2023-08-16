@@ -127,7 +127,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>沃尔玛科技为Adobe Commerce提供门店履行</td>
+      <td>沃尔玛科技为Adobe Commerce提供店铺履行</td>
       <td></td>
       <td></td>
       <td></td>
@@ -135,7 +135,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>在店内购买在线提货(BOPIS)</td>
+      <td>购买在线店内提货(BOPIS)</td>
       <td></td>
       <td></td>
       <td></td>
@@ -313,7 +313,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>在云基础架构上观察Adobe Commerce</td>
+      <td>在云基础架构上对Adobe Commerce的观察</td>
       <td></td>
       <td>+</td>
       <td>+</td>

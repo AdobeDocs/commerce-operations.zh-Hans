@@ -13,14 +13,14 @@ ht-degree: 0%
 
 # 优化资源文件
 
-对于响应速度更快的Commerce网站，优化CSS和JavaScript (JS)资源文件并消除渲染阻止资源。
+对于响应更迅速的Commerce网站，请优化CSS和JavaScript (JS)资源文件并消除渲染阻止资源。
 
-- **优化CSS和JS文件** — 通过配置Adobe Commerce将单独的文件合并、缩小和捆绑到一个文件中，从而减少加载CSS和JavaScript (JS)文件所需的时间。
-- **消除渲染阻止资源** — 考虑内联提供关键JS和CSS功能，并延迟所有非关键JS/CSS样式。 有关指导，请参阅 [消除渲染阻止资源](https://web.dev/render-blocking-resources/).
+- **优化CSS和JS文件** — 通过将Adobe Commerce配置为合并、缩小单独的文件并将其捆绑到单个文件中，减少加载CSS和JavaScript (JS)文件所需的时间。
+- **消除渲染阻止资源** — 考虑内联提供关键JS和CSS功能，并推迟所有非关键JS/CSS样式。 有关指导，请参阅 [消除渲染阻止资源](https://web.dev/render-blocking-resources/).
 
 ## 受影响的产品和版本
 
-[所有受支持的版本2.3及更高版本](../../../release/versions.md) 之：
+[所有受支持的版本，2.3及更高版本](../../../release/versions.md) 之：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -28,11 +28,11 @@ ht-degree: 0%
 
 ## 合并或缩小CSS文件
 
-通过将CSS和JavaScript (JS)文件合并、缩小并捆绑到单个文件中，可以减少加载CSS和JS文件所需的时间。
+通过合并、缩小单独的文件并将其捆绑到单个文件中，可以减少加载CSS和JavaScript (JS)文件所需的时间。
 
 >[!IMPORTANT]
 >
->云基础架构上的Adobe Commerce始终在生产模式下运行，不能在其他模式下进行设置，因此您必须使用命令行方法来启用合并、缩小的功能和捆绑功能。
+>云基础架构上的Adobe Commerce始终以生产模式运行，不能以其他方式设置它，因此您必须使用命令行方法来启用合并、缩小和捆绑功能。
 
 ### 使用管理员
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ## 合并和捆绑JS文件
 
-您可以在商务管理中打开合并或捆绑功能（合并和捆绑功能无法同时启用）： [!UICONTROL **商店** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**].
+您可以在商务管理员中打开合并或捆绑功能（合并和捆绑功能无法同时启用）： [!UICONTROL **商店** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**].
 
 您还可以从命令行启用Adobe Commerce内置捆绑（基本捆绑）：
 

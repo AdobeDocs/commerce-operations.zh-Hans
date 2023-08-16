@@ -1,6 +1,6 @@
 ---
 title: 配置Commerce清漆
-description: 了解如何更新和管理Commerce应用程序的清漆配置文件。
+description: 了解如何更新和管理Commerce应用程序的Varnish配置文件。
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
@@ -22,32 +22,32 @@ ht-degree: 0%
 
    | 字段 | 描述 |
    | ----- | ----------- |
-   | 访问列表 | 输入完整的主机名、IP地址或 [无类域间路由(CIDR)](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) 表示法要使其内容失效的IP地址范围。 参见 [清漆高速缓存清除](https://varnish-cache.org/docs/3.0/tutorial/purging.html). |
-   | 后端主机 | 输入Varnish的完全限定主机名或IP地址和侦听端口 _后端_ 或 _原始服务器_；即，提供内容清漆的服务器将加速。 通常，这是您的Web服务器。 参见 [清漆缓存后端服务器](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
+   | 访问列表 | 输入完全限定的主机名、IP地址或 [无类域间路由(CIDR)](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) 表示法要使其内容失效的IP地址范围。 请参阅 [清漆缓存清除](https://varnish-cache.org/docs/3.0/tutorial/purging.html). |
+   | 后端主机 | 输入Varnish的完全限定主机名或IP地址并监听端口 _后端_ 或 _原始服务器_；即，提供内容清漆的服务器将加速。 通常，这是您的Web服务器。 请参阅 [清漆缓存后端服务器](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
    | 后端端口 | 源服务器的侦听端口。 |
-   | 宽限期 | 宽限期决定了在后端无响应时Varnish提供过时内容的时长。 默认值为300秒。 |
+   | 宽限期 | 宽限期决定了当后端无响应时， Varnish提供过时内容的时长。 默认值为300秒。 |
 
 1. 单击 **保存配置**.
 
-您还可以使用C命令行界面工具从命令行激活Varnish，而不是登录到管理员：
+您还可以使用C命令行界面工具从命令行激活Varnish，而不是登录到Admin：
 
 ```bash
 bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/caching_application 2
 ```
 
-## 导出清漆配置文件
+## 导出Varnish配置文件
 
-要从管理员中导出Varnish配置文件：
+要从Admin导出Varnish配置文件：
 
-1. 单击其中一个导出按钮以创建 `varnish.vcl` 你可以和Varnish一起使用。
+1. 单击其中一个导出按钮以创建 `varnish.vcl` 你可以和清漆搭配使用。
 
    例如，如果您有Varnish 4，请单击 **为清漆4导出VCL**
 
    下图显示了一个示例：
 
-   ![在Admin中配置Commerce以使用清漆](../../assets/configuration/varnish-admin-22.png)
+   ![在管理员中配置Commerce以使用涂漆](../../assets/configuration/varnish-admin-22.png)
 
-1. 备份您的现有 `default.vcl`. 然后重命名 `varnish.vcl` 您刚刚导出到的文件 `default.vcl`. 然后将文件复制到 `/etc/varnish/` 目录。
+1. 备份您现有的 `default.vcl`. 然后重命名 `varnish.vcl` 您刚刚导出到的文件 `default.vcl`. 然后将文件复制到 `/etc/varnish/` 目录。
 
    ```bash
    cp /etc/varnish/default.vcl /etc/varnish/default.vcl.bak2
@@ -61,7 +61,7 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
    cp <download_directory>/default.vcl /etc/varnish/default.vcl
    ```
 
-1. Adobe建议您打开 `default.vcl` 并更改 `acl purge` Varnish主机的IP地址。 （您可以在单独的行上指定多个主机，也可以使用CIDR表示法。）
+1. Adobe建议您打开 `default.vcl` 并更改 `acl purge` 到Varnish主机的IP地址。 （您可以在单独的行上指定多个主机，也可以使用CIDR表示法。）
 
    例如，
 
@@ -97,4 +97,4 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
   #unset req.http.Cookie;
 ```
 
-在将Commerce配置为使用清漆之前，您必须进行这些更改。
+在配置Commerce使用Varnish之前，您必须进行这些更改。

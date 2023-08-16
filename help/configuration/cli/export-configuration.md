@@ -17,7 +17,7 @@ ht-degree: 0%
 bin/magento app:config:dump {config-types}
 ```
 
-_config_type_ 是要转储的配置类型列表（以空格分隔）。 可用类型包括 `scopes`， `system`， `themes`、和 `i18n`. 如果未指定配置类型，则命令将转储所有系统配置信息。
+_config_type_ 是要转储的配置类型列表（以空格分隔）。 可用的类型包括 `scopes`， `system`， `themes`、和 `i18n`. 如果未指定配置类型，则命令将转储所有系统配置信息。
 
 以下示例仅转储范围和主题：
 
@@ -29,19 +29,19 @@ bin/magento app:config:dump scopes themes
 
 - `app/etc/config.php`
 
-   这是所有Commerce实例的共享配置文件。
-将此代码包含在源代码管理中，以便在开发、构建和生产系统之间共享。
+  这是所有Commerce实例的共享配置文件。
+将此包括在源代码管理中，以便在开发、构建和生产系统之间共享。
 
-   参见 [config.php引用](../reference/config-reference-configphp.md).
+  请参阅 [config.php引用](../reference/config-reference-configphp.md).
 
 - `app/etc/env.php`
 
-   这是特定于环境的配置文件。
+  这是特定于环境的配置文件。
 它包含适用于各个环境的敏感和特定于系统的设置。
 
-   Do _非_ 将此文件包含在源代码管理中。
+  Do _非_ 将此文件包含在源代码管理中。
 
-   参见 [env.php参考](../reference/config-reference-envphp.md).
+  请参阅 [env.php参考](../reference/config-reference-envphp.md).
 
 ## 敏感或系统特定的设置
 

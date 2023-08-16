@@ -1,18 +1,18 @@
 ---
 title: 安全cron PHP
-description: 限制谁可以在浏览器中运行cron.php文件。
+description: 限制可在浏览器中运行cron.php文件的用户。
 feature: Configuration, Security
 exl-id: c81fcab2-1ee3-4ec7-a300-0a416db98614
 source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 安全cron PHP
 
-本主题讨论如何保护 `pub/cron.php` 以防止其被恶意利用。 如果不保护cron的安全，则任何用户都可能运行cron来攻击您的Commerce应用程序。
+本主题讨论如何保护 `pub/cron.php` 防止恶意利用它。 如果不保护cron的安全，则任何用户都可能运行cron来攻击您的Commerce应用程序。
 
 cron作业运行多个计划任务，是Commerce配置的重要组成部分。 计划任务包括但不限于：
 
@@ -23,9 +23,9 @@ cron作业运行多个计划任务，是Commerce配置的重要组成部分。 �
 
 >[!INFO]
 >
->请参阅 [配置和运行cron](../cli/configure-cron-jobs.md#run-cron-from-the-command-line) 了解有关cron组的更多信息。
+>请参阅 [配置和运行cron](../cli/configure-cron-jobs.md#run-cron-from-the-command-line) 了解有关cron组的详细信息。
 
-可以通过以下方式运行cron作业：
+您可以通过以下方式运行cron作业：
 
 - 使用 [`magento cron:run`](../cli/configure-cron-jobs.md#run-cron-from-the-command-line) 命令行或crontab中的命令
 - 访问 `pub/cron.php?[group=<name>]` 在Web浏览器中
@@ -43,7 +43,7 @@ cron作业运行多个计划任务，是Commerce配置的重要组成部分。 �
 
 ### 创建密码文件
 
-出于安全原因，您可以在Web服务器docroot以外的任何位置找到口令文件。 在本例中，我们将密码文件存储在新目录中。
+出于安全原因，您可以在Web服务器docroot以外的任何位置查找密码文件。 在本例中，我们将密码文件存储在新目录中。
 
 以用户身份输入以下命令 `root` 权限：
 
@@ -59,7 +59,7 @@ htpasswd -c /usr/local/apache/password/passwords <username>
 
 按照屏幕上的提示为用户创建密码。
 
-要将另一个用户添加到您的密码文件，请以用户身份输入以下命令 `root` 权限：
+要将另一个用户添加到密码文件，请输入以下命令作为用户 `root` 权限：
 
 ```bash
 htpasswd /usr/local/apache/password/passwords <username>
@@ -69,13 +69,13 @@ htpasswd /usr/local/apache/password/passwords <username>
 
 通过将多个用户添加到密码文件（包括组文件），您可以启用这些用户运行cron。
 
-要将其他用户添加到您的密码文件，请执行以下操作：
+要将其他用户添加到密码文件，请执行以下操作：
 
 ```bash
 htpasswd /usr/local/apache/password/passwords <username>
 ```
 
-要创建授权组，请在Web服务器docroot之外的任意位置创建组文件。 组文件指定组和组中的用户的名称。 在此示例中，组名称为 `MagentoCronGroup`.
+要创建授权组，请在Web服务器docroot之外的任意位置创建组文件。 组文件指定组的名称和组中的用户。 在此示例中，组名称为 `MagentoCronGroup`.
 
 ```bash
 vim /usr/local/apache/password/group
@@ -87,7 +87,7 @@ vim /usr/local/apache/password/group
 MagentoCronGroup: <username1> ... <usernameN>
 ```
 
-### 安全cron输入 `.htaccess`
+### 安全cron `.htaccess`
 
 确保cron安全 `.htaccess` 文件：
 
@@ -107,7 +107,7 @@ MagentoCronGroup: <username1> ... <usernameN>
    </Files>
    ```
 
-1. _对组的Cron访问权限。_ 替换现有 `<Files cron.php>` 指令包含以下内容：
+1. _Cron组访问权限。_ 替换现有 `<Files cron.php>` 指令包含以下内容：
 
    ```conf
    <Files cron.php>
@@ -120,9 +120,9 @@ MagentoCronGroup: <username1> ... <usernameN>
    ```
 
 1. 将更改保存到 `.htaccess` 并退出文本编辑器。
-1. 继续使用 [验证cron是否安全](#verify-cron-is-secure).
+1. 继续 [验证cron是否安全](#verify-cron-is-secure).
 
-## 使用Nginx保护cron
+## 使用Nginx确保Cron安全
 
 本节讨论如何使用Nginx Web服务器保护cron。 您必须执行以下任务：
 
@@ -136,7 +136,7 @@ MagentoCronGroup: <username1> ... <usernameN>
 - [如何在Ubuntu 14.04 (DigitalOcean)上使用Nginx设置密码身份验证](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
 - [使用Nginx进行基本HTTP身份验证(howtoforge)](https://www.howtoforge.com/basic-http-authentication-with-nginx)
 
-### 安全cron输入 `nginx.conf.sample`
+### 安全cron `nginx.conf.sample`
 
 Commerce提供了一个现成的优化示例nginx配置文件。 我们建议修改它以保护cron。
 
@@ -167,11 +167,11 @@ Commerce提供了一个现成的优化示例nginx配置文件。 我们建议修
 systemctl restart nginx
 ```
 
-1. 继续使用 [验证cron是否安全](#verify-cron-is-secure).
+1. 继续 [验证cron是否安全](#verify-cron-is-secure).
 
 ## 验证cron是否安全
 
-最简单的方法是验证 `pub/cron.php` 安全是验证它是否在 `cron_schedule` 设置口令验证后的数据库表。 此示例使用SQL命令来检查数据库，但您可以使用任何所需的工具。
+最简单的方法就是验证 `pub/cron.php` 安全是验证它是否正在 `cron_schedule` 设置口令验证后的数据库表。 此示例使用SQL命令来检查数据库，但您可以使用任何您喜欢的工具。
 
 >[!INFO]
 >
@@ -179,7 +179,7 @@ systemctl restart nginx
 
 **验证cron是否安全**：
 
-1. 以Commerce数据库用户身份或以下列身份登录到数据库 `root`.
+1. 以Commerce数据库用户或以下列身份登录到数据库 `root`.
 
    例如，
 
@@ -221,7 +221,7 @@ systemctl restart nginx
 
    ![使用HTTP Basic授权cron](../../assets/configuration/cron-auth.png)
 
-1. 验证是否已将行添加到表中：
+1. 验证是否已向表中添加行：
 
    ```shell
    SELECT * from cron_schedule;
@@ -254,19 +254,19 @@ systemctl restart nginx
 
 >[!WARNING]
 >
->Do _非_ 在浏览器中运行cron，而不首先保护它。
+>Do _非_ 在浏览器中运行cron，而不先对其进行保护。
 
 如果您使用的是Apache Web Server，则必须从 `.htaccess` 文件，然后才可以在浏览器中运行cron：
 
 1. 以有权写入Commerce文件系统的用户身份登录到Commerce服务器。
-1. 在文本编辑器中打开以下任一内容(具体取决于您进入Magento的入口点)：
+1. 在文本编辑器中打开以下任意内容(取决于您的入口点以Magento)：
 
    ```text
    <magento_root>/pub/.htaccess
    <magento_root>/.htaccess
    ```
 
-1. 删除或注释掉以下内容：
+1. 删除或注释以下内容：
 
    ```conf
    ## Deny access to cron.php
@@ -297,9 +297,9 @@ systemctl restart nginx
 其中：
 
 - `<your hostname or IP>` 是Commerce安装的主机名或IP地址
-- `<Commerce root>` 是安装Commerce软件的Web服务器docroot相对目录
+- `<Commerce root>` 是Commerce软件安装到的相对于Web服务器的docroot目录
 
-   用于运行Commerce应用程序的确切URL取决于您配置Web服务器和虚拟主机的方式。
+  用于运行Commerce应用程序的确切URL取决于您配置Web服务器和虚拟主机的方式。
 
 - `<group name>` 是任何有效的cron组名称（可选）
 
@@ -311,4 +311,4 @@ https://magento.example.com/magento2/pub/cron.php?group=index
 
 >[!INFO]
 >
->必须运行cron两次：首先发现要运行的任务，然后再次运行任务本身。 请参阅 [配置和运行cron](../cli/configure-cron-jobs.md) 了解有关cron组的更多信息。
+>您必须运行两次cron：首先发现要运行的任务，然后再次运行任务本身。 请参阅 [配置和运行cron](../cli/configure-cron-jobs.md) 了解有关cron组的详细信息。

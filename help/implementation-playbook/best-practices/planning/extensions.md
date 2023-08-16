@@ -13,16 +13,16 @@ ht-degree: 0%
 
 # 扩展最佳实践
 
-Adobe Commerce第三方扩展（模块）可能会导致各种问题，从而对店面性能产生负面影响。 您可以按照以下最佳实践来避免这些问题：
+Adobe Commerce第三方扩展（模块）可能会导致各种问题，这些问题可能会对店面性能产生负面影响。 您可以按照以下最佳实践来避免这些问题：
 
-- 从可靠来源(如 [Commerce Marketplace](https://marketplace.magento.com/extensions.html).
-- 将所有第三方扩展更新至最新版本。
+- 从受信任的来源(如 [Commerce Marketplace](https://marketplace.magento.com/extensions.html).
+- 将所有第三方扩展更新到最新版本。
 - 如果无法保持更新第三方扩展，请考虑使用不同的扩展。
-- 在计划升级到新版本的Adobe Commerce时，请验证安装的第三方扩展是否与新版本兼容，并根据需要升级扩展。
+- 在计划升级到新版Adobe Commerce时，请验证安装的第三方扩展是否与新版本兼容，并根据需要升级扩展。
 
 >[!NOTE]
 >
-> 需要使用Adobe Commerce Marketplace中提供的所有扩展来保持与新Commerce版本的兼容性。 参见 [版本兼容性](https://developer.adobe.com/commerce/marketplace/guides/sellers/compatibility/releases/).
+> 要保持与新Commerce版本的兼容性，需要使用Adobe Commerce Marketplace中提供的所有扩展。 请参阅 [版本兼容性](https://developer.adobe.com/commerce/marketplace/guides/sellers/compatibility/releases/).
 
 ## 受影响的产品和版本
 

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 较小的数据格式和结构更改
 
-在大多数情况下， [映射步骤](technical-specification.md#map-step) 使用中的以下方法，充分解析少量数据格式和结构更改 `map.xml` 文件：
+在大多数情况下， [映射步骤](technical-specification.md#map-step) 已使用中的以下方法充分解析少量数据格式和结构更改 `map.xml` 文件：
 
 - 使用映射规则更改表或字段名称
 - 使用现有处理程序或自定义处理程序转换数据格式
@@ -73,16 +73,16 @@ ht-degree: 0%
 
 - 不要从迁移不必要的数据 `great_blog_index` 索引表。
 - 表 `great_blog_publication` 已重命名为 `great_blog_post` 在Magento2中，因此数据会迁移到新表中。
-   - 此 `summary` 字段已重命名为 `title`，因此数据会迁移到新字段。
-   - 此 `priority` 字段已被删除，并且不再存在于Magento2中。
-   - 中的数据 `body` 字段的格式已更改，应由自定义处理程序处理： `\Migration\Handler\GreatBlog\NewFormat`.
-- Magento2中为“GreatBlog”扩展开发了一个新的评级功能。
+   - 此 `summary` 字段已重命名为 `title`，因此数据会迁移到新字段中。
+   - 此 `priority` 字段已被删除并且不再存在于Magento2中。
+   - 中的数据 `body` 字段已更改格式，应由自定义处理程序处理： `\Migration\Handler\GreatBlog\NewFormat`.
+- 为Magento2中的“GreatBlog”扩展开发了一个新的评级功能。
    - 新 `great_blog_rating` 已创建表。
    - 新 `great_blog_post.rating` 字段已创建。
 
 ### 在其他步骤中扩展映射
 
-其他步骤支持映射，例如 [EAV步骤](technical-specification.md#eav-step) 以及客户属性步骤。 这些步骤将迁移预定义的Magento表列表。 例如，假设“GreatBlog”扩展在 `eav_attribute` 表和Magento2中更改的名称。 因为表格是由 [EAV步骤](technical-specification.md#eav-step)，应为编写映射规则 `map-eav.xml` 文件。 此 `map.xml` 和 `map-eav.xml` 文件使用相同的 `map.xsd` 架构，因此映射规则保持不变。
+其他步骤支持映射，例如 [EAV步骤](technical-specification.md#eav-step) 和客户属性步骤。 这些步骤将迁移预定义的Magento表列表。 例如，假设“GreatBlog”扩展在 `eav_attribute` 表和Magento2中更改的名称。 因为表格是由 [EAV步骤](technical-specification.md#eav-step)，应为编写映射规则 `map-eav.xml` 文件。 此 `map.xml` 和 `map-eav.xml` 文件使用相同的 `map.xsd` 架构，因此映射规则保持不变。
 
 ## 主要数据格式和结构更改
 
@@ -92,13 +92,13 @@ ht-degree: 0%
 - OrderGrid步骤
 - [EAV步骤](technical-specification.md#eav-step)
 
-不像 [映射步骤](technical-specification.md#map-step)，则这些步骤扫描预定义的表列表而不是所有表。
+不像 [映射步骤](technical-specification.md#map-step)，则这些步骤扫描的是预定义的表列表，而不是所有表。
 
 对于主要的数据格式和结构更改，请创建一个自定义步骤。
 
 ### 创建自定义步骤
 
-使用相同的“GreatBlog”示例，假设扩展在Magento1中有一个表，但重新设计为在Magento2中有两个表。
+使用相同的“GreatBlog”示例，假设扩展在Magento1中具有一个表，但经过重新设计以在Magento2中具有两个表。
 
 在Magento1中，有一个 `greatblog_post` 表：
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 | tags      | TEXT     |
 ```
 
-在Magento2中，为标记提供了一个新表 `greatblog_post_tags` 引入了：
+在Magento2中，为标签创建了新表 `greatblog_post_tags` 引入了：
 
 ```text
 | Field      | Type     |
@@ -122,7 +122,7 @@ ht-degree: 0%
 | sort_order | SMALLINT |
 ```
 
-MAGENTO2 `greatblog_post` 表格现在看起来像这样：
+MAGENTO2 `greatblog_post` 现在，表格将如下所示：
 
 ```text
 | Field     | Type     |
@@ -133,7 +133,7 @@ MAGENTO2 `greatblog_post` 表格现在看起来像这样：
 | author_id | SMALLINT |
 ```
 
-要将所有数据从旧表结构迁移到新表结构，您可以在 `config.xml` 文件。 例如：
+要将所有数据从旧表结构迁移到新表结构，您可以在中创建自定义步骤 `config.xml` 文件。 例如：
 
 ```xml
 <steps mode="data">
@@ -153,9 +153,9 @@ MAGENTO2 `greatblog_post` 表格现在看起来像这样：
 </steps>
 ```
 
-刀具根据它们在中的位置执行步骤 `config.xml` 文件；从上到下。 在我们的示例中， `GreatBlog Step` 最后运行。
+刀具根据步骤在 `config.xml` 文件；从上到下。 在我们的示例中， `GreatBlog Step` 最后运行。
 
-步骤可以包括四种类型的类：
+步骤可以包含四种类型的类：
 
 - 完整性检查
 - 数据传送
@@ -164,12 +164,12 @@ MAGENTO2 `greatblog_post` 表格现在看起来像这样：
 
 >[!NOTE]
 >
->请参阅 [配置](technical-specification.md#configuration)， [步骤内部](technical-specification.md#step-internals)， [暂存](technical-specification.md#step-stages)、和 [运行模式](technical-specification.md#running-modes) 了解更多信息。
+>请参阅 [配置](technical-specification.md#configuration)， [步骤内部](technical-specification.md#step-internals)， [暂存](technical-specification.md#step-stages)、和 [运行模式](technical-specification.md#running-modes) 以了解更多信息。
 
 
-可以在这些类中组合复杂的SQL查询，以提取和迁移数据。 此外，这些表应在 [映射步骤](technical-specification.md#map-step) 因为它会扫描所有现有表并尝试迁移数据，除非数据位于 `<ignore>` 的标记 `map.xml` 文件。
+可以在这些类中组合复杂的SQL查询，以获取和迁移数据。 此外，这些表应在 [映射步骤](technical-specification.md#map-step) 因为它会扫描所有现有表并尝试迁移数据，除非数据位于 `<ignore>` 的标记 `map.xml` 文件。
 
-对于完整性检查，请在 `config.xml` 文件，以验证表结构是否与预期一致。
+对于完整性检查，在 `config.xml` 文件，以验证表结构是否符合预期。
 
 ```xml
 <config xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
@@ -248,7 +248,7 @@ class Integrity extends \Migration\App\Step\AbstractIntegrity
 }
 ```
 
-接下来，必须创建一个用于处理数据并将其保存到Magento2数据库的类 `Vendor\Migration\Step\GreatBlog\Data`：
+接下来，必须创建一个类来处理数据并将其保存到Magento2数据库中 `Vendor\Migration\Step\GreatBlog\Data`：
 
 ```php
 class Data implements \Migration\App\Step\StageInterface
@@ -355,7 +355,7 @@ class Volume extends \Migration\App\Step\AbstractVolume
 }
 ```
 
-要添加增量迁移功能，请将新组添加到 `deltalog.xml` 文件。 In `group`，指定必须检查其更改的表名：
+要添加增量迁移功能，请将新组添加到 `deltalog.xml` 文件。 在 `group`，指定必须检查其更改的表名：
 
 ```xml
 <groups>
@@ -406,10 +406,10 @@ class Delta extends \Migration\App\Step\AbstractDelta
 }
 ```
 
-在示例中提供的自定义步骤实施之后，系统从单个Magento1表中获取数据，并使用对其进行处理 `Vendor\Migration\Step\GreatBlog\Data` 类并将数据存储在两个Magento2表中。 新的和更改的记录将在增量迁移时使用 `Vendor\Migration\Step\GreatBlog\Delta` 类。
+在示例中提供的自定义步骤实施之后，系统从单个Magento1表中获取数据，并使用对其进行处理 `Vendor\Migration\Step\GreatBlog\Data` 类并将数据存储在两个Magento2表中。 在增量迁移中使用提供新的和更改的记录 `Vendor\Migration\Step\GreatBlog\Delta` 类。
 
 ## 禁止的扩展方法
 
-由于 [!DNL Data Migration Tool] 和Magento2在不断发展，现有步骤和处理程序可能会发生更改。 我们强烈建议不要覆盖 [映射步骤](technical-specification.md#map-step)， [URL重写步骤](technical-specification.md#url-rewrite-step)和处理程序。
+由于 [!DNL Data Migration Tool] 和Magento2在不断发展，现有步骤和处理程序可能会发生更改。 我们强烈建议不要覆盖 [映射步骤](technical-specification.md#map-step)， [URL重写步骤](technical-specification.md#url-rewrite-step)、和处理程序。
 
 某些步骤不支持映射，因此不能在不更改代码的情况下更改这些步骤。 您可以编写一个额外的步骤以在迁移结束时更改数据，也可以创建 [GitHub问题](https://github.com/magento/data-migration-tool/issues) 并请求在现有步骤上添加新的扩展点。

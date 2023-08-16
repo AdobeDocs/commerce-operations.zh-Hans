@@ -17,7 +17,7 @@ ht-degree: 0%
 - 本地和暂存环境设置
 - 冲刺计划
 - 票证执行
-- 疑难解答
+- 故障排除
 - 代码审查、合并和测试
 - 冲刺审核
 - 客户签署
@@ -66,6 +66,6 @@ ht-degree: 0%
 - [构建和部署的最佳实践](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html)
 - [静态内容部署 — 云](static-content-deployment.md)
 - [优化CSS和JS文件](optimize-css-js-files.md)
-- [优化图像以实现响应更快速的网站](image-optimization.md)
+- [为响应速度更快的网站优化图像](image-optimization.md)
 - [Adobe Commerce在云基础架构上的疑难解答最佳实践](troubleshooting.md)
 - [了解何时以及如何修改数据库表](modifying-core-and-third-party-tables.md)

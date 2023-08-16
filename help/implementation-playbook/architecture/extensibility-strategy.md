@@ -1,6 +1,6 @@
 ---
 title: Adobe Commerce可扩展性策略
-description: 了解Adobe Commerce的可扩展性模型如何让您自定义实施。
+description: 了解Adobe Commerce的可扩展性模型如何让您能够自定义实施。
 exl-id: fac4630d-8a41-40dc-899a-01eabceaa61e
 feature: Extensibility
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9

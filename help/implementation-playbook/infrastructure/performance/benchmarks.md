@@ -10,41 +10,41 @@ ht-degree: 0%
 
 ---
 
-# 基准摘要
+# 准则摘要
 
-Adobe Commerce 2.4.5性能基准结果反映了在使用以下基础架构和其他组件部署的Adobe Commerce实例上衡量的性能。
-- [Pro cloud环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html) 替换为 [扩展体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html)
+Adobe Commerce 2.4.5性能基准结果反映了在Adobe Commerce实例上衡量的性能，该实例部署了以下基础架构和其他组件。
+- [Pro云环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html) 替换为 [扩展体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html)
 - [适用于Adobe Commerce的B2B](https://experienceleague.adobe.com/docs/commerce-admin/b2b/introduction.html)
 - [Adobe Commerce Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/introduction.html)
 - [Adobe Stock](https://experienceleague.adobe.com/docs/commerce-admin/content-design/media/adobe-stock/adobe-stock.html)
 
 没有其他自定义项。
 
-以下信息总结了基准测试的结果，并提供了有关测试期间使用的环境和数据的信息。
+以下信息总结了基准测试结果，并提供了有关测试期间使用的环境和数据的信息。
 
-## 关键性能指标
+## 关键绩效指标
 
 下图显示了性能基准的Commerce存储配置以及测试结果中的关键性能量度。
 
 ![性能基准JMeter和生产基础架构](../../../assets/performance/images/performance-benchmark-kpis-245-cloud.png){width="700" zoomable="yes"}
 
-基于模拟企业B2C组织的测试标准，系统可以在高峰期以标准负载流处理请求的流量和订单数。
+基于模拟企业B2C组织的测试标准，该系统可以在高峰期以标准负载流处理请求的流量和订单数。
 
 ### 性能亮点
 
-- **订单** — 每分钟处理3,481个订单，同时将响应时间保持在第99个百分位数的不到2秒（为请求服务的99%请求的响应时间少于2秒）。
-- **页面查看次数** — 每小时处理的页面查看次数超过200万次，而第99个百分位数的响应时间保持在2秒内。
-- **有效SKU** — 客户档案包括2.42亿种不同的价格变化(<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/product-sku-limits.html">eSKU</a>)，以获取25万种产品。
-- **GraphQL请求** — 系统可扩展到每分钟10,500个GraphQL未缓存请求，同时将第99个百分位数的响应时间保持在2秒内。
+- **订购** — 每分钟处理3,481个订单，同时在第99个百分位数中保持不到2秒的响应时间（99%的请求均得到服务，响应时间不到2秒）。
+- **页面查看次数** — 每小时处理超过200万次页面查看，同时将第99百分位数的响应时间保持在2秒以内。
+- **有效SKU** — 客户档案包括2.42亿种不同的价格变化(<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/product-sku-limits.html">eSKU</a>)，以获取250,000个产品。
+- **GraphQL请求** — 系统可扩展到每分钟10,500个GraphQL未缓存请求，同时将第99百分位数的响应时间保持在2秒以内。
 - **并发管理员用户** — 系统可扩展到支持500个并发管理员用户，同时将第99个百分位数的响应时间保持在2秒以内。
 
 ## 测试环境
 
-通过在具有可扩展架构的Pro cloud环境中部署的Adobe Commerce 2.4.5实例进行测试，获得了性能基准结果。 该实例还安装、配置和启用了Adobe Commerce B2B、Inventory management和Adobe Stock集成模块。
+通过在具有缩放架构的Pro云环境中部署的Adobe Commerce 2.4.5实例进行测试，获得了性能基准结果。 该实例还安装、配置和启用了Adobe Commerce B2B、Inventory management和Adobe Stock集成模块。
 
 测试用户档案的性能测试数据是使用 <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/generate-data.html">Performance Toolkit</a>.
 
-绩效衡量基于针对客户和商业用户的模拟日常商店活动。 这些值反映每个案例的接近最大吞吐量，但并不反映独特的业务模式，如私有销售或闪电销售。
+绩效衡量基于针对客户和商业用户的模拟日常店铺活动。 这些值反映每个案例的接近最大吞吐量，但并不反映独特的业务模式，如私有销售或闪电销售。
 
 - **LUMA店面**
    - 店面有3000个并发用户
@@ -56,7 +56,7 @@ Adobe Commerce 2.4.5性能基准结果反映了在使用以下基础架构和其
    - 250个并发线程
    - 设置为0% CDN缓存命中率
 
-     通过GraphQL前面的缓存层，可显着缩短响应时间。
+     通过在GraphQL前面放置缓存层，可显着缩短响应时间。
 
 - **管理Web**
    - 500个并发用户
@@ -64,7 +64,7 @@ Adobe Commerce 2.4.5性能基准结果反映了在使用以下基础架构和其
 
 ## 测试环境规范
 
-加载测试已使用针对Adobe Commerce实例运行的JMeter加载配置文件完成。 测试过程中使用了3个Web节点和3个服务节点。 下图详细介绍了JMeter和生产基础架构的入口点。
+加载测试已使用针对Adobe Commerce实例运行的JMeter加载配置文件完成。 测试过程中使用了3个Web节点和3个服务节点。 下图详细说明了JMeter和生产基础架构的入口点。
 
 ![性能基准JMeter和生产基础架构](https://git.corp.adobe.com/storage/user/43354/files/4d801e3e-96b7-4193-b94f-12571263b495){width="700" zoomable="yes"}
 
@@ -74,18 +74,18 @@ Adobe Commerce 2.4.5性能基准结果反映了在使用以下基础架构和其
 
 ### 基础架构
 
-对于性能基准，Adobe Commerce 2.4.5部署在 [可扩展的基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html) 具有以下容量。
+为了实现性能基准，Adobe Commerce 2.4.5部署在 [可扩展的基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html) 具有以下容量。
 
 - **Web节点规范**
-   - vCPU 216 （72 x 3节点）
+   - vCPU 216（72 x 3节点）
    - 内存432 GiB（144 x 3节点）
    - 网络带宽768 Gbps （256 x 3节点）
    - EBS带宽57000 Mbps (19000 x 3个节点)
    - 已调配存储100 GB
 
 - **服务节点规范**
-   - vCPU 192 （64 x 3节点）
+   - vCPU 192（64 x 3节点）
    - 内存768 GiB（256 x 3节点）
-   - 网络带宽60 Gbps （20 x 3个节点）
+   - 网络带宽60 Gbps （20 x 3节点）
    - EBS带宽40800 Mbps (13600 x 3个节点)
    - 已调配存储1100 GB

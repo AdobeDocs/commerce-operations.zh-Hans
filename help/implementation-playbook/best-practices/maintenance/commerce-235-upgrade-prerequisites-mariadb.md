@@ -19,18 +19,18 @@ ht-degree: 0%
 
 ## 受影响的产品和版本
 
-使用MariaDB版本10.3或更早版本在云基础架构上部署Adobe Commerce。
+使用MariaDB版本10.3或更早版本在云基础架构上安装Adobe Commerce。
 
 ## 准备数据库以进行升级
 
-在Adobe Commerce支持团队开始升级过程之前，请通过转换数据库表来准备数据库：
+在Adobe Commerce支持团队开始升级过程之前，请通过转换数据库表准备数据库：
 
 - 转换行格式 `COMPACT` 到 `DYNAMIC`
 - 更改存储引擎 `MyISAM` 到 `InnoDB`
 
 在计划和计划转换时，请牢记以下注意事项：
 
-- 转换自 `COMPACT` 到 `DYNAMIC` 使用大型数据库时，表可能需要几个小时。
+- 转换自 `COMPACT` 到 `DYNAMIC` 对于大型数据库，表可能需要几个小时。
 
 - 为防止数据损坏，请勿在实时网站上完成转换工作。
 
@@ -52,13 +52,13 @@ ht-degree: 0%
    SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
    ```
 
-1. 确定表大小，以便您可以安排转换工作。
+1. 确定表大小，以便您可以计划转换工作。
 
    ```mysql
    SELECT table_schema as 'Database', table_name AS 'Table', round(((data_length + index_length) / 1024 / 1024), 2) 'Size in MB' FROM information_schema.TABLES ORDER BY (data_length + index_length) DESC;
    ```
 
-   较大的表需要较长时间才能转换。 查看表并按优先级和表大小对转换工作进行批处理，以帮助计划所需的维护窗口。
+   较大的表需要较长时间才能转换。 复查这些表并按优先级和表大小对转换工作进行批处理，以帮助计划所需的维护窗口。
 
 1. 将所有表逐个转换为动态格式。
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 您可以在群集中的一个节点上转换表。 更改会自动复制到其他服务节点。
 
-对于Adobe Commerce Starter和Adobe Commerce Pro项目，存储格式的转换过程不同。
+对于Adobe Commerce Starter和Adobe Commerce Pro项目，转换存储格式的过程不同。
 
 - 对于入门体系结构，请使用MySQL `ALTER` 命令转换格式。
 - 在Pro体系结构上，使用MySQL `CREATE` 和 `SELECT` 用于创建数据库表的命令 `InnoDB` 存储数据并将现有表中的数据复制到新表中。 此方法可确保将更改复制到群集中的所有节点。
@@ -83,7 +83,7 @@ ht-degree: 0%
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. 将所有表转换为 `InnoDB` 存储格式，一次一个。
+1. 将所有表转换为 `InnoDB` 存储格式。
 
    - 重命名现有表以防止名称冲突。
 
@@ -138,9 +138,9 @@ ht-degree: 0%
 
 ## 更改存储引擎
 
-参见 [将MyISAM表转换为InnoDB](../planning/database-on-cloud.md).
+请参阅 [将MyISAM表转换为InnoDB](../planning/database-on-cloud.md).
 
 ## 其他信息
 
 - [云基础架构上Adobe Commerce的数据库最佳实践](../planning/database-on-cloud.md)
-- [将Adobe Commerce on Cloud的MariaDB从10.0更新到12.0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/upgrade-mariadb-10.0-to-10.2-for-magento-commerce-cloud.html)
+- [正在将Adobe Commerce on Cloud的MariaDB从10.0更新到12.0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/upgrade-mariadb-10.0-to-10.2-for-magento-commerce-cloud.html)

@@ -1,6 +1,6 @@
 ---
 title: 配置自定义cron作业和cron组（教程）
-description: 使用此分步教程可创建自定义cron作业。
+description: 使用本分步教程创建自定义cron作业。
 exl-id: d8efcafc-3ae1-4c2d-a8ad-4a806fb48932
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # 配置自定义cron作业
 
-此分步教程演示如何在示例模块中创建自定义cron作业和（可选）cron组。 您可以使用已有的模块，也可以使用我们的示例模块 [`magento2-samples` 存储库][samples].
+此分步教程将演示如何在示例模块中创建自定义cron作业和（可选）cron组。 您可以使用已有的模块，也可以使用我们的示例模块 [`magento2-samples` 存储库][samples].
 
 运行cron作业会导致将一行添加到 `cron_schedule` 具有cron作业名称的表， `custom_cron`.
 
-我们还将向您说明如何选择性创建cron组，您可以使用它来运行自定义cron作业，其设置不包括Commerce应用程序默认值。
+我们还将向您说明如何选择创建一个cron组，以便使用商业应用程序默认值以外的设置运行自定义cron作业。
 
 在本教程中，我们假定：
 
 - 商务应用程序安装在 `/var/www/html/magento2`
 - 您的Commerce数据库用户名和密码都是 `magento`
-- 您执行所有操作时， [文件系统所有者](../../installation/prerequisites/file-system/overview.md)
+- 您以 [文件系统所有者](../../installation/prerequisites/file-system/overview.md)
 
 ## 步骤1：获取示例模块
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 **获取示例模块**：
 
-1. 以或切换为登录到您的Commerce服务器 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以或切换身份登录到Commerce服务器， [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 更改为不在Commerce应用程序根目录中的目录（例如，主目录）。
 1. 克隆 [`magento2-samples` 存储库][samples].
 
@@ -39,9 +39,9 @@ ht-degree: 0%
    git clone git@github.com:magento/magento2-samples.git
    ```
 
-   如果命令失败并出现错误 `Permission denied (publickey).`，您必须 [将SSH公钥添加到GitHub.com][git-ssh].
+   如果命令因错误而失败 `Permission denied (publickey).`，您必须 [将SSH公钥添加到GitHub.com][git-ssh].
 
-1. 创建一个要向其中复制示例代码的目录：
+1. 创建要将示例代码复制到其中的目录：
 
    ```bash
    mkdir -p /var/www/html/magento2/app/code/Magento/SampleMinimal
@@ -85,9 +85,9 @@ ht-degree: 0%
    bin/magento cache:clean
    ```
 
-## 步骤2：验证示例模块
+## 第2步：验证示例模块
 
-在继续之前，请验证示例模块是否已注册并启用。
+在继续之前，请验证是否已注册并启用示例模块。
 
 1. 运行以下命令：
 
@@ -103,13 +103,13 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果输出指示 `Module does not exist`，评论 [步骤1](#step-1-get-a-sample-module) 小心点。 确保代码位于正确的目录中。 拼写和大小写很重要；如果有任何不同，则不会加载模块。 还有，别忘了跑 `magento setup:upgrade`.
+>如果输出指示 `Module does not exist`，查看 [步骤1](#step-1-get-a-sample-module) 小心点。 确保代码位于正确的目录中。 拼写和大小写很重要；如果有任何不同，则不会加载模块。 还有，别忘了跑 `magento setup:upgrade`.
 
-## 步骤3：创建类以运行cron
+## 步骤3：创建一个类以运行cron
 
-此步骤显示一个用于创建cron作业的简单类。 类只会将一行写入 `cron_schedule` 用于确认已成功设置的表。
+此步骤显示用于创建cron作业的简单类。 该类只将一行写入 `cron_schedule` 用于确认已成功设置的表。
 
-要创建类，请执行以下操作：
+要创建类：
 
 1. 为类创建一个目录并转到该目录：
 
@@ -117,7 +117,7 @@ ht-degree: 0%
    mkdir /var/www/html/magento2/app/code/Magento/SampleMinimal/Cron && cd /var/www/html/magento2/app/code/Magento/SampleMinimal/Cron
    ```
 
-1. 创建了一个名为的文件 `Test.php` 目录，包含以下内容：
+1. 创建了一个名为的文件 `Test.php` 目录中包含以下内容：
 
    ```php
    <?php
@@ -160,9 +160,9 @@ ht-degree: 0%
 </config>
 ```
 
-前一个 `crontab.xml` 运行 `Magento/SampleMinimal/Cron/Test.php` 类每分钟一次，导致行被添加到 `cron_schedule` 表格。
+前一个 `crontab.xml` 运行 `Magento/SampleMinimal/Cron/Test.php` 类每分钟一次，从而会将一个行添加到 `cron_schedule` 表格。
 
-为了从管理员配置cron计划，请使用系统配置字段的配置路径。
+要使管理员能够配置cron计划，请使用系统配置字段的配置路径。
 
 ```xml
 <?xml version="1.0"?>
@@ -203,7 +203,7 @@ bin/magento cache:clean
    bin/magento cron:run
    ```
 
-1. 输入 `magento cron:run` 指挥了两三次。
+1. 输入 `magento cron:run` 命令了两三次。
 
    第一次输入该命令时，它将作业排入队列；随后，将运行cron作业。 必须输入命令 _至少_ 两次。
 
@@ -249,14 +249,14 @@ bin/magento cache:clean
 
 ## 步骤7（可选）：设置自定义cron组
 
-此步骤说明如何选择设置自定义cron组。 如果您希望自定义cron作业以与其他cron作业不同的计划运行（通常每分钟运行一次），或者希望使用不同的设置运行多个自定义cron作业，则应该设置自定义cron组。
+此步骤说明如何根据需要设置自定义cron组。 如果您希望自定义cron作业以与其他cron作业不同的计划运行（通常每分钟运行一次），或者如果您希望使用不同的设置运行多个自定义cron作业，则应该设置自定义cron组。
 
 要设置自定义cron组，请执行以下操作：
 
 1. 打开 `crontab.xml` 在文本编辑器中。
 1. 更改 `<group id="default">` 到 `<group id="custom_crongroup">`
 1. 退出文本编辑器。
-1. 创建 `/var/www/html/magento2/app/code/Magento/SampleMinimal/etc/cron_groups.xml` ，内容如下：
+1. 创建 `/var/www/html/magento2/app/code/Magento/SampleMinimal/etc/cron_groups.xml` 包含以下内容：
 
    ```xml
    <?xml version="1.0"?>
@@ -273,7 +273,7 @@ bin/magento cache:clean
    </config>
    ```
 
-有关选项的含义的说明，请参见 [自定义crons引用](custom-cron-reference.md).
+有关选项含义的说明，请参阅 [自定义crons引用](custom-cron-reference.md).
 
 ## 步骤8：验证您的自定义cron组
 

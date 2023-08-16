@@ -1,18 +1,18 @@
 ---
-title: 生成用于性能测试的数据
+title: 生成性能测试数据
 description: 了解如何生成大量数据以用于性能测试。
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
 source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
 # 性能测试数据
 
-要使用 [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) 或者用于性能测试的另一个工具，您必须生成大量数据，如商店、类别和产品。
+要使用 [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) 或者是另一种性能测试工具，您必须生成大量数据，如商店、类别和产品。
 
 {{file-system-owner}}
 
@@ -20,22 +20,22 @@ ht-degree: 8%
 
 您可以使用调整创建的数据量 _用户档案_ （小、中、大和特大）。 配置文件位于 `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` 目录。
 
-例如， `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
+例如，`/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
-下图显示了在店面上如何使用 _小_ 个人资料：
+下图显示了如何使用在店面中显示产品 _小_ 个人资料：
 
 ![使用生成的数据对店面进行示例](../../assets/configuration/generate-data.png)
 
 下表提供有关数据生成器配置文件的详细信息：小、中、大和特大。
 
-| 参数 | 小型配置文件 | 中型用户档案 | 中型多站点用户档案 | 大型配置文件 | 超大型配置文件 |
+| 参数 | 小型配置文件 | 中型用户档案 | 中等多站点配置文件 | 大型配置文件 | 超大配置文件 |
 | --- | --- | --- | --- | --- | --- |
 | `websites` | 1 | 3 | 25 | 5 | 5 |
 | `store_groups` | 1 | 3 | 25 | 5 | 5 |
 | `store_views` | 1 | 3 | 50 | 5 | 5 |
 | `simple_products` | 800 | 24,000 | 4,000 | 300,000 | 600,000 |
-| `configurable_products` | 16个，24个选项 | 640，带24个选项 | 800（24个选项）和79（200个选项） | 8,000个，带24个选项 | 16,000个，带24个选项 |
-| `product_images` | 100张图像/每个产品3张图像 | 1000张图像/每个产品3张图像 | 1000张图像/每个产品3张图像 | 2000个图像/每个产品3个图像 | 2000个图像/每个产品3个图像 |
+| `configurable_products` | 16个，24个选项 | 640个，带24个选项 | 800（24个选项）和79（200个选项） | 8,000个，带24个选项 | 16,000个，带24个选项 |
+| `product_images` | 100张图像/每个产品3张图像 | 1000张图像/每个产品3张图像 | 1000张图像/每个产品3张图像 | 2000张图像/每个产品3张图像 | 2000张图像/每个产品3张图像 |
 | `categories` | 30 | 300 | 100 | 3,000 | 6,000 |
 | `categories_nesting_level` | 3 | 3 | 3 | 5 | 5 |
 | `catalog_price_rules` | 20 | 20 | 20 | 20 | 20 |
@@ -52,7 +52,7 @@ ht-degree: 8%
 >
 >在运行数据生成器之前，请禁用服务器上运行的所有cron作业。 禁用cron作业会阻止数据生成器执行与活动cron作业冲突的操作，并避免不必要的错误。
 
-按照本节所述运行命令。 命令运行后，您必须 [重新索引所有索引器](../cli/manage-indexers.md).
+运行本节中介绍的命令。 命令运行后，您必须 [重新索引所有索引器](../cli/manage-indexers.md).
 
 命令选项：
 
@@ -125,7 +125,7 @@ Generating simple products...  done in <time>
 
 ### 捆绑产品
 
-生成捆绑包产品。 生成的捆绑选择不会单独显示在目录中。 产品按类别和网站统一分发。 如果  `assign_entities_to_all_websites` 从配置文件设置为 `1`. 产品会分配到所有网站。
+生成捆绑产品。 生成的束选取项不会在目录中单独显示。 产品按类别和网站统一分发。 如果  `assign_entities_to_all_websites` 从配置文件设置为 `1`. 产品会分配到所有网站。
 
 XML配置文件节点：
 
@@ -163,7 +163,7 @@ XML配置文件节点：
 
 ### 类别
 
-生成类别。 如果 `assign_entities_to_all_websites` 设置为 `0`，则所有类别均按根类别分布；否则，所有类别都分配到一个根类别。
+生成类别。 如果 `assign_entities_to_all_websites` 设置为 `0`，则所有类别按根类别均匀分布；否则，所有类别都分配给一个根类别。
 
 XML配置文件节点：
 
@@ -193,7 +193,7 @@ XML配置文件节点：
 </configs>
 ```
 
-### 可配置产品
+### 可配置的产品
 
 生成可配置产品。 生成的可配置选项不会单独显示在目录中。 产品按类别和网站统一分发。 如果 `assign_entities_to_all_websites` 设置为 `1`，则产品会分配到所有网站。
 
@@ -201,106 +201,106 @@ XML配置文件节点：
 
 - 按默认属性集和预定义属性集的分布：
 
-   ```xml
-   <!-- Number of configurable products -->
-   <configurable_products>{int}</configurable_products>
-   ```
+  ```xml
+  <!-- Number of configurable products -->
+  <configurable_products>{int}</configurable_products>
+  ```
 
-- 基于现有属性集生成产品：
+- 根据现有属性集生成产品：
 
-   ```xml
-   <configurable_products>
-   
-       <config>
-               <!-- Existing attribute set name -->
-               <attributeSet>{string}</attributeSet>
-   
-               <!-- Configurable sku pattern with %s -->
-               <sku>{string}</sku>
-   
-               <!-- Number of configurable products -->
-               <products>{int}</products>
-   
-               <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
-               <category>[{string}]</category>
-   
-               <!-- Type of Swatch attribute e.g. color|image -->
-               <swatches>{string}</swatches>
-       </config>
-   
-   <!-- ... more entries ... -->
-   </configurable_products>
-   ```
+  ```xml
+  <configurable_products>
+  
+      <config>
+              <!-- Existing attribute set name -->
+              <attributeSet>{string}</attributeSet>
+  
+              <!-- Configurable sku pattern with %s -->
+              <sku>{string}</sku>
+  
+              <!-- Number of configurable products -->
+              <products>{int}</products>
+  
+              <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
+              <category>[{string}]</category>
+  
+              <!-- Type of Swatch attribute e.g. color|image -->
+              <swatches>{string}</swatches>
+      </config>
+  
+  <!-- ... more entries ... -->
+  </configurable_products>
+  ```
 
-- 根据动态创建的具有指定数量的属性和选项的属性集生成产品：
+- 根据动态创建的属性集生成具有指定数量的属性和选项的产品：
 
-   ```xml
-   <configurable_products>
-   
-       <config>
-           <!-- Number of attributes in configurable product -->
-           <attributes>{int}</attributes>
-   
-           <!-- Number of options per attribute -->
-           <options>{int}</options>
-   
-           <!-- Configurable sku pattern with %s -->
-           <sku>{string}</sku>
-   
-           <!-- Number of configurable products -->
-           <products>{int}</products>
-   
-           <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
-           <category>[{string}]</category>
-   
-           <!-- Type of Swatch attribute e.g. color|image -->
-           <swatches>{string}</swatches>
-       </config>
-   
-       <!-- ... more entries ... -->
-   </configurable_products>
-   ```
+  ```xml
+  <configurable_products>
+  
+      <config>
+          <!-- Number of attributes in configurable product -->
+          <attributes>{int}</attributes>
+  
+          <!-- Number of options per attribute -->
+          <options>{int}</options>
+  
+          <!-- Configurable sku pattern with %s -->
+          <sku>{string}</sku>
+  
+          <!-- Number of configurable products -->
+          <products>{int}</products>
+  
+          <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
+          <category>[{string}]</category>
+  
+          <!-- Type of Swatch attribute e.g. color|image -->
+          <swatches>{string}</swatches>
+      </config>
+  
+      <!-- ... more entries ... -->
+  </configurable_products>
+  ```
 
 - 根据动态创建的属性集生成产品，每个属性均具有指定的配置：
 
-   ```xml
-   <configurable_products>
-   
-       <config>
-           <attributes>
-               <!-- Configuration for a first attribute -->
-               <attribute>
-                   <!-- Amount of options per attribute -->
-                   <options>{int}</options>
-   
-                   <!-- Type of Swatch attribute -->
-                   <swatches>{string}</swatches>
-               </attribute>
-   
-               <!-- Configuration for a second attribute -->
-               <attribute>
-                   <!-- Amount of options per attribute -->
-                   <options>{int}</options>
-               </attribute>
-           </attributes>
-   
-           <!-- Configurable sku pattern with %s -->
-           <sku>{string}</sku>
-   
-           <!-- Number of configurable products -->
-           <products>{int}</products>
-   
-           <!-- Category Name. Optional. By default, the category name from Categories fixture will be used -->
-           <category>[{string}]</category>
-       </config>
-   
-       <!-- ... more entries ... -->
-   </configurable_products>
-   ```
+  ```xml
+  <configurable_products>
+  
+      <config>
+          <attributes>
+              <!-- Configuration for a first attribute -->
+              <attribute>
+                  <!-- Amount of options per attribute -->
+                  <options>{int}</options>
+  
+                  <!-- Type of Swatch attribute -->
+                  <swatches>{string}</swatches>
+              </attribute>
+  
+              <!-- Configuration for a second attribute -->
+              <attribute>
+                  <!-- Amount of options per attribute -->
+                  <options>{int}</options>
+              </attribute>
+          </attributes>
+  
+          <!-- Configurable sku pattern with %s -->
+          <sku>{string}</sku>
+  
+          <!-- Number of configurable products -->
+          <products>{int}</products>
+  
+          <!-- Category Name. Optional. By default, the category name from Categories fixture will be used -->
+          <category>[{string}]</category>
+      </config>
+  
+      <!-- ... more entries ... -->
+  </configurable_products>
+  ```
 
 ### 客户
 
-生成客户。 客户在所有可用网站上都按正态分布。 每个客户都有相同的数据，但客户电子邮件、客户组和客户地址除外。
+生成客户。 客户在所有可用网站上均服从正态分布。 每个客户都有相同的数据，但客户电子邮件、客户组和客户地址除外。
 
 XML配置文件节点：
 
@@ -346,7 +346,7 @@ XML配置文件节点：
 </indexer>
 ```
 
-### 订单
+### 订购
 
 生成具有不同订单物料类型的可配置数量的订单。 （可选）为生成的订单生成无效报价。
 
@@ -380,7 +380,7 @@ XML配置文件节点：
 
 ### 简单产品
 
-生成简单产品。 产品按默认属性和预定义属性集分发。 如果在配置文件中指定了额外的属性集，如下所示： `<product_attribute_sets>{int}</product_attribute_sets>`，产品也根据其他属性集分发。
+生成简单产品。 产品按默认属性和预定义属性集分发。 如果在配置文件中指定了额外的属性集，如下所示： `<product_attribute_sets>{int}</product_attribute_sets>`，产品也会根据其他属性集进行分发。
 
 产品按类别和网站统一分发。 如果 `assign_entities_to_all_websites` 设置为 `1`，则产品会分配到所有网站。
 
@@ -413,7 +413,7 @@ XML配置文件节点：
 
 ### 商店视图
 
-生成存储视图。 存储视图在存储组之间正常分布。 XML配置文件节点：
+生成商店视图。 存储视图在存储组之间正常分布。 XML配置文件节点：
 
 ```xml
 <!-- Number of store views to be generated -->
@@ -438,12 +438,12 @@ XML配置文件节点：
 
 - `<Commerce root dir>/setup/performance-toolkit/config/customerConfig.xml` — 客户配置
 
-- `<Commerce root dir>/setup/performance-toolkit/config/description.xml` — 产品完整描述配置
+- `<Commerce root dir>/setup/performance-toolkit/config/description.xml` — 产品完整说明配置
 
 - `<Commerce root dir>/setup/performance-toolkit/config/shortDescription.xml` — 产品简要说明配置
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml` — 产品配置简短和完整描述。 提供此旧版实施是为了实现向后兼容性。
+- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml` — 产品配置简短和完整描述。 提供此旧版实施是为了向后兼容。
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml` — 搜索词很少，简略且完整地说明
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml` — 搜索词很少，简述如下
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml` — 要用于简短和完整描述的搜索词更多。
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml` — 在简短和完整描述中使用的搜索词更多。

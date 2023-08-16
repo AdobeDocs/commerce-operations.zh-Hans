@@ -13,9 +13,9 @@ ht-degree: 0%
 
 您可以通过两种方式访问 [!DNL Site-Wide Analysis Tool Dashboard].
 
-您可以访问 [!DNL dashboard] 从 [[!DNL Site-Wide Analysis Tool] 网站](https://supportinsights.adobe.com/commerce) 直接 **(仅适用于Adobe Commerce云基础架构)** ，然后使用您的Adobe ID登录，或通过 [!DNL dashboard] 从您商店的 [!DNL Admin Panel].
+您可以访问 [!DNL dashboard] 从 [[!DNL Site-Wide Analysis Tool] 网站](https://supportinsights.adobe.com/commerce) 直接 **(仅适用于Adobe Commerce云基础架构)** 并使用Adobe ID登录，或通过 [!DNL dashboard] 从您商店的 [!DNL Admin Panel].
 
-此 [!DNL Site-Wide Analysis Tool] 服务位于 [生产模式](https://docs.magento.com/user-guide/magento/installation-modes.html) 对象 [!DNL Admin] 有权访问用户的用户 [角色资源](https://docs.magento.com/user-guide/system/permissions-user-roles.html).
+此 [!DNL Site-Wide Analysis Tool] 服务在以下位置提供： [生产模式](https://docs.magento.com/user-guide/magento/installation-modes.html) 对象 [!DNL Admin] 有权访问用户的用户 [角色资源](https://docs.magento.com/user-guide/system/permissions-user-roles.html).
 
 >[!NOTE]
 >
@@ -38,8 +38,8 @@ An **[!DNL Adobe ID]为必填项** 访问 [!DNL Commerce] 帐户。
 
 1. 接受条款和条件。
 
-1. **<u>注释</u>：** 您的帐户应有权使用 **[!DNL Support Permissions]** 以访问 [!DNL Site-Wide Analysis Tool Dashboard].
-欲知更多详情，请参阅 [共享 [!DNL Commerce] 帐户](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html) （位于我们的用户指南中）。
+1. **<u>注意</u>：** 您的帐户应有权访问 **[!DNL Support Permissions]** 以访问 [!DNL Site-Wide Analysis Tool Dashboard].
+欲知更多详情，请参阅 [共享 [!DNL Commerce] 帐户](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html) 在我们的用户指南中。
 
 ## 选项2：登录到您的 [!DNL Site-Wide Analysis Tool Dashboard] 从您商店的 [!DNL Admin Panel]
 
@@ -49,7 +49,7 @@ An **[!DNL Adobe ID]为必填项** 访问 [!DNL Commerce] 帐户。
 
 >[!IMPORTANT]
 >
->此 [!DNL Site-Wide Analysis Tool] 角色资源（权限）为 **非** 自动分配。 必须为中的用户角色和分别分配给每个用户帐户的角色激活该角色。 [!UICONTROL Admin].
+>此 [!DNL Site-Wide Analysis Tool] 角色资源（权限）是 **非** 自动分配。 必须为中的用户角色和单独分配给每个用户帐户的角色激活该角色。 [!UICONTROL Admin].
 
 对于需要的自定义角色 [!DNL Site-Wide Analysis Tool] 访问，请执行以下操作：
 
@@ -60,11 +60,11 @@ An **[!DNL Adobe ID]为必填项** 访问 [!DNL Commerce] 帐户。
 
 1. 单击 **[!UICONTROL Save Role]**.
 
-1. 通知任何分配了该角色的用户注销 [!DNL Admin]，然后重新登录。
+1. 通知所有分配了该角色的用户注销 [!DNL Admin]，然后重新登录。
 
 >[!NOTE]
 >
->如果您已验证用户帐户是否有权访问 [!DNL Site-Wide Analysis Tool] 并且用户尝试从访问工具时收到403错误 [!DNL Admin]，则您在云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 此 [!DNL Site-Wide Analysis Tool] 如果您启用了HTTP身份验证，则不支持仪表板。 有关解决此问题的更多信息，请参阅我们的 [支持文章](https://support.magento.com/hc/en-us/articles/360057400172-403-errors-when-accessing-Site-Wide-Analysis-Tool-on-Magento?_ga=2.168901729.117144580.1649172612-1623400270.1640858671).
+>如果您已验证用户帐户具有访问 [!DNL Site-Wide Analysis Tool] 并且用户尝试从访问工具时收到403错误 [!DNL Admin]，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 此 [!DNL Site-Wide Analysis Tool] 如果您启用了HTTP身份验证，则不支持仪表板。 有关解决此问题的更多信息，请参阅我们的 [支持文章](https://support.magento.com/hc/en-us/articles/360057400172-403-errors-when-accessing-Site-Wide-Analysis-Tool-on-Magento?_ga=2.168901729.117144580.1649172612-1623400270.1640858671).
 
 ### 步骤2：访问 [!DNL Site-Wide Analysis Tool]
 
@@ -75,7 +75,7 @@ An **[!DNL Adobe ID]为必填项** 访问 [!DNL Commerce] 帐户。
 
 1. 阅读 *使用条款* 对于 [!DNL Site-Wide Analysis Tool] 并单击 **[!UICONTROL Accept]** 以继续。
 
-   每个用户都必须接受会话的使用条款。 对每个已登录的会话重复此步骤。
+   每个用户都必须接受会话的使用条款。 对于每个已登录的会话，将重复执行此步骤。
 
 
 1. 在功能板顶部，单击要查看的选项卡。
@@ -96,10 +96,10 @@ An **[!DNL Adobe ID]为必填项** 访问 [!DNL Commerce] 帐户。
 
 | 选项卡 | 描述 |
 | --- | --- |
-| 仪表板 | 通过当前通知和建议按优先级显示系统的运行状况。 |
-| 信息 | 提供客户联系信息和当前票证摘要，以及有关每个已安装的Adobe Commerce产品的详细信息。 |
+| 仪表板 | 按优先级显示带有当前通知和建议的系统运行状况。 |
+| 信息 | 提供客户联系信息和当前票证摘要，以及有关每个已安装Adobe Commerce产品的详细信息。 |
 | Recommendations | 列出基于最佳实践的建议，以解决在您的网站上检测到的问题。 |
-| 例外 | 列出由无错误处理程序的异常条件导致的应用程序引发的错误。 |
+| 例外 | 列出由无错误处理程序的异常条件引起的应用程序引发的错误。 |
 | 扩展 | 列出所有第三方扩展和第三方库。 |
 
 >[!NOTE]

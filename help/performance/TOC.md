@@ -6,7 +6,7 @@ topic: Administration, Commerce, Development, Performance
 source-git-commit: ee69fcec4986fc85f93e336dc654a9bfff486d8b
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 # 性能最佳实践 {#performance-best-practices}
 
 - [概述](overview.md)
-- [硬件推荐](hardware.md)
+- [硬件建议](hardware.md)
 - [软件推荐](software.md)
 - [参考架构](reference-architecture.md)
 - [开发环境建议](development-environment.md)

@@ -1,6 +1,6 @@
 ---
 title: 启用日志记录
-description: 了解如何启用和禁用类型的日志记录。
+description: 了解如何启用和禁用各种类型的日志记录。
 feature: Configuration, Logs
 exl-id: 78b0416a-5bad-42a9-a918-603600e98928
 source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 ## 调试日志记录
 
-默认情况下，Commerce写入调试日志(`<install_directory>/var/log/debug.log`)处于默认或开发模式时，但处于生产模式时不会出现这种情况。 使用 `bin/magento setup:config:set --enable-debug-logging` 命令更改缺省值。
+默认情况下，Commerce写入调试日志(`<install_directory>/var/log/debug.log`)处于默认或开发模式时，但不在生产模式时更新。 使用 `bin/magento setup:config:set --enable-debug-logging` 命令更改缺省值。
 
 >[!INFO]
 >
->自Commerce 2.3.1起，您无法再使用 `bin/magento config:set dev/debug/debug_logging` 命令来启用或禁用当前模式的调试日志记录。
+>自Commerce 2.3.1起，您将无法再使用 `bin/magento config:set dev/debug/debug_logging` 命令在当前模式下启用或禁用调试日志记录。
 
 ### 启用调试日志记录
 
-1. 使用 `setup:config:set` 在当前模式下启用调试日志记录的命令。
+1. 使用 `setup:config:set` 命令启用当前模式的调试日志记录。
 
    ```bash
    bin/magento setup:config:set --enable-debug-logging=true
@@ -74,9 +74,9 @@ ht-degree: 0%
 
 ## Cron日志记录
 
-在版本2.3.1中，Commerce现在创建单独的 `cron` 日志。 \
-Commerce最近使cron日志记录更加冗长，这提供了更多信息但延长了 `system.log` 相当重要。
-移动 `cron` 将信息保存到专用日志可使这两个日志更易于读取。
+在版本2.3.1中，Commerce现在创建了一个单独的 `cron` 日志。 \
+Commerce最近使cron日志记录更加冗长，这提供了更多信息，但延长了 `system.log` 相当大。
+正在移动 `cron` 将信息保存到专用日志可使两个日志更易于读取。
 
 默认情况下，Commerce会写入 `cron` 中的信息 `<install-directory>/var/log/cron.log` 文件。
 
@@ -88,7 +88,7 @@ Commerce最近使cron日志记录更加冗长，这提供了更多信息但延�
 
 ### 启用syslog日志记录
 
-正在登录到 `syslog` 默认情况下处于禁用状态。
+登录 `syslog` 默认情况下处于禁用状态。
 
 1. 使用 `setup:config:set` 命令更改 `dev/syslog/syslog_logging` 数据库值至 `true`.
 

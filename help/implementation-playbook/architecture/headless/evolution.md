@@ -1,5 +1,5 @@
 ---
-title: Headless与Adobe Commerce的演变
+title: 使用Adobe Commerce的Headless的演变
 description: 了解Adobe Commerce的Headless架构支持的演变。
 exl-id: 991f0530-c596-46c5-9eb0-fa109f848165
 feature: Integration
@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Headless与Adobe Commerce的演变
+# 使用Adobe Commerce的Headless的演变
 
 ![传统、分离和Headless商务架构的比较](../../../assets/playbooks/headless-evolution-table.svg)
 

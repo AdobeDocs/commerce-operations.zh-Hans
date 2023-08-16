@@ -15,14 +15,14 @@ ht-degree: 0%
 
 ## Commerce核对清单
 
-单击链接以下载清单：
+单击链接以下载核对清单：
 
 - [成熟度](../../assets/playbooks/checklists/maturity.pptx)
 - [上线](../../assets/playbooks/checklists/go-live.pptx)
 - [性能](../../assets/playbooks/checklists/performance.pptx)
 - [Commerce平台迁移](../../assets/playbooks/checklists/commerce-platform-migration.pptx)
 
-## 商务模板
+## 商业模板
 
 单击链接以下载模板：
 

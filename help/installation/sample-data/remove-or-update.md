@@ -13,7 +13,7 @@ ht-degree: 0%
 
 本主题讨论如何：
 
-* [删除示例数据模块](#remove-sample-data-modules) 从Adobe Commerce或Magento Open Source安装 `composer.json`. 此选项可以 *非* 从数据库中删除示例数据。
+* [删除示例数据模块](#remove-sample-data-modules) 从Adobe Commerce或Magento Open Source安装 `composer.json`. 此选项会 *非* 从数据库中删除示例数据。
 
 * [准备更新示例数据](#prepare-to-update-sample-data) (例如，在更新Magento应用程序之前)。
 

@@ -1,6 +1,6 @@
 ---
 title: 获取您的身份验证密钥
-description: 请按照以下步骤检索凭据以访问repo.magento.com上的Adobe Commerce和Magento Open Source编辑器包。
+description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce和Magento Open Source编辑器包。
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -11,17 +11,16 @@ ht-degree: 0%
 
 # 获取您的身份验证密钥
 
-此 `repo.magento.com` 存储库是存储Adobe Commerce和Magento Open Source及第三方编辑器包的位置，需要身份验证。 使用您的Commerce Marketplace帐户生成一对32个字符的帐户 *身份验证密钥* 以访问存储库。
+此 `repo.magento.com` 存储库是存储Adobe Commerce和Magento Open Source及第三方编辑器包的位置，需要对其进行身份验证。 使用您的Commerce Marketplace帐户生成一对32字符的帐户 *身份验证密钥* 以访问存储库。
 
-要获得对Adobe Commerce和Magento Open Source包的访问权限，您必须使用与有权访问这些包的MAGEID关联的密钥。 MAGEID通常是Adobe Commerce帐户上的主要联系人，并且可能并不总是云基础架构项目Adobe Commerce的项目所有者。
+要获得对Adobe Commerce和Magento Open Source包的访问权限，您必须使用与已授予对这些包访问权限的MAGEID关联的密钥。 MAGEID通常是Adobe Commerce帐户的主要联系人，可能并不总是云基础架构项目Adobe Commerce的项目所有者。
 
 >[!TIP]
 >
->如果您遇到 [错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)，您可能无权访问包，或者由于帐户中的未结发票，访问权利已过期。
+>如果您遇到 [错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)，您可能无权访问包，或者访问权利由于帐户中的未结发票而过期。
 >
->* 如果您是该帐户的主要联系人，请确保该帐户中没有列出未结发票。
->* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，请联系 [Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) ，以获得使用主要联系人的MAGEID的帮助。
-
+>* 如果您是该帐户的主要联系人，请确保该帐户中不存在未结发票。
+>* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，请联系 [Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以获取使用主要联系人的MAGEID的帮助。
 
 要创建身份验证密钥，请执行以下操作：
 
@@ -30,11 +29,11 @@ ht-degree: 0%
 
 1. 单击 **访问密钥** 在Marketplace选项卡中。
 
-   ![在Commerce Marketplace时获取安全访问密钥](../../assets/installation/cloud_access-key.png)
+   ![在Commerce Marketplace上获取安全访问密钥](../../assets/installation/cloud_access-key.png)
 
 1. 单击 **创建新的访问密钥**. 输入密钥的特定名称（例如，接收密钥的开发人员姓名），然后单击 **确定**.
 
-1. 新的公钥和私钥现在与您的帐户关联，您可以单击以复制这些密钥。 保存此信息或在使用项目时保持页面打开。 使用 **公钥** 作为您的用户名和 **私钥** 作为您的密码。
+1. 新的公钥和私钥现在与您的帐户关联，您可以单击以复制这些帐户。 保存此信息或在使用项目时保持页面打开。 使用 **公钥** 作为您的用户名和 **私钥** 作为您的密码。
 
 ## 管理您的身份验证密钥
 
@@ -56,7 +55,7 @@ ht-degree: 0%
 
 1. 单击 **生成新令牌** 替换和禁用现有令牌。
 
-您必须使用MAGEID和令牌以下载版本。 您的MAGEID显示在帐户页面的左上角。
+您必须使用MAGEID和令牌来下载版本。 您的MAGEID将显示在帐户页面的左上方。
 
 例如：
 
@@ -66,6 +65,6 @@ curl -k https://MAGEID:TOKEN@www.magentocommerce.com/products/downloads/info/hel
 
 使用您的身份验证密钥可以：
 
-* [获取隐喻（集成商、打包商）](../composer.md)
+* [获取中继包（集成商、打包商）](../composer.md)
 * [克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) （仅限参与开发人员）
 * [升级和管理模块](../../upgrade/modules/upgrade.md)

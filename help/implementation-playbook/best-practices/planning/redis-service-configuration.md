@@ -13,20 +13,20 @@ ht-degree: 0%
 
 # Redis服务配置的最佳实践
 
-- 使用扩展的Redis缓存实施，该实施包括以下优化，以最大限度地减少对Adobe Commerce的每个请求执行的Redis查询数量：
+- 使用扩展的Redis缓存实施，该实施包括以下优化，可最大限度地减少对Adobe Commerce的每个请求执行的Redis查询数量：
    - 缩小Redis和Adobe Commerce之间的网络数据传输大小
    - 通过提高适配器自动确定需要加载内容的能力，降低CPU周期的Redis消耗
-   - 减少Redis写入操作的竞争条件
+   - 减少Redis写入操作的竞争情形
 - 将Redis缓存与Redis会话分离
 - 压缩Redis缓存并使用 `gzip` 提高性能
 
 ## 扩展的Redis缓存实施
 
-更新您的配置以使用扩展Redis缓存实施 `\Magento\Framework\Cache\Backend\Redis`.
+更新您的配置以使用扩展的Redis缓存实施 `\Magento\Framework\Cache\Backend\Redis`.
 
 ### 配置云部署
 
-通过设置 `REDIS_BACKEND` 中的部署变量 `.magento.env.yaml` 配置文件。
+通过设置来配置增强的Redis缓存 `REDIS_BACKEND` 中的部署变量 `.magento.env.yaml` 配置文件。
 
 ```yaml
 stage:
@@ -34,21 +34,21 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\Redis'
 ```
 
-有关详细信息，请参见 [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) 中的变量描述 _云基础架构上的Commerce指南_.
+有关详细信息，请参见 [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) 中的变量说明 _云基础架构上的Commerce指南_.
 
 >[!NOTE]
 >
-> 查看 `ece-tools` 版本，从命令行安装，使用 `composer show magento/ece-tools` 命令。 如有必要， [更新到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
+> 查看 `ece-tools` 版本，通过命令行安装到本地环境中，使用 `composer show magento/ece-tools` 命令。 如有必要， [更新到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
 
 >[!WARNING]
 >
->Do _非_ 使用为云基础架构项目配置Redis从属连接 [扩展体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). 这会导致Redis连接错误。 参见 [redis配置指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) 在 _云基础架构上的Commerce_ 指南。
+>Do _非_ 使用为云基础架构项目配置Redis从属连接 [扩展体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). 这会导致Redis连接错误。 请参阅 [redis配置指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) 在 _云基础架构上的Commerce_ 指南。
 
 ### 配置内部部署
 
 对于Adobe Commerce内部部署，请使用配置新的Redis缓存实施 `bin/magento:setup` 命令。 有关说明，请参阅 [将Redis用于默认缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching).
 
-## 分开缓存和会话实例
+## 单独的缓存和会话实例
 
 通过将Redis缓存与Redis会话分离，您可以单独管理缓存和会话，以防止缓存问题影响会话。
 
@@ -118,7 +118,7 @@ stage:
    redis-cli -h 127.0.0.1 -p 6374 -n 0 FLUSHDB
    ```
 
-在部署期间，您应会在 [生成和部署日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html#build-and-deploy-logs)：
+在部署期间，您应该会在 [生成和部署日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html#build-and-deploy-logs)：
 
 ```terminal
 W:   - Downloading colinmollenhour/credis (1.11.1)
@@ -134,7 +134,7 @@ W:   - Installing colinmollenhour/php-redis-session-abstract (v1.4.5): Extractin
 
 ## 缓存压缩
 
-使用缓存压缩，但请注意，需要权衡客户端性能。 如果您有备用CPU，请启用它。 参见 [将Redis用于会话存储](../../../configuration/cache/redis-session.md).
+使用缓存压缩，但请注意，需要权衡客户端性能。 如果您有备用CPU，请启用它。 请参阅 [使用Redis进行会话存储](../../../configuration/cache/redis-session.md).
 
 ```yaml
 stage:
@@ -154,4 +154,4 @@ stage:
 ## 其他信息
 
 - [Redis页面缓存](../../../configuration/cache/redis-pg-cache.md)
-- [将Redis用于会话存储](../../../configuration/cache/redis-session.md)
+- [使用Redis进行会话存储](../../../configuration/cache/redis-session.md)

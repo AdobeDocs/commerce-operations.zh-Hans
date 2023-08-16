@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # 此 [!UICONTROL Indexing] 选项卡
 
-此 **[!UICONTROL Indexing]** Tab尝试解释索引编制问题并确定潜在原因。
+此 **[!UICONTROL Indexing]** 制表符会尝试解释索引相关问题并确定潜在原因。
 
 ## [!UICONTROL Core index invalidated]
 
 ![核心索引失效](../../assets/tools/observation-for-adobe-commerce/indexing-tab-1.jpg)
 
-此 **[!UICONTROL Core index invalidated]** 框架查看选定时间范围内的索引失效。 如果索引与其他资源密集型同时进行 [!DNL crons]，会给站点资源带来沉重的负载。
+此 **[!UICONTROL Core index invalidated]** frame查看选定时间范围内的索引失效。 如果索引与其他资源密集型同时发生 [!DNL crons]，会给站点资源带来沉重的负载。
 
 * `%Catalog Product Rule indexer has been invalidated%`)作为 `catalog_product_rule_idx_reset`
 * `%Catalog Rule Product indexer has been invalidated%`)作为 `catalog_rule_product_idx_reset`
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ![核心索引重建](../../assets/tools/observation-for-adobe-commerce/indexing-tab-2.jpg)
 
-此 **[!UICONTROL Core index rebuilds]** frame查看选定时间范围内的核心索引重建。 以下是从日志中解析的字符串，用于指示索引重建完成。
+此 **[!UICONTROL Core index rebuilds]** frame查看选定时间范围内的核心索引重建。 以下是从日志中解析的字符串，用于指示索引重建已完成。
 
 * `%Catalog Product Rule index has been rebuilt%`)作为 `catalog_product_rule_idx`
 * `%Catalog Rule Product index has been rebuilt%`)作为 `catalog_rule_product_idx`
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ## [!UICONTROL catalogsearch index table(s)]
 
-![目录搜索索引表](../../assets/tools/observation-for-adobe-commerce/indexing-tab-3.jpg)
+![catalogsearch索引表](../../assets/tools/observation-for-adobe-commerce/indexing-tab-3.jpg)
 
 此 **[!UICONTROL catalogsearch index table(s)]** frame查看选定时间范围内的目录搜索索引表。 此查询查看对具有的表的任意数据存储操作的持续时间 `%catalogsearch%` 在表名称中。
 

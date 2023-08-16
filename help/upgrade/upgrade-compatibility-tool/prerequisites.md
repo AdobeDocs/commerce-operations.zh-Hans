@@ -1,6 +1,6 @@
 ---
-title: ‘[!DNL Upgrade Compatibility Tool] 要求
-description: 验证您的系统是否满足运行 [!DNL Upgrade Compatibility Tool] 在Adobe Commerce项目的命令行界面中。
+title: ’[!DNL Upgrade Compatibility Tool] 要求
+description: 验证系统是否符合运行 [!DNL Upgrade Compatibility Tool] 在Adobe Commerce项目的命令行界面中。
 exl-id: b8af2e07-3d28-4937-bb88-b0a1c88a2938
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 {{commerce-only}}
 
-您必须拥有 [Adobe Commerce访问密钥](https://developer.adobe.com/commerce/marketplace/guides/sellers/profile-information/#access-keys) 下载和使用 [!DNL Upgrade Compatibility Tool]. 将您的Adobe Commerce访问密钥添加到 `auth.json` 文件，该文件位于 `~/.composer` 默认情况下。
+您必须拥有 [Adobe Commerce访问密钥](https://developer.adobe.com/commerce/marketplace/guides/sellers/profile-information/#access-keys) 要下载和使用 [!DNL Upgrade Compatibility Tool]. 将您的Adobe Commerce访问密钥添加到 `auth.json` 文件，位于 `~/.composer` 默认情况下。
 
 >[!NOTE]
 >
->检查您的 **COMPOSER_HOME** 环境变量，以查看 `auth.json` 文件位置。
+>检查您的 **COMPOSER_HOME** 环境变量，以查看 `auth.json` 文件所在位置。
 
 此 **公钥** 对应于 _用户名_ 而 **私钥** 是 _密码_：
 
-## Adobe Commerce访问密钥示例
+## Adobe Commerce访问键示例
 
 ```json
     "http-basic": {
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 如果您未正确配置 **Adobe Commerce访问密钥**，则无法下载 [!DNL Upgrade Compatibility Tool] 和 `composer create-project` 命令将失败。
+> 如果未正确配置 **Adobe Commerce访问密钥**，您无法下载 [!DNL Upgrade Compatibility Tool] 和 `composer create-project` 命令将失败。
 
 运行 `composer install` 在终端中安装依赖项。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 | **要求** | **约束** |
 |----------------|-----------------|
 | PHP版本 | >= 7.3 |
-| Composer | 没有已知的要求。 |
+| Composer | 没有已知要求。 |
 | Node.js | Node.js版本 `^12.22.0`， `^14.17.0`，或 `>=16.0.0` (请参阅 [安装节点.js](https://nodejs.dev/en/learn/how-to-install-nodejs/)) |
 | 内存限制 | 至少2GB RAM。 |
 
@@ -74,10 +74,10 @@ ext-zip       1.15.6    success
 php           7.4.30    success
 ```
 
-只有Linux操作系统支持Adobe Commerce。 您可以运行 [!DNL Upgrade Compatibility Tool] 在Linux操作系统中。 您不必运行 [!DNL Upgrade Compatibility Tool] Adobe Commerce实例所在的位置。
+Adobe Commerce仅在Linux操作系统上受支持。 您可以运行 [!DNL Upgrade Compatibility Tool] 在Linux操作系统中。 您不必运行 [!DNL Upgrade Compatibility Tool] Adobe Commerce实例的位置。
 
 对于 [!DNL Upgrade Compatibility Tool] 以访问Adobe Commerce实例的源代码。 例如，您可以将其安装在一台服务器上，并将其指向另一台服务器上的Adobe Commerce安装。
 
 如果您正在运行 [!DNL Upgrade Compatibility Tool] 对于具有大型模块和文件的Adobe Commerce实例，该工具可能需要大量RAM（至少2GB）。
 
-运行 [!DNL Upgrade Compatibility Tool] 从 [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) 对象 [云基础架构上的Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank} 个项目。
+运行 [!DNL Upgrade Compatibility Tool] 从 [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) 对象 [云基础架构上的Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank} 项目。

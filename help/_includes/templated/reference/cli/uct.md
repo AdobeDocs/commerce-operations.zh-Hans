@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此引用从应用程序代码库生成。 要更改内容，您可以更新中相应命令实施的源代码 [代码库](https://github.com/magento) 存储库并提交更改以供审核。 另一种方法是 _向我们提供反馈_ （在右上角找到链接）。 有关贡献准则，请参阅 [代码投稿](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+>此引用从应用程序代码库生成。 要更改内容，可以在中更新相应命令实施的源代码 [代码库](https://github.com/magento) 存储库并提交更改以供审阅。 另一种方法是 _向我们提供反馈_ （在右上角找到链接）。 有关贡献准则，请参阅 [代码贡献内容](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
 
 ## `_complete`
 
@@ -44,7 +44,7 @@ shell类型(“bash”)
 
 ### `--current`, `-c`
 
-光标所在的“input”数组的索引（例如COMP_CWORD）
+光标所在的“输入”数组的索引（例如COMP_CWORD）
 
 - 需要一个值
 
@@ -56,7 +56,7 @@ shell类型(“bash”)
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -126,7 +126,7 @@ bin/uct completion [--debug] [--] [<shell>]
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -205,7 +205,7 @@ bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -289,7 +289,7 @@ bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -349,11 +349,11 @@ bin/uct refactor <path>
 
 解决中问题的路径。
 
-- 必需
+- 必填
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -402,7 +402,7 @@ bin/uct refactor <path>
 
 ## `core:code:changes`
 
-升级兼容性工具是一种命令行工具，通过分析安装在Adobe Commerce实例中的所有非Adobe Commerce模块，根据特定版本检查该实例。 返回在升级到新版Adobe Commerce代码之前必须解决的错误和警告列表。
+升级兼容性工具是一个命令行工具，可通过分析安装在Adobe Commerce实例中的所有非Adobe Commerce模块，针对特定版本检查该实例。 返回在升级到新版Adobe Commerce代码之前必须解决的错误和警告列表。
 
 ```bash
 bin/uct core:code:changes [-o|--output [OUTPUT]] [--] <dir> [<vanilla-dir>]
@@ -413,7 +413,7 @@ bin/uct core:code:changes [-o|--output [OUTPUT]] [--] <dir> [<vanilla-dir>]
 
 Adobe Commerce安装目录。
 
-- 必需
+- 必填
 
 ### `vanilla-dir`
 
@@ -424,11 +424,11 @@ Adobe Commerce vanilla安装目录。
 
 将导出输出的文件的路径（Json格式）
 
-- 接受一个值
+- 接受值
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -478,7 +478,7 @@ Adobe Commerce vanilla安装目录。
 ## `dbschema:diff`
 
 允许列出两个选定版本之间的Adobe Commerce DB架构差异。
-可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4 - p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5-p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7 - p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7-p4 | 2.4.0 | 2.4.0 - p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2-p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4 - p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.5 - p2 | 2.4.6
+可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2 - p2 | 2.3.3 | 2.3.3 - p1 | 2.3.4 | 2.3.4 - p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5 - p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7 - p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7 - p4 | 2.4.0 | 2.4.0 - p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2 - p2 | 2.4.3 | 2.4.3-p1 | 2.4.3 - p2 | 2.4.3 - p3 | 2.4.4 | 2.4.4 - p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.5 - p2 | 2.4.6
 
 ```bash
 bin/uct dbschema:diff <current-version> <target-version>
@@ -489,17 +489,17 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 当前版本（例如2.3.2）。
 
-- 必需
+- 必填
 
 ### `target-version`
 
 目标版本（例如2.4.5）。
 
-- 必需
+- 必填
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -559,23 +559,23 @@ bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 
 指向第一个GraphQL架构的端点URL。
 
-- 必需
+- 必填
 
 ### `schema2`
 
 指向第二个GraphQL架构的端点URL。
 
-- 必需
+- 必填
 
 ### `--output`, `-o`
 
 将导出输出的文件的路径（JSON格式）
 
-- 接受一个值
+- 接受值
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值
@@ -624,7 +624,7 @@ bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 
 ## `upgrade:check`
 
-升级兼容性工具是一种命令行工具，它通过分析安装在Adobe Commerce自定义实例中的所有模块，根据特定版本检查该实例。 返回在升级到最新版本的Adobe Commerce之前必须解决的错误和警告列表。
+升级兼容性工具是一种命令行工具，可通过分析安装在Adobe Commerce自定义实例中的所有模块，针对特定版本检查该实例。 返回在升级到最新版本的Adobe Commerce之前必须解决的错误和警告列表。
 
 ```bash
 bin/uct upgrade:check [-a|--current-version [CURRENT-VERSION]] [-c|--coming-version [COMING-VERSION]] [--json-output-path [JSON-OUTPUT-PATH]] [--html-output-path [HTML-OUTPUT-PATH]] [--min-issue-level [MIN-ISSUE-LEVEL]] [-i|--ignore-current-version-compatibility-issues] [--context CONTEXT] [--] <dir>
@@ -635,38 +635,38 @@ bin/uct upgrade:check [-a|--current-version [CURRENT-VERSION]] [-c|--coming-vers
 
 Adobe Commerce安装目录。
 
-- 必需
+- 必填
 
 ### `--current-version`, `-a`
 
-如果忽略，则将使用当前Adobe Commerce版本的Adobe Commerce安装版本。
+如果忽略，则将使用当前的Adobe Commerce版本Adobe Commerce安装的版本。
 
-- 接受一个值
+- 接受值
 
 ### `--coming-version`, `-c`
 
-如果忽略，则将使用Adobe Commerce的最新发布版本Target Adobe Commerce版本。 可用Adobe Commerce版本： 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2-p2 \| 2.3.3 \| 2.3.3 - p1 \| 2.3.4 \| 2.3.4-p1 \| 2.3.4-p2 \| 2.3.5 \| 2.3.5-p2 \| 2.3.6 \| 2.3.6-p1 \| 2.3.7 \| 2.3.7-p1 \| 2.3.7-p2 \| 2.3.7-p2 \| 2.3.7-p3 \| 2.3.7-p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.5 \| 2.4.4-p2 \| 2.4.5-p1 \| 2.4.4 p3 \| 2.4.5 - p2 \| 2.4.6
+Target Adobe Commerce版本，如果忽略，将使用最新发布的Adobe Commerce版本。 可用的Adobe Commerce版本： 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2-p2 \| 2.3.3 \| 2.3.3 - p1 \| 2.3.4 \| 2.3.4 - p1 \| 2.3.4 - p2 \| 2.3.5 \| 2.3.5 - p2 \| 2.3.6 \| 2.3.6 - p1 \| 2.3.7 \| 2.3.7 - p1 \| 2.3.7 - p2 \| 2.3.7 - p3 \| 2.3.7-p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p3 \| 2.4.4 \| 2.4.4.4-p1 \| 2.4.5 \| 2.4.4-p2 \| 2.4.5-p1 \| 2.4.4 p3 \| 2.4.5 - p2 \| 2.4.6
 
-- 接受一个值
+- 接受值
 
 ### `--json-output-path`
 
 输出将以json格式导出的文件的路径
 
-- 接受一个值
+- 接受值
 
 ### `--html-output-path`
 
 输出将以HTML格式导出的文件的路径
 
-- 接受一个值
+- 接受值
 
 ### `--min-issue-level`
 
 要在报告中看到的最小问题级别（警告、错误或严重）。
 
 - 默认： `warning`
-- 接受一个值
+- 接受值
 
 ### `--ignore-current-version-compatibility-issues`, `-i`
 
@@ -683,7 +683,7 @@ Adobe Commerce安装目录。
 
 ### `--help`, `-h`
 
-显示给定命令的帮助。 未给出任何命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
 
 - 默认： `false`
 - 不接受值

@@ -1,6 +1,6 @@
 ---
 title: 常用命令
-description: 查看常见Commerce CLI命令和用法的取样。
+description: 查看常用Commerce CLI命令和用法的取样。
 exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 下面总结了一些可用的命令。
 
-**显示命令的完整列表**：
+**显示完整的命令列表**：
 
 ```bash
 bin/magento list
@@ -36,12 +36,12 @@ bin/magento help cache:enable
 | [`magento cache:{enable/disable/clean/flush/status}`](../cli/manage-cache.md) | 管理缓存 |
 | [`magento indexer:{status/show-mode/set-mode/reindex/info/reset/show-dimensions-mode/set-dimensions-mode}`](../cli/manage-indexers.md) | 管理索引器 |
 | [`magento cron:run`](../cli/configure-cron-jobs.md) | 运行Commerce cron作业 |
-| [`magento setup:di:compile`](../cli/code-compiler.md) | 编译所有不存在的代理和工厂；并预编译一个商店和网站的类定义、继承信息和插件定义。 |
-| [`magento info:dependencies:{show-modules/show-modules-circular/show-framework}`](../cli/dependency-reports.md) | 模块依赖关系、循环依赖关系和Commerce框架依赖关系。 |
+| [`magento setup:di:compile`](../cli/code-compiler.md) | 编译所有不存在的代理和工厂；预编译一个商店和网站的类定义、继承信息和插件定义。 |
+| [`magento info:dependencies:{show-modules/show-modules-circular/show-framework}`](../cli/dependency-reports.md) | 模块依赖项、循环依赖项和Commerce框架依赖项。 |
 | [`magento i18n:{collect-phrases/pack/uninstall}`](../cli/localization.md) | 创建翻译字典或翻译包 |
 | [`magento setup:static-content:deploy`](../cli/static-view-file-deployment.md) | 部署静态视图文件 |
 | [`magento dev:source-theme:deploy`](../cli/create-symlinks.md) | 从更少内容创建CSS |
-| [`magento dev:tests:run`](../cli/unit-tests.md) | 运行自动化测试 |
+| [`magento dev:tests:run`](../cli/unit-tests.md) | 运行自动测试 |
 | [`magento dev:xml:convert`](../cli/convert-layout-files.md) | 更新布局XML文件以匹配新的可扩展样式表语言转换(XSLT)样式表 |
 | [`magento setup:perf:generate-fixtures`](../cli/generate-data.md) | 生成数据以用于性能测试。 |
 | [`magento sampledata:install`](../../installation/sample-data/overview.md) | 在安装Commerce应用程序后安装可选的示例数据。<br><br>有关示例数据的更多详细信息，请参见 [可选的示例数据](../../installation/sample-data/overview.md). |

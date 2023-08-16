@@ -18,7 +18,7 @@ ht-degree: 0%
 >Magento和的版本 [!DNL Data Migration Tool] 必须匹配。
 
 
-确保使用 *同一发布版本* Magento2和 [!DNL Data Migration Tool]. 例如，对于Magento版本2.2.0，还必须使用 [!DNL Data Migration Tool] 版本2.2.0。
+确保您使用 *相同发布版本* Magento2和 [!DNL Data Migration Tool]. 例如，对于Magento版本2.2.0，还必须使用 [!DNL Data Migration Tool] 版本2.2.0。
 
 ## 检查您的版本
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### Composer中继包
 
-如果使用Composer元包下载Magento软件，请输入以下命令：
+如果您使用Composer元包下载了Magento软件，请输入以下命令：
 
 ```bash
 php <magento_root>/bin/magento --version
@@ -37,7 +37,7 @@ php <magento_root>/bin/magento --version
 
 ### GitHub存储库
 
-如果克隆Magento2 GitHub存储库，请输入以下命令：
+如果克隆了Magento2 GitHub存储库，请输入以下命令：
 
 ```bash
 cd <your Magento 2 clone directory>
@@ -47,14 +47,14 @@ cd <your Magento 2 clone directory>
 git branch
 ```
 
-如果您当前在 `develop` 分支，则必须更改为 [已发布分支](https://developer.adobe.com/commerce/contributor/guides/install/change-version/) 然后再继续。
+如果您当前在 `develop` 分支，您必须更改为 [已发布分支](https://developer.adobe.com/commerce/contributor/guides/install/change-version/) 然后再继续。
 
 如果您尚未安装Adobe Commerce或Magento Open Source软件， [立即安装](../../installation/prerequisites/commerce.md).
 如果要克隆GitHub存储库，请确保签出了版本标记，如中所述 [（参与者）克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/).
 
 ## 查找的已发布版本 [!DNL Data Migration Tool]
 
-转到 [版本](https://github.com/magento/data-migration-tool/releases) 第页，共 [!DNL Data Migration Tool] GitHub存储库，查找可用的已发布版本。
+转到 [版本](https://github.com/magento/data-migration-tool/releases) 第页，共 [!DNL Data Migration Tool] GitHub存储库，用于查找可用的已发布版本。
 
 ## 安装 [!DNL Data Migration Tool]
 
@@ -63,7 +63,7 @@ git branch
 - [&#39;repo.magento.com&#39;](#install-from-repomagentocom)
 - [GitHub](#install-from-github)
 
-安装之前，请确保您具有：
+安装之前，请确保您拥有：
 
 - 已完成中提到的所有任务 [前提条件](prerequisites.md) 部分
 - [已验证版本](install.md#check-your-version) Magento2软件的
@@ -72,7 +72,7 @@ git branch
 
 安装 [!DNL Data Migration Tool]，您必须更新 `composer.json` 在Magento根安装目录中，提供 [!DNL Data Migration Tool] 包。
 
-1. 以或切换至以下身份登录到应用程序服务器： [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以以下身份登录到您的应用程序服务器，或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 切换到应用程序根目录。
 1. 输入以下命令：
 
@@ -96,13 +96,13 @@ git branch
    composer require magento/data-migration-tool:2.2.0
    ```
 
-1. 出现提示时，输入您的 [身份验证密钥](../../installation/prerequisites/authentication-keys.md). 您的公钥是您的用户名；您的私钥是您的密码。
+1. 出现提示时，输入 [身份验证密钥](../../installation/prerequisites/authentication-keys.md). 您的公钥是您的用户名；您的私钥是您的密码。
 
 ### 从GitHub安装
 
 如果您已克隆GitHub存储库，请按照以下步骤安装 [!DNL Data Migration Tool].
 
-1. 以或切换至以下身份登录到应用程序服务器： [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以以下身份登录到您的应用程序服务器，或切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 切换到应用程序根目录。
 1. 输入以下命令：
 
@@ -132,4 +132,4 @@ git branch
 
 1. 打开 [`composer.json`](https://github.com/magento/data-migration-tool/blob/2.4/composer.json) 在文本编辑器中。
 
-1. 此 `version` 该文件中的条目是 [!DNL Data Migration Tool].
+1. 此 `version` 在该文件中输入的版本是 [!DNL Data Migration Tool].

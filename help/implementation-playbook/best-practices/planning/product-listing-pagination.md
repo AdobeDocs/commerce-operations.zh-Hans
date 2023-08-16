@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # 产品列表分页的最佳实践
 
-为获得最佳性能，每页最多可显示48个产品。
+为获得最佳性能，每页最多显示48个产品。
 
-您可以将Adobe Commerce配置为允许购物者在一个页面上查看所有类别的产品。 如果类别产品的数量明显超过48个产品，请更新店面分页控制的目录配置。
+您可以将Adobe Commerce配置为允许购物者在一个页面上查看所有类别的产品。 如果类别产品的数量明显超过48个产品，请更新店面分页控件的目录配置。
 
 ## 受影响的产品和版本
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 如果您在任何类别中有超过48种产品，请更新店面目录配置以禁用该选项 **允许每页所有产品**.
 
-禁用此选项后，Adobe Commerce会使用产品列表店面分页控件来管理店面组件中显示的产品数量。 有关说明，请参阅 [配置分页控件](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
+禁用此选项后，Adobe Commerce使用产品列表店面分页控件来管理店面组件中显示的产品数量。 有关说明，请参阅 [配置分页控件](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
 
 ## 其他信息
 

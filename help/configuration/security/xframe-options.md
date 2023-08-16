@@ -12,16 +12,16 @@ ht-degree: 0%
 
 # X-Frame-Options标头
 
-帮助防止 [点击劫持](https://owasp.org/www-community/attacks/Clickjacking) 利用漏洞，我们添加了一个选项来使用 [X-Frame-Options](https://datatracker.ietf.org/doc/html/rfc7034) 请求中的HTTP请求标头到您的店面。
+帮助防止 [点击劫持](https://owasp.org/www-community/attacks/Clickjacking) 利用漏洞，我们添加了一个选项来使用 [X-Frame-Options](https://datatracker.ietf.org/doc/html/rfc7034) 请求中的HTTP请求标头。
 
 此 `X-Frame-Options` 标头允许您指定是否允许浏览器在中呈现页面 `<frame>`， `<iframe>`，或 `<object>` 如下所示：
 
-- `DENY`：页面无法在框架中显示。
-- `SAMEORIGIN`：（默认）页面只能在与页面本身具有相同原点的框架中显示。
+- `DENY`：页面无法显示在框架中。
+- `SAMEORIGIN`：（默认）页面只能在与页面本身同源的框架中显示。
 
 >[!WARNING]
 >
->此 `ALLOW-FROM <uri>` 选项已被弃用，因为支持Commerce的浏览器不再支持它。 参见 [浏览器兼容性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#browser_compatibility).
+>此 `ALLOW-FROM <uri>` 选项已被弃用，因为受Commerce支持的浏览器不再支持它。 请参阅 [浏览器兼容性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#browser_compatibility).
 
 >[!WARNING]
 >
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->编辑 `env.php` 文件，以在“管理员”中设置值。
+>这样可以更安全地编辑 `env.php` 文件，以在“管理员”中设置值。
 
 ## 验证您的设置 `X-Frame-Options`
 

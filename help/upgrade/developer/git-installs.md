@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # 升级基于Git的安装
 
-本主题将讨论投稿开发人员如何在不重新安装的情况下更新Adobe Commerce或Magento Open Source。 如果您不是参与开发人员，请参阅 [执行升级](../implementation/perform-upgrade.md).
+本主题讨论参与开发的开发人员如何更新Adobe Commerce或Magento Open Source而不重新安装它。 如果您不是参与开发人员，请参阅 [执行升级](../implementation/perform-upgrade.md).
 
 要升级（如果您是参与开发人员），请执行以下操作：
 
 {{$include /help/_includes/server-login.md}}
 
-1. 保存您对所做的任何更改 `composer.json` 文件，因为后续步骤将覆盖该文件。
+1. 保存您对所做的任何更改 `composer.json` 文件，因为后续步骤会覆盖它。
 
 1. 创建您的备份 `composer.json` 文件。
 

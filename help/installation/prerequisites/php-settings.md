@@ -16,17 +16,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->参见 [系统要求](../system-requirements.md) 支持的PHP版本。
+>请参阅 [系统要求](../system-requirements.md) 支持的PHP版本。
 
 ## 验证是否已安装PHP
 
-默认情况下，大多数Linux版本都安装了PHP。 本主题假定您已安装PHP。 要验证是否已安装PHP，请在命令行中键入：
+Linux的大多数版本都默认安装了PHP。 本主题假定您已安装PHP。 要验证是否已安装PHP，请在命令行中键入：
 
 ```bash
 php -v
 ```
 
-如果安装了PHP，则会显示一条类似于以下内容的消息：
+如果安装了PHP，则会显示类似于以下内容的消息：
 
 ```terminal
 PHP 7.4.0 (cli) (built: Aug 14 2019 16:42:46) ( NTS )
@@ -34,10 +34,10 @@ Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies with Zend OPcache v7.1.6, Copyright (c) 1999-2018, by Zend Technologies
 ```
 
-Adobe Commerce和Magento Open Source2.4与PHP 7.3兼容，但我们使用PHP 7.4进行测试，并建议使用。
+Adobe Commerce和Magento Open Source2.4与PHP 7.3兼容，但我们使用PHP 7.4进行测试并建议使用。
 
-如果未安装PHP，或者需要版本升级，请按照针对您的特定Linux风格的说明安装它。
-在CentOS上， [可能需要执行其他步骤](https://wiki.centos.org/HowTos/php7).
+如果未安装PHP，或需要版本升级，请按照针对特定Linux版本的说明进行安装。
+在CentOS上， [可能需要其他步骤](https://wiki.centos.org/HowTos/php7).
 
 ## 验证已安装的扩展
 
@@ -54,7 +54,7 @@ Adobe Commerce和Magento Open Source需要安装一组扩展。
    ```
 
 1. 验证是否已安装所有必需的扩展。
-1. 使用用于安装PHP的相同工作流添加任何缺失的模块。 例如，如果您使用 `yum` 要安装PHP，可以将PHP 7.4模块添加为：
+1. 使用用于安装PHP的相同工作流添加任何缺少的模块。 例如，如果您使用 `yum` 要安装PHP，可以将PHP 7.4模块添加为：
 
    ```bash
     yum -y install php74u-pdo php74u-mysqlnd php74u-opcache php74u-xml php74u-gd php74u-devel php74u-mysql php74u-intl php74u-mbstring php74u-bcmath php74u-json php74u-iconv php74u-soap
@@ -64,9 +64,9 @@ Adobe Commerce和Magento Open Source需要安装一组扩展。
 
 >[!WARNING]
 >
->如果您使用的是PHP 7.4.20，请设置 `pcre.jit=0` 在您的 `php.ini` 文件。 这可以绕过PHP [错误](https://bugs.php.net/bug.php?id=81101) 可阻止CSS加载。
+>如果您使用的是PHP 7.4.20，请设置 `pcre.jit=0` 在您的 `php.ini` 文件。 这围绕PHP [错误](https://bugs.php.net/bug.php?id=81101) 可阻止CSS加载。
 
-- 为PHP设置系统时区；否则，在安装期间显示以下错误以及与时间相关的操作（如cron ）可能无法工作：
+- 为PHP设置系统时区；否则，安装期间显示的以下错误以及与时间相关的操作（如cron ）可能无法工作：
 
 ```terminal
 PHP Warning:  date(): It is not safe to rely on the system's timezone settings. [more messages follow]
@@ -76,7 +76,7 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
   我们的详细建议包括：
 
-   - 编译代码或部署静态资产， `1G`
+   - 编译代码或部署静态资源， `1G`
    - 调试， `2G`
    - 测试， `~3-4G`
 
@@ -87,7 +87,7 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
   realpath_cache_ttl=7200
   ```
 
-  这些设置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找文件。 参见 [性能调整](https://www.php.net/manual/en/ini.core.php) 在PHP文档中。
+  这些设置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找文件。 请参阅 [性能调整](https://www.php.net/manual/en/ini.core.php) 在PHP文档中。
 
 - 启用 [`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments)，它是Adobe Commerce和Magento Open Source2.1及更高版本所必需的。
 
@@ -97,7 +97,7 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 >[!NOTE]
 >
->为避免在安装和升级过程中出现问题，我们强烈建议您对PHP命令行配置和PHP Web服务器插件配置应用相同的PHP设置。 有关更多信息，请参阅下一节。
+>为避免在安装和升级过程中出现问题，我们强烈建议您对PHP命令行配置和PHP Web服务器插件配置应用相同的PHP设置。 有关更多信息，请参阅下一部分。
 
 ## 查找PHP配置文件
 
@@ -109,7 +109,7 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 ![PHP信息页](../../assets/installation/config_phpini-webserver.png)
 
-要找到PHP命令行配置，请输入
+要定位PHP命令行配置，请输入
 
 ```bash
 php --ini | grep "Loaded Configuration File"
@@ -117,19 +117,19 @@ php --ini | grep "Loaded Configuration File"
 
 >[!NOTE]
 >
->如果您只有一个 `php.ini` 文件，在该文件中进行更改。 如果您拥有两个 `php.ini` 文件，进行更改 *所有* 文件。 如果不这样做，可能会导致性能不可预测。
+>如果您只有一个 `php.ini` 文件，在该文件中进行更改。 如果您拥有两个 `php.ini` 文件，进行更改 *所有* 文件。 否则，可能会导致性能不可预测。
 
 ### 查找OPcache配置设置
 
 PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决于您的操作系统和PHP版本。 OPcache配置文件可能具有 `opcache` 部分或设置，如 `opcache.enable`.
 
-请遵循以下准则来查找它：
+请使用以下指南查找它：
 
 - Apache Web Server：
 
   对于带有Apache的Ubuntu，OPcache设置通常位于 `php.ini` 文件。
 
-  对于具有Apache或nginx的CentOS，OPcache设置通常位于 `/etc/php.d/opcache.ini`
+  对于带有Apache或nginx的CentOS，OPcache设置通常位于 `/etc/php.d/opcache.ini`
 
   如果没有，请使用以下命令找到它：
 
@@ -155,7 +155,7 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决
 
 1. 添加您在步骤2中找到的时区设置。
 
-1. 更改值 `memory_limit` 更改为本节开头推荐的值之一。
+1. 更改的值 `memory_limit` 更改为本节开头推荐的值之一。
 
    例如，
 
@@ -191,7 +191,7 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决
    - `php.ini` （乌本图）
    - `/etc/php/7.2/fpm/php.ini` (nginx web服务器（CentOS或Ubuntu）)
 
-1. 查找 `opcache.save_comments` 并在必要时取消注释。
+1. 定位 `opcache.save_comments` 并在必要时取消评论。
 1. 确保其值设置为 `1`.
 1. 保存更改并退出文本编辑器。
 1. 重新启动Web服务器：
@@ -200,9 +200,9 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决
    - Apache、CentOS： `service httpd restart`
    - Nginx、Ubuntu和CentOS： `service nginx restart`
 
-## 疑难解答
+## 故障排除
 
-请参阅以下Adobe Commerce支持文章，以获得解决PHP问题的帮助：
+有关解决PHP问题的帮助，请参阅以下Adobe Commerce支持文章：
 
 - [在浏览器中访问Adobe Commerce时，出现PHP版本错误或404错误](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
 - [PHP设置错误](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)

@@ -1,11 +1,11 @@
 ---
 title: 发布计划
-description: 了解Adobe计划何时宣布发布Adobe Commerce的实质性新功能。
+description: 了解 Adobe 打算何时发布 Adobe Commerce 重大的新功能。
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
 source-git-commit: 12b4f619673414f18d9697450e867681c6cb3194
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -63,7 +63,7 @@ Adobe版本 [补丁程序](versioning-policy.md#patch-release) 对于核心Adobe
   </tr>
   <tr>
     <td>2024年3月19日</td>
-    <td>--</td>
+    <td>—</td>
     <td><img alt="“补丁版本”图标" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Beta补丁</a>：2.4.7-beta3</td>
   </tr>
   <tr>

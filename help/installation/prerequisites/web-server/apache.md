@@ -15,7 +15,7 @@ Adobe Commerce支持Apache 2.4.x。
 
 ## Apache必需指令
 
-1. 设置 `AllowEncodedSlashes` 在服务器配置（全局）或虚拟主机配置中，以避免解码可能导致URL问题的编码斜杠。 例如，当通过API在SKU中检索具有斜杠的产品时，不希望进行转换。 示例块不完整，需要其他指令。
+1. 设置 `AllowEncodedSlashes` 在服务器配置（全局）或虚拟主机配置中，避免解码可能导致URL问题的编码斜杠。 例如，当通过API在SKU中检索具有斜杠的产品时，不希望进行转换。 示例块不完整，需要其他指令。
 
    ```conf
    <VirtualHost *:443>
@@ -26,17 +26,17 @@ Adobe Commerce支持Apache 2.4.x。
 
 ## Apache重写和htaccess
 
-本主题讨论如何启用Apache 2.4重写并指定 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
+本主题讨论如何启用Apache 2.4重写并指定设置 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
 
-Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 为Apache提供目录级说明。 以下说明也包含在本主题的所有其他部分中。
+Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 以提供Apache的目录级说明。 以下说明也包含在本主题的所有其他部分中。
 
-使用此部分可启用Apache 2.4重写并指定 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
+使用此部分可启用Apache 2.4重写，并指定 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
 
-Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 为Apache提供目录级说明。
+Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 以提供Apache的目录级说明。
 
 >[!NOTE]
 >
->无法启用这些设置通常会导致您的店面或管理员上不显示任何样式。
+>如果未启用这些设置，通常会导致您的店面或管理员上不显示任何样式。
 
 1. 启用Apache重写模块：
 
@@ -70,9 +70,8 @@ Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 为Apac
 
    >[!NOTE]
    >
-   >- 如果您从较早的Apache版本升级，请首先查找 `<Directory "/var/www/html">` 或 `<Directory "/var/www">` 在 `000-default.conf`.
-   >- 您必须更改 `AllowOverride` 在要安装Adobe Commerce或Magento Open Source软件的目录的指令中。 例如，要安装在Web服务器docroot中，请编辑 `<Directory /var/www>`.
-
+   >- 如果您从早期的Apache版本升级，请首先查找 `<Directory "/var/www/html">` 或 `<Directory "/var/www">` 在 `000-default.conf`.
+   >- 您必须更改以下项的值： `AllowOverride` 在用于您希望安装Adobe Commerce或Magento Open Source软件的目录的指令中。 例如，要在Web服务器docroot中安装，请编辑 `<Directory /var/www>`.
 
 >[!NOTE]
 >
@@ -104,7 +103,7 @@ Server version: Apache/2.4.04 (Ubuntu)
 Server built: Jul 22 2020 14:35:32
 ```
 
-- 如果Apache是 *非* 已安装，请参见：
+- 如果Apache是 *非* 已安装，请参阅：
    - [在Ubuntu上安装或升级Apache](#installing-apache-on-ubuntu)
    - [在CentOS上安装Apache](#installing-apache-on-centos)
 
@@ -185,9 +184,9 @@ Server built: Jul 22 2020 14:35:32
 
 ## 在CentOS上安装Apache
 
-Adobe Commerce和Magento Open Source需要Apache使用server rewrites。 您还必须指定可以在以下位置使用的指令类型： `.htaccess`，应用程序使用它来指定重写规则。
+Adobe Commerce和Magento Open Source要求使用Apache server rewrites。 还必须指定可在以下位置使用的指令类型： `.htaccess`，应用程序使用该参数来指定重写规则。
 
-安装和配置Apache基本上是一个三步过程：安装软件、启用重写并指定 `.htaccess` 指令。
+安装和配置Apache基本上分为三步：安装软件、启用重写并指定 `.htaccess` 指令。
 
 ### 安装Apache
 
@@ -203,7 +202,7 @@ Adobe Commerce和Magento Open Source需要Apache使用server rewrites。 您还�
    httpd -v
    ```
 
-   显示类似于以下内容的消息以确认安装成功：
+   类似于以下内容的消息显示以确认安装成功：
 
    ```terminal
    Server version: Apache/2.4.40 (Unix)
@@ -230,7 +229,7 @@ Adobe Commerce和Magento Open Source需要Apache使用server rewrites。 您还�
    <Directory "/var/www/html">
    ```
 
-1. 更改值 `AllowOverride` 到 `All`.
+1. 更改的值 `AllowOverride` 到 `All`.
 
    例如，
 
@@ -245,7 +244,7 @@ Adobe Commerce和Magento Open Source需要Apache使用server rewrites。 您还�
 
    >[!NOTE]
    >
-   >以下项的先前值 `Order` 可能并非在所有情况下都有效。 有关更多信息，请参阅Apache文档([2.4](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order))。
+   >前面的值 `Order` 可能并非在所有情况下都有效。 有关更多信息，请参阅Apache文档([2.4](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order))。
 
 1. 保存文件并退出文本编辑器。
 
@@ -257,7 +256,7 @@ Adobe Commerce和Magento Open Source需要Apache使用server rewrites。 您还�
 
 >[!NOTE]
 >
->无法启用这些设置通常会导致您的店面或管理员上不显示任何样式。
+>如果未启用这些设置，通常会导致您的店面或管理员上不显示任何样式。
 
 ### 为Ubuntu启用重写和.htaccess
 
@@ -271,7 +270,7 @@ Adobe Commerce和Magento Open Source需要Apache使用server rewrites。 您还�
 
    `<Directory "/var/www/html">`
 
-1. 更改值 `AllowOverride` 到 `All`.
+1. 更改的值 `AllowOverride` 到 `All`.
 
    例如：
 
@@ -323,4 +322,4 @@ Adobe Commerce和Magento Open Source需要Apache使用server rewrites。 您还�
 
 >[!NOTE]
 >
->以下项的先前值 `Order` 可能并非在所有情况下都有效。 欲了解更多信息，请参见 [Apache文档](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
+>前面的值 `Order` 可能并非在所有情况下都有效。 欲了解更多信息，请参见 [Apache文档](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).

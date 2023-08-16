@@ -5,12 +5,12 @@ source-wordcount: '1321'
 ht-degree: 0%
 
 ---
-# 社区投稿
+# 社区贡献
 
-| 投稿社区成员 | 拉取请求 | 相关的GitHub问题 |
+| 参与社区成员 | 拉取请求 | 相关的GitHub问题 |
 | ------- | ------- | ------- |
 | hostep | [magento/magento2#34873](https://github.com/magento/magento2/pull/34873) | [magento/magento-beta#47](https://github.com/magento/magento-beta/issues/47) |
-| hostep | [magento/magento2#34555](https://github.com/magento/magento2/pull/34555) | [bitExpert/phstan-magento#152](https://github.com/bitExpert/phpstan-magento/issues/152) |
+| hostep | [magento/magento2#34555](https://github.com/magento/magento2/pull/34555) | [bitExpert/phpstan-magento#152](https://github.com/bitExpert/phpstan-magento/issues/152) |
 | 凯特 — 姬玛 | [magento/magento2#34491](https://github.com/magento/magento2/pull/34491) | [magento/magento2#34579](https://github.com/magento/magento2/issues/34579) |
 | 凯特 — 姬玛 | [magento/magento2#34470](https://github.com/magento/magento2/pull/34470) | [magento/magento2#34490](https://github.com/magento/magento2/issues/34490) |
 | 凯特 — 姬玛 | [magento/magento2#34419](https://github.com/magento/magento2/pull/34419) | [magento/magento2#34422](https://github.com/magento/magento2/issues/34422) |
@@ -22,7 +22,7 @@ ht-degree: 0%
 | 凯特 — 姬玛 | [magento/magento2#34298](https://github.com/magento/magento2/pull/34298) | [magento/magento2#34512](https://github.com/magento/magento2/issues/34512) |
 | mrtuvn | [magento/magento2#34290](https://github.com/magento/magento2/pull/34290) | [magento/magento2#34467](https://github.com/magento/magento2/issues/34467) |
 | 凯特 — 姬玛 | [magento/magento2#34256](https://github.com/magento/magento2/pull/34256) | [magento/magento2#34317](https://github.com/magento/magento2/issues/34317) |
-| vovsky | [magento/magento2#34207](https://github.com/magento/magento2/pull/34207) | [magento/magento2#32948](https://github.com/magento/magento2/issues/32948) [magento/magento2#26254](https://github.com/magento/magento2/issues/26254) |
+| 沃夫斯基 | [magento/magento2#34207](https://github.com/magento/magento2/pull/34207) | [magento/magento2#32948](https://github.com/magento/magento2/issues/32948) [magento/magento2#26254](https://github.com/magento/magento2/issues/26254) |
 | 弗雷登 | [magento/magento2#34185](https://github.com/magento/magento2/pull/34185) | [magento/magento2#34513](https://github.com/magento/magento2/issues/34513) |
 | 亚斯尼乌欣 | [magento/magento2#34148](https://github.com/magento/magento2/pull/34148) | [magento/magento2#34130](https://github.com/magento/magento2/issues/34130) |
 | 凯特 — 姬玛 | [magento/magento2#34113](https://github.com/magento/magento2/pull/34113) | [magento/magento2#34316](https://github.com/magento/magento2/issues/34316) |
@@ -33,10 +33,10 @@ ht-degree: 0%
 | AnnaAPak | [magento/magento2#34022](https://github.com/magento/magento2/pull/34022) | [magento/magento2#34315](https://github.com/magento/magento2/issues/34315) |
 | sagar2009kumar | [magento/magento2#34001](https://github.com/magento/magento2/pull/34001) | [magento/magento2#34067](https://github.com/magento/magento2/issues/34067) |
 | 巴舍夫 | [magento/magento2#34000](https://github.com/magento/magento2/pull/34000) | [magento/magento2#33996](https://github.com/magento/magento2/issues/33996) |
-| thlassche | [magento/magento2#33998](https://github.com/magento/magento2/pull/33998) | [magento/magento2#34024](https://github.com/magento/magento2/issues/34024) [magento/magento2#34025](https://github.com/magento/magento2/issues/34025) |
+| 塔拉什 | [magento/magento2#33998](https://github.com/magento/magento2/pull/33998) | [magento/magento2#34024](https://github.com/magento/magento2/issues/34024) [magento/magento2#34025](https://github.com/magento/magento2/issues/34025) |
 | LyraGhost | [magento/magento2#33948](https://github.com/magento/magento2/pull/33948) | [magento/magento2#34338](https://github.com/magento/magento2/issues/34338) |
 | DmitryFurs | [magento/magento2#33922](https://github.com/magento/magento2/pull/33922) | [magento/magento2#33924](https://github.com/magento/magento2/issues/33924) |
-| 伊霍尔 — 斯维齐耶夫 | [magento/magento2#33903](https://github.com/magento/magento2/pull/33903) | [magento/magento2#33928](https://github.com/magento/magento2/issues/33928) [magento/magento2#23324](https://github.com/magento/magento2/issues/23324) |
+| 伊霍尔 — 斯维济耶夫 | [magento/magento2#33903](https://github.com/magento/magento2/pull/33903) | [magento/magento2#33928](https://github.com/magento/magento2/issues/33928) [magento/magento2#23324](https://github.com/magento/magento2/issues/23324) |
 | 收入 | [magento/magento2#33886](https://github.com/magento/magento2/pull/33886) | [magento/magento2#33680](https://github.com/magento/magento2/issues/33680) [magento/magento2#33755](https://github.com/magento/magento2/issues/33755) [magento/magento2#33945](https://github.com/magento/magento2/issues/33945) |
 | NetStorm84 | [magento/magento2#33874](https://github.com/magento/magento2/pull/33874) | [magento/magento2#34008](https://github.com/magento/magento2/issues/34008) [magento/merchdocs#1686](https://github.com/magento/merchdocs/issues/1686) |
 | 沃瓦亚秋克 | [magento/magento2#33851](https://github.com/magento/magento2/pull/33851) | [magento/magento2#34483](https://github.com/magento/magento2/issues/34483) |
@@ -44,15 +44,15 @@ ht-degree: 0%
 | 马尔文欣茨 | [magento/magento2#33726](https://github.com/magento/magento2/pull/33726) | [magento/magento2#33760](https://github.com/magento/magento2/issues/33760) [magento/magento2#33908](https://github.com/magento/magento2/issues/33908) |
 | SilinMykola | [magento/magento2#33682](https://github.com/magento/magento2/pull/33682) | [magento/magento2#33589](https://github.com/magento/magento2/issues/33589) |
 | AnnaAPak | [magento/magento2#33662](https://github.com/magento/magento2/pull/33662) | [magento/magento2#33689](https://github.com/magento/magento2/issues/33689) |
-| 巴尔特洛米耶什 | [magento/magento2#33658](https://github.com/magento/magento2/pull/33658) | [magento/magento2#33839](https://github.com/magento/magento2/issues/33839) |
-| 塞尔吉耶维奇 — v | [magento/magento2#33530](https://github.com/magento/magento2/pull/33530) | [magento/magento2#33531](https://github.com/magento/magento2/issues/33531) |
+| 巴尔特洛米耶斯 | [magento/magento2#33658](https://github.com/magento/magento2/pull/33658) | [magento/magento2#33839](https://github.com/magento/magento2/issues/33839) |
+| 塞尔吉维耶夫 | [magento/magento2#33530](https://github.com/magento/magento2/pull/33530) | [magento/magento2#33531](https://github.com/magento/magento2/issues/33531) |
 | qsolutions-pl | [magento/magento2#33487](https://github.com/magento/magento2/pull/33487) | [magento/magento2#33486](https://github.com/magento/magento2/issues/33486) |
-| 吉特希 | [magento/magento2#33468](https://github.com/magento/magento2/pull/33468) | [fastly/fastly-magento2#466](https://github.com/fastly/fastly-magento2/issues/466) [magento/magento2#28102](https://github.com/magento/magento2/issues/28102) [magento/magento2#6401](https://github.com/magento/magento2/issues/6401) |
-| monteshot | [magento/magento2#33449](https://github.com/magento/magento2/pull/33449) | [magento/magento2#33334](https://github.com/magento/magento2/issues/33334) |
+| 吉泰什 | [magento/magento2#33468](https://github.com/magento/magento2/pull/33468) | [fastly/fastly-magento2#466](https://github.com/fastly/fastly-magento2/issues/466) [magento/magento2#28102](https://github.com/magento/magento2/issues/28102) [magento/magento2#6401](https://github.com/magento/magento2/issues/6401) |
+| 蒙特肖特 | [magento/magento2#33449](https://github.com/magento/magento2/pull/33449) | [magento/magento2#33334](https://github.com/magento/magento2/issues/33334) |
 | AnnaAPak | [magento/magento2#33431](https://github.com/magento/magento2/pull/33431) | [magento/magento2#33635](https://github.com/magento/magento2/issues/33635) |
-| 伊霍尔 — 斯维齐耶夫 | [magento/magento2#33419](https://github.com/magento/magento2/pull/33419) | [magento/magento2#34166](https://github.com/magento/magento2/issues/34166) |
+| 伊霍尔 — 斯维济耶夫 | [magento/magento2#33419](https://github.com/magento/magento2/pull/33419) | [magento/magento2#34166](https://github.com/magento/magento2/issues/34166) |
 | sippsolutions | [magento/magento2#33369](https://github.com/magento/magento2/pull/33369) | [magento/magento2#34451](https://github.com/magento/magento2/issues/34451) |
-| 伊霍尔 — 斯维齐耶夫 | [magento/magento2#33324](https://github.com/magento/magento2/pull/33324) | [克拉维约/magento2 — 克拉维约#133](https://github.com/klaviyo/magento2-klaviyo/issues/133) [magento/magento2#33675](https://github.com/magento/magento2/issues/33675) [magento/magento2#33676](https://github.com/magento/magento2/issues/33676) |
+| 伊霍尔 — 斯维济耶夫 | [magento/magento2#33324](https://github.com/magento/magento2/pull/33324) | [克拉维约/magento2 — 克拉维约#133](https://github.com/klaviyo/magento2-klaviyo/issues/133) [magento/magento2#33675](https://github.com/magento/magento2/issues/33675) [magento/magento2#33676](https://github.com/magento/magento2/issues/33676) |
 | jasperzeinstra | [magento/magento2#33227](https://github.com/magento/magento2/pull/33227) | [magento/magento2#33984](https://github.com/magento/magento2/issues/33984) |
 | 凯特 — 姬玛 | [magento/magento2#33218](https://github.com/magento/magento2/pull/33218) | [magento/magento2#33556](https://github.com/magento/magento2/issues/33556) |
 | 凯特 — 姬玛 | [magento/magento2#33214](https://github.com/magento/magento2/pull/33214) | [magento/magento2#33806](https://github.com/magento/magento2/issues/33806) |
@@ -66,10 +66,10 @@ ht-degree: 0%
 | bradleybrecher | [magento/magento2#33067](https://github.com/magento/magento2/pull/33067) | [magento/magento2#33075](https://github.com/magento/magento2/issues/33075) |
 | 英格康福斯特罗 | [magento/magento2#33001](https://github.com/magento/magento2/pull/33001) | [magento/magento2#32596](https://github.com/magento/magento2/issues/32596) |
 | DmitryTsymbal | [magento/magento2#32986](https://github.com/magento/magento2/pull/32986) | [magento/magento2#32991](https://github.com/magento/magento2/issues/32991) |
-| 微调员 | [magento/magento2#32891](https://github.com/magento/magento2/pull/32891) | [magento/magento2#32885](https://github.com/magento/magento2/issues/32885) |
-| blmage | [magento/magento2#32818](https://github.com/magento/magento2/pull/32818) | [magento/magento2#33434](https://github.com/magento/magento2/issues/33434) |
+| 改头换面 | [magento/magento2#32891](https://github.com/magento/magento2/pull/32891) | [magento/magento2#32885](https://github.com/magento/magento2/issues/32885) |
+| 蓝图 | [magento/magento2#32818](https://github.com/magento/magento2/pull/32818) | [magento/magento2#33434](https://github.com/magento/magento2/issues/33434) |
 | MJTheOne | [magento/magento2#32814](https://github.com/magento/magento2/pull/32814) | [magento/magento2#32819](https://github.com/magento/magento2/issues/32819) |
-| 伊霍尔 — 斯维齐耶夫 | [magento/magento2#32808](https://github.com/magento/magento2/pull/32808) | [magento/magento2#32954](https://github.com/magento/magento2/issues/32954) |
+| 伊霍尔 — 斯维济耶夫 | [magento/magento2#32808](https://github.com/magento/magento2/pull/32808) | [magento/magento2#32954](https://github.com/magento/magento2/issues/32954) |
 | Usik2203 | [magento/magento2#32792](https://github.com/magento/magento2/pull/32792) | [magento/magento2#32821](https://github.com/magento/magento2/issues/32821) |
 | 弗雷登 | [magento/magento2#32720](https://github.com/magento/magento2/pull/32720) | [magento/magento2#34356](https://github.com/magento/magento2/issues/34356) |
 | bgorski | [magento/magento2#32637](https://github.com/magento/magento2/pull/32637) | [magento/magento2#32636](https://github.com/magento/magento2/issues/32636) |
@@ -80,7 +80,7 @@ ht-degree: 0%
 | 凯特 — 姬玛 | [magento/magento2#32112](https://github.com/magento/magento2/pull/32112) | [magento/magento2#33775](https://github.com/magento/magento2/issues/33775) |
 | 凯特 — 姬玛 | [magento/magento2#31963](https://github.com/magento/magento2/pull/31963) | [magento/magento2#33783](https://github.com/magento/magento2/issues/33783) |
 | 方便 | [magento/magento2#31879](https://github.com/magento/magento2/pull/31879) | [maritos/magento2-performance-fixes#4](https://github.com/maritos/magento2-performance-fixes/issues/4) |
-| nige-one | [magento/magento2#31654](https://github.com/magento/magento2/pull/31654) | [magento/magento2#30948](https://github.com/magento/magento2/issues/30948) |
+| 奈日 | [magento/magento2#31654](https://github.com/magento/magento2/pull/31654) | [magento/magento2#30948](https://github.com/magento/magento2/issues/30948) |
 | 基莫罗佐夫 | [magento/magento2#31613](https://github.com/magento/magento2/pull/31613) | [magento/magento2#33809](https://github.com/magento/magento2/issues/33809) |
 | mrtuvn | [magento/magento2#31413](https://github.com/magento/magento2/pull/31413) | [magento/magento2#31379](https://github.com/magento/magento2/issues/31379) |
 | dani97 | [magento/magento2#30995](https://github.com/magento/magento2/pull/30995) | [magento/magento2#31019](https://github.com/magento/magento2/issues/31019) [magento/magento2#32625](https://github.com/magento/magento2/issues/32625) [magento/magento2#33696](https://github.com/magento/magento2/issues/33696) |
@@ -88,4 +88,4 @@ ht-degree: 0%
 | 凯特 — 姬玛 | [magento/magento2#30562](https://github.com/magento/magento2/pull/30562) | [magento/magento2#33774](https://github.com/magento/magento2/issues/33774) |
 | Usik2203 | [magento/magento2#30526](https://github.com/magento/magento2/pull/30526) | [magento/magento2#33773](https://github.com/magento/magento2/issues/33773) |
 | hws47a | [magento/magento2#30001](https://github.com/magento/magento2/pull/30001) | [magento/magento-semver#50](https://github.com/magento/magento-semver/issues/50) |
-| 菲利普桑德 | [magento/magento2#27212](https://github.com/magento/magento2/pull/27212) | [magento/magento2#29609](https://github.com/magento/magento2/issues/29609) |
+| 菲利普桑德尔 | [magento/magento2#27212](https://github.com/magento/magento2/pull/27212) | [magento/magento2#29609](https://github.com/magento/magento2/issues/29609) |

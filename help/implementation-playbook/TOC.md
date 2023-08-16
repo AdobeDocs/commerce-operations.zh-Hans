@@ -1,11 +1,11 @@
 ---
 user-guide-title: 实施行动手册
-user-guide-description: 了解规划和实施成功的Adobe Commerce站点的策略。
+user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
 source-git-commit: 5aa1669e556e5b7bf5ed3777db0f026ccfff5e70
 workflow-type: tm+mt
 source-wordcount: '269'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 - 开发 {#development}
    - [平台工具](development/platform-tools.md)
    - [项目管理工具](development/project-management-tools.md)
-   - [项目实施方法](development/delivery.md)
+   - [项目执行方法](development/delivery.md)
    - [质量控制](development/quality-control.md)
 - 规划和治理 {#planning}
    - [交付和规划方法](planning/delivery.md)
@@ -42,7 +42,7 @@ ht-degree: 0%
       - [历程到Headless](architecture/headless/journey-to-headless.md)
       - [微服务](architecture/headless/microservices.md)
       - [Headless的演变](architecture/headless/evolution.md)
-      - [耦合店面架构](architecture/headless/legacy-storefront.md)
+      - [耦合的店面体系结构](architecture/headless/legacy-storefront.md)
       - [Headless体系结构](architecture/headless/adobe-commerce.md)
 - 基础架构和部署 {#infrastructure}
    - [概述](infrastructure/overview.md)
@@ -71,16 +71,16 @@ ht-degree: 0%
    - [启动后步骤](launch/post-launch-steps.md)
 - 维护和支持 {#maintenance}
    - [概述](maintenance/overview.md)
-   - [Adobe Managed Services](maintenance/adobe-managed-services.md)
+   - [AdobeManaged Services](maintenance/adobe-managed-services.md)
 - 最佳实践 {#best-practices}
    - [概述](best-practices/phases.md)
    - 规划 {#planning}
       - [概述](best-practices/planning/overview.md)
-      - [站点、商店和存储视图配置](best-practices/planning/sites-stores-store-views.md)
+      - [站点、商店和商店视图配置](best-practices/planning/sites-stores-store-views.md)
       - [报告配置](best-practices/planning/reporting-configuration.md)
       - [云部署的数据库配置&#x200B;。](best-practices/planning/database-on-cloud.md)
       - [MySQL从属连接配置&#x200B;](best-practices/planning/configure-mysql-slave-connection-on-cloud.md)
-      - [MySQL触发器使用情况](best-practices/planning/mysql-triggers-usage.md)
+      - [MySQL触发器使用](best-practices/planning/mysql-triggers-usage.md)
       - [Redis服务配置](best-practices/planning/redis-service-configuration.md)
       - [OPcache内存大小](best-practices/planning/opcache-memory-size.md)
       - [Realpath缓存大小](best-practices/planning/realpath-cache-size.md)
@@ -93,12 +93,12 @@ ht-degree: 0%
       - [产品购物车限制](best-practices/planning/product-cart.md)
       - [促销活动](best-practices/planning/product-cart-promotions.md)
       - [扩展](best-practices/planning/extensions.md)
-      - [合作伙伴呈报](best-practices/planning/partner-escalation.md)
+      - [合作伙伴升级](best-practices/planning/partner-escalation.md)
       - [支付存储处理](best-practices/planning/payment-processing-storage.md)
    - 开发 {#development}
       - [概述](best-practices/development/overview.md)
       - [图像优化](best-practices/development/image-optimization.md)
-      - [疑难解答](best-practices/development/troubleshooting.md)
+      - [故障排除](best-practices/development/troubleshooting.md)
       - [优化CSS和JS文件](best-practices/development/optimize-css-js-files.md)
       - [私有内容块](best-practices/development/private-content-block-configuration.md)
       - [静态内容部署](best-practices/development/static-content-deployment.md)

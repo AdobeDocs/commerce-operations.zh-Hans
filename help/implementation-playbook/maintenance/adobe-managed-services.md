@@ -1,6 +1,6 @@
 ---
-title: Adobe Managed Services
-description: 了解Adobe Managed Services如何帮助支持和维护Adobe Commerce实施。
+title: AdobeManaged Services
+description: 了解AdobeManaged Services如何帮助支持和维护Adobe Commerce实施。
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
@@ -11,37 +11,37 @@ ht-degree: 0%
 ---
 
 
-# Adobe Managed Services
+# AdobeManaged Services
 
 Adobe Commerce是一个用于提供电子商务功能的平台，其中包括强大的开箱即用功能、广泛的自定义选项和第三方集成。
 
-Adobe Managed Services在云基础架构Pro计划上为Adobe Commerce提供托管和托管应用程序和基础架构。
+AdobeManaged Services在云基础架构Pro计划上为Adobe Commerce提供托管和托管应用程序和基础架构。
 
 ## 优点
 
-![显示Adobe Managed Services优势的信息图表](../../assets/playbooks/managed-services-benefits.png)
+![显示AdobeManaged Services的好处的信息图表](../../assets/playbooks/managed-services-benefits.png)
 
 ### 实施选项的比较
 
-与内部部署和非托管云实施相比，Adobe Managed Services可提供以下主要优势：
+与内部部署和非托管云实施相比，AdobeManaged Services可提供以下主要优势：
 
 - **增强的服务水平目标(SLT)** — 响应时间比标准Adobe Commerce支持快。
-- **增强的服务水平协议(SLA)** — 应用程序级别为99.9% ，即常规Adobe Commerce on cloud infrastructure客户在99.99%的基础架构级别之上获得优势。
-- **指定的云专业知识**—Managed Services为客户指定一名客户成功工程师(CSE)，该工程师是应用程序和云基础架构的专家。 CSE与客户及其合作伙伴合作，为他们提供最佳做法和指导，以加快上市时间，其中包括：
-   - 指导和支持整个载入流程
+- **增强的服务水平协议(SLA)** — 在99.99%的基础架构级别上，常规云基础架构上的Adobe Commerce客户可获得99.9%的应用程序级别。
+- **指定的云专业知识**—Managed Services为客户提供指定的客户成功工程师(CSE)，作为应用程序和云基础架构专家。 CSE与客户及其合作伙伴合作，为他们提供最佳做法和指导，以加快产品上市速度，其中包括：
+   - 指导和支持入门流程
    - 管理配置和平台设置
-   - 就集成和自定义的体系结构原则提供建议
+   - 就集成和自定义的架构原则提供建议
    - 推动事件管理和业务连续性
    - 通过规划、执行和监控提供事件支持
    - 云支持和专业知识（主动优化、报告和最佳实践）
 
-查看以下信息图表，更详细地比较Managed Services的主要优势：
+请查看以下信息图表，更详细地比较Managed Services的主要优势：
 
-![显示Adobe Managed Services与其他Adobe Commerce实施选项比较的信息图表](../../assets/playbooks/managed-services-compare.png)
+![信息图显示了AdobeManaged Services与其他Adobe Commerce实施选项的比较](../../assets/playbooks/managed-services-compare.png)
 
 ## 角色和职责
 
-Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存和生产提供了一系列服务。 为了尽可能高效地开发和部署解决方案，客户和合作伙伴必须理解并履行其职责，如下所述：
+Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存和生产提供了一系列服务。 为了尽可能高效地开发和部署解决方案，客户和合作伙伴必须理解并履行其职责，如以下所述：
 
 <table>
     <thead>
@@ -63,13 +63,13 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
             <td>顾问</td>
         </tr>
         <tr>
-            <td>实例配置</td>
+            <td>实例设置</td>
             <td></td>
             <td></td>
             <td>所有者</td>
         </tr>
         <tr>
-            <td>内部网络配置和安全性</td>
+            <td>内部网络配置和安全</td>
             <td></td>
             <td></td>
             <td>所有者</td>
@@ -213,13 +213,13 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
             <td colspan="4" style="background:lightgray;"><strong>生产</strong></td>
         </tr>
         <tr>
-            <td>生产基础架构监控</td>
+            <td>生产基础设施监控</td>
             <td></td>
             <td></td>
             <td>所有者</td>
         </tr>
         <tr>
-            <td>主体应用程序监控</td>
+            <td>主应用程序监控</td>
             <td>投稿人</td>
             <td>投稿人</td>
             <td>所有者</td>
@@ -231,7 +231,7 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
             <td>所有者</td>
         </tr>
         <tr>
-            <td>基础架构和操作系统级别的维护</td>
+            <td>基础设施和操作系统级维护</td>
             <td></td>
             <td></td>
             <td>所有者</td>
@@ -267,7 +267,7 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
             <td>顾问</td>
         </tr>
         <tr>
-            <td>调整生产基础结构</td>
+            <td>调整生产基础架构</td>
             <td>投稿人</td>
             <td>投稿人</td>
             <td>所有者</td>
@@ -370,19 +370,19 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
 
 ## 安全性
 
-Managed Services的Adobe安全栈栈使用自动化和一致性在各级构建安全性，以减少人为错误。 开发和运营团队会自动从栈栈的不同级别继承安全控制。
+Managed Services的Adobe安全栈栈使用自动化和一致性在中的每个级别构建安全性，以减少人为错误。 开发和操作团队自动从栈栈的不同级别继承安全控制。
 
-平台合作伙伴(如Amazon Web Services和Microsoft Azure)在应用平台自定义设置时可确保最大限度的安全覆盖，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 参见 [Adobe Commerce安全性](https://business.adobe.com/products/magento/secure-ecommerce.html) 了解更多信息。
+平台合作伙伴(如Amazon Web Services和Microsoft Azure)在应用平台自定义设置时可确保最大程度的安全保护，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 请参阅 [Adobe Commerce安全](https://business.adobe.com/products/magento/secure-ecommerce.html) 以了解更多信息。
 
-下图显示了Adobe Managed Services安全技术栈栈：
+下图显示了AdobeManaged Services安全技术栈栈：
 
-![显示Adobe Managed Services安全栈栈的图](../../assets/playbooks/managed-services-security-stack.svg)
+![显示AdobeManaged Services安全栈栈的图](../../assets/playbooks/managed-services-security-stack.svg)
 
 ## 升级帮助
 
-Managed Services团队在帮助规划和协助升级过程方面发挥着积极作用。 您的客户成功工程师(CSE)与升级项目团队合作，包括项目经理和开发人员(内部主题专家、Adobe认证合作伙伴或Adobe咨询的专业人员)，帮助您的团队在升级期间确保正确规划并遵守最佳实践。
+Managed Services团队在帮助规划和协助升级过程中将发挥积极作用。 您的客户成功工程师(CSE)与升级项目团队合作，包括项目经理和开发人员(内部主题专家、Adobe认证合作伙伴或Adobe咨询的专业人员)，帮助您的团队在升级期间确保正确规划和遵守最佳实践。
 
-Managed Services CSE已与Adobe Commerce客户合作，在大型环境中执行升级。 您的CSE可以帮助您利用专家知识来最大限度地提高升级成功率，同时最大限度地减少停机时间并降低总体风险。 此外，Managed Services CSE可与您的专用暂存环境配合升级，因此在验证升级时，现有生产流程不会受到影响。
+Managed Services CSE已与Adobe Commerce客户合作，在大型环境中执行升级。 您的CSE可以帮助您利用专家知识最大限度地提高升级成功率，同时最大限度地减少停机时间并降低总体风险。 此外，Managed Services CSE可与您的专用暂存环境一起进行升级，因此在验证升级时，现有生产流程不会受到影响。
 
 Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了一系列服务。 下表概述了每个参与者在升级过程中扮演的角色：
 
@@ -392,7 +392,7 @@ Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了�
     <th>步骤</th>
     <th>任务</th>
     <th>客户</th>
-    <th>开发合作伙伴*</th>
+    <th>开发伙伴*</th>
     <th>Managed Services</th>
   </tr>
 </thead>
@@ -408,7 +408,7 @@ Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了�
     <td>确定所需的基础架构更改</td>
     <td></td>
     <td>投稿人</td>
-    <td>所有者<br />CSE审查暂存和生产基础架构，以确保适当的规模调整。</td>
+    <td>所有者<br />CSE会审查暂存和生产基础架构，以确保适当的规模调整。</td>
   </tr>
   <tr>
     <td>评估升级复杂性<br />识别并记录包、问题和修复以及第三方和自定义模块</td>
@@ -418,10 +418,10 @@ Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了�
   </tr>
   <tr>
     <td rowspan="3">执行升级</td>
-    <td>升级基础架构服务<br />[MariaDB、Redis、Open Search和Rabbit MQ]（暂存和生产）</td>
+    <td>升级基础设施服务<br />[MariaDB、Redis、Open Search和Rabbit MQ]（暂存和生产）</td>
     <td></td>
     <td></td>
-    <td>所有者<br />CSE协调基础设施服务升级。<br />CSE安排会议活动以进行升级。<br />CSE有助于将数据从生产环境迁移到暂存环境。</td>
+    <td>所有者<br />CSE协调基础设施服务升级。<br />CSE为升级安排会议活动。<br />CSE有助于将数据从生产环境迁移到暂存环境。</td>
   </tr>
   <tr>
     <td>更新Commerce代码库和自定义项；代码重新编译和代码重构</td>
@@ -437,10 +437,10 @@ Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了�
   </tr>
   <tr>
     <td rowspan="3">UAT和Launch</td>
-    <td>运行性能测试和安全性测试</td>
+    <td>运行性能和安全性测试</td>
     <td>投稿人</td>
     <td>所有者</td>
-    <td>投稿人<br />CSE通过监控应用程序和基础架构的性能来帮助进行负载测试。<br />CSE有助于配置Commerce安全扫描工具。</td>
+    <td>投稿人<br />CSE通过监控应用程序和基础架构的性能来帮助进行负载测试。<br />CSE协助配置Commerce安全扫描工具。</td>
   </tr>
   <tr>
     <td>暂存时的用户验收测试</td>
@@ -449,7 +449,7 @@ Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了�
     <td>投稿人<br />CSE将验证升级后应用程序和基础架构是否正确执行。</td>
   </tr>
   <tr>
-    <td>从启动到生产</td>
+    <td>启动到生产</td>
     <td>投稿人</td>
     <td>所有者</td>
     <td>投稿人<br />CSE计划启动会议事件。</td>

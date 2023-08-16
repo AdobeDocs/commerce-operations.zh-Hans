@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 获取Adobe Commerce软件
 
-全世界有24万商家信任我们的电子商务软件，你们就是其中之一。 我们收集了一些信息以帮助您开始安装。
+全世界有24万商家信任我们的电子商务软件，你们就是其中之一。 我们已收集了一些信息以帮助您开始安装。
 
 ## 如何获取软件
 
@@ -32,10 +32,10 @@ ht-degree: 0%
         <td><p>希望完全控制已安装的所有组件，有权访问应用程序服务器，技术含量高，可能会将Magento Open Source与其他组件重新打包。</p>
         </td>
         <td><ol><li>创建编辑器 <em>项目</em> ，其中包含要使用的组件列表。</li>
-            <li>使用编辑器更新包依赖项；使用 <code>composer create-project</code> 以获取Composer的比喻。</li>
+            <li>使用编辑器更新包依赖项；使用 <code>composer create-project</code> 来获取“作曲者”的比喻。</li>
             <li>使用安装应用程序 <a href="../advanced.md">命令行</a>.</li>
         <li>使用升级应用程序和扩展  <a href="../../upgrade/implementation/perform-upgrade.md">命令行</a>.</li></ol></td>
-        <td><p><a href="../composer.md">获取暗喻</a></p></td>
+        <td><p><a href="../composer.md">获取隐喻</a></p></td>
     </tr>
     <tr>
         <td><p>参与开发人员</p></td>
@@ -44,9 +44,9 @@ ht-degree: 0%
       <p>您必须使用进行升级 <a href="../../upgrade/developer/git-installs.md">Composer和Git命令</a>.</p></td>
         <td><ol><li>克隆GitHub存储库。</li>
             <li>使用编辑器更新包依赖关系。</li>
-            <li>使用以下方式安装应用程序 <a href="../advanced.md">命令行</a>.</li>
+            <li>安装应用程序，使用 <a href="../advanced.md">命令行</a>.</li>
             <li>使用升级应用程序 <a href="../../upgrade/developer/git-installs.md">Composer和Git命令</a>.</li>
-            <li>自定义下的代码 <code>app/code</code> 目录。</li></ol></td>
+            <li>在下自定义代码 <code>app/code</code> 目录。</li></ol></td>
         <td><p><a href="https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/">克隆GitHub存储库</a></p></td>
     </tr>
     </tbody>
@@ -58,8 +58,8 @@ ht-degree: 0%
 
 ## 所需的服务器权限
 
-UNIX系统需要 `root` 安装和配置软件（如Web服务器PHP）的权限。 如果需要安装此软件，请确保您拥有 `root` 访问权限。
+UNIX系统需要 `root` 安装和配置软件（如Web服务器PHP）的权限。 如果需要安装此软件，请确保您已 `root` 访问权限。
 
 Do *非* 在web服务器docroot中安装应用程序，作为 `root` 用户，因为Web服务器可能无法与这些文件交互。
 
-您需要 `root` 创建 [文件系统所有者](file-system/overview.md) 并将该所有者添加到Web服务器的组中。 使用文件系统所有者运行 `bin/magento` 命令行中的命令，用于设置cron作业，从而为您安排任务。
+您需要 `root` 权限以创建 [文件系统所有者](file-system/overview.md) 并将该所有者添加到Web服务器的组中。 使用文件系统所有者运行 `bin/magento` 命令行中的命令和设置cron作业的命令，这些作业为您安排任务。
