@@ -2,10 +2,10 @@
 user-guide-title: 实施行动手册
 user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
-source-git-commit: 5aa1669e556e5b7bf5ed3777db0f026ccfff5e70
+source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 10%
+source-wordcount: '254'
+ht-degree: 11%
 
 ---
 
@@ -76,22 +76,14 @@ ht-degree: 10%
    - [概述](best-practices/phases.md)
    - 规划 {#planning}
       - [概述](best-practices/planning/overview.md)
+      - [目录管理](best-practices/planning/catalog-management.md)
       - [站点、商店和商店视图配置](best-practices/planning/sites-stores-store-views.md)
       - [报告配置](best-practices/planning/reporting-configuration.md)
       - [云部署的数据库配置&#x200B;。](best-practices/planning/database-on-cloud.md)
-      - [MySQL从属连接配置&#x200B;](best-practices/planning/configure-mysql-slave-connection-on-cloud.md)
-      - [MySQL触发器使用](best-practices/planning/mysql-triggers-usage.md)
+      - [MySQL配置](best-practices/planning/mysql-configuration.md)
       - [Redis服务配置](best-practices/planning/redis-service-configuration.md)
       - [OPcache内存大小](best-practices/planning/opcache-memory-size.md)
       - [Realpath缓存大小](best-practices/planning/realpath-cache-size.md)
-      - [类别](best-practices/planning/category-limits.md)
-      - [产品](best-practices/planning/product-sku-limits.md)
-      - [产品变体](best-practices/planning/product-variations.md)
-      - [产品选项](best-practices/planning/product-options.md)
-      - [产品属性](best-practices/planning/product-attributes-and-options.md)
-      - [产品列表分页](best-practices/planning/product-listing-pagination.md)
-      - [产品购物车限制](best-practices/planning/product-cart.md)
-      - [促销活动](best-practices/planning/product-cart-promotions.md)
       - [扩展](best-practices/planning/extensions.md)
       - [合作伙伴升级](best-practices/planning/partner-escalation.md)
       - [支付存储处理](best-practices/planning/payment-processing-storage.md)
@@ -112,10 +104,11 @@ ht-degree: 10%
       - [概述](best-practices/maintenance/overview.md)
       - [审核前端性能](best-practices/maintenance/frontend-performance.md)
       - [索引器配置](best-practices/maintenance/indexer-configuration.md)
+      - [大规模修补](best-practices/maintenance/patching-at-scale.md)
       - [订单处理](best-practices/maintenance/order-processing-configuration.md)
+      - [解决数据库性能问题](best-practices/maintenance/resolve-database-performance-issues.md)
       - [正在安排生产站点上的管理员更新](best-practices/maintenance/scheduling-admin-updates-in-production.md)
       - [更新服务](best-practices/maintenance/update-services.md)
       - [升级核对清单](best-practices/maintenance/upgrade-checklist.md)
-      - [解决数据库性能问题](best-practices/maintenance/resolve-database-performance-issues.md)
       - [升级MariaDB的先决条件](best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
 - [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

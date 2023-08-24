@@ -4,9 +4,9 @@ description: 了解如何在云基础架构上部署Adobe Commerce时配置数�
 role: Developer, Admin
 feature: Best Practices
 exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 - 触发器被解释为代码，并且MySQL不预编译它们。 挂接到查询的事务空间后，它们将开销添加到解析器和解释器，以解释使用表执行的每个查询。
 - 触发器与原始查询共享相同的事务空间，当这些查询争夺表上的锁时，触发器会独立地争夺另一个表上的锁。
 
-要了解使用自定义触发器的替代方法，请参阅 [有效地使用MySQL触发器](mysql-triggers-usage.md) 在我们的支持知识库中。
+要了解使用自定义触发器的替代方法，请参阅 [MySQL触发器](mysql-configuration.md#triggers).
 
 ## 升级 [!DNL ECE-Tools] 到版本2002.0.21或更高版本 {#ece-tools-version}
 

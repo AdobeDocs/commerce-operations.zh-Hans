@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目规划阶段的实施最佳实践。
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,7 @@ ht-degree: 0%
 
 - **数据库配置**
    - [适用于云部署的数据库配置最佳实践&#x200B;。](database-on-cloud.md)
-   - [MySQL从属连接配置&#x200B;](configure-mysql-slave-connection-on-cloud.md)
-   - [MySQL触发器使用](mysql-triggers-usage.md)
+   - [MySQL配置&#x200B;](mysql-configuration.md)
 
 - **服务配置**
    - [设置Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
@@ -57,17 +56,17 @@ ht-degree: 0%
 
 以下主题描述了配置Adobe Commerce目录的性能优化最佳实践，包括类别数、产品有效SKU、产品变体、产品属性和选项等的建议最大值。
 
-- [类别配置](category-limits.md)
-- [产品配置&#x200B;](product-sku-limits.md)
-- [产品变体配置](product-variations.md)
-- [产品选项配置](product-options.md)
-- [产品属性配置&#x200B;。](product-attributes-and-options.md)
-- [产品列表的分页配置](product-listing-pagination.md)
+- [类别配置](catalog-management.md#category-limits)
+- [产品配置&#x200B;](catalog-management.md#product-sku-limits)
+- [产品变体配置](catalog-management.md#product-variations)
+- [产品选项配置](catalog-management.md#product-options)
+- [产品属性配置&#x200B;。](catalog-management.md#product-attributes)
+- [产品列表的分页配置](catalog-management.md#product-listing-pagination)
 
 ## **销售和营销**
 
-- [有关产品购物车限制的最佳实践](product-cart.md)
-- [配置促销活动的最佳实践](product-cart-promotions.md)
+- [有关产品购物车限制的最佳实践](catalog-management.md#cart-limits)
+- [配置促销活动的最佳实践](catalog-management.md#promotions)
 
 ## **项目范围**
 

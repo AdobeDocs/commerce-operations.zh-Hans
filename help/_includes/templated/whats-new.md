@@ -1,7 +1,7 @@
 ---
-source-git-commit: 34a0a124aeacce6cc905f979cf3f18cb2405f76e
+source-git-commit: f67737451f12c17f3253582b44c2c504cbf98fb2
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 1%
 ## 新增功能
 
 了解新文档和现有文档的重要更新。
+
+### 2023年8月23日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/patching-at-scale.html">新建主题</a> ，了解如何为Adobe Commerce项目实施集中式修补策略。</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/03cb50be0cb18b6079c5c69aafc74c6099610fb0">03cb50</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2023年8月10日
 
