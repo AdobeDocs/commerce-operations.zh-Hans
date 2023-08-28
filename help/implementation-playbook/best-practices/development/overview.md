@@ -3,12 +3,14 @@ title: 实施开发阶段
 description: 了解Adobe Commerce项目开发阶段的实施最佳实践。
 exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
 feature: Best Practices
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+role: Developer
+source-git-commit: 291c3f5ea3c58678c502d34c2baee71519a5c6dc
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 0%
+source-wordcount: '340'
+ht-degree: 2%
 
 ---
+
 
 # 开发阶段
 
@@ -22,50 +24,54 @@ ht-degree: 0%
 - 冲刺审核
 - 客户签署
 
+>[!TIP]
+>
+>请参阅 [一般最佳实践](general.md) 关于发展进程总体管理的高级别建议。
+
 以下部分包含开发阶段的最佳实践信息。
 
-## 应用程序开发
+## 代码管理
 
-### 代码审查、合并和测试
+| 最佳实践 | 描述 |
+|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| [代码审查](code-review.md) | 为确保实施的功能满足要求而推荐的验证过程 |
+| [Composer与Git](code-management.md) | 确定如何分发自定义代码，其中考虑发布管理、代码复杂性和依赖关系管理 |
+| [分支策略](git-branching.md) | 在Git存储库中管理源代码 |
+| [GRA示例](../../architecture/global-reference/examples.md) | 了解组织报表的常用方法 [全球参考体系结构](../../architecture/global-reference/overview.md) 代码库 |
 
-<!--Assets not yet integrated
-- Guidelines and standards
-  - [Development best practices](https://wiki.corp.adobe.com/x/nT4ykw)
-  - [Code Review](https://wiki.corp.adobe.com/x/qT4ykw)
-  - [Debugging Magento 2](https://wiki.corp.adobe.com/x/nz4ykw) (wiki)
--->
-- [优化CSS和JS文件](optimize-css-js-files.md)
-- [专用内容块的最佳实践](private-content-block-configuration.md)
-- [面向扩展开发人员的最佳实践](https://developer.adobe.com/commerce/php/best-practices/)
+## 数据库
 
-<!--Assets not yet integrated
+| 最佳实践 | 描述 |
+|----------------------------------------------------------------|---------------------------------------------------------------------------------|
+| [表格修改](modifying-core-and-third-party-tables.md) | 确定如何以及何时修改Adobe Commerce和第三方数据库表 |
 
-  - [Best practices for theme development](https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=MAGPS&title=Best+Practices+for+Theme+Development)
-  - [Module basis](https://wiki.corp.adobe.com/x/kz4ykw) (wiki) — Develop custom modules
-  - [Exception Handling](https://wiki.corp.adobe.com/x/nz4ykw)
-  - [Custom code copyrights](https://wiki.corp.adobe.com/x/lj4ykw)
-- Source control and package management - wiki articles
-  - [Code management - Git vs. Composer](https://wiki.corp.adobe.com/x/pz4ykw)
-  - [Git branching strategy](https://wiki.corp.adobe.com/display/MAGPS/Git+Branching+Strategy)
-  - [Composer development](https://wiki.corp.adobe.com/x/mD4ykw)
-  - [Composer patching](https://wiki.corp.adobe.com/x/mj4ykw)
-  - [Composer project structure](https://wiki.corp.adobe.com/x/mT4ykw)
-  - [Composer tips and tricks](https://wiki.corp.adobe.com/x/lz4ykw)
--->
+## 文件优化
+
+| 最佳实践 | 描述 |
+|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| [目录图像大小调整](catalog-image-resizing.md) | 在商店投入生产之前提供调整图像大小的指导，以确保获得最佳性能 |
+| [CSS和JS](optimize-css-js-files.md) | 从管理员或命令行合并和缩小层叠样式表(CSS)和JavaScript (JS)文件 |
+| [图像](image-optimization.md) | 优化图像并使用Fastly优化响应时间 |
+
+## 前端开发
+
+| 最佳实践 | 描述 |
+|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| [主题开发](https://developer.adobe.com/commerce/frontend-core/guide/best-practices/){target="_blank"} | 描述开发模式以帮助确保主题、Adobe Commerce的未来版本和自定义扩展之间的兼容性 |
+
+## PHP开发
+
+| 最佳实践 | 描述 |
+|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| [异常处理](exception-handling.md) | 介绍记录异常的推荐方法 |
+| [扩展](https://developer.adobe.com/commerce/php/best-practices/){target="_blank"} | 描述开发模式以帮助确保扩展、Adobe Commerce的未来版本和其他自定义扩展之间的兼容性 |
+| [私有内容块](private-content-block-configuration.md) | 配置专用内容块以优化店面性能 |
 
 ## 平台和服务
 
-- [使用Fastly进行图像优化](image-optimization.md)
-
-### 本地和暂存环境设置
-
-- [云基础架构上的开发工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html)
-
-## 代码，合并，测试
-
-- [构建和部署的最佳实践](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html)
-- [静态内容部署 — 云](static-content-deployment.md)
-- [优化CSS和JS文件](optimize-css-js-files.md)
-- [为响应速度更快的网站优化图像](image-optimization.md)
-- [Adobe Commerce在云基础架构上的疑难解答最佳实践](troubleshooting.md)
-- [了解何时以及如何修改数据库表](modifying-core-and-third-party-tables.md)
+| 最佳实践 | 描述 |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [生成和部署](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | 描述Adobe Commerce在云基础架构项目上的构建和部署阶段的最佳实践 |
+| 调试 | 系统地高效地调试Adobe Commerce框架 |
+| [静态内容部署](static-content-deployment.md) | 避免店面未显示静态内容的问题 |
+| [故障排除](troubleshooting.md) | Adobe Commerce实施常见问题疑难解答 |

@@ -4,7 +4,7 @@ description: 了解Adobe Commerce的集中修补如何帮助您管理企业项�
 role: Developer
 feature: Best Practices
 badge: label="由Adobe高级技术架构师Anton Evers提供" type="Informative" url="https://www.linkedin.com/in/anton-evers/" tooltip="安东·埃弗斯撰写"
-source-git-commit: d8ee656b4b1741b39f2eef1f5628a299377e774c
+source-git-commit: 9cda88a4aeb4cc58d8ec9c4417e3107885a6cdb8
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 大规模分发Adobe Commerce修补程序的最佳实践
 
-如果您管理多个Adobe Commerce安装， [修补](../../../upgrade/patches/apply.md) 可能会是一个复杂的过程。 _集中修补_ 是的重要组成部分 [全球参考体系结构](../../architecture/global-reference.md) 也是企业的最佳实践。 它可帮助您在所有Adobe Commerce安装中应用正确的修补程序。 本主题介绍如何为所有类型的Adobe Commerce实现集中式修补程序分发 [补丁程序](../../../upgrade/patches/overview.md).
+如果您管理多个Adobe Commerce安装， [修补](../../../upgrade/patches/apply.md) 可能会是一个复杂的过程。 _集中修补_ 是的重要组成部分 [全球参考体系结构](../../architecture/global-reference/overview.md) 也是企业的最佳实践。 它可帮助您在所有Adobe Commerce安装中应用正确的修补程序。 本主题介绍如何为所有类型的Adobe Commerce实现集中式修补程序分发 [补丁程序](../../../upgrade/patches/overview.md).
 
 >[!NOTE]
 >
