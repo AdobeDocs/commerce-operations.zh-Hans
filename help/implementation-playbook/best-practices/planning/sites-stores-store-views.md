@@ -4,20 +4,16 @@ description: 了解配置站点、商店和存储视图以最大限度地提高�
 role: Admin
 feature: Best Practices
 exl-id: 3ea0c6c5-15a9-4e77-b4d0-ce15721c7167
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: a81e88a4293880ae90cd531ce60c5a2b177188f2
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # 配置站点、商店和存储视图的最佳实践
 
-为获得最佳站点性能，请在云基础架构项目中为Adobe Commerce配置最多50个站点、50个存储和50个存储视图。
-
->[!NOTE]
->
->对于云基础架构上的Adobe Commerce，最佳实践特别适用于生产环境（并可能适用于专业架构上的暂存，取决于资源限制），生产环境将比集成和开发环境拥有更多资源。 对于集成（专业版和入门版）和暂存环境（入门版），将存储查看次数减少到5或10次以下（具体取决于技术审查情况）。
+对于云基础架构上的Adobe Commerce，最佳实践特别适用于生产环境（并可能适用于专业架构上的暂存，取决于资源限制），生产环境将比集成和开发环境拥有更多资源。
 
 ## 受影响的产品和版本
 
