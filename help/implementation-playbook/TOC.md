@@ -2,9 +2,9 @@
 user-guide-title: 实施行动手册
 user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
-source-git-commit: d33d1e24c38984d0abf0c7f8f5ad2eb804ff621d
+source-git-commit: c737a8e902c960c933e54e2521107475bb1e5a22
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '275'
 ht-degree: 10%
 
 ---
@@ -63,8 +63,6 @@ ht-degree: 10%
       - [概述](infrastructure/cloud/overview.md)
       - [地区](infrastructure/cloud/regions.md)
       - [技术](infrastructure/cloud/technology.md)
-      - [环境](infrastructure/cloud/environments.md)
-      - [Managed services](infrastructure/cloud/managed-services.md)
       - [安全性和合规性](infrastructure/cloud/security.md)
    - 性能优化 {#performance}
       - [典型问题](infrastructure/performance/optimization.md)
