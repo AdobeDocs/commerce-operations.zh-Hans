@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: da0c85a9f1b0ac0a3176ca5f6ef5904834e8d37e
+source-git-commit: 19d41495f95ae707be1db8446ac77eb5ead6375e
 workflow-type: tm+mt
-source-wordcount: '13965'
+source-wordcount: '14327'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,25 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.37 {#v1-1-37}
+
+* **ACSD-52613** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了即使没有对进行更新，缓存和索引也会刷新的问题。 `Inventory_source` REST API列出的项目。
+* **ACSD-51884** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了在运行resize命令后，产品图像缓存路径不正确的问题。
+* **ACSD-53628** (对于Adobe Commerce和Magento Open Source >=2.3.7 &lt;2.4.7) — 修复了CSV销售订单报表显示错误的特殊字符的问题。
+* **ACSD-53148** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了以下问题：在GraphQL中，将同一可配置产品添加到购物车的两个并行请求在购物车上产生了具有相同产品SKU的两个单独项目。
+* **ACSD-52606** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了错误消息的问题 *您的订单未准备好取货* 在用户单击时显示 **[!UICONTROL Notify Order is Ready for Pickup]**.
+* **ACSD-51574** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了将图像替换为具有相同名称的其他图像后，图像未在前端更新的问题。
+* **ACSD-53728** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了产品EAV索引器需要更长时间才能完成的问题。
+* **ACSD-53979** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在欢迎消息包含单引号时主页出现的JS问题。
+* **ACSD-52085** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了具有特殊价格的可配置产品在产品轮播中不可见的问题。
+* **ACSD-53795** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了中无效数据类型的问题 `indexer_update_all_views` cron作业。
+* **ACSD-52143** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了产品导入后删除自定义选项的问题。
+* **ACSD-53750** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复 *管道断开或连接关闭* 多线程运行期间出错 `catalog_product_price` 重新索引。
+* **ACSD-49843** (对于Adobe Commerce和Magento Open Source >=2.3.7 &lt;2.4.0) || >=2.4.1 &lt;2.4.7) — 修复了以下问题：使用在线支付方法自动对订购的项目开具发票后，产品下载上的链接不可用 **[!UICONTROL Payment Action]** = **[!UICONTROL Sale]** 设置已启用。
+* **ACSD-47054** (对于Adobe Commerce >=2.4.2 &lt;2.4.6) — 修复了预览重新索引为所有存储区运行重新索引，从而导致速度缓慢的问题。
+* 添加了ACSD-46541、ACSD-47079的新版本。
+* 已将ACSD-49970-v3替换为ACSD-54095。
 
 ## v1.1.36 {#v1-1-36}
 
