@@ -2,9 +2,9 @@
 title: 升级实施
 description: 了解Adobe Commerce项目升级实施的各个阶段。
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 1ba9325feaa47d767ec7991919fd5ecd53ae6226
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '825'
 ht-degree: 1%
 
 ---
@@ -84,4 +84,4 @@ UAT是升级的最后阶段之一，需要查看和验证站点。 您还必须�
 
 在网站启动后，请确保检查您的分析数据、Google Search Console和其他资源，以确保没有意外问题并且一切按预期运行。
 
-通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用 [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html) 监视站点性能。
+通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用 [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) 监视站点性能。

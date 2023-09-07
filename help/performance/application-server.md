@@ -3,7 +3,7 @@ title: 适用于GraphQL API的应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中为GraphQL API启用应用程序服务器。
 badgeCoreBeta: label="2.4.7-beta1" type="informative"
 exl-id: 346cc722-131e-4ed0-bc8c-23c3a1e58258
-source-git-commit: f085c0a77fe59ff3b2d76abbd6965b6bc8ee69db
+source-git-commit: 4f83a2181f6a7880b77dc07729574365def71f1d
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Commerce Application Server for GraphQL API使Adobe Commerce能够维护Commerce
 
 ### 配置Nginx
 
-您的特定Commerce部署决定了如何配置Nginx。 通常，Nginx配置文件默认名为 `nginx.conf` 和位于以下目录之一： `/usr/local/nginx/conf`， `/etc/nginx`，或 `/usr/local/etc/nginx`. 请参阅 [初学者指南](http://nginx.org/en/docs/beginners_guide.html) 有关配置Nginx的详细信息。
+您的特定Commerce部署决定了如何配置Nginx。 通常，Nginx配置文件默认名为 `nginx.conf` 和位于以下目录之一： `/usr/local/nginx/conf`， `/etc/nginx`，或 `/usr/local/etc/nginx`. 请参阅 [初学者指南](https://nginx.org/en/docs/beginners_guide.html) 有关配置Nginx的详细信息。
 
 示例Nginx配置：
 

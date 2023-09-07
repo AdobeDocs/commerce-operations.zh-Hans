@@ -4,9 +4,9 @@ description: 了解如何优化Adobe Commerce网站的后端性能。
 badge: label="由objectsource提供" type="Informative" url="https://objectsource.co.uk/" tooltip="objectsource"
 role: Admin, User, Developer
 feature: Best Practices
-source-git-commit: 2416357d8cacb5627fd24f92b16c2d9839f91082
+source-git-commit: 1ba9325feaa47d767ec7991919fd5ecd53ae6226
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ### 识别并解决性能问题
 
-通过使用New Relic和Observation for Adobe Commerce等各种工具来检测瓶颈并有效优化Commerce站点，从而解决性能问题。 [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html) 包含在云基础架构上的Adobe Commerce中，并且 [Adobe Commerce观察](/help/tools/observation-for-adobe-commerce/intro.md) 包括云和内部部署。
+通过使用New Relic和Observation for Adobe Commerce等各种工具来检测瓶颈并有效优化Commerce站点，从而解决性能问题。 [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) 包含在云基础架构上的Adobe Commerce中，并且 [Adobe Commerce观察](/help/tools/observation-for-adobe-commerce/intro.md) 包括云和内部部署。
 
 使用这些工具分析网站性能并识别与以下内容相关的性能问题：
 
