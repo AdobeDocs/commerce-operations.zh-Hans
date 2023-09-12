@@ -3,9 +3,9 @@ title: 启动后的步骤
 description: 使用我们的启动后核对清单确保Adobe Commerce站点实施顺利。
 exl-id: 0c3162d9-6475-4b34-9278-e5aea39bd0f9
 feature: Deploy
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: ce41158f900fad27e3e7b8157f5c64ac988bbabf
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 - 将群集标记为活动并创建支持票证以激活高SLA监控
 - 转换完成后，CSE（客户成功工程师）和TAM（技术客户经理）会立即执行以下任务：
    - 将群集标记为Adobe Commerce客户端的高SLA，并创建支持票证以激活它
-   - 激活Pingdom检查域名
+   - 激活 **内部** Pingdom检查域名（公开访问Pingdom不可用）
    - 审查监控状态并确保所有项目都呈绿色
    - 在上线当天通过电子邮件将保修期和参数通知利益相关者
 
