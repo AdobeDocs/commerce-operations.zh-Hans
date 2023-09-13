@@ -2,16 +2,18 @@
 title: 快速启动内部部署
 description: 按照以下步骤在您拥有的基础设施上安装Adobe Commerce或Magento Open Source。
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 3d9b7c5352f91308dd315a7195ee2cb1c4b191ee
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
 
 # 快速启动内部部署
 
-我们使用 [Composer](https://getcomposer.org/) 管理Adobe Commerce和Magento Open Source组件及其依赖项。 使用Composer获取Adobe Commerce和Magento Open Source元包具有以下优势：
+本页上的说明介绍了如何在上安装Adobe Commerce和Magento Open Source [自托管](../implementation-playbook/infrastructure/self-hosting/overview.md) 基础架构。 有关升级现有安装的指导，请参阅 [_升级指南_](../upgrade/overview.md).
+
+Adobe用途 [Composer](https://getcomposer.org/) 管理Adobe Commerce和Magento Open Source组件及其依赖项。 使用Composer获取Adobe Commerce和Magento Open Source元包具有以下优势：
 
 - 重用第三方库，而无需将它们与源代码捆绑在一起
 - 通过使用基于组件的架构和强大的依赖关系管理，减少扩展冲突和兼容性问题
@@ -33,7 +35,7 @@ ht-degree: 0%
 
 ## 以文件系统所有者的身份登录
 
-了解所有权、权限和文件系统所有者，请参见 [所有权和权限主题概述](prerequisites/file-system/overview.md).
+在中了解所有权、权限和文件系统所有者 [所有权和权限主题概述](prerequisites/file-system/overview.md).
 
 切换到文件系统所有者：
 
@@ -53,7 +55,7 @@ ht-degree: 0%
 
 1. 要从任何目录运行CLI命令，请添加 `<app_root>/bin` 到您的系统 `PATH`.
 
-   由于shell的语法不同，请查阅之类的引用 [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
+   由于外壳具有不同的语法，请查阅 [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
 
    CentOS的bash shell示例：
 
@@ -87,40 +89,36 @@ ht-degree: 0%
    composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   出现提示时，输入您的身份验证密钥。 可在中创建和配置公钥和私钥， [Commerce Marketplace](https://marketplace.magento.com/customer/account/login/).
+   出现提示时，输入您的身份验证密钥。 可在中创建和配置公钥和私钥， [Commerce Marketplace](https://commercemarketplace.adobe.com/customer/account/login/).
 
    如果您遇到错误，例如 `Could not find package...` 或 `...no matching package found`，确保命令中没有拼写错误。 如果仍遇到错误，则可能无权下载Adobe Commerce。 联系人 [Adobe Commerce支持](https://support.magento.com/hc/en-us) 以寻求帮助。
 
    请参阅 [疑难解答](https://support.magento.com/hc/en-us/articles/360033818091) 以获取有关更多错误的帮助。
 
-   >[!NOTE]
-   >
-   >Adobe Commerce客户可以在正式发布(GA)日期两周前访问修补程序。 预发行版包只能通过Composer使用。 在GA之前，您无法在开发人员门户或GitHub上访问预发行版。 如果您在编辑器中找不到这些包，请联系Adobe Commerce支持。
-
 ### 示例 — 次要版本
 
-次发行版本包含新功能、质量修复和安全修复。 使用编辑器指定次要版本。 例如，要指定Adobe Commerce 2.4.5metapackage，请执行以下操作：
+次发行版本包含新功能、质量修复和安全修复。 使用编辑器指定次要版本。 例如，要指定Adobe Commerce 2.4.6metapackage，请执行以下操作：
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6 <install-directory-name>
 ```
 
 ### 示例 — 质量修补程序
 
-质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时也可以包含向后兼容的新功能。 使用Composer下载质量修补程序。 例如，要指定Adobe Commerce 2.4.5metapackage，请执行以下操作：
+质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时也可以包含向后兼容的新功能。 使用Composer下载质量修补程序。 例如，要指定Adobe Commerce 2.4.6metapackage，请执行以下操作：
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6 <install-directory-name>
 ```
 
 ### 示例 — 安全修补程序
 
 安全修补程序仅包含安全修补程序。 它们旨在使升级过程更快、更轻松。
 
-安全修补程序使用编辑器命名约定 `2.4.5-px`. 使用Composer指定修补程序。 例如，要下载Adobe Commerce 2.4.5-p1中继包，请执行以下操作：
+安全修补程序使用编辑器命名约定 `2.4.6-px`. 使用Composer指定修补程序。 例如，要下载Adobe Commerce 2.4.6-p1中继包，请执行以下操作：
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5-p1 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6-p1 <install-directory-name>
 ```
 
 ## 设置文件权限
@@ -166,7 +164,7 @@ bin/magento setup:install \
 
 >[!TIP]
 >
->您可以使用自定义管理员URI `--backend-frontname` 选项。 但是，我们建议忽略此选项，并允许安装命令自动生成随机URI。 黑客或恶意软件更难利用随机URI。 安装完成后，控制台中会显示URI。
+>您可以使用自定义管理员URI `--backend-frontname` 选项。 但是，Adobe建议忽略此选项，并允许安装命令自动生成随机URI。 黑客或恶意软件更难利用随机URI。 安装完成后，控制台中会显示URI。
 
 >[!TIP]
 >
@@ -230,4 +228,4 @@ bin/magento help cache:enable
 
 >[!NOTE]
 >
->恭喜！您已完成快速安装。 需要更多高级帮助？ 查看我们的 [高级安装](advanced.md) 指南。
+>恭喜！您已完成快速安装。 需要更多高级帮助？ 查看 [高级安装](advanced.md) 指南。

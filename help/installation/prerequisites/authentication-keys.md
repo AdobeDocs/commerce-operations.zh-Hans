@@ -2,9 +2,9 @@
 title: 获取您的身份验证密钥
 description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce和Magento Open Source编辑器包。
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 3d9b7c5352f91308dd315a7195ee2cb1c4b191ee
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,8 @@ ht-degree: 0%
 
 要创建身份验证密钥，请执行以下操作：
 
-1. 登录到 [Commerce Marketplace](https://marketplace.magento.com). 如果您没有帐户，请单击 **注册**.
+1. 登录到 [Commerce Marketplace](https://commercemarketplace.adobe.com/). 如果您没有帐户，请单击 **注册**.
+
 1. 单击页面右上角的帐户名称，然后选择 **我的个人资料**.
 
 1. 单击 **访问密钥** 在Marketplace选项卡中。
@@ -45,7 +46,7 @@ ht-degree: 0%
 
 ### 管理SSH访问令牌
 
-要使用SSH下载Adobe Commerce版本，您必须生成下载访问令牌。 要生成令牌，请执行以下操作：
+要使用SSH下载Adobe Commerce和Magento Open Source版本，您必须生成下载访问令牌。 要生成令牌，请执行以下操作：
 
 1. 登录 [magento.com帐户](https://account.magento.com/customer/account/login).
 1. 单击 **我的帐户** 页面顶部的。
