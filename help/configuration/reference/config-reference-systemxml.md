@@ -4,9 +4,9 @@ description: 了解系统XML文件如何管理Commerce应用程序配置。
 feature: Configuration, System
 badge: label="作者：David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="大卫·兰鲍尔"
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
-source-git-commit: 37c23d7a410cdb664710880d3d89cb72efa164e9
+source-git-commit: e231a27d70e29b01c872b0655168e31f590d4876
 workflow-type: tm+mt
-source-wordcount: '2669'
+source-wordcount: '2663'
 ht-degree: 0%
 
 ---
@@ -296,7 +296,6 @@ A `<field>`-Tag可以具有以下子项：
 | `more_url` | 不可扩展。 请参阅下文。 | `typeUrl` |
 | `demo_url` | 不可扩展。 请参阅下文。 | `typeUrl` |
 | `hide_in_single_store_mode` | 该组是否应该在单存储模式下可见。 `1` 隐藏组； `0` 显示组。 | `int` |
-| `source_service` | 用于填充选择选项的服务。 | `complexType` |
 | `options` | 未使用。 可能已被弃用。 | `complexType` |
 | `depends` | 可用于声明对其他字段的依赖关系。 用于当给定字段的值为时仅显示特定字段/组 `1`. 此节点需要 `section/group/field`-string。 | `complexType` |
 | `attribute` | 前端模型可以使用自定义属性。 通常用于使给定的前端模型更动态。 | `complexType` |
