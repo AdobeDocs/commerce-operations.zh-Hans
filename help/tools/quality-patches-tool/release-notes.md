@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 19d41495f95ae707be1db8446ac77eb5ead6375e
+source-git-commit: 7e6e8f1ed15d88fc79e9a3ad5a4505b612564f71
 workflow-type: tm+mt
-source-wordcount: '14327'
+source-wordcount: '14539'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,17 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.38 {#v1-1-38}
+
+* **ACSD-53098** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4) — 修复了在执行部分索引时，分配给共享目录的产品未显示在店面中的问题。
+* **ACSD-54018** (对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复的性能问题 [!UICONTROL Product List] 在构件条件中使用非全局属性的构件。
+* **ACSD-54111** (对于Adobe Commerce和Magento Open Source >=2.4.2 &lt;2.4.6) — 修复了以下问题：当水印图像的宽高比与产品图像不匹配时，产品缩略图图像不会显示在店面上。
+* **ACSD-47669** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复 *完整性约束违规： 1452无法添加或更新子行：外键约束失败* 导入产品CSV时出错。
+* **ACSD-53347** (对于Adobe Commerce和Magento Open Source >=2.3.7 &lt;2.4.7) — 修复了价格索引器执行时间过长的问题。
+* **ACSD-52287** (适用于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了在启用异步网格索引时，归档订单网格中的订单状态不正确的问题。
+* **ACSD-52929** (对于Adobe Commerce和Magento Open Source >=2.3.7 &lt;2.4.7) — 修复了在异步模式下配置库存索引器时冗余请求对默认源项目重新索引的问题。
+* **ACSD-53824** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了以下问题： `UpdateMultiselectAttributesBackendTypes` 迁移数据修补程序超过数据库事务大小限制 `setup:upgrade`.
 
 ## v1.1.37 {#v1-1-37}
 
