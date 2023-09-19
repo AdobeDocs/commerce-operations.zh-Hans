@@ -3,7 +3,7 @@ title: 云基础架构安全性
 description: 了解Adobe如何确保Adobe Commerce在云基础架构上的安全。
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
 feature: Cloud, Security
-source-git-commit: afe70569796c056cd0ecab82898f0dec016e7a3f
+source-git-commit: 8d8cd0d33c1a3a95186948e670df6d9865b9a871
 workflow-type: tm+mt
 source-wordcount: '1739'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Adobe Commerce Pro计划生产环境配置为虚拟专用云(VPC)，因此生产
 
 ## 加密
 
-Amazon Elastic Block Store (EBS)用于存储。 所有EBS卷都使用AES-265算法进行加密，这意味着数据在静止时加密。 该系统还加密CDN和源之间以及源服务器之间的传输中的数据。 客户密码以哈希形式存储。 敏感凭据（包括支付网关凭据）使用SHA-256算法进行加密。
+Amazon Elastic Block Store (EBS)用于存储。 所有EBS卷都使用AES-256算法进行加密，这意味着数据在静止时加密。 该系统还加密CDN和源之间以及源服务器之间的传输中的数据。 客户密码以哈希形式存储。 敏感凭据（包括支付网关凭据）使用SHA-256算法进行加密。
 
 当数据不处于静止状态或不在服务器之间传输时，Adobe Commerce应用程序不支持列或行级加密或加密。 客户可以从应用程序中管理加密密钥。 系统使用的密钥存储在AWS密钥管理系统中，必须由Managed Services管理才能提供部分服务。
 
