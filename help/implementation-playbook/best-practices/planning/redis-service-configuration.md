@@ -4,53 +4,121 @@ description: 了解如何通过使用适用于Adobe Commerce的扩展Redis缓存
 role: Developer, Admin
 feature: Best Practices, Cache
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 156e6412b9f94b74bad040b698f466808b0360e3
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
 
 # Redis服务配置的最佳实践
 
-- 使用扩展的Redis缓存实施，该实施包括以下优化，可最大限度地减少对Adobe Commerce的每个请求执行的Redis查询数量：
-   - 缩小Redis和Adobe Commerce之间的网络数据传输大小
-   - 通过提高适配器自动确定需要加载内容的能力，降低CPU周期的Redis消耗
-   - 减少Redis写入操作的竞争情形
+- 配置Redis二级缓存
+- 启用Redis从属连接
+- 预加载键
+- 启用过时的缓存
 - 将Redis缓存与Redis会话分离
-- 压缩Redis缓存并使用 `gzip` 提高性能
+- 压缩Redis缓存并使用 `gzip` 获得更高的压缩
 
-## 扩展的Redis缓存实施
+## 配置Redis二级缓存
 
-更新您的配置以使用扩展的Redis缓存实施 `\Magento\Framework\Cache\Backend\Redis`.
-
-### 配置云部署
-
-通过设置来配置增强的Redis缓存 `REDIS_BACKEND` 中的部署变量 `.magento.env.yaml` 配置文件。
+通过设置 `REDIS_BACKEND` 中的部署变量 `.magento.env.yaml` 配置文件。
 
 ```yaml
 stage:
   deploy:
-    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\Redis'
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关详细信息，请参见 [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) 中的变量说明 _云基础架构上的Commerce指南_.
+有关云基础架构上的环境配置，请参阅 [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) 在 _云基础架构上的Commerce指南_.
+
+有关内部部署安装，请参阅 [配置Redis页面缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) 在 _配置指南_.
 
 >[!NOTE]
 >
-> 查看 `ece-tools` 版本，通过命令行安装到本地环境中，使用 `composer show magento/ece-tools` 命令。 如有必要， [更新到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
+>确认您使用的是最新版本的 `ece-tools` 包。 如果不能， [升级到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html). 您可以使用检查本地环境中安装的版本 `composer show magento/ece-tools` cli命令。
+
+## 启用Redis从属连接
+
+在中启用Redis从属连接 `.magento.env.yaml` 配置文件只允许一个节点处理读写通信，而其他节点处理只读通信。
+
+```yaml
+stage:
+  deploy:
+    REDIS_USE_SLAVE_CONNECTION: true
+```
+
+请参阅 [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) 在 _云基础架构上的Commerce指南_.
+
+对于Adobe Commerce内部部署，请使用配置新的Redis缓存实施 `bin/magento:setup` 命令。 请参阅 [将Redis用于默认缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) 在 _配置指南_.
 
 >[!WARNING]
 >
->Do _非_ 使用为云基础架构项目配置Redis从属连接 [扩展体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). 这会导致Redis连接错误。 请参阅 [redis配置指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) 在 _云基础架构上的Commerce_ 指南。
+>Do _非_ 使用为云基础架构项目配置Redis从属连接 [缩放/拆分体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). 这会导致Redis连接错误。 请参阅 [Redis配置指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) 在 _云基础架构上的Commerce_ 指南。
 
-### 配置内部部署
+## 预加载键
 
-对于Adobe Commerce内部部署，请使用配置新的Redis缓存实施 `bin/magento:setup` 命令。 有关说明，请参阅 [将Redis用于默认缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching).
+要在页面之间重用数据，请列出要在页面中预加载的键 `.magento.env.yaml` 配置文件。
 
-## 单独的缓存和会话实例
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          id_prefix: '061_'                       # Prefix for keys to be preloaded
+          backend_options:
+            preload_keys:                         # List the keys to be preloaded
+              - '061_EAV_ENTITY_TYPES:hash'
+              - '061_GLOBAL_PLUGIN_LIST:hash'
+              - '061_DB_IS_UP_TO_DATE:hash'
+              - '061_SYSTEM_DEFAULT:hash'
+```
 
-通过将Redis缓存与Redis会话分离，您可以单独管理缓存和会话，以防止缓存问题影响会话。
+有关内部部署安装，请参阅 [Redis预加载功能](../../../configuration/cache/redis-pg-cache.md#redis-preload-feature) 在 _配置指南_.
+
+## 启用过时的缓存
+
+通过使用过时的缓存，同时并行生成新缓存，减少锁定等待时间并提高性能，在处理大量块和缓存键时尤其如此。 启用过时的缓存并在中定义缓存类型 `.magento.env.yaml` 配置文件：
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      default:
+        backend_options:
+          use_stale_cache: false
+      stale_cache_enabled:
+        backend_options:
+          use_stale_cache: true
+      type:
+        default:
+          frontend: "default"
+        layout:
+          frontend: "stale_cache_enabled"
+        block_html:
+          frontend: "stale_cache_enabled"
+        reflection:
+          frontend: "stale_cache_enabled"
+        config_integration:
+          frontend: "stale_cache_enabled"
+        config_integration_api:
+          frontend: "stale_cache_enabled"
+        full_page:
+          frontend: "stale_cache_enabled"
+        translate:
+          frontend: "stale_cache_enabled"
+```
+
+有关配置内部部署安装的信息，请参阅 [过时的缓存选项](../../../configuration/cache/level-two-cache.md#stale-cache-options) 在 _配置指南_.
+
+## 单独的Redis缓存和会话实例
+
+通过将Redis缓存与Redis会话分离，您可以单独管理缓存和会话。 它可防止缓存问题影响会话，从而可能影响收入。 每个Redis实例都在自己的核心上运行，这可以提高性能。
 
 1. 更新 `.magento/services.yaml` 配置文件。
 
@@ -85,7 +153,7 @@ stage:
        rabbitmq: "rabbitmq:rabbitmq"
    ```
 
-1. 提交 [Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 更改Pro生产和暂存环境上的Redis服务配置。 包括已更新的 `.magento/services.yaml` 和 `.magento.app.yaml` 配置文件。
+1. 提交 [Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 请求配置专用于生产和暂存环境会话的新Redis实例。 包括已更新的 `.magento/services.yaml` 和 `.magento.app.yaml` 配置文件。 这不会导致任何停机，但需要部署来激活新服务。
 
 1. 验证新实例是否正在运行，并记下端口号。
 
@@ -134,7 +202,7 @@ W:   - Installing colinmollenhour/php-redis-session-abstract (v1.4.5): Extractin
 
 ## 缓存压缩
 
-使用缓存压缩，但请注意，需要权衡客户端性能。 如果您有备用CPU，请启用它。 请参阅 [使用Redis进行会话存储](../../../configuration/cache/redis-session.md).
+如果您使用的是超过6GB的Redis `maxmemory`中，您可以使用缓存压缩来减少键占用的空间。 请注意，需要权衡客户端性能。 如果您有备用CPU，请启用它。 请参阅 [使用Redis进行会话存储](../../../configuration/cache/redis-session.md) 在 _配置指南_.
 
 ```yaml
 stage:
