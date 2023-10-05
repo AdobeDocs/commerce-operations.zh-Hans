@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 7e6e8f1ed15d88fc79e9a3ad5a4505b612564f71
+source-git-commit: 67d4f2dd6b3aedae51c9b81268f2ced12369becc
 workflow-type: tm+mt
-source-wordcount: '14539'
+source-wordcount: '14811'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,21 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.39 {#v1-1-39}
+
+* **ACSD-53704** (对于Adobe Commerce >=2.4.0 &lt;2.4.7) — 修复了在奖励点过期后错误地计算奖励点余额历史记录的问题。
+* **ACSD-53583** (对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.7) — 改进的部分重新索引性能， *类别产品* 和 *产品类别* 索引器。
+* **ACSD-54026** (对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了的错误消息。 `updateCompanyRole` 非授权用户的GraphQL请求。
+* **ACSD-54106** (对于Adobe Commerce和Magento Open Source >=2.4.1 &lt;2.4.5) — 修复了按名称对土耳其语重音字符进行类别产品排序不正确的问题。
+* **ACSD-52219** (对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修复了在书签视图之间频繁切换时，管理员网格保存的过滤器无法按预期工作的问题。
+* **ACSD-54342** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复不正确的错误消息 *数据结构错误：值混合* 导入没有有效数据的CSV文件时。
+* **ACSD-54660** (对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.6) — 添加了新输入属性 *sort* 在GraphQL中排序客户订单的依据 `sort_field` 和 `sort_direction`.
+* **ACSD-54776** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了未选中此项的问题 *[!UICONTROL Use Default Value]* 对于第二个网站、商店和商店视图，和非默认产品字段值不会保存。
+* **ACSD-53998** (对于Adobe Commerce和Magento Open Source >=2.4.4-p2 &lt;2.4.5 || >=2.4.5-p1 &lt;2.4.7) — 修复了 **[!UICONTROL Dynamic Block]** 基于 **[!UICONTROL Customer Segment]** 从客户帐户注销后无法正常工作。
+* **ACSD-53204** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复 *无法保存产品。* 并发请求使用向产品库添加图像时出错 `rest/V1/products/<sku>/media` 端点。
+* **ACSD-47657** (对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.7) — 为AWS凭据添加了缓存机制。 凭据提供程序现在使用Magento缓存来缓存从AWS检索到的凭据以进行EC2配置。
+* 更新了修补程序：ACSD-51984、ACSD-51574。
 
 ## v1.1.38 {#v1-1-38}
 
