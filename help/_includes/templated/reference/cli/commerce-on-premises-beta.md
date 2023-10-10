@@ -1,7 +1,7 @@
 ---
-source-git-commit: 64c453adabb092075854b2c20bf7da73c4a5146e
+source-git-commit: d720b64f315d1e4b6fb7868d911eb3af089e3fa4
 workflow-type: tm+mt
-source-wordcount: '19899'
+source-wordcount: '20131'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**版本**：2.4.7-beta1
+**版本**：2.4.7-beta2
 
-此参考包含132条命令，这些命令可通过 `bin/magento` 命令行工具。
+此参考包含134个命令，这些命令可通过 `bin/magento` 命令行工具。
 初始列表是使用 `bin/magento list` Adobe Commerce命令。
 使用 [添加CLI命令](https://developer.adobe.com/commerce/php/development/cli-commands/) 添加自定义CLI命令的指南。
 
@@ -3756,6 +3756,120 @@ bin/magento events:metadata:populate
 - 不接受值
 
 
+## `events:provider:info`
+
+返回有关已配置事件提供程序的详细信息
+
+```bash
+bin/magento events:provider:info
+```
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
+## `events:registrations:list`
+
+列出App Builder项目中的事件注册
+
+```bash
+bin/magento events:registrations:list
+```
+
+### `--help`, `-h`
+
+显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+
+- 默认： `false`
+- 不接受值
+
+### `--quiet`, `-q`
+
+不输出任何消息
+
+- 默认： `false`
+- 不接受值
+
+### `--verbose`, `-v|-vv|-vvv`
+
+增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
+
+- 默认： `false`
+- 不接受值
+
+### `--version`, `-V`
+
+显示此应用程序版本
+
+- 默认： `false`
+- 不接受值
+
+### `--ansi`
+
+强制（或禁用 — no-ansi） ANSI输出
+
+- 不接受值
+
+### `--no-ansi`
+
+否定“ — ansi”选项
+
+- 默认： `false`
+- 不接受值
+
+### `--no-interaction`, `-n`
+
+不要问任何交互式问题
+
+- 默认： `false`
+- 不接受值
+
+
 ## `events:subscribe`
 
 订阅事件
@@ -7221,7 +7335,7 @@ bin/magento security:tfa:reset <user> <provider>
 运行应用程序服务器
 
 ```bash
-bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-a|--area [AREA]] [-mip|--magento-init-params [MAGENTO-INIT-PARAMS]]
+bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-a|--area [AREA]] [-mip|--magento-init-params [MAGENTO-INIT-PARAMS]] [-mwt|--maxWaitTime [MAXWAITTIME]]
 ```
 
 ### `--port`, `-p`
@@ -7250,6 +7364,13 @@ bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-a|--a
 magento bootstrap初始化参数
 
 - 默认：“
+- 接受值
+
+### `--maxWaitTime`, `-mwt`
+
+重新加载后等待工作人员多长时间(例如 配置更改)
+
+- 默认： `3600`
 - 接受值
 
 ### `--help`, `-h`
@@ -9417,7 +9538,7 @@ SSL连接的基本URL。 已弃用，请使用config：set以及路径web/secure
 
 ### `--search-engine`
 
-搜索引擎。 值： elasticsearch5、elasticsearch7、elasticsearch8、opensearch
+搜索引擎。 值： elasticsearch7、elasticsearch8、opensearch
 
 - 需要一个值
 

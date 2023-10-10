@@ -3,7 +3,7 @@ title: 配置最佳实践
 description: 使用这些最佳实践优化Adobe Commerce或Magento Open Source部署的响应时间。
 feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 62a37d5f83b4cc6efef8bddba16e44151e91a8d0
+source-git-commit: 11ccc59230a7a0d1768c043c39df43c7df031efd
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Commerce提供了许多设置和工具，可用于改善页面上的响应时间
 >
 >此 **[!UICONTROL Developer]** 选项卡和选项仅在 [开发人员模式](../configuration/cli/set-mode.md). [云基础架构上的Adobe Commerce](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) 不支持 `Developer` 模式。
 
-## 异步配置保存 [!BADGE 2.4.7-beta1]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="仅在2.4.7-beta1中提供"}
+## 异步配置保存 [!BADGE 2.4.7（测试版）]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="仅在2.4.7 Beta版中提供"}
 
 对于具有大量存储级别配置的项目，保存存储配置可能需要花费过多的时间或导致超时。 此 _异步配置_ 模块通过运行cron作业来启用异步配置保存，该作业使用使用者处理消息队列中的保存。 AsyncConfig **已禁用** 默认情况下。
 

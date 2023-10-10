@@ -2,7 +2,7 @@
 title: 消息队列使用者
 description: 了解Adobe Commerce和Magento Open Source消息队列使用者，包括与其关联的功能和系统配置设置。
 exl-id: 7fd7ab3f-581f-493c-956c-731f111d1b14
-source-git-commit: 1d7f5f58f8c21013c2ab0d68ab93a125ba0f3764
+source-git-commit: 11ccc59230a7a0d1768c043c39df43c7df031efd
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -65,7 +65,7 @@ ht-degree: 0%
 | 发送采购订单电子邮件。 在以下情况下需要： [**[!UICONTROL Purchase Order]**](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/purchase-order-flow.html) 选项在管理员系统配置设置中启用。 |                |                         |                     |
 | `purchaseorder.validation` |                | + |                     |
 | 根据相关验证采购订单 [审批规则](https://docs.magento.com/user-guide/customers/account-dashboard-approval-rules.html). 在以下情况下需要： [**[!UICONTROL Purchase Order]**](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/purchase-order-flow.html) 选项在管理员系统配置设置中启用。 |                |                         |                     |
-| `saveConfigProcessor` [!BADGE 2.4.7-beta1]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="仅在2.4.7-beta1中提供"} | + |                         | + |
+| `saveConfigProcessor` [!BADGE 2.4.7（测试版）]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="仅在2.4.7 Beta版中提供"} | + |                         | + |
 | 通过将保存作业置于消息队列中来异步保存存储配置更改，这可以提高包含大量存储级配置的部署的性能。 要使用 [`AsyncConfig`](../../performance/configuration.md#asynchronous-configuration-save) 模块。 |                |                         |                     |
 | `sales.rule.update.coupon.usage` | + | + | + |
 | 防止 [问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/coupon-code-used-more-than-once-adobe-commerce.html) 其中单次使用优惠券可以多次使用。 |                |                         |                     |

@@ -2,9 +2,9 @@
 title: 设置配置值
 description: 了解如何设置配置值并更改管理员中锁定的值。
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 78a7e99ecaba6a6f7982123f5bd67efc740ec2ef
+source-git-commit: 473ab09f83a4cfc1809adff854d52a11ad49d3af
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -289,3 +289,8 @@ bin/magento config:show --scope=stores --scope-code=default web/unsecure/base_ur
 ```terminal
 web/unsecure/base_url - http://example-for-store.com/
 ```
+
+>[!INFO]
+>
+>范围代码只能包含字母（a-z或A-Z）、数字(0-9)和下划线(_)。 此外，第一个字符必须是字母。 如果在创建网站或商店视图时使用大写或驼峰式大小写，则在内部匹配不区分大小写，以适应通过环境变量覆盖配置设置。 请参阅 [使用环境变量覆盖配置设置](../reference/override-config-settings.md#environment-variables).
+
