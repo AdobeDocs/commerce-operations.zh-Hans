@@ -2,7 +2,7 @@
 title: 发布策略
 description: 了解不同类型的Adobe Commerce版本，包括次要修补程序、安全修补程序、功能、修补程序、单个修补程序和自定义修补程序。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: f5ab11a43bb90fa96c20cea8d8c85eb2a4c98826
+source-git-commit: 9a74f87e0da5a7f11cd0930c8265556d80e3d1de
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Commerce和Magento Open Source使用 [语义版本控制](https://semver.o
    - **SECURITY补丁发行版**—2.4.5-p1
       - 安全错误修复
       - 安全性增强
-- **BETA补丁发布**—2.4.7-beta1
+- **BETA补丁发布**—2.4.7-beta2
 - **可扩展性、基础架构和服务版本**
 - **修补程序**
 - **单个修补程序**

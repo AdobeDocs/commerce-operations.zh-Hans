@@ -2,10 +2,10 @@
 title: 发布计划
 description: 了解 Adobe 打算何时发布 Adobe Commerce 重大的新功能。
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 12b4f619673414f18d9697450e867681c6cb3194
+source-git-commit: 7edf6d5a8dfe58a86f27e97816e4d850bc21babc
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 1%
+source-wordcount: '623'
+ht-degree: 2%
 
 ---
 
@@ -17,10 +17,7 @@ Adobe版本 [补丁程序](versioning-policy.md#patch-release) 对于核心Adobe
 
 >[!NOTE]
 >
->从2024年开始，Adobe不再提供对修补程序的“预发布”访问。 相反，对于2.4.7及更高版本，Adobe Commerce客户可以使用 [Beta版本](beta.md) 访问正式发布之前的可用性代码以进行测试和开发。 以下2023年版本仍计划提供预发行版访问：
->
-> - 2023年8月8日预发行版访问权限为2023年7月25日
-> - 2023年10月10日预发行版访问将于2023年9月26日进行
+>从2024年开始，Adobe不再提供对修补程序的“预发布”访问。 相反，对于2.4.7及更高版本，Adobe Commerce客户可以使用 [Beta版本](beta.md) 访问正式发布之前的可用性代码以进行测试和开发。
 
 下表提供了计划发放的日期（日期可能会更改）：
 
@@ -46,16 +43,6 @@ Adobe版本 [补丁程序](versioning-policy.md#patch-release) 对于核心Adobe
    </tr>
 </tfoot>
 <tbody>
-  <tr>
-    <td>2023年8月8日</td>
-    <td><img alt="B2B功能图标" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="“可扩展性功能”图标" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">可扩展性</a><br><img alt="基础架构功能图标" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">基础架构</a><br><img alt="“服务”功能图标" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">服务</a></td>
-    <td><img alt="“补丁版本”图标" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">安全修补程序</a>：2.4.6-p2、2.4.5-p4、2.4.4-p5</td>
-  </tr>
-  <tr>
-    <td>2023年10月10日</td>
-    <td><img alt="B2B功能图标" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="“可扩展性功能”图标" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">可扩展性</a><br><img alt="基础架构功能图标" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">基础架构</a><br><img alt="“服务”功能图标" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">服务</a></td>
-    <td><img alt="“补丁版本”图标" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Beta补丁</a>：2.4.7-beta2<br> <img alt="“补丁版本”图标" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">安全修补程序</a>：2.4.6-p3、2.4.5-p5、2.4.4-p6</td>
-  </tr>
   <tr>
     <td>2024年2月13日</td>
     <td><img alt="B2B功能图标" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="“可扩展性功能”图标" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">可扩展性</a><br><img alt="基础架构功能图标" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">基础架构</a><br><img alt="“服务”功能图标" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">服务</a></td>
