@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 67d4f2dd6b3aedae51c9b81268f2ced12369becc
+source-git-commit: 6e82738ab9b3ea106b7987fac2f6f4a026ddc4f0
 workflow-type: tm+mt
-source-wordcount: '14811'
+source-wordcount: '15145'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,24 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.40 {#v1-1-40}
+
+* **ACSD-54680** (对于Adobe Commerce >=2.4.0 &lt;2.4.6) — 修复了无法处理为具有多分配来源的产品提交的B2B报价的问题。
+* **ACSD-54040** (对于Adobe Commerce >=2.4.4-p5 &lt;2.4.5) || >=2.4.5-p4 &lt;2.4.6) — 修复了 *[!UICONTROL Created]* 启用B2B模块后，字段的订单详细信息为空。
+* **ACSD-54319** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了以下产品价格为零的问题： *[!UICONTROL Product in Cart]* 报告。
+* **ACSD-53378** (对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 为拥有大地址簿的客户缩短结帐页面加载时间。
+* **ACSD-52657** (对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修复了在使用子域的二级存储库中未更新minicart的问题。
+* **ACSD-53414** (对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了受限制的管理员用户在其权限范围之外查看CMS页面的问题。
+* **ACSD-54472** (对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了以下问题：被拒绝公司的客户仍然可以执行身份验证，被阻止和被拒绝公司的客户仍然可以下订单。 该修补程序添加了对GraphQL端点的其他验证。
+* **ACSD-52801** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 添加了在GraphQL中搜索产品时进行部分匹配的选项。
+* **ACSD-55004** (对于Adobe Commerce和Magento Open Source >=2.4.6 &lt;2.4.7) — 修复了在上传大于中配置的值的导入文件时，验证器崩溃的问题 `php.ini`.
+* **ACSD-54989** (对于Adobe Commerce >=2.4.4-p5 &lt;2.4.5) || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.7) — 修复了以下情况下公司管理员无法下订单的问题 *[!UICONTROL Enable Purchase Orders]* 设置为 *[!UICONTROL Yes]* 和 *[!UICONTROL Purchase Order]* 设置为 *[!UICONTROL No]*.
+* **ACSD-54007** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复错误 *未定义数组键“_scope”* 导入客户数据时。
+* **ACSD-55031** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复 *“混合”类型不能为空* 编译期间出错。
+* **ACSD-54961** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了受限管理员用户无法批量更新的问题 *产品审查* 状态。
+* **ACSD-55256** (对于Adobe Commerce和Magento Open Source >=2.4.6 &lt;2.4.7) — 修复了图像滑块中仅成功显示第一个图像的问题。
+* 更新的修补程序：ACSD-52041、ACSD-54106
 
 ## v1.1.39 {#v1-1-39}
 
