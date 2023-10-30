@@ -3,13 +3,13 @@ title: 例外处理最佳实践
 description: 了解在开发Adobe Commerce项目时记录异常的推荐方法。
 feature: Best Practices
 role: Developer
-source-git-commit: 94d37b6a95cae93f465daf8eb96363a198833e27
+exl-id: e7ad685b-3eaf-485b-8ab1-702f2e7ab89e
+source-git-commit: 4bf8dd5c5320cc9a34cfaa552ec5e91d517d3617
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
 
 ---
-
 
 # 例外处理最佳实践
 
@@ -88,7 +88,7 @@ try {
 
 ### ![不正确](../../../assets/no.svg) 日志记录前的逻辑
 
-记录之前的逻辑可能会导致其他异常或致命错误，这会导致无法记录异常，应替换为 [正确示例](#correct-logging-always-comes-first).
+记录之前的逻辑可能会导致其他异常或致命错误，这会导致无法记录异常，应替换为 [正确示例](#logging-always-comes-first).
 
 ```php
 try {
@@ -101,7 +101,7 @@ try {
 
 ### ![不正确](../../../assets/no.svg) 空 `catch`
 
-空 `catch` 块可能是无意静音的标志，应替换为 [正确示例](#correct-mute-signals).
+空 `catch` 块可能是无意静音的标志，应替换为 [正确示例](#mute-signals).
 
 ```php
 try {
@@ -137,11 +137,11 @@ try {
 
 这种方法在消息中引入了与PSR-3不兼容的换行符。 异常（包括栈栈跟踪）必须是消息上下文的一部分，以确保该异常与消息一起正确地保存在New Relic或其他与PSR-3单色兼容的日志存储中。
 
-通过按照中显示的正确示例替换代码来解决此问题 [写入异常日志](#correct-write-to-the-exception-log) 或 [降级异常](#correct-downgrade-exceptions).
+通过按照中显示的正确示例替换代码来解决此问题 [写入异常日志](#write-to-the-exception-log) 或 [降级异常](#downgrade-exceptions).
 
 ### ![不正确](../../../assets/no.svg) 无上下文的降级异常
 
-异常将降级为错误，该错误不允许传递对象，而只允许传递字符串，因此 `getMessage()`. 这会导致跟踪丢失，应使用中显示的正确示例替换 [写入异常日志](#correct-write-to-the-exception-log) 或 [降级异常](#correct-downgrade-exceptions).
+异常将降级为错误，该错误不允许传递对象，而只允许传递字符串，因此 `getMessage()`. 这会导致跟踪丢失，应使用中显示的正确示例替换 [写入异常日志](#write-to-the-exception-log) 或 [降级异常](#downgrade-exceptions).
 
 ```php
 try {
@@ -153,7 +153,7 @@ try {
 
 ### ![不正确](../../../assets/no.svg) 仅将消息记录到异常日志
 
-而不是传递对象 `$e`，仅限 `$e->getMessage()` 通过。 这会导致跟踪丢失，应使用所示的正确示例替换 [写入异常日志](#correct-write-to-the-exception-log) 或 [降级异常](#correct-downgrade-exceptions).
+而不是传递对象 `$e`，仅限 `$e->getMessage()` 通过。 这会导致跟踪丢失，应使用所示的正确示例替换 [写入异常日志](#write-to-the-exception-log) 或 [降级异常](#downgrade-exceptions).
 
 ```php
 try {
@@ -165,7 +165,7 @@ try {
 
 ### ![不正确](../../../assets/no.svg) 缺失 `// phpcs:ignore Magento2.CodeAnalysis.EmptyBlock.DetectedCatch`
 
-省略 `phpcs:ignore` line会在PHPCS中触发警告，因此不应传递您的CI。 此内容应替换为中显示的正确示例 [将信号静音](#correct-mute-signals).
+省略 `phpcs:ignore` line会在PHPCS中触发警告，因此不应传递您的CI。 此内容应替换为中显示的正确示例 [将信号静音](#mute-signals).
 
 ```php
 try {
