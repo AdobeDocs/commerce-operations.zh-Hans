@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1391904acf8e2f65a733c4c899f5a67561cd8810
+source-git-commit: 965d35bfc4150230d6f4bc3b3a45c951fc13ed2b
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '532'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,66 @@ ht-degree: 1%
 ## 新增功能
 
 了解新文档和现有文档的重要更新。
+
+### 2023年10月25日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已发布 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">发行说明</a> 适用于1.1.40 Quality Patches Tool (QPT)软件包版本。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9c02a9ca6341df46266b50dffaa6e5b961a6af98">9c02a9</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2023年10月13日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关在Cloud Starter环境中为GraphQL API启用PHP应用程序服务器的信息。 请参阅 <a href="https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/performance-best-practices/application-server.html">适用于GraphQL API的应用程序服务器</a>.</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1498d2e8cfaa0243f571a8fd9a0bb717bc3a86c4">1498天2</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2023年10月5
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已发布 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">发行说明</a> 适用于1.1.39 Quality Patches Tool (QPT)软件包版本。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6df49bc9d097bf883936b66176022251f9bf3b38">6df49b</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2023年10月10日
 
@@ -51,26 +111,6 @@ ht-degree: 1%
 </td>
       <td>major-update</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21d8d1f26e44d48c84095c539e68b34066854fda">21d8d1</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2023年10月5
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已发布 <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">发行说明</a> 适用于1.1.39 Quality Patches Tool (QPT)软件包版本。</p>
-</td>
-      <td>major-update</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6df49bc9d097bf883936b66176022251f9bf3b38">6df49b</a> （提交）</td>
     </tr>
   </tbody>
 </table><!-- date_group -->
