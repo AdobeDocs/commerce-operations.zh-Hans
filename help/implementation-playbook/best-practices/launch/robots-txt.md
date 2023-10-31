@@ -1,19 +1,20 @@
 ---
-title: 配置“robots.txt”和“sitemap.xml”文件的最佳实践
-description: 了解如何将有关您的Adobe Commerce网站的说明传递给Web爬网程序。
+title: 配置Web爬网程序的最佳实践
+description: 了解如何使用“robots.txt”和“sitemap.xml”文件，将有关Adobe Commerce网站的说明传递给Web爬网程序。
 role: Developer
 feature: Best Practices
 exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
 
-# 配置的最佳实践 `robots.txt` 和 `sitemap.xml` 文件
 
-本文提供了使用的最佳实践 `robots.txt` 和 `sitemap.xml` Adobe Commerce中的文件，包括配置和安全性。 这些文件指示Web机器人（通常是搜索引擎机器人）如何爬取网站上的页面。 配置这些文件可以提高网站性能和优化搜索引擎。
+# 配置Web爬网程序的最佳实践
+
+本文提供了使用的最佳实践 `robots.txt` 和 `sitemap.xml` Adobe Commerce中的文件，包括配置和安全性。 这些文件指示Web爬网程序（通常是搜索引擎机器人）如何爬网网站上的页面。 配置这些文件可以提高网站性能和优化搜索引擎。
 
 >[!NOTE]
 >

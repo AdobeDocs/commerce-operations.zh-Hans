@@ -2,10 +2,10 @@
 user-guide-title: 实施行动手册
 user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
-source-git-commit: c737a8e902c960c933e54e2521107475bb1e5a22
+source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 10%
+source-wordcount: '274'
+ht-degree: 11%
 
 ---
 
@@ -108,7 +108,7 @@ ht-degree: 10%
       - [修改数据库表](best-practices/development/modifying-core-and-third-party-tables.md)
    - Launch {#launch}
       - [概述](best-practices/launch/overview.md)
-      - [配置robots.txt文件](best-practices/launch/robots-txt.md)
+      - [配置Web爬网程序](best-practices/launch/robots-txt.md)
       - [预防和应对安全事件](best-practices/launch/prevent-respond-security-incident.md)
    - 维护 {#maintenance}
       - [概述](best-practices/maintenance/overview.md)
