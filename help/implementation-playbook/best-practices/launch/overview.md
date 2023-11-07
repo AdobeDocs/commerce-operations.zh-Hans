@@ -3,9 +3,9 @@ title: 实施启动阶段
 description: 了解Adobe Commerce项目启动阶段的实施最佳实践。
 exl-id: 2e85346c-2063-49c9-9b8d-1b5fdd3f1cef
 feature: Best Practices
-source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
+source-git-commit: e63f68dd469564e70269154810cbfbd95d2b2e57
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '173'
 ht-degree: 1%
 
 ---
@@ -25,11 +25,11 @@ ht-degree: 1%
 ## 安全配置
 
 | 最佳实践 | 描述 |
-|------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [Adobe安全通知服务&#x200B;](https://www.adobe.com/subscription/adbeSecurityNotifications.html) | 订阅Adobe安全通知。 |
-| [预防和应对安全事件](prevent-respond-security-incident.md) | 避免并响应Adobe Commerce在云基础架构项目中的安全事件。 |
+|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Adobe安全通知服务](https://www.adobe.com/subscription/adbeSecurityNotifications.html) | 订阅Adobe安全通知。 |
+| [保护您的Commerce网站和基础架构](security-best-practices.md) | 加强Commerce安装的安全状态，以保护Commerce商店、管理员、基础设施和数据免受未经授权的访问和网络攻击。 |
 | [Google reCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html) | 配置Google reCAPTCHA以进行管理员访问和注册客户启动的各种店面操作。 |
-| [配置Web爬网程序](robots-txt.md) | 使用以下方式将有关Adobe Commerce站点的说明传递给Web爬网程序 `robots.txt` 和 `sitemap.xml` 文件。 |
+| [配置Web爬网程序](robots-txt.md) | 将有关Adobe Commerce站点的说明传递给Web爬网程序。 |
 | [验证安全配置](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/launch/checklist.html) | 在云基础架构网站上启动Adobe Commerce之前，请查看清单项目。 |
 
 ## 性能监控

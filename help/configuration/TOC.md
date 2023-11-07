@@ -2,9 +2,9 @@
 user-guide-title: 配置指南
 user-guide-description: 配置Adobe Commerce或Magento Open Source应用程序功能和服务。
 feature: Configuration
-source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
+source-git-commit: b61a2726e1a26229515d28332bbd88ba3d416a98
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ ht-degree: 0%
    + [缓存中毒](security/cache-poisoning.md)
    + [安全cron PHP](security/secure-cron-php.md)
    + [安全TXT](security/security-txt.md)
-   + [X-Frame-Options标头](security/xframe-options.md)
+   + [单击“顶插”“漏洞”](security/xframe-options.md)
 + 存储 {#storage}
    + [数据库探查器](storage/db-profiler.md)
    + 远程存储 {#remote-storage}

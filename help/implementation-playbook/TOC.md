@@ -2,9 +2,9 @@
 user-guide-title: 实施行动手册
 user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
-source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
+source-git-commit: db0fce79b22d409e8d639b959dc5a04693e72659
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '277'
 ht-degree: 11%
 
 ---
@@ -109,7 +109,7 @@ ht-degree: 11%
    - Launch {#launch}
       - [概述](best-practices/launch/overview.md)
       - [配置Web爬网程序](best-practices/launch/robots-txt.md)
-      - [预防和应对安全事件](best-practices/launch/prevent-respond-security-incident.md)
+      - [保护您的站点和基础架构](best-practices/launch/security-best-practices.md)
    - 维护 {#maintenance}
       - [概述](best-practices/maintenance/overview.md)
       - [审核前端性能](best-practices/maintenance/frontend-performance.md)
@@ -118,6 +118,7 @@ ht-degree: 11%
       - [大规模修补](best-practices/maintenance/patching-at-scale.md)
       - [订单处理](best-practices/maintenance/order-processing-configuration.md)
       - [解决数据库性能问题](best-practices/maintenance/resolve-database-performance-issues.md)
+      - [响应安全事件](best-practices/maintenance/respond-to-security-incident.md)
       - [正在安排生产站点上的管理员更新](best-practices/maintenance/scheduling-admin-updates-in-production.md)
       - [更新服务](best-practices/maintenance/update-services.md)
       - [升级核对清单](best-practices/maintenance/upgrade-checklist.md)

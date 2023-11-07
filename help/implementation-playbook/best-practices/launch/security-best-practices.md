@@ -1,0 +1,193 @@
+---
+title: 保护您的Commerce网站和基础架构
+description: 通过在设置、配置和更新Adobe Commerce安装时实施安全最佳实践来维护安全性。
+feature: Best Practices
+source-git-commit: cea5868ee37317ae9adfd8b580cd38c33c19761e
+workflow-type: tm+mt
+source-wordcount: '2151'
+ht-degree: 0%
+
+---
+
+
+# 保护您的Commerce网站和基础架构
+
+为部署在云基础架构上的Adobe Commerce项目建立和维护安全的环境是Adobe Commerce客户、解决方案合作伙伴和Adobe共同承担的责任。 本指南旨在为方程式中的客户提供最佳实践。
+
+虽然您无法消除所有安全风险，但应用这些最佳实践会加强Commerce安装的安全状况。 安全的站点和基础架构使恶意攻击成为不那么诱人的目标，确保了解决方案和客户敏感信息的安全，并有助于最大限度地减少可能导致站点中断和成本高昂的调查的安全相关事件。
+
+>[!NOTE]
+>
+>有关在云基础架构上保护和维护Adobe Commerce项目的角色和职责的信息，请参阅 [Shared Responsibility指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) 在Adobe托管中心。
+
+[所有受支持的版本](../../../release/versions.md) 之：
+
+- 云基础架构上的Adobe Commerce
+- Adobe Commerce内部部署
+
+## 优先建议
+
+Adobe认为以下建议对所有客户具有最高优先级。 在所有Commerce部署中实施以下关键安全最佳实践：
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **为您的管理员和所有SSH连接启用双重身份验证**
+
+- [Commerce管理员的安全性](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/2fa/security-two-factor-authentication.html)
+
+- [安全SSH连接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/multi-factor-authentication.html) （云基础架构）
+
+在项目上启用MFA后，具有SSH访问权限的云基础架构上的所有Adobe Commerce帐户都必须遵循身份验证工作流。 此工作流需要双重身份验证(2FA)代码，或者API令牌和SSH证书来访问环境。
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **保护管理员**
+
+- [配置非默认管理员URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url) 而不是使用默认值 `admin` 或常用术语，例如 `backend`. 此配置可减少尝试获得对网站的未经授权访问的脚本的风险。
+
+- [配置高级安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html) — 向URL添加密钥，要求密码区分大小写，并限制管理员会话长度、密码生命周期间隔以及锁定管理员用户帐户之前允许的登录尝试次数。 为了提高安全性，请配置在当前会话过期之前键盘处于非活动状态的长度，并要求用户名和密码区分大小写。
+
+- [启用ReCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html) 保护管理员免受自动暴力攻击。
+
+- 分配时遵循最小权限原则 [管理员权限](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html) 角色和角色到管理员用户帐户。
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **升级到最新版本的Adobe Commerce**
+
+通过以下方式保持代码更新 [将您的Commerce项目升级到最新版本](#upgrade-to-the-latest-release) Adobe Commerce、Commerce Services和扩展的，包括Adobe提供的安全修补程序、修补程序和其他修补程序。
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **保护敏感配置值**
+
+使用 [配置管理](../../../configuration/cli/set-configuration-values.md) 以锁定关键配置值。
+
+此 `lock config` 和 `lock env` CLI命令可配置环境变量，以防止从管理员对其进行更新。 该命令将该值写入 `<Commerce base dir>/app/etc/env.php` 文件。 (有关云基础架构项目的Commerce，请参阅 [存储配置管理](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html#sensitive-data).)
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **运行安全扫描**
+
+使用 [Commerce安全扫描服务](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html) 监控所有Adobe Commerce和Magento Open Source站点是否存在已知的安全风险和恶意软件，并注册以接收修补程序更新和安全通知。
+
+## 确保扩展和自定义代码的安全性
+
+当您通过从Adobe Commerce Marketplace添加第三方扩展来扩展Adobe Commerce，或添加自定义代码时，请应用以下最佳实践来确保这些自定义设置的安全：
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **选择精通安全的合作伙伴或解决方案集成商(SI)** — 通过选择遵循安全开发实践并具有防止和解决安全问题的良好记录的组织，确保安全集成和安全交付自定义代码。
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用安全扩展** — 通过与解决方案集成商或开发人员咨询并开展后续工作，确定Commerce部署的最合适且最安全的扩展 [Adobe扩展最佳实践](../planning/extensions.md).
+
+- 仅限来自Adobe Commerce Marketplace或通过解决方案集成商的源扩展。 如果扩展是通过集成商提供的，请确保在集成商发生更改时，扩展许可证的所有权可转移。
+
+- 通过限制扩展和供应商的数量来降低风险。
+
+- 如果可能，请在与Commerce应用程序集成之前查看扩展代码的安全性。
+
+- 确保PHP扩展开发人员遵循Adobe Commerce开发准则、流程和安全最佳实践。 具体来说，开发人员必须避免使用PHP功能，因为这会导致远程代码执行或弱加密。 请参阅 [安全性](https://developer.adobe.com/commerce/php/best-practices/security/) 在 *扩展开发人员最佳实践指南*.
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **审核代码** — 检查服务器和源代码存储库中的开发剩余。 确保没有可访问的日志文件、公开可见的.git目录、用于执行SQL语句的隧道、数据库转储、php信息文件或任何其他不需要的、可能在攻击中使用的不受保护的文件。
+
+## 升级到最新版本
+
+Adobe会不断发布更新的解决方案组件，以提高安全性并更好地保护客户免受可能的危害。 升级到最新版本的Adobe Commerce应用程序、已安装的服务和扩展并应用当前修补程序是抵御安全威胁的第一道也是最好的防线。
+
+Commerce通常按季度发布安全更新，但保留根据优先级和其他因素发布主要安全威胁修补程序的权利。
+
+有关可用的Adobe Commerce版本、发行周期以及升级和修补过程的信息，请参阅以下资源：
+
+- [已发布版本](../../../release/versions.md)
+- [产品可用性](../../../release/product-availability.md) (Adobe Commerce服务和Adobe创作的扩展)
+- [Adobe Commerce生命周期政策](../../../release/lifecycle-policy.md)
+- [升级指南](../../../upgrade/overview.md)
+- [如何应用修补程序](../../../upgrade/patches/overview.md)
+
+>[!TIP]
+>
+>获取最新的安全信息，并通过订阅 [Adobe安全通知服务](https://www.adobe.com/subscription/adbeSecurityNotifications.html).
+
+## 制定灾难恢复计划
+
+如果您的商业网站遭到破坏，请通过制定和实施全面的灾难恢复计划，控制损坏并快速恢复正常业务运营。
+
+如果客户由于灾难而要求恢复Commerce实例，则Adobe可以为客户提供备份文件。 如果适用，客户和解决方案集成商可以执行恢复。
+
+作为灾难恢复计划的一部分，Adobe强烈建议客户 [导出其Adobe Commerce应用程序配置](../../../configuration/cli/export-configuration.md) 以方便出于业务连续性目的而需要进行的重新部署。 将配置导出到文件系统的主要原因是系统配置优先于数据库配置。 在只读文件系统中，必须重新部署应用程序以更改敏感的配置设置，从而提供额外的保护层。
+
+### 其他信息
+
+**在云基础架构上部署Adobe Commerce**
+
+- [备份和灾难恢复](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html#backup-and-disaster-recovery)
+
+- [在云基础架构上存储Adobe Commerce的配置管理](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html)
+
+**内部部署的Adobe Commerce**
+
+- [灾难恢复想法](../../infrastructure/self-hosting/disaster-recovery-ideas.md)
+
+- [备份和恢复](../../infrastructure/self-hosting/disaster-recovery-ideas.md)
+
+- [导出配置设置](../../../configuration/cli/export-configuration.md)
+
+   - [导入配置设置](../../../configuration/cli/import-configuration.md)
+
+   - [备份和回滚文件系统、介质和数据库](../../../installation/tutorials/backup.md)
+
+## 维护安全的站点和基础架构
+
+此部分总结了维护Adobe Commerce安装的站点和基础架构安全性的最佳实践。 其中许多最佳实践都侧重于保护计算机基础架构的总体安全，因此其中某些建议可能已经实施。
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **阻止未经授权的访问** — 与您的托管合作伙伴合作，设置VPN通道以阻止对Commerce网站和客户数据的未授权访问。 设置SSH隧道以阻止对Commerce应用程序的未授权访问。
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用Web应用程序防火墙** — 分析通信并发现可疑模式，例如使用Web应用程序防火墙发送到未知IP地址的信用卡信息。
+
+部署在云基础架构上的Adobe Commerce安装可以使用随提供的内置WAF服务 [Fastly服务集成](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html)
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **配置高级密码安全设置** — 按照PCI数据安全标准第8.2.4节中的建议，设置强密码并至少每90天更改一次。请参阅 [配置管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html).
+
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用HTTPS** — 如果商业网站是新实施的，请使用HTTPS启动整个网站。 Google不仅使用HTTPS作为排名因素，而且许多用户甚至不考虑从网站购买，除非网站受HTTPS保护。
+
+## Protect抵御恶意软件
+
+针对电子商务网站的恶意软件攻击非常普遍，威胁方不断开发从交易中获取信用卡和个人信息的新方法。
+
+然而，Adobe发现，大多数网站上的妥协并非源自于一个创新的黑客。 相反，威胁行为人通常会利用文件系统中现有的未修补漏洞、较差的密码以及较弱的所有权和权限设置。
+
+在最常见的攻击中，恶意代码会注入到客户存储的绝对页眉或绝对页脚中。 在那里，代码会收集客户在店面中输入的表单数据，包括客户登录凭据和结账表单数据。 然后，此数据会出于恶意目的发送到另一个位置，而不是发送到Commerce后端。 此外，恶意软件可能会危害管理员，使其以假形式执行替换原始支付表单的代码，从而覆盖支付提供商设置的任何保护。
+
+客户端信用卡掠夺者是一种将代码嵌入商户网站内容的恶意软件，可在用户的浏览器中执行，如下图所示。
+执行某些操作（如用户提交表单或修改字段值）后，撇取器会序列化数据并将其发送到第三方端点。 这些端点通常是其他受到危害的网站，它们充当中继将数据发送到其最终目的地。
+
+![针对电子商务网站的恶意软件攻击的数据流](../../../assets/playbooks/malware-data-flow.svg)
+
+执行某些操作（如用户提交表单或修改字段值）后，撇取器会序列化数据并将其发送到第三方端点。 这些端点通常是其他受到危害的网站，它们充当中继将数据发送到其最终目的地。
+
+
+如果Commerce网站遭到攻击，请遵循的Adobe Commerce最佳实践 [响应安全事件](../maintenance/respond-to-security-incident.md).
+
+### 了解最常见的攻击
+
+以下是Adobe建议所有Commerce客户了解并采取措施抵御的常见攻击类别：
+
+- **网站违规** — 攻击者通过更改网站的外观或添加自己的消息来破坏网站。 尽管对网站和用户帐户的访问受到威胁，但支付信息通常仍保持安全。
+
+- **僵尸网络** — 客户的Commerce服务器成为发送垃圾电子邮件的僵尸网络的一部分。 列入阻止列表虽然用户数据通常不会受到危害，但客户的域名可能会被垃圾邮件过滤器破坏，从而阻止从域投放任何电子邮件。 或者，客户站点成为僵尸网络的一部分，导致其他站点上的分布式拒绝服务(DDoS)攻击。僵尸网络可能会阻止到Commerce服务器的入站IP流量，从而阻止客户购物。
+
+- **直接服务器攻击** — 数据受到破坏，后门和恶意软件已安装，站点操作受到影响。 未存储在服务器上的付款信息不太可能通过这些攻击而受到危害。
+
+- **静默卡捕获** — 在这种最灾难性的攻击中，入侵者会安装隐藏的恶意软件或卡捕获软件，或者更糟糕的是，会修改结账过程以收集信用卡数据。 然后，数据被发送到另一个网站在黑暗网络上出售。 此类攻击可能会在较长的一段时间内不被发现，并可能导致客户帐户和财务信息严重受损。
+
+- **静默密钥记录** — 威胁操作者在客户服务器上安装密钥日志记录代码以收集管理员用户凭据，以便他们能够登录并发起其他攻击而不会被检测到。
+
+### Protect抵御口令猜测攻击
+
+暴力密码猜测攻击可能导致未经授权的管理员访问。 通过以下最佳实践，Protect您的站点免受这些攻击：
+
+- 识别和保护可以从外部访问Commerce安装的所有点。
+
+  您可以按照Adobe的，保护对管理员的访问，这通常需要最严格的保护。 [优先级建议](#priority-recommendations) 配置Commerce项目时。
+
+- 通过设置仅允许来自指定IP地址或网络的用户访问的访问控制列表，控制对Commerce网站的访问。
+
+  您可以将Fastly Edge ACL与自定义VCL代码段结合使用，以过滤传入请求并允许按IP地址访问。 请参阅 [用于允许请求的自定义VCL](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html).
+
+
+  >[!TIP]
+  >
+  >如果您雇用远程员工，请确保远程员工的IP地址包含在有权访问Commerce网站的地址列表中。
+
+### 防止点击劫持攻击
+
+Adobe通过提供以下功能，保护您的商店免受点击劫持攻击 `X-Frame-Options` 可包含在店面请求中的HTTP请求标头。 请参阅 [防止点击劫持攻击](../../../configuration/security/xframe-options.md) 在 *Adobe Commerce配置指南*.

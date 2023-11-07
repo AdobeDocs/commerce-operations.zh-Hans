@@ -1,18 +1,18 @@
 ---
-title: X-Frame-Options标头
-description: 使用X-Frame-Options控制页面渲染。
+title: 防止点击劫持攻击
+description: 通过使用“X-Frame-Options”标头控制页面渲染来阻止点击劫持攻击。
 feature: Configuration, Security
 exl-id: 83cf5fd2-3eb8-4bd9-99e2-1c701dcd1382
-source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
+source-git-commit: 6cc04211fedddab68087bcf2f3603ae0403862b9
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-# X-Frame-Options标头
+# 防止点击劫持攻击
 
-帮助防止 [点击劫持](https://owasp.org/www-community/attacks/Clickjacking) 利用漏洞，我们添加了一个选项来使用 [X-Frame-Options](https://datatracker.ietf.org/doc/html/rfc7034) 请求中的HTTP请求标头。
+防止 [点击劫持](https://owasp.org/www-community/attacks/Clickjacking) 通过包含 [X-Frame-Options](https://datatracker.ietf.org/doc/html/rfc7034) 请求中的HTTP请求标头。
 
 此 `X-Frame-Options` 标头允许您指定是否允许浏览器在中呈现页面 `<frame>`， `<iframe>`，或 `<object>` 如下所示：
 
