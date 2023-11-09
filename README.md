@@ -1,8 +1,8 @@
 ---
-source-git-commit: 8b82081057af7d134528988d3f9f7cf53f4d7525
+source-git-commit: 2727ddb18995ac2163276a0aa8573161add48971
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 5%
+source-wordcount: '760'
+ht-degree: 3%
 
 ---
 # Adobe Commerce技术文档
@@ -54,25 +54,75 @@ If you submit a pull request with significant changes to documentation and code 
 
 ## 模板
 
-此 `_jekyll` 目录包含模板化主题和所需资源。
-使用Liquid templating语言的模板位于 `_jekyll/templated` 目录作为HTML文件。
-此 `_jekyll/_data` 目录包含带有用于呈现模板的数据的文件。
+对于某些主题，我们使用数据文件和模板来生成已发布的内容。 此方法的用例包括：
 
-要呈现所有模板，请执行以下操作：
+* 发布大量以编程方式生成的内容
+* 为需要机器可读文件格式（如YAML）以进行集成（如站点范围分析工具）的多个系统中的客户提供单一真实来源
+
+模板化内容的示例包括但不限于：
+
+* [CLI工具参考](https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html)
+* [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)
+* [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
+
+### 生成模板化内容
+
+通常，大多数作者只需要将发行版本添加到产品可用性和系统要求表中。 所有其他模板化内容的维护都是自动进行的，或由专门的团队成员管理。 这些说明适用于“大多数”作者。
+
+>**注意：**
+>
+>* 生成模板化内容需要在终端中的命令行上工作。
+>* 必须安装Ruby才能运行渲染脚本。 请参阅 [_jekyll/.ruby-version](_jekyll/.ruby-version) 适用于所需版本。
+
+有关模板化内容的文件结构的描述，请参阅以下内容：
+
+* `_jekyll` — 包含模板化主题和所需资源
+* `_jekyll/_data` — 包含用于呈现模板的计算机可读文件格式
+* `_jekyll/templated` — 包含使用液体模板语言的基于HTML的模板文件
+* `help/_includes/templated` — 包含在中模板化内容的生成输出 `.md` 文件格式，以便在Experience League主题中发布；渲染脚本自动将生成的输出写入此目录中
+
+要更新模板化内容，请执行以下操作：
+
+1. 在文本编辑器中，打开以下位置的数据文件： `/jekyll/_data` 目录。 例如：
+
+   * [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)： `/jekyll/_data/product-availability.yml`
+   * [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)： `/jekyll/_data/system-requirements.yml`
+
+1. 使用现有的YAML结构创建条目。
+
+   例如，要将Adobe Commerce版本添加到产品可用性表中，请将以下内容添加到 `extensions` 和 `services` 的部分 `/jekyll/_data/product-availability.yml` 文件（根据需要修改版本号）：
+
+   ```
+   support:
+      - core: 1.2.3
+        version: 4.5.6
+   ```
 
 1. 导航至 `_jekyll` 目录。
 
+   ```
    cd _jekyll
+   ```
 
-1. 运行渲染脚本。
+1. 生成模板化内容并将输出写入 `help/_includes/templated` 目录。
 
-```
-_scripts/render
-```
+   ```
+   rake render
+   ```
 
-> **注意：** 您必须从以下位置运行脚本： `_jekyll` 目录。
-> **注意：** 必须安装Ruby才能运行此脚本。
+   >**注意：** 您必须从以下位置运行脚本： `_jekyll` 目录。 如果这是您第一次运行脚本，则必须先安装Ruby依赖项，并具有 `bundle install` 命令。
 
-脚本运行渲染并将渲染的模板写入 `help/_includes/templated` 目录。
+1. 验证预期的 `help/_includes/templated` 文件已修改。
+
+   ```
+   git status
+   ```
+
+   您应会看到类似于以下内容的输出：
+
+   ```
+   modified:   _data/product-availability.yml
+   modified:   ../help/_includes/templated/product-availability-extensions.md
+   ```
 
 有关更多详细信息，请参阅Jekyll文档 [数据文件](https://jekyllrb.com/docs/datafiles)， [液体过滤器](https://jekyllrb.com/docs/liquid/filters/)和其他功能。
