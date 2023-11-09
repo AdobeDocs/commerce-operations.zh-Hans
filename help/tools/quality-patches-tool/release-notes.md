@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 6e82738ab9b3ea106b7987fac2f6f4a026ddc4f0
+source-git-commit: b1c258b33898ec07a0d0d805843bea1b3e9de478
 workflow-type: tm+mt
-source-wordcount: '15145'
+source-wordcount: '15346'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,18 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.41 {#v1-1-41}
+
+* **ACSD-54376** (适用于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了在将产品添加到购物车后，当产品从共享目录中删除时购物车中发生的问题。
+* **ACSD-53722** (对于Adobe Commerce >=2.4.4 &lt;2.4.7) — 修复了以下问题：当其他范围的计划更新生效时，捆绑产品选项价格更改为$0。
+* **ACSD-53643** (对于Adobe Commerce >=2.4.3 &lt;2.4.7) — 修复了在订购禁用或缺货的产品时，订单总额不正确的问题。 通过隐藏 *[!UICONTROL Place Order]* 此类采购订单的按钮。
+* **ACSD-54067** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了产品视频无法在移动设备上播放的问题。
+* **ACSD-55414** (对于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.6) — 在MariaDB尝试将EAV entity_id从字符串转换为整数时，提高性能。
+* **ACSD-51819** (对于Adobe Commerce >=2.4.4 &lt;2.4.4-p4) — 修复了可使用同一报价ID下达多个订单的问题。
+* **ACSD-53118** (对于Adobe Commerce >=2.4.0 &lt;2.4.7) — 修复了以下问题 *[!UICONTROL Cart Price Rule]* 当产品具有空属性时，使用优惠券代码应用。
+* **ACSD-54324** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了GraphQL requisition_lists请求不考虑分页设置并返回所有结果的问题。
+* 更新的修补程序： MDVA-42855-v2
 
 ## v1.1.40 {#v1-1-40}
 
