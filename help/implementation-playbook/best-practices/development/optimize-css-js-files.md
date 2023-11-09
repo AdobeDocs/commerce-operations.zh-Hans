@@ -4,7 +4,7 @@ description: 了解如何从管理员或命令行合并Adobe Commerce项目的CS
 role: Developer
 feature: Best Practices
 exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
-source-git-commit: 409bd4795704b9daec7773459e5a1f9f42ef5128
+source-git-commit: 2662ced484fb42bf2d32609e4e82364c1e47c8f0
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 >
 >云基础架构上的Adobe Commerce始终以生产模式运行，不能以其他方式设置它，因此您必须使用命令行方法来启用合并、缩小和捆绑功能。
 
-如果您的部署使用HTTP2，请勿合并或捆绑文件。 HTTP2异步下载静态文件。 在处理文件内容之前，浏览器必须下载整个合并文件。
+如果您的部署使用HTTP/2，请勿合并或捆绑文件。 HTTP/2以异步方式下载静态文件。 在处理文件内容之前，浏览器必须下载整个合并文件。
 
 ### 使用管理员
 
