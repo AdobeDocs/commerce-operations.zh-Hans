@@ -2,9 +2,9 @@
 title: ’[!DNL Upgrade Compatibility Tool] 要求
 description: 验证系统是否符合运行 [!DNL Upgrade Compatibility Tool] 在Adobe Commerce项目的命令行界面中。
 exl-id: b8af2e07-3d28-4937-bb88-b0a1c88a2938
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 40d850add2ef8c51e9192758135768306b163780
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 0%
 |----------------|-----------------|
 | PHP版本 | >= 7.3 |
 | Composer | 没有已知要求。 |
-| Node.js | Node.js版本 `^12.22.0`， `^14.17.0`，或 `>=16.0.0` (请参阅 [安装节点.js](https://nodejs.dev/en/learn/how-to-install-nodejs/)) |
+| Node.js | Node.js版本 `^12.22.0`， `^14.17.0`，或 `>=16.0.0` (请参阅 [安装节点.js](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)) |
 | 内存限制 | 至少2GB RAM。 |
 
 [!DNL Upgrade Compatibility Tool] 需要 [PCNTL](https://www.php.net/manual/en/book.pcntl.php) 以及执行的其他PHP扩展。 使用以下方式检查所需的PHP扩展 `composer check-platform-reqs` 命令：

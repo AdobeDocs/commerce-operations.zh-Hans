@@ -3,9 +3,9 @@ title: 配置应用程序
 description: 了解Adobe Commerce和Magento Open Source内部部署所需的安装后配置。
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 40d850add2ef8c51e9192758135768306b163780
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ UNIX `logrotate` 实用程序使您可以管理生成大量日志文件的系统
 更多信息：
 
 * Ubuntu： [Ubuntu文档页面](https://help.ubuntu.com/community/IptablesHowTo).
-* CentOS： [CentOS操作说明](https://wiki.centos.org/HowTos/Network/IPTables).
+* CentOS： [CentOS操作说明](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html).
 
 ### Security Enhanced Linux (SELinux)规则
 

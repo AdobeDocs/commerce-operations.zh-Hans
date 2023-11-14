@@ -4,9 +4,9 @@ description: 了解如何使用自定义工具访问和删除Adobe Commerce和Ma
 hide: true
 hidefromtoc: true
 exl-id: 5080e03b-0a83-405c-a232-b93311e284a3
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 40d850add2ef8c51e9192758135768306b163780
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 <!-- TODO: Remove hide metadata when the library has been integrated with Commerce. -->
 
-此 [Adobe隐私JavaScript库](https://developer.adobe.com/apis/experienceplatform/gdpr/services/allservices.html) 是一组工具，可帮助创建访问和删除专用数据的流程。
+此 [Adobe隐私JavaScript库](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html) 是一组工具，可帮助创建访问和删除专用数据的流程。
 
 Adobe Commerce和Magento Open Source数据跟踪服务可以存储适用于隐私法规的隐私信息，例如 [通用数据保护条例(GDPR)](gdpr.md) 和 [《加州消费者隐私法案》(CCPA)](ccpa.md).
 
@@ -43,7 +43,7 @@ AdobePrivacy JS库提供了多种功能，用于管理存储在浏览器中的�
 `retrieveThenRemoveIdentities()`
 ：此函数类似于 `removeIdentities()` 因为它检索一组身份并从浏览器中删除它们。
 
-有关使用这些函数的更多信息和示例，请参见 [官方图书馆文档](https://developer.adobe.com/apis/experienceplatform/gdpr/services/allservices.html).
+有关使用这些函数的更多信息和示例，请参见 [官方图书馆文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html).
 
 ### 初始化
 
@@ -54,4 +54,4 @@ var adobePrivacy = new AdobePrivacy({});
 ```
 
 构造函数在实例化期间接受带有参数的配置对象。
-请参阅 [官方图书馆文档](https://developer.adobe.com/apis/experienceplatform/gdpr/services/allservices.html) 以获取这些配置参数的列表。
+请参阅 [官方图书馆文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html) 以获取这些配置参数的列表。

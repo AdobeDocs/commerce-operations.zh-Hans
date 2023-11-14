@@ -3,9 +3,9 @@ title: 内部部署安装安全
 description: 了解改进Adobe Commerce或Magento Open Source内部安装的安全状态的方法。
 feature: Install, Security
 exl-id: 56724a72-c64d-44d4-a886-90d97ae5fb6d
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 40d850add2ef8c51e9192758135768306b163780
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
@@ -68,4 +68,4 @@ chcon -R --type httpd_sys_rw_content_t <magento_root>/generated
 根据您的安全要求，您可能会发现有必要打开防火墙中的端口80和其他端口。 由于网络安全的敏感性质，Adobe强烈建议您在继续操作之前先咨询IT部门。 以下是一些建议的参考资料：
 
 * Ubuntu： [Ubuntu文档页面](https://help.ubuntu.com/community/IptablesHowTo)
-* CentOS： [CentOS操作说明](https://wiki.centos.org/HowTos/Network/IPTables).
+* CentOS： [CentOS操作说明](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html).

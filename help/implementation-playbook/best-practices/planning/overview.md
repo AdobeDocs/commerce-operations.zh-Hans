@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目规划阶段的实施最佳实践。
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: 48ed42e69c5786a10de3426d581e35030412c001
+source-git-commit: 40d850add2ef8c51e9192758135768306b163780
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
     <td>配置站点、商店和存储视图以最大限度地提高站点性能。</td>
   </tr>
   <tr>
-    <td><a href="https://business.adobe.com/blog/how-to/usual-suspects-five-configuration-fixes-maximize-your-peak-sales">常见配置问题</a></td>
+    <td><a href="https://business.adobe.com/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">常见配置问题</a></td>
     <td>修复和防止Adobe Commerce站点最常见的五个配置问题。</td>
   </tr>
   <tr>
