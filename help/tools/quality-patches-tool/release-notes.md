@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: b1c258b33898ec07a0d0d805843bea1b3e9de478
+source-git-commit: 704c3e2934c74ee4b06499bbfc4cb68b0a007a1e
 workflow-type: tm+mt
-source-wordcount: '15346'
+source-wordcount: '15669'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,23 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.42 {#v1-1-42}
+
+* **ACSD-53658** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了以下问题： *[!UICONTROL Recently Viewed]* 产品数据未在商店视图中正确更新。
+* **ACSD-54626** (对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了无法创建新采购订单规则的问题(`createPurchaseOrderApprovalRule`) `NUMBER_OF_SKUS` 属性通过 [!DNL GraphQL].
+* **ACSD-53845** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复 [!DNL MySQL] 连接超时问题出现于 `consumer max_messages` = 0。
+* **ACSD-54890** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了以下问题： `aggregate_sales_report_bestsellers_data` 原因 [!DNL MySQL] 错误源于 `/tmp` 磁盘空间不足。
+* **ACSD-55112** (对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了以下问题： *[!UICONTROL Submit review]* 多次单击按钮，不需要 [!DNL Google reCAPTCHA v3] 验证。
+* **ACSD-54264** (对于Adobe Commerce >=2.4.4-p5 &lt;2.4.5) || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.7) — 修复了错误消息的问题 *“您无法更新请求的属性。 行ID： store_id&quot;* 当客户尝试使用另一商店视图中的可转让报价结帐时显示。
+* **ACSD-54418** (对于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.7) — 修复了将固定数量的折扣错误地应用于动态定价捆绑包的每个子产品的问题。
+* **ACSD-55238** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了保存空产品的问题 *[!UICONTROL Meta Description]*.
+* **ACSD-54966** (对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修复了在上一个订单失败时，无法重用每个客户限量使用的优惠券代码的问题。
+* **ACSD-54060** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了受限制管理员无法保存产品（如果它是分配给其他范围的另一个产品的子产品）的问题。
+* **ACSD-48910** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在为订单开票和发运订单后，即使订单仍然具有非零数量，分配给多个来源的捆绑产品也会缺货的问题。
+* **ACSD-55381** (对于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了查询时的内部服务器错误 `configurable_product_option_uid` 和 `configurable_product_option_value_uid` 字段来自 [!DNL B2B] *[!UICONTROL Requisition list]* via [!DNL GraphQL].
+* **ACSD-55628** (对于Adobe Commerce >=2.4.4-p2 &lt; 2.4.5) || >=2.4.5-p1 &lt; 2.4.6) — 修复了在公司注册表中上传文件的操作，以及替换店面中客户属性的文件的操作。
+* 更新的修补程序：ACSD-51240、ACSD-51890、ACSD-53098
 
 ## v1.1.41 {#v1-1-41}
 
