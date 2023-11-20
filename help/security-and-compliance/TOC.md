@@ -1,10 +1,10 @@
 ---
 user-guide-title: 安全性和合规性
-user-guide-description: 了解Adobe Commerce和Magento Open Source商户如何负责维护其管辖范围内的安全环境，以及满足在线商户的法律要求和最佳实践。
+user-guide-description: 了解维护安全Adobe Commerce项目的合规性和商家职责。
 feature: Security
-source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
+source-git-commit: 28b94fe2fd4f976ad48fa9c59e7e1559db8ba35e
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '58'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,7 @@ ht-degree: 1%
 # 安全性和合规性 {#security-and-compliance}
 
 - [概述](overview.md)
+- [分担责任](shared-responsibility.md)
 - [内容安全策略](content-security-policy.md)
 - 隐私法规 {#privacy}
    - [CCPA](privacy/ccpa.md)
