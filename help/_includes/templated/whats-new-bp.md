@@ -1,7 +1,7 @@
 ---
-source-git-commit: 525ac7ae2481be8c52b32471d14ceefba7b855a2
+source-git-commit: e6bce0f8e9244d1a7c31f23687474a7dc4586c5d
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '366'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 1%
 ## 实施最佳实践的新增功能
 
 本页包含我们认为您希望查看的最新更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2023年11月7日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/launch/security-best-practices.html">安全最佳实践</a> 主题至 <em>实施行动手册</em>.</p>
+</td>
+      <td>最佳实践</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/2ffda8afd118184f314e8e329a678605ac241007">2ffda8</a> （提交）</td>
+    </tr>
+  </tbody>
+</table><!-- date_group -->
 
 ### 2023年8月28日
 
@@ -73,26 +93,6 @@ ht-degree: 1%
 </td>
       <td>最佳实践</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/03cb50be0cb18b6079c5c69aafc74c6099610fb0">03cb50</a> （提交）</td>
-    </tr>
-  </tbody>
-</table><!-- date_group -->
-
-### 2023年3月9日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已更新 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html">Redis配置最佳实践</a> 其中包含有关将缓存与会话分离以及使用压缩的信息。</p>
-</td>
-      <td>最佳实践</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f9d46893a25569b9cb00b45ab285758b3b74b410">f9d468</a> （提交）</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->
