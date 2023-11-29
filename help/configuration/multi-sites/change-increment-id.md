@@ -2,9 +2,9 @@
 title: 更改增量ID
 description: 更改Commerce数据库实体的增量ID。
 exl-id: 039fc34c-d9cf-42f4-af5d-16a26a3e8171
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 2a45fe77d5a6fac089ae2c55d0ad047064dd07b0
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 请参阅 [PayPal网关已拒绝请求 — 重复发票问题] 在 _知识库_.
+>您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 请参阅 [PayPal网关已拒绝请求 — 重复发票问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/payments/paypal-gateway-rejected-request-duplicate-invoice-issue.html) 在 _知识库_.
 
 ## 必备步骤
 
@@ -55,7 +55,7 @@ ALTER TABLE sequence_{entity_type}_{store_id} AUTO_INCREMENT = {new_increment_va
 
 >[!INFO]
 >
-重要信息：新增量值必须大于当前增量值。
+>重要信息：新增量值必须大于当前增量值。
 
 执行以下查询后：
 
@@ -74,6 +74,6 @@ ALTER TABLE sequence_order_1 AUTO_INCREMENT = 2000;
 
 <!-- Link Definitions -->
 
-[PayPal网关已拒绝请求 — 重复发票问题]: https://support.magento.com/hc/en-us/articles/115002457473
+[PayPal gateway rejected request - duplicate invoice issue]: https://support.magento.com/hc/en-us/articles/115002457473
 [创建数据库备份]: https://support.magento.com/hc/en-us/articles/360003254334
 [任何支持的版本]

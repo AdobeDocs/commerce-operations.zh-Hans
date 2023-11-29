@@ -3,9 +3,9 @@ title: 配置远程存储
 description: 了解如何为本地Commerce应用程序配置远程存储模块。
 feature: Configuration, Storage
 exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 2a45fe77d5a6fac089ae2c55d0ad047064dd07b0
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 >[!INFO]
 >
->sync命令只迁移 `pub/media` 目录， _非_ 中的导入/导出文件 `var` 目录。 请参阅 [计划的导入/导出][import-export] 在 _Commerce 2.4用户指南_.
+>sync命令只迁移 `pub/media` 目录， _非_ 中的导入/导出文件 `var` 目录。 请参阅 [计划的导入/导出](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html) 在 _Commerce 2.4用户指南_.
 
 <!-- link definitions -->
 
