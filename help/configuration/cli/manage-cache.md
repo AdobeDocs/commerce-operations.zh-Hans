@@ -2,9 +2,9 @@
 title: 管理缓存
 description: 管理缓存类型和查看缓存状态。
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 9476a8ee2ce49e635e17fbb25c74656ba30bf930
+source-git-commit: 604e2a1461e2cbbcc498dfed6018ba640efe8cde
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Commerce 2具有以下缓存类型：
 | Web服务配置 | config_webservice | 正在缓存Web API结构。 |
 | 客户通知 | customer_notification | 显示在用户界面中的临时通知。 |
 | 管理员UI SDK缓存 | admin_ui_sdk | 缓存通过添加的管理自定义项 [Adobe Commerce管理UI SDK](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/). |
+| Webhooks响应缓存 | webhooks_response | 将响应缓存到 [webhook请求](https://developer.adobe.com/commerce/extensibility/webhooks/). |
 
 ## 查看缓存状态
 
