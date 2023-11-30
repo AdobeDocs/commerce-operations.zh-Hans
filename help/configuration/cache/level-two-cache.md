@@ -3,9 +3,9 @@ title: 二级缓存配置
 description: 了解如何配置L2缓存。
 feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: ba3c656566af47f16f58f476d7bc9f4781bb0234
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -47,8 +47,7 @@ Commerce将经过哈希处理的数据版本存储在Redis中，并在常规键�
                 'local_backend' => 'Cm_Cache_Backend_File',
                 'local_backend_options' => [
                     'cache_dir' => '/dev/shm/'
-                ],
-                'use_stale_cache' => false,
+                ]
             ],
             'frontend_options' => [
                 'write_control' => false,
@@ -69,8 +68,7 @@ Commerce将经过哈希处理的数据版本存储在Redis中，并在常规键�
    - `remote_backend_options` 是远程缓存配置。
    - `local_backend` 是本地缓存实施： `Cm_Cache_Backend_File`
    - `local_backend_options` 是本地缓存配置。
-      - `cache_dir` 是用于存储本地缓存的目录的文件缓存特定选项。
-   - `use_stale_cache` 是一个标志，用于启用或禁用过时的缓存。
+   - `cache_dir` 是用于存储本地缓存的目录的文件缓存特定选项。
 
 Adobe建议使用Redis进行远程缓存(`\Magento\Framework\Cache\Backend\Redis`)和 `Cm_Cache_Backend_File` 对于共享内存中数据的本地缓存，使用： `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
 
@@ -94,6 +92,8 @@ Adobe建议启用 `use_stale_cache` 选项仅适用于从中获益最大的缓�
 - `reflection`
 - `translate`
 
+Adobe不建议启用 `use_stale_cache` 的选项 `default` 缓存类型。
+
 以下代码显示了示例配置：
 
 ```php
@@ -114,8 +114,7 @@ Adobe建议启用 `use_stale_cache` 选项仅适用于从中获益最大的缓�
                 'local_backend' => 'Cm_Cache_Backend_File',
                 'local_backend_options' => [
                     'cache_dir' => '/dev/shm/'
-                ],
-                'use_stale_cache' => false,
+                ]
             ],
             'frontend_options' => [
                 'write_control' => false,
