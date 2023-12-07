@@ -3,9 +3,9 @@ title: 静态内容缓存
 description: 了解静态内容签名以及如何启用或禁用该功能。
 feature: Configuration, Cache, SCD
 exl-id: b54ceea2-b3a1-4dbb-ba87-743f2af0d2fb
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: d099d60bcf3c960b2e40b48c386041d8865cfb50
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,10 @@ http://magento2.com/pub/static/version1475604434/frontend/Magento/luma/en_US/ima
 
 默认情况下，Commerce将启用此功能，Adobe建议保持启用此功能，以防止与提供旧静态资源的浏览器相关的问题。
 
-您可以在中找到此功能的配置 [**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://docs.magento.com/user-guide/system/static-file-signature.html).
+静态内容登录的配置已登录 [**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://docs.magento.com/user-guide/system/static-file-signature.html).
+
+- **仅限内部部署**：如果您的站点满足以下条件，则可以使用此配置 **非** 在 [生产模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode).
+- **云**：此配置是隐藏的，因为生产模式是强制实施的；因此，您必须使用命令行，如下所示。
 
 ![静态文件设置](../../assets/configuration/static-files-settings.png)
 
