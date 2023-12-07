@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目开发阶段的实施最佳实践。
 exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
 feature: Best Practices
 role: Developer
-source-git-commit: 291c3f5ea3c58678c502d34c2baee71519a5c6dc
+source-git-commit: ce386611834c4199e34b5d95ce76254957821f46
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '349'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 2%
 ## 文件优化
 
 | 最佳实践 | 描述 |
-|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | [目录图像大小调整](catalog-image-resizing.md) | 在商店投入生产之前提供调整图像大小的指导，以确保获得最佳性能 |
 | [CSS和JS](optimize-css-js-files.md) | 从管理员或命令行合并和缩小层叠样式表(CSS)和JavaScript (JS)文件 |
 | [图像](image-optimization.md) | 优化图像并使用Fastly优化响应时间 |
@@ -62,10 +62,11 @@ ht-degree: 2%
 ## PHP开发
 
 | 最佳实践 | 描述 |
-|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | [异常处理](exception-handling.md) | 介绍记录异常的推荐方法 |
 | [扩展](https://developer.adobe.com/commerce/php/best-practices/){target="_blank"} | 描述开发模式以帮助确保扩展、Adobe Commerce的未来版本和其他自定义扩展之间的兼容性 |
 | [私有内容块](private-content-block-configuration.md) | 配置专用内容块以优化店面性能 |
+| [修改核心和第三方PHP代码](modifying-core-and-third-party-code.md) | 修改未创作或未直接控制的任何代码的功能、结果或输入 |
 
 ## 平台和服务
 
@@ -74,4 +75,4 @@ ht-degree: 2%
 | [生成和部署](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | 描述Adobe Commerce在云基础架构项目上的构建和部署阶段的最佳实践 |
 | 调试 | 系统地高效地调试Adobe Commerce框架 |
 | [静态内容部署](static-content-deployment.md) | 避免店面未显示静态内容的问题 |
-| [故障排除](troubleshooting.md) | Adobe Commerce实施常见问题疑难解答 |
+| [疑难解答](troubleshooting.md) | Adobe Commerce实施常见问题疑难解答 |
