@@ -1,7 +1,7 @@
 ---
-source-git-commit: 20add0a748e8df38dff48a779c63e1177d2a022d
+source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -58,3 +58,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >虽然这些发行说明中描述的增强功能和错误修复代码与Adobe Commerce捆绑在一起，但其中几个项目(例如B2B、页面生成器和Progressive Web Application(PWA)Studio)也单独发布。 每个项目的文档中都提供了特定于项目的单独发行信息，其中记录了这些项目的错误修复。 请参阅 [产品版本概述](/help/release/release-notes/overview.md).
+
+## PHP进程控制 {#php-process-control}
+
+在并行模式下运行索引器之前，必须启用“进程控制”支持(`pcntl`)。 请参阅 [安装](https://www.php.net/manual/en/pcntl.installation.php) 在PHP文档中。

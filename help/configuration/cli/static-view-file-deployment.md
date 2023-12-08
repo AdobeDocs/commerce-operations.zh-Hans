@@ -2,9 +2,9 @@
 title: 部署静态视图文件
 description: 了解如何在生产模式期间将静态文件写入Commerce文件系统。
 exl-id: 51954738-b999-4982-954b-70f7a70c5a17
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 0a72bc492dfec0a9014a518282a97ab21e59f96d
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -57,10 +57,10 @@ ht-degree: 0%
 | `--language (-l)` | 仅生成指定语言的文件。 缺省情况下，不指定任何选项，生成所有ISO-639语言代码的文件。 您可以一次指定一个语言代码的名称。 默认值为 **所有**.<br>例如： `--language en_US --language es_ES` | 否 |
 | `--exclude-language` | 为指定的语言代码生成文件。 默认情况下，未指定任何选项，即不排除任何内容。 您可以指定一个语言代码的名称，也可以指定以逗号分隔的语言代码列表。 默认值为 **无**. | 否 |
 | `--theme <theme>` | 要部署静态内容的主题。 默认值为 **所有**.<br>例如： `--theme Magento/blank --theme Magento/luma` | 否 |
-| `--exclude-theme <theme>` | 部署静态内容时要排除的主题。 默认值为 **无**.<br>例如，`--exclude-theme Magento/blank` | 否 |
+| `--exclude-theme <theme>` | 部署静态内容时要排除的主题。 默认值为 **无**.<br>例如， `--exclude-theme Magento/blank` | 否 |
 | `--area (-a)` | 仅为指定区域生成文件。 缺省情况下，未指定选项，将为所有区域生成文件。 有效值为 `adminhtml` 和 `frontend`. 默认值为 **所有**.<br>例如： `--area adminhtml` | 否 |
 | `--exclude-area` | 不要为指定区域生成文件。 默认情况下，未指定任何选项，即不排除任何内容。 默认值为 **无**. | 否 |
-| `--jobs (-j)` | 使用指定的作业数启用并行处理。 缺省值为0 （不在并行进程中运行）。 默认值为 **0**. | 否 |
+| `--jobs (-j)` | 启用 [并行处理](manage-indexers.md#reindexing-in-parallel-mode) 使用指定数量的作业。 缺省值为0 （不在并行进程中运行）。 默认值为 **0**. | 否 |
 | `--symlink-locale` | 为这些区域设置的文件创建符号链接，这些区域设置传递用于部署，但没有进行自定义。 | 否 |
 | `--content-version=CONTENT-VERSION` | 如果在多个节点上运行部署，可以使用静态内容的自定义版本，以确保静态内容版本相同且缓存正常工作。 | 否 |
 | `--no-javascript` | 不部署JavaScript文件 | 否 |

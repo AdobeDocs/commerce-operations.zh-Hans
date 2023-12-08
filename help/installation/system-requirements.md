@@ -2,9 +2,9 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce和Magento Open Source版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: ad715d1581442fa447e394d88d496ec52519a1c3
+source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,10 @@ opensearch:
 对于内部部署，验证是否已安装PHP OPcache，请参见 [PHP设置](prerequisites/php-settings.md). 有关性能设置的特定指导，请参阅软件建议 [PHP设置](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings) 在 _性能最佳实践_ 指南。
 
 如果必须单独安装OPcache，请参见 [PHP OPcache文档](https://www.php.net/manual/en/opcache.setup.php).
+
+### PHP进程控制
+
+{{php-process-control}}
 
 ### PHPUnit
 
