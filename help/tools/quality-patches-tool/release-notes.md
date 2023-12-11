@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 704c3e2934c74ee4b06499bbfc4cb68b0a007a1e
+source-git-commit: 3364434c37935285214451a7d242ae38815f3453
 workflow-type: tm+mt
-source-wordcount: '15669'
+source-wordcount: '19210'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,24 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.43 {#v1-1-43}
+
+* **ACSD-54972** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了在更改类别URL后，规范类别URL未更新的问题。
+* **ACSD-53636** (对于Adobe Commerce和Magento Open Source >=2.4.3 &lt;2.4.5) — 修复了具有具有特价子产品的可配置产品的产品列表页面上未显示常规价格的问题。
+* **ACSD-54885** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了当管理员用户使用 *客户登录* 功能。
+* **ACSD-55610** (对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.7) — 修复了部分取消的订单的折扣额不正确的问题。
+* **ACSD-55334** (对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 在GraphQL响应中通过翻译词典修复标签的翻译。
+* **ACSD-54739** (适用于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了产品库存状态条件未应用于相关产品规则的问题。
+* **ACSD-53925** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了以下问题：当遇到产品轮播时，管理员无法保存CMS块 `catalog_product_price` dimensions-mode设置为 *网站*.
+* **ACSD-52714** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了将日期格式设置为时，日期过滤器在管理网格中不起作用的问题 *Y-m-d*.
+* **ACSD-55055** (对于Adobe Commerce和Magento Open Source >=2.4.2 &lt;2.4.7) — 提高了在购物车的购物车价格规则中加载产品属性的性能。
+* **ACSD-53790** (对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了通过REST API为单个产品创建多个RMA的问题。
+* **ACSD-56090** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5) — 修复了GraphQL请求响应所有存储区数据而非专门请求的存储区数据的问题。
+* **ACSD-54983** (对于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了当用户状态设置为时，无法通过GraphQL请求获取公司用户UID的问题 *[!UICONTROL Inactive]*.
+* **ACSD-53309** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了以下问题中尚未完全纳税： *[!UICONTROL Regular Price]* 标记在选择了可自定义选项时。
+* **ACSD-55305** (对于Adobe Commerce >=2.4.4 &lt;2.4.7) — 修复了以下问题 *[!UICONTROL Edit Company User]* 上的弹出窗口 **[!UICONTROL myAccount]** > **[!UICONTROL Company Structure]** 屏幕上有加载器时会冻结页面。
+* 更新的修补程序： ACSD-49013
 
 ## v1.1.42 {#v1-1-42}
 
