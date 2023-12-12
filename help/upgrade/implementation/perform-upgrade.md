@@ -1,26 +1,28 @@
 ---
 title: 执行升级
-description: 按照以下步骤升级Adobe Commerce或Magento Open Source项目。
+description: 按照以下步骤升级Adobe Commerce的内部部署。
 exl-id: 9183f1d2-a8dd-4232-bdee-7c431e0133df
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 0cee0ab36274758b583c04dbee8251ce3b78e559
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
 
+
 # 执行升级
 
-如果您通过以下方式安装了Adobe Commerce或Magento Open Source应用程序，则可以从命令行对其进行升级：
+您可以升级 _内部部署_ 部署Adobe Commerce或Magento Open Source应用程序（如果通过以下方式安装软件）：
 
-- 使用下载中继包 `composer create-project` 命令。
+- 使用下载编辑器metapackage `composer create-project` 命令。
 - 正在安装压缩的归档文件。
 
 >[!NOTE]
 >
->如果您克隆GitHub存储库，请勿使用此方法进行升级。 相反，请参阅 [升级基于Git的安装](../developer/git-installs.md) 以获取升级说明。
+>- 有关云基础架构项目的Adobe Commerce，请参阅 [升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html) （在云指南中）。
+>- 如果您克隆GitHub存储库，请勿使用此方法进行升级。 请参阅 [升级基于Git的安装](../developer/git-installs.md).
 
-以下说明说明了如何使用Composer升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须首先使用编辑器1升级到与编辑器2兼容的版本（例如，2.4.2） _早于_ 升级到Composer 2以进行2.4.2以上升级。 此外，您必须运行 [支持的版本](../../installation/system-requirements.md) PHP的。
+以下说明说明了如何使用编辑器包管理器进行升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须首先使用编辑器1升级到与编辑器2兼容的版本（例如，2.4.2） _早于_ 升级到Composer 2以进行2.4.2以上升级。 此外，您必须运行 [支持的版本](../../installation/system-requirements.md) PHP的。
 
 >[!WARNING]
 >
@@ -34,7 +36,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->请参阅本节末尾的示例，以获取指定不同版本级别的帮助。 例如，次要版本、质量补丁和安全补丁。 Adobe Commerce客户可以在正式发布(GA)日期两周前访问修补程序。 预发行版包只能通过Composer使用。 在GA发布之前，您无法在下载门户或GitHub上找到它们。 如果您在编辑器中找不到这些包，请联系Adobe Commerce支持。
+>请参阅本节末尾的示例，以获取指定不同版本级别的帮助。 例如，高质量的修补程序和安全修补程序。 如果您在编辑器中找不到这些包，请联系Adobe Commerce支持。
 
 1. 切换到维护模式以防止在升级过程中访问存储区。
 
@@ -114,7 +116,7 @@ ht-degree: 0%
 
    - `--interactive-root-conflicts`  — （可选）允许您以交互方式查看和更新先前版本的任何过期值，或与要升级到的版本不匹配的任何自定义值。
 
-   - `--force-root-updates`  — （可选）使用预期的Magento值覆盖所有冲突的自定义值。
+   - `--force-root-updates`  — （可选）使用预期的Commerce值覆盖所有冲突的自定义值。
 
    - `--help`  — （可选）提供有关插件的使用详细信息。
 
@@ -142,58 +144,36 @@ _Adobe Commerce_：
 composer show magento/product-enterprise-edition 2.4.* --available | grep -m 1 versions
 ```
 
-### 示例 — 次要版本
-
-次发行版本包含新功能、质量修复和安全修复。 使用编辑器指定次要版本。 例如，要指定Magento Open Source2.4.3元包，请执行以下操作：
-
-_Magento Open Source_：
-
-```bash
-composer require-commerce magento/product-community-edition 2.4.0 --no-update
-```
-
-_Adobe Commerce_：
-
-```bash
-composer require-commerce magento/product-enterprise-edition 2.4.0 --no-update
-```
-
 ### 示例 — 质量修补程序
 
-质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时可以包含向后兼容的新功能。 使用Composer下载质量修补程序。 例如，要指定Magento Open Source2.4.1元包，请执行以下操作：
+质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时可以包含向后兼容的新功能。 使用Composer下载质量修补程序。
+
+_Adobe Commerce_：
 
 ```bash
-composer require-commerce magento/product-community-edition 2.4.3 --no-update
+composer require-commerce magento/product-enterprise-edition 2.4.6 --no-update
 ```
 
 _Magento Open Source_：
 
 ```bash
-composer require-commerce magento/product-community-edition 2.4.3 --no-update
-```
-
-_Adobe Commerce_：
-
-```bash
-composer require-commerce magento/product-enterprise-edition 2.4.3 --no-update
+composer require-commerce magento/product-community-edition 2.4.6 --no-update
 ```
 
 ### 示例 — 安全修补程序
 
-安全修补程序仅包含安全修补程序。 它们旨在使升级过程更快、更轻松。
-
-安全修补程序使用编辑器命名约定 `2.4.x-px`. 使用Composer指定修补程序。
-
-_Magento Open Source_：
-
-```bash
-composer require-commerce magento/product-community-edition 2.4.3-p1 --no-update
-```
+安全修补程序仅包含安全修补程序。 它们旨在使升级过程更快、更轻松。 安全修补程序使用编辑器命名约定 `2.4.x-px`.
 
 _Adobe Commerce_：
 
 ```bash
-composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-update
+composer require-commerce magento/product-enterprise-edition 2.4.6-p3 --no-update
+```
+
+_Magento Open Source_：
+
+```bash
+composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
 ```
 
 ## 更新元数据
@@ -250,7 +230,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-updat
 
 ## 检查您的工作
 
-在Web浏览器中打开店面URL，检查升级是否成功。 如果升级不成功，您的店面将无法正确加载。
+要检查升级是否成功，请在Web浏览器中打开店面URL。 如果升级不成功，您的店面将无法正确加载。
 
 如果应用程序失败，  `We're sorry, an error has occurred while generating this email.` 错误：
 
