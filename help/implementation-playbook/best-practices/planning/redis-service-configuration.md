@@ -4,9 +4,9 @@ description: 了解如何通过使用适用于Adobe Commerce的扩展Redis缓存
 role: Developer, Admin
 feature: Best Practices, Cache
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-source-git-commit: 156e6412b9f94b74bad040b698f466808b0360e3
+source-git-commit: 6772c4fe31cfcd18463b9112f12a2dc285b39324
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,49 @@ stage:
 >[!NOTE]
 >
 >确认您使用的是最新版本的 `ece-tools` 包。 如果不能， [升级到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html). 您可以使用检查本地环境中安装的版本 `composer show magento/ece-tools` cli命令。
+
+
+### L2高速缓存内存大小(Adobe Commerce Cloud)
+
+二级缓存使用 [临时文件系统](https://en.wikipedia.org/wiki/Tmpfs) 作为存储机制。 与专用键值数据库系统相比，临时文件系统没有控制内存使用的键逐出策略。
+
+内存使用率控制不足会导致二级缓存内存使用率随着时间增长，因为它会累积过时的缓存。
+
+为避免内存耗尽二级缓存实现，Adobe Commerce会在达到特定阈值时清除存储。 默认的阈值为95%。
+
+根据项目对高速缓存存储的要求，调整二级高速缓存内存的最大使用率非常重要。 使用以下方法之一配置内存高速缓存大小：
+
+- 创建支持工单以请求对 `/dev/shm` 挂载。
+- 调整 `cleanup_percentage` 应用程序级别的属性，用于限制存储的最大填充百分比。 剩余的可用内存可供其他服务使用。
+您可以在部署配置中调整缓存配置组下的配置 `cache/frontend/default/backend_options/cleanup_percentage`.
+
+>[!NOTE]
+>
+>此 `cleanup_percentage` 可配置选项在Adobe Commerce 2.4.4中引入。
+
+以下代码显示了中的示例配置 `.magento.env.yaml` 文件：
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          backend_options:
+            cleanup_percentage: 90
+```
+
+缓存要求可能因项目配置和自定义第三方代码而异。 L2高速缓存内存大小的范围允许L2高速缓存在阈值命中次数不多的情况下运行。
+理想情况下，二级缓存内存的使用量应该稳定在低于阈值的某个级别，只是为了避免频繁的存储清除。
+
+您可以使用以下CLI命令检查群集的每个节点上的L2缓存存储内存使用情况，并查找 `/dev/shm` 行。
+虽然使用情况可能因不同的节点而异，但应该会收敛到相同的值。
+
+```bash
+df -h
+```
 
 ## 启用Redis从属连接
 
