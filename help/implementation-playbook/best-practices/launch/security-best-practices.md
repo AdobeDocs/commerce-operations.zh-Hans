@@ -2,13 +2,13 @@
 title: 保护您的Commerce网站和基础架构
 description: 通过在设置、配置和更新Adobe Commerce安装时实施安全最佳实践来维护安全性。
 feature: Best Practices
-source-git-commit: cea5868ee37317ae9adfd8b580cd38c33c19761e
+exl-id: 50d8a464-6496-4e9a-b642-0c6d0eb51ba0
+source-git-commit: cbfd19efd9f489fefa16d93cbd8116eefb57a900
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
-
 
 # 保护您的Commerce网站和基础架构
 
@@ -148,14 +148,15 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 在最常见的攻击中，恶意代码会注入到客户存储的绝对页眉或绝对页脚中。 在那里，代码会收集客户在店面中输入的表单数据，包括客户登录凭据和结账表单数据。 然后，此数据会出于恶意目的发送到另一个位置，而不是发送到Commerce后端。 此外，恶意软件可能会危害管理员，使其以假形式执行替换原始支付表单的代码，从而覆盖支付提供商设置的任何保护。
 
 客户端信用卡掠夺者是一种将代码嵌入商户网站内容的恶意软件，可在用户的浏览器中执行，如下图所示。
-执行某些操作（如用户提交表单或修改字段值）后，撇取器会序列化数据并将其发送到第三方端点。 这些端点通常是其他受到危害的网站，它们充当中继将数据发送到其最终目的地。
 
 ![针对电子商务网站的恶意软件攻击的数据流](../../../assets/playbooks/malware-data-flow.svg)
 
 执行某些操作（如用户提交表单或修改字段值）后，撇取器会序列化数据并将其发送到第三方端点。 这些端点通常是其他受到危害的网站，它们充当中继将数据发送到其最终目的地。
 
 
-如果Commerce网站遭到攻击，请遵循的Adobe Commerce最佳实践 [响应安全事件](../maintenance/respond-to-security-incident.md).
+>[!TIP]
+>
+>如果Commerce网站受到恶意软件攻击的影响，请遵循的Adobe Commerce最佳实践 [响应安全事件](../maintenance/respond-to-security-incident.md).
 
 ### 了解最常见的攻击
 
