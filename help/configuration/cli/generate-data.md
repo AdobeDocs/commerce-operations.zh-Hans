@@ -3,10 +3,10 @@ title: 生成性能测试数据
 description: 了解如何生成大量数据以用于性能测试。
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
-source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
+source-git-commit: a2dc85232aa10761a6729fe66f5548f644cb5bd4
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 9%
+source-wordcount: '788'
+ht-degree: 8%
 
 ---
 
@@ -51,6 +51,8 @@ ht-degree: 9%
 >[!WARNING]
 >
 >在运行数据生成器之前，请禁用服务器上运行的所有cron作业。 禁用cron作业会阻止数据生成器执行与活动cron作业冲突的操作，并避免不必要的错误。
+>
+>如果您打算使用实施事件 [!DNL Adobe I/O Events for Adobe Commerce] 测试性能时，请在订阅之前运行此命令 [事件](https://developer.adobe.com/commerce/extensibility/events/). 先订阅事件可能会导致错误。
 
 运行本节中介绍的命令。 命令运行后，您必须 [重新索引所有索引器](../cli/manage-indexers.md).
 
