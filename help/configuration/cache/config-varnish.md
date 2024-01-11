@@ -3,9 +3,9 @@ title: 配置和使用清漆
 description: 了解Varnish如何存储文件并改进HTTP流量。
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: ec3ab7e3c6c3835e73653b0d4f74aadc861016d3
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 [清漆缓存] 是一个开源Web应用程序加速器(也称为 _HTTP加速器_ 或 _缓存HTTP反向代理_)。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
 
-Commerce 2.4.2使用Varnish 6.4进行测试。Commerce 2.4.x与Varnish 6.x兼容
+[系统要求](../../installation/system-requirements.md) 列出支持的Varnish版本。
 
 >[!WARNING]
 >
->三 _强烈推荐_ 在生产中使用光亮漆。 内置全页缓存 — 适用于文件系统或 [数据库] — 比Varnish慢得多，Varnish旨在加速HTTP流量。
+>三 _强烈推荐_ 在生产中使用光亮漆。 内置全页缓存 — 适用于文件系统或 [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/) — 比Varnish慢得多，Varnish旨在加速HTTP流量。
 
 有关Varnish的详细信息，请参阅：
 
@@ -53,9 +53,9 @@ Commerce 2.4.2使用Varnish 6.4进行测试。Commerce 2.4.x与Varnish 6.x兼容
 
 >[!NOTE]
 >
-- 除非另有说明，否则您必须以用户身份输入本主题中讨论的所有命令， `root` 权限。
+>- 除非另有说明，否则您必须以用户身份输入本主题中讨论的所有命令， `root` 权限。
 >
-- 本主题为CentOS和Apache 2.4上的Varnish编写。如果在不同的环境中设置“清漆”，某些命令可能会不同。 有关更多信息，请参阅Varnish文档。
+>- 本主题为CentOS和Apache 2.4上的Varnish编写。如果在不同的环境中设置“清漆”，某些命令可能会不同。 有关更多信息，请参阅Varnish文档。
 
 ## 已知问题
 
@@ -96,7 +96,7 @@ Commerce 2.4.2使用Varnish 6.4进行测试。Commerce 2.4.x与Varnish 6.x兼容
 
 >[!INFO]
 >
-本主题仅介绍上述列表中的默认选项。 在复杂情况下可使用许多其他方法配置缓存（例如，使用内容交付网络）；这些方法不在本指南的涵盖范围内。
+>本主题仅介绍上述列表中的默认选项。 在复杂情况下可使用许多其他方法配置缓存（例如，使用内容交付网络）；这些方法不在本指南的涵盖范围内。
 
 在第一次浏览器请求时，可缓存的资产会从Varnish提交到客户端浏览器，并缓存在浏览器上。
 
@@ -120,7 +120,7 @@ Commerce 2.4.2使用Varnish 6.4进行测试。Commerce 2.4.x与Varnish 6.x兼容
 
 >[!NOTE]
 >
-大多数静态资产都有一个HTTP 200 (OK)状态代码，表示资产是从服务器检索的。
+>大多数静态资产都有一个HTTP 200 (OK)状态代码，表示资产是从服务器检索的。
 
 ### 第二次浏览器请求
 
@@ -148,7 +148,6 @@ Commerce 2.4.2使用Varnish 6.4进行测试。Commerce 2.4.x与Varnish 6.x兼容
 
 <!-- Link Definitions -->
 
-[数据库]: https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/
 [亮光的大图片]: https://www.varnish-cache.org/docs/trunk/users-guide/intro.html
 [清漆缓存]: https://varnish-cache.org
 [清漆启动选项]: https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options
