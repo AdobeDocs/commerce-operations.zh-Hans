@@ -2,9 +2,9 @@
 title: 示例数据概述
 description: 了解如何为Adobe Commerce和Magento Open Source项目使用示例数据。
 exl-id: 828b009d-a6ff-4db2-aa1a-838f6f55a194
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: decaac76955aaae011c308ed1295198abf791abe
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,15 @@ ht-degree: 0%
 
 示例数据提供一个基于Luma主题的店面，配有产品、类别、客户注册等。 它的功能与Commerce店面类似，您可以使用管理员操纵价格、库存和促销定价规则。
 
+>[!NOTE]
+>
+>要检查和分析数据库和各种功能，请考虑使用真实数据而不是示例数据。 样本数据被设计作为预生成的店面模拟，以演示主题设计和基本店面行为。 安装样本数据时，所有样本数据实体都将直接写入数据库表中。
+
 您可以在安装Commerce软件之前或之后安装示例数据。 使用完示例数据后，您可以将其删除或重新安装，如中所述 [删除示例数据模块或更新示例数据](remove-or-update.md).
 
 >[!WARNING]
 >
->无法卸载示例数据。 我们建议您仅使用示例数据来了解Adobe Commerce和Magento Open Source的工作原理。 避免在安装了示例数据的系统中进行任何开发。
+>无法卸载示例数据。 仅使用示例数据来了解Adobe Commerce和Magento Open Source的工作原理。 避免在安装了示例数据的系统中进行任何开发。
 
 您可以通过以下任意方式安装可选的示例数据：
 
