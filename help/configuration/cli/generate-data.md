@@ -3,18 +3,14 @@ title: 生成性能测试数据
 description: 了解如何生成大量数据以用于性能测试。
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
-source-git-commit: a2dc85232aa10761a6729fe66f5548f644cb5bd4
+source-git-commit: d4a6d5cd181c7c4426914bbe481f4d5d1e828b5e
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 8%
+source-wordcount: '762'
+ht-degree: 9%
 
 ---
 
 # 性能测试数据
-
-要使用 [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) 或者是另一种性能测试工具，您必须生成大量数据，如商店、类别和产品。
-
-{{file-system-owner}}
 
 ## 配置文件
 
@@ -47,6 +43,8 @@ ht-degree: 8%
 | `orders` | 80 | 50,000 | 50,000 | 100,000 | 150,000 |
 
 ### 运行数据生成器
+
+{{file-system-owner}}
 
 >[!WARNING]
 >
