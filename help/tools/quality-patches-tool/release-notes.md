@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 9d75675aed671b995f7bdda43abc5a06f2c03ee8
+source-git-commit: 6f0a3434d4730b4d2bcf0aecdacfae58025824cd
 workflow-type: tm+mt
-source-wordcount: '19551'
+source-wordcount: '19799'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,17 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.45 {#v1-1-45}
+
+* **ACSD-56886** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了计划更新禁用了两个子产品中的其中一个子产品时，可配置产品缺货的问题。
+* **ACSD-56616** (对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了捆绑产品在其简单产品缺货时在店面显示为现货的问题。
+* **ACSD-56515** (对于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了具有网站级别权限的管理员无法添加或编辑动态块的问题。
+* **ACSD-56447** (对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了通过并行REST Web API请求将同一产品添加到购物车会在购物车中导致两个单独项目的问题。
+* **ACSD-56415** (对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.7) — 修复了由于 `DELETE` 查询时数据库中有大量的要索引的部分价格数据。
+* **ACSD-54965** (对于Adobe Commerce >=2.4.5 &lt;2.4.6) — 修复了将产品仅分配给自定义库存时，可视化促销网格不显示正确库存的问题。
+* **ACSD-52824** (对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了在公司设置中禁用此类付款方法时，为公司客户显示PayPal Express、Google Pay和Apple Pay按钮的问题。
+* 更新的修补程序： ACSD-56193
 
 ## v1.1.44 {#v1-1-44}
 
