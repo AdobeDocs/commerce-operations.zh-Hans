@@ -2,9 +2,9 @@
 title: 应用程序模式
 description: Commerce应用程序可以根据您的需求以不同的模式运行。 查看可用的应用程序模式的详细列表。
 exl-id: a2a71f43-682f-4fa4-940a-1f6a4d441c41
-source-git-commit: 982c478f73bdd1301210db5a89fb09edf69a6c42
+source-git-commit: 5003e8dcbb3736201ea19ebe30d5e56775096157
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 云支持
 
-无需管理云基础架构项目的应用程序模式。 由于只读文件系统，您无法更改远程云环境中的模式。 请勿尝试通过修改 `app/etc/env.php` 文件，因为 `ece-tools` 包会根据多个配置源覆盖文件。
+由于只读文件系统，您无法更改远程云环境中的模式。 请勿尝试通过修改 `app/etc/env.php` 文件，因为 `ece-tools` 包会根据多个配置源覆盖文件。
 
 云基础架构上的Adobe Commerce会在中自动运行应用程序 _维护_ 模式，可使网站离线，直到部署完成。 否则，应用程序将保留在 _生产_ 模式。 请参阅 [部署过程](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase) 在 _云基础架构上的Commerce指南_.
 
