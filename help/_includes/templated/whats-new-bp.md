@@ -1,8 +1,8 @@
 ---
-source-git-commit: 903a5b52dd96423b7ac29997082b2feccdd3e10a
+source-git-commit: 5e25ba7151b16706f60c3fb8ffc5dbc6f31f29a6
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 2%
+source-wordcount: '60'
+ht-degree: 1%
 
 ---
 # 最佳实践的新增功能
@@ -27,26 +27,6 @@ ht-degree: 2%
 </td>
       <td>最佳实践</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21da4c22744dbb3b27b0dbe184b946788748a52e">21da4c</a> （提交）</td>
-    </tr>
-  </tbody>
-</table><!-- date_group --><!-- month_group -->
-
-### 2023年12月7日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>来源</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了一个关于以下内容的新最佳实践主题： <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/development/modifying-core-and-third-party-code.html">修改核心和第三方PHP代码</a>.</p>
-</td>
-      <td>最佳实践</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21c0b6faab093bf9db860ce2f4d56072c4cc6e49">21c0b6</a> （提交）</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->
