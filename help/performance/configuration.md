@@ -3,9 +3,9 @@ title: 配置最佳实践
 description: 使用这些最佳实践优化Adobe Commerce或Magento Open Source部署的响应时间。
 feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 3c53efdaedea075e288d262e247bc9c42b5a2432
+source-git-commit: 2fa587557db214ed2fbeb5e6c175a9a209883f94
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1428'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 提高您的店面响应能力 [!DNL Commerce] 在实例中，以默认或开发人员模式转到“管理员”，然后更改以下设置：
 
-**[!UICONTROL Stores]-> [!UICONTROL Configuration] -> [!UICONTROL Advanced] -> [!UICONTROL Developer]:**
+**[!UICONTROL Stores]-> [!UICONTROL Configuration] -> [!UICONTROL Advanced] -> [!UICONTROL Developer]：**
 
 | 设置组 | 设置 | 值 |
 | ------------------- | -------------------------- | ------ |
@@ -106,7 +106,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 ### 捆绑提示
 
 * 我们建议您使用第三方工具进行缩小和捆绑(例如 [r.js](https://requirejs.org/))。 [!DNL Commerce] 内置机制并非最佳方案，而是作为备用方案提供。
-* 激活HTTP/2协议可能是使用JS捆绑包的良好替代方法。 协议也提供了几乎相同的好处。
+* 激活HTTP/2协议可能是使用JS捆绑包的良好替代方法。 该协议提供了许多相同的好处。 默认情况下，在云基础架构项目上的Adobe Commerce中会启用此功能。
 * 我们不建议使用已弃用的设置，例如合并JS和CSS文件，因为它们仅为页面的HEAD部分中的同步加载JS而设计。 使用此技术可能会导致捆绑销售，并要求JS逻辑无法正常工作。
 
 ## 客户区段验证
