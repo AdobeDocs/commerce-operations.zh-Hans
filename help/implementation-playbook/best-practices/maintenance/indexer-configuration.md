@@ -4,9 +4,9 @@ description: 通过遵循索引器配置的最佳实践来维护和优化站点�
 role: Admin, User
 feature: Best Practices
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: af66d47279245f8ee105030bbb33d77b1b35c3e5
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Commerce有两种类型的索引器模式： [!UICONTROL Update on Save] �
 
 - **[!UICONTROL Update on Save]** 模式会在目录或其他数据发生更改时立即更新索引。 例如，如果管理员用户将新产品添加到类别，则保存更新后，将立即重新索引类别产品索引。
 
-- **[!UICONTROL Update on Schedule]** 模式存储有关数据更新的信息，重新索引操作和索引更新由cron作业管理，该作业按计划间隔在后台运行。
+- **[!UICONTROL Update on Schedule]** 模式存储有关数据更新的信息，重新索引操作和索引更新由cron作业管理，该作业按计划间隔在后台运行。 cron作业并不总是在每次运行时执行重新索引。 仅当索引器更改日志中有新条目（例如，索引器上有积压）时，它才会重新索引。
 
 大型存储区中有多个管理员在后端工作或者有许多导入和导出会触发频繁的索引更新。 如果站点索引配置设置为 [!UICONTROL Update on Save] 模式，频繁地重新索引会降低数据库性能，从而减慢网站性能并导致重新索引过程的长时间延迟，尤其是对于大型商店。
 
