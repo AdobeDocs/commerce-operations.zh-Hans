@@ -3,20 +3,20 @@ title: 交付成果
 description: 了解与Adobe Commerce实施相关的各种交付项。
 exl-id: 6f5e603b-bbe5-411d-ad72-696cb4eae246
 feature: Best Practices
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 903c8bfc7c341c46d98026f0a02fbefba22c8f5d
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
 # 交付成果
 
-发现过程可识别特定的Adobe Commerce实施交付项。 请阅读以下部分以了解更多信息。
+发现过程可识别特定的Adobe Commerce实施交付项。 要了解更多信息，请查看以下部分。
 
 ## 业务要求
 
-本文档捕获对功能规范和客户体验可用性的业务需求批准。 它用于改善用户体验、可视设计和详细的测试计划。
+业务需求文档捕获对功能规范和客户体验可用性的批准。 它用于改善用户体验、可视设计和详细的测试计划。
 
 ## 系统图
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 技术规范
 
-本文档定义了技术实施方法，以及有关所有需要修改的第三方集成和系统的适用详细信息。 这可能包括目前不存在并需要开发的API。
+技术规范定义了有关所有必须修改的第三方集成和系统的实施方法和适用详细信息。 这可以包括目前不存在并且必须开发的API。
 
 ## 数据映射
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 范围和供应商
 
-这是要集成到Adobe Commerce解决方案的已命名第三方供应商的最终列表。
+范围和供应商文档应包含要集成到Adobe Commerce解决方案中的已命名第三方供应商的完整列表。
 
 ## 产品数据
 
