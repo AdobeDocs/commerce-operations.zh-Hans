@@ -1,8 +1,8 @@
 ---
-source-git-commit: c1f3b19f2199b8c58beeab1b9bf6b69195269dbb
+source-git-commit: 9f85a298574b6343500cdccc54f3dbdad6d2e4a6
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 84%
+source-wordcount: '184'
+ht-degree: 66%
 
 ---
 # 云要求表
@@ -14,16 +14,19 @@ ht-degree: 84%
         软件依赖项
       </th>
       <th>2.4.7-beta2</th>
+      <th>2.4.6-p4</th>
       <th>2.4.6-p3</th>
       <th>2.4.6 - p2</th>
       <th>2.4.6-p1</th>
       <th>2.4.6</th>
+      <th>2.4.5-p6</th>
       <th>2.4.5-p5</th>
       <th>2.4.5-p4</th>
       <th>2.4.5-p3</th>
       <th>2.4.5 - p2</th>
       <th>2.4.5-p1</th>
       <th>2.4.5</th>
+      <th>2.4.4-p7</th>
       <th>2.4.4-p6</th>
       <th>2.4.4 - p5</th>
       <th>2.4.4-p4</th>
@@ -40,6 +43,15 @@ ht-degree: 84%
       <td><span class="uicontrol">[!DNL Composer]</span></td>
       <td>
             2.5
+      </td>
+      <td>
+            2.2
+      </td>
+      <td>
+            2.2
+      </td>
+      <td>
+            2.2
       </td>
       <td>
             2.2
@@ -105,58 +117,67 @@ ht-degree: 84%
           —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
       </td>
       <td>
-          --
+          —
+      </td>
+      <td>
+          —
+      </td>
+      <td>
+          —
+      </td>
+      <td>
+          —
       </td>
       <td>
             7.9
@@ -180,7 +201,7 @@ ht-degree: 84%
             2.5
       </td>
       <td>
-            1.2
+            2.5
       </td>
       <td>
             1.2
@@ -222,7 +243,16 @@ ht-degree: 84%
             1.2
       </td>
       <td>
-          --
+            1.2
+      </td>
+      <td>
+            1.2
+      </td>
+      <td>
+            1.2
+      </td>
+      <td>
+          —
       </td>
     </tr>
     <tr>
@@ -241,6 +271,15 @@ ht-degree: 84%
       </td>
       <td>
             10.6
+      </td>
+      <td>
+            10.6
+      </td>
+      <td>
+            10.4
+      </td>
+      <td>
+            10.4
       </td>
       <td>
             10.4
@@ -291,19 +330,28 @@ ht-degree: 84%
     <tr>
       <td><span class="uicontrol">[!DNL PHP]</span></td>
       <td>
-            8.2, 8.1
+            8.2、8.1
       </td>
       <td>
-            8.2, 8.1
+            8.2、8.1
       </td>
       <td>
-            8.2, 8.1
+            8.2、8.1
       </td>
       <td>
-            8.2, 8.1
+            8.2、8.1
       </td>
       <td>
-            8.2, 8.1
+            8.2、8.1
+      </td>
+      <td>
+            8.2、8.1
+      </td>
+      <td>
+            8.1
+      </td>
+      <td>
+            8.1
       </td>
       <td>
             8.1
@@ -357,25 +405,34 @@ ht-degree: 84%
             3.11
       </td>
       <td>
-            3.11, 3.9
+            3.11、3.9
       </td>
       <td>
-            3.11, 3.9
+            3.11、3.9
       </td>
       <td>
-            3.11, 3.9
+            3.11、3.9
       </td>
       <td>
-            3.11, 3.9
+            3.11、3.9
       </td>
       <td>
-            3.11, 3.9
+            3.11、3.9
       </td>
       <td>
-            3.11, 3.9
+            3.11、3.9
       </td>
       <td>
-            3.11, 3.9
+            3.11、3.9
+      </td>
+      <td>
+            3.11、3.9
+      </td>
+      <td>
+            3.11、3.9
+      </td>
+      <td>
+            3.9
       </td>
       <td>
             3.9
@@ -430,6 +487,15 @@ ht-degree: 84%
       </td>
       <td>
             7.0
+      </td>
+      <td>
+            7.0
+      </td>
+      <td>
+            6.2
+      </td>
+      <td>
+            6.2
       </td>
       <td>
             6.2

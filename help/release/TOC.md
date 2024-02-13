@@ -3,10 +3,10 @@ user-guide-title: 发行信息
 user-guide-description: 在一个位置访问Adobe Commerce修补程序和服务的所有发行信息。
 feature: Release Notes
 recommendations: noDisplay, noCatalog
-source-git-commit: b0b99e87162bdb026feeba062ca75594eb08d68a
+source-git-commit: 51b3be72fcbf3c92a133a8bdec654968a757eeac
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 16%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
@@ -38,14 +38,17 @@ ht-degree: 16%
       - [2.4.0](release-notes/open-source/2-4-0.md)
    - 安全修补程序版本 {#security-patches}
       - [概述](release-notes/security/overview.md)
+      - [2.4.6-p4](release-notes/security/2-4-6-p4.md)
       - [2.4.6-p3](release-notes/security/2-4-6-p3.md)
       - [2.4.6 - p2](release-notes/security/2-4-6-p2.md)
       - [2.4.6-p1](release-notes/security/2-4-6-p1.md)
+      - [2.4.5-p6](release-notes/security/2-4-5-p6.md)
       - [2.4.5-p5](release-notes/security/2-4-5-p5.md)
       - [2.4.5-p4](release-notes/security/2-4-5-p4.md)
       - [2.4.5-p3](release-notes/security/2-4-5-p3.md)
       - [2.4.5 - p2](release-notes/security/2-4-5-p2.md)
       - [2.4.5-p1](release-notes/security/2-4-5-p1.md)
+      - [2.4.4-p7](release-notes/security/2-4-4-p7.md)
       - [2.4.4-p6](release-notes/security/2-4-4-p6.md)
       - [2.4.4 - p5](release-notes/security/2-4-4-p5.md)
       - [2.4.4-p4](release-notes/security/2-4-4-p4.md)
