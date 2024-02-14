@@ -1,8 +1,8 @@
 ---
-source-git-commit: 631735eceb3609edd743c682291f373f6b01b399
+source-git-commit: d7926b9150137813b1161581bb1d7884a6fe11e9
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 0%
+source-wordcount: '138'
+ht-degree: 1%
 
 ---
 # MariaDB配置设置
@@ -13,6 +13,13 @@ ht-degree: 0%
 * [`optimizer_use_condition_selectivity = 1`](https://mariadb.com/products/skysql/docs/reference/es/system-variables/optimizer_use_condition_selectivity/)
 
 如果您在升级到MariaDB 10.6后遇到与索引无关的性能下降，请考虑启用 [`--query-cache-type`](https://mariadb.com/kb/en/server-system-variables/#query_cache_type) 设置。 例如， `--query-cache-type=ON`.
+
+在升级云基础架构项目上的Adobe Commerce之前，您可能还需要升级MariaDB ([请参阅MariaDB升级最佳实践](../implementation-playbook/best-practices/maintenance/mariadb-upgrade.md))。
+
+例如：
+
+* Adobe Commerce 2.4.6适用于MariaDB 10.5.1或更高版本
+* Adobe Commerce 2.3.5与MariaDB版本10.3或更低版本
 
 除了这些建议之外，您还应咨询数据库管理员配置以下参数：
 

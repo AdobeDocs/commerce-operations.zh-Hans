@@ -2,9 +2,9 @@
 title: 完成先决条件
 description: 通过完成这些先决条件步骤，准备Adobe Commerce项目以进行升级。
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1604'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
 
 ## 转换数据库表格式
 
-必须将所有数据库表的格式从 `COMPACT` 到 `DYNAMIC`. 您还必须将存储引擎类型从 `MyISAM` 到 `InnoDB`. 请参阅 [最佳实践](../../implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md).
+必须将所有数据库表的格式从 `COMPACT` 到 `DYNAMIC`. 您还必须将存储引擎类型从 `MyISAM` 到 `InnoDB`. 请参阅 [最佳实践](../../implementation-playbook/best-practices/maintenance/mariadb-upgrade.md).
 
 ## 设置打开文件限制
 

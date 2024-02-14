@@ -3,10 +3,10 @@ title: 实施维护阶段
 description: 了解Adobe Commerce项目维护阶段的实施最佳实践。
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
 feature: Best Practices
-source-git-commit: 00036391366625ab256a4dc682d1ecbe9e46fa23
+source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 2%
+source-wordcount: '371'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 | 最佳实践 | 描述 |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | [解决数据库性能问题&#x200B;。](resolve-database-performance-issues.md) | 修复了在云基础架构上部署的Adobe Commerce站点上导致性能降低的数据库问题。 |
-| [Adobe Commerce 2.3.5 MariaDB升级先决条件&#x200B;](commerce-235-upgrade-prerequisites-mariadb.md) | 准备MariaDB数据库以进行升级。 |
+| [MariaDB的Adobe Commerce升级先决条件&#x200B;](mariadb-upgrade.md) | 准备MariaDB数据库以进行升级。 |
 
 ## 功能增强
 
