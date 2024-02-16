@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 6f0a3434d4730b4d2bcf0aecdacfae58025824cd
+source-git-commit: 26bde6684b3f38ed16ede6ec9c63cc90fa849fd9
 workflow-type: tm+mt
-source-wordcount: '19799'
+source-wordcount: '19990'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,16 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关信息 [!DNL quality patches] 由社区创建以进行Magento Open Source，请参见 [发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.46 {#v1-1-46}
+
+* **ACSD-46767** (对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了在库存数量更改时，即使产品仍有库存，类别页面缓存也会失效的问题。
+* **ACSD-54656** (适用于Adobe Commerce >=2.4.5 &lt;2.4.6) — 修复了在签出期间不可见Recaptcha失败，从而阻止下达订单的问题。
+* **ACSD-55100** (对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了GraphQL在搜索结果中返回的产品不超过10,000的问题。
+* **ACSD-56621** (对于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了更新的名字和姓氏未反映在公司管理员用户的问候语标头部分的问题。
+* **ACSD-56842** (对于Adobe Commerce和Magento Open Source >=2.4.2 &lt;2.4.7) — 修复了运行后缺少延迟代理和延迟代理工厂的问题 `setup:di:compile`.
+* **ACSD-57003** (对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了订单状态更改为的问题 *[!UICONTROL Complete]* 而不是更改为 *[!UICONTROL Processing]* 订单部分退款和部分发运时。
+* 更新的修补程序：ACSD-50260-v2、ACSD-54966
 
 ## v1.1.45 {#v1-1-45}
 
