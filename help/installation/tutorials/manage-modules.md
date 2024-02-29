@@ -2,9 +2,9 @@
 title: 启用或禁用模块
 description: 按照以下步骤管理Adobe Commerce或Magento Open Source模块。
 exl-id: 7155950a-a66a-4254-a71c-1a9aeab47606
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 6e87d68df97adf47b5a61e8b6683ac11f600806c
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ bin/magento module:status [--enabled] [--disabled] <module-list>
 * `--enabled` 列出了所有已启用的模块。
 * `--disabled` 列出了所有禁用的模块。
 * `<module-list>` 是以空格分隔的模块列表，用于检查状态。 如果任何模块名称包含特殊字符，请用单引号或双引号将名称括起来。
+
+>[!NOTE]
+>
+>不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到 `app/etc/config.php` 环境文件。 请参阅 [专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow).
 
 ## 模块启用、禁用
 
