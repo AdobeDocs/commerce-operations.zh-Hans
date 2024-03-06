@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9f80bf4de9112cc986708266565c96515e85554c
+source-git-commit: 93ec4b59b4c26e31ee117bc13f98d21ce23d586f
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ## 2.4.7
 
-对2.4.7版本行的支持将于2027年4月19日终止。
+对2.4.7版本行的支持将于2027年4月9日终止。
 
 <table>
   <thead>
@@ -138,7 +138,7 @@ ht-degree: 0%
 
 ## 2.4.4
 
-对2.4.4版本行的支持将于2025年4月12日终止。
+对2.4.4版本行的支持将于2025年4月24日终止。
 
 <table>
   <thead>
