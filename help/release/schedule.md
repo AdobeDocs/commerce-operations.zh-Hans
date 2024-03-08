@@ -2,7 +2,7 @@
 title: 发布计划
 description: 了解 Adobe 打算何时发布 Adobe Commerce 的新功能。
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: c9e7a8926c7003d34a62d2defb62c09d58919ddd
+source-git-commit: a7aa02cd47deaf7aebdfcf0b3e969cce990a962a
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Adobe版本 [补丁程序](versioning-policy.md#patch-release) 对于核心Adobe
 </thead>
 <tfoot>
    <tr>
-      <td colspan="3"><strong>图例：</strong>
+      <td colspan="3"><strong>图例</strong>
          <ul>
             <li><strong><img alt="B2B功能图标" src="../assets/icons/enterprise.svg"></img> B2B</strong>—Adobe Commerce的B2B扩展的新增功能、增强功能和错误修复。</li>
             <li><strong><img alt="“可扩展性功能”图标" src="../assets/icons/brackets.svg"></img> 可扩展性</strong> — 新的开发人员工具和服务实现了进程外可扩展性，这些工具和服务独立于修补程序版本提供。 例如，管理员UI SDK、Commerce的Adobe I/O事件和API Mesh。</li>
