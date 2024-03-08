@@ -2,9 +2,9 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce和Magento Open Source版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
+source-git-commit: 56052a5777b8719d5a9257d0c48e5640a6812a5f
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -112,9 +112,8 @@ PHPUnit（作为命令行工具）9.0.0
 - Firefox（最新和以前的主要版本；任何操作系统）
 - Chrome（最新和以前的主要版本；任何操作系统）
 - Safari(最新和以前的主要版本；仅限macOS)
-- 适用于iPad 2的Safari Mobile、iPad Mini、带有Retina Display的iPad(iOS 12或更高版本)、桌面店面
-- 适用于iPhone 6或更高版本的Safari Mobile；适用于iOS 12或更高版本的移动店面
-- 适用于移动设备的Chrome（最新和以前的主要版本） [Android™ 4或更高版本] 适用于移动店面)
+- 适用于iOS的Safari（适用于店面的最新和以前的主要版本）
+- Chrome for Android（最新和以前的主要版本，适用于店面）
 
 ### 邮件服务器
 
