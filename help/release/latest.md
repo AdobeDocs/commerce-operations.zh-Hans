@@ -4,13 +4,13 @@ description: 了解Adobe Commerce中最新的可组合开发工具和AI支持的
 level: Intermediate, Experienced
 role: Admin, User, Developer
 mini-toc-levels: 1
-source-git-commit: 2e17313c0a2c87ce4d2ee43e9b40277fda25edb9
+exl-id: 176886bc-733a-48d9-94dc-58fd8b24f54e
+source-git-commit: 1f2c2ca98ba7076cdc3512e30fdd7a8c76f86200
 workflow-type: tm+mt
 source-wordcount: '3078'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Commerce 2月产品公告
 
@@ -22,7 +22,7 @@ Adobe Commerce一直与客户密切合作，开发以体验为导向的新商务
 
 参加这些面对面和虚拟活动，向电子商务领袖和从业人员了解有关Adobe Commerce的更多信息：
 
-- **2024年3月15日**：Adobe Commerce：构建以体验为导向的Commerce平台，格林威治标准时间上午10:00 /下午6:00。 [注册实时网络研讨会](https://engage.adobe.com/BdgxpComWBR-register.html).
+- **2024年3月14日**：Adobe Commerce：构建以体验为导向的Commerce平台，格林威治标准时间上午10:00 /下午5:00。 [注册实时网络研讨会](https://engage.adobe.com/BdgxpComWBR-register.html).
 
 - **2024年3月26日至28日**：与成千上万的电子商务领袖和从业人员一起在拉斯维加斯的Adobe Summit生活。 了解更多关于 [Adobe Summit](https://business.adobe.com/summit/adobe-summit.html) 和 [Commerce跟踪](https://reg.adobe.com/flow/adobe/as24/sessions/page/catalog?tab.allsessions=1643149273691001NFtR&amp;search.track=1601680652403006TXuG) 扬声器 [Hanesbrand](https://reg.adobe.com/flow/adobe/as24/sessions/page/catalog?tab.allsessions=1643149273691001NFtR&amp;search=S435)， [可口可乐](https://reg.adobe.com/flow/adobe/as24/sessions/page/catalog?tab.allsessions=1643149273691001NFtR&amp;search=S434)， [联合利华](https://reg.adobe.com/flow/adobe/as24/sessions/page/catalog?tab.allsessions=1643149273691001NFtR&amp;search=s430)、和 [雀巢普瑞纳](https://reg.adobe.com/flow/adobe/as24/sessions/page/catalog?tab.allsessions=1643149273691001NFtR&amp;search=S437).
 
@@ -116,7 +116,7 @@ _“像我们一样对业务做出回应是一个梦想成真。 我们说，�
 
 [!BADGE 现在可用]{type=Informative tooltip="现在可用"}
 
-Adobe拥有为各种规模的医疗保健客户部署HIPAA就绪服务的丰富经验。 从付款人到供应商，再到制药和医药技术供应商，Adobe为负责任的消费者数据管理设定了标准。 现在，借助适用于HIPPA的Adobe Commerce云平台版本，该专业知识正扩展到快速增长的医疗保健数字商业市场。
+Adobe拥有为各种规模的医疗保健客户部署HIPAA就绪服务的丰富经验。 从付款人到供应商，再到制药和医药技术供应商，Adobe为负责任的消费者数据管理设定了标准。 现在，借助适用于HIPAA的Adobe Commerce云平台版本，该专业知识正扩展到快速增长的医疗保健数字商业市场。
 
 Adobe Commerce Cloud和Managed Service客户可以使用HIPAA就绪产品。 它包括额外的安全性和隐私控制以确保对电子个人健康信息(ePHI)的保护，从而使医疗保健和生命科学组织可以更轻松地履行其法规遵从性义务。 该解决方案支持多种使用案例，包括快速方便地在线销售医疗保险、处方、处方医疗设备和医疗用品。 Adobe Commerce现在加入了 [Adobe Experience Cloud医疗保健版](https://business.adobe.com/solutions/industries/healthcare.html) 一整套解决方案，使客户能够在尊重消费者偏好的同时，提供安全而卓越的病人体验。
 
