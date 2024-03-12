@@ -2,7 +2,7 @@
 title: 管理缓存
 description: 管理缓存类型和查看缓存状态。
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 604e2a1461e2cbbcc498dfed6018ba640efe8cde
+source-git-commit: 6e0e7f209b265e5b924e0092fec020e0cefc165d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 ## 缓存类型
 
-Commerce 2具有以下缓存类型：
+Commerce具有以下缓存类型：
 
 | 缓存类型“友好”名称 | 缓存类型代码名称 | 描述 |
-|--- |--- |--- |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 配置 | config | Commerce会从所有模块中收集配置，将其合并，并将合并的结果保存到缓存中。 此缓存还包含存储在文件系统和数据库中的特定于存储的设置。 修改配置文件后，清除或刷新此缓存类型。 |
 | 布局 | 布局 | 已编译的页面布局（即来自所有组件的布局组件）。 在修改布局文件后，清理或刷新此缓存类型。 |
 | 阻止HTML输出 | block_html | 每个块的页面片段HTML。 在修改视图层后，清理或刷新此缓存类型。 |
@@ -31,10 +31,9 @@ Commerce 2具有以下缓存类型：
 | 翻译 | translate | 合并来自所有模块的翻译后，合并器缓存将被清理。 |
 | 集成配置 | 配置集成 | 已编译的集成。 在更改或添加集成后，清理或刷新此缓存。 |
 | 集成API配置 | config_integration_api | 已编译商店集成的集成API配置。 |
+| GraphQL查询解析程序结果 [!BADGE 2.4.7（测试版）]{type=Informational url=&quot;/help/release/release-notes/commerce/2-4-7.md&quot; tooltip=&quot;仅在2.4.7-beta版中提供&quot;} | graphql_query_resolver_result | 缓存来自客户、CMS页面、CMS块和产品媒体集实体的GraphQL查询解析器的结果。 启用此缓存可提高GraphQL性能。 |
 | Web服务配置 | config_webservice | 正在缓存Web API结构。 |
 | 客户通知 | customer_notification | 显示在用户界面中的临时通知。 |
-| 管理员UI SDK缓存 | admin_ui_sdk | 缓存通过添加的管理自定义项 [Adobe Commerce管理UI SDK](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/). |
-| Webhooks响应缓存 | webhooks_response | 将响应缓存到 [webhook请求](https://developer.adobe.com/commerce/extensibility/webhooks/). |
 
 ## 查看缓存状态
 
@@ -63,6 +62,7 @@ Current status:
             config_integration: 1
         config_integration_api: 1
                    target_rule: 1
+ graphql_query_resolver_result: 1
              config_webservice: 1
                      translate: 1
 ```
@@ -171,6 +171,7 @@ bin/magento cache:disable db_ddl full_page
    config_integration
    config_integration_api
    full_page
+   graphql_query_resolver_results
    config_webservice
    translate
 ```
