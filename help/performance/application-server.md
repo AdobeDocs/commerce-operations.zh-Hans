@@ -3,18 +3,18 @@ title: 适用于GraphQL API的应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中为GraphQL API启用应用程序服务器。
 badgeCoreBeta: label="2.4.7（测试版）" type="informative"
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: b7639e8830b2cab971e3e22285d91105b64e9a6e
+source-git-commit: 1fdb29c1a6666aeeef7e546bc7d57a83a40b7542
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
 
 # 适用于GraphQL API的应用程序服务器
 
-Commerce Application Server for GraphQL API使Adobe Commerce能够维护Commerce GraphQL API请求中的状态。 Application Server基于Open Swool扩展构建，作为进程运行，其工作线程处理请求处理。 Application Server通过在GraphQL API请求中保留引导的应用程序状态，增强了请求处理和总体产品性能。 API请求变得非常高效。
+Commerce Application Server for GraphQL API使Adobe Commerce能够维护Commerce GraphQL API请求中的状态。 应用程序服务器基于Swoole扩展构建，它作为进程运行，通过工作线程处理请求。 Application Server通过在GraphQL API请求中保留引导的应用程序状态，增强了请求处理和总体产品性能。 API请求变得非常高效。
 
-Cloud Starter和内部部署仅支持应用程序服务器。 在测试期间，它不适用于Cloud Pro实例。 它不适用于Magento Open Source部署。
+仅云基础架构Starter和Pro项目上的Adobe Commerce支持应用程序服务器。 它不适用于Magento Open Source项目。 Adobe不提供对Application Server的内部部署的支持。
 
 ## 应用程序服务器体系结构概述
 
@@ -33,42 +33,74 @@ Cloud Starter和内部部署仅支持应用程序服务器。 在测试期间，
 运行应用程序服务器需要满足以下条件：
 
 * PHP 8.2或更高版本
-* 打开已安装的Swoole PHP扩展v22+
+* 已安装Swoole PHP扩展v5+
 * 根据预期负载提供足够的RAM和CPU
 
-## 为云启动程序启用应用程序服务器
+## 启用应用程序服务器
 
-此 `ApplicationServer` 模块(`Magento/ApplicationServer/`)为GraphQL API启用应用程序服务器。 应用程序服务器仅支持内部部署和Cloud Starter部署。 在测试期间，它不适用于Cloud Pro实例。
+此 `ApplicationServer` 模块(`Magento/ApplicationServer/`)为GraphQL API启用应用程序服务器。 本地和云部署支持应用程序服务器。
 
-### 在开始Cloud Starter部署之前
+## 在Cloud Pro上启用应用程序服务器
 
-在部署应用程序服务器之前，请完成以下任务：
+在Cloud Pro上部署应用程序服务器之前，请完成以下任务：
 
-1. 确认Commerce Cloud上安装了Adobe Commerce。
-1. 确认 `CRYPT_KEY` 已为实例设置了环境变量。 您可以在云项目门户（载入UI）上检查此变量的状态。
+1. 确认已使用Adobe Commerce模板版本2.4.7或更高版本在Commerce Cloud上安装Cloud Template。
+1. 确保您的所有Commerce自定义项和扩展均 [兼容](https://developer.adobe.com/commerce/php/development/components/app-server/) 与应用程序服务器。
 1. 克隆Commerce Cloud项目。
-1. 创建 `graphql` 中的文件夹 `project_root` 文件夹。
-1. 添加其他自定义 `.magento.app.yaml` 文件包含在 [magento.app.yaml文件内容](#magento.app.yaml-file-content) 主题放入您的 `project_root/graphql` 文件夹。
-1. 编辑 `project_root/.magento/routes.yaml` 文件以包含以下指令：
+1. 如有必要，调整“application-server/nginx.conf.sample”文件中的设置。
+1. 注释掉中的活动“Web”部分 `project_root/.magento.app.yaml` 个文件。
+1. 取消注释中的以下“web”部分配置 `project_root/.magento.app.yaml` 包含应用程序服务器启动命令的文件。
 
    ```yaml
-   # The routes of the project.
-   #
-   # Each route describes how an incoming URL is going to be processed.
-   
-   "http://{default}/":
-     type: upstream
-     upstream: "mymagento:http"
-   
-   "http://{default}/graphql":
-     type: upstream
-     upstream: "graphql:http"
+   web:
+       upstream:
+           socket_family: tcp
+           protocol: http
+       commands:
+           start: ./application-server/start.sh > var/log/application-server-status.log 2>&1
    ```
 
 1. 使用以下命令将更新的文件添加到Git索引：
 
    ```bash
-   git add -f php.ini graphql/.magento.app.yaml .magento/routes.yaml swoole.so
+   git add -f .magento/routes.yaml application-server/.magento/*
+   ```
+
+1. 使用以下命令提交更改：
+
+   ```bash
+   git commit -m "AppServer Enabled"
+   ```
+
+### 在Cloud Pro上部署应用程序服务器
+
+执行先决任务后，使用以下命令部署应用程序服务器：
+
+```bash
+git push
+```
+
+### 在开始Cloud Starter部署之前
+
+在Cloud Starter上部署应用程序服务器之前，请完成以下任务：
+
+1. 确认已使用Adobe Commerce模板版本2.4.7或更高版本在Commerce Cloud上安装Cloud Template。
+1. 确保您的所有Commerce自定义项和扩展都与应用程序服务器兼容。
+1. 确认 `CRYPT_KEY` 已为实例设置了环境变量。 您可以在云项目门户（载入UI）上检查此变量的状态。
+1. 克隆Commerce Cloud项目。
+1. 将“application-server/.magento/.magento.app.yaml.sample”重命名为“application-server/.magento/.magento.app.yaml”，并根据需要调整.magento.app.yaml中的设置。
+1. 取消注释以下路由在 `project_root/.magento/routes.yaml` 要重定向的文件 `/graphql` 应用程序服务器的通信量。
+
+   ```yaml
+   "http://{all}/graphql":
+       type: upstream
+       upstream: "application-server:http"
+   ```
+
+1. 使用以下命令将更新的文件添加到Git索引：
+
+   ```bash
+   git add -f .magento/routes.yaml application-server/.magento/*
    ```
 
 1. 使用以下命令提交更改：
@@ -79,21 +111,13 @@ Cloud Starter和内部部署仅支持应用程序服务器。 在测试期间，
 
 ### 在云启动器上部署应用程序服务器
 
-执行先决任务后，使用以下命令部署应用程序服务器：
+完成 [先决条件](#before-you-begin-a-cloud-starter-deployment)，使用以下命令部署应用程序服务器：
 
 ```bash
 git push
 ```
 
 ### 验证云启动程序上的应用程序服务器是否启用
-
-1. 打开您的Cloud项目用户界面。 您应该会看到另一个SSH访问点，用于 `graphql` 应用程序。
-
-1. 使用SSH通过graphql应用程序接入点访问云实例，然后执行以下命令：
-
-   ```bash
-   ps aux|grep php
-   ```
 
 1. 对实例执行GraphQL查询或突变，以确认 `graphql` 端点可访问。 例如：
 
@@ -113,16 +137,24 @@ git push
     }
    ```
 
-1. 使用SSH通过GraphQL应用程序接入点访问您的云实例。 此 `project_root/var/log/magento-server.log` 应该包含每个GraphQL请求的新日志记录。
+1. 使用SSH访问您的云实例。 此 `project_root/var/log/application-server.log` 应该包含每个GraphQL请求的新日志记录。
 
-如果这些验证步骤成功，您可以继续执行测试周期。
+1. 还可以通过执行以下命令来检查应用程序服务器是否正在运行：
+
+   ```bash
+   ps aux|grep php
+   ```
+
+   您应该会看到 `bin/magento server:run` 使用多个线程的进程。
+
+如果这些验证步骤成功，则表示应用程序服务器正在运行并提供服务 `/graphql` 请求。
 
 
 ## 启用应用程序服务器内部部署
 
 此 `ApplicationServer` 模块(`Magento/ApplicationServer/`)为GraphQL API启用应用程序服务器。
 
-运行应用程序服务器需要安装Open Swool扩展并对部署的Nginx配置文件进行细微更改，才能在本地运行此应用程序服务器。
+在本地运行应用程序服务器需要安装Swoole扩展并对部署的NGINX配置文件进行细微更改。
 
 ### 在开始内部部署之前
 
@@ -130,7 +162,7 @@ git push
 
 * 配置Nginx
 
-* 安装和配置Open Swoole v22扩展
+* 安装和配置Swoole v5+扩展
 
 ### 配置Nginx
 
@@ -147,9 +179,9 @@ location /graphql {
 }
 ```
 
-### 安装和配置Open Swool
+### 安装和配置Swool
 
-若要在本地运行应用程序服务器，请安装Open Swoole v22扩展。 有多种方法可以安装此扩展。
+要在本地运行应用程序服务器，请安装Swoole扩展（v5.0或更高版本）。 有多种方法可以安装此扩展。
 
 ## 运行应用程序服务器
 
@@ -161,28 +193,27 @@ bin/magento server:run
 
 此命令在9501上启动HTTP端口。 应用程序服务器启动后，端口9501就会成为所有GraphQL查询的HTTP代理服务器。
 
-## 示例：安装Open Swool (OSX)
+## 示例：安装Swoole (OSX)
 
-此过程说明如何在基于OSX的系统的PHP 8.2上安装Open Swoole扩展。 这是安装Open Swoole扩展的多个方法之一。
+此过程说明如何在基于OSX的系统的PHP 8.2上安装Swoole扩展。 这是安装Swoole扩展的多个方法之一。
 
-### 安装Open Swool
+### 安装Swool
 
 输入：
 
 ```bash
-pecl install openswoole-22.0.0
-composer require openswoole/core:22.1.1
+pecl install swoole
 ```
 
 在安装期间，Adobe Commerce显示提示以启用对 `openssl`， `mysqlnd`， `sockets`， `http2`、和 `postgres`. 输入 `yes` 适用于所有选项，但 `postgres`.
 
-### 确认安装Open Swool
+### 确认Swoole的安装
 
-运行 `php -m | grep openswoole` 以确认已成功启用该扩展。
+运行 `php -m | grep swoole` 以确认已成功启用该扩展。
 
-### Open Swool安装的常见错误
+### Swoole安装的常见错误
 
-在Open Swool安装过程中发生的任何错误通常发生在 `pecl` 安装阶段。 典型错误包括缺失 `openssl.h` 和 `pcre2.h` 文件。 要解决这些错误，请确保在本地系统中安装了这两个软件包。
+在Swoole安装过程中发生的任何错误通常发生在 `pecl` 安装阶段。 典型错误包括缺失 `openssl.h` 和 `pcre2.h` 文件。 要解决这些错误，请确保在本地系统中安装了这两个软件包。
 
 * 检查位置 `openssl` 通过运行：
 
@@ -223,7 +254,7 @@ export LDFLAGS="-L/opt/homebrew/etc/openssl@3/lib" export CPPFLAGS="-I/opt/homeb
 您可以再次运行以下命令以检查是否已解决与openssl相关的问题：
 
 ```bash
-pecl install openswoole-22.0.0
+pecl install swoole
 ```
 
 #### 解决pcre2.h中的问题
@@ -240,7 +271,7 @@ ps aux | grep php
 
 确认应用程序服务器正在运行的其他方法包括：
 
-* 查看 `/var/log/magento-server.log` 与已处理的GraphQL请求相关的条目的文件。
+* 查看 `/var/log/application-server.log` 与已处理的GraphQL请求相关的条目的文件。
 * 尝试连接到Application Server所运行的HTTP端口。 例如： `curl -g 'http://localhost:9501/graph`.
 
 ### 确认应用程序服务器正在处理GraphQL请求
@@ -290,7 +321,7 @@ ps aux | grep php
 禁用应用程序服务器后：
 
 * `bin/magento server:run` 处于不活动状态。
-* `var/log/magento-server.log` 在GraphQL请求之后不包含条目。
+* `var/log/application-server.log` 在GraphQL请求之后不包含条目。
 
 ## PHP应用程序服务器的集成和功能测试
 
@@ -300,7 +331,7 @@ ps aux | grep php
 
 `GraphQlStateTest` 检测不应为多个请求重用的共享对象中的状态。
 
-此测试旨在检测由生成的服务对象的状态变化。 `ObjectManager`. 该测试执行两次相同的GraphQL查询，并比较第二次查询之前和之后的服务对象状态。 
+此测试旨在检测由生成的服务对象的状态变化。 `ObjectManager`. 该测试执行两次相同的GraphQL查询，并比较第二次查询之前和之后的服务对象状态。
 
 #### GraphQlStateTest失败和可能的修复
 
@@ -321,78 +352,9 @@ ps aux | grep php
 * **类的属性值不一致**. 如果此测试失败，请检查类是否已更改，结果是在构造后的对象具有与构造后的对象不同的属性值 `_resetState()` 方法被调用。 如果您正在处理的类不包含 `_resetState()` 方法本身，然后检查实现它的超类的类层次结构。
 
 * **在初始化消息之前不能访问键入的属性$x**. 此问题也会出现在 `GraphQlStateTest`.
- 
-运行 `ResetAfterRequestTest` 通过执行： `vendor/bin/phpunit -c $(pwd)/dev/tests/integration/phpunit.xml dev/tests/integration/testsuite/Magento/Framework/ObjectManager/ResetAfterRequestTest.php`.
+
+  运行 `ResetAfterRequestTest` 通过执行： `vendor/bin/phpunit -c $(pwd)/dev/tests/integration/phpunit.xml dev/tests/integration/testsuite/Magento/Framework/ObjectManager/ResetAfterRequestTest.php`.
 
 ### 功能测试
 
 扩展开发人员在部署应用程序服务器时，应该执行GraphQL的WebAPI功能测试，以及GraphQL的任何自定义自动或手动功能测试。 这些功能测试可帮助开发人员识别潜在的错误或兼容性问题。
-
-## magento.app.yaml文件内容
-
-请参阅 [在开始Cloud Starter部署之前](#Before-you-begin-a-Cloud-Starter-deployment) 有关将以下代码添加到 `project_root/graphql` 文件夹。
-
-```yaml
-name: graphql
-# The toolstack used to build the application.
-type: php:8.2
-build:
-    flavor: none
- 
-source:
-    root: /
-dependencies:
-    php:
-        composer/composer: '2.5.5'
- 
-# Enable extensions required by Magento 2
-runtime:
-    extensions:
-        - xsl
-        - sodium
- 
-# The relationships of the application with services or other applications.
-# The left-hand side is the name of the relationship as it will be exposed
-# to the application in the environment variable. The right-hand
-# side is in the form `<service name>:<endpoint name>`.
-relationships:
-    database: "mysql:mysql"
-    redis: "redis:redis"
-    opensearch: "opensearch:opensearch"
- 
-# The configuration of app when it is exposed to the web.
-web:
-    commands:
-        start: "php -dopcache.enable_cli=1 -dopcache.validate_timestamps=0 bin/magento server:run -vvv  --port=${PORT:-80} > ${MAGENTO_CLOUD_APP_DIR}/var/log/magento-server.log 2>&1"
-    upstream:
-        socket_family: tcp
-        protocol: http
-    locations:
-        '/':
-            root: "pub"
-            passthru: true
- 
-# The size of the persistent disk of the application (in MB).
-disk: 5120
- 
-# The mounts that will be performed when the package is deployed.
-mounts:
-    "var": "shared:files/var"
-    "app/etc": "shared:files/etc"
-    "pub/media": "shared:files/media"
-    "pub/static": "shared:files/static"
- 
-hooks:
-    # We run build hooks before your application has been packaged.
-    build: |
-        set -e
-        composer install
-        php ./vendor/bin/ece-tools run scenario/build/generate.xml
-        php ./vendor/bin/ece-tools run scenario/build/transfer.xml
-    # We run deploy hook after your application has been deployed and started.
-    deploy: |
-        php ./vendor/bin/ece-tools run scenario/deploy.xml
-    # We run post deploy hook to clean and warm the cache. Available with ECE-Tools 2002.0.10.
-    post_deploy: |
-        php ./vendor/bin/ece-tools run scenario/post-deploy.xml
-```
