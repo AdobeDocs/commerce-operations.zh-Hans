@@ -2,10 +2,10 @@
 user-guide-title: 实施行动手册
 user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+source-git-commit: 36a2a86cbafab1e4913573b1c8431524ba43dc6a
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 11%
+source-wordcount: '257'
+ht-degree: 12%
 
 ---
 
@@ -32,10 +32,7 @@ ht-degree: 11%
    - [责任和所有权](planning/ownership.md)
    - [项目治理](planning/governance.md)
 - 架构和集成 {#architecture}
-   - [功能](architecture/capabilities.md)
-   - [集成策略](architecture/integration-strategy.md)
-   - [可扩展性策略](architecture/extensibility-strategy.md)
-   - [集成选项](architecture/integration-options.md)
+   - [企业参考](architecture/enterprise-blueprint.md)
    - 全球参考体系结构 {#global-reference-architecture}
       - [概述](architecture/global-reference/overview.md)
       - [示例](architecture/global-reference/examples.md)
@@ -43,13 +40,6 @@ ht-degree: 11%
          - [概述](architecture/global-reference/composer/overview.md)
          - [项目结构](architecture/global-reference/composer/project-structure.md)
          - [提示和技巧](architecture/global-reference/composer/tips-and-tricks.md)
-   - Headless商务 {#headless}
-      - [优点](architecture/headless/benefits.md)
-      - [历程到Headless](architecture/headless/journey-to-headless.md)
-      - [微服务](architecture/headless/microservices.md)
-      - [Headless的演变](architecture/headless/evolution.md)
-      - [耦合的店面体系结构](architecture/headless/legacy-storefront.md)
-      - [Headless体系结构](architecture/headless/adobe-commerce.md)
 - 基础架构和部署 {#infrastructure}
    - [概述](infrastructure/overview.md)
    - 自托管 {#self-hosting}

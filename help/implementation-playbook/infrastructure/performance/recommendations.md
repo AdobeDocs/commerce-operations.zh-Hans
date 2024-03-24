@@ -4,9 +4,9 @@ description: 按照以下建议优化Adobe Commerce实施性能。
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
 feature: Cloud
 topic: Performance
-source-git-commit: 31c71af854a59381c7793f26ed9b121cd9bcac83
+source-git-commit: 8b09d734d8ac4490cd88af5673acd0a41b6cdf66
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,7 @@ Message Queue Framework (MQF)是一个允许模块将消息发布到队列的系
 
 ### Headless体系结构
 
-还有一个专门用于 [headless](../../architecture/headless/adobe-commerce.md). 总之，它将店面层与平台本身隔离开来。 它仍然是相同的后端，但Adobe Commerce不再直接处理请求，而是仅通过GraphQL API支持自定义店面。
+还有一个专门用于 [headless](../../architecture/enterprise-blueprint.md#headless-storefront). 总之，它将店面层与平台本身隔离开来。 它仍然是相同的后端，但Adobe Commerce不再直接处理请求，而是仅通过GraphQL API支持自定义店面。
 
 ### 保持Adobe Commerce更新
 
