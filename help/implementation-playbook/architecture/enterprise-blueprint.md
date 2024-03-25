@@ -2,13 +2,13 @@
 title: 企业参考体系结构
 description: 了解如何使用Adobe的最新可组合商务技术实施Adobe Commerce。
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
-source-git-commit: 96afb0ccf5ea872cb42320babfd04ba51fa7dbf6
+exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
+source-git-commit: 8eab688ed98eb1b9fcf4fc25f90fe2bbf99c02d6
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Commerce企业参考架构
 
@@ -78,3 +78,4 @@ Adobe提供一套丰富的智能、可组合的推销服务，帮助您支持关
 Headless商务是API优先的商务。 Adobe Commerce采用解耦的架构，实现了完全的headless。该架构通过GraphQL API层提供所有Commerce服务和数据。 此架构允许团队独立于核心应用程序开发其前台，从而提供使用新兴技术快速构建和测试新接触点的灵活性。
 
 Adobe提供现代headless店面技术，其优势和功能与以下产品相同： [Edge Delivery Services](https://www.aem.live/home) 基于文档的创作、性能优先的体系结构和现成的本机试验。 它利用了Adobe Commerce的规模和性能 [店面服务](#storefront-services) 以及灵活方便的 [下拉组件](https://experienceleague.adobe.com/developer/commerce/storefront/) 以提供商务功能。
+
