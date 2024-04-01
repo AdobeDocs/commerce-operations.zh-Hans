@@ -3,14 +3,18 @@ title: 安装指南
 description: 使用本指南进行安装 [!DNL Site-Wide Analysis Tool] （适用于您的网站）
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
 feature: Configuration, Install
-source-git-commit: 163d12b1f30a3098932c62e11f24784422002c67
+source-git-commit: 2501630bdbeb9a80c247fd39dcbe57c327b3244d
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
 
 # 安装指南
+
+>[!IMPORTANT]
+>
+>自二零二四年四月二十三日起， [!DNL Site-Wide Analysis Tool] 将为所有Adobe Commerce On-Premise客户停用。
 
 此 [!DNL Site-Wide Analysis Tool] 提供全天候的实时性能监控、报告和建议，以确保Adobe Commerce在云基础架构安装中的安全性和可操作性。 它还提供有关可用和已安装的修补程序、第三方扩展以及Adobe Commerce安装的详细信息。
 
