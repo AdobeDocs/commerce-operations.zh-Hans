@@ -2,9 +2,9 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce和Magento Open Source版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 56052a5777b8719d5a9257d0c48e5640a6812a5f
+source-git-commit: 4087d5f5de0bc11ce120d61a539800a3533893f0
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ opensearch:
 
 ### PHPUnit
 
-PHPUnit（作为命令行工具）9.0.0
+PHPUnit v9（作为命令行工具）。
 
 ### PHP扩展
 

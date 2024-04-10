@@ -1,7 +1,7 @@
 ---
-source-git-commit: e3c8cceec1cea6a384250c1a9165b8684674e64c
+source-git-commit: 7ad815d0191c6cc3df7ea7dfe383f17a40cbde0a
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
   <thead>
     <tr>
       <th>Adobe Commerce版本</th>
-      <th>2.4.7-beta3</th>
+      <th>2.4.7</th>
       <th>2.4.6</th>
       <th>2.4.5</th>
       <th>2.4.4</th>
@@ -66,7 +66,7 @@ ht-degree: 0%
       </tr>
       <tr>
           <td>数据连接</td>
-          <td>3.2.0-beta3</td>
+          <td>3.1.1+</td>
           <td>2.1.1+</td>
           <td>1.0.0+</td>
           <td>1.0.0+</td>

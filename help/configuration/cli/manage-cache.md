@@ -1,10 +1,10 @@
 ---
 title: 管理缓存
-description: 管理缓存类型和查看缓存状态。
+description: 使用Commerce CLI从命令行管理缓存类型和查看缓存状态
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 6e0e7f209b265e5b924e0092fec020e0cefc165d
+source-git-commit: 1070291396144f866cadd5e42ebca3e77a484a9b
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -15,29 +15,17 @@ ht-degree: 0%
 
 ## 缓存类型
 
-Commerce具有以下缓存类型：
+您可以使用Adobe Commerce缓存管理系统来提高站点的性能。 本主题介绍系统管理员或有权访问Commerce应用程序服务器的开发人员如何从命令行管理缓存。
 
-| 缓存类型“友好”名称 | 缓存类型代码名称 | 描述 |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 配置 | config | Commerce会从所有模块中收集配置，将其合并，并将合并的结果保存到缓存中。 此缓存还包含存储在文件系统和数据库中的特定于存储的设置。 修改配置文件后，清除或刷新此缓存类型。 |
-| 布局 | 布局 | 已编译的页面布局（即来自所有组件的布局组件）。 在修改布局文件后，清理或刷新此缓存类型。 |
-| 阻止HTML输出 | block_html | 每个块的页面片段HTML。 在修改视图层后，清理或刷新此缓存类型。 |
-| 收藏集数据 | 收藏集 | 数据库查询的结果。 如有必要，Commerce会自动清理此缓存，但第三方开发人员可以将任何数据放入缓存的任何区段中。 如果自定义模块使用的逻辑导致Commerce无法清理的缓存条目，请清理或刷新此缓存类型。 |
-| DDL | db_ddl | 数据库模式。 如有必要，Commerce会自动清理此缓存，但第三方开发人员可以将任何数据放入缓存的任何区段中。 在对数据库架构进行自定义更改后，清除或刷新此缓存类型。 （换句话说，Commerce不会自己进行的更新。） 自动更新数据库模式的一种方法是使用 `magento setup:db-schema:upgrade` 命令。 |
-| 已编译的配置 | compiled_config | 编译配置 |
-| 实体属性值(EAV) | eav | 与EAV属性相关的元数据（例如，存储标签、相关PHP代码的链接、属性渲染、搜索设置等）。 通常不需要清理或刷新此缓存类型。 |
-| 页面缓存 | full_page | 生成的HTML页。 如有必要，Commerce会自动清理此缓存，但第三方开发人员可以将任何数据放入缓存的任何区段中。 在修改影响HTML输出的代码级别后，清理或刷新此缓存类型。 建议启用此缓存，因为缓存HTML可显着提升性能。 |
-| 反射 | 反射 | 删除Webapi模块与客户模块之间的依赖关系。 |
-| 翻译 | translate | 合并来自所有模块的翻译后，合并器缓存将被清理。 |
-| 集成配置 | 配置集成 | 已编译的集成。 在更改或添加集成后，清理或刷新此缓存。 |
-| 集成API配置 | config_integration_api | 已编译商店集成的集成API配置。 |
-| GraphQL查询解析程序结果 [!BADGE 2.4.7（测试版）]{type=Informational url=&quot;/help/release/release-notes/commerce/2-4-7.md&quot; tooltip=&quot;仅在2.4.7-beta版中提供&quot;} | graphql_query_resolver_result | 缓存来自客户、CMS页面、CMS块和产品媒体集实体的GraphQL查询解析器的结果。 启用此缓存可提高GraphQL性能。 |
-| Web服务配置 | config_webservice | 正在缓存Web API结构。 |
-| 客户通知 | customer_notification | 显示在用户界面中的临时通知。 |
+>[!NOTE]
+>
+>
+>Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅 [缓存管理](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) 在 _管理系统指南_.
+
 
 ## 查看缓存状态
 
-要查看高速缓存的状态，请输入
+在Commerce应用程序服务器的命令行中，使用 `cache:status` Commerce CLI命令。
 
 ```bash
    bin/magento cache:status
@@ -56,16 +44,23 @@ Current status:
                     reflection: 1
                         db_ddl: 1
                compiled_config: 1
+             webhooks_response: 1
                            eav: 1
          customer_notification: 1
-                     full_page: 1
+ graphql_query_resolver_result: 1
             config_integration: 1
         config_integration_api: 1
+                  admin_ui_sdk: 1
+                     full_page: 1
                    target_rule: 1
- graphql_query_resolver_result: 1
              config_webservice: 1
                      translate: 1
 ```
+
+>[!TIP]
+>
+>有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅 [缓存](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches) 在 _管理系统指南_.
+
 
 ## 启用或禁用缓存类型
 

@@ -3,9 +3,9 @@ user-guide-title: 性能最佳实践
 user-guide-description: 使用我们的建议优化Adobe Commerce或Magento Open Source生产部署的性能。
 feature: Best Practices
 topic: Administration, Commerce, Development, Performance
-source-git-commit: cb843dbb3759d9ce5e94317ae977cfe8acfa4432
+source-git-commit: 51a86a24561e2c21b895dd59b3d784313b52d186
 workflow-type: tm+mt
-source-wordcount: '56'
+source-wordcount: '54'
 ht-degree: 1%
 
 ---
@@ -24,5 +24,5 @@ ht-degree: 1%
 - 高级概念 {#concepts}
    - [高级设置](advanced-setup.md)
    - [高级 [!DNL JavaScript] 捆绑](advanced-js-bundling.md)
-   - [适用于GraphQL API的应用程序服务器](application-server.md)
+   - [GraphQL应用程序服务器](application-server.md)
 - [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

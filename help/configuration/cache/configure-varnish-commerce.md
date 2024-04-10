@@ -3,9 +3,9 @@ title: 配置Commerce清漆
 description: 了解如何更新和管理Commerce应用程序的Varnish配置文件。
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
-source-git-commit: 11ccc59230a7a0d1768c043c39df43c7df031efd
+source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
    | 后端主机 | 输入Varnish的完全限定主机名或IP地址并监听端口 _后端_ 或 _原始服务器_；即，提供内容清漆的服务器将加速。 通常，这是您的Web服务器。 请参阅 [清漆缓存后端服务器](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
    | 后端端口 | 源服务器的侦听端口。 |
    | 宽限期 | 确定在后端无响应时，Varnish提供过时内容的时长。 默认值为300秒。 |
-   | 处理参数大小  [!BADGE 2.4.7（测试版）]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="仅在2.4.7 Beta版中提供"} | 指定最大数量 [布局句柄](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles) 处理 [`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md) 用于全页缓存的HTTP端点。 限制大小可以提高安全性和性能。 默认值为100。 |
+   | 处理参数大小 | 指定最大数量 [布局句柄](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles) 处理 [`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md) 用于全页缓存的HTTP端点。 限制大小可以提高安全性和性能。 默认值为100。 |
 
 1. 单击 **保存配置**.
 

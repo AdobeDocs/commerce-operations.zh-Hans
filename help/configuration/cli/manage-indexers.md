@@ -2,9 +2,9 @@
 title: 管理索引器
 description: 请参阅有关如何查看和管理Commerce索引器的示例。
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: a8f845813971eb32053cc5b2e390883abf3a104e
+source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -264,7 +264,7 @@ Index mode for Indexer Product Categories was changed from 'Update on Save' to '
 
 当索引器模式设置为时，将添加与索引器相关的数据库触发器 `schedule` 并将索引器模式设置为时删除 `realtime`. 当索引器设置为时，如果数据库中缺少触发器 `schedule`，将索引器更改为 `realtime` 然后改回 `schedule`. 这将重置触发器。
 
-### 设置索引器状态 [!BADGE 2.4.7（测试版）]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="仅在2.4.7 Beta版中提供"}
+### 设置索引器状态
 
 此命令允许管理员修改一个或多个索引器的运行状态，在大量操作（如数据导入、更新或维护）期间优化系统性能。
 

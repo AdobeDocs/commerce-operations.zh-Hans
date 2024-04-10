@@ -2,10 +2,10 @@
 title: 软件生命周期政策
 description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
-source-git-commit: bb90d7903eafe01b42d8c056db771769f9e4e752
+source-git-commit: 01e926e3cf36f27f5292a0b9ce7a6209d4960cc2
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 12%
+source-wordcount: '363'
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 - 对于关键的安全问题（例如零日漏洞），Adobe提供了 [修补程序](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) 适用于使用受支持版本的所有客户，即使他们不在最新补丁或安全补丁发行版上。 请务必注意，修补程序并不是一个通用修补程序，它不能解决所有可以通过升级到最新版本来修复的安全问题。
 
-- Adobe不提供第三方服务和软件依赖项（如PHP）的安全性和质量修复。 您有责任维护第三方软件依赖项的安全性和合规性（例如，PCI、ISO、SOC）。 Adobe建议尽快更新您的环境以使用Adobe Commerce支持的最新版本的PHP。 不要使用支持已终止的PHP版本。
+- Adobe不提供对第三方服务和软件依赖项（例如PHP和MySQL）的安全性和质量修复，这些服务和软件依赖项在客户处于Adobe Commerce的三年支持期时可能会终止。 请参阅 [系统要求](../installation/system-requirements.md) 有关经过测试和受支持的第三方技术的完整列表。
 
 ## 软件支持终止
 
