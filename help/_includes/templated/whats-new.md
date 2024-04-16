@@ -1,8 +1,8 @@
 ---
-source-git-commit: 018c61a4ea921b4a69cc854fde355606defe1215
+source-git-commit: 88cdf47409f45f9ba6de75701ab877c5e4604f13
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 0%
+source-wordcount: '224'
+ht-degree: 1%
 
 ---
 # 新增功能模板
@@ -29,41 +29,13 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/efd2fc4285a5cdc7ee20ead299ee16e54f9bcb83">efd2fc</a> （提交）</td>
     </tr>
     <tr>
-      <td><ul>
-  <li>更新以下内容的发行包主题： <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">MagentoOpenSource</a>.<br /> — 添加针对以下项的发行版包主题： <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">商业版B2B</a>.</li>
-</ul>
+      <td><p>更新了以下内容的发行包主题： <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">Magento Open Source</a>.<br /> 添加了的发行包主题 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">商业版B2B</a>.</p>
 </td>
       <td>major-update</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aad4b904ba95142d1d848f934c9d3702cc37ec16">aad4b9</a> （提交）</td>
     </tr>
     <tr>
-      <td><p>已更新 <em>bin/magento</em> 的CLI参考文档 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/commerce-on-premises">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/magento-open-source">MagentoOpenSource</a>.</p>
-</td>
-      <td>major-update</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b81dc87a261f128cdb572a30ff5538dae2087c49">b81dc8</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>发布于2.4.7 GA <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-7">发行说明</a>.</p>
-</td>
-      <td>major-update</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/35b7caafbef5ced52ef6e4907e0634dfb2a61e4f">35b7ca</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>添加了2024年4月Adobe Commerce安全版本(2.4.6-p5、2.4.5-p7、2.4.4-p8)的发行说明。 请参阅 <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Adobe Commerce和Magento Open Source的发行说明</a></p>
-</td>
-      <td>major-update</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7acab1d8d3f7b11cc1387b5558521f282ba0873f">7acab1</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><ul>
-  <li>更新以下内容的发行包主题： <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">MagentoOpenSource</a>.<br /> — 添加针对以下项的发行版包主题： <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">商业版B2B</a>.</li>
-</ul>
-</td>
-      <td>major-update</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aad4b904ba95142d1d848f934c9d3702cc37ec16">aad4b9</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>已更新 <em>bin/magento</em> 的CLI参考文档 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/commerce-on-premises">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/magento-open-source">MagentoOpenSource</a>.</p>
+      <td><p>已更新 <em>bin/magento</em> 的CLI参考文档 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/commerce-on-premises">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/magento-open-source">Magento Open Source</a>.</p>
 </td>
       <td>major-update</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b81dc87a261f128cdb572a30ff5538dae2087c49">b81dc8</a> （提交）</td>
