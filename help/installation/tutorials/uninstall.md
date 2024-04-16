@@ -1,10 +1,10 @@
 ---
 title: 卸载或重新安装Adobe Commerce
-description: 按照以下步骤卸载并重新安装Adobe Commerce和Magento Open Source的内部安装。
+description: 按照以下步骤卸载并重新安装Adobe Commerce的内部安装。
 exl-id: fbaeee2c-8da0-4c89-a6d1-882a65014520
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---

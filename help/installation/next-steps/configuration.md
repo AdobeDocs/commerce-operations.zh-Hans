@@ -1,11 +1,11 @@
 ---
 title: 配置应用程序
-description: 了解Adobe Commerce和Magento Open Source内部部署所需的安装后配置。
+description: 了解Adobe Commerce内部部署所需的安装后配置。
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: 40d850add2ef8c51e9192758135768306b163780
+source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 UNIX任务计划程序cron对应用程序的日常操作至关重要。 它计划重新索引、新闻稿、电子邮件和站点地图等内容。 A *crontab* 是cron配置。
 
-您必须在中安装Adobe Commerce和Magento Open Source服务 *crontab*&#x200B;或者某些核心功能（以及某些第三方扩展）无法正常运行。
+您必须在中安装Adobe Commerce服务 *crontab*&#x200B;或者某些核心功能（以及某些第三方扩展）无法正常运行。
 
 有关cron的更多信息，包括如何删除crontab并从命令行运行cron，请参见 [配置和运行cron](../../configuration/cli/configure-cron-jobs.md).
 
@@ -79,7 +79,7 @@ UNIX `logrotate` 实用程序使您可以管理生成大量日志文件的系统
 
 ### 设置电子邮件服务器
 
-Adobe Commerce和Magento Open Source需要电子邮件服务器。 我们不建议使用特定的服务器，但您可以尝试以下任一操作：
+Adobe Commerce需要电子邮件服务器。 我们不建议使用特定的服务器，但您可以尝试以下任一操作：
 
 * CentOS的后缀([数字海洋教程](https://www.digitalocean.com/community/tutorials/how-to-install-postfix-on-centos-6)， [CentOS文档](https://www.centos.org))
 * Ubuntu的后缀([数字海洋教程](https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04)， [Ubuntu文档](https://help.ubuntu.com/community/MailServer))
@@ -92,7 +92,7 @@ Adobe Commerce和Magento Open Source需要电子邮件服务器。 我们不建�
 
 ### 设置消息队列
 
-从版本2.3.0开始，Adobe Commerce和Magento Open Source包含消息队列功能。 在早期版本中，它仅适用于Adobe Commerce。
+自版本2.3.0起，Adobe Commerce就包含消息队列功能。 在早期版本中，它仅适用于Adobe Commerce。
 
 * [[!DNL RabbitMQ]](../../configuration/queues/message-queue-framework.md)
 

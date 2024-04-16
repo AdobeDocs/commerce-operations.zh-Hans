@@ -3,9 +3,9 @@ title: 卸载主题
 description: 按照以下步骤卸载Adobe Commerce或Magento Open Source主题。
 feature: Install, Themes
 exl-id: 73150e8c-2d83-4479-b96b-75f41fd9c842
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 使用此命令之前，必须知道主题的相对路径。 主题位于的子目录中 `<magento_root>/app/design/<area name>`. 您必须指定以区域开头的主题路径，即 `frontend` （对于店面主题）或 `adminhtml` （对于管理主题）。
 
-例如，Adobe Commerce和Magento Open Source提供的Luma主题的路径为 `frontend/Magento/luma`.
+例如，Adobe Commerce提供的Luma主题的路径为 `frontend/Magento/luma`.
 
 有关主题的更多信息，请参阅 [主题结构](https://developer.adobe.com/commerce/frontend-core/guide/themes/structure/).
 
@@ -39,7 +39,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] {theme p
 
 位置
 
-* `{theme path}` 是主题的相对路径，从区域名称开始。 例如，Adobe Commerce和Magento Open Source提供的空白主题的路径为 `frontend/Magento/blank`.
+* `{theme path}` 是主题的相对路径，从区域名称开始。 例如，Adobe Commerce提供的空白主题的路径为 `frontend/Magento/blank`.
 * `--backup-code` 备份代码库，如下面的段落所述。
 * `--clear-static-content` 已生成的清理 [静态视图文件](../../configuration/cli/static-view-file-deployment.md)，这是正确显示静态视图文件所必需的。
 

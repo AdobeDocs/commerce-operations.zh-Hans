@@ -1,10 +1,10 @@
 ---
 title: 高级内部部署安装
-description: 了解Adobe Commerce的高级安装方案或您拥有的基础架构上的Magento Open Source。
+description: 了解Adobe Commerce在您拥有的基础架构上的高级安装方案。
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: c9e7a8926c7003d34a62d2defb62c09d58919ddd
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2375'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 命令行界面(CLI)
 
-Adobe Commerce和Magento Open Source具有单个命令行界面来执行安装和配置任务： `<magento_root>/bin/magento`. 该界面可执行多项任务，包括：
+Adobe Commerce具有单个命令行界面来执行安装和配置任务： `<magento_root>/bin/magento`. 该界面可执行多项任务，包括：
 
 * 安装（以及创建或更新数据库架构、创建部署配置等相关任务）。
 * 正在清除缓存。

@@ -2,9 +2,9 @@
 title: 命令行工具
 description: 使用Commerce命令行工具运行安装和配置任务。
 exl-id: 44470ce1-a5a2-4c12-962e-e42d11a6bd15
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 运�
 - CLI是可扩展的，因此第三方开发人员可以“插入”到其中。 这还有消除用户学习曲线的额外好处。
 - 禁用模块的命令不显示。
 
-本主题讨论如何使用CLI配置Adobe Commerce和Magento Open Source软件。 有关安装Commerce的信息，请参阅 [安装流程](../../installation/overview.md) 在 _安装指南_.
+本主题讨论如何使用CLI配置Adobe Commerce软件。 有关安装Commerce的信息，请参阅 [安装流程](../../installation/overview.md) 在 _安装指南_.
 
 ## 先决条件
 

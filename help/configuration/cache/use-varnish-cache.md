@@ -3,24 +3,24 @@ title: 使用清漆清除缓存
 description: 了解缓存清除如何与Varnish配合使用以及如何将其用作Adobe Commerce应用程序的Web缓存加速器。
 feature: Configuration, Cache
 exl-id: 866da415-c428-4092-a045-c3079493cdc4
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
 # 使用清漆清除缓存
 
-本主题讨论将Varnish用作Adobe Commerce和Magento Open Source的Web缓存加速器的基础知识。
+本主题讨论将Varnish用作Adobe Commerce的Web缓存加速器的基础知识。
 
 ## 清漆清除
 
 根据 [涂漆文档](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html)， &quot;A *清除* 就是当您从缓存中选择对象并将其与其变体一起丢弃时，会出现的情况。” 清漆清除类似于缓存清除命令(或单击 **刷新Magento缓存** （在Admin中）。
 
-事实上，当您清理、刷新或刷新Commerce缓存时，Varnish也会清除。
+事实上，当您清理、刷新或刷新Commerce缓存时，“清漆”也会清除。
 
-安装并配置Varnish以用于Commerce后，以下操作可能导致清空清空：
+安装并配置Varnish以用于Commerce后，以下操作可能会导致清空清空：
 
 - 维护网站。
 
@@ -40,9 +40,9 @@ ht-degree: 0%
 
   您应该刷新缓存，并定期删除 `generated/code` 和 `generated/metadata` 目录。 有关刷新缓存的信息，请参阅下一部分。
 
-## 配置Commerce清除清漆
+## 配置Commerce以清除清漆
 
-使用配置清漆主机后，Commerce会清除清漆主机 [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset) 命令。
+在使用配置Varnish主机后，Commerce会清除Varnish主机 [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset) 命令。
 
 您可以使用可选参数 `--http-cache-hosts` 用于指定清漆主机和监听端口的逗号分隔列表的参数。 配置所有Varnish主机，无论您拥有一个还是多个。 （不要使用空格字符分隔主机。）
 

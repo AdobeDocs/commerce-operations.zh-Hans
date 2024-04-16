@@ -1,10 +1,10 @@
 ---
 title: 修补程序的工作方式
-description: 了解Adobe Commerce和Magento Open Source的各种类型的修补程序及其工作方式。
+description: 了解Adobe Commerce的各种类型的修补程序及其工作方式。
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: 915cac8c8d436105c4ae25f95bcaefbe19cc50c1
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -96,4 +96,4 @@ index c8a6fef58d31..7d01c195791e 100644
 
 >[!NOTE]
 >
->要将修补程序应用到云基础架构项目上的Adobe Commerce，请参阅 [应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) 在 _云上的Commerce指南_.
+>要将修补程序应用到云基础架构项目上的Adobe Commerce，请参阅 [应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) 在 _Commerce on Cloud指南_.

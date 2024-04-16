@@ -1,10 +1,10 @@
 ---
 title: 内部部署安装先决条件
-description: 详细了解Adobe Commerce和Magento Open Source的内部安装所需的软件依赖项。
+description: 详细了解Adobe Commerce的内部安装所需的软件依赖项。
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: 9fe0a27346554bca3cb635b2e7ecf175adcec54a
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '328'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ CentOS： `httpd -v`
 
 Ubuntu： `apache2 -v`
 
-Adobe Commerce和Magento Open Source支持Apache版本2.4，因为以下结果显示：
+Adobe Commerce支持Apache版本2.4，因为以下结果表示：
 
 ```terminal
 Server version: Apache/2.4.0 (Unix)

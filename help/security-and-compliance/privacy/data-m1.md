@@ -2,9 +2,9 @@
 title: 客户个人信息参考（版本1.x）
 description: 了解Magento1.x中客户个人信息的数据流和数据库实体映射。
 exl-id: 8b01418d-8ca1-48fc-9577-a324ed3109d1
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->这是一系列主题中的一个，旨在帮助Adobe Commerce和Magento Open Source商家及开发人员为遵守隐私法规做好准备。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
+>这是一系列主题中的一个，旨在帮助Adobe Commerce商家和开发人员为遵守隐私法规做好准备。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
 
 在开发隐私法规的合规性程序时，请参考以下数据流图和数据库实体映射，例如：
 

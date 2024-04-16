@@ -2,9 +2,9 @@
 title: 安全性和合规性
 description: 了解Adobe Commerce或Magento Open Source项目的安全性、隐私和行业合规性资源。
 exl-id: 8c8cb369-33da-4c4c-bcab-a95d5ec97cc1
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 商家有义务遵守维护安全环境的行业准则、其管辖范围内的法律要求以及电子商务的最佳实践。 要从业务角度了解更多信息，请参见 [存储隐私策略](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/privacy-policy.html).
 
-此合规性文档提供了技术信息，以确保Adobe Commerce和Magento Open Source安装符合特定隐私法规的要求。 其中部分要求商户完成额外的开发工作以实现合规性。 有关详细信息，请参阅以下主题：
+此合规性文档提供了技术信息，以确保Adobe Commerce安装符合特定隐私法规的要求。 其中部分要求商户完成额外的开发工作以实现合规性。 有关详细信息，请参阅以下主题：
 
 - [《加州消费者隐私法案》(CCPA)](privacy/ccpa.md)
 - [通用数据保护条例(GDPR)](privacy/gdpr.md)

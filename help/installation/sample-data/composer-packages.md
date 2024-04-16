@@ -1,11 +1,11 @@
 ---
 title: 下载示例数据编辑器包
-description: 按照以下步骤安装Adobe Commerce并使用编辑器PHP包管理器Magento Open Source示例数据。
+description: 按照以下步骤使用编辑器PHP包管理器安装Adobe Commerce示例数据。
 feature: Install, Deploy
 exl-id: 735591af-a152-4476-9fa6-e31c4bab3ba8
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 * 已使用 `composer create-project`
 
-您可以使用此方法获取Adobe Commerce和Magento Open Source的示例数据，但必须使用相同的示例数据 [身份验证密钥](../prerequisites/authentication-keys.md) 用于安装该应用程序的应用程序。
+您可以使用此方法获取Adobe Commerce的示例数据，但必须使用相同的示例数据 [身份验证密钥](../prerequisites/authentication-keys.md) 用于安装该应用程序的应用程序。
 
 >[!NOTE]
 >

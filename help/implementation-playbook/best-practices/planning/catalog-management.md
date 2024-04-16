@@ -3,13 +3,13 @@ title: 目录管理最佳实践
 description: 了解配置购物车限制和产品属性，以及列出分页、选项、促销和变体的建议。
 role: Developer
 feature: Best Practices, Catalog Management
-source-git-commit: a81e88a4293880ae90cd531ce60c5a2b177188f2
+exl-id: 9a672017-9122-4841-a67b-a183224b67dc
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
-
 
 # 目录管理最佳实践
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 购物车限制
 
-为获得最佳性能，请使用以下指南来管理Adobe Commerce和Magento Open Source的购物车限制。
+为获得最佳性能，请使用以下指南来管理Adobe Commerce的购物车限制。
 
 ### 受影响的产品和版本
 
@@ -262,4 +262,3 @@ ht-degree: 0%
 - 增加了加载和渲染微型艺术品的时间。
 - 增加了呈现购物车页面的时间。
 - 增加了呈现的时间 **总计** 在“结帐”页面上阻止。
-

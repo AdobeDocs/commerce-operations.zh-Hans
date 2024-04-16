@@ -2,16 +2,16 @@
 title: 发布策略
 description: 了解不同类型的Adobe Commerce版本，包括次要修补程序、安全修补程序、功能、修补程序、单个修补程序和自定义修补程序。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: 9a74f87e0da5a7f11cd0930c8265556d80e3d1de
+source-git-commit: f7db6b65d74c605976a3a338c98eebda2dc46a43
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
 
 # Adobe Commerce发布策略
 
-Adobe Commerce和Magento Open Source使用 [语义版本控制](https://semver.org/) 在单个模块级别(例如 `magento/framework 101.1.1`)，但不适用于营销版本号。 例如：
+Adobe Commerce使用 [语义版本控制](https://semver.org/) 在单个模块级别(例如 `magento/framework 101.1.1`)，但不适用于营销版本号。 例如：
 
 - **主要版本**—2
 - **次要版本**—2.4

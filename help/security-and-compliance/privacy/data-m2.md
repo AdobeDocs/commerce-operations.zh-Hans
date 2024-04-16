@@ -1,10 +1,10 @@
 ---
 title: 客户个人信息参考（版本2.x）
-description: 了解Adobe Commerce和Magento Open Source 2.x中客户个人信息的数据流图和数据库实体映射。
+description: 了解Adobe Commerce 2.x中客户个人信息的数据流图和数据库实体映射。
 exl-id: f08f4f93-a7b6-4c43-bc07-f159822dc528
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->这是一系列主题中的一个，旨在帮助Adobe Commerce和Magento Open Source商家及开发人员为遵守隐私法规做好准备。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
+>这是一系列主题中的一个，旨在帮助Adobe Commerce商家和开发人员为遵守隐私法规做好准备。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
 
 在开发隐私法规的合规性程序时，请参考以下数据流图和数据库实体映射，例如：
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ### 前端数据访问点
 
-当客户登录并查看多个不同的页面或签出时，Adobe Commerce和Magento Open Source会加载客户信息。
+客户登录并查看多个不同页面或结帐时，Adobe Commerce会加载客户信息。
 
 ![前端数据访问点](../../assets/security-compliance/frontend-data-access-points.svg)
 
@@ -44,17 +44,17 @@ ht-degree: 0%
 
 ### 后端数据访问点
 
-当商家查看多种类型的网格、单击网格查看详细信息并执行各种其他任务时，Adobe Commerce和Magento Open Source会加载客户信息。
+当商家查看多种类型的网格、单击网格查看详细信息和执行各种其他任务时，Adobe Commerce会加载客户信息。
 
 ![后端数据访问点](../../assets/security-compliance/backend-data-access-points.svg)
 
 ## 数据库实体
 
-Adobe Commerce和Magento Open Source主要存储客户、地址、订单、报价和付款表中特定于客户的信息。 其他表包含对客户ID的引用。
+Adobe Commerce主要将客户特定的信息存储在客户、地址、订单、报价和付款表中。 其他表包含对客户ID的引用。
 
 ### 客户数据
 
-Adobe Commerce和Magento Open Source可以配置为存储以下客户属性：
+可以将Adobe Commerce配置为存储以下客户属性：
 
 - 出生日期
 - 电子邮件
@@ -119,7 +119,7 @@ Adobe Commerce和Magento Open Source可以配置为存储以下客户属性：
 
 ### 地址数据
 
-Adobe Commerce和Magento Open Source存储以下客户属性：
+Adobe Commerce存储以下客户属性：
 
 - 城市
 - 公司
@@ -295,7 +295,7 @@ Adobe Commerce和Magento Open Source存储以下客户属性：
 
 ### 邀请数据
 
-可以配置Adobe Commerce和Magento Open Source，以便客户能够向私人销售和活动发送邀请。
+可以配置Adobe Commerce，以便客户能够向私人销售和活动发送邀请。
 
 #### `magento_invitation` 表
 

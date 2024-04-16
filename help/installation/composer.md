@@ -2,18 +2,18 @@
 title: 快速启动内部部署
 description: 按照以下步骤在您拥有的基础设施上安装Adobe Commerce或Magento Open Source。
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 3c6527e5936438d6f1f52b32082cc7dde5f87f22
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
 
 # 快速启动内部部署
 
-本页上的说明介绍了如何在上安装Adobe Commerce和Magento Open Source [自托管](../implementation-playbook/infrastructure/self-hosting/overview.md) 基础架构。 有关升级现有安装的指导，请参阅 [_升级指南_](../upgrade/overview.md).
+本页上的说明介绍了如何在上安装Adobe Commerce [自托管](../implementation-playbook/infrastructure/self-hosting/overview.md) 基础架构。 有关升级现有安装的指导，请参阅 [_升级指南_](../upgrade/overview.md).
 
-Adobe用途 [Composer](https://getcomposer.org/) 管理Adobe Commerce和Magento Open Source组件及其依赖项。 使用Composer获取Adobe Commerce和Magento Open Source元包具有以下优势：
+Adobe用途 [Composer](https://getcomposer.org/) 管理Adobe Commerce组件及其依赖项。 使用Composer获取Adobe Commercemetapackage具有以下优势：
 
 - 重用第三方库，而无需将它们与源代码捆绑在一起
 - 通过使用基于组件的架构和强大的依赖关系管理，减少扩展冲突和兼容性问题
@@ -31,7 +31,7 @@ Adobe用途 [Composer](https://getcomposer.org/) 管理Adobe Commerce和Magento 
 
 - 全部完成 [先决任务](system-requirements.md).
 - [安装编辑器](https://getcomposer.org/download/).
-- Get [身份验证密钥](prerequisites/authentication-keys.md) 到Adobe Commerce和Magento Open Source编辑器存储库。
+- Get [身份验证密钥](prerequisites/authentication-keys.md) 到Adobe Commerce Composer存储库。
 
 ## 以文件系统所有者的身份登录
 

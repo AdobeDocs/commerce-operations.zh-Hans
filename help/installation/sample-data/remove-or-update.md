@@ -1,10 +1,10 @@
 ---
 title: 删除或更新示例数据模块
-description: 按照以下步骤管理Adobe Commerce和Magento Open Source示例数据模块。
+description: 按照以下步骤管理Adobe Commerce示例数据模块。
 exl-id: d23f999f-18bf-449b-be23-bdf392dda539
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ bin/magento sampledata:remove
 
 下面是示例数据模块的完整列表：
 
-Adobe Commerce和Magento Open Source：
-
 * `magento/module-bundle-sample-data`
 * `magento/module-catalog-rule-sample-data`
 * `magento/module-catalog-sample-data`
@@ -50,14 +48,6 @@ Adobe Commerce和Magento Open Source：
 * `magento/module-widget-sample-data`
 * `magento/module-wishlist-sample-data`
 * `magento/sample-data-media`
-
-仅限Adobe Commerce：
-
-* `magento/module-customer-balance-sample-data`
-* `magento/module-gift-card-sample-data`
-* `magento/module-gift-registry-sample-data`
-* `magento/module-multiple-wishlist-sample-data`
-* `magento/module-target-rule-sample-data`
 
 ## 准备更新示例数据
 

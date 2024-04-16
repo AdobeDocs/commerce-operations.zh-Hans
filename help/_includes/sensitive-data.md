@@ -1,19 +1,19 @@
 ---
-source-git-commit: 475dbc056ac3e6a00c8f794259bb0fbf04143687
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 0%
+source-wordcount: '64'
+ht-degree: 1%
 
 ---
 # 敏感数据
 
-Adobe Commerce和Magento Open Source使用您的加密密钥来加密以下内容：
+Adobe Commerce使用您的加密密钥加密以下内容：
 
 * 信用卡信息
 * 在管理员配置中指定的用户名和密码（例如，登录到付款网关）
 * 通过网络发送的验证码值
 
-Adobe Commerce和Magento Open Source do *非* 加密：
+Adobe Commerce *非* 加密：
 
 * 管理用户名和客户用户名和密码（这些密码经过哈希处理）
 * 地址

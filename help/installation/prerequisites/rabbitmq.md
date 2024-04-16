@@ -1,10 +1,10 @@
 ---
 title: 消息代理
-description: 按照以下步骤安装和配置所需的消息代理软件(例如 [!DNL RabbitMQ])，以进行Adobe Commerce和Magento Open Source的内部安装。
+description: 按照以下步骤安装和配置所需的消息代理软件(例如 [!DNL RabbitMQ]Adobe Commerce )。
 exl-id: ae6200d6-540f-46b3-92ba-7df7f6bb6fae
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ sudo apt install -y rabbitmq-server
 
 此 [!DNL RabbitMQ] 服务器包含在CentOS中，但版本通常较旧。 [!DNL RabbitMQ] 建议从其网站安装包。
 
-请参阅 [!DNL RabbitMQ] 安装页面，以获取支持的最新版本。 Adobe Commerce和Magento Open Source2.3及2.4支持 [!DNL RabbitMQ] 3.8.x。
+请参阅 [!DNL RabbitMQ] 安装页面，以获取支持的最新版本。 Adobe Commerce 2.3和2.4支持 [!DNL RabbitMQ] 3.8.x。
 
 请参阅 [在基于rpm的Linux上安装](https://www.rabbitmq.com/install-rpm.html) 以了解更多信息。
 

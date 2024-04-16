@@ -3,9 +3,9 @@ title: 创建或更新部署配置
 description: 按照以下步骤管理Adobe Commerce或Magento Open Source部署配置。
 feature: Install, Deploy, Configuration
 exl-id: 2cdde735-0c70-44e8-b2ee-ffb874c1c443
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ bin/magento setup:config:set [--<parameter>=<value>, ...]
 | `--db-name` | 要在其中安装数据库表的数据库实例的名称。<br><br>默认为 `magento2`. | 否 |
 | `--db-user` | 数据库实例所有者的用户名。<br><br>默认为 `root`. | 否 |
 | `--db-password` | 数据库实例所有者的密码。 | 否 |
-| `--db-prefix` | 仅当在已有Adobe Commerce和Magento Open Source表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 有些客户在一台服务器上运行多个Adobe Commerce或Magento Open Source实例，该服务器上所有表都位于同一数据库中。<br><br>前缀最长可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项使这些客户能够与多个Adobe Commerce或Magento Open Source安装共享数据库服务器。 | 否 |
+| `--db-prefix` | 仅当在已有Adobe Commerce表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 有些客户在一台服务器上运行多个Adobe Commerce或Magento Open Source实例，该服务器上所有表都位于同一数据库中。<br><br>前缀最长可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项使这些客户能够与多个Adobe Commerce或Magento Open Source安装共享数据库服务器。 | 否 |
 | `--session-save` | 使用以下任一项：<br><br>- `db` 将会话数据存储在 [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/). 如果您有群集数据库，请选择数据库存储；否则，与基于文件的存储相比，这样做可能没有多大好处。<br><br>- `files` 将会话数据存储到文件系统中。 基于文件的会话存储是合适的，除非文件系统访问速度较慢，或者您拥有集群数据库，或者希望将会话数据存储在Redis中。<br><br>- `redis` 将会话数据存储在 [使用Redis进行会话存储](../../configuration/cache/config-redis.md). 如果将Redis用于默认缓存或页面缓存，则必须已安装Redis。 | 否 |
 | `--key` | 如果您有密钥，请指定要加密的密钥 [敏感数据](#sensitive-data) 在数据库中。 如果您没有，应用程序将为您生成一个。 | 否 |
 | `--db-init-statements` | 高级MySQL配置参数。 在连接到MySQL数据库时使用数据库初始化语句运行。<br><br>默认为 `SET NAMES utf8;`.<br><br>查阅参考资料，类似于 [这个](https://dev.mysql.com/doc/refman/5.6/en/server-options.html) 然后再设置任何值。 | 否 |

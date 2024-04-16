@@ -1,11 +1,11 @@
 ---
 title: 拆分数据库性能解决方案
-description: 阅读有关Adobe Commerce和Magento Open Source的拆分数据库解决方案的信息。
+description: 阅读有关Adobe Commerce的拆分数据库解决方案的信息。
 recommendations: noCatalog
 exl-id: 922a9af7-2c46-4bf3-b1ad-d966f5564ec0
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 {{deprecate-split-db}}
 
-Adobe Commerce具有多种可扩展性优势，包括能够为Commerce应用程序的不同功能区域使用三个单独的主数据库。
+Adobe Commerce具有多种可扩展性优势，包括能够为Commerce应用程序的不同功能区域使用三个单独的master数据库。
 
 结帐、订单和产品数据都可以使用单独的master数据库，您可以选择复制该数据库。 此分离可根据您的需求，独立缩放网站结账、订单管理活动、网站浏览和促销活动的负载。 这些更改在如何扩展数据库层方面提供了相当大的灵活性。
 
@@ -66,7 +66,7 @@ Adobe Commerce使用三个主数据库和可配置数量的从属数据库进行
 
 - [手动配置](multi-master-manual.md) 拆分数据库解决方案。
 
-  如果您已安装组件或Commerce已在生产中，则必须执行此任务。 (_不要_ 更新生产系统；在开发系统中进行更新，并在测试更改后同步这些更改。)
+  如果您已安装组件或Commerce已在生产环境中，则必须执行此任务。 (_不要_ 更新生产系统；在开发系统中进行更新，并在测试更改后同步这些更改。)
 
   >[!WARNING]
   >
@@ -74,7 +74,7 @@ Adobe Commerce使用三个主数据库和可配置数量的从属数据库进行
 
 ## 先决条件
 
-拆分数据库要求您在任意主机上设置三个MySQL master数据库（Commerce服务器上的所有三个数据库、单独的服务器上的每个数据库等等）。 这些是 _母版_ 数据库及其使用方式如下：
+拆分数据库要求您在任意主机上设置三个MySQL master数据库(所有三个数据库都在Commerce服务器上，每个数据库在单独的服务器上，等等)。 这些是 _母版_ 数据库及其使用方式如下：
 
 - 一个签出表的主数据库
 - 一个Master数据库，用于Sales表(也称为 _订单管理系统_，或 _OMS_，表)

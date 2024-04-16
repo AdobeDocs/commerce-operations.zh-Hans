@@ -1,10 +1,10 @@
 ---
 title: 内部部署安装概述
-description: 了解Adobe Commerce和Magento Open Source内部部署的安装过程。
+description: 了解Adobe Commerce内部部署的安装过程。
 exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->下图简要概述了 _**内部部署**_ Adobe Commerce和Magento Open Source的安装：
+>下图简要概述了 _**内部部署**_ Adobe Commerce的安装：
 
 ![安装工作原理](../assets/installation/install-diagram-24.svg)
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
    安装必备的软件，包括PHP、Apache、MySQL和搜索引擎。 请参阅 [系统要求](system-requirements.md) 以了解更多信息。
 
-1. Get [身份验证密钥](prerequisites/authentication-keys.md) 商务编辑器存储库。
+1. Get [身份验证密钥](prerequisites/authentication-keys.md) 到Commerce Composer存储库。
 
 1. 获取Adobe Commerce或Magento Open Source软件。
 

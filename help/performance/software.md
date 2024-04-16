@@ -1,11 +1,11 @@
 ---
 title: 软件Recommendations
-description: 查看与Adobe Commerce和Magento Open Source部署的最佳性能相关的推荐软件列表。
+description: 查看与Adobe Commerce部署的最佳性能相关的推荐软件列表。
 feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
-source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1392'
 ht-degree: 0%
 
 ---
@@ -197,7 +197,7 @@ Magento完全支持Nginx和Apache Web Server。 [!DNL Commerce] 提供了中建�
 | 参数 | 默认 | 描述 |
 |--- | --- | ---|
 | `innodb_buffer_pool_instances` | 8 | 默认值为8，以避免多个线程尝试访问同一实例时出现问题。 |
-| `innodb_buffer_pool_size` | 128MB | 结合上述多个池实例，这意味着默认内存分配为1024MB。 总大小在所有缓冲池中分配。 为获得最佳效率，请指定 `innodb_buffer_pool_instances` 和 `innodb_buffer_pool_size` 以使每个缓冲池实例至少1 GB。 |
+| `innodb_buffer_pool_size` | 128兆字节 | 结合上述多个池实例，这意味着默认内存分配为1024MB。 总大小在所有缓冲池中分配。 为获得最佳效率，请指定 `innodb_buffer_pool_instances` 和 `innodb_buffer_pool_size` 以使每个缓冲池实例至少1 GB。 |
 | `max_connections` | 150 | 的值 `max_connections` 参数应与应用程序服务器中配置的PHP线程总数相关。 一般建议是，小环境为300，中环境为1,000。 |
 | `innodb_thread_concurrency` | 0 | 此配置的最佳值应按以下公式计算： `innodb_thread_concurrency = 2 * (NumCPUs + NumDisks)` |
 

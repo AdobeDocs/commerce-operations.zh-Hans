@@ -1,18 +1,18 @@
 ---
 title: 将Redis用于默认缓存
-description: 了解如何将Redis配置为Adobe Commerce和Magento Open Source的默认缓存。
+description: 了解如何将Redis配置为Adobe Commerce的默认缓存。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
 
 # 将Redis用于默认缓存
 
-Commerce提供命令行选项来配置Redis页面和默认缓存。 虽然您可以通过编辑 `<Commerce-install-dir>app/etc/env.php` 文件，建议使用命令行方法，尤其是对于初始配置。 命令行提供验证，确保配置语法正确。
+Commerce提供了命令行选项来配置Redis页面和默认缓存。 虽然您可以通过编辑 `<Commerce-install-dir>app/etc/env.php` 文件，建议使用命令行方法，尤其是对于初始配置。 命令行提供验证，确保配置语法正确。
 
 您必须 [安装Redis](config-redis.md#install-redis) 然后再继续。
 
@@ -76,7 +76,7 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
 
 ## 结果
 
-作为两个示例命令的结果，Commerce会将类似于以下内容的行添加到 `<Commerce-install-dir>app/etc/env.php`：
+作为两个示例命令的结果，Commerce将类似于以下内容的行添加到 `<Commerce-install-dir>app/etc/env.php`：
 
 ```php
 'cache' => [
@@ -104,7 +104,7 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
 
 ## 在EC2实例中使用AWS ElastiCache
 
-从Commerce 2.4.3开始，在Amazon EC2上托管的实例可以使用AWS ElastiCache代替本地Redis实例。
+从Commerce 2.4.3开始，在Amazon EC2上托管的实例可能使用AWS ElastiCache来代替本地Redis实例。
 
 >[!WARNING]
 >
@@ -144,7 +144,7 @@ Commerce支持多种类型的缓存配置。 通常，缓存配置在前端和�
 bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=<ElastiCache Primary Endpoint host> --cache-backend-redis-port=<ElastiCache Primary Endpoint port> --cache-backend-redis-db=0
 ```
 
-要为Redis页面缓存配置Commerce：
+要为Redis页面缓存配置Commerce，请执行以下操作：
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=<ElastiCache Primary Endpoint host> --page-cache-redis-port=<ElastiCache Primary Endpoint port> --page-cache-redis-db=1
@@ -190,7 +190,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=<Ela
 
 ## Redis预加载功能
 
-由于Commerce将配置数据存储在Redis缓存中，因此我们可以预加载在页面之间重用的数据。 要查找必须预加载的键，请分析从Redis传输到Commerce的数据。 我们建议预加载在每个页面上加载的数据，例如 `SYSTEM_DEFAULT`， `EAV_ENTITY_TYPES`， `DB_IS_UP_TO_DATE`.
+由于Commerce将配置数据存储在Redis缓存中，因此我们可以预加载在页面之间重复使用的数据。 要查找必须预加载的键，请分析从Redis传输到Commerce的数据。 我们建议预加载在每个页面上加载的数据，例如 `SYSTEM_DEFAULT`， `EAV_ENTITY_TYPES`， `DB_IS_UP_TO_DATE`.
 
 Redis使用 `pipeline` 以便复合加载请求。 键应包含数据库前缀；例如，如果数据库前缀为 `061_`，预加载密钥如下所示： `061_SYSTEM_DEFAULT`
 
@@ -316,4 +316,4 @@ redis-cli ping
 
 ### 检查压缩数据
 
-要检查压缩的会话数据和页面缓存，请 [RESP.app](https://flathub.org/apps/details/app.resp.RESP) 支持Commerce 2会话和页面缓存的自动解压缩，并以易于用户阅读的形式显示PHP会话数据。
+要检查压缩的会话数据和页面缓存，请 [RESP.app](https://flathub.org/apps/details/app.resp.RESP) 支持自动解压缩Commerce 2会话和页面缓存，并以易于用户阅读的形式显示PHP会话数据。

@@ -1,10 +1,10 @@
 ---
 title: 克隆示例数据Git存储库
-description: 按照以下步骤安装Adobe Commerce，并通过克隆Git存储库来Magento Open Source示例数据。
+description: 按照以下步骤通过克隆Git存储库来安装Adobe Commerce示例数据。
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---

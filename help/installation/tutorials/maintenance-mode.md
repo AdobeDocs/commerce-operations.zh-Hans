@@ -2,9 +2,9 @@
 title: 启用或禁用维护模式
 description: 按照以下步骤自定义客户在Adobe Commerce或Magento Open Source部署因维护而停止时看到的内容。
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 以下指南参考了标准维护模式页面。 如果您需要使用自定义维护页面，请参阅 [创建自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md) 主题。
 
-Adobe Commerce和Magento Open Source使用 [维护模式](../../configuration/bootstrap/application-modes.md#maintenance-mode) 以禁用引导。 在维护、升级或重新配置站点时，禁用引导很有用。
+Adobe Commerce使用 [维护模式](../../configuration/bootstrap/application-modes.md#maintenance-mode) 以禁用引导。 在维护、升级或重新配置站点时，禁用引导很有用。
 
 应用程序检测维护模式，如下所示：
 

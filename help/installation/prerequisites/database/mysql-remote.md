@@ -1,10 +1,10 @@
 ---
 title: 设置远程MySQL数据库连接
-description: 按照以下步骤为Adobe Commerce和Magento Open Source的内部安装配置远程数据库连接。
+description: 按照以下步骤为Adobe Commerce的内部安装配置远程数据库连接。
 exl-id: 5fe304bd-ff38-4066-a1fd-8937575e4de4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 有时，您可能希望将数据库托管在单独的服务器上，而不是在同一台计算机上运行数据库服务器和Web服务器。
 
-Adobe提供了连接到其他计算机上的MySQL服务器的方法。 从Adobe Commerce和Magento Open Source2.4.3开始，您还可以将应用程序配置为使用Amazon Web Services (AWS) Aurora数据库，而无需更改代码。
+Adobe提供了连接到其他计算机上的MySQL服务器的方法。 从Adobe Commerce 2.4.3开始，您还可以将应用程序配置为使用Amazon Web Services (AWS) Aurora数据库，而无需更改代码。
 
 Aurora是托管在AWS上的高性能、完全兼容的MySQL服务器。
 
 ## 连接到AWS Aurora数据库
 
-使用Aurora作为数据库与使用默认数据库连接器在一般Adobe Commerce和Magento Open Source设置配置中指定数据库一样简单。
+使用Aurora作为数据库与使用默认数据库连接器在一般Adobe Commerce设置配置中指定数据库一样简单。
 
 运行时 `bin/magento setup:install`中，使用Aurora信息 `db-` 字段：
 

@@ -1,10 +1,10 @@
 ---
 title: MySQL准则
-description: 按照以下步骤安装和配置MySQL和MariaDB，以进行Adobe Commerce和Magento Open Source的内部安装。
+description: 按照以下步骤为Adobe Commerce的内部安装安装和配置MySQL和MariaDB。
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 Adobe _强烈_ 建议您在设置数据库时遵循以下标准：
 
-* Adobe Commerce和Magento Open Source使用 [MySQL数据库触发器](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) 改进重新索引期间的数据库访问。 当索引器模式设置为时，将创建这些项 [计划](../../../configuration/cli/manage-indexers.md#configure-indexers). 应用程序不支持数据库中的任何自定义触发器，因为自定义触发器可能会与将来的Adobe Commerce和Magento Open Source版本不兼容。
+* Adobe Commerce使用 [MySQL数据库触发器](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) 改进重新索引期间的数据库访问。 当索引器模式设置为时，将创建这些项 [计划](../../../configuration/cli/manage-indexers.md#configure-indexers). 应用程序不支持数据库中的任何自定义触发器，因为自定义触发器可能会与将来的Adobe Commerce版本不兼容。
 * 熟悉 [这些潜在的MySQL触发器限制](https://dev.mysql.com/doc/mysql-reslimits-excerpt/8.0/en/stored-program-restrictions.html) 然后再继续。
 * 要增强数据库安全状态，请启用 [`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_strict_all_tables) SQL模式，用于防止存储无效的数据值，这可能会导致不需要的数据库交互。
-* Adobe Commerce和Magento Open Source do _非_ 支持基于MySQL语句的复制。 确保使用 _仅限_ [基于行的复制](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
+* Adobe Commerce会 _非_ 支持基于MySQL语句的复制。 确保使用 _仅限_ [基于行的复制](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
 
 >[!WARNING]
 >
@@ -30,7 +30,7 @@ Adobe _强烈_ 建议您在设置数据库时遵循以下标准：
 
 ## 在Ubuntu上安装MySQL
 
-Adobe Commerce和Magento Open Source2.4需要全新安装MySQL 8.0。有关在计算机上安装MySQL的说明，请按照下面的链接操作。
+Adobe Commerce 2.4要求全新安装MySQL 8.0。有关在计算机上安装MySQL的说明，请按照下面的链接操作。
 
 * [乌班图](https://ubuntu.com/server/docs/databases-mysql)
 * [CentOS](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html)
@@ -53,7 +53,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ## MySQL 8更改
 
-对于Adobe Commerce和Magento Open Source2.4，我们添加了对MySQL 8的支持。
+对于Adobe Commerce 2.4，我们添加了对MySQL 8的支持。
 本节介绍开发人员应了解的对MySQL 8的主要更改。
 
 ### 已移除整数类型的宽度（填充）
@@ -92,11 +92,11 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ## Commerce和MySQL 8
 
-为了正确支持MySQL 8，对Adobe Commerce和Magento Open Source进行了一些更改。
+为了正确支持MySQL 8，对Adobe Commerce进行了一些更改。
 
 ### 查询和插入行为
 
-Adobe Commerce和Magento Open Source通过在以下位置设置SET SQL_MODE=&quot;来禁用常规验证行为 `/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php:424.`. 禁用验证后，MySQL可能会截断数据。 在MySQL中，查询行为已更改： `Select * on my_table where IP='127.0.0.1'` 不再返回结果，因为IP地址现在正确显示为字符串而不是整数。
+Adobe Commerce通过在以下位置设置SET SQL_MODE=&quot;来禁用常规验证行为 `/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php:424.`. 禁用验证后，MySQL可能会截断数据。 在MySQL中，查询行为已更改： `Select * on my_table where IP='127.0.0.1'` 不再返回结果，因为IP地址现在正确显示为字符串而不是整数。
 
 ## 从MySQL 5.7升级到MySQL 8
 

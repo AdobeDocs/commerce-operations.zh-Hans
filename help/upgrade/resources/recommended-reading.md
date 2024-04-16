@@ -2,22 +2,22 @@
 title: 推荐的升级读物
 description: 查看关于规划 Adobe Commerce 升级的推荐读物。
 exl-id: 24ca57c0-1a68-46c4-b2fa-4a114250d0e3
-source-git-commit: 83ee645269b4fb0b63bb11f6d2255ef7fa52bc4f
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 2%
+source-wordcount: '264'
+ht-degree: 4%
 
 ---
 
 # 升级计划的建议阅读
 
-使用本页上的资源继续了解Adobe Commerce和Magento Open Source升级。
+使用本页上的资源继续了解Adobe Commerce升级。
 
 <table>
   <tbody>
     <tr>
       <td><strong>发行说明和公告</strong>
-        <p>了解Adobe Commerce和Magento Open Source的最新发展，包括产品策略、安全性、错误修复和已知问题。</p>
+        <p>了解Adobe Commerce的最新发展，包括产品策略、安全性、错误修复和已知问题。</p>
           <ul>
             <li><a href="https://blog.adobe.com/">Adobe博客</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/overview.html">Adobe Help Center</a></li>
@@ -28,7 +28,7 @@ ht-degree: 2%
           </ul>
         </td>
       <td><strong>工具</strong>
-        <p>Browse工具旨在让您更轻松地查找和使用Adobe Commerce和Magento Open Source软件。</p>
+        <p>Browse工具旨在让您更轻松地查找和使用Adobe Commerce软件。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html">升级兼容性工具PhpStorm插件</a> （视频）</li>
             <li><a href="../upgrade-compatibility-tool/overview.md">升级兼容性工具</a></li>
@@ -39,7 +39,7 @@ ht-degree: 2%
     </tr>
     <tr>
       <td><strong>日历和策略</strong>
-        <p>查看有关Adobe Commerce和Magento Open Source版本及策略的详细信息。</p>
+        <p>查看有关Adobe Commerce版本和策略的详细信息。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-eos-policy-faq.html">Adobe Commerce软件终止支持常见问题解答</a></li>
             <li><a href="https://marketplacesupport.magento.com/hc/en-us/articles/4413722432653">Commerce Marketplace策略</a></li>
@@ -50,7 +50,7 @@ ht-degree: 2%
           </ul>
         </td>
       <td><strong>功能和独立的服务</strong>
-        <p>探索作为Adobe Commerce和Magento Open Source扩展提供的创新Commerce服务以及获取这些服务的位置。</p>
+        <p>探索作为Commerce扩展提供的创新性Adobe Commerce服务以及获取这些服务的位置。</p>
           <ul>
             <li><a href="https://marketplace.magento.com/">Commerce Marketplace</a></li>
             <li><a href="https://marketplace.magento.com/magento-live-search.html">实时搜索</a></li>

@@ -1,18 +1,18 @@
 ---
 title: 搜索引擎配置
-description: 为Adobe Commerce和Magento Open Source的内部部署配置搜索引擎。
+description: 为Adobe Commerce的内部部署配置搜索引擎。
 feature: Configuration, Search
 exl-id: 61fbe0c2-bdd5-4f57-a518-23e180401804
-source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 # 搜索引擎配置
 
-此部分讨论使用Adobe Commerce和OpenSearch的内部部署测试Elasticsearch或Magento Open Source时必须选择的最低设置。
+此部分讨论使用Adobe Commerce的内部部署测试Elasticsearch或OpenSearch时必须选择的最低设置。
 
 >[!TIP]
 >
@@ -39,7 +39,7 @@ ht-degree: 0%
    |--- |--- |
    | **[!UICONTROL Server Hostname]** | 输入运行Elasticsearch或OpenSearch的计算机的完全限定主机名或IP地址。<br>云基础架构上的Adobe Commerce：从集成系统中获取此价值。 |
    | **[!UICONTROL Server Port]** | 输入Web服务器代理端口。 默认值为9200<br>云基础架构上的Adobe Commerce：从集成系统中获取此价值。 |
-   | **[!UICONTROL Index Prefix]** | 输入搜索引擎索引前缀。 如果为多个Commerce安装（暂存环境和生产环境）使用单个实例，则必须为每个安装指定唯一的前缀。 否则，您可以使用默认前缀magento2。 |
+   | **[!UICONTROL Index Prefix]** | 输入搜索引擎索引前缀。 如果您将单个实例用于多个Commerce安装（暂存环境和生产环境），则必须为每个安装指定一个唯一的前缀。 否则，您可以使用默认前缀magento2。 |
    | **[!UICONTROL Enable HTTP Auth]** | 单击 **[!UICONTROL Yes]** 仅当为搜索引擎服务器启用了身份验证时。 如果存在，请在提供的字段中提供用户名和密码。 |
    | **[!UICONTROL Server Timeout]** | 输入尝试建立与Elasticsearch或OpenSearch服务器的连接时等待的时间（以秒为单位）。 |
 
@@ -61,9 +61,9 @@ ht-degree: 0%
 如果是这样，请尝试以下操作：
 
 - 确保搜索引擎服务器正在运行。
-- 如果服务器与Commerce位于不同的主机上，请登录到Commerce服务器并ping搜索引擎主机。 解决网络连接问题并再次测试连接。
+- 如果服务器与Commerce不在同一台主机上，请登录到Commerce服务器，然后ping搜索引擎主机。 解决网络连接问题并再次测试连接。
 - 检查启动Elasticsearch的命令窗口或OpenSearch以查找栈栈跟踪和异常。 您必须先解决这些问题，然后才能继续。 特别是，请确保您以用户的身份启动了搜索引擎， `root` 权限。
-- 确保 [UNIX防火墙和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) 都会被禁用，或者会设置规则以使搜索引擎和商务能够相互通信。
+- 确保 [UNIX防火墙和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) 页面都已禁用，或者设置了规则以使搜索引擎和Commerce能够相互通信。
 - 验证 **[!UICONTROL Server Hostname]** 字段。 确保服务器可用。 您可以改为尝试服务器的IP地址。
 - 使用 `netstat -an | grep <listen-port>` 命令来验证 **[!UICONTROL Server Port]** 字段未被其他进程使用。
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 使用命令行重新索引：
 
-1. 以或切换身份登录到Commerce服务器， [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以或切换至的身份登录到Commerce服务器， [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
 1. 输入以下任何命令：
 
    输入以下命令以仅重新索引目录搜索索引：

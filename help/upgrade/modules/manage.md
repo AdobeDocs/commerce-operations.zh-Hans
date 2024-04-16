@@ -1,18 +1,18 @@
 ---
 title: 管理模块和扩展
-description: 使用命令行界面启用、禁用和卸载Adobe Commerce以及Magento Open Source模块和扩展。
+description: 使用命令行界面启用、禁用和卸载Adobe Commerce模块和扩展。
 feature: Upgrade, Extensions
 exl-id: a71de7c6-395a-4734-b3ad-b2879809be0b
-source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
 
 # 管理模块和扩展
 
-您必须使用命令行来管理Adobe Commerce和Magento Open Source模块及扩展。
+您必须使用命令行来管理Adobe Commerce模块和扩展。
 
 ## 启用或禁用模块
 

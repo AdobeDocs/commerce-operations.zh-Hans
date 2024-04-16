@@ -1,10 +1,10 @@
 ---
 title: 文件所有权和权限
-description: 了解在使用Adobe Commerce和Magento Open Source的内部安装时文件系统权限的重要性。
+description: 了解在使用Adobe Commerce的内部安装时文件系统权限的重要性。
 exl-id: a84784bf-afd6-4dba-9745-3fefc0ecafcb
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 >
 >文件系统安全是复杂而重要的。 我们强烈建议您在决定要设置的权限级别之前，咨询经验丰富的系统管理员或网络管理员。 我们为您提供了一种可供使用的机制，但创建权限策略是您的责任。
 
-Adobe Commerce和Magento Open Source使用三位默认掩码： `002`. 从UNIX缺省值666（文件）和777（目录）中减去缺省掩码。
+Adobe Commerce使用三位默认掩码： `002`. 从UNIX缺省值666（文件）和777（目录）中减去缺省掩码。
 
 例如：
 
@@ -53,7 +53,7 @@ Adobe Commerce和Magento Open Source使用三位默认掩码： `002`. 从UNIX�
 
 ## 权限、所有权和应用程序模式
 
-当您使用不同的Adobe Commerce和Magento Open Source应用程序模式时，我们建议您使用不同的权限和所有权：
+当您使用不同的Adobe Commerce应用程序模式时，我们建议您使用不同的权限和所有权：
 
 - 默认
 - 开发人员

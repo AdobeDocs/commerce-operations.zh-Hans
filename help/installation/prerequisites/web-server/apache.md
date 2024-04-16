@@ -1,10 +1,10 @@
 ---
 title: Apache
-description: 按照以下步骤安装和配置Apache Web Server，以进行Adobe Commerce和Magento Open Source的内部安装。
+description: 按照以下步骤为Adobe Commerce的内部安装安装和配置Apache Web Server。
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Adobe Commerce支持Apache 2.4.x。
 
 本主题讨论如何启用Apache 2.4重写并指定设置 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
 
-Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 以提供Apache的目录级说明。 以下说明也包含在本主题的所有其他部分中。
+Adobe Commerce使用服务器重写和 `.htaccess` 以提供Apache的目录级说明。 以下说明也包含在本主题的所有其他部分中。
 
 使用此部分可启用Apache 2.4重写，并指定 [分布式配置文件， `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
 
-Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 以提供Apache的目录级说明。
+Adobe Commerce使用服务器重写和 `.htaccess` 以提供Apache的目录级说明。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Adobe Commerce和Magento Open Source使用服务器重写和 `.htaccess` 以提�
 
 ## Apache必需模块
 
-Adobe Commerce和Magento Open Source需要安装以下Apache模块：
+Adobe Commerce需要安装以下Apache模块：
 
 - [mod_deflate.c](https://httpd.apache.org/docs/2.4/mod/mod_deflate.html)
 - [mod_expires.c](https://httpd.apache.org/docs/2.4/mod/mod_expires.html)
@@ -184,7 +184,7 @@ Server built: Jul 22 2020 14:35:32
 
 ## 在CentOS上安装Apache
 
-Adobe Commerce和Magento Open Source要求使用Apache server rewrites。 还必须指定可在以下位置使用的指令类型： `.htaccess`，应用程序使用该参数来指定重写规则。
+Adobe Commerce要求重写Apache Server。 还必须指定可在以下位置使用的指令类型： `.htaccess`，应用程序使用该参数来指定重写规则。
 
 安装和配置Apache基本上分为三步：安装软件、启用重写并指定 `.htaccess` 指令。
 

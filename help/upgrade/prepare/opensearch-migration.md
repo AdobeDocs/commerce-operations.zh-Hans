@@ -1,11 +1,11 @@
 ---
 title: 从Elasticsearch迁移到OpenSearch
-description: 了解如何替换用于Adobe Commerce和Magento Open Source内部安装的搜索引擎。
+description: 了解如何替换用于Adobe Commerce本地安装的搜索引擎。
 feature: Upgrade, Search
 exl-id: 56f1e609-83d2-4705-99d8-b395bb511411
-source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 OpenSearch是在Elasticsearch的许可更改之后创建的Elasticsearch7.10.2的开源分支。
 
-从2.4.4、2.4.3-p2和2.3.7-p3开始，Adobe Commerce和Magento Open Source支持OpenSearch。 尽管云基础架构上的Adobe Commerce不再支持内部部署安装，但这些安装仍继续支持Elasticsearch。 从版本2.4.6开始，OpenSearch在管理员配置设置中拥有自己的模块和字段。
+从2.4.4、2.4.3-p2和2.3.7-p3开始，Adobe Commerce支持OpenSearch。 尽管云基础架构上的Adobe Commerce不再支持内部部署安装，但这些安装仍继续支持Elasticsearch。 从版本2.4.6开始，OpenSearch在管理员配置设置中拥有自己的模块和字段。
 
 ## 迁移路径
 

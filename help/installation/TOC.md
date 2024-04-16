@@ -1,11 +1,11 @@
 ---
 user-guide-title: 安装指南
-user-guide-description: 了解如何安装Adobe Commerce和用于内部部署的Magento Open Source。
+user-guide-description: 了解如何安装Adobe Commerce以进行内部部署。
 feature: Install
-source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 3%
+source-wordcount: '169'
+ht-degree: 2%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 3%
       - [下载编辑器包](sample-data/composer-packages.md)
       - [克隆Git存储库](sample-data/git-repositories.md)
       - [删除或更新模块](sample-data/remove-or-update.md)
-- 教程 {#tutorials}
+- Tutorials {#tutorials}
    - [备份和回滚文件系统、介质和数据库](tutorials/backup.md)
    - [检查数据库状态](tutorials/database-status.md)
    - [配置消息使用者行为](tutorials/message-consumers.md)
@@ -60,7 +60,7 @@ ht-degree: 3%
    - [启用或禁用维护模式](tutorials/maintenance-mode.md)
    - [启用或禁用模块](tutorials/manage-modules.md)
    - [安装扩展](tutorials/extensions.md)
-   - [安装Commer](tutorials/install.md)
+   - [安装Commerce](tutorials/install.md)
    - [修改docroot以提高安全性](tutorials/docroot.md)
    - [卸载语言包](tutorials/language-packages.md)
    - [卸载模块](tutorials/uninstall-modules.md)

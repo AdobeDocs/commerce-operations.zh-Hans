@@ -3,9 +3,9 @@ title: 内部部署安装安全
 description: 了解改进Adobe Commerce或Magento Open Source内部安装的安全状态的方法。
 feature: Install, Security
 exl-id: 56724a72-c64d-44d4-a886-90d97ae5fb6d
-source-git-commit: 40d850add2ef8c51e9192758135768306b163780
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe没有关于使用SELinux的建议；如果需要，可以将其用于增强安全性。 如果您使用SELinux，则必须对其进行正确配置，否则Adobe Commerce和Magento Open Source会无法预测地正常运行。 如果您选择使用SELinux，请查阅诸如 [CentOS维客](https://wiki.centos.org/HowTos/SELinux) 设置规则以启用通信。
+>Adobe没有关于使用SELinux的建议；如果需要，可以将其用于增强安全性。 如果您使用SELinux，则必须对其进行正确配置，否则Adobe Commerce会无法预测地正常运行。 如果您选择使用SELinux，请查阅诸如 [CentOS维客](https://wiki.centos.org/HowTos/SELinux) 设置规则以启用通信。
 
 ## 有关使用Apache安装的建议
 

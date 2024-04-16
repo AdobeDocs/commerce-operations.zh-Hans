@@ -1,11 +1,11 @@
 ---
 title: 安全性概述
-description: 阅读Adobe Commerce和Magento Open Source应用程序的安全设置的简短概述。
+description: 阅读Adobe Commerce应用程序的安全设置的简短概述。
 feature: Configuration, Security
 exl-id: e596d03f-8428-4ad7-a563-8b7f371ed5b4
-source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## 安全资源
 
-配置指南的安全部分中的主题不是所有Commerce功能都包含的全面。 其他Commerce指南中有许多与安全相关的重要主题，例如：
+配置指南的安全部分中的主题不是全部Commerce功能。 其他Commerce指南中有许多与安全相关的重要主题，例如：
 
-- [PHP开发人员指南](https://developer.adobe.com/commerce/php/development/security/) 有关Adobe Commerce和Magento Open Source开发人员可用于提高他们构建的组件安全性的信息。
+- [PHP开发人员指南](https://developer.adobe.com/commerce/php/development/security/) 有关Adobe Commerce开发人员可用于提高所构建组件安全性的信息。
 - [安全和合规性指南](https://devdocs.magento.com/security/security-and-compliance.html) 有关安全性、隐私和法规合规性的信息，请点击相关链接获取技术资源。
 
 现在，以下指南中同时包含了几个安全相关主题：

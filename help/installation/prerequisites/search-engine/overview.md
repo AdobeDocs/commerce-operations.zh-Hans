@@ -1,18 +1,18 @@
 ---
 title: 搜索引擎先决条件
-description: 按照以下步骤安装和配置受支持的Adobe Commerce和Magento Open Source本地安装的搜索引擎软件。
+description: 按照以下步骤为Adobe Commerce的内部安装安装和配置受支持的搜索引擎软件。
 feature: Install, Search
 exl-id: 44ea638a-7200-4269-be1b-b0851de2c4f4
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
 
 # 搜索引擎先决条件
 
-自Adobe Commerce和Magento Open Source2.4起，所有安装都必须配置为使用 [Elasticsearch](https://www.elastic.co) 或 [OpenSearch](https://opensearch.org/) 作为目录搜索解决方案。
+自Adobe Commerce 2.4起，所有安装都必须配置为使用 [Elasticsearch](https://www.elastic.co) 或 [OpenSearch](https://opensearch.org/) 作为目录搜索解决方案。
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 * 每台主机都有自己的Web服务器；Web服务器不必相同。
 
-  例如，商务应用程序可以运行Apache，搜索引擎可以运行nginx。
+  例如，Commerce应用程序可以运行Apache，而搜索引擎可以运行nginx。
 
 * 两个Web服务器都使用传输层安全性(TLS)。
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 搜索请求的处理方式如下：
 
-1. Commerce Web服务器接收来自用户的搜索请求，该服务器将其转发到搜索引擎服务器。
+1. Commerce Web服务器接收来自用户的搜索请求，并将其转发到搜索引擎服务器。
 
    您可以配置搜索引擎以连接到代理的主机和端口。 我们建议Web服务器的SSL端口（默认情况下，443）。
 

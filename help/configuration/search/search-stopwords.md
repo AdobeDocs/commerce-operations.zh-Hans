@@ -3,9 +3,9 @@ title: 配置搜索停用词
 description: 了解如何使用CSV文件管理Adobe Commerce的停用词。
 feature: Configuration, Search
 exl-id: 75320868-9939-4a6e-8dbb-73ca68c9f0ee
-source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 配置停用词
 
-停用词位于 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录。 Adobe Commerce和Magento Open Source随附一个CSV文件，其中包含默认区域设置的停用词和另一个文件， `stopwords.csv`，其中包含用于表示任何区域设置的非其他CSV文件所代表的非停用词。
+停用词位于 `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` 目录。 Adobe Commerce附带一个CSV文件，其中包含默认区域设置的停用词，以及另一个文件， `stopwords.csv`，其中包含用于表示任何区域设置的非其他CSV文件所代表的非停用词。
 
 非索引字文件缓存的默认生命周期为15分钟。
 
@@ -102,7 +102,7 @@ ht-degree: 0%
 - `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`
 - `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`
 
-位置取决于您安装Commerce软件的方式。 如果您克隆了Magento2 GitHub存储库，则路径位于 `app/code`. 如果安装了压缩的归档文件或中继，则路径位于 `vendor`.
+此位置取决于您安装Commerce软件的方式。 如果您克隆了Magento2 GitHub存储库，则路径位于 `app/code`. 如果安装了压缩的归档文件或中继，则路径位于 `vendor`.
 
 **更改目录**：
 

@@ -3,9 +3,9 @@ title: 平台开发原则
 description: 了解使用Adobe Commerce时的基本平台开发原则。
 exl-id: 3d822a8c-0e81-4a80-a820-46cf2702e0bf
 feature: Cloud
-source-git-commit: 3c1a49c2dc3dc0d3d47e16c724d4099b6a456c77
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -30,4 +30,4 @@ ht-degree: 0%
 
 ## 云基础架构上的Adobe Commerce
 
-云基础架构上的Adobe Commerce是适用于Adobe Commerce软件的托管、自动托管平台。 云基础架构上的Adobe Commerce提供了各种功能，使其有别于内部部署Adobe Commerce和Magento Open Source实施。 请参阅 [云指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html).
+云基础架构上的Adobe Commerce是适用于Adobe Commerce软件的托管、自动托管平台。 云基础架构上的Adobe Commerce提供了各种功能，使其与内部部署的Adobe Commerce实施有所不同。 请参阅 [云指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html).

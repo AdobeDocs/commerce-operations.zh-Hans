@@ -1,19 +1,19 @@
 ---
 title: 获取您的身份验证密钥
-description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce和Magento Open Source编辑器包。
+description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce Composer包。
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: 3d9b7c5352f91308dd315a7195ee2cb1c4b191ee
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
 # 获取您的身份验证密钥
 
-此 `repo.magento.com` 存储库是存储Adobe Commerce和Magento Open Source及第三方编辑器包的位置，需要对其进行身份验证。 使用您的Commerce Marketplace帐户生成一对32字符的帐户 *身份验证密钥* 以访问存储库。
+此 `repo.magento.com` 存储库是存储Adobe Commerce和第三方编辑器包的位置，需要对其进行身份验证。 使用您的Commerce Marketplace帐户生成一对32字符的帐户 *身份验证密钥* 以访问存储库。
 
-要获得对Adobe Commerce和Magento Open Source包的访问权限，您必须使用与已授予对这些包访问权限的MAGEID关联的密钥。 MAGEID通常是Adobe Commerce帐户的主要联系人，可能并不总是云基础架构项目Adobe Commerce的项目所有者。
+要获得对Adobe Commerce包的访问权限，您必须使用与有权访问这些包的MAGEID关联的密钥。 MAGEID通常是Adobe Commerce帐户的主要联系人，可能并不总是云基础架构项目Adobe Commerce的项目所有者。
 
 >[!TIP]
 >
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ### 管理SSH访问令牌
 
-要使用SSH下载Adobe Commerce和Magento Open Source版本，您必须生成下载访问令牌。 要生成令牌，请执行以下操作：
+要使用SSH下载Adobe Commerce版本，您必须生成下载访问令牌。 要生成令牌，请执行以下操作：
 
 1. 登录 [magento.com帐户](https://account.magento.com/customer/account/login).
 1. 单击 **我的帐户** 页面顶部的。

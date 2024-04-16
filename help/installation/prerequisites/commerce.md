@@ -1,10 +1,10 @@
 ---
 title: 获取Adobe Commerce软件
-description: 了解如何下载Adobe Commerce和Magento Open Source软件。
+description: 了解如何下载Adobe Commerce软件。
 exl-id: 7a769d5b-5397-4572-8db5-7602068e6aad
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---

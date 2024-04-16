@@ -2,9 +2,9 @@
 title: 了解升级范围
 description: 了解版本中可能影响Adobe Commerce或Magento Open Source自定义模块或第三方扩展的向后不兼容更改。
 exl-id: dab2a14f-dbf0-422e-afb4-642e2220ec7a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 向后不兼容的更改
 
-Adobe Commerce和Magento Open Source版本可能包含与向后不兼容的更改。 请查看我们向后不兼容的更改文档，请参阅以下内容：
+Adobe Commerce版本可能包含与向后不兼容的更改。 请查看我们向后不兼容的更改文档，请参阅以下内容：
 
 - **[主要更改亮点](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/index.html)** — 有重大影响并需要详细解释和特殊说明以确保第三方模块继续工作的更改。
 - **[次要更改引用](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/reference.html)** — 参考从代码库生成的文档，该文档介绍了对类、API成员资格、数据库、依赖项注入、接口、布局、系统和XSD的细微更改。

@@ -3,9 +3,9 @@ title: 安装清漆
 description: 请参阅有关安装清漆的建议。
 feature: Configuration, Cache
 exl-id: e1881a85-3965-42d9-a46f-c2f5f20fbacc
-source-git-commit: ec3ab7e3c6c3835e73653b0d4f74aadc861016d3
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -32,4 +32,4 @@ ht-degree: 0%
 varnishd -V
 ```
 
-确保 [Adobe Commerce和Magento Open Source支持](../../installation/system-requirements.md) 已安装的Varnish版本，然后继续。 如果您运行的是不支持的版本，则必须升级到支持的版本。 有关更多信息，请参阅Varnish安装文档。
+确保 [Adobe Commerce支持](../../installation/system-requirements.md) 已安装的Varnish版本，然后继续。 如果您运行的是不支持的版本，则必须升级到支持的版本。 有关更多信息，请参阅Varnish安装文档。

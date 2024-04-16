@@ -1,18 +1,18 @@
 ---
 title: 搜索引擎概述
-description: Adobe Commerce和Magento Open Source的搜索引擎选项概述。
+description: Adobe Commerce的搜索引擎选项概述。
 feature: Configuration, Search
 exl-id: 0ea78ca2-0bca-4d61-980a-02fb7da04553
-source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
 
 # 搜索引擎概述
 
-从版本2.4.4开始，Adobe Commerce和Magento Open Source需要 [Elasticsearch] 或 [OpenSearch] 成为目录搜索引擎。 以前版本的2.4.x需要Elasticsearch。 有关安装搜索引擎和初始配置的详细信息，请参阅以下主题：
+从版本2.4.4开始，Adobe Commerce需要 [Elasticsearch] 或 [OpenSearch] 成为目录搜索引擎。 以前版本的2.4.x需要Elasticsearch。 有关安装搜索引擎和初始配置的详细信息，请参阅以下主题：
 
 - [搜索引擎先决条件](../../installation/prerequisites/search-engine/overview.md)
 - [为搜索引擎配置nginx](../../installation/prerequisites/search-engine/configure-nginx.md)

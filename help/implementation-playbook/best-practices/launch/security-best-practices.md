@@ -1,20 +1,20 @@
 ---
-title: 保护您的Commerce网站和基础架构
+title: 保护您的Commerce站点和基础架构
 description: 通过在设置、配置和更新Adobe Commerce安装时实施安全最佳实践来维护安全性。
 feature: Best Practices
 exl-id: 50d8a464-6496-4e9a-b642-0c6d0eb51ba0
-source-git-commit: cbfd19efd9f489fefa16d93cbd8116eefb57a900
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
 
-# 保护您的Commerce网站和基础架构
+# 保护您的Commerce站点和基础架构
 
 为部署在云基础架构上的Adobe Commerce项目建立和维护安全的环境是Adobe Commerce客户、解决方案合作伙伴和Adobe共同承担的责任。 本指南旨在为方程式中的客户提供最佳实践。
 
-虽然您无法消除所有安全风险，但应用这些最佳实践会加强Commerce安装的安全状况。 安全的站点和基础架构使恶意攻击成为不那么诱人的目标，确保了解决方案和客户敏感信息的安全，并有助于最大限度地减少可能导致站点中断和成本高昂的调查的安全相关事件。
+虽然您无法消除所有安全风险，但应用这些最佳实践会强化Commerce安装的安全状况。 安全的站点和基础架构使恶意攻击成为不那么诱人的目标，确保了解决方案和客户敏感信息的安全，并有助于最大限度地减少可能导致站点中断和成本高昂的调查的安全相关事件。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ Adobe认为以下建议对所有客户具有最高优先级。 在所有Commerce
 
 ![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **升级到最新版本的Adobe Commerce**
 
-通过以下方式保持代码更新 [将您的Commerce项目升级到最新版本](#upgrade-to-the-latest-release) Adobe Commerce、Commerce Services和扩展的，包括Adobe提供的安全修补程序、修补程序和其他修补程序。
+通过以下方式保持代码更新 [将您的Commerce项目升级到最新版本](#upgrade-to-the-latest-release) Adobe Commerce、Commerce服务和扩展的，包括Adobe提供的安全修补程序、修补程序和其他修补程序。
 
 ![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **保护敏感配置值**
 
@@ -59,7 +59,7 @@ Adobe认为以下建议对所有客户具有最高优先级。 在所有Commerce
 
 ![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **运行安全扫描**
 
-使用 [Commerce安全扫描服务](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html) 监控所有Adobe Commerce和Magento Open Source站点是否存在已知的安全风险和恶意软件，并注册以接收修补程序更新和安全通知。
+使用 [Commerce安全扫描服务](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html) 监控所有Adobe Commerce站点是否存在已知的安全风险和恶意软件，并注册以接收修补程序更新和安全通知。
 
 ## 确保扩展和自定义代码的安全性
 
@@ -73,7 +73,7 @@ Adobe认为以下建议对所有客户具有最高优先级。 在所有Commerce
 
 - 通过限制扩展和供应商的数量来降低风险。
 
-- 如果可能，请在与Commerce应用程序集成之前查看扩展代码的安全性。
+- 如果可能，在与Commerce应用程序集成之前，请查看扩展代码的安全性信息。
 
 - 确保PHP扩展开发人员遵循Adobe Commerce开发准则、流程和安全最佳实践。 具体来说，开发人员必须避免使用PHP功能，因为这会导致远程代码执行或弱加密。 请参阅 [安全性](https://developer.adobe.com/commerce/php/best-practices/security/) 在 *扩展开发人员最佳实践指南*.
 
@@ -99,9 +99,9 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
 ## 制定灾难恢复计划
 
-如果您的商业网站遭到破坏，请通过制定和实施全面的灾难恢复计划，控制损坏并快速恢复正常业务运营。
+如果您的Commerce站点受到危害，请通过制定和实施全面的灾难恢复计划，控制损坏并快速恢复正常业务运营。
 
-如果客户由于灾难而要求恢复Commerce实例，则Adobe可以为客户提供备份文件。 如果适用，客户和解决方案集成商可以执行恢复。
+如果客户由于灾难而需要恢复Commerce实例，则Adobe可以为客户提供备份文件。 如果适用，客户和解决方案集成商可以执行恢复。
 
 作为灾难恢复计划的一部分，Adobe强烈建议客户 [导出其Adobe Commerce应用程序配置](../../../configuration/cli/export-configuration.md) 以方便出于业务连续性目的而需要进行的重新部署。 将配置导出到文件系统的主要原因是系统配置优先于数据库配置。 在只读文件系统中，必须重新部署应用程序以更改敏感的配置设置，从而提供额外的保护层。
 
@@ -129,7 +129,7 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
 此部分总结了维护Adobe Commerce安装的站点和基础架构安全性的最佳实践。 其中许多最佳实践都侧重于保护计算机基础架构的总体安全，因此其中某些建议可能已经实施。
 
-![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **阻止未经授权的访问** — 与您的托管合作伙伴合作，设置VPN通道以阻止对Commerce网站和客户数据的未授权访问。 设置SSH隧道以阻止对Commerce应用程序的未授权访问。
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **阻止未经授权的访问** — 与您的托管合作伙伴合作，设置VPN通道以阻止对Commerce站点和客户数据的未授权访问。 设置SSH隧道以阻止对Commerce应用程序的未授权访问。
 
 ![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用Web应用程序防火墙** — 分析通信并发现可疑模式，例如使用Web应用程序防火墙发送到未知IP地址的信用卡信息。
 
@@ -137,7 +137,7 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
 ![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **配置高级密码安全设置** — 按照PCI数据安全标准第8.2.4节中的建议，设置强密码并至少每90天更改一次。请参阅 [配置管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html).
 
-![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用HTTPS** — 如果商业网站是新实施的，请使用HTTPS启动整个网站。 Google不仅使用HTTPS作为排名因素，而且许多用户甚至不考虑从网站购买，除非网站受HTTPS保护。
+![清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用HTTPS** — 如果新实施了Commerce站点，请使用HTTPS启动整个站点。 Google不仅使用HTTPS作为排名因素，而且许多用户甚至不考虑从网站购买，除非网站受HTTPS保护。
 
 ## Protect抵御恶意软件
 
@@ -156,15 +156,15 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
 >[!TIP]
 >
->如果Commerce网站受到恶意软件攻击的影响，请遵循的Adobe Commerce最佳实践 [响应安全事件](../maintenance/respond-to-security-incident.md).
+>如果Commerce站点受到恶意软件攻击的影响，请遵循适用于的Adobe Commerce最佳实践 [响应安全事件](../maintenance/respond-to-security-incident.md).
 
 ### 了解最常见的攻击
 
-以下是Adobe建议所有Commerce客户了解并采取措施抵御的常见攻击类别：
+以下是Adobe建议所有Commerce客户都了解并采取措施抵御的常见攻击类别：
 
 - **网站违规** — 攻击者通过更改网站的外观或添加自己的消息来破坏网站。 尽管对网站和用户帐户的访问受到威胁，但支付信息通常仍保持安全。
 
-- **僵尸网络** — 客户的Commerce服务器成为发送垃圾电子邮件的僵尸网络的一部分。 列入阻止列表虽然用户数据通常不会受到危害，但客户的域名可能会被垃圾邮件过滤器破坏，从而阻止从域投放任何电子邮件。 或者，客户站点成为僵尸网络的一部分，导致其他站点上的分布式拒绝服务(DDoS)攻击。僵尸网络可能会阻止到Commerce服务器的入站IP流量，从而阻止客户购物。
+- **僵尸网络** — 客户的Commerce服务器成为发送垃圾电子邮件的僵尸网络的一部分。 列入阻止列表虽然用户数据通常不会受到危害，但客户的域名可能会被垃圾邮件过滤器破坏，从而阻止从域投放任何电子邮件。 或者，客户站点成为僵尸网络的一部分，导致其他站点上的分布式拒绝服务(DDoS)攻击。僵尸网络可能会阻止到Commerce服务器的入站IP流量，从而阻止客户进行购物。
 
 - **直接服务器攻击** — 数据受到破坏，后门和恶意软件已安装，站点操作受到影响。 未存储在服务器上的付款信息不太可能通过这些攻击而受到危害。
 
@@ -180,14 +180,14 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
   您可以按照Adobe的，保护对管理员的访问，这通常需要最严格的保护。 [优先级建议](#priority-recommendations) 配置Commerce项目时。
 
-- 通过设置仅允许来自指定IP地址或网络的用户访问的访问控制列表，控制对Commerce网站的访问。
+- 通过设置一个访问控制列表（仅允许来自指定IP地址或网络的用户访问），控制对Commerce站点的访问。
 
   您可以将Fastly Edge ACL与自定义VCL代码段结合使用，以过滤传入请求并允许按IP地址访问。 请参阅 [用于允许请求的自定义VCL](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html).
 
 
   >[!TIP]
   >
-  >如果您雇用远程员工，请确保远程员工的IP地址包含在有权访问Commerce网站的地址列表中。
+  >如果您雇用远程员工，请确保远程员工的IP地址包含在有权访问Commerce站点的地址列表中。
 
 ### 防止点击劫持攻击
 

@@ -2,9 +2,9 @@
 title: 《加州消费者隐私法案》(CCPA)
 description: 了解加州消费者隐私法案(CCPA) ，该法案扩展了加州消费者决定如何收集、存储和使用其个人信息的权利。
 exl-id: 5df0e745-fb2c-438e-aedd-17fb72be1350
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本主题是帮助Adobe Commerce和Magento Open Source商家及开发人员了解《加州消费者隐私法案》(CCPA)含义的系列主题之一。 该信息仅供参考，不应被理解为法律建议。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
+>这是一系列主题中的一个，旨在帮助Adobe Commerce商家和开发人员了解《加州消费者隐私法案》(CCPA)的影响。 该信息仅供参考，不应被理解为法律建议。 请咨询您的法律顾问，确定您的企业是否以及如何应遵守任何法律义务。
 
 此 [CCPA](https://oag.ca.gov/privacy/ccpa) 扩展了加州消费者的权利，以确定如何收集、存储和使用他们的个人信息，重点是保护消费者免受未经授权的销售或交换或他们的个人信息。 CCPA于2018年颁布并自2020年1月1日起生效。
 

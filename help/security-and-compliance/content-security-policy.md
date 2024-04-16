@@ -2,16 +2,16 @@
 title: 内容安全策略概述
 description: 了解如何使用内容安全策略改进Adobe Commerce或Magento Open Source存储的安全状态。
 exl-id: 81070a09-5f8f-48b1-b542-1443dbd43f5f
-source-git-commit: 8bb692518536f5e7403ed308328e6532c020a230
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 # 内容安全策略概述
 
-内容安全策略(CSP)可以帮助检测和缓解跨站点脚本(XSS)攻击和相关数据注入攻击，从而为Adobe Commerce和Magento Open Source安装提供额外的防御层。 这种常见的攻击向量通过注入恶意内容来工作，这些内容错误地声称来自网站。 当恶意内容被加载并执行后，就会启动未经授权的数据传输。
+内容安全策略(CSP)可以帮助检测和缓解跨站点脚本(XSS)攻击和相关数据注入攻击，从而为Adobe Commerce安装提供额外的防御层。 这种常见的攻击向量通过注入恶意内容来工作，这些内容错误地声称来自网站。 当恶意内容被加载并执行后，就会启动未经授权的数据传输。
 
 CSP提供了一组标准化的指令，用于告知浏览器哪些内容资源可信，哪些内容应被阻止。 使用仔细定义的策略，CSP可以限制浏览器内容，以仅允许显示已列入白名单的资源。
 

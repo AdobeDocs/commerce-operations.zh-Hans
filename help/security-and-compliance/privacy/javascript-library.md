@@ -1,10 +1,10 @@
 ---
 title: 隐私JavaScript库
-description: 了解如何使用自定义工具访问和删除Adobe Commerce和Magento Open Source收集的客户个人信息。
+description: 了解如何使用自定义工具访问和删除Adobe Commerce收集的客户个人信息。
 exl-id: bcfea656-2cf0-48ae-9049-d91679166d05
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # 隐私JavaScript库
 
-隐私JavaScript库是一组工具，可帮助创建用于访问和删除Adobe Commerce和Magento Open Source收集的私有数据的流程。
+隐私JavaScript库是一组工具，可帮助创建用于访问和删除Adobe Commerce收集的私有数据的流程。
 
 Commerce数据跟踪服务可以存储适用于隐私法规的隐私信息，例如 [通用数据保护条例(GDPR)](gdpr.md) 和 [《加州消费者隐私法案》(CCPA)](ccpa.md).
 
-此库提供了一组用于创建隐私数据请求和收集其响应的功能。 使用此库可检索和删除Adobe Commerce和Magento Open Source数据跟踪服务存储在浏览器中的数据。
+此库提供了一组用于创建隐私数据请求和收集其响应的功能。 使用此库可检索和删除Adobe Commerce数据跟踪服务存储在浏览器中的数据。
 
 >[!NOTE]
 >
->如果 [Cookie限制模式](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) 启用，在购物者同意之前，Commerce不会收集行为数据。 如果 [!UICONTROL **Cookie限制模式**] 禁用，默认情况下，Commerce会收集行为数据。
+>如果 [Cookie限制模式](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) 如果启用，Commerce将不会收集行为数据，直到购物者同意为止。 如果 [!UICONTROL **Cookie限制模式**] 禁用，Commerce会默认收集行为数据。
 
 ## 安装
 

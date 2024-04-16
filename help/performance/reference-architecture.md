@@ -1,17 +1,17 @@
 ---
 title: 参考架构
-description: 查看Adobe Commerce和Magento Open Source部署推荐的参考架构的示意图。
+description: 查看Adobe Commerce部署中推荐的参考架构的示意图。
 exl-id: 85a6d3d6-f47f-4806-97bd-fa7a73605f4c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
 
 # 参考架构
 
-本主题介绍了一般性建议设置，适用于Adobe Commerce和Magento Open Source实例，这些实例使用在数据中心（非虚拟化）物理托管的普通服务器，其中资源不与其他用户共享。 您的托管提供商（尤其是专门从事Commerce高性能托管业务的提供商）可能会建议您采用对您的要求同样有效或更为有效的其他设置。
+本主题介绍了一般性建议设置，适用于Adobe Commerce实例，这些实例使用在数据中心（非虚拟化）物理托管的普通服务器，其中资源不与其他用户共享。 您的托管提供商(尤其是专门从事Commerce高性能托管业务的提供商)可能会建议您采用对您的要求同样有效或更加有效的其他设置。
 
 有关云基础架构环境上的Adobe Commerce，请参阅 [入门级架构](https://devdocs.magento.com/cloud/architecture/starter-architecture.html).
 

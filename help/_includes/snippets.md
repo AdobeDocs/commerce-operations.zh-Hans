@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
+source-git-commit: f7db6b65d74c605976a3a338c98eebda2dc46a43
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Commerce和Magento Open Source版本可能包含向后不兼容的更改(BIC)。 要查看与向后不兼容的更改，请参阅 [BIC参考](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). 有关主要向后不兼容问题的说明，请参见 [BIC重点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). 并非所有发行版本都引进了主要BIC。
+>Adobe Commerce版本可能包含向后不兼容的更改(BIC)。 要查看与向后不兼容的更改，请参阅 [BIC参考](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). 有关主要向后不兼容问题的说明，请参见 [BIC重点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). 并非所有发行版本都引进了主要BIC。
 
 ## CVE通知 {#cve-notice}
 
