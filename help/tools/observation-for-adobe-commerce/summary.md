@@ -3,9 +3,9 @@ title: 此 [!UICONTROL Summary] 选项卡
 description: 了解 [!UICONTROL Summary] 选项卡/ [!DNL Observation for Adobe Commerce].
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 790089c178570ee69f33cc04b17800db5563741e
 workflow-type: tm+mt
-source-wordcount: '2653'
+source-wordcount: '2462'
 ht-degree: 0%
 
 ---
@@ -257,7 +257,7 @@ ht-degree: 0%
 
 ![redis从日志同步](../../assets/tools/redis-synchronization-from-log.jpg)
 
-[[!DNL Redis]](https://redis.io/docs/about/) 是用作数据库、缓存和消息代理的开源（BSD已许可）内存中数据结构存储。 如果配置，它可以执行数据库和会话缓存。 此 **[!UICONTROL Redis synchronization from Log]** 帧集中于 [[!DNL Redis] 同步](https://redis.io/docs/manual/replication/). 值越大 [!DNL Redis] 数据集，则同步越有可能出现问题（需要保持同步的数据越多）。
+[[!DNL Redis]](https://redis.io/docs/about/) 是用作数据库、缓存和消息代理的开源（BSD已许可）内存中数据结构存储。 如果配置，它可以执行数据库和会话缓存。 此 **[!UICONTROL Redis synchronization from Log]** 帧集中于 [[!DNL Redis] 同步](https://redis.io/docs/latest/operate/oss_and_stack/management/replication/). 值越大 [!DNL Redis] 数据集，则同步越有可能出现问题（需要保持同步的数据越多）。
 
 **[!DNL Redis]错误和消息：**
 
