@@ -2,9 +2,9 @@
 title: 恩金克斯
 description: 按照以下步骤安装和配置Nginx Web服务器，以便在Adobe Commerce中进行本地安装。
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -97,13 +97,13 @@ Adobe Commerce需要多个 [PHP扩展](../php-settings.md) 才能正常运行。
    cd /var/www/html
    ```
 
-1. 全局安装编辑器。 在安装Adobe Commerce或Magento Open Source之前，需要编辑器更新依赖项：
+1. 全局安装编辑器。 在安装Adobe Commerce之前，需要编辑器更新依赖项：
 
    ```bash
    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
    ```
 
-1. 使用Magento Open Source或Adobe Commerce元包创建编辑器项目。
+1. 使用Adobe Commerce中继资料创建编辑器项目。
 
    **Magento Open Source**
 
@@ -207,7 +207,7 @@ Adobe Commerce需要多个 [PHP扩展](../php-settings.md) 才能正常运行。
    >
    >此 `include` 指令必须指向安装目录中的示例nginx配置文件。
 
-1. 替换 `www.magento-dev.com` 使用您的域名。 此名称必须与在安装Adobe Commerce或Magento Open Source时指定的基本URL匹配。
+1. 替换 `www.magento-dev.com` 使用您的域名。 此名称必须匹配您在安装Adobe Commerce时指定的基本URL。
 
 1. 保存并退出编辑器。
 
@@ -283,7 +283,7 @@ Adobe Commerce需要多个 [PHP](../php-settings.md) 扩展才能正常运行。
 
    >[!NOTE]
    >
-   >测试Adobe Commerce或Magento Open Source时，我们建议将内存限制设置为2 G。 请参阅 [必需的PHP设置](../php-settings.md) 以了解更多信息。
+   >测试Adobe Commerce时，我们建议将内存限制设置为2 G。 请参阅 [必需的PHP设置](../php-settings.md) 以了解更多信息。
 
 1. 取消注释会话路径目录并设置路径：
 
@@ -376,13 +376,13 @@ Adobe Commerce需要多个 [PHP](../php-settings.md) 扩展才能正常运行。
    cd /var/www/html
    ```
 
-1. 全局安装编辑器。 在安装Adobe Commerce或Magento Open Source之前，需要编辑器更新依赖项：
+1. 全局安装编辑器。 在安装Adobe Commerce之前，需要编辑器更新依赖项：
 
    ```bash
    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
    ```
 
-1. 使用Magento Open Source或Adobe Commerce元包创建编辑器项目。
+1. 使用Adobe Commerce中继资料创建编辑器项目。
 
    **Magento Open Source**
 

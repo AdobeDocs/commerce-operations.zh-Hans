@@ -1,11 +1,11 @@
 ---
 title: 创建、编辑或解锁管理员帐户
-description: 按照以下步骤管理Adobe Commerce或Magento Open Source管理员应用程序的管理员帐户。
+description: 按照以下步骤管理Adobe Commerce Admin应用程序的管理员帐户。
 feature: Install, User Account
 exl-id: d87871a1-717d-4662-b84d-98a018518286
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---

@@ -2,16 +2,16 @@
 title: 内部部署安装先决条件
 description: 详细了解Adobe Commerce的内部安装所需的软件依赖项。
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '316'
 ht-degree: 1%
 
 ---
 
 # 内部部署安装先决条件
 
-在安装Adobe Commerce或Magento Open Source之前，必须执行以下操作：
+在安装Adobe Commerce之前，必须执行以下操作：
 
 * 设置一个或多个符合条件的主机 [系统要求](../system-requirements.md).
 * 如果要设置多个具有负载平衡的Web节点，请设置并测试系统的该部分 _早于_ 安装应用程序。
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->我们假设您要在以下位置安装Adobe Commerce或Magento Open Source： **开发环境**，您具有计算机的超级用户访问权限， **和** 机器不需要高度安全。 如果您正在设置更安全的计算机，我们强烈建议您向网络管理员寻求其他帮助。
+>我们假定您将在以下位置安装Adobe Commerce： **开发环境**，您具有计算机的超级用户访问权限， **和** 机器不需要高度安全。 如果您正在设置更安全的计算机，我们强烈建议您向网络管理员寻求其他帮助。
 
 我们强烈建议您更新和升级操作系统软件。 这些升级可提供安全和软件修复，以防止将来出现问题。 不知道这些是什么意思吗？ 查看我们的 [安装概述页面](../overview.md).
 
@@ -70,7 +70,7 @@ Server built:   Jul 23 2017 14:17:29
 
 ### MySQL
 
-检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce或Magento Open Source的版本。 请参阅 [系统要求](../system-requirements.md) 支持的版本。
+检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce版本。 请参阅 [系统要求](../system-requirements.md) 支持的版本。
 
 ```bash
 mysql -u <database root user or database owner name> -p

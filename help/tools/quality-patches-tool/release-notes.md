@@ -2,20 +2,20 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: f21891b1be51896efba83d36048c20119ea1edbf
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '20493'
+source-wordcount: '20485'
 ht-degree: 0%
 
 ---
 
 # 发行说明
 
-此 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) 提供由Adobe和Magento Open Source团体开发的各个修补程序。 它允许您应用、还原和查看有关已安装Adobe Commerce或Magento Open Source版本可用的所有单个修补程序的一般信息。 无论谁开发了修补程序，您都可以将修补程序应用到Adobe Commerce和Magento Open Source项目。 例如，您可以将社区开发的修补程序应用于Adobe Commerce项目。
+此 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) 提供由Adobe和Magento Open Source团体开发的各个修补程序。 它允许您应用、还原和查看有关已安装Adobe Commerce版本可用的所有单个修补程序的一般信息。 无论谁开发了修补程序，您都可以将修补程序应用到Adobe Commerce和Magento Open Source项目。 例如，您可以将社区开发的修补程序应用于Adobe Commerce项目。
 
 >[!INFO]
 >
->请参阅 [应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) 以获取有关将修补程序应用于Adobe Commerce或Magento Open Source项目的说明。 请参阅 [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
+>请参阅 [应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) 以获取有关将修补程序应用于Adobe Commerce项目的说明。 请参阅 [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
 
 >[!INFO]
 >

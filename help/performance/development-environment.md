@@ -1,17 +1,17 @@
 ---
 title: 开发环境Recommendations
-description: 了解关于设置本地Adobe Commerce或Magento Open Source开发环境的性能建议。
+description: 了解关于设置本地Adobe Commerce开发环境的性能建议。
 exl-id: f57396c0-86be-4933-8066-eb51c42fb9e4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
 # 开发环境建议
 
-此页面为Commerce开发环境提供建议。
+本页提供了有关Commerce开发环境的建议。
 
 ## 清理缓存而不是禁用
 

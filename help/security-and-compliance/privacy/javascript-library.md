@@ -2,9 +2,9 @@
 title: 隐私JavaScript库
 description: 了解如何使用自定义工具访问和删除Adobe Commerce收集的客户个人信息。
 exl-id: bcfea656-2cf0-48ae-9049-d91679166d05
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Commerce数据跟踪服务可以存储适用于隐私法规的隐私信息，例
 
 隐私JavaScript库在以下位置提供： `commerce.adobe.net/magentoprivacy.js`
 
-获得文件后，您需要将其添加到Adobe Commerce或Magento Open Source实例中安装的自定义模块或主题。 请按照 [使用自定义JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) 完成此任务的主题。
+获得文件后，您需要将其添加到Adobe Commerce实例中安装的自定义模块或主题。 请按照 [使用自定义JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) 完成此任务的主题。
 
 ### 初始化
 

@@ -2,9 +2,9 @@
 title: MySQL准则
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置MySQL和MariaDB。
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Adobe Commerce通过在以下位置设置SET SQL_MODE=&quot;来禁用常规验�
 
 要将MySQL从版本5.7正确更新到版本8，必须按照以下顺序执行以下步骤：
 
-1. 将Adobe Commerce或Magento Open Source升级到2.4.0。测试所有内容，并确保系统按预期工作。
+1. 将Adobe Commerce升级到2.4.0。测试所有内容，并确保系统按预期工作。
 1. 启用维护模式：
 
    ```bash
@@ -131,7 +131,7 @@ Adobe Commerce通过在以下位置设置SET SQL_MODE=&quot;来禁用常规验�
 
 ## 配置数据库实例
 
-本节讨论如何为Adobe Commerce或Magento Open Source创建数据库实例。 尽管建议使用新数据库实例，但您可以选择安装Adobe Commerce或与现有数据库实例Magento Open Source。
+本节讨论如何为Adobe Commerce创建数据库实例。 虽然建议使用新数据库实例，但您可以选择将Adobe Commerce与现有数据库实例一起安装。
 
 配置MySQL数据库实例：
 
@@ -177,7 +177,7 @@ Adobe Commerce通过在以下位置设置SET SQL_MODE=&quot;来禁用常规验�
 
    * 索引器的要求更高 `tmp_table_size` 和 `max_heap_table_size` 值（例如，64 M）。 如果您配置 `batch_size` 参数)时，可以调整该值以及表大小设置以提高索引器性能。 请参阅 [Optimization指南](../../../performance/configuration.md) 以了解更多信息。
 
-   * 为获得最佳性能，请确保所有MySQL和Adobe Commerce或Magento Open Source索引表都可以保存在内存中(例如，配置 `innodb_buffer_pool_size`)。
+   * 为获得最佳性能，请确保所有MySQL和Adobe Commerce索引表都可以保存在内存中(例如，配置 `innodb_buffer_pool_size`)。
 
    * 与其他MariaDB或MySQL版本相比，在MariaDB 10.4上重新索引需要更多时间。 请参阅 [配置最佳实践](../../../performance/configuration.md#indexers).
 

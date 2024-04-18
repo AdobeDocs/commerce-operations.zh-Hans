@@ -1,12 +1,12 @@
 ---
 user-guide-title: 性能最佳实践
-user-guide-description: 使用我们的建议优化Adobe Commerce或Magento Open Source生产部署的性能。
+user-guide-description: 使用我们的建议优化Adobe Commerce生产部署的性能。
 feature: Best Practices
 topic: Administration, Commerce, Development, Performance
-source-git-commit: 51a86a24561e2c21b895dd59b3d784313b52d186
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 1%
+source-wordcount: '50'
+ht-degree: 2%
 
 ---
 

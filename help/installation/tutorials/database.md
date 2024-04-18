@@ -1,10 +1,10 @@
 ---
 title: 创建数据库模式
-description: 按照以下步骤为Adobe Commerce或Magento Open Source创建数据库。
+description: 按照以下步骤为Adobe Commerce项目创建数据库。
 exl-id: 860c9918-44c4-4ef1-88a5-12614566307c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '49'
 ht-degree: 0%
 
 ---

@@ -2,9 +2,9 @@
 title: 通用数据保护条例(GDPR)
 description: 了解《通用数据保护条例》(GDPR)，该法规旨在为欧盟和欧洲经济区的所有个人规范数据保护与隐私。
 exl-id: 30e60601-f4f7-419e-b2dd-8c82c8a2ed33
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 个人信息参考
 
-有关技术信息，请参阅“个人信息参考”中的数据流图和数据库实体映射，这些映射适用于您支持的每个Adobe Commerce版本或Magento Open Source。
+有关技术信息，请参阅“个人信息参考”中的数据流图和数据库实体映射，这些映射适用于您支持的每个Adobe Commerce版本。
 
 - [客户个人信息参考（版本2.x）](data-m2.md)
 - [客户个人信息参考（版本） 1.x)](data-m1.md)

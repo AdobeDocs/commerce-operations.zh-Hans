@@ -1,7 +1,7 @@
 ---
-source-git-commit: 475dbc056ac3e6a00c8f794259bb0fbf04143687
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 * 您的搜索引擎与Web服务器在同一主机上运行。 在不同主机上运行搜索引擎和Web服务器超出了本主题的范围。
 
-  将搜索引擎和Web服务器放在同一台主机上的优点是，它使得拦截加密通信变得不可能。 搜索引擎Web服务器不必与Adobe Commerce或Magento Open SourceWeb服务器相同；例如，Adobe Commerce可以运行Apache，Elasticsearch/OpenSearch可以运行nginx。
+  将搜索引擎和Web服务器放在同一台主机上的优点是，它使得拦截加密通信变得不可能。 搜索引擎Web服务器不必与Adobe Commerce Web服务器相同；例如，Adobe Commerce可以运行Apache，而Elasticsearch/OpenSearch可以运行nginx。
 
   如果搜索引擎向公共Web公开，则应当配置身份验证。 如果您的搜索引擎实例在网络内受到保护，则可能没有必要。 与您的托管提供商合作，确定您应当实施哪些安全措施来保护实例。
 

@@ -1,11 +1,11 @@
 ---
 user-guide-title: 操作指南
-user-guide-description: 了解维护 Adobe Commerce 或 Magento Open Source 应用程序的操作指南。
+user-guide-description: 了解维护Adobe Commerce应用程序的操作环节。
 feature: Configuration, Best Practices, Install, Integration, Security, Release Notes, Upgrade
-source-git-commit: c8093c4575eccc1d012da0e1502eb618c9b048e5
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '57'
-ht-degree: 31%
+source-wordcount: '53'
+ht-degree: 5%
 
 ---
 

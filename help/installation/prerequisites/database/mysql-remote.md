@@ -2,9 +2,9 @@
 title: 设置远程MySQL数据库连接
 description: 按照以下步骤为Adobe Commerce的内部安装配置远程数据库连接。
 exl-id: 5fe304bd-ff38-4066-a1fd-8937575e4de4
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 
 * [安装MySQL服务器](mysql.md) 在数据库服务器上。
 * [创建数据库实例](mysql.md#configuring-the-database-instance) 在数据库服务器上。
-* 在Adobe Commerce或Magento Open SourceWeb节点上安装MySQL客户端。 有关详细信息，请参阅MySQL文档。
+* 在Adobe Commerce Web节点上安装MySQL客户端。 有关详细信息，请参阅MySQL文档。
 
 ### 高可用性
 
@@ -136,7 +136,7 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 mysql -u <local database username> -h <database server ip address> -p
 ```
 
-如果MySQL监视器显示如下，则数据库已准备好进行Adobe Commerce或Magento Open Source：
+如果MySQL监视器显示如下，则数据库已准备好使用Adobe Commerce：
 
 ```terminal
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -151,9 +151,9 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 如果Web服务器是群集的，请在每个Web服务器主机上输入该命令。
 
-## 安装Adobe Commerce或Magento Open Source
+## 安装Adobe Commerce
 
-安装Adobe Commerce或Magento Open Source时，必须指定以下内容：
+安装Adobe Commerce时，必须指定以下内容：
 
 * 基本URL(也称为 *商店地址*)指定 *Web节点*
 * 数据库主机是 *远程数据库服务器* IP地址（如果数据库服务器是群集的，则使用负载平衡器）

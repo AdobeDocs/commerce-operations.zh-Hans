@@ -5,9 +5,9 @@ role: Developer, Architect
 feature: Best Practices
 last-substantial-update: 2022-11-15T00:00:00Z
 exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 如果您确定旧数据需要迁移，或者新数据需要保存到 [!DNL Adobe Commerce]，Adobe建议使用 [扩展属性](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target="_blank"}. 使用扩展属性保存其他数据具有以下优势：
 
 - 您可以控制保留的数据和数据库结构，从而确保以正确的列类型和正确的索引保存数据。
-- 中的大多数实体 [!DNL Adobe Commerce] 和 [!DNL Magento Open Source] 支持使用扩展属性。
+- 中的大多数实体 [!DNL Adobe Commerce] 支持使用扩展属性。
 - 扩展属性是一种与存储无关的机制，该机制提供了灵活性，让您可以将数据保存在项目的最佳位置。
 
 存储位置的两个示例是数据库表和 [!DNL Redis]. 在选择位置时需要考虑的关键事项是：位置会引入额外的复杂性还是影响性能。

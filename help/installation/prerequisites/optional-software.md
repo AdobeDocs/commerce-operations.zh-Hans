@@ -2,9 +2,9 @@
 title: 可选软件
 description: 了解更多关于可安装以支持Adobe Commerce内部安装的可选软件的信息。
 exl-id: 533ff52b-3301-4624-b691-3dfddde6ce0b
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 我们强烈建议您安装NTP，以确保与cron相关的任务正确执行。 （例如，服务器日期可以是过去或未来。）
 
-本主题中讨论的其他可选实用程序可能会帮助您进行安装；但是，安装或使用Adobe Commerce或Magento Open Source时并不需要这些实用程序。
+本主题中讨论的其他可选实用程序可能会帮助您进行安装；但是，安装或使用Adobe Commerce并不需要这些实用程序。
 
 ## 安装和配置网络时间协议(NTP)
 
 [NTP](https://www.ntp.org/) 使服务器能够使用同步其系统时钟 [全局可用的池服务器](https://www.ntppool.org/en/). 我们建议您使用您信任的NTP服务器，无论它们是您内部网络的专用硬件解决方案，还是外部的公共服务器。
 
-如果您在多台主机上部署Adobe Commerce或Magento Open Source，则无论服务器处于哪个时区，NTP都是一种保证其时钟完全同步的简单方法。 此外，cron相关任务（如索引和事务性电子邮件）取决于服务器时钟的准确性。
+如果您在多台主机上部署Adobe Commerce，则NTP是一种简单的方法，可确保无论服务器处于哪个时区，它们的时钟都保持同步。 此外，cron相关任务（如索引和事务性电子邮件）取决于服务器时钟的准确性。
 
 ### 在Ubuntu上安装和配置NTP
 

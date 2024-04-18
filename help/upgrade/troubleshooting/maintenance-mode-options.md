@@ -1,10 +1,10 @@
 ---
 title: 升级的维护模式选项
-description: 创建自定义维护模式页面，以便客户在执行升级时在Adobe Commerce或Magento Open Source店面中看到该页面。
+description: 创建自定义维护模式页面，以便客户在执行升级时在Adobe Commerce店面中看到该页面。
 exl-id: 77e6d82d-5cc6-4d14-8b5c-1d2108f27b29
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---

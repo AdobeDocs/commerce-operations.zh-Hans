@@ -2,9 +2,9 @@
 title: 《加州消费者隐私法案》(CCPA)
 description: 了解加州消费者隐私法案(CCPA) ，该法案扩展了加州消费者决定如何收集、存储和使用其个人信息的权利。
 exl-id: 5df0e745-fb2c-438e-aedd-17fb72be1350
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ CCPA授予消费者以下新权利：
 
 ## 个人信息参考
 
-有关技术信息，请参阅“个人信息参考”中的数据流图和数据库实体映射，这些映射适用于您支持的每个Adobe Commerce版本或Magento Open Source。
+有关技术信息，请参阅“个人信息参考”中的数据流图和数据库实体映射，这些映射适用于您支持的每个Adobe Commerce版本。
 
 - [客户个人信息参考（版本2.x）](data-m2.md)
 - [客户个人信息参考（版本） 1.x)](data-m1.md)

@@ -2,9 +2,9 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -155,4 +155,4 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 
 >[!NOTE]
 >
->存在已知问题 `xdebug` 会影响Adobe Commerce或Magento Open Source安装或安装后对店面或Admin的访问的其他资源。 请参阅 [已知问题，影响 `xdebug` 安装](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html) 在 _Commerce支持知识库_.
+>存在已知问题 `xdebug` 会影响Adobe Commerce安装或安装后对店面或Admin的访问的其他限制。 请参阅 [已知问题，影响 `xdebug` 安装](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html) 在 _Commerce支持知识库_.

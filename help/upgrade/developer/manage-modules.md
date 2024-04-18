@@ -3,16 +3,16 @@ title: 管理模块和扩展（开发人员）
 description: 使用命令行界面和编辑器包管理器管理Adobe Commerce模块和扩展。
 feature: Upgrade, Extensions
 exl-id: 447eb317-83e1-4900-83a5-9ac1a008e752
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '131'
+ht-degree: 3%
 
 ---
 
 # 管理模块和扩展
 
-参与升级的开发人员通过在Adobe Commerce或Magento Open Source中指定其版本来升级模块和扩展 `composer.json` 文件。 如果您不是参与开发人员，请参阅 [执行升级](../implementation/perform-upgrade.md).
+参与升级的开发人员通过在Adobe Commerce中指定其版本来升级模块和扩展 `composer.json` 文件。 如果您不是参与开发人员，请参阅 [执行升级](../implementation/perform-upgrade.md).
 
 您可以添加 `require` 部分至 `composer.json` 文件，或者您可以使用 `composer require` 命令如下所示：
 

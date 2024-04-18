@@ -2,9 +2,9 @@
 title: 高级内部部署安装
 description: 了解Adobe Commerce在您拥有的基础架构上的高级安装方案。
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2314'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Adobe Commerce具有单个命令行界面来执行安装和配置任务： `<mag
 * CLI是可扩展的，因此第三方开发人员可以“插入”到其中。 这还有消除用户学习曲线的额外好处。
 * 禁用模块的命令不显示。
 
-本主题讨论如何使用CLI安装Adobe Commerce或Magento Open Source软件。 有关配置的信息，请参见 [配置指南](../configuration/overview.md).
+本主题讨论如何使用CLI安装Adobe Commerce软件。 有关配置的信息，请参见 [配置指南](../configuration/overview.md).
 
 如果需要，安装程序可以多次运行，这样您可以：
 
@@ -47,7 +47,7 @@ Adobe Commerce具有单个命令行界面来执行安装和配置任务： `<mag
   例如，在为Web服务器配置安全套接字层(SSL)后，可以运行安装程序来设置SSL选项。
 
 * 更正以前安装中的错误
-* 在其他数据库实例中安装Adobe Commerce或Magento Open Source
+* 在其他数据库实例中安装Adobe Commerce
 
 ## 开始安装之前
 
@@ -65,7 +65,7 @@ Adobe Commerce具有单个命令行界面来执行安装和配置任务： `<mag
 
 >[!NOTE]
 >
->您必须从安装Adobe Commerce或Magento Open Source `bin` 子目录。
+>您必须从安装Adobe Commerce `bin` 子目录。
 
 您可以使用不同的选项多次运行安装程序以完成如下安装任务：
 
@@ -73,7 +73,7 @@ Adobe Commerce具有单个命令行界面来执行安装和配置任务： `<mag
 
 * 更正以前安装中的错误。
 
-* 在其他数据库实例中安装Adobe Commerce或Magento Open Source。
+* 在其他数据库实例中安装Adobe Commerce。
 
 >[!NOTE]
 >
@@ -133,13 +133,13 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
-| `--base-url` | 用于通过以下任意格式访问管理员和店面的基本URL：<br><br>`http[s]://<host or ip>/<your install dir>/`.<br><br>**注意：** 方案(http://或https://)和尾随斜杠都是必需的。<br><br>`<your install dir>` 是安装Adobe Commerce或Magento Open Source软件的docroot相对路径。 根据您设置Web服务器和虚拟主机的方式，路径可能是magento2或为空。<br><br>要在本地主机上访问Adobe Commerce或Magento Open Source，您可以使用 `http://127.0.0.1/<your install dir>/` 或 `http://127.0.0.1/<your install dir>/`.<br><br>- `{{base_url}}` 它表示由虚拟主机设置或Docker等虚拟化环境定义的基本URL。 例如，如果您使用主机名设置虚拟主机， `magento.example.com`，您可以通过以下方式安装软件 `--base-url={{base_url}}` 并使用如下的URL访问管理员 `http://magento.example.com/admin`. | 是 |
+| `--base-url` | 用于通过以下任意格式访问管理员和店面的基本URL：<br><br>`http[s]://<host or ip>/<your install dir>/`.<br><br>**注意：** 方案(http://或https://)和尾随斜杠都是必需的。<br><br>`<your install dir>` 是安装Adobe Commerce软件的docroot相对路径。 根据您设置Web服务器和虚拟主机的方式，路径可能是magento2或为空。<br><br>要访问Adobe Commerce或MagenAdobe Commerceuse，请执行以下操作 `http://127.0.0.1/<your install dir>/` 或 `http://127.0.0.1/<your install dir>/`.<br><br>- `{{base_url}}` 它表示由虚拟主机设置或Docker等虚拟化环境定义的基本URL。 例如，如果您使用主机名设置虚拟主机， `magento.example.com`，您可以通过以下方式安装软件 `--base-url={{base_url}}` 并使用如下的URL访问管理员 `http://magento.example.com/admin`. | 是 |
 | `--backend-frontname` | 用于访问管理员的统一资源标识符(URI)。 您可以忽略此参数，以便应用程序使用以下模式为您生成随机URI <code>admin_jkhgdfq</code>.<br><br>出于安全原因，我们建议使用随机URI。 黑客或恶意软件更难利用随机URI。<br><br>URI将显示在安装结束时。 您可以稍后随时使用 `bin/magento info:adminuri` 命令。<br><br>如果您选择输入值，我们建议您不要使用诸如“管理员”、“后端”之类的常用词。 管理员URI可以包含字母数字值和下划线字符(`_`)。 | 否 |
 | `--db-host` | 使用以下任一项：<br><br> — 数据库服务器的完全限定的主机名或IP地址。<br><br>- `localhost` （默认）或 `127.0.0.1` 如果数据库服务器与Web服务器位于同一主机上。localhost表示MySQL客户端库使用UNIX套接字连接到数据库。 `127.0.0.1` 导致客户端库使用TCP协议。 有关套接字的详细信息，请参见 [PHP PDO_MYSQL文档](https://www.php.net/manual/en/ref.pdo-mysql.php).<br><br>**注意：** 您可以选择在其主机名中指定数据库服务器端口，如www.example.com:9000 | 是 |
 | `--db-name` | 要在其中安装数据库表的数据库实例的名称。<br><br>默认为 `magento2`. | 是 |
 | `--db-user` | 数据库实例所有者的用户名。<br><br>默认为 `root`. | 是 |
 | `--db-password` | 数据库实例所有者的密码。 | 是 |
-| `--db-prefix` | 仅当在已有Adobe Commerce或Magento Open Source表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 有些客户在一台服务器上运行多个Adobe Commerce或Magento Open Source实例，该服务器上所有表都位于同一数据库中。<br><br>前缀最长可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项使这些客户能够与多个Adobe Commerce或Magento Open Source安装共享数据库服务器。 | 否 |
+| `--db-prefix` | 仅当在已有Adobe Commerce表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 某些客户有多个Adobe Commerce或MagenAdobe Commerceserver，在同一数据库中包含所有表。<br><br>前缀最长可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项允许这些客户在多个Adobe Commerce安装中共享数据库服务器 |
 | `--db-ssl-key` | 客户端密钥的路径。 | 否 |
 | `--db-ssl-cert` | 客户端证书的路径。 | 否 |
 | `--db-ssl-ca` | 服务器证书的路径。 | 否 |
@@ -153,7 +153,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 | `--admin-use-security-key` | 1导致应用程序使用随机生成的键值来访问管理员和表单中的页面。 这些键值有助于防止跨站点脚本伪造攻击。 这是默认设置。<br><br>`0` 禁用键的使用。 | 否 |
 | `--session-save` | 使用以下任一项：<br><br>- `db` 将会话数据存储到数据库中。 如果您有群集数据库，请选择数据库存储；否则，与基于文件的存储相比，这样做可能没有多大好处。<br><br>- `files` 将会话数据存储到文件系统中。 基于文件的会话存储是合适的，除非文件系统访问速度较慢，或者您拥有集群数据库，或者希望将会话数据存储在Redis中。<br><br>- `redis` 将会话数据存储在Redis中。 如果将Redis用于默认缓存或页面缓存，则必须已安装Redis。 有关配置对Redis的支持的其他信息，请参阅将Redis用于会话存储。 | 否 |
 | `--key` | 如果您有密钥，请指定密钥以加密数据库中的敏感数据。 如果您没有，应用程序将为您生成一个。 | 是 |
-| `--cleanup-database` | 要在安装Adobe Commerce或Magento Open Source之前删除数据库表，请指定此参数，而不使用值。 否则，数据库将保持不变。 | 否 |
+| `--cleanup-database` | 要在安装Adobe Commerce之前删除数据库表，请指定此参数，而不使用值。 否则，数据库将保持不变。 | 否 |
 | `--db-init-statements` | 高级MySQL配置参数。 在连接到MySQL数据库时使用数据库初始化语句运行。 在设置任何值之前，请查阅与此类似的引用。<br><br>默认为 `SET NAMES utf8;`. | 否 |
 | `--sales-order-increment-prefix` | 指定要用作销售订单前缀的字符串值。 通常，这用于保证支付处理者的唯一订单编号。 | 否 |
 
@@ -205,7 +205,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 >[!NOTE]
 >
->要在安装Adobe Commerce或Magento Open Source后启用或禁用模块，请参阅 [启用和禁用模块](tutorials/manage-modules.md).
+>要在安装Adobe Commerce后启用或禁用模块，请参阅 [启用和禁用模块](tutorials/manage-modules.md).
 
 **敏感数据：**
 
@@ -217,7 +217,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 #### 示例1 — 使用管理员用户帐户进行基本安装
 
-以下示例通过以下选项安装Adobe Commerce或Magento Open Source：
+以下示例使用下列选项安装Adobe Commerce：
 
 * 应用程序安装在 `magento2` 相对于Web服务器docroot开启的目录 `localhost` 管理员的路径为 `admin`；因此：
 
@@ -262,7 +262,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 
 #### 示例2 — 无管理员用户帐户的基本安装
 
-您可以安装Adobe Commerce或Magento Open Source，而无需创建Administrator用户，如以下示例所示。
+您可以安装Adobe Commerce而不创建管理员用户，如以下示例所示。
 
 ```bash
 magento setup:install --base-url=http://127.0.0.1/magento2/ \
@@ -287,7 +287,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 
 #### 示例3 — 使用其他选项进行安装
 
-以下示例通过以下选项安装Adobe Commerce或Magento Open Source：
+以下示例使用下列选项安装Adobe Commerce：
 
 * 应用程序安装在 `magento2` 相对于Web服务器docroot开启的目录 `localhost` 管理员的路径为 `admin`；因此：
 

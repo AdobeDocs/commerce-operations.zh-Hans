@@ -1,11 +1,11 @@
 ---
 title: 设置umask（可选）
-description: 通过限制文件Magento Open Source权限，可提高Adobe Commerce或系统内部安装的安全状态。
+description: 通过限制文件系统权限来改进Adobe Commerce本地安装的安全状态。
 feature: Install, Configuration
 exl-id: 18d65d75-7be0-4488-bf35-4b058e4ae5ea
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---

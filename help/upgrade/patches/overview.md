@@ -2,9 +2,9 @@
 title: 修补程序的工作方式
 description: 了解Adobe Commerce的各种类型的修补程序及其工作方式。
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## 自定义修补程序
 
-有时，Adobe工程团队需要一段时间才能在Adobe Commerce或Magento Open Source编辑器版本中包含对GitHub所做的错误修复。 同时，您可以从GitHub创建一个修补程序，并使用 [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) 插件，以将其应用于基于编辑器的安装。
+有时，Adobe工程团队需要一段时间才能在Adobe Commerce Composer版本中包含对GitHub所做的错误修复。 同时，您可以从GitHub创建一个修补程序，并使用 [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) 插件，以将其应用于基于编辑器的安装。
 
 使用 [命令行](apply.md#command-line) 或 [Composer](apply.md#composer) 以应用自定义修补程序。
 

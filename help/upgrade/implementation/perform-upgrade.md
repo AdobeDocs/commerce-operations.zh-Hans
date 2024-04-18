@@ -2,9 +2,9 @@
 title: 执行升级
 description: 按照以下步骤升级Adobe Commerce的内部部署。
 exl-id: 9183f1d2-a8dd-4232-bdee-7c431e0133df
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 执行升级
 
-您可以升级 _内部部署_ 部署Adobe Commerce或Magento Open Source应用程序（如果通过以下方式安装软件）：
+您可以升级 _内部部署_ 从命令行部署Adobe Commerce应用程序（如果通过以下方式安装该软件）：
 
 - 使用下载编辑器metapackage `composer create-project` 命令。
 - 正在安装压缩的归档文件。
@@ -110,7 +110,7 @@ ht-degree: 0%
 
    - `<product>`  — （必需）要升级的包。 对于内部部署，此值必须为 `product-community-edition` 或 `product-enterprise-edition`.
 
-   - `<version>`  — （必需）要升级到的Adobe Commerce或Magento Open Source的版本。 例如， `2.4.3`.
+   - `<version>`  — （必需）要升级到的Adobe Commerce版本。 例如， `2.4.3`.
 
    - `--no-update`  — （必需）禁用依赖关系的自动更新。
 

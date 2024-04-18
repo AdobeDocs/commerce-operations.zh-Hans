@@ -2,9 +2,9 @@
 title: 管理缓存
 description: 使用Commerce CLI从命令行管理缓存类型和查看缓存状态
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 1070291396144f866cadd5e42ebca3e77a484a9b
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ bin/magento cache:disable db_ddl full_page
 
   >[!TIP]
   >
-  >在升级Magento Open Source或Adobe Commerce的版本、从Magento Open Source升级到Adobe Commerce，或安装B2B for Adobe Commerce或任何模块后，请始终清理缓存。
+  >在升级Adobe Commerce版本、从Magento Open Source升级到Adobe Commerce，或安装B2B for Adobe Commerce或任何模块后，始终清理缓存。
 
 - 刷新缓存类型会清除缓存存储，这可能会影响使用相同存储的其他进程应用程序。
 

@@ -3,16 +3,16 @@ title: 配置应用程序
 description: 了解Adobe Commerce内部部署所需的安装后配置。
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
 
 # 配置应用程序
 
-现在您已安装Adobe Commerce或Magento Open Source，您需要对其进行配置。 本主题提供了一些推荐的配置设置。
+现在您已安装Adobe Commerce，您需要对其进行配置。 本主题提供了一些推荐的配置设置。
 
 ## 设置cron
 

@@ -3,16 +3,16 @@ title: 下载示例数据编辑器包
 description: 按照以下步骤使用编辑器PHP包管理器安装Adobe Commerce示例数据。
 feature: Install, Deploy
 exl-id: 735591af-a152-4476-9fa6-e31c4bab3ba8
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
 
 # 下载示例数据编辑器包
 
-本节讨论如何安装示例数据(如果通过以下任一方式获得Adobe Commerce或Magento Open Source软件)：
+本节讨论如何安装示例数据(如果通过以下任一方式获得Adobe Commerce软件)：
 
 * 已从下载压缩的档案 `https://magento.com/tech-resources/download`.
 

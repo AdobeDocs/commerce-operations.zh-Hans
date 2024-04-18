@@ -1,10 +1,10 @@
 ---
 title: 安装Adobe Commerce
-description: 按照以下步骤在您拥有的基础设施上安装Adobe Commerce或Magento Open Source。
+description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce。
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2094'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 | `--db-name` | 要在其中安装数据库表的数据库实例的名称。<br><br>默认为 `magento2`. | 是 |
 | `--db-user` | 数据库实例所有者的用户名。<br><br>默认为 `root`. | 是 |
 | `--db-password` | 数据库实例所有者的密码。 | 是 |
-| `--db-prefix` | 仅当在已有Adobe Commerce或Magento Open Source表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 有些客户在一台服务器上运行多个Adobe Commerce实例，该服务器上所有表都位于同一数据库中。<br><br>前缀最长可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项使这些客户能够在多个安装中共享数据库服务器。 | 否 |
+| `--db-prefix` | 仅当在已有Adobe Commerce表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 有些客户在一台服务器上运行多个Adobe Commerce实例，该服务器上所有表都位于同一数据库中。<br><br>前缀最长可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项使这些客户能够在多个安装中共享数据库服务器。 | 否 |
 | `--db-ssl-key` | 客户端密钥的路径。 | 否 |
 | `--db-ssl-cert` | 客户端证书的路径。 | 否 |
 | `--db-ssl-ca` | 服务器证书的路径。 | 否 |

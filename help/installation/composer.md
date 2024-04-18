@@ -1,10 +1,10 @@
 ---
 title: 快速启动内部部署
-description: 按照以下步骤在您拥有的基础设施上安装Adobe Commerce或Magento Open Source。
+description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce。
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe用途 [Composer](https://getcomposer.org/) 管理Adobe Commerce组件及�
 - 通过使用基于组件的架构和强大的依赖关系管理，减少扩展冲突和兼容性问题
 - 遵守 [PHP-Framework互操作性组(FIG)](https://www.php-fig.org/) 标准
 - 使用其他组件重新打包Magento Open Source
-- 在生产环境中使用Adobe Commerce或Magento Open Source软件
+- 在生产环境中使用Adobe Commerce软件
 
 >[!NOTE]
 >
@@ -71,11 +71,11 @@ Adobe用途 [Composer](https://getcomposer.org/) 管理Adobe Commerce组件及�
 
 ## 获取隐喻
 
-要获取Adobe Commerce或Magento Open Source隐含，请执行以下操作：
+要获取Adobe Commerce的比喻，请执行以下操作：
 
 1. 以以下身份登录到您的应用程序服务器，或切换到 [文件系统所有者](prerequisites/file-system/overview.md).
 1. 转到Web服务器docroot目录或您已配置为虚拟主机docroot的目录。
-1. 使用Adobe Commerce或Magento Open Source元包创建编辑器项目。
+1. 使用Commerce隐喻创建编辑器项目。
 
    **Magento Open Source**
 
@@ -127,7 +127,7 @@ composer create-project --repository-url=https://repo.magento.com/ magento/proje
 
 ## 设置文件权限
 
-在安装Adobe Commerce或Magento Open Source之前，必须设置Web服务器组的读写权限。 这是必要的，以便命令行可以将文件写入文件系统。
+在安装Adobe Commerce之前，必须设置Web服务器组的读写权限。 这是必要的，以便命令行可以将文件写入文件系统。
 
 ```terminal
 cd /var/www/html/<magento install directory>
@@ -139,7 +139,7 @@ chmod u+x bin/magento
 
 ## 安装应用程序
 
-您必须使用命令行安装Adobe Commerce或Magento Open Source。
+您必须使用命令行安装Adobe Commerce。
 
 此示例假定安装目录名为 `magento2ee`， `db-host` 在同一台计算机上(`localhost`)，并且 `db-name`， `db-user`、和 `db-password` 全部 `magento`：
 

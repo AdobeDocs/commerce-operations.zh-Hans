@@ -1,10 +1,10 @@
 ---
 user-guide-title: 配置指南
-user-guide-description: 配置Adobe Commerce或Magento Open Source应用程序功能和服务。
+user-guide-description: 配置Adobe Commerce应用程序功能和服务。
 feature: Configuration
-source-git-commit: b61a2726e1a26229515d28332bbd88ba3d416a98
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 0%
    + [运行单元测试](cli/unit-tests.md)
    + [转换布局文件](cli/convert-layout-files.md)
    + [生成性能测试数据](cli/generate-data.md)
-   + [运行支持实用程序（仅限Commerce）](cli/run-support-utilities.md)
+   + [运行支持实用程序(仅限Commerce)](cli/run-support-utilities.md)
 + 配置文件 {#files}
    + [用于部署的配置文件](reference/deployment-files.md)
    + [配置类型](reference/config-create-types.md)

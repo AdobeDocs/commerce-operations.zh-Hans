@@ -1,10 +1,10 @@
 ---
 title: 备份和回滚文件系统、介质和数据库
-description: 请按照以下步骤备份和恢复Adobe Commerce或Magento Open Source应用程序。
+description: 请按照以下步骤备份和恢复Adobe Commerce应用程序。
 exl-id: b9925198-37b4-4456-aa82-7c55d060c9eb
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---

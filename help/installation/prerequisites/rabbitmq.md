@@ -2,9 +2,9 @@
 title: 消息代理
 description: 按照以下步骤安装和配置所需的消息代理软件(例如 [!DNL RabbitMQ]Adobe Commerce )。
 exl-id: ae6200d6-540f-46b3-92ba-7df7f6bb6fae
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,10 @@ Adobe Commerce使用 [!DNL RabbitMQ] 开源消息代理。 它提供可靠、高
 
 消息队列提供了一种异步通信机制，在这种机制中，消息的发送者和接收者不会相互联系。 它们也不需要同时与消息队列通信。 当发件人将邮件放入队列时，该邮件会一直存储到收件人收到这些邮件为止。
 
-安装Adobe Commerce或Magento Open Source之前，必须建立消息队列系统。 基本顺序为：
+安装Adobe Commerce之前，必须建立消息队列系统。 基本顺序为：
 
 1. 安装 [!DNL RabbitMQ] 以及任何先决条件。
-1. 连接 [!DNL RabbitMQ] 到Adobe Commerce或Magento Open Source。
+1. 连接 [!DNL RabbitMQ] Adobe Commerce。
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ sudo apt install -y rabbitmq-server
 
 ## 安装方式 [!DNL RabbitMQ] 并连接
 
-如果您安装Adobe Commerce或Magento Open Source _之后_ 您安装 [!DNL RabbitMQ]中，在安装期间添加以下命令行参数：
+如果您安装Adobe Commerce _之后_ 您安装 [!DNL RabbitMQ]中，在安装期间添加以下命令行参数：
 
 ```bash
 --amqp-host="<hostname>" --amqp-port="5672" --amqp-user="<user_name>" --amqp-password="<password>" --amqp-virtualhost="/"
@@ -90,7 +90,7 @@ sudo apt install -y rabbitmq-server
 
 ## 连接 [!DNL RabbitMQ]
 
-如果您已安装Adobe Commerce或Magento Open Source，并且要将其连接到 [!DNL RabbitMQ]，添加 `queue` 中的部分 `<install_directory>/app/etc/env.php` 文件，以便它类似于以下内容：
+如果您已安装Adobe Commerce并且希望将其连接到 [!DNL RabbitMQ]，添加 `queue` 中的部分 `<install_directory>/app/etc/env.php` 文件，以便它类似于以下内容：
 
 ```php
 'queue' =>

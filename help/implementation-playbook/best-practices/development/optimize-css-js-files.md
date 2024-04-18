@@ -4,16 +4,16 @@ description: 了解如何从管理员或命令行合并Adobe Commerce项目的CS
 role: Developer
 feature: Best Practices
 exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
-source-git-commit: 2662ced484fb42bf2d32609e4e82364c1e47c8f0
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
 
 # 优化资源文件
 
-对于响应更迅速的Commerce网站，请优化CSS和JavaScript (JS)资源文件并消除渲染阻止资源。
+对于响应更迅速的Commerce站点，请优化CSS和JavaScript (JS)资源文件并消除渲染阻止资源。
 
 - **优化CSS和JS文件** — 通过将Adobe Commerce配置为合并、缩小单独的文件并将其捆绑到单个文件中，减少加载CSS和JavaScript (JS)文件所需的时间。
 - **消除渲染阻止资源** — 考虑内联提供关键JS和CSS功能，并推迟所有非关键JS/CSS样式。 有关指导，请参阅 [消除渲染阻止资源](https://web.dev/render-blocking-resources/).
@@ -24,7 +24,6 @@ ht-degree: 0%
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
-- Magento Open Source
 
 ## 合并或缩小CSS文件
 
@@ -82,7 +81,7 @@ ht-degree: 0%
 
 ## 合并和捆绑JS文件
 
-您可以在商务管理员中打开合并或捆绑功能（合并和捆绑功能无法同时启用）： [!UICONTROL **商店** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**].
+您可以在Commerce管理中打开合并或捆绑功能（合并和捆绑功能无法同时启用）： [!UICONTROL **商店** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**].
 
 您还可以从命令行启用Adobe Commerce内置捆绑（基本捆绑）：
 

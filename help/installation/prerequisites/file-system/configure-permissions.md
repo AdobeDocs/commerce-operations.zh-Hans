@@ -2,16 +2,16 @@
 title: 配置文件所有权和权限
 description: 按照以下步骤为Adobe Commerce的内部安装配置文件系统权限。
 exl-id: 2410ee4f-978c-4b71-b3f6-0c042f9f4dc4
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
 
 # 配置文件所有权和权限
 
-本主题讨论如何在安装Adobe Commerce或Magento Open Source之前设置Web服务器组的读写权限。 这是必要的，因此命令行可以将文件写入文件系统。
+本主题讨论如何在安装Adobe Commerce之前设置Web服务器组的读写权限。 这是必要的，因此命令行可以将文件写入文件系统。
 
 您使用的过程会有所不同，具体取决于您是否使用 [共享托管](#set-permissions-for-one-user-on-shared-hosting) 并有一个用户，或者如果您使用 [专用服务器](#set-ownership-and-permissions-for-two-users) 拥有两个用户。
 

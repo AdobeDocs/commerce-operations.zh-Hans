@@ -2,9 +2,9 @@
 title: 高级设置
 description: 针对旨在处理大量数据的大型企业系统审查最佳实践和建议。
 exl-id: eb9ca9fa-b099-4e77-ab33-16cd0f382ffe
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ## 设置 [!DNL RabbitMQ]
 
-Magento Open Source和Adobe [!DNL Commerce] 通过实现的支持消息队列 [!DNL RabbitMQ]. [!DNL Commerce] 使用此服务执行大量异步操作，包括B2B目录操作和异步库存更新。 所有用于将更多作业添加到作业服务器的界面都随产品一起分发，并可用于第三方扩展范围内的自定义异步逻辑实施。 与任何其他集成一样， [!DNL Commerce] 提供了样例配置文件，用于 [!DNL RabbitMQ] 该库包含所有推荐的设置并已完全准备好用于生产。
+Adobe Commerce支持通过实现的消息队列 [!DNL RabbitMQ]. [!DNL Commerce] 使用此服务执行大量异步操作，包括B2B目录操作和异步库存更新。 所有用于将更多作业添加到作业服务器的界面都随产品一起分发，并可用于第三方扩展范围内的自定义异步逻辑实施。 与任何其他集成一样， [!DNL Commerce] 提供了样例配置文件，用于 [!DNL RabbitMQ] 该库包含所有推荐的设置并已完全准备好用于生产。
 
 ## 拆分数据库
 

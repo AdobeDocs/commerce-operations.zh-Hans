@@ -4,9 +4,9 @@ description: 了解如何安装 [!DNL Data Migration Tool] 在Magento1和Magento
 exl-id: 5f57067b-3ce8-4b51-b9ae-f60ae089c4ba
 topic: Commerce, Migration
 feature: Configuration, Install
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ git branch
 
 如果您当前在 `develop` 分支，您必须更改为 [已发布分支](https://developer.adobe.com/commerce/contributor/guides/install/change-version/) 然后再继续。
 
-如果您尚未安装Adobe Commerce或Magento Open Source软件， [立即安装](../../installation/prerequisites/commerce.md).
+如果您尚未安装Adobe Commerce软件， [立即安装](../../installation/prerequisites/commerce.md).
 如果要克隆GitHub存储库，请确保签出了版本标记，如中所述 [（参与者）克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/).
 
 ## 查找的已发布版本 [!DNL Data Migration Tool]

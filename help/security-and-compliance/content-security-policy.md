@@ -1,10 +1,10 @@
 ---
 title: 内容安全策略概述
-description: 了解如何使用内容安全策略改进Adobe Commerce或Magento Open Source存储的安全状态。
+description: 了解如何使用内容安全策略改进Adobe Commerce存储的安全状态。
 exl-id: 81070a09-5f8f-48b1-b542-1443dbd43f5f
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---

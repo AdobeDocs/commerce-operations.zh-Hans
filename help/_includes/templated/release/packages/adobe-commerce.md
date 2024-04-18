@@ -1,7 +1,7 @@
 ---
-source-git-commit: d0304f4060080f70c079fb571210cd015407f1cf
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1986'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Adobe Commerce使用编辑器管理PHP包。
 
-此 `composer.json` 文件声明文件包列表，而 `composer.lock` 文件存储用于构建Adobe Commerce或Magento Open Source安装的软件包（每个软件包及其依赖项的完整版本）的完整列表。
+此 `composer.json` 文件声明文件包列表，而 `composer.lock` 文件存储用于构建Adobe Commerce安装的软件包（每个软件包及其依赖项的完整版本）的完整列表。
 
 以下参考文档是从生成的 `composer.lock` 文件中，它涵盖Adobe Commerce 2.4.7中包含的必需包。
 

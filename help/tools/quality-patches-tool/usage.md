@@ -3,22 +3,22 @@ title: 使用情况
 description: 了解如何使用 [!DNL Quality Patches Tool].
 exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
 feature: Configuration, Install
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
 
 # 使用情况
 
-此 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) 提供由Adobe和Magento Open Source团体开发的各个修补程序。 它允许您应用、还原和查看有关已安装Adobe Commerce或Magento Open Source版本可用的所有单个修补程序的一般信息。 无论谁开发了修补程序，您都可以将修补程序应用到Adobe Commerce项目。 例如，您可以将社区开发的修补程序应用于Adobe Commerce项目。
+此 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) 提供由Adobe和Magento Open Source团体开发的各个修补程序。 它允许您应用、还原和查看有关已安装Adobe Commerce版本可用的所有单个修补程序的一般信息。 无论谁开发了修补程序，您都可以将修补程序应用到Adobe Commerce项目。 例如，您可以将社区开发的修补程序应用于Adobe Commerce项目。
 
 观看此内容 [技术视频](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) 并了解如何使用Quality Patches Tool for Adobe Commerce。
 
 >[!INFO]
 >
->请参阅 [应用单个修补程序](#apply-individual-patches) 以获取有关将修补程序应用于Adobe Commerce或Magento Open Source项目的说明。 请参阅 [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
+>请参阅 [应用单个修补程序](#apply-individual-patches) 以获取有关将修补程序应用于Adobe Commerce项目的说明。 请参阅 [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 查看已发布修补程序的完整列表。
 
 >[!WARNING]
 >
@@ -36,7 +36,7 @@ composer require magento/quality-patches
 
 ## 查看单个修补程序
 
-要查看适用于您的Adobe Commerce版本或Magento Open Source的个别修补程序列表，请执行以下操作：
+要查看适用于您的Adobe Commerce版本的各个修补程序的列表，请执行以下操作：
 
 ```bash
 ./vendor/bin/magento-patches status
@@ -76,7 +76,7 @@ Adobe Commerce 2.3.5。
 
 >[!INFO]
 >
->升级到Adobe Commerce或Magento Open Source的新版本后，如果修补程序未包含在新版本中，则必须重新应用修补程序。 请参阅 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
+>升级到Adobe Commerce的新版本后，如果修补程序未包含在新版本中，则必须重新应用修补程序。 请参阅 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
 
 ## 应用单个修补程序 {#apply-individual-patches}
 
@@ -104,7 +104,7 @@ Adobe Commerce 2.3.5。
 
 >[!INFO]
 >
->请考虑将已应用修补程序的列表保留在单独的位置。 升级到新版Adobe Commerce或Magento Open Source后，您可能需要重新应用其中的一些插件。 请参阅 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
+>请考虑将已应用修补程序的列表保留在单独的位置。 升级到新版Adobe Commerce后，您可能需要重新应用其中的一些插件。 请参阅 [升级后重新应用修补程序](#re-apply-patches-after-an-upgrade).
 
 ## 还原单个修补程序
 
@@ -156,7 +156,7 @@ composer update magento/quality-patches
 
 ## 升级后重新应用修补程序 {#re-apply-patches-after-an-upgrade}
 
-升级到新版本的Adobe Commerce或Magento Open Source时，如果修补程序未包含在新版本中，则必须重新应用修补程序。
+升级到新版本的Adobe Commerce时，如果新版本中未包含修补程序，则必须重新应用修补程序。
 
 要重新应用修补程序，请执行以下操作：
 

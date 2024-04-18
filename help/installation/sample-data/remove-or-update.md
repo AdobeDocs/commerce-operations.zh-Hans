@@ -2,9 +2,9 @@
 title: 删除或更新示例数据模块
 description: 按照以下步骤管理Adobe Commerce示例数据模块。
 exl-id: d23f999f-18bf-449b-be23-bdf392dda539
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 本主题讨论如何：
 
-* [删除示例数据模块](#remove-sample-data-modules) 从Adobe Commerce或Magento Open Source安装 `composer.json`. 此选项会 *非* 从数据库中删除示例数据。
+* [删除示例数据模块](#remove-sample-data-modules) 从Adobe Commerce安装 `composer.json`. 此选项会 *非* 从数据库中删除示例数据。
 
 * [准备更新示例数据](#prepare-to-update-sample-data) (例如，在更新Magento应用程序之前)。
 
@@ -51,7 +51,7 @@ bin/magento sampledata:remove
 
 ## 准备更新示例数据
 
-此命令允许您在更新Adobe Commerce或Magento Open Source之前更新示例数据。
+此命令允许您在更新Adobe Commerce之前更新示例数据。
 
 要准备样本数据以进行更新，请输入以下命令：
 

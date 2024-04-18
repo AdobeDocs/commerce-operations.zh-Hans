@@ -2,9 +2,9 @@
 title: 升级模块和扩展
 description: 使用命令行界面和编辑器升级Adobe Commerce模块和扩展。
 exl-id: 017d75df-fd21-4fb4-abc9-80a35fc47d0f
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 1. 从Marketplace或其他扩展开发人员下载更新的文件。 记下模块名称和版本。
 
-1. 将内容导出到Adobe Commerce或Magento Open Source根安装目录。
+1. 将内容导出到Adobe Commerce根安装目录。
 
 1. 如果模块存在编辑器包，请运行以下任一操作。
 

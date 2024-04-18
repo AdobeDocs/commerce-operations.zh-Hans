@@ -2,16 +2,16 @@
 title: 文件所有权和权限
 description: 了解在使用Adobe Commerce的内部安装时文件系统权限的重要性。
 exl-id: a84784bf-afd6-4dba-9745-3fefc0ecafcb
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
 # 文件所有权和权限
 
-在开发环境中保护您的Adobe Commerce或Magento Open Source安装非常重要，这样有助于防止出现与未经授权的人员或流程访问（并可能损害）您的系统相关的问题。 使用以下文件系统所有权和权限指南来保护您的安装。
+在开发环境中保护您的Adobe Commerce安装非常重要，这样有助于防止出现与未经授权的人员或流程访问（并可能损害）您的系统相关的问题。 使用以下文件系统所有权和权限指南来保护您的安装。
 
 ## 文件系统所有者
 
@@ -65,4 +65,4 @@ Adobe Commerce使用三位默认掩码： `002`. 从UNIX缺省值666（文件）
 
 >[!TIP]
 >
->在安装Adobe Commerce或Magento Open Source之前，请查看 [配置文件所有权和权限](configure-permissions.md).
+>在安装Adobe Commerce之前，请查看 [配置文件所有权和权限](configure-permissions.md).
