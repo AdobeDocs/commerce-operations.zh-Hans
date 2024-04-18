@@ -3,7 +3,7 @@ title: 企业参考体系结构
 description: 了解如何使用Adobe的最新可组合商务技术实施Adobe Commerce。
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
 exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
-source-git-commit: 8eab688ed98eb1b9fcf4fc25f90fe2bbf99c02d6
+source-git-commit: c2f6b7125f1a611e94f807999787fee48a0e5ece
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Adobe Commerce是一个以体验为导向的平台，它以独一无二的方式在技术灵活性和易用性之间提供了平衡，所有这些都是为了创造卓越的体验来推动业务成果。
 
-Commerce已经发展到可满足企业对性能、规模和安全性的要求。 采用使用Adobe最新可组合商业解决方案的现代实施方法对于企业成功至关重要。 此页面从技术角度详细描述了现代Commerce实施方法。
+Commerce已经过演变，可满足企业对性能、规模和安全性的要求。 采用使用Adobe最新可组合商业解决方案的现代实施方法对于企业成功至关重要。 本页从技术角度详细描述了现代化的Commerce实施方法。
 
 以下架构图说明了Adobe Commerce与所有Adobe Experience Cloud解决方案之间的数据流。
 
-![显示Adobe Commerce如何连接到Experience Cloud解决方案的架构图](../../assets/playbooks/commerce-architecture-v2.svg){zoomable=&quot;yes&quot;}
+![显示Adobe Commerce如何连接到Experience Cloud解决方案的架构图](../../assets/playbooks/commerce-architecture-v3.svg){zoomable=&quot;yes&quot;}
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ Commerce已经发展到可满足企业对性能、规模和安全性的要求。
 
 ## 云基础
 
-[云基础架构上的Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview) 是Commerce实施的基础。 它提供 [secure](../../security-and-compliance/shared-responsibility.md) 自动托管平台，在云原生环境中构建、部署、监控和管理Commerce应用程序，并提供自助式方法。
+[云基础架构上的Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview) 是Commerce实施的基础。 它提供 [secure](../../security-and-compliance/shared-responsibility.md) 自动托管平台，在云原生环境中构建、部署、监控和管理Commerce应用程序时可借助自助式方法。
 
 请参阅以下Cloud Foundation技术详细信息：
 
@@ -62,7 +62,7 @@ Adobe提供了以下用于构建集成和自定义的开发人员工具：
 - [**App Builder**](https://developer.adobe.com/app-builder/docs/overview/) — 构建和部署安全且可扩展的Web应用程序，这些应用程序扩展了Commerce功能并与第三方解决方案集成。
 - [**活动**](https://developer.adobe.com/commerce/extensibility/events/) — 使用自定义事件触发器与其他可扩展的开发工具交互。
 - [**Webhooks**](https://developer.adobe.com/commerce/extensibility/webhooks/) — 使用Webhook自动触发Commerce与第三方系统之间的交互。
-- [**管理员UI SDK**](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/) — 使用商户的新页面和功能自定义和增强Commerce管理员。
+- [**管理员UI SDK**](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/) — 使用适用于您的商家的新页面和功能自定义和增强Commerce管理员。
 
 ## 店面服务
 
