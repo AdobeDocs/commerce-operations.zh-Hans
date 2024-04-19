@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: a1e548c1b1bffd634e0d5b1df0a77ef65c5997f8
+source-git-commit: b89ed5ddb4c6361de22d4a4439ffcfcc3ec8d474
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '2267'
 ht-degree: 0%
 
 ---
@@ -360,3 +360,40 @@ GraphQL应用程序服务器添加了 `X-Backend` 具有值的响应标头 `grap
 ### 功能测试
 
 在部署GraphQL Application Server时，扩展开发人员应该执行GraphQL的WebAPI功能测试，以及GraphQL的任何自定义自动或手动功能测试。 这些功能测试可帮助开发人员识别潜在的错误或兼容性问题。
+
+#### 状态监视器模式
+
+在运行功能测试（或手动测试）时，应用程序服务器可以使用 `--state-monitor mode` 启用以帮助查找无意中重用状态的类。 正常启动应用程序服务器，但添加 `--state-monitor` 参数。
+
+```
+bin/magento server:run --state-monitor
+```
+
+处理完每个请求后，一个新文件将添加到 `tmp` 目录，例如： `var/tmp/StateMonitor-thread-output-50-6nmxiK`. 完成测试后，这些文件可以与 `bin/magento server:state-monitor:aggregate-output` 命令，用于创建两个合并的文件，一个在 `XML` 一英寸 `JSON`.
+
+示例：
+
+```
+/var/workspace/var/tmp/StateMonitor-json-2024-04-10T18:50:39Z-hW0ucN.json
+/var/workspace/var/tmp/StateMonitor-junit-2024-04-10T18:50:39Z-oreUco.xml
+```
+
+可以使用任何用于查看XML或JSON的工具来检查这些文件，这些工具将显示服务对象的修改属性，如GraphQlStateTest。 此 `--state-monitor` 模式使用与GraphQlStateTest相同的跳过列表和过滤器列表。
+
+>[!NOTE]
+>
+>请勿使用 `--state-monitor` 生产模式。 它仅用于开发和测试。 它会创建许多输出文件，并且运行速度将低于正常速度。
+
+>[!NOTE]
+>
+>`--state-monitor` 与PHP版本不兼容 `8.3.0` - `8.3.4` 由于PHP垃圾回收器中的错误。 如果您使用的是PHP 8.3，则必须升级到 `8.3.5` 或更高版本才能使用此功能。
+
+## 已知问题
+
+### 在工作线程结束的情况下，请求会丢失。
+
+如果工作线程出现问题，导致工作线程结束，则已排队到同一工作线程的任何HTTP请求都将重置TCP套接字连接。 如果服务器前面有反向代理（如NGINX），这些错误将显示为 `502` 错误。 工作人员可能会因崩溃、内存不足或第三方扩展中的PHP错误而死亡。 Swoole HTTP服务器的默认行为会导致此问题。 默认情况下，HTTP服务器在中启动 `SWOOLE_BASE` 模式。 在此模式下，传入的HTTP请求将分配给队列中的工作线程，即使工作线程仍在处理以前的请求。 如果您将此项更改为 `SWOOLE_PROCESS` 模式，则连接由主进程维护，它使用明显更多的进程间通信。 不利的一面是 `SWOOLE_PROCESS` 它不支持PHP ZTS。 阅读 [Swool文档](https://wiki.swoole.com/en/#/learn?id=swoole_process) 以了解更多信息。
+
+### 在某些情况下，应用程序服务器可能会使用以前的属性配置。
+
+此 `CatalogGraphQl\Model\Config\AttributeReader` 在 `2.4.7` 包含极少数的错误，这些错误可能会导致GraphQL请求使用以前的属性配置状态获取响应。 对此的修复已送达 `2.4-develop`，但未及时到达 `2.4.7` 释放。
