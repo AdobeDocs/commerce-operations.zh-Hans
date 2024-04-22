@@ -1,32 +1,43 @@
 ---
-title: 分担责任
+title: 分担责任的安全性和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
-source-git-commit: d216418c69cb972e93c04b5d5cc0a8ab0495653d
+exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
+source-git-commit: d4ea2f3fe8d30749c96389655ef38cae482afc99
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '2770'
 ht-degree: 0%
 
 ---
 
+# 分担责任的安全性和运营模式
 
-# 共享责任安全模型
+云基础架构上的Adobe Commerce是一项基于平台即服务(PaaS)的服务，它依赖于分担责任的安全性和运营模式。 这些职责在Adobe、商家、云服务提供商和内容交付网络(CDN)提供商之间分担。 各方对保护和运行Adobe Commerce应用程序以及部署在云基础架构上的特定于商家的代码和扩展承担不同的责任。
 
-云基础架构上的Adobe Commerce是一款依赖于共同责任安全模式的平台即服务(PaaS)产品。 Adobe、商家、云服务提供商和内容交付网络(CDN)提供商各自承担不同的责任，在云基础架构应用程序和特定于商家的代码和扩展上维护Adobe Commerce的安全性。
+此共享模型使商家能够设计和实施高度灵活、可定制和可扩展的解决方案，以满足其业务需求，同时最大限度地降低运营责任和成本。
 
-这种方法使商家能够设计和实施高度灵活、可定制和可扩展的解决方案，以最好地满足其业务需求，同时最大限度地降低运营责任和成本。
+通常，Adobe负责以下工作：
 
-通常，Adobe负责开发和维护安全的核心应用程序代码，维护平台的安全性，确保平台的SOC 2和PCI合规性及其与PCI合规性技术组件（例如，PHP、Redis）的兼容性，并响应与核心平台相关的安全问题。 Adobe还负责与云服务提供商和CDN合作伙伴合作，以解决可能出现的问题。
+- 开发和维护安全的核心应用程序代码
+- 维护平台的安全性
+- 确保该平台符合SOC 2和PCI标准，并与PCI标准的技术组件（例如PHP、Redis）兼容
+- 响应与核心平台有关的安全问题
+- 与云服务提供商和CDN合作伙伴合作，解决出现的任何问题
 
-商户负责维护安全的自定义代码以及与第三方应用程序的集成，确保安全应用程序开发，如果商户的支付处理器要求，则获得PCI认证，以及响应和响应安全事件。
+商家负责以下事项：
+
+- 维护自定义代码以及与第三方应用程序集成的安全性
+- 确保安全的应用程序开发
+- 如果商户的支付处理器要求，则获取PCI认证
+- 响应和响应安全事件
 
 ## Adobe职责
 
-Adobe负责云基础架构环境上的Adobe Commerce以及云基础架构解决方案代码上的核心Adobe Commerce的安全性和可用性。 此外，Adobe还负责必要的活动和机制来维护Adobe Commerce云基础架构解决方案的安全性，包括：
+Adobe负责Adobe Commerce on cloud infrastructure environment的安全性和可用性以及核心解决方案代码。 此外，Adobe还负责必要的活动和机制来维护Adobe Commerce云基础架构解决方案的安全性，包括：
 
 - 在云基础架构上为Adobe Commerce支持的应用程序（如云数据存储和搜索功能）应用服务器级安全性和修补程序
 - 对云基础架构代码的核心Adobe Commerce进行渗透测试和扫描
-- 对公共云服务提供商的身份和访问管理(IAM)解决方案和权限管理（PCI合规性要求）进行半年一次的审查/审核
-- 对授权用户(包括Adobe员工和承包商)进行半年度审查/审计（PCI合规性要求）
+- 对公共云服务提供商的身份和访问管理(IAM)解决方案和权限管理（PCI合规性要求）进行半年一次的审查和审核
+- 对授权用户(包括Adobe员工和承包商)进行半年一次的审查和审计（PCI合规性要求）
 - 对备份和恢复功能进行年度测试和文档记录
 - 配置服务器和外围防火墙
 - 在云基础架构存储库上连接和配置Adobe Commerce
@@ -44,13 +55,13 @@ Adobe负责云基础架构环境上的Adobe Commerce以及云基础架构解决�
 - 设置DNS(仅限云基础架构平台基础架构上的Adobe Commerce)
 - 测试平台的安全漏洞
 
-Adobe维护Adobe Commerce云基础架构解决方案运营中使用的基础架构和服务的PCI认证，而商家则负责自定义代码、系统和网络流程以及组织的合规性。
+Adobe维护用于Adobe Commerce解决方案的基础架构和服务的PCI认证。  商家负责遵守自定义代码、系统和网络流程以及组织。
 
 Adobe还可确保商户基础设施在适用的SLA中商定的可用性。
 
 ## 商户责任
 
-该商家负责为其云基础架构解决方案上的特定Adobe Commerce自定义实例遵循以下安全最佳实践，并负责：
+该商家负责为其云基础架构解决方案上的Adobe Commerce的特定自定义实例遵循以下安全最佳实践：
 
 - 将云基础架构配置文件上必需的Adobe Commerce添加到存储库
 - 在按Adobe发布安全修补程序和其他修补程序后，立即将其应用于云基础架构解决方案上的自定义Adobe Commerce
@@ -64,7 +75,7 @@ Adobe还可确保商户基础设施在适用的SLA中商定的可用性。
 
   >[!NOTE]
   >
-  >商家的PCI合规性建立在Adobe Commerce在云基础架构和云托管提供商上的PCI认证之上，以最大程度地减少必须审查的方面。
+  >为了最大程度地减少必须审查的方面，商家的PCI合规性建立在Adobe Commerce和云托管提供商的PCI认证之上。
 
 - 在云基础架构代码和平台上的核心Adobe Commerce中运行PCI ASV扫描并修复问题
 - 监控所有可能显示潜在安全威胁的应用程序活动，包括渗透测试、漏洞扫描和日志
@@ -75,7 +86,7 @@ Adobe还可确保商户基础设施在适用的SLA中商定的可用性。
 - 测试和QA自定义应用程序
 - 维护商家连接到Adobe Commerce上的云基础架构应用程序上的任何系统或网络的安全
 
-## 云服务提供商责任
+## Cloud Service提供商职责
 
 Adobe依靠成熟的云服务提供商在云基础架构上托管Adobe Commerce的云服务器基础架构。 这些提供商负责网络安全，包括通过防火墙系统和入侵检测系统(IDS)的路由、交换和外围网络安全。 云服务提供商还负责在云基础架构解决方案上托管Adobe Commerce的数据中心的物理安全以及数据中心的环境安全。
 
@@ -89,9 +100,18 @@ Adobe依靠成熟的云服务提供商在云基础架构上托管Adobe Commerce�
 
 Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页面加载时间、缓存内容并立即清除过时的内容。 这些提供商还负责与其CDN直接相关或影响其CDN的安全问题，以及定义和维护CDN WAF规则。
 
-## 安全责任图
+## 安全责任摘要
 
-下图使用RACI模型（R — 负责，A — 负责，C — 咨询，I — 信息）以视觉方式描绘生态系统关于Adobe Commerce云基础架构共享责任模型的安全责任中的每一方：
+>[!BEGINSHADEBOX]
+
+以下摘要表使用RACI模型来显示Adobe、商家和云服务提供商之间共享的安全职责：
+
+**R**  — 负责
+**A**  — 负责
+**C**  — 已咨询
+**I**  — 已通知
+
+>[!ENDSHADEBOX]
 
 <table>
 <thead>
@@ -112,7 +132,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>将修补程序应用到支持服务<br>（例如，Nginx、MySQL）</td>
+    <td>将修补程序应用到支持服务<br>（例如，Nginx或MySQL。）</td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -168,7 +188,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>缩放（PaaS/网格）</td>
+    <td>缩放（PaaS和网格）</td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -203,7 +223,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>在云基础架构上将存储库连接到Adobe Commerce</td>
+    <td>将存储库连接到云基础架构上的Adobe Commerce</td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -315,21 +335,21 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td>C</td>
   </tr>
   <tr>
-    <td>配置New Relic APM/基础架构</td>
+    <td>配置New Relic APM和基础架构应用程序</td>
     <td></td>
     <td>R</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>安装New Relic APM/基础架构</td>
+    <td>安装New Relic APM和基础架构应用程序</td>
     <td>R</td>
     <td>I</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>支持New Relic APM/基础架构</td>
+    <td>支持New Relic APM和基础架构应用程序</td>
     <td>R</td>
     <td>C</td>
     <td></td>
@@ -502,9 +522,373 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td colspan="5">
       <p><sup><strong>1</strong></sup> 仅当使用Adobe Commerce on cloud infrastructure存储库作为主存储库时。 使用其他外部存储库由商家全权负责。</p>
       <p><sup><strong>2</strong></sup> Adobe为CDN提供商的问题提供级别1支持。</p>
-      <p><sup><strong>3</strong></sup> 某些Ngnix控件由商家为其应用程序配置，并由他们负责。</p>
+      <p><sup><strong>3</strong></sup> 商家负责为其应用程序配置的任何Ngnix控件。</p>
       <p><sup><strong>4</strong></sup> 对于PCI，渗透测试要求在Adobe和商家之间共享。</p>
     </td>
   </tr>
 </tfoot>
 </table>
+
+## 运营责任摘要
+
+>[!BEGINSHADEBOX]
+
+以下汇总表阐明了Adobe和商家在云基础架构上开发、部署、维护和保护Adobe Commerce时的运营职责。
+
+>[!ENDSHADEBOX]
+
+### 编码与开发
+
+#### 核心Adobe Commerce代码
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 将更新和修补程序发布到Adobe Commerce核心 | R |     |
+| 文件系统的可用性和修补 | R |  |
+| 将更新和修补程序发布到ECE-Tools | R |     |
+| 核心Adobe Commerce应用程序质量 | R |     |
+
+{style="table-layout:auto"}
+
+#### 代码存储库
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| repo.magento.com的可用性 | R |     |
+| Adobe Commerce在Cloud Git服务器上的可用性 | R |     |
+| 其他商家选择的代码存储库（GitHub、Bitbucket、托管的Git服务器） |     | R |
+
+{style="table-layout:auto"}
+
+#### Cloud Docker
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 使Cloud Docker容器可供下载 | R |   |
+| Cloud Docker的部署和设置（可选） |     | R |
+| 任何其他本地开发设置 |     | R |
+
+{style="table-layout:auto"}
+
+#### COMMERCE CLOUDCLI
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 欧洲经委会工具的持续质量和更新 | R |   |
+| 安装最新的ECE工具版本 |     | R |
+
+{style="table-layout:auto"}
+
+#### 自定义
+
+|  | Adobe | 商家 |
+| --- | --- | --- |
+| 自定义Adobe Commerce模块和代码 |     | R |
+| 扩展 |     | R |
+| 自定义集成 |     | R |
+
+{style="table-layout:auto"}
+
+#### 部署
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 用于构建和部署代码的基础架构的可用性 | R |   |
+| 持续高质量的基础架构构建和部署配置管道 | R |   |
+| 构建和静态内容部署的配置 |     | R |
+| 构建和执行部署治理流程：标准和更改管理 |     | R |
+| 部署到暂存环境 |     | R |
+| 部署到生产环境 |     | R |
+| 生产回滚 |     | R |
+
+{style="table-layout:auto"}
+
+#### 同步环境
+
+商家负责在生产环境和暂存环境之间同步数据。
+
+#### 修补
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 为ECE-Tools安装更新和修补程序 |     | R |
+| 安装Adobe Commerce核心的更新和修补程序 |     | R |
+
+#### 网站可用性
+
+|  | Adobe | 商家 |
+| --- | --- | --- |
+| 自定义的Adobe Commerce应用程序和相关网站 |     | R |
+
+#### 性能
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 核心应用程序调整和优化 | R |   |
+| 自定义代码调整和优化 |     | R |
+| 自定义Adobe Commerce代码 |     | R |
+| 加载测试 |     | R |
+| 性能测试 |     | R |
+
+{style="table-layout:auto"}
+
+
+#### 日志和监控
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 旋转日志 | R |   |
+| 自定义Adobe Commerce应用程序 | | R |
+| New Relic服务的可用性：<br>APM应用程序和代理集成、基础架构应用程序、<br>日志记录和集成 | R |   |
+| 设置New Relic警报 |     | R |
+| 在PaaS服务器上部署New Relic代理 |     | R |
+
+{style="table-layout:auto"}
+
+#### 调试和问题隔离
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 调试和问题隔离 | R | R |
+| 及时支持调试和问题隔离过程 |     | R |
+
+{style="table-layout:auto"}
+
+### 应用程序和服务配置
+
+#### Commerce应用程序
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 应用程序配置 |     | R |
+| 向Adobe Commerce应用程序添加域（基本URL） |     | R |
+| 将Paa配置为使用所部署的Adobe Commerce版本支持的服务版本<br><br>例如，不同的Commerce版本与特定版本的PHP、Redis等兼容。 |     | R |
+
+{style="table-layout:auto"}
+
+#### 使用cron作业进行任务计划
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 默认cron作业的可用性 | R | |
+| 自定义cron作业的持续质量 |  | R |
+
+{style="table-layout:auto"}
+
+#### 消息队列框架的消息代理
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| RabbitMQ服务的可用性 | R |   |
+| 默认RabbitMQ设置的配置 | R |   |
+| RabbitMQ的持续质量和修补 | R |   |
+| 提交服务请求以安装与已安装的RabbitMQ版本兼容的Adobe Commerce版本 |   | R |
+
+{style="table-layout:auto"}
+
+#### PHP服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| PHP的可用性 | R |   |
+| 默认PHP设置的配置 | R |     |
+| 自定义PHP设置的配置 |     | R |
+| 配置YAML文件，以使PHP版本与已安装的Adobe Commerce版本兼容 |    | R |
+
+{style="table-layout:auto"}
+
+#### 数据库服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| Galera和MariaDB服务的可用性 | R | |
+| 持续维护默认数据库设置<br><br>（索引和优化核心表，优化默认sys-admin设置） | R |   |
+| 持续维护商家数据和修改的设置<br><br>（配置规范化表与平面表，索引和优化自定义表和第三方表，存档或删除数据，配置系统管理设置） |     | R |
+| Galera和MySQL的配置 | R |   |
+| Galera和MariaDB的持续质量和修补 | R |   |
+| 持续的基础架构优化 | R |   |
+| 识别和修复慢查询 |     | R |
+| 提交服务请求以安装与安装的Adobe Commerce版本兼容的MariaDB版本 |     | R |
+| 设置和维护特定于商家的数据保留策略(Adobe的数据保留策略在商家协议中定义) |     | R |
+
+{style="table-layout:auto"}
+
+#### CDN服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| CDN的可用性和质量 | R |   |
+| Fastly服务配置（通过扩展/API） |     | R |
+| Fastly扩展质量 | R |   |
+| Fastly集成VCL片段（与Fastly扩展捆绑在一起）的质量 | R |   |
+| 页面缓存优化 |     | R |
+| 将域添加到服务、CDN和基础架构 | R |   |
+| 自定义VCL代码片段 |     | R |
+| WAF和WAF规则 | R |   |
+
+{style="table-layout:auto"}
+
+#### 缓存服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| Redis服务的可用性 | R |   |
+| 默认Redis设置的配置 | R |   |
+| Redis的持续质量和修补 | R |   |
+| 提交服务请求以安装与已安装的Adobe Commerce版本兼容的Redis版本 |     | R |
+
+{style="table-layout:auto"}
+
+#### 搜索服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| Elasticsearch可用性 | R |   |
+| 默认Elasticsearch设置的配置 | R |   |
+| 提交服务请求以安装与已安装的Adobe Commerce版本兼容的Elasticsearch版本 |  | R |
+
+{style="table-layout:auto"}
+
+#### 电子邮件服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| SendGrid电子邮件服务的可用性及其集成 | R |   |
+| 根据限制监控商家的SendGrid使用情况 | R |   |
+| 商家只负责将服务用于传出事务性电子邮件<br>该服务不支持发送营销电子邮件。 |     | R |
+| 配置可选的第三方电子邮件服务 |     | R |
+
+{style="table-layout:auto"}
+
+#### 第三方服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 第三方服务的可用性和质量 |     | R |
+
+{style="table-layout:auto"}
+
+### Commerce Services扩展
+
+#### 高级报告服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 高级报告服务的可用性 | R |   |
+| 高级报告的配置符合高级报告条款和条件 |     | R |
+
+{style="table-layout:auto"}
+
+#### Commerce Intelligence
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| Adobe CommerceBusiness Intelligence服务的可用性 | R |   |
+| MBI数据同步过程 | R |   |
+| 检测MBI同步问题 | R |   |
+| 配置MBI数据同步到Adobe Commerce Cloud Pro、Starter、内部部署或非Adobe Commerce<br>(API、数据质量和格式、商家网络、<br>Adobe Commerce Cloud DB内部和外部的数据库连接（超过数据阈值） |     | R |
+| 配置MBI数据同步到Adobe Commerce Cloud Pro<br>(Adobe Commerce Cloud数据库配置) | R |   |
+
+{style="table-layout:auto"}
+
+#### 产品Recommendations
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 产品Recommendations服务的可用性 | R |   |
+
+{style="table-layout:auto"}
+
+### 网络服务
+
+#### 图像优化
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 映像优化的可用性和质量 | R |  |
+| 图像优化的配置 |     | R |
+
+{style="table-layout:auto"}
+
+#### SSL证书
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| SSL专用证书 — 到期 | R |  |
+| 配置SSL证书 | R |  |
+| 购买并维护EV/特定SSL证书（提供的默认证书除外）并向Adobe提供 |     | R |
+
+{style="table-layout:auto"}
+
+#### Web应用程序防火墙(WAF)
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| WAF的可用性和配置 | R |  |
+| 解决WAF规则误报 | R | |
+| 报告WAF规则误报 |     | R |
+| WAF规则调整（不支持） |     |     |
+| WAF/CDN日志 |     | R |
+
+{style="table-layout:auto"}
+
+#### DDOS
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 主动IP阻止 |     | R |
+| 机器人保护 |     | R |
+| DDOS检测 — 第3-4层 | R |   |
+| DDOS检测 — 第7层 |     | R |
+| DDOS响应 | R |   |
+| 快速扩展速率限制和机器人保护的配置（有限） |     | R |
+
+{style="table-layout:auto"}
+
+#### 专用链接
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 使用Adobe拥有的VPC配置和维护PrivateLink连接（如果使用） | R |   |
+| 使用商家拥有的VPC配置和维护PrivateLink连接（如果使用） |     | R |
+| SSH（非专用链接）的可用性 | R |   |
+| 入站到Adobe Commerce Cloud服务端点的PrivateLink配置 | R |   |
+| 接受入站到Adobe Commerce Cloud服务端点的PrivateLink |     | R |
+| PrivateLink入站到商家VPC服务端点的配置 |     | R |
+| 接受PrivateLink入站到商户的VPC服务端点 | R |   |
+| PrivateLink集成（端点到帐户）的配置 |     | R |
+| 为PrivateLink端点配置商家拥有的VPC<br><br> （包括任何VPN连接） |     | R |
+
+{style="table-layout:auto"}
+
+### 系统和基础架构
+
+#### 应用程序服务器
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| Nginx的可用性 | R |   |
+| Nginx的配置 | R |   |
+| Nginx的持续质量和修补 | R |   |
+
+{style="table-layout:auto"}
+
+#### 操作系统
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 操作系统可用性 | R |   |
+| 持续保持操作系统的质量和修补 | R |   |
+
+{style="table-layout:auto"}
+
+#### 备份、高可用性和故障切换
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 快照和备份过程的可用性 | R |   |
+| 为Cloud Pro暂存和生产环境计划备份 | R |   |
+| 为Cloud Starter和专业集成环境计划备份 |     | R |
+| 高可用性/故障切换 | R |   |
+
+{style="table-layout:auto"}
