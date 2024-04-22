@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: b89ed5ddb4c6361de22d4a4439ffcfcc3ec8d474
+source-git-commit: 81320626a83e26a55f9ec14ce8cb706753b44269
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2293'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,11 @@ GraphQL Application Server允许Adobe Commerce在连续的Commerce GraphQL API�
 
 ### 启用Pro项目
 
-在Pro项目上部署GraphQL Application Server之前，请完成以下步骤：
+>[!NOTE]
+>
+>应用程序服务器是Cloud Pro实例上的选择加入功能。 要启用该功能，请提交支持请求。
+
+在Pro项目上启用应用程序服务器功能后，请先完成以下步骤，然后再部署GraphQL Application Server：
 
 1. 使用来自的云模板在云基础架构上部署Adobe Commerce [2.4.7-appserver分支](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
 1. 确保您的所有Commerce自定义项和扩展均 [兼容](https://developer.adobe.com/commerce/php/development/components/app-server/) 与GraphQL Application Server集成。
