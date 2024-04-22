@@ -2,9 +2,9 @@
 title: 测试版
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 07e616b26784a6e2e8994efc5816a5005619b5bb
+source-git-commit: 1dd4b44c6aa685795e16dccebfaf073dcc0062f2
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、提供反馈以及引导Adobe Commerce未来的方式。 有两种类型的测试版计划：
 
 - 公共测试版：公共测试版计划可供所有Adobe Commerce客户和合作伙伴使用
-- 私人测试版：私人测试版计划可能需要根据资格标准进行批准才能参与
+- 私人测试版：私人测试版计划可能需要根据资格条件获得批准才能参与
 
 >[!IMPORTANT]
 >
@@ -70,7 +70,7 @@ IBM Sterling Order Management的这项集成加速器使Adobe Commerce客户能�
 
 #### 命名惯例和时间表
 
-Adobe将每年发布两次Beta测试版修补程序。 第一个测试版修补程序通常在新的核心应用程序修补程序版本正式发布三个月后发布。
+Adobe通常每年发布两次测试版修补程序。
 
 测试版发行包具有 `-betaX` 后缀。 例如，Adobe Commerce 2.4.7测试版发行包使用以下命名约定：
 
