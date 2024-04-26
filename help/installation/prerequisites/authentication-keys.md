@@ -2,9 +2,9 @@
 title: 获取您的身份验证密钥
 description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce Composer包。
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: fc63ca58cd2ff7c5ec597751980a39bfbe68aa5f
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 >如果您遇到 [错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)，您可能无权访问包，或者访问权利由于帐户中的未结发票而过期。
 >
 >* 如果您是该帐户的主要联系人，请确保该帐户中不存在未结发票。
->* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，请联系 [Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以获取使用主要联系人的MAGEID的帮助。
+>* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，则主要联系人应联系 [Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 以寻求帮助。
 
 要创建身份验证密钥，请执行以下操作：
 
