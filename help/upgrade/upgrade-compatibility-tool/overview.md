@@ -2,7 +2,7 @@
 title: 概述 [!DNL Upgrade Compatibility Tool]
 description: 了解 [!DNL Upgrade Compatibility Tool] 以及它如何帮助您实施Adobe Commerce项目。
 exl-id: 9493406a-1690-462b-b119-1b685b026c0b
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: fc1be3362863d3b0fa3468380fe62ca698abac43
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 您可以使用 [!DNL Upgrade Compatibility Tool] 通过：
 
-- 作为独立 [命令行界面](../upgrade-compatibility-tool/run.md) 工具。 有关可用命令的完整列表，请参见 [`bin/uct` 引用](/help/reference/uct.md).
+- 作为独立 [命令行界面](../upgrade-compatibility-tool/run.md) 工具。 有关可用命令的完整列表，请参见 [`bin/uct` 引用](../../tools/reference/uct.md).
 - 集成 [!DNL Upgrade Compatibility Tool] 使用 [[!DNL Site-Wide Analysis Tool]](../upgrade-compatibility-tool/integrate-analysis-tool.md).
 - 内的运行配置 [MagentoPHPStorm插件](../upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md).
 

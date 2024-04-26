@@ -2,10 +2,10 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 9527ce1983340c6438c33b1d07acf4b4b699ccc8
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 1%
+source-wordcount: '182'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 - [概述](overview.md)
 - 站点范围分析工具 {#site-wide-analysis-tool}
-   - [介绍](site-wide-analysis-tool/intro.md)
+   - [简介](site-wide-analysis-tool/intro.md)
    - [安装](site-wide-analysis-tool/installation.md)
    - [如何访问](site-wide-analysis-tool/access.md)
    - [状态属性](site-wide-analysis-tool/status.md)
@@ -30,8 +30,12 @@ ht-degree: 1%
    - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
+- 命令行工具引用 {#cli-reference}
+   - [Adobe Commerce（内部部署）](reference/commerce-on-premises.md)
+   - [Magento Open Source](reference/magento-open-source.md)
+   - [升级兼容性工具](reference/uct.md)
 - Adobe Commerce观察 {#observation-for-adobe-commerce}
-   - [介绍](observation-for-adobe-commerce/intro.md)
+   - [简介](observation-for-adobe-commerce/intro.md)
    - [如何访问](observation-for-adobe-commerce/access.md)
    - [选择帐户和时间范围](observation-for-adobe-commerce/selecting-the-account.md)
    - [选择焦点选项卡](observation-for-adobe-commerce/choosing-focus-tabs.md)
@@ -73,6 +77,6 @@ ht-degree: 1%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
 - [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
