@@ -3,13 +3,15 @@ title: Composer开发
 description: 了解如何在“vendor/”目录中就地开发编辑器模块。
 feature: Best Practices
 role: Developer
-source-git-commit: b4213c40fdf903fd962a15fc99b143f31aedbcde
+hide: true
+hidefromtoc: true
+exl-id: 7664ffb5-2e46-49c3-b2e6-c133c35d2f6b
+source-git-commit: 80cf4dc2b5c9dd690aee1b224fbe6c766fe8f2ab
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
-
 
 # Composer开发
 
