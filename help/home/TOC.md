@@ -2,7 +2,7 @@
 user-guide-title: 操作指南
 user-guide-description: 了解维护 Adobe Commerce 应用程序的操作指南。
 feature: Configuration, Best Practices, Install, Integration, Security, Release Notes, Upgrade
-source-git-commit: 9527ce1983340c6438c33b1d07acf4b4b699ccc8
+source-git-commit: a33d12a055db0cb4a4c8f64992d6ebf77842cbe7
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 27%
@@ -13,7 +13,7 @@ ht-degree: 27%
 # Adobe Commerce操作指南 {#operational-guides}
 
 - [操作指南主页](home.md)
-- [发行信息](https://experienceleague.adobe.com/en/docs/commerce-operations/release/latest)
+- [发行信息](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)
 - [性能](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/overview)
 - [安全性和合规性](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)
 - [实施行动手册](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/overview)

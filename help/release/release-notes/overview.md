@@ -2,9 +2,9 @@
 title: Adobe Commerce发行说明
 description: 了解在何处查找特定 Adobe Commerce 版本的信息。
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
+source-git-commit: 466256a0dfd915fe0f0c02d377ce724cd311463c
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '291'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 3%
 
 >[!TIP]
 >
->有关升级的信息，请参阅 [推荐阅读](../../upgrade/resources/recommended-reading.md).
+>- 如果您不熟悉Adobe Commerce，请参阅 [企业体系结构](../../implementation-playbook/architecture/enterprise-blueprint.md) 和 [关于Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about) 主题准备入门。
+>- 有关升级的信息，请参阅 [推荐阅读](../../upgrade/resources/recommended-reading.md).
 
 <table>
   <tbody>

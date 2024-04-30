@@ -2,7 +2,7 @@
 title: 操作指南主页
 description: 浏览Adobe Commerce系统管理和操作产品文档的索引。
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 0e3d5c0f7c0636bb690eea8643afdace074f0ffd
+source-git-commit: a33d12a055db0cb4a4c8f64992d6ebf77842cbe7
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 20%
@@ -19,11 +19,11 @@ ht-degree: 20%
 <table>
 <tr>
   <td valign="top">
-    <a href="../release/latest.md">
+    <a href="../release/release-notes/overview.md">
       <img alt="发行信息" src="../assets/icons/promote.svg" width="40"/>
     </a>
     <div>
-      <a href="../release/latest.md"><strong>发行信息</strong></a>
+      <a href="../release/release-notes/overview.md"><strong>发行信息</strong></a>
       <p>查看Adobe Commerce修补程序和服务的所有发行信息。</p>
     </div>
   </td>
