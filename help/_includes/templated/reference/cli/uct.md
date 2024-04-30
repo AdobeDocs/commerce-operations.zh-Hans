@@ -1,7 +1,7 @@
 ---
-source-git-commit: 68ea73d407dd3e6daf880a66de8ef4b7bbef2360
+source-git-commit: 19d19ef385cf4aaee3a255930af8e6d3b81de23a
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,12 @@ ht-degree: 0%
 
 ## `_complete`
 
-用于提供外壳完成建议的内部命令
-
 ```bash
 bin/uct _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-S|--symfony SYMFONY]
 ```
+
+用于提供外壳完成建议的内部命令
+
 
 ### `--shell`， `-s`
 
@@ -56,7 +57,7 @@ shell类型(“bash”)
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -105,10 +106,40 @@ shell类型(“bash”)
 
 ## `completion`
 
-转储shell完成脚本
-
 ```bash
 bin/uct completion [--debug] [--] [<shell>]
+```
+
+转储shell完成脚本
+
+
+```
+The completion command dumps the shell completion script required
+to use shell autocompletion (currently only bash completion is supported).
+
+Static installation
+-------------------
+
+Dump the script to a global completion file and restart your shell:
+
+    uct/bin/uct completion bash | sudo tee /etc/bash_completion.d/uct
+
+Or dump the script to a local file and source it:
+
+    uct/bin/uct completion bash > completion.sh
+
+    # source the file whenever you use the project
+    source completion.sh
+
+    # or add this line at the end of your "~/.bashrc" file:
+    source /path/to/completion.sh
+
+Dynamic installation
+--------------------
+
+Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
+
+    eval "$(/var/jenkins/workspace/gendocs-uct-cli/uct/bin/uct completion bash)"
 ```
 
 
@@ -126,7 +157,7 @@ bin/uct completion [--debug] [--] [<shell>]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -175,10 +206,23 @@ bin/uct completion [--debug] [--] [<shell>]
 
 ## `help`
 
-显示命令的帮助
-
 ```bash
 bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
+```
+
+显示命令的帮助
+
+
+```
+The help command displays help for a given command:
+
+  uct/bin/uct help list
+
+You can also output the help in other formats by using the --format option:
+
+  uct/bin/uct help --format=xml list
+
+To display the list of available commands, please use the list command.
 ```
 
 
@@ -205,7 +249,7 @@ bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -254,10 +298,29 @@ bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ## `list`
 
-列出命令
-
 ```bash
 bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
+```
+
+列出命令
+
+
+```
+The list command lists all commands:
+
+  uct/bin/uct list
+
+You can also display the commands for a specific namespace:
+
+  uct/bin/uct list test
+
+You can also output the information in other formats by using the --format option:
+
+  uct/bin/uct list --format=xml
+
+It's also possible to get raw list of commands (useful for embedding command runner):
+
+  uct/bin/uct list --raw
 ```
 
 
@@ -289,7 +352,7 @@ bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -338,11 +401,12 @@ bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 
 ## `refactor`
 
-解决了可以自动修复的问题。 将更新所提供路径中的代码。
-
 ```bash
 bin/uct refactor <path>
 ```
+
+解决了可以自动修复的问题。 将更新所提供路径中的代码。
+
 
 
 ### `path`
@@ -353,7 +417,7 @@ bin/uct refactor <path>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -402,11 +466,12 @@ bin/uct refactor <path>
 
 ## `core:code:changes`
 
-升级兼容性工具是一个命令行工具，可通过分析安装在Adobe Commerce实例中的所有非Adobe Commerce模块，针对特定版本检查该实例。 返回在升级到新版Adobe Commerce代码之前必须解决的错误和警告列表。
-
 ```bash
 bin/uct core:code:changes [-o|--output [OUTPUT]] [--] <dir> [<vanilla-dir>]
 ```
+
+升级兼容性工具是一个命令行工具，可通过分析安装在Adobe Commerce实例中的所有非Adobe Commerce模块，针对特定版本检查该实例。 返回在升级到新版Adobe Commerce代码之前必须解决的错误和警告列表。
+
 
 
 ### `dir`
@@ -428,7 +493,7 @@ Adobe Commerce vanilla安装目录。
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -477,11 +542,12 @@ Adobe Commerce vanilla安装目录。
 
 ## `dbschema:diff`
 
-允许列出两个选定版本之间的Adobe Commerce DB架构差异。 可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4-p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5-p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7-p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7-p4 | 2.4.0 | 2.4.0-p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2 - p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4-p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.4-p4 | 2.4.4 - p5 | 2.4.5 - p2 | 2.4.5-p3 | 2.4.5-p4 | 2.4.6 | 2.4.6-p1 | 2.4.6 - p2 | 2.4.7-beta1 | 2.4.4-p6 | 2.4.5-p5 | 2.4.6-p3 | 2.4.7-beta2 | 2.4.4-p7 | 2.4.5-p6 | 2.4.6-p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6 - p5 | 2.4.5-p7 | 2.4.4-p8
-
 ```bash
 bin/uct dbschema:diff <current-version> <target-version>
 ```
+
+允许列出两个选定版本之间的Adobe Commerce DB架构差异。 可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4-p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5-p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7-p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7-p4 | 2.4.0 | 2.4.0-p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2 - p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4-p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.4-p4 | 2.4.4 - p5 | 2.4.5 - p2 | 2.4.5-p3 | 2.4.5-p4 | 2.4.6 | 2.4.6-p1 | 2.4.6 - p2 | 2.4.7-beta1 | 2.4.4-p6 | 2.4.5-p5 | 2.4.6-p3 | 2.4.7-beta2 | 2.4.4-p7 | 2.4.5-p6 | 2.4.6-p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6 - p5 | 2.4.5-p7 | 2.4.4-p8
+
 
 
 ### `current-version`
@@ -498,7 +564,7 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -547,11 +613,12 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 ## `graphql:compare`
 
-GraphQL架构兼容性验证
-
 ```bash
 bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 ```
+
+GraphQL架构兼容性验证
+
 
 
 ### `schema1`
@@ -574,7 +641,7 @@ bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -623,11 +690,12 @@ bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 
 ## `upgrade:check`
 
-升级兼容性工具是一种命令行工具，可通过分析安装在Adobe Commerce自定义实例中的所有模块，针对特定版本检查该实例。 返回在升级到最新版本的Adobe Commerce之前必须解决的错误和警告列表。
-
 ```bash
 bin/uct upgrade:check [-a|--current-version [CURRENT-VERSION]] [-c|--coming-version [COMING-VERSION]] [--json-output-path [JSON-OUTPUT-PATH]] [--html-output-path [HTML-OUTPUT-PATH]] [--min-issue-level [MIN-ISSUE-LEVEL]] [-i|--ignore-current-version-compatibility-issues] [--context CONTEXT] [--] <dir>
 ```
+
+升级兼容性工具是一种命令行工具，可通过分析安装在Adobe Commerce自定义实例中的所有模块，针对特定版本检查该实例。 返回在升级到最新版本的Adobe Commerce之前必须解决的错误和警告列表。
+
 
 
 ### `dir`
@@ -682,7 +750,7 @@ Adobe Commerce安装目录。
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值

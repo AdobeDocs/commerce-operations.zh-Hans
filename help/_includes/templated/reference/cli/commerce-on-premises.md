@@ -1,7 +1,7 @@
 ---
-source-git-commit: 755ea50a75924cc16f690ff888367abd305565e9
+source-git-commit: 19d19ef385cf4aaee3a255930af8e6d3b81de23a
 workflow-type: tm+mt
-source-wordcount: '21455'
+source-wordcount: '21169'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,12 @@ ht-degree: 0%
 
 ## `_complete`
 
-用于提供外壳完成建议的内部命令
-
 ```bash
 bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-a|--api-version API-VERSION] [-S|--symfony SYMFONY]
 ```
+
+用于提供外壳完成建议的内部命令
+
 
 ### `--shell`， `-s`
 
@@ -66,7 +67,7 @@ bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURREN
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -115,10 +116,40 @@ bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURREN
 
 ## `completion`
 
-转储shell完成脚本
-
 ```bash
 bin/magento completion [--debug] [--] [<shell>]
+```
+
+转储shell完成脚本
+
+
+```
+The completion command dumps the shell completion script required
+to use shell autocompletion (currently, bash, fish, zsh completion are supported).
+
+Static installation
+-------------------
+
+Dump the script to a global completion file and restart your shell:
+
+    bin/magento completion  | sudo tee /etc/bash_completion.d/magento
+
+Or dump the script to a local file and source it:
+
+    bin/magento completion  > completion.sh
+
+    # source the file whenever you use the project
+    source completion.sh
+
+    # or add this line at the end of your "~/.bashrc" file:
+    source /path/to/completion.sh
+
+Dynamic installation
+--------------------
+
+Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
+
+    eval "$(/var/www/html/magento2/bin/magento completion )"
 ```
 
 
@@ -136,7 +167,7 @@ bin/magento completion [--debug] [--] [<shell>]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -185,10 +216,23 @@ bin/magento completion [--debug] [--] [<shell>]
 
 ## `help`
 
-显示命令的帮助
-
 ```bash
 bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
+```
+
+显示命令的帮助
+
+
+```
+The help command displays help for a given command:
+
+  bin/magento help list
+
+You can also output the help in other formats by using the --format option:
+
+  bin/magento help --format=xml list
+
+To display the list of available commands, please use the list command.
 ```
 
 
@@ -215,7 +259,7 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -264,10 +308,29 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 ## `list`
 
-列出命令
-
 ```bash
 bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
+```
+
+列出命令
+
+
+```
+The list command lists all commands:
+
+  bin/magento list
+
+You can also display the commands for a specific namespace:
+
+  bin/magento list test
+
+You can also output the information in other formats by using the --format option:
+
+  bin/magento list --format=xml
+
+It's also possible to get raw list of commands (useful for embedding command runner):
+
+  bin/magento list --raw
 ```
 
 
@@ -299,7 +362,7 @@ bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -348,15 +411,16 @@ bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 
 ## `admin:adobe-ims:disable`
 
-禁用Adobe IMS模块
-
 ```bash
 bin/magento admin:adobe-ims:disable
 ```
 
+禁用Adobe IMS模块
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -405,11 +469,12 @@ bin/magento admin:adobe-ims:disable
 
 ## `admin:adobe-ims:enable`
 
-启用Adobe IMS模块。
-
 ```bash
 bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|--client-id [CLIENT-ID]] [-s|--client-secret [CLIENT-SECRET]] [-t|--2fa [2FA]]
 ```
+
+启用Adobe IMS模块。
+
 
 ### `--organization-id`， `-o`
 
@@ -437,7 +502,7 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -486,15 +551,16 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 ## `admin:adobe-ims:info`
 
-Adobe IMS模块配置信息
-
 ```bash
 bin/magento admin:adobe-ims:info
 ```
 
+Adobe IMS模块配置信息
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -543,15 +609,16 @@ bin/magento admin:adobe-ims:info
 
 ## `admin:adobe-ims:status`
 
-Adobe IMS模块的状态
-
 ```bash
 bin/magento admin:adobe-ims:status
 ```
 
+Adobe IMS模块的状态
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -600,11 +667,12 @@ bin/magento admin:adobe-ims:status
 
 ## `admin:user:create`
 
-创建管理员
-
 ```bash
 bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-PASSWORD] [--admin-email ADMIN-EMAIL] [--admin-firstname ADMIN-FIRSTNAME] [--admin-lastname ADMIN-LASTNAME] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+创建管理员
+
 
 ### `--admin-user`
 
@@ -644,7 +712,7 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -693,10 +761,17 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 ## `admin:user:unlock`
 
-解锁管理员帐户
-
 ```bash
 bin/magento admin:user:unlock <username>
+```
+
+解锁管理员帐户
+
+
+```
+This command unlocks an admin account by its username.
+To unlock:
+      bin/magento admin:user:unlock username
 ```
 
 
@@ -708,7 +783,7 @@ bin/magento admin:user:unlock <username>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -757,11 +832,12 @@ bin/magento admin:user:unlock <username>
 
 ## `app:config:dump`
 
-创建应用程序转储
-
 ```bash
 bin/magento app:config:dump [<config-types>...]
 ```
+
+创建应用程序转储
+
 
 
 ### `config-types`
@@ -774,7 +850,7 @@ bin/magento app:config:dump [<config-types>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -823,15 +899,16 @@ bin/magento app:config:dump [<config-types>...]
 
 ## `app:config:import`
 
-将数据从共享配置文件导入到适当的数据存储
-
 ```bash
 bin/magento app:config:import
 ```
 
+将数据从共享配置文件导入到适当的数据存储
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -880,15 +957,16 @@ bin/magento app:config:import
 
 ## `app:config:status`
 
-检查配置传播是否需要更新
-
 ```bash
 bin/magento app:config:status
 ```
 
+检查配置传播是否需要更新
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -937,11 +1015,12 @@ bin/magento app:config:status
 
 ## `braintree:migrate`
 
-从Magento1数据库迁移存储的卡片
-
 ```bash
 bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password PASSWORD]
 ```
+
+从Magento1数据库迁移存储的卡片
+
 
 ### `--host`
 
@@ -969,7 +1048,7 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1018,11 +1097,12 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 ## `cache:clean`
 
-清理缓存类型
-
 ```bash
 bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+清理缓存类型
+
 
 
 ### `types`
@@ -1041,7 +1121,7 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1090,11 +1170,12 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ## `cache:disable`
 
-禁用缓存类型
-
 ```bash
 bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+禁用缓存类型
+
 
 
 ### `types`
@@ -1113,7 +1194,7 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1162,11 +1243,12 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ## `cache:enable`
 
-启用缓存类型
-
 ```bash
 bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+启用缓存类型
+
 
 
 ### `types`
@@ -1185,7 +1267,7 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1234,11 +1316,12 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ## `cache:flush`
 
-刷新由缓存类型使用的缓存存储
-
 ```bash
 bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+刷新由缓存类型使用的缓存存储
+
 
 
 ### `types`
@@ -1257,7 +1340,7 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1306,11 +1389,12 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 ## `cache:status`
 
-检查缓存状态
-
 ```bash
 bin/magento cache:status [--bootstrap BOOTSTRAP]
 ```
+
+检查缓存状态
+
 
 ### `--bootstrap`
 
@@ -1320,7 +1404,7 @@ bin/magento cache:status [--bootstrap BOOTSTRAP]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1369,11 +1453,12 @@ bin/magento cache:status [--bootstrap BOOTSTRAP]
 
 ## `catalog:images:resize`
 
-创建调整大小的产品图像
-
 ```bash
 bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 ```
+
+创建调整大小的产品图像
+
 
 ### `--async`， `-a`
 
@@ -1391,7 +1476,7 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1440,15 +1525,16 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 ## `catalog:product:attributes:cleanup`
 
-删除未使用的产品属性。
-
 ```bash
 bin/magento catalog:product:attributes:cleanup
 ```
 
+删除未使用的产品属性。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1497,11 +1583,12 @@ bin/magento catalog:product:attributes:cleanup
 
 ## `cms:wysiwyg:restrict`
 
-设置是强制执行用户HTML内容验证还是改为显示警告
-
 ```bash
 bin/magento cms:wysiwyg:restrict <restrict>
 ```
+
+设置是强制执行用户HTML内容验证还是改为显示警告
+
 
 
 ### `restrict`
@@ -1512,7 +1599,7 @@ y\n
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1561,11 +1648,12 @@ y\n
 
 ## `config:sensitive:set`
 
-设置敏感配置值
-
 ```bash
 bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<path> [<value>]]
 ```
+
+设置敏感配置值
+
 
 
 ### `path`
@@ -1601,7 +1689,7 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1650,11 +1738,12 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 ## `config:set`
 
-更改系统配置
-
 ```bash
 bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env] [-c|--lock-config] [-l|--lock] [--] <path> <value>
 ```
+
+更改系统配置
+
 
 
 ### `path`
@@ -1705,7 +1794,7 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1754,11 +1843,12 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 ## `config:show`
 
-显示给定路径的配置值。 如果未指定路径，将显示所有保存的值
-
 ```bash
 bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<path>]
 ```
+
+显示给定路径的配置值。 如果未指定路径，将显示所有保存的值
+
 
 
 ### `path`
@@ -1782,7 +1872,7 @@ bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<pat
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1831,11 +1921,12 @@ bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<pat
 
 ## `cron:install`
 
-为当前用户生成并安装crontab
-
 ```bash
 bin/magento cron:install [-f|--force] [-d|--non-optional]
 ```
+
+为当前用户生成并安装crontab
+
 
 ### `--force`， `-f`
 
@@ -1853,7 +1944,7 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1902,15 +1993,16 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 ## `cron:remove`
 
-从crontab中删除任务
-
 ```bash
 bin/magento cron:remove
 ```
 
+从crontab中删除任务
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -1959,11 +2051,12 @@ bin/magento cron:remove
 
 ## `cron:run`
 
-按计划运行作业
-
 ```bash
 bin/magento cron:run [--group GROUP] [--exclude-group [EXCLUDE-GROUP]] [--bootstrap BOOTSTRAP]
 ```
+
+按计划运行作业
+
 
 ### `--group`
 
@@ -1986,7 +2079,7 @@ bin/magento cron:run [--group GROUP] [--exclude-group [EXCLUDE-GROUP]] [--bootst
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2035,15 +2128,16 @@ bin/magento cron:run [--group GROUP] [--exclude-group [EXCLUDE-GROUP]] [--bootst
 
 ## `customer:hash:upgrade`
 
-根据最新算法升级客户的哈希
-
 ```bash
 bin/magento customer:hash:upgrade
 ```
 
+根据最新算法升级客户的哈希
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2092,11 +2186,12 @@ bin/magento customer:hash:upgrade
 
 ## `deploy:mode:set`
 
-设置应用程序模式。
-
 ```bash
 bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 ```
+
+设置应用程序模式。
+
 
 
 ### `mode`
@@ -2114,7 +2209,7 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2163,15 +2258,16 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 ## `deploy:mode:show`
 
-显示当前应用程序模式。
-
 ```bash
 bin/magento deploy:mode:show
 ```
 
+显示当前应用程序模式。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2220,11 +2316,12 @@ bin/magento deploy:mode:show
 
 ## `dev:di:info`
 
-提供有关命令的依赖项注入配置的信息。
-
 ```bash
 bin/magento dev:di:info <class>
 ```
+
+提供有关命令的依赖项注入配置的信息。
+
 
 
 ### `class`
@@ -2235,7 +2332,7 @@ bin/magento dev:di:info <class>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2284,15 +2381,16 @@ bin/magento dev:di:info <class>
 
 ## `dev:email:newsletter-compatibility-check`
 
-扫描新闻稿模板以查找潜在的变量使用兼容性问题
-
 ```bash
 bin/magento dev:email:newsletter-compatibility-check
 ```
 
+扫描新闻稿模板以查找潜在的变量使用兼容性问题
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2341,15 +2439,16 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ## `dev:email:override-compatibility-check`
 
-扫描电子邮件模板覆盖以查找潜在的变量使用兼容性问题
-
 ```bash
 bin/magento dev:email:override-compatibility-check
 ```
 
+扫描电子邮件模板覆盖以查找潜在的变量使用兼容性问题
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2398,15 +2497,16 @@ bin/magento dev:email:override-compatibility-check
 
 ## `dev:profiler:disable`
 
-禁用探查器。
-
 ```bash
 bin/magento dev:profiler:disable
 ```
 
+禁用探查器。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2455,11 +2555,12 @@ bin/magento dev:profiler:disable
 
 ## `dev:profiler:enable`
 
-启用探查器。
-
 ```bash
 bin/magento dev:profiler:enable [<type>]
 ```
+
+启用探查器。
+
 
 
 ### `type`
@@ -2469,7 +2570,7 @@ bin/magento dev:profiler:enable [<type>]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2518,15 +2619,16 @@ bin/magento dev:profiler:enable [<type>]
 
 ## `dev:query-log:disable`
 
-禁用数据库查询日志记录
-
 ```bash
 bin/magento dev:query-log:disable
 ```
 
+禁用数据库查询日志记录
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2575,11 +2677,12 @@ bin/magento dev:query-log:disable
 
 ## `dev:query-log:enable`
 
-启用数据库查询日志记录
-
 ```bash
 bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [--query-time-threshold [QUERY-TIME-THRESHOLD]] [--include-call-stack [INCLUDE-CALL-STACK]]
 ```
+
+启用数据库查询日志记录
+
 
 ### `--include-all-queries`
 
@@ -2604,7 +2707,7 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2653,11 +2756,12 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 
 ## `dev:source-theme:deploy`
 
-收集和发布主题的源文件。
-
 ```bash
 bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA] [--theme THEME] [--] [<file>...]
 ```
+
+收集和发布主题的源文件。
+
 
 
 ### `file`
@@ -2698,7 +2802,7 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2747,15 +2851,16 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 ## `dev:template-hints:disable`
 
-禁用前端模板提示。 可能需要缓存刷新。
-
 ```bash
 bin/magento dev:template-hints:disable
 ```
 
+禁用前端模板提示。 可能需要缓存刷新。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2804,15 +2909,16 @@ bin/magento dev:template-hints:disable
 
 ## `dev:template-hints:enable`
 
-启用前端模板提示。 可能需要缓存刷新。
-
 ```bash
 bin/magento dev:template-hints:enable
 ```
 
+启用前端模板提示。 可能需要缓存刷新。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2861,15 +2967,16 @@ bin/magento dev:template-hints:enable
 
 ## `dev:template-hints:status`
 
-显示前端模板提示状态。
-
 ```bash
 bin/magento dev:template-hints:status
 ```
 
+显示前端模板提示状态。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2918,11 +3025,12 @@ bin/magento dev:template-hints:status
 
 ## `dev:tests:run`
 
-运行测试
-
 ```bash
 bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
 ```
+
+运行测试
+
 
 
 ### `type`
@@ -2941,7 +3049,7 @@ PHPUnit的其他参数。 示例：“ — c” — filter=MyTest&#39;”（无�
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -2990,11 +3098,12 @@ PHPUnit的其他参数。 示例：“ — c” — filter=MyTest&#39;”（无�
 
 ## `dev:urn-catalog:generate`
 
-为IDE生成*.xsd映射的URN目录以高亮显示xml。
-
 ```bash
 bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 ```
+
+为IDE生成*.xsd映射的URN目录以高亮显示xml。
+
 
 
 ### `path`
@@ -3012,7 +3121,7 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3061,11 +3170,12 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 ## `dev:xml:convert`
 
-使用XSL样式表转换XML文件
-
 ```bash
 bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 ```
+
+使用XSL样式表转换XML文件
+
 
 
 ### `xml-file`
@@ -3089,7 +3199,7 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3138,11 +3248,12 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ## `downloadable:domains:add`
 
-将域添加到可下载的域白名单
-
 ```bash
 bin/magento downloadable:domains:add [<domains>...]
 ```
+
+将域添加到可下载的域白名单
+
 
 
 ### `domains`
@@ -3155,7 +3266,7 @@ bin/magento downloadable:domains:add [<domains>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3204,11 +3315,12 @@ bin/magento downloadable:domains:add [<domains>...]
 
 ## `downloadable:domains:remove`
 
-从可下载的域白名单中删除域
-
 ```bash
 bin/magento downloadable:domains:remove [<domains>...]
 ```
+
+从可下载的域白名单中删除域
+
 
 
 ### `domains`
@@ -3221,7 +3333,7 @@ bin/magento downloadable:domains:remove [<domains>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3270,15 +3382,16 @@ bin/magento downloadable:domains:remove [<domains>...]
 
 ## `downloadable:domains:show`
 
-显示可下载域白名单
-
 ```bash
 bin/magento downloadable:domains:show
 ```
 
+显示可下载域白名单
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3327,15 +3440,16 @@ bin/magento downloadable:domains:show
 
 ## `encryption:payment-data:update`
 
-使用最新的加密密码重新加密加密的信用卡数据。
-
 ```bash
 bin/magento encryption:payment-data:update
 ```
 
+使用最新的加密密码重新加密加密的信用卡数据。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3384,16 +3498,12 @@ bin/magento encryption:payment-data:update
 
 ## `events:create-event-provider`
 
+```bash
+bin/magento events:create-event-provider [--label [LABEL]] [--description [DESCRIPTION]]events:provider:create 
+```
+
 在此实例的Adobe I/O事件中创建自定义事件提供程序。 如果未指定label和description选项，则必须在系统app/etc/event-types.json文件中定义它们。
 
-```bash
-bin/magento events:create-event-provider [--label [LABEL]] [--description [DESCRIPTION]]
-```
-
-
-```bash
-bin/magento events:provider:create 
-```
 
 ### `--label`
 
@@ -3409,7 +3519,7 @@ bin/magento events:provider:create
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3458,15 +3568,16 @@ bin/magento events:provider:create
 
 ## `events:generate:module`
 
-根据插件列表生成模块
-
 ```bash
 bin/magento events:generate:module
 ```
 
+根据插件列表生成模块
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3515,11 +3626,12 @@ bin/magento events:generate:module
 
 ## `events:info`
 
-返回指定事件的有效负载。
-
 ```bash
 bin/magento events:info [--depth [DEPTH]] [--] <event-code>
 ```
+
+返回指定事件的有效负载。
+
 
 
 ### `event-code`
@@ -3537,7 +3649,7 @@ bin/magento events:info [--depth [DEPTH]] [--] <event-code>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3586,15 +3698,16 @@ bin/magento events:info [--depth [DEPTH]] [--] <event-code>
 
 ## `events:list`
 
-显示订阅事件的列表
-
 ```bash
 bin/magento events:list
 ```
 
+显示订阅事件的列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3643,11 +3756,12 @@ bin/magento events:list
 
 ## `events:list:all`
 
-返回在指定模块中定义的可订阅事件的列表
-
 ```bash
 bin/magento events:list:all <module_name>
 ```
+
+返回在指定模块中定义的可订阅事件的列表
+
 
 
 ### `module_name`
@@ -3658,7 +3772,7 @@ bin/magento events:list:all <module_name>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3707,15 +3821,16 @@ bin/magento events:list:all <module_name>
 
 ## `events:metadata:populate`
 
-从配置列表（XML和应用程序配置）Adobe I/O创建元数据
-
 ```bash
 bin/magento events:metadata:populate
 ```
 
+从配置列表（XML和应用程序配置）Adobe I/O创建元数据
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3764,15 +3879,16 @@ bin/magento events:metadata:populate
 
 ## `events:provider:info`
 
-返回有关已配置事件提供程序的详细信息
-
 ```bash
 bin/magento events:provider:info
 ```
 
+返回有关已配置事件提供程序的详细信息
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3821,15 +3937,16 @@ bin/magento events:provider:info
 
 ## `events:registrations:list`
 
-列出App Builder项目中的事件注册
-
 ```bash
 bin/magento events:registrations:list
 ```
 
+列出App Builder项目中的事件注册
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3878,11 +3995,12 @@ bin/magento events:registrations:list
 
 ## `events:subscribe`
 
-订阅事件
-
 ```bash
 bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [-p|--priority] [-d|--destination DESTINATION] [--] <event-code>
 ```
+
+订阅事件
+
 
 
 ### `event-code`
@@ -3934,7 +4052,7 @@ bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [-
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -3983,11 +4101,12 @@ bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [-
 
 ## `events:sync-events-metadata`
 
-同步此实例的事件元数据
-
 ```bash
 bin/magento events:sync-events-metadata [-d|--delete]
 ```
+
+同步此实例的事件元数据
+
 
 ### `--delete`， `-d`
 
@@ -3998,7 +4117,7 @@ bin/magento events:sync-events-metadata [-d|--delete]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4047,11 +4166,12 @@ bin/magento events:sync-events-metadata [-d|--delete]
 
 ## `events:unsubscribe`
 
-删除对所提供事件的订阅
-
 ```bash
 bin/magento events:unsubscribe <event-code>
 ```
+
+删除对所提供事件的订阅
+
 
 
 ### `event-code`
@@ -4062,7 +4182,7 @@ bin/magento events:unsubscribe <event-code>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4111,11 +4231,12 @@ bin/magento events:unsubscribe <event-code>
 
 ## `i18n:collect-phrases`
 
-发现代码库中的短语
-
 ```bash
 bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<directory>]
 ```
+
+发现代码库中的短语
+
 
 
 ### `directory`
@@ -4138,7 +4259,7 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4187,11 +4308,12 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 ## `i18n:pack`
 
-保存语言包
-
 ```bash
 bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <locale>
 ```
+
+保存语言包
+
 
 
 ### `source`
@@ -4222,7 +4344,7 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4271,11 +4393,12 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 ## `i18n:uninstall`
 
-卸载语言包
-
 ```bash
 bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 ```
+
+卸载语言包
+
 
 
 ### `package`
@@ -4296,7 +4419,7 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4345,15 +4468,16 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 ## `indexer:info`
 
-显示允许的索引器
-
 ```bash
 bin/magento indexer:info
 ```
 
+显示允许的索引器
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4402,11 +4526,12 @@ bin/magento indexer:info
 
 ## `indexer:reindex`
 
-重新索引数据
-
 ```bash
 bin/magento indexer:reindex [<index>...]
 ```
+
+重新索引数据
+
 
 
 ### `index`
@@ -4419,7 +4544,7 @@ bin/magento indexer:reindex [<index>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4468,11 +4593,12 @@ bin/magento indexer:reindex [<index>...]
 
 ## `indexer:reset`
 
-将索引器状态重置为无效
-
 ```bash
 bin/magento indexer:reset [<index>...]
 ```
+
+将索引器状态重置为无效
+
 
 
 ### `index`
@@ -4485,7 +4611,7 @@ bin/magento indexer:reset [<index>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4534,11 +4660,12 @@ bin/magento indexer:reset [<index>...]
 
 ## `indexer:set-dimensions-mode`
 
-设置索引器Dimension模式
-
 ```bash
 bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 ```
+
+设置索引器Dimension模式
+
 
 
 ### `indexer`
@@ -4553,7 +4680,7 @@ bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4602,11 +4729,12 @@ bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 
 ## `indexer:set-mode`
 
-设置索引模式类型
-
 ```bash
 bin/magento indexer:set-mode [<mode> [<index>...]]
 ```
+
+设置索引模式类型
+
 
 
 ### `mode`
@@ -4624,7 +4752,7 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4673,11 +4801,12 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 ## `indexer:set-status`
 
-设置指定的索引器状态
-
 ```bash
 bin/magento indexer:set-status <status> [<index>...]
 ```
+
+设置指定的索引器状态
+
 
 
 ### `status`
@@ -4696,7 +4825,7 @@ bin/magento indexer:set-status <status> [<index>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4745,11 +4874,12 @@ bin/magento indexer:set-status <status> [<index>...]
 
 ## `indexer:show-dimensions-mode`
 
-显示索引器Dimension模式
-
 ```bash
 bin/magento indexer:show-dimensions-mode [<indexer>...]
 ```
+
+显示索引器Dimension模式
+
 
 
 ### `indexer`
@@ -4762,7 +4892,7 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4811,11 +4941,12 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 ## `indexer:show-mode`
 
-显示索引模式
-
 ```bash
 bin/magento indexer:show-mode [<index>...]
 ```
+
+显示索引模式
+
 
 
 ### `index`
@@ -4828,7 +4959,7 @@ bin/magento indexer:show-mode [<index>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4877,11 +5008,12 @@ bin/magento indexer:show-mode [<index>...]
 
 ## `indexer:status`
 
-显示索引器的状态
-
 ```bash
 bin/magento indexer:status [<index>...]
 ```
+
+显示索引器的状态
+
 
 
 ### `index`
@@ -4894,7 +5026,7 @@ bin/magento indexer:status [<index>...]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -4943,15 +5075,16 @@ bin/magento indexer:status [<index>...]
 
 ## `info:adminuri`
 
-显示Magento管理员URI
-
 ```bash
 bin/magento info:adminuri
 ```
 
+显示Magento管理员URI
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5000,15 +5133,16 @@ bin/magento info:adminuri
 
 ## `info:backups:list`
 
-打印可用备份文件列表
-
 ```bash
 bin/magento info:backups:list
 ```
 
+打印可用备份文件列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5057,15 +5191,16 @@ bin/magento info:backups:list
 
 ## `info:currency:list`
 
-显示可用货币的列表
-
 ```bash
 bin/magento info:currency:list
 ```
 
+显示可用货币的列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5114,11 +5249,12 @@ bin/magento info:currency:list
 
 ## `info:dependencies:show-framework`
 
-显示Magento框架的依赖关系数
-
 ```bash
 bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 ```
+
+显示Magento框架的依赖关系数
+
 
 ### `--output`， `-o`
 
@@ -5129,7 +5265,7 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5178,11 +5314,12 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 
 ## `info:dependencies:show-modules`
 
-显示模块之间的依赖关系数
-
 ```bash
 bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 ```
+
+显示模块之间的依赖关系数
+
 
 ### `--output`， `-o`
 
@@ -5193,7 +5330,7 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5242,11 +5379,12 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 
 ## `info:dependencies:show-modules-circular`
 
-显示模块之间的循环依赖关系数
-
 ```bash
 bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 ```
+
+显示模块之间的循环依赖关系数
+
 
 ### `--output`， `-o`
 
@@ -5257,7 +5395,7 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5306,15 +5444,16 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 ## `info:language:list`
 
-显示可用语言区域设置的列表
-
 ```bash
 bin/magento info:language:list
 ```
 
+显示可用语言区域设置的列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5363,15 +5502,16 @@ bin/magento info:language:list
 
 ## `info:timezone:list`
 
-显示可用时区的列表
-
 ```bash
 bin/magento info:timezone:list
 ```
 
+显示可用时区的列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5420,16 +5560,17 @@ bin/magento info:timezone:list
 
 ## `inventory:reservation:create-compensations`
 
-通过提供的报酬参数创建保留
-
 ```bash
 bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compensations>...]
 ```
 
+通过提供的报酬参数创建保留
+
+
 
 ### `compensations`
 
-薪酬参数列表，格式为“\”&lt;order_increment_id>：\&lt;sku>：\&lt;quantity>：\&lt;stock-id>&quot;
+报酬参数列表，格式为“：：：”
 
 - 默认： `[]`
 
@@ -5444,7 +5585,7 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5493,11 +5634,12 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ## `inventory:reservation:list-inconsistencies`
 
-显示所有具有可销售数量不一致的订单和产品
-
 ```bash
 bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-i|--incomplete-orders] [-b|--bunch-size [BUNCH-SIZE]] [-r|--raw]
 ```
+
+显示所有具有可销售数量不一致的订单和产品
+
 
 ### `--complete-orders`， `-c`
 
@@ -5529,7 +5671,7 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5578,11 +5720,12 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 ## `inventory-geonames:import`
 
-下载并导入源选择算法的地理名称
-
 ```bash
 bin/magento inventory-geonames:import <countries>...
 ```
+
+下载并导入源选择算法的地理名称
+
 
 
 ### `countries`
@@ -5596,7 +5739,7 @@ bin/magento inventory-geonames:import <countries>...
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5645,11 +5788,12 @@ bin/magento inventory-geonames:import <countries>...
 
 ## `maintenance:allow-ips`
 
-设置维护模式劐免IP
-
 ```bash
 bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<ip>...]
 ```
+
+设置维护模式劐免IP
+
 
 
 ### `ip`
@@ -5682,7 +5826,7 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5731,11 +5875,12 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 ## `maintenance:disable`
 
-禁用维护模式
-
 ```bash
 bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+禁用维护模式
+
 
 ### `--ip`
 
@@ -5752,7 +5897,7 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5801,11 +5946,12 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 ## `maintenance:enable`
 
-启用维护模式
-
 ```bash
 bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+启用维护模式
+
 
 ### `--ip`
 
@@ -5822,7 +5968,7 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5871,11 +6017,12 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 ## `maintenance:status`
 
-显示维护模式状态
-
 ```bash
 bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+显示维护模式状态
+
 
 ### `--magento-init-params`
 
@@ -5885,7 +6032,7 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5934,15 +6081,16 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ## `media-content:sync`
 
-将内容与资产同步
-
 ```bash
 bin/magento media-content:sync
 ```
 
+将内容与资产同步
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -5991,15 +6139,16 @@ bin/magento media-content:sync
 
 ## `media-gallery:sync`
 
-同步数据库中的媒体存储和媒体资产
-
 ```bash
 bin/magento media-gallery:sync
 ```
 
+同步数据库中的媒体存储和媒体资产
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6048,15 +6197,16 @@ bin/magento media-gallery:sync
 
 ## `module:config:status`
 
-检查“app/etc/config.php”文件中的模块配置，并报告它们是否为最新版本
-
 ```bash
 bin/magento module:config:status
 ```
 
+检查“app/etc/config.php”文件中的模块配置，并报告它们是否为最新版本
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6105,11 +6255,12 @@ bin/magento module:config:status
 
 ## `module:disable`
 
-禁用指定的模块
-
 ```bash
 bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module>...]
 ```
+
+禁用指定的模块
+
 
 
 ### `module`
@@ -6149,7 +6300,7 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6198,11 +6349,12 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 ## `module:enable`
 
-启用指定的模块
-
 ```bash
 bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module>...]
 ```
+
+启用指定的模块
+
 
 
 ### `module`
@@ -6242,7 +6394,7 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6291,11 +6443,12 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 ## `module:status`
 
-显示模块的状态
-
 ```bash
 bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module-names>...]
 ```
+
+显示模块的状态
+
 
 
 ### `module-names`
@@ -6328,7 +6481,7 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6377,11 +6530,12 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 ## `module:uninstall`
 
-卸载由编辑器安装的模块
-
 ```bash
 bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media] [--backup-db] [--non-composer] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] <module>...
 ```
+
+卸载由编辑器安装的模块
+
 
 
 ### `module`
@@ -6443,7 +6597,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6492,11 +6646,12 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 ## `newrelic:create:deploy-marker`
 
-检查部署队列中的条目，并创建相应的部署标记。
-
 ```bash
 bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revision>]]
 ```
+
+检查部署队列中的条目，并创建相应的部署标记。
+
 
 
 ### `message`
@@ -6523,7 +6678,7 @@ bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revis
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6572,15 +6727,20 @@ bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revis
 
 ## `queue:consumers:list`
 
-MessageQueue使用者列表
-
 ```bash
 bin/magento queue:consumers:list
 ```
 
+MessageQueue使用者列表
+
+
+```
+This command shows list of MessageQueue consumers.
+```
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6629,15 +6789,20 @@ bin/magento queue:consumers:list
 
 ## `queue:consumers:restart`
 
-重新启动MessageQueue使用者
-
 ```bash
 bin/magento queue:consumers:restart
 ```
 
+重新启动MessageQueue使用者
+
+
+```
+Command put poison pill for MessageQueue consumers and force to restart them after next status check.
+```
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6686,10 +6851,43 @@ bin/magento queue:consumers:restart
 
 ## `queue:consumers:start`
 
-启动MessageQueue使用者
-
 ```bash
 bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BATCH-SIZE] [--area-code AREA-CODE] [--single-thread] [--multi-process [MULTI-PROCESS]] [--pid-file-path PID-FILE-PATH] [--] <consumer>
+```
+
+启动MessageQueue使用者
+
+
+```
+This command starts MessageQueue consumer by its name.
+
+To start consumer which will process all queued messages and terminate execution:
+
+    bin/magento queue:consumers:start someConsumer
+
+To specify the number of messages which should be processed by consumer before its termination:
+
+    bin/magento queue:consumers:start someConsumer --max-messages=50
+
+To specify the number of messages per batch for the batch consumer:
+
+    bin/magento queue:consumers:start someConsumer --batch-size=500
+
+To specify the preferred area:
+
+    bin/magento queue:consumers:start someConsumer --area-code='adminhtml'
+
+To do not run multiple copies of one consumer simultaneously:
+
+    bin/magento queue:consumers:start someConsumer --single-thread
+
+To save PID enter path (This option is deprecated, use --single-thread instead):
+
+    bin/magento queue:consumers:start someConsumer --pid-file-path='/var/someConsumer.pid'
+
+To define the number of processes per consumer:
+
+    bin/magento queue:consumers:start someConsumer --multi-process=4
 ```
 
 
@@ -6738,7 +6936,7 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6787,15 +6985,16 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 
 ## `remote-storage:sync`
 
-将媒体文件与远程存储同步。
-
 ```bash
 bin/magento remote-storage:sync
 ```
 
+将媒体文件与远程存储同步。
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6844,11 +7043,12 @@ bin/magento remote-storage:sync
 
 ## `saas:resync`
 
-将馈送数据重新同步到SaaS服务。
-
 ```bash
 bin/magento saas:resync [--feed FEED] [--no-reindex] [--cleanup-feed] [--dry-run] [--thread-count THREAD-COUNT] [--batch-size BATCH-SIZE] [--continue-resync]
 ```
+
+将馈送数据重新同步到SaaS服务。
+
 
 ### `--feed`
 
@@ -6898,7 +7098,7 @@ bin/magento saas:resync [--feed FEED] [--no-reindex] [--cleanup-feed] [--dry-run
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -6947,11 +7147,12 @@ bin/magento saas:resync [--feed FEED] [--no-reindex] [--cleanup-feed] [--dry-run
 
 ## `sampledata:deploy`
 
-为基于编辑器的Magento安装部署示例数据模块
-
 ```bash
 bin/magento sampledata:deploy [--no-update]
 ```
+
+为基于编辑器的Magento安装部署示例数据模块
+
 
 ### `--no-update`
 
@@ -6962,7 +7163,7 @@ bin/magento sampledata:deploy [--no-update]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7011,11 +7212,12 @@ bin/magento sampledata:deploy [--no-update]
 
 ## `sampledata:remove`
 
-从composer.json中删除所有示例数据包
-
 ```bash
 bin/magento sampledata:remove [--no-update]
 ```
+
+从composer.json中删除所有示例数据包
+
 
 ### `--no-update`
 
@@ -7026,7 +7228,7 @@ bin/magento sampledata:remove [--no-update]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7075,15 +7277,16 @@ bin/magento sampledata:remove [--no-update]
 
 ## `sampledata:reset`
 
-重置所有示例数据模块以重新安装
-
 ```bash
 bin/magento sampledata:reset
 ```
 
+重置所有示例数据模块以重新安装
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7132,15 +7335,16 @@ bin/magento sampledata:reset
 
 ## `security:recaptcha:disable-for-user-forgot-password`
 
-禁用管理员用户忘记密码表单的reCAPTCHA
-
 ```bash
 bin/magento security:recaptcha:disable-for-user-forgot-password
 ```
 
+禁用管理员用户忘记密码表单的reCAPTCHA
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7189,15 +7393,16 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ## `security:recaptcha:disable-for-user-login`
 
-对管理员用户登录表单禁用reCAPTCHA
-
 ```bash
 bin/magento security:recaptcha:disable-for-user-login
 ```
 
+对管理员用户登录表单禁用reCAPTCHA
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7246,11 +7451,12 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ## `security:tfa:google:set-secret`
 
-设置用于生成Google OTP的密码。
-
 ```bash
 bin/magento security:tfa:google:set-secret <user> <secret>
 ```
+
+设置用于生成Google OTP的密码。
+
 
 
 ### `user`
@@ -7267,7 +7473,7 @@ bin/magento security:tfa:google:set-secret <user> <secret>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7316,15 +7522,16 @@ bin/magento security:tfa:google:set-secret <user> <secret>
 
 ## `security:tfa:providers`
 
-列出所有可用的提供程序
-
 ```bash
 bin/magento security:tfa:providers
 ```
 
+列出所有可用的提供程序
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7373,11 +7580,12 @@ bin/magento security:tfa:providers
 
 ## `security:tfa:reset`
 
-重置一个用户的配置
-
 ```bash
 bin/magento security:tfa:reset <user> <provider>
 ```
+
+重置一个用户的配置
+
 
 
 ### `user`
@@ -7394,7 +7602,7 @@ bin/magento security:tfa:reset <user> <provider>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7443,11 +7651,12 @@ bin/magento security:tfa:reset <user> <provider>
 
 ## `server:run`
 
-运行应用程序服务器
-
 ```bash
 bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-wn|--workerNum [WORKERNUM]] [-dm|--dispatchMode [DISPATCHMODE]] [-mr|--maxRequests [MAXREQUESTS]] [-a|--area [AREA]] [-mip|--magento-init-params [MAGENTO-INIT-PARAMS]] [-mwt|--maxWaitTime [MAXWAITTIME]] [--state-monitor]
 ```
+
+运行应用程序服务器
+
 
 ### `--port`， `-p`
 
@@ -7514,7 +7723,7 @@ magento bootstrap初始化参数
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7563,15 +7772,16 @@ magento bootstrap初始化参数
 
 ## `server:state-monitor:aggregate-output`
 
-ApplicationServer状态监视器的聚合输出
-
 ```bash
 bin/magento server:state-monitor:aggregate-output
 ```
 
+ApplicationServer状态监视器的聚合输出
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7620,11 +7830,12 @@ bin/magento server:state-monitor:aggregate-output
 
 ## `setup:backup`
 
-对Magento应用程序代码库、媒体和数据库进行备份
-
 ```bash
 bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+对Magento应用程序代码库、媒体和数据库进行备份
+
 
 ### `--code`
 
@@ -7655,7 +7866,7 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -7704,11 +7915,12 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 ## `setup:config:set`
 
-创建或修改部署配置
-
 ```bash
 bin/magento setup:config:set [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--backend-frontname BACKEND-FRONTNAME] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--id_salt ID_SALT] [--config-async CONFIG-ASYNC] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-backend-redis-use-lua CACHE-BACKEND-REDIS-USE-LUA] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--backpressure-logger BACKPRESSURE-LOGGER] [--backpressure-logger-redis-server BACKPRESSURE-LOGGER-REDIS-SERVER] [--backpressure-logger-redis-port BACKPRESSURE-LOGGER-REDIS-PORT] [--backpressure-logger-redis-timeout BACKPRESSURE-LOGGER-REDIS-TIMEOUT] [--backpressure-logger-redis-persistent BACKPRESSURE-LOGGER-REDIS-PERSISTENT] [--backpressure-logger-redis-db BACKPRESSURE-LOGGER-REDIS-DB] [--backpressure-logger-redis-password BACKPRESSURE-LOGGER-REDIS-PASSWORD] [--backpressure-logger-redis-user BACKPRESSURE-LOGGER-REDIS-USER] [--backpressure-logger-id-prefix BACKPRESSURE-LOGGER-ID-PREFIX] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+创建或修改部署配置
+
 
 ### `--enable-debug-logging`
 
@@ -8305,7 +8517,7 @@ Redis服务器用户
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8354,11 +8566,12 @@ Redis服务器用户
 
 ## `setup:db-data:upgrade`
 
-在数据库中安装和升级数据
-
 ```bash
 bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+在数据库中安装和升级数据
+
 
 ### `--magento-init-params`
 
@@ -8368,7 +8581,7 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8417,11 +8630,12 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ## `setup:db-declaration:generate-patch`
 
-生成修补程序并将其放入特定文件夹中。
-
 ```bash
 bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--type [TYPE]] [--] <module> <patch>
 ```
+
+生成修补程序并将其放入特定文件夹中。
+
 
 
 ### `module`
@@ -8452,7 +8666,7 @@ bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--t
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8501,11 +8715,12 @@ bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--t
 
 ## `setup:db-declaration:generate-whitelist`
 
-生成允许声明安装程序编辑的表和列的白名单
-
 ```bash
 bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]]
 ```
+
+生成允许声明安装程序编辑的表和列的白名单
+
 
 ### `--module-name`
 
@@ -8516,7 +8731,7 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8565,11 +8780,12 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 ## `setup:db-schema:add-slave`
 
-将与签出引号相关的表移动到单独的数据库服务器
-
 ```bash
 bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--maxAllowedLag [MAXALLOWEDLAG]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+将与签出引号相关的表移动到单独的数据库服务器
+
 
 ### `--host`
 
@@ -8626,7 +8842,7 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8675,11 +8891,12 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 ## `setup:db-schema:split-quote`
 
-将与签出引号相关的表移动到单独的DB服务器。 自2.4.2起已弃用，将删除
-
 ```bash
 bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+将与签出引号相关的表移动到单独的DB服务器。 自2.4.2起已弃用，将删除
+
 
 ### `--host`
 
@@ -8727,7 +8944,7 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8776,11 +8993,12 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 ## `setup:db-schema:split-sales`
 
-将与销售相关的表移动到单独的数据库服务器。 自2.4.2起已弃用，将删除
-
 ```bash
 bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+将与销售相关的表移动到单独的数据库服务器。 自2.4.2起已弃用，将删除
+
 
 ### `--host`
 
@@ -8828,7 +9046,7 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8877,11 +9095,12 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 ## `setup:db-schema:upgrade`
 
-安装和升级数据库架构
-
 ```bash
 bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+安装和升级数据库架构
+
 
 ### `--convert-old-scripts`
 
@@ -8898,7 +9117,7 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -8947,11 +9166,12 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 ## `setup:db:status`
 
-检查数据库架构或数据是否需要升级
-
 ```bash
 bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+检查数据库架构或数据是否需要升级
+
 
 ### `--magento-init-params`
 
@@ -8961,7 +9181,7 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -9010,15 +9230,16 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ## `setup:di:compile`
 
-生成DI配置和所有可自动生成的缺失类
-
 ```bash
 bin/magento setup:di:compile
 ```
 
+生成DI配置和所有可自动生成的缺失类
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -9067,11 +9288,12 @@ bin/magento setup:di:compile
 
 ## `setup:install`
 
-安装Magento应用程序
-
 ```bash
 bin/magento setup:install [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--backend-frontname BACKEND-FRONTNAME] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--id_salt ID_SALT] [--config-async CONFIG-ASYNC] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-backend-redis-use-lua CACHE-BACKEND-REDIS-USE-LUA] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--backpressure-logger BACKPRESSURE-LOGGER] [--backpressure-logger-redis-server BACKPRESSURE-LOGGER-REDIS-SERVER] [--backpressure-logger-redis-port BACKPRESSURE-LOGGER-REDIS-PORT] [--backpressure-logger-redis-timeout BACKPRESSURE-LOGGER-REDIS-TIMEOUT] [--backpressure-logger-redis-persistent BACKPRESSURE-LOGGER-REDIS-PERSISTENT] [--backpressure-logger-redis-db BACKPRESSURE-LOGGER-REDIS-DB] [--backpressure-logger-redis-password BACKPRESSURE-LOGGER-REDIS-PASSWORD] [--backpressure-logger-redis-user BACKPRESSURE-LOGGER-REDIS-USER] [--backpressure-logger-id-prefix BACKPRESSURE-LOGGER-ID-PREFIX] [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--admin-user [ADMIN-USER]] [--admin-password [ADMIN-PASSWORD]] [--admin-email [ADMIN-EMAIL]] [--admin-firstname [ADMIN-FIRSTNAME]] [--admin-lastname [ADMIN-LASTNAME]] [--search-engine SEARCH-ENGINE] [--elasticsearch-host ELASTICSEARCH-HOST] [--elasticsearch-port ELASTICSEARCH-PORT] [--elasticsearch-enable-auth ELASTICSEARCH-ENABLE-AUTH] [--elasticsearch-username ELASTICSEARCH-USERNAME] [--elasticsearch-password ELASTICSEARCH-PASSWORD] [--elasticsearch-index-prefix ELASTICSEARCH-INDEX-PREFIX] [--elasticsearch-timeout ELASTICSEARCH-TIMEOUT] [--opensearch-host OPENSEARCH-HOST] [--opensearch-port OPENSEARCH-PORT] [--opensearch-enable-auth OPENSEARCH-ENABLE-AUTH] [--opensearch-username OPENSEARCH-USERNAME] [--opensearch-password OPENSEARCH-PASSWORD] [--opensearch-index-prefix OPENSEARCH-INDEX-PREFIX] [--opensearch-timeout OPENSEARCH-TIMEOUT] [--cleanup-database] [--sales-order-increment-prefix SALES-ORDER-INCREMENT-PREFIX] [--use-sample-data] [--enable-modules [ENABLE-MODULES]] [--disable-modules [DISABLE-MODULES]] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [-i|--interactive] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+安装Magento应用程序
+
 
 ### `--enable-debug-logging`
 
@@ -9907,7 +10129,7 @@ Magento安装将以模拟运行模式运行
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -9956,11 +10178,12 @@ Magento安装将以模拟运行模式运行
 
 ## `setup:performance:generate-fixtures`
 
-生成夹具
-
 ```bash
 bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profile>
 ```
+
+生成夹具
+
 
 
 ### `profile`
@@ -9978,7 +10201,7 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10027,11 +10250,12 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 ## `setup:rollback`
 
-回滚Magento应用程序代码库、媒体和数据库
-
 ```bash
 bin/magento setup:rollback [-c|--code-file CODE-FILE] [-m|--media-file MEDIA-FILE] [-d|--db-file DB-FILE] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+回滚Magento应用程序代码库、媒体和数据库
+
 
 ### `--code-file`， `-c`
 
@@ -10059,7 +10283,7 @@ var/备份中的数据库备份文件的基本名称
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10108,11 +10332,12 @@ var/备份中的数据库备份文件的基本名称
 
 ## `setup:static-content:deploy`
 
-部署静态视图文件
-
 ```bash
 bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] [-a|--area [AREA]] [--exclude-area [EXCLUDE-AREA]] [-t|--theme [THEME]] [--exclude-theme [EXCLUDE-THEME]] [-l|--language [LANGUAGE]] [--exclude-language [EXCLUDE-LANGUAGE]] [-j|--jobs [JOBS]] [--max-execution-time [MAX-EXECUTION-TIME]] [--symlink-locale] [--content-version CONTENT-VERSION] [--refresh-content-version-only] [--no-javascript] [--no-js-bundle] [--no-css] [--no-less] [--no-images] [--no-fonts] [--no-html] [--no-misc] [--no-html-minify] [--no-parent] [--] [<languages>...]
 ```
+
+部署静态视图文件
+
 
 
 ### `languages`
@@ -10285,7 +10510,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10334,11 +10559,12 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 ## `setup:store-config:set`
 
-安装商店配置。 自2.2.0起已弃用。请改用config：set
-
 ```bash
 bin/magento setup:store-config:set [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+安装商店配置。 自2.2.0起已弃用。请改用config：set
+
 
 ### `--base-url`
 
@@ -10402,7 +10628,7 @@ SSL连接的基本URL。 已弃用，请使用config：set以及路径web/secure
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10451,11 +10677,12 @@ SSL连接的基本URL。 已弃用，请使用config：set以及路径web/secure
 
 ## `setup:uninstall`
 
-卸载Magento应用程序
-
 ```bash
 bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+卸载Magento应用程序
+
 
 ### `--magento-init-params`
 
@@ -10465,7 +10692,7 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10514,11 +10741,12 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 ## `setup:upgrade`
 
-升级Magento应用程序、数据库数据和模式
-
 ```bash
 bin/magento setup:upgrade [--keep-generated] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+升级Magento应用程序、数据库数据和模式
+
 
 ### `--keep-generated`
 
@@ -10561,7 +10789,7 @@ Magento安装将以模拟运行模式运行
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10610,15 +10838,16 @@ Magento安装将以模拟运行模式运行
 
 ## `store:list`
 
-显示商店列表
-
 ```bash
 bin/magento store:list
 ```
 
+显示商店列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10667,15 +10896,16 @@ bin/magento store:list
 
 ## `store:website:list`
 
-显示网站列表
-
 ```bash
 bin/magento store:website:list
 ```
 
+显示网站列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10724,11 +10954,12 @@ bin/magento store:website:list
 
 ## `support:backup:code`
 
-创建代码备份
-
 ```bash
 bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 ```
+
+创建代码备份
+
 
 ### `--name`
 
@@ -10751,7 +10982,7 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10800,11 +11031,12 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 ## `support:backup:db`
 
-创建数据库备份
-
 ```bash
 bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs] [-i|--ignore-sanitize]
 ```
+
+创建数据库备份
+
 
 ### `--name`
 
@@ -10834,7 +11066,7 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10883,11 +11115,12 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 ## `support:utility:check`
 
-检查所需的备份实用程序
-
 ```bash
 bin/magento support:utility:check [--hide-paths]
 ```
+
+检查所需的备份实用程序
+
 
 ### `--hide-paths`
 
@@ -10898,7 +11131,7 @@ bin/magento support:utility:check [--hide-paths]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -10947,11 +11180,12 @@ bin/magento support:utility:check [--hide-paths]
 
 ## `support:utility:paths`
 
-创建实用程序路径列表
-
 ```bash
 bin/magento support:utility:paths [-f|--force]
 ```
+
+创建实用程序路径列表
+
 
 ### `--force`， `-f`
 
@@ -10962,7 +11196,7 @@ bin/magento support:utility:paths [-f|--force]
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -11011,11 +11245,12 @@ bin/magento support:utility:paths [-f|--force]
 
 ## `theme:uninstall`
 
-卸载主题
-
 ```bash
 bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <theme>...
 ```
+
+卸载主题
+
 
 
 ### `theme`
@@ -11043,7 +11278,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -11092,11 +11327,12 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 ## `varnish:vcl:generate`
 
-生成Varnish VCL并将其回显到命令行
-
 ```bash
 bin/magento varnish:vcl:generate [--access-list ACCESS-LIST] [--backend-host BACKEND-HOST] [--backend-port BACKEND-PORT] [--export-version EXPORT-VERSION] [--grace-period GRACE-PERIOD] [--input-file INPUT-FILE] [--output-file OUTPUT-FILE]
 ```
+
+生成Varnish VCL并将其回显到命令行
+
 
 ### `--access-list`
 
@@ -11147,7 +11383,7 @@ Web后端的端口
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -11196,11 +11432,12 @@ Web后端的端口
 
 ## `webhooks:dev:run`
 
-出于开发目的运行注册的webhook。
-
 ```bash
 bin/magento webhooks:dev:run <name> <payload>
 ```
+
+出于开发目的运行注册的webhook。
+
 
 
 ### `name`
@@ -11217,7 +11454,7 @@ JSON格式的webhook有效负荷
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -11266,15 +11503,16 @@ JSON格式的webhook有效负荷
 
 ## `webhooks:generate:module`
 
-根据webhook注册生成插件
-
 ```bash
 bin/magento webhooks:generate:module
 ```
 
+根据webhook注册生成插件
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -11323,11 +11561,12 @@ bin/magento webhooks:generate:module
 
 ## `webhooks:info`
 
-返回指定webhook的有效负载。
-
 ```bash
 bin/magento webhooks:info [--depth [DEPTH]] [--] <webhook-name> [<webhook-type>]
 ```
+
+返回指定webhook的有效负载。
+
 
 
 ### `webhook-name`
@@ -11352,7 +11591,7 @@ Webhook类型（之前、之后）
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -11401,15 +11640,16 @@ Webhook类型（之前、之后）
 
 ## `webhooks:list`
 
-显示已订阅Webhook的列表
-
 ```bash
 bin/magento webhooks:list
 ```
 
+显示已订阅Webhook的列表
+
+
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
@@ -11458,11 +11698,12 @@ bin/magento webhooks:list
 
 ## `webhooks:list:all`
 
-返回指定模块支持的webhook方法名称列表
-
 ```bash
 bin/magento webhooks:list:all <module_name>
 ```
+
+返回指定模块支持的webhook方法名称列表
+
 
 
 ### `module_name`
@@ -11473,7 +11714,7 @@ bin/magento webhooks:list:all <module_name>
 
 ### `--help`， `-h`
 
-显示给定命令的帮助。 未给出命令时，显示帮助\&lt;info>list\&lt;/info> 命令
+显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
