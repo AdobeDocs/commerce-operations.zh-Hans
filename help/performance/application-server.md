@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 81320626a83e26a55f9ec14ce8cb706753b44269
+source-git-commit: 9ffcbaa9a16315fe9c7d8ac4c4351ebe3fb27612
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -391,13 +391,3 @@ bin/magento server:run --state-monitor
 >[!NOTE]
 >
 >`--state-monitor` 与PHP版本不兼容 `8.3.0` - `8.3.4` 由于PHP垃圾回收器中的错误。 如果您使用的是PHP 8.3，则必须升级到 `8.3.5` 或更高版本才能使用此功能。
-
-## 已知问题
-
-### 在工作线程结束的情况下，请求会丢失。
-
-如果工作线程出现问题，导致工作线程结束，则已排队到同一工作线程的任何HTTP请求都将重置TCP套接字连接。 如果服务器前面有反向代理（如NGINX），这些错误将显示为 `502` 错误。 工作人员可能会因崩溃、内存不足或第三方扩展中的PHP错误而死亡。 Swoole HTTP服务器的默认行为会导致此问题。 默认情况下，HTTP服务器在中启动 `SWOOLE_BASE` 模式。 在此模式下，传入的HTTP请求将分配给队列中的工作线程，即使工作线程仍在处理以前的请求。 如果您将此项更改为 `SWOOLE_PROCESS` 模式，则连接由主进程维护，它使用明显更多的进程间通信。 不利的一面是 `SWOOLE_PROCESS` 它不支持PHP ZTS。 阅读 [Swool文档](https://wiki.swoole.com/en/#/learn?id=swoole_process) 以了解更多信息。
-
-### 在某些情况下，应用程序服务器可能会使用以前的属性配置。
-
-此 `CatalogGraphQl\Model\Config\AttributeReader` 在 `2.4.7` 包含极少数的错误，这些错误可能会导致GraphQL请求使用以前的属性配置状态获取响应。 对此的修复已送达 `2.4-develop`，但未及时到达 `2.4.7` 释放。
