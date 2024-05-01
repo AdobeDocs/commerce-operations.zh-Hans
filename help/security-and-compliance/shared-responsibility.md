@@ -2,9 +2,9 @@
 title: 分担责任的安全性和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: d4ea2f3fe8d30749c96389655ef38cae482afc99
+source-git-commit: 75eafe97a69668e43818f1c01639956e9b677a69
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2804'
 ht-degree: 0%
 
 ---
@@ -890,5 +890,16 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 为Cloud Pro暂存和生产环境计划备份 | R |   |
 | 为Cloud Starter和专业集成环境计划备份 |     | R |
 | 高可用性/故障切换 | R |   |
+
+{style="table-layout:auto"}
+
+#### 云服务器和扩展
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| CPU资源、数据中心、磁盘空间的可用性 | R |   |
+| 快速部署容量或紧急规模调整的可用性和执行 | R |   |
+| 请求快速部署容量 |     | R |
+| 根据限制监控vCPU使用情况 | R |   |
 
 {style="table-layout:auto"}
