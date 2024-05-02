@@ -1,7 +1,7 @@
 ---
-source-git-commit: 88cdf47409f45f9ba6de75701ab877c5e4604f13
+source-git-commit: ccc1c6451556ac721d331adebf02db8226e75699
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,72 @@ ht-degree: 1%
 ## 新增功能
 
 了解新文档和现有文档的重要更新。
+
+### 2024年4月29日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已更新 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/uct">UCT CLI参考</a>.</p>
+</td>
+      <td>技术</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ae9b29601953f25ca28f253f557d547b200616a0">ae9b29</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2024年4月26日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>重新组织了 <em>操作指南</em> 主页（此页面）并移动了 <em><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises">命令行工具参考</a></em> 指南 <em><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/overview">工具</a></em> 指南。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/839b4e26a7c5d662093c7c1eec3fd5883ed7706a">839b4e</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了一个新的 <a href="https://experienceleague.adobe.com/docs/commerce-operations/events/summit/2024.html">摘要页面</a> 用于Adobe Summit。</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1c2c75da7cda0e3c38ea904c98932472b618a3e5">1c2c75</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2024年4月15日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>来源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已更新 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/beta">beta</a> 页面，以包含有关Adobe Commerce的所有可用beta的信息。</p>
+</td>
+      <td>major-update</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a362cad66d38a89bacda656d1520047e22262179">a362ca</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2024年4月9日
 
@@ -29,7 +95,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/efd2fc4285a5cdc7ee20ead299ee16e54f9bcb83">efd2fc</a> （提交）</td>
     </tr>
     <tr>
-      <td><p>更新了以下内容的发行包主题： <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">Magento Open Source</a>.<br /> 添加了的发行包主题 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">商业版B2B</a>.</p>
+      <td><p>更新了以下内容的发行包主题： <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> 和 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">Magento Open Source</a>.<br /> 添加了的发行包主题 <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">适用于Commerce的B2B</a>.</p>
 </td>
       <td>major-update</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aad4b904ba95142d1d848f934c9d3702cc37ec16">aad4b9</a> （提交）</td>
