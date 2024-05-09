@@ -1,11 +1,11 @@
 ---
-source-git-commit: 8ec54f9a62c0afbbbb332ba23a9a97f9ce2a3187
+source-git-commit: 7edf0d26be64b4583d0a4d6ce313d25077662637
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '129'
 ht-degree: 6%
 
 ---
-# Commerce Services的产品可用性
+# Commerce服务的产品可用性
 
 
 <table style="table-layout:auto">
@@ -83,17 +83,6 @@ ht-degree: 6%
           <td>6.0.0</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-product-recommendations.html">市场</a><br/>
-              <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">发行说明</a><br/>
-          </td>
-      </tr>
-      <tr>
-          <td>快速签出</td>
-          <td>-</td>
-          <td>1.0.0+</td>
-          <td>1.2.0+</td>
-          <td>1.0.0+</td>
-          <td>
-              <a href="https://commercemarketplace.adobe.com/magento-quick-checkout.html">市场</a><br/>
               <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">发行说明</a><br/>
           </td>
       </tr>
