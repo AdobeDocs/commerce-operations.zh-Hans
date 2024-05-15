@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目开发阶段的实施最佳实践。
 exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
 feature: Best Practices
 role: Developer
-source-git-commit: ce386611834c4199e34b5d95ce76254957821f46
+source-git-commit: cca301a72b972d843b878fae28901a47c8fc0489
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '336'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,15 @@ ht-degree: 2%
 | [代码审查](code-review.md) | 为确保实施的功能满足要求而推荐的验证过程 |
 | [Composer与Git](code-management.md) | 确定如何分发自定义代码，其中考虑发布管理、代码复杂性和依赖关系管理 |
 | [分支策略](git-branching.md) | 在Git存储库中管理源代码 |
-| [GRA示例](../../architecture/global-reference/examples.md) | 了解组织报表的常用方法 [全球参考体系结构](../../architecture/global-reference/overview.md) 代码库 |
+
+## 平台和服务
+
+| 最佳实践 | 描述 |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [生成和部署](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | 描述Adobe Commerce在云基础架构项目上的构建和部署阶段的最佳实践 |
+| 调试 | 系统地高效地调试Adobe Commerce框架 |
+| [静态内容部署](static-content-deployment.md) | 避免店面未显示静态内容的问题 |
+| [疑难解答](troubleshooting.md) | Adobe Commerce实施常见问题疑难解答 |
 
 ## 数据库
 
@@ -67,12 +75,3 @@ ht-degree: 2%
 | [扩展](https://developer.adobe.com/commerce/php/best-practices/){target="_blank"} | 描述开发模式以帮助确保扩展、Adobe Commerce的未来版本和其他自定义扩展之间的兼容性 |
 | [私有内容块](private-content-block-configuration.md) | 配置专用内容块以优化店面性能 |
 | [修改核心和第三方PHP代码](modifying-core-and-third-party-code.md) | 修改未创作或未直接控制的任何代码的功能、结果或输入 |
-
-## 平台和服务
-
-| 最佳实践 | 描述 |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [生成和部署](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | 描述Adobe Commerce在云基础架构项目上的构建和部署阶段的最佳实践 |
-| 调试 | 系统地高效地调试Adobe Commerce框架 |
-| [静态内容部署](static-content-deployment.md) | 避免店面未显示静态内容的问题 |
-| [疑难解答](troubleshooting.md) | Adobe Commerce实施常见问题疑难解答 |
