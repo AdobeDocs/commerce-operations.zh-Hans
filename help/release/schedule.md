@@ -2,7 +2,7 @@
 title: 发布计划
 description: 了解 Adobe 打算何时发布 Adobe Commerce 的新功能。
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 4d57c979e8e65e1463f4f16829104cfbde730cb2
+source-git-commit: 1eac85dd1cf90f6cb064dc68a4622a6343c84b4d
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Adobe版本 [补丁程序](versioning-policy.md#patch-release) 对于核心Adobe
    <tr>
       <td colspan="3"><strong>图例</strong>
          <ul>
-           <li><strong><img alt="B2B功能图标" src="../assets/icons/enterprise.svg"></img> B2B</strong>—Adobe Commerce的B2B扩展的新增功能、增强功能和错误修复。 有关B2B扩展版本的详细信息，请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。</li>
+           <li><strong><img alt="B2B功能图标" src="../assets/icons/enterprise.svg"></img> B2B</strong>—Adobe Commerce的B2B扩展的新增功能、增强功能和错误修复。 有关B2B扩展版本的详细信息，请参阅[B2B发行说明](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html)。</li>
             <li><strong><img alt="“可扩展性功能”图标" src="../assets/icons/brackets.svg"></img> 可扩展性</strong> — 新的开发人员工具和服务实现了进程外可扩展性，这些工具和服务独立于修补程序版本提供。 例如，管理员UI SDK、Commerce的Adobe I/O事件和API Mesh。</li>
             <li><strong><img alt="基础架构功能图标" src="../assets/icons/servers.svg"></img> 基础架构</strong> — 云基础架构上的Adobe Commerce以及适用于Commerce软件包的Cloud Tools Suite的新增功能和增强功能，这些功能旨在部署和管理Cloud平台上的Adobe Commerce安装和升级。</li>
             <li><strong><img alt="“补丁版本”图标" src="../assets/icons/file-code.svg"></img> 补丁程序</strong> — 更新了核心Adobe Commerce PHP应用程序，其中包括安全性、合规性、性能和高优先级的质量修复。</li>
