@@ -2,9 +2,9 @@
 title: 软件生命周期政策
 description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
-source-git-commit: 01e926e3cf36f27f5292a0b9ce7a6209d4960cc2
+source-git-commit: 7df5edf2acba706fb01f58cc3749c4a2bf136fc5
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '426'
 ht-degree: 5%
 
 ---
@@ -22,22 +22,25 @@ ht-degree: 5%
 
 - Adobe不提供对第三方服务和软件依赖项（例如PHP和MySQL）的安全性和质量修复，这些服务和软件依赖项在客户处于Adobe Commerce的三年支持期时可能会终止。 请参阅 [系统要求](../installation/system-requirements.md) 有关经过测试和受支持的第三方技术的完整列表。
 
+- Adobe提供了与第三方服务和软件依赖项的兼容性，而客户在仅限安全的修补程序版本中启用了Adobe Commerce的三年支持期，但前提是客户可以这样做而不会引入向后不兼容的更改。
+
 ## 软件支持终止
 
-| 版本 | 正式发布 | 软件支持终止<sup>1</sup> | 依赖的PHP版本 |
-|----------------------|----------------------|-------------------------------------|-----------------------|
-| Adobe Commerce 2.4.7 | 2024年4月9日 | 2027年4月9日 | 8.2和8.3 |
-| Adobe Commerce 2.4.6 | 2023年3月14日 | 2026年3月14日 | 8.1和8.2 |
-| Adobe Commerce 2.4.5 | 2022年8月9日 | 2025年8月9日 | 8.1 |
-| Adobe Commerce 2.4.4 | 2022年4月12日 | 2025年4月24日 | 8.1 |
+| 版本 | 正式发布 | 软件支持终止<sup>1</sup> | 依赖的PHP版本 | 依赖的MariaDB版本 |
+|----------------------|----------------------|-------------------------------------|-----------------------|------------------------------|
+| Adobe Commerce 2.4.7 | 2024年4月9日 | 2027年4月9日 | 8.2和8.3 | 10.6 |
+| Adobe Commerce 2.4.6 | 2023年3月14日 | 2026年3月14日 | 8.1和8.2 | 10.6 |
+| Adobe Commerce 2.4.5 | 2022年8月9日 | 2025年8月9日 | 8.1 | 10.5<sup>2</sup> |
+| Adobe Commerce 2.4.4 | 2022年4月12日 | 2025年4月24日 | 8.1 | 10.5<sup>3</sup> |
 
 {style="table-layout:auto"}
 
-<sup>1软件支持终止包括质量修复终止和安全修复终止。</sup><br>
-
 >[!NOTE]
 >
->请参阅 [软件生命周期政策](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
+>- <sup>1</sup> 软件支持终止包括质量修复终止和安全修复终止。
+>- <sup>2</sup> 从2.4.5-p8安全修补程序开始。
+>- <sup>3</sup> 从2.4.4-p9安全修补程序开始。
+>- 请参阅 [软件生命周期政策](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
 
 <table style="table-layout:auto">
 <thead>
