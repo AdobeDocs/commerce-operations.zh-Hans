@@ -1,11 +1,11 @@
 ---
 title: 运营行动手册
-description: Commerce运营行动手册的目标
+description: Commerce 运营战术手册的目标
 exl-id: f072f6ca-3654-4bd2-a32e-000358bb67b3
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '422'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: 配置指南概述
-description: 了解Adobe Commerce应用程序的所有可配置功能和服务。
+description: 了解 Adobe Commerce 应用程序的所有可配置功能和服务。
 exl-id: c4997792-5a47-4ae5-903a-7e5d7235e42e
 source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 

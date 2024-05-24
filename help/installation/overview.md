@@ -1,11 +1,11 @@
 ---
 title: 内部部署安装概述
-description: 了解Adobe Commerce内部部署的安装过程。
+description: 了解 Adobe Commerce 内部部署的安装过程。
 exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
 source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
 source-wordcount: '148'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
