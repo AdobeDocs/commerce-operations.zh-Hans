@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 9527ce1983340c6438c33b1d07acf4b4b699ccc8
+source-git-commit: 7cdaeec902235898bb27914a1b39a551f26d26e2
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '179'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,6 @@ ht-degree: 3%
    - [发行说明](quality-patches-tool/release-notes.md)
 - 命令行工具引用 {#cli-reference}
    - [Adobe Commerce（内部部署）](reference/commerce-on-premises.md)
-   - [Magento Open Source](reference/magento-open-source.md)
    - [升级兼容性工具](reference/uct.md)
 - Adobe Commerce观察 {#observation-for-adobe-commerce}
    - [简介](observation-for-adobe-commerce/intro.md)
