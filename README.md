@@ -1,7 +1,7 @@
 ---
-source-git-commit: 580a15c908fc8ac4ef5d62582dfdd87d75dde994
+source-git-commit: 7dd6322370b976d8edea51fd94099e6dc4c082b7
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '719'
 ht-degree: 3%
 
 ---
@@ -112,6 +112,12 @@ If you submit a pull request with significant changes to documentation and code 
 
    >**注意：** 您必须从以下位置运行脚本： `_jekyll` 目录。 如果这是您第一次运行脚本，则必须先安装Ruby依赖项，并具有 `bundle install` 命令。
 
+1. 导航回 `root` 目录。
+
+   ```
+   cd ..
+   ```
+
 1. 验证预期的 `help/_includes/templated` 文件已修改。
 
    ```
@@ -122,7 +128,15 @@ If you submit a pull request with significant changes to documentation and code 
 
    ```
    modified:   _data/product-availability.yml
-   modified:   ../help/_includes/templated/product-availability-extensions.md
+   modified:   help/_includes/templated/product-availability-extensions.md
+   ```
+
+1. 推送您的更改。
+
+   ```
+   git add
+   git commit -m "_descriptive message of the intended commit_"
+   git push
    ```
 
 有关更多详细信息，请参阅Jekyll文档 [数据文件](https://jekyllrb.com/docs/datafiles)， [液体过滤器](https://jekyllrb.com/docs/liquid/filters/)和其他功能。
