@@ -2,9 +2,9 @@
 title: 测试版
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 1dd4b44c6aa685795e16dccebfaf073dcc0062f2
+source-git-commit: d761bd089fbd2046e993d4652e9e0e2b3c4d2777
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -47,15 +47,6 @@ IBM Sterling Order Management的这项集成加速器使Adobe Commerce客户能�
 - 支持多个数据集和数据流
 
 要参与此测试版，请发送电子邮件请求至 [DataConnection@adobe.com](mailto:DataConnection@adobe.com).
-
-### Backoffice集成入门工具包（私人测试版）
-
-后台 [集成入门工具包](https://developer-stage.adobe.com/commerce/extensibility/app-development/starter-kit/) 为开发人员提供了一个加速器，用于构建事件驱动的与ERP、CRM和OMS等系统的集成。 使用入门套件，您最多可以将开发成本降低50%。 入门套件还遵循Adobe Commerce最佳实践，可显着降低维护成本。 入门套件亮点包括：
-- 产品、订单、客户、库存和发货等常用对象的数据同步
-- 遵循最佳实践的架构Blueprint
-- 载入脚本以加快开发
-
-要参与此测试版，请完成 [注册表单](https://forms.office.com/r/YbYArqE3DT).
 
 ### Adobe Commerce Foundation（公共测试版）
 
