@@ -2,9 +2,9 @@
 title: ’[!DNL Site-Wide Analysis Tool]’
 description: 了解 [!DNL Site-Wide Analysis] 工具、其用途、安装过程以及如何获得访问权限
 exl-id: 32774040-d322-43d6-9c26-c340a0ab58a9
-source-git-commit: 7b6413c4fdc26b73dda74bcf7cd3a3acdd587abc
+source-git-commit: 5f39a2d8440225b3a2e463894e2bd866196fbac2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,10 @@ ht-degree: 0%
 
 - **信息**  — 提供客户联系信息和当前票证摘要，以及有关每个已安装Adobe Commerce产品的详细信息。
 
-- **Recommendations**  — 列出基于最佳实践的建议，以解决在您的网站上检测到的问题。
+- **Recommendations**  — 列出基于最佳实践的建议，以解决在您的网站上检测到的问题：
+   - 对于需要更新基础结构的更改，请提交支持请求。
+   - 对于需要更新应用程序的更改，请自行进行更改。
+   - 对于需要手动干预的更改，例如 [代码部署](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow)，请咨询您的系统管理员或开发人员以获取帮助。
 
 - **例外**  — 列出应用程序因异常情况而引发的错误，无错误处理程序。
 
