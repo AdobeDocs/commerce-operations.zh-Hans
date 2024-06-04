@@ -2,9 +2,9 @@
 title: 升级实施
 description: 了解Adobe Commerce项目升级实施的各个阶段。
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: a81d2c0b6526c2c8c8c5c4652c83595667985543
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,10 @@ ht-degree: 1%
    - 当前安装的版本
    - 升级目标版本
    - 发现的严重错误的数量和详细信息
+
+  >[!TIP]
+  >
+  >所有这些信息（及更多）都可在站点范围分析工具中找到 [仪表板](../../tools/site-wide-analysis-tool/dashboard.md).
 
 - 正在升级服务以支持目标版本。 使用下表模板来映射必须升级哪些服务。 使用 [系统要求](../../installation/system-requirements.md) 以确定要添加到中的内容 _升级到_ 列。
 

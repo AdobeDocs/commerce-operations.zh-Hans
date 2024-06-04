@@ -2,9 +2,9 @@
 title: 安全性和合规性
 description: 了解Adobe Commerce项目的安全性、隐私和行业合规性资源。
 exl-id: 8c8cb369-33da-4c4c-bcab-a95d5ec97cc1
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: f5bcf5c875234875a61664214e50806cc6ba2119
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,9 @@ ht-degree: 0%
 
 ## 安全性
 
-- [Adobe产品安全性](https://helpx.adobe.com/security.html)：Adobe Commerce的最新修补程序、安全更新和最佳实践。
-- [Adobe信任中心](https://www.adobe.com/trust.html)：有关Adobe云服务的运营健康、安全、隐私和合规性的最新信息。
+- [Adobe产品安全性](https://helpx.adobe.com/security.html)：了解Adobe Commerce的最新修补程序、安全更新和最佳实践。
+- [Adobe信任中心](https://www.adobe.com/trust.html)：访问有关所有Adobe云服务的运行健康、安全、隐私和合规性的最新可用信息。
+- [站点范围分析工具](../tools/site-wide-analysis-tool/dashboard.md)：查看有关您的Adobe Commerce站点的简化安全洞察，包括安全扫描、服务终止和安全推荐。
 
 ## 合规性
 
