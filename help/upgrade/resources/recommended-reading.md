@@ -2,7 +2,7 @@
 title: 推荐的升级读物
 description: 查看关于规划 Adobe Commerce 升级的推荐读物。
 exl-id: 24ca57c0-1a68-46c4-b2fa-4a114250d0e3
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 9542084e6ed1a4ebbbb33373d9c7bc9b463b9d5d
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 4%
@@ -42,7 +42,7 @@ ht-degree: 4%
         <p>查看有关Adobe Commerce版本和策略的详细信息。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-eos-policy-faq.html">Adobe Commerce软件终止支持常见问题解答</a></li>
-            <li><a href="https://marketplacesupport.magento.com/hc/en-us/articles/4413722432653">Commerce Marketplace策略</a></li>
+            <li><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/compatibility/requirements/">Commerce Marketplace策略</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-release-strategy-lifecycle-policy.html">新Adobe Commerce发布策略、更新的生命周期策略和扩展支持的常见问题解答</a></li>
             <li><a href="https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf">生命周期政策</a></li>
             <li><a href="../../release/schedule.md">发布计划</a></li>
