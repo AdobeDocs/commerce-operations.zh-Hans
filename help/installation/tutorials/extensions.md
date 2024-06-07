@@ -1,17 +1,18 @@
 ---
-title: 安装扩展
-description: 按照以下步骤安装Adobe Commerce扩展。
+title: 管理第三方扩展
+description: 按照以下步骤安装、启用、升级和卸载Adobe Commerce扩展。
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 6da0e70acc77d2171d6336ab632e6a9a8dd16c67
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
 
-# 安装扩展
 
-扩展或自定义Adobe Commerce行为的代码称为扩展。 您可以选择在上打包和分发扩展 [Commerce Marketplace](https://marketplace.magento.com) 或者另一个扩展分发系统。
+# 管理第三方扩展
+
+扩展或自定义Adobe Commerce行为的代码称为扩展。 您可以选择在上打包和分发扩展 [Commerce Marketplace](https://commercemarketplace.adobe.com/) 或者另一个扩展分发系统。
 
 扩展包括：
 
@@ -21,7 +22,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->本主题介绍如何使用命令行安装您从Commerce Marketplace购买的扩展。 您可以使用相同的过程来安装 _任意_ 扩展；您只需要扩展的编辑器名称和版本。 要找到它，请打开扩展的 `composer.json` 文件并记下 `"name"` 和 `"version"`.
+>本主题介绍如何使用命令行界面管理您从Commerce Marketplace购买的第三方扩展。 您可以使用相同的过程来安装 _任意_ 扩展；您只需要扩展的编辑器名称和版本。 要找到它，请打开扩展的 `composer.json` 文件并记下 `"name"` 和 `"version"`.
+
+## 安装
 
 安装之前，您可能需要：
 
@@ -51,13 +54,13 @@ ht-degree: 0%
 1. 验证扩展是否已正确安装。
 1. 启用并配置该扩展。
 
-## 获取扩展编辑器名称和版本
+### 获取扩展信息
 
-如果您已经知道扩展的编辑器名称和版本，请跳过此步骤并继续操作 [更新您的 `composer.json` 文件](#update-your-composer-file).
+如果您已经知道扩展的编辑器名称和版本，请跳过此步骤并继续操作 [更新您的 `composer.json` 文件](#update-composer-dependencies).
 
 要从Commerce Marketplace中获取扩展的编辑器名称和版本，请执行以下操作：
 
-1. 登录 [Commerce Marketplace](https://marketplace.magento.com) 以及购买扩展时所用的用户名和密码。
+1. 登录 [Commerce Marketplace](https://commercemarketplace.adobe.com/) 以及购买扩展时所用的用户名和密码。
 
 1. 在右上角，单击 **您的姓名** > **我的个人资料**.
 
@@ -75,7 +78,7 @@ ht-degree: 0%
 >
 >或者，您也可以找到的“编辑器”名称和版本 _任意_ 扩展(无论您是在Commerce Marketplace上还是在其他位置购买的) `composer.json` 文件。
 
-## 更新您的编辑器文件
+### 更新编辑器依赖项
 
 将扩展的名称和版本添加到 `composer.json` 文件：
 
@@ -103,7 +106,7 @@ ht-degree: 0%
    Generating autoload files
    ```
 
-## 验证扩展
+### 验证安装
 
 要验证扩展是否正确安装，请运行以下命令：
 
@@ -125,7 +128,7 @@ bin/magento module:status
 
 并在“已禁用的模块列表”下查找扩展。
 
-## 启用扩展
+### 启用
 
 除非先清除生成的静态视图文件，否则某些扩展无法正常工作。 使用 `--clear-static-content` 启用扩展时用于清除静态视图文件的选项。
 
@@ -183,7 +186,7 @@ bin/magento module:status
 >
 >如果在浏览器中加载店面时遇到错误，请使用以下命令清除缓存： `bin/magento cache:flush`.
 
-## 升级扩展
+## 升级
 
 要更新或升级模块或扩展，请执行以下操作：
 
@@ -218,3 +221,39 @@ bin/magento module:status
    ```bash
    bin/magento cache:clean
    ```
+
+## 卸载
+
+您应该联系扩展供应商以获取有关删除第三方扩展的说明。 说明应提供以下信息：
+
+- 如何还原数据库表更改
+- 如何还原数据库数据更改
+- 应删除或还原哪些文件
+
+>[!CAUTION]
+>
+>在非生产环境中执行卸载步骤 _第一_ 并在部署到生产环境之前进行全面测试。
+
+以下说明提供了有关卸载第三方扩展的常规信息：
+
+1. 从您的Adobe Commerce项目存储库中删除该扩展。
+
+   - 对于基于编辑器的扩展，请从Adobe Commerce中删除该扩展 `composer.json` 文件。
+
+     ```bash
+     composer remove <package-name>
+     ```
+
+   - 对于不基于Composer的扩展，请从Adobe Commerce项目存储库中删除物理文件。
+
+     ```bash
+     rm -rf app/code/<vendor-name>/<module-name>
+     ```
+
+1. 如果 `config.php` 文件在Adobe Commerce项目存储库中的源代码控制下，请从以下位置移除扩展： `config.php` 文件。
+
+1. 测试本地数据库，确保供应商提供的说明按预期工作。
+
+1. 验证扩展是否已正确禁用，以及您的网站在暂存环境中是否可按预期运行。
+
+1. 将更改部署到生产环境。
