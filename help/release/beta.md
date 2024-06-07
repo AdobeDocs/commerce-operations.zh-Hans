@@ -2,9 +2,9 @@
 title: 测试版
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: d761bd089fbd2046e993d4652e9e0e2b3c4d2777
+source-git-commit: 0e2dfc376a049a47348a7a913bd5181436227cc2
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、提供反馈以及引导Adobe Commerce未来的方式。 有两种类型的测试版计划：
 
 - 公共测试版：公共测试版计划可供所有Adobe Commerce客户和合作伙伴使用
-- 私人测试版：私人测试版计划可能需要根据资格条件获得批准才能参与
+- 私人测试版：私人测试版计划可能需要根据参与资格标准进行批准
 
 >[!IMPORTANT]
 >
@@ -27,6 +27,22 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 ## 当前测试版计划
 
 请参阅以下部分，了解活动Beta程序的列表。
+
+### Commerce的Experience Manager Assets集成（私有测试版）
+
+适用于Commerce的Experience Manager Assets集成支持高效管理和将大量产品映像从Experience Manager Assets交付到Adobe Commerce，并且无需执行或执行很低的操作工作。
+
+主要功能：
+
+- 即插即用集成 — 提供Experience Manager Assets与Adobe Commerce之间的开箱即用集成Adobe，使商家能够专注于最重要的事情，同时降低运营成本并提高效率。
+
+- 大规模个性化产品图像 — 使用Experience Manager Assets通过简单的基于UI的编辑工具、使用Adobe Firefly的创成性内容创建和分配的资源工作流为个性化的Commerce体验生成数百万个产品变体，以确保品牌一致性。 一旦您对资源满意，即可使用Experience Manager Assets集成将其无缝交付到Commerce店面。
+
+- 轻松载入 — 通过可配置的同步过程简化商户载入，该过程支持在Experience Manager Assets存储库和Commerce目录之间完全同步。
+
+- 灵活匹配策略 — 该集成包括基于产品SKU的默认资源匹配算法(可在AEM Assets和Commerce之间同步图像)，并可使用Adobe Developer App Builder进行扩展。 与您的解决方案合作伙伴合作，在集成的基础上构建自定义资产匹配策略，以适应任何资产管理存储库结构。
+
+要参与测试版，请发送电子邮件请求至 [肖恩·麦克兰](mailto:mccran@adobe.com).
 
 ### IBM Sterling Order Management系统集成（私人测试版）
 
