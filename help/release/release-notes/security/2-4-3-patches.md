@@ -2,23 +2,23 @@
 title: Adobe Commerce 2.4.3安全修补程序的发行说明
 description: 了解Adobe Commerce版本2.4.3的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 72d343cd-83d7-48ce-976a-e26ba1b8db27
-source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
+source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
 
-# Adobe Commerce 2.4.3安全修补程序发行说明
+
+# Adobe Commerce 2.4.3安全修补程序的发行说明
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
 
 ## Adobe Commerce 2.4.3-p3
 
-Adobe Commerce 2.4.3-p3安全版本为先前版本(Adobe Commerce 2.4.3和Magento Open Source2.4.3)中发现的漏洞提供了安全修复。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
+Adobe Commerce 2.4.3-p3安全版本为以前版本的2.4.3中发现的漏洞提供了安全修复。此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
 有关安全错误修复的最新信息，请参阅 [Adobe安全公告APSB22-38](https://helpx.adobe.com/security/products/magento/apsb22-38.html).
-
 
 ### 应用 `AC-3022.patch` 继续提供DHL作为运输承运商
 
@@ -39,7 +39,6 @@ Adobe Commerce 2.4.3-p2安全版本为以前版本中发现的漏洞提供了安
 ### 应用 `AC-3022.patch` 继续提供DHL作为运输承运商
 
 DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0。 支持DHL集成的Adobe Commerce 2.4.4及更早版本仅支持版本6.0。部署这些版本的商家应适用 `AC-3022.patch` 尽早继续提供DHL作为航运公司。 请参阅 [应用修补程序以继续将DHL作为运输运营商](https://support.magento.com/hc/en-us/articles/7707818131597-Apply-a-patch-to-continue-offering-DHL-as-shipping-carrier) 知识库文章，了解有关下载和安装修补程序的信息。
-
 
 ### 安全性亮点
 
@@ -65,7 +64,6 @@ Adobe Commerce 2.4.3-p1安全版本为先前版本(Adobe Commerce 2.4.3和Magent
 
 有关安全错误修复的最新信息，请参阅 [Adobe安全公告APSB21-86](https://helpx.adobe.com/security/products/magento/apsb21-86.html). 补丁发行版本还提供了 [Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html)， [克拉尔纳](https://marketplace.magento.com/klarna-m2-klarna.html)、和 [顶点](https://marketplace.magento.com/vertexinc-vertex-tax-module.html) 供应商开发的扩展。
 
-
 ### 应用 `AC-3022.patch` 继续提供DHL作为运输承运商
 
 DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0。 支持DHL集成的Adobe Commerce 2.4.4及更早版本仅支持版本6.0。部署这些版本的商家应适用 `AC-3022.patch` 尽早继续提供DHL作为航运公司。 请参阅 [应用修补程序以继续将DHL作为运输运营商](https://support.magento.com/hc/en-us/articles/7707818131597-Apply-a-patch-to-continue-offering-DHL-as-shipping-carrier) 知识库文章，了解有关下载和安装修补程序的信息。
@@ -87,4 +85,3 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 **最近的渗透测试漏洞** 已在此版本中修复。 <!-- MC-42431-->
 
 不支持的源表达式 `unsafe-inline` 已从内容安全策略中删除 `frame-ancestors` 指令。 [GitHub-33101](https://github.com/magento/magento2/issues/33101)<!-- MC-42632-->
-

@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.5安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.5的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: e1c5b5e5c1a8800aa5aa2657060f61c16743cbda
+source-git-commit: 7705e750a466ab134ae2616a40a32880ee0c45de
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,16 @@ ht-degree: 0%
 # Adobe Commerce 2.4.5安全修补程序的发行说明
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
+
+## Adobe Commerce 2.4.5-p8
+
+Adobe Commerce 2.4.5-p7安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。
+
+有关安全错误修复的最新信息，请参阅 [Adobe安全公告APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html).
+
+### 平台升级
+
+* **MariaDB 10.5支持**. 此补丁发行版本引入了与MariaDB版本10.5的兼容性。Adobe Commerce仍与MariaDB版本10.4兼容，但Adobe建议仅在MariaDB版本10.5中使用Adobe Commerce 2.4.5-p8以及所有即将发布的仅支持2.4.5安全的修补程序版本，因为MariaDB 10.4的维护将于2024年6月18日结束。 <!--AC-11530-->
 
 ## Adobe Commerce 2.4.5-p7
 
@@ -107,5 +117,3 @@ Adobe Commerce 2.4.5-p1安全版本为先前版本(Adobe Commerce 2.4.5和Magent
 有关安全错误修复的最新信息，请参阅 [Adobe安全公告APSB22-48](https://helpx.adobe.com/security/products/magento/apsb22-48.html).
 
 其中一项安全错误修复包括创建新的配置设置。 此 **电子邮件更改后需要电子邮件确认** 通过配置设置，管理员可在管理员用户更改其电子邮件地址时要求确认电子邮件。 <!-- AC-6292-->
-
-

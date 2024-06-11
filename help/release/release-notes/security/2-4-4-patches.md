@@ -2,16 +2,27 @@
 title: Adobe Commerce 2.4.4安全修补程序的发行说明
 description: 了解Adobe Commerce版本2.4.4的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 136d7090-6bf2-41e3-8445-b07bdc67f12b
-source-git-commit: e1c5b5e5c1a8800aa5aa2657060f61c16743cbda
+source-git-commit: 7705e750a466ab134ae2616a40a32880ee0c45de
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
 
-# Adobe Commerce 2.4.4安全修补程序发行说明
+
+# Adobe Commerce 2.4.4安全修补程序的发行说明
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
+
+## Adobe Commerce 2.4.4-p9
+
+Adobe Commerce 2.4.4-p9安全版本为以前版本的2.4.4中发现的漏洞提供了安全错误修复。
+
+有关安全错误修复的最新信息，请参阅 [Adobe安全公告APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html).
+
+### 平台升级
+
+* **MariaDB 10.5支持**. 此补丁发行版本引入了与MariaDB版本10.5的兼容性。Adobe Commerce仍与MariaDB版本10.4兼容，但Adobe建议仅在MariaDB版本10.5中使用Adobe Commerce 2.4.4-p9以及所有即将发布的仅支持2.4.4安全的修补程序版本，因为MariaDB 10.4的维护将于2024年6月18日结束。 <!--AC-11530-->
 
 ## 2.4.4-p8
 
@@ -131,4 +142,3 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 **问题**：在2.4.4-p1包上运行时，Web API和集成测试会显示此错误： `[2022-06-14T16:58:23.694Z] PHP Fatal error:  Declaration of Magento\TestFramework\ErrorLog\Logger::addRecord(int $level, string $message, array $context = []): bool must be compatible with Monolog\Logger::addRecord(int $level, string $message, array $context = [], ?Monolog\DateTimeImmutable $datetime = null): bool in /var/www/html/dev/tests/integration/framework/Magento/TestFramework/ErrorLog/Logger.php on line 69`. **解决方法**：通过运行 `require monolog/monolog:2.6.0` 命令。 <!-- AC-3651-->
 
 **问题**：商家在从Adobe Commerce 2.4.4升级到Adobe Commerce 2.4.4-p1的过程中可能会注意到包版本降级通知。 可以忽略这些消息。 包版本中的差异是由于包生成期间出现异常造成的。 没有产品功能受到影响。 请参阅 [从2.4.4升级到2.4.4后，将包降级 — p1](https://support.magento.com/hc/en-us/articles/8214752983949) 知识库文章，用于讨论受影响的情景和解决方法。
-

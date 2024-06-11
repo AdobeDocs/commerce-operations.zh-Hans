@@ -1,5 +1,5 @@
 ---
-source-git-commit: 7dd6322370b976d8edea51fd94099e6dc4c082b7
+source-git-commit: 0709cd6510adce0f513894fdecb2de5ac88d0e87
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # Adobe Commerce技术文档
 
-我们欢迎社区成员以及文档团队以外的Adobe员工踊跃参与。
+我们欢迎社区以及文档团队以外的Adobe员工投稿。
 
 ## Adobe开源项目行为准则
 
@@ -67,7 +67,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### 生成模板化内容
 
-通常，大多数作者只需要将发行版本添加到产品可用性和系统要求表中。 所有其他模板化内容的维护都是自动进行的，或由专门的团队成员管理。 这些说明适用于“大多数”作者。
+通常，大多数作者只需要将发行版本添加到产品可用性和系统要求表中。 所有其他模板化内容的维护都是自动进行的，或由专门的团队成员管理。 这些说明适用于大多数作者。
 
 >**注意：**
 >

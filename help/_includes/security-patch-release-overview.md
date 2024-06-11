@@ -1,11 +1,11 @@
 ---
-source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
+source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
-# 关于Adobe Commerce Security修补程序版本
+# 关于Adobe Commerce安全修补程序版本
 
 **安全错误修复**：解决已识别的安全问题并在受影响的产品区域提供预期结果的软件代码更改。 这些修复通常向后兼容。
 
