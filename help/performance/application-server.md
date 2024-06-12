@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 70d86569bef5c656fff3a8c6b4af142c81c81f10
+source-git-commit: c2f48db87f40498a84b2bf41569bb46202565701
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2088'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ GraphQL Application Server允许Adobe Commerce在连续的Commerce GraphQL API�
 在Pro项目上启用应用程序服务器功能后，请先完成以下步骤，然后再部署GraphQL Application Server：
 
 1. 使用来自的云模板在云基础架构上部署Adobe Commerce [2.4.7-appserver分支](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
-1. 确保您的所有Commerce自定义项和扩展均 [兼容](https://developer.adobe.com/commerce/php/development/components/app-server/) 与GraphQL Application Server集成。
+1. 确保您的所有Commerce自定义项和扩展都 [兼容](https://developer.adobe.com/commerce/php/development/components/app-server/) 与GraphQL Application Server集成。
 1. 克隆Commerce Cloud项目。
 1. 如有必要，调整“application-server/nginx.conf.sample”文件中的设置。
 1. 注释掉中的活动“Web”部分 `project_root/.magento.app.yaml` 个文件。
@@ -66,6 +66,12 @@ GraphQL Application Server允许Adobe Commerce在连续的Commerce GraphQL API�
            protocol: http
        commands:
            start: ./application-server/start.sh > var/log/application-server-status.log 2>&1
+   ```
+
+1. 确保 `/application-server/start.sh` 可通过运行以下命令来执行：
+
+   ```bash
+   chmod +x application-server/start.sh
    ```
 
 1. 使用以下命令将更新的文件添加到Git索引：
@@ -93,7 +99,7 @@ git push
 在启动项目上部署GraphQL Application Server之前，请完成以下步骤：
 
 1. 使用来自的云模板在云基础架构上部署Adobe Commerce [2.4.7-appserver分支](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
-1. 确保所有的Commerce自定义项和扩展都与GraphQL Application Server兼容。
+1. 确保您的所有Commerce自定义项和扩展都与GraphQL Application Server兼容。
 1. 确认 `CRYPT_KEY` 已为实例设置了环境变量。 您可以在云项目门户（载入UI）上检查此变量的状态。
 1. 克隆Commerce Cloud项目。
 1. 重命名 `application-server/.magento/.magento.app.yaml.sample` 到 `application-server/.magento/.magento.app.yaml` 并根据需要调整.magento.app.yaml中的设置。
