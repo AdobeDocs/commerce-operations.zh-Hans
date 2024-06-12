@@ -1,7 +1,7 @@
 ---
-source-git-commit: 19d19ef385cf4aaee3a255930af8e6d3b81de23a
+source-git-commit: 1f8fda87e0d39fdcf2372f72373a0b2ea486d25a
 workflow-type: tm+mt
-source-wordcount: '21169'
+source-wordcount: '21185'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**版本**：2.4.7
+**版本**：2.4.7-p1
 
 此参考包含141个命令，这些命令可通过 `bin/magento` 命令行工具。
 初始列表是使用 `bin/magento list` Adobe Commerce命令。
@@ -3996,7 +3996,7 @@ bin/magento events:registrations:list
 ## `events:subscribe`
 
 ```bash
-bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [-p|--priority] [-d|--destination DESTINATION] [--] <event-code>
+bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [-p|--priority] [-d|--destination DESTINATION] [--hipaaAuditRequired] [--] <event-code>
 ```
 
 订阅事件
@@ -4049,6 +4049,13 @@ bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [-
 
 - 默认： `default`
 - 需要一个值
+
+### `--hipaaAuditRequired`
+
+指示该事件包含要接受HIPAA审核的数据。
+
+- 默认： `false`
+- 不接受值
 
 ### `--help`， `-h`
 
