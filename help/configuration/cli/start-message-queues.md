@@ -2,9 +2,9 @@
 title: 启动消息队列使用者
 description: 了解如何启动消息队列使用者。
 exl-id: fd6edb24-8ebe-4b67-8a03-6cc759b60fa8
-source-git-commit: c9e7a8926c7003d34a62d2defb62c09d58919ddd
+source-git-commit: cdd752532d17e1168e0aa7d354ec283089d98be3
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ bin/magento queue:consumers:start [--max-messages=<value>] [--batch-size=<value>
 bin/magento queue:consumers:start <consumer_name> &
 ```
 
-请参阅 [`queue:consumers:start`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-commerce.html#queueconsumersstart) 在的Commerce部分中 _命令行工具引用_ 有关命令选项、参数和值的详细信息。
+请参阅 [`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart) 在的Commerce部分中 _命令行工具引用_ 有关命令选项、参数和值的详细信息。
 
 >[!INFO]
 >
