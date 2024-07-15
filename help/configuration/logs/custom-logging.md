@@ -5,7 +5,7 @@ feature: Configuration, Logs
 exl-id: 6c94ebcf-70df-4818-a17b-32512eba516d
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe建议使用集中式应用程序日志记录，原因如下：
 
 - 它允许在除应用程序服务器之外的服务器上存储日志，并减少磁盘I/O操作，从而简化对应用程序服务器的支持。
 
-- 它通过使用特殊工具(例如 [Logstash]， [Logplex]，或 [已流化] — 不影响生产服务器。
+- 它通过使用特殊工具（如[Logstash]、[Logplex]或[fluentd]）使日志数据的处理更加有效，而不会影响生产服务器。
 
   >[!INFO]
   >
@@ -28,22 +28,22 @@ Adobe建议使用集中式应用程序日志记录，原因如下：
 
 ## PSR-3合规性
 
-此 [PSR-3标准][laminas] 为日志记录库定义一个通用的PHP接口。 PSR-3的主要目标是允许库接收 `Psr\Log\LoggerInterface` 对象并以简单且通用的方式向其写入日志。
+[PSR-3标准][laminas]为日志记录库定义了公用PHP接口。 PSR-3的主要目标是允许库以简单且通用的方式接收`Psr\Log\LoggerInterface`对象并向其写入日志。
 
 这让您能够轻松替换实施，而无需担心此类替换可能会破坏应用程序代码。 它还确保即使将来系统的版本中更改了日志实施，自定义组件也能正常工作。
 
 ## 独白
 
-Commerce 2符合PSR-3标准。 默认情况下，Commerce使用 [独白]. 作为偏好设置实施的独白 `Psr\Log\LoggerInterface` 在Commerce应用程序中 [`di.xml`][di].
+Commerce 2符合PSR-3标准。 默认情况下，Commerce使用[独白]。 在Commerce应用程序[`di.xml`][di]中作为`Psr\Log\LoggerInterface`的首选项实现的单一日志。
 
 Monolog是一种常用的PHP日志记录解决方案，具有多种使您能够构建高级日志记录策略的处理程序。 以下是Monolog的工作原理摘要。
 
-独白 _logger_ 是一个拥有自己的渠道集 _处理程序_. Monolog有许多处理程序，包括：
+Monolog _logger_&#x200B;是拥有自己的&#x200B;_处理程序_&#x200B;集的通道。 Monolog有许多处理程序，包括：
 
 - 记录到文件和syslog
 - 发送警报和电子邮件
 - 记录特定的服务器和网络日志记录
-- 登录开发（与FireBug和Chrome Logger等集成）
+- 登录开发(与FireBug和Chrome Logger等集成)
 - 登录到数据库
 
 每个处理程序可以处理输入消息并停止传播，也可以将控件传递到链中的下一个处理程序。

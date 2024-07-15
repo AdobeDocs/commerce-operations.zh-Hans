@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # 安全性概述
 
-“安全”部分包含安全相关功能的设置，如密码散列、缓存中毒，以及保护 `cron.php` 文件。
+“安全”部分包含安全相关功能的设置，如密码散列、缓存中毒和保护`cron.php`文件。
 
 ## 安全资源
 
 配置指南的安全部分中的主题不是全部Commerce功能。 其他Commerce指南中有许多与安全相关的重要主题，例如：
 
-- [PHP开发人员指南](https://developer.adobe.com/commerce/php/development/security/) 有关Adobe Commerce开发人员可用于提高所构建组件安全性的信息。
-- [安全和合规性指南](https://devdocs.magento.com/security/security-and-compliance.html) 有关安全性、隐私和法规合规性的信息，请点击相关链接获取技术资源。
+- [PHP开发人员指南](https://developer.adobe.com/commerce/php/development/security/)，了解Adobe Commerce开发人员可用于提高所构建组件安全性的信息。
+- [安全和合规性指南](https://devdocs.magento.com/security/security-and-compliance.html)，了解有关安全、隐私和法规合规性的信息，以及指向技术资源的链接。
 
 现在，以下指南中同时包含了几个安全相关主题：
 
-- [Google reCAPTCHA](https://devdocs.magento.com/guides/v2.4/security/google-recaptcha.html) 在 _扩展指南_.
-- [双重身份验证](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html) 在 _扩展指南_.
-- [符合《通用数据保护条例》(GDPR)](https://devdocs.magento.com/compliance/privacy/gdpr.html) 在 _安全和合规性指南_.
+- _扩展指南_&#x200B;中的[Google reCAPTCHA](https://devdocs.magento.com/guides/v2.4/security/google-recaptcha.html)。
+- _扩展指南_&#x200B;中的[双重身份验证](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html)。
+- _安全和合规性指南_&#x200B;中的[通用数据保护条例(GDPR)合规性](https://devdocs.magento.com/compliance/privacy/gdpr.html)。

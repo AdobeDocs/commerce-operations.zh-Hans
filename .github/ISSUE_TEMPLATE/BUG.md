@@ -7,7 +7,7 @@ assignees: dshevtsov
 source-git-commit: b0f4671b8c214397af77cbd316e489dac1ce8601
 workflow-type: tm+mt
 source-wordcount: '17'
-ht-degree: 0%
+ht-degree: 29%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 1. 第一步
 1. 第二步
-1. 等
+1. 等等。
 
 ## 预期结果
 
 <!-- (REQUIRED) What is the expected result or behavior after resolving this issue? -->
 
-## 可能的解决方案
+## 可采用的解决方案
 
 <!-- (OPTIONAL) What would a solution for this issue look like? -->
 

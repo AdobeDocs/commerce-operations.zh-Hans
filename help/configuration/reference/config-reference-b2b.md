@@ -5,35 +5,35 @@ feature: Configuration, B2B, Companies, Payments, Quotes
 exl-id: 3414dea1-17c9-4462-8b8a-51a6045b0bc9
 source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
 
 # B2B扩展配置路径参考
 
-_这适用于安装了B2B for Adobe Commerce的实例。_
+_这适用于已安装Adobe Commerce的B2B的实例。_
 
-本主题列出了Commerce Enterprise B2B扩展的配置路径。 此 [`magento app:config:dump` 命令](../cli/export-configuration.md) 将这些值写入共享配置文件， `app/etc/config.php`，它应该在源代码控制中。
+本主题列出了Commerce Enterprise B2B扩展的配置路径。 [`magento app:config:dump`命令](../cli/export-configuration.md)将这些值写入到共享配置文件`app/etc/config.php`中，该文件应位于源代码控制中。
 
 >[!INFO]
 >
->此参考列表 _仅限_ Adobe Commerce B2B特有的配置路径。 此扩展包含Adobe Commerce的所有配置路径。
+>此参考仅列出Adobe Commerce中B2B唯一的&#x200B;_个_&#x200B;配置路径。 此扩展包含Adobe Commerce的所有配置路径。
 
 有关这些配置路径，请参阅：
 
 - [支付配置路径](config-reference-payment.md)
 - [敏感且特定于系统的配置路径参考](config-reference-sens.md)
 
-要选择性地覆盖任何配置设置或设置敏感设置，请参阅 [使用环境变量覆盖配置设置](override-config-settings.md#environment-variables).
+若要选择性地覆盖任何配置设置或设置敏感设置，请参阅[使用环境变量覆盖配置设置](override-config-settings.md#environment-variables)。
 
 ## 常规类别
 
-此部分列出了“管理员”中选项可用的变量名称和配置路径，位于 **[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL General]**.
+此部分列出了“管理员”中选项在&#x200B;**[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL General]**&#x200B;下可用的变量名称和配置路径。
 
 ### B2B功能路径
 
-这些配置值在管理员的以下位置提供： **[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL B2B Features]**.
+这些配置值在管理员的&#x200B;**[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL B2B Features]**&#x200B;中可用。
 
 | 名称 | 配置路径 | 是否加密？ | 特定于系统？ | 敏感？ |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -49,11 +49,11 @@ _这适用于安装了B2B for Adobe Commerce的实例。_
 
 ## 客户类别
 
-此部分列出了“管理员”中选项可用的变量名称和配置路径，位于 **[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL Customers]**.
+此部分列出了“管理员”中选项可用的变量名称和配置路径，位于&#x200B;**[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL Customers]**&#x200B;下。
 
 ### 公司配置路径
 
-这些配置值在管理员的以下位置提供： **[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL Customers]** > **[!UICONTROL Company Configuration]**.
+这些配置值在管理员的&#x200B;**[!UICONTROL Stores]** >设置> **[!UICONTROL Configuration]** > **[!UICONTROL Customers]** > **[!UICONTROL Company Configuration]**&#x200B;中可用。
 
 | 名称 | 配置路径 | 是否加密？ | 特定于系统？ | 敏感？ |
 |--------------|--------------|--------------|--------------|--------------|
@@ -93,7 +93,7 @@ _这适用于安装了B2B for Adobe Commerce的实例。_
 
 ### 申购单列出路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **申请列表**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **申请列表**&#x200B;的管理员中可用。
 
 | 名称 | 配置路径 | 是否加密？ | 特定于系统？ | 敏感？ |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -103,11 +103,11 @@ _这适用于安装了B2B for Adobe Commerce的实例。_
 
 ## 销售类别
 
-此部分列出了“管理员”中选项可用的变量名称和配置路径，位于 **商店** >设置> **配置** > **销售**.
+此部分列出了&#x200B;**商店** >设置> **配置** > **销售**&#x200B;下的管理员中选项可用的变量名称和配置路径。
 
 ### 销售电子邮件路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **销售电子邮件**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **销售电子邮件**&#x200B;的管理员中可用。
 
 | 名称 | 配置路径 | 是否加密？ | 特定于系统？ | 敏感？ |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -126,7 +126,7 @@ _这适用于安装了B2B for Adobe Commerce的实例。_
 
 ### 引号路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **引号**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **报价**&#x200B;的管理员中可用。
 
 | 名称 | 配置路径 | 是否加密？ | 特定于系统？ | 敏感？ |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -145,7 +145,7 @@ _这适用于安装了B2B for Adobe Commerce的实例。_
 
 ## 支付方式路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **支付方式**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **付款方式**&#x200B;的管理员中可用。
 
 >[!INFO]
 >

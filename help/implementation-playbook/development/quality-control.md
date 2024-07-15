@@ -77,7 +77,7 @@ ht-degree: 0%
   <tr>
     <td></td>
     <td></td>
-    <td>将错误发布到错误跟踪系统(Jira/Redmine/Trello)</td>
+    <td>Post错误到错误跟踪系统(Jira/Redmine/Trello)</td>
     <td>排定测试优先级/计划测试时间，以符合PM定义的项目计划</td>
   </tr>
   <tr>
@@ -143,7 +143,7 @@ ht-degree: 0%
 </tbody>
 </table>
 
-类似于 [工具](project-management-tools.md) 在开发过程中，我们选择了少数几种解决方案和平台，我们经常使用这些解决方案和平台进行质量控制测试。
+与我们在开发过程中确定的[工具](project-management-tools.md)类似，我们选择了几个我们经常用于质量控制测试的解决方案和平台。
 
 | 用途 | 工具 |
 |---------------------------|---------------------------------------------------|
@@ -181,7 +181,7 @@ BrowserStack是一个云Web和移动测试平台，允许开发人员跨按需�
 
 Postman是API开发的协作平台。 Postman简化了构建API的每个步骤，并简化了协作，以便您可以创建更好的API。
 
-SoapUI是用于简单对象访问协议(SOAP)和表示状态传输(REST)的开源Web服务测试应用程序。 其功能包括Web服务检查；调用、开发、模拟和模拟；功能测试；加载和合规性测试。
+SoapUI是一个用于Simple Object Access Protocol (SOAP)和呈现状态传输(REST)的开源Web服务测试应用程序。 其功能包括Web服务检查；调用、开发、模拟和模拟；功能测试；加载和合规性测试。
 
 ## 自动化测试
 

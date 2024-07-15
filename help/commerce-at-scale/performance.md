@@ -6,7 +6,7 @@ feature: Integration, Cache
 topic: Commerce, Performance
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '2248'
+source-wordcount: '2246'
 ht-degree: 0%
 
 ---
@@ -29,20 +29,20 @@ AEM Dispatcher是一个反向代理，可帮助提供既快速又动态的环境
 
 上述Dispatcher TTL方法会显着减少请求并加载到发布者上，但有些资产极不可能更改，因此甚至可以通过在用户浏览器上本地缓存相关文件来减少对Dispatcher的请求。 例如，站点的徽标（显示在站点模板中站点的每个页面上）不需要每次都向Dispatcher请求。 而是可以存储在用户的浏览器缓存中。 降低每个页面加载的带宽需求将对站点响应性和页面加载时间产生重大影响。
 
-通常，浏览器级别的缓存是通过“Cache-Control： max-age=”响应标头来设置。 maxage设置可以告知浏览器，在尝试“重新验证”或再次从站点请求缓存之前，应当缓存文件的时间长度（以秒为单位）。 这个缓存max-age的概念，通常指的是“缓存到期时间”或TTL（“生存时间”）。 大规模交付Commerce体验 — 使用Adobe Experience Manager、Commerce Integration Framework、Adobe Commerce 7
+通常，浏览器级别的缓存是通过“Cache-Control： max-age=”响应标头来设置。 maxage设置可以告知浏览器，在尝试“重新验证”或再次从站点请求缓存之前，应当缓存文件的时间长度（以秒为单位）。 这个缓存max-age的概念，通常指的是“缓存到期时间”或TTL（“生存时间”）。 大规模交付Commerce体验 — 使用Adobe Experience Manager、Commerce integration framework、Adobe Commerce 7
 
-AEM/CIF/Adobe Commerce站点的某些区域可以设置为在客户端浏览器中缓存，这些区域包括：
+可以设置为在客户端浏览器中缓存的AEM/CIF/Adobe Commerce站点的某些区域包括：
 
 - 图像(在AEM模板本身中，例如网站徽标和模板设计图像 — 将通过Fastly从Adobe Commerce调用目录产品图像，稍后将讨论缓存这些图像)
 - HTML文件（用于不常更改的页面 — 条款和条件页面等）
 - CSS文件
 - 所有站点JavaScript文件 — 包括CIF JavaScript文件
 
-## Dispatcher状态文件级别和宽限期优化
+## Dispatcher statfilelevel和宽限期优化
 
-默认Dispatcher配置使用/statfilelevel &quot;0&quot;设置 — 这意味着单个&quot;。stat&quot;文件放在htdocs目录（文档根目录）的根目录下。 如果对AEM中的页面或文件进行了更改，则此单一stat文件的修改时间将更新为更改时间。 如果时间比资源的修改时间新，则Dispatcher将考虑所有资源失效，并且任何对失效资源的后续请求都将触发对发布实例的调用。 因此，基本上，使用此设置，每次激活都会使整个缓存失效。
+默认Dispatcher配置使用/statfilelevel &quot;0&quot;设置 — 这意味着单个&quot;。stat&quot;文件放在htdocs目录（文档根目录）的根目录下。 如果对AEM中的页面或文件进行了更改，则此单一stat文件的修改时间将更新为更改时间。 如果时间比资源的修改时间新，则Dispatcher会认为所有资源都将失效，并且任何对失效资源的后续请求都将触发对Publish实例的调用。 因此，基本上，使用此设置，每次激活都会使整个缓存失效。
 
-对于任何网站，尤其是负载沉重的商务网站，这会向AEM发布层施加不必要的负载，以便整个网站结构在仅进行单页面更新时失效。
+对于任何网站，尤其是负载沉重的商务网站，这会向AEM Publish层施加不必要的负载，以便整个网站结构在仅进行单页面更新时失效。
 
 相反，可以将statfilelevel设置修改为一个更高的值，对应于文档根目录中htdocs目录的子目录的深度，这样当位于特定级别的文件失效时，将只更新该.stat目录级别或更低级别的文件。
 
@@ -68,11 +68,12 @@ content/ecommerce/us/en/products/product-page.html
 
 >[!NOTE]
 >
-> 有关此主题的更多详细阅读，请参见 [aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/gracePeriod) github存储库。
+> 有关此主题的更多详细阅读可在[aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/gracePeriod) GitHub存储库中找到。
 
-## CIF — 通过组件进行GraphQL缓存
+## CIF — 通过组件的GraphQL缓存
 
-可以将AEM中的各个组件设置为缓存，这意味着对Adobe Commerce的GraphQL请求调用一次，然后从AEM缓存中检索后续请求，最多不超过配置的时间限制，并且不会将进一步的加载放置到Adobe Commerce上。 例如，基于每个页面上显示的类别树的站点导航和多面搜索功能中的选项 — 这些只是需要在Adobe Commerce上构建资源密集型查询的两个方面，但不太可能定期更改，因此将是缓存的良好选择。 这样一来，即使发布者正在重建PDP或PLP，用于导航构建的资源密集型GraphQL请求也不会命中Adobe Commerce，并且可从AEM CIF上的GraphQL缓存中进行检索。
+可以将AEM中的各个组件设置为缓存，这意味着GraphQL请求Adobe
+Commerce调用一次，之后在配置的时间限制内，将从AEM缓存中检索后续请求，并且不会将进一步的加载放置到Adobe Commerce上。 例如，基于每个页面上显示的类别树的站点导航和多面搜索功能中的选项 — 这些只是需要在Adobe Commerce上构建资源密集型查询的两个方面，但不太可能定期更改，因此将是缓存的良好选择。 这样一来，即使发布者正在重建PDP或PLP，用于导航构建的资源密集型GraphQL请求也不会命中Adobe Commerce，并且可从AEM CIF上的GraphQL缓存中进行检索。
 
 以下示例适用于要缓存的导航组件，因为它在网站的所有页面上发送相同的GraphQL查询。 对于导航结构，以下请求在10分钟内缓存过去100个条目：
 
@@ -88,7 +89,8 @@ com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 
 请求（包括所有自定义http标头和变量）必须完全匹配才能使缓存“点击”并防止重复调用Adobe Commerce。 需要注意的是，一旦设置，将无法轻松地手动使此缓存失效。 这可能意味着，如果在Adobe Commerce中添加新类别，则在上面缓存中设置的到期时间到期并刷新GraphQL请求之前，此类别不会开始显示在导航中。 搜索Facet也是如此。 但是，鉴于此缓存可带来的性能优势，这通常是可接受的折衷方案。
 
-上述缓存选项可以使用“GraphQL Client Configuration Factory”中的AEM OSGi Configuration控制台进行设置。 可以使用以下格式指定每个缓存配置条目：
+上述缓存选项可以使用“GraphQL客户端”中的AEM OSGi配置控制台进行设置
+Configuration Factory”。 可以使用以下格式指定每个缓存配置条目：
 
 ```
 * NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
@@ -128,12 +130,12 @@ gclid和fbclid将随每个单击该广告的用户而更改，这用于跟踪目
 
 >[!NOTE]
 >
->进一步了解设置的重要性 `ignoreUrlParams` 可在 [aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/ignoreUrlParams) github存储库。
+>[aem-dispatcher-experiments](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/ignoreUrlParams) GitHub存储库中提供了有关设置`ignoreUrlParams`的重要性的进一步阅读。
 
 因此，应将其配置为默认忽略“ignoreUrlParams”中的所有参数，除非使用GET参数会更改页面的HTML结构。 例如，使用搜索页面，其中搜索词在URL中作为GET参数 — 在这种情况下，您应该手动配置ignoreUrlParams以忽略您的广告渠道正在使用的参数，如gclid、fbclid和任何其他跟踪参数，而不影响正常网站操作所需的GET参数。
 
 ## MPM工作人员对Dispatcher的限制
 
-MPM工作程序设置是一种高级Apache HTTP服务器配置，它需要彻底的测试以根据Dispatcher的可用CPU和RAM进行优化。 但是，在本白皮书中，我们建议ServerLimit和MaxRequestWorker应提高到服务器可用CPU和RAM支持的级别，然后将MinSpareThreads和MaxSpareThreads都提高到与MaxRequestWorker匹配的级别。
+MPM Worker设置是一种高级Apache HTTP服务器配置，需要根据Dispatcher的可用CPU和RAM进行全面测试以优化。 但是，在本白皮书中，我们建议ServerLimit和MaxRequestWorker应提高到服务器可用CPU和RAM支持的级别，然后将MinSpareThreads和MaxSpareThreads都提高到与MaxRequestWorker匹配的级别。
 
 此配置会将Apache HTTP保留在“完全就绪设置”上，这是具有大量RAM和多CPU核心的服务器的高性能配置。 此配置通过保持准备好服务请求的持久打开连接来从Apache HTTP生成可能的最佳响应时间，并将消除在响应突发流量激增时生成新进程的任何延迟，例如在闪存销售期间。

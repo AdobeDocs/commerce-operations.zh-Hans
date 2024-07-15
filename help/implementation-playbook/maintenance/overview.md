@@ -5,7 +5,7 @@ exl-id: 5a104148-74f1-469b-84ca-9bce740a7865
 feature: Deploy
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -33,5 +33,5 @@ ht-degree: 0%
 为您的企业确定适当的支持模式以继续改进和优化您的平台（以及整个商业实践），是维护实施过程中所做的所有艰苦工作的关键步骤。 借助全面的持续支持计划，您的商业网站可以跟上客户的期望，并不断实现您的目标。
 
 在部署Adobe Commerce时，考虑将哪些内容包含在维护和支持策略中至关重要。
-Adobe Commerce许可证中包含专家支持。 有关专家支持和Adobe支持计划的详细信息，请参阅 [Adobe支持计划](https://business.adobe.com/customers/consulting-services/premier-support.html).
+Adobe Commerce许可证中包含专家支持。 有关专家支持和Adobe支持计划的详细信息，请参阅[Adobe支持计划](https://business.adobe.com/customers/consulting-services/premier-support.html)。
 除了Adobe支持计划之外，还有旧版Magento支持条款。 要了解哪些支持服务适用于您，请参阅您的合同以了解您拥有哪些支持协议，或者与您的Adobe客户团队交谈。

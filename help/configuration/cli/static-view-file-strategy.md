@@ -5,7 +5,7 @@ feature: Configuration, Deploy, Extensions
 exl-id: 12ebbd36-f813-494f-9515-54ce697ca2e4
 source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 部署静态视图文件时，可以选择三种可用策略之一。 其中每个选项都可为不同用例提供最佳部署结果：
 
-- [标准](#standard-strategy)：常规部署流程。
-- [快速](#quick-strategy) (_默认_)：在部署多个区域设置的文件时最大限度地减少部署所需的时间。
-- [紧凑](#compact-strategy)：最大限度地减少已发布视图文件占用的空间。
+- [标准](#standard-strategy)：常规部署过程。
+- [快速](#quick-strategy) （_默认_）：在部署多个区域设置的文件时，最大程度地缩短部署所需的时间。
+- [紧凑](#compact-strategy)：最小化已发布视图文件占用的空间。
 
 以下各节描述了每个策略的实施详细信息和功能。
 
 ## 标准策略
 
-使用标准策略时，将部署所有包的所有静态视图文件，即由处理 [`\Magento\Framework\App\View\Asset\Publisher`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/View/Asset/Publisher.php).
+使用标准策略时，将部署所有包的所有静态视图文件，即[`\Magento\Framework\App\View\Asset\Publisher`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/View/Asset/Publisher.php)处理的文件。
 
-有关更多信息，请参阅 [部署静态视图文件](../cli/static-view-file-deployment.md).
+有关详细信息，请参阅[部署静态视图文件](../cli/static-view-file-deployment.md)。
 
 ## 快速策略
 
@@ -38,15 +38,15 @@ ht-degree: 0%
 
 >[!INFO]
 >
->按 _相似_，我们是指与区域设置、主题或区域无关的文件。 这些文件可能包含CSS、图像和字体。
+>按&#x200B;_similar_，我们是指与区域设置、主题或区域无关的文件。 这些文件可能包含CSS、图像和字体。
 
 虽然复制了大量文件，但此方法可最大限度地缩短多个区域设置所需的部署时间。
 
 ## 紧凑策略
 
-紧凑策略通过将类似文件存储在中来避免文件重复 `base` 子目录。
+压缩策略通过将相似文件存储在`base`子目录中来避免文件重复。
 
-为了得到最优化的结果，分配了三种可能的相似性范围：区域、主题和区域设置。 此 `base` 将为这些范围的所有组合创建子目录。
+为了得到最优化的结果，分配了三种可能的相似性范围：区域、主题和区域设置。 为这些范围的所有组合创建`base`子目录。
 
 文件将按照以下模式部署到这些子目录中。
 
@@ -66,11 +66,11 @@ ht-degree: 0%
 - `map.php`
 - `requirejs-map.js`
 
-此 `map.php` 文件使用者 [`Magento\Framework\View\Asset\Repository`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php) 以生成正确的URL。
+[`Magento\Framework\View\Asset\Repository`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php)使用`map.php`文件生成正确的URL。
 
-此 `requirejs-map.js` 由使用 `baseUrlResolver` RequireJS的插件。
+`requirejs-map.js`由`baseUrlResolver`插件用于RequireJS。
 
-示例 `map.php`：
+`map.php`示例：
 
 ```php?start_inline=1
 return [
@@ -87,7 +87,7 @@ return [
 ];
 ```
 
-示例 `requirejs-map.js`：
+`requirejs-map.js`示例：
 
 ```js
 require.config({
@@ -101,6 +101,6 @@ require.config({
 
 ## 扩展开发人员提示
 
-要生成静态视图文件的URL，请使用 [`\Magento\Framework\View\Asset\Repository::createAsset()`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php#L211-L244).
+若要生成静态视图文件的URL，请使用[`\Magento\Framework\View\Asset\Repository::createAsset()`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php#L211-L244)。
 
 请勿使用URL拼接来避免在页面渲染期间未找到或未显示静态文件的问题。

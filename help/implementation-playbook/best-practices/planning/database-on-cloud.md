@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 将所有MyISAM表转换为InnoDB
 
-Adobe建议使用InnoDB数据库引擎。 在默认的Adobe Commerce安装中，数据库中的所有表都使用InnoDB引擎进行存储。 但是，某些第三方模块（扩展）可能会以MyISAM格式引入表。 安装第三方模块后，检查数据库以标识中的任何表 `myisam` 格式并将它们转换为 `innodb` 格式。
+Adobe建议使用InnoDB数据库引擎。 在默认的Adobe Commerce安装中，数据库中的所有表都使用InnoDB引擎进行存储。 但是，某些第三方模块（扩展）可能会以MyISAM格式引入表。 安装第三方模块后，请检查数据库以识别`myisam`格式的所有表并将其转换为`innodb`格式。
 
 ### 确定模块是否包含MyISAM表
 
@@ -37,7 +37,7 @@ SELECT table_schema, CONCAT(ROUND((index_length+data_length)/1024/1024),'MB')
 
 ### 将存储引擎更改为InnoDB
 
-在 `db_schema.xml` 文件声明表，设置 `engine` 对应的属性值 `table` 节点至 `innodb`. 有关参考，请参阅 [配置声明性架构>表节点](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) 在我们的开发人员文档中。
+在声明表的`db_schema.xml`文件中，将相应`table`节点的`engine`属性值设置为`innodb`。 有关参考，请参阅我们的开发人员文档中的[配置声明性架构>表节点](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/)。
 
 声明性方案在Adobe Commerce中引入，用于云基础架构版本2.3。
 
@@ -72,22 +72,22 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 - 触发器被解释为代码，并且MySQL不预编译它们。 挂接到查询的事务空间后，它们将开销添加到解析器和解释器，以解释使用表执行的每个查询。
 - 触发器与原始查询共享相同的事务空间，当这些查询争夺表上的锁时，触发器会独立地争夺另一个表上的锁。
 
-要了解使用自定义触发器的替代方法，请参阅 [MySQL触发器](mysql-configuration.md#triggers).
+要了解使用自定义触发器的替代方法，请参阅[MySQL触发器](mysql-configuration.md#triggers)。
 
-## 升级 [!DNL ECE-Tools] 到版本2002.0.21或更高版本 {#ece-tools-version}
+## 将[!DNL ECE-Tools]升级到版本2002.0.21或更高版本 {#ece-tools-version}
 
-要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅 [更新 `ece-tools` 版本](https://devdocs.magento.com/cloud/project/ece-tools-update.html) 在我们的开发人员文档中。
+要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅我们的开发人员文档中的[更新`ece-tools`版本](https://devdocs.magento.com/cloud/project/ece-tools-update.html)。
 
 ## 安全切换索引器模式
 
 <!--This best practice might belong in the Maintenance phase. Database lock prevention might be consolidated under a single heading-->
 
-交换索引器生成 [!DNL data definition language] (DDL)语句，用于创建可能导致数据库锁定的触发器。 您可以在更改配置之前，通过将网站置于维护模式并禁用cron作业来防止出现此问题。
-有关说明，请参阅 [配置索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) 在 *Adobe Commerce配置指南*.
+切换索引器将生成[!DNL data definition language] (DDL)语句以创建可能导致数据库锁定的触发器。 您可以在更改配置之前，通过将网站置于维护模式并禁用cron作业来防止出现此问题。
+有关说明，请参阅*Adobe Commerce配置指南*&#x200B;中的[配置索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1)。
 
 ## 不要在生产环境中运行DDL语句
 
-避免在生产环境中运行DDL语句以防止冲突（如表修改和创建）。 此 `setup:upgrade` 进程是一个例外。
+避免在生产环境中运行DDL语句以防止冲突（如表修改和创建）。 `setup:upgrade`进程是一个异常。
 
 如果需要运行DDL语句，请将网站置于维护模式并禁用cron（请参阅上一节中有关安全切换索引的说明）。
 
@@ -95,7 +95,7 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 
 从管理员处启用订单存档，以随着订单数据的增长而减少销售表所需的空间。 存档可节省MySQL磁盘空间并提高签出性能。
 
-请参阅 [启用存档](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html) 在Adobe Commerce商家文档中。
+请参阅Adobe Commerce商家文档中的[启用存档](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html)。
 
 ## 其他信息
 

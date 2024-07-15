@@ -9,19 +9,20 @@ ht-degree: 0%
 
 ---
 
-# 使用Adobe Commerce、Commerce Integration Framework和Adobe Experience Manager大规模交付体验
+# 使用Adobe Commerce、Commerce integration framework和Adobe Experience Manager大规模交付体验
 
-推荐使用CIF作为连接器的AEM和Adobe Commerce之间的集成模式是，AEM拥有表示层（“玻璃”）和Adobe Commerce，从而支持商业后端作为“无头”后端。 此集成方法利用了每个应用程序的优势：AEM的创作、个性化和全渠道功能，以及Adobe Commerce的电子商务操作。
+推荐使用CIF作为连接器的AEM和Adobe Commerce之间的集成模式是，AEM拥有表示层（“玻璃”）和Adobe Commerce，后者将商业后端作为“无头”后端提供支持。 此集成方法利用了每个应用程序的优势：AEM的创作、个性化和全渠道功能，以及Adobe Commerce的电子商务操作。
 
 在AEM/CIF/Adobe Commerce环境中，电子商务网站访客将首先到达AEM。 AEM将检查其调度程序缓存中是否具有请求的页面。 如果该页面存在，则会向访客提供此缓存的页面，并且无需进一步处理。 如果Dispatcher不包含所请求的页面，或该页面已过期，则Dispatcher请求AEM发布者构建页面，发布者调用Adobe Commerce获取电子商务数据以构建页面（如有必要）。 然后，构建页面将传递给Dispatcher以提供给访客，并且随后会被缓存，以防止在来自其他访客的同一页面的后续请求中，将进一步的负载置于服务器上。
 
-![AdobeExperience Manager和Adobe Commerce架构概述图](../assets/commerce-at-scale/overview.png)
+![AdobeExperience Manager和Adobe Commerce架构的概述图](../assets/commerce-at-scale/overview.png)
 
-AEM/CIF/Adobe Commerce模型中可以使用服务器端渲染和客户端渲染的组合：服务器端渲染提供静态内容，而客户端渲染则通过从用户浏览器内直接调用特定组件的Adobe Commerce提供经常更改或个人动态内容。
+AEM/CIF/Adobe Commerce模型中可以使用服务器端渲染和客户端渲染的组合：服务器端渲染提供静态内容，而客户端渲染通过直接调用特定组件的Adobe Commerce提供经常更改或个人动态内容
+从用户的浏览器中。
 
 在下面的示例中可以看到AEM电子商务示例店面上的产品详细信息页面中不同组件的示例：
 
-![AdobeExperience Manager和Adobe Commerce架构概述图](../assets/commerce-at-scale/product-details-page.svg)
+![AdobeExperience Manager和Adobe Commerce架构的概述图](../assets/commerce-at-scale/product-details-page.svg)
 
 ## 服务器端渲染
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # 全局参考架构示例
 
-本主题介绍组织报表的常用方法 [全球参考体系结构(GRA)](overview.md) 代码库。 尽管 [单独的包](#option-1-separate-packages) 选项是首选，某些情况下需要下面描述的其他选项之一。
+本主题介绍组织[全局参考体系结构(GRA)](overview.md)代码库的常用方法。 虽然首选使用[单独的包](#option-1-separate-packages)选项，但在某些情况下，需要下面描述的其他选项之一。
 
 ## 定义
 
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 ## 选项1：单独的包
 
-请参阅 [Composer项目结构](composer/project-structure.md) 设置此方法的最佳实践。
+请参阅[Composer项目结构](composer/project-structure.md)设置此方法的最佳实践。
 
-![该图说明了全局参考体系结构的单独包选项](../../../assets/playbooks/gra-separate-packages.png)
+![全局参考体系结构的单独包选项示意图](../../../assets/playbooks/gra-separate-packages.png)
 
-管理GRA Composer包的最灵活方式是通过中继。 中继包包含 `composer.json` 仅文件，用于定义其他包依赖关系。 使用创建元包 [专用包程序](https://packagist.com/) 存储库。
+管理GRA Composer包的最灵活方式是通过中继。 元包仅包含`composer.json`文件，该文件定义了其他包依赖关系。 使用[专用包](https://packagist.com/)存储库创建中包。
 
-### 主项目 `composer.json`
+### 主项目`composer.json`
 
 ```json
 {
@@ -82,7 +82,7 @@ ht-degree: 0%
 }
 ```
 
-每个模块、语言包、主题和库都有自己的Git存储库。 每个Git存储库都会自动同步到专用包存储库，并在其中生成包，前提是 `composer.json` 文件，该文件位于Git存储库的根目录中。
+每个模块、语言包、主题和库都有自己的Git存储库。 每个Git存储库都会自动同步到专用包存储库，并在该处生成包，前提是Git存储库的根中存在`composer.json`文件。
 
 ## 选项2：批量包
 
@@ -109,7 +109,7 @@ ht-degree: 0%
             └── composer.json
 ```
 
-此 `composer.json` 文件应如下所示：
+`composer.json`文件应如下所示：
 
 ```json
 {
@@ -140,23 +140,23 @@ ht-degree: 0%
 
 - `core`：包含Adobe Commerce核心安装。 用于升级Adobe Commerce版本。
 - `GRA`：包含GRA代码。 所有GRA模块、语言包、白色标签主题和库。
-- `brand/region`：每个品牌或区域都有自己的存储库，其中仅包含特定于品牌或区域的代码。
-- `release`：上述所有内容将合并到此Git存储库中。 此处仅允许合并提交。
+- `brand/region`：每个品牌或地区都有自己的存储库，其中仅包含特定于品牌或地区的代码。
+- `release`：以上所有内容都已合并到此Git存储库中。 此处仅允许合并提交。
 
-![该图说明了全局参考体系结构的拆分Git选项](../../../assets/playbooks/gra-split-git.png)
+![示意图说明了全局参考体系结构的拆分Git选项](../../../assets/playbooks/gra-split-git.png)
 
 要设置此选项，请执行以下操作：
 
-1. 在Git中创建四种存储库类型。 创建 `core` 和 `GRA` 存储库一次。 创建一个 `brand/region` 和一个 `release` 每个品牌的存储库。
+1. 在Git中创建四种存储库类型。 仅创建`core`和`GRA`存储库一次。 为每个品牌创建一个`brand/region`和一个`release`存储库。
 
    建议的存储库名称：
 
    - `m2-core`
    - `m2-gra`
-   - `m2-region-x`/`m2-brand-x` (例如， `m2-emea`/`m2-adobe`)
-   - `m2-release-region-x`/`m2-release-brand-x` (例如， `m2-release-emea`/`m2-release-adobe`)
+   - `m2-region-x`/`m2-brand-x` （例如，`m2-emea`/`m2-adobe`）
+   - `m2-release-region-x`/`m2-release-brand-x` （例如，`m2-release-emea`/`m2-release-adobe`）
 
-1. 创建 `release/` 目录并运行以下命令，为所有存储库创建共享的Git历史记录。
+1. 创建`release/`目录并运行以下命令，为所有存储库创建共享Git历史记录。
 
    ```bash
    git init
@@ -173,7 +173,7 @@ ht-degree: 0%
    git push region-x master
    ```
 
-1. 克隆每个存储库，但 `core`，在计算机上的其他目录中。
+1. 将每个存储库（`core`除外）克隆到计算机上的其他目录中。
 
    ```bash
    git clone git@github.com:example-client/m2-release-brand-x.git
@@ -181,7 +181,7 @@ ht-degree: 0%
    git clone git@github.com:example-client/m2-gra.git
    ```
 
-1. [使用编辑器安装Adobe Commerce](../../../installation/composer.md). 删除 `.gitignore` 文件，添加 `core` 远程、添加和提交代码以及推送。
+1. [安装Adobe Commerce和编辑器](../../../installation/composer.md)。 删除`.gitignore`文件，添加`core`远程文件，添加并提交代码以及推送。
 
    ```bash
    composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition m2-core
@@ -196,18 +196,18 @@ ht-degree: 0%
    git push
    ```
 
-1. 在 `GRA` 存储库，创建以下目录：
+1. 在`GRA`存储库中，创建以下目录：
 
    - `app/code/`
    - `app/design/`
    - `app/i18n/`
    - `lib/`
 
-1. 添加代码。 删除 `.gitignore` 文件、添加和提交代码、添加远程和推送。
+1. 添加代码。 删除`.gitignore`文件，添加并提交代码，添加远程数据库，然后推送。
 
-1. 在 `brand/region` 存储库。 执行与中的相同的操作 `GRA` 并牢记文件必须是唯一的。 您不能同时在此存储库和 `GRA` 存储库。
+1. 在`brand/region`存储库中。 执行与`GRA`存储库中相同的操作，并牢记文件必须是唯一的。 您不能同时在此存储库和`GRA`存储库中包含同一文件。
 
-1. 在 `release` 存储库中，应用合并。
+1. 在`release`存储库中，应用合并。
 
    ```bash
    git clone git@github.com:example-client/m2-release-brand-x.git
@@ -220,9 +220,9 @@ ht-degree: 0%
    git push
    ```
 
-1. 删除 `.gitkeep` 文件。
+1. 删除`.gitkeep`文件。
 
-1. 部署 `release` 将存储库保存到生产、测试、QA和开发服务器。 升级 `core`， `GRA`、和 `brand` 代码可以轻松运行以下命令：
+1. 将`release`存储库部署到生产、测试、QA和开发服务器。 升级`core`、`GRA`和`brand`代码同样可以轻松运行以下命令：
 
    ```bash
    git fetch --all
@@ -236,13 +236,13 @@ ht-degree: 0%
 
 所有代码都在单个存储库中进行开发和测试。 自动化从此单一存储库中提取包，可使用编辑器将其安装在UAT和生产环境中。
 
-![说明全局参考体系结构的monorepo选项的示意图](../../../assets/playbooks/gra-monorepo1.png)
+![示意图说明了全局参考体系结构的monorepo选项](../../../assets/playbooks/gra-monorepo1.png)
 
 使用monorepo选项，您可以轻松地在单个存储库中工作，同时还可以灵活地使用包组合实例。
 
 版本控制和包蒸馏通过使用GitHub操作或GitLab操作通过自动化来完成。
 
-![说明全局参考体系结构的monorepo选项的示意图](../../../assets/playbooks/gra-monorepo2.png)
+![示意图说明了全局参考体系结构的monorepo选项](../../../assets/playbooks/gra-monorepo2.png)
 
 有关此自动化的更多信息，请参阅以下资源：
 
@@ -255,15 +255,15 @@ ht-degree: 0%
 
 ## 不要混合策略
 
-不建议对GRA包和 `app/` 品牌或区域包的目录。
+不建议对GRA包使用组合方法，对品牌或区域包使用组合方法。`app/`
 
-你不仅得到所有 _优势_ 但也是 _缺点_ 两种方法的。 您应该选择其中一个（Git或编辑器）以优化工作。
+您不仅获得了两种方法的&#x200B;_所有优点_，还获得了它们的&#x200B;_缺点_。 您应该选择其中一个（Git或编辑器）以优化工作。
 
 ## 要避免的解决方案
 
 - **表示GRA或品牌的模块命名约定**
 
-  命名模块以表示GRA或品牌会导致缺乏灵活性。 相反，请使用编辑器中继信息来确定模块属于哪个组。 例如，对于客户VF，包 `vf/meta-gra` 包含对所有GRA软件包的引用，并且可使用进行安装。 `composer require vf/meta-gra` 命令。 包 `vf/meta-kipling` 包含对所有吉卜林特定软件包和 `vf/meta-gra` 包。 模块已命名 `vf/module-sales` 和 `vf/module-sap` 例如。 此命名约定允许您在品牌状态与GRA状态之间移动包，但具有较低的影响。
+  命名模块以表示GRA或品牌会导致缺乏灵活性。 相反，请使用编辑器中继信息来确定模块属于哪个组。 例如，对于客户VF，包`vf/meta-gra`包含对所有GRA包的引用，可以使用`composer require vf/meta-gra`命令进行安装。 包`vf/meta-kipling`包含对所有吉卜林特定包和`vf/meta-gra`包的引用。 例如，模块名为`vf/module-sales`和`vf/module-sap`。 此命名约定允许您在品牌状态与GRA状态之间移动包，但具有较低的影响。
 
 - **每个实例的Adobe Commerce核心升级**
 

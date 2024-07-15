@@ -6,7 +6,7 @@ feature: Best Practices
 exl-id: e40e0564-a4eb-43a8-89dd-9f6c5cedb4a7
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,17 @@ ht-degree: 0%
 
 您可以使用MySQL识别并解决对云基础架构项目上的任何Adobe Commerce长时间运行的查询。
 
-1. 运行 [`SHOW \[FULL\] PROCESSLIST`](https://dev.mysql.com/doc/refman/8.0/en/show-processlist.html) 语句。
-1. 如果您发现查询运行时间较长，请运行 [MySQL `EXPLAIN` 和 `EXPLAIN ANALYZE`](https://mysqlserverteam.com/mysql-explain-analyze/) 对于每一个，找出是什么让查询长时间运行。
+1. 运行[`SHOW \[FULL\] PROCESSLIST`](https://dev.mysql.com/doc/refman/8.0/en/show-processlist.html)语句。
+1. 如果看到长时间运行的查询，请为每个查询运行[MySQL `EXPLAIN`和`EXPLAIN ANALYZE`](https://mysqlserverteam.com/mysql-explain-analyze/)，以了解是什么导致查询长时间运行。
 1. 根据发现的问题，采取措施修复查询，使其更快地运行。
 
 ### 使用Percona Toolkit分析查询（仅适用于Pro体系结构）
 
 如果您的Adobe Commerce项目部署在Pro体系结构上，则可以使用Percona工具包来分析查询。
 
-1. 运行 `pt-query-digest --type=slowlog` 命令，针对MySQL慢查询日志。
-   * 要查找慢查询日志的位置，请参阅 **[!UICONTROL Log locations > Service Logs]**(https://devdocs.magento.com/cloud/project/log-locations.html#service-logs)作为开发人员文档。
-   * 请参阅 [Percona Toolkit > pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest) 文档。
+1. 对MySQL慢查询日志运行`pt-query-digest --type=slowlog`命令。
+   * 要查找慢查询日志的位置，请参阅我们的开发人员文档中的&#x200B;**[!UICONTROL Log locations > Service Logs]**(https://devdocs.magento.com/cloud/project/log-locations.html#service-logs)。
+   * 请参阅[Percona工具包> pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest)文档。
 1. 根据发现的问题，采取措施修复查询，使其更快地运行。
 
 ## 验证所有表是否都有主键
@@ -58,15 +58,15 @@ ht-degree: 0%
    SELECT table_catalog, table_schema, table_name, engine FROM information_schema.tables        WHERE (table_catalog, table_schema, table_name) NOT IN (SELECT table_catalog, table_schema, table_name FROM information_schema.table_constraints  WHERE constraint_type = 'PRIMARY KEY') AND table_schema NOT IN ('information_schema', 'pg_catalog');    
    ```
 
-1. 对于任何缺少主键的表，请通过更新 `db_schema.xml` （声明性模式），其节点类似于以下内容：
+1. 对于任何缺少主键的表，请通过用类似于以下内容的节点更新`db_schema.xml`（声明性架构）来添加主键：
 
    ```html
    <constraint xsi:type="primary" referenceId="PRIMARY">         <column name="id_column"/>     </constraint>    
    ```
 
-   添加节点时，将 `referenceID` 和 `column name` 具有自定义自定义值的变量。
+   添加节点时，请将`referenceID`和`column name`变量替换为自定义自定义值。
 
-有关更多信息，请参阅 [配置声明性模式](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) 在我们的开发人员文档中。
+有关详细信息，请参阅我们的开发人员文档中的[配置声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/)。
 
 ## 识别并删除重复索引
 
@@ -82,11 +82,11 @@ SELECT s.INDEXED_COL,GROUP_CONCAT(INDEX_NAME) FROM (SELECT INDEX_NAME,GROUP_CONC
 
 查询返回列名和任何重复索引的名称。
 
-专业架构商也可以使用Percona Toolkit运行检查  `[pt-duplicate-key checker](https://www.percona.com/doc/percona-toolkit/LATEST/pt-duplicate-key-checker.html%C2%A0)` 命令。
+专业架构商也可以使用Percona Toolkit `[pt-duplicate-key checker](https://www.percona.com/doc/percona-toolkit/LATEST/pt-duplicate-key-checker.html%C2%A0)`命令运行检查。
 
 ### 删除重复的索引
 
-使用SQL [DROP INDEX语句](https://dev.mysql.com/doc/refman/8.0/en/drop-index.html) 删除重复的索引。
+使用SQL [DROP INDEX语句](https://dev.mysql.com/doc/refman/8.0/en/drop-index.html)删除重复的索引。
 
 ```SQL
 DROP INDEX

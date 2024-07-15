@@ -39,7 +39,7 @@ salesrule_rule                           Sales Rule
 ```
 
 >[!NOTE]
-> 使用Live Search、Catalog Service或Product Recommendations的Adobe Commerce商家可以选择使用 [基于SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html).
+> 使用Live Search、目录服务或产品Recommendations的Adobe Commerce商家可以选择使用基于[SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html)。
 
 ## 查看索引器状态
 
@@ -51,7 +51,7 @@ salesrule_rule                           Sales Rule
 bin/magento indexer:status [indexer]
 ```
 
-位置 `[indexer]` 是以空格分隔的索引器列表。 省略 `[indexer]` 以查看所有索引器的状态。
+其中`[indexer]`是以空格分隔的索引器列表。 省略`[indexer]`以查看所有索引器的状态。
 
 示例结果：
 
@@ -79,7 +79,7 @@ bin/magento indexer:status [indexer]
 
 >[!INFO]
 >
->此命令只重新索引一次。 要使索引器保持最新，您必须设置 [cron作业](../cli/configure-cron-jobs.md).
+>此命令只重新索引一次。 要使索引器保持最新，您必须设置[cron作业](../cli/configure-cron-jobs.md)。
 
 命令选项：
 
@@ -87,7 +87,7 @@ bin/magento indexer:status [indexer]
 bin/magento indexer:reindex [indexer]
 ```
 
-位置 `[indexer]` 是以空格分隔的索引器列表。 省略 `[indexer]` 重新索引所有索引器。
+其中`[indexer]`是以空格分隔的索引器列表。 省略`[indexer]`以重新索引所有索引器。
 
 示例结果：
 
@@ -115,16 +115,16 @@ Catalog Search index has been rebuilt successfully in <time>
 
 索引器具有作用域和多线程，以支持在并行模式下重新索引。 它通过索引器的维度进行并行，并在多个线程中执行，从而缩短处理时间。
 
-在这种情况下， `dimension` 是重新索引的范围，例如 `website` 或只是特定的 `customer_group`.
+在此上下文中，`dimension`是重新索引的范围，例如为`website`或只是特定的`customer_group`。
 
 索引并行化仅影响作用域的索引器，这意味着Commerce使用索引器作为其作用域将数据拆分为多个表，而不是将所有数据保留在一个表中。
 
 您可以在并行模式下运行以下索引：
 
-- `Catalog Search Fulltext` 可按商店查看次数并行。
-- `Category Product` 可按商店查看次数并行。
-- `Catalog Price` 可由网站和客户组并行。
-- `Catalog Permissions` 可以由客户组并行。
+- `Catalog Search Fulltext`可以由存储视图并行。
+- `Category Product`可以由存储视图并行。
+- `Catalog Price`可由网站和客户组并行。
+- `Catalog Permissions`可由客户组并行。
 
 >[!INFO]
 >
@@ -154,9 +154,9 @@ bin/magento indexer:set-dimensions-mode catalog_product_price website
 bin/magento indexer:show-dimensions-mode
 ```
 
-要在并行模式下重新索引，请使用环境变量运行reindex命令 `MAGE_INDEXER_THREADS_COUNT`，或将环境变量添加到 `env.php` 文件。 此变量设置用于重新索引处理的线程数。
+要在并行模式下重新索引，请使用环境变量`MAGE_INDEXER_THREADS_COUNT`运行reindex命令，或向`env.php`文件添加一个环境变量。 此变量设置用于重新索引处理的线程数。
 
-例如，以下命令运行 `Catalog Search Fulltext` 索引器跨三个线程：
+例如，以下命令跨三个线程运行`Catalog Search Fulltext`索引器：
 
 ```bash
 MAGE_INDEXER_THREADS_COUNT=3 php -f bin/magento indexer:reindex catalogsearch_fulltext
@@ -172,7 +172,7 @@ MAGE_INDEXER_THREADS_COUNT=3 php -f bin/magento indexer:reindex catalogsearch_fu
 bin/magento indexer:reset [indexer]
 ```
 
-位置 ```[indexer]``` 是以空格分隔的索引器列表。 省略 `[indexer]` 使所有索引器失效。
+其中```[indexer]```是以空格分隔的索引器列表。 省略`[indexer]`以使所有索引器失效。
 
 示例结果：
 
@@ -194,10 +194,10 @@ Catalog Search indexer has been invalidated.
 
 使用此命令可设置以下索引器选项：
 
-- **保存时更新(`realtime`)**：在管理员中进行更改后，索引数据会更新。 （例如，将产品添加到管理员中的类别后，会重新索引类别产品索引。） 这是默认设置。
-- **按计划更新(`schedule`)**：根据cron作业设置的时间表为数据编制索引。
+- **保存时更新(`realtime`)**：在管理员中进行更改后，索引数据将更新。 （例如，将产品添加到管理员中的类别后，会重新索引类别产品索引。） 这是默认设置。
+- **按计划(`schedule`)更新**：数据已根据cron作业设置的计划编制索引。
 
-[了解有关索引的更多信息](https://developer.adobe.com/commerce/php/development/components/indexing/).
+[了解有关索引的更多信息](https://developer.adobe.com/commerce/php/development/components/indexing/)。
 
 ### 显示当前配置
 
@@ -207,7 +207,7 @@ Catalog Search indexer has been invalidated.
 bin/magento indexer:show-mode [indexer]
 ```
 
-位置 `[indexer]` 是以空格分隔的索引器列表。 省略 `[indexer]` 以显示所有索引器的模式。 例如，要显示所有索引器的模式，请执行以下操作：
+其中`[indexer]`是以空格分隔的索引器列表。 省略`[indexer]`以显示所有索引器的模式。 例如，要显示所有索引器的模式，请执行以下操作：
 
 示例结果：
 
@@ -229,13 +229,13 @@ Catalog Search:                                    Update on Save
 
 >[!IMPORTANT]
 >
->请务必设置 [!DNL Customer Grid] 替换为 `realtime` 而不是 `schedule`. 此 [!DNL Customer Grid] 只能使用 [!UICONTROL Update on Save] 选项。 此索引不支持 `Update by Schedule` 选项。 使用以下命令行将此索引器设置为保存时更新： `php bin/magento indexer:set-mode realtime customer_grid`
+>请确保使用`realtime`而不是`schedule`设置[!DNL Customer Grid]。 只能使用[!UICONTROL Update on Save]选项为[!DNL Customer Grid]重新编制索引。 此索引不支持`Update by Schedule`选项。 使用以下命令行将此索引器设置为保存时更新： `php bin/magento indexer:set-mode realtime customer_grid`
 >
->请参阅 [索引器配置的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html) 在 _实施行动手册_.
+>请参阅&#x200B;_实施行动手册_&#x200B;中的[索引器配置的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html)。
 
 >[!INFO]
 >
->在切换索引器模式之前，请将您的网站设置为 [维护](../../installation/tutorials/maintenance-mode.md) 模式和 [禁用cron作业](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). 这可以确保您不会遇到数据库锁定的问题。
+>在切换索引器模式之前，请将您的网站设置为[维护](../../installation/tutorials/maintenance-mode.md)模式并[禁用cron作业](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs)。 这可以确保您不会遇到数据库锁定的问题。
 
 要指定索引器配置，请执行以下操作：
 
@@ -245,9 +245,9 @@ bin/magento indexer:set-mode {realtime|schedule} [indexer]
 
 其中：
 
-- `realtime` — 设置所选索引器在保存时更新。
+- `realtime` — 将选定的索引器设置为在保存时更新。
 - `schedule` — 根据cron计划设置要保存的指定索引器。
-- `indexer` — 以空格分隔的索引器列表。 省略 `indexer` 以相同方式配置所有索引器。
+- `indexer` — 是索引器的空格分隔列表。 省略`indexer`以按相同方式配置所有索引器。
 
 例如，要仅更改按计划更新的类别产品和产品类别索引器，请输入：
 
@@ -262,11 +262,11 @@ Index mode for Indexer Category Products was changed from 'Update on Save' to 'U
 Index mode for Indexer Product Categories was changed from 'Update on Save' to 'Update by Schedule'
 ```
 
-当索引器模式设置为时，将添加与索引器相关的数据库触发器 `schedule` 并将索引器模式设置为时删除 `realtime`. 当索引器设置为时，如果数据库中缺少触发器 `schedule`，将索引器更改为 `realtime` 然后改回 `schedule`. 这将重置触发器。
+当索引器模式设置为`schedule`时，添加与索引器相关的数据库触发器；当索引器模式设置为`realtime`时，删除与索引器相关的数据库触发器。 如果索引器设置为`schedule`时数据库中缺少触发器，请将索引器更改为`realtime`，然后将它们改回`schedule`。 这将重置触发器。
 
 ### 设置索引器状态
 
-此 `bin/magento indexer:set-status` 命令在Adobe Commerce 2.4.7中引入。它允许管理员修改一个或多个索引器的运行状态，在大量操作（如数据导入、更新或维护）期间优化系统性能。
+`bin/magento indexer:set-status`命令是在Adobe Commerce 2.4.7中引入的。它允许管理员修改一个或多个索引器的运行状态，在大量操作（如数据导入、更新或维护）期间优化系统性能。
 
 命令语法：
 
@@ -279,7 +279,7 @@ bin/magento indexer:set-status {invalid|suspended|valid} [indexer]
 - `invalid` — 将索引器标记为过期，在下次cron运行时提示重新索引，除非它们被挂起。
 - `suspended` — 暂时停止索引器的自动cron触发更新。 此状态同时适用于实时模式和计划模式，确保在密集型操作期间暂停自动更新。
 - `valid` — 指示索引器数据是最新的，无需重新索引。
-- `indexer` — 以空格分隔的索引器列表。 省略 `indexer` 以相同方式配置所有索引器。
+- `indexer` — 是索引器的空格分隔列表。 省略`indexer`以按相同方式配置所有索引器。
 
 例如，要暂停特定的索引器，请输入：
 
@@ -296,18 +296,18 @@ Index status for Indexer 'Product Categories' was changed from 'valid' to 'suspe
 
 #### 管理暂停的索引器状态
 
-当索引器设置为 `suspended` 状态，它主要影响自动重新索引和实例化视图更新。 下面是简要概述：
+当索引器设置为`suspended`状态时，它主要影响自动重新索引和实例化视图更新。 下面是简要概述：
 
-**已跳过重新索引**：绕过自动重新索引 `suspended` 索引器和共享相同索引器的任何索引器 `shared_index`. 这可以确保不会重新索引与已暂停进程相关的数据，从而节省系统资源。
+**已跳过重新索引**：已绕过`suspended`索引器和共享同一`shared_index`的任何索引器的自动重新索引。 这可以确保不会重新索引与已暂停进程相关的数据，从而节省系统资源。
 
-**已跳过实体化视图更新**：与重新索引类似，更新了与 `suspended` 索引器或其共享索引也会暂停。 该操作进一步减少了暂停期间的系统负载。
+**已跳过实例化视图更新**：与重新索引类似，与`suspended`索引器或其共享索引相关的实例化视图更新也会暂停。 该操作进一步减少了暂停期间的系统负载。
 
 >[!INFO]
 >
->此 `indexer:reindex` 命令对所有索引器重新编制索引，包括标记为 `suspended`，以便在暂停自动更新时手动更新。
+>`indexer:reindex`命令对所有索引器（包括标记为`suspended`的索引器）重新编制索引，使其在自动索引器暂停时可用于手动更新。
 
 >[!IMPORTANT]
 >
->将索引器的状态更改为 `valid` 从 `suspended` 或 `invalid` 需要谨慎。 如果存在累积的未索引数据，此操作可能会导致性能下降。
+>将索引器的状态从`suspended`或`invalid`更改为`valid`需要谨慎。 如果存在累积的未索引数据，此操作可能会导致性能下降。
 >
->在手动将状态更新到之前，确保所有数据都编制了准确的索引，这一点至关重要 `valid` 维护系统性能和数据完整性。
+>在手动将状态更新为`valid`以维护系统性能和数据完整性之前，确保所有数据都准确编制索引，这一点至关重要。

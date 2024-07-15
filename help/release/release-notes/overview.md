@@ -16,8 +16,8 @@ ht-degree: 3%
 
 >[!TIP]
 >
->- 如果您不熟悉Adobe Commerce，请参阅 [企业体系结构](../../implementation-playbook/architecture/enterprise-blueprint.md) 和 [关于Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about) 主题准备入门。
->- 有关升级的信息，请参阅 [推荐阅读](../../upgrade/resources/recommended-reading.md).
+>- 如果您是Adobe Commerce的新用户，请参阅[企业架构](../../implementation-playbook/architecture/enterprise-blueprint.md)和[关于Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about)的主题以了解相关内容。
+>- 有关升级的信息，请参阅[推荐的读取](../../upgrade/resources/recommended-reading.md)。
 
 <table>
   <tbody>
@@ -32,19 +32,19 @@ ht-degree: 3%
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">适用于Adobe Commerce的B2B</a></li>
           </ul>
         </td>
-      <td><strong>云基础架构上的Adobe Commerce</strong>
+      <td>云基础架构上的<strong>Adobe Commerce</strong>
         <p>了解Adobe Commerce云套件的最新改进，这些改进旨在云平台上部署和管理Adobe Commerce安装和升级。</p>
           <ul>
             <li><a href="https://devdocs.magento.com/cloud/release-notes/backward-incompatible-changes.html">向后不兼容的更改</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcp-release-notes.html">Commerce云修补程序</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcd-release-notes.html">Cloud Docker for Commerce</a></li>
+            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcp-release-notes.html">Commerce的云修补程序</a></li>
+            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcd-release-notes.html">适用于Commerce的Cloud Docker</a></li>
             <li><a href="https://devdocs.magento.com/cloud/release-notes/mcc-release-notes.html">适用于Commerce的云组件</a></li>
             <li><a href="https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html">ece-tools</a></li>
           </ul>
       </td>
     </tr>
     <tr>
-      <td><strong>Adobe Commerce服务</strong>
+      <td>适用于Adobe Commerce的<strong>服务</strong>
         <p>了解创新的Commerce促销服务的最新改进。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/customers/audience-activation.html">Audience Activation</a></li>
@@ -62,7 +62,7 @@ ht-degree: 3%
       <td><strong>工具</strong>
         <p>了解各项工具的最新改进，这些工具旨在让您更轻松地查找和使用Adobe Commerce软件。</p>
           <ul>
-            <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">面向AdobeAPP Builder开发人员的API网格</a></li>
+            <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">面向App Builder开发人员Adobe的API Mesh</a></li>
             <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">Adobe Commerce的Adobe I/O事件</a></li>
             <li><a href="https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes/">管理员UI SDK</a></li>
             <li><a href="../../tools/quality-patches-tool/release-notes.md">Quality Patches工具</a></li>

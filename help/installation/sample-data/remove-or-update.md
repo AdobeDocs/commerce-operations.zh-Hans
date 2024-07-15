@@ -13,9 +13,9 @@ ht-degree: 0%
 
 本主题讨论如何：
 
-* [删除示例数据模块](#remove-sample-data-modules) 从Adobe Commerce安装 `composer.json`. 此选项会 *非* 从数据库中删除示例数据。
+* [从Adobe Commerce安装`composer.json`中删除示例数据模块](#remove-sample-data-modules)。 此选项&#x200B;*不*&#x200B;从数据库中删除示例数据。
 
-* [准备更新示例数据](#prepare-to-update-sample-data) (例如，在更新Magento应用程序之前)。
+* [准备更新样本数据](#prepare-to-update-sample-data)(例如，在更新Magento应用程序之前)。
 
 ## 删除示例数据模块
 
@@ -59,4 +59,4 @@ bin/magento sampledata:remove
 bin/magento sampledata:reset
 ```
 
-之后， [更新应用程序](../tutorials/uninstall.md#update-the-application).
+之后，[更新应用程序](../tutorials/uninstall.md#update-the-application)。

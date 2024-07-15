@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # 配置清漆
 
-[清漆缓存] 是一个开源Web应用程序加速器(也称为 _HTTP加速器_ 或 _缓存HTTP反向代理_)。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
+[清漆缓存]是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
 
-[系统要求](../../installation/system-requirements.md) 列出支持的Varnish版本。
+[系统要求](../../installation/system-requirements.md)列出了支持的Varnish版本。
 
 >[!WARNING]
 >
->三 _强烈推荐_ 在生产中使用光亮漆。 内置全页缓存 — 适用于文件系统或 [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/) — 比Varnish慢得多，Varnish旨在加速HTTP流量。
+>我们&#x200B;_强烈建议_&#x200B;您在生产中使用清漆。 对于文件系统或[数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)的内置全页缓存比Varnish慢得多，而Varnish旨在加速HTTP流量。
 
 有关Varnish的详细信息，请参阅：
 
-- [亮光的大图片]
+- [大型涂漆图片]
 - [清漆启动选项]
 - [涂漆和网站性能]
 
@@ -32,11 +32,11 @@ ht-degree: 0%
 
 ![基本清漆图](../../assets/configuration/varnish-basic.png)
 
-在上图中，用户通过Internet发出的HTTP请求会导致CSS、HTML、JavaScript和图像出现大量请求(统称为 _资产_)。 清漆位于Web服务器前面，并将这些请求代理到Web服务器。
+在上图中，用户通过Internet发出的HTTP请求会导致CSS、HTML、JavaScript和图像的大量请求（统称为&#x200B;_资源_）。 清漆位于Web服务器前面，并将这些请求代理到Web服务器。
 
-在Web服务器返回资产时，可缓存的资产存储在Varnish中。 随后对这些资产的任何请求均由Varnish执行（即，请求不会到达Web服务器）。 清漆可以非常快速地返回缓存的内容。 这样，将内容返回给用户的响应速度就会加快，并且Commerce必须完成的请求数量也会减少。
+在Web服务器返回资产时，可缓存的资产存储在Varnish中。 随后对这些资产的任何请求均由Varnish执行（即，请求不会到达Web服务器）。 清漆可以非常快速地返回缓存的内容。 这样可以缩短将内容返回给用户的响应时间，减少Commerce必须完成的请求数。
 
-通过Varnish缓存的资产按可配置间隔过期，或被相同资产的较新版本替换。 您也可以使用管理员或 [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令。
+由Varnish缓存的Assets以可配置间隔过期，或被相同资源的较新版本替换。 您还可以使用Admin或[`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types)命令手动清除缓存。
 
 ## 流程概述
 
@@ -44,16 +44,16 @@ ht-degree: 0%
 
 该过程可概括如下：
 
-1. 安装Varnish并通过访问任何Commerce页面对其进行测试，以查看您是否获得指示Varnish正在工作的HTTP响应标头。
+1. 安装Varnish并通过访问任何Commerce页面对其进行测试，以查看是否获得指示Varnish正在工作的HTTP响应标头。
 1. 安装Commerce软件并使用管理员创建Varnish配置文件。
 1. 将您现有的Varnish配置文件替换为Admin生成的配置文件。
 1. 再次测试所有内容。
 
-   如果您的报表中没有任何内容， `<magento_root>/var/page_cache` 目录，您已成功使用Commerce配置清漆！
+   如果`<magento_root>/var/page_cache`目录中没有任何内容，则表示您已成功使用Commerce配置清漆！
 
 >[!NOTE]
 >
->- 除非另有说明，否则您必须以用户身份输入本主题中讨论的所有命令， `root` 权限。
+>- 除了上面提到的以外，您必须以具有`root`权限的用户身份输入本主题中讨论的所有命令。
 >
 >- 本主题为CentOS和Apache 2.4上的Varnish编写。如果在不同的环境中设置“清漆”，某些命令可能会不同。 有关更多信息，请参阅Varnish文档。
 
@@ -65,9 +65,9 @@ ht-degree: 0%
 
   作为替代方法，请使用SSL终止或SSL终止代理。
 
-- 如果您手动删除 `<magento_root>/var/cache` 目录，必须重新启动Varnish。
+- 如果手动删除`<magento_root>/var/cache`目录的内容，则必须重新启动Varnish。
 
-- 安装Commerce时可能出现错误：
+- 安装Commerce时可能出错：
 
   ```terminal
   Error 503 Service Unavailable
@@ -76,7 +76,7 @@ ht-degree: 0%
   Varnish cache server
   ```
 
-  如果遇到此错误，请编辑 `default.vcl` 并将超时添加到 `backend` 节如下：
+  如果您遇到此错误，请编辑`default.vcl`并向`backend`段添加超时，如下所示：
 
   ```conf
   backend default {
@@ -90,9 +90,9 @@ ht-degree: 0%
 
 清漆缓存可使用以下方式与Commerce配合使用：
 
-- [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) Magento2 GitHub存储库中的
-- `.htaccess` Commerce提供的Apache分布式配置文件
-- `default.vcl` 使用生成的清漆的配置 [管理员](../cache/configure-varnish-commerce.md)
+- Magento2 GitHub存储库中的[`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)
+- Commerce提供的Apache的`.htaccess`分布式配置文件
+- 使用[管理员](../cache/configure-varnish-commerce.md)生成的清漆的`default.vcl`配置
 
 >[!INFO]
 >
@@ -110,13 +110,13 @@ ht-degree: 0%
 
 ### 第一个浏览器请求
 
-`nginx.conf.sample` 和 `.htaccess` 提供客户端缓存选项。 当浏览器第一次请求可缓存对象时，Varnish会将其提供给客户端。
+`nginx.conf.sample`和`.htaccess`提供了客户端缓存选项。 当浏览器第一次请求可缓存对象时，Varnish会将其提供给客户端。
 
 下图显示了使用浏览器检查器的示例：
 
 ![首次请求可缓存对象时，Varnish会将其提供给浏览器](../../assets/configuration/varnish-apache-first-visit.png)
 
-上例显示了对店面主页的请求(`m2_ce_my`)。 CSS和JavaScript资产缓存在客户端浏览器中。
+上例显示了storefront主页面(`m2_ce_my`)的请求。 CSS和JavaScript资源缓存在客户端浏览器中。
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ ht-degree: 0%
 
 如果同一浏览器再次请求同一页面，则这些资产将从本地浏览器缓存中交付，如下图所示。
 
-![下次请求同一对象时，将从本地浏览器缓存中加载资产](../../assets/configuration/varnish-apache-second-visit.png)
+![下次请求同一对象时，从本地浏览器缓存加载资源](../../assets/configuration/varnish-apache-second-visit.png)
 
 请注意第一个请求和第二个请求之间的响应时间差异。 同样，静态资产具有200 (OK)响应代码，因为它们是首次从本地缓存中交付。
 
@@ -134,15 +134,15 @@ ht-degree: 0%
 
 以下示例显示特定静态资源的响应标头。
 
-![通过ETag，可以更轻松地确定静态资产是否已更改](../../assets/configuration/varnish-etag.png)
+![通过ETag，可以更轻松地确定静态资源是否已更改](../../assets/configuration/varnish-etag.png)
 
-`calendar.css` 具有ETag响应标头，这意味着客户端浏览器上的CSS文件可以与服务器上的文件进行比较。
+`calendar.css`具有ETag响应标头，这意味着客户端浏览器上的CSS文件可以与服务器上的文件进行比较。
 
 此外，静态资产会以304（未修改）HTTP状态代码返回，如下图所示。
 
-![HTTP 304（未修改）响应代码指示本地缓存中的静态资产与服务器上的相同](../../assets/configuration/varnish-304.png)
+![HTTP 304 （未修改）响应代码指示本地缓存中的静态资源与服务器上的相同](../../assets/configuration/varnish-304.png)
 
-出现304状态代码是因为用户使其本地缓存失效，并且服务器上的内容未发生更改。 由于304状态代码，静态资产 _内容_ 不会传输；只有HTTP标头会下载到浏览器。
+出现304状态代码是因为用户使其本地缓存失效，并且服务器上的内容未发生更改。 由于304状态代码，静态资源&#x200B;_内容_&#x200B;未传输；只将HTTP标头下载到浏览器。
 
 如果服务器上的内容发生更改，则客户端将下载静态资产，其中包含HTTP 200 (OK)状态代码和新的ETag。
 

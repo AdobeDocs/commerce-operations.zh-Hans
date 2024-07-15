@@ -5,26 +5,26 @@ feature: Configuration, Observability, Roles/Permissions, System
 exl-id: 3c557746-5182-4929-aebf-5b6fe76f0d8f
 source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
 
 # 常规和高级配置路径参考
 
-本主题列出了常规和高级配置路径以及 _非_ [敏感值和系统特定的值](config-reference-sens.md). 此 [`magento app:config:dump` 命令](../cli/export-configuration.md) 将这些值写入共享配置文件， `app/etc/config.php`，它应该在源代码控制中。
+本主题列出了常规和高级配置路径以及&#x200B;_非_ [敏感值和系统特定值](config-reference-sens.md)。 [`magento app:config:dump`命令](../cli/export-configuration.md)将这些值写入到共享配置文件`app/etc/config.php`中，该文件应位于源代码控制中。
 
-要选择性地覆盖任何配置设置或设置敏感设置，请参阅 [使用环境变量覆盖配置设置](override-config-settings.md#environment-variables).
+若要选择性地覆盖任何配置设置或设置敏感设置，请参阅[使用环境变量覆盖配置设置](override-config-settings.md#environment-variables)。
 
 ## 常规类别
 
-此部分列出了“管理员”中选项可用的变量名称和配置路径，位于 **商店** >设置> **配置** > **常规**.
+此部分列出了&#x200B;**存储** >设置> **配置** > **常规**&#x200B;下的管理员中选项可用的变量名称和配置路径。
 
 ### 常规路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** >常规> **常规**.
+这些配置值在&#x200B;**存储** >设置> **配置** >常规> **常规**&#x200B;中的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ | 敏感？ |
+| 名称 | 配置路径 | 仅限Commerce？ | 敏感？ |
 |--------------|--------------|--------------|--------------|
 | 默认国家/地区 | `general/country/default` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![敏感](/help/assets/configuration/cloud-sens.png) |
 | 允许国家/地区 | `general/country/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![敏感](/help/assets/configuration/cloud-sens.png) |
@@ -38,11 +38,11 @@ ht-degree: 0%
 | 重量单位 | `general/locale/weight_unit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | 每周第一天 | `general/locale/firstday` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | 周末 | `general/locale/weekend` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
-| 访问限制 | `general/restriction/is_active` | ![仅商务](/help/assets/configuration/cloud-ee.png) | |
-| 限制模式 | `general/restriction/mode` | ![仅商务](/help/assets/configuration/cloud-ee.png) | |
-| 启动页面 | `general/restriction/http_redirect` | ![仅商务](/help/assets/configuration/cloud-ee.png) | |
-| 登陆页面 | `general/restriction/cms_page` | ![仅商务](/help/assets/configuration/cloud-ee.png) | |
-| HTTP响应 | `general/restriction/http_status` | ![仅商务](/help/assets/configuration/cloud-ee.png) | |
+| 访问限制 | `general/restriction/is_active` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) | |
+| 限制模式 | `general/restriction/mode` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) | |
+| 启动页面 | `general/restriction/http_redirect` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) | |
+| 登陆页面 | `general/restriction/cms_page` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) | |
+| HTTP响应 | `general/restriction/http_status` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) | |
 | 存储名称 | `general/store_information/name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | 商店电话号码 | `general/store_information/phone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | 商店营业时间 | `general/store_information/hours` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
@@ -59,9 +59,9 @@ ht-degree: 0%
 
 ### Web路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **常规** > **Web**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **常规** > **Web**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 将存储代码添加到Url | `web/url/use_store` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 自动重定向到基本URL | `web/url/redirect_to_base` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -91,9 +91,9 @@ ht-degree: 0%
 
 ### 货币设置路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **常规** > **货币设置**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **常规** > **货币设置**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 基础货币 | `currency/options/base` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 默认显示货币 | `currency/options/default` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -116,9 +116,9 @@ ht-degree: 0%
 
 ### 联系人路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **常规** > **联系人**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **常规** > **联系人**&#x200B;中的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用联系我们 | `contact/contact/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 发送电子邮件至 | `contact/email/recipient_email` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -129,9 +129,9 @@ ht-degree: 0%
 
 ### 报告路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **常规** > **报表**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **常规** > **报告**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 年初至今开始 | `reports/dashboard/ytd_start` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 当前月份开始 | `reports/dashboard/mtd_start` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -140,9 +140,9 @@ ht-degree: 0%
 
 ### 内容管理路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **常规** > **内容管理**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **常规** > **内容管理**&#x200B;中的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用WYSIWYG编辑器 | `cms/wysiwyg/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 在WYSIWYG中为目录中的媒体内容使用静态URL | `cms/wysiwyg/use_static_urls_in_catalog` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -154,9 +154,9 @@ ht-degree: 0%
 
 ### New Relic报表路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **常规** > **New Relic报表**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **常规** > **New Relic报表**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用New Relic集成 | `newrelicreporting/general/enable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | New Relic应用程序名称 | `newrelicreporting/general/app_name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -166,13 +166,13 @@ ht-degree: 0%
 
 ## 高级类别
 
-此部分列出了“管理员”中选项可用的变量名称和配置路径，位于 **商店** >设置> **配置** > **高级**.
+此部分列出了&#x200B;**商店** >设置> **配置** > **高级**&#x200B;下的管理员中选项可用的变量名称和配置路径。
 
 ### 管理员路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **高级** > **管理员**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **高级** > **管理员**&#x200B;中的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 忘记密码电子邮件模板 | `admin/emails/forgot_email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 忘记并重置电子邮件发件人 | `admin/emails/forgot_email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -208,9 +208,9 @@ ht-degree: 0%
 
 ### 系统路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **高级** > **系统**.
+这些配置值在&#x200B;**存储** >设置> **配置** > **高级** > **系统**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 成功的消息生命周期 | `system/mysqlmq/successful_messages_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 重试以下时间后正在处理的消息 | `system/mysqlmq/retry_inprogress_after` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -229,20 +229,20 @@ ht-degree: 0%
 | 历史记录清理间隔 | `system/cron/default/history_cleanup_every` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 成功历史记录生命周期 | `system/cron/default/history_success_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 失败历史记录生命周期 | `system/cron/default/history_failure_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 生成计划间隔 | `system/cron/staging/schedule_generate_every` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 提前计划 | `system/cron/staging/schedule_ahead_for` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 如果未在中运行，则未运行 | `system/cron/staging/schedule_lifetime` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 历史记录清理间隔 | `system/cron/staging/history_cleanup_every` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 成功历史记录生命周期 | `system/cron/staging/history_success_lifetime` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 失败历史记录生命周期 | `system/cron/staging/history_failure_lifetime` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 使用单独的进程 | `system/cron/staging/use_separate_process` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 生成计划间隔 | `system/cron/catalog/event/schedule_generate_every` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 提前计划 | `system/cron/catalog/event/schedule_ahead_for` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 如果未在中运行，则未运行 | `system/cron/catalog/event/schedule_lifetime` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 历史记录清理间隔 | `system/cron/catalog/event/history_cleanup_every` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 成功历史记录生命周期 | `system/cron/catalog/event/history_success_lifetime` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 失败历史记录生命周期 | `system/cron/catalog/event/history_failure_lifetime` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 使用单独的进程 | `system/cron/catalog/event/use_separate_process` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 生成计划间隔 | `system/cron/staging/schedule_generate_every` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 提前计划 | `system/cron/staging/schedule_ahead_for` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 如果未在中运行，则未运行 | `system/cron/staging/schedule_lifetime` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 历史记录清理间隔 | `system/cron/staging/history_cleanup_every` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 成功历史记录生命周期 | `system/cron/staging/history_success_lifetime` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 失败历史记录生命周期 | `system/cron/staging/history_failure_lifetime` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 使用单独的进程 | `system/cron/staging/use_separate_process` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 生成计划间隔 | `system/cron/catalog/event/schedule_generate_every` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 提前计划 | `system/cron/catalog/event/schedule_ahead_for` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 如果未在中运行，则未运行 | `system/cron/catalog/event/schedule_lifetime` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 历史记录清理间隔 | `system/cron/catalog/event/history_cleanup_every` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 成功历史记录生命周期 | `system/cron/catalog/event/history_success_lifetime` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 失败历史记录生命周期 | `system/cron/catalog/event/history_failure_lifetime` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 使用单独的进程 | `system/cron/catalog/event/use_separate_process` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 使用单独的进程 | `system/cron/default/use_separate_process` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 禁用电子邮件通信 | `system/smtp/disable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 设置返回路径 | `system/smtp/set_return_path` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -264,7 +264,7 @@ ht-degree: 0%
 | 导出配置 | `system/full_page_cache/varnish/export_button_version4` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 日志中保存的天数 | `system/bulk/lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 媒体存储 | `system/media_storage_configuration/media_storage` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 选择媒体数据库 | `system/media_storage_configuration/media_database` （在Commerce 2.4.3中已弃用） | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| 选择媒体数据库 | `system/media_storage_configuration/media_database` (在Commerce 2.4.3中已弃用) | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 环境更新时间 | `system/media_storage_configuration/configuration_update_time` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 保存文件，天 | `system/magento_scheduled_import_export_log/save_days` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 启用计划文件历史记录清理 | `system/magento_scheduled_import_export_log/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -276,9 +276,9 @@ ht-degree: 0%
 
 ### 开发人员路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **高级** > **开发人员**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **高级** > **开发人员**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 工作流类型 | `dev/front_end_development_workflow/type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 允许符号链接 | `dev/template/allow_symlink` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |

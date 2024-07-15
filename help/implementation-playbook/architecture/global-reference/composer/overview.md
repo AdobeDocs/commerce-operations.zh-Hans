@@ -15,18 +15,18 @@ ht-degree: 0%
 
 # Composer开发
 
-本主题介绍就地开发编辑器模块的推荐方法（作为中的Git存储库） `vendor/` 目录)并将这些模块添加到您的主Git项目中。
+本主题介绍就地开发编辑器模块（作为`vendor/`目录中的Git存储库）并将这些模块添加到主Git项目的推荐方法。
 
 >[!NOTE]
 >
->这些准则主要适用于 [全球参考体系结构(GRA)](../overview.md) 项目。
+>这些准则主要适用于[全局参考体系结构(GRA)](../overview.md)项目。
 
 ## 准备开发分支
 
 1. 在主Git存储库中创建或签出开发分支。
 1. 需要您维护的每个模块的开发版本。
 
-   在此示例中，主Git存储库中的每个分支都表示一个编辑器包版本。 在此场景中，推荐的编辑器版本命名惯例是 `dev-` 后跟分支名称。 例如：
+   在此示例中，主Git存储库中的每个分支都表示一个编辑器包版本。 此场景中推荐的编辑器版本的命名约定是`dev-`，后跟分支名称。 例如：
 
    - `dev-develop`
    - `dev-qa`
@@ -35,25 +35,25 @@ ht-degree: 0%
    composer require client/module-example:dev-develop
    ```
 
-1. 如果另一个编辑器包需要模块的特定版本(例如， `client/module-example 1.0.12`)，请将其与别名一起安装：
+1. 如果另一个编辑器包需要特定版本的模块（例如，`client/module-example 1.0.12`），请用别名安装它：
 
    ```bash
    composer require 'client/module-example:dev-develop as 1.0.12'
    ```
 
-   对于 `qa` 分支，替换 `dev-develop` 替换为 `dev-qa`.
+   对于`qa`分支，将`dev-develop`替换为`dev-qa`。
 
 ## 将程序包转换为Git存储库
 
-默认情况下，包不包含 `.git/` 目录。 Composer可以从Git中签出包，而不是使用预建的Composer包。 此方法的优势在于，您可以在开发期间轻松修改包。
+默认情况下，包不包含`.git/`目录。 Composer可以从Git中签出包，而不是使用预建的Composer包。 此方法的优势在于，您可以在开发期间轻松修改包。
 
-1. 从移除模块 `vendor/` 目录。
+1. 从`vendor/`目录中删除模块。
 
    ```bash
    rm -rf vendor/client/module-example
    ```
 
-1. 使用 [指定的Git源](#prepare-a-development-branch).
+1. 使用[指定的Git源](#prepare-a-development-branch)重新安装模块。
 
    ```bash
    composer install --prefer-source
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 ## 使用您的开发更新主项目
 
-通过修改您的主Git存储库 `composer.lock` 文件。 如果您的模块是新模块，请启用该模块。
+通过修改`composer.lock`文件更新您的主Git存储库。 如果您的模块是新模块，请启用该模块。
 
 ```bash
 # to update your packages and all dependencies of the package

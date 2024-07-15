@@ -5,7 +5,7 @@ exl-id: cc9b090a-a504-4df3-aa32-81882f431dd9
 feature: Cloud
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 # 准则摘要
 
 Adobe Commerce 2.4.5性能基准结果反映了在Adobe Commerce实例上衡量的性能，该实例部署了以下基础架构和其他组件。
-- [Pro云环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html) 替换为 [扩展体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html)
-- [适用于Adobe Commerce的B2B](https://experienceleague.adobe.com/docs/commerce-admin/b2b/introduction.html)
+- 具有[缩放体系结构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html)的[专业云环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html)
+- Adobe Commerce的[B2B](https://experienceleague.adobe.com/docs/commerce-admin/b2b/introduction.html)
 - [Adobe Commerce Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/introduction.html)
 - [Adobe Stock](https://experienceleague.adobe.com/docs/commerce-admin/content-design/media/adobe-stock/adobe-stock.html)
 
@@ -24,7 +24,7 @@ Adobe Commerce 2.4.5性能基准结果反映了在Adobe Commerce实例上衡量�
 
 ## 关键绩效指标
 
-下图显示了性能基准的Commerce存储配置以及测试结果中的关键性能量度。
+下图显示了性能基准的Commerce存储配置以及测试结果中的关键性能指标。
 
 ![性能基准JMeter和生产基础架构](../../../assets/performance/images/performance-benchmark-kpis-245-cloud.png){width="700" zoomable="yes"}
 
@@ -32,17 +32,17 @@ Adobe Commerce 2.4.5性能基准结果反映了在Adobe Commerce实例上衡量�
 
 ### 性能亮点
 
-- **订购** — 每分钟处理3,481个订单，同时在第99个百分位数中保持不到2秒的响应时间（99%的请求均得到服务，响应时间不到2秒）。
-- **页面查看次数** — 每小时处理超过200万次页面查看，同时将第99百分位数的响应时间保持在2秒以内。
-- **有效SKU** — 客户档案包括2.42亿种不同的价格变化(<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/product-sku-limits.html">eSKU</a>)，以获取250,000个产品。
+- **订单数** — 每分钟处理3,481个订单，同时在第99个百分位数中保持不到2秒的响应时间（99%的请求均以不到2秒的响应时间提供服务）。
+- **页面查看次数** — 每小时处理的页面查看次数超过200万次，而第99个百分位数的响应时间保持在2秒以内。
+- **有效SKU** — 客户配置文件包含250,000种产品的2.42亿种不同的价格变化(<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/product-sku-limits.html">eSKU</a>)。
 - **GraphQL请求** — 系统可扩展到每分钟10,500个GraphQL未缓存请求，同时将第99百分位数的响应时间保持在2秒以内。
-- **并发管理员用户** — 系统可扩展到支持500个并发管理员用户，同时将第99个百分位数的响应时间保持在2秒以内。
+- **并发管理员用户** — 系统扩展为支持500个并发管理员用户，同时在第99个百分位数的响应时间保持在2秒以内。
 
 ## 测试环境
 
 通过在具有缩放架构的Pro云环境中部署的Adobe Commerce 2.4.5实例进行测试，获得了性能基准结果。 该实例还安装、配置和启用了Adobe Commerce B2B、Inventory management和Adobe Stock集成模块。
 
-测试用户档案的性能测试数据是使用 <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/generate-data.html">Performance Toolkit</a>.
+测试配置文件的性能测试数据是使用<a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/generate-data.html">性能工具包</a>生成的。
 
 绩效衡量基于针对客户和商业用户的模拟日常店铺活动。 这些值反映每个案例的接近最大吞吐量，但并不反映独特的业务模式，如私有销售或闪电销售。
 
@@ -52,7 +52,7 @@ Adobe Commerce 2.4.5性能基准结果反映了在Adobe Commerce实例上衡量�
 
      缓存层的有效使用增加了每小时的页面查看次数。
 
-- **GRAPHQL API**
+- **GraphQL API**
    - 250个并发线程
    - 设置为0% CDN缓存命中率
 
@@ -70,11 +70,11 @@ Adobe Commerce 2.4.5性能基准结果反映了在Adobe Commerce实例上衡量�
 
 ### 应用程序
 
-<a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-5.html">Adobe Commerce 2.4.5</a> 部署在具有Pro架构的云基础架构上。
+<a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-5.html">Adobe Commerce 2.4.5</a>部署在具有Pro架构的云基础架构上。
 
 ### 基础架构
 
-为了实现性能基准，Adobe Commerce 2.4.5部署在 [可扩展的基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html) 具有以下容量。
+对于性能基准，Adobe Commerce 2.4.5部署在[可扩展的基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html)上，具有以下容量。
 
 - **Web节点规范**
    - vCPU 216（72 x 3节点）

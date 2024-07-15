@@ -13,7 +13,7 @@ ht-degree: 0%
 
 本主题讨论如何在安装Adobe Commerce之前设置Web服务器组的读写权限。 这是必要的，因此命令行可以将文件写入文件系统。
 
-您使用的过程会有所不同，具体取决于您是否使用 [共享托管](#set-permissions-for-one-user-on-shared-hosting) 并有一个用户，或者如果您使用 [专用服务器](#set-ownership-and-permissions-for-two-users) 拥有两个用户。
+您使用的过程不同，这取决于您使用的是[共享托管](#set-permissions-for-one-user-on-shared-hosting)并有一个用户，还是使用[专用服务器](#set-ownership-and-permissions-for-two-users)并有两个用户。
 
 ## 为一个用户设置共享托管的权限
 
@@ -49,7 +49,7 @@ ht-degree: 0%
    chmod u+x bin/magento
    ```
 
-   要选择性地在一行中输入所有命令，假定应用程序安装在 `/var/www/html/magento2`：
+   要选择性地在一行中输入所有命令，请输入以下内容（假定应用程序安装在`/var/www/html/magento2`中）：
 
    ```bash
    cd /var/www/html/magento2 && find var generated vendor pub/static pub/media app/etc -type f -exec chmod u+w {} + && find var generated vendor pub/static pub/media app/etc -type d -exec chmod u+w {} + && chmod u+x bin/magento
@@ -58,17 +58,17 @@ ht-degree: 0%
 1. 如果您尚未这样做，请通过以下方式之一获取应用程序：
 
    * [Composer中继包](../../composer.md)
-   * [克隆存储库（仅限参与开发的开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+   * [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
-1. 设置文件系统所有权和权限后， [安装应用程序](../../advanced.md)
+1. 设置文件系统所有权和权限后，[安装应用程序](../../advanced.md)
 
 >[!NOTE]
 >
->要在安装应用程序后进一步限制权限，您可以 [配置umask](../../next-steps/set-umask.md).
+>若要在安装应用程序后进一步限制权限，您可以[配置umask](../../next-steps/set-umask.md)。
 
 ## 设置两个用户的所有权和权限
 
-本节讨论如何为自己的服务器或专用托管设置设置所有权和权限。 在此类型的设置中，您通常 *无法* 以Web服务器用户身份登录或切换到该用户。 通常以一个用户身份登录，并以其他用户身份运行Web服务器。
+本节讨论如何为自己的服务器或专用托管设置设置所有权和权限。 在此类型的设置中，您通常&#x200B;*无法*&#x200B;作为Web服务器用户登录或切换到该用户。 通常以一个用户身份登录，并以其他用户身份运行Web服务器。
 
 要设置双用户系统的所有权和权限，请执行以下操作：
 
@@ -83,25 +83,25 @@ ht-degree: 0%
 
 ### 关于共享组
 
-使Web服务器能够在文件系统中写入文件和目录，但还要维护 *所有权* 由文件系统所有者指定，两个用户必须位于同一组中。 这是必要的，这样两个用户才能共享对文件（包括使用“管理员”或其他基于Web的实用程序创建的文件）的访问权限。
+要使Web服务器能够写入文件系统中的文件和目录，同时维护文件系统所有者的&#x200B;*所有权*，两个用户必须位于同一组中。 这是必要的，这样两个用户才能共享对文件（包括使用“管理员”或其他基于Web的实用程序创建的文件）的访问权限。
 
 本节讨论如何创建文件系统所有者并将该用户放在Web服务器的组中。 如果需要，可以使用现有用户帐户；出于安全原因，我们建议用户使用强密码。
 
 >[!NOTE]
 >
->跳至 [查找Web服务器用户组](#find-the-web-server-user-group) 如果您计划使用现有用户帐户。
+>如果您计划使用现有的用户帐户，请跳到[查找Web服务器用户组](#find-the-web-server-user-group)。
 
 ### 创建文件系统所有者并为用户提供强密码
 
-本节讨论如何创建文件系统所有者。 (文件系统所有者是 *命令行用户*.)
+本节讨论如何创建文件系统所有者。 （文件系统所有者是&#x200B;*命令行用户*&#x200B;的另一个术语。）
 
-要在CentOS或Ubuntu上创建用户，请输入以下命令作为用户 `root` 权限：
+要在CentOS或Ubuntu上创建用户，请以具有`root`权限的用户身份输入以下命令：
 
 ```bash
 adduser <username>
 ```
 
-要向用户提供密码，请以用户的身份输入以下命令 `root` 权限：
+要为用户提供密码，请以具有`root`权限的用户身份输入以下命令：
 
 ```bash
 passwd <username>
@@ -111,9 +111,9 @@ passwd <username>
 
 >[!WARNING]
 >
->如果您没有 `root` 权限，可以使用其他本地用户帐户。 确保用户拥有强密码并继续使用 [将文件系统所有者放在Web服务器组中](#step-3-put-the-file-system-owner-in-the-web-servers-group).
+>如果您在应用程序服务器上没有`root`权限，则可以使用其他本地用户帐户。 确保用户具有强密码，然后继续[将文件系统所有者放入Web服务器组](#step-3-put-the-file-system-owner-in-the-web-servers-group)。
 
-例如，要创建名为的用户 `magento_user` 并为用户输入密码，请输入：
+例如，要创建名为`magento_user`的用户并为用户提供密码，请输入：
 
 ```bash
 sudo adduser magento_user
@@ -125,7 +125,7 @@ sudo passwd magento_user
 
 >[!WARNING]
 >
->由于创建此用户的目的是提供附加的安全性，因此请确保创建 [强密码](https://en.wikipedia.org/wiki/Password_strength).
+>由于创建此用户的目的是提供附加的安全性，因此请确保创建[强密码](https://en.wikipedia.org/wiki/Password_strength)。
 
 ### 查找Web服务器用户组
 
@@ -143,24 +143,24 @@ sudo passwd magento_user
   grep -Ei '^user|^group' /etc/httpd/conf/httpd.conf
   ```
 
-通常，用户和组名都是 `apache`.
+通常，用户和组名都是`apache`。
 
-* Ubuntu： `ps aux | grep apache` 查找Apache用户，然后 `groups <apache user>` 以查找组。
+* Ubuntu： `ps aux | grep apache`查找Apache用户，然后`groups <apache user>`查找组。
 
-通常，用户名和组名都是 `www-data`.
+通常，用户名和组名都是`www-data`。
 
 ### 将文件系统所有者放在Web服务器组中
 
-要将文件系统所有者放在Web服务器的主组中（假设CentOS和Ubuntu使用典型的Apache组名），请输入以下命令作为用户： `root` 权限：
+要将文件系统所有者放在Web服务器的主组中（假设CentOS和Ubuntu具有典型的Apache组名称），请以具有`root`权限的用户身份输入以下命令：
 
 * CentOS： `usermod -a -G apache <username>`
 * Ubuntu： `usermod -a -G www-data <username>`
 
 >[!NOTE]
 >
->此 `-a -G` 选项很重要，因为它们会添加 `apache` 或 `www-data` as a *辅助* 组到用户帐户，这将保留用户的 *主要* 组。 将辅助组添加到用户帐户有帮助 [限制文件所有权和权限](#set-ownership-and-permissions-for-two-users) 以确保共享组的成员只能访问某些文件。
+>`-a -G`选项很重要，因为它们将`apache`或`www-data`作为&#x200B;*次要*&#x200B;组添加到用户帐户，这将保留用户的&#x200B;*主要*&#x200B;组。 将辅助组添加到用户帐户有助于[限制文件所有权和权限](#set-ownership-and-permissions-for-two-users)，以确保共享组的成员只能访问某些文件。
 
-例如，添加用户 `magento_user` 到 `apache` CentOS上的主组：
+例如，要将用户`magento_user`添加到CentOS上的`apache`主组：
 
 ```bash
 sudo usermod -a -G apache magento_user
@@ -172,7 +172,7 @@ sudo usermod -a -G apache magento_user
 groups magento_user
 ```
 
-以下示例结果显示了用户的主节点(`magento`)和次要(`apache`)个组。
+以下示例结果显示了用户的主组(`magento`)和辅助组(`apache`)。
 
 ```bash
 magento_user : magento_user apache
@@ -192,7 +192,7 @@ magento_user : magento_user apache
 如果您尚未这样做，请通过以下方式之一获取软件：
 
 * [Composer中继包](../../composer.md)
-* [克隆存储库（仅限参与开发的开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
 ### 设置共享组的所有权和权限
 
@@ -221,13 +221,13 @@ magento_user : magento_user apache
    chmod u+x bin/magento
    ```
 
-要选择性地在一行中输入所有命令，假定应用程序安装在 `/var/www/html/magento2` 并且Web服务器组名称为 `apache`：
+若要选择在一行中输入所有命令，请输入以下内容（假定应用程序安装在`/var/www/html/magento2`中，且Web服务器组名称为`apache`）：
 
 ```bash
 cd /var/www/html/magento2 && find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} + && find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} + && chown -R :apache . && chmod u+x bin/magento
 ```
 
-如果文件系统权限设置不正确，且文件系统所有者无法更改权限，则可以作为用户输入命令，并使用 `root` 权限：
+如果文件系统权限设置不正确，且文件系统所有者无法更改权限，则可以输入命令作为具有`root`权限的用户：
 
 ```bash
 cd /var/www/html/magento2 && sudo find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} + && sudo find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} + && sudo chown -R :apache . && sudo chmod u+x bin/magento

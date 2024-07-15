@@ -1,32 +1,32 @@
 ---
-title: ’[!DNL Data Migration Tool] 技术规范
-description: 了解的实施详细信息 [!DNL Data Migration Tool] 以及在Magento1和Magento2之间传输数据时如何扩展。
+title: “[!DNL Data Migration Tool]技术规范”
+description: 了解 [!DNL Data Migration Tool] 的实现详细信息以及在Magento1和Magento2之间传输数据时如何扩展。
 exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2098'
 ht-degree: 0%
 
 ---
 
-# [!DNL Data Migration Tool] 技术规范
+# [!DNL Data Migration Tool]技术规范
 
-本节将介绍 [!DNL Data Migration Tool] 实施详细信息以及如何扩展其功能。
+本节介绍[!DNL Data Migration Tool]实现详细信息以及如何扩展其功能。
 
 ## 存储库
 
-要访问 [!DNL Data Migration Tool] 源代码，请参阅GitHub [存储库](https://github.com/magento/data-migration-tool).
+要访问[!DNL Data Migration Tool]源代码，请参阅GitHub [存储库](https://github.com/magento/data-migration-tool)。
 
 ## 系统要求
 
-此 [系统要求](../../installation/system-requirements.md) 对于 [!DNL Data Migration Tool] 与Magento2相同。
+[!DNL Data Migration Tool]的[系统要求](../../installation/system-requirements.md)与Magento2相同。
 
 ## 内部结构
 
 ### 目录结构
 
-下图显示了的目录结构 [!DNL Data Migration Tool]：
+下图表示[!DNL Data Migration Tool]的目录结构：
 
 ```terminal
 ├── etc                                    --- all configuration files
@@ -103,13 +103,13 @@ ht-degree: 0%
 
 ## 入口点
 
-运行迁移过程的脚本位于： `magento-root/bin/magento`.
+运行迁移进程的脚本位于： `magento-root/bin/magento`。
 
 ## 配置
 
-配置的架构 `config.xsd` 文件位于 `etc/` 目录。 默认配置文件(`config.xml.dist`)为Magento1.x的每个版本创建。它位于下的单独目录中 `etc/`.
+配置`config.xsd`文件的架构位于`etc/`目录中。 为Magento1.x的每个版本创建默认配置文件(`config.xml.dist`)。它位于`etc/`下的单独目录中。
 
-默认配置文件可由自定义配置文件替换(请参阅 [命令语法](migrate-data/overview.md#command-syntax))。
+默认配置文件可由自定义配置文件替换（请参阅[命令语法](migrate-data/overview.md#command-syntax)）。
 
 配置文件具有以下结构：
 
@@ -164,19 +164,19 @@ ht-degree: 0%
 
 在数据库表中安装了带有前缀的Magento时更改前缀选项。 可以为Magento1和Magento2数据库设置此值。 请相应地使用“source_prefix”和“dest_prefix”配置选项。
 
-配置数据可通过以下方式访问： `\Migration\Config` 类。
+可使用`\Migration\Config`类访问配置数据。
 
 ## 步骤可用操作
 
 | 文档 | 字段 |
 |---|---|
-| `step` | Steps节点中的第二级节点。 相关步骤的描述必须在 `title` 属性。 |
+| `step` | Steps节点中的第二级节点。 必须在`title`属性中指定相关步骤的描述。 |
 | `integrity` | 指定负责完整性检查的PHP类。 比较表字段名称、类型和其他信息，以验证Magento1和2数据结构之间的兼容性。 |
 | `data` | 指定负责数据检查的PHP类。 将数据逐表从Magento1传输到Magento2。 |
 | `volume` | 指定负责卷检查的PHP类。 比较表之间的记录数以验证传输是否成功。 |
 | `delta` | 指定负责增量检查的PHP类。 完全数据迁移后，将增量从Magento1传输到Magento2。 |
 
-## 源数据库信息属性
+## Source数据库信息属性
 
 | 文档 | 字段 | 必需？ |
 |---|---|---|
@@ -204,7 +204,7 @@ ht-degree: 0%
 
 ## 使用TLS协议连接
 
-您还可以使用TLS协议（即使用公共/专用加密密钥）连接到数据库。 将以下可选属性添加到 `database` 元素：
+您还可以使用TLS协议（即使用公共/专用加密密钥）连接到数据库。 将以下可选属性添加到`database`元素：
 
 * `ssl_ca`
 * `ssl_cert`
@@ -227,7 +227,7 @@ ht-degree: 0%
 
 步骤是一个单元，它提供迁移某些分隔数据所需的功能。 步骤可以包含一个或多个阶段（完整性检查、数据、卷检查和增量）。
 
-默认情况下，需要执行多个步骤([地图](#map-step)， [EAV](#eav)， [URL重写](#url-rewrite-step)，等等)。 您也可以选择添加自己的步骤。
+默认情况下，有几个步骤（[映射](#map-step)、[EAV](#eav)、[URL重写](#url-rewrite-step)等）。 您也可以选择添加自己的步骤。
 
 步骤相关类位于src/Migration/Step目录中。
 
@@ -263,9 +263,9 @@ class StageClass implements StageInterface
 }
 ```
 
-如果数据阶段支持回滚，则应实施 `RollbackInterface` 界面。
+如果数据阶段支持回滚，则它应该实现`RollbackInterface`接口。
 
-运行步骤的可视化图表由Symfony的ProgressBar组件提供(请参阅 [进度条](https://symfony.com/doc/current/components/console/helpers/progressbar.html))。 以LogLevelProcessor的身份在步骤中访问此组件。
+运行步骤的可视化图表由Symfony的ProgressBar组件提供（请参阅[进度条](https://symfony.com/doc/current/components/console/helpers/progressbar.html)）。 以LogLevelProcessor的身份在步骤中访问此组件。
 
 主要使用方法有：
 
@@ -283,7 +283,7 @@ $this->progress->finish();
 
 ### 数据传输
 
-如果完整性检查通过，则正在传输数据。 如果出现错误，则回滚运行以恢复Magento2的上一个状态。 如果步骤类实现 `RollbackInterface` 接口，然后在出现错误时执行rollback方法。
+如果完整性检查通过，则正在传输数据。 如果出现错误，则回滚运行以恢复Magento2的上一个状态。 如果步骤类实现`RollbackInterface`接口，则在出现错误时执行回滚方法。
 
 ### 音量检查
 
@@ -333,17 +333,17 @@ $this->progress->finish();
 </settings>
 ```
 
-在节点下 `<key>` 有一些规则可以在的“path”列中使用 `core_config_data` 表格。 `<ignore>` 规则会阻止工具传输某些设置。 可在此节点中使用通配符。 所有其他设置未列在 `<ignore>` 节点将被迁移。 如果设置的路径在Magento2中发生更改，则应将其添加到 `//key/rename` 节点，旧路径指示在 `//key/rename/path` 节点和新路径指示在 `//key/rename/to` 节点。
+在节点`<key>`下，有一些规则可与`core_config_data`表中的“path”列一起使用。 `<ignore>`规则阻止工具传输某些设置。 可在此节点中使用通配符。 `<ignore>`节点中未列出的所有其他设置都将迁移。 如果设置的路径在Magento2中发生更改，则应将其添加到`//key/rename`节点，其中旧路径在`//key/rename/path`节点中指示，新路径在`//key/rename/to`节点中指示。
 
-在节点下 `<value>`，有一些规则可在 `core_config_data` 表格。 这些规则旨在通过处理程序（实现的类）转换设置的值 `Migration\Handler\HandlerInterface`)，并将其调整为Magento2。
+在节点`<value>`下，有一些规则可与`core_config_data`表中的“value”列一起使用。 这些规则旨在通过处理程序（实现`Migration\Handler\HandlerInterface`的类）转换设置的值，并将其调整为Magento2。
 
 ### 数据迁移模式
 
-在此模式下，将迁移大部分数据。 在数据迁移之前，将为每个步骤运行完整性检查阶段。 如果完整性检查通过， [!DNL Data Migration Tool] 安装deltalog表（带前缀） `m2_cl_*`)和相应的触发器到Magento1数据库并运行数据迁移阶段的步骤。 当迁移完成且无错误时，卷检查将检查数据一致性。 如果迁移实时存储，则可能会显示警告消息。 不用担心，增量迁移会处理这些增量数据。 最有价值的迁移步骤是映射、URL重写和EAV。
+在此模式下，将迁移大部分数据。 在数据迁移之前，将为每个步骤运行完整性检查阶段。 如果完整性检查通过，[!DNL Data Migration Tool]将向Magento1数据库安装deltalog表（前缀为`m2_cl_*`）和相应的触发器，并运行步骤的数据迁移阶段。 当迁移完成且无错误时，卷检查将检查数据一致性。 如果迁移实时存储，则可能会显示警告消息。 不用担心，增量迁移会处理这些增量数据。 最有价值的迁移步骤是映射、URL重写和EAV。
 
 #### 映射步骤
 
-映射步骤负责将大部分数据从Magento1传输到Magento2。 此步骤从map.xml文件(位于 `etc/` 目录)。 该文件描述了源(Magento1)和目标(Magento2)的数据结构之间的差异。 如果Magento1包含属于Magento2中不存在的某个扩展的表或字段，则可以将这些实体放置在此处，以按映射步骤忽略它们。 否则，它将显示错误消息。
+映射步骤负责将大部分数据从Magento1传输到Magento2。 此步骤从map.xml文件（位于`etc/`目录）中读取说明。 该文件描述了源(Magento1)和目标(Magento2)的数据结构之间的差异。 如果Magento1包含属于Magento2中不存在的某个扩展的表或字段，则可以将这些实体放置在此处，以按映射步骤忽略它们。 否则，它将显示错误消息。
 
 映射文件的格式如下：
 
@@ -401,29 +401,29 @@ $this->progress->finish();
 
 区域：
 
-* *源*  — 包含源数据库的规则
+* *源* — 包含源数据库的规则
 
-* *目标*  — 包含目标数据库的规则
+* *目标* — 包含目标数据库的规则
 
 选项：
 
-* *忽略*  — 忽略使用此选项标记的文档、字段或数据类型
+* *忽略* — 忽略使用此选项标记的文档、字段或数据类型
 
-* *重命名*  — 描述具有不同名称的文档之间的名称关系。 如果目标文档名称与源文档名称不同，您可以使用重命名选项来设置与目标表名称类似的源文档名称
+* *重命名* — 描述具有不同名称的文档之间的名称关系。 如果目标文档名称与源文档名称不同，您可以使用重命名选项来设置与目标表名称类似的源文档名称
 
-* *移动*  — 设置将指定字段从源文档移动到目标文档的规则。 注意：目标文档名称应与源文档名称相同。 如果源文档名称与目标文档名称不同 — 需要对包含已移动字段的文档使用重命名选项
+* *移动* — 设置将指定字段从源文档移动到目标文档的规则。 注意：目标文档名称应与源文档名称相同。 如果源文档名称与目标文档名称不同 — 需要对包含已移动字段的文档使用重命名选项
 
-* *转换*  — 是一个选项，允许用户根据处理程序中描述的行为迁移字段
+* *转换* — 是一个允许用户根据处理程序中描述的行为迁移字段的选项
 
-* *处理程序*  — 描述字段的转换行为。 要调用处理程序，您需要在 `<handler>` 标记之前。 使用 `<param>` 标记以将其传递给处理程序
+* *处理程序* — 描述字段的转换行为。 要调用处理程序，您需要在`<handler>`标记中指定处理程序类名称。 将`<param>`标记与参数名称和值数据一起使用，以将其传递给处理程序
 
-**来源** 可用操作：
+**Source**&#x200B;可用操作：
 
 | 文档 | 字段 |
 |--- |--- |
 | 忽略重命名 | 忽略移动转换 |
 
-**目标** 可用操作：
+**目标**&#x200B;可用操作：
 
 | 文档 | 字段 |
 |--- |--- |
@@ -431,7 +431,7 @@ $this->progress->finish();
 
 #### 通配符
 
-忽略具有相似部件的文档(`document_name_1`， `document_name_2`)，则可以使用通配符功能。 Put `*` 符号而不是重复部分(`document_name_*`)，并且此掩码覆盖满足此掩码的所有源文档或目标文档。
+若要忽略具有相似部件(`document_name_1`， `document_name_2`)的文档，您可以使用通配符功能。 放入`*`符号而不是重复部分(`document_name_*`)，此掩码覆盖符合此掩码的所有源文档或目标文档。
 
 #### URL重写步骤
 
@@ -453,7 +453,7 @@ $this->progress->finish();
 
 ### 增量迁移模式
 
-主迁移后，其他数据可能已添加到Magento1数据库中（例如，由店面的客户添加）。 为了跟踪此数据，工具会在迁移过程的开始阶段为表设置数据库触发器。 有关更多信息，请参阅 [迁移由第三方扩展创建的数据](migrate-data/delta.md#migrate-data-created-by-third-party-extensions).
+主迁移后，其他数据可能已添加到Magento1数据库中（例如，由店面的客户添加）。 为了跟踪此数据，工具会在迁移过程的开始阶段为表设置数据库触发器。 有关详细信息，请参阅[迁移由第三方扩展创建的数据](migrate-data/delta.md#migrate-data-created-by-third-party-extensions)。
 
 ## 数据源
 
@@ -465,7 +465,7 @@ $this->progress->finish();
 
 ## 记录
 
-为了实现迁移过程的输出并控制所有可能的级别，在Magento中使用了PSR记录器。 `\Migration\Logger\Logger` 实现类以提供日志记录功能。 要使用记录器，应通过构造函数依赖项注入来注入记录器。
+为了实现迁移过程的输出并控制所有可能的级别，在Magento中使用了PSR记录器。 已实现`\Migration\Logger\Logger`类以提供日志记录功能。 要使用记录器，应通过构造函数依赖项注入来注入记录器。
 
 ```php
 class SomeClass
@@ -490,7 +490,7 @@ $this->logger->error("Message about error operation");
 $this->logger->warning("Some warning message");
 ```
 
-可以自定义日志信息的写入位置。 为此，您可以使用记录器的pushHandler()方法将处理程序添加到记录器。 每个处理程序都应实施 `\Monolog\Handler\HandlerInterface` 界面。 就目前而言，有两个处理程序：
+可以自定义日志信息的写入位置。 为此，您可以使用记录器的pushHandler()方法将处理程序添加到记录器。 每个处理程序都应实现`\Monolog\Handler\HandlerInterface`接口。 就目前而言，有两个处理程序：
 
 * ConsoleHandler：将消息写入控制台
 
@@ -516,24 +516,24 @@ $this->logger->pushProcessor([$this->processor, 'setExtra']);
 可以设置详细级别。 就目前而言，有三个层次：
 
 * `ERROR` （仅将错误写入日志）
-* `INFO` （只有重要信息会写入日志，即默认值）
-* `DEBUG` （所有内容都是写的）
+* `INFO` （只将重要信息写入日志，默认值）
+* `DEBUG` （已写入所有内容）
 
-可以通过调用为每个处理程序分别设置详细日志级别 `setLevel()` 方法。 如果要通过命令行参数设置详细级别，则应该在应用程序启动时更改“verbose”选项。
+可以通过调用`setLevel()`方法为每个处理程序分别设置详细日志级别。 如果要通过命令行参数设置详细级别，则应该在应用程序启动时更改“verbose”选项。
 
-您可以使用单色格式化程序格式化日志消息。 要使格式化程序功能正常工作，您必须使用 `setFormatter()` 方法。 目前，我们有一个格式化程序类(`MessageFormatter`)在消息处理期间设置特定格式（取决于详细级别）(通过 `format()` 从处理程序执行的方法)。
+您可以使用单色格式化程序格式化日志消息。 要使格式化程序功能正常工作，必须使用`setFormatter()`方法指定日志处理程序。 目前，我们有一个格式化程序类(`MessageFormatter`)，它在消息处理期间（通过从处理程序执行的`format()`方法）设置特定格式（取决于详细程度级别）。
 
-在中，以详细模式操作记录器（添加处理程序和处理器）和处理 `process()` 方法 `Migration\Logger\Manager` 类。 方法是在应用程序启动时调用的。
+在`Migration\Logger\Manager`类的`process()`方法中执行操作记录器（添加处理程序和处理器）和详细模式处理。 方法是在应用程序启动时调用的。
 
 ## 自动测试
 
-中提供了三种类型的测试 [!DNL Data Migration Tool]：
+[!DNL Data Migration Tool]中有三种类型的测试：
 
 * 静态
 * 单位
 * 集成
 
-它们位于工具的 `tests/` 目录，与测试类型相同(单元测试位于 `tests/unit` 目录)。 要启动测试，应安装phpunit。 将当前目录更改为测试目录并启动phpunit。 例如：
+它们位于工具的`tests/`目录中，这与测试类型相同（单元测试位于`tests/unit`目录中）。 要启动测试，应安装phpunit。 将当前目录更改为测试目录并启动phpunit。 例如：
 
 ```bash
 [10:32 AM]-[vagrant@debian-70rc1-x64-vbox4210]-[/var/www/magento2/vendor/magento/data-migration-tool]-[git master]

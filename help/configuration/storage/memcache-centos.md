@@ -5,14 +5,14 @@ feature: Configuration, Cache, Storage
 exl-id: fc4ad18b-7e99-496e-aebc-1d7640d8716c
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 # 在CentOS上设置内存缓存
 
-本节提供了在CentOS上安装内存缓存的说明。 欲了解更多信息，请参见 [memcached wiki](https://github.com/memcached/old-wiki).
+本节提供了在CentOS上安装内存缓存的说明。 有关详细信息，请参阅[memcached wiki](https://github.com/memcached/old-wiki)。
 
 >[!INFO]
 >
@@ -20,18 +20,18 @@ ht-degree: 0%
 
 由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
-- `memcache` (_否d_) — 旧版但很受欢迎的扩展，不会定期维护。
-此 `memcache` 当前扩展 _不会_ 使用PHP 7。 请参阅 [memcache的PHP文档](https://www.php.net/manual/en/book.memcache.php).
+- `memcache` (_no d_) — 不是定期维护的较旧但常用的扩展。
+当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache](https://www.php.net/manual/en/book.memcache.php)的[PHP文档。
 
-  确切名称为 `php-pecl-memcache` 用于CentOS。
+  对于CentOS，确切名称为`php-pecl-memcache`。
 
-- `memcached` (_带有`d`_) — 与PHP 7兼容的更新和维护的扩展。 请参阅 [memcached的PHP文档](https://www.php.net/manual/en/book.memcached.php).
+- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached](https://www.php.net/manual/en/book.memcached.php)的[PHP文档。
 
-  确切名称为 `php-pecl-memcached` 用于CentOS。
+  对于CentOS，确切名称为`php-pecl-memcached`。
 
 ## 在CentOS上安装和配置内存缓存
 
-要在CentOS上安装内存缓存，请以用户身份执行以下任务 `root` 权限：
+要在CentOS上安装memcached，请以具有`root`权限的用户身份执行以下任务：
 
 1. 安装memcached及其依赖项：
 
@@ -53,21 +53,21 @@ ht-degree: 0%
 
    >[!INFO]
    >
-   >上述命令的语法可能取决于您使用的程序包资料档案库。 例如，如果使用webtatic和PHP 5.6，请输入 `yum install -y php56w-pecl-memcache`. 使用 `yum search memcache|grep php` 以查找相应的包名称。
+   >上述命令的语法可能取决于您使用的程序包资料档案库。 例如，如果您使用webtatic和PHP 5.6，请输入`yum install -y php56w-pecl-memcache`。 使用`yum search memcache|grep php`查找相应的包名称。
 
 
-1. 更改的memcached配置设置 `CACHESIZE` 和 `OPTIONS`：
+1. 更改`CACHESIZE`和`OPTIONS`的memcached配置设置：
 
-   1. 打开 `/etc/sysconfig/memcached` 在文本编辑器中。
-   1. 查找值 `CACHESIZE` 并将其更改为至少1 GB。 例如：
+   1. 在文本编辑器中打开`/etc/sysconfig/memcached`。
+   1. 找到`CACHESIZE`的值，并将其更改为至少1 GB。 例如：
 
       ```config
       CACHESIZE="1GB"
       ```
 
-   1. 查找值 `OPTIONS` 并将其更改为 `localhost` 或 `127.0.0.1`
+   1. 找到`OPTIONS`的值，并将其更改为`localhost`或`127.0.0.1`
 
-1. 将更改保存到 `memcached` 并退出文本编辑器。
+1. 将更改保存到`memcached`并退出文本编辑器。
 1. 重新启动memcached。
 
    ```bash
@@ -86,13 +86,13 @@ ht-degree: 0%
 
 ## 在安装Commerce之前验证memcached的工作原理
 
-Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟的时间，并且以后可以简化故障排除。
+Adobe建议测试memcached，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟的时间，并且以后可以简化故障排除。
 
 ### 验证Web服务器是否识别memcached
 
 要验证Web服务器是否能够识别memcached：
 
-1. 创建 `phpinfo.php` Web服务器的docroot中的文件：
+1. 在Web服务器的docroot中创建`phpinfo.php`文件：
 
    ```php
    <?php
@@ -106,15 +106,15 @@ Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工�
 
 1. 请确保memcache按以下方式显示：
 
-![确认Web服务器可识别memcache](../../assets/configuration/memcache.png)
+![确认Web服务器识别了memcache](../../assets/configuration/memcache.png)
 
 验证您是否使用memcached版本3.0.5或更高版本。
 
-如果memcache未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍然不显示，请验证是否已安装 `php-pecl-memcache` 扩展。
+如果memcache未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍然不显示，请验证是否已安装`php-pecl-memcache`扩展。
 
 ### 创建由MySQL数据库和PHP脚本组成的memcache测试
 
-该测试使用MySQL数据库、表和数据来验证是否可以检索数据库数据并将其存储在memcache中。 PHP脚本首先搜索高速缓存。 如果结果不存在，脚本将查询数据库。 在原始数据库完成查询后，脚本使用 `set` 命令。
+该测试使用MySQL数据库、表和数据来验证是否可以检索数据库数据并将其存储在memcache中。 PHP脚本首先搜索高速缓存。 如果结果不存在，脚本将查询数据库。 在原始数据库完成查询后，脚本使用`set`命令将结果存储在memcache中。
 
 [有关此测试的更多详细信息](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-12-04)
 
@@ -124,7 +124,7 @@ Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工�
 mysql -u root -p
 ```
 
-在 `mysql` 提示，输入以下命令：
+在`mysql`提示符下，输入以下命令：
 
 ```sql
 create database memcache_test;
@@ -135,7 +135,7 @@ insert into example values (1, "new_data");
 exit
 ```
 
-创建 `cache-test.php` 在Web服务器的docroot中：
+在Web服务器的docroot中创建`cache-test.php`：
 
 ```php
 $meminstance = new Memcached();
@@ -163,7 +163,7 @@ print "got result from memcached\n";
 return 0;
 ```
 
-位置 `<memcached hostname or ip>` 是 `localhost`， `127.0.0.1`或内存缓存主机名或IP地址。 此 `<memcached port>` 是侦听端口；默认情况下， `11211`.
+其中`<memcached hostname or ip>`是`localhost`、`127.0.0.1`或memcache主机名或IP地址。 `<memcached port>`是侦听端口；默认情况下，`11211`。
 
 从命令行运行脚本。
 
@@ -175,9 +175,9 @@ cd <web server docroot>
 php cache-test.php
 ```
 
-第一个结果是 `got result from mysql`. 这意味着memcached中不存在该键，但它是从MySQL中检索的。
+第一个结果为`got result from mysql`。 这意味着memcached中不存在该键，但它是从MySQL中检索的。
 
-第二个结果是 `got result from memcached`，验证值是否成功存储在memcached中。
+第二个结果为`got result from memcached`，用于验证该值是否成功存储在memcached中。
 
 最后，您可以使用Telnet查看memcache密钥：
 

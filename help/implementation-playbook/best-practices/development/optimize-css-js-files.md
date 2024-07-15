@@ -16,18 +16,18 @@ ht-degree: 0%
 对于响应更迅速的Commerce站点，请优化CSS和JavaScript (JS)资源文件并消除渲染阻止资源。
 
 - **优化CSS和JS文件** — 通过将Adobe Commerce配置为合并、缩小单独的文件并将其捆绑到单个文件中，减少加载CSS和JavaScript (JS)文件所需的时间。
-- **消除渲染阻止资源** — 考虑内联提供关键JS和CSS功能，并推迟所有非关键JS/CSS样式。 有关指导，请参阅 [消除渲染阻止资源](https://web.dev/render-blocking-resources/).
+- **消除渲染阻止资源** — 考虑内联提供关键JS和CSS功能，并延迟所有非关键JS/CSS样式。 有关指导，请参阅[消除渲染阻止资源](https://web.dev/render-blocking-resources/)。
 
 ## 受影响的产品和版本
 
-[所有受支持的版本，2.3及更高版本](../../../release/versions.md) 之：
+[所有受支持的版本，2.3及更高版本，共](../../../release/versions.md)个：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
 
 ## 合并或缩小CSS文件
 
-通过合并、缩小单独的文件并将其捆绑到单个文件中，可以减少加载CSS和JavaScript (JS)文件所需的时间。
+通过合并、缩小单独的文件并将其捆绑到单个文件中，可以缩短加载CSS和JavaScript (JS)文件所需的时间。
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ### 使用管理员
 
-要启用CSS合并或缩小，请转到 [!UICONTROL **管理员** > **商店** > **设置** > **配置** > **高级** > **开发人员** > **CSS设置**].
+要启用CSS合并或缩小，请转到&#x200B;[!UICONTROL **管理员** > **存储** > **设置** > **配置** > **高级** > **开发人员** > **CSS设置**]。
 
 ### 使用命令行
 
@@ -49,7 +49,7 @@ ht-degree: 0%
    bin/magento config:set --lock-config dev/css/merge_css_files 1
    ```
 
-1. 将更改提交到 `app/etc/config.php` 文件并重新部署。
+1. 提交对`app/etc/config.php`文件的更改并重新部署。
 
 要在云基础架构上的Adobe Commerce中启用CSS缩小，请执行以下操作：
 
@@ -59,13 +59,13 @@ ht-degree: 0%
    bin/magento config:set --lock-config dev/css/minify_files 1
    ```
 
-1. 将更改提交到 `app/etc/config.php` 文件并重新部署。
+1. 提交对`app/etc/config.php`文件的更改并重新部署。
 
 ## 缩小JS文件
 
 ### 使用管理员
 
-在 *管理员* 侧栏，转到 **商店** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**.
+在&#x200B;*管理员*&#x200B;侧边栏上，转到&#x200B;**商店** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**。
 
 ### 使用命令行
 
@@ -77,11 +77,11 @@ ht-degree: 0%
    bin/magento config:set --lock-config dev/js/minify_files 1
    ```
 
-1. 将更改提交到 `app/etc/config.php` 文件并重新部署。
+1. 提交对`app/etc/config.php`文件的更改并重新部署。
 
 ## 合并和捆绑JS文件
 
-您可以在Commerce管理中打开合并或捆绑功能（合并和捆绑功能无法同时启用）： [!UICONTROL **商店** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**].
+您可以在Commerce管理中打开合并或捆绑功能（合并和捆绑功能无法同时启用）：[!UICONTROL **存储** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**]。
 
 您还可以从命令行启用Adobe Commerce内置捆绑（基本捆绑）：
 

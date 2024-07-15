@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # 部署流程
 
-此 [!DNL Commerce] 生产部署流程可帮助存储实现最佳性能。
+[!DNL Commerce]生产部署流可帮助存储实现最大性能。
 
 ## 安装依赖项
 
-此 `composer.json` 和 `composer.lock` 文件管理 [!DNL Commerce] 依赖关系，并为每个包安装适当的版本。 必须先安装依赖项，然后才能安装 [预处理依赖项注入指令](#preprocess-dependency-injection-instructions) 如果您计划更新 [自动加载机](#update-the-autoloader).
+`composer.json`和`composer.lock`文件管理[!DNL Commerce]依赖项并为每个包安装适当的版本。 如果计划更新[自动加载器](#update-the-autoloader)，则必须在[预处理依赖项注入指令](#preprocess-dependency-injection-instructions)之前安装依赖项。
 
-安装 [!DNL Commerce] 依赖关系：
+要安装[!DNL Commerce]依赖项，请执行以下操作：
 
 ```bash
 composer install --no-dev
@@ -41,13 +41,13 @@ bin/magento setup:di:compile
 
 ## 更新自动加载程序
 
-编译完成后，请确认 [APCu已启用](../performance/software.md#php-settings) 并更新自动加载程序：
+编译完成后，确认[APCu已启用](../performance/software.md#php-settings)并更新自动加载程序：
 
 要更新自动加载程序，请执行以下操作：
 
 >[!INFO]
 >
->此 `-o` 选项将PSR-0/4自动加载转换为类映射，以获得更快的自动加载程序。 此 `--apcu` 选项使用APCu缓存已找到/未找到类。
+>`-o`选项将PSR-0/4自动加载转换为类映射，以获得更快的自动加载程序。 `--apcu`选项使用APCu缓存已找到/未找到类。
 
 ```bash
 composer dump-autoload -o --apcu
@@ -73,7 +73,7 @@ bin/magento setup:static-content:deploy
 
 ## 部署静态内容
 
-部署静态内容原因 [!DNL Commerce] 要执行以下操作：
+部署静态内容导致[!DNL Commerce]执行以下操作：
 
 * 分析所有静态资源
 * 执行内容合并、最小化和捆绑
@@ -81,9 +81,9 @@ bin/magento setup:static-content:deploy
 * 分析主题回退
 * 将所有已处理和实例化内容存储到特定文件夹以供进一步使用
 
-如果未部署静态内容， [!DNL Commerce] 会动态执行所有列出的操作，从而显着增加响应时间。
+如果未部署您的静态内容，[!DNL Commerce]将动态执行所有列出的操作，从而导致响应时间显着增加。
 
-您可以使用多种选项，根据存储大小和履行需求自定义部署操作。 最常见的是紧凑部署策略。 请参阅 [静态文件部署策略](../configuration/cli/static-view-file-strategy.md)
+您可以使用多种选项，根据存储大小和履行需求自定义部署操作。 最常见的是紧凑部署策略。 查看[静态文件部署策略](../configuration/cli/static-view-file-strategy.md)
 
 要部署静态内容，请执行以下操作：
 
@@ -97,9 +97,9 @@ bin/magento setup:static-content:deploy
 
 >[!INFO]
 >
->将模式设置为生产模式会自动运行 `setup:di:compile` 和 `setup:static-content:deploy`.
+>将模式设置为生产模式会自动运行`setup:di:compile`和`setup:static-content:deploy`。
 
-最后，您需要将商店置于生产模式。 生产模式经过专门优化，可提供存储的最大性能。 它还停用了所有特定于开发人员的功能。 这可以在以下位置完成： `.htaccess` 或 `nginx.conf` 文件：
+最后，您需要将商店置于生产模式。 生产模式经过专门优化，可提供存储的最大性能。 它还停用了所有特定于开发人员的功能。 这可以在您的`.htaccess`或`nginx.conf`文件中完成：
 
 `SetEnv MAGE_MODE production`
 

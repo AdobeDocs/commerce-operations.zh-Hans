@@ -1,7 +1,7 @@
 ---
 source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
@@ -9,10 +9,10 @@ ht-degree: 1%
 
 本节将讨论验证HTTP基本身份验证是否正常工作的两种方法：
 
-* 使用 `curl` 命令验证必须输入用户名和密码才能获取群集状态
+* 使用`curl`命令验证必须输入用户名和密码才能获取群集状态
 * 在管理员中配置HTTP基本身份验证
 
-## 使用 `curl` 用于验证群集状态的命令
+## 使用`curl`命令验证群集状态
 
 输入以下命令：
 
@@ -68,8 +68,8 @@ Connection: keep-alive
 
 ## 在管理员中配置HTTP基本身份验证
 
-执行中所述的相同任务 [搜索引擎配置](../configuration/search/configure-search-engine.md) *排除* 单击 **[!UICONTROL Yes]** 从 **[!UICONTROL Enable HTTP Auth]** 在提供的字段中列出并输入用户名和密码。
+执行[搜索引擎配置](../configuration/search/configure-search-engine.md) *中讨论的相同任务，但*&#x200B;除外，请单击&#x200B;**[!UICONTROL Enable HTTP Auth]**&#x200B;列表中的&#x200B;**[!UICONTROL Yes]**，然后在提供的字段中输入用户名和密码。
 
-单击 **[!UICONTROL Test Connection]** 以确保它正常工作，然后单击 **[!UICONTROL Save Config]**.
+单击&#x200B;**[!UICONTROL Test Connection]**&#x200B;以确保它正常工作，然后单击&#x200B;**[!UICONTROL Save Config]**。
 
 在继续之前，必须刷新缓存并重新索引。

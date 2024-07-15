@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 完成升级先决条件
 
-了解运行Adobe Commerce所需的内容很重要。 您必须首先查看 [系统要求](../../installation/system-requirements.md) 适用于您计划升级到的版本。
+了解运行Adobe Commerce所需的内容很重要。 您必须首先查看计划升级到的版本的[系统要求](../../installation/system-requirements.md)。
 
 查看系统要求后，必须在升级系统之前完成以下先决条件：
 
@@ -20,34 +20,34 @@ ht-degree: 0%
 * 转换数据库表格式
 * 设置打开文件限制
 * 验证cron作业是否正在运行
-* 设置 `DATA_CONVERTER_BATCH_SIZE`
+* 设置`DATA_CONVERTER_BATCH_SIZE`
 * 验证文件系统权限
-* 设置 `pub/` 目录根目录
+* 设置`pub/`目录根
 * 安装编辑器更新插件
 
 ## 更新所有软件
 
-此 [系统要求](../../installation/system-requirements.md) 准确描述哪些第三方软件版本已通过Adobe Commerce版本测试。
+[系统要求](../../installation/system-requirements.md)准确地描述了哪些版本的第三方软件已通过Adobe Commerce版本测试。
 
-确保更新了环境中的所有系统要求和依赖项。 参见PHP [7.4](https://www.php.net/manual/en/migration74.php)， PHP [8.0](https://www.php.net/manual/en/migration80.php)， PHP [8.1](https://www.php.net/manual/en/migration81.php)、和 [所需的PHP设置](../../installation/prerequisites/php-settings.md#php-settings).
+确保更新了环境中的所有系统要求和依赖项。 请参阅PHP [7.4](https://www.php.net/manual/en/migration74.php)、PHP [8.0](https://www.php.net/manual/en/migration80.php)、PHP [8.1](https://www.php.net/manual/en/migration81.php)和[所需的PHP设置](../../installation/prerequisites/php-settings.md#php-settings)。
 
 >[!NOTE]
 >
->对于Adobe Commerce on cloud infrastructure Pro项目，您必须创建 [支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 用于在“暂存”和“生产”环境中安装或更新服务的票证。 指明所需的服务更改并包含更新后的服务 `.magento.app.yaml` 和 `services.yaml` 文件和PHP版本。 Cloud Infrastructure团队更新项目最多可能需要48小时。 请参阅 [支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services).
+>对于云基础架构Pro项目上的Adobe Commerce，您必须创建[支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)票证，以在暂存环境和生产环境中安装或更新服务。 指示所需的服务更改，并在票证中包含更新的`.magento.app.yaml`和`services.yaml`文件以及PHP版本。 Cloud Infrastructure团队更新项目最多可能需要48小时。 请参阅[支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services)。
 
 ## 验证是否安装了受支持的搜索引擎
 
 Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 
-**如果您要从2.3.x升级到2.4**&#x200B;中，您必须检查您是否将MySQL、Elasticsearch或第三方扩展用作2.3.x实例中的目录搜索引擎。 结果决定了您必须执行的操作 _早于_ 升级到2.4。
+**如果您要从2.3.x升级到2.4**，则必须检查您在2.3.x实例中是使用MySQL、Elasticsearch还是第三方扩展作为目录搜索引擎。 结果确定在升级到2.4之前&#x200B;_必须_&#x200B;做什么。
 
-**如果要在2.3.x或2.4.x版本行中升级补丁版本**，如果已安装Elasticsearch7.x，则可以选择 [迁移到OpenSearch](opensearch-migration.md).
+**如果要升级2.3.x或2.4.x版本行中的修补程序版本**，如果已安装Elasticsearch7.x，则可以选择[迁移到OpenSearch](opensearch-migration.md)。
 
 您可以使用命令行或管理员来确定目录搜索引擎：
 
-* 输入 `bin/magento config:show catalog/search/engine` 命令。 该命令返回值 `mysql`， `elasticsearch` (表示已配置Elasticsearch2)， `elasticsearch5`， `elasticsearch6`， `elasticsearch7`或自定义值，指示您已安装第三方搜索引擎。 对于低于2.4.6的版本，请使用 `elasticsearch7` Elasticsearch7或开放搜索引擎的值。 对于版本2.4.6及更高版本，请使用 `opensearch` 值。
+* 输入`bin/magento config:show catalog/search/engine`命令。 该命令返回值`mysql`、`elasticsearch`(表示已配置Elasticsearch2)、`elasticsearch5`、`elasticsearch6`、`elasticsearch7`或自定义值，表示您已安装第三方搜索引擎。 对于低于2.4.6的版本，为Elasticsearch7或OpenSearch引擎使用`elasticsearch7`值。 对于版本2.4.6及更高版本，请使用OpenSearch引擎的`opensearch`值。
 
-* 从管理员中，检查 **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]** 字段。
+* 从管理员中，检查&#x200B;**[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]**&#x200B;字段的值。
 
 以下部分介绍在升级到2.4.0之前必须执行的操作。
 
@@ -56,9 +56,9 @@ Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 从2.4开始，MySQL不再是一个受支持的目录搜索引擎。 在升级之前，必须安装和配置Elasticsearch或OpenSearch。 请使用以下资源来帮助您完成此过程：
 
 * [安装和配置Elasticsearch](../../configuration/search/overview-search.md)
-* [安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-* 配置 [恩金克斯](../../installation/prerequisites/search-engine/configure-nginx.md) 或 [Apache](../../installation/prerequisites/search-engine/configure-apache.md) 使用您的搜索引擎
-* [配置Commerce以使用Elasticsearch](../../configuration/search/configure-search-engine.md) 并重新索引
+* [正在安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
+* 配置[nginx](../../installation/prerequisites/search-engine/configure-nginx.md)或[Apache](../../installation/prerequisites/search-engine/configure-apache.md)以使用您的搜索引擎
+* [将Commerce配置为使用Elasticsearch](../../configuration/search/configure-search-engine.md)并重新索引
 
 一些第三方目录搜索引擎在Adobe Commerce搜索引擎上运行。 请与供应商联系以确定是否必须更新扩展。
 
@@ -68,11 +68,11 @@ Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 
 ### 搜索引擎
 
-在升级到2.4.0之前，必须安装和配置Elasticsearch7.6或更高版本或OpenSearch 1.2。Adobe不再支持Elasticsearch2.x、5.x和6.x。 [搜索引擎配置](../../configuration/search/configure-search-engine.md) 在 _配置指南_ 描述将Elasticsearch升级到支持的版本后必须执行的任务。
+在升级到2.4.0之前，必须安装和配置Elasticsearch7.6或更高版本或OpenSearch 1.2。Adobe不再支持Elasticsearch2.x、5.x和6.x。_配置指南_&#x200B;中的[搜索引擎配置](../../configuration/search/configure-search-engine.md)描述了将Elasticsearch升级到支持的版本后必须执行的任务。
 
-请参阅 [升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 有关备份数据、检测潜在迁移问题以及测试升级以便部署到生产环境之前的完整说明。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
+有关在部署到生产环境之前备份数据、检测潜在的迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
 
-Elasticsearch需要Java开发工具包(JDK) 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查已安装的JDK版本。
+Elasticsearch需要Java开发工具包(JDK) 1.8或更高版本。 请参阅[安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk)以检查安装的JDK版本。
 
 #### OpenSearch
 
@@ -84,19 +84,19 @@ OpenSearch是Elasticsearch许可更改后Elasticsearch7.10.2的开源分支。 �
 * 2.4.3-p2
 * 2.3.7 - p3
 
-您可以 [从Elasticsearch迁移到OpenSearch](opensearch-migration.md) 仅当您升级到上述（或更高版本）列出的Adobe Commerce版本时。
+只有升级到上述（或更高版本）列出的Adobe Commerce版本时，才能[从Elasticsearch迁移到OpenSearch](opensearch-migration.md)。
 
-OpenSearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) 以检查已安装的JDK版本。
+OpenSearch需要JDK 1.8或更高版本。 请参阅[安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk)以检查安装的JDK版本。
 
-[搜索引擎配置](../../configuration/search/configure-search-engine.md) 描述在更改搜索引擎后必须执行的任务。
+[搜索引擎配置](../../configuration/search/configure-search-engine.md)描述了更改搜索引擎后必须执行的任务。
 
 #### 升级Elasticsearch
 
 Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示了Elasticsearch从7.x升级到8.x的示例：
 
-1. 将Elasticsearch7.x服务器升级到8.x ，并确保已启动并正在运行。 请参阅 [Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+1. 将Elasticsearch7.x服务器升级到8.x ，并确保已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
 
-1. 启用 `id_field_data` 通过以下配置添加到 `elasticsearch.yml` 并重新启动Elasticsearch8.x服务。
+1. 通过将以下配置添加到`elasticsearch.yml`文件并重新启动Elasticsearch8.x服务来启用`id_field_data`字段。
 
    ```yaml
    indices:
@@ -106,9 +106,9 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
 
    >[!INFO]
    >
-   >为了支持Elasticsearch8.x，Adobe Commerce 2.4.6不允许使用 `indices.id_field_data` 属性并使用 `_id` 中的字段 `docvalue_fields` 属性。
+   >为了支持Elasticsearch8.x，Adobe Commerce 2.4.6在默认情况下不允许使用`indices.id_field_data`属性，并使用`docvalue_fields`属性中的`_id`字段。
 
-1. 在Adobe Commerce项目的根目录中，更新您的编辑器依赖项以删除 `Magento_Elasticsearch7` 模块并安装 `Magento_Elasticsearch8` 模块。
+1. 在Adobe Commerce项目的根目录中，更新编辑器依赖项以删除`Magento_Elasticsearch7`模块并安装`Magento_Elasticsearch8`模块。
 
    ```bash
    composer require magento/module-elasticsearch-8 --update-with-all-dependencies
@@ -120,7 +120,7 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
    bin/magento setup:upgrade
    ```
 
-1. [配置Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin) 在 [!DNL Admin].
+1. 在[!DNL Admin]中[配置Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin)。
 
 1. 重新索引目录索引。
 
@@ -138,9 +138,9 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
 
 如果您无意中升级了服务器上的Elasticsearch版本，或确定由于任何其他原因需要降级，则还必须更新Adobe Commerce项目依赖项。 例如，从Elasticsearch8.x降级到7.x
 
-1. 将Elasticsearch8.x服务器降级为7.x ，并确保已启动并正在运行。 请参阅 [Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+1. 将Elasticsearch8.x服务器降级为7.x ，并确保已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
 
-1. 在Adobe Commerce项目的根目录中，更新您的编辑器依赖项以删除 `Magento_Elasticsearch8` 模块及其编辑器依赖项，并安装 `Magento_Elasticsearch7` 模块。
+1. 在Adobe Commerce项目的根目录中，更新编辑器依赖项以删除`Magento_Elasticsearch8`模块及其编辑器依赖项，并安装`Magento_Elasticsearch7`模块。
 
    ```bash
    composer remove magento/module-elasticsearch-8
@@ -152,7 +152,7 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
    bin/magento setup:upgrade
    ```
 
-1. [配置Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin) 在 [!DNL Admin].
+1. 在[!DNL Admin]中[配置Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin)。
 
 1. 重新索引目录索引。
 
@@ -172,18 +172,18 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
 
 ## 转换数据库表格式
 
-必须将所有数据库表的格式从 `COMPACT` 到 `DYNAMIC`. 您还必须将存储引擎类型从 `MyISAM` 到 `InnoDB`. 请参阅 [最佳实践](../../implementation-playbook/best-practices/maintenance/mariadb-upgrade.md).
+您必须将所有数据库表的格式从`COMPACT`转换为`DYNAMIC`。 还必须将存储引擎类型从`MyISAM`转换为`InnoDB`。 请参阅[最佳实践](../../implementation-playbook/best-practices/maintenance/mariadb-upgrade.md)。
 
 ## 设置打开文件限制
 
-设置打开文件限制(ulimit)有助于避免因多次递归调用长查询字符串而失败或在使用时出现问题 `bin/magento setup:rollback` 命令。 此命令对于不同的UNIX shell是不同的。 请咨询您的个人口味，了解有关 `ulimit` 命令。
+设置打开文件限制(ulimit)有助于避免多次递归调用长查询字符串失败或使用`bin/magento setup:rollback`命令时出现问题。 此命令对于不同的UNIX shell是不同的。 有关`ulimit`命令的详细信息，请咨询您的个人风格。
 
-Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 到值 `65536` 或者更多，但如有必要，您可以使用更大的值。 您可以在命令行上设置限制，也可以将其设置为用户shell的永久设置。
+Adobe建议将打开的文件[ulimit](https://ss64.com/bash/ulimit.html)设置为`65536`或更大的值，但如有必要，您可以使用更大的值。 您可以在命令行上设置限制，也可以将其设置为用户shell的永久设置。
 
 要从命令行设置限制，请执行以下操作：
 
-1. 切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
-1. 将限制设置为 `65536`.
+1. 切换到[文件系统所有者](../../installation/prerequisites/file-system/overview.md)。
+1. 将限制设置为`65536`。
 
    ```bash
    ulimit -n 65536
@@ -191,23 +191,23 @@ Adobe建议设置打开的文件 [ulimit](https://ss64.com/bash/ulimit.html) 到
 
 要在Bash shell中设置值，请执行以下操作：
 
-1. 切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
-1. 打开 `/home/<username>/.bashrc` 在文本编辑器中。
+1. 切换到[文件系统所有者](../../installation/prerequisites/file-system/overview.md)。
+1. 在文本编辑器中打开`/home/<username>/.bashrc`。
 1. 添加以下行：
 
    ```bash
    ulimit -n 65536
    ```
 
-1. 将更改保存到 `.bashrc` 并退出文本编辑器。
+1. 保存对`.bashrc`文件所做的更改并退出文本编辑器。
 
 >[!IMPORTANT]
 >
->我们建议您避免为 `pcre.recursion_limit` 中的属性 `php.ini` 文件，因为它可能会导致不完整的回滚，并且不会出现失败通知。
+>我们建议您避免为`php.ini`文件中的`pcre.recursion_limit`属性设置值，因为它可能会导致不完整的回滚，并且不会出现失败通知。
 
 ## 验证cron作业是否正在运行
 
-UNIX任务计划程序 `cron` 对于Adobe Commerce的日常运营至关重要。 它计划重新索引、新闻稿、电子邮件和站点地图等内容。 多个功能要求至少有一个cron作业作为文件系统所有者运行。
+UNIX任务计划程序`cron`对于日常Adobe Commerce操作至关重要。 它计划重新索引、新闻稿、电子邮件和站点地图等内容。 多个功能要求至少有一个cron作业作为文件系统所有者运行。
 
 要验证您的cron作业是否设置正确，请通过输入以下命令作为文件系统所有者检查crontab：
 
@@ -231,11 +231,11 @@ cron未运行的另一个症状是管理员中出现以下错误：
 
 ![](../../assets/upgrade-guide/cron-not-running.png)
 
-要查看错误，请单击 **系统消息** ，如下所示：
+要查看错误，请单击窗口顶部的&#x200B;**系统消息**，如下所示：
 
 ![](../../assets/upgrade-guide/system-messages.png)
 
-请参阅 [配置和运行cron](../../configuration/cli/configure-cron-jobs.md) 以了解更多信息。
+有关详细信息，请参阅[配置和运行cron](../../configuration/cli/configure-cron-jobs.md)。
 
 ## 设置DATA_CONVERTER_BATCH_SIZE
 
@@ -253,11 +253,11 @@ Adobe Commerce 2.4包含安全增强功能，这些功能要求将某些数据�
 * `salesrule`
 * `url_rewrite`
 
-如果您有大量数据，可以通过设置环境变量的值来提高性能， `DATA_CONVERTER_BATCH_SIZE`. 默认情况下，该值设置为 `50,000`.
+如果您有大量数据，可以通过设置环境变量`DATA_CONVERTER_BATCH_SIZE`的值来提高性能。 默认情况下，该值设置为`50,000`。
 
 要设置环境变量，请执行以下操作：
 
-1. 切换到 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 切换到[文件系统所有者](../../installation/prerequisites/file-system/overview.md)。
 1. 设置变量：
 
    ```bash
@@ -266,7 +266,7 @@ Adobe Commerce 2.4包含安全增强功能，这些功能要求将某些数据�
 
    >[!NOTE]
    >
-   > `DATA_CONVERTER_BATCH_SIZE` 需要内存；如果不先测试内存，请避免将其设置为较大的值（约1 GB）。
+   > `DATA_CONVERTER_BATCH_SIZE`需要内存；如果不先测试它，请避免将其设置为较大的值（约1 GB）。
 
 1. 升级完成后，您可以取消设置变量：
 
@@ -276,13 +276,13 @@ Adobe Commerce 2.4包含安全增强功能，这些功能要求将某些数据�
 
 ## 验证文件系统权限
 
-出于安全原因，Adobe Commerce要求对文件系统具有某些权限。 权限与不同 _[所有权](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. 所有权决定了谁可以对文件系统执行操作；权限决定了用户可以执行哪些操作。
+出于安全原因，Adobe Commerce要求对文件系统具有某些权限。 权限与&#x200B;_[所有权](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_&#x200B;不同。 所有权决定了谁可以对文件系统执行操作；权限决定了用户可以执行哪些操作。
 
-文件系统中的目录必须可由 [文件系统所有者的](../../installation/prerequisites/file-system/overview.md) 组。
+文件系统中的目录必须可由[文件系统所有者的](../../installation/prerequisites/file-system/overview.md)组写入。
 
 要验证您的文件系统权限是否设置正确，请登录到应用程序服务器或使用托管提供商的文件管理器应用程序。
 
-例如，如果应用程序安装在 `/var/www/html/magento2`：
+例如，如果应用程序安装在`/var/www/html/magento2`中，请输入以下命令：
 
 ```bash
 ls -l /var/www/html/magento2
@@ -326,10 +326,10 @@ drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor
 
 有关示例输出的说明，请参阅以下内容：
 
-* 大多数文件是 `-rw-rw----`，即 `660`
+* 大多数文件为`-rw-rw----`，即`660`
 * `drwxrwx---` = `770`
 * `-rw-rw-rw-` = `666`
-* 文件系统所有者是 `magento_user`
+* 文件系统所有者是`magento_user`
 
 要获取更多详细信息，可以输入以下命令：
 
@@ -337,23 +337,23 @@ drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor
 ls -la /var/www/html/magento2/pub
 ```
 
-因为Adobe Commerce会将静态文件资产部署到的 `pub`，最好也验证其权限和所有权。
+由于Adobe Commerce会将静态文件资产部署到`pub`的子目录，因此最好也验证其权限和所有权。
 
-有关更多信息，请参阅 [文件系统权限和所有权](../../installation/prerequisites/file-system/overview.md).
+有关详细信息，请参阅[文件系统权限和所有权](../../installation/prerequisites/file-system/overview.md)。
 
-## 设置 `pub/` 目录根目录
+## 设置`pub/`目录根
 
-请参阅 [修改docroot以提高安全性](../../installation/tutorials/docroot.md) 以了解更多详细信息。
+有关详细信息，请参阅[修改docroot以提高安全性](../../installation/tutorials/docroot.md)。
 
 ## 安装编辑器更新插件
 
-此 [`magento/composer-root-update-plugin`](https://github.com/magento/composer-root-update-plugin) Composer插件解析必须对根项目进行的更改 `composer.json` 文件，然后再更新为新产品要求。
+[`magento/composer-root-update-plugin`](https://github.com/magento/composer-root-update-plugin) Composer插件解析了在更新到新产品要求之前必须对根项目`composer.json`文件进行的更改。
 
 该插件通过识别和帮助您解决相关性冲突，而不是要求您手动识别和修复这些冲突，从而部分自动化了手动升级。
 
 要安装插件，请执行以下操作：
 
-1. 将包添加到您的 `composer.json` 文件。
+1. 将包添加到您的`composer.json`文件。
 
    ```bash
    composer require magento/composer-root-update-plugin ~2.0 --no-update

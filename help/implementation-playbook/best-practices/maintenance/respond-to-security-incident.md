@@ -5,7 +5,7 @@ feature: Best Practices
 exl-id: 77275d37-4f1d-462d-ba11-29432791da6a
 source-git-commit: e63f68dd469564e70269154810cbfbd95d2b2e57
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobe发现，大多数安全事件发生在威胁行为人利用Commerce应用程序和基础架构配置中现有的未修补漏洞、较差的密码以及弱的所有权和权限设置时。 在设置、配置和更新Adobe Commerce安装时，通过查看并遵循Adobe安全最佳实践来最大限度地减少安全事件的发生。 请参阅 [保护您的Commerce网站和基础架构](../launch/security-best-practices.md).
+>Adobe发现，大多数安全事件都发生在威胁行为者利用Commerce应用程序和基础架构配置中现有的未修补漏洞、较差的密码以及较弱的所有权和权限设置时。 在设置、配置和更新Adobe Commerce安装时，通过查看并遵循Adobe安全最佳实践来最大限度地减少安全事件的发生。 查看[保护您的Commerce站点和基础架构](../launch/security-best-practices.md)。
 
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -63,27 +63,27 @@ ht-degree: 0%
 
 事件分析的第一步是尽可能快速地收集尽可能多的事实。 收集有关事件的信息有助于确定事件的潜在原因。 Adobe Commerce提供以下工具以帮助进行事件分析。
 
-- [审核管理员操作日志](https://experienceleague.adobe.com/docs/commerce-admin/systems/action-logs/action-log-report.html).
+- [审核管理员操作日志](https://experienceleague.adobe.com/docs/commerce-admin/systems/action-logs/action-log-report.html)。
 
   操作日志报告显示所有启用日志记录的管理员操作的详细记录。 每个记录都加盖时间戳，并注册用户的IP地址和名称。 日志详细信息包括管理员用户数据以及在操作期间所做的相关更改。
 
-- 使用分析事件 [Adobe Commerce工具的观察结果](../../../tools/observation-for-adobe-commerce/intro.md).
+- 使用Adobe Commerce工具](../../../tools/observation-for-adobe-commerce/intro.md)的[观察分析事件。
 
   Adobe Commerce观察工具允许您分析复杂的问题，帮助确定根本原因。 您可以花时间来关联事件和错误，而不是跟踪不同的数据，以便更深入地了解性能瓶颈的原因。
 
-  使用 **安全性** 选项卡，清晰地查看潜在的安全问题，帮助确定根本原因并保持站点以最佳状态运行。
+  使用工具中的&#x200B;**安全性**&#x200B;选项卡可清楚地了解潜在的安全问题，从而帮助确定根本原因并保持网站性能处于最佳状态。
 
-- 分析日志 [New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)
+- 使用[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)分析日志
 
-  Adobe Commerce on cloud infrastructure Pro项目包括 [New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html) 服务。 该服务已预配置为汇总暂存和生产环境中的所有日志数据，以便在集中式日志管理功能板中显示这些数据，您可以在其中搜索和可视化汇总的数据。
+  云基础架构Pro项目上的Adobe Commerce包括[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html)服务。 该服务已预配置为汇总暂存和生产环境中的所有日志数据，以便在集中式日志管理功能板中显示这些数据，您可以在其中搜索和可视化汇总的数据。
 
-  对于其他Commerce项目，您可以设置并使用 [New Relic日志](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) 服务以完成以下任务：
-   - 使用 [New Relic查询](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) 以搜索汇总的日志数据。
+  对于其他Commerce项目，您可以设置并使用[New Relic日志](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/)服务来完成以下任务：
+   - 使用[New Relic查询](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs)搜索聚合日志数据。
    - 通过New Relic日志应用程序可视化日志数据。
 
 ## 审核帐户、代码和数据库
 
-查看Commerce管理员和用户帐户、应用程序代码以及数据库配置和日志，以识别和清理可疑代码，并确保帐户、网站和数据库访问的安全性。 然后，根据需要重新部署。
+查看Commerce管理员和用户帐户、应用程序代码以及数据库配置和日志，以识别和清理可疑代码，并确保帐户、站点和数据库访问的安全。 然后，根据需要重新部署。
 
 发生事件后继续密切监视站点，因为许多站点在数小时内再次受到威胁。 确保持续进行日志审查和文件完整性监控，以快速发现任何新的损坏迹象。
 
@@ -93,13 +93,13 @@ ht-degree: 0%
 
 - [查看管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html) — 验证管理员安全设置是否遵循安全最佳实践。
 
-- [在云基础架构项目中查看Adobe Commerce的用户帐户](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html) — 删除旧的、未使用的或可疑的帐户，并为所有云项目管理员用户轮换密码。 确保正确配置帐户安全设置。
+- [在云基础架构项目中检查Adobe Commerce的用户帐户](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html) — 删除旧的、未使用的或可疑的帐户，并为所有云项目管理员用户轮换密码。 确保正确配置帐户安全设置。
 
-- [审核SSH密钥](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html) 适用于云基础架构上的Adobe Commerce — 审核、删除和轮换SSH密钥。
+- 在云基础架构上[审核Adobe Commerce的SSH密钥](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html) — 审核、删除和轮换SSH密钥。
 
 ### 审核代码
 
-- 从管理员中，查看 [HTML页眉和页脚配置](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html) 在所有范围级别中，包括 `website` 和 `store view`. 从脚本和样式表中删除任何未知的JavaScript代码以及其他HTML设置。 仅保留已识别的代码，例如跟踪片段。
+- 从管理员中，查看所有作用域级别（包括`website`和`store view`）的[HTML页眉和页脚配置](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html)。 从脚本和样式表中删除所有未知的JavaScript代码以及其他HTML设置。 仅保留已识别的代码，例如跟踪片段。
 
 - 将当前的生产代码库与版本控制系统(VCS)中存储的代码库进行比较。
 
@@ -111,17 +111,17 @@ ht-degree: 0%
 
 - 查看任何存储过程以进行修改。
 
-- 验证数据库仅可由Commerce实例访问。
+- 验证数据库是否只能由Commerce实例访问。
 
 - 使用公开可用的恶意软件扫描工具扫描网站，验证恶意软件是否不再存在。
 
-- 通过更改管理员面板的名称并验证站点，保护该面板 `app/etc/local.xml` 和 `var` URL不可公开访问。
+- 通过更改管理员面板的名称并验证站点`app/etc/local.xml`和`var` URL是否不可公开访问来保护该面板。
 
 - 发生事件后继续密切监视站点，因为许多站点在数小时内再次受到威胁。 确保持续进行日志审查和文件完整性监控，以快速发现任何新的损坏迹象。
 
 ## 删除Google警告
 
-如果Google已将该站点标记为包含恶意代码，则请在清理完该站点后请求审查。 审查感染了恶意软件的站点需要几天时间。 在Google确定站点干净后，搜索结果中的警告和浏览器应会在72小时内消失。 请参阅 [请求审核](https://web.dev/articles/request-a-review).
+如果Google已将该站点标记为包含恶意代码，则请在清理完该站点后请求审查。 审查感染了恶意软件的站点需要几天时间。 在Google确定站点干净后，搜索结果中的警告和浏览器应会在72小时内消失。 请参阅[请求审阅](https://web.dev/articles/request-a-review)。
 
 ## 查看恶意软件结果核对清单
 
@@ -133,4 +133,4 @@ ht-degree: 0%
 
 ## 其他信息
 
-- [根本原因分析框架](https://sansec.io/kb/incident-response/magento-root-cause-analysis).
+- [根本原因分析框架](https://sansec.io/kb/incident-response/magento-root-cause-analysis)。

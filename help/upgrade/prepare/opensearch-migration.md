@@ -18,16 +18,16 @@ OpenSearch是在Elasticsearch的许可更改之后创建的Elasticsearch7.10.2�
 
 ## 迁移路径
 
-迁移到OpenSearch的步骤非常简单，并且基本上遵循配置Elasticsearch的步骤。 这些步骤假定Adobe Commerce是唯一使用搜索引擎的应用程序。 如果有多个应用程序使用搜索引擎，请遵循官方的迁移指南 [从开源Elasticsearch移动到OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/).
+迁移到OpenSearch的步骤非常简单，并且基本上遵循配置Elasticsearch的步骤。 这些步骤假定Adobe Commerce是唯一使用搜索引擎的应用程序。 如果有多个应用程序使用搜索引擎，请遵循官方迁移指南[从开源Elasticsearch迁移到OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/)。
 
-1. 确保您的安装符合 [搜索引擎先决条件](../../installation/prerequisites/search-engine/overview.md).
+1. 确保您的安装符合[搜索引擎先决条件](../../installation/prerequisites/search-engine/overview.md)。
 
-1. 将站点放入 [维护模式](../../installation/tutorials/maintenance-mode.md).
+1. 将站点置于[维护模式](../../installation/tutorials/maintenance-mode.md)。
 
 1. 可以选择卸载Elasticsearch。
 
-1. [安装Open Search](https://opensearch.org/docs/latest/opensearch/install/important-settings/).
+1. [安装OpenSearch](https://opensearch.org/docs/latest/opensearch/install/important-settings/)。
 
-1. [配置搜索引擎](../../configuration/search/configure-search-engine.md) 并执行相关任务，如刷新缓存和重新索引目录搜索索引。
+1. [配置搜索引擎](../../configuration/search/configure-search-engine.md)并执行相关任务，如刷新缓存和重新索引目录搜索索引。
 
 无需进一步更改配置值。

@@ -17,7 +17,7 @@ Adobe Commerce 2.4.5支持使用Amazon OpenSearch Service群集。 此服务是A
 ## 创建AWS OpenSearch服务域
 
 您必须首先在AWS中建立OpenSearch实例。
-读取 [创建和管理Amazon OpenSearch服务域](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html) 以获取详细说明。
+有关详细说明，请参阅[创建和管理Amazon OpenSearch服务域](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)。
 
 ## 将数据获取到AWS OpenSearch
 
@@ -33,11 +33,11 @@ Adobe Commerce 2.4.5支持使用Amazon OpenSearch Service群集。 此服务是A
 无需迁移索引，因为这些索引可以在AWS实例中轻松重新创建。
 但是，在迁移数据索引时，请确保Elasticsearch/OpenSearch的版本兼容。
 
-请参阅Amazon的 [迁移到Amazon OpenSearch服务](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html) 说明以了解更多信息。
+有关详细信息，请参阅Amazon的[迁移到Amazon OpenSearch服务](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html)说明。
 
 ### 为OpenSearch配置Commerce
 
-有关配置OpenSearch的步骤，请参见 [高级安装](../../advanced.md) 主题。
+有关配置OpenSearch的步骤，请参见[高级安装](../../advanced.md)主题。
 
 要测试新配置是否正常工作，请直接测试OpenSearch端点：
 
@@ -45,12 +45,12 @@ Adobe Commerce 2.4.5支持使用Amazon OpenSearch Service群集。 此服务是A
 1. 通过管理员重新索引。
 1. 查询OpenSearch端点(可在AWS UI中找到)：
 
-   要获取索引，请附加： `/_cat/indices/*?v=true` 到URL：
+   若要获取索引，请将`/_cat/indices/*?v=true`附加到URL：
    `<AWS OS endpoint>/_cat/indices/*?v=true`
 
-要从索引中获取产品，请附加： `/magento2docker_product_1/_search?q=*` 到URL：
+要从索引获取产品，请将`/magento2docker_product_1/_search?q=*`附加到URL：
 `<AWS OS endpoint>/magento2docker_product_1/_search?q=testproduct1`
 
 ## 其他资源
 
-欲了解更多信息，请参见 [OpenSearch AWS文档](https://docs.aws.amazon.com/opensearch-service/index.html).
+有关详细信息，请参阅[OpenSearch AWS文档](https://docs.aws.amazon.com/opensearch-service/index.html)。

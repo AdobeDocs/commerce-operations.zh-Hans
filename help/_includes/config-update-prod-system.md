@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # 更新生产系统
 
-**更新生产系统**：
+**要更新生产系统**：
 
 1. 以文件系统所有者的身份登录到生产系统。
 1. 更改为应用程序根并启用维护模式。
@@ -20,9 +20,9 @@ ht-degree: 0%
    bin/magento maintenance:enable
    ```
 
-   有关其他选项（例如设置IP地址白名单的功能），请参阅 [`magento maintenance:enable`](../installation/tutorials/maintenance-mode.md).
+   有关其他选项，例如设置IP地址白名单的功能，请参阅[`magento maintenance:enable`](../installation/tutorials/maintenance-mode.md)。
 
-1. 通过设置停止任何正在运行的队列工作程序 `cron_run` 到 `false` 在 `app/etc/env.php` 如下所示：
+1. 通过将`app/etc/env.php`中的`cron_run`设置为`false`停止任何正在运行的队列工作程序，如下所示：
 
    ```php?start_inline=1
    'cron_consumers_runner' => [
@@ -36,13 +36,13 @@ ht-degree: 0%
    bin/magento app:config:import
    ```
 
-1. 最后， `kill` 任何活动的使用者进程。
+1. 最后，`kill`任何活动的使用者进程。
 
    ```bash
    kill <PID>
    ```
 
-   位置 `PID` 是要终止的进程ID，例如：
+   其中`PID`是要终止的进程ID，例如：
 
    ```bash
    kill 1234

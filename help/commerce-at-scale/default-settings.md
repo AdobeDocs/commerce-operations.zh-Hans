@@ -6,7 +6,7 @@ feature: Integration, Cache
 topic: Commerce, Performance
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,14 @@ ht-degree: 0%
 
 ## Adobe Commerce中的GraphQL缓存
 
-当用户的浏览器或AEM发布者调用Adobe Commerce的GraphQL时，某些调用将缓存在Fastly中。 缓存的查询通常包含非个人数据并且不太可能经常更改。 例如：categories、categoryList和products。 明确未缓存的是定期更改的查询，如果缓存，可能会对个人数据和网站操作（例如购物车和customerPaymentTokens等查询）带来风险。
+当用户的浏览器或AEM发布者调用Adobe Commerce的GraphQL时，将缓存某些调用
+在飞天里。 缓存的查询通常包含非个人数据并且不太可能经常更改。 例如：categories、categoryList和products。 明确未缓存的是定期更改的查询，如果缓存，可能会对个人数据和网站操作（例如购物车和customerPaymentTokens等查询）带来风险。
 
 GraphQL允许您在一次调用中进行多个查询。 请务必注意，如果您甚至指定一个查询，而Adobe Commerce不会缓存该查询与许多其他无法缓存的查询，则Adobe Commerce将绕过调用中所有查询的缓存。 开发人员在合并多个查询时应考虑这一点，以确保不会无意中绕过潜在的可缓存查询‡。
 
 >[!NOTE]
 >
-> 有关可缓存查询和不可缓存查询的更多信息，请参阅Adobe Commerce [开发人员文档](https://devdocs.magento.com/guides/v2.4/graphql/caching.html).
+> 有关可缓存查询和不可缓存查询的更多信息，请参阅Adobe Commerce [开发人员文档](https://devdocs.magento.com/guides/v2.4/graphql/caching.html)。
 
 ## 目录平面表
 
@@ -41,7 +42,7 @@ GraphQL允许您在一次调用中进行多个查询。 请务必注意，如果
 
 启用Fastly源屏蔽后，您还可以激活Fastly图像优化器。 当产品目录图像存储在Adobe Commerce上时，该服务能够将所有资源密集型产品目录图像转换处理卸载到Fastly上，并从Adobe Commerce源头中卸载。 在页面加载时间方面，最终用户响应时间也得到改善，因为在边缘位置转换图像，这通过减少返回Adobe Commerce源的请求数量来消除延迟。
 
-Fastly图像优化可以通过在Admin中的Fastly配置中“启用深层图像优化”来启用，但前提是激活了原始防护板。 有关Fastly图像优化的配置的更多详细信息可在Adobe Commerce中获取 [开发人员文档](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html).
+Fastly图像优化可以通过在Admin中的Fastly配置中“启用深层图像优化”来启用，但前提是激活了原始防护板。 有关Fastly图像优化的配置的更多详细信息，请参阅Adobe Commerce [开发人员文档](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html)。
 
 ![Adobe Commerce管理员中Fastly图像优化设置的屏幕截图](../assets/commerce-at-scale/image-optimization.svg)
 
@@ -57,7 +58,7 @@ Fastly图像优化可以通过在Admin中的Fastly配置中“启用深层图像
 
 作为指导，在正常负载的环境中，启用从属连接将使性能降低10-15%。 但在负载和流量较大的群集上，性能提升了10-15%左右。 因此，使用预期流量级别对您的环境进行负载测试很重要，以评估此设置是否对负载下的性能时间有益。
 
-要启用/禁用mysql和redis的从属连接，您应该编辑 `.magento.env.yaml` 文件，以包含以下内容：
+要启用/禁用mysql和redis的从属连接，您应该编辑`.magento.env.yaml`文件以包含以下内容：
 
 ```
 stage:

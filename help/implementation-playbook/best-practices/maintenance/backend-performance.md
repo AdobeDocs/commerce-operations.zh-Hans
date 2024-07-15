@@ -7,14 +7,14 @@ feature: Best Practices
 exl-id: 18bc97a0-3d34-4d48-a3e2-84af2da7d0d3
 source-git-commit: e5df5a7242dbe8ceff548257daeb39f7c9fc5c69
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
 
 # 优化后端性能的最佳实践
 
-本主题概述了调查和优化Adobe Commerce网站后端性能的最佳实践，重点是数据库优化和测试。 开发人员可以使用此信息调查每个Commerce项目的唯一上下文，并发现优化后端配置和操作以提高网站性能的机会。
+本主题概述了调查和优化Adobe Commerce网站后端性能的最佳实践，重点是数据库优化和测试。 开发人员可以使用此信息来调查每个Commerce项目的独特上下文，并发现优化后端配置和操作以提高站点性能的机会。
 
 >[!NOTE]
 >
@@ -22,18 +22,18 @@ ht-degree: 0%
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
 
 ## 优化数据库以提高性能
 
-数据库优化是增强用户体验和增加销售的一种有效方法。 优化数据库（Commerce站点的骨干）时，您可以防止网站性能变慢并消除给客户带来摩擦的冗长加载时间。
+数据库优化是增强用户体验和增加销售的一种有效方法。 优化数据库(Commerce站点的骨干)时，您可以防止网站性能变慢并消除给客户带来摩擦的冗长加载时间。
 
 ### 压力测试
 
-高流量时期（如黑色星期五）要求商务网站处理大量流量。 为准备此类事件，压力测试对于了解网站如何在指数级负载增长的情况下运行至关重要。
+高流量时期（如黑色星期五）要求Commerce站点处理大量流量。 为准备此类事件，压力测试对于了解网站如何在指数级负载增长的情况下运行至关重要。
 
 可用于压力测试的工具之一是GTmetrix。 通过配置GTmetrix来复制和乘以正常的访客行为和操作，量规站点负载准备情况会增加。 然后，运行测试以识别并解决在主要购物事件期间可能影响性能和网站可用性的问题。
 
@@ -45,18 +45,18 @@ ht-degree: 0%
 
 ### 负载测试
 
-您还可以使用GTmetrix或类似的工具来加载测试Commerce项目。 作为压力测试的前驱，负载测试对于大规模、高流量的站点是必不可少的。 通过预测并解决在峰值负载下影响站点性能的问题，防止意外站点中断、客户受挫和经济损失。
+您还可以使用GTmetrix或类似的工具来负载测试Commerce项目。 作为压力测试的前驱，负载测试对于大规模、高流量的站点是必不可少的。 通过预测并解决在峰值负载下影响站点性能的问题，防止意外站点中断、客户受挫和经济损失。
 
-使用GTmetrix模拟高流量并分析站点性能，以获取有关站点容量的明确信息。 此分析有助于发现并解决瓶颈问题，并发现优化机会，从而确保Commerce网站能够在负载增加的情况下有效运行。
+使用GTmetrix模拟高流量并分析站点性能，以获取有关站点容量的明确信息。 此分析有助于发现并解决瓶颈问题，同时发现优化机会，从而确保Commerce站点能够在负载增加的情况下有效运行。
 
 了解有关测试Adobe Commerce项目的更多信息：
 
-- [测试指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/guidance.html)  （云基础架构）
+- [测试指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/guidance.html) （云基础架构）
 - [应用程序测试](https://developer.adobe.com/commerce/testing/guide/)
 
 ### 识别并解决性能问题
 
-通过使用New Relic和Observation for Adobe Commerce等各种工具来检测瓶颈并有效优化Commerce站点，从而解决性能问题。 [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) 包含在云基础架构上的Adobe Commerce中，并且 [Adobe Commerce观察](/help/tools/observation-for-adobe-commerce/intro.md) 包括云和内部部署。
+通过使用New Relic和Observation for Adobe Commerce等各种工具来检测瓶颈并有效优化Commerce站点，从而解决性能问题。 云基础架构上的Adobe Commerce中包括[New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)，云和内部部署中包括Adobe Commerce的[观察](/help/tools/observation-for-adobe-commerce/intro.md)。
 
 使用这些工具分析网站性能并识别与以下内容相关的性能问题：
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 高流量网站经常面临数据库瓶颈，主要原因是依赖单个MySQL服务器。 通过实施数据库群集，您可以解决这些瓶颈问题。数据库群集是一种分布式体系结构，可提高性能并确保高可用性。
 
-通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在 [在云基础架构上部署的Adobe Commerce项目](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/technology.html).
+通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在云基础架构](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/technology.html)上部署的[Adobe Commerce项目中。
 
 #### 优化MySQL查询
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 了解有关配置和优化MySQL的详细信息：
 
 - [数据库配置的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/database-on-cloud.html)
-- [Galera DB复制复制速度慢](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/galera-db-slow-replication.html)
+- Galera DB复制的[复制缓慢](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/galera-db-slow-replication.html)
 - [一般MySQL准则](/help/installation/prerequisites/database/mysql.md)
 - [MySQL查询缓存](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/mysql-query-cache.html)
 
@@ -105,13 +105,13 @@ Cron作业在处理站点后台任务（如报告生成和产品索引）时起�
 
 为了平衡性能和便利性，通常建议在低流量期间安排cron作业。 然而，与不同时区的客户打交道可能会带来挑战，需要以深思熟虑的方式确保跨多个地区的和谐体验。
 
-如果您负责优化cron性能和时间，请在Commerce管理员中查看当前cron配置，并了解如何为Commerce项目设置和配置cron作业。
+如果您负责优化cron性能和时间，请查看Commerce管理员的当前cron配置，并了解如何为Commerce项目设置和配置cron作业。
 
 此外，您还可以使用针对Adobe Commerce的观察来查看与cron相关的绩效指标。 此工具将来自多个来源的日志数据整合在一起，以帮助您更好地管理Adobe Commerce站点性能和诊断问题。
 
 了解有关Adobe Commerce cron实施的更多信息：
 
-- [Cron（计划任务）](https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cron.html) 在 _Commerce管理系统用户指南_
+- _Commerce Admin Systems用户指南_&#x200B;中的[Cron（计划任务）](https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cron.html)
 - [应用程序配置 — crons属性](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html) （云基础架构）
-- [配置和运行crons](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html) （内部部署）
-- [Adobe Commerce观察](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html) (请参阅 [!UICONTROL Cron] 和 [!UICONTROL MySQL] 选项卡。)
+- [配置并运行crons](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html)（本地）
+- Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html)的[观察结果（请参阅[!UICONTROL Cron]和[!UICONTROL MySQL]选项卡。）

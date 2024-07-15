@@ -5,7 +5,7 @@ recommendations: noCatalog
 exl-id: 0e41dca0-5a23-4d12-96fe-241c511ae366
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ MySQL数据库以异步方式复制，这意味着无需永久连接从属进程
 - [MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/replication.html)
 - [如何在MySQL (digitalocean)中设置主从复制](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
 
-Commerce为从属数据库提供了示例MySQL配置。 简单的配置提供了 `ResourceConnections` 类 `README.md`.
+Commerce为从属数据库提供了示例MySQL配置。 为`ResourceConnections`类`README.md`提供了简单配置。
 
 下面是更高级的描述，仅供您参考：
 
@@ -122,9 +122,9 @@ Commerce为从属数据库提供了示例MySQL配置。 简单的配置提供了
 
 ## 性能改进
 
-为了提高主从复制的性能，可以过滤从实例上的某些表。 我们建议使用名称模式筛选所有临时表 `search\_tmp\_%` 用于目录搜索的内容。
+为了提高主从复制的性能，可以过滤从实例上的某些表。 我们建议筛选用于目录搜索且名称模式为`search\_tmp\_%`的所有临时表。
 
-为此，请将以下行添加到 `my.cnf` 从实例上的文件：
+为此，请在从属实例的`my.cnf`文件中添加以下行：
 
 ```conf
 replicate-wild-ignore-table=%.search\_tmp\_%

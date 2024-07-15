@@ -4,7 +4,7 @@ description: 查看有关规划Adobe Commerce升级的建议。
 exl-id: f776b000-0085-4b77-860f-623837c3c902
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 - 更好的开发人员体验和工具
 - 能够与其他Adobe Experience Cloud应用程序更深入地集成
 
-为了给我们的商家在计划升级时提供更大的灵活性，我们最近更新了Adobe Commerce [发布计划](../../release/schedule.md)，延长了2.3支持终止(EOS)日期，并宣布为我们的软件选定版本提供新的扩展支持选项。 有关这些更新的更多信息，请参阅 [扩大对Adobe Commerce的支持](https://business.adobe.com/blog/the-latest/adobe-announces-expanded-support).
+为了给我们的商家在规划升级时提供更大的灵活性，我们最近更新了Adobe Commerce [发布计划](../../release/schedule.md)，延长了2.3支持终止(EOS)日期，并宣布为我们的软件选定版本提供新的扩展支持选项。 有关这些更新的详细信息，请参阅[扩展的Adobe Commerce支持](https://business.adobe.com/blog/the-latest/adobe-announces-expanded-support)。
 
 以下是Adobe Commerce推荐的升级路径，可在升级到最新版本之一时确保站点的安全性和性能。
 
@@ -30,8 +30,8 @@ ht-degree: 0%
 
 ## 从2.4.0升级到2.4.3
 
-![从2.4.0到2.4.3的升级路径](../../assets/upgrade-guide/2.4.0-2.4.3.png)
+![从2.4.0到2.4.3](../../assets/upgrade-guide/2.4.0-2.4.3.png)的升级路径
 
 ## 从2.4.4和2.4.5升级
 
-![从2.4.4到2.4.5的升级路径](../../assets/upgrade-guide/2.4.4-and-2.4.5.png)
+![从2.4.4到2.4.5](../../assets/upgrade-guide/2.4.4-and-2.4.5.png)的升级路径

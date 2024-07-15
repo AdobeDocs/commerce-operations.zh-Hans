@@ -17,7 +17,7 @@ ht-degree: 0%
 
 下图显示了用于在AWS基础架构上部署Adobe Commerce本地的参考架构。 其他云提供商，如Azure、Google云和阿里巴巴云，共享相似的基础架构设计和同类服务。
 
-![显示第三方云服务上自托管Adobe Commerce基础架构的图](/help/assets/playbooks/on-premises-infrastructure.svg)
+![显示第三方云服务上自托管Adobe Commerce基础架构的图表](/help/assets/playbooks/on-premises-infrastructure.svg)
 
 让我们更深入地探讨上述基础架构各个方面的角色和功能：
 

@@ -13,11 +13,11 @@ ht-degree: 0%
 
 本主题介绍了一般性建议设置，适用于Adobe Commerce实例，这些实例使用在数据中心（非虚拟化）物理托管的普通服务器，其中资源不与其他用户共享。 您的托管提供商(尤其是专门从事Commerce高性能托管业务的提供商)可能会建议您采用对您的要求同样有效或更加有效的其他设置。
 
-有关云基础架构环境上的Adobe Commerce，请参阅 [入门级架构](https://devdocs.magento.com/cloud/architecture/starter-architecture.html).
+有关云基础架构环境上的Adobe Commerce，请参阅[入门架构](https://devdocs.magento.com/cloud/architecture/starter-architecture.html)。
 
-## [!DNL Commerce] 参考架构图
+## [!DNL Commerce]参考体系结构图
 
-此 [!DNL Commerce] 参考架构图代表了设置可扩展架构的最佳实践方法 [!DNL Commerce] 站点。
+[!DNL Commerce]参考架构图表示设置可缩放[!DNL Commerce]站点的最佳实践方法。
 
 图中每个元素的颜色指示该元素是Magento Open Source还是Adobe Commerce的一部分，以及是否必需。
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 
 ### [!DNL Varnish]
 
-* A [!DNL Varnish] 群集可以扩展到站点的流量
+* [!DNL Varnish]群集可以扩展到站点的流量
 * 根据所需的缓存页数优化实例大小
-* 在高流量网站上，使用 [!DNL Varnish] 主视图，可确保按Web层缓存刷新一个请求（最多）
+* 在高流量站点上，使用[!DNL Varnish]主机以确保在缓存中刷新每个Web层（最多）一个请求
 
 ### Web
 
@@ -62,14 +62,14 @@ ht-degree: 0%
 * 考虑将GFS或GlusterFS用于pub/media存储
 * 或者，将数据库存储用于低流量站点
 
-### 推荐 [!DNL Varnish] 参考体系结构
+### 推荐的[!DNL Varnish]参考体系结构
 
-Magento支持多个全页缓存引擎(File、Memcache、Redis、 [!DNL Varnish])，并通过扩展扩大了覆盖范围。 [!DNL Varnish] 是推荐的全页缓存引擎。  [!DNL Commerce] 支持多种不同的 [!DNL Varnish] 配置。
+Magento支持多个开箱即用的全页缓存引擎(File、Memcache、Redis、[!DNL Varnish])，并通过扩展扩展扩展了覆盖范围。 [!DNL Varnish]是推荐的完整页面缓存引擎。  [!DNL Commerce]支持许多不同的[!DNL Varnish]配置。
 
-对于不要求高可用性的网站，我们建议使用简单的 [!DNL Varnish] 设置Nginx SSL终止。
+对于不需要高可用性的网站，我们建议使用带有Nginx SSL终止的简单[!DNL Varnish]设置。
 
-![简单 [!DNL Varnish] 使用SSL终止进行配置](../assets/performance/images/single-varnish-with-ssl-termination.png)
+包含SSL终止的![简单[!DNL Varnish]配置](../assets/performance/images/single-varnish-with-ssl-termination.png)
 
-对于需要高可用性的站点，我们建议使用两层 [!DNL Varnish] 使用SSL终止负载平衡器的配置。
+对于需要高可用性的网站，我们建议使用带有SSL终止负载平衡器的两层[!DNL Varnish]配置。
 
-![高可用性两层 [!DNL Varnish] 使用SSL终止负载平衡器的配置](../assets/performance/images/ha-2-tier-varnish-with-ssl-term-load-balancer.png)
+使用SSL终止负载平衡器的![高可用性两层[!DNL Varnish]配置](../assets/performance/images/ha-2-tier-varnish-with-ssl-term-load-balancer.png)

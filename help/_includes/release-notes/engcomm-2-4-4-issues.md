@@ -1,7 +1,7 @@
 ---
 source-git-commit: 85e9a890f8ccb0f4d8b63c9c96971cf6e011f992
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 | AnnaAPak | [magento/magento2#33431](https://github.com/magento/magento2/pull/33431) | [magento/magento2#33635](https://github.com/magento/magento2/issues/33635) |
 | 伊霍尔 — 斯维济耶夫 | [magento/magento2#33419](https://github.com/magento/magento2/pull/33419) | [magento/magento2#34166](https://github.com/magento/magento2/issues/34166) |
 | sippsolutions | [magento/magento2#33369](https://github.com/magento/magento2/pull/33369) | [magento/magento2#34451](https://github.com/magento/magento2/issues/34451) |
-| 伊霍尔 — 斯维济耶夫 | [magento/magento2#33324](https://github.com/magento/magento2/pull/33324) | [克拉维约/magento2 — 克拉维约#133](https://github.com/klaviyo/magento2-klaviyo/issues/133) [magento/magento2#33675](https://github.com/magento/magento2/issues/33675) [magento/magento2#33676](https://github.com/magento/magento2/issues/33676) |
+| 伊霍尔 — 斯维济耶夫 | [magento/magento2#33324](https://github.com/magento/magento2/pull/33324) | [klaviyo/magento2-klaviyo#133](https://github.com/klaviyo/magento2-klaviyo/issues/133) [magento/magento2#33675](https://github.com/magento/magento2/issues/33675) [magento/magento2#33676](https://github.com/magento/magento2/issues/33676) |
 | jasperzeinstra | [magento/magento2#33227](https://github.com/magento/magento2/pull/33227) | [magento/magento2#33984](https://github.com/magento/magento2/issues/33984) |
 | 凯特 — 姬玛 | [magento/magento2#33218](https://github.com/magento/magento2/pull/33218) | [magento/magento2#33556](https://github.com/magento/magento2/issues/33556) |
 | 凯特 — 姬玛 | [magento/magento2#33214](https://github.com/magento/magento2/pull/33214) | [magento/magento2#33806](https://github.com/magento/magento2/issues/33806) |

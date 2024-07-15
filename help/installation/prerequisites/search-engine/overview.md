@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # 搜索引擎先决条件
 
-自Adobe Commerce 2.4起，所有安装都必须配置为使用 [Elasticsearch](https://www.elastic.co) 或 [OpenSearch](https://opensearch.org/) 作为目录搜索解决方案。
+从Adobe Commerce 2.4开始，必须将所有安装配置为使用[Elasticsearch](https://www.elastic.co)或[OpenSearch](https://opensearch.org/)作为目录搜索解决方案。
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关配置Elasticsearch7的所有说明均适用于OpenSearch。 [从Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 提供了有关切换到OpenSearch的指南。
+>2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关配置Elasticsearch7的所有说明均适用于OpenSearch。 [从Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)提供了有关切换到OpenSearch的指导。
 
 ## 支持的版本
 
 在安装Adobe Commerce 2.4.4及更高版本之前，必须安装和配置Elasticsearch或OpenSearch。
 
-请参阅 [系统要求](../../system-requirements.md) 以了解特定版本信息。
+有关特定版本信息，请参阅[系统要求](../../system-requirements.md)。
 
 ## 推荐的配置
 
@@ -35,13 +35,13 @@ ht-degree: 0%
 
 以下任务假定您已根据下图配置系统：
 
-![搜索引擎图表](../../../assets/installation/search-engine-config.svg)
+![搜索引擎关系图](../../../assets/installation/search-engine-config.svg)
 
 上图显示：
 
 * Commerce应用程序和搜索引擎安装在不同的主机上。
 
-  在单独的主机上运行需要代理才能正常工作。 (搜索引擎聚类超出了本指南的范围，但您可以在 [Elasticsearch聚类文档](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
+  在单独的主机上运行需要代理才能正常工作。 (搜索引擎聚类超出了本指南的范围，但您可以在[Elasticsearch聚类文档](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html)中找到更多信息。)
 
 * 每台主机都有自己的Web服务器；Web服务器不必相同。
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 1. 搜索引擎Web服务器（在端口443上侦听）将请求代理到搜索引擎服务器（默认情况下，在端口9200上侦听）。
 
-1. HTTP基本身份验证进一步保护对搜索引擎的访问。 对于到达搜索引擎的请求，必须通过SSL传输 *和* 提供有效的用户名和密码。
+1. HTTP基本身份验证进一步保护对搜索引擎的访问。 对于访问搜索引擎的请求，必须通过SSL *和*&#x200B;传递，并提供有效的用户名和密码。
 
 1. 搜索引擎处理请求。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 * [iptables操作说明](https://help.ubuntu.com/community/IptablesHowTo)
 * [如何编辑iptables规则（fedora项目）](https://fedoraproject.org/wiki/How_to_edit_iptables_rules)
 * [SELinux简介(CentOS.org)](https://www.centos.org)
-* [SELinux操作方法维客(CentOS.org)](https://wiki.centos.org/HowTos/SELinux)
+* [SELinux操作方法Wiki (CentOS.org)](https://wiki.centos.org/HowTos/SELinux)
 
 ### 安装Java软件开发工具包
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 java -version
 ```
 
-如果消息 `java: command not found` 显示时，您必须按照下一节中讨论的内容安装Java SDK。
+如果显示消息`java: command not found`，则必须按照下一节中讨论的内容安装Java SDK。
 
 请参阅以下部分之一：
 
@@ -104,9 +104,9 @@ java -version
 
 #### 在CentOS上安装JDK
 
-查看此 [数字海洋教程](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-centos-and-fedora#install-oracle-java-8).
+查看此[数字海洋教程](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-centos-and-fedora#install-oracle-java-8)。
 
-请务必安装JDK和 *非* JRE。
+请确保安装JDK和&#x200B;*而不是* JRE。
 
 ```bash
 yum -y install java-1.8.0-openjdk
@@ -114,11 +114,11 @@ yum -y install java-1.8.0-openjdk
 
 >[!NOTE]
 >
->Java版本8可能并不适用于所有操作系统。 例如，您可以 [搜索Ubuntu的可用包列表](https://packages.ubuntu.com/).
+>Java版本8可能并不适用于所有操作系统。 例如，您可以[搜索Ubuntu的可用包列表](https://packages.ubuntu.com/)。
 
 #### 在Ubuntu上安装JDK
 
-要在Ubuntu上安装JDK 1.8，请以用户身份输入以下命令， `root` 权限：
+要在Ubuntu上安装JDK 1.8，请以具有`root`权限的用户身份输入以下命令：
 
 ```bash
 apt-get -y update
@@ -128,11 +128,11 @@ apt-get -y update
 apt-get install -y openjdk-8-jdk
 ```
 
-有关其他选项，请参阅 [oracle文档](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html).
+有关其他选项，请参阅[Oracle文档](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html)。
 
 ### 安装搜索引擎
 
-关注 [安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) 或 [安装和配置OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/) 执行特定于平台的步骤。
+请按照[安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)或[安装和配置OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/)执行特定于平台的步骤。
 
 要验证Elasticsearch是否正常工作，请在运行该服务器的服务器上输入以下命令：
 
@@ -159,10 +159,10 @@ curl -XGET https://<host>:9200/_cat/plugins?v -u 'admin:admin' --insecure
 
 ## 升级Elasticsearch
 
-请参阅 [升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) 有关备份数据、检测潜在迁移问题以及测试升级以便部署到生产环境之前的完整说明。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
+有关在部署到生产环境之前备份数据、检测潜在的迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
 
-Elasticsearch需要JDK 1.8或更高版本。 请参阅 [安装Java软件开发工具包](#install-the-java-software-development-kit) 以检查已安装的JDK版本。
+Elasticsearch需要JDK 1.8或更高版本。 请参阅[安装Java软件开发工具包](#install-the-java-software-development-kit)以检查安装的JDK版本。
 
 ## 其他资源
 
-请参阅 [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) 或 [OpenSearch](https://opensearch.org/docs/latest/) 文档。
+请参阅[Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)或[OpenSearch](https://opensearch.org/docs/latest/)文档。

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 许多公司根据年度预算和路线图开展工作。 在这些年度讨论中，您一定要谈论您当年的平台运行状况、方向和升级策略，以及它如何适应业务的总体目标和关键绩效指标(KPI)。
 
-遵循 [发布计划](https://devdocs.magento.com/release/)，分配预算和发布窗口以进行升级，避免假日、公司关闭和高峰时段。 通过了解Adobe发布计划，并及时了解每个版本中的更改和改进，通过 [发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)，您就能更好地规划好您的年份。
+按照[发布计划](https://devdocs.magento.com/release/)，为升级分配预算和发布窗口，避免假日、公司停业和高峰时间。 通过了解Adobe发布计划并通过[发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)随时了解每个发布中的更改和改进，可以更好地规划您的年份。
 
 在规划过程中，您可能想问自己：
 

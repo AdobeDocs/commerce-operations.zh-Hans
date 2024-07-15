@@ -4,14 +4,14 @@ description: 请参见config.php文件中的值列表。
 exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
 
 # config.php引用
 
-此 `config.php` 文件包含以下部分：
+`config.php`文件包含以下部分：
 
 | 名称 | 描述 |
 | --------- | -------------------|
@@ -34,7 +34,7 @@ ht-degree: 1%
 ]
 ```
 
-了解有关 [模块].
+了解有关[模块]的详细信息。
 
 ## 范围
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 ]
 ```
 
-了解有关 [商业范围][scopes].
+了解有关[Commerce作用域][scopes]的更多信息。
 
 ## 系统
 
@@ -100,7 +100,7 @@ ht-degree: 1%
 ]
 ```
 
-了解有关 [特定于系统的配置](config-reference-sens.md).
+了解有关[特定于系统的配置](config-reference-sens.md)的详细信息。
 
 ## 主题
 
@@ -120,7 +120,7 @@ ht-degree: 1%
 ]
 ```
 
-了解有关 [主题].
+了解有关[主题]的更多信息。
 
 <!-- link definitions -->
 

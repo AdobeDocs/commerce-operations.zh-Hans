@@ -5,7 +5,7 @@ exl-id: 2e85346c-2063-49c9-9b8d-1b5fdd3f1cef
 feature: Best Practices
 source-git-commit: e63f68dd469564e70269154810cbfbd95d2b2e57
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '157'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 | 最佳实践 | 描述 |
 |------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Adobe安全通知服务](https://www.adobe.com/subscription/adbeSecurityNotifications.html) | 订阅Adobe安全通知。 |
-| [保护您的Commerce网站和基础架构](security-best-practices.md) | 加强Commerce安装的安全状态，以保护Commerce商店、管理员、基础设施和数据免受未经授权的访问和网络攻击。 |
+| [保护您的Commerce站点和基础架构](security-best-practices.md) | 强化Commerce安装的安全状态，以保护Commerce的店面、管理员、基础设施和数据免受未经授权的访问和网络攻击。 |
 | [Google reCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html) | 配置Google reCAPTCHA以进行管理员访问和注册客户启动的各种店面操作。 |
 | [配置Web爬网程序](robots-txt.md) | 将有关Adobe Commerce站点的说明传递给Web爬网程序。 |
 | [验证安全配置](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/launch/checklist.html) | 在云基础架构网站上启动Adobe Commerce之前，请查看清单项目。 |

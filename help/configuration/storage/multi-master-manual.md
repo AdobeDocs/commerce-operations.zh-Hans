@@ -5,7 +5,7 @@ recommendations: noCatalog
 exl-id: 2c357486-4a8a-4a36-9e13-b53c83f69456
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1373'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 {{deprecate-split-db}}
 
-如果Commerce应用程序已在生产中，或者您已安装自定义代码或组件，则可能需要手动配置拆分数据库。 在继续之前，请联系Adobe Commerce支持部门以查看在您的情况下是否有必要执行此操作。
+如果Commerce应用程序已在生产中，或者您已经安装了自定义代码或组件，则可能需要手动配置拆分数据库。 在继续之前，请联系Adobe Commerce支持部门以查看在您的情况下是否有必要执行此操作。
 
 手动拆分数据库涉及：
 
@@ -29,30 +29,30 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->如果有任何自定义代码将JOIN与sales和quote数据库中的表一起使用， _无法_ 使用拆分数据库。 如有疑问，请联系任何自定义代码或扩展的作者，确保其代码不使用JOIN。
+>如果任何自定义代码使用JOINs与sales和quote数据库中的表，则&#x200B;_不能_&#x200B;使用拆分数据库。 如有疑问，请联系任何自定义代码或扩展的作者，确保其代码不使用JOIN。
 
 本主题使用以下命名约定：
 
-- 主数据库名称为 `magento` 并且其用户名和密码都是 `magento`
-- 引号数据库名称为 `magento_quote` 并且其用户名和密码都是 `magento_quote`
+- 主数据库名称为`magento`，其用户名和密码均为`magento`
+- 引号数据库名称为`magento_quote`，其用户名和密码均为`magento_quote`
 
-  报价数据库也称为 _结账_ 数据库。
+  报价数据库也称为&#x200B;_签出_&#x200B;数据库。
 
-- 销售数据库名称为 `magento_sales` 并且其用户名和密码都是 `magento_sales`
+- 销售数据库名称为`magento_sales`，其用户名和密码均为`magento_sales`
 
   销售数据库也称为OMS数据库。
 
 >[!INFO]
 >
->本指南假定所有三个数据库与Commerce应用程序位于同一主机上。 但是，如何定位数据库以及数据库名称由您来决定。 我们希望我们的示例能够让这些说明更易于遵循。
+>本指南假定所有三个数据库与Commerce应用程序位于同一台主机上。 但是，如何定位数据库以及数据库名称由您来决定。 我们希望我们的示例能够让这些说明更易于遵循。
 
-## 备份商务系统
+## 备份Commerce系统
 
 Adobe强烈建议您备份当前数据库和文件系统，以便能够在过程中遇到问题时恢复该数据库。
 
-**备份您的系统**：
+**要备份您的系统**：
 
-1. 以或切换身份登录到Commerce服务器， [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以[文件系统所有者](../../installation/prerequisites/file-system/overview.md)的身份登录或切换到Commerce服务器。
 1. 输入以下命令：
 
    ```bash
@@ -65,7 +65,7 @@ Adobe强烈建议您备份当前数据库和文件系统，以便能够在过程
 
 本节讨论如何为销售和报价表创建数据库实例。
 
-**创建销售和OMS报价数据库**：
+**要创建销售和OMS报价数据库**：
 
 1. 以任意用户身份登录到数据库服务器。
 1. 输入以下命令以进入MySQL命令提示符：
@@ -74,8 +74,8 @@ Adobe强烈建议您备份当前数据库和文件系统，以便能够在过程
    mysql -u root -p
    ```
 
-1. 输入MySQL `root` 提示时用户的密码。
-1. 按照显示的顺序输入以下命令，以创建名为的数据库实例 `magento_quote` 和 `magento_sales` 用户名和密码相同：
+1. 出现提示时输入MySQL `root`用户的密码。
+1. 按照显示的顺序输入以下命令，以创建具有相同用户名和密码的名为`magento_quote`和`magento_sales`的数据库实例：
 
    ```shell
    create database magento_quote;
@@ -87,7 +87,7 @@ Adobe强烈建议您备份当前数据库和文件系统，以便能够在过程
    GRANT ALL ON magento_sales.* TO magento_sales@localhost IDENTIFIED BY 'magento_sales';
    ```
 
-1. 输入 `exit` 退出命令提示符。
+1. 输入`exit`退出命令提示符。
 
 1. 逐个验证数据库：
 
@@ -126,11 +126,11 @@ Adobe强烈建议您备份当前数据库和文件系统，以便能够在过程
 - `salesrule_`
 - `sales_`
 - `magento_sales_`
-- 此 `magento_customercustomattributes_sales_flat_order` 表格也受影响
+- `magento_customercustomattributes_sales_flat_order`表也受影响
 
 >[!INFO]
 >
->此部分包含具有特定数据库表名的脚本。 如果已经执行了自定义操作，或者希望在对表执行操作之前查看完整的表列表，请参见 [引用脚本](#reference-scripts).
+>此部分包含具有特定数据库表名的脚本。 如果已执行自定义操作，或者希望在对表执行操作之前查看完整的表列表，请参阅[引用脚本](#reference-scripts)。
 
 有关更多信息，请参阅：
 
@@ -139,13 +139,13 @@ Adobe强烈建议您备份当前数据库和文件系统，以便能够在过程
 
 ### 创建销售数据库SQL脚本
 
-在您登录Commerce服务器时用户可以访问的位置创建以下SQL脚本。 例如，如果您登录或运行命令为 `root`，则可以在页面的 `/root/sql-scripts` 目录。
+在您登录Commerce服务器时所在的用户可访问的位置创建以下SQL脚本。 例如，如果您以`root`身份登录或运行命令，则可以在`/root/sql-scripts`目录中创建脚本。
 
 #### 删除外键
 
 此脚本从sales数据库中删除引用非sales表的外键。
 
-创建以下脚本，并赋予其名称，如 `1_foreign-sales.sql`. 替换 `<your main DB name>` 使用数据库的名称。
+创建以下脚本并为其指定名称，如`1_foreign-sales.sql`。 将`<your main DB name>`替换为您的数据库名称。
 
 ```sql
 use <your main DB name>;
@@ -200,13 +200,13 @@ ALTER TABLE paypal_billing_agreement_order DROP FOREIGN KEY PAYPAL_BILLING_AGREE
 
 运行前面的脚本：
 
-1. 以以下身份登录MySQL数据库 `root` 或管理用户：
+1. 以`root`或管理用户身份登录到MySQL数据库：
 
    ```bash
    mysql -u root -p
    ```
 
-1. 在 `mysql>` 提示，按如下方式运行脚本：
+1. 在`mysql>`提示符下，按如下方式运行脚本：
 
    ```shell
    source <path>/<script>.sql
@@ -218,20 +218,20 @@ ALTER TABLE paypal_billing_agreement_order DROP FOREIGN KEY PAYPAL_BILLING_AGREE
    source /root/sql-scripts/1_foreign-sales.sql
    ```
 
-1. 脚本运行后，输入 `exit`.
+1. 脚本运行后，输入`exit`。
 
 ### 备份销售数据
 
-本节讨论如何从主Commerce数据库中备份销售表，以便在单独的sales数据库中恢复它们。
+本节讨论如何从主Commerce数据库中备份sales表，以便在单独的sales数据库中恢复它们。
 
-如果您当前在 `mysql>` 提示，输入 `exit` 返回到命令shell。
+如果您当前位于`mysql>`提示符处，请输入`exit`以返回到命令shell。
 
-运行以下命令 `mysqldump` 命令，一次一个命令，来自命令shell。 在每一行中，替换以下内容：
+从命令shell运行以下`mysqldump`命令，一次运行一个。 在每一行中，替换以下内容：
 
-- `<your database root username>` 使用数据库根用户的名称
-- `<your database root user password>` 使用用户的密码
-- `<your main Commerce DB name>` 使用Commerce数据库的名称
-- `<path>` 具有可写文件系统路径
+- `<your database root username>`与您的数据库根用户名
+- 使用用户密码的`<your database root user password>`
+- 使用Commerce数据库名称的`<your main Commerce DB name>`
+- 具有可写文件系统路径的`<path>`
 
 #### 脚本1
 
@@ -263,7 +263,7 @@ mysqldump -u <your database root username> -p <your main Commerce DB name> seque
 
 #### NDB要求
 
-如果您使用 [网络数据库(NDB)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html) 集群：
+如果您使用的是[网络数据库(NDB)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html)群集：
 
 1. 将转储文件中的表从InnoDb转换为NDB类型：
 
@@ -295,13 +295,13 @@ mysql -u <root username> -p <your sales DB name> < /<path>/customercustomattribu
 
 位置
 
-- `<your sales DB name>` 与您的销售数据库的名称。
+- 使用销售数据库名称的`<your sales DB name>`。
 
-  在本主题中，示例数据库名称为 `magento_sales`.
+  在此主题中，示例数据库名称为`magento_sales`。
 
-- `<root username>` 使用MySQL根用户名
-- `<root user password>` 使用用户的密码
-- 验证您之前创建的备份文件的位置(例如， `/var/sales.sql`)
+- 使用您的MySQL根用户名`<root username>`
+- 使用用户密码的`<root user password>`
+- 验证您之前创建的备份文件的位置（例如，`/var/sales.sql`）
 
 ## 配置报价数据库
 
@@ -309,15 +309,15 @@ mysql -u <root username> -p <your sales DB name> < /<path>/customercustomattribu
 
 >[!INFO]
 >
->此部分包含具有特定数据库表名的脚本。 如果已经执行了自定义操作，或者希望在对表执行操作之前查看完整的表列表，请参见 [引用脚本](#reference-scripts).
+>此部分包含具有特定数据库表名的脚本。 如果已执行自定义操作，或者希望在对表执行操作之前查看完整的表列表，请参阅[引用脚本](#reference-scripts)。
 
-引号数据库表名称的开头为 `quote`. 此 `magento_customercustomattributes_sales_flat_quote` 和 `magento_customercustomattributes_sales_flat_quote_address` 表格也会受影响
+引号数据库表名称以`quote`开头。 `magento_customercustomattributes_sales_flat_quote`和`magento_customercustomattributes_sales_flat_quote_address`表也受到影响
 
 ### 从引号表中删除外键
 
-此脚本从引号表中删除引用非引号表的外键。 替换 `<your main Commerce DB name>` 使用Commerce数据库的名称。
+此脚本从引号表中删除引用非引号表的外键。 将`<your main Commerce DB name>`替换为Commerce数据库的名称。
 
-创建以下脚本，并赋予其名称，如 `2_foreign-key-quote.sql`：
+创建以下脚本并为其指定名称，如`2_foreign-key-quote.sql`：
 
 ```sql
 use <your main DB name>;
@@ -334,7 +334,7 @@ ALTER TABLE quote_item DROP FOREIGN KEY QUOTE_ITEM_STORE_ID_STORE_STORE_ID;
    mysql -u root -p
    ```
 
-1. 在 `mysql >` 提示，按如下方式运行脚本：
+1. 在`mysql >`提示符下，按如下方式运行脚本：
    `source <path>/<script>.sql`
 
    例如，
@@ -343,7 +343,7 @@ ALTER TABLE quote_item DROP FOREIGN KEY QUOTE_ITEM_STORE_ID_STORE_STORE_ID;
    source /root/sql-scripts/2_foreign-key-quote.sql
    ```
 
-1. 脚本运行后，输入 `exit`.
+1. 脚本运行后，输入`exit`。
 
 ### 备份报价表
 
@@ -357,7 +357,7 @@ mysqldump -u <your database root username> -p <your main Commerce DB name> magen
 
 ### NDB要求
 
-如果您使用 [网络数据库(NDB)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html) 集群：
+如果您使用的是[网络数据库(NDB)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html)群集：
 
 1. 将转储文件中的表从InnoDb转换为NDB类型：
 
@@ -375,9 +375,9 @@ mysql -u root -p magento_quote < /<path>/quote.sql
 
 ## 从数据库中删除sales和quote表
 
-此脚本用于Commerce数据库中的sales和quote表。 替换 `<your main DB name>` 使用Commerce数据库的名称。
+此脚本用于编写Commerce数据库中的sales和quote表的脚本。 将`<your main DB name>`替换为Commerce数据库的名称。
 
-创建以下脚本，并赋予其名称，如 `3_drop-tables.sql`：
+创建以下脚本并为其指定名称，如`3_drop-tables.sql`：
 
 ```sql
 use <your main DB name>;
@@ -457,7 +457,7 @@ SET foreign_key_checks = 1;
    mysql -u root -p
    ```
 
-1. 在 `mysql>` 提示，按如下方式运行脚本：
+1. 在`mysql>`提示符下，按如下方式运行脚本：
 
    ```shell
    source <path>/<script>.sql
@@ -469,26 +469,26 @@ SET foreign_key_checks = 1;
    source /root/sql-scripts/3_drop-tables.sql
    ```
 
-1. 脚本运行后，输入 `exit`.
+1. 脚本运行后，输入`exit`。
 
 ## 更新您的部署配置
 
-手动拆分数据库的最后一步是将连接和资源信息添加到Commerce的部署配置中， `env.php`.
+手动拆分数据库的最后一步是将连接和资源信息添加到Commerce的部署配置`env.php`。
 
 要更新部署配置，请执行以下操作：
 
-1. 以或切换身份登录到Commerce服务器， [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以[文件系统所有者](../../installation/prerequisites/file-system/overview.md)的身份登录或切换到Commerce服务器。
 1. 备份您的部署配置：
 
    ```bash
    cp <magento_root>/app/etc/env.php <magento_root>/app/etc/env.php.orig
    ```
 
-1. 打开 `<magento_root>/app/etc/env.php` 在文本编辑器中，并使用以下部分中讨论的指南更新它。
+1. 在文本编辑器中打开`<magento_root>/app/etc/env.php`，然后按照以下部分中介绍的准则更新它。
 
 ### 更新数据库连接
 
-找到块，开始于 `'default'` (在 `'connection'`)并添加 `'checkout'` 和 `'sales'` 部分。 将示例值替换为适用于您的站点的值。
+找到以`'default'`开头的块（在`'connection'`下）并添加`'checkout'`和`'sales'`部分。 将示例值替换为适用于您的站点的值。
 
 ```php
  'default' =>
@@ -529,7 +529,7 @@ SET foreign_key_checks = 1;
 
 ### 更新资源
 
-找到块，开始于 `'resource'` 并添加 `'checkout'` 和 `'sales'` 部分如下所示：
+找到以`'resource'`开头的块并向其添加`'checkout'`和`'sales'`部分，如下所示：
 
 ```php
 'resource' =>
@@ -555,14 +555,14 @@ SET foreign_key_checks = 1;
 要使用这些脚本，请执行以下操作：
 
 1. 创建一个SQL脚本，其中包含本节中每个脚本的内容。
-1. 在每个脚本中，替换 `<your main DB name>` 使用Commerce数据库的名称。
+1. 在每个脚本中，将`<your main DB name>`替换为Commerce数据库的名称。
 
-   在本主题中，示例数据库名称为 `magento`.
+   在此主题中，示例数据库名称为`magento`。
 
-1. 运行以下路径中的每个脚本： `mysql>` 提示为 `source <script name>`
+1. 以`source <script name>`身份运行`mysql>`提示符下的每个脚本
 1. 检查输出。
 1. 将每个脚本的结果复制到另一个SQL脚本，删除管道字符(`|`)。
-1. 运行以下路径中的每个脚本： `mysql>` 提示为 `source <script name>`.
+1. 从`mysql>`提示符运行每个脚本为`source <script name>`。
 
    运行第二个脚本将在主Commerce数据库中执行操作。
 
@@ -672,4 +672,4 @@ select 'SET foreign_key_checks = 1;';
 
 ### 删除引号表
 
-删除以开头的所有表 `quote_`.
+删除所有以`quote_`开头的表。

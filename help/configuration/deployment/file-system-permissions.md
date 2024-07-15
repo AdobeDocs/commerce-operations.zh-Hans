@@ -5,20 +5,20 @@ feature: Configuration, Roles/Permissions
 exl-id: 95b27db9-5247-4f58-a9af-1590897d73db
 source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
 
 # 文件系统访问权限
 
-本节讨论如何为开发和生产系统设置Commerce文件系统的所有者或所有者。 在继续之前，请查看中讨论的概念 [文件系统所有权和权限概述](../../installation/prerequisites/file-system/overview.md).
+本节讨论如何为开发和生产系统设置Commerce文件系统的所有者或所有者。 在继续之前，请查看[文件系统所有权和权限概述](../../installation/prerequisites/file-system/overview.md)中讨论的概念。
 
-本主题侧重于商务开发和生产系统。 如果要安装Commerce，请参阅 [设置安装前的所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md).
+本主题重点介绍Commerce开发和生产系统。 如果要安装Commerce，请参阅[设置安装前的所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md)。
 
 后面的部分讨论了对一个或两个文件系统所有者的要求。 这意味着：
 
-- **一个用户** — 通常在共享托管提供程序上需要，该程序允许您仅访问服务器上的一个用户。此用户可以登录，使用FTP传输文件，并且此用户还运行Web服务器。
+- **一个用户** — 通常在共享托管提供程序上需要，该提供程序只允许你访问服务器上的一个用户。此用户可以登录，使用FTP传输文件，并且此用户还运行Web服务器。
 
 - **两个用户** — 如果您运行自己的Commerce服务器，我们建议使用两个用户：一个用于传输文件和运行命令行实用工具，另一个用于Web服务器软件。 如果可能，这是最好的，因为它更安全。
 
@@ -26,13 +26,13 @@ ht-degree: 0%
 
    - 运行Admin和storefront的Web服务器用户。
 
-   - A _命令行用户_，这是可用于登录到服务器的本地用户帐户。 此用户运行Commerce cron作业和命令行实用程序。
+   - _命令行用户_，这是可用于登录到服务器的本地用户帐户。 此用户运行Commerce cron作业和命令行实用程序。
 
 ## 共享托管的生产文件系统所有权（一个用户）
 
 要使用单一所有者设置，您必须以运行Web服务器的相同用户身份登录到Commerce服务器。 这是共享托管的典型做法。
 
-由于有一个文件系统所有者不太安全，因此，我们建议您尽可能在专用服务器上将Commerce在生产环境中部署，而不是在共享主机上部署。
+由于拥有一位文件系统所有者不太安全，因此我们建议您尽可能在专用服务器上将Commerce在生产环境中部署，而不是在共享主机上部署。
 
 ### 为默认或开发人员模式设置一个所有者
 
@@ -102,27 +102,27 @@ ht-degree: 0%
    chmod -R u+w .
    ```
 
-### （可选）设置 `magento_umask`
+### 可选设置`magento_umask`
 
-请参阅 [（可选）设置umask](../../installation/next-steps/set-umask.md) 在 _安装指南_.
+请参阅&#x200B;_安装指南_&#x200B;中的[可选设置umask](../../installation/next-steps/set-umask.md)。
 
 ## 专用托管的生产文件系统所有权（两个用户）
 
 如果您使用自己的服务器（包括托管提供商的专用服务器设置），则有两个用户：
 
-- 此 **Web服务器用户**，用于运行管理员和店面。
+- 运行管理员和店面的&#x200B;**Web服务器用户**。
 
   Linux系统通常不为此用户提供Shell；您无法以Web服务器用户身份登录Commerce服务器或切换到该用户。
 
-- 此 **命令行用户**，以或切换身份登录到Commerce服务器。
+- 您以或切换身份登录到Commerce服务器的&#x200B;**命令行用户**。
 
   Commerce使用此用户运行CLI命令和cron。
 
   >[!INFO]
   >
-  >命令行用户也称为 _文件系统所有者_.
+  >命令行用户也称为&#x200B;_文件系统所有者_。
 
-由于这些用户需要访问相同的文件，因此我们建议您创建 [共享组](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) 他们俩都属于的。 以下过程假定您已完成此操作。
+由于这些用户需要访问相同的文件，因此我们建议您创建他们同时属于的[共享组](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group)。 以下过程假定您已完成此操作。
 
 请参阅以下部分之一：
 
@@ -139,19 +139,19 @@ ht-degree: 0%
 - `pub/media`
 - `app/etc`
 
-设置 [`setgid`](https://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/) 位，因此权限始终从父目录继承。
+设置目录上的[`setgid`](https://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/)位，以便权限始终从父目录继承。
 
 >[!INFO]
 >
->`setgid` 仅适用于目录， _非_ 到文件。
+>`setgid`仅适用于目录，_不适用于_&#x200B;文件。
 
 此外，这些目录应可由Web服务器组写入。 由于这些目录中可能存在内容，因此应递归添加权限。
 
-#### 设置权限和 `setgid`
+#### 设置权限和`setgid`
 
-要设置 `setgid` 和权限（开发人员模式）：
+要为开发人员模式设置`setgid`和权限：
 
-1. 以文件系统所有者的身份登录或切换到您的Commerce服务器。
+1. 以文件系统所有者的身份登录Commerce服务器或切换到文件系统所有者。
 1. 按照显示的顺序输入以下命令：
 
    ```bash
@@ -192,7 +192,7 @@ ht-degree: 0%
    bin/magento deploy:mode:set production
    ```
 
-1. 以用户身份输入以下命令 `root` 权限：
+1. 以具有`root`权限的用户身份输入以下命令：
 
    ```bash
    find app/code lib pub/static app/etc generated/code generated/metadata var/view_preprocessed \( -type d -or -type f \) -exec chmod g-w {} + && chmod o-rwx app/etc/env.php

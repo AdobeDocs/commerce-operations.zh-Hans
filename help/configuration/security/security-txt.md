@@ -6,22 +6,22 @@ badge: label="由卡尔佩什·梅赫塔从科拉市撰写" type="Informative" u
 exl-id: ddafd03c-77b2-42e8-b593-7d655d08e9c3
 source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 # 安全TXT文件
 
-当研究人员发现安全漏洞时，往往缺乏适当的报告渠道。 因此，某些漏洞未报告。 目的 `security.txt` [文件格式](https://datatracker.ietf.org/doc/html/draft-foudil-securitytxt-09) 文件是为安全研究人员提供可以用来报告发现的信息。
+当研究人员发现安全漏洞时，往往缺乏适当的报告渠道。 因此，某些漏洞未报告。 `security.txt` [文件格式](https://datatracker.ietf.org/doc/html/draft-foudil-securitytxt-09)文件的目的是为安全研究人员提供可用于报告其发现的信息。
 
-商家可以输入他们的联系信息 [安全问题报告](https://docs.magento.com/user-guide/stores/security-issue-reporting.html) 来自商务 _管理员_. 对于开发人员， `Magento_Securitytxt` 模块提供以下功能：
+商家可以从Commerce _管理员_&#x200B;输入[安全问题报告](https://docs.magento.com/user-guide/stores/security-issue-reporting.html)的联系信息。 对于开发人员，`Magento_Securitytxt`模块提供了以下功能：
 
-- 允许从保存安全配置 _管理员_.
-- 包含路由器，用于将请求的应用程序操作类与 `.well-known/security.txt` 和 `.well-known/security.txt.sig` 文件。
-- 提供内容 `.well-known/security.txt` 和 `.well-known/security.txt.sig` 文件。
+- 允许从&#x200B;_管理员_&#x200B;保存安全配置。
+- 包含将应用程序操作类与`.well-known/security.txt`和`.well-known/security.txt.sig`文件的请求匹配的路由器。
+- 提供`.well-known/security.txt`和`.well-known/security.txt.sig`文件的内容。
 
-有效的 `security.txt` 文件可能如下所示：
+有效的`security.txt`文件可能如下所示：
 
 ```text
 Contact: mailto:security@example.com
@@ -32,7 +32,7 @@ Policy: https://example.com/security-policy.html
 Signature: https://example.com/.well-known/security.txt.sig
 ```
 
-要创建 `security.txt` 签名(`security.txt.sig`)文件：
+要创建`security.txt`签名(`security.txt.sig`)文件：
 
 ```bash
 gpg -u KEYID --output security.txt.sig --armor --detach-sig security.txt

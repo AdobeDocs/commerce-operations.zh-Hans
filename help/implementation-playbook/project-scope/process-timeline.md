@@ -19,8 +19,8 @@ ht-degree: 0%
 
 ## 典型时间线示例
 
-![典型Commerce实施时间线示例](../../assets/playbooks/timeline-example.svg)
+![典型商务实施时间表示例](../../assets/playbooks/timeline-example.svg)
 
 ## 时间线活动示例
 
-![商业实施时间线活动示例](../../assets/playbooks/timeline-activities-example.svg)
+![示例商务实施时间线活动](../../assets/playbooks/timeline-activities-example.svg)

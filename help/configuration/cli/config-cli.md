@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 命令行工具
 
-Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 运行安装和配置任务，包括：
+Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 用于运行安装和配置任务，包括：
 
 - 安装Commerce（以及更新数据库架构、创建部署配置等相关任务）
 - 清除缓存
@@ -28,15 +28,15 @@ Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 运�
 - CLI是可扩展的，因此第三方开发人员可以“插入”到其中。 这还有消除用户学习曲线的额外好处。
 - 禁用模块的命令不显示。
 
-本主题讨论如何使用CLI配置Adobe Commerce软件。 有关安装Commerce的信息，请参阅 [安装流程](../../installation/overview.md) 在 _安装指南_.
+本主题讨论如何使用CLI配置Adobe Commerce软件。 有关安装Commerce的信息，请参阅&#x200B;_安装指南_&#x200B;中的[安装流程](../../installation/overview.md)。
 
 ## 先决条件
 
 在开始使用CLI之前，请确保：
 
-1. 您的系统符合中讨论的要求 [系统要求](../../installation/system-requirements.md) 在 _安装指南_.
-1. 您已完成中讨论的所有先决任务 [先决条件](../../installation/prerequisites/overview.md) 在 _安装指南_.
-1. 登录到Commerce服务器后，切换到有权写入Commerce文件系统的用户。 请参阅 [切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md) 在 _安装指南_.
+1. 您的系统符合&#x200B;_安装指南_&#x200B;中的[系统要求](../../installation/system-requirements.md)中讨论的要求。
+1. 您已完成&#x200B;_安装指南_&#x200B;中的[先决条件](../../installation/prerequisites/overview.md)中讨论的所有先决条件任务。
+1. 登录到Commerce服务器后，切换到有权写入Commerce文件系统的用户。 请参阅&#x200B;_安装指南_&#x200B;中的[切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md)。
 
 ## 正在运行命令
 
@@ -52,9 +52,9 @@ su <file system owner> -s /bin/bash -c <command>
 sudo -u <file system owner> <command>
 ```
 
-**从任何目录运行CLI命令**：
+**要从任何目录运行CLI命令**：
 
-添加 `<magento_root>/bin` 到您的系统 `PATH`.
+将`<magento_root>/bin`添加到您的系统`PATH`。
 
 CentOS的bash shell示例：
 
@@ -64,6 +64,6 @@ export PATH=$PATH:/var/www/html/magento2/bin
 
 （可选）您可以运行以下命令：
 
-- `cd <magento_root>/bin` 并运行它们 `./magento <command name>`
+- `cd <magento_root>/bin`并作为`./magento <command name>`运行
 - `<magento_root>/bin/magento <command name>`
-- `<magento_root>` 是Web服务器docroot的子目录
+- `<magento_root>`是Web服务器docroot的子目录

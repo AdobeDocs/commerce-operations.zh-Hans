@@ -5,14 +5,14 @@ exl-id: 04d8270f-3f68-445a-8e7a-e17905a6f77c
 feature: Best Practices
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
 # 关键利益相关者
 
-2021年，许多企业已经意识到，成为“防疫组织”与组织的数字实力直接相关。 基于Forrester数据，[McKinsey](https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/five-fifty-the-quickening)研究发现，电子商务仅仅3个月就增长了10年，其增长动力来自与消费者实现数字化连接的需要，而实体门被锁上。
+2021年，许多企业已经意识到，成为“防疫组织”与组织的数字实力直接相关。 根据Forrester的数据，McKinsey](https://www.mckinsey.com/business-functions/strategy-and-corporate-finance/our-insights/five-fifty-the-quickening)发现，电子商务仅用3个月时间就增长了10年，其增长动力来自与客户进行数字化连接的需要，而实体门却被锁上了。[
 
 当决定投资商业转型时，最重要的步骤之一是确定谁从组织处参与该过程。 对于小型企业，有时电子商务或数字团队只有少数人，因此整个团队都会承担这项任务。 但是，对于较大的组织，一种方法是将其分为三个不同的区域，包括：
 
@@ -39,6 +39,6 @@ ht-degree: 0%
 
 ## 谁是执行发起人？
 
-Digital Commerce 360报告称，组织尚未投资于新的商业转型的首要原因是它们缺乏领导力支持。 领导团队的参与程度对品牌的成功至关重要。 建议通过以下角色提供全面支持，包括在商业实施期间定期召开检查点会议：
+数字Commerce 360报告称，企业尚未投资于新的商业转型的首要原因是，它们缺乏领导力支持。 领导团队的参与程度对品牌的成功至关重要。 建议通过以下角色提供全面支持，包括在商业实施期间定期召开检查点会议：
 
 - 整个C套件

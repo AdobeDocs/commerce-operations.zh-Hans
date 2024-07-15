@@ -16,13 +16,13 @@ ht-degree: 0%
 
 - [安装指南](https://www.varnish-software.com/developers/tutorials/installing-varnish-ubuntu/)
 - [清漆安装指南](https://www.varnish-cache.org/docs)
-- [如何安装Varnish (Tecmint)](https://www.tecmint.com/install-varnish-cache-web-accelerator/)
+- [如何安装清漆(Tecmint)](https://www.tecmint.com/install-varnish-cache-web-accelerator/)
 
 >[!INFO]
 >
 >本主题为CentOS和Apache 2.4上的Varnish编写。如果在不同的环境中设置Varnish，则某些命令可能会不同。 有关更多信息，请参阅之前的文档。
 >
->如果要安装Vmods模块(vmod)（如saint模式），则应通过编译代码来安装Varnish，而不是通过包进行安装。 请参阅 [Saint模式](config-varnish-advanced.md#saint-mode) 以了解更多详细信息。
+>如果要安装Vmods模块(vmod)（如saint模式），则应通过编译代码来安装Varnish，而不是通过包进行安装。 有关详细信息，请参阅[Saint模式](config-varnish-advanced.md#saint-mode)。
 
 ## 确认您的清漆版本
 
@@ -32,4 +32,4 @@ ht-degree: 0%
 varnishd -V
 ```
 
-确保 [Adobe Commerce支持](../../installation/system-requirements.md) 已安装的Varnish版本，然后继续。 如果您运行的是不支持的版本，则必须升级到支持的版本。 有关更多信息，请参阅Varnish安装文档。
+在继续之前，请确保[Adobe Commerce支持](../../installation/system-requirements.md)已安装的Varnish版本。 如果您运行的是不支持的版本，则必须升级到支持的版本。 有关更多信息，请参阅Varnish安装文档。

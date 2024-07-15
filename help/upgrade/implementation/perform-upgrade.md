@@ -12,25 +12,25 @@ ht-degree: 0%
 
 # 执行升级
 
-您可以升级 _内部部署_ 从命令行部署Adobe Commerce应用程序（如果通过以下方式安装该软件）：
+如果通过以下方式安装软件，则可以从命令行升级Adobe Commerce应用程序的&#x200B;_内部部署_&#x200B;部署：
 
-- 使用下载编辑器metapackage `composer create-project` 命令。
+- 使用`composer create-project`命令下载编辑器中继包。
 - 正在安装压缩的归档文件。
 
 >[!NOTE]
 >
->- 有关云基础架构项目的Adobe Commerce，请参阅 [升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html) （在云指南中）。
->- 如果您克隆GitHub存储库，请勿使用此方法进行升级。 请参阅 [升级基于Git的安装](../developer/git-installs.md).
+>- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html)。
+>- 如果您克隆GitHub存储库，请勿使用此方法进行升级。 请参阅[升级基于Git的安装](../developer/git-installs.md)。
 
-以下说明说明了如何使用编辑器包管理器进行升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须首先使用编辑器1升级到与编辑器2兼容的版本（例如，2.4.2） _早于_ 升级到Composer 2以进行2.4.2以上升级。 此外，您必须运行 [支持的版本](../../installation/system-requirements.md) PHP的。
+以下说明说明了如何使用编辑器包管理器进行升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须先使用编辑器1 _升级到与编辑器2（例如，2.4.2）兼容的版本，然后再将_&#x200B;升级到编辑器2，以进行>2.4.2升级。 此外，您必须运行[支持的PHP版本](../../installation/system-requirements.md)。
 
 >[!WARNING]
 >
->升级Adobe Commerce的过程已更改。 您必须安装新版本的 `magento/composer-root-update-plugin` 包(请参阅 [先决条件](../prepare/prerequisites.md))。 此外，用于升级的命令已从 `composer require magento/<package_name>` 到 `composer require-commerce magento/<package_name>`.
+>升级Adobe Commerce的过程已更改。 您必须安装`magento/composer-root-update-plugin`包的新版本（请参阅[先决条件](../prepare/prerequisites.md)）。 此外，用于升级的命令已从`composer require magento/<package_name>`更改为`composer require-commerce magento/<package_name>`。
 
 ## 开始之前
 
-您必须完成 [升级先决条件](../prepare/prerequisites.md) 以在开始升级过程之前准备环境。
+在开始升级过程之前，必须完成[升级先决条件](../prepare/prerequisites.md)以准备环境。
 
 ## 管理包
 
@@ -44,11 +44,11 @@ ht-degree: 0%
    bin/magento maintenance:enable
    ```
 
-   请参阅 [启用或禁用维护模式](../../installation/tutorials/maintenance-mode.md) 以获取其他选项。 或者，您可以创建 [自定义维护模式页面](../troubleshooting/maintenance-mode-options.md).
+   有关其他选项，请参阅[启用或禁用维护模式](../../installation/tutorials/maintenance-mode.md)。 您可以选择创建[自定义维护模式页面](../troubleshooting/maintenance-mode-options.md)。
 
 1. 在异步进程（如消息队列使用者）运行时启动升级过程可能会导致数据损坏。 要防止数据损坏，请禁用所有cron作业。
 
-   _云基础架构上的Adobe Commerce：_
+   云基础架构上的&#x200B;_Adobe Commerce：_
 
    ```bash
    ./vendor/bin/ece-tools cron:disable
@@ -66,9 +66,9 @@ ht-degree: 0%
    bin/magento cron:run --group=consumers
    ```
 
-   等待cron作业完成。 您可以使用进程查看器或通过运行 `ps aux | grep 'bin/magento queue'` 多次命令，直到所有进程完成。
+   等待cron作业完成。 您可以使用进程查看器或多次运行`ps aux | grep 'bin/magento queue'`命令来监视作业的状态，直到所有进程都完成为止。
 
-1. 创建备份 `composer.json` 文件。
+1. 创建`composer.json`文件的备份。
 
    ```bash
    cp composer.json composer.json.bak
@@ -100,7 +100,7 @@ ht-degree: 0%
      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* --no-update
      ```
 
-1. 使用以下方式升级您的实例 `composer require-commerce` 命令语法：
+1. 使用以下`composer require-commerce`命令语法升级实例：
 
    ```bash
    composer require-commerce magento/<product> <version> --no-update [--interactive-root-conflicts] [--force-root-updates] [--help]
@@ -108,19 +108,19 @@ ht-degree: 0%
 
    命令选项包括：
 
-   - `<product>`  — （必需）要升级的包。 对于内部部署，此值必须为 `product-community-edition` 或 `product-enterprise-edition`.
+   - `<product>` — （必需）要升级的包。 对于内部部署，此值必须为`product-community-edition`或`product-enterprise-edition`。
 
-   - `<version>`  — （必需）要升级到的Adobe Commerce版本。 例如， `2.4.3`.
+   - `<version>` — （必需）要升级到的Adobe Commerce版本。 例如，`2.4.3`。
 
-   - `--no-update`  — （必需）禁用依赖关系的自动更新。
+   - `--no-update` — （必需）禁用依赖项的自动更新。
 
-   - `--interactive-root-conflicts`  — （可选）允许您以交互方式查看和更新先前版本的任何过期值，或与要升级到的版本不匹配的任何自定义值。
+   - `--interactive-root-conflicts` — （可选）允许您以交互方式查看和更新以前版本的任何过期值，或与要升级到的版本不匹配的自定义值。
 
-   - `--force-root-updates`  — （可选）使用预期的Commerce值覆盖所有冲突的自定义值。
+   - `--force-root-updates` — （可选）使用预期的Commerce值覆盖所有冲突的自定义值。
 
-   - `--help`  — （可选）提供有关插件的使用详细信息。
+   - `--help` — （可选）提供有关插件的使用情况详细信息。
 
-   如果两者均不 `--interactive-root-conflicts` 也不 `--force-root-updates` 指定时，该命令将保留冲突的现有值并显示警告消息。 要了解有关插件的更多信息，请参阅 [插件使用情况自述文件](https://github.com/magento/composer-root-update-plugin/blob/develop/src/Magento/ComposerRootUpdatePlugin/README.md).
+   如果未指定`--interactive-root-conflicts`或`--force-root-updates`，该命令将保留冲突的现有值并显示一条警告消息。 要了解有关该插件的更多信息，请参阅[插件使用自述文件](https://github.com/magento/composer-root-update-plugin/blob/develop/src/Magento/ComposerRootUpdatePlugin/README.md)。
 
 1. 更新依赖关系。
 
@@ -146,7 +146,7 @@ composer show magento/product-enterprise-edition 2.4.* --available | grep -m 1 v
 
 ### 示例 — 质量修补程序
 
-质量补丁主要包含功能性 _和_ 安全修复。 但是，它们有时可以包含向后兼容的新功能。 使用Composer下载质量修补程序。
+质量修补程序主要包含功能性&#x200B;_和_&#x200B;安全修补程序。 但是，它们有时可以包含向后兼容的新功能。 使用Composer下载质量修补程序。
 
 _Adobe Commerce_：
 
@@ -162,7 +162,7 @@ composer require-commerce magento/product-community-edition 2.4.6 --no-update
 
 ### 示例 — 安全修补程序
 
-安全修补程序仅包含安全修补程序。 它们旨在使升级过程更快、更轻松。 安全修补程序使用编辑器命名约定 `2.4.x-px`.
+安全修补程序仅包含安全修补程序。 它们旨在使升级过程更快、更轻松。 安全修补程序使用Composer命名约定`2.4.x-px`。
 
 _Adobe Commerce_：
 
@@ -178,11 +178,11 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
 
 ## 更新元数据
 
-1. 更新 `"name"`， `"version"`、和 `"description"` 中的字段 `composer.json` 文件。
+1. 根据需要更新`composer.json`文件中的`"name"`、`"version"`和`"description"`字段。
 
    >[!NOTE]
    >
-   >在中更新元数据 `composer.json` 文件完全是表面的，无法正常运行。
+   >更新`composer.json`文件中的元数据完全是表面性的，无法正常使用。
 
 1. 应用更新。
 
@@ -190,7 +190,7 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
    composer update
    ```
 
-1. 清除 `var/` 和 `generated/` 子目录：
+1. 清除`var/`和`generated/`子目录：
 
    ```bash
    rm -rf var/cache/*
@@ -220,7 +220,7 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
    bin/magento maintenance:disable
    ```
 
-1. _（可选）_ 重新启动Varnish。
+1. _（可选）_&#x200B;重新启动清漆。
 
    如果将Varnish用于页面缓存，请重新启动它：
 
@@ -232,9 +232,9 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
 
 要检查升级是否成功，请在Web浏览器中打开店面URL。 如果升级不成功，您的店面将无法正确加载。
 
-如果应用程序失败，  `We're sorry, an error has occurred while generating this email.` 错误：
+如果应用程序失败并出现`We're sorry, an error has occurred while generating this email.`错误：
 
-1. 重置 [文件系统所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md) 作为用户，具有 `root` 权限。
+1. 将[文件系统所有权和权限](../../installation/prerequisites/file-system/configure-permissions.md)重置为具有`root`权限的用户。
 1. 清除以下目录：
    - `var/cache/`
    - `var/page_cache/`

@@ -18,9 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 请参阅 [将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 以了解更多信息。
+>2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
 
-本节讨论如何将nginx配置为 *不安全* 代理服务器，以便Adobe Commerce能够使用此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；将在中讨论 [与nginx的安全通信](#secure-communication-with-nginx).
+本节讨论如何将nginx配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与nginx](#secure-communication-with-nginx)的[安全通信中讨论。
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ### 在全局配置中指定其他配置文件
 
-确保您的全局 `/etc/nginx/nginx.conf` 包含以下行，以便加载以下各节中讨论的其他配置文件：
+请确保您的全局`/etc/nginx/nginx.conf`包含以下行，以便加载以下部分中讨论的其他配置文件：
 
 ```conf
 include /etc/nginx/conf.d/*.conf;
@@ -38,7 +38,7 @@ include /etc/nginx/conf.d/*.conf;
 
 本节讨论如何指定谁可以访问nginx服务器。
 
-1. 使用文本编辑器创建文件 `/etc/nginx/conf.d/magento_es_auth.conf` 包含以下内容：
+1. 使用文本编辑器创建包含以下内容的文件`/etc/nginx/conf.d/magento_es_auth.conf`：
 
    ```conf
    server {
@@ -81,14 +81,14 @@ include /etc/nginx/conf.d/*.conf;
 
 ## 与nginx的安全通信
 
-本节讨论如何设置 [HTTP基本身份验证](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html) 与您的安全代理进行交互。 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
+本节讨论如何使用安全代理设置[HTTP基本身份验证](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html)。 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
 
-由于nginx本身支持HTTP基本身份验证，因此我们建议将其覆盖，例如 [摘要式身份验证](https://www.nginx.com/resources/wiki/modules/auth_digest/)，在生产环境中不建议使用该选项。
+由于nginx本身支持HTTP基本身份验证，因此我们建议将其覆盖，例如[摘要式身份验证](https://www.nginx.com/resources/wiki/modules/auth_digest/)，在生产环境中不建议这样做。
 
 其他资源：
 
-* [如何在Ubuntu 14.04(Digital Ocean)上使用Nginx设置密码身份验证](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
-* [使用Nginx进行基本HTTP身份验证(HowtoForge)](https://www.howtoforge.com/basic-http-authentication-with-nginx)
+* [如何在Ubuntu 14.04 (Digital Ocean)上设置Nginx的密码身份验证](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
+* [使用Nginx (HowtoForge)进行基本HTTP身份验证](https://www.howtoforge.com/basic-http-authentication-with-nginx)
 * [Elasticsearch的Nginx配置示例](https://gist.github.com/karmi/b0a9b4c111ed3023a52d)
 
 有关更多信息，请参阅以下部分：
@@ -100,24 +100,24 @@ include /etc/nginx/conf.d/*.conf;
 
 ### 创建密码
 
-我们建议您使用Apache `htpasswd` 用于为有权访问Elasticsearch或OpenSearch的用户编码密码的命令(已命名 `magento_elasticsearch` 在此示例中)。
+我们建议您使用Apache `htpasswd`命令为有权访问Elasticsearch或OpenSearch（在此示例中名为`magento_elasticsearch`）的用户编码密码。
 
 要创建密码，请执行以下操作：
 
-1. 输入以下命令以确定 `htpasswd` 已安装：
+1. 输入以下命令以确定是否已安装`htpasswd`：
 
    ```bash
    which htpasswd
    ```
 
-   如果显示了路径，则表明已安装了路径；如果命令未返回任何输出， `htpasswd` 未安装。
+   如果显示路径，则表明已安装；如果命令未返回任何输出，则表明未安装`htpasswd`。
 
-1. 如有必要，请安装 `htpasswd`：
+1. 如有必要，请安装`htpasswd`：
 
    * Ubuntu： `apt-get -y install apache2-utils`
    * CentOS： `yum -y install httpd-tools`
 
-1. 创建 `/etc/nginx/passwd` 要存储密码的目录：
+1. 创建`/etc/nginx/passwd`目录以存储密码：
 
    ```bash
    mkdir -p /etc/nginx/passwd
@@ -129,15 +129,15 @@ include /etc/nginx/conf.d/*.conf;
 
    >[!WARNING]
    >
-   >出于安全原因， `<filename>` 应隐藏；即，它必须以句点开头。
+   >出于安全原因，`<filename>`应隐藏；即，它必须以句点开头。
 
-1. *（可选）。* 要将其他用户添加到密码文件，请输入相同的命令，但不使用 `-c` （创建）选项：
+1. *（可选）。*&#x200B;若要向密码文件添加其他用户，请输入相同的命令，但不使用`-c` （创建）选项：
 
    ```bash
    htpasswd /etc/nginx/passwd/.<filename> <username>
    ```
 
-1. 验证的内容 `/etc/nginx/passwd` 是正确的。
+1. 验证`/etc/nginx/passwd`的内容是否正确。
 
 ### 设置对nginx的访问权限
 
@@ -145,9 +145,9 @@ include /etc/nginx/conf.d/*.conf;
 
 >[!WARNING]
 >
->显示的示例用于 *不安全* 代理服务器。 要使用安全代理，请将以下内容（监听端口除外）添加到安全服务器块。
+>显示的示例适用于&#x200B;*不安全*&#x200B;代理。 要使用安全代理，请将以下内容（监听端口除外）添加到安全服务器块。
 
-使用文本编辑器修改 `/etc/nginx/conf.d/magento_es_auth.conf` （不安全）或您的安全服务器块，其内容如下：
+使用文本编辑器修改`/etc/nginx/conf.d/magento_es_auth.conf`（不安全）或您的安全服务器块，内容如下：
 
 ```conf
 server {
@@ -192,7 +192,7 @@ server {
    mkdir /etc/nginx/auth/
    ```
 
-1. 使用文本编辑器创建文件 `/etc/nginx/auth/magento_elasticsearch.conf` 包含以下内容：
+1. 使用文本编辑器创建包含以下内容的文件`/etc/nginx/auth/magento_elasticsearch.conf`：
 
    ```conf
    location /elasticsearch {
@@ -206,7 +206,7 @@ server {
    }
    ```
 
-1. 如果设置了安全代理，请删除 `/etc/nginx/conf.d/magento_es_auth.conf`.
+1. 如果您设置了安全代理，请删除`/etc/nginx/conf.d/magento_es_auth.conf`。
 1. 重新启动nginx并继续下一部分：
 
    ```bash

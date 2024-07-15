@@ -35,28 +35,28 @@ ht-degree: 3%
 
 | 最佳实践 | 描述 |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [产品目录管理](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/2eea2782fc874047a020391000519f8b/watch?source=CHANNEL) | 商务和咖啡录制，介绍管理产品目录的策略。 |
+| [产品目录管理](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/2eea2782fc874047a020391000519f8b/watch?source=CHANNEL) | Commerce &amp; Coffee录制，介绍管理产品目录的策略。 |
 
 ## 配置
 
 | 最佳实践 | 描述 |
 |-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| [正在安排生产站点上的管理员更新](scheduling-admin-updates-in-production.md) | 管理关键的Adobe Commerce更新，以防止性能缓慢和中断。 |
+| [正在计划生产站点上的管理员更新](scheduling-admin-updates-in-production.md) | 管理关键的Adobe Commerce更新，以防止性能缓慢和中断。 |
 
 ## 数据库管理
 
 | 最佳实践 | 描述 |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| [解决数据库性能问题&#x200B;。](resolve-database-performance-issues.md) | 修复了在云基础架构上部署的Adobe Commerce站点上导致性能降低的数据库问题。 |
+| [解决数据库性能问题&#x200B;](resolve-database-performance-issues.md) | 修复了在云基础架构上部署的Adobe Commerce站点上导致性能降低的数据库问题。 |
 | [MariaDB的Adobe Commerce升级先决条件&#x200B;](mariadb-upgrade.md) | 准备MariaDB数据库以进行升级。 |
 
 ## 功能增强
 
 | 最佳实践 | 描述 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| [个性化](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/e218545a77de490fb5102eca07d0580a/watch?source=CHANNEL) | 描述个性化策略的商务和咖啡录制。 |
-| [电子商务趋势](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/9a772468d7b64409a3d5dff4d67e656d/watch?source=CHANNEL) | 描述电子商务趋势的商务和咖啡录制。 |
-| [AI自动化](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/27ae23699c2847be981a23ca098e548f/watch?source=CHANNEL) | 商务和咖啡录制，通过人工智能和自动化描述个性化可能性。 |
+| [Personalization](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/e218545a77de490fb5102eca07d0580a/watch?source=CHANNEL) | 描述个性化策略的Commerce &amp; Coffee录制。 |
+| [E-Commerce趋势](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/9a772468d7b64409a3d5dff4d67e656d/watch?source=CHANNEL) | 描述电子商务趋势的Commerce &amp; Coffee录制。 |
+| [AI自动化](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/27ae23699c2847be981a23ca098e548f/watch?source=CHANNEL) | Commerce &amp; Coffee录制，通过人工智能和自动化描述个性化可能性。 |
 
 ## 索引
 
@@ -71,15 +71,15 @@ ht-degree: 3%
 | 最佳实践 | 描述 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | [审核前端性能](frontend-performance.md) | 使用Web性能工具识别并解决对网站性能产生负面影响的问题。 |
-| [就绪、设置、维护](https://business.adobe.com/blog/basics/ready-set-maintain) | 关于维护Adobe Commerce站点以最大限度地提高业务价值和正常运行时间的提示。 |
+| [就绪，设置，维护](https://business.adobe.com/blog/basics/ready-set-maintain) | 关于维护Adobe Commerce站点以最大限度地提高业务价值和正常运行时间的提示。 |
 | [使用 [!DNL Site-Wide Analysis Tool]](../../../tools/site-wide-analysis-tool/intro.md#integrations-with-other-adobe-commerce-support-tools) | 在一个位置查看有关Adobe Commerce站点的重要见解。 |
-| [监控性能、磁盘空间和日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html) | 使用New Relic在云基础架构网站上监控有关Adobe Commerce的关键性能分析。 |
+| [监视性能、磁盘空间和日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html) | 使用New Relic在云基础架构网站上监控有关Adobe Commerce的关键性能分析。 |
 | [响应安全事件](respond-to-security-incident.md) | 使用New Relic在云基础架构网站上监控有关Adobe Commerce的关键性能分析。 |
 
 ### 升级
 
 | 最佳实践 | 描述 |
 |-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [大规模修补](patching-at-scale.md) | 了解Adobe Commerce的集中修补如何帮助您管理企业项目。 |
-| [将服务和组件更新到最新版本&#x200B;。](update-services.md) | 使您的Adobe Commerce on cloud infrastructure技术栈栈保持更新。 |
+| [正在大规模修补](patching-at-scale.md) | 了解Adobe Commerce的集中修补如何帮助您管理企业项目。 |
+| [将服务和组件更新到最新版本&#x200B;](update-services.md) | 使您的Adobe Commerce on cloud infrastructure技术栈栈保持更新。 |
 | [Adobe Commerce的升级核对清单&#x200B;](upgrade-checklist.md) | 创建并使用升级核对清单来规划Adobe Commerce升级策略。 |

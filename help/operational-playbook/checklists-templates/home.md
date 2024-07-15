@@ -22,12 +22,12 @@ ht-degree: 0%
 - [性能](../../assets/playbooks/checklists/performance.pptx)
 - [Commerce平台迁移](../../assets/playbooks/checklists/commerce-platform-migration.pptx)
 
-## 商业模板
+## Commerce模板
 
 单击链接以下载模板：
 
 - [研讨会前需求调查表](../../assets/playbooks/templates/requirements-questionnaire.pptx)
-- [商务策略文档](../../assets/playbooks/templates/commerce-strategy-document.pptx)
+- [Commerce策略文档](../../assets/playbooks/templates/commerce-strategy-document.pptx)
 - [电子商务运营就绪性](../../assets/playbooks/templates/ecommerce-operational-readiness.pptx)
 - [电子商务平台功能](../../assets/playbooks/templates/ecommerce-platform-features.pptx)
 - [商家自助评估](../../assets/playbooks/templates/merchant-self-site-assessment.pptx)

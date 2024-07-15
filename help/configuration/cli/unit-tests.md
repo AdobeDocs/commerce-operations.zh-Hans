@@ -4,7 +4,7 @@ description: 运行在Adobe Commerce代码库中定义的单元测试。
 exl-id: 23200420-d15c-4910-8ce6-abd0cc070777
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 ## 先决条件
 
-在运行此命令之前，请执行以下命令 _必须_ 为真：
+运行此命令之前，以下&#x200B;_必须_&#x200B;为true：
 
-- 此 `Magento_Developer` 模块必须启用。 您可以按如下方式启用它：
+- 必须启用`Magento_Developer`模块。 您可以按如下方式启用它：
 
   ```bash
   bin/magento module:enable [--force] Magento_Developer
   ```
 
-  使用 `--force` 选项。
+  仅在必要时使用`--force`选项。
 
 - 必须设置您的系统才能运行所需的测试。
 
-例如，要运行集成测试，您应该复制 `dev/tests/integration/etc/install-config-mysql.php.dist` 到 `dev/tests/integration/etc/install-config-mysql.php` 并根据您的环境对其进行修改。
+例如，要运行集成测试，您应该将`dev/tests/integration/etc/install-config-mysql.php.dist`复制到`dev/tests/integration/etc/install-config-mysql.php`并修改它以适合您的环境。
 
 ## 正在运行测试
 

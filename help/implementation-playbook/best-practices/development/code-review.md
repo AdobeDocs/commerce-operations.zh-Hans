@@ -3,13 +3,13 @@ title: 代码审查最佳实践
 description: 了解Adobe Commerce项目开发阶段的代码审查最佳实践。
 feature: Best Practices
 role: Developer
-source-git-commit: 291c3f5ea3c58678c502d34c2baee71519a5c6dc
+exl-id: 1ef78bce-2e69-4c95-a26e-1bf7196ce546
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Commerce的代码审查最佳实践
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 通过运行PhpStorm检查，可以自动测试样式（见下文）。
 
-确保配置 [PHPMD和PHPC](https://developer.adobe.com/commerce/php/best-practices/phpstorm/code-inspection/) 并运行 [编码标准](https://github.com/magento/magento-coding-standard) CLI中的工具（也位于下方）。 虽然有一些重叠，但两者都有独特的测试。
+确保配置[PHPMD和PHPCS](https://developer.adobe.com/commerce/php/best-practices/phpstorm/code-inspection/)，并从CLI运行[Coding Standard](https://github.com/magento/magento-coding-standard)工具（也在下面）。 虽然有一些重叠，但两者都有独特的测试。
 
 ### 惯例和结构
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 - 配置是否可以启用或禁用代码，以及所有必需代码是否均可按预期运行？
 - 票证中提到的所有配置是否都存在？ 检查范围、数据类型、验证、转换和默认值。
-- 是否始终在尽可能最低的级别（商店视图级别、网站级别或全局级别）检索配置？ 配置检索必须与中范围的定义匹配 `system.xml` 文件。
+- 是否始终在尽可能最低的级别（商店视图级别、网站级别或全局级别）检索配置？ 配置检索必须与`system.xml`文件中的作用域定义匹配。
 - 是否涵盖了技术规范流程图中的所有路径？ 是否涵盖所有其他技术规范？
 - 是否为新功能定义了ACL？
 - PhpDocs是否清楚？ 提交消息是否清晰？
@@ -80,14 +80,14 @@ ht-degree: 0%
 性能审查是手动完成的，如有疑问，可通过代码执行提供帮助。
 
 - 查询是否在循环中执行？ 此循环可以位于已编辑文件之外。
-- 你能发现任何 `cachable="false"` 属性？ 它们是否正确应用？
+- 您能发现任何`cachable="false"`属性吗？ 它们是否正确应用？
 
 ### 安全性
 
 安全性审查是手动完成的，可通过文本搜索来辅助。 部分安全检查由自动测试处理。
 
 - 是否根据需要记录异常？ 是否使用了正确的例外类型？
-- 可以 `around` 应避免使用插件？
+- 能否避免`around`插件？
 - 插件是否返回正确的数据类型？
 - 您能否找到应使用数据库抽象层构建的任何原始SQL查询？
 - 向任何类型的用户、管理员或前端公开任何新类型的数据吗？ 这种暴露是否构成安全风险？
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 ### 隐私和GDPR
 
-隐私和审查 [GDPR](../../../security-and-compliance/privacy/gdpr.md) 手动完成。
+隐私和[GDPR](../../../security-and-compliance/privacy/gdpr.md)的审核是手动完成的。
 
 - 该代码处理客户数据还是电子邮件？ 请特别注意。
 - 如果此代码可以在循环中执行，它是否可以将客户数据从一个循环泄露到另一个循环中？
@@ -131,19 +131,19 @@ ht-degree: 0%
   bin/magento deploy:mode:set developer || exit;
   ```
 
-- 数据库模式 `whitelist.json` — 运行以下CLI命令并验证 `db_schema_whitelist.json` 未添加或更改文件。
+- 数据库架构`whitelist.json` — 运行以下CLI命令并验证`db_schema_whitelist.json`文件是否未添加或更改。
 
   ```bash
   bin/magento setup:db-declaration:generate-whitelist --module-name[=MODULE-NAME]
   ```
 
-- Composer验证 — 验证 `composer.json` 文件，方法是在包含 `composer.json` 文件。
+- Composer validate — 通过在包含`composer.json`文件的目录中运行以下CLI命令来验证`composer.json`文件。
 
   ```bash
   composer validate
   ```
 
-- 编码标准 — 安装和运行编码标准工具，并针对您的模块运行该工具。 以下文件说明如何通过键入命令使其在任意位置运行 `mcs ./app/code/Vendor/Module/`.
+- 编码标准 — 安装和运行编码标准工具，并针对您的模块运行该工具。 以下文件显示如何通过键入`mcs ./app/code/Vendor/Module/`使其在任意位置运行。
 
   ```bash
   #!/usr/bin/env bash

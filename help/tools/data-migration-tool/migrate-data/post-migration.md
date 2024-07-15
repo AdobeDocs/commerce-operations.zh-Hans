@@ -1,16 +1,16 @@
 ---
-title: 数据迁移后的步骤
-description: 了解在使用后应采取哪些步骤 [!DNL Data Migration Tool] 将数据从Magento1迁移到Magento2。
+title: Post数据迁移步骤
+description: 了解使用 [!DNL Data Migration Tool] 将数据从Magento1迁移到Magento2后应采取哪些步骤。
 exl-id: 00171c41-ccea-4ebe-8958-becb9aa09973
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
-# 数据迁移后的步骤
+# Post数据迁移步骤
 
 完成迁移并彻底测试新的Magento2站点后，请执行以下任务：
 

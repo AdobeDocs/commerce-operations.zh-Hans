@@ -17,9 +17,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->最新版本的Adobe Commerce至少需要8.1个PHP。请参阅 [系统要求](../system-requirements.md) 适用于所有受支持的PHP版本。
+>最新版本的Adobe Commerce至少需要8.1个PHP。有关所有支持的PHP版本，请参阅[系统要求](../system-requirements.md)。
 
-有关云配置指南，请参阅 [PHP设置](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) 在 _云基础架构上的Commerce_ 指南。
+有关云配置指南，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html)。
 
 ## PHP进程控制
 
@@ -65,7 +65,7 @@ Adobe Commerce需要特定的PHP扩展。 以下列表指定了每个Commerce版
 
 >[!WARNING]
 >
->如果您使用的是PHP 7.4.20，请设置 `pcre.jit=0` 在您的 `php.ini` 文件。 这围绕PHP [错误](https://bugs.php.net/bug.php?id=81101) 可阻止CSS加载。
+>如果您使用的是PHP 7.4.20，请在`php.ini`文件中设置`pcre.jit=0`。 这会绕过PHP [错误](https://bugs.php.net/bug.php?id=81101)而阻止加载CSS。
 
 - 为PHP设置系统时区；否则，安装期间显示的以下错误以及与时间相关的操作（如cron ）可能无法工作：
 
@@ -77,22 +77,22 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
   Adobe建议执行以下操作：
 
-   - 编译代码或部署静态资源， `1G`
-   - 调试， `2G`
-   - 测试， `~3-4G`
+   - 正在编译代码或部署静态资源，`1G`
+   - 调试，`2G`
+   - 正在测试，`~3-4G`
 
-- 增加PHP的值 `realpath_cache_size` 和 `realpath_cache_ttl` 到建议的设置：
+- 将PHP `realpath_cache_size`和`realpath_cache_ttl`的值增加到建议的设置：
 
   ```conf
   realpath_cache_size=10M
   realpath_cache_ttl=7200
   ```
 
-  这些设置允许PHP进程将路径缓存到文件，而不是在页面加载时查找文件。 请参阅 [性能调整](https://www.php.net/manual/en/ini.core.php) 在PHP文档中。
+  这些设置允许PHP进程将路径缓存到文件，而不是在页面加载时查找文件。 请参阅PHP文档中的[性能调整](https://www.php.net/manual/en/ini.core.php)。
 
-- 启用 [`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments)，Adobe Commerce 2.1及更高版本需要此参数。
+- 启用Adobe Commerce 2.1及更高版本所需的[`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments)。
 
-  Adobe建议启用 [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) 出于性能原因。 OPcache在许多PHP分发中启用。
+  出于性能原因，Adobe建议启用[PHP OPcache](https://www.php.net/manual/en/book.opcache.php)。 OPcache在许多PHP分发中启用。
 
   Adobe Commerce 2.1及更高版本使用PHP代码注释来生成代码。
 
@@ -104,9 +104,9 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 本节讨论如何查找更新所需设置所需的配置文件。
 
-### 查找 `php.ini` 配置文件
+### 查找`php.ini`配置文件
 
-要查找Web服务器配置，请运行 [`phpinfo.php` 文件](optional-software.md#create-phpinfophp) 在Web浏览器中查找 `Loaded Configuration File` 如下所示：
+要查找Web服务器配置，请在Web浏览器中运行[`phpinfo.php`文件](optional-software.md#create-phpinfophp)并查找`Loaded Configuration File`，如下所示：
 
 ![PHP信息页](../../assets/installation/config_phpini-webserver.png)
 
@@ -118,19 +118,19 @@ php --ini | grep "Loaded Configuration File"
 
 >[!NOTE]
 >
->如果您只有一个 `php.ini` 文件，更改该文件。 如果您拥有两个 `php.ini` 文件，更改 *两者* 文件。 否则，可能会导致性能不可预测。
+>如果您只有一个`php.ini`文件，请更改该文件。 如果您有两个`php.ini`文件，请更改&#x200B;*两个*&#x200B;文件。 否则，可能会导致性能不可预测。
 
 ### 查找OPcache配置设置
 
-PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决于您的操作系统和PHP版本。 OPcache配置文件可能具有 `opcache` 部分或设置，如 `opcache.enable`.
+PHP OPcache设置通常位于`php.ini`或`opcache.ini`中。 该位置可能取决于您的操作系统和PHP版本。 OPcache配置文件可能具有`opcache`部分或类似于`opcache.enable`的设置。
 
 请使用以下指南查找它：
 
 - Apache Web Server：
 
-  对于带有Apache的Ubuntu，OPcache设置通常位于 `php.ini` 文件。
+  对于带有Apache的Ubuntu，OPcache设置通常位于`php.ini`文件中。
 
-  对于带有Apache或nginx的CentOS，OPcache设置通常位于 `/etc/php.d/opcache.ini`
+  对于具有Apache或nginx的CentOS，OPcache设置通常位于`/etc/php.d/opcache.ini`中
 
   如果没有，请使用以下命令找到它：
 
@@ -138,16 +138,16 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决
   sudo find / -name 'opcache.ini'
   ```
 
-- 使用PHP-FPM的nginx Web服务器： `/etc/php/8.1/fpm/php.ini`
+- 带有PHP-FPM的nginx Web服务器： `/etc/php/8.1/fpm/php.ini`
 
-如果您有多个 `opcache.ini`，请修改所有这些参数。
+如果您有多个`opcache.ini`，请修改全部。
 
 ## 如何设置PHP选项
 
 要设置PHP选项：
 
-1. 打开 `php.ini` 在文本编辑器中。
-1. 在可用中找到服务器的时区 [时区设置](https://www.php.net/manual/en/timezones.php)
+1. 在文本编辑器中打开`php.ini`。
+1. 在可用的[时区设置](https://www.php.net/manual/en/timezones.php)中找到服务器的时区
 1. 找到以下设置并在必要时取消注释：
 
    ```conf
@@ -156,7 +156,7 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决
 
 1. 添加您在步骤2中找到的时区设置。
 
-1. 更改的值 `memory_limit` 更改为本节开头推荐的值之一。
+1. 将`memory_limit`的值更改为本节开头建议的值之一。
 
    例如，
 
@@ -164,7 +164,7 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决
    memory_limit=2G
    ```
 
-1. 添加或更新 `realpath_cache` 配置以匹配以下值：
+1. 添加或更新`realpath_cache`配置以匹配以下值：
 
    ```conf
    ;
@@ -180,33 +180,33 @@ PHP OPcache设置通常位于 `php.ini` 或 `opcache.ini`. 该位置可能取决
 
 1. 保存更改并退出文本编辑器。
 
-1. 打开另一个 `php.ini` （如果它们不同）并在其中进行相同的更改。
+1. 打开其他`php.ini`（如果它们不同）并在其中进行相同的更改。
 
 ## 设置OPcache选项
 
-要设置 `opcache.ini` 选项：
+要设置`opcache.ini`选项：
 
 1. 在文本编辑器中打开OPcache配置文件：
 
    - `opcache.ini` (CentOS)
-   - `php.ini` （乌本图）
-   - `/etc/php/8.1/fpm/php.ini` (nginx web服务器（CentOS或Ubuntu）)
+   - `php.ini` (Ubuntu)
+   - `/etc/php/8.1/fpm/php.ini` (nginx Web服务器（CentOS或Ubuntu）)
 
-1. 定位 `opcache.save_comments` 并在必要时取消评论。
-1. 确保其值设置为 `1`.
+1. 找到`opcache.save_comments`并在必要时取消其注释。
+1. 确保其值设置为`1`。
 1. 保存更改并退出文本编辑器。
 1. 重新启动Web服务器：
 
-   - Apache、Ubuntu： `service apache2 restart`
-   - Apache、CentOS： `service httpd restart`
-   - Nginx、Ubuntu和CentOS： `service nginx restart`
+   - Apache， Ubuntu： `service apache2 restart`
+   - Apache， CentOS： `service httpd restart`
+   - nginx、Ubuntu和CentOS： `service nginx restart`
 
 ## 故障排除
 
 有关解决PHP问题的帮助，请参阅以下Adobe Commerce支持文章：
 
-- [在浏览器中访问Adobe Commerce时，出现PHP版本错误或404错误](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
+- 在浏览器中访问Adobe Commerce时，[PHP版本错误或404错误](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
 - [PHP设置错误](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)
-- [PHP mcrypt扩展未正确安装](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
+- 未正确安装[PHP mcrypt扩展](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
 - [PHP版本准备情况检查问题](https://support.magento.com/hc/en-us/articles/360033546411)
-- [常见PHP致命错误和解决方案](https://support.magento.com/hc/en-us/articles/360030568432)
+- [常见PHP错误和解决方案](https://support.magento.com/hc/en-us/articles/360030568432)

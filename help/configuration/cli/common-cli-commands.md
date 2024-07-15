@@ -4,7 +4,7 @@ description: 查看常用Commerce CLI命令和用法的取样。
 exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 下面总结了一些可用的命令。
 
-**显示完整的命令列表**：
+**要显示完整的命令列表**：
 
 ```bash
 bin/magento list
@@ -44,7 +44,7 @@ bin/magento help cache:enable
 | [`magento dev:tests:run`](../cli/unit-tests.md) | 运行自动测试 |
 | [`magento dev:xml:convert`](../cli/convert-layout-files.md) | 更新布局XML文件以匹配新的可扩展样式表语言转换(XSLT)样式表 |
 | [`magento setup:perf:generate-fixtures`](../cli/generate-data.md) | 生成数据以用于性能测试。 |
-| [`magento sampledata:install`](../../installation/sample-data/overview.md) | 在安装Commerce应用程序后安装可选的示例数据。<br><br>有关示例数据的更多详细信息，请参见 [可选的示例数据](../../installation/sample-data/overview.md). |
+| [`magento sampledata:install`](../../installation/sample-data/overview.md) | 安装Commerce应用程序后安装可选的示例数据。<br><br>有关示例数据的更多详细信息，请参阅[可选示例数据](../../installation/sample-data/overview.md)。 |
 | [`magento config:{set/sensitive:set/show/}`](../cli/set-configuration-values.md) | 管理后端配置 |
 | [`magento admin:user:{create/unlock}`](../../installation/tutorials/admin.md#create-edit-or-unloack-an-administrator-account) | 创建/编辑/解锁管理员用户。 |
 | [`magento dev:template-hints:{enable/disable}`](https://developer.adobe.com/commerce/frontend-core/guide/themes/debug/) | 启用/禁用开发人员模板提示。 |
@@ -55,10 +55,10 @@ bin/magento help cache:enable
 
 | 长版本 | 简短版本 | 含义 |
 |--- |--- |--- |
-| `--help` | `-h` | 获取任何命令的帮助。 例如， `./magento help setup:install` 或 `./magento help setup:config:set`. |
+| `--help` | `-h` | 获取任何命令的帮助。 例如，`./magento help setup:install`或`./magento help setup:config:set`。 |
 | `--quiet` | `-q` | 安静模式；无输出。 |
 | `--no-interaction` | `-n` | 无交互式问题。 |
-| `--verbose=1,2,3` | `-v, -vv, -vvv` | 详细级别。 例如， `--verbose=3` 或 `-vvv` 显示调试详细程度，这是最详细的输出。 默认为 `--verbose=1` 或 `-v`. |
+| `--verbose=1,2,3` | `-v, -vv, -vvv` | 详细级别。 例如，`--verbose=3`或`-vvv`显示调试详细程度，这是最详细的输出。 默认值为`--verbose=1`或`-v`。 |
 | `--version` | `-V` | 显示此应用程序版本 |
 | `--ansi` | 不适用 | 强制ANSI输出 |
 | `--no-ansi` | 不适用 | 禁用ANSI输出 |

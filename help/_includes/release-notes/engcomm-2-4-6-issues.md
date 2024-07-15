@@ -1,7 +1,7 @@
 ---
 source-git-commit: d945ba1a06c691ba52b7caa89afc71d4a3d69815
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 | 特科托什 | [magento/magento2#35940](https://github.com/magento/magento2/pull/35940) | [magento/magento2#36642](https://github.com/magento/magento2/issues/36642) |
 | MeCapron | [magento/magento2#35885](https://github.com/magento/magento2/pull/35885) | [magento/magento2#36042](https://github.com/magento/magento2/issues/36042) |
 | 阿门克 | [magento/magento2#35848](https://github.com/magento/magento2/pull/35848) | [magento/magento2#35939](https://github.com/magento/magento2/issues/35939) |
-| Viper9x | [magento/magento2#35846](https://github.com/magento/magento2/pull/35846) | [magento/magento2#36643](https://github.com/magento/magento2/issues/36643) |
+| 毒蛇9x | [magento/magento2#35846](https://github.com/magento/magento2/pull/35846) | [magento/magento2#36643](https://github.com/magento/magento2/issues/36643) |
 | 拉利特莫汉 | [magento/magento2#35818](https://github.com/magento/magento2/pull/35818) | [magento/magento2#36644](https://github.com/magento/magento2/issues/36644) |
 | vo1 | [magento/magento2#35817](https://github.com/magento/magento2/pull/35817) | [magento/magento2#36645](https://github.com/magento/magento2/issues/36645) |
 | 谢普菲 | [magento/magento2#35816](https://github.com/magento/magento2/pull/35816) | [magento/magento2#36593](https://github.com/magento/magento2/issues/36593) |

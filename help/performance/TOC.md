@@ -21,8 +21,8 @@ ht-degree: 4%
 - [结账过程](high-throughput-order-processing.md)
 - [配置](configuration.md)
 - [部署流程](deployment-flow.md)
-- 高级概念 {#concepts}
+- 高级概念{#concepts}
    - [高级设置](advanced-setup.md)
    - [高级 [!DNL JavaScript] 捆绑](advanced-js-bundling.md)
    - [GraphQL应用程序服务器](application-server.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

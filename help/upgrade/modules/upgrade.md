@@ -47,14 +47,14 @@ ht-degree: 0%
 
 ## 供应商捆绑扩展(VBE)
 
-Adobe已全部删除 [VBE](https://devdocs.magento.com/extensions/vendor/) 在2.4.4中。供应商将继续在Adobe Commerce Marketplace上支持这些扩展。
+Adobe在2.4.4中删除了所有[VBE](https://devdocs.magento.com/extensions/vendor/)。供应商将继续在Adobe Commerce Marketplace上支持这些扩展。
 
-如果要继续在Adobe Commerce 2.4.4及更高版本中使用这些扩展，必须在中更新相应的包依赖项。 `composer.json` 文件 _早于_ 升级到2.4.4。有关要使用的包名称和版本，请与供应商联系。
+如果要继续在Adobe Commerce 2.4.4及更高版本中使用这些扩展，则必须在&#x200B;_升级到2.4.4之前，更新`composer.json`文件_&#x200B;中相应的包依赖项。有关要使用的包名称和版本，请与供应商联系。
 
 有关更多信息，请参阅以下Adobe Commerce Marketplace列表：
 
-- [Amazon Pay](https://marketplace.magento.com/amzn-amazon-pay-magento-2-module.html)
+- [Amazon支付](https://marketplace.magento.com/amzn-amazon-pay-magento-2-module.html)
 - [Dotdigital](https://marketplace.magento.com/dotdigital-dotdigital-magento2-os-package.html)
-- [克拉尔纳](https://marketplace.magento.com/klarna-m2-klarna.html)
+- [Klarna](https://marketplace.magento.com/klarna-m2-klarna.html)
 - [顶点](https://marketplace.magento.com/vertexinc-vertex-tax-module.html)
 - [Yotpo](https://marketplace.magento.com/yotpo-module-yotpo.html)

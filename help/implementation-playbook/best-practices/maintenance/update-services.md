@@ -6,7 +6,7 @@ feature: Best Practices
 exl-id: 62aeffe3-b5a6-49f8-a39b-3219b46cd486
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,15 @@ ht-degree: 0%
 
 在Adobe Commerce使用的服务和组件达到或接近生命周期结束日期之前升级它们。 这有助于遵守PCI法规并减少安全漏洞。
 
-入门计划客户可自助服务升级。 请参阅 [更改服务版本](https://devdocs.magento.com/cloud/project/services.html#change-service-version) 以了解有关如何执行此操作的详细信息。
+入门计划客户可自助服务升级。 有关如何更改服务的详细信息，请参阅[更改服务版本](https://devdocs.magento.com/cloud/project/services.html#change-service-version)。
 
-Pro计划的客户只能自助服务以下计划中的服务升级： [集成环境](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html). 对于在生产环境中升级服务，您必须 [提交支持服务单](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 请求升级。
+专业计划客户只能在其[集成环境](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)中自助服务升级。 对于在生产环境中升级服务，您必须[提交支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以请求升级。
 
 >[!WARNING]
 >
 >如果没有48个工作小时的通知，就无法将服务升级推送到生产环境。 这是必需的，因为我们需要确保我们有一名基础架构支持工程师在所需时间范围内更新您的配置，同时最大限度地减少生产环境的停机时间。
 
-您可以在以下文件中查看服务版本和生命周期结束日期的列表： [https://github.com/magento/ece-tools/blob/develop/config/eol.yaml](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+您可以在以下文件中查看服务版本和生命周期结束日期的列表： [https://github.com/magento/ece-tools/blob/develop/config/eol.yaml](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)。
 
 >[!NOTE]
 >

@@ -18,12 +18,12 @@ ht-degree: 2%
     <tr>
       <th>描述</th>
       <th>类型</th>
-      <th>来源</th>
+      <th>Source</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了以下项的最佳实践 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade.html">升级MariaDB</a> 到10.5.1及更高版本。</p>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade.html">将MariaDB</a>升级到10.5.1及更高版本的最佳实践。</p>
 </td>
       <td>最佳实践</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7199e74f82cef6dd682f5e240ee2b6fc56da18c8">7199e7</a> （提交）</td>
@@ -38,12 +38,12 @@ ht-degree: 2%
     <tr>
       <th>描述</th>
       <th>类型</th>
-      <th>来源</th>
+      <th>Source</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关 <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html">二级高速缓存内存大小调整配置选项</a> 适用于Adobe Commerce的云基础架构。</p>
+      <td><p>添加了关于云基础架构上Adobe Commerce的<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html">二级缓存大小调整配置选项</a>的详细信息。</p>
 </td>
       <td>最佳实践</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21da4c22744dbb3b27b0dbe184b946788748a52e">21da4c</a> （提交）</td>

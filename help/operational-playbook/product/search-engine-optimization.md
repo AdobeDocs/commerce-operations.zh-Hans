@@ -5,7 +5,7 @@ exl-id: 7b1348b5-d379-48c1-9e9d-71a8d02b2ca4
 feature: Best Practices, Search
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 查看下图中的红色列出的结果：
 
-![未付费SEO Google搜索结果](../../assets/playbooks/seo-unpaid.png)
+![未支付的SEO Google搜索结果](../../assets/playbooks/seo-unpaid.png)
 
 ## 已支付
 
@@ -34,14 +34,14 @@ ht-degree: 0%
 
 SEO策略包括：
 
-- **关键词搜索** — 客户用于搜索的关键字
+- **关键字搜索** — 客户用于搜索的关键字
 
-- **站点架构** — 对关键词进行了研究
+- **站点体系结构** — 对关键字进行了研究
 
 - **SEO（技术）** — 确保SEO爬网站点
 
-- **页面上的SEO** — 元标记和内容用于吸引客户
+- 页面&#x200B;**上的** SEO—Meta标记和内容用于吸引客户
 
-- **分析** — 使用工具(如Google Analytics)跟踪SEO
+- **Analytics** — 使用工具(如Google Analytics)跟踪SEO
 
 B2B SEO活动的目标是提高品牌认知度和潜在客户拓展，从而提高转化率。 B2C SEO促销活动旨在吸引访客立即购买。 SEO在B2B企业与B2C企业中具有不同的用途和影响。 SEO有助于增加网站流量，进而提高销售额和ROI。 制定简单的SEO策略以获得竞争优势。

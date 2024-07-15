@@ -12,9 +12,9 @@ ht-degree: 3%
 
 # 管理模块和扩展
 
-参与升级的开发人员通过在Adobe Commerce中指定其版本来升级模块和扩展 `composer.json` 文件。 如果您不是参与开发人员，请参阅 [执行升级](../implementation/perform-upgrade.md).
+参与开发的开发人员通过在Adobe Commerce `composer.json`文件中指定其版本来升级模块和扩展。 如果您不是参与开发人员，请参阅[执行升级](../implementation/perform-upgrade.md)。
 
-您可以添加 `require` 部分至 `composer.json` 文件，或者您可以使用 `composer require` 命令如下所示：
+您可以将`require`节添加到`composer.json`文件，也可以按如下方式使用`composer require`命令：
 
 {{$include /help/_includes/server-login.md}}
 
@@ -34,7 +34,7 @@ composer show --all <vendor>/<name>
 composer show --all example/module
 ```
 
-## 使用 `composer require` 命令
+## 使用`composer require`命令
 
 命令用法：
 
@@ -50,11 +50,11 @@ composer require example/module:1.0.0
 
 Composer正在更新依赖项并安装模块，请稍候。
 
-## 添加 `require` composer.json文件的部分
+## 向composer.json文件中添加`require`部分
 
-1. 打开 `composer.json` 在文本编辑器中。
+1. 在文本编辑器中打开`composer.json`。
 
-1. 添加 `require` 部分。
+1. 添加`require`分区。
 
    ```json
    "require": {
@@ -63,9 +63,9 @@ Composer正在更新依赖项并安装模块，请稍候。
    }
    ```
 
-1. 将更改保存到 `composer.json` 并退出文本编辑器。
+1. 保存对`composer.json`文件所做的更改并退出文本编辑器。
 
-1. 解决依赖关系并将确切版本写入 `composer.lock` 文件。
+1. 解决依赖关系并将精确版本写入`composer.lock`文件。
 
    ```bash
    composer update

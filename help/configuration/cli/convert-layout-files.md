@@ -4,7 +4,7 @@ description: 转换XML布局文件
 exl-id: 9852b735-9b4b-43ce-887f-5c37d398bbf7
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,6 @@ bin/magento dev:xml:convert [-o|--overwrite] {xml file} {xslt stylesheet}
 
 其中：
 
-- `{xml file}` — 是要转换的布局XML文件的完整路径和文件名（必需）
+- `{xml file}` — 要转换的布局XML文件的完整路径和文件名（必需）
 - `{xslt stylesheet}` — 是用于转换的XSLT样式表文件的完整路径和文件名（必需）
-- `-o|--overwrite` — 包括此选项以覆盖现有XML文件
+- `-o|--overwrite` — 包含此选项以覆盖现有XML文件

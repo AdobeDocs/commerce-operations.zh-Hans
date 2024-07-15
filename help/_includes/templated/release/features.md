@@ -1,7 +1,7 @@
 ---
 source-git-commit: d1af1ffe584b18cbc6c664cab31283c13f36c25e
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '180'
 ht-degree: 8%
 
 ---
@@ -159,7 +159,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>多源Inventory management</td>
+      <td>多Source Inventory management</td>
       <td></td>
       <td></td>
       <td></td>

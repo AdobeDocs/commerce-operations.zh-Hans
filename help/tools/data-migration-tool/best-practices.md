@@ -6,7 +6,7 @@ feature: Best Practices, Configuration
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 此部分提供了加速和简化迁移的最佳建议，以及有关可能需要多长时间的指导。
 
-* **使用Magento1实例中的数据库副本** 执行迁移测试时。 请勿使用Magento1存储数据库的生产实例。
+* 执行迁移测试时&#x200B;**使用Magento1实例中的数据库副本**。 请勿使用Magento1存储数据库的生产实例。
 
-* **删除过时和冗余数据** 迁移前从Magento1数据库中删除。
+* 在迁移之前，从Magento1数据库中删除过时的冗余数据&#x200B;**。**
 
 此类数据可能包括日志、订单报价、最近查看或比较的产品、访客、特定于事件的类别以及促销规则。
 
-* **请遵循 [成功迁移的一般规则](migrate-data/overview.md#migration-overview)**.
+* **按照[常规规则成功迁移](migrate-data/overview.md#migration-overview)**。
 
-* 要提升性能， **启用 `direct_document_copy` option** 在您的 `config.xml` 文件：
+* 若要提高性能，请在`config.xml`文件中&#x200B;**启用`direct_document_copy`选项**：
 
   ```xml
   <direct_document_copy>1</direct_document_copy>

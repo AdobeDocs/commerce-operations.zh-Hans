@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # 更新生成系统
 
-**更新生成系统**：
+**要更新生成系统**：
 
 1. 以文件系统所有者的身份登录到构建系统。
 1. 切换到应用程序根目录。
@@ -16,7 +16,7 @@ ht-degree: 0%
    cd <Magento root dir>
    ```
 
-1. 将更改提取到 `app/etc/config.php` 源控件中的。
+1. 将更改从源代码管理拉入`app/etc/config.php`。
 
    ```bash
    git pull mconfig m2.2_deploy

@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 使用以下策略管理购物车项目的数量
 
-- 通过使用 [!UICONTROL Add Item by SKU] 功能。
+- 使用[!UICONTROL Add Item by SKU]功能将订单拆分为若干个行数较少的较小订单。
 - 仅添加加载项目列表所需的自定义逻辑和购物车自定义。
 
 ## 类别限制
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 #### 查看属性集配置
 
-1. [连接到站点数据库](https://devdocs.magento.com/cloud/project/services-mysql.html#connect-to-the-database).
+1. [连接到站点数据库](https://devdocs.magento.com/cloud/project/services-mysql.html#connect-to-the-database)。
 
 1. 使用MySQL查找属性集数
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 ### 潜在的性能影响
 
-配置多个 **产品属性** 增加每个产品的产品模板大小（EAV结构）以及必须检索的数据量。 此增加会以下列方式影响操作：
+配置多个&#x200B;**产品属性**&#x200B;会增加每个产品的产品模板大小（EAV结构）以及必须检索的数据量。 此增加会以下列方式影响操作：
 
 - 与EAV数据检索和已处理的数据量相关的SQL查询流量增加，导致数据库吞吐量降低
 - 显着增加了Adobe Commerce索引和全文搜索索引的大小
@@ -125,7 +125,7 @@ ht-degree: 0%
 - 可以阻止“产品成批活动”功能。
 - 由于执行时间较长，无法每天为中型和大型目录执行索引重新构建时间。
 
-配置多个 **属性选项** 会以下列方式影响站点性能：
+配置多个&#x200B;**属性选项**&#x200B;可能会以下列方式影响网站性能：
 
 - 产品详细信息(PDP)和包含复杂产品的类别页面上的请求和渲染时间较长。
 - 管理产品保存操作响应时间超过最佳性能目标。
@@ -138,7 +138,7 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -155,7 +155,7 @@ ht-degree: 0%
 
 配置多个产品选项会增加所有读取和写入操作中为每个产品检索的数据量，从而导致：
 
-- 增加了SQL查询流量和负载 `JOIN` 操作提高了数据库吞吐量。
+- 增加的SQL查询流量和较重的`JOIN`操作增加了数据库吞吐量。
 - 增加了Adobe Commerce索引和全文搜索索引的大小。
 
 上面列出的增加可能会以下列方式影响站点性能：
@@ -170,16 +170,16 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
 
 ### 更新产品列表配置
 
-如果某个类别中有太多产品，请更新店面目录配置以禁用此选项 **允许每页所有产品**.
+如果类别中有太多产品，请更新storefront目录配置以禁用选项&#x200B;**允许每页所有产品**。
 
-禁用此选项后，Adobe Commerce使用产品列表店面分页控件来管理店面组件中显示的产品数量。 有关说明，请参阅 [配置分页控件](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
+禁用此选项后，Adobe Commerce使用产品列表店面分页控件来管理店面组件中显示的产品数量。 有关说明，请参阅[配置分页控件](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls)。
 
 ## 产品SKU限制
 
@@ -187,7 +187,7 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -205,7 +205,7 @@ ht-degree: 0%
    - 通过减少网站、客户组、共享目录、产品或可配置产品选项的数量来减少SKU的数量
 - 通过使用自定义选项而不是创建单独的产品来提供更多产品变体。
 - 考虑到有效的SKU可能包括价格的一些潜在排列，因为每个商店或客户组的价格可以有不同的指定。
-- 停用或删除未使用的系统组件，如模块。 请参阅  [卸载模块](../../../installation/tutorials/uninstall-modules.md).
+- 停用或删除未使用的系统组件，如模块。 请参阅[卸载模块](../../../installation/tutorials/uninstall-modules.md)。
 - 在外部平台管理系统(PMS)中管理产品。
 
 ## 产品变体
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -249,7 +249,7 @@ ht-degree: 0%
 
 ### 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -261,4 +261,4 @@ ht-degree: 0%
 - 将产品添加到购物车时增加的响应时间。
 - 增加了加载和渲染微型艺术品的时间。
 - 增加了呈现购物车页面的时间。
-- 增加了呈现的时间 **总计** 在“结帐”页面上阻止。
+- 增加了在签出页面上呈现&#x200B;**总计**&#x200B;块的时间。

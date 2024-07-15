@@ -4,7 +4,7 @@ description: 将您的Adobe Commerce和Adobe Experience Manager基础架构调�
 exl-id: f9cb818f-1461-4b23-b931-e7cee70912fd
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
    ![显示AEM负载平衡器运行状况检查的屏幕截图](../assets/commerce-at-scale/health-checks.png)
 
-1. 可以禁用Dispatcher目标组粘性，并且可以使用Round Robin负载平衡算法。 这是假设没有使用需要设置会话粘性的AEM特定功能或AEM用户会话。 它假定用户登录和会话管理仅通过GraphQL在Adobe Commerce上进行。
+1. 可以禁用Dispatcher目标组粘性，并且可以使用轮循负载平衡算法。 这是假设没有使用需要设置会话粘性的AEM特定功能或AEM用户会话。 它假定用户登录和会话管理仅通过GraphQL在Adobe Commerce上进行。
 
    ![显示AEM会话粘性属性的屏幕截图](../assets/commerce-at-scale/session-stickiness.png)
 
@@ -41,7 +41,7 @@ Dispatcher“renders”选项中的/timeout指定访问AEM发布实例的连接�
 
 ## 发布者
 
-发布者GraphQL连接限制和超时：最初，Adobe Commerce CIF GraphQL Client Configuration Factory OSGI中的“最大HTTP连接”设置应设置为默认的Fastly最大连接限制，当前设置为200。 即使AEM场中有多个发布者，也应为每个发布者设置相同的限制，以匹配Fastly设置。 原因在于，在某些情况下，如果从场中取出关联的调度程序，则一个发布程序可能处理比其他发布程序更多的流量。 这意味着所有流量都将通过仅剩下的一个调度程序和发布程序路由，在这种情况下，单个发布程序可能需要所有HTTP连接。
+发布者GraphQL连接限制和超时：最初，Adobe Commerce CIF GraphQL客户端配置工厂OSGI设置中的最大HTTP连接数应设置为默认的Fastly最大连接数限制，当前设置为200。 即使AEM场中有多个发布者，也应为每个发布者设置相同的限制，以匹配Fastly设置。 原因在于，在某些情况下，如果从场中取出关联的调度程序，则一个发布程序可能处理比其他发布程序更多的流量。 这意味着所有流量都将通过仅剩下的一个调度程序和发布程序路由，在这种情况下，单个发布程序可能需要所有HTTP连接。
 
 “默认HTTP方法”应从POST设置为GET。 Adobe Commerce GraphQL缓存中仅缓存GET请求，因此默认方法应始终设置为GET。
 
@@ -49,7 +49,7 @@ http连接超时和http套接字超时应设置为与Fastly超时匹配的值。
 
 下图显示了MagentoCIF GraphQL Client Configuration Factory。 此处显示的设置只是示例，需要根据具体情况进行调整：
 
-![Commerce Integration Framework配置设置的屏幕截图](../assets/commerce-at-scale/cif-config.png)
+![Commerce integration framework配置设置的屏幕截图](../assets/commerce-at-scale/cif-config.png)
 
 下图显示了Fastly后端配置。 此处显示的设置只是示例，需要根据具体情况进行调整：
 

@@ -6,7 +6,7 @@ feature: Best Practices
 exl-id: 3ea0c6c5-15a9-4e77-b4d0-ce15721c7167
 source-git-commit: a81e88a4293880ae90cd531ce60c5a2b177188f2
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 网站和商店是目录数据的倍数，因此拥有多个网站和商店可能会以下列方式负面影响网站性能：
 
-- 较大的索引表会增加完成索引操作所需的时间 [价格指数].
+- 索引表越大，完成索引操作[价格索引]所需的时间就越长。
 - 检索应用程序配置的时间增加会降低非缓存目录页面的店面响应时间。
 - 显着增加了在管理员中完成保存操作所需的时间，因为每个网站的数据都单独保存。
 

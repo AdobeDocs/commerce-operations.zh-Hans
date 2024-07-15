@@ -18,9 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 请参阅 [将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md) 以了解更多信息。
+>2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
 
-本节讨论如何将Apache配置为 *不安全* 代理服务器，以便Adobe Commerce能够使用此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；将在中讨论 [与Apache的安全通信](#secure-communication-with-apache).
+本节讨论如何将Apache配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与Apache的[安全通信](#secure-communication-with-apache)中讨论。
 
 >[!NOTE]
 >
@@ -30,13 +30,13 @@ ht-degree: 0%
 
 本节讨论如何使用虚拟主机配置代理。
 
-1. 启用 `mod_proxy` 如下所示：
+1. 按如下方式启用`mod_proxy`：
 
    ```bash
    a2enmod proxy_http
    ```
 
-1. 使用文本编辑器打开 `/etc/apache2/sites-available/000-default.conf`
+1. 使用文本编辑器打开`/etc/apache2/sites-available/000-default.conf`
 1. 在文件的顶部添加以下指令：
 
    ```conf
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 与Apache的安全通信
 
-本节讨论如何使用保护Apache与搜索引擎之间的通信 [HTTP基本](https://datatracker.ietf.org/doc/html/rfc2617) 使用Apache进行身份验证。 有关更多选项，请参阅以下资源之一：
+本节讨论如何使用Apache的[HTTP Basic](https://datatracker.ietf.org/doc/html/rfc2617)身份验证来保护Apache和搜索引擎之间的通信。 有关更多选项，请参阅以下资源之一：
 
 * [Apache 2.4身份验证和授权教程](https://httpd.apache.org/docs/2.4/howto/auth.html)
 
@@ -99,24 +99,24 @@ ht-degree: 0%
 
 #### 安装htpasswd（如有必要）
 
-首先，查看您是否拥有Apache `htpasswd` 实用程序安装如下：
+首先，查看您是否按如下方式安装了Apache `htpasswd`实用程序：
 
-1. 输入以下命令以确定 `htpasswd` 已安装：
+1. 输入以下命令以确定是否已安装`htpasswd`：
 
    ```bash
    which htpasswd
    ```
 
-   如果显示了路径，则表明已安装了路径；如果命令未返回任何输出， `htpasswd` 未安装。
+   如果显示路径，则表明已安装；如果命令未返回任何输出，则表明未安装`htpasswd`。
 
-1. 如有必要，请安装 `htpasswd`：
+1. 如有必要，请安装`htpasswd`：
 
    * Ubuntu： `apt-get -y install apache2-utils`
    * CentOS： `yum -y install httpd-tools`
 
 #### 创建密码文件
 
-以用户身份输入以下命令 `root` 权限：
+以具有`root`权限的用户身份输入以下命令：
 
 ```bash
 mkdir -p /usr/local/apache/password
@@ -128,21 +128,21 @@ htpasswd -c /usr/local/apache/password/.<password file name> <username>
 
 位置
 
-* `<username>` 可以是：
+* `<username>`可以是：
 
    * 设置cron：Web服务器用户或其他用户。
 
   在本例中，我们使用Web服务器用户，但用户的选择取决于您。
 
-   * 设置Elasticsearch：用户已命名 `magento_elasticsearch` 在此示例中
+   * 设置Elasticsearch：在此示例中，用户名为`magento_elasticsearch`
 
-* `<password file name>` 必须为隐藏文件(开头为 `.`)，并且应该反映用户的名称。 有关详细信息，请参阅此部分后面的示例。
+* `<password file name>`必须为隐藏文件（以`.`开头），且应反映用户的名称。 有关详细信息，请参阅此部分后面的示例。
 
 按照屏幕上的提示为用户创建密码。
 
 #### 示例
 
-**示例1：cron**
+**示例1： cron**
 您必须为cron仅设置一个用户的身份验证；在本例中，我们使用Web服务器用户。 要为Web服务器用户创建密码文件，请输入以下命令：
 
 ```bash
@@ -166,7 +166,7 @@ htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticse
 
 #### 添加其他用户
 
-要将另一个用户添加到密码文件，请输入以下命令作为用户 `root` 权限：
+要将其他用户添加到密码文件，请以具有`root`权限的用户身份输入以下命令：
 
 ```bash
 htpasswd /usr/local/apache/password/.htpasswd <username>
@@ -174,13 +174,13 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
 
 ### 与Apache的安全通信
 
-本节讨论如何设置 [HTTP基本身份验证](https://httpd.apache.org/docs/2.2/howto/auth.html). 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
+本节讨论如何设置[HTTP基本身份验证](https://httpd.apache.org/docs/2.2/howto/auth.html)。 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
 
 本节将讨论如何指定谁可以访问Apache Server。
 
 1. 使用文本编辑器将以下内容添加到您的安全虚拟主机。
 
-   * Apache 2.4：编辑 `/etc/apache2/sites-available/default-ssl.conf`
+   * Apache 2.4：编辑`/etc/apache2/sites-available/default-ssl.conf`
 
    ```conf
    <Proxy *>
@@ -200,7 +200,7 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
    </Proxy>
    ```
 
-1. 如果您将前面的内容添加到安全虚拟主机中，请删除 `Listen 8080` 和 `<VirtualHost *:8080>` 您之前添加到不安全的虚拟主机中的指令。
+1. 如果将上述添加到安全虚拟主机中，请删除`Listen 8080`以及之前添加到不安全虚拟主机中的`<VirtualHost *:8080>`指令。
 
 1. 保存更改，退出文本编辑器，然后重新启动Apache：
 

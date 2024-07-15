@@ -5,7 +5,7 @@ exl-id: a6b38975-ff85-4cc1-86e3-9792562369ab
 feature: Best Practices, Promotions/Events
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 在电子商务业务中，留下第一印象至关重要。 如果您发送给新客户的第一个电子邮件是有效的，则会在客户的记忆中留下持久的印象。 尽量保持设计简单原始。 例如，某些品牌在客户注册时在电子邮件中提供折扣。
 
-![示例欢迎营销电子邮件](../../assets/playbooks/marketing-email-welcome.png)
+![欢迎营销电子邮件示例](../../assets/playbooks/marketing-email-welcome.png)
 
 ## 策划的电子邮件
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 客户可以轻松地忽略电子邮件，但如果电子邮件作为参与电子邮件发送，则客户删除它而不查看它的概率较低。 参与电子邮件的形式可以是促销活动，为用户提供促销活动，如免费送货。
 
-![示例参与营销电子邮件](../../assets/playbooks/marketing-email-engagement.png)
+![参与营销电子邮件示例](../../assets/playbooks/marketing-email-engagement.png)
 
 ## 推荐电子邮件
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 客户放弃购物车有各种原因，包括运输成本高或退货政策不尽人意。 您可以尝试将这些客户转化为成功的购物者，方法是：向其发送有关购物车中余留产品的提醒电子邮件。 此外，您还可以提供完成结账的激励措施，包括免运费、折扣或下次购买优惠券。 这有助于提高转化率。
 
-![示例放弃营销电子邮件](../../assets/playbooks/marketing-email-abandon.png)
+![放弃营销电子邮件示例](../../assets/playbooks/marketing-email-abandon.png)
 
 ## 订单确认电子邮件
 

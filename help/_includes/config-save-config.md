@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # 更新共享配置
 
-**更新配置**：
+**要更新配置**：
 
 1. 以文件系统所有者的身份登录开发系统，或切换到文件系统所有者。
 
@@ -18,14 +18,14 @@ ht-degree: 0%
    php bin/magento app:config:dump
    ```
 
-   例如，如果Commerce安装在中 `/var/www/html/magento2`，输入：
+   例如，如果`/var/www/html/magento2`中安装了Commerce，请输入：
 
    ```bash
    cd /var/www/html/magento2
    php bin/magento app:config:dump
    ```
 
-1. 确认 `app/etc/config.php` 已更新。
+1. 确认`app/etc/config.php`已更新。
 
    ```bash
    git status
@@ -43,9 +43,9 @@ ht-degree: 0%
 
    >[!WARNING]
    >
-   >Do _非_ 将更改提交到 `generated`， `pub/media`，或 `pub/static` 目录到源代码管理。 您可以在生成系统上生成这些文件。 开发系统可能具有代码、主题等，尚未准备好用于生产系统。
+   >请&#x200B;_不_&#x200B;将对`generated`、`pub/media`或`pub/static`目录的更改提交到源代码管理。 您可以在生成系统上生成这些文件。 开发系统可能具有代码、主题等，尚未准备好用于生产系统。
 
-1. 将更改签入 `app/etc/config.php` 仅用于源代码管理。
+1. 仅将您对`app/etc/config.php`的更改签入到源代码管理。
 
    ```bash
    git add app/etc/config.php && git commit -m "Updated shared configuration" && git push mconfig m2.2_deploy

@@ -3,13 +3,13 @@ title: 调试最佳实践
 description: 学习解决常见Adobe Commerce开发问题的技术。
 feature: Best Practices
 role: Developer
-source-git-commit: 291c3f5ea3c58678c502d34c2baee71519a5c6dc
+exl-id: 78fbea7b-28e8-4713-990d-b4cae159250c
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Commerce的调试最佳实践
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 ### 缓存
 
 - 在进一步调查之前刷新缓存
-- 考虑APC缓存、CDN、Varnish、生成的代码以及 `var/view_preprocessed` 和 `pub/static/` 目录
+- 考虑APC缓存、CDN、Varnish、生成的代码以及`var/view_preprocessed`和`pub/static/`目录
 - 在刷新缓存或修改代码后停止并重新启动队列处理程序
 
 以下代码示例提供了与管理缓存（不在生产环境中运行）相关的有用命令：
@@ -96,7 +96,7 @@ bin/magento cache:flush
 
 ### 开发人员模式
 
-确保您的本地安装位于 `developer` 模式。
+确保您的本地安装处于`developer`模式。
 
 ### 新建模块
 
@@ -108,9 +108,9 @@ bin/magento cache:flush
   bin/magento module --enable Your_Module
   ```
 
-  查看 `app/etc/config.php` 新模块的文件。
+  检查`app/etc/config.php`文件以查找新模块。
 
-- 检查文件和目录结构嵌套。 例如，布局文件位于 `view/layout/` 目录，而不是 `view/frontend/layout` 目录？ 中的模板 `view/frontend/template` 目录，而不是 `view/frontend/templates` 目录？
+- 检查文件和目录结构嵌套。 例如，布局文件是在`view/layout/`目录中而不是`view/frontend/layout`目录中吗？ 模板是否位于`view/frontend/template`目录而非`view/frontend/templates`目录中？
 
 ## 故障诊断：半拆分
 
@@ -132,11 +132,11 @@ bin/magento cache:flush
 
 如果问题可能与代码无关，请先消除大块。 要考虑的一些大块资产包括：
 
-- **Adobe Commerce框架** — 问题是否与Adobe Commerce有关，还是与其他连接的系统有关？
+- **Adobe Commerce框架** — 问题是否与Adobe Commerce有关，或者是否与其他连接的系统有关？
 - **服务器和客户端** — 清除浏览器缓存和存储。 问题是否已解决？ 这可能会排除与服务器相关的原因。 问题是否仍然存在？ 无需再浪费浏览器调试时间。
 - **会话** — 问题是否对每个用户都出现？ 如果不能，问题可能仅限于与会话或浏览器相关的主题。
-- **缓存** — 禁用所有缓存会更改任何内容吗？ 如果是这样，您可以专注于与缓存相关的主题。
-- **数据库** — 问题是否在运行相同代码的每个环境中都出现？ 如果没有，请在配置中查找问题以及其他与数据库相关的主题。
+- **缓存** — 禁用所有缓存是否会更改任何内容？ 如果是这样，您可以专注于与缓存相关的主题。
+- **数据库** — 运行相同代码的每个环境是否都出现问题？ 如果没有，请在配置中查找问题以及其他与数据库相关的主题。
 - **代码** — 如果以上都不能解决问题，请查找代码问题。
 
 ### 步骤2：按承诺二分
@@ -148,7 +148,7 @@ bin/magento cache:flush
 ### 步骤3：按文件二分法
 
 - 按文件类型（核心和非核心）划分Adobe Commerce。 首先，禁用所有客户和市场模块。 问题是否仍然存在？ 这极有可能是一个非核心问题。
-- 再次启用（大约）一半模块 `app/etc/config.php` 文件。 了解依赖关系。 最好一次启用具有相同主题的模块群集。 问题是否仍然存在？
+- 再次启用`app/etc/config.php`文件中的一半模块（大约）。 了解依赖关系。 最好一次启用具有相同主题的模块群集。 问题是否仍然存在？
 - 启用四分之一的剩余模块。 问题是否仍然存在？ 禁用一半您启用的内容。 此方法可帮助您将根本原因隔离到单个模块。
 
 ## 节省时间
@@ -169,7 +169,7 @@ bin/magento cache:flush
 
 ### Internet搜索
 
-使用与问题相关的术语进行Internet搜索。 其他人可能已经遇到了同样的问题。 搜索 [Adobe Commerce GitHub问题](https://github.com/magento/magento2/issues).
+使用与问题相关的术语进行Internet搜索。 其他人可能已经遇到了同样的问题。 搜索[Adobe Commerce GitHub问题](https://github.com/magento/magento2/issues)。
 
 ### 休息一下
 

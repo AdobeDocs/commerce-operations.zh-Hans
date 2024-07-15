@@ -7,7 +7,7 @@ assignees: dshevtsov
 source-git-commit: b0f4671b8c214397af77cbd316e489dac1ce8601
 workflow-type: tm+mt
 source-wordcount: '10'
-ht-degree: 0%
+ht-degree: 50%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 <!-- (REQUIRED) How does this feature improve the docs experience? -->
 
-## 可能的解决方案
+## 可采用的解决方案
 
 <!-- (OPTIONAL) What would a solution for this issue look like? -->
 

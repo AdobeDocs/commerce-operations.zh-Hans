@@ -5,7 +5,7 @@ exl-id: 692236fd-b909-4061-8038-0db19e0ed72b
 feature: Best Practices, Checkout
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 结账流程就像终点线，购物者在这里变成进行交易的顾客。 但是，即使结账过程中的小故障也会对转化率和ROI产生巨大的负面影响，因此，略微提高转化率也可以大幅提高ROI。 改进结账流程和流程，甚至在结账页面之前就开始了。
 
-![结账流程图](../../assets/playbooks/checkout-diagram.png)
+![签出进程流程图](../../assets/playbooks/checkout-diagram.png)
 
 ## 产品页面
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 零售商应提供不同的配送方式，以满足不同客户的需求。
 
-除了付款选项，零售商还可以提供以下选项 [单击并收集](click-collect.md).
+除了付款选项之外，零售商还可以提供[点击和收款](click-collect.md)等选项。
 
 ## 付款详细信息
 

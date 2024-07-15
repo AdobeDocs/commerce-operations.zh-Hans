@@ -1,11 +1,11 @@
 ---
 title: 单个计算机部署
-description: 了解如何使用命令行将更新部署到生产服务器上的Commerce。
+description: 了解如何使用命令行在生产服务器上将更新部署到Commerce。
 feature: Configuration, Deploy
 exl-id: ca73309c-7584-4506-99de-dd933651eeb6
 source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 1%
 
 ## 假设
 
-- 您已使用安装Commerce [Composer](../../installation/composer.md).
+- 您使用[编辑器](../../installation/composer.md)安装了Commerce。
 - 您正在将更新直接应用到服务器。
 
 >[!WARNING]
 >
->本指南不适用，如果您使用 `git clone` 以安装Commerce。
->参与开发的开发人员应使用 [本指南][install] 以更新其Commerce安装。
+>如果您使用`git clone`安装Commerce，则本指南不适用。
+>参与开发的开发人员应使用[本指南][install]更新其Commerce安装。
 
 ## 部署步骤
 
-1. 以或切换至的生产服务器身份登录 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+1. 以[文件系统所有者](../../installation/prerequisites/file-system/overview.md)的身份登录或切换到生产服务器。
 
 1. 将目录更改为Commerce基目录：
 

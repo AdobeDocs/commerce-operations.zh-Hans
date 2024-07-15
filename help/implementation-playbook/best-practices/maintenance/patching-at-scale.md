@@ -4,25 +4,25 @@ description: 了解Adobe Commerce的集中修补如何帮助您管理企业项�
 role: Developer
 feature: Best Practices
 badge: label="由Adobe高级技术架构师Anton Evers提供" type="Informative" url="https://www.linkedin.com/in/anton-evers/" tooltip="安东·埃弗斯撰写"
-source-git-commit: 9cda88a4aeb4cc58d8ec9c4417e3107885a6cdb8
+exl-id: 08c38dc5-3dc2-49ee-b56f-59e1718e12b5
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
 
-
 # 大规模分发Adobe Commerce修补程序的最佳实践
 
-如果您管理多个Adobe Commerce安装， [修补](../../../upgrade/patches/apply.md) 可能会是一个复杂的过程。 _集中修补_ 是的重要组成部分 [全球参考体系结构](../../architecture/global-reference/overview.md) 也是企业的最佳实践。 它可帮助您在所有Adobe Commerce安装中应用正确的修补程序。 本主题介绍如何为所有类型的Adobe Commerce实现集中式修补程序分发 [补丁程序](../../../upgrade/patches/overview.md).
+如果您管理多个Adobe Commerce安装，[修补](../../../upgrade/patches/apply.md)可能是一个复杂的过程。 _集中式修补_&#x200B;是[全局参考体系结构](../../architecture/global-reference/overview.md)的重要部分，是企业的最佳实践。 它可帮助您在所有Adobe Commerce安装中应用正确的修补程序。 本主题介绍如何为所有类型的Adobe Commerce [修补程序](../../../upgrade/patches/overview.md)实现集中式修补程序分发。
 
 >[!NOTE]
 >
->以下内容最初发布在 [大规模分发Adobe Commerce修补程序](https://blog.developer.adobe.com/distributing-adobe-commerce-patches-at-scale-137412e05a20) 在Adobe技术博客上发帖。 它经过了修改，侧重于实施集中修补策略的步骤和代码示例。 请参阅原始文章，以了解有关此处描述的不同修补程序类型的更多详细信息。
+>以下内容最初发布在Adobe技术博客上的[按比例分发Adobe Commerce修补程序](https://blog.developer.adobe.com/distributing-adobe-commerce-patches-at-scale-137412e05a20)帖子中。 它经过了修改，侧重于实施集中修补策略的步骤和代码示例。 请参阅原始文章，以了解有关此处描述的不同修补程序类型的更多详细信息。
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -31,61 +31,61 @@ ht-degree: 0%
 
 由于存在许多不同类型的修补程序以及应用这些修补程序的多种方法，您如何知道哪个修补程序首先应用？ 您拥有的修补程序越多，它们应用到同一文件或同一行代码的可能性就越大。 修补程序的应用顺序如下：
 
-1. **安全修补程序** 是Adobe Commerce版本的静态代码库的一部分。
-1. **Composer修补程序** 到 `composer install` 和 `composer update` 插件，例如 [cweagans/composer-patches](https://packagist.org/packages/cweagans/composer-patches).
-1. 全部 **所需的修补程序** 包含在 [Commerce云修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html) 包。
-1. 已选择 **高质量的补丁程序** 包含在 [!DNL [Quality Patches Tool]](../../../tools/quality-patches-tool/usage.md).
-1. **自定义修补程序** 和Adobe Commerce支持中的修补程序 `/m2-hotfixes` 目录按修补程序名称的字母顺序。
+1. **安全修补程序**&#x200B;是Adobe Commerce版本的静态代码库的一部分。
+1. 通过`composer install`和`composer update`插件（如[cweagans/composer-patches](https://packagist.org/packages/cweagans/composer-patches)），**Composer修补程序**。
+1. Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html)程序包的[Cloud修补程序中包含所有&#x200B;**必需的修补程序**。
+1. 已选择[!DNL [Quality Patches Tool]](../../../tools/quality-patches-tool/usage.md)中包含的&#x200B;**质量修补程序**。
+1. **自定义修补程序**&#x200B;以及`/m2-hotfixes`目录中的Adobe Commerce支持修补程序，按修补程序名称的字母顺序排列。
 
    >[!IMPORTANT]
    >
    >应用的修补程序越多，代码就越复杂。 复杂的代码会增加升级到新版Adobe商务的难度，并增加您的总拥有成本。
 
-如果您负责维护Adobe Commerce的多个安装，那么确保所有实例都安装了同一组修补程序将是一项困难的挑战。 每个安装都有自己的Git存储库， `/m2-hotfixes` 目录，和 `composer.json` 文件。 您唯一能保证的是 **安全修补程序** 和 **所需的修补程序** for cloud用户都作为主Adobe Commerce版本的一部分进行安装。
+如果您负责维护Adobe Commerce的多个安装，那么确保所有实例都安装了同一组修补程序将是一项困难的挑战。 每个安装都有自己的Git存储库、`/m2-hotfixes`目录和`composer.json`文件。 您拥有的唯一保证是，云用户的&#x200B;**安全修补程序**&#x200B;和&#x200B;**必需的修补程序**&#x200B;都作为主Adobe Commerce版本的一部分安装。
 
-目前，对于此问题，没有单一的集中式解决方案，但Composer提供了一种弥补差距的方法。 此 [`cweagans/composer-patches`](https://packagist.org/packages/cweagans/composer-patches) 包允许您 [应用依赖项中的修补程序](https://github.com/cweagans/composer-patches/tree/1.x#allowing-patches-to-be-applied-from-dependencies). 您可以创建一个可安装所有修补程序的Composer包，然后在您的所有项目中需要该包。
+目前，对于此问题，没有单一的集中式解决方案，但Composer提供了一种弥补差距的方法。 [`cweagans/composer-patches`](https://packagist.org/packages/cweagans/composer-patches)程序包允许您[应用依赖项中的修补程序](https://github.com/cweagans/composer-patches/tree/1.x#allowing-patches-to-be-applied-from-dependencies)。 您可以创建一个可安装所有修补程序的Composer包，然后在您的所有项目中需要该包。
 
-涵盖 **安全修补程序**， **所需的修补程序**、和 **Composer修补程序**，但质量补丁和内容如何 `/m2-hotfixes` 目录？
+涵盖&#x200B;**安全修补程序**、**必需的修补程序**&#x200B;和&#x200B;**Composer修补程序**，但质量修补程序和`/m2-hotfixes`目录的内容呢？
 
 ## 应用高品质的补丁程序和修补程序
 
-您可以使用以下工具在云基础架构和内部安装上安装质量补丁程序 `vendor/bin/magento-patches apply` 命令。 您必须确保 `vendor/bin/magento-patches apply` 命令运行于 `composer install` 操作。
+您可以使用`vendor/bin/magento-patches apply`命令在云基础架构和内部部署安装上安装质量修补程序。 您必须确保`vendor/bin/magento-patches apply`命令在`composer install`操作之后运行。
 
 >[!NOTE]
 >
->在云基础架构上，您还可以通过在项目的 `.magento.env.yaml` 文件。 此处描述的示例要求使用 `vendor/bin/magento-patches apply` 命令。
+>在云基础架构上，您还可以通过将质量修补程序列在您的项目的`.magento.env.yaml`文件中来安装质量修补程序。 此处描述的示例要求使用`vendor/bin/magento-patches apply`命令。
 
-您可以指定要应用的修补程序 `composer.json` 自定义编辑器组件包的文件，然后创建一个插件包，该插件包随后运行命令 `composer install` 操作。
+您可以指定要应用于自定义编辑器组件包的`composer.json`文件中的修补程序，然后创建在`composer install`操作后运行该命令的插件包。
 
 总之，此集中式打补丁示例要求您创建两个自定义编辑器包：
 
 - **组件包：** `centralized-patcher`
 
-   - 定义质量修补程序的列表和 `m2-hotfixes` 安装
-   - 需要 `centralized-patcher-composer-plugin` 包，用于运行 `vendor/bin/magento-patches apply` 命令晚于 `composer install` 操作
+   - 定义要安装的质量修补程序和`m2-hotfixes`的列表
+   - 需要`centralized-patcher-composer-plugin`程序包，该程序包在`composer install`操作后运行`vendor/bin/magento-patches apply`命令
 
 - **插件包：** `centralized-patcher-composer-plugin`
 
-   - 定义 `CentralizedPatcher` 从读取质量修补程序列表的PHP类 `centralized-patcher` 包
-   - 运行 `vendor/bin/magento-patches apply` 命令以安装质量修补程序列表 `composer install` 操作
+   - 定义从`centralized-patcher`包读取质量修补程序列表的`CentralizedPatcher` PHP类
+   - 运行`vendor/bin/magento-patches apply`命令以在`composer install`操作后安装质量修补程序列表
 
 ### `centralized-patcher`
 
-您可以创建Composer组件包(`centralized-patcher`)，以集中管理所有高质量的修补程序和 `/m2-hotfixes` 在所有Adobe Commerce安装中进行归因、分段、流程、流失等操作。
+您可以创建编辑器组件包(`centralized-patcher`)以集中管理所有Adobe Commerce安装中的所有质量修补程序和`/m2-hotfixes`。
 
 组件包必须：
 
-- 复制 `/m2-hotfixes` 在部署期间将目录发送到所有安装中。
+- 在部署期间将`/m2-hotfixes`目录的内容复制到所有安装中。
 - 定义要安装的质量补丁程序的列表。
-- 运行 `vendor/bin/magento-patches` 命令在所有安装中安装相同的质量修补程序列表(使用 [`centralized-patcher-composer-plugin`](#centralized-patcher-composer-plugin) 插件包)。
+- 运行`vendor/bin/magento-patches`命令以在所有安装中安装相同的质量修补程序列表（使用[`centralized-patcher-composer-plugin`](#centralized-patcher-composer-plugin)插件包作为依赖项）。
 
-要创建 `centralized-patcher` 组件包：
+要创建`centralized-patcher`组件包，请执行以下操作：
 
-1. 创建 `composer.json` 文件包含以下内容：
+1. 创建包含以下内容的`composer.json`文件：
 
    >[!NOTE]
    >
-   >此 `require` 以下示例中的属性显示 `require` 依赖于 [插件包](#centralized-patcher-composer-plugin) 稍后必须创建此示例。
+   >以下示例中的`require`属性显示了[插件包](#centralized-patcher-composer-plugin)上的`require`依赖项，在此示例的后面必须创建该依赖项。
 
    ```json
    {
@@ -109,7 +109,7 @@ ht-degree: 0%
    }
    ```
 
-1. 创建 `/m2-hotfixes` directory并将其添加到 `map` 属性位于 `composer.json` 文件。 此 `map` 属性包含要从此包复制到要修补的目标项目的根目录中的文件。
+1. 在包中创建一个`/m2-hotfixes`目录，并将其添加到`composer.json`文件中的`map`属性。 `map`属性包含要从此包复制到要修补的目标项目根目录中的文件。
 
    ```json
    {
@@ -126,9 +126,9 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >此 `centralized-patcher` 包将复制 `/m2-hotfixes` 目录添加到上的目标项目的m2-hotfixes目录中 `composer install`.  由于云部署脚本在以下位置应用m2修补程序： `composer install`，则所有修补程序都将通过部署机制安装。
+   >`centralized-patcher`包将`/m2-hotfixes`目录的内容复制到`composer install`上目标项目的m2-hotfixes目录中。  由于云部署脚本在`composer install`之后应用m2修补程序，因此部署机制将安装所有修补程序。
 
-1. 定义要在中安装的质量修补程序 `quality-patches` 属性。
+1. 定义要在`quality-patches`属性中安装的质量修补程序。
 
    ```json
    {
@@ -148,13 +148,13 @@ ht-degree: 0%
    ```
 
 
-此 `quality-patches` 前面的代码示例中的属性包含两个修补程序，它们来自 [完整修补程序列表](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) 举个例子。  每个需要 `centralized-patcher` 使用打包 `vendor/bin/magento-patches apply` 命令。
+上述代码示例中的`quality-patches`属性包含[完整修补程序列表](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中的两个修补程序示例。  使用`vendor/bin/magento-patches apply`命令在需要`centralized-patcher`软件包的每个项目中安装这些质量修补程序。
 
-出于测试目的，您可以创建一个示例修补程序(`/m2-hotfixes/EXAMPLE-PATCH_2.4.6.patch`)。
+出于测试目的，您可以创建示例修补程序(`/m2-hotfixes/EXAMPLE-PATCH_2.4.6.patch`)。
 
 >[!NOTE]
 >
->您应该将自己的修补程序放在 `m2-hotfixes` 目录，以及您直接从Adobe Commerce支持部门收到的修补程序。
+>您应该将自己的修补程序与直接从Adobe Commerce支持接收的修补程序一起放在`m2-hotfixes`目录中。
 
 示例修补程序文件(`/m2-hotfixes/EXAMPLE-PATCH_2.4.6.patch`)：
 
@@ -175,11 +175,11 @@ index 03a3bf9..681e0b0 100644
 
 ### `centralized-patcher-composer-plugin`
 
-由于此示例使用本地方法来安装质量修补程序，因此您必须确保 `vendor/bin/magento-patches apply` 命令运行于 `composer install` 操作。 此插件在以下时段后触发： `composer install` 操作，运行 `vendor/bin/magento-patches apply` 命令。
+由于此示例使用本地方法来安装质量修补程序，因此您必须确保`vendor/bin/magento-patches apply`命令在`composer install`操作后运行。 此插件是在运行`vendor/bin/magento-patches apply`命令的`composer install`操作之后触发的。
 
-要创建 `centralized-patcher-compose-plugin` 组件包：
+要创建`centralized-patcher-compose-plugin`组件包，请执行以下操作：
 
-1. 创建 `composer.json` 文件包含以下内容：
+1. 创建包含以下内容的`composer.json`文件：
 
    ```json
    {
@@ -214,7 +214,7 @@ index 03a3bf9..681e0b0 100644
    }
    ```
 
-1. 创建PHP文件并定义 `CentralizedPatcher` 类以从读取质量修补程序列表 [`centralized-patcher`](#centralized-patcher) 组件包，并在每隔 `composer install` 操作。
+1. 创建PHP文件并定义`CentralizedPatcher`类以从[`centralized-patcher`](#centralized-patcher)组件包中读取质量修补程序列表，并在每次`composer install`操作后立即安装它们。
 
    ```php
    <?php
@@ -331,37 +331,37 @@ index 03a3bf9..681e0b0 100644
 
 >[!TIP]
 >
->请参阅 [代码示例](#code-examples) 查看本示例中所述的两个包的实际操作情况。
+>请参阅[code-examples](#code-examples)，查看此示例中描述的两个包的实际操作情况。
 
 
 ## 如何处理特定于项目的修补程序
 
-您可能会遇到这样的情况：所有项目中仅需要95%的修补程序，而少数修补程序仅适用于特定实例。 应用修补的常规方法仍然有效。 您可以在中保留特定于项目的修补程序 `/m2-hotfixes` 目录和安装每个项目的质量修补程序。
+您可能会遇到这样的情况：所有项目中仅需要95%的修补程序，而少数修补程序仅适用于特定实例。 应用修补的常规方法仍然有效。 您可以在`/m2-hotfixes`目录中保留特定于项目的修补程序，并为每个项目安装质量修补程序。
 
-如果你用这种方法， **不要** 提交中的任何修补程序 `/m2-hotfixes` 已由复制到您项目中的目录 `centralized-patcher` 组件包。 您可以通过添加以下内容防止意外提交 `/m2-hotfixes` 敬您的 `.gitignore` 文件。 更新后 `.gitignore` 文件，请记住， `/m2-hotfixes` 必须使用添加 `git add –force` 命令。
+如果使用此方法，**不提交`centralized-patcher`组件包复制到您项目的`/m2-hotfixes`目录中的任何修补程序。** 通过将`/m2-hotfixes`添加到您的`.gitignore`文件，您可以防止意外提交。 更新`.gitignore`文件后，请记住，必须使用`git add –force`命令添加任何特定于项目的`/m2-hotfixes`。
 
 ## 运行其他Adobe Commerce版本
 
-确保您在中设置了正确的依赖关系 `centralized-patcher` 组件包。 例如，您可能需要Adobe Commerce 2.4.5-p2才能获取包的特定版本，该版本仅提供与Adobe Commerce 2.4.5-p2兼容的修补程序。 您可能具有此包的其他版本与Adobe Commerce 2.4.4兼容。
+确保在`centralized-patcher`组件包中设置正确的依赖关系。 例如，您可能需要Adobe Commerce 2.4.5-p2才能获取包的特定版本，该版本仅提供与Adobe Commerce 2.4.5-p2兼容的修补程序。 您可能具有此包的其他版本与Adobe Commerce 2.4.4兼容。
 
 ## 了解结果
 
-与云基础架构上的Adobe Commerce一样，本文假定您的部署过程使用 `composer install` 命令而非 `composer update` 或 `git pull` 以将新代码部署到您的服务器。 然后，集中式补丁安装的流程如下所示：
+与云基础架构上的Adobe Commerce一样，本文假定您的部署过程使用`composer install`命令而不是`composer update`或`git pull`将新代码部署到您的服务器。 然后，集中式补丁安装的流程如下所示：
 
 1. Composer安装
 
    - 安装Adobe Commerce，包括 — p1或 — p2安全和功能修补程序
-   - 集集中式于一体 `/m2-hotfixes` 并支持带有项目特定修补程序的修补程序 `/m2-hotfixes` 和支持修补程序
-   - 应用随安装的任何修补程序 `cweagans/composer-patches` Composer包
+   - 将集中式`/m2-hotfixes`与项目特定的`/m2-hotfixes`结合起来并支持修补程序并支持修补程序
+   - 应用随`cweagans/composer-patches` Composer包一起安装的所有修补程序
 
-1. 之后 `composer install`
+1. `composer install`之后
 
    - Composer插件可安装集中式质量修补程序
 
 1. 部署
 
-   - 所需的补丁程序和特定于项目的质量补丁程序的安装基于 `.magento.env.yaml` 文件(仅限Adobe Commerce云基础架构项目)。
-   - 自定义修补程序以及支持来自的修补程序 `/m2-hotfixes` 目录按修补程序名称的字母顺序进行安装。
+   - 基于`.magento.env.yaml`文件安装了所需的补丁程序和特定于项目的质量补丁程序(仅云基础架构项目上的Adobe Commerce)。
+   - `/m2-hotfixes`目录中的自定义修补程序和支持修补程序按修补程序名称的字母顺序安装。
 
 这样，您就可以集中管理所有安装的所有修补程序，并且可以更好地保证Adobe Commerce存储的安全性和稳定性。 请使用以下方法检查修补程序状态：
 
@@ -371,6 +371,6 @@ index 03a3bf9..681e0b0 100644
 ## 代码示例
 
 - [Magento Open Source中的集中式修补程序](https://github.com/AntonEvers/centralized-patches-on-magento-open-source)
-- [Adobe Commerce中针对云基础架构的集中式修补程序](https://github.com/AntonEvers/centralized-patches-on-adobe-commerce-cloud)
-- [集中式补丁程序编辑器插件](https://github.com/AntonEvers/centralized-patcher-composer-plugin)
-- [集中式补丁程序组件](https://github.com/AntonEvers/centralized-patcher)
+- [Adobe Commerce中云基础架构上的集中式修补程序](https://github.com/AntonEvers/centralized-patches-on-adobe-commerce-cloud)
+- [集中式修补程序编辑器插件](https://github.com/AntonEvers/centralized-patcher-composer-plugin)
+- [集中式修补程序组件](https://github.com/AntonEvers/centralized-patcher)

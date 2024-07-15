@@ -13,17 +13,17 @@ ht-degree: 0%
 
 使用此命令可以备份：
 
-* 文件系统(不包括 `var` 和 `pub/static` 目录)
-* 此 `pub/media` 目录
+* 文件系统（不包括`var`和`pub/static`目录）
+* `pub/media`目录
 * 数据库
 
-备份存储在 `var/backups` 目录，并可随时使用 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
+备份存储在`var/backups`目录中，可以使用[`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files)命令随时还原。
 
-备份之后，您可以 [回滚](#rollback) 稍后。
+备份后，您可以[回滚](#rollback)。
 
 >[!TIP]
 >
->有关云基础架构项目的Adobe Commerce，请参阅 [快照和备份管理](https://devdocs.magento.com/cloud/project/project-webint-snap.html) 在 _云指南_.
+>有关云基础架构项目上的Adobe Commerce，请参阅&#x200B;_云指南_&#x200B;中的[快照和备份管理](https://devdocs.magento.com/cloud/project/project-webint-snap.html)。
 
 ## 启用备份
 
@@ -35,22 +35,22 @@ bin/magento config:set system/backup/functionality_enabled 1
 
 >[!WARNING]
 >
->**弃用说明：**
+>**弃用通知：**
 >备份功能自2.1.16、2.2.7和2.3.0起已弃用。我们建议研究其他备份技术和二进制备份工具（如Percona XtraBackup）。
 
 ## 设置打开文件限制
 
-回滚到以前的备份可能会以静默方式失败，导致使用写入文件系统或数据库的数据不完整。 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
+回滚到以前的备份可能会以静默方式失败，导致使用[`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files)命令向文件系统或数据库写入的数据不完整。
 
 有时，较长的查询字符串会导致用户分配的内存空间因太多递归调用而耗尽内存。
 
-## 如何设置打开的文件 `ulimit`
+## 如何设置打开的文件`ulimit`
 
-我们建议设置打开的文件 [`ulimit`](https://ss64.com/bash/ulimit.html) 文件系统用户的值 `65536` 或更多。
+我们建议将文件系统用户的打开文件[`ulimit`](https://ss64.com/bash/ulimit.html)的值设置为`65536`或更多。
 
 您可以在命令行上执行此操作，也可以通过编辑用户的shell脚本将其设置为用户的永久设置。
 
-在继续之前，如果您尚未这样做，请切换到 [文件系统所有者](../prerequisites/file-system/overview.md).
+在继续之前，如果您尚未这样做，请切换到[文件系统所有者](../prerequisites/file-system/overview.md)。
 
 命令：
 
@@ -62,23 +62,23 @@ ulimit -s 65536
 
 >[!NOTE]
 >
->打开文件的语法 `ulimit` 取决于您使用的UNIX shell。 前面的设置应适用于CentOS和Ubuntu以及Bash shell。 但是，对于macOS，正确的设置是 `ulimit -S 65532`. 有关更多信息，请参阅手册页或操作系统参考。
+>打开的文件`ulimit`的语法取决于您使用的UNIX shell。 前面的设置应适用于CentOS和Ubuntu以及Bash shell。 但是，对于macOS，正确的设置是`ulimit -S 65532`。 有关更多信息，请参阅手册页或操作系统参考。
 
 要在用户的Bash shell中可选地设置值，请执行以下操作：
 
-1. 如果您尚未这样做，请切换到 [文件系统所有者](../prerequisites/file-system/overview.md).
-1. 打开 `/home/<username>/.bashrc` 在文本编辑器中。
+1. 如果您尚未这样做，请切换到[文件系统所有者](../prerequisites/file-system/overview.md)。
+1. 在文本编辑器中打开`/home/<username>/.bashrc`。
 1. 添加以下行：
 
    ```bash
    ulimit -s 65536
    ```
 
-1. 将更改保存到 `.bashrc` 并退出文本编辑器。
+1. 将更改保存到`.bashrc`并退出文本编辑器。
 
 >[!WARNING]
 >
->我们建议您避免为设置值 [`pcre.recursion_limit`](https://www.php.net/manual/en/pcre.configuration.php) 在 `php.ini` 文件，因为它可能会导致不完整的回滚，并且不会出现失败通知。
+>我们建议您避免在`php.ini`文件中设置[`pcre.recursion_limit`](https://www.php.net/manual/en/pcre.configuration.php)的值，因为它可能会导致不完整的回滚，并且不会出现失败通知。
 
 ## 备份
 
@@ -140,7 +140,7 @@ bin/magento info:backups:list
 bin/magento setup:rollback [-c|--code-file="<name>"] [-m|--media-file="<name>"] [-d|--db-file="<name>"]
 ```
 
-例如，要恢复名为的介质备份 `1440611839_filesystem_media.tgz`，输入
+例如，要恢复名为`1440611839_filesystem_media.tgz`的媒体备份，请输入
 
 ```bash
 bin/magento setup:rollback -m 1440611839_filesystem_media.tgz

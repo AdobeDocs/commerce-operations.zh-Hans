@@ -1,10 +1,10 @@
 ---
 title: 运行支持实用程序
-description: 使用内置支持实用程序对Commerce项目进行故障排除。
+description: 使用内置的支持实用程序对Commerce项目进行故障诊断。
 exl-id: 021b795f-e00d-43b5-9cbb-5b57a4795be7
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Adobe Commerce支持实用程序 — 也称为 [数据收集器](https://docs.magento.com/user-guide/system/support-data-collector.html) — 使用户能够收集有关您的系统的故障排除信息，供我们的支持团队使用。
+Adobe Commerce支持实用程序（也称为[数据收集器](https://docs.magento.com/user-guide/system/support-data-collector.html)）使用户能够收集有关您的系统的故障排除信息，这些信息可供我们的支持团队使用。
 
-Adobe Commerce使用这些备份，也称为 _转储_，以分析需要访问代码的问题。 典型情况如下：
+Adobe Commerce使用这些备份（也称为&#x200B;_转储_）来分析需要访问您的代码的问题。 典型情况如下：
 
-1. 您的Commerce商店出现问题，请联系Adobe Commerce支持部门。
+1. 您的Commerce应用商店出现问题，请与Adobe Commerce支持部门联系。
 1. 支持人员确定他们需要查看代码或数据库才能重现问题。
-1. 将代码备份到 `.tar.gz` 文件。
+1. 将代码备份到`.tar.gz`文件。
 
    此备份不包括您的媒体文件，以加快此过程并生成一个小得多的文件(_E)。
 
-1. 将数据库备份到 `.tar.gz` 文件。
+1. 将数据库备份到`.tar.gz`文件。
 
    默认情况下，在进行备份时会散列敏感数据。
 
@@ -36,7 +36,7 @@ Adobe Commerce使用这些备份，也称为 _转储_，以分析需要访问代
 
 ## 创建代码备份
 
-此命令备份代码并将其压缩到 `tar.gz` 格式。
+此命令备份代码并以`tar.gz`格式压缩代码。
 
 {{tip-backup-command}}
 
@@ -48,11 +48,11 @@ bin/magento support:backup:code [--name=<file name>] [-o|--output=<path>] [-l|--
 
 其中：
 
-- **`--name`** 指定转储文件名（可选）。 如果忽略此参数，转储文件将带有时间和日期戳。
-- **`-o|--output=<path>`** 是存储备份的绝对文件系统路径（必需）。
-- **`-l|--logs`** 包含日志文件（可选）。
+- **`--name`**&#x200B;指定转储文件名（可选）。 如果忽略此参数，转储文件将带有时间和日期戳。
+- **`-o|--output=<path>`**&#x200B;是用于存储备份的绝对文件系统路径（必需）。
+- **`-l|--logs`**&#x200B;包含日志文件（可选）。
 
-例如，要创建名为的代码备份 `/var/www/html/magento2/var/log/mycodebackup.tar.gz`：
+例如，要创建名为`/var/www/html/magento2/var/log/mycodebackup.tar.gz`的代码备份：
 
 ```bash
 bin/magento support:backup:code --name mycodebackup -o /var/www/html/magento2/var/log
@@ -62,7 +62,7 @@ bin/magento support:backup:code --name mycodebackup -o /var/www/html/magento2/va
 
 ## 创建数据库备份
 
-此命令备份Commerce数据库并将其压缩到 `tar.gz` 格式。
+此命令备份Commerce数据库并以`tar.gz`格式压缩它。
 
 {{tip-backup-command}}
 
@@ -74,10 +74,10 @@ bin/magento support:backup:db [--name=<name>] [-o|--output=<path>] [-l|--logs] [
 
 其中：
 
-- **`--name`** 指定转储文件名（可选）。 如果忽略此参数，转储文件将带有时间和日期戳。
-- **`-o|--output=<path>` 是存储备份的绝对文件系统路径（必需）。
-- **`-l|--logs`** 包含日志文件（可选）。
-- **`-i|--ignore-sanitize`** 表示数据会保留；在创建备份时省略用于对存储在数据库中的敏感数据进行哈希处理的标记（可选）。
+- **`--name`**&#x200B;指定转储文件名（可选）。 如果忽略此参数，转储文件将带有时间和日期戳。
+- **`-o|--output=<path>`是用于存储备份的绝对文件系统路径（必需）。
+- **`-l|--logs`**&#x200B;包含日志文件（可选）。
+- **`-i|--ignore-sanitize`**&#x200B;表示保留数据；在创建备份时省略对存储在数据库中的敏感数据进行哈希处理的标记（可选）。
 
 敏感数据包括以下数据库表中的客户信息：
 
@@ -112,10 +112,10 @@ Utility lsof not found
 
    >[!INFO]
    >
-   >命令运行正常 _仅限_ 从您的安装目录中。
+   >命令从您的安装目录中&#x200B;_only_&#x200B;正确运行。
 
-1. `bin/magento support:utility:paths` 创建 `<magento_root>/var/support/Paths.php`，其中列出了该实用程序使用的所有应用程序的路径。
-1. `bin/magento support:utility:check` 显示文件系统路径。
+1. `bin/magento support:utility:paths`创建`<magento_root>/var/support/Paths.php`，其中列出了实用工具使用的所有应用程序的路径。
+1. `bin/magento support:utility:check`显示文件系统路径。
 
 下面是一个示例：
 
@@ -131,4 +131,4 @@ Utility lsof not found
    mysql => /usr/bin/mysql
 ```
 
-要解决运行工具时出现的问题，请确保已安装这些应用程序并且位于Web服务器用户的 `$PATH` 环境变量。
+若要解决运行工具时出现的问题，请确保已安装这些应用程序并且它们位于Web服务器用户的`$PATH`环境变量中。

@@ -6,8 +6,8 @@ feature: Best Practices, Cache
 exl-id: 1cd48155-5d60-48b2-b07b-9b5784b81681
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 0%
+source-wordcount: '182'
+ht-degree: 1%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Realpath缓存会缓存引用的文件名的实际文件系统路径，而不是每次都查找它们。 每次执行各种文件功能或需要使用文件并使用相对路径时，PHP都必须查找该文件真正存在的位置。
 
-要提高Commerce性能，请使用以下推荐的设置来配置 `realpath_cache` 中的设置 `php.ini` 文件：
+要提高Commerce性能，请使用以下推荐的设置来配置`php.ini`文件中的`realpath_cache`设置：
 
 - 将缓存大小设置为10 MB (`realpath cache_size=10M`)
 - 将生存时间(ttl)设置为7200秒(`realpath_cache_ttl=7200`)
 
-有关配置说明，请参阅 [如何设置PHP选项](../../../installation/prerequisites/php-settings.md#how-to-set-php-options).
+有关配置说明，请参阅[如何设置PHP选项](../../../installation/prerequisites/php-settings.md#how-to-set-php-options)。
 
 ## 受影响的产品和版本
 

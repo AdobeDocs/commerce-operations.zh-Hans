@@ -16,10 +16,10 @@ ht-degree: 0%
 
 ## 启用或禁用模块
 
-要启用或禁用模块，请参阅 [启用或禁用模块](../../installation/tutorials/manage-modules.md).
+要启用或禁用模块，请参阅[启用或禁用模块](../../installation/tutorials/manage-modules.md)。
 
 ## 卸载模块
 
-要卸载模块，请参阅 [卸载模块](../../installation/tutorials/uninstall-modules.md).
+要卸载模块，请参阅[卸载模块](../../installation/tutorials/uninstall-modules.md)。
 
-要卸载主题，请使用 [`theme:uninstall`](../../installation/tutorials/themes.md) 命令。
+要卸载主题，请使用[`theme:uninstall`](../../installation/tutorials/themes.md)命令。

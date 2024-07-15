@@ -4,7 +4,7 @@ description: 电子商务描述
 exl-id: b418d36b-7dc6-49c7-95a8-03a55c69cb6f
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
 - 与实体店相比，电子商务的开销很低
 - 网店全天候营业
 - 立即购买
-- 个性化和自定义用户体验
+- Personalization和自定义的用户体验
 - 全球客户覆盖潜力
 
 ### 缺点
@@ -71,8 +71,8 @@ ht-degree: 0%
 
 客户期望值在不断上升，总是有新的增长技术来提高您的转化率。 本行动手册将概述并更详细地解释如何解决其中一些客户挑战并成功运营电子商务网站，充分发挥其潜力。
 
-![商业技术的价值](../../assets/playbooks/commerce-tech.png)
+![商务技术的值](../../assets/playbooks/commerce-tech.png)
 
-## 商业行业
+## Commerce工业
 
-![商业技术的价值](../../assets/playbooks/commerce-industries.png)
+![商务技术的值](../../assets/playbooks/commerce-industries.png)

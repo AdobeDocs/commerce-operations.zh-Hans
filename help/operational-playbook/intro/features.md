@@ -15,4 +15,4 @@ ht-degree: 0%
 
 ## 支持您发展的开放平台
 
-![商业技术的价值](../../assets/playbooks/commerce-features.png)
+![商务技术的值](../../assets/playbooks/commerce-features.png)

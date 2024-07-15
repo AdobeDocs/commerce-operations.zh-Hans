@@ -5,7 +5,7 @@ exl-id: d7807b2f-85c0-4e3e-a473-c65dbec44d28
 feature: Configuration, Deploy
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -30,4 +30,4 @@ Adobe Commerce支持人员将与您一起完成该过程，检查状态并帮助
 
 - 如果有任何问题阻止上线，请联系Adobe Commerce热线
 
-![显示启动过程阶段3的图表](../../assets/playbooks/launch-steps-3.svg)
+![显示启动进程阶段3的图表](../../assets/playbooks/launch-steps-3.svg)

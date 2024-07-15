@@ -7,11 +7,11 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-exl-id: c4912f02-0411-466f-8c77-d610de9eb35d
+exl-id: f76a8906-af31-4a61-be68-f5dad87161e2
 feature: Install, Security
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 只读文件系统
 
-只读文件系统的概念借鉴自 [云基础架构上的Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}. 这将完全删除不良操作者使用的一个主要区域。 许多漏洞利用更改Commerce应用程序中预期存在的文件来避免检测。 错误操作者不会创建操作，而是更改现有文件的内容以执行意外操作。 使文件系统为只读会显着减少此攻击向量。
+从云基础架构](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}上的[Adobe Commerce借用了只读文件系统概念。 这将完全删除不良操作者使用的一个主要区域。 许多漏洞利用更改预期位于Commerce应用程序中的文件来避免检测。 错误操作者不会创建操作，而是更改现有文件的内容以执行意外操作。 使文件系统为只读会显着减少此攻击向量。
 
 ## 使用双重身份验证和密码管理器
 
@@ -34,13 +34,13 @@ ht-degree: 0%
 
 恶意软件扫描通常可以从尝试在Adobe Commerce中专门化的托管提供商找到。 随着新威胁的发现、分类和诊断，这个已知的恶意软件和漏洞库日益增加。 查询托管提供程序是否具有此类服务，以及它们是否可以自动运行或仅在请求时运行。 还有一些您可以订阅的服务，这些服务可以使用他们自己的已知利用漏洞库来不断检查您的商业应用程序中的利用漏洞。 其中有些只是外部的，有些可以添加到基础结构中以对所有文件夹、文件甚至数据库进行内部深层扫描。 从Sansec.io到Sucuri，当然还有MageReport，有一些提供商在这方面拥有多年的经验。 有些是免费的，有些则附有相关费用。 了解这一点并与Adobe Commerce架构师和开发运营团队进行深入细致的对话将确保您找到正确的解决方案。
 
-## 商务的网站范围分析工具
+## 适用于Commerce的站点范围分析工具
 
-此 [站点范围分析工具](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/intro.html){target="_blank"} 是一个主动式自助服务工具和中央存储库，其中包含详细的系统分析和建议，以确保Adobe Commerce安装的安全性和可操作性。 它提供全天候的实时性能监控、报告和建议，以发现潜在问题并更好地了解站点运行状况、安全性和应用程序配置。 它有助于缩短解决时间并提高站点稳定性和性能。
+[全站点分析工具](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/intro.html){target="_blank"}是一个主动式自助服务工具和中央存储库，其中包含详细的系统分析和建议，以确保Adobe Commerce安装的安全性和可操作性。 它提供全天候的实时性能监控、报告和建议，以发现潜在问题并更好地了解站点运行状况、安全性和应用程序配置。 它有助于缩短解决时间并提高站点稳定性和性能。
 
 ## 启用并验证管理员操作日志记录设置
 
-在登录Adobe Commerce管理员并导航到“存储” > “配置” > “高级” > “管理员” > “管理员操作日志记录”后，即可找到该标记。 这将提供被监视和记录的事件列表。 如果在受攻击的网站上进行取证分析，并且怀疑已获得商务管理员的访问权限，则此功能非常有用。 此日志记录和报告有助于查看错误操作者执行了哪些事件。 如果禁用了任何管理员操作日志记录，则表明执行某些操作时，有人可能出于保护目的而禁用了这些日志记录，请删除日志记录。
+在登录Adobe Commerce管理员并导航到“存储” > “配置” > “高级” > “管理员” > “管理员操作日志记录”后，即可找到该标记。 这将提供被监视和记录的事件列表。 如果在受攻击的站点上执行取证分析，并且怀疑这些站点已获得Commerce管理员的访问权限，则此功能非常有用。 此日志记录和报告有助于查看错误操作者执行了哪些事件。 如果禁用了任何管理员操作日志记录，则表明执行某些操作时，有人可能出于保护目的而禁用了这些日志记录，请删除日志记录。
 
 ## 用于ssh访问的堡垒服务器
 
@@ -58,7 +58,8 @@ Adobe Commerce的每位管理员用户都分配有一个ACL角色。 应创建�
 
 限制对生产数据的访问。 这些指定的队友应能够拉下生产数据库，并清除其真实数据。 如果可以选择删除数据，请截断相应的表，如订单、报价和客户。 但是，有时您需要完整的数据集，但可以匿名处理这些值。 在暂存环境中通常会发生这种情况。 在升级之前，此插件也非常有用。 通过拥有真实的数据量，但匿名化可以确保您测试和验证正确执行部署以进行升级的时间。 如果您的数据集有限，则可能会低估升级过程和时间。
 
-+++随机化客户信息示例以下示例介绍了如何在Adobe Commerce存储数据的某些标准表中使用随机字符串以及所有名字和姓氏字段更改客户电子邮件地址。 **切记检查所有表中是否有敏感数据，此列表并非全部包含于可能存储客户数据的表中**
++++随机化客户信息示例
+以下示例介绍了如何在Adobe Commerce存储数据的某些标准表中使用随机字符串以及所有名字和姓氏字段更改客户电子邮件地址。 **请记得检查所有表中是否有敏感数据，此列表并非全部包含于可能存储客户数据的表中**
 
 ```SQL
 SET FOREIGN_KEY_CHECKS=0;
@@ -104,7 +105,8 @@ SET FOREIGN_KEY_CHECKS=1;
 
 +++
 
-+++完全删除信息示例下面是一个示例，说明如何在启动之前删除所有订单、报价单、贷项通知单等，或者删除较低开发环境的所有订单、报价单、贷项通知单等
++++完全删除信息示例
+下面是一个示例，介绍如何在启动之前删除所有订单、报价单、贷项通知单等，或者适用于较低级别的开发环境
 
 ```SQL
 DELETE FROM `gift_message`;
@@ -210,11 +212,11 @@ ALTER TABLE sequence_shipment_7 AUTO_INCREMENT=1;
 
 ## 使用环境变量
 
-[!BADGE 仅限Adobe Commerce on cloud]{type=Informative}
+[!BADGE 仅云上的Adobe Commerce]{type=Informative}
 
 使用环境变量有助于您设置特定值，这些值可以也应该针对每个环境进行更改。 例如，您可能希望对每个环境使用不同的管理员URL。 通过将此值设置为环境变量，您能够配置此值，并在必要时从Cloud UI快速引用此值。
 
-有关此主题的更多信息，请参阅Experience League [云基础架构环境变量上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html){target="_blank"}
+有关此主题的更多信息，请参阅云基础架构环境变量上的Experience League[Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html){target="_blank"}
 
 ## 软件漏洞扫描工具
 
@@ -232,6 +234,6 @@ WAF会检查Web和管理通信以识别任何可疑活动。 它会评估GET和P
 
 作为基于云的服务，WAF不需要安装或维护任何硬件或软件。 Fastly是一家现有的技术合作伙伴，负责提供软件和专业知识。 它们的高性能、始终可用的WAF驻留在Fastly全球交付网络的每个缓存节点中。
 
-有关Fastly提供的Adobe Commerce on cloud的WAF的更多信息，请参阅 [Adobe Commerce知识库常见问题解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/web-application-firewall-waf-powered-by-fastly-the-faq.html){target="_blank"}.
+有关Fastly提供的Adobe Commerce on cloud的WAF的更多信息，请阅读[Adobe Commerce知识库常见问题解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/web-application-firewall-waf-powered-by-fastly-the-faq.html){target="_blank"}。
 
 {{$include /help/_includes/hosting-related-links.md}}

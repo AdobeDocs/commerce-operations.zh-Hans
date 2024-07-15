@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ![说明体系结构差异成本的表](../../../assets/playbooks/divergent-architecture.svg)
 
-![说明在体系结构中整合的成本的表](../../../assets/playbooks/consolidated-architecture.svg)
+![说明架构中整合成本的表](../../../assets/playbooks/consolidated-architecture.svg)
 
 GRA为：
 
@@ -55,4 +55,4 @@ GRA影响：
 
 >[!TIP]
 >
->请参阅 [GRA示例](examples.md).
+>查看[GRA示例](examples.md)。

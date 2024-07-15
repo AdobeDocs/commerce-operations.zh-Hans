@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->创建数据库的最简单方法是使用命令 `magento setup:upgrade`.
+>创建数据库的最简单方法是使用命令`magento setup:upgrade`。
 
 ## 创建或编辑管理员
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您正在编辑管理员，则仅 `first name`， `last name`、和 `password` 可以编辑。
+>如果您正在编辑管理员，则只能编辑`first name`、`last name`和`password`。
 
 命令用法：
 
@@ -75,7 +75,7 @@ Admin last name: Doe Young
 Created Magento administrator user named John
 ```
 
-以下示例将更新 `first name`， `last name`、和 `password` 之 `j.doe` 管理员用户：
+以下示例更新了`j.doe`管理员用户的`first name`、`last name`和`password`：
 
 ```bash
 bin/magento admin:user:create --admin-firstname="John X" --admin-lastname="Doe X" --admin-email=j.doe@example.com --admin-user=j.doe --admin-password=A1234567
@@ -109,7 +109,7 @@ The user account "admin" has been unlocked
 The user account "admin" was not locked or could not be unlocked
 ```
 
-验证用户是否为管理员、用户是否处于活动状态以及帐户是否已锁定。 要查看管理员中锁定用户的列表，请以管理员身份登录，然后单击 **系统** > **权限** > **锁定的用户**.
+验证用户是否为管理员、用户是否处于活动状态以及帐户是否已锁定。 要查看管理员中锁定的用户列表，请以管理员身份登录，然后单击&#x200B;**系统** > **权限** > **锁定的用户**。
 
 如果帐户不存在，则会显示以下消息：
 

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 显示或更改管理员URI
 
-运行此命令之前，必须 [创建或更新部署配置](deployment.md).
+运行此命令之前，必须[创建或更新部署配置](deployment.md)。
 
 ## 显示管理员URI
 
@@ -30,7 +30,7 @@ bin/magento info:adminuri
 Admin Panel URI: /admin_1wgrah
 ```
 
-您还可以在中查看管理员URI `<magento_root>/app/etc/env.php`. 以下是一个代码片段：
+您还可以在`<magento_root>/app/etc/env.php`中查看管理员URI。 以下是一个代码片段：
 
 ```php?start_inline=1
   'backend' =>
@@ -41,4 +41,4 @@ Admin Panel URI: /admin_1wgrah
 
 ## 更改管理员URL
 
-要更改管理员URI，请使用 [`magento setup:config:set`](deployment.md) 命令。
+要更改管理员URI，请使用[`magento setup:config:set`](deployment.md)命令。

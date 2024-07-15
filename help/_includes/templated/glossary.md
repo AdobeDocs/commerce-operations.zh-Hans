@@ -33,7 +33,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：云_
+* _字段： cloud_
 
 ### 适配器
 
@@ -54,12 +54,12 @@ _名词_
 在Adobe Commerce中，管理员用户拥有对管理员中所有功能、选项和功能的完全权限和访问权限。
 他们还可以创建用户和角色。
 
-了解详情： [添加用户](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html)
+了解详情：[添加用户](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html)
 
 _术语属性：_
 
-* _字段：商业软件_
-* _同义词：管理员、超级用户_
+* _字段：商务软件_
+* _同义词：管理员，超级用户_
 * _相关术语：商务管理员_
 
 ### 管理区域
@@ -70,13 +70,13 @@ _名词_
 用户可访问管理区域来管理商店，包括产品、订单、发货、CMS内容、商店设计、客户信息等。
 管理员用户具有一个关联的角色，该角色具有控制对功能、选项和功能访问权限的权限。
 
-了解详情： [Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+了解详情：[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _同义词：管理员、管理面板、后端、管理界面、管理UI_
-* _相关术语：管理员_
+* _相关术语： admin_
 
 ### 管理员变量
 
@@ -84,11 +84,11 @@ _名词_
 
 管理员变量是项目环境变量，用于覆盖管理员用户帐户的配置设置以访问管理员UI。
 
-了解详情： [管理员变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html)
+了解详情：[管理员变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html)
 
 _术语属性：_
 
-* _字段：管理员、云_
+* _字段：管理员，云_
 
 ### adminhtml
 
@@ -96,11 +96,11 @@ _名词_
 
 分配给管理员的内部区域名称。
 
-了解详情： [Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+了解详情：[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _相关术语：区域，商务管理员_
 
 ### 区域
@@ -120,8 +120,8 @@ Adobe Commerce领域包括：
 
 _术语属性：_
 
-* _字段：商业软件_
-* _相关术语：商业组件，店面_
+* _字段：商务软件_
+* _相关术语：商务组件，店面_
 
 ### 属性
 
@@ -136,12 +136,12 @@ Adobe Commerce用户可以创建自定义属性，以添加到默认属性集或
 
 对于Google购物广告渠道和AmazonSales Channel等集成，您可以将Commerce属性映射到第三方中的属性，以正确显示和销售产品、显示广告。
 
-了解详情： [EAV和extension extension_attributes](https://developer.adobe.com/commerce/php/development/components/attributes/)
+了解详情：[EAV和extension_attributes](https://developer.adobe.com/commerce/php/development/components/attributes/)
 
 _术语属性：_
 
-* _字段：商业软件、产品_
-* _同义词：产品属性、自定义属性_
+* _字段：商务软件，产品_
+* _同义词：产品属性，自定义属性_
 * _相关术语：扩展属性_
 
 ### 属性组
@@ -152,7 +152,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _相关术语：属性_
 
 ### 属性集
@@ -164,7 +164,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 * _相关术语：属性_
 
 ### 平均库存成本
@@ -212,25 +212,25 @@ _术语属性：_
 _名词_
 
 一个页面输出单位，可为最终用户呈现某些独特内容（一段信息、一个用户界面元素）以及任何视觉上可见的内容。
-[个块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html) 由模块实现和提供。
+[块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html)由模块实现和提供。
 块使用模板生成HTML。
 数据块的示例包括类别列表、迷你购物车、产品标记和产品列表。
 
-[动态块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html) 提供基于逻辑的内容，如价格规则。
+[动态块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html)提供基于逻辑的内容，如价格规则。
 
-Page Builder扩展了交互和创建 [个块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html) 和 [动态块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html).
+页面生成器扩展了[块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html)和[动态块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html)的交互性和创建。
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _同义词：动态块_
-* _相关术语：cms块、静态块、容器、布局_
+* _相关术语： cms块、静态块、容器、布局_
 
 ### 品牌
 
 _名词，动词_
 
-由制造商或设计人员定义特定产品或产品组的唯一标识。
+由制造商或Designer定义特定产品或产品组的唯一标识。
 这些品牌包括服装、家用电器、奢侈品等名牌。
 您的公司也可以是品牌，根据业务单元、目标受众等在多个品牌下销售产品。
 
@@ -248,11 +248,11 @@ _形容词_
 
 具有永久物理位置的零售业务，与通过互联网几乎或完全运作的业务不同。
 
-对象 [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html) 和 [Order Management](https://omsdocs.magento.com/getting-started/terminology/)，此商店是跟踪产品数量、装运订单和支持店内提货的来源。
+对于[Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html)和[Order Management](https://omsdocs.magento.com/getting-started/terminology/)，此商店是跟踪产品数量、送货订单和支持店内提货的来源。
 
 _术语属性：_
 
-* _字段：业务、库存_
+* _字段：业务，库存_
 
 ### 批量操作
 
@@ -274,11 +274,11 @@ _名词_
 允许客户从各种选项和配置中组装“构建您自己的”可定制产品。
 捆绑包中的每个项目都是单独的简单或虚拟产品。
 
-了解详情： [可配置产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html)
+了解更多： [可配置产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html)
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 * _相关术语：简单产品、虚拟产品、产品类型_
 
 ### 捆绑扩展
@@ -290,7 +290,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：捆绑的扩展，扩展_
+* _字段：捆绑扩展，扩展_
 * _同义词：扩展_
 * _相关术语：扩展，供应商捆绑的扩展_
 
@@ -353,7 +353,7 @@ _术语属性：_
 
 ### capture
 
-_动词_
+_谓词_
 
 将授权订单金额转换为可开单事务处理的流程。
 只有在获得授权后才能获取事务处理，并且在货物或服务发运后才能获取授权。
@@ -361,7 +361,7 @@ _动词_
 _术语属性：_
 
 * _字段：业务_
-* _相关术语：授权、订单状态_
+* _相关术语：授权，订单状态_
 
 ### 持卡人
 
@@ -371,7 +371,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 购物车规则
 
@@ -382,8 +382,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、定价、产品_
-* _相关术语：目录规则、购物车_
+* _字段：商务软件，定价，产品_
+* _相关术语：目录规则，购物车_
 
 ### 目录
 
@@ -401,8 +401,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、定价、产品_
-* _相关术语：共享目录、目录规则_
+* _字段：商务软件，定价，产品_
+* _相关术语：共享目录，目录规则_
 
 ### 目录规则
 
@@ -413,8 +413,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、定价、产品_
-* _相关术语：购物车规则、目录_
+* _字段：商务软件，定价，产品_
+* _相关术语：购物车规则，目录_
 
 ### 类别
 
@@ -425,7 +425,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 
 ### 结账
 
@@ -436,34 +436,34 @@ _名词_
 
 签出具有许多现成可用的选项和配置，并且可通过扩展实现。
 
-了解详情： [签出教程](https://developer.adobe.com/commerce/php/tutorials/frontend/custom-checkout/)
+了解更多： [查看教程](https://developer.adobe.com/commerce/php/tutorials/frontend/custom-checkout/)
 
 _术语属性：_
 
-* _字段：业务、设计、订购、产品、编程_
+* _字段：商业、设计、订购、产品、编程_
 
 ### 云变量
 
 _名词_
 
-云变量是特定于云基础架构上Adobe Commerce的环境变量，并使用 **`MAGENTO_CLOUD`** 前缀。
+云变量是特定于云基础架构上的Adobe Commerce的环境变量，并使用&#x200B;**`MAGENTO_CLOUD`**&#x200B;前缀。
 
-了解详情： [云变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html)
+了解更多： [云变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html)
 
 _术语属性：_
 
-* _字段：云_
+* _字段： cloud_
 
 ### CMS块
 
 _名词_
 
-特殊变体 [块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html) 只能在Admin中创建，不能通过布局文件引用。
+[块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html)的特殊变体，只能在Admin中创建，不能通过布局文件引用。
 
 _术语属性：_
 
-* _字段：商业软件_
-* _相关术语：块、静态块_
+* _字段：商务软件_
+* _相关术语：块，静态块_
 
 ### 复杂数据
 
@@ -483,7 +483,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _同义词：组件_
 * _相关术语： ui组件_
 
@@ -505,7 +505,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 * _相关术语：产品类型_
 
 ### 转化率
@@ -516,7 +516,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 核心层扩展
 
@@ -526,7 +526,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：云_
+* _字段： cloud_
 
 ### 贷项通知单
 
@@ -537,7 +537,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 贷项通知单备注
 
@@ -547,7 +547,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 贷项通知单项目
 
@@ -557,7 +557,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 交叉销售
 
@@ -581,7 +581,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 * _同义词：持卡人验证方法_
 * _相关术语：安全代码_
 
@@ -619,11 +619,11 @@ _名词_
 
 部署密钥是您的项目SSH公钥，它支持对Git存储库的只读或读写（如果已启用）访问。
 
-了解详情： [安全连接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html)
+了解更多： [安全连接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html)
 
 _术语属性：_
 
-* _字段：云_
+* _字段： cloud_
 
 ### 双重选择加入
 
@@ -647,7 +647,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 * _相关术语：产品类型_
 
 ### 动态内容
@@ -678,7 +678,7 @@ _名词_
 _术语属性：_
 
 * _字段：编程_
-* _相关术语：内容交付网络、url_
+* _相关术语：内容交付网络，url_
 
 ## E
 
@@ -692,7 +692,7 @@ _名词_
 
 _术语属性：_
 
-* _字段： cli、云、部署_
+* _字段： cli，云，部署_
 
 ### 实体
 
@@ -704,7 +704,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _相关术语：属性、购物车规则、目录规则_
 
 ### 实体属性值
@@ -716,12 +716,12 @@ _名词_
 在编码中，可用于描述实体的属性数量可以大幅扩展，但应用于给定实体的数量会最小化。
 此数据模型很灵活，但速度可能较慢。
 
-了解详情： [EAV和extension extension_attributes](https://developer.adobe.com/commerce/php/development/components/attributes/)
+了解详情：[EAV和extension_attributes](https://developer.adobe.com/commerce/php/development/components/attributes/)
 
 _术语属性：_
 
 * _字段：编程_
-* _同义词：eav_
+* _同义词： eav_
 
 ### 常青内容
 
@@ -743,7 +743,7 @@ Commerce扩展可以包括模块、主题和语言包。
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _相关术语：组件、模块、包_
 
 ### 扩展属性
@@ -752,12 +752,12 @@ _名词_
 
 扩展功能，并且通常使用比自定义属性更复杂的数据类型。 这些属性不会出现在GUI中。
 
-了解详情： [向实体添加扩展属性](https://developer.adobe.com/commerce/php/development/components/add-attributes/)
+了解更多： [将扩展属性添加到实体](https://developer.adobe.com/commerce/php/development/components/add-attributes/)
 
 _术语属性：_
 
-* _字段：商业软件_
-* _相关术语：属性、实体属性值_
+* _字段：商务软件_
+* _相关术语：属性，实体属性值_
 
 ## F
 
@@ -770,7 +770,7 @@ FOB可以基于原产地或目的地，并指定为托运或预付运费。
 
 _术语属性：_
 
-* _字段：业务、订单、定价_
+* _字段：商业、订单、定价_
 * _同义词： fob_
 
 ### 前端
@@ -787,7 +787,7 @@ _形容词_
 
 _术语属性：_
 
-* _字段：设计、编程_
+* _字段：设计，编程_
 * _同义词：客户端_
 * _相关术语：后端、店面、缓存前端_
 
@@ -799,7 +799,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：设计、编程_
+* _字段：设计，编程_
 
 ### 履行
 
@@ -834,7 +834,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _相关术语：产品类型_
 
 ### 毛利
@@ -860,8 +860,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
-* _相关术语：简单产品、产品类型_
+* _字段：商务软件，产品_
+* _相关术语：简单产品，产品类型_
 
 ## H
 
@@ -888,7 +888,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：云_
+* _字段： cloud_
 
 ## I
 
@@ -920,8 +920,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：设计、商业软件_
-* _相关术语：布局说明、块_
+* _字段：设计、商务软件_
+* _相关术语：布局说明，块_
 
 ### 布局说明
 
@@ -933,7 +933,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：设计、编程_
+* _字段：设计，编程_
 * _相关术语：布局、块、容器、用户界面组件_
 
 ### 布局更新
@@ -944,7 +944,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：设计、商业软件_
+* _字段：设计、商务软件_
 
 ### 许可证所有者
 
@@ -967,26 +967,26 @@ _名词_
 MAGEID通常是Adobe Commerce帐户上的账单联系人(可能不是Adobe Commerce on cloud infrastructure项目的项目所有者)。
 要获得对Adobe Commerce和Adobe Commerce在云基础架构包上的访问权限，您必须使用与已授予对这些包访问权限的MAGEID关联的访问密钥。
 
-了解详情： [获取您的身份验证密钥](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html)
+了解更多： [获取您的身份验证密钥](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html)
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 
 ### 标记
 
 _名词_
 
 在营销和零售中，为确定零售价而添加到项目成本的百分比。
-[配置标记](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html)、或Markdown标记时，可使用产品自定义选项进行标记。
+[通过产品可自定义选项配置产品的标记](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html)或Markdown。
 
 在开发中，一种计算机语言，控制文本的处理、表示和格式设置。
 此外，标记标记是向CMS页面或块添加功能或内容的代码片段。
 
 _术语属性：_
 
-* _字段：业务、编程_
-* _同义词：Markdown_
+* _字段：业务，编程_
+* _同义词： Markdown_
 
 ### 主环境
 
@@ -996,7 +996,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：云_
+* _字段： cloud_
 
 ### 商户帐户
 
@@ -1012,14 +1012,14 @@ _术语属性：_
 
 _名词_
 
-调制传递函数是 [功能测试框架](https://developer.adobe.com/commerce/testing/functional-testing-framework/).
+MFTF是[功能测试框架](https://developer.adobe.com/commerce/testing/functional-testing-framework/)。
 它为Commerce开发人员和软件工程师（如QA专家、PHP开发人员和系统集成商）提供了一个测试框架。
 开发人员和QA可以编写测试来尝试用户与Web应用程序的交互，验证功能，并自动进行回归测试。
 
 _术语属性：_
 
-* _字段：商业软件、编程_
-* _相关术语：cms块、静态块、容器、布局_
+* _字段：商务软件，编程_
+* _相关术语： cms块、静态块、容器、布局_
 
 ### 模块
 
@@ -1037,8 +1037,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
-* _相关术语：php、xml、块_
+* _字段：商务软件_
+* _相关术语： php， xml，块_
 
 ## O
 
@@ -1046,7 +1046,7 @@ _术语属性：_
 
 _名词_
 
-[OMS](https://omsdocs.magento.com) 是Adobe的Order Management System产品。
+[OMS](https://omsdocs.magento.com)是Adobe的Order Management System产品。
 
 OMS是一种灵活且经济实惠的解决方案，可用于从任何销售渠道管理、销售和完成库存。
 OMS提供了无缝的客户体验，在提高销售额的同时降低了成本，并加快了上市时间。
@@ -1058,11 +1058,11 @@ OMS功能包括：
 * 更轻松、响应更迅速的客户服务
 * 更好的客户体验和忠诚度
 
-了解详情： [OMS快速入门](https://omsdocs.magento.com/en/getting-started/)， [OMS文档站点](https://omsdocs.magento.com/en/)
+了解详情：[OMS入门](https://omsdocs.magento.com/en/getting-started/)，[OMS文档站点](https://omsdocs.magento.com/en/)
 
 _术语属性：_
 
-* _字段：功能、商业软件、订单管理_
+* _字段：功能，商务软件，订单管理_
 * _同义词：订单管理、MOM、订单管理系统、Magento Order Management_
 * _相关术语：订单管理_
 
@@ -1072,7 +1072,7 @@ _名词_
 
 源遮蔽是一项安全功能，允许云基础架构上的Adobe Commerce阻止任何流向云基础架构（源）的非Fastly流量以防御DDoS攻击。
 
-了解详情： [Fastly起源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html)
+了解更多：[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html)
 
 _术语属性：_
 
@@ -1090,13 +1090,13 @@ Page Builder是一个Commerce扩展，通过拖放预建控件来定义自定义
 商家无需编码体验即可设计版面和页面。
 为开发人员提供扩展支持以扩展Page Builder。
 
-了解详情： [Page Builder用户指南](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)， [页面生成器DevDocs](https://developer.adobe.com/commerce/frontend-core/page-builder/)
+了解详情：[页面生成器用户指南](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)，[页面生成器DevDocs](https://developer.adobe.com/commerce/frontend-core/page-builder/)
 
 _术语属性：_
 
-* _字段：商业软件，设计_
+* _字段：商务软件，设计_
 * _同义词：管理员、管理面板、后端、管理界面、管理UI_
-* _相关术语：管理员_
+* _相关术语： admin_
 
 ### 支付网关
 
@@ -1119,7 +1119,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 
 ## S
 
@@ -1131,8 +1131,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
-* _相关术语：购物车规则、目录规则_
+* _字段：商务软件，产品_
+* _相关术语：购物车规则，目录规则_
 
 ### 范围
 
@@ -1150,7 +1150,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 
 ### 服务合同
 
@@ -1163,7 +1163,7 @@ Web API可以通过配置文件绑定到服务协定。
 _术语属性：_
 
 * _字段：编程_
-* _相关术语：php、web api_
+* _相关术语： php， web api_
 
 ### 结算
 
@@ -1192,8 +1192,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
-* _相关术语：目录、b2b_
+* _字段：商务软件，产品_
+* _相关术语：目录，b2b_
 
 ### 装运
 
@@ -1204,7 +1204,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 装运单据
 
@@ -1214,7 +1214,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 装运承运人
 
@@ -1224,7 +1224,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、订单_
+* _字段：商业，订单_
 
 ### 购物车
 
@@ -1235,8 +1235,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、设计、产品、编程_
-* _同义词：购物车、购物篮_
+* _字段：商业、设计、产品、编程_
+* _同义词：购物车，购物篮_
 * _相关术语：购物车规则_
 
 ### 简单产品
@@ -1250,7 +1250,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 * _相关术语：产品类型_
 
 ### SKU
@@ -1262,7 +1262,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：业务、定价、产品、编程_
+* _字段：商业、定价、产品、编程_
 * _相关术语：共享目录_
 
 ### 启动页面
@@ -1285,8 +1285,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
-* _相关术语：cms块、块_
+* _字段：商务软件_
+* _相关术语： cms块，块_
 
 ### 静态内容
 
@@ -1307,7 +1307,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 
 ### 存储
 
@@ -1320,8 +1320,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
-* _相关术语：商店视图、网站_
+* _字段：商务软件，产品_
+* _相关术语：商店视图，网站_
 
 ### 商店视图
 
@@ -1333,8 +1333,8 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
-* _相关术语：商店、网站_
+* _字段：商务软件，产品_
+* _相关术语：商店，网站_
 
 ### 店面
 
@@ -1344,7 +1344,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 
 ## T
 
@@ -1369,7 +1369,7 @@ PHTML文件包含将HTML标记和PHP代码混合在一起以将动态内容插�
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 * _相关术语：块_
 
 ### 主题
@@ -1384,7 +1384,7 @@ Adobe Commerce可以在（编辑器）包中发送主题。
 
 _术语属性：_
 
-* _字段：商业软件_
+* _字段：商务软件_
 
 ## U
 
@@ -1402,18 +1402,18 @@ UI组件系统的目标包括：
 * 使用AJAX更新组件数据
 * 介绍用于创建上述项目的新DSL
 
-了解详情： [UI组件指南](https://developer.adobe.com/commerce/frontend-core/ui-components/)， [页面生成器](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)
+了解详情： [UI组件指南](https://developer.adobe.com/commerce/frontend-core/ui-components/)，[页面生成器](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)
 
 _术语属性：_
 
 * _字段：编程_
-* _相关术语：JavaScript、布局、组件、页面生成器_
+* _相关术语： JavaScript、布局、组件、页面生成器_
 
 ### 向上
 
 _名词_
 
-[PWA Studio](https://github.com/magento/pwa-studio) 用途 [向上](https://developer.adobe.com/commerce/pwa-studio/guides/packages/upward/) 正在开发中。
+[PWA Studio](https://github.com/magento/pwa-studio)在开发中使用[UPLOAD](https://developer.adobe.com/commerce/pwa-studio/guides/packages/upward/)。
 UPPER是统一渐进式Web应用程序响应定义的缩写。
 UPLOAD定义文件描述Web服务器如何提供和支持Progressive Web Application。
 
@@ -1427,8 +1427,8 @@ PWA项目可以包括UPPER定义文件以指定其服务依赖关系。
 
 _术语属性：_
 
-* _字段：设计、商业软件、编程_
-* _同义词：PWA Studio、统一的渐进式Web应用程序响应定义_
+* _字段：设计、商务软件、编程_
+* _同义词：PWA Studio，统一渐进式Web应用程序响应定义_
 * _相关术语： pwa_
 
 ## V
@@ -1441,12 +1441,12 @@ _名词_
 VBE经过彻底测试，并包含在每个受支持的Adobe Commerce版本中。
 VBE可以包括模块、主题和语言包。
 
-在中了解详情 [供应商捆绑扩展主题](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html).
+在[供应商捆绑扩展主题](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html)中了解详情。
 
 _术语属性：_
 
-* _字段：商务扩展、供应商捆绑扩展、扩展、VBE_
-* _同义词：扩展、VBE_
+* _字段：商务扩展，供应商捆绑扩展，扩展， VBE_
+* _同义词：扩展， VBE_
 * _相关术语：扩展，捆绑扩展_
 
 ### 垂直缩放
@@ -1472,7 +1472,7 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、产品_
+* _字段：商务软件，产品_
 * _相关术语：产品类型_
 
 ### 虚拟类型
@@ -1480,7 +1480,7 @@ _术语属性：_
 _名词_
 
 虚拟类型是一种将不同的依赖项插入到现有PHP类中的方法，它不会影响其他类，并且无需创建类文件。
-虚拟类型只能由中的参数覆盖引用 `<type>` 元素，从不在源代码中。
+虚拟类型只能由di.xml文件中`<type>`元素中的参数覆盖引用，在源代码中则不能引用。
 它们不能被扩展，也不能作为类构造函数中的依赖项引用。
 
 _术语属性：_
@@ -1500,18 +1500,18 @@ _名词_
 
 _术语属性：_
 
-* _字段：商业软件、设计、产品_
-* _相关术语：商店、商店视图_
+* _字段：商务软件、设计、产品_
+* _相关术语：商店，商店视图_
 
 ### 构件
 
 _名词_
 
-A [构件](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html) 是一个准备好的代码片段，可用于将块、链接和动态内容放置到商店页面上的特定位置。
+[小组件](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html)是一个预准备的代码片段，可用于在存储页面上的特定位置放置块、链接和动态内容。
 您可以使用小组件为营销活动创建登陆页面，并在商店中的特定位置显示促销内容。
 小组件还可用于为外部审阅系统、视频聊天、投票和订阅表单添加交互元素和操作块，或者为标记云和图像滑块提供导航元素。
 
 _术语属性：_
 
-* _字段：商业、商业软件、设计_
+* _字段：商业、商务软件、设计_
 * _相关术语：块_

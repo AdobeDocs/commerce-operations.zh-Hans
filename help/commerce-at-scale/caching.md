@@ -5,7 +5,7 @@ exl-id: 275eb21d-fa52-4b97-9453-8f8553128b53
 feature: Integration, Cache
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -20,16 +20,16 @@ ht-degree: 0%
 |---------------------------------------------------------------|--------------------|-------------------------------------------|-----------------------------------------------------|
 | 网站内容HTML页面，通过CMS更新 | 不频繁 | 低 | 1天 |
 | 网站内容模板媒体/资产 — 徽标、CSS设计、图像 | 不频繁 | 低 | 1周 |
-| 产品列表页(PLP) | 不频繁 | 中 | 1天 |
-| 产品详细信息页面(PDP) | 有时 | 中 | 1小时 |
-| 产品类别 | 不频繁 | 中 | 1天 |
+| 产品列表页(PLP) | 不频繁 | Medium | 1天 |
+| 产品详细信息页面(PDP) | 有时 | Medium | 1小时 |
+| 产品类别 | 不频繁 | Medium | 1天 |
 | 价格 | 经常 | 高 | 无缓存 |
 | 库存/库存 | 经常 | 高 | 无缓存 |
-| 网站搜索 | 大多数用户都是独特的 | 中 | 缓存前100个搜索短语的结果1天 |
+| 网站搜索 | 大多数用户都是独特的 | Medium | 缓存前100个搜索短语的结果1天 |
 | 结帐 | 每个独特用户 | 非常高 | 无缓存 |
 | 购物车 | 每个独特用户 | 非常高 | 无缓存 |
 | 付款页面 | 每个独特用户 | 非常高 | 无缓存 |
 
 完成此初始规划后，可以开始设置技术配置，以根据这些要求配置缓存。
 
-即使内容已更新并且需要在缓存TTL中上线，在大多数情况下，也可以手动清除的缓存。 [AEM调度程序](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) 和 [Adobe Commerce](../configuration//cli/manage-cache.md#clean-and-flush-cache-types) 选择性地缓存该内容，这意味着紧急更改将立即反映出来。 手动缓存清除流程也应提前计划和测试，以便如果需要手动强制更新某些内容，则将该内容记录到站点操作Runbook中，并清除需要如何以及谁参与才能执行此操作。
+即使在缓存TTL内更新了内容并且需要使其上线，在大多数情况下，也可以选择性地为该内容手动清除[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en)和[Adobe Commerce](../configuration//cli/manage-cache.md#clean-and-flush-cache-types)缓存的缓存，这意味着紧急更改将立即反映出来。 手动缓存清除流程也应提前计划和测试，以便如果需要手动强制更新某些内容，则将该内容记录到站点操作Runbook中，并清除需要如何以及谁参与才能执行此操作。

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->请参阅 [_性能最佳实践指南_](../../../performance/overview.md) 以了解有关性能优化的详细信息。
+>有关性能优化的详细信息，请参阅&#x200B;[_性能最佳实践指南_](../../../performance/overview.md)。
 
 ## 基础架构
 
@@ -58,15 +58,15 @@ N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
 
 优化这些设置取决于不同项目的性能测试结果。
 
-- **字节代码** — 要在PHP 7上实现Adobe Commerce的最大速度，您必须激活 `opcache` 模块并对其进行正确配置。
+- **ByteCode** — 要在PHP 7上实现Adobe Commerce的最大速度，必须激活`opcache`模块并正确对其进行配置。
 
-- **APCU**—Adobe建议启用PHP APCu扩展并配置Composer以优化性能。 此扩展可缓存已打开文件的文件位置，从而提高用于Adobe Commerce服务器调用（包括页面、Ajax调用和端点）的性能。
+- **APCU**—Adobe建议启用PHP APCu扩展并配置Composer以优化最大性能。 此扩展可缓存已打开文件的文件位置，从而提高用于Adobe Commerce服务器调用（包括页面、Ajax调用和端点）的性能。
 
-- **Realpath_cacheconfiguration** — 正在优化 `realpath_cache` 允许PHP进程缓存文件的路径，而不是在每次加载页面时查找文件。
+- **Realpath_cacheconfiguration** — 优化`realpath_cache`允许PHP进程缓存文件的路径，而不是在每次加载页面时查找文件。
 
 ### Web服务器
 
-使用nginx作为Web服务器只需要少量重新配置。 nginx Web服务器提供了更好的性能，并且使用Adobe Commerce中的示例配置文件可以轻松配置([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample))。
+使用nginx作为Web服务器只需要少量重新配置。 使用Adobe Commerce ([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample))中的示例配置文件，nginx Web服务器可提供更好的性能并易于配置。
 
 - 使用TCP正确设置PHP-FPM
 
@@ -80,7 +80,7 @@ N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
 
 Adobe Commerce数据库（以及任何其他数据库）对可用于存储数据和索引的内存量敏感。 要有效地使用MySQL数据索引，可用的内存量至少应接近数据库中存储的数据大小的一半。
 
-优化 `innodb_buffer_pool_instances` 设置，以避免多线程尝试访问同一实例时出现问题。 的值 `max_connections` 参数应与应用程序服务器中配置的PHP线程总数相关。 使用以下公式可计算 `innodb-thread-concurrency`：
+优化`innodb_buffer_pool_instances`设置，以避免多个线程尝试访问同一实例时出现问题。 `max_connections`参数的值应与应用程序服务器中配置的PHP线程总数相关。 使用以下公式计算`innodb-thread-concurrency`的最佳值：
 
 ```
 innodb-thread-concurrency = 2 * (NumCPUs+NumDisks)
@@ -94,7 +94,7 @@ Redis应分配足够的内存来保存内存中的所有其他缓存，以获得
 
 ### 页面缓存
 
-Adobe强烈建议在Adobe Commerce商店中使用Varnish进行全页缓存。 此 `PageCache` 代码库中仍存在模块，但应仅将其用于开发目的。
+Adobe强烈建议在Adobe Commerce商店中使用Varnish进行全页缓存。 `PageCache`模块仍存在于代码库中，但应仅将其用于开发目的。
 
 在Web层前面的单独服务器上安装Varnish。 它应接受所有传入请求并提供缓存的页面副本。 为了允许Varnish有效地处理安全页面，可以将SSL终止代理放置在Varnish之前。 Nginx可用于此目的。
 
@@ -102,7 +102,7 @@ Adobe强烈建议在Adobe Commerce商店中使用Varnish进行全页缓存。 �
 
 ### 消息队列
 
-Message Queue Framework (MQF)是一个允许模块将消息发布到队列的系统。 它还定义了异步接收消息的消费者。 Adobe Commerce支持 [!DNL RabbitMQ] 作为报文传送代理，它提供用于发送和接收报文的可伸缩平台。
+Message Queue Framework (MQF)是一个允许模块将消息发布到队列的系统。 它还定义了异步接收消息的消费者。 Adobe Commerce支持[!DNL RabbitMQ]作为消息代理，该消息代理为发送和接收消息提供了一个可扩展的平台。
 
 ### 性能测试和监控
 
@@ -122,11 +122,11 @@ Message Queue Framework (MQF)是一个允许模块将消息发布到队列的系
 
 ### Headless体系结构
 
-还有一个专门用于 [headless](../../architecture/enterprise-blueprint.md#headless-storefront). 总之，它将店面层与平台本身隔离开来。 它仍然是相同的后端，但Adobe Commerce不再直接处理请求，而是仅通过GraphQL API支持自定义店面。
+有一个专用于[headless](../../architecture/enterprise-blueprint.md#headless-storefront)的单独部分。 总之，它将店面层与平台本身隔离开来。 它仍然是相同的后端，但Adobe Commerce不再直接处理请求，而是仅通过GraphQL API支持自定义店面。
 
 ### 保持Adobe Commerce更新
 
-Adobe Commerce在运行最新版本时始终表现更好。 即使在每个新版本发布后无法使Adobe Commerce保持最新，仍建议执行以下操作 [升级](../../../upgrade/overview.md) 当Adobe Commerce引入重要的性能优化时。
+Adobe Commerce在运行最新版本时始终表现更好。 即使在每个新版本发布后无法使Adobe Commerce保持最新，仍建议在Adobe Commerce引入显着的性能优化时[升级](../../../upgrade/overview.md)。
 
 例如，2020年，Adobe发布了对Redis层的优化，修复了许多低效率、连接问题以及Redis和Adobe Commerce之间不必要的数据传输。 2.3和2.4之间的总体性能是昼夜不停的，并且由于Redis优化，在购物车、结账、并发用户方面得到了显着改进。
 

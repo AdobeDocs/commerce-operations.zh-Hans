@@ -45,7 +45,7 @@ Adobe Commerce是一个基于PHP的应用程序，并且最新版本始终与最
 
 Adobe Commerce完全支持Nginx和Apache Web服务器。 Adobe Commerce为以下两种工具提供了示例推荐配置文件：
 
-- **恩金克斯**—`<magento_home>/nginx.conf.sample`
+- **Nginx**—`<magento_home>/nginx.conf.sample`
 - **Apache**—`<magento_home>.htaccess.sample`
 
 Nginx示例包含用于提高性能的设置，并且设计得只需很少的重新配置。
@@ -62,11 +62,11 @@ Adobe Commerce提供多种选项来存储缓存和会话数据，包括Redis、M
 
 ## 消息队列服务
 
-消息队列提供了一种异步通信机制，在这种机制中，消息的发送者和接收者不会相互联系。 [!DNL RabbitMQ] 是一个开源消息中介，它提供可靠、高可用性、可扩展的便携式消息传递系统。
+消息队列提供了一种异步通信机制，在这种机制中，消息的发送者和接收者不会相互联系。 [!DNL RabbitMQ]是一个开源消息代理，可提供可靠、高可用、可扩展和可移植的消息传递系统。
 
 ## 安全工具
 
-此 [Adobe Commerce安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html) 使您能够定期监视商店网站，并接收已知安全风险、恶意软件和过时软件的更新。 通常，在开始用户验收测试(UAT)时即开始使用此工具。 Adobe Commerce安全扫描工具免费且适用于Adobe Commerce的所有实施和版本，除此之外，您还可以在CI/CD流程期间和每个版本之前使用其他选项。
+通过[Adobe Commerce安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html)，您可以定期监视商店网站并接收已知安全风险、恶意软件和过期的软件的更新。 通常，在开始用户验收测试(UAT)时即开始使用此工具。 Adobe Commerce安全扫描工具免费且适用于Adobe Commerce的所有实施和版本，除此之外，您还可以在CI/CD流程期间和每个版本之前使用其他选项。
 
 SonarQube是一个开源质量管理平台，旨在分析和衡量代码的技术质量。 SonarQube不仅提供了有关代码错误、语法错误和漏洞的完整报告，而且还提供了有关修复代码的建议与示例。 SonarQube非常适合于在CI/CD环境中用作能够在部署它之前分析代码的工具。
 

@@ -14,7 +14,7 @@ topic: Administration, Commerce, Development
 type: Documentation
 source-git-commit: aaca7ead9923b676718f6e371caa797d6c0d412f
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # 元数据供内部使用
 
-此 `metadata.md` 文件包含可传递给用户指南的存储库级元数据 `TOC.md` 存储库中的文件。 如果要更改任何用户指南的metadata.md内容，请在任意 `TOC.md` 文件。
+`metadata.md`文件包含存储库级别的元数据，这些元数据将传递到存储库中的用户指南`TOC.md`文件。 如果要更改任何用户指南的metadata.md内容，请在任意`TOC.md`文件中进行更改。
 
 | 元数据 | 作用 |
 |--- |--- |

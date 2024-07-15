@@ -17,14 +17,14 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必须以用户身份执行本节中的任务， `root` 权限。 在开发人员模式下无法设置自定义维护页面。
+>您必须以具有`root`权限的用户身份执行此部分中的任务。 在开发人员模式下无法设置自定义维护页面。
 
 ## 创建自定义维护页面
 
 要创建维护页面并重定向到该页面，请首先创建一个名为的维护页面：
 
 - Apache： `<web server docroot>/maintenance.html`
-- 恩金克斯： `<magento_root>/maintenance.html`
+- nginx： `<magento_root>/maintenance.html`
 
 添加以下内容：
 
@@ -59,7 +59,7 @@ body
 此部分中的示例说明如何修改以下文件，这是设置维护页面的一种方法：
 
 - Apache 2.4： `/etc/apache2/sites-available/000-default.conf`
-- Apache 2.2： `/etc/apache2/sites-available/default` (Ubuntu)， `/etc/httpd/conf/httpd.conf` (CentOS)
+- Apache 2.2：`/etc/apache2/sites-available/default` (Ubuntu)、`/etc/httpd/conf/httpd.conf` (CentOS)
 
 要将流量重定向到自定义维护页面，请执行以下操作：
 
@@ -94,9 +94,9 @@ body
    touch <web server docroot>/maintenance.enable
    ```
 
-1. [升级您的系统](../implementation/perform-upgrade.md).
+1. [升级您的系统](../implementation/perform-upgrade.md)。
 1. 测试您的网站以确保其正常运行。
-1. 升级完成后，删除 `maintenance.enable`.
+1. 升级完成后，删除`maintenance.enable`。
 
 ## nginx的自定义维护页面
 
@@ -105,9 +105,9 @@ body
 要将流量重定向到自定义维护页面，请执行以下操作：
 
 1. 使用文本编辑器打开包含服务器块的nginx配置文件。
-1. 将以下内容添加到服务器块(`server` 仅为了清楚起见而显示；不要添加第二个服务器块)。
+1. 将以下内容添加到服务器块（`server`仅供参考；不要添加第二个服务器块）。
 
-   以下允许列表在安装了Magento的系统上IP地址192.0.2.110和192.0.2.115 `/var/www/html/magento2`：
+   以下允许列表在`/var/www/html/magento2`中安装了Magento的系统上IP地址192.0.2.110和192.0.2.115：
 
    ```conf
    server {
@@ -154,9 +154,9 @@ body
    service nginx reload
    ```
 
-1. [升级您的系统](../implementation/perform-upgrade.md).
+1. [升级您的系统](../implementation/perform-upgrade.md)。
 1. 测试您的网站以确保其正常运行。
-1. 升级完成后，删除或重命名 `maintenance.enable`
+1. 升级完成后，删除或重命名`maintenance.enable`
 1. 重新加载nginx配置：
 
    ```bash

@@ -7,11 +7,11 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-exl-id: cab6213b-da44-498f-b5c1-e7f89e95038e
+exl-id: cd546571-0241-4619-8696-3c5ebead9939
 feature: Install
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 * 允许发生mysqldump并允许在不锁定数据库的情况下发生正常事务
 * 允许从外部数据源访问数据，而不会降低网站处理客户请求信息的能力。
 
-辅助数据库可以用作 `warm standby`. 当您考虑如何从主数据库故障中恢复时，这可能会起作用。 将辅助数据库升级为主数据库的复杂性低于将数据库重建和恢复到新创建的Mysql实例的复杂性。 这减少了恢复操作期间的实际停机时间。
+辅助数据库可以作为`warm standby`使用。 当您考虑如何从主数据库故障中恢复时，这可能会起作用。 将辅助数据库升级为主数据库的复杂性低于将数据库重建和恢复到新创建的Mysql实例的复杂性。 这减少了恢复操作期间的实际停机时间。
 
 可以将一些请求转移到辅助数据库。 如果使用此方法，建议将辅助数据库设为只读。 通过允许Adobe Commerce应用程序使用此辅助数据库进行读取操作，可以接受一些读取请求并允许辅助数据库做出响应，从而有所帮助。 但是，此更改仅占所有请求的30-50%，但您可以从主数据库中消除的任何负载都是一种胜利。
 

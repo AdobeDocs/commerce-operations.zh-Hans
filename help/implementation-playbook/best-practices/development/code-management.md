@@ -3,13 +3,13 @@ title: 代码管理最佳实践
 description: 了解Adobe Commerce项目开发阶段的代码管理最佳实践。
 feature: Best Practices
 role: Developer
-source-git-commit: 0902997fb0bf862b37a5e29026f462bf8c86c96b
+exl-id: 0bff4c7a-1082-4b3e-b19c-bc8ad529b131
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Commerce的代码管理最佳实践
 
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
 
-它同时涵盖了两个方面 [全球参考体系结构(GRA)](../../architecture/global-reference/overview.md) 和单实例安装。
+它包括[全局参考体系结构(GRA)](../../architecture/global-reference/overview.md)和单个实例安装。
 
 ## 定义
 
@@ -80,35 +80,35 @@ ht-degree: 0%
 
 | 功能 | Git | Composer |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| 主代码存储库 | 所有代码都驻留在单个或几个Git存储库中 | 所有代码都驻留在编辑器存储库中的包中<br>每个单个编辑器包均由一个Git存储库表示 |
-| 代码位置 | 开发发生在 `app/` 目录 | 开发发生在 `vendor/` 目录 |
+| 主代码存储库 | 所有代码都驻留在单个或几个Git存储库中 | 所有代码都驻留在Composer存储库中的包中<br>每个Composer包都由Git存储库表示 |
+| 代码位置 | 开发发生在`app/`目录中 | 开发发生在`vendor/`目录中 |
 | 核心升级管理 | 使用Composer安装和升级Adobe Commerce核心，结果在Git中提交 | 使用编辑器安装和升级Adobe Commerce核心；结果在Git中提交 |
-| 第三方模块管理 | 第三方模块安装在中 `vendor/` 通过marketplace或packagist.org安装。 否则，它们会安装在 `app/` | 所有第三方模块均安装在 `vendor/` 目录 |
-| 版本 | 释放的特点是 `git merge` 和 `git pull` 或 `git checkout` 命令 | 释放的特点是 `composer update` 和 `git pull` 或 `git checkout` 命令 |
+| 第三方模块管理 | 第三方模块是通过Marketplace或packagist.org安装在`vendor/`中的。 否则，它们安装在`app/`中 | 所有第三方模块都安装在`vendor/`目录中 |
+| 版本 | 正在释放的特征是`git merge`和`git pull`或`git checkout`命令 | 正在释放的特征是`composer update`和`git pull`或`git checkout`命令 |
 | Git存储库的数量 | 少数 | 许多 |
 | 开发复杂性 | 简单 | 复杂 |
 | 拉取请求复杂性 | 简单 | 复杂 |
 | 代码审查复杂性 | 简单 | 简单 |
 | 开发/QA/UAT环境更新复杂性 | 简单 | 复杂 |
-| GRA支持 | ![“是”图标](../../../assets/yes.svg) | ![“是”图标](../../../assets/yes.svg) |
-| 模块可以自动安装外部库 | ![无图标](../../../assets/no.svg) | ![“是”图标](../../../assets/yes.svg) |
-| GRA合成中的灵活性 | ![无图标](../../../assets/no.svg) | ![“是”图标](../../../assets/yes.svg) |
-| 模块依赖关系管理 | ![“是”图标](../../../assets/yes.svg) 仅通过 `module.xml`，功能有限 | ![“是”图标](../../../assets/yes.svg) 全面的依赖性管理，通过 `composer.json` |
-| 模块版本控制 | ![“是”图标](../../../assets/yes.svg) 您可以定义版本，但无法安装特定版本 | ![“是”图标](../../../assets/yes.svg) 完整版本支持 |
+| GRA支持 | ![是图标](../../../assets/yes.svg) | ![是图标](../../../assets/yes.svg) |
+| 模块可以自动安装外部库 | ![无图标](../../../assets/no.svg) | ![是图标](../../../assets/yes.svg) |
+| GRA合成中的灵活性 | ![无图标](../../../assets/no.svg) | ![是图标](../../../assets/yes.svg) |
+| 模块依赖关系管理 | ![是图标](../../../assets/yes.svg)仅通过`module.xml`，功能有限 | ![是图标](../../../assets/yes.svg)通过`composer.json`进行完全依赖关系管理 |
+| 模块版本控制 | ![是](../../../assets/yes.svg)您可以定义版本，但无法安装特定版本 | ![是](../../../assets/yes.svg)图标完整版本支持 |
 | 需要付费服务 | Git存储库 | Git存储库、私人打包员(每年600±元) |
-| 可能与Jira集成Bitbucket | ![“是”图标](../../../assets/yes.svg) | ![“是”图标](../../../assets/yes.svg) |
-| 对可立即安装的代码的更改 | ![“是”图标](../../../assets/yes.svg) | ![“是”图标](../../../assets/yes.svg) |
+| 可能与Jira集成Bitbucket | ![是图标](../../../assets/yes.svg) | ![是图标](../../../assets/yes.svg) |
+| 对可立即安装的代码的更改 | ![是图标](../../../assets/yes.svg) | ![是图标](../../../assets/yes.svg) |
 
 ## 要避免的解决方案
 
-1. **组合用编辑器和 `app/code` 模块**
+1. 针对您的模块&#x200B;**组合编辑器和`app/code`**
 
    从而导致在项目中同时使用这两种代码管理样式的所有缺点。 它增加了不必要的复杂性、不稳定和缺乏灵活性。
 
    例如：
    - 向开发团队解释Git和编辑器工作流（而不是其中的一个）。
-   - 在中安装不兼容的模块 `app/code` 因为没有任何东西可以阻止这种情况发生。
-   - 移动模块 `app/code` 对于Composer（或相反）比较繁琐，尤其是对于正在进行中的开发而言。
+   - 在`app/code`中安装不兼容的模块，因为没有任何内容可阻止发生这种情况。
+   - 将模块从`app/code`移动到编辑器（或反之）比较麻烦，尤其是对于正在进行的开发。
 
 1. **Satis包管理器**
 

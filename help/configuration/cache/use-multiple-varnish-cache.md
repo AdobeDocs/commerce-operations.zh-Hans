@@ -18,11 +18,11 @@ Adobe Commerce支持多个现成的Varnish实例。
 
 ## 清除多个Varnish实例的配置
 
-在使用配置Varnish主机后，Commerce会清除Varnish主机 [`magento setup:config:set`](../../installation/tutorials/deployment.md) 命令。
+在使用[`magento setup:config:set`](../../installation/tutorials/deployment.md)命令配置清漆主机后，Commerce会清除清漆主机。
 
-您应使用 `--http-cache-hosts` 用于指定清漆主机和监听端口的逗号分隔列表的参数。 （不要使用空格字符分隔主机。）
+您应该使用`--http-cache-hosts`参数指定以逗号分隔的Varnish主机和侦听端口列表。 （不要使用空格字符分隔主机。）
 
-参数格式必须为 `<hostname or ip>:<listen port>`，可忽略 `<listen port>` 如果是端口80。
+参数格式必须为`<hostname or ip>:<listen port>`，如果它是端口80，则可以省略`<listen port>`。
 
 例如，
 
@@ -30,8 +30,8 @@ Adobe Commerce支持多个现成的Varnish实例。
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:8080
 ```
 
-然后，您可以在刷新Commerce缓存时清除所有Varnish主机(也称为 _清理_ 缓存)，或使用命令行。
+然后，当您在Admin中刷新Commerce缓存（也称为&#x200B;_清理_&#x200B;缓存）或使用命令行时，可以清除所有Varnish主机。
 
-要使用“管理员”刷新缓存，请单击 **系统** >工具> **缓存管理**，然后单击 **刷新Magento缓存** 页面顶部的。 （也可以刷新单个缓存类型。）
+若要使用管理员刷新缓存，请单击&#x200B;**系统** >工具> **缓存管理**，然后单击页面顶部的&#x200B;**刷新Magento缓存**。 （也可以刷新单个缓存类型。）
 
-要通过cli刷新多个Varnish实例的缓存，请使用 [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) 命令作为 [文件系统所有者](../../installation/prerequisites/file-system/overview.md).
+要通过cli刷新多个Varnish实例的缓存，请使用[`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types)命令作为[文件系统所有者](../../installation/prerequisites/file-system/overview.md)。

@@ -1,15 +1,15 @@
 ---
-title: 商务策略
+title: Commerce策略
 description: 使用我们建议的战略框架解锁核心电子商务功能。
 exl-id: 0efb424b-9026-439d-a50c-d2d935c07c8c
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
 
-# 商务策略
+# Commerce策略
 
 数字商业是一股快速发展的力量，每年都在迅速演变。 虽然这对个人而言可能令人兴奋，但对于试图在电子商务领域取得进展的组织而言，这也带来了许多挑战。
 
@@ -79,4 +79,4 @@ ht-degree: 0%
 
 有关建议的电子商务策略框架，请参阅下图：
 
-![商务策略框架图](../../assets/playbooks/commerce-strategy-framework.png)
+![Commerce策略框架图](../../assets/playbooks/commerce-strategy-framework.png)

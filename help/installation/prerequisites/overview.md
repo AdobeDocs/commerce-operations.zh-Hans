@@ -13,17 +13,17 @@ ht-degree: 1%
 
 在安装Adobe Commerce之前，必须执行以下操作：
 
-* 设置一个或多个符合条件的主机 [系统要求](../system-requirements.md).
-* 如果要设置多个具有负载平衡的Web节点，请设置并测试系统的该部分 _早于_ 安装应用程序。
+* 设置一个或多个符合[系统要求](../system-requirements.md)的主机。
+* 如果要设置多个具有负载平衡的Web节点，请在安装应用程序之前&#x200B;_设置并测试系统_&#x200B;的该部分。
 * 确保您可以在安装过程中的不同时刻备份整个系统，以便在出现问题时回滚系统。
 
 >[!NOTE]
 >
->我们假定您将在以下位置安装Adobe Commerce： **开发环境**，您具有计算机的超级用户访问权限， **和** 机器不需要高度安全。 如果您正在设置更安全的计算机，我们强烈建议您向网络管理员寻求其他帮助。
+>我们假定您是在&#x200B;**开发环境**&#x200B;中安装Adobe Commerce，并且拥有对计算机&#x200B;**和**&#x200B;的根用户访问权限，该计算机不需要高度安全。 如果您正在设置更安全的计算机，我们强烈建议您向网络管理员寻求其他帮助。
 
-我们强烈建议您更新和升级操作系统软件。 这些升级可提供安全和软件修复，以防止将来出现问题。 不知道这些是什么意思吗？ 查看我们的 [安装概述页面](../overview.md).
+我们强烈建议您更新和升级操作系统软件。 这些升级可提供安全和软件修复，以防止将来出现问题。 不知道这些是什么意思吗？ 请查看我们的[安装概述页面](../overview.md)。
 
-以用户身份输入以下命令 `root` 权限：
+以具有`root`权限的用户身份输入以下命令：
 
 * 乌班图
 
@@ -62,15 +62,15 @@ Server version: Apache/2.4.0 (Unix)
 Server built:   Jul 23 2017 14:17:29
 ```
 
-要安装或升级Apache，请参阅 [Apache](web-server/apache.md).
+要安装或升级Apache，请参阅[Apache](web-server/apache.md)。
 
 ### PHP
 
-请参阅 [系统要求](../system-requirements.md) 支持的PHP和版本 [PHP](../system-requirements.md#php-settings) PHP要求。
+有关PHP的支持版本，请参阅[系统要求](../system-requirements.md)；有关PHP要求，请参阅[PHP](../system-requirements.md#php-settings)。
 
 ### MySQL
 
-检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce版本。 请参阅 [系统要求](../system-requirements.md) 支持的版本。
+检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce版本。 有关支持的版本，请参阅[系统要求](../system-requirements.md)。
 
 ```bash
 mysql -u <database root user or database owner name> -p
@@ -96,11 +96,11 @@ affiliates. Other names may be trademarks of their respective
 owners.
 ```
 
-类型 `help` 或 `\h` 以寻求帮助。 类型 `\c` 以清除当前输入语句。
+键入`help`或`\h`以获取帮助。 键入`\c`以清除当前的输入语句。
 
-输入 `exit` 在 `mysql>` 提示退出。
+在`mysql>`提示下输入`exit`以退出。
 
-要安装或升级MySQL，请参见 [MySQL](database/mysql.md).
+若要安装或升级MySQL，请参阅[MySQL](database/mysql.md)。
 
 ### 搜索引擎
 

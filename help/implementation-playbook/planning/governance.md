@@ -62,7 +62,7 @@ ht-degree: 0%
 
 ## 情节提要和速度
 
-![Kanban展示板示例](../../assets/playbooks/kanban-board-chart.svg)
+![示例Kanban板](../../assets/playbooks/kanban-board-chart.svg)
 
 ## 冲刺和释放燃尽
 

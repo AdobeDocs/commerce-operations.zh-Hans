@@ -30,7 +30,7 @@ ht-degree: 4%
       <td><strong>工具</strong>
         <p>Browse工具旨在让您更轻松地查找和使用Adobe Commerce软件。</p>
           <ul>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html">升级兼容性工具PhpStorm插件</a> （视频）</li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html">升级兼容性工具PhpStorm插件</a>（视频）</li>
             <li><a href="../upgrade-compatibility-tool/overview.md">升级兼容性工具</a></li>
             <li><a href="https://magentocommeng.slack.com/archives/C019Y143U9F">#UpgradeCompatibilityToolSlack渠道</a></li>
             <li><a href="../../tools/quality-patches-tool/usage.md">Quality Patches工具</a></li>
@@ -49,7 +49,7 @@ ht-degree: 4%
             <li><a href="../../release/versioning-policy.md">版本类型</a></li>
           </ul>
         </td>
-      <td><strong>功能和独立的服务</strong>
+      <td><strong>功能和独立服务</strong>
         <p>探索作为Commerce扩展提供的创新性Adobe Commerce服务以及获取这些服务的位置。</p>
           <ul>
             <li><a href="https://marketplace.magento.com/">Commerce Marketplace</a></li>
@@ -66,7 +66,7 @@ ht-degree: 4%
             <li><a href="recommended-upgrade-paths.md">建议的升级路径</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4技术升级讲习班录音</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cannot-access-the-latest-magento-commerce-pre-release.html">访问预发行版</a></li>
-            <li><a href="../../release/beta.md">Beta版概述</a></li>
+            <li><a href="../../release/beta.md">Beta版本概述</a></li>
             <li><a href="https://developer.adobe.com/commerce/contributor/guides/code-contributions/backward-compatibility-policy/">向后不兼容的开发</a></li>
             <li><a href="https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/">向后不兼容的更改</a></li>
             <li><a href="../../implementation-playbook/best-practices/maintenance/upgrade-checklist.md">升级计划核对清单</a></li>

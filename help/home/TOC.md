@@ -13,13 +13,13 @@ ht-degree: 27%
 # Adobe Commerce操作指南 {#operational-guides}
 
 - [操作指南主页](home.md)
-- [发行信息](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)
+- [版本信息](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)
 - [性能](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/overview)
 - [安全性和合规性](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)
 - [实施行动手册](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/overview)
 - [运营行动手册](https://experienceleague.adobe.com/en/docs/commerce-operations/operational-playbook/overview)
-- [大规模商务](https://experienceleague.adobe.com/en/docs/commerce-operations/deliver-commerce-at-scale/overview)
-- [安装（内部部署）](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview)
+- [Commerce规模](https://experienceleague.adobe.com/en/docs/commerce-operations/deliver-commerce-at-scale/overview)
+- [安装（本地）](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview)
 - [配置](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/overview)
 - [升级](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/overview)
 - [工具](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/overview)

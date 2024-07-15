@@ -5,7 +5,7 @@ exl-id: bd10881f-0336-4aa4-82ad-4d635010e2e4
 feature: Deploy
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 - 启用性能监视器工具(New Herithus)
 - 排练中的数据迁移活动（如果有）
 
-![显示启动过程阶段1的图表](../../assets/playbooks/launch-steps-1.svg)
+![显示启动进程阶段1的图表](../../assets/playbooks/launch-steps-1.svg)
 
 Adobe Commerce内部部署与云实施的主要区别在于部署脚本和工具，以及SSL、邮件服务和CDN的设置。 但是，过程仍然相同。
 
@@ -57,4 +57,4 @@ Adobe Commerce内部部署与云实施的主要区别在于部署脚本和工具
 - 生产环境的支付配置（对于某些人，支付使用沙盒模式进行测试）
 - 从生产数据库中清除测试数据（客户、愿望清单、审核、订单和相关数据）
 
-![显示启动过程阶段2的图表](../../assets/playbooks/launch-steps-2.svg)
+![显示启动进程阶段2的图表](../../assets/playbooks/launch-steps-2.svg)

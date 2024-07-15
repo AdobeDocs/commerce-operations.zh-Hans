@@ -6,14 +6,14 @@ badge: label="由Atwix提供" type="Informative" url="https://www.atwix.com/" to
 exl-id: 875f45e7-30c9-4b1b-afe9-d1a8d51ccdf0
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 # 写入自定义日志文件
 
-此 `Magento\Framework\Logger` 模块包含以下处理程序类：
+`Magento\Framework\Logger`模块包含以下处理程序类：
 
 | 类 | 日志文件 |
 | ----- | -------- |
@@ -23,18 +23,18 @@ ht-degree: 0%
 | [Magento\Framework\Logger\Handler\Syslog][syslog] | - |
 | [Magento\Framework\Logger\Handler\System][system] | `/var/log/system.log` |
 
-您可以在 `lib/internal/Magento/Framework/Logger/Handler` 目录。
+您可以在`lib/internal/Magento/Framework/Logger/Handler`目录中找到它们。
 
 您可以使用以下方法之一登录到自定义文件：
 
-- 在中设置自定义日志文件 `di.xml`
+- 在`di.xml`中设置自定义日志文件
 - 在自定义记录器处理程序类中设置自定义文件
 
-## 在中设置自定义日志文件 `di.xml`
+## 在`di.xml`中设置自定义日志文件
 
-此示例说明如何使用 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 到日志 `debug` 消息放入自定义日志文件而不是标准日志文件 `/var/log/debug.log`.
+此示例说明如何使用[虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)将`debug`消息记录到自定义日志文件而不是标准`/var/log/debug.log`中。
 
-1. 在 `di.xml` 文件，将自定义日志文件定义为 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
+1. 在模块的`di.xml`文件中，将自定义日志文件定义为[虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)。
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
@@ -44,9 +44,9 @@ ht-degree: 0%
    </virtualType>
    ```
 
-   此 `name` 值 `Magento\Payment\Model\Method\MyCustomDebug` 必须是唯一的。
+   `Magento\Payment\Model\Method\MyCustomDebug`的`name`值必须是唯一的。
 
-1. 在另一个中定义处理程序 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 具有唯一 `name`：
+1. 在另一具有唯一`name`的[虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)中定义处理程序：
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -58,7 +58,7 @@ ht-degree: 0%
    </virtualType>
    ```
 
-1. 插入 `MyCustomLogger` [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 在 `Magento\Payment\Model\Method\Logger` 对象：
+1. 在`Magento\Payment\Model\Method\Logger`对象中插入`MyCustomLogger` [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)：
 
    ```xml
    <type name="Magento\Payment\Model\Method\Logger">
@@ -68,7 +68,7 @@ ht-degree: 0%
    </type>
    ```
 
-1. 虚拟类 `Magento\Payment\Model\Method\MyCustomDebug` 被注入到 `debug` 的处理程序 `$logger` 中的属性 `Magento\Payment\Model\Method\Logger` 类。
+1. 虚拟类`Magento\Payment\Model\Method\MyCustomDebug`被插入到`Magento\Payment\Model\Method\Logger`类中`$logger`属性的`debug`处理程序中。
 
    ```xml
    ...
@@ -77,13 +77,13 @@ ht-degree: 0%
    </argument>
    ```
 
-异常消息将记录到 `/var/log/payment.log` 文件。
+异常消息记录到`/var/log/payment.log`文件中。
 
 ## 在记录器处理程序类中设置自定义日志文件
 
-此示例说明如何使用自定义记录器处理程序类进行记录 `error` 将消息写入特定日志文件。
+此示例说明如何使用自定义记录器处理程序类将`error`消息记录到特定日志文件中。
 
-1. 创建记录数据的类。 在此示例中，类定义于 `app/code/Vendor/ModuleName/Logger/Handler/ErrorHandler.php`.
+1. 创建记录数据的类。 在此示例中，该类在`app/code/Vendor/ModuleName/Logger/Handler/ErrorHandler.php`中定义。
 
    ```php
    <?php
@@ -117,7 +117,7 @@ ht-degree: 0%
    }
    ```
 
-1. 将此类的处理程序定义为 [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) 在模块的 `di.xml` 文件。
+1. 在模块的`di.xml`文件中将此类的处理程序定义为[虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)。
 
    ```xml
    <virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -129,9 +129,9 @@ ht-degree: 0%
    </virtualType>
    ```
 
-   `MyCustomLogger` 是唯一标识符。
+   `MyCustomLogger`是唯一标识符。
 
-1. 在 `type` 定义，指定插入自定义记录器处理程序的类名称。 使用上一步中的虚拟类型名称作为此类型的参数。
+1. 在`type`定义中，指定插入自定义记录器处理程序的类名。 使用上一步中的虚拟类型名称作为此类型的参数。
 
    ```xml
    <type name="Vendor\ModuleName\Observer\MyObserver">
@@ -141,7 +141,7 @@ ht-degree: 0%
    </type>
    ```
 
-   的源代码 `Vendor\ModuleName\Observer\MyObserver` class：
+   `Vendor\ModuleName\Observer\MyObserver`类的Source代码：
 
    ```php
    <?php
@@ -193,7 +193,7 @@ ht-degree: 0%
    }
    ```
 
-1. 类 `Vendor\ModuleName\Logger\Handler\ErrorHandler` 被注入到 `error` 的处理程序 `$logger` 中的属性 `Vendor\ModuleName\Observer\MyObserver`.
+1. 类`Vendor\ModuleName\Logger\Handler\ErrorHandler`被插入到`Vendor\ModuleName\Observer\MyObserver`中`$logger`属性的`error`处理程序中。
 
    ```xml
    ...
@@ -203,7 +203,7 @@ ht-degree: 0%
    ...
    ```
 
-例外消息记录在 `/var/log/my_custom_logger/error.log` 文件。
+异常消息记录在`/var/log/my_custom_logger/error.log`文件中。
 
 <!-- link definitions -->
 

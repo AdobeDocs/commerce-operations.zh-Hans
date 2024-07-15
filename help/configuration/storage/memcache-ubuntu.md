@@ -5,7 +5,7 @@ feature: Configuration, Cache, Storage
 exl-id: 831193d2-3e81-472c-9b87-78a8d52959b4
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -20,20 +20,20 @@ ht-degree: 0%
 
 由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
-- `memcache` (_否d_) — 旧版但很受欢迎的扩展，不会定期维护。
-此 `memcache` 当前扩展 _不会_ 使用PHP 7。 请参阅 [memcache的PHP文档](https://www.php.net/manual/en/book.memcache.php).
+- `memcache` (_no d_) — 不是定期维护的较旧但常用的扩展。
+当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache](https://www.php.net/manual/en/book.memcache.php)的[PHP文档。
 
-  确切名称为 `php5-memcache` 为了乌本图。
+  Ubuntu的确切名称为`php5-memcache`。
 
-- `memcached` (_带有`d`_) — 与PHP 7兼容的更新和维护的扩展。 请参阅 [memcached的PHP文档](https://www.php.net/manual/en/book.memcached.php).
+- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached](https://www.php.net/manual/en/book.memcached.php)的[PHP文档。
 
-  确切名称为 `php5-memcached` 为了乌本图。
+  Ubuntu的确切名称为`php5-memcached`。
 
 ## 在Ubuntu上安装和配置内存缓存
 
-**在Ubuntu上安装和配置内存缓存**：
+**要在Ubuntu上安装和配置memcached**：
 
-1. 作为用户，具有 `root` 权限，请输入以下命令：
+1. 作为具有`root`权限的用户，输入以下命令：
 
    ```bash
    apt-get -y update
@@ -43,14 +43,14 @@ ht-degree: 0%
    apt-get -y install php5-memcached memcached
    ```
 
-1. 更改的memcached配置设置 `CACHESIZE` 和 `-l`：
+1. 更改`CACHESIZE`和`-l`的memcached配置设置：
 
-   1. 打开 `/etc/memcached.conf` 在文本编辑器中。
-   1. 找到 `-m` 参数。
-   1. 至少将其值更改为 `1GB`
-   1. 找到 `-l` 参数。
-   1. 将其值更改为 `127.0.0.1` 或 `localhost`
-   1. 将更改保存到 `memcached.conf` 并退出文本编辑器。
+   1. 在文本编辑器中打开`/etc/memcached.conf`。
+   1. 找到`-m`参数。
+   1. 将其值更改为至少`1GB`
+   1. 找到`-l`参数。
+   1. 将其值更改为`127.0.0.1`或`localhost`
+   1. 将更改保存到`memcached.conf`并退出文本编辑器。
    1. 重新启动memcached。
 
       ```bash
@@ -59,19 +59,19 @@ ht-degree: 0%
 
 1. 重新启动Web服务器。
 
-   对于Apache， `service apache2 restart`
+   对于Apache，`service apache2 restart`
 
 1. 继续下一部分。
 
 ## 在安装Magento之前验证memcached是否有效
 
-Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟的时间，并且以后可以简化故障排除。
+Adobe建议测试memcached，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟的时间，并且以后可以简化故障排除。
 
 ### 验证Web服务器是否识别memcached
 
 要验证Web服务器是否能够识别memcached：
 
-1. 创建 `phpinfo.php` Web服务器的docroot中的文件：
+1. 在Web服务器的docroot中创建`phpinfo.php`文件：
 
    ```php
    <?php
@@ -87,19 +87,19 @@ Adobe建议先测试内存缓存，以确保它在安装Commerce之前正常工�
 
 1. 确保memcached按如下方式显示：
 
-   ![确认Web服务器能够识别memcached](../../assets/configuration/memcache.png)
+   ![确认Web服务器可识别memcached](../../assets/configuration/memcache.png)
 
    验证您是否使用memcached版本3.0.5或更高版本。
 
-   如果memcached未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍然不显示，请验证是否已安装 `php-pecl-memcached` 扩展。
+   如果memcached未显示，请重新启动Web服务器并刷新浏览器页面。 如果仍然不显示，请验证是否已安装`php-pecl-memcached`扩展。
 
 ### 验证memcached是否可以缓存数据
 
 此测试使用PHP脚本来验证memcached是否可以存储和检索缓存数据。
 
-有关此测试的详细信息，请参阅 [如何在Ubuntu上安装和使用内存缓存教程](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04).
+有关此测试的更多信息，请参阅[如何在Ubuntu上安装和使用Memcache教程](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04)。
 
-创建 `cache-test.php` 在Web服务器的docroot中，包含以下内容：
+在Web服务器的docroot中创建`cache-test.php`，内容如下：
 
 ```php
 $meminstance = new Memcached();
@@ -116,7 +116,7 @@ if ($result) {
 }
 ```
 
-位置 `<memcached hostname or ip>` 是 `localhost`， `127.0.0.1`或内存缓存主机名或IP地址。 此 `<memcached port>` 是侦听端口；默认情况下， `11211`.
+其中`<memcached hostname or ip>`是`localhost`、`127.0.0.1`或memcache主机名或IP地址。 `<memcached port>`是侦听端口；默认情况下，`11211`。
 
 在Web浏览器中转到该页面。 例如
 
@@ -124,9 +124,9 @@ if ($result) {
 http://192.0.2.1/cache-test.php
 ```
 
-首次转到该页面时，会显示以下内容： `No matching key found. Refresh the browser to add it!`
+第一次转到该页面时，会显示以下内容： `No matching key found. Refresh the browser to add it!`
 
-刷新浏览器。 消息将更改为 `Successfully retrieved the data!`
+刷新浏览器。 消息更改为`Successfully retrieved the data!`
 
 最后，您可以使用Telnet查看memcache密钥：
 

@@ -25,7 +25,7 @@ A/B测试是比较两个不同版本的网站以查看性能差异的过程。
 
 ## 部署测试
 
-![“部署测试”图标](../../assets/playbooks/deployment-testing.png)
+![部署测试图标](../../assets/playbooks/deployment-testing.png)
 
 部署测试的目标，用于验证在生产站点上所有构建、更改、设计和加载是否按预期工作。 部署测试很重要，因为它是站点启动和客户查看站点及其功能之前的最终检查。
 

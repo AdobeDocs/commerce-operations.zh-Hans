@@ -5,8 +5,8 @@ feature: Configuration, Storage
 exl-id: 51c2b9b3-0f5f-4868-9191-911d5df341ec
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -16,43 +16,43 @@ ht-degree: 1%
 
 下图显示了Nginx如何在缓存中检索、调整大小和存储图像。 调整大小取决于URL中包含的参数，如高度和宽度。
 
-![调整图像大小](../../assets/configuration/remote-storage-nginx-image-resize.png)
+![图像大小调整](../../assets/configuration/remote-storage-nginx-image-resize.png)
 
 >[!TIP]
 >
->有关云基础架构项目的Adobe Commerce，请参阅 [在云基础架构上为Commerce配置远程存储](cloud-support.md)
+>有关云基础架构项目上的Adobe Commerce，请参阅[为云基础架构上的Commerce配置远程存储](cloud-support.md)
 
 ## 在Adobe Commerce中配置URL格式
 
 要调整服务器端图像的大小，必须配置Adobe Commerce以提供图像的高度、宽度和位置(URL)参数。
 
-**配置Commerce以调整服务器端图像大小**：
+**要配置Commerce以调整服务器端图像大小**：
 
-1. 在 _管理员_ 面板，单击 **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]**.
+1. 在&#x200B;_管理员_&#x200B;面板中，单击&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]**。
 
-1. 在右窗格中，展开 **[!UICONTROL Url options]**.
+1. 在右窗格中，展开&#x200B;**[!UICONTROL Url options]**。
 
-1. 在 _目录媒体URL格式_ 部分，清除 **[!UICONTROL Use system value]**.
+1. 在&#x200B;_目录媒体URL格式_&#x200B;部分中，清除&#x200B;**[!UICONTROL Use system value]**。
 
-1. 选择 `Image optimization based on query parameters` 中的URL **_目录媒体URL格式_** 字段。
+1. 在&#x200B;**_目录媒体URL格式_**&#x200B;字段中选择`Image optimization based on query parameters` URL。
 
-1. 单击 **[!UICONTROL Save Config]**.
+1. 单击&#x200B;**[!UICONTROL Save Config]**。
 
-1. 继续访问 [恩金克斯配置](#configure-nginx).
+1. 继续到[Nginx配置](#configure-nginx)。
 
 ## 配置Nginx
 
-要继续配置服务器端图像大小调整，您必须准备 `nginx.conf` 文件并提供 `proxy_pass` 所选适配器的值。
+要继续配置服务器端图像大小调整，您必须准备`nginx.conf`文件并为您选择的适配器提供`proxy_pass`值。
 
-**启用Nginx调整图像大小**：
+**要允许Nginx调整图像大小**：
 
-1. 安装 [Nginx图像滤镜模块][nginx-module].
+1. 安装[Nginx映像筛选器模块][nginx-module]。
 
    ```shell
    load_module /etc/nginx/modules/ngx_http_image_filter_module.so;
    ```
 
-1. 创建 `nginx.conf` 基于所包含模板的文件 `nginx.conf.sample` 文件。 例如：
+1. 基于包含的模板`nginx.conf.sample`文件创建一个`nginx.conf`文件。 例如：
 
    ```conf
    location ~* \.(jpg|jpeg|png|gif|webp)$ {
@@ -69,7 +69,7 @@ ht-degree: 1%
    }
    ```
 
-1. [_可选_] 配置 `proxy_pass` 特定适配器的值。
+1. [_可选_]&#x200B;为特定适配器配置`proxy_pass`值。
 
    - [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md)
 

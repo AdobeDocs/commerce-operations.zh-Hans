@@ -1,8 +1,8 @@
 ---
 source-git-commit: 27b3be96897b57b3f5e7da7107dde7f5a1bd9211
 workflow-type: tm+mt
-source-wordcount: '3342'
-ht-degree: 13%
+source-wordcount: '1481'
+ht-degree: 0%
 
 ---
 # 社区贡献
@@ -32,7 +32,7 @@ ht-degree: 13%
 | 涂颜 | [#28084](https://github.com/magento/magento2/pull/28084) | [28059](https://github.com/magento/magento2/issues/28059) |
 | 涂颜 | [#28083](https://github.com/magento/magento2/pull/28083) | [27095](https://github.com/magento/magento2/issues/27095) |
 | 阿吉特 | [#28039](https://github.com/magento/magento2/pull/28039) |  |
-| 涂颜 | [#28032](https://github.com/magento/magento2/pull/28032) | [22702](https://github.com/magento/magento2/issues/22702), [26022](https://github.com/magento/magento2/issues/26022) |
+| 涂颜 | [#28032](https://github.com/magento/magento2/pull/28032) | [22702](https://github.com/magento/magento2/issues/22702)，[26022](https://github.com/magento/magento2/issues/26022) |
 | 奥利·乌西克 | [#27670](https://github.com/magento/magento2/pull/27670) |  |
 | 伊万·切普尔尼 | [#22829](https://github.com/magento/magento2/pull/22829) |  |
 | 奥利·乌西克 | [#28466](https://github.com/magento/magento2/pull/28466) |  |
@@ -86,13 +86,13 @@ ht-degree: 13%
 | 奥利·乌西克 | [#27549](https://github.com/magento/magento2/pull/27549) | [28755](https://github.com/magento/magento2/issues/28755) |
 | 亚历山大·梅尔尼克 | [#28666](https://github.com/magento/magento2/pull/28666) |  |
 | 佩特科夫斯基·马尔扬 | [#28714](https://github.com/magento/magento2/pull/28714) |  |
-| 德米特里·加利亚莫夫 | [#28647](https://github.com/magento/magento2/pull/28647) | [28568](https://github.com/magento/magento2/issues/28568), [28572](https://github.com/magento/magento2/issues/28572) |
+| 德米特里·加利亚莫夫 | [#28647](https://github.com/magento/magento2/pull/28647) | [28568](https://github.com/magento/magento2/issues/28568)，[28572](https://github.com/magento/magento2/issues/28572) |
 | 德米特里·琴巴尔 | [#28641](https://github.com/magento/magento2/pull/28641) | [28720](https://github.com/magento/magento2/issues/28720) |
 | 德米特里·琴巴尔 | [#28632](https://github.com/magento/magento2/pull/28632) | [28721](https://github.com/magento/magento2/issues/28721) |
 | 德米特里·琴巴尔 | [#28635](https://github.com/magento/magento2/pull/28635) | [28744](https://github.com/magento/magento2/issues/28744) |
 | 凯特·凯兹玛 | [#28457](https://github.com/magento/magento2/pull/28457) |  |
 | 爱德华·奇托拉加 | [#28205](https://github.com/magento/magento2/pull/28205) |  |
-| 奥利·乌西克 | [#28072](https://github.com/magento/magento2/pull/28072) | [253](https://github.com/magento/magento2/issues/253), [246](https://github.com/magento/magento2/issues/246), [28519](https://github.com/magento/magento2/issues/28519) |
+| 奥利·乌西克 | [#28072](https://github.com/magento/magento2/pull/28072) | [253](https://github.com/magento/magento2/issues/253)，[246](https://github.com/magento/magento2/issues/246)，[28519](https://github.com/magento/magento2/issues/28519) |
 | 维塔利·普罗科波夫 | [#28044](https://github.com/magento/magento2/pull/28044) | [27969](https://github.com/magento/magento2/issues/27969) |
 | 马特乌什·克尔泽索维亚克 | [#27616](https://github.com/magento/magento2/pull/27616) | [28807](https://github.com/magento/magento2/issues/28807) |
 | 阮道安 | [#27064](https://github.com/magento/magento2/pull/27064) | [27063](https://github.com/magento/magento2/issues/27063) |
@@ -125,7 +125,7 @@ ht-degree: 13%
 | 亚历山大·塔拉诺夫斯基 | [#28506](https://github.com/magento/magento2/pull/28506) |  |
 | 亚历山大·塔拉诺夫斯基 | [#28492](https://github.com/magento/magento2/pull/28492) |  |
 | 亚历山大·塔拉诺夫斯基 | [#28487](https://github.com/magento/magento2/pull/28487) | [28481](https://github.com/magento/magento2/issues/28481) |
-| 亚历山大·塔拉诺夫斯基 | [#27349](https://github.com/magento/magento2/pull/27349) | [28262](https://github.com/magento/magento2/issues/28262), [28427](https://github.com/magento/magento2/issues/28427) |
+| 亚历山大·塔拉诺夫斯基 | [#27349](https://github.com/magento/magento2/pull/27349) | [28262](https://github.com/magento/magento2/issues/28262)，[28427](https://github.com/magento/magento2/issues/28427) |
 | 奥利·乌西克 | [#28991](https://github.com/magento/magento2/pull/28991) |  |
 | 德米特里·琴巴尔 | [#28972](https://github.com/magento/magento2/pull/28972) | [29032](https://github.com/magento/magento2/issues/29032) |
 | 凯特·凯兹玛 | [#28869](https://github.com/magento/magento2/pull/28869) |  |
@@ -161,7 +161,7 @@ ht-degree: 13%
 | 瓦迪姆·马莱什 | [#28752](https://github.com/magento/magento2/pull/28752) | [24922](https://github.com/magento/magento2/issues/24922) |
 | 伊霍尔·斯维齐耶夫 | [#28749](https://github.com/magento/magento2/pull/28749) | [28900](https://github.com/magento/magento2/issues/28900) |
 | 瓦迪姆·马莱什 | [#28549](https://github.com/magento/magento2/pull/28549) | [23290](https://github.com/magento/magento2/issues/23290) |
-| 纳扎尔·克洛瓦尼 | [#28366](https://github.com/magento/magento2/pull/28366) | [824](https://github.com/magento/magento2/issues/824), [972](https://github.com/magento/magento2/issues/972) |
+| 纳扎尔·克洛瓦尼 | [#28366](https://github.com/magento/magento2/pull/28366) | [824](https://github.com/magento/magento2/issues/824)，[972](https://github.com/magento/magento2/issues/972) |
 | Madhu Rajawat | [#27516](https://github.com/magento/magento2/pull/27516) | [26191](https://github.com/magento/magento2/issues/26191) |
 | 阿迪提亚·亚达夫 | [#26660](https://github.com/magento/magento2/pull/26660) | [28143](https://github.com/magento/magento2/issues/28143) |
 | 纳扎尔·克洛瓦尼 | [#29144](https://github.com/magento/magento2/pull/29144) |  |
@@ -199,7 +199,7 @@ ht-degree: 13%
 | lumnn | [#28963](https://github.com/magento/magento2/pull/28963) | [29160](https://github.com/magento/magento2/issues/29160) |
 | lumnn | [#28906](https://github.com/magento/magento2/pull/28906) | [29161](https://github.com/magento/magento2/issues/29161) |
 | 涂颜 | [#28895](https://github.com/magento/magento2/pull/28895) | [24004](https://github.com/magento/magento2/issues/24004) |
-| 涂颜 | [#28639](https://github.com/magento/magento2/pull/28639) | [28345](https://github.com/magento/magento2/issues/28345), [29261](https://github.com/magento/magento2/issues/29261) |
+| 涂颜 | [#28639](https://github.com/magento/magento2/pull/28639) | [28345](https://github.com/magento/magento2/issues/28345)，[29261](https://github.com/magento/magento2/issues/29261) |
 | 罗维纳S | [#29170](https://github.com/magento/magento2/pull/29170) |  |
 | 约翰·卡洛·奥塔比奥 | [#28594](https://github.com/magento/magento2/pull/28594) |  |
 | 帕夫洛·西多连科 | [#27917](https://github.com/magento/magento2/pull/27917) | [28705](https://github.com/magento/magento2/issues/28705) |
@@ -227,7 +227,7 @@ ht-degree: 13%
 | jmonteros422 | [#29399](https://github.com/magento/magento2/pull/29399) |  |
 | 塞尔吉·伊瓦先科 | [#29396](https://github.com/magento/magento2/pull/29396) |  |
 | jmonteros422 | [#29393](https://github.com/magento/magento2/pull/29393) |  |
-| 纳扎尔·克洛瓦尼 | [#29392](https://github.com/magento/magento2/pull/29392) | [1700](https://github.com/magento/magento2/issues/1700), [1693](https://github.com/magento/magento2/issues/1693) |
+| 纳扎尔·克洛瓦尼 | [#29392](https://github.com/magento/magento2/pull/29392) | [1700](https://github.com/magento/magento2/issues/1700)，[1693](https://github.com/magento/magento2/issues/1693) |
 | 奥利·乌西克 | [#29386](https://github.com/magento/magento2/pull/29386) | [29420](https://github.com/magento/magento2/issues/29420) |
 | 奥利·乌西克 | [#29385](https://github.com/magento/magento2/pull/29385) | [29434](https://github.com/magento/magento2/issues/29434) |
 | 卢卡斯·巴伊萨罗维茨 | [#29341](https://github.com/magento/magento2/pull/29341) | [29389](https://github.com/magento/magento2/issues/29389) |
@@ -247,26 +247,26 @@ ht-degree: 13%
 | 阿吉特 | [#27977](https://github.com/magento/magento2/pull/27977) | [29097](https://github.com/magento/magento2/issues/29097) |
 | 亚历山大·克拉夫丘克 | [#27905](https://github.com/magento/magento2/pull/27905) | [28303](https://github.com/magento/magento2/issues/28303) |
 | Ledian Hymetlari | [#27582](https://github.com/magento/magento2/pull/27582) | [27570](https://github.com/magento/magento2/issues/27570) |
-| 伊霍尔·斯维齐耶夫 | [#27364](https://github.com/magento/magento2/pull/27364) | [17195](https://github.com/magento/magento2/issues/17195), [27355](https://github.com/magento/magento2/issues/27355) |
+| 伊霍尔·斯维齐耶夫 | [#27364](https://github.com/magento/magento2/pull/27364) | [17195](https://github.com/magento/magento2/issues/17195)，[27355](https://github.com/magento/magento2/issues/27355) |
 | Michal Derlatka | [#29256](https://github.com/magento/magento2/pull/29256) | [26110](https://github.com/magento/magento2/issues/26110) |
 | 雅罗斯拉夫·罗戈萨 | [#27914](https://github.com/magento/magento2/pull/27914) | [28524](https://github.com/magento/magento2/issues/28524) |
 | 黑兹尔·乔伊·卡基克拉 | [#29441](https://github.com/magento/magento2/pull/29441) |  |
 | 纳扎尔·克洛瓦尼 | [#29438](https://github.com/magento/magento2/pull/29438) |  |
 | jmonteros422 | [#29424](https://github.com/magento/magento2/pull/29424) |  |
-| 纳扎尔·克洛瓦尼 | [#29367](https://github.com/magento/magento2/pull/29367) | [1747](https://github.com/magento/magento2/issues/1747), [1704](https://github.com/magento/magento2/issues/1704), [1702](https://github.com/magento/magento2/issues/1702), [1699](https://github.com/magento/magento2/issues/1699), [1694](https://github.com/magento/magento2/issues/1694) |
+| 纳扎尔·克洛瓦尼 | [#29367](https://github.com/magento/magento2/pull/29367) | [1747](https://github.com/magento/magento2/issues/1747)，[1704](https://github.com/magento/magento2/issues/1704)，[1702](https://github.com/magento/magento2/issues/1702)，[1699](https://github.com/magento/magento2/issues/1699)，[1694](https://github.com/magento/magento2/issues/1694) |
 | 本杰明·罗森伯格 | [#29451](https://github.com/magento/magento2/pull/29451) | [29470](https://github.com/magento/magento2/issues/29470) |
 | 克里斯托夫，福曼 | [#29305](https://github.com/magento/magento2/pull/29305) | [29345](https://github.com/magento/magento2/issues/29345) |
 | 卢卡斯·巴伊萨罗维茨 | [#29272](https://github.com/magento/magento2/pull/29272) | [29346](https://github.com/magento/magento2/issues/29346) |
 | 涂颜 | [#28480](https://github.com/magento/magento2/pull/28480) | [26498](https://github.com/magento/magento2/issues/26498) |
 | 瓦迪姆·马莱什 | [#28238](https://github.com/magento/magento2/pull/28238) | [18823](https://github.com/magento/magento2/issues/18823) |
-| 马修·奥洛克林 | [#26256](https://github.com/magento/magento2/pull/26256) | [8815](https://github.com/magento/magento2/issues/8815), [26255](https://github.com/magento/magento2/issues/26255) |
+| 马修·奥洛克林 | [#26256](https://github.com/magento/magento2/pull/26256) | [8815](https://github.com/magento/magento2/issues/8815)，[26255](https://github.com/magento/magento2/issues/26255) |
 | jmonteros422 | [#29493](https://github.com/magento/magento2/pull/29493) | [1742](https://github.com/magento/magento2/issues/1742) |
 | 塞尔吉·伊瓦先科 | [#29449](https://github.com/magento/magento2/pull/29449) |  |
 | 奥利·乌西克 | [#29427](https://github.com/magento/magento2/pull/29427) |  |
 | 涂颜 | [#28642](https://github.com/magento/magento2/pull/28642) | [29468](https://github.com/magento/magento2/issues/29468) |
 | 卢卡斯·巴伊萨罗维茨 | [#28599](https://github.com/magento/magento2/pull/28599) |  |
 | 维塔利·普罗科波夫 | [#27758](https://github.com/magento/magento2/pull/27758) | [26702](https://github.com/magento/magento2/issues/26702) |
-| 帕维尔·贝斯特里茨基 | [#26175](https://github.com/magento/magento2/pull/26175) | [28319](https://github.com/magento/magento2/issues/28319), [29313](https://github.com/magento/magento2/issues/29313) |
+| 帕维尔·贝斯特里茨基 | [#26175](https://github.com/magento/magento2/pull/26175) | [28319](https://github.com/magento/magento2/issues/28319)，[29313](https://github.com/magento/magento2/issues/29313) |
 | 纳扎尔·克洛瓦尼 | [#29492](https://github.com/magento/magento2/pull/29492) | [1750](https://github.com/magento/magento2/issues/1750) |
 | 纳扎尔·克洛瓦尼 | [#29490](https://github.com/magento/magento2/pull/29490) | [1749](https://github.com/magento/magento2/issues/1749) |
 | 奥利·乌西克 | [#29485](https://github.com/magento/magento2/pull/29485) |  |

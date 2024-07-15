@@ -14,17 +14,17 @@ ht-degree: 9%
 
 ## 配置文件
 
-您可以使用调整创建的数据量 _用户档案_ （小、中、大和特大）。 配置文件位于 `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` 目录。
+您可以调整使用&#x200B;_用户档案_（小、中、大和特大）创建的数据量。 配置文件位于`<magento_root>/setup/performance-toolkit/profiles/<ce|ee>`目录中。
 
 例如，`/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
-下图显示了如何使用在店面中显示产品 _小_ 个人资料：
+下图显示了如何使用&#x200B;_小型_&#x200B;配置文件在店面中显示产品：
 
-![使用生成的数据对店面进行示例](../../assets/configuration/generate-data.png)
+![具有生成数据的店面示例](../../assets/configuration/generate-data.png)
 
 下表提供有关数据生成器配置文件的详细信息：小、中、大和特大。
 
-| 参数 | 小型配置文件 | 中型用户档案 | 中等多站点配置文件 | 大型配置文件 | 超大配置文件 |
+| 参数 | 小型配置文件 | Medium配置文件 | Medium多站点配置文件 | 大型配置文件 | 超大配置文件 |
 | --- | --- | --- | --- | --- | --- |
 | `websites` | 1 | 3 | 25 | 5 | 5 |
 | `store_groups` | 1 | 3 | 25 | 5 | 5 |
@@ -50,9 +50,9 @@ ht-degree: 9%
 >
 >在运行数据生成器之前，请禁用服务器上运行的所有cron作业。 禁用cron作业会阻止数据生成器执行与活动cron作业冲突的操作，并避免不必要的错误。
 >
->如果您打算使用实施事件 [!DNL Adobe I/O Events for Adobe Commerce] 测试性能时，请在订阅之前运行此命令 [事件](https://developer.adobe.com/commerce/extensibility/events/). 先订阅事件可能会导致错误。
+>如果您打算在测试性能时使用[!DNL Adobe I/O Events for Adobe Commerce]实施事件，请在订阅[事件](https://developer.adobe.com/commerce/extensibility/events/)之前运行此命令。 先订阅事件可能会导致错误。
 
-运行本节中介绍的命令。 命令运行后，您必须 [重新索引所有索引器](../cli/manage-indexers.md).
+运行本节中介绍的命令。 运行该命令后，必须[重新索引所有索引器](../cli/manage-indexers.md)。
 
 命令选项：
 
@@ -60,7 +60,7 @@ ht-degree: 9%
 bin/magento setup:perf:generate-fixtures <path-to-profile>
 ```
 
-位置 `<path-to-profile>` 指定配置文件的绝对文件系统路径和名称。
+其中`<path-to-profile>`指定配置文件的绝对文件系统路径和名称。
 
 例如，
 
@@ -125,7 +125,7 @@ Generating simple products...  done in <time>
 
 ### 捆绑产品
 
-生成捆绑产品。 生成的束选取项不会在目录中单独显示。 产品按类别和网站统一分发。 如果  `assign_entities_to_all_websites` 从配置文件设置为 `1`. 产品会分配到所有网站。
+生成捆绑产品。 生成的束选取项不会在目录中单独显示。 产品按类别和网站统一分发。 如果配置文件中的`assign_entities_to_all_websites`设置为`1`。 产品会分配到所有网站。
 
 XML配置文件节点：
 
@@ -163,7 +163,7 @@ XML配置文件节点：
 
 ### 类别
 
-生成类别。 如果 `assign_entities_to_all_websites` 设置为 `0`，则所有类别按根类别均匀分布；否则，所有类别都分配给一个根类别。
+生成类别。 如果将`assign_entities_to_all_websites`设置为`0`，则所有类别将按根类别均匀分布；否则，所有类别将分配给一个根类别。
 
 XML配置文件节点：
 
@@ -195,7 +195,7 @@ XML配置文件节点：
 
 ### 可配置的产品
 
-生成可配置产品。 生成的可配置选项不会单独显示在目录中。 产品按类别和网站统一分发。 如果 `assign_entities_to_all_websites` 设置为 `1`，则产品会分配到所有网站。
+生成可配置产品。 生成的可配置选项不会单独显示在目录中。 产品按类别和网站统一分发。 如果`assign_entities_to_all_websites`设置为`1`，则产品将分配到所有网站。
 
 支持以下XML节点格式：
 
@@ -380,9 +380,9 @@ XML配置文件节点：
 
 ### 简单产品
 
-生成简单产品。 产品按默认属性和预定义属性集分发。 如果在配置文件中指定了额外的属性集，如下所示： `<product_attribute_sets>{int}</product_attribute_sets>`，产品也会根据其他属性集进行分发。
+生成简单产品。 产品按默认属性和预定义属性集分发。 如果在配置文件中指定了额外的属性集： `<product_attribute_sets>{int}</product_attribute_sets>`，则产品也会按额外的属性集进行分配。
 
-产品按类别和网站统一分发。 如果 `assign_entities_to_all_websites` 设置为 `1`，则产品会分配到所有网站。
+产品按类别和网站统一分发。 如果`assign_entities_to_all_websites`设置为`1`，则产品将分配到所有网站。
 
 XML配置文件节点：
 
@@ -402,7 +402,7 @@ XML配置文件节点：
 
 ### 商店组
 
-生成商店组(在管理员中称为 _存储_)。 商店组在网站之间正常分布。
+生成商店组（在管理员中称为&#x200B;_商店_）。 商店组在网站之间正常分布。
 
 XML配置文件节点：
 
@@ -442,8 +442,8 @@ XML配置文件节点：
 
 - `<Commerce root dir>/setup/performance-toolkit/config/shortDescription.xml` — 产品简要说明配置
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml` — 产品配置简短和完整描述。 提供此旧版实施是为了向后兼容。
+- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml` — 产品简短和完整说明的配置。 提供此旧版实施是为了向后兼容。
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml` — 搜索词很少，简述如下
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml` — 搜索词较少，仅提供简短和完整的描述
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml` — 在简短和完整描述中使用的搜索词更多。
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml` — 要用于简短和完整描述的搜索词更多。

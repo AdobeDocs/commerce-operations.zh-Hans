@@ -12,24 +12,24 @@ ht-degree: 0%
 
 # 软件推荐
 
-我们需要以下软件用于的生产实例 [!DNL Commerce]：
+我们需要以下软件用于[!DNL Commerce]的生产实例：
 
 * [PHP](../installation/system-requirements.md)
-* Nginx和 [PHP-FPM](https://php-fpm.org/)
+* Nginx和[PHP-FPM](https://php-fpm.org/)
 * [[!DNL MySQL]](../installation/prerequisites/database/mysql.md)
-* [[!DNL Elasticsearch] 或OpenSearch](../installation/prerequisites/search-engine/overview.md)
+* [[!DNL Elasticsearch]或OpenSearch](../installation/prerequisites/search-engine/overview.md)
 
 对于多服务器部署或计划扩展业务的商家，我们建议执行以下操作：
 
-* [[!DNL Varnish] 缓存](../configuration/cache/config-varnish.md)
-* [Redis](../configuration/cache/redis-session.md) 用于会话（从2.0.6+开始）
-* 单独的Redis实例，作为 [默认缓存](../configuration/cache/redis-pg-cache.md) （不要将此实例用于页面缓存）
+* [[!DNL Varnish]缓存](../configuration/cache/config-varnish.md)
+* 会话的[Redis](../configuration/cache/redis-session.md)（从2.0.6+开始）
+* 单独的Redis实例作为[默认缓存](../configuration/cache/redis-pg-cache.md)（不要将此实例用于页面缓存）
 
-请参阅 [系统要求](../installation/system-requirements.md) 有关每种软件类型的受支持版本的信息。
+有关每种类型软件支持版本的信息，请参阅[系统要求](../installation/system-requirements.md)。
 
 ## 操作系统
 
-操作系统配置和优化与类似 [!DNL Commerce] 与其他高负载Web应用程序相比。 随着服务器处理的并发连接数的增加，可用套接字的数量可以完全分配。 Linux内核支持“重用”TCP连接的机制。 要启用此机制，请将以下值设置为 `/etc/sysctl.conf`：
+[!DNL Commerce]的操作系统配置和优化与其他高负载Web应用程序类似。 随着服务器处理的并发连接数的增加，可用套接字的数量可以完全分配。 Linux内核支持“重用”TCP连接的机制。 要启用此机制，请在`/etc/sysctl.conf`中设置以下值：
 
 >[!INFO]
 >
@@ -39,7 +39,7 @@ ht-degree: 0%
 net.ipv4.tcp_tw_reuse = 1
 ```
 
-内核参数 `net.core.somaxconn` 控制等待连接的最大开放套接字数。 可以安全地将此值增加到1024，但应该将其与服务器处理此数量的能力相关联。 要启用此内核参数，请设置以下值： `/etc/sysctl.conf`：
+内核参数`net.core.somaxconn`控制等待连接的打开套接字的最大数目。 可以安全地将此值增加到1024，但应该将其与服务器处理此数量的能力相关联。 要启用此内核参数，请在`/etc/sysctl.conf`中设置以下值：
 
 ```text
 net.core.somaxconn = 1024
@@ -51,7 +51,7 @@ Magento完全支持PHP 7.3和7.4。在配置PHP以获得最大请求处理速度
 
 ### PHP扩展
 
-我们建议将活动PHP扩展的列表限制为 [!DNL Commerce] 功能。
+我们建议将活动PHP扩展的列表限制为[!DNL Commerce]功能所需的那些扩展。
 
 Magento Open Source和Adobe Commerce：
 
@@ -114,7 +114,7 @@ Magento Open Source和Adobe Commerce：
 
 >[!INFO]
 >
->`php-mcrypt` 已从PHP 7.2中删除并替换为 [`sodium` 库](https://www.php.net/manual/en/book.sodium.php). 确保 [钠](https://www.php.net/manual/en/sodium.installation.php) 在升级PHP时正确启用。
+>已从PHP 7.2中删除`php-mcrypt`并将其替换为[`sodium`库](https://www.php.net/manual/en/book.sodium.php)。 请确保在升级PHP时正确启用[钠](https://www.php.net/manual/en/sodium.installation.php)。
 
 >[!INFO]
 >
@@ -122,7 +122,7 @@ Magento Open Source和Adobe Commerce：
 
 ### PHP设置
 
-要确保成功执行所有 [!DNL Commerce] 在不将数据或代码转储到磁盘的情况下，按如下方式设置内存限制：
+要确保成功执行所有[!DNL Commerce]实例，而不将数据或代码转储到磁盘，请按照以下方式设置内存限制：
 
 ```text
 memory_limit=1G
@@ -132,7 +132,7 @@ memory_limit=1G
 
 #### Realpath_cache配置
 
-改进 [!DNL Commerce] 性能，添加或更新以下推荐内容 `realpath_cache` 中的设置 `php.ini` 文件。 此配置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找它们。 请参阅 [性能调整](https://www.php.net/manual/en/ini.core.php) 在PHP文档中。
+要提高[!DNL Commerce]性能，请在`php.ini`文件中添加或更新以下推荐的`realpath_cache`设置。 此配置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找它们。 请参阅PHP文档中的[性能调整](https://www.php.net/manual/en/ini.core.php)。
 
 ```text
 realpath_cache_size=10M
@@ -141,7 +141,7 @@ realpath_cache_ttl=7200
 
 #### 字节代码
 
-获得最大速度 [!DNL Commerce] 在PHP 7上，必须激活OpCache模块并对其进行正确配置。 建议为模块设置以下设置：
+要在PHP 7上获得[!DNL Commerce]的最大速度，您必须激活OpCache模块并正确对其进行配置。 建议为模块设置以下设置：
 
 ```text
 opcache.memory_consumption=512
@@ -162,9 +162,9 @@ opcache.max_accelerated_files=60000
 
 #### APCU
 
-我们建议启用 [PHP APCu扩展](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) 和 [配置 `composer` 支持它](../performance/deployment-flow.md#preprocess-dependency-injection-instructions) 优化以获得最大性能。 此扩展可为打开的文件缓存文件位置，这样可以提高以下各项的性能 [!DNL Commerce] 服务器调用，包括页面、Ajax调用和端点。
+我们建议启用[PHP APCu扩展](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache)和[配置`composer`以支持它](../performance/deployment-flow.md#preprocess-dependency-injection-instructions)以优化其最大性能。 此扩展缓存已打开文件的文件位置，这将提高[!DNL Commerce]服务器调用（包括页面、Ajax调用和端点）的性能。
 
-编辑您的 `apcu.ini` 文件，以包含以下内容：
+编辑您的`apcu.ini`文件以包含以下内容：
 
 ```text
 extension=apcu.so
@@ -174,7 +174,7 @@ apc.enabled = 1
 
 ## Web服务器
 
-Magento完全支持Nginx和Apache Web Server。 [!DNL Commerce] 提供了中建议的配置文件示例  `<magento_home>/nginx.conf.sample` （恩金克斯）及  `<magento_home>.htaccess.sample` (Apache)文件。  Nginx示例包含用于提高性能的设置，并且设计得只需很少的重新配置。 示例文件中定义的一些主要配置最佳实践包括：
+Magento完全支持Nginx和Apache Web Server。 [!DNL Commerce]在`<magento_home>/nginx.conf.sample` (Nginx)和`<magento_home>.htaccess.sample` (Apache)文件中提供了示例推荐配置文件。  Nginx示例包含用于提高性能的设置，并且设计得只需很少的重新配置。 示例文件中定义的一些主要配置最佳实践包括：
 
 * 在浏览器中缓存静态内容的设置
 * PHP的内存和执行时间设置
@@ -185,45 +185,45 @@ Magento完全支持Nginx和Apache Web Server。 [!DNL Commerce] 提供了中建�
 | Web服务器 | 属性名称 | 位置 | 相关信息 |
 |--- | --- | --- | ---|
 | 恩金克斯 | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [调整NGINX以提高性能](https://www.nginx.com/blog/tuning-nginx/) |
-| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache性能优化](https://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
-| Apache 2.4 | `MaxRequestWorkers` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache MPM常用指令](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#maxrequestworkers) |
+| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache性能调整](https://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
+| Apache 2.4 | `MaxRequestWorkers` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache MPM公共指令](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#maxrequestworkers) |
 
 ## [!DNL MySQL]
 
-本文档未提供深入信息 [!DNL MySQL] 调整说明，因为每个商店和环境各不相同，但我们可以提出一些一般建议。
+本文档未提供深入的[!DNL MySQL]优化说明，因为每个存储和环境都不同，但我们可以提出一些常规建议。
 
-在以下方面做出了许多改进： [!DNL MySQL] 5.7.9我们有信心 [!DNL MySQL] 均使用良好的默认设置分发。 最关键的设置是：
+对[!DNL MySQL] 5.7.9进行了许多改进。我们确信已使用良好的默认设置分发[!DNL MySQL]。 最关键的设置是：
 
 | 参数 | 默认 | 描述 |
 |--- | --- | ---|
 | `innodb_buffer_pool_instances` | 8 | 默认值为8，以避免多个线程尝试访问同一实例时出现问题。 |
-| `innodb_buffer_pool_size` | 128兆字节 | 结合上述多个池实例，这意味着默认内存分配为1024MB。 总大小在所有缓冲池中分配。 为获得最佳效率，请指定 `innodb_buffer_pool_instances` 和 `innodb_buffer_pool_size` 以使每个缓冲池实例至少1 GB。 |
-| `max_connections` | 150 | 的值 `max_connections` 参数应与应用程序服务器中配置的PHP线程总数相关。 一般建议是，小环境为300，中环境为1,000。 |
+| `innodb_buffer_pool_size` | 128兆字节 | 结合上述多个池实例，这意味着默认内存分配为1024MB。 总大小在所有缓冲池中分配。 为获得最佳效率，请指定`innodb_buffer_pool_instances`和`innodb_buffer_pool_size`的组合，以便每个缓冲池实例至少为1 GB。 |
+| `max_connections` | 150 | `max_connections`参数的值应与应用程序服务器中配置的PHP线程总数相关。 一般建议是，小环境为300，中环境为1,000。 |
 | `innodb_thread_concurrency` | 0 | 此配置的最佳值应按以下公式计算： `innodb_thread_concurrency = 2 * (NumCPUs + NumDisks)` |
 
 ## [!DNL Varnish]
 
-Magento强烈建议使用 [!DNL Varnish] 作为商店的全页缓存服务器。 PageCache模块仍存在于代码库中，但应仅将其用于开发目的。 它不应与一起使用，也不应代替， [!DNL Varnish].
+Magento强烈建议使用[!DNL Varnish]作为商店的整页缓存服务器。 PageCache模块仍存在于代码库中，但应仅将其用于开发目的。 它不应与[!DNL Varnish]一起使用，也不应替代。
 
-安装 [!DNL Varnish] 在Web层前面的单独服务器上。 它应接受所有传入请求并提供缓存的页面副本。 允许 [!DNL Varnish] 为了有效处理安全页面，可以将SSL终止代理放置在 [!DNL Varnish]. Nginx可用于此目的。
+在Web层前面的单独服务器上安装[!DNL Varnish]。 它应接受所有传入请求并提供缓存的页面副本。 为了允许[!DNL Varnish]有效地处理安全页面，可以将SSL终止代理置于[!DNL Varnish]之前。 Nginx可用于此目的。
 
-[!DNL Commerce] 分发样例配置文件 [!DNL Varnish] （版本4和版本5），其中包含所有推荐的性能设置。 其中最重要的性能包括：
+[!DNL Commerce]为[!DNL Varnish]（版本4和5）分发一个示例配置文件，其中包含所有推荐的性能设置。 其中最重要的性能包括：
 
-* **后端运行状况检查** 轮询 [!DNL Commerce] 服务器确定它是否及时响应。
-* **宽限模式** 允许您指示 [!DNL Varnish] 将对象保留在缓存中超过其生存时间(TTL)时段并提供此过时内容，如果 [!DNL Commerce] 运行不正常，或者尚未获取最新内容。
-* **Saint模式** 黑名单不正常 [!DNL Commerce] 服务器，以保留可配置的时间量。 因此，当使用时，不正常的后端无法提供流量 [!DNL Varnish] 作为负载平衡器。
+* **后端运行状况检查**&#x200B;轮询[!DNL Commerce]服务器以确定它是否及时响应。
+* **宽限模式**&#x200B;允许您指示[!DNL Varnish]在超出[!DNL Commerce]的生存时间(TTL)时段后保留缓存中的对象并提供此过时内容（如果不正常或尚未获取新内容）。
+* **Saint模式**&#x200B;在可配置的时间范围内将不正常的[!DNL Commerce]服务器列入黑名单。 因此，当使用[!DNL Varnish]作为负载平衡器时，不正常的后端无法提供流量。
 
-请参阅 [高级 [!DNL Varnish] 配置](../configuration/cache/config-varnish-advanced.md) 以了解有关实施这些功能的更多信息。
+有关实现这些功能的详细信息，请参阅[高级 [!DNL Varnish] 配置](../configuration/cache/config-varnish-advanced.md)。
 
 ### 优化资产性能
 
 通常，我们建议将您的资产（图像、JS、CSS等）存储在CDN上以获得最佳性能。
 
-如果您的站点不需要部署大量区域设置，并且您的服务器与大多数客户位于同一个区域，则可以通过将资产存储在 [!DNL Varnish] 而不是使用CDN。
+如果您的网站不需要部署大量区域设置，并且您的服务器与大多数客户位于同一区域，则通过将资产存储在[!DNL Varnish]中而不是使用CDN，您可能会发现以较低的成本获得了显着的性能提升。
 
-要将您的资产存储在 [!DNL Varnish]，将以下VCL条目添加到 `default.vcl` 文件生成者 [!DNL Commerce] 对象 [!DNL Varnish] 5.
+要将您的资产存储在[!DNL Varnish]中，请在[!DNL Commerce]为[!DNL Varnish] 5生成的`default.vcl`文件中添加以下VCL条目。
 
-在 `if` PURGE请求的对帐单 `vcl_recv` 副例程，添加：
+在`vcl_recv`子例程中PURGE请求的`if`语句的末尾，添加：
 
 ```javascript
 # static files are cacheable. remove SSL flag and cookie
@@ -235,8 +235,8 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 }
 ```
 
-在 `vcl_backend_response` 副程式，查找 `if` 语句，用于取消设置的Cookie `GET` 或 `HEAD` 请求。
-更新的 `if` 块应如下所示：
+在`vcl_backend_response`子例程中，查找用于为`GET`或`HEAD`请求取消设置Cookie的`if`语句。
+更新的`if`块应如下所示：
 
 ```javascript
 # validate if we need to cache it and prevent from setting cookie
@@ -252,7 +252,7 @@ if (bereq.url !~ "\.(ico|css|js|jpg|jpeg|png|gif|tiff|bmp|gz|tgz|bz2|tbz|mp3|ogg
 }
 ```
 
-重新启动 [!DNL Varnish] 服务器，以便在您升级网站或部署/更新资产时刷新缓存的资产。
+每次升级网站或部署/更新资产时，请重新启动[!DNL Varnish]服务器以刷新缓存的资产。
 
 ## 缓存和会话服务器
 
@@ -264,7 +264,7 @@ Magento提供了多个用于存储缓存和会话数据的选项，包括Redis�
 
 ### 多个Web节点设置
 
-对于多Web节点设置，Redis是最佳选项。 因为 [!DNL Commerce] 主动缓存大量数据以获得更好的性能，请留意Web节点与Redis服务器之间的网络通道。 您不希望该渠道成为请求处理的瓶颈。
+对于多Web节点设置，Redis是最佳选项。 由于[!DNL Commerce]主动缓存大量数据以获得更好的性能，请注意网络节点和Redis服务器之间的网络通道。 您不希望该渠道成为请求处理的瓶颈。
 
 >[!INFO]
 >

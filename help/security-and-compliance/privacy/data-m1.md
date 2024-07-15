@@ -54,17 +54,17 @@ Magento1将客户信息存储在customer 、 sales和其他数据库表中。
 
 ### 客户数据
 
-Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity` 表格。 这两个表都有多个引用表，它们可以包含自定义客户属性。
+Magento1将客户信息存储在`customer_entity`和`customer_address_entity`表中。 这两个表都有多个引用表，它们可以包含自定义客户属性。
 
-#### `customer_entity` 和参考表
+#### `customer_entity`和引用表
 
-中的以下列 `customer_entity`该表包含客户信息：
+`customer_entity`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
 | `email` | varchar(255) |
 
-这些表引用 `customer_entity` 并且可以包含自定义客户属性：
+这些表引用`customer_entity`，并且可以包含自定义客户属性：
 
 | 表 | 列 | 数据类型 |
 | --- | --- | --- |
@@ -74,9 +74,9 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `customer_entity_text` | `value` | 文本 |
 | `customer_entity_varchar` | `value` | varchar(255) |
 
-#### `customer_address_entity` 和参考表
+#### `customer_address_entity`和引用表
 
-下表参考 `customer_address_entity` 并且可以包含自定义客户属性：
+以下表引用`customer_address_entity`，并且可以包含自定义客户属性：
 
 | 表 | 列 | 数据类型 |
 | --- | --- | --- |
@@ -88,11 +88,11 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 
 ### 订单数据
 
-此 `sales_flat_order` 和相关表包含客户名称、账单和运送地址以及相关信息。
+`sales_flat_order`和相关表包含客户名称、帐单和送货地址及相关信息。
 
-#### `sales_flat_order` 表
+#### `sales_flat_order`表
 
-中的以下列 `sales_order` 该表包含客户信息：
+`sales_order`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -107,9 +107,9 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `customer_taxvat` | varchar(32) |
 | `remote_ip` | varchar(32) |
 
-#### `sales_flat_order_address` 表
+#### `sales_flat_order_address`表
 
-此 `sales_flat_order_address` 表包含客户的地址。
+`sales_flat_order_address`表包含客户的地址。
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -129,9 +129,9 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `company` | varchar(255) |
 | `vat_id` | 文本 |
 
-#### `sales_flat_order_grid` 表
+#### `sales_flat_order_grid`表
 
-中的以下列 `sales_flat_order_grid` 该表包含客户信息：
+`sales_flat_order_grid`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -139,9 +139,9 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `shipping_name` | varchar(255) |
 | `billing_name` | varchar(255) |
 
-#### `sales_flat_order_payment` 表
+#### `sales_flat_order_payment`表
 
-中的以下列 `sales_flat_order_payment` 该表包含客户信息：
+`sales_flat_order_payment`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -159,9 +159,9 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 
 引号包含客户的姓名、电子邮件、地址和相关信息。
 
-#### `sales_flat_quote` 表
+#### `sales_flat_quote`表
 
-中的以下列 `sales_flat_quote` 该表包含客户信息：
+`sales_flat_quote`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -179,9 +179,9 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `remote_ip` | varchar(255) |
 | `customer_gender` | varchar(255) |
 
-#### `sales_flat_quote_address` 表
+#### `sales_flat_quote_address`表
 
-中的以下列 `sales_flat_quote_address` 该表包含客户信息：
+`sales_flat_quote_address`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --- | --- |
@@ -198,9 +198,9 @@ Magento1将客户信息存储在 `customer_entity` 和 `customer_address_entity`
 | `postcode` | varchar(255) |
 | `fax` | varchar(255) |
 
-#### `sales_flat_quote_payment` 表
+#### `sales_flat_quote_payment`表
 
-此 `sales_flat_quote_payment` 表包括信用卡信息和其他交易信息。
+`sales_flat_quote_payment`表包括信用卡信息和其他事务信息。
 
 | 列 | 数据类型 |
 | --- | --- |

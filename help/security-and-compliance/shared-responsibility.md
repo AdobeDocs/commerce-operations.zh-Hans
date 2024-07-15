@@ -106,10 +106,10 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 以下摘要表使用RACI模型来显示Adobe、商家和云服务提供商之间共享的安全职责：
 
-**R**  — 负责
-**A**  — 负责
-**C**  — 已咨询
-**I**  — 已通知
+**R** — 负责人
+**A** — 责任人
+**C** — 已咨询
+**I** — 已通知
 
 >[!ENDSHADEBOX]
 
@@ -132,7 +132,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>将修补程序应用到支持服务<br>（例如，Nginx或MySQL。）</td>
+    <td>正在将修补程序应用于支持服务<br>（例如，Nginx或MySQL。）</td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -230,7 +230,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>配置源存储库<sup>1</sup></td>
+    <td>正在配置源存储库<sup>1</sup></td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -356,7 +356,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>配置Nginx<sup>3</sup></td>
+    <td>正在配置Nginx<sup>3</sup></td>
     <td>R</td>
     <td>R</td>
     <td></td>
@@ -440,7 +440,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>在云基础架构PCI扫描上修复Adobe Commerce<sup>4</sup></td>
+    <td>正在云基础架构PCI扫描上修复Adobe Commerce<sup>4</sup></td>
     <td>R</td>
     <td>R</td>
     <td></td>
@@ -520,10 +520,10 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 <tfoot>
   <tr>
     <td colspan="5">
-      <p><sup><strong>1</strong></sup> 仅当使用Adobe Commerce on cloud infrastructure存储库作为主存储库时。 使用其他外部存储库由商家全权负责。</p>
-      <p><sup><strong>2</strong></sup> Adobe为CDN提供商的问题提供级别1支持。</p>
-      <p><sup><strong>3</strong></sup> 商家负责为其应用程序配置的任何Ngnix控件。</p>
-      <p><sup><strong>4</strong></sup> 对于PCI，渗透测试要求在Adobe和商家之间共享。</p>
+      <p><sup><strong>1</strong></sup>仅当云基础架构存储库上的Adobe Commerce用作主存储库时。 使用其他外部存储库由商家全权负责。</p>
+      <p><sup><strong>2</strong></sup>Adobe为CDN提供商的问题提供级别1支持。</p>
+      <p><sup><strong>3</strong></sup>商家负责为其应用程序配置的任何Ngnix控件。</p>
+      <p><sup><strong>4</strong></sup>对于PCI，渗透测试要求在Adobe和商家之间共享。</p>
     </td>
   </tr>
 </tfoot>
@@ -639,7 +639,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | --- | --- | --- |
 | 旋转日志 | R |   |
 | 自定义Adobe Commerce应用程序 | | R |
-| New Relic服务的可用性：<br>APM应用程序和代理集成、基础架构应用程序、<br>日志记录和集成 | R |   |
+| New Relic服务的可用性：<br>APM应用程序和代理集成、基础结构应用程序、<br>日志记录和集成 | R |   |
 | 设置New Relic警报 |     | R |
 | 在PaaS服务器上部署New Relic代理 |     | R |
 
@@ -662,7 +662,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | --- | --- | --- |
 | 应用程序配置 |     | R |
 | 向Adobe Commerce应用程序添加域（基本URL） |     | R |
-| 将Paa配置为使用所部署的Adobe Commerce版本支持的服务版本<br><br>例如，不同的Commerce版本与特定版本的PHP、Redis等兼容。 |     | R |
+| 将PaaS配置为使用所部署的Adobe Commerce版本<br><br>支持的服务版本。例如，不同的Commerce版本与特定版本的PHP、Redis等兼容。 |     | R |
 
 {style="table-layout:auto"}
 
@@ -702,8 +702,8 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | Galera和MariaDB服务的可用性 | R | |
-| 持续维护默认数据库设置<br><br>（索引和优化核心表，优化默认sys-admin设置） | R |   |
-| 持续维护商家数据和修改的设置<br><br>（配置规范化表与平面表，索引和优化自定义表和第三方表，存档或删除数据，配置系统管理设置） |     | R |
+| 正在维护默认数据库设置<br><br>（索引和优化核心表，优化默认sys-admin设置） | R |   |
+| 持续维护商家数据和修改的设置<br><br>（配置规范化表与平面表、索引和优化自定义表和第三方表、存档或删除数据、配置系统管理设置） |     | R |
 | Galera和MySQL的配置 | R |   |
 | Galera和MariaDB的持续质量和修补 | R |   |
 | 持续的基础架构优化 | R |   |
@@ -786,7 +786,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | Adobe CommerceBusiness Intelligence服务的可用性 | R |   |
 | MBI数据同步过程 | R |   |
 | 检测MBI同步问题 | R |   |
-| 配置MBI数据同步到Adobe Commerce Cloud Pro、Starter、内部部署或非Adobe Commerce<br>(API、数据质量和格式、商家网络、<br>Adobe Commerce Cloud DB内部和外部的数据库连接（超过数据阈值） |     | R |
+| 配置MBI数据同步到Adobe Commerce Cloud Pro、Starter、内部部署或非Adobe Commerce<br>(API、数据质量和格式、商家网络、<br>Adobe Commerce Cloud DB内部和外部的数据库连接，超过数据阈值) |     | R |
 | 配置MBI数据同步到Adobe Commerce Cloud Pro<br>(Adobe Commerce Cloud数据库配置) | R |   |
 
 {style="table-layout:auto"}
@@ -857,7 +857,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | PrivateLink入站到商家VPC服务端点的配置 |     | R |
 | 接受PrivateLink入站到商户的VPC服务端点 | R |   |
 | PrivateLink集成（端点到帐户）的配置 |     | R |
-| 为PrivateLink端点配置商家拥有的VPC<br><br> （包括任何VPN连接） |     | R |
+| 为PrivateLink终结点<br><br>配置商家拥有的VPC（包括任何VPN连接） |     | R |
 
 {style="table-layout:auto"}
 

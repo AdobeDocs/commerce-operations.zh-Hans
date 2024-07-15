@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 升级数据库架构和数据
 
-使用此命令之前，必须 [安装应用程序](../advanced.md).
+使用此命令之前，必须[安装应用程序](../advanced.md)。
 
 ## 升级数据库架构和数据
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->A *组件* 可以是模块、主题或语言包；组件是否来自Commerce Marketplace无关。
+>*组件*&#x200B;可以是模块、主题或语言包；组件是否来自Commerce Marketplace无关紧要。
 
 1. 开始升级：
 
@@ -31,7 +31,7 @@ ht-degree: 0%
    bin/magento setup:upgrade [--keep-generated]
    ```
 
-   位置 `--keep-generated` 是一个可选参数，不会更新 [静态视图文件](../../configuration/cli/static-view-file-deployment.md). 此可选参数可供使用 *仅限* 由经验丰富的系统集成商在有限的情况下提供。 应该使用它 *仅限* 在 [生产模式](../../configuration/bootstrap/application-modes.md#production-mode). 它应该 *非* 使用位置 [开发者模式](../../configuration/bootstrap/application-modes.md#developer-mode).
+   其中`--keep-generated`是不更新[静态视图文件](../../configuration/cli/static-view-file-deployment.md)的可选参数。 此可选参数仅供经验丰富的系统集成商在有限的情况下使用&#x200B;*1}。*&#x200B;在[生产模式](../../configuration/bootstrap/application-modes.md#production-mode)中只应使用&#x200B;*1}。*&#x200B;它应该&#x200B;*不*&#x200B;在[开发人员模式](../../configuration/bootstrap/application-modes.md#developer-mode)中使用。
 
 1. 清理缓存：
 

@@ -23,7 +23,7 @@ ht-degree: 20%
       <img alt="发行信息" src="../assets/icons/promote.svg" width="40"/>
     </a>
     <div>
-      <a href="../release/release-notes/overview.md"><strong>发行信息</strong></a>
+      <a href="../release/release-notes/overview.md"><strong>版本信息</strong></a>
       <p>查看Adobe Commerce修补程序和服务的所有发行信息。</p>
     </div>
   </td>
@@ -70,7 +70,7 @@ ht-degree: 20%
        <img alt="企业" src="../assets/icons/enterprise.svg" width="40"/>
     </a>
     <div>
-      <a href="../commerce-at-scale/overview.md"><strong>大规模商务</strong></a>
+      <a href="../commerce-at-scale/overview.md"><strong>Commerce规模</strong></a>
       <p>了解如何结合使用 Adobe Commerce 和 Adobe Experience Manager 大规模交付体验。</p>
     </div>
   </td>

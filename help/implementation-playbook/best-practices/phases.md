@@ -23,7 +23,7 @@ ht-degree: 7%
     <img alt="规划" src="../../assets/icons/enterprise.svg" width="80" height="80"/>
     </a>
     <div>
-    <a href="planning/overview.md"><strong>规划</strong></a>
+    <a href="planning/overview.md"><strong>计划</strong></a>
     </div>
     需求收集、架构设计、目录设计、项目范围、帐户配置、用户访问、扩展购买
     <br>
@@ -43,7 +43,7 @@ ht-degree: 7%
       <img alt="Launch" src="../../assets/icons/launch.svg" width="80" height="80">
     </a>
     <div>
-    <a href="launch/overview.md"><strong>Launch</strong></a>
+    <a href="launch/overview.md"><strong>启动项</strong></a>
     </div>
     最终的启动前和启动后清单审查、生产部署、安全配置、服务验证和性能监控  
     <br>

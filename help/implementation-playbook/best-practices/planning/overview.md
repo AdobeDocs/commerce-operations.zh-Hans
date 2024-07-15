@@ -98,7 +98,7 @@ ht-degree: 1%
 
 | 最佳实践 | 描述 |
 |----------------------------------------------------------------------------------------|----------------------------------------------------------|
-| [全球参考体系结构(GRA)](../../architecture/global-reference/examples.md) | 了解组织GRA代码库的常用方法。 |
+| [全局参考体系结构(GRA)](../../architecture/global-reference/examples.md) | 了解组织GRA代码库的常用方法。 |
 
 ## 目录设计
 
@@ -108,8 +108,8 @@ ht-degree: 1%
 | [产品配置&#x200B;](catalog-management.md#product-sku-limits) | 配置产品SKU以获得最佳性能。 |
 | [产品变体配置](catalog-management.md#product-variations) | 配置产品变体以获得最佳性能。 |
 | [产品选项配置](catalog-management.md#product-options) | 配置产品选项以获得最佳性能。 |
-| [产品属性配置&#x200B;。](catalog-management.md#product-attributes) | 配置产品属性以获得最佳性能。 |
-| [产品列表的分页配置](catalog-management.md#product-listing-pagination) | 配置产品列表分页以获得最佳性能。 |
+| [产品属性配置&#x200B;](catalog-management.md#product-attributes) | 配置产品属性以获得最佳性能。 |
+| 产品列表的[分页配置](catalog-management.md#product-listing-pagination) | 配置产品列表分页以获得最佳性能。 |
 
 ## 扩展
 
@@ -121,8 +121,8 @@ ht-degree: 1%
 
 | 最佳实践 | 描述 |
 |--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [合作伙伴升级](partner-escalation.md) | 准备向Adobe客户团队上报合作伙伴问题，或了解如何避免升级。 |
-| [支付存储处理](payment-processing-storage.md) | 安全地处理和存储付款详细信息。 |
+| [合作伙伴呈报](partner-escalation.md) | 准备向Adobe客户团队上报合作伙伴问题，或了解如何避免升级。 |
+| [付款存储处理](payment-processing-storage.md) | 安全地处理和存储付款详细信息。 |
 
 ## 销售和营销
 

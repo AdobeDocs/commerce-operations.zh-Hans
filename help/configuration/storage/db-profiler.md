@@ -6,7 +6,7 @@ badge: label="作者：阿提什·戈斯瓦米" type="Informative" url="https://
 exl-id: 87780db5-6e50-4ebb-9591-0cf22ab39af5
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Commerce数据库探查器显示页面上实施的所有查询，包括每个查
 
 ## 步骤1：修改部署配置
 
-修改 `<magento_root>/app/etc/env.php` 将以下引用添加到 [database profiler类](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php)：
+修改`<magento_root>/app/etc/env.php`以添加对[数据库探查器类](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/DB/Profiler.php)的以下引用：
 
 ```php?start_inline=1
         'profiler' => [
@@ -55,7 +55,7 @@ Commerce数据库探查器显示页面上实施的所有查询，包括每个查
 
 ## 步骤2：配置输出
 
-在Commerce应用程序引导文件中配置输出；这可能是 `<magento_root>/pub/index.php` 或者，它可以位于Web服务器虚拟主机配置中。
+在Commerce应用程序引导文件中配置输出；这可能是`<magento_root>/pub/index.php`，或者它可能位于Web服务器虚拟主机配置中。
 
 以下示例在三列表中显示结果：
 
@@ -63,7 +63,7 @@ Commerce数据库探查器显示页面上实施的所有查询，包括每个查
 - SQL （显示所有SQL查询；行标题显示查询计数）
 - 查询参数（显示每个SQL查询的参数）
 
-要配置输出，请在以下内容之后添加 `$bootstrap->run($app);` bootstrap文件中的行：
+要配置输出，请在引导文件的`$bootstrap->run($app);`行后面添加以下内容：
 
 ```php?start_inline=1
 /** @var \Magento\Framework\App\ResourceConnection $res */

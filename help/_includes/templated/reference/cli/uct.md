@@ -10,16 +10,16 @@ ht-degree: 0%
 <!-- All the assigned and captured content is used in the included template -->
 
 <!-- The template to render with above values -->
-**版本**：3.0.17
+**版本**： 3.0.17
 
-此参考包含9个命令，这些命令可通过 `bin/uct` 命令行工具。
-初始列表是使用 `bin/uct list` Adobe Commerce命令。
+此引用包含通过`bin/uct`命令行工具提供的9个命令。
+初始列表是在Adobe Commerce中使用`bin/uct list`命令自动生成的。
 
-在中了解有关该工具的更多信息 [概述](/help/upgrade/upgrade-compatibility-tool/overview.md).
+在[概述](/help/upgrade/upgrade-compatibility-tool/overview.md)中了解有关该工具的更多信息。
 
 >[!NOTE]
 >
->此引用从应用程序代码库生成。 要更改内容，可以在中更新相应命令实施的源代码 [代码库](https://github.com/magento) 存储库并提交更改以供审阅。 另一种方法是 _向我们提供反馈_ （在右上角找到链接）。 有关贡献准则，请参阅 [代码贡献内容](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+>此引用从应用程序代码库生成。 要更改内容，您可以在[代码库](https://github.com/magento)存储库中更新相应命令实现的源代码，并提交更改以供审阅。 另一种方法是&#x200B;_向我们提供反馈_（在右上角查找链接）。 有关贡献准则，请参阅[代码贡献](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)。
 
 ## `_complete`
 
@@ -30,53 +30,53 @@ bin/uct _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [
 用于提供外壳完成建议的内部命令
 
 
-### `--shell`， `-s`
+### `--shell`，`-s`
 
 shell类型(“bash”)
 
 - 需要一个值
 
-### `--input`， `-i`
+### `--input`，`-i`
 
-输入令牌的数组（例如COMP_WORDS或argv）
+输入令牌的数组(例如COMP_WORDS或argv)
 
 - 默认： `[]`
 - 需要一个值
 
-### `--current`， `-c`
+### `--current`，`-c`
 
-光标所在的“输入”数组的索引（例如COMP_CWORD）
+光标所在的“输入”数组的索引(例如COMP_CWORD)
 
 - 需要一个值
 
-### `--symfony`， `-S`
+### `--symfony`，`-S`
 
 完成脚本的版本
 
 - 需要一个值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -96,7 +96,7 @@ shell类型(“bash”)
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -155,28 +155,28 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 - 默认： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -196,7 +196,7 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -247,28 +247,28 @@ To display the list of available commands, please use the list command.
 - 默认： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -288,7 +288,7 @@ To display the list of available commands, please use the list command.
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -350,28 +350,28 @@ It's also possible to get raw list of commands (useful for embedding command run
 - 默认： `false`
 - 不接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -391,7 +391,7 @@ It's also possible to get raw list of commands (useful for embedding command run
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -415,28 +415,28 @@ bin/uct refactor <path>
 
 - 必填
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -456,7 +456,7 @@ bin/uct refactor <path>
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -485,34 +485,34 @@ Adobe Commerce安装目录。
 Adobe Commerce vanilla安装目录。
 
 
-### `--output`， `-o`
+### `--output`，`-o`
 
 将导出输出的文件的路径（Json格式）
 
 - 接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -532,7 +532,7 @@ Adobe Commerce vanilla安装目录。
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -562,28 +562,28 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 - 必填
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -603,7 +603,7 @@ bin/uct dbschema:diff <current-version> <target-version>
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -633,34 +633,34 @@ GraphQL架构兼容性验证
 
 - 必填
 
-### `--output`， `-o`
+### `--output`，`-o`
 
 将导出输出的文件的路径（JSON格式）
 
 - 接受值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -680,7 +680,7 @@ GraphQL架构兼容性验证
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 
@@ -704,13 +704,13 @@ Adobe Commerce安装目录。
 
 - 必填
 
-### `--current-version`， `-a`
+### `--current-version`，`-a`
 
 如果忽略，则将使用当前的Adobe Commerce版本Adobe Commerce安装的版本。
 
 - 接受值
 
-### `--coming-version`， `-c`
+### `--coming-version`，`-c`
 
 定位Adobe Commerce版本。 如果忽略，将使用最新发布的稳定版Adobe Commerce。 可用的Adobe Commerce版本： 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2 - p2 \| 2.3.3 \| 2.3.3-p1 \| 2.3.4 \| 2.3.4-p1 \| 2.3.4-p2 \| 2.3.5 \| 2.3.5-p1 \| 2.3.5 - p2 \| 2.3.6 \| 2.3.6-p1 \| 2.3.7 \| 2.3.7-p1 \| 2.3.7 - p2 \| 2.3.7 - p3 \| 2.3.7 - p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p2 \| 2.4.3 - p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.4-p2 \| 2.4.4 - p3 \| 2.4.4 - p4 \| 2.4.4-p5 \| 2.4.4-p6 \| 2.4.4-p7 \| 2.4.4 - p8 \| 2.4.4 - p9 \| 2.4.5 \| 2.4.5-p1 \| 2.4.5 - p2 \| 2.4.5 - p3 \| 2.4.5 - p4 \| 2.4.5 - p5 \| 2.4.5-p6 \| 2.4.5-p7 \| 2.4.5-p8 \| 2.4.6 \| 2.4.6-p1 \| 2.4.6-p2 \| 2.4.6 - p3 \| 2.4.6 - p4 \| 2.4.6-p5 \| 2.4.6-p6 \| 2.4.7-beta1 \| 2.4.7-beta2 \| 2.4.7-beta3 \| 2.4.7 \| 2.4.7 - p1
 
@@ -735,7 +735,7 @@ Adobe Commerce安装目录。
 - 默认： `warning`
 - 接受值
 
-### `--ignore-current-version-compatibility-issues`， `-i`
+### `--ignore-current-version-compatibility-issues`，`-i`
 
 忽略当前版本和即将发布的版本的常见问题
 
@@ -748,28 +748,28 @@ Adobe Commerce安装目录。
 
 - 需要一个值
 
-### `--help`， `-h`
+### `--help`，`-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-### `--quiet`， `-q`
+### `--quiet`，`-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-### `--verbose`， `-v|-vv|-vvv`
+### `--verbose`，`-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-### `--version`， `-V`
+### `--version`，`-V`
 
 显示此应用程序版本
 
@@ -789,7 +789,7 @@ Adobe Commerce安装目录。
 - 默认： `false`
 - 不接受值
 
-### `--no-interaction`， `-n`
+### `--no-interaction`，`-n`
 
 不要问任何交互式问题
 

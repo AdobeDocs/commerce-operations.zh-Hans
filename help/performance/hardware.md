@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## CPU
 
-[!DNL Commerce] Web节点提供未缓存或无法通过应用程序缓存的所有请求。 一个CPU核心最多可以处理两个（有时最多四个） [!DNL Commerce] 请求有效。 使用以下公式可确定需要有多少Web节点/核心来处理所有传入请求，而无需将它们排入队列：
+[!DNL Commerce] Web节点提供所有未缓存或无法通过应用程序缓存的请求。 一个CPU核心可以有效地处理大约两个（有时最多四个） [!DNL Commerce]请求。 使用以下公式可确定需要有多少Web节点/核心来处理所有传入请求，而无需将它们排入队列：
 
 ```
 N[Cores] = (N[Expected Requests] / 2) + N [Expected Cron Processes]
@@ -32,22 +32,22 @@ N[Cores] = (N[Expected Requests] / 2) + N [Expected Cron Processes]
 
 * 仅提供店面页面的Web节点：256 MB
 * Web节点使用大型目录为管理员页面提供服务：1 GB
-* [!DNL Commerce] cron使用大型目录索引网站：>256 MB(请参阅 [高级设置](../performance/advanced-setup.md) 以优化性能。)
-* [!DNL Commerce] 编译和部署静态资产：756 MB
-* [!DNL Commerce] 性能工具包配置文件生成：大于1 GB PHP RAM，大于16 MB [!DNL MySQL] TMP_TABLE_SIZE和MAX_HEAP_TABLE_SIZE设置
+* [!DNL Commerce] cron使用大型目录对网站编制索引： >256 MB （请参阅[高级设置](../performance/advanced-setup.md)以优化性能。）
+* [!DNL Commerce]编译和部署静态资源：756 MB
+* [!DNL Commerce]性能工具包配置文件生成：>1 GB PHP RAM，>16 MB [!DNL MySQL] TMP_TABLE_SIZE和MAX_HEAP_TABLE_SIZE设置
 
 ### [!DNL MySQL]
 
-此 [!DNL Commerce] 数据库（以及任何其他数据库）对可用于存储数据和索引的内存量敏感。 有效利用 [!DNL MySQL] 数据索引，可用的内存量至少应接近数据库中存储的数据大小的一半。
+[!DNL Commerce]数据库（以及任何其他数据库）对可用于存储数据和索引的内存量敏感。 要有效地利用[!DNL MySQL]数据索引，可用的内存量至少应接近数据库中存储的数据大小的一半。
 
 ### 缓存
 
-如果要部署多个 [!DNL Commerce] 使用Redis或 [!DNL Varnish] 对于您的缓存，请牢记以下原则：
+如果要部署多个[!DNL Commerce]并为缓存使用Redis或[!DNL Varnish]，请牢记以下原则：
 
-* [!DNL Varnish] 全页缓存内存失效有效，建议分配足够的内存给 [!DNL Varnish] 将你最受欢迎的分页保存在记忆中
+* [!DNL Varnish]整页缓存内存无效有效，建议分配给[!DNL Varnish]的内存足够容纳内存中最常用的页面
 * 会话缓存是为Redis的单独实例配置的良好候选项。  此缓存类型的内存配置应考虑站点的购物车放弃策略以及会话预计在缓存中保留的时长
 * Redis应分配足够的内存来保存内存中的所有其他缓存，以获得最佳性能。  块缓存将是决定要配置的内存量的关键因素。  块缓存会相对于网站上的页面数量而增长（sku数量x存储查看数量）
 
 ## 网络带宽
 
-充足的网络带宽是Web节点、数据库、缓存/会话服务器和其他服务之间数据交换的关键要求之一。 因为 [!DNL Commerce] 有效地利用缓存实现高性能，您的系统可以主动与Redis等缓存服务器交换数据。 如果Redis位于远程服务器上，则必须在Web节点和缓存服务器之间提供充足的网络通道，以防止读/写操作出现瓶颈。
+充足的网络带宽是Web节点、数据库、缓存/会话服务器和其他服务之间数据交换的关键要求之一。 由于[!DNL Commerce]有效地利用缓存实现高性能，因此您的系统可以主动与缓存服务器（如Redis）交换数据。 如果Redis位于远程服务器上，则必须在Web节点和缓存服务器之间提供充足的网络通道，以防止读/写操作出现瓶颈。

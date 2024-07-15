@@ -1,11 +1,11 @@
 ---
 title: 什么是B2B和B2C？
-description: 了解不同的Commerce商业模式。
+description: 了解不同的Commerce业务模式。
 exl-id: d66b4a7f-d54b-4902-8791-7a8f67fa4b43
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 1%
+source-wordcount: '266'
+ht-degree: 0%
 
 ---
 
@@ -52,9 +52,9 @@ B2B的客户服务：
 B2C客户服务：
 
 - 全天候客户服务
-- 售后退货
-- 售后交换
-- 售后问题
+- Post-sale回报
+- Post销售交换
+- Post-sale问题
 - 可用性
 
 ## B2B和B2C之间的区别摘要

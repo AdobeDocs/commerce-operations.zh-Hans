@@ -13,7 +13,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-您必须启动 [消息队列使用者](../queues/consumers.md) 启用异步操作，如Inventory management批量操作和REST批量操作以及异步端点。 要启用B2B功能，必须启动多个使用者。 第三方模块可能还要求您启动自定义消费者。
+必须启动[消息队列使用者](../queues/consumers.md)以启用异步操作，例如Inventory management批量操作以及REST批量操作和异步端点。 要启用B2B功能，必须启动多个使用者。 第三方模块可能还要求您启动自定义消费者。
 
 要查看所有使用者的列表，请执行以下操作：
 
@@ -27,14 +27,14 @@ bin/magento queue:consumers:list
 bin/magento queue:consumers:start [--max-messages=<value>] [--batch-size=<value>] [--single-thread] [--area-code=<value>] [--multi-process=<value>] <consumer_name>
 ```
 
-使用所有可用消息后，该命令将终止。 您可以手动或使用cron作业再次运行该命令。 您还可以运行 `magento queue:consumers:start` 命令处理大型消息队列。 例如，您可以附加 `&` 命令在后台运行，返回提示符，然后继续运行命令：
+使用所有可用消息后，该命令将终止。 您可以手动或使用cron作业再次运行该命令。 您还可以运行`magento queue:consumers:start`命令的多个实例来处理大型消息队列。 例如，您可以将`&`附加到命令中，以便在后台运行该命令，返回提示符，然后继续运行命令：
 
 ```bash
 bin/magento queue:consumers:start <consumer_name> &
 ```
 
-请参阅 [`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart) 在的Commerce部分中 _命令行工具引用_ 有关命令选项、参数和值的详细信息。
+有关命令选项、参数和值的详细信息，请参阅&#x200B;_命令行工具引用_&#x200B;的Commerce部分中的[`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart)。
 
 >[!INFO]
 >
->此 `--multi-process` 选项存在于中 `queue:consumers:start` 命令，但若要使用并行进程运行使用者，请配置 [`multiple_processes`](../queues/manage-message-queues.md#configuration) 中的选项 `/app/etc/env.php`. 否则，如果 `queue:consumers:start` 调用时使用 `--multi-process` 选项，它仅在单个线程上工作。
+>`--multi-process`选项存在于`queue:consumers:start`命令中，但若要使用并行进程运行使用者，请在`/app/etc/env.php`中配置[`multiple_processes`](../queues/manage-message-queues.md#configuration)选项。 否则，如果使用`--multi-process`选项调用`queue:consumers:start`，则它仅在单个线程上运行。

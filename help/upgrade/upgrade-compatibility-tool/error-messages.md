@@ -1,25 +1,25 @@
 ---
-title: ’[!DNL Upgrade Compatibility Tool] 错误消息
-description: 了解有关使用时遇到的错误消息的更多信息 [!DNL Upgrade Compatibility Tool] 在您的Adobe Commerce项目上。
+title: “[!DNL Upgrade Compatibility Tool]错误消息”
+description: 了解有关在您的Adobe Commerce项目上使用 [!DNL Upgrade Compatibility Tool] 时遇到的错误消息的更多信息。
 exl-id: fe4a17a9-a807-4315-b3cd-e35f34e39f6d
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '4113'
+source-wordcount: '4105'
 ht-degree: 4%
 
 ---
 
-# [!DNL Upgrade Compatibility Tool] 错误消息
+# [!DNL Upgrade Compatibility Tool]条错误消息
 
 {{commerce-only}}
 
-此错误消息参考提供了有关执行 [!DNL Upgrade Compatibility Tool].
+此错误消息引用提供有关执行[!DNL Upgrade Compatibility Tool]时可能发生错误的信息。
 
 错误消息按级别（严重问题、错误和警告）和类型(核心代码、自定义代码和GraphQL架构)进行分类。 每种类型都包含以下信息：
 
-- **错误代码**：为错误消息分配的Adobe Commerce标识符。
+- **错误代码**： Adobe Commerce为错误消息分配的标识符。
 - **错误描述**：总结错误原因的描述。
-- **错误建议操作**：如果适用，为排除故障和解决错误提供指导。
+- **错误建议操作**：如果适用，提供故障排除和解决错误的指导。
 
 ## 严重问题
 
@@ -29,10 +29,10 @@ ht-degree: 4%
 
 | 错误代码 | 错误描述 | 建议的操作 |
 | --- | --- | --- |
-| 2001 | 未找到核心文件 | 运行 `composer install` 命令。 |
-| 2002 | 核心文件已修改 | 运行 `composer install` 命令。 |
-| 2003 | 未安装编辑器依赖项 | 缺少编辑器依赖项可能会导致问题。 通过运行恢复依赖关系 `composer require package_name`. |
-| 2005 | 未找到核心文件夹 | 运行 `composer install` 命令。 |
+| 2001 | 未找到核心文件 | 从项目的根目录运行`composer install`命令。 |
+| 2002 | 核心文件已修改 | 从项目的根目录运行`composer install`命令。 |
+| 2003 | 未安装编辑器依赖项 | 缺少编辑器依赖项可能会导致问题。 通过运行`composer require package_name`还原依赖关系。 |
+| 2005 | 未找到核心文件夹 | 从项目的根目录运行`composer install`命令。 |
 
 {style="table-layout:auto"}
 
@@ -42,11 +42,11 @@ ht-degree: 4%
 
 | 错误代码 | 错误描述 | 建议的操作 |
 | --- | --- | --- |
-| 1110 | 实例化不存在的Adobe Commerce类/接口 | 更新代码以使用标记为 `@api`. 实例化不存在的Adobe Commerce类/接口。 |
-| 1111 | 从不存在的Adobe Commerce类扩展 | 扩展类不再存在于代码库中。 不建议使用继承方法来扩展Adobe Commerce功能。 更新代码以使用标记为 `@api`. |
-| 1112 | 正在导入不存在的Adobe Commerce类 | 更新代码以使用标记为 `@api`. |
-| 1113 | 正在加载不存在的Adobe Commerce类 | 更新代码以使用标记为 `@api`. |
-| 1114 | 使用不存在的Adobe Commerce类 | 更新代码以使用标记为 `@api`. |
+| 1110 | 实例化不存在的Adobe Commerce类/接口 | 更新代码以使用标记为`@api`的类。 实例化不存在的Adobe Commerce类/接口。 |
+| 1111 | 从不存在的Adobe Commerce类扩展 | 扩展类不再存在于代码库中。 不建议使用继承方法来扩展Adobe Commerce功能。 更新代码以使用标记为`@api`的类。 |
+| 1112 | 正在导入不存在的Adobe Commerce类 | 更新代码以使用标记为`@api`的类。 |
+| 1113 | 正在加载不存在的Adobe Commerce类 | 更新代码以使用标记为`@api`的类。 |
+| 1114 | 使用不存在的Adobe Commerce类 | 更新代码以使用标记为`@api`的类。 |
 | 1214 | 使用不存在的Adobe Commerce常量 | 请考虑在自定义代码中引入并使用所需值的私有常量。 |
 | 1215 | 覆盖不存在的Adobe Commerce常量 | 请考虑在自定义代码中引入并使用所需值的私有常量。 |
 | 1216 | 分配不存在的Adobe Commerce常量 | 请考虑在自定义代码中引入并使用所需值的私有常量。 |
@@ -54,10 +54,10 @@ ht-degree: 4%
 | 1314 | 使用不存在的Adobe Commerce接口 | 请考虑删除继承，或将其替换为自定义范围中引入的接口。 |
 | 1317 | 继承了不存在的Adobe Commerce接口 | 请考虑删除继承，或将其替换为自定义范围中引入的接口。 |
 | 1318 | 实施了不存在的Adobe Commerce接口 | 请考虑删除继承，或将其替换为自定义范围中引入的接口。 |
-| 1410 | 调用不存在的Adobe Commerce方法 | 更新代码以使用标记为 `@api`. |
-| 1514 | 使用不存在的Adobe Commerce属性 | 更新代码以使用标记为 `@api`. |
-| 1515 | 覆盖不存在的Adobe Commerce属性 | 更新代码以使用标记为 `@api`. |
-| 1516 | 分配不存在的Adobe Commerce资产 | 更新代码以使用标记为 `@api`. 如果属性访问级别只能在单个类中使用，请将属性访问级别更新为private。 |
+| 1410 | 调用不存在的Adobe Commerce方法 | 更新代码以使用标记为`@api`的类。 |
+| 1514 | 使用不存在的Adobe Commerce属性 | 更新代码以使用标记为`@api`的类。 |
+| 1515 | 覆盖不存在的Adobe Commerce属性 | 更新代码以使用标记为`@api`的类。 |
+| 1516 | 分配不存在的Adobe Commerce资产 | 更新代码以使用标记为`@api`的类。 如果属性访问级别只能在单个类中使用，请将属性访问级别更新为private。 |
 | 5002 | 开始PHP标记必须是文件中的第一个内容 | 在PHP开始标记之前，请确保文件中没有内容。 |
 | 5003 | 函数已被弃用 | 使用错误消息中建议的替换。 如果消息未建议进行替换，则需要仔细审查以选择替代功能或实施。 |
 | 5005 | PHP语法错误 | 必须更新代码以符合PHP语法标准。 |
@@ -107,64 +107,64 @@ ht-degree: 4%
 
 ### 自定义代码
 
-当自定义代码使用未考虑/标记为的Adobe Commerce入口点时，会引发自定义代码错误 `@api`. 不能保证保留此类入口点的行为。 自定义应依赖于 `@api` 入口点。 基于非API Adobe Commerce代码的功能应在升级后进行测试。 当主要编码标准被破坏时，也会报告这些错误。
+当自定义代码使用未考虑/标记为`@api`的Adobe Commerce入口点时，会引发自定义代码错误。 不能保证保留此类入口点的行为。 自定义应依赖于`@api`入口点。 基于非API Adobe Commerce代码的功能应在升级后进行测试。 当主要编码标准被破坏时，也会报告这些错误。
 
 | 错误代码 | 错误描述 | 建议的操作 |
 | --- | --- | --- |
-| 1104 | 使用继承API接口的非API类 | 未标记为的类 `@api` 可能更改。 请考虑更新代码以依赖标记为 `@api` 而是。 否则，应在升级后测试依赖此实施的功能。 |
-| 1121 | 从非Adobe Commerce API类扩展 | 扩展类不再存在于代码库中。 不建议使用继承方法来扩展Adobe Commerce功能。 更新代码以使用标记为 `@api`. |
-| 1122 | 导入非Adobe Commerce API类 | 扩展类不再存在于代码库中。 更新代码以使用标记为 `@api`. 否则，应在升级后测试依赖此实施的功能。 |
-| 1123 | 加载非Adobe Commerce API类 | 扩展类不再存在于代码库中。 更新代码以使用标记为 `@api`. 否则，应在升级后测试依赖此实施的功能。 |
-| 1124 | 使用非Adobe Commerce API类 | 扩展类不再存在于代码库中。 更新代码以使用标记为 `@api`. 否则，应在升级后测试依赖此实施的功能。 |
-| 1224 | 使用非Adobe Commerce API常量 | 未标记为的常量 `@api` 可能更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
-| 1225 | 覆盖非Adobe Commerce API常量 | 未标记为的常量 `@api` 可能更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
-| 1226 | 分配非Adobe Commerce API常量 | 未标记为的常量 `@api` 可能更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
-| 1322 | 导入的非Adobe Commerce API接口 | 接口未标记为 `@api` 可能更改。 请考虑删除此继承，或将其替换为Adobe Commerce界面中标记为的继承 `@api` 或自定义代码范围内引入的接口。 |
-| 1324 | 使用的非Adobe Commerce API接口 | 接口未标记为 `@api` 可能更改。 请考虑删除此继承，或将其替换为Adobe Commerce界面中标记为的继承 `@api` 或自定义代码范围内引入的接口。 |
-| 1327 | 继承的非Adobe Commerce API接口 | 未标记为的常量 `@api` 可能更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
-| 1328 | 实施了非Adobe Commerce API接口 | 接口未标记为 `@api` 可能更改。 请考虑删除此继承，或将其替换为Adobe Commerce界面中标记为的继承 `@api` 或自定义代码范围内引入的接口。 |
-| 1420 | 实例化非Adobe Commerce API类/接口 | 未标记为的类 `@api` 可能更改。 请考虑更新代码以依赖标记为 `@api` 而是。 否则，应在升级后测试依赖此实施的功能。 另外，检索类实例的推荐方法是使用DI。 如果需要类的新实例，请考虑使用工厂。 |
-| 1428 | 可能与实施详细信息存在依赖关系。 | 未标记为的类 `@api` 可能更改。 请考虑更新代码以依赖标记为 `@api` 而是。 否则，应在升级后测试依赖此实施的功能。 |
-| 1429 | 调用非Adobe Commerce API方法 | 未标记为的方法 `@api` 或未在API类/接口中声明的或可能会被更改。 即使在新版本中未更新方法的接口，其行为或输出也可能不同。 考虑依赖接口方法。 否则，应在升级后测试依赖此实施的功能。 |
+| 1104 | 使用继承API接口的非API类 | 未标记为`@api`的类可能会被更改。 请考虑更新代码以依赖标记为`@api`的接口。 否则，应在升级后测试依赖此实施的功能。 |
+| 1121 | 从非Adobe Commerce API类扩展 | 扩展类不再存在于代码库中。 不建议使用继承方法来扩展Adobe Commerce功能。 更新代码以使用标记为`@api`的类。 |
+| 1122 | 导入非Adobe Commerce API类 | 扩展类不再存在于代码库中。 更新代码以使用标记为`@api`的类。 否则，应在升级后测试依赖此实施的功能。 |
+| 1123 | 加载非Adobe Commerce API类 | 扩展类不再存在于代码库中。 更新代码以使用标记为`@api`的类。 否则，应在升级后测试依赖此实施的功能。 |
+| 1124 | 使用非Adobe Commerce API类 | 扩展类不再存在于代码库中。 更新代码以使用标记为`@api`的类。 否则，应在升级后测试依赖此实施的功能。 |
+| 1224 | 使用非Adobe Commerce API常量 | 未标记为`@api`的常量可能会发生更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
+| 1225 | 覆盖非Adobe Commerce API常量 | 未标记为`@api`的常量可能会发生更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
+| 1226 | 分配非Adobe Commerce API常量 | 未标记为`@api`的常量可能会发生更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
+| 1322 | 导入的非Adobe Commerce API接口 | 可以更改未标记为`@api`的接口。 请考虑删除此继承，或将其替换为标记为`@api`的Adobe Commerce接口或自定义代码范围内引入的接口的继承。 |
+| 1324 | 使用的非Adobe Commerce API接口 | 可以更改未标记为`@api`的接口。 请考虑删除此继承，或将其替换为标记为`@api`的Adobe Commerce接口或自定义代码范围内引入的接口的继承。 |
+| 1327 | 继承的非Adobe Commerce API接口 | 未标记为`@api`的常量可能会发生更改。 请考虑在自定义代码中引入并使用所需值的私有常量。 |
+| 1328 | 实施了非Adobe Commerce API接口 | 可以更改未标记为`@api`的接口。 请考虑删除此继承，或将其替换为标记为`@api`的Adobe Commerce接口或自定义代码范围内引入的接口的继承。 |
+| 1420 | 实例化非Adobe Commerce API类/接口 | 未标记为`@api`的类可能会被更改。 请考虑更新代码以依赖标记为`@api`的接口。 否则，应在升级后测试依赖此实施的功能。 另外，检索类实例的推荐方法是使用DI。 如果需要类的新实例，请考虑使用工厂。 |
+| 1428 | 可能与实施详细信息存在依赖关系。 | 未标记为`@api`的类可能会被更改。 请考虑更新代码以依赖标记为`@api`的接口。 否则，应在升级后测试依赖此实施的功能。 |
+| 1429 | 调用非Adobe Commerce API方法 | 未标记为`@api`或未在API类/接口中声明的方法可能会被更改。 即使在新版本中未更新方法的接口，其行为或输出也可能不同。 考虑依赖接口方法。 否则，应在升级后测试依赖此实施的功能。 |
 | 1449 | 对非接口方法的调用（实现中存在） | 未在接口中声明的方法可能会被更改。 考虑依赖接口方法。 否则，应在升级后测试依赖此实施的功能。 |
-| 1524 | 使用非Adobe Commerce API资产 | 未标记为的属性值 `@api` 可能更改。 请考虑改用API接口方法。 |
-| 1525 | 覆盖非Adobe Commerce API属性 | 未标记为的属性值 `@api` 可能更改。 请考虑改用API接口方法。 |
-| 1526 | 分配非Adobe Commerce API资产 | 未标记为的属性值 `@api` 可能更改。 请考虑改用API接口方法。 |
+| 1524 | 使用非Adobe Commerce API资产 | 未标记为`@api`的属性的值可能会发生更改。 请考虑改用API接口方法。 |
+| 1525 | 覆盖非Adobe Commerce API属性 | 未标记为`@api`的属性的值可能会发生更改。 请考虑改用API接口方法。 |
+| 1526 | 分配非Adobe Commerce API资产 | 未标记为`@api`的属性的值可能会发生更改。 请考虑改用API接口方法。 |
 | 5004 | 已弃用不带参数的函数 | 传递输入以作为函数的第一个参数进行验证。 |
 | 5007 | 不鼓励使用某些功能 | 避免使用这些函数。 |
 | 5009 | 模板指令不能调用方法。 只允许访问标量数组 | 从模板中删除方法调用。 |
-| 5010 | 模板 `@vars` 评论块包含无效的JSON | 修复了无效的JSON。 |
-| 5011 | 模板 `@vars` 评论块包含无效标签 | 修复无效标签。 |
-| 5012 | 模板 `@vars` 注释块缺少在模板中使用的变量 | 将缺少的变量添加@vars注释块。 |
+| 5010 | 模板`@vars`注释块包含无效的JSON | 修复了无效的JSON。 |
+| 5011 | 模板`@vars`注释块包含无效标签 | 修复无效标签。 |
+| 5012 | 模板`@vars`注释块缺少在模板中使用的变量 | 将缺少的变量添加@vars注释块。 |
 | 5013 | 避免将自关闭标记与非void html元素一起使用 | 请改用关闭标记。 |
-| 5014 | 此 `"active"` 属性已过时 | 活动模块的列表在部署配置中定义。 |
-| 5015 | 此 `<param>` 节点已过时 | 使用 `<argument name="..." xsi:type="...">` 而是。 |
-| 5016 | 此 `<instance>` 节点已过时 | 使用 `<argument name="..." xsi:type="object">` 而是。 |
-| 5017 | 此 `<array>` 节点已过时 | 使用 `<argument name="..." xsi:type="array">` 而是。 |
-| 5018 | 此 `<item key="...">` 节点已过时 | 使用 `<item name="..." xsi:type="...">` 而是。 |
-| 5019 | 此 `<value>` 节点已过时 | 请改为提供实际值作为文本文本。 |
-| 5020 | 过时的节点： `<supported_blocks>` | 将替换为 `<supported_containers>`. |
-| 5021 | 过时的节点： `<block_name>` | 将替换为 `<container_name>`. |
+| 5014 | `"active"`属性已过时 | 活动模块的列表在部署配置中定义。 |
+| 5015 | `<param>`节点已过时 | 请改用`<argument name="..." xsi:type="...">`。 |
+| 5016 | `<instance>`节点已过时 | 请改用`<argument name="..." xsi:type="object">`。 |
+| 5017 | `<array>`节点已过时 | 请改用`<argument name="..." xsi:type="array">`。 |
+| 5018 | `<item key="...">`节点已过时 | 请改用`<item name="..." xsi:type="...">`。 |
+| 5019 | `<value>`节点已过时 | 请改为提供实际值作为文本文本。 |
+| 5020 | 过时的节点： `<supported_blocks>` | 将替换为`<supported_containers>`。 |
+| 5021 | 过时的节点： `<block_name>` | 将替换为`<container_name>`。 |
 | 5022 | 检测到工厂名称 | 构件类型不应以/开头。 |
 | 5023 | 在线检测到过时的ACL结构 | 请查看lib/internal/Magento/Framework/Acl/etc/acl.xsd。 |
 | 5024 | 行中检测到过时的菜单结构 | 请查看app/code/Magento/Backend/etc/menu.xsd。 |
 | 5025 | 在文件中检测到过时的系统配置结构 | 请查看app/code/Magento/Config/etc/system_file.xsd。 |
-| 5026 | 不使用 `"text/javascript"` 类型属性 | 仅使用公共成员。 |
-| 5028 | 访问受保护成员和私有成员 `Block` 类在phtml模板中已过时 | 仅使用公共成员。 |
-| 5031 | Contains过时方法 | 使用 `getConnection()` 方法。 |
+| 5026 | 不使用`"text/javascript"`类型特性 | 仅使用公共成员。 |
+| 5028 | 对`Block`类的受保护和私有成员的访问在phtml模板中已过时 | 仅使用公共成员。 |
+| 5031 | Contains过时方法 | 请改用`getConnection()`方法。 |
 | 5042 | PHP类引用的格式不正确 | 检查是否仅使用驼峰式大小写字母、数字和无前导斜杠引用类。 |
 | 5043 | 模块引用的格式不正确 | 检查是否仅使用字母、数字、下划线和前导斜杠引用模块。 |
-| 5044 | 类 `Zend_Db_Select` 受限 | 建议的替代方案： `\Magento\Framework\DB\Select`. |
-| 5045 | 类 `Zend_Db_Adapter_Pdo_Mysql` 受限 | 建议的替代方案： `\Magento\Framework\DB\Adapter\Pdo\Mysql`. |
-| 5046 | 类 `Magento\Framework\Serialize\Serializer\Serialize` 受限 | 建议的替代方案： `Magento\Framework\Serialize\SerializerInterface`. |
-| 5047 | 类 `ArrayObject` 受限 | 建议的替换：自定义类，扩展自 `ArrayObject` 覆盖的序列化/反序列化方法。 |
-| 5048 | 类 `Magento\Framework\View\Element\UiComponent\ArrayObjectFactory` 受限 | 建议的替换：创建自定义类的工厂，扩展自 `ArrayObject` 覆盖的序列化/反序列化方法。 |
+| 5044 | 类`Zend_Db_Select`受限制 | 建议的替换： `\Magento\Framework\DB\Select`。 |
+| 5045 | 类`Zend_Db_Adapter_Pdo_Mysql`受限制 | 建议的替换： `\Magento\Framework\DB\Adapter\Pdo\Mysql`。 |
+| 5046 | 类`Magento\Framework\Serialize\Serializer\Serialize`受限制 | 建议的替换： `Magento\Framework\Serialize\SerializerInterface`。 |
+| 5047 | 类`ArrayObject`受限制 | 建议的替换：自定义类，使用覆盖的序列化/非序列化方法从`ArrayObject`扩展。 |
+| 5048 | 类`Magento\Framework\View\Element\UiComponent\ArrayObjectFactory`受限制 | 建议的替换：创建自定义类的工厂，使用覆盖的序列化/非序列化方法从`ArrayObject`扩展。 |
 | 5050 | 正在引用的块将被删除 | 删除对块的引用。 |
-| 5051 | `output="toHtml"` 已过时 | 使用 `output="1"`. |
-| 5052 | 类 `\Magento\Framework\View\Element\Text\ListText` 不应再在布局中使用 | 删除类 `\Magento\Framework\View\Element\Text\ListText` 从布局。 |
-| 5053 | 通过布局指令调用方法 `<action>` 不允许 | 避免在中使用违规方法 `<action>`. |
-| 5054 | `helper` 属性包含 `/` | 移除 `/` 来自帮助程序属性。 |
-| 5055 | `helper` 属性不包含 `::` | 添加 `::` 到帮助程序属性。 |
+| 5051 | `output="toHtml"`已过时 | 使用`output="1"`。 |
+| 5052 | 类`\Magento\Framework\View\Element\Text\ListText`不应再用于布局中 | 从布局中删除类`\Magento\Framework\View\Element\Text\ListText`。 |
+| 5053 | 不允许通过布局指令`<action>`调用方法 | 避免在`<action>`中使用违规方法。 |
+| 5054 | `helper`属性包含`/` | 从帮助程序属性中删除`/`。 |
+| 5055 | `helper`属性不包含`::` | 将`::`添加到帮助程序属性。 |
 | 5056 | 安装脚本已过时 | 在模块的etc/db_schema.xml文件中使用声明性模式方法。 |
 | 5057 | InstallSchema脚本已过时 | 在模块的etc/db_schema.xml文件中使用声明性模式方法。 |
 | 5058 | InstallData脚本已过时 | 在模块的设置/修补/数据目录中使用数据修补程序方法。 |
@@ -177,10 +177,10 @@ ht-degree: 4%
 | 5065 | &#39;data&#39;位于无效目录中 | 在模块的Setup/Patch/Data文件夹中创建数据修补程序以进行数据升级，或在模块的etc/db_schema.xml文件中使用声明性模式方法以进行模式更改。 |
 | 5066 | &#39;sql&#39;位于无效目录中 | 在模块的Setup/Patch/Data文件夹中创建数据修补程序以进行数据升级，或在模块的etc/db_schema.xml文件中使用声明性模式方法以进行模式更改。 |
 | 5067 | XPath标识的节点已过时 | 应更新错误中指出的过时XML。 按照错误消息中的建议操作。 |
-| 5068 | 指令 `{{htmlescape}}` 已过时 | 使用 `{{var}}` 而是。 |
-| 5069 | 指令 `{{escapehtml}}` 已过时 | 使用 `{{var}}` 而是。 |
-| 5070 | 不再需要使用第3个参数 `getChildHtml()` | 从对的调用中删除第三个参数 `getChildHtml()`. |
-| 5071 | 不再需要使用第4个参数 `getChildHtml()` | 从对的调用中删除第4个参数 `getChildHtml()`. |
+| 5068 | 指令`{{htmlescape}}`已过时 | 请改用`{{var}}`。 |
+| 5069 | 指令`{{escapehtml}}`已过时 | 请改用`{{var}}`。 |
+| 5070 | `getChildHtml()`不再需要第三个参数 | 从对`getChildHtml()`的调用中删除第三个参数。 |
+| 5071 | `getChildHtml()`不再需要第4个参数 | 从对`getChildHtml()`的调用中删除第4个参数。 |
 | 5073 | 带斜杠的旧表名必须固定到直接表名 | 请改用直接表名。 |
 | 5075 | 应用程序模块不应使用测试模块中的类 | 从测试模块中删除类的用法。 |
 | 5078 | 类必须在构造函数中请求，否则编译器将无法查找和生成这些类 | 将类添加到构造函数。 |
@@ -190,25 +190,25 @@ ht-degree: 4%
 | 5082 | 不建议在模板中使用$this | 请改用$block。 |
 | 5083 | 不允许将常量作为翻译函数的第一个参数 | 请改用字符串文字。 |
 | 5085 | 不鼓励使用某些功能 | 请改用消息上建议的替代函数。 |
-| 5087 | PHP跨版本兼容性问题 | 按照邮件中的建议检查 [迁移指南](https://www.php.net/manual/en/migration81.php). |
+| 5087 | PHP跨版本兼容性问题 | 按照消息中的建议检查[迁移指南](https://www.php.net/manual/en/migration81.php)。 |
 | 5088 | 在必需参数之后发现的可选参数 | 将所需参数移到可选参数之后。 |
-| 5089 | 方法可见性 `final private` 已找到 | 更改方法的可见性 `final private` 到 `private`. |
-| 5090 | 魔术方法 `__set_state` 未定义为 `static` | 魔术方法 `__set_state` 必须定义为 `static`. |
-| 5091 | 与的类 `__toString()` 不继承自的方法 `Stringable` 界面 | 添加 `Stringable` 与的类接口 `__toString()` 方法。 |
-| 5092 | `is_resource()` 用于现在返回Object的函数的方法 | 更改 `is_resource()` 到 `instanceof` 对象。 |
-| 6001 | `jQuery.andSelf()` 已删除 | 使用 `jQuery.addBack()`. |
-| 6002 | jQuery `$.bind` 和 `$.unbind` 已弃用 | 使用 `$.on` 和 `$.off` 而是。 |
-| 6003 | 订阅事件的jQuery方法已弃用，不应使用 | 使用 `.on("event name", fn)` 方法订阅该事件。 |
-| 6003 | 用于触发事件的jQuery方法已弃用，不应使用 | 使用 `.trigger("event name")` 方法，以触发该事件。 |
-| 6004 | jQuery `$.delegate` 和 `$.undelegate` 已弃用 | 使用 `$.on` 和 `$.off` 而是。 |
-| 6005 | (`jQuery.load()` / `jQuery.unload()` / `jQuery.error()`)已删除 | 使用(`.on("load", fn)` / `.on("unload", fn)` / `.on("error", fn)`)。 |
-| 6006 | `jQuery.size()` 已删除 | 使用 `jQuery.length`. |
-| 6007 | `jQuery.trim` 已弃用 | 使用 `String.prototype.trim`. |
-| 6008 | (`addButton`， `addContextToolbar`， `addMenuItem`， `addSidebar`， `file_browser_callback`， `insert_button_items`，“inlite”主题，“mobile”主题，“modern”主题)已移除 | 更新代码以与tinymce5兼容。 |
-| 6009 | `jQuery.isFunction()` 已弃用 | 在大多数情况下，可以将其替换为 [“函数”===x类型]. |
-| 6009 | `jQuery.type()` 已弃用 | 替换为相应的类型检查，如 [“函数”===x类型]. |
-| 6009 | `jQuery.isArray()` 已弃用 | 请改用本机Array.isArray方法。 |
-| 6009 | `jQuery.parseJSON()` 已弃用 | 要解析JSON字符串，请改用本机JSON.parse方法。 |
+| 5089 | 找到方法可见性`final private` | 将方法可见性从`final private`更改为仅`private`。 |
+| 5090 | 魔术方法`__set_state`未定义为`static` | 必须将魔术方法`__set_state`定义为`static`。 |
+| 5091 | 具有`__toString()`方法的类不从`Stringable`接口继承 | 使用`__toString()`方法将`Stringable`接口添加到类。 |
+| 5092 | `is_resource()`方法用于现在返回对象的函数 | 将`is_resource()`更改为`instanceof`对象。 |
+| 6001 | `jQuery.andSelf()`已删除 | 使用`jQuery.addBack()`。 |
+| 6002 | jQuery `$.bind`和`$.unbind`已弃用 | 请改用`$.on`和`$.off`。 |
+| 6003 | 订阅事件的jQuery方法已弃用，不应使用 | 请改用`.on("event name", fn)`方法订阅该事件。 |
+| 6003 | 用于触发事件的jQuery方法已弃用，不应使用 | 请改用`.trigger("event name")`方法来触发该事件。 |
+| 6004 | jQuery `$.delegate`和`$.undelegate`已弃用 | 请改用`$.on`和`$.off`。 |
+| 6005 | (`jQuery.load()` / `jQuery.unload()` / `jQuery.error()`)已删除 | 请改用(`.on("load", fn)` / `.on("unload", fn)` / `.on("error", fn)`)。 |
+| 6006 | `jQuery.size()`已删除 | 使用`jQuery.length`。 |
+| 6007 | `jQuery.trim`已弃用 | 使用`String.prototype.trim`。 |
+| 6008 | （`addButton`，`addContextToolbar`，`addMenuItem`，`addSidebar`，`file_browser_callback`，`insert_button_items`， &#39;inlite&#39;主题， &#39;mobile&#39;主题， &#39;modern&#39;主题）已删除 | 更新代码以与tinymce5兼容。 |
+| 6009 | `jQuery.isFunction()`已弃用 | 在大多数情况下，它可被[typeof x===“函数”]替换。 |
+| 6009 | `jQuery.type()`已弃用 | 替换为相应的类型检查，如[typeof x === &quot;function&quot;]。 |
+| 6009 | `jQuery.isArray()`已弃用 | 请改用本机Array.isArray方法。 |
+| 6009 | `jQuery.parseJSON()`已弃用 | 要解析JSON字符串，请改用本机JSON.parse方法。 |
 | 6010 | (`jQuery.expr[":"]`， `jQuery.expr.filters`)已弃用 | 请改用jQuery.expr.pseudos。 |
 
 {style="table-layout:auto"}
@@ -238,35 +238,35 @@ ht-degree: 4%
 
 | 错误代码 | 错误描述 | 建议的操作 |
 | --- | --- | --- |
-| 2004 | 编辑器依赖项版本不匹配 | 问题表示标准中的编辑器依赖项版本与实际项目不同。 通过运行更新依赖关系 `composer update <package_name>`. |
+| 2004 | 编辑器依赖项版本不匹配 | 问题表示标准中的编辑器依赖项版本与实际项目不同。 通过运行`composer update <package_name>`更新依赖关系。 |
 
 {style="table-layout:auto"}
 
 ### 自定义代码
 
-检测到引用已弃用的代码时，会引发自定义代码警告。 此类引用应替换为受支持的扩展点。 请注意 `@see` 推荐的已弃用项目的注释。 当次要编码标准被破坏时，也会报告这些错误。
+检测到引用已弃用的代码时，会引发自定义代码警告。 此类引用应替换为受支持的扩展点。 请注意推荐的已弃用项目的`@see`注释。 当次要编码标准被破坏时，也会报告这些错误。
 
 | 错误代码 | 错误描述 | 建议的操作 |
 | --- | --- | --- |
-| 1131 | 从Adobe Commerce扩展 ``@deprecated`` 类 | 扩展类将在即将发布的版本中删除。 不建议使用继承方法来扩展Adobe Commerce功能。 更新代码以使用标记为 `@api`. |
-| 1132 | 导入Adobe Commerce `@deprecated` 类 | 扩展类将在即将发布的版本中删除。 Adobe Commerce考虑使用标记为 `@api` 而是。 |
-| 1133 | 正在加载Adobe Commerce `@deprecated` 类 | 扩展类将在即将发布的版本中删除。 Adobe Commerce考虑使用标记为 `@api` 而是。 |
-| 1134 | 使用Adobe Commerce `@deprecated` 类 | 扩展类将在即将发布的版本中删除。 Adobe Commerce考虑使用标记为 `@api` 而是。 |
-| 1234 | 使用Adobe Commerce `@deprecated` 常量 | 即将发布的版本中将删除已弃用的常量。 考虑使用标记为 `@api` 或实施中的私有常量。 |
-| 1235 | 覆盖Adobe Commerce `@deprecated` 常量 | 即将发布的版本中将删除已弃用的常量。 考虑使用标记为 `@api` 或实施中的私有常量。 |
-| 1236 | Adobe Commerce的分派 `@deprecated` 常量 | 即将发布的版本中将删除已弃用的常量。 考虑使用标记为 `@api` 或实施中的私有常量。 |
-| 1332 | 导入的Adobe Commerce `@deprecated` 界面 | 即将发布的版本中将删除已弃用的界面。 考虑使用标记为 `@api` 而是。 |
-| 1334 | 使用的Adobe Commerce `@deprecated` 界面 | 即将发布的版本中将删除已弃用的界面。 考虑使用标记为 `@api` 而是。 |
-| 1337 | 继承自Adobe Commerce `@deprecated` 界面 | 即将发布的版本中将删除已弃用的界面。 考虑使用标记为的接口删除接口继承 `@api` 或实施中引入的接口。 |
-| 1338 | 实施的Adobe Commerce `@deprecated` 界面 | 即将发布的版本中将删除已弃用的界面。 考虑使用标记为的接口删除接口继承 `@api` 或实施中引入的接口。 |
+| 1131 | 从Adobe Commerce ``@deprecated``类扩展 | 扩展类将在即将发布的版本中删除。 不建议使用继承方法来扩展Adobe Commerce功能。 更新代码以使用标记为`@api`的类。 |
+| 1132 | 正在导入Adobe Commerce `@deprecated`类 | 扩展类将在即将发布的版本中删除。 请考虑改用标记为`@api`的Adobe Commerce类。 |
+| 1133 | 正在加载Adobe Commerce `@deprecated`类 | 扩展类将在即将发布的版本中删除。 请考虑改用标记为`@api`的Adobe Commerce类。 |
+| 1134 | 使用Adobe Commerce `@deprecated`类 | 扩展类将在即将发布的版本中删除。 请考虑改用标记为`@api`的Adobe Commerce类。 |
+| 1234 | 使用Adobe Commerce `@deprecated`常量 | 即将发布的版本中将删除已弃用的常量。 请考虑改为在实施中使用标记为`@api`的常量或专用常量。 |
+| 1235 | 正在覆盖Adobe Commerce `@deprecated`常量 | 即将发布的版本中将删除已弃用的常量。 请考虑改为在实施中使用标记为`@api`的常量或专用常量。 |
+| 1236 | Adobe Commerce `@deprecated`常量的分配 | 即将发布的版本中将删除已弃用的常量。 请考虑改为在实施中使用标记为`@api`的常量或专用常量。 |
+| 1332 | 已导入Adobe Commerce `@deprecated`界面 | 即将发布的版本中将删除已弃用的界面。 请考虑改用标记为`@api`的接口或类。 |
+| 1334 | 已使用Adobe Commerce `@deprecated`接口 | 即将发布的版本中将删除已弃用的界面。 请考虑改用标记为`@api`的接口或类。 |
+| 1337 | 继承自Adobe Commerce `@deprecated`界面 | 即将发布的版本中将删除已弃用的界面。 请考虑删除接口继承，改为使用标记为`@api`的接口或实施中引入的接口。 |
+| 1338 | 已实施Adobe Commerce `@deprecated`接口 | 即将发布的版本中将删除已弃用的界面。 请考虑删除接口继承，改为使用标记为`@api`的接口或实施中引入的接口。 |
 | 1430 | 调用未声明的数据对象方法 | 可以更改未声明的魔术方法。 请考虑改用接口方法。 |
-| 1439 | 调用Adobe Commerce `@deprecated` 方法 | 即将发布的版本中将删除已弃用的方法。 请考虑改为依赖在API接口中声明的方法。 |
+| 1439 | 调用Adobe Commerce `@deprecated`方法 | 即将发布的版本中将删除已弃用的方法。 请考虑改为依赖在API接口中声明的方法。 |
 | 1440 | 方法签名不匹配 | 使用与方法签名不匹配的参数、参数或返回类型检测核心方法的调用或覆盖。 |
-| 1534 | 使用Adobe Commerce `@deprecated` 属性 | 即将发布的版本中将删除已弃用的方法。 请考虑改为依赖在API接口中声明的方法。 |
-| 1535 | 覆盖Adobe Commerce `@deprecated` 属性 | 即将发布的版本中将删除已弃用的属性。 请考虑依赖在API接口中声明的方法，或者在实施中使用私有属性。 |
-| 1536 | Adobe Commerce的分派 `@deprecated` 属性 | 即将发布的版本中将删除已弃用的方法。 请考虑改为依赖在API接口中声明的方法。 |
+| 1534 | 使用Adobe Commerce `@deprecated`属性 | 即将发布的版本中将删除已弃用的方法。 请考虑改为依赖在API接口中声明的方法。 |
+| 1535 | 正在覆盖Adobe Commerce `@deprecated`属性 | 即将发布的版本中将删除已弃用的属性。 请考虑依赖在API接口中声明的方法，或者在实施中使用私有属性。 |
+| 1536 | Adobe Commerce `@deprecated`属性的分配 | 即将发布的版本中将删除已弃用的方法。 请考虑改为依赖在API接口中声明的方法。 |
 | 5006 | 构造函数中绝不能显式请求代理和侦听器 | 应将原始类声明为构造函数参数的类型。 Interceptor/Proxy类将由框架依赖项注入实现传递。 |
-| 5074 | 使用已弃用的方法 `getResource()` 检测到to（保存/加载/删除）数据。 | 请改用存储库。 |
+| 5074 | 使用已弃用的方法`getResource()`来检测（保存/加载/删除）数据。 | 请改用存储库。 |
 | 5086 | 可见性未在常量上声明 | 声明所有常量的可见性。 |
 
 {style="table-layout:auto"}

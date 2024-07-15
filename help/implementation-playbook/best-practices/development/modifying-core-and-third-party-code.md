@@ -4,7 +4,8 @@ description: 了解如何以及何时修改核心Adobe Commerce和第三方PHP�
 role: Developer, Architect
 feature: Best Practices
 last-substantial-update: 2023-12-8
-source-git-commit: ab02552939d595627f0de83b8508c7cd21777642
+exl-id: 32b3137d-fc00-4be8-ba02-5d8d48a51fe1
+source-git-commit: d47567a8d69ccdae3db01e964f1db12e8ae26717
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
@@ -46,7 +47,7 @@ index 51b68411d40..ac4a3468322 100644
 
 #### 使用修补程序可以更改的内容
 
-任何事。 实际上，任何目标文件中的任何字符都可以更改。 修补程序不限于任何特定的文件类型或代码语言。 通常，您会使用修补程序来定位 `vendor` 目录。 
+任何事。 实际上，任何目标文件中的任何字符都可以更改。 修补程序不限于任何特定的文件类型或代码语言。 通常，您将使用修补程序来定位`vendor`目录中的文件。 
 
 #### 何时使用修补程序
 
@@ -69,7 +70,7 @@ Adobe Commerce平台使用“对象管理器”来实例化PHP类，因为它不
 
 #### 声明首选项
 
-声明偏好设置是一个相当简单的过程。 需要将一行代码添加到 `di.xml` 模块中的文件。 这可以在全局范围内或任何Adobe Commerce“区域”内完成，例如 `frontend`， `adminhtml`， `graphql`， `webapi_rest`、和 `crontab`.
+声明偏好设置是一个相当简单的过程。 需要将一行代码添加到模块中的`di.xml`文件中。 此操作可以在全局范围内或任何Adobe Commerce“区域”内完成，例如`frontend`、`adminhtml`、`graphql`、`webapi_rest`和`crontab`。
 
 ```xml
 <preference for="Magento\Elasticsearch7\SearchAdapter\Adapter" type="Vendor\Namespace\Adapter\AlgoliaElasticSearch7Adapter"/>
@@ -105,11 +106,11 @@ class AlgoliaElasticSearchAdapter extends \Magento\Elasticsearch7\SearchAdapter\
 
 观察者是一种事件侦听器的概念，在许多应用程序、平台、库和编码语言中都存在。 这个概念并不是Adobe Commerce平台特有的。 从实施Magento1起，观察者就已被植入平台，并被视为如何修改核心代码和第三方代码的主要选择。 
 
-核心代码库和任何第三方模块都可以在代码中的选定位置发送事件。 观察者，在 `events.xml` 文件并按名称侦听已调度的事件，可以在全局级别工作或限制到任何Adobe Commerce“区域”，例如 `frontend`， `adminhtml`， `graphql`， `webapi_rest`、和 `crontab`.
+核心代码库和任何第三方模块都可以在代码中的选定位置发送事件。 观察程序在`events.xml`文件中声明并正在按名称侦听已调度的事件，该观察程序可以在全局级别工作，或约束到任何Adobe Commerce“区域”，如`frontend`、`adminhtml`、`graphql`、`webapi_rest`和`crontab`。
 
 #### 如何声明观察者
 
-可以在全局或特定于区域的情况下配置观察者 `events.xml` 文件。
+可以在全局或特定于区域的`events.xml`文件中配置观察程序。
 
 ```xml
     <event name="sales_model_service_quote_submit_before">
@@ -164,11 +165,11 @@ class SetOrderRewardFlag implements ObserverInterface
 
 ### 插件
 
-插件是Adobe Commerce平台中引入的灵活概念。 它允许您截取、替换和修改任何公共PHP方法。 插件允许您在执行目标方法之前修改进入方法的参数，在执行目标方法之后修改结果，或者完全替换目标方法。 可以在单个插件文件中修改目标PHP类的许多方法。 此外，您可以使用 `$subject` 用于执行目标PHP类中存在的任何公共方法的参数。
+插件是Adobe Commerce平台中引入的灵活概念。 它允许您截取、替换和修改任何公共PHP方法。 插件允许您在执行目标方法之前修改进入方法的参数，在执行目标方法之后修改结果，或者完全替换目标方法。 可以在单个插件文件中修改目标PHP类的许多方法。 此外，可以使用`$subject`参数执行目标PHP类中存在的任何公共方法。
 
 #### 如何声明插件
 
-插件可以在全局或特定于区域中进行配置 `di.xml` 文件。
+可以在全局或特定于区域的`di.xml`文件中配置插件。
 
 ```xml
     <type name="Magento\Catalog\Api\CategoryRepositoryInterface">

@@ -69,9 +69,9 @@ Adobe Commerce主要将客户特定的信息存储在客户、地址、订单、
 >
 >为遵循最新的安全和隐私最佳实践，在收集或处理客户完整出生日期（月、日、年）及其他个人标识符（如全名）之前，请确保您了解任何与此类存储相关的潜在法律和安全风险。
 
-#### `customer_entity` 和“customer_entity”引用
+#### `customer_entity`和“customer_entity”引用
 
-中的以下列 `customer_entity` 该表包含客户信息：
+`customer_entity`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | ------------ | ------------ |
@@ -84,7 +84,7 @@ Adobe Commerce主要将客户特定的信息存储在客户、地址、订单、
 | `dob` | 日期 |
 | `gender` | smallint(5) |
 
-这些表引用 `customer_entity` 并且可以包含自定义客户属性：
+这些表引用`customer_entity`，并且可以包含自定义客户属性：
 
 | 表 | 列 | 数据类型 |
 | -------------------------- | ------- | ------------- |
@@ -94,9 +94,9 @@ Adobe Commerce主要将客户特定的信息存储在客户、地址、订单、
 | `customer_entity_text` | `value` | 文本 |
 | `customer_entity_varchar` | `value` | varchar(255) |
 
-#### `customer_grid_flat` 表
+#### `customer_grid_flat`表
 
-中的以下列 `customer_grid_flat` 该表包含客户信息：
+`customer_grid_flat`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | -------------------- | ------------ |
@@ -137,9 +137,9 @@ Adobe Commerce存储以下客户属性：
 - 增值税号
 - 邮政编码
 
-#### `customer_address_entity` 和 `customer_address_entity` 引用
+#### `customer_address_entity`和`customer_address_entity`引用
 
-中的以下列 `customer_address_entity` 该表包含客户信息：
+`customer_address_entity`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | ------------ | ------------ |
@@ -158,7 +158,7 @@ Adobe Commerce存储以下客户属性：
 | `telephone` | varchar(255) |
 | `vat_id` | varchar(255) |
 
-这些表引用 `customer_address_entity` 并且可以包含自定义客户属性：
+这些表引用`customer_address_entity`，并且可以包含自定义客户属性：
 
 | 表 | 列 | 数据类型 |
 | ---------------------------------- | ------- | ------------- |
@@ -170,11 +170,11 @@ Adobe Commerce存储以下客户属性：
 
 ### 订单数据
 
-此 `sales_order` 和相关表包含客户名称、账单和运送地址以及相关数据。
+`sales_order`和相关表包含客户名称、帐单和送货地址以及相关数据。
 
-#### `sales_order` 表
+#### `sales_order`表
 
-中的以下列 `sales_order` 该表包含客户信息：
+`sales_order`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --------------------- | ------------ |
@@ -193,9 +193,9 @@ Adobe Commerce存储以下客户属性：
 | `remote_ip` | varchar(32) |
 | `x_forwarded_for` | varchar(32) |
 
-#### `sales_order_address` 表
+#### `sales_order_address`表
 
-此 `sales_order_address` 表包含客户的地址。
+`sales_order_address`表包含客户的地址。
 
 | 列 | 数据类型 |
 | --------------------- | ------------ |
@@ -216,9 +216,9 @@ Adobe Commerce存储以下客户属性：
 | `suffix` | varchar(255) |
 | `company` | varchar(255) |
 
-#### `sales_order_grid` 表
+#### `sales_order_grid`表
 
-中的以下列 `sales_order_grid` 该表包含客户信息：
+`sales_order_grid`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | ---------------------- | ------------ |
@@ -235,9 +235,9 @@ Adobe Commerce存储以下客户属性：
 
 引号包含客户的姓名、电子邮件、地址和相关信息。
 
-#### `quote` 表
+#### `quote`表
 
-中的以下列 `quote` 该表包含客户信息：
+`quote`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | --------------------- | ------------ |
@@ -252,9 +252,9 @@ Adobe Commerce存储以下客户属性：
 | `customer_taxvat` | varchar(255) |
 | `customer_gender` | varchar(255) |
 
-#### `quote_address` 表
+#### `quote_address`表
 
-中的以下列 `quote_address` 该表包含客户信息：
+`quote_address`表中的以下列包含客户信息：
 
 | 列 | 数据类型 |
 | ------------- | ------------ |
@@ -277,7 +277,7 @@ Adobe Commerce存储以下客户属性：
 
 ### 付款数据
 
-此 `sales_order_payment` 表包括信用卡信息和其他交易信息。
+`sales_order_payment`表包括信用卡信息和其他事务信息。
 
 | 列 | 数据类型 |
 | ------------------------ | ------------ |
@@ -297,9 +297,9 @@ Adobe Commerce存储以下客户属性：
 
 可以配置Adobe Commerce，以便客户能够向私人销售和活动发送邀请。
 
-#### `magento_invitation` 表
+#### `magento_invitation`表
 
-此 `magento_invitation` 表包含客户ID、电子邮件和推荐ID。
+`magento_invitation`表包含客户ID、电子邮件和反向链接ID。
 
 | 列 | 数据类型 |
 | ------------- | ------------ |
@@ -307,9 +307,9 @@ Adobe Commerce存储以下客户属性：
 | `email` | varchar(255) |
 | `referral_id` | int(10) |
 
-#### `magento_invitation_track` 表
+#### `magento_invitation_track`表
 
-此 `magento_invitation_track` 该表还包含客户信息。
+`magento_invitation_track`表还包含客户信息。
 
 | 列 | 数据类型 |
 | ------------- | --------- |
@@ -318,7 +318,7 @@ Adobe Commerce存储以下客户属性：
 
 ### 引用客户的杂项表
 
-下表包含 `customer_id` 列：
+以下表包含`customer_id`列：
 
 - `catalog_compare_item`
 - `catalog_product_frontend_action`

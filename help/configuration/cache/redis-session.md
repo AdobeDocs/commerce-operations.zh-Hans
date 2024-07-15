@@ -5,7 +5,7 @@ feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,12 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->您必须 [安装Redis](config-redis.md#install-redis) 然后再继续。
+>您必须[安装Redis](config-redis.md#install-redis)才能继续。
 
 
-Commerce现在提供命令行选项来配置Redis会话存储。 在以前的版本中，您编辑了 `<Commerce install dir>app/etc/env.php` 文件。 命令行提供验证功能，是推荐的配置方法，但您仍可以编辑 `env.php` 文件。
+Commerce现在提供命令行选项来配置Redis会话存储。 在以前的版本中，您编辑了`<Commerce install dir>app/etc/env.php`文件。 命令行提供验证，是推荐的配置方法，但您仍可以编辑`env.php`文件。
 
-运行 `setup:config:set` 命令并指定Redis特定的参数。
+运行`setup:config:set`命令并指定Redis特定的参数。
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
@@ -27,9 +27,9 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 
 位置
 
-`--session-save=redis` 启用Redis会话存储。 如果已启用此功能，请忽略此参数。
+`--session-save=redis`启用Redis会话存储。 如果已启用此功能，请忽略此参数。
 
-`--session-save-redis-<parameter_name>=<parameter_value>` 是配置会话存储的参数/值对列表：
+`--session-save-redis-<parameter_name>=<parameter_value>`是配置会话存储的参数/值对列表：
 
 | 命令行参数 | 参数名称 | 含义 | 默认值 |
 |--- |--- |--- |--- |
@@ -37,9 +37,9 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 | session-save-redis-port | 端口 | Redis服务器侦听端口。 | 6379 |
 | session-save-redis-password | 密码 | 如果Redis服务器要求身份验证，请指定密码。 | 空 |
 | session-save-redis-timeout | timeout | 连接超时（秒）。 | 2.5 |
-| session-save-redis-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70). |
-| session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要**：如果对多种类型的缓存使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
-| session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩(建议在 `suhosin.session.encrypt = On`)。<br>[字符串超过64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
+| session-save-redis-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70)。 |
+| session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要信息**：如果对多种类型的缓存使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
+| session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩（建议在`suhosin.session.encrypt = On`时使用）。<br>[字符串超过64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18)。 | 2048 |
 | session-save-redis-compression-lib | compress_library | 选项： gzip、lzf、lz4或snappy。 | gzip |
 | session-save-redis-log-level | log_level | 设置为以下任意值，按从少到多的顺序列出：<ul><li>0（紧急：仅最严重的错误）<li>1（警报：需要立即执行操作）<li>2（严重：应用程序组件不可用）<li>3 （错误：运行时错误，不严重，但必须监控）<li>4（警告：其他信息，推荐）<li>5（注意：正常但重要的情况）<li>6（信息：信息性消息）<li>7（调试：仅供开发或测试使用的信息最多）</ul> | 1 |
 | session-save-redis-max-concurrency | max_concurrency | 可以等待一个会话锁定的最大进程数。 对于大型生产群集，请将此参数至少设置为PHP进程数的10%。 | 6 |
@@ -58,7 +58,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 
 ## 示例
 
-以下示例将Redis设置为会话数据存储，将主机设置为 `127.0.0.1`，将日志级别设置为4 ，并将数据库编号设置为2。 所有其他参数均设置为默认值。
+以下示例将Redis设置为会话数据存储，将主机设置为`127.0.0.1`，将日志级别设置为4，并将数据库编号设置为2。 所有其他参数均设置为默认值。
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
@@ -66,7 +66,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.
 
 ### 结果
 
-Commerce将类似于以下内容的行添加到 `<magento_root>app/etc/env.php`：
+Commerce向`<magento_root>app/etc/env.php`添加类似于以下内容的行：
 
 ```php
     'session' =>
@@ -127,10 +127,10 @@ redis-cli monitor
 redis-cli ping
 ```
 
-`PONG` 应该是回应。
+`PONG`应为响应。
 
 如果两个命令都成功，则Redis设置正确。
 
 ### 检查压缩数据
 
-要检查压缩的会话数据和页面缓存，请 [RESP.app](https://flathub.org/apps/details/app.resp.RESP) 支持Commerce 2会话和页面缓存的自动解压缩，并以易于用户阅读的形式显示PHP会话数据。
+为了检查压缩的会话数据和页面缓存，[RESP.app](https://flathub.org/apps/details/app.resp.RESP)支持Commerce 2会话和页面缓存的自动解压缩，并以可读形式显示PHP会话数据。

@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # 销售配置路径参考
 
-此部分列出了“管理员”中选项可用的变量名称和配置路径，位于 **商店** >设置> **配置** > **销售**.
+此部分列出了&#x200B;**商店** >设置> **配置** > **销售**&#x200B;下的管理员中选项可用的变量名称和配置路径。
 
-此 [`magento app:config:dump` 命令](../cli/export-configuration.md) 将这些值写入共享配置文件， `app/etc/config.php`，它应该在源代码控制中。 要选择性地覆盖任何配置设置或设置敏感设置，请参阅 [使用环境变量覆盖配置设置](override-config-settings.md#environment-variables). 此主题可以 _非_ 列表 [敏感值和系统特定的值](config-reference-sens.md).
+[`magento app:config:dump`命令](../cli/export-configuration.md)将这些值写入到共享配置文件`app/etc/config.php`中，该文件应位于源代码控制中。 若要选择性地覆盖任何配置设置或设置敏感设置，请参阅[使用环境变量覆盖配置设置](override-config-settings.md#environment-variables)。 此主题&#x200B;_不_&#x200B;列出[敏感且特定于系统的值](config-reference-sens.md)。
 
 ## 销售路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **销售**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **销售**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 隐藏客户IP | `sales/general/hide_customer_ip` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 小计 | `sales/totals_sort/subtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -29,8 +29,8 @@ ht-degree: 0%
 | 税金 | `sales/totals_sort/tax` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 固定产品税 | `sales/totals_sort/weee` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 总计 | `sales/totals_sort/grand_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 礼品卡 | `sales/totals_sort/giftcardaccount` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 商店点数 | `sales/totals_sort/customerbalance` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 礼品卡 | `sales/totals_sort/giftcardaccount` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 商店点数 | `sales/totals_sort/customerbalance` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 允许重新排序 | `sales/reorder/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 用于PDF打印输出的徽标(200x50) | `sales/identity/logo` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | HTML打印视图的徽标 | `sales/identity/logo_html` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -47,33 +47,33 @@ ht-degree: 0%
 | 待定付款订单生命周期（分钟） | `sales/orders/delete_pending_after` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 允许订单级别的礼品消息 | `sales/gift_options/allow_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 允许订单物料使用礼品消息 | `sales/gift_options/allow_items` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 允许订单级别的礼品包装 | `sales/gift_options/wrapping_allow_order` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 允许订单物料的礼品包装 | `sales/gift_options/wrapping_allow_items` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 允许礼品收据 | `sales/gift_options/allow_gift_receipt` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 允许打印卡片 | `sales/gift_options/allow_printed_card` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 打印卡的默认价格 | `sales/gift_options/printed_card_price` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 允许订单级别的礼品包装 | `sales/gift_options/wrapping_allow_order` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 允许订单物料的礼品包装 | `sales/gift_options/wrapping_allow_items` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 允许礼品收据 | `sales/gift_options/allow_gift_receipt` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 允许打印卡片 | `sales/gift_options/allow_printed_card` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 打印卡的默认价格 | `sales/gift_options/printed_card_price` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 启用映射 | `sales/msrp/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示实际价格 | `sales/msrp/display_price_type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 默认弹出文本消息 | `sales/msrp/explanation_message` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 默认的“这是什么”短信 | `sales/msrp/explanation_message_whats_this` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 在Storefront的“我的帐户”上启用“按SKU排序” | `sales/product_sku/my_account_enable` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 在Storefront的“我的帐户”上启用“按SKU排序” | `sales/product_sku/my_account_enable` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 已启用 | `sales/instant_purchase/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 按钮文本 | `sales/instant_purchase/button_text` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 客户组 | `sales/product_sku/allowed_groups` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 启用存档 | `sales/magento_salesarchive/active` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 存档采购的订单 | `sales/magento_salesarchive/age` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 要存档的订单状态 | `sales/magento_salesarchive/order_statuses` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 在店面启用RMA | `sales/magento_rma/enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 在产品级别启用RMA | `sales/magento_rma/enabled_on_product` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 使用商店地址 | `sales/magento_rma/use_store_address` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 客户组 | `sales/product_sku/allowed_groups` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 启用存档 | `sales/magento_salesarchive/active` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 存档采购的订单 | `sales/magento_salesarchive/age` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 要存档的订单状态 | `sales/magento_salesarchive/order_statuses` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 在店面启用RMA | `sales/magento_rma/enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 在产品级别启用RMA | `sales/magento_rma/enabled_on_product` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 使用商店地址 | `sales/magento_rma/use_store_address` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 
 {style="table-layout:auto"}
 
 ## 销售电子邮件路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **销售电子邮件**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **销售电子邮件**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 异步发送 | `sales_email/general/async_sending` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 已启用 | `sales_email/order/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -116,26 +116,26 @@ ht-degree: 0%
 | 贷项通知单注释电子邮件模板 | `sales_email/creditmemo_comment/template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 来宾的贷项通知单备注电子邮件模板 | `sales_email/creditmemo_comment/guest_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 发送贷项通知单注释电子邮件复制方法 | `sales_email/creditmemo_comment/copy_method` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 已启用 | `sales_email/magento_rma/enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA电子邮件发件人 | `sales_email/magento_rma/identity` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA电子邮件模板 | `sales_email/magento_rma/template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 来宾的RMA电子邮件模板 | `sales_email/magento_rma/guest_template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 发送RMA电子邮件复制方法 | `sales_email/magento_rma/copy_method` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 已启用 | `sales_email/magento_rma_auth/enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA授权电子邮件发件人 | `sales_email/magento_rma_auth/identity` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA授权电子邮件模板 | `sales_email/magento_rma_auth/template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 来宾的RMA授权电子邮件模板 | `sales_email/magento_rma_auth/guest_template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 发送RMA授权电子邮件复制方法 | `sales_email/magento_rma_auth/copy_method` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 已启用 | `sales_email/magento_rma_comment/enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA评论电子邮件发件人 | `sales_email/magento_rma_comment/identity` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA评论电子邮件模板 | `sales_email/magento_rma_comment/template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 来宾的RMA评论电子邮件模板 | `sales_email/magento_rma_comment/guest_template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 发送RMA电子邮件复制方法 | `sales_email/magento_rma_comment/copy_method` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 已启用 | `sales_email/magento_rma_customer_comment/enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA评论电子邮件发件人 | `sales_email/magento_rma_customer_comment/identity` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA评论电子邮件收件人 | `sales_email/magento_rma_customer_comment/recipient` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| RMA评论电子邮件模板 | `sales_email/magento_rma_customer_comment/template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 发送RMA电子邮件复制方法 | `sales_email/magento_rma_customer_comment/copy_method` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 已启用 | `sales_email/magento_rma/enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA电子邮件发件人 | `sales_email/magento_rma/identity` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA电子邮件模板 | `sales_email/magento_rma/template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 来宾的RMA电子邮件模板 | `sales_email/magento_rma/guest_template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 发送RMA电子邮件复制方法 | `sales_email/magento_rma/copy_method` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 已启用 | `sales_email/magento_rma_auth/enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA授权电子邮件发件人 | `sales_email/magento_rma_auth/identity` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA授权电子邮件模板 | `sales_email/magento_rma_auth/template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 来宾的RMA授权电子邮件模板 | `sales_email/magento_rma_auth/guest_template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 发送RMA授权电子邮件复制方法 | `sales_email/magento_rma_auth/copy_method` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 已启用 | `sales_email/magento_rma_comment/enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA评论电子邮件发件人 | `sales_email/magento_rma_comment/identity` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA评论电子邮件模板 | `sales_email/magento_rma_comment/template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 来宾的RMA评论电子邮件模板 | `sales_email/magento_rma_comment/guest_template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 发送RMA电子邮件复制方法 | `sales_email/magento_rma_comment/copy_method` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 已启用 | `sales_email/magento_rma_customer_comment/enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA评论电子邮件发件人 | `sales_email/magento_rma_customer_comment/identity` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA评论电子邮件收件人 | `sales_email/magento_rma_customer_comment/recipient` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA评论电子邮件模板 | `sales_email/magento_rma_customer_comment/template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 发送RMA电子邮件复制方法 | `sales_email/magento_rma_customer_comment/copy_method` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 在标题中显示订单ID | `sales_pdf/invoice/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 在标题中显示订单ID | `sales_pdf/shipment/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 在标题中显示订单ID | `sales_pdf/creditmemo/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -144,12 +144,12 @@ ht-degree: 0%
 
 ## 税务路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **税金**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **税费**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 用于装运的税类 | `tax/classes/shipping_tax_class` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 赠品选项的税分类 | `tax/classes/wrapping_tax_class` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 赠品选项的税分类 | `tax/classes/wrapping_tax_class` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 产品的默认税分类 | `tax/classes/default_product_tax_class` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 客户的默认税分类 | `tax/classes/default_customer_tax_class` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 基于的计税方法 | `tax/calculation/algorithm` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -162,22 +162,22 @@ ht-degree: 0%
 | 支持跨境贸易 | `tax/calculation/cross_border_trade_enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 默认国家/地区 | `tax/defaults/country` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 默认状态 | `tax/defaults/region` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 默认邮政编码 | `tax/defaults/postcode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| 默认Post代码 | `tax/defaults/postcode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 在目录中显示产品价格 | `tax/display/type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示送货价格 | `tax/display/shipping` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示价格 | `tax/cart_display/price` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示小计 | `tax/cart_display/subtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示装运金额 | `tax/cart_display/shipping` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 显示礼品包装价格 | `tax/cart_display/gift_wrapping` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 显示打印卡价格 | `tax/cart_display/printed_card` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 显示礼品包装价格 | `tax/cart_display/gift_wrapping` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 显示打印卡价格 | `tax/cart_display/printed_card` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 按订单总计包括税 | `tax/cart_display/grandtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示完整税务汇总 | `tax/cart_display/full_summary` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示零税小计 | `tax/cart_display/zero_tax` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示价格 | `tax/sales_display/price` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示小计 | `tax/sales_display/subtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示装运金额 | `tax/sales_display/shipping` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 显示礼品包装价格 | `tax/sales_display/gift_wrapping` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 显示打印卡价格 | `tax/sales_display/printed_card` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 显示礼品包装价格 | `tax/sales_display/gift_wrapping` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 显示打印卡价格 | `tax/sales_display/printed_card` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 按订单总计包括税 | `tax/sales_display/grandtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示完整税务汇总 | `tax/sales_display/full_summary` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示零税小计 | `tax/sales_display/zero_tax` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -193,9 +193,9 @@ ht-degree: 0%
 
 ## 签出路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **结帐**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **结帐**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用Onepage签出 | `checkout/options/onepage_checkout_enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 允许访客签出 | `checkout/options/guest_checkout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -205,7 +205,7 @@ ht-degree: 0%
 | 添加产品后，重定向到购物车 | `checkout/cart/redirect_to_cart` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 已分组的产品图像 | `checkout/cart/grouped_product_image` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 可配置产品图像 | `checkout/cart/configurable_product_image` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 预览报价生命周期（分钟） | `checkout/cart/preview_quota_lifetime` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 预览报价生命周期（分钟） | `checkout/cart/preview_quota_lifetime` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 显示购物车摘要 | `checkout/cart_link/use_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示购物车侧栏 | `checkout/sidebar/display` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 最大显示最近添加的项目 | `checkout/sidebar/count` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -218,9 +218,9 @@ ht-degree: 0%
 
 ## 配送设置路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **配送设置**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **配送设置**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 应用自定义送货策略 | `shipping/shipping_policy/enable_shipping_policy` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 配送政策 | `shipping/shipping_policy/shipping_policy_content` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -229,9 +229,9 @@ ht-degree: 0%
 
 ## 多配送设置路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **多配送设置**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **多配送设置**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 允许配送到多个地址 | `multishipping/options/checkout_multiple` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 允许装运到多个地址的最大数量 | `multishipping/options/checkout_multiple_maximum_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -240,9 +240,9 @@ ht-degree: 0%
 
 ## 投放方法路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **投放方法**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **交付方法**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 已启用 | `carriers/flatrate/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 标题 | `carriers/flatrate/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -280,7 +280,7 @@ ht-degree: 0%
 | 显示方法（如果不适用） | `carriers/tablerate/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 排序顺序 | `carriers/tablerate/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 已启用签出 | `carriers/ups/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 已启用RMA | `carriers/ups/active_rma` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 已启用RMA | `carriers/ups/active_rma` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | UPS类型 | `carriers/ups/type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 模式 | `carriers/ups/mode_xml` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 装运的来源 | `carriers/ups/origin_shipment` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -307,7 +307,7 @@ ht-degree: 0%
 | 显示方法（如果不适用） | `carriers/ups/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 排序顺序 | `carriers/ups/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 已启用签出 | `carriers/usps/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 已启用RMA | `carriers/usps/active_rma` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 已启用RMA | `carriers/usps/active_rma` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 模式 | `carriers/usps/mode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 程序包请求类型 | `carriers/usps/shipment_requesttype` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 容器 | `carriers/usps/container` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -332,7 +332,7 @@ ht-degree: 0%
 | 显示方法（如果不适用） | `carriers/usps/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 排序顺序 | `carriers/usps/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 已启用签出 | `carriers/fedex/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 已启用RMA | `carriers/fedex/active_rma` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 已启用RMA | `carriers/fedex/active_rma` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 标题 | `carriers/fedex/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Web服务URL（生产） | `carriers/fedex/production_webservices_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Web服务URL（沙盒） | `carriers/fedex/sandbox_webservices_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -357,7 +357,7 @@ ht-degree: 0%
 | 显示方法（如果不适用） | `carriers/fedex/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 排序顺序 | `carriers/fedex/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 已启用签出 | `carriers/dhl/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 已启用RMA | `carriers/dhl/active_rma` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 已启用RMA | `carriers/dhl/active_rma` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 标题 | `carriers/dhl/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 内容类型 | `carriers/dhl/content_type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 计算手续费 | `carriers/dhl/handling_type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -386,19 +386,19 @@ ht-degree: 0%
 
 ## Google API路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **GOOGLE API**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **Google API**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用 | `google/analytics/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 帐户类型 | `google/analytics/type` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 帐户类型 | `google/analytics/type` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 启用内容试验 | `google/analytics/experiments` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 目录页面的列表属性 | `google/analytics/catalog_page_list_value` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 交叉销售块的列表属性 | `google/analytics/crosssell_block_list_value` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 追加销售块的列表属性 | `google/analytics/upsell_block_list_value` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 相关产品块的列表属性 | `google/analytics/related_block_list_value` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 搜索结果页面的列表属性 | `google/analytics/search_page_list_value` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 促销活动字段“标签”的“内部促销活动”。 | `google/analytics/promotions_list_value` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 目录页面的列表属性 | `google/analytics/catalog_page_list_value` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 交叉销售块的列表属性 | `google/analytics/crosssell_block_list_value` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 追加销售块的列表属性 | `google/analytics/upsell_block_list_value` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 相关产品块的列表属性 | `google/analytics/related_block_list_value` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 搜索结果页面的列表属性 | `google/analytics/search_page_list_value` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 促销活动字段“标签”的“内部促销活动”。 | `google/analytics/promotions_list_value` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 启用 | `google/adwords/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 转换ID | `google/adwords/conversion_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 转换语言 | `google/adwords/conversion_language` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -412,9 +412,9 @@ ht-degree: 0%
 
 ## 礼品卡路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **销售** > **礼品卡**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **销售** > **礼品卡**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 礼品卡通知电子邮件发件人 | `giftcard/email/identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 礼品卡通知电子邮件模板 | `giftcard/email/template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |

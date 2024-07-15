@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # 客户配置路径参考
 
-此部分列出了“管理员”中选项可用的变量名称和配置路径，位于 **商店** >设置> **配置** > **客户**.
+此部分列出了&#x200B;**商店** >设置> **配置** > **客户**&#x200B;下的管理员中选项可用的变量名称和配置路径。
 
-此 [`magento app:config:dump` 命令](../cli/export-configuration.md) 将这些值写入共享配置文件， `app/etc/config.php`，它应该在源代码控制中。 要选择性地覆盖任何配置设置或设置敏感设置，请参阅 [使用环境变量覆盖配置设置](override-config-settings.md#environment-variables). 此主题可以 _非_ 列表 [敏感值和系统特定的值](config-reference-sens.md).
+[`magento app:config:dump`命令](../cli/export-configuration.md)将这些值写入到共享配置文件`app/etc/config.php`中，该文件应位于源代码控制中。 若要选择性地覆盖任何配置设置或设置敏感设置，请参阅[使用环境变量覆盖配置设置](override-config-settings.md#environment-variables)。 此主题&#x200B;_不_&#x200B;列出[敏感且特定于系统的值](config-reference-sens.md)。
 
 ## 新闻稿路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **新闻稿**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **新闻稿**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 允许来宾订阅 | `newsletter/subscription/allow_guest_subscribe` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 需要确认 | `newsletter/subscription/confirm` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 ## 客户配置路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **客户配置**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **客户配置**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 联机分钟间隔 | `customer/online_customers/online_minutes_interval` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 共享客户帐户 | `customer/account_share/scope` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -77,20 +77,20 @@ ht-degree: 0%
 | 显示中间名（首字母） | `customer/address/middlename_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示后缀 | `customer/address/suffix_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 后缀下拉选项 | `customer/address/suffix_options` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 显示出生日期 | `customer/address/dob_show`<br>为遵循最新的安全和隐私最佳实践，在收集或处理客户完整出生日期（月、日、年）及其他个人标识符（如全名）之前，请确保您了解任何与此类存储相关的潜在法律和安全风险。 | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| 显示出生日期 | `customer/address/dob_show`<br>为遵循当前的安全和隐私最佳实践，在收集或处理此类数据之前，请确保您了解任何与客户的完整出生日期（月、日、年）以及其他个人标识符（如全名）存储相关的潜在法律和安全风险。 | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示税号/增值税号 | `customer/address/taxvat_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 显示性别 | `customer/address/gender_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 启用商店信用功能 | `customer/magento_customerbalance/is_enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 向客户显示商店信用历史记录 | `customer/magento_customerbalance/show_history` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 自动退款商店点数 | `customer/magento_customerbalance/refund_automatically` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 存储信用更新电子邮件发件人 | `customer/magento_customerbalance/email_identity` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 商店信用更新电子邮件模板 | `customer/magento_customerbalance/email_template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 启用商店信用功能 | `customer/magento_customerbalance/is_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 向客户显示商店信用历史记录 | `customer/magento_customerbalance/show_history` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 自动退款商店点数 | `customer/magento_customerbalance/refund_automatically` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 存储信用更新电子邮件发件人 | `customer/magento_customerbalance/email_identity` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 商店信用更新电子邮件模板 | `customer/magento_customerbalance/email_template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 登录后将客户重定向到帐户信息板 | `customer/startup/redirect_dashboard` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 文本 | `customer/address_templates/text` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 文本一行 | `customer/address_templates/oneline` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | HTML | `customer/address_templates/html` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | PDF | `customer/address_templates/pdf` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 启用客户细分功能 | `customer/magento_customersegment/is_enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 启用客户细分功能 | `customer/magento_customersegment/is_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 在店面启用验证码 | `customer/captcha/enable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 字体 | `customer/captcha/font` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Forms | `customer/captcha/forms` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -105,13 +105,13 @@ ht-degree: 0%
 
 ## 愿望清单路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **愿望清单**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **愿望清单**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 已启用 | `wishlist/general/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 启用多个愿望清单 | `wishlist/general/multiple_enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 多个愿望清单的数量 | `wishlist/general/multiple_wishlist_number` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 启用多个愿望清单 | `wishlist/general/multiple_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 多个愿望清单的数量 | `wishlist/general/multiple_wishlist_number` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 电子邮件发件人 | `wishlist/email/email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 电子邮件模板 | `wishlist/email/email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 允许发送的电子邮件数量上限 | `wishlist/email/number_limit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -122,69 +122,69 @@ ht-degree: 0%
 
 ## 邀请路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **邀请**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **邀请**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
-| 启用邀请功能 | `magento_invitation/general/enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 在店面启用邀请 | `magento_invitation/general/enabled_on_front` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 引用的客户组 | `magento_invitation/general/registration_use_inviter_group` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 新帐户注册 | `magento_invitation/general/registration_required_invitation` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 允许客户向邀请电子邮件添加自定义消息 | `magento_invitation/general/allow_customer_message` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 允许一次发送的最大邀请数 | `magento_invitation/general/max_invitation_amount_per_send` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 客户邀请电子邮件发件人 | `magento_invitation/email/identity` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 客户邀请电子邮件模板 | `magento_invitation/email/template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 启用邀请功能 | `magento_invitation/general/enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 在店面启用邀请 | `magento_invitation/general/enabled_on_front` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 引用的客户组 | `magento_invitation/general/registration_use_inviter_group` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 新帐户注册 | `magento_invitation/general/registration_required_invitation` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 允许客户向邀请电子邮件添加自定义消息 | `magento_invitation/general/allow_customer_message` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 允许一次发送的最大邀请数 | `magento_invitation/general/max_invitation_amount_per_send` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 客户邀请电子邮件发件人 | `magento_invitation/email/identity` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 客户邀请电子邮件模板 | `magento_invitation/email/template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 
 {style="table-layout:auto"}
 
 ## 奖励点数路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **奖励点数**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **奖励点数**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
-| 启用奖励积分功能 | `magento_reward/general/is_enabled` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 在店面启用奖励积分功能 | `magento_reward/general/is_enabled_on_front` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 客户可能会看到奖励积分历史记录 | `magento_reward/general/publish_history` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 奖励积分余额兑换阈值 | `magento_reward/general/min_points_balance` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 将奖励积分余额限制在 | `magento_reward/general/max_points_balance` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 奖励积分过期时间（天） | `magento_reward/general/expiration_days` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 奖励积分到期计算 | `magento_reward/general/expiry_calculation` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 自动退款奖励积分 | `magento_reward/general/refund_automatically` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 从退款金额中自动扣除奖励积分 | `magento_reward/general/deduct_automatically` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 登陆页面 | `magento_reward/general/landing_page` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 购买 | `magento_reward/points/order` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 注册 | `magento_reward/points/register` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 新闻稿注册 | `magento_reward/points/newsletter` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 将邀请转换为客户 | `magento_reward/points/invitation_customer` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 客户转化邀请数量限制 | `magento_reward/points/invitation_customer_limit` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 将邀请转换为订单 | `magento_reward/points/invitation_order` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 订单转换邀请数量限制 | `magento_reward/points/invitation_order_limit` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 从邀请转换为订单奖励 | `magento_reward/points/invitation_order_frequency` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 审核提交 | `magento_reward/points/review` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 已奖励的审核提交数量限制 | `magento_reward/points/review_limit` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 电子邮件发件人 | `magento_reward/notification/email_sender` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 默认订阅客户 | `magento_reward/notification/subscribe_by_default` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 余额更新电子邮件 | `magento_reward/notification/balance_update_template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 奖励积分到期警告电子邮件 | `magento_reward/notification/expiry_warning_template` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 过期警告早于（天） | `magento_reward/notification/expiry_day_before` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 启用奖励积分功能 | `magento_reward/general/is_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 在店面启用奖励积分功能 | `magento_reward/general/is_enabled_on_front` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 客户可能会看到奖励积分历史记录 | `magento_reward/general/publish_history` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 奖励积分余额兑换阈值 | `magento_reward/general/min_points_balance` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 将奖励积分余额限制在 | `magento_reward/general/max_points_balance` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 奖励积分过期时间（天） | `magento_reward/general/expiration_days` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 奖励积分到期计算 | `magento_reward/general/expiry_calculation` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 自动退款奖励积分 | `magento_reward/general/refund_automatically` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 从退款金额中自动扣除奖励积分 | `magento_reward/general/deduct_automatically` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 登陆页面 | `magento_reward/general/landing_page` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 购买 | `magento_reward/points/order` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 注册 | `magento_reward/points/register` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 新闻稿注册 | `magento_reward/points/newsletter` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 将邀请转换为客户 | `magento_reward/points/invitation_customer` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 客户转化邀请数量限制 | `magento_reward/points/invitation_customer_limit` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 将邀请转换为订单 | `magento_reward/points/invitation_order` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 订单转换邀请数量限制 | `magento_reward/points/invitation_order_limit` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 从邀请转换为订单奖励 | `magento_reward/points/invitation_order_frequency` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 审核提交 | `magento_reward/points/review` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 已奖励的审核提交数量限制 | `magento_reward/points/review_limit` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 电子邮件发件人 | `magento_reward/notification/email_sender` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 默认订阅客户 | `magento_reward/notification/subscribe_by_default` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 余额更新电子邮件 | `magento_reward/notification/balance_update_template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 奖励积分到期警告电子邮件 | `magento_reward/notification/expiry_warning_template` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 过期警告早于（天） | `magento_reward/notification/expiry_day_before` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 
 {style="table-layout:auto"}
 
 ## 促销活动路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **促销活动**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **促销活动**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用提醒电子邮件 | `promo/magento_reminder/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 频率 | `promo/magento_reminder/frequency` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 间隔 | `promo/magento_reminder/interval` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 小时中的分钟 | `promo/magento_reminder/minutes` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 开始时间 | `promo/magento_reminder/time` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 每次运行的最大电子邮件数 | `promo/magento_reminder/limit` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 电子邮件发送失败阈值 | `promo/magento_reminder/threshold` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
-| 提醒电子邮件发件人 | `promo/magento_reminder/identity` | ![仅商务](/help/assets/configuration/cloud-ee.png) |
+| 小时中的分钟 | `promo/magento_reminder/minutes` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 开始时间 | `promo/magento_reminder/time` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 每次运行的最大电子邮件数 | `promo/magento_reminder/limit` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 电子邮件发送失败阈值 | `promo/magento_reminder/threshold` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 提醒电子邮件发件人 | `promo/magento_reminder/identity` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 代码长度 | `promo/auto_generated_coupon_codes/length` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 代码格式 | `promo/auto_generated_coupon_codes/format` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 代码前缀 | `promo/auto_generated_coupon_codes/prefix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -195,9 +195,9 @@ ht-degree: 0%
 
 ## 礼品注册表路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **礼品注册表**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **礼品注册表**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用礼品注册 | `magento_giftregistry/general/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 最大注册者数 | `magento_giftregistry/general/max_registrant` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -213,9 +213,9 @@ ht-degree: 0%
 
 ## 永久购物车路径
 
-这些配置值在管理员的以下位置提供： **商店** >设置> **配置** > **客户** > **永久购物车**.
+这些配置值在&#x200B;**商店** >设置> **配置** > **客户** > **永久购物车**&#x200B;的管理员中可用。
 
-| 名称 | 配置路径 | 仅限商务？ |
+| 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | 启用持久性 | `persistent/options/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 持久性生命周期（秒） | `persistent/options/lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |

@@ -1,6 +1,6 @@
 ---
 title: 部署先决条件
-description: 请参阅将Commerce部署到开发、构建或生产系统的先决条件列表。
+description: 请参阅将Commerce部署到开发、构建或生产系统中的先决条件列表。
 feature: Configuration, Deploy
 exl-id: 9ea0eeff-e0f8-4532-887c-5d7f07d89ddd
 source-git-commit: dcc283b901917e3681863370516771763ae87462
@@ -22,8 +22,8 @@ ht-degree: 0%
 
 - 根据需要使用以下准则更改每个系统上的Commerce文件系统权限和所有权：
 
-   - 开发和构建： [设置安装前的所有权和权限（两个用户）](file-system-permissions.md#set-up-two-owners-for-default-or-developer-mode)
-   - 生产： [开发和生产中的商业所有权和权限](file-system-permissions.md)
+   - 开发和生成： [设置安装前的所有权和权限（两个用户）](file-system-permissions.md#set-up-two-owners-for-default-or-developer-mode)
+   - 生产： [开发和生产中的Commerce所有权和权限](file-system-permissions.md)
 
 >[!INFO]
 >

@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >要检查和分析数据库和各种功能，请考虑使用真实数据而不是示例数据。 样本数据被设计作为预生成的店面模拟，以演示主题设计和基本店面行为。 安装样本数据时，所有样本数据实体都将直接写入数据库表中。
 
-您可以在安装Commerce软件之前或之后安装示例数据。 使用完示例数据后，您可以将其删除或重新安装，如中所述 [删除示例数据模块或更新示例数据](remove-or-update.md).
+您可以在安装Commerce软件之前或之后安装示例数据。 处理完样本数据后，您可以将其删除或全新安装，如[删除样本数据模块或更新样本数据](remove-or-update.md)中所述。
 
 >[!WARNING]
 >
@@ -27,5 +27,5 @@ ht-degree: 0%
 
 | 安装方法 | 描述 | 所需技能级别 |
 |--- |--- |--- |
-| 使用编辑器 | [运行 `magento sampledata:deploy` 修改应用程序的根目录 `composer.json`](composer-packages.md) 以启用示例数据模块。 | 需要具有Composer知识和访问Commerce文件系统的权限。 |
-| 克隆存储库 | [克隆GitHub存储库](git-repositories.md) 和示例数据存储库，然后将它们链接在一起。 | 仅供参与开发的开发人员使用。 其他所有人都应使用上述方法之一。 |
+| 使用编辑器 | [运行`magento sampledata:deploy`以修改应用程序的根`composer.json`](composer-packages.md)以启用示例数据模块。 | 需要具有Composer知识和访问Commerce文件系统的权限。 |
+| 克隆存储库 | [克隆GitHub存储库](git-repositories.md)和示例数据存储库，然后将它们链接在一起。 | 仅供参与开发的开发人员使用。 其他所有人都应使用上述方法之一。 |

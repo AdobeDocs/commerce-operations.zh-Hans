@@ -9,19 +9,19 @@ ht-degree: 3%
 
 我们欢迎社区以及文档团队以外的Adobe员工投稿。
 
-## Adobe开源项目行为准则
+## Adobe打开Source行为准则
 
 本项目已采用 [Adobe 开源行为准则](code-of-conduct.md)或 [.NET Foundation 行为准则](https://dotnetfoundation.org/code-of-conduct)。有关更多信息，请参阅[贡献](contributing.md)文章。
 
 ## 关于您对Adobe内容的投稿
 
-请参阅 [Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 您的参与方式取决于您的身份以及您希望参与的更改类型：
 
 ### 次要更改
 
-如果您要提供较小的更新，请访问文章，然后单击文章底部显示的反馈区域，然后单击 **详细的反馈选项**，然后单击 **建议编辑** 以转到GitHub上的Markdown源文件。 使用GitHub UI进行更新。 查看常规 [Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) 以了解更多信息。
+如果您要提供较小的更新，请访问文章，然后单击文章底部显示的反馈区域，单击&#x200B;**详细的反馈选项**，然后单击&#x200B;**建议编辑**&#x200B;以转到GitHub上的Markdown源文件。 使用GitHub UI进行更新。 有关详细信息，请参阅常规[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 您为此存储库中的文档和代码示例提交的小幅度更正或说明受Adobe使用条款的约束。
 
@@ -35,7 +35,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### 来自Adobe员工的重大更改
 
-如果您是来自Adobe Experience Cloud解决方案产品团队的技术文档撰稿人、项目经理或开发人员，并且您的工作就是撰写或创作技术文章，那么您应当使用位于的专用存储库 `https://git.corp.adobe.com/AdobeDocs`.
+如果您是来自Adobe Experience Cloud解决方案产品团队的技术文档撰稿人、项目经理或开发人员，并且您的工作就是撰写或创作技术文章，那么您应当使用位于`https://git.corp.adobe.com/AdobeDocs`的专用存储库。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
@@ -43,13 +43,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-请参阅 [Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) 以了解详细信息。
+有关详细信息，请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 ## 如何使用Markdown格式化主题
 
 此存储库中的所有文章都使用GitHub风格的标记。 如果您不熟悉Markdown，请参阅：
 
-* [Markdown基础](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
+* [标记基础知识](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [可打印的Markdown速查表](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ## 模板
@@ -61,7 +61,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 模板化内容的示例包括但不限于：
 
-* [CLI工具参考](https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html)
+* [CLI工具引用](https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html)
 * [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)
 * [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
 
@@ -69,28 +69,28 @@ If you submit a pull request with significant changes to documentation and code 
 
 通常，大多数作者只需要将发行版本添加到产品可用性和系统要求表中。 所有其他模板化内容的维护都是自动进行的，或由专门的团队成员管理。 这些说明适用于大多数作者。
 
->**注意：**
+>**注释：**
 >
 >* 生成模板化内容需要在终端中的命令行上工作。
->* 必须安装Ruby才能运行渲染脚本。 请参阅 [_jekyll/.ruby-version](_jekyll/.ruby-version) 适用于所需版本。
+>* 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 有关模板化内容的文件结构的描述，请参阅以下内容：
 
 * `_jekyll` — 包含模板化主题和所需资源
 * `_jekyll/_data` — 包含用于呈现模板的计算机可读文件格式
-* `_jekyll/templated` — 包含使用液体模板语言的基于HTML的模板文件
-* `help/_includes/templated` — 包含在中模板化内容的生成输出 `.md` 文件格式，以便在Experience League主题中发布；渲染脚本自动将生成的输出写入此目录中
+* `_jekyll/templated` — 包含使用Liquid模板语言的基于HTML的模板文件
+* `help/_includes/templated` — 包含模板化内容的生成输出，格式为`.md`，因此可在Experience League主题中发布；渲染脚本自动将生成的输出写入此目录中
 
 要更新模板化内容，请执行以下操作：
 
-1. 在文本编辑器中，打开以下位置的数据文件： `/jekyll/_data` 目录。 例如：
+1. 在文本编辑器中，打开`/jekyll/_data`目录中的数据文件。 例如：
 
    * [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)： `/jekyll/_data/product-availability.yml`
    * [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)： `/jekyll/_data/system-requirements.yml`
 
 1. 使用现有的YAML结构创建条目。
 
-   例如，要将Adobe Commerce版本添加到产品可用性表中，请将以下内容添加到 `extensions` 和 `services` 的部分 `/jekyll/_data/product-availability.yml` 文件（根据需要修改版本号）：
+   例如，要将Adobe Commerce版本添加到产品可用性表中，请将以下内容添加到`/jekyll/_data/product-availability.yml`文件的`extensions`和`services`部分中的每个条目（根据需要修改版本号）：
 
    ```
    support:
@@ -98,27 +98,27 @@ If you submit a pull request with significant changes to documentation and code 
         version: 4.5.6
    ```
 
-1. 导航至 `_jekyll` 目录。
+1. 导航到`_jekyll`目录。
 
    ```
    cd _jekyll
    ```
 
-1. 生成模板化内容并将输出写入 `help/_includes/templated` 目录。
+1. 生成模板化内容并将输出写入`help/_includes/templated`目录。
 
    ```
    rake render
    ```
 
-   >**注意：** 您必须从以下位置运行脚本： `_jekyll` 目录。 如果这是您第一次运行脚本，则必须先安装Ruby依赖项，并具有 `bundle install` 命令。
+   >**注意：**&#x200B;必须从`_jekyll`目录运行脚本。 如果这是您第一次运行脚本，则必须先使用`bundle install`命令安装Ruby依赖项。
 
-1. 导航回 `root` 目录。
+1. 导航回`root`目录。
 
    ```
    cd ..
    ```
 
-1. 验证预期的 `help/_includes/templated` 文件已修改。
+1. 验证预期的`help/_includes/templated`文件是否已修改。
 
    ```
    git status
@@ -139,4 +139,4 @@ If you submit a pull request with significant changes to documentation and code 
    git push
    ```
 
-有关更多详细信息，请参阅Jekyll文档 [数据文件](https://jekyllrb.com/docs/datafiles)， [液体过滤器](https://jekyllrb.com/docs/liquid/filters/)和其他功能。
+有关[Data Files](https://jekyllrb.com/docs/datafiles)、[Liquid Filters](https://jekyllrb.com/docs/liquid/filters/)和其他功能的更多详细信息，请参阅Jekyll文档。

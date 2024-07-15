@@ -21,11 +21,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关成功升级的技术步骤的详细说明，请参阅 [完成升级先决条件](../../../upgrade/prepare/prerequisites.md) 在我们的用户文档中。
+>有关成功升级的技术步骤的详细说明，请参阅用户文档中的[完成升级先决条件](../../../upgrade/prepare/prerequisites.md)。
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ## 预算和时间
 
-▢使用Adobe Commerce [发布计划](../../../release/schedule.md) 以计划下次升级并提前准备。
+▢使用Adobe Commerce [发布计划](../../../release/schedule.md)来计划下次升级并提前准备。
 
 ▢根据预期需求，讨论您认为将采用哪个版本（完全版本或仅限安全版本）。
 
@@ -60,14 +60,14 @@ ht-degree: 0%
 
 ▢早访问活动
 
-- 合作伙伴参与 [测试版](../../../release/beta.md)
-- 测试版发行说明审查。
+- 合作伙伴参与了[Beta](../../../release/beta.md)
+- Beta发行说明审查。
 
 ▢就预算、时间表和范围达成一致。
 
-▢运行 [升级兼容性工具](../../../upgrade/upgrade-compatibility-tool/overview.md)
+▢运行[升级兼容性工具](../../../upgrade/upgrade-compatibility-tool/overview.md)
 
-▢考虑使用升级来解决 [站点范围分析工具](../../../tools/site-wide-analysis-tool/intro.md).
+▢考虑使用升级来解决[站点范围分析工具](../../../tools/site-wide-analysis-tool/intro.md)发现的问题。
 
 ▢文档依赖项和所需的任何技术栈栈更改，如PHP或Elastic Search版本。
 
@@ -77,17 +77,17 @@ ht-degree: 0%
 
 ▢如果预计停机，则计划维护时段。
 
-▢审查和批准测试策略；考虑使用Adobe Commerce [测试框架](https://developer.adobe.com/commerce/testing/) 或第三方自动化套件。
+▢查看并批准测试策略；考虑使用Adobe Commerce [测试框架](https://developer.adobe.com/commerce/testing/)或第三方自动化套件。
 
 ▢确认所有扩展和自定义项都兼容。
 
 ▢查看并更新启动后的行动手册；在升级期间或升级后发现问题时使用。
 
-## 部署后
+## Post部署
 
 ▢监测站点是否存在问题 — 性能、订单处理、分析等。
 
-▢执行Adobe Commerce [安全扫描](https://account.magento.com/scanner/dashboard/) 或其他第三方扫描并审查潜在的安全漏洞。
+▢执行Adobe Commerce [安全扫描](https://account.magento.com/scanner/dashboard/)或其他第三方扫描并检查潜在的安全漏洞。
 
 ▢与所有利益相关者一起回顾并记录哪些方面进展顺利、哪些方面未进展以及如何改进。
 

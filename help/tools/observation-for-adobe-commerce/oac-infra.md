@@ -1,57 +1,57 @@
 ---
-title: 此 [!DNL Infra] 选项卡
-description: 此 [!DNL Infra] 选项卡可隔离基础架构问题的问题和原因。
+title: ' [!DNL Infra] 选项卡'
+description: ' [!DNL Infra] 选项卡可隔离基础架构问题的问题和原因。'
 exl-id: 45f24177-3264-4848-99bc-951be32c1f7b
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
 
-# 此 [!DNL Infra] 选项卡
+# [!DNL Infra]选项卡
 
-此 **[!DNL Infra]** 选项卡可隔离基础架构问题的问题和原因。 对您可在选项卡上看到的帧进行了进一步的描述。
+**[!DNL Infra]**&#x200B;选项卡可隔离基础架构问题的问题和原因。 对您可在选项卡上看到的帧进行了进一步的描述。
 
 ## [!UICONTROL Service Alerts – Infrastructure Alerts by Application name]
 
 ![服务警报](../../assets/tools/observation-for-adobe-commerce/service-alerts.jpg)
 
-此 **[!UICONTROL Service Alerts – Infrastructure Alerts by Application name]** 该图显示了由收集的服务预警 [!DNL New Relic] 基础结构代理。 这将显示服务重新启动，其中许多与部署关联。
+**[!UICONTROL Service Alerts – Infrastructure Alerts by Application name]**&#x200B;图形显示[!DNL New Relic]基础结构代理收集的服务警报。 这将显示服务重新启动，其中许多与部署关联。
 
 ## [!UICONTROL Inode usage by mount]
 
-![按装载列出的Inode使用情况](../../assets/tools/observation-for-adobe-commerce/inode-usage-mount.jpg)
+![装载的Inode使用量](../../assets/tools/observation-for-adobe-commerce/inode-usage-mount.jpg)
 
-此 **[!UICONTROL Inode usage by mount]** 帧显示 [!DNL inode] 在整个所选时间范围内按装载列出的使用情况。 即使节点用完后，可能还有大量空闲存储空间 [!DNL inodes]，则将显示缺少可用存储。 删除文件（尤其是小文件）将释放空间并生成 [!DNL inodes] 可用。
+**[!UICONTROL Inode usage by mount]**&#x200B;帧显示所选时间范围内按装载显示的[!DNL inode]使用情况。 即使可能有大量可用存储，但如果节点用完[!DNL inodes]，则会显示缺少可用存储。 删除文件（尤其是小文件）将释放两个空间并使[!DNL inodes]可用。
 
 ## [!UICONTROL vCPU tier view over timeline GREATER 2 weeks]
 
-![时间线上的vCPU层视图大于2周](../../assets/tools/observation-for-adobe-commerce/vCPU-tier.jpg)
+![vCPU层在时间线上的查看时间大于2周](../../assets/tools/observation-for-adobe-commerce/vCPU-tier.jpg)
 
-此 **[!UICONTROL vCPU tier view over timeline GREATER 2 weeks]** 该帧显示超过两周的选定时间范围内的vCPU层视图。 此帧查看分配给的vCPU数 [!DNL New Relic] 显示的应用程序名称。
+**[!UICONTROL vCPU tier view over timeline GREATER 2 weeks]**&#x200B;帧在超过两周的选定时间范围内显示vCPU层视图。 此框架查看分配给所显示[!DNL New Relic]应用程序名称的vCPU数。
 
 ## [!UICONTROL vCPU tier view over timeline]
 
-![vCPU层时间线视图](../../assets/tools/observation-for-adobe-commerce/vcpu-tier-24.jpg)
+![vCPU层查看时间线](../../assets/tools/observation-for-adobe-commerce/vcpu-tier-24.jpg)
 
-此 **[!UICONTROL vCPU tier view over timeline]** 该帧显示选定时间范围内超过24小时的vCPU层视图。 此帧查看分配给的vCPU数 [!DNL New Relic] 显示的应用程序名称。 它将同时显示群集的上升和下降。
+**[!UICONTROL vCPU tier view over timeline]**&#x200B;帧在超过24小时的选定时间范围内显示vCPU层视图。 此框架查看分配给所显示[!DNL New Relic]应用程序名称的vCPU数。 它将同时显示群集的上升和下降。
 
 ## [!UICONTROL vCPU tier view over timeline BY NODE]
 
-![vCPU层按节点查看时间线](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)
+按节点](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)在时间线上查看![vCPU层
 
-此 **[!UICONTROL vCPU tier view over timeline BY NODE]** 帧按节点显示选定时间范围内的vCPU层视图。 此帧有助于检测节点丢失情况或节点放大或缩小情况。 vCPU层按节点查看时间线，应查看不到24小时的时间线。
+**[!UICONTROL vCPU tier view over timeline BY NODE]**&#x200B;帧按节点显示选定时间范围内的vCPU层视图。 此帧有助于检测节点丢失情况或节点放大或缩小情况。 vCPU层按节点查看时间线，应查看不到24小时的时间线。
 
 ## [!UICONTROL Instance details]
 
 ![实例详细信息](../../assets/tools/observation-for-adobe-commerce/instance-details.jpg)
 
-此 **[!UICONTROL Instance details]** 该表显示每个实例的详细信息 [!DNL New Relic] 应用程序。
+**[!UICONTROL Instance details]**&#x200B;表显示每个[!DNL New Relic]应用程序的实例详细信息。
 
 ## [!UICONTROL Logging, if there is a broken line for a node, it indicates non-responsive node during that time period]
 
 ![无响应节点](../../assets/tools/observation-for-adobe-commerce/non-responsive-node.jpg)
 
-此 **[!UICONTROL Logging, if there is a broken line for a node, it indicates non-responsive node during that time period]** 帧显示一段时间内无响应的节点。
+**[!UICONTROL Logging, if there is a broken line for a node, it indicates non-responsive node during that time period]**&#x200B;帧显示一段时间内无响应的节点。

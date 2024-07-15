@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Adobe Commerce 2.4.6
 
-从MariaDB 10.5.1开始，使用旧临时格式的列使用 `/* mariadb-5.3 */` 注释在输出中 `SHOW CREATE TABLE`， `SHOW COLUMNS`， `DESCRIBE` 语句，以及 `COLUMN_TYPE` 列 `INFORMATION_SCHEMA.COLUMNS` 表格。 [请参阅MariaDB文档](https://mariadb.com/kb/en/datetime/#internal-format).
+从MariaDB 10.5.1开始，在`SHOW CREATE TABLE`、`SHOW COLUMNS`、`DESCRIBE`语句的输出以及`INFORMATION_SCHEMA.COLUMNS`表的`COLUMN_TYPE`列中，具有旧临时格式的列使用`/* mariadb-5.3 */`注释进行标记。 [请参阅MariaDB文档](https://mariadb.com/kb/en/datetime/#internal-format)。
 
 由于MariaDB注释，Adobe Commerce无法将日期列映射到正确的数据类型，这可能会导致自定义代码中出现意外行为。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ### 默认配置
 
-在MariaDB 10.1.2中，从MySQL 5.6引入了一种新的临时格式。此 `mysql56_temporal_format` 系统变量允许数据库在执行alter表或导入数据库时自动将旧日期格式转换为新日期格式。 的默认配置 `mysql56_temporal_format` 在云基础架构上的Adobe Commerce上始终启用。
+在MariaDB 10.1.2中，从MySQL 5.6引入了一种新的临时格式。`mysql56_temporal_format`系统变量允许数据库在执行更改表或导入数据库时将旧日期格式自动转换为新日期格式。 云基础架构上的Adobe Commerce始终启用`mysql56_temporal_format`的默认配置。
 
 ### 迁移日期列
 
@@ -47,7 +47,7 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
 
 >[!NOTE]
 >
->请务必将这些列迁移到新的内部日期格式 _早于_ 部署新代码以避免意外行为。
+>在部署新代码之前&#x200B;_将列迁移到新的内部日期格式_&#x200B;很重要，以避免意外行为。
 
 ## Adobe Commerce 2.3.5
 
@@ -59,18 +59,18 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
 
 在Adobe Commerce支持团队开始升级过程之前，请通过转换数据库表准备数据库：
 
-- 转换行格式 `COMPACT` 到 `DYNAMIC`
-- 更改存储引擎 `MyISAM` 到 `InnoDB`
+- 将行格式从`COMPACT`转换为`DYNAMIC`
+- 将存储引擎从`MyISAM`更改为`InnoDB`
 
 在计划和计划转换时，请牢记以下注意事项：
 
-- 转换自 `COMPACT` 到 `DYNAMIC` 对于大型数据库，表可能需要几个小时。
+- 对于大型数据库，从`COMPACT`转换为`DYNAMIC`表可能需要几个小时。
 
 - 为防止数据损坏，请勿在实时网站上完成转换工作。
 
 - 在网站上的低流量期间完成转化工作。
 
-- 将您的站点切换到 [维护模式](../../../installation/tutorials/maintenance-mode.md) 运行命令转换数据库表之前。
+- 运行转换数据库表的命令之前，请将站点切换到[维护模式](../../../installation/tutorials/maintenance-mode.md)。
 
 #### 转换数据库表行格式
 
@@ -106,18 +106,18 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
 
 对于Adobe Commerce Starter和Adobe Commerce Pro项目，转换存储格式的过程不同。
 
-- 对于入门体系结构，请使用MySQL `ALTER` 命令转换格式。
-- 在Pro体系结构上，使用MySQL `CREATE` 和 `SELECT` 用于创建数据库表的命令 `InnoDB` 存储数据并将现有表中的数据复制到新表中。 此方法可确保将更改复制到群集中的所有节点。
+- 对于入门体系结构，请使用MySQL `ALTER`命令转换格式。
+- 在Pro体系结构上，使用MySQL `CREATE`和`SELECT`命令创建具有`InnoDB`存储空间的数据库表，并将现有表中的数据复制到新表中。 此方法可确保将更改复制到群集中的所有节点。
 
 **转换Adobe Commerce Pro项目的表存储格式**
 
-1. 标识使用的表 `MyISAM` 存储。
+1. 标识使用`MyISAM`存储的表。
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. 将所有表转换为 `InnoDB` 存储格式。
+1. 将所有表逐个转换为`InnoDB`存储格式。
 
    - 重命名现有表以防止名称冲突。
 
@@ -125,7 +125,7 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
      RENAME TABLE <existing_table> <table_old>;
      ```
 
-   - 创建使用 `InnoDB` 使用现有表中的数据进行存储。
+   - 使用现有表中的数据创建一个使用`InnoDB`存储的表。
 
      ```mysql
      CREATE TABLE <existing_table> ENGINE=InnoDB SELECT * from <table_old>;
@@ -136,15 +136,15 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
    - 删除重命名的原始表。
 
 
-**为Adobe Commerce Starter项目转换表存储格式**
+**转换Adobe Commerce Starter项目的表存储格式**
 
-1. 标识使用的表 `MyISAM` 存储。
+1. 标识使用`MyISAM`存储的表。
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. 转换使用的表 `MyISAM` 存储到 `InnoDB` 存储。
+1. 将使用`MyISAM`存储的表转换为`InnoDB`存储。
 
    ```mysql
    ALTER TABLE [ table name here ] ENGINE=InnoDB;
@@ -156,13 +156,13 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
 
 1. 登录到数据库。
 
-1. 检查任何仍具有 `COMPACT` 行格式。
+1. 检查任何仍具有`COMPACT`行格式的表。
 
    ```mysql
    SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
    ```
 
-1. 检查任何仍使用 `MyISAM` 存储格式
+1. 检查任何仍使用`MyISAM`存储格式的表
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
@@ -172,4 +172,4 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
 
 ### 更改存储引擎
 
-请参阅 [将MyISAM表转换为InnoDB](../planning/database-on-cloud.md).
+请参阅[将MyISAM表转换为InnoDB](../planning/database-on-cloud.md)。

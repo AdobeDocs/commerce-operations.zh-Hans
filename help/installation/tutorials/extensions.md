@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 管理第三方扩展
 
-扩展或自定义Adobe Commerce行为的代码称为扩展。 您可以选择在上打包和分发扩展 [Commerce Marketplace](https://commercemarketplace.adobe.com/) 或者另一个扩展分发系统。
+扩展或自定义Adobe Commerce行为的代码称为扩展。 您可以选择在[Commerce Marketplace](https://commercemarketplace.adobe.com/)或其他扩展分发系统上打包和分发扩展。
 
 扩展包括：
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->本主题介绍如何使用命令行界面管理您从Commerce Marketplace购买的第三方扩展。 您可以使用相同的过程来安装 _任意_ 扩展；您只需要扩展的编辑器名称和版本。 要找到它，请打开扩展的 `composer.json` 文件并记下 `"name"` 和 `"version"`.
+>本主题介绍如何使用命令行界面管理您从Commerce Marketplace购买的第三方扩展。 您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
 
 ## 安装
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 要安装扩展，您必须：
 
 1. 从Commerce Marketplace或其他扩展开发人员处获取扩展。
-1. 如果从Commerce Marketplace安装扩展，请确保 `repo.magento.com` 存储库存在于您的 `composer.json` 文件：
+1. 如果从Commerce Marketplace安装扩展，请确保`composer.json`文件中存在`repo.magento.com`存储库：
 
    ```bash
    "repositories": [
@@ -50,39 +50,39 @@ ht-degree: 0%
    ```
 
 1. 获取扩展的编辑器名称和版本。
-1. 更新 `composer.json` 使用扩展名的名称和版本创建文件。
+1. 使用扩展名的名称和版本更新项目中的`composer.json`文件。
 1. 验证扩展是否已正确安装。
 1. 启用并配置该扩展。
 
 ### 获取扩展信息
 
-如果您已经知道扩展的编辑器名称和版本，请跳过此步骤并继续操作 [更新您的 `composer.json` 文件](#update-composer-dependencies).
+如果您已经知道扩展的编辑器名称和版本，请跳过此步骤，继续[更新您的`composer.json`文件](#update-composer-dependencies)。
 
 要从Commerce Marketplace中获取扩展的编辑器名称和版本，请执行以下操作：
 
-1. 登录 [Commerce Marketplace](https://commercemarketplace.adobe.com/) 以及购买扩展时所用的用户名和密码。
+1. 使用您购买扩展所用的用户名和密码登录[Commerce Marketplace](https://commercemarketplace.adobe.com/)。
 
-1. 在右上角，单击 **您的姓名** > **我的个人资料**.
+1. 单击右上角的&#x200B;**您的姓名** > **我的个人资料**。
 
-   ![访问您的Marketplace帐户](../../assets/installation/marketplace-my-profile.png)
+   ![访问你的Marketplace帐户](../../assets/installation/marketplace-my-profile.png)
 
-1. 单击 **我的购买**.
+1. 单击&#x200B;**我的购买次数**。
 
-   ![Marketplace购买历史记录](../../assets/installation//marketplace-my-purchases.png)
+   ![市场购买历史记录](../../assets/installation//marketplace-my-purchases.png)
 
-1. 找到要安装的扩展，然后单击 **技术详细信息**.
+1. 查找要安装的扩展，然后单击&#x200B;**技术详细信息**。
 
    ![技术详细信息显示扩展的编辑器名称](../../assets/installation/marketplace-extension-technical-details.png)
 
 >[!TIP]
 >
->或者，您也可以找到的“编辑器”名称和版本 _任意_ 扩展(无论您是在Commerce Marketplace上还是在其他位置购买的) `composer.json` 文件。
+>或者，您可以在扩展的`composer.json`文件中找到&#x200B;_any_&#x200B;扩展的编辑器名称和版本(无论您是在Commerce Marketplace上还是在其他位置购买的)。
 
 ### 更新编辑器依赖项
 
-将扩展的名称和版本添加到 `composer.json` 文件：
+将扩展名的名称和版本添加到您的`composer.json`文件：
 
-1. 导航到项目目录并更新您的 `composer.json` 文件。
+1. 导航到项目目录并更新`composer.json`文件。
 
    ```bash
    composer require <component-name>:<version>
@@ -94,7 +94,7 @@ ht-degree: 0%
    composer require j2t/module-payplug:2.0.2
    ```
 
-1. 输入您的 [身份验证密钥](../prerequisites/authentication-keys.md). 您的公钥是您的用户名；您的私钥是您的密码。
+1. 输入您的[身份验证密钥](../prerequisites/authentication-keys.md)。 您的公钥是您的用户名；您的私钥是您的密码。
 
 1. 等待Composer完成项目依赖项的更新，并确保没有任何错误：
 
@@ -120,7 +120,7 @@ bin/magento module:status J2t_Payplug
 Module is disabled
 ```
 
-扩展名采用格式 `<VendorName>_<ComponentName>`；这与编辑器名称格式不同。 使用此格式启用扩展。 如果不确定扩展名称，请运行：
+扩展名采用`<VendorName>_<ComponentName>`格式；这与编辑器名称格式不同。 使用此格式启用扩展。 如果不确定扩展名称，请运行：
 
 ```bash
 bin/magento module:status
@@ -130,7 +130,7 @@ bin/magento module:status
 
 ### 启用
 
-除非先清除生成的静态视图文件，否则某些扩展无法正常工作。 使用 `--clear-static-content` 启用扩展时用于清除静态视图文件的选项。
+除非先清除生成的静态视图文件，否则某些扩展无法正常工作。 启用扩展时，可使用`--clear-static-content`选项清除静态视图文件。
 
 1. 启用扩展并清除静态视图文件：
 
@@ -184,7 +184,7 @@ bin/magento module:status
 
 >[!TIP]
 >
->如果在浏览器中加载店面时遇到错误，请使用以下命令清除缓存： `bin/magento cache:flush`.
+>如果在浏览器中加载店面时遇到错误，请使用以下命令清除缓存： `bin/magento cache:flush`。
 
 ## 升级
 
@@ -232,13 +232,13 @@ bin/magento module:status
 
 >[!CAUTION]
 >
->在非生产环境中执行卸载步骤 _第一_ 并在部署到生产环境之前进行全面测试。
+>在非生产环境&#x200B;_上执行卸载步骤_&#x200B;并在部署到生产环境之前进行全面测试。
 
 以下说明提供了有关卸载第三方扩展的常规信息：
 
 1. 从您的Adobe Commerce项目存储库中删除该扩展。
 
-   - 对于基于编辑器的扩展，请从Adobe Commerce中删除该扩展 `composer.json` 文件。
+   - 对于基于编辑器的扩展，请从Adobe Commerce `composer.json`文件中删除该扩展。
 
      ```bash
      composer remove <package-name>
@@ -250,7 +250,7 @@ bin/magento module:status
      rm -rf app/code/<vendor-name>/<module-name>
      ```
 
-1. 如果 `config.php` 文件在Adobe Commerce项目存储库中的源代码控制下，请从以下位置移除扩展： `config.php` 文件。
+1. 如果`config.php`文件在Adobe Commerce项目存储库中受源代码管理，请从`config.php`文件中删除该扩展。
 
 1. 测试本地数据库，确保供应商提供的说明按预期工作。
 

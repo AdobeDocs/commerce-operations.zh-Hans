@@ -40,11 +40,11 @@ ht-degree: 0%
 - 依赖缓慢的第三方服务响应
 - 没有可扩展性的体系结构
 
-加载缓慢的资源通常被视为定义静态资源（CSS、JavaScript、图像、视频、第三方Ajax调用响应）的指示器。
+加载缓慢的资源通常被视为定义静态资源(CSS、JavaScript、图像、视频、第三方Ajax调用响应)的指示器。
 
 Adobe Commerce可以通过其功能随您的业务进行扩展：
 
-![显示Adobe Commerce可伸缩功能的示意图](../../../assets/playbooks/scalable-capabilities.svg)
+显示Adobe Commerce可伸缩功能的![图表](../../../assets/playbooks/scalable-capabilities.svg)
 
 此外，商业活动的规模还受到一些关键因素的推动，这些因素也影响了整体性能。
 
@@ -57,4 +57,4 @@ Adobe Commerce可以通过其功能随您的业务进行扩展：
 
 对于针对规模而构建的分层式可缓存体系结构，您可以使用此图作为参考。
 
-![示意图显示如何在可缓存的架构中使用Adobe Commerce GraphQL API](../../../assets/playbooks/cacheable-architecture.svg)
+![显示如何在可缓存的架构中使用Adobe Commerce GraphQL API的图表](../../../assets/playbooks/cacheable-architecture.svg)

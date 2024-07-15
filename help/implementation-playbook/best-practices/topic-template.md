@@ -7,8 +7,8 @@ hide: true
 hidefromtoc: true
 source-git-commit: 4360a3436f013c1b2a8b95a876d2037a6987acac
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 0%
+source-wordcount: '92'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/
 
 <!-- Example 1: -->
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
@@ -43,7 +43,7 @@ Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/
 
 使用Adobe Commerce版本2.3.4或更早版本以及MariaDB版本10.0或更早版本在云基础架构上部署Adobe Commerce。
 
-&lt;! — 业务类型：B2C和B2B — 仅在需要时指定/)—>
+&lt;！ — 业务类型：B2C和B2B — 仅在需要时指定/)—>
 
 ## 标题……
 

@@ -6,8 +6,8 @@ labels: New Topic
 assignees: ''
 source-git-commit: b0f4671b8c214397af77cbd316e489dac1ce8601
 workflow-type: tm+mt
-source-wordcount: '33'
-ht-degree: 0%
+source-wordcount: '36'
+ht-degree: 8%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 0%
 
 <!-- Use the following checklist template as a starting point -->
 
-- [ ] 本主题说明了____的工作原理。
-- [ ] 本主题介绍了____的步骤。
-- [ ] 本主题包含显示____的代码示例。
-- [ ] 其他（请说明）
+- [ ]本主题说明了____的工作方式。
+- [ ]本主题提供了____的步骤。
+- [ ]本主题包含显示____的代码示例。
+- [ 其他]（请指定）
 
 ## 其他信息
 

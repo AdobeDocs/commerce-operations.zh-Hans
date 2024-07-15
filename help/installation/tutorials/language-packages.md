@@ -13,9 +13,9 @@ ht-degree: 0%
 
 本节讨论如何从文件系统卸载一个或多个语言包，或者包括语言包的代码。 您可以先创建备份，以便以后恢复数据。
 
-此命令卸载 *仅限* 中指定的语言包 `composer.json`；换言之，即作为编辑器包提供的语言包。 如果您的语言包不是编辑器包，则必须通过从文件系统删除语言包代码来手动卸载它。
+此命令仅卸载`composer.json`中指定的&#x200B;*个*&#x200B;语言包；换句话说，卸载作为编辑器包提供的语言包。 如果您的语言包不是编辑器包，则必须通过从文件系统删除语言包代码来手动卸载它。
 
-您可以随时使用 [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) 命令。
+您可以随时使用[`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files)命令恢复备份。
 
 命令用法：
 
@@ -29,8 +29,8 @@ bin/magento i18n:uninstall [-b|--backup-code] {language package name} ... {langu
 
    要解决此问题，您可以同时卸载所有从属语言包，也可以先卸载从属语言包。
 
-1. 如果 `--backup code` 指定，备份文件系统(不包括 `var` 和 `pub/static` 目录) `var/backups/<timestamp>_filesystem.tgz`
-1. 使用以下方式从代码库中移除语言包文件 `composer remove`.
+1. 如果指定了`--backup code`，请将文件系统（不包括`var`和`pub/static`目录）备份到`var/backups/<timestamp>_filesystem.tgz`
+1. 使用`composer remove`从代码库中移除语言包文件。
 1. 清理缓存。
 
 例如，如果您尝试卸载其他语言包所依赖的语言包，则会显示以下消息：

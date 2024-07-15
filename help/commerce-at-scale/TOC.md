@@ -4,8 +4,8 @@ user-guide-description: 了解如何结合使用 Adobe Commerce 和 Adobe Experi
 feature: Integration
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 49%
+source-wordcount: '46'
+ht-degree: 54%
 
 ---
 
@@ -19,4 +19,4 @@ ht-degree: 49%
 - [Adobe Commerce性能优化](default-settings.md)
 - [性能测试提示](launch.md)
 - [结论](conclusion.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

@@ -6,22 +6,22 @@ feature: Best Practices
 exl-id: 635f38d3-0199-4d96-ba75-9edd0cb94b5c
 source-git-commit: db0fce79b22d409e8d639b959dc5a04693e72659
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
 # 支付处理和存储的最佳做法
 
-维护的关键原则之一 [PCI合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) 正在制定策略以正确处理和存储信用卡支付。
+维护[PCI合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html)的关键原则之一就是要有策略正确处理和存储信用卡付款。
 
-在Adobe Commerce中存储持卡人数据是 **严禁** 这样做可能会违反您作为商家在支付卡行业数据安全标准(PCI-DSS)下的义务。 有关共同责任模式和商户责任指南的更多信息，请参见 [Adobe Commerce共享责任模型指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) 在Adobe托管中心。
+在Adobe Commerce中存储持卡人数据是&#x200B;**严格禁止的**，这样做可能会违反您作为商家在支付卡行业数据安全标准(PCI-DSS)下的义务。 有关Adobe信任中心的[Adobe Commerce责任分担模型指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf)中提供了有关商户责任的责任分担模型和准则的更多信息。
 
-遵循以下最佳实践，以确保正确处理电子商务网站上的付款信息。 有关安全最佳实践的其他指导，请参阅 [保护您的站点和基础架构](../launch/security-best-practices.md).
+遵循以下最佳实践，以确保正确处理电子商务网站上的付款信息。 有关安全最佳实践的其他指导，请参阅[保护您的站点和基础架构](../launch/security-best-practices.md)。
 
 ## 受影响的产品和版本
 
-[所有受支持的版本](../../../release/versions.md) 之：
+[所有受支持的版本](../../../release/versions.md)，共：
 
 * 云基础架构上的Adobe Commerce
 * Adobe Commerce内部部署
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 保护加密密钥对于数据保护策略至关重要。 让技术娴熟且值得信赖的托管人监管这些密钥至关重要。
 
-最后，主帐号(PAN)在存储期间必须不可读，例如被掩盖 `XXX`. 这包括便携式存储和备份介质，如闪存驱动器、 USB和外部硬盘，甚至审核日志。
+最后，主帐号(PAN)在存储期间必须不可读，例如使用`XXX`进行掩盖。 这包括便携式存储和备份介质，如闪存驱动器、 USB和外部硬盘，甚至审核日志。
 
 ## 加密持卡人数据的传输
 
@@ -53,4 +53,4 @@ ht-degree: 0%
 
 ## 其他信息
 
-如果您需要按Adobe推荐的支付解决方案，请考虑 [Adobe支付服务](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/overview.html).
+如果您正在查找按Adobe推荐的付款解决方案，请考虑[Adobe付款服务](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/overview.html)。

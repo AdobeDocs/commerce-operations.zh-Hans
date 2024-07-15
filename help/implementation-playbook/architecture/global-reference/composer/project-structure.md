@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Composer项目结构
 
-本指南介绍如何设置并维护 [单独的包选项](../examples.md#option-1-separate-packages) 在全球参考体系结构(GRA)示例中进行了说明。
+本指南介绍如何设置和维护全局参考体系结构(GRA)示例中描述的[单独的包选项](../examples.md#option-1-separate-packages)。
 
 ## 先决条件
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 - 您有一个Git存储库
 - 您拥有Composer存储库（本主题重点介绍私有包程序）
-- 您已将Composer存储库配置为镜像 `repo.magento.com` 和 `packagist.org` 存储库
+- 您已配置编辑器存储库以镜像`repo.magento.com`和`packagist.org`存储库
 
 ## 主Git项目存储库
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 └─ composer.lock
 ```
 
-将以下内容添加到 `.gitignore` 文件：
+将以下内容添加到`.gitignore`文件：
 
 ```tree
 /*
@@ -47,9 +47,9 @@ ht-degree: 0%
 
 ## 初始化主项目
 
-1. 创建一个名为的Git存储库 `project-<region/country/brand>`.
+1. 创建名为`project-<region/country/brand>`的Git存储库。
 
-1. 创建 `composer.json` 和 `composer.lock` 文件：
+1. 创建`composer.json`和`composer.lock`文件：
 
    ```bash
    composer create-project --no-install --repository-url=https://repo.magento.com/ magento/project-enterprise-edition project-<region/country/brand>
@@ -71,13 +71,13 @@ ht-degree: 0%
 
 ## 保存非模块文件
 
-1. 添加 `app/etc/config.xml` 文件到Git存储库。
+1. 将`app/etc/config.xml`文件添加到Git存储库。
 
-   您可以使用将要创建的模块来安装其他区域或品牌特定的文件，例如 `.htaccess`、Google或Bing身份验证文本文件、可执行文件或其他不由Adobe Commerce模块管理的静态文件。
+   您可以使用将要创建的模块安装其他区域或品牌特定文件，如`.htaccess`、Google或Bing身份验证文本文件、可执行文件或其他不由Adobe Commerce模块管理的静态文件。
 
-   使用 `magento2-component` 键入包以创建文件映射以将文件复制到主Git存储库中 `composer install` 和 `composer update` 操作。
+   使用`magento2-component`类型包创建文件映射，以便在`composer install`和`composer update`操作期间将文件复制到主Git存储库中。
 
-1. 创建遵循命名惯例的Git存储库 `component-environment-<region/country/brand>`：
+1. 创建遵循命名约定`component-environment-<region/country/brand>`的Git存储库：
 
    ```bash
    bin/magento module:enable --all
@@ -94,7 +94,7 @@ ht-degree: 0%
    composer config -e
    ```
 
-1. 添加 `app/etc/config.php` 文件作为映射 `extra.map` 属性 `composer.json` 文件：
+1. 将`app/etc/config.php`文件添加为`composer.json`文件的`extra.map`属性中的映射：
 
    ```json
    {
@@ -115,7 +115,7 @@ ht-degree: 0%
    }
    ```
 
-1. 验证您的 `composer.json` 文件并将其提交到Git存储库：
+1. 验证`composer.json`文件并将其提交到Git存储库：
 
    ```bash
    composer validate
@@ -203,7 +203,7 @@ ht-degree: 0%
    git push --tags
    ```
 
-1. 验证编辑器是否复制了 `app/etc/config.php` 文件来源 `<client>/component-environment-<region/country/brand>`.
+1. 验证编辑器是否从`<client>/component-environment-<region/country/brand>`复制了`app/etc/config.php`文件。
 
 ## 部署代码
 
@@ -211,24 +211,24 @@ ht-degree: 0%
 
 ## 添加其他实例和包
 
-每个实例(地区、品牌或其他独特的Adobe Commerce安装)都应拥有自己的 **主项目** 实例， **特定隐含**、和 **环境组件包**. 此 **GRA隐含** 应为 **共享** 跨所有实例。
+每个实例(地区、品牌或其他唯一的Adobe Commerce安装)都应获得自己的&#x200B;**主项目**&#x200B;实例、**特定中继**&#x200B;和&#x200B;**环境组件包**。 **GRA中继**&#x200B;应在所有实例中&#x200B;**共享**。
 
 以下任一方式均需要功能包(例如Adobe Commerce模块、主题、语言包和库)和第三方包：
 
-- **GRA隐含** — 用于安装 _所有_ 实例
-- **实例特定的中继** — 用于安装在单个品牌或区域上
+- **GRA中继** — 用于在&#x200B;_所有_&#x200B;实例上安装
+- **特定于实例的中继包** — 用于安装在单个品牌或区域上
 
 >[!IMPORTANT]
 >
->不需要主项目的包 `composer.json` 文件位于 `main` 或 `release` 分支。
+>在`main`或`release`分支上的主项目的`composer.json`文件中不需要包。
 
 ## 准备开发
 
-对于开发，请安装 `develop` 您所维护的所有模块的版本。
+对于开发，请安装您维护的所有模块的`develop`版本。
 
-根据您的分支策略，您可能会 `develop`， `qa`， `uat`、和 `main` 分支。 Composer中存在每个分支，它们具有 `dev-` 前缀。 所以 `develop` 可通过Composer要求分支为版本 `dev-develop`.
+根据您的分支策略，您可能具有`develop`、`qa`、`uat`和`main`分支。 每个分支都存在于前缀为`dev-`的编辑器中。 因此，可以通过Composer以版本`dev-develop`的形式需要`develop`分支。
 
-1. 创建 `develop` 分支中的所有模块和项目存储库。
+1. 在所有模块和项目存储库中创建`develop`分支。
 
    ```bash
    cd ../component-environment-<region/country/brand>
@@ -262,7 +262,7 @@ ht-degree: 0%
    "magento-services/component-environment-fantasy-corp:dev-develop as 0.999"
    ```
 
-   上一步在 `composer.json` 文件：
+   上一步在`composer.json`文件中生成以下行：
 
    ```json
    "require": {
@@ -274,4 +274,4 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >**不合并** 这些 `composer.json` 对您的生产分支进行了文件更改。 仅在上安装稳定版本的包 `release` 和 `main` 分支。 您可以定义这些依赖关系 `qa` 分支和其他非主分支。
+   >**请勿将这`composer.json`个文件更改合并**&#x200B;到您的生产分支。 仅在`release`和`main`分支上安装稳定版本的包。 您可以为`qa`分支和其他非主分支定义这些依赖项。
