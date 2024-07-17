@@ -21,7 +21,7 @@ Adobe仅支持下表中描述的系统要求组合。 例如，2.4.5已通过Mar
 
 >[!BEGINTABS]
 
->云端上的[!TAB Commerce]
+>[!TAB 云端上的Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
@@ -82,7 +82,7 @@ PHPUnit v9（作为命令行工具）。
 
 >[!BEGINTABS]
 
->云端上的[!TAB Commerce]
+>[!TAB 云端上的Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
