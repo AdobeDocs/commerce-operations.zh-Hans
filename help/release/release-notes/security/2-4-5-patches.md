@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.5安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.5的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: 59a5306c8329ddc3ca2a2e086f5ebe81b49eab3a
+source-git-commit: 2269c99908c0f8292ad62bd5837b1b8cebd50cb3
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 Adobe Commerce 2.4.5-p7安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。
 
 有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html)。
+
+### 应用适用于CVE-2024-34102的修补程序
+
+{{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
 
 ### 平台升级
 
