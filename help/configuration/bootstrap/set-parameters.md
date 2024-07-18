@@ -2,7 +2,7 @@
 title: 设置引导参数值
 description: 了解如何为Commerce应用程序设置引导参数。
 exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 例如，您可以使用`MAGE_PROFILER`系统环境变量指定模式，如下所示：
 
-```terminal
+```
 MAGE_PROFILER={firebug|csv|<custom value>}
 ```
 
@@ -80,7 +80,7 @@ export MAGE_PROFILER=firebug
 
 1. 将`MAGE_PROFILER`的值设置为以下任意值：
 
-   ```terminal
+   ```
    firebug
    csvfile
    <custom value>

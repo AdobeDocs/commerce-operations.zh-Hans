@@ -3,7 +3,7 @@ title: 当前搜索引擎不受支持
 description: 在遇到有关不受支持的搜索引擎的错误后，对Adobe Commerce升级进行故障排除。
 feature: Upgrade, Search
 exl-id: 11479d23-53a5-4086-9f9a-c3420ccad073
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 以下错误消息指示您要升级的Adobe Commerce版本配置为使用目录搜索引擎，而您要升级到的版本不支持该目录搜索引擎：
 
-```terminal
+```
 Your current search engine, <Engine Name>, is not supported. You must install a supported search engine before upgrading. See the System Upgrade Guide for more information.
 ```
 

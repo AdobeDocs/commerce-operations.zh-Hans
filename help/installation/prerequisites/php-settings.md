@@ -3,7 +3,7 @@ title: PHP设置
 description: 按照以下步骤安装所需的PHP扩展，并为Adobe Commerce的内部安装配置所需的PHP设置。
 feature: Install, Configuration
 exl-id: 84064442-7053-42ab-a8a6-9b313e5efc78
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 0%
@@ -35,7 +35,7 @@ php -v
 
 如果安装了PHP，则会显示类似于以下内容的消息：
 
-```terminal
+```
 PHP 8.1.2-1ubuntu2.14 (cli) (built: Aug 18 2023 11:41:11) (NTS)
 Copyright (c) The PHP Group
 Zend Engine v4.1.2, Copyright (c) Zend Technologies
@@ -69,7 +69,7 @@ Adobe Commerce需要特定的PHP扩展。 以下列表指定了每个Commerce版
 
 - 为PHP设置系统时区；否则，安装期间显示的以下错误以及与时间相关的操作（如cron ）可能无法工作：
 
-```terminal
+```
 PHP Warning:  date(): It is not safe to rely on the system's timezone settings. [more messages follow]
 ```
 

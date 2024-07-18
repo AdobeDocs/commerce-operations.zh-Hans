@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.6安全补丁发行说明
 description: 了解Adobe Commerce版本2.4.6的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: cde096ac-d192-490d-873a-475996c474ff
-source-git-commit: 2269c99908c0f8292ad62bd5837b1b8cebd50cb3
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 0%
@@ -128,7 +128,7 @@ Adobe Commerce 2.4.6-p1安全版本为以前版本中发现的漏洞提供了安
 
 * 在安装或将B2B扩展升级到1.4.0时，缺少B2B安全包的依赖项会导致以下安装错误。
 
-  ```terminal
+  ```
   Your requirements could not be resolved to an installable set of packages.
   
     Problem 1

@@ -2,7 +2,7 @@
 title: Apache
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置Apache Web Server。
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '759'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Adobe Commerce使用服务器重写和`.htaccess`为Apache提供目录级说明�
 
    例如，您可以在`000-default.conf`的末尾添加以下内容：
 
-   ```terminal
+   ```
    <Directory "/var/www/html">
        AllowOverride All
    </Directory>
@@ -98,7 +98,7 @@ apache2 -v
 
 显示的结果类似于以下内容：
 
-```terminal
+```
 Server version: Apache/2.4.04 (Ubuntu)
 Server built: Jul 22 2020 14:35:32
 ```
@@ -132,7 +132,7 @@ Server built: Jul 22 2020 14:35:32
 
    显示的结果类似于以下内容：
 
-   ```terminal
+   ```
    Server version: Apache/2.4.18 (Ubuntu)
    Server built: 2020-04-15T18:00:57
    ```
@@ -175,7 +175,7 @@ Server built: Jul 22 2020 14:35:32
 
    应显示类似于以下内容的消息：
 
-   ```terminal
+   ```
    Server version: Apache/2.4.10 (Ubuntu)
    Server built: Jul 22 2020 22:46:25
    ```
@@ -204,7 +204,7 @@ Adobe Commerce要求重写Apache Server。 还必须指定可在`.htaccess`中�
 
    类似于以下内容的消息显示以确认安装成功：
 
-   ```terminal
+   ```
    Server version: Apache/2.4.40 (Unix)
    Server built: Oct 16 2020 14:48:21
    ```

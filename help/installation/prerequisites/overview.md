@@ -2,7 +2,7 @@
 title: 内部部署安装先决条件
 description: 详细了解Adobe Commerce的内部安装所需的软件依赖项。
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 1%
@@ -57,7 +57,7 @@ Ubuntu： `apache2 -v`
 
 Adobe Commerce支持Apache版本2.4，因为以下结果表示：
 
-```terminal
+```
 Server version: Apache/2.4.0 (Unix)
 Server built:   Jul 23 2017 14:17:29
 ```
@@ -84,7 +84,7 @@ mysql -u magento -p
 
 以下结果指示您正在运行的版本。
 
-```terminal
+```
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 871
 Server version: 5.7.9 MySQL Community Server (GPL)
@@ -122,7 +122,7 @@ curl -XGET '<elasticsearch-hostname>:<elasticsearch-port>'
 curl -XGET 'localhost:9200'
 ```
 
-```terminal
+```
 {
   "name" : "Z0S2B05",
   "cluster_name" : "elasticsearch_myname",

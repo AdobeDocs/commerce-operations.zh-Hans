@@ -3,7 +3,7 @@ title: 将Redis用于默认缓存
 description: 了解如何将Redis配置为Adobe Commerce的默认缓存。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%
@@ -281,7 +281,7 @@ redis-cli monitor
 
 页面缓存输出示例：
 
-```terminal
+```
 1476826133.810090 [0 127.0.0.1:52366] "select" "1"
 1476826133.816293 [0 127.0.0.1:52367] "select" "0"
 1476826133.817461 [0 127.0.0.1:52367] "hget" "zc:k:ea6_GLOBAL__DICONFIG" "d"

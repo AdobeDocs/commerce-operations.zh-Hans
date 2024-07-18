@@ -3,7 +3,7 @@ title: 静态内容缓存
 description: 了解静态内容签名以及如何启用或禁用该功能。
 feature: Configuration, Cache, SCD
 exl-id: b54ceea2-b3a1-4dbb-ba87-743f2af0d2fb
-source-git-commit: d099d60bcf3c960b2e40b48c386041d8865cfb50
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Commerce通过向静态文件的URL添加部署版本来实现这一点。
 
 以下是使用版本签名的URL示例：
 
-```terminal
+```
 http://magento2.com/pub/static/version1475604434/frontend/Magento/luma/en_US/images/logo.svg
 ```
 

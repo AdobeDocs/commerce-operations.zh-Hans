@@ -3,7 +3,7 @@ title: 为搜索引擎配置Nginx
 description: 按照以下步骤使用Nginx Web服务器配置搜索引擎，用于Adobe Commerce的内部安装。
 feature: Install, Search
 exl-id: 8d2f8695-e30a-4acc-bba3-d122212b0a53
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -69,7 +69,7 @@ include /etc/nginx/conf.d/*.conf;
 
    类似于以下内容的消息显示成功：
 
-   ```terminal
+   ```
    HTTP/1.1 200 OK
    Date: Tue, 23 Feb 2019 20:38:03 GMT
    Content-Type: application/json; charset=UTF-8

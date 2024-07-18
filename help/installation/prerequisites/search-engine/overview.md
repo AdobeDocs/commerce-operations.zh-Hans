@@ -3,7 +3,7 @@ title: 搜索引擎先决条件
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置受支持的搜索引擎软件。
 feature: Install, Search
 exl-id: 44ea638a-7200-4269-be1b-b0851de2c4f4
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '723'
 ht-degree: 0%
@@ -142,7 +142,7 @@ curl -XGET '<host>:9200/_cat/health?v&pretty'
 
 将显示类似于以下内容的消息：
 
-```terminal
+```
 epoch      timestamp cluster       status node.total node.data shards pri relo init unassign pending_tasks
 1519701563 03:19:23  elasticsearch green           1         1      0   0    0    0        0             0
 ```

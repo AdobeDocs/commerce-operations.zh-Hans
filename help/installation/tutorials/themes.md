@@ -3,7 +3,7 @@ title: 卸载主题
 description: 按照以下步骤卸载Adobe Commerce主题。
 feature: Install, Themes
 exl-id: 73150e8c-2d83-4479-b96b-75f41fd9c842
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -68,7 +68,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] {theme p
 
 例如，如果尝试卸载另一个主题所依赖的主题，则会显示以下消息：
 
-```terminal
+```
 Cannot uninstall frontend/ExampleCorp/SampleModuleTheme because the following package(s) depend on it:
         ExampleCorp/sample-module-theme-depend
 ```
@@ -81,7 +81,7 @@ bin/magento theme:uninstall frontend/ExampleCorp/SampleModuleTheme frontend/Exam
 
 与以下内容类似的消息：
 
-```terminal
+```
 Code backup is starting...
 Code backup filename: 1435261098_filesystem_code.tgz (The archive can be uncompressed with 7-Zip on Windows systems)
 Code backup path: /var/www/html/magento2/var/backups/1435261098_filesystem_code.tgz

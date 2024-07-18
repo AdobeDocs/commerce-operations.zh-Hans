@@ -3,7 +3,7 @@ title: 搜索引擎配置
 description: 为Adobe Commerce的内部部署配置搜索引擎。
 feature: Configuration, Search
 exl-id: 61fbe0c2-bdd5-4f57-a518-23e180401804
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -75,7 +75,7 @@ ht-degree: 0%
 
   如果它在端口9200上运行，则显示类似以下内容：
 
-  ```terminal
+  ```
   `tcp        0      0 :::9200            :::-         LISTEN`
   ```
 

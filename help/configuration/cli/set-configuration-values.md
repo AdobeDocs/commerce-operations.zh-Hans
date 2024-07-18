@@ -2,7 +2,7 @@
 title: 设置配置值
 description: 了解如何设置配置值并更改管理员中锁定的值。
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 473ab09f83a4cfc1809adff854d52a11ad49d3af
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '1038'
 ht-degree: 0%
@@ -98,7 +98,7 @@ ht-degree: 0%
 
    以下是示例结果：
 
-   ```terminal
+   ```
    [mysql]> SELECT * FROM store_website;
    +------------+-------+--------------+------------+------------------+------------+
    | website_id | code  | name         | sort_order | default_group_id | is_default |
@@ -233,7 +233,7 @@ bin/magento config:show
 
 结果：
 
-```terminal
+```
 web/unsecure/base_url - http://example.com/
 general/region/display_all - 1
 general/region/state_required - AT,BR,CA,CH,EE,ES,FI,LT,LV,RO,US
@@ -249,7 +249,7 @@ bin/magento config:show --scope=websites --scope-code=base
 
 结果：
 
-```terminal
+```
 web/unsecure/base_url - http://example-for-website.com/
 general/region/state_required - AT,BR,CA
 ```
@@ -262,7 +262,7 @@ bin/magento config:show web/unsecure/base_url
 
 结果：
 
-```terminal
+```
 web/unsecure/base_url - http://example.com/
 ```
 
@@ -274,7 +274,7 @@ bin/magento config:show --scope=websites --scope-code=base web/unsecure/base_url
 
 结果：
 
-```terminal
+```
 web/unsecure/base_url - http://example-for-website.com/
 ```
 
@@ -286,7 +286,7 @@ bin/magento config:show --scope=stores --scope-code=default web/unsecure/base_ur
 
 结果：
 
-```terminal
+```
 web/unsecure/base_url - http://example-for-store.com/
 ```
 

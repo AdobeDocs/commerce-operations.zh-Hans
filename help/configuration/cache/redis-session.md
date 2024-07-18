@@ -3,7 +3,7 @@ title: 使用Redis进行会话存储
 description: 了解如何为会话存储配置Redis。
 feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 1%
@@ -112,7 +112,7 @@ redis-cli monitor
 
 会话存储输出示例：
 
-```terminal
+```
 1476824834.187250 [0 127.0.0.1:52353] "select" "0"
 1476824834.187587 [0 127.0.0.1:52353] "hmget" "sess_sgmeh2k3t7obl2tsot3h2ss0p1" "data" "writes"
 1476824834.187939 [0 127.0.0.1:52353] "expire" "sess_sgmeh2k3t7obl2tsot3h2ss0p1" "1200"

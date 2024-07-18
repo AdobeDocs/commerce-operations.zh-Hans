@@ -2,7 +2,7 @@
 title: 运行支持实用程序
 description: 使用内置的支持实用程序对Commerce项目进行故障诊断。
 exl-id: 021b795f-e00d-43b5-9cbb-5b57a4795be7
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
@@ -81,7 +81,7 @@ bin/magento support:backup:db [--name=<name>] [-o|--output=<path>] [-l|--logs] [
 
 敏感数据包括以下数据库表中的客户信息：
 
-```terminal
+```
 'customer_entity',
 'customer_entity_varchar',
 'customer_address_entity',
@@ -100,7 +100,7 @@ bin/magento support:backup:db [--name=<name>] [-o|--output=<path>] [-l|--logs] [
 
 我们提供一些命令，这些命令显示到数据收集器和命令行所需的实用程序的路径。 例如，如果在Admin或命令行中显示以下错误，则可以使用这些命令：
 
-```terminal
+```
 Utility lsof not found
 ```
 
@@ -119,7 +119,7 @@ Utility lsof not found
 
 下面是一个示例：
 
-```terminal
+```
    gzip => /bin/gzip
    lsof => /usr/sbin/lsof
    mysqldump => /usr/bin/mysqldump

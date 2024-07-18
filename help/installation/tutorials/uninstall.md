@@ -2,7 +2,7 @@
 title: 卸载或重新安装Adobe Commerce
 description: 按照以下步骤卸载并重新安装Adobe Commerce的内部安装。
 exl-id: fbaeee2c-8da0-4c89-a6d1-882a65014520
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -39,7 +39,7 @@ bin/magento setup:uninstall
 
 将显示以下消息以确认卸载成功：
 
-```terminal
+```
 [SUCCESS]: Magento uninstallation complete.
 ```
 

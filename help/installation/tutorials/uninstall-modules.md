@@ -2,7 +2,7 @@
 title: 卸载模块
 description: 按照以下步骤卸载Adobe Commerce模块。
 exl-id: 66879ef5-47c7-4b61-8c7e-78b60441980a
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -67,7 +67,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 例如，如果您尝试卸载另一个模块所依赖的模块，则会显示以下消息：
 
-```terminal
+```
 magento module:uninstall Magento_SampleMinimal
     Cannot uninstall module 'Magento_SampleMinimal' because the following module(s) depend on it:
         Magento_SampleModifyContent
@@ -81,7 +81,7 @@ bin/magento module:uninstall Magento_SampleMinimal Magento_SampleModifyContent -
 
 与以下内容类似的消息：
 
-```terminal
+```
 You are about to remove code and/or database tables. Are you sure?[y/N]y
 Enabling maintenance mode
 Code backup is starting...
@@ -180,7 +180,7 @@ bin/magento setup:rollback [-c|--code-file="<filename>"] [-m|--media-file="<file
 
   与以下内容类似的消息：
 
-  ```terminal
+  ```
   Enabling maintenance mode
   Code rollback is starting ...
   Code rollback filename: 1433876616_filesystem.tgz

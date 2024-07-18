@@ -2,7 +2,7 @@
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤在Adobe Commerce项目的命令行界面中运行 [!DNL Upgrade Compatibility Tool] 。
 exl-id: ea467a74-18eb-476b-96e2-23f4fc257d73
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '1077'
 ht-degree: 0%
@@ -217,7 +217,7 @@ bin/uct --help
 
 在命令行界面中为[!DNL Upgrade Compatibility Tool]返回一个包含所有可用`help`选项的列表：
 
-```terminal
+```
 - --raw             To output raw command list
 - --format=FORMAT   The output format (txt, xml, json, or md) [default: "txt"]
 - --short           To skip describing commands' arguments
@@ -239,7 +239,7 @@ bin/uct upgrade:check --help
 
 这会返回可以为`upgrade:check`命令运行的特定选项：
 
-```terminal
+```
 - -a, --current-version[=CURRENT-VERSION]: Current Adobe Commerce version, version of the Adobe Commerce installation will be used if omitted.
 - -c, --coming-version[=COMING-VERSION]: Target Adobe Commerce version, latest released version of Adobe Commerce will be used if omitted. Provides a list of all available Adobe Commerce versions.
 - --json-output-path[=JSON-OUTPUT-PATH]: Path of the file where the output will be exported in json format.

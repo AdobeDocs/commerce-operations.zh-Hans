@@ -2,7 +2,7 @@
 title: 高级 [!DNL JavaScript] 捆绑
 description: 了解JavaScript捆绑包如何减少服务器请求的大小和频率。
 exl-id: 81a313f8-e541-4da6-801b-8bbd892d6252
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: f9f8aea1a77ef062d7076a61bbafd12433f15edf
 workflow-type: tm+mt
 source-wordcount: '2134'
 ht-degree: 0%
@@ -212,7 +212,7 @@ phantomjs deps.js <i>指向特定页面的url</i> &gt; <i>text-file-representing
 
 例如，下面是Luma主题示例存储中的四个页面，这些页面表示我们将用于创建四个包（主页、类别、产品、购物车）的四种页面类型：
 
-```terminal
+```
 phantomjs deps.js http://m2.loc/ > bundle/homepage.txt
 phantomjs deps.js http://m2.loc/women/tops-women/jackets-women.html > bundle/category.txt
 phantomjs deps.js http://m2.loc/beaumont-summit-kit.html > bundle/product.txt
@@ -234,7 +234,7 @@ Object.keys(window.require.s.contexts._.defined)
 
 将[!DNL RequireJS]依赖项合并到页面类型文本文件后，您可以对每个页面类型依赖项文件使用以下命令，将文件中的逗号替换为换行符：
 
-```terminal
+```bash
 sed -i -e $'s/,/\\\n/g' bundle/category.txt
 sed -i -e $'s/,/\\\n/g' bundle/homepage.txt
 sed -i -e $'s/,/\\\n/g' bundle/product.txt
@@ -243,7 +243,7 @@ sed -i -e $'s/,/\\\n/g' bundle/product.txt
 
 您还应该删除每个文件的所有mixin，因为mixin重复依赖项。 对每个依赖关系文件使用以下命令：
 
-```terminal
+```bash
 sed -i -e 's/mixins\!.*$//g' bundle/homepage.txt
 sed -i -e 's/mixins\!.*$//g' bundle/category.txt
 sed -i -e 's/mixins\!.*$//g' bundle/product.txt
@@ -262,7 +262,7 @@ sort bundle/*.txt |uniq -c |sort -n
 
 此命令合并和排序`bundle/*.txt`文件中找到的依赖项。  输出还显示包含每个依赖项的文件数：
 
-```terminal
+```
 1 buildTools,
 1 jquery/jquery.parsequery,
 1 jsbuild,
@@ -317,7 +317,7 @@ bash deps-map.sh
 
 此脚本的输出应用于我们的三个示例页面类型，应当类似于这样（但时间更长）：
 
-```terminal
+```
 bundle/product.txt   -->   buildTools,
 bundle/category.txt  -->   jquery/jquery.parsequery,
 bundle/product.txt   -->   jsbuild,
@@ -427,7 +427,7 @@ r.js -o build.js baseUrl=pub/static/frontend/Magento/luma/en_US_tmp dir=pub/stat
 ll pub/static/frontend/Magento/luma/en_US/bundles
 ```
 
-```terminal
+```
 total 1900
 drwxr-xr-x  2 root root    4096 Mar 28 11:24 ./
 drwxr-xr-x 70 root root    4096 Mar 28 11:24 ../

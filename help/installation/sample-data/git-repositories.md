@@ -2,7 +2,7 @@
 title: 克隆示例数据Git存储库
 description: 按照以下步骤通过克隆Git存储库来安装Adobe Commerce示例数据。
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ht-degree: 0%
    >
    >如果显示以下错误，请确保您[已与GitHub共享SSH密钥](https://docs.github.com/articles/generating-ssh-keys/)：<br>
 
-   ```terminal
+   ```
    Cloning into 'magento2'...
    Permission denied (publickey).
    fatal: The remote end hung up unexpectedly

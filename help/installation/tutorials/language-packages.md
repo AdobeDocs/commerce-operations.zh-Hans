@@ -2,7 +2,7 @@
 title: 卸载语言包
 description: 按照以下步骤卸载Adobe Commerce语言包。
 exl-id: 9901aa0b-af1a-4ae9-968f-ac8421060f57
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -35,7 +35,7 @@ bin/magento i18n:uninstall [-b|--backup-code] {language package name} ... {langu
 
 例如，如果您尝试卸载其他语言包所依赖的语言包，则会显示以下消息：
 
-```terminal
+```
 Cannot uninstall vendorname/language-en_us because the following package(s) depend on it:
       vendorname/language-en_gb
 ```
@@ -48,7 +48,7 @@ bin/magento i18n:uninstall vendorname/language-en_us vendorname/language-en_gb -
 
 与以下内容类似的消息：
 
-```terminal
+```
 Code backup is starting...
 Code backup filename: 1435261098_filesystem_code.tgz (The archive can be uncompressed with 7-Zip on Windows systems)
 Code backup path: /var/www/html/magento2/var/backups/1435261098_filesystem_code.tgz
