@@ -1,7 +1,7 @@
 ---
-source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
+source-git-commit: 50b87e6f2f604d195c2d079bd18451754edaa11c
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
@@ -15,4 +15,4 @@ ht-degree: 0%
 
 每个安全补丁发行版本都基于以前的完整补丁发行版本。 它包含先前修补程序版本的质量和安全修复，以及在先前完整修补程序版本和安全修补程序版本之间创建的安全修复。
 
-有关下载和应用安全修补程序的说明，请参阅[快速入门安装](../installation/composer.md#example---security-patch)。
+有关下载和应用安全修补程序的说明，请参阅&#x200B;_升级指南_&#x200B;中的[执行并升级](../installation/composer.md#example---security-patch)。
