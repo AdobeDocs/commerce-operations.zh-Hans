@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0709cd6510adce0f513894fdecb2de5ac88d0e87
+source-git-commit: a6086afc0a1f099b62014ad61098a5a1dc9d4675
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 3%
@@ -134,8 +134,8 @@ If you submit a pull request with significant changes to documentation and code 
 1. 推送您的更改。
 
    ```
-   git add
-   git commit -m "_descriptive message of the intended commit_"
+   git add .
+   git commit -m "descriptive message of the intended commit"
    git push
    ```
 
