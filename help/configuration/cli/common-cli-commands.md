@@ -2,7 +2,7 @@
 title: 常用命令
 description: 查看常用Commerce CLI命令和用法的取样。
 exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 3d0e6d6517e28a32816bfe2b328edfba97523740
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
@@ -51,7 +51,7 @@ bin/magento help cache:enable
 
 ## 常用参数
 
-以下参数对所有命令都是通用的。 这些命令可以在安装Commerce软件之前或之后运行：
+以下参数是[所有命令](/help/tools/reference/commerce-on-premises.md)的通用参数。 这些命令可以在安装Commerce软件之前或之后运行：
 
 | 长版本 | 简短版本 | 含义 |
 |--- |--- |--- |
