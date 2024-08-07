@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: f9f8aea1a77ef062d7076a61bbafd12433f15edf
+source-git-commit: 620be59a5b66bd4f55997951c59e473ac14a5c21
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Commerce GraphQL Application Server使Adobe Commerce能够维护Commerce GraphQL API请求中的状态。 GraphQL Application Server基于Swoole扩展构建，作为具有工作线程的进程运行，这些工作线程处理请求。 GraphQL Application Server通过在GraphQL API请求中保留引导的应用程序状态，来增强请求处理和整体产品性能。 API请求变得非常高效。
 
-GraphQL Application Server仅适用于Adobe Commerce。 它不适用于Magento Open Source。 您必须[提交Adobe Commerce支持](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)票证，才能在Pro项目中启用GraphQL应用程序服务器。
+GraphQL Application Server仅适用于Adobe Commerce。 它不适用于Magento Open Source。 对于Cloud Pro项目，您必须[提交Adobe Commerce支持](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)票证以启用GraphQL应用程序服务器。
 
 >[!NOTE]
 >
@@ -30,12 +30,13 @@ GraphQL Application Server可维护Commerce GraphQL API请求之间的状态，�
 
 ## 优点
 
-GraphQL Application Server允许Adobe Commerce在连续的Commerce GraphQL API请求之间保持状态。 跨请求共享应用程序状态通过最大限度地减少处理开销和优化请求处理而增强了API请求效率。 因此，GraphQL请求响应时间最多可以减少30%。
+GraphQL Application Server允许Adobe Commerce在连续的Commerce GraphQL API请求之间保持状态。 跨请求共享应用程序状态通过最大限度地减少处理开销和优化请求处理而增强了API请求效率。 因此，GraphQL请求响应时间最多可缩短30%。
 
 ## 系统要求
 
 运行GraphQL Application Server需要满足以下条件：
 
+* Commerce版本2.4.7+
 * PHP 8.2或更高版本
 * 已安装Swoole PHP扩展v5+
 * 根据预期负载提供足够的RAM和CPU
@@ -125,7 +126,7 @@ git push
 
 >[!NOTE]
 >
->确保将根`.magento.app.yaml`文件中的所有自定义设置正确迁移到`application-server/.magento/.magento.app.yaml`文件中。 将`application-server/.magento/.magento.app.yaml`文件添加到您的项目后，除了根`.magento.app.yaml`文件之外，您还应维护它。 例如，如果您需要[配置rabbitmq](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq)或[管理Web属性](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property)，则还应该向`application-server/.magento/.magento.app.yaml`添加相同的配置。
+>确保将根`.magento.app.yaml`文件中的所有自定义设置正确迁移到`application-server/.magento/.magento.app.yaml`文件中。 将`application-server/.magento/.magento.app.yaml`文件添加到您的项目后，除了根`.magento.app.yaml`文件之外，您还应维护它。 例如，如果您需要[配置RabbitMQ服务](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq)或[管理Web属性](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property)，则还应该将相同的配置添加到`application-server/.magento/.magento.app.yaml`。
 
 ### 部署入门项目
 
@@ -182,7 +183,7 @@ git push
 
 #### 配置Nginx
 
-您的特定Commerce部署决定了如何配置Nginx。 通常，Nginx配置文件默认名为`nginx.conf`，并位于以下目录之一： `/usr/local/nginx/conf`、`/etc/nginx`或`/usr/local/etc/nginx`。 有关配置Nginx的更多信息，请参阅[初学者指南](https://nginx.org/en/docs/beginners_guide.html)。
+您的特定Commerce部署决定了如何配置Nginx。 通常，Nginx配置文件默认名为`nginx.conf`，并位于以下目录之一： `/usr/local/nginx/conf`、`/etc/nginx`或`/usr/local/etc/nginx`。 有关配置Nginx的更多信息，请参阅&#x200B;_[初学者指南](https://nginx.org/en/docs/beginners_guide.html)_。
 
 示例Nginx配置：
 
@@ -288,11 +289,11 @@ ps aux | grep php
 
 ### 确认正在处理GraphQL请求
 
-GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添加到其处理的每个请求中。 要检查请求是否已由GraphQL应用程序服务器处理，请检查此响应标头。
+GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添加到其处理的每个请求中。 要检查GraphQL Application Server是否已处理请求，请检查此响应标头。
 
 ### 确认扩展和自定义兼容性
 
-扩展开发人员和商家应首先验证其扩展和自定义代码是否符合[技术准则](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)中描述的技术准则。
+扩展开发人员和商户应首先验证其扩展和自定义代码是否符合&#x200B;_[技术准则](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)_&#x200B;中所述的准则。
 
 在代码评估过程中请考虑以下准则：
 
@@ -328,7 +329,7 @@ GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添
 
 ### 确认已禁用GraphQL应用程序服务器
 
-要确认`php-fpm`而不是GraphQL Application Server正在处理GraphQL请求，请输入以下命令： `ps aux | grep php`。
+要确认`php-fpm`正在处理GraphQL请求而不是GraphQL应用程序服务器，请输入以下命令： `ps aux | grep php`。
 
 禁用GraphQL应用程序服务器后：
 
@@ -347,7 +348,7 @@ GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添
 
 #### GraphQlStateTest失败和可能的修复
 
-* **无法添加、跳过或筛选列表**。 如果遇到错误，表明添加、跳过或过滤列表是不安全的，请考虑是否能够以向后兼容的方式重构类，以使用具有可变状态的服务类的工厂。
+* **无法添加、跳过或筛选列表**。 如果看到有关添加、跳过或过滤列表的错误，请考虑是否能够以向后兼容的方式重构类，以使用具有可变状态的服务类的工厂。
 
 * **类呈现可变状态**。 如果类本身表现出可变状态，请尝试重写您的代码以规避此状态。 如果出于性能原因需要可变状态，则实现`ResetAfterRequestInterface`并使用`_resetState()`将对象重置为其初始构造状态。
 
@@ -357,7 +358,7 @@ GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添
 
 ### ResetAfterRequestTest
 
-`ResetAfterRequestTest`查找所有实现`ResetAfterRequestInterface`的类，并验证`_resetState()`方法是否将对象的状态返回到`ObjectManager`构造后它保持的状态。  此测试创建具有`ObjectManager`的服务对象，然后克隆该对象，调用`_resetState()`，然后比较两个对象。 该测试未在对象实例化和`_resetState()`之间调用任何方法，因此它不会确认重置任何可变状态。 它确实发现了`_resetState()`中的错误或拼写错误可能会将状态设置为与它原来的状态不同的问题。
+`ResetAfterRequestTest`将查找实现`ResetAfterRequestInterface`的所有类，并验证`_resetState()`方法是否将对象的状态返回到`ObjectManager`构造后它保持的状态。  此测试创建具有`ObjectManager`的服务对象，然后克隆该对象，调用`_resetState()`，然后比较两个对象。 该测试未在对象实例化和`_resetState()`之间调用任何方法，因此它不会确认重置任何可变状态。 它确实发现了`_resetState()`中的错误或拼写错误可能会将状态设置为与它原来的状态不同的问题。
 
 #### ResetAfterRequestTest失败和可能的修正
 
@@ -369,11 +370,11 @@ GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添
 
 ### 功能测试
 
-在部署GraphQL Application Server时，扩展开发人员应该执行GraphQL的WebAPI功能测试，以及GraphQL的任何自定义自动或手动功能测试。 这些功能测试可帮助开发人员识别潜在的错误或兼容性问题。
+在部署GraphQL Application Server时，扩展开发人员应该执行GraphQL的WebAPI功能测试和任何自定义的自动或手动功能测试。 这些功能测试可帮助开发人员识别潜在的错误或兼容性问题。
 
 #### 状态监视器模式
 
-在运行功能测试（或手动测试）时，应用程序服务器可以在启用`--state-monitor mode`的情况下运行，以帮助查找状态被无意重复使用的类。 正常启动应用程序服务器，但添加`--state-monitor`参数除外。
+在运行功能测试（或手动测试）时，GraphQL Application Server可以在启用`--state-monitor mode`的情况下运行，以帮助查找状态被无意重复使用的类。 正常启动应用程序服务器，但添加`--state-monitor`参数除外。
 
 ```
 bin/magento server:run --state-monitor
@@ -388,11 +389,11 @@ bin/magento server:run --state-monitor
 /var/workspace/var/tmp/StateMonitor-junit-2024-04-10T18:50:39Z-oreUco.xml
 ```
 
-可以使用任何用于查看XML或JSON的工具来检查这些文件，这些工具将显示服务对象的修改属性，如GraphQlStateTest。 `--state-monitor`模式使用与GraphQlStateTest相同的跳过列表和筛选器列表。
+可以使用用于查看XML或JSON的任何工具来检查这些文件，这些工具显示`GraphQlStateTest`等服务对象的修改属性。 `--state-monitor`模式使用与GraphQlStateTest相同的跳过列表和筛选器列表。
 
 >[!NOTE]
 >
->请勿在生产环境中使用`--state-monitor`模式。 它仅用于开发和测试。 它会创建许多输出文件，并且运行速度将低于正常速度。
+>请勿在生产环境中使用`--state-monitor`模式。 它仅用于开发和测试。 它会创建许多输出文件，并且运行速度比正常速度慢。
 
 >[!NOTE]
 >
