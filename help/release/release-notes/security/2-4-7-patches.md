@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.7安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.7的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 38e5632b-c795-47d8-89dd-26bbaeb34e67
-source-git-commit: 2269c99908c0f8292ad62bd5837b1b8cebd50cb3
+source-git-commit: 3a2d104f0a689ac3715af302d470a1660857543c
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '283'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,21 @@ ht-degree: 0%
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
 
-## Adobe Commerce 2.4.7-p1
+## 2.4.7 - p2
+
+Adobe Commerce 2.4.7-p2安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
+
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-61](https://helpx.adobe.com/security/products/magento/apsb24-61.html)。
+
+### 高亮
+
+{{$include /help/_includes/release-notes/2024-08/security.md}}
+
+### 此版本中包含的修补程序
+
+{{$include /help/_includes/release-notes/2024-08/hotfixes-included.md}}
+
+## 2.4.7 - p1
 
 Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞。
 
@@ -23,7 +37,9 @@ Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞�
 
 {{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
 
-### 安全性亮点
+### 高亮
+
+此版本包括以下功能亮点：
 
 * **更新Google Authenticator的[一次性密码(OTP)设置](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/2fa/security-two-factor-authentication#google)** — 需要此更新才能解决2.4.7中[向后不兼容的更改](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/#new-system-configuration-validation-for-two-factor-authentication-otp_window-value)导致的错误。**[!UICONTROL OTP Window]**&#x200B;字段的描述现在提供了设置的准确解释，默认值已从`1`更改为`29`。
 
