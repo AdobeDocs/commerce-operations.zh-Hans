@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.6安全补丁发行说明
 description: 了解Adobe Commerce版本2.4.6的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: cde096ac-d192-490d-873a-475996c474ff
-source-git-commit: 3a2d104f0a689ac3715af302d470a1660857543c
+source-git-commit: 7024c6a9c464257df00ed98f435a3d7793478db5
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Adobe Commerce 2.4.6-p6安全版本为以前版本的2.4.6中发现的漏洞提�
 
 {{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
 
-为了与Commerce版本2.4.6-p6兼容，具有Adobe Commerce B2B扩展的商家必须升级到[B2B版本1.4.2-p1](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes#b2b-v142p1.html)。
+为了与Commerce版本2.4.6-p6兼容，具有Adobe Commerce B2B扩展的商家必须升级到[B2B版本1.4.2-p1](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes#b2b-v142-p1)。
 
 ### 高亮
 
