@@ -3,9 +3,9 @@ title: 敏感路径和系统特定路径
 description: 请参阅系统特定的敏感配置值列表。
 feature: Configuration, System
 exl-id: 127880ab-7507-4e53-8b51-dfa6557d0b18
-source-git-commit: 5a8e52d8eee1619697db40accb9775b92b4e8a9d
+source-git-commit: e5a1c5634124831c8d5a95df6818ec30c372e8dd
 workflow-type: tm+mt
-source-wordcount: '3696'
+source-wordcount: '3676'
 ht-degree: 0%
 
 ---
@@ -150,16 +150,16 @@ ht-degree: 0%
 | HTTP用户名Elasticsearch | `catalog/search/elasticsearch_username` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
 | HTTP口令Elasticsearch | `catalog/search/elasticsearch_password` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch服务器超时 | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
-| HTTP用户名Elasticsearch | `catalog/search/elasticsearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| HTTP口令Elasticsearch | `catalog/search/elasticsearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| Elasticsearch服务器超时 | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| OpenSearch服务器主机名 | `catalog/search/opensearch_server_hostname` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) | ![敏感](/help/assets/configuration/cloud-sens.png) |
-| OpenSearch服务器端口 | `catalog/search/opensearch_server_port` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) | ![敏感](/help/assets/configuration/cloud-sens.png) |
-| OpenSearch索引前缀 | `catalog/search/opensearch_index_prefix` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) | ![敏感](/help/assets/configuration/cloud-sens.png) |
-| 启用OpenSearch HTTP身份验证 | `catalog/search/opensearch_enable_auth` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| OpenSearch HTTP用户名 | `catalog/search/opensearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| OpenSearch HTTP密码 | `catalog/search/opensearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| OpenSearch服务器超时 | `catalog/search/opensearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
+| HTTP用户名Elasticsearch | `catalog/search/elasticsearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
+| HTTP口令Elasticsearch | `catalog/search/elasticsearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
+| Elasticsearch服务器超时 | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
+| OpenSearch服务器主机名 | `catalog/search/opensearch_server_hostname` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) | ![敏感](/help/assets/configuration/cloud-sens.png) |
+| OpenSearch服务器端口 | `catalog/search/opensearch_server_port` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) | ![敏感](/help/assets/configuration/cloud-sens.png) |
+| OpenSearch索引前缀 | `catalog/search/opensearch_index_prefix` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) | ![敏感](/help/assets/configuration/cloud-sens.png) |
+| 启用OpenSearch HTTP身份验证 | `catalog/search/opensearch_enable_auth` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
+| OpenSearch HTTP用户名 | `catalog/search/opensearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
+| OpenSearch HTTP密码 | `catalog/search/opensearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
+| OpenSearch服务器超时 | `catalog/search/opensearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![系统特定](/help/assets/configuration/cloud-env.png) |
 
 {style="table-layout:auto"}
 
