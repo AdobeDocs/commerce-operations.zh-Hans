@@ -2,9 +2,9 @@
 title: 分担责任的安全性和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 76aafb88855f7f41db8e57b06cf0e82370b57302
+source-git-commit: 9d0ab29be70c5638296694f90755fedac41b6a77
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2791'
 ht-degree: 0%
 
 ---
@@ -51,13 +51,13 @@ Adobe负责Adobe Commerce on cloud infrastructure environment的安全性和可�
 - 监控平台操作，并在云基础架构商户上为Adobe Commerce提供全天候支持
 - 配置生产和暂存环境
 - 评估对平台操作和基础架构的潜在安全威胁
-- 根据与商户的服务级别协议(SLA)中的说明，扩展计算、存储、网格和其他资源
+- 扩展计算、存储、网格和其他资源，如与商户的服务级别协议(SLA)中所述
 - 设置DNS(仅限云基础架构平台基础架构上的Adobe Commerce)
 - 测试平台的安全漏洞
 
 Adobe维护用于Adobe Commerce解决方案的基础架构和服务的PCI认证。  商家负责遵守自定义代码、系统和网络流程以及组织。
 
-Adobe还可确保商户基础设施在适用的SLA中商定的可用性。
+Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
 
 ## 商户责任
 
@@ -153,7 +153,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td>R</td>
   </tr>
   <tr>
-    <td>部署平台WAF规则</td>
+    <td>部署platform WAF规则</td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -641,7 +641,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 自定义Adobe Commerce应用程序 | | R |
 | New Relic服务的可用性：<br>APM应用程序和代理集成、基础结构应用程序、<br>日志记录和集成 | R |   |
 | 设置New Relic警报 |     | R |
-| 在PaaS服务器上部署New Relic代理 |     | R |
+| 在PaaS服务器上部署New Relic代理 | R |  |
 
 {style="table-layout:auto"}
 
@@ -841,7 +841,6 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | DDOS检测 — 第3-4层 | R |   |
 | DDOS检测 — 第7层 |     | R |
 | DDOS响应 | R |   |
-| 快速扩展速率限制和机器人保护的配置（有限） |     | R |
 
 {style="table-layout:auto"}
 
@@ -854,10 +853,10 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | SSH（非专用链接）的可用性 | R |   |
 | 入站到Adobe Commerce Cloud服务端点的PrivateLink配置 | R |   |
 | 接受入站到Adobe Commerce Cloud服务端点的PrivateLink |     | R |
-| PrivateLink入站到商家VPC服务端点的配置 |     | R |
-| 接受PrivateLink入站到商户的VPC服务端点 | R |   |
+| 入站到商家VPC服务端点的PrivateLink的配置 |     | R |
+| 接受入站到商家VPC服务端点的PrivateLink | R |   |
 | PrivateLink集成（端点到帐户）的配置 |     | R |
-| 为PrivateLink终结点<br><br>配置商家拥有的VPC（包括任何VPN连接） |     | R |
+| 为PrivateLink端点<br><br>配置商家拥有的VPC（包括任何VPN连接） |     | R |
 
 {style="table-layout:auto"}
 
