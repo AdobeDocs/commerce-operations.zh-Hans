@@ -1,10 +1,10 @@
 ---
 title: 发行说明
-description: 了解Adobe Commerce的可用修补程序以及它们所解决的问题。
+description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: d870d98caf2b2576f3bf179e860e711d1cea9afc
+source-git-commit: b1b7152caa8a9f04ee779e4483c6b82d2002fcc7
 workflow-type: tm+mt
-source-wordcount: '21346'
+source-wordcount: '21646'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,19 @@ ht-degree: 0%
 >
 >有关社区为Magento Open Source而创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
 
+## v1.1.51 {#v1-1-51}
+
+* **ACSD-59786**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.8) — 修复了在尝试获取已过期报价的报价ID时GraphQL返回内部服务器错误的问题。
+* **ACSD-60234**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了通过付款方式应用折扣时，[!DNL PayPal]上显示不正确金额的问题。
+* **ACSD-59967**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7-p2) — 修复了JavaScript错误导致[!DNL Google Maps]无法正确呈现的问题。
+* **ACSD-60326**(对于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了GraphQL查询客户返回状态时出现错误的问题。
+* **ACSD-60538**(对于Adobe Commerce >=2.4.7 &lt;2.4.8) — 修复了以下问题：如果某个产品在&#x200B;*[!UICONTROL All Store Views]*&#x200B;中处于禁用状态，并且只在特定商店视图范围内启用，则产品属性在GraphQL响应中无法正确显示，从而导致产品无法正确显示。
+* **ACSD-60631**(适用于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了将同一简单产品分配给多个可配置产品时GraphQL返回错误的问题。
+* **ACSD-60632**(对于Adobe Commerce和Magento Open Source>=2.4.5-p8 &lt;2.4.8) — 修复了在每次尝试下订单时保存新地址的问题，无论是否成功创建了订单。
+* **ACSD-60816**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了APM代理插入的[!DNL New Relic Browser Monitoring]脚本与CSP（内容安全策略）不兼容，从而阻止其执行的问题。
+* **ACSD-61195**(适用于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了在购物车GraphQL请求的最后一页上未返回购物车项目的问题。
+* 更新的修补程序： ACSD-59378
+
 ## v1.1.50 {#v1-1-50}
 
 * **ACSD-59280**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了在安装2.4.4-pX版本时发生的错误&#x200B;*调用未定义的方法ReflectionUnionType：：getName()*。
@@ -34,8 +47,8 @@ ht-degree: 0%
 * **ACSD-58790**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了[!DNL Chrome]上移动视图中产品详细信息页面图像的缩放夹功能。
 * **ACSD-59036**(适用于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了在加载产品价格时上下限均等于$0时发生的异常。
 * **ACSD-59229**(适用于Adobe Commerce和Magento Open Source Magento>=2.4.4 &lt;2.4.7) — 修复了由于X-Request-Vary的旧值而导致客户组相关信息保存在错误区段中的问题。
-* **ACSD-59378**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在导入期间错误地更新存储级别URL重写的问题。
-* **ACSD-59514**(适用于Adobe Commerce >=2.4.4 &lt;2.4.7-p2) — 修复了Admin Area中[!DNL Page Builder]的表单引发错误&#x200B;*[!DNL Page Builder]且渲染5秒而不释放锁定的问题。提交表单后，在浏览器控制台中显示*，无法保存更改。
+* **ACSD-59378**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在导入期间存储级别URL重写被错误更新的问题。
+* **ACSD-59514**(对于Adobe Commerce >=2.4.4 &lt;2.4.7-p2) — 修复了具有[!DNL Page Builder]的管理员区域中的表单抛出错误&#x200B;*[!DNL Page Builder]且呈现5秒而不释放锁的问题。提交表单后，在浏览器控制台中显示*，无法保存更改。
 * **ACSD-60303**(对于Adobe Commerce >=2.4.4-p9 &lt;2.4.5) || >=2.4.5-p8 &lt;2.4.6 || >=2.4.6-p6 &lt;2.4.8) — 修复了启用HTML缩小功能后无法下达管理员订单的问题。
 * **ACSD-60441**(适用于Adobe Commerce和Magento Open Source2.4.4-p9) || 2.4.5-p8 || 2.4.6-p6 || 2.4.7-p1) — 修复了在使用从后端生成的集成访问令牌时通过`V1/customers` [!DNL REST API]端点更新客户的问题。
 * 更新的修补程序： ACSD-57003
@@ -48,7 +61,7 @@ ht-degree: 0%
 * **ACSD-57643**(适用于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了通过GraphQL将具有自定义选项的产品错误地添加到购物车的问题。
 * **ACSD-57846**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了以下问题：由于出现异常，使用零价格过滤器搜索的GraphQL产品不会返回任何结果。
 * **ACSD-57941**(适用于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了将产品选项错误地分配给管理员商店而不是其各自商店的问题。
-* **ACSD-58375**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了在商店视图级别添加[!DNL YouTube]视频时，错误&#x200B;*[!DNL YouTube API Key]*&#x200B;配置导致错误的问题。
+* **ACSD-58375**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了在商店视图级别添加[!DNL YouTube]视频时，错误的&#x200B;*[!DNL YouTube API Key]*&#x200B;配置导致错误的问题。
 * **ACSD-58739**(对于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了部分重新索引引发错误的问题。
 * **ACSD-58446**(适用于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了以下问题：当删除包含子用户或团队的团队时，无论其状态如何（非活动），系统都会提供与UI不一致的消息性错误消息。
 * **ACSD-58054**(对于Adobe Commerce >=2.4.4 &lt;2.4.6) — 修复了通过API为非活动客户生成客户令牌的问题。
@@ -65,16 +78,16 @@ ht-degree: 0%
 * **ACSD-57315**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了每次在Admin中的&#x200B;**[!UICONTROL View transaction]**&#x200B;屏幕上单击[!UICONTROL Fetch]按钮时在[!DNL PayPal Payflow Pro]中创建新事务时的问题。
 * **ACSD-57337**(对于Adobe Commerce >=2.4.4 &lt;2.4.6) — 修复了具有特定网站访问限制的管理员用户能够查看&#x200B;**[!UICONTROL Companies]**&#x200B;网格中所有网站的公司的问题。
 * **ACSD-57394**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了[!DNL GraphQL]中按多个排序字段对产品排序不正确的问题。
-* **ACSD-57565**(适用于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在更新时间段之前，**[!UICONTROL Order]**&#x200B;仪表板显示错误订单信息的问题。 现在，仪表板在首次加载时显示正确的订单统计信息。
-* **ACSD-57854**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了产品[!DNL GraphQL]请求在类别聚合中返回禁用类别时的问题。
+* **ACSD-57565**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在更新时间段之前&#x200B;**[!UICONTROL Order]**&#x200B;功能板显示错误订单信息的问题。 现在，仪表板在首次加载时显示正确的订单统计信息。
+* **ACSD-57854**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了产品[!DNL GraphQL]请求在类别聚合中返回禁用类别的问题。
 * **ACSD-58008**(对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了在未指定结束日期的情况下，更新计划更新会删除暂存项目的先前版本的问题。
 * 更新的修补程序：MDVA-39305-V2、ACSD-48627、ACSD-54965
 
 ## v1.1.47 {#v1-1-47}
 
-* **ACSD-55241**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了在使用多个地址进行签出期间，*[!UICONTROL Used]*&#x200B;和&#x200B;*[!UICONTROL Times Used]*&#x200B;属性显示的生成优惠券值不正确的问题。
-* **ACSD-56760**(适用于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了以下问题：如果仅限特定网站的管理员用户在Webstore有自己的根类别时，无法对类别内的产品进行排序或添加新产品。
-* **ACSD-56858**(适用于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了为受限制的公司管理员错误地显示B2B公司角色权限的问题。
+* **ACSD-55241**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了在使用多个地址进行签出时，*[!UICONTROL Used]*&#x200B;和&#x200B;*[!UICONTROL Times Used]*&#x200B;属性显示生成的赠券的不正确值的问题。
+* **ACSD-56760**(适用于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了以下问题：如果Webstore具有自己的根类别，则仅限特定网站的管理员用户无法对类别内的产品进行排序或添加新产品。
+* **ACSD-56858**(适用于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了受限制公司管理员的B2B公司角色权限显示不正确的问题。
 * **ACSD-57074**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了以`price_`开头的`attrbute_code`的&#x200B;*是/否*&#x200B;自定义属性无法正确处理索引的问题，并且具有此类属性的产品在前端不可用。
 * 更新的修补程序：ACSD-53378、ACSD-51819
 
@@ -93,8 +106,8 @@ ht-degree: 0%
 * **ACSD-56886**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了计划更新禁用了两个子产品之一时，可配置产品缺货的问题。
 * **ACSD-56616**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了捆绑产品在其简单产品缺货时在店面显示为有货的问题。
 * **ACSD-56515**(对于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了具有网站级别权限的管理员无法添加或编辑动态块的问题。
-* **ACSD-56447**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了通过并行REST Web API请求将同一产品添加到购物车会导致购物车中出现两个单独项目的问题。
-* **ACSD-56415**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了在数据库包含大量要索引的部分价格数据时，由于`DELETE`查询，部分价格索引的性能会下降的问题。
+* **ACSD-56447**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了通过并行REST Web API请求将同一产品添加到购物车中导致购物车中有两个单独项目的问题。
+* **ACSD-56415**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了在数据库包含大量要索引的部分价格数据时，由于`DELETE`查询而导致部分价格索引的性能变慢的问题。
 * **ACSD-54965**(适用于Adobe Commerce >=2.4.5 &lt;2.4.6) — 修复了将产品仅分配给自定义库存时，可视化促销网格不显示正确库存的问题。
 * **ACSD-52824**(适用于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了在公司设置中禁用此类付款方法时，向公司客户显示PayPal Express、Google Pay和Apple Pay按钮的问题。
 * 更新的修补程序： ACSD-56193
@@ -116,12 +129,12 @@ ht-degree: 0%
 ## v1.1.43 {#v1-1-43}
 
 * **ACSD-54972**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了在更改类别URL后规范类别URL未更新的问题。
-* **ACSD-53636**(适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5) — 修复了对于其子产品具有特价的可配置产品，在产品列表页面上未显示正常价格的问题。
-* **ACSD-54885**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了管理员用户使用&#x200B;*“以客户身份登录”*&#x200B;功能时出现的多个地址签出问题。
-* **ACSD-55610**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了部分取消的订单的折扣额不正确的问题。
-* **ACSD-55334**(适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 通过GraphQL响应中的翻译词典修复标签翻译。
+* **ACSD-53636**(适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5) — 修复了具有具有特价子产品的可配置产品的产品列表页面上未显示常规价格的问题。
+* **ACSD-54885**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了当管理员用户使用&#x200B;*以客户身份登录*&#x200B;功能时多个地址签出的问题。
+* **ACSD-55610**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了部分取消的订单折扣金额不正确的问题。
+* **ACSD-55334**(适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 通过GraphQL响应中的翻译词典修复标签的翻译。
 * **ACSD-54739**(对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了产品库存状态条件未应用于相关产品规则的问题。
-* **ACSD-53925**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了将`catalog_product_price` dimensions-mode设置为&#x200B;*网站*&#x200B;时，管理员无法使用产品轮播保存CMS块的问题。
+* **ACSD-53925**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了当`catalog_product_price` dimensions-mode设置为&#x200B;*website*&#x200B;时，管理员无法通过产品轮播保存CMS块的问题。
 * **ACSD-52714**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了将日期格式设置为&#x200B;*Y-m-d*&#x200B;时，日期过滤器在管理网格中不起作用的问题。
 * **ACSD-55055**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 提高在购物车的购物车价格规则中加载产品属性的性能。
 * **ACSD-53790**(对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了通过REST API为单个产品创建多个RMA的问题。
@@ -152,7 +165,7 @@ ht-degree: 0%
 
 * **ACSD-54376**(适用于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了在将产品添加到购物车后，将产品从共享目录中删除时购物车中出现的问题。
 * **ACSD-53722**(对于Adobe Commerce >=2.4.4 &lt;2.4.7) — 修复了当其他范围的计划更新生效时，捆绑产品选项价格更改为$0的问题。
-* **ACSD-53643**(适用于Adobe Commerce >=2.4.3 &lt;2.4.7) — 修复了在下达包含禁用或缺货产品的采购订单时，订单金额不正确的问题。 通过隐藏此类采购订单的&#x200B;*[!UICONTROL Place Order]*&#x200B;按钮修复了此问题。
+* **ACSD-53643**(适用于Adobe Commerce >=2.4.3 &lt;2.4.7) — 修复了在订购禁用或缺货产品的采购订单时，订单总计不正确的问题。 通过隐藏此类采购订单的&#x200B;*[!UICONTROL Place Order]*&#x200B;按钮可修复此问题。
 * **ACSD-54067**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了产品视频无法在移动设备上播放的问题。
 * **ACSD-55414**(用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 在MariaDB尝试将EAV entity_id从字符串转换为整数时提高性能。
 * **ACSD-51819**(对于Adobe Commerce >=2.4.4 &lt;2.4.4-p4) — 修复了可使用同一报价ID下达多个订单的问题。
@@ -172,8 +185,8 @@ ht-degree: 0%
 * **ACSD-52801**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 添加了在GraphQL中搜索产品时进行部分匹配的选项。
 * **ACSD-55004**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在上传大于`php.ini`中配置的值的导入文件时，验证器崩溃的问题。
 * **ACSD-54989**(对于Adobe Commerce >=2.4.4-p5 &lt;2.4.5) || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.7) — 修复了当&#x200B;*[!UICONTROL Enable Purchase Orders]*&#x200B;设置为&#x200B;*[!UICONTROL Yes]*&#x200B;且&#x200B;*[!UICONTROL Purchase Order]*&#x200B;设置为&#x200B;*[!UICONTROL No]*&#x200B;时，公司管理员无法下订单的问题。
-* **ACSD-54007**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了导入客户数据时出现的错误&#x200B;*“未定义数组键“_scope”*。
-* **ACSD-55031**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了编译期间出现的&#x200B;*类型“混合”不能为空白*&#x200B;错误。
+* **ACSD-54007**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了在导入客户数据时出现的错误&#x200B;*“未定义数组键“_scope”*。
+* **ACSD-55031**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在编译期间&#x200B;*类型“混合”不能为nullable*&#x200B;错误。
 * **ACSD-54961**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了受限管理员用户无法批量更新&#x200B;*产品评论*&#x200B;状态的问题。
 * **ACSD-55256**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了图像滑块中仅成功显示第一个图像的问题。
 * 更新的修补程序：ACSD-52041、ACSD-54106
@@ -204,10 +217,10 @@ ht-degree: 0%
 * **ACSD-52929**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了在异步模式下配置库存索引器时重新索引默认源项目的多余请求的问题。
 * **ACSD-53824**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了`setup:upgrade`期间`UpdateMultiselectAttributesBackendTypes`迁移数据修补程序超出数据库事务大小限制的问题。
 
-## 版本1.1.37 {#v1-1-37}
+## v1.1.37 {#v1-1-37}
 
-* **ACSD-52613**(适用于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了即使REST API未更新`Inventory_source`项也刷新缓存和索引的问题。
-* **ACSD-51884**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了在运行resize命令后，产品图像缓存路径不正确的问题。
+* **ACSD-52613**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了即使REST API没有对`Inventory_source`项目进行任何更新，缓存和索引也会被刷新的问题。
+* **ACSD-51884**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了在运行resize命令后，产品图像缓存路径不正确的问题。
 * **ACSD-53628**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了CSV销售订单报表显示错误的特殊字符的问题。
 * **ACSD-53148**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了以下问题：GraphQL中有关将同一可配置产品添加到购物车的两个并行请求在购物车上产生了具有相同产品SKU的两个单独项目。
 * **ACSD-52606**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了以下问题：用户单击&#x200B;**[!UICONTROL Notify Order is Ready for Pickup]**&#x200B;时，显示错误消息&#x200B;*您的订单未做好取货准备*。
@@ -230,8 +243,8 @@ ht-degree: 0%
 * **ACSD-51846**(对于Adobe Commerce和Magento Open Source>=2.4.3-p2 &lt;2.4.6) — 修复了由于并非所有级别的REST API有效负载都经过验证而发生的&#x200B;*内部错误*&#x200B;问题。
 * **ACSD-52906**(对于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了以下问题：属于同一客户区段的已登录客户的X-Magento差异Cookie设置不正确，从而导致某些页面的缓存不正确。
 * **ACSD-52736**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了包含可配置产品数量要求的&#x200B;*购物车价格规则*&#x200B;无法按预期工作的问题。
-* **ACSD-47875**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了管理员用户无法从具有库存管理的特定商店视图范围的Admin将产品添加到客户购物车的问题。
-* **ACSD-53176**(适用于Adobe Commerce >=2.3.7 &lt;2.4.5) — 修复了具有&#x200B;*的*&#x200B;相关产品规则&#x200B;*是*&#x200B;条件之一，与产品不匹配的问题。
+* **ACSD-47875**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了以下问题：管理员用户无法从管理员将产品添加到具有库存管理的特定商店视图范围内的客户购物车。
+* **ACSD-53176**(对于Adobe Commerce >=2.3.7 &lt;2.4.5) — 修复了&#x200B;*包含*&#x200B;的“相关产品规则”*是*&#x200B;条件中的一个，但与产品不匹配的问题。
 * **ACSD-51666**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了错误&#x200B;*会话已过期，请重新登录。在客户尝试登录后发生的*。
 * 添加了MDVA-39305-v2的新版本。
 * 更新了ACSD-19640的要求。
@@ -285,19 +298,19 @@ ht-degree: 0%
 * **ACSD-50949**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了与SKU筛选器一起使用时，高级搜索中的价格筛选器无法返回正确结果的问题。
 * **ACSD-51645**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了在禁用扩展`Magento_OfflineShipping`的情况下保存新的购物车价格规则时引发的错误。
 * **ACSD-50895**(对于Adobe Commerce >=2.4.5 &lt;2.4.7) — 修复了未配置[!DNL Google Analytics] 4 GTM时未触发[!DNL Google Analytics] 3 GTM标记的问题。
-* **ACSD-51102**(适用于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了在计划更新启用应用于大量产品的目录规则时，该规则未正确索引的问题。
+* **ACSD-51102**(适用于Adobe Commerce >=2.4.2 &lt;2.4.7) — 修复了在计划更新启用目录规则时，应用于大量产品的目录规则未正确索引的问题。
 * **ACSD-50368**(适用于Adobe Commerce和Magento Open Source>= 2.4.3 &lt;2.4.5) — 修复了在通过异步REST API或异步批量REST API创建客户时忽略客户的`group_id`的问题。
 * **ACSD-51497**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.0) || >= 2.4.1 &lt;2.4.7) — 修复了客户无法按下拉列表类型的自定义属性对目录页面进行排序的问题。
-* **ACSD-51408**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt; 2.4.7) — 修复了将订单项状态错误地设置为&#x200B;*[!UICONTROL Backordered]*&#x200B;的问题。
-* **ACSD-51735**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了在产品素材库为&#x200B;*0*&#x200B;时，将订单项状态错误地设置为&#x200B;*[!UICONTROL Ordered]*&#x200B;的问题。
-* **ACSD-51792**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了启用[!DNL Google Tag Manager] 4后页面没有印象事件的问题。
-* **ACSD-51471**(适用于Adobe Commerce >=2.4.3 &lt;2.4.7) — 修复了管理员用户无法为捆绑产品保存计划更新的问题，捆绑产品使用本身具有计划更新的简单产品。
+* **ACSD-51408**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt; 2.4.7) — 修复了订单项状态错误设置为&#x200B;*[!UICONTROL Backordered]*&#x200B;的问题。
+* **ACSD-51735**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了当产品库存为&#x200B;*0*&#x200B;时，订单项状态被错误地设置为&#x200B;*[!UICONTROL Ordered]*&#x200B;的问题。
+* **ACSD-51792**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在启用[!DNL Google Tag Manager] 4时页面没有展示次数事件的问题。
+* **ACSD-51471**(对于Adobe Commerce >=2.4.3 &lt;2.4.7) — 修复了以下问题：对于使用简单产品的捆绑产品，管理员用户无法为其保存计划更新，而该产品本身具有计划更新。
 * **ACSD-51700**(适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.7) — 修复了在管理员的可下载产品编辑页面上切换商店视图时发生的错误。
-* **ACSD-51120**(适用于Adobe Commerce >=2.3.7 &lt;2.4.3) — 修复了对于包含通过暂存更新更新更新的CMS块的CMS页，GraphQLGET请求缓存未得到清除的问题。
-* **ACSD-51240**(适用于Adobe Commerce >=2.4.4 &lt;2.4.6) — 修复了通过公司注册表进行注册时上传文件缺失的问题。
-* **ACSD-51907**(适用于Adobe Commerce >=2.4.2 &lt;2.4.3) — 修复了受限管理员用户无法创建具有脱机退款的贷项通知单的问题。
-* **ACSD-52148**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4) — 修复了[!DNL Google V3 reCAPTCHA]管理员登录偶尔失败的问题。
-* **ACSD-51431**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了索引器状态为&#x200B;*工作中*&#x200B;的问题，即使更改日志中没有新条目也是如此。
+* **ACSD-51120**(对于Adobe Commerce >=2.3.7 &lt;2.4.3) — 修复了以下问题：对于包含通过暂存更新更新更新的GraphQL块的CMS页面，未清除CMSGET的缓存。
+* **ACSD-51240**(对于Adobe Commerce >=2.4.4 &lt;2.4.6) — 修复了通过公司注册表进行注册时上传文件缺失的问题。
+* **ACSD-51907**(对于Adobe Commerce >=2.4.2 &lt;2.4.3) — 修复了受限管理员用户无法创建包含离线退款的贷项通知单的问题。
+* **ACSD-52148**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4) — 修复了[!DNL Google V3 reCAPTCHA]管理员登录偶尔失败的问题。
+* **ACSD-51431**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了即使更改日志中没有新条目，索引器状态为&#x200B;*正在工作*&#x200B;的问题。
 * **ACSD-51892**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了配置文件加载多次的性能问题。
 * 已弃用ACSD-51114。
 
@@ -305,9 +318,9 @@ ht-degree: 0%
 
 * **ACSD-49628**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了[!UICONTROL Page Builder's]多个错误阻止管理员保存没有内容权限的产品的问题。
 * **ACSD-51305**(适用于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了缺货可配置子产品在GraphQL响应中不可用的问题。
-* **ACSD-50621**(适用于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了在多网站环境中尝试编辑共享目录中的不同网站时，[!UICONTROL Tier Prices]不可见的问题。
-* **ACSD-51041**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.0) || >=2.4.1 &lt;2.4.6) — 改进价格索引器的性能。
-* **ACSD-51379**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了通过[!UICONTROL Page Builder]对页面文本内容所做的更改未保存的问题。
+* **ACSD-50621**(适用于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了在多网站环境中尝试编辑共享目录中的其他网站时，这些网站的[!UICONTROL Tier Prices]不可见的问题。
+* **ACSD-51041**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.0) || >=2.4.1 &lt;2.4.6) — 提高价格索引器的性能。
+* **ACSD-51379**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了通过[!UICONTROL Page Builder]对页面文本内容所做的更改未保存的问题。
 * **ACSD-49480**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了仅将一个购物车价格规则应用于购物车的问题。
 * **ACSD-51230**(适用于Adobe Commerce >=2.3.7 &lt;2.4.7) — 修复了在处理订单中简单产品的部分退款时删除礼品卡帐户的问题。
 * **ACSD-51238**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了在更新可配置产品和编辑价格时删除库存来源的问题。
@@ -338,8 +351,8 @@ ht-degree: 0%
 * **ACSD-50165**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.7) — 修复了错误&#x200B;*无法删除该文件。 警告！unlink：从Admin刷新JS/CSS缓存时没有此类文件或目录*。
 * **ACSD-49737**(适用于Adobe Commerce和Magento Open Source>=2.4.1-p1 &lt;2.4.7) — 修复了在卡付款失败后优惠券被错误地标记为使用的问题。
 * **ACSD-50814**(适用于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了管理员用户无法创建贷项通知单的问题。
-* **ACSD-50116**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了管理员用户无法为子类别级别3或更低级别创建URL重写的问题。
-* **ACSD-49513**(适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5) — 修复了由于0字节文件而导致远程存储同步失败的问题。
+* **ACSD-50116**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了管理员用户无法为子类别级别3或更低级别创建URL重写的问题。
+* **ACSD-49513**(对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5) — 修复了远程存储同步因0字节文件而失败的问题。
 * **ACSD-46683**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了配送价格显示&#x200B;*尚未计算的问题*。
 * **ACSD-49129**(对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了`rest/V1/products/sku/media`产品媒体API响应中未返回&#x200B;*[!UICONTROL content]*&#x200B;属性（base64图像代码）的问题。
 * **ACSD-50276**(适用于Adobe Commerce >=2.4.0 &lt;2.4.7) — 修复了创建多选客户属性后店面中无法正常使用客户注册表单的问题。
@@ -406,43 +419,43 @@ ht-degree: 0%
 
 * **ACSD-47937**(适用于Adobe Commerce和Magento Open Source2.4.4) || >=2.4.5 &lt;2.4.6) — 修复了由于应用程序级别的缓存而并非总是发送价格下降通知的问题。
 * **ACSD-48661**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了公司的信用额度大于999时，由于验证错误，逗号分隔符阻止保存公司的问题。
-* **ACSD-48773**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了奖励积分电子邮件模板从错误商店获取的问题。
+* **ACSD-48773**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.7) — 修复了从错误商店获取奖励点数电子邮件模板的问题。
 * **ACSD-48587**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.7) — 修复了在产品小组件匹配规则中HTML特殊字符导致无法显示匹配产品的问题。
-* **ACSD-48212**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了产品导入将产品分配给错误源的问题。
-* **ACSD-47988**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了产品导出从HTML生成器产品描述裁切页面标记的问题。
+* **ACSD-48212**(对于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了产品导入将产品分配给错误源的问题。
+* **ACSD-47988**(适用于Adobe Commerce和Magento Open Source>=2.3.7 &lt;2.4.6) — 修复了产品导出会从页面生成器产品描述中裁切HTML标签的问题。
 * **ACSD-48366**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了产品图像未显示在返股电子邮件模板上的问题。
-* **ACSD-48417**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了为产品创建计划更改并保存另一个产品后显示SQL错误的问题。
+* **ACSD-48417**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了在为产品创建计划更改并保存另一个产品后显示SQL错误的问题。
 
-## 版本1.1.25 {#v1-1-25}
+## v1.1.25 {#v1-1-25}
 
-* **ACSD-48058**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了如果未将捆绑产品分配给任何网站，产品价格重新索引不起作用的问题。
-* **ACSD-48262**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了“允许每页所有产品”设置为“是”时产品在前端不可见的问题。
-* **ACSD-48293**(适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4) — 修复了在将已售出的子产品退回Stock时，复合产品脱销的问题。
-* **ACSD-47520**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了客户在创建贷项通知单时失去奖励点的问题。
-* **ACSD-48044**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4) — 修复了将多个礼品卡应用于具有多个发运的单个订单会导致订单无法下达的问题。
-* **ACSD-48300**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了在删除可配置产品后无法创建退货的问题。
-* **ACSD-47910**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了各自实体网格中缺少订单、发票、装运和贷项通知单的问题。
-* **ACSD-47292**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了“显示现成产品”设置为“是”时，现成捆绑产品在GraphQL响应中不可用的问题。
-* **ACSD-48234**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在启用“显示现有量不足”选项的情况下，目录搜索结果显示错误类别项计数的问题。
-* **ACSD-48313**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.5) — 修复了当属性值包含逗号时，无法分析“configurable_variations”列的问题。 “additional_attributes”使用相同的解析算法。
-* **ACSD-48627**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在发送GraphQL请求以获取购物车详细信息时，库存不足的可配置产品导致错误的问题。
-* 更新的修补程序：MDVA-39384。
+* **ACSD-48058**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了将捆绑产品分配给任何网站时，产品价格重新索引无法正常工作的问题。
+* **ACSD-48262**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了将“允许每页所有产品”设置设为“是”时，产品在前端不可见的问题。
+* **ACSD-48293**(用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4) — 修复了子产品售出后重新上架时，复合产品缺货的问题。
+* **ACSD-47520**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了在创建贷项通知单时客户丢失奖励点的问题。
+* **ACSD-48044**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4) — 修复了向包含多批发运的单个订单应用多张礼品卡导致无法下订单的问题。
+* **ACSD-48300**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了在删除可配置产品时无法创建返回的问题。
+* **ACSD-47910**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了相应实体网格中缺少订单、发票、装运和贷项通知单的问题。
+* **ACSD-47292**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了将“显示缺货产品”设置为“是”时，GraphQL响应中缺货捆绑产品不可用的问题。
+* **ACSD-48234**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在启用“显示缺货”选项时，目录搜索结果显示不正确的类别项计数的问题。
+* **ACSD-48313**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.5) — 修复了当属性值包含逗号时，无法解析“configurable_variations”列的问题。 “additional_attributes”使用相同的解析算法。
+* **ACSD-48627**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.6) — 修复了在发送GraphQL请求以获取购物车详细信息时，缺货的可配置产品导致错误的问题。
+* 更新了修补程序：MDVA-39384。
 
-## 版本1.1.24 {#v1-1-24}
+## v1.1.24 {#v1-1-24}
 
-* **ACSD-45168**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了在商店视图级别覆盖&#x200B;*url_key*&#x200B;属性的产品无法生成SEO友好URL的问题。
-* **ACSD-46865**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了在启用异步索引时未填充装运和贷项通知单网格的问题。
-* **ACSD-47004**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了在没有增值税ID的情况下，增值税不适用于账单地址的问题。
-* **ACSD-47803**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了显示库存外可配置产品色板是否可用的问题。
+* **ACSD-45168**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了在应用商店视图级别上覆盖&#x200B;*url_key*&#x200B;属性的产品未生成SEO友好URL的问题。
+* **ACSD-46865**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了在启用异步索引时未填充装运和贷项通知单网格的问题。
+* **ACSD-47004**(适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.6) — 修复了没有VAT ID的帐单地址无法应用VAT的问题。
+* **ACSD-47803**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了缺货的可配置产品样本显示为可用的问题。
 * **ACSD-47137**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.6) — 当pub/media文件夹非常大时，提高图像库的加载速度。
 * **ACSD-46770**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了即使&#x200B;*电子邮件订单确认*&#x200B;未选中，仍会发送管理员订单电子邮件的问题。
 * **ACSD-47955**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.6) — 修复了GraphQL未正确显示购物车折扣的问题。
 * **ACSD-46617**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了以下问题：即使小计大于配置的&#x200B;*最小订单量*，仍然&#x200B;*继续结帐*&#x200B;按钮呈灰显状态。
 * **ACSD-47079**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5) — 修复了当子产品库存状态通过REST APIPOST/rest/V1/inventory/source-items更改时，复合产品（捆绑、分组和可配置）库存状态未更新的问题。
-* **ACSD-47336**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复&#x200B;*错误。在Commerce管理员中取消通知时出现*&#x200B;错误。
+* **ACSD-47336**(对于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复&#x200B;*出现错误。在Commerce管理员中取消通知时出现*&#x200B;错误。
 * **ACSD-47559**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了“预览电子邮件模板”区域不完全可见的问题。
-* **ACSD-47920**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了即使关闭了&#x200B;*允许来宾结帐*，也可以通过Rest API以访客用户身份下达订单的问题。
-* 已替换的修补程序：MDVA-39305、MDVA-42855。
+* **ACSD-47920**(适用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.6) — 修复了在&#x200B;*允许来宾结帐*&#x200B;关闭时，仍可以通过Rest API作为来宾用户下达订单的问题。
+* 已更换修补程序：MDVA-39305、MDVA-42855。
 
 ## v1.1.23 {#v1-1-23}
 
@@ -530,17 +543,17 @@ ht-degree: 0%
 * **MDVA-44562** (*用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.2-p2*) — 修复了以下问题：尽管非默认商店视图发起了GraphQL请求，但报价项目的非默认商店ID会被默认商店ID覆盖。
 * **MDVA-43167** (*适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了当管理员用户选择所有订单时，管理员订单网格批量操作不适用于多页的问题。
 * **MDVA-44044** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.2-p2*) — 修复了将产品分配给新网站后无法显示在“类别”页面上的问题。
-* **MDVA-42509**(*Adobe Commerce和Magento Open Source>=2.3.3 &lt;2.4.4*) — 修复了无法上传CSV以快速订购导致&#x200B;*无法发送Cookie*&#x200B;错误的问题。
-* 更新的修补程序：MDVA-41061、MDVA-42584。
+* **MDVA-42509** (*用于Adobe Commerce和Magento Open Source>=2.3.3 &lt;2.4.4*) — 修复了无法快速上传CSV导致出现&#x200B;*无法发送Cookie*&#x200B;错误的问题。
+* 更新的修补程序： MDVA-41061和MDVA-42584。
 * 由于内部进程更改，新[!DNL Quality Patches Tool]修补程序的前缀将从&#x200B;*MDVA*&#x200B;更改为&#x200B;*ACSD*。
 
-## 版本1.1.15 {#v1-1-15}
+## v1.1.15 {#v1-1-15}
 
-* **MDVA-40961**(*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了在购物车中已有最小数量的项目时无法向购物车添加其他项目的问题。
-* **MDVA-44887** (*Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5*) — 修复了“管理”面板中的&#x200B;*未捕获的SyntaxError：意外标记“const”*&#x200B;错误。
-* **MDVA-43718** (*对于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复&#x200B;*未授权使用者访问%资源。从自定义集成访问共享目录时出现*&#x200B;错误。
-* **MDVA-44660**(*Adobe Commerce和Magento Open Source>=2.4.2-p1 &lt;2.4.5*) — 修复了重音符``` ` ```不能用于客户姓氏和名字的问题。
-* **MDVA-40896** (*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了异步产品批量API中向Magento传递的&#x200B;*错误：类型错误：参数3错误*&#x200B;错误。
+* **MDVA-40961** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了当购物车中已有最小数量的项目时，无法将其他项目添加到购物车的问题。
+* **MDVA-44887** (*用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.5*) — 修复了“管理”面板中的&#x200B;*未捕获的SyntaxError：意外的令牌“const”*&#x200B;错误。
+* **MDVA-43718** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复&#x200B;*使用者无权访问%资源。从自定义集成访问共享目录时出现*&#x200B;错误。
+* **MDVA-44660** (*用于Adobe Commerce和Magento Open Source>=2.4.2-p1 &lt;2.4.5*) — 修复了重音符号字符``` ` ```无法用于客户的名字和姓氏的问题。
+* **MDVA-40896** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了异步产品批量API中的&#x200B;*错误：类型错误：传递给Magento的参数3错误*。
 * **MDVA-38559** (*用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.3*) — 修复了具有多个订阅的客户的&#x200B;*/V1/customers/search API*&#x200B;错误。
 * **MDVA-44533** (*适用于Adobe Commerce和Magento Open Source>=2.3.1 &lt;2.4.4*) — 修复了将折扣错误地应用于捆绑包子产品的问题。
 * 更新的修补程序： MDVA-41061和MDVA-42269。
@@ -548,35 +561,35 @@ ht-degree: 0%
 ## v1.1.14 {#v1-1-14}
 
 * **MDVA-43983** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了&#x200B;*无法单独显示的产品*&#x200B;仍然显示在目录高级搜索结果中的问题。
-* **MDVA-44100**(*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了所有FPT都分配给购物车中的最后一个产品并重置为其他产品的问题。
-* **MDVA-43605**(*对于Adobe Commerce和Magento Open Source>=2.3.1 &lt;2.4.5*) — 修复了在使用Rest API时，订单数据为行总计返回负值的问题。
-* **MDVA-43102**(*Adobe Commerce和Magento Open Source>=2.3.1 &lt;2.4.5*) — 修复了在通过REST API进行退款时，可销售数量未正确更新的问题。
-* **MDVA-43178**(*Adobe Commerce和Magento Open Source>=2.4.3-p2 &lt;2.4.5*) — 修复了在GraphQL中无法检索自定义商店的客户令牌的问题。
+* **MDVA-44100** (适用于Adobe Commerce和Magento Open Source的&#x200B;*>=2.4.3 &lt;2.4.5*) — 修复了将所有FPT分配给购物车中的最后一个产品并重置为其他产品的问题。
+* **MDVA-43605** (*用于Adobe Commerce和Magento Open Source>=2.3.1 &lt;2.4.5*) — 修复了在使用Rest API时，订单数据返回行总计负值的问题。
+* **MDVA-43102** (*用于Adobe Commerce和Magento Open Source>=2.3.1 &lt;2.4.5*) — 修复了通过REST API进行退款时可销售数量未正确更新的问题。
+* **MDVA-43178** (*适用于Adobe Commerce和Magento Open Source>=2.4.3-p2 &lt;2.4.5*) — 修复了无法在GraphQL中检索自定义商店的客户令牌的问题。
 * **MDVA-43859** (*用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了以下问题：当已删除的客户尝试登录时，不会记录错误&#x200B;*客户ID =*&#x200B;的此类实体。
-* **MDVA-44147**(*对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复GraphQL请求不返回申请列表的问题。
-* **MDVA-44505**(*对于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.3*) — 修复了GraphQL应用奖励点数不会更新总计，以及在下单期间多次应用商店积分的问题。
+* **MDVA-44147** (*适用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了GraphQL请求不返回申请列表的问题。
+* **MDVA-44505** (*适用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.3*) — 修复了GraphQL应用奖励点数未更新总计，以及在下单过程中多次应用商店点数的问题。
 * 更新的修补程序：MDVA-29148、MDVA-36464-V5、MDVA-42584、MDVA-39993-V2。
 
-## 版本1.1.13 {#v1-1-13}
+## v1.1.13 {#v1-1-13}
 
-* **MDVA-42969**(*对于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.3*) — 修复了相关产品规则仅在客户区段设置为&#x200B;*全部*&#x200B;时有效的问题。
-* **MDVA-39605**(*对于Adobe Commerce和Magento Open Source>=2.3.4 &lt;2.4.5*) — 修复Redis缓存TTL（到期日期）具有错误值的问题。
-* **MDVA-43862**(*Adobe Commerce和Magento Open Source>=2.3.3 &lt;2.4.5*) — 修复了客户由于GraphQL *UpdateCartItems突变*&#x200B;错误而无法更新购物车项的问题。
-* **MDVA-43824**(*对于Adobe Commerce和Magento Open Source>=2.3.6 &lt;=2.3.7-p3 || >=2.4.1 &lt;2.4.5*) — 修复了在取消带有折扣的订单时出现错误的问题。
-* **MDVA-43451** (*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了错误&#x200B;*未找到请求的存储的问题。 请验证该商店，然后重试。在为特定网站配置共享目录时显示*。
-* **MDVA-43491**(*Adobe Commerce和Magento Open Source>=2.3.5 &lt;2.4.5*) — 修复了在导入多商店网站的产品时，基础图像标签不更新的问题。
-* **MDVA-43601** (*对于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复完全重新索引后缺少触发器的问题。
-* **MDVA-42046** (*对于Adobe Commerce和Magento Open Source>=2.3.4 &lt;=2.3.5-p2 || >=2.4.0 &lt;2.4.5*) — 修复了在更新产品时向带有日期输入字段的产品属性分配不正确值的问题。
-* **MDVA-43935**(*对于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了追加销售产品显示两次的问题。
-* **MDVA-44188**(*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了地址中包含`.-`的系统发布的电子邮件无法发送的问题。
-* **MDVA-42283**(*Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了法语区域设置的管理员顺序网格中的日期 — 时间格式无效的问题。
-* 更新的修补程序：MDVA-41061-V2、MDVA-36309、MDVA-30862、MDVA-39713。
-* 已添加[!DNL Site-Wide Analysis Tool]的修补程序元数据。
+* **MDVA-42969** (*适用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.3*) — 修复了仅当“客户区段”设置为&#x200B;*全部*&#x200B;时，“相关产品规则”才能正常工作的问题。
+* **MDVA-39605** (*用于Adobe Commerce和Magento Open Source>=2.3.4 &lt;2.4.5*) — 修复了Redis缓存TTL（过期日期）具有错误值的问题。
+* **MDVA-43862** (*用于Adobe Commerce和Magento Open Source>=2.3.3 &lt;2.4.5*) — 修复了由于GraphQL *UpdateCartItems突变*&#x200B;错误而导致客户无法更新购物车项目的问题。
+* **MDVA-43824** (*用于Adobe Commerce和Magento Open Source>=2.3.6 &lt;=2.3.7-p3 || >=2.4.1 &lt;2.4.5*) — 修复了取消带有折扣的订单时出现错误的问题。
+* **MDVA-43451** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了错误&#x200B;*未找到所请求的存储的问题。 请验证存储并重试。为特定网站配置共享目录时显示*。
+* **MDVA-43491** (*用于Adobe Commerce和Magento Open Source>=2.3.5 &lt;2.4.5*) — 修复了在导入多商店网站的产品时，基础图像标签不更新的问题。
+* **MDVA-43601** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复完全重新索引后缺少触发器的问题。
+* **MDVA-42046** (*用于Adobe Commerce和Magento Open Source>=2.3.4 &lt;=2.3.5-p2 || >=2.4.0 &lt;2.4.5*) — 修复了在更新产品时为具有日期输入字段的产品属性分配不正确值的问题。
+* **MDVA-43935** (*用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了向上销售产品显示两次的问题。
+* **MDVA-44188** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了系统颁发的地址中包含`.-`的电子邮件未发送的问题。
+* **MDVA-42283** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了法语区域设置的管理顺序网格中的日期时间格式无效的问题。
+* 更新了修补程序：MDVA-41061-V2、MDVA-36309、MDVA-30862、MDVA-39713。
+* 为[!DNL Site-Wide Analysis Tool]添加了修补程序元数据。
 
-## 版本1.1.12 {#v1-1-12}
+## v1.1.12 {#v1-1-12}
 
-* **MDVA-39713**(*Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.3.6*) — 修复了用户能够编辑活动计划更新的开始时间的问题。
-* **MDVA-42410**(*对于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了优惠券报告仅显示默认基础货币的问题。
+* **MDVA-39713** (适用于Adobe Commerce的&#x200B;*且Magento Open Source>=2.3.0 &lt;2.3.6*) — 修复了用户能够编辑活动计划更新的开始时间的问题。
+* **MDVA-42410** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了优惠券报表仅显示默认基础货币的问题。
 * **MDVA-41136** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了`mage-cache-sessid`的过期日期未延长而导致客户数据清理的问题。
 * **MDVA-39993** (*用于Adobe Commerce和Magento Open Source>=2.3.5 &lt;=2.3.7-p2 || >=2.4.0 &lt;2.4.4*) — 修复了通过API完成的库存更改未在前端产品页面上反映的问题。
 * **MDVA-42855** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了签出期间新客户地址未保存到通讯簿中的问题。
@@ -594,47 +607,47 @@ ht-degree: 0%
 * 更新了修补程序：MDVA-36464、MDVA-37478、MDVA-38608。
 * 为[!DNL Site-Wide Analysis Tool]添加了修补程序元数据。
 
-## 版本1.1.11 {#v1-1-11}
+## v1.1.11 {#v1-1-11}
 
-* **MDVA-42790**(*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了无法通过REST API为特定网站更新产品价格属性的问题。
-* **MDVA-41350**(*Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了具有受限访问权限的管理员用户按SKU顺序添加其角色范围之外的产品时引发异常的问题。
-* **MDVA-42269** (*对于Adobe Commerce和Magento Open Source>=2.4.3-p1 &lt;2.4.5*) — 修复了管理员用户无法登录管理员的问题，因为&#x200B;*TypeError： strtotime()要求参数1为字符串，给定为null*&#x200B;错误。
-* **MDVA-40830**(*对于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了在下达订单期间多次应用商店积分的问题。
-* **MDVA-42237**(*Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了可配置产品特殊价格在子产品价格发生变化后未更新的问题。
+* **MDVA-42790** (适用于Adobe Commerce和Magento Open Source的&#x200B;*>=2.4.3 &lt;2.4.5*) — 修复了无法通过REST API为特定网站更新产品价格属性的问题。
+* **MDVA-41350** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了当具有受限访问权限的管理员用户按SKU按顺序添加产品超出其角色范围时引发异常的问题。
+* **MDVA-42269** (*用于Adobe Commerce和Magento Open Source>=2.4.3-p1 &lt;2.4.5*) — 修复了由于&#x200B;*TypeError而导致管理员用户无法登录到管理员的问题： strtotime()预期参数1为字符串，但给定*&#x200B;错误为null。
+* **MDVA-40830** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了在下单期间多次应用商店点数的问题。
+* **MDVA-42237** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了可配置产品特殊价格在子产品价格发生更改后未更新的问题。
 * **MDVA-42520** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了使用&#x200B;*启用跨境贸易*&#x200B;时两次应用税率的问题。
-* 更新的修补程序：MDVA-27239、MDVA-39305、MDVA-41236、MDVA-36832。
-* 弃用的修补程序：MDVA-37725。
+* 更新了修补程序：MDVA-27239、MDVA-39305、MDVA-41236、MDVA-36832。
+* 已弃用的修补程序：MDVA-37725。
 
-## 版本1.1.10 {#v1-1-10}
+## v1.1.10 {#v1-1-10}
 
-* **MDVA-38728** (*对于Adobe Commerce和Magento Open Source>=2.3.2 &lt;2.4.5*) — 修复了批量属性更新仅在更改&#x200B;*产品可见性*&#x200B;后为默认商店创建URL重写的问题。
-* **MDVA-43091**(*Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了在后端从管理员订购捆绑产品时出现错误&#x200B;*您不能对此产品使用小数数量的问题*。
-* **MDVA-40816**(*对于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了相关产品规则显示来自规则条件中未定义的类别中的产品的问题。
-* **MDVA-41305**(*Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了GraphQL变异添加到愿望列表后不返回可配置产品选项的问题。
-* **MDVA-39181**(*对于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了相关产品规则显示来自规则条件中未定义的类别中的产品的问题。
-* **MDVA-42584**(*Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3*) — 修复了通过导入或API更改数量和Stock状态后，后端中可配置的Stock状态未更新的问题。
-* **MDVA-40175**(*Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.3*) — 修复了&#x200B;*单击以更改装运方法*&#x200B;在重新排序期间没有在管理员中显示用于选择装运方法的单选按钮的问题。
-* **MDVA-42768**(*Adobe Commerce和Magento Open Source>=2.3.4 &lt;2.4.5*) — 修复了&#x200B;*显示不限量显示*&#x200B;为“是”时，可配置产品将常规价格显示为0的问题。
-* **MDVA-43201**(*对于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了在将DOB属性用于某些区域设置时，客户登录中出现错误的问题。
-* 更新的修补程序：MDVA-35092、MDVA-33970。
+* **MDVA-38728** (*用于Adobe Commerce和Magento Open Source>=2.3.2 &lt;2.4.5*) — 修复了在更改&#x200B;*产品可见性*&#x200B;后批量属性更新仅为默认商店创建URL重写的问题。
+* **MDVA-43091** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了在后端从管理员订购捆绑产品时出现错误&#x200B;*的问题。您不能对此产品使用小数数量*。
+* **MDVA-40816** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了相关产品规则显示规则条件中未定义类别中产品的问题。
+* **MDVA-41305** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.5*) — 修复了GraphQL突变在将其添加到愿望清单后不返回可配置产品选项的问题。
+* **MDVA-39181** (*用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了相关产品规则显示规则条件中未定义类别中产品的问题。
+* **MDVA-42584** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3*) — 修复了通过“导入”或API更改数量和库存状态后后端中可配置库存状态未更新的问题。
+* **MDVA-40175** (*用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.3*) — 修复了以下问题：*单击更改配送方式*&#x200B;在重新排序过程中不会在“管理员”中显示用于选择配送方式的单选按钮。
+* **MDVA-42768** (*用于Adobe Commerce和Magento Open Source>=2.3.4 &lt;2.4.5*) — 修复了当&#x200B;*显示缺货*&#x200B;为“是”时，可配置产品的正常价格显示为0的问题。
+* **MDVA-43201** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了在特定区域设置中使用DOB属性时客户登录中发生错误的问题。
+* 更新的修补程序： MDVA-35092和MDVA-33970。
 
-## 版本1.1.9 {#v1-1-9}
+## v1.1.9 {#v1-1-9}
 
-* **MDVA-38346**(*Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了Adobe Commerce时区与本地环境时区不同时，日期筛选器无法正常工作的问题。
-* **MDVA-42657**(*Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了管理员用户无法在客户区段条件中选择类别的问题。
-* **MDVA-42806**(*Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了在每次通过REST API更新现有公司时发送&#x200B;*新公司注册*&#x200B;电子邮件的问题。
-* **MDVA-37984** (*Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了[!DNL Visual Merchandiser] *按规则匹配产品*&#x200B;功能无法用暂存更新正确筛选产品的问题。
-* **MDVA-40488**(*Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了包含库存不足子产品的可配置产品未显示在其正确价格范围内的问题。
-* **MDVA-42507** (*对于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了在为购物车规则应用暂存更新后清理整页缓存的问题。
-* **MDVA-39163**(*Adobe Commerce和Magento Open Source>=2.3.5 &lt;2.4.5*) — 修复了注册新用户且购物车中的产品来自来宾会话时，装运方法不可用的问题。
-* **MDVA-38626**(*Adobe Commerce和Magento Open Source>=2.3.3 &lt;2.4.5*) — 修复了管理员用户无法使用[!DNL PayPal Payflow Pro]付款在后端下单的问题。
-* **MDVA-38666**(*Adobe Commerce和Magento Open Source>=2.3.2 &lt;2.3.6*) — 修复了管理员用户无法更改客户购物车中可配置产品选项的问题。
-* **MDVA-38526** (*Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.4*) — 修复了管理员用户无法访问[!DNL Site-Wide Analysis tool]的问题。
-* 更新的修补程序：MDVA-40101。
+* **MDVA-38346** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.5*) — 修复了当Adobe Commerce时区与本地环境时区不同时日期过滤器无法正常工作的问题。
+* **MDVA-42657** (*适用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了管理员用户无法在客户区段条件中选择类别的问题。
+* **MDVA-42806** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了在每次通过REST API更新现有公司时发送&#x200B;*新公司注册*&#x200B;电子邮件的问题。
+* **MDVA-37984** (*用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.5*) — 修复了[!DNL Visual Merchandiser] *按规则匹配产品*&#x200B;功能无法正确筛选具有暂存更新的产品的问题。
+* **MDVA-40488** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了具有缺货子产品的可配置产品无法在其正确价格范围内显示的问题。
+* **MDVA-42507** (*适用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.5*) — 修复了在为购物车规则应用暂存更新后清理全页缓存的问题。
+* **MDVA-39163** (*用于Adobe Commerce和Magento Open Source>=2.3.5 &lt;2.4.5*) — 修复了在注册新且购物车中的产品来自访客会话时配送方式不可用的问题。
+* **MDVA-38626** (*用于Adobe Commerce和Magento Open Source>=2.3.3 &lt;2.4.5*) — 修复了管理员用户无法使用[!DNL PayPal Payflow Pro]付款在后端下订单的问题。
+* **MDVA-38666** (*用于Adobe Commerce和Magento Open Source>=2.3.2 &lt;2.3.6*) — 修复了管理员用户无法更改客户购物车中可配置产品选项的问题。
+* **MDVA-38526** (*用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.4*) — 修复了管理员用户无法访问[!DNL Site-Wide Analysis tool]的问题。
+* 更新了修补程序：MDVA-40101。
 
-## 版本1.1.8 {#v1-1-8}
+## v1.1.8 {#v1-1-8}
 
-* **MDVA-41215** (*Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了用户设置&#x200B;*mage-messages* Cookie（如果存在）后获得500错误但没有新消息的问题。
+* **MDVA-41215** (适用于Adobe Commerce和Magento Open Source的&#x200B;*>=2.3.0 &lt;2.4.4*) — 修复了在设置&#x200B;*mage-messages* Cookie（如果存在）后用户收到500错误的问题，但是没有新消息。
 * **MDVA-41139** (*用于Adobe Commerce和Magento Open Source>=2.4.3 &lt;2.4.4*) — 修复了在导入产品后，当简单产品的一个源的数目为0时，可配置产品出现缺货的问题。
 * **MDVA-42326** (*用于Adobe Commerce和Magento Open Source>=2.3.6 &lt;=2.3.7-p2 || >=2.4.1 &lt;2.4.4*) — 修复了以下问题：即使启用了永久购物车，客户在会话超时后仍会在结账时遇到错误。
 * **MDVA-42341** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了以下问题：如果请求具有Store标头，`categoryList` GraphQL查询不会过滤结果。
@@ -657,8 +670,8 @@ ht-degree: 0%
 * **MDVA-41399** (*用于Adobe Commerce和Magento Open Source>=2.3.3 &lt;2.4.2*) — 修复了如果客户将产品添加到愿望清单，管理员用户无法访问&#x200B;*管理购物车*&#x200B;页面的问题。
 * **MDVA-40609** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3*) — 修复了`cataloginventory_stock_status`索引表中缺少禁用产品数据，显示不正确的禁用产品数量的问题。
 * **MDVA-39031** (适用于Adobe Commerce和Magento Open Source的&#x200B;*>=2.4.1 &lt;2.4.4*) — 修复了即使在未分配到GraphQL的情况下，仍可以通过将产品添加到购物车的问题。
-* **MDVA-41597**(*Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了用户使用GraphQL向购物车添加多个可配置产品时出现错误的问题。
-* **MDVA-27456** (*Adobe Commerce和Magento Open Source>=2.3.5 &lt;2.3.7*) — 修复了用户在尝试加载[!DNL Swagger]时收到错误的问题。
+* **MDVA-41597** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.4*) — 修复了使用GraphQL将多个可配置产品添加到购物车时用户收到错误的问题。
+* **MDVA-27456** (适用于Adobe Commerce和Magento Open Source的&#x200B;*>=2.3.5 &lt;2.3.7*) — 修复了用户在尝试加载[!DNL Swagger]时出现错误的问题。
 * **MDVA-32776** (适用于Adobe Commerce的&#x200B;*且Magento Open Source>=2.4.0 &lt;2.4.2*) — 修复了在下订单但未发送时，库存状态未更新的问题。
 * **MDVA-30862** (*用于Adobe Commerce和Magento Open Source>=2.3.4 &lt;2.4.0*) — 修复了打印的PDF发票上订购日期不正确的问题。
 * 改进了[!DNL Quality Patch Tool]的索引页。 在工具的最新版本中添加了[!DNL quality patches]的方便搜索和筛选功能。
@@ -670,8 +683,8 @@ ht-degree: 0%
 * **MDVA-41046** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了具有自定义选项的简单产品可用于分配给可配置/分组产品的问题。
 * **MDVA-40545** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了即使同一页面有多个节点，也仅检索到页面的第一个节点的问题。
 * **MDVA-41164** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3-p1*) — 修复了管理员用户无法保存或编辑具有文件或图像类型自定义客户属性的公司的问题。
-* **MDVA-39229** (*Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了导致在更新目录规则暂存更新开始时间后出现以下错误的问题： *Cron Job staging_synchronize_entities_period出错：无法删除活动更新。*
-* **MDVA-40619**(*对于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了尝试在CMS页面上执行内联编辑时，对CMS页面层次结构所做的更改会导致500错误的问题。
+* **MDVA-39229** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了在更新目录规则暂存更新开始时间后导致出现以下错误的问题： *Cron作业staging_synchronize_entities_period出错：无法删除活动更新。*
+* **MDVA-40619** (适用于Adobe Commerce的&#x200B;*且Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了尝试在CMS页面上执行内联编辑时，对CMS页面层次结构所做的更改会导致500错误的问题。
 * **MDVA-41061** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3*) — 修复了从管理员保存产品时，库存状态重置为可销售的问题。
 * **MDVA-31763** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了在手动重新索引之前还原（或不应用）目录价格规则的问题。
 * **MDVA-37748** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3*) — 修复了GraphQL查询返回未分配给共享目录的产品的问题。
@@ -697,7 +710,7 @@ ht-degree: 0%
 * **MDVA-37234** (*用于Adobe Commerce和Magento Open Source>=2.3.5 &lt;2.4.0 || >=2.4.1 &lt;=2.4.2-p2*) — 修复了以下问题：对于同一SKU，将项目多次添加到购物车（并行请求）会为同一购物车ID创建重复的行项目。
 * **MDVA-33606** (*适用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;=2.4.2-p2*) — 修复了在保存分配给层次结构的CMS页面时，用户收到&#x200B;*唯一约束冲突*&#x200B;错误的问题。
 * **MDVA-31590** (*用于Adobe Commerce，Magento Open Source>=2.4.0 &lt;=2.4.1-p1*) — 修复了用户无法使用MySQL异步队列批量更新属性的问题。
-* **MDVA-36309**(*Adobe Commerce和Magento Open Source>=2.4.2 &lt;=2.4.2-p2*) — 修复了管理网格中按属性搜索产品时速度慢的问题。
+* **MDVA-36309** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;=2.4.2-p2*) — 修复了在管理网格中按属性搜索产品速度缓慢的问题。
 
 ## v1.1.2 {#v1-1-2}
 
@@ -715,10 +728,10 @@ ht-degree: 0%
 * **MDVA-40134** (*用于Adobe Commerce和Magento Open Source>=2.4.2 &lt;2.4.3*) — 修复了在启用共享目录后GraphQL未返回相关产品的问题。
 * **MDVA-39935** (*用于Adobe Commerce和Magento Open Source>=2.4.1 &lt;2.4.4*) — 修复了GraphQL返回在网站级别禁用的可配置子产品的问题。
 
-## 版本1.1.1 {#v1-1-1}
+## v1.1.1 {#v1-1-1}
 
-* **MDVA-36021** (*Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4*) — 修复了管理员的订单详细信息页面上显示&#x200B;*调用成员函数getId()*&#x200B;错误的问题。
-* **MDVA-34948** (*对于Adobe Commerce和Magento Open Source>=2.3.6 &lt;=2.3.6-p1 || >=2.4.0 &lt;=2.4.0-p1*) — 修复长时间运行的查询（如`GET_LOCK`）的问题。
+* **MDVA-36021** (*用于Adobe Commerce和Magento Open Source>=2.4.0 &lt;2.4.4*) — 修复了&#x200B;*调用成员函数getId()*&#x200B;错误显示在Admin的订单详细信息页面上的问题。
+* **MDVA-34948** (*用于Adobe Commerce和Magento Open Source>=2.3.6 &lt;=2.3.6-p1 || >=2.4.0 &lt;=2.4.0-p1*) — 修复了长时间运行的查询（如`GET_LOCK`）的问题。
 * **MDVA-39305** (*用于Adobe Commerce且Magento Open Source>=2.4.0 &lt;=2.4.2-p1*) — 修复了注册客户无法使用已启用的Google ReCaptcha登录的问题。
 * **MDVA-37897** (*用于Adobe Commerce和Magento Open Source>=2.3.0 &lt;2.4.4*) — 修复了客户尝试使用“最近查看的”小组件中的选项添加产品时，重定向不正确的问题。
 
@@ -741,22 +754,22 @@ ht-degree: 0%
 ## v1.0.25 {#v1-0-25}
 
 * **MDVA-37916** (*适用于Adobe Commerce >=2.3.6 &lt;2.4.3*) — 修复了在使用[!DNL Paypal Payment Advanced]方法时客户未进入付款确认页面的问题。
-* **MDVA-37082**(*对于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了保存分组产品的自定义库存时导致产品在前端显示缺货的问题。
-* **MDVA-36572** (*对于Adobe Commerce >=2.3.5 &lt;2.4.3*) — 修复了贷项通知单更新不再导致数据库中产品保留更新重复的问题。
-* **MDVA-38132** (*对于Adobe Commerce >=2.3.3 &lt;2.4.3*) — 修复了由于&#x200B;*重定向次数过多*&#x200B;错误而无法访问Admin面板时的问题。
-* **MDVA-38270**(*对于Adobe Commerce >=2.4.1 &lt;2.4.3*) — 修复了GraphQL中缺少订单合计中礼品卡信息的问题。
+* **MDVA-37082** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了在保存分组产品的自定义库存时导致产品在前端无库存的问题。
+* **MDVA-36572** (*适用于Adobe Commerce >=2.3.5 &lt;2.4.3*) — 修复了贷项通知单更新不再导致数据库中重复产品预订更新的问题。
+* **MDVA-38132** (*适用于Adobe Commerce >=2.3.3 &lt;2.4.3*) — 修复了由于&#x200B;*重定向次数过多*&#x200B;错误而无法访问管理员面板的问题。
+* **MDVA-38270** (*适用于Adobe Commerce >=2.4.1 &lt;2.4.3*) — 修复了GraphQL中订单总计中缺少礼品卡信息的问题。
 
-## 版本1.0.24 {#v1-0-24}
+## v1.0.24 {#v1-0-24}
 
 * **MDVA-37779** (*适用于Adobe Commerce >=2.4.2 &lt;=2.4.4*) — 修复了在网站ID与商店ID不符时通过GraphQL将可配置产品添加到购物车时出现的问题。
-* **MDVA-36832**(*对于Adobe Commerce >=2.3.4 &lt;=2.4.2-p1*) — 修复了当视图宽度为768px时图像在页面上复制的问题。
-* **MDVA-37874** (*对于Adobe Commerce >=2.3.6 &lt;=2.3.7 || >=2.4.1 &lt;=2.4.2-p1*) — 修复了&#x200B;*整个购物车的固定折扣额*&#x200B;错误地应用于包含多个选项的捆绑包产品的问题。
-* **MDVA-37913** (*对于Adobe Commerce >=2.3.0 &lt;=2.4.0-p1*) — 修复了可下载产品通过API更新时可下载链接消失的问题。
-* **MDVA-34330**(*对于Adobe Commerce >=2.3.1 &lt;=2.4.2-p1*) — 修复了“订单”网格中的订单未根据管理时区筛选的问题。
+* **MDVA-36832** (*适用于Adobe Commerce >=2.3.4 &lt;=2.4.2-p1*) — 修复了当视图宽度为768px时，页面上出现图像重复的问题。
+* **MDVA-37874** (*用于Adobe Commerce >=2.3.6 &lt;=2.3.7 || >=2.4.1 &lt;=2.4.2-p1*) — 修复了以下问题：*整个购物车的固定折扣金额*&#x200B;错误地应用于包含多个选项的捆绑产品。
+* **MDVA-37913** (*适用于Adobe Commerce >=2.3.0 &lt;=2.4.0-p1*) — 修复了通过API更新可下载产品时可下载链接消失的问题。
+* **MDVA-34330** (*适用于Adobe Commerce >=2.3.1 &lt;=2.4.2-p1*) — 修复了订单网格中的订单未根据管理员时区进行过滤的问题。
 
-## 版本1.0.23 {#v1-0-23}
+## v1.0.23 {#v1-0-23}
 
-* **MDVA-37478**(*对于Adobe Commerce >=2.3.0 &lt;=2.3.7*) — 修复了当通过REST API使用&#x200B;*帐户付款*&#x200B;付款方式下达的订单创建部分发票时，Adobe Commerce会引发错误的问题。
+* **MDVA-37478** (*适用于Adobe Commerce >=2.3.0 &lt;=2.3.7*) — 修复了以下问题：为通过REST API使用&#x200B;*帐户付款*&#x200B;付款方式下达的订单创建部分发票时，Adobe Commerce会引发错误。
 * **MDVA-37362** (*适用于Adobe Commerce >=2.3.4 &lt;=2.4.2-p1*) — 修复了GraphQL响应中可配置产品选项值和变量属性值为空的问题。
 * **MDVA-37288** (适用于Adobe Commerce 2.4.2 *的*) — 修复了GraphQL请求后返回错误层价格的问题。
 * **MDVA-37225** (*适用于Adobe Commerce >=2.4.1 &lt;=2.4.2-p1*) — 修复了在快速创建订单期间，当导入的SKU中存在整数值时上传流程卡住的问题。
@@ -805,8 +818,8 @@ ht-degree: 0%
 * **MDVA-35155** (*适用于Adobe Commerce >=2.3.0 &lt;2.3.6*) — 修复了在选项标题更改时无法购买捆绑产品的问题。
 * **MDVA-35910** (*适用于Adobe Commerce >=2.4.1 &lt;2.4.3*) — 修复了在禁用“以客户身份登录”功能后无法创建新客户帐户的问题。
 * **MDVA-34474** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了使用API将产品添加到申购单列表的问题。
-* **MDVA-34591**(*对于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了购物车规则折扣计算不正确的问题，即&#x200B;*最大数量折扣应用于*&#x200B;和&#x200B;*折扣数量步骤（购买X）*。
-* **MDVA-33704** (*对于Adobe Commerce >=2.4.0 &lt;2.4.3*) — 修复了&#x200B;*店内提货*&#x200B;装运选项未显示的问题，但配置为可用。
+* **MDVA-34591** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了购物车规则折扣计算&#x200B;*最大数量折扣应用于*&#x200B;和&#x200B;*折扣数量步骤（购买X）*&#x200B;不正确的问题。
+* **MDVA-33704** (*适用于Adobe Commerce >=2.4.0 &lt;2.4.3*) — 修复了&#x200B;*店内提货*&#x200B;配送选项配置为可用但无法显示的问题。
 * **MDVA-34928** (*适用于Adobe Commerce >=2.3.5 &lt;2.3.5-p2*) — 修复了从付款中删除商店点数后无限期显示页面加载程序的问题。
 * **MDVA-35254** (*适用于Adobe Commerce >=2.3.1 &lt;2.4.3*) — 修复了签出期间验证码的问题。
 * **MDVA-35569** (*适用于Adobe Commerce >=2.3.4 &lt;2.4.2*) — 修复了在指定状态时GraphQL响应中未填充&#x200B;*已修复的产品税*&#x200B;字段的问题。
@@ -838,16 +851,16 @@ ht-degree: 0%
 * **MDVA-32634** (*用于Adobe Commerce ^2.3.1*) — 修复了在层次结构中移动类别后，分配给所有商店的类别的`url_path`未更改的问题。
 * **MDVA-33344** (*用于Adobe Commerce ^2.3.0*) — 修复了使用硬编码的`rma_item`实体默认属性集ID而不是来自数据库的值的问题。
 * **MDVA-34192** (*适用于Adobe Commerce >=2.3.4 &lt;2.4.3*) — 修复了无法使用dd/mm/yyyy格式修改/指定客户出生日期的问题。
-* **MDVA-34847**(*对于Adobe Commerce ^2.3.0*) — 修复了具有自定义权限的管理员用户的管理员集合中，SQL条件的存储ID类型转换为整数。
-* **MDVA-34886**(*对于Adobe Commerce ^2.3.2*) — 修复了将&#x200B;*粗细*&#x200B;产品属性配置为可搜索时，搜索不返回结果的问题。
+* **MDVA-34847** (*用于Adobe Commerce ^2.3.0*) — 修复了具有自定义权限的管理员用户的管理员集合中，SQL条件的存储ID类型转换的整数。
+* **MDVA-34886** (*用于Adobe Commerce ^2.3.2*) — 修复了将&#x200B;*权重*&#x200B;产品属性配置为可搜索时，搜索未返回结果的问题。
 
-## 版本1.0.15 {#v1-0-15}
+## v1.0.15 {#v1-0-15}
 
 * **MDVA-33559** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了[!DNL PayPal Payflow Pro]付款失败并出现重定向参数列表格式错误的问题。
 * **MDVA-34023** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.3*) — 修复了错误&#x200B;*没有此类地址为ID为*&#x200B;的实体在访客的浏览器中随机显示的问题。
 * **MDVA-32759** (*适用于Adobe Commerce >=2.3.1 &lt;2.4.3，扩展为B2B*) — 修复了共享目录删除现有层定价的问题。
-* **MDVA-33482**(适用于Adobe Commerce ^2.3.5 *的*) — 修复了针对部分发票生成贷项通知单导致对总订单计税而不是对该部分发票计税的问题。
-* **MDVA-33393** (*Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复错误&#x200B;*提供的countryId不存在*。
+* **MDVA-33482** (*用于Adobe Commerce ^2.3.5*) — 修复了在生成针对部分发票的贷项通知单时，导致对总订单计税，而不是对该部分发票计税的问题。
+* **MDVA-33393** (*用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复错误&#x200B;*提供的countryId不存在*。
 * **MDVA-33632** (*适用于Adobe Commerce >=2.3.0 &lt;2.3.7*) — 修复了在尝试重新订购缺货产品时，向管理员用户显示异常消息&#x200B;*此产品缺货*&#x200B;的问题。
 * **MDVA-34469** (*适用于Adobe Commerce >=2.4.1 &lt;2.4.2*) — 修复了在使用多个商店视图时，客户购物车上的GraphQL突变失败的问题。
 * **MDVA-33976** (*适用于Adobe Commerce >=2.3.0 &lt;2.3.7*) — 修复了从捆绑包产品中删除第二个选项后，在店面中显示捆绑包产品缺货的问题。
@@ -863,10 +876,10 @@ ht-degree: 0%
 * **MDVA-33382** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了从类别中删除产品后索引器失效的问题。
 * **MDVA-28511** (*用于Adobe Commerce >=2.3.5 &lt;2.3.6*) — 修复了当“名称”字段包含某些字符（如重音大写字母）时，无法完成[!DNL PayPal]签出的问题。
 * **MDVA-31519** (*适用于Adobe Commerce >=2.3.5 &lt;2.3.6*) — 修复了在使用全站点销售规则时来宾结账中的等待超时问题。
-* **MDVA-33281** (*对于Adobe Commerce >=2.3.4 &lt;2.3.6*) — 修复了由于SKU参数类型错误而导致在`inventory:reservation:list-inconsistencies`中出现严重错误的问题。
-* **MDVA-24201**(*对于Adobe Commerce >=2.3.0 &lt;2.3.5*) — 修复了价格在手动重新索引之前无法反映计划的购物车价格规则的问题。
-* **MDVA-32694** (*对于Adobe Commerce >=2.3.0 &lt;2.3.6 || >= 2.4.0 &lt;2.4.2*) — 修复了管理员用户无法将产品添加到可转让报价的问题（如果它与非默认商店相关）。
-* **MDVA-33516**(*对于Adobe Commerce >=2.3.0 &lt;2.3.6*) — 修复了在申请列表中编辑捆绑产品会导致错误的问题。
+* **MDVA-33281** (*用于Adobe Commerce >=2.3.4 &lt;2.3.6*) — 修复了由于SKU参数类型错误而导致`inventory:reservation:list-inconsistencies`中出现严重错误的问题。
+* **MDVA-24201** (*适用于Adobe Commerce >=2.3.0 &lt;2.3.5*) — 修复了在手动重新编制索引之前，价格无法反映计划购物车价格规则的问题。
+* **MDVA-32694** (*用于Adobe Commerce >=2.3.0 &lt;2.3.6 || >= 2.4.0 &lt;2.4.2*) — 修复了管理员用户无法将产品添加到可转让报价单的问题（如果它与非默认商店相关）。
+* **MDVA-33516** (*适用于Adobe Commerce >=2.3.0 &lt;2.3.6*) — 修复了在申请列表中编辑捆绑产品会导致错误的问题。
 * **MDVA-33975** (*适用于Adobe Commerce >=2.3.4 &lt;2.4.2*) — 修复了GraphQL请求中与价格计算相关的多个问题。
 
 ## v1.0.13 {#v1-0-13}
@@ -930,25 +943,25 @@ ht-degree: 0%
 
 * **MDVA-30972** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了在使用WebApi创建部分装运后，自定义订单状态更改为&#x200B;*正在处理*&#x200B;的问题。
 * **MDVA-30428** (*适用于Adobe Commerce >=2.3.4 &lt;2.3.5*) — 修复了以下问题：如果将该产品分配给自定义库存源，则客户无法将产品添加到愿望清单。
-* **MDVA-30594** (*Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了在配置FPT时，签出期间无法保存多个地址的订单的问题。
+* **MDVA-30594** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了在配置FPT时签出期间无法保存具有多个地址的订单的问题。
 * **MDVA-29148** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了在通过API调用创建产品时的问题，如果有效负载中未提供值，则`\Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend` （如Multiselect）类型的产品自定义属性不会使用其默认值。
 * **MDVA-30837** (*适用于Adobe Commerce >=2.3.1 &lt;2.3.5*) — 在免运费方法配置中添加了配置设置&#x200B;*含税金额：是/否*。 当&#x200B;*含税金额*&#x200B;设置为&#x200B;*是*&#x200B;时，最小订单金额计算为小计+税。 当&#x200B;*含税金额*&#x200B;设置为&#x200B;*否*&#x200B;时，最小订单金额计算为小计
 * **MDVA-25028** (*用于Adobe Commerce >=2.3.2 &lt;2.3.3 || >=2.3.5 &lt;2.3.6*) — 修复了在触发欺诈过滤器时，使用[!DNL PayPal Payflow Pro]下达的订单未设置为可疑欺诈状态的问题。
 * **MDVA-31224** (*用于Adobe Commerce >=2.3.3 &lt;2.3.5*) — 改进捆绑产品的`catalog_product_price`重新索引操作的性能。
 * **MDVA-31321** (*用于Adobe Commerce >=2.3.2 &lt;2.3.5*) — 修复选择&#x200B;*显示全部*&#x200B;时的空白页（错误）。 [!DNL Elasticsearch]返回较大的产品ID列表。 在此方案中，order by子句将转换为不正确的SQL格式。
-* **MDVA-30815** (*对于Adobe Commerce >=2.3.2 &lt;2.3.4*) — 修复了当您更改搜索结果页面上应显示的搜索结果数量时，Adobe Commerce显示空白页面的问题。 当更改每页查看的搜索结果数时，[!DNL Elasticsearch]现在可以正确显示类别页的结果。
-* **MDVA-30782** (*对于Adobe Commerce >=2.3.5 &lt;2.4.2*) — 修复了显示动态块而不考虑购物车规则的问题。
-* **MDVA-31021** (*对于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复`module-catalog-import-export/Model/Import/Product/Option.php`中存在的性能问题。 如果`catalog_product_option`表中的记录数超过100k，则使用单个产品的新CSV进行验证所花的时间少于10秒。
-* **MDVA-31007**(*对于Adobe Commerce >=2.4.0 &lt;2.4.1*) — 修复了自定义地址属性未在“我的帐户”区域和后端中的订单详细信息页面中正确显示的问题。
+* **MDVA-30815** (*适用于Adobe Commerce >=2.3.2 &lt;2.3.4*) — 修复了以下问题：当您更改搜索结果页面上应显示的搜索结果数量时，Adobe Commerce会显示一个空白页。 当您更改每页查看的搜索结果数时，[!DNL Elasticsearch]现在可以正确显示类别页中的结果。
+* **MDVA-30782** (*适用于Adobe Commerce >=2.3.5 &lt;2.4.2*) — 修复了在不考虑购物车规则的情况下显示动态块的问题。
+* **MDVA-31021** (*用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了`module-catalog-import-export/Model/Import/Product/Option.php`中存在性能问题的情况。 如果`catalog_product_option`表中的记录数超过~100,000条，则验证单个产品的新CSV所花费的时间将少于10秒。
+* **MDVA-31007** (*适用于Adobe Commerce >=2.4.0 &lt;2.4.1*) — 修复了自定义地址属性未正确显示在“我的帐户”区域和后端的订单详细信息页面中的问题。
 * **MDVA-29389** (*用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了高级报表的问题，其中`analytics_collect_data` cronjob指示： *端口必须在主机参数（如localhost：3306）中配置*。
 * **MDVA-31343** (*用于Adobe Commerce >=2.3.4 &lt;2.3.6*) — 修复了在计划类别时已删除的正文类`page-layout-category-full-width`的问题。
 * **MDVA-30945** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了在更新购物车`Call to a member function getValue() on null in module-configurable-product CartItemProcessor.php`时收到严重错误消息的问题。
 
 ## v1.0.6 {#v1-0-6}
 
-* **MDVA-28993** (*用于Adobe Commerce >=2.3.4 &lt;2.4.0*) — 实现&#x200B;*最小值应与*&#x200B;功能及对[!DNL Elasticsearch]引擎的部分搜索相匹配。 解决搜索查询中的连字符问题。
-* **MDVA-30102**(*对于Adobe Commerce >=2.3.2 &lt;=2.4.0*) — 修复了布局缓存没有TTL时Redis缓存快速增长的问题。
-* **MDVA-30599** (*对于Adobe Commerce >=2.3.4 &lt;=2.4.0*) — 修复了使用API创建的来宾引号被错误地标记为供已登录客户使用的引号的问题。
+* **MDVA-28993** (*用于Adobe Commerce >=2.3.4 &lt;2.4.0*) — 实现&#x200B;*最小值应与*&#x200B;功能及对[!DNL Elasticsearch]引擎的部分搜索相匹配。 解决了搜索查询中连字符的问题。
+* **MDVA-30102** (*适用于Adobe Commerce >=2.3.2 &lt;=2.4.0*) — 修复了布局缓存没有TTL时Redis缓存快速增长的问题。
+* **MDVA-30599** (*适用于Adobe Commerce >=2.3.4 &lt;=2.4.0*) — 修复了使用API创建的来宾引号被错误地标记为登录客户的引号的问题。
 * **MDVA-29446** (*适用于Adobe Commerce >=2.3.3 &lt;=2.4.0*) — 修复了在结账期间不适用的配送方式价格显示为零的问题。
 * **MDVA-30357** (*用于Adobe Commerce >=2.3.2 &lt;=2.4.0*) — 修复了在通过cron生成Sitemap时创建错误图像URL的问题。
 * **MDVA-30565** (*适用于Adobe Commerce >=2.3.2 &lt;=2.3.3-p1*) — 修复了以下问题：如果启用了永久购物车，则店面结帐时&#x200B;*不会为访客客户显示此类带有cartid = 0*&#x200B;错误的实体。
@@ -979,13 +992,13 @@ ht-degree: 0%
 * **MDVA-30106** (*用于Adobe Commerce ^2.3.0*) — 修复了结账期间付款未加载&#x200B;*JS控制台中出现*&#x200B;错误“无法读取null的属性‘长度’”的问题。
 * **MDVA-28656** (*用于Adobe Commerce >=2.3.1 &lt;2.3.6 || >=2.4.0 &lt;2.4.2*) — 修复了以下问题：如果下订单时不需要付款信息（例如，100%折扣），并且为订单创建了发票，则订单状态将更改为&#x200B;*已关闭*，而不是“完成”。
 * **MDVA-30209** (*适用于Adobe Commerce 2.3.0 - 2.3.3-p1*) — 修复了客户更新其帐户信息时客户组更改为默认的问题。
-* **MDVA-30123** (*对于Adobe Commerce >=2.3.4 &lt;2.4.2*) — 修复了无法为GraphQL查询正确转换属性选项标签的问题。
-* **MDVA-29996** (*Adobe Commerce >=2.3.3 &lt;2.4.2*) — 修复了在启用类别权限后，类别页未由整页缓存缓存的问题。
-* **MDVA-30164**(*对于Adobe Commerce >=2.3.1 &lt;2.4.2*) — 修复了存在自定义客户属性时无法从客户网格导出客户记录的问题。
+* **MDVA-30123** (*用于Adobe Commerce >=2.3.4 &lt;2.4.2*) — 修复了未正确翻译GraphQL查询的属性选项标签的问题。
+* **MDVA-29996** (*适用于Adobe Commerce >=2.3.3 &lt;2.4.2*) — 修复了在启用类别权限后，类别页面不会由完整页面缓存的问题。
+* **MDVA-30164** (*适用于Adobe Commerce >=2.3.1 &lt;2.4.2*) — 修复了在存在自定义客户属性时无法从客户网格导出客户记录的问题。
 * **MDVA-30444** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.1*) — 修复了使用GraphQL下订单时不会发送确认电子邮件的问题。
 * **MDVA-30490** (*适用于Adobe Commerce 2.3.4 - 2.3.5-p2*) — 修复了以下问题：如果其中一个产品的简短描述为空，则产品比较会引发500错误页面。
 * **MDVA-30232** (*适用于Adobe Commerce >=2.3.1 &lt;2.4.1*) — 修复了原始订单包含礼品卡时无法重新订购的问题。
-* **MDVA-29965** (*对于Adobe Commerce >=2.3.3 &lt;2.4.0*) — 修复了客户在将产品添加到购物车时收到“表单密钥无效”错误的问题。
+* **MDVA-29965** (*适用于Adobe Commerce >=2.3.3 &lt;2.4.0*) — 修复了将产品添加到购物车时，客户收到“无效的表单密钥”错误的问题。
 * **MDVA-30008** (*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*) — 修复了无法通过Admin API为公共目录中的产品下单的B2B问题。
 * **MDVA-22469** (*适用于Adobe Commerce 2.3.2-p2 - 2.3.3-p1*) — 修复了以下问题：升级到Adobe Commerce 2.3.3后，页面生成器在“管理”面板中无法正常工作，并且某些JS和CSS文件无法加载。
 * **MC-35984** (*适用于Adobe Commerce >=2.4.0 &lt;2.4.1*) — 修复了在为退货授权(RMA)创建配送标签后，商家无法与“退货”页面上的任何页面元素交互的问题。
