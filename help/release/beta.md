@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 050d5877fae4cb9caaee06598f4429ea8857b1d2
+source-git-commit: f90279e0e152204ac976db307ca14d4418cbcba8
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,32 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 ## 当前的Beta项目
 
 请参阅以下部分，了解活动Beta程序的列表。
+
+### 增强了实时搜索的搜索功能(公共Beta)
+
+此测试版支持[`productSearch`查询](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/)中的三种新功能：
+
+- **分层搜索** — 在另一个搜索上下文中搜索 — 使用此功能，您最多可以为搜索查询执行两层搜索。 例如：
+
+   - **第1层搜索** — 在“product_attribute_1”上搜索“motor”。
+   - **第2层搜索** — 在“product_attribute_2”上搜索“部件号123”。 此示例在结果中搜索“motor”的“部件号123”。
+
+  分层搜索可用于`startsWith`搜索索引和`contains`搜索索引，如下所述：
+
+- **startsWith搜索索引** — 使用`startsWith`索引进行搜索。 此新功能允许：
+
+   - 搜索属性值以特定字符串开头的产品。
+   - 配置“结尾为”搜索，以便购物者可以搜索属性值以特定字符串结尾的产品。 要启用“结束于”搜索，需要反向摄取产品属性，并且API调用也应该是一个反向字符串。
+
+- **包含搜索索引** — 使用包含索引搜索属性。 此新功能允许：
+
+   - 在较大的字符串中搜索查询。 例如，如果购物者搜索字符串“HAPE-123”中的产品编号“PE-123”。
+
+      - 注意：此搜索类型不同于现有的[短语搜索](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/#phrase)，后者执行自动完成搜索。 例如，如果您的产品属性值为“outdoor pants”，则短语搜索会返回“out pan”的响应，但不会返回“oor ants”的响应。 但是，包含搜索会返回“或蚂蚁”的响应。
+
+这些新条件增强了搜索查询过滤机制以细化搜索结果。 这些新条件不会影响主搜索查询。 若要访问测试版，请向`sagonzal@adobe.com`或`alexj@adobe.com`发送电子邮件。
+
+要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta)。
 
 ### 适用于Commerce (Private Beta)的Experience Manager Assets集成
 
