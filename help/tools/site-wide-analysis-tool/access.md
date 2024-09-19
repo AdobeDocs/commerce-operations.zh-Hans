@@ -2,9 +2,9 @@
 title: 如何访问 [!DNL Site-Wide Analysis Tool]
 description: 了解如何访问 [!DNL Site-Wide Analysis Tool]
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
-source-git-commit: 5f9f81b930a3b23c0b334ccbea94d296338a0048
+source-git-commit: 18416ae29cee182a5d088069065d73814fc7d860
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果本地安装了Adobe Commerce，则必须在您的基础架构上安装[代理](../site-wide-analysis-tool/installation.md)才能使用该工具。
+>自2024年4月23日起，[!DNL Site-Wide Analysis Tool]已停用，不再供Adobe Commerce本地客户使用。
+
 
 ![站点范围分析仪表板](../../assets/tools/site-wide-analysis-tool-dashboard.png)
 *[!DNL Site-Wide Analysis Tool]仪表板*
