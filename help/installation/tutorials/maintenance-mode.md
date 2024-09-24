@@ -2,9 +2,9 @@
 title: 启用或禁用维护模式
 description: 按照以下步骤自定义客户在Adobe Commerce部署因维护而停止时看到的内容。
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: a5dbefda6b77d993756143ef0e7270425f824c44
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,8 @@ Adobe Commerce使用[维护模式](../../configuration/bootstrap/application-mod
 
 应用程序检测维护模式，如下所示：
 
-* 如果`var/.maintenance.flag`不存在，则维护模式将关闭，并且应用程序将正常运行。
-* 否则，维护模式将开启，除非`var/.maintenance.ip`存在。
-
-  `var/.maintenance.ip`可以包含IP地址列表。 如果使用HTTP访问入口点，并且客户端IP地址与该列表中的某个条目相对应，则维护模式将关闭。
+* 如果存在`var/.maintenance.flag`，则维护模式为开启，应用程序将返回503维护页面。
+* 如果存在`var/.maintenance.ip`，并且客户端IP对应于此文件中的某个IP地址条目，则忽略请求的维护页面。
 
 ## 安装应用程序
 
