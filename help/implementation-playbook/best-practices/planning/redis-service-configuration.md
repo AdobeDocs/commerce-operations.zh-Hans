@@ -4,9 +4,9 @@ description: 了解如何通过使用适用于Adobe Commerce的扩展Redis缓存
 role: Developer, Admin
 feature: Best Practices, Cache
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 7f277fe6245aba851aba7ddc70be40343bdaecc7
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
@@ -156,6 +156,10 @@ stage:
         translate:
           frontend: "stale_cache_enabled"
 ```
+
+>[!NOTE]
+>
+>在上一个示例中，`full_page`缓存与云基础架构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly)。
 
 有关配置内部部署安装的信息，请参阅&#x200B;_配置指南_&#x200B;中的[过时缓存选项](../../../configuration/cache/level-two-cache.md#stale-cache-options)。
 
