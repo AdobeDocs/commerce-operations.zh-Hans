@@ -1,0 +1,73 @@
+---
+title: 'ACSD-56616：在简单库存短缺期间捆绑产品的店面展示'
+description: 应用ACSD-56616补丁以修复以下问题：当所有关联的简单产品缺货时，Adobe Commerce店面会意外显示捆绑产品。
+feature: Products
+role: Admin, Developer
+source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 0%
+
+---
+
+# ACSD-56616：在简单库存短缺期间捆绑产品的店面展示。
+
+ACSD-56616修补程序修复了以下问题：当所有关联的简单产品都缺货时，店面中会意外出现捆绑产品。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.45时，此修补程序可用。 修补程序ID为ACSD-56616。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
+
+## 受影响的产品和版本
+
+**为Adobe Commerce版本创建了修补程序：**
+
+* Adobe Commerce（所有部署方法） 2.4.5-p1
+
+**与Adobe Commerce版本兼容：**
+
+* Adobe Commerce（所有部署方法） 2.4.5 - 2.4.5-p5
+
+>[!NOTE]
+>
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+
+## 问题
+
+简单库存短缺期间捆绑产品的店面显示不正确。
+
+<u>重现步骤</u>：
+
+1. 创建新网站/商店/店面。
+1. 创建新源。
+1. 创建新库存，并将其分配给新创建的网站。
+1. 配置索引器以按计划更新。
+1. 生成两个简单产品S1 （数量= 1）和S2 （数量= 1），并将它们分配给新库存和新网站。
+1. 创建&#x200B;*捆绑的1*&#x200B;产品并将其与新网站关联，将其放在类别&#x200B;*CAT*&#x200B;中。
+1. 定义两个必需的下拉列表选项，并将简单产品&#x200B;*S1*&#x200B;链接到option1，将简单产品&#x200B;*S2*&#x200B;链接到option2。
+1. 保存产品。
+1. 导航到&#x200B;**[!UICONTROL System]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]**&#x200B;并启用&#x200B;*将存储代码添加到URL* = *是*。
+1. 打开店面并购买捆绑产品。
+1. 运行两次压缩。
+1. 返回&#x200B;*CAT*&#x200B;类别。
+
+<u>预期的结果</u>：
+
+*bundle1*&#x200B;产品缺货。
+
+<u>实际结果</u>：
+
+*捆绑包1*&#x200B;产品可见，价格= *$0*。
+
+## 应用修补程序
+
+要应用单独的修补程序，请根据您的部署方法使用以下链接：
+
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
+
+## 相关阅读
+
+要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
+
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
+
+
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
