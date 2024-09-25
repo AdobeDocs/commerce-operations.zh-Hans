@@ -2,7 +2,7 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 582f36f9f38394d8af9aaf660847be15372fd815
+source-git-commit: 9c9001f28c4cb28ad881bb9a3c78e875fcbef607
 workflow-type: tm+mt
 source-wordcount: '5878'
 ht-degree: 0%
@@ -129,7 +129,7 @@ ht-degree: 0%
          - [MDVA-42507：为购物车规则应用暂存更新后清理全页缓存](quality-patches-tool/patches-available-in-qpt/v1-1-9/mdva-42507-full-page-cache-is-cleaned-after-applying-staging-update-for-cart-rule.md)
          - [MDVA-42657：无法在客户区段条件中选择类别](quality-patches-tool/patches-available-in-qpt/v1-1-9/mdva-42657-unable-to-select-categories-in-customer-segment-conditions.md)
          - [MDVA-42806：每次更新现有公司时都会发送新的公司注册电子邮件](quality-patches-tool/patches-available-in-qpt/v1-1-9/mdva-42806-new-company-registration-email-sent-when-existing-company-updated.md)
-      - v1-1-10 {#v1-1-10}
+      - v1.1.10 {#v1-1-10}
          - [概述：Quality Patches Tool (QPT) v1.1.10](quality-patches-tool/patches-available-in-qpt/v1-1-10/overview.md)
          - [MDVA-38728：更改产品可见性将为主网站创建URL重写](quality-patches-tool/patches-available-in-qpt/v1-1-10/mdva-38728-changing-product-visibility-creates-url-rewrite-for-the-main-website.md)
          - [MDVA-39181：相关产品规则显示规则中未定义类别中的产品](quality-patches-tool/patches-available-in-qpt/v1-1-10/mdva-39181-related-product-rules-show-products-from-category-not-defined-in-rule.md)
@@ -148,7 +148,7 @@ ht-degree: 0%
          - [MDVA-42269：由于“TypeError”错误，管理员用户无法登录到管理员](quality-patches-tool/patches-available-in-qpt/v1-1-11/mdva-42269-admin-user-cannot-log-in-to-admin-due-to-the-typeerror.md)
          - [MDVA-42520：使用“启用跨境贸易”时应用两次的税率](quality-patches-tool/patches-available-in-qpt/v1-1-11/mdva-42520-tax-rate-applied-twice-when-enable-cross-border-trade-is-used.md)
          - [MDVA-42790：无法通过REST API为特定网站更新产品价格属性](quality-patches-tool/patches-available-in-qpt/v1-1-11/mdva-42790-product-price-attributes-cannot-be-updated-for-specific-website-via-rest-api.md)
-      - v1-1-12 {#v1-1-12}
+      - v1.1.12 {#v1-1-12}
          - [概述：Quality Patches Tool (QPT) v1.1.12](quality-patches-tool/patches-available-in-qpt/v1-1-12/overview.md)
          - [MDVA-39546：可以将暂存更新开始日期设置为早于当前日期的日期](quality-patches-tool/patches-available-in-qpt/v1-1-12/mdva-39546-staging-update-start-date-set-to-earlier-date-than-current-date.md)
          - [MDVA-39713：用户能够编辑活动计划更新的开始时间](quality-patches-tool/patches-available-in-qpt/v1-1-12/mdva-39713-user-able-to-edit-start-time-for-active-scheduled-update.md)
@@ -623,6 +623,8 @@ ht-degree: 0%
          - [ACSD-48210：存储视图特定的范围属性将覆盖全局值](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-48210-store-view-specific-scope-attribute-overrides-global-values.md)
          - [ACSD-59280： 2.4.4-pX安装中的ReflectionUnionType：：getName()错误](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59280-fix-for-reflection-union-type-error.md)
          - [ACSD-60303：在启用HTML缩小功能的情况下解决了管理员订单放置问题](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-60303-admin-order-placement-fix.md)
+      - v1.1.51 {#v1-1-51}
+         - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.51](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/overview.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - 命令行工具引用{#cli-reference}
