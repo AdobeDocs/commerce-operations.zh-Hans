@@ -3,9 +3,9 @@ title: 'ACSD-44851：包含子类别的类别无法打开或展开'
 description: 当用户无法打开或展开包含子类别的类别时，本文提供了相应问题的解决方案。
 feature: Categories
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ACSD-44851修补程序解决了用户无法打开或扩展具有子类别的类�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或本地Magento Open Source： Quality Patches Tool指南中的[Quality Patches Tools > Usage](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)。
+* Adobe Commerce或本地Magento Open Source： Quality Patches Tool指南中的[Quality Patches Tools > Usage](/help/tools/quality-patches-tool/usage.md)。
 
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 

@@ -3,9 +3,9 @@ title: 'ACSD-46519： [!UICONTROL categoryList] [!DNL GraphQL] 查询中的[!UIC
 description: 应用ACSD-46519修补程序以修复Adobe Commerce问题，其中当您使用[!UICONTROL categoryList] [!DNL GraphQL] 方法获取子类别时，它会将[!UICONTROL product_count]显示为父类别的0。
 feature: Categories, GraphQL, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ ACSD-46519修补程序解决了[!UICONTROL categoryList] [!DNL GraphQL]查询中
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读

@@ -3,9 +3,9 @@ title: 'ACSD-50887： *[!UICONTROL Use in Search Results Layered Navigation]*设
 description: 应用ACSD-50887修补程序以修复Adobe Commerce问题，在该问题中，产品属性属性*[!UICONTROL Use in Search Results Layered Navigation]*可以设置为*是*，而选项*[!UICONTROL Use in Search]*也可以设置为*是*。
 feature: Attributes, Products, Search, Storefront
 role: Admin, Developer
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ ACSD-50887修补程序修复了产品属性属性&#x200B;*[!UICONTROL Use in Sea
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读

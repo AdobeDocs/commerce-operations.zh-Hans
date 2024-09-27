@@ -3,9 +3,9 @@ title: 'ACSD-55566： [!UICONTROL mergeCart]变异失败，出现 [!DNL GraphQL]
 description: 应用ACSD-55566修补程序以修复Adobe Commerce问题，该问题导致在合并具有相同捆绑项目的源和目标购物车时，“mergeCart”突变失败，并出现 [!DNL GraphQL] 响应中的内部服务器错误。
 feature: GraphQL, Shopping Cart
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ ACSD-55566修补程序修复了以下问题： `mergeCart`突变失败，[!DNL G
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读

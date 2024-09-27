@@ -3,16 +3,16 @@ title: “ACSD-45049：客户‘必需’属性设置不适用于管理员中的
 description: 应用ACSD-45049修补程序以修复客户“[!UICONTROL Is required]”属性无法按照Admin中的网站范围正确覆盖的Adobe Commerce问题。
 feature: Attributes, Customers
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
 # ACSD-45049：客户&#x200B;*[!UICONTROL Is required]*&#x200B;属性设置无法按管理员中的网站范围使用
 
-ACSD-45049修补程序修复了客户&#x200B;*[!UICONTROL Is required]*&#x200B;属性设置无法按照Admin中的网站范围正确工作的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) 1.1.50时，此修补程序可用。 修补程序ID为ACSD-45049。 请注意，Adobe Commerce 2.4.6中已修复此问题。
+ACSD-45049修补程序修复了客户&#x200B;*[!UICONTROL Is required]*&#x200B;属性设置无法按照Admin中的网站范围正确工作的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/usage.md) 1.1.50时，此修补程序可用。 修补程序ID为ACSD-45049。 请注意，Adobe Commerce 2.4.6中已修复此问题。
 
 ## 受影响的产品和版本
 
@@ -53,7 +53,7 @@ ACSD-45049修补程序修复了客户&#x200B;*[!UICONTROL Is required]*&#x200B;�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读

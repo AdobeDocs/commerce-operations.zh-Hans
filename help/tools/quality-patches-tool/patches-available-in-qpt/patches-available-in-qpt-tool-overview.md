@@ -3,9 +3,9 @@ title: QPT工具中提供的修补程序概述
 description: 本文概述了 [!DNL Quality Patches Tool] (QPT)，并提供了资源链接，以说明如何使用QPT。
 feature: Support, Tools and External Services
 role: Admin
-source-git-commit: 6f311fc4c20caca8b98d4c3c06642e5f61dc614f
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ### 如何在Adobe Commerce内部部署安装和使用QPT
 
-有关如何安装和使用QPT以应用和还原修补程序的详细信息，请参阅我们的开发人员文档中的[Commerce >工具>用法](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)。
+有关如何安装和使用QPT以应用和还原修补程序的详细信息，请参阅我们的开发人员文档中的[Commerce >工具>用法](/help/tools/quality-patches-tool/usage.md)。
 
 ### 如何在云基础架构上安装和使用QPT for Adobe Commerce
 
