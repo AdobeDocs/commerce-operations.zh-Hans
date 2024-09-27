@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 9c9001f28c4cb28ad881bb9a3c78e875fcbef607
+source-git-commit: b9164d958ddc366de3843c9f9b7f6521ad0b4ff2
 workflow-type: tm+mt
-source-wordcount: '5878'
+source-wordcount: '5888'
 ht-degree: 0%
 
 ---
@@ -625,6 +625,7 @@ ht-degree: 0%
          - [ACSD-60303：在启用HTML缩小功能的情况下解决了管理员订单放置问题](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-60303-admin-order-placement-fix.md)
       - v1.1.51 {#v1-1-51}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.51](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/overview.md)
+         - [ACSD-60538：如果禁用产品，则不显示属性](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60538-if-product-is-disabled-attributes-dont-show.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - 命令行工具引用{#cli-reference}
