@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: a6c0a7f8c2a2bd6156f19838e05f8046209177e4
+source-git-commit: 4643c8392b6d92a2ccbbc2ec5b27d75c112d7521
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
       - 注意：此搜索类型不同于现有的[短语搜索](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/#phrase)，后者执行自动完成搜索。 例如，如果您的产品属性值为“outdoor pants”，则短语搜索会返回“out pan”的响应，但不会返回“oor ants”的响应。 但是，包含搜索会返回“或蚂蚁”的响应。
 
-这些新条件增强了搜索查询过滤机制以细化搜索结果。 这些新条件不会影响主搜索查询。 要参加测试版，请向[Sandra Gonzales Mangana](mailto:sagonzal@adobe.com)或[Alex Jose](mailto:alexj@adobe.com)发送电子邮件请求。
+这些新条件增强了搜索查询过滤机制以细化搜索结果。 这些新条件不会影响主搜索查询。 要参与测试版，请向[commerce-storefront-services](mailto:commerce-storefront-services@adobe.com)发送电子邮件请求。
 
 要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta)。
 
