@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: b1b7152caa8a9f04ee779e4483c6b82d2002fcc7
+source-git-commit: e951ffec9b6b6178f58a1721095b7d62e4f006d3
 workflow-type: tm+mt
-source-wordcount: '21646'
+source-wordcount: '21987'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,21 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关社区为Magento Open Source而创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.52 {#v1-1-52}
+
+* **BUNDLE-3375**(用于Adobe Commerce和Magento Open Source) — 添加所有必要字段，以便在使用[!DNL Braintree]作为付款网关时满足3DS VISA授权要求。
+* **ACSD-59366**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了以下问题：在尝试删除团队时，如果团队包含未在团队列表中显示的已停用用户，则会发生错误。
+* **ACSD-59865**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了在购物车中的产品数量不足以应用规则时，[!UICONTROL Cart Price Rule]无法取消以前应用的规则的问题。
+* **ACSD-59925**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了在GraphQL中按位置对[!UICONTROL Media Gallery]中的项目排序时出现的问题。
+* **ACSD-59952**(对于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了在使用分配给现有[!UICONTROL Shared Catalog]的组ID创建[!UICONTROL Shared Catalog]时出现错误的问题。
+* **ACSD-60590**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 改进为大量下订单生成[!UICONTROL Bestsellers Aggregated Daily Reports]的性能。
+* **ACSD-60673**(适用于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了以下问题：结账时多个付款方法的[!UICONTROL Cart Price Rule]无法正确应用于特定的付款方法。
+* **ACSD-60684**(适用于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.7) — 修复了按多个字段排序的GraphQL产品无法按预期工作的问题。
+* **ACSD-60788**(对于Adobe Commerce >=2.4.7 &lt;2.4.8) — 修复了由于内容安全策略(CSP)错误而无法执行[!DNL Google Tag Manager]的自定义脚本的问题。
+* **ACSD-61322**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了以下问题：在XML Sitemap中仍包含[!UICONTROL Products/Categories]且未分配给默认（常规组）的[!UICONTROL Shared Catalog]。
+* **ACSD-61366**(对于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了在为DB连接指定端口时，必须在主机参数&#x200B;*错误中配置*&#x200B;端口的情况下，在出现多个作业失败的情况下运行`setup:static-content:deploy --jobs 4`命令的问题。
+* 更新的修补程序：ACSD-51857、ACSD-57394
 
 ## v1.1.51 {#v1-1-51}
 
