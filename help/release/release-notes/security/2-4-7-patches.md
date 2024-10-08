@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.7安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.7的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 38e5632b-c795-47d8-89dd-26bbaeb34e67
-source-git-commit: 3a2d104f0a689ac3715af302d470a1660857543c
+source-git-commit: cb4f388c90902c2fe1df4a5d84841280fa740104
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,22 @@ ht-degree: 0%
 # Adobe Commerce 2.4.7安全修补程序的发行说明
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
+
+## 2.4.7 - p3
+
+Adobe Commerce 2.4.7-p3安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
+
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/security/products/magento/apsb24-73.html)。
+
+{{b2b-patches}}
+
+### 高亮
+
+{{$include /help/_includes/release-notes/2024-10/security-foo.md}}
+
+### 此版本中包含的修补程序
+
+{{$include /help/_includes/release-notes/2024-10/hotfixes-included-foo.md}}
 
 ## 2.4.7 - p2
 

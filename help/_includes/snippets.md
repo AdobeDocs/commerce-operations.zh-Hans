@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
+source-git-commit: ab3401c2629b550655c7b2a382b998ce2c8ac6f0
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,12 @@ ht-degree: 0%
 >
 >`support:backup`命令是&#x200B;_而不是_&#x200B;由`setup:backup`命令执行的相同代码备份。 `support:backup`命令用于备份代码以供Adobe Commerce支持部门检查。
 
+## B2B修补程序 {#b2b-patches}
+
+>[!NOTE]
+>
+>安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。
+
 ## 仅限Adobe Commerce {#ee-only}
 
 >[!NOTE]
@@ -46,6 +52,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe Commerce版本可能包含向后不兼容的更改(BIC)。 要查看与向后不兼容的更改，请参阅[BIC参考](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/)。 在[BIC亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/)中描述了严重的向后不兼容问题。 并非所有发行版本都引进了主要BIC。
+
+## Beta免责声明 {#beta}
+
+>[!IMPORTANT]
+>
+>Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(从Adobe支持服务或任何其他服务)Beta版。 客户应谨慎使用，切勿依赖测试版和/或任何随附的文档或材料的正确功能或性能。 因此，使用测试版完全由客户自行承担风险。
 
 ## CVE通知 {#cve-notice}
 

@@ -2,9 +2,9 @@
 title: 管理索引器
 description: 请参阅有关如何查看和管理Commerce索引器的示例。
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 9a92204369d3a8310aadfb94f8193a6c89f78c30
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -194,7 +194,7 @@ Catalog Search indexer has been invalidated.
 
 使用此命令可设置以下索引器选项：
 
-- **保存时更新(`realtime`)**：在管理员中进行更改后，索引数据将更新。 （例如，将产品添加到管理员中的类别后，会重新索引类别产品索引。） 这是默认设置。
+- **保存时更新(`realtime`)**：在管理员中进行更改后，索引数据将更新。 （例如，将产品添加到管理员中的类别后，会重新索引类别产品索引。）
 - **按计划(`schedule`)更新**：数据已根据cron作业设置的计划编制索引。
 
 [了解有关索引的更多信息](https://developer.adobe.com/commerce/php/development/components/indexing/)。

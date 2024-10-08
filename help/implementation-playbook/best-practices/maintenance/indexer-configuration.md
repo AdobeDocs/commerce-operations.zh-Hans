@@ -4,9 +4,9 @@ description: 通过遵循索引器配置的最佳实践来维护和优化站点�
 role: Admin, User
 feature: Best Practices
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: af66d47279245f8ee105030bbb33d77b1b35c3e5
+source-git-commit: 153cf3bae74a78d7a41176e0216203d354d2513b
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 设置索引器以按计划更新
 
-Adobe Commerce具有两种类型的索引器模式： [!UICONTROL Update on Save] （默认设置）和[!DNL Update on Schedule]。
+Adobe Commerce具有两种类型的索引器模式：[!UICONTROL Update on Save]和[!DNL Update on Schedule]。
 
 - 当目录或其他数据发生更改时，**[!UICONTROL Update on Save]**&#x200B;模式会立即更新索引。 例如，如果管理员用户将新产品添加到类别，则保存更新后，将立即重新索引类别产品索引。
 
