@@ -1,7 +1,7 @@
 ---
-source-git-commit: cb3392b7716667201305b7502f6c9c31bc7d1a23
+source-git-commit: d2fe92c778cb90912062c5f318332a02f6a4131e
 workflow-type: tm+mt
-source-wordcount: '14443'
+source-wordcount: '14792'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ laminas/laminas-validator
 
 ## 修复的问题
 
-我们已在Magento Open Source2.4.8核心代码中修复了253个问题。 此版本中包含的已修复问题的子集如下所述。
+我们已在Magento Open Source2.4.8核心代码中修复了254个问题。 此版本中包含的已修复问题的子集如下所述。
 
 ### API
 
@@ -207,6 +207,10 @@ laminas/laminas-validator
    * _修复注释_：系统现在接受带大写字母文件扩展名的产品图像上载，从而确保产品创建过程顺畅。 以前，使用大写字母文件扩展名的图像上传被拒绝，从而迫使用户将文件扩展名更改为小写。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38831>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c8f87c25>
+* _AC-6975_： [问题]将默认索引器模式设置为“计划”
+   * _修复注释_：所有新索引器默认处于&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
+   * _GitHub问题_： <https://github.com/magento/magento2/issues/36419>
+   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0b410856>
 * _AC-7700_： [问题]在mview取消订阅时删除索引器更改日志表
    * _修复注释_：当索引从“按计划更新”切换为“保存时更新”时，系统现在会自动删除未使用的changelog表，并将索引标记为无效，以确保不会丢失任何条目。 以前，将索引切换为“保存时更新”会在系统中保留未使用的changelog表，并将所有更改的索引标记为“有效”。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/29789>
@@ -300,18 +304,24 @@ laminas/laminas-validator
 ### Braintree
 
 * _BUNDLE-3367_：通过LPM付费
+   * _修复说明_：系统现在会在首次加载时正确呈现本地支付方式(LPM)，即使登录客户的送货地址和帐单地址不匹配也是如此，从而确保结账过程顺利进行。 以前，客户的送货地址和账单地址不匹配会导致LPM无法呈现，进而在结账期间导致潜在中断。
    * _GitHub代码贡献_： <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3368_：可使用Virtual作为子产品进行配置
+   * _修复注释_：系统现在允许对具有虚拟子产品的可配置产品使用快速付款方法，以确保顺利的结账过程。 以前，当将带有虚拟子产品的可配置产品添加到购物车时，快速付款方法不可用。
    * _GitHub代码贡献_： <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3369_： CVV验证失败错误
    * _GitHub代码贡献_： <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3370_：通过帐户区域进行保险存储问题247
+   * _修复注释_：系统现在允许客户跨多个网站保存新卡或PayPal帐户信息，而不会遇到授权错误。 以前，客户无法跨不同网站保存新的支付方式，并收到授权错误消息。
    * _GitHub代码贡献_： <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3371_：从其他国家发送到地址
+   * _修复注释_：系统现在允许处理从其他国家发往某个地址的交易记录，而不会出错，从而确保结账过程顺利进行。 以前，尝试从其他国家/地区发送地址会导致控制台错误，尽管前端没有明显错误。
    * _GitHub代码贡献_： <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3372_： Credit Card - Teardown函数
+   * _修复注释_：现在，当客户从付款页导航回送货页时，系统可正确处理BraintreePayPal组件的拆卸，从而防止任何错误并确保PayPal Express按钮正确呈现。 以前，在尝试拆卸BraintreePayPal组件时，从付款页面导航回送货页面有时会导致错误。
    * _GitHub代码贡献_： <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3373_： PayPal Express的配送回拨
+   * _修复说明_：系统现在可在PayPal Express模式中正确显示可用的配送方式，允许客户在继续查看页面或完成交易之前选择其首选配送方式。 以前，在PayPal Express模式中无法选择配送方式，这要求客户在完成交易之前，在单独的审核页面上选择配送方式。
    * _GitHub代码贡献_： <https://github.com/magento/ext-braintree/pull/204>
 
 ### 购物车和结帐
