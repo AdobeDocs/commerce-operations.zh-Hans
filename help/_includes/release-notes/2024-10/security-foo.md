@@ -1,5 +1,5 @@
 ---
-source-git-commit: cb4f388c90902c2fe1df4a5d84841280fa740104
+source-git-commit: cbb880010fa907592f87b42ecd4da8fdf06bc5fe
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
    * TinyMCE 7.3提供了增强的用户体验、更好的协作和更高的效率。 TinyMCE 5已在2.4.8发行版中移除&#x200B;。
 
-   * 由于TinyMCE 5.10中报告存在安全漏洞([CVE-2024-38357](https://nvd.nist.gov/vuln/detail/CVE-2024-38357))，因此当前支持的所有版本行均已升级依赖项，并包含在所有2024年10月的安全修补程序中：
+   * 由于TinyMCE 5.10中报告了安全漏洞([CVE-2024-38357](https://nvd.nist.gov/vuln/detail/CVE-2024-38357))，因此当前支持的所有发行行都已升级依赖关系，并且这些依赖关系已包含在所有的2024年10月安全修补程序中：
 
       * 2.4.7 - p3
       * 2.4.6-p8
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 * **Require.js升级**—Adobe Commerce现在使用最新版本的Require.js (2.3.7)。
 
-   * 由于Require.js 2.3.6中报告存在安全漏洞([CVE-2024-38999](https://nvd.nist.gov/vuln/detail/CVE-2024-38999))，因此当前支持的所有版本行的依赖项均已升级，并包含在所有2024年10月的安全修补程序中：
+   * 由于Require.js 2.3.6中报告了一个安全漏洞([CVE-2024-38999](https://nvd.nist.gov/vuln/detail/CVE-2024-38999))，因此当前支持的所有版本行均已升级依赖关系，并且所有2024年10月安全修补程序中均包含该依赖关系：
 
       * 2.4.7 - p3
       * 2.4.6-p8
