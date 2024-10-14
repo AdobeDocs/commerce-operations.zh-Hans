@@ -1,5 +1,5 @@
 ---
-source-git-commit: b30fe4ed4d910ac3a99d3bcf4ff94103bcbd1369
+source-git-commit: 00b8e1bb5ee259763ddb2c52065cee2af98641e0
 workflow-type: tm+mt
 source-wordcount: '1154'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/security/products/magento/apsb24-73.html)。
 
-<table style="table-layout-auto">
+<table style="table-layout:auto">
     <tbody>
         <tr>
             <td><strong>设置</strong></td>
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 此版本的以下平台升级确保Adobe Commerce保持稳定可靠的平台，随时准备满足现代商务环境的需求：
 
-<table style="table-layout-auto">
+<table style="table-layout:auto">
     <tbody>
         <tr>
             <td><strong>数据库</strong></td>
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 此版本包括以下性能增强：
 
-<table style="table-layout-auto">
+<table style="table-layout:auto">
     <tbody>
         <tr>
             <td><strong>索引器</strong></td>
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 此版本包括以下质量增强功能：
 
-<table style="table-layout-auto">
+<table style="table-layout:auto">
     <tbody>
         <tr>
            <td><strong>库存</strong></td>
@@ -117,7 +117,7 @@ ht-degree: 0%
 
 此版本包括以下GraphQL增强功能：
 
-<table style="table-layout-auto">
+<table style="table-layout:auto">
     <tbody>
         <tr>
            <td><strong>常规增强功能</strong></td>
