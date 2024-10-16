@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: e951ffec9b6b6178f58a1721095b7d62e4f006d3
+source-git-commit: f10eb87efbda20899574486f1e9db01f2a66f855
 workflow-type: tm+mt
-source-wordcount: '21987'
+source-wordcount: '22258'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,19 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关社区为Magento Open Source而创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.53 {#v1-1-53}
+
+* **ACSD-48318**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了不允许嵌套环境模拟的问题。 现在，模拟在`send()`调用期间启动，一旦模拟在`getInfoBlockHtml()`调用期间停止。
+* **ACSD-59930**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 改进公司的&#x200B;**[!UICONTROL Create]**、**[!UICONTROL Save]**&#x200B;和&#x200B;**[!UICONTROL Delete]**&#x200B;流的性能。
+* **ACSD-60584**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了在某个网站上为用户创建的访问令牌有权访问或更改其他网站上的客户信息的问题。
+* **ACSD-60804**(对于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了以下问题：编辑链接到已删除公司的客户会导致在null *上出现错误*&#x200B;调用成员函数`getSuperUserId()`。
+* **ACSD-61133**(对于Adobe Commerce >=2.4.4-p5 &lt;2.4.5) || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.8) — 修复了`sales_clean_quotes` [!DNL cron]从未批准的采购订单中删除报价的问题。
+* **ACSD-61528**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了使用[!DNL GraphQL]从[!UICONTROL Admin]中检索角色时未返回任何结果的问题。
+* **ACSD-61553**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了在将具有不同优先级的多个折扣和&#x200B;**[!UICONTROL Maximum Qty Discount is Applied To]**&#x200B;应用于产品时，**[!UICONTROL Cart Price Rule]**&#x200B;折扣计算不正确的问题。
+* **ACSD-61667**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 改进库存性能，在许多有店内提货的来源中创建装运。
+* **ACSD-61969**(对于Adobe Commerce >=2.4.7 &lt;2.4.8) — 修复了要求用户键入区分大小写的优惠券代码以便与配置的优惠券代码完全匹配的问题。
+* 更新的修补程序：ACSD-54989、ACSD-60632
 
 ## v1.1.52 {#v1-1-52}
 
