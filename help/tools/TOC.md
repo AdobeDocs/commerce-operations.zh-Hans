@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: c489f77a9805ff3f96211f4ce2f47d8e963c47de
+source-git-commit: 46c1b2cdafe8335e604ee0391ca9aa8a32b54d84
 workflow-type: tm+mt
-source-wordcount: '6020'
+source-wordcount: '6035'
 ht-degree: 0%
 
 ---
@@ -628,6 +628,7 @@ ht-degree: 0%
          - [ACSD-60632：每次尝试订购时保存的地址](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60632-address-saved-on-every-order-attempt.md)
          - [ACSD-61195：购物车GraphQL请求无法返回最终页面上的项目](quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-61195-empty-cart-on-final-graphql-page.md)
          - [ACSD-60538：如果禁用产品，则不显示属性](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60538-if-product-is-disabled-attributes-dont-show.md)
+         - [ACSD-60631：将同一产品分配给多个可配置产品时，GraphQL会返回错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60631-graphql-returns-an-error-when-same-product-is-assigned-to-multiple-configurable-products.md)
          - [ACSD-60816： [!DNL New Relic] 由APM代理插入的浏览器监视脚本与CSP不兼容](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60816-newrelic-browser-monitoring-scripts-injected-by-apm-agent-are-not-compliant-with-csp.md)
          - [ACSD-59967： JavaScript错误导致 [!DNL Google Maps] 无法正确呈现](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-59967-javascript-error-prevents-google-maps-from-rendering-correctly.md)
          - [ACSD-60326：对客户[!UICONTROL Returns]状态的GraphQL查询出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60326-graphql-query-error-customer-return-status.md)
