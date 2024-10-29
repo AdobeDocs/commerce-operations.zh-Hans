@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 1140bdcf13ad03703afe1c2e7290bcd743302a52
+source-git-commit: c489f77a9805ff3f96211f4ce2f47d8e963c47de
 workflow-type: tm+mt
-source-wordcount: '6013'
+source-wordcount: '6020'
 ht-degree: 0%
 
 ---
@@ -347,7 +347,7 @@ ht-degree: 0%
          - [ACSD-50234：使用 [!DNL PayPal]下订单的确认电子邮件中的客户名称不正确](quality-patches-tool/patches-available-in-qpt/v1-1-29/acsd-50234-incorrect-customer-name-in-confirmation-email-for-orders-placed-with-paypal.md)
          - [ACSD-48813：搜索未根据属性的搜索权重显示相关结果](quality-patches-tool/patches-available-in-qpt/v1-1-29/acsd-48813-search-not-showing-relevant-results-based-on-search-weight-of-attributes.md)
          - [ACSD-49464：未从存档中移回的发票、发运和贷项通知单](quality-patches-tool/patches-available-in-qpt/v1-1-29/acsd-49464-invoices-shipments-credit-memos-not-moved-back-from-archive.md)
-         - [ACSD-48771：所见即所得编辑器以不同的方式呈现内容](quality-patches-tool/patches-available-in-qpt/v1-1-29/acsd-48771-wyswigy-editor-rendering-content-differently.md)
+         - [ACSD-48771：WYSIWYG编辑器以不同的方式呈现内容](quality-patches-tool/patches-available-in-qpt/v1-1-29/acsd-48771-wyswigy-editor-rendering-content-differently.md)
          - [ACSD-49527：GraphQL公司角色未正确显示分页](quality-patches-tool/patches-available-in-qpt/v1-1-29/acsd-49527-graphql-company-roles-dont-display-pagination-correctly.md)
       - v1.1.30 {#v1-1-30}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.30](quality-patches-tool/patches-available-in-qpt/v1-1-30/overview.md)
@@ -641,6 +641,7 @@ ht-degree: 0%
          - [ACSD-59952：删除与其他共享目录具有相同组ID的共享目录时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59952-error-on-deleting-shared-catalog-with-same-group-id-as-another-shared-catalog.md)
       - v1.1.53 {#v1-1-53}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
+         - [ACSD-59930：改进公司流的性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-59930-improves-performance-of-company-flows.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - 命令行工具引用{#cli-reference}
