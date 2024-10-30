@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 593d2f2fc5850e08f9568dba56d7b0c3378d9fbe
+source-git-commit: 3efc57161e30a17dae50a52060a78698997649f0
 workflow-type: tm+mt
-source-wordcount: '6050'
+source-wordcount: '6061'
 ht-degree: 0%
 
 ---
@@ -640,6 +640,7 @@ ht-degree: 0%
          - [ACSD-60590：提高Bestsellers汇总每日报告生成的性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60590-optimized-bestseller-report-generation.md)
          - [ACSD-59925：对[!UICONTROL Media Gallery]中的项目排序](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59925-sorting-items-in-media-gallery.md)
          - [ACSD-59865：由于数量不足，[!UICONTROL Cart Price Rule]无法取消以前的规则](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59865-cart-price-rule-fix-for-insufficient-quantity-issue.md)
+         - [ACSD-60788：由于CSP错误， [!DNL Google Tag Manager] 的自定义脚本未执行](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60788-fixes-issue-where-custom-scripts-for-google-tag-manager-are-not-executed-due-to-content-security-policy-errors.md)
          - [ACSD-59952：删除与其他共享目录具有相同组ID的共享目录时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59952-error-on-deleting-shared-catalog-with-same-group-id-as-another-shared-catalog.md)
       - v1.1.53 {#v1-1-53}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
