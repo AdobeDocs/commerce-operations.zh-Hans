@@ -1,5 +1,5 @@
 ---
-source-git-commit: a8f4df78dfec2a1e94d650cac03c7fba21f398e8
+source-git-commit: 31de6be4eb57fa396801c9ce4f3ed65d77026190
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 
 <!-- The template to render with above values -->
-**版本**： 3.0.19
+**版本**： 3.0.20
 
 此引用包含通过`bin/uct`命令行工具提供的9个命令。
 初始列表是在Adobe Commerce中使用`bin/uct list`命令自动生成的。
