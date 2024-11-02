@@ -3,7 +3,7 @@ title: 云基础架构安全性
 description: 了解Adobe如何确保Adobe Commerce在云基础架构上的安全。
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
 feature: Cloud, Security
-source-git-commit: 8d8cd0d33c1a3a95186948e670df6d9865b9a871
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1691'
 ht-degree: 0%
@@ -27,15 +27,15 @@ Fastly提供内容交付网络(CDN)和分布式拒绝服务(DDoS)保护。 Fastl
 
 ## Web应用程序防火墙
 
-Fastly Web应用程序防火墙(WAF)用于提供额外的保护。 Fastly基于云的WAF使用来自商业和开源来源的第三方规则，如OWASP核心规则集。 此外，还采用了特定于Adobe Commerce的规则。 保护客户免受关键应用程序层攻击，包括注入攻击和恶意输入攻击、跨站点脚本攻击、数据导出、HTTP协议违规和其他OWASP十大威胁。
+Fastly Web Application Firewall (WAF)用于提供额外的保护。 Fastly基于云的WAF使用来自商业和开放源代码(如OWASP核心规则集)的第三方规则。 此外，还采用了特定于Adobe Commerce的规则。 保护客户免受关键应用程序层攻击，包括注入攻击和恶意输入攻击、跨站点脚本攻击、数据导出、HTTP协议违规和其他OWASP十大威胁。
 
-如果检测到新的漏洞，Adobe Commerce将更新WAF规则，以便Managed Services在软件修补程序之前“虚拟修补”安全问题。 Fastly WAF不提供速率限制或机器人检测服务。 如果需要，客户可以许可与Fastly兼容的第三方机器人检测服务。
+WAF规则由Adobe Commerce更新，如果检测到新的漏洞，则允许Managed Services在软件修补程序之前“虚拟修补”安全问题。 Fastly WAF不提供速率限制或机器人检测服务。 如果需要，客户可以许可与Fastly兼容的第三方机器人检测服务。
 
 请参阅&#x200B;_云指南_&#x200B;中的[Web应用程序防火墙(WAF)](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-waf-service.html)。
 
 ## 虚拟专用云
 
-Adobe Commerce Pro计划生产环境配置为虚拟专用云(VPC)，因此生产服务器是隔离的，进出云环境的能力有限。 只允许与云服务器的安全连接。 SFTP或rsync等安全协议可用于文件传输。
+Adobe Commerce Pro计划生产环境配置为Virtual Private Cloud (VPC)，因此生产服务器是孤立的，进出云环境的能力有限。 只允许与云服务器的安全连接。 SFTP或rsync等安全协议可用于文件传输。
 
 客户可以使用SSH隧道保护与应用程序的通信。 访问AWS PrivateLink需要支付额外费用。 与这些服务器的所有连接都使用AWS安全组进行控制，该虚拟防火墙限制与环境之间的连接。 客户的技术资源可以使用SSH访问这些服务器。
 
@@ -70,7 +70,7 @@ Adobe会定期测试核心应用程序代码是否存在安全漏洞。 为客�
 
 每两周会使用这些工具扫描整个代码库。 通过直接电子邮件、应用程序中的通知以及[安全中心](https://helpx.adobe.com/security.html)中的通知，客户将收到有关安全修补程序的通知。
 
-客户必须确保根据PCI准则在发布后30天内将这些修补程序应用到其定制应用程序中。 Adobe还提供[安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html)，使商家能够定期监视其网站，并接收有关已知安全风险、恶意软件和未经授权的访问的更新。 安全扫描工具是一项免费服务，可在任何版本的Adobe Commerce上运行。
+客户必须确保根据PCI准则在发布后30天内将这些修补程序应用到其定制应用程序中。 Adobe还提供[安全扫描工具](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)，使商家能够定期监视其网站，并接收有关已知安全风险、恶意软件和未经授权的访问的更新。 安全扫描工具是一项免费服务，可在任何版本的Adobe Commerce上运行。
 
 为了鼓励安全研究人员识别和报告漏洞，除了内部测试之外，Adobe Commerce还设立了[漏洞奖励计划](https://hackerone.com/magento)。 此外，如果需要，还向客户提供了应用程序的完整源代码以供他们自行审查。
 
@@ -84,7 +84,7 @@ Adobe会定期测试核心应用程序代码是否存在安全漏洞。 为客�
 
 ## 记录
 
-所有AWS活动都登录到AWS CloudTrail。 操作系统、应用程序服务器和数据库日志存储在生产服务器上，并存储在备份中。 所有源代码更改都记录在Git存储库中。 部署历史记录在Adobe Commerce [Project Web界面](https://devdocs.magento.com/cloud/project/projects.html#login)中可用。 所有支持访问都将被记录，支持会话也被记录。
+所有AWS活动都登录到AWS CloudTrail。 操作系统、应用程序服务器和数据库日志存储在生产服务器上，并存储在备份中。 所有源代码更改都记录在Git存储库中。 部署历史记录在Adobe Commerce [Project Web界面](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/project/overview)中可用。 所有支持访问都将被记录，支持会话也被记录。
 
 请参阅&#x200B;_云指南_&#x200B;中的[查看和管理日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html)。
 

@@ -2,7 +2,7 @@
 title: 集成 [!DNL Site-Wide Analysis Tool]
 description: 按照以下步骤从Adobe Commerce项目的 [!DNL Site-Wide Analysis Tool] 仪表板中检索 [!DNL Upgrade Compatibility Tool] 报告。
 exl-id: 1ef37294-a837-47a4-841c-4027087acf12
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Upgrade Compatibility Tool]现在与[!DNL Site-Wide Analysis Tool]集成，以便非技术人员能够运行[!DNL Upgrade Compatibility Tool]并获得包含每个文件问题列表的[报告](../upgrade-compatibility-tool/reports.md)。
 
-有关详细信息，请参阅[[!DNL Site-Wide Analysis Tool] 用户指南](https://docs.magento.com/user-guide/reports/site-wide-analysis-tool.html)。
+有关详细信息，请参阅[[!DNL Site-Wide Analysis Tool] 用户指南](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access)。
 
 ## 从[!DNL Site-Wide Analysis Tool]运行[!DNL Upgrade Compatibility Tool]
 

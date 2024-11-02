@@ -3,7 +3,7 @@ title: '''MDVA-41631：检索订单信息时出错，没有可选的“电话”
 description: MDVA-41631修补程序修复了以下问题：用户通过GraphQL检索订单信息时，若没有可选的“电话”值，则会出现错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7后，即可使用此修补程序。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Orders
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -36,8 +36,8 @@ Adobe Commerce（所有部署方法） 2.4.1 - 2.4.3-p1
 
 1. 前往&#x200B;**商店** > **配置** > **客户** > **客户配置** > **名称和地址选项** > **显示电话**&#x200B;并将电话号码设置为可选。
 1. 使用GraphQL API作为登录客户下订单。
-   * 设置帐单和送货地址时，请勿设置电话号码。 按照开发人员文档中的[GraphQL结帐教程](https://devdocs.magento.com/guides/v2.4/graphql/tutorials/checkout/checkout-customer.html)中提供的说明进行操作。
-1. 使用GraphQL [customerOrders查询](https://devdocs.magento.com/guides/v2.4/graphql/queries/customer-orders.html)检索订单。
+   * 设置帐单和送货地址时，请勿设置电话号码。 按照开发人员文档中的[GraphQL结帐教程](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/checkout-customer.html)中提供的说明进行操作。
+1. 使用GraphQL [customerOrders查询](https://developer.adobe.com/commerce/webapi/graphql/queries/customer-orders.html)检索订单。
 
 <pre>
 <code class="language-graphql">

@@ -2,7 +2,7 @@
 title: 高级内部部署安装
 description: 了解Adobe Commerce在您拥有的基础架构上的高级安装方案。
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '2314'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 ## 命令行界面(CLI)
 
-Adobe Commerce具有用于安装和配置任务的单个命令行界面： `<magento_root>/bin/magento`。 该界面可执行多项任务，包括：
+Adobe Commerce具有用于安装和配置任务的单个命令行界面： `<magento_root>/bin/magento`。 该界面可执行多种任务，包括：
 
 * 安装（以及创建或更新数据库架构、创建部署配置等相关任务）。
 * 正在清除缓存。
 * 管理索引，包括重新编制索引。
 * 创建翻译词典和翻译包。
-* 为插件生成不存在的类（如工厂和侦听器），为对象管理器生成依赖项注入配置。
-* 部署静态视图文件。
+* 为插件生成不存在的类（如工厂和侦听器），并为对象管理器生成依赖关系注入配置。
+* 正在部署静态视图文件。
 * 从更少内容创建CSS。
 
 其他好处：
@@ -77,7 +77,7 @@ Adobe Commerce具有用于安装和配置任务的单个命令行界面： `<mag
 
 >[!NOTE]
 >
->默认情况下，如果在同一数据库实例中安装软件，则安装程序不会覆盖数据库。 您可以使用可选的`cleanup-database`参数更改此行为。
+>默认情况下，如果在同一数据库实例中安装软件，则安装程序不会覆盖数据库。 您可以使用可选的`cleanup-database`参数来更改此行为。
 
 另请参阅[更新、重新安装、卸载](tutorials/uninstall.md)。
 
@@ -119,7 +119,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 您可以在安装期间或安装后创建管理员用户。 如果在安装期间创建用户，则需要所有管理员凭据变量。 请参阅[本地主机安装示例](#sample-localhost-installations)。
 
-下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html)。
+下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
@@ -127,7 +127,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 | `--admin-lastname` | 管理员用户的姓氏。 | 是 |
 | `--admin-email` | 管理员用户的电子邮件地址。 | 是 |
 | `--admin-user` | 管理员用户名。 | 是 |
-| `--admin-password` | 管理员用户密码。 密码长度必须至少为7个字符，并且必须至少包含一个字母和至少一个数字字符。 我们建议使用更长、更复杂的密码。 用单引号将整个密码字符串括起来。 例如，`--admin-password='A0b9%t3g'` | 是 |
+| `--admin-password` | 管理员用户密码。 密码长度必须至少为7个字符，并且必须至少包含一个字母字符和一个数字字符。 我们建议使用更长、更复杂的密码。 用单引号将整个密码字符串括起来。 例如，`--admin-password='A0b9%t3g'` | 是 |
 
 **站点和数据库配置选项：**
 
@@ -150,12 +150,12 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 | `--use-secure` | `1`允许在店面URL中使用安全套接字层(SSL)。 在选择此选项之前，请确保您的Web服务器支持SSL。<br><br>`0`禁用使用SSL。 在这种情况下，所有其他安全URL选项也假定为0。 这是默认设置。 | 否 |
 | `--base-url-secure` | 用于访问管理员和店面的安全基础URL，格式如下： `http[s]://<host or ip>/<your install dir>/` | 否 |
 | `--use-secure-admin` | `1`表示您使用SSL访问管理员。 在选择此选项之前，请确保您的Web服务器支持SSL。<br><br>`0`表示您未将SSL与管理员一起使用。 这是默认设置。 | 否 |
-| `--admin-use-security-key` | 1导致应用程序使用随机生成的键值来访问管理员和表单中的页面。 这些键值有助于防止跨站点脚本伪造攻击。 这是默认设置。<br><br>`0`禁用该密钥。 | 否 |
-| `--session-save` | 使用以下任意一项： <br><br>- `db`将会话数据存储到数据库中。 如果您有群集数据库，请选择数据库存储；否则，与基于文件的存储相比，这样做可能没有多大好处。<br><br>- `files`以在文件系统中存储会话数据。 基于文件的会话存储是合适的，除非文件系统访问速度较慢，或者您拥有集群数据库，或者希望将会话数据存储在Redis中。<br><br>- `redis`在Redis中存储会话数据。 如果将Redis用于默认缓存或页面缓存，则必须已安装Redis。 有关配置对Redis的支持的其他信息，请参阅将Redis用于会话存储。 | 否 |
+| `--admin-use-security-key` | 1导致应用程序使用随机生成的键值来访问Admin和表单中的页面。 这些键值有助于防止跨站点脚本伪造攻击。 这是默认设置。<br><br>`0`禁用密钥。 | 否 |
+| `--session-save` | 使用以下任意选项： <br><br>- `db`在数据库中存储会话数据。 如果您有群集数据库，请选择数据库存储；否则，与基于文件的存储相比可能没有太大好处。<br><br>- `files`在文件系统中存储会话数据。 基于文件的会话存储是合适的，除非文件系统访问速度较慢，您有群集数据库，或者您想在Redis中存储会话数据。<br><br>- `redis`在Redis中存储会话数据。 如果将Redis用于默认缓存或页面缓存，则必须已安装Redis。 有关配置对Redis的支持的其他信息，请参阅将Redis用于会话存储。 | 否 |
 | `--key` | 如果您有密钥，请指定密钥以加密数据库中的敏感数据。 如果您没有，应用程序将为您生成一个。 | 是 |
 | `--cleanup-database` | 要在安装Adobe Commerce之前删除数据库表，请指定此参数，而不使用值。 否则，数据库将保持不变。 | 否 |
-| `--db-init-statements` | 高级MySQL配置参数。 在连接到MySQL数据库时使用数据库初始化语句运行。 在设置任何值之前，请查阅与此类似的引用。<br><br>默认值为`SET NAMES utf8;`。 | 否 |
-| `--sales-order-increment-prefix` | 指定要用作销售订单前缀的字符串值。 通常，这用于保证支付处理者的唯一订单编号。 | 否 |
+| `--db-init-statements` | 高级MySQL配置参数。 在连接到MySQL数据库时使用数据库初始化语句运行。 在设置任何值之前，请先查阅类似此参考资料。<br><br>默认值为`SET NAMES utf8;`。 | 否 |
+| `--sales-order-increment-prefix` | 指定字符串值以用作销售订单的前缀。 通常，这用于确保付款处理商的唯一订单号。 | 否 |
 
 **搜索引擎配置选项：**
 
@@ -187,7 +187,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 | `--amqp-password` | 用于连接到[!DNL RabbitMQ]的密码。 不要使用默认密码`guest`。 | 否 |
 | `--amqp-virtualhost` | 用于连接到[!DNL RabbitMQ]的虚拟主机。 默认值为`/`。 | 否 |
 | `--amqp-ssl` | 指示是否连接到[!DNL RabbitMQ]。 默认值为`false`。 有关为[!DNL RabbitMQ]设置SSL的信息，请参阅[!DNL RabbitMQ]。 | 否 |
-| `--consumers-wait-for-messages` | 消费者是否应该等待队列中的消息？ 1 — 是，0 — 否 | 否 |
+| `--consumers-wait-for-messages` | 用户是否应该等待来自队列的消息？ 1 — 是，0 — 否 | 否 |
 
 **锁定配置选项：**
 
@@ -289,9 +289,9 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 
 以下示例使用下列选项安装Adobe Commerce：
 
-* 该应用程序安装在`localhost`上相对于Web服务器docroot的`magento2`目录中，并且管理员的路径为`admin`；因此：
+* 应用程序安装在`localhost`上相对于Web服务器Docroot的`magento2`目录中，并且管理员的路径为`admin`；因此：
 
-  您的店面URL是`http://127.0.0.1`
+  您的店面URL为`http://127.0.0.1`
 
 * 数据库服务器与Web服务器位于同一主机上。
 
@@ -303,11 +303,11 @@ For security, remove write permissions from these directories: '/var/www/html/ma
    * 用户名是`admin`，密码是`admin123`
    * 电子邮件地址为`user@example.com`
 
-* 默认语言为`en_US` （美国英语）
-* 默认货币为美元
+* 默认语言为`en_US`（美国英语）
+* 本币为美元
 * 默认时区为美国中部（美洲/芝加哥）
-* 安装程序先清理数据库，然后再安装表和模式
-* 您可以使用销售订单增量前缀`ORD$`（由于它包含特殊字符[`$`]，因此必须将值用双引号括起来）
+* 安装程序首先清理数据库，然后再安装表和架构
+* 您可以使用销售订单增量前缀`ORD$`（因为它包含特殊字符[`$`]，所以该值必须用双引号括起来）
 * 会话数据保存在数据库中
 * 使用服务器重写
 * OpenSearch安装在`os-host.example.com`上并连接到端口9200
@@ -325,7 +325,7 @@ magento setup:install --base-url=http://127.0.0.1/magento2/ \
 
 >[!NOTE]
 >
->您必须在单行中输入命令，或者如上例所示，在每行末尾输入`\`字符。
+>必须在单行上输入该命令，或者如上例所示，在每行末输入`\`字符。
 
 如果安装成功，将显示如下消息：
 

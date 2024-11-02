@@ -2,7 +2,7 @@
 title: 覆盖配置设置
 description: 了解如何使用环境变量覆盖配置设置。
 exl-id: 788fd3cd-f8c1-4514-8141-547fed36e9ce
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -62,8 +62,8 @@ ht-degree: 0%
   有关作用域的详细信息，请参阅：
 
    - [步骤1：查找网站或商店视图范围值](#step-1-find-the-website-or-store-view-scope-value)
-   - 有关作用域的[Commerce用户指南主题](https://docs.magento.com/user-guide/configuration/scope.html)
-   - [范围快速引用](https://docs.magento.com/user-guide/stores/store-scope-reference.html)
+   - 有关作用域的[Commerce用户指南主题](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
+   - [范围快速引用](https://experienceleague.adobe.com/en/docs/commerce-admin/config/scope-change#scope-quick-reference)
 
 `<SYSTEM__VARIABLE__NAME>`是`/`被双下划线字符替换的配置路径。 有关详细信息，请参阅[第2步：设置系统变量](#step-2-set-global-website-or-store-view-variables)。
 
@@ -251,7 +251,7 @@ $_ENV['CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'] = '123
 
 >[!WARNING]
 >
->- 要使用您在`$_ENV`数组中设置的值，必须在`php.ini`文件中设置`variables_order = "EGPCS"`(Environment、Get、Post、Cookie和服务器)。 有关详细信息，请参阅[PHP文档](https://www.php.net/manual/en/ini.core.php)。
+>- 要使用您在`$_ENV`数组中设置的值，必须在`php.ini`文件中设置`variables_order = "EGPCS"`（Environment、Get、Post、Cookie和服务器）。 有关详细信息，请参阅[PHP文档](https://www.php.net/manual/en/ini.core.php)。
 >
 >- 对于云基础架构上的Adobe Commerce，如果您尝试使用[Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)覆盖配置设置，则必须在变量名称前加上`env:`。 例如：
 >

@@ -3,7 +3,7 @@ title: 会话存储位置
 description: 了解会话文件的存储位置。
 feature: Configuration, Storage
 exl-id: 43cab98a-5b68-492e-b891-8db4cc99184e
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ## 管理会话大小
 
-请参阅&#x200B;_用户指南_&#x200B;中的[会话管理](https://docs.magento.com/user-guide/stores/security-session-management.html)。
+请参阅&#x200B;_用户指南_&#x200B;中的[会话管理](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-session-management)。
 
 ## 垃圾收集配置
 

@@ -2,7 +2,7 @@
 title: env.php参考
 description: 查看env.php文件的值列表。
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-在&#x200B;_Commerce用户指南_&#x200B;中了解有关[加密密钥](https://docs.magento.com/user-guide/system/encryption-key.html)的更多信息。
+在&#x200B;_Commerce用户指南_&#x200B;中了解有关[加密密钥](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)的更多信息。
 
 ## db
 
@@ -203,7 +203,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-了解有关[可下载域](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#downloadabledomainsadd)的更多信息。
+了解有关[可下载域](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
 
 ## 安装
 

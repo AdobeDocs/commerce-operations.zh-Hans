@@ -4,7 +4,7 @@ description: 如果不使用报表模块，请通过删除报表模块来优化�
 role: Admin
 feature: Best Practices, Configuration
 exl-id: 8c991b8a-affb-4a9e-9383-671f595ff89e
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 报告配置最佳实践
 
-如果您的企业不需要报告或动态客户区段功能，请禁用[报告功能](https://docs.magento.com/user-guide/configuration/general/reports.html)以提高存储性能。
+如果您的企业不需要报告或动态客户区段功能，请禁用[报告功能](https://experienceleague.adobe.com/en/docs/commerce-admin/config/general/reports)以提高存储性能。
 
 ## 受影响的产品和版本
 
@@ -32,5 +32,5 @@ ht-degree: 1%
 
 ## 其他信息
 
-- [在Adobe Commerce中生成报告](https://docs.magento.com/user-guide/reports.html)
-- [客户动态区段](https://docs.magento.com/user-guide/marketing/customer-segments.html)
+- [在Adobe Commerce中生成报告](https://experienceleague.adobe.com/en/docs/commerce-admin/start/reporting/reports-menu)
+- [客户动态区段](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segments)

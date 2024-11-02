@@ -3,7 +3,7 @@ title: 'MDVA-37897：从“最近查看的项目”添加产品时重定向不�
 description: MDVA-37897修补程序解决了当用户尝试使用最近查看的构件中的选项添加产品时，重定向不正确的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1后，即可使用此修补程序。 修补程序ID为MDVA-37897。 请注意，该问题计划在Adobe Commerce版本2.4.4中修复。
 feature: Products
 role: Admin
-source-git-commit: c1055ed10813aa6e585f93ec3091d216af06affd
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -51,8 +51,8 @@ MDVA-37897修补程序解决了当用户尝试使用最近查看的构件中的�
 
 要应用单个修补程序，请根据您的部署类型使用以下链接：
 
-* 在我们的开发人员文档中，将Adobe Commerce内部部署：[软件更新指南>应用修补程序](https://devdocs.magento.com/guides/v2.4/comp-mgr/patching/mqp.html)。
-* 我们的云基础架构上的Adobe Commerce：开发人员文档中的[升级和修补程序>应用修补程序](https://devdocs.magento.com/cloud/project/project-patch.html)。
+* 在我们的开发人员文档中，将Adobe Commerce内部部署：[软件更新指南>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage)。
+* 我们的云基础架构上的Adobe Commerce：开发人员文档中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

@@ -4,7 +4,7 @@ description: 了解配置最佳实践以提高结账和订单处理性能。
 role: Admin, User
 feature: Best Practices
 exl-id: d15fe845-670f-4f7e-9645-7e111e6e809f
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 - **[!UICONTROL Asynchronous indexing]** — 启用此选项可防止同时下达大量订单时数据库锁定并减慢处理速度。
 - **[!UICONTROL Asynchronous email notifications]** — 启用此选项以按指定的间隔发送结帐和订单处理电子邮件通知而不是立即发送它们，从而加快结帐性能。
-- **[!UICONTROL Enable Archiving]** — 启用此选项可提高订单、发票、装运和贷项通知单的性能，并使您的工作区不会出现不必要的信息，因此您可以专注于当前业务。 请参阅[启用存档](https://docs.magento.com/user-guide/sales/order-archive.html#to-enable-archiving)。
+- **[!UICONTROL Enable Archiving]** — 启用此选项可提高订单、发票、装运和贷项通知单的性能，并使您的工作区不会出现不必要的信息，因此您可以专注于当前业务。 请参阅[启用存档](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/order-management/orders/order-archive)。
 
 ## 受影响的产品和版本
 

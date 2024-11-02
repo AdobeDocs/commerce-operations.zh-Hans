@@ -4,7 +4,7 @@ description: 了解如何在云基础架构上部署Adobe Commerce时配置数�
 role: Developer, Admin
 feature: Best Practices
 exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -59,9 +59,9 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 
 有关配置说明，请参阅云上Adobe Commerce的《开发人员指南》 ：
 
-- [设置OpenSearch服务](https://devdocs.magento.com/cloud/project/services-opensearch.html)
+- [设置OpenSearch服务](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/opensearch)
 
-- [设置Elasticsearch服务](https://devdocs.magento.com/cloud/project/services-elastic.html)
+- [设置Elasticsearch服务](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/elasticsearch)
 
 ## 避免自定义触发器
 
@@ -76,7 +76,7 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 
 ## 将[!DNL ECE-Tools]升级到版本2002.0.21或更高版本 {#ece-tools-version}
 
-要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅我们的开发人员文档中的[更新`ece-tools`版本](https://devdocs.magento.com/cloud/project/ece-tools-update.html)。
+要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅我们的开发人员文档中的[更新`ece-tools`版本](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package)。
 
 ## 安全切换索引器模式
 

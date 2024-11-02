@@ -2,7 +2,7 @@
 title: '[!DNL Exceptions]'
 description: 了解 [!DNL Site-Wide Analysis Tool]中的[!UICONTROL Exceptions]选项卡、使用时间、优点和最佳实践。
 exl-id: bd793536-b95c-47db-9372-33c00be8e144
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
@@ -27,4 +27,4 @@ ht-degree: 0%
 
 ## 最佳实践
 
-监视[!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions]页面以查看发生哪些异常。 有关详细信息，请参阅我们的开发人员文档中的[查看和管理日志](https://devdocs.magento.com/cloud/project/log-locations.html)。
+监视[!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions]页面以查看发生哪些异常。 有关详细信息，请参阅我们的开发人员文档中的[查看和管理日志](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/test/log-locations)。

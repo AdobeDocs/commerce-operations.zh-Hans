@@ -3,7 +3,7 @@ title: “MDVA-44147：GraphQL请求未返回申请列表”
 description: MDVA-44147修补程序修复了GraphQL请求不返回申请列表的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14后，即可使用此修补程序。 修补程序ID为MDVA-44147。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: B2B, GraphQL
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -35,8 +35,8 @@ GraphQL请求不返回申请列表。
 <u>重现步骤</u>：
 
 1. 转到&#x200B;**商店** > **设置** > **配置** > **常规** > **B2B功能**&#x200B;并启用申请列表。
-1. 以客户身份登录并将产品添加到[申请列表](https://docs.magento.com/user-guide/customers/account-dashboard-requisition-lists.html)。
-1. 创建[客户令牌](https://devdocs.magento.com/guides/v2.4/graphql/mutations/generate-customer-token.html)。
+1. 以客户身份登录并将产品添加到[申请列表](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists)。
+1. 创建[客户令牌](https://developer.adobe.com/commerce/webapi/graphql/mutations/generate-customer-token.html)。
 
    <pre>
     <code class="language-graphql">
@@ -51,7 +51,7 @@ GraphQL请求不返回申请列表。
       </code>
       </pre>
 
-1. 使用以下查询从客户处检索所有申请列表。 使用值为`Bearer <customer_token>`的&#x200B;**授权**&#x200B;标头。 有关详细信息，请参阅开发人员文档中的[客户查询](https://devdocs.magento.com/guides/v2.4/graphql/queries/customer.html)文章。
+1. 使用以下查询从客户处检索所有申请列表。 使用值为`Bearer <customer_token>`的&#x200B;**授权**&#x200B;标头。 有关详细信息，请参阅开发人员文档中的[客户查询](https://developer.adobe.com/commerce/webapi/graphql/queries/customer.html)文章。
 
    请求：
 

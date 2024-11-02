@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.3安全修补程序的发行说明
 description: 了解Adobe Commerce版本2.4.3的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 72d343cd-83d7-48ce-976a-e26ba1b8db27
-source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 0%
@@ -80,7 +80,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 **限制管理员访问媒体集文件夹**。 默认媒体集权限现在只允许配置明确允许的目录操作（查看、上传、删除和创建）。 管理员用户无法再通过在`catalog/category`或`wysiwyg`目录之外上传的媒体集访问媒体资产。 管理员如果想要访问介质资源，必须将其移至明确允许的文件夹或调整其配置设置。 请参阅[修改Media Library文件夹权限](https://developer.adobe.com/commerce/php/tutorials/backend/modify-image-library-permissions/)。<!-- B2B-1897-->
 
-**降低了对GraphQL查询复杂性的限制**。 GraphQL允许的最大查询复杂性已降低，以防止拒绝服务(DOS)攻击。 查看[GraphQL安全配置](https://devdocs.magento.com/guides/v2.4/graphql/security-configuration.html)。<!-- PWA-1700-->
+**降低了对GraphQL查询复杂性的限制**。 GraphQL允许的最大查询复杂性已降低，以防止拒绝服务(DOS)攻击。 查看[GraphQL安全配置](https://developer.adobe.com/commerce/webapi/graphql/security-configuration.html)。<!-- PWA-1700-->
 
 已在此版本中修复了&#x200B;**最近的渗透测试漏洞**。<!-- MC-42431-->
 

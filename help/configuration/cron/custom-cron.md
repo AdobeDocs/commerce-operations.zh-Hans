@@ -2,7 +2,7 @@
 title: Cron作业
 description: 了解cron组和创建自定义cron作业。
 exl-id: a9d83af7-9979-4653-adc9-30ffeb13a5ce
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
@@ -21,5 +21,5 @@ Commerce应用程序提供以下cron组：
 - `index`，它刷新[索引器](../cli/manage-indexers.md)
 - `consumers`，运行消息队列[消费者](../cli/start-message-queues.md)
 - 这些主题仅在Adobe Commerce中可用
-   - `staging`，它运行[与暂存相关的](https://docs.magento.com/user-guide/cms/content-staging.html)任务
+   - `staging`，它运行[与暂存相关的](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging)任务
    - `catalog_event`，它运行Target和购物车规则的任务

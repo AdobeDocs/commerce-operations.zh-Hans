@@ -3,7 +3,7 @@ title: 平台工具
 description: 选择适用于Adobe Commerce实施的推荐平台工具。
 exl-id: 3fc164f9-a0fc-46e7-a54e-08ce101ccae7
 feature: Configuration
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Adobe Commerce提供多种选项来存储缓存和会话数据，包括Redis、M
 
 ## 安全工具
 
-通过[Adobe Commerce安全扫描工具](https://docs.magento.com/user-guide/magento/security-scan.html)，您可以定期监视商店网站并接收已知安全风险、恶意软件和过期的软件的更新。 通常，在开始用户验收测试(UAT)时即开始使用此工具。 Adobe Commerce安全扫描工具免费且适用于Adobe Commerce的所有实施和版本，除此之外，您还可以在CI/CD流程期间和每个版本之前使用其他选项。
+通过[Adobe Commerce安全扫描工具](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)，您可以定期监视商店网站并接收已知安全风险、恶意软件和过期的软件的更新。 通常，在开始用户验收测试(UAT)时即开始使用此工具。 Adobe Commerce安全扫描工具免费且适用于Adobe Commerce的所有实施和版本，除此之外，您还可以在CI/CD流程期间和每个版本之前使用其他选项。
 
 SonarQube是一个开源质量管理平台，旨在分析和衡量代码的技术质量。 SonarQube不仅提供了有关代码错误、语法错误和漏洞的完整报告，而且还提供了有关修复代码的建议与示例。 SonarQube非常适合于在CI/CD环境中用作能够在部署它之前分析代码的工具。
 

@@ -4,7 +4,7 @@ description: 通过更改某些默认设置，准备您的Adobe Commerce项目�
 exl-id: 55d77af7-508c-4ef7-888b-00911cc6e920
 feature: Integration, Cache
 topic: Commerce, Performance
-source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 0%
@@ -26,7 +26,7 @@ GraphQL允许您在一次调用中进行多个查询。 请务必注意，如果
 
 >[!NOTE]
 >
-> 有关可缓存查询和不可缓存查询的更多信息，请参阅Adobe Commerce [开发人员文档](https://devdocs.magento.com/guides/v2.4/graphql/caching.html)。
+> 有关可缓存查询和不可缓存查询的更多信息，请参阅Adobe Commerce [开发人员文档](https://developer.adobe.com/commerce/webapi/graphql/caching.html)。
 
 ## 目录平面表
 
@@ -42,7 +42,7 @@ GraphQL允许您在一次调用中进行多个查询。 请务必注意，如果
 
 启用Fastly源屏蔽后，您还可以激活Fastly图像优化器。 当产品目录图像存储在Adobe Commerce上时，该服务能够将所有资源密集型产品目录图像转换处理卸载到Fastly上，并从Adobe Commerce源头中卸载。 在页面加载时间方面，最终用户响应时间也得到改善，因为在边缘位置转换图像，这通过减少返回Adobe Commerce源的请求数量来消除延迟。
 
-Fastly图像优化可以通过在Admin中的Fastly配置中“启用深层图像优化”来启用，但前提是激活了原始防护板。 有关Fastly图像优化的配置的更多详细信息，请参阅Adobe Commerce [开发人员文档](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html)。
+Fastly图像优化可以通过在Admin中的Fastly配置中“启用深层图像优化”来启用，但前提是激活了原始防护板。 有关Fastly图像优化的配置的更多详细信息，请参阅Adobe Commerce [开发人员文档](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization)。
 
 ![Adobe Commerce管理员中Fastly图像优化设置的屏幕截图](../assets/commerce-at-scale/image-optimization.svg)
 

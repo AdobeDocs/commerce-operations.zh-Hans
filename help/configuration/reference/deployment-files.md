@@ -3,7 +3,7 @@ title: 用于部署的配置文件
 description: 了解配置文件如何用于安装Commerce应用程序。
 feature: Configuration, Deploy
 exl-id: 772a6814-6b18-4f8f-b31e-72faf790ff37
-source-git-commit: b40d2bd4d466782ba5bc1b29ee8681756d9e85cc
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Adobe Commerce提供了配置文件，使您能够轻松自定义组件和创建
 示例：
 
 - 卸载组件： [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
-- 检查组件的状态： [`bin/magento module:status`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#modulestatus)
+- 检查组件的状态： [`bin/magento module:status`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
 - 启用或禁用组件： [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md)，[`bin/magento module:enable`](../../installation/tutorials/manage-modules.md)。
 
 > _config.php_

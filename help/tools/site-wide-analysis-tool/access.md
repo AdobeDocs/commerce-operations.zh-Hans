@@ -2,7 +2,7 @@
 title: 如何访问 [!DNL Site-Wide Analysis Tool]
 description: 了解如何访问 [!DNL Site-Wide Analysis Tool]
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
-source-git-commit: 18416ae29cee182a5d088069065d73814fc7d860
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 您可以从[[!DNL Site-Wide Analysis Tool] 网站](https://supportinsights.adobe.com/commerce)直接&#x200B;**访问[!DNL dashboard](仅适用于Adobe Commerce on cloud infrastructure)**&#x200B;并使用您的Adobe ID登录，也可以从您商店的[!DNL Admin Panel]通过[!DNL dashboard]访问。
 
-[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://docs.magento.com/user-guide/magento/installation-modes.html)下供有权访问用户[角色资源](https://docs.magento.com/user-guide/system/permissions-user-roles.html)的[!DNL Admin]用户使用。
+[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[角色资源](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)的[!DNL Admin]用户使用。
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ### 步骤1：验证权限
 
-验证[!DNL Admin]用户帐户是否有权通过其[分配的用户角色](https://docs.magento.com/user-guide/system/permissions-user-roles.html)访问[!DNL Site-Wide Analysis Tool]。
+验证[!DNL Admin]用户帐户是否有权通过其[分配的用户角色](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)访问[!DNL Site-Wide Analysis Tool]。
 
 >[!IMPORTANT]
 >

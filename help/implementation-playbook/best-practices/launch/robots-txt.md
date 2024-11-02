@@ -4,7 +4,7 @@ description: 了解如何使用“robots.txt”和“sitemap.xml”文件，将�
 role: Developer
 feature: Best Practices
 exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
-source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 为单站点店面配置`robots.txt`和`sitemap.xml`文件时，请遵循以下最佳实践：
 
-- 确保您的项目使用的是[`ece-tools`](https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html)版本2002.0.12或更高版本。
+- 确保您的项目使用的是[`ece-tools`](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package)版本2002.0.12或更高版本。
 - 使用Admin应用程序将内容添加到`robots.txt`文件。
 
   >[!TIP]
@@ -64,12 +64,12 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关详细说明，请参阅[添加站点地图和搜索引擎机器人](https://devdocs.magento.com/cloud/trouble/robots-sitemap.html)。
+>有关详细说明，请参阅[添加站点地图和搜索引擎机器人](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/robots-sitemap)。
 
 
 ### 多站点店面
 
-您可以在云基础架构上通过一次实施Adobe Commerce来设置和运行多个商店。 请参阅[设置多个网站或商店](https://devdocs.magento.com/cloud/project/project-multi-sites.html)。
+您可以在云基础架构上通过一次实施Adobe Commerce来设置和运行多个商店。 请参阅[设置多个网站或商店](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)。
 
 为[单站点店面](#single-site-storefronts)配置`robots.txt`和`sitemap.xml`文件的相同最佳实践适用于具有两个重要区别的多站点店面：
 
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 ## 其他信息
 
-- [了解网站、商店和商店视图](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
-- [添加网站](https://docs.magento.com/user-guide/stores/stores-all-create-website.html)
-- [使用Fastly阻止Adobe Commerce网站的恶意流量](https://devdocs.magento.com/cloud/cdn/fastly-vcl-blocking.html)
+- [了解网站、商店和商店视图](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
+- [添加网站](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [使用Fastly阻止Adobe Commerce网站的恶意流量](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
 - [robots.txt在云基础架构2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html)上的Adobe Commerce中出现404错误

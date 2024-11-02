@@ -2,7 +2,7 @@
 title: 年度升级计划
 description: 查看有关为您的Adobe Commerce项目创建年度升级计划的提示。
 exl-id: f28e5ad1-28ac-4419-a507-63d79dbd6376
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 许多公司根据年度预算和路线图开展工作。 在这些年度讨论中，您一定要谈论您当年的平台运行状况、方向和升级策略，以及它如何适应业务的总体目标和关键绩效指标(KPI)。
 
-按照[发布计划](https://devdocs.magento.com/release/)，为升级分配预算和发布窗口，避免假日、公司停业和高峰时间。 通过了解Adobe发布计划并通过[发行说明](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)随时了解每个发布中的更改和改进，可以更好地规划您的年份。
+按照[发布计划](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule)，为升级分配预算和发布窗口，避免假日、公司停业和高峰时间。 通过了解Adobe发布计划并通过[发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)随时了解每个发布中的更改和改进，可以更好地规划您的年份。
 
 在规划过程中，您可能想问自己：
 

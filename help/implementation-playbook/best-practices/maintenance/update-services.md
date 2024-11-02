@@ -4,7 +4,7 @@ description: 了解如何使您的Adobe Commerce on cloud infrastructure技术�
 role: Developer
 feature: Best Practices
 exl-id: 62aeffe3-b5a6-49f8-a39b-3219b46cd486
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 在Adobe Commerce使用的服务和组件达到或接近生命周期结束日期之前升级它们。 这有助于遵守PCI法规并减少安全漏洞。
 
-入门计划客户可自助服务升级。 有关如何更改服务的详细信息，请参阅[更改服务版本](https://devdocs.magento.com/cloud/project/services.html#change-service-version)。
+入门计划客户可自助服务升级。 有关如何更改服务的详细信息，请参阅[更改服务版本](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/services-yaml#change-service-version)。
 
 专业计划客户只能在其[集成环境](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)中自助服务升级。 对于在生产环境中升级服务，您必须[提交支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)以请求升级。
 

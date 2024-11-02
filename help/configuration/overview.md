@@ -2,7 +2,7 @@
 title: 配置指南概述
 description: 了解 Adobe Commerce 应用程序的所有可配置功能和服务。
 exl-id: c4997792-5a47-4ae5-903a-7e5d7235e42e
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 9%
@@ -25,7 +25,7 @@ _配置_&#x200B;指南为管理可配置的Commerce应用程序功能和服务�
 
 ## Commerce管理配置
 
-[Commerce用户指南](https://docs.magento.com/user-guide/stores/configuration.html)中有相应的主题，可以帮助您了解Commerce管理中每个配置设置的字段描述。
+[Commerce用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/config/guide-overview)中有相应的主题，可以帮助您了解Commerce管理中每个配置设置的字段描述。
 
 ## 云配置
 

@@ -4,7 +4,7 @@ description: 通过遵循索引器配置的最佳实践来维护和优化站点�
 role: Admin, User
 feature: Best Practices
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: 153cf3bae74a78d7a41176e0216203d354d2513b
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Adobe Commerce具有两种类型的索引器模式：[!UICONTROL Update on Save]
 要最大限度地提高网站性能，请遵循以下编制索引最佳实践：
 
 - 查看索引配置。
-- 对于大型网站以及经常更新和流量较大的网站，将索引器设置为&#x200B;_[!UICONTROL Update on Schedule]_。 请参阅[索引管理](https://docs.magento.com/user-guide/system/index-management.html#change-the-index-mode)。
+- 对于大型网站以及经常更新和流量较大的网站，将索引器设置为&#x200B;_[!UICONTROL Update on Schedule]_。 请参阅[索引管理](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/index-management#change-the-index-mode)。
 - 遵循[性能最佳实践](../../../performance/configuration.md)来管理索引。
 
 >[!IMPORTANT]

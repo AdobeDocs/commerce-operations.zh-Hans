@@ -2,7 +2,7 @@
 title: 运行支持实用程序
 description: 使用内置的支持实用程序对Commerce项目进行故障诊断。
 exl-id: 021b795f-e00d-43b5-9cbb-5b57a4795be7
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Adobe Commerce支持实用程序（也称为[数据收集器](https://docs.magento.com/user-guide/system/support-data-collector.html)）使用户能够收集有关您的系统的故障排除信息，这些信息可供我们的支持团队使用。
+Adobe Commerce支持实用程序（也称为[数据收集器](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector)）使用户能够收集有关您的系统的故障排除信息，这些信息可供我们的支持团队使用。
 
 Adobe Commerce使用这些备份（也称为&#x200B;_转储_）来分析需要访问您的代码的问题。 典型情况如下：
 
