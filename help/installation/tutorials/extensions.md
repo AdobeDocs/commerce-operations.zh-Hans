@@ -2,9 +2,9 @@
 title: 管理第三方扩展
 description: 按照以下步骤安装、启用、升级和卸载Adobe Commerce扩展。
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: f057cf082eeab1e34957e284817c6b93517de21b
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 - 主题（更改店面和管理员的外观）
 - 语言包（将店面和管理员本地化）
 
->[!TIP]
->
->本主题介绍如何使用命令行界面管理您从Commerce Marketplace购买的第三方扩展。 您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
+本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
+
+您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
 
 ## 安装
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
    ![市场购买历史记录](../../assets/installation//marketplace-my-purchases.png)
 
-1. 查找要安装的扩展，然后单击&#x200B;**技术详细信息**。
+1. 找到要安装的扩展，并记下组件名称和版本。
 
    ![技术详细信息显示扩展的编辑器名称](../../assets/installation/marketplace-extension-technical-details.png)
 
@@ -241,13 +241,13 @@ bin/magento module:status
    - 对于基于编辑器的扩展，请从Adobe Commerce `composer.json`文件中删除该扩展。
 
      ```bash
-     composer remove <package-name>
+     composer remove <component-name>
      ```
 
    - 对于不基于Composer的扩展，请从Adobe Commerce项目存储库中删除物理文件。
 
      ```bash
-     rm -rf app/code/<vendor-name>/<module-name>
+     rm -rf app/code/<vendor-name>/<component-name>
      ```
 
 1. 如果`config.php`文件在Adobe Commerce项目存储库中受源代码管理，请从`config.php`文件中删除该扩展。
