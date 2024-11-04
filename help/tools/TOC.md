@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: d146972c919934452f40521141842524a80d4da6
+source-git-commit: 4764716fe6fbc043f96843195f9d25b6d3517a40
 workflow-type: tm+mt
-source-wordcount: '6071'
+source-wordcount: '6087'
 ht-degree: 0%
 
 ---
@@ -646,6 +646,7 @@ ht-degree: 0%
       - v1.1.53 {#v1-1-53}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
          - [ACSD-59930：改进公司流的性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-59930-improves-performance-of-company-flows.md)
+         - [ACSD-60584：允许为一个网站创建的访问令牌访问其他网站上的信息](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-60584-access-token-created-for-one-website-is-allowed-to-access-information-on-other-websites.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - 命令行工具引用{#cli-reference}
