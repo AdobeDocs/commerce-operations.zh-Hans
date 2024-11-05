@@ -3,9 +3,9 @@ title: 'ACSD-48216：*INVENTORY_source_item*表的AUTO_INCREMENT在*UPDATE*操�
 description: 应用ACSD-48216修补程序以修复Adobe Commerce问题，该问题导致inventory_source_item*表的*AUTO_INCREMENT在*UPDATE*操作时增加。
 feature: Admin Workspace, Inventory, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ ACSD-48216修补程序修复了&#x200B;*inventory_source_item*&#x200B;表的&#x2
 
 ## 问题
 
-*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;在&#x200B;*UPDATE*&#x200B;操作中增加。
+`inventory_source_item`表的`AUTO_INCREMENT`在`UPDATE`操作中增加。
 
 <u>重现步骤</u>：
 
-1. 检查&#x200B;*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;的当前值：
+1. 检查`inventory_source_item`表的`AUTO_INCREMENT`的当前值：
 
 ```bash
 MySQL > show create table inventory_source_item;
@@ -75,29 +75,27 @@ CREATE TABLE `inventory_source_item` (
 }
 ```
 
-1. 再次检查&#x200B;*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;值。
+1. 再次检查`inventory_source_item`表的`AUTO_INCREMENT`值。
 
 <u>预期的结果</u>：
 
-每次更新操作后，*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;值不会增加。
+在每次更新操作后，`inventory_source_item`表的`AUTO_INCREMENT`值不会增加。
 
 <u>实际结果</u>：
 
-每次更新操作后，*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;值都会增加。
+每次更新操作后，`inventory_source_item`表的`AUTO_INCREMENT`值都会增加。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)
+* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)
 
 ## 相关阅读
 
-要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
-
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)。
-* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
-
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题
+* [在Commerce实施行动手册中修改数据库表的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/development/modifying-core-and-third-party-tables#why-adobe-recommends-avoiding-modifications)
 
 有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
