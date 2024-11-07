@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 2a751e4548ab032a1d9339efeb66559c3836e58e
+source-git-commit: 5049afe19ff7e25983c8a21544677c64473e2806
 workflow-type: tm+mt
-source-wordcount: '6106'
+source-wordcount: '6116'
 ht-degree: 0%
 
 ---
@@ -645,6 +645,7 @@ ht-degree: 0%
          - [ACSD-59366：删除其已停用用户的团队在团队列表中不可见](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59366-delete-teams-with-deactivated-users-not-visible-in-the-team-list.md)
          - [ACSD-60788：由于CSP错误， [!DNL Google Tag Manager] 的自定义脚本未执行](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60788-fixes-issue-where-custom-scripts-for-google-tag-manager-are-not-executed-due-to-content-security-policy-errors.md)
          - [ACSD-59952：删除与其他共享目录具有相同组ID的共享目录时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59952-error-on-deleting-shared-catalog-with-same-group-id-as-another-shared-catalog.md)
+         - [ACSD-60673：在结账时修复了多个付款方法的[!UICONTROL Cart Price Rule]问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60673-cart-price-rule-fix-for-multiple-payment-methods-at-checkout.md)
       - v1.1.53 {#v1-1-53}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
          - [ACSD-59930：改进公司流的性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-59930-improves-performance-of-company-flows.md)
