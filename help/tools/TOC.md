@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 5049afe19ff7e25983c8a21544677c64473e2806
+source-git-commit: 0c03963e3ebe7239e52f34fcb3279eedb6fbf74a
 workflow-type: tm+mt
-source-wordcount: '6116'
+source-wordcount: '6124'
 ht-degree: 0%
 
 ---
@@ -650,6 +650,7 @@ ht-degree: 0%
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
          - [ACSD-59930：改进公司流的性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-59930-improves-performance-of-company-flows.md)
          - [ACSD-60584：允许为一个网站创建的访问令牌访问其他网站上的信息](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-60584-access-token-created-for-one-website-is-allowed-to-access-information-on-other-websites.md)
+         - [ACSD-48318：“system.log”中出现环境模拟嵌套错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-48318-environment-emulation-nesting-error-in-system-log.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - 命令行工具引用{#cli-reference}
