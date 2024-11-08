@@ -4,9 +4,9 @@ description: 了解如何使您的Adobe Commerce on cloud infrastructure技术�
 role: Developer
 feature: Best Practices
 exl-id: 62aeffe3-b5a6-49f8-a39b-3219b46cd486
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 5e3289b328b51eb50354efdc1571283791175b9a
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->如果没有48个工作小时的通知，就无法将服务升级推送到生产环境。 这是必需的，因为我们需要确保我们有一名基础架构支持工程师在所需时间范围内更新您的配置，同时最大限度地减少生产环境的停机时间。
+>服务升级必须提前48个营业时间通知Adobe的基础架构团队，才能推送到生产环境。 这是必需的，因此Adobe可以确保基础架构支持工程师在所需时间范围内更新您的配置，同时最大限度地减少生产环境的停机时间。 Adobe建议在服务升级期间将站点置于维护模式。
 
 您可以在以下文件中查看服务版本和生命周期结束日期的列表： [https://github.com/magento/ece-tools/blob/develop/config/eol.yaml](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)。
 
