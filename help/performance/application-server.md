@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 620be59a5b66bd4f55997951c59e473ac14a5c21
+source-git-commit: c5446f0273705b158297c0a253054742ec95b44e
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2082'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ git push
 
 1. 使用[2.4.7-appserver分支](https://github.com/magento/magento-cloud/tree/2.4.7-appserver)中的云模板在云基础架构上部署Adobe Commerce。
 1. 确保您的所有Commerce自定义项和扩展都与GraphQL Application Server兼容。
-1. 确认已为您的实例设置了`CRYPT_KEY`环境变量。 您可以在云项目门户（载入UI）上检查此变量的状态。
+1. 确认已为您的实例设置了`CRYPT_KEY`环境变量。 您可以在Cloud Console上检查此变量的状态。
 1. 克隆Commerce Cloud项目。
 1. 将`application-server/.magento/.magento.app.yaml.sample`重命名为`application-server/.magento/.magento.app.yaml`，并根据需要调整.magento.app.yaml中的设置。
 1. 在`project_root/.magento/routes.yaml`文件中取消注释以下路由的配置，将`/graphql`流量重定向到GraphQL Application Server。
