@@ -2,9 +2,9 @@
 title: 应用程序模式
 description: Commerce应用程序可以根据您的需求以不同的模式运行。 查看可用的应用程序模式的详细列表。
 exl-id: a2a71f43-682f-4fa4-940a-1f6a4d441c41
-source-git-commit: 5003e8dcbb3736201ea19ebe30d5e56775096157
+source-git-commit: c415c3427f513255b9d4ebe1d24ba4024df21928
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ ht-degree: 0%
 
 ## 云支持
 
-由于只读文件系统，您无法更改远程云环境中的模式。 请勿尝试通过修改`app/etc/env.php`文件来更改模式，因为`ece-tools`包会基于多个配置源覆盖该文件。
+由于文件系统为只读，因此对更改远程云环境中的模式有严格的限制，并且不能被Adobe Commerce支持覆盖。 请勿尝试通过修改`app/etc/env.php`文件来更改模式，因为`ece-tools`包会基于多个配置源覆盖该文件。
 
 云基础架构上的Adobe Commerce在部署期间以&#x200B;_维护_&#x200B;模式自动运行应用程序，这将使您的网站脱机，直到部署完成。 否则，应用程序将保持在&#x200B;_生产_&#x200B;模式下。 请参阅&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[部署进程](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase)。
 
 如果您使用Cloud Docker for Commerce作为开发工具，则可以在&#x200B;_开发人员_&#x200B;模式下在Docker环境中部署云基础架构项目，但由于额外的文件同步操作，性能会降低。 请参阅&#x200B;_Cloud Docker for Commerce指南_&#x200B;中的[部署Docker环境](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode)。
+
 
 ## 默认模式
 
@@ -54,6 +55,10 @@ ht-degree: 0%
 - 错误处理程序中会引发异常，而不是被记录
 - 当无法调用事件订阅者时，将引发异常
 - 显示自定义`X-Magento-*` HTTP请求和响应标头
+
+>[!NOTE]
+>
+>Adobe Commerce Cloud环境不支持此模式，并且Adobe Commerce支持部门无法促进更改应用程序模式。
 
 ## 生产模式
 
