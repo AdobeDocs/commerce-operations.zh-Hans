@@ -1,7 +1,7 @@
 ---
-source-git-commit: d2fe92c778cb90912062c5f318332a02f6a4131e
+source-git-commit: 2d46933005b9848fee526d0a9f96e2e5ff58cbb8
 workflow-type: tm+mt
-source-wordcount: '14792'
+source-wordcount: '14732'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ laminas/laminas-validator
 
 ## 修复的问题
 
-我们已在Magento Open Source2.4.8核心代码中修复了254个问题。 此版本中包含的已修复问题的子集如下所述。
+我们已在Magento Open Source2.4.8核心代码中修复了253个问题。 此版本中包含的已修复问题的子集如下所述。
 
 ### API
 
@@ -1143,10 +1143,6 @@ laminas/laminas-validator
 * _AC-12128_： Prototype.js安全漏洞修复CVE-2020-27511
    * _修复说明_：系统已更新，以解决Prototype.js 1.7.3中的安全漏洞CVE-2020-27511，从而提高系统的整体安全性。 在此更新之前，系统通过删除精心编制的HTML标签容易遭受正则表达式拒绝服务(ReDOS)攻击。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/de4dfb8e>
-* _AC-12128_：
-   * _修复注释_： Prototype.js安全漏洞修复CVE-2020-27511
-   * _GitHub问题_： &lt;<https://github.com/magento/magento2/commit/de4dfb8e>>
-   * _GitHub代码贡献_：系统已更新，以解决Prototype.js 1.7.3中的安全漏洞CVE-2020-27511，从而提高系统的整体安全性。 在此更新之前，系统通过删除精心编制的HTML标签容易遭受正则表达式拒绝服务(ReDOS)攻击。
 * _AC-12189_： Grunt Less使用pub/前缀作为sourcemaps
    * _修复注释_：在使用grunt时，系统现在为路径生成不带/pub前缀的较少/css源地图，从而无需在Web服务器配置中进行变通处理。 以前，在sourcemaps路径中使用/pub前缀需要Web服务器中的特定配置才能正常工作。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38837>

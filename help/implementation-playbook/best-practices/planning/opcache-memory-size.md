@@ -4,7 +4,7 @@ description: 描述如何通过Adobe Commerce项目上的OPcache内存消耗的�
 role: Developer
 feature: Best Practices
 exl-id: d1e10068-e4e8-4e75-9f30-f3a89a08d791
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 6c0a9268cb3a3b2e76f4a389846e8407f0893b4f
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 1%
@@ -27,7 +27,7 @@ ht-degree: 1%
 ## 其他信息
 
 * [性能最佳实践 — PHP设置](../../../performance/software.md#php-settings)
-* [配置PHP选项](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/start/overview)
+* [配置PHP选项](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml)
 * [云基础架构上Adobe Commerce的数据库最佳实践](database-on-cloud.md)
 * [Adobe Commerce中有关云基础架构的最常见数据库问题](../maintenance/resolve-database-performance-issues.md)
 * [索引器“按计划更新”可优化Adobe Commerce性能](../maintenance/indexer-configuration.md)
