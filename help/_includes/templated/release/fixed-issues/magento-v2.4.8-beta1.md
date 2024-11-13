@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2d46933005b9848fee526d0a9f96e2e5ff58cbb8
+source-git-commit: e05e4e4ef547bfb95fdcc53c2095ef0725b0a6e1
 workflow-type: tm+mt
-source-wordcount: '14732'
+source-wordcount: '14731'
 ht-degree: 0%
 
 ---
@@ -809,10 +809,10 @@ laminas/laminas-validator
    * _修复注释_：现在，当添加具有所需状态的新国家/地区时，系统仅会将修改后的国家/地区添加到“general/region/state_required”配置中，以防止假定地区已禁用的自定义代码出现任何中断。 以前，添加具有所需状态的新国家/地区会将“general/region/state_required”配置重置为具有所需状态的默认国家/地区，这可能会中断业务。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37796>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38076>
-* _AC-9712_： https://github.com/magento/magento2/issues/37841
-   * _修复注释_：具有复杂的`calc`表达式的php &amp; nodejs库(grunt)之间较少编译的差异
-   * _GitHub问题_： &lt;<https://github.com/magento/magento2/commit/b34c0a75>>
-   * _GitHub代码贡献_：在更新wikimedia/less.php之后，修复php &amp; nodejs库(grunt)之间较少编译的差异：^5.x
+* _AC-9712_：具有复杂`calc`表达式的php &amp; nodejs库(grunt)之间编译较少的差异
+   * _修复注释_：在更新wikimedia/less.php：^5.x后，修复php &amp; nodejs库(grunt)之间较少编译的差异
+   * _GitHub问题_： <https://github.com/magento/magento2/issues/37841>
+   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/b34c0a75>
 * _ACP2E-2692_：执行部分索引时出现“未找到基表或视图”错误
    * _修复注释_：现在，在辅助数据库连接的情况下，部分重新索引可以与大更改日志一起正常工作
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ba25af8a>
