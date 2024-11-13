@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 8e92a5bafc045f719250756dbca4857bb76d990b
+source-git-commit: 247be06de65e4d6216419f8da0326ad5c150f20e
 workflow-type: tm+mt
-source-wordcount: '6165'
+source-wordcount: '6177'
 ht-degree: 0%
 
 ---
@@ -646,6 +646,7 @@ ht-degree: 0%
          - [ACSD-60788：由于CSP错误， [!DNL Google Tag Manager] 的自定义脚本未执行](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60788-fixes-issue-where-custom-scripts-for-google-tag-manager-are-not-executed-due-to-content-security-policy-errors.md)
          - [ACSD-59952：删除与其他共享目录具有相同组ID的共享目录时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59952-error-on-deleting-shared-catalog-with-same-group-id-as-another-shared-catalog.md)
          - [ACSD-60673：在结账时修复了多个付款方法的[!UICONTROL Cart Price Rule]问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60673-cart-price-rule-fix-for-multiple-payment-methods-at-checkout.md)
+         - [ACSD-60684： [!DNL GraphQL] 按多个字段排序的产品无法按预期工作](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60684-graphql-product-sorting-by-multiple-fields-does-not-work-as-expected.md)
       - v1.1.53 {#v1-1-53}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
          - [ACSD-59930：改进公司流的性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-59930-improves-performance-of-company-flows.md)
