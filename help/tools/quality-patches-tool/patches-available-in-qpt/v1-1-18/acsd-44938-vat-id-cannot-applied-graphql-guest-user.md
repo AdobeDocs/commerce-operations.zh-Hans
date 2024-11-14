@@ -1,18 +1,19 @@
 ---
-title: 'ACSD-44938：无法在GraphQL的访客用户请求中应用VAT_ID'
-description: ACSD-44938修补程序修复了在GraphQL请求中无法将VAT_ID应用于访客用户的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.18后，即可使用此修补程序。 修补程序ID为ACSD-44938。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+title: “ACSD-44938：无法在 [!DNL GraphQL] 来宾用户的请求中应用VAT_ID”
+description: ACSD-44938修补程序修复了无法在访客用户的 [!DNL GraphQL] 请求中应用“VAT_ID”的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.18后，即可使用此修补程序。 修补程序ID为ACSD-44938。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Admin Workspace, GraphQL
 role: Admin
-source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
+exl-id: 62d36c27-545a-4c32-be69-a92e4b3ca2ca
+source-git-commit: 3fdefc6201714c441d63574d293863e83205894b
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
 
-# ACSD-44938：无法在GraphQL访客用户请求中应用VAT_ID
+# ACSD-44938：无法在[!DNL GraphQL]访客用户的请求中应用VAT_ID
 
-ACSD-44938修补程序修复了在GraphQL请求中无法将VAT_ID应用于访客用户的问题。 This patch is available when the [Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.18 is installed. 修补程序ID为ACSD-44938。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+ACSD-44938修补程序修复了无法在访客用户的[!DNL GraphQL]请求中应用`VAT_ID`的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.18时，此修补程序可用。 修补程序ID为ACSD-44938。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 
 ## 受影响的产品和版本
 
@@ -30,20 +31,20 @@ ACSD-44938修补程序修复了在GraphQL请求中无法将VAT_ID应用于访客
 
 ## 问题
 
-VAT_ID不能在GraphQL请求中应用于来宾用户。
+`VAT_ID`无法应用于[!DNL GraphQL]访客用户的请求。
 
 <u>重现步骤</u>：
 
-1. Follow the steps mentioned in the [GraphQL tutorial](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/checkout-shopping-cart.html) in our developer documentation to create a guest cart.
-1. Try to apply VAT_ID for the guest user using GraphQL.
+1. 按照开发人员文档的[[!DNL GraphQL] 教程](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/)中所述的步骤创建访客购物车。
+1. 尝试使用[!DNL GraphQL]为来宾用户应用`VAT_ID`。
 
 <u>预期的结果</u>：
 
-VAT_ID的应用方式与注册客户的相同。 请参阅我们的开发人员文档中的[createCustomerAddress突变](https://developer.adobe.com/commerce/webapi/graphql/mutations/create-customer-address.html)一文。
+`VAT_ID`的应用方式与注册客户的相同。 请参阅我们的开发人员文档中的[`createCustomerAddress`突变](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/mutations/create-address/)文章。
 
 <u>实际结果</u>：
 
-VAT_ID不适用于使用GraphQL的访客用户。
+无法使用[!DNL GraphQL]将`VAT_ID`应用于来宾用户。
 
 ## 应用修补程序
 
@@ -54,9 +55,9 @@ VAT_ID不适用于使用GraphQL的访客用户。
 
 ## 相关阅读
 
-To learn more about Quality Patches Tool, refer to:
+要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [Quality Patches Tool released: a new tool to self-serve quality patches](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) in the support knowledge base.
+* 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
 有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。

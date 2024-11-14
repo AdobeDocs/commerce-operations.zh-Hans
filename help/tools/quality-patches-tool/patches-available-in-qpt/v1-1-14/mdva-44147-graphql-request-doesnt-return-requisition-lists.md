@@ -1,18 +1,19 @@
 ---
-title: “MDVA-44147：GraphQL请求未返回申请列表”
-description: MDVA-44147修补程序修复了GraphQL请求不返回申请列表的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14后，即可使用此修补程序。 修补程序ID为MDVA-44147。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
+title: “MDVA-44147： [!DNL GraphQL] 请求未返回[!UICONTROL Requisition Lists]”
+description: MDVA-44147修补程序修复了 [!DNL GraphQL] 请求未返回[!UICONTROL Requisition Lists]的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14后，即可使用此修补程序。 修补程序ID为MDVA-44147。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: B2B, GraphQL
 role: Admin
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+exl-id: 534c4e45-6521-45c0-ae4e-c60b754f432f
+source-git-commit: fa95ca5ac2f7606386a785fb3b29f56672d555b1
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
 
-# MDVA-44147：GraphQL请求未返回申请列表
+# MDVA-44147： [!DNL GraphQL]请求未返回[!UICONTROL Requisition Lists]
 
-MDVA-44147修补程序修复了GraphQL请求不返回申请列表的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14时，此修补程序可用。 修补程序ID为MDVA-44147。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
+MDVA-44147修补程序修复了[!DNL GraphQL]请求未返回[!UICONTROL Requisition Lists]的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14时，此修补程序可用。 修补程序ID为MDVA-44147。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 
 ## 受影响的产品和版本
 
@@ -30,12 +31,12 @@ MDVA-44147修补程序修复了GraphQL请求不返回申请列表的问题。 �
 
 ## 问题
 
-GraphQL请求不返回申请列表。
+[!DNL GraphQL]请求未返回[!UICONTROL Requisition Lists]。
 
 <u>重现步骤</u>：
 
-1. 转到&#x200B;**商店** > **设置** > **配置** > **常规** > **B2B功能**&#x200B;并启用申请列表。
-1. 以客户身份登录并将产品添加到[申请列表](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists)。
+1. 转到&#x200B;**存储** > **设置** > **配置** > **常规** > **B2B功能**&#x200B;并启用&#x200B;**[!UICONTROL Requisition List]**。
+1. 以客户身份登录并将产品添加到[[!UICONTROL Requisition List]](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists)。
 1. 创建[客户令牌](https://developer.adobe.com/commerce/webapi/graphql/mutations/generate-customer-token.html)。
 
    <pre>
@@ -51,7 +52,7 @@ GraphQL请求不返回申请列表。
       </code>
       </pre>
 
-1. 使用以下查询从客户处检索所有申请列表。 使用值为`Bearer <customer_token>`的&#x200B;**授权**&#x200B;标头。 有关详细信息，请参阅开发人员文档中的[客户查询](https://developer.adobe.com/commerce/webapi/graphql/queries/customer.html)文章。
+1. 使用以下查询从客户检索所有[!UICONTROL Requisition Lists]。 使用值为`Bearer <customer_token>`的&#x200B;**授权**&#x200B;标头。 有关详细信息，请参阅开发人员文档中的[客户查询](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/queries/customer/)文章。
 
    请求：
 

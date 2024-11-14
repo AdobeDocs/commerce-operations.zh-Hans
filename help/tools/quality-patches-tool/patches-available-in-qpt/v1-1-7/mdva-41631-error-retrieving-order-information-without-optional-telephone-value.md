@@ -1,18 +1,19 @@
 ---
 title: '''MDVA-41631：检索订单信息时出错，没有可选的“电话”值'
-description: MDVA-41631修补程序修复了以下问题：用户通过GraphQL检索订单信息时，若没有可选的“电话”值，则会出现错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7后，即可使用此修补程序。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: MDVA-41631修补程序修复了以下问题：用户通过 [!DNL GraphQL]检索订单信息时出现错误，且没有可选的“电话”值。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7后，即可使用此修补程序。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Orders
 role: Admin
-source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
+exl-id: e56cea59-ffc1-4520-85ca-136cda613884
+source-git-commit: 3f14d93eca09967e320aae4af5e94c6d0c16cd20
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
 
 # MDVA-41631：检索没有可选“电话”值的订单信息时出错
 
-MDVA-41631修补程序修复了以下问题：用户通过GraphQL检索订单信息时，若没有可选的“电话”值，则会出现错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7时，此修补程序可用。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+MDVA-41631修补程序修复了以下问题：用户通过[!DNL GraphQL]检索订单信息时出现错误，且没有可选的“电话”值。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7时，此修补程序可用。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 
 ## 受影响的产品和版本
 
@@ -30,14 +31,14 @@ Adobe Commerce（所有部署方法） 2.4.1 - 2.4.3-p1
 
 ## 问题
 
-用户通过GraphQL检索订单信息时，如果没有可选的“telephone”值，则会收到错误。
+通过[!DNL GraphQL]检索订单信息时，用户在没有可选“电话”值的情况下收到错误。
 
 <u>重现步骤</u>：
 
 1. 前往&#x200B;**商店** > **配置** > **客户** > **客户配置** > **名称和地址选项** > **显示电话**&#x200B;并将电话号码设置为可选。
-1. 使用GraphQL API作为登录客户下订单。
-   * 设置帐单和送货地址时，请勿设置电话号码。 按照开发人员文档中的[GraphQL结帐教程](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/checkout-customer.html)中提供的说明进行操作。
-1. 使用GraphQL [customerOrders查询](https://developer.adobe.com/commerce/webapi/graphql/queries/customer-orders.html)检索订单。
+1. 使用[!DNL GraphQL API]作为登录客户下订单。
+   * 设置帐单和送货地址时，请勿设置电话号码。 按照开发人员文档中的[[!DNL GraphQL] 查看教程](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/)中提供的说明进行操作。
+1. 使用[!DNL GraphQL] [`customerOrders`查询](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/queries/orders/)检索订单。
 
 <pre>
 <code class="language-graphql">
@@ -96,7 +97,7 @@ country_code
 
 ## 相关阅读
 
-要了解有关Quality Patches Tool的更多信息，请参阅：
+要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
