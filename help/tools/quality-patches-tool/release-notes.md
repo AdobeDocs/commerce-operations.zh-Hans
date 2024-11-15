@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: efa483b3e5a09bf2f4a472f9ee9e30512a0ca211
+source-git-commit: fb884f895cb03dcc920dc3de9baa63deb8737cd3
 workflow-type: tm+mt
-source-wordcount: '22642'
+source-wordcount: '23125'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,25 @@ ht-degree: 0%
 >
 >有关社区为Magento Open Source而创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
 
+## v1.1.55 {#v1-1-55}
+
+* **ACSD-58383**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了以下问题：通过[!DNL REST API]同时执行两个相同请求并发出退款，从而创建重复的贷项通知单。
+* **ACSD-58471**(适用于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了在计划关联的目录价格规则时，在产品详细信息页面上加载动态内容失败的问题。
+* **ACSD-58566**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了在查询`addPurchaseOrderComment`突变中的`created_at`字段时[!DNL GraphQL]返回内部服务器错误的问题。
+* **ACSD-58685**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了在禁用电子邮件通信时发起的销售电子邮件，在重新启用电子邮件通信后仍会发送的问题。
+* **ACSD-58735**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了受限管理员无法在关联网站的[!UICONTROL Admin]客户帐户页面上查看放弃的购物车的问题。
+* **ACSD-58828**(对于Adobe Commerce和Magento Open Source>=2.4.6 &lt;2.4.8) — 修复了以下问题：如果任何必填字段留空，则在客户端验证消息旁边会显示服务器端验证消息&#x200B;*地址*。 服务器端验证将不显示空必填字段的消息，客户端验证将处理错误通知，声明&#x200B;*这是必填字段。*
+* **ACSD-60344**(对于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了在使用具有自动审批的&#x200B;**[!UICONTROL Purchase Order]**&#x200B;时发送重复订单确认电子邮件的问题。
+* **ACSD-61348**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了在多网站环境中通过[!DNL GraphQL]可见愿望清单项目，但不在店面中显示的问题。
+* **ACSD-61534**(对于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了无法使用`bin/magento config:set`命令设置设计配置，以及通过表单操作更改锁定值的问题。 现在，无法更新从[!DNL CLI]中设置的带`--lock-env`或`--lock-conf`的锁定值。
+* **ACSD-61785**(对于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了无法通过[!DNL GraphQL]突变和[!DNL REST API]调用更新`reward_warning_notification`属性的问题，使其行为与`reward_update_notification`保持一致。
+* **ACSD-62591**(适用于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了在配置&#x200B;**[!UICONTROL User Agent Rules]**&#x200B;时主题无法正确切换的问题。
+* **ACSD-62793**(对于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了导出数据中的`datetime`属性不包含时间组件的问题。 此外，如果&#x200B;**[!UICONTROL Fields Enclosure]**&#x200B;已启用&#x200B;**，则`additional_attributes`列中的属性值将用双引号括起来。
+* **ACSD-62332**(对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了产品列表[!DNL GraphQL]查询限制为10,000个产品中的`total_count`的问题。 修复了在通过[!DNL GraphQL]查询时，[!DNL Live Search]将搜索条件中的当前页面设置为&#x200B;*1*&#x200B;而不是页面&#x200B;*2*&#x200B;的问题。
+* 已更新的版本： **ACSD-46581**、**ACSD-49513**、**ACSD-52801**、**ACSD-59514**
+* 已替换的修补程序： **ACSD-52801**、**ACSD-55100**
+* 已弃用的修补程序： **ACSD-52085**、**ACSD-57854**
+
 ## v1.1.54 {#v1-1-54}
 
 * **AC-13283**(适用于Adobe Commerce和Magento Open Source2.4.6-p8) - 2.4.6-p8中包含的回复下单向后不兼容的更改。
@@ -35,8 +54,8 @@ ht-degree: 0%
 * **ACSD-61845**(对于Adobe Commerce和Magento Open Source>=2.4.7-p1 &lt;2.4.8) — 修复了在仅使用&#x200B;*text/html*&#x200B;接受标头发送时发生的错误。
 * **ACSD-62056**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了在安装MSI的情况下可配置产品的图像上传失败的问题。
 * **ACSD-62485**(对于Adobe Commerce >=2.4.4 &lt;2.4.6-p8) || >=2.4.7 &lt;2.4.8) — 修复了在创建公司时`async.operations.all`使用者停止工作的问题。
-* 更新的修补程序：ACSD-48661、ACSD-51846、ACSD-55100、ACSD-61553
-* 已弃用的修补程序：ACSD-51846
+* 已更新的版本： **ACSD-48661**、**ACSD-55100**、**ACSD-61553**
+* 已弃用的修补程序： **ACSD-51846**
 
 ## v1.1.53 {#v1-1-53}
 
@@ -64,7 +83,7 @@ ht-degree: 0%
 * **ACSD-60788**(对于Adobe Commerce >=2.4.7 &lt;2.4.8) — 修复了由于内容安全策略(CSP)错误而无法执行[!DNL Google Tag Manager]的自定义脚本的问题。
 * **ACSD-61322**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了以下问题：在XML Sitemap中仍包含[!UICONTROL Products/Categories]且未分配给默认（常规组）的[!UICONTROL Shared Catalog]。
 * **ACSD-61366**(对于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了在为DB连接指定端口时，必须在主机参数&#x200B;*错误中配置*&#x200B;端口的情况下，在出现多个作业失败的情况下运行`setup:static-content:deploy --jobs 4`命令的问题。
-* 更新的修补程序：ACSD-51857、ACSD-57394
+* 已更新的版本： **ACSD-54989**、**ACSD-60632**
 
 ## v1.1.51 {#v1-1-51}
 
