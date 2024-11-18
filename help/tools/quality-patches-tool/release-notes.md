@@ -2,7 +2,7 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: fb884f895cb03dcc920dc3de9baa63deb8737cd3
+source-git-commit: 3f6093b55c7bbfaf8666438ac1fef8f90432d947
 workflow-type: tm+mt
 source-wordcount: '23125'
 ht-degree: 0%
@@ -68,7 +68,7 @@ ht-degree: 0%
 * **ACSD-61553**(适用于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.7) — 修复了在将具有不同优先级的多个折扣和&#x200B;**[!UICONTROL Maximum Qty Discount is Applied To]**&#x200B;应用于产品时，**[!UICONTROL Cart Price Rule]**&#x200B;折扣计算不正确的问题。
 * **ACSD-61667**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 改进库存性能，在许多有店内提货的来源中创建装运。
 * **ACSD-61969**(对于Adobe Commerce >=2.4.7 &lt;2.4.8) — 修复了要求用户键入区分大小写的优惠券代码以便与配置的优惠券代码完全匹配的问题。
-* 更新的修补程序：ACSD-54989、ACSD-60632
+* 已更新的版本： **ACSD-54989**、**ACSD-60632**
 
 ## v1.1.52 {#v1-1-52}
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 * **ACSD-60788**(对于Adobe Commerce >=2.4.7 &lt;2.4.8) — 修复了由于内容安全策略(CSP)错误而无法执行[!DNL Google Tag Manager]的自定义脚本的问题。
 * **ACSD-61322**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了以下问题：在XML Sitemap中仍包含[!UICONTROL Products/Categories]且未分配给默认（常规组）的[!UICONTROL Shared Catalog]。
 * **ACSD-61366**(对于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了在为DB连接指定端口时，必须在主机参数&#x200B;*错误中配置*&#x200B;端口的情况下，在出现多个作业失败的情况下运行`setup:static-content:deploy --jobs 4`命令的问题。
-* 已更新的版本： **ACSD-54989**、**ACSD-60632**
+* 更新的修补程序：ACSD-51857、ACSD-57394
 
 ## v1.1.51 {#v1-1-51}
 
