@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 4ad78705e8bf9b37f4d3b9ee71efdf4f24d7e244
+source-git-commit: b6ba3f3381c60e0158c85d77f70899f16ad7ca7b
 workflow-type: tm+mt
-source-wordcount: '6192'
+source-wordcount: '6203'
 ht-degree: 0%
 
 ---
@@ -659,6 +659,7 @@ ht-degree: 0%
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.54](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/overview.md)
          - [ACSD-61200：修复销售总额计算中的折扣税补偿](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61200-fixes-discount-tax-compensation-in-sales-total-calculations.md)
          - [ACSD-61522：名字和姓氏字段中的电子邮件地址会发送无效的订单确认](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61522-email-in-name-fields-sends-invalid-order-confirmations.md)
+         - [ACSD-61845：带有text/html接受标头的请求出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - 命令行工具引用{#cli-reference}
