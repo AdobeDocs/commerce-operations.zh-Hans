@@ -1,7 +1,7 @@
 ---
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 0d5eeb691281d7c62aa64a9d8cd042f18504a67f
 workflow-type: tm+mt
-source-wordcount: '6363'
+source-wordcount: '6370'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ _术语属性：_
 _名词_
 
 商店的受密码保护的后台，在此可管理订单、目录、内容和配置。
-用户可访问管理区域来管理商店，包括产品、订单、发货、CMS内容、商店设计、客户信息等。
+用户可访问管理区域来管理商店，包括产品、订单、发货、CMS内容、店面设计、客户信息等。
 管理员用户具有一个关联的角色，该角色具有控制对功能、选项和功能访问权限的权限。
 
 了解详情：[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
@@ -248,7 +248,7 @@ _形容词_
 
 具有永久物理位置的零售业务，与通过互联网几乎或完全运作的业务不同。
 
-对于[Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html)和[Order Management](https://omsdocs.magento.com/getting-started/terminology/)，此商店是跟踪产品数量、送货订单和支持店内提货的来源。
+对于[Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html)和[Order Management](#oms)，此商店是跟踪产品数量、送货订单和支持店内提货的来源。
 
 _术语属性：_
 
@@ -1046,7 +1046,11 @@ _术语属性：_
 
 _名词_
 
-[OMS](https://omsdocs.magento.com)是Adobe的Order Management System产品。
+OMS是Adobe的Order Management System产品。
+
+>[!IMPORTANT]
+>
+>Adobe Commerce Order Management (OMS)的生命周期已终止，不再受支持。
 
 OMS是一种灵活且经济实惠的解决方案，可用于从任何销售渠道管理、销售和完成库存。
 OMS提供了无缝的客户体验，在提高销售额的同时降低了成本，并加快了上市时间。
@@ -1058,7 +1062,7 @@ OMS功能包括：
 * 更轻松、响应更迅速的客户服务
 * 更好的客户体验和忠诚度
 
-了解详情：[OMS入门](https://omsdocs.magento.com/en/getting-started/)，[OMS文档站点](https://omsdocs.magento.com/en/)
+了解详情： [存档的OMS文档站点](https://commerce-docs.github.io/oms-documentation-archive/)
 
 _术语属性：_
 
@@ -1279,7 +1283,7 @@ _术语属性：_
 
 _名词_
 
-一种模块化内容单元，用户可以将其放在CMS中的页面上以显示文本和图像，或执行代码片段。
+一种模块化内容单元，用户可在CMS中将其放置到页面上以显示文本和图像，或执行代码片段。
 静态块包含可编辑的内容，并可作为产品类别的登陆页面。
 可以将小组件添加到静态块以提供其他功能。
 
