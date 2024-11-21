@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: f684470add56a13dc7bf898f50a73c792e26673c
+source-git-commit: 10c83d907fba94fcc65103bf6efce5f0c115c310
 workflow-type: tm+mt
-source-wordcount: '6207'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -657,6 +657,7 @@ ht-degree: 0%
          - [ACSD-60804：编辑与已删除公司关联的客户会导致错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-60804-editing-customer-linked-to-deleted-company-causes-error.md)
       - v1.1.54 {#v1-1-54}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.54](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/overview.md)
+         - [ACSD-61199： CMS页面的[!UICONTROL Hierarchy]选项卡未显示正确的树结构](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61199-cms-page-hierarchy-tab-doesnt-display-proper-tree-structure.md)
          - [ACSD-61200：修复销售总额计算中的折扣税补偿](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61200-fixes-discount-tax-compensation-in-sales-total-calculations.md)
          - [ACSD-61522：名字和姓氏字段中的电子邮件地址会发送无效的订单确认](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61522-email-in-name-fields-sends-invalid-order-confirmations.md)
          - [ACSD-61845：带有text/html接受标头的请求出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header.md)
