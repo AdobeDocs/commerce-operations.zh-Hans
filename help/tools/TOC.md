@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 63b3e7bcb22d791aff8f76886f74674f94596113
+source-git-commit: b6dada04a89664fe03c0f706ce9cd247e61679ac
 workflow-type: tm+mt
-source-wordcount: '6227'
+source-wordcount: '6243'
 ht-degree: 0%
 
 ---
@@ -663,6 +663,7 @@ ht-degree: 0%
          - [ACSD-61845：带有text/html接受标头的请求出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header.md)
       - v1.1.55 {#v1-1-55}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.55](/help//tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/overview.md)
+         - [ACSD-58471：计划目录价格规则时，无法在产品详细信息页面上加载动态内容](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page.md)
          - [ACSD-58383：通过 [!DNL REST API]进行的同步退款请求中的重复贷项通知单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58383-duplicate-credit-memos-from-simultaneous-refund-requests-via-rest-api.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
