@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.5安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.5的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: cb4f388c90902c2fe1df4a5d84841280fa740104
+source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
@@ -114,7 +114,7 @@ Adobe Commerce 2.4.5-p4安全版本为以前版本的2.4.5中发现的漏洞提�
 
 ### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source2.4.4、2.4.5和2.4.6。运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6)知识库文章的[jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source2.4.4、2.4.5和2.4.6。运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6)知识库文章的[jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
 
 ## 2.4.5-p3
 
@@ -124,7 +124,7 @@ Adobe Commerce 2.4.5-p3安全版本为以前版本的2.4.5中发现的漏洞提�
 
 ### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source2.4.4、2.4.5和2.4.6。运行受影响部署的商户应应用[查询UI安全漏洞CVE-2022-31160针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6)知识库文章中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source2.4.4、2.4.5和2.4.6。运行受影响部署的商户应应用[查询UI安全漏洞CVE-2022-31160针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6)知识库文章中指定的修补程序。
 
 ### 高亮
 

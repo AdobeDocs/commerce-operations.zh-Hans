@@ -3,7 +3,7 @@ title: 配置Redis
 description: 大致了解Redis功能并启动Redis配置。
 feature: Configuration, Cache
 exl-id: e037c382-334a-4096-a417-a25fdb61a9ce
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Redis功能包括：
 
 您还可以同时启用RDB和AOF选项。 有关包括持久性选项的优缺点的其他详细信息，请参阅[Redis持久性文档](https://redis.io/topics/persistence)。
 
-对于缓存实例，请设置该实例，使其足够大，用于存储整个Commerce缓存。 大小要求取决于不同的因素，如产品数量和商店查看次数。 作为起点，您可以使用文件系统中缓存文件夹的大小。 例如，如果文件系统上的`var/cache`文件夹为5 GB，请将Redis实例设置为至少5 GB以启动。 缓存实例不需要持久性，因为可以恢复Commerce缓存。 请参阅[Redis缓存指南](https://redis.io/docs/manual/eviction/)。
+对于缓存实例，请设置该实例，使其足够大，用于存储整个Commerce缓存。 大小要求取决于不同的因素，如产品数量和商店查看次数。 作为起点，您可以使用文件系统中缓存文件夹的大小。 例如，如果文件系统上的`var/cache`文件夹为5 GB，请将Redis实例设置为至少5 GB以启动。 缓存实例不需要持久性，因为可以恢复Commerce缓存。 请参阅[Redis缓存指南](https://redis.io/docs/latest/develop/use/)。
 
 对于性能优化，可以为异步删除启用以下设置。 这些设置不会更改Redis的行为。
 
