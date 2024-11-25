@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: b6dada04a89664fe03c0f706ce9cd247e61679ac
+source-git-commit: 9aeaa3faaf0aee1ed2e20cb86362d4246c858a05
 workflow-type: tm+mt
-source-wordcount: '6243'
+source-wordcount: '6268'
 ht-degree: 0%
 
 ---
@@ -660,9 +660,11 @@ ht-degree: 0%
          - [ACSD-61199： CMS页面的[!UICONTROL Hierarchy]选项卡未显示正确的树结构](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61199-cms-page-hierarchy-tab-doesnt-display-proper-tree-structure.md)
          - [ACSD-61200：修复销售总额计算中的折扣税补偿](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61200-fixes-discount-tax-compensation-in-sales-total-calculations.md)
          - [ACSD-61522：名字和姓氏字段中的电子邮件地址会发送无效的订单确认](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61522-email-in-name-fields-sends-invalid-order-confirmations.md)
+         - [ACSD-62485： async.operations.all consumer在创建公司时停止工作](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-62485-async-operations-all-consumer-stops-working-when-company-is-created.md)
          - [ACSD-61845：带有text/html接受标头的请求出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header.md)
       - v1.1.55 {#v1-1-55}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.55](/help//tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/overview.md)
+         - [ACSD-58735：受限管理员无法查看相关网站客户帐户上放弃的购物车](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58735-restricted-admin-cant-view-abandoned-shopping-carts.md)
          - [ACSD-58471：计划目录价格规则时，无法在产品详细信息页面上加载动态内容](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page.md)
          - [ACSD-58383：通过 [!DNL REST API]进行的同步退款请求中的重复贷项通知单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58383-duplicate-credit-memos-from-simultaneous-refund-requests-via-rest-api.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
