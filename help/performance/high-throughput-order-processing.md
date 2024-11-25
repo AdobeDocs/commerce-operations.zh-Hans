@@ -3,9 +3,9 @@ title: 签出性能最佳实践
 description: 了解如何优化Adobe Commerce网站上的签出体验的性能。
 feature: Best Practices, Orders
 exl-id: dc2d0399-0d7f-42d8-a6cf-ce126e0b052d
-source-git-commit: e4c1832076bb81cd3e70ff279a6921ffb29ea631
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Commerce中的[结帐](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process)流程是店面体验的关键方面。 它依赖于内置[购物车](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#shopping-cart)和[结帐](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#checkout-page)功能。
 
-性能是保持良好用户体验的关键。 查看[性能基准摘要](../implementation-playbook/infrastructure/performance/benchmarks.md)以了解有关性能预期的更多信息。 您可以通过为&#x200B;**高吞吐量订单处理**&#x200B;配置以下选项来优化签出性能：
+性能是保持良好用户体验的关键。 您可以通过为&#x200B;**高吞吐量订单处理**&#x200B;配置以下选项来优化签出性能：
 
 - [AsyncOrder](#asynchronous-order-placement) — 使用队列异步处理订单。
 - [延迟总计计算](#deferred-total-calculation) — 延迟订单总计计算，直到结帐开始。

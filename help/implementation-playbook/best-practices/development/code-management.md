@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目开发阶段的代码管理最佳实践�
 feature: Best Practices
 role: Developer
 exl-id: 0bff4c7a-1082-4b3e-b19c-bc8ad529b131
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,6 @@ ht-degree: 0%
 
 - 云基础架构上的Adobe Commerce
 - Adobe Commerce内部部署
-
-它包括[全局参考体系结构(GRA)](../../architecture/global-reference/overview.md)和单个实例安装。
 
 ## 定义
 

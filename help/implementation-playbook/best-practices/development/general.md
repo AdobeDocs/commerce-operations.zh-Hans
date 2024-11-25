@@ -4,9 +4,9 @@ description: 了解开发Adobe Commerce项目的一般最佳实践。
 feature: Best Practices
 role: Developer
 exl-id: 35de9849-2d19-4bb6-b920-9ce3838bc8bc
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: 68dc4635df9fc411925fe0d48a578edece8895dc
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -46,18 +46,6 @@ ht-degree: 0%
 1. 所有开发人员应使用与在（未来）生产服务器上使用的相同技术栈栈进行开发和测试。 此技术栈栈中的软件版本必须与生产服务器上安装的软件的主要版本和次要版本匹配。 有关Adobe Commerce的典型技术栈栈的详细信息，请参阅[系统要求](../../../installation/system-requirements.md)。
 1. 系统管理员或技术架构师可以为团队提供集中维护的本地开发环境，以确保和促进平等和最新的本地环境。
 1. 开发人员和QA工程师必须能够访问QA环境的命令行、数据库和日志文件。 这可能需要VPN连接。
-
-## 编码标准
-
-1. 所有代码都应遵循架构、方法和编码标准方面的惯例。 创意是功能所需，而不是形式所需。
-1. 所有代码应符合[Adobe Commerce架构指南](https://developer.adobe.com/commerce/php/architecture/){target="_blank}。
-1. 所有代码都应遵循[Adobe Commerce编码标准](https://developer.adobe.com/commerce/php/coding-standards/)。
-1. 所有代码都应遵循[Adobe Commerce技术准则](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)。
-1. 所有代码都应实施[Adobe Commerce最佳实践](../phases.md)（如果适用）。
-1. 所有代码都应遵守[PHP-Framework Interoperability Group (FIG)标准](https://www.php-fig.org/)。
-1. 建议尽可能考虑[Adobe Commerce技术愿景](https://developer.adobe.com/commerce/php/architecture/technical-vision/)。
-1. 与外部系统的所有集成都应该进行集成测试，以验证业务流程。
-1. 所有模块都应具有测试覆盖率。 确切测试什么内容应由开发团队与技术架构师或主要开发人员合作确定。 这一确定应基于定性措施，而不是定量措施；高代码覆盖率不是成功指标，也不意味着代码质量高。 相反，通过评估程序某一部分出现退化的可能性和严重性，确定未涵盖该部分代码的风险。
 
 ## 版本控制
 

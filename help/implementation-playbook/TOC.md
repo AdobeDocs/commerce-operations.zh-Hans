@@ -2,10 +2,10 @@
 user-guide-title: 实施行动手册
 user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
-source-git-commit: 36a2a86cbafab1e4913573b1c8431524ba43dc6a
+source-git-commit: 3f6bf86091885ffa0c557b0c43ce3ff024076a45
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 12%
+source-wordcount: '160'
+ht-degree: 15%
 
 ---
 
@@ -13,56 +13,8 @@ ht-degree: 12%
 # 实施行动手册 {#implementation-playbook}
 
 - [概述](overview.md)
-- Commerce {#intro}
-   - [关于Adobe Commerce](intro/about-commerce.md)
-   - [平台开发原则](intro/platform-development.md)
-- 项目范围{#project-scope}
-   - [知识就是力量](project-scope/knowledge.md)
-   - [关键利益相关者](project-scope/key-stakeholders.md)
-   - [流程和时间线](project-scope/process-timeline.md)
-   - [交付成果](project-scope/deliverables.md)
-   - [需求核对清单](project-scope/requirement-checklists.md)
-- 开发{#development}
-   - [平台工具](development/platform-tools.md)
-   - [项目管理工具](development/project-management-tools.md)
-   - [项目执行方法](development/delivery.md)
-   - [质量控制](development/quality-control.md)
-- 规划和治理{#planning}
-   - [交付和规划方法](planning/delivery.md)
-   - [责任和所有权](planning/ownership.md)
-   - [项目治理](planning/governance.md)
 - 架构和集成{#architecture}
    - [企业参考](architecture/enterprise-blueprint.md)
-   - 全局参考体系结构{#global-reference-architecture}
-      - [概述](architecture/global-reference/overview.md)
-      - [示例](architecture/global-reference/examples.md)
-      - 编辑器开发{#composer}
-         - [概述](architecture/global-reference/composer/overview.md)
-         - [项目结构](architecture/global-reference/composer/project-structure.md)
-         - [提示和技巧](architecture/global-reference/composer/tips-and-tricks.md)
-- 基础结构和部署{#infrastructure}
-   - [概述](infrastructure/overview.md)
-   - 自托管{#self-hosting}
-      - [概述](infrastructure/self-hosting/overview.md)
-      - [内部部署基础结构](infrastructure/self-hosting/on-premises.md)
-      - [安全概念](infrastructure/self-hosting/security-concepts.md)
-      - [监测遥测和工具](infrastructure/self-hosting/monitoring-tools.md)
-      - [灾难恢复想法](infrastructure/self-hosting/disaster-recovery-ideas.md)
-      - [性能提示](infrastructure/self-hosting/performance-tips.md)
-   - 云基础架构{#cloud}
-      - [概述](infrastructure/cloud/overview.md)
-      - [地区](infrastructure/cloud/regions.md)
-      - [技术](infrastructure/cloud/technology.md)
-      - [安全性和合规性](infrastructure/cloud/security.md)
-   - 性能优化{#performance}
-      - [典型问题](infrastructure/performance/optimization.md)
-      - [基准](infrastructure/performance/benchmarks.md)
-      - [Recommendations](infrastructure/performance/recommendations.md)
-- 启动准备就绪{#launch}
-   - [概述](launch/overview.md)
-   - [启动前步骤](launch/pre-launch-steps.md)
-   - [启动步骤](launch/launch-steps.md)
-   - [Post — 启动步骤](launch/post-launch-steps.md)
 - 维护和支持{#maintenance}
    - [概述](maintenance/overview.md)
    - [AdobeManaged Services](maintenance/adobe-managed-services.md)
@@ -103,6 +55,7 @@ ht-degree: 12%
       - [保护您的站点和基础架构](best-practices/launch/security-best-practices.md)
    - 维护{#maintenance}
       - [概述](best-practices/maintenance/overview.md)
+      - [启动后支持](best-practices/maintenance/post-launch.md)
       - [审核前端性能](best-practices/maintenance/frontend-performance.md)
       - [优化后端性能](best-practices/maintenance/backend-performance.md)
       - [索引器配置](best-practices/maintenance/indexer-configuration.md)
@@ -114,4 +67,5 @@ ht-degree: 12%
       - [更新服务](best-practices/maintenance/update-services.md)
       - [升级核对清单](best-practices/maintenance/upgrade-checklist.md)
       - [升级MariaDB的先决条件](best-practices/maintenance/mariadb-upgrade.md)
+- [术语表](glossary.md)
 - [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

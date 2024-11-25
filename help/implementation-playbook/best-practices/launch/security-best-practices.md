@@ -3,9 +3,9 @@ title: 保护您的Commerce站点和基础架构
 description: 通过在设置、配置和更新Adobe Commerce安装时实施安全最佳实践来维护安全性。
 feature: Best Practices
 exl-id: 50d8a464-6496-4e9a-b642-0c6d0eb51ba0
-source-git-commit: a00b7b66beb6499f7fb19fda2dfd450799f73728
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '2000'
 ht-degree: 0%
 
 ---
@@ -114,10 +114,6 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 - 在云基础架构上[存储Adobe Commerce的配置管理](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html)
 
 **Adobe Commerce已部署在本地**
-
-- [灾难恢复想法](../../infrastructure/self-hosting/disaster-recovery-ideas.md)
-
-- [备份和恢复](../../infrastructure/self-hosting/disaster-recovery-ideas.md)
 
 - [导出配置设置](../../../configuration/cli/export-configuration.md)
 

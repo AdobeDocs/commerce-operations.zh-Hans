@@ -5,9 +5,9 @@ badge: label="由objectsource提供" type="Informative" url="https://objectsourc
 role: Admin, User, Developer
 feature: Best Practices
 exl-id: 18bc97a0-3d34-4d48-a3e2-84af2da7d0d3
-source-git-commit: e5df5a7242dbe8ceff548257daeb39f7c9fc5c69
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,6 @@ ht-degree: 0%
 了解有关管理站点性能的更多信息：
 
 - [性能监控](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html) （云基础架构）
-- [性能优化审查](/help/implementation-playbook/infrastructure/performance/recommendations.md)
 - [配置最佳实践](/help/performance/configuration.md)
 - [Adobe Commerce观察](/help/tools/observation-for-adobe-commerce/intro.md)
 

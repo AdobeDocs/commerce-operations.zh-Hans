@@ -4,9 +4,9 @@ description: 了解如何避免由第三方Adobe Commerce扩展引起的性能�
 role: Admin
 feature: Best Practices, Extensions
 exl-id: 95d2c7bf-fd2f-4c98-8293-96d69b86341f
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 1fdbded7738365593ef7da64f4dbe6713984bff3
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '193'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 1%
 
 Adobe Commerce第三方扩展（模块）可能会导致各种问题，这些问题可能会对店面性能产生负面影响。 您可以按照以下最佳实践来避免这些问题：
 
+- 尽可能使用[进程外可扩展性](https://developer.adobe.com/commerce/extensibility/)来开发Commerce集成和自定义项，以便轻松进行维护和升级。
 - 从受信任的来源(如[Commerce Marketplace](https://marketplace.magento.com/extensions.html))下载并购买第三方扩展。
 - 将所有第三方扩展更新到最新版本。
 - 如果无法保持更新第三方扩展，请考虑使用不同的扩展。

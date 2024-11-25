@@ -2,7 +2,7 @@
 title: 快速启动内部部署
 description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce。
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: f9f8aea1a77ef062d7076a61bbafd12433f15edf
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 快速启动内部部署
 
-本页上的说明介绍了如何在[自托管](../implementation-playbook/infrastructure/self-hosting/overview.md)基础架构上安装Adobe Commerce。 有关升级现有安装的指导，请参阅&#x200B;[_升级指南_](../upgrade/overview.md)。
+本页上的说明介绍了如何在自托管基础架构上安装Adobe Commerce。 有关升级现有安装的指导，请参阅&#x200B;[_升级指南_](../upgrade/overview.md)。
 
 Adobe使用[Composer](https://getcomposer.org/)管理Adobe Commerce组件及其依赖项。 使用Composer获取Adobe Commercemetapackage具有以下优势：
 
