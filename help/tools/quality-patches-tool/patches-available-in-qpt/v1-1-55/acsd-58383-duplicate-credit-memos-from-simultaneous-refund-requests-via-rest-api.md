@@ -3,15 +3,15 @@ title: 'ACSD-58383：通过 [!DNL REST API]同步退款请求中的重复贷项�
 description: 应用ACSD-58383修补程序以修复Adobe Commerce问题，该问题导致通过 [!DNL REST API] 同时执行两个相同请求时发出退款，从而创建重复的贷项通知单。
 feature: REST, Payments, Returns
 role: Admin, Developer
-source-git-commit: ce3faa5dfc05500dcd672498761b48307064614e
+exl-id: 962970d5-22e7-4bdc-afa0-70e1fa21ecec
+source-git-commit: 28390659fe180180c9b2c8d16239008a1f8a510b
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%
 
 ---
 
-
-# ACSD-58383 Adobe Commerce修补程序：通过[!DNL REST API]同时退款请求中的重复贷项通知单
+# ACSD-58383 Adobe Commerce修补程序：通过[!DNL REST API]从同步退款请求复制贷项通知单
 
 ACSD-58383修补程序修复了以下问题：通过[!DNL REST API]发出退款，其中有两个同时执行的相同请求，从而导致重复的贷项通知单。
 

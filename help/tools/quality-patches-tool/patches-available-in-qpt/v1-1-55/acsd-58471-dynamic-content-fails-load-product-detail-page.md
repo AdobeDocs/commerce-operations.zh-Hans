@@ -1,15 +1,15 @@
 ---
-title: “ACSD-58471：在计划了关联的目录价格规则时，在产品详细信息页面上加载动态内容失败”
+title: 'ACSD-58471：在计划了关联的目录价格规则时，在产品详细信息页面上加载动态内容失败'
 description: 应用ACSD-58471修补程序以修复在计划关联的目录价格规则时，在产品详细信息页面上加载动态内容失败的Adobe Commerce问题。
 feature: Catalog Management
 role: Admin, Developer
-source-git-commit: a3afb779006de95ac70dff39a737360112220af8
+exl-id: 6ff68b74-67fc-400c-aa79-a1274fd19708
+source-git-commit: 28390659fe180180c9b2c8d16239008a1f8a510b
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-58471：在计划了关联的目录价格规则时，无法在产品详细信息页面上加载动态内容
 
@@ -28,6 +28,8 @@ ACSD-58471修补程序解决了在计划关联的目录价格规则时，在产�
 >该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
+
+在计划目录价格规则时，产品详细信息页面上未加载动态内容。
 
 <u>重现步骤</u>：
 
