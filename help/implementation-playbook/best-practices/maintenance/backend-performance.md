@@ -5,7 +5,7 @@ badge: label="由objectsource提供" type="Informative" url="https://objectsourc
 role: Admin, User, Developer
 feature: Best Practices
 exl-id: 18bc97a0-3d34-4d48-a3e2-84af2da7d0d3
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: d884d434e696a911de626dc76983468556cf451f
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 0%
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 高流量网站经常面临数据库瓶颈，主要原因是依赖单个MySQL服务器。 通过实施数据库群集，您可以解决这些瓶颈问题。数据库群集是一种分布式体系结构，可提高性能并确保高可用性。
 
-通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在云基础架构](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/technology.html)上部署的[Adobe Commerce项目中。
+通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在云基础架构](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-architecture)上部署的[Adobe Commerce项目中。
 
 #### 优化MySQL查询
 
