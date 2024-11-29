@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 0f593cd529ee1b5d259c091758e141629e785ab8
+source-git-commit: 088b9ce70ba89bad4ea82f60093de0e3bf050cf9
 workflow-type: tm+mt
-source-wordcount: '6365'
+source-wordcount: '6377'
 ht-degree: 0%
 
 ---
@@ -659,7 +659,8 @@ ht-degree: 0%
          - [ACSD-61667：提高库存性能以创建发运](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-61667-improves-inventory-performance-for-creating-shipping.md)
       - v1.1.54 {#v1-1-54}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.54](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/overview.md)
-           [ACSD-60267：通过可配置的产品选项添加产品时，FPT应用不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-60267-fpt-applies-fails-when-products-are-added-through-configurable-product-options.md)
+         - [ACSD-61756：由于缺少数据库索引，AdvancedSalesRule筛选器的性能下降](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61756-boosting-advanced-sales-rule-filter.md)
+         - [ACSD-60267：通过可配置的产品选项添加产品时，FPT无法正确应用](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-60267-fpt-applies-fails-when-products-are-added-through-configurable-product-options.md)
          - [ACSD-61199： CMS页面的[!UICONTROL Hierarchy]选项卡未显示正确的树结构](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61199-cms-page-hierarchy-tab-doesnt-display-proper-tree-structure.md)
          - [ACSD-61200：修复销售总额计算中的折扣税补偿](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61200-fixes-discount-tax-compensation-in-sales-total-calculations.md)
          - [ACSD-61522：名字和姓氏字段中的电子邮件地址会发送无效的订单确认](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61522-email-in-name-fields-sends-invalid-order-confirmations.md)
