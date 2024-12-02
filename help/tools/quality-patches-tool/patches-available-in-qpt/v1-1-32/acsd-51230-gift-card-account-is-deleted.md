@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51230：已删除礼品卡帐户'
+title: ACSD-51230：已删除礼品卡帐户
 description: 应用ACSD-51230修补程序以修复以下问题：当订单中的简单产品部分退款被处理时，Adobe Commerce帐户会被删除。
 feature: Customer Service, Gift, Marketing Tools
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a4aed574-3908-42e0-ac32-911f61b44995
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%

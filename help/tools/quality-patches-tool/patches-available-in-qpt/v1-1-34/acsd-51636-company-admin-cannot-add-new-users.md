@@ -1,9 +1,10 @@
 ---
-title: “ACSD-51636：公司管理员无法从客户帐户部分添加新用户”
+title: ACSD-51636：公司管理员无法从客户帐户部分添加新用户
 description: 应用ACSD-51636修补程序以修复Adobe Commerce问题，该问题导致公司管理员无法从客户帐户部分添加新用户，尽管他们拥有所有必要的角色和权限。
 feature: Admin Workspace, B2B, Companies, Customer Service
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 46e79ae3-ea24-4cb2-b06e-e82cec33b16c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%

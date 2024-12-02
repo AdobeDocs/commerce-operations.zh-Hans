@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-37897：从“最近查看的项目”添加产品时重定向不正确'
+title: MDVA-37897：从“最近查看的项目”添加产品时重定向不正确
 description: MDVA-37897修补程序解决了当用户尝试使用最近查看的构件中的选项添加产品时，重定向不正确的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1后，即可使用此修补程序。 修补程序ID为MDVA-37897。 请注意，该问题计划在Adobe Commerce版本2.4.4中修复。
 feature: Products
 role: Admin
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+exl-id: d4d1d735-38e4-455e-9045-a2443ce33851
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%

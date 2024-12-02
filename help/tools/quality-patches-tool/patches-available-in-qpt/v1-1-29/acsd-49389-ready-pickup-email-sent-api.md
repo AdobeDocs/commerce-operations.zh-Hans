@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49389：准备好接收由API发送的电子邮件，但还没有准备好接收'
+title: ACSD-49389：当不准备接收时，由API发送可接收电子邮件
 description: 应用ACSD-49389修补程序以修复Adobe Commerce问题，该问题导致在订单未准备好接收时，API会发送准备接收电子邮件。
 feature: REST, Communications
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d1bc430a-3021-40d1-9091-db8ed9125619
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%

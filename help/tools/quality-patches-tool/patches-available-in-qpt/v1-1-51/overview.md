@@ -1,9 +1,10 @@
 ---
-title: '概述： [!DNL Quality Patches Tool] (QPT) v1.1.51'
+title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.51
 description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.51中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: 670b0546f089bdbf572d06765af6a92f8ff5f233
+exl-id: 277b6301-944b-4913-84a3-bbcca2c92ce1
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%

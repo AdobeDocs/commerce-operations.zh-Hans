@@ -1,10 +1,10 @@
 ---
-title: “ACSD-44938：无法在 [!DNL GraphQL] 来宾用户的请求中应用VAT_ID”
+title: ACSD-44938：无法在 [!DNL GraphQL] 来宾用户的请求中应用VAT_ID
 description: ACSD-44938修补程序修复了无法在访客用户的 [!DNL GraphQL] 请求中应用“VAT_ID”的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.18后，即可使用此修补程序。 修补程序ID为ACSD-44938。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Admin Workspace, GraphQL
 role: Admin
 exl-id: 62d36c27-545a-4c32-be69-a92e4b3ca2ca
-source-git-commit: 3fdefc6201714c441d63574d293863e83205894b
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%

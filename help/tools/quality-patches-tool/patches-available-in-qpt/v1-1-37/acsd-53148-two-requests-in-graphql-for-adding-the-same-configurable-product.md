@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53148：GraphQL中用于添加同一可配置产品的两个并行请求'
+title: ACSD-53148：GraphQL中用于添加同一可配置产品的两个并行请求
 description: 应用ACSD-53148修补程序以修复Adobe Commerce问题，该问题导致GraphQL中将同一可配置产品添加到购物车的两个并行请求在购物车上产生了具有相同产品SKU的两个单独项目。
 feature: GraphQL, Shopping Cart
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e5e22bed-69de-4872-9aa8-ab228f640b30
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

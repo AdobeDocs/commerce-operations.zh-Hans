@@ -1,9 +1,10 @@
 ---
-title: “ACSD-48204：根据*是/否*属性创建的目录价格规则不考虑选定的范围”
+title: ACSD-48204：根据*是/否*属性创建的目录价格规则不考虑选定的范围
 description: 应用ACSD-48204补丁程序，以修复基于*是/否*属性创建的目录价格规则不考虑所选范围的Adobe Commerce问题。
 feature: Admin Workspace, Attributes, Catalog Management, Orders, Price Rules
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 69f2b35c-856e-4f96-ae2f-fb0c64d5eb94
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%

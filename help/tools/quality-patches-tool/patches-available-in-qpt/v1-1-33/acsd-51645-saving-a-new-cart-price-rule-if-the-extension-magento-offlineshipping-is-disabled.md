@@ -1,7 +1,8 @@
 ---
-title: 'ACSD-51645：在禁用Magento_OfflineShipping扩展的情况下保存新的购物车价格规则'
+title: ACSD-51645：在禁用Magento_OfflineShipping扩展的情况下保存新的购物车价格规则
 description: 应用ACSD-51645修补程序以修复在禁用扩展Magento_OfflineShipping的情况下保存新的购物车价格规则时出现错误的Adobe Commerce问题。
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: ce747ae4-6d2f-41c0-ba75-7da72be359c7
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-57941：产品选项未正确分配给管理员商店'
+title: ACSD-57941：产品选项未正确分配给管理员商店
 description: Adobe Commerce应用ACSD-57941修补程序以修复以下问题：产品选项被错误地分配给管理员存储区而不是其各自的存储区。广告
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a78c1797-c366-4931-b036-966d3dcf59bb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-58446：通过GraphQL删除具有子用户或团队的团队时，会显示一条信息不明确的错误消息'
+title: ACSD-58446：通过GraphQL删除具有子用户或团队的团队时，会显示一条信息不明确的错误消息
 description: 应用ACSD-58446修补程序以修复Adobe Commerce问题，该问题导致通过GraphQL删除具有子用户或团队的团队时，返回与UI不一致的消息性错误消息。
 feature: GraphQL
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 943ab281-cc41-4b96-8a7c-fff8c074267c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%

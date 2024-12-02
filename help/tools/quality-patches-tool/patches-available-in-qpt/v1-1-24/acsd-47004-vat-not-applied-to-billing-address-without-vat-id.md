@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47004：增值税未应用于没有VAT ID的帐单地址'
+title: ACSD-47004：增值税未应用于没有VAT ID的帐单地址
 description: 应用ACSD-47004修补程序以修复以下Adobe Commerce问题：如果帐单地址没有VAT ID，则不会对其应用VAT。
 feature: Customer Service, Shipping/Delivery, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 72a64937-1c04-4fc2-bc61-fd2056e24419
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 1%

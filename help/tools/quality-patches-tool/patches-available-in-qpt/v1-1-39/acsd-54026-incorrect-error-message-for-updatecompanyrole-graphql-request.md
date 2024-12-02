@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54026：updateCompanyRole GraphQL请求显示不正确的错误消息'
+title: ACSD-54026：updateCompanyRole GraphQL请求的错误消息不正确
 description: 应用ACSD-54026修补程序以修复Adobe Commerce问题，该问题导致非授权用户的updateCompanyRole GraphQL请求出现不正确的错误消息。
 feature: Roles/Permissions
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 21695333-5f18-48db-acde-246f269dd691
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51431：索引器状态为*[!UICONTROL Working]*，即使更改日志中没有条目'
+title: ACSD-51431：索引器状态为*[!UICONTROL Working]*，即使更改日志中没有条目
 description: 应用ACSD-51431修补程序以修复索引器状态为*[!UICONTROL Working]*的Adobe Commerce问题，即使更改日志中没有条目。
 feature: Logs, Price Indexer
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c87c059b-f435-468d-a7fe-e6786fdba1f8
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 0%

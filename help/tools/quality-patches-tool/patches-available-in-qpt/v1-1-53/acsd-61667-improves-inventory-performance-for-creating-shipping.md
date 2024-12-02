@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-61667：提高库存性能以创建发运'
+title: ACSD-61667：提高库存性能以创建发运
 description: 应用ACSD-60584修补程序以提高库存性能，以便在存在许多店内装货来源的情况下创建装运。
 feature: Customers, Shipping/Delivery
 role: Admin, Developer
-source-git-commit: 29748a439992c0e3efbbc84c5ab9c8239f460b73
+exl-id: 47682daf-9117-45f1-ab09-a66c13132ff3
+source-git-commit: c32684a09e4a99733feb198b1d353b090c68a7f5
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%
@@ -65,4 +66,3 @@ ACSD-61667修补程序修复了在为多个来源启用[[!DNL Inventory Manageme
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-

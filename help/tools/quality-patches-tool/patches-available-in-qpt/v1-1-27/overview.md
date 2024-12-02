@@ -1,9 +1,10 @@
 ---
-title: '概述：Quality Patches Tool (QPT) v1.1.27'
+title: 概述：Quality Patches Tool (QPT) v1.1.27
 description: 此子部分详细描述了[!UICONTROL Quality Patches Tool] (QPT) v1.1.27中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+exl-id: c82b5829-917d-4f38-b8a6-826f92e319b6
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%

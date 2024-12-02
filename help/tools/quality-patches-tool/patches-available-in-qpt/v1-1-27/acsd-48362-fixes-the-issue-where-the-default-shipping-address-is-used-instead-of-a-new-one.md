@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48362：使用默认送货地址而不是新送货地址。'
+title: ACSD-48362：使用默认送货地址而不是新送货地址。
 description: 应用ACSD-48362修补程序以修复以下问题：在使用可转让报价下订单时，使用Adobe Commerce的默认送货地址而不是新送货地址。
 feature: Admin Workspace, B2B, Orders, Shipping/Delivery
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 6f0717a6-1e29-4059-9640-5b92586c36e4
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%

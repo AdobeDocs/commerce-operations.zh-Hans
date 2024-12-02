@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-44591：订单时出错且未确认验证码'
+title: ACSD-44591：订单时出错且未进行验证码确认
 description: ACSD-44591修补程序解决了用户在未经CAPTCHA确认的情况下尝试下达订单时出现错误的问题。
 feature: Orders
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 4b8a8090-a2ba-428c-9a04-7c0842e94a6f
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%

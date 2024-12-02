@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55112：可多次单击[!UICONTROL Sumbit Review]按钮'
+title: ACSD-55112：可多次单击[!UICONTROL Sumbit Review]按钮
 description: 应用ACSD-55112修补程序以修复可多次单击[!UICONTROL Submit Review]按钮而无需 [!DNL Google reCAPTCHA v3] 验证的Adobe Commerce问题。
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 270c8adc-4f85-4643-8425-341ab0849d2b
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%

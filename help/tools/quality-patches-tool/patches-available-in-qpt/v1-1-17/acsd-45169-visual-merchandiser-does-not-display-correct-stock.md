@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-45169：Visual Merchandiser显示可配置产品的不正确库存和价格'
+title: ACSD-45169：Visual Merchandiser显示可配置产品的不正确库存和价格
 description: ACSD-45169修补程序修复了在应用暂存更新后，可视化促销程序无法显示可配置产品的正确库存和价格的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.17后，即可使用此修补程序。 修补程序ID为ACSD-45169。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Categories, Configuration, Merchandising, Orders, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 3f1218ee-2fd0-4f3e-80d7-7e6f9342e0fb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%

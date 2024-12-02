@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-33606：保存分配给层次结构的CMS页面时，用户收到错误'
+title: MDVA-33606：保存分配给层次结构的CMS页面时，用户收到错误
 description: MDVA-33606修补程序解决了在保存分配给层次结构树的CMS页面时，用户收到*发现唯一约束冲突*错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-33606。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: CMS
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 19aaa13f-7ee6-49bc-b1d9-c288dc93b951
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-39043：将小组件添加到CMS页面时，管理员用户收到错误'
+title: MDVA-39043：管理员用户将小组件添加到CMS页面时遇到错误
 description: MDVA-39043修补程序修复了具有有限访问权限的管理员用户在将“产品”构件添加到CMS页面时收到错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-39043。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Admin Workspace, CMS, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 82488249-cca3-4a28-bdc1-fa93a4c9dc2f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

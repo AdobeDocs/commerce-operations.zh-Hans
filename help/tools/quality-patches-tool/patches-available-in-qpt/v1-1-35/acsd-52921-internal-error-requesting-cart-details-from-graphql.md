@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52921：从GraphQL请求有关缺货的可配置产品的购物车详细信息时出错'
+title: ACSD-52921：从GraphQL请求有关缺货的可配置产品的购物车详细信息时出错
 description: 应用ACSD-52921修补程序以修复Adobe Commerce问题，该问题导致从GraphQL请求缺货可配置产品的购物车详细信息时出现内部错误。
 feature: GraphQL, Configuration, Products, Shopping Cart
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 7790718a-6b86-497e-b1a1-88ba22c3e8ff
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%

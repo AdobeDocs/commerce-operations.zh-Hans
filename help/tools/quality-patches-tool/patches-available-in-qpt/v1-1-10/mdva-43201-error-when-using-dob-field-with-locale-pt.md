@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-43201：使用具有区域设置PT的DOB字段时出错'
+title: MDVA-43201：使用具有区域设置PT的DOB字段时出错
 description: MDVA-43201修补程序解决了在客户注册表中使用葡萄牙语言环境的DOB客户属性时出现错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.10后，即可使用此修补程序。 修补程序ID为MDVA-43201。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: B2B, Cache
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: be087420-1ee3-40cc-8ff7-62c5641609cc
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%

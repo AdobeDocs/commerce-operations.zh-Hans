@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-57854： *GraphQL*响应包含不应在类别聚合中列出的禁用类别'
+title: ACSD-57854： *GraphQL*响应包含不应在类别聚合中列出的禁用类别
 description: 应用ACSD-57854修补程序以修复Adobe Commerce问题，该问题导致*GraphQL*响应包含不应在类别聚合中列出的禁用类别。
 feature: GraphQL
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 216aad2a-f470-49f9-b8ca-79107ca07891
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%

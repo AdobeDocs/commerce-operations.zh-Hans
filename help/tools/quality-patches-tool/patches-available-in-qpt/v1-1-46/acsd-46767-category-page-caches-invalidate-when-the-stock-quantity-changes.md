@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46767：库存数量更改时，[!UICONTROL Category]页面缓存失效'
+title: ACSD-46767：库存数量更改时，[!UICONTROL Category]页面缓存失效
 description: 应用ACSD-46767修补程序以修复在库存数量更改时，即使产品仍有库存，[!UICONTROL Category]页面缓存也会失效的Adobe Commerce问题。
 feature: Cache, Products, Inventory
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 5872dca7-fdef-47ad-8718-bf343cd3a42a
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%

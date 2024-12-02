@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54324： GraphQL requisition_lists请求不考虑分页设置'
+title: ACSD-54324： GraphQL requisition_lists请求不考虑分页设置
 description: 应用ACSD-54324修补程序以修复Adobe Commerce问题，该问题导致GraphQL“requisition_lists”请求不考虑分页设置并返回所有结果。
 feature: B2B, Customers, GraphQL
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 60f82602-1cfc-4523-a50d-46af5d5f10d9
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%

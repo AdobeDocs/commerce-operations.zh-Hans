@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55381：解决从B2B申请列表请求可配置产品选项uid时的错误'
+title: ACSD-55381：解决从B2B申请列表请求可配置产品选项uid时的错误
 description: 应用ACSD-55381修补程序以修复Adobe Commerce问题：在GraphQL从B2B申请列表查询“configurable_product_option_uid”和“configurable_product_option_value_uid”字段时出现内部服务器错误。
 feature: GraphQL, B2B, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 573d33bc-c7b6-49ce-9ad1-926548f4c952
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD 49843：使用[!UICONTROL Payment Action] = [!UICONTROL Intent Sale]自动开票后产品下载链接不可用'
+title: ACSD 49843：使用[!UICONTROL Payment Action]自动开票后产品下载链接不可用= [!UICONTROL Intent Sale]
 description: 应用ACSD-49843修补程序以修复Adobe Commerce问题：当[!UICONTROL Payment Action]设置为[!UICONTROL Intent Sale]时，通过在线付款方式自动对订购项目开票后，产品下载链接不可用。
 feature: Catalog Management, Configuration, Invoices, Orders, Storefront
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e990b550-fb32-48d2-9c39-2176d7ab34c9
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

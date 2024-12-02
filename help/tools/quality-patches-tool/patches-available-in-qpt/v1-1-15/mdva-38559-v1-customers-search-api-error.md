@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-38559： /V1/customers/search API返回错误'
+title: MDVA-38559： /V1/customers/search API返回错误
 description: MDVA-38559修补程序修复了“/V1/customers/search”API向具有多个订阅的客户返回错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.15后，即可使用此修补程序。 修补程序ID为MDVA-38559。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: REST, Search
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 6bcb65d0-1389-4090-b53c-8048bf64d8fb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 0%

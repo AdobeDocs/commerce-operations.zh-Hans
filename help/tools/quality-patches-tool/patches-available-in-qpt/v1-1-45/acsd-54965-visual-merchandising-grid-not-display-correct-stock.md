@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54965：[!UICONTROL Visual Merchandising]网格不显示正确的库存'
+title: ACSD-54965： [!UICONTROL Visual Merchandising]网格未显示正确的库存
 description: 应用ACSD-54965修补程序以修复Adobe Commerce问题，该问题导致在产品被分配给自定义库存时，[!UICONTROL Visual Merchandising]网格不显示正确的库存。
 feature: Merchandising, Categories
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: bd8a3547-1d84-4a17-b006-b35d92256211
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%

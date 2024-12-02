@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53925：无法使用[!UICONTROL Product Carousel]保存CMS块'
+title: ACSD-53925：无法使用[!UICONTROL Product Carousel]保存CMS块
 description: Adobe Commerce应用ACSD-53925修补程序以修复以下问题：将“catalog_product_price”的维度模式设置为“website”时，管理员无法通过产品轮播保存CMS块。
 feature: CMS, Page Builder, Price Indexer, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: f6d286ab-d904-4f08-8265-99632f74b88a
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%

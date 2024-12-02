@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51899：默认配送地址自动填充不正确'
+title: ACSD-51899：默认配送地址自动填充不正确
 description: 应用ACSD-51899修补程序以修复Adobe Commerce问题，该问题导致默认送货地址自动填充了错误的地址。
 feature: Checkout
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 14e48613-6af8-476c-978d-87c27a0b0d15
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

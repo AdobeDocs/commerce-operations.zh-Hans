@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54376：从[!UICONTROL shared catalog]中删除产品时购物车中出现异常'
+title: ACSD-54376：从[!UICONTROL shared catalog]中删除产品时购物车中出现异常
 description: 应用ACSD-54376修补程序以修复Adobe Commerce问题，该问题导致当产品在添加到购物车后从[!UICONTROL shared catalog]中删除时在购物车中发生异常。
 feature: Shopping Cart, B2B
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 59047ccb-d434-46cd-8d2f-ceb0c85a785a
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%

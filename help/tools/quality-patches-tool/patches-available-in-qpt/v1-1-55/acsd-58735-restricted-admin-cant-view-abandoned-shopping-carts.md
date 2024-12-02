@@ -1,16 +1,15 @@
 ---
-title: 'ACSD-58735：受限管理员无法查看相关网站客户帐户上放弃的购物车'
+title: ACSD-58735：受限管理员无法查看相关网站客户帐户上放弃的购物车
 description: 应用ACSD-58735修补程序以修复Adobe Commerce问题，该问题导致受限管理员无法在关联网站的Commerce管理员中查看客户帐户页面上的放弃的购物车。
 feature: Shopping Cart, Admin Workspace, Customers
 role: Admin, Developer
-source-git-commit: 35bae8cff40235957f8fea418a43ccead13536da
+exl-id: b5dcc12f-325d-4de5-bae5-ff938ec77b13
+source-git-commit: 8a33e0aadf3aab2b267f18b20a5195538b6990ef
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
 
 ---
-
-
 
 # ACSD-58735：受限管理员无法查看相关网站客户帐户上放弃的购物车
 

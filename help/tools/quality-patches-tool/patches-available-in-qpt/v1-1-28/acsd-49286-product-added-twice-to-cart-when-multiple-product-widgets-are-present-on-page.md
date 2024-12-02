@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49286：当存在多个产品小组件时，将产品添加到购物车两次'
+title: ACSD-49286：当存在多个产品构件时，将产品添加到购物车两次
 description: 应用ACSD-49286修补程序以修复Adobe Commerce问题：当页面上存在多个产品小组件时，产品会向购物车中添加两次。
 feature: Admin Workspace, Orders, Products, Shopping Cart
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 03fdaafe-5566-4b75-a0eb-e0cba3dad3e7
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%

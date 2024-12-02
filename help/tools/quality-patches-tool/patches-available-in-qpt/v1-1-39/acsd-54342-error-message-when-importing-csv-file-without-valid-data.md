@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54342：导入没有有效数据的CSV文件时出现错误消息'
+title: ACSD-54342：导入没有有效数据的CSV文件时出现错误消息
 description: 应用ACSD-54342修补程序以修复Adobe Commerce问题，该问题导致在导入没有有效数据的CSV文件时出现不正确的错误消息。
 feature: Roles/Permissions
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 34324a18-45af-462b-a6e6-6b6a02d4d331
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%

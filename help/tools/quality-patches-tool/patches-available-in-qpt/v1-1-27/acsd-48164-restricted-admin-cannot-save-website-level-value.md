@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48164：受限管理员无法保存网站级别的值'
+title: ACSD-48164：受限管理员无法保存网站级别的值
 description: 应用ACSD-48164修补程序以修复受限管理员无法保存网站级别值的Adobe Commerce问题。
 feature: Admin Workspace
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1ad4758e-7ecc-48d0-8313-1163188cbe73
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%

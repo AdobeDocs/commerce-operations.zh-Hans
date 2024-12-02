@@ -1,9 +1,10 @@
 ---
-title: “ACSD-51846：内部错误，因为 [!DNL REST API] 有效负载级别未验证”
+title: ACSD-51846：内部错误，因为 [!DNL REST API] 有效负载级别未验证
 description: 应用ACSD-51846修补程序以修复发生“内部错误”的Adobe Commerce问题，该问题导致未验证 [!DNL REST API] 有效负载的所有级别。
 feature: REST
 role: Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 436b075c-d9df-4bf2-94a2-52f2e66e8a4c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%

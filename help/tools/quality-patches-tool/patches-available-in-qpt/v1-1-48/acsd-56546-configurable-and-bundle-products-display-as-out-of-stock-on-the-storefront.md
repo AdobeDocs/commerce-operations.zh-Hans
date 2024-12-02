@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56546：可配置和捆绑产品在店面显示为缺货'
+title: ACSD-56546：可配置和捆绑产品在店面显示为缺货
 description: 应用ACSD-56546修补程序以修复在禁用*[!UICONTROL Display Out of Stock Products]*配置选项时，可配置和捆绑产品在店面显示为缺货的Adobe Commerce问题。
 feature: Storefront, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d9bb05ca-a84e-48bb-957e-55b28631b3cb
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%

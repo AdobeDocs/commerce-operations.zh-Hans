@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-40816：产品网格上未显示库存数据'
+title: MDVA-40816：产品网格上未显示清单数据
 description: 如果产品SKU包含特殊字符，MDVA-40816修补程序可解决在产品网格上不显示库存信息的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.10后，即可使用此修补程序。 修补程序ID为MDVA-40816。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Admin Workspace, Inventory, Orders, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: be1dbf75-389d-4bb2-847f-56afb746e4ce
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

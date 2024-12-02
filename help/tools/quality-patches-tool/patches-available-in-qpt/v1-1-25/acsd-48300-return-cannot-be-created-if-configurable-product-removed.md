@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48300：如果删除了可配置产品，则无法创建返回'
+title: ACSD-48300：如果删除了可配置产品，则无法创建返回
 description: 应用ACSD-48300修补程序以修复在删除可配置产品时无法创建返回的Adobe Commerce问题。
 feature: Admin Workspace, Configuration, Orders, Products, Returns
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 50139364-e2ea-47a8-9bca-09876dd0e70d
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%

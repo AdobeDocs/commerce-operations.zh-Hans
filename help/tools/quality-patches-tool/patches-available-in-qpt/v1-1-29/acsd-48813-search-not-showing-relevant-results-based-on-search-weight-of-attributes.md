@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48813：搜索未根据属性的搜索权重显示相关结果'
+title: ACSD-48813：搜索未根据属性的搜索权重显示相关结果
 description: Adobe Commerce应用ACSD-48813修补程序以修复以下问题：根据属性的搜索权重，搜索未显示相关结果。
 feature: Admin Workspace, Attributes, Search
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 98ef7eb1-c13e-4c56-9a25-8e61cfb5fade
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%

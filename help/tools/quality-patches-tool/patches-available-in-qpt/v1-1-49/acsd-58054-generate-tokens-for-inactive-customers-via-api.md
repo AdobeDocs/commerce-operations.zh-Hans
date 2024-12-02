@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-58054：为非活动客户生成API令牌'
+title: ACSD-58054：为非活动客户生成API令牌
 description: 应用ACSD-58054修补程序以修复Adobe Commerce问题，在该问题中可以通过API为不活跃客户生成客户令牌。
 feature: Customers, API Mesh
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 143cfc3e-0220-4950-8528-acf3bce686db
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%

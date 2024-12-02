@@ -1,5 +1,5 @@
 ---
-title: '''MDVA-41631：检索订单信息时出错，没有可选的“电话”值'
+title: MDVA-41631：检索没有可选“电话”值的订单信息时出错
 description: MDVA-41631修补程序修复了以下问题：用户通过 [!DNL GraphQL]检索订单信息时出现错误，且没有可选的“电话”值。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7后，即可使用此修补程序。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Orders
 role: Admin

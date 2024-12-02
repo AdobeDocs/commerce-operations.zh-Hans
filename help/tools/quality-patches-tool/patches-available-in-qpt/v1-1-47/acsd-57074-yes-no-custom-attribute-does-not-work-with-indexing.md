@@ -1,9 +1,10 @@
 ---
-title: “ACSD-57074：*是/否*在‘attribute_code’属性中带有‘price_*’前缀的自定义属性不适用于索引”
+title: ACSD-57074： *是/否*在“attribute_code”属性中带有“price_*”前缀的自定义属性不适用于索引
 description: 应用ACSD-57074修补程序以修复Adobe Commerce问题，该问题导致“attribute_code”属性中前缀为“price_*”的*Yes/No*自定义属性不适用于索引编制。
 feature: Products, Categories, Catalog Management
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 718b8f2d-4d3d-4755-8a91-5c2f97114813
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%

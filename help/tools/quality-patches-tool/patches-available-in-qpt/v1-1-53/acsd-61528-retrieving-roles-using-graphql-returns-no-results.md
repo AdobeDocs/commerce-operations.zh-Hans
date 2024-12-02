@@ -1,9 +1,10 @@
 ---
-title: “ACSD-61528：使用GraphQL检索角色时未返回任何结果”
+title: ACSD-61528：使用GraphQL检索角色时未返回任何结果
 description: 应用ACSD-61528修补程序以解决Adobe Commerce问题，该问题导致使用GraphQL从公司管理员处检索角色时始终返回空结果。
 feature: GraphQL, B2B, Companies, Roles/Permissions
 role: Admin, Developer
-source-git-commit: 4a02bb524fd8d1caae02d909bc9f2e3fc0112042
+exl-id: 81d78746-e723-4b18-860c-d973158b469c
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%

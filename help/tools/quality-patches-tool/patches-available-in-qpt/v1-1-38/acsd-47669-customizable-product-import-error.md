@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47669：导入带有可自定义选项的产品时出现内部服务器错误'
+title: ACSD-47669：导入带有可自定义选项的产品时出现内部服务器错误
 description: 应用ACSD-47669修补程序以修复在导入带有可自定义选项的产品时出现内部服务器错误的Adobe Commerce问题。
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e1a3b3b4-0392-4325-9766-a83276c1a593
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%

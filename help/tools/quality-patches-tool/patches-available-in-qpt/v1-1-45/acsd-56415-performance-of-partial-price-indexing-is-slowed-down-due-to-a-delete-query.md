@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56415：由于“DELETE”查询，[!UICONTROL Partial Price Indexing]的性能减慢'
+title: ACSD-56415：由于“DELETE”查询，[!UICONTROL Partial Price Indexing]的性能变慢
 description: 应用ACSD-56415修补程序以修复Adobe Commerce问题：当数据库包含大量要索引的部分价格数据时，由于“DELETE”查询导致[!UICONTROL Partial Price Indexing]的性能变慢。
 feature: Catalog Service
 role: Admin, Developer
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: c877844e-79d3-4756-97a5-de44e6fb5170
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56616：在简单库存短缺期间捆绑产品的店面展示'
+title: ACSD-56616：在简单库存短缺期间捆绑产品的店面展示
 description: 应用ACSD-56616补丁以修复以下问题：当所有关联的简单产品缺货时，Adobe Commerce店面会意外显示捆绑产品。
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 8b225d9d-1898-4c4d-81be-7b92cbf7d06f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%

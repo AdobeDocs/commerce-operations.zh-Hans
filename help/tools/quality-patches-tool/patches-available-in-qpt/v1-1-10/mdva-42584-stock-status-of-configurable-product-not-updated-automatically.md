@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-42584：可配置产品的库存状态未自动更新'
+title: MDVA-42584：可配置产品的库存状态未自动更新
 description: MDVA-42584修补程序解决了在简单产品更新时，可配置产品的库存状态未自动更新的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.10后，即可使用此修补程序。 修补程序ID为MDVA-42584。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Configuration, Orders, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 6311f069-f08f-4d58-9f4b-fa1246c02640
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%

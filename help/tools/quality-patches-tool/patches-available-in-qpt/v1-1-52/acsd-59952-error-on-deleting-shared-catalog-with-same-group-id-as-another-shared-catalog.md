@@ -1,15 +1,15 @@
 ---
-title: “ACSD-59952：删除与其他共享目录具有相同组ID的共享目录时出错”
+title: ACSD-59952：删除与其他共享目录具有相同组ID的共享目录时出错
 description: 应用ACSD-59952修补程序以修复Adobe Commerce问题，该问题导致在删除与另一个共享目录具有相同“customer_group_id”的共享目录时引发错误。
 feature: B2B, REST
 role: Admin, Developer
-source-git-commit: a67f31aa905b420dcd2a17645734632d3f94520c
+exl-id: 11cba2e6-dd62-4063-a38c-b98ea70a72e9
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-59952：删除与其他共享目录具有相同组ID的共享目录时出错
 

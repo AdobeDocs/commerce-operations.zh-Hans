@@ -1,9 +1,10 @@
 ---
-title: “MDVA-40399：无法通过API同时创建同一订单的部分发票”
+title: MDVA-40399：无法通过API同时创建同一订单的部分发票
 description: MDVA-40399修补程序修复了无法通过Rest API同时创建同一订单的部分发票的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40399。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: REST, Invoices, Orders
 role: Admin
-source-git-commit: 1fb76b8d648cbbe2a9f602d2b1a0149f1f4f0e46
+exl-id: aa400a15-57b9-4f80-a49f-f4680b7e4705
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%

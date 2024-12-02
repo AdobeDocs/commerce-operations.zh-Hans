@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-42507：为购物车规则应用暂存更新后清理全页缓存'
+title: MDVA-42507：为购物车规则应用暂存更新后清理全页缓存
 description: MDVA-42507修补程序解决了在为购物车规则应用暂存更新后清理全页缓存的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.9后，即可使用此修补程序。 修补程序ID为MDVA-42507。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Cache, Categories, Orders, Shopping Cart, Staging
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 19f61e31-67da-4bd6-bce7-a9250f3946c7
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

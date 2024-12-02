@@ -1,9 +1,10 @@
 ---
-title: “ACSD-52041：页面生成器渲染不会释放锁定”
+title: ACSD-52041：页面生成器渲染不会释放锁定
 description: 应用ACSD-52041修补程序以修复Adobe Commerce问题，该问题导致页面生成器呈现五秒钟，并且不释放锁定。
 feature: Page Builder
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 48a7fc36-e98a-4a4e-bed3-248d7d73f6cb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%

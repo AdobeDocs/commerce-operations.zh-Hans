@@ -1,9 +1,10 @@
 ---
-title: 'MC-42528：categoryList的GraphQL查询显示所有类别'
+title: MC-42528：categoryList的GraphQL查询显示所有类别
 description: MC-42528修补程序解决了以下问题：当特定类别的浏览类别设置为“拒绝”时，“categoryList”的GraphQL查询会返回已分配和未分配的类别。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MC-42528。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Catalog Management, Categories, GraphQL, Customer Service
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 0611a7ff-9d55-4d95-9d4e-9ce1d9096bb6
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 0%

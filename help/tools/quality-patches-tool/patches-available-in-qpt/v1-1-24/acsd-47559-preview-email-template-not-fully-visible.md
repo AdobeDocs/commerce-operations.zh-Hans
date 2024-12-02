@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47559：电子邮件的电子邮件模板预览不完全可见'
+title: ACSD-47559：电子邮件的电子邮件模板预览不完全可见
 description: 应用ACSD-47559修补程序以修复电子邮件模板预览不完全可见的Adobe Commerce问题。
 feature: Communications, Marketing Tools, Personalization
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a0bd51e0-990b-47c9-8de0-6071b6f79e54
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%

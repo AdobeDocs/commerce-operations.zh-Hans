@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53628：CSV销售订单报表显示错误的特殊字符'
+title: ACSD-53628：CSV销售订单报表显示不正确的特殊字符
 description: 应用ACSD-53628修补程序以修复CSV销售订单报表显示错误的特殊字符的Adobe Commerce问题。
 feature: Orders, Data Import/Export
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: b6293efe-fbeb-4b1e-b408-34dc86228b8e
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%

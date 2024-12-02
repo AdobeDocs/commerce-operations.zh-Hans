@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47497：存储/配置/服务[!UICONTROL OAuth]缺少ACL'
+title: ACSD-47497：存储/配置/服务[!UICONTROL OAuth]缺少ACL
 description: 当为特定角色设置了权限，并且您无法定义对配置部分的访问权限时，应用ACSD-47497修补程序以修复Adobe Commerce问题。
 feature: Configuration, Identity Management, Services
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 4dbbd7df-f34b-4db8-a207-3de40fb39c6f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

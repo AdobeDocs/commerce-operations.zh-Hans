@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48448：订单取消期间出现竞争条件问题，导致inventory_reservation表中出现重复条目'
+title: ACSD-48448：订单取消期间出现的竞争条件问题，导致inventory_reservation表中出现重复条目
 description: 应用ACSD-48448补丁程序，以修复在订单取消期间发生竞争条件问题，从而导致inventory_reservation表中条目重复的Adobe Commerce性能问题。
 feature: Orders, Checkout
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: c1905b60-4607-454c-975b-77b0056661ad
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%

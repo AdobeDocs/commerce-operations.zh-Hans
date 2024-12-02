@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-41046：无法分配具有自定义选项的简单产品'
+title: MDVA-41046：具有自定义选项的简单产品不可用于分配
 description: MDVA-41046修补程序解决了具有自定义选项的简单产品无法分配给可配置/分组产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.5后，即可使用此修补程序。 修补程序ID为MDVA-41046。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Products
 role: Developer
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 7fd7a9db-f834-4aea-a9d7-6e9535c037c8
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 0%

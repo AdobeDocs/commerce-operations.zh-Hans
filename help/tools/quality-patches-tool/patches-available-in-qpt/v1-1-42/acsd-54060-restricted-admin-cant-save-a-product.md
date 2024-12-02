@@ -1,9 +1,10 @@
 ---
-title: “ACSD-54060：受限管理员无法保存属于其他产品的产品”
+title: ACSD-54060：受限管理员无法保存属于其他产品的产品
 description: 应用ACSD-54060修补程序以修复受限管理员无法保存产品（如果它是分配给其他范围的另一个产品的子产品）的Adobe Commerce问题。
 feature: Admin Workspace, Roles/Permissions, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 2af24cbf-65a1-4bd6-aad3-19b613bee7f2
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%

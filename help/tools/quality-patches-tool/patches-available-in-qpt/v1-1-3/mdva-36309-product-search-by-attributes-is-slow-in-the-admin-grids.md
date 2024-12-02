@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-36309：在管理网格中，按属性搜索产品的速度较慢'
+title: MDVA-36309：在管理网格中，按属性搜索产品的速度较慢
 description: MDVA-36309修补程序解决了在管理网格中按属性搜索产品速度缓慢的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-36309。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: Admin Workspace, Attributes, Products, Search
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: fe23f129-15b4-4239-a699-4776587cc4b8
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%

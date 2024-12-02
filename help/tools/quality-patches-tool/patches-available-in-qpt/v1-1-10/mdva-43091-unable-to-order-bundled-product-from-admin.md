@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-43091：无法从管理员订购捆绑产品'
+title: MDVA-43091：无法从管理员处订购捆绑产品
 description: MDVA-43091修补程序解决了用户无法从Commerce管理员订购捆绑产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.10后，即可使用此修补程序。 修补程序ID为MDVA-43091。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Admin Workspace, Orders, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: d2812f97-107c-4db9-93cc-7004344fcc95
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48059：商家无法为类别属性保存[!UICONTROL Match product by rule]。'
+title: ACSD-48059：商家无法为“类别”属性保存[!UICONTROL Match product by rule]。
 description: 应用ACSD-48059修补程序以修复Adobe Commerce问题，该问题导致商家无法保存“类别”属性的[!UICONTROL Match product by rule]。
 feature: Admin Workspace, Attributes, Categories, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e156a752-81b3-4404-81e2-af7ed29f2b1d
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%

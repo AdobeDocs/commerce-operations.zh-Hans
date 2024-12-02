@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51666：错误“会话已过期，请重新登录。” 登录后'
+title: ACSD-51666：错误“会话已过期，请重新登录。” 登录之后
 description: 应用ACSD-51666修补程序以修复错误*会话已过期的Adobe Commerce问题，请重新登录。*在您尝试登录后发生。
 feature: Customers
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 8968b314-6625-45fa-9733-20560cca7089
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 0%

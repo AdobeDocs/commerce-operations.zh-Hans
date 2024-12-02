@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48773：从错误的商店获取的奖励积分电子邮件模板'
+title: ACSD-48773：从错误的商店获取的奖励积分电子邮件模板
 description: 应用ACSD-48773修补程序以修复从错误商店获取奖励点电子邮件模板的Adobe Commerce问题。
 feature: Admin Workspace, Communications, Marketing Tools, Orders, Personalization, Rewards
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: db8b6196-3e13-4c1b-8ae8-040487180817
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%

@@ -1,15 +1,15 @@
 ---
-title: “ACSD-61522：字段*名字和姓氏*中的电子邮件地址发送无效的订单确认”
+title: ACSD-61522：*名字和姓氏*字段中的电子邮件地址会发送无效的订单确认
 description: 应用ACSD-61522修补程序以修复Adobe Commerce问题，该问题导致有可能在来宾客户的*[!UICONTROL First Name]*和*[!UICONTROL Last Name]*字段中输入电子邮件地址，从而导致发送无效的订单确认电子邮件。
 feature: Checkout, Customers
 role: Admin, Developer
-source-git-commit: d56f4fda007c1499bdba82ac3db9ac5ea1d34b0e
+exl-id: e1ed7a57-4054-44db-bc17-9b9056096fce
+source-git-commit: a5dda25e502889ee0a23e99b412aeeb863de452c
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-61522： *名字和姓氏*&#x200B;字段中的电子邮件地址会发送无效的订单确认
 

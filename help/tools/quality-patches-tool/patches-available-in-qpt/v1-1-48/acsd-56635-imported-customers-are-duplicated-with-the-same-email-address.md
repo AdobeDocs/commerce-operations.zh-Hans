@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56635：将帐户共享设置为 [!DNL Global]时，导入的客户重复'
+title: ACSD-56635：将帐户共享设置为 [!DNL Global]时，导入的客户重复
 description: 应用ACSD-56635修补程序以修复Adobe Commerce问题，该问题导致在使用导入且帐户共享设置为 [!DNL Global]时，导入的客户使用相同的电子邮件地址重复。
 feature: Customers, Attributes
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 73abec4a-03b0-45d4-bfc6-f3c6862e733c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%

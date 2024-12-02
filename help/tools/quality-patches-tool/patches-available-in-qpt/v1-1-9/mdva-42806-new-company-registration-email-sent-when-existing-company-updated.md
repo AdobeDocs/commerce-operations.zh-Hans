@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-42806：每次更新现有公司时都会发送新的公司注册电子邮件'
+title: MDVA-42806：每次更新现有公司时都会发送新的公司注册电子邮件
 description: MDVA-42806修补程序解决了每次通过REST API更新现有公司时都会发送新的公司注册电子邮件的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.9后，即可使用此修补程序。 修补程序ID为MDVA-42806。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: REST, B2B, Communications, Companies
 role: Admin
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+exl-id: 4fc2ee54-d88b-4940-b6ac-e25ad61e5c66
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%

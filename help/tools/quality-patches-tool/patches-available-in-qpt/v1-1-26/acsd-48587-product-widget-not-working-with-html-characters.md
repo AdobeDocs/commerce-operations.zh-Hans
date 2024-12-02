@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48587：产品小部件不适用于包含HTML字符的SKU'
+title: ACSD-48587：产品小部件不适用于包含HTML字符的SKU
 description: 应用ACSD-48587补丁以修复Adobe Commerce问题，该问题导致在产品构件匹配规则中HTML特殊字符无法显示匹配产品。
 feature: Admin Workspace, CMS, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c3e31835-03be-46b4-a080-09edf55b5b4e
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48313：如果属性值包含逗号，则未解析[!UICONTROL configurable_variations]列'
+title: ACSD-48313：如果属性值包含逗号，则未解析[!UICONTROL configurable_variations]列
 description: 应用ACSD-48313修补程序以修复当属性值包含逗号时无法解析[!UICONTROL configurable_variations]列的Adobe Commerce问题。
 feature: Attributes, Configuration
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1ce0c8dc-0d03-4ebd-b02a-08090b244190
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52801：GraphQL产品过滤器查询未显示部分匹配结果'
+title: ACSD-52801：GraphQL产品过滤器查询未显示部分匹配结果
 description: 应用ACSD-52801修补程序以修复Adobe CommerceGraphQL产品过滤器查询未显示部分匹配结果的问题。
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 946a7189-60b2-4812-92ca-ed7ba35b2488
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-50345：签出期间出现reCAPTCHA问题'
+title: ACSD-50345：在签出期间出现reCAPTCHA问题
 description: 应用ACSD-50345修补程序以修复Adobe Commerce问题，该问题导致在下订单时和结账过程中reCAPTCHA v2和v3验证失败。
 feature: Checkout, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: eae9a6ad-0999-4581-b3c0-7667ee7beb54
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%

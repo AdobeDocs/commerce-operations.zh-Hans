@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55231：使用快速订购功能时出现“SKU未找到”错误'
+title: ACSD-55231：使用快速订购功能时出现“未找到SKU”错误
 description: Adobe Commerce应用ACSD-55231修补程序以修复以下问题：当尝试使用快速订购功能将产品添加到购物车时，出现*“在目录中未找到SKU”*错误。
 feature: Products, Checkout, B2B
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: f0a04773-7395-4945-a72b-5a6a018bc94e
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-27456：用户加载Swagger时出错'
+title: MDVA-27456：用户加载Swagger时遇到错误
 description: MDVA-27456修补程序修复了用户在尝试加载Swagger时出现错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-27456。 请注意，Adobe Commerce 2.3.7中已修复此问题。
 feature: Tools and External Services
 role: Admin
-source-git-commit: 1fb76b8d648cbbe2a9f602d2b1a0149f1f4f0e46
+exl-id: a7d5dc7d-b916-4a09-9068-646f8474bba4
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51700：在可下载的产品编辑页面上切换商店视图时出错'
+title: ACSD-51700：在可下载的产品编辑页面上切换商店视图时出错
 description: 应用ACSD-51700补丁以修复在管理员的可下载产品编辑页面上切换商店视图时出现错误的Adobe Commerce问题。
 feature: Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: dd3da026-ac72-440c-8632-8a3ca27fc134
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

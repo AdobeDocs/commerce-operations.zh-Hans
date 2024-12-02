@@ -1,11 +1,12 @@
 ---
-title: 'ACSD-61199： CMS页面[!UICONTROL Hierarchy]选项卡未显示正确的树结构'
+title: ACSD-61199： CMS页面[!UICONTROL Hierarchy]选项卡未显示正确的树结构
 description: 应用ACSD-61199修补程序以修复Adobe Commerce问题，该问题导致在编辑具有现有*[!UICONTROL Hierarchy]*的CMS页面时，CMS页面的*[!UICONTROL Hierarchy]*选项卡未显示正确的树结构。
 feature: Page Content
 role: Admin, Developer
-source-git-commit: bbe4e272d3a8bd82163bdd718d006a314287b650
+exl-id: f541d001-9680-431a-9a62-816c2d10b6d5
+source-git-commit: 5568b2f574c7e90e641513c3c0ea4574648770ac
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---

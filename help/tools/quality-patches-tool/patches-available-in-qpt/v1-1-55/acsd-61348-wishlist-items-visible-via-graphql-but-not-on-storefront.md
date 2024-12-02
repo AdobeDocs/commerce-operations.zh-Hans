@@ -3,7 +3,8 @@ title: ACSD-61348：通过GraphQL可见但不在店面显示的愿望清单项�
 description: 应用ACSD-61348修补程序以修复Adobe Commerce问题，该问题导致在多网站环境中，希望列表项目通过GraphQL可见，但在店面中不可见。
 feature: Customers
 role: Admin, Developer
-source-git-commit: b3dcce33b5710cd3c4b835f5fc7fd8f16cdc6a7f
+exl-id: fcba2c28-077d-4663-b129-7da436e2791d
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51294：价格、数量、税额、运费、作为字符串发送至 [!DNL Google Analytics] 的收入和GTM'
+title: ACSD-51294：价格、数量、税额、运输、作为字符串发送到 [!DNL Google Analytics] 的收入和GTM
 description: 应用ACSD-51294修补程序以修复Adobe Commerce问题，该问题导致价格、数量、税务、运费和收入作为字符串发送到 [!DNL Google Analytics] 和GTM。
 feature: Orders, Shipping/Delivery, Variables
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 99d2a311-2543-4007-99fd-6c34a2950773
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

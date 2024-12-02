@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-38447：GraphQL响应中返回“不可见”可单独配置的子产品，导致MySQL查询缓慢'
+title: MDVA-38447：GraphQL响应中返回“不可见”可单独配置的子产品，导致MySQL查询缓慢
 description: MDVA-38447 Adobe Commerce修补程序修复了以下问题：GraphQL响应中返回“不可见”可单独配置的子产品，以及使用类别过滤器的GraphQL产品查询MySQL速度缓慢。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-38447。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: B2B, GraphQL, Categories, Configuration, Products, Services
 role: Admin
-source-git-commit: c1055ed10813aa6e585f93ec3091d216af06affd
+exl-id: d97297c5-e8e8-407b-b43b-033937426fe2
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%

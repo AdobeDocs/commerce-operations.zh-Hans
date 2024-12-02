@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47292：GraphQL响应中没有现成的捆绑产品'
+title: ACSD-47292：GraphQL响应中没有现成的捆绑产品
 description: Adobe Commerce应用ACSD-47292修补程序以修复以下问题：即使“显示缺货产品”设置为“是”，GraphQL响应中仍无法使用缺货捆绑产品。
 feature: Admin Workspace, Categories, GraphQL, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 3b8114a3-cc45-4d65-af74-cb3e905d7f75
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47988：产品导出会修剪HTML生成器产品描述中的页面标记'
+title: ACSD-47988：产品导出会修剪Page Builder产品描述中的HTML标记
 description: 应用ACSD-47988修补程序以修复Adobe Commerce问题，该问题导致产品导出会裁切HTML生成器产品描述中的页面标记。
 feature: Admin Workspace, Data Import/Export, Page Builder, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 2cb3b4ac-38df-4832-b894-b34bb3d7bbc6
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%

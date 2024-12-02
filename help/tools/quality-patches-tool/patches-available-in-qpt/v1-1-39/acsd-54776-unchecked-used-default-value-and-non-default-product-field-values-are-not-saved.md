@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54776：未选中[!UICONTROL Use Default Value]，第二个网站、商店和商店视图未保存非默认产品字段值'
+title: ACSD-54776：未选中[!UICONTROL Use Default Value]，第二个网站、商店和商店视图不会保存非默认的产品字段值
 description: 应用ACSD-54776修补程序以修复Adobe Commerce问题，该问题导致第二个网站、商店和商店视图未保存未勾选的[!UICONTROL Use Default Value]和非默认产品字段值。
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d9f63abb-5d00-4777-a186-1120344af018
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%

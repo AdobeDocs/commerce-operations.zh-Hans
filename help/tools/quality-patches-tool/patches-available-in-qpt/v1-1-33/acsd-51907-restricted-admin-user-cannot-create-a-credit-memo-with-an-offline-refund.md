@@ -1,7 +1,8 @@
 ---
-title: “ACSD-51907：受限管理员用户无法创建离线退款的贷项通知单”
+title: ACSD-51907：受限管理员用户无法创建离线退款的贷项通知单
 description: 应用ACSD-51907补丁以修复Adobe Commerce问题，该问题导致受限管理员用户无法创建包含离线退款的贷项通知单。
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1c44d99b-7633-4768-b7e7-332f3666a5d9
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46809：用户在分配大量产品源时出错'
+title: ACSD-46809：分配大量产品源时，用户收到错误
 description: 应用ACSD-46809修补程序以修复在分配大量产品源时用户收到错误的Adobe Commerce问题。
 feature: Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 4225f49b-84a1-4641-a05b-ba6ada6e83be
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%

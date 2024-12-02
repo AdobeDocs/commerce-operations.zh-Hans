@@ -1,15 +1,15 @@
 ---
-title: 'ACSD-58141：为启用了L2 Redis缓存的登录客户在POST请求时重新生成PHPSESSID'
+title: ACSD-58141：为启用了L2 Redis缓存的已登录客户在POST请求时重新生成PHPSESSID
 description: 应用ACSD-58141修补程序以修复以下Adobe Commerce问题：对于已启用L2 Redis缓存的登录客户，在店面区域的POST请求上重新生成“PHPSESSID”，并且通过Admin更新该客户。
 feature: Customers, Cache
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c188c215-204c-489f-8703-4c81ca8703b7
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-58141：如果启用了L2 Redis缓存，则对已登录客户的[!DNL POST]请求重新生成PHPSESSID
 

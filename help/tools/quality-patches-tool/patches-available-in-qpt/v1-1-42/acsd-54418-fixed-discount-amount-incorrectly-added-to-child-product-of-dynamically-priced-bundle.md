@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54418：将固定折扣金额错误地添加到动态定价捆绑包的子产品中'
+title: ACSD-54418：将固定折扣金额错误地添加到动态定价捆绑包的子产品中
 description: 应用ACSD-54418修补程序以修复将固定折扣金额错误地应用于动态定价捆绑包的每个子产品的Adobe Commerce问题。
 feature: Shopping Cart
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: f7b57361-9056-4eec-a393-dadb65aa595b
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%

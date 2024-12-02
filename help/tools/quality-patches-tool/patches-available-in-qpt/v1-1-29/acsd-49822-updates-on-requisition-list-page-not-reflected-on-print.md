@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49822：申请列表页面上的更新未反映在打印申请列表中'
+title: ACSD-49822：申请列表页面上的更新未反映在打印申请列表中
 description: 应用ACSD-49822补丁程序，以修复Adobe Commerce中申购单列表页上的更新未反映在打印申购单列表上的问题。
 feature: Admin Workspace, B2B
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 053b8900-0900-4b7e-ba1b-ad4b88ca3f35
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%

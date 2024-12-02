@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48058：如果捆绑产品未分配网站，则产品价格重新指数不起作用'
+title: ACSD-48058：如果捆绑产品未分配网站，则产品价格重新指数不起作用
 description: 应用ACSD-48058修补程序以修复产品价格重新索引在Adobe Commerce未分配给任何网站的情况下不起作用的问题。
 feature: Admin Workspace, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 270e1b5d-75e0-4374-973a-2bb37161ceec
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%

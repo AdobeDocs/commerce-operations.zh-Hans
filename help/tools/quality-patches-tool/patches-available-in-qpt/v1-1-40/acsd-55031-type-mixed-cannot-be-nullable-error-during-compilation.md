@@ -1,9 +1,10 @@
 ---
-title: '''ACSD-55031：编译期间出现''类型“mixed”不能为空''错误'''
+title: ACSD-55031：编译期间出现“类型“mixed”不能为nullable”错误
 description: Adobe Commerce应用ACSD-55031修补程序以修复以下问题：安装自定义扩展后，在编译期间出现*类型“mixed”不能为空*错误。
 feature: Extensions
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 770d35aa-7ce2-4517-b393-b7c623c9f779
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 0%

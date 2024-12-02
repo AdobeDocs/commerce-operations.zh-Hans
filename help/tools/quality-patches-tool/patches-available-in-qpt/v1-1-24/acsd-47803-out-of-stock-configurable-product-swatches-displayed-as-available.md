@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47803：缺货的可配置产品样本显示为可用'
+title: ACSD-47803：缺货的可配置产品色板显示为可用
 description: 应用ACSD-47803修补程序以修复显示缺货的可配置产品样本可用的Adobe Commerce问题。
 feature: Configuration, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c1b80949-65ed-4a44-8be4-25decda32142
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%

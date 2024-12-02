@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55305：在[!UICONTROL My Account]中编辑公司用户期间弹出窗口冻结'
+title: ACSD-55305：在[!UICONTROL My Account]中编辑公司用户时弹出窗口冻结
 description: 应用ACSD-55305修补程序以修复Adobe Commerce问题，该问题导致[!UICONTROL My Account] &amp；gt； [!UICONTROL Company Structure]页面上的[!UICONTROL Edit Company User]弹出窗口因屏幕上的加载器而冻结。
 feature: Companies, B2B
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: eeb2b136-022f-42d5-85e2-85537f4677d6
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%

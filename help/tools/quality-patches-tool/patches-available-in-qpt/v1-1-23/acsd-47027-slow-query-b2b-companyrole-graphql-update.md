@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47027：慢查询B2B [!UICONTROL CompanyRole] [!DNL GraphQL] 更新'
+title: ACSD-47027：查询B2B [!UICONTROL CompanyRole] [!DNL GraphQL] 更新缓慢
 description: 应用ACSD-47027修补程序以修复查询B2B [!UICONTROL CompanyRole] [!DNL GraphQL] 更新缓慢的Adobe Commerce问题。
 feature: B2B, Companies, GraphQL, Roles/Permissions
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 91eb0297-1ba8-47b7-9581-29bee835843c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%

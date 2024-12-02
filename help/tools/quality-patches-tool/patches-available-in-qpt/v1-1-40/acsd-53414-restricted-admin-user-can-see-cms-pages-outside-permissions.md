@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53414：受限管理员用户可在其权限范围内查看CMS页面'
+title: ACSD-53414：受限管理员用户可在其权限范围内查看CMS页面
 description: 应用ACSD-53414修补程序以修复Adobe Commerce问题，该问题导致受限管理员用户无法看到其权限范围之外的CMS页面。
 feature: CMS
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 86658336-679b-4fe0-9d26-56064ff0c604
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%

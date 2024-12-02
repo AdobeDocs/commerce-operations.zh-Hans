@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54739： *[!UICONTROL Product Stock]*状态未应用于*[!UICONTROL Related Product Rules]*'
+title: ACSD-54739： *[!UICONTROL Product Stock]*状态未应用于*[!UICONTROL Related Product Rules]*
 description: 应用ACSD-54739修补程序以修复未对*[!UICONTROL Related Product Rules]*应用*[!UICONTROL Product Stock]*状态的Adobe Commerce问题。
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d6d3b25d-b10e-4ccb-a9c4-b5c1c7773eb6
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%

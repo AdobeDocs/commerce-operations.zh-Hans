@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46865：启用[!UICONTROL asynchronous indexing]时未填充[!UICONTROL shipment]和[!UICONTROL credit memo]'
+title: ACSD-46865：启用[!UICONTROL asynchronous indexing]时未填充[!UICONTROL shipment]和[!UICONTROL credit memo]
 description: 应用ACSD-46865修补程序以修复启用[!UICONTROL asynchronous indexing]后未填充[!UICONTROL shipment]和[!UICONTROL credit memo]网格的Adobe Commerce问题。
 feature: Cache, Orders, Returns, Shipping/Delivery
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 6f84f5b6-6c34-476c-aae5-9a8ba306f8e4
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%

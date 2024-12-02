@@ -1,9 +1,10 @@
 ---
-title: “ACSD-47106：未保存公司创建页面上的新自定义属性”
+title: ACSD-47106：未保存公司创建页面上的新自定义属性
 description: 应用ACSD-47106修补程序以修复在公司创建页面上的新自定义属性中无法保存值的Adobe Commerce问题。
 feature: Attributes, B2B, Companies
 role: Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 5835760d-fca1-44ba-aa5e-8797258c7c75
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

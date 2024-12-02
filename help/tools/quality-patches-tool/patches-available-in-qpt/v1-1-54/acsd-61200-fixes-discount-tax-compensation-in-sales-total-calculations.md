@@ -1,9 +1,10 @@
 ---
-title: “ACSD-61200：修复销售总额计算中的折扣税补偿”
+title: ACSD-61200：修复销售总额计算中的折扣税补偿
 description: 应用ACSD-61200修补程序以修复销售总额计算中缺少*[!UICONTROL Discount Tax Compensation Amount]*和*[!UICONTROL Shipping Discount Tax Compensation Amount]*而导致销售订单数据与优惠券报表数据不一致的Adobe Commerce问题。
 feature: Reporting, Taxes
 role: Admin, Developer
-source-git-commit: 61259d8e059cd813a84907e4baef873b2cc8cad0
+exl-id: eb908827-de29-4b2c-b094-b5db0931cd52
+source-git-commit: 2e82c935145d71d0c66c531003fa51f564da6e41
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%

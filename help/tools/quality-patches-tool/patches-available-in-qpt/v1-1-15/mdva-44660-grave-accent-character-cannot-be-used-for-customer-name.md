@@ -1,9 +1,10 @@
 ---
-title: “MDVA-44660：重音符号字符[']不能用于客户名称”
+title: MDVA-44660：重音符号字符[']不能用于客户名称
 description: MDVA-44660修补程序修复了重音符号字符(')无法用于客户名称的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.15后，即可使用此修补程序。 修补程序ID为MDVA-44660。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Variables
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 603161bf-fac3-4571-b872-d98de1bdf6b4
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

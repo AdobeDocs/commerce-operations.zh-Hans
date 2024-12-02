@@ -1,9 +1,10 @@
 ---
-title: “ACSD-60673：在结账时修复了多种付款方法的[!UICONTROL Cart Price Rule]问题”
+title: ACSD-60673：在结账时修复了多个付款方法的[!UICONTROL Cart Price Rule]问题
 description: 应用ACSD-60673修补程序以修复Adobe Commerce问题，该问题导致总计中并非总是列出使用付款方法条件的[!UICONTROL Cart Price Rule]的折扣。
 feature: Price Rules
 role: Admin, Developer
-source-git-commit: 9334b0bb7aa32cd14622c6dcef799dffe7e35fdc
+exl-id: 2fe27959-5e5f-4d25-9f56-b0f8319fd562
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%

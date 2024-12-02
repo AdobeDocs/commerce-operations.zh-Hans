@@ -1,9 +1,10 @@
 ---
-title: “ACSD-60584：允许为一个网站创建的访问令牌访问其他网站上的信息”
+title: ACSD-60584：允许为一个网站创建的访问令牌访问其他网站上的信息
 description: 应用ACSD-60584修补程序修复了一个网站上为用户创建的访问令牌被允许访问或更改其他网站上的客户信息的问题。
 feature: Customers, GraphQL
 role: Admin, Developer
-source-git-commit: eba4a8fd7bbf52fbc4295feab0d5bb79e7383b66
+exl-id: ea30ba92-4b7b-44f9-a1b1-97946061d9e6
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%

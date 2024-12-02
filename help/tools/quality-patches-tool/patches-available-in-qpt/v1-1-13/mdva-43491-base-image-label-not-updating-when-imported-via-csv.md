@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-43491：通过CSV导入时，基本图像标签未更新'
+title: MDVA-43491：通过CSV导入时，基本图像标签未更新
 description: MDVA-43491修补程序修复了在通过多商店网站的CSV文件导入时，“base_image_label”不会更新的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.13后，即可使用此修补程序。 修补程序ID为MDVA-43491。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Data Import/Export
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: f6a5f641-aaf0-4b6e-afa9-7f436f8f59e6
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53704：奖励积分余额历史记录在过期后计算错误'
+title: ACSD-53704：过期后奖励积分余额历史记录计算错误
 description: 应用ACSD-53704修补程序以修复在奖励点到期日期后错误计算奖励点余额历史记录的Adobe Commerce问题。
 feature: Rewards
 role: Admin, Developer
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 8cd297cc-9e9d-4615-b817-283065a79c2f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%

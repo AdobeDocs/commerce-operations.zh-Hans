@@ -1,15 +1,15 @@
 ---
-title: 'ACSD-61103：客户通过API成功登录后，故障计数未重置为零'
+title: ACSD-61103：客户通过API成功登录后，故障计数不会重置为零
 description: 应用ACSD-61103修补程序以修复Adobe Commerce问题：在客户通过API端点成功登录后，“customer_entity”表中的故障计数不会重置为零。
 feature: GraphQL, REST, Customers
 role: Admin, Developer
-source-git-commit: d53b747c3b2021e842647de5371a5f0f2a760f09
+exl-id: 9f5aac1f-c8a3-4255-8ebc-2268283b3384
+source-git-commit: acb5ff9656d7391de1e9b936909ce5a8a73d5d67
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-61103：客户通过API成功登录后，故障计数不会重置为零
 
@@ -61,4 +61,3 @@ ACSD-61103修补程序解决了客户通过API端点成功登录后，`customer_
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-

@@ -1,9 +1,10 @@
 ---
-title: “ACSD-60631：将同一产品分配给多个可配置产品时，GraphQL会返回错误”
+title: ACSD-60631：将同一产品分配给多个可配置产品时，GraphQL会返回错误
 description: 应用ACSD-60631修补程序以修复Adobe Commerce问题，该问题导致将同一产品分配给多个可配置产品时，GraphQL查询返回错误。
 feature: Attributes, GraphQL
 role: Admin, Developer
-source-git-commit: 093c5d030d38a108d8acb6e59455513db147dfdf
+exl-id: 2fcc0e06-390f-4803-8e43-db7bac1c51e8
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53309：可自定义选项和[!UICONTROL Regular Price]标签的税务申请不完整'
+title: ACSD-53309：可自定义选项和[!UICONTROL Regular Price]标签的纳税申请不完整
 description: 应用ACSD-53309修补程序以修复在选择了可自定义选项时未在“[!UICONTROL Regular Price]”标签中完全应用税的Adobe Commerce问题。
 feature: Taxes, Shipping/Delivery
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 7f4a8923-11dd-48b2-9d97-77de5c2b24ce
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%

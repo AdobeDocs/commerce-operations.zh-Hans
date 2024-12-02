@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56515：具有网站级别权限的管理员无法编辑[!UICONTROL Dynamic Block]'
+title: ACSD-56515：具有网站级别权限的管理员无法编辑[!UICONTROL Dynamic Block]
 description: 应用ACSD-56515修补程序以修复Adobe Commerce问题，该问题导致具有网站级别权限的管理员无法添加或编辑[!UICONTROL Dynamic Block]。
 feature: Roles/Permissions, Admin Workspace
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: dd3e61a4-aba4-4f86-b4fe-88ca4276ace5
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%

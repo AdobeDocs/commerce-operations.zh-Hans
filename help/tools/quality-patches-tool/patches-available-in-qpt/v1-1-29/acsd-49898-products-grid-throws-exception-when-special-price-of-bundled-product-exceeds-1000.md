@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49898：产品网格引发异常'
+title: ACSD-49898：产品网格引发异常
 description: 应用ACSD-49898修补程序以修复捆绑产品的特殊价格超过1000时，产品网格会引发异常的Adobe Commerce问题。
 feature: Admin Workspace, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: adc8f12e-73e4-4ed5-8081-a9907ec13342
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%

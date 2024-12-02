@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-43983：设置为“单独不可见”的产品将显示在搜索结果中'
+title: MDVA-43983：设置为“单独不可见”的产品将显示在搜索结果中
 description: MDVA-43983修补程序解决了设置为“不可见”的产品仍然显示在目录高级搜索结果中的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14后，即可使用此修补程序。 修补程序ID为MDVA-43983。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Catalog Management, Products, Search
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: d494d263-016b-43fd-aa87-0d74eadc4a6a
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54106：更正产品类别中的土耳其重音字符排序'
+title: ACSD-54106：更正产品类别中的土耳其重音字符排序
 description: 应用ACSD-54106修补程序以修复按名称对土耳其语重音字符进行类别产品排序不正确的Adobe Commerce问题。
 feature: Categories, Products, Search
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 45c8efbb-85d0-4d25-9d7e-9c41a97e80fa
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%

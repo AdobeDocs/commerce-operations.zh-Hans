@@ -1,9 +1,10 @@
 ---
-title: “ACSD-52689：图像无法通过REST API上传到Amazon S3存储”
+title: ACSD-52689：图像无法通过REST API上传到Amazon S3存储
 description: 应用ACSD-52689修补程序以修复无法通过REST API将图像上传到Amazon S3存储的Adobe Commerce问题。
 feature: REST, Storage, Iaas
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 4d7a8ea7-2856-4b40-a922-fdd356dcaea4
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: “ACSD-55100： [!DNL GraphQL] 不会在搜索结果中返回超过10,000的产品”
+title: ACSD-55100： [!DNL GraphQL] 在搜索结果中未返回超过10,000的产品
 description: 应用ACSD-55100修补程序以修复Adobe Commerce问题，该问题导致GraphQL在搜索结果中未返回超过*10k*的产品。
 feature: GraphQL, Products, Search
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: f08b62b9-ed56-4eca-b7e7-6e2bd99df01f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

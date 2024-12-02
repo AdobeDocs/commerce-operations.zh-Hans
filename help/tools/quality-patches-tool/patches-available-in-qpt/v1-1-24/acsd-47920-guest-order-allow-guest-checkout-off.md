@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47920：即使[!UICONTROL Allow Guest Checkout]关闭，访客用户也可以通过REST API下达订单'
+title: ACSD-47920：即使[!UICONTROL Allow Guest Checkout]关闭，访客用户也可以通过REST API下订单
 description: 应用ACSD-47920修补程序以修复Adobe Commerce问题，该问题导致即使在[!UICONTROL Allow Guest Checkout]关闭的情况下，也可以通过REST API作为访客用户下达订单。
 feature: REST, Checkout, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 27c74803-a3f3-46bc-9eb8-8e2c72c30cd9
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%

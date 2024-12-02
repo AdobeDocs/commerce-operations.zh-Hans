@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48210：存储视图特定的范围属性覆盖全局值'
+title: ACSD-48210：存储视图特定的范围属性将覆盖全局值
 description: 应用ACSD-48210修补程序以修复在特定存储视图中更新*[!UICONTROL Website Scope]*属性会覆盖全局范围内的属性值这一Adobe Commerce问题。
 feature: Products, Attributes
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 944089c6-2f05-4c51-86ea-ede124bff80b
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 0%

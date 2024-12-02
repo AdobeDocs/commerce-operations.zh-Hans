@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56246：计划产品更新将清除多选属性值'
+title: ACSD-56246：计划产品更新将清除多选属性值
 description: 应用ACSD-56246修补程序以修复Adobe Commerce问题，该问题导致安排产品更新时清除多选属性值。
 feature: Products, Attributes, Staging
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1751a03d-2610-423f-be2f-b9d060452904
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%

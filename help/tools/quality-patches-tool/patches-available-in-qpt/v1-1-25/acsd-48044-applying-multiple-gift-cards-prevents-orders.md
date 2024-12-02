@@ -1,9 +1,10 @@
 ---
-title: “ACSD-48044：使用多张礼品卡可防止下订单”
+title: ACSD-48044：应用多张礼品卡可防止下订单
 description: 应用ACSD-48044补丁以修复Adobe Commerce的问题，该问题导致在多次发运的情况下一次订购多张礼品卡会导致订单无法下达。
 feature: Admin Workspace, Gift, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c7b72b1f-2f1b-4445-b842-5847d05d5ae9
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

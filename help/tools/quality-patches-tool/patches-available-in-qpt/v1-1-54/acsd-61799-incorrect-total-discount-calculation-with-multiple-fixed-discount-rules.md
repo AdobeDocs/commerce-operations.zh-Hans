@@ -1,15 +1,15 @@
 ---
-title: 'ACSD-61799：对报价应用了多个固定折扣购物车规则时，总折扣计算不正确'
+title: ACSD-61799：对报价应用了多个固定折扣购物车规则时，总折扣计算不正确
 description: 应用ACSD-61799修补程序以修复以下问题：当对报价应用了多个具有固定折扣的购物车规则时，Adobe Commerce计算的总折扣有误。
 feature: Price Rules
 role: Admin, Developer
-source-git-commit: 0b4c46e0db3dbd7ce5914490ae20471709be261d
+exl-id: a87ec1cd-f141-43b9-bde1-eca354c12d4e
+source-git-commit: 737204ae7418f49fdebfffbf351304796e9f5eb0
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-61799：对报价应用了多个固定折扣购物车规则时，总折扣计算不正确
 
@@ -66,4 +66,3 @@ ACSD-61799修补程序解决了/修复了在将多个具有固定折扣的购物
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-

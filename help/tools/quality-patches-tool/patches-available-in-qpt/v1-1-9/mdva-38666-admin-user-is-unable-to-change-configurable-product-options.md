@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-38666：管理员用户无法更改可配置的产品选项'
+title: MDVA-38666：管理员用户无法更改可配置的产品选项
 description: MDVA-38666修补程序解决了管理员用户无法更改客户购物车中可配置的产品选项的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.9后，即可使用此修补程序。 修补程序ID为MDVA-38666。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Admin Workspace, Configuration, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 8e72f6a4-b36f-4fe4-bc01-2254984dd512
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

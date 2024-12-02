@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47937：由于应用程序级别的缓存，未发送价格下降通知'
+title: ACSD-47937：由于应用程序级别的缓存，未发送价格下降通知
 description: 应用ACSD-47937修补程序以修复由于应用程序级别的缓存而无法始终发送降价通知的Adobe Commerce问题。
 feature: Admin Workspace, Cache, Orders
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 91d8e677-c2bb-4230-bbe3-a2c5f9b82e16
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%

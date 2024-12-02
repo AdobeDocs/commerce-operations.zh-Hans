@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55628：在公司注册表中上传文件；替换店面中客户属性的文件'
+title: ACSD-55628：在公司注册表中上传文件；替换店面中客户属性的文件
 description: 应用ACSD-55628修补程序以修复在公司注册表中上传文件并替换店面中客户属性的文件时出现的Adobe Commerce问题。
 feature: Storefront, Attributes, B2B, Customers
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a008a205-ec1d-4a1d-9cd2-75f10a937057
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%

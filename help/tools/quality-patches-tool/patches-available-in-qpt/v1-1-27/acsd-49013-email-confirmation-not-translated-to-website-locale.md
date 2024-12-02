@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49013：电子邮件确认未转换为网站区域设置'
+title: ACSD-49013：电子邮件确认未转换为网站区域设置
 description: 应用ACSD-49013修补程序以修复在使用批量API创建客户时，电子邮件确认内容未转换为网站区域设置的Adobe Commerce问题。
 feature: Admin Workspace, Communications
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1b0dc6aa-d5ee-4adf-882d-88f29a7eab34
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 0%

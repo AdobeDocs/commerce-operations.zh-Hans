@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-32776：库存状态未随订单投放更新'
+title: MDVA-32776：库存状态未随订单投放更新
 description: MDVA-32776修补程序修复了在下订单但未发送时，库存状态未更新的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-32776。 请注意，Adobe Commerce 2.4.2中已修复此问题。
 feature: Orders
 role: Admin
-source-git-commit: 1fb76b8d648cbbe2a9f602d2b1a0149f1f4f0e46
+exl-id: 6f872c72-c96f-4c23-b6df-44e3da3a81c2
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%

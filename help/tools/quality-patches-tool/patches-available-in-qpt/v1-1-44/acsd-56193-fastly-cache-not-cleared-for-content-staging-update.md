@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56193： [!DNL Fastly] 缓存未清除内容暂存更新'
+title: ACSD-56193： [!DNL Fastly] 缓存未清除内容暂存更新
 description: 应用ACSD-56193修补程序以修复未清除 [!DNL Fastly] 缓存以进行内容暂存更新的Adobe Commerce问题。
 feature: Cache, GraphQL, Staging
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a702ce22-cc85-4f58-8766-637a1b93d405
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%

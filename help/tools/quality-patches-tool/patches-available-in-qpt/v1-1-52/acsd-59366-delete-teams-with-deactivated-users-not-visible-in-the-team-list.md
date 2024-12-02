@@ -1,9 +1,10 @@
 ---
-title: “ACSD-59366：删除其已停用用户的团队在团队列表中不可见”
+title: ACSD-59366：删除其已停用用户的团队在团队列表中不可见
 description: Adobe Commerce应用ACSD-59366修补程序以修复以下问题：当您尝试删除团队时，如果团队包含未在团队列表中显示的已停用用户，则会出现错误。
 feature: GraphQL, Companies
 role: Admin, Developer
-source-git-commit: 8037db7a89cd850385dc88750e881f68ae62172f
+exl-id: 406d2242-38f9-4852-b311-0ee57c4a7c26
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
@@ -64,5 +65,3 @@ Adobe Commerce（所有部署方法） 2.4.6 - 2.4.7-p3
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-
-

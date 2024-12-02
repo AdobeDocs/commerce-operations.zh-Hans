@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46703：产品自定义项拖放不起作用'
+title: ACSD-46703：产品自定义项拖放不起作用
 description: 本文为产品可自定义选项拖放无法按预期工作的问题提供了解决方案。
 feature: Products
 role: Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 38b9490a-c9d4-4f8e-b90f-69bf50a6b571
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%

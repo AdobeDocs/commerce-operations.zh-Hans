@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54007：导入客户数据时出现未定义数组键作用域错误'
+title: ACSD-54007：导入客户数据时出现未定义的数组键作用域错误(_S)
 description: 应用ACSD-54007修补程序以修复在导入客户数据时显示“未定义阵列键值_范围”错误的Adobe Commerce问题。
 feature: Data Import/Export
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: df0fc9f4-1d42-47bc-b161-d2f109996684
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%

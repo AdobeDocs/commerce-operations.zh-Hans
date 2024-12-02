@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-40401：订单失败后优惠券使用值发生更改'
+title: MDVA-40401：订单失败后优惠券使用值发生更改
 description: MDVA-40401修补程序修复了即使在订单失败后优惠券使用值也会更改的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40401。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Orders
 role: Admin
-source-git-commit: 1fb76b8d648cbbe2a9f602d2b1a0149f1f4f0e46
+exl-id: bc8eedd6-977f-4f21-bcd1-b5f6c4a6704f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%

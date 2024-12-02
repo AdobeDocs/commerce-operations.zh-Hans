@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-31763：将还原目录价格规则，直到手动重新索引为止'
+title: MDVA-31763：将还原目录价格规则，直到手动重新编入索引
 description: MDVA-31763修补程序解决了在手动重新索引之前恢复目录价格规则的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.5后，即可使用此修补程序。 修补程序ID为MDVA-31763。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Catalog Management, Orders, Price Rules
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 1d144bfc-c26b-43d0-a80c-26a9c2d8ef32
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%

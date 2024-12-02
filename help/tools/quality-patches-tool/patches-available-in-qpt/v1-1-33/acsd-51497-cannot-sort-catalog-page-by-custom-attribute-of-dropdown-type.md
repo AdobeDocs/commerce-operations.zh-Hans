@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51497：无法按“下拉列表”类型的自定义属性对目录页面排序'
+title: ACSD-51497：无法按“下拉列表”类型的自定义属性对目录页面进行排序
 description: 应用ACSD-51497修补程序以修复客户无法按下拉类型的自定义属性对目录页面进行排序的Adobe Commerce问题。
 feature: Attributes, Cache, Catalog Management, Categories
 role: Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c66a7e04-fd2a-47be-8f7a-7982780a5414
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%

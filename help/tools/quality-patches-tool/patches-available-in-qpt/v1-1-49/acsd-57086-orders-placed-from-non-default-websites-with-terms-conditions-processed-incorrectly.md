@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-57086：来自启用了条款和条件的非默认网站的订单处理不正确'
+title: ACSD-57086：来自启用了条款和条件的非默认网站的订单处理不正确
 description: 应用ACSD-57086修补程序以修复以下问题：来自启用了条款和条件的非默认网站的订单无法正确处理。Adobe Commerce
 feature: Orders
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d9f2ef50-12c4-4a2d-b140-dfd0e8948fd3
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%

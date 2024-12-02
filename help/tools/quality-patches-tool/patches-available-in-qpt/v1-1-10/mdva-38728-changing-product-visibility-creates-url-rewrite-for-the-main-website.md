@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-38728：更改产品可见性将为主网站创建URL重写'
+title: MDVA-38728：更改产品可见性将为主网站创建URL重写
 description: MDVA-38728修补程序解决了更改第二个网站的产品可见性会为主网站创建URL重写的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.10后，即可使用此修补程序。 修补程序ID为MDVA-38728。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: c9dfa386-6327-43b6-a977-a29178c64b89
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%

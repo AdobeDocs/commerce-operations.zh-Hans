@@ -1,9 +1,10 @@
 ---
-title: “ACSD-48404： *[!UICONTROL Remember Category Pagination] = [!UICONTROL Yes]*在按下浏览器的‘后退’按钮时导致错误”
+title: ACSD-48404： *[!UICONTROL Remember Category Pagination] = [!UICONTROL Yes]*在按下浏览器的“返回”按钮时导致错误
 description: 应用ACSD-48404修补程序以修复在按下浏览器的“返回”按钮时，*[!UICONTROL Remember Category Pagination] = [!UICONTROL Yes]*导致错误的Adobe Commerce问题。
 feature: Categories
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 8c08f0e2-d4f9-4ac8-b8e8-85b4a7de98fb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%

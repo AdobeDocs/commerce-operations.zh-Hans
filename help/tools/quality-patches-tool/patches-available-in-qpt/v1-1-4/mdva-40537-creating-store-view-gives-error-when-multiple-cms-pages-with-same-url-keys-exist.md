@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-40537：当多个CMS页面具有相同的URL键时，创建商店视图会出错。'
+title: MDVA-40537：当多个CMS页面具有相同的URL键时，创建存储视图会出错。
 description: MDVA-40537修补程序修复了以下问题：如果多个CMS页面具有相同的URL密钥，则用户在创建商店视图时会收到错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40537。 请注意，Adobe Commerce 2.4.1中已修复此问题。
 feature: CMS
 role: Admin
-source-git-commit: 1fb76b8d648cbbe2a9f602d2b1a0149f1f4f0e46
+exl-id: 10c3d935-dbc9-4033-85a1-041b8af74d78
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%

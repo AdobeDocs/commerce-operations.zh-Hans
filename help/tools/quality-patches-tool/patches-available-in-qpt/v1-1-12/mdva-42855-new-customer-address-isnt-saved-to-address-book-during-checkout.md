@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-42855：签出期间未将新客户地址保存到通讯簿'
+title: 'MDVA-42855：在签出期间新客户地址未保存到通讯簿 '
 description: MDVA-42855修补程序修复了在签出期间新客户地址未保存到通讯簿中的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.12后，即可使用此修补程序。 修补程序ID为MDVA-42855。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Checkout, Orders, Shipping/Delivery
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 924b8f57-1fec-4e62-bf0e-1f9cafa75cab
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%

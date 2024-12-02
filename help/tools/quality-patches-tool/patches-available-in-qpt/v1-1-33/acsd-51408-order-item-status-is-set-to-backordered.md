@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51408：订单项目状态错误地设置为[!UICONTROL backordered]'
+title: ACSD-51408：订单项状态错误地设置为[!UICONTROL backordered]
 description: 应用ACSD-51408修补程序以修复订单项状态错误设置为[!UICONTROL backordered]的Adobe Commerce问题。
 feature: B2B, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 51abb4c6-5618-43a5-89ca-a3879be2c3c4
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

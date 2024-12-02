@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55334：未在GraphQL响应中通过翻译词典翻译的标签'
+title: ACSD-55334：未在GraphQL响应中通过翻译词典翻译的标签
 description: 应用ACSD-55334修补程序以修复GraphQL响应中标签未通过翻译字典翻译的Adobe Commerce问题。
 feature: Categories, GraphQL
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c22e5007-c661-49d4-90b7-dcee9b97c823
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%

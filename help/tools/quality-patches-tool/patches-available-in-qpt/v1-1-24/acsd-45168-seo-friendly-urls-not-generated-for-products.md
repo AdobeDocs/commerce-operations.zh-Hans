@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-45168：没有为已覆盖url_key属性的产品生成SEO友好的URL'
+title: ACSD-45168：没有为已覆盖url_key属性的产品生成SEO友好的URL
 description: 应用ACSD-45168修补程序以修复Adobe Commerce问题：对于在商店视图级别覆盖url_key属性的产品，不会生成对SEO友好的URL。
 feature: Attributes, Cache, Categories, Marketing Tools, Products
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 7d908307-f60c-4758-ad0f-f108ebb94558
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%

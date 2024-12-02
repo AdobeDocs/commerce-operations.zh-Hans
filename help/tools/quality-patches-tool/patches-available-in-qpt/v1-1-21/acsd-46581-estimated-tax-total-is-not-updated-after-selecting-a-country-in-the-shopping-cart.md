@@ -1,9 +1,10 @@
 ---
-title: “ACSD-46581：在购物车中选择国家/地区后，预计税额合计未更新”
+title: ACSD-46581：在购物车中选择国家/地区后，预计税额合计未更新
 description: 应用ACSD-46581补丁以解决在购物车中切换国家/地区后税率未更新的Adobe Commerce问题。
 feature: Orders, Shopping Cart
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 45800055-8556-4f87-8938-c6be5d82938d
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%

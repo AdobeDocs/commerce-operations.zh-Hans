@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48661：公司信用额度逗号分隔符验证问题'
+title: ACSD-48661：公司信用额度逗号分隔符验证问题
 description: Adobe Commerce应用ACSD-48661修补程序以修复以下问题：当公司信用额度大于999时，逗号分隔符会因验证错误而阻止保存公司。
 feature: Admin Workspace, B2B, Companies, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 7115226e-5942-4a8f-9dec-b1b6f665eef8
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

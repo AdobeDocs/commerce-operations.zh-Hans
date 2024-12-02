@@ -1,9 +1,10 @@
 ---
-title: “ACSD-60816： [!DNL New Relic] 由APM代理插入的浏览器监视脚本与CSP不兼容”
+title: ACSD-60816： [!DNL New Relic] 由APM代理插入的浏览器监视脚本与CSP不兼容
 description: 应用ACSD-60816修补程序以修复Adobe Commerce问题，该问题导致APM代理插入的 [!DNL New Relic] 浏览器监视脚本与内容安全策略(CSP)不兼容，从而无法执行。
 feature: Tools and External Services, Checkout
 role: Admin, Developer
-source-git-commit: 278cc668a9d6746a38845e54d173260e1a65bb22
+exl-id: d03c25e0-ed25-4877-8470-737d3499473f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%

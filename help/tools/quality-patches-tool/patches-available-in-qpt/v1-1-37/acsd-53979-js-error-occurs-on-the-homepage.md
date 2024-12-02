@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53979：主页出现JS错误'
+title: ACSD-53979：主页出现JS错误
 description: 应用ACSD-53979修补程序以修复主页上JavaScript错误（如果欢迎消息包含单引号）的Adobe Commerce问题。
 feature: Page Content
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 34a1802e-b64c-4d5d-85df-356c0740aa41
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: “ACSD-51853：使用页面生成器未应用复制的文本样式”
+title: ACSD-51853：使用页面生成器未应用复制的文本样式
 description: 应用ACSD-51853补丁可修复以下问题：使用Page Builder时未应用复制的文本样式。Adobe Commerce
 feature: Page Builder
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: fda5ba6e-4786-473c-a3a2-7356aa20f5ae
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52143：导入产品后删除自定义选项'
+title: ACSD-52143：导入产品后删除自定义选项
 description: 应用ACSD-52143修补程序以修复在产品导入后删除自定义选项的Adobe Commerce问题。
 feature: Data Import/Export
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 630fffa7-012c-4539-9745-9a34571bd2eb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%

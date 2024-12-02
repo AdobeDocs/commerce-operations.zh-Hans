@@ -1,9 +1,10 @@
 ---
-title: “ACSD-47079：子产品库存状态更改时复合产品的库存状态未更新”
+title: ACSD-47079：子产品库存状态更改时复合产品的库存状态未更新
 description: 应用ACSD-47079修补程序以修复Adobe Commerce问题：当子产品库存状态通过REST APIPOST/rest/V1/inventory/source-items发生更改时，复合产品（捆绑、分组和可配置）库存状态不会更新。
 feature: Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: f035f530-fae5-4b61-8af9-044f6ec02284
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51735：当产品库存为0时，订单项目状态错误地设置为*[!UICONTROL Ordered]*'
+title: ACSD-51735：当产品库存为0时，订单项目状态错误地设置为*[!UICONTROL Ordered]*
 description: 应用ACSD-51735修补程序以修复当产品库存为0时，订单项状态错误设置为*[!UICONTROL Ordered]*的Adobe Commerce问题。
 feature: Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 56c8b58c-819f-46bd-8912-f543f56b66d6
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%

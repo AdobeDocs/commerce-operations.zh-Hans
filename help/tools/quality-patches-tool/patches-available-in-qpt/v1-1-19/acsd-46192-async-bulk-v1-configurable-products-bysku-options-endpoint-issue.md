@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46192：异步/bulk/V1/configurable-products/bySku/options端点问题'
+title: ACSD-46192：异步/bulk/V1/configurable-products/bySku/options端点问题
 description: ACSD-46192修补程序修复了“async/bulk/V1/configurable-products/bySku/options”端点的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
 feature: Configuration, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 5a54f4b5-8467-40de-9d8f-ba46880ed5ad
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%

@@ -1,7 +1,8 @@
 ---
-title: 'ACSD-51120：没有为包含GraphQL块的CMS页面清除CMSGET请求缓存'
+title: ACSD-51120：没有为包含GraphQL块的CMS页面清除CMSGET请求缓存
 description: 应用ACSD-51120修补程序以修复包含GraphQL块的Adobe Commerce页面未清除CMSGET请求缓存的CMS问题。
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e1b84db0-2441-4729-aeeb-8486a623aebf
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%

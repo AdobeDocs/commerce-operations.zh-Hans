@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46520：使用商店积分退款时订单状态不正确'
+title: ACSD-46520：使用商店积分退款时订单状态不正确
 description: 本文为使用商店积分退款时用户收到错误订单状态的问题提供了解决方案。
 feature: Orders, Returns
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 67740003-a71e-41bf-afda-ca3e32290115
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%

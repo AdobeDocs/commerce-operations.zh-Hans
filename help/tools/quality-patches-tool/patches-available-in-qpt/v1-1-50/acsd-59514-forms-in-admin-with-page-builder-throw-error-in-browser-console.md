@@ -1,15 +1,15 @@
 ---
-title: 'ACSD-59514：管理员中的Forms在浏览器控制台中出现 [!DNL Page Builder] throw错误'
+title: ACSD-59514：管理员中的Forms在浏览器控制台中出现 [!DNL Page Builder] throw错误
 description: 应用ACSD-59514修补程序以修复Adobe Commerce问题：管理员中带有 [!DNL Page Builder] 抛出的表单错误“[!DNL Page Builder]”呈现5秒钟，并且未释放锁定。 在浏览器控制台中提交表单后，无法保存更改。
 feature: Page Builder
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 3d1167d2-0a75-48ac-bc31-5bbd3c4a409e
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-59514：管理员中的Forms在浏览器控制台中抛出[!DNL Page Builder]错误
 

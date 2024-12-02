@@ -1,15 +1,15 @@
 ---
-title: 'ACSD-58442：修复了将768px宽度的设备视为移动设备，导致菜单和标题在移动视图中加载而不是在桌面加载的问题'
+title: ACSD-58442：修复了宽度为768px的设备被视为移动设备的问题，该问题会导致菜单和标题在移动设备视图而非桌面中加载
 description: 应用ACSD-58442修补程序以修复Adobe Commerce问题，该问题导致将宽度为768px的设备视为移动设备，从而导致在移动视图而非桌面中加载菜单和标头。
 feature: Storefront
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 86ea64aa-10fc-4fa3-9902-918fb8983ca0
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-58442：修复了宽度为768px的设备被视为移动设备的问题，该问题会导致菜单和标题在移动设备视图而非桌面中加载
 
@@ -62,5 +62,3 @@ ACSD-58442修补程序修复了Adobe Commerce的问题：宽度为768px的设备
 
 
 有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
-
-

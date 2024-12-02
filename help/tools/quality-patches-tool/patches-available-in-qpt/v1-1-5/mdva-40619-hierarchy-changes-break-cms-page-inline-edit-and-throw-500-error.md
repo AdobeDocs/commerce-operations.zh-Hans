@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-40619：层次结构更改中断CMS页面内联编辑并引发500错误'
+title: MDVA-40619：层次结构更改中断CMS页面内联编辑并引发500错误
 description: MDVA-40619修补程序解决了CMS页面层次结构更改中断CMS页面内联编辑并引发“500错误”的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.5后，即可使用此修补程序。 修补程序ID为MDVA-40619。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: CMS
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 148cb0a5-5a6c-4cfa-bf95-4bafc57beec6
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%

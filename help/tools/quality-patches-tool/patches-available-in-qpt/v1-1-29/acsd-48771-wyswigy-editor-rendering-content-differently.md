@@ -1,16 +1,17 @@
 ---
-title: 'ACSD-48771： WYSIWYG编辑器以不同的方式呈现内容'
+title: ACSD-48771：WYSIWYG编辑器以不同的方式呈现内容
 description: 应用ACSD-48771修补程序以修复WYSIWYG编辑器以不同方式呈现内容的Adobe Commerce问题。
 feature: Cache, Page Content
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 9480af54-800b-4802-b1a3-65d1a6e169ec
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
-# ACSD-48771：所见即所得编辑器以不同的方式呈现内容
+# ACSD-48771：WYSIWYG编辑器以不同的方式呈现内容
 
 ACSD-48771修补程序修复了WYSIWYG编辑器以不同方式呈现内容的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.29时，此修补程序可用。 修补程序ID为ACSD-48771。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46404：升级到2.4.4后，管理员用户无法登录'
+title: ACSD-46404：升级到2.4.4后，管理员用户无法登录
 description: ACSD-46404修补程序解决了管理员用户在升级到2.4.4后无法登录的问题。安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46404。 请注意，Adobe Commerce 2.4.5中已修复此问题。
 feature: Admin Workspace
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: f475ca56-5e06-4d4d-be42-f760c95968cf
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%

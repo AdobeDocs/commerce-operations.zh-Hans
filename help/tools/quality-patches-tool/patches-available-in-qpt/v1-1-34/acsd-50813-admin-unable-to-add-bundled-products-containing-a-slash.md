@@ -1,7 +1,8 @@
 ---
-title: 'ACSD-50813：管理员无法添加包含斜杠的捆绑产品'
+title: ACSD-50813：管理员无法添加包含斜杠的捆绑产品
 description: 应用ACSD-50813修补程序以修复Adobe Commerce性能问题，该问题导致管理员无法通过*Add Products by SKU*功能在SKU中添加包含斜杠('/')的捆绑产品，进而导致管理员订单无法处理。
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: ff6fa673-bac1-4ef8-a427-60c2f56068f3
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%

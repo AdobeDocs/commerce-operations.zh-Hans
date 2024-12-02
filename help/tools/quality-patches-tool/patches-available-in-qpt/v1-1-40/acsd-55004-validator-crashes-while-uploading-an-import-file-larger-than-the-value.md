@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55004：验证程序在上传大于值的导入文件时崩溃'
+title: ACSD-55004：在上传大于值的导入文件时验证器崩溃
 description: 应用ACSD-55004修补程序以修复在上传大于“php.ini”中配置的值的导入文件时验证器崩溃的Adobe Commerce问题。
 feature: Data Import/Export
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c889f645-a3ae-4330-8ca9-45f8b6616ac8
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%

@@ -1,5 +1,5 @@
 ---
-title: “[!DNL Upgrade Compatibility Tool]要求”
+title: '[!DNL Upgrade Compatibility Tool]要求'
 description: 验证系统是否满足在Adobe Commerce项目的命令行界面中运行 [!DNL Upgrade Compatibility Tool] 的必要要求。
 exl-id: b8af2e07-3d28-4937-bb88-b0a1c88a2938
 source-git-commit: 40d850add2ef8c51e9192758135768306b163780

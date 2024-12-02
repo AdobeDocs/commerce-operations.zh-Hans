@@ -1,9 +1,10 @@
 ---
-title: '''ACSD-46938：在''setup：upgrade''期间数据库触发器出现性能问题'
+title: ACSD-46938：在“setup：upgrade”期间数据库触发器出现性能问题
 description: 应用ACSD-46938修补程序以修复Adobe Commerce问题，该问题导致“setup：upgrade”命令将索引器模式从计划更改为保存，从而显着降低性能。
 feature: Upgrade
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a4e88329-c5bb-4666-8738-b78b86056b71
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%

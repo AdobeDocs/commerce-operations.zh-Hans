@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52929：重新索引默认源项的冗余请求'
+title: ACSD-52929：重新索引默认源项的冗余请求
 description: 应用ACSD-52929补丁程序，以修复在异步模式下配置清单索引器时存在重新索引默认源项目的冗余请求的Adobe Commerce问题。
 feature: Configuration, Inventory
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 904aed0e-a6cd-4a0f-949d-bb32fcd77356
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%

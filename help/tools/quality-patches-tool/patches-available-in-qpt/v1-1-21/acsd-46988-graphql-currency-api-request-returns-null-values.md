@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46988：GraphQL货币API请求返回null值'
+title: ACSD-46988：GraphQL货币API请求返回null值
 description: ACSD-46988修补程序修复了GraphQL货币API请求为自定义货币返回null值的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.21后，即可使用此修补程序。 修补程序ID为ACSD-46988。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: REST, GraphQL
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 276d2c75-6e7f-4888-b4d2-ac96bea93fc1
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: “ACSD-48293：复合产品缺货时补充库存的子产品”
+title: ACSD-48293：复合产品缺货时补充库存的子产品
 description: 应用ACSD-48293补丁以修复组合产品在缺货子产品恢复库存时缺货的Adobe Commerce问题。
 feature: Admin Workspace, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 2aa75e97-373e-4e4a-a545-69bce807ca4d
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%

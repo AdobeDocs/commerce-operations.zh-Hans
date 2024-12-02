@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47520：创建贷项通知单时，客户会失去奖励积分'
+title: ACSD-47520：创建贷项通知单时，客户会失去奖励积分
 description: 应用ACSD-47520补丁以修复客户在创建贷项通知单时失去奖励点的Adobe Commerce问题。
 feature: Admin Workspace, Cache, Orders, Rewards, Returns
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 09104451-e9f0-4ddb-b019-8aa34630edb9
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49480：放弃后续规则不起作用'
+title: ACSD-49480：放弃后续规则不起作用
 description: 应用ACSD-49480修补程序以修复[!UICONTROL Cart Price Rule - Discard Subsequent Rules]无法按预期工作的Adobe Commerce问题。
 feature: Price Rules
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1919043b-99a8-46a2-94df-9285c05bec7b
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%

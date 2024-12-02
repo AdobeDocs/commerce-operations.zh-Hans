@@ -1,9 +1,10 @@
 ---
-title: '概述： [!DNL Quality Patches Tool] (QPT) v1.1.48'
+title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.48
 description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.48中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+exl-id: 250c88e9-1422-4af5-a0f0-32b15d9ab078
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
@@ -28,4 +29,3 @@ QPT v1.1.48包含以下修补程序：
 1. **ACSD-58008**：修复了在未指定结束日期的情况下更新计划更新会删除暂存项目的先前版本的问题。
 
 使用左侧的菜单导航到特定的修补程序页面。
-

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53239：库存索引器清理所有缓存'
+title: ACSD-53239：清单索引器清理所有缓存
 description: 应用ACSD-53239修补程序以修复清单索引器在[!UICONTROL Update on Schedule]模式下清理所有缓存的Adobe Commerce问题。
 feature: GraphQL, Inventory, Catalog Management
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 69e71e2d-8f26-4200-ad4a-6bd9e45627e4
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%

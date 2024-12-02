@@ -1,9 +1,10 @@
 ---
-title: “ACSD-49433：在购物车中显示为礼品卡小计的默认金额”
+title: ACSD-49433：在礼品卡的购物车中显示为小计的默认金额
 description: 应用ACSD-49433修补程序以修复Adobe Commerce问题，该问题导致在具有未结金额的礼品卡的购物车中显示默认金额的小计。
 feature: Admin Workspace, Gift, Orders, Shopping Cart
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 22691e35-0491-4935-8e7c-148900706491
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: “MDVA-39935：GraphQL返回在网站级别禁用的可配置子产品”
+title: MDVA-39935：GraphQL返回在网站级别禁用的可配置子产品
 description: MDVA-39935 Adobe Commerce修补程序修复了GraphQL返回在网站级别禁用的可配置子产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-39935。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: GraphQL, Configuration, Products
 role: Admin
-source-git-commit: c1055ed10813aa6e585f93ec3091d216af06affd
+exl-id: b86b1595-ddd5-41ce-b126-287046462561
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%

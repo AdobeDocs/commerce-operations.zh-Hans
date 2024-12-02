@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47908： *应为小于或等于0的值*结账时出现错误'
+title: ACSD-47908： *应为小于或等于0的值*结账过程中出错
 description: 应用ACSD-47908修补程序以修复Adobe Commerce错误*在结帐期间在运输步骤中选择源和数量时，应提供一个小于或等于0的值*。
 feature: Admin Workspace, Checkout, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: f1429bd9-652d-43c0-af52-b2258e2a7643
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%

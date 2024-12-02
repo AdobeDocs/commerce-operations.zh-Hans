@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56280：未完成礼品注册购买'
+title: ACSD-56280：未完成礼品注册购买
 description: 应用ACSD-56280补丁以修复未完成礼品注册购买的Adobe Commerce问题
 feature: Checkout
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a79f789f-999f-4d11-b7ee-2c065b681efb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48234：启用[!UICONTROL Display Out of Stock Products]时，目录搜索结果类别项计数不正确'
+title: ACSD-48234：启用[!UICONTROL Display Out of Stock Products]时，目录搜索结果类别项计数不正确
 description: Adobe Commerce应用ACSD-48234修补程序以修复以下问题：启用[!UICONTROL Display Out of Stock Products]选项后，目录搜索结果显示错误的类别项计数。
 feature: Admin Workspace, Categories, Catalog Management, Orders, Products, Search
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c177f12d-2db5-48e2-8f88-ff589cea4dd4
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%

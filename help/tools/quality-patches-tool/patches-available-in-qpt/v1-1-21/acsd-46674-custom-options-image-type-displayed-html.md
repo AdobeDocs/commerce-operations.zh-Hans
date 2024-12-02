@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46674：客户电子邮件中显示为HTML的图像类型的自定义选项'
+title: ACSD-46674：在客户电子邮件中显示为HTML的图像类型的自定义选项
 description: 应用ACSD-46674补丁以修复客户电子邮件中将图像类型的自定义选项显示为HTML的Adobe Commerce问题。
 feature: Communications, Personalization
 role: Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 123ca7b5-02da-4573-897f-ff8adb184389
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%

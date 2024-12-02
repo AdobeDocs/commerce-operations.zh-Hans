@@ -1,9 +1,10 @@
 ---
-title: “ACSD-61845：带有text/html接受标头的请求出错”
+title: ACSD-61845：带有text/html接受标头的请求出错
 description: 应用ACSD-61845修补程序以修复Adobe Commerce问题，该问题导致发送仅带有*text/html*接受标头的HTTP请求时出现500错误，并安装B2B模块。
 feature: B2B
 role: Admin, Developer
-source-git-commit: 8dbf91806097281fb4f7c74e182f10b09b18e925
+exl-id: 6fa6c3ff-bb45-4b9e-afd4-95692acb0a90
+source-git-commit: 29845fd4a8c1c744aa780e60bb4154dfc3c1a02c
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%

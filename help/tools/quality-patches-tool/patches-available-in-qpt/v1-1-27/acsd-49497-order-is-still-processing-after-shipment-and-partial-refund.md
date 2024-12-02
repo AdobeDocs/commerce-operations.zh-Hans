@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49497：订单在发运和部分退款后仍在处理'
+title: ACSD-49497：发运和部分退款后仍在处理订单
 description: 应用ACSD-49497补丁以修复Adobe Commerce问题，该问题导致订单状态在发运后仍为“正在处理”，并且应用了部分退款。
 feature: Admin Workspace, Orders, Shipping/Delivery
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e2e3d2b3-24be-4827-a735-aebfc6f475ea
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%

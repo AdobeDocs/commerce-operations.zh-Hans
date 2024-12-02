@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-42283：法语区域设置的日期时间格式无效'
+title: MDVA-42283：法语区域设置的日期时间格式无效
 description: MDVA-42283修补程序修复了法语区域设置的管理顺序网格中的日期 — 时间格式无效的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.13后，即可使用此修补程序。 修补程序ID为MDVA-42283。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: CMS
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: ed99519d-03e2-444b-9cd1-e5c6e6d2ac2d
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '423'
 ht-degree: 0%

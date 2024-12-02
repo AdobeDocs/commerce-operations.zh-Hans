@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-37234：将项目多次添加到购物车会创建重复的行项目'
+title: MDVA-37234：将项目多次添加到购物车会创建重复的行项目
 description: MDVA-37234修补程序修复了以下问题：对于同一SKU，将项目多次添加到购物车（并行请求），会为同一购物车ID创建一个重复的行项目。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-37234。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Orders, Shopping Cart
 role: Admin
-source-git-commit: c1055ed10813aa6e585f93ec3091d216af06affd
+exl-id: d4e9fca1-7fba-4a33-9c5e-c9695cbfc61c
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%

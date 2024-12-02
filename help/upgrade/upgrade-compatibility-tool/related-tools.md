@@ -1,8 +1,8 @@
 ---
-title: “[!DNL Upgrade Compatibility Tool]相关工具”
+title: '[!DNL Upgrade Compatibility Tool]相关工具'
 description: 了解有关您的Adobe Commerce项目上 [!DNL Upgrade Compatibility Tool] 的相关工具的更多信息。
 exl-id: a8cebb74-fba9-42ce-914b-b8fb6c7f53bf
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%

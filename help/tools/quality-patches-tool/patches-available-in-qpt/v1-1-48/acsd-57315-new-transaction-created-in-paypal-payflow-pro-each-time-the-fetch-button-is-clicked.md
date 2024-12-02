@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-57315：每次单击获取按钮时， [!DNL PayPal Payflow Pro] 中都会创建新事务'
+title: ACSD-57315：每次单击获取按钮时， [!DNL PayPal Payflow Pro] 中都会创建新事务
 description: 应用ACSD-57315修补程序以修复Adobe Commerce问题，该问题导致每次在[!UICONTROL Admin]中的查看事务屏幕上单击获取按钮时， [!DNL PayPal Payflow Pro] 中都会创建一个新事务。
 feature: Payments
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1fb8a5af-fda1-4c24-859d-d45424bde12f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%

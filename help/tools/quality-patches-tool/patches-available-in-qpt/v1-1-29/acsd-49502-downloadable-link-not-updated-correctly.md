@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49502：可下载链接在 [!DNL staging] 更新后未正确更新'
+title: ACSD-49502： [!DNL staging] 更新后可下载链接未正确更新
 description: 应用ACSD-49502修补程序以修复Adobe Commerce问题，该问题导致在可下载产品应用 [!DNL staging] 更新后可下载链接未正确更新。
 feature: Staging
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 9bdc9a7e-4291-4438-9ba0-65fcab1f95bb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%

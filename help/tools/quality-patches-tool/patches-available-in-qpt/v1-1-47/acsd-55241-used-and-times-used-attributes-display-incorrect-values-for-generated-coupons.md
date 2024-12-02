@@ -1,9 +1,10 @@
 ---
-title: “ACSD-55241：**已使用**和**已使用次数**属性显示的已生成优惠券值不正确”
+title: ACSD-55241：**已使用**和**已使用次数**属性显示的已生成优惠券值不正确
 description: 应用ACSD-55241修补程序以修复Adobe Commerce问题，该问题导致**已使用**和**使用次数**属性显示生成的赠券的值不正确
 feature: Price Rules
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a156f03c-c939-4ea7-bd34-03c2234edbff
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 0%

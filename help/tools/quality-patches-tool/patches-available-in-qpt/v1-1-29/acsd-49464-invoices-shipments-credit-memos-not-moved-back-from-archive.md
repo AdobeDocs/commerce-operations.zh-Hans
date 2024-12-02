@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49464：发票、装运和贷项通知单未从存档移回'
+title: ACSD-49464：未从存档中移回的发票、发运和贷项通知单
 description: 应用ACSD-49464修补程序以修复Adobe Commerce问题，该问题导致在orderId不同时，发票、发运和贷项通知单不会从存档中移回。
 feature: Admin Workspace, Invoices, Orders, Returns, Shipping/Delivery
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d9ccd043-cbd3-4be5-ab29-c5351da53030
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%

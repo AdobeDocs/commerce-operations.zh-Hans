@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52095：导出CSV时管理股票值错误'
+title: ACSD-52095：导出CSV时管理股票值错误
 description: 应用ACSD-52095修补程序以修复导出CSV时Adobe Commerce产品管理库存值错误的问题。
 feature: Inventory, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1f8415aa-23c6-480a-b54d-37b2b2d3199a
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: “ACSD-50858：提高了加载横幅内容的性能”
+title: ACSD-50858：提高了加载横幅内容的性能
 description: 应用ACSD-50858修补程序以修复Adobe Commerce问题，该问题导致购物车/结账页面中的横幅性能因过多的数据库查询和页面加载时间延长而受到影响。
 feature: Page Content
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1b46e51f-70ad-4450-b3a8-173c2e4b7925
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%

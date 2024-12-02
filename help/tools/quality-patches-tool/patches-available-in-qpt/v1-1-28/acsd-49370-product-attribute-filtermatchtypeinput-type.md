@@ -1,9 +1,10 @@
 ---
-title: “ACSD-49370：产品属性在GraphQL架构中具有‘FilterMatchTypeInput’类型”
+title: ACSD-49370：产品属性在GraphQL架构中具有“FilterMatchTypeInput”类型
 description: 应用ACSD-49370修补程序以修复Adobe CommerceGraphQL架构中产品属性具有“FilterMatchTypeInput”类型的问题。
 feature: Admin Workspace, Attributes, GraphQL, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 05cc6db6-6ea6-4eb7-8dc0-fcb9f479fd89
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%

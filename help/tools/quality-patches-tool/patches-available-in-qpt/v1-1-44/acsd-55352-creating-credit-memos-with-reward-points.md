@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55352：创建带奖励积分的贷项通知单'
+title: ACSD-55352：创建具有奖励积分的贷项通知单
 description: 应用ACSD-55352补丁以修复Adobe Commerce问题，其中在使用客户奖励点创建部分贷项通知单后，订单状态更改为*closed*，贷项通知单选项从管理订单页中消失。
 feature: Checkout, Orders
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: bee0c4be-11ec-4dcb-9b3c-7af26676cee9
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%

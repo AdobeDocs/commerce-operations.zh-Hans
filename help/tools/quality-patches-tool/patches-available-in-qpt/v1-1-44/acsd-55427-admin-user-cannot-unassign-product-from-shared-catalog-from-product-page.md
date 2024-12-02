@@ -1,9 +1,10 @@
 ---
-title: “ACSD-55427：管理员无法从产品页面上的**[!UICONTROL Product in Shared Catalogs]**中取消分配产品”
+title: ACSD-55427：管理员无法从产品页面上的**[!UICONTROL Product in Shared Catalogs]**中取消分配产品
 description: 应用ACSD-55427修补程序以修复无法从**[!UICONTROL Product in Shared Catalogs]**中取消分配产品的Adobe Commerce问题。
 feature: Products, B2B
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 974347fd-351d-4a4b-a9ca-a534daf3fbd7
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%

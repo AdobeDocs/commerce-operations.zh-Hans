@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53204： *无法保存产品*向图库添加图像的并发请求出错'
+title: ACSD-53204： *无法保存产品*向图库添加图像的并发请求出错
 description: 应用ACSD-53204修补程序以修复以下Adobe Commerce问题：*无法保存产品*在使用rest/V1/products/&amp；lt；sku&amp；gt；/media端点向产品库添加图像的并发请求时会引发错误。
 feature: Catalog Management, Media, Products, REST
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 7fdf41e5-46ef-4505-b8ce-c330bd899fa1
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51291：受限管理员可以将图像/视频添加到分配给多个网站的产品'
+title: ACSD-51291：受限管理员可以将图像/视频添加到分配给多个网站的产品
 description: 应用ACSD-51291修补程序以修复Adobe Commerce问题，该问题导致限制只能访问一个网站的管理员可以将图像/视频添加到分配给多个网站的产品。
 feature: Admin Workspace, Products, Page Content
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a4edd034-f718-4559-9993-11609f0d0efa
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46770：即使未选中[!UICONTROL Email Order Confirmation]，也会发送订单确认电子邮件'
+title: ACSD-46770：即使未选中[!UICONTROL Email Order Confirmation]，也会发送订单确认电子邮件
 description: 应用ACSD-46770修补程序以修复在未选择[!UICONTROL Email Order Confirmation]的情况下发送订单确认电子邮件的Adobe Commerce问题。
 feature: Communications, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d25ca121-7551-417c-b598-d8ed3a3da969
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

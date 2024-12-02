@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49065：报价项在管理员中不可见'
+title: ACSD-49065：报价单项目在管理员中不可见
 description: Adobe Commerce应用ACSD-49065修补程序以修复以下问题：如果报价项目仅分配给自定义库存，则无法在管理员中看到这些报价项目。
 feature: Admin Workspace, B2B, Orders, Quotes
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: fc3bea92-305b-4598-9915-3422d61c76ec
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%

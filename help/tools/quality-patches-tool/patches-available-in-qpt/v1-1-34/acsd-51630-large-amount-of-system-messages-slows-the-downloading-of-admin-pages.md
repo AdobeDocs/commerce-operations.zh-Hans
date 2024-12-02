@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51630：大量系统消息导致管理员页面下载缓慢'
+title: ACSD-51630：大量系统消息导致管理员页面下载缓慢
 description: 应用ACSD-51630修补程序以修复大量系统消息导致下载管理页面变慢的Adobe Commerce性能问题。
 feature: Admin Workspace, System
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 8f39afea-551a-4306-994a-cb8ce5bd5b4a
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%

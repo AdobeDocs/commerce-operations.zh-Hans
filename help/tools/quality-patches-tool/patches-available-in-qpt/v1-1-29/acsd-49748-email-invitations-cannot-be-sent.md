@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49748：无法发送电子邮件邀请'
+title: ACSD-49748：无法发送电子邮件邀请
 description: 应用ACSD-49748补丁以修复用户无法发送电子邮件邀请的Adobe Commerce问题。
 feature: Admin Workspace, Communications, Marketing Tools
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 03dad66c-4691-421e-8c80-eca12c60175c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -60,4 +61,3 @@ ACSD-49748修补程序修复了用户无法发送电子邮件邀请的问题。 
 
 * [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)。
 * [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
-

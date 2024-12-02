@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52824：为公司客户显示的已禁用付款方法'
+title: ACSD-52824：为公司客户显示的已禁用付款方法
 description: 应用ACSD-52824修补程序以修复Adobe Commerce问题，该问题导致尽管公司设置中禁用了 [!DNL PayPal Express], [!DNL Google Pay], and [!DNL Apple Pay] 付款方法，但仍向公司客户显示。
 feature: Payments, B2B, Shopping Cart
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 39d67de6-1796-4067-ae7a-ef17fcf794e5
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-60303：在启用HTML缩小功能的情况下解决了管理员订单放置问题'
+title: ACSD-60303：在启用HTML缩小功能的情况下解决了管理员订单放置问题
 description: 应用ACSD-60303修补程序以修复在启用HTML缩小功能后无法提交管理员订单的Adobe Commerce问题。
 feature: Orders
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 85b987e7-9d65-4d15-8099-985dc227b66c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%

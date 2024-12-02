@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-50512：更新可下载产品暂存更新的开始日期时出错'
+title: ACSD-50512：更新可下载产品暂存更新的开始日期时出错
 description: 应用ACSD-51892修补程序以修复Adobe Commerce性能问题，该问题导致以下错误*可下载链接与产品无关。请验证该链接，然后重试*，此错误会在更新可下载产品暂存更新的开始日期时发生。
 feature: Products, Staging
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 9c3b4d45-c500-46a7-8679-a8aa9e0a66d6
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

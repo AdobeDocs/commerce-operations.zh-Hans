@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53998：注销后，基于客户区段的动态块无法正常工作'
+title: ACSD-53998：注销后，基于客户区段的动态块无法正常工作
 description: 应用ACSD-53998修补程序以修复Adobe Commerce问题：从客户帐户注销后，基于客户区段的动态块无法正常工作。
 feature: Customers, Page Builder, Personalization
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: aa7001c7-bb35-4e5c-8ac9-3ed84b75d7cd
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

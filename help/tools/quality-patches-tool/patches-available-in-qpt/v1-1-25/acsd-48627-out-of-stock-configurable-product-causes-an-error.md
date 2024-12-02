@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48627：缺货的可配置产品导致错误'
+title: ACSD-48627：缺货的可配置产品导致错误
 description: 应用ACSD-48627修补程序以修复Adobe Commerce问题，该问题导致在发送GraphQL请求以获取购物车详细信息时出现错误。
 feature: Admin Workspace, Configuration, Orders, Products
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 457c605e-d0c3-479e-b515-9b2851a71a08
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%

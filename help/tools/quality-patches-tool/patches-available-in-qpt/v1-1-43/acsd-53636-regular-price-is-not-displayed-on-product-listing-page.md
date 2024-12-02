@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53636：[!UICONTROL Product Listing]页面上不显示常规价格'
+title: ACSD-53636：[!UICONTROL Product Listing]页面上不显示常规价格
 description: 应用ACSD-53636修补程序以修复Adobe Commerce问题，该问题导致在具有具有特价子产品的可配置产品的*[!UICONTROL Product Listing]*页面上不显示常规价格。
 feature: Catalog Management, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e6d66ae4-2c21-466a-b03c-a1f486e7fa29
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%

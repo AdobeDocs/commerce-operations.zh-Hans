@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-57846：使用零价格过滤器搜索的GraphQL产品未返回结果'
+title: ACSD-57846：使用零价格过滤器搜索的GraphQL产品未返回结果
 description: 应用ACSD-57846修补程序以修复Adobe Commerce问题，该问题导致从零开始筛选产品会导致向 [!DNL OpenSearch] 发出格式错误的请求，并且不会返回任何结果。
 feature: GraphQL, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: ec523a54-201b-4a8f-85ce-cbe1d0bf1304
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%

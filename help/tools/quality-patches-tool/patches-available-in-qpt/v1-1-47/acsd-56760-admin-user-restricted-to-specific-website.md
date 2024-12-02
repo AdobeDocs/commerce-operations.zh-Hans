@@ -1,8 +1,9 @@
 ---
-title: 'ACSD-56760：管理员用户仅限访问特定网站，无法排序或添加新产品'
+title: ACSD-56760：管理员用户仅限访问特定网站，无法排序或添加新产品
 description: 应用ACSD-56760修补程序以修复Adobe Commerce问题：该问题导致管理员用户仅限于访问特定网站，如果网络商店拥有自己的根类别，则该用户无法对类别进行排序或添加新产品。
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 2d75164e-c463-4e1a-aa6f-f420dbe0aaeb
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%

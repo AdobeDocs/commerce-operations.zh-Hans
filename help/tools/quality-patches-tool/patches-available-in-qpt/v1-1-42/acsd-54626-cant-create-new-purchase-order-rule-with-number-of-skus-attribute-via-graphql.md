@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54626：无法通过GraphQL创建具有NUMBER_OF_SKUS的新采购订单规则'
+title: ACSD-54626：无法通过GraphQL创建具有NUMBER_OF_SKUS的新采购订单规则
 description: 应用ACSD-54626修补程序以修复Adobe Commerce问题，该问题导致客户无法通过GraphQL创建具有“NUMBER_OF_SKUS”属性的新采购订单规则(“createPurchaseOrderApprovalRule”)。
 feature: Attributes, B2B, GraphQL, Purchase Orders
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 626bd403-6334-4475-b702-09606a590c7e
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

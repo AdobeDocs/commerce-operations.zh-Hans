@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-57588：发送到多个地址时区域ID处理出错'
+title: ACSD-57588：发运到多个地址时，区域ID处理出错
 description: 应用ACSD-57588修补程序以修复Adobe Commerce问题，该问题导致在区域ID处理期间将订单发送到多个地址会触发错误。
 feature: Orders, Shipping/Delivery
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 9a455d32-47d3-4d29-b12e-068bbee98f89
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%

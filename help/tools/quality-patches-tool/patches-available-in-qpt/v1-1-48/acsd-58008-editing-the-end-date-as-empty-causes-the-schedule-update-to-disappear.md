@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-58008：将结束日期编辑为*empty*会导致计划更新消失'
+title: ACSD-58008：将结束日期编辑为*empty*会导致计划更新消失
 description: 应用ACSD-58008修补程序以修复Adobe Commerce问题，该问题导致将结束日期编辑为*empty*会导致计划更新消失。
 feature: Staging, Page Content
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 6d2279e5-6580-4325-b0a8-ed62a95da3c2
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%

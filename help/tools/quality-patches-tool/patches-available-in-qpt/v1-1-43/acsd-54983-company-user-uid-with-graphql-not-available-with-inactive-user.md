@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54983：带GraphQL的公司用户UID不适用于非活动用户'
+title: ACSD-54983：带GraphQL的公司用户UID不适用于非活动用户
 description: 应用ACSD-54983修补程序以修复Adobe Commerce问题：当用户状态设置为不活动时，无法通过GraphQL请求获取公司用户UID。
 feature: GraphQL
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: b188270f-5454-41c9-8370-f4c396095297
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%

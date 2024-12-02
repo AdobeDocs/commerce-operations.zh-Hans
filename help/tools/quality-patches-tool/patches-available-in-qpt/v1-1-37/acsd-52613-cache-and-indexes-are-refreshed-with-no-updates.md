@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52613：缓存和索引刷新而不更新'
+title: ACSD-52613：缓存和索引刷新而不更新
 description: 应用ACSD-52613修补程序以修复Adobe Commerce问题，即 [!DNL REST API]未对“Inventory_source”项目进行任何更新时刷新缓存和索引的问题。
 feature: REST
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 18878161-da4e-4d6e-9f58-706519f837f8
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52399：有现货的可销售数量0的产品'
+title: ACSD-52399：可销售数量0的产品有库存
 description: 应用ACSD-52399修补程序以修复Adobe Commerce问题，该问题导致可销售数量为0的可配置产品选项在产品页面上显示*In Stock*。
 feature: Products, Configuration
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 7b7332bb-15ae-44b6-a347-38ac7c9001db
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%

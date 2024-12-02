@@ -1,9 +1,10 @@
 ---
-title: “ACSD-61133：'sales_clean_quotes' cron从未批准的采购订单中删除报价”
+title: ACSD-61133： 'sales_clean_quotes' cron从未批准的采购订单中删除报价
 description: 应用ACSD-61133修补程序以修复Adobe Commerce问题，该问题导致“sales_clean_quotes”cron从未批准的采购订单中删除报价。
 feature: B2B, Purchase Orders
 role: Admin, Developer
-source-git-commit: 67b1dd3d4814b487d47a25697ed21d60f1e4e378
+exl-id: 06979d4b-08ea-40fe-a211-3d950c9afb47
+source-git-commit: 05f94eb45fe6ec08b9e9f9d3bb7ad3c6fb8d5445
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%

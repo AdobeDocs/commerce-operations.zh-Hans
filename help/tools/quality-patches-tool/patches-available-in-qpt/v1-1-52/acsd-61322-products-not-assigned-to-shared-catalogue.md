@@ -1,9 +1,10 @@
 ---
-title: “ACSD-61322：未分配给[!UICONTROL Shared Catalogue]的产品包含在XML Sitemap中”
+title: ACSD-61322：未分配给[!UICONTROL Shared Catalogue]的产品包含在XML站点地图中
 description: 应用ACSD-61322修补程序以修复Adobe Commerce问题，该问题导致未分配给默认（常规）组的[!UICONTROL Shared Catalog]的产品/类别仍包含在XML站点地图中。
 feature: Site Navigation, B2B
 role: Admin, Developer
-source-git-commit: 1eed4f1f6484112a0ec728659aa4b79855bf9612
+exl-id: 4698ba5a-673e-4bf0-b36c-39f6122dab26
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%

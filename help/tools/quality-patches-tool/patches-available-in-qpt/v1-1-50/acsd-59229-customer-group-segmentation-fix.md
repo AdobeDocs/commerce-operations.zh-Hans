@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-59229：由于过时的XMagento变化值而导致客户组数据分配错误'
+title: ACSD-59229：由于过时的XMagento变化值而导致客户组数据分配错误
 description: 应用ACSD-59229修补程序以修复Adobe Commerce问题，该问题导致与客户组相关的信息被保存在错误的区段中，因为请求中的X-Magento-Vary值已过期。
 feature: Customers, Personalization, Marketing Tools
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c039c114-d920-4b05-b5e9-3e9b73490ee0
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%

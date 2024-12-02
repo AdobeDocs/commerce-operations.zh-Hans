@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-48910：分配了多个来源的捆绑产品在开具发票和发货后缺货'
+title: ACSD-48910：分配了多个来源的捆绑产品在开具发票和发运后缺货
 description: 应用ACSD-48910修补程序以修复Adobe Commerce问题：在开票和发运订单后，分配给多个来源的捆绑产品会缺货，即使该订单仍然具有非零数量。
 feature: Products, Inventory
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c8d86531-2db5-4115-92d5-a8d391c4f75d
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%

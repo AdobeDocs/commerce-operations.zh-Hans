@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-50814：管理员用户无法创建贷项通知单'
+title: acsd-50814：管理员用户无法创建贷项通知单
 description: 应用ACSD-50814补丁以修复管理员用户无法创建贷项通知单的Adobe Commerce问题。
 feature: Admin Workspace, Orders, Returns
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 87ee7166-7492-4948-9a85-a183ecf54fa7
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

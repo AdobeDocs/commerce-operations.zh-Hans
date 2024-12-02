@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-43348：礼品卡GraphQL请求显示错误'
+title: MDVA-43348：礼品卡GraphQL请求显示错误
 description: MDVA-43348修补程序修复了礼品卡GraphQL请求在“gift_card_options”包含“uid”时显示错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.12后，即可使用此修补程序。 修补程序ID为MDVA-43348。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Gift, GraphQL
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 94cb939a-fad2-4f01-a641-d8d5b656d931
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-54660：新的输入属性排序可对 [!DNL GraphQL]中的客户订单进行排序'
+title: ACSD-54660：新的输入属性排序可对 [!DNL GraphQL]中的客户订单进行排序
 description: 应用ACSD-54660修补程序以修复Adobe Commerce问题，该问题导致新增输入属性“sort”按“sort_field”和“sort_direction”对 [!DNL GraphQL] 中的客户订单进行排序。
 feature: GraphQL, Orders
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 3962d4b6-634e-4164-adae-fa840ca7d869
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%

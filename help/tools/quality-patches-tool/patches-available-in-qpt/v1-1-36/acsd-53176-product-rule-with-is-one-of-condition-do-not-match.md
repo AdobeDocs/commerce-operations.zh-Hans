@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-53176：具有“为之一”条件的产品规则不匹配'
+title: ACSD-53176：具有“为之一”条件的产品规则不匹配
 description: 应用ACSD-53176修补程序以修复Adobe Commerce问题，该问题导致相关的产品规则“是”条件无法正常用于“要匹配的产品”。
 feature: Marketing Tools
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 8260c6ac-3ca2-4361-9e36-a8a58468fa95
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%

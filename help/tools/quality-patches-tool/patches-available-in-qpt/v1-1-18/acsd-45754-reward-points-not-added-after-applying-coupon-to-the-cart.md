@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-45754：将优惠券应用到购物车后未添加奖励积分'
+title: ACSD-45754：将优惠券应用到购物车后未添加奖励积分
 description: ACSD-45754修补程序解决了将优惠券应用到购物车后未添加奖励点数的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.18后，即可使用此修补程序。 修补程序ID为ACSD-45754。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Orders, Rewards, Shopping Cart
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 02f3bfc4-440b-4d77-adf5-0824d1b21073
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%

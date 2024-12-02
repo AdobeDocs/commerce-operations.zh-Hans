@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-50527：保存具有空动态块的页面时出错'
+title: ACSD-50527：保存具有空动态块的页面时出错
 description: 应用ACSD-50527修补程序以修复Adobe Commerce问题，该问题导致在保存具有空动态块的页面时出现错误。
 feature: Page Content
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: d4943772-cbb8-4b6e-b553-7d3f5a50500e
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%

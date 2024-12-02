@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46519： [!UICONTROL categoryList] [!DNL GraphQL] 查询中的[!UICONTROL product_count]返回锚点类别为0'
+title: ACSD-46519： [!UICONTROL categoryList] [!DNL GraphQL] 查询中的[!UICONTROL product_count]返回锚点类别为0
 description: 应用ACSD-46519修补程序以修复Adobe Commerce问题，其中当您使用[!UICONTROL categoryList] [!DNL GraphQL] 方法获取子类别时，它会将[!UICONTROL product_count]显示为父类别的0。
 feature: Categories, GraphQL, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 7becaa4e-421a-4983-ac73-f5b58fc45d8f
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%

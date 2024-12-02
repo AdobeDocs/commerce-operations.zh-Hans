@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-46815：使用紧凑策略部署静态内容失败'
+title: ACSD-46815：使用紧凑策略部署静态内容失败
 description: 应用ACSD-46815修补程序以修复在使用压缩策略时静态内容部署失败的Adobe Commerce问题。
 feature: Deploy, Page Content, SCD
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 66941a83-daf8-4bb2-a575-b615e1c5dc7c
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

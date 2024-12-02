@@ -1,9 +1,10 @@
 ---
-title: “ACSD-61195：购物车GraphQL请求无法返回最终页面上的项目”
+title: ACSD-61195：购物车GraphQL请求无法返回最终页面上的项目
 description: 应用ACSD-61195修补程序以修复在购物车GraphQL请求的最后一页上未返回购物车项目的Adobe Commerce问题。
 feature: GraphQL
 role: Admin, Developer
-source-git-commit: f6e410e0787e56717b3910b7f3938108a7af9cd8
+exl-id: 15f0f29c-8517-4f1e-9370-772572e75c9a
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%

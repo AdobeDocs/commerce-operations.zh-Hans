@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-42689：在导入期间更新产品类别时，用户出现完整性约束违规错误'
+title: MDVA-42689：在导入过程中更新产品类别时，用户出现完整性约束违规错误
 description: MDVA-42689修补程序解决了用户在导入期间更新产品类别时出现完整性约束违规错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.12后，即可使用此修补程序。 修补程序ID为MDVA-42689。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Categories, Data Import/Export, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 3f81f195-5a95-45f6-8970-403b8398e759
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%

@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-49773：将AWS S3用作远程存储时，产品导出失败'
+title: ACSD-49773：将AWS S3用作远程存储时，产品导出失败
 description: 应用ACSD-49773修补程序以修复在使用Adobe Commerce S3作为远程存储时产品导出失败的AWS问题。
 feature: Data Import/Export, Iaas, Products, Storage
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 82f1299f-52b6-4f87-b01c-072d1661c022
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

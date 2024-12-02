@@ -1,9 +1,10 @@
 ---
-title: “ACSD-60538：如果在[!UICONTROL All Store Views]中禁用了产品，则属性无法正确显示”
+title: ACSD-60538：如果在[!UICONTROL All Store Views]中禁用了产品，则属性无法正确显示
 description: 应用ACSD-60538修补程序以修复Adobe Commerce问题：如果某个产品在*所有商店视图*中处于禁用状态，并且只在特定商店视图范围内处于启用状态，则产品属性在GraphQL响应中无法正确显示，从而导致产品无法正确显示。
 feature: Attributes, GraphQL
 role: Admin, Developer
-source-git-commit: c394e003797d8095c17a0f6047024231e26a8321
+exl-id: 2ea9de11-b750-4ab6-9cc7-e940e1791f22
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%

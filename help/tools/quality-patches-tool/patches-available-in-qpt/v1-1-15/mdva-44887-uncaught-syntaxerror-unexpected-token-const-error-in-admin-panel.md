@@ -1,9 +1,10 @@
 ---
-title: “MDVA-44887：管理面板中出现‘Uncaught SyntaxError： Unexpected token const’错误”
-description: “MDVA-44887修补程序修复了管理员用户无法单击任何菜单选项的问题。 “管理”面板中显示*Uncaught SyntaxError： Unexpected token const*错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.15后，即可使用此修补程序。 修补程序ID为MDVA-44887。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。”
+title: MDVA-44887：“管理”面板中出现“Uncaught SyntaxError： Unexpected token const”错误
+description: MDVA-44887修补程序修复了管理员用户无法单击任何菜单选项的问题。 “管理”面板中显示*Uncaught SyntaxError： Unexpected token const*错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.15后，即可使用此修补程序。 修补程序ID为MDVA-44887。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Admin Workspace, Orders
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: d8cc03c3-35a0-4f00-8ec3-1ba3e100f7ca
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '423'
 ht-degree: 0%

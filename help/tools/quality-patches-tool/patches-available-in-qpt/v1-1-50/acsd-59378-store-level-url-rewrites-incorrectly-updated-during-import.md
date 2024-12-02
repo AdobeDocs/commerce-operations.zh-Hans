@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-59378：导入期间错误地更新了存储级别 [!DNL URL] 重写'
+title: ACSD-59378：导入期间错误地更新了存储级别 [!DNL URL] 重写
 description: 应用ACSD-59378修补程序以修复导入期间存储级别 [!DNL URL] 重写更新不正确的Adobe Commerce问题。
 feature: Data Import/Export
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: dc54d810-dcc6-42c6-a877-d00d3cf4f9a5
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%

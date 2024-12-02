@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-47704：捆绑产品仅显示库存产品的价格'
+title: ACSD-47704：捆绑产品仅显示库存产品的价格
 description: 应用ACSD-47704补丁以修复Adobe Commerce问题，该问题导致捆绑产品仅显示库存产品的价格。
 feature: Admin Workspace, Customer Service, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 7f05ceed-869c-4d1a-91fd-0122dc98e65e
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '604'
 ht-degree: 0%

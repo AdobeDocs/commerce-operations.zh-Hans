@@ -1,15 +1,15 @@
 ---
-title: 'ACSD-54887：客户购物车在客户会话过期后清空'
+title: ACSD-54887：在客户会话过期后清除客户购物车
 description: 应用ACSD-54887修补程序以修复在启用[!UICONTROL Persistent Shopping Cart]的客户会话过期后客户购物车被清除的Adobe Commerce问题。
 feature: Shopping Cart
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: de2a96b2-48ce-4b9b-93bc-f7b64c37463a
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-54887：在客户会话过期后清除客户购物车
 
@@ -71,4 +71,3 @@ ACSD-54887修补程序修复了在启用[!UICONTROL Persistent Shopping Cart]后
 
 
 有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
-

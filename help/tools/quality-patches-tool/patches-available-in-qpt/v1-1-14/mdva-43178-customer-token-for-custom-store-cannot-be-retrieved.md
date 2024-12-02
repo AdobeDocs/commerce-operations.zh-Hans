@@ -1,9 +1,10 @@
 ---
-title: 'MDVA-43178：无法在GraphQL中检索自定义存储区的客户令牌'
+title: MDVA-43178：无法在GraphQL中检索自定义存储区的客户令牌
 description: MDVA-43178修补程序修复了无法在GraphQL中检索自定义存储区的客户令牌的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14后，即可使用此修补程序。 修补程序ID为MDVA-43178。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: GraphQL
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 8dd9c9e7-573c-4c7a-8fd0-3b3886649af3
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%

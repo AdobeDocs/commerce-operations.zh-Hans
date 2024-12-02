@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-56886：子产品禁用时，可配置产品缺货'
+title: ACSD-56886：禁用子产品后，可配置产品将缺货
 description: 应用ACSD-56886补丁以修复在禁用产品时可配置产品缺货子项的Adobe Commerce问题。
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 5e9c1fd4-b56a-42c0-83e7-75e868213124
+source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%

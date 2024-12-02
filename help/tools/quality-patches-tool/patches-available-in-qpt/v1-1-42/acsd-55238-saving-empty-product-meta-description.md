@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-55238：保存空的产品元描述'
+title: ACSD-55238：保存空的产品元描述
 description: 应用ACSD-55238修补程序以修复Adobe Commerce问题，该问题导致元描述中始终显示包含 [!DNL Page Builder] 或其他HTML编辑器生成的HTML代码的产品描述，并且无法将其设置为空。
 feature: Products, Page Builder, Page Content
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 39ccf1bb-a71a-47a0-b252-e6331e2df9b0
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%

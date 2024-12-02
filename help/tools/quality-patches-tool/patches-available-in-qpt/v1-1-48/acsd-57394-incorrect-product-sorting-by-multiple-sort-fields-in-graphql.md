@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-57394： [!DNL GraphQL]中按多个排序属性排序的产品不正确'
+title: ACSD-57394： [!DNL GraphQL]中按多个排序属性排序的产品排序不正确
 description: 应用ACSD-57394修补程序以修复在 [!DNL GraphQL]中使用多个排序属性时产品排序不正确的Adobe Commerce问题。
 feature: GraphQL, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 3e4ca535-37ed-4363-ba6c-968eb53b98b3
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -103,4 +104,3 @@ ACSD-57394修补程序修复了在[!DNL GraphQL]中使用多个排序属性时�
 
 
 有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
-
