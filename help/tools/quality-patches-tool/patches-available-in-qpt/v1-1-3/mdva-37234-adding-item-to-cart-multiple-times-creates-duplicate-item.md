@@ -4,7 +4,7 @@ description: MDVA-37234修补程序修复了以下问题：对于同一SKU，将
 feature: Orders, Shopping Cart
 role: Admin
 exl-id: d4e9fca1-7fba-4a33-9c5e-c9695cbfc61c
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%

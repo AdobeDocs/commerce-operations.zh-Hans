@@ -4,7 +4,7 @@ description: 应用ACSD-47079修补程序以修复Adobe Commerce问题：当子�
 feature: Orders, Products
 role: Admin
 exl-id: f035f530-fae5-4b61-8af9-044f6ec02284
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%

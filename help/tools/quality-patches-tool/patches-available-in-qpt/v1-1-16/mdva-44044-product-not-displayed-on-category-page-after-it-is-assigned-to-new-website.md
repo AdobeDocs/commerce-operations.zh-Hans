@@ -4,7 +4,7 @@ description: MDVA-44044修补程序解决了将产品分配给新网站后，该
 feature: Categories, Products
 role: Admin
 exl-id: ae797cdc-5977-40b8-82da-ccf364466bdf
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%

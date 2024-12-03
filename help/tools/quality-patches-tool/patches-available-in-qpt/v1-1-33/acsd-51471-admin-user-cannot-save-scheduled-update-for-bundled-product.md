@@ -2,7 +2,7 @@
 title: ACSD-51471：管理员用户无法保存捆绑产品的计划更新
 description: 应用ACSD-51471修补程序以修复Adobe Commerce问题，该问题导致管理员用户无法为使用具有计划更新的简单产品的捆绑产品保存计划更新。
 exl-id: d8134111-63f0-4476-a407-677bda52fa90
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%

@@ -4,7 +4,7 @@ description: 应用ACSD-45168修补程序以修复Adobe Commerce问题：对于�
 feature: Attributes, Cache, Categories, Marketing Tools, Products
 role: Admin
 exl-id: 7d908307-f60c-4758-ad0f-f108ebb94558
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%

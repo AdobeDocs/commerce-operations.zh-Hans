@@ -4,7 +4,7 @@ description: 应用ACSD-49773修补程序以修复在使用Adobe Commerce S3作�
 feature: Data Import/Export, Iaas, Products, Storage
 role: Admin
 exl-id: 82f1299f-52b6-4f87-b01c-072d1661c022
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

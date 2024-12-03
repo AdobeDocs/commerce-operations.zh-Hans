@@ -4,7 +4,7 @@ description: MDVA-29400修补程序解决了客户通过PayPal Express结帐下�
 feature: Checkout, Orders, Payments
 role: Admin
 exl-id: 6f7291d3-d554-4e4e-a55d-89ea2b9dea33
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 0%

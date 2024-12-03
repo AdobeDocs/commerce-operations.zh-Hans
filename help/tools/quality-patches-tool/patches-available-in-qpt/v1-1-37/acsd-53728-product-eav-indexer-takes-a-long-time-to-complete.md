@@ -4,7 +4,7 @@ description: 应用ACSD-53728修补程序以修复产品EAV索引器需要很长
 feature: Products, Attributes
 role: Admin, Developer
 exl-id: 6cf3e401-ec28-4f80-b628-d1584f771c45
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%

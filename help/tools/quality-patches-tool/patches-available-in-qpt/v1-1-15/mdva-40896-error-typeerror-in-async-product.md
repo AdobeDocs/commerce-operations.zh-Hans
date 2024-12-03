@@ -4,7 +4,7 @@ description: MDVA-40896修补程序修复了传递到Magento\Framework\Webapi\Se
 feature: Products
 role: Admin
 exl-id: 24eedd8d-4ae1-4ebc-a3e4-993f0c361a67
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%

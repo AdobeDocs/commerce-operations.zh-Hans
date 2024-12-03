@@ -4,7 +4,7 @@ description: 应用ACSD-50814补丁以修复管理员用户无法创建贷项通
 feature: Admin Workspace, Orders, Returns
 role: Admin
 exl-id: 87ee7166-7492-4948-9a85-a183ecf54fa7
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

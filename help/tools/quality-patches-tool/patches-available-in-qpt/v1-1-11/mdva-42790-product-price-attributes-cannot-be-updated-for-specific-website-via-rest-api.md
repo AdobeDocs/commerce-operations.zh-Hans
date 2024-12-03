@@ -4,7 +4,7 @@ description: MDVA-42790修补程序修复了用户无法通过REST API更新特�
 feature: REST, Attributes, Orders, Products
 role: Admin
 exl-id: bb8dc764-d2d5-4e00-884a-2b4c1a567f58
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%

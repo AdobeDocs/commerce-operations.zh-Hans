@@ -4,7 +4,7 @@ description: MDVA-36309修补程序解决了在管理网格中按属性搜索产
 feature: Admin Workspace, Attributes, Products, Search
 role: Admin
 exl-id: fe23f129-15b4-4239-a699-4776587cc4b8
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%

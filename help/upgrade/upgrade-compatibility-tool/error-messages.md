@@ -2,7 +2,7 @@
 title: '[!DNL Upgrade Compatibility Tool]条错误消息'
 description: 了解有关在您的Adobe Commerce项目上使用 [!DNL Upgrade Compatibility Tool] 时遇到的错误消息的更多信息。
 exl-id: fe4a17a9-a807-4315-b3cd-e35f34e39f6d
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '4105'
 ht-degree: 4%

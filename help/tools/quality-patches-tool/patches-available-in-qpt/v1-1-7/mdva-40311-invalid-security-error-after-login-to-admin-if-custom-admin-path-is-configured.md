@@ -4,7 +4,7 @@ description: MDVA-40311修补程序修复了管理员用户收到错误消息*�
 feature: Admin Workspace, Compliance, Security
 role: Admin
 exl-id: dce4914b-e32e-4af0-be24-e55680191fa3
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%

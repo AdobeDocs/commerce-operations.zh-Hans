@@ -4,7 +4,7 @@ description: 应用ACSD-48293补丁以修复组合产品在缺货子产品恢复
 feature: Admin Workspace, Orders, Products
 role: Admin
 exl-id: 2aa75e97-373e-4e4a-a545-69bce807ca4d
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%

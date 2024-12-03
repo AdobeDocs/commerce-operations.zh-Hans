@@ -4,7 +4,7 @@ description: MDVA-42283修补程序修复了法语区域设置的管理顺序网
 feature: CMS
 role: Admin
 exl-id: ed99519d-03e2-444b-9cd1-e5c6e6d2ac2d
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '423'
 ht-degree: 0%

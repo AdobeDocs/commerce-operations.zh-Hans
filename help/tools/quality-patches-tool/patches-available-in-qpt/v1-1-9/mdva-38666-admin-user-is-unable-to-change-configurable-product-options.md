@@ -4,7 +4,7 @@ description: MDVA-38666修补程序解决了管理员用户无法更改客户购
 feature: Admin Workspace, Configuration, Products
 role: Admin
 exl-id: 8e72f6a4-b36f-4fe4-bc01-2254984dd512
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

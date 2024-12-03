@@ -4,7 +4,7 @@ description: ACSD-45488修补程序解决了具有多个来源的可配置产品
 feature: Configuration, Orders, Products, Returns
 role: Admin
 exl-id: 53f34e8e-00bd-4386-bebf-b15882e36da1
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%

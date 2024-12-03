@@ -4,7 +4,7 @@ description: MDVA-38728修补程序解决了更改第二个网站的产品可见
 feature: Products
 role: Admin
 exl-id: c9dfa386-6327-43b6-a977-a29178c64b89
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%

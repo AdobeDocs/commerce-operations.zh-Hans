@@ -4,7 +4,7 @@ description: 应用ACSD-49433修补程序以修复Adobe Commerce问题，该问�
 feature: Admin Workspace, Gift, Orders, Shopping Cart
 role: Admin
 exl-id: 22691e35-0491-4935-8e7c-148900706491
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

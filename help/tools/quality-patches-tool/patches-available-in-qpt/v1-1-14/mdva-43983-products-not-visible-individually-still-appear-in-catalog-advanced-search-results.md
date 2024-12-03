@@ -4,7 +4,7 @@ description: MDVA-43983修补程序解决了设置为“不可见”的产品仍
 feature: Catalog Management, Products, Search
 role: Admin
 exl-id: d494d263-016b-43fd-aa87-0d74eadc4a6a
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

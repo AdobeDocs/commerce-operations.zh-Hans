@@ -4,7 +4,7 @@ description: MDVA-42046修补程序修复了在更新具有日期输入字段的
 feature: Attributes, Products
 role: Admin
 exl-id: ff5903ff-70b3-4274-a8a1-450c2fde9750
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%

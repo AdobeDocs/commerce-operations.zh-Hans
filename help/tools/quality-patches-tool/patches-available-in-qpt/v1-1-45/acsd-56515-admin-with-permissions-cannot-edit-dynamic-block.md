@@ -4,7 +4,7 @@ description: 应用ACSD-56515修补程序以修复Adobe Commerce问题，该问�
 feature: Roles/Permissions, Admin Workspace
 role: Admin, Developer
 exl-id: dd3e61a4-aba4-4f86-b4fe-88ca4276ace5
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%

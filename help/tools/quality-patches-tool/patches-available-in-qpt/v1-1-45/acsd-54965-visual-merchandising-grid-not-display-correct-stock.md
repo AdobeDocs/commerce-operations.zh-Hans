@@ -4,7 +4,7 @@ description: 应用ACSD-54965修补程序以修复Adobe Commerce问题，该问�
 feature: Merchandising, Categories
 role: Admin, Developer
 exl-id: bd8a3547-1d84-4a17-b006-b35d92256211
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%

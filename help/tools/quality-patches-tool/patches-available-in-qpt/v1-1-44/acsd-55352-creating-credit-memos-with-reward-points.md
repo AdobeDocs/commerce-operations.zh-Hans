@@ -4,7 +4,7 @@ description: 应用ACSD-55352补丁以修复Adobe Commerce问题，其中在使�
 feature: Checkout, Orders
 role: Admin, Developer
 exl-id: bee0c4be-11ec-4dcb-9b3c-7af26676cee9
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%

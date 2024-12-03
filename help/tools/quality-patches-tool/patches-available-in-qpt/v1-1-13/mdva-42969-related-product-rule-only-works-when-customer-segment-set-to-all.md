@@ -4,7 +4,7 @@ description: MDVA-42969修补程序修复了相关产品规则仅在客户区段
 feature: Customer Service, Marketing Tools, Products
 role: Admin
 exl-id: 121da040-4541-468a-aeaf-cf98094e1918
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%

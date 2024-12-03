@@ -4,7 +4,7 @@ description: 应用ACSD-58141修补程序以修复以下Adobe Commerce问题：�
 feature: Customers, Cache
 role: Admin, Developer
 exl-id: c188c215-204c-489f-8703-4c81ca8703b7
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%

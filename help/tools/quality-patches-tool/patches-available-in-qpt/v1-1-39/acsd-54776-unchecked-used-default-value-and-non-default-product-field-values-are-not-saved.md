@@ -4,7 +4,7 @@ description: 应用ACSD-54776修补程序以修复Adobe Commerce问题，该问�
 feature: Products
 role: Admin, Developer
 exl-id: d9f63abb-5d00-4777-a186-1120344af018
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%

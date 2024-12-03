@@ -4,7 +4,7 @@ description: Adobe Commerce应用ACSD-48661修补程序以修复以下问题：�
 feature: Admin Workspace, B2B, Companies, Orders
 role: Admin
 exl-id: 7115226e-5942-4a8f-9dec-b1b6f665eef8
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

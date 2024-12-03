@@ -4,7 +4,7 @@ description: 应用ACSD-49843修补程序以修复Adobe Commerce问题：当[!UI
 feature: Catalog Management, Configuration, Invoices, Orders, Storefront
 role: Admin, Developer
 exl-id: e990b550-fb32-48d2-9c39-2176d7ab34c9
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%

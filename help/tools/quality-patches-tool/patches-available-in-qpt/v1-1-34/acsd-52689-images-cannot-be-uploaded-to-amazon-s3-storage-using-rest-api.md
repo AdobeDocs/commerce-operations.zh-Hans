@@ -4,7 +4,7 @@ description: 应用ACSD-52689修补程序以修复无法通过REST API将图像�
 feature: REST, Storage, Iaas
 role: Admin
 exl-id: 4d7a8ea7-2856-4b40-a922-fdd356dcaea4
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%

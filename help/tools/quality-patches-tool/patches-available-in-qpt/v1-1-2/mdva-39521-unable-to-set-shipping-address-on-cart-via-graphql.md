@@ -4,7 +4,7 @@ description: MDVA-39521修补程序解决了用户无法通过GraphQL为电话�
 feature: GraphQL, Orders, Shipping/Delivery, Shopping Cart
 role: Admin
 exl-id: aac44c20-b244-472b-bab0-7d6e7d99608a
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%

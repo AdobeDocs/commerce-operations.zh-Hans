@@ -4,7 +4,7 @@ description: 应用ACSD-61528修补程序以解决Adobe Commerce问题，该问�
 feature: GraphQL, B2B, Companies, Roles/Permissions
 role: Admin, Developer
 exl-id: 81d78746-e723-4b18-860c-d973158b469c
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: e6ba48b10918437df8846992d435d65db0669eda
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%

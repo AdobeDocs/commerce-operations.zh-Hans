@@ -4,7 +4,7 @@ description: MDVA-27239修补程序修复了未显示交叉销售产品的问题
 feature: Products
 role: Admin
 exl-id: ab8fe64d-adbe-4756-be43-1a35ba6b4123
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%

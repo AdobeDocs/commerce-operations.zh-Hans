@@ -4,7 +4,7 @@ description: 此子部分详细描述了[!UICONTROL Quality Patches Tool] (QPT) 
 feature: Tools and External Services
 role: Admin
 exl-id: c82b5829-917d-4f38-b8a6-826f92e319b6
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%

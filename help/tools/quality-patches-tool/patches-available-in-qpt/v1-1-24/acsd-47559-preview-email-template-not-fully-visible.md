@@ -4,7 +4,7 @@ description: 应用ACSD-47559修补程序以修复电子邮件模板预览不完
 feature: Communications, Marketing Tools, Personalization
 role: Admin
 exl-id: a0bd51e0-990b-47c9-8de0-6071b6f79e54
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%

@@ -4,7 +4,7 @@ description: ACSD-44938修补程序修复了无法在访客用户的 [!DNL Graph
 feature: Admin Workspace, GraphQL
 role: Admin
 exl-id: 62d36c27-545a-4c32-be69-a92e4b3ca2ca
-source-git-commit: f6abbbb28a3077f7bf26a393388c5059fcd8c599
+source-git-commit: 3fdefc6201714c441d63574d293863e83205894b
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
