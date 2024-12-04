@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 46c7053368bfab9c5975c5616be9b67050b93105
+source-git-commit: c03b0b3c81556f1c75ad5259a5905a5dd5b0224e
 workflow-type: tm+mt
-source-wordcount: '6415'
+source-wordcount: '6425'
 ht-degree: 0%
 
 ---
@@ -679,6 +679,7 @@ ht-degree: 0%
          - [ACSD-58471：计划目录价格规则时，无法在产品详细信息页面上加载动态内容](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page.md)
          - [ACSD-58383：通过 [!DNL REST API]同步退款请求中的重复贷项通知单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58383-duplicate-credit-memos-from-simultaneous-refund-requests-via-rest-api.md)
          - [ACSD-58735：受限管理员无法查看相关网站客户帐户上放弃的购物车](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58735-restricted-admin-cant-view-abandoned-shopping-carts.md)
+         - [ACSD-60344：有关使用自动审批[!UICONTROL Purchase Order]的重复订单确认电子邮件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-60344-duplicate-order-confirmation-emails-for-purchase-order-with-auto-approval.md)
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - 命令行工具引用{#cli-reference}
