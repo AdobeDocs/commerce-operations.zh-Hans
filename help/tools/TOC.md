@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 73953020c85ffb0a941602e1dafe5de6a6175cff
+source-git-commit: 7fdaa4cb85abc76c307ca8aa5f43cfa394b8a1ce
 workflow-type: tm+mt
-source-wordcount: '6437'
+source-wordcount: '6446'
 ht-degree: 0%
 
 ---
@@ -673,6 +673,7 @@ ht-degree: 0%
          - [ACSD-62056：如果安装了MSI，则为可配置产品上传映像失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-62056-image-upload-for-configurable-products-fail-msi-installed.md)
       - v1.1.55 {#v1-1-55}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.55](/help//tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/overview.md)
+         - [ACSD-58685：重新启用时会发送禁用的销售电子邮件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58685-ensures-disabled-sales-emails-are-not-sent-upon-re-enabling.md)
          - [ACSD-58828：任何空的必填字段都会显示服务器端“地址为必填项”消息，以及客户端验证](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58828-server-side-address-required-message-appears-for-any-empty-required-field-alongside-client-side-validation.md)
          - [ACSD-61534：无法使用bin/magento config：set设置设计配置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61534-design-configuration-cannot-set-using-bin-magento-config-set.md)
          - [ACSD-61348：通过GraphQL可见但不在店面显示的愿望清单项目](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61348-wishlist-items-visible-via-graphql-but-not-on-storefront.md)
