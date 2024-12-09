@@ -1,11 +1,11 @@
 ---
 title: 实施行动手册
-description: 了解用于规划、开发、启动和维护您的Adobe Commerce项目的最佳实践。
+description: 了解 Adobe Commerce 项目的规划、开发、启动和维护的最佳实践。
 exl-id: 2f82c68c-60c7-4a62-837b-492afc06e0db
 feature: Best Practices, Cloud, Integration
 source-git-commit: 581a7dbcc19c31df80e03cb9f321a6adb5fa1a73
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
