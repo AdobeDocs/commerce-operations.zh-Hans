@@ -2,9 +2,9 @@
 title: 完成先决条件
 description: 通过完成这些先决条件步骤，准备Adobe Commerce项目以进行升级。
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+source-git-commit: 4c84710da62fbb31214a0de2adc8adbd68880a76
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
@@ -229,11 +229,11 @@ crontab -l
 
 cron未运行的另一个症状是管理员中出现以下错误：
 
-![](../../assets/upgrade-guide/cron-not-running.png)
+![系统消息 — cron未运行](../../assets/upgrade-guide/cron-not-running.png)
 
 要查看错误，请单击窗口顶部的&#x200B;**系统消息**，如下所示：
 
-![](../../assets/upgrade-guide/system-messages.png)
+![系统消息通知](../../assets/upgrade-guide/system-messages.png)
 
 有关详细信息，请参阅[配置和运行cron](../../configuration/cli/configure-cron-jobs.md)。
 
