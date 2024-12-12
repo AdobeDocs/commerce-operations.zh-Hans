@@ -4,14 +4,18 @@ description: 应用ACSD-52801修补程序以修复Adobe CommerceGraphQL产品过
 feature: Products
 role: Admin, Developer
 exl-id: 946a7189-60b2-4812-92ca-ed7ba35b2488
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: ec05b041c7af477abd6d3ade6ea95fed5065f2fa
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
 # ACSD-52801：GraphQL产品过滤器查询未显示部分匹配结果
+
+>[!NOTE]
+>
+>已发布更新的修补程序([ACSD-62332](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md))，以解决版本2.4.6 - 2.4.6-p8的相同问题。 它取代了2.4.6及更高版本的ACSD-52801修补程序。 有关详细信息，请参阅[ACSD-62332](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md)。
 
 ACSD-52801修补程序修复了GraphQL产品过滤器查询不显示部分匹配结果的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.40时，此修补程序可用。 修补程序ID为ACSD-52801。 请注意，Adobe Commerce 2.4.7中已修复该问题。
 
