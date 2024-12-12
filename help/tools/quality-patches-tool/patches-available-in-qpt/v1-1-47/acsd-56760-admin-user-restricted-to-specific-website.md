@@ -3,16 +3,16 @@ title: ACSD-56760：管理员用户仅限访问特定网站，无法排序或添
 description: 应用ACSD-56760修补程序以修复Adobe Commerce问题：该问题导致管理员用户仅限于访问特定网站，如果网络商店拥有自己的根类别，则该用户无法对类别进行排序或添加新产品。
 role: Admin
 exl-id: 2d75164e-c463-4e1a-aa6f-f420dbe0aaeb
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: 881d33089b15b78583e09b79e93a3f78f38bc2ca
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # ACSD-56760：管理员用户仅限访问特定网站，无法排序或添加新产品
 
-ACSD-56760修补程序修复了以下问题：管理员用户被限制在特定网站，如果网络商店拥有自己的根类别，则无法在类别中排序或添加新产品。 安装[!DNL Quality Patches Tool (QPT)] 1.1.47时，此修补程序可用。 修补程序ID为ACSD-56760。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
+ACSD-56760修补程序修复了以下问题：管理员用户被限制在特定网站，如果网络商店拥有自己的根类别，则无法在类别中排序或添加新产品。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.47时，此修补程序可用。 修补程序ID为ACSD-56760。 请注意，该问题计划在Adobe Commerce 2.4.8-beta1中修复。
 
 ## 受影响的产品和版本
 
@@ -69,8 +69,4 @@ ACSD-56760修补程序修复了以下问题：管理员用户被限制在特定�
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)。
-* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
-
-
-有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
+* [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
