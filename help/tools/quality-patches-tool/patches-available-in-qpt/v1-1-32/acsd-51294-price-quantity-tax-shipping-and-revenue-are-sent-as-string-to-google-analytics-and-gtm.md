@@ -4,7 +4,7 @@ description: 应用ACSD-51294修补程序以修复Adobe Commerce问题，该问�
 feature: Orders, Shipping/Delivery, Variables
 role: Admin
 exl-id: 99d2a311-2543-4007-99fd-6c34a2950773
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -52,7 +52,7 @@ ACSD-51294修补程序修复了将价格、数量、税务、运输和收入作�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](</help/tools/quality-patches-tool/usage.md>)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读

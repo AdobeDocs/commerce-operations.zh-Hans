@@ -4,7 +4,7 @@ description: 应用ACSD-52041修补程序以修复Adobe Commerce问题，该问�
 feature: Page Builder
 role: Admin, Developer
 exl-id: 48a7fc36-e98a-4a4e-bed3-248d7d73f6cb
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -55,7 +55,7 @@ ACSD-52041修补程序修复了页面生成器呈现5秒钟而不释放锁的问
 
 要为版本&#x200B;**2.4.4 - 2.4.4-p5、2.4.5 - 2.4.5-p4和2.4.6 - 2.4.6-p2**&#x200B;应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](</help/tools/quality-patches-tool/usage.md>)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读

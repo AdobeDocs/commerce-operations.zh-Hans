@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51102：应用于大量产品的目录规则未正确索引'
+title: ACSD-51102：应用于大量产品的目录规则未正确编制索引
 description: 应用ACSD-51102修补程序以修复Adobe Commerce问题：当计划更新启用了应用于大量产品的目录规则时，该规则无法正确编制索引。
 feature: Catalog Management, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 35a8078d-667b-4101-8562-ece052b44c9c
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -56,7 +57,7 @@ ACSD-51102修补程序修复了以下问题：当计划更新启用了应用于�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](</help/tools/quality-patches-tool/usage.md>)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读

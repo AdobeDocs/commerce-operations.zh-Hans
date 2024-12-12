@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51890：可多次单击[!UICONTROL Submit review]按钮'
+title: ACSD-51890：可多次单击[!UICONTROL Submit review]按钮
 description: 应用ACSD-51890修补程序以修复可多次单击[!UICONTROL Submit Review]按钮而无需 [!DNL Google reCAPTCHA v3] 验证的Adobe Commerce问题。
 feature: Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: db69ccdc-c66e-4bdb-9783-772f2af0d33f
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 0%
@@ -55,7 +56,7 @@ ACSD-51890修补程序修复了在没有&#x200B;**[!DNL Google reCAPTCHA v3]**&#
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](</help/tools/quality-patches-tool/usage.md>)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
