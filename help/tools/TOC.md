@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 5537079eff80496f8f4906ba22220a9a3ac3402a
+source-git-commit: f2b773bdae1a892216d4384b85d1d929553529ea
 workflow-type: tm+mt
-source-wordcount: '6651'
+source-wordcount: '6662'
 ht-degree: 0%
 
 ---
@@ -701,6 +701,7 @@ ht-degree: 0%
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
       - v1.1.57 {#v1-1-57}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.57](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/overview.md)
+         - [ACSD-61622： REST API响应中缺少 [!DNL FedEx] 帐户特定费率](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-61622-fedex-account-specific-rates-missing-from-response.md)
          - [ACSD-62965：修复了GraphQL订单放置响应中缺少LocalizedException消息的问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62965-fixes-missing-localizedexception-message-in-graphql-order-placement-response.md)
          - [ACSD-62758：解决了可配置产品页面上的视频渲染问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62758-resolved-video-rendering-issue-on-configurable-product-pages.md)
          - [ACSD-63326：修复了从后端下订单后的管理员重定向问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63326-fix-admin-redirection-issue-after-placing-an-order-from-the-backend.md)
