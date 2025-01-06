@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: f2b773bdae1a892216d4384b85d1d929553529ea
+source-git-commit: d0a1da302c3e50b3b73a89d5d6326ef638005fec
 workflow-type: tm+mt
-source-wordcount: '6662'
+source-wordcount: '6674'
 ht-degree: 0%
 
 ---
@@ -705,6 +705,7 @@ ht-degree: 0%
          - [ACSD-62965：修复了GraphQL订单放置响应中缺少LocalizedException消息的问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62965-fixes-missing-localizedexception-message-in-graphql-order-placement-response.md)
          - [ACSD-62758：解决了可配置产品页面上的视频渲染问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62758-resolved-video-rendering-issue-on-configurable-product-pages.md)
          - [ACSD-63326：修复了从后端下订单后的管理员重定向问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63326-fix-admin-redirection-issue-after-placing-an-order-from-the-backend.md)
+         - [ACSD-63286：分配给共享目录的产品需要手动重新索引才能显示](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63286-products-in-shared-catalog-need-manual-reindexing-to-appear.md)
          - [ACSD-58325：即使在发生验证错误后，[!UICONTROL Import]按钮也可用](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-58325-import-button-available-even-after-a-validation-error.md)
 - 命令行工具引用{#cli-reference}
    - [Adobe Commerce（内部部署）](reference/commerce-on-premises.md)
