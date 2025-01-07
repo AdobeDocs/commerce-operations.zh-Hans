@@ -2,9 +2,9 @@
 title: 快速启动内部部署
 description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce。
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: 60db3da9154e76032c88d687b6b6e22d7b81f9ae
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
@@ -89,11 +89,11 @@ Adobe使用[Composer](https://getcomposer.org/)管理Adobe Commerce组件及其�
    composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   出现提示时，输入您的身份验证密钥。 在[Commerce Marketplace](https://commercemarketplace.adobe.com/customer/account/login/)中创建并配置公钥和私钥。
+   出现提示时，输入您的身份验证密钥。 从[Commerce Marketplace — 访问密钥](https://commercemarketplace.adobe.com/customer/account/login/)创建和配置公钥和私钥。 对于`[!UICONTROL username]`，复制并粘贴公钥值。 对于`[!UICONTROL password]`，复制并粘贴私钥值。
 
    >[!NOTE]
    >
-   > 使用编辑器`auth.json`文件或环境变量时，系统不会提示您输入身份验证密钥。
+   > 如果使用使用Commerce身份验证密钥配置的编辑器`[auth.json](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`文件或环境变量，则不会提示您输入身份验证密钥。
 
    如果遇到错误（如`Could not find package...`或`...no matching package found`），请确保命令中没有拼写错误。 如果仍遇到错误，则可能无权下载Adobe Commerce。 请联系[Adobe Commerce支持](https://support.magento.com/hc/en-us)以获取帮助。
 
