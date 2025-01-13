@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: ad941810716f34f252e401455fb3db64ae35f35f
+source-git-commit: 0ab8ce896243757d3b17375acfebff3614219a3b
 workflow-type: tm+mt
-source-wordcount: '6784'
+source-wordcount: '6796'
 ht-degree: 0%
 
 ---
@@ -707,6 +707,7 @@ ht-degree: 0%
       - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
       - v1.1.57 {#v1-1-57}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.57](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/overview.md)
+         - [ACSD-62689：无法在深度4之后添加[!UICONTROL Related Product Rules]中的类别和小部件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62689-customer-add-categories-issue-related-product-rules-and-widgets.md)
          - [ACSD-62629：小组件中的产品列表显示不正确的类别](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62629-product-list-widgets-category-condition.md)
          - [ACSD-57570：修复了管理员用户访问共享目录的受限问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-57570-fix-restricted-admin-access.md)
          - [ACSD-62635：在 [!DNL GraphQL]中显示的多商店相关产品不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62635-multistore-related-products-displayed-incorrectly-in-graphql.md)
