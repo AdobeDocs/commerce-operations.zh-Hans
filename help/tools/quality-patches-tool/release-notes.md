@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 696f8b1e24c38b7604058df88eff31c6c296d6e7
+source-git-commit: 9e71d979e0662770043fd9ca74b9ba8b5a6752f0
 workflow-type: tm+mt
-source-wordcount: '24185'
+source-wordcount: '24552'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,23 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关社区为Magento Open Source而创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.58 {#v1-1-58}
+
+* **ACSD-48570**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.7) — 修复了以下问题：当&#x200B;**将存储代码添加到URL**&#x200B;启用了&#x200B;*时，单击[!UICONTROL Admin]重置密码链接无法访问重置密码页面*，该链接之前导致显示登录页面或404页面。
+* **ACSD-62118**(对于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了使用“采购订单”方法下达[!DNL B2B]订单时，`sales_order_tax_item`表未完全更新的问题。
+* **ACSD-63067**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了以下问题：所有产品数量均错误地高亮显示，并且当只有一个数量不正确时，将为分组产品中的所有产品显示消息&#x200B;*[!DNL Please specify the quantity of product(s).]*。
+* **ACSD-63090**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了在将产品添加到购物车后，当删除产品时删除购物车商品的问题。
+* **ACSD-63182**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了在保存启用了&#x200B;**[!DNL MSI]** *的重复捆绑包产品时出现错误的问题*。
+* **ACSD-63283**(适用于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了从礼品注册表中订购商品导致异常以及礼品注册表更新中包含不属于注册表的商品的问题。
+* **ACSD-63299**(适用于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了店面未显示可配置产品的特殊价格的问题。
+* **ACSD-63325**(对于Adobe Commerce和Magento Open Source>=2.4.7 &lt;2.4.8) — 修复了在提交空[!DNL GraphQL]请求时发生`Syntax Error: Unexpected <EOF>`错误的问题。
+* **ACSD-63329**(对于Adobe Commerce和Magento Open Source>=2.4.4 &lt;2.4.8) — 修复了在通过[!DNL REST API]创建产品时，未设置具有&#x200B;**[!UICONTROL Date]**&#x200B;或&#x200B;**[!UICONTROL Date and Time]**&#x200B;输入类型的属性的默认值的问题。
+* **ACSD-63572**(对于Adobe Commerce和Magento Open Source>=2.4.5 &lt;2.4.8) — 修复了终止索引器进程时未清理`CatalogRule`索引器临时表的问题。
+* **ACSD-63578**(对于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了单击[!UICONTROL Admin]中&#x200B;**[!UICONTROL Add to Order by SKU]**&#x200B;的&#x200B;**[!UICONTROL Delete]**&#x200B;按钮未删除[!DNL SKU]的问题。
+* 更新的版本： **MDVA-39305-V3**
+* 已替换的修补程序： **ACSD-56280**
+* 已弃用的修补程序： **ACSD-62872**
 
 ## v1.1.57 {#v1-1-57}
 
