@@ -1,5 +1,5 @@
 ---
-source-git-commit: 9bbb006234aa61c998c853167fa89e43d5f9012b
+source-git-commit: 4a84f20fba387f6b94786095ebad82c2fdf0560e
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 0%
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 ## 2.4.6
 
-对2.4.6版本行的支持将于2026年3月14日终止。
+对2.4.6版本线的支持将于2026年8月11日终止。
 
 <table>
   <thead>
