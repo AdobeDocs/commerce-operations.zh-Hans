@@ -3,16 +3,17 @@ title: ACSD-63286：分配给共享目录的产品需要手动重新索引才能
 description: 应用ACSD-63286修补程序以修复Adobe Commerce问题，该问题导致在执行手动重新索引之前，通过API分配到共享目录的产品不会显示在店面上。
 feature: Products, REST
 role: Admin, Developer
-source-git-commit: 00b2b9285ca27d630bd0ece2750b531710e8d196
+exl-id: 0435c06e-337e-4320-acc6-fa79a3b34008
+source-git-commit: e18a41c5abb1cc8b407ff6c188acdeed0e8a7659
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
 # ACSD-63286：分配给共享目录的产品需要手动重新索引才能显示
 
-ACSD-63286修补程序修复了以下问题：在执行手动重新索引之前，通过API分配到共享目录的产品不会显示在店面上。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-63286。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-63286修补程序修复了以下问题：在执行手动重新索引之前，通过API分配到共享目录的产品不会显示在店面上。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-63286。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 

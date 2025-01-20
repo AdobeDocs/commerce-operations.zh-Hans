@@ -3,17 +3,17 @@ title: ACSD-62689：无法在深度4之后添加[!UICONTROL Related Product Rule
 description: 应用ACSD-62689修补程序以修复Adobe Commerce问题，该问题导致客户在深度嵌套四次后无法在[!UICONTROL Related Product Rules]和小组件中添加类别。
 feature: Categories
 role: Admin, Developer
-source-git-commit: 154a017fbc6e069e8e59651db46955922c004955
+exl-id: 2506744a-01c8-462b-9a27-cd0bdb5664f9
+source-git-commit: e18a41c5abb1cc8b407ff6c188acdeed0e8a7659
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
-
 # ACSD-62689：无法在深度4之后添加&#x200B;*[!UICONTROL Related Product Rules]*&#x200B;中的类别和小部件
 
-ACSD-62689修补程序修复了客户无法在深度嵌套四次之后在&#x200B;*[!UICONTROL Related Product Rules]*&#x200B;和小组件中添加类别的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/patches/release-notes.html) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62689。 请注意，此问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-62689修补程序修复了客户无法在深度嵌套四次之后在&#x200B;*[!UICONTROL Related Product Rules]*&#x200B;和小组件中添加类别的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62689。 请注意，此问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -67,3 +67,4 @@ ACSD-62689修补程序修复了客户无法在深度嵌套四次之后在&#x200B
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
+

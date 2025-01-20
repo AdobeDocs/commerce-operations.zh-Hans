@@ -3,16 +3,17 @@ title: ACSD-62758：解决了可配置产品页面上的视频渲染问题
 description: 应用ACSD-62758修补程序以修复当URL包含预先选定的样本选项时，可配置产品详细信息页面上的产品视频无法正确呈现的Adobe Commerce问题。
 feature: Catalog Management
 role: Admin, Developer
-source-git-commit: 313709361ee86e39b89c416f71a92b078318f4fb
+exl-id: 084b497d-4471-4458-bc1d-2a452bfe2662
+source-git-commit: e18a41c5abb1cc8b407ff6c188acdeed0e8a7659
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
 
 # ACSD-62758：解决了可配置产品页面上的视频渲染问题
 
-ACSD-62758修补程序修复了当URL包含预先选定的样本选项时，可配置产品详细信息页面上的产品视频无法正确呈现的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62758。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-62758修补程序修复了当URL包含预先选定的样本选项时，可配置产品详细信息页面上的产品视频无法正确呈现的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62758。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -70,3 +71,4 @@ ACSD-62758修补程序修复了当URL包含预先选定的样本选项时，可�
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
+
