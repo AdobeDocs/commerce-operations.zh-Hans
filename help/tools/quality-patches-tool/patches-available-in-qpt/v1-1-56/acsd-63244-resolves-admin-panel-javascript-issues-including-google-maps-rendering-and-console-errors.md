@@ -3,14 +3,15 @@ title: ACSD-63244：解决管理面板JavaScript问题，包括 [!DNL Google Map
 description: ACSD-63244修补程序修复了管理面板中的多个JavaScript问题，包括 [!DNL Google Maps] 渲染问题以及反复出现的“Uncated TypeError”问题。在浏览器控制台中，_each不是函数错误。
 feature: Admin Workspace
 role: Admin, Developer
-source-git-commit: 01d6d74bfb9a9491bc006f140a2eebf4bbee004b
+exl-id: 1985c845-219e-4af4-8f70-62dd57722494
+source-git-commit: 6b623811440238deee7a7fe859d887830f89782c
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
-# ACSD-63244： ACSD-63244：解决管理面板JavaScript问题，包括[!DNL Google Maps]渲染和控制台错误
+# ACSD-63244：解决管理面板JavaScript问题，包括[!DNL Google Maps]渲染和控制台错误
 
 ACSD-63244修补程序修复了管理面板中的多个JavaScript问题，包括浏览器控制台中的[!DNL Google Maps]渲染问题和重复出现的`Uncaught TypeError: this._each is not a function`错误。 此修补程序在[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.56中可用。修补程序ID为ACSD-63244。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
