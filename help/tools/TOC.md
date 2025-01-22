@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: b2659c1fc31150e452cb50424bb26529e6162c85
+source-git-commit: 30403c10ccb7332b0105c9859c37d7d23a784ce5
 workflow-type: tm+mt
-source-wordcount: '6825'
+source-wordcount: '6836'
 ht-degree: 0%
 
 ---
@@ -720,6 +720,7 @@ ht-degree: 0%
          - [ACSD-62671： [!DNL GraphQL] 第一次尝试时未返回更新的地址](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62671-graphql-not-returning-updated-address-on-first-attempt.md)
       - v1.1.58 {#v1-1-58}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.58](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/overview.md)
+         - [ACSD-63067：解决店面分组产品的数量验证问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63067-resolving-quantity-validation-issues-in-grouped-products-on-storefront.md)
          - [ACSD-62118：使用[!UICONTROL Purchase Order]方法下达的B2B订单未完全更新sales_order_tax_item表](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-62118-tax-item-table-not-updated-po-method.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - 命令行工具引用{#cli-reference}
