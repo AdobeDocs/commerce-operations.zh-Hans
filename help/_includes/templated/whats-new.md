@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c72ffc09d5b0147ce3c3f31cf18510a8cd9931f
+source-git-commit: 3ea627f6f4531f63ab1dc05414252c73cac6ffd0
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1417'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,262 @@ ht-degree: 1%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2025年1月22日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62212-forgot-password-email-not-translated-to-store-view-language">对QPT 1.1.57版本</a>中ACSD-62212修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9a00ebde10ad5dd916fd7afeb73e5e6aeec32495">9a00eb</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62481-shopping-cart-empty-even-with-persistence-enabled">对QPT 1.1.57版本</a>中ACSD-62481修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/94781de6a8ec4e342299da5a64bef1a9a2d14366">94781d</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-62118-tax-item-table-not-updated-po-method">对QPT 1.1.58版本</a>中ACSD-62118修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7fb220f5a55f6ff40fddf980537262d933f993dc">7fb220</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2025年1月17日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了QPT 1.1.58版本</a>中可用修补程序所修复问题的<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/overview">描述</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/657f4f1f497fca7a8f1278be73284bf558c5769e">657f4f</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2025年1月15日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62708-tinymce-7-editor-font-size-issue">对QPT 1.1.57版本</a>中ACSD-62708修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/da761a8db901b5b95b4682dfb7721cc53e2c842a">da761a</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2025年1月13日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了[QPT 1.1.57版本中ACSD-62689修补程序修复的问题的详细说明]<br />(https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62689-customer-add-categories-issue-related-product-rules-and-widgets)</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a6a62dea458a8e70c432c83fc7c75a4f0a26aacb">a6a62d</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-55339-resolving-sku-trimming-issue-in-negotiable-quotes-for-adobe-commerce">对QPT 1.1.56版本</a>中ACSD-55339修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c7311e6c665a018c3da30f37fea2c35487034795">c7311e</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2025年1月10日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-61805-stock-status-issue-storefront-backorder-status-update-rest-api">对QPT 1.1.56版本</a>中ACSD-61805修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/cac43e2e74ddfa0fa77603100a73e2894510b552">cac43e</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62629-product-list-widgets-category-condition">对QPT 1.1.57版本</a>中ACSD-62629修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/cab2b42f8fa02419d0ca4164e74cc87dd344b3e4">cab2b4</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2025年1月8日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62755-tinymce-7-needs-font-size-added-in-editor-initialization-setting">对QPT 1.1.56版本</a>中ACSD-62755修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/5a785f5111778a36e1556ecc3443d37f50ffc435">5a785f</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62670-products-ordered-report-export-to-csv-xml-throws-error">对QPT 1.1.56版本</a>中ACSD-62670修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1d04fa3c26e1762156f99837ea75e38a142bf595">1d04fa</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-60811-fixes-limitation-in-updating-order-status-to-custom-values">对QPT 1.1.56版本</a>中ACSD-60811修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1def9cb825b4935987727a6b27b01482a3f91ba7">1def9c</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-57570-fix-restricted-admin-access">对QPT 1.1.57版本</a>中ACSD-57570修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7e40cf7e683ac578614d61233cae2155ab2f777e">7e40cf</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2025年1月6日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-63244-resolves-admin-panel-javascript-issues-including-google-maps-rendering-and-console-errors">对QPT 1.1.56版本</a>中ACSD-63244修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/4bff3aebf07c922e1121468d556facdfd7c7bad1">4bff3a</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62355-improves-configurable-product-edit-performance-in-adobe-commerce">对QPT 1.1.56版本</a>中ACSD-62355修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d6544587a287ce8374933f25bed69fa45dab2e97">d65445</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-61622-fedex-account-specific-rates-missing-from-response">对QPT 1.1.57版本</a>中ACSD-61622修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/dd7956e3577b47faef15350b06c9f38ca36899da">dd7956</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62635-multistore-related-products-displayed-incorrectly-in-graphql">对QPT 1.1.57版本</a>中ACSD-62635修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/71e2d772e0cf118c0f47a65e1b81360741d71f5a">71e2d7</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62671-graphql-not-returning-updated-address-on-first-attempt">对QPT 1.1.57版本</a>中ACSD-62671修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/72c7e7d96c9adffba8d3c48fc4a3f0f961268a4c">72c7e7</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63286-products-in-shared-catalog-need-manual-reindexing-to-appear">对QPT 1.1.57版本</a>中ACSD-63286修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a0a2b5ad10c5f38603963af036fb280988df612d">a0a2b5</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2025年1月3日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62952-gift-registry-date-inaccurate-storefront">对QPT 1.1.56版本</a>中ACSD-62952修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/5d612d7f4a57824aae06e8dcff86c4534e451f68">5d612d</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62872-schedule-updates-validated-incorrectly">对QPT 1.1.56版本</a>中ACSD-62872修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/374deb66f7fb8081318a966f78fe3b1bd4ced2a0">374deb</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62758-resolved-video-rendering-issue-on-configurable-product-pages">对QPT 1.1.57版本</a>中ACSD-62758修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f6582b9c90f84d99335534f25d38aa2bff9d02be">f6582b</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62965-fixes-missing-localizedexception-message-in-graphql-order-placement-response">对QPT 1.1.57版本</a>中ACSD-62965修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/427969b0e983065cbaad20d7b960a023ae238299">427969</a> （提交）</td>
+    </tr>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-58325-import-button-available-even-after-a-validation-error">对QPT 1.1.57版本</a>中ACSD-58325修补程序修复的问题的详细说明</p>
+</td>
+      <td>新建主题</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9a46f93eab7e2cb3da76941a6d8a2ef636fd8696">9a46f9</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2025年1月2日
 
@@ -375,202 +631,6 @@ ht-degree: 1%
 </td>
       <td>新建主题</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fc5343374cf270f85b908e9bd022ce89c00c615f">fc5343</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月25日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58735-restricted-admin-cant-view-abandoned-shopping-carts">对QPT 1.1.55版本</a>中ACSD-58735修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/358233a5c250b888c1a95ef1389b13caa4dbfcc6">358233</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-62485-async-operations-all-consumer-stops-working-when-company-is-created">对QPT 1.1.54版本</a>中ACSD-62485修补程序修复的问题的详细说明。</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/50f430f82753c76675cf870cdc967c9dce6b6fa3">50f430</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月22日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58383-duplicate-credit-memos-from-simultaneous-refund-requests-via-rest-api">对QPT 1.1.55版本</a>中ACSD-58383修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/be768cdf7c4518db6a0c1ecb264a32170b51dbf7">be768c</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page">对QPT 1.1.55版本</a>中ACSD-58471修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/45fc69f6a52436edb96e83e99db2f5b9a7f3db62">45fc69</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月20日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61199-cms-page-hierarchy-tab-doesnt-display-proper-tree-structure">对QPT 1.1.54版本</a>中ACSD-61199修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0908c54f14963f0192f13b0bd33d581f7a5c6bdb">0908c5</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月19日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了QPT 1.1.55版本</a>中可用的修补程序所修复问题的<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/overview">描述</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7848afbcdbec3ca4c06f53ddaef6de2829cc5006">7848af</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header">对QPT 1.1.54版本</a>中ACSD-61845修补程序修复的问题的详细说明。</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/46bc94e85c07dca87d4f3ed40a3eb45faa2f8d92">46bc94</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月15日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已发布1.1.55 Quality Patches Tool (QPT)包版本的<a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">发行说明</a>。</p>
-</td>
-      <td>major-update</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0e8a6315fc93e271fc71bdad1629103ed727f3dd">0e8a63</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月14日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-61553-cart-price-rule-discounts-are-incorrectly-calculated-when-multiple-discounts-with-different-priorities-are-applied">对QPT 1.1.53版本</a>中ACSD-61553修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d7b72cb646e47257a26f32bbddcec96e36c02946">d7b72c</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61200-fixes-discount-tax-compensation-in-sales-total-calculations">对QPT 1.1.54版本</a>中ACSD-61200修补程序修复的问题的详细说明。</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ded386f6dcd7b99f6337c9f84ec1d3f3433f0d02">ded386</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月13日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61522-email-in-name-fields-sends-invalid-order-confirmations">对QPT 1.1.54版本</a>中ACSD-61522修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/4aa599e57df7fe2282efdad7ebceda909aaa7398">4aa599</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-60804-editing-customer-linked-to-deleted-company-causes-error">对QPT 1.1.53版本</a>中ACSD-60804修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/893a0fe6a61a9a53734f34950ccf056a3faa068d">893a0f</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60684-graphql-product-sorting-by-multiple-fields-does-not-work-as-expected">对QPT 1.1.52版本</a>中ACSD-60684修补程序修复的问题的详细说明。</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/4bae8f076b20579ce5e7c4c84d7235ab338f40c3">4bae8f</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2024年11月8
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-61528-retrieving-roles-using-graphql-returns-no-results">对QPT 1.1.53版本</a>中ACSD-61528修补程序修复的问题的详细说明</p>
-</td>
-      <td>新建主题</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/dd2f98fad78659b360f243c78424f234389c05b7">dd2f98</a> （提交）</td>
     </tr>
   </tbody>
 </table>
