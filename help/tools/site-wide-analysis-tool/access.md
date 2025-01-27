@@ -2,20 +2,18 @@
 title: 如何访问 [!DNL Site-Wide Analysis Tool]
 description: 了解如何访问 [!DNL Site-Wide Analysis Tool]
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 2896442432158456698cac2d566cf0f61b5d7847
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
 # 如何访问[!DNL Site-Wide Analysis Tool]
 
-您可以通过两种方式访问[!DNL Site-Wide Analysis Tool Dashboard]。
+您可以从商店的[!UICONTROL Admin Panel]访问[!DNL Site-Wide Analysis Tool]仪表板。
 
-您可以从[[!DNL Site-Wide Analysis Tool] 网站](https://supportinsights.adobe.com/commerce)直接&#x200B;**访问[!DNL dashboard](仅适用于Adobe Commerce on cloud infrastructure)**&#x200B;并使用您的Adobe ID登录，也可以从您商店的[!DNL Admin Panel]通过[!DNL dashboard]访问。
-
-[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[角色资源](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)的[!DNL Admin]用户使用。
+[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[角色资源](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)的[!UICONTROL Admin]用户使用。
 
 >[!NOTE]
 >
@@ -25,28 +23,16 @@ ht-degree: 0%
 ![站点范围分析仪表板](../../assets/tools/site-wide-analysis-tool-dashboard.png)
 *[!DNL Site-Wide Analysis Tool]仪表板*
 
-## 选项1：直接从[!DNL Site-Wide Analysis Tool]域登录到您的[!DNL Site-Wide Analysis Tool Dashboard](仅适用于云基础架构上的Adobe Commerce)
+>[!NOTE]
+>
+>您的帐户应有权使用&#x200B;**[!DNL Support Permissions]**&#x200B;以访问[!DNL Site-Wide Analysis Tool Dashboard]。
+>请参阅用户指南中的[共享 [!DNL Commerce] 帐户](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html)中的更多详细信息。
 
-需要&#x200B;**[!DNL Adobe ID]才能访问[!DNL Commerce]帐户**。
-如果您已经拥有[!DNL Commerce]帐户，但没有帐户[!DNL Adobe ID]，则可以在登录过程中创建帐户。
-
-1. 转到[https://supportinsights.adobe.com/commerce](https://supportinsights.adobe.com/commerce)。
-
-1. 单击&#x200B;**[!UICONTROL Sign in with Adobe ID]**&#x200B;按钮并按照提示操作。
-
-   ![站点范围分析仪表板](../../assets/tools/adobe-id-login.jpg)
-   *[!DNL Adobe ID]登录屏幕*
-
-1. 接受条款和条件。
-
-1. **<u>注意</u>：**&#x200B;您的帐户应有权访问&#x200B;**[!DNL Support Permissions]**&#x200B;以访问[!DNL Site-Wide Analysis Tool Dashboard]。
-请参阅用户指南中的[共享 [!DNL Commerce] 帐户](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html)中的更多详细信息。
-
-## 选项2：从应用商店的[!DNL Admin Panel]登录到您的[!DNL Site-Wide Analysis Tool Dashboard]
+## 从应用商店的[!UICONTROL Admin Panel]登录到[!DNL Site-Wide Analysis Tool Dashboard]
 
 ### 步骤1：验证权限
 
-验证[!DNL Admin]用户帐户是否有权通过其[分配的用户角色](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)访问[!DNL Site-Wide Analysis Tool]。
+验证[!UICONTROL Admin]用户帐户是否有权通过其[分配的用户角色](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)访问[!DNL Site-Wide Analysis Tool]。
 
 >[!IMPORTANT]
 >
@@ -65,14 +51,14 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!DNL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://support.magento.com/hc/en-us/articles/360057400172-403-errors-when-accessing-Site-Wide-Analysis-Tool-on-Magento?_ga=2.168901729.117144580.1649172612-1623400270.1640858671)。
+>如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!UICONTROL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/403-errors-when-accessing-site-wide-analysis-tool-on-magento)。
 
 ### 步骤2：访问[!DNL Site-Wide Analysis Tool]
 
 1. 在&#x200B;*[!UICONTROL Admin]*&#x200B;侧边栏上，转到&#x200B;**[!UICONTROL Reports]** > *[!UICONTROL System Insights]* > **[!UICONTROL Site-Wide Analysis Tool]**。
 
    ![站点范围分析仪表板](../../assets/tools/ac-admin-panel-marked.jpg)
-   在Adobe Commerce *的[!DNL Admin Panel]中的*[!DNL Site-Wide Analysis Tool]&#x200B;位置
+   在Adobe Commerce *的[!UICONTROL Admin Panel]中的*[!DNL Site-Wide Analysis Tool]&#x200B;位置
 
 1. 阅读[!DNL Site-Wide Analysis Tool]的&#x200B;*使用条款*&#x200B;并单击&#x200B;**[!UICONTROL Accept]**&#x200B;以继续。
 
