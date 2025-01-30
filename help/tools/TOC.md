@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 79f587e1ed2f4117141cd29c7a512a6b677047d6
+source-git-commit: ef50c80723bdef72df5319f29069ddfc0814807b
 workflow-type: tm+mt
-source-wordcount: '6904'
+source-wordcount: '6915'
 ht-degree: 0%
 
 ---
@@ -726,6 +726,7 @@ ht-degree: 0%
       - v1.1.58 {#v1-1-58}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.58](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/overview.md)
          - [ACSD-63067：解决店面分组产品的数量验证问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63067-resolving-quantity-validation-issues-in-grouped-products-on-storefront.md)
+         - [ACSD-63283：解决Adobe Commerce中的[!UICONTROL Gift Registry]电子邮件和订购问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63283-resolving-gift-registry-email-and-order-placement-issues-in-adobe-commerce.md)
          - [ACSD-62118：使用[!UICONTROL Purchase Order]方法下达的B2B订单未完全更新sales_order_tax_item表](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-62118-tax-item-table-not-updated-po-method.md)
          - [ACSD-63182：在复制捆绑产品后保存产品时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63182-error-occurs-while-saving-a-product-after-bundle-product-duplication.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
