@@ -3,13 +3,13 @@ title: ACSD-62872：计划更新验证不正确
 description: 应用ACSD-62872补丁程序，通过唯一属性验证来修复Adobe Commerce问题，该问题导致未正确验证计划的更新。
 feature: Catalog Management, Admin Workspace
 role: Admin, Developer
-source-git-commit: f734dab2316237d60164a430eeabed17782b0ae6
+exl-id: bd0d452b-aae3-4682-8a2c-471a7f8bf132
+source-git-commit: 4727a94178c642922224cb37ad5c1b2b4f6002cb
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62872：计划更新验证不正确
 
@@ -23,7 +23,11 @@ ACSD-62872修补程序修复了唯一属性验证的问题，该问题导致无�
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
+* Adobe Commerce（所有部署方法） 2.4.7 - 2.4.7-p3
+
+>[!NOTE]
+>
+>在1.1.58 QPT版本中，该修补程序在2.4.4 - 2.4.6-p8版本中被标记为已弃用。
 
 >[!NOTE]
 >
@@ -39,7 +43,7 @@ ACSD-62872修补程序修复了唯一属性验证的问题，该问题导致无�
 1. 导航到&#x200B;**[!UICONTROL Catalog]** > **[!UICONTROL Categories]**。
 1. 创建新类别。
 1. 在同一类别中，转到&#x200B;**[!UICONTROL Scheduled Updates]**&#x200B;部分。
-1. 为此类别设置未来任何时间的新更新。
+1. 在以后任何时候为此类别设置新的更新。
 1. 在开始计划更新之前，请尝试编辑为类别创建的计划更新。
 
 <u>预期的结果</u>：
@@ -55,8 +59,7 @@ ACSD-62872修补程序修复了唯一属性验证的问题，该问题导致无�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
-
+* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
