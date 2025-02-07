@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 420a74a1c0e4d4d242691968cfa6b515a9f91e77
+source-git-commit: 183a83346633913b3b013732cbac8676a0756609
 workflow-type: tm+mt
-source-wordcount: '6970'
+source-wordcount: '6981'
 ht-degree: 0%
 
 ---
@@ -729,6 +729,7 @@ ht-degree: 0%
          - [ACSD-63283：解决Adobe Commerce中的[!UICONTROL Gift Registry]电子邮件和订购问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63283-resolving-gift-registry-email-and-order-placement-issues-in-adobe-commerce.md)
          - [ACSD-62118：使用[!UICONTROL Purchase Order]方法下达的B2B订单未完全更新sales_order_tax_item表](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-62118-tax-item-table-not-updated-po-method.md)
          - [ACSD-63182：在复制捆绑产品后保存产品时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63182-error-occurs-while-saving-a-product-after-bundle-product-duplication.md)
+         - [ACSD-63090：从管理员删除产品会清空购物车](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63090-deleting-product-from-admin-empties-the-shopping-cart.md)
          - [ACSD-48570：修复了URL中的存储代码存在的管理员重置密码链接问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-48570-fixing-admin-reset-password-link-issue-with-store-card-in-url.md)
          - [ACSD-63299：店面不显示可配置产品的特殊价格](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63299-special-price-for-a-configurable-product-doesnt-display-on-the-storefront.md)
          - [ACSD-63325：提交空 [!DNL GraphQL] 请求时出现“语法错误：意外&lt; EOF >”错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request.md)
