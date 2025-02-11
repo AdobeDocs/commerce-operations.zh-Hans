@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.3安全修补程序的发行说明
 description: 了解Adobe Commerce版本2.4.3的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 72d343cd-83d7-48ce-976a-e26ba1b8db27
-source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
+source-git-commit: b63fa9a8b2b59f6e8dfd7003e75c66caf99d5e81
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Adobe Commerce 2.4.3安全修补程序的发行说明
 
-{{$include /help/_includes/security-patch-release-notes-intro.md}}
+{{$include /help/_includes/release-notes/security-patch-intro.md}}
 
 ## Adobe Commerce 2.4.3-p3
 
@@ -59,7 +59,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 ## 2.4.3-p1
 
-Adobe Commerce 2.4.3-p1安全版本为先前版本(Adobe Commerce 2.4.3和Magento Open Source2.4.3)中发现的漏洞修复了安全错误。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
+Adobe Commerce 2.4.3-p1安全版本为先前版本(Adobe Commerce 2.4.3和Magento Open Source 2.4.3)中发现的漏洞修复了安全错误。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
 
 有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-86](https://helpx.adobe.com/security/products/magento/apsb21-86.html)。 此补丁发行版本还为[Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html)、[Klarna](https://marketplace.magento.com/klarna-m2-klarna.html)和[Vertex](https://marketplace.magento.com/vertexinc-vertex-tax-module.html)供应商开发的扩展提供了错误修复。
@@ -78,7 +78,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 **会话ID已从数据库**&#x200B;中删除。 如果商家具有使用存储在数据库中的原始会话ID的自定义设置或安装的扩展，则此代码更改可能会导致重大更改。<!-- MC-40976-->
 
-**限制管理员访问媒体集文件夹**。 默认媒体集权限现在只允许配置明确允许的目录操作（查看、上传、删除和创建）。 管理员用户无法再通过在`catalog/category`或`wysiwyg`目录之外上传的媒体集访问媒体资产。 管理员如果想要访问介质资源，必须将其移至明确允许的文件夹或调整其配置设置。 请参阅[修改Media Library文件夹权限](https://developer.adobe.com/commerce/php/tutorials/backend/modify-image-library-permissions/)。<!-- B2B-1897-->
+**限制管理员访问媒体集文件夹**。 默认媒体集权限现在只允许配置明确允许的目录操作（查看、上传、删除和创建）。 管理员用户无法再通过在`catalog/category`或`wysiwyg`目录之外上传的媒体集访问媒体资产。 管理员如果想要访问介质资源，必须将其移至明确允许的文件夹或调整其配置设置。 请参阅[修改媒体库文件夹权限](https://developer.adobe.com/commerce/php/tutorials/backend/modify-image-library-permissions/)。<!-- B2B-1897-->
 
 **降低了对GraphQL查询复杂性的限制**。 GraphQL允许的最大查询复杂性已降低，以防止拒绝服务(DOS)攻击。 查看[GraphQL安全配置](https://developer.adobe.com/commerce/webapi/graphql/usage/security-configuration/)。<!-- PWA-1700-->
 

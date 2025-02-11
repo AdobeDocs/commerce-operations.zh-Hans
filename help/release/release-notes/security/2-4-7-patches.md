@@ -2,16 +2,28 @@
 title: Adobe Commerce 2.4.7安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.7的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 38e5632b-c795-47d8-89dd-26bbaeb34e67
-source-git-commit: cb4f388c90902c2fe1df4a5d84841280fa740104
+source-git-commit: 9397740c608e4f0521018d6f6c918ca267197c6c
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
 # Adobe Commerce 2.4.7安全修补程序的发行说明
 
-{{$include /help/_includes/security-patch-release-notes-intro.md}}
+{{$include /help/_includes/release-notes/security-patch-intro.md}}
+
+## 2.4.7 - p4
+
+Adobe Commerce 2.4.7-p4安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
+
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html)。
+
+{{b2b-patches}}
+
+### 高亮
+
+{{$include /help/_includes/release-notes/highlights/security-2025-02.md}}
 
 ## 2.4.7 - p3
 
@@ -23,11 +35,11 @@ Adobe Commerce 2.4.7-p3安全版本为2.4.7早期版本中发现的漏洞修复�
 
 ### 高亮
 
-{{$include /help/_includes/release-notes/2024-10/security-foo.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-10.md}}
 
 ### 此版本中包含的修补程序
 
-{{$include /help/_includes/release-notes/2024-10/hotfixes-included-foo.md}}
+{{$include /help/_includes/release-notes/hotfixes/included-2024-10.md}}
 
 ## 2.4.7 - p2
 
@@ -37,11 +49,11 @@ Adobe Commerce 2.4.7-p2安全版本为2.4.7早期版本中发现的漏洞修复�
 
 ### 高亮
 
-{{$include /help/_includes/release-notes/2024-08/security.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-08.md}}
 
 ### 此版本中包含的修补程序
 
-{{$include /help/_includes/release-notes/2024-08/hotfixes-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/included-2024-08.md}}
 
 ## 2.4.7 - p1
 
@@ -51,7 +63,7 @@ Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞�
 
 ### 应用适用于CVE-2024-34102的修补程序
 
-{{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/not-included-2024-06.md}}
 
 ### 高亮
 
@@ -63,4 +75,4 @@ Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞�
 
 ### 此版本中包含的修补程序
 
-Adobe Commerce 2.4.7-p1解决了从SOAP迁移到REST API的UPS集成过程中出现的问题。 此问题会影响从美国境外发运的客户，并阻止他们使用公制系统/SI测量值（即包装的公斤和厘米）来创建与UPS的发运。 有关详细信息，请参阅[UPS配送方式集成从SOAP迁移到RESTful API](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/ups-shipping-method-integration-migration-from-soap-to-restful-api)知识库文章。
+Adobe Commerce 2.4.7-p1解决了从SOAP迁移到REST API的UPS集成过程中引入的问题。 此问题会影响从美国境外发运的客户，并阻止他们使用公制系统/SI测量值（即包装的公斤和厘米）来创建与UPS的发运。 有关详细信息，请参阅[UPS配送方式集成从SOAP迁移到RESTful API](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/ups-shipping-method-integration-migration-from-soap-to-restful-api)知识库文章。

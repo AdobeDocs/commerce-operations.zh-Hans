@@ -2,9 +2,9 @@
 title: Adobe Commerce发行说明
 description: 了解在何处查找特定 Adobe Commerce 版本的信息。
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: a2c93cb8481a3d843bc3be186d682f1d5e7974f6
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '275'
 ht-degree: 3%
 
 ---
@@ -48,23 +48,20 @@ ht-degree: 3%
         <p>了解创新的Commerce促销服务的最新改进。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/customers/audience-activation.html">Audience Activation</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html">AmazonSales Channel</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html">目录服务</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html">渠道经理（沃尔玛市场销售）</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html">Experience Platform连接器</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html">实时搜索</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/release-notes.html">支付服务</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">产品Recommendations</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">产品推荐</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html">服务连接器</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html?lang=en">商店履行</a></li>
           </ul>
         </td>
       <td><strong>工具</strong>
         <p>了解各项工具的最新改进，这些工具旨在让您更轻松地查找和使用Adobe Commerce软件。</p>
           <ul>
-            <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">面向App Builder开发人员Adobe的API Mesh</a></li>
-            <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">Adobe Commerce的Adobe I/O事件</a></li>
-            <li><a href="https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes/">管理员UI SDK</a></li>
+            <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">面向Adobe App Builder开发人员的API Mesh</a></li>
+            <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">适用于Adobe Commerce的Adobe I/O Events</a></li>
+            <li><a href="https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes/">管理UI SDK</a></li>
             <li><a href="../../tools/quality-patches-tool/release-notes.md">Quality Patches工具</a></li>
             <li><a href="../../tools/site-wide-analysis-tool/intro.md">站点范围分析工具</a></li>
             <li><a href="../../upgrade/upgrade-compatibility-tool/overview.md">升级兼容性工具</a></li>
