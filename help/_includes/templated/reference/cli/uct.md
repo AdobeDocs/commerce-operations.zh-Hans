@@ -1,8 +1,8 @@
 ---
-source-git-commit: 31de6be4eb57fa396801c9ce4f3ed65d77026190
+source-git-commit: 5e907705e1fc20e44caedc81153e0ad118de5b42
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 0%
+source-wordcount: '929'
+ht-degree: 1%
 
 ---
 # bin/uct
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 
 <!-- The template to render with above values -->
-**版本**： 3.0.20
+**版本**： 3.0.21
 
 此引用包含通过`bin/uct`命令行工具提供的9个命令。
 初始列表是在Adobe Commerce中使用`bin/uct list`命令自动生成的。
@@ -77,7 +77,7 @@ ht-degree: 0%
 ## `_complete`
 
 ```bash
-bin/uct _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-S|--symfony SYMFONY]
+bin/uct _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-a|--api-version API-VERSION] [-S|--symfony SYMFONY]
 ```
 
 用于提供外壳完成建议的内部命令
@@ -88,7 +88,7 @@ bin/uct _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [
 
 #### `--shell`，`-s`
 
-shell类型(“bash”)
+壳类型(“bash”、“fish”、“zsh”)
 
 - 需要一个值
 
@@ -105,9 +105,15 @@ shell类型(“bash”)
 
 - 需要一个值
 
+#### `--api-version`，`-a`
+
+完成脚本的API版本
+
+- 需要一个值
+
 #### `--symfony`，`-S`
 
-完成脚本的版本
+已弃用
 
 - 需要一个值
 
@@ -122,18 +128,18 @@ bin/uct completion [--debug] [--] [<shell>]
 
 ```
 The completion command dumps the shell completion script required
-to use shell autocompletion (currently only bash completion is supported).
+to use shell autocompletion (currently, bash, fish, zsh completion are supported).
 
 Static installation
 -------------------
 
 Dump the script to a global completion file and restart your shell:
 
-    uct/bin/uct completion bash | sudo tee /etc/bash_completion.d/uct
+    uct/bin/uct completion  | sudo tee /etc/bash_completion.d/uct
 
 Or dump the script to a local file and source it:
 
-    uct/bin/uct completion bash > completion.sh
+    uct/bin/uct completion  > completion.sh
 
     # source the file whenever you use the project
     source completion.sh
@@ -146,7 +152,7 @@ Dynamic installation
 
 Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 
-    eval "$(/var/jenkins/workspace/gendocs-uct-cli/uct/bin/uct completion bash)"
+    eval "$(/var/jenkins/workspace/gendocs-uct-cli/uct/bin/uct completion )"
 ```
 
 ### 参数
@@ -331,7 +337,7 @@ Adobe Commerce vanilla安装目录。
 bin/uct dbschema:diff <current-version> <target-version>
 ```
 
-允许列出两个选定版本之间的Adobe Commerce DB架构差异。 可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4-p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5-p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7-p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7-p4 | 2.4.0 | 2.4.0-p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2 - p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4-p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.4-p4 | 2.4.4 - p5 | 2.4.5 - p2 | 2.4.5-p3 | 2.4.5-p4 | 2.4.6 | 2.4.6-p1 | 2.4.6 - p2 | 2.4.7-beta1 | 2.4.4-p6 | 2.4.5-p5 | 2.4.6-p3 | 2.4.7-beta2 | 2.4.4-p7 | 2.4.5-p6 | 2.4.6-p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6 - p5 | 2.4.5-p7 | 2.4.4-p8 | 2.4.4 - p9 | 2.4.5-p8 | 2.4.6-p6 | 2.4.7 - p1 | 2.4.4-p10 | 2.4.5-p9 | 2.4.6-p7 | 2.4.7 - p2 | 2.4.4-p11 | 2.4.5-p10 | 2.4.6-p8 | 2.4.7 - p3 | 2.4.8-beta1
+允许列出两个选定版本之间的Adobe Commerce DB架构差异。 可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4-p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5-p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7-p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7-p4 | 2.4.0 | 2.4.0-p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2 - p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4-p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.4-p4 | 2.4.4 - p5 | 2.4.5 - p2 | 2.4.5-p3 | 2.4.5-p4 | 2.4.6 | 2.4.6-p1 | 2.4.6 - p2 | 2.4.7-beta1 | 2.4.4-p6 | 2.4.5-p5 | 2.4.6-p3 | 2.4.7-beta2 | 2.4.4-p7 | 2.4.5-p6 | 2.4.6-p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6 - p5 | 2.4.5-p7 | 2.4.4-p8 | 2.4.4 - p9 | 2.4.5-p8 | 2.4.6-p6 | 2.4.7 - p1 | 2.4.4-p10 | 2.4.5-p9 | 2.4.6-p7 | 2.4.7 - p2 | 2.4.4-p11 | 2.4.5-p10 | 2.4.6-p8 | 2.4.7 - p3 | 2.4.8-beta1 | 2.4.4-p12 | 2.4.5-p11 | 2.4.6-p9 | 2.4.7 - p4 | 2.4.8-beta2
 
 ### 参数
 
@@ -415,7 +421,7 @@ Adobe Commerce安装目录。
 
 #### `--coming-version`，`-c`
 
-定位Adobe Commerce版本。 如果忽略，将使用最新发布的稳定版Adobe Commerce。 可用的Adobe Commerce版本： 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2 - p2 \| 2.3.3 \| 2.3.3-p1 \| 2.3.4 \| 2.3.4-p1 \| 2.3.4-p2 \| 2.3.5 \| 2.3.5-p1 \| 2.3.5 - p2 \| 2.3.6 \| 2.3.6-p1 \| 2.3.7 \| 2.3.7-p1 \| 2.3.7 - p2 \| 2.3.7 - p3 \| 2.3.7 - p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p2 \| 2.4.3 - p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.4-p2 \| 2.4.4 - p3 \| 2.4.4 - p4 \| 2.4.4-p5 \| 2.4.4-p6 \| 2.4.4-p7 \| 2.4.4 - p8 \| 2.4.4 - p9 \| 2.4.4-p10 \| 2.4.4-p11 \| 2.4.5 \| 2.4.5-p1 \| 2.4.5 - p2 \| 2.4.5 - p3 \| 2.4.5 - p4 \| 2.4.5 - p5 \| 2.4.5-p6 \| 2.4.5-p7 \| 2.4.5-p8 \| 2.4.5-p9 \| 2.4.5-p10 \| 2.4.6 \| 2.4.6-p1 \| 2.4.6-p2 \| 2.4.6 - p3 \| 2.4.6 - p4 \| 2.4.6-p5 \| 2.4.6-p6 \| 2.4.6-p7 \| 2.4.6-p8 \| 2.4.7-beta1 \| 2.4.7-beta2 \| 2.4.7-beta3 \| 2.4.7 \| 2.4.7-p1 \| 2.4.7 - p2 \| 2.4.7 - p3 \| 2.4.8-beta1
+定位Adobe Commerce版本。 如果忽略，将使用最新发布的稳定版Adobe Commerce。 可用的Adobe Commerce版本： 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2 - p2 \| 2.3.3 \| 2.3.3-p1 \| 2.3.4 \| 2.3.4-p1 \| 2.3.4-p2 \| 2.3.5 \| 2.3.5-p1 \| 2.3.5 - p2 \| 2.3.6 \| 2.3.6-p1 \| 2.3.7 \| 2.3.7-p1 \| 2.3.7 - p2 \| 2.3.7 - p3 \| 2.3.7 - p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p2 \| 2.4.3 - p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.4-p2 \| 2.4.4 - p3 \| 2.4.4 - p4 \| 2.4.4-p5 \| 2.4.4-p6 \| 2.4.4-p7 \| 2.4.4 - p8 \| 2.4.4 - p9 \| 2.4.4-p10 \| 2.4.4-p11 \| 2.4.4-p12 \| 2.4.5 \| 2.4.5-p1 \| 2.4.5 - p2 \| 2.4.5 - p3 \| 2.4.5 - p4 \| 2.4.5 - p5 \| 2.4.5-p6 \| 2.4.5-p7 \| 2.4.5-p8 \| 2.4.5-p9 \| 2.4.5-p10 \| 2.4.5-p11 \| 2.4.6 \| 2.4.6-p1 \| 2.4.6-p2 \| 2.4.6 - p3 \| 2.4.6 - p4 \| 2.4.6-p5 \| 2.4.6-p6 \| 2.4.6-p7 \| 2.4.6-p8 \| 2.4.6-p9 \| 2.4.7-beta1 \| 2.4.7-beta2 \| 2.4.7-beta3 \| 2.4.7 \| 2.4.7-p1 \| 2.4.7 - p2 \| 2.4.7 - p3 \| 2.4.7 - p4 \| 2.4.8-beta1 \| 2.4.8-beta2
 
 - 接受值
 
