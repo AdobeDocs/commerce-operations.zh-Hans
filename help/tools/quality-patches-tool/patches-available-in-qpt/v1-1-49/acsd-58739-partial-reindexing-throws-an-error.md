@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-58739：部分重新索引引发错误'
+title: ACSD-58739：部分重新索引引发错误
 description: 应用ACSD-55241修补程序以修复部分重新索引引发错误的Adobe Commerce问题。
 feature: Inventory, Products
 role: Admin, Developer
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: b4e6b8b4-43de-4434-94fb-6269a75e1c28
+source-git-commit: c643d55823ae0791ecfa0f2220116bbcbd02668a
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -34,7 +35,7 @@ ACSD-58739修补程序修复了部分重新索引引发错误的问题。 安装
 
 <u>重现步骤</u>：
 
-1. 将从属连接设置添加到`app/etc/ev.php`。
+1. 将从属连接设置添加到`app/etc/env.php`。
 1. 生成最多10000个产品并执行以下命令：
 
    ```
