@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 4643c8392b6d92a2ccbbc2ec5b27d75c112d7521
+source-git-commit: c29602d6f1619c0b32feb48843ec01b350a3ae32
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 >[!IMPORTANT]
 >
->Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)测试版。 建议客户谨慎使用，并且不要以任何方式依赖测试版和/或任何随附的文档或材料的正确功能或性能。 Beta版中的功能和API如有更改，恕不另行通知。 因此，使用测试版完全由客户自行承担风险。
+>Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)Beta版。 建议客户谨慎使用，并且不要以任何方式依赖测试版和/或任何随附的文档或材料的正确功能或性能。 Beta版中的功能和API如有更改，恕不另行通知。 因此，使用测试版完全由客户自行承担风险。
 
 ## 参与的优势
 
-通过抢先使用Adobe正在开发的功能，客户和合作伙伴将能够提供反馈、制定产品开发方案，并准备在正式发布之前采用新功能。
+抢先体验Adobe正在开发的功能可以让客户和合作伙伴提供反馈、制定产品开发方案，并准备在正式发布之前采用新功能。
 
 ## 当前的Beta项目
 
@@ -54,22 +54,6 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta)。
 
-### 适用于Commerce (Private Beta)的Experience Manager Assets集成
-
-适用于Commerce的Experience Manager Assets集成支持高效管理和将大量产品映像从Experience Manager Assets交付到Adobe Commerce，并且无需执行或执行很低的操作工作。
-
-主要功能：
-
-- 即插即用集成 — 提供Experience Manager Assets与Adobe Commerce之间的开箱即用集成Adobe，使商家能够专注于最重要的事情，同时降低运营成本并提高效率。
-
-- 大规模个性化产品图像 — 使用Experience Manager Assets通过简单的基于UI的编辑工具、使用Adobe Firefly的创成性内容创建和分配的资源工作流为个性化的Commerce体验生成数百万个产品变体，以确保品牌一致性。 一旦您对资源满意，即可使用Experience Manager Assets集成将其无缝交付到Commerce店面。
-
-- 轻松载入 — 通过可配置的同步过程简化商户载入，该过程支持在Experience Manager Assets存储库和Commerce目录之间完全同步。
-
-- 灵活匹配策略 — 该集成包括基于产品SKU的默认资源匹配算法(可在AEM Assets和Commerce之间同步图像)，并且可使用Adobe Developer App Builder进行扩展。 与您的解决方案合作伙伴合作，在集成的基础上构建自定义资产匹配策略，以适应任何资产管理存储库结构。
-
-若要参与测试版，请向[Shaun McCran](mailto:mccran@adobe.com)发送电子邮件请求。
-
 ### IBM Sterling Order Management系统集成(Private Beta)
 
 借助适用于IBM Sterling Order Management的集成加速器，Adobe Commerce客户可以开始使用由IBM Sterling OMS提供支持的高级订单管理功能。 通过此集成，商家可以：
@@ -81,7 +65,7 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 要参与此测试版，请向[sbieber@adobe.com](mailto:sbieber@adobe.com)发送电子邮件请求。
 
-### 数据连接和Audience Activation(公共Beta)
+### Data Connection和Audience Activation(公共Beta)
 
 扩展了Adobe Commerce和Adobe Experience Platform之间的数据共享，以推动提供更强大的个性化体验。 此功能使商家能够：
 
@@ -103,7 +87,7 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 #### 命名惯例和时间表
 
-Adobe通常每年发布两次测试版修补程序。
+Adobe通常会每年发布两次Beta测试版修补程序。
 
 Beta版本包具有`-betaX`后缀。 例如，Adobe Commerce 2.4.7测试版发行包使用以下命名约定：
 
@@ -121,7 +105,7 @@ Adobe Commerce测试版的发布方式与任何其他Adobe Commerce补丁版本�
 
 #### 问题报告
 
-Adobe不提供测试版的标准Adobe支持服务。
+Adobe不为测试版提供标准的Adobe支持服务。
 
 若要提交与测试版版本相关的反馈，请按照[GitHub](https://github.com/magento/magento2)上的[常规问题报告流程](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)操作。
 
