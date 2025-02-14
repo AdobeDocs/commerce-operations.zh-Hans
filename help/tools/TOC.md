@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 329a9413eca2de00451ee694501cca2cf0c57c30
+source-git-commit: fcff1ac0ed1b36952adb54098154fd039c7013a4
 workflow-type: tm+mt
-source-wordcount: '6990'
+source-wordcount: '6994'
 ht-degree: 0%
 
 ---
@@ -735,6 +735,8 @@ ht-degree: 0%
          - [ACSD-63325：提交空 [!DNL GraphQL] 请求时出现“语法错误：意外&lt; EOF >”错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request.md)
          - [ACSD-63578：单击[!UICONTROL Add to Order by SKU]中的[!UICONTROL Delete]图标不会删除SKU](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63578-clicking-delete-in-add-to-order-by-sku-doesnot-remove-sku.md)
          - [ACSD-63329：使用REST API创建产品时，未设置日期和时间字段的默认值](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63329-date-and-time-attributes-arent-set-when-creating-products-with-the-rest-api.md)
+      - v1.1.59 {#v1-1-59}
+         - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.59](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/overview.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - 命令行工具引用{#cli-reference}
    - [Adobe Commerce（内部部署）](reference/commerce-on-premises.md)
