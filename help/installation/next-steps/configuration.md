@@ -3,9 +3,9 @@ title: 配置应用程序
 description: 了解Adobe Commerce内部部署所需的安装后配置。
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: e737ca014e90860b8ab023487625b07c0eeb1222
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '713'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,14 @@ UNIX `logrotate`实用程序使您能够管理生成大量日志文件的系统�
 * [HowTo：包含十个示例的终极日志旋转命令教程](https://www.thegeekstuff.com/2010/07/logrotate-examples)
 * [栈叠Exchange](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
 * [`logrotate`手册页](https://linuxconfig.org/logrotate-8-manual-page)
+
+>[!AVAILABILITY]
+>
+>以下可用性信息适用于云基础架构项目上的Adobe Commerce：
+>
+>* 入门环境没有日志轮换。
+>
+>* 无法在Pro集成环境中配置日志轮换。 您必须实施自定义解决方案/脚本，并[配置cron](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)以根据需要运行脚本。
 
 ### 设置iptables规则以启用各种服务进行通信
 
