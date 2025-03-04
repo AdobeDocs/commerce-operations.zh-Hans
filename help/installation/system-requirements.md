@@ -2,9 +2,9 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 63c73a34eb6c61c83f00761e0510108485687596
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,19 @@ ht-degree: 0%
 
 下面总结了为Adobe Commerce测试的软件依赖项和服务。
 
-在云基础架构上，Commerce的依赖项存在一些差异。 云基础架构上Adobe Commerce的服务版本和兼容性支持取决于测试和部署到托管云环境的服务，有时不同于Adobe Commerce内部部署支持的版本。 例如，内部部署支持Elasticsearch7.17的Commerce 2.4.4，而云基础架构上的Commerce 2.4.4支持OpenSearch 1.2。
+在云基础架构上，Commerce的依赖项存在一些差异。 云基础架构上Adobe Commerce的服务版本和兼容性支持取决于测试和部署到托管云环境的服务，有时不同于Adobe Commerce内部部署支持的版本。 例如，内部部署支持Elasticsearch 7.17的Commerce 2.4.4，而云基础架构上的Commerce 2.4.4支持OpenSearch 1.2。
 
-下表显示了Adobe使用特定Adobe Commerce版本测试的第三方软件依赖项版本。
+>[!NOTE]
+>
+>系统要求仅适用于Adobe Commerce的发行版本。 不包括Beta或早期访问版本。 请参阅[发行说明](../release/release-notes/overview.md)以了解有关Adobe Commerce最新发行版本的更多信息。
 
-Adobe仅支持下表中描述的系统要求组合。 例如，2.4.5已通过MariaDB 10.4进行了全面测试。Adobe建议您在升级到2.4.5之前升级到MariaDB 10.4。
+下表显示了Adobe已在特定Adobe Commerce版本中测试的第三方软件依赖项版本。
+
+Adobe仅支持下表所述的系统要求组合。 例如，2.4.5已通过MariaDB 10.4进行了全面测试。Adobe建议您在升级到2.4.5之前升级到MariaDB 10.4。
 
 >[!BEGINTABS]
 
->[!TAB 云端上的Commerce]
+>云端上的[!TAB Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
@@ -82,7 +86,7 @@ PHPUnit v9（作为命令行工具）。
 
 >[!BEGINTABS]
 
->[!TAB 云端上的Commerce]
+>云端上的[!TAB Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
