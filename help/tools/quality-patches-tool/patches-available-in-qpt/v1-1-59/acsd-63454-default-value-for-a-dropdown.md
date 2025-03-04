@@ -3,13 +3,13 @@ title: ACSD-63454：下拉列表和多选属性的默认值未正确保存在数
 description: 应用ACSD-63454修补程序以修复Adobe Commerce问题，该问题导致下拉列表和多选属性的默认值未正确保存在数据库中。
 feature: Attributes, Products
 role: Admin, Developer
-source-git-commit: 1c872ebeff05c0c84756d7abd7f43c4652032d3f
+exl-id: fa79a3bb-e615-44cb-8d84-da892f924fd0
+source-git-commit: cb73a5a346ec0e8acd59accf73605e25ef35c3ca
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63454：数据库中未正确保存[!UICONTROL Dropdown]和[!UICONTROL Multiple Select]属性的默认值
 
@@ -35,19 +35,19 @@ ACSD-63454修补程序修复了[!UICONTROL Dropdown]和[!UICONTROL Multiple Sele
 
 <u>重现步骤</u>：
 
-1. 登录到后端，转到&#x200B;**[!UICONTROL Stores]** > [!UICONTROL Attributes] > **[!UICONTROL Product]**。
+1. 登录到后端，转到&#x200B;**[!UICONTROL Stores]** > *[!UICONTROL Attributes]* > **[!UICONTROL Product]**。
 1. 单击&#x200B;**[!UICONTROL Add New Attribute]**。
 1. 在&#x200B;**[!UICONTROL Properties]**&#x200B;选项卡中，设置以下内容：
-   * [!UICONTROL Default Label] =测试
-   * [!UICONTROL Catalog Input Type for Store Owner]= [!UICONTROL Multiple Select]
-   * [!UICONTROL Manage Options]：添加2个选项而不选择&#x200B;**[!UICONTROL Is Default]**。
+   * **[!UICONTROL Default Label]**： *测试*
+   * **[!UICONTROL Catalog Input Type for Store Owner]**： *[!UICONTROL Multiple Select]*
+   * **[!UICONTROL Manage Options]**：添加两个选项而不选择&#x200B;**[!UICONTROL Is Default]**。
 1. 单击&#x200B;**[!UICONTROL Save Attribute]**。
-1. 在数据库中检查&#x200B;*default_value*&#x200B;列是否为空。
+1. 在数据库中检查`default_value`列是否为空。
 
    `select attribute_code, default_value from eav_attribute where attribute_code = 'test';`
 
 1. 返回并将两个选项之一设置为&#x200B;**[!UICONTROL Is Default]**。
-1. 再次检查数据库以确保&#x200B;*default_value*&#x200B;现在包含所选选项ID。
+1. 再次检查数据库以确保`default_value`现在包含所选的选项ID。
 1. 返回并通过选择另一个选项来更改默认选项。
 
 <u>预期的结果</u>：
