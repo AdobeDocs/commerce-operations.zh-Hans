@@ -4,9 +4,9 @@ description: 应用ACSD-46815修补程序以修复在使用压缩策略时静态
 feature: Deploy, Page Content, SCD
 role: Admin
 exl-id: 66941a83-daf8-4bb2-a575-b615e1c5dc7c
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: 94fba368c799f4584e27331e852c0f8abeeabbd6
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ bin/magento setup:static-content:deploy -f -s compact
 
 <u>实际结果</u>：
 
-静态内容部署因紧凑策略而失败。 在部署过程中出现以下错误： *来自/app/pub/static/adminhtml/debugger/base/default/的Magento。无法读取/node_modules/@spectrum-css/vars/dist/spectrum-global.css文件。*
+静态内容部署因紧凑策略而失败。 部署过程中出现以下错误： *来自/app/pub/static/adminhtml/Magento/base/default/的内容。无法读取/node_modules/@spectrum-css/vars/dist/spectrum-global.css文件。*
 
 ## 应用修补程序
 
@@ -60,8 +60,4 @@ bin/magento setup:static-content:deploy -f -s compact
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)。
-* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
-
-
-有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
+* [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。

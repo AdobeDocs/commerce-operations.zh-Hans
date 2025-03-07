@@ -4,9 +4,9 @@ description: ACSD-45675修补程序修复了产品导出使用默认商店视图
 feature: Categories, Data Import/Export, Products
 role: Admin
 exl-id: ebe72038-511d-43e1-bd65-e5b468342f05
-source-git-commit: a1c5898626fb8419af017a29a009a0a2c069326e
+source-git-commit: b1f7739688a538b25b738efc337fa81f15a5bac8
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -60,14 +60,11 @@ ACSD-45675修补程序修复了产品导出使用默认商店视图范围内的�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tools] > Quality Patches Tool指南中的用法](/help/tools/quality-patches-tool/usage.md)。
+* Adobe Commerce或Magento Open Source内部部署： Quality Patches Tool指南中的[[!DNL Quality Patches Tools] >用法](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)。
-* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
-
-有关[!DNL QPT]中其他可用修补程序的信息，请参阅Quality Patches Tool指南中的 [!DNL QPT]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中的[Patches。
+* [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
