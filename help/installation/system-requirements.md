@@ -2,9 +2,9 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 63c73a34eb6c61c83f00761e0510108485687596
+source-git-commit: 0d8dcfd7064488787ddd0ff54c82c77f3e4d1cfb
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 下面总结了为Adobe Commerce测试的软件依赖项和服务。
 
-在云基础架构上，Commerce的依赖项存在一些差异。 云基础架构上Adobe Commerce的服务版本和兼容性支持取决于测试和部署到托管云环境的服务，有时不同于Adobe Commerce内部部署支持的版本。 例如，内部部署支持Elasticsearch 7.17的Commerce 2.4.4，而云基础架构上的Commerce 2.4.4支持OpenSearch 1.2。
+在Commerce on Cloud的依赖项方面有一些差异。 Adobe Commerce on Cloud的服务版本和兼容性支持由测试并部署到托管云环境的服务决定，有时不同于Adobe Commerce内部部署支持的版本。 例如，内部部署支持Elasticsearch 7.17的Commerce 2.4.4，而Cloud上的Adobe Commerce 2.4.4支持OpenSearch 1。
 
 >[!NOTE]
 >
