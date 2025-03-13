@@ -4,14 +4,18 @@ description: 应用ACSD-56280补丁以修复未完成礼品注册购买的Adobe 
 feature: Checkout
 role: Admin
 exl-id: a79f789f-999f-4d11-b7ee-2c065b681efb
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: ab02be3396e68044e9356f89fba6b55aa880056f
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
 # ACSD-56280：未完成礼品注册购买
+
+>[!NOTE]
+>
+>此修补程序已被[ACSD-63283](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63283-resolving-gift-registry-email-and-order-placement-issues-in-adobe-commerce.md)替换。
 
 ACSD-56280修补程序修复了礼品注册购买未完成的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.44时，此修补程序可用。 修补程序ID为ACSD-56280。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
