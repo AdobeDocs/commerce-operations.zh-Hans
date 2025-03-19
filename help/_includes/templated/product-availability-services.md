@@ -1,7 +1,7 @@
 ---
-source-git-commit: a3f0b582b9a1fdd41f5f84ab9a7e73edc9fac89d
+source-git-commit: c3fc4276d7cae3794ad5f7a1b59261cee5d13b68
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '94'
 ht-degree: 4%
 
 ---
@@ -35,11 +35,11 @@ ht-degree: 4%
       </tr>
       <tr>
           <td>实时搜索</td>
-          <td>-</td>
-          <td>4.2.1</td>
-          <td>4.2.1</td>
-          <td>4.2.1</td>
-          <td>4.2.1</td>
+          <td>4.3.0</td>
+          <td>4.3.0</td>
+          <td>4.3.0</td>
+          <td>4.3.0</td>
+          <td>4.3.0</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-live-search.html">市场</a><br/>
               <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html">发行说明</a><br/>
@@ -59,11 +59,11 @@ ht-degree: 4%
       </tr>
       <tr>
           <td>产品推荐</td>
-          <td>-</td>
-          <td>6.0.3</td>
-          <td>6.0.3</td>
-          <td>6.0.3</td>
-          <td>6.0.3</td>
+          <td>6.1.0</td>
+          <td>6.1.0</td>
+          <td>6.1.0</td>
+          <td>6.1.0</td>
+          <td>6.1.0</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-product-recommendations.html">市场</a><br/>
               <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">发行说明</a><br/>
