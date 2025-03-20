@@ -2,9 +2,9 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 0d8dcfd7064488787ddd0ff54c82c77f3e4d1cfb
+source-git-commit: ca0c47cf9882bccbc55aca786f3e6615503662f3
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ opensearch:
 
 建议您验证是否出于性能原因启用了[PHP OPcache](https://www.php.net/manual/en/intro.opcache.php)。 OPcache在许多PHP分发中启用。 默认情况下，`opcache`扩展安装在云基础架构上的Commerce中。
 
-有关内部部署，请验证是否已安装PHP OPcache，请参阅[PHP设置](prerequisites/php-settings.md)。 有关性能设置的特定指导，请参阅&#x200B;_性能最佳实践_&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings)的软件建议。
+对于内部部署，验证是否已安装PHP OPcache，请参阅[PHP设置](prerequisites/php-settings.md)。 有关性能设置的特定指导，请参阅&#x200B;_性能最佳实践_&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings)的软件建议。
 
 如果必须单独安装OPcache，请参阅[PHP OPcache文档](https://www.php.net/manual/en/opcache.setup.php)。
 
@@ -129,7 +129,9 @@ PHPUnit v9（作为命令行工具）。
 
 ### 操作系统(Linux x86-64)
 
-Linux发行版，如RedHat Enterprise Linux (RHEL)、CentOS、Ubuntu、Debian等。 不支持Microsoft Windows和macOS。
+Linux发行版，如RedHat Enterprise Linux (RHEL)、CentOS、Ubuntu、Debian等。
+
+Microsoft Windows和macOS **不支持**。
 
 Adobe Commerce需要以下系统工具才能进行某些操作：
 
