@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: a45b8e687d186f7a5ae540037dd3645a510f626a
+source-git-commit: 4860a9f950849eb2735e02f6b51d1fce61cc3d1b
 workflow-type: tm+mt
-source-wordcount: '7217'
+source-wordcount: '7223'
 ht-degree: 0%
 
 ---
@@ -748,6 +748,7 @@ ht-degree: 0%
          - [ACSD-63325：提交空 [!DNL GraphQL] 请求时出现“语法错误：意外&lt; EOF >”错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request.md)
          - [ACSD-63578：单击[!UICONTROL Add to Order by SKU]中的[!UICONTROL Delete]图标不会删除SKU](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63578-clicking-delete-in-add-to-order-by-sku-doesnot-remove-sku.md)
          - [ACSD-63329：使用REST API创建产品时，未设置日期和时间字段的默认值](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63329-date-and-time-attributes-arent-set-when-creating-products-with-the-rest-api.md)
+         - [MDVA-39305-V3：已启用 [!DNL Google reCAPTCHA]的登录问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/mdva-39305-v3-login-issue-with-enabled-google-recaptcha.md)
          - [ACSD-63572：如果索引器进程终止，则不会清除catalogrule索引器临时表](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63572-catalogrule-indexer-temporary-tables-arent-cleaned-if-the-indexer-process-is-terminated.md)
       - v1.1.59 {#v1-1-59}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.59](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/overview.md)
