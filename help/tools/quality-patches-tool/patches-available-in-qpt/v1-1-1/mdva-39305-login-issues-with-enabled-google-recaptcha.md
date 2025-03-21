@@ -1,18 +1,23 @@
 ---
-title: 'MDVA-39305：启用了Google reCAPTCHA的登录问题'
-description: MDVA-39305修补程序修复了已注册客户无法使用已启用的Google reCAPTCHA登录的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1后，即可使用此修补程序。 修补程序ID为MDVA-39305。 请注意，该问题计划在Adobe Commerce版本2.4.4和2.4.7中修复。
+title: MDVA-39305：启用了Google reCAPTCHA的登录问题
+description: 应用MDVA-39305修补程序以修复在启用Adobe Commerce reCAPTCHA后注册客户无法登录的Google问题。
 feature: Console
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: c40fd84a-73dc-42bd-8cda-58738615fbba
+source-git-commit: 007fcb1308ba2c5b42755ee4c4c2ca598eb0e62e
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
 # MDVA-39305：启用了Google reCAPTCHA的登录问题
 
-MDVA-39305修补程序修复了已注册客户无法使用已启用的Google reCAPTCHA登录的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1时，此修补程序可用。 修补程序ID为MDVA-39305。 请注意，该问题计划在Adobe Commerce版本2.4.4和2.4.7中修复。
+>[!NOTE]
+>
+>此修补程序已更新，最新的修补程序ID为MDVA-39305-V3。 新修补程序是为Adobe Commerce版本2.4.4、2.4.5-p2和2.4.7创建的。有关详细信息，请参阅[MDVA-39305-V3](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/mdva-39305-v3-login-issue-with-enabled-google-recaptcha)修补程序文章。
+
+MDVA-39305修补程序修复了启用Google reCAPTCHA后，已注册客户无法登录的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1时，此修补程序可用。 修补程序ID为MDVA-39305。 请注意，Adobe Commerce版本2.4.4和2.4.7中已修复此问题。
 
 ## 受影响的产品和版本
 
