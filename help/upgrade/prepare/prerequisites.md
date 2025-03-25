@@ -2,9 +2,9 @@
 title: 完成先决条件
 description: 通过完成这些先决条件步骤，准备Adobe Commerce项目以进行升级。
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 4c84710da62fbb31214a0de2adc8adbd68880a76
+source-git-commit: d19051467efe7dcf7aedfa7a29460c72d896f5d4
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
@@ -41,11 +41,11 @@ Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 
 **如果您要从2.3.x升级到2.4**，则必须检查您在2.3.x实例中是使用MySQL、Elasticsearch还是第三方扩展作为目录搜索引擎。 结果确定在升级到2.4之前&#x200B;_必须_&#x200B;做什么。
 
-**如果要升级2.3.x或2.4.x版本行中的修补程序版本**，如果已安装Elasticsearch7.x，则可以选择[迁移到OpenSearch](opensearch-migration.md)。
+**如果要升级2.3.x或2.4.x版本行中的修补程序版本**，如果已安装Elasticsearch 7.x，则可以选择[迁移到OpenSearch](opensearch-migration.md)。
 
 您可以使用命令行或管理员来确定目录搜索引擎：
 
-* 输入`bin/magento config:show catalog/search/engine`命令。 该命令返回值`mysql`、`elasticsearch`(表示已配置Elasticsearch2)、`elasticsearch5`、`elasticsearch6`、`elasticsearch7`或自定义值，表示您已安装第三方搜索引擎。 对于低于2.4.6的版本，为Elasticsearch7或OpenSearch引擎使用`elasticsearch7`值。 对于版本2.4.6及更高版本，请使用OpenSearch引擎的`opensearch`值。
+* 输入`bin/magento config:show catalog/search/engine`命令。 该命令返回值`mysql`、`elasticsearch`(表示已配置Elasticsearch 2)、`elasticsearch5`、`elasticsearch6`、`elasticsearch7`或自定义值，表示您已安装第三方搜索引擎。 对于低于2.4.6的版本，为Elasticsearch 7或OpenSearch引擎使用`elasticsearch7`值。 对于版本2.4.6及更高版本，请使用OpenSearch引擎的`opensearch`值。
 
 * 从管理员中，检查&#x200B;**[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]**&#x200B;字段的值。
 
@@ -53,12 +53,12 @@ Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 
 ### MySQL
 
-从2.4开始，MySQL不再是一个受支持的目录搜索引擎。 在升级之前，必须安装和配置Elasticsearch或OpenSearch。 请使用以下资源来帮助您完成此过程：
+从2.4开始，MySQL不再是一个受支持的目录搜索引擎。 升级之前，必须安装和配置Elasticsearch或OpenSearch。 请使用以下资源来帮助您完成此过程：
 
 * [安装和配置Elasticsearch](../../configuration/search/overview-search.md)
 * [正在安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
 * 配置[nginx](../../installation/prerequisites/search-engine/configure-nginx.md)或[Apache](../../installation/prerequisites/search-engine/configure-apache.md)以使用您的搜索引擎
-* [将Commerce配置为使用Elasticsearch](../../configuration/search/configure-search-engine.md)并重新索引
+* [配置Commerce以使用Elasticsearch](../../configuration/search/configure-search-engine.md)并重新索引
 
 一些第三方目录搜索引擎在Adobe Commerce搜索引擎上运行。 请与供应商联系以确定是否必须更新扩展。
 
@@ -68,15 +68,15 @@ Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 
 ### 搜索引擎
 
-在升级到2.4.0之前，必须安装和配置Elasticsearch7.6或更高版本或OpenSearch 1.2。Adobe不再支持Elasticsearch2.x、5.x和6.x。_配置指南_&#x200B;中的[搜索引擎配置](../../configuration/search/configure-search-engine.md)描述了将Elasticsearch升级到支持的版本后必须执行的任务。
+在升级到2.4.0之前，必须安装和配置Elasticsearch 7.6或更高版本或者OpenSearch 1.2。Adobe不再支持Elasticsearch 2.x、5.x和6.x。_配置指南_&#x200B;中的[搜索引擎配置](../../configuration/search/configure-search-engine.md)介绍了将Elasticsearch升级到支持的版本后必须执行的任务。
 
-有关在部署到生产环境之前备份数据、检测潜在的迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
+有关在部署到生产环境之前备份数据、检测潜在迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
 
 Elasticsearch需要Java开发工具包(JDK) 1.8或更高版本。 请参阅[安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk)以检查安装的JDK版本。
 
 #### OpenSearch
 
-OpenSearch是Elasticsearch许可更改后Elasticsearch7.10.2的开源分支。 以下版本的Adobe Commerce引入了对OpenSearch的支持：
+OpenSearch是Elasticsearch 7.10.2的一个开源分支，它遵循Elasticsearch的许可更改原则。 以下版本的Adobe Commerce引入了对OpenSearch的支持：
 
 * 2.4.6（OpenSearch具有单独的模块和设置）
 * 2.4.5
@@ -84,7 +84,7 @@ OpenSearch是Elasticsearch许可更改后Elasticsearch7.10.2的开源分支。 �
 * 2.4.3-p2
 * 2.3.7 - p3
 
-只有升级到上述（或更高版本）列出的Adobe Commerce版本时，才能[从Elasticsearch迁移到OpenSearch](opensearch-migration.md)。
+只有升级到上述（或更高版本）列出的Elasticsearch版本时，才能[从Adobe Commerce迁移到OpenSearch](opensearch-migration.md)。
 
 OpenSearch需要JDK 1.8或更高版本。 请参阅[安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk)以检查安装的JDK版本。
 
@@ -92,11 +92,15 @@ OpenSearch需要JDK 1.8或更高版本。 请参阅[安装Java软件开发工具
 
 #### 升级Elasticsearch
 
-Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示了Elasticsearch从7.x升级到8.x的示例：
+Adobe Commerce 2.4.6中引入了对Elasticsearch 8.x的支持。以下说明显示了Elasticsearch从7.x升级到8.x的示例：
 
-1. 将Elasticsearch7.x服务器升级到8.x ，并确保已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
+>[!NOTE]
+>
+>在即将发布的2.4.8版本中，这些步骤将不是必需的，因为默认情况下包含Elasticsearch 8模块，因此您无需单独安装该模块。
 
-1. 通过将以下配置添加到`elasticsearch.yml`文件并重新启动Elasticsearch8.x服务来启用`id_field_data`字段。
+1. 将Elasticsearch 7.x服务器升级到8.x，并确保已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
+
+1. 通过将以下配置添加到您的`elasticsearch.yml`文件并重新启动Elasticsearch 8.x服务来启用`id_field_data`字段。
 
    ```yaml
    indices:
@@ -106,13 +110,35 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
 
    >[!INFO]
    >
-   >为了支持Elasticsearch8.x，Adobe Commerce 2.4.6在默认情况下不允许使用`indices.id_field_data`属性，并使用`docvalue_fields`属性中的`_id`字段。
+   >为了支持Elasticsearch 8.x，Adobe Commerce 2.4.6在默认情况下不允许使用`indices.id_field_data`属性，并使用`docvalue_fields`属性中的`_id`字段。
 
 1. 在Adobe Commerce项目的根目录中，更新编辑器依赖项以删除`Magento_Elasticsearch7`模块并安装`Magento_Elasticsearch8`模块。
 
    ```bash
    composer require magento/module-elasticsearch-8 --update-with-all-dependencies
    ```
+
+   如果您遇到`psr/http-message`的依赖关系错误，请单击以展开以下疑难解答部分：
+
+   +++疑难解答
+
+   如果在安装Elasticsearch 8时遇到依赖关系冲突，特别是与`psr/http-message`的冲突，可以通过执行以下步骤来解决此问题：
+
+   1. 首先，需要Elasticsearch 8模块，而不更新其他依赖项：
+
+      ```bash
+      composer require magento/module-elasticsearch-8 --no-update
+      ```
+
+   1. 然后更新Elasticsearch 8模块和`aws/aws-sdk-php`包：
+
+      ```bash
+      composer update magento/module-elasticsearch-8 aws/aws-sdk-php -W
+      ```
+
+   此方法适用于2.4.7-p4和PHP 8.3。出现此问题的原因是`aws/aws-sdk-php`需要`psr/http-message >= 2.0`，这可能会导致冲突。 上述步骤有助于解决这些依赖性问题。
+
++++
 
 1. 更新项目组件。
 
@@ -136,9 +162,9 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
 
 #### 降级Elasticsearch
 
-如果您无意中升级了服务器上的Elasticsearch版本，或确定由于任何其他原因需要降级，则还必须更新Adobe Commerce项目依赖项。 例如，从Elasticsearch8.x降级到7.x
+如果您无意中升级了服务器上的Elasticsearch版本，或确定由于任何其他原因需要降级，则还必须更新Adobe Commerce项目依赖项。 例如，从Elasticsearch 8.x降级到7.x
 
-1. 将Elasticsearch8.x服务器降级为7.x ，并确保已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
+1. 将Elasticsearch 8.x服务器降级为7.x，并确保其已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
 
 1. 在Adobe Commerce项目的根目录中，更新编辑器依赖项以删除`Magento_Elasticsearch8`模块及其编辑器依赖项，并安装`Magento_Elasticsearch7`模块。
 
@@ -178,7 +204,7 @@ Adobe Commerce 2.4.6引入了对Elasticsearch8.x的支持。以下说明显示�
 
 设置打开文件限制(ulimit)有助于避免多次递归调用长查询字符串失败或使用`bin/magento setup:rollback`命令时出现问题。 此命令对于不同的UNIX shell是不同的。 有关`ulimit`命令的详细信息，请咨询您的个人风格。
 
-Adobe建议将打开的文件[ulimit](https://ss64.com/bash/ulimit.html)设置为`65536`或更大的值，但如有必要，您可以使用更大的值。 您可以在命令行上设置限制，也可以将其设置为用户shell的永久设置。
+Adobe建议将打开的文件[ulimit](https://ss64.com/bash/ulimit.html)设置为`65536`或更多的值，但如有必要，您可以使用更大的值。 您可以在命令行上设置限制，也可以将其设置为用户shell的永久设置。
 
 要从命令行设置限制，请执行以下操作：
 
