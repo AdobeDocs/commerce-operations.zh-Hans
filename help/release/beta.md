@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: e569e8106930882323ab3ab046a3db0ee1da1503
+source-git-commit: c27867be74dfaa1bcd782a23db27db29fdccc4e3
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -79,15 +79,6 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 
 要参与此测试版，请向[sbieber@adobe.com](mailto:sbieber@adobe.com)发送电子邮件请求。
 
-### Data Connection和Audience Activation(公共Beta)
-
-扩展了Adobe Commerce和Adobe Experience Platform之间的数据共享，以推动提供更强大的个性化体验。 此功能使商家能够：
-
-- 共享Commerce客户配置文件
-- 创建自定义属性
-
-要参与此测试版，请向[DataConnection@adobe.com](mailto:DataConnection@adobe.com)发送电子邮件请求。
-
 ### Adobe Commerce基础(公共Beta)
 
 每个Adobe Commerce Foundation测试版都包括在计划发布日期之前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能领域：
@@ -109,7 +100,6 @@ Beta版本包具有`-betaX`后缀。 例如，Adobe Commerce 2.4.7测试版发�
 - `2.4.7-beta2`
 
 有关即将发布的公共测试版发布日期的列表，请参阅[发布计划](schedule.md)。
-
 
 #### Beta版本访问权限
 
