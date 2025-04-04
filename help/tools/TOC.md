@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: bbbe5481d87c44fe22beb303bcc19dcc00984fac
+source-git-commit: 1e02a1831639368ba4640231a854d6f5613c60ad
 workflow-type: tm+mt
-source-wordcount: '7271'
+source-wordcount: '7287'
 ht-degree: 0%
 
 ---
@@ -767,6 +767,7 @@ ht-degree: 0%
          - [ACSD-63992：管理UI中出现带优惠券和配送方式条件错误的[!UICONTROL Cart Price Rule]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-63992-admin-ui-cart-rule-shipping-method.md)
       - v1.1.61 {#v1-1-61}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.61](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/overview.md)
+         - [ACP2E-3689：类别树在更深层显示并反映锚点/非锚点关系的多个问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3689-issues-with-category-tree-display-reflect-anchor-non-anchor-relationships.md)
          - [ACSD-64178： [!UICONTROL Edit Attribute Set]页面加载缓慢，具有数千个产品属性](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64178-attribute-set-edit-page-loads-slow-with-thousands-of-attributes.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - 命令行工具引用{#cli-reference}
