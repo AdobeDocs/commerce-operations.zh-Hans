@@ -2,7 +2,7 @@
 title: 管理索引器
 description: 请参阅有关如何查看和管理Commerce索引器的示例。
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: 9a92204369d3a8310aadfb94f8193a6c89f78c30
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -39,7 +39,7 @@ salesrule_rule                           Sales Rule
 ```
 
 >[!NOTE]
-> 使用Live Search、目录服务或产品Recommendations的Adobe Commerce商家可以选择使用基于[SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html)。
+> 使用实时搜索、目录服务或产品推荐的Adobe Commerce商家可以选择使用基于[SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce/price-indexer/index.html)。
 
 ## 查看索引器状态
 

@@ -2,7 +2,7 @@
 title: 产品可用性
 description: 了解当前支持哪些Adobe Commerce功能，并检查它们与特定Adobe Commerce版本的兼容性。
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
-source-git-commit: 56dabc0c35460a8ace6f6be455050f56119d1b16
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe已对支持的版本进行了全面测试。 Adobe客户支持部门可提
 
 ## Adobe创作的扩展
 
-这些Adobe Commerce扩展与核心Adobe Commerce代码库分离。 这允许Adobe在更灵活的时间范围内发布这些扩展的反复版本，并使客户能够更早地访问新功能。
+这些Adobe Commerce扩展与核心Adobe Commerce代码库分离。 这允许Adobe在更灵活的时间范围内发布这些扩展的反复版本，并让客户能够更早地访问新功能。
 
 下表显示了每个扩展相对于Adobe Commerce版本的版本支持。
 
@@ -31,14 +31,14 @@ Adobe已对支持的版本进行了全面测试。 Adobe客户支持部门可提
 
 ## Commerce服务
 
-[Commerce Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/home.html)是一套Adobe托管功能，可与您的Commerce实例配合使用，提供强大的功能和快速的响应时间。
+[Commerce Services](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html)是一套由Adobe托管的功能，可与您的Commerce实例相结合，提供强大的功能和快速的响应时间。
 
 建议商家使用最新版本的服务，以确保最高的稳定性和功能。 本文档介绍了当前发布的版本。
 
 * Adobe Commerce服务当前与Commerce 2.4.4及更高版本兼容。 建议商家使用最新版本的服务。
 * 虽然服务被认为与Commerce 2.4.x的早期版本兼容，但官方并不支持这些服务。
-* 服务与Commerce 2.3.x不兼容，但产品Recommendations 3.3.7及更低版本除外。
-* Payments服务当前与Magento Open Source2.4.4及更高版本兼容。 建议商家使用最新版本的服务。
+* 服务与Commerce 2.3.x不兼容，但产品推荐3.3.7及更低版本除外。
+* Payments服务当前与Magento Open Source 2.4.4及更高版本兼容。 建议商家使用最新版本的服务。
 
 下表显示了相对于Adobe Commerce版本的每个服务的版本支持。
 

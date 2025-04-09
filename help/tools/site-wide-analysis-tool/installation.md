@@ -1,9 +1,9 @@
 ---
 title: 安装指南
-description: 使用此指南为您的网站安装 [!DNL Site-Wide Analysis Tool]
+description: '使用此指南为您的网站安装 [!DNL Site-Wide Analysis Tool] '
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
 feature: Configuration, Install
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 0%
@@ -22,13 +22,13 @@ ht-degree: 0%
 >
 >了解[如何启用](../site-wide-analysis-tool/access.md) [!DNL Site-Wide Analysis Tool]并生成报告。
 
-如果您内部安装了Adobe Commerce，请在您的基础架构上安装代理以使用该工具。 您不需要在云基础架构项目上的Adobe Commerce上安装代理。
+如果您拥有本地Adobe Commerce安装，请在基础设施上安装代理以使用该工具。 您无需在Adobe Commerce上针对云基础设施项目安装代理。
 
 ## 代理
 
 [!DNL Site-Wide Analysis Tool]代理允许您将[!DNL Site-Wide Analysis Tool]用于Adobe Commerce的内部安装。
 
-[!DNL Site-Wide Analysis Tool]代理收集应用程序和业务数据，对其进行分析并提供有关安装运行状况的更多见解，以便您改善客户体验。 它可以监视您的应用程序，并帮助您识别性能、安全性、可用性和应用程序问题。
+[!DNL Site-Wide Analysis Tool]代理会收集应用程序和业务数据，分析这些数据，并提供有关安装运行状况的其他见解，以便您可以改进客户体验。 它可以监控您的应用程序，并帮助您确定性能、安全性、可用性和应用程序问题。
 
 安装代理程序需要以下步骤：
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ## [!DNL Commerce Services Connector]
 
-代理需要在您的系统上安装[[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html)扩展和[已使用API密钥配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html)。 要验证是否已安装扩展，请运行以下命令：
+代理需要在您的系统上安装[[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)扩展和[已使用API密钥配置](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)。 要验证是否已安装扩展，请运行以下命令：
 
 ```bash
 bin/magento module:status Magento_ServicesId
@@ -98,21 +98,21 @@ bin/magento module:status Magento_ServicesId
 
 1. 单击现有API密钥旁边的&#x200B;**[!UICONTROL Delete]**。
 
-1. [配置](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html)新的API密钥。
+1. [配置](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)新的API密钥。
 
 >[!IMPORTANT]
 >
-> 如果您在API门户中生成新密钥，请立即更新[!DNL Admin configuration]中的API密钥。 如果您生成新密钥但未更新[!DNL Admin]中的密钥，则SaaS扩展将不再有效，并且您将丢失有价值的数据。
+> 如果在API门户中生成新密钥，请立即更新[!DNL Admin configuration]中的API密钥。 如果您生成新密钥并且不更新[!DNL Admin]中的密钥，您的SaaS扩展将不再有效，并且您将丢失宝贵的数据。
 
-如果未安装该扩展，请按照以下说明进行安装：
+如果未安装扩展，请按照以下说明进行安装：
 
-1. 将扩展添加到`composer.json`文件并进行安装。
+1. 将扩展添加到您的`composer.json`文件并安装它。
 
    ```bash
    composer require magento/services-id
    ```
 
-1. 启用该扩展。
+1. 启用扩展。
 
    ```bash
    bin/magento module:enable Magento_ServicesId
@@ -130,7 +130,7 @@ bin/magento module:status Magento_ServicesId
    bin/magento cache:clean
    ```
 
-1. [配置API密钥](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html)以将扩展连接到您的系统。
+1. [配置API密钥](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)以将扩展连接到您的系统。
 
 ## 安装代理
 
@@ -165,19 +165,19 @@ bin/magento module:status Magento_ServicesId
 
 1. 下载并安装代理后，[使用以下方法之一将其配置为运行](#run-the-agent)：
 
-   - [服务](#service)（如果您具有根访问权限，则为首选服务）
+   - [服务](#service)（如果您具有根用户访问权限，则首选）
 
    - [Cron](#cron)
 
 ### 手动 {#manual}
 
-如果您不想使用我们的[shell脚本](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh)来安装代理，则必须按照以下步骤手动安装：
+如果您不想使用我们的[shell脚本](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh)来安装代理，则必须按照以下步骤手动安装它：
 
-1. 创建要下载代理的目录。
+1. 创建要在其中下载代理的目录。
 
    >[!TIP]
    >
-   >我们建议在根Adobe Commerce项目目录之外安装代理。
+   >我们建议在Adobe Commerce项目根目录之外安装代理。
 
 1. 下载二进制文件并将其解包。
 
@@ -187,13 +187,13 @@ bin/magento module:status Magento_ServicesId
 
    对于&#x200B;**AMD64**&#x200B;体系结构：
 
-   1. 下载启动器档案。
+   1. 下载启动程序归档文件。
 
       ```bash
       curl -O https://updater.supportinsights.adobe.com/launcher/launcher.linux-amd64.tar.gz
       ```
 
-   1. 解压缩启动器档案。
+   1. 解压缩启动程序归档文件。
 
       ```bash
       tar -xf launcher.linux-amd64.tar.gz
@@ -262,9 +262,9 @@ bin/magento module:status Magento_ServicesId
    Success exit.
    ```
 
-1. 下载并安装代理后，必须[将其配置为使用以下方法之一运行](#run-the-agent)：
+1. 下载并安装代理后，您必须[将其配置为使用以下方法之一运行](#run-the-agent)：
 
-   - [服务](#service)（如果您具有根访问权限，则为首选服务）
+   - [服务](#service)（如果您具有根用户访问权限，则首选）
 
    - [Cron](#cron)
 
@@ -404,7 +404,7 @@ FATA[2022-12-10 20:38:44] bad http status from https://updater.supportinsights.a
 1. 执行[脚本安装](#scripted)，保存输出并查看输出是否有错误。
 1. 查看生成的`config.yaml`文件，并验证指向Commerce实例和PHP的路径是否正确。
 1. 确保运行计划程序的用户位于[文件系统所有者](../../installation/prerequisites/file-system/overview.md) Unix组中，或者与文件系统所有者是同一个用户。
-1. 确保已正确安装[Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html)密钥，并尝试更新这些密钥以将扩展连接到您的系统。
+1. 确保已正确安装[Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)密钥，并尝试更新这些密钥以将扩展连接到您的系统。
 1. [在更新密钥后卸载](#uninstall)代理并使用[安装脚本](#scripted)重新安装。
 1. 运行调度程序并查看您是否仍收到相同的错误。
 1. 如果您仍收到相同的错误，请增加`config.yaml`中的日志级别以调试并打开支持票证。

@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.6安全补丁发行说明
 description: 了解Adobe Commerce版本2.4.6的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: cde096ac-d192-490d-873a-475996c474ff
-source-git-commit: 9397740c608e4f0521018d6f6c918ca267197c6c
+source-git-commit: 9bf1c539220d70a8e7fe449e4d91199f23cc23b2
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1316'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,14 @@ ht-degree: 0%
 # Adobe Commerce 2.4.6安全修补程序的发行说明
 
 {{$include /help/_includes/release-notes/security-patch-intro.md}}
+
+## 2.4.6-p10
+
+Adobe Commerce 2.4.6-p10安全版本为2.4.6早期版本中发现的漏洞修复了安全错误。
+
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-26](https://helpx.adobe.com/security/products/magento/apsb25-26.html)。
+
+{{b2b-patches}}
 
 ## 2.4.6-p9
 

@@ -3,7 +3,7 @@ title: 企业参考体系结构
 description: 了解如何使用Adobe的最新可组合商务技术实施Adobe Commerce。
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
 exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
-source-git-commit: 581a7dbcc19c31df80e03cb9f321a6adb5fa1a73
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Adobe Commerce是一个以体验为导向的平台，它以独一无二的方式在技术灵活性和易用性之间提供了平衡，所有这些都是为了创造卓越的体验来推动业务成果。
 
-Commerce已经过演变，可满足企业对性能、规模和安全性的要求。 采用使用Adobe最新可组合商业解决方案的现代实施方法对于企业成功至关重要。 本页从技术角度详细描述了现代化的Commerce实施方法。
+Commerce已经过演变，可满足企业对性能、规模和安全性的要求。 采用一种现代化实施方法，该方法会使用Adobe最新的可组合商务解决方案，这对于企业企业的成功至关重要。 本页从技术角度详细描述了现代化的Commerce实施方法。
 
 以下架构图说明了Adobe Commerce与所有Adobe Experience Cloud解决方案之间的数据流。
 
@@ -41,7 +41,7 @@ Commerce已经过演变，可满足企业对性能、规模和安全性的要求
 
 Adobe Commerce与所有Experience Cloud解决方案集成，可大规模提供[个性化商务体验](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customers-menu/personalize-scale#customers-menu)。
 
-[数据连接](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/overview)解锁关于购物者购买行为的洞察，以便您可以使用其他Adobe数字体验产品跨所有渠道创建个性化购物体验。
+[Data Connection](https://experienceleague.adobe.com/en/docs/commerce/data-connection/overview)解锁关于购物者购买行为的洞察，以便您能够与其他Adobe数字体验产品跨所有渠道创建个性化的购物体验。
 
 >[!NOTE]
 >
@@ -59,13 +59,13 @@ Adobe为开发人员提供了全面的扩展点和工具，用于构建可扩展
 - **隔离** — 隔离环境意味着开发人员可以自行升级或修改其扩展，而无需依赖核心版本。
 - **技术独立性** — 开发人员可以选择任何符合其需求的技术栈栈和编码语言。
 
-Adobe提供了以下用于构建集成和自定义的开发人员工具：
+Adobe提供了以下开发人员工具来构建集成和自定义：
 
 - Adobe Developer App Builder的&#x200B;[**API网格**](https://developer.adobe.com/graphql-mesh-gateway/) — 协调多个API、GraphQL、REST和其他源并将其合并到一个可查询的GraphQL端点中。
 - [**App Builder**](https://developer.adobe.com/app-builder/docs/overview/) — 构建并部署安全且可扩展的Web应用程序，这些应用程序可扩展Commerce功能并与第三方解决方案集成。
 - [**事件**](https://developer.adobe.com/commerce/extensibility/events/) — 使用自定义事件触发器与其他可扩展开发工具交互。
 - [**Webhooks**](https://developer.adobe.com/commerce/extensibility/webhooks/) — 使用Webhook自动触发Commerce与第三方系统之间的交互。
-- [**管理UI SDK**](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/) — 使用适用于商户的新页面和功能自定义并增强Commerce管理。
+- [**管理员UI SDK**](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/) — 使用商户的新页面和功能自定义并增强Commerce管理员。
 - [**集成入门工具包**](https://developer.adobe.com/commerce/extensibility/starter-kit/) — 通过参考集成、入门脚本和标准化架构加速您的Backoffice集成。
 
 >[!NOTE]
@@ -76,14 +76,14 @@ Adobe提供了以下用于构建集成和自定义的开发人员工具：
 
 Adobe提供一套丰富的智能、可组合的推销服务，帮助您支持关键业务目标。 这些服务还提供了对大规模优化性能至关重要的API。
 
-- [实时搜索](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/overview) — 通过此AI支持的搜索工具，为购物者提供更智能、更快速且相关的结果。
-- [产品Recommendations](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/product-recommendations/overview) — 根据购物者行为、流行趋势、产品相似性等添加由AI提供支持的推荐。
-- [目录服务](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/catalog-service/guide-overview) — 为客户提供优化的产品体验，同时提高性能、改进可扩展性和提高转化率。
-- [支付服务](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/guide-overview) — 通过提供各种支付方式（包括免息分期付款）和单一付款处理、订单和发票视图，提高客户满意度。
+- [实时搜索](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview) — 通过此AI支持的搜索工具，为购物者提供更智能、更快速且相关的结果。
+- [产品推荐](https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/overview) — 根据购物者行为、流行趋势、产品相似性等添加AI驱动的推荐。
+- [目录服务](https://experienceleague.adobe.com/en/docs/commerce/catalog-service/guide-overview) — 为客户提供优化的产品体验，同时提高性能、改进可扩展性和提高转化率。
+- [支付服务](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview) — 通过提供各种支付方式（包括免息分期付款）和单一付款处理、订单和发票视图，提高客户满意度。
 
 ## Headless店面
 
 Headless商务是API优先的商务。 Adobe Commerce采用解耦的架构，实现了完全的headless。该架构通过GraphQL API层提供所有Commerce服务和数据。 此架构允许团队独立于核心应用程序开发其前台，从而提供使用新兴技术快速构建和测试新接触点的灵活性。
 
-Adobe提供现代headless storefront技术，其优势和功能与[Edge Delivery Services](https://www.aem.live/home)提供的相同，包括基于文档的创作、性能优先的架构和现成的本机试验。 它利用Adobe Commerce [店面服务](#storefront-services)的规模和性能以及[插入组件](https://experienceleague.adobe.com/developer/commerce/storefront/)的灵活性和便利性来提供商务功能。
+Adobe提供现代headless storefront技术，它与[Edge Delivery Services](https://www.aem.live/home)提供的优势和功能相同，具有基于文档的创作、性能优先的架构和现成的本机试验。 它利用Adobe Commerce [店面服务](#storefront-services)的规模和性能以及[插入组件](https://experienceleague.adobe.com/developer/commerce/storefront/)的灵活性和便利性来提供商务功能。
 

@@ -2,7 +2,7 @@
 title: Adobe Commerce发行说明
 description: 了解在何处查找特定 Adobe Commerce 版本的信息。
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: a2c93cb8481a3d843bc3be186d682f1d5e7974f6
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 3%
@@ -48,12 +48,12 @@ ht-degree: 3%
         <p>了解创新的Commerce促销服务的最新改进。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/customers/audience-activation.html">Audience Activation</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html">目录服务</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html">Experience Platform连接器</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html">实时搜索</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/release-notes.html">支付服务</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">产品推荐</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html">服务连接器</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/catalog-service/release-notes.html">目录服务</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/experience-platform-connector/release-notes.html">Experience Platform连接器</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/live-search/release-notes.html">实时搜索</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/payment-services/release-notes.html">支付服务</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/product-recommendations/release-notes.html">产品推荐</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html">服务连接器</a></li>
           </ul>
         </td>
       <td><strong>工具</strong>

@@ -2,7 +2,7 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: c27867be74dfaa1bcd782a23db27db29fdccc4e3
+source-git-commit: c523b57270370d87be0f2ab0513f7908bb0a7173
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 
 这些新条件增强了搜索查询过滤机制以细化搜索结果。 这些新条件不会影响主搜索查询。 要参与测试版，请向[commerce-storefront-services](mailto:commerce-storefront-services@adobe.com)发送电子邮件请求。
 
-要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta)。
+要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/en/docs/commerce/live-search/install#install-the-live-search-beta)。
 
 ### IBM Sterling Order Management系统集成(Private Beta)
 
@@ -88,7 +88,7 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/home.html)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
