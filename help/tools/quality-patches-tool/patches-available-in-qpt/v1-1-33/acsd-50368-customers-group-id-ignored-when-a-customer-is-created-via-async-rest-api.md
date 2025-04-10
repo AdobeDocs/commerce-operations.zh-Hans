@@ -1,16 +1,21 @@
 ---
-title: 'ACSD-50368：通过异步REST API或异步批量REST API创建客户时，将忽略Customers group_id'
+title: ACSD-50368：通过异步REST API或异步批量REST API创建客户时，将忽略客户group_id
 description: 应用ACSD-50368修补程序以修复Adobe Commerce问题，该问题导致在通过异步REST API或异步批量REST API创建客户时忽略客户group_id。
 feature: REST
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1ca78717-2144-4410-a398-764864ee182f
+source-git-commit: 9039635038bee9083fa3ed009e79c76e3655b357
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
 
 # ACSD-50368：通过异步REST API或异步批量REST API创建客户时，将忽略客户group_id
+
+>[!NOTE]
+>
+>已部分弃用ACSD-50368修补程序，因为对于2.4.4以上的版本，强制安全修补程序[APSB25-08](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)已解决此问题。
 
 ACSD-50368修补程序修复了在通过异步REST API或异步批量REST API创建客户时忽略客户group_id的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.33时，此修补程序可用。 修补程序ID为ACSD-50368。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
@@ -22,7 +27,7 @@ ACSD-50368修补程序修复了在通过异步REST API或异步批量REST API创
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.4.3 - 2.4.4-p4
+* Adobe Commerce（所有部署方法） 2.4.3 - 2.4.3-p3
 
 >[!NOTE]
 >
