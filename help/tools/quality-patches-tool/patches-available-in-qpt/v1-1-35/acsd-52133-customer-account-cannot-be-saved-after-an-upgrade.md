@@ -1,16 +1,21 @@
 ---
-title: 'ACSD-52133：升级后无法保存客户帐户'
+title: ACSD-52133：升级后无法保存客户帐户
 description: 应用ACSD-52133修补程序以修复在升级后无法保存客户帐户的Adobe Commerce问题。
 feature: Customers, Upgrade
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 4a0e6ed8-3e35-40ce-bb49-8ccfcde437a0
+source-git-commit: 82667023bbaa9d725eb52dacb8bd47042bdfe028
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
 
 # ACSD-52133：升级后无法保存客户帐户
+
+>[!NOTE]
+>
+>此修补程序已弃用，因为与安全修补程序[APSB25-08](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)冲突。
 
 ACSD-52133修补程序修复了在升级后无法保存客户帐户的问题。 安装[!DNL Quality Patches Tool (QPT)] 1.1.35时，此修补程序可用。 修补程序ID为ACSD-52133。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
