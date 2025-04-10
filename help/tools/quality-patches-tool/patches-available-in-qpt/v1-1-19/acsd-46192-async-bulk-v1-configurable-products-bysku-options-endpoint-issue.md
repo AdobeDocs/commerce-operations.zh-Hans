@@ -4,14 +4,18 @@ description: ACSD-46192修补程序修复了“async/bulk/V1/configurable-produc
 feature: Configuration, Products
 role: Admin
 exl-id: 5a54f4b5-8467-40de-9d8f-ba46880ed5ad
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: 2cd5a55d95fad071fe872fa466aaeb56c439dad1
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
 # ACSD-46192：异步/bulk/V1/configurable-products/bySku/options端点问题
+
+>[!NOTE]
+>
+>部分弃用ACSD-46192修补程序，因为强制安全修补程序[APSB25-08](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)已解决此问题。
 
 ACSD-46192修补程序修复了`async/bulk/V1/configurable-products/bySku/options`终结点的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
 
@@ -23,7 +27,7 @@ ACSD-46192修补程序修复了`async/bulk/V1/configurable-products/bySku/option
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.4.3和2.4.4
+* Adobe Commerce（所有部署方法） 2.3.6 - 2.4.3-p3
 
 >[!NOTE]
 >
