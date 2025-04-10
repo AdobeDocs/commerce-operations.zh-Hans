@@ -4,14 +4,18 @@ description: 应用ACSD-49392修补程序以修复Adobe Commerce问题，该问�
 feature: Orders
 role: Admin
 exl-id: e12cbf2d-219e-4cb5-a226-6c7ae4929549
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+source-git-commit: 67e050b4ceccc3f30bf8cd49125525b2e8d8b0dd
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
 # ACSD-49392：部分退款后订单状态更改为“已关闭”
+
+>[!NOTE]
+>
+>对于版本2.4.6-p7到2.4.6-p10，修补程序ACSD-49392被替换为修补程序[ACSD-57003](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-46/acsd-57003-order-status-changed-to-complete-instead-of-processing)。
 
 ACSD-49392修补程序修复了在对捆绑产品进行部分退款后，订单状态更改为closed的问题。 安装[!DNL Quality Patches Tool (QPT)] 1.1.31时，此修补程序可用。 修补程序ID为ACSD-49392。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
@@ -23,7 +27,7 @@ ACSD-49392修补程序修复了在对捆绑产品进行部分退款后，订单�
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.3.7 - 2.3.7-p4和2.4.1 - 2.4.6
+* Adobe Commerce（所有部署方法） 2.3.7 - 2.3.7-p4和2.4.1 - 2.4.6-p6
 
 >[!NOTE]
 >
