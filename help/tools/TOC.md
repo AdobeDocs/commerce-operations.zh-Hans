@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 77f3bb9b766eef3d56fc5d89b29daa9254992220
+source-git-commit: 7358d2aca927c94505e7a99b5ee390aa6a7f5fc9
 workflow-type: tm+mt
-source-wordcount: '7335'
+source-wordcount: '7359'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 # 工具 {#tools}
 
 - [概述](overview.md)
-- 站点范围分析工具 {#site-wide-analysis-tool}
+- 站点范围分析工具{#site-wide-analysis-tool}
    - [简介](site-wide-analysis-tool/intro.md)
    - [安装](site-wide-analysis-tool/installation.md)
    - [如何访问](site-wide-analysis-tool/access.md)
@@ -27,7 +27,7 @@ ht-degree: 0%
    - [警报](site-wide-analysis-tool/alerts.md)
    - [补丁程序](site-wide-analysis-tool/patches.md)
 
-- Adobe Commerce上的受管警报 {#managed-alerts-for-adobe-commerce}
+- Adobe Commerce {#managed-alerts-for-adobe-commerce}上的托管警报
    - [Adobe Commerce上的托管警报： [!DNL Redis] 内存严重警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert.md)
    - [Adobe Commerce托管警报：磁盘警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-disk-warning-alert.md)
    - [Adobe Commerce的受管警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce.md)
@@ -40,12 +40,12 @@ ht-degree: 0%
    - [Adobe Commerce上的托管警报： [!DNL MariaDB] 警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-mariadb-alerts.md)
    - [Adobe Commerce的托管警报： [!DNL Apdex] 警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-apdex-warning-alert.md)
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
-- Quality Patches工具 {#quality-patches-tool}
+- 高质量修补程序工具{#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
    - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
-   - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
+   - Quality Patches Tool {#patches-available-in-qpt}中可用的修补程序
       - [概述](quality-patches-tool/patches-available-in-qpt/patches-available-in-qpt-tool-overview.md)
       - v1.1.0 {#v1-1-0}
          - [概述：Quality Patches Tool (QPT) v1.1.0](quality-patches-tool/patches-available-in-qpt/v1-1-0/overview.md)
@@ -763,6 +763,7 @@ ht-degree: 0%
       - v1.1.60 {#v1-1-60}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.60](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/overview.md)
          - [ACSD-63323：解析[!UICONTROL Select All]功能并增强产品类别弹出窗口中的分页和记录计数](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-63323-resolves-select-all-functionality-and-enhances-pagination-and-record-count-in-product-category-popup.md)
+         - [ACSD-64149：仅编辑一个日期时，可以保存具有[!UICONTROL Date range]条件的客户区段](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/ascd-64149-customer-segment-with-a-date-range-condition.md)
          - [ACSD-64111：修复了InvalidArgumentException：在 [!DNL Page Builder]中设置产品组件的嵌套条件时类不存在错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-64111-fixes-issue-where-invalidargumentexceptionclass-does-not-exist-error-occurs-in-vendor-magento-module-rule-model-conditionfactoryphp50-when-setting-nested-conditions-for-a-product-component-in-page-builder.md)
          - [ACSD-63992：管理UI中出现带优惠券和配送方式条件错误的[!UICONTROL Cart Price Rule]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-63992-admin-ui-cart-rule-shipping-method.md)
       - v1.1.61 {#v1-1-61}
@@ -770,14 +771,15 @@ ht-degree: 0%
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.61](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/overview.md)
          - [ACP2E-3689：类别树在更深层显示并反映锚点/非锚点关系的多个问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3689-issues-with-category-tree-display-reflect-anchor-non-anchor-relationships.md)
          - [ACSD-64178： [!UICONTROL Edit Attribute Set]页面加载缓慢，具有数千个产品属性](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64178-attribute-set-edit-page-loads-slow-with-thousands-of-attributes.md)
+         - [ACSD-63883：正在修复[!UICONTROL Requisition List]的 [!DNL GraphQL] 响应中错误的items_count](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-63883-fixes-the-issue-where-the-requisition-list.md)
          - [ACP2E-3705：在设置MAGE_INDEXER_THREADS_COUNT时，indexer_update_all_views cron执行失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3705-fixes-an-issue-where-the-indexer.md)
          - [ACSD-64467：在商店视图级别保存类别描述后，WYSIWYG编辑器为空](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64467-wysiwyg-editor-empty-after-saving-category-description.md)
          - [ACSD-63974：通过分页修复了[!UICONTROL Requisition List]加载时间缓慢的问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-63974-fixes-the-issue-where-the-requisition-list-page-takes-a-long-time.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
-- 命令行工具引用 {#cli-reference}
+- 命令行工具引用{#cli-reference}
    - [Adobe Commerce（内部部署）](reference/commerce-on-premises.md)
    - [升级兼容性工具](reference/uct.md)
-- Adobe Commerce观察 {#observation-for-adobe-commerce}
+- Adobe Commerce {#observation-for-adobe-commerce}的观察结果
    - [简介](observation-for-adobe-commerce/intro.md)
    - [如何访问](observation-for-adobe-commerce/access.md)
    - [选择帐户和时间范围](observation-for-adobe-commerce/selecting-the-account.md)
@@ -799,11 +801,11 @@ ht-degree: 0%
    - [安全选项卡](observation-for-adobe-commerce/security-tab.md)
    - [“底层”选项卡](observation-for-adobe-commerce/oac-infra.md)
    - [如何将观察用于Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
-- Data Migration Tool {#data-migration}
+- 数据迁移工具{#data-migration}
    - [迁移的工作方式](data-migration-tool/how-migration-works.md)
    - [最佳实践](data-migration-tool/best-practices.md)
    - [支持的版本](data-migration-tool/supported-versions.md)
-   - 基础知识 {#basics}
+   - 基本信息{#basics}
       - [创建计划](data-migration-tool/create-plan.md)
       - [先决条件](data-migration-tool/prerequisites.md)
       - [安装](data-migration-tool/install.md)
@@ -811,7 +813,7 @@ ht-degree: 0%
       - [配置](data-migration-tool/configure.md)
       - [自定义](data-migration-tool/customize.md)
       - [技术规范](data-migration-tool/technical-specification.md)
-   - 迁移数据 {#migrate-data}
+   - 迁移数据{#migrate-data}
       - [概述](data-migration-tool/migrate-data/overview.md)
       - [设置](data-migration-tool/migrate-data/settings.md)
       - [数据](data-migration-tool/migrate-data/data.md)
@@ -819,7 +821,7 @@ ht-degree: 0%
       - [跟进](data-migration-tool/migrate-data/follow-up.md)
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
-   - 资源 {#resources}
+   - 资源{#resources}
       - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [更改日志](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
 - [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
