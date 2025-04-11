@@ -1,7 +1,7 @@
 ---
-source-git-commit: 62b6501fc2ba595146bf7f38a7d3352ef02be1a0
+source-git-commit: 2f8ca1dd3289c1a24e33198c95d38c1a04a507ff
 workflow-type: tm+mt
-source-wordcount: '26051'
+source-wordcount: '26047'
 ht-degree: 0%
 
 ---
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ## 高亮
 
-以下31项重点内容适用于Magento Open Source2.4.8版本。
+以下31项功能亮点适用于Magento Open Source 2.4.8版本。
 
 ### 框架
 
@@ -37,11 +37,11 @@ ht-degree: 0%
    * _修复注释_：将jquery/validate库依赖项升级到最新的次要版本1.20.0
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/de4dfb8e>
 * _AC-12025_：将moment.js系统依赖关系升级到最新的次要版本
-   * _修复注释_：将Moment.js系统依赖关系升级到最新的次要版本2.30.1
+   * _修复注释_：将moment.js系统依赖关系升级到最新的次要版本2.30.1
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/de4dfb8e>
 * _AC-12032_：添加与MySQL 8.4 LTS for EE的兼容性
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/672a2e61>
-* _AC-12034_：为B2B添加与MySQL 8.4 LTS的兼容性
+* _AC-12034_：添加与MySQL 8.4 LTS for B2B的兼容性
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/672a2e61>
 * _AC-12074_：为包扩展添加与MySQL 8.4 LTS的兼容性
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/672a2e61>
@@ -86,14 +86,14 @@ laminas/laminas-validator
 * _AC-11421_：在现有Magento安装中，当按计划安装第三方索引器模块时默认设置更新中的索引器。
    * _修复注释_：默认情况下，所有新索引器都处于[按计划更新]模式。 以前，默认模式为[保存时更新]。 自定义索引器也是如此。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/71432aeb>
-* _AC-12480_：Elasticsearch7和8选项应随附管理员配置中弃用的。
-   * _修复注释_：“管理员配置”选项中的“Elasticsearch8”选项将显示已弃用的文本，以通知用户不再建议使用“Elasticsearch8”选项。
+* _AC-12480_： Elasticsearch 7和8选项应在管理配置中随附已弃用。
+   * _修复注释_：“管理员配置”选项中的Elasticsearch 8选项将显示已弃用的文本，以告知用户不再建议使用Elasticsearch 8选项。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0611e750>
 * _AC-12481_：在管理员配置中选择Elasticsearch选项时添加文本注释
-   * _修复注释_：添加了文本注释，以让Adobe Commerce管理员用户知道elasticsearch不再受Adobe支持且已弃用。
+   * _修复说明_：添加了文本说明，以便Adobe Commerce管理员用户知道Adobe不再支持elasticsearch，并且已弃用。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0611e750>
-* _AC-13448_：在2.4.8版中提供层级价格运营性能改进修补程序
-   * _修复说明_：在使用“/V1/products/tier-prices”REST API端点时，系统现在允许更高效地批量更新层价格，而不会导致性能问题或站点无响应。 以前，使用此端点更新大量价格可能会导致性能问题和网站无响应。
+* _AC-13448_：为2.4.8提供了一级价格运营性能改进修补程序
+   * _修复注释_：在使用“/V1/products/tier-prices”REST API端点时，系统现在允许更高效地批量更新层价格，而不会导致性能问题或站点无响应。 以前，使用此端点更新大量价格可能会导致性能问题和网站无响应。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/082d981c>
 * _AC-13550_：从Adobe存储库中删除所有Magento Open Source机密版权声明
    * _修复说明_：已从开源存储库中删除所有Adobe机密版权声明，确保仅使用Adobe版权的简化形式。 以前，公共存储库中的某些文件包含Adobe机密版权声明，这会导致社区上报。
@@ -106,7 +106,7 @@ laminas/laminas-validator
    * _修复说明_：已将TinyMCE 5迁移到TinyMCE 7.3.0以作为Adobe Commerce的支持版本，以前的系统使用的是5.10.2，该版本已过时并报告了安全漏洞
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/edcd0dcc>
 * _AC-12825_： [2.4.8-beta1] TinyMCE 5迁移到TinyMCE 7页面生成器
-   * _修复说明_：将TinyMCE 5迁移到TinyMCE 7.3.0以成为Adobe Commerce支持的版本，以前的系统使用的是5.10.2，该版本已过时并报告了安全漏洞
+   * _修复说明_：已将TinyMCE 5迁移到TinyMCE 7.3.0以作为Adobe Commerce的支持版本，以前的系统使用的是5.10.2，该版本已过时并报告了安全漏洞
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/edcd0dcc>
 * _AC-12844_： [2.4.8-beta1] TinyMCE 5迁移到TinyMCE 7 - Magento2-infra — 禁止使用的字词
    * _修复说明_：已将TinyMCE 5迁移到TinyMCE 7.3.0以作为Adobe Commerce的支持版本，以前的系统使用的是5.10.2，该版本已过时并报告了安全漏洞
@@ -133,9 +133,9 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/35577>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c699c206>
 * _ACP2E-2755_：启用2FA Duo后rest api出现问题
-   * _修复注释_： 2FA with Duo安全选项现在可为Rest API生成正确的签名
+   * _修复注释_： 2FA with Duo安全选项现在为Rest API生成正确的签名
    * _GitHub代码贡献_： <https://github.com/magento/security-package/commit/412fa642>
-* _ACP2E-2927_： [REST API]：为可配置产品添加配置后，商店视图中的使用默认值不会保持选中状态
+* _ACP2E-2927_： [REST API]：为可配置产品添加配置后，在存储视图中使用默认值不会保持选中状态
    * _修复注释_：通过确保非默认存储的可自定义选项具有正确的数据库条目，该问题已得到修复。 由于数据库条目不准确，因此以前在“管理员>目录>产品编辑>可自定义选项”部分中针对自定义商店的复选框处于未选中状态，即使自定义商店的选项标题与默认商店的标题保持相同也是如此。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3056e9cb>
 * _ACP2E-2969_：使用Oauth1时，REST API无法在SKU中使用斜杠(/)发出请求
@@ -149,7 +149,7 @@ laminas/laminas-validator
 以前，可以在层价格Api中创建重复的网站组价格客户组，以免在产品保存期间通过管理员验证。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/148c3ead>
 * _ACP2E-3130_：无法通过REST API添加具有状态的订单注释
-   * _修复注释_：该问题已解决，如果订单状态仅来自当前状态，则允许更改订单状态。 以前，它不遵循订单状态并防止任何订单状态中的更改，即使它来自同一状态。
+   * _修复注释_：通过允许更改顺序状态（如果该状态仅来自当前状态），该问题已得到解决。 以前，它不会遵循订单状态并阻止任何订单状态中的更改，即使订单状态来自同一状态也是如此。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/93d50f8d>
 * _ACP2E-3236_：有效负载中缺少SKU时，异步操作失败
    * _修复注释_：如果有效负载中缺少sku，则异步和同步操作以前由于产品保存错误而失败。 修复后，异步和同步产品保存rest api操作失败，并显示相关的异常消息。
@@ -200,22 +200,22 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38740>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-13000_：“以客户选择加入身份登录”复选框不可翻译
-   * _修复说明_：系统现在允许在“商店视图”范围中设置“以客户选择加入复选框身份登录”和“以客户复选框身份登录”工具提示字段，从而支持针对不同商店视图的翻译。 以前，这些字段仅在“网站”范围中设置，无法针对单个商店视图进行翻译。
+   * _修复说明_：系统现在允许在“商店视图”范围中设置“以客户身份登录选择加入复选框”和“以客户身份登录”复选框工具提示”字段，从而为不同的商店视图启用翻译。 以前，这些字段仅在“网站”范围中设置，导致无法翻译各个商店视图。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/32329>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/32359>
 * _AC-6071_：客户已登录，但在前端显示404错误。
-   * _修复注释_：现在，当客户登录时，店面客户仪表板页面会按预期加载。 以前，客户可以登录，但此页面显示了404错误。 [GitHub-35838](https://github.com/magento/magento2/issues/35838)
+   * _修复注释_：现在，当客户登录时，店面客户仪表板页面会按预期加载。 以前，客户可以登录，但此页面显示404错误。 [GitHub-35838](https://github.com/magento/magento2/issues/35838)
    * _GitHub问题_： <https://github.com/magento/magento2/issues/35838>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/36263>
 * _ACP2E-2791_：无法在管理员编辑客户部分中保存客户属性信息；
    * _修复注释_：现在已按管理员客户编辑表单的网站范围正确实施客户的商店ID。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/488c1034>
-* _ACP2E-3329_：登录后，以访客用户身份添加到比较列表中的产品不可见。
-   * _修复说明_：以客户身份登录之前添加到产品比较列表中的产品，现在会在登录后保留。
-以前，在登录后，不会显示以访客用户身份添加到比较列表中的产品。
+* _ACP2E-3329_：登录后，未显示以访客用户身份添加到比较列表的产品。
+   * _修复注释_：以客户身份登录之前添加到产品比较列表的产品现在会在登录后保留。
+以前，在登录后，以访客用户身份添加到比较列表的产品不可见。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/078c387e>
 * _ACP2E-3433_：允许国家/地区配置导致客户地址配置出现问题
-   * _修复说明_：现在，选择“允许国家/地区”配置不会影响为给定范围之外的国家/地区显示的国家/地区。 以前允许受配置影响的客户地址属性超出给定范围
+   * _修复注释_：现在选择“允许国家/地区”配置不会影响为给定范围之外显示的国家/地区。 以前，允许国家/地区配置会影响给定范围之外的客户地址属性
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/078c387e>
 * _ACP2E-3501_： VAPT：业务逻辑错误 — 将来日期作为客户出生日期
    * _修复注释_：客户的出生日期不能设置为晚于今天
@@ -223,19 +223,19 @@ laminas/laminas-validator
 
 ### 帐户、API、GraphQL
 
-* _ACP2E-3246_： Customer API - Login Failures Number Cannot Able to Reset To 0 After Successful Login （客户API — 登录成功后，登录失败数字无法重置为0）
-   * _修复注释_：现在，客户通过API端点成功登录后，客户实体表中的失败编号将重置为零。
+* _ACP2E-3246_：客户API — 成功登录后无法重置为0的登录失败数
+   * _修复注释_：现在，客户通过API端点成功登录后，客户实体表中的故障编号将重置为零。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ec7e32a9>
 
-### 帐户，管理员UI，B2B
+### 帐户、管理员UI、B2B
 
 * _ACP2E-3038_：受限管理员用户无法始终查看自定义共享目录
-   * _修复注释_：受限管理员用户现在可以始终如一地查看和管理客户以及产品分配到的所有共享目录，前提是他们有权访问特定商店。 以前，有权访问特定商店的受限管理员用户不可能始终看到产品分配到的所有共享目录，或者可能看到无法保存的客户，从而导致系统不一致。
+   * _修复注释_：受限管理员用户现在可以始终查看和管理客户以及为其分配产品的所有共享目录，前提是他们有权访问特定商店。 以前，具有特定商店访问权限的受限管理员用户无法始终查看分配给产品的所有共享目录，或者无法查看客户，从而导致系统中出现不一致的情况。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/7377de59>
 
 ### 帐户、购物车和结帐
 
-* _AC-2341_：“select”自定义客户地址属性不会为新客户地址渲染
+* _AC-2341_：“选择”自定义客户地址属性未针对新客户地址呈现
    * _GitHub问题_： <https://github.com/magento/magento2/issues/34950>
 
 ### 管理员UI
@@ -267,13 +267,13 @@ laminas/laminas-validator
    * _修复注释_：系统现在可以正确验证和导入包含特殊字符的产品CSV文件，从而允许成功传输数据。 以前，尝试导入包含特殊字符的产品CSV文件会导致错误，从而阻止导入过程。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6cfb9b6b>
 * _AC-13850_：必填电话号码字段没有红色星号
-   * _修复注释_：电话号码未显示早期的红色星号，但是  电话号码是必填项。 现在，已修复红色星号的电话号码可视为必填字段。
+   * _修复注释_：电话号码未显示早期红色星号，但是  电话号码为必填项。 现在修复的红色星号可在电话号码上显示为必填字段。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c699c206>
 * _AC-6975_： [问题]将默认索引器模式设置为“计划”
-   * _修复注释_：所有新索引器默认处于&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
+   * _修复注释_：所有新索引器默认处于&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
    * _GitHub问题_： <https://github.com/magento/magento2/issues/36419>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0b410856>
-* _AC-7700_： [问题]删除mview取消订阅上的索引器更改日志表
+* _AC-7700_： [问题]在mview取消订阅时删除索引器更改日志表
    * _修复注释_：当索引从“按计划更新”切换为“保存时更新”时，系统现在会自动删除未使用的changelog表，并将索引标记为无效，以确保不会丢失任何条目。 以前，将索引切换为“保存时更新”会在系统中保留未使用的changelog表，并将所有更改的索引标记为“有效”。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/29789>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/25859>
@@ -286,7 +286,7 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/36947>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37642>
 * _AC-9843_： i18n：collect-phrases破坏翻译完整性
-   * _修复注释_： `bin/magento i18n:collect-phrases -o`命令现在可以正确收集和添加JavaScript和.phtml文件中的新短语，确保翻译准确反映在翻译文件中。 以前，系统无法在翻译文件中包含JavaScript文件的多行翻译短语和.phtml文件的短语，从而导致翻译不完整或不正确。
+   * _修复注释_： `bin/magento i18n:collect-phrases -o`命令现在可以从JavaScript和.phtml文件中正确收集和添加新短语，确保翻译文件能准确反映翻译。 以前，系统无法在翻译文件中包含来自JavaScript文件的多行翻译短语以及来自.phtml文件的短语，从而导致翻译不完整或不正确。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0c53bbf7>
 * _ACP2E-2787_：存储视图名称中的撇号已替换为&#39;
    * _修复注释_：网格的存储视图筛选器现在正确显示撇号
@@ -295,7 +295,7 @@ laminas/laminas-validator
 * _ACP2E-2847_： Favicon上传无法验证.ico文件
    * _修复注释_：文件验证错误已更新为“文件验证失败。 请验证存储配置中的图像处理设置。” 以前，它只是“文件验证失败”。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/39d54c2d>
-* _ACP2E-2957_： PageBuilder中的库显示旧图像缩略图，而不是新上传的图像
+* _ACP2E-2957_： PageBuilder中的图库显示的是旧的图像缩略图，而不是新上传的图像
    * _修复注释_：为通过页面生成器内容中的媒体集删除并重新上传的具有相同名称的图像，重新生成图像预览。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/60140cd2>，<https://github.com/magento/magento2/commit/001e5188>
 * _ACP2E-2978_：由角色范围不同的管理员用户保存产品将覆盖/删除产品中现有的相关产品信息
@@ -356,25 +356,25 @@ laminas/laminas-validator
    * _修复注释_：以前，如果购物车价格规则具有附带优惠券的配送方式折扣，则无法通过管理员UI应用该价格规则。 应用此修复后，将从Admin UI成功应用带有特定配送方式优惠券的购物车价格规则折扣。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/a52ff98f>，<https://github.com/magento/inventory/commit/11ce816b>
 * _ACP2E-3559_： [FRESH]十六进制代码未在样本中正确更新
-   * _修复注释_：用户在Visual Swatch拾色器中手动输入的十六进制代码不再由系统更改。 以前，某些十六进制代码由于颜色模型之间的转换错误而经历细微调整。
+   * _修复注释_：用户在可视样本拾色器中手动输入的十六进制代码不再由系统更改。 以前，某些十六进制代码会因颜色模型之间的转换错误而稍有调整。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/344fce23>，<https://github.com/magento/inventory/commit/1ef984c0>
 
-### 管理员UI、B2B
+### 管理员UI，B2B
 
-* _AC-13628_：作为客户标头的B2B登录仍具有Magento品牌
-   * _修复注释_：以前，店面标题显示“您现在已作为&lt;store name>上的&lt;customer name>连接”，并带有Magento品牌。 此问题现已修复，并且标题将以ADOBE品牌化显示。
+* _AC-13628_： B2B登录作为客户标题仍具有Magento品牌
+   * _修复说明_：较早的店面标题显示“您现在作为&lt;store name>上的&lt;customer name>连接”并带有Magento品牌。 现已修复，并且标题会显示为ADOBE品牌。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/96dec499>
 
-### 管理员UI、付款/付款方式、订单
+### 管理员UI、支付/支付方式、订单
 
-* _AC-13520_：PayPal智能按钮排序后，“交易”选项卡中未显示交易授权
-   * _修复注释_：现在，在使用PayPal智能按钮下达订单后，系统可在“交易”选项卡中正确显示交易授权。 以前，单击“授权”按钮后，授权交易未显示在Transaction选项卡中，并且未创建“授权”类型的新交易。
+* _AC-13520_： PayPal智能按钮排序后，交易授权未显示在“交易”选项卡中
+   * _修复注释_：使用PayPal智能按钮下订单后，系统现在会在“交易”选项卡中正确显示交易授权。 以前，单击“授权”按钮后，授权交易未显示在Transaction选项卡中，并且未创建“授权”类型的新交易。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6cfb9b6b>
 
 ### 管理员UI，性能
 
 * _ACP2E-3169_：更新到2.4.5-p8后，从管理员创建订单时出现500错误
-   * _修复注释_：以前，启用HTML最小化时，无法向管理员下达订单。 现在，在启用HTML缩减功能的情况下，可以成功下达管理员的订单。
+   * _修复注释_：以前，启用HTML缩小功能时，无法下达管理员的订单。 现在，启用HTML缩小功能后，管理员的订单就可以成功下达。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/b21e5d91>
 
 ### 管理员UI，配送
@@ -383,16 +383,16 @@ laminas/laminas-validator
    * _修复注释_：以前，在多次发运下订单时，在“管理优惠券代码”选项卡的“使用时间”列中，优惠券代码计数不会更新。 现在，正确计数会同时显示在“使用时间”中，以反映多次配送的所需值。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/4745100c>
 
-### 管理员UI、暂存和预览
+### 管理UI、暂存和预览
 
-* _ACP2E-3424_： [Cloud]移除包含缺失图像的模板时导致pub/media被删除
-   * _修复注释_：以前进行过此修复，如果pagebuilder模板缺少预览图像名称，则会删除pub/media文件夹。 修复后，将仅删除模板并预览图像（如果找到）。
+* _ACP2E-3424_： [Cloud]删除缺少映像的模板导致pub/media被删除
+   * _修复注释_：在此修复之前，如果pagebuilder模板缺少预览图像名称，则会删除pub/media文件夹。 修复后，将仅删除模板和预览图像（如果找到）。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/0986853b>
 
-### 分析/报告
+### Analytics/报表
 
-* _AC-9922_：Google AnalyticsCSP错误https://region1.analytics.google.com
-   * _修复注释_：启用Google Analytics后，系统现在可正确允许连接到“https://region1.analytics.google.com&#39;”，从而防止出现内容安全策略(CSP)错误。 以前，由于拒绝连接到&#39;https://region1.analytics.google.com&#39;，从欧盟启用Google Analytics和查看网站会导致CSP控制台错误。
+* _AC-9922_： Google Analytics CSP错误https://region1.analytics.google.com
+   * _修复注释_：启用Google Analytics后，系统现在可正确连接到“https://region1.analytics.google.com&#39;”，从而防止出现内容安全策略(CSP)错误。 以前，由于拒绝连接到“https://region1.analytics.google.com&#39;”，因此启用Google Analytics并从欧盟查看网站会导致CSP控制台错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37750>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38991>
 * _ACP2E-2570_：高级报告无法正常工作
@@ -401,8 +401,8 @@ laminas/laminas-validator
 * _ACP2E-3080_：管理员订购的产品报告日期范围可见性问题。
    * _修复说明_：用户将能够从“订购的产品”报表中选择任何日期。 以前，在刷新表后，选择“起始”日期将重置“截止”日期。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6f4805f8>
-* _ACP2E-3096_： curl标头不正确，导致newrelic:create:deploy-marker无法正常工作
-   * _修复注释_：系统现在可以正确设置curl标头的格式，从而允许newrelic:create:deploy-marker命令在New Relic中成功创建部署标记。 以前，错误的curl标头会阻止在New Relic中创建部署标记。
+* _ACP2E-3096_：不正确的CURL标头导致`newrelic:create:deploy-marker`无法正常工作
+   * _修复注释_：系统现在可以正确设置curl标头的格式，从而允许`newrelic:create:deploy-marker`命令在New Relic中成功创建部署标记。 以前，错误的curl标头会阻止在New Relic中创建部署标记。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37641>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6a185204>
 * _ACP2E-3183_： NewRelic浏览器监视内联JS脚本导致CSP错误
@@ -412,10 +412,10 @@ laminas/laminas-validator
    * _修复注释_：以前，如果下订单量很大，则要生成畅销商品汇总的每日报表会花费大量时间。 现在，报告已及时生成。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/7377de59>
 * _ACP2E-3276_：订单报表显示错误的货币符号
-   * _修正说明_：订单报告中订单金额的货币符号错误地取自货币/选项/基数。 现已更正，使用货币/选项/默认进行准确报告。
+   * _修复注释_：订单报表中订单金额的货币符号错误地取自currency/options/base。 现已更正为使用“货币”/“选项”/“默认”报表，以便进行准确的报告。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/fd5cf3af>
-* _ACP2E-3302_：优惠券使用情况报告中的[云]计算不正确
-   * _固定注释_：现在，通过合并“折扣税补偿金额”和“装运折扣税补偿金额”，可准确计算优惠券报表网格中的销售总额。 以前，计算中缺少这些金额，导致销售总额与销售订单数据之间出现差异。
+* _ACP2E-3302_： [Cloud]优惠券使用情况报告中的计算不正确
+   * _固定注释_：通过将“折扣税补偿金额”和“装运折扣税补偿金额”合并在一起，现在可以准确计算优惠券报表网格中的销售总额。 以前，计算中缺少这些金额，导致销售总额与销售订单数据之间存在差异。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d75cff27>
 * _ACP2E-3339_：共享“&lt;project_id>/var/tmp”时出现问题
    * _修复注释_： Analytics DataExport临时文件将使用sys tmp目录，该目录更适合频繁访问和更改。 为了避免在同一服务器上运行多个实例时发生冲突，更新了tmp路径以使用实例的唯一id
@@ -429,22 +429,22 @@ laminas/laminas-validator
 
 ### Analytics/报表、云
 
-* _ACP2E-3067_：Magento放弃大部分New Relic cron交易#34108
-   * _修复注释_： AC正在向NewRelic正确报告cron作业相关事务。 以前，某些与cron作业相关的事务在NR中显示为“OtherTransaction/Action/unknown”
+* _ACP2E-3067_： Magento放弃大部分New Relic cron交易#34108
+   * _修复注释_： AC正在向NewRelic正确报告cron作业相关的事务。 以前，某些cron作业相关事务在NR中显示为“OtherTransaction/Action/unknown”
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/35b1b1da>
-* _ACP2E-3187_：NR中的指标可能会对背景交易造成误导 — ACP2E-3067的跟进
+* _ACP2E-3187_： NR中的量度可能对后台事务产生误导 — ACP2E-3067的跟进
    * _修复注释_：后台事务(cron)将使用在配置设置中定义的New Relic应用程序名称
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ec7e32a9>
 
 ### B2B
 
-* _ACP2E-2139_：执行部分索引时，分配给共享目录的产品不会反映在前端
-   * _修复说明_：完成部分索引后，通过REST API分配给共享目录的产品现在可以立即显示在店面上。 以前，产品仅在完全重新编制索引后才可见。
+* _ACP2E-2139_：执行部分索引时，分配给共享目录的产品未反映在前端
+   * _修复注释_：现在，在部分索引完成后，通过REST API分配到共享目录的产品会立即在店面中可见。 以前，产品仅在完全重新索引后可见。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/7377de59>
-* _ACP2E-3044_：“我的订单”部分中存在不必要的边框
-   * _修正注释_：以前曾创建应用了其他CSS类的额外容器（订单引用），这导致“我的订单”部分中的订单编号下方出现不必要的边框行，现在不可见。
+* _ACP2E-3044_：“我的订单”部分上有不必要的边框
+   * _修复注释_：以前创建了一个附加容器（订单引用），该容器应用了附加的CSS类，这会导致“我的订单”部分中的订单编号下方出现不必要的边框行，而现在该订单编号不可见。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/9af794a4>
-* _ACP2E-3247_： sales_clean_quotes cron从尚未批准的采购订单中删除报价
+* _ACP2E-3247_： sales_clean_quotes cron会从尚未批准的采购订单中删除报价
    * _修复注释_： sales_clean_quotes cron作业不会删除采购订单中使用的报价
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/581b7ef1>
 
@@ -462,8 +462,8 @@ laminas/laminas-validator
 
 ### 购物车和结帐
 
-* _AC-10660_：在比较产品页中将产品添加到购物车时，未正确处理异常
-   * _修复注释_：现在，当从比较产品页将产品添加到购物车时，系统可正确处理异常，并在控制器中显示消息管理器消息。 以前，异常将导致返回JSON编码的页面，而不是正确捕获和处理。
+* _AC-10660_：在比较产品页面中将产品添加到购物车时，未正确处理异常
+   * _修复注释_：现在，在从比较产品页将产品添加到购物车时，系统可正确处理异常，并在控制器中显示消息管理器消息。 以前，异常会导致返回JSON编码页面，而不是正确捕获和处理该页面。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38200>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38257>，<https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-10698_： GTag未发送交易价格和总计。
@@ -471,7 +471,7 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37348>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37504>，<https://github.com/magento/magento2/pull/37349>
 * _AC-11641_： [问题] [签出] Depend指令已在失败的付款电子邮件模板中更新
-   * _修复注释_：系统现在会从失败的虚拟产品付款电子邮件模板中正确忽略运送地址和运送方式，从而确保电子邮件中仅包含相关信息。 以前，虚拟产品付款失败的电子邮件未正确包含运送地址和运送方式。
+   * _修复注释_：系统现在会从虚拟产品的付款电子邮件模板中正确忽略送货地址和送货方式，确保电子邮件中仅包含相关信息。 以前，虚拟产品付款失败的电子邮件错误地包含送货地址和送货方法。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/32781>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/32511>
 * _AC-11717_： Magento 2在现有客户的签出内登录，在Firefox浏览器中引发控制台错误
@@ -505,29 +505,29 @@ laminas/laminas-validator
    * _修复注释_：系统现在通过防止重复的getActions调用、提高购物车操作的速度和效率，优化大型购物车的性能。 以前，对于包含多个项目的购物车，会多次调用getActions函数，这会降低系统的性能。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39292>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39290>
-* _AC-8103_：地址渲染器中的翻译增值税
-   * _修复说明_：系统现在允许翻译地址呈现器中的文本“VAT”、“T”、“F”，使用户能够将这些条款翻译为商店的特定语言。 以前，这些术语无法翻译，从而迫使用户采用解决方法。
+* _AC-8103_：地址呈现器中的翻译VAT
+   * _修复注释_：系统现在允许地址渲染器中文本“VAT”、“T”、“F”的翻译，使用户可以将这些术语翻译为商店的特定语言。 以前，这些术语无法翻译，因此用户必须采用解决方法。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/36942>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/36943>
-* _ACP2E-2055_：具有相同报价ID但存在少量时间差异的重复订单
-   * _修复注释_：修复了Adobe Commerce客户遇到使用相同QuoteID下达重复订单的问题
+* _ACP2E-2055_：具有相同报价ID的重复订单，时间差很小
+   * _修复注释_：修复了Adobe Commerce客户遇到使用相同QuoteID下重复订单的问题
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/f89a447e>
-* _ACP2E-2470_：结帐步骤中永久清除购物车
-   * _修复注释_：修复后，如果在结帐时选择付款方式而没有登录，将不会终止永久会话。
+* _ACP2E-2470_：在结帐步骤中清理了永久购物车
+   * _修复说明_：修复后，在未登录时结账期间选择付款方式不会终止永久会话。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/a4fbf702>
 * _ACP2E-2518_：重新排序将未分配的产品添加到购物车
-   * _修复注释_：以前，对于不同的商店，可以从其他商店对产品重新排序。 仅应用同一商店应用此修复后，启用客户帐户共享时，可以重新排序同一范围的产品
+   * _修复注释_：以前，对于不同的商店，可以从其他商店对产品重新排序。 仅应用此修复后，在启用客户帐户共享时，可对同一范围产品重新排序
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/f89a447e>
-* _ACP2E-2620_：在Admin中，选择项目时左侧的购物车未更新，从右侧选择“移至购物车”时未更新
-   * _修复注释_：选择项目时，左侧的“购物车”会更新；选择管理端右侧的“移动到购物车”时，左侧的“移动到购物车”会更新。 以前，此功能不起作用，因为转换后的购物车项目不会从会话中清空。
+* _ACP2E-2620_：在admin中，从右侧选择商品和“移至购物车”时，左侧的“购物车”未更新
+   * _修复注释_：选择项目时，左侧的“购物车”将更新，而管理员右侧的“移至购物车”将更新。 以前，此功能不起作用，因为转换后的购物车项目不会从会话中清空。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/39d54c2d>
 * _ACP2E-2646_： [Cloud]销售规则未应用于第一笔多发订单
    * _修复注释_：修复之后，将正确显示同一多送货报价单中每个订单的折扣。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/f89a447e>
 * _ACP2E-2664_： [Cloud]将相同产品添加到购物车的生产并行请求在购物车REST API中产生了两个不同的项目
-   * _修复注释_：系统现在可正确处理多个并行请求，以将同一产品添加到购物车中的单个行项目，从而防止为同一SKU创建单独的行项目。 以前，并行请求通过REST API将同一产品添加到购物车将导致同一SKU包含多个行项目。
+   * _修复注释_：系统现在可正确处理多个并行请求，以将同一产品添加到购物车中，并添加到单个行项目，从而防止为同一SKU创建单独的行项目。 以前，并行请求通过REST API将同一产品添加到购物车会导致同一SKU出现多个行项目。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/f89a447e>
-* _ACP2E-2704_：无法发送Cookie。 尝试重新排序时“图像消息”的大小
+* _ACP2E-2704_：获取无法发送Cookie。 尝试重新排序时“图像消息”的大小
    * _修复注释_：重新排序过程现在不会生成自己的错误。 它将依赖购物车列表的内置项目检查。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ba25af8a>
 * _ACP2E-2798_：结帐时未选择默认送货地址
@@ -537,7 +537,7 @@ laminas/laminas-validator
    * _修复注释_： GraphQL使用不同的自定义选项将相同的产品正确地添加到购物车
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c971859e>
 * _ACP2E-2923_：签出为新客户时，向帐户添加了多个地址
-   * _修复说明_：现在，如果未能创建订单，系统只会保存一次新的客户地址，从而防止在出现订单下达错误的情况下创建多个相同的地址。 以前，系统会在每次尝试下单时保存一个新地址，而不管订单是否成功创建。
+   * _修复注释_：现在，系统仅在创建订单失败时保存一次新客户地址，从而防止在出现订单放置错误时创建多个相同的地址。 以前，每次尝试下订单时，无论是否成功创建了订单，系统都会保存一个新地址。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/001e5188>，<https://github.com/magento/inventory/commit/2ebcef39>
 * _ACP2E-3004_：通过访客订单重新订购客户订单导致购物车为空
    * _修复注释_：以前，通过“订单和退货”页面重新订购时，客户被重定向到登录页面。 应用此修复后，进行重新订购时，注册的客户会被正确重定向到“查看购物车”页面。 该流的工作方式与访客客户相同。
@@ -549,10 +549,10 @@ laminas/laminas-validator
    * _修复注释_：当购物车价格规则条件中使用的属性对于所有产品均不存在，并且启用了MAP（最低广告价格）功能时，结账性能已得到改进。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/66dea0de>
 * _ACP2E-3211_：购物车中重复的项目
-   * _修复注释_：系统现在可正确处理多个并行请求，以将同一产品添加到购物车中，并添加到单个行项目，从而防止为同一SKU创建单独的行项目。 以前，并行请求将同一产品添加到店面的购物车会导致同一SKU有多个行项目。
+   * _修复注释_：系统现在可正确处理多个并行请求，以将同一产品添加到购物车中，并添加到单个行项目，从而防止为同一SKU创建单独的行项目。 以前，并行请求将同一产品添加到店面的购物车会导致同一SKU出现多个行项目。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/66dea0de>
-* _ACP2E-3296_：结帐订单电子邮件确认会发送到以名字/姓氏输入的电子邮件中
-   * _修复说明_：结帐单电子邮件确认不再发送，之前在“名字”和“姓氏”字段中输入类似电子邮件的模式时曾发送过该确认电子邮件。
+* _ACP2E-3296_：将结账订单电子邮件确认发送给以名字/姓氏输入的电子邮件
+   * _修复注释_：不再发送签出订单电子邮件确认，该确认之前在“名字”和“姓氏”字段中输入类似电子邮件的模式时发送。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/5184c067>
 * _ACP2E-3402_：签出送货地址表单更新为错误的地址
    * _修复注释_：现在已将shippingAddressFromData保存到每个网站的本地存储中。 以前，如果在URL中使用商店代码，并且在同一访客会话期间从多个网站启动了结账，则来自错误网站的地址可能会在结账期间自动填充到送货地址表单中。
@@ -566,8 +566,8 @@ laminas/laminas-validator
 * _ACP2E-3488_：现有报价数据未更新/不可见，而是在trigger_recollect = 1时创建新的报价记录
    * _修复注释_：客户的购物车项目在添加到购物车后不再因产品被删除而消失。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1984c61c>
-* _ACP2E-3618_：[CLOUD]重新排序按钮功能
-   * _修复注释_：现在，从管理员区域重新排序的订单会将具有Stock的产品添加到报价中，即使原始订单中的某些产品不再具有Stock。 修复之前，如果原始订单中没有库存产品，则不会将任何产品添加到新报价中。
+* _ACP2E-3618_： [CLOUD]重新排序按钮功能
+   * _修复注释_：从管理员区域对订单重新排序后，即使原始订单中的某些产品不再有库存，现在也会将带库存的产品添加到报价中。 在修复之前，如果原始订单中没有库存的产品，则不会向新报价添加任何产品。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/a52ff98f>
 * _ACP2E-3622_：搜索存储无法按邮政编码工作
    * _修复注释_：按邮政编码搜索取车位置对于荷兰本地化无法正常工作。 修复后，取车地点搜索将根据邮政编码提供结果。
@@ -599,7 +599,7 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38217>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38693>
 * _AC-10953_：未从可配置产品中删除层价格
-   * _修复注释_：现在，当产品从简单产品转换为可配置产品时，系统会正确移除产品的层价格，从而确保前端准确显示价格。 以前，将产品从简单产品转换为可配置产品时，不会删除可配置产品的层价格，从而导致显示的价格不匹配。
+   * _修复注释_：现在，当产品从简单产品转换为可配置产品时，系统会正确移除产品的层价格，从而确保前端准确显示价格。 以前，当产品从简单产品转换为可配置产品时，不会删除可配置产品的层价格，从而导致显示的价格不匹配。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38390>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38427>
 * _AC-11804_：非默认存储审阅中的类别描述WYSIWYG为空
@@ -611,7 +611,7 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38736>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1d144bce>
 * _AC-12076_： [问题]修复分层导航上筛选器项的措辞
-   * _修复注释_：系统现在可正确使用分层导航筛选器项中的“item”和“items”两词，从而增强筛选器描述的清晰度和准确性。 以前，这些词语使用不正确，这可能导致导航过滤器选项的用户混淆。
+   * _修复注释_：系统现在正确使用了分层导航筛选器项中的“item”和“items”两词，从而增强了筛选器描述的清晰度和准确性。 以前，这些词语使用不正确，这可能导致导航过滤器选项的用户混淆。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38789>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37852>
 * _AC-12164_：自定义选项的日期和时间格式不起作用
@@ -621,20 +621,20 @@ laminas/laminas-validator
 * _AC-13068_：下拉列表选项缺失
    * _修复注释_：现在，在创建具有超过20个值的新属性时，系统会在下拉列表中正确显示所有值。 以前，仅显示前20个值或其他选定的页面值，从而导致其余值缺失。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/47b448e2>
-* _AC-13296_： [问题]将当前存储ID用于类别运行时缓存
-   * _修复注释_：系统现在可正确使用类别运行时缓存的当前存储ID，从而防止在使用仿真时覆盖数据，或防止自定义代码将类别保存到不同的存储中。 以前，运行时中存储的对象可能来自错误的存储，从而导致数据覆盖。
+* _AC-13296_： [问题]将当前的存储ID用于类别运行时缓存
+   * _修复注释_：系统现在可以正确使用类别运行时缓存的当前存储ID，从而防止在使用模拟或自定义代码将类别保存到其他存储时覆盖数据。 以前，存储在运行时的对象可能来自错误的存储，从而导致数据覆盖。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39310>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/36394>
 * _AC-13324_： bin/magento sampledata：deploy —no-update引发异常
-   * _修复注释_：现在，在使用sampledata：deploy命令中的 — no-update选项时，系统可正确接受布尔值，从而防止在示例数据部署期间出现任何错误。 以前，使用此命令时引发错误，因为系统错误地期望整数值。
+   * _修复注释_：在sampledata：deploy命令中使用 — no-update选项时，系统现在可以正确接受布尔值，从而防止在示例数据部署期间出现任何错误。 以前，使用此命令时引发错误，因为系统错误地期望整数值。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39344>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39345>
 * _AC-13355_： [问题]修复EAV缓存类型的用法
-   * _修复注释_：系统现在在所有相关位置正确使用EAV缓存类型，确保一致且高效的数据缓存。 以前，EAV缓存类型使用不一致，这可能导致数据缓存效率低下和不一致。
+   * _修复注释_：系统现在在所有相关位置正确使用EAV缓存类型，确保一致且高效的数据缓存。 以前，EAV缓存类型使用不一致，这会导致数据缓存效率低下和不一致。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/32322>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/31264>
-* _AC-13596_：包含空数据的目录高级搜索将转到搜索结果页[2.4.dev branch]
-   * _修复注释_：系统现在可以正确保留“高级搜索”页面上的用户，并在用户尝试在不输入任何数据的情况下执行搜索时显示错误消息。 以前，执行空搜索会将用户重定向到“目录高级搜索”页面，并会显示一条消息，提示用户修改其搜索。
+* _AC-13596_：包含空数据的目录高级搜索将转到搜索结果页面[2.4.dev分支]
+   * _修复注释_：系统现在可以在“高级搜索”页面上正确保留用户，并在用户尝试执行搜索而不输入任何数据时显示错误消息。 以前，执行空搜索会将用户重定向到“目录高级搜索”页面，并显示一条消息，提示用户修改其搜索。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6cfb9b6b>
 * _AC-13622_： [问题]基于attribute_set的产品布局
    * _修复注释_：系统现在允许根据属性集调整产品布局，从而为管理前端商店中的产品显示提供了一种更实用和更高效的方法。 以前，布局只能根据SKU或产品类型进行调整，这对于许多产品或特定文章并不总是可行的。
@@ -648,8 +648,8 @@ laminas/laminas-validator
    * _修复注释_：系统现在使用类别产品索引器的可见性类，而不是硬编码值，增强了模块性。 以前，在类别产品索引器中使用硬编码值，限制了灵活性和适应性。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37200>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37199>
-* _AC-9375_：新产品小组件中的货币代码未更改
-   * _修复注释_：现在，在前端更改货币时，系统可正确更新新产品小组件中的货币代码，从而确保整个站点显示的货币一致。 以前，更改前端中的货币不会影响新产品小组件中显示的货币代码。
+* _AC-9375_：新产品小部件中的货币代码未更改
+   * _修复注释_：现在，当货币在前端发生更改时，系统可正确更新新产品小组件中的货币代码，从而确保网站中货币显示的一致性。 以前，更改前端中的货币不会影响新产品小部件中显示的货币代码。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37898>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37899>
 * _ACP2E-2224_：可配置产品的PLP上不显示常规价格
@@ -701,7 +701,7 @@ laminas/laminas-validator
 * _ACP2E-2871_： [Cloud]商家面临愿望清单计数问题
    * _修复注释_：在一个商店中将产品添加到愿望清单不会再增加在同一浏览器中打开的其他商店中的愿望清单计数。 以前，如果两个存储都加载到同一浏览器中，则另一个存储中的愿望清单计数也会增加。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3a7c4d17>
-* _ACP2E-2874_：使用捆绑产品时，前端的类别页面显示空插槽
+* _ACP2E-2874_：使用捆绑包产品时，前端类别页面显示空插槽
    * _修复注释_：在当前存储上下文中不可销售的捆绑产品不再编制索引。
    * _GitHub代码贡献_： <https://github.com/magento/inventory/commit/bc37ec76>
 * _ACP2E-2905_：[Cloud]多网站架构中的报价问题
@@ -709,7 +709,7 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38506>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/a4fbf702>
 * _ACP2E-2909_： dynamic-rows.js：658编辑捆绑产品时未捕获的TypeError： dataRecord.slice
-   * _修复注释_：从捆绑产品中删除选项时，浏览器控制台中没有JavaScript错误。
+   * _修复注释_：从捆绑包产品中删除选项时，浏览器控制台中没有Javascript错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38505>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/93d50f8d>
 * _ACP2E-2950_： [Cloud]捆绑产品在订单确认中定价错误
@@ -736,14 +736,14 @@ laminas/laminas-validator
 * _ACP2E-3076_：删除捆绑包选项时出错
    * _修复注释_：系统现在可以正确删除捆绑包选项，而不会触发错误或导致页面无响应。 以前，尝试删除捆绑包选项会导致“页面无响应”错误并阻止保存产品。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6a185204>
-* _ACP2E-3100_： [New Relic错误日志中不存在]图像文件
-   * _修复注释_：现在，系统会将自定义占位符图像同步到本地存储，从而确保在使用远程存储(如AWS S3)时正确渲染这些图像。 以前，自定义占位符图像在使用远程存储时无法渲染，从而导致图像显示和错误日志损坏。
+* _ACP2E-3100_： New Relic错误日志中不存在[Cloud]图像文件
+   * _修复注释_：系统现在将自定义占位符图像同步到本地存储，以确保在使用远程存储(如AWS S3)时正确呈现这些图像。 以前，自定义占位符图像在使用远程存储时无法渲染，从而导致图像显示中断和错误日志。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d1f7dc95>
-* _ACP2E-3103_：由于缓存问题，未使用新产品更新新产品RSS源
-   * _修复注释_：现在，当产品设置为新产品并保存时，新产品的Rss源已更新
+* _ACP2E-3103_：由于缓存，未使用新产品更新New Products RSS源
+   * _修复注释_：将产品设置为新并保存后，现在将更新“新产品”的Rss源
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d01ee51e>
 * _ACP2E-3126_： [Cloud]产品媒体集GQL响应未按图像位置排序
-   * _修复注释_：系统现在可以正确排序GraphQL响应中按位置的媒体集中的项目，确保准确显示顺序。 以前，媒体集中的项目未按位置排序，导致显示顺序不正确。
+   * _修复注释_：系统现在可以在GraphQL响应中按位置正确排列媒体集中的项目，确保显示顺序准确。 以前，媒体集中的项目不按位置排序，从而导致显示顺序不正确。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37671>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/b21e5d91>
 * _ACP2E-3136_：[Cloud]子类别项未显示在管理员后端的小组件编辑中
@@ -776,8 +776,8 @@ laminas/laminas-validator
 * _ACP2E-3469_：当一个产品的数量无效时，将触发组中所有产品的验证错误
    * _修复注释_：现在，当一个产品的数量无效时（以前未发生这种情况），将正确触发组中所有产品的验证错误。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/56463d5e>
-* _ACP2E-3513_：可配置产品中未显示[CLOUD]特价
-   * _修复说明_：修复后，更改特殊价格属性的“在产品列表中使用”值不会影响显示可配置产品的特殊价格。
+* _ACP2E-3513_： [CLOUD]可配置产品中未显示特殊价格
+   * _修复注释_：修复之后，更改特殊价格属性的“在产品列表中使用”值将不会影响显示可配置产品的特殊价格。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d4de4726>
 * _ACP2E-3516_：如果进程终止，则不清理索引器临时表
    * _修复注释_：如果索引器进程终止，现在将清除CatalogRule索引器临时表
@@ -794,11 +794,11 @@ laminas/laminas-validator
 
 ### 目录，内容
 
-* _ACP2E-3063_： [Cloud]缓存未失效。
-   * _修复注释_：以前，保存包含更新设计布局的CMS页面时，它没有正确反映在前端。 应用此修复后，当更改设计布局并保存CMS页面时，将在前端看到合适的设计布局。
+* _ACP2E-3063_： [云]缓存未失效。
+   * _修复注释_：以前，在保存具有更新设计布局的CMS页面时，该页面不会在前端正确反映。 应用此修复后，当我们更改设计布局并保存CMS页面时，会在前端看到相应的设计布局。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/66dea0de>
-* _ACP2E-3131_：[云]锚点/非锚点类别在内容小组件中反转
-   * _修复注释_：以前，当我们选择“显示于 — >锚点类别”时，它显示所有不反映锚点和非锚点之间的父子关系的类别。 应用此修复后，“显示于 — >锚点类别”仅显示锚点类别（可选），“显示于 — >非锚点类别”显示非锚点类别（可选）
+* _ACP2E-3131_：[云]在内容小部件中反转的锚点/非锚点类别
+   * _修复注释_：以前，当我们选择“显示位置” — >“锚点类别”时，它显示的所有类别都没有反映锚点与非锚点之间的父子关系。 应用此修复后，“显示位置 — >锚点类别”仅显示锚点类别（可选），“显示位置 — >非锚点类别”则显示非锚点类别（可选）
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/7377de59>
 * _ACP2E-3152_：类别无法使用小组件
    * _修复注释_：以前，如果我们为不同的锚点/非锚点类别保存CMS块，那么当该块显示在前端时，它不适用于子类别。 应用此修复后，块会显示在不同类别的前端。
@@ -851,7 +851,7 @@ laminas/laminas-validator
    * _修复注释_：以前，带price_* attribute_code的Yes/No自定义属性不适用于索引。 进行此修复后，“是/否”自定义属性会按预期工作。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ba25af8a>
 * _ACP2E-3053_： [Cloud]某些类别页面上的弹性搜索错误
-   * _修复注释_：以前，在提及配置票证后，当我们为多个产品定价0时，会在前端类别页面引发异常。 应用此修复后，当多个产品价格0且我们在前面加载类别页面时，它不会引发任何异常，并将成功加载类别页面。
+   * _修复注释_：以前，在提及配置票证后，当我们为多个产品定价0时，会在前端类别页面引发异常。 应用此修复后，当多个产品价格0并且我们在前端加载类别页面时，它不会引发任何异常，并且将成功加载类别页面。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c8931218>
 * _ACP2E-3345_：创建对象时出现类型错误： Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor异常
    * _修复注释_：修复后，无需指定$data即可创建Magento\CatalogSearch\Model\Indexer\Fulltext类的实例。
@@ -871,22 +871,22 @@ laminas/laminas-validator
 
 ### 内容
 
-* _AC-10539_：“最近查看”小组件中的价格显示出现[问题]
-   * _修复说明_：系统现在可以在“最近查看的产品”小组件中正确显示现成的简单产品的价格，确保所有小组件和产品列表页面的一致性。 以前，由于价格加载模板中存在条件，缺货简单产品的价格不会显示在“最近查看的产品”小组件中。
+* _AC-10539_：[问题]，最近查看的小组件中显示价格
+   * _修复注释_：系统现在可在“最近查看的产品”构件中正确显示缺货的简单产品的价格，确保所有构件和产品列表页面的一致性。 以前，由于价格加载模板中的条件，缺货的简单产品的价格不会显示在“最近查看的产品”小部件中。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38167>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38159>
 * _AC-10596_： [问题] acl.xsd文件中的拼写错误和语法正确
    * _修复注释_：系统现在更正了acl.xsd文件中的拼写错误和语法错误，提高了文档的清晰度和准确性。 以前， acl.xsd文件包含拼写错误和语法错误，这可能会导致混淆。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38061>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38046>
-* _AC-10845_：页面生成器横幅图像在图库中不可见
-   * _修复注释_：系统现在可正确显示页面生成器库中新创建的文件夹中上传的横幅图像，从而消除了以前的控制台错误。 在此修复之前，如果横幅图像上传到新文件夹中，则不会在图库中看到这些横幅图像，这会导致控制台错误。
+* _AC-10845_： Pagebuilder横幅图像在图库中不可见
+   * _修复注释_：系统现在可以正确显示在Pagebuilder图库中新创建的文件夹中上传的横幅图像，从而消除以前的控制台错误。 在此修复之前，如果横幅图像上载到新文件夹中，则不会在图库中显示这些图像，从而导致控制台错误。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c8f87c25>
 * _AC-12283_：更新到2.4.5-p8后“未设置区号”
-   * _修复注释_：现在，在启用Magento_CSP模块并将“dev/js/translate_strategy”设置为“embedded”时，系统可成功完成静态内容部署过程，而不会触发“未设置区码”错误。 以前，在这些情况下，静态内容部署过程将失败，并显示“未设置区码”错误。
+   * _修复注释_：现在，在启用Magento_CSP模块并将“dev/js/translate_strategy”设置为“embedded”时，系统可成功完成静态内容部署过程，而不会触发“未设置区码”错误。 以前，在这些情况下，静态内容部署过程会失败，并出现“未设置区码”错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38845>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38922>
-* _AC-12692_：构件类别树未正确渲染
+* _AC-12692_：构件类别树未正确呈现
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39008>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/58e40ceb>
 * _AC-13054_：在设计配置页面中更改主题时，无法看到“使用默认值”消息
@@ -909,20 +909,20 @@ laminas/laminas-validator
 * _ACP2E-2836_： ACP2E-2836： [Cloud]调查日志中发现的异常： InvalidArgumentException：类在vendor/magento/module-rule/Model/ConditionFactory.php中不存在
    * _修复注释_：删除PageBuilder产品内容设置的条件不会再导致在日志文件中记录异常。 以前，删除PageBuilder产品内容设置上的条件会导致在日志中记录严重异常，即使不会导致前端出现任何问题。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/36c0f5df>
-* _ACP2E-2842_：切换到单一商店模式 — 不再显示全局内容
-   * _修复注释_：现在，在启用单一商店模式时，系统会将商店视图设计配置与网站设计配置同步，确保内容更新在前端可见。 以前，切换到单一商店模式会阻止在店面反映内容更新。
+* _ACP2E-2842_：切换到单存储模式 — 全局内容不再出现
+   * _修复注释_：在启用单商店模式时，系统现在将商店视图设计配置与网站设计配置同步，确保内容更新在前端可见。 以前，切换到单商店模式会阻止内容更新反映在店面上。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/7e0e5582>
 * _ACP2E-2903_：页面生成器在尝试添加链接和其他可用性问题时替换图像。
    * _修复注释_：现在单击图像，页面生成器文本元素的wysiwyg编辑器中的链接将在图像、链接配置对话框中加载正确的数据。 现在，在编辑器中添加指向图像的链接也可正常使用。 以前，图像会被替换为链接。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/4d5db10a>
-* _ACP2E-2970_：将0字节的图像放入目录时，旧媒体库无法渲染图像
-   * _修复注释_：系统现在可以在不中断功能的情况下处理媒体集中的0字节图像，从而允许按预期显示和选择目录中的其他图像。 以前，媒体集中存在0字节的图像会阻止显示或选择目录中的所有图像。
+* _ACP2E-2970_：将0字节的图像放在目录中时，旧媒体集无法呈现图像
+   * _修复注释_：系统现在可以在不中断功能的情况下处理媒体集中的0字节图像，从而允许按预期显示和选择目录中的其他图像。 以前，如果媒体集中存在0字节图像，则会阻止显示或选择目录中的所有图像。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/35b1b1da>
 * _ACP2E-3064_：编辑CMS块时页面生成器出错
-   * _修复注释_：系统现在可以正确保存使用页面生成器所做的管理区域更改，而不会引发错误“页面生成器渲染了5秒钟，但未释放锁定”。 在浏览器控制台中。 以前，在尝试保存更改时发生此错误，从而阻止成功更新内容。
+   * _修复注释_：系统现在可以使用页面生成器正确地保存管理区域中所做的更改，而不会引发错误“页面生成器呈现了5秒钟，并且未释放锁定”。 在浏览器控制台中。 以前，在尝试保存更改时会发生此错误，从而阻止内容成功更新。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/35b1b1da>，<https://github.com/magento/magento2-page-builder/commit/4d5db10a>
-* _ACP2E-3092_： [CLOUD]购物车部分中没有结帐或编辑购物车的按钮
-   * _修复注释_：捆绑产品现已通过Widget添加到购物车中，且未出现错误。
+* _ACP2E-3092_： [CLOUD]购物车分区中没有结帐或编辑购物车的按钮
+   * _修复注释_：现在通过小组件将捆绑包产品添加到购物车，并且没有出现错误。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/b21e5d91>，<https://github.com/magento/magento2-page-builder/commit/4ebe3f1d>
 * _ACP2E-3122_： [CLOUD]上传图像按钮不起作用
    * _修复注释_：在PageBuilder中“横幅”和“滑块”的“上传图像”按钮未按预期工作之前，现在按该按钮时会打开本地文件管理器以选择要上传的图像。
@@ -934,16 +934,16 @@ laminas/laminas-validator
    * _修复注释_：Google映射现在可在PageBuilder编辑器中正确呈现。 以前，Javascript错误会导致Google映射无法正确呈现。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/148c3ead>
 * _ACP2E-3275_： [Cloud] - CMS滑块未反映最新更改
-   * _修复注释_：通过在编辑幻灯片屏幕上触发保存事件时确保刷新滑块列表，此问题已修复。 以前，它会触发并导致问题。
+   * _修复注释_：通过确保在编辑幻灯片屏幕上触发保存事件时刷新滑块列表，已修复此问题。 以前，它会触发并导致问题。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/ae2cdeb0>
 * _ACP2E-3326_：使用页面生成器按特定顺序插入CMS块时，CSM页面中出错
    * _修复说明_：以前，在某些版本的PHP和OS (Linux)上，通过PageBuilder引用其他cms块的块的块呈现会失败，并出现“发生未知错误。 请重试。” 现在，cms块的内容在PageBuilder控制的内容中正确呈现。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/ae2cdeb0>
 * _ACP2E-3428_：大型内容的Pagebuilder模板预览失败
-   * _修复注释_：大型内容导致画布元素超出浏览器的限制，并返回不正确的值，这会破坏后端代码（无法正确解码图像）。 修正了将画布大小限制为通用浏览器的限制。
+   * _修复注释_：大型内容导致画布元素超出浏览器的限制，并返回不正确的值，这会破坏后端代码（无法正确解码图像）。 修复了将画布大小限制为通用浏览器限制的问题。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/adfb1747>
-* _ACP2E-3430_：缺少字体大小的TinyMCE 7的最新安全更新
-   * _修复注释_：字体大小和字体系列选择器现在可在WYSIWYG编辑器中使用。 在此修复之前，使用TinyMCE 7时，编辑器界面中没有这些功能。
+* _ACP2E-3430_：缺少TinyMCE 7字体大小的最新安全更新
+   * _修复注释_： WYSIWYG编辑器中现在提供字体大小和字体系列选择器。 在此修复之前，使用TinyMCE 7时，这些在编辑器界面中不可用。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d50f6b5d>，<https://github.com/magento/magento2-page-builder/commit/2c2f7a0e>
 * _ACP2E-3483_：管理员中的TinyMCE 7编辑器字体大小为PT，而不是PX，请说明
    * _修复注释_：在修复之前，无法在WYSIWYG区域的px中指定字体大小。 现在，您可以用px而不是pt来设置字体大小。
@@ -1002,7 +1002,7 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38484>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38449>
 * _AC-11489_： [问题]修复\Magento\Framework\Data\Collection：：getItemById的PHPDocs
-   * _修复注释_： \Magento\Framework\Data\Collection：：getItemById方法的PHPDocs已更新，以包括null作为可能的返回类型，从而解决了静态分析工具的问题。 以前，该方法的PHPDocs不指定null作为可能的返回类型，导致在条件语句中使用该方法时进行静态分析时出现警告或错误。
+   * _修复说明_： \Magento\Framework\Data\Collection：：getItemById方法的PHPDocs已更新，可能包含null作为返回类型，从而解决了静态分析工具的问题。 以前，该方法的PHPDocs不指定null作为可能的返回类型，导致在条件语句中使用该方法时进行静态分析时出现警告或错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38485>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38439>
 * _AC-11592_： [问题]在安装期间仅允许有效的首选项:di:编译
@@ -1017,20 +1017,20 @@ laminas/laminas-validator
    * _修复注释_：更新了composer.json中的tinymce最新版本
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38533>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/36543>，<https://github.com/magento/magento2/commit/b34c0a75>
-* _AC-11696_： ChangelogBatchWalker无法在多个线程中运行
-   * _修复注释_：系统现在支持MView索引的进程分支，从而防止在多个线程上操作索引器时在执行索引器时出现错误。 以前，在多个线程上运行ChangelogBatchWalker会导致删除其他线程使用的表，从而导致索引器执行期间出错。
+* _AC-11696_： ChangelogBatchWalker在多个线程中不起作用
+   * _修复注释_：系统现在支持MView索引的进程分支，以防止在多个线程上运行索引器时出现错误。 以前，在多个线程上运行ChangelogBatchWalker会导致删除其他线程使用的表，从而导致索引器执行期间出错。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38246>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38248>
 * _AC-11781_： [问题]重命名命名错误的变量
-   * _修复注释_：系统现在可以正确命名包含仍可退款的金额的变量，从而防止在调试过程中混淆。 之前，此变量被错误地命名为totalRefund，这可能会导致开发人员产生误解。
+   * _修复注释_：系统现在可以正确命名包含仍可退款的金额的变量，以防止在调试期间出现混淆。 以前，此变量错误地命名为totalRefute，这可能导致开发人员误解。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38609>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/36205>
 * _AC-11809_： [问题]通过XML将自定义属性传递到当前链接
    * _修复注释_：系统现在允许通过XML将自定义属性传递到当前链接，确保即使链接是当前页面也能正确显示这些属性。 以前，由于当前链接未使用getAttributesHtml()方法，因此不会显示当前页面链接的自定义属性。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38500>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/30070>
-* _AC-11819_：对于某些配置，内置FPC缓存在2.4.7中损坏
-   * _修复注释_：在设置MAGE_RUN_CODE参数后，系统现在可以正确缓存页面，从而确保最佳性能。 以前，在这些情况下不会缓存页面，这会导致潜在的性能问题。
+* _AC-11819_：某些配置的内置FPC缓存在2.4.7中损坏
+   * _修复注释_：现在，在设置MAGE_RUN_CODE参数时，系统会正确缓存页面，从而确保最佳性能。 以前，在这些情况下不会缓存页面，这会导致潜在的性能问题。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38626>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38646>，<https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-11829_： [问题]修复了开发模式和生产模式之间的异常处理不一致
@@ -1100,11 +1100,11 @@ laminas/laminas-validator
    * _修复说明_：已更正AllowedCountries：：getAllowedCountries()方法的PHPDoc，以提供准确的信息，从而提高文档的清晰度和实用性。 以前，此方法的PHPDoc包含不正确的信息，这可能导致混淆或误用方法。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39246>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39241>
-* _AC-13348_： [问题]删除了我们不再支持的PHP版本的一些代码。
-   * _修复注释_：删除了Magento中不再支持的PHP版本的代码
+* _AC-13348_： [问题]删除我们不再支持的PHP版本的一些代码。
+   * _修复注释_：删除了Magento不再支持的PHP版本的代码
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39361>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39202>
-* _AC-13417_： [问题]使ImageMagick适配器与php8兼容（从浮点到整点的隐式转换）
+* _AC-13417_： [问题]使ImageMagick适配器与php8兼容（从浮点数到int的隐式转换）
    * _修复注释_：系统现在通过在计算图像尺寸时正确处理浮点数，从而确保与PHP8的兼容性，从而防止因从浮点到int的隐式转换而出现任何错误。 以前，计算图像尺寸可能会导致浮点数，这种情况下，隐式舍入可能会导致错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39402>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37362>
@@ -1117,10 +1117,10 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39546>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39558>
 * _AC-13810_：客户网格索引器在“按计划更新”模式下无法正常工作
-   * _修复说明_：早期的客户网格已立即更新，但修复后的客户网格在cron运行后更新，但未立即反映。
+   * _修复注释_：早期客户网格已即时更新，但在修复后客户网格已在cron运行后更新，但未立即反映。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1da9ba6f>
-* _AC-6754_：js文件出现拼写错误。
-   * _修复注释_：系统现在可正确使用JavaScript文件中的术语“订阅者”，从而确保相关功能的正确功能。 以前，JavaScript文件中的印刷错误导致术语“subscriptibers”使用不正确。
+* _AC-6754_： js文件出现拼写错误。
+   * _修复注释_：系统现在可以在JavaScript文件中正确使用“订阅者”一词，从而确保相关功能正常运行。 以前，JavaScript文件中的输入错误会导致术语“subscribers”的使用不正确。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/36163>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/36171>
 * _AC-8353_： [问题]删除禁止的`@author`标记
@@ -1136,15 +1136,15 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37394>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37395>
 * _AC-8662_： [问题]改进cron错误日志记录
-   * _修复注释_：现在，系统会捕获并记录cron进程的STDERR和STDOUT，在cron进程失败的情况下提供有价值的诊断信息。 以前，cron进程内的任何错误消息都不会被记录，并且在单独的进程中运行的cron组的STDERR和STDOUT将会丢失。
+   * _修复注释_：系统现在捕获并记录cron进程的STDERR和STDOUT，在cron进程失败的情况下提供有价值的诊断信息。 以前，cron进程内的任何错误消息都不会被记录，并且在不同的进程中运行的cron组的STDERR和STDOUT将会丢失。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37453>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/32690>
-* _AC-8984_： [问题]向某些设置cli命令的输出添加更多颜色
-   * _修复说明_：系统现在会将更多颜色添加到某些安装命令行界面(CLI)命令的输出中，从而增强可读性和用户体验。 以前，由于缺少颜色区分，这些命令的输出更难读取。
+* _AC-8984_： [问题]在某些安装cli命令的输出中添加了一些颜色
+   * _修复注释_：系统现在为某些安装命令行界面(CLI)命令的输出添加了更多颜色，增强了可读性和用户体验。 以前，由于缺少颜色区分，这些命令的输出更难读取。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/29335>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/29298>
 * _AC-9630_：当添加具有所需州/地区的新国家/地区时，升级Magento将重置general/region/state_required。
-   * _修复说明_：现在，在添加具有所需状态的新国家/地区时，系统仅将修改后的国家/地区添加到“general/region/state_required”配置，从而防止假定区域已禁用的自定义代码出现任何中断。 以前，添加具有所需状态的新国家/地区会将“general/region/state_required”配置重置为具有所需状态的默认国家/地区，从而可能会破坏正常使用。
+   * _修复注释_：现在，当添加具有所需状态的新国家/地区时，系统仅会将修改后的国家/地区添加到“general/region/state_required”配置中，以防止假定地区已禁用的自定义代码出现任何中断。 以前，添加具有所需状态的新国家/地区会将“general/region/state_required”配置重置为具有所需状态的默认国家/地区，这可能会中断业务。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37796>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38076>
 * _AC-9712_：具有复杂`calc`表达式的php &amp; nodejs库(grunt)之间编译较少的差异
@@ -1152,19 +1152,19 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37841>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/b34c0a75>
 * _ACP2E-2692_：执行部分索引时出现“未找到基表或视图”错误
-   * _修复注释_：在辅助数据库连接的情况下，部分重新索引现在可正确与大更改日志配合使用
+   * _修复注释_：现在，在辅助数据库连接的情况下，部分重新索引可以与大更改日志一起正常工作
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ba25af8a>
 * _ACP2E-2844_：将MariaDB升级到10.5.1或更高版本后出现问题
    * _修复注释_：修复了Mysql升级后，数据库中的日期时间值转换为0000-00-00 00:00:00的问题
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/a12063bd>
-* _ACP2E-2855_：检查数据是否更改时，数据比较中的类型不匹配
+* _ACP2E-2855_：检查数据是否有更改时，数据比较中的类型不匹配
    * _修复注释_：以前，每次在没有任何数据更改的情况下调用save对象（对于任何数值数据字段，如int/float/double）。 它会触发将_hasDataChanges标志设置为true并调用save函数。 进行此修复后，仅当数据发生更改时，才会调用save函数。 int/float/double-check的数据值，其值传递给函数并执行严格的类型匹配。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/57a32313>
 * _ACP2E-2959_： [云]导入不能与目录var一起使用
    * _修复注释_：无论文件名如何，都可以成功导入产品。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3a7c4d17>
 * _ACP2E-2966_：在ipad mini中，菜单和标题以移动设备加载，而应以桌面加载。
-   * _修复注释_：系统现在将宽度为768像素的设备视为桌面，以确保菜单和标头正确加载。 以前，宽度768像素的设备被视为移动设备，导致菜单和标头在移动视图中加载。
+   * _修复注释_：系统现在将宽度为768像素的设备视为桌面，以确保菜单和标题正确加载。 以前，宽度为768像素的设备被视为移动设备，从而导致菜单和标题在移动视图中加载。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/35b1b1da>，<https://github.com/magento/magento2-page-builder/commit/4d5db10a>
 * _ACP2E-3230_：在外键的情况下无法通过db_schema.xml修改列长度
    * _修复注释_：现在通过声明性架构修改带有外键的列不会在MariaDB中引发错误
@@ -1176,10 +1176,10 @@ laminas/laminas-validator
    * _修复注释_：以前，在管理面板中，控制台中存在多个javascript错误。 现在，在管理面板中，控制台中没有JavaScript错误，所有默认的JavaScript功能都将成功执行且不会出现任何问题。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d75cff27>
 * _ACP2E-3387_： [Cloud] Magento：已删除队列消息
-   * _修复注释_：队列消息现在正在被正确清除。 在修复之前，假设正在使用SQL队列系统，如果清除队列消息同时运行，则新消息可能已被删除。
+   * _修复注释_：正在正确清除队列消息。 在修复之前，假定正在使用SQL队列系统，如果清除队列消息同时运行，则可能会删除新消息。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d50f6b5d>
-* _ACP2E-3537_：缓存标记中没有相应的缓存键项，因此缓存清理无法正常工作
-   * _修复注释_：现在默认情况下为Redis缓存垃圾回收器启用LUA模式，以防止出现争用情况
+* _ACP2E-3537_：缓存标记中没有相应的缓存键条目，因此无法正确进行缓存清理
+   * _修复注释_：现在为Redis缓存垃圾回收器默认启用LUA模式，以防止出现争用情况
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/a52ff98f>
 * _ACP2E-3681_：已忽略MAGENTO_DC_INDEXER__USE_APPLICATION_LOCK值
    * _修复注释_：修复之后，设置为“false”的ENV变量将被视为bool false，而不是字符串“false”。
@@ -1248,20 +1248,20 @@ laminas/laminas-validator
 * _ACP2E-3404_： [GraphQL]重置内容与主题/链接之间的密码电子邮件不一致
    * _修复注释_：通过模拟在发送密码重置请求时客户帐户注册的正确商店（无论网站商店如何），该问题已得到解决。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/5184c067>
-* _ACP2E-3419_： [Cloud]产品GraphQL查询返回未分配给当前网站的相关产品
-   * _修复注释_：以前，对于graphQL查询，多商店相关产品无法正确显示产品查询。 应用此修复后，对于产品，graphQL查询多商店相关产品会相应地显示。
+* _ACP2E-3419_： [Cloud]产品GraphQL查询返回未分配到当前网站的相关产品
+   * _修复注释_：以前，对于graphQL查询，产品查询无法正确显示与多商店相关的产品。 应用此修复后，对于产品，graphQL会查询多商店相关产品并相应地显示。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/078c387e>
-* _ACP2E-3447_：在GraphQL标头中使用错误的存储ID会导致严重的内存错误
+* _ACP2E-3447_：在GraphQL标头中使用错误的Store ID会导致内存错误
    * _修复注释_：在GraphQL请求中发送错误的存储区代码不再导致内存消耗过多。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d50f6b5d>
-* _ACP2E-3467_： [云] 500响应，针对2.4.7上的空Graphql响应
+* _ACP2E-3467_： [Cloud] 500响应2.4.7上的空Graphql响应
    * _修复注释_：修复后，无效的graphql请求将不会记录到exception.log文件中。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1984c61c>
 * _ACP2E-3492_：[Cloud] Graphql API存在问题
    * _修复注释_：在使用Graphql应用程序服务器进行修复之前，客户地址请求未返回最新数据。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3f12d152>
-* _ACP2E-3505_：禁用产品仍显示在grpahQL查询中的相关、追加销售、交叉销售项目中
-   * _修复注释_： Graphql现在可为已禁用的related、upsell和cross-sell产品提供正确响应
+* _ACP2E-3505_：在grpahQL查询中，禁用产品仍然出现在相关、追加销售、交叉销售商品中
+   * _修复注释_： Graphql现在为禁用的相关、追加销售和交叉销售产品提供正确响应
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d4de4726>
 * _ACP2E-3647_： [CLOUD]： GraphQl错误内部服务器错误placeOrder突变
    * _修复注释_：请求中包含优惠券代码信息的“placeOrder”突变不再引发内部错误异常，订单已成功下达。 以前，它失败并出现“内部服务器错误”。
@@ -1271,16 +1271,16 @@ laminas/laminas-validator
 * _LYNX-485_：当捆绑产品之一缺货时，捆绑产品仍显示“IN_STOCK”
    * _修复注释_：解决了捆绑产品即使其中一个捆绑产品缺货，仍显示“IN_STOCK”的问题。
 * _LYNX-486_： not_available_message和only_x_left_in_stock不显示相同的可用库存
-   * _修复注释_：解决了not_available_message和only_x_left_in_stock显示stock可用性不一致的问题
+   * _修复注释_：解决了not_available_message和only_x_left_in_stock显示库存可用性不一致的问题
 * _LYNX-488_： original_row_total字段返回了错误值
    * _修复注释_：解决了original_row_total字段的问题，该字段在选择自定义选项时返回不正确的值
-* _LYNX-503_：应根据配置显示分组产品缩略图     .
+* _LYNX-503_：应根据配置显示分组的产品缩略图     .
    * _修复注释_：解决了该问题，以确保根据配置设置显示分组的产品缩略图
-* _LYNX-512_： original_item_price不包括折扣
-   * _修复注释_：更新了original_item_price以包含折扣。
-* _LYNX-530_：未显示可用库存数量的可用消息
-   * _修复注释_：解决了AddProductsToCart变异的错误消息和错误代码，使其与“不可用”消息配置保持一致
-* _LYNX-532_：“OUT_OF_STOCK”状态返回带多个选择选项的Simple with custom选项产品
+* _LYNX-512_： original_item_price不包含折扣
+   * _修复注释_：已更新original_item_price以包含折扣。
+* _LYNX-530_：无可用消息未显示可用库存数量
+   * _修复注释_：已解决AddProductsToCart突变的错误消息和错误代码以与“不可用”消息配置一致
+* _LYNX-532_：“Simple with custom options products with multi-select options”返回“OUT_OF_STOCK”状态
    * _修复注释_：更新了库存包中的StockStatusProvider解析程序，以修复具有自定义选项的简单产品的stock_status。
 * _LYNX-533_：错误(GQL)： cart.itemsV2.items.product.custom_attributesV2返回服务器错误
    * _修复注释_：通过添加不含任何自定义属性的产品解决了当购物车查询包含产品的自定义属性时发生的服务器错误。
@@ -1314,7 +1314,7 @@ laminas/laminas-validator
 ### GraphQL，性能
 
 * _AC-9569_： [GraphQL解析程序]未使导入中的客户解析程序数据失效
-   * _修复说明_：现在，通过导入编辑或删除客户时，GraphQL客户解析器缓存会按预期失效。 以前，缓存不会失效，并且可以在导入期间编辑或删除客户数据。
+   * _修复注释_：通过导入编辑或删除客户时，GraphQL客户解析程序缓存现在会按预期失效。 以前，缓存不会失效，并且可以在导入期间编辑或删除客户数据。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0574ac23>
 
 ### GraphQL，搜索
@@ -1343,20 +1343,20 @@ laminas/laminas-validator
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ea79f7dd>
 * _ACP2E-2737_：正在使用导入的相同电子邮件地址创建重复客户
    * _修复注释_：在“帐户共享”设置为“全局”时导入客户，更新了系统中存在的导入客户。
-以前导入的客户已复制。
+之前导入的客户重复。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c971859e>
-* _ACP2E-2902_：添加/更新产品导入并复制可自定义选项
-   * _修复注释_：通过在产品选项CSV导入期间将正确的商店分配给产品选项，解决了此问题。
+* _ACP2E-2902_：添加/更新产品导入重复可自定义选项
+   * _修复注释_：通过在产品选项CSV导入期间将正确的存储分配给产品选项，该问题已得到解决。
 以前，分配给管理员存储，而不是其各自的存储。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3a7c4d17>
 * _ACP2E-2990_：客户的“created_at”日期未在导出时转换为存储时区
    * _修复注释_：根据客户导出CSV分区中的存储时区，列“created_at”日期值将转换为适当的日期格式。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3056e9cb>
 * _ACP2E-3165_： [Cloud]使用CSV检查导入数据中的数据时出现错误
-   * _修复注释_：在CSV导入期间检查数据时没有错误。 以前，使用管理员提供的CSV检查导入部分中的数据时，显示的错误消息为：“我们找不到在行：1中与此电子邮件和网站代码匹配的客户”。
+   * _修复注释_：在CSV导入期间检查数据时没有错误。 以前，使用管理员的CSV检查导入部分中的数据时显示的错误消息是：“我们在以下行中找不到与此电子邮件和网站代码匹配的客户： 1”。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/8459b17d>
-* _ACP2E-3172_：“导入”按钮缺失
-   * _修复注释_：解决CSV中数据检查后导入按钮缺失的问题。 以前，如果在数据检查后使用了CSV中的正确和不正确的记录，则不会显示导入按钮。
+* _ACP2E-3172_：缺少导入按钮
+   * _修复注释_：解决CSV中数据检查后导入按钮缺失的问题。 以前，在对CSV中正确和不正确记录的数据进行检查后，导入按钮不会显示。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1819fe73>
 * _ACP2E-3382_：无法导入导出的客户地址
    * _修复注释_：客户地址导入将按预期继续。 以前，如果共享客户帐户=全局，客户地址导入文件将不会通过验证，并且有两个网站（默认网站有一个受限制的国家/地区列表）的导入地址适用于另一个允许国家/地区不同的网站
@@ -1432,26 +1432,26 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38252>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38320>
 * _AC-10994_： [问题]订单地址呈现器中使用了错误的存储ID
-   * _修复注释_：现在，在渲染订单地址时，系统可正确使用与订单关联的存储ID，从而确保根据相应的存储ID正确格式化地址。 以前，系统未正确使用当前商店ID，在需要发送来自不同商店的多个订单电子邮件时，这可能会导致地址格式不正确。
+   * _修复注释_：现在，系统在呈现订单地址时，正确使用了与订单关联的商店ID，从而确保根据相应的商店ID正确格式化地址。 以前，系统错误地使用当前商店ID，在需要发送来自不同商店的多份订单电子邮件时，可能会导致地址格式不正确。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38412>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37932>
 * _AC-11690_： JoinProcessor缓存问题
    * _修复注释_：系统现在可以正确应用每个迭代的JoinProcessor，即使连续调用也是如此，从而确保准确的数据检索。 以前，JoinProcessor被错误地标记为已在连续迭代中应用，导致数据检索出错。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/27504>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37550>
-* _AC-11798_：[问题]装运价格在打印的PDF中显示不同
+* _AC-11798_： [问题]装运价格在打印的PDF中显示差异
    * _修复备注_：系统现在可根据税务配置设置以打印的PDF正确显示发运价格，确保销售订单发票视图页与打印发票之间的一致性。 以前，无论税配置设置如何，打印的PDF中显示的运费不含税。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38608>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38595>，<https://github.com/magento/magento2/commit/1bafc571>
 * _AC-13839_：使用已删除的父可配置产品重新排序
-   * _修复注释_：现在，在使用已删除的产品重新排序时，系统不会显示要重新排序的重新排序按钮
+   * _修复注释_：现在，使用已删除的产品重新订购时，系统不会显示要重新订购的重新订购按钮
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39568>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39601>
-* _AC-13924_： [问题]修复错误的\Magento\Sales\Model\Order\Email\Container\Template：：$id属性
-   * _修复注释_：这将修复\Magento\Sales\Model\Order\Email\Container\Template：：$id的错误phpdoc，实际上$id是类型int，但实际上是string。
+* _AC-13924_： [问题]修复错误\Magento\Sales\Model\Order\Email\Container\Template：：$id属性
+   * _修复注释_：这将修复\Magento\Sales\Model\Order\Email\Container\Template：：$id的错误phpdoc，实际上$id是int类型，但实际上是string。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39151>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39150>
-* _ACP2E-2622_：无法保存现有订单详细信息中对电话号码的更改
+* _ACP2E-2622_：无法在现有订单详细信息中保存对电话号码的更改
    * _修复注释_：现在，用户可以在订单地址的电话字段中添加国际前缀00
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38201>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/12e071c3>
@@ -1530,14 +1530,14 @@ laminas/laminas-validator
 * _LYNX-430_：捆绑产品缺货的购物车出现GraphQL服务器错误
    * _修复注释_：修复了在获取购物车时GraphQL返回内部服务器错误的问题，该购物车包含带有缺货项目的捆绑产品，尤其是当查询包含itemsV2属性时。 GraphQL现在可以按预期正确返回项目列表，并在捆绑的产品项目条目中附加相关错误消息。
 * _LYNX-441_：无法创建具有自定义属性的地址
-   * _修复说明_：修复了createCustomerAddress变异导致无法创建具有所需自定义属性的地址的问题。 现在，当提供适当的负载时，突变可以正确处理自定义地址属性。
-* _LYNX-447_：捆绑产品上仅具有_x_left_in_stock的购物车上的GraphQL服务器错误
-   * _修复注释_：修复了获取购物车时导致内部服务器错误的问题，该购物车包含在GraphQL查询中带有only_x_left_in_stock字段的捆绑产品。 GraphQL现在可正确返回only_x_left_in_stock字段的浮点值或空值，且不会出现错误。
-* _LYNX-464_：删除购物车中可配置产品不足的其他产品时，GraphQL出错
-   * _修复说明_：修复了如果购物车还包含库存不足的可配置产品，则尝试从购物车中移除库存产品会导致“请求的数量不可用”GraphQL错误的问题。 删除操作现在可按预期方式工作，而不会触发错误。
+   * _修复注释_：修复了createCustomerAddress突变的问题，该突变阻止使用所需的自定义属性创建地址。 现在，当提供相应的有效负载时，该突变可正确处理自定义地址属性。
+* _LYNX-447_：捆绑产品上只有_x_left_in_stock的购物车出现GraphQL服务器错误
+   * _修复注释_：修复了获取购物车时导致内部服务器错误的问题，该购物车包含GraphQL查询中具有only_x_left_in_stock字段的捆绑产品。 GraphQL现在可以正确为only_x_left_in_stock字段返回浮点值或空值，而不会出现错误。
+* _LYNX-464_：删除购物车中可配置产品不足的其他产品时GraphQL出错
+   * _修复注释_：修复了以下问题：如果购物车还包含库存不足的可配置产品，则尝试从购物车中删除库存产品会导致“请求的数量不可用”GraphQL错误。 现在，删除操作可按预期运行，而不会触发错误。
 * _LYNX-469_：由于突变中的SKU区分大小写，无法添加产品
-   * _修复说明_：解决了使用不同大小写的SKU时，addProductsToCart突变返回“PRODUCT_NOT_FOUND”错误的问题。 此突变现在可以不区分大小写地处理SKU，从而确保与目录服务查询和PDP行为一致。
-* _LYNX-603_：产品属性>商标简短形式™以™形式返回
+   * _修复注释_：解决了使用具有不同大小写的SKU时，addProductsToCart突变返回“PRODUCT_NOT_FOUND”错误的问题。 该突变现在处理SKU不区分大小写，确保与目录服务查询和PDP行为一致。
+* _LYNX-603_： Product attribute > trademark short form ™返回为™
    * _修复注释_：解决了GraphQL API的产品名称存在的字符编码问题
 * _LYNX-619_： updateCustomerEmail突变问题
    * _修复注释_：解决了updateCustomerEmail突变的问题，该问题导致没有所需自定义属性（在创建帐户后添加）的客户无法更新其电子邮件。
@@ -1548,12 +1548,12 @@ laminas/laminas-validator
 * _LYNX-643_：使用setBillingAddressOnCart GQL的same_as_shipping字段时，无法保存在通讯簿中
    * _修复注释_：修复了在将setBillingAddressOnCart GraphQL突变的same_as_shipping字段设置为true时，未将送货地址保存到客户通讯簿中的问题。 现在，送货地址已按预期正确存储。
 * _LYNX-650_：标准化突变中的order_id
-   * _修复注释_：标准化了突变中的order_id输入，并更新了订单取消确认电子邮件模板，以显示增量id而不是订单id。
+   * _修复注释_：将order_id输入逐个标准化，并更新了订单取消确认电子邮件模板，以公开增量id而不是订单id。
 * _LYNX-651_：客户订单未显示订单注释
-   * _修复注释_：解决了CustomerOrder的问题，从而在来宾查询和客户订单GraphQL查询中包含订单注释。
+   * _修复注释_：解决了CustomerOrder在来宾和客户订单GraphQL查询中包含订单注释的问题。
 * _LYNX-652_： original_item_price不得包含任何折扣
    * _修复注释_：更新了GraphQL购物车项目价格中original_item_price的逻辑以排除折扣。
-* _LYNX-681_：当捆绑产品的某个缺货时，捆绑产品仍显示“IN_STOCK”
+* _LYNX-681_：当捆绑产品之一缺货时，捆绑产品仍显示“IN_STOCK”
    * _修复注释_：解决了即使其中一个捆绑产品缺货，捆绑产品的product.stock_status仍显示“IN_STOCK”的问题。
 * _LYNX-686_：如果客户存在已删除自定义属性的值，则客户查询返回内部服务器错误
    * _修复注释_：修复了在已删除的自定义属性仍具有存储值时，客户查询返回内部服务器错误的问题。 现在，如果请求不存在的属性，则会返回正确的错误消息。 删除客户自定义属性时，必要的缓存将失效。
@@ -1577,7 +1577,7 @@ laminas/laminas-validator
 ### 其他开发人员工具
 
 * _AC-10658_： [问题]修复visual.phtml中的HTML语法错误
-   * _修复注释_：系统现在可正确关闭visual.phtml文件中的启动标记，从而确保HTML语法正确。 以前，未正确关闭启动标记，从而导致HTML语法错误。
+   * _修复注释_：系统现在可以正确关闭visual.phtml文件中的开始标记，从而确保HTML语法正确。 以前，start标记未正确关闭，从而导致HTML语法错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38247>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37457>
 * _AC-11474_： [问题]在bin/magento maintenance：status命令中将“活动”更改为“已启用”
@@ -1587,11 +1587,11 @@ laminas/laminas-validator
 * _AC-12571_：在类别树中导航会导致Redis中出现错误：“Redis会话超出并发连接数”
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38851>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0611e750>
-* _AC-12731_：与dev/css/use_css_critical_path合并的CSP问题
-   * _修复注释_：现在，即使启用了“dev/css/use_css_critical_path”设置，系统也会在签出页面上以异步方式正确加载CSS文件，从而确保这些页面呈现正确的CSS样式。 以前，限制的内容安全策略(CSP)阻止执行内联JavaScript，这会导致无法按预期加载CSS文件。
+* _AC-12731_：与dev/css/use_css_critical_path结合使用的CSP问题
+   * _修复注释_：现在，即使启用了“dev/css/use_css_critical_path”设置，系统也会在签出页面上正确异步加载CSS文件，从而确保这些页面使用正确的CSS样式呈现。 以前，受限制的内容安全策略(CSP)阻止执行内联JavaScript，这导致CSS文件无法按预期加载。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39020>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39040>
-* _AC-13398_：使用虚拟类型配置插件，无法在安装程序:di:compile命令中正确生成侦听器方法
+* _AC-13398_：使用虚拟类型配置插件，无法在安装程序:di:编译命令中正确生成侦听器方法
    * _修复注释_：系统现在在使用虚拟类型配置插件时正确生成侦听器方法，从而确保无论是预编译的结果还是运行时编译的结果都一致。 以前，与运行时编译相比，在预编译时，系统会产生不正确的结果。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/33980>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38141>
@@ -1601,8 +1601,8 @@ laminas/laminas-validator
 
 ### 付款/付款方式、订单
 
-* _AC-13699_：保存的付款方式页面上未显示保存供以后使用的付款方式信用卡详细信息
-   * _修复便笺_：以前保存的付款流程信用卡详细信息供以后使用，未显示在存储的付款方式页面上，而现在修复的信用卡详细信息显示在存储的付款方式页面上。
+* _AC-13699_：保存供以后使用的纸面付款流信用卡详细信息未显示在存储的付款方式页面上
+   * _固定备注_：先前保存供以后使用的纸面付款流信用卡详细信息未显示在存储的付款方法页面上，而现在固定的信用卡详细信息显示在存储的付款方法页面上。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/96dec499>
 
 ### 支付
@@ -1616,8 +1616,8 @@ laminas/laminas-validator
 * _ACP2E-3028_：加拿大Paypal商家帐户的PDP中未显示Paylater消息
    * _修复说明_：当可以根据帐户帐单地址或装运确定买方所在国家/地区时，系统现在会在产品详细信息页面(PDP)上正确显示加拿大PayPal商家帐户的PayLater消息。 以前，由于缺少参数，不会显示PayLater消息，这会导致浏览器控制台中出现错误。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6a185204>
-* _ACP2E-3143_： PayPal订单退款导致重复的贷项通知单
-   * _修复注释_：修复了PayPal付款服务的IPN创建的贷项通知单的并发问题。
+* _ACP2E-3143_： PayPal订单退款导致贷项通知单重复
+   * _修复注释_：修复了PayPal付款服务的IPN创建的贷项通知单并发问题。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d01ee51e>
 * _ACP2E-3163_：购物车价格规则不适用于Paypal
    * _固定注释_：通过付款方式应用折扣时，PayPal端会显示正确的金额
@@ -1633,11 +1633,11 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38703>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/7d5e3906>
 * _AC-12000_： [问题]代码清理并添加新的关键标题块并将关键css移动到资产之前
-   * _修复注释_：系统现在包括一个新的关键头块，并将关键CSS移至资产之前，允许在前端进行更多自定义和性能优化。 以前，关键CSS没有放在资源之前，这限制了自定义和优化机会。
+   * _修复注释_：系统现在包含新的关键头块并将关键CSS移动到资产之前，允许在前端进行更多自定义和性能优化。 以前，关键CSS不放在资产之前，从而限制了自定义和优化机会。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38748>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/35580>
-* _AC-12176_：当mysql主机包含端口信息时，主题编译中断
-   * _修复注释_：系统现在可正确处理包含端口信息的MySQL主机配置，从而确保成功进行主题编译。 以前，如果数据库连接中的MySQL主机配置包含端口信息，则主题编译将失败。
+* _AC-12176_： mysql主机包含端口信息时主题编译中断
+   * _修复注释_：系统现在可以正确处理包含端口信息的MySQL主机配置，确保主题编译成功。 以前，如果数据库连接中的MySQL主机配置包含端口信息，则主题编译将失败。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38799>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38842>
 * _AC-13471_：支持Magento CLI中的Symfony CommandLoaderInterface
@@ -1655,7 +1655,7 @@ laminas/laminas-validator
 在它们被自动拒绝之前。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/57a32313>
 * _ACP2E-2910_： Order Rest API调用需要很长时间才能执行
-   * _修复注释_：系统现在会在合理的时间范围内执行Order Rest API调用，从而提高了获取大量订单时的性能。 以前，执行Order Rest API调用需要很长时间，导致在检索大量订单时出现延迟。
+   * _修复注释_：系统现在会在合理的时间范围内执行Order Rest API调用，从而提高获取大量订单时的性能。 以前，Order Rest API调用执行时间较长，导致在检索大量订单时出现延迟。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/001e5188>
 
 ### 定价
@@ -1681,15 +1681,15 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/30857>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/30838>
 * _AC-13173_： [问题]修复PHPDoc块中的拼写错误
-   * _修复注释_：系统现在可正确删除PHPDoc中对$helper变量声明的未知引用变量，从而增强代码清晰度和准确性。 以前，PHPDoc中的此未知引用变量在代码中引起混淆和潜在错误。
+   * _修复注释_：系统现在可以正确删除PHPDoc中用于$helper变量声明的未知引用变量，从而提高代码清晰度和准确性。 以前，PHPDoc中这个未知的引用变量会导致代码中出现混淆和潜在的不准确性。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38961>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38940>
-* _AC-13423_： [问题]修复了Magento中损坏的捆绑包和可下载产品页面布局>= 2.4.7
-   * _修复注释_：捆绑包和可下载产品页面的布局已修复，确保在所有设备上显示一致且正确。 以前，这些页面由于重新排列产品信息媒体块而遇到布局问题。
+* _AC-13423_： [问题]修复了Magento中损坏的捆绑包和可下载的产品页布局>= 2.4.7
+   * _修复说明_：已修复捆绑包和可下载产品页面的布局，确保所有设备显示一致且正确。 以前，由于重新排列产品信息媒体块，这些页面遇到布局问题。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39403>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/6cfb9b6b>
 * _AC-5969_： AlertProcessor — 参数#2($storeId)必须是int类型，并且给定字符串
-   * _修复注释_：系统现在通过确保存储标识符的数据类型正确来正确触发产品警报电子邮件。 以前，由于商店标识符中的类型不匹配，因此未发送产品警告电子邮件。
+   * _修复注释_：系统现在通过确保商店标识符的数据类型正确来正确触发产品警报电子邮件。 以前，由于商店标识符中的类型不匹配，不会发送产品警报电子邮件。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/35602>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0574ac23>
 * _ACP2E-2944_： [Cloud] addFilterToMap函数无法用于某些列
@@ -1701,8 +1701,8 @@ laminas/laminas-validator
 * _ACP2E-2602_：从邀请创建帐户时客户属性不可见
    * _修复注释_：从邀请创建帐户时，客户属性可用。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/39d54c2d>
-* _ACP2E-2627_：由于订单取消失败，无法发放具有每个优惠券使用次数限制的优惠券代码，因此无法付款
-   * _修复注释_：现在，系统会在创建或取消订单时立即更新优惠券使用情况，并将规则使用情况添加到队列，以防止潜在的死锁。 这可确保发放限制为“按优惠券使用”的优惠券代码，如果订单因付款失败而被取消，则可以重复使用。 以前，系统不会释放该优惠券代码以便在此类情况下重复使用，从而导致一条错误消息，指出该优惠券代码无效。
+* _ACP2E-2627_：未释放每个优惠券限制使用次数的优惠券代码以进行取消订单的付款
+   * _修复注释_：系统现在会在创建或取消订单后立即更新优惠券使用情况，并将规则使用情况添加到队列中，以防止潜在的死锁。 这可确保释放具有“每张优惠券的使用次数”限制的优惠券代码，并且可在因付款失败而取消订单时重复使用。 以前，系统不会发布优惠券代码以供在此类情况下重用，从而导致出现错误消息，指出优惠券代码无效。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c971859e>
 * _ACP2E-2811_： [Cloud]重新索引目录规则产品索引器引发SQLSTATE[HY000]：常规错误： 2006 MySQL服务器已消失。
    * _修复注释_：系统现在可以正确处理“Magento\CatalogRule\Model\Indexer\IndexBuilder”的di.xml中的自定义“batchCount”值，从而防止在重新索引目录规则产品索引器期间由于大型目录的批处理大小不正确而出现SQL错误，如“常规错误： 2006 MySQL服务器已消失”
@@ -1717,7 +1717,7 @@ laminas/laminas-validator
    * _修复说明_：在从管理区域创建订单时使用优惠券代码时，无论使用大写还是小写，都会正确验证优惠券代码。 以前，如果优惠券代码与配置的购物车规则代码的字母大小写不符，则不会验证优惠券代码。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/581b7ef1>
 * _ACP2E-3374_：在后端，使用产品属性的默认存储值（而不是预期的管理员值）
-   * _修复注释_：现在，在后端中，使用管理员值，而不是产品属性的默认商店值。
+   * _修复注释_：现在在后端，使用管理员值而不是产品属性的默认商店值。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/5184c067>
 * _ACP2E-3377_：添加捆绑包产品时，购物车规则“整个购物车的固定金额折扣”操作应用折扣不正确
    * _修复注释_：未正确为捆绑包产品应用固定数量的购物车规则。 现在，在计算总折扣金额时，会考虑捆绑子产品，从而生成正确的折扣计算。
@@ -1744,7 +1744,7 @@ laminas/laminas-validator
    * _修复注释_：具有动态价格的捆绑产品折扣现已正确反映在发票中。 以前，折扣不会反映在发票上。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3f12d152>
 * _ACP2E-3498_：与折扣/特价产品同时应用多个购物车价格规则时，折扣值不正确
-   * _修复注释_：在修复之前，如果应用了多个购物车规则，则无法正确应用整个购物车规则的固定金额。 现在，正在正确应用固定金额折扣购物车规则。
+   * _修复注释_：在修复之前，如果应用了多个购物车规则，则无法正确应用整个购物车规则的固定金额。 现在，可以正确应用固定金额折扣购物车规则。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1984c61c>
 
 ### SEO
@@ -1776,8 +1776,8 @@ laminas/laminas-validator
 
 ### 安全性
 
-* _AC-11855_： [问题]缺少字体CSP Paylater弹出窗口
-   * _修复说明_：系统现在允许在不违反内容安全策略指令的情况下加载字体“https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.woff&#39;”，从而确保正确显示Paylater弹出窗口。 以前，该字体因违反“内容安全策略”指令而被拒绝加载，从而导致Paylater弹出窗口出现显示问题。
+* _AC-11855_： [问题]缺少字体CSP播放器弹出窗口
+   * _修复注释_：系统现在允许加载字体“https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.woff&#39;”，而不违反内容安全策略指令，从而确保正确显示Paylater弹出窗口。 以前，由于违反Content Security Policy指令而拒绝加载字体，这会导致Paylater弹出窗口的显示问题。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38624>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37401>
 * _AC-12035_： [问题]更新js.js DOM文本将重新解释为HTML
@@ -1787,10 +1787,10 @@ laminas/laminas-validator
    * _修复注释_：以前，对于长单词语言（如德语），签出时电子邮件地址下方的recaptcha显示为无样式。 之后，recaptcha看起来与其他区域中的所有recaptcha元素相同。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/7377de59>
 * _ACP2E-3300_：管理员登录时的验证码不需要与某些用户进行交互
-   * _修复注释_：管理员登录的ReCaptcha已按预期进行验证
+   * _修复说明_：管理员登录的ReCaptcha已按预期验证
    * _GitHub代码贡献_： <https://github.com/magento/security-package/commit/8f64ab3c>
 
-### 装运
+### 配送
 
 * _AC-10757_： [问题]修复了tracking.phtml中的拼写错误 — 已将JS函数“currier”重命名为“carrier”
    * _修复注释_：现在，系统在订单跟踪模板中使用的JavaScript处理程序函数中正确使用了术语“carrier”，而不是拼写错误的“currier”，从而确保函数命名正确且代码清晰明了。 以前，使用拼写错误的术语“currier”，这可能导致代码库中的混淆和不一致。
@@ -1813,17 +1813,17 @@ laminas/laminas-validator
 * _ACP2E-2765_：由于未在Jenkins环境中添加凭据，MFTF测试AdminCreatingShippingLabelTest失败
    * _修复注释_： mftf测试修复
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ea79f7dd>
-* _ACP2E-3340_： FedEx轨道API无法处理REST凭据
-   * _修复注释_：以前的FedEx集成不需要额外的API密钥即可跟踪API。 现在，添加了新配置以支持跟踪API密钥。
+* _ACP2E-3340_： FedEx跟踪API不使用REST凭据
+   * _修复注释_：以前，FedEx集成不需要额外的API密钥即可跟踪API。 现在添加了新配置以支持跟踪API密钥。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ec7e32a9>
-* _ACP2E-3354_：[Cloud] FedEx协商利率未返回REST
+* _ACP2E-3354_： [Cloud] FedEx协商利率未在REST上返回
    * _修复注释_：在修复之前，联邦快递帐户特定的费率未在响应时发送，即使根据FedEx文档它们本应发送也如此。 修复后，通过更改我们方的请求，在响应中发送特定于帐户的费率。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/55615e61>
 
 ### 暂存和预览
 
-* _ACP2E-3453_：使用唯一的自定义类别属性时无法更新计划的更新
-   * _修复注释_：修复了如果类别具有唯一属性，则无法更新该类别的计划更新的问题
+* _ACP2E-3453_：使用唯一的自定义类别属性时无法更新计划更新
+   * _修复注释_：修复了在类别具有唯一属性时无法更新类别的计划更新的问题
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/078c387e>
 
 ### 目标选择
@@ -1833,7 +1833,7 @@ laminas/laminas-validator
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37943>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/30699>
 
-### 税
+### 税金
 
 * _AC-13295_： [问题] Feature/php8.1构造函数属性升级wee图形ql
    * _修复注释_：在图ql的模块中，使用构造函数属性升级替换所有属性：
@@ -1866,7 +1866,7 @@ laminas/laminas-validator
 ### UI框架
 
 * _AC-12128_： Prototype.js安全漏洞修复CVE-2020-27511
-   * _修复说明_：系统已更新，可解决Prototype.js 1.7.3中的安全漏洞CVE-2020-27511，从而增强系统的整体安全性。 在此更新之前，通过去除精心编制的HTML标记，系统容易遭受正则表达式拒绝服务(ReDOS)攻击。
+   * _修复说明_：系统已更新，以解决Prototype.js 1.7.3中的安全漏洞CVE-2020-27511，从而提高系统的整体安全性。 在此更新之前，系统通过删除精心编制的HTML标签容易遭受正则表达式拒绝服务(ReDOS)攻击。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/de4dfb8e>
 * _AC-12189_： Grunt Less使用pub/前缀作为sourcemaps
    * _修复注释_：在使用grunt时，系统现在为路径生成不带/pub前缀的较少/css源地图，从而无需在Web服务器配置中进行变通处理。 以前，在sourcemaps路径中使用/pub前缀需要Web服务器中的特定配置才能正常工作。
@@ -1880,8 +1880,8 @@ laminas/laminas-validator
    * _修复注释_：改进了js控制台中的日期格式：从12小时切换为24小时
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38983>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38972>
-* _AC-12650_： [问题]在开发人员模式下为更少的文件添加sourceMap生成
-   * _修复注释_：现在，系统在开发人员模式下为较少的文件生成源映射，从而更容易识别样式的源。 以前，在服务器端编译较少的开发人员模式下运行系统时，很难确定样式的来源。
+* _AC-12650_： [问题]在开发人员模式下为较少的文件添加sourceMap生成
+   * _修复注释_：在开发人员模式下，系统现在为较少的文件生成源映射，从而更容易识别样式的源。 以前，在服务器端编译较少的开发者模式下运行系统时，要识别样式的来源非常困难。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38982>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38977>
 * _AC-1306_：正在为禁用的模块部署静态内容
@@ -1909,7 +1909,7 @@ laminas/laminas-validator
    * _修复注释_：用户将能够在查看和编辑购物车屏幕中获取礼品卡余额。 以前，启用reCAPTCHA时，不会显示这些详细信息。
    * _GitHub代码贡献_： <https://github.com/magento/magento2-page-builder/commit/4a2795ea>
 * _ACP2E-2729_：[说明]功能请求ADA合规性
-   * _修复注释_：系统现在通过删除不受支持的CSS属性并将其替换为print.css文件中支持的属性来确保ADA的合规性。 以前，使用不支持的CSS属性会导致浏览器兼容性问题。
+   * _修复注释_：系统现在通过删除不支持的CSS属性并将其替换为print.css文件中支持的属性来确保ADA合规性。 以前，使用不支持的CSS属性会导致浏览器兼容性问题。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/57a32313>
 * _ACP2E-3061_： [Cloud] AC 2.4.4-p8的effect-drop.js中的混淆库代码
    * _修复注释_：系统现在可以正确实施effect-drop.js库，从而确保jQuery UI效果的正常运行。 以前，effect-drop.js库错误地被effect-clip.js库覆盖，导致jQuery UI效果出现潜在问题。
