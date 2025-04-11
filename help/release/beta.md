@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: c523b57270370d87be0f2ab0513f7908bb0a7173
+source-git-commit: ea4f340540e57b282657a44502d80f1d5c409c6a
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 - 使用AI和ML创建个性化搜索和推荐。
 - 查看重要的产品数据可用性，包括同步状态和店面事件数据，以便准确实施和故障排除。
 
-[了解有关Adobe Commerce Optimizer的更多信息](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html)。 如果您想参加Adobe Commerce Optimizer抢先体验计划，请发送电子邮件请求至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
+[了解有关Adobe Commerce Optimizer的更多信息](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html)。 如果您有兴趣进一步了解[!DNL Adobe Commerce Optimizer]抢先体验计划，请完成[抢先体验申请表](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u)。
 
 ### 增强了实时搜索的搜索功能(公共Beta)
 
