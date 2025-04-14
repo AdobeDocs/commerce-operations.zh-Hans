@@ -3,13 +3,13 @@ title: ACSD-64149：仅编辑一个日期时，可以保存具有[!UICONTROL Dat
 description: 应用ACSD-64149修补程序以修复Adobe Commerce问题，该问题导致在仅编辑其中一个日期时可以保存具有**[!UICONTROL Date range]**条件的客户区段。
 feature: Customers, Admin Workspace
 role: Admin, Developer
-exl-id: 5423bbd3-75e9-4137-b2d5-3a0ceb3384ad
-source-git-commit: 352bbe1c8a14de8ccc24854d251002df9d48e68a
+source-git-commit: c1c5256aee44ce65e9339cf3985e53f710fc7c8a
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
 
 ---
+
 
 # ACSD-64149：仅编辑一个日期时，可以保存具有[!UICONTROL Date range]条件的客户区段
 
