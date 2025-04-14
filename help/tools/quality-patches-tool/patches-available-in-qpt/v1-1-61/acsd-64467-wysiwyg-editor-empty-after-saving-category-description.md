@@ -3,8 +3,7 @@ title: ACSD-64467：在商店视图级别保存类别描述后，WYSIWYG编辑�
 description: 应用ACSD-64467修补程序以修复Adobe Commerce问题，该问题导致在商店视图级别保存类别描述后，WYSIWYG编辑器显示为空。
 feature: Page Content
 role: Admin, Developer
-exl-id: 8bc1794f-ace1-4719-9fff-194dbd701ab6
-source-git-commit: b71447d5dac3208e537b29204dc8d47e8838f584
+source-git-commit: 4e883b3ec9b790f52dd56206539475e72bdf361d
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
