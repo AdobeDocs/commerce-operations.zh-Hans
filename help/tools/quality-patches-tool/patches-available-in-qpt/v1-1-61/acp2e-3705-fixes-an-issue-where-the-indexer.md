@@ -3,13 +3,13 @@ title: ACP2E-3705：在设置“MAGE_INDEXER_THREADS_COUNT”时，“indexer_up
 description: 应用ACP2E-3705修补程序以修复在设置“MAGE_INDEXER_THREADS_COUNT”时，“indexer_update_all_views”cron执行失败的Adobe Commerce问题。
 feature: Catalog Management, B2B
 role: Admin, Developer
-exl-id: 111325fa-8ed5-45f9-9e68-b52f4425d253
-source-git-commit: 7ef772510274bc8681c395656437d64f8b40e70a
+source-git-commit: 4f719c62fdd9fd960548799c9872f73c76997278
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
+
 
 # ACP2E-3705：设置`MAGE_INDEXER_THREADS_COUNT`时，`indexer_update_all_views` cron执行失败
 
