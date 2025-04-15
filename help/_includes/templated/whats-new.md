@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3acd96480fb9238401a349efb107362f24bb8341
+source-git-commit: f756964406f101a93a513600f668edbffec17cb1
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '965'
 ht-degree: 2%
 
 ---
@@ -10,6 +10,28 @@ ht-degree: 2%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2025年4月11日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Update <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements">system requirements</a> tables:<br />- Delete Elasticsearch in v2.4.8 as not supported<br />- Delete versions 2.4.2 and 2.4.3 as reached the end of support</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6557cc45c1250ca17ba53acdd2a9c4748403df8d">6557cc</a> （提交）</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2025年4月10日
 
@@ -567,88 +589,6 @@ ht-degree: 2%
         新主题
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/826125b9e176639a53c79ec7fea825b6963ffa3c">826125</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年2月14日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了QPT 1.1.59版本</a>中可用修补程序所修复问题的<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/overview">描述</p>
-</td>
-      <td>
-        新主题
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8200051f16c7d12d09c1487a4e12258b52d8d805">820005</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年2月13日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63578-clicking-delete-in-add-to-order-by-sku-doesnot-remove-sku">对QPT 1.1.58版本</a>中ACSD-63578修补程序修复的问题的详细说明</p>
-</td>
-      <td>
-        新主题
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/bf22eac2923a78f112a999dbcb6be1bc6f5eb9db">bf22ea</a> （提交）</td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025年2月11日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>为2025年2月版本添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>。</p>
-</td>
-      <td>
-        重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/2004b40fafb74b0af2a82f618bb04ca13e9372c8">2004b4</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>已发布2025年2月测试版和安全修补程序的发行说明：<br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-8">2.4.8-beta2</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-7-patches">2.4.7-p4</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-6-patches">2.4.6-p9</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-5-patches">2.4.5-p11</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-4-patches">2.4.4-p12</a></p>
-</td>
-      <td>
-        重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/12562e72703651b48cc506d587732e896573c7bc">12562e</a> （提交）</td>
-    </tr>
-    <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/uct">UCT CLI引用</a>。</p>
-</td>
-      <td>
-        技术
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8c45d89c610a5b319352d202057d010b0450c848">8c45d8</a> （提交）</td>
     </tr>
   </tbody>
 </table>
