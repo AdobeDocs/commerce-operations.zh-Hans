@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 0960da0b0c1945e899ce092fb938de13e1b5c95c
+source-git-commit: 43f4055d7c6bf681fde851d5132860ea7b68b677
 workflow-type: tm+mt
-source-wordcount: '7422'
+source-wordcount: '7423'
 ht-degree: 0%
 
 ---
@@ -772,7 +772,7 @@ ht-degree: 0%
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.61](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/overview.md)
          - [ACP2E-3689：类别树在更深层显示并反映锚点/非锚点关系的多个问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3689-issues-with-category-tree-display-reflect-anchor-non-anchor-relationships.md)
          - [ACSD-64178： [!UICONTROL Edit Attribute Set]页面加载缓慢，具有数千个产品属性](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64178-attribute-set-edit-page-loads-slow-with-thousands-of-attributes.md)
-         - [ACSD-64431：请求中具有优惠券代码的“placeOrder”突变引发内部错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64431-placeorder-mutation-with-coupon-code-throws-error.md)
+         - [ACSD-64431：请求中具有优惠券代码的“placeOrder”突变引发内部服务器错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64431-placeorder-mutation-with-coupon-code-throws-error.md)
          - [ACSD-64684：保存值超过999的礼品卡时出现验证错误，因为逗号以1000为单位(1,000)](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64684-validation-error-for-gift-card-value-over-999-due-to-comma-in-one-thousand.md)
          - [ACSD-63883：正在修复[!UICONTROL Requisition List]的 [!DNL GraphQL] 响应中错误的items_count](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-63883-fixes-the-issue-where-the-requisition-list.md)
          - [ACP2E-3705：在设置MAGE_INDEXER_THREADS_COUNT时，indexer_update_all_views cron执行失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3705-fixes-an-issue-where-the-indexer.md)

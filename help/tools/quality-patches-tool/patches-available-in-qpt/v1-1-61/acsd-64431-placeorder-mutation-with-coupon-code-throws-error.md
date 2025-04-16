@@ -3,15 +3,15 @@ title: ACSD-64431：请求中具有优惠券代码的“placeOrder”突变引�
 description: 应用ACSD-64431修补程序以修复Adobe Commerce问题，该问题导致请求中包含优惠券代码信息的“placeOrder”突变引发内部服务器错误，而不是成功下订单。
 feature: GraphQL, Orders, Promotions/Events
 role: Admin, Developer
-source-git-commit: 883b9db12308c8832afbf709bc188edab746618f
+exl-id: 13918f3e-842b-4b2e-b2e2-2d8add542a87
+source-git-commit: 43f4055d7c6bf681fde851d5132860ea7b68b677
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
-
-# ACSD-64431：请求中具有优惠券代码的“placeOrder”突变引发内部错误
+# ACSD-64431：请求中具有优惠券代码的“placeOrder”突变引发内部服务器错误
 
 ACSD-64431修补程序修复了以下问题：请求中包含优惠券代码信息的`placeOrder`突变引发内部服务器错误，而不是成功下订单。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.61时，此修补程序可用。 修补程序ID为ACSD-64431。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
@@ -341,10 +341,6 @@ ACSD-64431修补程序修复了以下问题：请求中包含优惠券代码信�
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
-
-## 安装修补程序后所需的其他步骤
-
-（本节为可选内容；在应用修补程序后，可能需要执行一些步骤来修复此问题。） 
 
 ## 相关阅读
 
