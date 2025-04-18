@@ -1,7 +1,7 @@
 ---
-source-git-commit: 934fe621356c45bcefd2f84b7d01986b4995b061
+source-git-commit: ae8701cf2486ef0a79c96bd264e16b0e7803a8f6
 workflow-type: tm+mt
-source-wordcount: '28390'
+source-wordcount: '28386'
 ht-degree: 0%
 
 ---
@@ -245,7 +245,7 @@ ht-degree: 0%
    * _修复说明_：修复后，如果自定义管理域是主域的子域，则只能从配置的子域访问管理员。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37663>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3f12d152>
-* _ACP2E-3392_：“购物车中允许的最大数量”的验证损坏
+* _ACP2E-3392_：“购物车中允许的最大数量”的验证已中断
    * _修复注释_：以前，当我们将`Maximum Qty Allowed in Shopping Cart`设置为空时，它不会引发任何异常，尽管此处不接受空值。 进行此修复后，输入空字符串将会引发异常，并且不允许保存产品。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d50f6b5d>
 * _ACP2E-3408_：[Pagebuilder预览UI问题]页面生成器列中的按钮未正确对齐
@@ -1089,8 +1089,8 @@ ht-degree: 0%
    * _修复注释_：系统现在可以正确引用模块中的类，从而确保操作更顺畅，并防止由于不存在类而导致崩溃。 这包括Indexer和Creditmemo模块中的错误修复，以及PrintAction类中HttpGetActionInterface的实现。 以前，错误的类引用会导致错误和潜在的系统崩溃，并且某些功能(如creditmemo PDF文件的文件名和股票重新索引)无法按预期工作。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39126>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37784>
-* _AC-12964_：能够为dev:di:info CLI命令定义区域
-   * _修复注释_：系统现在允许开发人员定义dev:di:info CLI命令的区域，从而增强开发和调试过程。 以前，此命令只能显示GLOBAL区域的信息。
+* _AC-12964_：能够为`dev:di:info` CLI命令定义区域
+   * _修复注释_：系统现在允许开发人员定义`dev:di:info` CLI命令的区域，从而增强开发和调试过程。 以前，此命令只能显示GLOBAL区域的信息。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38758>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38759>
 * _AC-13149_： [问题]将isMultipleFiles属性添加到图像表单元素模板

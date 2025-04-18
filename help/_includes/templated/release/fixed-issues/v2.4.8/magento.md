@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2f8ca1dd3289c1a24e33198c95d38c1a04a507ff
+source-git-commit: ae8701cf2486ef0a79c96bd264e16b0e7803a8f6
 workflow-type: tm+mt
-source-wordcount: '26047'
+source-wordcount: '26039'
 ht-degree: 0%
 
 ---
@@ -195,8 +195,8 @@ laminas/laminas-validator
    * _修复注释_：系统现在可以将“页面操作”按钮正确对齐管理面板中粘性标题的右侧，从而增强专业外观。 以前，这些按钮错误地浮动到粘性标题的左侧。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38701>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/44cef3a9>
-* _AC-11999_： magento 2.4.7中的dev:di:info错误
-   * _修复注释_：系统现在在执行dev:di:info命令时可正确显示构造函数参数，从而防止出现任何错误。 以前，执行此命令会导致错误，因为参数中的类型不匹配。
+* _AC-11999_： magento 2.4.7中出现`dev:di:info`错误
+   * _修复注释_：系统现在在执行`dev:di:info`命令时正确显示构造函数参数，从而防止出现任何错误。 以前，执行此命令会导致错误，因为参数中的类型不匹配。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38740>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-13000_：“以客户选择加入身份登录”复选框不可翻译
@@ -331,7 +331,7 @@ laminas/laminas-validator
    * _修复说明_：修复后，如果自定义管理域是主域的子域，则只能从配置的子域访问管理员。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/37663>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/3f12d152>
-* _ACP2E-3392_：“购物车中允许的最大数量”的验证损坏
+* _ACP2E-3392_：“购物车中允许的最大数量”的验证已中断
    * _修复注释_：以前，当我们将`Maximum Qty Allowed in Shopping Cart`设置为空时，它不会引发任何异常，尽管此处不接受空值。 进行此修复后，输入空字符串将会引发异常，并且不允许保存产品。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d50f6b5d>
 * _ACP2E-3408_：[Pagebuilder预览UI问题]页面生成器列中的按钮未正确对齐
@@ -1084,8 +1084,8 @@ laminas/laminas-validator
    * _修复注释_：系统现在可以正确引用模块中的类，从而确保操作更顺畅，并防止由于不存在类而导致崩溃。 这包括Indexer和Creditmemo模块中的错误修复，以及PrintAction类中HttpGetActionInterface的实现。 以前，错误的类引用会导致错误和潜在的系统崩溃，并且某些功能(如creditmemo PDF文件的文件名和股票重新索引)无法按预期工作。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39126>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37784>
-* _AC-12964_：能够为dev:di:info CLI命令定义区域
-   * _修复注释_：系统现在允许开发人员定义dev:di:info CLI命令的区域，从而增强开发和调试过程。 以前，此命令只能显示GLOBAL区域的信息。
+* _AC-12964_：能够为`dev:di:info` CLI命令定义区域
+   * _修复注释_：系统现在允许开发人员定义`dev:di:info` CLI命令的区域，从而增强开发和调试过程。 以前，此命令只能显示GLOBAL区域的信息。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38758>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38759>
 * _AC-13149_： [问题]将isMultipleFiles属性添加到图像表单元素模板
@@ -1506,8 +1506,8 @@ laminas/laminas-validator
 * _LYNX-399_：将简单产品添加到分组产品中的购物车时，会返回占位符缩略图
    * _修复注释_：修复了在将简单产品（分组产品的一部分）添加到购物车时返回占位符缩略图图像的问题，即使该产品已分配图像。
 修复详细信息：
-·产品缩略图现在可以正确显示分配的图像（如果可用）。
-·缩略图选择遵循以下项下的管理员配置：
+* 现在，产品缩略图可正确显示分配的图像（如果可用）。
+* 缩略图选择遵循下的管理员配置：
 商店>配置>销售>结账>购物车>分组的产品图像。
 这可确保根据商店设置对分组产品执行一致的缩略图行为。
 * _LYNX-400_：客户的自定义选项属性不适用于整数值
@@ -1517,8 +1517,8 @@ laminas/laminas-validator
 * _LYNX-403_： only_x_left_in_stock对于可配置产品始终返回0
    * _修复注释_：解决了使用带有选项的父SKU添加可配置产品时，only_x_left_in_stock属性始终返回0的问题。
 修复详细信息：
-· only_x_left_in_stock值现在可准确反映所选子变体而非父SKU的库存。
-·这确保在购物车和产品页面中正确显示可配置产品变体的库存水平。
+* only_x_left_in_stock值现在可准确反映所选子变体的库存，而不是父SKU的库存。
+* 这确保在购物车和产品页面中正确显示可配置产品变体的库存水平。
 * _LYNX-411_： GraphQL查询未返回可自定义产品的正确计算常规价格
    * _修复注释_：修复了GraphQL未针对可自定义产品返回正确计算出的正常价格的问题。 现在，查询会在prices属性中正确包含计算出的正常价格以及应用的自定义值（例如$125），这既反映了基本价格，也反映了任何其他自定义成本。
 * _LYNX-412_：通过EstimatedTotals应用的ApplicedTaxes随更新的突变而保留
