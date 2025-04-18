@@ -1,10 +1,10 @@
 ---
 title: 发布策略
-description: 了解不同类型的Adobe Commerce版本，包括次要修补程序、安全修补程序、功能、修补程序、单个修补程序和自定义修补程序。
+description: 了解不同类型的Adobe Commerce版本。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: b63fa9a8b2b59f6e8dfd7003e75c66caf99d5e81
+source-git-commit: 0ea8c2bfffe81d27547c0330abdd75fc078542cf
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,12 @@ Adobe Commerce在单个模块级别（例如`magento/framework 101.1.1`）使用
 
 - **主要版本**—2
 - **次要版本** - 2.4
-- **PATCH版本** - 2.4.5
-   - **安全修补程序版本**—2.4.5-p1
+- **PATCH版本** - 2.4.8
+   - **安全修补程序版本**—2.4.8-p1
       - 安全错误修复
       - 安全性增强
-- **BETA修补程序版本**—2.4.7-beta2
+- **ALPHA修补程序版本**—2.4.8-alpha1
+- **BETA修补程序版本**—2.4.8-beta1
 - **可扩展性、基础架构和服务版本**
 - **修补程序**
 - **单个修补程序**
@@ -42,25 +43,36 @@ Adobe Commerce在单个模块级别（例如`magento/framework 101.1.1`）使用
 
 - 最新支持的次要版本将获得完整的功能质量修复和增强功能。
 - 避免进行可能破坏扩展或代码兼容性的更改。 例如，为版本2.2.0编写的代码在版本2.2.7上仍然有效。
-- 在特殊情况下，可能会发布重大更改或其他修补程序或修补程序，以解决安全性或合规性问题以及影响重大的质量问题。 在模块级别，这些更改主要是PATCH级别的更改；有时是次要级别的更改。
+- 在特殊情况下，可能会发布重大更改或其他修补程序或修补程序，以解决安全性或合规性问题以及影响重大的质量问题。 在模块级别，这些更改主要是PATCH级别更改，有时是次要级别更改。
 
 ### SECURITY补丁发行版
 
 {{$include /help/_includes/release-notes/security-patch-overview.md}}
 
+## Alpha补丁版本
+
+Adobe Commerce功能的Beta前版本已公开提供给所有Adobe Commerce客户和Adobe合作伙伴。 Alpha版本旨在对仍在积极开发的功能提供早期反馈和评估。 这些版本提供了在Beta和General Availability版本之前提前测试和集成规划的机会。
+
+Alpha版本可能不完整，并且可能包含缺陷。 它们按“原样”提供，不提供任何形式的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)Alpha版本。 客户不应依赖Alpha版本或任何随附文档或材料的正确功能或性能。 使用Alpha版本完全由客户自行承担风险。
+
 ## Beta补丁版本
 
-Adobe Commerce功能正式发布前的版本已公开提供给所有Adobe Commerce客户和Adobe合作伙伴。 它留出了在正式发布之前的一段额外时间，让您可以审查代码和受影响的组件。
+Adobe Commerce功能的正式发布之前版本已公开提供给所有Adobe Commerce客户和Adobe合作伙伴。 它留出了在正式发布之前的一段额外时间，让您可以审查代码和受影响的组件。
 
-Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)Beta版本。 建议客户谨慎使用，并且不要以任何方式依赖Beta版本和/或任何随附文档或材料的正确功能或性能。 因此，使用Beta版本的任何行为都要由客户自行承担风险。
+Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)Beta版本。 客户不应依赖Beta版本或任何随附文档或材料的正确功能或性能。 因此，使用Beta版本的任何行为都要由客户自行承担风险。
 
 ## 功能、云基础架构和可扩展性版本
 
-云基础架构和功能版本包含作为独立服务（与修补程序版本不同）提供的新功能和功能更新。 示例包括对我们的云托管服务和基础架构、B2B、SaaS产品（目录服务、数据连接、产品推荐和实时搜索）以及可扩展性技术（API Mesh、Integration Starter Kit和Eventing）的更新。
+云基础架构和功能版本包含作为独立服务（与修补程序版本不同）提供的新功能和功能更新。 示例包括但不限于：
+
+- 云托管服务和基础设施的更新
+- B2B
+- SaaS产品（“目录服务”、“数据连接”、“产品推荐”和“实时搜索”）
+- 可扩展性技术(管理UI SDK、API Mesh、App Builder Starter Kit、Eventing和Webhooks)
 
 ## 修补程序
 
-修补程序是包含影响许多商家的高影响安全或质量修补程序的修补程序，例如针对零日漏洞的修补程序。 Adobe会根据需要发布受Adobe Commerce关键安全或质量问题支持和影响的AEM版本修补程序。 修补程序已发布到我们知识库的[已知问题部分](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-)。 这些修复包括在下一个计划的修补程序版本中。
+修补程序是包含影响许多商家的高影响安全或质量修补程序的修补程序，例如针对零日漏洞的修补程序。 当严重的安全或质量问题影响受支持的Adobe Commerce版本时，Adobe会根据需要发布这些版本的修补程序。 修补程序已发布到知识库的[已知问题部分](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-)。 这些修复包括在下一个计划的修补程序版本中。
 
 >[!NOTE]
 >
@@ -68,7 +80,7 @@ Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担�
 
 ## 单个修补程序
 
-单个修补程序包含针对特定问题的低影响质量修复。 这些修复适用于Adobe Commerce支持的次要版本。 根据我们的[软件生命周期策略](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf)，Adobe会根据需要发布Adobe Commerce的单个修补程序。
+单个修补程序包含针对特定问题的低影响质量修复。 这些修复适用于Adobe Commerce支持的次要版本。 根据[软件生命周期策略](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf)，Adobe会根据需要发布Adobe Commerce的单个修补程序。
 
 >[!NOTE]
 >
@@ -76,8 +88,8 @@ Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担�
 
 ## 隔离的修补程序
 
-包含最新发布的仅用于安全保护的修补程序中包含的独立修补程序，或者即将发布的仅用于安全保护的修补程序，将单独发布这些修补程序以加快实施速度。
+独立修补程序包含最新仅安全修补程序中包含的独立修补程序，或者即将发布的仅安全修补程序中包含独立修补程序，这些修补程序将单独发布以加快实施。
 
 ## 自定义修补程序
 
-由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)提供。
+由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage)提供。
