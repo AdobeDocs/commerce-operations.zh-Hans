@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: c5446f0273705b158297c0a253054742ec95b44e
+source-git-commit: 2f8396a367cbe1191bdf67aec75bd56f64d3fda8
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ GraphQL Application Server仅适用于Adobe Commerce。 它不适用于Magento O
 
 >[!NOTE]
 >
->GraphQL Application Server当前与[[!DNL Amazon Simple Storage Service (AWS S3)]](https://aws.amazon.com/s3/)不兼容。 在Adobe于2024年晚些时候发布修补程序之前，当前在[远程存储](../configuration/remote-storage/cloud-support.md)上使用[!DNL AWS S3]的Adobe Commerce基础架构客户无法使用GraphQL Application Server。
+>GraphQL Application Server当前与[[!DNL Amazon Simple Storage Service (AWS S3)]](https://aws.amazon.com/s3/)不兼容。 云基础架构上的Adobe Commerce客户当前将[!DNL AWS S3]用于[远程存储](../configuration/remote-storage/cloud-support.md)，不能使用GraphQL应用程序服务器。
 
 ## 架构
 
