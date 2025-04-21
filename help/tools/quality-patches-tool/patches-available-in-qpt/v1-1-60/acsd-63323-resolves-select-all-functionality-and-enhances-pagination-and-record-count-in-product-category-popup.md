@@ -3,17 +3,17 @@ title: ACSD-63323：解析[!UICONTROL Select All]功能并增强产品类别弹�
 description: 应用ACSD-63323修补程序以修复将产品添加到类别时，[!UICONTROL Select All]选项不起作用的Adobe Commerce问题。 此外，当通过弹出网格将产品添加到类别时，它还可确保分页和记录计数标签正常工作。
 feature: Products
 role: Admin, Developer
-source-git-commit: f3f0cc93adf83b485ca50811adcc561638e3c5c2
+exl-id: 96e318fd-f1dd-4b15-b171-78ae1c8e4e0d
+source-git-commit: d24909ea2571eacafac1ff6b225e87bc40d320bc
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
-
 # ACSD-63323：解析[!UICONTROL Select All]功能并增强产品类别弹出窗口中的分页和记录计数
 
-ACSD-63323修补程序修复了在将产品添加到类别时，**[!UICONTROL Select All]**&#x200B;选项不起作用的问题。 此外，当通过弹出网格将产品添加到类别时，它还可确保分页和记录计数标签正常工作。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)后，此修补程序可用。 修补程序ID为ACSD-63323。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-63323修补程序修复了在将产品添加到类别时，**[!UICONTROL Select All]**&#x200B;选项不起作用的问题。 此外，当通过弹出网格将产品添加到类别时，它还可确保分页和记录计数标签正常工作。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.60时，此修补程序可用。 修补程序ID为ACSD-63323。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -68,5 +68,3 @@ ACSD-63323修补程序修复了在将产品添加到类别时，**[!UICONTROL Se
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-
-
