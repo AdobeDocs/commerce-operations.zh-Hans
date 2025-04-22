@@ -1,11 +1,12 @@
 ---
-title: 'ACSD-51819：使用单引号ID下达多个订单'
+title: ACSD-51819：使用单引号ID下达多个订单
 description: 应用ACSD-51819修补程序以修复可通过同一报价ID下达多个订单的Adobe Commerce问题。
 feature: Orders, Checkout
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: dbca8790-d947-4104-bba9-b29abcfc0344
+source-git-commit: 5f22591c499f0f5d349994195731c7c87512f5f0
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -18,11 +19,11 @@ ACSD-51819修补程序修复了可以通过同一报价ID下达多个订单的�
 
 **为Adobe Commerce版本创建了修补程序：**
 
-* Adobe Commerce（所有部署方法） 2.4.4-p2
+* Adobe Commerce（所有部署方法） 2.4.4-p2、2.4.5-p5、2.4.6、2.4.6-p4、2.4.7-p1
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.4.4 - 2.4.4-p3
+* Adobe Commerce（所有部署方法） 2.4.4 - 2.4.4-p11、2.4.5-p3 - 2.4.5-p10、2.4.6 - 2.4.6-p8、2.4.7 - 2.4.7-p3
 
 >[!NOTE]
 >
