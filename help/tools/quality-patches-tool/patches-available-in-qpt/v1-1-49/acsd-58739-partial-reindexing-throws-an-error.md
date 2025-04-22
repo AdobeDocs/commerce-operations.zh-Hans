@@ -4,14 +4,18 @@ description: 应用ACSD-55241修补程序以修复部分重新索引引发错误
 feature: Inventory, Products
 role: Admin, Developer
 exl-id: b4e6b8b4-43de-4434-94fb-6269a75e1c28
-source-git-commit: c643d55823ae0791ecfa0f2220116bbcbd02668a
+source-git-commit: e29b177fec7c5cc411c3495ce635e08fa6540ab8
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
 
 # ACSD-58739：部分重新索引引发错误
+
+>[!NOTE]
+>
+>此修补程序已被[ACP2E-3705](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3705-fixes-an-issue-where-the-indexer.md)替换。
 
 ACSD-58739修补程序修复了部分重新索引引发错误的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.49时，此修补程序可用。 修补程序ID为ACSD-58739。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
