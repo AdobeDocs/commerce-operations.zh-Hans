@@ -1,11 +1,12 @@
 ---
-title: 'ACSD-54966：修复了在订单失败后重用优惠券代码的问题'
+title: ACSD-54966：修复了在订单失败后重用优惠券代码的问题
 description: 应用ACSD-54966补丁以修复Adobe Commerce问题，防止重复使用以前失败的订单中每个促销和购物车限制的优惠券代码。
 feature: Promotions/Events, Shopping Cart, Orders
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e08062e5-62ff-4da6-918f-896af36edccc
+source-git-commit: f109d3544912ee09b25d882333840cf81d2f08e3
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
@@ -19,10 +20,12 @@ ACSD-54966修补程序修复了以下问题：在先前失败的订单之后，�
 **为Adobe Commerce版本创建了修补程序：**
 
 * Adobe Commerce（所有部署方法） 2.4.6-p1
+* Adobe Commerce 2.4.7-p2
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.4.5 - 2.4.6-p3
+* Adobe Commerce（所有部署方法） 2.4.5 - 2.4.5-p10、2.4.6 - 2.4.6-p8
+* Adobe Commerce：2.4.7 - 2.4.7-p3
 
 >[!NOTE]
 >
@@ -61,6 +64,5 @@ ACSD-54966修补程序修复了以下问题：在先前失败的订单之后，�
 
 * [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches)。
 * [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
-
 
 有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
