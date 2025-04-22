@@ -1,11 +1,12 @@
 ---
-title: 'ACSD-57003：订单状态更改为*完成*，而不是更改为*正在处理*'
+title: ACSD-57003：订单状态更改为*完成*，而不是更改为*正在处理*
 description: 应用ACSD-57003修补程序以修复订单状态更改为*Complete*而不是更改为*Processing*的Adobe Commerce问题。
 feature: Orders, Invoices, Shipping/Delivery
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a28ecc35-5c9a-4bba-b0b9-67fbe37ed8c3
+source-git-commit: 128107310416e97edca3b122e97456138d04073f
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -18,11 +19,11 @@ ACSD-57003修补程序修复了订单状态更改为&#x200B;*完成*&#x200B;而�
 
 **为Adobe Commerce版本创建了修补程序：**
 
-* Adobe Commerce（所有部署方法） 2.4.6-p3
+* Adobe Commerce（所有部署方法） 2.4.6-p3、2.4.6-p8、2.4.7-p3
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.4.6 - 2.4.6-p3
+* Adobe Commerce（所有部署方法） 2.4.6 - 2.4.6-p9、2.4.7-p2 - 2.4.7-p4
 
 >[!NOTE]
 >
