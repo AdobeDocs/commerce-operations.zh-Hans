@@ -3,13 +3,13 @@ title: ACSD-62979： GraphQL标头中的存储ID不正确会导致内存错误
 description: 应用ACSD-62979修补程序以修复以下问题：在Adobe CommerceGraphQL标头中使用不正确的存储ID会导致致命内存错误
 feature: GraphQL
 role: Admin, Developer
-source-git-commit: 16875f95ab23559d4e1081b8cfe0374e1394d87d
+exl-id: 832baae1-34b4-4ca8-bfa9-221aa60da67e
+source-git-commit: 187a0056971e6bec324b5cc9d374375bbfb84dd8
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62979： GraphQL标头中的存储ID不正确会导致内存错误
 
@@ -19,11 +19,11 @@ ACSD-62979修补程序修复了以下问题：在GraphQL标头中使用不正确
 
 **为Adobe Commerce版本创建了修补程序：**
 
-* Adobe Commerce（所有部署方法）2.4.6-p7、2.4.6
+* Adobe Commerce（所有部署方法） 2.4.6、2.4.6-p7、2.4.7-p3
 
 **与Adobe Commerce版本兼容：**
 
-* Adobe Commerce（所有部署方法） 2.4.4 - 2.4.6-p8
+* Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p4
 
 >[!NOTE]
 >
@@ -93,4 +93,3 @@ ACSD-62979修补程序修复了以下问题：在GraphQL标头中使用不正确
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-
