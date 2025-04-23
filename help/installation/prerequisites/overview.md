@@ -2,9 +2,9 @@
 title: 内部部署安装先决条件
 description: 详细了解Adobe Commerce的内部安装所需的软件依赖项。
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: db2256f5327897a4376a0d038ce697e8f93235af
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 在安装Adobe Commerce之前，必须执行以下操作：
 
-* 设置一个或多个符合[系统要求](../system-requirements.md)的主机。
+* 设置一个或多个符合&#x200B;*Commerce本地*&#x200B;选项卡中列出的[系统要求](../system-requirements.md)的主机。
 * 如果要设置多个具有负载平衡的Web节点，请在安装应用程序之前&#x200B;_设置并测试系统_&#x200B;的该部分。
 * 确保您可以在安装过程中的不同时刻备份整个系统，以便在出现问题时回滚系统。
 
@@ -66,11 +66,11 @@ Server built:   Jul 23 2017 14:17:29
 
 ### PHP
 
-有关PHP的支持版本，请参阅[系统要求](../system-requirements.md)；有关PHP要求，请参阅[PHP](../system-requirements.md#php-settings)。
+有关PHP和[PHP](../system-requirements.md#php-settings)的支持版本，请参阅[系统要求](../system-requirements.md)中的&#x200B;*Commerce本地*&#x200B;选项卡，了解PHP要求。
 
 ### MySQL
 
-检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce版本。 有关支持的版本，请参阅[系统要求](../system-requirements.md)。
+检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce版本。 有关支持的版本，请参阅[系统要求](../system-requirements.md)中的&#x200B;*Commerce本地*&#x200B;选项卡。
 
 ```bash
 mysql -u <database root user or database owner name> -p
