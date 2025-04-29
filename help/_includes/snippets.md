@@ -1,5 +1,5 @@
 ---
-source-git-commit: ab3401c2629b550655c7b2a382b998ce2c8ac6f0
+source-git-commit: 9eeb0e3a1c75b25cc70b092d23f02ebfe355d6bd
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->所有MagentoCLI命令都必须由[文件系统所有者](/help/configuration/cli/config-cli.md#prerequisites)运行。
+>所有Magento CLI命令都必须由[文件系统所有者](/help/configuration/cli/config-cli.md#prerequisites)运行。
 
 ## 备份命令 {#tip-backup-command}
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Commerce版本可能包含向后不兼容的更改(BIC)。 要查看与向后不兼容的更改，请参阅[BIC参考](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/)。 在[BIC亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/)中描述了严重的向后不兼容问题。 并非所有发行版本都引进了主要BIC。
+>Adobe Commerce版本可能包含向后不兼容的更改(BIC)。 要查看与向后不兼容的更改，请参阅[BIC参考](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/)。 在[BIC亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/)中描述了严重的向后不兼容问题。 并非所有发行版本都引进了主要BIC。
 
 ## Beta免责声明 {#beta}
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->虽然这些发行说明中描述的增强功能和错误修复代码与Adobe Commerce捆绑在一起，但其中几个项目(例如B2B、页面生成器和Progressive Web Application(PWA)Studio)也单独发布。 每个项目的文档中都提供了特定于项目的单独发行信息，其中记录了这些项目的错误修复。 请参阅[产品版本概述](/help/release/release-notes/overview.md)。
+>虽然这些发行说明中描述的增强功能和错误修复代码与Adobe Commerce捆绑在一起，但其中几个项目(例如B2B、Page Builder和Progressive Web Applications (PWA) Studio)也独立发布。 每个项目的文档中都提供了特定于项目的单独发行信息，其中记录了这些项目的错误修复。 请参阅[产品版本概述](/help/release/release-notes/overview.md)。
 
 ## PHP进程控制 {#php-process-control}
 

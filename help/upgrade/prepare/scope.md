@@ -2,7 +2,7 @@
 title: 了解升级范围
 description: 了解版本中可能影响Adobe Commerce自定义模块或第三方扩展的向后不兼容更改。
 exl-id: dab2a14f-dbf0-422e-afb4-642e2220ec7a
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 9eeb0e3a1c75b25cc70b092d23f02ebfe355d6bd
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Commerce版本可能包含与向后不兼容的更改。 请查看我们向后不兼容的更改文档，请参阅以下内容：
 
-- **[主要更改亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/)** — 具有主要影响并需要详细说明和特殊说明以确保第三方模块继续工作的更改。
+- **[主要更改亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/)** — 具有主要影响并需要详细说明和特殊说明以确保第三方模块继续工作的更改。
 - **[次要更改引用](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/)** — 引用从代码库生成的文档，其中介绍了对类、API成员资格、数据库、依赖项注入、接口、布局、系统和XSD的次要更改。
 
 ## 第三方扩展
