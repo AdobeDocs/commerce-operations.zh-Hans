@@ -1,7 +1,7 @@
 ---
-source-git-commit: ae8701cf2486ef0a79c96bd264e16b0e7803a8f6
+source-git-commit: c96f5620bbde1b15f6419c482c790517cc8de70c
 workflow-type: tm+mt
-source-wordcount: '26039'
+source-wordcount: '26036'
 ht-degree: 0%
 
 ---
@@ -288,7 +288,7 @@ laminas/laminas-validator
 * _AC-9843_： i18n：collect-phrases破坏翻译完整性
    * _修复注释_： `bin/magento i18n:collect-phrases -o`命令现在可以从JavaScript和.phtml文件中正确收集和添加新短语，确保翻译文件能准确反映翻译。 以前，系统无法在翻译文件中包含来自JavaScript文件的多行翻译短语以及来自.phtml文件的短语，从而导致翻译不完整或不正确。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0c53bbf7>
-* _ACP2E-2787_：存储视图名称中的撇号已替换为&#39;
+* _ACP2E-2787_：将存储视图名称中的撇号替换为&amp;#039；
    * _修复注释_：网格的存储视图筛选器现在正确显示撇号
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38395>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/39d54c2d>
@@ -1005,8 +1005,8 @@ laminas/laminas-validator
    * _修复说明_： \Magento\Framework\Data\Collection：：getItemById方法的PHPDocs已更新，可能包含null作为返回类型，从而解决了静态分析工具的问题。 以前，该方法的PHPDocs不指定null作为可能的返回类型，导致在条件语句中使用该方法时进行静态分析时出现警告或错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38485>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38439>
-* _AC-11592_： [问题]在安装期间仅允许有效的首选项:di:编译
-   * _修复注释_：如果为不存在或明确排除的类创建首选项，系统现在会在安装:di:编译命令期间引发错误，确保只允许使用有效的首选项。 以前，这些方案将以静默方式失败，潜在地使与原始类关联的任何插件变得无用。
+* _AC-11592_： [问题]仅允许在`setup:di:compile`期间使用有效的首选项
+   * _修复注释_：现在，如果为不存在或特别排除的类创建了首选项，则系统将在`setup:di:compile`命令期间引发错误，从而确保仅允许使用有效的首选项。 以前，这些方案将以静默方式失败，潜在地使与原始类关联的任何插件变得无用。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38517>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/33161>
 * _AC-11651_： Magento尝试在LoggerProxy的__wakeUp方法中修改只读属性
@@ -1537,7 +1537,7 @@ laminas/laminas-validator
    * _修复注释_：修复了以下问题：如果购物车还包含库存不足的可配置产品，则尝试从购物车中删除库存产品会导致“请求的数量不可用”GraphQL错误。 现在，删除操作可按预期运行，而不会触发错误。
 * _LYNX-469_：由于突变中的SKU区分大小写，无法添加产品
    * _修复注释_：解决了使用具有不同大小写的SKU时，addProductsToCart突变返回“PRODUCT_NOT_FOUND”错误的问题。 该突变现在处理SKU不区分大小写，确保与目录服务查询和PDP行为一致。
-* _LYNX-603_： Product attribute > trademark short form ™返回为™
+* _LYNX-603_： Product attribute > trademark short form &amp;amp；trade；返回为&amp;amp；trade；
    * _修复注释_：解决了GraphQL API的产品名称存在的字符编码问题
 * _LYNX-619_： updateCustomerEmail突变问题
    * _修复注释_：解决了updateCustomerEmail突变的问题，该问题导致没有所需自定义属性（在创建帐户后添加）的客户无法更新其电子邮件。
@@ -1591,7 +1591,7 @@ laminas/laminas-validator
    * _修复注释_：现在，即使启用了“dev/css/use_css_critical_path”设置，系统也会在签出页面上正确异步加载CSS文件，从而确保这些页面使用正确的CSS样式呈现。 以前，受限制的内容安全策略(CSP)阻止执行内联JavaScript，这导致CSS文件无法按预期加载。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/39020>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39040>
-* _AC-13398_：使用虚拟类型配置插件，无法在安装程序:di:编译命令中正确生成侦听器方法
+* _AC-13398_：使用虚拟类型配置插件，无法在`setup:di:compile`命令中正确生成侦听器方法
    * _修复注释_：系统现在在使用虚拟类型配置插件时正确生成侦听器方法，从而确保无论是预编译的结果还是运行时编译的结果都一致。 以前，与运行时编译相比，在预编译时，系统会产生不正确的结果。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/33980>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38141>

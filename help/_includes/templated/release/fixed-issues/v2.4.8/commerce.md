@@ -1,7 +1,7 @@
 ---
-source-git-commit: ae8701cf2486ef0a79c96bd264e16b0e7803a8f6
+source-git-commit: c96f5620bbde1b15f6419c482c790517cc8de70c
 workflow-type: tm+mt
-source-wordcount: '28386'
+source-wordcount: '28383'
 ht-degree: 0%
 
 ---
@@ -104,10 +104,10 @@ ht-degree: 0%
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38740>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-13000_：“以客户选择加入身份登录”复选框不可翻译
-   * _修复说明_：系统现在允许在“商店视图”范围中设置“以客户身份登录选择加入复选框”和“以客户身份登录”复选框工具提示”字段，从而为不同的商店视图启用翻译。 以前，这些字段仅在“网站”范围中设置，导致无法翻译各个商店视图。
-   * _GitHub问题_： <https://github.com/magento/magento2/issues/32329>
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/32359>
-* _AC-14299_：我的个人资料下拉列表中的前端UI主页按钮不存在。（间歇性）
+   * _修复说明_：系统现在允许在“商店视图”范围内设置“以客户身份登录选择加入复选框”和“以客户身份登录”复选框工具提示“字段，从而启用不同商店视图的翻译。 以前，这些字段仅设置在“网站”范围内，无法翻译单个商店视图。
+   * _GitHub 问题_： <https://github.com/magento/magento2/issues/32329>
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/pull/32359>
+* _AC-14299_：我的配置文件中的前端 UI 主页下拉列表是按钮不存在。（间歇性）
 * _AC-6071_：客户已登录，但在前端显示404错误。
    * _修复注释_：现在，当客户登录时，店面客户仪表板页面会按预期加载。 以前，客户可以登录，但此页面显示404错误。 [GitHub-35838](https://github.com/magento/magento2/issues/35838)
    * _GitHub问题_： <https://github.com/magento/magento2/issues/35838>
@@ -202,7 +202,7 @@ ht-degree: 0%
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0c53bbf7>
 * _ACP2E-2687_：访问动态块的权限问题
    * _修复注释_：以前，对于受限管理员，添加新的动态块会引发错误。 实施此修复后，受限制的管理员可以成功添加动态块，并在没有任何错误的情况下编辑块
-* _ACP2E-2787_：存储视图名称中的撇号已替换为&#39;
+* _ACP2E-2787_：将存储视图名称中的撇号替换为&amp;#039；
    * _修复注释_：网格的存储视图筛选器现在正确显示撇号
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38395>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/39d54c2d>
@@ -346,11 +346,11 @@ ht-degree: 0%
 
 * _ACP2E-2300_： B2B - Sitemap包括未分配给共享目录的产品/类别
    * _修复注释_：将Sitemap生成的类别和产品限制为仅分配给公共共享目录和/或目录类别权限设置的类别和产品。
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ea79f7dd>
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/commit/ea79f7dd>
 
-### Analytics/报表、云
+### 分析/报告，云
 
-* _ACP2E-3067_： Magento放弃大部分New Relic cron交易#34108
+* _ACP2E-3067_：Magento 丢弃大多数新遗物 cron 事务 #34108
    * _修复注释_： AC正在向NewRelic正确报告cron作业相关的事务。 以前，某些cron作业相关事务在NR中显示为“OtherTransaction/Action/unknown”
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/35b1b1da>
 * _ACP2E-3187_： NR中的量度可能对后台事务产生误导 — ACP2E-3067的跟进
@@ -582,15 +582,15 @@ ht-degree: 0%
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38622>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38623>
 * _AC-11970_：无法通过选中自定义选项的一个复选框来重新排序可配置产品
-   * _修复注释_：系统现在使用单个选定的复选框自定义选项正确处理可配置产品的重新排序，从而允许成功创建购物篮。 以前，尝试重新排序此类产品会导致错误，并阻止将商品添加到购物车。
-   * _GitHub问题_： <https://github.com/magento/magento2/issues/38736>
+   * _修复说明_：系统现在只需选中一个复选框自定义选项即可正确处理可配置产品的重新排序，从而成功创建购物篮。 以前，尝试重新订购此类产品会导致错误，并阻止将商品添加到购物车。
+   * _GitHub 问题_： <https://github.com/magento/magento2/issues/38736>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1d144bce>
 * _AC-12076_： [问题]修复分层导航上筛选器项的措辞
    * _修复注释_：系统现在正确使用了分层导航筛选器项中的“item”和“items”两词，从而增强了筛选器描述的清晰度和准确性。 以前，这些词语使用不正确，这可能导致导航过滤器选项的用户混淆。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38789>
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/37852>
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/pull/37852>
 * _AC-12164_：自定义选项的日期和时间格式不起作用
-   * _修复注释_：系统现在可以将配置的日期格式正确应用于类型为“日期”的产品自定义选项，确保日期格式在前端正确显示。 以前，对日期格式配置的更改不会反映在日期类型的产品自定义选项的前端。
+   * _修复说明_：系统现在将配置的日期格式正确应用于日期类型的产品自定义选项，确保日期格式在前端正确显示。 以前，对日期格式配置的更改不会反映在 Date 类型的产品自定义选项的前端。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/32990>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38925>
 * _AC-13068_：下拉列表选项缺失
@@ -751,11 +751,11 @@ ht-degree: 0%
    * _修复注释_：如果URL包含选定的选项，产品视频现在将在可配置的产品详细信息页面上正确呈现。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/078c387e>
 * _ACP2E-3461_： PageBuilder轮播构件显示不符合条件的产品
-   * _修复注释_：构件中使用的产品列表现在遵循类别条件
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/078c387e>
-* _ACP2E-3469_：当一个产品的数量无效时，将触发组中所有产品的验证错误
-   * _修复注释_：现在，当一个产品的数量无效时（以前未发生这种情况），将正确触发组中所有产品的验证错误。
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/56463d5e>
+   * _修复注意_：小部件中使用的产品列表现在尊重类别条件
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/commit/078c387e>
+* _ACP2E-3469_：当一个产品的数量无效时，为组中的所有产品触发验证错误
+   * _修复说明_：现在，当一个产品的数量无效时，系统会为组中的所有产品正确触发验证错误，这在以前不会发生。
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/commit/56463d5e>
 * _ACP2E-3513_： [CLOUD]可配置产品中未显示特殊价格
    * _修复注释_：修复之后，更改特殊价格属性的“在产品列表中使用”值将不会影响显示可配置产品的特殊价格。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/d4de4726>
@@ -989,16 +989,16 @@ ht-degree: 0%
 * _AC-10838_：目录搜索索引过程错误索引过程
    * _修复注释_：无论使用PHP编译的libxml版本如何，系统现在都能成功完成重新索引命令，而不会遇到任何错误。 以前，当使用特定版本的libxml编译PHP时，运行“重新索引”命令会导致“索引过程中出现目录搜索索引过程错误”错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38254>
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38553>，<https://github.com/magento/magento2/commit/0574ac23>
-* _AC-10941_：已将created_at、status和grand_total筛选器添加到客户订单查询，并修复了多个筛选器失败
-   * _修复注释_：系统现在支持在客户订单查询中使用created_at、status和grand_total筛选器，并且解决了多个筛选器未正确应用的问题。 以前，系统不支持这些过滤器，并且在查询中使用多个过滤器时，将无法应用所有过滤器。
-   * _GitHub问题_： <https://github.com/magento/magento2/issues/38392>
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/pull/38553>， <https://github.com/magento/magento2/commit/0574ac23>
+* _AC-10941_：向客户订单查询添加了created_at、状态和grand_total筛选器，并修复了多个筛选器失败的问题
+   * _修复注意_：系统现在支持在客户订单查询中使用created_at、状态和grand_total筛选器，并解决了未正确应用多个筛选器的问题。 以前，系统不支持这些筛选器，并且当查询中使用多个筛选器时，将无法应用所有筛选器。
+   * _GitHub 问题_： <https://github.com/magento/magento2/issues/38392>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/36949>
 * _AC-10991_：从相关/追加销售/交叉销售区块和价格索引中随机获取大量查询
    * _修复注释_：系统现在优化来自相关、追加销售和交叉销售块的查询，从而提高性能并防止网站因过多的查询而停机。 以前，系统可能会因这些块中的查询而过载，从而导致速度显着减慢，并可能使网站停机。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/36667>
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38050>
-* _AC-11423_：异常：警告：正在尝试访问ICU 74.1 (PHP Intl)升级后的Calendar.php中的数组偏移…… ->
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/pull/38050>
+* _AC-11423_：异常：警告：自升级到 ICU 74.1 以来，正在尝试访问数组偏移量 -> Calendar.php （PHP 国际机场）
    * _修复注释_：每当购物者或商家访问店面或管理员时，Commerce不再在exception.log中记录以下异常： `main.CRITICAL: Exception: Warning: Trying to access array offset on value of type null in /vendor/magento/framework/View/Element/Html/Calendar.php on line 114 in /vendor/magento/framework/App/ErrorHandler.php:62`。 [GitHub-38214](https://github.com/magento/magento2/issues/38214)
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38214>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38364>
@@ -1010,8 +1010,8 @@ ht-degree: 0%
    * _修复说明_： \Magento\Framework\Data\Collection：：getItemById方法的PHPDocs已更新，可能包含null作为返回类型，从而解决了静态分析工具的问题。 以前，该方法的PHPDocs不指定null作为可能的返回类型，导致在条件语句中使用该方法时进行静态分析时出现警告或错误。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38485>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38439>
-* _AC-11592_： [问题]在安装期间仅允许有效的首选项:di:编译
-   * _修复注释_：如果为不存在或明确排除的类创建首选项，系统现在会在安装:di:编译命令期间引发错误，确保只允许使用有效的首选项。 以前，这些方案将以静默方式失败，潜在地使与原始类关联的任何插件变得无用。
+* _AC-11592_： [问题]仅允许在`setup:di:compile`期间使用有效的首选项
+   * _修复注释_：现在，如果为不存在或特别排除的类创建了首选项，则系统将在`setup:di:compile`命令期间引发错误，从而确保仅允许使用有效的首选项。 以前，这些方案将以静默方式失败，潜在地使与原始类关联的任何插件变得无用。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38517>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/33161>
 * _AC-11651_： Magento尝试在LoggerProxy的__wakeUp方法中修改只读属性
@@ -1214,9 +1214,9 @@ ht-degree: 0%
 
 * _AC-11729_：即使标头值未通过验证，Magento_GraphQl也会执行标头处理
    * _修复注释_：系统现在确保仅在标头值通过验证时只执行一次标头处理，从而增强安全性并防止潜在漏洞。 以前，即使标头值未通过验证，也会执行标头处理，这会由于两次处理标头值而导致潜在漏洞和意外行为。
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/c8f87c25>
-* _AC-8951_：物理Giftcard选项没有正确的排序顺序
-   * _修复注释_：在通过GraphQL查询时，系统现在可以正确排序实际礼品卡产品的选项，确保与Luma主题一致的呈现。 以前，根据Luma主题排序顺序不正确，导致显示和排序选项不正确，例如发件人姓名、收件人姓名和金额。
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/commit/c8f87c25>
+* _AC-8951_：实体礼品卡选项的排序顺序不正确
+   * _修复说明_：当通过 GraphQL 查询时，系统现在可以正确排序实体礼品卡产品的选项，确保与 Luma 主题的呈现一致。 以前，根据亮度主题的排序顺序不正确，导致发件人姓名、收件人姓名和金额等选项的显示和排序不正确。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/1bafc571>
 * _AC-9157_： [GraphQL]解析器缓存在创建/编辑/移动/删除临时更新时失效
    * _修复注释_：系统现在确保在创建、编辑、移动或删除临时更新时不会使解析程序缓存失效，但仅当将临时更新应用于实体时才会使解析程序缓存失效。 以前，解析程序缓存过早失效，甚至在应用暂存更新之前就失效，这导致不必要的缓存失效。
@@ -1411,11 +1411,11 @@ ht-degree: 0%
    * _修复注释_：当数据库使用前缀时，系统现在可以正确更新可配置产品的清单，从而防止出现任何错误消息并确保保存正确的数量。 以前，如果数据库使用前缀，则在尝试保存可配置产品中简单产品的库存数量时会出错。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/38045>
 * _AC-11593_：添加具有属性的映射时，Google google API密钥不起作用
-   * _修复注释_：系统现在支持最新的Google Maps API版本3.56，使用户能够成功地将映射内容块从PageBuilder菜单添加到舞台中，而不会遇到任何错误。 以前，由于Google地图API版本存在兼容性问题，用户无法添加地图内容块，从而导致“出现问题”错误消息。
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0574ac23>
-* _AC-13922_：无法为具有多个来源且SKU已损坏的订单项目创建装运
-   * _修复注释_：以前，通过数据库错误地在SKU中添加空格会导致装运页面出错，该错误现已修复，并且自动修剪被视为人性化的错误，未找到任何影响。因此，已成功创建装运。
-   * _GitHub代码贡献_： <https://github.com/magento/inventory/commit/c18eb5fa>
+   * _修复说明_：系统现在支持最新的 Google 地图 API 版本 3.56，允许用户从页面构建器菜单中成功将地图内容块添加到舞台，而不会遇到任何错误。 以前，由于与 Google Maps API 版本的兼容性问题，用户无法添加地图内容区块，从而导致出现“出现问题”错误消息。
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/commit/0574ac23>
+* _AC-13922_：无法为具有多个来源和损坏 SKU 的订单项目创建货件
+   * _修复说明_：早些时候，当空格错误地通过数据库添加到SKU中时，会导致货件页面出错，该页面现已修复，自动修剪被视为人类友好错误，未发现任何影响。因此，已成功创建装运。
+   * _GitHub 代码贡献_： <https://github.com/magento/inventory/commit/c18eb5fa>
 * _ACP2E-1411_：[测试]捆绑销售前部显示库存为0的产品
    * _修复注释_：捆绑产品未使用其他库存显示在其他网站上。
 * _ACP2E-2794_：[Cloud]产品列表的关键问题为空白
@@ -1566,7 +1566,7 @@ ht-degree: 0%
    * _修复注释_：修复了以下问题：如果购物车还包含库存不足的可配置产品，则尝试从购物车中删除库存产品会导致“请求的数量不可用”GraphQL错误。 现在，删除操作可按预期运行，而不会触发错误。
 * _LYNX-469_：由于突变中的SKU区分大小写，无法添加产品
    * _修复注释_：解决了使用具有不同大小写的SKU时，addProductsToCart突变返回“PRODUCT_NOT_FOUND”错误的问题。 该突变现在处理SKU不区分大小写，确保与目录服务查询和PDP行为一致。
-* _LYNX-603_： Product attribute > trademark short form ™返回为™
+* _LYNX-603_： Product attribute > trademark short form &amp;amp；trade；返回为&amp;amp；trade；
    * _修复注释_：解决了GraphQL API的产品名称存在的字符编码问题
 * _LYNX-619_： updateCustomerEmail突变问题
    * _修复注释_：解决了updateCustomerEmail突变的问题，该问题导致没有所需自定义属性（在创建帐户后添加）的客户无法更新其电子邮件。
@@ -1639,17 +1639,17 @@ ht-degree: 0%
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/0611e750>
 * _AC-12731_：与dev/css/use_css_critical_path结合使用的CSP问题
    * _修复注释_：现在，即使启用了“dev/css/use_css_critical_path”设置，系统也会在签出页面上正确异步加载CSS文件，从而确保这些页面使用正确的CSS样式呈现。 以前，受限制的内容安全策略(CSP)阻止执行内联JavaScript，这导致CSS文件无法按预期加载。
-   * _GitHub问题_： <https://github.com/magento/magento2/issues/39020>
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/39040>
-* _AC-13398_：使用虚拟类型配置插件，无法在安装程序:di:编译命令中正确生成侦听器方法
-   * _修复注释_：系统现在在使用虚拟类型配置插件时正确生成侦听器方法，从而确保无论是预编译的结果还是运行时编译的结果都一致。 以前，与运行时编译相比，在预编译时，系统会产生不正确的结果。
+   * _GitHub 问题_： <https://github.com/magento/magento2/issues/39020>
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/pull/39040>
+* _AC-13398_：使用虚拟类型配置插件，无法在命令中 `setup:di:compile` 正确生成拦截器方法
+   * _修复说明_：现在，在使用虚拟类型配置插件时，系统会正确生成拦截器方法，确保无论是预编译还是运行时编译的结果一致。 以前，与运行时编译相比，在预编译时，系统会产生不正确的结果。
    * _GitHub问题_： <https://github.com/magento/magento2/issues/33980>
    * _GitHub代码贡献_： <https://github.com/magento/magento2/pull/38141>
 * _ACP2E-3441_：无法从数据收集器下载文件
    * _修复注释_：下载备份不再显示空白页而非下载文件。
-* _ACP2E-3631_： Adobe Commerce 2.4.7-p3单元测试失败
+* _ACP2E-3631_：Adobe Commerce 2.4.7-p3 单元测试失败
    * _修复说明_：不需要发行说明。
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/982b1c42>
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/commit/982b1c42>
 
 ### 付款/付款方式、订单
 
@@ -1832,9 +1832,9 @@ ht-degree: 0%
    * _修复注释_：使用自定义作用域URL键为父项的子项生成正确的URL重写
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/ea79f7dd>
 * _ACP2E-2770_：“产品名称”字段中的双字节字符（特殊字符）会阻止在后端创建产品
-   * _修复注释_：添加了新设置，允许您对产品URL应用音译或不应用音译。 可在以下位置进行设置：存储>配置>目录>目录>搜索引擎优化：“为产品URL应用音译”
-   * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/b2286ecf>
-* _ACP2E-3383_：在一个商店组中创建了多个商店的url_rewrite条目不正确
+   * _修复说明_：添加了一个新设置，允许您是否将音译应用于产品 URL。 设置在此处可用： 存储>配置>目录>目录>搜索引擎优化：“对产品 URL 应用音译”
+   * _GitHub 代码贡献_： <https://github.com/magento/magento2/commit/b2286ecf>
+* _ACP2E-3383_：在一个商店组中创建多个商店的url_rewrite条目不正确
    * _修复注释_：在修复之前，您只能在编辑产品时生成网站级别的URL重写。 修复后，引入了一个新设置（存储>配置>目录>目录>搜索引擎优化，包含选项“存储视图”、“网站”的“产品URL重写范围”），允许您在存储视图或网站级别生成URL重写。
    * _GitHub代码贡献_： <https://github.com/magento/magento2/commit/2d627301>
 
