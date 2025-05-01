@@ -3,9 +3,9 @@ title: 目录配置路径引用
 description: 查看目录配置值的列表。
 feature: Configuration, Catalog Management
 exl-id: 19451443-228e-437d-a3eb-7dc968b9fb0d
-source-git-commit: df8878a3fea19b8f1780b5037273e18b5a3f1373
+source-git-commit: 47bda51cdcab964c37d9f652d467d69d795d8641
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -69,8 +69,8 @@ ht-degree: 0%
 | 启用搜索建议 | `catalog/search/search_suggestion_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 搜索建议计数 | `catalog/search/search_suggestion_count` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 显示每个建议的结果计数 | `catalog/search/search_suggestion_count_results_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
-| 启用搜索Recommendations | `catalog/search/search_recommendations_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
-| 搜索Recommendations计数 | `catalog/search/search_recommendations_count` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 启用搜索推荐 | `catalog/search/search_recommendations_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
+| 搜索推荐计数 | `catalog/search/search_recommendations_count` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 显示每个推荐的结果计数 | `catalog/search/search_recommendations_count_results_enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 要匹配的最少搜索词 | `catalog/search/minimum_should_match` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 生成“类别/产品”URL重写 | `catalog/seo/generate_category_product_rewrites` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -150,6 +150,8 @@ ht-degree: 0%
 {style="table-layout:auto"}
 
 ## 可视化促销路径
+
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
 
 这些配置值在&#x200B;**存储** >设置> **配置** > **目录** > **可视推销**&#x200B;中的管理员中可用。
 
