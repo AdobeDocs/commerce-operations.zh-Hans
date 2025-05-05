@@ -2,9 +2,9 @@
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤在Adobe Commerce项目的命令行界面中运行 [!DNL Upgrade Compatibility Tool] 。
 exl-id: ea467a74-18eb-476b-96e2-23f4fc257d73
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: bfb952d29bd3d7fc7147107216981e05202e44aa
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1079'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ chmod +x ./uct/bin/uct
 
 [!DNL Upgrade Compatibility Tool]是一种通过分析其中安装的所有模块来针对特定版本检查Adobe Commerce自定义实例的工具。 它会返回在升级到最新版本的Adobe Commerce之前必须解决的严重问题、错误和警告列表。
 
-请参阅此[视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=zh-Hans) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
+请参阅此[视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=en) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
 
 命令行界面中[!DNL Upgrade Compatibility Tool]的可用命令：
 
@@ -59,7 +59,7 @@ bin/uct upgrade:check <dir>
 
 | **命令** | **可用选项** |
 |----------------|-----------------|
-| `upgrade:check` | <ul><li>—help：返回所有可用选项。</li><li>—current-version：当前的Adobe Commerce版本。 此参数是必需的，必须始终使用。</li><li> — 最小问题级别：您可以根据最小问题级别筛选问题（默认值为“警告”）。</li><li>—ignore-current-version-compatibility-issues（或 — i）：如果不想在报表中包含来自当前版本的严重问题、错误和警告。</li><li> — 即将推出的版本（或 — c）：定位特定的Adobe Commerce版本。 如果省略，将使用最新可用的。</li></ul> |
+| `upgrade:check` | <ul><li>—help：返回所有可用选项。</li><li>—current-version：当前的Adobe Commerce版本。 如果忽略，则将使用Adobe Commerce安装的版本。</li><li> — 最小问题级别：您可以根据最小问题级别筛选问题（默认值为“警告”）。</li><li>—ignore-current-version-compatibility-issues（或 — i）：如果不想在报表中包含来自当前版本的严重问题、错误和警告。</li><li> — 即将推出的版本（或 — c）：定位特定的Adobe Commerce版本。 如果省略，将使用最新可用的。</li></ul> |
 
 [!DNL Upgrade Compatibility Tool]允许您运行带有`--ignore-current-version-compatibility-issues`选项的`upgrade:check`命令。 当您只想在[!DNL Upgrade Compatibility Tool]报表中获取从当前版本更新到目标版本时引入的新问题时，可使用此选项：
 
@@ -146,7 +146,7 @@ bin/uct core:code:changes <dir> <vanilla dir>
 
 >[!NOTE]
 >
-> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)。
+> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)。
 
 ### Vanilla安装
 
@@ -259,8 +259,8 @@ bin/uct upgrade:check --help
 
 - 避免使用具有相同名称的两个模块。
 - 遵循Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards/)。
-- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)最佳实践。
-- 在云基础架构[&#128279;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans){target=_blank}项目中为Adobe Commerce运行[[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html?lang=zh-Hans)中的[!DNL Upgrade Compatibility Tool]。
+- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)最佳实践。
+- 在云基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}项目中为[Adobe Commerce运行[[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html)中的[!DNL Upgrade Compatibility Tool]。
 
 ## 优化结果
 
