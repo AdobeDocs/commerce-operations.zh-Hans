@@ -21,7 +21,7 @@ Commerce数据跟踪服务可以存储适用于隐私法规的隐私信息，例
 
 >[!NOTE]
 >
->如果启用了[Cookie限制模式](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html)，则在购物者同意之前，Commerce不会收集行为数据。 如果&#x200B;[!UICONTROL **Cookie限制模式**]&#x200B;被禁用，Commerce将默认收集行为数据。
+>如果启用了[Cookie限制模式](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html?lang=zh-Hans)，则在购物者同意之前，Commerce不会收集行为数据。 如果&#x200B;[!UICONTROL **Cookie限制模式**]&#x200B;被禁用，Commerce将默认收集行为数据。
 
 ## 安装
 

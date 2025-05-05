@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html)。
+>- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html?lang=zh-Hans)。
 >- 如果您克隆GitHub存储库，请勿使用此方法进行升级。 请参阅[升级基于Git的安装](../developer/git-installs.md)。
 
 以下说明说明了如何使用编辑器包管理器进行升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须先使用编辑器1 _升级到与编辑器2（例如，2.4.2）兼容的版本，然后再将_&#x200B;升级到编辑器2，以进行>2.4.2升级。 此外，您必须运行[支持的PHP版本](../../installation/system-requirements.md)。

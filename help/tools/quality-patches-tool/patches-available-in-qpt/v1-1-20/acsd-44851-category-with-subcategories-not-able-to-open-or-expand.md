@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # ACSD-44851：子类别无法打开或展开的类别
 
-ACSD-44851修补程序解决了用户无法打开或扩展具有子类别的类别的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.20时，此修补程序可用。 修补程序ID为ACSD-44851。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+ACSD-44851修补程序解决了用户无法打开或扩展具有子类别的类别的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.20时，此修补程序可用。 修补程序ID为ACSD-44851。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 
 ## 受影响的产品和版本
 
@@ -27,7 +27,7 @@ ACSD-44851修补程序解决了用户无法打开或扩展具有子类别的类�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新的Quality Patches Tool版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新的Quality Patches Tool版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -55,7 +55,7 @@ ACSD-44851修补程序解决了用户无法打开或扩展具有子类别的类�
 
 * Adobe Commerce或Magento Open Source内部部署： Quality Patches Tool指南中的[Quality Patches Tools >用法](/help/tools/quality-patches-tool/usage.md)。
 
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读
 

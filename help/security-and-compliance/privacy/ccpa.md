@@ -26,7 +26,7 @@ CCPA授予消费者以下新权利：
 
 ## CCPA合规性
 
-制定和实施CCPA合规计划需要协调一致的努力。 我们鼓励商家组建一个跨职能团队，并遵循[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html)中概述的路线图，使他们的公司遵守法规。 作为开发人员，您可能会被邀请作为利益相关者参加，重点是该过程的步骤2到5。 有关详细信息，请参阅[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html)。
+制定和实施CCPA合规计划需要协调一致的努力。 我们鼓励商家组建一个跨职能团队，并遵循[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html?lang=zh-Hans)中概述的路线图，使他们的公司遵守法规。 作为开发人员，您可能会被邀请作为利益相关者参加，重点是该过程的步骤2到5。 有关详细信息，请参阅[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html?lang=zh-Hans)。
 
 1. 组建一个跨职能团队以解决CCPA合规性问题。
 

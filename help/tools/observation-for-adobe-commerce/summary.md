@@ -58,7 +58,7 @@ ht-degree: 0%
 
 主机![&#128279;](../../assets/tools/cpu-percent-by-host.jpg)的CPU百分比
 
-所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU使用率的更多提示，请参阅[在Adobe Commerce上使用New Relic排除性能故障](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)。
+所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU使用率的更多提示，请参阅[在Adobe Commerce上使用New Relic排除性能故障](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=zh-Hans)。
 
 ## [!UICONTROL Alerts during timeframe]
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ![CPU使用率](../../assets/tools/cpu-usage.jpg)
 
-如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html)为您的网站启用[!DNL New Relic Infrastructure]。
+如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans)为您的网站启用[!DNL New Relic Infrastructure]。
 
 ## [!UICONTROL Average Response Time]
 

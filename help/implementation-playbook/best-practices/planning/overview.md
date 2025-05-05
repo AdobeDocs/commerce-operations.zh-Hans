@@ -46,7 +46,7 @@ ht-degree: 1%
     <td>修复和防止Adobe Commerce站点最常见的五个配置问题。</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html">缓存</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html?lang=zh-Hans">缓存</a></td>
     <td>使用缓存管理工具提高站点的性能。</td>
   </tr>
   <tr>
@@ -76,11 +76,11 @@ ht-degree: 1%
     <td colspan="2"><em>服务配置</em></td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html">设置Fastly</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=zh-Hans">设置Fastly</a></td>
     <td>在云基础架构项目中为Adobe Commerce配置Fastly服务。</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html">为New Relic配置通知渠道</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html?lang=zh-Hans">为New Relic配置通知渠道</a></td>
     <td>访问您的New Relic功能板并分析来自Adobe Commerce的云基础架构项目数据。</td>
   </tr>
   <tr>

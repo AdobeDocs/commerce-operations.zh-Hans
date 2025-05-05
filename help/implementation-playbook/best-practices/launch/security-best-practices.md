@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关在云基础架构上保护和维护Adobe Commerce项目的角色和责任的信息，请参阅&#x200B;_Adobe Commerce安全和合规性指南_&#x200B;中的[共享责任模型](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility#security-responsibilities-chart)。
+>有关在云基础架构上保护和维护Adobe Commerce项目的角色和责任的信息，请参阅&#x200B;_Adobe Commerce安全和合规性指南_&#x200B;中的[共享责任模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility#security-responsibilities-chart)。
 
 [所有受支持的版本](../../../release/versions.md)，共：
 
@@ -31,21 +31,21 @@ Adobe认为以下建议对所有客户具有最高优先级。 在所有Commerce
 
 ![核对清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **为您的管理员和所有SSH连接启用双重身份验证**
 
-- [Commerce管理员的安全性](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/2fa/security-two-factor-authentication.html)
+- [Commerce管理员的安全性](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/2fa/security-two-factor-authentication.html?lang=zh-Hans)
 
-- [安全SSH连接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/multi-factor-authentication.html) （云基础架构）
+- [安全SSH连接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/multi-factor-authentication.html?lang=zh-Hans) （云基础架构）
 
 在项目上启用MFA后，具有SSH访问权限的云基础架构上的所有Adobe Commerce帐户都必须遵循身份验证工作流。 此工作流需要双重身份验证(2FA)代码，或者API令牌和SSH证书来访问环境。
 
 ![检查清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **保护管理员**
 
-- [配置非默认管理员URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url)，而不是使用默认`admin`或常用术语，如`backend`。 此配置可减少尝试获得对网站的未经授权访问的脚本的风险。
+- [配置非默认管理员URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=zh-Hans#use-a-custom-admin-url)，而不是使用默认`admin`或常用术语，如`backend`。 此配置可减少尝试获得对网站的未经授权访问的脚本的风险。
 
-- [配置高级安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html) — 向URL添加密钥，要求密码区分大小写，并限制管理员会话长度、密码生命周期间隔以及锁定管理员用户帐户之前允许的登录尝试次数。 为了提高安全性，请配置在当前会话过期之前键盘处于非活动状态的长度，并要求用户名和密码区分大小写。
+- [配置高级安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html?lang=zh-Hans) — 向URL添加密钥，要求密码区分大小写，并限制管理员会话长度、密码生命周期间隔以及锁定管理员用户帐户之前允许的登录尝试次数。 为了提高安全性，请配置在当前会话过期之前键盘处于非活动状态的长度，并要求用户名和密码区分大小写。
 
-- [启用ReCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html)以保护管理员免受自动暴力攻击。
+- [启用ReCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html?lang=zh-Hans)以保护管理员免受自动暴力攻击。
 
-- 在将[管理员权限](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html)分配给角色和角色分配给管理员用户帐户时，遵循最小权限原则。
+- 在将[管理员权限](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html?lang=zh-Hans)分配给角色和角色分配给管理员用户帐户时，遵循最小权限原则。
 
 ![检查清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **升级到Adobe Commerce的最新版本**
 
@@ -55,11 +55,11 @@ Adobe认为以下建议对所有客户具有最高优先级。 在所有Commerce
 
 使用[配置管理](../../../configuration/cli/set-configuration-values.md)锁定关键配置值。
 
-`lock config`和`lock env` CLI命令可配置环境变量，以防止从管理员更新它们。 该命令将该值写入`<Commerce base dir>/app/etc/env.php`文件。 (对于云基础架构项目上的Commerce，请参阅[存储配置管理](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html#sensitive-data)。)
+`lock config`和`lock env` CLI命令可配置环境变量，以防止从管理员更新它们。 该命令将该值写入`<Commerce base dir>/app/etc/env.php`文件。 (对于云基础架构项目上的Commerce，请参阅[存储配置管理](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html?lang=zh-Hans#sensitive-data)。)
 
 ![检查清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **运行安全扫描**
 
-使用[Commerce安全扫描服务](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html)监视所有Adobe Commerce站点是否存在已知的安全风险和恶意软件，并注册以接收修补程序更新和安全通知。
+使用[Commerce安全扫描服务](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html?lang=zh-Hans)监视所有Adobe Commerce站点是否存在已知的安全风险和恶意软件，并注册以接收修补程序更新和安全通知。
 
 ## 确保扩展和自定义代码的安全性
 
@@ -109,9 +109,9 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
 **Adobe Commerce已部署在云基础架构上**
 
-- [备份和灾难恢复](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html#backup-and-disaster-recovery)
+- [备份和灾难恢复](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html?lang=zh-Hans#backup-and-disaster-recovery)
 
-- 在云基础架构上[存储Adobe Commerce的配置管理](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html)
+- 在云基础架构上[存储Adobe Commerce的配置管理](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html?lang=zh-Hans)
 
 **Adobe Commerce已部署在本地**
 
@@ -129,9 +129,9 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
 ![检查清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用Web应用程序防火墙** — 分析通信并发现可疑模式，例如使用Web应用程序防火墙发送到未知IP地址的信用卡信息。
 
-部署在云基础架构上的Adobe Commerce安装可以使用随[Fastly服务集成](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html)提供的内置WAF服务
+部署在云基础架构上的Adobe Commerce安装可以使用随[Fastly服务集成](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html?lang=zh-Hans)提供的内置WAF服务
 
-![核对清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **配置高级密码安全设置** — 按照PCI数据安全标准第8.2.4节中的建议，设置强密码并至少每90天更改一次。请参阅[配置管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html)。
+![核对清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **配置高级密码安全设置** — 按照PCI数据安全标准第8.2.4节中的建议，设置强密码并至少每90天更改一次。请参阅[配置管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html?lang=zh-Hans)。
 
 ![检查清单](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **使用HTTPS** — 如果Commerce站点是新实施的，请使用HTTPS启动整个站点。 Google不仅使用HTTPS作为排名因素，而且许多用户甚至不考虑从网站购买，除非网站受HTTPS保护。
 
@@ -178,7 +178,7 @@ Commerce通常按季度发布安全更新，但保留根据优先级和其他因
 
 - 通过设置一个访问控制列表（仅允许来自指定IP地址或网络的用户访问），控制对Commerce站点的访问。
 
-  您可以使用带有自定义VCL代码片段的Fastly Edge ACL来过滤传入的请求并允许按IP地址访问。 查看[自定义VCL以允许请求](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html)。
+  您可以使用带有自定义VCL代码片段的Fastly Edge ACL来过滤传入的请求并允许按IP地址访问。 查看[自定义VCL以允许请求](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=zh-Hans)。
 
 
   >[!TIP]

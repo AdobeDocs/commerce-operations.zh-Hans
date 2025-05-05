@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ## [!DNL Commerce Services Connector]
 
-代理需要在您的系统上安装[[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)扩展和[已使用API密钥配置](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)。 要验证是否已安装扩展，请运行以下命令：
+代理需要在您的系统上安装[[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=zh-Hans)扩展和[已使用API密钥配置](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=zh-Hans)。 要验证是否已安装扩展，请运行以下命令：
 
 ```bash
 bin/magento module:status Magento_ServicesId
@@ -92,13 +92,13 @@ bin/magento module:status Magento_ServicesId
 
    >[!NOTE]
    >
-   > 如果访问帐户时遇到问题，请参阅[无法登录Adobe Commerce支持或云帐户](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html)以获取疑难解答帮助。
+   > 如果访问帐户时遇到问题，请参阅[无法登录Adobe Commerce支持或云帐户](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html?lang=zh-Hans)以获取疑难解答帮助。
 
 1. 单击&#x200B;**[!UICONTROL API Portal]**。
 
 1. 单击现有API密钥旁边的&#x200B;**[!UICONTROL Delete]**。
 
-1. [配置](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)新的API密钥。
+1. [配置](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=zh-Hans)新的API密钥。
 
 >[!IMPORTANT]
 >
@@ -130,7 +130,7 @@ bin/magento module:status Magento_ServicesId
    bin/magento cache:clean
    ```
 
-1. [配置API密钥](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)以将扩展连接到您的系统。
+1. [配置API密钥](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=zh-Hans)以将扩展连接到您的系统。
 
 ## 安装代理
 
@@ -404,7 +404,7 @@ FATA[2022-12-10 20:38:44] bad http status from https://updater.supportinsights.a
 1. 执行[脚本安装](#scripted)，保存输出并查看输出是否有错误。
 1. 查看生成的`config.yaml`文件，并验证指向Commerce实例和PHP的路径是否正确。
 1. 确保运行计划程序的用户位于[文件系统所有者](../../installation/prerequisites/file-system/overview.md) Unix组中，或者与文件系统所有者是同一个用户。
-1. 确保已正确安装[Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html)密钥，并尝试更新这些密钥以将扩展连接到您的系统。
+1. 确保已正确安装[Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=zh-Hans)密钥，并尝试更新这些密钥以将扩展连接到您的系统。
 1. [在更新密钥后卸载](#uninstall)代理并使用[安装脚本](#scripted)重新安装。
 1. 运行调度程序并查看您是否仍收到相同的错误。
 1. 如果您仍收到相同的错误，请增加`config.yaml`中的日志级别以调试并打开支持票证。

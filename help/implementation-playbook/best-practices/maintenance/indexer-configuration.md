@@ -35,7 +35,7 @@ Adobe Commerce具有两种类型的索引器模式：[!UICONTROL Update on Save]
 要最大限度地提高网站性能，请遵循以下编制索引最佳实践：
 
 - 查看索引配置。
-- 对于大型网站以及经常更新和流量较大的网站，将索引器设置为&#x200B;_[!UICONTROL Update on Schedule]_。 请参阅[索引管理](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/index-management#change-the-index-mode)。
+- 对于大型网站以及经常更新和流量较大的网站，将索引器设置为&#x200B;_[!UICONTROL Update on Schedule]_。 请参阅[索引管理](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/index-management#change-the-index-mode)。
 - 遵循[性能最佳实践](../../../performance/configuration.md)来管理索引。
 
 >[!IMPORTANT]
@@ -45,5 +45,5 @@ Adobe Commerce具有两种类型的索引器模式：[!UICONTROL Update on Save]
 ## 其他信息
 
 - [管理员用户的索引管理](../../../configuration/cli/manage-indexers.md#configure-indexers)
-- [使用MagentoCLI进行索引管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
+- [使用MagentoCLI进行索引管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hans)
 - [针对开发人员的索引概述](https://developer.adobe.com/commerce/php/development/components/indexing/)

@@ -57,7 +57,7 @@ ht-degree: 0%
 
 随着我们不断扩展Adobe Commerce的功能，您必须在最新可用版本上进行开发，并在项目计划中定义升级策略，这一点至关重要。 这样做有助于您保持安全、合规并及时了解最新的增强功能，从而让您能够更快地增加销售额、更有效地运营，并在现在和未来保持竞争优势。
 
-为了帮助您规划和预算升级，您应该监视我们的[发布计划](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule)。 提前计划团队积压中的升级任务。 旨在用GA完成此工作。
+为了帮助您规划和预算升级，您应该监视我们的[发布计划](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/schedule)。 提前计划团队积压中的升级任务。 旨在用GA完成此工作。
 
 - 使用预发行版本了解每个新版本。 预发布是Adobe Commerce商家和所有合作伙伴在正式发布两周之前可用的正式发布代码。 如果您有多个商店，请使用基础商店上的预发行版，并验证您的自定义模块和主题是否与该商店兼容。
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 评估升级要完成的工作：
 
-- 查看[发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)，了解新版本的范围和影响。
+- 查看[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/overview)，了解新版本的范围和影响。
 
 - 在尝试升级到新版本之前，请使用[[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md)确定自定义代码中必须修复的潜在问题。
 

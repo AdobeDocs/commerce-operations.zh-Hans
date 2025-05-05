@@ -31,5 +31,5 @@ ht-degree: 0%
 
 有关Adobe Commerce如何帮助商家遵守GDPR的更多信息，请参阅以下内容：
 
-- [GDPR合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
+- [GDPR合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html?lang=zh-Hans)
 - [Adobe Commerce已为GDPR做好准备](https://business.adobe.com/privacy/general-data-protection-regulation.html)

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 可以使用以下任一方法应用修补程序：
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
 - [命令行](../patches/apply.md#command-line)
 - [Composer](../patches/apply.md#composer)
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->要应用官方质量修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
+>要应用官方质量修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
 
 要使用编辑器应用自定义修补程序，请执行以下操作：
 

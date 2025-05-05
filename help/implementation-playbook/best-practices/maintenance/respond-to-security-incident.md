@@ -63,7 +63,7 @@ ht-degree: 0%
 
 事件分析的第一步是尽可能快速地收集尽可能多的事实。 收集有关事件的信息有助于确定事件的潜在原因。 Adobe Commerce提供以下工具以帮助进行事件分析。
 
-- [审核管理员操作日志](https://experienceleague.adobe.com/docs/commerce-admin/systems/action-logs/action-log-report.html)。
+- [审核管理员操作日志](https://experienceleague.adobe.com/docs/commerce-admin/systems/action-logs/action-log-report.html?lang=zh-Hans)。
 
   操作日志报告显示所有启用日志记录的管理员操作的详细记录。 每个记录都加盖时间戳，并注册用户的IP地址和名称。 日志详细信息包括管理员用户数据以及在操作期间所做的相关更改。
 
@@ -73,9 +73,9 @@ ht-degree: 0%
 
   使用工具中的&#x200B;**安全性**&#x200B;选项卡可清楚地了解潜在的安全问题，从而帮助确定根本原因并保持网站性能处于最佳状态。
 
-- 使用[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)分析日志
+- 使用[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=zh-Hans)分析日志
 
-  云基础架构Pro项目上的Adobe Commerce包括[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html)服务。 该服务已预配置为汇总暂存和生产环境中的所有日志数据，以便在集中式日志管理功能板中显示这些数据，您可以在其中搜索和可视化汇总的数据。
+  云基础架构Pro项目上的Adobe Commerce包括[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html?lang=zh-Hans)服务。 该服务已预配置为汇总暂存和生产环境中的所有日志数据，以便在集中式日志管理功能板中显示这些数据，您可以在其中搜索和可视化汇总的数据。
 
   对于其他Commerce项目，您可以设置并使用[New Relic日志](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/)服务来完成以下任务：
    - 使用[New Relic查询](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs)搜索聚合日志数据。
@@ -89,17 +89,17 @@ ht-degree: 0%
 
 ### 审核管理员用户帐户
 
-- [查看管理员用户访问权限](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html) — 删除旧的、未使用的或可疑的帐户，并为所有管理员用户轮换密码。
+- [查看管理员用户访问权限](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html?lang=zh-Hans) — 删除旧的、未使用的或可疑的帐户，并为所有管理员用户轮换密码。
 
-- [查看管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html) — 验证管理员安全设置是否遵循安全最佳实践。
+- [查看管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html?lang=zh-Hans) — 验证管理员安全设置是否遵循安全最佳实践。
 
-- [在云基础架构项目中检查Adobe Commerce的用户帐户](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html) — 删除旧的、未使用的或可疑的帐户，并为所有云项目管理员用户轮换密码。 确保正确配置帐户安全设置。
+- [在云基础架构项目中检查Adobe Commerce的用户帐户](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html?lang=zh-Hans) — 删除旧的、未使用的或可疑的帐户，并为所有云项目管理员用户轮换密码。 确保正确配置帐户安全设置。
 
-- 在云基础架构上[审核Adobe Commerce的SSH密钥](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html) — 审核、删除和轮换SSH密钥。
+- 在云基础架构上[审核Adobe Commerce的SSH密钥](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html?lang=zh-Hans) — 审核、删除和轮换SSH密钥。
 
 ### 审核代码
 
-- 从管理员中，查看所有作用域级别（包括`website`和`store view`）的[HTML页眉和页脚配置](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html)。 从脚本和样式表中删除所有未知的JavaScript代码以及其他HTML设置。 仅保留已识别的代码，例如跟踪片段。
+- 从管理员中，查看所有作用域级别（包括`website`和`store view`）的[HTML页眉和页脚配置](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html?lang=zh-Hans)。 从脚本和样式表中删除所有未知的JavaScript代码以及其他HTML设置。 仅保留已识别的代码，例如跟踪片段。
 
 - 将当前的生产代码库与版本控制系统(VCS)中存储的代码库进行比较。
 

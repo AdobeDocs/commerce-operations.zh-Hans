@@ -51,7 +51,7 @@ Adobe Commerce提供了配置文件，使您能够轻松自定义组件和创建
 示例：
 
 - 卸载组件： [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
-- 检查组件的状态： [`bin/magento module:status`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
+- 检查组件的状态： [`bin/magento module:status`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
 - 启用或禁用组件： [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md)，[`bin/magento module:enable`](../../installation/tutorials/manage-modules.md)。
 
 > _config.php_

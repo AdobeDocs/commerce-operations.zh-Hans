@@ -29,7 +29,7 @@ bin/magento module:status [--enabled] [--disabled] <module-list>
 
 >[!NOTE]
 >
->不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow)。
+>不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=zh-Hans#deployment-workflow)。
 
 ## 模块启用、禁用
 
