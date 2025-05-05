@@ -37,7 +37,7 @@ ht-degree: 0%
 
 观看此视频以了解[!DNL Upgrade Compatibility Tool]：
 
->[!VIDEO](https://video.tv.adobe.com/v/341245?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/344381?quality=12&captions=chi_hans)
 
 ## 帮助改进[!DNL Upgrade Compatibility Tool]
 
