@@ -40,15 +40,15 @@ ACSD-56415修补程序修复了在数据库具有大量部分价格数据索引�
 1. 创建&#x200B;*10个客户组*。
 1. 执行以下查询以将产品添加到`_cl`表：
 
-   ``
+   &grave;&grave;
     insert into catalog_product_price_cl (entity_id) select entity_id from catalog_product_entity
- ``
+ &grave;&grave;
 
 1. 执行以下命令以触发部分价格索引过程：
 
-   ``
+   &grave;&grave;
     bin/magento cron:run --group=index --bootstrap=standaloneProcessStarted=1
- ``
+ &grave;&grave;
 
 <u>预期的结果</u>：
 

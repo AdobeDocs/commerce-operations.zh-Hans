@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## [!UICONTROL CPU % by host]
 
-主机](../../assets/tools/cpu-percent-by-host.jpg)的![CPU百分比
+主机![&#128279;](../../assets/tools/cpu-percent-by-host.jpg)的CPU百分比
 
 所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU使用率的更多提示，请参阅[在Adobe Commerce上使用New Relic排除性能故障](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)。
 
@@ -384,7 +384,7 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 * &#39;%您可以通过将您的Magento云基础结构上的Elasticsearch服务升级到“ver_err”版本%来解决此问题
 * “%cluster运行状况状态已从\[YELLOW\]更改为\[RED\]（原因：%）为“yel_red”
 * “%No space”作为“no_space”，在设备%上已没有剩余空间
-* “%”无法作为“failed_query”执行[SearchRequest{searchType=%&#39;
+* “%”无法作为“failed_query”执行&lbrack;SearchRequest&lbrace;searchType=%&#39;
 
 ## [!UICONTROL Cron view]
 

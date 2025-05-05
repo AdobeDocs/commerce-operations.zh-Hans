@@ -175,7 +175,7 @@ ht-degree: 0%
 * __在管理员中，当我们尝试重新排序时，提交订单按钮不可单击。 （间歇性）__
   _AC-14300_
 * __[问题]将默认索引器模式设置为“计划”__
-默认情况下，所有新索引器都处于**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
+默认情况下，所有新索引器都处于&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
   _AC-6975 - [GitHub问题](https://github.com/magento/magento2/issues/36419) - [GitHub代码贡献](https://github.com/magento/magento2/commit/0b410856)_
 * __[问题]在mview取消订阅时删除索引器更改日志表__
 现在，当索引从“按计划更新”切换到“保存时更新”时，系统自动删除未使用的更改日志表，将索引标记为无效，以确保没有丢失任何条目。 以前，将索引切换为“保存时更新”会在系统中保留未使用的changelog表，并将所有更改的索引标记为“有效”。
@@ -549,7 +549,7 @@ Giftcard产品现已正确合并到购物车中
 ### 购物车和结帐、结帐/单页结帐
 
 * __[随机错误]电子邮件字段未呈现，或者需要很长时间才能在结帐送货或付款页面中显示__
-Commerce现在按预期在结账送货和付款页面上渲染**[!UICONTROL Email]**字段。 以前，此字段不存在或呈现缓慢。
+Commerce现在按预期在结账送货和付款页面上渲染&#x200B;**[!UICONTROL Email]**&#x200B;字段。 以前，此字段不存在或呈现缓慢。
   _AC-9386 - [GitHub代码贡献](https://github.com/magento/magento2/commit/e1babcfd)_
 
 ### 购物车和结帐、订购

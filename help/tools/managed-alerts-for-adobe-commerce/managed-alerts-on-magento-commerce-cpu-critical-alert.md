@@ -22,7 +22,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 ## 问题
 
-如果您已为Adobe Commerce](managed-alerts-for-magento-commerce.md)注册了[个托管警报，并且一个或多个警报阈值已超出，则您将在[!DNL New Relic]中收到托管警报。 这些警报由Adobe Commerce开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了个托管警报，并且一个或多个警报阈值已超出，则您将在[!DNL New Relic]中收到托管警报。 这些警报由Adobe Commerce开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 <u>**做！**</u>：
 

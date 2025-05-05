@@ -11,9 +11,9 @@ ht-degree: 0%
 
 ---
 
-# ACSD-47444：访问PHP 7.4上已知产品的某些不存在类别路径时出现&#x200B;_[!UICONTROL Trying to access array offset on value of type bool]_错误
+# ACSD-47444：访问PHP 7.4上已知产品的某些不存在类别路径时出现&#x200B;_[!UICONTROL Trying to access array offset on value of type bool]_&#x200B;错误
 
-ACSD-47444修补程序解决了访问PHP 7.4上已知产品的某些不存在类别路径时出现&#x200B;_[!UICONTROL Trying to access array offset on value of type bool]_错误的问题。安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.22时，此修补程序可用。
+ACSD-47444修补程序解决了访问PHP 7.4上已知产品的某些不存在类别路径时出现&#x200B;_[!UICONTROL Trying to access array offset on value of type bool]_&#x200B;错误的问题。安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.22时，此修补程序可用。
 
 ## 受影响的产品和版本
 

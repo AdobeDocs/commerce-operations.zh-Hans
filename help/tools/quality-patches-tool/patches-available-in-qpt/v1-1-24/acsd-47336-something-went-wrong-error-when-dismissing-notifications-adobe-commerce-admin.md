@@ -11,9 +11,9 @@ ht-degree: 0%
 
 ---
 
-# ACSD-47336：在Adobe Commerce管理中取消通知时出现&#x200B;_[!UICONTROL Something went wrong]_错误
+# ACSD-47336：在Adobe Commerce管理中取消通知时出现&#x200B;_[!UICONTROL Something went wrong]_&#x200B;错误
 
-ACSD-47336修补程序修复了用户在[!DNL Commerce]管理员中取消通知时看到&#x200B;_[!UICONTROL Something went wrong]_错误的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.24时，此修补程序可用。 修补程序ID为ACSD-47336。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+ACSD-47336修补程序修复了用户在[!DNL Commerce]管理员中取消通知时看到&#x200B;_[!UICONTROL Something went wrong]_&#x200B;错误的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.24时，此修补程序可用。 修补程序ID为ACSD-47336。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 
 ## 受影响的产品和版本
 
@@ -31,7 +31,7 @@ ACSD-47336修补程序修复了用户在[!DNL Commerce]管理员中取消通知�
 
 ## 问题
 
-在[!DNL Commerce]管理员中取消通知时，用户看到&#x200B;_[!UICONTROL Something went wrong]_错误。
+在[!DNL Commerce]管理员中取消通知时，用户看到&#x200B;_[!UICONTROL Something went wrong]_&#x200B;错误。
 
 <u>重现步骤</u>：
 
@@ -41,11 +41,11 @@ ACSD-47336修补程序修复了用户在[!DNL Commerce]管理员中取消通知�
 
 <u>预期的结果</u>：
 
-清除已完成的任务时，不应显示&#x200B;_[!UICONTROL Something went wrong]_错误。
+清除已完成的任务时，不应显示&#x200B;_[!UICONTROL Something went wrong]_&#x200B;错误。
 
 <u>实际结果</u>：
 
-显示&#x200B;_[!UICONTROL Something went wrong]_错误。
+显示&#x200B;_[!UICONTROL Something went wrong]_&#x200B;错误。
 
 ## 应用修补程序
 

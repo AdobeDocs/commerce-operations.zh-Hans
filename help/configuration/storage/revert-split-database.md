@@ -14,7 +14,7 @@ ht-degree: 0%
 
 {{ee-only}}
 
-对于已实施[拆分数据库](multi-master.md)的Adobe Commerce客户，以下主题介绍了如何还原或迁移回单个数据库。 我们建议Adobe Commerce商家当前使用拆分数据库，并计划升级到2.4.2，稍后再查看这些步骤，以及我们关于计划弃用拆分数据库的公告[](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187)。
+对于已实施[拆分数据库](multi-master.md)的Adobe Commerce客户，以下主题介绍了如何还原或迁移回单个数据库。 我们建议Adobe Commerce商家当前使用拆分数据库，并计划升级到2.4.2，稍后再查看这些步骤，以及我们关于计划弃用拆分数据库的公告[&#128279;](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187)。
 
 从拆分数据库还原到单个数据库涉及先创建`magento_quote`和`magento_sales`数据库的备份，然后再将其加载到单个`magento_main`数据库中。
 

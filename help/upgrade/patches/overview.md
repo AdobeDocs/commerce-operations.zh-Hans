@@ -60,7 +60,7 @@ ht-degree: 0%
 要创建自定义修补程序，请执行以下操作：
 
 1. 在本地项目中创建一个`patches/composer`目录。
-1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[](https://github.com/magento/magento2/issues/6474)的[`2d31571`#64741}承诺。](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)
+1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[&#128279;](https://github.com/magento/magento2/issues/6474)的[`2d31571`#64741&rbrace;承诺。](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)
 1. 将`.patch`或`.diff`扩展附加到提交URL。 对较小的文件大小使用`.diff`。 例如：[https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
 1. 将页面另存为`patches/composer`目录中的文件。 例如，`github-issue-6474.diff`。
 1. 编辑文件并从所有路径中删除`app/code/<VENDOR>/<PACKAGE>`，使其相对于`vendor/<VENDOR>/<PACKAGE>`目录。

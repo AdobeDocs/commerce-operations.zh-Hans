@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## [!UICONTROL SQL Trace count by path]
 
-按路径](../../assets/tools/observation-for-adobe-commerce/cron-tab-3.jpg)列出的![SQL跟踪计数
+按路径![&#128279;](../../assets/tools/observation-for-adobe-commerce/cron-tab-3.jpg)列出的SQL跟踪计数
 
 **[!UICONTROL SQL Trace count by path]**&#x200B;框架按路径查看MySQL跟踪计数，这有助于跟踪选定时间范围内的SQL语句。
 

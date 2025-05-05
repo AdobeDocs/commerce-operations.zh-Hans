@@ -224,7 +224,7 @@ ht-degree: 0%
 
 1. 确定范围。
 
-   在[数据库](#find-a-website-or-store-view-scope-in-the-database)中查找范围，如步骤1中所述：查找网站或存储视图范围值。 (您还可以在Admin中找到值，如步骤2中的[表中所示：设置全局、网站或存储视图变量](#step-2-set-global-website-or-store-view-variables。
+   在[数据库](#find-a-website-or-store-view-scope-in-the-database)中查找范围，如步骤1中所述：查找网站或存储视图范围值。 (您还可以在Admin中找到值，如步骤2中的[表中所示：设置全局、网站或存储视图变量] (#step-2-set-global-website-or-store-view-variables。
 
    例如，范围可以是`CONFIG__WEBSITES__DEFAULT`。
 

@@ -14,13 +14,13 @@ ht-degree: 0%
 
 ## [!UICONTROL MySQL% free storage by node]
 
-按节点](../../assets/tools/observation-for-adobe-commerce/mysql-tab-1.jpg)列出的![MySQL%可用存储
+按节点![&#128279;](../../assets/tools/observation-for-adobe-commerce/mysql-tab-1.jpg)列出的MySQL%可用存储
 
 许多问题是由于MySQL存储空间不足(分配给MySQL （`datadir` MySQL配置设置，默认值为`/data/mysql`）或`tmpdir`空间不足。 默认`tmpdir` （MySQL设置）为`/tmp`。 **[!UICONTROL MySQL% free storage by node]**&#x200B;帧查看`/, /tmp`（如果定义为单独的装载）和`/data/mysql`可用存储空间百分比。 从MySQL版本5.7（MariaDB版本10.2）开始，未压缩的`tmp`表将写入文件(ibtmp1)中`/data/mysql`目录的`tmp`表空间中。 默认情况下，此文件将自动展开，无限制。 由于它是一个表空间，因此其大小不会减少，并且在MySQL重新启动时会重置为12 MB。
 
 ## [!UICONTROL MySQL Connections by Node]
 
-按节点](../../assets/tools/observation-for-adobe-commerce/mysql-tab-2.jpg)进行的![MySQL连接
+按节点![&#128279;](../../assets/tools/observation-for-adobe-commerce/mysql-tab-2.jpg)进行的MySQL连接
 
 **[!UICONTROL MySQL Connections by Node]**&#x200B;帧表示数据库节点停机或连接量大的时间段。
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Galera Log by Host]
 
-按主机](../../assets/tools/observation-for-adobe-commerce/mysql-tab-7.jpg)的![galera日志
+按主机![&#128279;](../../assets/tools/observation-for-adobe-commerce/mysql-tab-7.jpg)的galera日志
 
 **[!UICONTROL Galera Log by Host]**&#x200B;帧与&#x200B;**[!UICONTROL Galera log]**&#x200B;帧相同，不同之处在于它按节点划分，以帮助进行故障排除。
 

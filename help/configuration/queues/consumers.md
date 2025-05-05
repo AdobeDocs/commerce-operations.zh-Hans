@@ -16,11 +16,11 @@ ht-degree: 0%
 | 使用者和描述 | Adobe Commerce | 带有B2B的Adobe Commerce | Magento Open Source |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|-------------------------|---------------------|
 | `async.operations.all` | + | + | + |
-| 为[批量操作](https://developer.adobe.com/commerce/php/development/components/message-queues/bulk-operations/)的每个单独任务创建消息，如导入或导出物料、批量更改价格以及将产品分配给仓库。 在管理员系统配置设置中将&#x200B;[**[!UICONTROL Admin bulk operations]**](https://experienceleague.adobe.com/en/docs/commerce-admin/config/catalog/inventory#admin-bulk-operations)选项设置为&#x200B;**[!UICONTROL Run asynchronously]**时需要。 |                |                         |                     |
+| 为[批量操作](https://developer.adobe.com/commerce/php/development/components/message-queues/bulk-operations/)的每个单独任务创建消息，如导入或导出物料、批量更改价格以及将产品分配给仓库。 在管理员系统配置设置中将&#x200B;[**[!UICONTROL Admin bulk operations]**](https://experienceleague.adobe.com/en/docs/commerce-admin/config/catalog/inventory#admin-bulk-operations)选项设置为&#x200B;**[!UICONTROL Run asynchronously]**&#x200B;时需要。 |                |                         |                     |
 | `codegeneratorProcessor` | + | + | + |
 | 在后台异步生成优惠券。 需要使用[批次优惠券生成](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon.html#method-2%3A-generate-a-batch-of-coupons)功能。 |                |                         |                     |
 | `commerce.eventing.event.publish` | + | + |                     |
-| 检查已在Adobe Commerce](https://developer.adobe.com/commerce/events/get-started/)的[Adobe I/O事件中注册为优先级的事件。 |
+| 检查已在Adobe Commerce[&#128279;](https://developer.adobe.com/commerce/events/get-started/)的Adobe I/O事件中注册为优先级的事件。 |
 | `exportProcessor` | + | + | + |
 | 防止在大型数据集（例如200,000个产品）的[导出](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-export.html)期间连接超时。 |                |                         |                     |
 | `inventoryQtyCounter` | + | + |                     |

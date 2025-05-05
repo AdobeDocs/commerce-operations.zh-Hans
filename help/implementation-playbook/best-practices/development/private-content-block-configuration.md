@@ -15,7 +15,7 @@ ht-degree: 1%
 
 当专用内容块包含`_isScopePrivate`变量时，该块无法缓存。 由于未缓存专用块，因此Adobe Commerce必须为每个客户请求检索相同的数据，这会增加服务器负载。
 
-请创建块和模板以显示与用户无关的数据，而不是将`_isScopePrivate`变量用于私有内容。 此数据已由Adobe Commerce UI组件替换为特定于用户的数据，该组件可更高效地处理预渲染数据。 有关说明，请参阅&#x200B;_[!DNL Commerce PHP Extensions Guide]_中的[私人内容](https://developer.adobe.com/commerce/php/development/cache/page/private-content/)。
+请创建块和模板以显示与用户无关的数据，而不是将`_isScopePrivate`变量用于私有内容。 此数据已由Adobe Commerce UI组件替换为特定于用户的数据，该组件可更高效地处理预渲染数据。 有关说明，请参阅&#x200B;_[!DNL Commerce PHP Extensions Guide]_&#x200B;中的[私人内容](https://developer.adobe.com/commerce/php/development/cache/page/private-content/)。
 
 ## 受影响的产品和版本
 

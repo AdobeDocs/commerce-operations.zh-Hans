@@ -1,5 +1,5 @@
 ---
-title: “ACSD-59786：GraphQL在获取过期报价的`quote_id`时返回错误”
+title: “ACSD-59786：GraphQL在获取过期报价的&grave;quote_id&grave;时返回错误”
 description: 应用ACSD-59786修补程序以修复Adobe Commerce问题，该问题导致GraphQL查询在获取过期报价的“quote_id”时返回错误。
 feature: GraphQL, Quotes, Companies
 role: Admin, Developer

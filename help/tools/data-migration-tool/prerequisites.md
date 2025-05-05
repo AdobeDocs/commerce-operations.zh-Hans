@@ -44,6 +44,6 @@ ht-degree: 0%
 
 将Magento1扩展代码迁移到Magento2。
 
-要查找最新的扩展版本，请访问[!DNL [Commerce Marketplace]](https://marketplace.magento.com/)或与扩展提供商联系。
+要查找最新的扩展版本，请访问[[!DNL [Commerce Marketplace]]](https://marketplace.magento.com/)或与扩展提供商联系。
 
-您也可以使用[!DNL [Code Migration Tool]](https://github.com/magento-commerce/code-migration/blob/develop/README.md)。
+您也可以使用[[!DNL [Code Migration Tool]]](https://github.com/magento-commerce/code-migration/blob/develop/README.md)。

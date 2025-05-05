@@ -105,7 +105,7 @@ ht-degree: 0%
    ln -s /etc/nginx/sites-available/magento magento
    ```
 
-有关map指令的更多详细信息，请参阅有关map指令](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)的[nginx文档。
+有关map指令的更多详细信息，请参阅有关map指令[&#128279;](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)的nginx文档。
 
 
 **要创建多个虚拟主机**：

@@ -33,7 +33,7 @@ ACSD-48210修补程序修复了在特定存储视图内更新&#x200B;*[!UICONTRO
 
 更新特定存储视图中的&#x200B;*[!UICONTROL Website Scope]*&#x200B;属性时，将覆盖全局范围中的属性值。
 
-导入产品价格时，如果多个行共享相同的`SKU`和`store_view_code`，则会导致&#x200B;*[!UICONTROL All Store View]*&#x200B;和&#x200B;*[!UICONTROL Default Store]*范围内的价格更新不正确。 修改特定商店视图中的网站范围属性不再覆盖全局范围中的属性值。
+导入产品价格时，如果多个行共享相同的`SKU`和`store_view_code`，则会导致&#x200B;*[!UICONTROL All Store View]*&#x200B;和&#x200B;*[!UICONTROL Default Store]*&#x200B;范围内的价格更新不正确。 修改特定商店视图中的网站范围属性不再覆盖全局范围中的属性值。
 <u>重现步骤</u>：
 
 1. 将&#x200B;*[!UICONTROL Catalog Price Scope]*&#x200B;配置为&#x200B;*[!UICONTROL Website]*。

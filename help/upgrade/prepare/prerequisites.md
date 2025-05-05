@@ -99,7 +99,7 @@ Adobe在2.4.8发行版中添加了对MySQL 8.4的支持。
    >
    >如果不将`restrict_fk_on_non_standard_key`的值更改为`OFF`，则在导入期间将收到以下错误：
    >
-   ```sql
+   >```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
 1. 重新启动MySQL服务器。
@@ -192,7 +192,7 @@ Adobe Commerce 2.4.6中引入了对Elasticsearch 8.x的支持。以下说明显�
 
    此方法适用于2.4.7-p4和PHP 8.3。出现此问题的原因是`aws/aws-sdk-php`需要`psr/http-message >= 2.0`，这可能导致冲突。 上述步骤可帮助解决这些依赖性问题。
 
-+++
+   +++
 
 1. 更新项目组件。
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
 
-本节讨论如何将nginx配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与nginx](#secure-communication-with-nginx)的[安全通信中讨论。
+本节讨论如何将nginx配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与nginx[&#128279;](#secure-communication-with-nginx)的安全通信中讨论。
 
 >[!NOTE]
 >

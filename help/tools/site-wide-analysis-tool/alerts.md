@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!DNL Alerts]
 
-[!DNL Site-Wide Analysis Tool's] [!UICONTROL Alerts]页面显示商户的Adobe Commerce Managed Alerts修补程序。 Adobe提供了[!DNL Managed Alerts]以使用行业最佳实践跟踪性能指标。 在我们的[!DNL support knowledge base]中引用Adobe Commerce](https://support.magento.com/hc/en-us/articles/360045806832-Managed-alerts-for-Adobe-Commerce)文章的[托管警报。
+[!DNL Site-Wide Analysis Tool's] [!UICONTROL Alerts]页面显示商户的Adobe Commerce Managed Alerts修补程序。 Adobe提供了[!DNL Managed Alerts]以使用行业最佳实践跟踪性能指标。 在我们的[!DNL support knowledge base]中引用Adobe Commerce[&#128279;](https://support.magento.com/hc/en-us/articles/360045806832-Managed-alerts-for-Adobe-Commerce)文章的托管警报。
 
 ## 使用时间
 

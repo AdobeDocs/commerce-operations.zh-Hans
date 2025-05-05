@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 问题
 
-如果您已为Adobe Commerce](managed-alerts-for-magento-commerce.md)注册了[个托管警报，并且一个或多个警报阈值已超出，则您将在[!DNL New Relic]中收到托管警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了个托管警报，并且一个或多个警报阈值已超出，则您将在[!DNL New Relic]中收到托管警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 <u> **做！** </u>
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 1. **[!DNL Redis]**：如果[!DNL Redis]是内存消耗的顶级源，则[提交支持票证](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。
 1. **PHP**：如果PHP是内存消耗的最大来源，请在CLI/终端中运行`ps aufx`来检查正在运行的进程。 在终端输出中，您将看到当前正在执行的cron作业和进程。 检查进程执行时间的输出。 如果存在执行时间较长的cron，则该cron可能会挂起。 有关故障排除步骤，请参阅Commerce支持知识库中的[性能缓慢、运行缓慢且时间较长](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/slow-performance-slow-and-long-running-crons)和[Cron作业停留在“正在运行”状态](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-job-is-stuck-in-running-status)。
 1. 如果您仍在努力找出问题的根源，请使用[[!DNL New Relic] APM的“事务”页](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/transactions-page-find-specific-performance-problems)来识别具有性能问题的事务：
-   * 按升序[!DNL Apdex]分数对事务排序。 [[!DNL Apdex]](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction)指用户对Web应用程序和服务的响应时间的满意度。 [[!DNL Apdex score]](managed-alerts-for-magento-commerce-apdex-warning-alert.md)可能表示瓶颈（响应时间较长的事务）。 通常是数据库[!DNL  Redis]或PHP。 有关步骤，请参阅[[!DNL New Relic] 查看满意度最高的 [!DNL Apdex] 事务](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/view-your-apdex-score#apdex-dissat)。
+   * 按升序[!DNL Apdex]分数对事务排序。 [[!DNL Apdex]](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction)指用户对Web应用程序和服务的响应时间的满意度。 [[!DNL Apdex score]](managed-alerts-for-magento-commerce-apdex-warning-alert.md)可能表示瓶颈（响应时间较长的事务）。 通常是数据库[!DNL &#x200B; Redis]或PHP。 有关步骤，请参阅[[!DNL New Relic] 查看满意度最高的 [!DNL Apdex] 事务](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/view-your-apdex-score#apdex-dissat)。
    * 按最高吞吐量、最慢的平均响应时间、最耗时的阈值和其他阈值对事务进行排序。 有关步骤，请参阅[[!DNL New Relic] [查找具体性能问题]](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/transactions-page-find-specific-performance-problems)。 如果您仍在努力识别问题，请使用[[!DNL New Relic] APM的基础结构页面](https://docs.newrelic.com/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/)。
 1. 如果您无法确定内存消耗增加的原因，请查看近期趋势以确定近期代码部署或配置更改（例如，新客户组和目录的大幅更改）中存在的问题。 建议您查看过去7天的活动，以了解代码部署或更改中的任何关联。
 1. 如果上述方法不能帮助您在合理的时间内找到原因和/或解决方案，请请求升级站点，或将站点置于维护模式（如果尚未这样做）。 有关步骤，请参阅Commerce支持知识库中的[如何请求调整临时大小](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize)，以及《Commerce安装指南》中的[启用或禁用维护模式](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/maintenance-mode)。

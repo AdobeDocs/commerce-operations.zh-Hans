@@ -72,7 +72,7 @@ If you submit a pull request with significant changes to documentation and code 
 >**注释：**
 >
 >* 生成模板化内容需要在终端中的命令行上工作。
->* 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version](_jekyll/.ruby-version)。
+>* 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
 
 有关模板化内容的文件结构的描述，请参阅以下内容：
 

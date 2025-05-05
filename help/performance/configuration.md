@@ -95,7 +95,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 >[!INFO]
 >
->**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)上的[Adobe [!DNL Commerce] 不支持`Developer`模式。
+>**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)上的Adobe [!DNL Commerce] 不支持`Developer`模式。
 
 激活&#x200B;**[!UICONTROL Enable [!DNL JavaScript] Bundling]**&#x200B;选项后，您允许Commerce将所有JS资源合并到一个或一组加载到店面页面中的捆绑包中。 捆绑JS可减少向服务器发出的请求，从而改善页面性能。 它还有助于浏览器在首次调用时缓存JS资源，并在所有进一步浏览中重复使用它们。 此选项还会带来延迟评估，因为所有JS都作为文本加载。 它仅在页面上触发特定操作后才启动代码分析和评估。 但是，对于首次页面加载时间极其关键的存储区，不建议使用此设置，因为所有JS内容都将在首次调用时加载。
 
@@ -134,7 +134,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 要提高大型目录的产品网格性能，我们建议使用&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Admin] > [!UICONTROL Admin Grids] >[!UICONTROL Limit Number of Products in Grid]**&#x200B;系统配置设置来限制网格中的产品数量。
 
 默认情况下，此系统配置设置处于禁用状态。 启用此选项后，您可以将网格中的产品数量限制为特定值。 **[!UICONTROL Records Limit]**&#x200B;是可自定义的设置，其默认最小值为`20000`。
-启用**[!UICONTROL Limit Number of Products in Grid]**&#x200B;设置且网格中的产品数大于记录限制时，将返回有限制的记录集合。 当达到限制时，将在网格标题中隐藏找到的记录总数、选定的记录数和分页元素。
+启用&#x200B;**[!UICONTROL Limit Number of Products in Grid]**&#x200B;设置且网格中的产品数大于记录限制时，将返回有限制的记录集合。 当达到限制时，将在网格标题中隐藏找到的记录总数、选定的记录数和分页元素。
 
 当网格中的产品总数有限时，它不会影响产品网格中的批量操作。 它只影响产品网格表示层。 例如，网格中的`20000`产品数量有限，用户单击&#x200B;**[!UICONTROL Select All]**，选择&#x200B;**[!UICONTROL Update attributes]**&#x200B;批量操作，并更新某些属性。 因此，所有产品都已更新，而不是有限的`20000`记录集合。
 

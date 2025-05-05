@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 问题
 
-如果您已为Adobe Commerce](managed-alerts-for-magento-commerce.md)注册了[托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，用于通过支持和工程部门的分析为商家提供一组标准警报。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，用于通过支持和工程部门的分析为商家提供一组标准警报。
 
 **<u>做！</u>**
 
