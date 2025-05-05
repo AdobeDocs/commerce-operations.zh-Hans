@@ -29,7 +29,7 @@ chmod +x ./uct/bin/uct
 
 [!DNL Upgrade Compatibility Tool]是一种通过分析其中安装的所有模块来针对特定版本检查Adobe Commerce自定义实例的工具。 它会返回在升级到最新版本的Adobe Commerce之前必须解决的严重问题、错误和警告列表。
 
-请参阅此[视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=en) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
+请参阅此[视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=zh-Hans) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
 
 命令行界面中[!DNL Upgrade Compatibility Tool]的可用命令：
 
@@ -146,7 +146,7 @@ bin/uct core:code:changes <dir> <vanilla dir>
 
 >[!NOTE]
 >
-> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)。
+> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)。
 
 ### Vanilla安装
 
@@ -259,8 +259,8 @@ bin/uct upgrade:check --help
 
 - 避免使用具有相同名称的两个模块。
 - 遵循Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards/)。
-- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)最佳实践。
-- 在云基础架构[&#128279;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}项目中为Adobe Commerce运行[[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html)中的[!DNL Upgrade Compatibility Tool]。
+- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)最佳实践。
+- 在云基础架构[&#128279;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans){target=_blank}项目中为Adobe Commerce运行[[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html?lang=zh-Hans)中的[!DNL Upgrade Compatibility Tool]。
 
 ## 优化结果
 
