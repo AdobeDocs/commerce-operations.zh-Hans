@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.5安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.5的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: 9bf1c539220d70a8e7fe449e4d91199f23cc23b2
+source-git-commit: 55bba84f05042667d0de3aa053e9a52119bd2599
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1236'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,19 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.5-p12安全版本为2.4.5早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-26](https://helpx.adobe.com/cn/security/products/magento/apsb25-26.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-26](https://helpx.adobe.com/security/products/magento/apsb25-26.html)。
 
 {{b2b-patches}}
+
+### 高亮
+
+{{$include /help/_includes/release-notes/highlights/security-2025-04.md}}
 
 ## 2.4.5-p11
 
 Adobe Commerce 2.4.5-p11安全版本为2.4.5早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-08](https://helpx.adobe.com/cn/security/products/magento/apsb25-08.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html)。
 
 {{b2b-patches}}
 
@@ -38,7 +42,7 @@ Adobe Commerce 2.4.5-p11安全版本为2.4.5早期版本中发现的漏洞修复
 
 Adobe Commerce 2.4.5-p10安全版本为2.4.5早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/cn/security/products/magento/apsb24-73.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/security/products/magento/apsb24-73.html)。
 
 {{b2b-patches}}
 
@@ -54,21 +58,21 @@ Adobe Commerce 2.4.5-p10安全版本为2.4.5早期版本中发现的漏洞修复
 
 Adobe Commerce 2.4.5-p9安全版本为2.4.5早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-61](https://helpx.adobe.com/cn/security/products/magento/apsb24-61.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-61](https://helpx.adobe.com/security/products/magento/apsb24-61.html)。
 
-### 高光
+### 高亮
 
 {{$include /help/_includes/release-notes/highlights/security-2024-08.md}}
 
-### 此版本中包括的修补程序
+### 此版本中包含的修补程序
 
 {{$include /help/_includes/release-notes/hotfixes/included-2024-08.md}}
 
 ## 2.4.5-p8
 
-Adobe Commerce 2.4.5-p8安全版本修复了2.4.5早期版本中发现的漏洞的安全错误。
+Adobe Commerce 2.4.5-p8安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-40](https://helpx.adobe.com/cn/security/products/magento/apsb24-40.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html)。
 
 ### 应用适用于CVE-2024-34102的修补程序
 
@@ -86,21 +90,21 @@ Adobe Commerce 2.4.5-p8安全版本修复了2.4.5早期版本中发现的漏洞�
 
 Adobe Commerce 2.4.5-p7安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-18](https://helpx.adobe.com/cn/security/products/magento/apsb24-18.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-18](https://helpx.adobe.com/security/products/magento/apsb24-18.html)。
 
 ## 2.4.5-p6
 
 Adobe Commerce 2.4.5-p6安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。此版本还包括安全增强功能，可提高对最新安全最佳实践的合规性。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-03](https://helpx.adobe.com/cn/security/products/magento/apsb24-03.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-03](https://helpx.adobe.com/security/products/magento/apsb24-03.html)。
 
-### 高光
+### 高亮
 
 此版本引入了两项重要的安全增强功能：
 
-* **对非生成缓存键的行为所做的更改**：
+* **更改未生成的缓存键的行为**：
 
-   * 现在，块的非生成缓存键包括与自动生成的键的前缀不同的前缀。 （非生成缓存键是通过模板指令语法或`setCacheKey`或`setData`方法设置的键。）
+   * 块的非生成缓存键现在包含与自动生成的键的前缀不同的前缀。 （未生成的缓存键是通过template指令语法或`setCacheKey`或`setData`方法设置的键。）
    * 块的非生成缓存键现在只能包含字母、数字、连字符(-)和下划线字符(_)。<!-- AC-9831 -->
 
 * **自动生成的优惠券代码数量的限制**。 Commerce现在限制自动生成的优惠券代码数量。 默认最大值为250,000。 商家可以使用新的&#x200B;**[!UICONTROL Code Quantity Limit]**&#x200B;配置选项(**[!UICONTROL Stores]** > **[!UICONTROL Settings:Configuration]** > **[!UICONTROL Customers]** > **[!UICONTROL Promotions]**)来控制此新限制。<!-- AC-8753 -->
@@ -109,7 +113,7 @@ Adobe Commerce 2.4.5-p6安全版本为以前版本的2.4.5中发现的漏洞提�
 
 Adobe Commerce 2.4.5-p5安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。此版本还包括安全增强功能，可提高对最新安全最佳实践的合规性。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB23-50](https://helpx.adobe.com/cn/security/products/magento/apsb23-50.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB23-50](https://helpx.adobe.com/security/products/magento/apsb23-50.html)。
 
 ### 高亮
 
@@ -128,23 +132,23 @@ Adobe Commerce 2.4.5-p5安全版本为以前版本的2.4.5中发现的漏洞提�
 
 ## 2.4.5-p4
 
-Adobe Commerce 2.4.5-p4安全版本修复了2.4.5早期版本中发现的漏洞的安全错误。
+Adobe Commerce 2.4.5-p4安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB23-42](https://helpx.adobe.com/cn/security/products/magento/apsb23-42.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB23-42](https://helpx.adobe.com/security/products/magento/apsb23-42.html)。
 
-### 应用CVE-2022-31160的修补程序
+### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6)知识库文章的jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6)知识库文章的[jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
 
 ## 2.4.5-p3
 
 Adobe Commerce 2.4.5-p3安全版本为以前版本的2.4.5中发现的漏洞提供了安全修复。此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告](https://helpx.adobe.com/cn/security/products/magento/apsb23-35.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告](https://helpx.adobe.com/security/products/magento/apsb23-35.html)。
 
 ### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。运行受影响部署的商户应应用[查询UI安全漏洞CVE-2022-31160针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6)知识库文章中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。运行受影响部署的商户应应用[查询UI安全漏洞CVE-2022-31160针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6)知识库文章中指定的修补程序。
 
 ### 高亮
 
@@ -164,12 +168,12 @@ Adobe Commerce 2.4.5-p3安全版本为以前版本的2.4.5中发现的漏洞提�
 
 Adobe Commerce 2.4.5-p2安全版本为以前版本的2.4.5中发现的漏洞提供了三个安全修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB23-17](https://helpx.adobe.com/cn/security/products/magento/apsb23-17.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB23-17](https://helpx.adobe.com/security/products/magento/apsb23-17.html)。
 
 ## 2.4.5-p1
 
-Adobe Commerce 2.4.5-p1安全版本修复了2.4.5早期版本中发现的漏洞的安全错误。
+Adobe Commerce 2.4.5-p1安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-48](https://helpx.adobe.com/cn/security/products/magento/apsb22-48.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-48](https://helpx.adobe.com/security/products/magento/apsb22-48.html)。
 
 其中一项安全错误修复包括创建新的配置设置。 如果电子邮件已更改，**需要电子邮件确认**&#x200B;配置设置允许管理员用户在更改其电子邮件地址时要求电子邮件确认。<!-- AC-6292-->

@@ -1,7 +1,7 @@
 ---
-source-git-commit: 53b2494d848c027e32f1493bbc7a9f204677afaa
+source-git-commit: 5d6d60b99d883f0a83cdcfc1c65c04d2f4ef09b7
 workflow-type: tm+mt
-source-wordcount: '27958'
+source-wordcount: '27937'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ ht-degree: 0%
 * __在管理员中，当我们尝试重新排序时，提交订单按钮不可单击。 （间歇性）__
   _AC-14300_
 * __[问题]将默认索引器模式设置为“计划”__
-默认情况下，所有新索引器都处于&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
+默认情况下，所有新索引器都处于**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
   _AC-6975 - [GitHub问题](https://github.com/magento/magento2/issues/36419) - [GitHub代码贡献](https://github.com/magento/magento2/commit/0b410856)_
 * __[问题]在mview取消订阅时删除索引器更改日志表__
 现在，当索引从“按计划更新”切换到“保存时更新”时，系统自动删除未使用的更改日志表，将索引标记为无效，以确保没有丢失任何条目。 以前，将索引切换为“保存时更新”会在系统中保留未使用的changelog表，并将所有更改的索引标记为“有效”。
@@ -549,7 +549,7 @@ Giftcard产品现已正确合并到购物车中
 ### 购物车和结帐、结帐/单页结帐
 
 * __[随机错误]电子邮件字段未呈现，或者需要很长时间才能在结帐送货或付款页面中显示__
-Commerce现在按预期在结账送货和付款页面上渲染&#x200B;**[!UICONTROL Email]**&#x200B;字段。 以前，此字段不存在或呈现缓慢。
+Commerce现在按预期在结账送货和付款页面上渲染**[!UICONTROL Email]**字段。 以前，此字段不存在或呈现缓慢。
   _AC-9386 - [GitHub代码贡献](https://github.com/magento/magento2/commit/e1babcfd)_
 
 ### 购物车和结帐、订购
@@ -1638,9 +1638,6 @@ GraphQl中按多个字段对产品排序现在按文档中的说明工作
 * __使用虚拟类型配置插件，无法在`setup:di:compile`命令__中正确生成侦听器方法
 现在，当使用虚拟类型配置插件时，系统可正确生成拦截器方法，从而确保无论是预编译的结果还是运行时编译的结果都一致。 以前，与运行时编译相比，在预编译时，系统会产生不正确的结果。
   _AC-13398 - [GitHub问题](https://github.com/magento/magento2/issues/33980) - [GitHub代码贡献](https://github.com/magento/magento2/pull/38141)_
-* __无法从数据收集器下载文件__
-下载备份不再显示空白页而非下载文件。
-  _ACP2E-3441_
 * __Adobe Commerce 2.4.7-p3单元测试失败__
 无需发行说明。
   _ACP2E-3631 - [GitHub代码贡献](https://github.com/magento/magento2/commit/982b1c42)_
