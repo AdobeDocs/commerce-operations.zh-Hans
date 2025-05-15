@@ -2,7 +2,7 @@
 title: 分担责任的安全性和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 9d0ab29be70c5638296694f90755fedac41b6a77
+source-git-commit: 4cd71d156ef6833185565180b297ba1b7f42a032
 workflow-type: tm+mt
 source-wordcount: '2791'
 ht-degree: 0%
@@ -11,9 +11,11 @@ ht-degree: 0%
 
 # 分担责任的安全性和运营模式
 
-云基础架构上的Adobe Commerce是一项基于平台即服务(PaaS)的服务，它依赖于分担责任的安全性和运营模式。 这些职责在Adobe、商家、云服务提供商和内容交付网络(CDN)提供商之间分担。 各方对保护和运行Adobe Commerce应用程序以及部署在云基础架构上的特定于商家的代码和扩展承担不同的责任。
+云基础架构上的Adobe Commerce是一项基于平台即服务(PaaS)的服务，它依赖于分担责任的安全性和运营模式。 这些责任在Adobe、商家、云服务提供商和内容交付网络(CDN)提供商之间分担。 各方对保护和运行Adobe Commerce应用程序以及部署在云基础架构上的特定于商家的代码和扩展承担不同的责任。
 
 此共享模型使商家能够设计和实施高度灵活、可定制和可扩展的解决方案，以满足其业务需求，同时最大限度地降低运营责任和成本。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3458392/?learn=on&enablevpops)
 
 通常，Adobe负责以下工作：
 
@@ -32,16 +34,16 @@ ht-degree: 0%
 
 ## Adobe职责
 
-Adobe负责Adobe Commerce on cloud infrastructure environment的安全性和可用性以及核心解决方案代码。 此外，Adobe还负责必要的活动和机制来维护Adobe Commerce云基础架构解决方案的安全性，包括：
+Adobe负责云基础架构环境以及核心解决方案代码上的Adobe Commerce的安全性和可用性。 此外，Adobe还负责必要的活动和机制来维护Adobe Commerce在云基础架构解决方案中的安全性，包括：
 
 - 在云基础架构上为Adobe Commerce支持的应用程序（如云数据存储和搜索功能）应用服务器级安全性和修补程序
 - 对云基础架构代码的核心Adobe Commerce进行渗透测试和扫描
 - 对公共云服务提供商的身份和访问管理(IAM)解决方案和权限管理（PCI合规性要求）进行半年一次的审查和审核
-- 对授权用户(包括Adobe员工和承包商)进行半年一次的审查和审计（PCI合规性要求）
+- 对授权用户(包括Adobe员工和承包商)进行半年一次的审查和审核（PCI合规性要求）
 - 对备份和恢复功能进行年度测试和文档记录
 - 配置服务器和外围防火墙
 - 在云基础架构存储库上连接和配置Adobe Commerce
-- 为Adobe职责范围内的各个领域定义、测试、实施和记录灾难恢复(DR)计划
+- 定义、测试、实施和记录Adobe职责范围内各领域的灾难恢复(DR)计划
 - 定义全球平台Web应用程序防火墙(WAF)规则
 - 加强操作系统(OS)
 - 在云基础架构上实施并维护内容分发网络(CDN)和应用程序性能管理(APM)解决方案与Adobe Commerce的集成
@@ -64,7 +66,7 @@ Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
 该商家负责为其云基础架构解决方案上的Adobe Commerce的特定自定义实例遵循以下安全最佳实践：
 
 - 将云基础架构配置文件上必需的Adobe Commerce添加到存储库
-- 在按Adobe发布安全修补程序和其他修补程序后，立即将其应用于云基础架构解决方案上的自定义Adobe Commerce
+- 在Adobe发布其自定义云基础架构Adobe Commerce解决方案后，立即将其安全修补程序和其他修补程序应用到这些解决方案
 - 在供应商发布安全修补程序和其他修补程序后，立即将其应用于所有自定义扩展和代码
 - 创建、部署和测试自定义清漆VCL文件
 - 在云基础架构解决方案上设计、设置主题、安装、集成和保护自定义的Adobe Commerce，包括所有自定义扩展和代码
@@ -104,7 +106,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 >[!BEGINSHADEBOX]
 
-以下摘要表使用RACI模型来显示Adobe、商家和云服务提供商之间共享的安全职责：
+以下摘要表使用RACI模型来显示Adobe、商家和云服务提供商之间共享的安全责任：
 
 **R** — 负责人
 **A** — 责任人
@@ -503,7 +505,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>对Adobe灾难恢复计划以及备份和恢复进行年度测试和记录</td>
+    <td>Adobe灾难恢复计划以及备份和恢复的年度测试和文档记录</td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -521,7 +523,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
   <tr>
     <td colspan="5">
       <p><sup><strong>1</strong></sup>仅当云基础架构存储库上的Adobe Commerce用作主存储库时。 使用其他外部存储库由商家全权负责。</p>
-      <p><sup><strong>2</strong></sup>Adobe为CDN提供商的问题提供级别1支持。</p>
+      <p><sup><strong>2</strong></sup> Adobe为CDN提供商的问题提供级别1支持。</p>
       <p><sup><strong>3</strong></sup>商家负责为其应用程序配置的任何Ngnix控件。</p>
       <p><sup><strong>4</strong></sup>对于PCI，渗透测试要求在Adobe和商家之间共享。</p>
     </td>
@@ -533,7 +535,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 >[!BEGINSHADEBOX]
 
-以下汇总表阐明了Adobe和商家在云基础架构上开发、部署、维护和保护Adobe Commerce时的运营职责。
+以下汇总表阐明了Adobe和商家在云基础架构上开发、部署、维护和保护Adobe Commerce时的运营责任。
 
 >[!ENDSHADEBOX]
 
@@ -570,7 +572,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 {style="table-layout:auto"}
 
-#### COMMERCE CLOUDCLI
+#### COMMERCE CLOUD CLI
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
@@ -682,7 +684,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | RabbitMQ服务的可用性 | R |   |
 | 默认RabbitMQ设置的配置 | R |   |
 | RabbitMQ的持续质量和修补 | R |   |
-| 提交服务请求以安装与已安装的RabbitMQ版本兼容的Adobe Commerce版本 |   | R |
+| 提交服务请求以安装与安装的Adobe Commerce版本兼容的RabbitMQ版本 |   | R |
 
 {style="table-layout:auto"}
 
@@ -743,9 +745,9 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| Elasticsearch可用性 | R |   |
+| Elasticsearch的可用性 | R |   |
 | 默认Elasticsearch设置的配置 | R |   |
-| 提交服务请求以安装与已安装的Adobe Commerce版本兼容的Elasticsearch版本 |  | R |
+| 提交服务请求以安装与已安装的Elasticsearch版本兼容的Adobe Commerce版本 |  | R |
 
 {style="table-layout:auto"}
 
@@ -783,19 +785,19 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| Adobe CommerceBusiness Intelligence服务的可用性 | R |   |
+| Adobe Commerce Business Intelligence服务的可用性 | R |   |
 | MBI数据同步过程 | R |   |
 | 检测MBI同步问题 | R |   |
-| 配置MBI数据同步到Adobe Commerce Cloud Pro、Starter、内部部署或非Adobe Commerce<br>(API、数据质量和格式、商家网络、<br>Adobe Commerce Cloud DB内部和外部的数据库连接，超过数据阈值) |     | R |
-| 配置MBI数据同步到Adobe Commerce Cloud Pro<br>(Adobe Commerce Cloud数据库配置) | R |   |
+| 配置MBI数据同步到Adobe Commerce Cloud Pro、Starter、内部部署或非Adobe Commerce<br>（API、数据质量和格式、商家网络、Adobe Commerce Cloud DB内部和外部的<br>数据库连接，超过数据阈值） |     | R |
+| 配置MBI数据同步到Adobe Commerce Cloud Pro<br>（Adobe Commerce Cloud数据库配置） | R |   |
 
 {style="table-layout:auto"}
 
-#### 产品Recommendations
+#### 产品推荐
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| 产品Recommendations服务的可用性 | R |   |
+| 产品推荐服务的可用性 | R |   |
 
 {style="table-layout:auto"}
 
@@ -816,7 +818,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | --- | --- | --- |
 | SSL专用证书 — 到期 | R |  |
 | 配置SSL证书 | R |  |
-| 购买并维护EV/特定SSL证书（提供的默认证书除外）并向Adobe提供 |     | R |
+| 购买和维护特定于EV的SSL证书（提供的默认证书除外）并提供给Adobe |     | R |
 
 {style="table-layout:auto"}
 
@@ -851,8 +853,8 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 使用Adobe拥有的VPC配置和维护PrivateLink连接（如果使用） | R |   |
 | 使用商家拥有的VPC配置和维护PrivateLink连接（如果使用） |     | R |
 | SSH（非专用链接）的可用性 | R |   |
-| 入站到Adobe Commerce Cloud服务端点的PrivateLink配置 | R |   |
-| 接受入站到Adobe Commerce Cloud服务端点的PrivateLink |     | R |
+| 配置入站到Adobe Commerce云服务端点的PrivateLink | R |   |
+| 接受PrivateLink入站到Adobe Commerce云服务端点 |     | R |
 | 入站到商家VPC服务端点的PrivateLink的配置 |     | R |
 | 接受入站到商家VPC服务端点的PrivateLink | R |   |
 | PrivateLink集成（端点到帐户）的配置 |     | R |
@@ -896,7 +898,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| CPU资源、数据中心、磁盘空间的可用性 | R |   |
+| CPU资源、数据中心和磁盘空间的可用性 | R |   |
 | 快速部署容量或紧急规模调整的可用性和执行 | R |   |
 | 请求快速部署容量 |     | R |
 | 根据限制监控vCPU使用情况 | R |   |
