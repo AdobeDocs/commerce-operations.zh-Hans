@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-63/acsd-65195-fixes-the-issue-where-the-graphql-mutation-createcompany">对QPT 1.1.63版本</a>中ACSD-65195修补程序修复的问题的详细说明。</p>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-63/acsd-65195-fixes-the-issue-where-the-graphql-mutation-createcompany">对QPT 1.1.63版本</a>中ACSD-65195修补程序修复的问题的详细说明。</p>
 </td>
       <td>
         新主题qpt
@@ -31,7 +31,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a6a8ad44c339b95b4afcedbd33b84c1d8b3411cc">提交</a></td>
     </tr>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-62/acsd-64532-env-variable-set-to-string-false-instead-of-boolean-false">ACSD-64532修补程序</a>修复了将ENV变量设置为false而非布尔值FALSE视为字符串false的问题。</p>
+      <td><p><a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-62/acsd-64532-env-variable-set-to-string-false-instead-of-boolean-false">ACSD-64532修补程序</a>修复了将ENV变量设置为false而非布尔值FALSE视为字符串false的问题。</p>
 </td>
       <td>
         新主题qpt
