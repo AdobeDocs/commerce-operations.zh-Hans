@@ -24,13 +24,13 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》_中的[`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)_。
+有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》_中的[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)_。
 
 有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[配置Valkey页缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)。
 
 >[!NOTE]
 >
->验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
+>验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
 
 ### 二级缓存内存大小(Adobe Commerce Cloud)
 
@@ -90,7 +90,7 @@ stage:
 
 >[!WARNING]
 >
->请&#x200B;_不_&#x200B;为具有[缩放/拆分架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)的云基础架构项目配置Valkey从属连接。 这会导致Redis连接错误。 有关详细信息，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[Redis配置指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection)。
+>请&#x200B;_不_&#x200B;为具有[缩放/拆分架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)的云基础架构项目配置Valkey从属连接。 这会导致Redis连接错误。 有关详细信息，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[Redis配置指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection)。
 
 ## 预加载键
 
@@ -152,7 +152,7 @@ stage:
 
 >[!NOTE]
 >
->在上一个示例中，`full_page`缓存与云基础架构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)。
+>在上一个示例中，`full_page`缓存与云基础架构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly)。
 
 有关配置内部部署安装的信息，请参阅&#x200B;_配置指南_&#x200B;中的[过时缓存选项](../../../configuration/cache/level-two-cache.md#stale-cache-options)。
 
