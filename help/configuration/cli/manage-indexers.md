@@ -2,7 +2,7 @@
 title: 管理索引器
 description: 请参阅有关如何查看和管理Commerce索引器的示例。
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
+source-git-commit: 54aef3d7db7b8333721fb56db0ba8f098aea030b
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -39,7 +39,8 @@ salesrule_rule                           Sales Rule
 ```
 
 >[!NOTE]
-> 使用实时搜索、目录服务或产品推荐的Adobe Commerce商家可以选择使用基于[SaaS的价格索引](https://experienceleague.adobe.com/docs/commerce/price-indexer/index.html)。
+>
+> 使用实时搜索、目录服务或产品推荐的Adobe Commerce商家可以选择使用基于[SaaS的价格索引](https://experienceleague.adobe.com/en/docs/commerce/price-indexer/price-indexing)。
 
 ## 查看索引器状态
 
@@ -231,11 +232,11 @@ Catalog Search:                                    Update on Save
 >
 >请确保使用`realtime`而不是`schedule`设置[!DNL Customer Grid]。 只能使用[!UICONTROL Update on Save]选项为[!DNL Customer Grid]重新编制索引。 此索引不支持`Update by Schedule`选项。 使用以下命令行将此索引器设置为保存时更新： `php bin/magento indexer:set-mode realtime customer_grid`
 >
->请参阅&#x200B;_实施行动手册_&#x200B;中的[索引器配置的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html?lang=zh-Hans)。
+>请参阅&#x200B;_实施行动手册_&#x200B;中的[索引器配置的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html)。
 
 >[!INFO]
 >
->在切换索引器模式之前，请将您的网站设置为[维护](../../installation/tutorials/maintenance-mode.md)模式并[禁用cron作业](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html?lang=zh-Hans#disable-cron-jobs)。 这可以确保您不会遇到数据库锁定的问题。
+>在切换索引器模式之前，请将您的网站设置为[维护](../../installation/tutorials/maintenance-mode.md)模式并[禁用cron作业](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs)。 这可以确保您不会遇到数据库锁定的问题。
 
 要指定索引器配置，请执行以下操作：
 
