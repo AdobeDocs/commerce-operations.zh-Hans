@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9514f6655bb6d99205c3799a164b6db62887362c
+source-git-commit: 0eb7528ebcc1515defd672830b8f00e460819aa1
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -17,4 +17,4 @@ ht-degree: 0%
 
 每个安全补丁发行版本都基于以前的完整补丁发行版本。 它包含先前修补程序版本的质量和安全修复，以及在先前完整修补程序版本和安全修补程序版本之间创建的安全修复。
 
-有关下载和应用安全修补程序的说明，请参阅&#x200B;_升级指南_&#x200B;中的[执行并升级](../../installation/composer.md#example---security-patch)。
+有关下载和应用安全修补程序的说明，请参阅&#x200B;_Adobe Commerce知识库_&#x200B;中的[如何获取和应用安全修补程序](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)。
