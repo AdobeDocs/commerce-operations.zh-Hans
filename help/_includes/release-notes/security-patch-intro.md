@@ -18,4 +18,4 @@ ht-degree: 0%
 了解有关安全修补程序版本的更多信息：
 
 * [Adobe Commerce安全修补程序版本概述](/help/release/release-notes/security/overview.md#about-adobe-commerce-security-patch-releases)
-* 有关下载和应用安全修补程序版本的说明，请参见&#x200B;_Adobe Commerce知识库_&#x200B;中的[如何获取和应用安全修补程序](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)。
+* 有关下载和应用安全修补程序版本的说明，请参见&#x200B;_Adobe Commerce知识库_&#x200B;中的[如何获取和应用安全修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)。
