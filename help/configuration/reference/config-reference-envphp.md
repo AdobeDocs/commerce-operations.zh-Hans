@@ -2,9 +2,9 @@
 title: env.php参考
 description: 查看env.php文件的值列表。
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 3f46ee08bb4edc08775bf986804772b88ca35f45
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '944'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-在&#x200B;_Commerce用户指南_&#x200B;中了解有关[加密密钥](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)的更多信息。
+在&#x200B;_Commerce用户指南_&#x200B;中了解有关[加密密钥](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)的更多信息。
 
 ## db
 
@@ -203,7 +203,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-了解有关[可下载域](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
+了解有关[可下载域](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
 
 ## 安装
 
@@ -300,3 +300,74 @@ x-frame-options标头可以使用此节点进行配置。
 <!-- Link definitions -->
 
 [message-queue]: https://developer.adobe.com/commerce/php/development/components/message-queues/
+
+
+## 将变量添加到文件配置
+
+您可以使用操作系统(OS)级别的环境变量来设置或覆盖每个配置选项（具有值的变量）。
+
+`env.php`配置存储在具有嵌套级别的数组中。 要将嵌套数组路径转换为OS环境变量的字符串，请用双下划线字符`__`、大写并以`MAGENTO_DC_`为前缀连接路径中的每个键。
+
+例如，我们将会话保存处理程序从`env.php`配置转换为操作系统环境变量。
+
+```conf
+'session' => [
+  'save' => 'files'
+],
+```
+
+与`__`连接，大写键将变为`SESSION__SAVE`。
+
+然后，我们使用`MAGENTO_DC_`作为前缀以获取生成的OS环境变量名称`MAGENTO_DC_SESSION__SAVE`。
+
+```shell
+export MAGENTO_DC_SESSION__SAVE=files
+```
+
+作为另一个示例，让我们转换标量`env.php`配置选项路径。
+
+```conf
+'x-frame-options' => 'SAMEORIGIN'
+```
+
+>[!INFO]
+>
+>虽然变量名称应大写，但值区分大小写，应按照文档进行保留。
+
+我们只需将其大写并添加`MAGENTO_DC_`作为前缀，即可接收最终的OS环境变量名称`MAGENTO_DC_X-FRAME-OPTIONS`。
+
+```shell
+export MAGENTO_DC_X-FRAME-OPTIONS=SAMEORIGIN
+```
+
+>[!INFO]
+>
+>请注意，`env.php`内容将具有高于操作系统环境变量的优先级。
+
+## 使用变量覆盖文件配置
+
+要使用操作系统环境变量覆盖现有`env.php`配置选项，配置的数组元素必须经过JSON编码并设置为`MAGENTO_DC__OVERRIDE`操作系统变量的值。
+
+如果需要覆盖多个配置选项，请在JSON编码之前将它们全部组合到单个数组中。
+
+例如，让我们覆盖以下`env.php`配置：
+
+```conf
+'session' => [
+  'save' => 'files'
+],
+'x-frame-options' => 'SAMEORIGIN'
+```
+
+上述数组的JSON编码文本将为
+`{"session":{"save":"files"},"x-frame-options":"SAMEORIGIN"}`。
+
+现在，将它设置为`MAGENTO_DC__OVERRIDE`操作系统变量的值。
+
+```shell
+export MAGENTO_DC__OVERRIDE='{"session":{"save":"files"},"x-frame-options":"SAMEORIGIN"}'
+```
+
+>[!INFO]
+>
+>如有必要，请确保正确引用和/或转义JSON编码数组，以防止操作系统损坏编码字符串。
