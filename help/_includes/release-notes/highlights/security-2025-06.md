@@ -1,7 +1,7 @@
 ---
-source-git-commit: f9cc5ab0cb1b64455e12081ffbf719e0f2a791ad
+source-git-commit: cbf41054a2a8ffefa38049e1bf6e4a2f09e06ce1
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,8 @@ ht-degree: 0%
 
 * **修复了CVE-2025-47110** — 解决了电子邮件模板漏洞。<!-- AC-14695 -->
 
-* **修复VULN-31547** — 解决类别规范链接漏洞。<!-- AC-14713 -->
-
 >[!BEGINSHADEBOX]
 
-CVE-2025-47110 VULN-31547的修复程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50)。
+CVE-2025-47110的修补程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50)。
 
 >[!ENDSHADEBOX]
