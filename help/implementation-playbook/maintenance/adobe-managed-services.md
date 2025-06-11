@@ -3,9 +3,9 @@ title: Adobe Managed Services
 description: 了解Adobe Managed Services如何帮助支持和维护Adobe Commerce实施。
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
-source-git-commit: c93dd37d6e196a09c9e7f4b376e421ca5886c7e0
+source-git-commit: e5a50707463bb7b36b4285889b10353faf9ba09f
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -53,8 +53,6 @@ Adobe Managed Services与内部部署和非托管云实施相比具有关键优�
 | 上线流程协调 | | | |
 | 专门的上报管理 | | | |
 | 应用监测和协助 | | | |
-
-如果您希望将此文件导出为Excel或其他格式，请告知我。
 
 ## 角色和职责
 
