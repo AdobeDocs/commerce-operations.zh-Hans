@@ -1,5 +1,5 @@
 ---
-source-git-commit: cbf41054a2a8ffefa38049e1bf6e4a2f09e06ce1
+source-git-commit: 33debd1c742698e8242faaef1ff83bb2a9e5ee58
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 * **Cookie限制兼容性** — 解决涉及框架中`MAX_NUM_COOKIES`常量的向后不兼容的更改。 此更新将恢复预期行为，并确保与Cookie限制交互的扩展或自定义设置的兼容性。<!-- AC-14475 -->
 
-* **修复CVE-2024-34104** — 解决不正确的授权漏洞。<!-- AC-13917 -->
+* **异步操作** — 用于覆盖先前客户订单的异步操作受限。<!-- AC-13917 -->
 
 * **修复了CVE-2025-47110** — 解决了电子邮件模板漏洞。<!-- AC-14695 -->
 
