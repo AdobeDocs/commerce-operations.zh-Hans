@@ -38,7 +38,7 @@ ACSD-54961修补程序修复了受限管理员用户无法批量更新[!UICONTRO
 1. 创建其他网站、商店和商店视图。
 1. 将产品添加到第2个商店，然后添加评论。
 1. 创建仅具有第2家商店访问权限的受限制管理员用户。
-1. 以受限管理员用户身份登录，然后转到&#x200B;**[!UICONTROL  Marketings]** > **[!UICONTROL Reviews]** > **[!UICONTROL Mass Update]**，并将&#x200B;**状态**&#x200B;设置为&#x200B;*已批准*&#x200B;或&#x200B;*待处理*。
+1. 以受限管理员用户身份登录，然后转到&#x200B;**[!UICONTROL &#x200B; Marketings]** > **[!UICONTROL Reviews]** > **[!UICONTROL Mass Update]**，并将&#x200B;**状态**&#x200B;设置为&#x200B;*已批准*&#x200B;或&#x200B;*待处理*。
 
 <u>预期的结果</u>：
 

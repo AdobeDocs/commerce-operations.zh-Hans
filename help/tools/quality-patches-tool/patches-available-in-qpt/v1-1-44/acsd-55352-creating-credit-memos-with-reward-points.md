@@ -50,7 +50,7 @@ ACSD-55352修补程序修复了以下问题：使用客户奖励积分创建部�
 5. 从店面创建客户。
 6. 再次转到后端： **[!UICONTROL Customers]** > **[!UICONTROL All Customers]** > **[!UICONTROL Edit]** > **[!UICONTROL Reward Points]** > **[!UICONTROL Update Points]** >添加&#x200B;*100*&#x200B;并保存客户。
 7. 转到店面，并以客户之前创建的身份登录。
-8. 将产品添加到购物车，数量为&#x200B;*1}：* 10 *。*
+8. 将产品添加到购物车，数量为&#x200B;*1&rbrace;：* 10 *。*
 9. 转到&#x200B;**[!UICONTROL Checkout]**&#x200B;并在出现提示时使用可用的&#x200B;*100*&#x200B;奖励积分并下订单。
 10. 转到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Sales]** > **[!UICONTROL Orders]** > **[!UICONTROL Invoice]**&#x200B;并发送该订单。
 11. 转到[!UICONTROL Credit Memo]并将&#x200B;*退款数量*&#x200B;更新为&#x200B;*8*。

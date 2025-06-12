@@ -56,12 +56,12 @@ ACSD-60441修补程序修复了在使用从后端生成的集成访问令牌时�
 
 您会收到以下错误：
 
-    ``json
-    {
-    ``message`： &quot;关联网站中已存在具有相同电子邮件地址的客户。&quot;，
-    `trace&quot;： ...
-    }
-    ``
+    &grave;&grave;json
+    &lbrace;
+    &grave;&grave;message&grave;： &quot;关联网站中已存在具有相同电子邮件地址的客户。&quot;，
+    &grave;trace&quot;： ...
+    &rbrace;
+    &grave;&grave;
 
 ## 应用修补程序
 

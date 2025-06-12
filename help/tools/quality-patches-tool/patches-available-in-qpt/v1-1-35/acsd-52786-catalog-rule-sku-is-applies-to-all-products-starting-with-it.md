@@ -38,7 +38,7 @@ ACSD-52786修补程序修复了目录规则条件&#x200B;*[!UICONTROL SKU is]*&#
 1. 创建两个产品，一个带有SKU“24”，另一个带有SKU“24-MB01”。
 1. 导航到&#x200B;**[!UICONTROL Marketing]** > **[!UICONTROL Catalog Price Rule]** > **[!UICONTROL Add New Rule]**。
 1. 应用以下条件：
-   * 这些条件中的&#x200B;*[!UICONTROL If **&#x200B;全部&#x200B;**为** TRUE **]*： *[!UICONTROL SKU is 24]*
+   * 这些条件中的&#x200B;*[!UICONTROL If **&#x200B;全部&#x200B;**&#x200B;为**&#x200B; TRUE &#x200B;**]*： *[!UICONTROL SKU is 24]*
 1. 在操作中设置任何折扣金额。
 1. 单击&#x200B;**[!UICONTROL Save and Apply]**。
 1. 刷新缓存。

@@ -40,7 +40,7 @@ ACSD-46520修补程序解决了使用商店积分退款时，用户得到的订�
 1. 使用商店积分下订单。
 1. 为订单开票。
 1. 创建贷项通知单以退款订单的全部金额。
-选中**[!UICONTROL Refund to store credit]**&#x200B;复选框。
+选中&#x200B;**[!UICONTROL Refund to store credit]**&#x200B;复选框。
 1. 检查订单状态。
 
 <u>预期的结果</u>：

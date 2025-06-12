@@ -44,7 +44,7 @@ MDVA-39305-V3修补程序修复了在启用[!DNL Google reCAPTCHA]时注册客�
 
 <u>重现步骤</u>：
 
-1. 转到&#x200B;**[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL Security]** > **[!DNL Google reCAPTCHA Storefront]**&#x200B;并启用***[!DNL Google reCAPTCHA]***。
+1. 转到&#x200B;**[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL Security]** > **[!DNL Google reCAPTCHA Storefront]**&#x200B;并启用&#x200B;***[!DNL Google reCAPTCHA]***。
 1. 去前台。
 1. 在浏览器中打开&#x200B;**[!UICONTROL Developer Tool Console]**。
 

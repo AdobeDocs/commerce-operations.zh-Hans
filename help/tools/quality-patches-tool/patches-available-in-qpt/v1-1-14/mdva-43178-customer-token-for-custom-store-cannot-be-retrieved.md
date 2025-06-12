@@ -44,10 +44,10 @@ MDVA-43178修补程序修复了无法在GraphQL中检索自定义存储区的客
 
    <pre>
     <code class="language-graphql">
-    {
+    &lbrace;
       "username": "login",
       "password": "password"
-    }
+    &rbrace;
     </code>
     </pre>
 

@@ -46,16 +46,16 @@ Adobe Commerce（所有部署方法） 2.4.2-p1 - 2.4.2-p2
 1. 在&#x200B;**相关产品**&#x200B;下，添加两个饺子包（ID 7和13）。
 1. 发送&#x200B;**Post**&#x200B;请求：
 
-<pre>{
-  products(filter： {sku： {eq： "24-MB01"}}，sort： {name： ASC}) {
-    项目{
-      related_products {
+<pre>&lbrace;
+  products(filter： {sku： {eq： "24-MB01"}}，sort： {name： ASC}) &lbrace;
+    项目&lbrace;
+      related_products &lbrace;
         uid
         name
-      }
-    }
-  }
-}</pre>
+      &rbrace;
+    &rbrace;
+  &rbrace;
+&rbrace;</pre>
 
 <u>预期的结果</u>：
 
@@ -65,7 +65,7 @@ GraphQL响应中将显示相关产品。
 
 用户收到以下错误：
 
-<pre>Magento\CatalogPermissionsGraphQl\Model\Store\StoreProcessor：：getStoreId()的返回值必须是int类型，null返回{"exception"："[object] (GraphQL\\Error\\Error(code： 0)： Magento\\CatalogPermissionsGraphQl\\Model\\Store\\StoreProcessor：：getStoreId()的返回值必须是int类型，返回的是null </pre>
+<pre>Magento\CatalogPermissionsGraphQl\Model\Store\StoreProcessor：：getStoreId()的返回值必须是int类型，null返回&lbrace;"exception"："[object] (GraphQL\\Error\\Error(code： 0)： Magento\\CatalogPermissionsGraphQl\\Model\\Store\\StoreProcessor：：getStoreId()的返回值必须是int类型，返回的是null </pre>
 
 ## 应用修补程序
 
