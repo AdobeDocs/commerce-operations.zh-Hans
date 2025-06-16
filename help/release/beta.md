@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: ea4f340540e57b282657a44502d80f1d5c409c6a
+source-git-commit: 1c0dd720df944a5784c850a3f4ea63b8984069f1
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 - 使用AI和ML创建个性化搜索和推荐。
 - 查看重要的产品数据可用性，包括同步状态和店面事件数据，以便准确实施和故障排除。
 
-[了解有关Adobe Commerce Optimizer的更多信息](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html?lang=zh-Hans)。 如果您有兴趣进一步了解[!DNL Adobe Commerce Optimizer]抢先体验计划，请完成[抢先体验申请表](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u)。
+[了解有关Adobe Commerce Optimizer的更多信息](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html)。 如果您有兴趣进一步了解[!DNL Adobe Commerce Optimizer]抢先体验计划，请完成[抢先体验申请表](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u)。
 
 ### 增强了实时搜索的搜索功能(公共Beta)
 
@@ -66,7 +66,7 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 
 这些新条件增强了搜索查询过滤机制以细化搜索结果。 这些新条件不会影响主搜索查询。 要参与测试版，请向[commerce-storefront-services](mailto:commerce-storefront-services@adobe.com)发送电子邮件请求。
 
-要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/install#install-the-live-search-beta)。
+要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/en/docs/commerce/live-search/install#install-the-live-search-beta)。
 
 ### IBM Sterling Order Management系统集成(Private Beta)
 
@@ -79,38 +79,43 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 
 要参与此测试版，请向[sbieber@adobe.com](mailto:sbieber@adobe.com)发送电子邮件请求。
 
-### Adobe Commerce基础(公共Beta)
+### Adobe Commerce基础(公共Alpha/Beta)
 
-每个Adobe Commerce Foundation测试版都包括在计划发布日期之前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能领域：
+每个Adobe Commerce Foundation Alpha和测试版都包括在计划发布日期之前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能区域：
 
 - 最新的安全修复
 - 性能改进
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html?lang=zh-Hans)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
-Adobe通常会每年发布两次Beta测试版修补程序。
+Adobe通常会每年发布多次alpha和beta修补程序。
+
+Alpha版本包具有`-alphaX`后缀。 例如，Adobe Commerce 2.4.7 alpha发行版包使用以下命名约定：
+
+- `2.4.7-alpha1`
+- `2.4.7-alpha2`
 
 Beta版本包具有`-betaX`后缀。 例如，Adobe Commerce 2.4.7测试版发行包使用以下命名约定：
 
 - `2.4.7-beta1`
 - `2.4.7-beta2`
 
-有关即将发布的公共测试版发布日期的列表，请参阅[发布计划](schedule.md)。
+有关即将发布的公共Alpha和Beta版本的日期列表，请参阅[发布计划](schedule.md)。
 
-#### Beta版本访问权限
+#### 发布访问权限
 
-Adobe Commerce测试版的发布方式与任何其他Adobe Commerce补丁版本相同：作为`https://repo.magento.com`上的编辑器中继包。 源代码在[GitHub](https://github.com/magento/magento2)上可用。
+Adobe Commerce alpha和beta版本的发布方式与任何其他Adobe Commerce补丁版本相同：作为`https://repo.magento.com`上的编辑器中继包。 源代码在[GitHub](https://github.com/magento/magento2)上可用。
 
 有关详细信息，请参阅[Composer安装快速入门](../installation/composer.md)。
 
 #### 问题报告
 
-Adobe不为测试版提供标准的Adobe支持服务。
+Adobe不为alpha和beta版本提供标准的Adobe支持服务。
 
-若要提交与测试版版本相关的反馈，请按照[GitHub](https://github.com/magento/magento2)上的[常规问题报告流程](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)操作。
+要提交与Alpha版和Beta版相关的反馈，请按照[GitHub](https://github.com/magento/magento2)上的[常规问题报告流程](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)操作。
 
-我们的内部团队将监控针对最新测试版报告的所有严重问题，并在GA发布日期之前优先解决这些问题。
+Adobe会监控针对最新Alpha或Beta版本报告的所有严重问题，并排定在GA发行日期之前需要解决这些问题的优先级。
