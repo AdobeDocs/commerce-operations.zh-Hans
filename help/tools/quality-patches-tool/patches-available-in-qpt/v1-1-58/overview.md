@@ -3,7 +3,9 @@ title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.58
 description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.58中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: f8473bbdedef26b291547d828e47a9ba08a5d142
+exl-id: 61bf8b82-f897-41f6-8524-5aa74c6440f1
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -29,4 +31,3 @@ QPT v1.1.58包含以下修补程序：
 1. **ACSD-63578**：修复了单击[!UICONTROL Admin]中&#x200B;**[!UICONTROL Add to Order by SKU]**&#x200B;的&#x200B;**[!UICONTROL Delete]**&#x200B;按钮未删除[!DNL SKU]的问题。
 
 使用左侧的菜单导航到特定的修补程序页面。
-

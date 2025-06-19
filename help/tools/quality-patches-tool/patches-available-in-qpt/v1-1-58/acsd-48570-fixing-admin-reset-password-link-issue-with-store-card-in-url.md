@@ -3,7 +3,9 @@ title: ACSD-48570：修复了URL中的存储代码存在的管理员重置密码
 description: 应用ACSD-48570修补程序以修复启用[!UICONTROL Add Store Code to URLs]配置时无法通过管理员重置密码链接访问重置密码页面的Adobe Commerce问题。
 feature: Security, User Account
 role: Admin, Developer
-source-git-commit: a9d7f4f4c2f2e27ff9571de08bcec918b4605b03
+exl-id: 049a82ff-80e3-46a1-8472-ac74de0e365f
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
@@ -26,11 +28,11 @@ ACSD-48570修补程序，用于修复启用&#x200B;*[!UICONTROL Add Store Code t
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-启用&#x200B;**[!UICONTROL Add Store Code to URLs]**&#x200B;设置后，管理员重置密码功能无法正常工作。
+启用&#x200B;**[!UICONTROL Add Store Code to URLs]**设置后，管理员重置密码功能无法正常工作。
 在管理员用户请求重置密码并单击电子邮件中的恢复链接后，他们将被重定向到登录页面或收到404错误，而不是被带入重置密码表单。 这可以防止管理员无需手动干预即可恢复其帐户。
 
 <u>重现步骤</u>：
@@ -53,7 +55,7 @@ ACSD-48570修补程序，用于修复启用&#x200B;*[!UICONTROL Add Store Code t
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

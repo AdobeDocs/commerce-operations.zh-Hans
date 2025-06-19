@@ -3,7 +3,9 @@ title: ACSD-62755： [!DNL TinyMCE] 7需要在编辑器初始化设置中添加�
 description: 应用ACSD-62755修补程序以修复Adobe Commerce问题，该问题导致 [!DNL TinyMCE] 7要求在编辑器初始化设置中专门添加*font size*和*font family*。
 feature: Page Content, Page Builder, Admin Workspace
 role: Admin, Developer
-source-git-commit: 4aba81ea12cc08370881d3cc108e94ba410a2198
+exl-id: f61dc7b6-ac6b-45eb-a0a2-f3f0bff4422b
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -26,7 +28,7 @@ Adobe Commerce（所有部署方法） 2.4.4-p11、2.4.5-p10、2.4.6-p8、2.4.7-
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -49,7 +51,7 @@ WYSIWYG编辑器中缺少&#x200B;*字体大小*&#x200B;选择器。
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

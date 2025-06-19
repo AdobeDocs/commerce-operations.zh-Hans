@@ -3,13 +3,14 @@ title: ACSD-64732：第三方控制器未通过客户区段正确缓存
 description: 应用ACSD-64732补丁以修复第三方控制器未正确通过客户区段缓存的Adobe Commerce问题。
 feature: Cache
 role: Admin, Developer
-source-git-commit: 047de42098f711036f1f5252d2cbc4a329ebbfb2
+exl-id: 378e5a96-06dd-4796-9e45-a67cf539fcce
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64732：第三方控制器未通过客户区段正确缓存
 
@@ -27,7 +28,7 @@ ACSD-64732修补程序修复了第三方控制器无法通过客户区段正确�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 

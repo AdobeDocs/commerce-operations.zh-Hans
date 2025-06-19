@@ -3,13 +3,14 @@ title: ACSD-63469：多个规则未正确应用固定金额购物车折扣
 description: Adobe Commerce应用ACSD-63469修补程序以修复以下问题：当应用多个规则时，无法正确应用整个购物车的固定金额折扣。
 feature: Price Rules
 role: Admin, Developer
-source-git-commit: 3699a9f64198558fcf1ffe53753f035d22c2d301
+exl-id: fb6dee57-281e-4165-8b70-7ff5949eb677
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63469：多个规则未正确应用固定金额购物车折扣
 
@@ -27,7 +28,7 @@ ACSD-63469修补程序修复了在应用多个规则时，整个购物车的固�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -58,7 +59,7 @@ ACSD-63469修补程序修复了在应用多个规则时，整个购物车的固�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 安装修补程序后所需的其他步骤
 
@@ -69,4 +70,3 @@ ACSD-63469修补程序修复了在应用多个规则时，整个购物车的固�
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-

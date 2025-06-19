@@ -3,13 +3,14 @@ title: ACSD-64149：仅编辑一个日期时，可以保存具有[!UICONTROL Dat
 description: 应用ACSD-64149修补程序以修复Adobe Commerce问题，该问题导致在仅编辑其中一个日期时可以保存具有**[!UICONTROL Date range]**条件的客户区段。
 feature: Customers, Admin Workspace
 role: Admin, Developer
-source-git-commit: c1c5256aee44ce65e9339cf3985e53f710fc7c8a
+exl-id: 5423bbd3-75e9-4137-b2d5-3a0ceb3384ad
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64149：仅编辑一个日期时，可以保存具有[!UICONTROL Date range]条件的客户区段
 
@@ -27,7 +28,7 @@ ACSD-64149修补程序修复了在仅编辑日期之一时可以保存具有日�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 

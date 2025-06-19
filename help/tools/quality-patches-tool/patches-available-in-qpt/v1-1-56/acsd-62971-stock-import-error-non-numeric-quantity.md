@@ -3,13 +3,14 @@ title: ACSD-62971：使用非数字数量值导入库存来源会导致数量设
 description: 应用ACSD-62971修补程序以修复Adobe Commerce问题，该问题导致在“数量”列中导入具有非数字值的库存源导致数量设置为0。
 feature: Data Import/Export, Inventory
 role: Admin, Developer
-source-git-commit: 5b54c0681b699303fff1bb058d434b6eb8b750b0
+exl-id: ece23153-4932-4ac5-b46e-49327a8e84a1
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62971：使用非数字数量值导入库存来源会导致数量设置为0
 
@@ -27,7 +28,7 @@ ACSD-62971修补程序修复了以下问题：在“quantity”列中导入具�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -56,11 +57,10 @@ ACSD-62971修补程序修复了以下问题：在“quantity”列中导入具�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
-

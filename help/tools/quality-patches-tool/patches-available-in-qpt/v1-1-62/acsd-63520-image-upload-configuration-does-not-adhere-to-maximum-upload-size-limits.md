@@ -3,13 +3,14 @@ title: ACSD-63520：通过图像上传配置上传的图像超过了配置的大
 description: 应用ACSD-63520补丁以修复通过“管理”面板中的图像上传配置上传的图像不符合配置的最大上传大小限制的Adobe Commerce问题。
 feature: Media, Products
 role: Admin, Developer
-source-git-commit: 987d335f03d552763f75adb73890787abf235e66
+exl-id: 5132bfa9-813a-4623-8e02-a8801f6396e8
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63520：通过[!UICONTROL Image Upload Configuration]上传的映像超出了配置的大小限制
 
@@ -25,7 +26,7 @@ ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的[!DNL Adobe Commerce]版本兼容，请将`magento/quality-patches`包更新为最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的[!DNL Adobe Commerce]版本兼容，请将`magento/quality-patches`包更新为最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -65,7 +66,7 @@ ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 

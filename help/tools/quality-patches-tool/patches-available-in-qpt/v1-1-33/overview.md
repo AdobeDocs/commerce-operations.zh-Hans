@@ -4,7 +4,8 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin
 exl-id: 31812668-1d24-4da6-992f-981c259e00da
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%
@@ -30,7 +31,7 @@ QPT v1.1.33包含以下修补程序：
 1. **ACSD-51792**：修复了在启用[!DNL Google Tag Manager] 4时页面没有展示事件的问题。
 1. **ACSD-51471**：修复了管理员用户无法为捆绑产品保存计划更新的问题，捆绑产品使用本身具有计划更新的简单产品。
 1. **ACSD-51700**：修复了在管理员的可下载产品编辑页面上切换商店视图时发生的错误。
-1. **ACSD-51120**：修复了包含通过暂存更新更新更新的GraphQL块的CMS页面未清除CMSGET缓存的问题。
+1. **ACSD-51120**：修复了包含通过暂存更新更新更新的GraphQL块的CMS页面未清除CMS GET请求缓存的问题。
 1. **ACSD-51240**：修复了通过公司注册表进行注册时上传文件缺失的问题。
 1. **ACSD-51907**：修复了受限管理员用户无法创建包含离线退款的贷项通知单的问题。
 1. **ACSD-52148**：修复了[!UICONTROL Google V3 reCAPTCHA Admin]登录偶尔失败的问题。

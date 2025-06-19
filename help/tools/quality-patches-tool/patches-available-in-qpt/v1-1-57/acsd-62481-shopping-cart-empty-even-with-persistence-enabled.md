@@ -3,13 +3,14 @@ title: ACSD-62481：即使在启用[!UICONTROL Persistence]的情况下，购物
 description: 应用ACSD-62481修补程序以修复在结账期间使用登录弹出窗口时永久性购物车功能失败的Adobe Commerce问题。
 feature: Shopping Cart, Checkout
 role: Admin, Developer
-source-git-commit: 27a98c42f2c514b3dd1a2f59c140b60b7ac26592
+exl-id: 79fb3161-f56e-45f3-9933-cf95703f1554
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62481：即使在启用&#x200B;*[!UICONTROL Persistence]*&#x200B;的情况下，购物车仍保持空白
 
@@ -27,7 +28,7 @@ ACSD-62481修补程序修复了在签出期间使用登录弹出窗口时永久�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 

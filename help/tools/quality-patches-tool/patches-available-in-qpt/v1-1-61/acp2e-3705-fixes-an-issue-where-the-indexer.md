@@ -3,13 +3,14 @@ title: ACP2E-3705：在设置“MAGE_INDEXER_THREADS_COUNT”时，“indexer_up
 description: 应用ACP2E-3705修补程序以修复在设置“MAGE_INDEXER_THREADS_COUNT”时，“indexer_update_all_views”cron执行失败的Adobe Commerce问题。
 feature: Catalog Management, B2B
 role: Admin, Developer
-source-git-commit: 4f719c62fdd9fd960548799c9872f73c76997278
+exl-id: 111325fa-8ed5-45f9-9e68-b52f4425d253
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
-
 
 # ACP2E-3705：设置`MAGE_INDEXER_THREADS_COUNT`时，`indexer_update_all_views` cron执行失败
 
@@ -31,7 +32,7 @@ ACP2E-3705修补程序修复了在设置`MAGE_INDEXER_THREADS_COUNT`时`indexer_
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 

@@ -3,13 +3,14 @@ title: ACSD-64523：REST端点无法验证必填字段
 description: 应用ACSD-64523修补程序以修复REST端点“[V1/import/csv]”无法验证必填字段的问题，从而允许在不提供必填字段的情况下创建产品。
 feature: REST, Products, Admin Workspace
 role: Admin, Developer
-source-git-commit: 4bf9a5eb2e423f5981ee9234be57230a6dff3913
+exl-id: 21aecd6d-06e4-4f2b-904a-27487ba74968
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64523：REST端点无法验证必填字段
 
@@ -27,7 +28,7 @@ ACSD-64523修补程序修复了REST端点[V1/import/csv]无法验证必填字段
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -91,7 +92,7 @@ REST端点`[V1/import/csv]`无法验证必填字段，允许创建产品而不�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

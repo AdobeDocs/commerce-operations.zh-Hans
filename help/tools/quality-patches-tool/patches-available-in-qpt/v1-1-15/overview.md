@@ -4,7 +4,8 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin
 exl-id: f30a9554-cacf-4406-b6b4-a43d680597bc
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 QPT v1.1.15包含以下修补程序：
 
 1. **MDVA-38559**：为具有多个订阅的客户修复了&#x200B;*/V1/customers/search API*&#x200B;错误。
-1. **MDVA-40896**：修复了异步产品批量API中的&#x200B;*错误： TypeError：传递给Magento*&#x200B;的参数3错误。
+1. **MDVA-40896**：修复了异步产品批量API中的&#x200B;*错误： TypeError：传递到Magento的参数3*&#x200B;错误。
 1. **MDVA-40961**：修复了当购物车中已有最小数量的项目时，无法将其他项目添加到购物车的问题。
 1. **MDVA-43718**：修复&#x200B;*使用者无权访问%资源。从自定义集成访问共享目录时出现*&#x200B;错误。
 1. **MDVA-44533**：修复了错误将折扣应用于捆绑包子产品的问题。

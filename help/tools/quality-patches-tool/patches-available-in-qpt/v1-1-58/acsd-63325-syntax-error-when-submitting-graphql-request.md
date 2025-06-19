@@ -1,15 +1,16 @@
 ---
-title: ACSD-63325：语法错误：提交empty [!DNL GraphQL] 请求时出现意外<EOF>错误
+title: ACSD-63325：语法错误：提交空 [!DNL GraphQL] 请求时出现意外的&amp；lt；EOF&amp；gt；错误
 description: 应用ACSD-63325修补程序以修复在提交empty [!DNL GraphQL] 请求时发生语法错误的Adobe Commerce问题。
 feature: GraphQL
 Role: Admin, Developer
-source-git-commit: 805ab7fb001cda112ce1298f0221fb22b6494b47
+exl-id: a83a8c5f-a43a-4733-a601-7b92656e5325
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63325：提交空[!DNL GraphQL]请求时出现“语法错误：意外&lt; EOF >”错误
 
@@ -27,7 +28,7 @@ ACSD-63325修补程序修复了在提交空[!DNL GraphQL]请求时返回“语�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -62,7 +63,7 @@ HTTP/1.1 500 Internal Server Error
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

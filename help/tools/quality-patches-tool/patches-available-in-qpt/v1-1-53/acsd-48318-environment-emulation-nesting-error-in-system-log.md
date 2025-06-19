@@ -1,9 +1,11 @@
 ---
-title: “ACSD-48318：‘system.log’中出现环境模拟嵌套错误”
+title: ACSD-48318： 'system.log'中出现环境模拟嵌套错误
 description: 应用ACSD-48318修补程序以修复Adobe Commerce问题，该问题导致每次发送发票电子邮件时都在“system.log”中显示错误消息*main.ERROR：不允许进行环境仿真嵌套*。
 feature: System, Orders
 role: Admin, Developer
-source-git-commit: 94b68d18bc46065b5803a2eb88f0e844f71f0386
+exl-id: 24af18de-80dd-4e0a-bdf9-5b9c075fc608
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -26,7 +28,7 @@ ACSD-48318修补程序修复了错误消息&#x200B;*main的问题。错误：每
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -51,7 +53,7 @@ ACSD-48318修补程序修复了错误消息&#x200B;*main的问题。错误：每
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

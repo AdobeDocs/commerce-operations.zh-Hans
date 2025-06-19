@@ -4,7 +4,8 @@ description: 本文概述了 [!DNL Quality Patches Tool] (QPT)，并提供了资
 feature: Support, Tools and External Services
 role: Admin
 exl-id: e67e5823-d878-4efc-90af-c7bb8c59d654
-source-git-commit: 32800bcca9174eb09ff7a723bdc775ebaa569807
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 ## 什么是质量修补程序工具？
 
-[[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) (QPT)是一种允许您应用由Adobe和Magento Open Source团体开发的单个质量修补程序的工具。
+[[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) (QPT)是一种允许您应用Adobe和Magento Open Source社区开发的单个质量修补程序的工具。
 
 它允许您：
 
@@ -32,18 +33,18 @@ ht-degree: 0%
 
 下面是状态表的示例，您可以获得该表以查看可用的修补程序：
 
-![Magento修补程序列表](/help/assets/tools/status_table.png)
+![Magento_patches_list](/help/assets/tools/status_table.png)
 
 该工具旨在让您能够自助提供修补程序，以解决在Adobe Commerce中可能遇到的问题，或轻松应用Adobe Commerce支持人员建议的修补程序。
 
 >[!NOTE]
 >
->QPT仅适用于高质量的修补程序。 在[Adobe Commerce和Magento Open Source的发行说明](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html?lang=zh-Hans)中提供了安全修补程序。
+>QPT仅适用于高质量的修补程序。 在[Adobe Commerce和Magento Open Source的发行说明中提供了安全修补程序](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html)。
 
 ## [!DNL Quality Patches Tool]中可用的修补程序
 
 在Adobe Commerce支持知识库的此部分中，您将找到按QPT修补程序解决的问题按QPT发行版本分组的详细说明。
-您还可以查看可用QPT修补程序的列表，并使用我们的支持知识库中[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上动态生成的表按组件进行筛选。
+您还可以查看可用QPT修补程序的列表，并使用我们的支持知识库中[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上动态生成的表按组件进行筛选。
 
 ## 如何安装和使用[!DNL Quality Patches Tool]
 
@@ -55,8 +56,8 @@ ht-degree: 0%
 
 ### 如何在云基础架构上安装和使用QPT for Adobe Commerce
 
-请参阅我们的开发人员文档中的[Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)，了解有关如何在Adobe Commerce on Cloud Infrastructure上安装和使用QPT来应用和还原修补程序的详细信息。
+请参阅我们的开发人员文档中的[Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)，了解有关如何在Adobe Commerce on Cloud Infrastructure上安装和使用QPT来应用和还原修补程序的详细信息。
 
 ## 相关阅读
 
-* [[!DNL Quality Patches Tool] 发行说明](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=zh-Hans)（位于我们的开发人员文档中）。
+* [[!DNL Quality Patches Tool] 发行说明](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)（位于我们的开发人员文档中）。

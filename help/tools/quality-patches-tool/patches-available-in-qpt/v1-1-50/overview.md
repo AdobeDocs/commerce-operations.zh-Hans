@@ -4,7 +4,8 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 4e136531-6bd4-4294-9a5a-66d19eb136db
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -22,7 +23,7 @@ QPT v1.1.50包含以下修补程序：
 1. **ACSD-46938**：修复了`setup:upgrade`期间重新创建数据库触发器的性能问题。
 1. **ACSD-48210**：修复了在特定存储视图中更新&#x200B;*[!UICONTROL website scope]*&#x200B;属性会覆盖全局范围中的属性值的问题。
 1. **ACSD-54887**：修复了在启用&#x200B;*[!UICONTROL Persistent Shopping Cart]*&#x200B;后客户会话过期后客户购物车被清空的问题。
-1. **ACSD-58141**：修复了在启用[!UICONTROL L2 Redis cache]且客户从Admin中更新的情况下，在已登录客户的店面区域上重新生成`PHPSESSID`的POST请求的问题。
+1. **ACSD-58141**：修复了在已启用[!UICONTROL L2 Redis cache]且客户从Admin中更新的情况下，在登录客户的店面区域上为`PHPSESSID`重新生成POST请求的问题。
 1. **ACSD-58352**：修复了在请求标头中指定非默认商店视图时，通过GraphQL API返回默认商店视图的返回属性标签的问题。
 1. **ACSD-58442**：修复了宽度为&#x200B;*768px*&#x200B;的设备被视为移动设备，导致菜单和标题加载到移动视图而非桌面的问题。
 1. **ACSD-58790**：修复了[!DNL Chrome]上移动设备视图中的产品详细信息页面图像的&#x200B;*缩放夹入*&#x200B;功能。

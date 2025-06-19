@@ -3,13 +3,14 @@ title: ACSD-63974：通过分页修复了[!UICONTROL Requisition List]加载时�
 description: 应用ACSD-63974修补程序以修复项目过多时[!UICONTROL Requisition List]页面加载时间较长的问题。
 feature: B2B
 role: Admin, Developer
-source-git-commit: e5f8112b870e3550b4f3a9113be48428a54d454a
+exl-id: 1798baa3-da2f-44eb-8312-1f1b3f75b24d
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63974：通过分页修复了[!UICONTROL Requisition List]加载时间缓慢的问题
 
@@ -27,7 +28,7 @@ ACSD-63974修补程序修复了在项目过多时&#x200B;**[!UICONTROL Requisiti
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 

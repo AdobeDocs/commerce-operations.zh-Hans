@@ -3,13 +3,14 @@ title: ACSD-64137：按邮政编码搜索取车位置不适用于荷兰语本地
 description: 应用ACSD-64137补丁程序，修复按邮政编码搜索接收位置不适用于荷兰语本地化的问题。
 feature: Shipping/Delivery
 role: Admin, Developer
-source-git-commit: 4947133daaffb919aeba986c8a6b88ecb2e1b943
+exl-id: 86c28b6d-6584-4caf-bd35-13e0c1bdcf1d
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64137：按邮政编码搜索取车位置不适用于荷兰语本地化
 
@@ -27,7 +28,7 @@ ACSD-64137修补程序修复了按邮政编码搜索接收位置不适用于荷�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -65,7 +66,7 @@ ACSD-64137修补程序修复了按邮政编码搜索接收位置不适用于荷�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 
 ## 相关阅读

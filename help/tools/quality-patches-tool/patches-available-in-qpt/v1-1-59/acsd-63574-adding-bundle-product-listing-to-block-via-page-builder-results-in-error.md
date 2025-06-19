@@ -1,9 +1,11 @@
 ---
 title: ACSD-63574：将[!UICONTROL Bundle Product]列表添加到via [!DNL Page Builder] 的块会导致错误
-description: '应用ACSD-63574修补程序以修复Adobe Commerce问题，该问题导致通过&lbrace;1**向块添加带有“复选框”或“多选”选项的**[!UICONTROL Bundle Product]会导致错误。 [!DNL Page Builder] '
+description: '应用ACSD-63574修补程序以修复Adobe Commerce问题，该问题导致通过{1**向块添加带有“复选框”或“多选”选项的**[!UICONTROL Bundle Product]会导致错误。 [!DNL Page Builder] '
 feature: Page Builder, Page Content
 role: Admin, Developer
-source-git-commit: b2e6a3a61dbd3cd3b76e968ff8cdad664663fc4b
+exl-id: bb56c0c2-e094-4173-8260-da154df79748
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -26,15 +28,15 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.4-p11
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
 使用[!DNL Page Builder]将&#x200B;**[!UICONTROL Bundle Product]**&#x200B;添加到块时，产品小组件预览会中断并显示错误消息&#x200B;*很抱歉，生成此内容时出错*。 当捆绑产品包含`Checkbox`或`Multi Select`选项类型，并且`indexer dimension mode`设置为`website_and_customer_group`时，具体会发生此问题。 异常日志显示以下错误：
 
-    &grave;&grave;
+    ``
     report.CRITICAL： PDOException： SQLSTATE[42S02]：未找到基表或视图： 1146表`db_name.catalog_product_index_price_cg0_ws0`在/home/vendor/magento/framework/DB/Statement/Pdo/Mysql.php：90
-    &grave;&grave;
+    ``
 中不存在
 <u>重现步骤</u>：
 
@@ -63,7 +65,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.4-p11
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 
 ## 相关阅读

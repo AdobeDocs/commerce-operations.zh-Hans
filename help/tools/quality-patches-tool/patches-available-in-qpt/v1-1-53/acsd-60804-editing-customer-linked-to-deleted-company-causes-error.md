@@ -1,10 +1,11 @@
 ---
-title: 'ACSD-60804：编辑与已删除公司关联的客户会导致错误'
+title: ACSD-60804：编辑与已删除公司关联的客户会导致错误
 description: 应用ACSD-60804修补程序以修复Adobe Commerce问题，该问题导致编辑与已删除公司关联的客户时出现错误*在null*上调用成员函数getSuperUserId() 。
 feature: Companies, Customers, B2B
 role: Admin, Developer
 exl-id: 09241160-f5ed-41f8-8bb6-2bb8ed5cccd5
-source-git-commit: 9d39b1045099a71d23f25ad1ef4932f78b1f33f0
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -27,7 +28,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -59,7 +60,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 
