@@ -2,9 +2,9 @@
 title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 811c29c722448a0dc0c9172f58020bd17241513c
+source-git-commit: 883d9cd90a70dc898766f89ee4d8e8adb1583c08
 workflow-type: tm+mt
-source-wordcount: '26381'
+source-wordcount: '26682'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,24 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.66 {#v1-1-66}
+
+* **ACP2E-3789**(适用于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.9) — 修复了在提供媒体ID时通过[!DNL WebAPI]重复媒体文件更新产品的问题。
+* **ACP2E-3918**(适用于Adobe Commerce >=2.4.5 &lt;2.4.9) — 修复了使用无默认账单地址店内收取的登录公司客户无法结账的问题。
+* **ACSD-65750**(对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9) — 修复了GraphQL `route`查询在页面生成器产品内容类型中返回产品顺序不正确的问题。
+* **ACSD-65775**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了在订购同一项目的多个数量时，[!DNL REST] API订单详细信息返回错误的`base_row_total`和`row_total`值的问题。
+* **ACSD-65777**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了`MediaGallery` GraphQL请求中产品图像类型缺少`types`字段的问题。
+* **ACSD-65848**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了使用子选择计算类别中产品总数的问题，方法是重构方法以使用连接。
+* **ACSD-65913**(对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9) — 修复了以下问题：[!DNL OpenSearch]对于具有相同价格的产品，引发了&#x200B;*illegal_argument_exception*&#x200B;错误。
+* **ACSD-66041**(适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了由于缺少`CountryID`而无法搜索接收位置爱尔兰(IE)邮政编码的问题。
+* **ACSD-66212**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了导入客户CSV文件两次导致第二次尝试和后续尝试失败的问题。
+* 已更新的版本： **MDVA-12304**、**MDVA-19640**、**ACP2E-3841**、**ACSD-65100**、**ACSD-65787**、**ACP2E-3753**、**ACSD-65202**、**ACSD-65331**、**ACSD-65822**
 
 ## v1.1.65 {#v1-1-65}
 
