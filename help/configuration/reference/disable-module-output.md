@@ -2,9 +2,9 @@
 title: 禁用模块输出
 description: 了解如何禁用模块输出。
 exl-id: af556bf5-8454-4d65-8ac8-4a64c108f092
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: fee09845777e23717e618ac57df4158d6b172d4f
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,7 @@ bin/magento cache:clean config
    ```
 
 在此示例中，`Magento_Review`模块的输出已被禁用，客户无法再查看产品。
-要重新启用输出，请将值设置为`0`。
+
+### 重新启用模块输出
+
+要重新启用输出，请将模块的值设置为`0`，或者从`config.php`文件中删除行/模块。
