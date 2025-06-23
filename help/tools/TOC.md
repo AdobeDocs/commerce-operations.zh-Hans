@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 336b4331ff9576a4f7bfc49073307ea25b6e64bd
+source-git-commit: 996038418c8f09b8f983bd92715b431a368f09de
 workflow-type: tm+mt
-source-wordcount: '7722'
+source-wordcount: '7735'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
    - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
@@ -804,6 +804,7 @@ ht-degree: 0%
          - [ACP2E-3841：当使用子选择条件并启用免费配送时，多配送产品的购物车价格规则无法正确应用](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acp2e-3841-cart-price-rules-for-multi-shipping-products-do-not-apply-correctly-when-subselect-conditions-are-used-and-free-shipping-is-enabled.md)
       - v1.1.65 {#v1-1-65}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.65](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/overview.md)
+         - [ACP2E-3753：库存警报电子邮件未在多商店设置中使用商店特定的主题模板](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acp2e-3753-stock-alert-emails-not-using-store-specific-theme-templates-in-multi-store-setup.md)
          - [ACSD-65202： [!UICONTROL My Account]页面不显示来自其他商店视图的最近订单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acsd-65202-my-account-page-doesnt-show-recent-orders-from-other-store-views.md)
          - [ACSD-66093：来宾客户名称字段允许输入电子邮件，从而导致订单电子邮件无效](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acsd-66093-guest-customer-name-fields-allow-email-input-causing-invalid-order-emails.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
@@ -853,6 +854,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [更改日志](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
