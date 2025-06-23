@@ -5,9 +5,9 @@ feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
 exl-id: 6cfe4f4c-cdb3-49b3-84d0-ad794dfcafc3
-source-git-commit: b1912bbc5aabd36067563326ee5c6bb84e14441d
+source-git-commit: 773bc7a5b34a2b5f7314929be435c842a755de54
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ QPT v1.1.65包含以下修补程序：
 1. **ACSD-65202**： **[!UICONTROL My Account]**&#x200B;页面不显示来自其他商店视图的最近订单。
 1. **ACSD-65254**：通过`updateCustomerEmail` GraphQL突变更新客户电子邮件后未发送电子邮件通知。
 1. **ACSD-65331**：返回签出页面后，**[!UICONTROL Pick in Store]**&#x200B;中选定的存储已清除。
-1. **ACSD-65822**：捆绑包和可配置产品数量未正确反映在购物车中。
+1. **ACSD-65822**： [!UICONTROL Shopping Cart]中未正确反映捆绑包和可配置产品数量。
 1. **ACSD-66093**：来宾客户名称字段允许输入电子邮件，从而导致订单电子邮件无效。
 
 使用左侧的菜单导航到特定的修补程序页面。
