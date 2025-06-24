@@ -85,7 +85,7 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-有关更多详细信息，请参阅《云基础架构上的Commerce指南》_中的_ VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)。[
+有关更多详细信息，请参阅《云基础架构上的Commerce指南》_中的_ VALKEY_USE_SLAVE_CONNECTION[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)。
 
 对于Adobe Commerce内部部署，请使用`bin/magento:setup`命令配置新的Valkey缓存实现。 有关详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[将值键用于默认缓存](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching)。
 
