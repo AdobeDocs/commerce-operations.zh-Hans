@@ -3,9 +3,10 @@ title: Valkey服务配置的最佳实践
 description: 了解如何通过使用适用于Adobe Commerce的扩展Valkey缓存实现来提高缓存性能。
 role: Developer, Admin
 feature: Best Practices, Cache
-source-git-commit: 107b5bb19c3375be64c216bd89feb8410e2fc2bd
+exl-id: ca1598b0-07c6-4338-aed1-f2ba05375197
+source-git-commit: 1ab977bf2b30c2851609f0bfcc636978e974f07a
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -24,13 +25,13 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》_中的[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)_。
+有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》_中的[`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)_。
 
-有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[配置Valkey页缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)。
+有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[配置Valkey页缓存](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching)。
 
 >[!NOTE]
 >
->验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
+>验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
 
 ### 二级缓存内存大小(Adobe Commerce Cloud)
 
@@ -84,13 +85,13 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-有关更多详细信息，请参阅《云基础架构上的Commerce指南》_中的_ VALKEY_USE_SLAVE_CONNECTION[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)。
+有关更多详细信息，请参阅《云基础架构上的Commerce指南》_中的_ VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)。[
 
-对于Adobe Commerce内部部署，请使用`bin/magento:setup`命令配置新的Valkey缓存实现。 有关详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[将值键用于默认缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)。
+对于Adobe Commerce内部部署，请使用`bin/magento:setup`命令配置新的Valkey缓存实现。 有关详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[将值键用于默认缓存](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching)。
 
 >[!WARNING]
 >
->请&#x200B;_不_&#x200B;为具有[缩放/拆分架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)的云基础架构项目配置Valkey从属连接。 这会导致Redis连接错误。 有关详细信息，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[Redis配置指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection)。
+>请&#x200B;_不_&#x200B;为具有[缩放/拆分架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)的云基础架构项目配置Valkey从属连接。 这会导致Valkey连接错误。 有关详细信息，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[Valkey配置指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection)。
 
 ## 预加载键
 
@@ -113,7 +114,7 @@ stage:
               - '061_SYSTEM_DEFAULT:hash'
 ```
 
-有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[Valkey预加载功能](../../../configuration/cache/redis-pg-cache.md#redis-preload-feature)。
+有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[Valkey预加载功能](../../../configuration/cache/valkey-pg-cache.md#valkey-preload-feature)。
 
 ## 启用过时的缓存
 
@@ -152,7 +153,7 @@ stage:
 
 >[!NOTE]
 >
->在上一个示例中，`full_page`缓存与云基础架构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly)。
+>在上一个示例中，`full_page`缓存与云基础架构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)。
 
 有关配置内部部署安装的信息，请参阅&#x200B;_配置指南_&#x200B;中的[过时缓存选项](../../../configuration/cache/level-two-cache.md#stale-cache-options)。
 
@@ -172,7 +173,7 @@ W:   - Installing colinmollenhour/php-redis-session-abstract (v1.4.5): Extractin
 
 ## 缓存压缩
 
-如果您使用的Valkey `maxmemory`超过6GB，则可以使用缓存压缩来减少密钥占用的空间。 请注意，需要权衡客户端性能。 如果您有备用的CPU，Adobe建议启用它们。 请参阅&#x200B;_配置指南_&#x200B;中的[为会话存储](../../../configuration/cache/redis-session.md)使用Redis。
+如果您使用的Valkey `maxmemory`超过6GB，则可以使用缓存压缩来减少密钥占用的空间。 请注意，需要权衡客户端性能。 如果您有备用的CPU，Adobe建议启用它们。 请参阅&#x200B;_配置指南_&#x200B;中的[对会话存储使用Valkey](../../../configuration/cache/valkey-session.md)。
 
 ```yaml
 stage:
@@ -188,8 +189,3 @@ stage:
             compress_threshold: 20480     # do not compress files smaller than this value
             compression_lib: 'gzip'       # snappy and lzf for performance, gzip for high compression (~70%)
 ```
-
-## 其他信息
-
-- [Redis页面缓存](../../../configuration/cache/redis-pg-cache.md)
-- [使用Redis进行会话存储](../../../configuration/cache/redis-session.md)
