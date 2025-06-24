@@ -150,4 +150,4 @@ ht-degree: 1%
       + [验证拆分数据库](storage/multi-master-verify.md)
       + [数据库复制](storage/multi-master-replication.md)
       + [还原到单个数据库](storage/revert-split-database.md)
-+ [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
++ [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
