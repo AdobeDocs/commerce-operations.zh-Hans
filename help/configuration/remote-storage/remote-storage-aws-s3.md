@@ -3,9 +3,9 @@ title: 为远程存储配置AWS S3存储段
 description: 将Commerce项目配置为使用AWS S3存储服务进行远程存储。
 feature: Configuration, Storage
 exl-id: e8aeade8-2ec4-4844-bd6c-ab9489d10436
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 3f45b61a2f4fd6db161c66182212f3aff5900e26
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,10 @@ ht-degree: 0%
    ```
 
 ## 配置Nginx
+
+>[!NOTE]
+>
+>这种方法不适用于云基础架构项目上的Adobe Commerce。 无法在云基础架构上的Adobe Commerce上配置Nginx。 有关详细信息，请参阅[特定于云的文档](cloud-support.md)。
 
 Nginx需要其他配置才能使用`proxy_pass`指令执行身份验证。 将以下代理信息添加到`nginx.conf`文件：
 
