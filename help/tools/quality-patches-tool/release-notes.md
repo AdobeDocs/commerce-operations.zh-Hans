@@ -3,9 +3,9 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: fe1bec27cb9aa420fd71a0542edd5f82492e17aa
+source-git-commit: c14532e7390a3c123a4f673fca2211bfea9bcaa1
 workflow-type: tm+mt
-source-wordcount: '26682'
+source-wordcount: '26993'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,25 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.67 {#v1-1-67}
+
+* **ACSD-65935**(对于Adobe Commerce >=2.4.4 &lt;2.4.8) — 修复了在删除产品时`customerOrders` GraphQL查询返回内部服务器错误的问题。
+* **ACSD-66049**(对于Adobe Commerce和Magento Open Source >=2.4.5-p3 &lt;2.4.6) || >=2.4.7 &lt;2.4.9) — 修复了由于ICU库版本而导致非英语店面显示错误定价的问题。
+* **ACSD-66084**(对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.9) — 修复了在订单API响应中将`row_total_incl_tax`作为近零残值返回，而不是完全折扣项目的0.00返回的问题。
+* **ACSD-66118**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了在未刷新配置缓存时更新商店视图代码会清除[!UICONTROL Design Configuration]设置的问题。
+* **ACSD-66139**(对于Adobe Commerce >=2.4.7 &lt;2.4.8) — 修复了GraphQL调用对不存在或不活动的购物车下订单时返回&#x200B;*UNDEFINED*&#x200B;错误代码的问题。
+* **ACSD-66301**(对于Adobe Commerce和Magento Open Source >=2.4.6-p9 &lt;2.4.7) || >=2.4.7-p4 &lt;2.4.8) — 修复了在管理员中将产品从订单移回购物车导致数量不匹配的问题。
+* **ACSD-66434**(对于Adobe Commerce >=2.4.6-p8 &lt;2.4.9) — 修复了公司GraphQL查询中缺少客户ID的问题。
+* **ACSD-66441**(对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.8) — 修复了在为多商店设置索引可配置产品时，店面在分层导航中显示不正确索引数据的问题。
+* **AC-14984**(对于Adobe Commerce和Magento Open Source >=2.4.6-p10 &lt;2.4.7) || >=2.4.8 &lt;2.4.9) — 修复了RabbitMQ SSL连接上的错误&#x200B;*无效的帧类型21*。
+* **AC-14985**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了在启用TLS的情况下使用外部`smtp`服务器时未发送电子邮件的问题。
+* 已更新的版本： **MDVA-12304**、**ACSD-47920**、**ACSD-56447**、**ACSD-61845**、**ACSD-64118**
 
 ## v1.1.66 {#v1-1-66}
 
