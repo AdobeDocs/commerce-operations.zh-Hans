@@ -1,13 +1,13 @@
 ---
-title: 发送地址更改时，“店内提货”中预先选定的商店不会更新
+title: ACSD-64753：配送地址更改时，店内收取中预先选定的店面不会更新
 description: 应用ACSD-64753修补程序以修复在所选商店的服务半径之外输入新送货地址时预选商店未更新的Adobe Commerce问题。
 feature: Inventory
 role: Admin, Developer
 exl-id: 4efc99d6-88a3-43f9-88d4-dedb9d8a269e
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 036c1b81d9ec8f55f002446a8ea6078c6f8014d9
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ACSD-64753修补程序修复了在所选商店的服务半径之外输入新送�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -36,8 +36,8 @@ ACSD-64753修补程序修复了在所选商店的服务半径之外输入新送�
 
 <u>重现步骤</u>：
 
-1. 导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Delivery Methods]** > **[!UICONTROL In-Store Delivery]**&#x200B;以启用&#x200B;**[!UICONTROL In-Store Delivery]**。
-1. 为[!DNL Google Distance Provider]提供有效的[!DNL Google] API密钥。 为此，请导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Inventory]** > **[!UICONTROL Google Distance Provider]**。
+1. 导航到&#x200B;**[!UICONTROL In-Store Delivery]** > **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Delivery Methods]**&#x200B;以启用&#x200B;**[!UICONTROL In-Store Delivery]**。
+1. 为[!DNL Google]提供有效的[!DNL Google Distance Provider] API密钥。 为此，请导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Inventory]** > **[!UICONTROL Google Distance Provider]**。
 1. 添加新源(**[!UICONTROL Stores]** > **[!UICONTROL Sources]** > **[!UICONTROL Add New Source]**)，并设置以下值：
    * **[!UICONTROL Latitude]**： *-41.917344*
    * **[!UICONTROL Longitude]**： *-88.102569*
@@ -66,8 +66,8 @@ ACSD-64753修补程序修复了在所选商店的服务半径之外输入新送�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 
