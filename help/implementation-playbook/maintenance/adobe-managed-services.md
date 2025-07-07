@@ -3,9 +3,9 @@ title: Adobe Managed Services
 description: 了解Adobe Managed Services如何帮助支持和维护Adobe Commerce实施。
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
-source-git-commit: e5a50707463bb7b36b4285889b10353faf9ba09f
+source-git-commit: 486e789787c9c08b27b4aae8e601680138956b88
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
@@ -40,19 +40,20 @@ Adobe Managed Services与内部部署和非托管云实施相比具有关键优�
 | 功能 | Adobe Commerce内部部署 | Adobe Commerce on Cloud | Managed Services上的Adobe Commerce |
 |---------|---------------------------|-------------------------|-----------------------------------|
 | Adobe的企业版软件 | ✓ | ✓ | ✓ |
-| 安全和专用的云基础架构 | | ✓ | ✓ |
-| 增强的事件服务级别目标 | | P1:1小时 | P1:15分钟 |
-| 浪涌容量监控和响应 | | | ✓ |
-| 基础架构安全性 | | | ✓ |
-| 基础架构级别99.99%SLA | | | ✓ |
-| 应用程序级别99.9% SLA | | | |
-| 指定的基础架构专家资源（客户成功工程师） | | | |
-| 计划的事件管理 | | | |
-| 自定义的站点监控和个性化的Runbook | | | |
-| 升级和修补部署帮助 | | | |
-| 上线流程协调 | | | |
-| 专门的上报管理 | | | |
-| 应用监测和协助 | | | |
+| Adobe Developer App Builder | | ✓ | ✓ |
+| 安全和专用的云基础架构 | | ✓ P1： 1小时 | ✓ P1： 15分钟 |
+| 增强的事件服务级别目标 | | ✓ | ✓ |
+| 浪涌容量监控和响应 | | ✓ | ✓ |
+| 基础架构安全性 | | ✓ | ✓ |
+| 基础架构级别99.99%SLA | | ✓ | ✓ |
+| 应用程序级别99.9% SLA | | | ✓ |
+| 指定的基础架构专家资源（客户成功工程师） | | | ✓ |
+| 计划的事件管理 | | | ✓ |
+| 自定义站点监控和个性化Runbook | | | ✓ |
+| 升级和修补部署帮助 | | | ✓ |
+| 上线流程协调 | | | ✓ |
+| 专门的上报管理 | | | ✓ |
+| 应用监测和协助 | | | ✓ |
 
 ## 角色和职责
 
