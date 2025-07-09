@@ -2,9 +2,9 @@
 title: GraphQL应用程序服务器
 description: 按照以下说明在Adobe Commerce部署中启用GraphQL应用程序服务器。
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 2f8396a367cbe1191bdf67aec75bd56f64d3fda8
+source-git-commit: 8427460cd11169ffe7dd2d4ba0cc1fdaea513702
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Commerce GraphQL Application Server使Adobe Commerce能够维护Commerce GraphQL API请求中的状态。 GraphQL Application Server基于Swoole扩展构建，作为具有工作线程的进程运行，这些工作线程处理请求。 GraphQL Application Server通过在GraphQL API请求中保留引导的应用程序状态，来增强请求处理和整体产品性能。 API请求变得非常高效。
 
-GraphQL Application Server仅适用于Adobe Commerce。 它不适用于Magento Open Source。 对于Cloud Pro项目，您必须[提交Adobe Commerce支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)票证以启用GraphQL应用程序服务器。
+GraphQL Application Server仅适用于Adobe Commerce。 它不适用于Magento Open Source。 对于Cloud Pro项目，您必须[提交Adobe Commerce支持](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)票证以启用GraphQL应用程序服务器。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ GraphQL Application Server允许Adobe Commerce在连续的Commerce GraphQL API�
 1. 克隆Commerce Cloud项目。
 1. 如有必要，调整“application-server/nginx.conf.sample”文件中的设置。
 1. 完全注释掉`project_root/.magento.app.yaml`文件中的活动“web”部分。
-1. 在包含GraphQL应用程序服务器`start`命令的`project_root/.magento.app.yaml`文件中取消注释以下“Web”节配置。
+1. 在包含GraphQL应用程序服务器`project_root/.magento.app.yaml`命令的`start`文件中取消注释以下“Web”节配置。
 
    ```yaml
    web:
@@ -112,29 +112,154 @@ git push
        upstream: "application-server:http"
    ```
 
+1. 取消注释`files`文件中的`.magento/services.yaml`节。
+
+   ```yaml
+   files:
+       type: network-storage:2.0
+       disk: 5120
+   ```
+
+1. 取消注释`TEMPORARY SHARED MOUNTS`文件中装载配置的`.magento.app.yaml`部分。
+
+   ```yaml
+   "var_shared":
+       source: "service"
+       service: "files"
+       source_path: "var"
+   "app/etc_shared":
+       source: "service"
+       service: "files"
+       source_path: "etc"
+   "pub/media_shared":
+       source: "service"
+       service: "files"
+       source_path: "media"
+   "pub/static_shared":
+       source: "service"
+       service: "files"
+       source_path: "static"
+   ```
+
 1. 将更新的文件添加到Git索引：
 
    ```bash
-   git add -f .magento/routes.yaml application-server/.magento/*
+   git add -f .magento.app.yaml .magento/routes.yaml .magento/services.yaml application-server/.magento/*
    ```
 
-1. 提交更改：
+1. 提交更改并推送它们以触发部署：
 
    ```bash
-   git commit -m "AppServer Enabled"
+   git commit -m "Enabling AppServer: initial changes"
+   git push
+   ```
+
+1. 使用SSH登录到远程云环境（_不是_ `application-server`应用程序）：
+
+   ```bash
+   magento-cloud ssh -p <project-ID> -e <environment-ID>
+   ```
+
+1. 将数据从本地装载同步到共享装载：
+
+   ```bash
+   rsync -avz var/* var_shared/
+   rsync -avz app/etc/* app/etc_shared/
+   rsync -avz pub/media/* pub/media_shared/
+   rsync -avz pub/static/* pub/static_shared/
+   ```
+
+1. 注释掉`DEFAULT MOUNTS`文件中装载配置的`TEMPORARY SHARED MOUNTS`和`.magento.app.yaml`部分。
+
+   ```yaml
+   #"var": "shared:files/var"
+   #"app/etc": "shared:files/etc"
+   #"pub/media": "shared:files/media"
+   #"pub/static": "shared:files/static"
+   
+   #"var_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "var"
+   #"app/etc_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "etc"
+   #"pub/media_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "media"
+   #"pub/static_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "static"
+   ```
+
+1. 取消注释`OLD LOCAL MOUNTS`文件中装载配置的`SHARED MOUNTS`和`.magento.app.yaml`部分。
+
+   ```yaml
+   "var_old": "shared:files/var"
+   "app/etc_old": "shared:files/etc"
+   "pub/media_old": "shared:files/media"
+   "pub/static_old": "shared:files/static"
+   
+   "var":
+       source: "service"
+       service: "files"
+       source_path: "var"
+   "app/etc":
+       source: "service"
+       service: "files"
+       source_path: "etc"
+   "pub/media":
+       source: "service"
+       service: "files"
+       source_path: "media"
+   "pub/static":
+       source: "service"
+       service: "files"
+       source_path: "static"
+   ```
+
+1. 将更新的文件添加到Git索引，提交更改，然后推送以触发部署：
+
+   ```bash
+   git add -f .magento.app.yaml
+   git commit -m "Enabling AppServer: switch mounts"
+   git push
+   ```
+
+1. 确保实际目录中存在`*_old`目录中的文件。
+
+1. 清理旧的本地装载：
+
+   ```bash
+   rm -rf var_old/*
+   rm -rf app/etc_old/*
+   rm -rf pub/media_old/*
+   rm -rf pub/static_old/*
+   ```
+
+1. 注释掉`OLD LOCAL MOUNTS`文件中装载配置的`.magento.app.yaml`部分。
+
+   ```yaml
+   #"var_old": "shared:files/var"
+   #"app/etc_old": "shared:files/etc"
+   #"pub/media_old": "shared:files/media"
+   #"pub/static_old": "shared:files/static"
+   ```
+
+1. 将更新的文件添加到Git索引，提交更改，然后推送以触发部署：
+
+   ```bash
+   git add -f .magento.app.yaml
+   git commit -m "Enabling AppServer: finish"
+   git push
    ```
 
 >[!NOTE]
 >
->确保将根`.magento.app.yaml`文件中的所有自定义设置正确迁移到`application-server/.magento/.magento.app.yaml`文件中。 将`application-server/.magento/.magento.app.yaml`文件添加到您的项目后，除了根`.magento.app.yaml`文件之外，您还应维护它。 例如，如果您需要[配置RabbitMQ服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq)或[管理Web属性](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property)，则还应该将相同的配置添加到`application-server/.magento/.magento.app.yaml`。
-
-### 部署入门项目
-
-完成启用[步骤](#before-you-begin-a-cloud-starter-deployment)后，将更改推送到您的Git存储库以部署GraphQL Application Server：
-
-```bash
-git push
-```
+>确保将根`.magento.app.yaml`文件中的所有自定义设置正确迁移到`application-server/.magento/.magento.app.yaml`文件中。 将`application-server/.magento/.magento.app.yaml`文件添加到您的项目后，除了根`.magento.app.yaml`文件之外，您还应维护它。 例如，如果您需要[配置RabbitMQ服务](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq)或[管理Web属性](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property)，则还应该将相同的配置添加到`application-server/.magento/.magento.app.yaml`。
 
 ### 验证云项目上的启用情况
 
@@ -206,7 +331,7 @@ location /graphql {
 pecl install swoole
 ```
 
-在安装期间，Adobe Commerce显示提示以启用对`openssl`、`mysqlnd`、`sockets`、`http2`和`postgres`的支持。 为除`postgres`之外的所有选项输入`yes`。
+在安装期间，Adobe Commerce显示提示以启用对`openssl`、`mysqlnd`、`sockets`、`http2`和`postgres`的支持。 为除`yes`之外的所有选项输入`postgres`。
 
 ### 验证Swool安装
 
@@ -289,7 +414,7 @@ ps aux | grep php
 
 ### 确认正在处理GraphQL请求
 
-GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添加到其处理的每个请求中。 要检查GraphQL Application Server是否已处理请求，请检查此响应标头。
+GraphQL Application Server将值为`X-Backend`的`graphql_server`响应标头添加到其处理的每个请求中。 要检查GraphQL Application Server是否已处理请求，请检查此响应标头。
 
 ### 确认扩展和自定义兼容性
 
@@ -322,7 +447,7 @@ GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添
 
 ### 禁用GraphQL Application Server（本地）
 
-1. 注释掉启用GraphQL Application Server时添加的`nginx.conf`文件的`/graphql`部分。
+1. 注释掉启用GraphQL Application Server时添加的`/graphql`文件的`nginx.conf`部分。
 1. 重新启动nginx。
 
 这种禁用GraphQL Application Server的方法对于快速测试或比较性能很有用。
@@ -354,7 +479,7 @@ GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添
 
 * 在初始化消息&#x200B;**之前，不能访问**&#x200B;键入的属性$x。 此类型的消息失败表明指定的属性尚未被构造函数初始化。 这是一种时间耦合的形式，发生这种耦合的原因是，对象在初始构建后无法使用。 即使属性是私有的，也会发生这种耦合，因为从属性中检索数据的收集器正在使用PHP反射特征。 在这种情况下，尝试重构类以避免时间耦合和避免可变状态。 如果该重构不能解决故障，您可以将属性类型更改为可空类型，以便将其初始化为null。  如果属性是一个数组，请尝试将该属性初始化为空数组。
 
-通过执行`vendor/bin/phpunit -c $(pwd)/dev/tests/integration/phpunit.xml dev/tests/integration/testsuite/Magento/GraphQl/App/GraphQlStateTest.php`运行`GraphQlStateTest`。
+通过执行`GraphQlStateTest`运行`vendor/bin/phpunit -c $(pwd)/dev/tests/integration/phpunit.xml dev/tests/integration/testsuite/Magento/GraphQl/App/GraphQlStateTest.php`。
 
 ### ResetAfterRequestTest
 
@@ -366,7 +491,7 @@ GraphQL Application Server将值为`graphql_server`的`X-Backend`响应标头添
 
 * 在初始化消息&#x200B;**之前，不能访问**&#x200B;键入的属性$x。 `GraphQlStateTest`也存在此问题。
 
-  通过执行`vendor/bin/phpunit -c $(pwd)/dev/tests/integration/phpunit.xml dev/tests/integration/testsuite/Magento/Framework/ObjectManager/ResetAfterRequestTest.php`运行`ResetAfterRequestTest`。
+  通过执行`ResetAfterRequestTest`运行`vendor/bin/phpunit -c $(pwd)/dev/tests/integration/phpunit.xml dev/tests/integration/testsuite/Magento/Framework/ObjectManager/ResetAfterRequestTest.php`。
 
 ### 功能测试
 
