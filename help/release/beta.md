@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 1c0dd720df944a5784c850a3f4ea63b8984069f1
+source-git-commit: 879160b11fe4840eb3af97c64f080deb5f002827
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -27,20 +27,6 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 ## 当前的Beta项目
 
 请参阅以下部分，了解活动Beta程序的列表。
-
-### Adobe Commerce Optimizer
-
-Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，从而提升有机流量、客户参与度和收入。
-
-借助Adobe Commerce Optimizer，您可以：
-
-- 扩大并扩展您的目录，而无需重新规划您的整个商业栈栈。
-- 从任何源引入目录数据。
-- 定义业务渠道和策略。
-- 使用AI和ML创建个性化搜索和推荐。
-- 查看重要的产品数据可用性，包括同步状态和店面事件数据，以便准确实施和故障排除。
-
-[了解有关Adobe Commerce Optimizer的更多信息](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html?lang=zh-Hans)。 如果您有兴趣进一步了解[!DNL Adobe Commerce Optimizer]抢先体验计划，请完成[抢先体验申请表](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u)。
 
 ### 增强了实时搜索的搜索功能(公共Beta)
 
@@ -66,7 +52,7 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 
 这些新条件增强了搜索查询过滤机制以细化搜索结果。 这些新条件不会影响主搜索查询。 要参与测试版，请向[commerce-storefront-services](mailto:commerce-storefront-services@adobe.com)发送电子邮件请求。
 
-要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/install#install-the-live-search-beta)。
+要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/en/docs/commerce/live-search/install#install-the-live-search-beta)。
 
 ### IBM Sterling Order Management系统集成(Private Beta)
 
@@ -88,7 +74,7 @@ Adobe Commerce Optimizer通过高性能店面提升您的电子商务体验，�
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/home)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
@@ -116,6 +102,6 @@ Adobe Commerce alpha和beta版本的发布方式与任何其他Adobe Commerce补
 
 Adobe不为alpha和beta版本提供标准的Adobe支持服务。
 
-要提交与Alpha版和Beta版相关的反馈，请按照[GitHub](https://github.com/magento/magento2)上的[常规问题报告流程](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)操作。
+要提交与Alpha版和Beta版相关的反馈，请按照[GitHub](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)上的[常规问题报告流程](https://github.com/magento/magento2)操作。
 
 Adobe会监控针对最新Alpha或Beta版本报告的所有严重问题，并排定在GA发行日期之前需要解决这些问题的优先级。
