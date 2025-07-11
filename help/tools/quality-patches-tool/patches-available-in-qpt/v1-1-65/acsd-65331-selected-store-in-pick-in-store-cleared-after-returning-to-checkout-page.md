@@ -78,11 +78,11 @@ ACSD-65331修补程序修复了在用户反复返回签出页面时，清除&#x2
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[**** >使用情况][!DNL Quality Patches Tool]**(/help/tools/quality-patches-tool/usage.md)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[**&#x200B;** >使用情况][!DNL Quality Patches Tool]**(/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序]**(https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]**的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool]**： Tools指南中用于高质量修补程序的自助服务工具]**(/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [[!DNL Quality Patches Tool]&#x200B;**： Tools指南中用于高质量修补程序的自助服务工具]**(/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
