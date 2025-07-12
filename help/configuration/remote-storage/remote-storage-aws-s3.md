@@ -3,9 +3,9 @@ title: 为远程存储配置AWS S3存储段
 description: 将Commerce项目配置为使用AWS S3存储服务进行远程存储。
 feature: Configuration, Storage
 exl-id: e8aeade8-2ec4-4844-bd6c-ab9489d10436
-source-git-commit: 3f45b61a2f4fd6db161c66182212f3aff5900e26
+source-git-commit: 3690043019d70ad15332f757158937a7d5305043
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 >[!WARNING]
 >
 >Adobe强烈建议不要使用公共存储桶，因为它会带来严重的安全风险。
+>
+>使用客户提供的S3存储段进行资产或介质存储时，Adobe不负责也不支持与S3存储段的配置、管理或操作相关的任何问题、数据丢失或中断。 S3存储段的所有故障诊断和维护由客户全权负责。
 
 **要使用AWS S3适配器启用远程存储**：
 
