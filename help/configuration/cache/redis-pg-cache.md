@@ -3,9 +3,9 @@ title: 将Redis用于默认缓存
 description: 了解如何将Redis配置为Adobe Commerce的默认缓存。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 2c489f2655e6fb067de1730355df6cd3683ea562
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-<parame
 | `cache-backend-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
 | `cache-backend-redis-db` | 数据库 | 如果默认缓存和全页缓存都使用Redis，则此为必填字段。 必须指定其中一个高速缓存的数据库编号；另一个高速缓存默认使用0。<br><br>**重要信息**：如果对多种类型的缓存使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
 | `cache-backend-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一： `auth`命令，该命令要求客户端进行身份验证以访问数据库。 密码直接在Redis的配置文件中配置： `/etc/redis/redis.conf` | |
+| `--cache-backend-redis-use-lua` | use_lua | 启用或禁用LUA。 <br><br>**LUA**： Lua使我们能够在Redis内运行部分应用程序逻辑，从而改进性能并通过其原子执行确保数据一致性。 | `0` |
+| `--cache-backend-redis-use-lua-on-gc` | use_lua_on_gc | 为垃圾收集启用或禁用LUA。 <br><br>**LUA**： Lua使我们能够在Redis内运行部分应用程序逻辑，从而改进性能并通过其原子执行确保数据一致性。 | `1` |
 
 ### 示例命令
 
