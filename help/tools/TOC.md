@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 17c44a40eed91f38272956cd043122c14b4b7267
+source-git-commit: d12657ff88bc832cb875dbe48bd823545e5362f0
 workflow-type: tm+mt
-source-wordcount: '7827'
+source-wordcount: '7836'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
    - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
@@ -267,7 +267,7 @@ ht-degree: 0%
          - [概述：Quality Patches Tool (QPT) v1.1.22](quality-patches-tool/patches-available-in-qpt/v1-1-22/overview.md)
          - [ACSD-47106：未保存公司创建页面上的新自定义属性](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47106-new-custom-attribute-on-company-creation-page-not-saved.md)
          - [ACSD-47444：访问PHP 7.4上已知产品的某些不存在类别路径时出现[!UICONTROL Trying to access array offset on value of type bool]错误](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47444-trying-access-array-offset-value-type-bool-error.md)
-         - [ACSD-47332：仅在UTC时间00:00到00:59之间运行时，Cron失败并报告错误](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47332-cron-fails-with-error-reported-between-00-59.md)
+         - [ACSD-47332：仅在运行时间介于00之间时，CRON失败并报告错误](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47332-cron-fails-with-error-reported-between-00-59.md)
       - v1.1.23 {#v1-1-23}
          - [概述：Quality Patches Tool (QPT) v1.1.23](quality-patches-tool/patches-available-in-qpt/v1-1-23/overview.md)
          - [ACSD-46519： [!UICONTROL categoryList] [!DNL GraphQL] 查询中的product_count为锚点类别返回0](quality-patches-tool/patches-available-in-qpt/v1-1-23/acsd-46519-product-count-categorylist-graphql-query-returns-zero-anchor-categories.md)
@@ -623,7 +623,7 @@ ht-degree: 0%
          - [ACSD-59036：加载产品价格时出现异常](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59036-exception-occurs-when-loading-product-prices.md)
          - [ACSD-45049：客户[!UICONTROL Is required]属性设置无法按管理员中的网站范围使用](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-45049-customer-attribute-is-required-setting-doesnt-work.md)
          - [ACSD-59378：在导入期间错误地更新了存储级别 [!DNL URL] 重写](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59378-store-level-url-rewrites-incorrectly-updated-during-import.md)
-         - [ACSD-46938：安装：升级期间数据库触发器出现性能问题](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-46938-fix-for-db-triggers-performance-issue-during-setup-upgrade.md)
+         - [ACSD-46938：安装期间数据库触发器出现性能问题](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-46938-fix-for-db-triggers-performance-issue-during-setup-upgrade.md)
          - [ACSD-54887：在客户会话过期后清除客户购物车](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-54887-customer-shopping-cart-gets-cleared-after-session-expiry.md)
          - [ACSD-58141：如果启用了L2 Redis缓存，则为已登录的客户在POST请求上重新生成PHPSESSID](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-58141-phpsessid-regenerates-on-post-requests-for-logged-in-customers.md)
          - [ACSD-59229：由于X-Magento-Vary值已过时，导致客户组数据分配错误](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59229-customer-group-segmentation-fix.md)
@@ -687,7 +687,7 @@ ht-degree: 0%
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.55](/help//tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/overview.md)
          - [ACSD-58685：重新启用时会发送禁用的销售电子邮件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58685-ensures-disabled-sales-emails-are-not-sent-upon-re-enabling.md)
          - [ACSD-58828：任何空的必填字段都会显示服务器端“地址为必填项”消息，以及客户端验证](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58828-server-side-address-required-message-appears-for-any-empty-required-field-alongside-client-side-validation.md)
-         - [ACSD-61534：无法使用bin/magento config：set设置设计配置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61534-design-configuration-cannot-set-using-bin-magento-config-set.md)
+         - [ACSD-61534：无法使用bin/magento配置设置设计配置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61534-design-configuration-cannot-set-using-bin-magento-config-set.md)
          - [ACSD-61348：通过GraphQL可见但不在店面显示的愿望清单项目](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61348-wishlist-items-visible-via-graphql-but-not-on-storefront.md)
          - [ACSD-61785：无法通过GraphQL突变和REST API调用更新reward_warning_notification属性](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61785-updating-reward-warning-notification-attribute-not-possible-via-graphql.md)
          - [ACSD-58471：计划目录价格规则时，无法在产品详细信息页面上加载动态内容](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page.md)
@@ -814,6 +814,7 @@ ht-degree: 0%
          - [ACSD-65331：返回签出后，[!UICONTROL Pick in Store]中的选定存储已清除](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acsd-65331-selected-store-in-pick-in-store-cleared-after-returning-to-checkout-page.md)
       - v1.1.66 {#v1-1-66}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.66](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/overview.md)
+         - [ACSD-66212：导入客户CSV文件两次，导致第二次和后续尝试失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acsd-66212-importing-a-customer-csv-file-twice-caused-failures-on-the-second-and-subsequent-attempts.md)
          - [ACSD-65775：多个数量的REST API订单详细信息中的base_row_total和row_total值不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acsd-65775-incorrect-order-detail-values-in-rest-api-order-details-for-multiple-quantities.md)
          - [ACP2E-3789：通过WebAPI在产品更新时复制的媒体文件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acp2e-3789-media-files-duplicated-on-product-update-via-webapi.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
@@ -863,6 +864,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [更改日志](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
