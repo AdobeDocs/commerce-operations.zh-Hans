@@ -4,13 +4,13 @@ description: 应用ACSD-65331修补程序以修复Adobe Commerce问题，该问�
 feature: Inventory
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: a322e822ccf0b584d2385d3f38a3b92ebe3a23d3
+exl-id: 10aaf898-feca-4485-90f6-6b3a9ea013b2
+source-git-commit: dc5df9e918adffe8d6901478a676d9da36b33bcc
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65331：返回签出后，**[!UICONTROL Pick in Store]**&#x200B;中的选定存储已清除
 
@@ -28,7 +28,7 @@ ACSD-65331修补程序修复了在用户反复返回签出页面时，清除&#x2
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -78,11 +78,11 @@ ACSD-65331修补程序修复了在用户反复返回签出页面时，清除&#x2
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[**&#x200B;** >使用情况][!DNL Quality Patches Tool]**(/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序]**(https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 
-要了解有关[!DNL Quality Patches Tool]**的更多信息，请参阅：
+要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool]&#x200B;**： Tools指南中用于高质量修补程序的自助服务工具]**(/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
