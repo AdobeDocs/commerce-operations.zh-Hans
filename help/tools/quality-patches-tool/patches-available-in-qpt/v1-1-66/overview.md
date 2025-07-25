@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: b5b80bfa-a52c-466b-b95c-23590e850aed
-source-git-commit: a7cbe756f73211e4cc400ea27e357e99aa39605c
+source-git-commit: 8e7cec268cf4d0022cf5037f5effcaa8a13b55ca
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 0%
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.66中提供的修补程序所修复的问题。
 
 QPT v1.1.66包含以下修补程序：
+1. **ACP2E-3918**：使用店内取货的公司客户签出失败。
 1. **ACP2E-3789**：通过WebAPI在产品更新时复制的媒体文件。
-1. **ACP2E-3918**：对于使用无默认帐单地址的店内提货的已登录公司客户，签出失败。
 1. **ACSD-65750**： GraphQL“route”查询在Page Builder产品内容类型中返回的产品乱序。
 1. **ACSD-65775**：多个数量的REST API订单详细信息中的`base_row_total`和`row_total`值不正确。
 1. **ACSD-65777**： `MediaGallery` GraphQL请求中的产品图像类型缺少“types”字段。
