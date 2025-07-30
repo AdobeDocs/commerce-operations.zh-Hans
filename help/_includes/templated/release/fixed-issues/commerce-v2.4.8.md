@@ -1,5 +1,5 @@
 ---
-source-git-commit: 92907752d92cd7f4a81377a5239dfded10fe3655
+source-git-commit: 1f377ab6e4dcdd2d350366f3889b8befd233474b
 workflow-type: tm+mt
 source-wordcount: '27924'
 ht-degree: 0%
@@ -1971,7 +1971,7 @@ _AC-8353 - [GitHub问题](https://github.com/magento/magento2/issues/37253) - [G
 
 _AC-8356 - [GitHub问题](https://github.com/magento/magento2/issues/37250) - [GitHub代码贡献](https://github.com/magento/magento2/pull/37000)_
 
-#### editorconfig语法中的空格中断`[&lbrace;composer,auth&rbrace;.json]`的规则
+#### editorconfig语法中的空格中断`[{composer,auth}.json]`的规则
 
 在修复了editorconfig中的语法错误后，系统现在可以正确将4空格缩进应用于composer和auth.json文件。 以前，由于editorconfig语法中存在空格，因此这些文件使用2空格缩进的格式不正确。
 
@@ -2127,7 +2127,7 @@ _ACP2E-2642 - [GitHub代码贡献](https://github.com/magento/magento2/commit/ba
 
 _ACP2E-2653 - [GitHub代码贡献](https://github.com/magento/magento2/commit/12e071c3)_
 
-#### 包含价格过滤器`&lbrace;from:&quot;0&quot;&rbrace;`的GraphQL产品调用未返回任何结果
+#### 包含价格过滤器`{from:&quot;0&quot;}`的GraphQL产品调用未返回任何结果
 
 以前，使用零价格过滤器的graphql产品搜索由于抛出异常，根本没有返回任何结果。 现在，搜索会按预期返回结果。
 
@@ -2706,8 +2706,8 @@ _LYNX-395_
 
 修复了将简单产品（分组产品的一部分）添加到购物车时返回占位符缩略图图像的问题，即使产品已分配图像。
 修复详细信息：
-* 现在，产品缩略图可正确显示分配的图像（如果可用）。
-* 缩略图选择遵循下的管理员配置：
+- 现在，产品缩略图可正确显示分配的图像（如果可用）。
+- 缩略图选择遵循下的管理员配置：
 商店>配置>销售>结账>购物车>分组的产品图像。
 这可确保根据商店设置对分组产品执行一致的缩略图行为。
 
@@ -2729,8 +2729,8 @@ _LYNX-402_
 
 解决了使用带有选项的父SKU添加时，对于可配置产品，only_x_left_in_stock属性始终返回0的问题。
 修复详细信息：
-* only_x_left_in_stock值现在可准确反映所选子变体的库存，而不是父SKU的库存。
-* 这确保在购物车和产品页面中正确显示可配置产品变体的库存水平。
+- only_x_left_in_stock值现在可准确反映所选子变体的库存，而不是父SKU的库存。
+- 这确保在购物车和产品页面中正确显示可配置产品变体的库存水平。
 
 _LYNX-403_
 
