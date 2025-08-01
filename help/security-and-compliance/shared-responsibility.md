@@ -2,9 +2,9 @@
 title: 分担责任的安全性和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 4cd71d156ef6833185565180b297ba1b7f42a032
+source-git-commit: fcaf6ff1dce1c1a5084307cd366ca58d71a8f4e4
 workflow-type: tm+mt
-source-wordcount: '2791'
+source-wordcount: '2850'
 ht-degree: 0%
 
 ---
@@ -798,6 +798,28 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | 产品推荐服务的可用性 | R |   |
+
+{style="table-layout:auto"}
+
+#### 实时搜索
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 实时搜索服务的可用性 | R |   |
+
+{style="table-layout:auto"}
+
+#### 店面活动（数据收集）的质量，可加强产品推荐和实时搜索输出
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 核心主题(Luma) | R |   |
+| 自定义主题 |  | R |
+| 核心PWA实施 | R |   |
+| 自定义PWA实施 |  | R |
+| 核心AEM EDS实施(Commerce样板) | R |   |
+| 自定义AEM EDS实施 |  | R |
+| 任何其他自定义店面实施 |  | R |
 
 {style="table-layout:auto"}
 
