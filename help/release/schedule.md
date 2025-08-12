@@ -18,9 +18,9 @@ Adobe不断努力在使产品升级变得简单且可预测，同时更快地为
 
 新功能、功能更新、云基础架构和可扩展性更新与修补程序版本分开提供，并可通过外部模块、扩展、工具或Web服务提供。 示例包括：
 
-- ![功能图标](../assets/icons/feature.svg) [**功能和特性**](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all) — 新功能和特性独立于修补程序版本提供。 例如，[B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)、目录服务、数据连接、实时搜索和产品推荐。
+- ![功能图标](../assets/icons/feature.svg) [**功能和特性**](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/release-information/release-notes-all) — 新功能和特性独立于修补程序版本提供。 例如，[B2B](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)、目录服务、数据连接、实时搜索和产品推荐。
 
-- ![基础架构图标](../assets/icons/servers.svg) [**云基础架构**](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite) — 云基础架构上的Adobe Commerce的新增功能和增强以及Commerce包的Cloud Tools Suite，这些功能和增强在Cloud Platform上部署和管理Adobe Commerce安装和升级。
+- ![基础架构图标](../assets/icons/servers.svg) [**云基础架构**](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite) — 云基础架构上的Adobe Commerce的新增功能和增强以及Commerce包的Cloud Tools Suite，这些功能和增强在Cloud Platform上部署和管理Adobe Commerce安装和升级。
 
 - ![扩展性图标](../assets/icons/brackets.svg) [**扩展性**](https://developer.adobe.com/commerce/extensibility/) — 新的开发人员工具和服务提供了与修补程序版本无关的进程外扩展性。 例如，集成入门工具包、SDK管理员UI、Adobe I/O Events for Commerce和API Mesh。
 
