@@ -2,9 +2,10 @@
 title: 配置Valkey
 description: 大致了解Valkey功能并启动Valkey配置。
 feature: Configuration, Cache
-source-git-commit: 1850301e0b7f1abbc54613209940dd63d16ef145
+exl-id: 12dbc171-3df6-4413-869b-a3450b5647b4
+source-git-commit: b2cf71bfda3e5db8e27eb28d764cf99216454e33
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -27,13 +28,13 @@ Valkey功能包括：
 
 ## 设置Valkey配置
 
-根据您的安装，您通常可以在`/etc/valkey/valkey.conf`或`/etc/valkey/<port>.conf`中找到Valkey配置。
+根据您的安装，您通常可以在`/etc/valkey/valkey.conf`文件或`/etc/valkey/<port>.conf`文件中找到Valkey配置。
 
 为了根据您的要求优化Valkey实例，您可以为每个会话、Commerce缓存和FPC使用专用实例以获得最佳结果。
 
 Adobe建议为会话启用持久性以将Valkey数据复制到磁盘。 可以使用Valkey数据库备份(RDB)快照或仅附加文件(AOF)持久性日志。
 
-- **RDB** （Valkey数据库）快照在给定时间后将完整数据库存储在转储文件中，该时间自上次保存以来已更改最小数量的键。 使用`valkey.conf`文件中的`save`设置配置此设置。
+- **RDB** （Valkey数据库）快照在给定时间后将完整数据库存储在转储文件中，该时间自上次保存以来已更改最小数量的键。 使用`save`文件中的`valkey.conf`设置配置此设置。
 
 - **仅附加文件** (AOF)将发送到Valkey的每个写入操作存储在日志文件中。 Valkey仅在重新启动时读取此文件，并使用它恢复原始数据集。
 

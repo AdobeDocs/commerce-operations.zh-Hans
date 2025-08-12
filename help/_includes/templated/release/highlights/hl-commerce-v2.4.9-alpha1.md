@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2f471a1bc1cbf31076aeb67ceaee289196841cd4
+source-git-commit: 44c3581a68cad32ce737219351601cfde31941fb
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,9 @@ _AC-14559_
 #### 将DHL集成从过期的DHL Express XML迁移到新的MyDHL API RESTful API
 
 _AC-13258_
+
+### 安全性
+
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html)。
+
+{{$include /help/_includes/release-notes/highlights/security-2025-06.md}}
