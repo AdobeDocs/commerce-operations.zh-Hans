@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 47f6b57d-b945-4e77-8630-2df709a3469e
-source-git-commit: a0bf44520c0d355c9aca3aaab55306a2d0fe018e
+source-git-commit: d025c8a6e451ff41ec4b50cf633927e52b9429f0
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ QPT v1.1.67包含以下修补程序：
 1. **ACSD-66084**： `row_total_incl_tax`对于订单API响应中的完全折扣项，返回接近零的残值，而不是0.00。
 1. **ACSD-66118**：如果配置缓存未刷新，则更新&#x200B;**[!UICONTROL Store View]**&#x200B;代码将清除&#x200B;**[!UICONTROL Design Configuration]**&#x200B;设置。
 1. **ACSD-66139**：在订购期间，GraphQL为不存在的或不活动的购物车返回UNDEFINED错误。
-1. **ACSD-66301**：将产品从订单移回管理员中的购物车会导致数量不匹配。
+1. **ACSD-66301**：在Commerce管理中将产品从订单移至购物车导致数量不匹配。
 1. **ACSD-66434**：公司GraphQL查询中缺少客户ID。
 1. **ACSD-66441**：分层导航在多存储设置中显示不正确的属性选项。
 

@@ -1,0 +1,68 @@
+---
+title: ACSD-66301：在Commerce管理员中将产品从订单移至购物车会导致数量不匹配
+description: 应用ACSD-66301修补程序以修复Adobe Commerce问题：当从“管理员”面板创建订单时，客户购物车中的产品在添加到订单后未删除。
+feature: Orders, Products
+role: Admin, Developer
+type: Troubleshooting
+source-git-commit: 9a4224c02634514a9428dc6b0daf4c1d5f5c7c43
+workflow-type: tm+mt
+source-wordcount: '399'
+ht-degree: 0%
+
+---
+
+
+# ACSD-66301：在Commerce管理员中将产品从订单移回购物车会导致数量不匹配
+
+ACSD-66301修补程序修复了在Admin中将产品从订单移回购物车会导致数量不匹配的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.67时，此修补程序可用。 修补程序ID为ACSD-66301。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
+
+## 受影响的产品和版本
+
+**为Adobe Commerce版本创建了修补程序：**
+
+* Adobe Commerce（所有部署方法） 2.4.6-p10、2.4.7-p4
+
+**与Adobe Commerce版本兼容：**
+
+* Adobe Commerce（所有部署方法） 2.4.6-p9 - 2.4.6-p11、2.4.7-p4 - 2.4.7-p6
+
+>[!NOTE]
+>
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+
+## 问题
+
+在Commerce管理员中，将产品从订单移回购物车会导致数量不匹配。
+
+<u>重现步骤</u>：
+
+1. 通过店面创建用户。
+2. 向购物车添加数量= *5*&#x200B;的产品。
+3. 转到“管理员”面板，然后打开添加产品的用户帐户。
+4. 单击&#x200B;**[!UICONTROL Create Order]**。
+5. 在左侧面板中，您可以查看客户的活动，包括添加的产品和数量。
+6. 将产品添加到订单。
+7. 更新主订单部分中的数量= *4*。
+8. 单击&#x200B;**[!UICONTROL Update Items and Quantities]**&#x200B;按钮。
+9. 将选定项目从订单转移回客户的购物车。
+
+<u>预期的结果</u>：
+
+已将产品添加到购物车，新数量= *4*。
+
+<u>实际结果</u>：
+
+添加到购物车的产品具有旧数量= *5*。
+
+## 应用修补程序
+
+要应用单独的修补程序，请根据您的部署方法使用以下链接：
+
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
+
+## 相关阅读
+
+要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
+
+* [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
