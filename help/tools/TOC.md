@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: d025c8a6e451ff41ec4b50cf633927e52b9429f0
+source-git-commit: 2f5ed0b6b934fa3cfb7882eb40880fd599006346
 workflow-type: tm+mt
-source-wordcount: '8074'
+source-wordcount: '8070'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
    - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
@@ -828,7 +828,7 @@ ht-degree: 0%
          - [ACSD-66301：在Commerce管理员中将产品从订单移至购物车会导致数量不匹配](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66301-order-to-cart-quantity-mismatch.md)
          - [AC-14984：php-amqplib/php-amqplib ^3.2.0的SSL连接问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/ac-14984-ssl-connection-issue-with-php-amqplib-php-amqplib-3-2.md)
          - [ACSD-66118：如果未刷新配置缓存，更新[!UICONTROL Store View]代码将清除[!UICONTROL Design Configuration]设置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66118-updating-store-view-code-clears-design-configuration-settings-if-configuration-cache-isn-t-refreshed.md)
-         - [ACSD-66084：对于订单API响应中的完全折扣项目，row_total_incl_tax返回接近零的残值，而不是0.00](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66084-fix-row-total-incl-tax-residual-value-for-discounted-items-in-order-api.md)
+         - [ACSD-66084：对于订单API中的完全折扣项目，row_total_incl_tax的返回值接近于零，而不是0.00](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66084-fix-row-total-incl-tax-residual-value-for-discounted-items-in-order-api.md)
          - [ACSD-66049：由于ICU库版本，非英语店面显示的定价不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66049-non-english-storefronts-display-incorrect-pricing-due-to-the-icu-library-version.md)
          - [ACSD-66441：分层导航在多存储设置中显示不正确的属性选项](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66441-layered-navigation-displays-incorrect-attribute-in-multi-store-setup.md)
          - [AC-14985：使用TLS发送SMTP电子邮件时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/ac-14985-error-when-sending-smtp-emails-using-tls.md)
@@ -886,6 +886,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [更改日志](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
