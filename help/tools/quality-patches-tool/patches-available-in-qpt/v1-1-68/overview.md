@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 47c8541c228f9ed3795c93b67b8ff85cbd4bd555
+source-git-commit: 937acc659427b788b8af778f5ea826eacccdc70e
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,6 @@ QPT v1.1.68包含以下修补程序：
 1. **ACSD-66889**：在CLI中重新索引清单时出错。
 1. **ACSD-66963**：将折扣代码应用于带有虚拟产品的购物车时，EstimateTotals突变会返回折扣null。
 1. **ACSD-66965**：“申请列表”页面上的“打印”选项会导致错误。
-1. **ACSD-67039**：由于rp_token系统属性的验证，未保存客户记录。
+1. **ACSD-67039**：由于`rp_token`系统属性的验证，未保存客户记录。
 
 使用左侧的菜单导航到特定的修补程序页面。
