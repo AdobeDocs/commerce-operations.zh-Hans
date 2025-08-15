@@ -9,7 +9,7 @@ ht-degree: 0%
 
 此版本包括以下功能亮点：
 
-* **TinyMCE升级** — 管理员中的[WYSIWYG编辑器](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/wysiwyg/editor)现在使用最新版本的TinyMCE依赖项(7.3&#x200B;)。
+* **TinyMCE升级** — 管理员中的[WYSIWYG编辑器](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/content-design/wysiwyg/editor)现在使用最新版本的TinyMCE依赖项(7.3&#x200B;)。
 
    * TinyMCE 7.3提供了增强的用户体验、更好的协作和更高的效率。 TinyMCE 5已在2.4.8发行版中移除&#x200B;。
 

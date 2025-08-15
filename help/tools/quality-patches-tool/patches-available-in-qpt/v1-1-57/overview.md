@@ -21,7 +21,7 @@ QPT v1.1.57包含以下修补程序：
 1. **ACSD-57570**：修复了以下问题：具有特定商店访问权限的受限管理员用户无法始终查看产品所分配的所有共享目录，或无法查看客户，从而导致系统中出现不一致的情况。
 1. **ACSD-58325**：修复了[!UICONTROL Import]按钮在验证错误后仍可用的问题。
 1. **ACSD-59083**：修复了某些数据库更新操作导致&#x200B;_未找到基表或视图的问题_&#x200B;错误（如果[!DNL mview]更新同时运行）。
-1. **ACSD-61622**：修复了响应中缺少[!DNL FedEx]帐户特定费率的问题。 ACSD-61622取代了从[[!DNL FedEx] 迁移到 [!DNL SOAP]  [!DNL RESTful API]的](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/fedex-shipping-method-integration-migration-soap-restful-api)送货方法集成中记录的修复。
+1. **ACSD-61622**：修复了响应中缺少[!DNL FedEx]帐户特定费率的问题。 ACSD-61622取代了从[[!DNL FedEx] 迁移到 [!DNL SOAP]  [!DNL RESTful API]的](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/fedex-shipping-method-integration-migration-soap-restful-api)送货方法集成中记录的修复。
 1. **ACSD-61895**：修复了类别[!DNL GraphQL]查询返回具有&#x200B;*允许*&#x200B;权限的类别的问题，即使根类别没有&#x200B;*允许*&#x200B;权限。
 1. **ACSD-62212**：修复了[!UICONTROL Forgot Password]电子邮件内容未翻译为商店视图语言的问题。
 1. **ACSD-62481**：修复了即使启用了[!UICONTROL Persistence]，客户的购物车也变空的问题。

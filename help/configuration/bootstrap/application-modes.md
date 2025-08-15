@@ -26,7 +26,7 @@ ht-degree: 0%
 
 由于文件系统为只读，因此对更改远程云环境中的模式有严格的限制，并且不能被Adobe Commerce支持覆盖。 请勿尝试通过修改`app/etc/env.php`文件来更改模式，因为`ece-tools`包会基于多个配置源覆盖该文件。
 
-云基础架构上的Adobe Commerce在部署期间以&#x200B;_维护_&#x200B;模式自动运行应用程序，这将使您的网站脱机，直到部署完成。 否则，应用程序将保持在&#x200B;_生产_&#x200B;模式下。 请参阅[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase)中的&#x200B;_部署进程_。
+云基础架构上的Adobe Commerce在部署期间以&#x200B;_维护_&#x200B;模式自动运行应用程序，这将使您的网站脱机，直到部署完成。 否则，应用程序将保持在&#x200B;_生产_&#x200B;模式下。 请参阅[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html?lang=zh-Hans#deploy-phase)中的&#x200B;_部署进程_。
 
 如果您使用Cloud Docker for Commerce作为开发工具，则可以在&#x200B;_开发人员_&#x200B;模式下在Docker环境中部署云基础架构项目，但由于额外的文件同步操作，性能会降低。 请参阅[Cloud Docker for Commerce指南](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode)中的&#x200B;_部署Docker环境_。
 
@@ -78,7 +78,7 @@ _维护_&#x200B;模式限制或禁止在改进、更新和配置任务期间访�
 
 您可以创建[自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md)，手动启用和禁用维护模式，并配置维护模式以允许来自授权IP地址的访客正常查看存储区。 请参阅[安装指南](../../installation/tutorials/maintenance-mode.md)中的&#x200B;_启用和禁用维护模式_。
 
-如果您在云基础架构上使用Commerce，则Commerce应用程序将在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将恢复以生产模式运行。 请参阅[云基础架构上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks)中的&#x200B;_部署挂接_。
+如果您在云基础架构上使用Commerce，则Commerce应用程序将在部署阶段以维护模式运行。 成功完成部署后，Commerce应用程序将恢复以生产模式运行。 请参阅[云基础架构上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html?lang=zh-Hans#phase-5%3A-deployment-hooks)中的&#x200B;_部署挂接_。
 
 在维护模式下：
 

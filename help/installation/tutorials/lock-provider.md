@@ -26,7 +26,7 @@ ht-degree: 0%
 
 默认情况下，Adobe Commerce使用数据库保存锁定。 如果您的服务器上有多个节点，我们建议使用Zookeeper作为锁定提供程序。
 
-如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
+如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
 
 ### 命令用法
 

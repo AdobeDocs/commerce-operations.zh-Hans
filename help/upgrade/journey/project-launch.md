@@ -13,4 +13,4 @@ ht-degree: 0%
 
 维护一个健康的电子商务网站对于您的业务成功与首次启动一样重要，其中一个关键方面是主动规划和准备升级，帮助您的网站尽可能顺畅地运行。
 
-在此期间未设置正确的升级期望会导致未来不满意。 确保您了解并了解[发行节奏](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule)，并使用此指南帮助您定义如何以及何时计划升级。
+在此期间未设置正确的升级期望会导致未来不满意。 确保您了解并了解[发行节奏](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/schedule)，并使用此指南帮助您定义如何以及何时计划升级。

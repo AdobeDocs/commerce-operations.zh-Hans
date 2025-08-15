@@ -27,7 +27,7 @@ ht-degree: 1%
 ## 其他信息
 
 * [性能最佳实践 — PHP设置](../../../performance/software.md#php-settings)
-* [配置PHP选项](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml)
+* [配置PHP选项](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml)
 * [云基础架构上Adobe Commerce的数据库最佳实践](database-on-cloud.md)
 * [Adobe Commerce中有关云基础架构的最常见数据库问题](../maintenance/resolve-database-performance-issues.md)
 * [索引器“按计划更新”可优化Adobe Commerce性能](../maintenance/indexer-configuration.md)

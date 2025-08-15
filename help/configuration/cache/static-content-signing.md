@@ -35,9 +35,9 @@ http://magento2.com/pub/static/version1475604434/frontend/Magento/luma/en_US/ima
 
 默认情况下，Commerce将启用此功能，Adobe建议保持启用此功能，以防止与提供旧静态资源的浏览器相关的问题。
 
-静态内容签名的配置位于&#x200B;[**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures)中。
+静态内容签名的配置位于&#x200B;[**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures)中。
 
-- **仅限内部部署**：如果您的站点在&#x200B;**生产模式**&#x200B;中是[而不是](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode)，则此配置可用。
+- **仅限内部部署**：如果您的站点在&#x200B;**生产模式**&#x200B;中是[而不是](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans#production-mode)，则此配置可用。
 - **Cloud**：此配置是隐藏的，因为生产模式是强制实施的；因此，您必须使用命令行，如下所示。
 
 ![静态文件设置](../../assets/configuration/static-files-settings.png)

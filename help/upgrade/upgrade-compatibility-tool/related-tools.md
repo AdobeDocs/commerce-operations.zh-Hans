@@ -15,7 +15,7 @@ ht-degree: 0%
 
 存在与[!DNL Upgrade Compatibility Tool]相关的工具，这些工具可用于类似结果，或者可以触发执行[!DNL Upgrade Compatibility Tool]。
 
-- **[!DNL Security scanner]**：通过主动检测恶意软件并在其存储遭到破坏时通知客户，为Adobe Commerce客户提供其存储的安全状态的实时分析。 有关详细信息，请参阅[[!DNL Security scan] 用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)。
+- **[!DNL Security scanner]**：通过主动检测恶意软件并在其存储遭到破坏时通知客户，为Adobe Commerce客户提供其存储的安全状态的实时分析。 有关详细信息，请参阅[[!DNL Security scan] 用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan)。
 
 - **[!DNL Site-Wide Analysis Tool]**：主动式自助服务工具和中央存储库，其中包含详细的系统分析和建议，以确保Adobe Commerce安装的安全性和可操作性。 它提供全天候的实时性能监控、报告和建议，以发现潜在问题，并更好地了解站点运行状况、安全性和应用程序配置。 有关详细信息，请参阅[[!DNL Site-Wide Analysis Tool] 指南](../../tools/site-wide-analysis-tool/intro.md)。
 
@@ -25,4 +25,4 @@ ht-degree: 0%
   >
   >[!DNL AmpersandHQ]不是Adobe官方工具。
 
-- **[!DNL Quality Patches Tool]**：为Adobe Commerce提供高质量修补程序的命令行工具。 有关详细信息，请参阅[[!DNL Quality patches tool] 用户指南](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}。
+- **[!DNL Quality Patches Tool]**：为Adobe Commerce提供高质量修补程序的命令行工具。 有关详细信息，请参阅[[!DNL Quality patches tool] 用户指南](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}。

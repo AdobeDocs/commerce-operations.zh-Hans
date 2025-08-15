@@ -92,4 +92,4 @@ Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担�
 
 ## 自定义修补程序
 
-由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage)提供。
+由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/usage)提供。

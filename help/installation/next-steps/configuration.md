@@ -65,7 +65,7 @@ UNIX `logrotate`实用程序使您能够管理生成大量日志文件的系统�
 >
 >* 入门级环境没有日志轮换。
 >
->* 无法在Pro集成环境中配置日志轮换。 您必须实施自定义解决方案/脚本，并[配置cron](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)以根据需要运行脚本。
+>* 无法在Pro集成环境中配置日志轮换。 您必须实施自定义解决方案/脚本，并[配置cron](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)以根据需要运行脚本。
 
 ### 设置iptables规则以启用各种服务进行通信
 

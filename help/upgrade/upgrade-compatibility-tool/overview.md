@@ -54,6 +54,6 @@ ht-degree: 0%
 请参阅以下资源以帮助您了解Adobe Commerce升级：
 
 - [升级指南](../overview.md)概述了典型的Adobe Commerce升级历程以及在该历程中遵循的最佳实践。
-- [即将发布的版本](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule)页面提供了计划版本和即将发布的版本的日期。
+- [即将发布的版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/schedule)页面提供了计划版本和即将发布的版本的日期。
 - [社区资源](https://developer.adobe.com/commerce/contributor/community/)页面将放置以开始讨论，或查找更多信息。
 - 查看[相关工具](../upgrade-compatibility-tool/related-tools.md)页面，了解典型升级历程中的有用工具。

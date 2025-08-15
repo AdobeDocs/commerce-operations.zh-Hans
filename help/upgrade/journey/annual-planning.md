@@ -13,7 +13,7 @@ ht-degree: 0%
 
 许多公司根据年度预算和路线图开展工作。 在这些年度讨论中，您一定要谈论您当年的平台运行状况、方向和升级策略，以及它如何适应业务的总体目标和关键绩效指标(KPI)。
 
-按照[发布计划](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule)，为升级分配预算和发布窗口，避免假日、公司停业和高峰时间。 通过了解Adobe发行计划并通过[发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)随时了解每个发行版中的更改和改进，您可以更好地规划年份。
+按照[发布计划](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/schedule)，为升级分配预算和发布窗口，避免假日、公司停业和高峰时间。 通过了解Adobe发行计划并通过[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/overview)随时了解每个发行版中的更改和改进，您可以更好地规划年份。
 
 在规划过程中，您可能想问自己：
 

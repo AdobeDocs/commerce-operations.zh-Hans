@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # 最佳实践：内容创建工作流
 
-本文档描述了用户请求对&#x200B;*[Adobe Commerce实施行动手册]中的*&#x200B;最佳实践&#x200B;*(https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/phases.html*)内容进行更改或添加的工作流。
+本文档描述了用户请求对&#x200B;*[Adobe Commerce实施行动手册]中的*&#x200B;最佳实践&#x200B;*(https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/phases.html?lang=zh-Hans*)内容进行更改或添加的工作流。
 
 ## 谁可以创建请求？
 
@@ -35,13 +35,13 @@ Adobe接受来自内部和外部利益相关者的请求，包括但不限于以
 
 如果请求中未提供足够的信息，团队会向请求者请求附加信息。 如果请求者未在14天内作出响应，团队将关闭请求。
 
-**创建或更新内容** — 按照[Adobe Experience League参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)中记录的过程完成内容创建工作。 根据请求，工作可能包括将新内容转换为Markdown、创建主题或更新现有主题。
+**创建或更新内容** — 按照[Adobe Experience League参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hans)中记录的过程完成内容创建工作。 根据请求，工作可能包括将新内容转换为Markdown、创建主题或更新现有主题。
 
-**内容审阅、批准和发布** — 内容在主题创建或更新期间使用[GitHub拉取请求](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/git-fundamentals.html?lang=en#pull-requests)进行审阅和编辑。 所有内容都必须经过编辑审核。 技术审查是可选的，具体取决于内容。 如果不需要进行技术审查，则仅继续进行编辑审查。 在内容获得批准之前，此过程可能需要多次迭代。
+**内容审阅、批准和发布** — 内容在主题创建或更新期间使用[GitHub拉取请求](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/git-fundamentals.html?lang=zh-Hans#pull-requests)进行审阅和编辑。 所有内容都必须经过编辑审核。 技术审查是可选的，具体取决于内容。 如果不需要进行技术审查，则仅继续进行编辑审查。 在内容获得批准之前，此过程可能需要多次迭代。
 
 文章获得批准后，拉取请求可以合并到生产分支。 合并应由作者完成。 在合并主题后，可以使用手动过程立即将其发布到生产环境，也可以在下次发布作业运行时自动发布。 发布作业通常每两小时运行一次。
 
-**新内容通知**-Adobe将提供有关&#x200B;*最佳实践概述*&#x200B;主题的[新增功能](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/phases.html?lang=en)部分，以随时向用户告知最近发布或更新的主题。 Adobe还将利用现有渠道（如营销和内部沟通）推广新的最佳实践内容。
+**新内容通知**-Adobe将提供有关&#x200B;*最佳实践概述*&#x200B;主题的[新增功能](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/phases.html?lang=zh-Hans)部分，以随时向用户告知最近发布或更新的主题。 Adobe还将利用现有渠道（如营销和内部沟通）推广新的最佳实践内容。
 
 ## 积压工作和Kanban板
 

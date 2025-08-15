@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 报告配置最佳实践
 
-如果您的企业不需要报告或动态客户区段功能，请禁用[报告功能](https://experienceleague.adobe.com/en/docs/commerce-admin/config/general/reports)以提高存储性能。
+如果您的企业不需要报告或动态客户区段功能，请禁用[报告功能](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/general/reports)以提高存储性能。
 
 ## 受影响的产品和版本
 
@@ -32,5 +32,5 @@ ht-degree: 1%
 
 ## 其他信息
 
-- [在Adobe Commerce中生成报告](https://experienceleague.adobe.com/en/docs/commerce-admin/start/reporting/reports-menu)
-- [客户动态区段](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segments)
+- [在Adobe Commerce中生成报告](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/reporting/reports-menu)
+- [客户动态区段](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/customers/segments/customer-segments)

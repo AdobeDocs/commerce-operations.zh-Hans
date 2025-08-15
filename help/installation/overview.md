@@ -20,7 +20,7 @@ ht-degree: 3%
 >
 >要成功继续，您应该具有中级技术知识和服务器访问权限。
 
-安装程序将创建一个功能齐全的Adobe Commerce商店，该商店具有面向客户的店面[和](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront)管理面板[。 ](https://experienceleague.adobe.com/en/docs/commerce-admin/start/admin/admin)在开始该过程之前，必须准备好数据库凭据、域信息和验证密钥。
+安装程序将创建一个功能齐全的Adobe Commerce商店，该商店具有面向客户的店面[和](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/storefront/storefront)管理面板[。 ](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/admin/admin)在开始该过程之前，必须准备好数据库凭据、域信息和验证密钥。
 
 ## 工作流
 

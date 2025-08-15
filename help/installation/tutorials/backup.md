@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关云基础架构项目上的Adobe Commerce，请参阅[云指南](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/storage/snapshots)中的&#x200B;_快照和备份管理_。
+>有关云基础架构项目上的Adobe Commerce，请参阅[云指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/storage/snapshots)中的&#x200B;_快照和备份管理_。
 
 ## 启用备份
 

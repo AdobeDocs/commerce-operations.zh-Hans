@@ -43,7 +43,7 @@ ht-degree: 0%
 
 单个修补程序包含针对特定问题的低影响质量修复。 这些修复适用于最新支持的次要版本（例如2.4.x），但在先前支持的次要版本（例如2.3.x）中可能缺失。 Adobe会根据需要发布各个修补程序。
 
-使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}应用单个修补程序。
+使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}应用单个修补程序。
 
 >[!NOTE]
 >
@@ -90,10 +90,10 @@ index c8a6fef58d31..7d01c195791e 100644
 
 可以使用以下任一方法应用修补程序：
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
 - [命令行](/help/upgrade/patches/apply.md#command-line)
 - [Composer](/help/upgrade/patches/apply.md#composer)
 
 >[!NOTE]
 >
->要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅[Commerce on Cloud指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)中的&#x200B;_应用修补程序_。
+>要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅[Commerce on Cloud指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)中的&#x200B;_应用修补程序_。

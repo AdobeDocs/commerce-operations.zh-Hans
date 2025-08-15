@@ -35,7 +35,7 @@ ht-degree: 0%
 
 为单站点店面配置`robots.txt`和`sitemap.xml`文件时，请遵循以下最佳实践：
 
-- 确保您的项目使用的是[`ece-tools`](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package)版本2002.0.12或更高版本。
+- 确保您的项目使用的是[`ece-tools`](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package)版本2002.0.12或更高版本。
 - 使用Admin应用程序将内容添加到`robots.txt`文件。
 
   >[!TIP]
@@ -64,12 +64,12 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关详细说明，请参阅[添加站点地图和搜索引擎机器人](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/robots-sitemap)。
+>有关详细说明，请参阅[添加站点地图和搜索引擎机器人](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/robots-sitemap)。
 
 
 ### 多站点店面
 
-您可以在云基础架构上通过一次实施Adobe Commerce来设置和运行多个商店。 请参阅[设置多个网站或商店](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)。
+您可以在云基础架构上通过一次实施Adobe Commerce来设置和运行多个商店。 请参阅[设置多个网站或商店](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)。
 
 为`robots.txt`单站点店面`sitemap.xml`配置[和](#single-site-storefronts)文件的相同最佳实践适用于具有两个重要区别的多站点店面：
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 ## Adobe Commerce内部部署
 
-使用管理员应用程序配置`robots.txt`和`sitemap.xml`文件，以防止机器人扫描和索引不必要的内容（请参阅[搜索引擎机器人](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots)）。
+使用管理员应用程序配置`robots.txt`和`sitemap.xml`文件，以防止机器人扫描和索引不必要的内容（请参阅[搜索引擎机器人](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html?lang=zh-Hans#search-engine-robots)）。
 
 >[!TIP]
 >
@@ -103,15 +103,15 @@ ht-degree: 0%
 
 不要在`robots.txt`文件中公开您的管理员路径。 暴露管理员路径是网站黑客攻击和潜在数据丢失的漏洞。 从`robots.txt`文件中删除管理员路径。
 
-有关编辑`robots.txt`文件并删除管理员路径所有条目的步骤，请参阅[营销用户指南> SEO和搜索>搜索引擎机器人](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots)。
+有关编辑`robots.txt`文件并删除管理员路径所有条目的步骤，请参阅[营销用户指南> SEO和搜索>搜索引擎机器人](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html?lang=zh-Hans#search-engine-robots)。
 
 >[!TIP]
 >
->如果需要帮助，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。
+>如果需要帮助，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。
 
 ## 其他信息
 
-- [了解网站、商店和商店视图](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
-- [添加网站](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
-- [使用Fastly阻止Adobe Commerce网站的恶意流量](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
-- [robots.txt在云基础架构2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html)上的Adobe Commerce中出现404错误
+- [了解网站、商店和商店视图](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
+- [添加网站](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [使用Fastly阻止Adobe Commerce网站的恶意流量](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
+- [robots.txt在云基础架构2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html?lang=zh-Hans)上的Adobe Commerce中出现404错误

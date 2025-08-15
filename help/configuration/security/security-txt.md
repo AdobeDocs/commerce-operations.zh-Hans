@@ -15,7 +15,7 @@ ht-degree: 0%
 
 当研究人员发现安全漏洞时，往往缺乏适当的报告渠道。 因此，某些漏洞未报告。 `security.txt` [文件格式](https://datatracker.ietf.org/doc/html/draft-foudil-securitytxt-09)文件的目的是为安全研究人员提供可用于报告其发现的信息。
 
-商家可以从Commerce [管理员](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-issue-reporting)输入&#x200B;_安全问题报告_&#x200B;的联系信息。 对于开发人员，`Magento_Securitytxt`模块提供了以下功能：
+商家可以从Commerce [管理员](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-issue-reporting)输入&#x200B;_安全问题报告_&#x200B;的联系信息。 对于开发人员，`Magento_Securitytxt`模块提供了以下功能：
 
 - 允许从&#x200B;_管理员_&#x200B;保存安全配置。
 - 包含将应用程序操作类与`.well-known/security.txt`和`.well-known/security.txt.sig`文件的请求匹配的路由器。

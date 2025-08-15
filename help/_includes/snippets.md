@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。
+>安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)。
 
 ## 仅限Adobe Commerce {#ee-only}
 
