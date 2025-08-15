@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Adobe Commerce 2.4.6
 
-从MariaDB 10.5.1开始，在`SHOW CREATE TABLE`、`SHOW COLUMNS`、`DESCRIBE`语句的输出以及`INFORMATION_SCHEMA.COLUMNS`表的`COLUMN_TYPE`列中，具有旧临时格式的列使用`/* mariadb-5.3 */`注释进行标记。 [请参阅MariaDB文档](https://mariadb.com/kb/en/datetime/#internal-format)。
+从MariaDB 10.5.1开始，在`/* mariadb-5.3 */`、`SHOW CREATE TABLE`、`SHOW COLUMNS`语句的输出以及`DESCRIBE`表的`COLUMN_TYPE`列中，具有旧临时格式的列使用`INFORMATION_SCHEMA.COLUMNS`注释进行标记。 [请参阅MariaDB文档](https://mariadb.com/kb/en/datetime/#internal-format)。
 
 由于MariaDB注释，Adobe Commerce无法将日期列映射到正确的数据类型，这可能会导致自定义代码中出现意外行为。
 

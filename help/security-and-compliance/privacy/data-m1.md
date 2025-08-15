@@ -1,6 +1,6 @@
 ---
 title: 客户个人信息参考（版本1.x）
-description: 了解Magento1.x中客户个人信息的数据流和数据库实体映射。
+description: 了解Magento 1.x中客户个人信息的数据流和数据库实体映射。
 exl-id: 8b01418d-8ca1-48fc-9577-a324ed3109d1
 source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
@@ -50,11 +50,11 @@ ht-degree: 0%
 
 ## 数据库实体
 
-Magento1将客户信息存储在customer 、 sales和其他数据库表中。
+Magento 1将客户信息存储在客户、销售和其他数据库表中。
 
 ### 客户数据
 
-Magento1将客户信息存储在`customer_entity`和`customer_address_entity`表中。 这两个表都有多个引用表，它们可以包含自定义客户属性。
+Magento 1将客户信息存储在`customer_entity`和`customer_address_entity`表中。 这两个表都有多个引用表，它们可以包含自定义客户属性。
 
 #### `customer_entity`和引用表
 

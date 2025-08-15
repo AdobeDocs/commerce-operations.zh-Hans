@@ -20,7 +20,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >
->Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅&#x200B;_管理系统指南_&#x200B;中的[缓存管理](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management)。
+>Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅[管理系统指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)中的&#x200B;_缓存管理_。
 
 
 ## 查看缓存状态
@@ -59,7 +59,7 @@ Current status:
 
 >[!TIP]
 >
->有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅&#x200B;_Admin Systems指南_&#x200B;中的[缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management#caches)。
+>有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅[Admin Systems指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches)中的&#x200B;_缓存_。
 
 
 ## 启用或禁用缓存类型
@@ -68,7 +68,7 @@ Current status:
 
 >[!INFO]
 >
->从版本2.2开始，在生产模式下运行Commerce时，只能使用命令行启用或禁用缓存类型。 如果在开发人员模式下运行Commerce，则可以使用命令行或手动启用或禁用缓存类型。 在执行此操作之前，必须手动使[文件系统所有者](../../installation/prerequisites/file-system/overview.md)可以写入`<magento_root>/app/etc/env.php`。
+>从版本2.2开始，在生产模式下运行Commerce时，只能使用命令行启用或禁用缓存类型。 如果在开发人员模式下运行Commerce，则可以使用命令行或手动启用或禁用缓存类型。 在执行此操作之前，必须手动使`<magento_root>/app/etc/env.php`文件系统所有者[可以写入](../../installation/prerequisites/file-system/overview.md)。
 
 您可以使用命令行或管理员清理（也称为&#x200B;_刷新_&#x200B;或&#x200B;_刷新_）缓存类型。
 

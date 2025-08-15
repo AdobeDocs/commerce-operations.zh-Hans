@@ -4,13 +4,13 @@ description: 应用ACSD-65775修补程序以修复Adobe Commerce问题，该问�
 feature: REST
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 23c78abaf28f64baf0e91bcaf89bd0e34b5bf78a
+exl-id: c2a8f4ef-3998-4e73-af9e-69b17a10d684
+source-git-commit: ce5a136dd59c52d5fa5b555b3ee74fe14d7e53a4
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65775：多个数量的REST API订单详细信息中的`base_row_total`和`row_total`值不正确
 
@@ -28,7 +28,7 @@ ACSD-65775修补程序修复了在订购同一项目的多个数量时，REST AP
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -64,7 +64,7 @@ ACSD-65775修补程序修复了在订购同一项目的多个数量时，REST AP
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

@@ -4,13 +4,13 @@ description: Adobe Commerce应用ACSD-65254修补程序以修复以下问题：�
 feature: GraphQL, User Account
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 5f7af7704c53c808298422dc165397dd255480b9
+exl-id: a97daceb-98f6-4bb8-9847-692af700c0fd
+source-git-commit: 7e9598e3ac0558706ef98ca81c19d27c37f7e860
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65254：通过`updateCustomerEmail` [!DNL GraphQL]突变更新客户电子邮件后未发送电子邮件通知
 
@@ -28,7 +28,7 @@ ACSD-65254修补程序修复了使用`updateCustomerEmail` [!DNL GraphQL]突变�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -90,8 +90,8 @@ ACSD-65254修补程序修复了使用`updateCustomerEmail` [!DNL GraphQL]突变�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

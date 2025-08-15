@@ -41,6 +41,6 @@ ht-degree: 0%
 
 如果页面不显示样式，请参阅[疑难解答](https://support.magento.com/hc/en-us/articles/360032994352)。
 
-如果出现与以下内容类似的404（未找到）错误，请参阅在浏览器[&#128279;](https://support.magento.com/hc/en-us/articles/360033117152)中访问Adobe Commerce时出现PHP版本错误或404。
+如果出现与以下内容类似的404（未找到）错误，请参阅在浏览器[中访问Adobe Commerce时出现](https://support.magento.com/hc/en-us/articles/360033117152)PHP版本错误或404。
 
 `The requested URL /magento2index.php/admin/admin/dashboard/index/key/0c81957145a968b697c32a846598dc2e/ was not found on this server.`

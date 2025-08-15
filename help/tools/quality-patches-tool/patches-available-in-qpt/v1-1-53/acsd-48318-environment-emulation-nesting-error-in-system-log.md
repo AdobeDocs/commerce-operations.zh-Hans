@@ -7,14 +7,14 @@ exl-id: 24af18de-80dd-4e0a-bdf9-5b9c075fc608
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
 # ACSD-48318： `system.log`中的环境模拟嵌套错误
 
-ACSD-48318修补程序修复了错误消息&#x200B;*main的问题。错误：每次发送发票电子邮件时，`system.log`中都会出现环境模拟嵌套*。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.53时，此修补程序可用。 修补程序ID为ACSD-48318。 请注意，Adobe Commerce 2.4.7中已修复该问题。
+ACSD-48318修补程序修复了以下问题：每次发送发票电子邮件时，*中都会显示错误消息:Environmentmain.ERROR*&#x200B;模拟嵌套`system.log`。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.53时，此修补程序可用。 修补程序ID为ACSD-48318。 请注意，Adobe Commerce 2.4.7中已修复该问题。
 
 ## 受影响的产品和版本
 
@@ -28,17 +28,17 @@ ACSD-48318修补程序修复了错误消息&#x200B;*main的问题。错误：每
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-每次发送发票电子邮件时，`system.log`中都会显示错误消息&#x200B;*不允许环境模拟嵌套*。
+每次发送发票电子邮件时，*中都会显示错误消息*&#x200B;不允许环境模拟嵌套`system.log`。
 
 <u>重现步骤</u>：
 
 1. 下达订单并生成发票。
 1. 从管理员处打开发票，然后单击&#x200B;**[!UICONTROL Send Email]**。
-1. 单击&#x200B;**[!UICONTROL Send Email]**，对&#x200B;*贷项通知单*&#x200B;和&#x200B;*装运*&#x200B;执行相同的步骤。
+1. 单击&#x200B;*，对*&#x200B;贷项通知单&#x200B;*和*&#x200B;装运&#x200B;**[!UICONTROL Send Email]**&#x200B;执行相同的步骤。
 
 <u>预期的结果</u>：
 
@@ -52,8 +52,8 @@ ACSD-48318修补程序修复了错误消息&#x200B;*main的问题。错误：每
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

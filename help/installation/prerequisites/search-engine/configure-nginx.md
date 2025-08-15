@@ -18,9 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
+>2.4.4中添加了OpenSearch支持。OpenSearch是Elasticsearch的一个兼容分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
 
-本节讨论如何将nginx配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与nginx[&#128279;](#secure-communication-with-nginx)的安全通信中讨论。
+本节讨论如何将nginx配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与nginx[的](#secure-communication-with-nginx)安全通信中讨论。
 
 >[!NOTE]
 >
@@ -81,7 +81,7 @@ include /etc/nginx/conf.d/*.conf;
 
 ## 与nginx的安全通信
 
-本节讨论如何使用安全代理设置[HTTP基本身份验证](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html)。 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
+本节讨论如何使用安全代理设置[HTTP基本身份验证](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html)。 将TLS和HTTP基本身份验证结合使用可防止任何人拦截与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
 
 由于nginx本身支持HTTP基本身份验证，因此我们建议将其覆盖，例如[摘要式身份验证](https://www.nginx.com/resources/wiki/modules/auth_digest/)，在生产环境中不建议这样做。
 

@@ -28,7 +28,7 @@ ACSD-66093修补程序修复了在来宾客户的&#x200B;**[!UICONTROL First Nam
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -39,8 +39,8 @@ ACSD-66093修补程序修复了在来宾客户的&#x200B;**[!UICONTROL First Nam
 1. 将产品作为来宾客户添加到购物车。
 2. 去结帐。
 3. 在电子邮件地址中填写“test1@gmail.co”。
-4. 用“<test2@gmail.co>”填充&#x200B;**[!UICONTROL First Name]**。
-5. 用“<test3@gmail.co>”填充&#x200B;**[!UICONTROL Last Name]**。
+4. 用“**[!UICONTROL First Name]**”填充<test2@gmail.co>。
+5. 用“**[!UICONTROL Last Name]**”填充<test3@gmail.co>。
 6. 填写其他必填字段。
 7. 下单。
 
@@ -51,15 +51,15 @@ ACSD-66093修补程序修复了在来宾客户的&#x200B;**[!UICONTROL First Nam
 <u>实际结果</u>：
 
 已下订单。
-**[!UICONTROL First Name]**&#x200B;和&#x200B;**[!UICONTROL Last Name]**&#x200B;字段保存为已输入。
+**[!UICONTROL First Name]**&#x200B;和&#x200B;**[!UICONTROL Last Name]**字段保存为已输入。
 订单确认电子邮件会发送到所有这三封电子邮件：test1@gmail.co、test2@gmail.co和test3@gmail.co。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

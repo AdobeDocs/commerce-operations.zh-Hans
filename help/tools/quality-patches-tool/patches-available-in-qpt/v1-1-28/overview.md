@@ -18,7 +18,7 @@ ht-degree: 0%
 
 QPT v1.1.28包含以下修补程序：
 
-1. **ACSD-48204**：修复了基于&#x200B;*[!UICONTROL Yes/No]*&#x200B;属性创建的&#x200B;*[!UICONTROL catalog price rule]*&#x200B;不考虑所选范围的问题。
+1. **ACSD-48204**：修复了基于&#x200B;*[!UICONTROL catalog price rule]*&#x200B;属性创建的&#x200B;*[!UICONTROL Yes/No]*&#x200B;不考虑所选范围的问题。
 1. **ACSD-47704**：修复了捆绑产品仅显示库存产品价格的问题。
 1. **ACSD-49370**：修复了GraphQL架构中产品属性具有`FilterMatchTypeInput`类型的问题。
 1. **ACSD-48807**：修复了Storeview未通过GraphQL对产品评论进行过滤的问题。

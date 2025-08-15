@@ -1,6 +1,6 @@
 ---
 title: ' [!DNL Cron] 选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的 [!DNL Cron] 选项卡。
+description: 了解 [!DNL Cron] 的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: 66f5ffd6-4118-4534-b2d6-09c7a30e5e13
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## [!UICONTROL SQL Trace count by path]
 
-按路径![&#128279;](../../assets/tools/observation-for-adobe-commerce/cron-tab-3.jpg)列出的SQL跟踪计数
+按路径![列出的](../../assets/tools/observation-for-adobe-commerce/cron-tab-3.jpg)SQL跟踪计数
 
 **[!UICONTROL SQL Trace count by path]**&#x200B;框架按路径查看MySQL跟踪计数，这有助于跟踪选定时间范围内的SQL语句。
 

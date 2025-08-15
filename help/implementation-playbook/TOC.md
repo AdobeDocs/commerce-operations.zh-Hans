@@ -69,4 +69,4 @@ ht-degree: 14%
       - [升级核对清单](best-practices/maintenance/upgrade-checklist.md)
       - [升级MariaDB的先决条件](best-practices/maintenance/mariadb-upgrade.md)
 - [术语表](glossary.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

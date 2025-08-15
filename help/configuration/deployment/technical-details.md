@@ -38,13 +38,13 @@ ht-degree: 0%
 
 共享配置存储在`app/etc/config.php`中，它应位于源代码管理中。
 
-在开发(或云基础架构&#x200B;_集成_&#x200B;上的Adobe Commerce)系统的管理员中设置共享配置，并使用[`magento app:config:dump`命令](../cli/export-configuration.md)将该配置写入`config.php`。
+在开发(或云基础架构&#x200B;_集成_&#x200B;上的Adobe Commerce)系统的管理员中设置共享配置，并使用`config.php`命令[`magento app:config:dump`将该配置写入](../cli/export-configuration.md)。
 
 ### 管理特定于系统的配置
 
 系统特定的配置存储在`app/etc/env.php`中，它应该&#x200B;_不是_&#x200B;位于源代码管理中。
 
-在开发(或Adobe Commerce on cloud infrastructure集成)系统的管理员中设置系统特定的配置，并使用[`magento app:config:dump`命令](../cli/export-configuration.md)将该配置写入`env.php`。
+在开发(或Adobe Commerce on cloud infrastructure集成)系统的管理员中设置系统特定的配置，并使用`env.php`命令[`magento app:config:dump`将该配置写入](../cli/export-configuration.md)。
 
 此命令还会将敏感设置写入`env.php`。
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 您可以通过以下任意方式管理敏感配置：
 
 - 环境变量
-- 使用[`magento config:set:sensitive`命令](../cli/set-configuration-values.md)将敏感配置保存在生产系统上的`env.php`中
+- 使用`env.php`命令[`magento config:set:sensitive`将敏感配置保存在生产系统上的](../cli/set-configuration-values.md)中
 
 ### 已在Admin中锁定配置设置
 
@@ -84,7 +84,7 @@ ht-degree: 0%
 
   我们建议在切换到生产模式之前进行这些更改。
 
-  您仍然可以使用环境变量或路径为`general/locale/code`的`config:set` CLI命令配置区域设置。
+  您仍然可以使用环境变量或路径为`config:set`的`general/locale/code` CLI命令配置区域设置。
 
 ## 安装和删除cron
 
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->要小心上述方法。 删除`generated`或`pub`文件夹中的`.htacces`文件可能会导致问题。
+>要小心上述方法。 删除`.htacces`或`generated`文件夹中的`pub`文件可能会导致问题。
 
 ### 构建系统
 
@@ -178,9 +178,9 @@ ht-degree: 0%
 
 ### 更改默认区域设置
 
-此部分显示当您使用管理员（**商店** >设置> **配置** >常规> **常规** > **区域设置选项**）更改默认权重单位时对`config.php`所做的更改。
+此部分显示当您使用管理员（`config.php`商店&#x200B;**>设置>**&#x200B;配置&#x200B;**>常规>**&#x200B;常规&#x200B;**>**&#x200B;区域设置选项&#x200B;**）更改默认权重单位时对**&#x200B;所做的更改。
 
-在管理员中进行更改后，运行`bin/magento app:config:dump`以将该值写入`config.php`。 此值将写入`locale`下的`general`数组，因为`config.php`中的以下代码片段显示：
+在管理员中进行更改后，运行`bin/magento app:config:dump`以将该值写入`config.php`。 此值将写入`general`下的`locale`数组，因为`config.php`中的以下代码片段显示：
 
 ```php
 'general' =>

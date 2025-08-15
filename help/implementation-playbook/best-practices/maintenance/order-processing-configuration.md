@@ -17,7 +17,7 @@ ht-degree: 0%
 
 - **[!UICONTROL Asynchronous indexing]** — 启用此选项可防止同时下达大量订单时数据库锁定并减慢处理速度。
 - **[!UICONTROL Asynchronous email notifications]** — 启用此选项以按指定的间隔发送结帐和订单处理电子邮件通知而不是立即发送它们，从而加快结帐性能。
-- **[!UICONTROL Enable Archiving]** — 启用此选项可提高订单、发票、装运和贷项通知单的性能，并使您的工作区不会出现不必要的信息，因此您可以专注于当前业务。 请参阅[启用存档](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/order-management/orders/order-archive)。
+- **[!UICONTROL Enable Archiving]** — 启用此选项可提高订单、发票、装运和贷项通知单的性能，并使您的工作区不会出现不必要的信息，因此您可以专注于当前业务。 请参阅[启用存档](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/order-management/orders/order-archive)。
 
 ## 受影响的产品和版本
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 启用异步订单处理的步骤取决于部署模式：
 
-- 对于处于生产模式的云基础架构和本地站点上的Adobe Commerce，请使用以下MagentoCLI命令启用异步索引：
+- 对于处于生产模式的云基础架构和本地站点上的Adobe Commerce，请使用以下Magento CLI命令启用异步索引：
 
   ```php
   php bin/magento config:set dev/grid/async_indexing 1
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 - 对于处于默认或生产模式的Adobe Commerce本地站点，可通过在管理员中更新网格设置配置来启用异步索引。
 
-  请参阅[启用计划的网格更新并重新索引](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html?lang=zh-Hans#enable-scheduled-grid-updates-and-reindexing)
+  请参阅[启用计划的网格更新并重新索引](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html#enable-scheduled-grid-updates-and-reindexing)
 
   >[!WARNING]
   >

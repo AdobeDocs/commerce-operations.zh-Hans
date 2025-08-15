@@ -61,7 +61,7 @@ ht-degree: 4%
 | 5002 | 开始PHP标记必须是文件中的第一个内容 | 在PHP开始标记之前，请确保文件中没有内容。 |
 | 5003 | 函数已被弃用 | 使用错误消息中建议的替换。 如果消息未建议进行替换，则需要仔细审查以选择替代功能或实施。 |
 | 5005 | PHP语法错误 | 必须更新代码以符合PHP语法标准。 |
-| 5072 | 可能存在Magento2设计冲突。 检测到典型的Magento1.x结构 | 将构建更新为Magento2标准。 |
+| 5072 | 可能违反了Magento 2设计。 检测到典型的Magento 1.x结构 | 将构建更新为Magento 2标准。 |
 | 5076 | 无法在命名空间中使用，因为命名空间是自PHP 7以来保留的 | 将命名空间中的保留字替换为非保留关键字。 |
 | 5077 | 不能用作类名，因为它是自PHP 7以来保留的 | 将保留的类名替换为非保留名称。 |
 
@@ -194,7 +194,7 @@ ht-degree: 4%
 | 5088 | 在必需参数之后发现的可选参数 | 将所需参数移到可选参数之后。 |
 | 5089 | 找到方法可见性`final private` | 将方法可见性从`final private`更改为仅`private`。 |
 | 5090 | 魔术方法`__set_state`未定义为`static` | 必须将魔术方法`__set_state`定义为`static`。 |
-| 5091 | 具有`__toString()`方法的类不从`Stringable`接口继承 | 使用`__toString()`方法将`Stringable`接口添加到类。 |
+| 5091 | 具有`__toString()`方法的类不从`Stringable`接口继承 | 使用`Stringable`方法将`__toString()`接口添加到类。 |
 | 5092 | `is_resource()`方法用于现在返回对象的函数 | 将`is_resource()`更改为`instanceof`对象。 |
 | 6001 | `jQuery.andSelf()`已删除 | 使用`jQuery.addBack()`。 |
 | 6002 | jQuery `$.bind`和`$.unbind`已弃用 | 请改用`$.on`和`$.off`。 |

@@ -41,17 +41,17 @@ ht-degree: 0%
 
 ## 管理会话大小
 
-请参阅&#x200B;_用户指南_&#x200B;中的[会话管理](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-session-management)。
+请参阅[用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-session-management)中的&#x200B;_会话管理_。
 
 ## 垃圾收集配置
 
-为了清理过期的会话，系统根据`gc_probability / gc_divisor`指令计算的概率随机调用`gc` （_垃圾回收_）处理程序。 例如，如果分别将这些指令设置为`1/100`，则表示`1%`的概率（每100个请求一个垃圾收集调用的概率&#x200B;__）。
+为了清理过期的会话，系统根据`gc`指令计算的概率随机调用&#x200B;_（_&#x200B;垃圾回收`gc_probability / gc_divisor`）处理程序。 例如，如果分别将这些指令设置为`1/100`，则表示`1%`的概率（每100个请求一个垃圾收集调用的概率&#x200B;__）。
 
 垃圾收集处理程序使用`gc_maxlifetime`指令，即会话被视为&#x200B;_垃圾桶_&#x200B;并可能被清理的秒数。
 
 在某些操作系统(Debian/Ubuntu)上，默认`session.gc_probability`指令为`0`，该指令可阻止垃圾收集处理程序运行。
 
-您可以覆盖`<magento_root>/app/etc/env.php`文件中`php.ini`文件中的`session.gc_`指令：
+您可以覆盖`session.gc_`文件中`php.ini`文件中的`<magento_root>/app/etc/env.php`指令：
 
 ```php
  'session' => [

@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ## 其他信息
 
-- [缓存最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management#best-practices-for-caching)
+- [缓存最佳实践](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#best-practices-for-caching)
 - [私有内容：使私有内容无效](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
 - [硬件建议：缓存](../../../performance/hardware.md#caches)
 - [高级设置：设置Redis](../../../performance/advanced-setup.md#set-up-redis)

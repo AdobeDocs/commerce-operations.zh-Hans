@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 搜索引擎概述
 
-从版本2.4.4开始，Adobe Commerce要求[Elasticsearch]或[OpenSearch]作为目录搜索引擎。 以前版本的2.4.x需要Elasticsearch。 有关安装搜索引擎和初始配置的详细信息，请参阅以下主题：
+从版本2.4.4开始，Adobe Commerce要求[Elasticsearch]或[OpenSearch]作为目录搜索引擎。 2.4.x的先前版本要求使用Elasticsearch。 有关安装搜索引擎和初始配置的详细信息，请参阅以下主题：
 
 - [搜索引擎先决条件](../../installation/prerequisites/search-engine/overview.md)
 - [为搜索引擎配置nginx](../../installation/prerequisites/search-engine/configure-nginx.md)

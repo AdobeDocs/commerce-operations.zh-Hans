@@ -13,7 +13,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-使用Commerce 2.2 [管道部署模型](../deployment/technical-details.md)设置生产系统时，必须&#x200B;_将`config.php`和`env.php`中的_配置设置导入数据库。
+使用Commerce 2.2 [管道部署模型](../deployment/technical-details.md)设置生产系统时，必须&#x200B;_将_&#x200B;和`config.php`中的`env.php`配置设置导入数据库。
 这些设置包括配置路径和值、网站、商店、商店视图和主题。
 
 导入网站、商店、商店视图和主题后，您可以创建产品属性，并在生产系统上将其应用于网站、商店和商店视图。
@@ -64,7 +64,7 @@ Nothing to import
 
 ### 系统配置
 
-Commerce在`config.php`或`env.php`文件中直接使用`system`数组中的值，而不是将这些值导入数据库，因为它们需要一些预处理操作和后期处理操作。
+Commerce在`system`或`config.php`文件中直接使用`env.php`数组中的值，而不是将这些值导入数据库，因为它们需要一些预处理操作和后期处理操作。
 
 例如，必须使用后端模型验证配置路径`web/secure/base_url`的值。
 
@@ -80,7 +80,7 @@ Commerce在`config.php`或`env.php`文件中直接使用`system`数组中的值�
 ### 网站、商店和商店组配置
 
 我们导入以下类型的配置。
-（这些配置位于`config.php`中的`scopes`阵列下。）
+（这些配置位于`scopes`中的`config.php`阵列下。）
 
 - `websites`：网站相关配置
 - `groups`：存储相关配置
@@ -98,7 +98,7 @@ Commerce在`config.php`或`env.php`文件中直接使用`system`数组中的值�
 
 ### 主题配置
 
-主题配置包括在Commerce系统中注册的所有主题；数据直接来自`theme`数据库表。 （主题配置位于`config.php`中的`themes`数组中。）
+主题配置包括在Commerce系统中注册的所有主题；数据直接来自`theme`数据库表。 （主题配置位于`themes`中的`config.php`数组中。）
 
 #### 主题数据的结构
 

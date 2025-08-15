@@ -1,6 +1,6 @@
 ---
-title: ACSD-63578：单击[!UICONTROL Add to Order by SKU]中的[!UICONTROL Delete]图标不会删除SKU
-description: 应用ACSD-63578修补程序以修复在管理员中单击[!UICONTROL Add to Order by SKU]中的[!UICONTROL Delete]图标未删除SKU的Adobe Commerce问题。
+title: ACSD-63578：单击[!UICONTROL Delete]中的[!UICONTROL Add to Order by SKU]图标不会删除SKU
+description: 应用ACSD-63578修补程序以修复在管理员中单击[!UICONTROL Delete]中的[!UICONTROL Add to Order by SKU]图标未删除SKU的Adobe Commerce问题。
 feature: Orders
 role: Admin, Developer
 exl-id: 12afceb5-db3c-4783-a532-93c4c71f05f4
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 ---
 
-# ACSD-63578：单击&#x200B;*[!UICONTROL Add to Order by SKU]*&#x200B;中的&#x200B;**[!UICONTROL Delete]**&#x200B;图标不会删除SKU
+# ACSD-63578：单击&#x200B;**[!UICONTROL Delete]**&#x200B;中的&#x200B;*[!UICONTROL Add to Order by SKU]*&#x200B;图标不会删除SKU
 
-ACSD-63578修补程序修复了在管理员中单击&#x200B;*[!UICONTROL Add to Order by SKU]*&#x200B;中的&#x200B;**[!UICONTROL Delete]**&#x200B;图标未删除SKU的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.58时，此修补程序可用。 修补程序ID为ACSD-63578。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-63578修补程序修复了在管理员中单击&#x200B;**[!UICONTROL Delete]**&#x200B;中的&#x200B;*[!UICONTROL Add to Order by SKU]*&#x200B;图标未删除SKU的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.58时，此修补程序可用。 修补程序ID为ACSD-63578。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -28,11 +28,11 @@ ACSD-63578修补程序修复了在管理员中单击&#x200B;*[!UICONTROL Add to 
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-单击管理员中&#x200B;*[!UICONTROL Add to Order by SKU]*&#x200B;的&#x200B;**[!UICONTROL Delete]**&#x200B;图标不会从订单中删除该SKU。
+单击管理员中&#x200B;**[!UICONTROL Delete]**&#x200B;的&#x200B;*[!UICONTROL Add to Order by SKU]*&#x200B;图标不会从订单中删除该SKU。
 
 <u>重现步骤</u>：
 
@@ -58,8 +58,8 @@ ACSD-63578修补程序修复了在管理员中单击&#x200B;*[!UICONTROL Add to 
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

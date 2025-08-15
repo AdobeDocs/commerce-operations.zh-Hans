@@ -18,7 +18,7 @@ Adobe _强烈_&#x200B;建议您在设置数据库时遵循以下标准：
 * Adobe Commerce使用[MySQL数据库触发器](https://dev.mysql.com/doc/refman/8.0/en/triggers.html)来改进重新索引期间的数据库访问。 当索引器模式设置为[计划](../../../configuration/cli/manage-indexers.md#configure-indexers)时，将创建这些项。 应用程序不支持数据库中的任何自定义触发器，因为自定义触发器可能会与将来的Adobe Commerce版本不兼容。
 * 在继续之前，请熟悉[这些潜在的MySQL触发器限制](https://dev.mysql.com/doc/mysql-reslimits-excerpt/8.0/en/stored-program-restrictions.html)。
 * 要增强数据库的安全状态，请启用[`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_strict_all_tables) SQL模式以防止存储无效的数据值，这可能会导致不必要的数据库交互。
-* Adobe Commerce _不_&#x200B;支持基于MySQL语句的复制。 确保仅使用&#x200B;_1&rbrace; [基于行的复制](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html)。_
+* Adobe Commerce _不_&#x200B;支持基于MySQL语句的复制。 确保仅使用&#x200B;_1}_&#x200B;基于行的复制[。](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html)
 
 >[!WARNING]
 >
@@ -73,7 +73,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 | `username` | `varchar(40)` | 是 | UNI | `NULL` | |
 | `password` | `varchar(255)` | 否 | | `NULL` | |
 | `created` | `timestamp` | 否 | | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` |
-| `modified` | `timestamp` | 否 | | `CURRENT_TIMESTAMP` | 更新`CURRENT_TIMESTAMP`时`DEFAULT_GENERATED` |
+| `modified` | `timestamp` | 否 | | `CURRENT_TIMESTAMP` | 更新`DEFAULT_GENERATED`时`CURRENT_TIMESTAMP` |
 | `logdate` | `timestamp` | 是 | | `NULL` | |
 | `lognum` | `smallint unsigned` | 否 | | `0` | |
 
@@ -88,7 +88,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ### GROUP BY的已弃用ASC和DESC限定符
 
-自MySQL 8.0.13起，已删除`GROUP BY`子句的已弃用`ASC`或`DESC`限定符。 以前依赖于`GROUP BY`排序的查询可能会产生与以前的MySQL版本不同的结果。 要生成给定的排序顺序，请提供`ORDER BY`子句。
+自MySQL 8.0.13起，已删除`ASC`子句的已弃用`DESC`或`GROUP BY`限定符。 以前依赖于`GROUP BY`排序的查询可能会产生与以前的MySQL版本不同的结果。 要生成给定的排序顺序，请提供`ORDER BY`子句。
 
 ## Commerce和MySQL 8
 

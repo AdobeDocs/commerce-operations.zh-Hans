@@ -1,6 +1,6 @@
 ---
 title: '[!UICONTROL PHP]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL PHP]选项卡。
+description: 了解[!UICONTROL PHP]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: 0989a7f5-75b0-4fb5-ac5e-2618603bf548
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ![PHP进程加载](../../assets/tools/php-process-load.jpg)
 
-**[!UICONTROL PHP process load (# of PHP processes and % of CPU load)]**&#x200B;帧显示选定时间范围内来自PHP-FPM进程的CPU负载。
+**[!UICONTROL PHP process load (# of PHP processes and % of CPU load)]**&#x200B;帧显示选定时间范围内从PHP-FPM进程加载的CPU。
 
 ## [!UICONTROL PHP Memory detail]
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## [!UICONTROL PHP CPU Utilization]
 
-![PHP CPU使用率](../../assets/tools/php-cpu-utilization.jpg)
+![PHP CPU利用率](../../assets/tools/php-cpu-utilization.jpg)
 
 **[!UICONTROL PHP CPU Utilization]**&#x200B;帧显示选定时间范围内PHP进程的CPU利用率百分比。
 

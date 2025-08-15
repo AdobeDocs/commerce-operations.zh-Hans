@@ -33,9 +33,9 @@ bin/magento dev:source-theme:deploy [--type="..."] [--locale="..."] [--area="...
 | `--locale` | 区域设置代码。<br>要显示区域设置代码列表，请输入`bin/magento info:language:list` | 否 |
 | `--area` | 区域（`adminhtml`表示管理区域，`frontend`表示店面）。 | 否 |
 | `--theme` | `<VendorName>/<theme-name>`格式的主题名称。 例如，`Magento/blank`或`Magento/backend`。 | 否 |
-| `<file>` | 要转换为LESS但不带CSS扩展名的CSS文件列表（以空格分隔）。 （对于adminhtml类型`css/styles css/styles-old`，默认值为`css/styles-m css/styles-l`） | 否 |
+| `<file>` | 要转换为LESS但不带CSS扩展名的CSS文件列表（以空格分隔）。 （对于adminhtml类型`css/styles-m css/styles-l`，默认值为`css/styles css/styles-old`） | 否 |
 
-例如，要使用名为`<magento_root>/pub/static/frontend/VendorName/themeName/en_US/css/styles-l.css`的CSS文件在`en_US`区域设置中为名为`VendorName/themeName`的前端主题创建LESS文件，请输入以下命令：
+例如，要使用名为`VendorName/themeName`的CSS文件在`en_US`区域设置中为名为`<magento_root>/pub/static/frontend/VendorName/themeName/en_US/css/styles-l.css`的前端主题创建LESS文件，请输入以下命令：
 
 ```bash
 bin/magento dev:source-theme:deploy --type="less" --locale="en_US" --area="frontend" --theme="VendorName/themeName" css/styles-l

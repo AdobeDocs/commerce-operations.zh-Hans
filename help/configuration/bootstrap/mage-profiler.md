@@ -29,7 +29,7 @@ Commerce在[`Magento\Framework\Profiler`][profiler]中提供基本功能。
 
 ## 设置MAGE_PROFILER
 
-您可以按照[中讨论的任何方法来设置`MAGE_PROFILER`的值。请设置引导参数值](../bootstrap/set-parameters.md)。
+您可以按照`MAGE_PROFILER`中讨论的任何方法来设置[的值。请设置引导参数值](../bootstrap/set-parameters.md)。
 
 `MAGE_PROFILER`支持以下值：
 
@@ -37,7 +37,7 @@ Commerce在[`Magento\Framework\Profiler`][profiler]中提供基本功能。
 
   您可以使用以下值之一来启用特定的Profiler：
 
-   - 使用[`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`][csvfile]的`csvfile`
+   - 使用`csvfile`的[`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`][csvfile]
    - 任何其他值（`2`除外），包括使用[`Magento\Framework\Profiler\Driver\Standard\Output\Html`][html]的空值
 
 - `2`以启用依赖关系图。
@@ -50,7 +50,7 @@ Commerce在[`Magento\Framework\Profiler`][profiler]中提供基本功能。
 
 您可以使用CLI命令启用或禁用Profiler：
 
-- `dev:profiler:enable <type>`通过`html`的`type`（默认）或`csvfile`启用探查器。 启用后，将创建标志文件`var/profiler.flag`。
+- `dev:profiler:enable <type>`通过`type`的`html`（默认）或`csvfile`启用探查器。 启用后，将创建标志文件`var/profiler.flag`。
 - `dev:profiler:disable`禁用该探查器。 禁用后，将删除flagfile `var/profiler.flag`。
 
 要启用依赖关系图，请使用变量选项。

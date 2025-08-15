@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 在云基础架构上为Commerce配置远程存储
 
-从`ece-tools`包2002.1.5开始，您可以使用环境变量来启用远程存储模块；但是，在云基础架构上，远程存储模块在Adobe Commerce上具有&#x200B;_有限的_&#x200B;支持。 Adobe无法完全排除第三方storage adapter服务的故障。
+从`ece-tools`包2002.1.5开始，您可以使用环境变量来启用远程存储模块；但是，在云基础架构上，远程存储模块在Adobe Commerce上具有&#x200B;_有限的_&#x200B;支持。 Adobe无法完全排除第三方存储适配器服务的故障。
 
 ## 环境变量
 
-`REMOTE_STORAGE`变量在云基础架构项目的[部署阶段](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html?lang=zh-Hans)中使用。
+`REMOTE_STORAGE`变量在云基础架构项目的[部署阶段](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html)中使用。
 
 ### `REMOTE_STORAGE`
 
@@ -40,7 +40,7 @@ stage:
 
 ### 使用Cloud CLI设置变量
 
-将`REMOTE_STORAGE`变量设置为[环境级变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=zh-Hans)，以便文件不在生产、暂存和集成环境之间共享。 在环境级别设置变量后，可以灵活地在选定环境中仅使用远程存储，例如排除使用远程存储的集成环境。
+将`REMOTE_STORAGE`变量设置为[环境级变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html)，以便文件不在生产、暂存和集成环境之间共享。 在环境级别设置变量后，可以灵活地在选定环境中仅使用远程存储，例如排除使用远程存储的集成环境。
 
 **要使用Cloud CLI添加远程存储变量**，请执行以下操作：
 
@@ -89,7 +89,7 @@ magento-cloud variable:create --level environment --name REMOTE_STORAGE --json t
 
 ### 使用可选身份验证
 
-`key`和`secret`是可选的。 创建变量时，您可以通过选择`sensitive`选项来隐藏`key`和`secret`。 使用此设置，Web界面中不会显示这些值。 请参阅&#x200B;_云基础架构上的Commerce指南_&#x200B;中的[变量可见性](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=zh-Hans#visibility)。
+`key`和`secret`是可选的。 创建变量时，您可以通过选择`key`选项来隐藏`secret`和`sensitive`。 使用此设置，Web界面中不会显示这些值。 请参阅[云基础架构上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility)中的&#x200B;_变量可见性_。
 
 如果要使用其他身份验证方法，请从JSON配置中忽略`key`和`secret`。 配置替代身份验证方法，并验证服务器是否有权使用S3存储桶。
 
@@ -109,9 +109,9 @@ bin/magento remote-storage:sync
 
 ## Fastly配置
 
-如果选择将远程存储解决方案与Adobe Commerce on cloud infrastructure项目一起使用，请使用&#x200B;_Fastly_&#x200B;文档中的[Amazon S3](https://docs.fastly.com/en/guides/amazon-s3)指南来确保Fastly图像优化可与AWS S3配合使用。
+如果选择将远程存储解决方案与Adobe Commerce on cloud infrastructure项目一起使用，请使用[Fastly](https://docs.fastly.com/en/guides/amazon-s3)文档中的&#x200B;_Amazon S3_&#x200B;指南来确保Fastly图像优化可与AWS S3配合使用。
 
-准备好您的[Fastly凭据](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=zh-Hans#get-fastly-credentials)。 在Pro项目中，使用SSH连接到您的服务器并从`/mnt/shared/fastly_tokens.txt`文件中获取Fastly凭据。 暂存环境和生产环境具有唯一的凭据。 您必须获取每个环境的凭据。
+准备好您的[Fastly凭据](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html#get-fastly-credentials)。 在Pro项目中，使用SSH连接到您的服务器并从`/mnt/shared/fastly_tokens.txt`文件中获取Fastly凭据。 暂存环境和生产环境具有唯一的凭据。 您必须获取每个环境的凭据。
 
 请通过以下任务继续为云项目设置远程存储：
 
@@ -119,4 +119,4 @@ bin/magento remote-storage:sync
 
 1. 为[AWS S3身份验证](https://docs.fastly.com/en/guides/amazon-s3#using-an-amazon-s3-private-bucket)创建VCL逻辑。
 
-1. 为AWS S3存储桶[&#128279;](https://developer.fastly.com/reference/vcl/variables/backend-connection/req-backend/)的后端请求创建VCL逻辑。
+1. 为AWS S3存储桶[的](https://developer.fastly.com/reference/vcl/variables/backend-connection/req-backend/)后端请求创建VCL逻辑。

@@ -28,7 +28,7 @@ ACSD-64137修补程序修复了按邮政编码搜索接收位置不适用于荷�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -40,7 +40,7 @@ ACSD-64137修补程序修复了按邮政编码搜索接收位置不适用于荷�
 1. 创建自定义库存。
 1. 使用荷兰地址创建两个源，并将它们分配给库存（邮政编码7311ER和7311AE）。
 1. 创建简单产品并添加库存。
-1. 导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Delivery Methods]**&#x200B;以启用&#x200B;**[!UICONTROL In-Store Delivery]**。
+1. 导航到&#x200B;**[!UICONTROL In-Store Delivery]** > **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]**&#x200B;以启用&#x200B;**[!UICONTROL Delivery Methods]**。
 1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Inventory]** > **[!UICONTROL Distance Provider for Distance Based SSA]**。 将&#x200B;**[!UICONTROL Provider]**&#x200B;设置为&#x200B;*脱机计算*。
 1. 运行以下命令以导入NL国家/地区的地理名称。
 
@@ -50,7 +50,7 @@ ACSD-64137修补程序修复了按邮政编码搜索接收位置不适用于荷�
 
 1. 将产品添加到购物车并转到送货步骤。
 1. 选择&#x200B;**[!UICONTROL Pick In Store]**。 然后，单击&#x200B;**[!UICONTROL Select Other]**&#x200B;以选择其他商店。
-1. 在&#x200B;**[!UICONTROL Select Store]**&#x200B;搜索表单中键入&#x200B;*7311*&#x200B;或&#x200B;*7311AE*。
+1. 在&#x200B;*搜索表单中键入* 7311 *或* 7311AE **[!UICONTROL Select Store]**。
 
 
 **预期的结果**：
@@ -65,8 +65,8 @@ ACSD-64137修补程序修复了按邮政编码搜索接收位置不适用于荷�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 
 ## 相关阅读

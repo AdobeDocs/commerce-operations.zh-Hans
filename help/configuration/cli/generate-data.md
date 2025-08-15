@@ -12,7 +12,7 @@ ht-degree: 9%
 
 # 性能测试数据
 
-## 配置文件
+## 轮廓
 
 您可以调整使用&#x200B;_用户档案_（小、中、大和特大）创建的数据量。 配置文件位于`<magento_root>/setup/performance-toolkit/profiles/<ce|ee>`目录中。
 

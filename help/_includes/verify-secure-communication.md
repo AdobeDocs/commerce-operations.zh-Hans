@@ -68,7 +68,7 @@ Connection: keep-alive
 
 ## 在管理员中配置HTTP基本身份验证
 
-执行[搜索引擎配置](../configuration/search/configure-search-engine.md) *中讨论的相同任务，但*&#x200B;除外，请单击&#x200B;**[!UICONTROL Enable HTTP Auth]**&#x200B;列表中的&#x200B;**[!UICONTROL Yes]**，然后在提供的字段中输入用户名和密码。
+执行[搜索引擎配置](../configuration/search/configure-search-engine.md) *中讨论的相同任务，但*&#x200B;除外，请单击&#x200B;**[!UICONTROL Yes]**&#x200B;列表中的&#x200B;**[!UICONTROL Enable HTTP Auth]**，然后在提供的字段中输入用户名和密码。
 
 单击&#x200B;**[!UICONTROL Test Connection]**&#x200B;以确保它正常工作，然后单击&#x200B;**[!UICONTROL Save Config]**。
 

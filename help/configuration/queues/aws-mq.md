@@ -13,11 +13,11 @@ ht-degree: 0%
 
 自Commerce 2.4.3起，Amazon Message Queue (MQ)可用作本地消息队列实例的云就绪替代项。
 
-要在AWS上创建消息队列，请参阅&#x200B;_Amazon文档_&#x200B;中的[设置AWS MQ](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-setting-up.html)。
+要在AWS上创建消息队列，请参阅[Amazon文档](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-setting-up.html)中的&#x200B;_设置AWS MQ_。
 
 ## 为AWS MQ配置Commerce
 
-要连接到AWS MQ服务，请在`env.php`文件中配置`queue.amqp`对象。
+要连接到AWS MQ服务，请在`queue.amqp`文件中配置`env.php`对象。
 AWS Message Queue需要SSL/TLS连接。
 
 ```php

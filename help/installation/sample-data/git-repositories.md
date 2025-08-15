@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 克隆示例数据Git存储库
 
-本主题讨论如何在克隆Magento Open SourceGitHub存储库时克隆和添加示例数据。 此方法仅适用于参与开发的开发人员(即计划参与Magento Open Source代码库的开发人员)。
+本主题讨论如何在克隆Magento Open Source GitHub存储库时克隆和添加示例数据。 此方法仅适用于参与开发的开发人员(即计划参与Magento Open Source代码库的开发人员)。
 
 如果您不是参与开发人员，请选择页面左侧目录中显示的其他选项之一。
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->您可以将示例数据与`develop`分支（更新）或已发布的分支(例如`2.4`（更稳定）)一起使用。 我们建议您使用已发布的分支，因为它更稳定。 如果您正在向存储库贡献代码，并且需要最新的代码，请使用`develop`分支。 无论您选择哪个分支，都必须[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)Magento Open SourceGitHub存储库的相应分支。 例如，`develop`分支的示例数据只能与Magento Open Source`develop`分支一起&#x200B;*使用*。
+>您可以将示例数据与`develop`分支（更新）或已发布的分支(例如`2.4`（更稳定）)一起使用。 我们建议您使用已发布的分支，因为它更稳定。 如果您正在向存储库贡献代码，并且需要最新的代码，请使用`develop`分支。 无论您选择哪个分支，都必须[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) Magento Open Source GitHub存储库的相应分支。 例如，`develop`分支的示例数据只能在Magento Open Source *分支中*&#x200B;使用`develop`。
 
 ## 克隆示例数据存储库
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
    例如：
 
-   如果您使用了Magento Open SourceGitHub存储库的`2.4-develop`分支，则示例数据分支应为`2.4-develop`。
+   如果您使用了Magento Open Source GitHub存储库的`2.4-develop`分支，则示例数据分支应为`2.4-develop`。
 
    要检查正确的分支，请从示例数据存储库的根目录中运行以下命令（假设您需要`2.4-develop`分支）：
 
@@ -125,7 +125,7 @@ ht-degree: 0%
 
    例如：
 
-   如果您使用了Magento Open SourceGitHub存储库的`2.4-develop`分支，则示例数据分支应为`2.4-develop`。
+   如果您使用了Magento Open Source GitHub存储库的`2.4-develop`分支，则示例数据分支应为`2.4-develop`。
 
    要检查正确的分支，请从示例数据存储库的根目录中运行以下命令（假设您需要`2.4-develop`分支）：
 
@@ -159,7 +159,7 @@ ht-degree: 0%
 
 ## 设置文件系统所有权和权限
 
-由于`php build-sample-data.php`脚本在示例数据存储库和您的Magento Open Source存储库之间创建符号链接，因此您必须在示例数据存储库中设置文件系统权限和所有权。 否则，会导致访问店面时出现错误。
+由于`php build-sample-data.php`脚本在示例数据存储库和Magento Open Source存储库之间创建符号链接，因此您必须在示例数据存储库中设置文件系统权限和所有权。 否则，会导致访问店面时出现错误。
 
 要对示例数据存储库设置文件系统权限和所有权，请执行以下操作：
 

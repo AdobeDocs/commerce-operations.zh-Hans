@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Adobe Commerce发布策略
 
-Adobe Commerce在单个模块级别（例如`magento/framework 101.1.1`）使用[语义版本控制](https://semver.org/)，但不用于营销版本号。 例如：
+Adobe Commerce在单个模块级别（例如[）使用](https://semver.org/)语义版本控制`magento/framework 101.1.1`，但不用于营销版本号。 例如：
 
 - **主要版本**—2
 - **次要版本** - 2.4
@@ -92,4 +92,4 @@ Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担�
 
 ## 自定义修补程序
 
-由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/usage)提供。
+由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage)提供。

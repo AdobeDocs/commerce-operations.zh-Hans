@@ -19,4 +19,4 @@ ht-degree: 0%
 
 **[!UICONTROL Health Index Bar]**：它测量从0到100的总体网站运行状况，其中0表示最差，100表示完全运行状况。 它是根据活跃推荐的数量和优先级权重系数计算的。
 
-**[!UICONTROL Download Recommendations Report]**： Recommendations报表提供了适用于您项目的个性化推荐。 您可以通过单击此部分下载PDF报表。
+**[!UICONTROL Download Recommendations Report]**：推荐报表提供了适用于您项目的个性化推荐。 您可以通过单击此部分下载PDF报表。

@@ -4,7 +4,7 @@ description: 按照以下步骤在您的Adobe Commerce项目上运行 [!DNL Upgr
 exl-id: a2272339-46d6-443b-bd53-286b72f13d4e
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
 
 - *当前版本*：当前安装的版本。
 - *目标版本*：要升级到的版本。
-- *执行时间*：分析生成报告所用的时间(mm：ss)。
+- *执行时间*：分析生成报告所用的时间(mm:ss)。
 - *需要更新的模块*：包含兼容性问题且需要更新的模块的百分比。
 - *需要更新的文件*：包含兼容性问题且需要更新的文件的百分比。
 - *严重错误总数*：找到的严重错误数。
@@ -83,7 +83,7 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 
 ## HTML报表
 
-在命令行界面上或通过[!DNL Site-Wide Analysis Tool]运行工具时，可以获取HTML报告。 HTML报表还包含：
+在命令行界面上或通过[!DNL Site-Wide Analysis Tool]运行该工具时，可以获取HTML报表。 HTML报表还包含：
 
 - 已识别问题的列表。
 - 分析摘要。
@@ -96,7 +96,7 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 
 右上角有一个下拉列表，允许您选择其他级别。 已识别的问题列表将相应地被过滤。
 
-![HTML报告 — 下拉列表使用情况](../../assets/upgrade-guide/uct-html-filtered-issues-list.png)
+![HTML报告 — 下拉菜单使用情况](../../assets/upgrade-guide/uct-html-filtered-issues-list.png)
 
 >[!NOTE]
 >

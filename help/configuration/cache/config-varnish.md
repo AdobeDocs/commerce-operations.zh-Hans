@@ -90,9 +90,9 @@ ht-degree: 0%
 
 清漆缓存可使用以下方式与Commerce配合使用：
 
-- Magento2 GitHub存储库中的[`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)
+- Magento 2 GitHub存储库中的[`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)
 - Commerce提供的Apache的`.htaccess`分布式配置文件
-- 使用[管理员](../cache/configure-varnish-commerce.md)生成的清漆的`default.vcl`配置
+- 使用`default.vcl`管理员[生成的清漆的](../cache/configure-varnish-commerce.md)配置
 
 >[!INFO]
 >

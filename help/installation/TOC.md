@@ -5,7 +5,7 @@ feature: Install
 source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 - [概述](overview.md)
 - [系统要求](system-requirements.md)
-- 先决条件{#prerequisites}
+- 先决条件 {#prerequisites}
    - [概述](prerequisites/overview.md)
-   - 文件系统{#file-system}
+   - 文件系统 {#file-system}
       - [概述](prerequisites/file-system/overview.md)
       - [配置权限](prerequisites/file-system/configure-permissions.md)
-   - Web服务器{#web-server}
+   - Web服务器 {#web-server}
       - [恩金克斯](prerequisites/web-server/nginx.md)
       - [Apache](prerequisites/web-server/apache.md)
-   - 数据库服务器{#database-server}
+   - 数据库服务器 {#database-server}
       - [MySQL](prerequisites/database/mysql.md)
       - [远程连接](prerequisites/database/mysql-remote.md)
-   - 搜索引擎{#search-engine}
+   - 搜索引擎 {#search-engine}
       - [概述](prerequisites/search-engine/overview.md)
       - [AWS OpenSearch](prerequisites/search-engine/aws-opensearch.md)
       - [配置Nginx](prerequisites/search-engine/configure-nginx.md)
@@ -38,7 +38,7 @@ ht-degree: 2%
    - [可选软件](prerequisites/optional-software.md)
 - [快速入门安装](composer.md)
 - [高级安装](advanced.md)
-- Post安装步骤{#next-steps}
+- 安装后步骤 {#next-steps}
    - [验证安装](next-steps/verify.md)
    - [配置应用程序](next-steps/configuration.md)
    - [设置umask（可选）](next-steps/set-umask.md)
@@ -47,7 +47,7 @@ ht-degree: 2%
       - [下载编辑器包](sample-data/composer-packages.md)
       - [克隆Git存储库](sample-data/git-repositories.md)
       - [删除或更新模块](sample-data/remove-or-update.md)
-- Tutorials{#tutorials}
+- 教程 {#tutorials}
    - [备份和回滚文件系统、介质和数据库](tutorials/backup.md)
    - [检查数据库状态](tutorials/database-status.md)
    - [配置消息使用者行为](tutorials/message-consumers.md)
@@ -67,4 +67,4 @@ ht-degree: 2%
    - [卸载或重新安装Commerce](tutorials/uninstall.md)
    - [卸载主题](tutorials/themes.md)
    - [升级数据库模式](tutorials/database-upgrade.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

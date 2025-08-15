@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 如何获取软件
 
-查看令人兴奋的新功能和版本的可用性，并了解如何在我们的[产品可用性页面](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability)上获取这些功能和版本。
+查看令人兴奋的新功能和版本的可用性，并了解如何在我们的[产品可用性页面](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability)上获取这些功能和版本。
 
 请参阅下表，了解如何开始安装Adobe Commerce。
 
@@ -39,7 +39,7 @@ ht-degree: 0%
     </tr>
     <tr>
         <td><p>参与开发人员</p></td>
-        <td><p>提供Magento Open Source代码库、文件错误和自定义应用程序。 技术含量高，拥有自己的开发服务器，了解Composer和GitHub。</p>
+        <td><p>产生Magento Open Source代码库、文件错误并自定义应用程序。 技术含量高，拥有自己的开发服务器，了解Composer和GitHub。</p>
             <p>您<em>无法</em>在生产环境中使用该应用程序。</p>
       <p>您必须使用<a href="../../upgrade/developer/git-installs.md">编辑器和Git命令</a>进行升级。</p></td>
         <td><ol><li>克隆GitHub存储库。</li>

@@ -1,5 +1,5 @@
 ---
-title: 软件Recommendations
+title: 软件建议
 description: 查看与Adobe Commerce部署的最佳性能相关的推荐软件列表。
 feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
@@ -132,7 +132,7 @@ memory_limit=1G
 
 #### Realpath_cache配置
 
-要提高[!DNL Commerce]性能，请在`php.ini`文件中添加或更新以下推荐的`realpath_cache`设置。 此配置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找它们。 请参阅PHP文档中的[性能调整](https://www.php.net/manual/en/ini.core.php)。
+要提高[!DNL Commerce]性能，请在`realpath_cache`文件中添加或更新以下推荐的`php.ini`设置。 此配置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找它们。 请参阅PHP文档中的[性能调整](https://www.php.net/manual/en/ini.core.php)。
 
 ```text
 realpath_cache_size=10M
@@ -151,7 +151,7 @@ opcache.validate_timestamps=0
 opcache.enable_cli=1
 ```
 
-在微调opcache的内存分配时，请考虑Magento代码库和所有扩展的大小。 Magento的性能团队使用前面的示例中的值进行测试，因为它在opcache中提供了足够的空间来容纳平均已安装的扩展数。
+在微调opcache的内存分配时，请考虑Magento代码库和您的所有扩展的大小。 Magento的性能团队使用前面的示例中的值进行测试，因为它在opcache中提供了足够的空间来容纳平均已安装的扩展数。
 
 如果您的计算机内存不足，但未安装许多扩展或自定义设置，请使用以下设置获得类似结果：
 
@@ -174,7 +174,7 @@ apc.enabled = 1
 
 ## Web服务器
 
-Magento完全支持Nginx和Apache Web Server。 [!DNL Commerce]在`<magento_home>/nginx.conf.sample` (Nginx)和`<magento_home>.htaccess.sample` (Apache)文件中提供了示例推荐配置文件。  Nginx示例包含用于提高性能的设置，并且设计得只需很少的重新配置。 示例文件中定义的一些主要配置最佳实践包括：
+Magento完全支持Nginx和Apache Web服务器。 [!DNL Commerce]在`<magento_home>/nginx.conf.sample` (Nginx)和`<magento_home>.htaccess.sample` (Apache)文件中提供了示例推荐配置文件。  Nginx示例包含用于提高性能的设置，并且设计得只需很少的重新配置。 示例文件中定义的一些主要配置最佳实践包括：
 
 * 在浏览器中缓存静态内容的设置
 * PHP的内存和执行时间设置
@@ -221,9 +221,9 @@ Magento强烈建议使用[!DNL Varnish]作为商店的整页缓存服务器。 P
 
 如果您的网站不需要部署大量区域设置，并且您的服务器与大多数客户位于同一区域，则通过将资产存储在[!DNL Varnish]中而不是使用CDN，您可能会发现以较低的成本获得了显着的性能提升。
 
-要将您的资产存储在[!DNL Varnish]中，请在[!DNL Commerce]为[!DNL Varnish] 5生成的`default.vcl`文件中添加以下VCL条目。
+要将您的资产存储在[!DNL Varnish]中，请在`default.vcl`为[!DNL Commerce] 5生成的[!DNL Varnish]文件中添加以下VCL条目。
 
-在`vcl_recv`子例程中PURGE请求的`if`语句的末尾，添加：
+在`if`子例程中PURGE请求的`vcl_recv`语句的末尾，添加：
 
 ```javascript
 # static files are cacheable. remove SSL flag and cookie
@@ -235,7 +235,7 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 }
 ```
 
-在`vcl_backend_response`子例程中，查找用于为`GET`或`HEAD`请求取消设置Cookie的`if`语句。
+在`vcl_backend_response`子例程中，查找用于为`if`或`GET`请求取消设置Cookie的`HEAD`语句。
 更新的`if`块应如下所示：
 
 ```javascript
@@ -256,7 +256,7 @@ if (bereq.url !~ "\.(ico|css|js|jpg|jpeg|png|gif|tiff|bmp|gz|tgz|bz2|tbz|mp3|ogg
 
 ## 缓存和会话服务器
 
-Magento提供了多个用于存储缓存和会话数据的选项，包括Redis、Memcache、文件系统和数据库。 下面将讨论其中一些选项。
+Magento提供了多个选项来存储缓存和会话数据，包括Redis、Memcache、文件系统和数据库。 下面将讨论其中一些选项。
 
 ### 单个Web节点设置
 

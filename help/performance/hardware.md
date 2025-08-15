@@ -1,5 +1,5 @@
 ---
-title: 硬件Recommendations
+title: 硬件建议
 description: 查看与Adobe Commerce部署的最佳性能相关的推荐硬件列表。
 feature: Best Practices, Install
 exl-id: ab548c4b-6f56-4409-a4ed-5c959939e04b
@@ -26,7 +26,7 @@ N[Cores] = (N[Expected Requests] / 2) + N [Expected Cron Processes]
 
 ### PHP
 
-根据Magento的部署方式，系统有不同的PHP内存要求。  通常，如果要设置单个服务器存储，我们建议为2G配置PHP内存。  如果您使用管道部署设置站点，我们建议在构建服务器上使用2 GB，在Web节点上使用1 GB。
+根据系统部署方式，Magento有不同的PHP内存要求。  通常，如果要设置单个服务器存储，我们建议为2G配置PHP内存。  如果您使用管道部署设置站点，我们建议在构建服务器上使用2 GB，在Web节点上使用1 GB。
 
 方案和预期的PHP内存要求：
 

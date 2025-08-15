@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
+>2.4.4中添加了OpenSearch支持。OpenSearch是Elasticsearch的一个兼容分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
 
 本节讨论如何将Apache配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与Apache的[安全通信](#secure-communication-with-apache)中讨论。
 
@@ -174,7 +174,7 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
 
 ### 与Apache的安全通信
 
-本节讨论如何设置[HTTP基本身份验证](https://httpd.apache.org/docs/2.2/howto/auth.html)。 同时使用TLS和HTTP Basic身份验证可防止任何人截获与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
+本节讨论如何设置[HTTP基本身份验证](https://httpd.apache.org/docs/2.2/howto/auth.html)。 将TLS和HTTP基本身份验证结合使用可防止任何人拦截与Elasticsearch、OpenSearch或您的应用程序服务器的通信。
 
 本节将讨论如何指定谁可以访问Apache Server。
 

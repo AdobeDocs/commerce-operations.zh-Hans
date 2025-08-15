@@ -21,5 +21,5 @@ Commerce应用程序提供以下cron组：
 - `index`，它刷新[索引器](../cli/manage-indexers.md)
 - `consumers`，运行消息队列[消费者](../cli/start-message-queues.md)
 - 这些主题仅在Adobe Commerce中可用
-   - `staging`，它运行[与暂存相关的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/content-design/staging/content-staging)任务
+   - `staging`，它运行[与暂存相关的](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging)任务
    - `catalog_event`，它运行Target和购物车规则的任务

@@ -5,7 +5,7 @@ feature: Configuration, Cache, Install, Logs
 exl-id: b31179ef-3c0e-4a6b-a118-d3be1830ba4e
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,11 @@ ht-degree: 0%
 
 1. 将`.host`的值替换为Varnish _后端_&#x200B;或&#x200B;_原始服务器_&#x200B;的完全限定的主机名或IP地址和侦听端口；即，提供内容Varnish的服务器将加速。
 
-   通常，这是您的Web服务器。 请参阅&#x200B;_清漆指南_&#x200B;中的[后端服务器](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html)。
+   通常，这是您的Web服务器。 请参阅[清漆指南](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html)中的&#x200B;_后端服务器_。
 
 1. 将`.port`的值替换为Web服务器的侦听端口（在此示例中为8080）。
 
-   示例： Apache安装在主机192.0.2.55上，Apache在端口8080上监听：
+   示例： Apache安装在主机192.0.2.55上，Apache正在端口8080上侦听：
 
    ```conf
    backend default {
@@ -91,7 +91,7 @@ ht-degree: 0%
 
    >[!INFO]
    >
-   >如果Varnish和Apache在同一台主机上运行，Adobe建议您使用IP地址或主机名，而不是`localhost`。
+   >如果Varnish和Apache在同一主机上运行，Adobe建议您使用IP地址或主机名，而不是`localhost`。
 
 1. 将更改保存到`default.vcl`并退出文本编辑器。
 

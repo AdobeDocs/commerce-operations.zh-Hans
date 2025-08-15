@@ -74,9 +74,9 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 请记住，[!DNL JavaScript]捆绑的目标是减少浏览器中加载的每个页面所请求的资产的数量和大小。 为此，我们希望构建捆绑包，以便商店中的每个页面只需要下载一个通用捆绑包和一个针对所访问每个页面的页面特定捆绑包。
 
-实现此目标的一种方法是按页面类型定义捆绑包。 您可以将[!DNL Commerce]的页面划分为多种页面类型，包括“类别”、“产品”、“CMS”、“客户”、“购物车”和“结帐”。 分类为其中一种页面类型的每个页面都具有一组不同的RequireJS模块依赖项。 当按页面类型捆绑RequireJS模块时，最终将只有少数捆绑包覆盖存储中任何页面的依赖项。
+实现此目标的一种方法是按页面类型定义捆绑包。 您可以将[!DNL Commerce]的页面划分为多种页面类型，包括“类别”、“产品”、“CMS”、“客户”、“购物车”和“结账”。 分类为其中一种页面类型的每个页面都具有一组不同的RequireJS模块依赖项。 当按页面类型捆绑RequireJS模块时，最终将只有少数捆绑包覆盖存储中任何页面的依赖项。
 
-例如，最终可能会有一个用于所有页面通用的依赖项的捆绑包、一个用于仅CMS页面的捆绑包、一个用于仅目录页面的捆绑包、另一个用于仅搜索页面的捆绑包，以及一个用于签出页面的捆绑包。
+例如，最终可能会有一个用于所有页面所共有依赖项的捆绑包、一个用于仅CMS页面的捆绑包、一个用于仅目录页面的捆绑包、另一个用于仅搜索页面的捆绑包，以及一个用于签出页面的捆绑包。
 
 您还可以按用途创建包：用于常见功能、产品相关功能、配送功能、结账功能、税费和表单验证。 如何定义捆绑包取决于您以及商店的结构。 您可能会发现某些捆绑式策略比其他策略效果更好。
 
@@ -102,7 +102,7 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 #### 1\。 添加build.js文件
 
-在[!DNL Commerce]根目录中创建`build.js`文件。 此文件将包含捆绑包的整个生成配置。
+在`build.js`根目录中创建[!DNL Commerce]文件。 此文件将包含捆绑包的整个生成配置。
 
 ```javascript
 ({
@@ -131,13 +131,13 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 #### 3\。 聚合requirejs-config.js实例值
 
-在此步骤中，您需要将存储的`requirejs-config.js`文件中的所有多个`deps`、`shim`、`paths`和`map`配置节点聚合到`build.js`文件中的相应节点中。 为此，您可以在浏览器的“开发人员工具”面板中打开&#x200B;**[!UICONTROL Network]**&#x200B;选项卡，然后导航到应用商店中的任何页面，如主页。 在“网络”选项卡中，您将在顶部附近看到应用商店的`requirejs-config.js`文件实例，该实例在此处突出显示：
+在此步骤中，您需要将存储的`deps`文件中的所有多个`shim`、`paths`、`map`和`requirejs-config.js`配置节点聚合到`build.js`文件中的相应节点中。 为此，您可以在浏览器的“开发人员工具”面板中打开&#x200B;**[!UICONTROL Network]**&#x200B;选项卡，然后导航到应用商店中的任何页面，如主页。 在“网络”选项卡中，您将在顶部附近看到应用商店的`requirejs-config.js`文件实例，该实例在此处突出显示：
 
 ![RequireJS配置](../assets/performance/images/RequireJSConfig.png)
 
-在此文件中，您将找到每个配置节点(`deps`、`shim`、`paths`、`map`)的多个条目。 您需要将这些多个节点值聚合到build.js文件的单个配置节点中。 例如，如果存储区的`requirejs-config.js`实例包含15个单独的`map`节点的条目，则需要将所有15个节点的条目合并到`build.js`文件中的单个`map`节点中。 `deps`、`shim`和`paths`节点同样如此。 如果没有脚本来自动执行此过程，则可能需要一些时间。
+在此文件中，您将找到每个配置节点(`deps`、`shim`、`paths`、`map`)的多个条目。 您需要将这些多个节点值聚合到build.js文件的单个配置节点中。 例如，如果存储区的`requirejs-config.js`实例包含15个单独的`map`节点的条目，则需要将所有15个节点的条目合并到`map`文件中的单个`build.js`节点中。 `deps`、`shim`和`paths`节点同样如此。 如果没有脚本来自动执行此过程，则可能需要一些时间。
 
-您需要将配置节点`paths`中的路径`mage/requirejs/text`更改为`requirejs/text`，如下所示：
+您需要将配置节点`mage/requirejs/text`中的路径`requirejs/text`更改为`paths`，如下所示：
 
 ```javascript
 ({
@@ -176,7 +176,7 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 #### 要使用[!DNL PhantomJS]：
 
-在[!DNL Commerce]根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[!DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
+在[!DNL Commerce]根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[！DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
 
 ```javascript
 "use strict";
@@ -337,7 +337,7 @@ bundle/category.txt/bundle/homepage.txt/bundle/product.txt --> knockoutjs/knocko
 
 打开`build.js`配置文件并将您的捆绑包添加到`modules`节点。 每个包应定义以下属性：
 
-- `name` — 包的名称。 例如，名称`bundles/cart`在`bundles`子目录中生成`cart.js`包。
+- `name` — 包的名称。 例如，名称`bundles/cart`在`cart.js`子目录中生成`bundles`包。
 
 - `create` — 用于创建捆绑包的布尔标记（值： `true`或`false`）。
 
@@ -413,7 +413,7 @@ mv pub/static/frontend/Magento/luma/en_US pub/static/frontend/Magento/luma/en_US
 
 #### 3.运行r.js优化器
 
-然后从[!DNL Commerce]的根目录对`build.js`文件运行r.js优化程序。 所有目录和文件的路径均相对于工作目录。
+然后从`build.js`的根目录对[!DNL Commerce]文件运行r.js优化程序。 所有目录和文件的路径均相对于工作目录。
 
 ```bash
 r.js -o build.js baseUrl=pub/static/frontend/Magento/luma/en_US_tmp dir=pub/static/frontend/Magento/luma/en_US
@@ -440,7 +440,7 @@ drwxr-xr-x 70 root root    4096 Mar 28 11:24 ../
 
 #### 4.配置RequireJS以使用捆绑包
 
-要获取RequireJS以使用您的包，请在`build.js`文件中的`modules`节点之后添加`onModuleBundleComplete`回调：
+要获取RequireJS以使用您的包，请在`onModuleBundleComplete`文件中的`modules`节点之后添加`build.js`回调：
 
 ```javascript
 [
@@ -482,7 +482,7 @@ require.config({});
 r.js -o app/design/frontend/Magento/luma/build.js baseUrl=pub/static/frontend/Magento/luma/en_US_tmp dir=pub/static/frontend/Magento/luma/en_US
 ```
 
-在`pub/static/frontend/Magento/luma/en_US`目录中打开`requirejs-config.js`以验证RequireJS是否将该文件附加到捆绑配置调用：
+在`requirejs-config.js`目录中打开`pub/static/frontend/Magento/luma/en_US`以验证RequireJS是否将该文件附加到捆绑配置调用：
 
 ```javascript
 require.config({

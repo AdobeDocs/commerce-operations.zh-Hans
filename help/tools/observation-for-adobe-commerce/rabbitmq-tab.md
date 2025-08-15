@@ -1,6 +1,6 @@
 ---
-title: '[!DNL RabbitMQ]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!DNL RabbitMQ]选项卡。
+title: '[!UICONTROL [!DNL RabbitMQ]选项卡'
+description: 了解[!UICONTROL [!DNL RabbitMQ]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: c5370c30-fed8-4f45-89c3-ef0d6ad41a89
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 ## [!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]
 
-按队列![&#128279;](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-5.jpeg)列出的[!DNL RabbitMQ]消息高级摘要状态
+按队列![[!DNL RabbitMQ]列出的](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-5.jpeg)消息高级摘要状态
 
 **[!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]**&#x200B;图形显示所选时间范围内[!DNL RabbitMQ]队列已发布的消息数。
 

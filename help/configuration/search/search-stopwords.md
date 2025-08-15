@@ -63,7 +63,7 @@ ht-degree: 0%
 
 1. 登录到您的Commerce服务器或切换到[文件系统所有者](../../installation/prerequisites/file-system/overview.md)。
 
-1. 使用文本编辑器在`<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`目录中创建名为`stopwords_<locale_code>.csv`的停用词文件。
+1. 使用文本编辑器在`stopwords_<locale_code>.csv`目录中创建名为`<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`的停用词文件。
 
    例如，要为意大利语言环境创建非索引字，请命名文件`stopwords_it_IT.csv`。
 
@@ -102,11 +102,11 @@ ht-degree: 0%
 - `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`
 - `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`
 
-此位置取决于您安装Commerce软件的方式。 如果您克隆了Magento2 GitHub存储库，则路径位于`app/code`下。 如果您安装了压缩存档或中继，则路径位于`vendor`下。
+此位置取决于您安装Commerce软件的方式。 如果您克隆了Magento 2 GitHub存储库，则路径位于`app/code`下。 如果您安装了压缩存档或中继，则路径位于`vendor`下。
 
 **要更改目录**：
 
-1. 作为文件系统所有者，在文本编辑器中打开Elasticsearch`di.xml`。
+1. 作为文件系统所有者，在文本编辑器中打开Elasticsearch `di.xml`。
 
    如果您克隆了存储库，则该存储库位于`app/code/Magento/Elasticsearch/etc/di.xml`
 

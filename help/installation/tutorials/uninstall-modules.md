@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此命令仅检查在`composer.json`文件中声明的依赖项。 如果您卸载的模块不是`composer.json`文件中定义的&#x200B;_和_，此命令将卸载该模块而不检查依赖关系。 此命令&#x200B;_不_，但是，请从文件系统中删除模块的代码。 必须使用文件系统工具删除模块的代码（例如，`rm -rf <path to module>`）。 作为替代方法，您可以[禁用](manage-modules.md)非编辑器模块。
+>此命令仅检查在`composer.json`文件中声明的依赖项。 如果您卸载的模块不是&#x200B;_文件中定义的_&#x200B;和`composer.json`，此命令将卸载该模块而不检查依赖关系。 此命令&#x200B;_不_，但是，请从文件系统中删除模块的代码。 必须使用文件系统工具删除模块的代码（例如，`rm -rf <path to module>`）。 作为替代方法，您可以[禁用](manage-modules.md)非编辑器模块。
 
 命令用法：
 
@@ -32,7 +32,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 1. 验证指定的模块是否存在于代码库中，以及是否由Composer安装的包。
 
-   此命令只对定义为Composer包的模块起作用&#x200B;_1&rbrace;。_
+   此命令只对定义为Composer包的模块起作用&#x200B;_1}。_
 
 1. 检查与其他模块的依赖关系，如果存在任何未满足的依赖关系，则终止该命令。
 
@@ -50,7 +50,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 1. 如果指定了`--remove-data`，则删除在模块的`Uninstall`类中定义的数据库架构和数据。
 
-   对于要卸载的每个指定模块，调用其`Uninstall`类中的`uninstall`方法。 此类必须继承自[Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php)。
+   对于要卸载的每个指定模块，调用其`uninstall`类中的`Uninstall`方法。 此类必须继承自[Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php)。
 
 1. 从`setup_module`数据库表中删除指定的模块。
 1. 从[部署配置](../../configuration/reference/deployment-files.md)的模块列表中删除指定的模块。

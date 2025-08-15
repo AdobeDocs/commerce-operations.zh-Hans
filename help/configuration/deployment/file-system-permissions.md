@@ -104,7 +104,7 @@ ht-degree: 0%
 
 ### 可选设置`magento_umask`
 
-请参阅&#x200B;_安装指南_&#x200B;中的[可选设置umask](../../installation/next-steps/set-umask.md)。
+请参阅[安装指南](../../installation/next-steps/set-umask.md)中的&#x200B;_可选设置umask_。
 
 ## 专用托管的生产文件系统所有权（两个用户）
 

@@ -17,7 +17,7 @@ ht-degree: 1%
 - 开发和质量保证(QA)
 - 用户验收测试(UAT)和启动准备工作
 - Launch
-- Post-launch
+- 启动后
 
 ## 升级分析
 
@@ -84,8 +84,8 @@ UAT是升级的最后阶段之一，需要查看和验证站点。 您还必须�
 
 最后，与您的团队进行汇报，以确定所吸取的经验教训和隐患。 此回顾可帮助您在下次改进该流程。
 
-## Post-Launch
+## 启动后
 
 在网站启动后，请确保检查您的分析数据、Google Search Console和其他资源，以确保没有意外问题并且一切按预期运行。
 
-通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用[New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=zh-Hans)等服务来监控网站性能。
+通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用[New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)等服务来监控网站性能。

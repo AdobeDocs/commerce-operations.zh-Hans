@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.2-p2安全版本为以前版本的2.4.2中发现的漏洞提供了安全错误修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-64](https://helpx.adobe.com/cn/security/products/magento/apsb21-64.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-64](https://helpx.adobe.com/security/products/magento/apsb21-64.html)。
 
 ## 应用`AC-3022.patch`以继续将DHL作为装运承运人提供
 

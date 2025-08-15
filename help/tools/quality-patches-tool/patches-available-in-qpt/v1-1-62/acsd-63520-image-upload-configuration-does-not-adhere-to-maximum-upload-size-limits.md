@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # ACSD-63520：通过[!UICONTROL Image Upload Configuration]上传的映像超出了配置的大小限制
 
-ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上传的图像不符合配置的最大上传大小限制的问题。 要解决此问题，请在[!UICONTROL Admin]面板中配置[!UICONTROL Images Upload Configuration]设置。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.62时，此修补程序可用。 修补程序ID为ACSD-63520。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上传的图像不符合配置的最大上传大小限制的问题。 要解决此问题，请在[!UICONTROL Images Upload Configuration]面板中配置[!UICONTROL Admin]设置。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.62时，此修补程序可用。 修补程序ID为ACSD-63520。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -26,11 +26,11 @@ ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的[!DNL Adobe Commerce]版本兼容，请将`magento/quality-patches`包更新为最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的[!DNL Adobe Commerce]版本兼容，请将`magento/quality-patches`包更新为最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-通过[!UICONTROL Admin]面板中的[!UICONTROL Images Upload Configuration]上传的图像不符合最大上传大小限制。
+通过[!UICONTROL Images Upload Configuration]面板中的[!UICONTROL Admin]上传的图像不符合最大上传大小限制。
 
 <u>重现步骤</u>：
 
@@ -65,8 +65,8 @@ ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 

@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## [!UICONTROL vCPU tier view over timeline BY NODE]
 
-按节点![&#128279;](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)在时间线上查看vCPU层
+按节点![在时间线上查看](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)vCPU层
 
 **[!UICONTROL vCPU tier view over timeline BY NODE]**&#x200B;帧按节点显示选定时间范围内的vCPU层视图。 此帧有助于检测节点丢失情况或节点放大或缩小情况。 vCPU层按节点查看时间线，应查看不到24小时的时间线。
 

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 {{ee-only}}
 
-对于已实施[拆分数据库](multi-master.md)的Adobe Commerce客户，以下主题介绍了如何还原或迁移回单个数据库。 我们建议Adobe Commerce商家当前使用拆分数据库，并计划升级到2.4.2，稍后再查看这些步骤，以及我们关于计划弃用拆分数据库的公告[&#128279;](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187)。
+对于已实施[拆分数据库](multi-master.md)的Adobe Commerce客户，以下主题介绍了如何还原或迁移回单个数据库。 我们建议Adobe Commerce商家当前使用拆分数据库，并计划升级到2.4.2，稍后再查看这些步骤，以及我们关于计划弃用拆分数据库的公告[](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187)。
 
 从拆分数据库还原到单个数据库涉及先创建`magento_quote`和`magento_sales`数据库的备份，然后再将其加载到单个`magento_main`数据库中。
 
@@ -56,7 +56,7 @@ ht-degree: 0%
    mysql -h "magento2-mysql" -u root -p -e "DROP DATABASE magento_quote;"
    ```
 
-1. 在`env.php`文件的`connections`和`resources`部分中移除`checkout`和`sales`的部署配置。
+1. 在`checkout`文件的`sales`和`connections`部分中移除`resources`和`env.php`的部署配置。
 1. 还原外键：
 
    ```bash
@@ -65,8 +65,8 @@ ht-degree: 0%
 
 ## 验证您的工作
 
-要验证单个数据库实施是否正常工作，请使用数据库工具（如[phpMyAdmin](../../installation/prerequisites/optional-software.md#phpmyadmin)）执行以下任务并验证数据是否已添加到`magento_main`数据库表中：
+要验证单个数据库实施是否正常工作，请使用数据库工具（如`magento_main`phpMyAdmin[）执行以下任务并验证数据是否已添加到](../../installation/prerequisites/optional-software.md#phpmyadmin)数据库表中：
 
-1. 验证是否已还原外键。 例如，`quote`数据库表中的`QUOTE_STORE_ID_STORE_STORE_ID`键。
+1. 验证是否已还原外键。 例如，`QUOTE_STORE_ID_STORE_STORE_ID`数据库表中的`quote`键。
 1. 确认客户可以从店面下订单。
 1. 验证在将拆分数据库还原到单个数据库之前创建的订单在管理员中是否可用。

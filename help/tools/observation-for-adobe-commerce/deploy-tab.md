@@ -1,6 +1,6 @@
 ---
 title: '[!UICONTROL Deploy]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL Deploy]选项卡。
+description: 了解[!UICONTROL Deploy]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: 3e33f7b0-7a40-4598-ae2e-436118e8d99a
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Post Deploy Log Detail]
 
-![Post部署日志详细信息](../../assets/tools/observation-for-adobe-commerce/deploy-tab-4.jpg)
+![部署日志后详细信息](../../assets/tools/observation-for-adobe-commerce/deploy-tab-4.jpg)
 
 **[!UICONTROL Post Deploy Log Detail]**&#x200B;框架显示所选时间范围内发生的部署后日志详细信息。 此框架侧重于包含以下字符串的特定日志消息：
 

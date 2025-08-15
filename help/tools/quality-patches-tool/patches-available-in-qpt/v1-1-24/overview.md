@@ -19,7 +19,7 @@ ht-degree: 0%
 QPT v1.1.24包含以下修补程序：
 
 1. **ACSD-45168**：修复了在存储视图级别覆盖&#x200B;*url_key*&#x200B;属性的产品未生成SEO友好URL的问题。
-1. **ACSD-46617**：修复了即使小计大于配置的&#x200B;*最小订单量*，**[!UICONTROL Continue to Checkout]**&#x200B;按钮仍呈灰色状态的问题。
+1. **ACSD-46617**：修复了即使小计大于配置的&#x200B;**[!UICONTROL Continue to Checkout]**&#x200B;最小订单量&#x200B;*，*&#x200B;按钮仍呈灰色状态的问题。
 1. **ACSD-46770**：修复了即使&#x200B;*电子邮件订单确认*&#x200B;未选中，仍会发送管理员订单电子邮件的问题。
 1. **ACSD-46865**：修复了在启用异步索引时未填充[!UICONTROL Shipment and Credit Memo]网格的问题。
 1. **ACSD-47004**：修复了在没有VAT ID的帐单地址中未应用VAT的问题。

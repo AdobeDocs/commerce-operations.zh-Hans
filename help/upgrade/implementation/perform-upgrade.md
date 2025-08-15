@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html?lang=zh-Hans)。
+>- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html)。
 >- 如果您克隆GitHub存储库，请勿使用此方法进行升级。 请参阅[升级基于Git的安装](../developer/git-installs.md)。
 
 以下说明说明了如何使用编辑器包管理器进行升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须先使用编辑器1 _升级到与编辑器2（例如，2.4.2）兼容的版本，然后再将_&#x200B;升级到编辑器2，以进行>2.4.2升级。 此外，您必须运行[支持的PHP版本](../../installation/system-requirements.md)。
@@ -48,13 +48,13 @@ ht-degree: 0%
 
 1. 在异步进程（如消息队列使用者）运行时启动升级过程可能会导致数据损坏。 要防止数据损坏，请禁用所有cron作业。
 
-   云基础架构上的&#x200B;_Adobe Commerce：_
+   云基础架构上的Adobe Commerce(_W):_
 
    ```bash
    ./vendor/bin/ece-tools cron:disable
    ```
 
-   _Magento Open Source：_
+   _Magento Open Source :_
 
    ```bash
    bin/magento cron:remove
@@ -88,13 +88,13 @@ ht-degree: 0%
    composer require <sample data module-1>:<version> ... <sample data module-n>:<version> --no-update
    ```
 
-   - _Adobe Commerce：_
+   - _Adobe Commerce :_
 
      ```bash
      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* magento/module-gift-card-sample-data:100.4.* magento/module-customer-balance-sample-data:100.4.* magento/module-target-rule-sample-data:100.4.* magento/module-gift-registry-sample-data:100.4.* magento/module-multiple-wishlist-sample-data:100.4.* --no-update
      ```
 
-   - _Magento Open Source：_
+   - _Magento Open Source :_
 
      ```bash
      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* --no-update
@@ -178,7 +178,7 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
 
 ## 更新元数据
 
-1. 根据需要更新`composer.json`文件中的`"name"`、`"version"`和`"description"`字段。
+1. 根据需要更新`"name"`文件中的`"version"`、`"description"`和`composer.json`字段。
 
    >[!NOTE]
    >

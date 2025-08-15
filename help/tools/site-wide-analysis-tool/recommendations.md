@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Recommendations]'
-description: 了解 [!DNL Site-Wide Analysis Tool]中的[!UICONTROL Recommendations]选项卡、使用时间、优点和最佳实践。
+description: 了解[!UICONTROL Recommendations]中的 [!DNL Site-Wide Analysis Tool]选项卡、使用时间、优点和最佳实践。
 exl-id: 17ff57e2-5b51-4afb-b505-09e46f490509
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt

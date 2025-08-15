@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # ACSD-60267：通过可配置的产品选项添加产品时，FPT无法正确应用
 
-ACSD-60267修补程序修复了在将简单产品直接添加到购物车时正确应用固定产品税(FPT)的问题，但在通过可配置产品选项选择相同产品时失败。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans) 1.1.54时，此修补程序可用。 修补程序ID为ACSD-60267。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-60267修补程序修复了在将简单产品直接添加到购物车时正确应用固定产品税(FPT)的问题，但在通过可配置产品选项选择相同产品时失败。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) 1.1.54时，此修补程序可用。 修补程序ID为ACSD-60267。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -28,7 +28,7 @@ ACSD-60267修补程序修复了在将简单产品直接添加到购物车时正�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -36,7 +36,7 @@ ACSD-60267修补程序修复了在将简单产品直接添加到购物车时正�
 
 <u>重现步骤</u>：
 
-1. 导航到&#x200B;*管理员* > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Tax]** > **[!UICONTROL Fixed Product Taxes]**，将&#x200B;*[!UICONTROL Enable FPT]*&#x200B;设置为&#x200B;*是*。
+1. 导航到&#x200B;*[!UICONTROL Enable FPT]*&#x200B;管理员&#x200B;*>* > *>* > **[!UICONTROL Configuration]**，将&#x200B;**[!UICONTROL Sales]**&#x200B;设置为&#x200B;**[!UICONTROL Tax]**&#x200B;是&#x200B;**[!UICONTROL Fixed Product Taxes]**。
 1. 创建FPT属性并将其分配给&#x200B;*[!UICONTROL Attribute Set]*。
 1. 打开&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Attributes]** > **[!UICONTROL Product]**。
 1. 对于&#x200B;*[!UICONTROL Default Label]*，请输入标识该属性的标签。
@@ -61,8 +61,8 @@ ACSD-60267修补程序修复了在将简单产品直接添加到购物车时正�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

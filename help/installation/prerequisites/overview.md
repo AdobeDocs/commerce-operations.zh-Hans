@@ -13,7 +13,7 @@ ht-degree: 1%
 
 在安装Adobe Commerce之前，必须执行以下操作：
 
-* 设置一个或多个符合&#x200B;*Commerce本地*&#x200B;选项卡中列出的[系统要求](../system-requirements.md)的主机。
+* 设置一个或多个符合[Commerce本地](../system-requirements.md)选项卡中列出的&#x200B;*系统要求*&#x200B;的主机。
 * 如果要设置多个具有负载平衡的Web节点，请在安装应用程序之前&#x200B;_设置并测试系统_&#x200B;的该部分。
 * 确保您可以在安装过程中的不同时刻备份整个系统，以便在出现问题时回滚系统。
 
@@ -66,11 +66,11 @@ Server built:   Jul 23 2017 14:17:29
 
 ### PHP
 
-有关PHP和[PHP](../system-requirements.md#php-settings)的支持版本，请参阅[系统要求](../system-requirements.md)中的&#x200B;*Commerce本地*&#x200B;选项卡，了解PHP要求。
+有关PHP和&#x200B;*PHP*&#x200B;的支持版本，请参阅[系统要求](../system-requirements.md)中的[Commerce本地](../system-requirements.md#php-settings)选项卡，了解PHP要求。
 
 ### MySQL
 
-检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce版本。 有关支持的版本，请参阅[系统要求](../system-requirements.md)中的&#x200B;*Commerce本地*&#x200B;选项卡。
+检查您是否有兼容的MySQL版本以用于要安装的Adobe Commerce版本。 有关支持的版本，请参阅&#x200B;*系统要求*&#x200B;中的[Commerce本地](../system-requirements.md)选项卡。
 
 ```bash
 mysql -u <database root user or database owner name> -p
@@ -98,7 +98,7 @@ owners.
 
 键入`help`或`\h`以获取帮助。 键入`\c`以清除当前的输入语句。
 
-在`mysql>`提示下输入`exit`以退出。
+在`exit`提示下输入`mysql>`以退出。
 
 若要安装或升级MySQL，请参阅[MySQL](database/mysql.md)。
 

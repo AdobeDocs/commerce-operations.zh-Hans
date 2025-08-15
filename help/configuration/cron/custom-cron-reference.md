@@ -82,7 +82,7 @@ _cron组_&#x200B;是一个逻辑组，可让您一次轻松运行多个进程的
 </config>
 ```
 
-例如，请参阅[Magento_客户crontab.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/crontab.xml)。
+例如，请参阅[Magento_Customer crontab.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/crontab.xml)。
 
 ### 指定Cron组选项
 
@@ -123,9 +123,9 @@ _cron组_&#x200B;是一个逻辑组，可让您一次轻松运行多个进程的
 
 ## 禁用cron作业
 
-Cron作业没有我们为[观察者](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers)提供的`disable`功能。 但是，可以使用以下技术禁用cron作业： `schedule`一次包含永远不会发生的日期的时间。
+Cron作业没有我们为`disable`观察者[提供的](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers)功能。 但是，可以使用以下技术禁用cron作业： `schedule`一次包含永远不会发生的日期的时间。
 
-例如，禁用在`Magento_Customer`模块中定义的`visitor_clean` cron作业：
+例如，禁用在`visitor_clean`模块中定义的`Magento_Customer` cron作业：
 
 ```xml
 ...
@@ -149,4 +149,4 @@ Cron作业没有我们为[观察者](https://developer.adobe.com/commerce/php/de
 ...
 ```
 
-现在，`visitor_clean` cron作业已设置为在2月30日00:00运行 — 该日期永远不会发生。
+现在，`visitor_clean` cron作业已设置为在2月30日的00:00运行 — 该日期永远不会发生。

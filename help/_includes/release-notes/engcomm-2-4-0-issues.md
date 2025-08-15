@@ -127,7 +127,7 @@ ht-degree: 0%
 | 卢卡斯·巴伊萨罗维茨 | [#26125](https://github.com/magento/magento2/pull/26125) | 不适用 |
 | 格热戈日·博古斯 | [#26033](https://github.com/magento/magento2/pull/26033) | [25974](https://github.com/magento/magento2/issues/25974) |
 | 帕维尔·贝斯特里茨基 | [#25915](https://github.com/magento/magento2/pull/25915) | 不适用 |
-| Andreas莫茨 | [#25838](https://github.com/magento/magento2/pull/25838) | [25674](https://github.com/magento/magento2/issues/25674) |
+| 安德烈亚斯·莫茨 | [#25838](https://github.com/magento/magento2/pull/25838) | [25674](https://github.com/magento/magento2/issues/25674) |
 | 马克·罗德里格斯 | [#25315](https://github.com/magento/magento2/pull/25315) | [13136](https://github.com/magento/magento2/issues/13136) |
 | 卢卡斯·巴伊萨罗维茨 | [#25957](https://github.com/magento/magento2/pull/25957) | [22047](https://github.com/magento/magento2/issues/22047) |
 | 大卫·兰鲍尔 | [#24103](https://github.com/magento/magento2/pull/24103) | 不适用 |
@@ -266,7 +266,7 @@ ht-degree: 0%
 | jimuld | [#25742](https://github.com/magento/magento2/pull/25742) | 不适用 |
 | 劳尔·韦杜戈·洛伦佐 | [#25324](https://github.com/magento/magento2/pull/25324) | [13865](https://github.com/magento/magento2/issues/13865) |
 | 乔治·巴巴鲁斯 | [#24648](https://github.com/magento/magento2/pull/24648) | 不适用 |
-| Andreas·冯·斯塔尼茨 | [#24485](https://github.com/magento/magento2/pull/24485) | 不适用 |
+| 安德烈亚斯·冯·斯塔尼茨 | [#24485](https://github.com/magento/magento2/pull/24485) | 不适用 |
 | 克里斯·普克 | [#26378](https://github.com/magento/magento2/pull/26378) | [26375](https://github.com/magento/magento2/issues/26375) |
 | 帕维尔·蒂莱克 | [#25641](https://github.com/magento/magento2/pull/25641) | [25032](https://github.com/magento/magento2/issues/25032) |
 | 安德烈·尼古拉耶夫 | [#25285](https://github.com/magento/magento2/pull/25285) | 不适用 |

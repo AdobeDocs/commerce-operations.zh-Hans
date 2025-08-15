@@ -68,7 +68,7 @@ ht-degree: 0%
 | `--no-less` | 请勿部署LESS文件。 | 否 |
 | `--no-images` | 不部署映像。 | 否 |
 | `--no-fonts` | 不部署字体文件。 | 否 |
-| `--no-html` | 不部署HTML文件。 | 否 |
+| `--no-html` | 请勿部署HTML文件。 | 否 |
 | `--no-misc` | 请勿部署其他类型的文件：MD、JBF、CSV、JSON、TXT、HTC、SWF | 否 |
 | `--no-html-minify` | 请勿缩小HTML文件。 | 否 |
 | `-s <quick\|standard\|compact>` | 定义部署策略。 仅当有多个本地时，才使用这些选项。<ul><li>使用[快速策略](static-view-file-strategy.md#quick-strategy)以最大限度地缩短部署时间。 如果未指定，则这是缺省命令选项。</li><li>使用[标准策略](static-view-file-strategy.md#standard-strategy)为所有包部署所有静态视图文件。</li><li>使用[压缩策略](static-view-file-strategy.md#compact-strategy)节省服务器上的磁盘空间。</li></ul> | 否 |

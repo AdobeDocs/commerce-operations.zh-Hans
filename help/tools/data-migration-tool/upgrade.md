@@ -1,6 +1,6 @@
 ---
 title: 升级 [!DNL Data Migration Tool]
-description: 了解如何升级 [!DNL Data Migration Tool] 以在Magento1和Magento2之间传输数据。
+description: 了解如何升级 [!DNL Data Migration Tool] 以便在Magento 1和Magento 2之间传输数据。
 exl-id: c0d56d1d-b15b-437f-be72-74282dbe85c1
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 升级[!DNL Data Migration Tool]
 
-为确保当前Magento2安装的版本与[!DNL Data Migration Tool]完全匹配，您可能需要升级该工具。
+为确保当前Magento 2安装的版本与[!DNL Data Migration Tool]完全匹配，您可能需要升级该工具。
 
 ## 先决条件
 
@@ -45,13 +45,13 @@ php <magento_root>/bin/magento setup:backup --code --db
 
 ### 确保版本匹配
 
-[!DNL Data Migration Tool]和您的Magento软件的版本必须完全匹配。 例如，Magento2.1.2需要[!DNL Data Migration Tool]的版本2.1.2。
+[!DNL Data Migration Tool]和Magento软件的版本必须完全匹配。 例如，Magento 2.1.2需要[!DNL Data Migration Tool]的版本2.1.2。
 
 请参阅[安装 [!DNL Data Migration Tool]](install.md)主题以了解如何：
 
-* [检查](install.md#check-your-version)您的Magento2版本
+* [检查](install.md#check-your-version)您的Magento 2版本
 
-* [查找[!DNL Data Migration Tool]的已发布版本](install.md#find-released-versions-of-data-migration-tool)
+* [查找](install.md#find-released-versions-of-data-migration-tool)的已发布版本[!DNL Data Migration Tool]
 
 * [检查](install.md#check-version-of-installed-data-migration-tool) [!DNL Data Migration Tool]版本
 
@@ -65,7 +65,7 @@ php <magento_root>/bin/magento setup:backup --code --db
    composer require magento/data-migration-tool:<version>
    ```
 
-   其中`<version>`必须与Magento2代码库的版本匹配。
+   其中`<version>`必须与Magento 2代码库的版本匹配。
 
    例如，对于版本2.1.2，输入：
 

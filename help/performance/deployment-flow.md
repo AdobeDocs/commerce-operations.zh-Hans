@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 安装依赖项
 
-`composer.json`和`composer.lock`文件管理[!DNL Commerce]依赖项并为每个包安装适当的版本。 如果计划更新[自动加载器](#update-the-autoloader)，则必须在[预处理依赖项注入指令](#preprocess-dependency-injection-instructions)之前安装依赖项。
+`composer.json`和`composer.lock`文件管理[!DNL Commerce]依赖项并为每个包安装适当的版本。 如果计划更新[自动加载器](#preprocess-dependency-injection-instructions)，则必须在[预处理依赖项注入指令](#update-the-autoloader)之前安装依赖项。
 
 要安装[!DNL Commerce]依赖项，请执行以下操作：
 
@@ -26,7 +26,7 @@ composer install --no-dev
 
 ## 预处理依赖项注入指令
 
-在预处理和编译依赖项注入(DI)指令时，请Magento：
+在预处理和编译依赖项注入(DI)指令时，Magento会：
 
 * 读取和处理所有当前配置
 * 分析类之间的依赖关系

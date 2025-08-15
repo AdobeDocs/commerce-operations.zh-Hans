@@ -16,10 +16,10 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在版本2.4.4和2.4.3-p2中，标记为&#x200B;**Elasticsearch**&#x200B;的所有字段也适用于OpenSearch。
->当版本2.4.6中引入对Elasticsearch8.x的支持时，创建了新标签以区分Elasticsearch配置和OpenSearch配置。
+>在版本2.4.4和2.4.3-p2中，标记为&#x200B;**Elasticsearch**的所有字段也适用于OpenSearch。
+>>当版本2.4.6中引入对Elasticsearch 8.x的支持时，创建了新标签以区分Elasticsearch和OpenSearch配置。
 
-有关配置搜索引擎的其他详细信息，请参阅[用户指南](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html?lang=zh-Hans)。
+有关配置搜索引擎的其他详细信息，请参阅[用户指南](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html)。
 
 ## 从管理员配置搜索引擎
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 >
 >有关升级到新搜索引擎版本的说明，请参阅[升级先决条件](../../upgrade/prepare/prerequisites.md)。
 
-要将系统配置为使用Elasticsearch或OpenSearch：
+要将系统配置为使用Elasticsearch或OpenSearch，请执行以下操作：
 
 1. 以管理员身份登录到管理员。
 1. 单击&#x200B;**[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**。
@@ -37,7 +37,7 @@ ht-degree: 0%
 
    | 选项 | 描述 |
    |--- |--- |
-   | **[!UICONTROL Server Hostname]** | 输入运行Elasticsearch或OpenSearch的计算机的完全限定主机名或IP地址。云基础架构上的<br>Adobe Commerce：从集成系统中获取此值。 |
+   | **[!UICONTROL Server Hostname]** | 输入运行Elasticsearch或OpenSearch的计算机的完全限定的主机名或IP地址。云基础架构上的<br>Adobe Commerce：从集成系统中获取此值。 |
    | **[!UICONTROL Server Port]** | 输入Web服务器代理端口。 云基础架构上的默认值为9200<br>Adobe Commerce：从集成系统中获取此值。 |
    | **[!UICONTROL Index Prefix]** | 输入搜索引擎索引前缀。 如果您将单个实例用于多个Commerce安装（暂存环境和生产环境），则必须为每个安装指定一个唯一的前缀。 否则，您可以使用默认前缀magento2。 |
    | **[!UICONTROL Enable HTTP Auth]** | 仅当为搜索引擎服务器启用了身份验证时，才单击&#x200B;**[!UICONTROL Yes]**。 如果存在，请在提供的字段中提供用户名和密码。 |
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 - 确保搜索引擎服务器正在运行。
 - 如果服务器与Commerce不在同一台主机上，请登录到Commerce服务器，然后ping搜索引擎主机。 解决网络连接问题并再次测试连接。
-- 检查启动Elasticsearch的命令窗口或OpenSearch以查找栈栈跟踪和异常。 您必须先解决这些问题，然后才能继续。 特别是，请确保您以具有`root`权限的用户身份启动搜索引擎。
+- 检查启动Elasticsearch或OpenSearch的命令窗口，以了解栈栈跟踪和异常。 您必须先解决这些问题，然后才能继续。 特别是，请确保您以具有`root`权限的用户身份启动搜索引擎。
 - 请确保[UNIX防火墙和SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux)均已禁用，或设置规则以使您的搜索引擎和Commerce能够相互通信。
 - 验证&#x200B;**[!UICONTROL Server Hostname]**&#x200B;字段的值。 确保服务器可用。 您可以改为尝试服务器的IP地址。
 - 使用`netstat -an | grep <listen-port>`命令验证&#x200B;**[!UICONTROL Server Port]**&#x200B;字段中指定的端口是否未被其他进程使用。

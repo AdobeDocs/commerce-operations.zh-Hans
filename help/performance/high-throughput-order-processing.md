@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 签出性能最佳实践
 
-Adobe Commerce中的[结帐](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process)流程是店面体验的关键方面。 它依赖于内置[购物车](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/storefront/storefront#shopping-cart)和[结帐](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/storefront/storefront#checkout-page)功能。
+Adobe Commerce中的[结帐](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process)流程是店面体验的关键方面。 它依赖于内置[购物车](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#shopping-cart)和[结帐](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#checkout-page)功能。
 
 性能是保持良好用户体验的关键。 您可以通过为&#x200B;**高吞吐量订单处理**&#x200B;配置以下选项来优化签出性能：
 
@@ -37,7 +37,7 @@ _异步订单_&#x200B;模块启用异步订单下达，该功能将订单标记�
 - **可用产品** — 订单状态更改为&#x200B;_待定_，产品数量已调整，已向客户发送一封包含订单详细信息的电子邮件，并且成功的订单详细信息可在&#x200B;**订单和退货**&#x200B;列表中查看，并带有可操作选项，例如重新订购。
 - **产品缺货或供应不足** — 订单状态更改为&#x200B;_已拒绝_，未调整产品数量，已向客户发送一封包含有关问题的订单详细信息的电子邮件，并且已拒绝的订单详细信息将在&#x200B;**订单和退货**&#x200B;列表中可用，且没有可操作选项。
 
-使用命令行界面启用这些功能，或根据&#x200B;[_模块参考指南_](https://developer.adobe.com/commerce/php/module-reference/)中定义的相应README文件编辑`app/etc/env.php`文件。
+使用命令行界面启用这些功能，或根据`app/etc/env.php`模块参考指南&#x200B;[__&#x200B;中定义的相应README文件编辑](https://developer.adobe.com/commerce/php/module-reference/)文件。
 
 **启用AsyncOrder**：
 
@@ -56,7 +56,7 @@ bin/magento setup:config:set --checkout-async 1
    ]
 ```
 
-请参阅&#x200B;_模块参考指南_&#x200B;中的[异步订单](https://developer.adobe.com/commerce/php/module-reference/module-async-order/)。
+请参阅[模块参考指南](https://developer.adobe.com/commerce/php/module-reference/module-async-order/)中的&#x200B;_异步订单_。
 
 **禁用AsyncOrder**：
 
@@ -126,7 +126,7 @@ _可转让报价异步订单_ B2B模块允许您异步保存`NegotiableQuote`功
 
 _延迟总计计算_&#x200B;模块通过将总计计算延迟到购物车请求时或在最终结帐步骤期间来优化结帐过程。 启用后，只有小计会在客户将产品添加到购物车时进行计算。
 
-延迟总计计算默认为&#x200B;**禁用**。 使用命令行界面启用这些功能，或根据&#x200B;[_模块参考指南_](https://developer.adobe.com/commerce/php/module-reference/)中定义的相应README文件编辑`app/etc/env.php`文件。
+延迟总计计算默认为&#x200B;**禁用**。 使用命令行界面启用这些功能，或根据`app/etc/env.php`模块参考指南&#x200B;[__&#x200B;中定义的相应README文件编辑](https://developer.adobe.com/commerce/php/module-reference/)文件。
 
 **启用DeferredTotalCalculation**：
 
@@ -162,7 +162,7 @@ bin/magento setup:config:set --deferred-total-calculating 0
    ]
 ```
 
-请参阅&#x200B;_模块参考指南_&#x200B;中的[DeferredTotalCalculating](https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/)。
+请参阅[模块参考指南](https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/)中的&#x200B;_DeferredTotalCalculating_。
 
 ### 固定产品税
 
@@ -174,13 +174,13 @@ _在购物车加载时启用库存_&#x200B;全局设置确定在购物车中加�
 
 禁用后，将产品添加到购物车时不会进行库存检查。 如果跳过此库存检查，则某些缺货方案可能会引发其他类型的错误。 库存检查&#x200B;_始终_&#x200B;发生在订单下达步骤，即使已禁用也是如此。
 
-**默认情况下启用“购物车加载时启用库存检查”**（设置为“是”）。 要在加载购物车时禁用库存检查，请在管理员UI **商店** > **配置** > **目录** > **库存** > **库存选项**&#x200B;分区中将&#x200B;**[!UICONTROL Enable Inventory Check On Cart Load]**&#x200B;设置为`No`。 请参阅&#x200B;_用户指南_&#x200B;中的[配置全局选项](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/inventory/configuration/global-options)和[目录清单](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/inventory/guide-overview)。
+**默认情况下启用“购物车加载时启用库存检查”**（设置为“是”）。 要在加载购物车时禁用库存检查，请在管理员UI **[!UICONTROL Enable Inventory Check On Cart Load]**&#x200B;商店`No` > **配置** > **目录** > **库存** > **库存选项**&#x200B;分区中将&#x200B;**设置为**。 请参阅[用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options)中的[配置全局选项](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/guide-overview)和&#x200B;_目录清单_。
 
 ## 负载平衡
 
 通过为MySQL数据库和Redis实例启用辅助连接，您可以帮助平衡不同节点的负载。
 
-Adobe Commerce可以异步读取多个数据库或Redis实例。 如果在云基础架构上使用Commerce，则可通过编辑`.magento.env.yaml`文件中的[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)和[REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)值来配置辅助连接。 只有一个节点需要处理读写通信，因此将变量设置为`true`会导致为只读通信创建辅助连接。 将值设置为`false`以从`env.php`文件中删除任何现有的只读连接数组。
+Adobe Commerce可以异步读取多个数据库或Redis实例。 如果在云基础架构上使用Commerce，则可通过编辑[文件中的](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)MYSQL_USE_SLAVE_CONNECTION[和](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)REDIS_USE_SLAVE_CONNECTION`.magento.env.yaml`值来配置辅助连接。 只有一个节点需要处理读写通信，因此将变量设置为`true`会导致为只读通信创建辅助连接。 将值设置为`false`以从`env.php`文件中删除任何现有的只读连接数组。
 
 `.magento.env.yaml`文件示例：
 

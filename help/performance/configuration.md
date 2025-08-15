@@ -16,11 +16,11 @@ Commerce提供了许多设置和工具，可用于改善页面上的响应时间
 
 ## Cron作业
 
-使用Linux `cron`命令执行[!DNL Commerce]中的所有异步操作。 请参阅[配置和运行cron](../configuration/cli/configure-cron-jobs.md)以正确配置。
+使用Linux [!DNL Commerce]命令执行`cron`中的所有异步操作。 请参阅[配置和运行cron](../configuration/cli/configure-cron-jobs.md)以正确配置。
 
 ## 索引器
 
-索引器可在&#x200B;**[!UICONTROL Update on Save]**&#x200B;或&#x200B;**[!UICONTROL Update on Schedule]**&#x200B;模式下运行。 当目录或其他数据发生更改时，**[!UICONTROL Update on Save]**&#x200B;模式会立即进行索引。 此模式假定存储中的更新和浏览操作强度较低。 它可能会导致高负载期间出现严重延迟和数据不可用。 出于性能考虑，我们建议使用&#x200B;**计划**&#x200B;更新，因为它存储有关数据更新的信息，并通过特定的cron作业在后台按部分执行索引。 您可以在&#x200B;**[!UICONTROL System]** > [!UICONTROL Tools] > **[!UICONTROL Index Management]**&#x200B;配置页面上单独更改每个[!DNL Commerce]索引器的模式。 [!UICONTROL Customer Grid]索引必须始终设置为&#x200B;**[!UICONTROL Update on Save]**&#x200B;模式。
+索引器可在&#x200B;**[!UICONTROL Update on Save]**&#x200B;或&#x200B;**[!UICONTROL Update on Schedule]**&#x200B;模式下运行。 当目录或其他数据发生更改时，**[!UICONTROL Update on Save]**&#x200B;模式会立即进行索引。 此模式假定存储中的更新和浏览操作强度较低。 它可能会导致高负载期间出现严重延迟和数据不可用。 出于性能考虑，我们建议使用&#x200B;**计划**&#x200B;更新，因为它存储有关数据更新的信息，并通过特定的cron作业在后台按部分执行索引。 您可以在[!DNL Commerce] > **[!UICONTROL System]** > [!UICONTROL Tools]配置页面上单独更改每个&#x200B;**[!UICONTROL Index Management]**&#x200B;索引器的模式。 [!UICONTROL Customer Grid]索引必须始终设置为&#x200B;**[!UICONTROL Update on Save]**&#x200B;模式。
 
 >[!TIP]
 >
@@ -32,15 +32,15 @@ Commerce提供了许多设置和工具，可用于改善页面上的响应时间
 
 ## 异步电子邮件通知
 
-启用“异步电子邮件通知”设置会将处理结账和订单处理电子邮件通知的流程移至后台。 要启用此功能，请转到&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Sales] > [!UICONTROL Sales Emails] > [!UICONTROL General Settings] >[!UICONTROL Asynchronous Sending]**。 有关详细信息，请参阅&#x200B;_管理员用户指南_&#x200B;中的[销售电子邮件](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/sales/sales-emails)。
+启用“异步电子邮件通知”设置会将处理结账和订单处理电子邮件通知的流程移至后台。 要启用此功能，请转到&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Sales] > [!UICONTROL Sales Emails] > [!UICONTROL General Settings] >[!UICONTROL Asynchronous Sending]**。 有关详细信息，请参阅[管理员用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/config/sales/sales-emails)中的&#x200B;_销售电子邮件_。
 
 ## 异步订单数据处理
 
-有时候，店面在进行密集销售的同时，[!DNL Commerce]还会执行密集订单处理。 您可以配置[!DNL Commerce]，以便在数据库级别区分这两种通信模式，以避免相应表中的读取和写入操作发生冲突。 您可以异步存储和索引订单数据。 订单将置于临时存储中，并批量移至Order Management网格，不会出现任何冲突。 您可以从&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Developer] > [!UICONTROL Grid Settings] >[!UICONTROL Asynchronous indexing]**&#x200B;激活此选项。 有关详细信息，请参阅&#x200B;_管理员用户指南_&#x200B;中的[计划网格更新](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations#enable-scheduled-grid-updates-and-reindexing)。
+有时候，店面在进行密集销售的同时，[!DNL Commerce]还会执行密集订单处理。 您可以配置[!DNL Commerce]，以便在数据库级别区分这两种通信模式，以避免相应表中的读取和写入操作发生冲突。 您可以异步存储和索引订单数据。 订单将置于临时存储中，并批量移至Order Management网格，不会出现任何冲突。 您可以从&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Developer] > [!UICONTROL Grid Settings] >[!UICONTROL Asynchronous indexing]**&#x200B;激活此选项。 有关详细信息，请参阅[管理员用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations#enable-scheduled-grid-updates-and-reindexing)中的&#x200B;_计划网格更新_。
 
 >[!WARNING]
 >
->**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)不支持`Developer`模式。
+>**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)不支持`Developer`模式。
 
 ## 异步配置保存
 
@@ -69,7 +69,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 ## 延期库存更新
 
-在密集销售期间，[!DNL Commerce]可以延迟与订单相关的库存更新。 这样可最大限度地减少操作次数，并加快下单流程。 但是，此选项有风险，并且只能在商店中激活延交订单时使用，因为此选项可能导致存货数量为负。 对于可轻松按需重新补充库存的商店，此选项可显着提升结账流的性能。 要在您的网站上激活延期库存更新，请转到&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**。 有关详细信息，请参阅&#x200B;_Adobe Commerce用户指南_&#x200B;中的[管理库存](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
+在密集销售期间，[!DNL Commerce]可以延迟与订单相关的库存更新。 这样可最大限度地减少操作次数，并加快下单流程。 但是，此选项有风险，并且只能在商店中激活延交订单时使用，因为此选项可能导致存货数量为负。 对于可轻松按需重新补充库存的商店，此选项可显着提升结账流的性能。 要在您的网站上激活延期库存更新，请转到&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**。 有关详细信息，请参阅[Adobe Commerce用户指南](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)中的&#x200B;_管理库存_。
 
 >[!INFO]
 >
@@ -77,7 +77,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 >[!INFO]
 >
->此选项也适用于[异步下单](high-throughput-order-processing.md#asynchronous-order-placement)和[Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/guide-overview.html?lang=zh-Hans)。
+>此选项也适用于[异步下单](high-throughput-order-processing.md#asynchronous-order-placement)和[Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/guide-overview.html)。
 
 ## 客户端优化设置
 
@@ -95,7 +95,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 >[!INFO]
 >
->**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)上的Adobe [!DNL Commerce] 不支持`Developer`模式。
+>**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构[上的 [!DNL Commerce] Adobe](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)不支持`Developer`模式。
 
 激活&#x200B;**[!UICONTROL Enable [!DNL JavaScript] Bundling]**&#x200B;选项后，您允许Commerce将所有JS资源合并到一个或一组加载到店面页面中的捆绑包中。 捆绑JS可减少向服务器发出的请求，从而改善页面性能。 它还有助于浏览器在首次调用时缓存JS资源，并在所有进一步浏览中重复使用它们。 此选项还会带来延迟评估，因为所有JS都作为文本加载。 它仅在页面上触发特定操作后才启动代码分析和评估。 但是，对于首次页面加载时间极其关键的存储区，不建议使用此设置，因为所有JS内容都将在首次调用时加载。
 
@@ -111,7 +111,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 ## 客户区段验证
 
-具有大量[客户区段](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/customers/segments/customer-segments)的商家可能会因客户操作（如客户登录和将产品添加到购物车）而遇到性能显着下降的情况。
+具有大量[客户区段](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segments)的商家可能会因客户操作（如客户登录和将产品添加到购物车）而遇到性能显着下降的情况。
 
 客户操作会触发客户区段的验证过程，这可能导致性能下降。 默认情况下，Adobe Commerce会实时验证每个区段，以定义哪些客户区段匹配，哪些客户区段不匹配。
 
@@ -134,7 +134,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 要提高大型目录的产品网格性能，我们建议使用&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Admin] > [!UICONTROL Admin Grids] >[!UICONTROL Limit Number of Products in Grid]**&#x200B;系统配置设置来限制网格中的产品数量。
 
 默认情况下，此系统配置设置处于禁用状态。 启用此选项后，您可以将网格中的产品数量限制为特定值。 **[!UICONTROL Records Limit]**&#x200B;是可自定义的设置，其默认最小值为`20000`。
-启用&#x200B;**[!UICONTROL Limit Number of Products in Grid]**&#x200B;设置且网格中的产品数大于记录限制时，将返回有限制的记录集合。 当达到限制时，将在网格标题中隐藏找到的记录总数、选定的记录数和分页元素。
+启用**[!UICONTROL Limit Number of Products in Grid]**&#x200B;设置且网格中的产品数大于记录限制时，将返回有限制的记录集合。 当达到限制时，将在网格标题中隐藏找到的记录总数、选定的记录数和分页元素。
 
 当网格中的产品总数有限时，它不会影响产品网格中的批量操作。 它只影响产品网格表示层。 例如，网格中的`20000`产品数量有限，用户单击&#x200B;**[!UICONTROL Select All]**，选择&#x200B;**[!UICONTROL Update attributes]**&#x200B;批量操作，并更新某些属性。 因此，所有产品都已更新，而不是有限的`20000`记录集合。
 

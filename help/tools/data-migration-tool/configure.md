@@ -1,6 +1,6 @@
 ---
 title: 配置 [!DNL Data Migration Tool]
-description: 了解配置 [!DNL Data Migration Tool] 在Magento1和Magento2之间传输数据的两种方法。
+description: 了解配置 [!DNL Data Migration Tool] 在Magento 1和Magento 2之间传输数据的两种方法。
 exl-id: 273be997-8085-4488-a455-f6005a85b406
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -15,10 +15,10 @@ ht-degree: 0%
 安装[!DNL Data Migration Tool]后，以下目录包含映射和配置文件：
 
 * Magento Open Source：
-   * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-opensource`：从Magento Open Source1迁移到Magento Open Source2的配置和脚本
+   * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-opensource`：从Magento Open Source 1迁移到Magento Open Source 2的配置和脚本
 
 * Adobe Commerce：
-   * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-commerce`：从Magento Open Source1迁移到Adobe Commerce 2的配置和脚本
+   * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-commerce`：从Magento Open Source 1迁移到Adobe Commerce 2的配置和脚本
    * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/commerce-to-commerce`：从Adobe Commerce 1迁移到Adobe Commerce 2的配置和脚本
 
 上述目录包含每个受支持版本的子目录。
@@ -28,16 +28,16 @@ ht-degree: 0%
 有两种方法可配置[!DNL Data Migration Tool]：
 
 * 在单独的模块中配置[!DNL Data Migration Tool]（推荐）
-* 更改`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/`目录中的[!DNL Data Migration Tool]配置。
+* 更改[!DNL Data Migration Tool]目录中的`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/`配置。
 
 要使用源代码管理迁移配置并将其用于部署，您必须创建一个单独的模块。
 如果您计划仅在本地运行[!DNL Data Migration Tool]，则可以直接编辑`<your Magento 2 install dir>/vendor/magento/data-migration-tool/`目录中的文件。
 
 ### 在单独的模块中配置迁移
 
-在迁移任何数据之前，必须创建Magento2模块。
+在迁移任何数据之前，必须创建一个Magento 2模块。
 
-1. 创建Magento2模块。
+1. 创建Magento 2模块。
 
    * `<your Magento 2 install dir>/app/code/Vendor/Migration/composer.json`
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 1. 在`config.xml`文件中，必须设置M1和M2数据库的访问详细信息以及加密密钥。
 
-1. 如果M1存储区有自定义更改，则应将其余配置文件映射到Magento1存储区自定义设置。 请参阅[使用配置和映射文件](#migration-config)。
+1. 如果M1存储有自定义更改，则应将其余配置文件映射到Magento 1存储自定义。 请参阅[使用配置和映射文件](#migration-config)。
 
 ### 在`vendor`文件夹中配置迁移
 
@@ -144,7 +144,7 @@ ht-degree: 0%
    </options>
    ```
 
-   &lt;crypt_key>标记必须包含一个值。 您可以在`<key>`标记中找到它，该标记位于Magento1实例上的app/etc/local.xml文件中。
+   &lt;crypt_key>标记必须包含一个值。 您可以在`<key>`标记中找到它，该标记位于Magento 1实例上的app/etc/local.xml文件中。
 
    可选参数：
 
@@ -152,7 +152,7 @@ ht-degree: 0%
    * 数据库自定义端口： `port=<port>`
    * 表前缀： `<source_prefix>`，`<dest_prefix>`
 
-   例如，如果数据库所有者的用户名是`root`，密码为`pass`，而您在Magento1数据库中使用前缀`magento1`，请在`config.xml`中使用以下内容：
+   例如，如果数据库所有者的用户名是`root`，密码为`pass`，并且您在Magento 1数据库中使用前缀`magento1`，请在`config.xml`中使用以下内容：
 
    ```xml
    <source>
@@ -190,7 +190,7 @@ ht-degree: 0%
 
 ## 使用配置和映射文件
 
-[!DNL Data Migration Tool]使用&#x200B;*映射文件*&#x200B;来允许您在Magento1和Magento2数据库之间执行自定义数据库映射，包括：
+[!DNL Data Migration Tool]使用&#x200B;*映射文件*&#x200B;来允许您在Magento 1和Magento 2数据库之间执行自定义数据库映射，包括：
 
 * 更改表名
 
@@ -198,19 +198,19 @@ ht-degree: 0%
 
 * 忽略表或字段
 
-* 将字段的传输数据调整为Magento2格式
+* 将字段的传输数据调整为Magento 2格式
 
-受支持Magento版本的映射文件位于`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc`的子目录中
+支持的Magento版本的映射文件位于`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc`的子目录中
 
 要使用映射文件，请执行以下操作：
 
 1. 将它们从`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/`复制到`<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/`并删除`.dist`扩展。
 
-1. 更新`config.xml`的`<options>`节点中新复制文件的路径。 更新的路径应为以下路径之一：
+1. 更新`<options>`的`config.xml`节点中新复制文件的路径。 更新的路径应为以下路径之一：
 
    1. 绝对文件路径，如`/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. magento/data-migration-tool模块相对文件路径： `etc/opensource-to-opensource/1.9.4.1/map.xml`
-   1. 根目录相对文件路径Magento： `app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
+   1. Magento根目录相对文件路径： `app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
 
 `<Magento 2 dir>/vendor/magento/data-migration-tool/etc`和`<Magento 2 dir>/vendor/magento/data-migration-tool/etc/<ce version>`目录包含以下配置文件：
 
@@ -218,8 +218,8 @@ ht-degree: 0%
 
 | 映射文件名 | 描述 |
 | --- | --- |
-| `class-map.xml.dist` | Magento1和Magento2之间类映射的字典 |
-| `config.xml.dist` | 指定Magento1和Magento2数据库配置、步骤配置以及映射到文件的链接的主配置文件 |
+| `class-map.xml.dist` | Magento 1和Magento 2之间类映射的字典 |
+| `config.xml.dist` | 指定Magento 1和Magento 2数据库配置、步骤配置以及映射到文件的链接的主配置文件 |
 | *仅限Adobe Commerce*。`customer-attr-document-groups.xml.dist` | 自定义客户属性步骤中使用的表的列表。 |
 | *仅限Adobe Commerce*。`customer-attr-map.xml.dist` | 在自定义客户属性步骤中使用的映射文件。 |
 | `deltalog.xml.dist` | 包含数据库例程设置所需的表列表。 |

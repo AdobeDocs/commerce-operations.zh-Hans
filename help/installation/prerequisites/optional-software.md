@@ -103,7 +103,7 @@ apt-get install ntp
 
 >[!NOTE]
 >
->仅在开发系统&#x200B;_中使用`phpinfo.php`_。 这可能是一个生产中的安全问题。
+>仅在开发系统`phpinfo.php`中使用&#x200B;__。 这可能是一个生产中的安全问题。
 
 在Web服务器的docroot中的任意位置添加以下代码：
 

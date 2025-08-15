@@ -4,7 +4,7 @@ description: 按照以下步骤自定义客户在Adobe Commerce部署因维护�
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
 source-git-commit: a5dbefda6b77d993756143ef0e7270425f824c44
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ bin/magento maintenance:status
 bin/magento maintenance:enable
 ```
 
-要为除192.0.2.10和192.0.2.11之外的所有客户端启用维护模式，请执行以下操作：
+要为除192.0.2.10和192.0.2.11之外的所有客户端启用维护模式：
 
 ```bash
 bin/magento maintenance:enable --ip=192.0.2.10 --ip=192.0.2.11
@@ -86,7 +86,7 @@ bin/magento maintenance:allow-ips <ip address> .. <ip address> [--none]
 
 在以下示例中，我们使用的是`503`类型错误模板文件，该文件需要本地化的内容。
 
-`Error_Processor`类的构造函数接受一个`skin`GET参数以更改布局：
+`Error_Processor`类的构造函数接受`skin` GET参数以更改布局：
 
 ```php
 if (isset($_GET['skin'])) {

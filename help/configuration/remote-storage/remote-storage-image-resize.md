@@ -34,7 +34,7 @@ ht-degree: 0%
 
 1. 在&#x200B;_目录媒体URL格式_&#x200B;部分中，清除&#x200B;**[!UICONTROL Use system value]**。
 
-1. 在&#x200B;**_目录媒体URL格式_**&#x200B;字段中选择`Image optimization based on query parameters` URL。
+1. 在`Image optimization based on query parameters`目录媒体URL格式&#x200B;**_字段中选择_** URL。
 
 1. 单击&#x200B;**[!UICONTROL Save Config]**。
 
@@ -52,7 +52,7 @@ ht-degree: 0%
    load_module /etc/nginx/modules/ngx_http_image_filter_module.so;
    ```
 
-1. 基于包含的模板`nginx.conf.sample`文件创建一个`nginx.conf`文件。 例如：
+1. 基于包含的模板`nginx.conf`文件创建一个`nginx.conf.sample`文件。 例如：
 
    ```conf
    location ~* \.(jpg|jpeg|png|gif|webp)$ {

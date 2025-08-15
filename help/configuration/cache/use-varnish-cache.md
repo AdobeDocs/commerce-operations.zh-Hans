@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 清漆清除
 
-根据[Varnish文档](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html)，“当您从缓存中挑选对象并将其随其变体一起丢弃时，将发生&#x200B;*清除*。” 清漆清除类似于缓存清除命令(或者在Admin中单击&#x200B;**刷新Magento缓存**)。
+根据[Varnish文档](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html)，“当您从缓存中挑选对象并将其随其变体一起丢弃时，将发生&#x200B;*清除*。” 清漆清除类似于缓存清除命令(或单击管理员中的&#x200B;**刷新Magento缓存**)。
 
 事实上，当您清理、刷新或刷新Commerce缓存时，“清漆”也会清除。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ## 配置Commerce以清除清漆
 
-在使用[`magento setup:config:set`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset)命令配置清漆主机后，Commerce会清除清漆主机。
+在使用[`magento setup:config:set`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset)命令配置清漆主机后，Commerce会清除清漆主机。
 
 您可以使用可选参数`--http-cache-hosts`参数指定以逗号分隔的Varnish主机和侦听端口列表。 配置所有Varnish主机，无论您拥有一个还是多个。 （不要使用空格字符分隔主机。）
 
@@ -56,6 +56,6 @@ bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 
 然后，当您在Admin中刷新Commerce缓存（也称为&#x200B;*清理*&#x200B;缓存）或使用命令行时，可以清除Varnish主机。
 
-若要使用管理员刷新缓存，请单击&#x200B;**[!UICONTROL SYSTEM]** >工具> **缓存管理**，然后单击页面顶部的&#x200B;**刷新Magento缓存**。 （也可以刷新单个缓存类型。）
+要使用管理员刷新缓存，请单击&#x200B;**[!UICONTROL SYSTEM]** >工具> **缓存管理**，然后单击页面顶部的&#x200B;**刷新Magento缓存**。 （也可以刷新单个缓存类型。）
 
 要使用命令行刷新缓存，通常使用[`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types)命令作为[文件系统所有者](../../installation/prerequisites/file-system/overview.md)。

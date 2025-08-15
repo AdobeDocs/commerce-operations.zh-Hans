@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # ACSD-48216： *UPDATE*&#x200B;操作时&#x200B;*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;增加
 
-ACSD-48216修补程序修复了&#x200B;*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;在&#x200B;*UPDATE*&#x200B;操作中增加的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.27时，此修补程序可用。 修补程序ID为ACSD-48216。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
+ACSD-48216修补程序修复了&#x200B;*inventory_source_item*&#x200B;表的&#x200B;*AUTO_INCREMENT*&#x200B;在&#x200B;*UPDATE*&#x200B;操作中增加的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.27时，此修补程序可用。 修补程序ID为ACSD-48216。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
 ## 受影响的产品和版本
 
@@ -28,15 +28,15 @@ ACSD-48216修补程序修复了&#x200B;*inventory_source_item*&#x200B;表的&#x2
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-`inventory_source_item`表的`AUTO_INCREMENT`在`UPDATE`操作中增加。
+`AUTO_INCREMENT`表的`inventory_source_item`在`UPDATE`操作中增加。
 
 <u>重现步骤</u>：
 
-1. 检查`inventory_source_item`表的`AUTO_INCREMENT`的当前值：
+1. 检查`AUTO_INCREMENT`表的`inventory_source_item`的当前值：
 
 ```bash
 MySQL > show create table inventory_source_item;
@@ -77,27 +77,27 @@ CREATE TABLE `inventory_source_item` (
 }
 ```
 
-1. 再次检查`inventory_source_item`表的`AUTO_INCREMENT`值。
+1. 再次检查`AUTO_INCREMENT`表的`inventory_source_item`值。
 
 <u>预期的结果</u>：
 
-在每次更新操作后，`inventory_source_item`表的`AUTO_INCREMENT`值不会增加。
+在每次更新操作后，`AUTO_INCREMENT`表的`inventory_source_item`值不会增加。
 
 <u>实际结果</u>：
 
-每次更新操作后，`inventory_source_item`表的`AUTO_INCREMENT`值都会增加。
+每次更新操作后，`AUTO_INCREMENT`表的`inventory_source_item`值都会增加。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)
-* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]
+* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)
 
 ## 相关阅读
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)
-* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题
-* [在Commerce实施行动手册中修改数据库表的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/development/modifying-core-and-third-party-tables#why-adobe-recommends-avoiding-modifications)
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)
+* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题
+* [在Commerce实施行动手册中修改数据库表的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/development/modifying-core-and-third-party-tables#why-adobe-recommends-avoiding-modifications)
 
-有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
+有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)：搜索修补程序[!DNL Quality Patches Tool]。

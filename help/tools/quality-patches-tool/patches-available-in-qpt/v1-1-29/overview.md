@@ -20,7 +20,7 @@ QPT v1.1.29包含以下修补程序：
 
 1. **ACSD-49389**：修复了在订单未准备好接收时，API会发送准备接收电子邮件的问题。
 1. **ACSD-49822**：修复了&#x200B;*[!UICONTROL Requisition List]*&#x200B;页面中的更新未反映在[!UICONTROL Print Requisition]列表上的问题。
-1. **ACSD-48771**：修复了从旧版[!DNL Page Builder]升级[!UICONTROL column-block]内容类型时出现的问题。
+1. **ACSD-48771**：修复了从旧版[!UICONTROL column-block]升级[!DNL Page Builder]内容类型时出现的问题。
 1. **ACSD-49464**：修复了当orderId不同时，发票、装运和贷项通知单不会从存档移回的问题。
 1. **ACSD-49773**：修复了将AWS S3用作远程存储时产品导出失败的问题。
 1. **ACSD-49748**：修复了无法发送邀请的问题。
@@ -31,7 +31,7 @@ QPT v1.1.29包含以下修补程序：
 1. **ACSD-49898**：修复了捆绑产品的特殊价格超过1000时，产品网格引发异常的问题。
 1. **ACSD-50234**：修复了使用[!DNL PayPal]下订单时，确认电子邮件中客户名称错误的问题。
 1. **ACSD-49960**：修复了按日期过滤不适用于客户订单网格的问题。
-1. **ACSD-49849**：修复了通过GraphQL向[!DNL PayPal Express]下达订单时，客户电子邮件被替换为[!DNL PayPal]电子邮件的问题。
+1. **ACSD-49849**：修复了通过GraphQL向[!DNL PayPal]下达订单时，客户电子邮件被替换为[!DNL PayPal Express]电子邮件的问题。
 1. **ACSD-49839**：修复了当SKU中的产品具有单引号或双引号时，[!UICONTROL Shared Catalog Pricing]和[!UICONTROL Structure]在Admin中引发错误的问题。
 1. **ACSD-49970**：修复了在启用[!DNL New Relic]报告时对GraphQL错误的不正确处理。
 1. **ACSD-50260**：修复了GraphQL产品搜索结果仅限于10,000个结果的问题。

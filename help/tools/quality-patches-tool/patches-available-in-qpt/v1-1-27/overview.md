@@ -19,8 +19,8 @@ ht-degree: 0%
 QPT v1.1.27包含以下修补程序：
 
 1. ACSD-48362：修复了在使用可转让报价下订单时使用默认送货地址而非新送货地址的问题。
-1. ACSD-48059：修复了[!UICONTROL Visual Merchandiser]中商家无法为[!UICONTROL Categories]属性保存“[!UICONTROL Match product by rule]”的问题。
-1. ACSD-48216：修复了[!UICONTROL inventory_source_item]表的[!UICONTROL AUTO_INCREMENT]在[!UICONTROL UPDATE]操作中增加的问题。
+1. ACSD-48059：修复了[!UICONTROL Visual Merchandiser]中商家无法为[!UICONTROL Match product by rule]属性保存“[!UICONTROL Categories]”的问题。
+1. ACSD-48216：修复了[!UICONTROL AUTO_INCREMENT]表的[!UICONTROL inventory_source_item]在[!UICONTROL UPDATE]操作中增加的问题。
 1. ACSD-47908：修复了结账期间在送货步骤中选择源和数量时出现的“值应小于或等于0”错误。
 1. ACSD-49497：修复了在发运后订单仍处于处理状态并应用部分退款的问题。
 1. ACSD-48694：修复了“请求的状态更改无效”错误导致客户无法下订单的问题。

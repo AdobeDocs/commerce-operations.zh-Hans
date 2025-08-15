@@ -1,6 +1,6 @@
 ---
-title: “[!DNL Data Migration Tool]技术规范”
-description: 了解 [!DNL Data Migration Tool] 的实现详细信息以及在Magento1和Magento2之间传输数据时如何扩展。
+title: '[!DNL Data Migration Tool]技术规范'
+description: 了解 [!DNL Data Migration Tool] 的实施详细信息以及在Magento 1和Magento 2之间传输数据时如何扩展。
 exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
 topic: Commerce, Migration
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 系统要求
 
-[!DNL Data Migration Tool]的[系统要求](../../installation/system-requirements.md)与Magento2相同。
+[的](../../installation/system-requirements.md)系统要求[!DNL Data Migration Tool]与Magento 2相同。
 
 ## 内部结构
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 ## 配置
 
-配置`config.xsd`文件的架构位于`etc/`目录中。 为Magento1.x的每个版本创建默认配置文件(`config.xml.dist`)。它位于`etc/`下的单独目录中。
+配置`config.xsd`文件的架构位于`etc/`目录中。 为每个版本的Magento 1.x创建默认配置文件(`config.xml.dist`)。它位于`etc/`下的单独目录中。
 
 默认配置文件可由自定义配置文件替换（请参阅[命令语法](migrate-data/overview.md#command-syntax)）。
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 
 * 选项 — 参数列表。 包含必需(map_file、settings_map_file、bulk_size)和可选(custom_option、resource_adapter_class_name、prefix_source、prefix_dest、log_file)参数
 
-在数据库表中安装了带有前缀的Magento时更改前缀选项。 可以为Magento1和Magento2数据库设置此值。 请相应地使用“source_prefix”和“dest_prefix”配置选项。
+在数据库表中安装了带有前缀的Magento的情况下更改前缀选项。 可以为Magento 1和Magento 2数据库设置此值。 请相应地使用“source_prefix”和“dest_prefix”配置选项。
 
 可使用`\Migration\Config`类访问配置数据。
 
@@ -171,20 +171,20 @@ ht-degree: 0%
 | 文档 | 字段 |
 |---|---|
 | `step` | Steps节点中的第二级节点。 必须在`title`属性中指定相关步骤的描述。 |
-| `integrity` | 指定负责完整性检查的PHP类。 比较表字段名称、类型和其他信息，以验证Magento1和2数据结构之间的兼容性。 |
-| `data` | 指定负责数据检查的PHP类。 将数据逐表从Magento1传输到Magento2。 |
+| `integrity` | 指定负责完整性检查的PHP类。 比较表字段名称、类型和其他信息，以验证Magento 1和2数据结构之间的兼容性。 |
+| `data` | 指定负责数据检查的PHP类。 将数据逐表从Magento 1传输到Magento 2。 |
 | `volume` | 指定负责卷检查的PHP类。 比较表之间的记录数以验证传输是否成功。 |
-| `delta` | 指定负责增量检查的PHP类。 完全数据迁移后，将增量从Magento1传输到Magento2。 |
+| `delta` | 指定负责增量检查的PHP类。 在完全数据迁移后，将增量从Magento 1传输到Magento 2。 |
 
 ## Source数据库信息属性
 
 | 文档 | 字段 | 必需？ |
 |---|---|---|
-| `name` | Magento1服务器的数据库名称。 | 是 |
-| `host` | 主机1服务器的MagentoIP地址。 | 是 |
-| `port` | Magento1服务器的端口号。 | 否 |
-| `user` | Magento1数据库服务器的用户名。 | 是 |
-| `password` | Magento1数据库服务器的口令。 | 是 |
+| `name` | Magento 1服务器的数据库名称。 | 是 |
+| `host` | Magento 1服务器的主机IP地址。 | 是 |
+| `port` | Magento 1服务器的端口号。 | 否 |
+| `user` | Magento 1数据库服务器的用户名。 | 是 |
+| `password` | Magento 1数据库服务器的密码。 | 是 |
 | `ssl_ca` | SSL证书颁发机构文件的路径。 | 否 |
 | `ssl_cert` | SSL证书文件的路径。 | 否 |
 | `ssl_key` | SSL密钥文件的路径。 | 否 |
@@ -193,11 +193,11 @@ ht-degree: 0%
 
 | 文档 | 字段 | 必需？ |
 |---|---|---|
-| `name` | Magento2服务器的数据库名称。 | 是 |
-| `host` | Magento2服务器的主机IP地址。 | 是 |
-| `port` | Magento2服务器的端口号。 | 否 |
-| `user` | Magento2数据库服务器的用户名。 | 是 |
-| `password` | Magento2数据库服务器的口令。 | 是 |
+| `name` | Magento 2服务器的数据库名称。 | 是 |
+| `host` | Magento 2服务器的主机IP地址。 | 是 |
+| `port` | Magento 2服务器的端口号。 | 否 |
+| `user` | Magento 2数据库服务器的用户名。 | 是 |
+| `password` | Magento 2数据库服务器的密码。 | 是 |
 | `ssl_ca` | SSL证书颁发机构文件的路径。 | 否 |
 | `ssl_cert` | SSL证书文件的路径。 | 否 |
 | `ssl_key` | SSL密钥文件的路径。 | 否 |
@@ -279,11 +279,11 @@ $this->progress->finish();
 
 ### 完整性检查
 
-每个步骤都必须检查数据源的结构(默认为Magento1)和数据目标(Magento2)的结构是否兼容。 如果不兼容 — 对于不兼容的实体会显示错误。 如果字段具有不同的数据类型(同一字段在Magento1中具有十进制数据类型，在Magento2中具有整数)，则会显示警告消息（除非该字段包含在映射文件中）。
+每个步骤都必须检查数据源的结构(默认为Magento 1)和数据目标的结构(Magento 2)是否兼容。 如果不兼容 — 对于不兼容的实体会显示错误。 如果字段具有不同的数据类型(同一字段在Magento 1中具有十进制数据类型，在Magento 2中具有整数)，则会显示警告消息（除非该类型包含在映射文件中）。
 
 ### 数据传输
 
-如果完整性检查通过，则正在传输数据。 如果出现错误，则回滚运行以恢复Magento2的上一个状态。 如果步骤类实现`RollbackInterface`接口，则在出现错误时执行回滚方法。
+如果完整性检查通过，则正在传输数据。 如果出现错误，则会运行回滚以恢复Magento 2以前的状态。 如果步骤类实现`RollbackInterface`接口，则在出现错误时执行回滚方法。
 
 ### 音量检查
 
@@ -333,17 +333,17 @@ $this->progress->finish();
 </settings>
 ```
 
-在节点`<key>`下，有一些规则可与`core_config_data`表中的“path”列一起使用。 `<ignore>`规则阻止工具传输某些设置。 可在此节点中使用通配符。 `<ignore>`节点中未列出的所有其他设置都将迁移。 如果设置的路径在Magento2中发生更改，则应将其添加到`//key/rename`节点，其中旧路径在`//key/rename/path`节点中指示，新路径在`//key/rename/to`节点中指示。
+在节点`<key>`下，有一些规则可与`core_config_data`表中的“path”列一起使用。 `<ignore>`规则阻止工具传输某些设置。 可在此节点中使用通配符。 `<ignore>`节点中未列出的所有其他设置都将迁移。 如果设置的路径在Magento 2中发生更改，则应将其添加到`//key/rename`节点，其中旧路径在`//key/rename/path`节点中指示，新路径在`//key/rename/to`节点中指示。
 
-在节点`<value>`下，有一些规则可与`core_config_data`表中的“value”列一起使用。 这些规则旨在通过处理程序（实现`Migration\Handler\HandlerInterface`的类）转换设置的值，并将其调整为Magento2。
+在节点`<value>`下，有一些规则可与`core_config_data`表中的“value”列一起使用。 这些规则旨在通过处理程序（实现`Migration\Handler\HandlerInterface`的类）转换设置的值，并针对Magento 2对其进行调整。
 
 ### 数据迁移模式
 
-在此模式下，将迁移大部分数据。 在数据迁移之前，将为每个步骤运行完整性检查阶段。 如果完整性检查通过，[!DNL Data Migration Tool]将向Magento1数据库安装deltalog表（前缀为`m2_cl_*`）和相应的触发器，并运行步骤的数据迁移阶段。 当迁移完成且无错误时，卷检查将检查数据一致性。 如果迁移实时存储，则可能会显示警告消息。 不用担心，增量迁移会处理这些增量数据。 最有价值的迁移步骤是映射、URL重写和EAV。
+在此模式下，将迁移大部分数据。 在数据迁移之前，将为每个步骤运行完整性检查阶段。 如果完整性检查通过，[!DNL Data Migration Tool]将向Magento 1数据库安装deltalog表（前缀为`m2_cl_*`）和相应的触发器，并运行步骤的数据迁移阶段。 当迁移完成且无错误时，卷检查将检查数据一致性。 如果迁移实时存储，则可能会显示警告消息。 不用担心，增量迁移会处理这些增量数据。 最有价值的迁移步骤是映射、URL重写和EAV。
 
 #### 映射步骤
 
-映射步骤负责将大部分数据从Magento1传输到Magento2。 此步骤从map.xml文件（位于`etc/`目录）中读取说明。 该文件描述了源(Magento1)和目标(Magento2)的数据结构之间的差异。 如果Magento1包含属于Magento2中不存在的某个扩展的表或字段，则可以将这些实体放置在此处，以按映射步骤忽略它们。 否则，它将显示错误消息。
+映射步骤负责将大部分数据从Magento 1传输到Magento 2。 此步骤从map.xml文件（位于`etc/`目录）中读取说明。 文件介绍了源(Magento 1)和目标(Magento 2)的数据结构之间的差异。 如果Magento 1包含属于Magento 2中不存在的某个扩展的表或字段，则可以将这些实体放置在此处，以按映射步骤忽略它们。 否则，它将显示错误消息。
 
 映射文件的格式如下：
 
@@ -435,11 +435,11 @@ $this->progress->finish();
 
 #### URL重写步骤
 
-此步骤比较复杂，因为在Magento1中开发的许多算法与Magento2不兼容。 对于Magento1的不同版本，可以有不同的算法。 因此，在Step/UrlRewrite文件夹下，有一些为某些特定版本的Magento开发的类，Migration\Step\UrlRewrite\Version191to2000就是其中之一。 它可以将URL重写数据从Magento1.9.1传输到Magento2。
+此步骤非常复杂，因为在Magento 1中开发的许多算法与Magento 2不兼容。 对于Magento 1的不同版本，可以有不同的算法。 因此，在Step/UrlRewrite文件夹下，有一些为某些特定版本的Magento开发的类，Migration\Step\UrlRewrite\Version191to2000就是其中之一。 它可以将URL重写数据从Magento 1.9.1传输到Magento 2。
 
 #### EAV步骤
 
-此步骤会将所有属性（产品、客户、RMA）从Magento1转移到Magento2。 它使用map-eav.xml文件，其中包含与map.xml文件中的规则相似的规则，用于特定情况下处理数据。
+此步骤会将所有属性（产品、客户、RMA）从Magento 1转移到Magento 2。 它使用map-eav.xml文件，其中包含与map.xml文件中的规则相似的规则，用于特定情况下处理数据。
 
 在此步骤中处理的一些表：
 
@@ -453,11 +453,11 @@ $this->progress->finish();
 
 ### 增量迁移模式
 
-主迁移后，其他数据可能已添加到Magento1数据库中（例如，由店面的客户添加）。 为了跟踪此数据，工具会在迁移过程的开始阶段为表设置数据库触发器。 有关详细信息，请参阅[迁移由第三方扩展创建的数据](migrate-data/delta.md#migrate-data-created-by-third-party-extensions)。
+主迁移后，其他数据可能已添加到Magento 1数据库中（例如，由店面的客户添加）。 为了跟踪此数据，工具会在迁移过程的开始阶段为表设置数据库触发器。 有关详细信息，请参阅[迁移由第三方扩展创建的数据](migrate-data/delta.md#migrate-data-created-by-third-party-extensions)。
 
 ## 数据源
 
-要访问Magento1和Magento2的数据源并操作其数据（选择、更新、插入、删除），资源文件夹中有许多类。 Migration\ResourceModel\Source和Migration\ResourceModel\Destination是主类。 所有迁移步骤都使用它来操作数据。 此数据包含在Migration\ResourceModel\Document、Migration\ResourceModel\Record、Migration\ResourceModel\Structure等类中。
+要访问Magento 1和Magento 2的数据源并使用其数据进行操作（选择、更新、插入、删除），资源文件夹中有许多类。 Migration\ResourceModel\Source和Migration\ResourceModel\Destination是主类。 所有迁移步骤都使用它来操作数据。 此数据包含在Migration\ResourceModel\Document、Migration\ResourceModel\Record、Migration\ResourceModel\Structure等类中。
 
 以下是这些类的类图：
 
@@ -523,7 +523,7 @@ $this->logger->pushProcessor([$this->processor, 'setExtra']);
 
 您可以使用单色格式化程序格式化日志消息。 要使格式化程序功能正常工作，必须使用`setFormatter()`方法指定日志处理程序。 目前，我们有一个格式化程序类(`MessageFormatter`)，它在消息处理期间（通过从处理程序执行的`format()`方法）设置特定格式（取决于详细程度级别）。
 
-在`Migration\Logger\Manager`类的`process()`方法中执行操作记录器（添加处理程序和处理器）和详细模式处理。 方法是在应用程序启动时调用的。
+在`process()`类的`Migration\Logger\Manager`方法中执行操作记录器（添加处理程序和处理器）和详细模式处理。 方法是在应用程序启动时调用的。
 
 ## 自动测试
 

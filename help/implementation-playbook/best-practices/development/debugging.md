@@ -122,7 +122,7 @@ bin/magento cache:flush
 
 ![二叉图](../../../assets/playbooks/bisect2.png)
 
-虽然有几种平分方法，但Adobe建议遵循以下顺序：
+虽然存在几种平分方法，但Adobe建议遵循以下顺序：
 
 - 按主题二分
 - 按承诺二分

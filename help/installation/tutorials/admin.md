@@ -15,7 +15,7 @@ ht-degree: 0%
 在使用此命令之前，必须执行以下操作：
 
 - [创建部署配置](deployment.md)
-- [至少启用Magento_授权和Magento_用户模块](manage-modules.md)
+- [至少启用Magento_Authorization和Magento_User模块](manage-modules.md)
 - 创建数据库模式
 
 >[!NOTE]
@@ -75,7 +75,7 @@ Admin last name: Doe Young
 Created Magento administrator user named John
 ```
 
-以下示例更新了`j.doe`管理员用户的`first name`、`last name`和`password`：
+以下示例更新了`first name`管理员用户的`last name`、`password`和`j.doe`：
 
 ```bash
 bin/magento admin:user:create --admin-firstname="John X" --admin-lastname="Doe X" --admin-email=j.doe@example.com --admin-user=j.doe --admin-password=A1234567

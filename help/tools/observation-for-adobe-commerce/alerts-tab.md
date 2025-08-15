@@ -1,6 +1,6 @@
 ---
 title: '[!UICONTROL Alerts]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL Alerts]选项卡。
+description: 了解[!UICONTROL Alerts]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: e9305576-6ed2-48f3-baec-36e081b0d04b
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ![打开严重警报](../../assets/tools/observation-for-adobe-commerce/alerts-tab-1.jpg)
 
-**[!UICONTROL Open Alert Details]**&#x200B;帧显示选定时间范围内未解决的严重警报的计数。 这些警报将包括Adobe创建的警报以及合作伙伴或商家创建的任何警报。
+**[!UICONTROL Open Alert Details]**&#x200B;帧显示选定时间范围内未解决的严重警报的计数。 警报将包括Adobe创建的警报以及合作伙伴或商家创建的任何警报。
 
 ## [!UICONTROL Closed Critical Alerts]
 
 ![已关闭严重警报](../../assets/tools/observation-for-adobe-commerce/alerts-tab-2.jpg)
 
-**[!UICONTROL Closed Critical Alerts]**&#x200B;帧显示选定时间范围内已关闭关键警报的计数。 这些警报将包括Adobe创建的警报以及合作伙伴或商家创建的任何警报。
+**[!UICONTROL Closed Critical Alerts]**&#x200B;帧显示选定时间范围内已关闭关键警报的计数。 警报将包括Adobe创建的警报以及合作伙伴或商家创建的任何警报。
 
 ## [!UICONTROL Critical Alert Details]
 

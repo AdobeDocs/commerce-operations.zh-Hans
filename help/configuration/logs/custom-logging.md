@@ -24,7 +24,7 @@ Adobe建议使用集中式应用程序日志记录，原因如下：
 
   >[!INFO]
   >
-  >Adobe不建议或认可任何特定的日志记录解决方案。
+  >Adobe不推荐也不认可任何特定的日志记录解决方案。
 
 ## PSR-3合规性
 
@@ -34,7 +34,7 @@ Adobe建议使用集中式应用程序日志记录，原因如下：
 
 ## 独白
 
-Commerce 2符合PSR-3标准。 默认情况下，Commerce使用[独白]。 在Commerce应用程序[`di.xml`][di]中作为`Psr\Log\LoggerInterface`的首选项实现的单一日志。
+Commerce 2符合PSR-3标准。 默认情况下，Commerce使用[独白]。 在Commerce应用程序`Psr\Log\LoggerInterface`中作为[`di.xml`][di]的首选项实现的单一日志。
 
 Monolog是一种常用的PHP日志记录解决方案，具有多种使您能够构建高级日志记录策略的处理程序。 以下是Monolog的工作原理摘要。
 

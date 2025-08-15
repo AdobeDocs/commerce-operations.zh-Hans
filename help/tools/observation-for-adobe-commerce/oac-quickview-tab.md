@@ -28,6 +28,6 @@ ht-degree: 0%
 
 ## [!UICONTROL CPU Utilization]
 
-![CPU使用率](../../assets/tools/observation-for-adobe-commerce/quickview_cpu.jpg)
+![CPU利用率](../../assets/tools/observation-for-adobe-commerce/quickview_cpu.jpg)
 
-**[!UICONTROL CPU Utilization]**&#x200B;帧显示所选时间范围内节点的CPU利用率。
+**[!UICONTROL CPU Utilization]**&#x200B;帧显示所选时间范围内按节点列出的CPU利用率。

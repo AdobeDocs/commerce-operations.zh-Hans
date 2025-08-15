@@ -1,6 +1,6 @@
 ---
 title: '[!UICONTROL Elasticsearch]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL Elasticsearch]选项卡。
+description: 了解[!UICONTROL Elasticsearch]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: e98d351d-b3b1-47bc-bc0d-f96ba9ec2b80
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ![活动主分片](../../assets/tools/active-primary-shards.jpg)
 
-根据所选帐户的[!DNL Elasticsearch]服务的活动主分片的数量，**[!UICONTROL Active Primary Shards]**&#x200B;框架显示不同的数字。
+根据所选帐户的&#x200B;**[!UICONTROL Active Primary Shards]**&#x200B;服务的活动主分片的数量，[!DNL Elasticsearch]框架显示不同的数字。
 
 从[!DNL Elasticsearch]：最终指南[2.x]：
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Elasticsearch index information]
 
-![索引信息Elasticsearch](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
+![Elasticsearch索引信息](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
 **[!UICONTROL Elasticsearch index information]**&#x200B;表显示索引名称、它所在的节点、索引文档数、索引运行状况以及在特定时间的索引大小（以MB为单位）。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ![Elasticsearch进程CPU](../../assets/tools/elasticsearch-process-cpu.jpg)
 
-**[!UICONTROL Elasticsearch process CPU %]**&#x200B;帧显示[!DNL Elasticsearch]进程在所选时间范围内的进程CPU百分比。
+**[!UICONTROL Elasticsearch process CPU %]**&#x200B;框架显示选定时间范围内进程[!DNL Elasticsearch]的CPU百分比。
 
 ## [!UICONTROL Elasticsearch Memory garbage collection]
 
@@ -68,13 +68,13 @@ ht-degree: 0%
 
 ## [!UICONTROL Elasticsearch Index information]
 
-![索引信息Elasticsearch](../../assets/tools/elasticsearch-index-information-2.jpg)
+![Elasticsearch索引信息](../../assets/tools/elasticsearch-index-information-2.jpg)
 
 创建和更新索引时，索引运行状况可能会发生更改。
 
 ## [!UICONTROL Elasticsearch Index Size]
 
-![Elasticsearch的索引大小](../../assets/tools/elasticsearch-index-size.jpg)
+![Elasticsearch索引大小](../../assets/tools/elasticsearch-index-size.jpg)
 
 **[!UICONTROL Elasticsearch Index Size]**&#x200B;帧指示所选时间范围内的索引名称和大小。 它可能会指示网站索引方式的问题。
 
@@ -86,6 +86,6 @@ ht-degree: 0%
 
 ## [!UICONTROL Elasticsearch Unassigned Shards]：
 
-![Elasticsearch未分配的分片](../../assets/tools/elasticsearch-unassigned-shards.jpg)
+![Elasticsearch未分配分片](../../assets/tools/elasticsearch-unassigned-shards.jpg)
 
 未分配的分片将导致群集从绿色状态移动到黄色状态。

@@ -4,7 +4,7 @@ description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerc
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2093'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
 | `--base-url` | 用于以下列任何格式访问管理员和店面的基本URL：<br><br>`http[s]://<host or ip>/<your install dir>/`。<br><br>**注意：**&#x200B;方案(http://或https://)和尾随斜杠都是必需的。<br><br>`<your install dir>`是安装应用程序的docroot相对路径。 根据您设置Web服务器和虚拟主机的方式，路径可能是magento2或为空。<br><br>要访问本地主机上的应用程序，您可以使用`http://127.0.0.1/<your install dir>/`或`http://127.0.0.1/<your install dir>/`。<br><br>- `{{base_url}}`，表示由虚拟主机设置或Docker等虚拟化环境定义的基本URL。 例如，如果您使用主机名commerce.example.com设置虚拟主机，则可以使用`--base-url={{base_url}}`安装应用程序，并使用类似`http://commerce.example.com/admin`的URL访问管理员。 | 是 |
-| `--backend-frontname` | 用于访问管理员的统一资源标识符(URI)。 您可以忽略此参数，以便应用程序使用以下模式为您生成随机URI <code>admin_jkhgdfq</code>.<br><br>出于安全考虑，我们建议使用随机URI。 黑客或恶意软件更难利用随机URI。<br><br>URI显示在安装结束时。 您可以稍后随时使用`magento info:adminuri`命令显示它。<br><br>如果您选择输入值，我们建议您不要使用诸如admin、backend之类的常用词。 管理员URI只能包含字母数字值和下划线字符(`_`)。 | 否 |
+| `--backend-frontname` | 用于访问管理员的统一资源标识符(URI)。 您可以忽略此参数，以便应用程序使用以下模式为您生成随机URI <code>admin_jkhgdfq</code>。<br><br>出于安全考虑，我们建议使用随机URI。 黑客或恶意软件更难利用随机URI。<br><br>URI显示在安装结束时。 您可以稍后随时使用`magento info:adminuri`命令显示它。<br><br>如果您选择输入值，我们建议您不要使用诸如admin、backend之类的常用词。 管理员URI只能包含字母数字值和下划线字符(`_`)。 | 否 |
 | `--db-host` | 使用以下任一项：<br><br> — 数据库服务器的完全限定主机名或IP地址。<br><br>- `localhost`（默认）或`127.0.0.1`（如果数据库服务器与Web服务器位于同一主机上）。localhost表示MySQL客户端库使用UNIX套接字连接到数据库。 `127.0.0.1`导致客户端库使用TCP协议。 有关套接字的详细信息，请参阅[PHP PDO_MYSQL文档](https://www.php.net/manual/en/ref.pdo-mysql.php)。<br><br>**注意：**&#x200B;您可以选择在其主机名中指定数据库服务器端口，如www.example.com:9000 | 是 |
 | `--db-name` | 要在其中安装数据库表的数据库实例的名称。<br><br>默认值为`magento2`。 | 是 |
 | `--db-user` | 数据库实例所有者的用户名。<br><br>默认值为`root`。 | 是 |
@@ -117,13 +117,13 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 
 >[!TIP]
 >
->若要在安装期间启用远程存储服务，请参阅&#x200B;_配置指南_&#x200B;中的[配置远程存储](../../configuration/remote-storage/remote-storage.md)。
+>若要在安装期间启用远程存储服务，请参阅[配置指南](../../configuration/remote-storage/remote-storage.md)中的&#x200B;_配置远程存储_。
 
 **搜索引擎配置选项：**
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
-| `--search-engine` | 搜索引擎的版本。 可能的值为`elasticsearch7`、`elasticsearch6`和`elasticsearch5`。 默认值为`elasticsearch7`。 如果您已将OpenSearch作为搜索引擎安装，请指定值`elasticsearch7`。 Elasticsearch5已被弃用，不建议使用。 | 否 |
+| `--search-engine` | 搜索引擎的版本。 可能的值为`elasticsearch7`、`elasticsearch6`和`elasticsearch5`。 默认值为`elasticsearch7`。 如果您已将OpenSearch作为搜索引擎安装，请指定值`elasticsearch7`。 Elasticsearch 5已被弃用，不建议使用。 | 否 |
 | `--elasticsearch-host` | 运行搜索引擎的主机名或IP地址。 默认值为`localhost`。 | 否 |
 | `--elasticsearch-port` | 传入HTTP请求的端口。 默认值为`9200`。 | 否 |
 | `--elasticsearch-index-prefix` | 标识搜索索引的前缀。 默认值为`magento2`。 | 否 |
@@ -185,7 +185,7 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 
 以下示例使用下列选项安装应用程序：
 
-* 该应用程序安装在`localhost`上相对于Web服务器docroot的`magento2`目录中，并且管理员的路径为`admin`；因此：
+* 该应用程序安装在`magento2`上相对于Web服务器docroot的`localhost`目录中，并且管理员的路径为`admin`；因此：
 
   您的店面URL是`http://127.0.0.1`
 
@@ -204,7 +204,7 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 * 默认语言为`en_US` （美国英语）
 * 默认货币为美元
 * 默认时区为美国中部（美洲/芝加哥）
-* Elasticsearch7安装在`es-host.example.com`上并连接到9200端口
+* Elasticsearch 7安装在`es-host.example.com`上并连接到端口9200
 
 ```bash
 magento setup:install --base-url=http://127.0.0.1/magento2/ \
@@ -255,7 +255,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 
 以下示例使用下列选项安装应用程序：
 
-* Magapplication安装在`localhost`上相对于Web服务器docroot的`magento2`目录中，并且管理员的路径为`admin`；因此：
+* Magapplication安装在`magento2`上相对于Web服务器docroot的`localhost`目录中，并且管理员的路径为`admin`；因此：
 
   您的店面URL是`http://127.0.0.1`
 
@@ -276,7 +276,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 * 您使用`ORD$`销售订单增量前缀（由于它包含特殊字符[`$`]，因此必须用双引号将值括起来）
 * 会话数据保存在数据库中
 * 使用服务器重写
-* Elasticsearch7安装在`es-host.example.com`上并连接到9200端口
+* Elasticsearch 7安装在`es-host.example.com`上并连接到端口9200
 
 ```bash
 magento setup:install --base-url=http://127.0.0.1/magento2/ \

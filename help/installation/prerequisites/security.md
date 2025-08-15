@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe没有关于使用SELinux的建议；如果需要，可以将其用于增强安全性。 如果您使用SELinux，则必须对其进行正确配置，否则Adobe Commerce会无法预测地正常运行。 如果选择使用SELinux，请查阅[CentOS wiki](https://wiki.centos.org/HowTos/SELinux)之类的资源以设置规则来启用通信。
+>Adobe没有关于使用SELinux的建议；如果需要，您可以将其用于增强安全性。 如果您使用SELinux，则必须对其进行正确配置，否则Adobe Commerce会无法预测地正常运行。 如果选择使用SELinux，请查阅[CentOS wiki](https://wiki.centos.org/HowTos/SELinux)之类的资源以设置规则来启用通信。
 
 ## 有关使用Apache安装的建议
 
@@ -65,7 +65,7 @@ chcon -R --type httpd_sys_rw_content_t <magento_root>/generated
 
 ## 在防火墙中打开端口
 
-根据您的安全要求，您可能会发现有必要打开防火墙中的端口80和其他端口。 由于网络安全的敏感性质，Adobe强烈建议您在继续操作之前先咨询IT部门。 以下是一些建议的参考资料：
+根据您的安全要求，您可能会发现有必要打开防火墙中的端口80和其他端口。 由于网络安全的敏感性质，Adobe强烈建议您在继续操作之前咨询您的IT部门。 以下是一些建议的参考资料：
 
 * Ubuntu： [Ubuntu文档页面](https://help.ubuntu.com/community/IptablesHowTo)
 * CentOS： [CentOS操作方法](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html)。

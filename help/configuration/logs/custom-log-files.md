@@ -44,9 +44,9 @@ ht-degree: 0%
    </virtualType>
    ```
 
-   `Magento\Payment\Model\Method\MyCustomDebug`的`name`值必须是唯一的。
+   `name`的`Magento\Payment\Model\Method\MyCustomDebug`值必须是唯一的。
 
-1. 在另一具有唯一`name`的[虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)中定义处理程序：
+1. 在另一具有唯一[的](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)虚拟类型`name`中定义处理程序：
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -58,7 +58,7 @@ ht-degree: 0%
    </virtualType>
    ```
 
-1. 在`Magento\Payment\Model\Method\Logger`对象中插入`MyCustomLogger` [虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)：
+1. 在`MyCustomLogger`对象中插入[ ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)虚拟类型`Magento\Payment\Model\Method\Logger`：
 
    ```xml
    <type name="Magento\Payment\Model\Method\Logger">
@@ -68,7 +68,7 @@ ht-degree: 0%
    </type>
    ```
 
-1. 虚拟类`Magento\Payment\Model\Method\MyCustomDebug`被插入到`Magento\Payment\Model\Method\Logger`类中`$logger`属性的`debug`处理程序中。
+1. 虚拟类`Magento\Payment\Model\Method\MyCustomDebug`被插入到`debug`类中`$logger`属性的`Magento\Payment\Model\Method\Logger`处理程序中。
 
    ```xml
    ...
@@ -117,7 +117,7 @@ ht-degree: 0%
    }
    ```
 
-1. 在模块的`di.xml`文件中将此类的处理程序定义为[虚拟类型](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)。
+1. 在模块的[文件中将此类的处理程序定义为](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)虚拟类型`di.xml`。
 
    ```xml
    <virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -193,7 +193,7 @@ ht-degree: 0%
    }
    ```
 
-1. 类`Vendor\ModuleName\Logger\Handler\ErrorHandler`被插入到`Vendor\ModuleName\Observer\MyObserver`中`$logger`属性的`error`处理程序中。
+1. 类`Vendor\ModuleName\Logger\Handler\ErrorHandler`被插入到`error`中`$logger`属性的`Vendor\ModuleName\Observer\MyObserver`处理程序中。
 
    ```xml
    ...

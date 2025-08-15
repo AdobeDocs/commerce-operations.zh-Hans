@@ -48,11 +48,11 @@ ht-degree: 0%
 
 - 如果您有在执行触发器时写入某些数据的自定义触发器，请将此逻辑移动到直接写入审计表。 例如，通过在应用程序代码中添加其他查询，在要为其创建触发器的查询之后。
 - 查看现有的自定义触发器，并考虑删除它们并直接从应用程序端写入表。 使用[`SHOW TRIGGERS` SQL语句](https://dev.mysql.com/doc/refman/8.0/en/show-triggers.html)检查数据库中的现有触发器。
-- 如需其他帮助、问题或顾虑，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans&#submit-ticket)。
+- 如需其他帮助、问题或顾虑，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?#submit-ticket)。
 
 ## 从属连接
 
-Adobe Commerce可以异步读取多个数据库。 如果您预计部署在云基础架构Pro体系结构上的Commerce站点的MySQL数据库负载会很高，则Adobe建议启用MYSQL从属连接。
+Adobe Commerce可以异步读取多个数据库。 如果您预计部署在云基础架构Pro架构上的Commerce站点的MySQL数据库负载会很高，Adobe建议启用MYSQL从属连接。
 
 启用MYSQL从属连接时，Adobe Commerce使用到数据库的只读连接来接收非主节点上的只读通信。 当只有一个节点处理读写通信时，通过负载平衡提高了性能。
 
@@ -62,7 +62,7 @@ Adobe Commerce可以异步读取多个数据库。 如果您预计部署在云�
 
 ### 配置
 
-在云基础架构上的Adobe Commerce中，您可以通过设置[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#mysql_use_slave_connection)变量来覆盖MYSQL从属连接的默认配置。 将此变量设置为`true`可自动使用到数据库的只读连接。
+在云基础架构上的Adobe Commerce中，您可以通过设置[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#mysql_use_slave_connection)变量来覆盖MYSQL从属连接的默认配置。 将此变量设置为`true`可自动使用到数据库的只读连接。
 
 **启用MySQL从属连接**：
 

@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Realpath缓存会缓存引用的文件名的实际文件系统路径，而不是每次都查找它们。 每次执行各种文件功能或需要使用文件并使用相对路径时，PHP都必须查找该文件真正存在的位置。
 
-要提高Commerce性能，请使用以下推荐的设置来配置`php.ini`文件中的`realpath_cache`设置：
+要提高Commerce性能，请使用以下推荐的设置来配置`realpath_cache`文件中的`php.ini`设置：
 
 - 将缓存大小设置为10 MB (`realpath cache_size=10M`)
 - 将生存时间(ttl)设置为7200秒(`realpath_cache_ttl=7200`)

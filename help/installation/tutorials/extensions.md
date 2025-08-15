@@ -20,7 +20,7 @@ ht-degree: 0%
 - 主题（更改店面和管理员的外观）
 - 语言包（将店面和管理员本地化）
 
-本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
+本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
 
 您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 要安装扩展，您必须：
 
 1. 从Commerce Marketplace或其他扩展开发人员处获取扩展。
-1. 如果从Commerce Marketplace安装扩展，请确保`composer.json`文件中存在`repo.magento.com`存储库：
+1. 如果从Commerce Marketplace安装扩展，请确保`repo.magento.com`文件中存在`composer.json`存储库：
 
    ```bash
    "repositories": [
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->或者，您可以在扩展的`composer.json`文件中找到&#x200B;_any_&#x200B;扩展的编辑器名称和版本(无论您是在Commerce Marketplace上还是在其他位置购买的)。
+>或者，您可以在扩展的&#x200B;_文件中找到_ any`composer.json`扩展的编辑器名称和版本(无论您是在Commerce Marketplace上还是在其他位置购买的)。
 
 ### 更新编辑器依赖项
 
@@ -156,7 +156,7 @@ bin/magento module:status
    bin/magento setup:upgrade
    ```
 
-1. 重新编译项目：在生产模式下，您可能会收到一条消息“请重新运行Magento编译命令”。 应用程序不会提示您以开发人员模式运行compile命令。
+1. 重新编译项目：在生产模式下，您可能会收到一条消息，显示“请重新运行Magento编译命令”。 应用程序不会提示您以开发人员模式运行compile命令。
 
    ```bash
    bin/magento setup:di:compile

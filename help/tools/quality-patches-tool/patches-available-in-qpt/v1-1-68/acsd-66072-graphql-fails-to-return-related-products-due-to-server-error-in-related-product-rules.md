@@ -4,13 +4,13 @@ description: 应用ACSD-66072补丁以修复在配置相关产品规则时由于
 feature: GraphQL, Products
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: b1cd5383d774ab0ed97b80a4abf7df5706706ea5
+exl-id: a706a710-aed3-41a4-bc87-3150e9ba95f7
+source-git-commit: 8bb921704239d2b4622931a7814759bda5e9401f
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66072：GraphQL无法在“产品详细信息”页面上返回相关产品
 
@@ -28,7 +28,7 @@ ACSD-66072修补程序修复了在配置&#x200B;**[!UICONTROL Related Products R
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -181,7 +181,7 @@ report.ERROR: Deprecated Functionality: explode(): Passing null to parameter #2 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

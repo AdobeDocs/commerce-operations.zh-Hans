@@ -27,23 +27,23 @@ ht-degree: 0%
 
 ## 更新所有软件
 
-[系统要求](../../installation/system-requirements.md)准确描述了已使用Adobe Commerce版本测试的第三方软件版本。
+[系统要求](../../installation/system-requirements.md)准确地描述了哪些版本的第三方软件已通过Adobe Commerce版本测试。
 
-确保更新了环境中的所有系统要求和依赖项。 请参阅PHP [7.4](https://www.php.net/manual/en/migration74.php)、PHP [8.0](https://www.php.net/manual/en/migration80.php)、PHP [8.1](https://www.php.net/manual/en/migration81.php)和[必需的PHP设置](../../installation/prerequisites/php-settings.md#php-settings)。
+确保更新了环境中的所有系统要求和依赖项。 请参阅PHP [7.4](https://www.php.net/manual/en/migration74.php)、PHP [8.0](https://www.php.net/manual/en/migration80.php)、PHP [8.1](https://www.php.net/manual/en/migration81.php)和[所需的PHP设置](../../installation/prerequisites/php-settings.md#php-settings)。
 
 >[!NOTE]
 >
->对于云基础架构Pro项目上的Adobe Commerce，您必须创建[支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)票证，才能在暂存和生产环境中安装或更新服务。 指示所需的服务更改，并在票证中包含更新的`.magento.app.yaml`和`services.yaml`文件以及PHP版本。 Cloud Infrastructure团队更新项目最多可能需要48小时。 请参阅[支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html?lang=zh-Hans#supported-software-and-services)。
+>对于云基础架构Pro项目上的Adobe Commerce，您必须创建[支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)票证，以在暂存环境和生产环境中安装或更新服务。 指示所需的服务更改，并在票证中包含更新的`.magento.app.yaml`和`services.yaml`文件以及PHP版本。 Cloud Infrastructure团队更新项目最多可能需要48小时。 请参阅[支持的软件和服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services)。
 
 ## 验证是否安装了受支持的搜索引擎
 
 Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 
-**如果要从2.3.x升级到2.4**，则必须检查在2.3.x实例中是否使用MySQL、Elasticsearch或第三方扩展作为目录搜索引擎。 结果确定在升级到2.4之前&#x200B;_必须_&#x200B;执行的操作。
+**如果您要从2.3.x升级到2.4**，则必须检查您在2.3.x实例中是使用MySQL、Elasticsearch还是第三方扩展作为目录搜索引擎。 结果确定在升级到2.4之前&#x200B;_必须_&#x200B;做什么。
 
-**如果要在2.3.x或2.4.x发行行内升级修补程序版本**，如果已安装Elasticsearch7.x，则可选择地[迁移到OpenSearch](opensearch-migration.md)。
+**如果要升级2.3.x或2.4.x版本行中的修补程序版本**，如果已安装Elasticsearch 7.x，则可以选择[迁移到OpenSearch](opensearch-migration.md)。
 
-您可以使用命令行或管理员来确定您的目录搜索引擎：
+您可以使用命令行或管理员来确定目录搜索引擎：
 
 * 输入`bin/magento config:show catalog/search/engine`命令。 该命令返回值`mysql`、`elasticsearch`(表示已配置Elasticsearch 2)、`elasticsearch5`、`elasticsearch6`、`elasticsearch7`或自定义值，表示您已安装第三方搜索引擎。 对于低于2.4.6的版本，为Elasticsearch 7或OpenSearch引擎使用`elasticsearch7`值。 对于版本2.4.6及更高版本，请使用OpenSearch引擎的`opensearch`值。
 
@@ -60,14 +60,14 @@ Adobe Commerce需要安装Elasticsearch或OpenSearch才能使用该软件。
 * 配置[nginx](../../installation/prerequisites/search-engine/configure-nginx.md)或[Apache](../../installation/prerequisites/search-engine/configure-apache.md)以使用您的搜索引擎
 * [配置Commerce以使用Elasticsearch](../../configuration/search/configure-search-engine.md)并重新索引
 
-一些第三方目录搜索引擎在Adobe Commerce搜索引擎上运行。 请与供应商联系，以确定是否必须更新扩展。
+一些第三方目录搜索引擎在Adobe Commerce搜索引擎上运行。 请与供应商联系以确定是否必须更新扩展。
 
 ### MySQL 8.4更改
 
-Adobe在2.4.8发行版中添加了对MySQL 8.4的支持。
-本节介绍开发人员应了解的MySQL 8.4的主要更改。
+Adobe在2.4.8版本中添加了对MySQL 8.4的支持。
+本节介绍开发人员应了解的对MySQL 8.4的主要更改。
 
-#### 已弃用的非标准密钥
+#### 已弃用的非标准键
 
 使用非唯一键或部分键作为外键是不标准的，在MySQL 8.4中已弃用。从MySQL 8.4.0开始，您必须通过将[`restrict_fk_on_non_standard_key`](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_restrict_fk_on_non_standard_key)设置为`OFF`或使用`--skip-restrict-fk-on-non-standard-key`选项启动服务器来显式启用此类密钥。
 
@@ -88,7 +88,7 @@ Adobe在2.4.8发行版中添加了对MySQL 8.4的支持。
    ```
 
 1. 将MySQL升级到版本8.4。
-1. 在`my.cnf`文件的`[mysqld]`中将`restrict_fk_on_non_standard_key`设置为`OFF`。
+1. 在`restrict_fk_on_non_standard_key`文件的`OFF`中将`[mysqld]`设置为`my.cnf`。
 
    ```bash
    [mysqld]
@@ -99,7 +99,7 @@ Adobe在2.4.8发行版中添加了对MySQL 8.4的支持。
    >
    >如果不将`restrict_fk_on_non_standard_key`的值更改为`OFF`，则在导入期间将收到以下错误：
    >
-   >```sql
+   ```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
 1. 重新启动MySQL服务器。
@@ -122,7 +122,7 @@ Adobe在2.4.8发行版中添加了对MySQL 8.4的支持。
 
 ### 搜索引擎
 
-在升级到2.4.0之前，必须安装和配置Elasticsearch 7.6或更高版本或者OpenSearch 1.2。Adobe不再支持Elasticsearch 2.x、5.x和6.x。_配置指南_&#x200B;中的[搜索引擎配置](../../configuration/search/configure-search-engine.md)介绍了将Elasticsearch升级到支持的版本后必须执行的任务。
+在升级到2.4.0之前，必须安装和配置Elasticsearch 7.6或更高版本或者OpenSearch 1.2。Adobe不再支持Elasticsearch 2.x、5.x和6.x。[配置指南](../../configuration/search/configure-search-engine.md)中的&#x200B;_搜索引擎配置_&#x200B;介绍了将Elasticsearch升级到支持的版本后必须执行的任务。
 
 有关在部署到生产环境之前备份数据、检测潜在迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
 
@@ -154,7 +154,7 @@ Adobe Commerce 2.4.6中引入了对Elasticsearch 8.x的支持。以下说明显�
 
 1. 将Elasticsearch 7.x服务器升级到8.x，并确保已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
 
-1. 通过将以下配置添加到`elasticsearch.yml`文件并重新启动Elasticsearch8.x服务，启用`id_field_data`字段。
+1. 通过将以下配置添加到您的`id_field_data`文件并重新启动Elasticsearch 8.x服务来启用`elasticsearch.yml`字段。
 
    ```yaml
    indices:
@@ -164,33 +164,33 @@ Adobe Commerce 2.4.6中引入了对Elasticsearch 8.x的支持。以下说明显�
 
    >[!INFO]
    >
-   >为了支持Elasticsearch8.x，Adobe Commerce 2.4.6默认情况下不允许`indices.id_field_data`属性，并使用`docvalue_fields`属性中的`_id`字段。
+   >为了支持Elasticsearch 8.x，Adobe Commerce 2.4.6在默认情况下不允许使用`indices.id_field_data`属性，并使用`_id`属性中的`docvalue_fields`字段。
 
-1. 在Adobe Commerce项目的根目录中，更新您的Composer依赖项以删除`Magento_Elasticsearch7`模块并安装`Magento_Elasticsearch8`模块。
+1. 在Adobe Commerce项目的根目录中，更新编辑器依赖项以删除`Magento_Elasticsearch7`模块并安装`Magento_Elasticsearch8`模块。
 
    ```bash
    composer require magento/module-elasticsearch-8 --update-with-all-dependencies
    ```
 
-   如果遇到`psr/http-message`的依赖项错误，请单击展开以下故障诊断部分：
+   如果您遇到`psr/http-message`的依赖关系错误，请单击以展开以下疑难解答部分：
 
-   +++疑难解答
+   +++故障排除
 
-   如果在安装Elasticsearch8时遇到依赖关系冲突，特别是与`psr/http-message`的冲突，可以通过以下步骤解决此问题：
+   如果在安装Elasticsearch 8时遇到依赖关系冲突，特别是与`psr/http-message`的冲突，可以通过执行以下步骤来解决此问题：
 
-   1. 首先，需要在不更新其他依赖项的情况下安装Elasticsearch8模块：
+   1. 首先，需要Elasticsearch 8模块，而不更新其他依赖项：
 
       ```bash
       composer require magento/module-elasticsearch-8 --no-update
       ```
 
-   1. 然后更新Elasticsearch8模块和`aws/aws-sdk-php`包：
+   1. 然后更新Elasticsearch 8模块和`aws/aws-sdk-php`包：
 
       ```bash
       composer update magento/module-elasticsearch-8 aws/aws-sdk-php -W
       ```
 
-   此方法适用于2.4.7-p4和PHP 8.3。出现此问题的原因是`aws/aws-sdk-php`需要`psr/http-message >= 2.0`，这可能导致冲突。 上述步骤可帮助解决这些依赖性问题。
+   此方法适用于2.4.7-p4和PHP 8.3。出现此问题的原因是`aws/aws-sdk-php`需要`psr/http-message >= 2.0`，这可能会导致冲突。 上述步骤有助于解决这些依赖性问题。
 
    +++
 
@@ -200,7 +200,7 @@ Adobe Commerce 2.4.6中引入了对Elasticsearch 8.x的支持。以下说明显�
    bin/magento setup:upgrade
    ```
 
-1. 在[!DNL Admin]中[配置Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin)。
+1. 在[中](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin)配置Elasticsearch[!DNL Admin]。
 
 1. 重新索引目录索引。
 
@@ -218,9 +218,9 @@ Adobe Commerce 2.4.6中引入了对Elasticsearch 8.x的支持。以下说明显�
 
 如果您无意中升级了服务器上的Elasticsearch版本，或确定由于任何其他原因需要降级，则还必须更新Adobe Commerce项目依赖项。 例如，从Elasticsearch 8.x降级到7.x
 
-1. 将Elasticsearch8.x服务器降级到7.x，并确保已启动并且正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
+1. 将Elasticsearch 8.x服务器降级为7.x，并确保其已启动并正在运行。 请参阅[Elasticsearch文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)。
 
-1. 在Adobe Commerce项目的根目录中，更新书写器依赖项以删除`Magento_Elasticsearch8`模块及其Composer依赖项并安装`Magento_Elasticsearch7`模块。
+1. 在Adobe Commerce项目的根目录中，更新编辑器依赖项以删除`Magento_Elasticsearch8`模块及其编辑器依赖项，并安装`Magento_Elasticsearch7`模块。
 
    ```bash
    composer remove magento/module-elasticsearch-8
@@ -232,7 +232,7 @@ Adobe Commerce 2.4.6中引入了对Elasticsearch 8.x的支持。以下说明显�
    bin/magento setup:upgrade
    ```
 
-1. 在[!DNL Admin]中[配置Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin)。
+1. 在[中](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin)配置Elasticsearch[!DNL Admin]。
 
 1. 重新索引目录索引。
 
@@ -283,7 +283,7 @@ Adobe建议将打开的文件[ulimit](https://ss64.com/bash/ulimit.html)设置�
 
 >[!IMPORTANT]
 >
->我们建议您避免为`php.ini`文件中的`pcre.recursion_limit`属性设置值，因为它可能会导致不完整的回滚，并且不会出现失败通知。
+>我们建议您避免为`pcre.recursion_limit`文件中的`php.ini`属性设置值，因为它可能会导致不完整的回滚，并且不会出现失败通知。
 
 ## 验证cron作业是否正在运行
 
@@ -346,7 +346,7 @@ Adobe Commerce 2.4包含安全增强功能，这些功能要求将某些数据�
 
    >[!NOTE]
    >
-   > `DATA_CONVERTER_BATCH_SIZE`需要内存；请避免将其设置为较大的值（约1 GB），而不先对其进行测试。
+   > `DATA_CONVERTER_BATCH_SIZE`需要内存；如果不先测试它，请避免将其设置为较大的值（约1 GB）。
 
 1. 升级完成后，您可以取消设置变量：
 
@@ -423,23 +423,23 @@ ls -la /var/www/html/magento2/pub
 
 ## 设置`pub/`目录根
 
-有关更多详细信息，请参阅[修改Docroot以提高安全性](../../installation/tutorials/docroot.md)。
+有关详细信息，请参阅[修改docroot以提高安全性](../../installation/tutorials/docroot.md)。
 
-## 安装Composer更新插件
+## 安装编辑器更新插件
 
-[`magento/composer-root-update-plugin`](https://github.com/magento/composer-root-update-plugin) Composer插件解析了在更新到新产品要求之前必须对根项目`composer.json`文件所做的更改。
+[`magento/composer-root-update-plugin`](https://github.com/magento/composer-root-update-plugin) Composer插件解析了在更新到新产品要求之前必须对根项目`composer.json`文件进行的更改。
 
 该插件通过识别和帮助您解决相关性冲突，而不是要求您手动识别和修复这些冲突，从而部分自动化了手动升级。
 
 要安装插件，请执行以下操作：
 
-1. 将该包添加到您的`composer.json`文件。
+1. 将包添加到您的`composer.json`文件。
 
    ```bash
    composer require magento/composer-root-update-plugin ~2.0 --no-update
    ```
 
-1. 更新依赖项：
+1. 更新依赖关系：
 
    ```bash
    composer update

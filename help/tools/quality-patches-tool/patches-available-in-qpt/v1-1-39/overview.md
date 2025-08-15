@@ -26,8 +26,8 @@ QPT v1.1.39包含以下修补程序：
 1. **ACSD-54342**：修复了不正确的错误消息&#x200B;*数据结构中的错误：导入没有有效数据的CSV文件时，值会混合*。
 1. **ACSD-54660**：添加了新的输入属性&#x200B;*sort*，以便按`sort_field`和`sort_direction`对GraphQL中的客户订单进行排序。
 1. **ACSD-54776**：修复了为第二个网站、商店和商店视图保存未选中&#x200B;*[!UICONTROL Use Default Value]*&#x200B;和非默认产品字段值的问题。
-1. **ACSD-53998**：修复了从客户帐户注销后，基于&#x200B;**[!UICONTROL Customer Segment]**&#x200B;的&#x200B;**[!UICONTROL Dynamic Block]**&#x200B;无法正常工作的问题。
-1. **ACSD-53204**：修复&#x200B;*无法保存产品。使用`rest/V1/products/<sku>/media`端点向产品库添加图像的并发请求时出现*&#x200B;错误。
+1. **ACSD-53998**：修复了从客户帐户注销后，基于&#x200B;**[!UICONTROL Dynamic Block]**&#x200B;的&#x200B;**[!UICONTROL Customer Segment]**&#x200B;无法正常工作的问题。
+1. **ACSD-53204**：修复&#x200B;*无法保存产品。使用*&#x200B;端点向产品库添加图像的并发请求时出现`rest/V1/products/<sku>/media`错误。
 1. **ACSD-47657**：添加了AWS凭据的缓存机制。 凭据提供程序现在使用Magento缓存来缓存从AWS检索到的凭据以进行EC2配置。
 
 使用左侧的菜单导航到特定的修补程序页面。

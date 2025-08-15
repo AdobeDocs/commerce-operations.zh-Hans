@@ -27,6 +27,6 @@ QPT v1.1.52包含以下修补程序：
 1. **ACSD-60684**：修复了按多个字段排序的GraphQL产品无法按预期工作的问题。
 1. **ACSD-60788**：修复了由于内容安全策略(CSP)错误而无法执行[!DNL Google Tag Manager]的自定义脚本的问题。
 1. **ACSD-61322**：修复了未分配给默认（常规组）的[!UICONTROL Shared Catalog]的产品/类别仍包含在XML Sitemap中的问题。
-1. **ACSD-61366**：修复了在为DB连接指定端口时，必须在主机参数&#x200B;*中配置*&#x200B;端口的情况下运行`setup:static-content:deploy --jobs 4`命令且多个作业失败的问题。
+1. **ACSD-61366**：修复了在为DB连接指定端口时，必须在主机参数`setup:static-content:deploy --jobs 4`中配置&#x200B;*端口的情况下运行*&#x200B;命令且多个作业失败的问题。
 
 使用左侧的菜单导航到特定的修补程序页面。

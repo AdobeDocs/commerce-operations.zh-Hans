@@ -21,11 +21,11 @@ ht-degree: 0%
 由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
 - `memcache` (_no d_) — 不是定期维护的较旧但常用的扩展。
-当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache[&#128279;](https://www.php.net/manual/en/book.memcache.php)的PHP文档。
+当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache[的](https://www.php.net/manual/en/book.memcache.php)PHP文档。
 
   Ubuntu的确切名称为`php5-memcache`。
 
-- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached[&#128279;](https://www.php.net/manual/en/book.memcached.php)的PHP文档。
+- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached[的](https://www.php.net/manual/en/book.memcached.php)PHP文档。
 
   Ubuntu的确切名称为`php5-memcached`。
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 1. 继续下一部分。
 
-## 在安装Magento之前验证memcached是否有效
+## 在安装Magento之前验证memcached的工作原理
 
 Adobe建议测试memcached，以确保它在安装Commerce之前正常工作。 执行此操作只需要几分钟的时间，并且以后可以简化故障排除。
 

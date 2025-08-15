@@ -1,6 +1,6 @@
 ---
 title: '[!UICONTROL Summary]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL Summary]选项卡。
+description: 了解[!UICONTROL Summary]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
 source-git-commit: 790089c178570ee69f33cc04b17800db5563741e
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # [!UICONTROL Summary]选项卡
 
-[!DNL Observation for Adobe Commerce]的[!UICONTROL Summary]选项卡用于快速查看站点遇到的一些问题，以帮助您自动解决或识别站点问题的潜在根本原因。 其他选项卡提供有关组件服务、数据库、基础架构和流程状态的更深入的信息。
+[!UICONTROL Summary]的[!DNL Observation for Adobe Commerce]选项卡用于快速查看站点遇到的一些问题，以帮助您自动解决或识别站点问题的潜在根本原因。 其他选项卡提供有关组件服务、数据库、基础架构和流程状态的更深入的信息。
 
 ## [!UICONTROL Transaction Overview]
 
 ![事务概述](../../assets/tools/transaction-overview.jpg)
 
-### [什么是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-，什么%20is%20a%20transaction%3F，工作%20in%20a%20software%20application。&amp;text=For%20APM%2C%20it%20will%20overly，当%20the%20response%20is%20sent)
+### [什么是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-，什么%20is%20a%20transaction%3F，工作%20in%20a%20software%20application。&text=For%20APM%2C%20it%20will%20overly，当%20the%20response%20is%20sent)
 
 “在[!DNL New Relic]，事务被定义为软件应用程序中的一个逻辑工作单元。 具体来说，它是指构成该工作单元的函数调用和方法调用。 它通常指的是Web交易，代表一种活动，从应用程序收到Web请求时到响应发送时发生的活动。”
 
@@ -56,9 +56,9 @@ ht-degree: 0%
 
 ## [!UICONTROL CPU % by host]
 
-主机![&#128279;](../../assets/tools/cpu-percent-by-host.jpg)的CPU百分比
+按主机![显示的](../../assets/tools/cpu-percent-by-host.jpg)CPU百分比
 
-所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU使用率的更多提示，请参阅[在Adobe Commerce上使用New Relic排除性能故障](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=zh-Hans)。
+所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU利用率的更多提示，请参阅[在Adobe Commerce上使用New Relic进行性能故障诊断](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)。
 
 ## [!UICONTROL Alerts during timeframe]
 
@@ -68,9 +68,9 @@ ht-degree: 0%
 
 ## [!UICONTROL CPU Usage]
 
-![CPU使用率](../../assets/tools/cpu-usage.jpg)
+![CPU使用情况](../../assets/tools/cpu-usage.jpg)
 
-如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans)为您的网站启用[!DNL New Relic Infrastructure]。
+如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html)为您的网站启用[!DNL New Relic Infrastructure]。
 
 ## [!UICONTROL Average Response Time]
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 * &#39;%NOTICE： Generate command completed%&#39;)作为&#39;gen_compl&#39;
 * “%NOTICE： Deployment completed%”)作为“deploy_compl”
 * &#39;%NOTICE：正在启动后期部署。%&#39;)作为“start_pdeploy”
-* &#39;%NOTICE： Post-deploy is complete%&#39;)作为&#39;pdeploy&#39;
+* &#39;%NOTICE： Post-deploy已完成%&#39;)作为&#39;pdeploy&#39;
 * “%deploy-complete%”)作为“cl_deploy_compl”
 
 ## [!UICONTROL IP Frequency]
@@ -245,7 +245,7 @@ ht-degree: 0%
 
 ![数据库跟踪](../../assets/tools/database-traces.jpg)
 
-**[!UICONTROL Database traces]**&#x200B;框架查看来自[!DNL New Relic]的[sql跟踪](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/)实体的数据并返回跟踪的路径。
+**[!UICONTROL Database traces]**&#x200B;框架查看来自[的](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/)sql跟踪[!DNL New Relic]实体的数据并返回跟踪的路径。
 
 ## [!UICONTROL Database mysql-slow.log]
 
@@ -310,7 +310,7 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 
 ![php进程](../../assets/tools/php-processes.jpg)
 
-[PHP-FPM](https://php-fpm.org/)是[!DNL Nginx]使用的[!UICONTROL FastCGI Process Manager]。 要了解系统要求，请参阅映射到Adobe Commerce版本的[PHP版本要求](../../installation/system-requirements.md)。 **[!UICONTROL PHP processes]**&#x200B;帧显示在所选时间线中的特定时间运行的PHP进程数。
+[PHP-FPM](https://php-fpm.org/)是[!UICONTROL FastCGI Process Manager]使用的[!DNL Nginx]。 要了解系统要求，请参阅映射到Adobe Commerce版本的[PHP版本要求](../../installation/system-requirements.md)。 **[!UICONTROL PHP processes]**&#x200B;帧显示在所选时间线中的特定时间运行的PHP进程数。
 
 ## [!UICONTROL Secondary processes]
 
@@ -380,11 +380,11 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 
 * “%all shards failed%”作为“all_shards_failed”
 * “%NoNodesAvailableException%”作为“no_alive_nodes”
-* “%PHP严重错误：未捕获错误：Elasticsearch%”的参数错误，为“wrong_param”
-* &#39;%您可以通过将您的Magento云基础结构上的Elasticsearch服务升级到“ver_err”版本%来解决此问题
+* “%PHP”严重错误：未捕获错误： Elasticsearch%”的参数错误，为“wrong_param”
+* &#39;%您可以通过将Magento Cloud基础架构上的Elasticsearch服务升级到“ver_err”版本%来解决此问题
 * “%cluster运行状况状态已从\[YELLOW\]更改为\[RED\]（原因：%）为“yel_red”
 * “%No space”作为“no_space”，在设备%上已没有剩余空间
-* “%”无法作为“failed_query”执行&lbrack;SearchRequest&lbrace;searchType=%&#39;
+* “%”无法作为“failed_query”执行[SearchRequest{searchType=%&#39;
 
 ## [!UICONTROL Cron view]
 

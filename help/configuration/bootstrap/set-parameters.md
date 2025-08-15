@@ -57,7 +57,7 @@ export MAGE_PROFILER=firebug
 
 ### Nginx设置
 
-查看&#x200B;_GitHub_&#x200B;上的[Nginx示例配置]。
+查看[GitHub]上的&#x200B;_Nginx示例配置_。
 
 ### Apache .htaccess设置
 

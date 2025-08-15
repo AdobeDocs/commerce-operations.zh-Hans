@@ -16,7 +16,7 @@ ht-degree: 0%
 通过Commerce翻译，您可以通过生成以下内容为多个地区和市场自定义商店并使其本地化：
 
 - **翻译词典**，这是自定义或翻译&#x200B;_某些_&#x200B;单词和短语（如自定义模块或主题的词典）的简便方法。
-- 允许您在Commerce应用程序中翻译&#x200B;_任何或所有_&#x200B;单词和短语的&#x200B;**语言包**。
+- 允许您在Commerce应用程序中翻译&#x200B;**任何或所有**&#x200B;单词和短语的&#x200B;_语言包_。
 
 请参阅[翻译概述]。
 
@@ -117,7 +117,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 - 所需的许可证文件
 - `composer.json`
-- [注册]语言包的`registration.php`
+- `registration.php`注册[语言包的]
 - [`language.xml`](#language-package-languagexml)元信息文件
 
 >[!INFO]
@@ -316,7 +316,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 [翻译概述]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
 [翻译词典]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
-[配置翻译]: https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-localize
+[配置翻译]: https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize
 [了解有关语言包的更多信息]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages
 [ISO 639-1]: https://www.iso.org/iso-639-language-codes.html
 [ISO 3166]: https://www.iso.org/iso-3166-country-codes.html

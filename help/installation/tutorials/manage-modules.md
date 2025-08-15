@@ -29,7 +29,7 @@ bin/magento module:status [--enabled] [--disabled] <module-list>
 
 >[!NOTE]
 >
->不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=zh-Hans#deployment-workflow)。
+>不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow)。
 
 ## 模块启用、禁用
 
@@ -92,7 +92,7 @@ Adobe Commerce允许您启用或禁用当前可用的模块；换言之，启用
 
 * 模块A与模块B冲突。您可以禁用模块A和模块B，也可以禁用任一模块，但您&#x200B;*无法*&#x200B;同时启用模块A和模块B。
 
-* 依赖项在每个模块的Adobe Commerce `composer.json`文件的`require`字段中声明。 在模块的`composer.json`文件的`conflict`字段中声明冲突。 我们使用该信息来构建依赖关系图： `A->B`表示模块A依赖模块B。
+* 依赖项在每个模块的Adobe Commerce `require`文件的`composer.json`字段中声明。 在模块的`conflict`文件的`composer.json`字段中声明冲突。 我们使用该信息来构建依赖关系图： `A->B`表示模块A依赖模块B。
 
 * *依赖关系链*&#x200B;是从模块到另一个模块的路径。 例如，如果模块A依赖于模块B，而模块B依赖于模块C，则依赖关系链为`A->B->C`。
 

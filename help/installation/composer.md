@@ -18,7 +18,7 @@ Adobe使用[Composer](https://getcomposer.org/)管理Adobe Commerce组件及其�
 - 重用第三方库，而无需将它们与源代码捆绑在一起
 - 通过使用基于组件的架构和强大的依赖关系管理，减少扩展冲突和兼容性问题
 - 遵守[PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/)标准
-- 使用其他组件重新打包Magento Open Source
+- 将Magento Open Source与其他组件重新打包
 - 在生产环境中使用Adobe Commerce软件
 
 >[!NOTE]
@@ -93,7 +93,7 @@ Adobe使用[Composer](https://getcomposer.org/)管理Adobe Commerce组件及其�
 
    >[!NOTE]
    >
-   > 如果使用使用Commerce身份验证密钥配置的编辑器`[auth.json](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`文件或环境变量，则不会提示您输入身份验证密钥。
+   > 如果使用使用Commerce身份验证密钥配置的编辑器`[auth.json](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`文件或环境变量，则不会提示您输入身份验证密钥。
 
    如果遇到错误（如`Could not find package...`或`...no matching package found`），请确保命令中没有拼写错误。 如果仍遇到错误，则可能无权下载Adobe Commerce。 请联系[Adobe Commerce支持](https://support.magento.com/hc/en-us)以获取帮助。
 

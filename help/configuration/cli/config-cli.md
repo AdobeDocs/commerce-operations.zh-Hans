@@ -28,15 +28,15 @@ Commerce具有一个命令行界面(CLI)—`<magento_root>/bin/magento` — 用�
 - CLI是可扩展的，因此第三方开发人员可以“插入”到其中。 这还有消除用户学习曲线的额外好处。
 - 禁用模块的命令不显示。
 
-本主题讨论如何使用CLI配置Adobe Commerce软件。 有关安装Commerce的信息，请参阅&#x200B;_安装指南_&#x200B;中的[安装流程](../../installation/overview.md)。
+本主题讨论如何使用CLI配置Adobe Commerce软件。 有关安装Commerce的信息，请参阅[安装指南](../../installation/overview.md)中的&#x200B;_安装流程_。
 
 ## 先决条件
 
 在开始使用CLI之前，请确保：
 
-1. 您的系统符合&#x200B;_安装指南_&#x200B;中的[系统要求](../../installation/system-requirements.md)中讨论的要求。
-1. 您已完成&#x200B;_安装指南_&#x200B;中的[先决条件](../../installation/prerequisites/overview.md)中讨论的所有先决条件任务。
-1. 登录到Commerce服务器后，切换到有权写入Commerce文件系统的用户。 请参阅&#x200B;_安装指南_&#x200B;中的[切换到文件系统所有者](../../installation/prerequisites/file-system/overview.md)。
+1. 您的系统符合[安装指南](../../installation/system-requirements.md)中的&#x200B;_系统要求_&#x200B;中讨论的要求。
+1. 您已完成[安装指南](../../installation/prerequisites/overview.md)中的&#x200B;_先决条件_&#x200B;中讨论的所有先决条件任务。
+1. 登录到Commerce服务器后，切换到有权写入Commerce文件系统的用户。 请参阅[安装指南](../../installation/prerequisites/file-system/overview.md)中的&#x200B;_切换到文件系统所有者_。
 
 ## 正在运行命令
 

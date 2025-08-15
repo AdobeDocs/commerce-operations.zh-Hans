@@ -25,7 +25,7 @@ Adobe Commerce提供了配置文件，使您能够轻松自定义组件和创建
 
 >[!INFO]
 >
->[!DNL Commerce 2]部署配置替换了[!DNL Magento 1.x]中的`local.xml`。
+>[!DNL Commerce 2]部署配置替换了`local.xml`中的[!DNL Magento 1.x]。
 
 与其他[模块配置文件](../reference/module-files.md)不同，Commerce部署配置在初始化期间加载到内存中，不会与任何其他文件合并，并且无法扩展。 （`config.php`和`env.php`已相互合并。）
 
@@ -51,7 +51,7 @@ Adobe Commerce提供了配置文件，使您能够轻松自定义组件和创建
 示例：
 
 - 卸载组件： [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
-- 检查组件的状态： [`bin/magento module:status`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
+- 检查组件的状态： [`bin/magento module:status`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
 - 启用或禁用组件： [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md)，[`bin/magento module:enable`](../../installation/tutorials/manage-modules.md)。
 
 > _config.php_

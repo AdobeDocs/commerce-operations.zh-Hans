@@ -1,5 +1,5 @@
 ---
-title: '开始使用：选择帐户和时间范围'
+title: 开始使用：选择帐户和时间范围
 description: 了解如何通过选择帐户和时间范围来开始使用 [!DNL Observation for Adobe Commerce] Nerdlet。
 exl-id: f2364fa4-ef83-42f2-992f-e37ff1ac96a1
 feature: Configuration, Observability

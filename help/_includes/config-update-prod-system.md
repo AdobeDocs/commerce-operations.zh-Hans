@@ -22,7 +22,7 @@ ht-degree: 0%
 
    有关其他选项，例如设置IP地址白名单的功能，请参阅[`magento maintenance:enable`](../installation/tutorials/maintenance-mode.md)。
 
-1. 通过将`app/etc/env.php`中的`cron_run`设置为`false`停止任何正在运行的队列工作程序，如下所示：
+1. 通过将`cron_run`中的`false`设置为`app/etc/env.php`停止任何正在运行的队列工作程序，如下所示：
 
    ```php?start_inline=1
    'cron_consumers_runner' => [

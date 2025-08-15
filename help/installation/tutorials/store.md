@@ -33,9 +33,9 @@ bin/magento setup:store-config:set [--<parameter_name>=<value>, ...]
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
 | `--base-url` | 用于以下列任何格式访问您的管理员和店面的基本URL：<br><br>- `http[s]://<host or ip>/<your install dir>/`。<br><br>**注意：**&#x200B;方案（`http://`或`https://`）和尾随斜杠都是必需的。 `<your install dir>`是安装应用程序的docroot相对路径。 根据您设置Web服务器和虚拟主机的方式，路径可能是magento2或为空。<br><br>要访问本地主机上的应用程序，您可以使用`http://127.0.0.1/<your install dir>/`。<br><br>- `{{base_url}}`，表示由虚拟主机设置或Docker等虚拟化环境定义的基本URL。 例如，如果您使用主机名commerce.example.com设置虚拟主机，则可以使用`--base-url={{base_url}}`安装应用程序，并使用类似`http://commerce.example.com/admin`的URL访问管理员。 | 否 |
-| `--language` | 在管理员和店面中使用的语言代码。<br><br>（如果尚未这样做，则可以通过输入`bin`目录中的`magento info:language:list`来查看语言代码列表。） | 否 |
-| `--currency` | 店面中使用的默认货币。 <br><br>（如果尚未这样做，则可以从`bin`目录中输入`magento info:currency:list`来查看货币列表。） | 否 |
-| `--timezone` | 在管理员和店面中使用的默认时区。 （如果您尚未这样做，则可以通过输入`bin`目录中的`magento info:timezone:list`来查看时区列表。） | 否 |
+| `--language` | 在管理员和店面中使用的语言代码。<br><br>（如果尚未这样做，则可以通过输入`magento info:language:list`目录中的`bin`来查看语言代码列表。） | 否 |
+| `--currency` | 店面中使用的默认货币。 <br><br>（如果尚未这样做，则可以从`magento info:currency:list`目录中输入`bin`来查看货币列表。） | 否 |
+| `--timezone` | 在管理员和店面中使用的默认时区。 （如果您尚未这样做，则可以通过输入`magento info:timezone:list`目录中的`bin`来查看时区列表。） | 否 |
 | `--use-rewrites` | `1`表示您对店面和管理中生成的链接使用Web服务器重写。<br><br>`0`禁用使用Web服务器重写。 这是默认设置。 | 否 |
 | `--use-secure` | `1`允许在店面URL中使用安全套接字层(SSL)。 在选择此选项之前，请确保您的Web服务器支持SSL。<br><br>`0`禁用使用SSL。 在这种情况下，所有其他安全URL选项也假定为0。 这是默认设置。 | 否 |
 | `--base-url-secure` | 用于访问管理员和店面的安全基础URL，格式如下： `http[s]://<host or ip>/<your install dir>/` | 否 |

@@ -1,6 +1,6 @@
 ---
 title: 迁移更改
-description: 了解如何使用 [!DNL Data Migration Tool]仅迁移自上次Magento1数据迁移以来发生更改的数据。
+description: 了解如何使用 [!DNL Data Migration Tool]仅迁移自上次Magento 1数据迁移以来发生更改的数据。
 exl-id: c300c567-77d3-4c25-8b28-a7ae4ab0092e
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 迁移更改
 
-增量迁移工具在数据的[迁移](data.md)期间在Magento1数据库中安装deltalog表（前缀为`m2_cl_*`）和触发器（用于跟踪更改）。 要确保仅迁移自上次迁移数据以来在Magento1中所做的更改，这些增量表和触发器至关重要。 这些更改包括：
+在数据的`m2_cl_*`迁移[期间，增量迁移工具会在Magento 1数据库中安装deltalog表（前缀为](data.md)）和触发器（用于跟踪更改）。 要确保仅迁移自上次迁移数据以来在Magento 1中所做的更改，这些增量表和触发器至关重要。 这些更改包括：
 
 * 客户通过店面添加的数据（创建的订单、审查和客户配置文件中的更改）
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->通过管理员输入的所有其他新实体或更新实体（如属性或CMS页面）不会包含在增量迁移中，也不会进行迁移。
+>通过管理员输入的所有其他新实体或更新实体(如属性或CMS页面)未包含在增量迁移中，因此不会迁移。
 
 
 在开始之前，请执行以下步骤进行准备：
@@ -53,7 +53,7 @@ bin/magento migrate:delta [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 ## 迁移由第三方扩展创建的数据
 
-在`Delta`模式下，[!DNL Data Migration Tool]仅迁移由Magento自己的模块创建的数据，而不负责第三方开发人员创建的代码或扩展。 如果这些扩展在店面数据库中创建了数据，而商家希望在Magento2中存储这些数据，则应相应地创建和修改[!DNL Data Migration Tool]的配置文件。
+在`Delta`模式下，[!DNL Data Migration Tool]将迁移仅由Magento自己的模块创建的数据，而不负责由第三方开发人员创建的代码或扩展。 如果这些扩展在店面数据库中创建了数据，并且商家希望在Magento 2中拥有此数据，则应相应地创建和修改[!DNL Data Migration Tool]的配置文件。
 
 如果扩展有自己的表，并且您需要跟踪其对增量迁移所做的更改，请执行以下步骤：
 

@@ -259,7 +259,7 @@ systemctl restart nginx
 如果您使用的是Apache Web Server，则必须先从`.htaccess`文件中删除限制，然后才能在浏览器中运行cron：
 
 1. 以有权写入Commerce文件系统的用户身份登录到Commerce服务器。
-1. 在文本编辑器中打开以下任意内容(取决于您的入口点以Magento)：
+1. 在文本编辑器中打开以下任意内容(具体取决于您指向Magento的入口点)：
 
    ```text
    <magento_root>/pub/.htaccess

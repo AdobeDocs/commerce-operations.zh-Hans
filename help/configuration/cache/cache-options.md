@@ -16,7 +16,7 @@ Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的
 
 ## 低级前端缓存
 
-Commerce通过实现[Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php)前端缓存来扩展[Zend_Cache_Core](https://framework.zend.com/manual/1.12/en/zend.cache.frontends.html)。
+Commerce通过实现[Magento\Framework\Cache\Core](https://framework.zend.com/manual/1.12/en/zend.cache.frontends.html)前端缓存来扩展[Zend_Cache_Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php)。
 
 ## 低级后端缓存
 

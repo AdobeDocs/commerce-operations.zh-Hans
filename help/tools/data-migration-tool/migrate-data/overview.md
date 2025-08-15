@@ -1,6 +1,6 @@
 ---
 title: 迁移概述
-description: 了解如何使用 [!DNL Data Migration Tool]开始将数据从Magento1迁移到Magento2。
+description: 了解如何使用 [!DNL Data Migration Tool]开始将数据从Magento 1迁移到Magento 2。
 exl-id: b775ede1-9d1d-49d5-ad0f-763404b48278
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # 迁移概述
 
-在开始迁移之前，请停止所有Magento1 cron作业。
+在开始迁移之前，请停止所有Magento 1 cron作业。
 
 在迁移过程中，请遵循以下一般规则以成功迁移：
 
-1. **不要**&#x200B;在Magento1管理员中进行更改，但订单管理（发运、创建发票和贷项通知单）除外
+1. **不要**&#x200B;在Magento 1管理员中进行更改，但订单管理（发运、创建发票和贷项通知单）除外
 1. **不**&#x200B;更改任何代码
-1. **不要**&#x200B;在Magento2管理员和店面中进行更改
+1. **不要**&#x200B;在Magento 2管理员和店面中进行更改
 
 >[!TIP]
 >
->允许在Magento1店面中进行所有操作。
+>允许在Magento 1店面中进行所有操作。
 
 ## 运行[!DNL Data Migration Tool]
 
@@ -44,7 +44,7 @@ ht-degree: 0%
    sudo -u <file system owner>  <command>
    ```
 
-1. 若要从任何目录运行Magento命令，请将`<magento_root>/bin`添加到您的系统`PATH`。
+1. 要从任何目录运行Magento命令，请将`<magento_root>/bin`添加到您的系统`PATH`。
 
    由于外壳的语法不同，请查阅[unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables)之类的引用。
 

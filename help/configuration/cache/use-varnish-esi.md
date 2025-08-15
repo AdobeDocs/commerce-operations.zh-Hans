@@ -30,7 +30,7 @@ Edge Side Include (ESI)是特殊指令，可用于将网页包含在其他网页
 Commerce框架会在满足以下条件时创建ESI标记：
 
 - 缓存应用程序设置为`Varnish Cache`
-- 已添加具有`ttl`特性的XML布局`block`元素
+- 已添加具有`block`特性的XML布局`ttl`元素
 
 ### 示例
 

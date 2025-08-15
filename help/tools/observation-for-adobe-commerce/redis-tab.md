@@ -1,6 +1,6 @@
 ---
 title: '[!UICONTROL Redis]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL Redis]选项卡。
+description: 了解[!UICONTROL Redis]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: 9c52350d-45a7-4afe-9dd7-c3968bd84d71
 feature: Configuration, Observability
 source-git-commit: 06f015139683f319f11317f8d7f0029cbd2548e3
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Commands per second by node]
 
-节点![&#128279;](../../assets/tools/observation-for-adobe-commerce/redis-tab-5.jpg)每秒的个命令
+节点![每秒的](../../assets/tools/observation-for-adobe-commerce/redis-tab-5.jpg)个命令
 
 **[!UICONTROL Commands per second by node]**&#x200B;帧显示在所选时间范围内按节点每秒显示的[!DNL Redis]命令。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 自上次数据库保存后的![Redis更改](../../assets/tools/observation-for-adobe-commerce/redis-tab-8.jpg)
 
-[!DNL Redis]驻留在内存中并将信息保存到存储中。 **[!UICONTROL Redis changes since last db save]**&#x200B;帧指示自上次数据库保存到存储后发生的内存更改次数。 有关[!DNL Redis's]持久性的详细说明，请参阅[Redis持久性](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)。
+[!DNL Redis]驻留在内存中并将信息保存到存储中。 **[!UICONTROL Redis changes since last db save]**&#x200B;帧指示自上次数据库保存到存储后发生的内存更改次数。 有关[持久性的详细说明，请参阅](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)Redis持久性[!DNL Redis's]。
 
 ## [!UICONTROL Redis synchronization from Log]
 

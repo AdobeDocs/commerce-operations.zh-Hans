@@ -26,29 +26,29 @@ Commerce已经过演变，可满足企业对性能、规模和安全性的要求
 
 ## 云基础
 
-云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/overview)是Commerce实施的基础。 它提供了一个[安全](../../security-and-compliance/shared-responsibility.md)自动托管平台，以及用于在云原生环境中构建、部署、监视和管理Commerce应用程序的自助方法。
+云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview)是Commerce实施的基础。 它提供了一个[安全](../../security-and-compliance/shared-responsibility.md)自动托管平台，以及用于在云原生环境中构建、部署、监视和管理Commerce应用程序的自助方法。
 
 请参阅以下Cloud Foundation技术详细信息：
 
-- [**扩展的体系结构**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture) — 自动调整容量以保持稳定、可预测的性能
-- [**多个环境**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/pro-architecture) — 预配置了PHP、MySQL (MariaDB)、Redis、RabbitMQ和受支持的搜索引擎技术，以开发、测试和部署您的站点
-- [**配置管理**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/overview) — 可自定义的环境配置文件和命令行界面(CLI)，用于管理应用程序设置、路由、生成和部署操作以及通知。
-- [**基于Git的工作流**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow) — 在推送代码更改以进行快速开发和连续部署后自动构建和部署
-- [**内置可观察性**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/monitor/performance) — 可组合来自多个源的日志数据的工具，帮助您管理网站性能和诊断问题
+- [**扩展的体系结构**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture) — 自动调整容量以保持稳定、可预测的性能
+- [**多个环境**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-architecture) — 预配置了PHP、MySQL (MariaDB)、Redis、RabbitMQ和受支持的搜索引擎技术，以开发、测试和部署您的站点
+- [**配置管理**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/overview) — 可自定义的环境配置文件和命令行界面(CLI)，用于管理应用程序设置、路由、生成和部署操作以及通知。
+- [**基于Git的工作流**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow) — 在推送代码更改以进行快速开发和连续部署后自动构建和部署
+- [**内置可观察性**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/monitor/performance) — 可组合来自多个源的日志数据的工具，帮助您管理网站性能和诊断问题
 - [**全面的API覆盖**](https://developer.adobe.com/commerce/webapi/get-started/)—[GraphQL](https://developer.adobe.com/commerce/webapi/graphql/)和[REST](https://developer.adobe.com/commerce/webapi/rest) API，用于集成核心Commerce应用程序与第三方系统并扩展Commerce功能
 
 ## 与Experience Cloud集成
 
-Adobe Commerce与所有Experience Cloud解决方案集成，可大规模提供[个性化商务体验](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/customers/customers-menu/personalize-scale#customers-menu)。
+Adobe Commerce与所有Experience Cloud解决方案集成，可大规模提供[个性化商务体验](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customers-menu/personalize-scale#customers-menu)。
 
-[Data Connection](https://experienceleague.adobe.com/zh-hans/docs/commerce/data-connection/overview)解锁关于购物者购买行为的洞察，以便您能够与其他Adobe数字体验产品跨所有渠道创建个性化的购物体验。
+[Data Connection](https://experienceleague.adobe.com/en/docs/commerce/data-connection/overview)解锁关于购物者购买行为的洞察，以便您能够与其他Adobe数字体验产品跨所有渠道创建个性化的购物体验。
 
 >[!NOTE]
 >
 >有关更多信息，请参阅以下资源：
 >
->- [数字体验Blueprint](https://experienceleague.adobe.com/zh-hans/docs/blueprints-learn/architecture/overview)，了解更多技术详细信息。
->- 请参阅[个性化客户体验](https://experienceleague.adobe.com/zh-hans/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization)。
+>- [数字体验Blueprint](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview)，了解更多技术详细信息。
+>- 请参阅[个性化客户体验](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization)。
 
 
 ## 与第三方系统集成
@@ -70,20 +70,20 @@ Adobe提供了以下开发人员工具来构建集成和自定义：
 
 >[!NOTE]
 >
->请参阅[现代方法：Adobe Commerce中的有效可扩展性](https://experienceleague.adobe.com/zh-hans/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility)。
+>请参阅[现代方法：Adobe Commerce中的有效可扩展性](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility)。
 
 ## 店面服务
 
 Adobe提供一套丰富的智能、可组合的推销服务，帮助您支持关键业务目标。 这些服务还提供了对大规模优化性能至关重要的API。
 
-- [实时搜索](https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/overview) — 通过此AI支持的搜索工具，为购物者提供更智能、更快速且相关的结果。
-- [产品推荐](https://experienceleague.adobe.com/zh-hans/docs/commerce/product-recommendations/overview) — 根据购物者行为、流行趋势、产品相似性等添加AI驱动的推荐。
-- [目录服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/catalog-service/guide-overview) — 为客户提供优化的产品体验，同时提高性能、改进可扩展性和提高转化率。
-- [支付服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/payment-services/guide-overview) — 通过提供各种支付方式（包括免息分期付款）和单一付款处理、订单和发票视图，提高客户满意度。
+- [实时搜索](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview) — 通过此AI支持的搜索工具，为购物者提供更智能、更快速且相关的结果。
+- [产品推荐](https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/overview) — 根据购物者行为、流行趋势、产品相似性等添加AI驱动的推荐。
+- [目录服务](https://experienceleague.adobe.com/en/docs/commerce/catalog-service/guide-overview) — 为客户提供优化的产品体验，同时提高性能、改进可扩展性和提高转化率。
+- [支付服务](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview) — 通过提供各种支付方式（包括免息分期付款）和单一付款处理、订单和发票视图，提高客户满意度。
 
 ## Headless店面
 
 Headless商务是API优先的商务。 Adobe Commerce采用解耦的架构，实现了完全的headless。该架构通过GraphQL API层提供所有Commerce服务和数据。 此架构允许团队独立于核心应用程序开发其前台，从而提供使用新兴技术快速构建和测试新接触点的灵活性。
 
-Adobe提供现代headless storefront技术，它与[Edge Delivery Services](https://www.aem.live/home)提供的优势和功能相同，具有基于文档的创作、性能优先的架构和现成的本机试验。 它利用Adobe Commerce [店面服务](#storefront-services)的规模和性能以及[插入组件](https://experienceleague.adobe.com/developer/commerce/storefront/?lang=zh-Hans)的灵活性和便利性来提供商务功能。
+Adobe提供现代headless storefront技术，它与[Edge Delivery Services](https://www.aem.live/home)提供的优势和功能相同，具有基于文档的创作、性能优先的架构和现成的本机试验。 它利用Adobe Commerce [店面服务](#storefront-services)的规模和性能以及[插入组件](https://experienceleague.adobe.com/developer/commerce/storefront/)的灵活性和便利性来提供商务功能。
 

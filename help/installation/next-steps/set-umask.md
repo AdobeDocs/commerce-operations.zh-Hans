@@ -26,7 +26,7 @@ Web服务器组必须具有对文件系统中特定目录的写入权限；但�
 
 * 664用于文件，这意味着用户可写，组可写，其他每个人以只读方式访问
 
-一个常见建议是在`magento_umask`文件中使用值`022`，这意味着：
+一个常见建议是在`022`文件中使用值`magento_umask`，这意味着：
 
 * 755适用于目录：用户可完全控制，其他所有人都能遍历目录。
 * 644对于文件：用户的读写权限，其他所有人的只读权限。
@@ -46,6 +46,6 @@ Web服务器组必须具有对文件系统中特定目录的写入权限；但�
    echo <desired umask number> > magento_umask
    ```
 
-   您现在应在`<Magento install dir>`中拥有名为`magento_umask`的文件，其中唯一的内容为`umask`数字。
+   您现在应在`magento_umask`中拥有名为`<Magento install dir>`的文件，其中唯一的内容为`umask`数字。
 
 1. 注销并以[文件系统所有者](../prerequisites/file-system/overview.md)的身份重新登录以应用更改。

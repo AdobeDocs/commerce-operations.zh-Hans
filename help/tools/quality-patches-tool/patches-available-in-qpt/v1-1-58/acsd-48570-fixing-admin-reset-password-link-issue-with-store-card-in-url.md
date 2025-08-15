@@ -28,16 +28,16 @@ ACSD-48570修补程序，用于修复启用&#x200B;*[!UICONTROL Add Store Code t
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-启用&#x200B;**[!UICONTROL Add Store Code to URLs]**&#x200B;设置后，管理员重置密码功能无法正常工作。
+启用&#x200B;**[!UICONTROL Add Store Code to URLs]**设置后，管理员重置密码功能无法正常工作。
 在管理员用户请求重置密码并单击电子邮件中的恢复链接后，他们将被重定向到登录页面或收到404错误，而不是被带入重置密码表单。 这可以防止管理员无需手动干预即可恢复其帐户。
 
 <u>重现步骤</u>：
 
-1. 在&#x200B;**[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]** > **[!UICONTROL URL Options]**&#x200B;处启用&#x200B;**[!UICONTROL Add Store Code to URLs]**&#x200B;配置。
+1. 在&#x200B;**[!UICONTROL Add Store Code to URLs]** > **[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]**&#x200B;处启用&#x200B;**[!UICONTROL URL Options]**&#x200B;配置。
 1. 从管理员面板注销，然后单击管理员登录页面上的&#x200B;**[!UICONTROL Forgot your password?]**&#x200B;链接。
 1. 输入管理员用户的电子邮件，传递验证码，然后单击&#x200B;**[!UICONTROL Retrieve Password]**。
 1. 打开密码重置电子邮件并单击密码恢复链接。
@@ -54,8 +54,8 @@ ACSD-48570修补程序，用于修复启用&#x200B;*[!UICONTROL Add Store Code t
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

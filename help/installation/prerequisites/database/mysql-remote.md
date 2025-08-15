@@ -48,7 +48,7 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 如果Web服务器或数据库服务器是群集的，请使用以下准则来配置远程数据库连接：
 
 * 必须为每个Web服务器节点配置一个连接。
-* 通常，可以配置到数据库负载平衡器的数据库连接；但是，数据库群集可能会很复杂，具体配置取决于您。 Adobe没有对数据库聚类提出具体的建议。
+* 通常，可以配置到数据库负载平衡器的数据库连接；但是，数据库群集可能会很复杂，具体配置取决于您。 Adobe未对数据库聚类提出具体建议。
 
   有关详细信息，请参阅[MySQL文档](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html)。
 

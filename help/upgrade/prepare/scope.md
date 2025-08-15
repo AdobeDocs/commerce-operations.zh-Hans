@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 了解升级的范围
 
-查看[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/overview)了解发行范围，包括增强功能、错误修复以及可能影响第三方和自定义模块的已知问题。
+查看[发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)了解发行范围，包括增强功能、错误修复以及可能影响第三方和自定义模块的已知问题。
 
 ## 向后不兼容的更改
 
@@ -26,7 +26,7 @@ Adobe Commerce Marketplace的新兼容性策略可确保&#x200B;_所有_&#x200B;
 
 ## 自定义模块
 
-所有自定义模块都应针对您要升级到的目标版本进行检查。 这是最耗时、最耗资源的升级过程。 在评估自定义模块时，必须查找与向后不兼容的更改并了解新实践，如控制器分解。 您可以在[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/overview)中了解有关此内容的更多信息。 此外，请确保遵循模块开发的[最佳实践](https://developer.adobe.com/commerce/php/best-practices/extensions/)。
+所有自定义模块都应针对您要升级到的目标版本进行检查。 这是最耗时、最耗资源的升级过程。 在评估自定义模块时，必须查找与向后不兼容的更改并了解新实践，如控制器分解。 您可以在[发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)中了解有关此内容的更多信息。 此外，请确保遵循模块开发的[最佳实践](https://developer.adobe.com/commerce/php/best-practices/extensions/)。
 
 ## [!DNL Upgrade Compatibility Tool]
 

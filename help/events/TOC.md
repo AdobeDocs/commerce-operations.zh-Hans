@@ -1,6 +1,6 @@
 ---
 user-guide-title: Adobe Commerce活动摘要
-user-guide-description: 从Adobe事件中查看Adobe Commerce内容的摘要。
+user-guide-description: 从Adobe活动中查看Adobe Commerce内容的摘要。
 hide: true
 source-git-commit: 7a42eb716abbd588051288cd6a288408925d8bba
 workflow-type: tm+mt
@@ -12,5 +12,5 @@ ht-degree: 5%
 
 # Adobe Commerce活动摘要 {#events}
 
-+ 峰会{#summit}
++ Summit {#summit}
    + [2024](summit/2024.md)

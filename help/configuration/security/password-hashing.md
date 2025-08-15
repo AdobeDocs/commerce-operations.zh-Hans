@@ -61,4 +61,4 @@ def verify(password, hash):
 
 ## 实现
 
-`\Magento\Framework\Encryption\Encryptor`类负责密码哈希生成和验证。 [`bin/magento customer:hash:upgrade`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#customerhashupgrade)命令将客户密码哈希升级为最新的哈希算法。
+`\Magento\Framework\Encryption\Encryptor`类负责密码哈希生成和验证。 [`bin/magento customer:hash:upgrade`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#customerhashupgrade)命令将客户密码哈希升级为最新的哈希算法。

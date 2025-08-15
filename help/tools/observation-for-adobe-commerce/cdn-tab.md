@@ -1,6 +1,6 @@
 ---
 title: '[!UICONTROL CDN]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL CDN]选项卡。
+description: 了解[!UICONTROL CDN]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: db22bbca-2033-4e9a-8799-b47d84bdd720
 feature: Configuration, Observability
 source-git-commit: e753528a1d74eda0a1393e2cc455f33f529db739

@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >最新版本的Adobe Commerce至少需要8.1个PHP。有关所有支持的PHP版本，请参阅[系统要求](../system-requirements.md)。
 
-有关云配置指南，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=zh-Hans)。
+有关云配置指南，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html)指南中的&#x200B;_PHP设置_。
 
 ## PHP进程控制
 
@@ -65,7 +65,7 @@ Adobe Commerce需要特定的PHP扩展。 以下列表指定了每个Commerce版
 
 >[!WARNING]
 >
->如果您使用的是PHP 7.4.20，请在`php.ini`文件中设置`pcre.jit=0`。 这会绕过PHP [错误](https://bugs.php.net/bug.php?id=81101)而阻止加载CSS。
+>如果您使用的是PHP 7.4.20，请在`pcre.jit=0`文件中设置`php.ini`。 这会绕过PHP [错误](https://bugs.php.net/bug.php?id=81101)而阻止加载CSS。
 
 - 为PHP设置系统时区；否则，安装期间显示的以下错误以及与时间相关的操作（如cron ）可能无法工作：
 

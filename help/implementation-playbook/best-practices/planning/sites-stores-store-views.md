@@ -41,5 +41,5 @@ ht-degree: 0%
 
 ## 其他信息
 
-- [了解网站、商店和商店视图](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
-- [设置多个网站或商店](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)
+- [了解网站、商店和商店视图](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
+- [设置多个网站或商店](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)

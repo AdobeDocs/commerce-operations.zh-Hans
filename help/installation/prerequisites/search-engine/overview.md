@@ -16,11 +16,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是兼容的Elasticsearch分支。 有关配置Elasticsearch7的所有说明均适用于OpenSearch。 [从Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)提供了有关切换到OpenSearch的指导。
+>2.4.4中添加了OpenSearch支持。OpenSearch是Elasticsearch的一个兼容分支。 有关配置Elasticsearch 7的所有说明均适用于OpenSearch。 [从Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)提供了有关切换到OpenSearch的指导。
 
 ## 支持的版本
 
-在安装Adobe Commerce 2.4.4及更高版本之前，必须安装和配置Elasticsearch或OpenSearch。
+在安装Elasticsearch 2.4.4及更高版本之前，必须安装和配置Adobe Commerce或OpenSearch。
 
 有关特定版本信息，请参阅[系统要求](../../system-requirements.md)。
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 1. 搜索引擎处理请求。
 
-1. 通信沿同一路径返回，ElasticsearchWeb服务器充当安全反向代理。
+1. 通信将沿同一路径返回，Elasticsearch Web服务器将充当安全反向代理。
 
 ## 先决条件
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 java -version
 ```
 
-如果显示消息`java: command not found`，则必须按照下一节中讨论的内容安装Java SDK。
+如果显示消息`java: command not found`，则必须按照下一节中所述安装Java SDK。
 
 请参阅以下部分之一：
 
@@ -134,7 +134,7 @@ apt-get install -y openjdk-8-jdk
 
 请按照[安装Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)或[安装和配置OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/)执行特定于平台的步骤。
 
-要验证Elasticsearch是否正常工作，请在运行该服务器的服务器上输入以下命令：
+要验证Elasticsearch是否正在运行，请在运行该库的服务器上输入以下命令：
 
 ```bash
 curl -XGET '<host>:9200/_cat/health?v&pretty'
@@ -159,7 +159,7 @@ curl -XGET https://<host>:9200/_cat/plugins?v -u 'admin:admin' --insecure
 
 ## 升级Elasticsearch
 
-有关在部署到生产环境之前备份数据、检测潜在的迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
+有关在部署到生产环境之前备份数据、检测潜在迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
 
 Elasticsearch需要JDK 1.8或更高版本。 请参阅[安装Java软件开发工具包](#install-the-java-software-development-kit)以检查安装的JDK版本。
 

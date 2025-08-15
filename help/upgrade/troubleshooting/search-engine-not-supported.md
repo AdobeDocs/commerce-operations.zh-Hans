@@ -43,13 +43,13 @@ bin/magento config:show catalog/search/engine
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->其中`<version>`是您在升级&#x200B;**之前运行的** Magento的版本。 例如，`2.3.5`。
+>其中，`<version>`是您在升级&#x200B;**之前运行的**&#x200B;的Magento版本。 例如，`2.3.5`。
 
 请遵循以下各节中所述的准则，从不一致状态中恢复。
 
 ## 如果您的搜索引擎为`mysql`
 
-在2.4之前，MySQL是默认的目录搜索引擎，但此容量已不再支持MySQL。 现在，在升级到2.4之前，您必须将Elasticsearch或OpenSearch安装并配置为您的搜索引擎。
+在2.4之前，MySQL是默认的目录搜索引擎，但此容量已不再支持MySQL。 现在，您必须先安装和配置Elasticsearch或OpenSearch作为搜索引擎，然后才能升级到2.4。
 
 请使用以下资源来帮助您完成此过程：
 
@@ -60,13 +60,13 @@ bin/magento config:show catalog/search/engine
 
 ## 如果您的搜索引擎为`elasticsearch`
 
-不再支持Elasticsearch6及更早版本。
+不再支持Elasticsearch 6及更早版本。
 
-值为`elasticsearch`表示您的Adobe Commerce低级版本配置为使用Elasticsearch2.x。不再支持此版本的Elasticsearch。
+值为`elasticsearch`表示您的Adobe Commerce低级版本配置为使用Elasticsearch 2.x。不再支持此版本的Elasticsearch。
 
 升级到2.4之前，必须执行以下任务：
 
-1. 更新到Commerce支持的Elasticsearch版本。 有关在部署到生产环境之前备份数据、检测潜在的迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
+1. 更新到Commerce支持的Elasticsearch版本。 有关在部署到生产环境之前备份数据、检测潜在迁移问题和测试升级的完整说明，请参阅[升级Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html)。 根据您当前的Elasticsearch版本，可能需要也可能不需要完全重新启动群集。
 
    >[!NOTE]
    >

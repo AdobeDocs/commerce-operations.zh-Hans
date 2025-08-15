@@ -47,6 +47,6 @@ bin/magento app:config:dump scopes themes
 
 若要设置写入`env.php`的敏感设置，请使用[`bin/magento config:sensitive:set`](set-configuration-values.md#set-values)命令。
 
-通过引用模块[`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/#how-to-specify-values-as-sensitive-or-system-specific)文件中的[`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php)，将配置值指定为敏感值或系统特定值。
+通过引用模块[`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php)文件中的[`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/#how-to-specify-values-as-sensitive-or-system-specific)，将配置值指定为敏感值或系统特定值。
 
 要在使用`config_types`时导出其他系统设置，请考虑使用[`bin/magento config:set`](set-configuration-values.md#set-values)命令。

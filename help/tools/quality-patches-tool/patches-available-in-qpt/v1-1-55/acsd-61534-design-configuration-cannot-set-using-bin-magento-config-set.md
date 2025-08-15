@@ -28,7 +28,7 @@ Adobe Commerce（所有部署方法） 2.4.7 - 2.4.7-p3
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -39,7 +39,7 @@ Adobe Commerce（所有部署方法） 2.4.7 - 2.4.7-p3
 1. 使用云环境变量（如`CONFIG_WEBSITESBASEDESIGNHEAD_INCLUDES`）锁定配置值。
 1. 转到&#x200B;*[!UICONTROL Admin]*&#x200B;面板。
 1. 转到&#x200B;**[!UICONTROL Content]** > **[!UICONTROL Design]** > **[!UICONTROL Configuration]**。
-1. 单击第二行&#x200B;**[!UICONTROL Global/Main website]**&#x200B;附近的&#x200B;**[!UICONTROL Edit]**。
+1. 单击第二行&#x200B;**[!UICONTROL Edit]**&#x200B;附近的&#x200B;**[!UICONTROL Global/Main website]**。
 1. 编辑商店视图的主题。
 1. 打开HTML头。
 1. 使用开发人员工具启用禁用的&#x200B;**[!UICONTROL Scripts and Style Sheets]**&#x200B;字段。
@@ -57,8 +57,8 @@ Adobe Commerce（所有部署方法） 2.4.7 - 2.4.7-p3
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

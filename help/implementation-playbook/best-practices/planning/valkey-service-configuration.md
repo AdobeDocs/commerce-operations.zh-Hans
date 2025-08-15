@@ -17,7 +17,7 @@ Adobe建议在配置Valkey服务时遵循以下最佳实践：
 
 ## 配置Valkey L2缓存
 
-通过在`.magento.env.yaml`配置文件中设置`VALKEY_BACKEND`部署变量来配置Valkey L2缓存。
+通过在`VALKEY_BACKEND`配置文件中设置`.magento.env.yaml`部署变量来配置Valkey L2缓存。
 
 ```yaml
 stage:
@@ -25,13 +25,13 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》_中的[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)_。
+有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》[`VALKEY_BACKEND`中的](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)__。
 
-有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[配置Valkey页缓存](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching)。
+有关内部部署安装，请参阅[配置指南](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching)中的&#x200B;_配置Valkey页缓存_。
 
 >[!NOTE]
 >
->验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
+>验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
 
 ### 二级缓存内存大小(Adobe Commerce Cloud)
 
@@ -51,7 +51,7 @@ stage:
 >
 >Adobe Commerce 2.4.4中引入了`cleanup_percentage`配置选项。
 
-以下示例显示了`.magento.env.yaml`文件中的`CACHE_CONFIGURATION`：
+以下示例显示了`CACHE_CONFIGURATION`文件中的`.magento.env.yaml`：
 
 ```yaml
 stage:
@@ -85,13 +85,13 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-有关更多详细信息，请参阅《云基础架构上的Commerce指南》_中的_ VALKEY_USE_SLAVE_CONNECTION[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)。
+有关更多详细信息，请参阅《云基础架构上的Commerce指南》[中的](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)VALKEY_USE_SLAVE_CONNECTION _。_
 
-对于Adobe Commerce内部部署，请使用`bin/magento:setup`命令配置新的Valkey缓存实现。 有关详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[将值键用于默认缓存](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching)。
+对于Adobe Commerce内部部署，请使用`bin/magento:setup`命令配置新的Valkey缓存实现。 有关详细信息，请参阅[配置指南](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching)中的&#x200B;_将值键用于默认缓存_。
 
 >[!WARNING]
 >
->请&#x200B;_不_&#x200B;为具有[缩放/拆分架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)的云基础架构项目配置Valkey从属连接。 这会导致Valkey连接错误。 有关详细信息，请参阅&#x200B;_Commerce on Cloud Infrastructure_&#x200B;指南中的[Valkey配置指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection)。
+>请&#x200B;_不_&#x200B;为具有[缩放/拆分架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)的云基础架构项目配置Valkey从属连接。 这会导致Valkey连接错误。 有关详细信息，请参阅[Commerce on Cloud Infrastructure](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection)指南中的&#x200B;_Valkey配置指南_。
 
 ## 预加载键
 
@@ -114,7 +114,7 @@ stage:
               - '061_SYSTEM_DEFAULT:hash'
 ```
 
-有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[Valkey预加载功能](../../../configuration/cache/valkey-pg-cache.md#valkey-preload-feature)。
+有关内部部署安装，请参阅[配置指南](../../../configuration/cache/valkey-pg-cache.md#valkey-preload-feature)中的&#x200B;_Valkey预加载功能_。
 
 ## 启用过时的缓存
 
@@ -153,9 +153,9 @@ stage:
 
 >[!NOTE]
 >
->在上一个示例中，`full_page`缓存与云基础架构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly)。
+>在上一个示例中，`full_page`缓存与云基础架构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)。
 
-有关配置内部部署安装的信息，请参阅&#x200B;_配置指南_&#x200B;中的[过时缓存选项](../../../configuration/cache/level-two-cache.md#stale-cache-options)。
+有关配置内部部署安装的信息，请参阅[配置指南](../../../configuration/cache/level-two-cache.md#stale-cache-options)中的&#x200B;_过时缓存选项_。
 
 在部署期间，您应该会在[生成和部署日志](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations.html#build-and-deploy-logs)中看到以下行：
 
@@ -173,7 +173,7 @@ W:   - Installing colinmollenhour/php-redis-session-abstract (v1.4.5): Extractin
 
 ## 缓存压缩
 
-如果您使用的Valkey `maxmemory`超过6GB，则可以使用缓存压缩来减少密钥占用的空间。 请注意，需要权衡客户端性能。 如果您有备用的CPU，Adobe建议启用它们。 请参阅&#x200B;_配置指南_&#x200B;中的[对会话存储使用Valkey](../../../configuration/cache/valkey-session.md)。
+如果您使用的Valkey `maxmemory`超过6GB，则可以使用缓存压缩来减少密钥占用的空间。 请注意，需要权衡客户端性能。 如果您有备用的CPU，Adobe建议启用它们。 请参阅[配置指南](../../../configuration/cache/valkey-session.md)中的&#x200B;_对会话存储使用Valkey_。
 
 ```yaml
 stage:

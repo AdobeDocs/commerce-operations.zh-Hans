@@ -13,10 +13,10 @@ ht-degree: 0%
 
 此任务要求您为每个存储创建一个根类别（如果需要，还要创建其他类别）。 本主题中讨论的任务提供了一种设置多个商店的方法。 有关更多信息，请参阅《Commerce用户指南》中的以下资源：
 
-- [类别](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/catalog/categories/categories)
-- [添加网站](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
-- [存储URL](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls)
-- [内容](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/content-design/content-menu)
+- [类别](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/categories)
+- [添加网站](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [存储URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
+- [内容](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu)
 
 >[!INFO]
 >
@@ -34,7 +34,7 @@ ht-degree: 0%
 1. 在&#x200B;**类别名称**&#x200B;字段中，输入唯一名称以标识该类别。
 1. 确保将“启用类别”设置为&#x200B;**是**。
 
-   有关此页面上其他选项的信息，请参阅[根类别](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/catalog/categories/category-root)。
+   有关此页面上其他选项的信息，请参阅[根类别](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/category-root)。
 
    下图显示了一个示例。
 
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 1. 在右窗格中，展开&#x200B;**基本URL**。
 1. 在&#x200B;_基本URL_&#x200B;部分中，清除&#x200B;**使用系统值**。
-1. 在&#x200B;**基本URL**&#x200B;和&#x200B;**基本链接URL**&#x200B;字段中输入`http://french.magento.mg` URL。
+1. 在`http://french.magento.mg`基本URL **和**&#x200B;基本链接URL **字段中输入** URL。
 
 1. 在&#x200B;_基本URL（安全）_&#x200B;部分中重复上一步骤。
 
@@ -131,7 +131,7 @@ Commerce为您提供了将商店代码添加到站点基本URL的选项，这简
 
 这样可防止`index.php`和`.htaccess`在将来升级时与Commerce代码库不同步。
 
-请参阅[Commerce用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls)。
+请参阅[Commerce用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)。
 
 要将存储代码添加到基本URL，请执行以下操作：
 
@@ -141,7 +141,7 @@ Commerce为您提供了将商店代码添加到站点基本URL的选项，这简
    ![选择默认配置范围](../../assets/configuration/multi-site-default.png)
 
 1. 在右窗格中，展开&#x200B;**Url选项**。
-1. 清除&#x200B;_将存储代码添加到Url_&#x200B;旁边的&#x200B;**使用系统值**&#x200B;复选框。
+1. 清除&#x200B;**将存储代码添加到Url**&#x200B;旁边的&#x200B;_使用系统值_&#x200B;复选框。
 1. 从&#x200B;_将存储代码添加到Url_&#x200B;列表中，单击&#x200B;**是**。
 
    ![将商店代码添加到商店基本URL](../../assets/configuration/multi-site-add-store-url.png)
@@ -163,7 +163,7 @@ Commerce为您提供了将商店代码添加到站点基本URL的选项，这简
 
 1. 在右窗格中，展开&#x200B;**基本URL**。
 1. 在&#x200B;_基本URL_&#x200B;部分中，清除&#x200B;**使用系统值**。
-1. 在&#x200B;**基本URL**&#x200B;和&#x200B;**基本链接URL**&#x200B;字段中输入`http://magento.mg` URL。
+1. 在`http://magento.mg`基本URL **和**&#x200B;基本链接URL **字段中输入** URL。
 
 1. 在&#x200B;**基本URL（安全）**&#x200B;部分中重复上一步骤。
 

@@ -41,4 +41,4 @@ bin/magento dev:urn-catalog:generate <path>
 
 >[!INFO]
 >
->要使您的“架构和DTD”保持最新，请在每次添加、修改或删除包含`*.xsd`文件的Commerce 2模块时运行`dev:urn-catalog:generate`命令。
+>要使您的“架构和DTD”保持最新，请在每次添加、修改或删除包含`dev:urn-catalog:generate`文件的Commerce 2模块时运行`*.xsd`命令。

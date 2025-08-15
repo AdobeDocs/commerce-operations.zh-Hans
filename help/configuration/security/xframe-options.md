@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 防止点击劫持攻击
 
-通过在店面的请求中包含[X-Frame-Options](https://datatracker.ietf.org/doc/html/rfc7034) HTTP请求标头，防止[点击劫持](https://owasp.org/www-community/attacks/Clickjacking)攻击。
+通过在店面的请求中包含[X-Frame-Options](https://owasp.org/www-community/attacks/Clickjacking) HTTP请求标头，防止[点击劫持](https://datatracker.ietf.org/doc/html/rfc7034)攻击。
 
 `X-Frame-Options`标题允许您指定是否允许浏览器在`<frame>`、`<iframe>`或`<object>`中呈现页面，如下所示：
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 实施`X-Frame-Options`
 
-在`<project-root>/app/etc/env.php`中设置`X-Frame-Options`的值。 缺省值设置如下：
+在`X-Frame-Options`中设置`<project-root>/app/etc/env.php`的值。 缺省值设置如下：
 
 ```php
 'x-frame-options' => 'SAMEORIGIN',

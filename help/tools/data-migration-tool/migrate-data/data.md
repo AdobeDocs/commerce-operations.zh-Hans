@@ -1,6 +1,6 @@
 ---
 title: 迁移数据
-description: 了解如何使用 [!DNL Data Migration Tool]开始将数据从Magento1迁移到Magento2。
+description: 了解如何使用 [!DNL Data Migration Tool]开始将数据从Magento 1迁移到Magento 2。
 exl-id: f4ea8f6a-21f8-4db6-b598-c5efecec254f
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -35,7 +35,7 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 * `{<path to config.xml>}`是`config.xml`的绝对文件系统路径；此参数是必需的
 
-在此步骤中，[!DNL Data Migration Tool]为Magento1数据库中的迁移表创建其他表和触发器。 它们在[增量/增量](delta.md)迁移步骤中使用。 其他表包含有关最终迁移执行后更改的记录的信息。 数据库触发器用于填充这些额外的表，因此，如果正在对特定表执行新操作（添加/修改/删除记录），这些数据库触发器会将有关此操作的信息保存到额外的表中。 当我们运行增量迁移过程时，[!DNL Data Migration Tool]会检查这些表中的未处理记录，并将必要的内容迁移到Magento2数据库中。
+在此步骤中，[!DNL Data Migration Tool]为Magento 1数据库中的迁移表创建其他表和触发器。 它们在[增量/增量](delta.md)迁移步骤中使用。 其他表包含有关最终迁移执行后更改的记录的信息。 数据库触发器用于填充这些额外的表，因此，如果正在对特定表执行新操作（添加/修改/删除记录），这些数据库触发器会将有关此操作的信息保存到额外的表中。 当我们运行增量迁移过程时，[!DNL Data Migration Tool]会检查这些表中的未处理记录，并将必要的内容迁移到Magento 2数据库中。
 
 每个新表都包含：
 
@@ -85,12 +85,12 @@ bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 >[!NOTE]
 >
->[!DNL Data Migration Tool]在运行时保存其当前进度。 如果出现错误或用户干预导致其停止运行，则工具会在上一次确认工作正常时恢复进度。 要强制[!DNL Data Migration Tool]从头运行，请使用`--reset`参数。 在这种情况下，建议您恢复Magento2数据库转储，以防止复制以前迁移的数据。
+>[!DNL Data Migration Tool]在运行时保存其当前进度。 如果出现错误或用户干预导致其停止运行，则工具会在上一次确认工作正常时恢复进度。 要强制[!DNL Data Migration Tool]从头运行，请使用`--reset`参数。 在这种情况下，我们建议您恢复Magento 2数据库转储，以防止复制以前迁移的数据。
 
 
 ## 可能的一致性错误
 
-运行时，[!DNL Data Migration Tool]可能会报告Magento1和Magento2数据库之间的不一致，并显示如下消息：
+运行时，[!DNL Data Migration Tool]可能会报告Magento 1和Magento 2数据库之间的不一致，并显示如下消息：
 
 * `Source documents are missing: <EXTENSION_TABLE_1>,<EXTENSION_TABLE_2>,...<EXTENSION_TABLE_N>`
 * `Destination documents are missing: <EXTENSION_TABLE_1>,<EXTENSION_TABLE_2>,...<EXTENSION_TABLE_N>`

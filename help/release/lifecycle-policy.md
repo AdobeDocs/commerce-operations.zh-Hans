@@ -14,7 +14,7 @@ ht-degree: 3%
 
 对于Adobe Commerce 2.4.4及后续版本：
 
-- 为了简化Adobe Commerce生命周期政策并支持客户的任务关键型需求，Adobe将支持时间从Adobe Commerce 2.4.4及更高版本的正式发布日期(GA)延长到了三年。 Adobe为2.4.4及更高版本提供了三年支持期的质量修复。 客户可以通过联系[Adobe Commerce支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)或自助服务[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)访问质量修复（如果其版本仍然符合质量支持条件）。 下表介绍了Adobe Commerce发行行的软件支持终止日期。
+- 为了简化Adobe Commerce生命周期政策并支持客户的任务关键型需求，Adobe将支持时间从Adobe Commerce 2.4.4及更高版本的正式发布日期(GA)延长到了三年。 Adobe为2.4.4及更高版本提供了三年支持期的质量修复。 客户可以通过联系[Adobe Commerce支持](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)或自助服务[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)访问质量修复（如果其版本仍然符合质量支持条件）。 下表介绍了Adobe Commerce发行行的软件支持终止日期。
 
 - Adobe通过安全补丁发行版提供三年支持期的安全修复。
 

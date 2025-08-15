@@ -40,7 +40,7 @@ Source代码在开发过程中会经历多个稳定性阶段：
 
 >[!TIP]
 >
->云基础架构项目上的Adobe Commerce包含对应于不同环境的特定分支。 请参阅&#x200B;_云指南_&#x200B;中的[Pro项目工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=zh-Hans)和[入门项目工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/starter-develop-deploy-workflow.html?lang=zh-Hans)。
+>云基础架构项目上的Adobe Commerce包含对应于不同环境的特定分支。 请参阅[云指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html)中的[Pro项目工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/starter-develop-deploy-workflow.html)和&#x200B;_入门项目工作流_。
 
 ## 分支策略
 

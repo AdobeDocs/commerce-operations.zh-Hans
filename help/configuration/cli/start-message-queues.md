@@ -33,8 +33,8 @@ bin/magento queue:consumers:start [--max-messages=<value>] [--batch-size=<value>
 bin/magento queue:consumers:start <consumer_name> &
 ```
 
-有关命令选项、参数和值的详细信息，请参阅&#x200B;_命令行工具引用_&#x200B;的Commerce部分中的[`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart)。
+有关命令选项、参数和值的详细信息，请参阅[`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart)命令行工具引用&#x200B;_的Commerce部分中的_。
 
 >[!INFO]
 >
->`--multi-process`选项存在于`queue:consumers:start`命令中，但若要使用并行进程运行使用者，请在`/app/etc/env.php`中配置[`multiple_processes`](../queues/manage-message-queues.md#configuration)选项。 否则，如果使用`--multi-process`选项调用`queue:consumers:start`，则它仅在单个线程上运行。
+>`--multi-process`选项存在于`queue:consumers:start`命令中，但若要使用并行进程运行使用者，请在[`multiple_processes`](../queues/manage-message-queues.md#configuration)中配置`/app/etc/env.php`选项。 否则，如果使用`queue:consumers:start`选项调用`--multi-process`，则它仅在单个线程上运行。

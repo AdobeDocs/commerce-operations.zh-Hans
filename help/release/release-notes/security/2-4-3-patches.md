@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.3-p3安全版本为以前版本的2.4.3中发现的漏洞提供了安全修复。此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-38](https://helpx.adobe.com/cn/security/products/magento/apsb22-38.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-38](https://helpx.adobe.com/security/products/magento/apsb22-38.html)。
 
 ### 应用`AC-3022.patch`以继续将DHL作为装运承运人提供
 
@@ -33,7 +33,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 Adobe Commerce 2.4.3-p2安全版本为以前版本中发现的漏洞提供了安全错误修复。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-13](https://helpx.adobe.com/cn/security/products/magento/apsb22-13.html)。  修补程序版本还解决了由`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch`和`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch`解决的漏洞。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-13](https://helpx.adobe.com/security/products/magento/apsb22-13.html)。  修补程序版本还解决了由`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch`和`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch`解决的漏洞。
 
 
 ### 应用`AC-3022.patch`以继续将DHL作为装运承运人提供
@@ -44,7 +44,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 * 在2.3.4中，作为降低安全风险的一部分，为了支持更严格的变量语法，已弃用电子邮件变量用法。 此版本中完全删除了此旧版行为，以继续降低安全风险。
 
-  因此，在早期版本中有效的电子邮件或新闻稿模板在升级到Adobe Commerce 2.4.3-p2后可能无法正常工作。 受影响的模板包括自定义模块或第三方扩展中的管理员覆盖、主题、子主题和模板。 即使在使用[升级兼容性工具](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=zh-Hans)修复已弃用的使用之后，您的部署仍可能会受到影响。 请参阅[迁移自定义电子邮件模板](https://developer.adobe.com/commerce/frontend-core/guide/templates/email-migration/)，以了解有关迁移受影响模板的潜在影响和准则的信息。
+  因此，在早期版本中有效的电子邮件或新闻稿模板在升级到Adobe Commerce 2.4.3-p2后可能无法正常工作。 受影响的模板包括自定义模块或第三方扩展中的管理员覆盖、主题、子主题和模板。 即使在使用[升级兼容性工具](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=en)修复已弃用的使用之后，您的部署仍可能会受到影响。 请参阅[迁移自定义电子邮件模板](https://developer.adobe.com/commerce/frontend-core/guide/templates/email-migration/)，以了解有关迁移受影响模板的潜在影响和准则的信息。
 
 * 现在，将OAuth访问令牌和密码重置令牌存储在数据库中时会进行加密。<!-- AC-520 1323-->
 
@@ -62,7 +62,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 Adobe Commerce 2.4.3-p1安全版本为先前版本(Adobe Commerce 2.4.3和Magento Open Source 2.4.3)中发现的漏洞修复了安全错误。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-86](https://helpx.adobe.com/cn/security/products/magento/apsb21-86.html)。 此补丁发行版本还为[Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html?lang=zh-Hans)、[Klarna](https://marketplace.magento.com/klarna-m2-klarna.html)和[Vertex](https://marketplace.magento.com/vertexinc-vertex-tax-module.html)供应商开发的扩展提供了错误修复。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-86](https://helpx.adobe.com/security/products/magento/apsb21-86.html)。 此补丁发行版本还为[Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html)、[Klarna](https://marketplace.magento.com/klarna-m2-klarna.html)和[Vertex](https://marketplace.magento.com/vertexinc-vertex-tax-module.html)供应商开发的扩展提供了错误修复。
 
 ### 应用`AC-3022.patch`以继续将DHL作为装运承运人提供
 
@@ -84,4 +84,4 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 已在此版本中修复了&#x200B;**最近的渗透测试漏洞**。<!-- MC-42431-->
 
-已从内容安全策略`frame-ancestors`指令中删除不受支持的源表达式`unsafe-inline`。 [GitHub-33101](https://github.com/magento/magento2/issues/33101)<!-- MC-42632-->
+已从内容安全策略`unsafe-inline`指令中删除不受支持的源表达式`frame-ancestors`。 [GitHub-33101](https://github.com/magento/magento2/issues/33101)<!-- MC-42632-->

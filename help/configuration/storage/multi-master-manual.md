@@ -48,7 +48,7 @@ ht-degree: 0%
 
 ## 备份Commerce系统
 
-Adobe强烈建议您备份当前数据库和文件系统，以便能够在过程中遇到问题时恢复该数据库。
+Adobe强烈建议您备份当前的数据库和文件系统，以便在过程中遇到问题时可以恢复它们。
 
 **要备份您的系统**：
 
@@ -559,7 +559,7 @@ SET foreign_key_checks = 1;
 
    在此主题中，示例数据库名称为`magento`。
 
-1. 以`source <script name>`身份运行`mysql>`提示符下的每个脚本
+1. 以`mysql>`身份运行`source <script name>`提示符下的每个脚本
 1. 检查输出。
 1. 将每个脚本的结果复制到另一个SQL脚本，删除管道字符(`|`)。
 1. 从`mysql>`提示符运行每个脚本为`source <script name>`。

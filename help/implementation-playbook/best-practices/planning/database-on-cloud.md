@@ -37,13 +37,13 @@ SELECT table_schema, CONCAT(ROUND((index_length+data_length)/1024/1024),'MB')
 
 ### 将存储引擎更改为InnoDB
 
-在声明表的`db_schema.xml`文件中，将相应`table`节点的`engine`属性值设置为`innodb`。 有关参考，请参阅我们的开发人员文档中的[配置声明性架构>表节点](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/)。
+在声明表的`db_schema.xml`文件中，将相应`engine`节点的`table`属性值设置为`innodb`。 有关参考，请参阅我们的开发人员文档中的[配置声明性架构>表节点](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/)。
 
 声明性方案在Adobe Commerce中引入，用于云基础架构版本2.3。
 
 ## 为本机MySQL搜索配置推荐的搜索引擎
 
-Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索工具，也始终为云基础架构项目上的Adobe Commerce设置Elasticsearch或OpenSearch。 此配置提供了第三方搜索工具发生故障时的回退选项。
+Adobe建议您在云基础架构项目中始终为您的Adobe Commerce设置Elasticsearch或OpenSearch，即使您计划为Adobe Commerce应用程序配置第三方搜索工具也是如此。 此配置提供了第三方搜索工具发生故障时的回退选项。
 
 您使用的搜索引擎取决于安装的云版Adobe Commerce：
 
@@ -59,15 +59,15 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 
 有关配置说明，请参阅云上Adobe Commerce的《开发人员指南》 ：
 
-- [设置OpenSearch服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/opensearch)
+- [设置OpenSearch服务](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/opensearch)
 
-- [设置Elasticsearch服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/elasticsearch)
+- [设置Elasticsearch服务](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/elasticsearch)
 
 ## 避免自定义触发器
 
 如果可能，请避免使用自定义触发器。
 
-触发器用于将更改记录到审核表中。 出于以下原因，Adobe建议将应用程序配置为直接写入审计表，而不是使用“触发”功能：
+触发器用于将更改记录到审核表中。 Adobe建议将应用程序配置为直接写入审核表，而不是使用触发器功能，原因如下：
 
 - 触发器被解释为代码，并且MySQL不预编译它们。 挂接到查询的事务空间后，它们将开销添加到解析器和解释器，以解释使用表执行的每个查询。
 - 触发器与原始查询共享相同的事务空间，当这些查询争夺表上的锁时，触发器会独立地争夺另一个表上的锁。
@@ -76,14 +76,14 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 
 ## 将[!DNL ECE-Tools]升级到版本2002.0.21或更高版本 {#ece-tools-version}
 
-要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅我们的开发人员文档中的[更新`ece-tools`版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package)。
+要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅我们的开发人员文档中的[更新`ece-tools`版本](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package)。
 
 ## 安全切换索引器模式
 
 <!--This best practice might belong in the Maintenance phase. Database lock prevention might be consolidated under a single heading-->
 
 切换索引器将生成[!DNL data definition language] (DDL)语句以创建可能导致数据库锁定的触发器。 您可以在更改配置之前，通过将网站置于维护模式并禁用cron作业来防止出现此问题。
-有关说明，请参阅*Adobe Commerce配置指南*&#x200B;中的[配置索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hans#configure-indexers-1)。
+有关说明，请参阅[Adobe Commerce配置指南](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1)中的&#x200B;*配置索引器*。
 
 ## 不要在生产环境中运行DDL语句
 
@@ -95,7 +95,7 @@ Adobe建议，即使您计划为Adobe Commerce应用程序配置第三方搜索�
 
 从管理员处启用订单存档，以随着订单数据的增长而减少销售表所需的空间。 存档可节省MySQL磁盘空间并提高签出性能。
 
-请参阅Adobe Commerce商家文档中的[启用存档](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html?lang=zh-Hans)。
+请参阅Adobe Commerce商家文档中的[启用存档](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html)。
 
 ## 其他信息
 

@@ -34,4 +34,4 @@ ht-degree: 0%
 
 在部署Adobe Commerce时，考虑将哪些内容包含在维护和支持策略中至关重要。
 Adobe Commerce许可证中包含专家支持。 有关专家支持和Adobe支持计划的详细信息，请参阅[Adobe支持计划](https://business.adobe.com/customers/consulting-services/premier-support.html)。
-除了Adobe支持计划之外，还有旧版Magento支持条款。 要了解哪些支持服务适用于您，请参阅您的合同以了解您拥有哪些支持协议，或者与您的Adobe客户团队交谈。
+除了Adobe支持计划之外，还有旧版Magento支持术语。 要了解哪些支持服务适用于您，请参阅您的合同以了解您拥有哪些支持协议，或者与您的Adobe客户团队交谈。

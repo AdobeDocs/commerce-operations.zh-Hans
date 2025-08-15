@@ -55,7 +55,7 @@ server {
 - Apache (2.4+)
 - MySQL （5.7及更高版本）
 - PHP (7.4)
-- Elasticsearch(7.x)或OpenSearch (1.2)
+- Elasticsearch (7.x)或OpenSearch (1.2)
 - Adobe Commerce (2.4+)
 
 >[!NOTE]

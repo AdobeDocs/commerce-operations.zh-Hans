@@ -31,7 +31,7 @@ try {
 }
 ```
 
-此方法按照[PSR-3上下文标准](https://www.php-fig.org/psr/psr-3/#13-context)，自动将`$e->getMessage`保存到日志消息，将`$e`对象保存到上下文。 此操作在`\Magento\Framework\Logger\Monolog::addRecord`内完成。
+此方法按照`$e->getMessage`PSR-3上下文标准`$e`，自动将[保存到日志消息，将](https://www.php-fig.org/psr/psr-3/#13-context)对象保存到上下文。 此操作在`\Magento\Framework\Logger\Monolog::addRecord`内完成。
 
 ### ![正确](../../../assets/yes.svg)静音信号
 
@@ -153,7 +153,7 @@ try {
 
 ### ![不正确](../../../assets/no.svg)仅将消息记录到异常日志
 
-只传递`$e->getMessage()`，而不是传递对象`$e`。 这会导致跟踪丢失，应被显示为[写入异常日志](#write-to-the-exception-log)或[降级异常](#downgrade-exceptions)的正确示例替换。
+只传递`$e`，而不是传递对象`$e->getMessage()`。 这会导致跟踪丢失，应被显示为[写入异常日志](#write-to-the-exception-log)或[降级异常](#downgrade-exceptions)的正确示例替换。
 
 ```php
 try {

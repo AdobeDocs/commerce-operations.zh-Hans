@@ -59,9 +59,9 @@ Adobe Commerce使用三位默认掩码： `002`。 从UNIX缺省值666（文件�
 - 开发人员
 - 生产
 
-请参阅&#x200B;_配置指南_&#x200B;中的[关于模式](../../../configuration/bootstrap/application-modes.md)。
+请参阅[配置指南](../../../configuration/bootstrap/application-modes.md)中的&#x200B;_关于模式_。
 
-我们在&#x200B;_配置指南_&#x200B;的[文件系统访问权限](../../../configuration/deployment/file-system-permissions.md)中进一步讨论权限建议。
+我们在[配置指南](../../../configuration/deployment/file-system-permissions.md)的&#x200B;_文件系统访问权限_&#x200B;中进一步讨论权限建议。
 
 >[!TIP]
 >

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Adobe Commerce支持实用程序（也称为[数据收集器](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/support#data-collector)）使用户能够收集有关您的系统的故障排除信息，这些信息可供我们的支持团队使用。
+Adobe Commerce支持实用程序（也称为[数据收集器](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector)）使用户能够收集有关您的系统的故障排除信息，这些信息可供我们的支持团队使用。
 
 Adobe Commerce使用这些备份（也称为&#x200B;_转储_）来分析需要访问您的代码的问题。 典型情况如下：
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 
   在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
 
-  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[设置多个网站或商店](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=zh-Hans)。
+  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html)中的&#x200B;_设置多个网站或商店_。
 
 - 每个网站使用一个虚拟主机；虚拟主机配置文件为`/etc/httpd/httpd.conf`
 
@@ -28,8 +28,8 @@ ht-degree: 0%
 - Commerce软件安装在`/var/www/html/magento2`中
 - 您拥有默认网站以外的两个网站：
 
-   - 网站代码为`french`且商店视图代码为`fr`的`french.mysite.mg`
-   - 网站代码为`german`且商店视图代码为`de`的`german.mysite.mg`
+   - 网站代码为`french.mysite.mg`且商店视图代码为`french`的`fr`
+   - 网站代码为`german.mysite.mg`且商店视图代码为`german`的`de`
 
 ## 使用Apache设置多个网站的路线图
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ## 步骤2：创建Apache虚拟主机
 
-本节讨论如何在虚拟主机中使用Apache Server变量`SetEnvIf`设置`MAGE_RUN_TYPE`和`MAGE_RUN_CODE`的值。
+本节讨论如何在虚拟主机中使用Apache Server变量`MAGE_RUN_TYPE`设置`MAGE_RUN_CODE`和`SetEnvIf`的值。
 
 有关`SetEnvIf`的详细信息，请参阅：
 
@@ -110,7 +110,7 @@ ht-degree: 0%
 >[!INFO]
 >
 >- 在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
->- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅&#x200B;_云基础架构上的Commerce指南_&#x200B;中的[设置多个云网站或商店](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=zh-Hans)。
+>- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅[云基础架构上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html)中的&#x200B;_设置多个云网站或商店_。
 
 ### 故障排除
 

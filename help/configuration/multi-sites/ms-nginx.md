@@ -17,15 +17,15 @@ ht-degree: 0%
 
   在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
 
-  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[设置多个网站或商店](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=zh-Hans)。
+  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html)中的&#x200B;_设置多个网站或商店_。
 
 - 在一个虚拟主机文件中接受多个域或为每个网站使用一个虚拟主机；虚拟主机配置文件位于`/etc/nginx/sites-available`中。
 - 您仅对本教程中讨论的修改使用了Commerce提供的`nginx.conf.sample`。
 - Commerce软件安装在`/var/www/html/magento2`中。
 - 您拥有默认网站以外的两个网站：
 
-   - 网站代码为`french`且商店视图代码为`fr`的`french.mysite.mg`
-   - 网站代码为`german`且商店视图代码为`de`的`german.mysite.mg`
+   - 网站代码为`french.mysite.mg`且商店视图代码为`french`的`fr`
+   - 网站代码为`german.mysite.mg`且商店视图代码为`german`的`de`
    - `mysite.mg`是默认网站和默认商店视图
 
 >[!TIP]
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 1. [在管理员中设置网站、商店和商店视图](ms-admin.md)。
 1. 创建一个[Nginx虚拟主机](#step-2-create-nginx-virtual-hosts))以映射多个网站或每个Commerce网站一个Nginx虚拟主机（详细步骤如下）。
-1. 使用Magento提供的`nginx.conf.sample`将[MAGE变量](ms-overview.md) `$MAGE_RUN_TYPE`和`$MAGE_RUN_CODE`的值传递给nginx（详细步骤如下）。
+1. 使用Magento提供的[将](ms-overview.md)MAGE变量`$MAGE_RUN_TYPE` `$MAGE_RUN_CODE`和`nginx.conf.sample`的值传递给nginx（详细步骤如下）。
 
    - `$MAGE_RUN_TYPE`可以是`store`或`website`：
 
@@ -105,7 +105,7 @@ ht-degree: 0%
    ln -s /etc/nginx/sites-available/magento magento
    ```
 
-有关map指令的更多详细信息，请参阅有关map指令[&#128279;](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)的nginx文档。
+有关map指令的更多详细信息，请参阅有关map指令[的](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)nginx文档。
 
 
 **要创建多个虚拟主机**：
@@ -280,7 +280,7 @@ bin/magento cache:clean config full_page
 >[!INFO]
 >
 >- 在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
->- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅&#x200B;_云基础架构上的Commerce指南_&#x200B;中的[设置多个云网站或商店](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=zh-Hans)。
+>- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅[云基础架构上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html)中的&#x200B;_设置多个云网站或商店_。
 
 ### 故障排除
 

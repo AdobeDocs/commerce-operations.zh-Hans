@@ -35,7 +35,7 @@ Cron作业是重新启动使用者的默认机制。 由`cron`启动的进程使
 >
 >它可以在管理员商店>设置>配置>高级>系统> Cron配置选项中针对组进行配置：消费者。
 >
->有关将`cron`与Commerce结合使用的详细信息，请参阅[配置和运行cron](../cli/configure-cron-jobs.md)。
+>有关将[与Commerce结合使用的详细信息，请参阅](../cli/configure-cron-jobs.md)配置和运行cron`cron`。
 
 您还可以使用进程管理器（如[主管](https://supervisord.readthedocs.io/en/latest/)）来监视进程的状态。 管理员可以使用命令行根据需要重新启动进程。
 
@@ -49,7 +49,7 @@ Cron作业是重新启动使用者的默认机制。 由`cron`启动的进程使
 
 >[!INFO]
 >
->如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#cron_consumers_runner)配置`consumers_runner` cron作业。
+>如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner)配置`consumers_runner` cron作业。
 
 ### 特定配置
 
@@ -82,6 +82,6 @@ Cron作业是重新启动使用者的默认机制。 由`cron`启动的进程使
 
   >[!INFO]
   >
-  >如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#consumers_wait_for_max_messages)配置使用者如何处理来自消息队列的消息。
+  >如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages)配置使用者如何处理来自消息队列的消息。
 
 请参阅[启动消息队列使用者](../cli/start-message-queues.md)。

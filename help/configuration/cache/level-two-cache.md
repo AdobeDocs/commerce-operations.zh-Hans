@@ -5,7 +5,7 @@ feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
 source-git-commit: ba3c656566af47f16f58f476d7bc9f4781bb0234
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 - 检查缓存数据版本，并确保最新的缓存存储在本地
 - 将最新缓存从远程计算机传输到本地计算机
 
-Commerce将经过哈希处理的数据版本存储在Redis中，并在常规键后面附加后缀“：hash”。 如果存在过时的本地缓存，则会使用缓存适配器将数据传输到本地计算机。
+Commerce将经过哈希处理的数据版本存储在Redis中，后缀“:hash”附加到常规键中。 如果存在过时的本地缓存，则会使用缓存适配器将数据传输到本地计算机。
 
 >[!INFO]
 >
->对于云基础架构上的Adobe Commerce，您可以使用[部署变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)来配置二级缓存。
+>对于云基础架构上的Adobe Commerce，您可以使用[部署变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend)来配置二级缓存。
 
 ## 配置示例
 
@@ -72,7 +72,7 @@ Commerce将经过哈希处理的数据版本存储在Redis中，并在常规键�
 
 Adobe建议使用Redis进行远程缓存(`\Magento\Framework\Cache\Backend\Redis`)，使用`Cm_Cache_Backend_File`进行共享内存中数据的本地缓存，使用： `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
 
-Adobe建议使用[`cache preload`](redis-pg-cache.md#redis-preload-feature)功能，因为它可显着降低Redis上的压力。 不要忘记为预加载密钥添加后缀“：hash”。
+Adobe建议使用[`cache preload`](redis-pg-cache.md#redis-preload-feature)功能，因为它可显着降低Redis上的压力。 不要忘记为预加载密钥添加后缀“:hash”。
 
 ## 过时的缓存选项
 
@@ -82,7 +82,7 @@ Adobe建议使用[`cache preload`](redis-pg-cache.md#redis-preload-feature)功�
 
 过时的缓存仅适用于二级缓存。 使用过时的缓存，您可以发送过时的缓存，同时在并行进程中生成新的缓存。 要启用过时的缓存，请将`'use_stale_cache' => true`添加到L2缓存的顶部配置中。
 
-Adobe建议仅对从中获益最多的缓存类型启用`use_stale_cache`选项，包括：
+Adobe建议仅对从中获益最大的缓存类型启用`use_stale_cache`选项，包括：
 
 - `block_html`
 - `config_integration_api`
@@ -92,7 +92,7 @@ Adobe建议仅对从中获益最多的缓存类型启用`use_stale_cache`选项�
 - `reflection`
 - `translate`
 
-Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
+Adobe不建议为`use_stale_cache`缓存类型启用`default`选项。
 
 以下代码显示了示例配置：
 

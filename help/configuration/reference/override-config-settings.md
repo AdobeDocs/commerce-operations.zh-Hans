@@ -13,11 +13,11 @@ ht-degree: 0%
 
 本主题讨论如何获取知道配置路径的环境变量名称。 您可以使用环境变量覆盖Adobe Commerce配置设置。 例如，您可以在生产系统上覆盖支付处理者的实时URL的值。
 
-您可以使用环境变量覆盖&#x200B;_any_&#x200B;配置设置的值；但是，Adobe建议您使用共享配置文件`config.php`和系统特定的配置文件`env.php`来保持一致的设置，如[部署常规概述](../deployment/overview.md)中所述。
+您可以使用环境变量覆盖&#x200B;_any_&#x200B;配置设置的值；但是，Adobe建议您使用共享配置文件`config.php`和特定于系统的配置文件`env.php`来保持一致的设置，如[部署常规概述](../deployment/overview.md)中所述。
 
 >[!TIP]
 >
->查看&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[配置环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html?lang=zh-Hans)主题。
+>查看[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html)中的&#x200B;_配置环境_&#x200B;主题。
 
 ## 环境变量
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 您可以将变量用于以下任何一项：
 
-- 必须使用环境变量或[`magento config:sensitive:set`](../cli/set-configuration-values.md)命令设置[敏感值](config-reference-sens.md)。
+- 必须使用环境变量或[命令设置](config-reference-sens.md)敏感值[`magento config:sensitive:set`](../cli/set-configuration-values.md)。
 - 必须使用以下方式设置系统特定的值：
 
    - 环境变量
@@ -62,8 +62,8 @@ ht-degree: 0%
   有关作用域的详细信息，请参阅：
 
    - [步骤1：查找网站或商店视图范围值](#step-1-find-the-website-or-store-view-scope-value)
-   - 有关作用域的[Commerce用户指南主题](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
-   - [范围快速引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/scope-change#scope-quick-reference)
+   - 有关作用域的[Commerce用户指南主题](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
+   - [范围快速引用](https://experienceleague.adobe.com/en/docs/commerce-admin/config/scope-change#scope-quick-reference)
 
 `<SYSTEM__VARIABLE__NAME>`是`/`被双下划线字符替换的配置路径。 有关详细信息，请参阅[第2步：设置系统变量](#step-2-set-global-website-or-store-view-variables)。
 
@@ -196,7 +196,7 @@ ht-degree: 0%
 
 | 描述 | 管理员中的路径（省略&#x200B;**商店** > **设置** > **配置**） | 变量名称 |
 |--------------|--------------|----------------------|
-| Elasticsearch的服务器主机名 | 目录> **目录**，**Elasticsearch服务器主机名** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME` |
+| Elasticsearch服务器主机名 | 目录> **目录**，**Elasticsearch服务器主机名** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME` |
 | Elasticsearch服务器端口 | 目录> **目录**，**Elasticsearch服务器端口** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_PORT` |
 | 装运国家/地区 | 销售> **送货设置** | `<SCOPE>__SHIPPING__ORIGIN__COUNTRY_ID` |
 | 自定义管理员URL | 高级> **管理员** | `<SCOPE>__ADMIN__URL__CUSTOM` |
@@ -206,7 +206,7 @@ ht-degree: 0%
 
 本节介绍如何查找某些示例变量的值。
 
-### Elasticsearch的服务器主机名
+### Elasticsearch服务器主机名
 
 要查找全局HTML缩小的变量名称，请执行以下操作：
 
@@ -224,7 +224,7 @@ ht-degree: 0%
 
 1. 确定范围。
 
-   在[数据库](#find-a-website-or-store-view-scope-in-the-database)中查找范围，如步骤1中所述：查找网站或存储视图范围值。 (您还可以在Admin中找到值，如步骤2中的[表中所示：设置全局、网站或存储视图变量] (#step-2-set-global-website-or-store-view-variables。
+   在[数据库](#find-a-website-or-store-view-scope-in-the-database)中查找范围，如步骤1中所述：查找网站或存储视图范围值。 (您还可以在Admin中找到值，如步骤2中的[表中所示：设置全局、网站或存储视图变量]&#x200B;(#step-2-set-global-website-or-store-view-variables。
 
    例如，范围可以是`CONFIG__WEBSITES__DEFAULT`。
 
@@ -238,7 +238,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在`index.php`或`pub/index.php`中设置变量值并不总是按预期运行，因为可以根据Web服务器配置使用不同的应用程序入口点。 通过将指令置于`app/bootstrap.php`文件中，而不考虑不同的应用程序入口点，可以始终执行`$_ENV`指令，因为`app/bootstrap.php`文件作为Commerce架构的一部分加载。`$_ENV`
+>在`index.php`或`pub/index.php`中设置变量值并不总是按预期运行，因为可以根据Web服务器配置使用不同的应用程序入口点。 通过将指令置于`$_ENV`文件中，而不考虑不同的应用程序入口点，可以始终执行`app/bootstrap.php`指令，因为`$_ENV`文件作为Commerce架构的一部分加载。`app/bootstrap.php`
 
 下面是设置两个`$_ENV`值的示例：
 
@@ -251,8 +251,8 @@ $_ENV['CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'] = '123
 
 >[!WARNING]
 >
->- 要使用您在`$_ENV`数组中设置的值，必须在`php.ini`文件中设置`variables_order = "EGPCS"`（Environment、Get、Post、Cookie和服务器）。 有关详细信息，请参阅[PHP文档](https://www.php.net/manual/en/ini.core.php)。
+>- 要使用您在`$_ENV`数组中设置的值，必须在`variables_order = "EGPCS"`文件中设置`php.ini`（Environment、Get、Post、Cookie和服务器）。 有关详细信息，请参阅[PHP文档](https://www.php.net/manual/en/ini.core.php)。
 >
->- 对于云基础架构上的Adobe Commerce，如果您尝试使用[Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans#configure-the-project)覆盖配置设置，则必须在变量名称前加上`env:`。 例如：
+>- 对于云基础架构上的Adobe Commerce，如果您尝试使用[Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)覆盖配置设置，则必须在变量名称前加上`env:`。 例如：
 >
 >![环境变量示例](../../assets/configuration/cloud-console-envvariable.png)

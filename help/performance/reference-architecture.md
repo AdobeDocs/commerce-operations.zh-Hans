@@ -13,13 +13,13 @@ ht-degree: 0%
 
 本主题介绍了一般性建议设置，适用于Adobe Commerce实例，这些实例使用在数据中心（非虚拟化）物理托管的普通服务器，其中资源不与其他用户共享。 您的托管提供商(尤其是专门从事Commerce高性能托管业务的提供商)可能会建议您采用对您的要求同样有效或更加有效的其他设置。
 
-有关云基础架构环境上的Adobe Commerce，请参阅[入门架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/starter-architecture)。
+有关云基础架构环境上的Adobe Commerce，请参阅[入门架构](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/starter-architecture)。
 
 ## [!DNL Commerce]参考体系结构图
 
 [!DNL Commerce]参考架构图表示设置可缩放[!DNL Commerce]站点的最佳实践方法。
 
-图中每个元素的颜色指示该元素是Magento Open Source还是Adobe Commerce的一部分，以及是否必需。
+图中每个元素的颜色指示该元素是Magento Open Source还是Adobe Commerce的一部分以及是否必需。
 
 * Magento Open Source需要橙色元素
 * 灰色元素对于Magento Open Source是可选的
