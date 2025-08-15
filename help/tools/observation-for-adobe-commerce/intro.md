@@ -38,4 +38,4 @@ ht-degree: 0%
 
 观看此视频以了解[!DNL Observation for Adobe Commerce]：
 
->[!VIDEO](https://video.tv.adobe.com/v/344444?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3410745?quality=12&captions=chi_hans)
