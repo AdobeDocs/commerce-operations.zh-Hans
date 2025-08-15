@@ -80,4 +80,4 @@ Adobe Commerce仅在Linux操作系统上受支持。 您可以在Linux操作系�
 
 如果您针对具有大型模块和文件的Adobe Commerce实例运行[!DNL Upgrade Compatibility Tool]，则该工具可能需要大量RAM（至少2GB）。
 
-在云基础架构[!DNL Upgrade Compatibility Tool]项目中为[[!DNL Site-Wide Analysis Tool]Adobe Commerce运行](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html)[中的](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}。
+在云基础架构[!DNL Upgrade Compatibility Tool]项目中为[[!DNL Site-Wide Analysis Tool]Adobe Commerce运行](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) [中的](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}。

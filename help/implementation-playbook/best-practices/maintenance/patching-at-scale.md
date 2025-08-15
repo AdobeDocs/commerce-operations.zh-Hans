@@ -34,7 +34,7 @@ ht-degree: 0%
 1. **安全修补程序**&#x200B;是Adobe Commerce版本的静态代码库的一部分。
 1. 通过&#x200B;**和**&#x200B;插件（如`composer install`cweagans/composer-patches`composer update`），[Composer修补程序](https://packagist.org/packages/cweagans/composer-patches)。
 1. Commerce **程序包的** Cloud修补程序中包含所有[必需的修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html)。
-1. 已选择&#x200B;**中包含的**&#x200B;质量修补程序[!DNL [Quality Patches Tool]](../../../tools/quality-patches-tool/usage.md)。
+1. 已选择&#x200B;**中包含的**&#x200B;质量修补程序[[!DNL [Quality Patches Tool]]](../../../tools/quality-patches-tool/usage.md)。
 1. **自定义修补程序**&#x200B;以及`/m2-hotfixes`目录中的Adobe Commerce支持修补程序，按修补程序名称的字母顺序排列。
 
    >[!IMPORTANT]

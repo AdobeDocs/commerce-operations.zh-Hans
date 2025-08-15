@@ -384,7 +384,7 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 * &#39;%您可以通过将Magento Cloud基础架构上的Elasticsearch服务升级到“ver_err”版本%来解决此问题
 * “%cluster运行状况状态已从\[YELLOW\]更改为\[RED\]（原因：%）为“yel_red”
 * “%No space”作为“no_space”，在设备%上已没有剩余空间
-* “%”无法作为“failed_query”执行[SearchRequest{searchType=%&#39;
+* “%”无法作为“failed_query”执行&lbrack;SearchRequest&lbrace;searchType=%&#39;
 
 ## [!UICONTROL Cron view]
 

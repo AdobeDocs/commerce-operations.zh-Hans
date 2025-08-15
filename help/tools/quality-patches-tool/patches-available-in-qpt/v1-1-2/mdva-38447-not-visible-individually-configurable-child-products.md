@@ -50,26 +50,26 @@ GraphQL响应中返回“不可见”可单独配置的子产品，并且使用�
   $search：字符串
   $pageSize： Int！
   $currentPage： Int！
-) {
+) &lbrace;
   products(
     过滤器：$filter
     排序：$sort
     搜索：$search
     pageSize：$pageSize
     currentPage：$currentPage
-  ) {
+  ) &lbrace;
     total_count
-    page_info {
+    page_info &lbrace;
       total_pages
       current_page
       page_size
-    }
-    项目{
+    &rbrace;
+    项目&lbrace;
       name
       sku
-    }
-  }
-}</pre>
+    &rbrace;
+  &rbrace;
+&rbrace;</pre>
 
 变量：
 

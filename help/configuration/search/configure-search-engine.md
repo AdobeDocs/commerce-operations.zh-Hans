@@ -16,8 +16,8 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在版本2.4.4和2.4.3-p2中，标记为&#x200B;**Elasticsearch**的所有字段也适用于OpenSearch。
->>当版本2.4.6中引入对Elasticsearch 8.x的支持时，创建了新标签以区分Elasticsearch和OpenSearch配置。
+>在版本2.4.4和2.4.3-p2中，标记为&#x200B;**Elasticsearch**&#x200B;的所有字段也适用于OpenSearch。
+>&#x200B;>当版本2.4.6中引入对Elasticsearch 8.x的支持时，创建了新标签以区分Elasticsearch和OpenSearch配置。
 
 有关配置搜索引擎的其他详细信息，请参阅[用户指南](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html)。
 

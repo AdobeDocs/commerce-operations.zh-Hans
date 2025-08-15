@@ -1,6 +1,6 @@
 ---
-title: '[!UICONTROL [!DNL RabbitMQ]选项卡'
-description: 了解[!UICONTROL [!DNL RabbitMQ]的 [!DNL Observation for Adobe Commerce]选项卡。
+title: '[!DNL RabbitMQ]选项卡'
+description: 了解[!DNL RabbitMQ]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: c5370c30-fed8-4f45-89c3-ef0d6ad41a89
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7

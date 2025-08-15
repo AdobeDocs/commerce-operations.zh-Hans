@@ -1,6 +1,6 @@
 ---
 title: ACSD-63574：将[!UICONTROL Bundle Product]列表添加到via [!DNL Page Builder] 的块会导致错误
-description: '应用ACSD-63574修补程序以修复Adobe Commerce问题，该问题导致通过{1**向块添加带有“复选框”或“多选”选项的**[!UICONTROL Bundle Product]会导致错误。 [!DNL Page Builder] '
+description: '应用ACSD-63574修补程序以修复Adobe Commerce问题，该问题导致通过&lbrace;1**向块添加带有“复选框”或“多选”选项的**[!UICONTROL Bundle Product]会导致错误。 [!DNL Page Builder] '
 feature: Page Builder, Page Content
 role: Admin, Developer
 exl-id: bb56c0c2-e094-4173-8260-da154df79748
@@ -34,9 +34,9 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.4-p11
 
 使用&#x200B;**[!UICONTROL Bundle Product]**&#x200B;将[!DNL Page Builder]添加到块时，产品小组件预览会中断并显示错误消息&#x200B;*很抱歉，生成此内容时出错*。 当捆绑产品包含`Checkbox`或`Multi Select`选项类型，并且`indexer dimension mode`设置为`website_and_customer_group`时，具体会发生此问题。 异常日志显示以下错误：
 
-    ``
+    &grave;&grave;
     report.CRITICAL： PDOException： SQLSTATE[42S02]：未找到基表或视图： 1146表`db_name.catalog_product_index_price_cg0_ws0`在/home/vendor/magento/framework/DB/Statement/Pdo/Mysql.php：90
-    ``
+    &grave;&grave;
 中不存在
 <u>重现步骤</u>：
 

@@ -51,7 +51,7 @@ ACSD-66093修补程序修复了在来宾客户的&#x200B;**[!UICONTROL First Nam
 <u>实际结果</u>：
 
 已下订单。
-**[!UICONTROL First Name]**&#x200B;和&#x200B;**[!UICONTROL Last Name]**字段保存为已输入。
+**[!UICONTROL First Name]**&#x200B;和&#x200B;**[!UICONTROL Last Name]**&#x200B;字段保存为已输入。
 订单确认电子邮件会发送到所有这三封电子邮件：test1@gmail.co、test2@gmail.co和test3@gmail.co。
 
 ## 应用修补程序

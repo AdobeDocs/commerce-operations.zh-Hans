@@ -22,7 +22,7 @@ ht-degree: 1%
 >[!WARNING]
 >
 >如果您使用`git clone`安装Commerce，则本指南不适用。
->>参与开发的开发人员应使用[本指南][install]更新其Commerce安装。
+>&#x200B;>参与开发的开发人员应使用[本指南][install]更新其Commerce安装。
 
 ## 部署步骤
 
