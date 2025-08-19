@@ -3,9 +3,9 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: 00153baf1c4a52d17b750db35a678b1950e00ed1
+source-git-commit: 4adac1df0382cd0ae0833599011aeb664a91ceb6
 workflow-type: tm+mt
-source-wordcount: '27482'
+source-wordcount: '28046'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,33 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.69 {#v1-1-69}
+
+* **AC-15223**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了2.4.8店面中的一个问题，该问题导致在切换商店之后，从缓存中提供页面，并且不反映选定的商店。
+* **ACP2E-3731**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了在多商店环境中，具有&#x200B;**[!UICONTROL Catalog, Search]**&#x200B;可见性的产品导出错误地包含来自其他商店视图的记录的问题。
+* **ACP2E-3767**(适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了无法删除捆绑包产品中最后一个捆绑包选项的问题。
+* **ACP2E-3964**(对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8) — 修复了在图库中设置了视频时，无法通过REST API列出可配置产品的子产品的问题。
+* **ACP2E-3977**(对于Adobe Commerce >=2.4.4 &lt;2.4.9) — 修复了在设置&#x200B;**[!UICONTROL Cap Reward Points Balance At]**&#x200B;时[!UICONTROL Rewards Points Balance Redemption Threshold]字段不能为空，从而导致验证错误的问题。
+* **ACP2E-4050**(适用于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.8) — 修复了在使用捆绑产品并启用免费配送功能的情况下使用子选择条件时，购物车价格规则无法正确应用于多配送产品的问题。
+* **ACSD-56226**(对于Adobe Commerce >=2.4.6 &lt;2.4.7) — 修复了在启用`synchronous_replication`标记时，从节点上的READ查询返回过期数据的问题。
+* **ACSD-57477**(对于Adobe Commerce和Magento Open Source >=2.4.6 &lt;2.4.7) — 修复了销售规则处理导致购物车相关请求性能缓慢的问题。
+* **ACSD-58108**(对于Adobe Commerce和Magento Open Source >=2.4.6 &lt;2.4.8) — 修复了原始提取表中缺少联接表名称导致顺序网格中的自定义模块扩展SQL出现错误的问题。
+* **ACSD-65983**(对于Adobe Commerce >=2.4.6-p10 &lt;2.4.9) — 修复了在Admin后端中重新配置捆绑产品报价时引发错误的问题。
+* **ACSD-66149**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8) — 修复了IPN处理程序针对不支持的或未知的IPN类型返回&#x200B;*500*&#x200B;错误的问题。
+* **ACSD-66153**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了由于缓存的布局结构不正确而导致页面返回&#x200B;*500*&#x200B;错误的问题。
+* **ACSD-66302**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了按商店ID错误地筛选愿望清单项目而不是按网站筛选的问题。
+* **ACSD-66311**(对于Adobe Commerce >=2.4.6-p9 &lt;2.4.9) — 修复了网站访问受限的管理员用户，公司网格加载缓慢的问题。
+* **ACSD-66404**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了cron作业无法清除changelog表，在处理大量数据时导致[!DNL Galera Cluster]崩溃的问题。
+* **ACSD-66952**(对于Adobe Commerce >=2.4.4 &lt;2.4.9) — 修复了在每次PLP或购物车访问时清除缓存而导致设置目标规则时产生性能开销的问题。
+* **ACSD-67264**(适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8) — 修复了捆绑包和可下载产品页面布局在各设备间不一致的问题。
+* **ACSD-67347**(对于Adobe Commerce和Magento Open Source >=2.4.5-p11 &lt;2.4.6) — 修复了以下问题：使用具有特殊字符的优惠券并启用文件锁定时，出现&#x200B;*无法获取锁定*&#x200B;错误。
+* 已替换的修补程序： **ACP2E-3841**
 
 ## v1.1.68 {#v1-1-68}
 
