@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: 0dd91496c3117a424c71382e18b9689fff016ada
+source-git-commit: c701c9ff7385821b771af2d19920ead192e4410a
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -26,7 +26,7 @@ QPT v1.1.69包含以下修补程序：
 1. **ACSD-57477**：销售规则处理会降低购物车相关请求的性能。
 1. **ACSD-58108**：缺少联接表名称导致顺序网格自定义模块扩展出现SQL错误。
 1. **ACSD-65983**：在Admin中重新配置捆绑的产品报价时出错。
-1. **[ACSD-66149](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-66149-ipn-handler-returns-500-for-unsupported-types.md)**： IPN处理程序针对不支持的类型返回500。
+1. **ACSD-66149**： IPN处理程序针对不支持的类型返回500。
 1. **ACSD-66153**：由于缓存的布局结构不正确，页面返回500。
 1. **ACSD-66302**：按商店ID而不是网站过滤的愿望清单项目。
 1. **ACSD-66311**：受限制管理员的公司网格加载缓慢。
