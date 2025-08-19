@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: a59d05b93e1ada3416562625ce864b7bda94ee8e
+source-git-commit: 0dd91496c3117a424c71382e18b9689fff016ada
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ QPT v1.1.69包含以下修补程序：
 1. **ACP2E-3731**：具有&#x200B;**[!UICONTROL Catalog, Search]**&#x200B;可见性的产品导出包括来自其他商店视图的记录。
 1. **ACP2E-3767**：保存捆绑产品后，最后一个捆绑选项会重新显示。
 1. **ACP2E-3964**：未通过REST API列出带有视频的可配置子产品。
-1. **ACP2E-3977**： **[!UICONTROL Cap Reward Points Balance At]**&#x200B;不能留空。
+1. **ACP2E-3977**： [!UICONTROL Cap Reward Points Balance At]字段不能留空。
 1. **ACP2E-4050**：捆绑产品和免费配送的多次配送购物车价格规则失败。
 1. **ACSD-56226**：读取查询返回启用`synchronous_replication`的过期数据。
 1. **ACSD-57477**：销售规则处理会降低购物车相关请求的性能。
 1. **ACSD-58108**：缺少联接表名称导致顺序网格自定义模块扩展出现SQL错误。
 1. **ACSD-65983**：在Admin中重新配置捆绑的产品报价时出错。
-1. **ACSD-66149**： IPN处理程序针对不支持的类型返回500。
+1. **[ACSD-66149](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-66149-ipn-handler-returns-500-for-unsupported-types.md)**： IPN处理程序针对不支持的类型返回500。
 1. **ACSD-66153**：由于缓存的布局结构不正确，页面返回500。
 1. **ACSD-66302**：按商店ID而不是网站过滤的愿望清单项目。
 1. **ACSD-66311**：受限制管理员的公司网格加载缓慢。
