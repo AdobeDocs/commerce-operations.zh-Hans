@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: c701c9ff7385821b771af2d19920ead192e4410a
+source-git-commit: 29f09e0ee426f9b58a98fdd512d7c1ac3fca2425
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -27,7 +27,7 @@ QPT v1.1.69包含以下修补程序：
 1. **ACSD-58108**：缺少联接表名称导致顺序网格自定义模块扩展出现SQL错误。
 1. **ACSD-65983**：在Admin中重新配置捆绑的产品报价时出错。
 1. **ACSD-66149**： IPN处理程序针对不支持的类型返回500。
-1. **ACSD-66153**：由于缓存的布局结构不正确，页面返回500。
+1. **ACSD-66153**：由于缓存的布局结构不正确，页面返回500错误。
 1. **ACSD-66302**：按商店ID而不是网站过滤的愿望清单项目。
 1. **ACSD-66311**：受限制管理员的公司网格加载缓慢。
 1. **ACSD-66404**：由于[!DNL Galera Cluster]事务大小限制，Cron作业无法清除changelog表。
