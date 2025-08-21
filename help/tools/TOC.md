@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 29f09e0ee426f9b58a98fdd512d7c1ac3fca2425
+source-git-commit: fa5164f3118ec51e4562f7ae5073781307452bc4
 workflow-type: tm+mt
-source-wordcount: '8232'
+source-wordcount: '8266'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
    - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
@@ -825,6 +825,7 @@ ht-degree: 0%
          - [ACP2E-3918：使用店内取货的公司客户签出失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acp2e-3918-checkout-failure-for-company-customers-using-in-store-pickup.md)
       - v1.1.67 {#v1-1-67}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.67](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/overview.md)
+         - [ACSD-66139：对于不活动的购物车，GraphQL订单失败并出现“未定义”错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66139-graphql-order-fails-with-undefined-error-for-inactive-cart.md)
          - [ACSD-66301：在Commerce管理员中将产品从订单移至购物车会导致数量不匹配](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66301-order-to-cart-quantity-mismatch.md)
          - [AC-14984：php-amqplib/php-amqplib ^3.2.0的SSL连接问题](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/ac-14984-ssl-connection-issue-with-php-amqplib-php-amqplib-3-2.md)
          - [ACSD-66118：如果未刷新配置缓存，更新[!UICONTROL Store View]代码将清除[!UICONTROL Design Configuration]设置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66118-updating-store-view-code-clears-design-configuration-settings-if-configuration-cache-isn-t-refreshed.md)
@@ -836,6 +837,8 @@ ht-degree: 0%
       - v1.1.68 {#v1-1-68}
          - [ACSD-66072：由于[!UICONTROL Related Products Rule]配置期间的内部服务器错误，GraphQL无法在“产品详细信息”页面上返回相关产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-66072-graphql-fails-to-return-related-products-due-to-server-error-in-related-product-rules.md)
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.68](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/overview.md)
+         - [ACSD-66965： [!UICONTROL Print]页面上的[!UICONTROL Requisition List]选项导致错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-66965-print-option-on-requisition-list-page-causes-an-error.md)
+         - [ACSD-66865：保存[!UICONTROL Catalog Price Rule]将使索引器失效，并且提供替代方法，以仅对受影响的产品重新索引](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-66865-saving-catalog-price-rules-invalidates-indexers-and-provides-an-alternative-to-reindex-only-affected-products.md)
          - [ACSD-65938：即使发票创建失败，也发送礼品卡电子邮件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-65938-gift-card-emails-were-sent-even-when-the-invoice-creation-failed.md)
          - [ACSD-62146：选定的账单地址在结账付款页面上消失](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-62146-selected-billing-address-disappears-on-checkout-payment-page.md)
          - [ACSD-67039：由于rp_token系统属性验证，未保存客户记录](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-67039-customer-records-were-not-saved-due-to-validation-of-the-rp-token-system-attribute.md)
@@ -902,6 +905,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [更改日志](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

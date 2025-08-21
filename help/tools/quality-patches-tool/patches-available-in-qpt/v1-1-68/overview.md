@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 937acc659427b788b8af778f5ea826eacccdc70e
+source-git-commit: fa5164f3118ec51e4562f7ae5073781307452bc4
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,11 @@ QPT v1.1.68包含以下修补程序：
 1. **ACSD-66179**：取消付款类型为“Not Capture”的发票会导致404错误页。
 1. **ACSD-66233**：由于无响应的产品列表弹出窗口，管理员无法添加产品。
 1. **ACSD-66506**：删除以前分配的共享目录产品并分配新产品时出现后端错误。
-1. **ACSD-66865**：保存目录价格规则将使索引器失效，并提供仅对受影响的产品重新索引的替代方法。
+1. **ACSD-66865**：保存&#x200B;**[!UICONTROL Catalog Price Rule]**&#x200B;将使索引器失效，并提供仅对受影响的产品重新索引的替代方法。
 1. **ACSD-66889**：在CLI中重新索引清单时出错。
 1. **ACSD-66963**：将折扣代码应用于带有虚拟产品的购物车时，EstimateTotals突变会返回折扣null。
-1. **ACSD-66965**：“申请列表”页面上的“打印”选项会导致错误。
+1. **ACSD-66965**： **[!UICONTROL Print]**&#x200B;页面上的&#x200B;**[!UICONTROL Requisition List]**&#x200B;选项会导致错误。
 1. **ACSD-67039**：由于`rp_token`系统属性的验证，未保存客户记录。
+
 
 使用左侧的菜单导航到特定的修补程序页面。
