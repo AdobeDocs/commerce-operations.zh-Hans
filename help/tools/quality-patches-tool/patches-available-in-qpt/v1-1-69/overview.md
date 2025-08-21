@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: 29f09e0ee426f9b58a98fdd512d7c1ac3fca2425
+source-git-commit: 564004a106d69f4b7ff6f85563209433799d36f1
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 QPT v1.1.69包含以下修补程序：
 1. **AC-15223**： Storefront页面显示切换商店后缓存的内容。
-1. **ACP2E-3731**：具有&#x200B;**[!UICONTROL Catalog, Search]**&#x200B;可见性的产品导出包括来自其他商店视图的记录。
+1. **ACP2E-3731**：具有&#x200B;*[!UICONTROL Catalog, Search]*&#x200B;可见性的产品导出包括来自其他商店视图的记录。
 1. **ACP2E-3767**：保存捆绑产品后，最后一个捆绑选项会重新显示。
 1. **ACP2E-3964**：未通过REST API列出带有视频的可配置子产品。
 1. **ACP2E-3977**： [!UICONTROL Cap Reward Points Balance At]字段不能留空。
