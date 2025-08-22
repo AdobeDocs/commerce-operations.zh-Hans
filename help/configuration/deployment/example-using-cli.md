@@ -2,7 +2,7 @@
 title: 使用CLI命令的示例
 description: 请参阅有关如何使用命令行在开发系统中设置共享、系统特定的敏感值的示例。
 exl-id: d0058e9f-a5a9-48a6-9c66-c61515666335
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 0%
@@ -181,3 +181,5 @@ bin/magento config:sensitive:set contact/email/recipient_email --scope=website -
    **默认电子邮件域**&#x200B;字段的值显示如下。 这是系统特定的设置。
 
    ![检查生产系统中的设置](../../assets/configuration/split-default-domain.png)
+
+<!-- Last updated from includes: 2024-07-18 15:50:54 -->

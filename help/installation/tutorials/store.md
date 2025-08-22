@@ -2,7 +2,7 @@
 title: 配置存储
 description: 按照以下步骤配置您的Adobe Commerce商店。
 exl-id: ab5e9c43-d914-4de9-98a9-b60d3984b23c
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -42,3 +42,5 @@ bin/magento setup:store-config:set [--<parameter_name>=<value>, ...]
 | `--use-secure-admin` | `1`表示您使用SSL访问管理员。 在选择此选项之前，请确保您的Web服务器支持SSL。<br><br>`0`表示您未将SSL与管理员一起使用。 这是默认设置。 | 否 |
 | `--admin-use-security-key` | `1`导致应用程序使用随机生成的键值来访问管理员和表单中的页面。 这些键值有助于防止跨站点脚本伪造攻击。 这是默认设置。<br/><br/>`0`禁用该密钥。 | 否 |
 | `--magento-init-params` | 添加到任何命令以自定义应用程序初始化参数<br/><br/>例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache` | 否 |
+
+<!-- Last updated from includes: 2022-09-08 11:33:05 -->

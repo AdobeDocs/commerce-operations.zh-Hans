@@ -2,7 +2,7 @@
 title: 使用共享配置的示例
 description: 请参阅有关如何使用共享配置文件更改开发系统中的设置的示例。
 exl-id: c980ec01-ca2d-43db-b68d-8e9435e07e6a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -89,3 +89,5 @@ ht-degree: 0%
 >[!INFO]
 >
 >要更改管理员中锁定的设置，请使用[`magento config:set --lock`命令](../cli/set-configuration-values.md)。
+
+<!-- Last updated from includes: 2024-07-18 15:50:54 -->

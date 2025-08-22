@@ -4,7 +4,7 @@ description: 了解Adobe Commerce项目开发阶段的代码管理最佳实践�
 feature: Best Practices
 role: Developer
 exl-id: 0bff4c7a-1082-4b3e-b19c-bc8ad529b131
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -115,3 +115,5 @@ ht-degree: 0%
 1. **从Git开始，然后移至编辑器**
 
    在项目开始时选择代码管理方法。 在持续开发的情况下从Git切换到编辑器或反之，过程非常繁琐，可能会导致代码丢失和或修订历史记录丢失。
+
+<!-- Last updated from includes: 2023-08-23 15:56:59 -->

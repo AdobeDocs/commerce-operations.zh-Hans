@@ -2,7 +2,7 @@
 title: 配置锁定提供程序
 description: 执行以下步骤，防止重复的cron作业和cron组在Adobe Commerce部署上运行。
 exl-id: c54e05b7-38fd-4731-bc77-a873b44d0ae8
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 默认情况下，Adobe Commerce使用数据库保存锁定。 如果您的服务器上有多个节点，我们建议使用Zookeeper作为锁定提供程序。
 
-如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
+如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
 
 ### 命令用法
 
@@ -43,3 +43,5 @@ bin/magento setup:config:set [--<parameter_name>=<value>, ...]
 | `--lock-zookeeper-host` | 使用`zookeeper`锁定提供程序时用于连接到Zookeeper群集的主机和端口。<br><br>例如： `127.0.0.1:2181` | 是，如果您设置`--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Zookeeper保存锁的路径。<br><br>默认路径为： `/magento/locks` | 否 |
 | `--lock-file-path` | 保存文件锁定的路径。 | 是，如果您设置`--lock-provider=file` |
+
+<!-- Last updated from includes: 2022-09-08 11:33:05 -->

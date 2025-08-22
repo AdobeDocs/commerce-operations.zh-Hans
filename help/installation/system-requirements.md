@@ -2,7 +2,7 @@
 title: 系统要求
 description: 使用本参考可识别已在Adobe Commerce版本中测试的必需软件依赖项。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 9e93937aebf405f2dd1193abe9378177f9cd0cce
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 0%
@@ -26,7 +26,8 @@ Adobe仅支持下表所述的系统要求组合。 例如，2.4.5已通过MariaD
 为了确保顺利升级过程并防止部署失败，Adobe建议以增量方式升级RabbitMQ版本。 例如，从版本3.8升级到4.1时，您应该首先从3.8升级到3.9，然后从3.9升级到3.10，以此类推。 只有在到达版本3.13之后，您才应该继续升级到版本4.1。
 
 >[!BEGINTABS]
->[!TAB 云端上的 Commerce]
+
+>云端上的[!TAB Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
@@ -47,7 +48,7 @@ opensearch:
     disk: 1024
 ```
 
-请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html?lang=zh-Hans)指南中的&#x200B;_配置服务_。
+请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html)指南中的&#x200B;_配置服务_。
 
 >[!TAB Commerce内部部署]
 
@@ -59,13 +60,13 @@ opensearch:
 
 有特定的PHP配置设置，如`memory_limit`设置，可帮助您在使用Adobe Commerce时避免常见问题。 请参阅[必需的PHP设置](prerequisites/php-settings.md)。
 
-有关云配置指南，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=zh-Hans)指南中的&#x200B;_PHP设置_。
+有关云配置指南，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html)指南中的&#x200B;_PHP设置_。
 
 ### PHP OPcache
 
 建议您验证是否出于性能原因启用了[PHP OPcache](https://www.php.net/manual/en/intro.opcache.php)。 OPcache在许多PHP分发中启用。 默认情况下，`opcache`扩展安装在云基础架构上的Commerce中。
 
-对于内部部署，验证是否已安装PHP OPcache，请参阅[PHP设置](prerequisites/php-settings.md)。 有关性能设置的特定指导，请参阅[性能最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html?lang=zh-Hans#php-settings)指南中的&#x200B;_PHP设置_&#x200B;的软件建议。
+对于内部部署，验证是否已安装PHP OPcache，请参阅[PHP设置](prerequisites/php-settings.md)。 有关性能设置的特定指导，请参阅[性能最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings)指南中的&#x200B;_PHP设置_&#x200B;的软件建议。
 
 如果必须单独安装OPcache，请参阅[PHP OPcache文档](https://www.php.net/manual/en/opcache.setup.php)。
 
@@ -83,10 +84,11 @@ PHPUnit v9（作为命令行工具）。
 
 >[!TIP]
 >
->有关云基础架构中的PHP扩展，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=zh-Hans#enable-extensions)指南中的&#x200B;_启用PHP扩展_。
+>有关云基础架构中的PHP扩展，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html#enable-extensions)指南中的&#x200B;_启用PHP扩展_。
 
 >[!BEGINTABS]
->[!TAB 云端上的 Commerce]
+
+>云端上的[!TAB Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
@@ -121,7 +123,7 @@ PHPUnit v9（作为命令行工具）。
 
 ### 邮件服务器
 
-邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/sendgrid.html?lang=zh-Hans)。
+邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/sendgrid.html)。
 
 ### 内存
 
@@ -151,15 +153,17 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 - 不支持自签名SSL证书。
 - 传输层安全性(TLS)要求 — PayPal和`repo.magento.com`都需要TLS 1.2或更高版本。
 
-有关云基础架构上的Commerce，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=zh-Hans)指南中的&#x200B;_Fastly配置_。
+有关云基础架构上的Commerce，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html)指南中的&#x200B;_Fastly配置_。
 
 ### Xdebug
 
 对于Adobe Commerce，请使用[php_xdebug 2.5.x](https://xdebug.org/download)或更高版本（仅适用于开发环境；可能会对性能产生不利影响）。
 
-有关云上的Adobe Commerce，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/debug.html?lang=zh-Hans)指南中的&#x200B;_配置Xdebug_。
+有关云上的Adobe Commerce，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/debug.html)指南中的&#x200B;_配置Xdebug_。
 
 >[!NOTE]
 >
->`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在[Commerce支持知识库`xdebug`中查看影响](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html?lang=zh-Hans)安装&#x200B;_的_&#x200B;已知问题。
+>`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在[Commerce支持知识库`xdebug`中查看影响](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html)安装&#x200B;_的_&#x200B;已知问题。
 
+
+<!-- Last updated from includes: 2025-08-18 10:08:31 -->

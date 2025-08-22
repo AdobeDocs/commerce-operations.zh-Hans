@@ -2,7 +2,7 @@
 title: 克隆示例数据Git存储库
 description: 按照以下步骤通过克隆Git存储库来安装Adobe Commerce示例数据。
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -195,3 +195,5 @@ ht-degree: 0%
 ## 完成示例数据安装
 
 {{$include /help/_includes/sample-data-complete.md}}
+
+<!-- Last updated from includes: 2022-09-08 11:33:05 -->
