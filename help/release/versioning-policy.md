@@ -90,10 +90,10 @@ Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担�
 
 独立修补程序是独立于完整安全修补程序发布的安全修补程序，用于实现更快的实施。 每个独立的修补程序都会解决特定的安全问题，并且都包含在最新或即将推出的完整安全修补程序中。 有关该问题的详细信息在相关安全公告中提供，该公告链接到知识库(KB)文章，其中包含修补程序详细信息、如何应用修补程序以及其他信息。
 
-请参阅[安全中心](https://helpx.adobe.com/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
+请参阅[安全中心](https://helpx.adobe.com/cn/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
 
 ## 自定义修补程序
 
-由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage)提供。
+由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/usage)提供。
 
 <!-- Last updated from includes: 2025-05-28 16:37:31 -->
