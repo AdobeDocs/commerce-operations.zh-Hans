@@ -81,32 +81,32 @@ ACSD-66963修补程序修复了在将折扣代码应用于仅包含虚拟产品�
 
 对于仅包含虚拟产品的购物车，包含折扣信息。
 
-    `
-    {
-    `data`： {
-    `estimateTotals`： {
-    `cart`： {
-    `prices`： {
-    `discounts`： [
-    {
-    `amount`： {
+    &grave;
+    &lbrace;
+    `data`： &lbrace;
+    `estimateTotals`： &lbrace;
+    `cart`： &lbrace;
+    `prices`： &lbrace;
+    `discounts`： &lbrack;
+    &lbrace;
+    `amount`： &lbrace;
     `value`： 100.5，
     `currency`： &quot;USD&quot;
-    }，
+    &rbrace;，
     `label`： &quot;第二个测试折扣代码&quot;，
-    `coupon`： {
+    `coupon`： &lbrace;
     `code`： &quot;z3r0c00l&quot;
-    }，
+    &rbrace;，
     &quot;applied_to&quot;： &quot;ITEM&quot;，
     &quot;type&quot;： null
-    }
-    ]
-    }
-    }
-    }
-    }，
+    &rbrace;
+    &rbrack;
+    &rbrace;
+    &rbrace;
+    &rbrace;
+    &rbrace;，
     &quot;extensions&quot;：{}
-    }
+    &rbrace;
     &quot;&#39;
 
 <u>实际结果</u>：
@@ -114,18 +114,18 @@ ACSD-66963修补程序修复了在将折扣代码应用于仅包含虚拟产品�
 对于仅包含虚拟产品的购物车，折扣信息返回为&#x200B;*null*。
 
     “
-    {
-    ”数据“： {
-    ”估计总数“： {
-    ”购物车“： {
-    ”价格“： {
+    &lbrace;
+    ”数据“： &lbrace;
+    ”估计总数“： &lbrace;
+    ”购物车“： &lbrace;
+    ”价格“： &lbrace;
     ”折扣“： null
-    }
-    }
-    }
-    }，
+    &rbrace;
+    &rbrace;
+    &rbrace;
+    &rbrace;，
     ”扩展“： {}
-    }
+    &rbrace;
     ”“
 
 ## 应用修补程序
