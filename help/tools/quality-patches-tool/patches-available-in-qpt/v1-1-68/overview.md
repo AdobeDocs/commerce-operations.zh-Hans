@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 53768b017845d0ea8033ebd7651421877ed36a55
+source-git-commit: f04931fb8223f404bbdab8371cc1e4952948f1c1
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,9 @@ QPT v1.1.68包含以下修补程序：
 1. **ACSD-66072**：由于配置[!UICONTROL Related Products Rule]时发生内部服务器错误，相关产品未通过“产品详细信息”页面上的GraphQL返回。
 1. **ACSD-66082**：无法通过产品导入更新产品的样本图像。
 1. **ACSD-66179**：取消付款类型为“Not Capture”的发票会导致404错误页。
+1. **ACSD-66233**：由于未加载“添加产品”弹出窗口，管理员用户无法将产品添加到类别。
+1. **ACSD-66506**：删除并重新分配共享目录产品后发生后端错误。
+1. **ACSD-66865**：保存目录价格规则将使索引器失效，并提供仅对受影响的产品重新索引的替代方法。
 1. **ACSD-66233**：由于无响应的产品列表弹出窗口，管理员无法添加产品。
 1. **ACSD-66506**：删除以前分配的共享目录产品并分配新产品时出现后端错误。
 1. **ACSD-66865**：保存&#x200B;**[!UICONTROL Catalog Price Rule]**&#x200B;将使索引器失效，并提供仅对受影响的产品重新索引的替代方法。
