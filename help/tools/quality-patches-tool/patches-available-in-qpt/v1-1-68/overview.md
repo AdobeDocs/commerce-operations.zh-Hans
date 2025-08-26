@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 674aa68a0f7ecf30481a6d4f33b119d295c51a6b
+source-git-commit: 9dd2ea9464a8e0fb9e45fea44e17d2ded0193ba9
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.68中提供的修补程序所修复的问题。
 
 QPT v1.1.68包含以下修补程序：
-1. **ACSD-58131**：媒体集中存在0字节的图像，导致目录中的所有图像无法显示或选择。
+1. **ACSD-58131**&#x200B;旧媒体集由于0字节图像文件而无法加载图像。
 1. **ACSD-62146**：启用地址搜索并将“客户地址数限制”设置为1时，选定的帐单地址将在签出付款页面上消失。
 1. **[ACSD-62415](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-62415-adobe-commerce-backend-loads-categories-very-slowly.md)**： Adobe Commerce后端加载类别的速度非常慢。
 1. **ACSD-65938**：即使发票创建失败，也发送了礼品卡电子邮件。
