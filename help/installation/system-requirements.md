@@ -26,8 +26,7 @@ Adobe仅支持下表所述的系统要求组合。 例如，2.4.5已通过MariaD
 为了确保顺利升级过程并防止部署失败，Adobe建议以增量方式升级RabbitMQ版本。 例如，从版本3.8升级到4.1时，您应该首先从3.8升级到3.9，然后从3.9升级到3.10，以此类推。 只有在到达版本3.13之后，您才应该继续升级到版本4.1。
 
 >[!BEGINTABS]
-
->云端上的[!TAB Commerce]
+>[!TAB 云端上的 Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
@@ -87,8 +86,7 @@ PHPUnit v9（作为命令行工具）。
 >有关云基础架构中的PHP扩展，请参阅[云基础架构上的Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html#enable-extensions)指南中的&#x200B;_启用PHP扩展_。
 
 >[!BEGINTABS]
-
->云端上的[!TAB Commerce]
+>[!TAB 云端上的 Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
