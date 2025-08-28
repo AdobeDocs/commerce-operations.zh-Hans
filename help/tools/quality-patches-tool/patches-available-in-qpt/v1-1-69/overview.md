@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: 7a2d626092b19852287c48dc3da1fcc766237212
+source-git-commit: e72c99bbb5e82cd2dc77e33b7d17dfe8955e945a
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -26,7 +26,7 @@ QPT v1.1.69包含以下修补程序：
 1. **ACP2E-4050**：捆绑产品和免费配送的多次配送购物车价格规则失败。
 1. **ACSD-56226**：读取查询返回启用`synchronous_replication`的过期数据。
 1. **ACSD-57477**：销售规则处理会降低购物车相关请求的性能。
-1. **ACSD-58108**：缺少联接表名称导致顺序网格自定义模块扩展出现SQL错误。
+1. **[ACSD-58108](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-58108-missing-join-table-name-causes-sql-errors-in-order-grid-custom-module-extension.md)**：缺少联接表名称导致顺序网格自定义模块扩展出现SQL错误。
 1. **ACSD-65983**：在Admin中重新配置捆绑的产品报价时出错。
 1. **ACSD-66149**： IPN处理程序针对不支持的类型返回500。
 1. **ACSD-66153**：由于缓存的布局结构不正确，页面返回500错误。
