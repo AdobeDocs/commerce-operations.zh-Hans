@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: e72c99bbb5e82cd2dc77e33b7d17dfe8955e945a
+source-git-commit: 789f46300f6adb7972e72d2ee92a2b03f2094274
 workflow-type: tm+mt
-source-wordcount: '8390'
+source-wordcount: '8401'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
    - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
@@ -852,6 +852,7 @@ ht-degree: 0%
          - [ACSD-66233：由于无响应的产品列表弹出窗口，管理员无法添加产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-66233-admins-unable-add-products-due-to-unresponsive-product-list-popup.md)
       - v1.1.69 {#v1-1-69}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.69](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/overview.md)
+         - [ACSD-66302：按商店ID而不是网站过滤的愿望清单项目](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-66302-wishlist-items-filtered-by-store-id-instead-of-website.md)
          - [ACSD-58108：由于缺少联接表名称，导致网格自定义模块扩展顺序出现SQL错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-58108-missing-join-table-name-causes-sql-errors-in-order-grid-custom-module-extension.md)
          - [ACP2E-3767：保存捆绑产品后，将重新显示最后一个捆绑选项](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acp2e-3767-last-bundle-option-reappears-after-saving-a-bundle-product.md)
          - [ACP2E-4050： [!UICONTROL Free Shipping]未应用于多配送结帐](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acp2e-4050-cart-price-rules-fail-for-multi-shipping-with-bundle-products-and-free-shipping.md)
@@ -916,6 +917,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [疑难解答](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [更改日志](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
