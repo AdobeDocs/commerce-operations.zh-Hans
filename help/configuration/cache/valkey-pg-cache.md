@@ -3,9 +3,9 @@ title: 将Valkey用于默认缓存
 description: 了解如何将Valkey配置为Adobe Commerce的默认缓存。
 feature: Configuration, Cache
 exl-id: d0baa2a6-8aa8-4f3f-9edf-102d621430e0
-source-git-commit: bc0274074c0254f649af2f9e2b288017ac82ce9b
+source-git-commit: dea0ad57a8c4525be9bc442708bdd2495f28d72d
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,14 @@ bin/magento setup:config:set --cache-backend=valkey --cache-backend-valkey-<para
 
 - `--cache-backend-valkey-<parameter>=<value>`是配置默认缓存的键值对列表：
 
+>[!NOTE]
+>
+>从&#x200B;**Adobe Commerce 2.4.9-alpha2**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
+
+```bash
+bin/magento setup:config:set --cache-backend=redis --cache-backend-valkey-<parameter>=<value>...
+```
+
 | 命令行参数 | 值 | 含义 | 默认值 |
 |---------------------------------| --------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------- |
 | `cache-backend-valkey-server` | 服务器 | 完全限定的主机名、IP地址或UNIX套接字的绝对路径。 默认值`127.0.0.1`表示Commerce服务器上安装了Valkey。 | `127.0.0.1` |
@@ -42,6 +50,14 @@ bin/magento setup:config:set --cache-backend=valkey --cache-backend-valkey-<para
 
 ```bash
 bin/magento setup:config:set --cache-backend=valkey --cache-backend-valkey-server=127.0.0.1 --cache-backend-valkey-db=0
+```
+
+>[!NOTE]
+>
+>从&#x200B;**Adobe Commerce 2.4.9-alpha2**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
+
+```bash
+bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=127.0.0.1 --cache-backend-redis-db=0
 ```
 
 ## 配置页面缓存
@@ -58,6 +74,14 @@ bin/magento setup:config:set --page-cache=valkey --page-cache-valkey-<parameter>
 
 - `--page-cache-valkey-<parameter>=<value>`是配置页面缓存的键值对列表：
 
+>[!NOTE]
+>
+>从&#x200B;**Adobe Commerce 2.4.9-alpha2**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
+
+```bash
+bin/magento setup:config:set --page-cache=redis --page-cache-redis-<parameter>=<value>...
+```
+
 | 命令行参数 | 值 | 含义 | 默认值 |
 |------------------------------| --------- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------- |
 | `page-cache-valkey-server` | 服务器 | 完全限定的主机名、IP地址或UNIX套接字的绝对路径。 默认值`127.0.0.1`表示Commerce服务器上安装了Valkey。 | `127.0.0.1` |
@@ -71,6 +95,14 @@ bin/magento setup:config:set --page-cache=valkey --page-cache-valkey-<parameter>
 
 ```bash
 bin/magento setup:config:set --page-cache=valkey --page-cache-valkey-server=127.0.0.1 --page-cache-valkey-db=1
+```
+
+>[!NOTE]
+>
+>从&#x200B;**Adobe Commerce 2.4.9-alpha2**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
+
+```bash
+bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.0.1 --page-cache-valkey-db=1
 ```
 
 ## 结果

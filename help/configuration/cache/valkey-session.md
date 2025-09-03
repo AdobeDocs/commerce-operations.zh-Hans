@@ -3,9 +3,9 @@ title: 使用Valkey进行会话存储
 description: 了解如何为会话存储配置Valkey。
 feature: Configuration, Cache
 exl-id: 986ddb5c-8fc5-4210-8a41-a29e3a7625b7
-source-git-commit: bc0274074c0254f649af2f9e2b288017ac82ce9b
+source-git-commit: dea0ad57a8c4525be9bc442708bdd2495f28d72d
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,15 @@ bin/magento setup:config:set --session-save=valkey --session-save-valkey-<parame
 - `--session-save=valkey`启用Valkey会话存储。 如果已启用此功能，请忽略此参数。
 
 - `--session-save-valkey-<parameter_name>=<parameter_value>`是配置会话存储的参数/值对列表：
+
+
+>[!NOTE]
+>
+>从&#x200B;**Adobe Commerce 2.4.9-alpha2**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
+
+```bash
+bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
+```
 
 | 命令行参数 | 参数名称 | 含义 | 默认值 |
 |----------------------------------------------|--- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--- |
@@ -60,6 +69,14 @@ bin/magento setup:config:set --session-save=valkey --session-save-valkey-<parame
 
 ```bash
 bin/magento setup:config:set --session-save=valkey --session-save-valkey-host=127.0.0.1 --session-save-valkey-log-level=4 --session-save-valkey-db=2
+```
+
+>[!NOTE]
+>
+>从&#x200B;**Adobe Commerce 2.4.9**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
+
+```bash
+bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
 ```
 
 ### 结果
