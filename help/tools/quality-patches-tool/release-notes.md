@@ -3,9 +3,9 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: 4adac1df0382cd0ae0833599011aeb664a91ceb6
+source-git-commit: edb7f2351afc346d54f62ae1278f481ba7d732f9
 workflow-type: tm+mt
-source-wordcount: '28046'
+source-wordcount: '28348'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,26 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.70 {#v1-1-70}
+
+* **AC-15210**(对于Adobe Commerce和Magento Open Source >=2.4.6-p3 &lt;2.4.9) — 将USPS集成从过时的Web Tools API迁移到新的RESTful USPS API。
+* **ACSD-67102**(对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8) — 修复了Adobe Commerce后端加载&#x200B;**[!UICONTROL Categories]**&#x200B;非常缓慢的问题。
+* **ACSD-66120**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了在将目录价格配置为含税时，[!DNL GraphQL]错误地显示折扣百分比和基本价格的问题。
+* **ACSD-66157**(对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.9) — 修复了在不同时区创建的网站特价未生效的问题。
+* **ACSD-67659**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了已翻译错误消息返回未定义错误代码的问题。
+* **ACSD-67166**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了在店面加载报价时多次执行`cataloginventory_stock_status`查询，从而导致重复数据库调用的问题。
+* **ACSD-67289**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了在应用特殊价格时未显示常规价格的问题。
+* **ACSD-67686**(对于Adobe Commerce和Magento Open Source >=2.4.4-p15 &lt;2.4.5) || >=2.4.5-p14 &lt;2.4.6 || >=2.4.6-p12 &lt;2.4.7) — 修复了在提交空`Syntax Error: Unexpected <EOF>`请求时发生[!DNL GraphQL]错误的问题。
+* **ACSD-67250**(对于Adobe Commerce >=2.4.7-p4 &lt;2.4.8) — 修复了&#x200B;**[!UICONTROL Shared Catalog]**&#x200B;保存操作更新所有项目而不是仅更新受影响项目的问题，通过消除不必要的操作提高了性能。
+* **ACSD-67030**(适用于Adobe Commerce >=2.4.4 &lt;2.4.9) — 修复了在由受限角色管理员编辑时，从可配置产品中取消分配简单产品的问题。
+* 已更新的版本： **ACSD-54095**、**ACSD-51636**、**ACSD-51739**、**ACSD-66093**
+* 已替换的修补程序： **ACSD-62415**
 
 ## v1.1.69 {#v1-1-69}
 
