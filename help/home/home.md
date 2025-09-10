@@ -2,7 +2,7 @@
 title: 操作指南主页
 description: 浏览Adobe Commerce系统管理和操作产品文档的索引。
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 023a29b443856e72c7ce5e5f57a5245192bfabcd
+source-git-commit: 21a4ec57b49f896cffefbec8db4ce97c161315a0
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 7%
@@ -102,4 +102,4 @@ ht-degree: 7%
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2025-09-02 02:22:42 -->
+<!-- Last updated from includes: 2025-09-05 20:40:49 -->

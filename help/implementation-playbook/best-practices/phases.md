@@ -3,7 +3,7 @@ title: 实施阶段
 description: 了解 Adobe Commerce 项目实施阶段的最佳实践。
 exl-id: c5272f79-7315-46dc-a191-a40004aaa812
 feature: Best Practices
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 21a4ec57b49f896cffefbec8db4ce97c161315a0
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 7%
@@ -63,4 +63,4 @@ ht-degree: 7%
 
 {{$include /help/_includes/templated/whats-new-bp.md}}
 
-<!-- Last updated from includes: 2025-01-06 16:29:49 -->
+<!-- Last updated from includes: 2025-09-04 11:19:10 -->

@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7f23a1b123d2ca2e1d116eb66344a67cfe45e409
+source-git-commit: 21a4ec57b49f896cffefbec8db4ce97c161315a0
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '850'
 ht-degree: 3%
 
 ---
@@ -43,13 +43,13 @@ ht-degree: 3%
 
 ## 关于您对Adobe内容的投稿
 
-请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hans)。
+请参阅[Adobe文档参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 您的参与方式取决于您的身份以及您希望参与的更改类型：
 
 ### 次要更改
 
-如果您要提供较小的更新，请访问文章，然后单击文章底部显示的反馈区域，单击&#x200B;**详细的反馈选项**，然后单击&#x200B;**建议编辑**&#x200B;以转到GitHub上的Markdown源文件。 使用GitHub UI进行更新。 有关详细信息，请参阅常规的[Adobe Docs参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hans)。
+如果您要提供较小的更新，请访问文章，然后单击文章底部显示的反馈区域，单击&#x200B;**详细的反馈选项**，然后单击&#x200B;**建议编辑**&#x200B;以转到GitHub上的Markdown源文件。 使用GitHub UI进行更新。 有关详细信息，请参阅常规的[Adobe Docs参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 您为此存储库中的文档和代码示例提交的小幅度更正或说明受Adobe使用条款的约束。
 
@@ -67,7 +67,7 @@ ht-degree: 3%
 
 社区参与者可以使用GitHub UI进行基本编辑或创建存储库分支以进行重大更改。
 
-有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hans)。
+有关详细信息，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
 
 ## 如何使用Markdown格式化主题
 
@@ -86,8 +86,8 @@ ht-degree: 3%
 模板化内容的示例包括但不限于：
 
 - [CLI工具引用](https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html)
-- [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html?lang=zh-Hans)
-- [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)
+- [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)
+- [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
 
 ### 生成模板化内容
 
@@ -96,7 +96,7 @@ ht-degree: 3%
 >**注释：**
 >
 >- 生成模板化内容需要在终端中的命令行上工作。
->- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version] (_jekyll/.ruby-version)。
+>- 必须安装Ruby才能运行渲染脚本。 有关所需版本，请参阅[_jekyll/.ruby-version](_jekyll/.ruby-version)。
 
 有关模板化内容的文件结构的描述，请参阅以下内容：
 
@@ -109,8 +109,8 @@ ht-degree: 3%
 
 1. 在文本编辑器中，打开`/jekyll/_data`目录中的数据文件。 例如：
 
-   - [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html?lang=zh-Hans)： `/jekyll/_data/product-availability.yml`
-   - [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)： `/jekyll/_data/system-requirements.yml`
+   - [产品可用性表](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)： `/jekyll/_data/product-availability.yml`
+   - [系统要求表](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)： `/jekyll/_data/system-requirements.yml`
 
 1. 使用现有的YAML结构创建条目。
 
@@ -131,10 +131,10 @@ ht-degree: 3%
 1. 生成模板化内容并将输出写入`help/_includes/templated`目录。
 
    ```bash
-   rake render
+   bundle exec rake render
    ```
 
-   >**注意：**&#x200B;必须从`_jekyll`目录运行脚本。 如果这是您第一次运行脚本，则必须先使用`bundle install`命令安装Ruby依赖项。
+   >**注意：**&#x200B;必须从`_jekyll`目录运行脚本。 如果这是您第一次运行脚本，则必须先使用`bundle install`命令安装Ruby依赖项。 rake任务由`adobe-comdox-exl-rake-tasks` gem提供，以便更好地维护Adobe Commerce文档存储库中的内容。
 
 1. 导航回`root`目录。
 
@@ -164,3 +164,12 @@ ht-degree: 3%
    ```
 
 有关[Data Files](https://jekyllrb.com/docs/datafiles)、[Liquid Filters](https://jekyllrb.com/docs/liquid/filters/)和其他功能的更多详细信息，请参阅Jekyll文档。
+
+## 可用的Rake任务
+
+此存储库使用`adobe-comdox-exl-rake-tasks` gem提供的Rake任务。 要查看所有可用任务，请运行：
+
+```bash
+cd _jekyll
+bundle exec rake --tasks
+```
