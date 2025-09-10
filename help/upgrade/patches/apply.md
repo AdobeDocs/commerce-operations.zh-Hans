@@ -2,9 +2,9 @@
 title: 应用修补程序
 description: 了解将修补程序应用于Adobe Commerce项目的方法。
 exl-id: 1d5d81ad-0115-4575-adfd-dde7c2826d85
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 可以使用以下任一方法应用修补程序：
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [命令行](../patches/apply.md#command-line)
 - [Composer](../patches/apply.md#composer)
 
@@ -24,9 +24,7 @@ ht-degree: 0%
 
 ## Composer
 
->[!IMPORTANT]
->
->要应用官方质量修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
+{{custom-patches-disclaimer}}
 
 要使用编辑器应用自定义修补程序，请执行以下操作：
 

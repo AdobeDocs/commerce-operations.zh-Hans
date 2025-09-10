@@ -1,7 +1,7 @@
 ---
-source-git-commit: 102fee9672c75c94c7d18d47562338f8eff97f11
+source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)。
+>安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。
 
 ## 仅限Adobe Commerce {#ee-only}
 
@@ -80,3 +80,9 @@ ht-degree: 0%
 ## PHP进程控制 {#php-process-control}
 
 在并行模式下运行索引器之前，必须在PHP中启用进程控制支持(`pcntl`)。 请参阅PHP文档中的[安装](https://www.php.net/manual/en/pcntl.installation.php)。
+
+## 自定义修补程序 {#custom-patches-disclaimer}
+
+>[!IMPORTANT]
+>
+>Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。

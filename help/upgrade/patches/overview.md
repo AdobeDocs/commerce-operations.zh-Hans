@@ -2,7 +2,7 @@
 title: 修补程序的工作方式
 description: 了解Adobe Commerce的各种类型的修补程序及其工作方式。
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 单个修补程序包含针对特定问题的低影响质量修复。 这些修复适用于最新支持的次要版本（例如2.4.x），但在先前支持的次要版本（例如2.3.x）中可能缺失。 Adobe会根据需要发布各个修补程序。
 
-使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}应用单个修补程序。
+使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}应用单个修补程序。
 
 >[!NOTE]
 >
@@ -51,7 +51,9 @@ ht-degree: 0%
 
 ## 自定义修补程序
 
-有时，Adobe工程团队需要一段时间才能在Adobe Commerce编辑器版本中包含对GitHub所做的错误修复。 同时，您可以从GitHub创建修补程序，并使用[`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/)插件将其应用于基于编辑器的安装。
+有时，Adobe工程团队需要一段时间才能在官方Adobe Commerce版本中包含对GitHub所做的错误修复。 同时，您可以从GitHub创建修补程序，并使用[`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/)插件将其应用于基于编辑器的安装。
+
+{{custom-patches-disclaimer}}
 
 使用[命令行](apply.md#command-line)或[编辑器](apply.md#composer)应用自定义修补程序。
 
@@ -60,7 +62,7 @@ ht-degree: 0%
 要创建自定义修补程序，请执行以下操作：
 
 1. 在本地项目中创建一个`patches/composer`目录。
-1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)的[#64741&rbrace;承诺。](https://github.com/magento/magento2/issues/6474)
+1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)的[#64741}承诺。](https://github.com/magento/magento2/issues/6474)
 1. 将`.patch`或`.diff`扩展附加到提交URL。 对较小的文件大小使用`.diff`。 例如：[https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
 1. 将页面另存为`patches/composer`目录中的文件。 例如，`github-issue-6474.diff`。
 1. 编辑文件并从所有路径中删除`app/code/<VENDOR>/<PACKAGE>`，使其相对于`vendor/<VENDOR>/<PACKAGE>`目录。
@@ -90,10 +92,10 @@ index c8a6fef58d31..7d01c195791e 100644
 
 可以使用以下任一方法应用修补程序：
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [命令行](/help/upgrade/patches/apply.md#command-line)
 - [Composer](/help/upgrade/patches/apply.md#composer)
 
 >[!NOTE]
 >
->要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅[Commerce on Cloud指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)中的&#x200B;_应用修补程序_。
+>要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅[Commerce on Cloud指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)中的&#x200B;_应用修补程序_。
