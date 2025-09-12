@@ -54,7 +54,7 @@ _名词_
 在Adobe Commerce中，管理员用户拥有对管理员中所有功能、选项和功能的完全权限和访问权限。
 他们还可以创建用户和角色。
 
-了解详情：[添加用户](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html)
+了解详情：[添加用户](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -70,7 +70,7 @@ _名词_
 用户可访问管理区域来管理商店，包括产品、订单、发货、CMS内容、店面设计、客户信息等。
 管理员用户具有一个关联的角色，该角色具有控制对功能、选项和功能访问权限的权限。
 
-了解详情：[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+了解详情：[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -84,7 +84,7 @@ _名词_
 
 管理员变量是项目环境变量，用于覆盖管理员用户帐户的配置设置以访问管理员UI。
 
-了解详情：[管理员变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html)
+了解详情：[管理员变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -96,7 +96,7 @@ _名词_
 
 分配给管理员的内部区域名称。
 
-了解详情：[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+了解详情：[Adobe Commerce用户指南](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -190,7 +190,7 @@ _名词_
 货币符号出现在产品价格和销售文档中，如订单和发票。
 您可以根据需要自定义货币符号，并为每个商店或视图单独设置价格的显示。
 
-了解详情： [货币](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/currency/currency.html)
+了解详情： [货币](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/currency/currency.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -212,13 +212,13 @@ _名词_
 _名词_
 
 一个页面输出单位，可为最终用户呈现某些独特内容（一段信息、一个用户界面元素）以及任何视觉上可见的内容。
-[块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html)由模块实现和提供。
+[块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html?lang=zh-Hans)由模块实现和提供。
 块使用模板来生成HTML。
 数据块的示例包括类别列表、迷你购物车、产品标记和产品列表。
 
-[动态块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html)提供基于逻辑的内容，如价格规则。
+[动态块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html?lang=zh-Hans)提供基于逻辑的内容，如价格规则。
 
-页面生成器扩展了[块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html)和[动态块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html)的交互性和创建。
+页面生成器扩展了[块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html?lang=zh-Hans)和[动态块](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html?lang=zh-Hans)的交互性和创建。
 
 术语属性&#x200B;:_(_T)
 
@@ -248,7 +248,7 @@ _形容词_
 
 具有永久物理位置的零售业务，与通过互联网几乎或完全运作的业务不同。
 
-对于[Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html)和[Order Management](#oms)，此商店是跟踪产品数量、送货订单和支持店内提货的来源。
+对于[Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html?lang=zh-Hans)和[Order Management](#oms)，此商店是跟踪产品数量、送货订单和支持店内提货的来源。
 
 术语属性&#x200B;:_(_T)
 
@@ -274,7 +274,7 @@ _名词_
 允许客户从各种选项和配置中组装“构建您自己的”可定制产品。
 捆绑包中的每个项目都是单独的简单或虚拟产品。
 
-了解更多： [可配置产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html)
+了解更多： [可配置产品](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -448,7 +448,7 @@ _名词_
 
 云变量是特定于云基础架构上的Adobe Commerce的环境变量，并使用&#x200B;**`MAGENTO_CLOUD`**&#x200B;前缀。
 
-了解更多： [云变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html)
+了解更多： [云变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -458,7 +458,7 @@ _名词_
 
 _名词_
 
-[块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html)的特殊变体，只能在Admin中创建，不能通过布局文件引用。
+[块](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html?lang=zh-Hans)的特殊变体，只能在Admin中创建，不能通过布局文件引用。
 
 术语属性&#x200B;:_(_T)
 
@@ -619,7 +619,7 @@ _名词_
 
 部署密钥是您的项目SSH公钥，它支持对Git存储库的只读或读写（如果已启用）访问。
 
-了解更多： [安全连接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html)
+了解更多： [安全连接](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -688,7 +688,7 @@ _名词_
 
 一组用于管理和部署Commerce应用程序的脚本和工具。 此软件包简化了云基础架构过程中的许多Adobe Commerce，包括部署到Docker环境、管理cron、验证项目配置和应用Adobe修补程序。
 
-了解详情： [ece-tools包](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html)
+了解详情： [ece-tools包](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -978,7 +978,7 @@ _名词_
 MAGEID通常是Adobe Commerce帐户上的账单联系人(可能不是Adobe Commerce on cloud infrastructure项目的项目所有者)。
 要获得对Adobe Commerce和Adobe Commerce在云基础架构包上的访问权限，您必须使用与已授予对这些包访问权限的MAGEID关联的访问密钥。
 
-了解更多： [获取您的身份验证密钥](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html)
+了解更多： [获取您的身份验证密钥](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -989,7 +989,7 @@ MAGEID通常是Adobe Commerce帐户上的账单联系人(可能不是Adobe Comme
 _名词_
 
 在营销和零售中，为确定零售价而添加到项目成本的百分比。
-[通过产品可自定义选项配置产品的标记](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html)或Markdown。
+[通过产品可自定义选项配置产品的标记](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html?lang=zh-Hans)或Markdown。
 
 在开发中，一种计算机语言，控制文本的处理、表示和格式设置。
 此外，标记标记是向CMS页面或块添加功能或内容的代码片段。
@@ -1087,7 +1087,7 @@ _名词_
 
 源遮蔽是一项安全功能，允许云基础架构上的Adobe Commerce阻止任何流向云基础架构（源）的非Fastly流量以防御DDoS攻击。
 
-了解更多：[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html)
+了解更多：[Fastly源遮蔽](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -1105,7 +1105,7 @@ Page Builder是一个Commerce扩展，通过拖放预建控件来定义自定义
 商家无需编码体验即可设计版面和页面。
 为开发人员提供扩展支持以扩展Page Builder。
 
-了解详情：[页面生成器用户指南](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)，[页面生成器DevDocs](https://developer.adobe.com/commerce/frontend-core/page-builder/)
+了解详情：[页面生成器用户指南](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html?lang=zh-Hans)，[页面生成器DevDocs](https://developer.adobe.com/commerce/frontend-core/page-builder/)
 
 术语属性&#x200B;:_(_T)
 
@@ -1397,8 +1397,8 @@ Adobe Commerce租户ID是Adobe Experience Cloud中特定Adobe Commerce实例的�
 
 了解详情：
 
-[Adobe Commerce as a Cloud Service基础知识](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started#adobe-commerce-as-a-cloud-service-basics)
-[Adobe Commerce Optimizer快速入门](https://experienceleague.adobe.com/en/docs/commerce/optimizer/get-started#manage-instances)
+[Adobe Commerce as a Cloud Service基础知识](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/getting-started#adobe-commerce-as-a-cloud-service-basics)
+[Adobe Commerce Optimizer快速入门](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/get-started#manage-instances)
 
 术语属性&#x200B;:_(_T)
 
@@ -1435,7 +1435,7 @@ UI组件系统的目标包括：
 * 使用AJAX更新组件数据
 * 介绍用于创建上述项目的新DSL
 
-了解详情： [UI组件指南](https://developer.adobe.com/commerce/frontend-core/ui-components/)，[页面生成器](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)
+了解详情： [UI组件指南](https://developer.adobe.com/commerce/frontend-core/ui-components/)，[页面生成器](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html?lang=zh-Hans)
 
 术语属性&#x200B;:_(_T)
 
@@ -1474,7 +1474,7 @@ _名词_
 VBE经过彻底测试，并包含在每个受支持的Adobe Commerce版本中。
 VBE可以包括模块、主题和语言包。
 
-在[供应商捆绑扩展主题](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html)中了解详情。
+在[供应商捆绑扩展主题](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html?lang=zh-Hans)中了解详情。
 
 术语属性&#x200B;:_(_T)
 
@@ -1540,7 +1540,7 @@ _名词_
 
 _名词_
 
-[小组件](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html)是一个预准备的代码片段，可用于在存储页面上的特定位置放置块、链接和动态内容。
+[小组件](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html?lang=zh-Hans)是一个预准备的代码片段，可用于在存储页面上的特定位置放置块、链接和动态内容。
 您可以使用小组件为营销活动创建登陆页面，并在商店中的特定位置显示促销内容。
 小组件还可用于为外部审阅系统、视频聊天、投票和订阅表单添加交互元素和操作块，或者为标记云和图像滑块提供导航元素。
 
