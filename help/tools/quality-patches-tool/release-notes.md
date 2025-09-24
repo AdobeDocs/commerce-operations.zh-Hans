@@ -3,9 +3,9 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: edb7f2351afc346d54f62ae1278f481ba7d732f9
+source-git-commit: 4718ebd237c73913e8bc03b9370298b3504e619f
 workflow-type: tm+mt
-source-wordcount: '28348'
+source-wordcount: '28592'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,23 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.71 {#v1-1-71}
+
+* **ACSD-60624**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8) — 修复了页面生成器中&#x200B;**[!UICONTROL Upload Image]**、[!UICONTROL Image]和[!UICONTROL Banner]部分中的[!UICONTROL Slider]不适用于空内容的问题。
+* **ACSD-67089**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了`inventory/export-stock-salable-qty` API中的分页问题，该问题错误地将`total_count`限制为页面大小。
+* **ACSD-67093**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了使用日期范围筛选器通过GraphQL检索订单时返回错误结果的问题。
+* **ACSD-67459**(适用于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.9) — 修复了无法导入描述长度超过65,536个字符的产品的问题。
+* **ACSD-67603**(适用于Adobe Commerce >=2.4.6 &lt;2.4.8) — 修复了启用图像包含功能的产品的Sitemap生成过程耗时较长的问题。
+* **ACSD-67643**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了在具有大量嵌套类别的环境中进行计划更新期间创建重复项的问题。
+* **ACSD-67652**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了以下问题：在GraphQL调用中，即使子产品和父产品有库存，也会将捆绑产品状态返回为缺货。
+* **ACSD-67904**(适用于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了城市名称包含数字(0-9)、&amp;符号(&amp;)、句点(.)或圆括号()时无法下订单的问题。
+* 已替换的修补程序： **ACSD-61322**、**ACSD-65848**
 
 ## v1.1.70 {#v1-1-70}
 
