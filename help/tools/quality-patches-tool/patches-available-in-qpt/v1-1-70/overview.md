@@ -3,9 +3,9 @@ title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.70
 description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.70中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: 9394bdaec258299bf7def327bf2e01792ada2eeb
+source-git-commit: fa246140cf582bd96151715073ddb8f4b0c7c648
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.70中提供的修补程序所修复的问题。
 
 QPT v1.1.70包含以下修补程序：
-1. **ACSD-67102**：类别加载缓慢或类别和产品数量较多时超时。
+1. **ACSD-67102**：当类别和产品数量很大时，类别加载缓慢或超时。
 1. **ACSD-66120**： [!DNL GraphQL]显示含税目录定价的折扣百分比和基价不正确。
 1. **ACSD-66157**：对于在不同时区创建的网站，特殊价格不会生效。
 1. **ACSD-67659**：已翻译的错误消息返回UNDEFINED代码
