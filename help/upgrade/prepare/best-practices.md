@@ -3,7 +3,7 @@ title: 最佳实践
 description: 使用Adobe推荐的最佳实践来管理Adobe Commerce项目的升级过程。
 feature: Upgrade, Best Practices
 exl-id: 53c505a3-8b99-4fc3-b1b4-f2f75208a51b
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 6b3afb93770c1d976dd975a484070e0aee730a98
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%
@@ -57,11 +57,11 @@ ht-degree: 0%
 
 随着我们不断扩展Adobe Commerce的功能，您必须在最新可用版本上进行开发，并在项目计划中定义升级策略，这一点至关重要。 这样做有助于您保持安全、合规并及时了解最新的增强功能，从而让您能够更快地增加销售额、更有效地运营，并在现在和未来保持竞争优势。
 
-为了帮助您规划和预算升级，您应该监视我们的[发布计划](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/schedule)。 提前计划团队积压中的升级任务。 旨在用GA完成此工作。
+为了帮助您规划和预算升级，您应该监视我们的[发布计划](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule)。 提前计划团队积压中的升级任务。 旨在用GA完成此工作。
 
 - 使用预发行版本了解每个新版本。 预发行版是通用可用性代码，在通用可用性发布两周前可供Adobe Commerce商家和所有合作伙伴使用。 如果您有多个商店，请使用基础商店中的预发行版，并验证您的自定义模块和主题是否与其兼容。
 
-- 查看Adobe Commerce的[升级计划核对清单](https://support.magento.com/hc/en-us/articles/360057968951)，以帮助您规划升级。
+- 查看Adobe Commerce的[升级计划核对清单](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/upgrade-checklist)，以帮助您规划升级。
 
 - 计划于年初升级。 您必须预订预算和资源才能完成每次升级。 请记住，升级工作可能会因项目而异。 运用您的经验和知识制定尽可能准确的计划。
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 评估升级要完成的工作：
 
-- 请查阅[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/overview)以了解新版本的范围和影响。
+- 请查阅[发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview)以了解新版本的范围和影响。
 
 - 使用[[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md)识别在尝试升级到新版本之前必须在自定义代码中修复的潜在问题。
 
