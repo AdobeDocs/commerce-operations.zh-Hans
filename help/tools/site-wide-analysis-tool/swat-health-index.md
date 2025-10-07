@@ -1,9 +1,9 @@
 ---
 title: 了解SWAT健康指数得分和建议
 description: 了解全站点分析工具运行状况索引对您的Adobe Commerce站点的意义。 了解如何解释分数并有效使用推荐。
-source-git-commit: e39e0229538bb245fbe744ebfd642572fc2dc790
+source-git-commit: d9b598e9399c26c8fb7c52e9f211029689343ce9
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 当您从SWAT仪表板下载&#x200B;**[!DNL Recommendations Report]**&#x200B;时，PDF在&#x200B;**[!DNL Site Wide Analysis Tool Health Index]**&#x200B;简介&#x200B;**部分包含**&#x200B;分数：
 
-在生成的推荐报告中![全网站分析工具运行状况指数得分](https://git.corp.adobe.com/AdobeDocs/commerce-operations.en/assets/38345/cf56a076-e5a8-488d-927d-a3989966a089)
+在生成的推荐报告中![全网站分析工具运行状况指数得分](/help/assets/tools/swat-health-index-scroe.png)
 
 SWAT健康指数可帮助您监控和改善Adobe Commerce网站的整体健康状况。 此分数是一个指导工具，而不是绝对的通过或失败度量。
 
