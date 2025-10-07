@@ -26,7 +26,7 @@ ht-degree: 0%
    | 后端主机 | 输入完全限定的主机名或IP地址，并侦听Varnish _后端_&#x200B;或&#x200B;_原始服务器_&#x200B;的端口；即，提供内容Varnish的服务器将加速。 通常，这是您的Web服务器。 查看[清漆缓存后端服务器](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html)。 |
    | 后端端口 | 源服务器的侦听端口。 |
    | 宽限期 | 确定在后端无响应时，Varnish提供过时内容的时长。 默认值为300秒。 |
-   | 处理参数大小 | 指定全页缓存的[ HTTP终结点上要处理的](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles)布局句柄[`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md)的最大数量。 限制大小可以提高安全性和性能。 默认值为100。 |
+   | 处理参数大小 | 指定全页缓存的[&#x200B; HTTP终结点上要处理的](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles)布局句柄[`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md)的最大数量。 限制大小可以提高安全性和性能。 默认值为100。 |
 
 1. 单击&#x200B;**保存配置**。
 

@@ -34,7 +34,7 @@ ht-degree: 0%
 
 UNIX系统使用&#x200B;_crontab_&#x200B;安排由特定用户执行的任务，该文件包含有关cron守护程序的说明，指示守护程序在生效时“在此日期运行此命令”。 每个用户都有自己的crontab，任何给定的crontab中的命令都以拥有该命令的用户身份执行。
 
-要在Web浏览器中运行cron，请参阅[在浏览器中运行的安全cron.php ](../security/secure-cron-php.md)。
+要在Web浏览器中运行cron，请参阅[在浏览器中运行的安全cron.php &#x200B;](../security/secure-cron-php.md)。
 
 ## 创建或删除Commerce crontab
 

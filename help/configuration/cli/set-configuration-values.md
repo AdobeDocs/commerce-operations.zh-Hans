@@ -221,7 +221,7 @@ bin/magento config:show [--scope[="..."]] [--scope-code[="..."]] path
 
 >[!INFO]
 >
->`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `******`。
+>`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `**&#x200B;**&#x200B;**`。
 
 ### 示例
 
