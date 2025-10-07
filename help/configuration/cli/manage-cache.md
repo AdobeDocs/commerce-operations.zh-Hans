@@ -1,10 +1,10 @@
 ---
 title: 管理缓存
-description: 使用Commerce CLI从命令行管理缓存类型并查看缓存状态
+description: 了解如何使用Adobe Commerce CLI命令管理缓存类型和查看缓存状态。 了解缓存管理和优化技术。
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >
->Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅[管理系统指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management)中的&#x200B;_缓存管理_。
+>Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅[管理系统指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)中的&#x200B;_缓存管理_。
 
 
 ## 查看缓存状态
@@ -59,7 +59,7 @@ Current status:
 
 >[!TIP]
 >
->有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅[Admin Systems指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management#caches)中的&#x200B;_缓存_。
+>有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅[Admin Systems指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches)中的&#x200B;_缓存_。
 
 
 ## 启用或禁用缓存类型

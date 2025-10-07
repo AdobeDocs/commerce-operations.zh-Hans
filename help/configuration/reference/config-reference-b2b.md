@@ -1,11 +1,11 @@
 ---
 title: B2B扩展配置路径参考
-description: 请参阅与B2B相关的配置值列表。
+description: 了解Adobe Commerce的B2B扩展配置路径和值。 了解特定于公司、支付、报价和B2B的配置选项。
 feature: Configuration, B2B, Companies, Payments, Quotes
 exl-id: 3414dea1-17c9-4462-8b8a-51a6045b0bc9
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---

@@ -1,10 +1,10 @@
 ---
 title: 参考架构
-description: 查看Adobe Commerce部署中推荐的参考架构的示意图。
+description: 了解Adobe Commerce中的参考架构。 了解实施指导和优化策略。
 exl-id: 85a6d3d6-f47f-4806-97bd-fa7a73605f4c
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 本主题介绍了一般性建议设置，适用于Adobe Commerce实例，这些实例使用在数据中心（非虚拟化）物理托管的普通服务器，其中资源不与其他用户共享。 您的托管提供商(尤其是专门从事Commerce高性能托管业务的提供商)可能会建议您采用对您的要求同样有效或更加有效的其他设置。
 
-有关云基础架构环境上的Adobe Commerce，请参阅[入门架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/starter-architecture)。
+有关云基础架构环境上的Adobe Commerce，请参阅[入门架构](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/starter-architecture)。
 
 ## [!DNL Commerce]参考体系结构图
 

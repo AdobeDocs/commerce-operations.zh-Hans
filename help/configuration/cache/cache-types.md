@@ -1,11 +1,11 @@
 ---
 title: 缓存类型
-description: 将缓存前端与缓存类型相关联。
+description: 了解如何在Adobe Commerce中将缓存前端与缓存类型相关联。 了解缓存配置和管理技术。
 feature: Configuration, Cache
 exl-id: 67d4ba06-b48b-4e1a-a7a8-9830490dfe3d
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---

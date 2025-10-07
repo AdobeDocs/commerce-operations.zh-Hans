@@ -1,11 +1,11 @@
 ---
 title: 配置Redis
-description: 大致了解Redis功能并启动Redis配置。
+description: 了解如何配置Redis缓存以优化Adobe Commerce性能。 了解功能、设置步骤和配置最佳实践。
 feature: Configuration, Cache
 exl-id: e037c382-334a-4096-a417-a25fdb61a9ce
-source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---

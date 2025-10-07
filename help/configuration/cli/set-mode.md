@@ -1,10 +1,10 @@
 ---
 title: 设置操作模式
-description: 阅读有关设置Adobe Commerce操作模式的信息。
+description: 了解如何在开发人员和生产人员之间设置Adobe Commerce操作模式。 了解模式切换命令和安全含义。
 exl-id: 62d183fa-d4ff-441d-b8bd-64ef5ae10978
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---

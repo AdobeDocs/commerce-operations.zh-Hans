@@ -1,12 +1,12 @@
 ---
 title: system.xml引用
-description: 了解系统XML文件如何管理Commerce应用程序配置。
+description: 了解system.xml文件如何管理Adobe Commerce应用程序配置。 了解系统配置管理、XML结构和实现技术。
 feature: Configuration, System
 badge: label="作者：David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="大卫·兰鲍尔"
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
-source-git-commit: e231a27d70e29b01c872b0655168e31f590d4876
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2717'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ ht-degree: 0%
 | `select` | 普通下拉列表，可能需要自定义`source_model`。 也用于`Yes/No`选择。 有关示例，请参阅`Magento\Search\Model\Adminhtml\System\Config\Source\Engine`。 |
 | `multiselect` | 类似`select`，但多个选项有效。 |
 | `button` | 触发即时事件的按钮。 需要自定义前端模型来定义按钮文本和操作。 有关示例，请参阅`Magento\ScheduledImportExport\Block\Adminhtml\System\Config\Clean`。 |
-| `obscure` | 一个文本字段，其值已加密并显示为`**&#x200B;**`。 在浏览器中使用“检查元素”更改类型不会显示值。 |
+| `obscure` | 一个文本字段，其值已加密并显示为`****`。 在浏览器中使用“检查元素”更改类型不会显示值。 |
 | `password` | 与`obscure`类似，只是隐藏值未加密，在浏览器中使用“Inspect Element”强制更改类型确实会显示该值。 |
 | `file` | 允许上传文件以供处理。 |
 | `label` | 显示标签而不是可编辑字段。 当字段仅在特定范围上可编辑时（例如，仅存储视图级别），使用此类型。 |

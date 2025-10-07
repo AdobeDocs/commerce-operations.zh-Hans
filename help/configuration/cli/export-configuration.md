@@ -1,10 +1,10 @@
 ---
 title: 导出配置设置
-description: 将Adobe Commerce配置设置导出到配置文件，也称为配置转储。
+description: 了解如何使用配置转储将Adobe Commerce配置设置导出到文件。 发现管道部署和配置管理。
 exl-id: db680f5e-547a-48f3-b017-d77b8cb07bfd
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---

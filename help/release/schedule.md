@@ -1,11 +1,11 @@
 ---
 title: 发布计划
-description: 了解 Adobe 打算何时发布 Adobe Commerce 的新功能。
+description: 了解Adobe计划何时发布Adobe Commerce的新增功能和发行版本。 了解即将到来的修补程序计划和功能交付时间表，以便更好地进行规划。
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: b908b468f0b8abe8bb7904b9c4a626201dc919bc
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 2%
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +18,9 @@ Adobe不断努力在使产品升级变得简单且可预测，同时更快地为
 
 新功能、功能更新、云基础架构和可扩展性更新与修补程序版本分开提供，并可通过外部模块、扩展、工具或Web服务提供。 示例包括：
 
-- ![功能图标](../assets/icons/feature.svg) [**功能和特性**](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/release-information/release-notes-all) — 新功能和特性独立于修补程序版本提供。 例如，[B2B](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)、目录服务、数据连接、实时搜索和产品推荐。
+- ![功能图标](../assets/icons/feature.svg) [**功能和特性**](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all) — 新功能和特性独立于修补程序版本提供。 例如，[B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)、目录服务、数据连接、实时搜索和产品推荐。
 
-- ![基础架构图标](../assets/icons/servers.svg) [**云基础架构**](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite) — 云基础架构上的Adobe Commerce的新增功能和增强以及Commerce包的Cloud Tools Suite，这些功能和增强在Cloud Platform上部署和管理Adobe Commerce安装和升级。
+- ![基础架构图标](../assets/icons/servers.svg) [**云基础架构**](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite) — 云基础架构上的Adobe Commerce的新增功能和增强以及Commerce包的Cloud Tools Suite，这些功能和增强在Cloud Platform上部署和管理Adobe Commerce安装和升级。
 
 - ![扩展性图标](../assets/icons/brackets.svg) [**扩展性**](https://developer.adobe.com/commerce/extensibility/) — 新的开发人员工具和服务提供了与修补程序版本无关的进程外扩展性。 例如，集成入门工具包、SDK管理员UI、Adobe I/O Events for Commerce和API Mesh。
 

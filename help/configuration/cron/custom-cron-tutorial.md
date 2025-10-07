@@ -1,10 +1,10 @@
 ---
 title: 配置自定义cron作业和cron组（教程）
-description: 使用本分步教程创建自定义cron作业。
+description: 通过此Adobe Commerce分步教程了解如何创建自定义cron作业。 发现模块设置和cron组配置。
 exl-id: d8efcafc-3ae1-4c2d-a8ad-4a806fb48932
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---

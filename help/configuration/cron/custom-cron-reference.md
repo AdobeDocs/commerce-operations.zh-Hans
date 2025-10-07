@@ -1,10 +1,10 @@
 ---
 title: 自定义cron作业和cron组引用
-description: 了解如何使用cron组自定义cron。
+description: 了解如何使用Adobe Commerce中的cron组和crontab自定义cron。 发现自定义模块设置和计划任务配置。
 exl-id: 16e342ff-aa94-4e31-8c75-dfea1ef02706
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---

@@ -2,9 +2,9 @@
 title: 管理第三方扩展
 description: 按照以下步骤安装、启用、升级和卸载Adobe Commerce扩展。
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: f057cf082eeab1e34957e284817c6b93517de21b
+source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 - 主题（更改店面和管理员的外观）
 - 语言包（将店面和管理员本地化）
 
-本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
+本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
 
 您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 1. 找到要安装的扩展，并记下组件名称和版本。
 
-   ![技术详细信息显示扩展的编辑器名称](../../assets/installation/marketplace-extension-technical-details.png)
+   ![扩展技术详细信息显示安装的编辑器包名称](../../assets/installation/marketplace-extension-technical-details.png)
 
 >[!TIP]
 >

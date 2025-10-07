@@ -1,11 +1,11 @@
 ---
 title: 客户配置路径参考
-description: 请参阅客户配置值列表。
+description: 了解客户配置路径和Adobe Commerce管理设置中的值。 了解新闻稿、帐户管理和客户服务选项。
 feature: Configuration, Customers
 exl-id: a0571423-6fbd-4cfc-9797-a13c0c24bb53
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---

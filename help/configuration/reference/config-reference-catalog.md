@@ -1,11 +1,11 @@
 ---
 title: 目录配置路径引用
-description: 查看目录配置值的列表。
+description: 了解Adobe Commerce管理设置中的目录配置路径和值。 发现产品、类别和目录管理配置选项。
 feature: Configuration, Catalog Management
 exl-id: 19451443-228e-437d-a3eb-7dc968b9fb0d
-source-git-commit: 47bda51cdcab964c37d9f652d467d69d795d8641
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 0%
 | 名称 | 配置路径 | 仅限Commerce？ |
 |--------------|--------------|--------------|
 | SKU蒙版 | `catalog/fields_masks/sku` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 元标题的蒙版 | `catalog/fields_masks/meta_title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 元关键字的掩码 | `catalog/fields_masks/meta_keyword` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 元说明的蒙版 | `catalog/fields_masks/meta_description` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Meta标题的蒙版 | `catalog/fields_masks/meta_title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Meta关键字掩码 | `catalog/fields_masks/meta_keyword` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Meta描述的掩码 | `catalog/fields_masks/meta_description` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 列表模式 | `catalog/frontend/list_mode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 网格上每页的产品允许值 | `catalog/frontend/grid_per_page_values` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 网格上每页的产品默认值 | `catalog/frontend/grid_per_page` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -80,7 +80,7 @@ ht-degree: 0%
 | 将类别路径用于产品URL | `catalog/seo/product_use_categories` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 如果URL键发生更改，请为URL创建永久重定向 | `catalog/seo/save_rewrites_history` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 页面标题分隔符 | `catalog/seo/title_separator` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 对类别使用规范链接元标记 | `catalog/seo/category_canonical_tag` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| 对类别使用规范链接Meta标记 | `catalog/seo/category_canonical_tag` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 对产品使用规范链接Meta标记 | `catalog/seo/product_canonical_tag` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 启用 | `catalog/magento_catalogpermissions/enabled` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
 | 允许浏览类别 | `catalog/magento_catalogpermissions/grant_catalog_category_view` | ![仅限Commerce](/help/assets/configuration/cloud-ee.png) |
@@ -151,7 +151,7 @@ ht-degree: 0%
 
 ## 可视化促销路径
 
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
 
 这些配置值在&#x200B;**存储** >设置> **配置** > **目录** > **可视推销**&#x200B;中的管理员中可用。
 

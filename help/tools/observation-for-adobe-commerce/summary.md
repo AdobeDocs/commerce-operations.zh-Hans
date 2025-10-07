@@ -3,9 +3,9 @@ title: '[!UICONTROL Summary]选项卡'
 description: 了解[!UICONTROL Summary]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
-source-git-commit: 790089c178570ee69f33cc04b17800db5563741e
+source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2494'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,19 @@ ht-degree: 0%
 
 ## [!UICONTROL 404 page errors frame]
 
-![404页错误框架](../../assets/tools/404-page-errors.jpg)
+![404错误监视仪表板显示一段时间内未找到事件的页面](../../assets/tools/404-page-errors.jpg)
 
 **[!UICONTROL 404 page errors]**&#x200B;帧列出了选定时间范围内的[URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)和404页错误的计数。
 
 ## [!UICONTROL % of Storage Free frame]
 
-存储可用帧的![百分比](../../assets/tools/percent-of-storage-free.jpg)
+![显示可用磁盘空间百分比的存储利用率图表](../../assets/tools/percent-of-storage-free.jpg)
 
 **[!UICONTROL % of Storage Free]**&#x200B;框架显示群集的所有节点中存储挂载的平均可用百分比。 例如，如果您有一个三节点群集，则框架将显示\&lt;装载点\>、\&lt;环境名称\>。 如果三个节点之间存在差异，则此帧具有欺骗性。 例如，如果`/data/mysql`可用装入点在三个节点群集中的值不同，则会出现差异。 在[!UICONTROL MySQL]选项卡下有一个框架，该框架按节点名称面向装载点，以便更准确地查看每个节点上的`/data/mysql`可用存储空间的实际大小。
 
 ## [!UICONTROL % of system memory that is free frame]
 
-可用帧的系统内存的![百分比](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
+![显示可用RAM百分比的系统内存使用图表](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
 
 **%的可用系统内存**&#x200B;帧按节点显示每个节点上可用的系统内存量。
 
@@ -58,11 +58,11 @@ ht-degree: 0%
 
 按主机![显示的](../../assets/tools/cpu-percent-by-host.jpg)CPU百分比
 
-所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU利用率的更多提示，请参阅[在Adobe Commerce上使用New Relic进行性能故障诊断](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=zh-Hans)。
+所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU利用率的更多提示，请参阅[在Adobe Commerce上使用New Relic进行性能故障诊断](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)。
 
 ## [!UICONTROL Alerts during timeframe]
 
-时间范围内![个警报](../../assets/tools/alerts-during-timeframe.jpg)
+![显示选定时间段内事件的警报通知仪表板](../../assets/tools/alerts-during-timeframe.jpg)
 
 **[!UICONTROL Alerts during timeframe]**&#x200B;显示所有警报，包括Adobe Commerce支持添加的[!UICONTROL Managed Alerts]。
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ![CPU使用情况](../../assets/tools/cpu-usage.jpg)
 
-如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans)为您的网站启用[!DNL New Relic Infrastructure]。
+如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html)为您的网站启用[!DNL New Relic Infrastructure]。
 
 ## [!UICONTROL Average Response Time]
 
@@ -139,7 +139,7 @@ ht-degree: 0%
 
 ## [!UICONTROL API Calls by IP, details by URL]
 
-按URL的![IP详细信息的API调用](../../assets/tools/api-calls-by-ip-details-by-url.jpg)
+![API请求分析显示按IP地址和端点URL分组的调用](../../assets/tools/api-calls-by-ip-details-by-url.jpg)
 
 **[!UICONTROL API Calls by IP, details by URL]**&#x200B;框架提供针对API的高流量详细信息以及发出请求的URL的详细信息。
 
@@ -332,13 +332,13 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 
 ## [!UICONTROL Page Rendering]
 
-![页面渲染](../../assets/tools/page-rendering.jpg)
+![页面性能量度显示呈现时间分析](../../assets/tools/page-rendering.jpg)
 
 **[!UICONTROL Page Rendering]**&#x200B;框架显示页面查看源[!DNL New Relic]与同一时间段前一周相比的当前周平均页面渲染持续时间。
 
 ## [!UICONTROL Page loading detail]
 
-![页面正在加载详细信息](../../assets/tools/page-loading-detail.png)
+![显示加载时间组件的详细页面加载性能细分](../../assets/tools/page-loading-detail.png)
 
 **[!UICONTROL Page loading detail]**&#x200B;框架描述了页面加载事件。 它详述了这些方面的含义。 以下是为此帧运行的查询：
 
@@ -384,7 +384,7 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 * &#39;%您可以通过将Magento Cloud基础架构上的Elasticsearch服务升级到“ver_err”版本%来解决此问题
 * “%cluster运行状况状态已从\[YELLOW\]更改为\[RED\]（原因：%）为“yel_red”
 * “%No space”作为“no_space”，在设备%上已没有剩余空间
-* “%”无法作为“failed_query”执行&lbrack;SearchRequest&lbrace;searchType=%&#39;
+* “%”无法作为“failed_query”执行[SearchRequest{searchType=%&#39;
 
 ## [!UICONTROL Cron view]
 

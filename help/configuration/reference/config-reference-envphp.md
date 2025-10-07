@@ -1,10 +1,10 @@
 ---
 title: env.php参考
-description: 查看env.php文件的值列表。
+description: 了解Adobe Commerce中的env.php文件配置值和部分。 发现环境设置和配置选项。
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 26fac37405ad635f297b65415517451d5149e50f
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-在[Commerce用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)中了解有关&#x200B;_加密密钥_&#x200B;的更多信息。
+在[Commerce用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)中了解有关&#x200B;_加密密钥_&#x200B;的更多信息。
 
 ## db
 
@@ -203,7 +203,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-了解有关[可下载域](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
+了解有关[可下载域](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
 
 ## 安装
 

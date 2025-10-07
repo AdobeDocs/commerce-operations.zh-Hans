@@ -1,11 +1,11 @@
 ---
 title: 升级过程概述
-description: 了解如何升级您的 Adobe Commerce 项目以确保您的店面安全且高效运行。
+description: 了解升级Adobe Commerce项目如何确保店面安全高效。 探索规划和执行成功升级的最佳实践。
 exl-id: 40bd97ca-6648-40d4-9c61-7d159391976a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 1%
+source-wordcount: '901'
+ht-degree: 0%
 
 ---
 

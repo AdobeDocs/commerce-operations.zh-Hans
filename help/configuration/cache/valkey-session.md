@@ -1,11 +1,11 @@
 ---
 title: 使用Valkey进行会话存储
-description: 了解如何为会话存储配置Valkey。
+description: 了解如何在Adobe Commerce中为会话存储配置Valkey。 了解设置步骤、配置选项和性能优化技术。
 feature: Configuration, Cache
 exl-id: 986ddb5c-8fc5-4210-8a41-a29e3a7625b7
-source-git-commit: dea0ad57a8c4525be9bc442708bdd2495f28d72d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '807'
 ht-degree: 1%
 
 ---

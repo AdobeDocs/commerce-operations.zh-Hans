@@ -1,10 +1,10 @@
 ---
 title: 高级 [!DNL JavaScript] 捆绑
-description: 了解JavaScript捆绑包如何减少服务器请求的大小和频率。
+description: 了解Adobe Commerce中的高级 [!DNL javascript] 捆绑。 了解实施指导和优化策略。
 exl-id: 81a313f8-e541-4da6-801b-8bbd892d6252
-source-git-commit: f9f8aea1a77ef062d7076a61bbafd12433f15edf
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2133'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 #### 要使用[!DNL PhantomJS]：
 
-在[!DNL Commerce]根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[!DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
+在[!DNL Commerce]根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[！DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
 
 ```javascript
 "use strict";

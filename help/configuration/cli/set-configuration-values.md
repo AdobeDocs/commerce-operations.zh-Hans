@@ -1,10 +1,10 @@
 ---
 title: 设置配置值
-description: 了解如何设置配置值并更改管理员中锁定的值。
+description: 了解如何在Adobe Commerce中设置配置值和更改锁定的管理员值。 了解高级配置命令和技术。
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -221,7 +221,7 @@ bin/magento config:show [--scope[="..."]] [--scope-code[="..."]] path
 
 >[!INFO]
 >
->`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `**&#x200B;**&#x200B;**`。
+>`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `******`。
 
 ### 示例
 

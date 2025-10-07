@@ -1,11 +1,11 @@
 ---
 title: 二级缓存配置
-description: 了解如何配置L2缓存。
+description: 了解如何配置二级缓存以优化Adobe Commerce性能。 了解设置步骤和网络流量减少技术。
 feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-source-git-commit: ba3c656566af47f16f58f476d7bc9f4781bb0234
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Commerce将经过哈希处理的数据版本存储在Redis中，后缀“:hash�
 
 >[!INFO]
 >
->对于云基础架构上的Adobe Commerce，您可以使用[部署变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)来配置二级缓存。
+>对于云基础架构上的Adobe Commerce，您可以使用[部署变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend)来配置二级缓存。
 
 ## 配置示例
 

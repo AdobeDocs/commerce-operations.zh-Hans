@@ -1,11 +1,11 @@
 ---
 title: 将Redis用于默认缓存
-description: 了解如何将Redis配置为Adobe Commerce的默认缓存。
+description: 了解如何将Redis配置为Adobe Commerce的默认缓存。 了解命令行设置、配置选项和验证技术。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-source-git-commit: 2c489f2655e6fb067de1730355df6cd3683ea562
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---

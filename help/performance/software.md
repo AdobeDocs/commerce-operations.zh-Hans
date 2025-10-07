@@ -1,11 +1,11 @@
 ---
 title: 软件建议
-description: 查看与Adobe Commerce部署的最佳性能相关的推荐软件列表。
+description: 了解Adobe Commerce的软件要求和建议。 探索生产支持的版本和配置最佳实践。
 feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1396'
 ht-degree: 0%
 
 ---

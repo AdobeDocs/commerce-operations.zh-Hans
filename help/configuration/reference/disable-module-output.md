@@ -1,10 +1,10 @@
 ---
 title: 禁用模块输出
-description: 了解如何禁用模块输出。
+description: 了解如何在不删除依赖项的情况下禁用Adobe Commerce中的模块输出。 了解配置步骤和用例。
 exl-id: af556bf5-8454-4d65-8ac8-4a64c108f092
-source-git-commit: fee09845777e23717e618ac57df4158d6b172d4f
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---

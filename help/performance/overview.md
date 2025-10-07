@@ -1,10 +1,10 @@
 ---
 title: 概述
-description: 按照这些最佳实践优化Adobe Commerce部署的性能。
+description: 了解优化您的Adobe Commerce部署的性能最佳实践。 发现用于最大限度提高速度、效率和用户体验的经验证的策略。
 exl-id: 5381a477-bacd-4e74-a150-7f98abc2f744
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '94'
 ht-degree: 1%
 
 ---

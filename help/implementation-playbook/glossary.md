@@ -1,11 +1,11 @@
 ---
 title: 术语表
-description: Adobe Commerce中的术语和定义
+description: 了解Adobe Commerce实施项目中使用的主要术语和定义。 探索开发人员、商家和技术团队的基本词汇。
 exl-id: 82abd8c3-fb5a-4599-8435-f1f2f6122397
 recommendations: noDisplay, noCatalog
-source-git-commit: a436200f76cc200b70113daf7dff5929edf0b104
+source-git-commit: 062267b8b06e41d89f704144e640fc1254952532
 workflow-type: tm+mt
-source-wordcount: '8'
+source-wordcount: '23'
 ht-degree: 0%
 
 ---

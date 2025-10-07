@@ -1,11 +1,11 @@
 ---
 title: 使用多个Varnish实例清除缓存
-description: 了解缓存清除如何与多个Varnish实例一起使用。
+description: 了解缓存清除如何与Adobe Commerce中的多个清漆实例配合使用。 了解配置和管理最佳实践。
 feature: Configuration, Cache
 exl-id: 289a4e54-9e73-454c-bfb9-e78e405af56c
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '185'
 ht-degree: 1%
 
 ---

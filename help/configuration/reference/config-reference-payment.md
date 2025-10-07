@@ -1,11 +1,11 @@
 ---
 title: 支付配置路径参考
-description: 查看可配置支付方式值的列表。
+description: 了解Adobe Commerce Admin中的付款配置路径和方法值。 了解PayPal、信用卡和支付网关配置选项。
 feature: Configuration, Payments
 exl-id: f3e356aa-7262-4d99-9ed4-d77cbd93708c
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '4100'
+source-wordcount: '4113'
 ht-degree: 0%
 
 ---

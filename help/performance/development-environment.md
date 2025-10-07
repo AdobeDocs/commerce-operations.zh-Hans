@@ -1,10 +1,10 @@
 ---
 title: 开发环境建议
-description: 了解关于设置本地Adobe Commerce开发环境的性能建议。
+description: 了解Adobe Commerce中的开发环境建议。 了解实施指导和优化策略。
 exl-id: f57396c0-86be-4933-8066-eb51c42fb9e4
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---

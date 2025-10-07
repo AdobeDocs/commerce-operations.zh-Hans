@@ -1,10 +1,10 @@
 ---
 title: .gitignore引用
-description: 请参阅如何添加包含在忽略列表中的文件。
+description: 了解如何向Adobe Commerce项目的.gitignore列表添加文件。 探索版本控制管理和文件排除最佳实践。
 exl-id: 7c53b50a-7bdf-433b-bebb-0129f792a1a4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---

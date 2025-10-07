@@ -1,12 +1,12 @@
 ---
 title: 写入自定义日志文件
-description: 了解如何设置自定义日志文件。
+description: 了解如何在Adobe Commerce中创建和配置自定义日志文件。 发现日志记录器处理程序和自定义日志记录实施。
 feature: Configuration, Logs
 badge: label="由Atwix提供" type="Informative" url="https://www.atwix.com/" tooltip="阿特维克斯"
 exl-id: 875f45e7-30c9-4b1b-afe9-d1a8d51ccdf0
-source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 0%
    </virtualType>
    ```
 
-1. 在`MyCustomLogger`对象中插入[&#128279;](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)虚拟类型`Magento\Payment\Model\Method\Logger`：
+1. 在`MyCustomLogger`对象中插入[ ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types)虚拟类型`Magento\Payment\Model\Method\Logger`：
 
    ```xml
    <type name="Magento\Payment\Model\Method\Logger">

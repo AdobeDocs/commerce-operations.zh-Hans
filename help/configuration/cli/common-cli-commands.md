@@ -1,10 +1,10 @@
 ---
 title: 常用命令
-description: 查看常用Commerce CLI命令和用法的取样。
+description: 了解常见的Adobe Commerce CLI命令及其使用示例。 发现用于开发和管理的基本命令行工具。
 exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
-source-git-commit: 3d0e6d6517e28a32816bfe2b328edfba97523740
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---

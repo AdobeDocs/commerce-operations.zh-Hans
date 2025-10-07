@@ -1,10 +1,10 @@
 ---
 title: 从配置文件导入数据
-description: 从配置文件导入Adobe Commerce配置设置。
+description: 了解如何从配置文件导入Adobe Commerce配置设置。 发现管道部署和数据库导入流程。
 exl-id: 7d9f156c-e8d3-4888-b359-5d9aa8c4ea05
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---

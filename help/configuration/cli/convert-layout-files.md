@@ -1,10 +1,10 @@
 ---
 title: 转换布局文件
-description: 转换XML布局文件
+description: 了解如何使用Adobe Commerce命令行工具转换XML布局文件。 发现XSLT样式表更新和文件转换过程。
 exl-id: 9852b735-9b4b-43ce-887f-5c37d398bbf7
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---

@@ -1,11 +1,11 @@
 ---
 title: 部署流程
-description: 了解在生产环境中部署Adobe Commerce所需的步骤。
+description: 了解Adobe Commerce生产环境的部署流程流程。 了解实现最大性能和可靠性的步骤。
 feature: Best Practices, Deploy
 exl-id: 88da0b1b-5aa7-4f1c-9d01-ae58324b2754
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---

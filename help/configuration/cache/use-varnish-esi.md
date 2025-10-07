@@ -1,12 +1,12 @@
 ---
 title: 清漆ESI块
-description: 了解Edge端包含以及如何使用它们嵌入网页。
+description: 了解Varnish Edge Side Include (ESI)以及如何嵌入Adobe Commerce的网页。 发现ESI块的实施和优化。
 badge: label="由Konstantin G提供。" type="Informative" url="https://github.com/goivvy" tooltip="康斯坦丁G."
 feature: Configuration, Cache
 exl-id: 7dccafa5-df79-4690-be5c-ff774c66bb2a
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---

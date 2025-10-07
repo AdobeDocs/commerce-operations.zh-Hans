@@ -1,10 +1,10 @@
 ---
 title: 翻译词典和语言包
-description: 了解如何生成翻译词典和构建语言包。
+description: 了解如何为Adobe Commerce生成翻译词典和构建语言包。 了解本地化和多语言商店设置。
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 4116d0983edc797ce42d24e711fb5ecdbf8fdec9
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -316,7 +316,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 [翻译概述]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
 [翻译词典]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
-[配置翻译]: https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-localize
+[配置翻译]: https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize
 [了解有关语言包的更多信息]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages
 [ISO 639-1]: https://www.iso.org/iso-639-language-codes.html
 [ISO 3166]: https://www.iso.org/iso-3166-country-codes.html

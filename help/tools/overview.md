@@ -1,10 +1,10 @@
 ---
 title: 工具
-description: 使用这些工具优化Adobe Commerce商店。
+description: 了解优化Adobe Commerce商店性能的基本工具。 了解如何使用分析工具、修补程序和实用程序实现更好的站点管理。
 exl-id: e2770019-d879-4685-bcbe-791550f49cf0
-source-git-commit: 60f85dfb889e1e6d15aaf45f95115705b090ccad
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 * [[!DNL Site-Wide Analysis Tool]](../tools/site-wide-analysis-tool/intro.md)
 * [[!DNL Managed alerts for Adobe Commerce]](../tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce.md)
-* [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+* [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 * [&#39;bin/magento&#39;](reference/commerce-on-premises.md)
 * [&#39;bin/uct&#39;](reference/commerce-on-premises.md)
 * [[!DNL Observation for Adobe Commerce]](../tools/observation-for-adobe-commerce/intro.md)

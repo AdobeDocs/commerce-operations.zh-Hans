@@ -1,11 +1,11 @@
 ---
 title: 配置缓存
-description: 了解缓存以及如何为Adobe Commerce应用程序配置缓存机制。
+description: 了解Adobe Commerce应用程序的缓存机制和配置选项。 发现默认文件系统缓存的替代方案。
 feature: Configuration, Cache
 exl-id: 6effa069-c043-411a-b161-01210be17391
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---

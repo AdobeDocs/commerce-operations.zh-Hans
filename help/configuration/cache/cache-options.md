@@ -1,11 +1,11 @@
 ---
 title: 缓存选项
-description: 配置对低级缓存存储的访问。
+description: 了解Adobe Commerce中的低级缓存选项和存储配置。 发现Redis和数据库的前端、后端和存储设置。
 feature: Configuration, Cache
 exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---

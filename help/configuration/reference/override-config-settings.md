@@ -1,10 +1,10 @@
 ---
 title: 覆盖配置设置
-description: 了解如何使用环境变量覆盖配置设置。
+description: 了解如何使用环境变量覆盖Adobe Commerce配置设置。 探索配置管理和部署最佳实践。
 exl-id: 788fd3cd-f8c1-4514-8141-547fed36e9ce
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->查看[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html?lang=zh-Hans)中的&#x200B;_配置环境_&#x200B;主题。
+>查看[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html)中的&#x200B;_配置环境_&#x200B;主题。
 
 ## 环境变量
 
@@ -62,8 +62,8 @@ ht-degree: 0%
   有关作用域的详细信息，请参阅：
 
    - [步骤1：查找网站或商店视图范围值](#step-1-find-the-website-or-store-view-scope-value)
-   - 有关作用域的[Commerce用户指南主题](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
-   - [范围快速引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/scope-change#scope-quick-reference)
+   - 有关作用域的[Commerce用户指南主题](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
+   - [范围快速引用](https://experienceleague.adobe.com/en/docs/commerce-admin/config/scope-change#scope-quick-reference)
 
 `<SYSTEM__VARIABLE__NAME>`是`/`被双下划线字符替换的配置路径。 有关详细信息，请参阅[第2步：设置系统变量](#step-2-set-global-website-or-store-view-variables)。
 
@@ -253,6 +253,6 @@ $_ENV['CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'] = '123
 >
 >- 要使用您在`$_ENV`数组中设置的值，必须在`variables_order = "EGPCS"`文件中设置`php.ini`（Environment、Get、Post、Cookie和服务器）。 有关详细信息，请参阅[PHP文档](https://www.php.net/manual/en/ini.core.php)。
 >
->- 对于云基础架构上的Adobe Commerce，如果您尝试使用[Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans#configure-the-project)覆盖配置设置，则必须在变量名称前加上`env:`。 例如：
+>- 对于云基础架构上的Adobe Commerce，如果您尝试使用[Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)覆盖配置设置，则必须在变量名称前加上`env:`。 例如：
 >
 >![环境变量示例](../../assets/configuration/cloud-console-envvariable.png)

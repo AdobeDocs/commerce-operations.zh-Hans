@@ -1,11 +1,11 @@
 ---
 title: 会话存储位置
-description: 了解会话文件的存储位置。
+description: 了解Adobe Commerce中的会话存储位置和文件管理。 发现存储逻辑和配置选项。
 feature: Configuration, Storage
 exl-id: 43cab98a-5b68-492e-b891-8db4cc99184e
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ## 管理会话大小
 
-请参阅[用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-session-management)中的&#x200B;_会话管理_。
+请参阅[用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-session-management)中的&#x200B;_会话管理_。
 
 ## 垃圾收集配置
 

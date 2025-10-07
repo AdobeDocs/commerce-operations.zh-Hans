@@ -1,11 +1,11 @@
 ---
 title: 常规配置路径引用
-description: 请参阅常规和高级配置值的列表。
+description: 了解Adobe Commerce的常规和高级配置路径和值。 发现系统、安全和管理配置选项。
 feature: Configuration, Observability, Roles/Permissions, System
 exl-id: 3c557746-5182-4929-aebf-5b6fe76f0d8f
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---

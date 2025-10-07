@@ -1,11 +1,11 @@
 ---
 title: 敏感路径和系统特定路径
-description: 请参阅系统特定的敏感配置值列表。
+description: 了解Adobe Commerce的敏感和特定于系统的配置路径。 发现安全配置和环境变量管理。
 feature: Configuration, System
 exl-id: 127880ab-7507-4e53-8b51-dfa6557d0b18
-source-git-commit: e5a1c5634124831c8d5a95df6818ec30c372e8dd
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '3676'
+source-wordcount: '3684'
 ht-degree: 0%
 
 ---

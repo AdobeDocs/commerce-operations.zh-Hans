@@ -1,10 +1,10 @@
 ---
 title: config.php引用
-description: 请参见config.php文件中的值列表。
+description: 了解Adobe Commerce配置的config.php文件值和部分。 发现模块、范围、系统设置和部署最佳实践。
 exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '158'
 ht-degree: 1%
 
 ---
@@ -124,6 +124,6 @@ ht-degree: 1%
 
 <!-- link definitions -->
 
-[模块]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=zh-Hans
-[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=zh-Hans#scope-settings
+[模块]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html
+[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings
 [主题]: https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/

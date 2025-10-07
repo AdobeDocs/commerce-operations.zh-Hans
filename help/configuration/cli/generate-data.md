@@ -1,11 +1,11 @@
 ---
 title: 生成性能测试数据
-description: 了解如何生成大量数据以用于性能测试。
+description: 了解如何为Adobe Commerce性能测试生成大量数据。 了解数据生成用户档案和测试策略。
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '768'
 ht-degree: 9%
 
 ---

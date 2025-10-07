@@ -1,11 +1,11 @@
 ---
 title: 将Valkey用于默认缓存
-description: 了解如何将Valkey配置为Adobe Commerce的默认缓存。
+description: 了解如何将Valkey配置为Adobe Commerce的默认缓存。 了解命令行设置、配置选项和验证技术。
 feature: Configuration, Cache
 exl-id: d0baa2a6-8aa8-4f3f-9edf-102d621430e0
-source-git-commit: dea0ad57a8c4525be9bc442708bdd2495f28d72d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
