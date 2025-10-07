@@ -151,7 +151,7 @@ ht-degree: 0%
 
 ## 可视化促销路径
 
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
 
 这些配置值在&#x200B;**存储** >设置> **配置** > **目录** > **可视推销**&#x200B;中的管理员中可用。
 

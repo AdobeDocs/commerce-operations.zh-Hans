@@ -13,7 +13,7 @@ ht-degree: 0%
 
 您可以从商店的[!DNL Site-Wide Analysis Tool]访问[!UICONTROL Admin Panel]仪表板。
 
-[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[!UICONTROL Admin]角色资源[的](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)用户使用。
+[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[!UICONTROL Admin]角色资源[的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/user-accounts/permissions-user-roles)用户使用。
 
 >[!NOTE]
 >
@@ -26,13 +26,13 @@ ht-degree: 0%
 >[!NOTE]
 >
 >您的帐户应有权使用&#x200B;**[!DNL Support Permissions]**&#x200B;以访问[!DNL Site-Wide Analysis Tool Dashboard]。
->&#x200B;>请参阅用户指南中的[共享 [!DNL Commerce] 帐户](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html)中的更多详细信息。
+>&#x200B;>请参阅用户指南中的[共享 [!DNL Commerce] 帐户](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html?lang=zh-Hans)中的更多详细信息。
 
 ## 从应用商店的[!DNL Site-Wide Analysis Tool Dashboard]登录到[!UICONTROL Admin Panel]
 
 ### 步骤1：验证权限
 
-验证[!UICONTROL Admin]用户帐户是否有权通过其[!DNL Site-Wide Analysis Tool]分配的用户角色[访问](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)。
+验证[!UICONTROL Admin]用户帐户是否有权通过其[!DNL Site-Wide Analysis Tool]分配的用户角色[访问](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/user-accounts/permissions-user-roles)。
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!UICONTROL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/403-errors-when-accessing-site-wide-analysis-tool-on-magento)。
+>如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!UICONTROL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/403-errors-when-accessing-site-wide-analysis-tool-on-magento)。
 
 ### 步骤2：访问[!DNL Site-Wide Analysis Tool]
 
