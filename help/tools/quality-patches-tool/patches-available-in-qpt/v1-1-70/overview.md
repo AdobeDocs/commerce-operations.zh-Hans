@@ -3,7 +3,7 @@ title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.70
 description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.70中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: 824b1d8a7994938d9f000764631647757f20799d
+source-git-commit: 19e32289f4a7954d070370e065bc683d5f9b54e5
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
@@ -20,7 +20,7 @@ QPT v1.1.70包含以下修补程序：
 1. **ACSD-66157**：对于在不同时区创建的网站，特殊价格不会生效。
 1. **ACSD-67659**：已翻译的错误消息返回&#x200B;*UNDEFINED*&#x200B;代码。
 1. **ACSD-67166**：在店面加载报价时运行重复的`cataloginventory_stock_status`查询。
-1. **ACSD-67030**：当由受限角色管理员编辑时，简单产品会因可配置而被取消分配。
+1. **[ACSD-67030](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-70/acsd-67030.md)**：当由受限角色管理员编辑时，简单产品会因可配置而被取消分配。
 1. **ACSD-67289**：应用特殊价格时无法显示常规价格。
 
 使用左侧的菜单导航到特定的修补程序页面。
