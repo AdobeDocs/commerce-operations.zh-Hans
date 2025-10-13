@@ -17,8 +17,8 @@ ht-degree: 0%
 
 每个安全补丁发行版本都基于以前的完整补丁发行版本。 它包含先前修补程序版本的质量和安全修复，以及在先前完整修补程序版本和安全修补程序版本之间创建的安全修复。
 
-有关下载和应用安全修补程序的说明，请参阅[Adobe Commerce知识库](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)中的&#x200B;_如何获取和应用安全修补程序_。
+有关下载和应用安全修补程序的说明，请参阅[Adobe Commerce知识库](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)中的&#x200B;_如何获取和应用安全修补程序_。
 
 >[!NOTE]
 >
->2.4.4和2.4.5的扩展支持安全修补程序仅向Adobe Commerce客户提供，不向Magento Open Source代码库提供。 请参阅[扩展支持](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
+>2.4.4和2.4.5的扩展支持安全修补程序仅向Adobe Commerce客户提供，不向Magento Open Source代码库提供。 请参阅[扩展支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
