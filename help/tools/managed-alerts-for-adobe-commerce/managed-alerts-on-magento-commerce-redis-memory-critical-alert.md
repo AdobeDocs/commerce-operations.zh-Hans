@@ -49,7 +49,7 @@ ht-degree: 0%
    * 警报的说明。
    * [[!DNL New Relic] 事件链接](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/view-violation-event-details-incidents/)。 这包含在您的[Adobe Commerce托管警报](managed-alerts-for-magento-commerce.md)中。
 
-1. 如果不存在支持票证，请转到[!DNL Redis]one.newrelic.com[ > ](https://login.newrelic.com) > **[!UICONTROL Infrastructure]**&#x200B;页面检查&#x200B;**[!UICONTROL Third-party services]**&#x200B;已用内存是否正在增加或减少，然后选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
+1. 如果不存在支持票证，请转到[!DNL Redis]one.newrelic.com[&#x200B; > &#x200B;](https://login.newrelic.com) > **[!UICONTROL Infrastructure]**&#x200B;页面检查&#x200B;**[!UICONTROL Third-party services]**&#x200B;已用内存是否正在增加或减少，然后选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
 1. 如果您无法确定[!DNL Redis]内存消耗增加的原因，请查看近期趋势以确定近期代码部署或配置更改（例如，新客户组和目录的大幅更改）中存在的问题。 建议您查看过去七天的活动，以了解代码部署或更改中的任何关联。
 1. 检查第三方扩展是否存在行为不端：
 

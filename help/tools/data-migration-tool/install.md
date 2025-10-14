@@ -54,7 +54,7 @@ git branch
 
 ## 查找[!DNL Data Migration Tool]的已发布版本
 
-转到[ GitHub存储库的](https://github.com/magento/data-migration-tool/releases)版本[!DNL Data Migration Tool]页面以查找可用的发布版本。
+转到[&#x200B; GitHub存储库的](https://github.com/magento/data-migration-tool/releases)版本[!DNL Data Migration Tool]页面以查找可用的发布版本。
 
 ## 安装[!DNL Data Migration Tool]
 

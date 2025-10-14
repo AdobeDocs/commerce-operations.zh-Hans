@@ -42,7 +42,7 @@ ht-degree: 0%
 
 按照以下步骤确定原因并排除故障。
 
-1. 通过转到[!DNL Redis]one.newrelic.com[ > ](https://login.newrelic.com/login)基础架构&#x200B;**>**&#x200B;第三方服务&#x200B;**页面检查**&#x200B;已使用的内存是增加还是减少，请选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
+1. 通过转到[!DNL Redis]one.newrelic.com[&#x200B; > &#x200B;](https://login.newrelic.com/login)基础架构&#x200B;**>**&#x200B;第三方服务&#x200B;**页面检查**&#x200B;已使用的内存是增加还是减少，请选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
 1. 如果您无法确定[!DNL Redis]内存消耗增加的原因，请查看近期趋势以确定近期代码部署或配置更改（例如，新客户组和目录的大幅更改）中存在的问题。 建议您查看过去七天的活动，以了解代码部署或更改中的任何关联。
 1. 检查第三方扩展是否存在行为不端：
    * 请尝试查找与最近安装的第三方扩展以及问题开始时间的关联。
