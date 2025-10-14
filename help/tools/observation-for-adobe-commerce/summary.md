@@ -3,7 +3,7 @@ title: '[!UICONTROL Summary]选项卡'
 description: 了解[!UICONTROL Summary]的 [!DNL Observation for Adobe Commerce]选项卡。
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
-source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
+source-git-commit: 5a0455b61824cb1946e29dba3ff7bfd9d225b110
 workflow-type: tm+mt
 source-wordcount: '2494'
 ht-degree: 0%
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 按主机![显示的](../../assets/tools/cpu-percent-by-host.jpg)CPU百分比
 
-所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU利用率的更多提示，请参阅[在Adobe Commerce上使用New Relic进行性能故障诊断](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=zh-Hans)。
+所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU利用率的更多提示，请参阅[在Adobe Commerce上使用New Relic进行性能故障诊断](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)。
 
 ## [!UICONTROL Alerts during timeframe]
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 
 ![CPU使用情况](../../assets/tools/cpu-usage.jpg)
 
-如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans)为您的网站启用[!DNL New Relic Infrastructure]。
+如果&#x200B;**[!UICONTROL CPU Usage]**&#x200B;帧为空，则表示未启用[!DNL New Relic]的基础结构应用程序。 如果您的网站位于起始位置，则不会看到此信息。 如果您的网站是Pro，请打开[支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html)为您的网站启用[!DNL New Relic Infrastructure]。
 
 ## [!UICONTROL Average Response Time]
 
@@ -257,7 +257,7 @@ ht-degree: 0%
 
 ![redis从日志](../../assets/tools/redis-synchronization-from-log.jpg)同步
 
-[[!DNL Redis]](https://redis.io/docs/about/)是用作数据库、缓存和消息代理的开源（BSD已授权）内存中数据结构存储。 如果配置，它可以执行数据库和会话缓存。 **[!UICONTROL Redis synchronization from Log]**&#x200B;帧侧重于[[!DNL Redis] 同步](https://redis.io/docs/latest/operate/oss_and_stack/management/replication/)。 [!DNL Redis]数据集越大，同步越可能出现问题（需要保持同步的数据越多）。
+[[!DNL Redis]](https://redis.io/about/)是用作数据库、缓存和消息代理的开源（BSD已授权）内存中数据结构存储。 如果配置，它可以执行数据库和会话缓存。 **[!UICONTROL Redis synchronization from Log]**&#x200B;帧侧重于[[!DNL Redis] 同步](https://redis.io/docs/latest/operate/oss_and_stack/management/replication/)。 [!DNL Redis]数据集越大，同步越可能出现问题（需要保持同步的数据越多）。
 
 **[!DNL Redis]个错误和消息：**
 
@@ -384,7 +384,7 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 * &#39;%您可以通过将Magento Cloud基础架构上的Elasticsearch服务升级到“ver_err”版本%来解决此问题
 * “%cluster运行状况状态已从\[YELLOW\]更改为\[RED\]（原因：%）为“yel_red”
 * “%No space”作为“no_space”，在设备%上已没有剩余空间
-* “%”无法作为“failed_query”执行&lbrack;SearchRequest&lbrace;searchType=%&#39;
+* “%”无法作为“failed_query”执行[SearchRequest{searchType=%&#39;
 
 ## [!UICONTROL Cron view]
 
