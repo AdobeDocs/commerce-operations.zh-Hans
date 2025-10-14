@@ -69,4 +69,4 @@ ht-degree: 3%
    - [卸载或重新安装Commerce](tutorials/uninstall.md)
    - [卸载主题](tutorials/themes.md)
    - [升级数据库模式](tutorials/database-upgrade.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
