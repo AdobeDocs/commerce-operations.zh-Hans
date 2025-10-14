@@ -2,9 +2,9 @@
 title: env.php参考
 description: 了解Adobe Commerce中的env.php文件配置值和部分。 发现环境设置和配置选项。
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: cb89f0c0a576cf6cd8b53a4ade12c21106e2cdf3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-在[Commerce用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)中了解有关&#x200B;_加密密钥_&#x200B;的更多信息。
+在[Commerce用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)中了解有关&#x200B;_加密密钥_&#x200B;的更多信息。
 
 ## db
 
@@ -172,11 +172,19 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 
 ## default_connection
 
-定义消息队列的默认连接。 该值可以是`db`、`amqp`或自定义队列系统，如`redismq`。 如果指定了`db`以外的任何值，则必须先安装和配置消息队列软件。 否则，将无法正确处理消息。
+定义消息队列的默认连接。 该值可以是`db`、`amqp`、`stomp`或自定义队列系统，如`redismq`。 如果指定了`db`以外的任何值，则必须先安装和配置消息队列软件。 否则，将无法正确处理消息。
 
 ```conf
 'queue' => [
     'default_connection' => 'amqp'
+]
+```
+
+对于STOMP (ActiveMQ Artemis)：
+
+```conf
+'queue' => [
+    'default_connection' => 'stomp'
 ]
 ```
 
@@ -203,7 +211,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-了解有关[可下载域](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
+了解有关[可下载域](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
 
 ## 安装
 
@@ -233,13 +241,13 @@ Commerce应用程序的安装日期。
 
 ## 队列
 
-此节点中提供了消息队列配置。
+此节点中提供了消息队列配置。 您可以将RabbitMQ (AMQP)或ActiveMQ Artemis (STOMP)配置为消息代理。
 
 ```conf
 'queue' => [
   'topics' => [
-    'customer.created' => [publisher="default-rabitmq"],
-    'order.created' => [publisher="default-rabitmq"],
+    'customer.created' => [publisher="default-broker"],
+    'order.created' => [publisher="default-broker"],
   ]
 ]
 ```

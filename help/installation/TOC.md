@@ -2,9 +2,9 @@
 user-guide-title: 安装指南
 user-guide-description: 了解如何安装Adobe Commerce以进行内部部署。
 feature: Install
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 73faaa2a3b9ce773e9a381d103735403966f568b
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '173'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,9 @@ ht-degree: 3%
       - [配置Nginx](prerequisites/search-engine/configure-nginx.md)
       - [配置Apache](prerequisites/search-engine/configure-apache.md)
    - [PHP](prerequisites/php-settings.md)
-   - [消息代理](prerequisites/rabbitmq.md)
+   - 报文经纪商 {#message-brokers}
+      - [Rabbit MQ](prerequisites/rabbitmq.md)
+      - [活动MQ](prerequisites/activemq.md)
    - [安全性](prerequisites/security.md)
    - [身份验证密钥](prerequisites/authentication-keys.md)
    - [Adobe Commerce](prerequisites/commerce.md)
@@ -67,4 +69,4 @@ ht-degree: 3%
    - [卸载或重新安装Commerce](tutorials/uninstall.md)
    - [卸载主题](tutorials/themes.md)
    - [升级数据库模式](tutorials/database-upgrade.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

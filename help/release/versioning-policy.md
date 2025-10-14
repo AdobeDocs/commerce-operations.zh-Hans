@@ -2,9 +2,9 @@
 title: 发布策略
 description: 了解不同类型的Adobe Commerce版本。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: fd2ebc358850e47975ce6a3b8df058774440bcf2
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -61,15 +61,6 @@ Adobe Commerce功能的正式发布之前版本已公开提供给所有Adobe Com
 
 Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)Beta版本。 客户不应依赖Beta版本或任何随附文档或材料的正确功能或性能。 因此，使用Beta版本的任何行为都要由客户自行承担风险。
 
-## 功能、云基础架构和可扩展性版本
-
-云基础架构和功能版本包含作为独立服务（与修补程序版本不同）提供的新功能和功能更新。 示例包括但不限于：
-
-- 云托管服务和基础设施的更新
-- B2B
-- SaaS产品（“目录服务”、“数据连接”、“产品推荐”和“实时搜索”）
-- 可扩展性技术(管理UI SDK、API Mesh、App Builder Starter Kit、Eventing和Webhooks)
-
 ## 修补程序
 
 修补程序是包含影响许多商家的高影响安全或质量修补程序的修补程序，例如针对零日漏洞的修补程序。 当严重的安全或质量问题影响受支持的Adobe Commerce版本时，Adobe会根据需要发布这些版本的修补程序。 修补程序已发布到知识库的[已知问题部分](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-)。 这些修复包括在下一个计划的修补程序版本中。
@@ -86,14 +77,14 @@ Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担�
 >
 >单个修补程序不包含向后不兼容的更改。
 
-## 隔离的修补程序
+## 隔离的安全修复
 
-独立修补程序是独立于完整安全修补程序发布的安全修补程序，用于实现更快的实施。 每个独立的修补程序都会解决特定的安全问题，并且都包含在最新或即将推出的完整安全修补程序中。 有关该问题的详细信息在相关安全公告中提供，该公告链接到知识库(KB)文章，其中包含修补程序详细信息、如何应用修补程序以及其他信息。
+独立修补程序是与完整安全修补程序独立发布的非累积安全修补程序，用于实现更快的实施。 每个独立的安全修补程序都解决了特定的安全问题，并且包含在最新或即将发布的完整安全修补程序中。 有关该问题的详细信息在相关安全公告中提供，该公告链接到包含修补程序详细信息、如何应用修补程序以及其他信息的知识库(KB)文章。
 
-请参阅[安全中心](https://helpx.adobe.com/cn/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
+请参阅[安全中心](https://helpx.adobe.com/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
 
 ## 自定义修补程序
 
-由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/usage)提供。
+由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。 自定义修补程序通过[Quality Patches Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage)提供。
 
 <!-- Last updated from includes: 2025-05-28 16:37:31 -->

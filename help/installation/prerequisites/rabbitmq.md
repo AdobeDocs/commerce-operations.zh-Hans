@@ -1,15 +1,15 @@
 ---
-title: 消息代理
+title: 消息代理(RabbitMQ)
 description: 按照以下步骤安装和配置Adobe Commerce本地安装所需的消息代理软件（如 [!DNL RabbitMQ]）。
 exl-id: ae6200d6-540f-46b3-92ba-7df7f6bb6fae
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 73faaa2a3b9ce773e9a381d103735403966f568b
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
 
-# 消息代理
+# 消息代理(RabbitMQ)
 
 Adobe Commerce使用[!DNL RabbitMQ]开源消息代理。 它提供可靠、高可用、可扩展且便携的消息传递系统。
 
