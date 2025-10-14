@@ -2,9 +2,9 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: d467ada97a81d64dff358bc83acd489f69ba0677
+source-git-commit: a15422e4e135eba01931172960dfb0a6b359cde8
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 ### Cloud Automation修补服务(Private Beta)
 
-[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[环境上的](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)Adobe Commerce。
+[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[环境上的](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)Adobe Commerce。
 
-2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
+2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
 
 - 自动安装修补程序
 - 回滚恢复
@@ -47,37 +47,9 @@ Beta版包括以下功能：
 
 >[!NOTE]
 >
->由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
+>由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
 
 要参与此测试版，请完成并提交[Cloud Automation Patching Service - Beta注册表单](https://forms.office.com/r/3Wfxj5nPdB)。
-
-### 增强了实时搜索的搜索功能(公共Beta)
-
-此测试版支持[`productSearch`查询](https://developer.adobe.com/commerce/webapi/graphql/schema/live-search/queries/product-search/)中的三种新功能：
-
-- **分层搜索** — 在另一个搜索上下文中搜索 — 使用此功能，您最多可以为搜索查询执行两层搜索。 例如：
-
-   - **第1层搜索** — 在“product_attribute_1”上搜索“motor”。
-   - **第2层搜索** — 在“product_attribute_2”上搜索“部件号123”。 此示例在结果中搜索“motor”的“部件号123”。
-
-  分层搜索可用于`startsWith`搜索索引和`contains`搜索索引，如下所述：
-
-- **startsWith搜索索引** — 使用`startsWith`索引进行搜索。 此新功能允许：
-
-   - 搜索属性值以特定字符串开头的产品。
-   - 配置“结尾为”搜索，以便购物者可以搜索属性值以特定字符串结尾的产品。 要启用“结束于”搜索，需要反向摄取产品属性，并且API调用也应该是一个反向字符串。
-
-- **包含搜索索引** — 使用包含索引搜索属性。 此新功能允许：
-
-   - 在较大的字符串中搜索查询。 例如，如果购物者搜索字符串“HAPE-123”中的产品编号“PE-123”。
-
-     >[!NOTE]
-     >
-     >此搜索类型不同于现有的[短语搜索](https://developer.adobe.com/commerce/webapi/graphql/schema/live-search/queries/product-search/)，后者执行自动完成搜索。 例如，如果您的产品属性值为“outdoor pants”，则短语搜索会返回“out pan”的响应，但不会返回“oor ants”的响应。 但是，包含搜索会返回“或蚂蚁”的响应。
-
-这些新条件增强了搜索查询过滤机制以细化搜索结果。 这些新条件不会影响主搜索查询。 要参与测试版，请向[commerce-storefront-services](mailto:commerce-storefront-services@adobe.com)发送电子邮件请求。
-
-要安装实时搜索测试版，请参阅[实时搜索指南](https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/install#install-the-live-search-beta)。
 
 ### IBM Sterling Order Management系统集成(Private Beta)
 
@@ -99,7 +71,7 @@ Beta版包括以下功能：
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/home)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
