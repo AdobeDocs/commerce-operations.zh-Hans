@@ -57,6 +57,6 @@ _AC-15160_
 
 ### 安全性
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/cn/security/products/magento/apsb25-94.html)。
 
 {{$include /help/_includes/release-notes/highlights/security-2025-10.md}}

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.5-p15安全版本为2.4.5早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/cn/security/products/magento/apsb25-94.html)。
 
 {{b2b-patches}}
 
