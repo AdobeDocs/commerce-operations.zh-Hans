@@ -3,9 +3,9 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: 4718ebd237c73913e8bc03b9370298b3504e619f
+source-git-commit: 8ca7b1b616bd5733cc2ecc18cef50dbb176ea0c3
 workflow-type: tm+mt
-source-wordcount: '28592'
+source-wordcount: '29060'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,30 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.72 {#v1-1-72}
+
+* **ACSD-68040**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.7) — 修复了包含许多历史搜索请求的[!DNL MariaDB] 10.6和11.4上的前端搜索页面性能下降的问题。
+* **ACSD-67941**(对于Adobe Commerce和Magento Open Source >=2.4.7-p1 &lt;2.4.8) — 修复了具有未知筛选器名称的GraphQL请求导致PHP异常日志的问题。
+* **ACSD-68064**(对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8) — 修复了在具有大量嵌套类别的环境中创建计划更新导致重复条目的问题。
+* **ACSD-66807**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了`report_viewed_product_index`表显示产品页面查看次数不正确计数的问题。
+* **ACSD-67383**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8) — 修复了在同一会话中使用具有两个公司管理员帐户的&#x200B;**[!UICONTROL Login as Customer]**&#x200B;导致&#x200B;*没有具有cartId*&#x200B;的此类实体错误的问题。
+* **ACSD-67518**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了高级报表在行数超过批次大小时生成重复标题行的问题。
+* **ACSD-67639**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了将&#x200B;**[!UICONTROL Dynamic Price]**&#x200B;设置为&#x200B;*No*&#x200B;的捆绑产品创建贷项通知单失败的问题。
+* **ACSD-67696**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了在缓存刷新后`media_gallery`条目未返回购物车GraphQL产品节点的问题。
+* **ACSD-67946**(对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9) — 修复了购物车更新显示重复错误横幅的问题。
+* **ACSD-68011**(对于Adobe Commerce，B2B >=1.5.1 &lt;1.5.3) — 修复了通过`/V1/sharedCatalog/:id/assignProducts` [!DNL REST] API将不存在的SKU分配给共享目录的问题。
+* **ACSD-68118**(对于Adobe Commerce和Magento Open Source >=2.4.6 &lt;2.4.9) — 修复了`customerCart` GraphQL查询返回的产品属性值未反映商店标题，从而导致本地化不一致的问题。
+* **ACSD-68092**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了在多次保存后由于计划更新与基本产品数据之间的不正确同步而丢失捆绑产品选项的问题。
+* **ACSD-67424**(对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3) — 修复了在使用可协商引号时，`updated_at` `GET /carts/search` API响应中的[!DNL REST]值与&#x200B;**[!UICONTROL Admin panel]**&#x200B;中显示的值不匹配的问题。
+* **ACSD-67187**(对于Adobe Commerce，B2B >=1.5.1 &lt;1.5.3) — 修复了管理员用户被限制访问非默认网站时出现错误&#x200B;*的问题，请至少创建一个公共共享目录以继续*，并且无法访问公司网格上的&#x200B;**[!UICONTROL Add New Company]**&#x200B;按钮。
+* 已更新的版本： **ACSD-49737**、**ACSD-53750**、**ACSD-51819**、**ACSD-55566**、**ACSD-62965**、**ACSD-63323**、**ACSD-63406**、**ACSD-66139**、**ACSD-66404**、**ACSD-67659**， **ACSD-66301**
+* 已替换的修补程序： **ACSD-62577**、**ACSD-63325**、**ACSD-67102**
 
 ## v1.1.71 {#v1-1-71}
 
