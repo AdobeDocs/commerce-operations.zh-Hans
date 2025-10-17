@@ -2,7 +2,7 @@
 title: 修补程序发布计划
 description: 了解Adobe计划何时发布Adobe Commerce的新补丁和安全修复。
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 5f9f0e1dab7f5e4580f077693039ea387df23880
+source-git-commit: f4601034e3e988b3058946b263ec5e8da41fce16
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Adobe不断努力在使产品升级变得简单且可预测，同时更快地为
 
 >[!NOTE]
 >
->要了解有关新功能、云基础架构和可扩展性版本的更多信息，请参阅[Adobe Commerce Services](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/release-information/release-notes-all)版本文档。
+>要了解有关新功能、云基础架构和可扩展性版本的更多信息，请参阅[Adobe Commerce Services](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all)版本文档。
 
 除了此页面上列出的计划质量、安全性和测试版修补程序之外，Adobe还通过[质量修补程序工具](versioning-policy.md#individual-patch)提供对[单个修补程序](../tools/quality-patches-tool/usage.md)的访问。 该工具允许您应用、还原和查看有关已安装Adobe Commerce版本可用的所有单个修补程序的一般信息。
 
@@ -34,4 +34,6 @@ Adobe不断努力在使产品升级变得简单且可预测，同时更快地为
 
 有关详细信息，请参阅以下图像：
 
-![2026 Adobe Commerce版本日历](../assets/release/release-calendar.drawio.svg)
+<!-- The SVG source for the following image is located here: /help/assets/release/release-calendar.drawio.svg -->
+
+![2026 Adobe Commerce版本日历](../assets/release/release-calendar.drawio.png)
