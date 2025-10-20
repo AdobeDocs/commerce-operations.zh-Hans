@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。
+>安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)。
 
 ## 仅限Adobe Commerce {#ee-only}
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
+>Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
 
 ## 2025年10月安全补丁补丁补丁补丁补丁补丁补丁补丁补丁包 {#oct-2025-backports}
 
@@ -99,5 +99,5 @@ ht-degree: 0%
 
 * **已添加对Apache ActiveMQ Artemis STOMP协议的支持**
 
-  通过简单文本导向消息协议(STOMP)增加了对ActiveMQ Artemis开源消息代理的支持。 它提供了可靠且可扩展的报文传送系统，为基于STOMP的集成提供了灵活性。 请参阅[Commerce配置指南](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework#apache-activemq-artemis-stomp)中的&#x200B;*Apache ActiveMQ Artemis*。
+  通过简单文本导向消息协议(STOMP)增加了对ActiveMQ Artemis开源消息代理的支持。 它提供了可靠且可扩展的报文传送系统，为基于STOMP的集成提供了灵活性。 请参阅[Commerce配置指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework#apache-activemq-artemis-stomp)中的&#x200B;*Apache ActiveMQ Artemis*。
 
