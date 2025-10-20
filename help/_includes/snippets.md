@@ -1,7 +1,7 @@
 ---
-source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
+source-git-commit: b0756431d8ddf0833ef8c13528f7681a1a92a3ca
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)。
+>安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。
 
 ## 仅限Adobe Commerce {#ee-only}
 
@@ -85,4 +85,19 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
+>Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
+
+## 2025年10月安全补丁补丁补丁补丁补丁补丁补丁补丁补丁包 {#oct-2025-backports}
+
+<!--These fixes were backported to 2.4.8-pe, 2.4.7-p8, and 2.4.6-p13-->
+
+* **从TinyMCE迁移到Hugerte.org**
+
+  由于对TinyMCE 5和6的支持终止以及与TinyMCE 7的许可不兼容，Adobe Commerce WYSIWYG编辑器的当前实现从TinyMCE迁移到开源[GreatRTE编辑器](https://hugerte.org/)。
+
+  此迁移确保Adobe Commerce保持对开源许可的合规性，避免已知的TinyMCE 6漏洞，并为商家和开发人员提供现代且受支持的编辑体验。
+
+* **已添加对Apache ActiveMQ Artemis STOMP协议的支持**
+
+  通过简单文本导向消息协议(STOMP)增加了对ActiveMQ Artemis开源消息代理的支持。 它提供了可靠且可扩展的报文传送系统，为基于STOMP的集成提供了灵活性。 请参阅[Commerce配置指南](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework#apache-activemq-artemis-stomp)中的&#x200B;*Apache ActiveMQ Artemis*。
+

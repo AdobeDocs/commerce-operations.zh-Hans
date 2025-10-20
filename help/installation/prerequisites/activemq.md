@@ -1,9 +1,9 @@
 ---
 title: 消息代理(ActiveMQ Artemis)
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置Apache ActiveMQ Artemis消息代理。
-source-git-commit: 6f15a24e650a7138bae6d0b40f230e6970a943b0
+source-git-commit: 46816b42ea30cb6c5f5ce59752cc00c38d221610
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -12,9 +12,10 @@ ht-degree: 0%
 
 Adobe Commerce还通过简单文本导向消息协议(STOMP)支持ActiveMQ Artemis开源消息代理。 它提供了可靠且可扩展的报文传送系统，为基于STOMP的集成提供了灵活性。
 
+
 >[!NOTE]
 >
->ActiveMQ Artemis在Adobe Commerce 2.4.6及更高版本中引入。
+>ActiveMQ Artemis在Adobe Commerce 2.4.6及更高版本中引入。 有关在云基础架构项目上的Adobe Commerce中安装ActiveMQ Artemis的详细信息，请参阅《云上的Commerce指南》[中的](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/activemqsee)设置ActiveMQ服务&#x200B;**。
 
 消息队列提供了一种异步通信机制，在这种机制中，消息的发送者和接收者不会相互联系。 它们也不需要同时与消息队列通信。 当发件人将邮件放入队列时，该邮件会一直存储到收件人收到这些邮件为止。
 

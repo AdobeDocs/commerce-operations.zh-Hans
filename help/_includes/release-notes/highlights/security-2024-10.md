@@ -1,5 +1,5 @@
 ---
-source-git-commit: b63fa9a8b2b59f6e8dfd7003e75c66caf99d5e81
+source-git-commit: c71367c553dce66c146540389461f36eaa529bfc
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 此版本包括以下功能亮点：
 
-* **TinyMCE升级** — 管理员中的[WYSIWYG编辑器](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/content-design/wysiwyg/editor)现在使用最新版本的TinyMCE依赖项(7.3&#x200B;)。
+* **TinyMCE升级** — 管理员中的[WYSIWYG编辑器](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/wysiwyg/editor)现在使用最新版本的TinyMCE依赖项(7.3&#x200B;)。
 
    * TinyMCE 7.3提供了增强的用户体验、更好的协作和更高的效率。 TinyMCE 5已在2.4.8发行版中移除&#x200B;。
 
