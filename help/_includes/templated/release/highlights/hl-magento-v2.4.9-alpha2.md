@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3bc225485fa5a4c2b3565014af4ed81dc37fc4ab
+source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,7 @@ _AC-14610_
 #### 将USPS集成从过期的Web工具API迁移到新的RESTful USPS API
 
 为了遵守USPS宣布于2026年1月25日停用旧版Web Tools API，已将Adobe Commerce USPS集成迁移到新的RESTful USPS API。
+
 关键增强功能：
 
 * Dual API支持：管理员用户现在可以通过配置设置在旧版Web Tools API和新RESTful USPS API之间进行选择。
@@ -100,7 +101,7 @@ _AC-14610_
 * 改进的数据格式：从XML转换为JSON，以实现更清晰、更有效的通信。
 * 新管理字段：
    * 网关REST URL（基于模式：开发或实时）
-   * 客户端ID和密码
+   * 客户端ID &amp;amp；amp；密码
    * 帐户类型、帐号
    * CRID、MID、邮件程序标识代码
    * 用于国际装运的AES/ITN

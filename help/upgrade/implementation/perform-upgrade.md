@@ -2,9 +2,9 @@
 title: 执行升级
 description: 按照以下步骤升级Adobe Commerce的内部部署。
 exl-id: 9183f1d2-a8dd-4232-bdee-7c431e0133df
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html?lang=zh-Hans)。
+>- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html)。
 >- 如果您克隆GitHub存储库，请勿使用此方法进行升级。 请参阅[升级基于Git的安装](../developer/git-installs.md)。
 
 以下说明说明了如何使用编辑器包管理器进行升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须先使用编辑器1 _升级到与编辑器2（例如，2.4.2）兼容的版本，然后再将_&#x200B;升级到编辑器2，以进行>2.4.2升级。 此外，您必须运行[支持的PHP版本](../../installation/system-requirements.md)。
@@ -31,6 +31,12 @@ ht-degree: 0%
 ## 开始之前
 
 在开始升级过程之前，必须完成[升级先决条件](../prepare/prerequisites.md)以准备环境。
+
+>[!IMPORTANT]
+>
+>Adobe Commerce版本2.4.6-p13不包含`magento/inventory-composer-installer`包，该包是从具有向后不兼容更改的旧次版本顺利升级所必需的。<br>
+>>如果从2.3升级到2.4.6-p13，请在升级之前运行以下命令以安装`magento/inventory-composer-installer`包：
+>>`composer require magento/inventory-composer-installer`
 
 ## 管理包
 

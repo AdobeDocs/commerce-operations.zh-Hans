@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.8安全补丁发行说明
 description: 了解Adobe Commerce版本2.4.7的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 5f8866ed-9215-4b2e-9c77-b2d474f6c1f9
-source-git-commit: 40328796c25c56c101f95e286298325b5d1ef439
+source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.8-p3安全版本为2.4.8早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/cn/security/products/magento/apsb25-94.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html)。
 
 {{b2b-patches}}
 
@@ -37,7 +37,7 @@ Adobe Commerce 2.4.8-p3安全版本为2.4.8早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.8-p2安全版本为2.4.8早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/cn/security/products/magento/apsb25-71.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/security/products/magento/apsb25-71.html)。
 
 {{b2b-patches}}
 
@@ -45,7 +45,7 @@ Adobe Commerce 2.4.8-p2安全版本为2.4.8早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.8-p1安全版本为2.4.8早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/cn/security/products/magento/apsb25-50.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html)。
 
 {{b2b-patches}}
 
@@ -69,8 +69,8 @@ Adobe Commerce 2.4.8-p1安全版本为2.4.8早期版本中发现的漏洞修复�
 
 >[!BEGINSHADEBOX]
 
-CVE-2025-47110和VULN-31547的修补程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50)。
+CVE-2025-47110和VULN-31547的修补程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50)。
 
 >[!ENDSHADEBOX]
 
-<!-- Last updated from includes: 2025-10-06 13:12:34 -->
+<!-- Last updated from includes: 2025-10-22 11:16:25 -->
