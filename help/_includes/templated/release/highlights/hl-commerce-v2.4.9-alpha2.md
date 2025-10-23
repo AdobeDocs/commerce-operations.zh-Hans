@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
+source-git-commit: 5b0229d73dc7b8ad53750102e99447bb15baa84d
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ _AC-14610_
 * 改进的数据格式：从XML转换为JSON，以实现更清晰、更有效的通信。
 * 新管理字段：
    * 网关REST URL（基于模式：开发或实时）
-   * 客户端ID &amp;amp；amp；密码
+   * 客户端ID和密码
    * 帐户类型、帐号
    * CRID、MID、邮件程序标识代码
    * 用于国际装运的AES/ITN
