@@ -35,8 +35,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Adobe Commerce版本2.4.6-p13不包含`magento/inventory-composer-installer`包，该包是从具有向后不兼容更改的旧次版本顺利升级所必需的。<br>
->>如果从2.3升级到2.4.6-p13，请在升级之前运行以下命令以安装`magento/inventory-composer-installer`包：
->>`composer require magento/inventory-composer-installer`
+>&#x200B;>如果从2.3升级到2.4.6-p13，请在升级之前运行以下命令以安装`magento/inventory-composer-installer`包：
+>&#x200B;>`composer require magento/inventory-composer-installer`
 
 ## 管理包
 
