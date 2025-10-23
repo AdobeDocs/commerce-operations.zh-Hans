@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: a6a18a4cbab9d2e5a0c4824fc5ad9463f9e61c1c
+source-git-commit: fddde045789cdbbe811975b06635574b9835d497
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ QPT v1.1.72包含以下修补程序：
 1. **ACSD-67639**：为&#x200B;**[!UICONTROL Dynamic Price]**&#x200B;设置为&#x200B;*No*&#x200B;的捆绑产品创建贷项通知单失败。
 1. **[ACSD-67696](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67696.md)**：缓存刷新后，`media_gallery`条目未返回到Cart GraphQL产品节点中。
 1. **ACSD-67946**：购物车更新显示重复的错误横幅。
-1. **ACSD-68011**：可以通过`/V1/sharedCatalog/:id/assignProducts` [!DNL REST] API将不存在的SKU分配给共享目录。
+1. **ACSD-68011**：通过/V1/sharedCatalog/:id/assignProducts API分配给共享目录的不存在SKU。
 1. **ACSD-68118**： `customerCart` GraphQL查询返回的产品属性值未反映商店标头，从而导致本地化不一致。
 1. **ACSD-68092**：由于计划更新与基本产品数据之间的同步不当，多次保存后捆绑产品选项丢失。
 1. **ACSD-67424**： `updated_at` `GET /carts/search` API响应中的[!DNL REST]值与使用可协商引号时&#x200B;**[!UICONTROL Admin panel]**&#x200B;中显示的值不匹配。
