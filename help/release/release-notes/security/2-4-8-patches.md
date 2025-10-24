@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.8安全补丁发行说明
 description: 了解Adobe Commerce版本2.4.7的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 5f8866ed-9215-4b2e-9c77-b2d474f6c1f9
-source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
+source-git-commit: e625670e741c0669050ab758d4f87c5ca06fe3df
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.8-p3安全版本为2.4.8早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/cn/security/products/magento/apsb25-94.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html)。
 
 {{b2b-patches}}
 
@@ -29,15 +29,21 @@ Adobe Commerce 2.4.8-p3安全版本为2.4.8早期版本中发现的漏洞修复�
 
 * 对ACP2E-3874的修复：现在，订购了多个相同项目时，订单详细信息的REST API响应将包含`base_row_total`和`row_total`属性的正确值。
 
-* 修复了 — AC-15446：修复了`Magento\Framework\Mail\EmailMessage`中的一个错误，其中`getBodyText()`尝试在`getTextBody()`上调用不存在的`Symfony\Component\Mime\Message`方法，从而确保与Magento 2.4.8-p2和`magento/framework` 103.0.8-p2的兼容性。
+* 修复了AC-15446：修复了`Magento\Framework\Mail\EmailMessage`中的一个错误，其中`getBodyText()`尝试在`getTextBody()`上调用不存在的`Symfony\Component\Mime\Message`方法，从而确保与Magento 2.4.8-p2和`magento/framework` 103.0.8-p2兼容。
 
 {{oct-2025-backports}}
+
+### 已知问题
+
+#### 签出页面无法加载static.min.js和mixins.min.js
+
+{{checkout-page-fails-to-load-static-min-js-and-mixins-min-js}}
 
 ## 2.4.8-p2
 
 Adobe Commerce 2.4.8-p2安全版本为2.4.8早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/cn/security/products/magento/apsb25-71.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/security/products/magento/apsb25-71.html)。
 
 {{b2b-patches}}
 
@@ -45,7 +51,7 @@ Adobe Commerce 2.4.8-p2安全版本为2.4.8早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.8-p1安全版本为2.4.8早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/cn/security/products/magento/apsb25-50.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html)。
 
 {{b2b-patches}}
 
@@ -69,7 +75,7 @@ Adobe Commerce 2.4.8-p1安全版本为2.4.8早期版本中发现的漏洞修复�
 
 >[!BEGINSHADEBOX]
 
-CVE-2025-47110和VULN-31547的修补程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50)。
+CVE-2025-47110和VULN-31547的修补程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50)。
 
 >[!ENDSHADEBOX]
 
