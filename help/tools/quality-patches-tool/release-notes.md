@@ -3,9 +3,9 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: 8ca7b1b616bd5733cc2ecc18cef50dbb176ea0c3
+source-git-commit: 828be0e395980ddd9fca3424dc08324c3fe87244
 workflow-type: tm+mt
-source-wordcount: '29060'
+source-wordcount: '29260'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,21 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.73 {#v1-1-73}
+
+* **ACSD-67171**(对于Adobe Commerce >=2.4.4 &lt;2.4.9) — 修复了B2B用户在其会话过期或在签出期间被移除时看到&#x200B;*[!UICONTROL Access Denied]*&#x200B;页面的问题。
+* **ACSD-67908**(适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了JS文件在多存储设置中无法正确合并的问题。
+* **ACSD-68190**(适用于Adobe Commerce >=2.4.4 &lt;2.4.7) — 修复了以下问题：不适用折扣，在GraphQL购物车查看响应中无法正确显示应用的折扣，以及在删除优惠券折扣时删除非优惠券折扣。
+* **ACSD-68206**(对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9) — 修复了在安装&#x200B;**[!UICONTROL Rate Limiting]**&#x200B;扩展的情况下使用GraphQL应用程序服务器并安装[!DNL PHP Redis]功能时出现的错误。
+* **ACSD-68356**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了GraphQL购物车查询返回虚拟报价的折扣金额不正确的问题。
+* **ACSD-68391**(对于Adobe Commerce >=2.4.6-p10 &lt;2.4.9) — 修复了在&#x200B;**[!UICONTROL Quick Order]**&#x200B;和&#x200B;**[!UICONTROL Requisition Lists]**&#x200B;中未正确应用类别相关权限的问题。
+* **ACSD-68400**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8) — 修复了虚拟礼品卡数量未在库存预订表中准确反映的问题。
 
 ## v1.1.72 {#v1-1-72}
 
