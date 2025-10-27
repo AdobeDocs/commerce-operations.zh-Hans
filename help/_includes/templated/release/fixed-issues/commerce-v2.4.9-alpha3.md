@@ -1,5 +1,5 @@
 ---
-source-git-commit: 151272eed6c4bb2e1c2e5138a5c8a3a7e7bd8fe6
+source-git-commit: ae571a9e7ca1234644a3bc9beade447009c58a3d
 workflow-type: tm+mt
 source-wordcount: '6077'
 ht-degree: 0%
@@ -41,9 +41,9 @@ _AC-15208 - [GitHub问题](https://github.com/magento/magento2/issues/40093) - [
 
 _ACP2E-4086 - [GitHub代码贡献](https://github.com/magento/inventory/commit/5632fb5e)_
 
-#### 攻击者可以使用REST API的POST请求并发送RCE有效负载
+#### 购物车项目REST API中的自定义选项ID存在验证问题
 
-REST API V1/guest-carts/&lt;cartId>/items/和V1/carts/mine/items/现在验证“product_options.extension_attributes.custom_options”。*.option_id”作为购物车项目SKU中的有效option_id。 以前，在数据库中处理和保存此类选项时不会进行任何验证。
+REST API V1/guest-carts/&lt;cartId>/items/和V1/carts/mine/items/现在验证“product_options.extension_attributes.custom_options”。*.option_id”，以确保它为购物车项目SKU引用了有效的option_id。 以前，在数据库中处理和保存此参数时不会进行验证。
 
 _ACP2E-4138 - [GitHub代码贡献](https://github.com/magento/magento2/commit/a1c57b2e)_
 
