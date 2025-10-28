@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 4a3060235a4d22764cbb231aca7c1f835d357906
+source-git-commit: 3493a89d40e3dee377be715e71e2f977a3afd382
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ QPT v1.1.72包含以下修补程序：
 1. **[ACSD-67696](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67696.md)**：缓存刷新后，`media_gallery`条目未返回到Cart GraphQL产品节点中。
 1. **ACSD-67946**：购物车更新显示重复的错误横幅。
 1. **ACSD-68011**：通过/V1/sharedCatalog/:id/assignProducts API分配给共享目录的不存在SKU。
-1. **ACSD-68118**： `customerCart` GraphQL查询返回的产品属性值未反映商店标头，从而导致本地化不一致。
+1. **ACSD-68118**： `customerCart` [!DNL GraphQL]查询返回商店视图的产品属性值不正确。
 1. **ACSD-68092**：由于计划更新与基本产品数据之间的同步不当，多次保存后捆绑产品选项丢失。
 1. **ACSD-67424**： `updated_at` `GET /carts/search` API响应中的[!DNL REST]值与使用可协商引号时&#x200B;**[!UICONTROL Admin panel]**&#x200B;中显示的值不匹配。
 1. **ACSD-67187**：限制到非默认网站的管理员用户看到此错误，*“*”请至少创建一个公共共享目录以继续*，并且无法访问公司网格上的&#x200B;**[!UICONTROL Add New Company]**&#x200B;按钮。
