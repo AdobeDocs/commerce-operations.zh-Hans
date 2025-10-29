@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 87f2d57e60ca74e2c90107a0d38517049802c89e
+source-git-commit: 4e2c22626701e342920c8f60caff56af23712306
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 QPT v1.1.72包含以下修补程序：
 1. **ACSD-68040**： [!DNL MariaDB] 10.6上的前端搜索页面速度减慢，且历史记录较大。
 1. **ACSD-67941**：具有未知筛选器名称的GraphQL请求会导致PHP异常日志。
-1. **ACSD-68064**：创建计划更新会导致环境中存在重复条目，这些环境具有大量嵌套类别。
+1. **ACSD-68064**：在具有深度嵌套类别的环境中进行计划更新期间创建重复条目。
 1. **ACSD-66807**： `report_viewed_product_index`表显示的产品页面查看次数不正确。
 1. **ACSD-67383**：在同一会话中以客户身份登录并拥有两个公司管理员帐户会导致&#x200B;*没有cartId为*&#x200B;的此类实体错误。
 1. **ACSD-67518**：当行数超过批次大小时，高级报表会生成重复的标题行。
