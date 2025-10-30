@@ -53,7 +53,7 @@ ht-degree: 0%
 
 了解Adobe Cloud自动修补服务，以及此工具如何帮助用户快速查找和应用安全修补程序。 以下视频介绍如何通过SWAT仪表板访问它，选择您的项目和环境，以及单击一下即可应用修补程序。
 
->[!VIDEO](https://video.tv.adobe.com/v/3476247/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476257/?captions=chi_hans&learn=on&enablevpops)
 
 ## 常见用例
 
