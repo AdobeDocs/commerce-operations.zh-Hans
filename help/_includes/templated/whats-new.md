@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67424">ACSD-67424的QPT 1.1.72修复程序的详细说明：使用可转让引号</a>时，GET /carts/search REST API响应中的Updated_at值与管理员面板中显示的值不匹配。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67424">ACSD-67424的QPT 1.1.72修复程序的详细说明：使用可转让引号</a>时，GET /carts/search REST API响应中的Updated_at值与管理员面板中显示的值不匹配。</p>
 </td>
       <td>
         新主题qpt
@@ -31,7 +31,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b8967a4cc8006fc5fa4319f7ffd6d8c7f3edf3d1">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67383">ACSD-67383的QPT 1.1.72修复程序的详细说明：以客户身份在同一会话中具有两个公司管理员帐户会导致“没有具有cartId的此类实体”错误</a>。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67383">ACSD-67383的QPT 1.1.72修复程序的详细说明：以客户身份在同一会话中具有两个公司管理员帐户会导致“没有具有cartId的此类实体”错误</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -53,7 +53,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/overview">Overview： Quality Patches Tool (QPT) v1.1.73</a>。</p>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/overview">Overview： Quality Patches Tool (QPT) v1.1.73</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -75,7 +75,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68064">ACSD-68064的QPT 1.1.72修复的详细说明：创建计划更新会在具有大量嵌套类别</a>的环境中导致重复条目。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68064">ACSD-68064的QPT 1.1.72修复的详细说明：创建计划更新会在具有大量嵌套类别</a>的环境中导致重复条目。</p>
 </td>
       <td>
         新主题qpt
@@ -83,7 +83,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b8d4046ce9ea0d085cc11f5631d04a8b3adb3239">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67946">ACSD-67946的QPT 1.1.72修复的详细说明：购物车更新显示重复的错误横幅</a>。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67946">ACSD-67946的QPT 1.1.72修复的详细说明：购物车更新显示重复的错误横幅</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -113,7 +113,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68040">ACSD-68040的QPT 1.1.72修复的详细说明：如果有许多历史搜索请求</a>，前端搜索页面在MariaDB 10.6和11.4上性能会降低。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68040">ACSD-68040的QPT 1.1.72修复的详细说明：如果有许多历史搜索请求</a>，前端搜索页面在MariaDB 10.6和11.4上性能会降低。</p>
 </td>
       <td>
         新主题qpt
@@ -121,7 +121,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6dff1447a89c083fb8bd867281d20462cc843baa">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68118">ACSD-68118的QPT 1.1.72修复的详细说明： CustomerCart GraphQL查询返回的产品属性值未反映商店标头，从而导致本地化</a>不一致。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68118">ACSD-68118的QPT 1.1.72修复的详细说明： CustomerCart GraphQL查询返回的产品属性值未反映商店标头，从而导致本地化</a>不一致。</p>
 </td>
       <td>
         新主题qpt
@@ -129,7 +129,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7dec696f3d87d91902a166314199cf3b6c161f85">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-66807">ACSD-66807的QPT 1.1.72修复的详细说明： Report_viewed_product_index表显示产品页面查看次数</a>不正确。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-66807">ACSD-66807的QPT 1.1.72修复的详细说明： Report_viewed_product_index表显示产品页面查看次数</a>不正确。</p>
 </td>
       <td>
         新主题qpt
@@ -151,7 +151,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67639">ACSD-67639的QPT 1.1.72修复程序的详细说明：对于动态价格设置为“No</a>”的捆绑包产品，创建贷项通知单失败。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67639">ACSD-67639的QPT 1.1.72修复程序的详细说明：对于动态价格设置为“No</a>”的捆绑包产品，创建贷项通知单失败。</p>
 </td>
       <td>
         新主题qpt
