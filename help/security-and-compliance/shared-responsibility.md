@@ -2,9 +2,9 @@
 title: 分担责任的安全性和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: fcaf6ff1dce1c1a5084307cd366ca58d71a8f4e4
+source-git-commit: aac78fc95b86951f352a636eef33e0b79b22a183
 workflow-type: tm+mt
-source-wordcount: '2850'
+source-wordcount: '2939'
 ht-degree: 0%
 
 ---
@@ -745,9 +745,9 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| Elasticsearch的可用性 | R |   |
-| 默认Elasticsearch设置的配置 | R |   |
-| 提交服务请求以安装与已安装的Elasticsearch版本兼容的Adobe Commerce版本 |  | R |
+| Elasticsearch或OpenSearch的可用性 | R |   |
+| 默认Elasticsearch或OpenSearch设置的配置 | R |   |
+| 提交服务请求以安装与安装的Elasticsearch版本兼容的Adobe Commerce或OpenSearch版本 |  | R |
 
 {style="table-layout:auto"}
 
@@ -793,11 +793,17 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 {style="table-layout:auto"}
 
+>
+>商家必须使用最新版本的Live Search、产品推荐和支付服务，以确保最高的稳定性、功能和最符合支持资格。
+>Adobe不支持过时的版本，升级可确保您从最新的增强功能和错误修复中受益。
+>有关受支持版本的详细信息，请参阅[Commerce服务的产品可用性矩阵](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#commerce-services)。
+
 #### 产品推荐
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | 产品推荐服务的可用性 | R |   |
+| 升级“产品推荐”模块 |   | R |
 
 {style="table-layout:auto"}
 
@@ -806,6 +812,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | 实时搜索服务的可用性 | R |   |
+| 升级Live Search模块 |   | R |
 
 {style="table-layout:auto"}
 
@@ -820,6 +827,15 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 核心AEM EDS实施(Commerce样板) | R |   |
 | 自定义AEM EDS实施 |  | R |
 | 任何其他自定义店面实施 |  | R |
+
+{style="table-layout:auto"}
+
+#### 支付服务
+
+|     | Adobe | 商家 |
+| --- | --- | --- |
+| 支付服务的可用性 | R |   |
+| 升级支付模块 |   | R |
 
 {style="table-layout:auto"}
 
