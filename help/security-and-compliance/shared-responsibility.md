@@ -796,7 +796,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 >
 >商家必须使用最新版本的Live Search、产品推荐和支付服务，以确保最高的稳定性、功能和最符合支持资格。
 >Adobe不支持过时的版本，升级可确保您从最新的增强功能和错误修复中受益。
->有关受支持版本的详细信息，请参阅[Commerce服务的产品可用性矩阵](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#commerce-services)。
+>有关受支持版本的详细信息，请参阅[Commerce服务的产品可用性矩阵](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability#commerce-services)。
 
 #### 产品推荐
 
