@@ -55,4 +55,4 @@ ht-degree: 4%
 - 资源 {#resources}
    - [推荐阅读](resources/recommended-reading.md)
    - [使用Adobe Commerce实现平台现代化](resources/recommended-upgrade-paths.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
