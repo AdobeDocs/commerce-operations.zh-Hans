@@ -18,7 +18,7 @@ Adobe接受来自内部和外部利益相关者的请求，包括但不限于以
 
 ## 如何创建请求？
 
-**内部利益相关者**&#x200B;可以通过在COMDOX项目中打开Jira问题来提交请求。 **外部利益相关者**&#x200B;可以通过在此存储库中打开[GitHub问题](https://github.com/AdobeDocs/commerce-operations.en/issues/new/choose)来提交请求。
+**内部利益相关者**&#x200B;可以通过在COMDOX项目中打开Jira问题来提交请求。 **外部利益相关者**&#x200B;可以通过在此存储库中打开[GitHub问题](https://github.com/AdobeDocs/commerce-operations.zh-Hans/issues/new/choose)来提交请求。
 
 您可以提交以下类型的请求：
 
@@ -29,7 +29,7 @@ Adobe接受来自内部和外部利益相关者的请求，包括但不限于以
 ## 整个过程是怎样的？
 
 
-**创建Jira票证或问题** — 内部利益相关者在COMDOX项目中创建Jira票证。 外部利益相关者提交GitHub问题。 在Jira或[GitHub问题](https://github.com/AdobeDocs/commerce-operations.en/issues/new/choose)中包含完整的详细信息，以帮助团队了解上下文并设置请求的优先级。
+**创建Jira票证或问题** — 内部利益相关者在COMDOX项目中创建Jira票证。 外部利益相关者提交GitHub问题。 在Jira或[GitHub问题](https://github.com/AdobeDocs/commerce-operations.zh-Hans/issues/new/choose)中包含完整的详细信息，以帮助团队了解上下文并设置请求的优先级。
 
 **Adobe项目团队评估请求并排定其优先级** — 团队定期监控请求以确定优先级，并评估请求的更改以纳入《实施行动手册最佳实践》。 例如，团队可能确定应将请求的内容添加到Experience League或Adobe Developer网站上的现有产品文档，而不是创建新的最佳实践主题。
 
