@@ -2,7 +2,7 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 17397fe91806c22272e426d615b11fd383602798
+source-git-commit: af4a347296cd7291077d0fea638d598767624d26
 workflow-type: tm+mt
 source-wordcount: '887'
 ht-degree: 0%
@@ -43,9 +43,9 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 ### Cloud Automation修补服务(Private Beta)
 
-[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[环境上的](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)Adobe Commerce。
+[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[环境上的](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)Adobe Commerce。
 
-2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
+2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
 
 - 自动安装修补程序
 - 回滚恢复
@@ -60,7 +60,7 @@ Beta版包括以下功能：
 
 >[!NOTE]
 >
->由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
+>由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
 
 要参与此测试版，请完成并提交[Cloud Automation Patching Service - Beta注册表单](https://forms.office.com/r/3Wfxj5nPdB)。
 
@@ -77,14 +77,14 @@ Beta版包括以下功能：
 
 ### Adobe Commerce基础(公共Alpha/Beta)
 
-每个Adobe Commerce Foundation Alpha和测试版都包括在计划发布日期之前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能区域：
+每个Adobe Commerce Foundation Alpha和测试版都包含在计划发布日期前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能区域：
 
 - 最新的安全修复
 - 性能改进
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/home)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
