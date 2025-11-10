@@ -17,4 +17,4 @@ ht-degree: 0%
 
 {{bics}}
 
-使用编辑器将Commerce安装更新到最新发行版本，以利用新功能、性能改进和安全修补程序。 有关详细的升级说明，请参阅[Adobe Commerce升级指南](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html)。
+使用编辑器将Commerce安装更新到最新发行版本，以利用新功能、性能改进和安全修补程序。 有关详细的升级说明，请参阅[Adobe Commerce升级指南](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html?lang=zh-Hans)。
