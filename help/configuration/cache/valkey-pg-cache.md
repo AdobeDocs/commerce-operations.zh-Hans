@@ -3,7 +3,7 @@ title: 将Valkey用于默认缓存
 description: 了解如何将Valkey配置为Adobe Commerce的默认缓存。 了解命令行设置、配置选项和验证技术。
 feature: Configuration, Cache
 exl-id: d0baa2a6-8aa8-4f3f-9edf-102d621430e0
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: e9f1bef9f97a0e1d738f1221758f1b9a0a238da1
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -34,7 +34,7 @@ bin/magento setup:config:set --cache-backend=valkey --cache-backend-valkey-<para
 >从&#x200B;**Adobe Commerce 2.4.9-alpha2**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
 
 ```bash
-bin/magento setup:config:set --cache-backend=redis --cache-backend-valkey-<parameter>=<value>...
+bin/magento setup:config:set --cache-backend=valkey --cache-backend-valkey-<parameter>=<value>...
 ```
 
 | 命令行参数 | 值 | 含义 | 默认值 |
@@ -272,7 +272,7 @@ valkey-cli monitor
 ### Valkey ping命令
 
 ```bash
-redis-cli ping
+valkey-cli ping
 ```
 
 预期的响应为： `PONG`
