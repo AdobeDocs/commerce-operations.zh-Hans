@@ -3,9 +3,9 @@ title: 启用日志记录
 description: 了解如何在Adobe Commerce中启用和禁用不同类型的日志记录。 了解日志记录配置和管理技术。
 feature: Configuration, Logs
 exl-id: 78b0416a-5bad-42a9-a918-603600e98928
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: aff705cefcd4de38d17cad41628bc8dbd6d630cb
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,23 @@ ht-degree: 0%
 
 默认情况下，Commerce将数据库活动日志写入`<install-dir>/var/debug/db.log`文件。
 
+### 查询日志记录存储位置
+
+启用数据库日志记录后，Commerce会将查询日志存储在以下位置：
+
+- **查询日志文件**： `<install-directory>/var/debug/db.log`
+- **日志目录**： `<install-directory>/var/debug/`
+
+查询日志包含：
+- 应用程序执行的SQL查询
+- 查询执行时间
+- 查询参数和绑定
+- 数据库连接信息
+
+>[!NOTE]
+>
+>在高流量环境中，查询日志文件可能会快速增大。 监视磁盘空间，并考虑实施日志轮换或定期清理查询日志文件。
+
 ### 启用数据库日志记录
 
 1. 使用`dev:query-log`命令启用或禁用数据库日志记录。
@@ -71,6 +88,24 @@ ht-degree: 0%
    ```bash
    bin/magento cache:flush
    ```
+
+### 查看查询日志
+
+您可以使用标准文件查看命令查看查询日志：
+
+```bash
+# View the entire query log
+cat var/debug/db.log
+
+# View the last 100 lines of the query log
+tail -n 100 var/debug/db.log
+
+# Monitor the query log in real-time
+tail -f var/debug/db.log
+
+# Search for specific queries
+grep "SELECT" var/debug/db.log
+```
 
 ## Cron日志记录
 
