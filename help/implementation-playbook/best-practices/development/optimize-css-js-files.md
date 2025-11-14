@@ -4,9 +4,9 @@ description: 了解如何从管理员或命令行合并Adobe Commerce项目的CS
 role: Developer
 feature: Best Practices
 exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
-source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
+source-git-commit: 19f874130645fcabe3178a37ec6dedcf75b93afa
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -89,9 +89,19 @@ ht-degree: 0%
 php -f bin/magento config:set dev/js/enable_js_bundling 1
 ```
 
+## 延迟非关键性标头脚本
+
+通过启用此设置，自动延迟自动加载到标头部分中的非关键Javascript： [!UICONTROL **存储** > **设置** > **配置** > **高级** > **开发人员** > **JavaScript设置**]。
+
+您还可以从命令行启用此标记：
+
+```bash
+php -f bin/magento config:set dev/js/defer_non_critical 1
+```
+
 ## 其他信息
 
 - [客户端优化设置](../../../performance/configuration.md#client-side-optimization-settings)
-- [用户指南：优化资源文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
+- [用户指南：优化资源文件](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
 - [前端开发人员指南：CSS合并、缩小和网站性能](https://developer.adobe.com/commerce/frontend-core/guide/css/#css-merging-minification-and-performance)
 - [高级JavaScript捆绑](../../../performance/advanced-js-bundling.md)
