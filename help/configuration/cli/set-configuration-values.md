@@ -2,9 +2,9 @@
 title: 设置配置值
 description: 了解如何在Adobe Commerce中设置配置值和更改锁定的管理员值。 了解高级配置命令和技术。
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 2672c696d672ad72bef7537570ed630bc33c41b4
+source-git-commit: 5e2d11330d3334df36ba8b3d176fbe2d8bfe0486
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -140,9 +140,7 @@ bin/magento config:sensitive:set [--scope="..."] [--scope-code="..."] path
 
 >[!INFO]
 >
->自Commerce 2.2.4起，`--lock-env`和`--lock-config`选项将替换`--lock`选项。
->
->如果使用`--lock-env`或`--lock-config`选项设置或更改值，则必须使用[`bin/magento app:config:import`命令](../cli/import-configuration.md)导入设置，然后再访问Admin或Storefront。
+>自Commerce 2.2.4起，`--lock-env`和`--lock-config`选项将替换`--lock`选项。 如果使用这两个选项中的任何一个，该值将直接写入`app/etc/env.php`或`app/etc/config.php`文件，并在管理员中变为只读。 要将配置更改从这些文件导入数据库，请运行`bin/magento app:config:import`命令 — 例如，在手动编辑或重新部署这些文件之后。
 
 如果输入的配置路径不正确，此命令将返回错误
 
@@ -191,7 +189,7 @@ bin/magento config:set --lock-env --scope=stores --scope-code=default web/unsecu
 
 >[!INFO]
 >
->`env.php`文件特定于系统。 您不应将其传输到其他系统。 您可以使用它覆盖数据库中的配置值。 例如，您可以从另一个系统获取数据库转储并覆盖`base_url`和其他值，这样您就不必修改数据库。
+>`env.php`文件特定于系统。 请勿将其传输到其他系统。 您可以使用它覆盖数据库中的配置值。 例如，您可以从另一个系统获取数据库转储并覆盖`base_url`和其他值，这样您就不必修改数据库。
 
 如果按如下方式使用`--lock-config`选项，则配置值保存在`<Commerce base dir>/app/etc/config.php`中。 管理员中用于编辑此值的字段已禁用。
 
@@ -221,7 +219,7 @@ bin/magento config:show [--scope[="..."]] [--scope-code[="..."]] path
 
 >[!INFO]
 >
->`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `**&#x200B;**&#x200B;**`。
+>`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `******`。
 
 ### 示例
 
