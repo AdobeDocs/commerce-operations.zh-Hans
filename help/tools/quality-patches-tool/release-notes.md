@@ -3,9 +3,9 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: 828be0e395980ddd9fca3424dc08324c3fe87244
+source-git-commit: fff49f8c9b0c1def976c14e72b4ae7ee08f823b9
 workflow-type: tm+mt
-source-wordcount: '29260'
+source-wordcount: '29413'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,20 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.74 {#v1-1-74}
+
+* **ACSD-68636**(适用于Adobe Commerce >=2.4.4 &lt;2.4.9) — 修复了在其他商店创建发票时，商店所有者的姓名未正确显示在礼品卡电子邮件标头中的问题。
+* **ACSD-68430**(对于Adobe Commerce和Magento Open Source >=2.4.6 &lt;2.4.8) — 修复了以下问题：如果记录包含多个已从属性配置中删除的属性选项，则保存客户或客户地址会失败。
+* **ACSD-68499**(对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9) — 修复了在更新数量超过可用库存量时，GraphQL `updateCartItems`突变返回错误成功响应，从而导致数量和总数虚增的问题。
+* **ACSD-68810**(对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9) — 修复了以下问题：将订单分配给在其他网站上创建的客户，而不考虑&#x200B;**[!UICONTROL Customer Account Sharing]**&#x200B;配置。
+* 已更新的版本： **ACSD-49737**，**ACSD-57003-V2**
+* 已替换的修补程序： **ACSD-61969**
 
 ## v1.1.73 {#v1-1-73}
 
