@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: a604879f63b1cfcf8f21fec53e69984bff0c66d4
+source-git-commit: ae994d8185516dabf88b682a33f1775c0d636515
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ QPT v1.1.73包含以下修补程序：
 1. **ACSD-67908**：修复了JS文件在多存储设置中无法正确合并的问题。
 1. **ACSD-68190**：修复了以下问题：折扣不适用，应用的折扣在GraphQL购物车查看响应中无法正确显示，删除优惠券折扣时删除了非优惠券折扣。
 1. **ACSD-68206**：修复了在安装PHP **[!UICONTROL Rate Limiting]**&#x200B;扩展的情况下将GraphQL应用程序服务器与[!DNL Redis]功能结合使用时出现的错误。
-1. **ACSD-68356**：修复了GraphQL购物车查询返回虚拟报价的折扣金额不正确的问题。
+1. **ACSD-68356**： [!DNL GraphQL]购物车查询为虚拟报价返回不正确的折扣金额。
 1. **ACSD-68391**：修复了在&#x200B;**[!UICONTROL Quick Order]**&#x200B;和&#x200B;**[!UICONTROL Requisition Lists]**&#x200B;中未正确应用类别相关权限的问题。
 1. **ACSD-68400**：修复了虚拟礼品卡数量未在&#x200B;**[!UICONTROL Inventory reservation table]**&#x200B;中准确反映的问题。
 
