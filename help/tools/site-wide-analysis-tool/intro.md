@@ -73,4 +73,4 @@ ht-degree: 0%
 
 观看此视频以了解[!DNL Site-Wide Analysis Tool]：
 
->[!VIDEO](https://video.tv.adobe.com/v/344001?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3410775?captions=chi_hans&quality=12)
