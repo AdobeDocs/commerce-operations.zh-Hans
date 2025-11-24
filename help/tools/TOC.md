@@ -840,7 +840,7 @@ ht-degree: 0%
          - [ACSD-66049：由于ICU库版本，非英语店面显示的定价不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66049-non-english-storefronts-display-incorrect-pricing-due-to-the-icu-library-version.md)
          - [ACSD-66441：分层导航在多存储设置中显示不正确的属性选项](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66441-layered-navigation-displays-incorrect-attribute-in-multi-store-setup.md)
          - [AC-14985：使用TLS发送SMTP电子邮件时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/ac-14985-error-when-sending-smtp-emails-using-tls.md)
-         - [ACSD-66434：公司[!UICONTROL Customer ID]查询中缺少 [!DNL GraphQL] ](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66434-customer-id-missing-from-company-graphql-queries.md)
+         - [ACSD-66434：公司[!UICONTROL Customer ID]查询中缺少 [!DNL GraphQL] &#x200B;](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66434-customer-id-missing-from-company-graphql-queries.md)
       - v1.1.68 {#v1-1-68}
          - [ACSD-66072：由于[!UICONTROL Related Products Rule]配置期间的内部服务器错误，GraphQL无法在“产品详细信息”页面上返回相关产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-66072-graphql-fails-to-return-related-products-due-to-server-error-in-related-product-rules.md)
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.68](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/overview.md)
@@ -894,8 +894,8 @@ ht-degree: 0%
          - [ACSD-67603：启用图像包含功能的产品，其Sitemap生成过程将需要较长的处理时间](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67603.md)
          - [ACSD-67093：使用日期范围筛选器通过GraphQL检索订单时，会返回错误结果](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67093.md)
          - [ACSD-67652：在GraphQL调用中将捆绑产品状态返回为缺货，并且子产品和父产品有库存](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67652.md)
-         - [ACSD-60624：上传 [!DNL Page Builder]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-60624.md)中图像、横幅和滑块部分中的空内容图像失败
-         - [ACSD-67904：如果城市名称包含数字(0-9)、&amp;符号(&amp;)、句点(.)或圆括号()](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67904.md)，则无法下达订单
+         - [ACSD-60624：上传 [!DNL Page Builder]中图像、横幅和滑块部分中的空内容图像失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-60624.md)
+         - [ACSD-67904：如果城市名称包含数字(0-9)、&amp;符号(&amp;)、句点(.)或圆括号()，则无法下达订单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67904.md)
          - [ACSD-67459：无法导入描述长度超过65,536个字符的产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67459.md)
       - v1.1.72 {#v1-1-72}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.72](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/overview.md)
@@ -941,7 +941,7 @@ ht-degree: 0%
    - [“警报”选项卡](observation-for-adobe-commerce/alerts-tab.md)
    - [WAF选项卡](observation-for-adobe-commerce/waf-tab.md)
    - [CDN选项卡](observation-for-adobe-commerce/cdn-tab.md)
-   - [ [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [&#x200B; [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Cron选项卡](observation-for-adobe-commerce/cron-tab.md)
    - [索引选项卡](observation-for-adobe-commerce/indexing-tab.md)
    - [QuickView选项卡](observation-for-adobe-commerce/oac-quickview-tab.md)
