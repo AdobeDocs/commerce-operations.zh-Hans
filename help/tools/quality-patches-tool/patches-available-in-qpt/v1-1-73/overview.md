@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: e1109aea68d590e5b7fe2fc6ae1fb934b06d4f91
+source-git-commit: 7468146f4e2e9e363f0b7a5b0dac03985812d15c
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,10 @@ ht-degree: 0%
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.73中提供的修补程序所修复的问题。
 
 QPT v1.1.73包含以下修补程序：
-1. **ACSD-67171**：修复了B2B用户在其会话过期或在签出期间被移除时看到“访问被拒绝”页面的问题。
+1. **ACSD-67171**：在签出期间已过期的[!DNL B2B]会话重定向到“访问被拒绝”页面而不是登录
 1. **ACSD-67908**：修复了JS文件在多存储设置中无法正确合并的问题。
 1. **ACSD-68190**：修复了以下问题：折扣不适用，应用的折扣在GraphQL购物车查看响应中无法正确显示，删除优惠券折扣时删除了非优惠券折扣。
+1. **ACSD-68206**： [!DNL GraphQL]服务器因速率限制和PHP Redis扩展而失败。
 1. **ACSD-68206**：修复了在安装PHP **[!UICONTROL Rate Limiting]**&#x200B;扩展的情况下将GraphQL应用程序服务器与[!DNL Redis]功能结合使用时出现的错误。
 1. **ACSD-68356**： [!DNL GraphQL]购物车查询为虚拟报价返回不正确的折扣金额。
 1. **ACSD-68391**：修复了在&#x200B;**[!UICONTROL Quick Order]**&#x200B;和&#x200B;**[!UICONTROL Requisition Lists]**&#x200B;中未正确应用类别相关权限的问题。
