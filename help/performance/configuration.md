@@ -134,7 +134,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 要提高大型目录的产品网格性能，我们建议使用&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Admin] > [!UICONTROL Admin Grids] >[!UICONTROL Limit Number of Products in Grid]**&#x200B;系统配置设置来限制网格中的产品数量。
 
 默认情况下，此系统配置设置处于禁用状态。 启用此选项后，您可以将网格中的产品数量限制为特定值。 **[!UICONTROL Records Limit]**&#x200B;是可自定义的设置，其默认最小值为`20000`。
-启用**[!UICONTROL Limit Number of Products in Grid]**&#x200B;设置且网格中的产品数大于记录限制时，将返回有限制的记录集合。 当达到限制时，将在网格标题中隐藏找到的记录总数、选定的记录数和分页元素。
+启用&#x200B;**[!UICONTROL Limit Number of Products in Grid]**&#x200B;设置且网格中的产品数大于记录限制时，将返回有限制的记录集合。 当达到限制时，将在网格标题中隐藏找到的记录总数、选定的记录数和分页元素。
 
 当网格中的产品总数有限时，它不会影响产品网格中的批量操作。 它只影响产品网格表示层。 例如，网格中的`20000`产品数量有限，用户单击&#x200B;**[!UICONTROL Select All]**，选择&#x200B;**[!UICONTROL Update attributes]**&#x200B;批量操作，并更新某些属性。 因此，所有产品都已更新，而不是有限的`20000`记录集合。
 
