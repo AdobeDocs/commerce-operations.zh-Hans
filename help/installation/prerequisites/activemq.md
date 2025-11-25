@@ -15,7 +15,7 @@ Adobe Commerce还通过简单文本导向消息协议(STOMP)支持ActiveMQ Artem
 
 >[!NOTE]
 >
->ActiveMQ Artemis在Adobe Commerce 2.4.6及更高版本中引入。 有关在云基础架构项目上的Adobe Commerce中安装ActiveMQ Artemis的详细信息，请参阅《云上的Commerce指南》[中的](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/activemq)设置ActiveMQ服务&#x200B;**。
+>ActiveMQ Artemis在Adobe Commerce 2.4.6及更高版本中引入。 有关在云基础架构项目上的Adobe Commerce中安装ActiveMQ Artemis的详细信息，请参阅《云上的Commerce指南》[中的](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/activemq)设置ActiveMQ服务&#x200B;**。
 
 消息队列提供了一种异步通信机制，在这种机制中，消息的发送者和接收者不会相互联系。 它们也不需要同时与消息队列通信。 当发件人将邮件放入队列时，该邮件会一直存储到收件人收到这些邮件为止。
 
