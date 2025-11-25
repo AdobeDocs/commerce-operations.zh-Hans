@@ -2,7 +2,7 @@
 title: 配置文件所有权和权限
 description: 按照以下步骤为Adobe Commerce的内部安装配置文件系统权限。
 exl-id: 2410ee4f-978c-4b71-b3f6-0c042f9f4dc4
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%
@@ -58,7 +58,7 @@ ht-degree: 0%
 1. 如果您尚未这样做，请通过以下方式之一获取应用程序：
 
    * [Composer中继包](../../composer.md)
-   * [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+   * [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 1. 设置文件系统所有权和权限后，[安装应用程序](../../advanced.md)
 
@@ -192,7 +192,7 @@ magento_user : magento_user apache
 如果您尚未这样做，请通过以下方式之一获取软件：
 
 * [Composer中继包](../../composer.md)
-* [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 ### 设置共享组的所有权和权限
 

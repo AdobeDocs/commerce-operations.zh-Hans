@@ -2,7 +2,7 @@
 title: 克隆示例数据Git存储库
 description: 按照以下步骤通过克隆Git存储库来安装Adobe Commerce示例数据。
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 如果符合以下情况，参与开发的开发人员只能使用此方法来安装示例数据&#x200B;**：
 
 * 您使用Magento Open Source
-* 您[已克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* 您[已克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 >[!WARNING]
 >
->您可以将示例数据与`develop`分支（更新）或已发布的分支(例如`2.4`（更稳定）)一起使用。 我们建议您使用已发布的分支，因为它更稳定。 如果您正在向存储库贡献代码，并且需要最新的代码，请使用`develop`分支。 无论您选择哪个分支，都必须[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) Magento Open Source GitHub存储库的相应分支。 例如，`develop`分支的示例数据只能在Magento Open Source *分支中*&#x200B;使用`develop`。
+>您可以将示例数据与`develop`分支（更新）或已发布的分支(例如`2.4`（更稳定）)一起使用。 我们建议您使用已发布的分支，因为它更稳定。 如果您正在向存储库贡献代码，并且需要最新的代码，请使用`develop`分支。 无论您选择哪个分支，都必须[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) Magento Open Source GitHub存储库的相应分支。 例如，`develop`分支的示例数据只能在Magento Open Source *分支中*&#x200B;使用`develop`。
 
 ## 克隆示例数据存储库
 

@@ -2,9 +2,9 @@
 title: 获取您的身份验证密钥
 description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce Composer包。
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: fc63ca58cd2ff7c5ec597751980a39bfbe68aa5f
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果您遇到[错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html?lang=zh-Hans)，则可能没有访问包的授权，或者由于您帐户上的未结发票而导致访问权利已过期。
+>如果您遇到[错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)，或者在Marketplace选项卡中未看到[!UICONTROL Access Keys]部分，则您可能无权访问该包，或者访问权利已过期，因为您的帐户上有未结发票。
 >
 >* 如果您是该帐户的主要联系人，请确保该帐户中不存在未结发票。
->* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，则主要联系人应联系[Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)寻求帮助。
+>* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，则主要联系人应联系[Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)寻求帮助。
 
 要创建身份验证密钥，请执行以下操作：
 
@@ -67,5 +67,5 @@ curl -k https://MAGEID:TOKEN@www.magentocommerce.com/products/downloads/info/hel
 使用您的身份验证密钥可以：
 
 * [获取中继包（集成商、打包商）](../composer.md)
-* [克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)（仅参与开发人员）
+* [克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)（仅参与开发人员）
 * [升级和管理模块](../../upgrade/modules/upgrade.md)

@@ -2,7 +2,7 @@
 title: 安装Adobe Commerce
 description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce。
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 47525e8d8379061b254bfa90ab46e27a1ee2f524
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '2261'
 ht-degree: 0%
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果在运行这些命令时显示错误，请验证是否已按照[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/)中所述更新了安装依赖项。
+>如果在运行这些命令时显示错误，请验证是否已按照[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies)中所述更新了安装依赖项。
 
 ## 从命令行安装
 

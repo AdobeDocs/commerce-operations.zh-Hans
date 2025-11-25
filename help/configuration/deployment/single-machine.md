@@ -3,7 +3,7 @@ title: 单个计算机部署
 description: 了解如何使用命令行在生产服务器上将更新部署到Commerce。
 feature: Configuration, Deploy
 exl-id: ca73309c-7584-4506-99de-dd933651eeb6
-source-git-commit: dcc283b901917e3681863370516771763ae87462
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 >[!WARNING]
 >
 >如果您使用`git clone`安装Commerce，则本指南不适用。
->&#x200B;>参与开发的开发人员应使用[本指南][install]更新其Commerce安装。
+>参与开发的开发人员应使用[本指南][install]更新其Commerce安装。
 
 ## 部署步骤
 
@@ -93,4 +93,4 @@ ht-degree: 1%
 
 <!-- link definitions -->
 
-[install]: https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/
+[install]: https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies

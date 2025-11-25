@@ -2,7 +2,7 @@
 title: 高级内部部署安装
 description: 了解Adobe Commerce内部部署的高级安装方案。 发现复杂的配置和自定义设置选项。
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: cb89f0c0a576cf6cd8b53a4ade12c21106e2cdf3
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '2485'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->丢失？ 需要帮忙吗？ 尝试我们的[快速入门安装](composer.md)或[参与者安装](https://developer.adobe.com/commerce/contributor/guides/install/)指南。
+>丢失？ 需要帮忙吗？ 尝试我们的[快速入门安装](composer.md)或[参与者安装](https://developer.adobe.com/commerce/contributor/guides/install)指南。
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Adobe Commerce具有用于安装和配置任务的单个命令行界面： `<mag
 
 >[!NOTE]
 >
->如果在运行这些命令时显示错误，请验证是否已按照[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/)中所述更新了安装依赖项。
+>如果在运行这些命令时显示错误，请验证是否已按照[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies)中所述更新了安装依赖项。
 
 ## 从命令行安装
 
@@ -119,7 +119,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 您可以在安装期间或安装后创建管理员用户。 如果在安装期间创建用户，则需要所有管理员凭据变量。 请参阅[本地主机安装示例](#sample-localhost-installations)。
 
-下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
+下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |

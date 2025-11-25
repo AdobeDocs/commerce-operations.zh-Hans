@@ -2,7 +2,7 @@
 title: 卸载或重新安装Adobe Commerce
 description: 按照以下步骤卸载并重新安装Adobe Commerce的内部安装。
 exl-id: fbaeee2c-8da0-4c89-a6d1-882a65014520
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -24,8 +24,8 @@ ht-degree: 0%
 
 从命令行重新安装应用程序的方式取决于您的角色：
 
-* 如果是从归档文件安装软件，或者使用的是“composer-create-project”，请参阅[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/)。
-* 如果您是参与开发人员（即您开始使用`git clone`），请参阅[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/)。
+* 如果是从归档文件安装软件，或者使用的是“composer-create-project”，请参阅[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies)。
+* 如果您是参与开发人员（即您开始使用`git clone`），请参阅[更新安装依赖项](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies)。
 
 ## 卸载应用程序
 

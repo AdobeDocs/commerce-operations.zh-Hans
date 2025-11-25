@@ -2,7 +2,7 @@
 title: 恩金克斯
 description: 按照以下步骤安装和配置Nginx Web服务器，以便在Adobe Commerce中进行本地安装。
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Adobe Commerce需要多个[PHP扩展](../php-settings.md)才能正常运行。 �
 
 * [获取Composer隐含](../../composer.md)
 
-* [克隆Git存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [克隆Git存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 此示例显示了使用命令行进行的基于编辑器的安装。
 
@@ -364,7 +364,7 @@ Adobe Commerce需要多个[PHP](../php-settings.md)扩展才能正常运行。 �
 
 * [获取Composer隐含](../../composer.md)
 
-* [克隆Git存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [克隆Git存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 此示例显示了使用命令行进行的基于编辑器的安装。
 

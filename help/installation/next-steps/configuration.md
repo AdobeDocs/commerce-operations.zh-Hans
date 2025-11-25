@@ -3,7 +3,7 @@ title: 配置应用程序
 description: 了解Adobe Commerce内部部署所需的安装后配置。
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: a7c98879e027948fc887e28d4baa5fb04214ca95
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 0%
@@ -26,12 +26,12 @@ UNIX任务计划程序cron对应用程序的日常操作至关重要。 它计�
 
 安装后，我们建议执行以下操作：
 
-* 确保正确设置您的文件所有权和权限[&#128279;](../prerequisites/file-system/configure-permissions.md)
+* 确保正确设置您的文件所有权和权限[](../prerequisites/file-system/configure-permissions.md)
 * 我们强烈建议[将默认管理员URI](../tutorials/admin-uri.md)从`admin`更改为其他内容
 * 确保正确设置[`X-Frame-Option` HTTP标头](../../configuration/security/xframe-options.md)。
-* 通过[保护您的模板](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)，采取防范措施以防止跨站点脚本(XSS)
+* 通过[保护您的模板](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting)，采取防范措施以防止跨站点脚本(XSS)
 
-如果通过[克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)进行安装，请确保在部署应用程序时仅包含生产环境所需的文件和文件夹。 不需要的文件和文件夹可能会暴露安全风险。
+如果通过[克隆GitHub存储库](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)进行安装，请确保在部署应用程序时仅包含生产环境所需的文件和文件夹。 不需要的文件和文件夹可能会暴露安全风险。
 
 ## 启用Apache服务器重写
 
@@ -65,7 +65,7 @@ UNIX `logrotate`实用程序使您能够管理生成大量日志文件的系统�
 >
 >* 入门级环境没有日志轮换。
 >
->* 无法在Pro集成环境中配置日志轮换。 您必须实施自定义解决方案/脚本，并[配置cron](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)以根据需要运行脚本。
+>* 无法在Pro集成环境中配置日志轮换。 您必须实施自定义解决方案/脚本，并[配置cron](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)以根据需要运行脚本。
 
 ### 设置iptables规则以启用各种服务进行通信
 

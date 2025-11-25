@@ -2,7 +2,7 @@
 title: 内部部署安装概述
 description: 了解Adobe Commerce的内部安装过程。 了解服务器要求、设置步骤和部署最佳实践。
 exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
-source-git-commit: 062267b8b06e41d89f704144e640fc1254952532
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >要成功继续，您应该具有中级技术知识和服务器访问权限。
 
-安装程序将创建一个功能齐全的Adobe Commerce商店，该商店具有面向客户的店面[和](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/storefront/storefront)管理面板[。 &#x200B;](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/admin/admin)在开始该过程之前，必须准备好数据库凭据、域信息和验证密钥。
+安装程序将创建一个功能齐全的Adobe Commerce商店，该商店具有面向客户的店面[和](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront)管理面板[。 ](https://experienceleague.adobe.com/en/docs/commerce-admin/start/admin/admin)在开始该过程之前，必须准备好数据库凭据、域信息和验证密钥。
 
 ## 商户责任
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 使用[编辑器](prerequisites/commerce.md)（推荐）或从GitHub克隆下载以进行开发贡献。
 
-如果要向Magento Open Source代码库贡献内容或自定义应用程序，请[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) GitHub存储库。 此方法需要同时熟悉GitHub和Composer。
+如果要向Magento Open Source代码库贡献内容或自定义应用程序，请[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) GitHub存储库。 此方法需要同时熟悉GitHub和Composer。
 
 ### 安装应用程序
 
