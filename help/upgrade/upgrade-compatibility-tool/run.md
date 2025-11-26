@@ -2,7 +2,7 @@
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤在Adobe Commerce项目的命令行界面中运行 [!DNL Upgrade Compatibility Tool] 。
 exl-id: ea467a74-18eb-476b-96e2-23f4fc257d73
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 2d17da1f8cbda1462839ad2fa3ea569833443827
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -29,7 +29,7 @@ chmod +x ./uct/bin/uct
 
 [!DNL Upgrade Compatibility Tool]是一种通过分析其中安装的所有模块来针对特定版本检查Adobe Commerce自定义实例的工具。 它会返回在升级到最新版本的Adobe Commerce之前必须解决的严重问题、错误和警告列表。
 
-请参阅此[视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=zh-Hans) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
+请参阅此[视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
 
 命令行界面中[!DNL Upgrade Compatibility Tool]的可用命令：
 
@@ -146,7 +146,7 @@ bin/uct core:code:changes <dir> <vanilla dir>
 
 >[!NOTE]
 >
-> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)。
+> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)。
 
 ### Vanilla安装
 
@@ -156,7 +156,7 @@ _vanilla_&#x200B;安装是对特定发行版本的指定版本标记或分支的
 
 您可以运行带有[!DNL Upgrade Compatibility Tool]选项的`--vanilla-dir`命令，以指定Adobe Commerce vanilla安装目录。
 
-有关详细信息，请参阅[部署vanilla实例](https://developer.adobe.com/commerce/contributor/guides/code-contributions/#deploy-vanilla-magento-open-source-instance)主题。
+有关详细信息，请参阅[部署vanilla实例](https://developer.adobe.com/commerce/contributor/guides/code-contributions#deploy-vanilla-magento-open-source-instance)主题。
 
 ## 使用`refactor`命令
 
@@ -259,8 +259,8 @@ bin/uct upgrade:check --help
 
 - 避免使用具有相同名称的两个模块。
 - 遵循Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards)。
-- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)最佳实践。
-- 在云基础架构[!DNL Upgrade Compatibility Tool]项目中为[[!DNL Site-Wide Analysis Tool]Adobe Commerce运行](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html?lang=zh-Hans) [中的](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans){target=_blank}。
+- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)最佳实践。
+- 在云基础架构[!DNL Upgrade Compatibility Tool]项目中为[[!DNL Site-Wide Analysis Tool]Adobe Commerce运行](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html)[中的](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}。
 
 ## 优化结果
 
