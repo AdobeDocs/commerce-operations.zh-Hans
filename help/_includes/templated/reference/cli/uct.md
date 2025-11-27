@@ -1,5 +1,5 @@
 ---
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 48dfdd81992a82bf984c3e7b0f30f8e5a69ee735
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 1%
@@ -25,7 +25,9 @@ ht-degree: 1%
 >
 >`composer update`命令无法升级此工具 — 您必须[下载并安装最新版本](/help/upgrade/upgrade-compatibility-tool/run.md)。
 
-此参考文档从应用程序源代码生成。 要更改文档，您应在相关的[代码库](https://github.com/magento)存储库中打开相应命令的拉取请求。 有关详细信息，请参阅[代码贡献](https://developer.adobe.com/commerce/contributor/guides/code-contributions)。
+此参考文档从应用程序源代码生成。 要更改文档，您应该打开
+相关[代码库](https://github.com/magento)存储库中相应命令的拉取请求。 请参阅
+[代码贡献](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)以了解更多信息。
 
 ### 全局选项
 
