@@ -119,7 +119,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 您可以在安装期间或安装后创建管理员用户。 如果在安装期间创建用户，则需要所有管理员凭据变量。 请参阅[本地主机安装示例](#sample-localhost-installations)。
 
-下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
+下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |

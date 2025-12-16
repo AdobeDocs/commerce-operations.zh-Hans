@@ -49,7 +49,7 @@ Cron作业是重新启动使用者的默认机制。 由`cron`启动的进程使
 
 >[!INFO]
 >
->如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner)配置`consumers_runner` cron作业。
+>如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#cron_consumers_runner)配置`consumers_runner` cron作业。
 
 ### 特定配置
 
@@ -82,7 +82,7 @@ Cron作业是重新启动使用者的默认机制。 由`cron`启动的进程使
 
   >[!INFO]
   >
-  >如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages)配置使用者如何处理来自消息队列的消息。
+  >如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#consumers_wait_for_max_messages)配置使用者如何处理来自消息队列的消息。
 
   >[!NOTE]
   >
