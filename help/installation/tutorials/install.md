@@ -2,7 +2,7 @@
 title: 安装Adobe Commerce
 description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce。
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
 workflow-type: tm+mt
 source-wordcount: '2261'
 ht-degree: 0%
@@ -148,7 +148,7 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 
 >[!NOTE]
 >
->ActiveMQ Artemis在Adobe Commerce 2.4.6及更高版本中引入。
+>ActiveMQ Artemis在Adobe Commerce 2.4.5及更高版本中引入。
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
@@ -335,7 +335,7 @@ magento setup:install --base-url=http://127.0.0.1/magento2/ \
 
 >[!NOTE]
 >
->ActiveMQ Artemis安装需要Adobe Commerce 2.4.6或更高版本。
+>ActiveMQ Artemis安装需要Adobe Commerce 2.4.5或更高版本。
 
 >[!TIP]
 >

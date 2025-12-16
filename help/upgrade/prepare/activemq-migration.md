@@ -2,9 +2,9 @@
 title: 从RabbitMQ迁移到ActiveMQ
 description: 了解如何替换用于Adobe Commerce本地安装的消息队列代理。
 feature: Services, Configuration
-source-git-commit: 8f57a4fa7744f4647ab96d0fcfae08b8eb4927c6
+source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ActiveMQ (Apache ActiveMQ Artemis)是一种高性能、多协议消息代理，为Adobe Commerce中处理消息队列的RabbitMQ提供了替代方案。
 
-截至2.4.8-p3、2.4.7-p8和2.4.6-p13，Adobe Commerce支持ActiveMQ作为消息队列代理。 这为本地安装提供了更大的灵活性，以便根据其基础架构要求和专业知识在RabbitMQ和ActiveMQ之间进行选择。
+截至2.4.8-p3、2.4.7-p8、2.4.6-p13和2.4.5-p16，Adobe Commerce支持ActiveMQ作为消息队列代理。 这为本地安装提供了更大的灵活性，以便根据其基础架构要求和专业知识在RabbitMQ和ActiveMQ之间进行选择。
 
 ## 开始之前
 

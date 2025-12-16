@@ -2,7 +2,7 @@
 title: 管理消息队列
 description: 了解如何通过Adobe Commerce的命令行管理消息队列。
 exl-id: 619e5df1-39cb-49b6-b636-618b12682d32
-source-git-commit: 47525e8d8379061b254bfa90ab46e27a1ee2f524
+source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Cron作业是重新启动使用者的默认机制。 由`cron`启动的进程使
 
 >[!INFO]
 >
->如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#cron_consumers_runner)配置`consumers_runner` cron作业。
+>如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner)配置`consumers_runner` cron作业。
 
 ### 特定配置
 
@@ -82,10 +82,10 @@ Cron作业是重新启动使用者的默认机制。 由`cron`启动的进程使
 
   >[!INFO]
   >
-  >如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#consumers_wait_for_max_messages)配置使用者如何处理来自消息队列的消息。
+  >如果您的Adobe Commerce存储托管在Cloud平台上，请使用[`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages)配置使用者如何处理来自消息队列的消息。
 
   >[!NOTE]
   >
-  >ActiveMQ Artemis (STOMP)在Adobe Commerce 2.4.6及更高版本中引入。
+  >ActiveMQ Artemis (STOMP)在Adobe Commerce 2.4.5及更高版本中引入。
 
 请参阅[启动消息队列使用者](../cli/start-message-queues.md)。

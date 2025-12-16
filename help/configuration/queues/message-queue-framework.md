@@ -2,7 +2,7 @@
 title: 消息队列概述
 description: 阅读有关消息队列框架及其如何与Adobe Commerce应用程序配合使用的信息。
 exl-id: 21e7bc3e-6265-4399-9d47-d3b9f03dfef6
-source-git-commit: 6f15a24e650a7138bae6d0b40f230e6970a943b0
+source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 Message Queue Framework (MQF)是一个允许模块将消息发布到队列的系统。 它还定义了将异步接收消息的[消费者](consumers.md)。 MQF支持多个报文传送代理：
 
 - **[[!DNL RabbitMQ]](https://www.rabbitmq.com)** — 主要消息代理，它提供用于发送和接收消息的可伸缩平台。 它包括一个用于存储未投放消息的机制，并且基于高级消息队列协议(AMQP) 0.9.1规范。
-- **[Apache ActiveMQ Artemis](https://activemq.apache.org/components/artemis/)** — 使用STOMP（简单文本导向消息协议）进行可靠且可扩展消息传递的替代消息传递代理。 在Adobe Commerce 2.4.6及更高版本中引入。
+- **[Apache ActiveMQ Artemis](https://activemq.apache.org/components/artemis/)** — 使用STOMP（简单文本导向消息协议）进行可靠且可扩展消息传递的替代消息传递代理。 在Adobe Commerce 2.4.5及更高版本中引入。
 
 ## RabbitMQ (AMQP)
 
@@ -38,7 +38,7 @@ Message Queue Framework (MQF)是一个允许模块将消息发布到队列的系
 
 >[!NOTE]
 >
->ActiveMQ Artemis在Adobe Commerce 2.4.6及更高版本中引入。
+>ActiveMQ Artemis在Adobe Commerce 2.4.5及更高版本中引入。
 
 下图说明了使用ActiveMQ Artemis的STOMP框架：
 
