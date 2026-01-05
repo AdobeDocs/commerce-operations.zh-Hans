@@ -23,12 +23,12 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>提供了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values">设置配置值</a>的更多详细信息。</p>
+      <td><p>提供了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values">设置配置值</a>的更多详细信息。</p>
 </td>
       <td>
         最佳实践
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/pull/147">拉取请求</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.zh-Hans/pull/147">拉取请求</a></td>
     </tr>
   </tbody>
 </table>
@@ -45,12 +45,12 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新了<code class="language-plaintext highlighter-rouge">bin/magento setup:config:set</code>Configure Valkey default caching<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/valkey/valkey-pg-cache#configure-valkey-default-caching">说明中的</a> CLI命令，以便为<code class="language-plaintext highlighter-rouge">cache-backend</code>参数指定正确的值。</p>
+      <td><p>更新了<code class="language-plaintext highlighter-rouge">bin/magento setup:config:set</code>Configure Valkey default caching<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/valkey/valkey-pg-cache#configure-valkey-default-caching">说明中的</a> CLI命令，以便为<code class="language-plaintext highlighter-rouge">cache-backend</code>参数指定正确的值。</p>
 </td>
       <td>
         最佳实践
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/pull/159">拉取请求</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.zh-Hans/pull/159">拉取请求</a></td>
     </tr>
   </tbody>
 </table>
