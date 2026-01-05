@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4dd926ca7014c9e007a8c2c847e076064eb8d170
+source-git-commit: 86d7fba92705b808b45d655a432bb92ed9f9181a
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '576'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 参与者指南文档
 
-请参阅[参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+请参阅[参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 ## 有疑问吗？
 
@@ -41,10 +41,9 @@ ht-degree: 1%
 由项目提交者创建。 阅读[GitHub的拉取请求文档](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 以了解有关发送拉取请求的更多信息。
 
-<!--
-Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
-submitting a pull request!
--->
+最后，请在以下情况下遵循[拉取请求模板](PULL_REQUEST_TEMPLATE.md)：
+提交拉取请求！
+
 
 ## 从参与者到提交者
 
@@ -57,11 +56,11 @@ submitting a pull request!
 
 ## 安全问题
 
-不应在此问题跟踪器上报告安全问题。 相反，[向我们的安全专家提出问题](https://helpx.adobe.com/cn/security/alertus.html)。
+不应在此问题跟踪器上报告安全问题。 相反，[向我们的安全专家提出问题](https://helpx.adobe.com/security/alertus.html)。
 
 ## 新增功能亮点
 
-如果您的更改引入新主题、重大更新或需要突出显示的更正，则可以在拉取请求正文的[新增功能部分](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/operational-guides/home#whats-new)中添加简短描述。
+如果您的更改引入新主题、重大更新或需要突出显示的更正，则可以在拉取请求正文的[新增功能部分](https://experienceleague.adobe.com/en/docs/commerce-operations/operational-guides/home#whats-new)中添加简短描述。
 
 添加“新增功能”高亮显示：
 
@@ -109,4 +108,4 @@ submitting a pull request!
 1. `whatsnew`部分必须从`whatsnew`标记开始，并且位于拉取请求正文的最末尾。
 1. 对更改的描述必须包含工作链接。 请确保链接正确无误并指向预期的主题。 如果主题是新主题，请在合并拉取请求并发布新主题后，验证链接是否正常工作。 可以在合并拉取请求后修复链接。
 
-例如，在存储库的已关闭拉取请求中搜索以查看现有高亮的格式设置，并将它们与[新增功能部分](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/operational-guides/home#whats-new)进行比较，以查看它们在文档中的显示方式。
+例如，在存储库的已关闭拉取请求中搜索以查看现有高亮的格式设置，并将它们与[新增功能部分](https://experienceleague.adobe.com/en/docs/commerce-operations/operational-guides/home#whats-new)进行比较，以查看它们在文档中的显示方式。
