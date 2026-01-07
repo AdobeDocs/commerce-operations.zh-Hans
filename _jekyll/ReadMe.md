@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9994f486c38df4c0dc2ff477c48f3e8f3259aa9f
+source-git-commit: 4589c405bab743001e967a9825d578ee1a03c216
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,32 @@ rake whatsnew_bp since="jul 4"
 ```sh
 rake azure_regions
 ```
+
+### `get_released_versions`
+
+从`magento/magento2`存储库获取最近10个已发布的版本。 需要安装和验证[GitHub CLI](https://cli.github.com/)。
+
+**用法：**
+
+```sh
+rake get_released_versions
+```
+
+**输出：**&#x200B;生成具有发行标记名称和日期的`tmp/core-release.txt`。
+
+### `first_merge_date`
+
+获取首次合并到指定分支中的日期。 需要安装和验证[GitHub CLI](https://cli.github.com/)。
+
+**用法：**
+
+```sh
+rake first_merge_date base=develop
+```
+
+**参数：**
+
+- `base` （必需）：要检查合并的目标分支名称。
 
 ### `includes:maintain_relationships`
 
@@ -215,7 +241,8 @@ relationships:
 ## 先决条件
 
 - Ruby和Bundler已安装。
-- 在Gemfile中指定的必需gems。
+- 在Gemfile中指定的必需gems（`adobe-comdox-exl-rake-tasks`提供了核心依赖项）。
+- 用于[和](https://cli.github.com/)任务的`get_released_versions`GitHub CLI`first_merge_date`。
 - 用于[任务的Python、](https://www.pygmt.org/latest/install.html)PyGMT[和](https://formulae.brew.sh/formula/pdf2svg)pdf2svg`azure_regions`。
 
 ## 设置
