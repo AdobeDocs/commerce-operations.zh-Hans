@@ -2,9 +2,9 @@
 user-guide-title: 配置指南
 user-guide-description: 配置Adobe Commerce应用程序功能和服务。
 feature: Configuration
-source-git-commit: 1850301e0b7f1abbc54613209940dd63d16ef145
+source-git-commit: d86b9eb07a9da6dc93234f8a02103c543bbead68
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '372'
 ht-degree: 1%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 1%
       + [配置Redis](cache/config-redis.md)
       + [将Redis用于默认缓存](cache/redis-pg-cache.md)
       + [使用Redis进行会话存储](cache/redis-session.md)
+      + [为EC2实例配置ElastiCache](cache/redis-elasticache-for-ec2.md)
    + Valkey {#valkey}
       + [配置Valkey](cache/config-valkey.md)
       + [将Valkey用于默认缓存](cache/valkey-pg-cache.md)
@@ -150,4 +151,4 @@ ht-degree: 1%
       + [验证拆分数据库](storage/multi-master-verify.md)
       + [数据库复制](storage/multi-master-replication.md)
       + [还原到单个数据库](storage/revert-split-database.md)
-+ [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
++ [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
