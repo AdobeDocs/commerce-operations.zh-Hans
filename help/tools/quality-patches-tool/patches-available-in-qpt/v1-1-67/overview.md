@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 47f6b57d-b945-4e77-8630-2df709a3469e
-source-git-commit: 951738a4c671ed6fcc47b2a928d2110c78763d26
+source-git-commit: 4f4131b89abffbe707f084b45f9d492679138b00
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 QPT v1.1.67包含以下修补程序：
 1. **AC-14985**：使用TLS发送SMTP电子邮件时出错。
 1. **AC-14984**： php-amqplib/php-amqplib ^3.2.0的SSL连接问题。
-1. **ACSD-65935**： `customerOrders` GraphQL查询在删除产品时返回内部服务器错误。
+1. **[ACSD-65935](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-65935-customerorders-graphql-query-returned-an-internal-server-error-when-a-product-was-deleted.md)**： `customerOrders` GraphQL查询在删除产品时返回内部服务器错误。
 1. **ACSD-66049**：非英语店面显示不正确的定价，原因是ICU库版本。
 1. **ACSD-66084**： `row_total_incl_tax`对订单API中的完全折扣项目返回接近零的值，而不是0.00。
 1. **ACSD-66118**：如果配置缓存未刷新，则更新&#x200B;**[!UICONTROL Store View]**&#x200B;代码将清除&#x200B;**[!UICONTROL Design Configuration]**&#x200B;设置。
