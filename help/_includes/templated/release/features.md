@@ -1,5 +1,5 @@
 ---
-source-git-commit: d1af1ffe584b18cbc6c664cab31283c13f36c25e
+source-git-commit: 9db68896486b973f6f84ac5bcd5bf6b4b1cc7250
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 8%
@@ -7,8 +7,8 @@ ht-degree: 8%
 ---
 # Commerce功能
 
-<!--This include content is automatically generated using the features.html template and the "_data/release/features.yml" data file. To update the content, add new information to the data file. Follow the instructions in the README instructions to generate the updated content: 
-https://github.com/AdobeDocs/commerce-operations.zh-Hans/blob/main/README.md#templates -->
+<!--This include content is automatically generated using the features.html template and the "_data/release/features.yml" data file. To update the content, add new information to the data file. Follow the instructions in the README instructions to generate the updated content:
+https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#templates -->
 
 <table style="table-layout:auto">
   <tbody>
@@ -21,7 +21,7 @@ https://github.com/AdobeDocs/commerce-operations.zh-Hans/blob/main/README.md#tem
       <th style="border-style:none;">2.4</th>
     </tr>
     <tr>
-      <td>由Adobe Sensei提供支持的实时搜索（B2C和B2B）</td>
+      <td>由Adobe AI （B2C和B2B）提供支持的实时搜索</td>
       <td></td>
       <td></td>
       <td></td>
@@ -45,7 +45,7 @@ https://github.com/AdobeDocs/commerce-operations.zh-Hans/blob/main/README.md#tem
       <td>+</td>
     </tr>
     <tr>
-      <td>由Adobe Sensei提供支持的产品推荐（B2C和B2B）</td>
+      <td>由Adobe AI提供支持的产品推荐（B2C和B2B）</td>
       <td></td>
       <td></td>
       <td></td>
