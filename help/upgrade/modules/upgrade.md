@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 供应商捆绑扩展(VBE)
 
-Adobe在2.4.4中删除了所有[VBE](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/modules/upgrade)。供应商将继续在Adobe Commerce Marketplace上支持这些扩展。
+Adobe在2.4.4中删除了所有[VBE](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/upgrade-guide/modules/upgrade)。供应商将继续在Adobe Commerce Marketplace上支持这些扩展。
 
 如果要继续在Adobe Commerce 2.4.4及更高版本中使用这些扩展，则必须在`composer.json`升级到2.4.4之前，更新&#x200B;_文件_&#x200B;中相应的包依赖项。有关要使用的包名称和版本，请与供应商联系。
 
