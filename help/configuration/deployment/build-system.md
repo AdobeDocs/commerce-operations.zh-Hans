@@ -3,9 +3,9 @@ title: 构建系统设置
 description: 了解如何将Commerce部署到构建系统中。
 feature: Configuration, Build, Deploy
 exl-id: f6daf5c6-6d12-46b0-b775-76791bacea53
-source-git-commit: dcc283b901917e3681863370516771763ae87462
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -67,11 +67,11 @@ ht-degree: 0%
    mv composer.phar /usr/local/bin/composer
    ```
 
-有关其他安装选项，请参阅[Composer安装文档][composer]。
+有关其他安装选项，请参阅[Composer安装文档](https://getcomposer.org/download/)。
 
 ### 安装PHP
 
-在[CentOS]或[Ubuntu]上安装PHP。
+在[CentOS](https://wiki.centos.org/HowTos/php7)或[Ubuntu](https://help.ubuntu.com/lts/serverguide/php.html)上安装PHP。
 
 ### 设置构建系统
 
@@ -134,8 +134,3 @@ ht-degree: 0%
 
    `<mode>`为必填项。 它可以是`default`或`developer`。
 
-<!-- Link Definitions -->
-
-[CentOS]: https://wiki.centos.org/HowTos/php7
-[composer]: https://getcomposer.org/download/
-[乌班图]: https://help.ubuntu.com/lts/serverguide/php.html

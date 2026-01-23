@@ -2,7 +2,7 @@
 title: '[!DNL Extensions]'
 description: 了解 [!DNL Extensions] 中的 [!DNL Site-Wide Analysis Tool]选项卡、使用时机、优点和最佳实践。
 exl-id: e0ddc158-b268-44cc-8998-6b853d92b835
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # [!DNL Extensions]
 
-[!DNL extension]是自定义模块、语言包或自定义模块和语言包的组合，用于向核心Adobe Commerce产品添加新功能。 [Commerce Marketplace](https://marketplace.magento.com/extensions.html)提供一系列免费的[!DNL extensions]和可供销售的。 您可以在[!DNL extensions]中找到安装在Adobe Commerce实例上的[!DNL Site-Wide Analysis Tool]列表。
+[!DNL extension]是自定义模块、语言包或自定义模块和语言包的组合，用于向核心Adobe Commerce产品添加新功能。 [Commerce Marketplace](https://commercemarketplace.adobe.com//extensions.html)提供一系列免费的[!DNL extensions]和可供销售的。 您可以在[!DNL extensions]中找到安装在Adobe Commerce实例上的[!DNL Site-Wide Analysis Tool]列表。
 
 ## 使用时间
 
@@ -31,4 +31,4 @@ ht-degree: 0%
 
 * 如果您无法将第三方[!DNL extensions]保持为最新版本，请考虑使用其他[!DNL extensions]。
 
-* 为避免潜在问题，请从受信任的来源(如[!DNL extensions]Commerce Marketplace[)下载/购买第三方](https://marketplace.magento.com/extensions.html)。
+* 为避免潜在问题，请从受信任的来源(如[!DNL extensions]Commerce Marketplace[)下载/购买第三方](https://commercemarketplace.adobe.com//extensions.html)。

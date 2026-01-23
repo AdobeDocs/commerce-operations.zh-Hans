@@ -3,16 +3,16 @@ title: 为远程存储配置AWS S3存储段
 description: 将Commerce项目配置为使用AWS S3存储服务进行远程存储。
 feature: Configuration, Storage
 exl-id: e8aeade8-2ec4-4844-bd6c-ab9489d10436
-source-git-commit: 3690043019d70ad15332f757158937a7d5305043
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
 
 # 为远程存储配置AWS S3存储段
 
-[Amazon Simple Storage Service (Amazon S3)][AWS S3]是一项对象存储服务，它提供了业界领先的可扩展性、数据可用性、安全性和性能。 AWS S3服务使用存储桶或容器进行数据存储。 此配置要求您创建一个&#x200B;_私有_&#x200B;存储桶。 有关云基础架构上的Adobe Commerce，请参阅[在云基础架构上为Commerce配置远程存储](cloud-support.md)。
+[Amazon Simple Storage Service (Amazon S3)](https://aws.amazon.com/s3)是一项对象存储服务，它提供了业界领先的可扩展性、数据可用性、安全性和性能。 AWS S3服务使用存储桶或容器进行数据存储。 此配置要求您创建一个&#x200B;_私有_&#x200B;存储桶。 有关云基础架构上的Adobe Commerce，请参阅[在云基础架构上为Commerce配置远程存储](cloud-support.md)。
 
 >[!WARNING]
 >
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 1. 登录到您的Amazon S3仪表板并创建&#x200B;_私有_&#x200B;存储段。
 
-1. 设置[AWS IAM]角色。 或者，生成访问密钥和密钥。
+1. 设置[AWS IAM](https://aws.amazon.com/iam/)角色。 或者，生成访问密钥和密钥。
 
 1. 禁用默认数据库存储。
 
@@ -73,7 +73,7 @@ location ~* \.(ico|jpg|jpeg|png|gif|svg|js|css|swf|eot|ttf|otf|woff|woff2)$ {
 
 ### 身份验证
 
-如果您使用访问密钥和密钥而不是[AWS IAM]角色，则必须包含[`ngx_aws_auth` Nginx模块][ngx repo]。
+如果您使用访问密钥和密钥而不是[AWS IAM](https://aws.amazon.com/iam/)角色，则必须包含[`ngx_aws_auth` Nginx模块](https://github.com/anomalizer/ngx_aws_auth)。
 
 ### 权限
 
@@ -83,8 +83,3 @@ S3集成依赖于在本地文件系统上生成和存储缓存图像的功能。
 
 强烈建议您在编码或扩展开发中使用[!DNL Commerce]文件适配器方法，而不管文件存储类型如何。 使用S3进行存储时，请勿使用本机PHP文件I/O操作，如`copy`、`rename`或`file_put_contents`，因为S3文件不在文件系统中。 有关代码示例，请参阅[DriverInterface.php](https://github.com/magento/magento2/blob/2.4-develop/lib/internal/Magento/Framework/Filesystem/DriverInterface.php#L18)。
 
-<!-- link definitions -->
-
-[AWS S3]: https://aws.amazon.com/s3
-[AWS IAM]: https://aws.amazon.com/iam/
-[ngx repo]: https://github.com/anomalizer/ngx_aws_auth

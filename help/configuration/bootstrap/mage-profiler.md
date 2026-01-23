@@ -2,7 +2,7 @@
 title: 启用分析
 description: 了解有关使MAGE Profiler能够与您的分析工具一起使用的更多信息。
 exl-id: a46289ed-16dc-4a72-84ff-85fe825dac11
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
   您应该特别关注&#x200B;_未使用的依赖项_&#x200B;的列表，这些依赖项是由于某些构造函数中请求但从未使用过而创建的对象（也就是说，未调用任何方法）。 因此，用于创建这些依赖项的处理器时间和内存被浪费了。
 
-Commerce在[`Magento\Framework\Profiler`][profiler]中提供基本功能。
+Commerce在[`Magento\Framework\Profiler`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler.php)中提供基本功能。
 
 可以使用MAGE_PROFILER变量或命令行来启用和配置Profiler。
 
@@ -37,8 +37,8 @@ Commerce在[`Magento\Framework\Profiler`][profiler]中提供基本功能。
 
   您可以使用以下值之一来启用特定的Profiler：
 
-   - 使用`csvfile`的[`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`][csvfile]
-   - 任何其他值（`2`除外），包括使用[`Magento\Framework\Profiler\Driver\Standard\Output\Html`][html]的空值
+   - 使用`csvfile`[`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`的](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Csvfile.php)
+   - 任何其他值（`2`除外），包括使用[`Magento\Framework\Profiler\Driver\Standard\Output\Html`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Html.php)的空值
 
 - `2`以启用依赖关系图。
 
@@ -81,8 +81,3 @@ Commerce在[`Magento\Framework\Profiler`][profiler]中提供基本功能。
    bin/magento dev:profiler:disable
    ```
 
-<!-- link definitions -->
-
-[csvfile]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Csvfile.php
-[html]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Html.php
-[profiler]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Profiler.php

@@ -2,9 +2,9 @@
 title: 设置引导参数值
 description: 了解如何为Commerce应用程序设置引导参数。
 exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 1%
 MAGE_PROFILER={firebug|csv|<custom value>}
 ```
 
-使用特定于shell的命令设置变量。 由于外壳的语法不同，请查阅[unix.stackexchange.com][unix-stackx]之类的引用。
+使用特定于shell的命令设置变量。 由于外壳的语法不同，请查阅[unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables)之类的引用。
 
 CentOS的Bash shell示例：
 
@@ -57,7 +57,7 @@ export MAGE_PROFILER=firebug
 
 ### Nginx设置
 
-查看[GitHub]上的&#x200B;_Nginx示例配置_。
+查看[GitHub](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample#L16)上的&#x200B;_Nginx示例配置_。
 
 ### Apache .htaccess设置
 
@@ -92,7 +92,7 @@ export MAGE_PROFILER=firebug
 
 Apache Web Server支持使用`mod_env`指令设置应用程序模式。
 
-Apache `mod_env`指令在[Apache版本2.2]和[Apache版本2.4]中略有不同。
+Apache `mod_env`指令在[Apache版本2.2](https://httpd.apache.org/docs/2.2/mod/mod_env.html#setenv)和[Apache版本2.4](https://httpd.apache.org/docs/2.4/mod/mod_env.html#setenv)中略有不同。
 
 下面的过程说明了如何在Apache虚拟主机中设置应用程序模式。 这不是使用`mod_env`指令的唯一方法；有关详细信息，请参阅Apache文档。
 
@@ -166,9 +166,3 @@ Apache `mod_env`指令在[Apache版本2.2]和[Apache版本2.4]中略有不同。
    - Ubuntu： `service apache2 restart`
    - CentOS： `service httpd restart`
 
-<!-- link definitions -->
-
-[Apache版本2.2]: https://httpd.apache.org/docs/2.2/mod/mod_env.html#setenv
-[Apache版本2.4]: https://httpd.apache.org/docs/2.4/mod/mod_env.html#setenv
-[Nginx示例配置]: https://github.com/magento/magento2/blob/2.4/nginx.conf.sample#L16
-[unix-stackx]: https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables

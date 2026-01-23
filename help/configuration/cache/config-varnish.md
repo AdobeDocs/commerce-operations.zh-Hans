@@ -3,16 +3,16 @@ title: 配置和使用清漆
 description: 了解如何为Adobe Commerce配置和使用Varnish缓存。 探索HTTP加速、文件存储和性能优化技术。
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
 
 # 配置清漆
 
-[清漆缓存]是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
+[清漆缓存](https://varnish-cache.org)是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
 
 [系统要求](../../installation/system-requirements.md)列出了支持的Varnish版本。
 
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 有关Varnish的详细信息，请参阅：
 
-- [大型涂漆图片]
-- [清漆启动选项]
-- [涂漆和网站性能]
+- [大型涂漆图片](https://www.varnish-cache.org/docs/trunk/users-guide/intro.html)
+- [清漆启动选项](https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options)
+- [涂漆和网站性能](https://www.varnish-cache.org/docs/trunk/users-guide/performance.html#users-performance)
 
 ## 清漆拓扑图
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 我们知道以下与Varnish有关的问题：
 
-- [清漆不支持SSL]
+- [清漆不支持SSL](https://www.varnish-cache.org/docs/3.0/phk/ssl.html)
 
   作为替代方法，请使用SSL终止或SSL终止代理。
 
@@ -146,10 +146,3 @@ ht-degree: 0%
 
 如果服务器上的内容发生更改，则客户端将下载静态资产，其中包含HTTP 200 (OK)状态代码和新的ETag。
 
-<!-- Link Definitions -->
-
-[亮光的大图片]: https://www.varnish-cache.org/docs/trunk/users-guide/intro.html
-[清漆缓存]: https://varnish-cache.org
-[清漆启动选项]: https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options
-[涂漆和网站性能]: https://www.varnish-cache.org/docs/trunk/users-guide/performance.html#users-performance
-[清漆不支持SSL]: https://www.varnish-cache.org/docs/3.0/phk/ssl.html

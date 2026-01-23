@@ -3,19 +3,19 @@ title: 记录数据库活动
 description: 配置Commerce以使用Logger界面记录数据库活动。
 feature: Configuration, Logs, Storage
 exl-id: 2487c5ec-a01e-4d87-bc5e-c33643b032df
-source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
 # 记录数据库活动
 
-以下示例显示如何使用[`Magento\Framework\DB\LoggerInterface`][interface]记录数据库活动，该应用程序有两种实现：
+以下示例显示如何使用`[Magento\Framework\DB\LoggerInterface](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/DB/LoggerInterface.php)`记录数据库活动，该应用程序有两种实现：
 
-- 不记录任何内容（默认）： [`Magento\Framework\DB\Logger\Quiet`][quiet]
-- `var/log`目录的日志： [`Magento\Framework\DB\Logger\File`][file]
+- 不记录任何内容（默认）： [`Magento\Framework\DB\Logger\Quiet`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/DB/Logger/Quiet.php)
+- `var/log`目录的日志： [`Magento\Framework\DB\Logger\File`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/DB/Logger/File.php)
 
 >[!TIP]
 >
@@ -58,8 +58,3 @@ bin/magento setup:di:compile
 bin/magento cache:clean
 ```
 
-<!-- link definitions -->
-
-[file]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/DB/Logger/File.php
-[interface]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/DB/LoggerInterface.php
-[quiet]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/DB/Logger/Quiet.php

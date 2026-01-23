@@ -3,28 +3,28 @@ title: 应用程序初始化和引导
 description: 阅读Commerce应用程序的初始化和引导逻辑。
 feature: Configuration, Install, Media
 exl-id: 46d1ffc0-7870-4dd1-beec-0a9ff858ab62
-source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
 
 # 初始化和引导概述
 
-要运行Commerce应用程序，请在[pub/index.php][index]中实现以下操作：
+要运行Commerce应用程序，请在[pub/index.php](https://github.com/magento/magento2/tree/2.4.8/pub/index.php)中实现以下操作：
 
-- 包括[app/bootstrap.php][bootinitial]，它执行基本初始化例程，如错误处理、初始化自动加载程序、设置性能分析选项和设置默认时区。
-- 创建[\Magento\Framework\App\Bootstrap.php][bootstrap] <!-- It requires initialization parameters to be specified in constructor. Normally, the $_SERVER super-global variable is supposed to be passed there. -->的实例
-- 创建Commerce应用程序实例： [\Magento\Framework\AppInterface][app-face]
+- 包含用于部署到您环境的Commerce版本的[app/bootstrap.php](https://github.com/magento/magento2/blob/2.4.8/app/bootstrap.php)文件。 此文件执行基本初始化例程，如错误处理、初始化自动加载程序、设置性能分析选项和设置默认时区。
+- 创建[\Magento\Framework\App\Bootstrap.php](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/Bootstrap.php) <!-- It requires initialization parameters to be specified in constructor. Normally, the $_SERVER super-global variable is supposed to be passed there. -->的实例
+- 创建Commerce应用程序实例： [\Magento\Framework\AppInterface](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/AppInterface.php)
 - 运行Commerce
 
 ## Bootstrap运行逻辑
 
-[引导对象][bootinitial]使用以下算法运行Commerce应用程序：
+[引导对象](https://github.com/magento/magento2/tree/2.4.8/app/bootstrap.php)使用以下算法运行Commerce应用程序：
 
 1. 初始化错误处理程序。
-1. 创建随处使用且受环境影响的[对象管理器][object]和基本共享服务。 环境参数将被正确地插入这些对象中。
+1. 创建随处使用且受环境影响的[对象管理器](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/ObjectManager)和基本共享服务。 环境参数将被正确地插入这些对象中。
 1. 声明维护模式为&#x200B;_未启用_；否则，将终止。
 1. 声明已安装Commerce应用程序；否则，将终止。
 1. 启动Commerce应用程序。
@@ -71,7 +71,7 @@ bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下
 
 ### HTTP入口点
 
-[\Magento\Framework\App\Http][http]的工作方式如下：
+[\Magento\Framework\App\Http](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/Http)的工作方式如下：
 
 1. 确定[应用程序区域](https://developer.adobe.com/commerce/php/architecture/modules/areas/)。
 1. 启动前端控制器和路由系统，以便查找并执行控制器操作。
@@ -89,7 +89,7 @@ bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下
 
 ### 静态资源入口点
 
-[\Magento\Framework\App\StaticResource][static-resource]是用于检索静态资源(例如，CSS、JavaScript和图像)的应用程序。 它会延迟对静态资源执行任何操作，直到请求该资源为止。
+[\Magento\Framework\App\StaticResource](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/StaticResource.php)是用于检索静态资源(例如，CSS、JavaScript和图像)的应用程序。 它会延迟对静态资源执行任何操作，直到请求该资源为止。
 
 >[!INFO]
 >
@@ -105,17 +105,7 @@ bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下
 
 ### 媒体资源入口点
 
-[Magento\MediaStorage\App\Media][media]从数据库中检索媒体资源（即上载到媒体存储的任何文件）。 只要将数据库配置为介质存储，就会使用它。
+[Magento\MediaStorage\App\Media](https://github.com/magento/magento2/tree/2.4.8/app/code/Magento/MediaStorage/App/Media.php)从数据库中检索媒体资源（即上载到媒体存储的任何文件）。 只要将数据库配置为介质存储，就会使用它。
 
 `\Magento\Core\App\Media`尝试在配置的数据库存储中找到媒体文件并将其写入`pub/static`目录，然后返回其内容。 出错时，它会在标头中返回HTTP 404（未找到）状态代码，并且不含内容。
 
-<!-- Link Definitions -->
-
-[app-face]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/AppInterface.php
-[bootinitial]: https://github.com/magento/magento2/tree/2.4/app/bootstrap.php
-[bootstrap]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/App/Bootstrap.php
-[http]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/App/Http
-[index]: https://github.com/magento/magento2/tree/2.4/pub/index.php
-[media]: https://github.com/magento/magento2/tree/2.4/app/code/Magento/MediaStorage/App/Media.php
-[object]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/ObjectManager
-[static-resource]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/App/StaticResource.php

@@ -2,9 +2,9 @@
 title: 更改增量ID
 description: 更改Commerce数据库实体的增量ID。
 exl-id: 039fc34c-d9cf-42f4-af5d-16a26a3e8171
-source-git-commit: 2a45fe77d5a6fac089ae2c55d0ad047064dd07b0
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 查看[PayPal网关拒绝的请求 — &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/payments/paypal-gateway-rejected-request-duplicate-invoice-issue.html?lang=zh-Hans)知识库&#x200B;_中的重复发票问题_。
+>您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 查看[PayPal网关拒绝的请求 — ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/payments/paypal-gateway-rejected-request-duplicate-invoice-issue.html)知识库&#x200B;_中的重复发票问题_。
 
 ## 必备步骤
 
@@ -70,10 +70,5 @@ ALTER TABLE sequence_order_1 AUTO_INCREMENT = 2000;
 在云基础架构上的Adobe Commerce的生产环境中执行`ALTER TABLE`查询之前，我们强烈建议执行以下步骤：
 
 - 测试在暂存环境中更改增量ID的整个过程
-- [创建数据库备份]以在失败时还原您的生产数据库
+- [创建数据库备份](https://support.magento.com/hc/en-us/articles/360003254334)以在失败时还原您的生产数据库
 
-<!-- Link Definitions -->
-
-[PayPal gateway rejected request - duplicate invoice issue]: https://support.magento.com/hc/en-us/articles/115002457473
-[创建数据库备份]: https://support.magento.com/hc/en-us/articles/360003254334
-[任何支持的版本]

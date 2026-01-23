@@ -2,16 +2,16 @@
 title: 配置自定义cron作业和cron组（教程）
 description: 通过此Adobe Commerce分步教程了解如何创建自定义cron作业。 发现模块设置和cron组配置。
 exl-id: d8efcafc-3ae1-4c2d-a8ad-4a806fb48932
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
 # 配置自定义cron作业
 
-此分步教程将演示如何在示例模块中创建自定义cron作业和（可选）cron组。 您可以使用已有的模块，也可以使用我们[`magento2-samples`存储库][samples]中的示例模块。
+此分步教程将演示如何在示例模块中创建自定义cron作业和（可选）cron组。 您可以使用已有的模块，也可以使用我们[`magento2-samples`存储库](https://github.com/magento/magento2-samples)中的示例模块。
 
 运行cron作业会导致向`cron_schedule`表中添加一个名为cron作业`custom_cron`的行。
 
@@ -33,13 +33,13 @@ ht-degree: 0%
 
 1. 以[文件系统所有者](../../installation/prerequisites/file-system/overview.md)的身份登录或切换到Commerce服务器。
 1. 更改为不在Commerce应用程序根目录中的目录（例如，主目录）。
-1. 克隆[`magento2-samples`存储库][samples]。
+1. 克隆[`magento2-samples`存储库](https://github.com/magento/magento2-samples)。
 
    ```bash
    git clone git@github.com:magento/magento2-samples.git
    ```
 
-   如果命令失败，出现错误`Permission denied (publickey).`，您必须[将SSH公钥添加到GitHub.com][git-ssh]。
+   如果命令失败，出现错误`Permission denied (publickey).`，您必须[将SSH公钥添加到GitHub.com](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)。
 
 1. 创建要将示例代码复制到其中的目录：
 
@@ -303,7 +303,3 @@ bin/magento cache:clean
 
    ![您的自定义cron组](../../assets/configuration/cron-group.png)
 
-<!-- link definitions -->
-
-[git-ssh]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-[samples]: https://github.com/magento/magento2-samples

@@ -2,7 +2,7 @@
 title: 代码编译器
 description: 了解如何从命令行运行Adobe Commerce代码编译器。 了解编译流程和优化技术。
 exl-id: 08dbf808-ea79-4956-a0bc-f464bb80eee7
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 - 存储库代码生成（为API生成的代码）
 - 服务数据属性生成（为数据对象生成的扩展类）
 
-您可以在[\Magento\Setup\Module\Di\App\Task\Operation][operation]命名空间中找到代码编译类。
+您可以在[\Magento\Setup\Module\Di\App\Task\Operation](https://github.com/magento/magento2/blob/2.4.8/setup/src/Magento/Setup/Module/Di/App/Task/Operation)命名空间中找到代码编译类。
 
 要运行单租户编译器，请执行以下操作：
 
@@ -60,6 +60,3 @@ Generated code and dependency injection configuration successfully.
 
 要在没有数据库的情况下编译代码，请参阅[部署静态视图文件而不安装Magento](../cli/static-view-file-deployment.md)。
 
-<!-- link definitions -->
-
-[operation]: https://github.com/magento/magento2/blob/2.4/setup/src/Magento/Setup/Module/Di/App/Task/Operation

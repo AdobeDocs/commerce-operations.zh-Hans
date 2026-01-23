@@ -3,7 +3,7 @@ title: 为远程存储配置图像大小调整
 description: 通过配置服务器端映像调整大小来优化磁盘资源。
 feature: Configuration, Storage
 exl-id: 51c2b9b3-0f5f-4868-9191-911d5df341ec
-source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 **要允许Nginx调整图像大小**：
 
-1. 安装[Nginx映像筛选器模块][nginx-module]。
+1. 安装[Nginx映像筛选器模块](https://nginx.org/en/docs/http/ngx_http_image_filter_module.html)。
 
    ```shell
    load_module /etc/nginx/modules/ngx_http_image_filter_module.so;
@@ -73,6 +73,3 @@ ht-degree: 0%
 
    - [Amazon Simple Storage Service (Amazon S3)](remote-storage-aws-s3.md)
 
-<!-- link definitions -->
-
-[nginx-module]: https://nginx.org/en/docs/http/ngx_http_image_filter_module.html

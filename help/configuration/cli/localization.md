@@ -2,9 +2,9 @@
 title: 翻译词典和语言包
 description: 了解如何为Adobe Commerce生成翻译词典和构建语言包。 了解本地化和多语言商店设置。
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 0%
 - **翻译词典**，这是自定义或翻译&#x200B;_某些_&#x200B;单词和短语（如自定义模块或主题的词典）的简便方法。
 - 允许您在Commerce应用程序中翻译&#x200B;**任何或所有**&#x200B;单词和短语的&#x200B;_语言包_。
 
-请参阅[翻译概述]。
+请参阅[翻译概述](https://developer.adobe.com/commerce/frontend-core/guide/translations/)。
 
 ## 生成翻译词典
 
-您可以生成[翻译字典]以自定义现有字符串、在自定义模块中翻译单词和短语、本地化主题或创建语言包。
+您可以生成[翻译字典](https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries)以自定义现有字符串、在自定义模块中翻译单词和短语、本地化主题或创建语言包。
 
 要开始翻译，请使用命令生成一个词典CSV文件，其中包含所有现有短语和单词的收集列表。
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 1. 您可以将翻译字典打包到一个语言包中，并将该包提供给Commerce商店管理员。
 
-1. 在管理员中，商店管理员[配置翻译]。
+1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize)。
 
 命令选项：
 
@@ -85,7 +85,7 @@ Product 'Multimeter-2000' has been added to shopping cart.
 
 ## 创建语言包
 
-与翻译词典不同，您可以在Commerce应用程序中使用语言包翻译任何或所有单词和短语。 您可以使用翻译词典翻译特定组件（如模块或主题）。 [了解有关语言包的更多信息]。
+与翻译词典不同，您可以在Commerce应用程序中使用语言包翻译任何或所有单词和短语。 您可以使用翻译词典翻译特定组件（如模块或主题）。 [了解有关语言包的更多信息](https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages)。
 
 此部分讨论如何创建将CSV文件写入模块和主题的语言包。 要创建语言包，您必须执行以下部分中讨论的任务：
 
@@ -107,7 +107,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 | 参数 | 值 | 必需？ |
 |--- |--- |--- |
 | `<source>` | CSV文件的绝对文件系统路径和文件名，该文件包含组合翻译词典和分解为语言包所需的元信息。<br><br>使用[`bin/magento i18n:collect-phrases`](#config-cli-subcommands-xlate-dict-dict)创建CSV文件，然后创建语言包，如[创建目录和文件](#m2devgde-xlate-files)中所述。 | 是 |
-| `<locale>` | [ISO 639-1]（语言）和[ISO 3166]（国家/地区）用作所有生成的CSV文件文件文件名的语言标识符。 示例： `de_DE`、`pt_PT`、`pt_BR`。 | 是 |
+| `<locale>` | [ISO 639-1](https://www.iso.org/iso-639-language-codes.html)（语言）和[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)（国家/地区）用作所有生成的CSV文件文件文件名的语言标识符。 示例： `de_DE`、`pt_PT`、`pt_BR`。 | 是 |
 | `-m --mode` | 如果目标文件存在，则指定是替换现有语言包还是与新语言包合并。 合并将覆盖任何现有的短语并添加新短语。<br><br>值：合并或替换（默认）。 | 否 |
 | `-d --allow-duplicates` | 包括此选项以允许语言包中存在重复项。 否则，如果命令在多个包含不同翻译的条目中遇到相同的短语，则会失败并出现错误。 | 否 |
 
@@ -117,12 +117,12 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 - 所需的许可证文件
 - `composer.json`
-- `registration.php`注册[语言包的]
+- `registration.php`注册[语言包的](https://developer.adobe.com/commerce/php/development/build/component-registration/)
 - [`language.xml`](#language-package-languagexml)元信息文件
 
 >[!INFO]
 >
->必须将整个路径变为小写。 例如，请参阅[`de_de`]。
+>必须将整个路径变为小写。 例如，请参阅[`de_de`](https://github.com/magento/magento2/blob/2.4/app/i18n/Magento/de_DE/registration.php)。
 
 要创建这些文件，请执行以下操作：
 
@@ -131,8 +131,8 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
    例如，Commerce语言包位于`app/i18n/magento`中
 
 1. 添加所需的许可证文件。
-1. 添加指定语言包依赖项的[`composer.json`]。
-1. 向[`registration.php`]注册语言包
+1. 添加指定语言包依赖项的[`composer.json`](https://developer.adobe.com/commerce/php/development/build/composer-integration/)。
+1. 向[`registration.php`](https://developer.adobe.com/commerce/php/development/build/component-registration/)注册语言包
 1. 按照下一节中所述添加`language.xml`元信息文件。
 
 #### 语言包语言.xml
@@ -195,7 +195,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 1. `<vendorname>/en_ca_package`
 1. `<vendorname>/en_us_package`
 
-指定语言包之间的所有继承可能会导致创建循环继承链。 使用[Magento\Test\Integrity\App\Language\CircularDependencyTest]测试来查找和修复此类链。
+指定语言包之间的所有继承可能会导致创建循环继承链。 使用[Magento\Test\Integrity\App\Language\CircularDependencyTest](https://github.com/magento/magento2/blob/2.4/dev/tests/static/testsuite/Magento/Test/Integrity/App/Language/CircularDependencyTest.php)测试来查找和修复此类链。
 
 ### 为一种语言配置多个包
 
@@ -312,16 +312,3 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
    </language>
    ```
 
-<!-- link definitions -->
-
-[翻译概述]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
-[翻译词典]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
-[配置翻译]: https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-localize
-[了解有关语言包的更多信息]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages
-[ISO 639-1]: https://www.iso.org/iso-639-language-codes.html
-[ISO 3166]: https://www.iso.org/iso-3166-country-codes.html
-[寄存器]: https://developer.adobe.com/commerce/php/development/build/component-registration/
-[&#39;de_de&#39;]: https://github.com/magento/magento2/blob/2.4/app/i18n/Magento/de_DE/registration.php
-[&#39;composer.json&#39;]: https://developer.adobe.com/commerce/php/development/build/composer-integration/
-[&#39;registration.php&#39;]: https://developer.adobe.com/commerce/php/development/build/component-registration/
-[Magento\Test\Integrity\App\Language\CircularDependencyTest]: https://github.com/magento/magento2/blob/2.4/dev/tests/static/testsuite/Magento/Test/Integrity/App/Language/CircularDependencyTest.php

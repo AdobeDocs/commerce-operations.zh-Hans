@@ -2,7 +2,7 @@
 title: 自定义基目录路径
 description: 使用MAGE_DIRS变量可设置绝对路径数组。
 exl-id: ee8e1a3a-f1d4-412c-8767-16447113f0cd
-source-git-commit: 4116d0983edc797ce42d24e711fb5ecdbf8fdec9
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 设置MAGE_DIRS
 
-指定一个关联数组，其中键是来自[\\Magento\\App\\Filesystem\\DirectoryList][directory-list]的常量，值分别为目录的绝对路径或其URL路径。
+指定一个关联数组，其中键是来自[\\Magento\\App\\Filesystem\\DirectoryList](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Filesystem/DirectoryList.php)的常量，值分别为目录的绝对路径或其URL路径。
 
 您可以通过以下任意方式设置`MAGE_DIRS`：
 
@@ -50,6 +50,3 @@ ht-degree: 0%
 
 上述示例分别将`[cache]`和`[media]`目录的路径设置为`/mnt/nfs/cache`和`/mnt/nfs/media`。
 
-<!-- link definitions -->
-
-[directory-list]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Filesystem/DirectoryList.php

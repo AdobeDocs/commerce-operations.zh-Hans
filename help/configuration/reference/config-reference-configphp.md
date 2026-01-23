@@ -2,9 +2,9 @@
 title: config.php引用
 description: 了解Adobe Commerce配置的config.php文件值和部分。 发现模块、范围、系统设置和部署最佳实践。
 exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '156'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 1%
 ]
 ```
 
-了解有关[模块]的详细信息。
+了解有关[模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html)的详细信息。
 
 ## 范围
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 ]
 ```
 
-了解有关[Commerce作用域][scopes]的更多信息。
+了解有关[Commerce作用域](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings)的更多信息。
 
 ## 系统
 
@@ -120,10 +120,5 @@ ht-degree: 1%
 ]
 ```
 
-了解有关[主题]的更多信息。
+了解有关[主题](https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/)的更多信息。
 
-<!-- link definitions -->
-
-[模块]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=zh-Hans
-[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=zh-Hans#scope-settings
-[主题]: https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/
