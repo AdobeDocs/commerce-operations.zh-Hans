@@ -2,7 +2,7 @@
 title: 使用AWS ElastiCache配置Redis
 description: 对于在EC2上托管的Commerce实例，了解如何使用AWS ElastiCache代替本地Redis实例。 了解命令行设置、配置选项和验证技术。
 feature: Configuration, Cache
-source-git-commit: 908796587e78b80d699354c0506ca948d0f37518
+source-git-commit: b66479ee1350d92c1d59212283222e5068c263a6
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 先决条件
 
-- **创建Redis OSS无服务器缓存** — 从AWS管理控制台中，在EC2实例的同一区域和VPC中创建Redis缓存。 有关说明，请参阅[AWS Elasticache文档]&#x200B;(https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/GettingStarted.serverless-redis.step1.html)。
+- **创建Redis OSS无服务器缓存** — 从AWS管理控制台中，在EC2实例的同一区域和VPC中创建Redis缓存。 有关说明，请参阅[AWS Elasticache文档](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/GettingStarted.serverless-redis.step1.html)。
 
 - **验证与您的EC2 Commerce实例的连接**
 
