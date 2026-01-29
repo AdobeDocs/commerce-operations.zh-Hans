@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: cb39f5a778ee8af49823f45704d0bb68a13fbf08
+source-git-commit: 9eb3461ef13e9d2572a50733e08f4c6d3af547e3
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ QPT v1.1.75包含以下修补程序：
 1. **ACSD-68289**：修复了以下问题：如果所有可搜索字段总体满足最低匹配条件，则全文搜索现在返回匹配产品，而不是要求条件由单个字段满足。
 1. **ACSD-68359**：修复了在使用&#x200B;**[!UICONTROL Pick in Store]**&#x200B;结账期间选择商店时，当购物车中有许多产品时，由于URL较长而导致选择不再失败的问题。 以前，这触发了414错误，该错误是由商店销售期间生成的过长URL导致的。
 1. **ACSD-68451**：修复了以下多个网站的问题：公司管理员登录一个网站，在另一个网站上创建不相关的公司，但错误地关联到该不相关的公司。
-1. **ACSD-68490**：修复了在创建可配置产品期间受限管理员用户看到&#x200B;**[!UICONTROL Add New Attribute]**&#x200B;按钮的问题。
+1. **ACSD-68490**：在可配置产品创建期间对受限管理员可见的&#x200B;**[!UICONTROL Add New Attribute]**&#x200B;按钮。
 1. **ACSD-68517**：修复了目录和目录搜索页面上的表单重新提交错误。
 1. **ACSD-68573**：修复了类别权限未正确应用于客户愿望清单项目的问题。 修复后，在Web和GraphQL中均可正确显示愿望清单项目并进行分页。
 1. **ACSD-68615**：修复了当处理的组合缺少订单ID时，库存预留补偿CLI显示异常的问题。
