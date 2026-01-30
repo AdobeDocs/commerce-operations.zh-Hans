@@ -31,7 +31,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c73feb1bb1d8e11220482f5ea51fa4427ecee201">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68490">ACSD-68490的QPT 1.1.75修复程序的详细说明：在可配置产品创建</a>期间，受限制的管理员用户会看到“添加新属性”按钮。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68490">ACSD-68490的QPT 1.1.75修复程序的详细说明：在可配置产品创建</a>期间，受限制的管理员用户会看到“添加新属性”按钮。</p>
 </td>
       <td>
         新主题qpt
@@ -53,7 +53,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/overview">Overview： Quality Patches Tool (QPT) v1.1.75</a>。</p>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/overview">Overview： Quality Patches Tool (QPT) v1.1.75</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -75,7 +75,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule">Commerce修补程序发布计划</a>以反映2026年发布计划。</p>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/schedule">Commerce修补程序发布计划</a>以反映2026年发布计划。</p>
 </td>
       <td>
         技术，反馈
@@ -105,7 +105,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d45a1ea4357f3f14c5d6133225f0d74dee84c9a9">提交</a></td>
     </tr>
     <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements">中的编辑器依赖关系</a>系统要求<br /> — 对于核心版本2.4.4-2.4.6（基础版本和修补程序版本）：已更新到v2.2.26.<br /> — 对于2.4.7+（基础版本和修补程序包括2.4.8和2.4.9-alpha版本）：已更新到v2.9.3。</p>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">中的编辑器依赖关系</a>系统要求<br /> — 对于核心版本2.4.4-2.4.6（基础版本和修补程序版本）：已更新到v2.2.26.<br /> — 对于2.4.7+（基础版本和修补程序包括2.4.8和2.4.9-alpha版本）：已更新到v2.9.3。</p>
 </td>
       <td>
         技术
@@ -127,7 +127,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-65935-customerorders-graphql-query-returned-an-internal-server-error-when-a-product-was-deleted">对QPT 1.1.67版本</a>中ACSD-65935修补程序修复的问题的详细说明。</p>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-65935-customerorders-graphql-query-returned-an-internal-server-error-when-a-product-was-deleted">对QPT 1.1.67版本</a>中ACSD-65935修补程序修复的问题的详细说明。</p>
 </td>
       <td>
         新主题qpt
@@ -135,7 +135,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8921d17196230f97b6f940621e8236c5d85e1b9f">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68190">ACSD-68190的QPT 1.1.73修复程序的详细说明：折扣不适用，应用的折扣在GraphQL购物车视图响应中无法正确显示，删除优惠券折扣</a>时已删除非优惠券折扣。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68190">ACSD-68190的QPT 1.1.73修复程序的详细说明：折扣不适用，应用的折扣在GraphQL购物车视图响应中无法正确显示，删除优惠券折扣</a>时已删除非优惠券折扣。</p>
 </td>
       <td>
         新主题qpt
@@ -157,7 +157,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html">系统要求</a>文档中添加了编辑器2.9作为Adobe Commerce 2.4.9、2.4.8和2.4.7的支持版本。</p>
+      <td><p>在<a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans">系统要求</a>文档中添加了编辑器2.9作为Adobe Commerce 2.4.9、2.4.8和2.4.7的支持版本。</p>
 </td>
       <td>
         技术
@@ -179,7 +179,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-74/acsd-68499">ACSD-68499的QPT 1.1.74修复的详细说明：更新数量超过可用库存量时，GraphQL updateCartItems突变返回不正确的成功响应，导致数量和总数虚增</a>。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-74/acsd-68499">ACSD-68499的QPT 1.1.74修复的详细说明：更新数量超过可用库存量时，GraphQL updateCartItems突变返回不正确的成功响应，导致数量和总数虚增</a>。</p>
 </td>
       <td>
         新主题qpt
