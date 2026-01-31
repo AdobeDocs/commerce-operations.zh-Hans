@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68615">ACSD-68615的QPT 1.1.75修复的详细说明：如果处理的组合缺少订单ID</a>，则库存预留补偿CLI将显示异常。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68615">ACSD-68615的QPT 1.1.75修复的详细说明：如果处理的组合缺少订单ID</a>，则库存预留补偿CLI将显示异常。</p>
 </td>
       <td>
         新主题qpt
