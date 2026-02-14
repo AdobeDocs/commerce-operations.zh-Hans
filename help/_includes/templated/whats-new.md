@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68517">ACSD-68517的QPT 1.1.75修复的详细说明：修复了“目录”和“目录搜索”页面</a>上的表单重新提交错误。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68517">ACSD-68517的QPT 1.1.75修复的详细说明：修复了“目录”和“目录搜索”页面</a>上的表单重新提交错误。</p>
 </td>
       <td>
         新主题qpt
@@ -53,7 +53,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8ee6404271170b19ff27a3ab64711061505494b3">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/overview">Overview： Quality Patches Tool (QPT) v1.1.76</a>。</p>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/overview">Overview： Quality Patches Tool (QPT) v1.1.76</a>。</p>
 </td>
       <td>
         新主题qpt

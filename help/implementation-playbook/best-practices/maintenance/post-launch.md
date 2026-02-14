@@ -226,7 +226,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关详细指导，请参阅[维护最佳实践](overview.md)、[个性化](https://business.adobe.com/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)和[功能开发](https://business.adobe.com/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)。
+>有关详细指导，请参阅[维护最佳实践](overview.md)、[个性化](https://business.adobe.com/cn/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)和[功能开发](https://business.adobe.com/cn/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)。
 
 ### 报告和分析
 

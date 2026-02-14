@@ -42,7 +42,7 @@ ht-degree: 1%
     <td>配置站点、商店和存储视图以最大限度地提高站点性能。</td>
   </tr>
   <tr>
-    <td><a href="https://business.adobe.com/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">常见配置问题</a></td>
+    <td><a href="https://business.adobe.com/cn/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">常见配置问题</a></td>
     <td>修复和防止Adobe Commerce站点最常见的五个配置问题。</td>
   </tr>
   <tr>
