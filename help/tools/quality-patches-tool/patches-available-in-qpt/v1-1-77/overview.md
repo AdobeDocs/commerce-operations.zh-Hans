@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 4ee77d46bb32afcfd7fd12cfbc4a5111c247bed4
+source-git-commit: ba9d41179fe253634b9de3e3711c19b6fe797a69
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 QPT v1.1.77包含以下修补程序：
 
 1. **ACSD-63687**：由于[!DNL Redis]缓存清理问题，显示的价格不正确。
-1. **ACSD-68341**：在PDP加载时出现多个`X‑Magento‑Vary`Cookie更新。
+1. **[ACSD-68341](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)**：在PDP加载时出现多个`X‑Magento‑Vary`Cookie更新。
 1. **ACSD-68537**：签出性能因许多客户区段而降低。
 1. **ACSD-68664**：计划的更新预览在自定义存储域上有错误。
 1. **ACSD-68759**：显示出生日期时，在阿拉伯语言环境中创建客户帐户出错。
