@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: aeda6ddd9bac7e5f81329d9bd05ab8957ef2fb76
+source-git-commit: 27356acfca4b9e640478010579b0f419749930d3
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ QPT v1.1.76包含以下修补程序：
 1. **ACSD-69319**：修复了子产品在自定义来源下有库存时，捆绑价格未正确索引的问题。
 1. **ACSD-69325**：修复了修改SKU案例导致店面中产品缺货的问题。
 1. **ACSD-69331**：修复了媒体集中的内容创建者无法创建仅具有`create_folder`权限的文件夹的问题。 修复后，他们可以按预期创建文件夹。
-1. **ACSD-69333**：修复了允许对具有活动计划更新的产品进行SKU更改的问题。 修复后，在活动更新期间禁止SKU更改；保存失败并出现明确错误，并且禁用了管理员SKU字段。 这会阻止MSI。
+1. **[ACSD-69333](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69333.md)**：修复了允许对具有活动计划更新的产品进行SKU更改的问题。 修复后，在活动更新期间禁止SKU更改；保存失败并出现明确错误，并且禁用了管理员SKU字段。 这样可以防止在暂存回滚期间由SKU更改导致的MSI库存不一致。
 1. **ACSD-69541**：修复了以下问题：将管理员中的产品数量减少到低于购物车中已有的产品数量，导致无法通过GraphQL编辑该购物车中的产品数量。
 
 使用左侧的菜单导航到特定的修补程序页面。
