@@ -2,9 +2,11 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: c5d43d79679a1036f207313464f2a43bc197a3b5
+badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"
+badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目(Adobe管理的SaaS基础架构)。"
+source-git-commit: 6024fafd5cbe04455f29c4f5ae74fb4d7eda20d7
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
@@ -18,7 +20,8 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 >[!IMPORTANT]
 >
->Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担保。 Adobe没有义务维护、更正、更新、更改、修改或以其他方式支持(通过Adobe支持服务或其他方式)Beta版。 建议客户谨慎使用，并且不要以任何方式依赖测试版和/或任何随附的文档或材料的正确功能或性能。 Beta版中的功能和API如有更改，恕不另行通知。 因此，使用测试版完全由客户自行承担风险。
+>**法律免责声明**<br/>
+>Beta版本包括预发行版功能和代码，这些功能和代码可能包含缺陷，并“按原样”提供，不提供任何类型的担保。 Adobe自行决定是否公开发布Beta版本。 Adobe没有义务维护、更正、更新、更改、修改、支持(通过Adobe支持服务或其他方式)，或在任何特定日期之前交付此类Beta版本。 如果测试版正式发布，则可能需要遵守其他条款和条件，包括适用的费用。 Beta版本如有更改，恕不另行通知，包括停止使用。 建议客户谨慎使用，并且不要以任何方式依赖测试版的不中断或无错误功能或性能。  因此，使用测试版完全由客户自行承担风险。
 
 ## 参与的优势
 
@@ -28,11 +31,59 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 请参阅以下部分，了解活动Beta程序的列表。
 
+### 全局和每个目录视图的促销规则(公共Beta)
+
+仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目(Adobe管理的SaaS基础架构)。"}
+
+Adobe Commerce Optimizer引入了一种通过灵活范围定义促销规则的功能，允许商家跨所有目录视图应用规则，或将其范围限定到特定的目录视图。 此功能简化了针对经营多个店面、品牌或语言的商家的促销规则管理。 目录视图特定的规则允许商家在需要本地化或品牌特定的体验时，为各个渠道定制搜索结果和促销逻辑。 如果存在特定于目录视图的规则，则这些规则将覆盖该视图的全局规则，从而提供精确控制，同时保持高效的配置管理。
+
+**主要优势**
+
+- 在所有目录视图中全局定义促销规则。
+- 当需要本地化体验时，覆盖特定目录视图的规则。
+- 减少跨店面的配置重复。
+- 提高多品牌和多语言商务实施的可扩展性。
+
+此功能提高了促销灵活性和运营效率，帮助商家大规模提供更相关的产品发现体验。 若要了解更多信息，请参阅[促销规则](https://experienceleague.adobe.com/en/docs/commerce/optimizer/merchandising/rules/add)。
+
+>[!NOTE]
+>
+>Beta参与者需要重新创建任何现有的促销规则，以利用新的目录视图范围。
+
+若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
+
+### 全局和按目录查看产品推荐(公共Beta)
+
+仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目(Adobe管理的SaaS基础架构)。"}
+
+Adobe Commerce Optimizer引入了对产品推荐配置的增强控制，使商家能够在所有目录视图间全局定义推荐单位，或者专门针对各个目录视图定义推荐单位。
+
+此功能简化了针对经营多个店面、品牌、地区或语言的企业的推荐管理。 商家可以全局创建推荐单元一次，该单元将应用于所有目录视图，从而确保跨渠道的一致产品发现策略。 同时，特定于目录视图的推荐单元允许商家在需要时为特定店面定制体验。
+
+店面参与事件和推荐量度在目录视图级别进行跟踪，从而更准确地了解不同店面的购物者行为。
+
+**主要优势**
+
+- 在所有目录视图中全局配置产品推荐单元。
+- 为本地化的店面体验创建特定于目录视图的建议。
+- 减少跨多品牌或多语言商店的重复配置。
+- 通过目录视图跟踪的量度和事件获得更准确的见解。
+
+此增强功能可帮助商家提供更相关的产品发现体验，同时简化复杂商业环境中的推荐管理。 若要了解更多信息，请参阅[推荐](https://experienceleague.adobe.com/en/docs/commerce/optimizer/manage-results/recommendation-performance)
+
+>[!NOTE]
+>
+>Beta参与者需要重新创建任何现有的推荐单元，以利用新的目录视图范围。
+
+若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
+
 ### 用于App Builder (Public Beta)的数据库存储
 
 [用于App Builder的数据库存储](https://developer.adobe.com/app-builder/docs/guides/app_builder_guides/storage/database)是内置到Adobe Developer App Builder中的新托管、文档样式的数据存储，它为Commerce应用程序提供结构化JSON数据的永久可查询存储。 所有拥有App Builder许可证的客户都可以配置此功能。
 
-### 语义搜索：更智能、上下文感知的购物体验（私有测试版）
+### 语义搜索：更智能、上下文感知的购物体验(Private Beta)
+
+仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目(Adobe管理的SaaS基础架构)。"}
 
 语义搜索是一种电子商务搜索技术，它理解购物者查询后面的&#x200B;*含义*，而不仅仅是确切的单词。 传统基于关键字的搜索在查询包含不熟悉或拼写错误的术语时通常失败，与此不同，这种AI支持的方法使用自然语言处理(NLP)和上下文来解释意图，以提供更相关的结果。
 
@@ -47,9 +98,11 @@ Adobe Commerce测试版程序是一种商户访问预发行版功能和代码、
 
 ### Cloud Automation修补服务(Private Beta)
 
-[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[环境上的](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)Adobe Commerce。
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
 
-2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
+[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[环境上的](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)Adobe Commerce。
+
+2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
 
 - 自动安装修补程序
 - 回滚恢复
@@ -64,22 +117,13 @@ Beta版包括以下功能：
 
 >[!NOTE]
 >
->由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
+>由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
 
 要参与此测试版，请完成并提交[Cloud Automation Patching Service - Beta注册表单](https://forms.office.com/r/3Wfxj5nPdB)。
 
-### IBM Sterling Order Management系统集成(Private Beta)
-
-借助适用于IBM Sterling Order Management的集成加速器，Adobe Commerce客户可以开始使用由IBM Sterling OMS提供支持的高级订单管理功能。 通过此集成，商家可以：
-
-- 实时了解客户的库存水平和准确的交付日期。
-- 基于可配置规则的订单自动来源补充，因此您可以优化履行网络和库存。
-- 通过单个仪表板跨渠道统一查看订单，以便您的支持团队能够提供卓越的服务并快速识别和处理异常。
-- 简化退货管理的模板化退货管理流程。
-
-要参与此测试版，请向[sbieber@adobe.com](mailto:sbieber@adobe.com)发送电子邮件请求。
-
 ### Adobe Commerce基础(公共Alpha/Beta)
+
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
 
 每个Adobe Commerce Foundation Alpha和测试版都包含在计划发布日期前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能区域：
 
@@ -88,7 +132,7 @@ Beta版包括以下功能：
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/home)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
