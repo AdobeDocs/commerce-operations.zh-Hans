@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 9d24eeeeedc02e2e086560b5f18baa4a1a61b972
+source-git-commit: 9b73f6e893a2d68029237407fa525e4d001960e9
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ QPT v1.1.76包含以下修补程序：
 1. **[ACSD-69129](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69129.md)**：修复了以下问题：在尝试通过[!DNL REST] API更新辅助网站的层价格时，删除默认基本网站并使用辅助网站作为默认网站会导致错误。
 1. **ACSD-69203**：修复了在类别条件中列出了多个类别时，**[!UICONTROL Products List]**&#x200B;构件返回错误结果的问题。
 1. **ACSD-69261**：修复了在部分发票中对`times_used`属性的处理不正确以及剩余数量取消方案中，配置为每位客户单次使用的购物车价格规则优惠券被多次重复使用的问题。
-1. **ACSD-69308**：修复了在网站级别（而不是在`special_price`）设置&#x200B;**[!UICONTROL All Store Views]**&#x200B;时，目录价格规则不适用的问题。 修复之后，通过首先检查网站的默认商店，可正确应用目录价格规则。
+1. **[ACSD-69308](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308.md)**：修复了在网站级别（而不是在`special_price`）设置&#x200B;**[!UICONTROL All Store Views]**&#x200B;时，目录价格规则不适用的问题。
 1. **ACSD-69319**：修复了子产品在自定义来源下有库存时，捆绑价格未正确索引的问题。
 1. **[ACSD-69325](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69325.md)**：修复了修改SKU案例导致店面中产品缺货的问题。
 1. **ACSD-69331**：修复了媒体集中的内容创建者无法创建仅具有`create_folder`权限的文件夹的问题。 修复后，他们可以按预期创建文件夹。
