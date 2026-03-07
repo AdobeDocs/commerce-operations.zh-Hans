@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308">ACSD-69308的QPT 1.1.76修复的详细说明：当<code class="language-plaintext highlighter-rouge">special_price</code>仅在网站级别设置（而不是在“所有商店视图”）时，目录价格规则不适用。 修复之后，通过首先检查网站的默认商店</a>，可以正确应用目录价格规则。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308">ACSD-69308的QPT 1.1.76修复的详细说明：当<code class="language-plaintext highlighter-rouge">special_price</code>仅在网站级别设置（而不是在“所有商店视图”）时，目录价格规则不适用。 修复之后，通过首先检查网站的默认商店</a>，可以正确应用目录价格规则。</p>
 </td>
       <td>
         新主题qpt
@@ -31,7 +31,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/db07a5d6f991ff36536a4365ee88fa25062dbe43">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69541">ACSD-69541的QPT 1.1.76修复程序的详细说明：将管理员中的产品数量减少到低于购物车中已有的产品数量，将无法通过GraphQL</a>编辑该购物车中的产品数量。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69541">ACSD-69541的QPT 1.1.76修复程序的详细说明：将管理员中的产品数量减少到低于购物车中已有的产品数量，将无法通过GraphQL</a>编辑该购物车中的产品数量。</p>
 </td>
       <td>
         新主题qpt
@@ -39,7 +39,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b2b801b88aee7fc6c275be3fb32a2e75bbe6f20d">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020">ACSD-69020的QPT 1.1.77修复程序的详细说明：当子产品与过滤器</a>匹配时，页面生成器轮播中会显示可配置的产品。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020">ACSD-69020的QPT 1.1.77修复程序的详细说明：当子产品与过滤器</a>匹配时，页面生成器轮播中会显示可配置的产品。</p>
 </td>
       <td>
         新主题qpt
