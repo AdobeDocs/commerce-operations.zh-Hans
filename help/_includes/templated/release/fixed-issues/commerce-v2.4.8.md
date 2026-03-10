@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1f377ab6e4dcdd2d350366f3889b8befd233474b
+source-git-commit: 4f2ca409bbad8b399e61577484a6e0d5a549d5c3
 workflow-type: tm+mt
-source-wordcount: '27924'
+source-wordcount: '27921'
 ht-degree: 0%
 
 ---
@@ -337,7 +337,7 @@ _AC-9843 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0c53b
 
 _ACP2E-2687_
 
-#### 存储视图名称中的撇号将替换为&amp;#039；
+#### 存储视图名称中的撇号已替换为&#39;
 
 网格的存储视图过滤器现在可正确显示撇号
 
@@ -1971,7 +1971,7 @@ _AC-8353 - [GitHub问题](https://github.com/magento/magento2/issues/37253) - [G
 
 _AC-8356 - [GitHub问题](https://github.com/magento/magento2/issues/37250) - [GitHub代码贡献](https://github.com/magento/magento2/pull/37000)_
 
-#### editorconfig语法中的空格中断`[&lbrace;composer,auth&rbrace;.json]`的规则
+#### editorconfig语法中的空格中断`[{composer,auth}.json]`的规则
 
 在修复了editorconfig中的语法错误后，系统现在可以正确将4空格缩进应用于composer和auth.json文件。 以前，由于editorconfig语法中存在空格，因此这些文件使用2空格缩进的格式不正确。
 
@@ -2127,7 +2127,7 @@ _ACP2E-2642 - [GitHub代码贡献](https://github.com/magento/magento2/commit/ba
 
 _ACP2E-2653 - [GitHub代码贡献](https://github.com/magento/magento2/commit/12e071c3)_
 
-#### 包含价格过滤器`&lbrace;from:&quot;0&quot;&rbrace;`的GraphQL产品调用未返回任何结果
+#### 包含价格过滤器`{from:"0"}`的GraphQL产品调用未返回任何结果
 
 以前，使用零价格过滤器的graphql产品搜索由于抛出异常，根本没有返回任何结果。 现在，搜索会按预期返回结果。
 
@@ -2800,7 +2800,7 @@ _LYNX-464_
 
 _LYNX-469_
 
-#### 产品属性>商标简短形式&amp;amp；trade；返回为&amp;amp；trade；
+#### 产品属性>商标简短形式™返回为™
 
 解决了GraphQL API的产品名称存在的字符编码问题
 
