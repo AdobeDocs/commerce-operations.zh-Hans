@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 7dd35627836160bf1e892ea920a21ddd107642ad
+source-git-commit: 5ad8f9ce930ca8484c355561f8bfa2f19dba3e9c
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,9 @@ QPT v1.1.77包含以下修补程序：
 1. **ACSD-69016**：不同时区的网站不适用特殊价格。
 1. **[ACSD-69020](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020.md)**：修复了当子产品与筛选条件匹配时，可配置产品会出现在[!DNL Page Builder]产品轮播中的问题。
 1. **ACSD-69237**： `sales_*_async_insert` cron作业每次运行仅处理100个条目。
+1. **ACSD-69351**：修复了在不正确的网站上显示礼品卡余额和到期日期的问题。
 1. **ACSD-69311**：从发票中部分退款后，修复贷项通知单中计税不正确的问题。
-1. **ACSD-69351**：在不正确的网站上显示的礼品卡余额和到期日期。
+1. **ACSD-69494**：使用`is_online`修复异步退款请求不会触发联机退款。
 1. **[ACSD-69494](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)**：使用`is_online`修复异步退款请求不会触发联机退款。
 
 使用左侧的菜单导航到特定的修补程序页面。
