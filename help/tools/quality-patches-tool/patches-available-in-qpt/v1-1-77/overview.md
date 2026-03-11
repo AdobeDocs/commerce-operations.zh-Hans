@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 5ad8f9ce930ca8484c355561f8bfa2f19dba3e9c
+source-git-commit: fa839814adf83d2a22840e13d4d70540270269b1
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,9 @@ QPT v1.1.77包含以下修补程序：
 1. **ACSD-68537**：签出性能因许多客户区段而降低。
 1. **[ACSD-68664](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68664.md)**：计划的更新预览在自定义存储域上有错误。
 1. **ACSD-68759**：显示出生日期时，在阿拉伯语言环境中创建客户帐户出错。
+1. **ACSD-68892**：可缓存页面的[!DNL Fastly]缓存行为不一致。
+1. **[ACSD-69016](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69016.md)**：修复了不同时区的网站未应用特价的问题。
+1. **ACSD-69020**：当子产品与筛选器匹配时，[!UICONTROL Page Builder]轮播中显示可配置的产品。
 1. **[ACSD-68892](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68892.md)**：修复了可缓存页面的[!DNL Fastly]缓存行为不一致的问题。
 1. **ACSD-69016**：不同时区的网站不适用特殊价格。
 1. **[ACSD-69020](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020.md)**：修复了当子产品与筛选条件匹配时，可配置产品会出现在[!DNL Page Builder]产品轮播中的问题。
