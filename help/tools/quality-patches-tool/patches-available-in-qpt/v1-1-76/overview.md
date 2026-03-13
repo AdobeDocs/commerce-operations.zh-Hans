@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: f56050886f28692286c42102222dfb580e52aef1
+source-git-commit: d852c8dc40d061b878daf25aac0c7cf57628954c
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,7 @@ QPT v1.1.76包含以下修补程序：
 1. **[ACSD-68410](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-68410.md)**：修复了为可转让报价下订单时错误地添加或将其他购物车行合并到报价的问题。 现在，产品在退出可协商报价结账的最后一步后正确添加到购物车中。
 1. **ACSD-69086**：修复了cron作业无法清除changelog表，在处理大量数据时导致[!DNL Galera Cluster]崩溃的问题。
 1. **ACSD-69115**：修复了在管理分配给非默认网站的客户的购物车时，没有向管理员用户显示购物车错误的问题。
+1. **[ACSD-69203](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69203.md)**：修复了在类别条件中列出了多个类别时，**[!UICONTROL Products List]**&#x200B;构件返回错误结果的问题。
 1. **[ACSD-69129](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69129.md)**：修复了以下问题：在尝试通过[!DNL REST] API更新辅助网站的层价格时，删除默认基本网站并使用辅助网站作为默认网站会导致错误。
 1. **ACSD-69203**：修复了在类别条件中列出了多个类别时，**[!UICONTROL Products List]**&#x200B;构件返回错误结果的问题。
 1. **[ACSD-69261](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69261.md)**：修复了在部分发票中对`times_used`属性的处理不正确以及剩余数量取消方案中，配置为每位客户单次使用的购物车价格规则优惠券被多次重复使用的问题。
