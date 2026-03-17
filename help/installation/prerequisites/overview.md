@@ -2,9 +2,9 @@
 title: 内部部署安装先决条件
 description: 详细了解Adobe Commerce的内部安装所需的软件依赖项。
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: db2256f5327897a4376a0d038ce697e8f93235af
+source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '350'
 ht-degree: 1%
 
 ---
@@ -82,12 +82,12 @@ mysql -u <database root user or database owner name> -p
 mysql -u magento -p
 ```
 
-以下结果指示您正在运行的版本。
+在命令输出中，`Server version`行指示您正在运行的版本。 确认它匹配要安装的Adobe Commerce版本支持的版本。
 
 ```
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 871
-Server version: 5.7.9 MySQL Community Server (GPL)
+Server version: <supported MySQL version> MySQL Community Server (GPL)
 
 Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
 

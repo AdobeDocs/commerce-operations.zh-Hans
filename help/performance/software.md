@@ -3,9 +3,9 @@ title: 软件建议
 description: 了解Adobe Commerce的软件要求和建议。 探索生产支持的版本和配置最佳实践。
 feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 我们需要以下软件用于[!DNL Commerce]的生产实例：
 
 * [PHP](../installation/system-requirements.md)
-* Nginx和[PHP-FPM](https://php-fpm.org/)
+* Nginx和[PHP-FPM](https://www.php.net/manual/en/install.fpm.php)
 * [[!DNL MySQL]](../installation/prerequisites/database/mysql.md)
 * [[!DNL Elasticsearch]或OpenSearch](../installation/prerequisites/search-engine/overview.md)
 
@@ -47,7 +47,7 @@ net.core.somaxconn = 1024
 
 ## PHP
 
-Magento完全支持PHP 7.3和7.4。在配置PHP以获得最大请求处理速度和效率时，需要考虑以下几个因素。
+使用您正在安装的Adobe Commerce版本支持的PHP版本，如[系统要求](../installation/system-requirements.md)中所列。 在配置PHP以获得最大请求处理速度和效率时，需要考虑以下几个因素。
 
 ### PHP扩展
 
@@ -141,7 +141,7 @@ realpath_cache_ttl=7200
 
 #### 字节代码
 
-要在PHP 7上获得[!DNL Commerce]的最大速度，您必须激活OpCache模块并正确对其进行配置。 建议为模块设置以下设置：
+要使[!DNL Commerce]达到最大速度，您必须激活OpCache模块并正确对其进行配置。 建议为模块设置以下设置：
 
 ```text
 opcache.memory_consumption=512
@@ -184,15 +184,14 @@ Magento完全支持Nginx和Apache Web服务器。 [!DNL Commerce]在`<magento_ho
 
 | Web服务器 | 属性名称 | 位置 | 相关信息 |
 |--- | --- | --- | ---|
-| 恩金克斯 | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [调整NGINX以提高性能](https://www.nginx.com/blog/tuning-nginx/) |
-| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache性能调整](https://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
+| 恩金克斯 | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [调整NGINX以提高性能](https://www.f5.com/company/blog/nginx/tuning-nginx) |
 | Apache 2.4 | `MaxRequestWorkers` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Apache MPM公共指令](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#maxrequestworkers) |
 
 ## [!DNL MySQL]
 
 本文档未提供深入的[!DNL MySQL]优化说明，因为每个存储和环境都不同，但我们可以提出一些常规建议。
 
-对[!DNL MySQL] 5.7.9进行了许多改进。我们确信已使用良好的默认设置分发[!DNL MySQL]。 最关键的设置是：
+最近的[!DNL MySQL]版本包括许多性能改进，并且通常使用良好的默认设置分发[!DNL MySQL]。 最关键的设置是：
 
 | 参数 | 默认 | 描述 |
 |--- | --- | ---|
@@ -207,7 +206,7 @@ Magento强烈建议使用[!DNL Varnish]作为商店的整页缓存服务器。 P
 
 在Web层前面的单独服务器上安装[!DNL Varnish]。 它应接受所有传入请求并提供缓存的页面副本。 为了允许[!DNL Varnish]有效地处理安全页面，可以将SSL终止代理置于[!DNL Varnish]之前。 Nginx可用于此目的。
 
-[!DNL Commerce]为[!DNL Varnish]（版本4和5）分发一个示例配置文件，其中包含所有推荐的性能设置。 其中最重要的性能包括：
+[!DNL Commerce]分发支持的[!DNL Varnish]版本的示例配置文件，其中包含所有建议的性能设置。 其中最重要的性能包括：
 
 * **后端运行状况检查**&#x200B;轮询[!DNL Commerce]服务器以确定它是否及时响应。
 * **宽限模式**&#x200B;允许您指示[!DNL Varnish]在超出[!DNL Commerce]的生存时间(TTL)时段后保留缓存中的对象并提供此过时内容（如果不正常或尚未获取新内容）。
@@ -221,7 +220,7 @@ Magento强烈建议使用[!DNL Varnish]作为商店的整页缓存服务器。 P
 
 如果您的网站不需要部署大量区域设置，并且您的服务器与大多数客户位于同一区域，则通过将资产存储在[!DNL Varnish]中而不是使用CDN，您可能会发现以较低的成本获得了显着的性能提升。
 
-要将您的资产存储在[!DNL Varnish]中，请在`default.vcl`为[!DNL Commerce] 5生成的[!DNL Varnish]文件中添加以下VCL条目。
+要将您的资产存储在[!DNL Varnish]中，请在`default.vcl`生成的[!DNL Commerce]文件中添加以下VCL条目。
 
 在`if`子例程中PURGE请求的`vcl_recv`语句的末尾，添加：
 
