@@ -99,7 +99,7 @@ Adobe在2.4.8版本中添加了对MySQL 8.4的支持。
    >
    >如果不将`restrict_fk_on_non_standard_key`的值更改为`OFF`，则在导入期间将收到以下错误：
    >
-   ```sql
+   >```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
 1. 重新启动MySQL服务器。

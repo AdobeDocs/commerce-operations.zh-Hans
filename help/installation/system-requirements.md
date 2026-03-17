@@ -27,7 +27,7 @@ Adobe仅支持下表所述的系统要求组合。 例如，2.4.5已通过MariaD
 
 >[!BEGINTABS]
 
->云端上的[!TAB Commerce]
+>[!TAB 云端上的 Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
@@ -66,7 +66,7 @@ opensearch:
 
 Adobe建议您验证是否出于性能原因启用了[PHP OPcache](https://www.php.net/manual/en/book.opcache.php)。 OPcache在许多PHP分发中启用。
 - **对于云基础架构部署上的Adobe Commerce**，默认情况下会安装`opcache`扩展。
-- 对于Adobe Commerce内部部署：****
+- 对于Adobe Commerce内部部署：**&#x200B;**
    - [验证是否已安装PHP OPcache扩展](prerequisites/php-settings.md#verify-php-is-installed)。
    - 有关性能设置的特定指导，请参阅[性能最佳实践](../performance/software.md#php-settings)指南中的&#x200B;*PHP设置*&#x200B;的软件建议。
 
@@ -91,7 +91,7 @@ PHPUnit v9（作为命令行工具）。
 
 >[!BEGINTABS]
 
->云端上的[!TAB Commerce]
+>[!TAB 云端上的 Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
