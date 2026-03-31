@@ -17,16 +17,16 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果您遇到[错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)，或者在Marketplace选项卡中未看到[!UICONTROL Access Keys]部分，则您可能无权访问该包，或者访问权利已过期，因为您的帐户上有未结发票。
+>如果您遇到[错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html?lang=zh-Hans)，或者在Marketplace选项卡中未看到[!UICONTROL Access Keys]部分，则您可能无权访问该包，或者访问权利已过期，因为您的帐户上有未结发票。
 >
 >* 如果您是该帐户的主要联系人，请确保该帐户中不存在未结发票。
->* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，则主要联系人应联系[Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)寻求帮助。
+>* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，则主要联系人应联系[Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)寻求帮助。
 
 要创建身份验证密钥，请执行以下操作：
 
 >[!NOTE]
 >
->自2022年8月起，帐户所有者必须拥有Adobe ID并确保它已关联到其Commerce帐户。 如果帐户所有者没有Adobe ID，则必须先创建一个，并将其链接到其Commerce帐户，然后才能生成身份验证密钥： [创建并访问您的Commerce帐户](https://experienceleague.adobe.com/en/docs/commerce-admin/start/commerce-account/commerce-account-create#create-a-commerce-account)
+>自2022年8月起，帐户所有者必须拥有Adobe ID并确保它已关联到其Commerce帐户。 如果帐户所有者没有Adobe ID，则必须先创建一个，并将其链接到其Commerce帐户，然后才能生成身份验证密钥： [创建并访问您的Commerce帐户](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/commerce-account/commerce-account-create#create-a-commerce-account)
 
 1. 登录到[Commerce Marketplace](https://commercemarketplace.adobe.com/)。 如果没有帐户，请单击&#x200B;**注册**。
 
