@@ -2,9 +2,9 @@
 title: 高级内部部署安装
 description: 了解Adobe Commerce内部部署的高级安装方案。 发现复杂的配置和自定义设置选项。
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2484'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 您可以在安装期间或安装后创建管理员用户。 如果在安装期间创建用户，则需要所有管理员凭据变量。 请参阅[本地主机安装示例](#sample-localhost-installations)。
 
-下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
+下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
@@ -133,13 +133,13 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |
-| `--base-url` | 用于以下列任何格式访问管理员和店面的基本URL：<br><br>`http[s]://<host or ip>/<your install dir>/`。<br><br>**注意：**&#x200B;方案(http://或https://)和尾随斜杠都是必需的。<br><br>`<your install dir>`是安装Adobe Commerce软件的docroot相对路径。 根据您设置Web服务器和虚拟主机的方式，路径可能是magento2或为空。<br><br>访问Adobe Commerce或MagenAdobe Commerceuse `http://127.0.0.1/<your install dir>/`或`http://127.0.0.1/<your install dir>/`。<br><br>- `{{base_url}}`，表示由虚拟主机设置或Docker等虚拟化环境定义的基本URL。 例如，如果您设置了主机名为`magento.example.com`的虚拟主机，则可以使用`--base-url={{base_url}}`安装软件，并使用类似`http://magento.example.com/admin`的URL访问管理员。 | 是 |
+| `--base-url` | 用于以下列任何格式访问管理员和店面的基本URL：<br><br>`http[s]://<host or ip>/<your install dir>/`。<br><br>**注意：**&#x200B;方案（http://或https://）和尾随斜杠都是必需的。<br><br>`<your install dir>`是安装Adobe Commerce软件的docroot相对路径。 根据您设置Web服务器和虚拟主机的方式，路径可能是magento2或为空。<br><br>访问Adobe Commerce或MagenAdobe Commerceuse `http://127.0.0.1/<your install dir>/`或`http://127.0.0.1/<your install dir>/`。<br><br>- `{{base_url}}`，表示由虚拟主机设置或Docker等虚拟化环境定义的基本URL。 例如，如果您设置了主机名为`magento.example.com`的虚拟主机，则可以使用`--base-url={{base_url}}`安装软件，并使用类似`http://magento.example.com/admin`的URL访问管理员。 | 是 |
 | `--backend-frontname` | 用于访问管理员的统一资源标识符(URI)。 您可以忽略此参数，以便应用程序使用以下模式为您生成随机URI <code>admin_jkhgdfq</code>。<br><br>出于安全考虑，我们建议使用随机URI。 黑客或恶意软件更难利用随机URI。<br><br>URI显示在安装结束时。 您可以稍后随时使用`bin/magento info:adminuri`命令显示它。<br><br>如果您选择输入值，我们建议您不要使用诸如admin、backend之类的常用词。 管理员URI只能包含字母数字值和下划线字符(`_`)。 | 否 |
-| `--db-host` | 使用以下任一项：<br><br> — 数据库服务器的完全限定主机名或IP地址。<br><br>- `localhost`（默认）或`127.0.0.1`（如果数据库服务器与Web服务器位于同一主机上）。localhost表示MySQL客户端库使用UNIX套接字连接到数据库。 `127.0.0.1`导致客户端库使用TCP协议。 有关套接字的详细信息，请参阅[PHP PDO_MYSQL文档](https://www.php.net/manual/en/ref.pdo-mysql.php)。<br><br>**注意：**&#x200B;您可以选择在其主机名中指定数据库服务器端口，如www.example.com:9000 | 是 |
+| `--db-host` | 使用以下任一项：<br><br> — 数据库服务器的完全限定主机名或IP地址。<br><br>- `localhost`（默认）或`127.0.0.1`（如果数据库服务器与Web服务器位于同一主机上）。localhost表示MySQL客户端库使用UNIX套接字连接到数据库。 `127.0.0.1`导致客户端库使用TCP协议。 有关套接字的详细信息，请参阅[PHP PDO_MYSQL文档](https://www.php.net/manual/en/ref.pdo-mysql.php)。<br><br>**注意：**&#x200B;您可以选择在其主机名中指定数据库服务器端口，如`www.example.com:9000` | 是 |
 | `--db-name` | 要在其中安装数据库表的数据库实例的名称。<br><br>默认值为`magento2`。 | 是 |
 | `--db-user` | 数据库实例所有者的用户名。<br><br>默认值为`root`。 | 是 |
 | `--db-password` | 数据库实例所有者的密码。 | 是 |
-| `--db-prefix` | 仅当在已有Adobe Commerce表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 某些客户有多个Adobe Commerce或MagenAdobe Commerceserver，在同一数据库中包含所有表。<br><br>前缀长度最多可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项使这些客户能够与多个Adobe Commerce安装共享数据库服务器 |
+| `--db-prefix` | 仅当在已有Adobe Commerce表的数据库实例中安装数据库表时才使用。<br><br>在这种情况下，请使用前缀来标识此安装的表。 某些客户有多个Adobe Commerce或MagenAdobe Commerceserver，在同一数据库中包含所有表。<br><br>前缀长度最多可为5个字符。 它必须以字母开头，并且只能包含字母、数字和下划线字符。<br><br>此选项使这些客户能够与多个Adobe Commerce安装共享数据库服务器 | |
 | `--db-ssl-key` | 客户端密钥的路径。 | 否 |
 | `--db-ssl-cert` | 客户端证书的路径。 | 否 |
 | `--db-ssl-ca` | 服务器证书的路径。 | 否 |

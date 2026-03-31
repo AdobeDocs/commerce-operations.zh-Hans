@@ -3,7 +3,7 @@ title: 使用Valkey进行会话存储
 description: 了解如何在Adobe Commerce中为会话存储配置Valkey。 了解设置步骤、配置选项和性能优化技术。
 feature: Configuration, Cache
 exl-id: 986ddb5c-8fc5-4210-8a41-a29e3a7625b7
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 1%
@@ -44,7 +44,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 | session-save-valkey-port | 端口 | Valkey服务器侦听端口。 | 6379 |
 | session-save-valkey-password | 密码 | 如果Valkey服务器要求身份验证，请指定密码。 | 空 |
 | session-save-valkey-timeout | timeout | 连接超时（秒）。 | 2.5 |
-| session-save-valkey-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70)。 |
+| session-save-valkey-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70)。 |  |
 | session-save-valkey-db | 数据库 | 唯一的Valkey数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要信息**：如果对多种类型的缓存使用Valkey，则数据库编号必须不同。 建议将默认缓存数据库编号分配给`0`，将页面缓存数据库编号分配给`1`，将会话存储数据库编号分配给`2`。 | 0 |
 | session-save-valkey-compression-threshold | compression_threshold | 设置为`0`以禁用压缩（建议在`suhosin.session.encrypt = On`时使用）。 | 2048 |
 | session-save-valkey-compression-lib | compress_library | 选项： gzip、lzf、lz4或snappy。 | gzip |

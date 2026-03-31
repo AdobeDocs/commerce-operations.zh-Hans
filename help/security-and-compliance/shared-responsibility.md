@@ -2,7 +2,7 @@
 title: 分担责任的安全性和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: aac78fc95b86951f352a636eef33e0b79b22a183
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Adobe负责云基础架构环境以及核心解决方案代码上的Adobe Commer
 - 在云基础架构上为Adobe Commerce支持的应用程序（如云数据存储和搜索功能）应用服务器级安全性和修补程序
 - 对云基础架构代码的核心Adobe Commerce进行渗透测试和扫描
 - 对公共云服务提供商的身份和访问管理(IAM)解决方案和权限管理（PCI合规性要求）进行半年一次的审查和审核
-- 对授权用户(包括Adobe员工和承包商)进行半年一次的审查和审核（PCI合规性要求）
+- 对授权用户（包括Adobe员工和承包商）进行半年一次的审查和审核（PCI合规性要求）
 - 对备份和恢复功能进行年度测试和文档记录
 - 配置服务器和外围防火墙
 - 在云基础架构存储库上连接和配置Adobe Commerce
@@ -54,7 +54,7 @@ Adobe负责云基础架构环境以及核心解决方案代码上的Adobe Commer
 - 配置生产和暂存环境
 - 评估对平台操作和基础架构的潜在安全威胁
 - 扩展计算、存储、网格和其他资源，如与商户的服务级别协议(SLA)中所述
-- 设置DNS(仅限云基础架构平台基础架构上的Adobe Commerce)
+- 设置DNS（仅限云基础架构平台基础架构上的Adobe Commerce）
 - 测试平台的安全漏洞
 
 Adobe维护用于Adobe Commerce解决方案的基础架构和服务的PCI认证。  商家负责遵守自定义代码、系统和网络流程以及组织。
@@ -711,7 +711,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 持续的基础架构优化 | R |   |
 | 识别和修复慢查询 |     | R |
 | 提交服务请求以安装与安装的Adobe Commerce版本兼容的MariaDB版本 |     | R |
-| 设置和维护特定于商家的数据保留策略(Adobe的数据保留策略在商家协议中定义) |     | R |
+| 设置和维护特定于商家的数据保留策略（Adobe的数据保留策略在商家协议中定义） |     | R |
 
 {style="table-layout:auto"}
 
@@ -793,10 +793,11 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 {style="table-layout:auto"}
 
+>[!NOTE]
 >
 >商家必须使用最新版本的Live Search、产品推荐和支付服务，以确保最高的稳定性、功能和最符合支持资格。
 >Adobe不支持过时的版本，升级可确保您从最新的增强功能和错误修复中受益。
->有关受支持版本的详细信息，请参阅[Commerce服务的产品可用性矩阵](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability#commerce-services)。
+>有关受支持版本的详细信息，请参阅[Commerce服务的产品可用性矩阵](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#commerce-services)。
 
 #### 产品推荐
 
@@ -824,7 +825,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 自定义主题 |  | R |
 | 核心PWA实施 | R |   |
 | 自定义PWA实施 |  | R |
-| 核心AEM EDS实施(Commerce样板) | R |   |
+| 核心AEM EDS实施（Commerce样板） | R |   |
 | 自定义AEM EDS实施 |  | R |
 | 任何其他自定义店面实施 |  | R |
 

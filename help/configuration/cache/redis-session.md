@@ -3,7 +3,7 @@ title: 使用Redis进行会话存储
 description: 了解如何在Adobe Commerce中为会话存储配置Redis。 了解命令行设置、配置选项和性能优化技术。
 feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -37,7 +37,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 | session-save-redis-port | 端口 | Redis服务器侦听端口。 | 6379 |
 | session-save-redis-password | 密码 | 如果Redis服务器要求身份验证，请指定密码。 | 空 |
 | session-save-redis-timeout | timeout | 连接超时（秒）。 | 2.5 |
-| session-save-redis-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70)。 |
+| session-save-redis-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70)。 |  |
 | session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要信息**：如果对多种类型的缓存使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
 | session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩（建议在`suhosin.session.encrypt = On`时使用）。<br>[字符串超过64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18)。 | 2048 |
 | session-save-redis-compression-lib | compress_library | 选项： gzip、lzf、lz4或snappy。 | gzip |

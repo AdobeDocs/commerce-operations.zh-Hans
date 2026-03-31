@@ -2,7 +2,7 @@
 title: 完成先决条件
 description: 通过完成这些先决条件步骤，准备Adobe Commerce项目以进行升级。
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->对于云基础架构Pro项目上的Adobe Commerce，您必须创建[支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)票证，以在暂存环境和生产环境中安装或更新服务。 指示所需的服务更改，并在票证中包含更新的`.magento.app.yaml`和`services.yaml`文件以及PHP版本。 Cloud Infrastructure团队更新项目最多可能需要48小时。 请参阅[支持的软件和服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/cloud-architecture#supported-software-and-services)。
+>对于云基础架构Pro项目上的Adobe Commerce，您必须创建[支持](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)票证，以在暂存环境和生产环境中安装或更新服务。 指示所需的服务更改，并在票证中包含更新的`.magento.app.yaml`和`services.yaml`文件以及PHP版本。 Cloud Infrastructure团队更新项目最多可能需要48小时。 请参阅[支持的软件和服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/cloud-architecture#supported-software-and-services)。
 
 ## 验证是否安装了受支持的搜索引擎
 
@@ -102,6 +102,7 @@ Adobe在2.4.8版本中添加了对MySQL 8.4的支持。
    >```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
+
 1. 重新启动MySQL服务器。
 1. 将备份的数据导入MySQL。
 1. 清理缓存：

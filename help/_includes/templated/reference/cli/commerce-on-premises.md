@@ -1,11 +1,11 @@
 ---
-source-git-commit: e50883135e13621f9668914a260bd5a2bf48641d
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
-source-wordcount: '8232'
+source-wordcount: '8012'
 ht-degree: 1%
 
 ---
-# bin/magento(Adobe Commerce内部部署)
+# bin/magento（Adobe Commerce内部部署）
 
 <!-- All the assigned and captured content is used in the included template -->
 
@@ -30,28 +30,28 @@ ht-degree: 1%
 
 ### 全局选项
 
-#### `--help`，`-h`
+#### `--help`, `-h`
 
 显示给定命令的帮助。 未给出任何命令时，显示list命令的帮助
 
 - 默认： `false`
 - 不接受值
 
-#### `--quiet`，`-q`
+#### `--quiet`, `-q`
 
 不输出任何消息
 
 - 默认： `false`
 - 不接受值
 
-#### `--verbose`，`-v|-vv|-vvv`
+#### `--verbose`, `-v|-vv|-vvv`
 
 增加消息的详细程度：1表示正常输出，2表示更多详细输出，3表示调试
 
 - 默认： `false`
 - 不接受值
 
-#### `--version`，`-V`
+#### `--version`, `-V`
 
 显示此应用程序版本
 
@@ -71,7 +71,7 @@ ht-degree: 1%
 - 默认： `false`
 - 不接受值
 
-#### `--no-interaction`，`-n`
+#### `--no-interaction`, `-n`
 
 不要问任何交互式问题
 
@@ -91,32 +91,32 @@ bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURREN
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--shell`，`-s`
+#### `--shell`, `-s`
 
 壳类型(“bash”、“fish”、“zsh”)
 
 - 需要一个值
 
-#### `--input`，`-i`
+#### `--input`, `-i`
 
 输入令牌的数组（例如COMP_WORDS或argv）
 
 - 默认： `[]`
 - 需要一个值
 
-#### `--current`，`-c`
+#### `--current`, `-c`
 
 光标所在的“输入”数组的索引（例如COMP_CWORD）
 
 - 需要一个值
 
-#### `--api-version`，`-a`
+#### `--api-version`, `-a`
 
 完成脚本的API版本
 
 - 需要一个值
 
-#### `--symfony`，`-S`
+#### `--symfony`, `-S`
 
 已弃用
 
@@ -308,25 +308,25 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--organization-id`，`-o`
+#### `--organization-id`, `-o`
 
 为Adobe IMS配置设置组织ID 。 启用模块时必需
 
 - 接受值
 
-#### `--client-id`，`-c`
+#### `--client-id`, `-c`
 
 为Adobe IMS配置设置客户端ID 。 启用模块时必需
 
 - 接受值
 
-#### `--client-secret`，`-s`
+#### `--client-secret`, `-s`
 
 为Adobe IMS配置设置客户端密钥 启用模块时必需
 
 - 接受值
 
-#### `--2fa`，`-t`
+#### `--2fa`, `-t`
 
 检查Adobe Admin Console中是否为“组织”启用了2FA。 启用模块时必需
 
@@ -403,7 +403,7 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -676,7 +676,7 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--async`，`-a`
+#### `--async`, `-a`
 
 在异步模式下调整图像大小
 
@@ -748,7 +748,7 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--interactive`，`-i`
+#### `--interactive`, `-i`
 
 启用交互模式以设置所有敏感变量
 
@@ -810,21 +810,21 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 - 需要一个值
 
-#### `--lock-env`，`-e`
+#### `--lock-env`, `-e`
 
-锁定值，防止在Admin中进行修改(将保存在app/etc/env.php中)
-
-- 默认： `false`
-- 不接受值
-
-#### `--lock-config`，`-c`
-
-锁定并与其他安装共享值，防止在管理员中进行修改(将保存在app/etc/config.php中)
+锁定值，防止在Admin中进行修改（将保存在app/etc/env.php中）
 
 - 默认： `false`
 - 不接受值
 
-#### `--lock`，`-l`
+#### `--lock-config`, `-c`
+
+锁定并与其他安装共享值，防止在管理员中进行修改（将保存在app/etc/config.php中）
+
+- 默认： `false`
+- 不接受值
+
+#### `--lock`, `-l`
 
 已弃用，请改用 — lock-env选项。
 
@@ -877,14 +877,14 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 强制安装任务
 
 - 默认： `false`
 - 不接受值
 
-#### `--non-optional`，`-d`
+#### `--non-optional`, `-d`
 
 仅安装非可选（默认）任务
 
@@ -970,7 +970,7 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--skip-compilation`，`-s`
+#### `--skip-compilation`, `-s`
 
 跳过清除和重新生成静态内容（生成的代码、预处理的CSS和pub/static/中的资产）
 
@@ -1232,7 +1232,7 @@ bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--arguments`，`-c`
+#### `--arguments`, `-c`
 
 PHPUnit的其他参数。 示例：“ — c” — filter=MyTest&#39;”（无空格）
 
@@ -1295,7 +1295,7 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--overwrite`，`-o`
+#### `--overwrite`, `-o`
 
 覆盖XML文件
 
@@ -1407,7 +1407,7 @@ bin/magento encryption:key:change [-k|--key [KEY]]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--key`，`-k`
+#### `--key`, `-k`
 
 密钥必须为32个字符长的字符串。 如果未提供，将生成随机密钥。
 
@@ -1586,7 +1586,7 @@ bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [-
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 强制订阅指定的事件，即使它尚未在本地定义。
 
@@ -1613,14 +1613,14 @@ bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [-
 - 默认： `[]`
 - 需要一个值
 
-#### `--priority`，`-p`
+#### `--priority`, `-p`
 
 加快此事件的传输。 为需要立即发送的事件指定此选项。 默认情况下，cron每分钟会发送一次事件。
 
 - 默认： `false`
 - 不接受值
 
-#### `--destination`，`-d`
+#### `--destination`, `-d`
 
 此事件的目标。 为应交付到自定义目标的事件指定此选项。
 
@@ -1647,7 +1647,7 @@ bin/magento events:sync-events-metadata [-d|--delete]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--delete`，`-d`
+#### `--delete`, `-d`
 
 删除事件元数据不再需要
 
@@ -1694,13 +1694,13 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--output`，`-o`
+#### `--output`, `-o`
 
 输出文件的路径（包括文件名）。 未指定文件的情况下，默认为stdout。
 
 - 需要一个值
 
-#### `--magento`，`-m`
+#### `--magento`, `-m`
 
 使用 — magento参数解析当前的Magento代码库。 如果指定了目录，则省略参数。
 
@@ -1735,14 +1735,14 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--mode`，`-m`
+#### `--mode`, `-m`
 
 词典保存模式 — “替换” — 用新语言包替换语言包 — “合并” — 合并语言包，默认为“替换”
 
 - 默认： `replace`
 - 需要一个值
 
-#### `--allow-duplicates`，`-d`
+#### `--allow-duplicates`, `-d`
 
 使用 — allow-duplicates参数以允许保存翻译的重复项。 否则，忽略参数。
 
@@ -1773,7 +1773,7 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--backup-code`，`-b`
+#### `--backup-code`, `-b`
 
 进行代码和配置文件备份（不包括临时文件）
 
@@ -2035,7 +2035,7 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--output`，`-o`
+#### `--output`, `-o`
 
 报表文件名
 
@@ -2055,7 +2055,7 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--output`，`-o`
+#### `--output`, `-o`
 
 报表文件名
 
@@ -2075,7 +2075,7 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--output`，`-o`
+#### `--output`, `-o`
 
 报表文件名
 
@@ -2130,7 +2130,7 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--raw`，`-r`
+#### `--raw`, `-r`
 
 原始输出
 
@@ -2150,28 +2150,28 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--complete-orders`，`-c`
+#### `--complete-orders`, `-c`
 
 仅显示完成订单的不一致
 
 - 默认： `false`
 - 不接受值
 
-#### `--incomplete-orders`，`-i`
+#### `--incomplete-orders`, `-i`
 
 仅显示未完成订单的不一致
 
 - 默认： `false`
 - 不接受值
 
-#### `--bunch-size`，`-b`
+#### `--bunch-size`, `-b`
 
 定义将同时加载多少订单
 
 - 默认： `50`
 - 接受值
 
-#### `--raw`，`-r`
+#### `--raw`, `-r`
 
 原始输出
 
@@ -2240,7 +2240,7 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2266,7 +2266,7 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2292,7 +2292,7 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2311,7 +2311,7 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2376,7 +2376,7 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 绕过依赖项检查
 
@@ -2390,7 +2390,7 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 - 默认： `false`
 - 不接受值
 
-#### `--clear-static-content`，`-c`
+#### `--clear-static-content`, `-c`
 
 清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
@@ -2399,7 +2399,7 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2425,7 +2425,7 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 绕过依赖项检查
 
@@ -2439,7 +2439,7 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 - 默认： `false`
 - 不接受值
 
-#### `--clear-static-content`，`-c`
+#### `--clear-static-content`, `-c`
 
 清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
@@ -2448,7 +2448,7 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2490,7 +2490,7 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2518,7 +2518,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--remove-data`，`-r`
+#### `--remove-data`, `-r`
 
 删除模块安装的数据
 
@@ -2553,7 +2553,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 - 默认： `false`
 - 不接受值
 
-#### `--clear-static-content`，`-c`
+#### `--clear-static-content`, `-c`
 
 清除生成的静态视图文件。 如果模块具有静态视图文件，则此为必需字段
 
@@ -2562,7 +2562,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2973,56 +2973,56 @@ bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-wn|--
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--port`，`-p`
+#### `--port`, `-p`
 
 要服务的端口
 
 - 默认： `9501`
 - 接受值
 
-#### `--background`，`-b`
+#### `--background`, `-b`
 
 背景模式标志
 
 - 默认： `0`
 - 接受值
 
-#### `--workerNum`，`-wn`
+#### `--workerNum`, `-wn`
 
 要启动的工作进程数
 
 - 默认： `4`
 - 接受值
 
-#### `--dispatchMode`，`-dm`
+#### `--dispatchMode`, `-dm`
 
 调度到工作进程的连接的模式
 
 - 默认： `3`
 - 接受值
 
-#### `--maxRequests`，`-mr`
+#### `--maxRequests`, `-mr`
 
 重新启动工作进程前的最大请求数
 
 - 默认： `10000`
 - 接受值
 
-#### `--area`，`-a`
+#### `--area`, `-a`
 
 应用程序服务器区域
 
 - 默认： `graphql`
 - 接受值
 
-#### `--magento-init-params`，`-mip`
+#### `--magento-init-params`, `-mip`
 
 magento bootstrap初始化参数
 
 - 默认：“
 - 接受值
 
-#### `--maxWaitTime`，`-mwt`
+#### `--maxWaitTime`, `-mwt`
 
 重新加载后等待工作人员多长时间(例如 配置更改)
 
@@ -3085,7 +3085,7 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -3311,7 +3311,7 @@ Amqp SSL选项(JSON)
 
 - 需要一个值
 
-#### `--skip-db-validation`，`-s`
+#### `--skip-db-validation`, `-s`
 
 如果已指定，则将跳过数据库连接验证
 
@@ -3703,7 +3703,7 @@ Redis服务器用户
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -3722,7 +3722,7 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -3850,7 +3850,7 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -3907,7 +3907,7 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -3964,7 +3964,7 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -3990,7 +3990,7 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4009,7 +4009,7 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4248,7 +4248,7 @@ Amqp SSL选项(JSON)
 
 - 需要一个值
 
-#### `--skip-db-validation`，`-s`
+#### `--skip-db-validation`, `-s`
 
 如果已指定，则将跳过数据库连接验证
 
@@ -4851,7 +4851,7 @@ OpenSearch服务器超时。
 - 默认： `false`
 - 接受值
 
-#### `--interactive`，`-i`
+#### `--interactive`, `-i`
 
 交互式Magento安装
 
@@ -4879,7 +4879,7 @@ Magento安装将以模拟运行模式运行
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4904,7 +4904,7 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--skip-reindex`，`-s`
+#### `--skip-reindex`, `-s`
 
 跳过重新索引
 
@@ -4924,19 +4924,19 @@ bin/magento setup:rollback [-c|--code-file CODE-FILE] [-m|--media-file MEDIA-FIL
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--code-file`，`-c`
+#### `--code-file`, `-c`
 
 var/backups中的代码备份文件的基本名称
 
 - 需要一个值
 
-#### `--media-file`，`-m`
+#### `--media-file`, `-m`
 
 var/备份中的媒体备份文件的基本名称
 
 - 需要一个值
 
-#### `--db-file`，`-d`
+#### `--db-file`, `-d`
 
 var/备份中的数据库备份文件的基本名称
 
@@ -4944,7 +4944,7 @@ var/备份中的数据库备份文件的基本名称
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4970,21 +4970,21 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 以任何模式部署文件。
 
 - 默认： `false`
 - 不接受值
 
-#### `--strategy`，`-s`
+#### `--strategy`, `-s`
 
 使用指定的策略部署文件。
 
 - 默认： `quick`
 - 接受值
 
-#### `--area`，`-a`
+#### `--area`, `-a`
 
 仅为指定区域生成文件。
 
@@ -4998,7 +4998,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 - 默认： `none`
 - 接受多个值
 
-#### `--theme`，`-t`
+#### `--theme`, `-t`
 
 仅为指定的主题生成静态视图文件。
 
@@ -5012,7 +5012,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 - 默认： `none`
 - 接受多个值
 
-#### `--language`，`-l`
+#### `--language`, `-l`
 
 仅生成指定语言的文件。
 
@@ -5026,7 +5026,7 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 - 默认： `none`
 - 接受多个值
 
-#### `--jobs`，`-j`
+#### `--jobs`, `-j`
 
 使用指定的作业数启用并行处理。
 
@@ -5199,7 +5199,7 @@ SSL连接的基本URL。 已弃用，请将config:set与路径web/secure/base_ur
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5218,7 +5218,7 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5270,7 +5270,7 @@ Magento安装将以模拟运行模式运行
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5319,13 +5319,13 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 - 接受值
 
-#### `--output`，`-o`
+#### `--output`, `-o`
 
 输出路径
 
 - 接受值
 
-#### `--logs`，`-l`
+#### `--logs`, `-l`
 
 包含日志
 
@@ -5351,20 +5351,20 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 - 接受值
 
-#### `--output`，`-o`
+#### `--output`, `-o`
 
 输出路径
 
 - 接受值
 
-#### `--logs`，`-l`
+#### `--logs`, `-l`
 
 包含日志
 
 - 默认： `false`
 - 不接受值
 
-#### `--ignore-sanitize`，`-i`
+#### `--ignore-sanitize`, `-i`
 
 忽略清理
 
@@ -5404,7 +5404,7 @@ bin/magento support:utility:paths [-f|--force]
 
 有关全局选项，请参阅[全局选项](#global-options)。
 
-#### `--force`，`-f`
+#### `--force`, `-f`
 
 强制
 
@@ -5442,7 +5442,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 - 默认： `false`
 - 不接受值
 
-#### `--clear-static-content`，`-c`
+#### `--clear-static-content`, `-c`
 
 清除生成的静态视图文件。
 

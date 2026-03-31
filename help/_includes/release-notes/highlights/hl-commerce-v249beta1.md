@@ -1,5 +1,5 @@
 ---
-source-git-commit: fd421e8c2455a2b45d3f3cc93573d2a609e4936d
+source-git-commit: adda02b9d05b66ab066f110e877584bc1c77515d
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 0%
@@ -97,7 +97,7 @@ _ACP2E-3397 - [GitHub代码贡献](https://github.com/magento/magento2/commit/52
 
 - **Braintree保险存储卡的实时帐户更新程序(RTAU)**
 
-  Braintree中新增的实时帐户更新器(RTAU)功能可确保保险存储的Visa、Mastercard和Discover卡详细信息会在卡过期或被替换时自动更新。 这样可将失败的支付降至最低，使Commerce Vault保持最新，并跳过不受支持的类型(预付、Apple Pay、Google Pay)，而不会出错。
+  Braintree中新增的实时帐户更新器(RTAU)功能可确保保险存储的Visa、Mastercard和Discover卡详细信息会在卡过期或被替换时自动更新。 这样可将失败的支付降至最低，使Commerce Vault保持最新，并跳过不受支持的类型（预付、Apple Pay、Google Pay），而不会出错。
 
   _BUNDLE-3462_
 
@@ -279,9 +279,9 @@ _AC-14078 - [GitHub代码贡献](https://github.com/magento/magento2/commit/9a73
 
 #### 简化的双重身份验证配置
 
-现在，管理员用户只需配置商户启用的2FA提供商之一(例如，Google Authenticator或U2F)，即可访问管理员面板。 以后可以根据需要配置其他启用的提供程序。 以前，当启用了多个2FA提供商时，要求每个管理员用户在登录之前配置所有已启用的提供商，这会给无权访问所有因素的用户带来摩擦。
+现在，管理员用户只需配置商户启用的2FA提供商之一（例如，Google Authenticator或U2F），即可访问管理员面板。 以后可以根据需要配置其他启用的提供程序。 以前，当启用了多个2FA提供商时，要求每个管理员用户在登录之前配置所有已启用的提供商，这会给无权访问所有因素的用户带来摩擦。
 
-_AC-8253 - [GitHub代码贡献](https://github.com/magento/security-package/commit/71e7936b)_
+_AC-8253 - [GitHub代码贡献](https://github.com/magento-commerce/security-package/commit/41e5a26bd36528cb6b1bdc27b249696a2c721779)_
 
 ### 配送
 

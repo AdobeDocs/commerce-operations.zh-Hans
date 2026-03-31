@@ -1,11 +1,11 @@
 ---
-source-git-commit: a1a8e9192dbdccbc758be972612f8a8828202299
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
-source-wordcount: '9398'
+source-wordcount: '9178'
 ht-degree: 1%
 
 ---
-# bin/magento(Adobe Commerce内部部署2.4.9-beta1)
+# bin/magento（Adobe Commerce内部部署2.4.9-beta1）
 
 <!-- All the assigned and captured content is used in the included template -->
 
@@ -409,7 +409,7 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -818,14 +818,14 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 #### `--lock-env`, `-e`
 
-锁定值，防止在Admin中进行修改(将保存在app/etc/env.php中)
+锁定值，防止在Admin中进行修改（将保存在app/etc/env.php中）
 
 - 默认： `false`
 - 不接受值
 
 #### `--lock-config`, `-c`
 
-锁定并与其他安装共享值，防止在管理员中进行修改(将保存在app/etc/config.php中)
+锁定并与其他安装共享值，防止在管理员中进行修改（将保存在app/etc/config.php中）
 
 - 默认： `false`
 - 不接受值
@@ -2271,7 +2271,7 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2297,7 +2297,7 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2323,7 +2323,7 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2342,7 +2342,7 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2430,7 +2430,7 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2479,7 +2479,7 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2521,7 +2521,7 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -2593,7 +2593,7 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -3178,7 +3178,7 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4084,7 +4084,7 @@ Redis服务器用户
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4103,7 +4103,7 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4231,7 +4231,7 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4288,7 +4288,7 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4345,7 +4345,7 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4371,7 +4371,7 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -4390,7 +4390,7 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5548,7 +5548,7 @@ Magento安装将以模拟运行模式运行
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5613,7 +5613,7 @@ var/备份中的数据库备份文件的基本名称
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5868,7 +5868,7 @@ SSL连接的基本URL。 已弃用，请将config:set与路径web/secure/base_ur
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5887,7 +5887,7 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 
@@ -5939,7 +5939,7 @@ Magento安装将以模拟运行模式运行
 
 #### `--magento-init-params`
 
-添加到任何命令以自定义Magento初始化参数，例如：&quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+添加到任何命令以自定义Magento初始化参数，例如： `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - 需要一个值
 

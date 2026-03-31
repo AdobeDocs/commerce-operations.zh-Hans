@@ -3,7 +3,7 @@ title: 常规配置路径引用
 description: 了解Adobe Commerce的常规和高级配置路径和值。 发现系统、安全和管理配置选项。
 feature: Configuration, Observability, Roles/Permissions, System
 exl-id: 3c557746-5182-4929-aebf-5b6fe76f0d8f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -30,8 +30,8 @@ ht-degree: 0%
 | 允许国家/地区 | `general/country/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![敏感](/help/assets/configuration/cloud-sens.png) |
 | 对于，邮政编码是可选的 | `general/country/optional_zip_countries` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![敏感](/help/assets/configuration/cloud-sens.png) |
 | 欧洲联盟国家 | `general/country/eu_countries` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![敏感](/help/assets/configuration/cloud-sens.png) |
-| 热门目标 | `general/country/destinations` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 状态为必填 | `general/region/state_required` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| 热门目标 | `general/country/destinations` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| 状态为必填 | `general/region/state_required` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | 允许选择国家/地区可选的州 | `general/region/display_all` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | 时区 | `general/locale/timezone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | 区域设置 | `general/locale/code` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
@@ -264,7 +264,7 @@ ht-degree: 0%
 | 导出配置 | `system/full_page_cache/varnish/export_button_version4` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 日志中保存的天数 | `system/bulk/lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 媒体存储 | `system/media_storage_configuration/media_storage` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| 选择媒体数据库 | `system/media_storage_configuration/media_database` (在Commerce 2.4.3中已弃用) | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| 选择媒体数据库 | `system/media_storage_configuration/media_database` （在Commerce 2.4.3中已弃用） | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 环境更新时间 | `system/media_storage_configuration/configuration_update_time` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 保存文件，天 | `system/magento_scheduled_import_export_log/save_days` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | 启用计划文件历史记录清理 | `system/magento_scheduled_import_export_log/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
