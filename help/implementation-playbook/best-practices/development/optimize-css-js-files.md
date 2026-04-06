@@ -105,6 +105,6 @@ php -f bin/magento config:set dev/js/enable_js_bundling 1
 
 - [客户端优化设置](../../../performance/configuration.md#client-side-optimization-settings)
 - [捆绑提示](../../../performance/configuration.md#bundling-tips)（位于&#x200B;*配置最佳实践*&#x200B;中） — 第三方捆绑工具、HTTP/2以及有关已弃用的JS和CSS合并的指南
-- [用户指南：优化资源文件](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
+- [用户指南：优化资源文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
 - [前端开发人员指南：CSS合并、缩小和网站性能](https://developer.adobe.com/commerce/frontend-core/guide/css/#css-merging-minification-and-performance)
 - [高级JavaScript捆绑](../../../performance/advanced-js-bundling.md)

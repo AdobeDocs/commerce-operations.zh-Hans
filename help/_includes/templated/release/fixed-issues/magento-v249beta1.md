@@ -3158,7 +3158,7 @@ _ACP2E-4212 - [GitHub代码贡献](https://github.com/magento/magento2/commit/ab
 
 #### 无法在计划更新预览中的网站之间导航
 
-在此修复之前，当尝试预览具有自定义域的商店的内容时，计划的更新预览将中断。 进行此修复后，可以按原样预览自定义存储域，并在预览iframe中导航。 该修复涵盖了产品、类别、CMS页面和CMS块，并支持使用`{{store url}}`Adobe Commerce变量和标记标记[中记录的](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags)标记标记的导航链接。
+在此修复之前，当尝试预览具有自定义域的商店的内容时，计划的更新预览将中断。 进行此修复后，可以按原样预览自定义存储域，并在预览iframe中导航。 该修复涵盖了产品、类别、CMS页面和CMS块，并支持使用`{{store url}}`Adobe Commerce变量和标记标记[中记录的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/variables/markup-tags)标记标记的导航链接。
 
 _ACP2E-4308 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0a3b7032)_
 
