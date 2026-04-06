@@ -1,28 +1,30 @@
 ---
-title: 高级 [!DNL JavaScript] 捆绑
-description: 了解Adobe Commerce中的高级 [!DNL javascript] 捆绑。 了解实施指导和优化策略。
+title: 高级JavaScript捆绑
+description: 了解Adobe Commerce中的高级JavaScript捆绑包。 了解实施指导和优化策略。
 exl-id: 81a313f8-e541-4da6-801b-8bbd892d6252
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 5d827da35414fa75649f86a2d96fa8ab9086601a
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2224'
 ht-degree: 0%
 
 ---
 
-# 高级[!DNL JavaScript]捆绑
+# 高级JavaScript捆绑
 
-捆绑[!DNL JavaScript]模块以获得更好的性能，需要减少以下两点：
+捆绑JavaScript模块以获得更好的性能，需要减少两个方面：
 
 1. 服务器请求的数量。
 1. 这些服务器请求的大小。
 
-在模块化应用程序中，服务器请求的数量可能高达数百个。 例如，以下屏幕快照仅显示全新安装的主页上加载的[!DNL JavaScript]模块列表的开始。
+在模块化应用程序中，服务器请求的数量可能高达数百个。 例如，以下屏幕快照仅显示全新安装的主页上加载的JavaScript模块列表的开始。
 
 ![没有捆绑](../assets/performance/images/noBundling.png)
 
 ## 合并和捆绑
 
-[!DNL Commerce]提供了两种现成的方法来减少服务器请求数：合并和捆绑。 默认情况下，这些设置处于关闭状态。 您可以在&#x200B;**[!UICONTROL Stores]** > **设置** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]** > **[!UICONTROL [!DNL JavaScript] Settings]**&#x200B;中的管理员UI中或从命令行将其打开。
+Commerce支持捆绑销售，以减少服务器请求的数量。 默认情况下，捆绑处于关闭状态。 您可以在&#x200B;**[!UICONTROL Stores]** > **设置** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]** > **[!UICONTROL JavaScript Settings]**&#x200B;中打开它，也可以从命令行打开它。
+
+有关第三方工具、HTTP/2以及有关已弃用的JS和CSS合并的指南，请参阅[配置最佳实践](configuration.md#bundling-tips)中的&#x200B;*捆绑提示*。
 
 ![捆绑](../assets/performance/images/bundlingImage.png)
 
@@ -34,15 +36,20 @@ ht-degree: 0%
 php -f bin/magento config:set dev/js/enable_js_bundling 1
 ```
 
-这是一个本机[!DNL Commerce]机制，它将系统中存在的所有资产组合在一起，并在大小相同的捆绑包(bundle_0.js、bundle_1.js ... bundle_x.js)之间分发它们：
+这是一个本机Commerce机制，它将系统中存在的所有资源组合在一起，并在大小相同的包(bundle_0.js、bundle_1.js ... bundle_x.js)之间分发它们：
 
-![[!DNL Commerce]捆绑](../assets/performance/images/magentoBundling.png)
+![Commerce捆绑](../assets/performance/images/magentoBundling.png)
 
-更好，但浏览器仍加载所有[!DNL JavaScript]包，而不只是所需的包。
+更棒的是，浏览器仍会加载所有JavaScript包，而不只是所需的包。
 
-[!DNL Commerce]捆绑可减少每页的连接数，但对于每个页面请求，它会加载所有捆绑包，即使所请求的页面可能仅依赖于一个或两个捆绑包中的文件也是如此。 在浏览器缓存捆绑包后，性能得以改进。 但是，由于浏览器同步加载这些捆绑包，因此用户首次访问[!DNL Commerce]店面可能需要一段时间才能呈现，并且会损害用户体验。
+Commerce捆绑包可减少每个页面的连接数，但对于每个页面请求，它会加载所有捆绑包，即使所请求的页面可能仅依赖于一个或两个捆绑包中的文件也是如此。 在浏览器缓存捆绑包后，性能得以改进。 但是，由于浏览器同步加载这些捆绑包，因此用户首次访问Commerce店面可能需要一段时间才能呈现并损害用户体验。
 
-### 基本合并
+### 基本合并（不推荐）
+
+>[!NOTE]
+>
+>我们不建议使用&#x200B;**[!UICONTROL Merge JavaScript Files]**。 此设置仅针对页面中HEAD部分同步加载的JavaScript而设计，可能会导致捆绑和[!DNL RequireJS]逻辑无法正常工作。 它仅供向后兼容性使用，启用HTTP/2时性能不会受到影响。
+>如果您已启用&#x200B;**[!UICONTROL Merge JavaScript Files]**&#x200B;并遇到问题，请尝试在应用任何修补程序之前禁用它。 如果无法禁用合并，请参阅[ACSD-67908](../tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-67908.md)。
 
 要从命令行启用内置合并，请执行以下操作：
 
@@ -50,7 +57,7 @@ php -f bin/magento config:set dev/js/enable_js_bundling 1
 php -f bin/magento config:set dev/js/merge_files 1
 ```
 
-此命令将所有同步[!DNL JavaScript]文件合并到一个文件中。 在不启用捆绑的情况下启用合并没有用，因为[!DNL Commerce]使用RequireJS。 如果未启用捆绑包，[!DNL Commerce]只合并RequireJS及其配置。 启用绑定和合并后，[!DNL Commerce]将创建单个[!DNL JavaScript]文件：
+此命令将所有同步JavaScript文件合并到一个文件中。 在不启用捆绑的情况下启用合并没有用处，因为Commerce使用[!DNL RequireJS]。 如果未启用捆绑包，则Commerce仅合并[!DNL RequireJS]及其配置。 在启用捆绑和合并功能后，Commerce将创建一个JavaScript文件：
 
 ![真实世界合并](../assets/performance/images/magentoMergingDevWorld.png)
 
@@ -62,25 +69,25 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 ![现实世界捆绑](../assets/performance/images/magentoBundlingRealWorld.png)
 
-在3G连接速度较慢的情况下，大约需要44秒才能加载干净的[!DNL Commerce]安装的主页的所有包。
+在使用慢速3G连接的情况下，大约需要44秒才能加载干净的Commerce安装主页的所有捆绑包。
 
 将捆绑包合并到单个文件中时也是如此。 用户仍可以等待约42秒的时间进行初始页面加载，如下所示：
 
 ![真实世界合并](../assets/performance/images/magentoMergingRealWorld.png)
 
-通过更高级的[!DNL JavaScript]捆绑方法，我们可以缩短这些加载时间。
+通过更高级的JavaScript捆绑方法，我们可以缩短这些加载时间。
 
 ## 高级捆绑
 
-请记住，[!DNL JavaScript]捆绑的目标是减少浏览器中加载的每个页面所请求的资产的数量和大小。 为此，我们希望构建捆绑包，以便商店中的每个页面只需要下载一个通用捆绑包和一个针对所访问每个页面的页面特定捆绑包。
+请记住，JavaScript捆绑的目标是减少浏览器中加载的每个页面所请求的资源的数量和大小。 为此，我们希望构建捆绑包，以便商店中的每个页面只需要下载一个通用捆绑包和一个针对所访问每个页面的页面特定捆绑包。
 
-实现此目标的一种方法是按页面类型定义捆绑包。 您可以将[!DNL Commerce]的页面划分为多种页面类型，包括“类别”、“产品”、“CMS”、“客户”、“购物车”和“结账”。 分类为其中一种页面类型的每个页面都具有一组不同的RequireJS模块依赖项。 当按页面类型捆绑RequireJS模块时，最终将只有少数捆绑包覆盖存储中任何页面的依赖项。
+实现此目标的一种方法是按页面类型定义捆绑包。 您可以将Commerce页面划分为多种页面类型，包括“类别”、“产品”、“CMS”、“客户”、“购物车”和“结账”。 分类为其中一种页面类型的每个页面都具有一组不同的[!DNL RequireJS]模块依赖项。 当您按页面类型捆绑[!DNL RequireJS]模块时，最终将只有少数捆绑包覆盖存储中任何页面的依赖项。
 
 例如，最终可能会有一个用于所有页面所共有依赖项的捆绑包、一个用于仅CMS页面的捆绑包、一个用于仅目录页面的捆绑包、另一个用于仅搜索页面的捆绑包，以及一个用于签出页面的捆绑包。
 
 您还可以按用途创建包：用于常见功能、产品相关功能、配送功能、结账功能、税费和表单验证。 如何定义捆绑包取决于您以及商店的结构。 您可能会发现某些捆绑式策略比其他策略效果更好。
 
-干净的[!DNL Commerce]安装允许通过按页面类型拆分捆绑包来实现足够的良好性能，但某些自定义可能需要更深入的分析和其他资产分配。
+干净的Commerce安装允许通过按页面类型拆分捆绑包来实现足够的良好性能，但一些自定义项可能需要更深入的分析和其他资源分配。
 
 ### 所需工具
 
@@ -102,7 +109,7 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 #### 1\。 添加build.js文件
 
-在`build.js`根目录中创建[!DNL Commerce]文件。 此文件将包含捆绑包的整个生成配置。
+在Commerce根目录中创建`build.js`文件。 此文件将包含捆绑包的整个生成配置。
 
 ```javascript
 ({
@@ -113,9 +120,9 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 稍后，我们将将`optimize:`设置从_ `none`更改为`uglify2`以缩小包输出。 但现在，在开发过程中，您可以将其保留为`none`以确保更快的生成。
 
-#### 2\。 添加RequireJS依赖项、填充项、路径和映射
+#### 2\。 添加[!DNL RequireJS]依赖项、填充项、路径和映射
 
-将以下RequireJS生成配置节点`deps`、`shim`、`paths`和`map`添加到您的生成文件中：
+将以下[!DNL RequireJS]生成配置节点`deps`、`shim`、`paths`和`map`添加到您的生成文件中：
 
 ```javascript
 ({
@@ -129,11 +136,11 @@ php -f bin/magento config:set dev/js/merge_files 1
 })
 ```
 
-#### 3\。 聚合requirejs-config.js实例值
+#### 3\。 聚合`requirejs-config.js`实例值
 
 在此步骤中，您需要将存储的`deps`文件中的所有多个`shim`、`paths`、`map`和`requirejs-config.js`配置节点聚合到`build.js`文件中的相应节点中。 为此，您可以在浏览器的“开发人员工具”面板中打开&#x200B;**[!UICONTROL Network]**&#x200B;选项卡，然后导航到应用商店中的任何页面，如主页。 在“网络”选项卡中，您将在顶部附近看到应用商店的`requirejs-config.js`文件实例，该实例在此处突出显示：
 
-![RequireJS配置](../assets/performance/images/RequireJSConfig.png)
+![[!DNL RequireJS]配置](../assets/performance/images/RequireJSConfig.png)
 
 在此文件中，您将找到每个配置节点(`deps`、`shim`、`paths`、`map`)的多个条目。 您需要将这些多个节点值聚合到build.js文件的单个配置节点中。 例如，如果存储区的`requirejs-config.js`实例包含15个单独的`map`节点的条目，则需要将所有15个节点的条目合并到`map`文件中的单个`build.js`节点中。 `deps`、`shim`和`paths`节点同样如此。 如果没有脚本来自动执行此过程，则可能需要一些时间。
 
@@ -167,16 +174,16 @@ php -f bin/magento config:set dev/js/merge_files 1
 })
 ```
 
-#### 5\。 检索RequireJS依赖项
+#### 5\。 检索[!DNL RequireJS]依赖项
 
 您可以使用以下方式从存储区的页面类型检索所有[!DNL RequireJS]模块依赖项：
 
 1. 命令行[!DNL PhantomJS]（假设您已安装[!DNL PhantomJS]）。
-1. 在浏览器的控制台中需要JS命令。
+1. 浏览器控制台中的[!DNL RequireJS]命令。
 
 #### 要使用[!DNL PhantomJS]：
 
-在[!DNL Commerce]根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[!DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
+在Commerce根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[！DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
 
 ```javascript
 "use strict";
@@ -204,7 +211,7 @@ if (system.args.length === 1) {
 }
 ```
 
-打开[!DNL Commerce]根目录中的终端，并对存储中表示特定页面类型的每个页面运行脚本：
+打开Commerce根目录中的终端，并对存储中表示特定页面类型的每个页面运行脚本：
 
 <pre>
 phantomjs deps.js <i>指向特定页面的url</i> &gt; <i>text-file-representing-pagetype-dependencies</i>
@@ -252,9 +259,9 @@ sed -i -e 's/mixins\!.*$//g' bundle/product.txt
 
 #### 7\。 识别独特和常见的捆绑包
 
-目标是创建所有页面所需的[!DNL JavaScript]个文件的公共包。 这样，浏览器只需加载通用捆绑包以及一个或多个特定页面类型。
+目标是创建所有页面所需的通用JavaScript文件包。 这样，浏览器只需加载通用捆绑包以及一个或多个特定页面类型。
 
-打开[!DNL Commerce]根目录中的终端，然后使用以下命令验证您是否具有可以拆分为单独捆绑包的依赖项：
+在Commerce根目录中打开终端，然后使用以下命令验证您是否具有可以拆分为单独捆绑包的依赖项：
 
 ```bash
 sort bundle/*.txt |uniq -c |sort -n
@@ -287,7 +294,7 @@ sort bundle/*.txt |uniq -c |sort -n
 
 #### 8\。 创建依赖项分发文件
 
-要了解哪些页面类型需要依赖项，请在[!DNL Commerce]根目录中创建一个名为`deps-map.sh`的新文件，并复制下面的代码：
+要了解哪些页面类型需要依赖项，请在Commerce根目录中创建一个名为`deps-map.sh`的新文件，并复制下面的代码：
 
 ```shell
 awk 'END {
@@ -309,7 +316,7 @@ awk 'END {
 
 您还可以在[https://www.unix.com/shell-programming-and-scripting/140390-get-common-lines-multiple-files.html](https://www.unix.com/shell-programming-and-scripting/140390-get-common-lines-multiple-files.html)找到该脚本
 
-在[!DNL Commerce]根目录中打开终端并运行文件：
+在Commerce根目录中打开终端并运行文件：
 
 ```bash
 bash deps-map.sh
@@ -341,7 +348,7 @@ bundle/category.txt/bundle/homepage.txt/bundle/product.txt --> knockoutjs/knocko
 
 - `create` — 用于创建捆绑包的布尔标记（值： `true`或`false`）。
 
-- `include` — 作为页面的依赖项包括的一组资源（字符串）。 RequireJS跟踪所有依赖关系，并将它们包含在捆绑包中，除非排除这些依赖关系。
+- `include` — 作为页面的依赖项包括的一组资源（字符串）。 [!DNL RequireJS]跟踪所有依赖项，并将它们包含在捆绑包中，除非将其排除。
 
 - `exclude` — 要从捆绑包中排除的捆绑包或资源的数组。
 
@@ -378,7 +385,7 @@ bundle/category.txt/bundle/homepage.txt/bundle/product.txt --> knockoutjs/knocko
 
 ### 第2部分：生成包
 
-以下步骤描述了生成更高效的[!DNL Commerce]捆绑包的基本流程。 您可以按照所需的任何方式自动执行此过程，但您仍需要使用`nodejs`和`r.js`来实际生成捆绑包。 如果您的主题具有与[!DNL JavaScript]相关的自定义项并且无法重用相同的`build.js`文件，则可能需要为每个主题创建多个`build.js`配置。
+以下步骤描述了生成更高效的Commerce捆绑包的基本流程。 您可以按照所需的任何方式自动执行此过程，但您仍需要使用`nodejs`和`r.js`来实际生成捆绑包。 如果您的主题具有与JavaScript相关的自定义设置，并且无法重用相同的`build.js`文件，则可能需要为每个主题创建多个`build.js`配置。
 
 #### 1.生成静态存储站点
 
@@ -399,7 +406,7 @@ php -f bin/magento setup:static-content:deploy -f -a frontend
 
 #### 2.将静态存储内容移动到临时目录
 
-首先，需要将静态内容从目标目录移动到某个临时目录，因为RequireJS会替换目标目录中的所有内容。
+首先，您需要将静态内容从目标目录移动到某个临时目录，因为[!DNL RequireJS]将替换目标目录中的所有内容。
 
 ```bash
 mv pub/static/frontend/Magento/{theme}/{locale} pub/static/frontend/Magento/{theme}/{locale}_tmp
@@ -413,7 +420,7 @@ mv pub/static/frontend/Magento/luma/en_US pub/static/frontend/Magento/luma/en_US
 
 #### 3.运行r.js优化器
 
-然后从`build.js`的根目录对[!DNL Commerce]文件运行r.js优化程序。 所有目录和文件的路径均相对于工作目录。
+然后对Commerce根目录中的`build.js`文件运行r.js优化器。 所有目录和文件的路径均相对于工作目录。
 
 ```bash
 r.js -o build.js baseUrl=pub/static/frontend/Magento/luma/en_US_tmp dir=pub/static/frontend/Magento/luma/en_US
@@ -438,9 +445,9 @@ drwxr-xr-x 70 root root    4096 Mar 28 11:24 ../
 -rw-r--r--  1 root root   74233 Mar 28 11:24 shipping.js
 ```
 
-#### 4.配置RequireJS以使用捆绑包
+#### 4.配置[!DNL RequireJS]以使用包
 
-要获取RequireJS以使用您的包，请在`onModuleBundleComplete`文件中的`modules`节点之后添加`build.js`回调：
+要获取[!DNL RequireJS]以使用您的包，请在`onModuleBundleComplete`文件中的`modules`节点之后添加`build.js`回调：
 
 ```javascript
 [
@@ -482,7 +489,7 @@ require.config({});
 r.js -o app/design/frontend/Magento/luma/build.js baseUrl=pub/static/frontend/Magento/luma/en_US_tmp dir=pub/static/frontend/Magento/luma/en_US
 ```
 
-在`requirejs-config.js`目录中打开`pub/static/frontend/Magento/luma/en_US`以验证RequireJS是否将该文件附加到捆绑配置调用：
+在`requirejs-config.js`目录中打开`pub/static/frontend/Magento/luma/en_US`以验证[!DNL RequireJS]是否将该文件附加到捆绑配置调用：
 
 ```javascript
 require.config({
@@ -503,11 +510,11 @@ require.config({
 
 ![快一倍](../assets/performance/images/TwiceAsFast.png)
 
-空主页的页面加载时间现在比使用本机[!DNL Commerce]捆绑快一倍。 但是我们可以做得更好。
+现在，空主页的页面加载时间比使用本机Commerce捆绑包快2倍。 但是我们可以做得更好。
 
 #### 7.优化包
 
-即使gzipped，[!DNL JavaScript]文件仍然很大。 使用RequireJS来缩小它们，后者使用修饰符来缩小[!DNL JavaScript]以获得良好的结果。
+即使gzipped，JavaScript文件仍然很大。 使用[!DNL RequireJS]缩小它们，这使用修饰符将JavaScript缩小到良好的结果。
 
 要在`build.js`文件中启用优化程序，请添加`uglify2`作为`build.js`文件顶部的优化属性的值：
 
@@ -521,4 +528,4 @@ require.config({
 结果可能非常可观：
 ![快三倍](../assets/performance/images/ThreeTimesFaster.png)
 
-加载时间现在比使用本机[!DNL Commerce]捆绑快三倍。
+现在，加载时间比使用本机Commerce捆绑包快3倍。

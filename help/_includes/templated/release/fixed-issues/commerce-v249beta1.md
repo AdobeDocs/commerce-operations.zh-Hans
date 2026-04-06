@@ -1,7 +1,7 @@
 ---
-source-git-commit: 0a22d08d6965c6abc288a1a171d25f4ff8bbd7ce
+source-git-commit: 34e2262ad8b4fa1a2e7ade8d3b16258f9873822d
 workflow-type: tm+mt
-source-wordcount: '26969'
+source-wordcount: '26949'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ _AC-15473 - [GitHub问题](https://github.com/magento/magento2/issues/39943) - [
 
 _AC-6419 - [GitHub问题](https://github.com/magento/magento2/issues/35934) - [GitHub代码贡献](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### `/V1/order/&lbrace;orderId&rbrace;/ship` API终结点中的内部服务器错误
+#### `/V1/order/{orderId}/ship` API终结点中的内部服务器错误
 
 系统现在修复了`/V1/order/{orderId}/ship` API端点中的内部服务器错误，并返回400错误，因为请求格式不正确。
 
@@ -150,7 +150,7 @@ _ACP2E-4227 - [GitHub代码贡献](https://github.com/magento/magento2/commit/6e
 
 在修复之前，允许您创建不包括全球范围内的金额的礼品卡产品。 通过此修复，添加了一个检查全局范围中金额的验证。
 
-_ACP2E-4395 - [GitHub问题](https://mcstaging.panini.it/shp_ita_it/)_
+_ACP2E-4395_
 
 ### API、购物车和结账
 
@@ -261,7 +261,7 @@ _AC-15074 - [GitHub问题](https://github.com/magento/magento2/issues/40036) - [
 
 #### Storefront客户帐户注册：电子邮件地址格式已转换为不同的域格式
 
-此错误解决了域中具有特殊字符(例如tec55241@adòbe.com)的客户电子邮件自动转换为旁路代码格式(tec55241@xn--adbe-mqa.com)的问题。
+此错误解决了域中具有特殊字符（例如òbe.com）的客户电子邮件自动转换为旁路代码格式(tec55241@xn--adbe-mqa.com)的问题。
 在Magento 2.4.9-alpha3中，此修复程序可确保此类电子邮件ID保持不变并有效，从而防止出现投放错误。
 
 _AC-15177 - [GitHub代码贡献](https://github.com/magento/magento2/commit/68a45d0a)_
@@ -406,11 +406,11 @@ _AC-14020 - [GitHub问题](https://github.com/magento/magento2/issues/39654) - [
 
 _AC-14266 - [GitHub代码贡献](https://github.com/magento/magento2/commit/b5e99d20)_
 
-#### Symfony\Component\Mime\Exception\LogicException： “Sender”标头必须为“Symfony\Component\Mime\Header\MailboxHeader”的实例(得到“Symfony\Component\Mime\Header\MailboxListHeader”)
+#### Symfony\Component\Mime\Exception\LogicException： “Sender”标头必须为“Symfony\Component\Mime\Header\MailboxHeader”的实例（得到“Symfony\Component\Mime\Header\MailboxListHeader”）
 
-现在，为SMTP配置自定义返回路径地址时，Adobe Commerce会成功发送注册电子邮件。 以前，在system/smtp/set_return_path设置为2且system/smtp/return_path_email设置为自定义地址的vanilla Adobe Commerce 2.4.8上，客户注册已完成，但未发送注册电子邮件，并且Adobe Commerce记录了以下错误：Symfony\Component\Mime\Exception\LogicException：“Sender”标头必须为“Symfony\Component\Mime\Header\MailboxHeader”的实例(得到“Symfony\Component\Mime\Header\MailboxListHeader”)。
+现在，为SMTP配置自定义返回路径地址时，Adobe Commerce会成功发送注册电子邮件。 以前，在system/smtp/set_return_path设置为2且system/smtp/return_path_email设置为自定义地址的vanilla Adobe Commerce 2.4.8上，客户注册已完成，但未发送注册电子邮件，并且Adobe Commerce记录了以下错误：Symfony\Component\Mime\Exception\LogicException：“Sender”标头必须为“Symfony\Component\Mime\Header\MailboxHeader”的实例（得到“Symfony\Component\Mime\Header\MailboxListHeader”）。
 
-_AC-14520 - [GitHub问题](https://github.com/magento/magento2/issues/39823) - [GitHub代码贡献](https://github.com/magento/magento2/commit/1e14bd72) - [GitHub代码贡献](https://github.com/magento/magento2/commit/1514117f)_
+_AC-14520 - [GitHub问题](https://github.com/magento/magento2/issues/39823) - [GitHub代码贡献](https://github.com/magento/magento2/commit/1e14bd72)_
 
 #### 刷新顺序未获取最新的自定义属性数据
 
@@ -467,7 +467,7 @@ _AC-2916 - [GitHub问题](https://github.com/magento/magento2/issues/35358) - [G
 
 _AC-3179 - [GitHub问题](https://github.com/magento/magento2/issues/34975) - [GitHub代码贡献](https://github.com/magento/magento2/commit/4f7e5983) - [GitHub代码贡献](https://github.com/magento/security-package/commit/804dbc2a)_
 
-#### 条件SKU的购物车价格规则不考虑SKU中的“前导零”(sku：01234与1234相同)
+#### 条件SKU的购物车价格规则不考虑SKU中的“前导零”（sku：01234与1234相同）
 
 系统现在可以正确处理购物车价格规则，其中条件SKU会考虑SKU中的“前导零”
 
@@ -525,13 +525,13 @@ _ACP2E-4044 - [GitHub代码贡献](https://github.com/magento/magento2/commit/47
 
 生日过滤器和列将使用统一格式M/d/y，与“客户开始时间”过滤器/列相同
 
-_ACP2E-4052 - [GitHub问题](https://stg1.navi-online.kakuyasu.co.jp/adminCgWN7zCh/admin/system_account/index/key/d6fdbee50ff25178d1fef981ec823c5e82e8cee6959717790031bb900c4d6633/) - [GitHub代码贡献](https://github.com/magento/magento2/commit/52f46328)_
+_ACP2E-4052 - [GitHub代码贡献](https://github.com/magento/magento2/commit/52f46328)_
 
 #### Admin Grid标题两侧出现白色块
 
 修复了管理网格中的视觉对齐问题。 以前，在管理面板中的产品网格中水平滚动时，网格标题的左右两侧会显示未对齐的白色块。 现在，网格标题元素在滚动时可保持正确的垂直对齐方式，从而为管理大型产品目录的管理员提供更加简洁的视觉体验。
 
-_ACP2E-4104 - [GitHub问题](https://mcprod.pap-store.acer.com/index.html)_
+_ACP2E-4104_
 
 #### Ui组件文件2.4.8-p1/ 2.4-develop上的Uploader无法正常工作
 
@@ -585,7 +585,7 @@ _ACP2E-4336 - [GitHub代码贡献](https://github.com/magento/magento2/commit/26
 
 修复了尽管选中了“使用默认值/网站”，系统配置字段在页面加载后仍可以呈现为启用的问题。
 
-_ACP2E-4337 - [GitHub问题](https://mcstaging.pap-store.acer.com) - [GitHub代码贡献](https://github.com/magento/magento2/commit/31258bf6)_
+_ACP2E-4337 - [GitHub代码贡献](https://github.com/magento/magento2/commit/31258bf6)_
 
 #### 管理员功能板订单图表按照最终大小显示动画
 
@@ -651,20 +651,20 @@ _ACP2E-3679_
 
 #### 税率管理员UI错误
 
-该票证修复了以下税率管理员UI问题：切换国家/地区(例如，从美国→英国)仍显示之前选择的美国州，从而误导用户。
+该票证修复了以下税率管理员UI问题：切换国家/地区（例如，从美国→英国）仍显示之前选择的美国州，从而误导用户。
 在2.4.9-alpha3中，如果所选国家没有国家，则状态字段现在重置为*。
 
 _AC-8440 - [GitHub代码贡献](https://github.com/magento/magento2/commit/a3b1abc2)_
 
 ### Analytics/报表
 
-#### 列入允许列表 [问题]已添加Analytics的scp(如果您只使用Google Analytics)
+#### [问题]已添加Analytics的scp（如果您只使用Google Analytics）
 
 此PR会将CSP白名单添加到Google Analytics模块，以便该模块可以独立运行，而无需Google Adwords依赖项。 现在，即使Google Adwords模块被禁用，Google Analytics也可以正常工作。
 
 _AC-16311 - [GitHub问题](https://github.com/magento/magento2/issues/40051) - [GitHub代码贡献](https://github.com/magento/magento2/pull/40032)_
 
-#### 管理操作日志用户报表未显示应用过滤器时使用的过滤器的详细信息
+#### 管理操作日志用户报告未显示应用过滤器时使用的过滤器的详细信息
 
 在修复之前，管理活动报表中不会记录筛选参数。 现在，修复后，将记录所有请求数据。
 
@@ -818,7 +818,7 @@ _AC-14464 - [GitHub问题](https://github.com/magento/magento2/issues/39820) - [
 
 #### [2.4.8]无法在城市名称中包含数字0-9、与号、句号或圆括号的城市下订单
 
-修复了包含特殊字符（如）的城市名称签出失败的问题。、和，或括号。
+修复了包含特殊字符（如。 、 &amp;或圆括号）的城市名称签出失败的问题。
 现在，成功下达了具有此类城市名称的订单，且没有出现验证错误。
 
 _AC-14495 - [GitHub问题](https://github.com/magento/magento2/issues/39854) - [GitHub代码贡献](https://github.com/magento/magento2/commit/b9f5d6f7)_
@@ -892,7 +892,7 @@ _ACP2E-3493 - [GitHub代码贡献](https://github.com/magento/magento2/commit/11
 
 #### 签出非活动公司时出现“出现错误”错误
 
-在修复之前，如果长期登录用户公司不再启用，则无法在购物车页面上正确完成注销操作。 现在，如果公司不再可用，则正确执行注销。
+在修复之前，如果登录的用户公司不再启用，则无法在购物车页面上正确完成注销操作。 现在，如果公司不再可用，则正确执行注销。
 
 _ACP2E-3541 - [GitHub代码贡献](https://github.com/magento/magento2/commit/df92debe)_
 
@@ -942,7 +942,7 @@ _ACP2E-4223 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0a
 
 修复了多货币商店的购物车页面上的捆绑产品价格问题
 
-_ACP2E-4245 - [GitHub问题](https://www.techbuyer.com/) - [GitHub代码贡献](https://github.com/magento/magento2/commit/cbca0396)_
+_ACP2E-4245 - [GitHub代码贡献](https://github.com/magento/magento2/commit/cbca0396)_
 
 #### 管理购物车存储范围问题
 
@@ -991,7 +991,7 @@ _ACP2E-3885 - [GitHub代码贡献](https://github.com/magento/magento2/commit/3a
 当购物车中有许多产品时，由于存在较长URL，在结账期间使用“Pick in Store”选择商店不再失败。
 以前，这触发了414错误，导致在商店选择期间生成的URL过长，阻止客户完成结账。
 
-_ACP2E-4266 - [GitHub问题](https://mcstaging.casamyers.com.mx/) - [GitHub代码贡献](https://github.com/magento/inventory/commit/ae1f272f)_
+_ACP2E-4266 - [GitHub代码贡献](https://github.com/magento/inventory/commit/ae1f272f)_
 
 ### 购物车和结帐、订购、产品
 
@@ -1007,7 +1007,7 @@ _ACP2E-3905_
 
 已根据分配的网站范围限制礼品卡余额检查。
 
-_ACP2E-4379 - [GitHub问题](https://www.panini.it)_
+_ACP2E-4379_
 
 ### 购物车和结帐、SEO
 
@@ -1023,7 +1023,7 @@ _ACP2E-3699_
 
 在启用了精简和捆绑时，修复mixin之前的版本将不会加载到购物车和结账中。 修复后，所有mixin都应按预期加载。
 
-_ACP2E-4128 - [GitHub问题](https://ansg.integration-5ojmyuq-f46gejjrfa7be.ap-3.magentosite.cloud/) - [GitHub代码贡献](https://github.com/magento/magento2/commit/e457c5e2)_
+_ACP2E-4128 - [GitHub代码贡献](https://github.com/magento/magento2/commit/e457c5e2)_
 
 ### 购物车和结帐、送货
 
@@ -1100,7 +1100,7 @@ _AC-13671 - [GitHub问题](https://github.com/magento/magento2/issues/39521) - [
 
 _AC-13857 - [GitHub问题](https://github.com/magento/magento2/issues/33559)_
 
-#### [\Magento\ConfigurableProduct\Model\Product\Type\Configurable] PHP错误未通知
+#### 未注意到[\Magento\ConfigurableProduct\Model\Product\Type\Configurable] PHP错误
 
 更改了循环变量名称，以便正确添加要用于后续调用的给定产品上的“_cache_instance_product_ids”数据。
 
@@ -1195,6 +1195,8 @@ _AC-15833 - [GitHub问题](https://github.com/magento/magento2/issues/40216) - [
 _AC-16066 - [GitHub问题](https://github.com/magento/magento2/issues/33965) - [GitHub代码贡献](https://github.com/magento/magento2/commit/3b5ac075)_
 
 #### 在产品页面上创建属性时，删除下拉列表选项不起作用
+
+无可用描述。
 
 _AC-16437_
 
@@ -1307,7 +1309,7 @@ _ACP2E-4136 - [GitHub代码贡献](https://github.com/magento/magento2/commit/a1
 
 _ACP2E-4159 - [GitHub代码贡献](https://github.com/magento/magento2/commit/a1c57b2e)_
 
-#### [云]比较不同商店的产品计数不匹配问题
+#### [CLOUD]比较不同商店的产品计数不匹配问题
 
 现在，在切换到其他商店后，比较产品列表可正常工作
 
@@ -1493,7 +1495,7 @@ _AC-13556 - [GitHub问题](https://github.com/magento/magento2/issues/39481) - [
 
 #### [小错误]当字段值包含`listing component`时，无法点击管理面板`\`的筛选器
 
-过滤页面标题中存在斜杠时(例如：Magento\Store)，系统工作正常
+过滤页面标题中存在斜杠时（例如：Magento\Store），系统工作正常
 
 _AC-13661 - [GitHub问题](https://github.com/magento/magento2/issues/39513) - [GitHub代码贡献](https://github.com/magento/magento2/pull/39535)_
 
@@ -1676,7 +1678,7 @@ _AC-15336 - [GitHub代码贡献](https://github.com/magento/magento2/commit/68a4
 
 ### 框架
 
-#### 正在完成已禁用模块的代码。
+#### 编译已禁用模块的代码
 
 此拉取请求转义在代码编译之前禁用了模块。
 
@@ -1786,7 +1788,7 @@ _AC-13719 - [GitHub问题](https://github.com/magento/magento2/issues/39456) - [
 
 #### [问题] [PHPDOC]修复Magento\Framework\Message\ManagerInterface的错误phpdoc
 
-此PR修复了\Magento\Framework\Message\ManagerInterface的错误phpdoc并删除了\Magento\Framework\Message\Manager中的所有重复phpdoc（使用inheritdoc syntaxe）。
+此PR修复了\Magento\Framework\Message\ManagerInterface的错误phpdoc并删除了\Magento\Framework\Message\Manager中的所有重复phpdoc（使用inheritdoc语法）。
 
 _AC-14312 - [GitHub问题](https://github.com/magento/magento2/issues/39593) - [GitHub代码贡献](https://github.com/magento/magento2/pull/39153)_
 
@@ -1873,7 +1875,7 @@ _AC-14807 - [GitHub代码贡献](https://github.com/magento/magento2/commit/7bda
 以前，通过带有TLS的SMTP发送电子邮件会导致错误： error:1408F10B:SSL例程:ssl3_get_record:版本号错误。
 AC-14883
 
-_AC-14883 - [GitHub问题](https://github.com/magento/magento2/issues/39947) - [GitHub代码贡献](https://github.com/magento/magento2/commit/3717e6cb) - [GitHub代码贡献](https://github.com/magento/magento2/commit/8b453942) - [GitHub代码贡献](https://github.com/magento/magento2/commit/d3ea191d)_
+_AC-14883 - [GitHub问题](https://github.com/magento/magento2/issues/39947) - [GitHub代码贡献](https://github.com/magento/magento2/commit/3717e6cb) - [GitHub代码贡献](https://github.com/magento/magento2/commit/d3ea191d)_
 
 #### [问题]修复静态内容部署中的并发问题
 
@@ -1992,7 +1994,7 @@ EmailMessage类现在可以正确处理电子邮件正文检索。
 以前，在带有magento/framework版本103.0.8-p2的Magento 2.4.8-p2中，Magento\Framework\Mail\EmailMessage类尝试在Symfony邮件消息对象上调用不存在的方法(getTextBody)。 当第三方模块或自定义项依赖此方法处理电子邮件时，这会导致错误。
 现在，EmailMessage类不再调用未定义的方法，从而防止了这些错误。 AC-15446
 
-_AC-15446 - [GitHub问题](https://github.com/magento/magento2/issues/40170) - [GitHub代码贡献](https://github.com/magento/magento2/commit/059fd469) - [GitHub代码贡献](https://github.com/magento/magento2/commit/e9412b24)_
+_AC-15446 - [GitHub问题](https://github.com/magento/magento2/issues/40170) - [GitHub代码贡献](https://github.com/magento/magento2/commit/e9412b24)_
 
 #### [Magento 2.3.x]数据/架构修补程序getAliases()在`setup:upgrade`期间导致错误
 
@@ -2001,6 +2003,8 @@ getAliases()在安装:upgrade期间导致错误，此PR修复了相同的
 _AC-15559 - [GitHub问题](https://github.com/magento/magento2/issues/31396) - [GitHub代码贡献](https://github.com/magento/magento2/pull/38239)_
 
 #### 非法混合操作的归类
+
+无可用描述。
 
 _AC-15614 - [GitHub问题](https://github.com/magento/magento2/issues/40138) - [GitHub代码贡献](https://github.com/magento/magento2/commit/44329e9d)_
 
@@ -2011,6 +2015,8 @@ _AC-15614 - [GitHub问题](https://github.com/magento/magento2/issues/40138) - [
 _AC-15626 - [GitHub问题](https://github.com/magento/magento2/issues/39598) - [GitHub代码贡献](https://github.com/magento/magento2/pull/39581)_
 
 #### 在urlrewrite模块中非法混合归类
+
+无可用描述。
 
 _AC-15647 - [GitHub问题](https://github.com/magento/magento2/issues/40189) - [GitHub代码贡献](https://github.com/magento/magento2/commit/44329e9d)_
 
@@ -2076,6 +2082,8 @@ _AC-16244 - [GitHub问题](https://github.com/magento/magento2/issues/40006) - [
 _AC-16313 - [GitHub问题](https://github.com/magento/magento2/issues/40438) - [GitHub代码贡献](https://github.com/magento/magento2/pull/36600)_
 
 #### 伪模块需要扩展存储库中的dev/目录
+
+无可用描述。
 
 _AC-16487_
 
@@ -2275,7 +2283,7 @@ _ACP2E-4058 - [GitHub代码贡献](https://github.com/magento/magento2/commit/6d
 
 修复了将日期属性的日历弹出窗口分配给自定义属性组时显示在屏幕外的问题。
 
-_ACP2E-4060 - [GitHub问题](https://integration-5ojmyuq-3ssteurpe3xzy.us-5.magentosite.cloud/) - [GitHub代码贡献](https://github.com/magento/magento2/commit/6dd3fa99)_
+_ACP2E-4060 - [GitHub代码贡献](https://github.com/magento/magento2/commit/6dd3fa99)_
 
 #### 生产ACL权限检查导致性能下降 — populateAcl方法是瓶颈
 
@@ -2285,7 +2293,7 @@ _ACP2E-4114 - [GitHub代码贡献](https://github.com/magento/magento2/commit/98
 
 #### 使用AC-15867 + ACP2E-4296和SCD压缩实现最新版本的签出时不加载
 
-在修复之前，通过头部分加载自定义javascript可能会导致问题。 引入新设置后，可以自动推迟此类脚本，从而确保与Magento 2框架更加兼容。
+在修复之前，通过头部分加载自定义javascript可能会导致问题。 引入新设置后，可以自动延迟此类脚本，以确保与Magento 2框架更好地兼容。
 
 _ACP2E-4319 - [GitHub代码贡献](https://github.com/magento/magento2/commit/1c547060)_
 
@@ -2351,7 +2359,7 @@ _AC-8949 - [GitHub代码贡献](https://github.com/magento/magento2/commit/3b5ac
 
 #### GraphQL对订单安排的响应不包括异常消息
 
-还原以前以不同格式返回错误的更改。 现在，以一致的方式返回了潜在错误，而不会破坏GraphQL架构。 应作为已知BIC添加，PM可在此处批准： https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
+还原以前以不同格式返回错误的更改。 现在，以一致的方式返回了潜在错误，而不会破坏GraphQL架构。 应作为已知BIC添加，PM可在此处批准： https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
 
 _ACP2E-3399 - [GitHub代码贡献](https://github.com/magento/magento2/commit/9608ca21)_
 
@@ -2377,7 +2385,7 @@ _ACP2E-3785 - [GitHub代码贡献](https://github.com/magento/magento2/commit/c8
 
 以前，在通过updateGiftRegistry突变进行此修复之前，不会通过GraphQL突变来修改或更新礼品注册表的自定义属性。 应用此修复后，可通过updateGiftRegistry变异成功更新礼品注册表的动态属性。
 
-_ACP2E-3805 - [GitHub问题](https://mcstaging.briscoes.co.nz/)_
+_ACP2E-3805_
 
 #### 删除产品时customerOrders graphql返回错误
 
@@ -2424,7 +2432,7 @@ _ACP2E-4090 - [GitHub代码贡献](https://github.com/magento/magento2/commit/a1
 
 #### 解决ACP2E-4031中提出的问题
 
-在修复之前，错误节点位置不提供与2.4.7和2.4.9版本的无缝兼容性。 现在，修复后，错误节点可正确放置以适应这两个版本。
+在修复之前，错误节点位置不提供与2.4.7和2.4.9版本的无缝兼容性。 现在，修复后，错误节点已正确放置以适应这两个版本。
 
 _ACP2E-4115 - [GitHub代码贡献](https://github.com/magento/magento2/commit/e457c5e2)_
 
@@ -2660,7 +2668,7 @@ _ACP2E-4375 - [GitHub代码贡献](https://github.com/magento/inventory/commit/0
 
 #### 具有无效数据的按价格/价格彩块化排序
 
-在修复之前，当子产品在自定义来源下有库存时，捆绑价格未正确索引。 现在，在修正之后，无论子产品库存分配如何，捆绑价格都会正确编制索引。
+在修复之前，当子产品在自定义来源下有库存时，捆绑价格未正确索引。 现在，修复后，无论子产品库存分配如何，捆绑价格都会正确索引。
 
 _ACP2E-4380 - [GitHub代码贡献](https://github.com/magento/magento2/commit/1c547060) - [GitHub代码贡献](https://github.com/magento/inventory/commit/1f83ed24)_
 
@@ -2681,6 +2689,8 @@ AC-10568
 _AC-10568 - [GitHub问题](https://github.com/magento/magento2/issues/31644)_
 
 #### 当客户设置为报价单时，仍为来宾订单
+
+无可用描述。
 
 _AC-11689 - [GitHub问题](https://github.com/magento/magento2/issues/38540)_
 
@@ -2803,7 +2813,7 @@ _ACP2E-3662_
 
 #### 订单状态在处理时卡住
 
-在修复之前，在订购启用了“Ship together”（一起发货）选项的捆绑产品时，在开票和发货后，订单状态不会自动切换为“complete”（完成）。 现在，修复之后，在订单开票并发运后，订单状态会自动切换为“完成”。
+在修复之前，在订购启用了“一起发货”选项的捆绑产品时，在开具发票和发运后，订单状态不会自动切换为“完成”。 现在，修复之后，在订单开票并发运后，订单状态会自动切换为“完成”。
 
 _ACP2E-3947 - [GitHub代码贡献](https://github.com/magento/magento2/commit/2a252ae6)_
 
@@ -2899,10 +2909,10 @@ _AC-10980 - [GitHub问题](https://github.com/magento/magento2/issues/38424) - [
 
 _AC-12783 - [GitHub问题](https://github.com/magento/magento2/issues/39054) - [GitHub代码贡献](https://github.com/magento/magento2/pull/39164)_
 
-#### 禁用验证码storefont配置仍加载验证码js文件
+#### 禁用captcha storefront配置仍加载captcha js文件
 
 在禁用验证码时，系统现在不加载验证码js文件
-（存储）
+店面
 
 _AC-14267 - [GitHub问题](https://github.com/magento/magento2/issues/32987) - [GitHub代码贡献](https://github.com/magento/magento2/pull/39154)_
 
@@ -2986,7 +2996,7 @@ _AC-16109 - [GitHub问题](https://github.com/magento/magento2/issues/40282) - [
 
 #### 类别权限模块可能会阻止缓存
 
-第三方控制器现在使用客户区段正确缓存
+第三方控制器现在通过客户区段正确缓存
 
 _ACP2E-3721_
 
@@ -3170,7 +3180,7 @@ _AC-15199 - [GitHub问题](https://github.com/magento/magento2/issues/40090) - [
 
 _AC-15753 - [GitHub问题](https://github.com/magento/magento2/issues/40213) - [GitHub代码贡献](https://github.com/magento/magento2/commit/a06a4a57)_
 
-#### 退款金额始终为负值
+#### 负数量退款始终退款折扣
 
 修复了创建具有负数量的贷项通知单时错误地退款折扣金额的问题。
 现在，负数量不退款折扣，并且退款数量正确设置为零。
@@ -3255,7 +3265,7 @@ _AC-14889 - [GitHub问题](https://github.com/magento/magento2/issues/39962) - [
 
 _ACP2E-4299_
 
-#### 未应用[Cloud][experienceleague]目录价格规则
+#### 未应用`[Cloud][experienceleague]`目录价格规则
 
 在固定目录价格规则应用之前，当`special_price`仅在网站级别（而不是在“所有商店视图”）设置时。 现在，当在网站级别设置`special_price`时，通过先检查网站的默认商店，在固定目录价格规则之后正确应用。
 
@@ -3303,9 +3313,9 @@ _ACP2E-3902 - [GitHub代码贡献](https://github.com/magento/magento2/commit/52
 
 #### [Cloud]存储切换器无法从EN工作到FR以查找常见问题页
 
-修复了在商店视图之间切换时，将用户重定向到主页而不是对应的已翻译CMS页面的问题。 现在，商店切换器会检查目标商店中的URL重写，以确保正确重定向(例如，英语的常见问题页面→法语的常见问题页面)。
+修复了在商店视图之间切换时，将用户重定向到主页而不是对应的已翻译CMS页面的问题。 现在，商店切换器会检查目标商店中的URL重写，以确保正确重定向（例如，英语的常见问题页面→法语的常见问题页面）。
 
-_ACP2E-4112 - [GitHub问题](https://adobe-ent.crm.dynamics.com/main.aspx?appid=f2e74f34-7119-ea11-a811-000d3a5936c5&forceUCI=1&pagetype=entityrecord&etn=incident&id=3e1df344-8a69-f011-bec3-6045bd04f475)_
+_ACP2E-4112_
 
 #### [云]取消激活旧站点地图生成
 
@@ -3361,7 +3371,7 @@ _AC-16344 - [GitHub代码贡献](https://github.com/magento/magento2/commit/8670
 
 #### 捆绑/合并的JS不属于SRI哈希
 
-在修复之前，生成的包或合并的文件未添加到SRI哈希列表。 现在，这些文件被适当地添加到SRI哈希中。
+在修复之前，生成的包或合并的文件未添加到SRI哈希列表。 现在，正在将文件正确添加到SRI哈希中。
 
 _ACP2E-3854 - [GitHub代码贡献](https://github.com/magento/magento2/commit/4ca73607)_
 
@@ -3481,13 +3491,13 @@ _ACP2E-4212 - [GitHub代码贡献](https://github.com/magento/magento2/commit/ab
 
 #### 促销活动预览模式中应用的优惠券在应用后不久即消失的问题。
 
-在修复之前，无法在暂存预览模式下正确使用验证器代码。 现在，修复后，优惠券代码正确应用于结账页面。
+在修复之前，无法在暂存预览模式下正确使用优惠券代码。 现在，修复后，优惠券代码正确应用于结账页面。
 
 _ACP2E-4226_
 
 #### 无法在计划更新预览中的网站之间导航
 
-在此修复之前，当尝试预览具有自定义域的商店的内容时，计划的更新预览将中断。 进行此修复后，可以按原样预览自定义存储域，并在预览iframe中导航。 该修复涵盖了产品、类别、CMS页面和CMS块，并支持使用`{{store url}}`Adobe Commerce变量和标记标记[中记录的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/variables/markup-tags)标记标记的导航链接。
+在此修复之前，当尝试预览具有自定义域的商店的内容时，计划的更新预览将中断。 进行此修复后，可以按原样预览自定义存储域，并在预览iframe中导航。 该修复涵盖了产品、类别、CMS页面和CMS块，并支持使用`{{store url}}`Adobe Commerce变量和标记标记[中记录的](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags)标记标记的导航链接。
 
 _ACP2E-4308 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0a3b7032)_
 
@@ -3546,13 +3556,19 @@ _AC-13492 - [GitHub问题](https://github.com/magento/magento2/issues/39462) - [
 
 #### [Cloud Native Service] CNS生成失败 — 2.4.9-beta1 — 集成
 
+无可用描述。
+
 _AC-16427_
 
 #### 硬编码夹具路径在Composer构建中失败
 
+无可用描述。
+
 _AC-16488_
 
 #### PR和编辑器内部版本之间的PHPUnit配置文件不匹配
+
+无可用描述。
 
 _AC-16501_
 
@@ -3642,6 +3658,8 @@ AC-12343
 _AC-12343 - [GitHub问题](https://github.com/magento/magento2/issues/37469)_
 
 #### GUID未保存为安全格式
+
+无可用描述。
 
 _AC-15809_
 
