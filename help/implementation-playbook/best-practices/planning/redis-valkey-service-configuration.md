@@ -199,7 +199,7 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的[Commerce ](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection)中的&#x200B;_REDIS_USE_SLAVE_CONNECTION_。
+有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的[Commerce &#x200B;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection)中的&#x200B;_REDIS_USE_SLAVE_CONNECTION_。
 
 对于Adobe Commerce内部部署，请使用`bin/magento setup`命令配置新的Redis缓存实现。 请参阅[配置指南](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)中的&#x200B;_对默认缓存使用Redis_。
 
@@ -213,7 +213,7 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的[Commerce ](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)中的&#x200B;_VALKEY_USE_SLAVE_CONNECTION_。
+有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的[Commerce &#x200B;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)中的&#x200B;_VALKEY_USE_SLAVE_CONNECTION_。
 
 对于Adobe Commerce内部部署，请使用`bin/magento setup`命令配置新的Valkey缓存实现。 请参阅[配置指南](../../../configuration/cache/config-valkey.md)中的&#x200B;_配置Valkey_。
 
@@ -714,7 +714,7 @@ io-threads-do-reads yes
 io-threads 8 # Choose a value lower than the number of CPU cores (check with nproc), and then tune under load.
 ```
 
->[!TAB 为Valkey]配置I/O线程
+>[!TAB 为Valkey配置I/O线程]
 
 对于Valkey：
 
