@@ -2,9 +2,9 @@
 user-guide-title: 实施行动手册
 user-guide-description: 了解规划和实施成功的 Adobe Commerce 网站的策略。
 mini-toc-levels: 3
-source-git-commit: 8d2dd409741717b534e4aef5e252a614ccb81f4a
+source-git-commit: 28ca422543728123edcaa41dedca6e3cc53536b6
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 14%
 
 ---
@@ -27,8 +27,7 @@ ht-degree: 14%
       - [报告配置](best-practices/planning/reporting-configuration.md)
       - [云部署的数据库配置&#x200B;。](best-practices/planning/database-on-cloud.md)
       - [MySQL配置](best-practices/planning/mysql-configuration.md)
-      - [Redis服务配置](best-practices/planning/redis-service-configuration.md)
-      - [Valkey服务配置](best-practices/planning/valkey-service-configuration.md)
+      - [Redis/Valkey服务配置](best-practices/planning/redis-valkey-service-configuration.md)
       - [OPcache内存大小](best-practices/planning/opcache-memory-size.md)
       - [Realpath缓存大小](best-practices/planning/realpath-cache-size.md)
       - [扩展](best-practices/planning/extensions.md)
@@ -52,7 +51,7 @@ ht-degree: 14%
       - [正在修改核心代码和第三方代码](best-practices/development/modifying-core-and-third-party-code.md)
    - Launch {#launch}
       - [概述](best-practices/launch/overview.md)
-      - [配置Web爬网程序](best-practices/launch/robots-txt.md)
+      - [配置Web爬虫](best-practices/launch/robots-txt.md)
       - [保护您的站点和基础架构](best-practices/launch/security-best-practices.md)
    - 维护 {#maintenance}
       - [概述](best-practices/maintenance/overview.md)
@@ -69,4 +68,4 @@ ht-degree: 14%
       - [升级核对清单](best-practices/maintenance/upgrade-checklist.md)
       - [升级MariaDB的先决条件](best-practices/maintenance/mariadb-upgrade.md)
 - [术语表](glossary.md)
-- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
