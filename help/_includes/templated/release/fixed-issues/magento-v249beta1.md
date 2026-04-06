@@ -61,7 +61,7 @@ _AC-15473 - [GitHub问题](https://github.com/magento/magento2/issues/39943) - [
 
 _AC-6419 - [GitHub问题](https://github.com/magento/magento2/issues/35934) - [GitHub代码贡献](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### `/V1/order/{orderId}/ship` API终结点中的内部服务器错误
+#### `/V1/order/&lbrace;orderId&rbrace;/ship` API终结点中的内部服务器错误
 
 系统现在修复了`/V1/order/{orderId}/ship` API端点中的内部服务器错误，并返回400错误，因为请求格式不正确。
 
@@ -2172,7 +2172,7 @@ _AC-8949 - [GitHub代码贡献](https://github.com/magento/magento2/commit/3b5ac
 
 #### GraphQL对订单安排的响应不包括异常消息
 
-还原以前以不同格式返回错误的更改。 现在，以一致的方式返回了潜在错误，而不会破坏GraphQL架构。 应作为已知BIC添加，PM可在此处批准： https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
+还原以前以不同格式返回错误的更改。 现在，以一致的方式返回了潜在错误，而不会破坏GraphQL架构。 应作为已知BIC添加，PM可在此处批准： https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
 
 _ACP2E-3399 - [GitHub代码贡献](https://github.com/magento/magento2/commit/9608ca21)_
 
