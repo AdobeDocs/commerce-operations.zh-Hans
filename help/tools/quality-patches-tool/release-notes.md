@@ -46,7 +46,7 @@ ht-degree: 0%
 * **ACP2E-4732**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了当changelog表中的version_id列达到最大值时，具有大量更新的客户停止部分索引的问题。
 * **ACP2E-4763**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了以下问题：当目录价格设置为“含税”时，由于应用了两次税，GraphQL客户订单查询会返回夸大的original_price_include_tax和original_row_total_include_tax值。
 * **ACSD-60989**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过声明性架构修改带有外键的列会在MariaDB上导致错误的问题。
-* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050{37**
+* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050&lbrace;37**
 * 已替换的修补程序： **ACSD-58446**、**ACSD-67904**
 
 ## v1.1.77 {#v1-1-77}
