@@ -17,11 +17,11 @@ ht-degree: 0%
 
 每个安全补丁发行版本都基于以前的完整补丁发行版本。 它包含先前修补程序版本的质量和安全修复，以及在先前完整修补程序版本和安全修补程序版本之间创建的安全修复。
 
-有关下载和应用安全修补程序的说明，请参阅[Adobe Commerce知识库](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)中的&#x200B;_如何获取和应用安全修补程序_。
+有关下载和应用安全修补程序的说明，请参阅[Adobe Commerce知识库](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)中的&#x200B;_如何获取和应用安全修补程序_。
 
 >[!NOTE]
 >
->扩展支持安全修补程序仅适用于Adobe Commerce客户，不适用于Magento Open Source代码库。 请参阅[扩展支持](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
+>扩展支持安全修补程序仅适用于Adobe Commerce客户，不适用于Magento Open Source代码库。 请参阅[扩展支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
 
 ## 隔离的安全修补程序文件
 
@@ -29,5 +29,5 @@ ht-degree: 0%
 
 要应用独立的安全修补程序文件，客户必须在其受支持的发行版中安装最新的仅安全修补程序发行版（最新的 — p版本），因为独立的安全修补程序文件将专门针对该版本进行测试。
 
-请参阅[安全中心](https://helpx.adobe.com/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
+请参阅[安全中心](https://helpx.adobe.com/cn/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
 

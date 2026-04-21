@@ -18,7 +18,7 @@ Adobe不断努力在使产品升级变得简单且可预测，同时更快地为
 
 >[!NOTE]
 >
->要了解有关新功能、云基础架构和可扩展性版本的更多信息，请参阅[Adobe Commerce Services](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all)版本文档。
+>要了解有关新功能、云基础架构和可扩展性版本的更多信息，请参阅[Adobe Commerce Services](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/release-information/release-notes-all)版本文档。
 
 除了此页面上列出的计划质量、安全性和测试版修补程序之外，Adobe还通过[质量修补程序工具](versioning-policy.md#individual-patch)提供对[单个修补程序](../tools/quality-patches-tool/usage.md)的访问。 该工具允许您应用、还原和查看有关已安装Adobe Commerce版本可用的所有单个修补程序的一般信息。
 
@@ -45,10 +45,10 @@ Adobe Commerce补丁发行版本基于以下准则发布：
 
 Adobe通过以下渠道通知客户新的修补程序版本：
 
-- [Adobe安全公告与建议](https://helpx.adobe.com/security/security-bulletin.html#magento)
+- [Adobe安全公告与建议](https://helpx.adobe.com/cn/security/security-bulletin.html#magento)
 - 电子邮件
 - 产品内警报
 
 >[!NOTE]
 >
-> 有关每个次要、补丁和安全版本的发行日期以及常规支持结束日期，请参阅[已发行版本](https://experienceleague.adobe.com/en/docs/commerce-operations/release/versions)。
+> 有关每个次要、补丁和安全版本的发行日期以及常规支持结束日期，请参阅[已发行版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/versions)。
