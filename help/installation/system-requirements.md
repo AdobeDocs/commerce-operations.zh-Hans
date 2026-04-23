@@ -50,7 +50,7 @@ opensearch:
     disk: 1024
 ```
 
-请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
+请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
 >[!TAB Commerce内部部署]
 
@@ -62,7 +62,7 @@ opensearch:
 
 有特定的PHP配置设置，如`memory_limit`设置，可帮助您在使用Adobe Commerce时避免常见问题。 请参阅[必需的PHP设置](prerequisites/php-settings.md)。
 
-有关云配置指南，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
+有关云配置指南，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
 
 ### PHP OPcache
 
@@ -89,7 +89,7 @@ PHPUnit v9（作为命令行工具）。
 
 >[!TIP]
 >
->有关云基础架构中的PHP扩展，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[启用PHP扩展](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。
+>有关云基础架构中的PHP扩展，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[启用PHP扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。
 
 >[!BEGINTABS]
 
@@ -128,11 +128,11 @@ PHPUnit v9（作为命令行工具）。
 
 ### 邮件服务器
 
-邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/sendgrid)。
+邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/sendgrid)。
 
 ### 内存
 
-升级从Commerce Marketplace和其他来源获得的应用程序和扩展最多可能需要2 GB的RAM。 如果您使用的系统RAM小于2 GB，请创建[交换文件](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/installation-and-upgrade/out-of-memory-error-during-install-or-upgrade)。 否则，升级可能会失败。
+升级从Commerce Marketplace和其他来源获得的应用程序和扩展最多可能需要2 GB的RAM。 如果您使用的系统RAM小于2 GB，请创建[交换文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/installation-and-upgrade/out-of-memory-error-during-install-or-upgrade)。 否则，升级可能会失败。
 
 ### 操作系统(Linux x86-64)
 
@@ -158,17 +158,17 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 - 不支持自签名SSL证书。
 - 传输层安全性(TLS)要求 — PayPal和`repo.magento.com`都需要TLS 1.2或更高版本。
 
-有关云基础架构上的Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[Fastly配置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)。
+有关云基础架构上的Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[Fastly配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)。
 
 ### Xdebug
 
 对于Adobe Commerce，请使用[php_xdebug 2.5.x](https://xdebug.org/download)或更高版本（仅适用于开发环境；可能会对性能产生不利影响）。
 
-有关云上的Adobe Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置Xdebug](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/debug)。
+有关云上的Adobe Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置Xdebug](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/test/debug)。
 
 >[!NOTE]
 >
->`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
+>`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
 
 
 <!-- Last updated from includes: 2026-03-13 12:40:18 -->
