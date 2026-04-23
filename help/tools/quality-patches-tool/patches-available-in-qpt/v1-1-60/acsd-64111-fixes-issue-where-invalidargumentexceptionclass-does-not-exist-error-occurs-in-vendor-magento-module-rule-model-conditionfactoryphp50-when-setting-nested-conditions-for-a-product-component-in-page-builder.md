@@ -1,63 +1,69 @@
 ---
-title: 'ACSD-64111: Fixes the *InvalidArgumentException: Class does not exist* error when setting nested conditions for a Product component in [!DNL Page Builder]'
+title: ACSD-64111：修复了在 [!DNL Page Builder]中设置产品组件的嵌套条件时出现*InvalidArgumentException：类不存在*错误
 feature: Products, Page Builder
 role: Admin, Developer
 exl-id: dc39c65b-fb78-4105-b0e8-92a78b49adaf
 type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 0%
+
 ---
-# ACSD-64111: Fixes the *InvalidArgumentException: Class does not exist* error when setting nested conditions for a Product component in [!DNL Page Builder]
 
-The ACSD-64111 patch fixes the issue where *InvalidArgumentException: Class does not exist* error occurs in `vendor/magento/module-rule/Model/ConditionFactory.php:50` when setting nested conditions for a Product component in [!DNL Page Builder]. This patch is available when the [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.60 is installed. The patch ID is ACSD-64111. Please note that the issue is scheduled to be fixed in Adobe Commerce 2.4.8.
+# ACSD-64111：修复了在[!DNL Page Builder]中设置产品组件的嵌套条件时出现&#x200B;*InvalidArgumentException：类不存在*&#x200B;错误
 
-## Affected products and versions
+ACSD-64111修补程序修复了以下问题： *InvalidArgumentException：类不存在*，在[!DNL Page Builder]中为产品组件设置嵌套条件时在`vendor/magento/module-rule/Model/ConditionFactory.php:50`中发生错误。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.60时，此修补程序可用。 修补程序ID为ACSD-64111。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
-**The patch is created for Adobe Commerce version:**
+## 受影响的产品和版本
 
-* Adobe Commerce (all deployment methods)  2.4.6-p8
+**为Adobe Commerce版本创建了修补程序：**
 
-**Compatible with Adobe Commerce versions:**
+* Adobe Commerce（所有部署方法）  2.4.6-p8
 
-* Adobe Commerce (all deployment methods) 2.4.4 - 2.4.7-p4
+**与Adobe Commerce版本兼容：**
+
+* Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p4
 
 >[!NOTE]
 >
->The patch might become applicable to other versions with new [!DNL Quality Patches Tool] releases. To check if the patch is compatible with your Adobe Commerce version, update the `magento/quality-patches` package to the latest version and check the compatibility on the [[!DNL Quality Patches Tool]: Search for patches page](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans). Use the patch ID as a search keyword to locate the patch.
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
-## Issue
+## 问题
 
-An error *InvalidArgumentException: Class does not exist in /app/<project id\>/vendor/magento/module-rule/Model/ConditionFactory.php* is thrown when adding a *[!UICONTROL Conditions Combination]* in [!DNL Page Builder] Products widget condition.
+在[!DNL Page Builder]产品构件条件中添加&#x200B;*[!UICONTROL Conditions Combination]*&#x200B;时，引发错误&#x200B;*InvalidArgumentException：类在/app/&lt;project id\>/vendor/magento/module-rule/Model/ConditionFactory.php*&#x200B;中不存在。
 
-<u>Steps to reproduce</u>:
+<u>重现步骤</u>：
 
-1. Log in to the Adobe Commerce admin.
-1. Go to **[!UICONTROL Content]** > *[!UICONTROL Elements]* > **[!UICONTROL Pages]**.
-1. Add a new page (or edit an existing page).
-1. Expand the **[!UICONTROL Content]** section and click **[!UICONTROL Edit with Page Builder]**.
-1. Add a new row and then the **[!UICONTROL Products]** widget.
-1. Configure the **[!UICONTROL Products]** widget.
-1. Select the **[!UICONTROL Condition]** under **[!UICONTROL Select Products By]**.
-1. Add a new condition and select **[!UICONTROL Conditions Combination]** from the dropdown.
+1. 登录到Adobe Commerce管理员。
+1. 转到&#x200B;**[!UICONTROL Content]** > *[!UICONTROL Elements]* > **[!UICONTROL Pages]**。
+1. 添加新页面（或编辑现有页面）。
+1. 展开&#x200B;**[!UICONTROL Content]**&#x200B;部分并单击&#x200B;**[!UICONTROL Edit with Page Builder]**。
+1. 添加新行，然后添加&#x200B;**[!UICONTROL Products]**&#x200B;构件。
+1. 配置&#x200B;**[!UICONTROL Products]**&#x200B;小组件。
+1. 选择&#x200B;**[!UICONTROL Select Products By]**&#x200B;下的&#x200B;**[!UICONTROL Condition]**。
+1. 添加新条件并从下拉列表中选择&#x200B;**[!UICONTROL Conditions Combination]**。
 
-<u>Expected results</u>:
+<u>预期的结果</u>：
 
-No errors in logs.
+日志中没有错误。
 
-<u>Actual results</u>:
+<u>实际结果</u>：
 
-The below exception is recorded in the logs:
+日志中记录了以下异常：
 
-*report.CRITICAL: InvalidArgumentException: Class does not exist in vendor/magento/module-rule/Model/ConditionFactory.php:50*
+*report.CRITICAL： InvalidArgumentException：类在vendor/magento/module-rule/Model/ConditionFactory.php:50*&#x200B;中不存在
 
-## Apply the patch
+## 应用修补程序
 
-To apply individual patches, use the following links depending on your deployment method:
+要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce or Magento Open Source on-premises: [[!DNL Quality Patches Tool] > Usage](/help/tools/quality-patches-tool/usage.md) in the [!DNL Quality Patches Tool] guide.
-* Adobe Commerce on cloud infrastructure: [Upgrades and Patches > Apply Patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans) in the Commerce on Cloud Infrastructure guide.
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 
-## Related reading
+## 相关阅读
 
-To learn more about [!DNL Quality Patches Tool], refer to:
+要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool]: A self-service tool for quality patches](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) in the Tools guide.
+* [[!DNL Quality Patches Tool]： “工具”指南中用于高质量修补程序的](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的自助服务工具。
