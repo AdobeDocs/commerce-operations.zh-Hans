@@ -29,7 +29,7 @@ Adobe仅支持下表所述的系统要求组合。 例如，2.4.5已通过MariaD
 
 >[!BEGINTABS]
 
->云端上的[!TAB Commerce]
+>[!TAB 云端上的 Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
@@ -68,7 +68,7 @@ opensearch:
 
 Adobe建议您验证是否出于性能原因启用了[PHP OPcache](https://www.php.net/manual/en/book.opcache.php)。 OPcache在许多PHP分发中启用。
 - **对于云基础架构部署上的Adobe Commerce**，默认情况下会安装`opcache`扩展。
-- 对于Adobe Commerce内部部署：****
+- 对于Adobe Commerce内部部署：**&#x200B;**
    - [验证是否已安装PHP OPcache扩展](prerequisites/php-settings.md#verify-php-is-installed)。
    - 有关性能设置的特定指导，请参阅&#x200B;*性能最佳实践*&#x200B;指南中的[PHP设置](../performance/software.md#php-settings)的软件建议。
 
@@ -93,7 +93,7 @@ PHPUnit v9（作为命令行工具）。
 
 >[!BEGINTABS]
 
->云端上的[!TAB Commerce]
+>[!TAB 云端上的 Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
@@ -168,7 +168,7 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 
 >[!NOTE]
 >
->`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的[已知问题。
+>`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
 
 
 <!-- Last updated from includes: 2026-03-13 12:40:18 -->
