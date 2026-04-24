@@ -992,7 +992,7 @@ ht-degree: 0%
    - [“警报”选项卡](observation-for-adobe-commerce/alerts-tab.md)
    - [WAF选项卡](observation-for-adobe-commerce/waf-tab.md)
    - [CDN选项卡](observation-for-adobe-commerce/cdn-tab.md)
-   - [ [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [&#x200B; [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Cron选项卡](observation-for-adobe-commerce/cron-tab.md)
    - [索引选项卡](observation-for-adobe-commerce/indexing-tab.md)
    - [QuickView选项卡](observation-for-adobe-commerce/oac-quickview-tab.md)
