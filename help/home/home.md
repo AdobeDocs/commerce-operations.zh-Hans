@@ -1,16 +1,16 @@
 ---
-title: 操作指南主页
-description: 了解Adobe Commerce系统管理和操作概念。 浏览有关规划、配置和维护Commerce部署的综合指南。
+title: Operational Guides Home
+description: Learn about Adobe Commerce system administration and operational concepts. 浏览有关规划、配置和维护Commerce部署的综合指南。
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: d4759f2394d55d115e5da80c271152ee621a2683
+source-git-commit: e0905f357c5ab84b30304eeaad00d9ae4ec0c168
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '173'
 ht-degree: 7%
 
 ---
 
 
-# Adobe Commerce操作指南
+# Adobe Commerce Operational Guides
 
 使用下列指南集了解系统管理概念、流程、工具和最佳实践，以便规划、配置、部署和维护Adobe Commerce项目。
 
@@ -102,4 +102,4 @@ ht-degree: 7%
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2026-04-03 22:13:36 -->
+<!-- Last updated from includes: 2026-04-24 20:40:38 -->
