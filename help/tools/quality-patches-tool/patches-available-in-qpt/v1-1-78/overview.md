@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 3e003e0cf2428a5e6ec45292fa19aaa2b9e9324d
+source-git-commit: 5d52a3d956054c1d4cb8922f0cfd26ae600c4b8d
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 QPT v1.1.78包含以下修补程序：
 1. **ACP2E-4416**：修复了在管理员中创建客户奖励点时未初始化的问题。
-1. **ACP2E-4419**：修复了在店面成功进行reCAPTCHA v2（“我不是机器人”）验证后，礼品卡在结账时未正确应用的问题。
+1. **[ACP2E-4419](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4419.md)**：修复了在店面成功进行reCAPTCHA v2（“我不是机器人”）验证后，礼品卡在结账时未正确应用的问题。
 1. **ACP2E-4431**：修复了在重新索引过程中删除与目标规则匹配的相关产品的问题。
 1. **ACP2E-4448**：修复了在Redis中断期间所做的配置更改在Redis恢复后未反映出来，从而导致保留过时值的问题。
 1. **ACP2E-4452**：修复了“快速订单”页面上的产品价格包含税的问题，无论显示税配置如何。
