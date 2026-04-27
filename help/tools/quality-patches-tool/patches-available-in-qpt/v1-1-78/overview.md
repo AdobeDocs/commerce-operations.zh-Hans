@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: cc3bd15a0c11762812e4e51e4c01bfa64756421a
+source-git-commit: 0494717c06fcabcb093a2b168ae714f773ed6f7b
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 0%
@@ -29,7 +29,7 @@ QPT v1.1.78包含以下修补程序：
 1. **ACP2E-4535**：修复了提交忘记密码表单导致会话被销毁或重新生成（PHPSESSID更改）并且访客购物车被清除的问题。
 1. **ACP2E-4540**：修复了Fotorama库未正确加载，导致仅显示附加的第一个图像的问题。
 1. **ACP2E-4555**：修复了包含“。”的现代电话号码的问题。 或“/”未正确验证。
-1. **ACP2E-4565**：修复了在使用X-Adobe-Company标头时，GraphQL公司查询返回“当前客户未获得授权”的问题。
+1. **[ACP2E-4565](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4565.md)**：修复了在使用X-Adobe-Company标头时，GraphQL公司查询返回“当前客户未获得授权”的问题。
 1. **ACP2E-4591**：修复了基于“首次购买者”等订单计数的客户区段在通过REST API下订单时未更新的问题。
 1. **ACP2E-4609**：修复了当某些引号包含已删除的产品时，“我的引号”页面不显示引号的问题。
 1. **ACP2E-4613**：修复了大型媒体目录结构导致gettree响应缓慢，从而延长媒体集目录树加载时间的问题。
