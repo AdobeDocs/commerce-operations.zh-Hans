@@ -4,7 +4,7 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 5d52a3d956054c1d4cb8922f0cfd26ae600c4b8d
+source-git-commit: cc3bd15a0c11762812e4e51e4c01bfa64756421a
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 0%
@@ -24,7 +24,7 @@ QPT v1.1.78包含以下修补程序：
 1. **ACP2E-4456**：修复了使用GraphQL突变取消订单时无法将完全使用礼品卡支付的订单转换为“已关闭”状态的问题。
 1. **ACP2E-4507**：修复了密码选项配置未应用于通过GraphQL突变进行的客户密码重置请求的问题。
 1. **ACP2E-4513**：修复了未从系统中删除过期验证码图像的问题。
-1. **ACP2E-4522**：修复了在同时运行多个购物车合并或报价保存请求时，quote_coupons表发生间歇性重复键错误的问题。
+1. **[ACP2E-4522](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4522.md)**：修复了在同时运行多个购物车合并或报价保存请求时，quote_coupons表发生间歇性重复键错误的问题。
 1. **ACP2E-4528**：修复了客户地址中的城市验证问题，该问题现在允许使用正斜杠(/)字符并拒绝无效字符，如！、&#39;、#和？。
 1. **ACP2E-4535**：修复了提交忘记密码表单导致会话被销毁或重新生成（PHPSESSID更改）并且访客购物车被清除的问题。
 1. **ACP2E-4540**：修复了Fotorama库未正确加载，导致仅显示附加的第一个图像的问题。
