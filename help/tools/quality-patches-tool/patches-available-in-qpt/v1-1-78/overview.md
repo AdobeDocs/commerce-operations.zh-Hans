@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 0494717c06fcabcb093a2b168ae714f773ed6f7b
+source-git-commit: 55b1c830073eaa7bfacae9fb8e9190414d7a990c
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,8 @@ QPT v1.1.78包含以下修补程序：
 1. **[ACP2E-4522](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4522.md)**：修复了在同时运行多个购物车合并或报价保存请求时，quote_coupons表发生间歇性重复键错误的问题。
 1. **ACP2E-4528**：修复了客户地址中的城市验证问题，该问题现在允许使用正斜杠(/)字符并拒绝无效字符，如！、&#39;、#和？。
 1. **ACP2E-4535**：修复了提交忘记密码表单导致会话被销毁或重新生成（PHPSESSID更改）并且访客购物车被清除的问题。
-1. **ACP2E-4540**：修复了Fotorama库未正确加载，导致仅显示附加的第一个图像的问题。
-1. **ACP2E-4555**：修复了包含“。”的现代电话号码的问题。 或“/”未正确验证。
+1. **[ACP2E-4540](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4540.md)**：修复了Fotorama库未正确加载，导致仅显示附加的第一个图像的问题。
+1. **[ACP2E-4555](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4555.md)**：修复了包含“。”的现代电话号码的问题。 或“/”未正确验证。
 1. **[ACP2E-4565](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4565.md)**：修复了在使用X-Adobe-Company标头时，GraphQL公司查询返回“当前客户未获得授权”的问题。
 1. **ACP2E-4591**：修复了基于“首次购买者”等订单计数的客户区段在通过REST API下订单时未更新的问题。
 1. **ACP2E-4609**：修复了当某些引号包含已删除的产品时，“我的引号”页面不显示引号的问题。
