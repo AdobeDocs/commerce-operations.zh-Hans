@@ -2,18 +2,18 @@
 title: 如何访问 [!DNL Site-Wide Analysis Tool]
 description: 了解如何从Adobe Commerce管理面板访问网站范围的分析工具仪表板。 了解用户权限和角色要求。
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: d75d8fe87b5bf5cf5cd1d5a15371a456b82f18db
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
 # 如何访问[!DNL Site-Wide Analysis Tool]
 
-您可以从商店的[!DNL Site-Wide Analysis Tool]访问[!UICONTROL Admin Panel]仪表板。
+您可以从商店的[!UICONTROL Admin Panel]访问[!DNL Site-Wide Analysis Tool]仪表板。
 
-[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[!UICONTROL Admin]角色资源[的](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/user-accounts/permissions-user-roles)用户使用。
+[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[角色资源](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)的[!UICONTROL Admin]用户使用。
 
 >[!NOTE]
 >
@@ -21,18 +21,17 @@ ht-degree: 0%
 
 
 ![站点范围分析仪表板](../../assets/tools/site-wide-analysis-tool-dashboard.png)
-*[!DNL Site-Wide Analysis Tool]仪表板*
+*[!DNL Site-Wide Analysis Tool]信息板*
 
 >[!NOTE]
 >
->您的帐户应有权使用&#x200B;**[!DNL Support Permissions]**&#x200B;以访问[!DNL Site-Wide Analysis Tool Dashboard]。
->&#x200B;>请参阅用户指南中的[共享 [!DNL Commerce] 帐户](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html?lang=zh-Hans)中的更多详细信息。
+>要访问全站点分析工具(SWAT)，用户必须在Adobe Commerce管理中拥有所需权限。 不支持直接访问SWAT URL，包括已添加书签的链接。
 
-## 从应用商店的[!DNL Site-Wide Analysis Tool Dashboard]登录到[!UICONTROL Admin Panel]
+## 从应用商店的[!UICONTROL Admin Panel]登录到[!DNL Site-Wide Analysis Tool Dashboard]
 
 ### 步骤1：验证权限
 
-验证[!UICONTROL Admin]用户帐户是否有权通过其[!DNL Site-Wide Analysis Tool]分配的用户角色[访问](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/user-accounts/permissions-user-roles)。
+验证[!UICONTROL Admin]用户帐户是否有权通过其[分配的用户角色](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)访问[!DNL Site-Wide Analysis Tool]。
 
 >[!IMPORTANT]
 >
@@ -43,7 +42,7 @@ ht-degree: 0%
 1. 选择&#x200B;**[!UICONTROL Reports]** > *[!UICONTROL System Insights]* > **[!UICONTROL Site-Wide Analysis Tool]**&#x200B;角色资源。
 
    ![站点范围分析仪表板](../../assets/tools/swat-role-access.png)
-   已为角色&#x200B;*[!DNL Site-Wide Analysis Tool]选择*&#x200B;权限
+   已为角色&#x200B;*选择*[!DNL Site-Wide Analysis Tool]&#x200B;权限
 
 1. 单击&#x200B;**[!UICONTROL Save Role]**。
 
@@ -51,16 +50,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!UICONTROL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/403-errors-when-accessing-site-wide-analysis-tool-on-magento)。
+>如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!UICONTROL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/403-errors-when-accessing-site-wide-analysis-tool-on-magento)。
 
 ### 步骤2：访问[!DNL Site-Wide Analysis Tool]
 
 1. 在&#x200B;*[!UICONTROL Admin]*&#x200B;侧边栏上，转到&#x200B;**[!UICONTROL Reports]** > *[!UICONTROL System Insights]* > **[!UICONTROL Site-Wide Analysis Tool]**。
 
    ![站点范围分析仪表板](../../assets/tools/ac-admin-panel-marked.jpg)
-   在Adobe Commerce *[!DNL Site-Wide Analysis Tool]的[!UICONTROL Admin Panel]中的*&#x200B;位置
+   在Adobe Commerce *的[!UICONTROL Admin Panel]中的*[!DNL Site-Wide Analysis Tool]&#x200B;位置
 
-1. 阅读&#x200B;*的*&#x200B;使用条款[!DNL Site-Wide Analysis Tool]并单击&#x200B;**[!UICONTROL Accept]**&#x200B;以继续。
+1. 阅读[!DNL Site-Wide Analysis Tool]的&#x200B;*使用条款*&#x200B;并单击&#x200B;**[!UICONTROL Accept]**&#x200B;以继续。
 
    每个用户都必须接受会话的使用条款。 对于每个已登录的会话，将重复执行此步骤。
 
