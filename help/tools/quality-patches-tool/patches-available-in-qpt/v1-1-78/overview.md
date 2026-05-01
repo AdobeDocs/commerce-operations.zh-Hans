@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: e0111754306fc220ba7eacf3590b70bcc048f34f
+source-git-commit: f78520918618a750cdca062a0543eb4821dfc525
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,7 @@ QPT v1.1.78包含以下修补程序：
 1. **ACP2E-4609**：修复了当某些引号包含已删除的产品时，“我的引号”页面不显示引号的问题。
 1. **[ACP2E-4613](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4613.md)**：修复了大型媒体目录结构导致gettree响应缓慢，从而导致&#x200B;**[!UICONTROL Media Gallery]**&#x200B;目录树的加载时间延长的问题。
 1. **ACP2E-4628**：修复了将“帐户共享”设置为“全局”时，导入具有大写电子邮件地址的客户会导致未定义数组键值错误的问题。
+1. **[ACP2E-4665](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4665.md)**：修复了在通过REST API请求时，产品库中包含视频的可配置产品的子产品未列出的问题。
 1. **ACP2E-4665**：修复了在通过REST API请求时，产品库中包含视频的可配置产品的子产品未列出的问题。
 1. **ACP2E-4732**：修复了当changelog表中的version_id列达到最大值时，具有大量更新的客户停止部分索引的问题。
 1. **ACP2E-4763**：修复了GraphQL customerOrders查询在“目录价格”设置为“含税”时，因两次应用税而返回夸大的original_price_include_tax和original_row_total_include_tax值的问题。
