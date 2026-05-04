@@ -2,9 +2,9 @@
 title: 应用修补程序
 description: 了解将修补程序应用于Adobe Commerce项目的方法。
 exl-id: 1d5d81ad-0115-4575-adfd-dde7c2826d85
-source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 可以使用以下任一方法应用修补程序：
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [命令行](../patches/apply.md#command-line)
 - [Composer](../patches/apply.md#composer)
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 1. 打开命令行应用程序并导航到项目目录。
 1. 将`cweagans/composer-patches`插件添加到`composer.json`文件。
 
-   ```bash
+   ```shell
    composer require cweagans/composer-patches
    ```
 
@@ -57,13 +57,13 @@ ht-degree: 0%
 
 1. 应用修补程序。 仅当要查看调试信息时，才使用`-v`选项。
 
-   ```bash
+   ```shell
    composer -v install
    ```
 
 1. 更新`composer.lock`文件。 锁定文件会跟踪哪些修补程序已应用于对象中的每个Composer包。
 
-   ```bash
+   ```shell
    composer update --lock
    ```
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 1. 以[管理员用户](../../configuration/cli/config-cli.md#prerequisites)身份登录服务器，并验证该文件是否位于正确的目录中。
 1. 在命令行界面中，根据修补程序扩展运行以下命令：
 
-   ```bash
+   ```shell
    patch < patch_file_name.patch
    ```
 

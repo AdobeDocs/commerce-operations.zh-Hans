@@ -3,9 +3,9 @@ title: 设置Ubuntu上的内存缓存
 description: 了解如何在Ubuntu上安装和配置用于Adobe Commerce缓存的memcached。 了解设置说明和优化提示。
 feature: Configuration, Cache, Storage
 exl-id: 831193d2-3e81-472c-9b87-78a8d52959b4
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
 - `memcache` (_no d_) — 不是定期维护的较旧但常用的扩展。
-当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache[的](https://www.php.net/manual/en/book.memcache.php)PHP文档。
+当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache](https://www.php.net/manual/en/book.memcache.php)的[PHP文档。
 
   Ubuntu的确切名称为`php5-memcache`。
 
-- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached[的](https://www.php.net/manual/en/book.memcached.php)PHP文档。
+- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached](https://www.php.net/manual/en/book.memcached.php)的[PHP文档。
 
   Ubuntu的确切名称为`php5-memcached`。
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 
 1. 作为具有`root`权限的用户，输入以下命令：
 
-   ```bash
+   ```shell
    apt-get -y update
    ```
 
-   ```bash
+   ```shell
    apt-get -y install php5-memcached memcached
    ```
 
@@ -53,7 +53,7 @@ ht-degree: 0%
    1. 将更改保存到`memcached.conf`并退出文本编辑器。
    1. 重新启动memcached。
 
-      ```bash
+      ```shell
       service memcached restart
       ```
 
@@ -130,7 +130,7 @@ http://192.0.2.1/cache-test.php
 
 最后，您可以使用Telnet查看memcache密钥：
 
-```bash
+```shell
 telnet localhost <memcache port>
 ```
 
@@ -142,7 +142,7 @@ stats items
 
 结果类似于以下内容：
 
-```
+```text
 STAT items:2:number 1
 STAT items:2:age 106
 STAT items:2:evicted 0

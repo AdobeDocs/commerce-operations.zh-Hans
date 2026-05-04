@@ -5,9 +5,9 @@ feature: REST
 role: Admin, Developer
 exl-id: e0c6d4c1-ecaf-46e7-af2d-05a148970d71
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-通过REST API *[!UICONTROL Credit Memo]*&#x200B;创建贷项通知单时发送的`POST V1/order/:orderId/refund`电子邮件不包括订单项和总计。
+通过REST API `POST V1/order/:orderId/refund`创建贷项通知单时发送的&#x200B;*[!UICONTROL Credit Memo]*&#x200B;电子邮件不包括订单项和总计。
 
 <u>重现步骤</u>：
 
@@ -43,7 +43,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
    1. 终结点： `POST V1/order/:orderId/refund`
    1. 请求有效负载：
 
-      ```
+      ```json
       {  
           "notify": true,  
           "items": [  
@@ -67,8 +67,8 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 
 ## 相关阅读

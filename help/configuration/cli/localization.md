@@ -2,9 +2,9 @@
 title: 翻译词典和语言包
 description: 了解如何为Adobe Commerce生成翻译词典和构建语言包。 了解本地化和多语言商店设置。
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 通过Commerce翻译，您可以通过生成以下内容为多个地区和市场自定义商店并使其本地化：
 
 - **翻译词典**，这是自定义或翻译&#x200B;_某些_&#x200B;单词和短语（如自定义模块或主题的词典）的简便方法。
-- 允许您在Commerce应用程序中翻译&#x200B;**任何或所有**&#x200B;单词和短语的&#x200B;_语言包_。
+- 允许您在Commerce应用程序中翻译&#x200B;_任何或所有_&#x200B;单词和短语的&#x200B;**语言包**。
 
 请参阅[翻译概述](https://developer.adobe.com/commerce/frontend-core/guide/translations/)。
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 
 1. 您可以将翻译字典打包到一个语言包中，并将该包提供给Commerce商店管理员。
 
-1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-localize)。
+1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize)。
 
 命令选项：
 
-```bash
+```shell
 bin/magento i18n:collect-phrases [-o|--output="<csv file path and name>"] [-m|--magento] <path to directory to translate>
 ```
 
@@ -98,7 +98,7 @@ Product 'Multimeter-2000' has been added to shopping cart.
 
 命令用法：
 
-```bash
+```shell
 bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <source> <locale>
 ```
 
@@ -108,7 +108,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 |--- |--- |--- |
 | `<source>` | CSV文件的绝对文件系统路径和文件名，该文件包含组合翻译词典和分解为语言包所需的元信息。<br><br>使用[`bin/magento i18n:collect-phrases`](#config-cli-subcommands-xlate-dict-dict)创建CSV文件，然后创建语言包，如[创建目录和文件](#m2devgde-xlate-files)中所述。 | 是 |
 | `<locale>` | [ISO 639-1](https://www.iso.org/iso-639-language-codes.html)（语言）和[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)（国家/地区）用作所有生成的CSV文件文件文件名的语言标识符。 示例： `de_DE`、`pt_PT`、`pt_BR`。 | 是 |
-| `-m --mode` | 如果目标文件存在，则指定是替换现有语言包还是与新语言包合并。 合并将覆盖任何现有的短语并添加新短语。<br><br>值：合并或替换（默认）。 | 否 |
+| `-m --mode` | 如果目标文件存在，则指定是替换现有语言包还是与新语言包合并。 合并会覆盖任何现有的短语并添加新短语。<br><br>值：合并或替换（默认值）。 | 否 |
 | `-d --allow-duplicates` | 包括此选项以允许语言包中存在重复项。 否则，如果命令在多个包含不同翻译的条目中遇到相同的短语，则会失败并出现错误。 | 否 |
 
 ### 创建目录和文件
@@ -117,7 +117,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 - 所需的许可证文件
 - `composer.json`
-- `registration.php`注册[语言包的](https://developer.adobe.com/commerce/php/development/build/component-registration/)
+- [注册](https://developer.adobe.com/commerce/php/development/build/component-registration/)语言包的`registration.php`
 - [`language.xml`](#language-package-languagexml)元信息文件
 
 >[!INFO]
@@ -213,7 +213,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 1. 从模块中收集短语：
 
-   ```bash
+   ```shell
    bin/magento i18n:collect-phrases -o "/var/www/html/magento2/app/code/ExampleCorp/SampleModule/i18n/xx_YY.csv" /var/www/html/magento2/app/code/ExampleCorp/SampleModule
    ```
 
@@ -230,7 +230,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 1. 从模块中收集短语：
 
-   ```bash
+   ```shell
    bin/magento i18n:collect-phrases -o "/var/www/html/magento2/xx_YY.csv" -m
    ```
 
@@ -241,7 +241,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 1. 使用[这些指南](#translation-guidelines)翻译单词和短语。
 1. 创建语言包。
 
-   ```bash
+   ```shell
    bin/magento i18n:pack /var/www/html/magento2/xx_YY.csv -d xx_YY
    ```
 

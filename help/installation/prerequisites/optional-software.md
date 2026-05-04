@@ -2,9 +2,9 @@
 title: 可选软件
 description: 了解更多关于可安装以支持Adobe Commerce内部安装的可选软件的信息。
 exl-id: 533ff52b-3301-4624-b691-3dfddde6ce0b
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 输入以下命令以安装NTP：
 
-```bash
+```shell
 apt-get install ntp
 ```
 
@@ -37,7 +37,7 @@ apt-get install ntp
 
 1. 输入以下命令查找相应的NTP软件：
 
-   ```bash
+   ```shell
    yum search ntp
    ```
 
@@ -45,13 +45,13 @@ apt-get install ntp
 
 1. 安装包。
 
-   ```bash
+   ```shell
    yum -y install ntp.x86_64
    ```
 
 1. 输入以下命令，以便NTP在服务器启动时启动。
 
-   ```bash
+   ```shell
    chkconfig ntpd on
    ```
 
@@ -103,7 +103,7 @@ apt-get install ntp
 
 >[!NOTE]
 >
->仅在开发系统`phpinfo.php`中使用&#x200B;__。 这可能是一个生产中的安全问题。
+>仅在开发系统&#x200B;_中使用`phpinfo.php`_。 这可能是一个生产中的安全问题。
 
 在Web服务器的docroot中的任意位置添加以下代码：
 
@@ -128,7 +128,7 @@ http://<web server host or IP>/phpinfo.php
 
   [Ubuntu帮助](https://help.ubuntu.com/community/UFW)
 
-  CentOS的[帮助](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html)
+  [CentOS帮助](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html)
 
 ## phpMyAdmin
 

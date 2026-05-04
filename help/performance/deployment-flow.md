@@ -3,9 +3,9 @@ title: 部署流程
 description: 了解Adobe Commerce生产环境的部署流程流程。 了解实现最大性能和可靠性的步骤。
 feature: Best Practices, Deploy
 exl-id: 88da0b1b-5aa7-4f1c-9d01-ae58324b2754
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ## 安装依赖项
 
-`composer.json`和`composer.lock`文件管理[!DNL Commerce]依赖项并为每个包安装适当的版本。 如果计划更新[自动加载器](#preprocess-dependency-injection-instructions)，则必须在[预处理依赖项注入指令](#update-the-autoloader)之前安装依赖项。
+`composer.json`和`composer.lock`文件管理[!DNL Commerce]依赖项并为每个包安装适当的版本。 如果计划更新[自动加载器](#update-the-autoloader)，则必须在[预处理依赖项注入指令](#preprocess-dependency-injection-instructions)之前安装依赖项。
 
 要安装[!DNL Commerce]依赖项，请执行以下操作：
 
-```bash
+```shell
 composer install --no-dev
 ```
 
@@ -35,7 +35,7 @@ composer install --no-dev
 
 要预处理和编译DI指令，请执行以下操作：
 
-```bash
+```shell
 bin/magento setup:di:compile
 ```
 
@@ -49,25 +49,25 @@ bin/magento setup:di:compile
 >
 >`-o`选项将PSR-0/4自动加载转换为类映射，以获得更快的自动加载程序。 `--apcu`选项使用APCu缓存已找到/未找到类。
 
-```bash
+```shell
 composer dump-autoload -o --apcu
 ```
 
 如果计划更新自动加载程序，则必须按顺序运行以下命令：
 
-```bash
+```shell
 composer install --no-dev
 ```
 
-```bash
+```shell
 bin/magento setup:di:compile
 ```
 
-```bash
+```shell
 composer dump-autoload -o
 ```
 
-```bash
+```shell
 bin/magento setup:static-content:deploy
 ```
 
@@ -87,7 +87,7 @@ bin/magento setup:static-content:deploy
 
 要部署静态内容，请执行以下操作：
 
-```bash
+```shell
 bin/magento setup:static-content:deploy
 ```
 
@@ -105,7 +105,7 @@ bin/magento setup:static-content:deploy
 
 您还可以在一个CLI命令中部署静态内容、编译内容并设置模式：
 
-```bash
+```shell
 bin/magento deploy:mode:set production
 ```
 
@@ -117,4 +117,4 @@ bin/magento deploy:mode:set production
 
 * 重新编入数据索引，以避免索引中出现任何不一致的数据。
 * 刷新缓存以确保缓存中没有留下旧的或不正确的数据。
-* 预热缓存，提前调出最受欢迎或最关键的存储页面，以便生成并存储这些页面的缓存。 此操作可以使用任何Internet Crawler执行，或者手动执行（如果存储空间较小）。
+* 预热缓存，提前调出最受欢迎或最关键的存储页面，以便生成并存储这些页面的缓存。 此操作可以在任何互联网爬虫中执行，或者如果您有一个小型商店，也可以手动执行。

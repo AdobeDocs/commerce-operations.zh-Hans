@@ -1,11 +1,11 @@
 ---
 title: 构建系统设置
-description: 了解如何将Commerce部署到构建系统中。
+description: 了解如何为Adobe Commerce部署设置一个生成系统，该系统具有源代码管理、生成的资源和静态内容要求。
 feature: Configuration, Build, Deploy
 exl-id: f6daf5c6-6d12-46b0-b775-76791bacea53
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -59,11 +59,11 @@ ht-degree: 0%
 
 1. 输入以下命令：
 
-   ```bash
+   ```shell
    curl -sS https://getcomposer.org/installer | php
    ```
 
-   ```bash
+   ```shell
    mv composer.phar /usr/local/bin/composer
    ```
 
@@ -82,26 +82,26 @@ ht-degree: 0%
 
    如果使用Git，请使用以下命令：
 
-   ```bash
+   ```shell
    git clone [-b <branch name>] <repository URL>
    ```
 
 1. 转到Commerce根目录并输入：
 
-   ```bash
+   ```shell
    composer install
    ```
 
 1. 等待依赖项更新。
 1. 设置所有权：
 
-   ```bash
+   ```shell
    chown -R <Commerce file system owner name>:<web server username> .
    ```
 
    例如，
 
-   ```bash
+   ```shell
    chown -R commerce-username:apache .
    ```
 
@@ -120,7 +120,7 @@ ht-degree: 0%
 1. 将更改保存到`.gitignore`并退出文本编辑器。
 1. 如果使用Git，请使用以下命令提交更改：
 
-   ```bash
+   ```shell
    git add .gitignore && git commit -m "Modify .gitignore for build and production"
    ```
 
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 1. 生成系统应使用[默认模式](../bootstrap/application-modes.md#default-mode)或[开发人员模式](../bootstrap/application-modes.md#developer-mode)：
 
-   ```bash
+   ```shell
    bin/magento deploy:mode:set <mode>
    ```
 

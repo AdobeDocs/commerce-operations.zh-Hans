@@ -2,9 +2,9 @@
 title: '[!DNL Upgrade Compatibility Tool]个报告'
 description: 按照以下步骤在您的Adobe Commerce项目上运行 [!DNL Upgrade Compatibility Tool] 。
 exl-id: a2272339-46d6-443b-bd53-286b72f13d4e
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 请参阅以下报告的命令行界面示例：
 
-```
+```text
 File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
 ------------------------------------------------------------------
  * [WARNING][1131] Line 10: Extending from class 'Magento\Framework\App\Action\Action' that is @deprecated on version '2.4.4'
@@ -43,7 +43,7 @@ File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
 
 请参阅以下命令行界面示例：
 
-```
+```text
  ----------------------------- ----------------- 
   Current version               2.4.1            
   Target version                2.4.4            
@@ -68,7 +68,7 @@ File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
 
 要将此`JSON`文件导出到其他输出文件夹，请执行以下操作：
 
-```bash
+```shell
 bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 ```
 
@@ -121,7 +121,7 @@ HTML报表图也会相应地更新，但`Modules with relative sizes and issues`
 
 要将此HTML报表导出到其他输出文件夹，请执行以下操作：
 
-```bash
+```shell
 bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
 ```
 

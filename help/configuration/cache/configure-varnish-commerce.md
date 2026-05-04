@@ -3,9 +3,9 @@ title: 为Commerce配置清漆
 description: 了解如何专门为Adobe Commerce应用程序配置Varnish。 了解配置文件更新和管理技术。
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 0%
    | 后端主机 | 输入完全限定的主机名或IP地址，并侦听Varnish _后端_&#x200B;或&#x200B;_原始服务器_&#x200B;的端口；即，提供内容Varnish的服务器将加速。 通常，这是您的Web服务器。 查看[清漆缓存后端服务器](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html)。 |
    | 后端端口 | 源服务器的侦听端口。 |
    | 宽限期 | 确定在后端无响应时，Varnish提供过时内容的时长。 默认值为300秒。 |
-   | 处理参数大小 | 指定全页缓存的[&#x200B; HTTP终结点上要处理的](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles)布局句柄[`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md)的最大数量。 限制大小可以提高安全性和性能。 默认值为100。 |
+   | 处理参数大小 | 指定全页缓存的[`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md) HTTP终结点上要处理的[布局句柄](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles)的最大数量。 限制大小可以提高安全性和性能。 默认值为100。 |
 
 1. 单击&#x200B;**保存配置**。
 
 您还可以使用C命令行界面工具从命令行激活Varnish，而不是登录到Admin：
 
-```bash
+```shell
 bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/caching_application 2
 ```
 
@@ -50,15 +50,15 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
 
 1. 备份您现有的`default.vcl`。 然后将您刚刚导出的`varnish.vcl`文件重命名为`default.vcl`。 然后将文件复制到`/etc/varnish/`目录。
 
-   ```bash
+   ```shell
    cp /etc/varnish/default.vcl /etc/varnish/default.vcl.bak2
    ```
 
-   ```bash
+   ```shell
    mv <download_directory>/varnish.vcl default.vcl
    ```
 
-   ```bash
+   ```shell
    cp <download_directory>/default.vcl /etc/varnish/default.vcl
    ```
 
@@ -76,11 +76,11 @@ bin/magento config:set --scope=default --scope-code=0 system/full_page_cache/cac
 
 1. 重新启动Varnish和您的Web服务器：
 
-   ```bash
+   ```shell
    service varnish restart
    ```
 
-   ```bash
+   ```shell
    service httpd restart
    ```
 

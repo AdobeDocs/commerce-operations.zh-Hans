@@ -3,7 +3,7 @@ title: 自动配置主数据库
 description: 请参阅有关自动配置拆分数据库解决方案的指南。
 recommendations: noCatalog
 exl-id: a27ad097-de60-4cdd-81f9-eb1ae84587e4
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 1%
@@ -37,7 +37,7 @@ ht-degree: 1%
 1. 以任意用户身份登录到数据库服务器。
 1. 输入以下命令以进入MySQL命令提示符：
 
-   ```bash
+   ```shell
    mysql -u root -p
    ```
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
    签出数据库：
 
-   ```bash
+   ```shell
    mysql -u magento_quote -p
    ```
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
    订单管理系统数据库：
 
-   ```bash
+   ```shell
    mysql -u magento_sales -p
    ```
 
@@ -98,19 +98,19 @@ ht-degree: 1%
 
 命令语法：
 
-```bash
+```shell
 bin/magento setup:db-schema:split-quote --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 ```
 
 例如，
 
-```bash
+```shell
 bin/magento setup:db-schema:split-quote --host="localhost" --dbname="magento_quote" --username="magento_quote" --password="magento_quote"
 ```
 
 将显示以下消息以确认设置成功：
 
-```
+```text
 Migration has been finished successfully!
 ```
 
@@ -118,22 +118,22 @@ Migration has been finished successfully!
 
 命令语法：
 
-```bash
+```shell
 bin/magento setup:db-schema:split-sales --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 ```
 
 例如，
 
-```bash
+```shell
 bin/magento setup:db-schema:split-sales --host="localhost" --dbname="magento_sales" --username="magento_sales" --password="magento_sales"
 ```
 
-```bash
+```shell
 bin/magento setup:upgrade
 ```
 
 将显示以下消息以确认设置成功：
 
-```
+```text
 Migration has been finished successfully!
 ```

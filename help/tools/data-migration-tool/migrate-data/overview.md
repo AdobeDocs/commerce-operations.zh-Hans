@@ -3,9 +3,9 @@ title: 迁移概述
 description: 了解如何使用 [!DNL Data Migration Tool]开始将数据从Magento 1迁移到Magento 2。
 exl-id: b775ede1-9d1d-49d5-ad0f-763404b48278
 topic: Commerce, Migration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -34,13 +34,13 @@ ht-degree: 0%
 
    如果使用bash shell，则可以使用以下语法切换到文件系统所有者并同时输入命令：
 
-   ```bash
+   ```shell
    su <file system owner> -s /bin/bash -c <command>
    ```
 
    如果文件系统所有者不允许登录，您可以执行以下操作：
 
-   ```bash
+   ```shell
    sudo -u <file system owner>  <command>
    ```
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
    CentOS的bash shell示例：
 
-   ```bash
+   ```shell
    export PATH=$PATH:/var/www/html/magento2/bin
    ```
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 以下是典型的命令示例：
 
-```bash
+```shell
 bin/magento migrate:<mode> [-r|--reset] [-a|--auto] {<path to config.xml>}
 ```
 

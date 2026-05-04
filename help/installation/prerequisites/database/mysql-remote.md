@@ -2,9 +2,9 @@
 title: 设置远程MySQL数据库连接
 description: 按照以下步骤为Adobe Commerce的内部安装配置远程数据库连接。
 exl-id: 5fe304bd-ff38-4066-a1fd-8937575e4de4
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Aurora是托管在AWS上的高性能、完全兼容的MySQL服务器。
 
 运行`bin/magento setup:install`时，使用`db-`字段中的Aurora信息：
 
-```bash
+```shell
 bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws.com' --db-name='magento2' --db-user='username' --db-password='password' ...
 ```
 
@@ -64,13 +64,13 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 
    要找到它，请输入以下命令：
 
-   ```bash
+   ```shell
    mysql --help
    ```
 
    该位置显示如下：
 
-   ```
+   ```text
    Default options are read from the following files in the given order:
    /etc/my.cnf /etc/mysql/my.cnf /usr/etc/my.cnf ~/.my.cnf
    ```
@@ -132,13 +132,13 @@ bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws
 
 在Web节点主机上，输入以下命令以验证连接是否有效：
 
-```bash
+```shell
 mysql -u <local database username> -h <database server ip address> -p
 ```
 
 如果MySQL监视器显示如下，则数据库已准备好使用Adobe Commerce：
 
-```
+```text
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 213 Server version: 5.6.26 MySQL Community Server (GPL)
 

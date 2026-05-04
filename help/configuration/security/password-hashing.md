@@ -1,11 +1,11 @@
 ---
 title: 密码散列
-description: 阅读有关密码哈希处理策略和实施的信息。
+description: 了解Adobe Commerce中的密码哈希处理、受支持的算法（如Argon2和SHA256），以及旧版哈希处理如何升级而不更改密码。
 feature: Configuration, Security
 exl-id: 2865d041-950a-4d96-869c-b4b35f5c4120
-source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -61,4 +61,4 @@ def verify(password, hash):
 
 ## 实现
 
-`\Magento\Framework\Encryption\Encryptor`类负责密码哈希生成和验证。 [`bin/magento customer:hash:upgrade`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#customerhashupgrade)命令将客户密码哈希升级为最新的哈希算法。
+`\Magento\Framework\Encryption\Encryptor`类负责密码哈希生成和验证。 [`bin/magento customer:hash:upgrade`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#customerhashupgrade)命令将客户密码哈希升级为最新的哈希算法。

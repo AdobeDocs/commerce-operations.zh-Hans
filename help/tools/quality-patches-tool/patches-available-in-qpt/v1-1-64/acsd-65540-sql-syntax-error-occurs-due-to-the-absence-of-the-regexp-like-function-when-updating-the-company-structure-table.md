@@ -5,16 +5,16 @@ feature: B2B
 role: Admin, Developer
 type: Troubleshooting
 exl-id: a3e60742-60d4-41e3-93c3-506cc5a1c4a3
-source-git-commit: b1912bbc5aabd36067563326ee5c6bb84e14441d
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-# ACSD-65540：由于`REGEXP_LIKE`更新中缺少`company_structure`函数，因此出现SQL错误
+# ACSD-65540：由于`company_structure`更新中缺少`REGEXP_LIKE`函数，因此出现SQL错误
 
-ACSD-65540修补程序修复了由于`REGEXP_LIKE`更新中缺少`company_structure`函数而发生SQL错误的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.64时，此修补程序可用。 修补程序ID为ACSD-65540。
+ACSD-65540修补程序修复了由于`company_structure`更新中缺少`REGEXP_LIKE`函数而发生SQL错误的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.64时，此修补程序可用。 修补程序ID为ACSD-65540。
 
 ## 受影响的产品和版本
 
@@ -28,18 +28,18 @@ ACSD-65540修补程序修复了由于`REGEXP_LIKE`更新中缺少`company_struct
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-由于`REGEXP_LIKE`更新中缺少`company_structure`函数，因此出现SQL语法错误。
+由于`company_structure`更新中缺少`REGEXP_LIKE`函数，因此出现SQL语法错误。
 
 <u>重现步骤</u>：
 
 1. 将[!DNL B2B]更新到版本1.5.2。
 1. 运行以下命令：
 
-```
+```shell
 bin/magento setup:upgrade
 ```
 
@@ -49,7 +49,7 @@ bin/magento setup:upgrade
 
 <u>实际结果</u>：
 
-```
+```text
 Unable to apply data patch Magento\Company\Setup\Patch\Data\SetCompanyForStructure for module Magento_Company. Original exception message: SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION REGEXP_LIKE does not exist, query was: UPDATE `company_structure` SET `company_id` = ? WHERE (REGEXP_LIKE(path, '^331(/.+)?$'))
 ```
 
@@ -57,8 +57,8 @@ Unable to apply data patch Magento\Company\Setup\Patch\Data\SetCompanyForStructu
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

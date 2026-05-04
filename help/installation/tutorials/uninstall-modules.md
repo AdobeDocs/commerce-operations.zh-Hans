@@ -1,10 +1,10 @@
 ---
 title: 卸载模块
-description: 按照以下步骤卸载Adobe Commerce模块。
+description: 了解如何通过可选删除代码、架构和数据来卸载Adobe Commerce模块，以及何时禁用模块而不是卸载它们。
 exl-id: 66879ef5-47c7-4b61-8c7e-78b60441980a
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此命令仅检查在`composer.json`文件中声明的依赖项。 如果您卸载的模块不是&#x200B;_文件中定义的_&#x200B;和`composer.json`，此命令将卸载该模块而不检查依赖关系。 此命令&#x200B;_不_，但是，请从文件系统中删除模块的代码。 必须使用文件系统工具删除模块的代码（例如，`rm -rf <path to module>`）。 作为替代方法，您可以[禁用](manage-modules.md)非编辑器模块。
+>此命令仅检查在`composer.json`文件中声明的依赖项。 如果您卸载的模块不是`composer.json`文件中定义的&#x200B;_和_，此命令将卸载该模块而不检查依赖关系。 此命令&#x200B;_不_，但是，请从文件系统中删除模块的代码。 必须使用文件系统工具删除模块的代码（例如，`rm -rf <path to module>`）。 作为替代方法，您可以[禁用](manage-modules.md)非编辑器模块。
 
 命令用法：
 
-```bash
+```shell
 bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|--remove-data] [-c|--clear-static-content] \
   {ModuleName} ... {ModuleName}
 ```
@@ -32,7 +32,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 1. 验证指定的模块是否存在于代码库中，以及是否由Composer安装的包。
 
-   此命令只对定义为Composer包的模块起作用&#x200B;_1&rbrace;。_
+   此命令只对定义为Composer包的模块起作用&#x200B;_1}。_
 
 1. 检查与其他模块的依赖关系，如果存在任何未满足的依赖关系，则终止该命令。
 
@@ -50,7 +50,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 1. 如果指定了`--remove-data`，则删除在模块的`Uninstall`类中定义的数据库架构和数据。
 
-   对于要卸载的每个指定模块，调用其`uninstall`类中的`Uninstall`方法。 此类必须继承自[Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php)。
+   对于要卸载的每个指定模块，调用其`Uninstall`类中的`uninstall`方法。 此类必须继承自[Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php)。
 
 1. 从`setup_module`数据库表中删除指定的模块。
 1. 从[部署配置](../../configuration/reference/deployment-files.md)的模块列表中删除指定的模块。
@@ -67,7 +67,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 例如，如果您尝试卸载另一个模块所依赖的模块，则会显示以下消息：
 
-```
+```shell
 magento module:uninstall Magento_SampleMinimal
     Cannot uninstall module 'Magento_SampleMinimal' because the following module(s) depend on it:
         Magento_SampleModifyContent
@@ -75,13 +75,13 @@ magento module:uninstall Magento_SampleMinimal
 
 另一种选择是在备份模块文件系统、`pub/media`文件和数据库表但&#x200B;_不_&#x200B;删除模块的数据库架构或数据之后卸载这两个模块：
 
-```bash
+```shell
 bin/magento module:uninstall Magento_SampleMinimal Magento_SampleModifyContent --backup-code --backup-media --backup-db
 ```
 
 与以下内容类似的消息：
 
-```
+```text
 You are about to remove code and/or database tables. Are you sure?[y/N]y
 Enabling maintenance mode
 Code backup is starting...
@@ -122,7 +122,7 @@ Disabling maintenance mode
 
 要将代码库恢复到备份时的状态，请使用以下命令：
 
-```bash
+```shell
 bin/magento setup:rollback [-c|--code-file="<filename>"] [-m|--media-file="<filename>"] [-d|--db-file="<filename>"]
 ```
 
@@ -142,25 +142,25 @@ bin/magento setup:rollback [-c|--code-file="<filename>"] [-m|--media-file="<file
 1. 验证备份文件名。
 1. 如果指定代码回滚文件：
 
-   a.验证回滚目标位置是否可写（请注意，`pub/static`和`var`文件夹将被忽略）。
+   答： 验证回滚目标位置是否可写（请注意，`pub/static`和`var`文件夹将被忽略）。
 
-   b.删除应用程序安装目录下的所有文件和目录。
+   b. 删除应用程序安装目录下的所有文件和目录。
 
-   c.将存档文件提取到目标位置。
+   c. 将存档文件提取到目标位置。
 
 1. 如果指定数据库回滚文件：
 
-   a.删除整个数据库。
+   答： 删除整个数据库。
 
-   b.使用数据库备份还原数据库。
+   b. 使用数据库备份还原数据库。
 
 1. 如果指定介质回滚文件：
 
-   a.验证回滚目标位置是否可写。
+   答： 验证回滚目标位置是否可写。
 
-   b.删除`pub/media`下的所有文件和目录
+   b. 删除`pub/media`下的所有文件和目录
 
-   c.将存档文件提取到目标位置。
+   c. 将存档文件提取到目标位置。
 
 1. 使存储退出维护模式。
 
@@ -168,19 +168,19 @@ bin/magento setup:rollback [-c|--code-file="<filename>"] [-m|--media-file="<file
 
 * 显示备份列表：
 
-  ```bash
+  ```shell
   magento info:backups:list
   ```
 
 * 还原名为`1433876616_filesystem.tgz`的文件备份：
 
-  ```bash
+  ```shell
   magento setup:rollback --code-file="1433876616_filesystem.tgz"
   ```
 
   与以下内容类似的消息：
 
-  ```
+  ```text
   Enabling maintenance mode
   Code rollback is starting ...
   Code rollback filename: 1433876616_filesystem.tgz

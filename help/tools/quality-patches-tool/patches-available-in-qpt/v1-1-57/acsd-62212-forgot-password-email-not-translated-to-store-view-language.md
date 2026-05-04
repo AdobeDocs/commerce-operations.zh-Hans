@@ -5,16 +5,16 @@ feature: GraphQL
 role: Admin, Developer
 exl-id: 29e6f2fa-574f-4ab1-82f5-88e1eb1de83e
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
 
 # ACSD-62212： *[!UICONTROL Forgot Password]*&#x200B;电子邮件未翻译为存储视图语言
 
-ACSD-62212修补程序修复了&#x200B;*[!UICONTROL Forgot Password]*&#x200B;电子邮件的内容未翻译为商店视图语言的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62212。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-62212修补程序修复了&#x200B;*[!UICONTROL Forgot Password]*&#x200B;电子邮件的内容未翻译为商店视图语言的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62212。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -28,7 +28,7 @@ ACSD-62212修补程序修复了&#x200B;*[!UICONTROL Forgot Password]*&#x200B;电
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -42,7 +42,7 @@ ACSD-62212修补程序修复了&#x200B;*[!UICONTROL Forgot Password]*&#x200B;电
 1. 创建客户帐户。
 1. 将以下GraphQL突变与&#x200B;*存储*&#x200B;标头配合使用辅助存储视图代码。
 
-   ```
+   ```graphql
    mutation {
        requestPasswordResetEmail(
            email: "test@gmail.com"
@@ -69,8 +69,8 @@ ACSD-62212修补程序修复了&#x200B;*[!UICONTROL Forgot Password]*&#x200B;电
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

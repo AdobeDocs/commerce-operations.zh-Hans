@@ -3,16 +3,16 @@ title: 配置和使用清漆
 description: 了解如何为Adobe Commerce配置和使用Varnish缓存。 探索HTTP加速、文件存储和性能优化技术。
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
 
 # 配置清漆
 
-[清漆缓存](https://varnish-cache.org)是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
+[清漆缓存](https://www.varnish.org/)是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
 
 [系统要求](../../installation/system-requirements.md)列出了支持的Varnish版本。
 
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 有关Varnish的详细信息，请参阅：
 
-- [大型涂漆图片](https://www.varnish-cache.org/docs/trunk/users-guide/intro.html)
-- [清漆启动选项](https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options)
-- [涂漆和网站性能](https://www.varnish-cache.org/docs/trunk/users-guide/performance.html#users-performance)
+- [亮光的大图片](https://www.varnish.org/docs/users-guide/intro/#users-intro)
+- [清漆启动选项](https://www.varnish.org/docs/users-guide/running/#users-running)
+- [涂漆和网站性能](https://www.varnish.org/docs/users-guide/performance/)
 
 ## 清漆拓扑图
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 >
 >- 除了上面提到的以外，您必须以具有`root`权限的用户身份输入本主题中讨论的所有命令。
 >
->- 本主题为CentOS和Apache 2.4上的Varnish编写。如果在不同的环境中设置“清漆”，某些命令可能会不同。 有关更多信息，请参阅Varnish文档。
+>- 本主题为CentOS和Apache 2.4上的Varnish编写。 如果在不同的环境中设置“清漆”，某些命令可能会不同。 有关更多信息，请参阅Varnish文档。
 
 ## 已知问题
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 - 安装Commerce时可能出错：
 
-  ```
+  ```text
   Error 503 Service Unavailable
   Service Unavailable
   XID: 303394517
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 - Magento 2 GitHub存储库中的[`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)
 - Commerce提供的Apache的`.htaccess`分布式配置文件
-- 使用`default.vcl`管理员[生成的清漆的](../cache/configure-varnish-commerce.md)配置
+- 使用[管理员](../cache/configure-varnish-commerce.md)生成的清漆的`default.vcl`配置
 
 >[!INFO]
 >

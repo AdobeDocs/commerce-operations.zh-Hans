@@ -3,9 +3,9 @@ title: 云基础架构上适用于Commerce的远程存储
 description: 请参阅有关如何为云基础架构上的Adobe Commerce设置远程存储的指南。
 feature: Configuration, Cloud, Storage
 exl-id: da352466-13f2-42e4-a589-3b0a89728467
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -16,14 +16,14 @@ ht-degree: 0%
 
 ## 环境变量
 
-`REMOTE_STORAGE`变量在云基础架构项目的[部署阶段](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html?lang=zh-Hans)中使用。
+`REMOTE_STORAGE`变量在云基础架构项目的[部署阶段](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html)中使用。
 
 ### `REMOTE_STORAGE`
 
 - **默认值**—_未设置_
 - **版本**—Commerce 2.4.2及更高版本
 
-配置&#x200B;_存储适配器_&#x200B;以使用存储服务(如AWS S3)将媒体文件存储在永久性的远程存储容器中。 启用远程存储模块以提高云项目的性能，这些项目具有必须共享资源的复杂、多服务器配置。 以下是使用`.magento.env.yaml`文件的远程存储配置示例：
+配置&#x200B;_存储适配器_&#x200B;以使用存储服务（如AWS S3）将媒体文件存储在永久性的远程存储容器中。 启用远程存储模块以提高云项目的性能，这些项目具有必须共享资源的复杂、多服务器配置。 以下是使用`.magento.env.yaml`文件的远程存储配置示例：
 
 ```yaml
 stage:
@@ -40,11 +40,11 @@ stage:
 
 ### 使用Cloud CLI设置变量
 
-将`REMOTE_STORAGE`变量设置为[环境级变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=zh-Hans)，以便文件不在生产、暂存和集成环境之间共享。 在环境级别设置变量后，可以灵活地在选定环境中仅使用远程存储，例如排除使用远程存储的集成环境。
+将`REMOTE_STORAGE`变量设置为[环境级变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html)，以便文件不在生产、暂存和集成环境之间共享。 在环境级别设置变量后，可以灵活地在选定环境中仅使用远程存储，例如排除使用远程存储的集成环境。
 
 **要使用Cloud CLI添加远程存储变量**，请执行以下操作：
 
-```bash
+```shell
 magento-cloud variable:create --level environment --name REMOTE_STORAGE --json true --inheritable false --value '{"driver":"aws-s3","prefix":"uat","config":{"bucket":"aws-bucket-id","region":"eu-west-1","key":"optional-key","secret":"optional-secret"}}'
 ```
 
@@ -89,7 +89,7 @@ magento-cloud variable:create --level environment --name REMOTE_STORAGE --json t
 
 ### 使用可选身份验证
 
-`key`和`secret`是可选的。 创建变量时，您可以通过选择`key`选项来隐藏`secret`和`sensitive`。 使用此设置，Web界面中不会显示这些值。 请参阅[云基础架构上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=zh-Hans#visibility)中的&#x200B;_变量可见性_。
+`key`和`secret`是可选的。 创建变量时，您可以通过选择`sensitive`选项来隐藏`key`和`secret`。 使用此设置，Web界面中不会显示这些值。 请参阅&#x200B;_云基础架构上的Commerce指南_&#x200B;中的[变量可见性](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility)。
 
 如果要使用其他身份验证方法，请从JSON配置中忽略`key`和`secret`。 配置替代身份验证方法，并验证服务器是否有权使用S3存储桶。
 
@@ -103,15 +103,15 @@ magento-cloud variable:create --level environment --name REMOTE_STORAGE --json t
 
 1. 启动同步。
 
-```bash
+```shell
 bin/magento remote-storage:sync 
 ```
 
 ## Fastly配置
 
-如果选择将远程存储解决方案与Adobe Commerce on cloud infrastructure项目一起使用，请使用[Fastly](https://docs.fastly.com/en/guides/amazon-s3)文档中的&#x200B;_Amazon S3_&#x200B;指南来确保Fastly图像优化可与AWS S3配合使用。
+如果选择将远程存储解决方案与Adobe Commerce on cloud infrastructure项目一起使用，请使用&#x200B;_Fastly_&#x200B;文档中的[Amazon S3](https://docs.fastly.com/en/guides/amazon-s3)指南来确保Fastly图像优化可与AWS S3配合使用。
 
-准备好您的[Fastly凭据](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=zh-Hans#get-fastly-credentials)。 在Pro项目中，使用SSH连接到您的服务器并从`/mnt/shared/fastly_tokens.txt`文件中获取Fastly凭据。 暂存环境和生产环境具有唯一的凭据。 您必须获取每个环境的凭据。
+准备好您的[Fastly凭据](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html#get-fastly-credentials)。 在Pro项目中，使用SSH连接到您的服务器并从`/mnt/shared/fastly_tokens.txt`文件中获取Fastly凭据。 暂存环境和生产环境具有唯一的凭据。 您必须获取每个环境的凭据。
 
 请通过以下任务继续为云项目设置远程存储：
 
@@ -119,4 +119,4 @@ bin/magento remote-storage:sync
 
 1. 为[AWS S3身份验证](https://docs.fastly.com/en/guides/amazon-s3#using-an-amazon-s3-private-bucket)创建VCL逻辑。
 
-1. 为AWS S3存储桶[的](https://developer.fastly.com/reference/vcl/variables/backend-connection/req-backend/)后端请求创建VCL逻辑。
+1. 为AWS S3存储桶](https://developer.fastly.com/reference/vcl/variables/backend-connection/req-backend/)的[后端请求创建VCL逻辑。

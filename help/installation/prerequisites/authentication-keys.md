@@ -2,9 +2,9 @@
 title: 获取您的身份验证密钥
 description: 请按照以下步骤检索凭据，以访问repo.magento.com上的Adobe Commerce Composer包。
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: 4a4fd51891b7a98529d00d51c94ed10429218726
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果您遇到[错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html?lang=zh-Hans)，或者在Marketplace选项卡中未看到[!UICONTROL Access Keys]部分，则您可能无权访问该包，或者访问权利已过期，因为您的帐户上有未结发票。
+>如果您遇到[错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)，或者在Marketplace选项卡中未看到[!UICONTROL Access Keys]部分，则您可能无权访问该包，或者访问权利已过期，因为您的帐户上有未结发票。
 >
 >* 如果您是该帐户的主要联系人，请确保该帐户中不存在未结发票。
->* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，则主要联系人应联系[Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)寻求帮助。
+>* 如果主要联系人提供的密钥不起作用，且帐户中没有未结发票，则主要联系人应联系[Adobe Commerce支持](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)寻求帮助。
 
 要创建身份验证密钥，请执行以下操作：
 
 >[!NOTE]
 >
->自2022年8月起，帐户所有者必须拥有Adobe ID并确保它已关联到其Commerce帐户。 如果帐户所有者没有Adobe ID，则必须先创建一个，并将其链接到其Commerce帐户，然后才能生成身份验证密钥： [创建并访问您的Commerce帐户](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/commerce-account/commerce-account-create#create-a-commerce-account)
+>自2022年8月起，帐户所有者必须拥有Adobe ID并确保它已关联到其Commerce帐户。 如果帐户所有者没有Adobe ID，则必须先创建一个，并将其链接到其Commerce帐户，然后才能生成身份验证密钥： [创建并访问您的Commerce帐户](https://experienceleague.adobe.com/en/docs/commerce-admin/start/commerce-account/commerce-account-create#create-a-commerce-account)
 
 1. 登录到[Commerce Marketplace](https://commercemarketplace.adobe.com/)。 如果没有帐户，请单击&#x200B;**注册**。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 例如：
 
-```bash
+```shell
 curl -k https://MAGEID:TOKEN@www.magentocommerce.com/products/downloads/info/help
 ```
 

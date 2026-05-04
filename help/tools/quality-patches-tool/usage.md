@@ -4,9 +4,9 @@ description: 了解如何使用Quality Patches Tool来应用和管理Adobe Comme
 exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
 feature: Configuration, Install
 type: Troubleshooting
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches)提供了由Adobe和Magento Open Source社区开发的各个修补程序。 它允许您应用、还原和查看有关已安装Adobe Commerce版本可用的所有单个修补程序的一般信息。 无论谁开发了修补程序，您都可以将修补程序应用到Adobe Commerce项目。 例如，您可以将社区开发的修补程序应用于Adobe Commerce项目。
 
-观看此[技术视频](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=zh-Hans)，了解如何使用Adobe Commerce的Quality Patches Tool。
+观看此[技术视频](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html)，了解如何使用Adobe Commerce的Quality Patches Tool。
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用单个修补程序](#apply-individual-patches)。 请参阅[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用单个修补程序](#apply-individual-patches)。 请参阅[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)以查看已发布修补程序的完整列表。
 
 >[!WARNING]
 >
@@ -31,7 +31,7 @@ ht-degree: 0%
 >
 >如果尚未安装，则必须先安装[[!DNL Git]](https://github.com/git-guides/install-git)或[修补程序](https://man7.org/linux/man-pages/man1/patch.1.html)，然后再安装[!DNL Quality Patches Tool]。 将`magento/quality-patches`编辑器包添加到您的`composer.json`文件：
 
-```bash
+```shell
 composer require magento/quality-patches
 ```
 
@@ -39,7 +39,7 @@ composer require magento/quality-patches
 
 要查看适用于您的Adobe Commerce版本的各个修补程序的列表，请执行以下操作：
 
-```bash
+```shell
 ./vendor/bin/magento-patches status
 ```
 
@@ -62,7 +62,7 @@ Adobe Commerce 2.3.5。
 状态表包括：
 
 - **类型**：
-   - `Optional` — [!DNL Quality Patches Tool]和[Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)包中的所有修补程序对于Adobe Commerce安装都是可选的。
+   - `Optional` — [!DNL Quality Patches Tool]和[Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)包中的所有修补程序对于Adobe Commerce安装都是可选的。
    - `Deprecated` — Adobe已弃用单个修补程序。 如果您已应用修补程序，我们建议您恢复它。 还原操作还会从状态表中删除修补程序。
 
 - **状态**：
@@ -83,23 +83,23 @@ Adobe Commerce 2.3.5。
 
 >[!WARNING]
 >
->在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 还建议在应用修补程序之前备份数据。 请参阅[备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html?lang=zh-Hans)。
+>在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 还建议在应用修补程序之前备份数据。 请参阅[备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html)。
 
 要应用单个修补程序，请运行以下命令，其中`MAGETWO-XXXX`是在状态表中指定的修补程序ID：
 
-```bash
+```shell
 ./vendor/bin/magento-patches apply MAGETWO-XXXX
 ```
 
 还可以通过用空格分隔每个附加的修补程序ID来同时应用多个修补程序：
 
-```bash
+```shell
 ./vendor/bin/magento-patches apply MAGETWO-XXXX MAGETWO-YYYY
 ```
 
 在应用修补程序后必须清除缓存，才能查看Adobe Commerce应用程序中的更改：
 
-```bash
+```shell
 ./bin/magento cache:clean
 ```
 
@@ -111,29 +111,29 @@ Adobe Commerce 2.3.5。
 
 >[!WARNING]
 >
->在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 还建议在应用修补程序之前备份数据。 请参阅[备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html?lang=zh-Hans)。
+>在部署到生产环境之前，最佳做法是在暂存或开发环境中测试所有修补程序。 还建议在应用修补程序之前备份数据。 请参阅[备份和回滚文件系统、介质和数据库](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html)。
 
 要还原单个修补程序，请运行以下命令，其中`MAGETWO-XXXX`是状态表中指定的修补程序ID：
 
-```bash
+```shell
 ./vendor/bin/magento-patches revert MAGETWO-XXXX
 ```
 
 此外，还可以通过用空格分隔每个附加的修补程序ID来同时还原多个修补程序：
 
-```bash
+```shell
 ./vendor/bin/magento-patches revert MAGETWO-XXXX MAGETWO-YYYY
 ```
 
 还原所有应用的修补程序：
 
-```bash
+```shell
 ./vendor/bin/magento-patches revert --all
 ```
 
 还原修补程序后必须清除缓存，才能查看Adobe Commerce应用程序中的更改：
 
-```bash
+```shell
 ./bin/magento cache:clean
 ```
 
@@ -141,7 +141,7 @@ Adobe Commerce 2.3.5。
 
 Adobe Commerce会定期发布新的单个修补程序。 您必须更新[!DNL Quality Patches Tool]以获取新的单个修补程序：
 
-```bash
+```shell
 composer update magento/quality-patches
 ```
 
@@ -151,7 +151,7 @@ composer update magento/quality-patches
 >
 >新的添加修补程序显示在表的底部。
 
-```bash
+```shell
 ./vendor/bin/magento-patches status
 ```
 
@@ -163,7 +163,7 @@ composer update magento/quality-patches
 
 1. 更新[!DNL Quality Patches Tool]：
 
-   ```bash
+   ```shell
    composer update magento/quality-patches.
    ```
 
@@ -171,7 +171,7 @@ composer update magento/quality-patches
 
 1. 应用修补程序：
 
-   ```bash
+   ```shell
    ./vendor/bin/magento-patches apply MAGETWO-XXXX
    ```
 
@@ -179,7 +179,7 @@ composer update magento/quality-patches
 
 1. 清理缓存：
 
-   ```bash
+   ```shell
    ./bin/magento cache:clean
    ```
 

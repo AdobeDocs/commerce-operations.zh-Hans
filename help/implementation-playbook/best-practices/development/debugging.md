@@ -4,9 +4,9 @@ description: 学习解决常见Adobe Commerce开发问题的技术。
 feature: Best Practices
 role: Developer
 exl-id: 78fbea7b-28e8-4713-990d-b4cae159250c
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 以下代码示例提供了与管理缓存（不在生产环境中运行）相关的有用命令：
 
-```bash
+```shell
 # restart php-fpm to flush APC
 sudo service php-fpm restart
  
@@ -78,7 +78,7 @@ sudo kill <process_id>
 
 由于分支更改或在以前的调试工作中编辑的核心文件，您的代码可能已过时。 要消除潜在问题，请运行以下命令：
 
-```bash
+```shell
 rm -rf vendor/*
 composer clear-cache
 composer install
@@ -88,7 +88,7 @@ composer install
 
 在调试JS、CSS、图像、翻译和其他文件中生成的内容之前，请重新构建前端文件。
 
-```bash
+```shell
 rm -rf generated/* var/cache/* var/page_cache/* var/session/* var/view_preprocessed/* pub/static/*
 bin/magento setup:static-content:deploy
 bin/magento cache:flush
@@ -104,7 +104,7 @@ bin/magento cache:flush
 
 - 模块是否已启用？
 
-  ```bash
+  ```shell
   bin/magento module --enable Your_Module
   ```
 
@@ -179,7 +179,7 @@ bin/magento cache:flush
 
 n98 magerun CLI工具([https://github.com/netz98/n98-magerun2](https://github.com/netz98/n98-magerun2))提供了从命令行使用Adobe Commerce的有用功能。 尤其是以下命令：
 
-```bash
+```shell
 n98-magerun2.phar dev:console
 n98-magerun2.phar sys:cron:run
 n98-magerun2.phar db:console

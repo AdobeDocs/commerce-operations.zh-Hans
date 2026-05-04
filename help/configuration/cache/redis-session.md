@@ -3,9 +3,9 @@ title: 使用Redis进行会话存储
 description: 了解如何在Adobe Commerce中为会话存储配置Redis。 了解命令行设置、配置选项和性能优化技术。
 feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '836'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Commerce现在提供命令行选项来配置Redis会话存储。 在以前的版
 
 运行`setup:config:set`命令并指定Redis特定的参数。
 
-```bash
+```shell
 bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
 ```
 
@@ -38,8 +38,8 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 | session-save-redis-password | 密码 | 如果Redis服务器要求身份验证，请指定密码。 | 空 |
 | session-save-redis-timeout | timeout | 连接超时（秒）。 | 2.5 |
 | session-save-redis-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70)。 |  |
-| session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要信息**：如果对多种类型的缓存使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
-| session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩（建议在`suhosin.session.encrypt = On`时使用）。<br>[字符串超过64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18)。 | 2048 |
+| session-save-redis-db | 数据库 | 唯一的Redis数据库编号，建议使用此编号以防止数据丢失。<br><br>**重要信息**：如果对多种类型的缓存使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | 0 |
+| session-save-redis-compression-threshold | compression_threshold | 设置为0可禁用压缩（建议在`suhosin.session.encrypt = On`时使用）。<br>[字符串大于64 KB的已知问题](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18)。 | 2048 |
 | session-save-redis-compression-lib | compress_library | 选项： gzip、lzf、lz4或snappy。 | gzip |
 | session-save-redis-log-level | log_level | 设置为以下任意值，按从少到多的顺序列出：<ul><li>0（紧急：仅最严重的错误）<li>1（警报：需要立即执行操作）<li>2（严重：应用程序组件不可用）<li>3 （错误：运行时错误，不严重，但必须监控）<li>4（警告：其他信息，推荐）<li>5（注意：正常但重要的情况）<li>6（信息：信息性消息）<li>7（调试：仅供开发或测试使用的信息最多）</ul> | 1 |
 | session-save-redis-max-concurrency | max_concurrency | 可以等待一个会话锁定的最大进程数。 对于大型生产群集，请将此参数至少设置为PHP进程数的10%。 | 6 |
@@ -60,7 +60,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 
 以下示例将Redis设置为会话数据存储，将主机设置为`127.0.0.1`，将日志级别设置为4，并将数据库编号设置为2。 所有其他参数均设置为默认值。
 
-```bash
+```shell
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
 ```
 
@@ -104,13 +104,13 @@ Commerce向`<magento_root>app/etc/env.php`添加类似于以下内容的行：
 
 ### Redis监视命令
 
-```bash
+```shell
 redis-cli monitor
 ```
 
 会话存储输出示例：
 
-```
+```text
 1476824834.187250 [0 127.0.0.1:52353] "select" "0"
 1476824834.187587 [0 127.0.0.1:52353] "hmget" "sess_sgmeh2k3t7obl2tsot3h2ss0p1" "data" "writes"
 1476824834.187939 [0 127.0.0.1:52353] "expire" "sess_sgmeh2k3t7obl2tsot3h2ss0p1" "1200"
@@ -121,7 +121,7 @@ redis-cli monitor
 
 ### Redis ping命令
 
-```bash
+```shell
 redis-cli ping
 ```
 

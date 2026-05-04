@@ -5,9 +5,9 @@ feature: GraphQL, Page Builder, Products
 role: Admin, Developer
 type: Troubleshooting
 exl-id: 3aee28e1-1293-42d0-a62c-5021e8f75518
-source-git-commit: 2d6debf4d426a0473eb77919c2307afdc77bf937
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ ACSD-65750修补程序修复了[!DNL GraphQL]“route”查询在[!DNL Page Buil
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-使用[!DNL GraphQL] Products内容类型时，[!DNL Page Builder]“route”查询未按正确的排序顺序返回产品。
+使用[!DNL Page Builder] Products内容类型时，[!DNL GraphQL]“route”查询未按正确的排序顺序返回产品。
 
 <u>重现步骤</u>：
 
@@ -51,7 +51,7 @@ ACSD-65750修补程序修复了[!DNL GraphQL]“route”查询在[!DNL Page Buil
 1. 保存页面。
 1. 发出以下[!DNL GraphQL]请求：
 
-```
+```graphql
 query {
   route(url: "/test-widget") {
     relative_url
@@ -87,8 +87,8 @@ query {
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

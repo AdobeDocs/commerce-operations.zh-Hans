@@ -3,9 +3,9 @@ title: '[!DNL Data Migration Tool]技术规范'
 description: 了解 [!DNL Data Migration Tool] 的实施详细信息以及在Magento 1和Magento 2之间传输数据时如何扩展。
 exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
 topic: Commerce, Migration
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2113'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 系统要求
 
-[的](../../installation/system-requirements.md)系统要求[!DNL Data Migration Tool]与Magento 2相同。
+[!DNL Data Migration Tool]的[系统要求](../../installation/system-requirements.md)与Magento 2相同。
 
 ## 内部结构
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 下图表示[!DNL Data Migration Tool]的目录结构：
 
-```
+```shell
 ├── etc                                    --- all configuration files
 │   ├── opensource-to-opensource            --- configuration files for migration from Magento Open Source 1 to Magento Open Source 2
 │   │   ├── 1.9.1.1
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 ## 配置
 
-配置`config.xsd`文件的架构位于`etc/`目录中。 为每个版本的Magento 1.x创建默认配置文件(`config.xml.dist`)。它位于`etc/`下的单独目录中。
+配置`config.xsd`文件的架构位于`etc/`目录中。 为每个版本的Magento 1.x创建默认配置文件(`config.xml.dist`)。 它位于`etc/`下的单独目录中。
 
 默认配置文件可由自定义配置文件替换（请参阅[命令语法](migrate-data/overview.md#command-syntax)）。
 
@@ -279,7 +279,7 @@ $this->progress->finish();
 
 ### 完整性检查
 
-每个步骤都必须检查数据源的结构(默认为Magento 1)和数据目标的结构(Magento 2)是否兼容。 如果不兼容 — 对于不兼容的实体会显示错误。 如果字段具有不同的数据类型(同一字段在Magento 1中具有十进制数据类型，在Magento 2中具有整数)，则会显示警告消息（除非该类型包含在映射文件中）。
+每个步骤都必须检查数据源的结构（默认为Magento 1）和数据目标的结构(Magento 2)是否兼容。 如果不兼容 — 对于不兼容的实体会显示错误。 如果字段具有不同的数据类型（同一字段在Magento 1中具有十进制数据类型，在Magento 2中具有整数），则会显示警告消息（除非该类型包含在映射文件中）。
 
 ### 数据传输
 
@@ -523,7 +523,7 @@ $this->logger->pushProcessor([$this->processor, 'setExtra']);
 
 您可以使用单色格式化程序格式化日志消息。 要使格式化程序功能正常工作，必须使用`setFormatter()`方法指定日志处理程序。 目前，我们有一个格式化程序类(`MessageFormatter`)，它在消息处理期间（通过从处理程序执行的`format()`方法）设置特定格式（取决于详细程度级别）。
 
-在`process()`类的`Migration\Logger\Manager`方法中执行操作记录器（添加处理程序和处理器）和详细模式处理。 方法是在应用程序启动时调用的。
+在`Migration\Logger\Manager`类的`process()`方法中执行操作记录器（添加处理程序和处理器）和详细模式处理。 方法是在应用程序启动时调用的。
 
 ## 自动测试
 
@@ -535,12 +535,12 @@ $this->logger->pushProcessor([$this->processor, 'setExtra']);
 
 它们位于工具的`tests/`目录中，这与测试类型相同（单元测试位于`tests/unit`目录中）。 要启动测试，应安装phpunit。 将当前目录更改为测试目录并启动phpunit。 例如：
 
-```bash
+```shell
 [10:32 AM]-[vagrant@debian-70rc1-x64-vbox4210]-[/var/www/magento2/vendor/magento/data-migration-tool]-[git master]
 $ cd tests/unit
 ```
 
-```bash
+```shell
 [10:33 AM]-[vagrant@debian-70rc1-x64-vbox4210]-[/var/www/magento2/vendor/magento/data-migration-tool/tests/unit]-[git master]
 $ phpunit
 PHPUnit 8.1.0 by Sebastian Bergmann.

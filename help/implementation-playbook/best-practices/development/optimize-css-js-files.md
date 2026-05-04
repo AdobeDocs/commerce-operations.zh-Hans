@@ -4,9 +4,9 @@ description: 了解如何从管理员或命令行合并Adobe Commerce项目的CS
 role: Developer
 feature: Best Practices
 exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
-source-git-commit: a08560eb307638a36fdc52224c41bdf2c5d47763
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 1. 在本地运行此命令：
 
-   ```bash
+   ```shell
    bin/magento config:set --lock-config dev/css/merge_css_files 1
    ```
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 1. 在本地运行此命令：
 
-   ```bash
+   ```shell
    bin/magento config:set --lock-config dev/css/minify_files 1
    ```
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 1. 在本地运行此命令：
 
-   ```bash
+   ```shell
    bin/magento config:set --lock-config dev/js/minify_files 1
    ```
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 您还可以从命令行启用Adobe Commerce内置捆绑（基本捆绑）：
 
-```bash
+```shell
 php -f bin/magento config:set dev/js/enable_js_bundling 1
 ```
 
@@ -105,6 +105,6 @@ php -f bin/magento config:set dev/js/enable_js_bundling 1
 
 - [客户端优化设置](../../../performance/configuration.md#client-side-optimization-settings)
 - [捆绑提示](../../../performance/configuration.md#bundling-tips)（位于&#x200B;*配置最佳实践*&#x200B;中） — 第三方捆绑工具、HTTP/2以及有关已弃用的JS和CSS合并的指南
-- [用户指南：优化资源文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
+- [用户指南：优化资源文件](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
 - [前端开发人员指南：CSS合并、缩小和网站性能](https://developer.adobe.com/commerce/frontend-core/guide/css/#css-merging-minification-and-performance)
 - [高级JavaScript捆绑](../../../performance/advanced-js-bundling.md)

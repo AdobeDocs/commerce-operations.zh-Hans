@@ -1,20 +1,20 @@
 ---
 title: ACP2E-4050： [!UICONTROL Free Shipping]未应用于多配送结帐
-description: 应用ACP2E-4050修补程序以修复Adobe Commerce问题：当[!UICONTROL Free Shipping]包含子选择条件和具有特定价格的产品时，在多地址签出期间未应用[!UICONTROL Cart Price Rules]。
+description: 应用ACP2E-4050修补程序以修复Adobe Commerce问题：当[!UICONTROL Cart Price Rules]包含子选择条件和具有特定价格的产品时，在多地址签出期间未应用[!UICONTROL Free Shipping]。
 feature: Shopping Cart, Shipping/Delivery
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: d36ce39fcd897261b784d57f8806b3eceb66fc01
+exl-id: 447d2460-5c29-4849-81d0-a9aaf0a758b4
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-
 # ACP2E-4050： **[!UICONTROL Free Shipping]**&#x200B;未应用于多配送结帐
 
-ACP2E-4050修补程序修复了以下问题：**[!UICONTROL Free Shipping]**&#x200B;包含子选择条件和具有特定价格的产品时，在多配送结账过程中未应用&#x200B;**[!UICONTROL Cart Price Rules]**。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.69时，此修补程序可用。 修补程序ID为ACP2E-4050。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
+ACP2E-4050修补程序修复了以下问题：**[!UICONTROL Cart Price Rules]**&#x200B;包含子选择条件和具有特定价格的产品时，在多配送结账过程中未应用&#x200B;**[!UICONTROL Free Shipping]**。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.69时，此修补程序可用。 修补程序ID为ACP2E-4050。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
 
 ## 受影响的产品和版本
 
@@ -28,11 +28,11 @@ ACP2E-4050修补程序修复了以下问题：**[!UICONTROL Free Shipping]**&#x2
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-当&#x200B;**[!UICONTROL Free Shipping]**&#x200B;包含子选择条件和具有特定价格的产品时，在多配送结算期间不应用&#x200B;**[!UICONTROL Cart Price Rules]**。
+当&#x200B;**[!UICONTROL Cart Price Rules]**&#x200B;包含子选择条件和具有特定价格的产品时，在多配送结算期间不应用&#x200B;**[!UICONTROL Free Shipping]**。
 
 <u>重现步骤</u>：
 
@@ -40,7 +40,7 @@ ACP2E-4050修补程序修复了以下问题：**[!UICONTROL Free Shipping]**&#x2
 1. 启用&#x200B;**[!UICONTROL Free Shipping]**&#x200B;并将&#x200B;**[!UICONTROL Minimum Order Amount]**&#x200B;设置为&#x200B;*999999*。
 1. 导航到[!UICONTROL Admin] > [!UICONTROL Marketing] > [!UICONTROL Cart Price Rules]，然后创建包含以下条件的购物车价格规则：
 
-```
+```text
 If ALL of these conditions are TRUE:
  * Subtotal is at least 50
  * The subtotal is at most 500
@@ -70,8 +70,8 @@ If ALL of these conditions are TRUE:
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

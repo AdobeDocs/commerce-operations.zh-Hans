@@ -4,13 +4,13 @@ description: 应用ACP2E-3964修补程序以修复Adobe Commerce问题：带有[
 feature: Products, Media, REST, Catalog Management
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: f48ced28035c65db561f4700113652574d302ec9
+exl-id: 61c5b97c-79aa-4ee7-96b3-70924d2c85a0
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # ACP2E-3964：可通过REST API配置的子产品以及未列出的视频
 
@@ -28,7 +28,7 @@ ACP2E-3964修补程序修复了以下问题：在&#x200B;**[!UICONTROL Media Gal
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -37,7 +37,7 @@ ACP2E-3964修补程序修复了以下问题：在&#x200B;**[!UICONTROL Media Gal
 <u>重现步骤</u>：
 
 1. 创建新的可配置产品并添加单个子产品。
-1. 编辑子产品并在&#x200B;**[!UICONTROL Images and Videos]**&#x200B;下添加视频(例如，[https://vimeo.com/1084537](https://vimeo.com/1084537))。
+1. 编辑子产品并在&#x200B;**[!UICONTROL Images and Videos]**&#x200B;下添加视频（例如，[https://vimeo.com/1084537](https://vimeo.com/1084537)）。
 1. 保存子产品。
 1. 使用Admin持有者令牌将GET请求发送到REST API端点： `rest/v1/configurable-products/%sku%/children`。
 
@@ -49,7 +49,7 @@ REST API应返回子产品数据，并且没有错误，包括&#x200B;**[!UICONT
 
 REST API返回错误：
 
-```
+```text
 Error: Call to a member function getVideoProvider() on null in vendor/magento/module-product-video/Model/Product/Attribute/Media/ExternalVideoEntryConverter.php:87
 ```
 
@@ -57,8 +57,8 @@ Error: Call to a member function getVideoProvider() on null in vendor/magento/mo
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

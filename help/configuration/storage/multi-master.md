@@ -1,11 +1,11 @@
 ---
 title: 拆分数据库性能解决方案
-description: 阅读有关Adobe Commerce的拆分数据库解决方案的信息。
+description: 了解适用于Adobe Commerce的拆分数据库性能解决方案，将结账、订购和基础产品分隔开来，以实现内部可扩展性。
 recommendations: noCatalog
 exl-id: 922a9af7-2c46-4bf3-b1ad-d966f5564ec0
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Adobe Commerce使用三个主数据库和可配置数量的从属数据库进行
 
 由于拆分数据库性能解决方案的设计方式，您的自定义代码和已安装的组件&#x200B;_无法_&#x200B;执行以下任何操作：
 
-- 直接写入数据库(相反，您必须使用Adobe Commerce数据库界面)
+- 直接写入数据库（相反，您必须使用Adobe Commerce数据库界面）
 - 使用影响销售或报价数据库的JOIN
 - 对结帐、销售或主数据库中的表使用外键
 
@@ -74,10 +74,10 @@ Adobe Commerce使用三个主数据库和可配置数量的从属数据库进行
 
 ## 先决条件
 
-拆分数据库要求您在任意主机上设置三个MySQL master数据库(所有三个数据库都在Commerce服务器上，每个数据库在单独的服务器上，等等)。 这些是&#x200B;_master_&#x200B;数据库，其使用方式如下：
+拆分数据库要求您在任意主机上设置三个MySQL master数据库（所有三个数据库都在Commerce服务器上，每个数据库在单独的服务器上，等等）。 这些是&#x200B;_master_&#x200B;数据库，其使用方式如下：
 
 - 一个签出表的主数据库
-- 一个Master数据库，用于Sales表(也称为&#x200B;_Order Management System_&#x200B;或&#x200B;_OMS_，表)
+- 一个Master数据库，用于Sales表（也称为&#x200B;_Order Management System_&#x200B;或&#x200B;_OMS_，表）
 - 一个master数据库，用于Commerce 2应用程序表的其余部分
 
 此外，您还可以选择设置任意数量的&#x200B;_从属_&#x200B;数据库，用作负载平衡器和备份。

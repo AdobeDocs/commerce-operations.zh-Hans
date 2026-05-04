@@ -2,9 +2,9 @@
 title: 管理缓存
 description: 了解如何使用Adobe Commerce CLI命令管理缓存类型和查看缓存状态。 了解缓存管理和优化技术。
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -20,14 +20,14 @@ ht-degree: 0%
 >[!NOTE]
 >
 >
->Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅[管理系统指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management)中的&#x200B;_缓存管理_。
+>Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅&#x200B;_管理系统指南_&#x200B;中的[缓存管理](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
 
 
 ## 查看缓存状态
 
 从Commerce应用程序服务器的命令行中，使用`cache:status` Commerce CLI命令查看缓存的状态。
 
-```bash
+```shell
    bin/magento cache:status
 ```
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 下面是一个示例：
 
-```
+```text
 Current status:
                         config: 1
                         layout: 1
@@ -59,7 +59,7 @@ Current status:
 
 >[!TIP]
 >
->有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅[Admin Systems指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management#caches)中的&#x200B;_缓存_。
+>有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅&#x200B;_Admin Systems指南_&#x200B;中的[缓存](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches)。
 
 
 ## 启用或禁用缓存类型
@@ -68,17 +68,17 @@ Current status:
 
 >[!INFO]
 >
->从版本2.2开始，在生产模式下运行Commerce时，只能使用命令行启用或禁用缓存类型。 如果在开发人员模式下运行Commerce，则可以使用命令行或手动启用或禁用缓存类型。 在执行此操作之前，必须手动使`<magento_root>/app/etc/env.php`文件系统所有者[可以写入](../../installation/prerequisites/file-system/overview.md)。
+>从版本2.2开始，在生产模式下运行Commerce时，只能使用命令行启用或禁用缓存类型。 如果在开发人员模式下运行Commerce，则可以使用命令行或手动启用或禁用缓存类型。 在执行此操作之前，必须手动使[文件系统所有者](../../installation/prerequisites/file-system/overview.md)可以写入`<magento_root>/app/etc/env.php`。
 
 您可以使用命令行或管理员清理（也称为&#x200B;_刷新_&#x200B;或&#x200B;_刷新_）缓存类型。
 
 命令选项：
 
-```bash
+```shell
 bin/magento cache:enable [type] ... [type]
 ```
 
-```bash
+```shell
 bin/magento cache:disable [type] ... [type]
 ```
 
@@ -88,19 +88,19 @@ bin/magento cache:disable [type] ... [type]
 
 要列出高速缓存类型及其状态，请执行以下操作：
 
-```bash
+```shell
 bin/magento cache:status
 ```
 
 例如，要禁用全页高速缓存和DDL高速缓存，请执行以下操作：
 
-```bash
+```shell
 bin/magento cache:disable db_ddl full_page
 ```
 
 示例结果：
 
-```
+```text
    Changed cache status:
        db_ddl: 1 -> 0
     full_page: 1 -> 0
@@ -136,23 +136,23 @@ bin/magento cache:disable db_ddl full_page
 
 命令用法：
 
-```bash
+```shell
    bin/magento cache:clean [type] ... [type]
 ```
 
-```bash
+```shell
    bin/magento cache:flush [type] ... [type]
 ```
 
 其中`[type]`是以空格分隔的缓存类型列表。 省略`[type]`可同时清除或刷新所有缓存类型。 例如，要刷新所有缓存类型，请输入
 
-```bash
+```shell
    bin/magento cache:flush
 ```
 
 示例结果：
 
-```
+```text
    Flushed cache types:
    config
    layout

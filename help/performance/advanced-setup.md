@@ -2,9 +2,9 @@
 title: 高级设置
 description: 了解如何为Adobe Commerce进行高级设置。 了解分步说明和配置要求。
 exl-id: eb9ca9fa-b099-4e77-ab33-16cd0f382ffe
-source-git-commit: da9ce645d4d32c1368da442d9bd260f5fb3cdb98
+source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 在处理大量数据时，重新索引可能会成为一个问题。 [!DNL Commerce]团队选择了加载次数最多的索引并启用了批量索引，这允许您设置要在每个迭代上处理的数据的一部分。 这样，用户就可以根据数据库中数据的类型和大小调整批量大小。
 
-要管理此设置，请在相应模块的`batchRowsCount`文件中编辑`di.xml`参数。 以下索引支持此功能：
+要管理此设置，请在相应模块的`di.xml`文件中编辑`batchRowsCount`参数。 以下索引支持此功能：
 
 * 类别产品索引（目录模块）
 * 价格指数（目录模块）
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 您可以通过调整索引批量处理大小变量来调整索引器性能。 这控制索引器一次处理的实体数。 在某些情况下，我们发现索引时间显着减少。
 
-例如，如果您运行类似B2B Medium的配置文件，则可以在`batchRowsCount`中覆盖配置值`app/code/Magento/catalog/etc/di.xml`并将默认值`5000`覆盖为`1000`。 使用默认[!DNL MySQL]配置，这会将完整索引时间从4小时缩短到2小时。
+例如，如果您运行类似B2B Medium的配置文件，则可以在`app/code/Magento/catalog/etc/di.xml`中覆盖配置值`batchRowsCount`并将默认值`5000`覆盖为`1000`。 使用默认[!DNL MySQL]配置，这会将完整索引时间从4小时缩短到2小时。
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Adobe Commerce支持通过[!DNL RabbitMQ]实现的消息队列。 [!DNL Commerce
 
 >[!WARNING]
 >
->在Adobe Commerce版本2.4.2中，拆分数据库功能[已弃用](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187)。 请参阅[从拆分数据库还原到单个数据库](../configuration/storage/revert-split-database.md)。
+>在Adobe Commerce版本2.4.2中，已弃用拆分数据库功能。 请参阅[从拆分数据库还原到单个数据库](../configuration/storage/revert-split-database.md)。
 
 Adobe Commerce允许您配置可扩展的数据库存储，以满足不断增长的业务的需要。 您可以设置三个独立的主数据库，为特定域提供服务：
 
@@ -68,13 +68,13 @@ Adobe Commerce允许您配置可扩展的数据库存储，以满足不断增长
 
 用于签出主数据库
 
-```bash
+```shell
 bin/magento setup:db-schema:split-quote
 ```
 
 对于OMS主数据库
 
-```bash
+```shell
 bin/magento setup:db-schema:split-sales
 ```
 
@@ -86,13 +86,13 @@ bin/magento setup:db-schema:split-sales
 
 您可以通过运行以下命令来添加从属数据库：
 
-```bash
+```shell
 bin/magento setup:db-schema:add-slave
 ```
 
 此命令执行配置更改，但不配置复制本身。 这应该手动完成。
 
-拆分主数据库并设置从属数据库后，[!DNL Commerce]会自动调整到特定数据库的连接，并根据请求类型(POST、PUT、GET等)和数据资源做出决策。 如果[!DNL Commerce]或其扩展对GET请求执行写入操作，系统会自动将连接从从属数据库切换到主数据库。 它与master数据库的工作方式相同：一旦您使用与签出相关的表，系统就会将所有查询重定向到特定数据库。 同时，所有与目录相关的查询将转到主数据库。
+拆分主数据库并设置从属数据库后，[!DNL Commerce]会自动调整到特定数据库的连接，并根据请求类型（POST、PUT、GET等）和数据资源做出决策。 如果[!DNL Commerce]或其扩展对GET请求执行写入操作，系统会自动将连接从从属数据库切换到主数据库。 它与master数据库的工作方式相同：一旦您使用与签出相关的表，系统就会将所有查询重定向到特定数据库。 同时，所有与目录相关的查询将转到主数据库。
 
 有关配置和多个主/从配置优点的更多详细信息，请参见
 [拆分数据库性能解决方案](../configuration/storage/multi-master.md)。

@@ -3,9 +3,9 @@ title: 在CentOS上设置内存缓存
 description: 了解如何在CentOS上安装和配置用于Adobe Commerce缓存的memcached。 了解设置说明和优化提示。
 feature: Configuration, Cache, Storage
 exl-id: fc4ad18b-7e99-496e-aebc-1d7640d8716c
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
 - `memcache` (_no d_) — 不是定期维护的较旧但常用的扩展。
-当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache[的](https://www.php.net/manual/en/book.memcache.php)PHP文档。
+当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache](https://www.php.net/manual/en/book.memcache.php)的[PHP文档。
 
   对于CentOS，确切名称为`php-pecl-memcache`。
 
-- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached[的](https://www.php.net/manual/en/book.memcached.php)PHP文档。
+- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached](https://www.php.net/manual/en/book.memcached.php)的[PHP文档。
 
   对于CentOS，确切名称为`php-pecl-memcached`。
 
@@ -35,19 +35,19 @@ ht-degree: 0%
 
 1. 安装memcached及其依赖项：
 
-   ```bash
+   ```shell
    yum -y update
    ```
 
-   ```bash
+   ```shell
    yum install -y libevent libevent-devel
    ```
 
-   ```bash
+   ```shell
    yum install -y memcached
    ```
 
-   ```bash
+   ```shell
    yum install -y php-pecl-memcache
    ```
 
@@ -70,7 +70,7 @@ ht-degree: 0%
 1. 将更改保存到`memcached`并退出文本编辑器。
 1. 重新启动memcached。
 
-   ```bash
+   ```shell
    service memcached restart
    ```
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
    对于Apache：
 
-   ```bash
+   ```shell
    service httpd restart
    ```
 
@@ -120,7 +120,7 @@ Adobe建议测试memcached，以确保它在安装Commerce之前正常工作。 
 
 创建MySQL数据库：
 
-```bash
+```shell
 mysql -u root -p
 ```
 
@@ -167,11 +167,11 @@ return 0;
 
 从命令行运行脚本。
 
-```bash
+```shell
 cd <web server docroot>
 ```
 
-```bash
+```shell
 php cache-test.php
 ```
 
@@ -181,19 +181,19 @@ php cache-test.php
 
 最后，您可以使用Telnet查看memcache密钥：
 
-```bash
+```shell
 telnet localhost <memcache port>
 ```
 
 在提示下，输入
 
-```bash
+```shell
 stats items
 ```
 
 结果类似于以下内容：
 
-```
+```text
 STAT items:3:number 1
 STAT items:3:age 1075
 STAT items:3:evicted 0
@@ -205,11 +205,11 @@ STAT items:3:tailrepairs 0
 
 刷新memcache存储并退出Telnet：
 
-```bash
+```shell
 flush_all
 ```
 
-```bash
+```shell
 quit
 ```
 

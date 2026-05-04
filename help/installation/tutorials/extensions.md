@@ -2,9 +2,9 @@
 title: 管理第三方扩展
 description: 按照以下步骤安装、启用、升级和卸载Adobe Commerce扩展。
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 扩展包括：
 
-- 模块(扩展Adobe Commerce功能)
+- 模块（扩展Adobe Commerce功能）
 - 主题（更改店面和管理员的外观）
 - 语言包（将店面和管理员本地化）
 
-本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
+本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
 
 您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
 
@@ -31,16 +31,16 @@ ht-degree: 0%
 1. 备份数据库。
 1. 启用维护模式：
 
-   ```bash
+   ```shell
    bin/magento maintenance:enable
    ```
 
 要安装扩展，您必须：
 
 1. 从Commerce Marketplace或其他扩展开发人员处获取扩展。
-1. 如果从Commerce Marketplace安装扩展，请确保`repo.magento.com`文件中存在`composer.json`存储库：
+1. 如果从Commerce Marketplace安装扩展，请确保`composer.json`文件中存在`repo.magento.com`存储库：
 
-   ```bash
+   ```shell
    "repositories": [
        {
            "type": "composer",
@@ -76,7 +76,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->或者，您可以在扩展的&#x200B;_文件中找到_ any`composer.json`扩展的编辑器名称和版本(无论您是在Commerce Marketplace上还是在其他位置购买的)。
+>或者，您可以在扩展的`composer.json`文件中找到&#x200B;_any_&#x200B;扩展的编辑器名称和版本（无论您是在Commerce Marketplace上还是在其他位置购买的）。
 
 ### 更新编辑器依赖项
 
@@ -84,13 +84,13 @@ ht-degree: 0%
 
 1. 导航到项目目录并更新`composer.json`文件。
 
-   ```bash
+   ```shell
    composer require <component-name>:<version>
    ```
 
    例如，
 
-   ```bash
+   ```shell
    composer require j2t/module-payplug:2.0.2
    ```
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 1. 等待Composer完成项目依赖项的更新，并确保没有任何错误：
 
-   ```
+   ```text
    Updating dependencies (including require-dev)
    Package operations: 1 install, 0 updates, 0 removals
      - Installing j2t/module-payplug (2.0.2): Downloading (100%)
@@ -110,19 +110,19 @@ ht-degree: 0%
 
 要验证扩展是否正确安装，请运行以下命令：
 
-```bash
+```shell
 bin/magento module:status J2t_Payplug
 ```
 
 默认情况下，该扩展可能已禁用：
 
-```
+```text
 Module is disabled
 ```
 
 扩展名采用`<VendorName>_<ComponentName>`格式；这与编辑器名称格式不同。 使用此格式启用扩展。 如果不确定扩展名称，请运行：
 
-```bash
+```shell
 bin/magento module:status
 ```
 
@@ -134,13 +134,13 @@ bin/magento module:status
 
 1. 启用扩展并清除静态视图文件：
 
-   ```bash
+   ```shell
    bin/magento module:enable J2t_Payplug --clear-static-content
    ```
 
    您应该会看到以下输出：
 
-   ```
+   ```text
    The following modules have been enabled:
    - J2t_Payplug
    
@@ -152,31 +152,31 @@ bin/magento module:status
 
 1. 注册扩展：
 
-   ```bash
+   ```shell
    bin/magento setup:upgrade
    ```
 
 1. 重新编译项目：在生产模式下，您可能会收到一条消息，显示“请重新运行Magento编译命令”。 应用程序不会提示您以开发人员模式运行compile命令。
 
-   ```bash
+   ```shell
    bin/magento setup:di:compile
    ```
 
 1. 验证扩展是否已启用：
 
-   ```bash
+   ```shell
    bin/magento module:status J2t_Payplug
    ```
 
    您应该会看到验证扩展是否已不再禁用的输出：
 
-   ```
+   ```text
    Module is enabled
    ```
 
 1. 清理缓存：
 
-   ```bash
+   ```shell
    bin/magento cache:clean
    ```
 
@@ -198,27 +198,27 @@ bin/magento module:status
 
    每个模块名称更新：
 
-   ```bash
+   ```shell
    composer update vendor/module-name
    ```
 
    每个版本更新：
 
-   ```bash
+   ```shell
    composer require vendor/module-name ^x.x.x
    ```
 
 1. 运行以下命令以升级、部署和清理缓存。
 
-   ```bash
+   ```shell
    bin/magento setup:upgrade --keep-generated
    ```
 
-   ```bash
+   ```shell
    bin/magento setup:static-content:deploy
    ```
 
-   ```bash
+   ```shell
    bin/magento cache:clean
    ```
 
@@ -240,13 +240,13 @@ bin/magento module:status
 
    - 对于基于编辑器的扩展，请从Adobe Commerce `composer.json`文件中删除该扩展。
 
-     ```bash
+     ```shell
      composer remove <component-name>
      ```
 
    - 对于不基于Composer的扩展，请从Adobe Commerce项目存储库中删除物理文件。
 
-     ```bash
+     ```shell
      rm -rf app/code/<vendor-name>/<component-name>
      ```
 

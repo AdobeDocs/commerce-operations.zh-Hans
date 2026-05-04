@@ -1,10 +1,10 @@
 ---
 title: 获取Adobe Commerce软件
-description: 了解如何下载Adobe Commerce软件。
+description: 了解如何使用编辑器获取Adobe Commerce软件、检查扩展兼容性并选择正确的安装分发。
 exl-id: 7a769d5b-5397-4572-8db5-7602068e6aad
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ## 如何获取软件
 
-在我们的[产品可用性页面](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability)上检查适用于Adobe Commerce和Magento Open Source的Adobe创作的扩展以及Commerce服务的可用性和兼容性。
+在我们的[产品可用性页面](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability)上检查适用于Adobe Commerce和Magento Open Source的Adobe创作的扩展以及Commerce服务的可用性和兼容性。
 
 >[!NOTE]
 >
 >由于策略更改，Adobe Commerce代码库现在只能通过Composer分发。 使用编辑器下载列出的任何Adobe Commerce版本，因为代码库在下载部分中不再可用。
 >
->有关详细信息，请参阅[无法访问云基础架构上的Adobe Commerce上的帐单和下载代码库](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-26611)
+>有关详细信息，请参阅[无法访问云基础架构上的Adobe Commerce上的帐单和下载代码库](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26611)
 
 请参阅下表，了解如何开始安装Adobe Commerce。
 

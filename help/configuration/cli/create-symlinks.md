@@ -2,9 +2,9 @@
 title: 创建指向LESS文件的符号链接
 description: 了解如何为Adobe Commerce开发创建指向LESS文件的符号链接。 发现样式表链接和开发工作流优化。
 exl-id: 58a6123a-28b4-445b-b3f9-f524233ac127
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 命令选项：
 
-```bash
+```shell
 bin/magento dev:source-theme:deploy [--type="..."] [--locale="..."] [--area="..."] [--theme="..."] [file1] ... [fileN]
 ```
 
@@ -33,17 +33,17 @@ bin/magento dev:source-theme:deploy [--type="..."] [--locale="..."] [--area="...
 | `--locale` | 区域设置代码。<br>要显示区域设置代码列表，请输入`bin/magento info:language:list` | 否 |
 | `--area` | 区域（`adminhtml`表示管理区域，`frontend`表示店面）。 | 否 |
 | `--theme` | `<VendorName>/<theme-name>`格式的主题名称。 例如，`Magento/blank`或`Magento/backend`。 | 否 |
-| `<file>` | 要转换为LESS但不带CSS扩展名的CSS文件列表（以空格分隔）。 （对于adminhtml类型`css/styles-m css/styles-l`，默认值为`css/styles css/styles-old`） | 否 |
+| `<file>` | 要转换为LESS但不带CSS扩展名的CSS文件列表（以空格分隔）。 （对于adminhtml类型`css/styles css/styles-old`，默认值为`css/styles-m css/styles-l`） | 否 |
 
-例如，要使用名为`VendorName/themeName`的CSS文件在`en_US`区域设置中为名为`<magento_root>/pub/static/frontend/VendorName/themeName/en_US/css/styles-l.css`的前端主题创建LESS文件，请输入以下命令：
+例如，要使用名为`<magento_root>/pub/static/frontend/VendorName/themeName/en_US/css/styles-l.css`的CSS文件在`en_US`区域设置中为名为`VendorName/themeName`的前端主题创建LESS文件，请输入以下命令：
 
-```bash
+```shell
 bin/magento dev:source-theme:deploy --type="less" --locale="en_US" --area="frontend" --theme="VendorName/themeName" css/styles-l
 ```
 
 将显示以下消息以确认成功：
 
-```
+```text
 Processed Area: frontend, Locale: en_US, Theme: VendorName/themeName, File type: less.
 -> css/styles-l.less
 Successfully processed.
@@ -51,6 +51,6 @@ Successfully processed.
 
 要为admin html创建LESS文件：
 
-```bash
+```shell
 bin/magento dev:source-theme:deploy --locale="en_US" --area="adminhtml" --theme="Magento/backend" css/styles css/styles-old
 ```

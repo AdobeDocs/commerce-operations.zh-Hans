@@ -2,9 +2,9 @@
 title: 卸载或重新安装Adobe Commerce
 description: 按照以下步骤卸载并重新安装Adobe Commerce的内部安装。
 exl-id: fbaeee2c-8da0-4c89-a6d1-882a65014520
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,13 @@ ht-degree: 0%
 
 要卸载应用程序，请输入以下命令：
 
-```bash
+```shell
 bin/magento setup:uninstall
 ```
 
 将显示以下消息以确认卸载成功：
 
-```
+```text
 [SUCCESS]: Magento uninstallation complete.
 ```
 
@@ -49,7 +49,7 @@ bin/magento setup:uninstall
 
 但是，在某些情况下（特别是部署到生产环境），您可能希望避免清除编译的代码，因为这样可能需要一些时间。 （缓存仍被清除。） 要更新数据库架构和数据&#x200B;*而不清除*&#x200B;已编译的代码，请输入：
 
-```bash
+```shell
 bin/magento setup:upgrade --keep-generated
 ```
 

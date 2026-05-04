@@ -4,9 +4,9 @@ description: 了解如何安装 [!DNL Data Migration Tool] 以在Magento 1和Mag
 exl-id: 5f57067b-3ce8-4b51-b9ae-f60ae089c4ba
 topic: Commerce, Migration
 feature: Configuration, Install
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >Magento和[!DNL Data Migration Tool]的版本必须匹配。
 
 
-确保您同时使用Magento 2和&#x200B;*的*&#x200B;相同发布版本[!DNL Data Migration Tool]。 例如，对于Magento版本2.2.0，还必须使用[!DNL Data Migration Tool]版本2.2.0。
+确保您同时使用Magento 2和[!DNL Data Migration Tool]的&#x200B;*相同发布版本*。 例如，对于Magento版本2.2.0，还必须使用[!DNL Data Migration Tool]版本2.2.0。
 
 ## 检查您的版本
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 如果您使用Composer元包下载了Magento软件，请输入以下命令：
 
-```bash
+```shell
 php <magento_root>/bin/magento --version
 ```
 
@@ -39,11 +39,11 @@ php <magento_root>/bin/magento --version
 
 如果克隆了Magento 2 GitHub存储库，请输入以下命令：
 
-```bash
+```shell
 cd <your Magento 2 clone directory>
 ```
 
-```bash
+```shell
 git branch
 ```
 
@@ -54,13 +54,13 @@ git branch
 
 ## 查找[!DNL Data Migration Tool]的已发布版本
 
-转到[&#x200B; GitHub存储库的](https://github.com/magento/data-migration-tool/releases)版本[!DNL Data Migration Tool]页面以查找可用的发布版本。
+转到[!DNL Data Migration Tool] GitHub存储库的[版本](https://github.com/magento/data-migration-tool/releases)页面以查找可用的发布版本。
 
 ## 安装[!DNL Data Migration Tool]
 
 您可以从以下位置安装[!DNL Data Migration Tool]：
 
-- [&#39;repo.magento.com&#39;](#install-from-repomagentocom)
+- [`repo.magento.com`](#install-from-repomagentocom)
 - [GitHub](#install-from-github)
 
 安装之前，请确保您拥有：
@@ -76,11 +76,11 @@ git branch
 1. 切换到应用程序根目录。
 1. 输入以下命令：
 
-   ```bash
+   ```shell
    composer config repositories.magento composer https://repo.magento.com
    ```
 
-   ```bash
+   ```shell
    composer require magento/data-migration-tool:<version>
    ```
 
@@ -88,11 +88,11 @@ git branch
 
    例如，对于版本2.2.0，输入：
 
-   ```bash
+   ```shell
    composer config repositories.magento composer https://repo.magento.com
    ```
 
-   ```bash
+   ```shell
    composer require magento/data-migration-tool:2.2.0
    ```
 
@@ -106,11 +106,11 @@ git branch
 1. 切换到应用程序根目录。
 1. 输入以下命令：
 
-   ```bash
+   ```shell
    composer config repositories.data-migration-tool git https://github.com/magento/data-migration-tool
    ```
 
-   ```bash
+   ```shell
    composer require magento/data-migration-tool:<version>
    ```
 
@@ -118,11 +118,11 @@ git branch
 
    例如，对于版本2.2.0，输入：
 
-   ```bash
+   ```shell
    composer config repositories.data-migration-tool git https://github.com/magento/data-migration-tool
    ```
 
-   ```bash
+   ```shell
    composer require magento/data-migration-tool:2.2.0
    ```
 

@@ -2,9 +2,9 @@
 title: 开发环境建议
 description: 了解Adobe Commerce中的开发环境建议。 了解实施指导和优化策略。
 exl-id: f57396c0-86be-4933-8066-eb51c42fb9e4
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 清理缓存而不是禁用
 
-许多开发人员倾向于在其开发人员实例上禁用所有缓存。 我们建议只清理缓存，而不禁用所有缓存。 当您[!DNL Commerce]清理缓存[而不是完全禁用它们时，](../configuration/cli/manage-cache.md#clean-and-flush-cache-types)运行效率更高。 大多数类型的缓存在开发过程中很少失效。
+许多开发人员倾向于在其开发人员实例上禁用所有缓存。 我们建议只清理缓存，而不禁用所有缓存。 当您[清理缓存](../configuration/cli/manage-cache.md#clean-and-flush-cache-types)而不是完全禁用它们时，[!DNL Commerce]运行效率更高。 大多数类型的缓存在开发过程中很少失效。
 
 如果您[禁用缓存](../configuration/cli/manage-cache.md#enable-or-disable-cache-types)，我们建议仅在开发实例中禁用页面和块缓存。 切记在测试期间启用所有缓存。
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 * `setup:di:compile`生成自动生成类和优化配置缓存。
 
-  ```bash
+  ```shell
   bin/magento setup:di:compile
   ```
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 * `setup:static-content:deploy`为存储部署静态内容。
 
-  ```bash
+  ```shell
   bin/magento setup:static-content:deploy
   ```
 

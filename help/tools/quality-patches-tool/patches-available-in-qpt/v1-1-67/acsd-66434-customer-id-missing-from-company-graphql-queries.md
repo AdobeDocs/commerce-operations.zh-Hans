@@ -1,20 +1,20 @@
 ---
-title: 'ACSD-66434：公司[!UICONTROL Customer ID]查询中缺少 [!DNL GraphQL] '
-description: 应用ACSD-66434修补程序以修复公司[!UICONTROL Customer ID]查询中缺少 [!DNL GraphQL] 的Adobe Commerce问题。
+title: ACSD-66434：公司 [!DNL GraphQL] 查询中缺少[!UICONTROL Customer ID]
+description: 应用ACSD-66434修补程序以修复公司 [!DNL GraphQL] 查询中缺少[!UICONTROL Customer ID]的Adobe Commerce问题。
 feature: B2B, GraphQL
 role: Admin, Developer
 type: Troubleshooting
 exl-id: cd83c868-29d8-4d7c-9067-af7597056d35
-source-git-commit: e60194341bf79ca3ecdc505cf30f226b8f1b6c7f
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
-# ACSD-66434：公司[!UICONTROL Customer ID]查询中缺少[!DNL GraphQL]
+# ACSD-66434：公司[!DNL GraphQL]查询中缺少[!UICONTROL Customer ID]
 
-ACSD-66434修补程序修复了公司&#x200B;**[!UICONTROL Customer ID]**&#x200B;查询中缺少[!DNL GraphQL]的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.67时，此修补程序可用。 修补程序ID为ACSD-66434。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
+ACSD-66434修补程序修复了公司[!DNL GraphQL]查询中缺少&#x200B;**[!UICONTROL Customer ID]**&#x200B;的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.67时，此修补程序可用。 修补程序ID为ACSD-66434。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
 
 ## 受影响的产品和版本
 
@@ -28,11 +28,11 @@ ACSD-66434修补程序修复了公司&#x200B;**[!UICONTROL Customer ID]**&#x200B
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-[!DNL GraphQL]公司查询返回公司结构中`null`的&#x200B;**[!UICONTROL Customer ID]**。
+[!DNL GraphQL]公司查询返回公司结构中&#x200B;**[!UICONTROL Customer ID]**&#x200B;的`null`。
 
 <u>重现步骤</u>：
 
@@ -40,7 +40,7 @@ ACSD-66434修补程序修复了公司&#x200B;**[!UICONTROL Customer ID]**&#x200B
 1. 在Commerce管理员中，启用B2B功能并创建测试公司。
 1. 使用以下[!DNL GraphQL]突变为公司管理员生成持有者令牌：
 
-```
+```graphql
 mutation {
   generateCustomerToken(email: "admin_email@example.com", password: "admin_password") {
     token
@@ -50,7 +50,7 @@ mutation {
 
 1. 使用生成的令牌通过以下[!DNL GraphQL]查询检索客户的公司结构：
 
-```
+```graphql
 query {
   company {
     id
@@ -80,14 +80,14 @@ query {
 
 <u>实际结果</u>：
 
-在公司&#x200B;**[!UICONTROL Customer ID]**&#x200B;查询中，`null`返回为[!DNL GraphQL]。
+在公司[!DNL GraphQL]查询中，**[!UICONTROL Customer ID]**&#x200B;返回为`null`。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

@@ -1,11 +1,11 @@
 ---
 title: 数据库复制
-description: 了解配置数据库复制的好处。
+description: 了解Adobe Commerce的数据库复制优势，包括备份、Analytics卸载和异步MySQL从属配置。
 recommendations: noCatalog
 exl-id: 0e41dca0-5a23-4d12-96fe-241c511ae366
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---

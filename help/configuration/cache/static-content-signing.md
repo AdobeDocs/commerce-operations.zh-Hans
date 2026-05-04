@@ -3,16 +3,16 @@ title: 静态内容缓存
 description: 了解Adobe Commerce中的静态内容缓存签名和性能优化。 了解如何启用、禁用和配置缓存功能。
 feature: Configuration, Cache, SCD
 exl-id: b54ceea2-b3a1-4dbb-ba87-743f2af0d2fb
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
 # 静态内容缓存
 
-为了提高性能，Commerce为静态资源(如图像、JavaScript和CSS文件)设置`Expires`标头。
+为了提高性能，Commerce为静态资源（如图像、JavaScript和CSS文件）设置`Expires`标头。
 在静态资源上设置`Expires`标头可告知浏览器在该URL缓存资源并提供缓存的版本，直到它过期为止。
 这是用于缓存静态资源的常见[最佳实践](https://developer.yahoo.com/performance/rules.html#expires=)。
 
@@ -26,7 +26,7 @@ Commerce通过向静态文件的URL添加部署版本来实现这一点。
 
 以下是使用版本签名的URL示例：
 
-```
+```text
 http://magento2.com/pub/static/version1475604434/frontend/Magento/luma/en_US/images/logo.svg
 ```
 
@@ -35,22 +35,22 @@ http://magento2.com/pub/static/version1475604434/frontend/Magento/luma/en_US/ima
 
 默认情况下，Commerce将启用此功能，Adobe建议保持启用此功能，以防止与提供旧静态资源的浏览器相关的问题。
 
-静态内容签名的配置位于&#x200B;[**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures)中。
+静态内容签名的配置位于&#x200B;[**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures)中。
 
-- **仅限内部部署**：如果您的站点在&#x200B;**生产模式**&#x200B;中是[而不是](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans#production-mode)，则此配置可用。
+- **仅限内部部署**：如果您的站点在[生产模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode)中是&#x200B;**而不是**，则此配置可用。
 - **Cloud**：此配置是隐藏的，因为生产模式是强制实施的；因此，您必须使用命令行，如下所示。
 
 ![静态文件设置](../../assets/configuration/static-files-settings.png)
 
 确定状态：
 
-```bash
+```shell
 bin/magento config:show dev/static/sign
 ```
 
 启用或禁用静态内容签名：
 
-```bash
+```shell
 bin/magento config:set dev/static/sign <value>
 ```
 

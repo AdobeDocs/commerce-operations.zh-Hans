@@ -2,9 +2,9 @@
 title: 生产系统设置
 description: 了解如何为Commerce应用程序设置生产系统。
 exl-id: e678e97e-d9f2-4f24-bb6b-1994a2a1167c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
    创建目录：
 
-   ```bash
+   ```shell
    mkdir -p ~/.ssh/.composer
    ```
 
@@ -74,19 +74,19 @@ ht-degree: 0%
 1. 转到Commerce安装目录。
 1. 输入以下命令：
 
-   ```bash
+   ```shell
    bin/magento config:sensitive:set {configuration path} {value}
    ```
 
    例如，要将YouTube API密钥的值设置为`1234`，请输入
 
-   ```bash
+   ```shell
    bin/magento config:sensitive:set catalog/product_video/youtube_api_key 1234
    ```
 
    您还可以以交互方式设置一个或多个值，如下所示：
 
-   ```bash
+   ```shell
    bin/magento config:sensitive:set -i
    ```
 

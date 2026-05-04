@@ -2,9 +2,9 @@
 title: 设置引导参数值
 description: 了解如何为Commerce应用程序设置引导参数。
 exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 例如，您可以使用`MAGE_PROFILER`系统环境变量指定模式，如下所示：
 
-```
+```text
 MAGE_PROFILER={firebug|csv|<custom value>}
 ```
 
@@ -43,7 +43,7 @@ MAGE_PROFILER={firebug|csv|<custom value>}
 
 CentOS的Bash shell示例：
 
-```bash
+```shell
 export MAGE_PROFILER=firebug
 ```
 
@@ -57,7 +57,7 @@ export MAGE_PROFILER=firebug
 
 ### Nginx设置
 
-查看[GitHub](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample#L16)上的&#x200B;_Nginx示例配置_。
+查看&#x200B;_GitHub_&#x200B;上的[Nginx示例配置](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample#L16)。
 
 ### Apache .htaccess设置
 
@@ -80,7 +80,7 @@ export MAGE_PROFILER=firebug
 
 1. 将`MAGE_PROFILER`的值设置为以下任意值：
 
-   ```
+   ```text
    firebug
    csvfile
    <custom value>
@@ -124,13 +124,13 @@ Apache `mod_env`指令在[Apache版本2.2](https://httpd.apache.org/docs/2.2/mod
 1. 保存更改并退出文本编辑器。
 1. 启用虚拟主机（如果尚未启用）：
 
-   ```bash
+   ```shell
    a2ensite <virtual host config file name>
    ```
 
    例如，
 
-   ```bash
+   ```shell
    a2ensite my.magento.conf
    ```
 

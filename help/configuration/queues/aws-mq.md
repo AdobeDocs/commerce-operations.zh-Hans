@@ -1,10 +1,10 @@
 ---
 title: 设置Amazon消息队列
-description: 了解如何配置Commerce以使用AWS MQ服务。
+description: 了解如何在env.php中为Amazon MQ配置Adobe Commerce消息队列，包括云就绪型AMQP连接的SSL和TLS要求。
 exl-id: 463e513f-e8d4-4450-845e-312cbf00d843
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 自Commerce 2.4.3起，Amazon Message Queue (MQ)可用作本地消息队列实例的云就绪替代项。
 
-要在AWS上创建消息队列，请参阅[Amazon文档](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-setting-up.html)中的&#x200B;_设置AWS MQ_。
+要在AWS上创建消息队列，请参阅&#x200B;_Amazon文档_&#x200B;中的[设置AWS MQ](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-setting-up.html)。
 
 ## 为AWS MQ配置Commerce
 
-要连接到AWS MQ服务，请在`queue.amqp`文件中配置`env.php`对象。
+要连接到AWS MQ服务，请在`env.php`文件中配置`queue.amqp`对象。
 AWS Message Queue需要SSL/TLS连接。
 
 ```php
@@ -37,7 +37,7 @@ AWS Message Queue需要SSL/TLS连接。
 
 其中：
 
-- `host` - AMQP端点的URL；可通过在AWS中单击Broker名称使用(删除“https://”和尾随端口号)
+- `host` - AMQP端点的URL；可通过在AWS中单击Broker名称使用（删除“https://”和尾随端口号）
 - `user` — 创建AWS MQ代理时输入的用户名值
 - `password` — 创建AWS MQ代理时输入的密码值
 
@@ -47,7 +47,7 @@ AWS Message Queue需要SSL/TLS连接。
 
 编辑`env.php`文件后，请运行以下命令以完成安装：
 
-```bash
+```shell
 bin/magento setup:upgrade
 ```
 
@@ -82,7 +82,7 @@ async.V1.inventory.bulk-product-source-transfer.POST
 
 1. 启动`async.operations.all`消息队列使用者。
 
-   ```bash
+   ```shell
    bin/magento queue:consumers:start async.operations.all
    ```
 

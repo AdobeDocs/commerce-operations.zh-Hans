@@ -2,9 +2,9 @@
 title: 升级基于Git的安装
 description: 升级您从Git存储库克隆的Adobe Commerce安装。
 exl-id: a8c42857-7221-4b21-8377-4bfb6308c418
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 1. 创建`composer.json`文件的备份。
 
-   ```bash
+   ```shell
    cp composer.json composer.json.old
    ```
 
 1. 更新本地存储库以获取最新代码：
 
-   ```bash
+   ```shell
    git pull origin develop
    ```
 
@@ -39,19 +39,19 @@ ht-degree: 0%
 
 1. 解决依赖关系并将精确版本写入`composer.lock`文件。
 
-   ```bash
+   ```shell
    composer update
    ```
 
 1. 更新数据库：
 
-   ```bash
+   ```shell
    bin/magento setup:upgrade
    ```
 
 1. 清理缓存：
 
-   ```bash
+   ```shell
    bin/magento cache:clean
    ```
 

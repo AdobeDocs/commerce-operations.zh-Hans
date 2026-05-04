@@ -3,9 +3,9 @@ title: 修改docroot以提高安全性
 description: 防止对Adobe Commerce本地文件系统的未经授权的基于浏览器的访问。
 feature: Install, Security
 exl-id: aabe148d-00c8-4011-a629-aa5abfa6c682
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -62,14 +62,14 @@ server {
 >
 >有关详细信息，请参阅[先决条件](../prerequisites/overview.md)和[安装指南](../overview.md)。
 
-## 1.编辑服务器配置
+## &#x200B;1. 编辑服务器配置
 
 虚拟主机文件的名称和位置取决于您运行的Apache版本。 此示例显示了Apache v2.4上虚拟主机文件的名称和位置。
 
 1. 登录到应用程序服务器。
 1. 编辑您的虚拟主机文件：
 
-   ```bash
+   ```shell
    vim /etc/apache2/sites-available/000-default.conf
    ```
 
@@ -92,11 +92,11 @@ server {
 
 1. 重新启动Apache：
 
-   ```bash
+   ```shell
    systemctl restart apache2
    ```
 
-## 2.更新您的基本URL
+## &#x200B;2. 更新您的基本URL
 
 如果在安装了应用程序（例如`http://192.168.33.10/magento2`）时，将目录名称附加到服务器的主机名或IP地址以创建基本URL，则需要将其删除。
 
@@ -106,7 +106,7 @@ server {
 
 1. 登录到数据库：
 
-   ```bash
+   ```shell
    mysql -u <user> -p
    ```
 
@@ -122,7 +122,7 @@ server {
    UPDATE core_config_data SET value='http://192.168.33.10' WHERE path='web/unsecure/base_url';
    ```
 
-## 3.更新环境文件php
+## &#x200B;3. 更新env.php文件
 
 将以下节点附加到`env.php`文件。
 
@@ -134,7 +134,7 @@ server {
 
 有关详细信息，请参阅[env.php引用](../../configuration/reference/config-reference-envphp.md)。
 
-## 4.切换模式
+## &#x200B;4. 切换模式
 
 [应用程序模式](../../configuration/bootstrap/application-modes.md)（包括`production`和`developer`）旨在提高安全性并使开发更容易。 根据名称建议，在扩展或自定义应用程序时，您应该切换到`developer`模式，在实时环境中运行时应该切换到`production`模式。
 
@@ -143,28 +143,28 @@ server {
 1. 转到安装目录。
 1. 切换到`production`模式。
 
-   ```bash
+   ```shell
    bin/magento deploy:mode:set production
    ```
 
-   ```bash
+   ```shell
    bin/magento cache:flush
    ```
 
 1. 刷新浏览器并验证店面是否正确显示。
 1. 切换到`developer`模式。
 
-   ```bash
+   ```shell
    bin/magento deploy:mode:set developer
    ```
 
-   ```bash
+   ```shell
    bin/magento cache:flush
    ```
 
 1. 刷新浏览器并验证店面是否正确显示。
 
-## 5.验证店面
+## &#x200B;5. 验证店面
 
 在Web浏览器中转到店面以验证一切正常。
 

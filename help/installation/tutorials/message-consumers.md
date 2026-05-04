@@ -2,7 +2,7 @@
 title: 配置消息使用者
 description: 按照以下步骤配置Adobe Commerce消息队列使用者的行为。
 exl-id: df292301-f4bd-49df-a241-7467c35bf1d8
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 通过在设置函数中发送键/值对，可配置消费者行为：
 
-```bash
+```shell
 bin/magento setup:config:set [--<parameter_name>=<value>, ...]
 ```
 

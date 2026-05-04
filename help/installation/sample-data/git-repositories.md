@@ -2,16 +2,16 @@
 title: 克隆示例数据Git存储库
 description: 按照以下步骤通过克隆Git存储库来安装Adobe Commerce示例数据。
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
 
 # 克隆示例数据Git存储库
 
-本主题讨论如何在克隆Magento Open Source GitHub存储库时克隆和添加示例数据。 此方法仅适用于参与开发的开发人员(即计划参与Magento Open Source代码库的开发人员)。
+本主题讨论如何在克隆Magento Open Source GitHub存储库时克隆和添加示例数据。 此方法仅适用于参与开发的开发人员（即计划参与Magento Open Source代码库的开发人员）。
 
 如果您不是参与开发人员，请选择页面左侧目录中显示的其他选项之一。
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->您可以将示例数据与`develop`分支（更新）或已发布的分支(例如`2.4`（更稳定）)一起使用。 我们建议您使用已发布的分支，因为它更稳定。 如果您正在向存储库贡献代码，并且需要最新的代码，请使用`develop`分支。 无论您选择哪个分支，都必须[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) Magento Open Source GitHub存储库的相应分支。 例如，`develop`分支的示例数据只能在Magento Open Source *分支中*&#x200B;使用`develop`。
+>您可以将示例数据与`develop`分支（更新）或已发布的分支(例如`2.4`（更稳定）)一起使用。 我们建议您使用已发布的分支，因为它更稳定。 如果您正在向存储库贡献代码，并且需要最新的代码，请使用`develop`分支。 无论您选择哪个分支，都必须[克隆](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) Magento Open Source GitHub存储库的相应分支。 例如，`develop`分支的示例数据只能在Magento Open Source `develop`分支中&#x200B;*使用*。
 
 ## 克隆示例数据存储库
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
    下面是一个示例：
 
-   ```bash
+   ```shell
    git clone git@github.com:magento/magento2-sample-data.git
    ```
 
@@ -61,7 +61,7 @@ ht-degree: 0%
    >
    >如果显示以下错误，请确保您[已与GitHub共享SSH密钥](https://docs.github.com/articles/generating-ssh-keys/)：<br>
 
-   ```
+   ```text
    Cloning into 'magento2'...
    Permission denied (publickey).
    fatal: The remote end hung up unexpectedly
@@ -75,14 +75,14 @@ ht-degree: 0%
 
    要检查正确的分支，请从示例数据存储库的根目录中运行以下命令（假设您需要`2.4-develop`分支）：
 
-   ```bash
+   ```shell
    git checkout 2.4-develop
    ```
 
 1. 更改为`<app_root>`。
 1. 输入以下命令，在您克隆的文件之间创建符号链接，以使示例数据正常工作：
 
-   ```bash
+   ```shell
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
    ```
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 1. 运行以下命令：
 
-   ```bash
+   ```shell
    bin/magento setup:upgrade
    ```
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 
    下面是一个示例：
 
-   ```bash
+   ```shell
    git clone https://github.com/magento/magento2-sample-data.git
    ```
 
@@ -129,20 +129,20 @@ ht-degree: 0%
 
    要检查正确的分支，请从示例数据存储库的根目录中运行以下命令（假设您需要`2.4-develop`分支）：
 
-   ```bash
+   ```shell
    git checkout 2.4-develop
    ```
 
 1. 更改为`<magento_root>`。
 1. 输入以下命令，在您克隆的文件之间创建符号链接，以使示例数据正常工作：
 
-   ```bash
+   ```shell
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
    ```
 
    例如，
 
-   ```bash
+   ```shell
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="/var/www/magento2"
    ```
 
@@ -153,7 +153,7 @@ ht-degree: 0%
 >
 >如果在安装Adobe Commerce *之后安装示例数据*，则还必须运行以下命令来更新数据库和架构：
 >
->```bash
+>```shell
 ><magento_root>/bin/magento setup:upgrade
 >```
 
@@ -166,7 +166,7 @@ ht-degree: 0%
 1. 切换到示例数据克隆目录。
 1. 设置所有权：
 
-   ```bash
+   ```shell
    chown -R :<your web server group name> .
    ```
 
@@ -178,17 +178,17 @@ ht-degree: 0%
 
 1. 设置权限：
 
-   ```bash
+   ```shell
    find . -type d -exec chmod g+ws {} +
    ```
 
 1. 清除静态文件：
 
-   ```bash
+   ```shell
    cd <your Magento Open Source install dir>
    ```
 
-   ```bash
+   ```shell
    rm -rf var/cache/* var/page_cache/* generated/*
    ```
 

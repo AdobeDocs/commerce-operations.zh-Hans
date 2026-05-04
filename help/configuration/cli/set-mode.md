@@ -2,9 +2,9 @@
 title: 设置操作模式
 description: 了解如何在开发人员和生产人员之间设置Adobe Commerce操作模式。 了解模式切换命令和安全含义。
 exl-id: 62d183fa-d4ff-441d-b8bd-64ef5ae10978
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 当您更改为开发人员模式或生产模式时，我们将清除以下目录的内容：
 
-```
+```text
 var/cache
 generated/metadata
 generated/code
@@ -48,13 +48,13 @@ pub/static
 
 命令用法：
 
-```bash
+```shell
 bin/magento deploy:mode:show
 ```
 
 此时将显示一条与以下内容类似的消息：
 
-```
+```text
 Current application mode: {mode}. (Note: Environment variables may override this value.)
 ```
 
@@ -66,7 +66,7 @@ Current application mode: {mode}. (Note: Environment variables may override this
 
 命令用法：
 
-```bash
+```shell
 bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
 ```
 
@@ -80,13 +80,13 @@ bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
 
 ### 更改为生产模式
 
-```bash
+```shell
 bin/magento deploy:mode:set production
 ```
 
 与以下内容类似的消息：
 
-```
+```text
 Enabled maintenance mode
 Requested languages: en_US
 === frontend -> Magento/luma -> en_US ===
@@ -131,31 +131,31 @@ Enabled production mode.
 
 1. 如果要从生产模式更改为开发人员模式，请删除`generated/code`和`generated/metadata`目录的内容：
 
-   ```bash
+   ```shell
    rm -rf <magento_root>/generated/metadata/* <magento_root>/generated/code/*
    ```
 
 1. 设置模式：
 
-   ```bash
+   ```shell
    bin/magento deploy:mode:set developer
    ```
 
    将显示以下消息：
 
-   ```
+   ```text
    Enabled developer mode.
    ```
 
 ### 更改为默认模式
 
-```bash
+```shell
 bin/magento deploy:mode:set default
 ```
 
 将显示以下消息：
 
-```
+```text
 Enabled default mode.
 ```
 

@@ -2,9 +2,9 @@
 title: URN荧光笔
 description: 了解如何在IDE中为Adobe Commerce开发设置URN高亮显示。 发现XSD架构配置和开发优化。
 exl-id: 6389ab58-af70-4b33-800e-be3191c5a4cc
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Commerce代码以[统一资源名称(URN)](https://www.ietf.org/rfc/rfc2141.txt)
 
 命令语法：
 
-```bash
+```shell
 bin/magento dev:urn-catalog:generate <path>
 ```
 
@@ -41,4 +41,4 @@ bin/magento dev:urn-catalog:generate <path>
 
 >[!INFO]
 >
->要使您的“架构和DTD”保持最新，请在每次添加、修改或删除包含`dev:urn-catalog:generate`文件的Commerce 2模块时运行`*.xsd`命令。
+>要使您的“架构和DTD”保持最新，请在每次添加、修改或删除包含`*.xsd`文件的Commerce 2模块时运行`dev:urn-catalog:generate`命令。

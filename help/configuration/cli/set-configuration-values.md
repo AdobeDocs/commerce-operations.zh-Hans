@@ -2,9 +2,9 @@
 title: 设置配置值
 description: 了解如何在Adobe Commerce中设置配置值和更改锁定的管理员值。 了解高级配置命令和技术。
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 5e2d11330d3334df36ba8b3d176fbe2d8bfe0486
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 1. 连接到Commerce数据库。
 
-   ```bash
+   ```shell
    mysql -u <Commerce database username> -p
    ```
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 
    以下是示例结果：
 
-   ```
+   ```ini
    [mysql]> SELECT * FROM store_website;
    +------------+-------+--------------+------------+------------------+------------+
    | website_id | code  | name         | sort_order | default_group_id | is_default |
@@ -117,13 +117,13 @@ ht-degree: 0%
 
 **要设置系统特定的配置值**：
 
-```bash
+```shell
 bin/magento config:set [--scope="..."] [--scope-code="..."] [-le | --lock-env] [-lc | --lock-config] path value
 ```
 
 **要设置敏感配置值**：
 
-```bash
+```shell
 bin/magento config:sensitive:set [--scope="..."] [--scope-code="..."] path
 ```
 
@@ -161,19 +161,19 @@ The "wrong/config/path" does not exist
 
 为默认范围设置基本URL：
 
-```bash
+```shell
 bin/magento config:set web/unsecure/base_url http://example.com/
 ```
 
 为`base`网站设置基本URL：
 
-```bash
+```shell
 bin/magento config:set --scope=websites --scope-code=base web/unsecure/base_url http://example2.com/
 ```
 
 设置`test`存储视图的基本URL：
 
-```bash
+```shell
 bin/magento config:set --scope=stores --scope-code=test web/unsecure/base_url http://example3.com/
 ```
 
@@ -181,7 +181,7 @@ bin/magento config:set --scope=stores --scope-code=test web/unsecure/base_url ht
 
 如果按如下方式使用`--lock-env`选项，则该命令会将配置值保存在`<Commerce base dir>/app/etc/env.php`中，并禁用该字段以在管理员中编辑该值。
 
-```bash
+```shell
 bin/magento config:set --lock-env --scope=stores --scope-code=default web/unsecure/base_url http://example3.com
 ```
 
@@ -193,7 +193,7 @@ bin/magento config:set --lock-env --scope=stores --scope-code=default web/unsecu
 
 如果按如下方式使用`--lock-config`选项，则配置值保存在`<Commerce base dir>/app/etc/config.php`中。 管理员中用于编辑此值的字段已禁用。
 
-```bash
+```shell
 bin/magento config:set --lock-config --scope=stores --scope-code=default web/url/use_store 1
 ```
 
@@ -207,7 +207,7 @@ bin/magento config:set --lock-config --scope=stores --scope-code=default web/url
 
 命令选项：
 
-```bash
+```shell
 bin/magento config:show [--scope[="..."]] [--scope-code[="..."]] path
 ```
 
@@ -215,23 +215,23 @@ bin/magento config:show [--scope[="..."]] [--scope-code[="..."]] path
 
 - `--scope`是配置的范围（默认、网站、商店）。 默认值为`default`
 - `--scope-code`是配置的范围代码（网站代码或商店视图代码）
-- `path`是格式为first_part/second_part/third_part/etc的配置路径(_required_)
+- `path`是格式为first _part/second_ part/third_part/etc的配置路径(_required_)
 
 >[!INFO]
 >
->`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `**&#x200B;**&#x200B;**`。
+>`bin/magento config:show`命令将任何[加密值](../reference/config-reference-sens.md)的值显示为一系列星号： `******`。
 
 ### 示例
 
 **显示所有保存的配置**：
 
-```bash
+```shell
 bin/magento config:show
 ```
 
 结果：
 
-```
+```text
 web/unsecure/base_url - http://example.com/
 general/region/display_all - 1
 general/region/state_required - AT,BR,CA,CH,EE,ES,FI,LT,LV,RO,US
@@ -241,50 +241,50 @@ analytics/subscription/enabled - 1
 
 **要显示`base`网站**&#x200B;的所有已保存配置，请执行以下操作：
 
-```bash
+```shell
 bin/magento config:show --scope=websites --scope-code=base
 ```
 
 结果：
 
-```
+```text
 web/unsecure/base_url - http://example-for-website.com/
 general/region/state_required - AT,BR,CA
 ```
 
 **显示默认作用域**&#x200B;的基本URL：
 
-```bash
+```shell
 bin/magento config:show web/unsecure/base_url
 ```
 
 结果：
 
-```
+```text
 web/unsecure/base_url - http://example.com/
 ```
 
 **要显示`base`网站**&#x200B;的基本URL，请执行以下操作：
 
-```bash
+```shell
 bin/magento config:show --scope=websites --scope-code=base web/unsecure/base_url
 ```
 
 结果：
 
-```
+```text
 web/unsecure/base_url - http://example-for-website.com/
 ```
 
 **要显示`default`存储**&#x200B;的基本URL：
 
-```bash
+```shell
 bin/magento config:show --scope=stores --scope-code=default web/unsecure/base_url
 ```
 
 结果：
 
-```
+```text
 web/unsecure/base_url - http://example-for-store.com/
 ```
 

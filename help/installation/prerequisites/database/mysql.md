@@ -2,9 +2,9 @@
 title: MySQL准则
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置MySQL和MariaDB。
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe _强烈_&#x200B;建议您在设置数据库时遵循以下标准：
 * Adobe Commerce使用[MySQL数据库触发器](https://dev.mysql.com/doc/refman/8.4/en/triggers.html)来改进重新索引期间的数据库访问。 当索引器模式设置为[计划](../../../configuration/cli/manage-indexers.md#configure-indexers)时，将创建这些项。 应用程序不支持数据库中的任何自定义触发器，因为自定义触发器可能会与将来的Adobe Commerce版本不兼容。
 * 在继续之前，请熟悉[这些潜在的MySQL触发器限制](https://dev.mysql.com/doc/refman/8.4/en/stored-program-restrictions.html)。
 * 要增强数据库的安全状态，请启用[`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/8.4/en/sql-mode.html#sqlmode_strict_all_tables) SQL模式以防止存储无效的数据值，这可能会导致不必要的数据库交互。
-* Adobe Commerce _不_&#x200B;支持基于MySQL语句的复制。 确保仅使用&#x200B;_1&rbrace;_&#x200B;基于行的复制[。](https://dev.mysql.com/doc/refman/8.4/en/replication-formats.html)
+* Adobe Commerce _不_&#x200B;支持基于MySQL语句的复制。 确保仅使用&#x200B;_1} [基于行的复制](https://dev.mysql.com/doc/refman/8.4/en/replication-formats.html)。_
 
 >[!WARNING]
 >
@@ -32,7 +32,7 @@ Adobe _强烈_&#x200B;建议您在设置数据库时遵循以下标准：
 
 根据要安装的版本，Adobe Commerce 2.4支持不同的MySQL 8版本。 使用[系统要求](../../system-requirements.md)中列出的版本，然后按照以下链接获取有关在计算机上安装MySQL的说明。
 
-* [Ubuntu](https://ubuntu.com/server/docs/databases-mysql/)
+* [乌班图](https://ubuntu.com/server/docs/databases-mysql/)
 * [CentOS](https://dev.mysql.com/doc/refman/8.4/en/linux-installation-yum-repo.html)
 
 如果您希望导入大量产品，可以将[`max_allowed_packet`](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_max_allowed_packet)的值增加到大于默认值16 MB的值。
@@ -58,13 +58,13 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ### 已移除整数类型的宽度（填充）
 
-在MySQL 8.0.17中，已弃用整数数据类型(TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT)的显示宽度规范。在输出中包含数据类型定义的语句不再显示整数类型的显示宽度，TINYINT(1)除外。 MySQL连接器假定TINYINT(1)列源自BOOLEAN列。 这一例外使他们能够继续作出这一假设。
+在MySQL 8.0.17中，已弃用整数数据类型(TINYINT、SMALLINT、MEDIUMINT、INT、BIGINT)的显示宽度规范。 在输出中包含数据类型定义的语句不再显示整数类型的显示宽度，TINYINT(1)除外。 MySQL连接器假定TINYINT(1)列源自BOOLEAN列。 这一例外使他们能够继续作出这一假设。
 
 #### 示例
 
 在mysql 8.19中描述admin_user
 
-| 字段 | 类型 | 空 | 键 | 默认 | 额外 |
+| 字段 | 类型 | Null | 键 | 默认 | 额外 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | user\_id | `int unsigned` | 否 | PRI | `NULL` | `auto_increment` |
 | `firstname` | `varchar(32)` | 是 | | `NULL` | |
@@ -73,7 +73,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 | `username` | `varchar(40)` | 是 | UNI | `NULL` | |
 | `password` | `varchar(255)` | 否 | | `NULL` | |
 | `created` | `timestamp` | 否 | | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` |
-| `modified` | `timestamp` | 否 | | `CURRENT_TIMESTAMP` | 更新`DEFAULT_GENERATED`时`CURRENT_TIMESTAMP` |
+| `modified` | `timestamp` | 否 | | `CURRENT_TIMESTAMP` | 更新`CURRENT_TIMESTAMP`时`DEFAULT_GENERATED` |
 | `logdate` | `timestamp` | 是 | | `NULL` | |
 | `lognum` | `smallint unsigned` | 否 | | `0` | |
 
@@ -88,7 +88,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ### GROUP BY的已弃用ASC和DESC限定符
 
-自MySQL 8.0.13起，已删除`ASC`子句的已弃用`DESC`或`GROUP BY`限定符。 以前依赖于`GROUP BY`排序的查询可能会产生与以前的MySQL版本不同的结果。 要生成给定的排序顺序，请提供`ORDER BY`子句。
+自MySQL 8.0.13起，已删除`GROUP BY`子句的已弃用`ASC`或`DESC`限定符。 以前依赖于`GROUP BY`排序的查询可能会产生与以前的MySQL版本不同的结果。 要生成给定的排序顺序，请提供`ORDER BY`子句。
 
 ## Commerce和MySQL 8
 
@@ -106,13 +106,13 @@ Adobe Commerce通过在`/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php
 测试所有内容，并确保系统按预期工作。
 1. 启用维护模式：
 
-   ```bash
+   ```shell
    bin/magento maintenance:enable
    ```
 
 1. 进行数据库备份：
 
-   ```bash
+   ```shell
    bin/magento setup:backup --db
    ```
 
@@ -120,13 +120,13 @@ Adobe Commerce通过在`/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php
 1. 将备份的数据导入MySQL。
 1. 清理缓存：
 
-   ```bash
+   ```shell
    bin/magento cache:clean
    ```
 
 1. 禁用维护模式：
 
-   ```bash
+   ```shell
    bin/magento maintenance:disable
    ```
 
@@ -139,7 +139,7 @@ Adobe Commerce通过在`/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php
 1. 以任意用户身份登录到数据库服务器。
 1. 转到MySQL命令提示符：
 
-   ```bash
+   ```shell
    mysql -u root -p
    ```
 
@@ -166,7 +166,7 @@ Adobe Commerce通过在`/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php
 
 1. 验证数据库：
 
-   ```bash
+   ```shell
    mysql -u magento -p
    ```
 

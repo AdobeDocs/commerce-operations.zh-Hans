@@ -2,9 +2,9 @@
 title: 备份和回滚文件系统、介质和数据库
 description: 请按照以下步骤备份和恢复Adobe Commerce应用程序。
 exl-id: b9925198-37b4-4456-aa82-7c55d060c9eb
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -23,20 +23,20 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关云基础架构项目上的Adobe Commerce，请参阅[云指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/storage/snapshots)中的&#x200B;_快照和备份管理_。
+>有关云基础架构项目上的Adobe Commerce，请参阅&#x200B;_云指南_&#x200B;中的[快照和备份管理](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/storage/snapshots)。
 
 ## 启用备份
 
 默认情况下，备份功能处于禁用状态。 要启用，请输入以下CLI命令：
 
-```bash
+```shell
 bin/magento config:set system/backup/functionality_enabled 1
 ```
 
 >[!WARNING]
 >
 >**弃用通知：**
->&#x200B;>备份功能自2.1.16、2.2.7和2.3.0起已弃用。我们建议研究其他备份技术和二进制备份工具（如Percona XtraBackup）。
+>备份功能自2.1.16、2.2.7和2.3.0起已弃用。 我们建议研究其他备份技术和二进制备份工具（如Percona XtraBackup）。
 
 ## 设置打开文件限制
 
@@ -54,7 +54,7 @@ bin/magento config:set system/backup/functionality_enabled 1
 
 命令：
 
-```bash
+```shell
 ulimit -s 65536
 ```
 
@@ -70,7 +70,7 @@ ulimit -s 65536
 1. 在文本编辑器中打开`/home/<username>/.bashrc`。
 1. 添加以下行：
 
-   ```bash
+   ```shell
    ulimit -s 65536
    ```
 
@@ -78,13 +78,13 @@ ulimit -s 65536
 
 >[!WARNING]
 >
->我们建议您避免在[`pcre.recursion_limit`文件中设置](https://www.php.net/manual/en/pcre.configuration.php)`php.ini`的值，因为它可能会导致不完整的回滚，并且不会出现失败通知。
+>我们建议您避免在`php.ini`文件中设置[`pcre.recursion_limit`](https://www.php.net/manual/en/pcre.configuration.php)的值，因为它可能会导致不完整的回滚，并且不会出现失败通知。
 
 ## 备份
 
 命令用法：
 
-```bash
+```shell
 bin/magento setup:backup [--code] [--media] [--db]
 ```
 
@@ -103,13 +103,13 @@ bin/magento setup:backup [--code] [--media] [--db]
 
 例如，要备份文件系统和数据库，
 
-```bash
+```shell
 bin/magento setup:backup --code --db
 ```
 
 与以下内容类似的消息：
 
-```
+```shell
 Enabling maintenance mode
 Code backup is starting...
 Code backup filename: 1434133011_filesystem.tgz (The archive can be uncompressed with 7-Zip on Windows systems)
@@ -128,7 +128,7 @@ Disabling maintenance mode
 
 要查找备份的名称，请输入：
 
-```bash
+```shell
 bin/magento info:backups:list
 ```
 
@@ -136,19 +136,19 @@ bin/magento info:backups:list
 
 要回滚到以前的备份，请输入：
 
-```bash
+```shell
 bin/magento setup:rollback [-c|--code-file="<name>"] [-m|--media-file="<name>"] [-d|--db-file="<name>"]
 ```
 
 例如，要恢复名为`1440611839_filesystem_media.tgz`的媒体备份，请输入
 
-```bash
+```shell
 bin/magento setup:rollback -m 1440611839_filesystem_media.tgz
 ```
 
 与以下内容类似的消息：
 
-```
+```shell
 [SUCCESS]: Media rollback completed successfully.
 Please set file permission of bin/magento to executable
 Disabling maintenance mode

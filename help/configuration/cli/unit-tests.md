@@ -2,7 +2,7 @@
 title: 运行单元测试
 description: 了解如何运行Adobe Commerce代码库中定义的单元测试。 发现测试命令、执行选项和结果报告。
 exl-id: 23200420-d15c-4910-8ce6-abd0cc070777
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 - 必须启用`Magento_Developer`模块。 您可以按如下方式启用它：
 
-  ```bash
+  ```shell
   bin/magento module:enable [--force] Magento_Developer
   ```
 
@@ -35,24 +35,24 @@ ht-degree: 0%
 
 命令用法：
 
-```bash
+```shell
 bin/magento dev:tests:run <test>
 ```
 
 列出可用的测试类型：
 
-```bash
+```shell
 bin/magento dev:tests:run --help
 ```
 
 示例返回：
 
-```
+```text
 all, unit, integration, integration-all, static, static-all, integrity, legacy, default
 ```
 
 例如，要运行集成测试，请执行以下操作：
 
-```bash
+```shell
 bin/magento dev:tests:run integration
 ```

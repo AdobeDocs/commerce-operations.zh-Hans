@@ -4,10 +4,10 @@ description: 了解配置专用内容块以优化店面性能的最佳实践。
 role: Developer
 feature: Best Practices
 exl-id: a6d2f324-f9b9-4b2b-997f-36df02c37465
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 1%
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 当专用内容块包含`_isScopePrivate`变量时，该块无法缓存。 由于未缓存专用块，因此Adobe Commerce必须为每个客户请求检索相同的数据，这会增加服务器负载。
 
-请创建块和模板以显示与用户无关的数据，而不是将`_isScopePrivate`变量用于私有内容。 此数据已由Adobe Commerce UI组件替换为特定于用户的数据，该组件可更高效地处理预渲染数据。 有关说明，请参阅[中的](https://developer.adobe.com/commerce/php/development/cache/page/private-content/)私人内容&#x200B;_[!DNL Commerce PHP Extensions Guide]_。
+请创建块和模板以显示与用户无关的数据，而不是将`_isScopePrivate`变量用于私有内容。 此数据已由Adobe Commerce UI组件替换为特定于用户的数据，该组件可更高效地处理预渲染数据。 有关说明，请参阅&#x200B;_[!DNL Commerce PHP Extensions Guide]_中的[私人内容](https://developer.adobe.com/commerce/php/development/cache/page/private-content/)。
 
 ## 受影响的产品和版本
 
@@ -31,4 +31,4 @@ ht-degree: 1%
 ## 其他信息
 
 - [私有内容](../../../performance/configuration.md#client-side-optimization-settings)
-- [高吞吐量AJAX请求导致性能不佳](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/high-throughput-ajax-requests-cause-poor-performance.html?lang=zh-Hans)
+- _[!DNL Commerce PHP Extensions Guide]_中的[可缓存块和专用块](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#cacheable-and-private-blocks)

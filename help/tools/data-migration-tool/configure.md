@@ -3,9 +3,9 @@ title: 配置 [!DNL Data Migration Tool]
 description: 了解配置 [!DNL Data Migration Tool] 在Magento 1和Magento 2之间传输数据的两种方法。
 exl-id: 273be997-8085-4488-a455-f6005a85b406
 topic: Commerce, Migration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 有两种方法可配置[!DNL Data Migration Tool]：
 
 * 在单独的模块中配置[!DNL Data Migration Tool]（推荐）
-* 更改[!DNL Data Migration Tool]目录中的`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/`配置。
+* 更改`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/`目录中的[!DNL Data Migration Tool]配置。
 
 要使用源代码管理迁移配置并将其用于部署，您必须创建一个单独的模块。
 如果您计划仅在本地运行[!DNL Data Migration Tool]，则可以直接编辑`<your Magento 2 install dir>/vendor/magento/data-migration-tool/`目录中的文件。
@@ -96,11 +96,11 @@ ht-degree: 0%
 
    例如，如果将`Magento 1.9.3.6 Community Edition`迁移到`Magento 2 Open Source`：
 
-   ```bash
+   ```shell
    cd <your Magento 2 install dir>
    ```
 
-   ```bash
+   ```shell
    cp vendor/magento/data-migration-tool/etc/opensource-to-opensource/1.9.3.6/config.xml.dist app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.3.6/config.xml
    ```
 
@@ -118,13 +118,13 @@ ht-degree: 0%
 
 1. 切换到以下目录：
 
-   ```bash
+   ```shell
    <your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>
    ```
 
 1. 输入以下命令以从提供的示例创建`config.xml`：
 
-   ```bash
+   ```shell
    cp config.xml.dist config.xml
    ```
 
@@ -206,9 +206,9 @@ ht-degree: 0%
 
 1. 将它们从`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/`复制到`<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/`并删除`.dist`扩展。
 
-1. 更新`<options>`的`config.xml`节点中新复制文件的路径。 更新的路径应为以下路径之一：
+1. 更新`config.xml`的`<options>`节点中新复制文件的路径。 更新的路径应为以下路径之一：
 
-   1. 绝对文件路径，如`/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
+   1. 绝对文件路径，如 g. `/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. magento/data-migration-tool模块相对文件路径： `etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. Magento根目录相对文件路径： `app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
 

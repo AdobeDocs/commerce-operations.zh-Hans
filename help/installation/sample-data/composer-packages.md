@@ -3,16 +3,16 @@ title: 下载示例数据编辑器包
 description: 按照以下步骤使用编辑器PHP包管理器安装Adobe Commerce示例数据。
 feature: Install, Deploy
 exl-id: 735591af-a152-4476-9fa6-e31c4bab3ba8
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
 
 # 下载示例数据编辑器包
 
-本节讨论如何安装示例数据(如果通过以下任一方式获得Adobe Commerce软件)：
+本节讨论如何安装示例数据（如果通过以下任一方式获得Adobe Commerce软件）：
 
 * 已从`https://magento.com/tech-resources/download`下载压缩存档。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 要使用命令行安装示例数据，请在`<app_root>`目录中输入以下命令作为文件系统所有者：
 
-```bash
+```shell
 bin/magento sampledata:deploy
 ```
 
@@ -44,7 +44,7 @@ bin/magento sampledata:deploy
 >
 >如果在安装应用程序&#x200B;_之后安装示例数据_，则还必须运行以下命令以更新`<app_root>`目录中的数据库和架构：
 
-```bash
+```shell
 bin/magento setup:upgrade
 ```
 
@@ -54,7 +54,7 @@ bin/magento setup:upgrade
 
 可能会显示以下身份验证错误：
 
-```
+```text
 [Composer\Downloader\TransportException]
 The 'https://repo.magento.com/packages.json' URL required authentication.
 You must be using the interactive console to authenticate

@@ -1,14 +1,14 @@
 ---
 title: 最佳实践主题标题
-description: 了解如何……
+description: 了解如何在为Experience League创作新的Adobe Commerce操作指南时应用此最佳实践主题模板。
 role: Developer
 feature: Best Practices
 hide: true
 hidefromtoc: true
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 2%
+source-wordcount: '107'
+ht-degree: 1%
 
 ---
 

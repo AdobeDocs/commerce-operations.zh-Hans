@@ -2,9 +2,9 @@
 title: 配置文件所有权和权限
 description: 按照以下步骤为Adobe Commerce的内部安装配置文件系统权限。
 exl-id: 2410ee4f-978c-4b71-b3f6-0c042f9f4dc4
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -33,32 +33,32 @@ ht-degree: 0%
 
 1. 如果您具有命令行访问权限，请按照显示的顺序输入以下命令：
 
-   ```bash
+   ```shell
    cd <app_root>
    ```
 
-   ```bash
+   ```shell
    find var generated vendor pub/static pub/media app/etc -type f -exec chmod u+w {} +
    ```
 
-   ```bash
+   ```shell
    find var generated vendor pub/static pub/media app/etc -type d -exec chmod u+w {} +
    ```
 
-   ```bash
+   ```shell
    chmod u+x bin/magento
    ```
 
    要选择性地在一行中输入所有命令，请输入以下内容（假定应用程序安装在`/var/www/html/magento2`中）：
 
-   ```bash
+   ```shell
    cd /var/www/html/magento2 && find var generated vendor pub/static pub/media app/etc -type f -exec chmod u+w {} + && find var generated vendor pub/static pub/media app/etc -type d -exec chmod u+w {} + && chmod u+x bin/magento
    ```
 
 1. 如果您尚未这样做，请通过以下方式之一获取应用程序：
 
    * [Composer中继包](../../composer.md)
-   * [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
+   * [克隆存储库（仅限参与开发的开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 1. 设置文件系统所有权和权限后，[安装应用程序](../../advanced.md)
 
@@ -97,13 +97,13 @@ ht-degree: 0%
 
 要在CentOS或Ubuntu上创建用户，请以具有`root`权限的用户身份输入以下命令：
 
-```bash
+```shell
 adduser <username>
 ```
 
 要为用户提供密码，请以具有`root`权限的用户身份输入以下命令：
 
-```bash
+```shell
 passwd <username>
 ```
 
@@ -115,11 +115,11 @@ passwd <username>
 
 例如，要创建名为`magento_user`的用户并为用户提供密码，请输入：
 
-```bash
+```shell
 sudo adduser magento_user
 ```
 
-```bash
+```shell
 sudo passwd magento_user
 ```
 
@@ -133,13 +133,13 @@ sudo passwd magento_user
 
 * CentOS：
 
-  ```bash
+  ```shell
   grep -E -i '^user|^group' /etc/httpd/conf/httpd.conf
   ```
 
   或
 
-  ```bash
+  ```shell
   grep -Ei '^user|^group' /etc/httpd/conf/httpd.conf
   ```
 
@@ -162,19 +162,19 @@ sudo passwd magento_user
 
 例如，要将用户`magento_user`添加到CentOS上的`apache`主组：
 
-```bash
+```shell
 sudo usermod -a -G apache magento_user
 ```
 
 要确认您的用户是Web服务器组的成员，请输入以下命令：
 
-```bash
+```shell
 groups magento_user
 ```
 
 以下示例结果显示了用户的主组(`magento`)和辅助组(`apache`)。
 
-```bash
+```shell
 magento_user : magento_user apache
 ```
 
@@ -192,7 +192,7 @@ magento_user : magento_user apache
 如果您尚未这样做，请通过以下方式之一获取软件：
 
 * [Composer中继包](../../composer.md)
-* [克隆存储库（仅限参与开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
+* [克隆存储库（仅限参与开发的开发人员）](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 ### 设置共享组的所有权和权限
 
@@ -201,35 +201,35 @@ magento_user : magento_user apache
 1. 以文件系统所有者的身份登录或切换到您的应用程序服务器。
 1. 按照显示的顺序输入以下命令：
 
-   ```bash
+   ```shell
    cd <app_root>
    ```
 
-   ```bash
+   ```shell
    find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
    ```
 
-   ```bash
+   ```shell
    find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
    ```
 
-   ```bash
+   ```shell
    chown -R :<web server group> .
    ```
 
-   ```bash
+   ```shell
    chmod u+x bin/magento
    ```
 
 若要选择在一行中输入所有命令，请输入以下内容（假定应用程序安装在`/var/www/html/magento2`中，且Web服务器组名称为`apache`）：
 
-```bash
+```shell
 cd /var/www/html/magento2 && find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} + && find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} + && chown -R :apache . && chmod u+x bin/magento
 ```
 
 如果文件系统权限设置不正确，且文件系统所有者无法更改权限，则可以输入命令作为具有`root`权限的用户：
 
-```bash
+```shell
 cd /var/www/html/magento2 && sudo find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} + && sudo find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} + && sudo chown -R :apache . && sudo chmod u+x bin/magento
 ```
 
@@ -242,6 +242,6 @@ cd /var/www/html/magento2 && sudo find var generated vendor pub/static pub/media
 
 例如，
 
-```bash
+```shell
 su magento_user
 ```

@@ -1,5 +1,5 @@
 ---
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 1%
@@ -16,19 +16,19 @@ ht-degree: 1%
 
 输入以下命令：
 
-```bash
+```shell
 curl -i http://<hostname, ip, or localhost>:<proxy port>/_cluster/health
 ```
 
 例如，如果在搜索引擎服务器上输入命令，而您的代理使用的是端口8080：
 
-```bash
+```shell
 curl -i http://localhost:8080/_cluster/health
 ```
 
 将显示以下消息来指示验证失败：
 
-```
+```text
 HTTP/1.1 401 Unauthorized
 Date: Tue, 23 Feb 2016 20:35:29 GMT
 Content-Type: text/html
@@ -45,19 +45,19 @@ WWW-Authenticate: Basic realm="Restricted"
 
 现在尝试以下命令：
 
-```bash
+```shell
 curl -i -u <username>:<password> http://<hostname, ip, or localhost>:<proxy port>/_cluster/health
 ```
 
 例如：
 
-```bash
+```shell
 curl -i -u magento_elasticsearch:mypassword http://localhost:8080/_cluster/health
 ```
 
 此时，该命令会成功，并显示一条类似于以下内容的消息：
 
-```
+```text
 HTTP/1.1 200 OK
 Date: Tue, 23 Feb 2016 20:38:03 GMT
 Content-Type: application/json; charset=UTF-8
@@ -68,7 +68,7 @@ Connection: keep-alive
 
 ## 在管理员中配置HTTP基本身份验证
 
-执行[搜索引擎配置](../configuration/search/configure-search-engine.md) *中讨论的相同任务，但*&#x200B;除外，请单击&#x200B;**[!UICONTROL Yes]**&#x200B;列表中的&#x200B;**[!UICONTROL Enable HTTP Auth]**，然后在提供的字段中输入用户名和密码。
+执行[搜索引擎配置](../configuration/search/configure-search-engine.md) *中讨论的相同任务，但*&#x200B;除外，请单击&#x200B;**[!UICONTROL Enable HTTP Auth]**&#x200B;列表中的&#x200B;**[!UICONTROL Yes]**，然后在提供的字段中输入用户名和密码。
 
 单击&#x200B;**[!UICONTROL Test Connection]**&#x200B;以确保它正常工作，然后单击&#x200B;**[!UICONTROL Save Config]**。
 

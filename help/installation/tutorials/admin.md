@@ -3,7 +3,7 @@ title: 创建、编辑或解锁管理员帐户
 description: 按照以下步骤管理Adobe Commerce Admin应用程序的管理员帐户。
 feature: Install, User Account
 exl-id: d87871a1-717d-4662-b84d-98a018518286
-source-git-commit: aaed7dba7d11085eb8e2793cefffb8c8b082e750
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 命令用法：
 
-```bash
+```shell
 bin/magento admin:user:create [--<parameter_name>=<value>, ...]
 ```
 
@@ -49,21 +49,21 @@ bin/magento admin:user:create [--<parameter_name>=<value>, ...]
 
 使用示例：
 
-```bash
+```shell
 bin/magento admin:user:create --admin-firstname=John --admin-lastname=Doe --admin-email=j.doe@example.com --admin-user=j.doe --admin-password=A0b9%t3g
 ```
 
-```
+```text
 Created Magento administrator user named j.doe
 ```
 
 如果未指定任何必需的参数，应用程序会在CLI中询问这些参数：
 
-```bash
+```shell
 bin/magento admin:user:create
 ```
 
-```
+```text
 Admin user: John
 Admin password:
 Admin email: j.doe.young@example.com
@@ -71,17 +71,17 @@ Admin first name: John
 Admin last name: Doe Young
 ```
 
-```
+```text
 Created Magento administrator user named John
 ```
 
-以下示例更新了`first name`管理员用户的`last name`、`password`和`j.doe`：
+以下示例更新了`j.doe`管理员用户的`first name`、`last name`和`password`：
 
-```bash
+```shell
 bin/magento admin:user:create --admin-firstname="John X" --admin-lastname="Doe X" --admin-email=j.doe@example.com --admin-user=j.doe --admin-password=A1234567
 ```
 
-```
+```text
 Created Magento administrator user named j.doe
 ```
 
@@ -89,23 +89,23 @@ Created Magento administrator user named j.doe
 
 使用此命令可解锁通常由于多次错误登录尝试而锁定的管理员帐户。
 
-```bash
+```shell
 bin/magento admin:user:unlock {username}
 ```
 
 必须指定管理员的用户名。 示例：
 
-```bash
+```shell
 bin/magento admin:user:unlock admin
 ```
 
-```
+```text
 The user account "admin" has been unlocked
 ```
 
 如果帐户未解锁或出现问题，则会显示以下消息：
 
-```
+```text
 The user account "admin" was not locked or could not be unlocked
 ```
 
@@ -113,6 +113,6 @@ The user account "admin" was not locked or could not be unlocked
 
 如果帐户不存在，则会显示以下消息：
 
-```
+```text
 Couldn't find the user account "bob"
 ```

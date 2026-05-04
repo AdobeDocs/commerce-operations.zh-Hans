@@ -3,9 +3,9 @@ title: 管理模块和扩展（开发人员）
 description: 使用命令行界面和编辑器包管理器管理Adobe Commerce模块和扩展。
 feature: Upgrade, Extensions
 exl-id: 447eb317-83e1-4900-83a5-9ac1a008e752
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '132'
 ht-degree: 3%
 
 ---
@@ -24,13 +24,13 @@ ht-degree: 3%
 
 命令用法：
 
-```bash
+```shell
 composer show --all <vendor>/<name>
 ```
 
 例如：
 
-```bash
+```shell
 composer show --all example/module
 ```
 
@@ -38,13 +38,13 @@ composer show --all example/module
 
 命令用法：
 
-```bash
+```shell
 composer require <vendor>/<name>:<version>
 ```
 
 例如：
 
-```bash
+```shell
 composer require example/module:1.0.0
 ```
 
@@ -67,7 +67,7 @@ Composer正在更新依赖项并安装模块，请稍候。
 
 1. 解决依赖关系并将精确版本写入`composer.lock`文件。
 
-   ```bash
+   ```shell
    composer update
    ```
 

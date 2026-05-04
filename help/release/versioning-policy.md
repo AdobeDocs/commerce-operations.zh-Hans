@@ -1,10 +1,10 @@
 ---
 title: 发布策略
-description: 了解不同类型的Adobe Commerce版本。
+description: 了解Adobe Commerce版本类型、营销与模块版本控制、补丁和安全版本、测试版、修补程序和整体发布策略。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: e0905f357c5ab84b30304eeaad00d9ae4ec0c168
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Adobe Commerce在单个模块级别（例如`magento/framework 101.1.1`）使用
 - **单个修补程序**
 - **自定义修补程序**
 
-## MINOR release
+## 次要版本
 
 以下准则适用于次要版本：
 
-- Breaking changes are possible; code written for Adobe Commerce 2.2.x may no longer work with Adobe Commerce 2.3.x. 例如，次要版本可能会引入对主要系统要求和依赖项（如PHP）的支持。
+- 可以进行重大更改；为Adobe Commerce 2.2.x编写的代码可能无法再用于Adobe Commerce 2.3.x。 例如，次要版本可能会引入对主要系统要求和依赖项（如PHP）的支持。
 - 模块版本可能有所不同。 例如，一些模块更改是在新补丁中引入的，而其他模块更改是在次要版本中引入的。
 - 次要版本可能包括一些新功能，在升级期间您可能需要或您的解决方案合作伙伴进行额外的操作以确保兼容性。
 - 次要版本可能包括对安全和质量问题的修复。

@@ -2,7 +2,7 @@
 title: 升级的维护模式选项
 description: 创建自定义维护模式页面，以便客户在执行升级时在Adobe Commerce店面中看到该页面。
 exl-id: 77e6d82d-5cc6-4d14-8b5c-1d2108f27b29
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
@@ -72,7 +72,7 @@ body
 
    在Apache配置文件的末尾添加以下内容：
 
-   ```
+   ```text
    RewriteEngine On
    RewriteCond %{REMOTE_ADDR} !^192\.0\.2\.110
    RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
@@ -90,7 +90,7 @@ body
 
 1. 输入以下命令：
 
-   ```bash
+   ```shell
    touch <web server docroot>/maintenance.enable
    ```
 
@@ -107,7 +107,7 @@ body
 1. 使用文本编辑器打开包含服务器块的nginx配置文件。
 1. 将以下内容添加到服务器块（`server`仅供参考；不要添加第二个服务器块）。
 
-   以下允许列表在192.0.2.110中安装了Magento的系统上IP地址192.0.2.115和`/var/www/html/magento2`：
+   以下允许列表在`/var/www/html/magento2`中安装了Magento的系统上IP地址192.0.2.110和192.0.2.115：
 
    ```conf
    server {
@@ -144,13 +144,13 @@ body
 
 1. 输入以下命令：
 
-   ```bash
+   ```shell
    touch <magento_root>/maintenance.enable
    ```
 
 1. 重新加载nginx配置：
 
-   ```bash
+   ```shell
    service nginx reload
    ```
 
@@ -159,6 +159,6 @@ body
 1. 升级完成后，删除或重命名`maintenance.enable`
 1. 重新加载nginx配置：
 
-   ```bash
+   ```shell
    service nginx reload
    ```

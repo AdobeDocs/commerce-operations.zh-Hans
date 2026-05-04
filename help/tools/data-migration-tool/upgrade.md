@@ -3,9 +3,9 @@ title: 升级 [!DNL Data Migration Tool]
 description: 了解如何升级 [!DNL Data Migration Tool] 以便在Magento 1和Magento 2之间传输数据。
 exl-id: c0d56d1d-b15b-437f-be72-74282dbe85c1
 topic: Commerce, Migration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 您还可以使用以下命令备份整个Magento代码库和数据库：
 
-```bash
+```shell
 php <magento_root>/bin/magento setup:backup --code --db
 ```
 
@@ -51,7 +51,7 @@ php <magento_root>/bin/magento setup:backup --code --db
 
 * [检查](install.md#check-your-version)您的Magento 2版本
 
-* [查找](install.md#find-released-versions-of-data-migration-tool)的已发布版本[!DNL Data Migration Tool]
+* [查找[!DNL Data Migration Tool]的已发布版本](install.md#find-released-versions-of-data-migration-tool)
 
 * [检查](install.md#check-version-of-installed-data-migration-tool) [!DNL Data Migration Tool]版本
 
@@ -61,7 +61,7 @@ php <magento_root>/bin/magento setup:backup --code --db
 1. 切换到应用程序根目录。
 1. 输入以下命令：
 
-   ```bash
+   ```shell
    composer require magento/data-migration-tool:<version>
    ```
 
@@ -69,7 +69,7 @@ php <magento_root>/bin/magento setup:backup --code --db
 
    例如，对于版本2.1.2，输入：
 
-   ```bash
+   ```shell
    composer require magento/data-migration-tool:2.1.2
    ```
 

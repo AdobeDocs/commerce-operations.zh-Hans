@@ -2,7 +2,7 @@
 title: 卸载语言包
 description: 按照以下步骤卸载Adobe Commerce语言包。
 exl-id: 9901aa0b-af1a-4ae9-968f-ac8421060f57
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 本节讨论如何从文件系统卸载一个或多个语言包，或者包括语言包的代码。 您可以先创建备份，以便以后恢复数据。
 
-此命令仅卸载&#x200B;*中指定的*&#x200B;个`composer.json`语言包；换句话说，卸载作为编辑器包提供的语言包。 如果您的语言包不是编辑器包，则必须通过从文件系统删除语言包代码来手动卸载它。
+此命令仅卸载`composer.json`中指定的&#x200B;*个*&#x200B;语言包；换句话说，卸载作为编辑器包提供的语言包。 如果您的语言包不是编辑器包，则必须通过从文件系统删除语言包代码来手动卸载它。
 
 您可以随时使用[`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files)命令恢复备份。
 
 命令用法：
 
-```bash
+```shell
 bin/magento i18n:uninstall [-b|--backup-code] {language package name} ... {language package name}
 ```
 
@@ -35,20 +35,20 @@ bin/magento i18n:uninstall [-b|--backup-code] {language package name} ... {langu
 
 例如，如果您尝试卸载其他语言包所依赖的语言包，则会显示以下消息：
 
-```
+```text
 Cannot uninstall vendorname/language-en_us because the following package(s) depend on it:
       vendorname/language-en_gb
 ```
 
 另一种选择是在备份代码库后卸载两种语言包：
 
-```bash
+```shell
 bin/magento i18n:uninstall vendorname/language-en_us vendorname/language-en_gb --backup-code
 ```
 
 与以下内容类似的消息：
 
-```
+```text
 Code backup is starting...
 Code backup filename: 1435261098_filesystem_code.tgz (The archive can be uncompressed with 7-Zip on Windows systems)
 Code backup path: /var/www/html/magento2/var/backups/1435261098_filesystem_code.tgz

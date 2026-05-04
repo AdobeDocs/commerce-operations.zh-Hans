@@ -2,9 +2,9 @@
 title: 启用分析
 description: 了解有关使MAGE Profiler能够与您的分析工具一起使用的更多信息。
 exl-id: a46289ed-16dc-4a72-84ff-85fe825dac11
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Commerce在[`Magento\Framework\Profiler`](https://github.com/magento/magento2/bl
 
 ## 设置MAGE_PROFILER
 
-您可以按照`MAGE_PROFILER`中讨论的任何方法来设置[的值。请设置引导参数值](../bootstrap/set-parameters.md)。
+您可以按照[中讨论的任何方法来设置`MAGE_PROFILER`的值。请设置引导参数值](../bootstrap/set-parameters.md)。
 
 `MAGE_PROFILER`支持以下值：
 
@@ -37,7 +37,7 @@ Commerce在[`Magento\Framework\Profiler`](https://github.com/magento/magento2/bl
 
   您可以使用以下值之一来启用特定的Profiler：
 
-   - 使用`csvfile`[`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`的](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Csvfile.php)
+   - 使用[`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Csvfile.php)的`csvfile`
    - 任何其他值（`2`除外），包括使用[`Magento\Framework\Profiler\Driver\Standard\Output\Html`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Html.php)的空值
 
 - `2`以启用依赖关系图。
@@ -50,7 +50,7 @@ Commerce在[`Magento\Framework\Profiler`](https://github.com/magento/magento2/bl
 
 您可以使用CLI命令启用或禁用Profiler：
 
-- `dev:profiler:enable <type>`通过`type`的`html`（默认）或`csvfile`启用探查器。 启用后，将创建标志文件`var/profiler.flag`。
+- `dev:profiler:enable <type>`通过`html`的`type`（默认）或`csvfile`启用探查器。 启用后，将创建标志文件`var/profiler.flag`。
 - `dev:profiler:disable`禁用该探查器。 禁用后，将删除flagfile `var/profiler.flag`。
 
 要启用依赖关系图，请使用变量选项。
@@ -63,13 +63,13 @@ Commerce在[`Magento\Framework\Profiler`](https://github.com/magento/magento2/bl
 
    要使用类型`html`启用探查器并创建flagfile，请执行以下操作：
 
-   ```bash
+   ```shell
    bin/magento dev:profiler:enable html
    ```
 
    要使用类型`csvfile`启用探查器并创建flagfile，请执行以下操作：
 
-   ```bash
+   ```shell
    bin/magento dev:profiler:enable csvfile
    ```
 
@@ -77,7 +77,7 @@ Commerce在[`Magento\Framework\Profiler`](https://github.com/magento/magento2/bl
 
    要禁用Profiler并删除Flagfile，请执行以下操作：
 
-   ```bash
+   ```shell
    bin/magento dev:profiler:disable
    ```
 

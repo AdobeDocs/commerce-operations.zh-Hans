@@ -3,9 +3,9 @@ title: 为搜索引擎配置Apache
 description: 按照以下步骤使用Apache Web Server配置搜索引擎，以进行Adobe Commerce的内部安装。
 feature: Install, Search
 exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.4中添加了OpenSearch支持。OpenSearch是Elasticsearch的一个兼容分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
+>2.4.4中添加了OpenSearch支持。 OpenSearch是Elasticsearch的一个兼容分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
 
 本节讨论如何将Apache配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与Apache的[安全通信](#secure-communication-with-apache)中讨论。
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 1. 按如下方式启用`mod_proxy`：
 
-   ```bash
+   ```shell
    a2enmod proxy_http
    ```
 
@@ -54,25 +54,25 @@ ht-degree: 0%
 
 1. 重新启动Apache：
 
-   ```bash
+   ```shell
    service apache2 restart
    ```
 
 1. 通过输入以下命令验证代理是否正常工作：
 
-   ```bash
+   ```shell
    curl -i http://localhost:<proxy port>/_cluster/health
    ```
 
    例如，如果您使用Elasticsearch，而您的代理使用的是端口8080：
 
-   ```bash
+   ```shell
    curl -i http://localhost:8080/_cluster/health
    ```
 
    类似于以下内容的消息显示成功：
 
-   ```
+   ```text
    HTTP/1.1 200 OK
    Date: Tue, 23 Feb 2019 20:38:03 GMT
    Content-Type: application/json; charset=UTF-8
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 1. 输入以下命令以确定是否已安装`htpasswd`：
 
-   ```bash
+   ```shell
    which htpasswd
    ```
 
@@ -118,11 +118,11 @@ ht-degree: 0%
 
 以具有`root`权限的用户身份输入以下命令：
 
-```bash
+```shell
 mkdir -p /usr/local/apache/password
 ```
 
-```bash
+```shell
 htpasswd -c /usr/local/apache/password/.<password file name> <username>
 ```
 
@@ -145,22 +145,22 @@ htpasswd -c /usr/local/apache/password/.<password file name> <username>
 **示例1： cron**
 您必须为cron仅设置一个用户的身份验证；在本例中，我们使用Web服务器用户。 要为Web服务器用户创建密码文件，请输入以下命令：
 
-```bash
+```shell
 mkdir -p /usr/local/apache/password
 ```
 
-```bash
+```shell
 htpasswd -c /usr/local/apache/password/.htpasswd apache
 ```
 
 **示例2：Elasticsearch**
 您必须为两个用户设置身份验证：一个具有对nginx的访问权限，另一个具有对Elasticsearch的访问权限。 要为这些用户创建密码文件，请输入以下命令：
 
-```bash
+```shell
 mkdir -p /usr/local/apache/password
 ```
 
-```bash
+```shell
 htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticsearch
 ```
 
@@ -168,7 +168,7 @@ htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticse
 
 要将其他用户添加到密码文件，请以具有`root`权限的用户身份输入以下命令：
 
-```bash
+```shell
 htpasswd /usr/local/apache/password/.htpasswd <username>
 ```
 

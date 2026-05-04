@@ -2,9 +2,9 @@
 title: 启用或禁用维护模式
 description: 按照以下步骤自定义客户在Adobe Commerce部署因维护而停止时看到的内容。
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
-source-git-commit: a5dbefda6b77d993756143ef0e7270425f824c44
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,15 @@ Adobe Commerce使用[维护模式](../../configuration/bootstrap/application-mod
 
 命令用法：
 
-```bash
+```shell
 bin/magento maintenance:enable [--ip=<ip address> ... --ip=<ip address>] | [ip=none]
 ```
 
-```bash
+```shell
 bin/magento maintenance:disable [--ip=<ip address> ... --ip=<ip address>] | [ip=none]
 ```
 
-```bash
+```shell
 bin/magento maintenance:status
 ```
 
@@ -52,13 +52,13 @@ bin/magento maintenance:status
 
 例如，启用没有IP地址劐免的维护模式：
 
-```bash
+```shell
 bin/magento maintenance:enable
 ```
 
 要为除192.0.2.10和192.0.2.11之外的所有客户端启用维护模式：
 
-```bash
+```shell
 bin/magento maintenance:enable --ip=192.0.2.10 --ip=192.0.2.11
 ```
 
@@ -69,7 +69,7 @@ bin/magento maintenance:enable --ip=192.0.2.10 --ip=192.0.2.11
 
 要维护免除IP地址列表，您可以使用上述命令中的`[--ip=<ip list>]`选项，也可以使用以下命令：
 
-```bash
+```shell
 bin/magento maintenance:allow-ips <ip address> .. <ip address> [--none]
 ```
 

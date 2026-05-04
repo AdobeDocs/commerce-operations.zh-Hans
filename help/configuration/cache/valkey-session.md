@@ -3,9 +3,9 @@ title: 使用Valkey进行会话存储
 description: 了解如何在Adobe Commerce中为会话存储配置Valkey。 了解设置步骤、配置选项和性能优化技术。
 feature: Configuration, Cache
 exl-id: 986ddb5c-8fc5-4210-8a41-a29e3a7625b7
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Adobe Commerce提供了命令行选项来配置Valkey会话存储。
 
 运行`setup:config:set`命令并指定Valkey特定的参数。
 
-```bash
+```shell
 bin/magento setup:config:set --session-save=valkey --session-save-valkey-<parameter_name>=<parameter_value>...
 ```
 
@@ -34,7 +34,7 @@ bin/magento setup:config:set --session-save=valkey --session-save-valkey-<parame
 >
 >从&#x200B;**Adobe Commerce 2.4.9-alpha2**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
 
-```bash
+```shell
 bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
 ```
 
@@ -45,7 +45,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 | session-save-valkey-password | 密码 | 如果Valkey服务器要求身份验证，请指定密码。 | 空 |
 | session-save-valkey-timeout | timeout | 连接超时（秒）。 | 2.5 |
 | session-save-valkey-persistent-id | persistent_identifier | 用于启用持久连接的唯一字符串（例如，sess-db0）。<br>[phpredis和php-fpm的已知问题](https://github.com/phpredis/phpredis/issues/70)。 |  |
-| session-save-valkey-db | 数据库 | 唯一的Valkey数据库编号，建议使用此编号来防止数据丢失。<br><br>**重要信息**：如果对多种类型的缓存使用Valkey，则数据库编号必须不同。 建议将默认缓存数据库编号分配给`0`，将页面缓存数据库编号分配给`1`，将会话存储数据库编号分配给`2`。 | 0 |
+| session-save-valkey-db | 数据库 | 唯一的Valkey数据库编号，建议使用此编号以防止数据丢失。<br><br>**重要信息**：如果对多种类型的缓存使用Valkey，则数据库编号必须不同。 建议将默认缓存数据库编号分配给`0`，将页面缓存数据库编号分配给`1`，将会话存储数据库编号分配给`2`。 | 0 |
 | session-save-valkey-compression-threshold | compression_threshold | 设置为`0`以禁用压缩（建议在`suhosin.session.encrypt = On`时使用）。 | 2048 |
 | session-save-valkey-compression-lib | compress_library | 选项： gzip、lzf、lz4或snappy。 | gzip |
 | session-save-valkey-log-level | log_level | 设置为以下任意值，按从少到多的顺序列出：<ul><li>0（紧急：仅最严重的错误）<li>1（警报：需要立即执行操作）<li>2（严重：应用程序组件不可用）<li>3 （错误：运行时错误，不严重，但必须监控）<li>4（警告：其他信息，推荐）<li>5（注意：正常但重要的情况）<li>6（信息：信息性消息）<li>7（调试：仅供开发或测试使用的信息最多）</ul> | 1 |
@@ -67,7 +67,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 
 以下示例将Valkey设置为会话数据存储，将主机设置为`127.0.0.1`，将日志级别设置为`4`，并将数据库编号设置为`2`。 所有其他参数均设置为默认值。
 
-```bash
+```shell
 bin/magento setup:config:set --session-save=valkey --session-save-valkey-host=127.0.0.1 --session-save-valkey-log-level=4 --session-save-valkey-db=2
 ```
 
@@ -75,7 +75,7 @@ bin/magento setup:config:set --session-save=valkey --session-save-valkey-host=12
 >
 >从&#x200B;**Adobe Commerce 2.4.9**&#x200B;开始，**Valkey**&#x200B;已正式替换CLI工具中的Redis，因为授权发生了更改。 Valkey是Redis的一个分支，可维护几乎相同的功能。 对于&#x200B;**版本2.4.8和更早版本**，用于配置Valkey的CLI命令与Redis的命令相同，从而确保无缝向后兼容性并简化迁移或双环境支持。 以下示例显示了特定于Valkey的命令。
 
-```bash
+```shell
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
 ```
 
@@ -119,13 +119,13 @@ Commerce向`<magento_root>app/etc/env.php`添加类似于以下内容的行：
 
 ### Valkey monitor命令
 
-```bash
+```shell
 valkey-cli monitor
 ```
 
 会话存储输出示例：
 
-```
+```text
 1476824834.187250 [0 127.0.0.1:52353] "select" "0"
 1476824834.187587 [0 127.0.0.1:52353] "hmget" "sess_sgmeh2k3t7obl2tsot3h2ss0p1" "data" "writes"
 1476824834.187939 [0 127.0.0.1:52353] "expire" "sess_sgmeh2k3t7obl2tsot3h2ss0p1" "1200"
@@ -136,7 +136,7 @@ valkey-cli monitor
 
 ### Valkey ping命令
 
-```bash
+```shell
 valkey-cli ping
 ```
 

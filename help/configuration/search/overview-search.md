@@ -1,11 +1,11 @@
 ---
 title: 搜索引擎概述
-description: Adobe Commerce的搜索引擎选项概述。
+description: 了解Elasticsearch和OpenSearch for Adobe Commerce目录搜索、先决条件、Web服务器设置和安装后维护任务。
 feature: Configuration, Search
 exl-id: 0ea78ca2-0bca-4d61-980a-02fb7da04553
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---

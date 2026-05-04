@@ -3,7 +3,7 @@ title: 数据迁移设置
 description: 了解如何使用 [!DNL Data Migration Tool]开始将设置从Magento 1迁移到Magento 2。
 exl-id: 6fc8285a-9f26-48a5-9034-49a6a1b66b40
 topic: Commerce, Migration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 要开始迁移设置，请运行：
 
-```bash
+```shell
 bin/magento migrate:settings [-r|--reset] [-a|--auto] {<path to config.xml>}
 ```
 
@@ -58,7 +58,7 @@ bin/magento migrate:settings [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 1. 切换到以下目录：
 
-   ```bash
+   ```shell
    cd <your application 2 install dir>/vendor/magento/data-migration-tool/etc/<edition-to-edition>
    ```
 
@@ -72,15 +72,15 @@ bin/magento migrate:settings [-r|--reset] [-a|--auto] {<path to config.xml>}
 
 1. 要从提供的示例创建`settings.xml`文件，请运行：
 
-   ```bash
+   ```shell
    cp settings.xml.dist settings.xml
    ```
 
 1. 在`settings.xml`中进行更改。
 
-1. 要指定用于映射的设置文件的新名称，请更改`<settings_map_file>`文件中的`path/to/config.xml`标记。
+1. 要指定用于映射的设置文件的新名称，请更改`path/to/config.xml`文件中的`<settings_map_file>`标记。
 
-有关更多详细信息，请参阅工具[规范](../technical-specification.md#settings-migration-mode)的[设置迁移模式](../technical-specification.md)部分。
+有关更多详细信息，请参阅工具[规范](../technical-specification.md)的[设置迁移模式](../technical-specification.md#settings-migration-mode)部分。
 
 ## 下一个迁移步骤
 

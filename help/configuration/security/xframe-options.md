@@ -3,16 +3,16 @@ title: 防止点击劫持攻击
 description: 通过使用“X-Frame-Options”标头控制页面渲染来阻止点击劫持攻击。
 feature: Configuration, Security
 exl-id: 83cf5fd2-3eb8-4bd9-99e2-1c701dcd1382
-source-git-commit: 6cc04211fedddab68087bcf2f3603ae0403862b9
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
 
 # 防止点击劫持攻击
 
-通过在店面的请求中包含[X-Frame-Options](https://owasp.org/www-community/attacks/Clickjacking) HTTP请求标头，防止[点击劫持](https://datatracker.ietf.org/doc/html/rfc7034)攻击。
+通过在店面的请求中包含[X-Frame-Options](https://datatracker.ietf.org/doc/html/rfc7034) HTTP请求标头，防止[点击劫持](https://owasp.org/www-community/attacks/Clickjacking)攻击。
 
 `X-Frame-Options`标题允许您指定是否允许浏览器在`<frame>`、`<iframe>`或`<object>`中呈现页面，如下所示：
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 实施`X-Frame-Options`
 
-在`X-Frame-Options`中设置`<project-root>/app/etc/env.php`的值。 缺省值设置如下：
+在`<project-root>/app/etc/env.php`中设置`X-Frame-Options`的值。 缺省值设置如下：
 
 ```php
 'x-frame-options' => 'SAMEORIGIN',
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 以下示例使用curl，您可以从任何可以通过HTTP协议连接到Commerce服务器的计算机运行它。
 
-```bash
+```shell
 curl -I -v --location-trusted '<storefront-URL>'
 ```
 

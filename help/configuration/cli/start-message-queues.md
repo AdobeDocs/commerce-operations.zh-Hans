@@ -2,9 +2,9 @@
 title: 启动消息队列使用者
 description: 了解如何为Adobe Commerce异步操作启动消息队列使用者。 了解使用者管理和B2B功能设置。
 exl-id: fd6edb24-8ebe-4b67-8a03-6cc759b60fa8
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -17,24 +17,24 @@ ht-degree: 0%
 
 要查看所有使用者的列表，请执行以下操作：
 
-```bash
+```shell
 bin/magento queue:consumers:list
 ```
 
 要启动消息队列使用者，请执行以下操作：
 
-```bash
+```shell
 bin/magento queue:consumers:start [--max-messages=<value>] [--batch-size=<value>] [--single-thread] [--area-code=<value>] [--multi-process=<value>] <consumer_name>
 ```
 
 使用所有可用消息后，该命令将终止。 您可以手动或使用cron作业再次运行该命令。 您还可以运行`magento queue:consumers:start`命令的多个实例来处理大型消息队列。 例如，您可以将`&`附加到命令中，以便在后台运行该命令，返回提示符，然后继续运行命令：
 
-```bash
+```shell
 bin/magento queue:consumers:start <consumer_name> &
 ```
 
-有关命令选项、参数和值的详细信息，请参阅[`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart)命令行工具引用&#x200B;_的Commerce部分中的_。
+有关命令选项、参数和值的详细信息，请参阅&#x200B;_命令行工具引用_&#x200B;的Commerce部分中的[`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart)。
 
 >[!INFO]
 >
->`--multi-process`选项存在于`queue:consumers:start`命令中，但若要使用并行进程运行使用者，请在[`multiple_processes`](../queues/manage-message-queues.md#configuration)中配置`/app/etc/env.php`选项。 否则，如果使用`queue:consumers:start`选项调用`--multi-process`，则它仅在单个线程上运行。
+>`--multi-process`选项存在于`queue:consumers:start`命令中，但若要使用并行进程运行使用者，请在`/app/etc/env.php`中配置[`multiple_processes`](../queues/manage-message-queues.md#configuration)选项。 否则，如果使用`--multi-process`选项调用`queue:consumers:start`，则它仅在单个线程上运行。

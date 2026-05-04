@@ -8,9 +8,9 @@ feature: Best Practices, Cache
 feature-set: Commerce
 topic: Performance
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-source-git-commit: 381d58d5fc9844aca88239e8e7ac39151dfc766c
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '2071'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->对于云基础架构环境上的Commerce，请验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html?lang=zh-Hans)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
+>对于云基础架构环境上的Commerce，请验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
 
 ## 配置L2缓存
 
-通过在`REDIS_BACKEND`配置文件中设置`VALKEY_BACKEND`或`.magento.env.yaml`部署变量来配置L2缓存。
+通过在`.magento.env.yaml`配置文件中设置`REDIS_BACKEND`或`VALKEY_BACKEND`部署变量来配置L2缓存。
 
 >[!BEGINTABS]
 
@@ -48,9 +48,9 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》[`REDIS_BACKEND`中的](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)_配置引用_。
+有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》_中的[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend)配置引用_。
 
-有关内部部署安装，请参阅[配置指南](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)中的&#x200B;_配置Redis页面缓存_。
+有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[配置Redis页面缓存](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)。
 
 >[!TAB Valkey配置]
 
@@ -62,9 +62,9 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》[`VALKEY_BACKEND`中的](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)_配置引用_。
+有关云基础架构上的环境配置，请参阅《云基础架构上的Commerce指南》_中的[`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)配置引用_。
 
-有关内部部署安装，请参阅[配置指南](../../../configuration/cache/config-valkey.md)中的&#x200B;_配置Valkey_。
+有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[配置Valkey](../../../configuration/cache/config-valkey.md)。
 
 >[!ENDTABS]
 
@@ -123,7 +123,7 @@ stage:
 
 通过运行以下CLI命令并查看`/dev/shm`行，可以检查群集的每个节点上的L2缓存存储内存使用情况。
 
-```bash
+```shell
 df -h /dev/shm
 ```
 
@@ -145,9 +145,9 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的[Commerce &#x200B;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_use_slave_connection)中的&#x200B;_REDIS_USE_SLAVE_CONNECTION_。
+有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的&#x200B;_Commerce_&#x200B;中的[REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection)。
 
-对于Adobe Commerce内部部署，请使用`bin/magento setup`命令配置新的Redis缓存实现。 请参阅[配置指南](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)中的&#x200B;_对默认缓存使用Redis_。
+对于Adobe Commerce内部部署，请使用`bin/magento setup`命令配置新的Redis缓存实现。 请参阅&#x200B;_配置指南_&#x200B;中的[对默认缓存使用Redis](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching)。
 
 >[!TAB Valkey配置]
 
@@ -159,9 +159,9 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的[Commerce &#x200B;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#valkey_use_slave_connection)中的&#x200B;_VALKEY_USE_SLAVE_CONNECTION_。
+有关Commerce Cloud基础架构上的环境配置，请参阅《云基础架构指南》上的&#x200B;_Commerce_&#x200B;中的[VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)。
 
-对于Adobe Commerce内部部署，请使用`bin/magento setup`命令配置新的Valkey缓存实现。 请参阅[配置指南](../../../configuration/cache/config-valkey.md)中的&#x200B;_配置Valkey_。
+对于Adobe Commerce内部部署，请使用`bin/magento setup`命令配置新的Valkey缓存实现。 请参阅&#x200B;_配置指南_&#x200B;中的[配置Valkey](../../../configuration/cache/config-valkey.md)。
 
 >[!ENDTABS]
 
@@ -212,7 +212,7 @@ cat /tmp/list.keys | grep "HGET" | awk '{print $5}' | sort | uniq -c | sort -nr 
 redis-cli -p 6370 -n 1 hgetall "<key_name>"
 ```
 
-有关内部部署安装，请参阅[配置指南](../../../configuration/cache/redis-pg-cache.md#redis-preload-feature)中的&#x200B;_Redis预加载功能_。
+有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[Redis预加载功能](../../../configuration/cache/redis-pg-cache.md#redis-preload-feature)。
 
 >[!TAB Valkey预加载密钥配置]
 
@@ -253,7 +253,7 @@ cat /tmp/list.keys | grep "HGET" | awk '{print $5}' | sort | uniq -c | sort -nr 
 valkey-cli -p 6370 -n 1 hgetall "<key_name>"
 ```
 
-有关内部部署安装，请参阅[配置指南](../../../configuration/cache/valkey-pg-cache.md#valkey-preload-feature)中的&#x200B;_Valkey预加载功能_。
+有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[Valkey预加载功能](../../../configuration/cache/valkey-pg-cache.md#valkey-preload-feature)。
 
 >[!ENDTABS]
 
@@ -305,9 +305,9 @@ stage:
 
 >[!NOTE]
 >
->`full_page`缓存类型与Cloud基础结构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/fastly)。
+>`full_page`缓存类型与Cloud基础结构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly)。
 
-有关内部部署安装，请参阅[配置指南](../../../configuration/cache/level-two-cache.md#stale-cache-options)中的&#x200B;_过时缓存选项_。
+有关内部部署安装，请参阅&#x200B;_配置指南_&#x200B;中的[过时缓存选项](../../../configuration/cache/level-two-cache.md#stale-cache-options)。
 
 >[!WARNING]
 >
@@ -490,13 +490,13 @@ stage:
 
 1. 请求专用于生产和暂存环境会话的新Redis实例。
 
-   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
+   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
 
    此更新不会导致任何停机时间，但需要部署才能激活新服务。
 
 1. 验证新实例是否正在运行，并记下端口号。
 
-   ```bash
+   ```shell
    echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
    ```
 
@@ -565,13 +565,13 @@ stage:
 
 1. 请求一个专用于生产和暂存环境会话的新Valkey实例。
 
-   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
+   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
 
    此更新不会导致任何停机时间，但需要部署才能激活新服务。
 
 1. 验证新实例是否正在运行，并记下端口号。
 
-   ```bash
+   ```shell
    echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
    ```
 
@@ -607,7 +607,7 @@ stage:
 
 ## 缓存压缩
 
-如果您使用的Redis或Valkey `maxmemory`超过6 GB，则可以启用缓存压缩以减少密钥占用的空间。 请注意，此设置通过提升客户端性能来节省内存。 如果您有空闲的CPU容量，请考虑启用它。 请参阅[配置指南](../../../configuration/cache/redis-session.md)中的[对会话存储使用Redis](../../../configuration/cache/valkey-session.md)或&#x200B;_对会话存储使用Valkey_。
+如果您使用的Redis或Valkey `maxmemory`超过6 GB，则可以启用缓存压缩以减少密钥占用的空间。 请注意，此设置通过提升客户端性能来节省内存。 如果您有空闲的CPU容量，请考虑启用它。 请参阅&#x200B;_配置指南_&#x200B;中的[对会话存储使用Redis](../../../configuration/cache/redis-session.md)或[对会话存储使用Valkey](../../../configuration/cache/valkey-session.md)。
 
 ```yaml
 stage:
@@ -625,7 +625,7 @@ stage:
 
 ## 启用异步释放
 
-要在云基础架构上的Adobe Commerce上启用`lazyfree`，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，请求将以下Redis或Valkey配置应用于您的环境：
+要在云基础架构上的Adobe Commerce上启用`lazyfree`，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，请求将以下Redis或Valkey配置应用于您的环境：
 
 ```text
 lazyfree-lazy-eviction yes
@@ -647,7 +647,7 @@ lazyfree-lazy-user-del yes
 
 ## 启用多线程I/O
 
-要在云基础架构上的Adobe Commerce上启用Redis I/O线程，请提交请求以下I/O线程配置的[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 此配置可以通过从主线程卸载套接字读取和写入以及命令解析来提高吞吐量，但代价是较高的CPU使用率。 在加载下验证并监视主机。
+要在云基础架构上的Adobe Commerce上启用Redis I/O线程，请提交请求以下I/O线程配置的[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 此配置可以通过从主线程卸载套接字读取和写入以及命令解析来提高吞吐量，但代价是较高的CPU使用率。 在加载下验证并监视主机。
 
 >[!BEGINTABS]
 
@@ -660,7 +660,7 @@ io-threads-do-reads yes
 io-threads 8 # Choose a value lower than the number of CPU cores (check with nproc), and then tune under load.
 ```
 
->[!TAB 为Valkey配置I/O线程]
+>[!TAB 为Valkey]配置I/O线程
 
 对于Valkey：
 

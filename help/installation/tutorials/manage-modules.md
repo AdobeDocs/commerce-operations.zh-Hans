@@ -1,10 +1,10 @@
 ---
 title: 启用或禁用模块
-description: 按照以下步骤管理Adobe Commerce模块。
+description: 了解如何使用模块状态和相关选项，从命令行启用、禁用和检查Adobe Commerce模块的状态。
 exl-id: 7155950a-a66a-4254-a71c-1a9aeab47606
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 使用以下命令列出已启用和禁用的模块：
 
-```bash
+```shell
 bin/magento module:status [--enabled] [--disabled] <module-list>
 ```
 
@@ -29,17 +29,17 @@ bin/magento module:status [--enabled] [--disabled] <module-list>
 
 >[!NOTE]
 >
->不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=zh-Hans#deployment-workflow)。
+>不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow)。
 
 ## 模块启用、禁用
 
 要启用或禁用可用模块，请使用以下命令：
 
-```bash
+```shell
 bin/magento module:enable [-c|--clear-static-content] [-f|--force] [--all] <module-list>
 ```
 
-```bash
+```shell
 bin/magento module:disable [-c|--clear-static-content] [-f|--force] [--all] <module-list>
 ```
 
@@ -56,7 +56,7 @@ bin/magento module:disable [-c|--clear-static-content] [-f|--force] [--all] <mod
 
 例如，要禁用`Magento_Weee`模块，请输入：
 
-```bash
+```shell
 bin/magento module:disable Magento_Weee
 ```
 
@@ -66,13 +66,13 @@ bin/magento module:disable Magento_Weee
 
 如果启用了一个或多个模块，请运行以下命令来更新数据库：
 
-```bash
+```shell
 bin/magento setup:upgrade
 ```
 
 然后清理缓存：
 
-```bash
+```shell
 bin/magento cache:clean
 ```
 
@@ -92,7 +92,7 @@ Adobe Commerce允许您启用或禁用当前可用的模块；换言之，启用
 
 * 模块A与模块B冲突。您可以禁用模块A和模块B，也可以禁用任一模块，但您&#x200B;*无法*&#x200B;同时启用模块A和模块B。
 
-* 依赖项在每个模块的Adobe Commerce `require`文件的`composer.json`字段中声明。 在模块的`conflict`文件的`composer.json`字段中声明冲突。 我们使用该信息来构建依赖关系图： `A->B`表示模块A依赖模块B。
+* 依赖项在每个模块的Adobe Commerce `composer.json`文件的`require`字段中声明。 在模块的`composer.json`文件的`conflict`字段中声明冲突。 我们使用该信息来构建依赖关系图： `A->B`表示模块A依赖模块B。
 
 * *依赖关系链*&#x200B;是从模块到另一个模块的路径。 例如，如果模块A依赖于模块B，而模块B依赖于模块C，则依赖关系链为`A->B->C`。
 

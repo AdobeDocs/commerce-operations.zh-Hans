@@ -3,16 +3,16 @@ title: 配置远程存储
 description: 了解如何为本地Commerce应用程序配置远程存储模块。
 feature: Configuration, Storage
 exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
 
 # 配置远程存储
 
-“远程存储”模块提供了使用存储服务(如AWS S3)将媒体文件存储到永久性的远程存储容器中并安排导入和导出的选项。
+“远程存储”模块提供了使用存储服务（如AWS S3）将媒体文件存储到永久性的远程存储容器中并安排导入和导出的选项。
 
 默认情况下，Adobe Commerce应用程序会将媒体文件存储在包含该应用程序的同一文件系统中。 这对于复杂的多服务器配置而言效率低下，并可能导致在共享资源时性能降低。 使用远程存储模块，您可以将媒体文件存储在`pub/media`目录中，并将文件导入/导出到远程对象存储的`var`目录中，以利用服务器端映像大小调整功能。
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 不能同时启用远程存储&#x200B;_和_&#x200B;数据库存储。 在启用远程存储之前，必须禁用数据库存储。
 
-```bash
+```shell
 bin/magento config:set system/media_storage_configuration/media_database 0
 ```
 
@@ -30,7 +30,7 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 >[!INFO]
 >
->- 远程存储仅适用于Commerce版本2.4.2及更高版本。 请参阅[2.4.2发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/magento-open-source/2-4-2)。
+>- 远程存储仅适用于Commerce版本2.4.2及更高版本。 请参阅[2.4.2发行说明](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/2-4-2)。
 >
 >- 在云基础架构上的Adobe Commerce上，远程存储模块具有&#x200B;_有限的_&#x200B;支持。 Adobe无法完全排除第三方存储适配器服务的故障。 有关为云项目实施远程存储的指导，请参阅[在云基础架构上为Commerce配置远程存储](cloud-support.md)。
 
@@ -67,13 +67,13 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 - 示例：使用远程存储安装Commerce
 
-  ```bash
+  ```shell
   bin/magento setup:install --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
   ```
 
 - 示例：在现有Commerce上启用远程存储
 
-  ```bash
+  ```shell
   bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
   ```
 
@@ -85,11 +85,11 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 为特定适配器启用远程存储后，可以使用CLI将现有&#x200B;_媒体_&#x200B;文件迁移到远程存储。
 
-```bash
+```shell
 ./magento2ce/bin/magento remote-storage:sync
 ```
 
 >[!INFO]
 >
->同步命令只迁移`pub/media`目录中的文件，_而不是_&#x200B;目录`var`中的导入/导出文件。 请参阅[Commerce 2.4用户指南](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html?lang=zh-Hans)中的&#x200B;_计划导入/导出_。
+>同步命令只迁移`pub/media`目录中的文件，_而不是_&#x200B;目录`var`中的导入/导出文件。 请参阅&#x200B;_Commerce 2.4用户指南_&#x200B;中的[计划导入/导出](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html)。
 

@@ -2,9 +2,9 @@
 title: 使用Nginx设置多个网站
 description: 按照本教程使用Nginx设置多个网站。
 exl-id: f13926a2-182c-4ce2-b091-19c5f978f267
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '972'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 0%
 
   在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
 
-  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅[Commerce on Cloud Infrastructure指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=zh-Hans)中的&#x200B;_设置多个网站或商店_。
+  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[设置多个网站或商店](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html)。
 
 - 在一个虚拟主机文件中接受多个域或为每个网站使用一个虚拟主机；虚拟主机配置文件位于`/etc/nginx/sites-available`中。
 - 您仅对本教程中讨论的修改使用了Commerce提供的`nginx.conf.sample`。
 - Commerce软件安装在`/var/www/html/magento2`中。
 - 您拥有默认网站以外的两个网站：
 
-   - 网站代码为`french.mysite.mg`且商店视图代码为`french`的`fr`
-   - 网站代码为`german.mysite.mg`且商店视图代码为`german`的`de`
+   - 网站代码为`french`且商店视图代码为`fr`的`french.mysite.mg`
+   - 网站代码为`german`且商店视图代码为`de`的`german.mysite.mg`
    - `mysite.mg`是默认网站和默认商店视图
 
 >[!TIP]
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 1. [在管理员中设置网站、商店和商店视图](ms-admin.md)。
 1. 创建一个[Nginx虚拟主机](#step-2-create-nginx-virtual-hosts))以映射多个网站或每个Commerce网站一个Nginx虚拟主机（详细步骤如下）。
-1. 使用Magento提供的[将](ms-overview.md)MAGE变量`$MAGE_RUN_TYPE` `$MAGE_RUN_CODE`和`nginx.conf.sample`的值传递给nginx（详细步骤如下）。
+1. 使用Magento提供的`nginx.conf.sample`将[MAGE变量](ms-overview.md) `$MAGE_RUN_TYPE`和`$MAGE_RUN_CODE`的值传递给nginx（详细步骤如下）。
 
    - `$MAGE_RUN_TYPE`可以是`store`或`website`：
 
@@ -83,13 +83,13 @@ ht-degree: 0%
 1. 保存对文件所做的更改并退出文本编辑器。
 1. 验证服务器配置：
 
-   ```bash
+   ```shell
    nginx -t
    ```
 
 1. 如果成功，将显示以下消息：
 
-   ```
+   ```yaml
    nginx: configuration file /etc/nginx/nginx.conf test is successful
    ```
 
@@ -97,15 +97,15 @@ ht-degree: 0%
 
 1. 在`/etc/nginx/sites-enabled`目录中创建符号链接：
 
-   ```bash
+   ```shell
    cd /etc/nginx/sites-enabled
    ```
 
-   ```bash
+   ```shell
    ln -s /etc/nginx/sites-available/magento magento
    ```
 
-有关map指令的更多详细信息，请参阅有关map指令[的](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)nginx文档。
+有关map指令的更多详细信息，请参阅有关map指令](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)的[nginx文档。
 
 
 **要创建多个虚拟主机**：
@@ -141,13 +141,13 @@ ht-degree: 0%
 1. 保存对文件所做的更改并退出文本编辑器。
 1. 验证服务器配置：
 
-   ```bash
+   ```shell
    nginx -t
    ```
 
 1. 如果成功，将显示以下消息：
 
-   ```
+   ```yaml
    nginx: configuration file /etc/nginx/nginx.conf test is successful
    ```
 
@@ -155,15 +155,15 @@ ht-degree: 0%
 
 1. 在`/etc/nginx/sites-enabled`目录中创建符号链接：
 
-   ```bash
+   ```shell
    cd /etc/nginx/sites-enabled
    ```
 
-   ```bash
+   ```shell
    ln -s /etc/nginx/sites-available/french.mysite.mg french.mysite.mg
    ```
 
-   ```bash
+   ```shell
    ln -s /etc/nginx/sites-available/german.mysite.mg german.mysite.mg
    ```
 
@@ -253,7 +253,7 @@ location ~ (index|get|static|report|404|503|health_check)\.php$ {
 
 运行以下命令以清理`config`和`full_page`缓存。
 
-```bash
+```shell
 bin/magento cache:clean config full_page
 ```
 
@@ -280,7 +280,7 @@ bin/magento cache:clean config full_page
 >[!INFO]
 >
 >- 在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
->- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅[云基础架构上的Commerce指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=zh-Hans)中的&#x200B;_设置多个云网站或商店_。
+>- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅&#x200B;_云基础架构上的Commerce指南_&#x200B;中的[设置多个云网站或商店](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html)。
 
 ### 故障排除
 

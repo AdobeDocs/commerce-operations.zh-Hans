@@ -2,9 +2,9 @@
 title: 运行 [!DNL Upgrade Compatibility Tool]
 description: 按照以下步骤在Adobe Commerce项目的命令行界面中运行 [!DNL Upgrade Compatibility Tool] 。
 exl-id: ea467a74-18eb-476b-96e2-23f4fc257d73
-source-git-commit: 2d17da1f8cbda1462839ad2fa3ea569833443827
+source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 要在命令行界面中开始使用[!DNL Upgrade Compatibility Tool]，请通过运行以下命令下载它：
 
-```bash
+```shell
 composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
 ```
 
 您可能需要使用`chmod`命令授予工具可执行文件的权限：
 
-```bash
+```shell
 chmod +x ./uct/bin/uct
 ```
 
@@ -29,7 +29,7 @@ chmod +x ./uct/bin/uct
 
 [!DNL Upgrade Compatibility Tool]是一种通过分析其中安装的所有模块来针对特定版本检查Adobe Commerce自定义实例的工具。 它会返回在升级到最新版本的Adobe Commerce之前必须解决的严重问题、错误和警告列表。
 
-请参阅此[视频教程](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=zh-Hans) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
+请参阅此[视频教程](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/extensibility/backend-development/upgrade/upgrade-compatibility-tool-overview) (06:02)，了解有关[!DNL Upgrade Compatibility Tool]的更多信息。
 
 命令行界面中[!DNL Upgrade Compatibility Tool]的可用命令：
 
@@ -41,7 +41,7 @@ chmod +x ./uct/bin/uct
 | `refactor` | 此命令会自动修复一组减少的问题。 |
 | `graphql:compare` | 此命令提供选项，用于内检两个GraphQL端点并比较其架构。 |
 | `list` | 此命令返回所有[!DNL Upgrade Compatibility Tool]可用命令的列表。 |
-| `help` | 此命令返回`help`的所有可用[!DNL Upgrade Compatibility Tool]选项。 此命令也可以与以前的命令一起运行选项。 |
+| `help` | 此命令返回[!DNL Upgrade Compatibility Tool]的所有可用`help`选项。 此命令也可以与以前的命令一起运行选项。 |
 
 ## 使用`upgrade:check`命令
 
@@ -49,7 +49,7 @@ chmod +x ./uct/bin/uct
 
 `upgrade:check`命令是执行该工具的主命令：
 
-```bash
+```shell
 bin/uct upgrade:check <dir>
 ```
 
@@ -61,9 +61,9 @@ bin/uct upgrade:check <dir>
 |----------------|-----------------|
 | `upgrade:check` | <ul><li>—help：返回所有可用选项。</li><li>—current-version：当前的Adobe Commerce版本。 如果忽略，则将使用Adobe Commerce安装的版本。</li><li> — 最小问题级别：您可以根据最小问题级别筛选问题（默认值为“警告”）。</li><li>—ignore-current-version-compatibility-issues（或 — i）：如果不想在报表中包含来自当前版本的严重问题、错误和警告。</li><li> — 即将推出的版本（或 — c）：定位特定的Adobe Commerce版本。 如果省略，将使用最新可用的。</li></ul> |
 
-[!DNL Upgrade Compatibility Tool]允许您运行带有`upgrade:check`选项的`--ignore-current-version-compatibility-issues`命令。 当您只想在[!DNL Upgrade Compatibility Tool]报表中获取从当前版本更新到目标版本时引入的新问题时，可使用此选项：
+[!DNL Upgrade Compatibility Tool]允许您运行带有`--ignore-current-version-compatibility-issues`选项的`upgrade:check`命令。 当您只想在[!DNL Upgrade Compatibility Tool]报表中获取从当前版本更新到目标版本时引入的新问题时，可使用此选项：
 
-```bash
+```shell
 bin/uct upgrade:check --ignore-current-version-compatibility-issues <dir>
 ```
 
@@ -73,11 +73,11 @@ bin/uct upgrade:check --ignore-current-version-compatibility-issues <dir>
 
 ### 添加`--coming-version`选项
 
-您可以使用`>=2.3`选项将当前Adobe Commerce安装与任何Adobe Commerce版本`--coming-version`进行比较。
+您可以使用`--coming-version`选项将当前Adobe Commerce安装与任何Adobe Commerce版本`>=2.3`进行比较。
 
 运行`upgrade:check`命令时必须提供版本作为参数：
 
-```bash
+```shell
 bin/uct upgrade:check <dir> -c 2.4.3
 ```
 
@@ -94,7 +94,7 @@ bin/uct upgrade:check <dir> -c 2.4.3
 
 您可以检索两个Adobe Commerce版本的数据库架构之间的差异。
 
-```bash
+```shell
 bin/uct dbschema:diff <current-version> <target-version>
 ```
 
@@ -105,7 +105,7 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 执行示例：
 
-```bash
+```text
 bin/uct dbschema:diff 2.4.3 2.4.3-p3
 
 DB schema differences between versions 2.4.3 and 2.4.3-p3:
@@ -129,7 +129,7 @@ Total detected differences between version 2.4.3 and 2.4.3-p3: 11
 
 您可以比较当前的Adobe Commerce安装，以验证Adobe Commerce的核心代码是否已修改以实现自定义。 此命令仅显示核心修改的列表：
 
-```bash
+```shell
 bin/uct core:code:changes <dir> <vanilla dir>
 ```
 
@@ -146,7 +146,7 @@ bin/uct core:code:changes <dir> <vanilla dir>
 
 >[!NOTE]
 >
-> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)。
+> 最佳做法是将自定义代码排除在核心代码之外。 有关更多升级最佳实践，请参阅Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)。
 
 ### Vanilla安装
 
@@ -154,9 +154,9 @@ _vanilla_&#x200B;安装是对特定发行版本的指定版本标记或分支的
 
 `bin/uct core:code:changes`命令检查系统中是否存在vanilla实例。 如果这是第一次使用vanilla安装，则会出现一个交互式命令行问题，提示您从Adobe Commerce存储库(`https://repo.magento.com/`)下载vanilla项目。
 
-您可以运行带有[!DNL Upgrade Compatibility Tool]选项的`--vanilla-dir`命令，以指定Adobe Commerce vanilla安装目录。
+您可以运行带有`--vanilla-dir`选项的[!DNL Upgrade Compatibility Tool]命令，以指定Adobe Commerce vanilla安装目录。
 
-有关详细信息，请参阅[部署vanilla实例](https://developer.adobe.com/commerce/contributor/guides/code-contributions#deploy-vanilla-magento-open-source-instance)主题。
+有关详细信息，请参阅[部署vanilla实例](https://developer.adobe.com/commerce/contributor/guides/install/)主题。
 
 ## 使用`refactor`命令
 
@@ -168,7 +168,7 @@ _vanilla_&#x200B;安装是对特定发行版本的指定版本标记或分支的
 
 为此，请执行`refactor`命令：
 
-```bash
+```shell
 bin/uct refactor <dir>
 ```
 
@@ -184,7 +184,7 @@ bin/uct refactor <dir>
 
 此命令为[!DNL Upgrade Compatibility Tool]提供选项，用于内嵌两个GraphQL端点并比较其架构，以查找它们之间的突破性更改和危险更改：
 
-```bash
+```shell
 bin/uct graphql:compare <schema1> <schema2>
 ```
 
@@ -203,7 +203,7 @@ bin/uct graphql:compare <schema1> <schema2>
 
 要返回[!DNL Upgrade Compatibility Tool]可用命令的列表，请运行：
 
-```bash
+```shell
 bin/uct list
 ```
 
@@ -211,13 +211,13 @@ bin/uct list
 
 要查看[!DNL Upgrade Compatibility Tool]命令的常规选项和帮助，请运行：
 
-```bash
+```shell
 bin/uct --help
 ```
 
-在命令行界面中为`help`返回一个包含所有可用[!DNL Upgrade Compatibility Tool]选项的列表：
+在命令行界面中为[!DNL Upgrade Compatibility Tool]返回一个包含所有可用`help`选项的列表：
 
-```
+```text
 - --raw             To output raw command list
 - --format=FORMAT   The output format (txt, xml, json, or md) [default: "txt"]
 - --short           To skip describing commands' arguments
@@ -231,15 +231,15 @@ bin/uct --help
 
 运行特定命令时，可以将`--help`作为选项运行。 它返回指定命令的`--help`选项。
 
-带`upgrade:check`选项的`--help`命令示例：
+带`--help`选项的`upgrade:check`命令示例：
 
-```bash
+```shell
 bin/uct upgrade:check --help
 ```
 
 这会返回可以为`upgrade:check`命令运行的特定选项：
 
-```
+```shell
 - -a, --current-version[=CURRENT-VERSION]: Current Adobe Commerce version, version of the Adobe Commerce installation will be used if omitted.
 - -c, --coming-version[=COMING-VERSION]: Target Adobe Commerce version, latest released version of Adobe Commerce will be used if omitted. Provides a list of all available Adobe Commerce versions.
 - --json-output-path[=JSON-OUTPUT-PATH]: Path of the file where the output will be exported in json format.
@@ -259,13 +259,13 @@ bin/uct upgrade:check --help
 
 - 避免使用具有相同名称的两个模块。
 - 遵循Adobe Commerce [编码标准](https://developer.adobe.com/commerce/php/coding-standards)。
-- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=zh-Hans)最佳实践。
-- 在云基础架构[!DNL Upgrade Compatibility Tool]项目中为[[!DNL Site-Wide Analysis Tool]Adobe Commerce运行](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html?lang=zh-Hans) [中的](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans){target=_blank}。
+- Adobe Commerce 2.4 [升级指南](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf)最佳实践。
+- 在云基础架构](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}项目中为[Adobe Commerce运行[[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html)中的[!DNL Upgrade Compatibility Tool]。
 
 ## 优化结果
 
 [!DNL Upgrade Compatibility Tool]提供包含结果的报告，其中默认包含项目中识别的所有问题。 您可以优化结果以重点关注为完成升级而必须修复的那些问题：
 
-- 当您只想在`--ignore-current-version-compatibility-issues`报表中获取从当前版本更新到目标版本时引入的新问题时，请使用选项[!DNL Upgrade Compatibility Tool]。
+- 当您只想在[!DNL Upgrade Compatibility Tool]报表中获取从当前版本更新到目标版本时引入的新问题时，请使用选项`--ignore-current-version-compatibility-issues`。
 - 通过添加`--min-issue-level`选项，此设置允许设置最低问题级别，以帮助仅排定升级中最重要的问题的优先级。
-- [!DNL Upgrade Compatibility Tool]至少需要2GB RAM才能运行。 建议使用此设置以避免由于内存不足限制导致的问题。 如果运行设置低[!DNL Upgrade Compatibility Tool]的`upgrade:check`命令，`memory_limit`会显示一个问题。
+- [!DNL Upgrade Compatibility Tool]至少需要2GB RAM才能运行。 建议使用此设置以避免由于内存不足限制导致的问题。 如果运行设置低`memory_limit`的`upgrade:check`命令，[!DNL Upgrade Compatibility Tool]会显示一个问题。

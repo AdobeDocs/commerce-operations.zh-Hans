@@ -2,9 +2,9 @@
 title: 配置锁定提供程序
 description: 执行以下步骤，防止重复的cron作业和cron组在Adobe Commerce部署上运行。
 exl-id: c54e05b7-38fd-4731-bc77-a873b44d0ae8
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 ## 配置锁定
 
-配置锁定提供程序以防止启动重复的cron作业和cron组。 (需要Adobe Commerce 2.2.x、2.2.5及更高版本以及2.3.3及更高版本。)
+配置锁定提供程序以防止启动重复的cron作业和cron组。 （需要Adobe Commerce 2.2.x、2.2.5及更高版本以及2.3.3及更高版本。）
 
 默认情况下，Adobe Commerce使用数据库保存锁定。 如果您的服务器上有多个节点，我们建议使用Zookeeper作为锁定提供程序。
 
-如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
+如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
 
 ### 命令用法
 
-```bash
+```shell
 bin/magento setup:config:set [--<parameter_name>=<value>, ...]
 ```
 

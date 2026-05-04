@@ -5,16 +5,16 @@ feature: Search
 role: Admin, Developer
 exl-id: 211c1e3c-0739-4ff6-a25c-b27d335920d1
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
 # ACSD-62577：店面搜索性能优化
 
-ACSD-62577修补程序通过优化查询和表索引来修复店面搜索查询性能缓慢的问题。 此修补程序在[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.56中可用。修补程序ID为ACSD-62577。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-62577修补程序通过优化查询和表索引来修复店面搜索查询性能缓慢的问题。 此修补程序在[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.56中可用。 修补程序ID为ACSD-62577。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -28,7 +28,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -39,7 +39,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 1. 使用性能工具包`small.xml`设置Adobe Commerce Develop。
 1. 访问SQL命令行并使用以下命令删除`search_query`表：
 
-   ```
+   ```text
    SET FOREIGN_KEY_CHECKS = 0;  
    DROP TABLE search_query;  
    SET FOREIGN_KEY_CHECKS = 1;  
@@ -48,7 +48,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 1. 使用大量记录填充`search_query`表，例如： 400万条记录。
 1. 触发重新索引和刷新缓存。
 
-   ```
+   ```shell
    bin/magento indexer:reindex  
    bin/magento c:c  
    bin/magento c:f  
@@ -56,7 +56,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 
 1. 启用数据库调试日志：
 
-   ```
+   ```shell
    bin/magento dev:query-log:enable  
    ```
 
@@ -64,7 +64,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
    `http://your_magento_instance/default/catalogsearch/result/?q=test.`
 1. 检查`db.log`以了解以下SQL的查询执行时间：
 
-   ```
+   ```sql
    SELECT COUNT(*) FROM (  
    SELECT DISTINCT `main_table`.`query_text`  
    FROM `search_query` AS `main_table`  
@@ -82,7 +82,7 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.7-p3
 
 由于处理大型`search_query`表的效率较低，查询执行时间显着增加：
 
-```
+```text
 TIME: 10.8520 seconds  
 ```
 
@@ -90,8 +90,8 @@ TIME: 10.8520 seconds
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html)。
 
 ## 相关阅读
 

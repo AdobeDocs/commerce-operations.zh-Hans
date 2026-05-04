@@ -3,9 +3,9 @@ title: 硬件建议
 description: 了解用于优化Adobe Commerce性能的硬件建议。 了解生产部署的CPU、内存和存储要求。
 feature: Best Practices, Install
 exl-id: ab548c4b-6f56-4409-a4ed-5c959939e04b
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Commerce] Web节点提供所有未缓存或无法通过应用程序缓存的请求。 一个CPU核心可以有效地处理大约两个（有时最多四个） [!DNL Commerce]请求。 使用以下公式可确定需要有多少Web节点/核心来处理所有传入请求，而无需将它们排入队列：
 
-```
+```text
 N[Cores] = (N[Expected Requests] / 2) + N [Expected Cron Processes]
 ```
 

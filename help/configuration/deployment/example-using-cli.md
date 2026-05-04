@@ -2,9 +2,9 @@
 title: 使用CLI命令的示例
 description: 请参阅有关如何使用命令行在开发系统中设置共享、系统特定的敏感值的示例。
 exl-id: d0058e9f-a5a9-48a6-9c66-c61515666335
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ ht-degree: 0%
 
 要设置系统特定的设置&#x200B;**默认电子邮件域**（位于默认作用域中），请使用以下命令：
 
-```bash
+```shell
 bin/magento config:set customer/create_account/email_domain <email domain>
 ```
 

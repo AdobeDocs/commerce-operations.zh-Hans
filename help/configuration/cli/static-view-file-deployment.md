@@ -2,9 +2,9 @@
 title: 部署静态视图文件
 description: 了解如何在生产模式下将静态视图文件部署到Adobe Commerce文件系统。 了解部署命令和优化技术。
 exl-id: 51954738-b999-4982-954b-70f7a70c5a17
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->_仅限开发人员模式_：安装或启用新模块时，该模块可能会加载新的JavaScript、CSS、布局等。 要避免出现静态文件问题，您必须清除旧文件，以确保您获得新模块的所有更改。 您可以通过多种方式清理生成的静态视图文件。 有关详细信息，请参阅[清理静态文件缓存主题](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache)。
+>_仅限开发人员模式_：安装或启用新模块时，该模块可能会加载新的JavaScript、CSS、布局等。 要避免出现静态文件问题，您必须清除旧文件，以确保您获得新模块的所有更改。 您可以通过多种方式清理生成的静态视图文件。 有关详细信息，请参阅[清理静态文件缓存主题](https://developer.adobe.com/commerce/frontend-core/guide/caching#clean-static-files-cache)。
 
 **要部署静态视图文件**：
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
    命令选项：
 
-   ```bash
+   ```shell
    bin/magento setup:static-content:deploy [<languages>] [-t|--theme[="<theme>"]] [--exclude-theme[="<theme>"]] [-l|--language[="<language>"]] [--exclude-language[="<language>"]] [-a|--area[="<area>"]] [--exclude-area[="<area>"]] [-j|--jobs[="<number>"]]  [--no-javascript] [--no-css] [--no-less] [--no-images] [--no-fonts] [--no-html] [--no-misc] [--no-html-minify] [--no-parent] [-f|--force]
    ```
 
@@ -87,13 +87,13 @@ ht-degree: 0%
 
 以下命令为美国英语(`en_US`)语言部署静态内容，排除随Commerce提供的Luma主题，并且不会缩小HTML文件。
 
-```bash
+```shell
 bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
 ```
 
 示例输出：
 
-```
+```text
 Requested languages: en_US
 Requested areas: frontend, adminhtml
 Requested themes: Magento/blank, Magento/backend
@@ -112,13 +112,13 @@ Successful: 1993 files; errors: 0
 
 以下命令使用标准部署策略仅部署具有4个作业的JavaScript：
 
-```bash
+```shell
 bin/magento setup:static-content:deploy -s standard --no-misc --no-html --no-fonts --no-images --no-less --no-css -j 4
 ```
 
 以下命令仅部署CSS和LESS，包含3个作业和一个快速部署策略：
 
-```bash
+```shell
 bin/magento setup:static-content:deploy -s quick --no-misc --no-html --no-fonts --no-images --no-javascript -j 3
 ```
 
@@ -126,13 +126,13 @@ bin/magento setup:static-content:deploy -s quick --no-misc --no-html --no-fonts 
 
 以下命令为所有语言生成静态视图文件，仅前端区域，仅Commerce Luma主题，不生成字体：
 
-```bash
+```shell
 bin/magento setup:static-content:deploy --area frontend --no-fonts --theme Magento/luma
 ```
 
 示例输出：
 
-```
+```text
 Requested languages: en_US
 Requested areas: frontend
 Requested themes: Magento/luma
@@ -162,7 +162,7 @@ New version of deployed files: 1466711110
 
 **症状**：运行静态视图文件部署工具时显示以下错误：
 
-```
+```text
 ERROR: You need to install the Commerce application before running this utility.
 ```
 
