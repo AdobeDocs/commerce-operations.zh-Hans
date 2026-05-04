@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 签出性能最佳实践
 
-Adobe Commerce中的[结帐](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process)流程是店面体验的关键方面。 它依赖于内置[购物车](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#shopping-cart)和[结帐](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#checkout-page)功能。
+Adobe Commerce中的[结帐](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process)流程是店面体验的关键方面。 它依赖于内置[购物车](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/storefront/storefront#shopping-cart)和[结帐](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/storefront/storefront#checkout-page)功能。
 
 性能是保持良好用户体验的关键。 您可以通过为&#x200B;**高吞吐量订单处理**&#x200B;配置以下选项来优化签出性能：
 
@@ -174,13 +174,13 @@ _在购物车加载时启用库存_&#x200B;全局设置确定在购物车中加�
 
 禁用后，将产品添加到购物车时不会进行库存检查。 如果跳过此库存检查，则某些缺货方案可能会引发其他类型的错误。 库存检查&#x200B;_始终_&#x200B;发生在订单下达步骤，即使已禁用也是如此。
 
-**默认情况下启用“购物车加载时启用库存检查”**（设置为“是”）。 要在加载购物车时禁用库存检查，请在管理员UI **商店** > **配置** > **目录** > **库存** > **库存选项**&#x200B;分区中将&#x200B;**[!UICONTROL Enable Inventory Check On Cart Load]**&#x200B;设置为`No`。 请参阅&#x200B;_用户指南_&#x200B;中的[配置全局选项](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options)和[目录清单](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/guide-overview)。
+**默认情况下启用“购物车加载时启用库存检查”**（设置为“是”）。 要在加载购物车时禁用库存检查，请在管理员UI **商店** > **配置** > **目录** > **库存** > **库存选项**&#x200B;分区中将&#x200B;**[!UICONTROL Enable Inventory Check On Cart Load]**&#x200B;设置为`No`。 请参阅&#x200B;_用户指南_&#x200B;中的[配置全局选项](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/inventory/configuration/global-options)和[目录清单](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/inventory/guide-overview)。
 
 ## 负载平衡
 
 通过为MySQL数据库和Redis实例启用辅助连接，您可以帮助平衡不同节点的负载。
 
-Adobe Commerce可以异步读取多个数据库或Redis实例。 如果在云基础架构上使用Commerce，则可通过编辑`.magento.env.yaml`文件中的[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)和[REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)值来配置辅助连接。 只有一个节点需要处理读写通信，因此将变量设置为`true`会导致为只读通信创建辅助连接。 将值设置为`false`以从`env.php`文件中删除任何现有的只读连接数组。
+Adobe Commerce可以异步读取多个数据库或Redis实例。 如果在云基础架构上使用Commerce，则可通过编辑`.magento.env.yaml`文件中的[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)和[REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)值来配置辅助连接。 只有一个节点需要处理读写通信，因此将变量设置为`true`会导致为只读通信创建辅助连接。 将值设置为`false`以从`env.php`文件中删除任何现有的只读连接数组。
 
 `.magento.env.yaml`文件示例：
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >
->Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅&#x200B;_管理系统指南_&#x200B;中的[缓存管理](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
+>Commerce站点管理员可以使用缓存管理系统工具从管理员管理缓存。 请参阅&#x200B;_管理系统指南_&#x200B;中的[缓存管理](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management)。
 
 
 ## 查看缓存状态
@@ -59,7 +59,7 @@ Current status:
 
 >[!TIP]
 >
->有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅&#x200B;_Admin Systems指南_&#x200B;中的[缓存](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches)。
+>有关Adobe Commerce支持的默认缓存类型的详细说明，请参阅&#x200B;_Admin Systems指南_&#x200B;中的[缓存](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management#caches)。
 
 
 ## 启用或禁用缓存类型

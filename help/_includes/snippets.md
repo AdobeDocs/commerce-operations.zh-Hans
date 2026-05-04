@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2.4.5的扩展支持安全修补程序仅向Adobe Commerce客户提供。 这些修补程序不适用于Magento Open Source代码库。 请参阅[扩展支持](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
+>2.4.5的扩展支持安全修补程序仅向Adobe Commerce客户提供。 这些修补程序不适用于Magento Open Source代码库。 请参阅[扩展支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
 
 ## 仅限Commerce {#commerce-only}
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。
+>安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)。
 
 ## 仅限Adobe Commerce {#ee-only}
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
+>Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
 
 ## 2025年10月安全补丁补丁补丁补丁补丁补丁补丁补丁补丁包 {#oct-2025-backports}
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 * **已添加对Apache ActiveMQ Artemis STOMP协议的支持**
 
-  通过简单文本导向消息协议(STOMP)增加了对ActiveMQ Artemis开源消息代理的支持。 它提供了可靠且可扩展的报文传送系统，为基于STOMP的集成提供了灵活性。 请参阅&#x200B;*Commerce配置指南*&#x200B;中的[Apache ActiveMQ Artemis](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework#apache-activemq-artemis-stomp)。
+  通过简单文本导向消息协议(STOMP)增加了对ActiveMQ Artemis开源消息代理的支持。 它提供了可靠且可扩展的报文传送系统，为基于STOMP的集成提供了灵活性。 请参阅&#x200B;*Commerce配置指南*&#x200B;中的[Apache ActiveMQ Artemis](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework#apache-activemq-artemis-stomp)。
 
 ## 签出页面无法加载static.min.js和mixins.min.js {#checkout-page-fails-to-load-static-min-js-and-mixins-min-js}
 
@@ -122,4 +122,4 @@ ht-degree: 0%
 
 **修补程序**：
 
-提供了修补程序。 请参阅知识库中的[启用JS缩小和捆绑时，签出失败](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997)以了解修补程序详细信息。
+提供了修补程序。 请参阅知识库中的[启用JS缩小和捆绑时，签出失败](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27997)以了解修补程序详细信息。

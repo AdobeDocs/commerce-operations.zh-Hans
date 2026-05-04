@@ -20,7 +20,7 @@ ht-degree: 0%
 - 主题（更改店面和管理员的外观）
 - 语言包（将店面和管理员本地化）
 
-本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
+本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/extensions)。
 
 您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
 
