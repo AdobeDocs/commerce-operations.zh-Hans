@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: f78520918618a750cdca062a0543eb4821dfc525
+source-git-commit: 371cca36da675d8b9ad8e7b0281e48a3067073e2
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.78中提供的修补程序所修复的问题。
 
 QPT v1.1.78包含以下修补程序：
+1. **ACP2E-4416**：修复了在管理员中创建客户奖励点时未初始化的问题。
+1. **ACP2E-4419**：修复了在店面成功进行reCAPTCHA v2（“我不是机器人”）验证后，礼品卡在结账时未正确应用的问题。
+1. **ACP2E-4431**：修复了在重新索引过程中删除与目标规则匹配的相关产品的问题。
+1. **[ACP2E-4448](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4448.md)**：修复了在Redis中断期间所做的配置更改在Redis恢复后未反映出来，从而导致保留过时值的问题。
 1. **[ACP2E-4416](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4416.md)**：修复了在管理员中创建客户奖励点时未初始化的问题。
 1. **[ACP2E-4431](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4431.md)**：修复了在重新索引过程中删除与目标规则匹配的[!UICONTROL Related Products]的问题。
 1. **[ACP2E-4419](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4419.md)**：修复了在店面成功进行reCAPTCHA v2（“我不是机器人”）验证后，礼品卡在结账时未正确应用的问题。

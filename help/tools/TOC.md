@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: f78520918618a750cdca062a0543eb4821dfc525
+source-git-commit: 371cca36da675d8b9ad8e7b0281e48a3067073e2
 workflow-type: tm+mt
-source-wordcount: '9806'
+source-wordcount: '9820'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
    - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
@@ -895,8 +895,8 @@ ht-degree: 0%
          - [ACSD-67603：启用图像包含功能的产品，其Sitemap生成过程将需要较长的处理时间](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67603.md)
          - [ACSD-67093：使用日期范围筛选器通过GraphQL检索订单时，会返回错误结果](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67093.md)
          - [ACSD-67652：在GraphQL调用中将捆绑产品状态返回为缺货，并且子产品和父产品有库存](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67652.md)
-         - [ACSD-60624：上传 [!DNL Page Builder]中图像、横幅和滑块部分中的空内容图像失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-60624.md)
-         - [ACSD-67904：如果城市名称包含数字(0-9)、&amp;符号(&amp;)、句点(.)或圆括号()，则无法下达订单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67904.md)
+         - [ACSD-60624：上传 [!DNL Page Builder]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-60624.md)中图像、横幅和滑块部分中的空内容图像失败
+         - [ACSD-67904：如果城市名称包含数字(0-9)、&amp;符号(&amp;)、句点(.)或圆括号()](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67904.md)，则无法下达订单
          - [ACSD-67459：无法导入描述长度超过65,536个字符的产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67459.md)
       - v1.1.72 {#v1-1-72}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.72](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/overview.md)
@@ -972,6 +972,7 @@ ht-degree: 0%
          - [ACSD-68341：在PDP加载时出现多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
       - v1.1.78 {#v1-1-78}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
+         - [ACP2E-4448：在 [!DNL Redis] 次中断期间所做的配置更改在 [!DNL Redis] 次恢复后不会反映出来，并且过时的值会保留](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4448.md)
          - [ACP2E-4665：通过REST API请求时，产品库中带有视频的可配置产品的子产品不会显示](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4665.md)
          - [ACP2E-4613：大型媒体目录导致媒体集目录树的加载延迟](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4613.md)
          - [ACP2E-4609：当某些引号包含已删除的产品时，[!UICONTROL My Quotes]页不显示引号](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4609.md)
@@ -1004,7 +1005,7 @@ ht-degree: 0%
    - [“警报”选项卡](observation-for-adobe-commerce/alerts-tab.md)
    - [WAF选项卡](observation-for-adobe-commerce/waf-tab.md)
    - [CDN选项卡](observation-for-adobe-commerce/cdn-tab.md)
-   - [&#x200B; [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [ [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Cron选项卡](observation-for-adobe-commerce/cron-tab.md)
    - [索引选项卡](observation-for-adobe-commerce/indexing-tab.md)
    - [QuickView选项卡](observation-for-adobe-commerce/oac-quickview-tab.md)
@@ -1032,6 +1033,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
