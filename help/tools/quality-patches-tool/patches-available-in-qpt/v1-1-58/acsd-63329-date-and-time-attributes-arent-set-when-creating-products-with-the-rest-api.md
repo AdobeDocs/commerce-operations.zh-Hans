@@ -36,7 +36,7 @@ ACSD-63329修补程序修复了在使用REST API创建新产品时，没有为�
 
 <u>重现步骤</u>：
 
-1. 创建&#x200B;**[!UICONTROL Product]**&#x200B;特性，将其默认值设置为`12/31/2020`，并将&#x200B;**[!UICONTROL Catalog Input Type for Store Owner]**&#x200B;设置为&#x200B;***[!UICONTROL Date]***&#x200B;或***[!UICONTROL Date and Time]***。
+1. 创建&#x200B;**[!UICONTROL Product]**&#x200B;特性，将其默认值设置为`12/31/2020`，并将&#x200B;**[!UICONTROL Catalog Input Type for Store Owner]**&#x200B;设置为&#x200B;***[!UICONTROL Date]***&#x200B;或&#x200B;***[!UICONTROL Date and Time]***。
 1. 创建另一个文本类型属性，并将默认值设置为&#x200B;***测试值***。
 1. 使用对`/rest/all/V1/products/`的REST API POST请求创建新产品。
 

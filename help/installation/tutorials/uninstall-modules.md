@@ -32,7 +32,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 1. 验证指定的模块是否存在于代码库中，以及是否由Composer安装的包。
 
-   此命令只对定义为Composer包的模块起作用&#x200B;_1}。_
+   此命令只对定义为Composer包的模块起作用&#x200B;_1&rbrace;。_
 
 1. 检查与其他模块的依赖关系，如果存在任何未满足的依赖关系，则终止该命令。
 

@@ -173,7 +173,7 @@ Server built: <build-date>
 
 1. 在[系统要求](../../system-requirements.md)中，确认安装的版本与Adobe Commerce版本支持的版本匹配。
 
-1. 为Ubuntu](#enable-rewrites-and-htaccess-for-ubuntu)启用[重写和`.htaccess`。
+1. 为Ubuntu[&#128279;](#enable-rewrites-and-htaccess-for-ubuntu)启用重写和`.htaccess`。
 
 ### 为Ubuntu启用重写和.htaccess
 

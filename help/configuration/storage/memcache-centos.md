@@ -21,11 +21,11 @@ ht-degree: 0%
 由于PHP对memcache没有本机支持，因此您必须安装扩展以便PHP使用它。 有两个可用的PHP扩展，请务必解码要使用哪个PHP扩展：
 
 - `memcache` (_no d_) — 不是定期维护的较旧但常用的扩展。
-当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache](https://www.php.net/manual/en/book.memcache.php)的[PHP文档。
+当前`memcache`扩展&#x200B;_不适用于PHP 7。_&#x200B;请参阅有关memcache[&#128279;](https://www.php.net/manual/en/book.memcache.php)的PHP文档。
 
   对于CentOS，确切名称为`php-pecl-memcache`。
 
-- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached](https://www.php.net/manual/en/book.memcached.php)的[PHP文档。
+- `memcached` （_带`d`_） — 与PHP 7兼容的更新和维护的扩展。 请参阅有关memcached[&#128279;](https://www.php.net/manual/en/book.memcached.php)的PHP文档。
 
   对于CentOS，确切名称为`php-pecl-memcached`。
 
