@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 371cca36da675d8b9ad8e7b0281e48a3067073e2
+source-git-commit: 4c95c5a6c60ff701e81a3d58cbcd587810322a24
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,12 @@ QPT v1.1.78包含以下修补程序：
 1. **ACP2E-4416**：修复了在管理员中创建客户奖励点时未初始化的问题。
 1. **ACP2E-4419**：修复了在店面成功进行reCAPTCHA v2（“我不是机器人”）验证后，礼品卡在结账时未正确应用的问题。
 1. **ACP2E-4431**：修复了在重新索引过程中删除与目标规则匹配的相关产品的问题。
+1. **ACP2E-4448**：修复了在Redis中断期间所做的配置更改在Redis恢复后未反映出来，从而导致保留过时值的问题。
+1. **[ACP2E-4452](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4452.md)**：修复了[!UICONTROL Quick Order]页面上的产品价格包含税的问题，无论显示税配置如何。
+1. **ACP2E-4456**：修复了使用GraphQL突变取消订单时无法将完全使用礼品卡支付的订单转换为“已关闭”状态的问题。
+1. **ACP2E-4507**：修复了密码选项配置未应用于通过GraphQL突变进行的客户密码重置请求的问题。
+1. **ACP2E-4513**：修复了未从系统中删除过期验证码图像的问题。
+1. **ACP2E-4522**：修复了在同时运行多个购物车合并或报价保存请求时，quote_coupons表发生间歇性重复键错误的问题。
 1. **[ACP2E-4448](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4448.md)**：修复了在Redis中断期间所做的配置更改在Redis恢复后未反映出来，从而导致保留过时值的问题。
 1. **[ACP2E-4416](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4416.md)**：修复了在管理员中创建客户奖励点时未初始化的问题。
 1. **[ACP2E-4431](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4431.md)**：修复了在重新索引过程中删除与目标规则匹配的[!UICONTROL Related Products]的问题。
