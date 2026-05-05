@@ -218,8 +218,8 @@ ht-degree: 0%
 
 ### 相关主题
 
-* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview)
-* [Adobe Commerce安装指南](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview)
+* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/overview)
+* [Adobe Commerce安装指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/overview)
 * [CAPS介绍](intro.md)
 * [如何访问](access.md)
 * [工作流](workflow.md)
