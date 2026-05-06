@@ -1,6 +1,6 @@
 ---
 title: ACSD-63574：将[!UICONTROL Bundle Product]列表添加到via [!DNL Page Builder] 的块会导致错误
-description: '应用ACSD-63574修补程序以修复Adobe Commerce问题，该问题导致通过{1**向块添加带有“复选框”或“多选”选项的**[!UICONTROL Bundle Product]会导致错误。 [!DNL Page Builder] '
+description: '应用ACSD-63574修补程序以修复Adobe Commerce问题，该问题导致通过&lbrace;1**向块添加带有“复选框”或“多选”选项的**[!UICONTROL Bundle Product]会导致错误。 [!DNL Page Builder] '
 feature: Page Builder, Page Content
 role: Admin, Developer
 exl-id: bb56c0c2-e094-4173-8260-da154df79748
