@@ -36,7 +36,8 @@ Adobe Commerce（所有部署方法） 2.4.4 - 2.4.4-p11
 
     ```yaml
     report.CRITICAL： PDOException： SQLSTATE[42S02]：未找到基表或视图： 1146表`db_name.catalog_product_index_price_cg0_ws0`在/home/vendor/magento/framework/DB/Statement/Pdo/Mysql.php：90
-    ``&#39;
+    ```
+
 中不存在
 <u>重现步骤</u>：
 
