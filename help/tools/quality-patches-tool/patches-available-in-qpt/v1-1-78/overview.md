@@ -4,9 +4,9 @@ description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 88d68b8ad28dfe044808a304d947bde4f5dfb054
+source-git-commit: fcc363df787b5d2f35e8109481d0f9d94c6da9e7
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,11 @@ QPT v1.1.78包含以下修补程序：
 1. **ACP2E-4540**：修复了Fotorama库未正确加载，导致仅显示附加的第一个图像的问题。
 1. **ACP2E-4555**：修复了包含“。”的现代电话号码的问题。 或“/”未正确验证。
 1. **ACP2E-4565**：修复了在使用X-Adobe-Company标头时，GraphQL公司查询返回“当前客户未获得授权”的问题。
-1. **ACP2E-4591**：修复了基于“首次购买者”等订单计数的客户区段在通过REST API下订单时未更新的问题。
+1. **[ACP2E-4591](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4591.md)**：修复了基于“首次购买者”等订单计数的客户区段在通过REST API下订单时未更新的问题。
 1. **[ACP2E-4540](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4540.md)**：修复了Fotorama库未正确加载，导致仅显示附加的第一个图像的问题。
 1. **[ACP2E-4555](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4555.md)**：修复了包含“。”的现代电话号码的问题。 或“/”未正确验证。
 1. **[ACP2E-4565](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4565.md)**：修复了在使用X-Adobe-Company标头时，GraphQL公司查询返回“当前客户未获得授权”的问题。
-1. **ACP2E-4591**：修复了基于“首次购买者”等订单计数的客户区段在通过REST API下订单时未更新的问题。
 1. **[ACP2E-4609](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4609.md)**：修复了当某些引号包含已删除的产品时，“我的引号”页面不显示引号的问题。
-1. **ACP2E-4591**：修复了基于“首次购买者”等订单计数的客户区段在通过REST API下订单时未更新的问题。
 1. **ACP2E-4609**：修复了当某些引号包含已删除的产品时，“我的引号”页面不显示引号的问题。
 1. **[ACP2E-4613](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4613.md)**：修复了大型媒体目录结构导致gettree响应缓慢，从而导致&#x200B;**[!UICONTROL Media Gallery]**&#x200B;目录树的加载时间延长的问题。
 1. **ACP2E-4628**：修复了将“帐户共享”设置为“全局”时，导入具有大写电子邮件地址的客户会导致未定义数组键值错误的问题。
