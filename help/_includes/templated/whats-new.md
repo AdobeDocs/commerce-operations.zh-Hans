@@ -23,7 +23,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4665">ACP2E-4665的QPT 1.1.78修复的详细说明：通过REST API</a>请求时，产品库中带有视频的可配置产品的子产品不会显示。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4665">ACP2E-4665的QPT 1.1.78修复的详细说明：通过REST API</a>请求时，产品库中带有视频的可配置产品的子产品不会显示。</p>
 </td>
       <td>
         新主题qpt
@@ -45,7 +45,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4613">ACP2E-4613的QPT 1.1.78修复的详细说明：大型媒体目录结构缓慢的gettree响应和延迟媒体集目录树加载</a>。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4613">ACP2E-4613的QPT 1.1.78修复的详细说明：大型媒体目录结构缓慢的gettree响应和延迟媒体集目录树加载</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -67,7 +67,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4535">ACP2E-4535的QPT 1.1.78修复的详细说明：提交忘记密码表单会破坏或重新生成会话（PHPSESSID更改）并清除来宾购物车</a>。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4535">ACP2E-4535的QPT 1.1.78修复的详细说明：提交忘记密码表单会破坏或重新生成会话（PHPSESSID更改）并清除来宾购物车</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -75,7 +75,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/953e231d2161d84e2444fa46ac95b93dbba28241">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4507">ACP2E-4507的QPT 1.1.78修复的详细说明：“密码选项”配置不适用于通过GraphQL变动</a>发出的客户密码重置请求。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4507">ACP2E-4507的QPT 1.1.78修复的详细说明：“密码选项”配置不适用于通过GraphQL变动</a>发出的客户密码重置请求。</p>
 </td>
       <td>
         新主题qpt
@@ -83,7 +83,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b657f2e50d48c9179d1c6b3559ee7e6ee99b306d">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4609">ACP2E-4609的QPT 1.1.78修复程序的详细说明：当某些引号包含已删除的产品</a>时，“我的引号”页面不显示任何引号。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4609">ACP2E-4609的QPT 1.1.78修复程序的详细说明：当某些引号包含已删除的产品</a>时，“我的引号”页面不显示任何引号。</p>
 </td>
       <td>
         新主题qpt
@@ -91,7 +91,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/670dacfa2bdc211eb9f4ed6788144ba6c1dac678">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4431">ACP2E-4431的QPT 1.1.78修复的详细说明：在重新索引进程</a>期间已删除与目标规则匹配的相关产品。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4431">ACP2E-4431的QPT 1.1.78修复的详细说明：在重新索引进程</a>期间已删除与目标规则匹配的相关产品。</p>
 </td>
       <td>
         新主题qpt
@@ -99,7 +99,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f9424da66669c54eb0a794555ea7df66625f6c71">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4416">ACP2E-4416的QPT 1.1.78修复程序的详细说明：在Admin</a>中创建客户奖励点时不会初始化。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4416">ACP2E-4416的QPT 1.1.78修复程序的详细说明：在Admin</a>中创建客户奖励点时不会初始化。</p>
 </td>
       <td>
         新主题qpt
