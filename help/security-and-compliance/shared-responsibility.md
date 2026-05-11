@@ -1,106 +1,116 @@
 ---
-title: 分担责任的安全性和运营模式
+title: 共享责任安全和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 4e5477a247b272dc17863a84bd3b9a55bf36d688
 workflow-type: tm+mt
-source-wordcount: '2939'
+source-wordcount: '3227'
 ht-degree: 0%
 
 ---
 
 # 分担责任的安全性和运营模式
 
-云基础架构上的Adobe Commerce是一项基于平台即服务(PaaS)的服务，它依赖于分担责任的安全性和运营模式。 这些责任在Adobe、商家、云服务提供商和内容交付网络(CDN)提供商之间分担。 各方对保护和运行Adobe Commerce应用程序以及部署在云基础架构上的特定于商家的代码和扩展承担不同的责任。
+云基础架构上的Adobe Commerce是一项基于平台即服务(PaaS)的服务，它依赖于分担责任的安全性和运营模式。 Adobe、商家、云服务提供商和内容交付网络(CDN)提供商共同承担这些责任。 各方对保护和运行Adobe Commerce应用程序以及部署在云基础架构上的特定于商家的代码和扩展承担不同的责任。
 
-此共享模型使商家能够设计和实施高度灵活、可定制和可扩展的解决方案，以满足其业务需求，同时最大限度地降低运营责任和成本。
+此共享模型使商家能够设计和实施灵活、可定制和可扩展的解决方案，在满足其业务需求的同时最大限度地降低运营责任和成本。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3458392/?learn=on&enablevpops)
 
-通常，Adobe负责以下工作：
+Adobe负责以下工作：
 
-- 开发和维护安全的核心应用程序代码
-- 维护平台的安全性
-- 确保该平台符合SOC 2和PCI标准，并与PCI标准的技术组件（例如PHP、Redis）兼容
-- 响应与核心平台有关的安全问题
-- 与云服务提供商和CDN合作伙伴合作，解决出现的任何问题
+* 开发和维护安全的核心应用程序代码
+* 维护平台的安全性
+* 确保该平台符合SOC 2和PCI标准，并与PCI标准的技术组件（例如PHP、Redis）兼容
+* 响应与核心平台有关的安全问题
+* 与云服务提供商和CDN合作伙伴合作，解决出现的任何问题
 
 商家负责以下事项：
 
-- 维护自定义代码以及与第三方应用程序集成的安全性
-- 确保安全的应用程序开发
-- 如果商户的支付处理器要求，则获取PCI认证
-- 响应和响应安全事件
+* 维护自定义代码以及与第三方应用程序集成的安全性
+* 确保安全的应用程序开发
+* 如果商户的支付处理器要求，则获取PCI认证
+* 响应和响应安全事件
+* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability)。
+
+{{supported-versions-only}}
 
 ## Adobe职责
 
-Adobe负责云基础架构环境以及核心解决方案代码上的Adobe Commerce的安全性和可用性。 此外，Adobe还负责必要的活动和机制来维护Adobe Commerce在云基础架构解决方案中的安全性，包括：
+Adobe负责云基础架构环境以及核心解决方案代码上的Adobe Commerce的安全性和可用性。 Adobe还执行各种活动来维护Adobe Commerce on cloud infrastructure解决方案的安全性，包括：
 
-- 在云基础架构上为Adobe Commerce支持的应用程序（如云数据存储和搜索功能）应用服务器级安全性和修补程序
-- 对云基础架构代码的核心Adobe Commerce进行渗透测试和扫描
-- 对公共云服务提供商的身份和访问管理(IAM)解决方案和权限管理（PCI合规性要求）进行半年一次的审查和审核
-- 对授权用户（包括Adobe员工和承包商）进行半年一次的审查和审核（PCI合规性要求）
-- 对备份和恢复功能进行年度测试和文档记录
-- 配置服务器和外围防火墙
-- 在云基础架构存储库上连接和配置Adobe Commerce
-- 定义、测试、实施和记录Adobe职责范围内各领域的灾难恢复(DR)计划
-- 定义全球平台Web应用程序防火墙(WAF)规则
-- 加强操作系统(OS)
-- 在云基础架构上实施并维护内容分发网络(CDN)和应用程序性能管理(APM)解决方案与Adobe Commerce的集成
-- 对云基础架构代码的核心Adobe Commerce发布定期安全更新和其他更新（应用修补程序是商家的责任）
-- 管理商家支持和支持访问控制（例如Zendesk）
-- 监控、记录和修复与云基础架构平台基础架构上的Adobe Commerce有关的安全事件
-- 监控平台操作，并在云基础架构商户上为Adobe Commerce提供全天候支持
-- 配置生产和暂存环境
-- 评估对平台操作和基础架构的潜在安全威胁
-- 扩展计算、存储、网格和其他资源，如与商户的服务级别协议(SLA)中所述
-- 设置DNS（仅限云基础架构平台基础架构上的Adobe Commerce）
-- 测试平台的安全漏洞
+* 在云基础架构上为Adobe Commerce支持的应用程序（如云数据存储和搜索功能）应用服务器级安全性和修补程序
+* 对云基础架构代码的核心Adobe Commerce进行渗透测试和扫描
+* 对公共云服务提供商的身份和访问管理(IAM)解决方案和权限管理（PCI合规性要求）进行半年一次的审查和审核
+* 对授权用户（包括Adobe员工和承包商）进行半年一次的审查和审核（PCI合规性要求）
+* 对备份和恢复功能进行年度测试和文档记录
+* 配置服务器和外围防火墙
+* 在云基础架构存储库上连接和配置Adobe Commerce
+* 定义、测试、实施和记录Adobe职责范围内各领域的灾难恢复(DR)计划
+* 定义全球平台Web应用程序防火墙(WAF)规则
+* 加强操作系统(OS)
+* 在云基础架构上实施并维护内容分发网络(CDN)和应用程序性能管理(APM)解决方案与Adobe Commerce的集成
+* 对云基础架构代码的核心Adobe Commerce发布定期安全更新和其他更新（应用修补程序是商家的责任）
+* 管理商家支持和支持访问控制（例如，Experience League支持）
+* 监控、记录和修复与云基础架构平台基础架构上的Adobe Commerce有关的安全事件
+* 监控平台操作，并在云基础架构商户上为Adobe Commerce提供全天候支持
+* 配置生产和暂存环境
+* 评估对平台操作和基础架构的潜在安全威胁
+* 扩展计算、存储、网格和其他资源，如与商户的服务级别协议(SLA)中所述
+* 设置DNS（仅限云基础架构平台基础架构上的Adobe Commerce）
+* 测试平台的安全漏洞
 
-Adobe维护用于Adobe Commerce解决方案的基础架构和服务的PCI认证。  商家负责遵守自定义代码、系统和网络流程以及组织。
+Adobe维护用于Adobe Commerce解决方案的基础架构和服务的PCI认证。 商家负责遵守其自定义代码、系统和网络流程以及组织。
 
 Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
 
 ## 商户责任
 
-该商家负责为其云基础架构解决方案上的Adobe Commerce的特定自定义实例遵循以下安全最佳实践：
+该商家负责为其自定义的Adobe Commerce on cloud infrastructure解决方案实例遵循以下安全最佳实践：
 
-- 将云基础架构配置文件上必需的Adobe Commerce添加到存储库
-- 在Adobe发布其自定义云基础架构Adobe Commerce解决方案后，立即将其安全修补程序和其他修补程序应用到这些解决方案
-- 在供应商发布安全修补程序和其他修补程序后，立即将其应用于所有自定义扩展和代码
-- 创建、部署和测试自定义清漆VCL文件
-- 在云基础架构解决方案上设计、设置主题、安装、集成和保护自定义的Adobe Commerce，包括所有自定义扩展和代码
-- 授予和撤销用户对商家Adobe Commerce实例的云基础架构配置、应用程序和平台的访问权限
-- 处理与商户的内部网络、服务器、基础架构以及基于Adobe Commerce在云基础架构平台上构建的任何自定义应用程序相关的安全问题
-- 在云基础架构上安装Adobe Commerce命令行集成(CLI)工具
-- 按照PCI-DSS准则的定义，保持定制应用程序和其他内部过程所需的PCI合规性级别
+* 将云基础架构配置文件上必需的Adobe Commerce添加到存储库
+* 在Adobe发布其自定义云基础架构Adobe Commerce解决方案后，立即将其安全修补程序和其他修补程序应用到这些解决方案
+* 供应商发布安全修补程序和其他修补程序后，立即将其应用到所有自定义扩展和代码
+* 创建、部署和测试自定义清漆VCL文件
+* 在云基础架构解决方案上设计、设置主题、安装、集成和保护自定义的Adobe Commerce，包括所有自定义扩展和代码
+* 授予和撤销用户对商家Adobe Commerce实例的云基础架构配置、应用程序和平台的访问权限
+* 处理与商户的内部网络、服务器、基础架构以及基于Adobe Commerce在云基础架构平台上构建的任何自定义应用程序相关的安全问题
+* 在云基础架构上安装Adobe Commerce命令行集成(CLI)工具
+* 按照PCI-DSS准则的定义，保持定制应用程序和其他内部过程所需的PCI合规性级别
 
   >[!NOTE]
   >
   >为了最大程度地减少必须审查的方面，商家的PCI合规性建立在Adobe Commerce和云托管提供商的PCI认证之上。
 
-- 在云基础架构代码和平台上的核心Adobe Commerce中运行PCI ASV扫描并修复问题
-- 监控所有可能显示潜在安全威胁的应用程序活动，包括渗透测试、漏洞扫描和日志
-- 在云基础架构解决方案和用户帐户上监控和响应安全事件，包括与商家Adobe Commerce相关的鉴证、补救和报告
-- 获取DNS提供商并配置和维护任何特定于商家的DNS记录
-- 在自定义应用程序上运行性能测试
-- 保护对平台帐户的访问、实例访问和应用程序的安全
-- 测试和QA自定义应用程序
-- 维护商家连接到Adobe Commerce上的云基础架构应用程序上的任何系统或网络的安全
+* 在云基础架构代码和平台上的核心Adobe Commerce中运行PCI ASV扫描并修复问题
+* 监控所有可能显示潜在安全威胁的应用程序活动，包括渗透测试、漏洞扫描和日志
+* 在云基础架构解决方案和用户帐户上监控和响应安全事件，包括与商家Adobe Commerce相关的鉴证、补救和报告
+* 获取DNS提供商并配置和维护任何特定于商家的DNS记录
+* 在自定义应用程序上运行性能测试
+* 保护对平台帐户的访问、实例访问和应用程序的安全
+* 测试和QA自定义应用程序
+* 维护商家连接到Adobe Commerce上的云基础架构应用程序上的任何系统或网络的安全
+* 在各自供应商或Adobe积极支持的版本上维护所有平台服务、第三方依赖项和Adobe Commerce服务扩展。 这包括：
 
-## Cloud Service提供商职责
+   * 基础结构服务，如数据库、高速缓存、搜索、PHP运行时和Web服务器
+   * Adobe Commerce Services扩展
+   * 所有第三方扩展和自定义集成
 
-Adobe依靠成熟的云服务提供商在云基础架构上托管Adobe Commerce的云服务器基础架构。 这些提供商负责网络安全，包括通过防火墙系统和入侵检测系统(IDS)的路由、交换和外围网络安全。 云服务提供商还负责在云基础架构解决方案上托管Adobe Commerce的数据中心的物理安全以及数据中心的环境安全。
+  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability)。
+
+## 云服务提供商责任
+
+Adobe依靠云服务提供商在云基础架构上为Adobe Commerce托管云服务器基础架构。 这些提供商负责网络安全，包括通过防火墙系统和入侵检测系统(IDS)的路由、交换和外围网络安全。 云服务提供商还负责在云基础架构解决方案上托管Adobe Commerce的数据中心的物理和环境安全。
 
 云服务提供商还负责：
 
-- 为其云服务维护PCI DSS、SOC 2和ISO 27001认证
-- 保护虚拟机管理程序
-- 保护数据中心（包括物理和网络访问）
+* 为其云服务维护PCI DSS、SOC 2和ISO 27001认证
+* 保护虚拟机管理程序
+* 保护数据中心（包括物理和网络访问）
 
 ## CDN提供商责任
 
-Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页面加载时间、缓存内容并立即清除过时的内容。 这些提供商还负责与其CDN直接相关或影响其CDN的安全问题，以及定义和维护CDN WAF规则。
+Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页面加载时间、缓存内容并立即清除过时的内容。 这些提供商还负责影响其CDN的安全问题，以及定义和维护CDN WAF规则。
 
 ## 安全责任摘要
 
@@ -484,7 +494,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
   </tr>
   <tr>
-    <td>在云基础架构上管理Adobe Commerce的IAMand权限</td>
+    <td>在云基础架构上管理Adobe Commerce的IAM和权限</td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -518,14 +528,21 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td>在积极支持的版本（包括但不限于基础设施服务、SaaS Commerce插件和第三方扩展）上维护所有平台服务、第三方依赖项和Commerce服务扩展</td>
+    <td>I</td>
+    <td>R</td>
+    <td></td>
+    <td></td>
+  </tr>
 </tbody>
 <tfoot>
   <tr>
     <td colspan="5">
-      <p><sup><strong>1</strong></sup>仅当云基础架构存储库上的Adobe Commerce用作主存储库时。 使用其他外部存储库由商家全权负责。</p>
-      <p><sup><strong>2</strong></sup> Adobe为CDN提供商的问题提供级别1支持。</p>
-      <p><sup><strong>3</strong></sup>商家负责为其应用程序配置的任何Ngnix控件。</p>
-      <p><sup><strong>4</strong></sup>对于PCI，渗透测试要求在Adobe和商家之间共享。</p>
+      <p><sup>1</sup>仅当云基础架构存储库上的Adobe Commerce用作主存储库时。 使用其他外部存储库由商家全权负责。</p>
+      <p><sup>2</sup> Adobe为CDN提供商的问题提供级别1支持。</p>
+      <p><sup>3</sup>商家负责为其应用程序配置的任何Nginx控件。</p>
+      <p><sup>4</sup>对于PCI，渗透测试要求在Adobe和商家之间共享。</p>
     </td>
   </tr>
 </tfoot>
@@ -629,7 +646,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 核心应用程序调整和优化 | R |   |
 | 自定义代码调整和优化 |     | R |
 | 自定义Adobe Commerce代码 |     | R |
-| 加载测试 |     | R |
+| 负载测试 |     | R |
 | 性能测试 |     | R |
 
 {style="table-layout:auto"}
@@ -640,10 +657,10 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | 旋转日志 | R |   |
-| 自定义Adobe Commerce应用程序 | | R |
+| 自定义Adobe Commerce应用程序 |   | R |
 | New Relic服务的可用性：<br>APM应用程序和代理集成、基础结构应用程序、<br>日志记录和集成 | R |   |
 | 设置New Relic警报 |     | R |
-| 在PaaS服务器上部署New Relic代理 | R |  |
+| 在PaaS服务器上部署New Relic代理 | R |   |
 
 {style="table-layout:auto"}
 
@@ -696,6 +713,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 默认PHP设置的配置 | R |     |
 | 自定义PHP设置的配置 |     | R |
 | 配置YAML文件，以使PHP版本与已安装的Adobe Commerce版本兼容 |    | R |
+| 商家必须在支持的版本上维护PHP。 在不受支持的版本上进行的部署不符合Adobe支持的条件，并且可能包含未修补的安全漏洞。 |     | R |
 
 {style="table-layout:auto"}
 
@@ -704,13 +722,14 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | Galera和MariaDB服务的可用性 | R | |
-| 正在维护默认数据库设置<br><br>（索引和优化核心表，优化默认sys-admin设置） | R |   |
+| 正在维护默认数据库设置<br><br>（索引和优化核心表，优化默认系统管理设置） | R |   |
 | 持续维护商家数据和修改的设置<br><br>（配置规范化表与平面表、索引和优化自定义表和第三方表、存档或删除数据、配置系统管理设置） |     | R |
 | Galera和MySQL的配置 | R |   |
 | Galera和MariaDB的持续质量和修补 | R |   |
 | 持续的基础架构优化 | R |   |
 | 识别和修复慢查询 |     | R |
 | 提交服务请求以安装与安装的Adobe Commerce版本兼容的MariaDB版本 |     | R |
+| 商家必须在支持的版本上维护MariaDB。 在不受支持的版本上进行的部署不符合Adobe支持的条件，并且可能包含未修补的安全漏洞。 |     | R |
 | 设置和维护特定于商家的数据保留策略（Adobe的数据保留策略在商家协议中定义） |     | R |
 
 {style="table-layout:auto"}
@@ -720,11 +739,11 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | CDN的可用性和质量 | R |   |
-| Fastly服务配置（通过扩展/API） |     | R |
+| Fastly服务配置（通过扩展或API） |     | R |
 | Fastly扩展质量 | R |   |
-| Fastly集成VCL片段（与Fastly扩展捆绑在一起）的质量 | R |   |
+| Fastly集成VCL片段的质量（与Fastly扩展捆绑在一起） | R |   |
 | 页面缓存优化 |     | R |
-| 将域添加到服务、CDN和基础架构 | R |   |
+| 向服务、CDN和基础架构添加域 | R |   |
 | 自定义VCL代码片段 |     | R |
 | WAF和WAF规则 | R |   |
 
@@ -738,6 +757,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 默认Redis设置的配置 | R |   |
 | Redis的持续质量和修补 | R |   |
 | 提交服务请求以安装与已安装的Adobe Commerce版本兼容的Redis版本 |     | R |
+| 商家必须在支持的版本上维护红色。 在不受支持的版本上进行的部署不符合Adobe支持的条件，并且可能包含未修补的安全漏洞。 |     | R |
 
 {style="table-layout:auto"}
 
@@ -745,9 +765,10 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| Elasticsearch或OpenSearch的可用性 | R |   |
-| 默认Elasticsearch或OpenSearch设置的配置 | R |   |
-| 提交服务请求以安装与安装的Elasticsearch版本兼容的Adobe Commerce或OpenSearch版本 |  | R |
+| OpenSearch | R |   |
+| 默认OpenSearch设置的配置 | R |   |
+| 提交服务请求以安装与已安装的Adobe Commerce版本兼容的OpenSearch版本 |   | R |
+| 商家必须在支持的版本上维护OpenSearch。 不受支持的版本上的部署&#x200B;_不符合Adobe支持的条件_，并且可能包含未修补的安全漏洞。 |     | R |
 
 {style="table-layout:auto"}
 
@@ -757,7 +778,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | --- | --- | --- |
 | SendGrid电子邮件服务的可用性及其集成 | R |   |
 | 根据限制监控商家的SendGrid使用情况 | R |   |
-| 商家只负责将服务用于传出事务性电子邮件<br>该服务不支持发送营销电子邮件。 |     | R |
+| 仅将服务用于传出事务性电子邮件。 该服务不支持发送营销电子邮件。 |     | R |
 | 配置可选的第三方电子邮件服务 |     | R |
 
 {style="table-layout:auto"}
@@ -793,11 +814,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 {style="table-layout:auto"}
 
->[!NOTE]
->
->商家必须使用最新版本的Live Search、产品推荐和支付服务，以确保最高的稳定性、功能和最符合支持资格。
->Adobe不支持过时的版本，升级可确保您从最新的增强功能和错误修复中受益。
->有关受支持版本的详细信息，请参阅[Commerce服务的产品可用性矩阵](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability#commerce-services)。
+{{supported-versions-only}}
 
 #### 产品推荐
 
@@ -805,6 +822,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | --- | --- | --- |
 | 产品推荐服务的可用性 | R |   |
 | 升级“产品推荐”模块 |   | R |
+| 仅支持产品推荐的最新发布版本。 每次放行后，商家必须迅速升级。 |     | R |
 
 {style="table-layout:auto"}
 
@@ -814,10 +832,13 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | --- | --- | --- |
 | 实时搜索服务的可用性 | R |   |
 | 升级Live Search模块 |   | R |
+| 仅支持最新发行版的Live Search。 每次放行后，商家必须迅速升级。 |     | R |
 
 {style="table-layout:auto"}
 
-#### 店面活动（数据收集）的质量，可加强产品推荐和实时搜索输出
+#### 店面事件数据质量
+
+店面活动收藏集提高了产品推荐和实时搜索输出的质量。 责任取决于店面实施：
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
@@ -825,8 +846,8 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 自定义主题 |  | R |
 | 核心PWA实施 | R |   |
 | 自定义PWA实施 |  | R |
-| 核心AEM EDS实施（Commerce样板） | R |   |
-| 自定义AEM EDS实施 |  | R |
+| 核心Edge Delivery Services实施（Commerce样板） | R |   |
+| 自定义Edge Delivery Services实施 |   | R |
 | 任何其他自定义店面实施 |  | R |
 
 {style="table-layout:auto"}
@@ -837,6 +858,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | --- | --- | --- |
 | 支付服务的可用性 | R |   |
 | 升级支付模块 |   | R |
+| 仅支持最新发布的支付服务版本。 每次放行后，商家必须迅速升级。 |     | R |
 
 {style="table-layout:auto"}
 
@@ -846,7 +868,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| 映像优化的可用性和质量 | R |  |
+| 映像优化的可用性和质量 | R |   |
 | 图像优化的配置 |     | R |
 
 {style="table-layout:auto"}
@@ -855,9 +877,9 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| SSL专用证书 — 到期 | R |  |
-| 配置SSL证书 | R |  |
-| 购买和维护特定于EV的SSL证书（提供的默认证书除外）并提供给Adobe |     | R |
+| 专用SSL证书到期 | R |   |
+| 设置SSL证书 | R |   |
+| 购买并维护EV或其他特定SSL证书（提供的默认证书除外）并将它们提供给Adobe |     | R |
 
 {style="table-layout:auto"}
 
@@ -865,27 +887,27 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| WAF的可用性和配置 | R |  |
-| 解决WAF规则误报 | R | |
+| WAF的可用性和配置 | R |   |
+| 解决WAF规则误报 | R |   |
 | 报告WAF规则误报 |     | R |
 | WAF规则调整（不支持） |     |     |
-| WAF/CDN日志 |     | R |
+| WAF和CDN日志 |     | R |
 
 {style="table-layout:auto"}
 
-#### DDOS
+#### Dos
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
 | 主动IP阻止 |     | R |
 | 机器人保护 |     | R |
-| DDOS检测 — 第3-4层 | R |   |
-| DDOS检测 — 第7层 |     | R |
-| DDOS响应 | R |   |
+| DDoS检测 — 第3-4层 | R |   |
+| DDoS检测 — 第7层 |     | R |
+| Dsos响应 | R |   |
 
 {style="table-layout:auto"}
 
-#### 专用链接
+#### Privatelink
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
@@ -894,7 +916,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | SSH（非专用链接）的可用性 | R |   |
 | 配置入站到Adobe Commerce云服务端点的PrivateLink | R |   |
 | 接受PrivateLink入站到Adobe Commerce云服务端点 |     | R |
-| 入站到商家VPC服务端点的PrivateLink的配置 |     | R |
+| 配置入站到商家VPC服务端点的PrivateLink |     | R |
 | 接受入站到商家VPC服务端点的PrivateLink | R |   |
 | PrivateLink集成（端点到帐户）的配置 |     | R |
 | 为PrivateLink端点<br><br>配置商家拥有的VPC（包括任何VPN连接） |     | R |
@@ -917,7 +939,7 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 
 |     | Adobe | 商家 |
 | --- | --- | --- |
-| 操作系统可用性 | R |   |
+| 操作系统的可用性 | R |   |
 | 持续保持操作系统的质量和修补 | R |   |
 
 {style="table-layout:auto"}
@@ -943,3 +965,4 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 根据限制监控vCPU使用情况 | R |   |
 
 {style="table-layout:auto"}
+
