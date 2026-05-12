@@ -3,7 +3,7 @@ title: 已发布版本
 description: 了解特定版本的Adobe Commerce的发布时间。
 recommendations: noCatalog
 exl-id: 9b03900c-39ba-4757-ab7e-8bc832277192
-source-git-commit: e0905f357c5ab84b30304eeaad00d9ae4ec0c168
+source-git-commit: fdd98cea53f1a060b8b56268250b463c74abaaa1
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
@@ -23,9 +23,9 @@ ht-degree: 0%
 >[!NOTE]
 >
 >- Adobe建议将Adobe Commerce安装或升级到每个版本提供的最新安全修补程序。
->- 有关其他安全更新，请参阅[Magento/Adobe Commerce的安全更新](https://helpx.adobe.com/cn/security/products/magento.html)。
->- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/cn/products/magento/pricing.html)。
+>- 有关其他安全更新，请参阅[Magento/Adobe Commerce的安全更新](https://helpx.adobe.com/security/products/magento.html)。
+>- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/products/magento/pricing.html)。
 
 {{$include /help/_includes/templated/release/core-releases.md}}
 
-<!-- Last updated from includes: 2026-04-20 02:12:24 -->
+<!-- Last updated from includes: 2026-05-12 12:57:59 -->
