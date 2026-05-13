@@ -30,7 +30,7 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
 
 >[!INFO]
 >
->对于云基础架构上的Adobe Commerce，您可以使用[部署变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend)来配置二级缓存。
+>对于云基础架构上的Adobe Commerce，您可以使用[部署变量](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)来配置二级缓存。
 
 ## 旧版L2缓存配置(RemoteSynchronizedCache)
 
