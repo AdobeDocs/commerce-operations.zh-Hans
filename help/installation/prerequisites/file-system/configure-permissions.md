@@ -2,7 +2,7 @@
 title: 配置文件所有权和权限
 description: 按照以下步骤为Adobe Commerce的内部安装配置文件系统权限。
 exl-id: 2410ee4f-978c-4b71-b3f6-0c042f9f4dc4
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 0%
@@ -111,7 +111,7 @@ passwd <username>
 
 >[!WARNING]
 >
->如果您在应用程序服务器上没有`root`权限，则可以使用其他本地用户帐户。 确保用户具有强密码，然后继续[将文件系统所有者放入Web服务器组](#step-3-put-the-file-system-owner-in-the-web-servers-group)。
+>如果您在应用程序服务器上没有`root`权限，则可以使用其他本地用户帐户。 确保用户具有强密码，然后继续[将文件系统所有者放入Web服务器组](#put-the-file-system-owner-in-the-web-server-group)。
 
 例如，要创建名为`magento_user`的用户并为用户提供密码，请输入：
 

@@ -2,9 +2,9 @@
 user-guide-title: 配置指南
 user-guide-description: 配置Adobe Commerce应用程序功能和服务。
 feature: Configuration
-source-git-commit: d86b9eb07a9da6dc93234f8a02103c543bbead68
+source-git-commit: 605b2e59d200bc8eeab43e91006a3f95e6a6c138
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -34,28 +34,28 @@ ht-degree: 1%
       + [使用环境变量](deployment/example-environment-variables.md)
 + 缓存 {#cache}
    + [缓存概述](cache/caching-overview.md)
-   + [缓存类型](cache/cache-types.md)
-   + [缓存选项](cache/cache-options.md)
-   + [二级高速缓存](cache/level-two-cache.md)
+   + [配置缓存前端](cache/cache-types.md)
+   + [缓存后端选项](cache/cache-options.md)
+   + [二级缓存配置](cache/level-two-cache.md)
    + Redis {#redis}
-      + [配置Redis](cache/config-redis.md)
-      + [将Redis用于默认缓存](cache/redis-pg-cache.md)
-      + [使用Redis进行会话存储](cache/redis-session.md)
-      + [为EC2实例配置ElastiCache](cache/redis-elasticache-for-ec2.md)
+      + [安装和设置Redis](cache/config-redis.md)
+      + [为默认缓存和页面缓存配置Redis](cache/redis-pg-cache.md)
+      + [为会话存储配置Redis](cache/redis-session.md)
+      + [使用AWS ElastiCache配置Redis](cache/redis-elasticache-for-ec2.md)
    + Valkey {#valkey}
-      + [配置Valkey](cache/config-valkey.md)
-      + [将Valkey用于默认缓存](cache/valkey-pg-cache.md)
-      + [使用Valkey进行会话存储](cache/valkey-session.md)
+      + [安装和设置Valkey](cache/config-valkey.md)
+      + [为默认缓存和页面缓存配置Valkey](cache/valkey-pg-cache.md)
+      + [为会话存储配置Valkey](cache/valkey-session.md)
    + 清漆 {#varnish}
       + [涂漆概述](cache/config-varnish.md)
       + [安装清漆](cache/config-varnish-install.md)
-   + [Web服务器](cache/config-varnish-server.md)
-   + [配置Commerce应用程序](cache/configure-varnish-commerce.md)
-   + [高级清漆配置](cache/config-varnish-advanced.md)
-   + [缓存清除](cache/use-varnish-cache.md)
-   + [缓存清除多个清漆实例](cache/use-multiple-varnish-cache.md)
-   + [验证清漆配置](cache/config-varnish-final.md)
-   + [清漆ESI块](cache/use-varnish-esi.md)
+      + [配置Web服务器](cache/config-varnish-server.md)
+      + [配置Commerce应用程序](cache/configure-varnish-commerce.md)
+      + [高级清漆配置](cache/config-varnish-advanced.md)
+      + [验证清漆配置](cache/config-varnish-final.md)
+      + [使用清漆清除缓存](cache/use-varnish-cache.md)
+      + [使用多个Varnish实例清除缓存](cache/use-multiple-varnish-cache.md)
+      + [清漆ESI块](cache/use-varnish-esi.md)
    + [静态内容缓存](cache/static-content-signing.md)
 + 命令行 {#cli}
    + [命令行工具](cli/config-cli.md)
@@ -81,7 +81,7 @@ ht-degree: 1%
    + [运行单元测试](cli/unit-tests.md)
    + [转换布局文件](cli/convert-layout-files.md)
    + [生成性能测试数据](cli/generate-data.md)
-   + [运行支持实用程序(仅限Commerce)](cli/run-support-utilities.md)
+   + [运行支持实用程序（仅限Commerce）](cli/run-support-utilities.md)
 + 配置文件 {#files}
    + [用于部署的配置文件](reference/deployment-files.md)
    + [配置类型](reference/config-create-types.md)
@@ -151,4 +151,4 @@ ht-degree: 1%
       + [验证拆分数据库](storage/multi-master-verify.md)
       + [数据库复制](storage/multi-master-replication.md)
       + [还原到单个数据库](storage/revert-split-database.md)
-+ [返回操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
++ [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

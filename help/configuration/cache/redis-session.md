@@ -1,16 +1,16 @@
 ---
-title: 使用Redis进行会话存储
-description: 了解如何在Adobe Commerce中为会话存储配置Redis。 了解命令行设置、配置选项和性能优化技术。
+title: 为会话存储配置Redis
+description: 了解如何在Adobe Commerce中为会话存储配置Redis。 了解CLI设置、会话参数和连接验证技术。
 feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '835'
 ht-degree: 1%
 
 ---
 
-# 使用Redis进行会话存储
+# 为会话存储配置Redis
 
 >[!IMPORTANT]
 >

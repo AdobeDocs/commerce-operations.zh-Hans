@@ -1,18 +1,18 @@
 ---
-title: 配置Redis
-description: 了解如何配置Redis缓存以优化Adobe Commerce性能。 了解功能、设置步骤和配置最佳实践。
+title: 安装和设置Redis
+description: 了解如何使用Adobe Commerce安装和配置Redis以进行缓存和会话存储。 发现优化和性能调整的选项。
 feature: Configuration, Cache
 exl-id: e037c382-334a-4096-a417-a25fdb61a9ce
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: de613310ad701dd594a6ee8fcd973aa2c3769870
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
 
-# 配置Redis
+# 安装和设置Redis
 
-Redis功能包括：
+Redis是内存中的数据存储，可用作缓存后端和会话存储。 主要功能包括：
 
 - PHP会话存储
 - 无`foreach`循环的基于标记的缓存清理
@@ -24,7 +24,7 @@ Redis功能包括：
 
 - [下载Redis页面](https://redis.io/download)
 - [Redis快速入门](https://redis.io/docs/latest/)
-- [数字海洋](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)
+- [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)
 - [Redis文档页面](https://redis.io/docs)
 
 ## 设置Redis配置
@@ -35,7 +35,7 @@ Redis功能包括：
 
 对于会话，Adobe建议启用持久性以使用以下任一持久性选项将Redis数据复制到磁盘：常规Redis数据库备份(RDB)快照或仅附加文件(AOF)持久性日志。
 
-- **Redis Database Backup** (RDB)快照在给定时间后将完整数据库存储在转储文件中，该时间自上次保存以来已更改最小密钥数。 使用`save`文件中的`redis.conf`设置配置此设置。
+- **Redis Database Backup** (RDB)快照在给定时间后将完整数据库存储在转储文件中，该时间自上次保存以来已更改最小密钥数。 使用`redis.conf`文件中的`save`设置配置此设置。
 
 - **仅附加文件** (AOF)将发送到Redis的每个写入操作存储在日志文件中。 Redis仅在重新启动时读取此文件，并使用它恢复原始数据集。
 

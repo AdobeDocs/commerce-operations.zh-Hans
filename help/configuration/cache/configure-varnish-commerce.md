@@ -3,14 +3,14 @@ title: 为Commerce配置清漆
 description: 了解如何专门为Adobe Commerce应用程序配置Varnish。 了解配置文件更新和管理技术。
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
 
-# 配置Commerce应用程序以使用Varnish
+# 为Commerce配置清漆
 
 要将Commerce配置为使用涂漆，请执行以下操作：
 

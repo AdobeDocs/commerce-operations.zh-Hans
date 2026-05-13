@@ -1,16 +1,16 @@
 ---
-title: 静态内容缓存
-description: 了解Adobe Commerce中的静态内容缓存签名和性能优化。 了解如何启用、禁用和配置缓存功能。
+title: 静态内容签名和浏览器缓存失效
+description: 了解静态内容签名如何在Adobe Commerce中工作以使静态资源的浏览器缓存失效。 了解如何启用和配置此功能。
 feature: Configuration, Cache, SCD
 exl-id: b54ceea2-b3a1-4dbb-ba87-743f2af0d2fb
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
-# 静态内容缓存
+# 静态内容签名和浏览器缓存失效
 
 为了提高性能，Commerce为静态资源（如图像、JavaScript和CSS文件）设置`Expires`标头。
 在静态资源上设置`Expires`标头可告知浏览器在该URL缓存资源并提供缓存的版本，直到它过期为止。
@@ -35,9 +35,9 @@ http://magento2.com/pub/static/version1475604434/frontend/Magento/luma/en_US/ima
 
 默认情况下，Commerce将启用此功能，Adobe建议保持启用此功能，以防止与提供旧静态资源的浏览器相关的问题。
 
-静态内容签名的配置位于&#x200B;[**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures)中。
+静态内容签名的配置位于&#x200B;[**[!UICONTROL Stores]**>设置>配置>**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures)中。
 
-- **仅限内部部署**：如果您的站点在[生产模式](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=zh-Hans#production-mode)中是&#x200B;**而不是**，则此配置可用。
+- **仅限内部部署**：如果您的站点在[生产模式](../bootstrap/application-modes.md#production-mode)中是&#x200B;**而不是**，则此配置可用。
 - **Cloud**：此配置是隐藏的，因为生产模式是强制实施的；因此，您必须使用命令行，如下所示。
 
 ![静态文件设置](../../assets/configuration/static-files-settings.png)

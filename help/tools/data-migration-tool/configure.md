@@ -3,7 +3,7 @@ title: 配置 [!DNL Data Migration Tool]
 description: 了解配置 [!DNL Data Migration Tool] 在Magento 1和Magento 2之间传输数据的两种方法。
 exl-id: 273be997-8085-4488-a455-f6005a85b406
 topic: Commerce, Migration
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 1. 在`config.xml`文件中，必须设置M1和M2数据库的访问详细信息以及加密密钥。
 
-1. 如果M1存储有自定义更改，则应将其余配置文件映射到Magento 1存储自定义。 请参阅[使用配置和映射文件](#migration-config)。
+1. 如果M1存储有自定义更改，则应将其余配置文件映射到Magento 1存储自定义。 请参阅[使用配置和映射文件](#work-with-configuration-and-mapping-files)。
 
 ### 在`vendor`文件夹中配置迁移
 

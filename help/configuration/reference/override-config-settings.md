@@ -2,9 +2,9 @@
 title: 覆盖配置设置
 description: 了解如何使用环境变量覆盖Adobe Commerce配置设置。 探索配置管理和部署最佳实践。
 exl-id: 788fd3cd-f8c1-4514-8141-547fed36e9ce
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1270'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->查看&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[配置环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html?lang=zh-Hans)主题。
+>查看&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[配置环境](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html)主题。
 
 ## 环境变量
 
@@ -62,8 +62,8 @@ ht-degree: 0%
   有关作用域的详细信息，请参阅：
 
    - [步骤1：查找网站或商店视图范围值](#step-1-find-the-website-or-store-view-scope-value)
-   - [《Commerce用户指南》中关于范围的主题](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
-   - [范围快速参考](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/scope-change#scope-quick-reference)
+   - [《Commerce用户指南》中关于范围的主题](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
+   - [范围快速参考](https://experienceleague.adobe.com/en/docs/commerce-admin/config/scope-change#scope-quick-reference)
 
 `<SYSTEM__VARIABLE__NAME>`是`/`被双下划线字符替换的配置路径。 有关详细信息，请参阅[第2步：设置系统变量](#step-2-set-global-website-or-store-view-variables)。
 
@@ -224,7 +224,7 @@ ht-degree: 0%
 
 1. 确定范围。
 
-   在[数据库](#find-a-website-or-store-view-scope-in-the-database)中查找范围，如步骤1中所述：查找网站或存储视图范围值。 (您还可以在Admin中找到值，如步骤2中的[表中所示：设置全局、网站或存储视图变量]&#x200B;(#step-2-set-global-website-or-store-view-variables。
+   在[数据库](#find-a-website-or-store-view-scope-in-the-database)中查找范围，如步骤1中所述：查找网站或存储视图范围值。 (您还可以在Admin中找到值，如步骤2中的[表中所示：设置全局、网站或存储视图变量](#step-2-set-global-website-or-store-view-variables)。
 
    例如，范围可以是`CONFIG__WEBSITES__DEFAULT`。
 
@@ -253,6 +253,6 @@ $_ENV['CONFIG__DEFAULT__GENERAL__STORE_INFORMATION__MERCHANT_VAT_NUMBER'] = '123
 >
 >- 要使用您在`$_ENV`数组中设置的值，必须在`php.ini`文件中设置`variables_order = "EGPCS"`（Environment、Get、Post、Cookie和服务器）。 有关详细信息，请参阅[PHP文档](https://www.php.net/manual/en/ini.core.php)。
 >
->- 对于云基础架构上的Adobe Commerce，如果您尝试使用[Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans#configure-the-project)覆盖配置设置，则必须在变量名称前加上`env:`。 例如：
+>- 对于云基础架构上的Adobe Commerce，如果您尝试使用[Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)覆盖配置设置，则必须在变量名称前加上`env:`。 例如：
 >
 >![环境变量示例](../../assets/configuration/cloud-console-envvariable.png)

@@ -3,7 +3,7 @@ title: 当前搜索引擎不受支持
 description: 在遇到有关不受支持的搜索引擎的错误后，对Adobe Commerce升级进行故障排除。
 feature: Upgrade, Search
 exl-id: 11479d23-53a5-4086-9f9a-c3420ccad073
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -70,7 +70,7 @@ bin/magento config:show catalog/search/engine
 
    >[!NOTE]
    >
-   >Elasticsearch需要JDK 1.8或更高版本。 请参阅[安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk)以检查安装的JDK版本。
+   >Elasticsearch需要JDK 1.8或更高版本。 请参阅[安装Java软件开发工具包(JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit)以检查安装的JDK版本。
 
 1. [配置Elasticsearch](../../configuration/search/configure-search-engine.md)并重新索引。
 

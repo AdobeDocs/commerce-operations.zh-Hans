@@ -1,10 +1,10 @@
 ---
 title: 使用AWS ElastiCache配置Redis
-description: 对于在EC2上托管的Commerce实例，了解如何使用AWS ElastiCache代替本地Redis实例。 了解命令行设置、配置选项和验证技术。
+description: 了解如何将AWS ElastiCache用作EC2上Adobe Commerce的Redis后端。 发现命令行设置、配置和验证。
 feature: Configuration, Cache
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -75,4 +75,4 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=<Ela
    ```
 
 1. 在Commerce UI中打开页面。
-1. 验证终端中的[缓存输出](#verify-the-redis-connection)。
+1. 验证终端中的[缓存输出](#verify-connectivity)。

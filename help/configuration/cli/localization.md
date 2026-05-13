@@ -2,7 +2,7 @@
 title: 翻译词典和语言包
 description: 了解如何为Adobe Commerce生成翻译词典和构建语言包。 了解本地化和多语言商店设置。
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 1. 您可以将翻译字典打包到一个语言包中，并将该包提供给Commerce商店管理员。
 
-1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-localize)。
+1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize)。
 
 命令选项：
 
@@ -106,7 +106,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 | 参数 | 值 | 必需？ |
 |--- |--- |--- |
-| `<source>` | CSV文件的绝对文件系统路径和文件名，该文件包含组合翻译词典和分解为语言包所需的元信息。<br><br>使用[`bin/magento i18n:collect-phrases`](#config-cli-subcommands-xlate-dict-dict)创建CSV文件，然后创建语言包，如[创建目录和文件](#m2devgde-xlate-files)中所述。 | 是 |
+| `<source>` | CSV文件的绝对文件系统路径和文件名，该文件包含组合翻译词典和分解为语言包所需的元信息。<br><br>使用[`bin/magento i18n:collect-phrases`](#generate-a-translation-dictionary)创建CSV文件，然后创建语言包，如[创建目录和文件](#create-directories-and-files)中所述。 | 是 |
 | `<locale>` | [ISO 639-1](https://www.iso.org/iso-639-language-codes.html)（语言）和[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)（国家/地区）用作所有生成的CSV文件文件文件名的语言标识符。 示例： `de_DE`、`pt_PT`、`pt_BR`。 | 是 |
 | `-m --mode` | 如果目标文件存在，则指定是替换现有语言包还是与新语言包合并。 合并会覆盖任何现有的短语并添加新短语。<br><br>值：合并或替换（默认值）。 | 否 |
 | `-d --allow-duplicates` | 包括此选项以允许语言包中存在重复项。 否则，如果命令在多个包含不同翻译的条目中遇到相同的短语，则会失败并出现错误。 | 否 |

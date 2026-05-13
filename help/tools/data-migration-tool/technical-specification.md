@@ -3,7 +3,7 @@ title: '[!DNL Data Migration Tool]技术规范'
 description: 了解 [!DNL Data Migration Tool] 的实施详细信息以及在Magento 1和Magento 2之间传输数据时如何扩展。
 exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
 topic: Commerce, Migration
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
 source-wordcount: '2113'
 ht-degree: 0%
@@ -227,7 +227,7 @@ ht-degree: 0%
 
 步骤是一个单元，它提供迁移某些分隔数据所需的功能。 步骤可以包含一个或多个阶段（完整性检查、数据、卷检查和增量）。
 
-默认情况下，有几个步骤（[映射](#map-step)、[EAV](#eav)、[URL重写](#url-rewrite-step)等）。 您也可以选择添加自己的步骤。
+默认情况下，有几个步骤（[映射](#map-step)、[EAV](#eav-step)、[URL重写](#url-rewrite-step)等）。 您也可以选择添加自己的步骤。
 
 步骤相关类位于src/Migration/Step目录中。
 

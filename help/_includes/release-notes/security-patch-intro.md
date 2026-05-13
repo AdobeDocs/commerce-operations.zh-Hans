@@ -1,7 +1,7 @@
 ---
-source-git-commit: 779571c234e6fc620321d91cf8fd5f9ed28b869e
+source-git-commit: b1cfa656e3393bd47fb2c1557ff75db3ec6c6a67
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
@@ -17,5 +17,5 @@ ht-degree: 0%
 
 了解有关安全修补程序版本的更多信息：
 
-* [Adobe Commerce安全修补程序版本概述](/help/release/release-notes/security/overview.md#about-adobe-commerce-security-patch-releases)
-* 有关下载和应用安全修补程序版本的说明，请参见[Adobe Commerce知识库](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)中的&#x200B;_如何获取和应用安全修补程序_。
+* [Adobe Commerce安全修补程序版本概述](/help/release/release-notes/security/overview.md#about-security-patch-releases)
+* 有关下载和应用安全修补程序版本的说明，请参见&#x200B;_Adobe Commerce知识库_&#x200B;中的[如何获取和应用安全修补程序](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches)。

@@ -1,16 +1,16 @@
 ---
-title: 最终验证
+title: 验证清漆配置
 description: 了解如何使用Adobe Commerce执行清漆配置的最终验证。 了解测试步骤和故障排除技术。
 feature: Configuration, Cache
 exl-id: 01f28c93-75cd-4969-9142-b8dac0aa2adb
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
-# 清漆配置的最终验证
+# 验证清漆配置 {#final-verification}
 
 现在您使用的是Commerce为您生成的`default.vcl`，您可以执行一些最终验证以确保Varnish正常工作。
 
@@ -83,4 +83,4 @@ X-Magento-Cache-Debug: MISS
 
 >[!TIP]
 >
->如果您遇到503 （后端提取失败）错误，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[解决503 （服务不可用）错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html?lang=zh-Hans)。
+>如果您遇到503 （后端提取失败）错误，请参阅&#x200B;_Adobe Commerce帮助中心_&#x200B;中的[解决503 （服务不可用）错误](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html)。

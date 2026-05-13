@@ -1,17 +1,17 @@
 ---
-title: 清漆ESI块
+title: 配置清漆ESI块
 description: 了解Varnish Edge Side Include (ESI)以及如何嵌入Adobe Commerce的网页。 发现ESI块的实施和优化。
 badge: label="由Konstantin G提供。" type="Informative" url="https://github.com/goivvy" tooltip="康斯坦丁G."
 feature: Configuration, Cache
 exl-id: 7dccafa5-df79-4690-be5c-ff774c66bb2a
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 605b2e59d200bc8eeab43e91006a3f95e6a6c138
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
-# 清漆ESI块
+# 配置清漆ESI块 {#varnish-esi-block}
 
 Edge Side Include (ESI)是特殊指令，可用于将网页包含在其他网页中。
 
@@ -30,11 +30,11 @@ Edge Side Include (ESI)是特殊指令，可用于将网页包含在其他网页
 Commerce框架会在满足以下条件时创建ESI标记：
 
 - 缓存应用程序设置为`Varnish Cache`
-- 已添加具有`block`特性的XML布局`ttl`元素
+- 已添加具有`ttl`特性的XML布局`block`元素
 
 ### 示例
 
-`cms_index_index.xml`：
+`cms_index_index.xml`:
 
 ```xml
   <referenceContainer name="content">
@@ -48,7 +48,7 @@ Commerce框架会在满足以下条件时创建ESI标记：
 
 目前，Varnish不支持通过HTTPS进行ESI，因此会自动切换到HTTP。
 
-`Magento\PageCache\Observer\ProcessLayoutRenderElement`：
+`Magento\PageCache\Observer\ProcessLayoutRenderElement`:
 
 ```php
     private function _wrapEsi(

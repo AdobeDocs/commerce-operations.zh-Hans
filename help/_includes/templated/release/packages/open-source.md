@@ -1,7 +1,7 @@
 ---
-source-git-commit: ef3abc83e2c699ebfbb53ad367aaceb9ecb92491
+source-git-commit: 44f5debe62afeb55d301a769ca8a3af957e5b6fd
 workflow-type: tm+mt
-source-wordcount: '6407'
+source-wordcount: '6568'
 ht-degree: 0%
 
 ---
@@ -19,19 +19,20 @@ Magento Open Source使用编辑器管理PHP包。
 
 `composer.json`文件声明了包的列表，而`composer.lock`文件存储了用于构建Magento Open Source安装的包的完整列表（每个包的完整版本及其依赖项）。
 
-以下参考文档是从`composer.lock`文件生成的，它涵盖Magento Open Source 2.4.8中包含的必需包。
+以下参考文档是从`composer.lock`文件生成的，它涵盖Magento Open Source 2.4.9中包含的必需包。
 
 ## 依赖关系
 
-`magento/product-community-edition 2.4.8`具有以下依赖项：
+`magento/product-community-edition 2.4.9`具有以下依赖项：
 
-- adobe-commerce/os-extensions-metapackage： 1.0.1
+- adobe-commerce/adobe-ims-metapackage： ~2.2.4
+- adobe-commerce/os-extensions-metapackage： ^1.0.3
 - colimollenhour/cache-backend-file： ^1.4
 - colimollenhour/cache-backend-redis： ^1.16
 - colimollenhour/credis： ^1.15
 - colimollenhour/php-redis-session-abstract： ^2.0
-- 作者/作者： ^2.0、!=2.2.16
-- duosecurity/duo_api_php： ^1.1
+- 作者/作者： ^2.2
+- duosecurity/duo_api_php： ^1.2
 - duosecurity/duo_universal_php： ^1.0
 - elasticsearch/elasticsearch： ^8.15
 - ext-bcmath： *
@@ -53,291 +54,300 @@ Magento Open Source使用编辑器管理PHP包。
 - ext-zip： *
 - ezyang/htmlpurifier： ^4.17
 - guzzlehttp/guzzle： ^7.5
-- laminas/laminas-captcha： ^2.18
+- laminas/laminas-captcha： ^2.20
 - laminas/laminas-code： ^4.13
-- laminas/laminas-di： ^3.15
+- laminas/laminas-di： ^3.16
 - laminas/laminas-escaper： ^2.13
 - laminas/laminas-eventmanager： ^3.11
-- 层合板/层合板 — 馈送： ^2.22
+- 层合板/层合板 — 馈送： ^2.26
 - 层合板/层合板滤镜： ^2.33
-- laminas/laminas-http： ^2.15
+- laminas/laminas-http： ^2.23
 - laminas/laminas-i18n： ^2.17
-- laminas/laminas-modulemanager： ^2.11
-- laminas/laminas-mvc： ^3.6
-- laminas/laminas-permissions-acl： ^2.10
+- laminas/laminas-modulemanager： ^2.19
+- laminas/laminas-permissions-acl： ^2.18
+- laminas/laminas-server： ^2.19
 - laminas/laminas-servicemanager： ^3.16
-- laminas/laminas-soap： ^2.10
+- laminas/laminas-session： ^2.26
+- laminas/laminas-soap： ^2.15
 - laminas/laminas-stdlib： ^3.11
-- laminas/laminas-uri： ^2.9
+- laminas/laminas-uri： ^2.14
 - laminas/laminas-validator： ^2.23
+- laminas/laminas-view： ^2.36
 - league/flysystem： ^3.0
 - league/flysystem-aws-s3-v3： ^3.0
 - lib-libxml： *
-- magento/composer： ^1.10.1-beta1
+- magento/composer： ^1.10.2-beta4
 - magento/composer-dependency-version-audit-plugin： ^0.1
-- magento/framework： 103.0.8
-- magento/framework-amqp： 100.4.6
-- magento/framework-bulk： 101.0.4
-- magento/framework-message-queue： 100.4.8
-- magento/inventory-metapackage： 1.2.8
-- magento/language-de_de： 100.4.0
-- magento/language-en_us： 100.4.0
-- magento/language-es_es： 100.4.0
-- magento/language-fr_fr： 100.4.0
-- magento/language-nl_nl： 100.4.0
-- magento/language-pt_br： 100.4.0
-- magento/language-zh_hans_cn： 100.4.0
+- magento/framework： 103.0.9
+- magento/framework-amqp： 100.4.7
+- magento/framework-bulk： 101.0.5
+- magento/framework-message-queue： 100.4.9
+- magento/framework-stomp： 100.4.5
+- magento/inventory-metapackage： 1.2.9
+- magento/language-de_de： 100.4.1
+- magento/language-en_us： 100.4.1
+- magento/language-es_es： 100.4.1
+- magento/language-fr_fr： 100.4.1
+- magento/language-nl_nl： 100.4.1
+- magento/language-pt_br： 100.4.1
+- magento/language-zh_hans_cn： 100.4.1
 - magento/magento-composer-installer： >=0.4.0
-- magento/magento-zf-db： ^3.21.0
-- magento/magento2-base： 2.4.8
-- [magento/module-admin-analytics](https://developer.adobe.com/commerce/php/module-reference/module-admin-analytics)： 100.4.7
-- [magento/module-admin-notification](https://developer.adobe.com/commerce/php/module-reference/module-admin-notification)： 100.4.7
-- [magento/module-advanced-pricing-import-export](https://developer.adobe.com/commerce/php/module-reference/module-advanced-pricing-import-export)： 100.4.8
-- [magento/module-advanced-search](https://developer.adobe.com/commerce/php/module-reference/module-advanced-search)： 100.4.6
-- [magento/module-amqp](https://developer.adobe.com/commerce/php/module-reference/module-amqp)： 100.4.5
-- [magento/module-analytics](https://developer.adobe.com/commerce/php/module-reference/module-analytics)： 100.4.8
-- [magento/module-application-performance-monitor](https://developer.adobe.com/commerce/php/module-reference/module-application-performance-monitor)： 100.4.1
-- [magento/module-application-performance-monitor-new-relic](https://developer.adobe.com/commerce/php/module-reference/module-application-performance-monitor-new-relic)： 100.4.1
-- [magento/module-async-config](https://developer.adobe.com/commerce/php/module-reference/module-async-config)： 100.4.1
-- [magento/module-asynchronous-operations](https://developer.adobe.com/commerce/php/module-reference/module-asynchronous-operations)： 100.4.8
-- [magento/module-authorization](https://developer.adobe.com/commerce/php/module-reference/module-authorization)： 100.4.8
-- [magento/module-aws-s3](https://developer.adobe.com/commerce/php/module-reference/module-aws-s3)： 100.4.6
-- [magento/module-backend](https://developer.adobe.com/commerce/php/module-reference/module-backend)： 102.0.8
-- [magento/module-backup](https://developer.adobe.com/commerce/php/module-reference/module-backup)： 100.4.8
-- [magento/module-bundle](https://developer.adobe.com/commerce/php/module-reference/module-bundle)： 101.0.8
-- [magento/module-bundle-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-bundle-graph-ql)： 100.4.8
-- [magento/module-bundle-import-export](https://developer.adobe.com/commerce/php/module-reference/module-bundle-import-export)： 100.4.7
-- [magento/module-cache-invalidate](https://developer.adobe.com/commerce/php/module-reference/module-cache-invalidate)： 100.4.6
-- [magento/module-captcha](https://developer.adobe.com/commerce/php/module-reference/module-captcha)： 100.4.8
-- [magento/module-cardinal-commerce](https://developer.adobe.com/commerce/php/module-reference/module-cardinal-commerce)： 100.4.6
-- [magento/module-catalog](https://developer.adobe.com/commerce/php/module-reference/module-catalog)： 104.0.8
-- [magento/module-catalog-analytics](https://developer.adobe.com/commerce/php/module-reference/module-catalog-analytics)： 100.4.5
-- [magento/module-catalog-cms-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-cms-graph-ql)： 100.4.4
-- [magento/module-catalog-customer-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-customer-graph-ql)： 100.4.7
-- [magento/module-catalog-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-graph-ql)： 100.4.8
-- [magento/module-catalog-import-export](https://developer.adobe.com/commerce/php/module-reference/module-catalog-import-export)： 101.1.8
-- [magento/module-catalog-inventory](https://developer.adobe.com/commerce/php/module-reference/module-catalog-inventory)： 100.4.8
-- [magento/module-catalog-inventory-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-inventory-graph-ql)： 100.4.5
-- [magento/module-catalog-rule](https://developer.adobe.com/commerce/php/module-reference/module-catalog-rule)： 101.2.8
-- [magento/module-catalog-rule-configurable](https://developer.adobe.com/commerce/php/module-reference/module-catalog-rule-configurable)： 100.4.7
-- [magento/module-catalog-rule-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-rule-graph-ql)： 100.4.5
-- [magento/module-catalog-search](https://developer.adobe.com/commerce/php/module-reference/module-catalog-search)： 102.0.8
-- [magento/module-catalog-url-rewrite](https://developer.adobe.com/commerce/php/module-reference/module-catalog-url-rewrite)： 100.4.8
-- [magento/module-catalog-url-rewrite-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-url-rewrite-graph-ql)： 100.4.6
-- [magento/module-catalog-widget](https://developer.adobe.com/commerce/php/module-reference/module-catalog-widget)： 100.4.8
-- [magento/module-checkout](https://developer.adobe.com/commerce/php/module-reference/module-checkout)： 100.4.8
-- [magento/module-checkout-agreements](https://developer.adobe.com/commerce/php/module-reference/module-checkout-agreements)： 100.4.7
-- [magento/module-checkout-agreements-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-checkout-agreements-graph-ql)： 100.4.4
-- [magento/module-cms](https://developer.adobe.com/commerce/php/module-reference/module-cms)： 104.0.8
-- [magento/module-cms-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-cms-graph-ql)： 100.4.5
-- [magento/module-cms-url-rewrite](https://developer.adobe.com/commerce/php/module-reference/module-cms-url-rewrite)： 100.4.7
-- [magento/module-cms-url-rewrite-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-cms-url-rewrite-graph-ql)： 100.4.6
-- [magento/module-compare-list-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-compare-list-graph-ql)： 100.4.4
-- [magento/module-config](https://developer.adobe.com/commerce/php/module-reference/module-config)： 101.2.8
-- [magento/module-configurable-import-export](https://developer.adobe.com/commerce/php/module-reference/module-configurable-import-export)： 100.4.6
-- [magento/module-configurable-product](https://developer.adobe.com/commerce/php/module-reference/module-configurable-product)： 100.4.8
-- [magento/module-configurable-product-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-configurable-product-graph-ql)： 100.4.8
-- [magento/module-configurable-product-sales](https://developer.adobe.com/commerce/php/module-reference/module-configurable-product-sales)： 100.4.5
-- [magento/module-contact](https://developer.adobe.com/commerce/php/module-reference/module-contact)： 100.4.7
-- [magento/module-contact-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-contact-graph-ql)： 100.4.1
-- [magento/module-cookie](https://developer.adobe.com/commerce/php/module-reference/module-cookie)： 100.4.8
-- [magento/module-cron](https://developer.adobe.com/commerce/php/module-reference/module-cron)： 100.4.8
-- [magento/module-csp](https://developer.adobe.com/commerce/php/module-reference/module-csp)： 100.4.7
-- [magento/module-currency-symbol](https://developer.adobe.com/commerce/php/module-reference/module-currency-symbol)： 100.4.6
-- [magento/module-customer](https://developer.adobe.com/commerce/php/module-reference/module-customer)： 103.0.8
-- [magento/module-customer-analytics](https://developer.adobe.com/commerce/php/module-reference/module-customer-analytics)： 100.4.5
-- [magento/module-customer-downloadable-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-customer-downloadable-graph-ql)： 100.4.4
-- [magento/module-customer-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-customer-graph-ql)： 100.4.8
-- [magento/module-customer-import-export](https://developer.adobe.com/commerce/php/module-reference/module-customer-import-export)： 100.4.8
-- [magento/module-deploy](https://developer.adobe.com/commerce/php/module-reference/module-deploy)： 100.4.8
-- [magento/module-developer](https://developer.adobe.com/commerce/php/module-reference/module-developer)： 100.4.8
-- [magento/module-dhl](https://developer.adobe.com/commerce/php/module-reference/module-dhl)： 100.4.7
-- [magento/module-directory](https://developer.adobe.com/commerce/php/module-reference/module-directory)： 100.4.8
-- [magento/module-directory-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-directory-graph-ql)： 100.4.6
-- [magento/module-downloadable](https://developer.adobe.com/commerce/php/module-reference/module-downloadable)： 100.4.8
-- [magento/module-downloadable-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-downloadable-graph-ql)： 100.4.8
-- [magento/module-downloadable-import-export](https://developer.adobe.com/commerce/php/module-reference/module-downloadable-import-export)： 100.4.7
-- [magento/module-eav](https://developer.adobe.com/commerce/php/module-reference/module-eav)： 102.1.8
-- [magento/module-eav-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-eav-graph-ql)： 100.4.5
-- [magento/module-elasticsearch](https://developer.adobe.com/commerce/php/module-reference/module-elasticsearch)： 101.0.8
-- [magento/module-elasticsearch-8](https://developer.adobe.com/commerce/php/module-reference/module-elasticsearch-8)： 101.0.0
-- [magento/module-email](https://developer.adobe.com/commerce/php/module-reference/module-email)： 101.1.8
-- [magento/module-encryption-key](https://developer.adobe.com/commerce/php/module-reference/module-encryption-key)： 100.4.6
-- [magento/module-fedex](https://developer.adobe.com/commerce/php/module-reference/module-fedex)： 100.4.6
-- [magento/module-gift-message](https://developer.adobe.com/commerce/php/module-reference/module-gift-message)： 100.4.7
-- [magento/module-gift-message-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-gift-message-graph-ql)： 100.4.6
-- [magento/module-google-adwords](https://developer.adobe.com/commerce/php/module-reference/module-google-adwords)： 100.4.5
-- [magento/module-google-analytics](https://developer.adobe.com/commerce/php/module-reference/module-google-analytics)： 100.4.4
-- [magento/module-google-gtag](https://developer.adobe.com/commerce/php/module-reference/module-google-gtag)： 100.4.3
-- [magento/module-google-optimizer](https://developer.adobe.com/commerce/php/module-reference/module-google-optimizer)： 100.4.7
-- [magento/module-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql)： 100.4.8
-- [magento/module-graph-ql-cache](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql-cache)： 100.4.5
-- [magento/module-graph-ql-new-relic](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql-new-relic)： 100.4.1
-- [magento/module-graph-ql-resolver-cache](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql-resolver-cache)： 100.4.1
-- [magento/module-grouped-catalog-inventory](https://developer.adobe.com/commerce/php/module-reference/module-grouped-catalog-inventory)： 100.4.5
-- [magento/module-grouped-import-export](https://developer.adobe.com/commerce/php/module-reference/module-grouped-import-export)： 100.4.6
-- [magento/module-grouped-product](https://developer.adobe.com/commerce/php/module-reference/module-grouped-product)： 100.4.8
-- [magento/module-grouped-product-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-grouped-product-graph-ql)： 100.4.8
-- [magento/module-import-export](https://developer.adobe.com/commerce/php/module-reference/module-import-export)： 101.0.8
-- [magento/module-indexer](https://developer.adobe.com/commerce/php/module-reference/module-indexer)： 100.4.8
-- [magento/module-instant-purchase](https://developer.adobe.com/commerce/php/module-reference/module-instant-purchase)： 100.4.7
-- [magento/module-integration](https://developer.adobe.com/commerce/php/module-reference/module-integration)： 100.4.8
-- [magento/module-integration-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-integration-graph-ql)： 100.4.1
-- [magento/module-jwt-framework-adapter](https://developer.adobe.com/commerce/php/module-reference/module-jwt-framework-adapter)： 100.4.4
-- [magento/module-jwt-user-token](https://developer.adobe.com/commerce/php/module-reference/module-jwt-user-token)： 100.4.3
-- [magento/module-layered-navigation](https://developer.adobe.com/commerce/php/module-reference/module-layered-navigation)： 100.4.8
-- [magento/module-login-as-customer](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer)： 100.4.8
-- [magento/module-login-as-customer-admin-ui](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-admin-ui)： 100.4.8
-- [magento/module-login-as-customer-api](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-api)： 100.4.7
-- [magento/module-login-as-customer-assistance](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-assistance)： 100.4.7
-- [magento/module-login-as-customer-frontend-ui](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-frontend-ui)： 100.4.7
-- [magento/module-login-as-customer-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-graph-ql)： 100.4.5
-- [magento/module-login-as-customer-log](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-log)： 100.4.6
-- [magento/module-login-as-customer-page-cache](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-page-cache)： 100.4.7
-- [magento/module-login-as-customer-quote](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-quote)： 100.4.6
-- [magento/module-login-as-customer-sales](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-sales)： 100.4.7
-- [magento/module-marketplace](https://developer.adobe.com/commerce/php/module-reference/module-marketplace)： 100.4.6
-- [magento/module-media-content](https://developer.adobe.com/commerce/php/module-reference/module-media-content)： 100.4.6
-- [magento/module-media-content-api](https://developer.adobe.com/commerce/php/module-reference/module-media-content-api)： 100.4.7
-- [magento/module-media-content-catalog](https://developer.adobe.com/commerce/php/module-reference/module-media-content-catalog)： 100.4.6
-- [magento/module-media-content-cms](https://developer.adobe.com/commerce/php/module-reference/module-media-content-cms)： 100.4.6
-- [magento/module-media-content-synchronization](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization)： 100.4.7
-- [magento/module-media-content-synchronization-api](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization-api)： 100.4.6
-- [magento/module-media-content-synchronization-catalog](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization-catalog)： 100.4.5
-- [magento/module-media-content-synchronization-cms](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization-cms)： 100.4.5
-- [magento/module-media-gallery](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery)： 100.4.7
-- [magento/module-media-gallery-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-api)： 101.0.7
-- [magento/module-media-gallery-catalog](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-catalog)： 100.4.5
-- [magento/module-media-gallery-catalog-integration](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-catalog-integration)： 100.4.5
-- [magento/module-media-gallery-catalog-ui](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-catalog-ui)： 100.4.5
-- [magento/module-media-gallery-cms-ui](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-cms-ui)： 100.4.5
-- [magento/module-media-gallery-integration](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-integration)： 100.4.7
-- [magento/module-media-gallery-metadata](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-metadata)： 100.4.6
-- [magento/module-media-gallery-metadata-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-metadata-api)： 100.4.5
-- [magento/module-media-gallery-renditions](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-renditions)： 100.4.6
-- [magento/module-media-gallery-renditions-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-renditions-api)： 100.4.5
-- [magento/module-media-gallery-synchronization](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-synchronization)： 100.4.7
-- [magento/module-media-gallery-synchronization-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-synchronization-api)： 100.4.6
-- [magento/module-media-gallery-synchronization-metadata](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-synchronization-metadata)： 100.4.4
-- [magento/module-media-gallery-ui](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-ui)： 100.4.7
-- [magento/module-media-gallery-ui-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-ui-api)： 100.4.6
-- [magento/module-media-storage](https://developer.adobe.com/commerce/php/module-reference/module-media-storage)： 100.4.7
-- [magento/module-message-queue](https://developer.adobe.com/commerce/php/module-reference/module-message-queue)： 100.4.8
-- [magento/module-msrp](https://developer.adobe.com/commerce/php/module-reference/module-msrp)： 100.4.7
-- [magento/module-msrp-configurable-product](https://developer.adobe.com/commerce/php/module-reference/module-msrp-configurable-product)： 100.4.5
-- [magento/module-msrp-grouped-product](https://developer.adobe.com/commerce/php/module-reference/module-msrp-grouped-product)： 100.4.5
-- [magento/module-multishipping](https://developer.adobe.com/commerce/php/module-reference/module-multishipping)： 100.4.8
-- [magento/module-mysql-mq](https://developer.adobe.com/commerce/php/module-reference/module-mysql-mq)： 100.4.6
-- [magento/module-new-relic-reporting](https://developer.adobe.com/commerce/php/module-reference/module-new-relic-reporting)： 100.4.6
-- [magento/module-newsletter](https://developer.adobe.com/commerce/php/module-reference/module-newsletter)： 100.4.8
-- [magento/module-newsletter-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-newsletter-graph-ql)： 100.4.5
-- [magento/module-offline-payments](https://developer.adobe.com/commerce/php/module-reference/module-offline-payments)： 100.4.6
-- [magento/module-offline-shipping](https://developer.adobe.com/commerce/php/module-reference/module-offline-shipping)： 100.4.7
-- [magento/module-open-search](https://developer.adobe.com/commerce/php/module-reference/module-open-search)： 100.4.2
-- [magento/module-order-cancellation](https://developer.adobe.com/commerce/php/module-reference/module-order-cancellation)： 100.4.1
-- [magento/module-order-cancellation-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-order-cancellation-graph-ql)： 100.4.1
-- [magento/module-order-cancellation-ui](https://developer.adobe.com/commerce/php/module-reference/module-order-cancellation-ui)： 100.4.1
-- [magento/module-page-cache](https://developer.adobe.com/commerce/php/module-reference/module-page-cache)： 100.4.8
-- [magento/module-payment](https://developer.adobe.com/commerce/php/module-reference/module-payment)： 100.4.8
-- [magento/module-payment-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-payment-graph-ql)： 100.4.3
-- [magento/module-paypal](https://developer.adobe.com/commerce/php/module-reference/module-paypal)： 101.0.8
-- [magento/module-paypal-captcha](https://developer.adobe.com/commerce/php/module-reference/module-paypal-captcha)： 100.4.5
-- [magento/module-paypal-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-paypal-graph-ql)： 100.4.6
-- [magento/module-persistent](https://developer.adobe.com/commerce/php/module-reference/module-persistent)： 100.4.8
-- [magento/module-product-alert](https://developer.adobe.com/commerce/php/module-reference/module-product-alert)： 100.4.7
-- [magento/module-product-video](https://developer.adobe.com/commerce/php/module-reference/module-product-video)： 100.4.8
-- [magento/module-quote](https://developer.adobe.com/commerce/php/module-reference/module-quote)： 101.2.8
-- [magento/module-quote-analytics](https://developer.adobe.com/commerce/php/module-reference/module-quote-analytics)： 100.4.7
-- [magento/module-quote-bundle-options](https://developer.adobe.com/commerce/php/module-reference/module-quote-bundle-options)： 100.4.4
-- [magento/module-quote-configurable-options](https://developer.adobe.com/commerce/php/module-reference/module-quote-configurable-options)： 100.4.4
-- [magento/module-quote-downloadable-links](https://developer.adobe.com/commerce/php/module-reference/module-quote-downloadable-links)： 100.4.4
-- [magento/module-quote-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-quote-graph-ql)： 100.4.8
-- [magento/module-related-product-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-related-product-graph-ql)： 100.4.5
-- [magento/module-release-notification](https://developer.adobe.com/commerce/php/module-reference/module-release-notification)： 100.4.6
-- [magento/module-remote-storage](https://developer.adobe.com/commerce/php/module-reference/module-remote-storage)： 100.4.6
-- [magento/module-reports](https://developer.adobe.com/commerce/php/module-reference/module-reports)： 100.4.8
-- [magento/module-require-js](https://developer.adobe.com/commerce/php/module-reference/module-require-js)： 100.4.4
-- [magento/module-review](https://developer.adobe.com/commerce/php/module-reference/module-review)： 100.4.8
-- [magento/module-review-analytics](https://developer.adobe.com/commerce/php/module-reference/module-review-analytics)： 100.4.5
-- [magento/module-review-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-review-graph-ql)： 100.4.4
-- [magento/module-robots](https://developer.adobe.com/commerce/php/module-reference/module-robots)： 101.1.4
-- [magento/module-rss](https://developer.adobe.com/commerce/php/module-reference/module-rss)： 100.4.6
-- [magento/module-rule](https://developer.adobe.com/commerce/php/module-reference/module-rule)： 100.4.7
-- [magento/module-sales](https://developer.adobe.com/commerce/php/module-reference/module-sales)： 103.0.8
-- [magento/module-sales-analytics](https://developer.adobe.com/commerce/php/module-reference/module-sales-analytics)： 100.4.5
-- [magento/module-sales-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-sales-graph-ql)： 100.4.8
-- [magento/module-sales-inventory](https://developer.adobe.com/commerce/php/module-reference/module-sales-inventory)： 100.4.5
-- [magento/module-sales-rule](https://developer.adobe.com/commerce/php/module-reference/module-sales-rule)： 101.2.8
-- [magento/module-sales-rule-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-sales-rule-graph-ql)： 100.4.1
-- [magento/module-sales-sequence](https://developer.adobe.com/commerce/php/module-reference/module-sales-sequence)： 100.4.5
-- [magento/module-sample-data](https://developer.adobe.com/commerce/php/module-reference/module-sample-data)： 100.4.6
-- [magento/module-search](https://developer.adobe.com/commerce/php/module-reference/module-search)： 101.1.8
-- [magento/module-security](https://developer.adobe.com/commerce/php/module-reference/module-security)： 100.4.8
-- [magento/module-send-friend](https://developer.adobe.com/commerce/php/module-reference/module-send-friend)： 100.4.6
-- [magento/module-send-friend-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-send-friend-graph-ql)： 100.4.4
-- [magento/module-shipping](https://developer.adobe.com/commerce/php/module-reference/module-shipping)： 100.4.8
-- [magento/module-sitemap](https://developer.adobe.com/commerce/php/module-reference/module-sitemap)： 100.4.7
-- [magento/module-store](https://developer.adobe.com/commerce/php/module-reference/module-store)： 101.1.8
-- [magento/module-store-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-store-graph-ql)： 100.4.6
-- [magento/module-swagger](https://developer.adobe.com/commerce/php/module-reference/module-swagger)： 100.4.7
-- [magento/module-swagger-webapi](https://developer.adobe.com/commerce/php/module-reference/module-swagger-webapi)： 100.4.4
-- [magento/module-swagger-webapi-async](https://developer.adobe.com/commerce/php/module-reference/module-swagger-webapi-async)： 100.4.4
-- [magento/module-swatches](https://developer.adobe.com/commerce/php/module-reference/module-swatches)： 100.4.8
-- [magento/module-swatches-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-swatches-graph-ql)： 100.4.6
-- [magento/module-swatches-layered-navigation](https://developer.adobe.com/commerce/php/module-reference/module-swatches-layered-navigation)： 100.4.4
-- [magento/module-tax](https://developer.adobe.com/commerce/php/module-reference/module-tax)： 100.4.8
-- [magento/module-tax-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-tax-graph-ql)： 100.4.4
-- [magento/module-tax-import-export](https://developer.adobe.com/commerce/php/module-reference/module-tax-import-export)： 100.4.7
-- [magento/module-theme](https://developer.adobe.com/commerce/php/module-reference/module-theme)： 101.1.8
-- [magento/module-theme-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-theme-graph-ql)： 100.4.5
-- [magento/module-translation](https://developer.adobe.com/commerce/php/module-reference/module-translation)： 100.4.8
-- [magento/module-ui](https://developer.adobe.com/commerce/php/module-reference/module-ui)： 101.2.8
-- [magento/module-ups](https://developer.adobe.com/commerce/php/module-reference/module-ups)： 100.4.8
-- [magento/module-url-rewrite](https://developer.adobe.com/commerce/php/module-reference/module-url-rewrite)： 102.0.7
-- [magento/module-url-rewrite-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-url-rewrite-graph-ql)： 100.4.7
-- [magento/module-user](https://developer.adobe.com/commerce/php/module-reference/module-user)： 101.2.8
-- [magento/module-usps](https://developer.adobe.com/commerce/php/module-reference/module-usps)： 100.4.7
-- [magento/module-variable](https://developer.adobe.com/commerce/php/module-reference/module-variable)： 100.4.6
-- [magento/module-vault](https://developer.adobe.com/commerce/php/module-reference/module-vault)： 101.2.8
-- [magento/module-vault-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-vault-graph-ql)： 100.4.4
-- [magento/module-version](https://developer.adobe.com/commerce/php/module-reference/module-version)： 100.4.5
-- [magento/module-webapi](https://developer.adobe.com/commerce/php/module-reference/module-webapi)： 100.4.7
-- [magento/module-webapi-async](https://developer.adobe.com/commerce/php/module-reference/module-webapi-async)： 100.4.6
-- [magento/module-webapi-security](https://developer.adobe.com/commerce/php/module-reference/module-webapi-security)： 100.4.5
-- [magento/module-weee](https://developer.adobe.com/commerce/php/module-reference/module-weee)： 100.4.8
-- [magento/module-weee-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-weee-graph-ql)： 100.4.5
-- [magento/module-widget](https://developer.adobe.com/commerce/php/module-reference/module-widget)： 101.2.8
-- [magento/module-wishlist](https://developer.adobe.com/commerce/php/module-reference/module-wishlist)： 101.2.8
-- [magento/module-wishlist-analytics](https://developer.adobe.com/commerce/php/module-reference/module-wishlist-analytics)： 100.4.6
-- [magento/module-wishlist-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-wishlist-graph-ql)： 100.4.8
-- magento/page-builder： 1.7.5
-- magento/security-package： 1.1.7
-- magento/theme-adminhtml-backend： 100.4.8
-- magento/theme-frontend-blank： 100.4.8
-- magento/theme-frontend-luma： 100.4.8
+- magento/magento2-base： 2.4.9
+- [magento/module-admin-analytics](https://developer.adobe.com/commerce/php/module-reference/module-admin-analytics)： 100.4.8
+- [magento/module-admin-notification](https://developer.adobe.com/commerce/php/module-reference/module-admin-notification)： 100.4.8
+- [magento/module-advanced-pricing-import-export](https://developer.adobe.com/commerce/php/module-reference/module-advanced-pricing-import-export)： 100.4.9
+- [magento/module-advanced-search](https://developer.adobe.com/commerce/php/module-reference/module-advanced-search)： 100.4.7
+- [magento/module-amqp](https://developer.adobe.com/commerce/php/module-reference/module-amqp)： 100.4.6
+- [magento/module-analytics](https://developer.adobe.com/commerce/php/module-reference/module-analytics)： 100.4.9
+- [magento/module-application-performance-monitor](https://developer.adobe.com/commerce/php/module-reference/module-application-performance-monitor)： 100.4.2
+- [magento/module-application-performance-monitor-new-relic](https://developer.adobe.com/commerce/php/module-reference/module-application-performance-monitor-new-relic)： 100.4.2
+- [magento/module-async-config](https://developer.adobe.com/commerce/php/module-reference/module-async-config)： 100.4.2
+- [magento/module-asynchronous-operations](https://developer.adobe.com/commerce/php/module-reference/module-asynchronous-operations)： 100.4.9
+- [magento/module-authorization](https://developer.adobe.com/commerce/php/module-reference/module-authorization)： 100.4.9
+- [magento/module-aws-s3](https://developer.adobe.com/commerce/php/module-reference/module-aws-s3)： 100.4.7
+- [magento/module-backend](https://developer.adobe.com/commerce/php/module-reference/module-backend)： 102.0.9
+- [magento/module-backup](https://developer.adobe.com/commerce/php/module-reference/module-backup)： 100.4.9
+- [magento/module-bundle](https://developer.adobe.com/commerce/php/module-reference/module-bundle)： 101.0.9
+- [magento/module-bundle-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-bundle-graph-ql)： 100.4.9
+- [magento/module-bundle-import-export](https://developer.adobe.com/commerce/php/module-reference/module-bundle-import-export)： 100.4.8
+- [magento/module-cache-invalidate](https://developer.adobe.com/commerce/php/module-reference/module-cache-invalidate)： 100.4.7
+- [magento/module-captcha](https://developer.adobe.com/commerce/php/module-reference/module-captcha)： 100.4.9
+- [magento/module-cardinal-commerce](https://developer.adobe.com/commerce/php/module-reference/module-cardinal-commerce)： 100.4.7
+- [magento/module-catalog](https://developer.adobe.com/commerce/php/module-reference/module-catalog)： 104.0.9
+- [magento/module-catalog-analytics](https://developer.adobe.com/commerce/php/module-reference/module-catalog-analytics)： 100.4.6
+- [magento/module-catalog-cms-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-cms-graph-ql)： 100.4.5
+- [magento/module-catalog-customer-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-customer-graph-ql)： 100.4.8
+- [magento/module-catalog-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-graph-ql)： 100.4.9
+- [magento/module-catalog-import-export](https://developer.adobe.com/commerce/php/module-reference/module-catalog-import-export)： 101.1.9
+- [magento/module-catalog-inventory](https://developer.adobe.com/commerce/php/module-reference/module-catalog-inventory)： 100.4.9
+- [magento/module-catalog-inventory-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-inventory-graph-ql)： 100.4.6
+- [magento/module-catalog-rule](https://developer.adobe.com/commerce/php/module-reference/module-catalog-rule)： 101.2.9
+- [magento/module-catalog-rule-configurable](https://developer.adobe.com/commerce/php/module-reference/module-catalog-rule-configurable)： 100.4.8
+- [magento/module-catalog-rule-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-rule-graph-ql)： 100.4.6
+- [magento/module-catalog-search](https://developer.adobe.com/commerce/php/module-reference/module-catalog-search)： 102.0.9
+- [magento/module-catalog-url-rewrite](https://developer.adobe.com/commerce/php/module-reference/module-catalog-url-rewrite)： 100.4.9
+- [magento/module-catalog-url-rewrite-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-catalog-url-rewrite-graph-ql)： 100.4.7
+- [magento/module-catalog-widget](https://developer.adobe.com/commerce/php/module-reference/module-catalog-widget)： 100.4.9
+- [magento/module-checkout](https://developer.adobe.com/commerce/php/module-reference/module-checkout)： 100.4.9
+- [magento/module-checkout-agreements](https://developer.adobe.com/commerce/php/module-reference/module-checkout-agreements)： 100.4.8
+- [magento/module-checkout-agreements-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-checkout-agreements-graph-ql)： 100.4.5
+- [magento/module-cms](https://developer.adobe.com/commerce/php/module-reference/module-cms)： 104.0.9
+- [magento/module-cms-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-cms-graph-ql)： 100.4.6
+- [magento/module-cms-url-rewrite](https://developer.adobe.com/commerce/php/module-reference/module-cms-url-rewrite)： 100.4.8
+- [magento/module-cms-url-rewrite-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-cms-url-rewrite-graph-ql)： 100.4.7
+- [magento/module-compare-list-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-compare-list-graph-ql)： 100.4.5
+- [magento/module-config](https://developer.adobe.com/commerce/php/module-reference/module-config)： 101.2.9
+- [magento/module-configurable-import-export](https://developer.adobe.com/commerce/php/module-reference/module-configurable-import-export)： 100.4.7
+- [magento/module-configurable-product](https://developer.adobe.com/commerce/php/module-reference/module-configurable-product)： 100.4.9
+- [magento/module-configurable-product-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-configurable-product-graph-ql)： 100.4.9
+- [magento/module-configurable-product-sales](https://developer.adobe.com/commerce/php/module-reference/module-configurable-product-sales)： 100.4.6
+- [magento/module-contact](https://developer.adobe.com/commerce/php/module-reference/module-contact)： 100.4.8
+- [magento/module-contact-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-contact-graph-ql)： 100.4.2
+- [magento/module-cookie](https://developer.adobe.com/commerce/php/module-reference/module-cookie)： 100.4.9
+- [magento/module-cron](https://developer.adobe.com/commerce/php/module-reference/module-cron)： 100.4.9
+- [magento/module-csp](https://developer.adobe.com/commerce/php/module-reference/module-csp)： 100.4.8
+- [magento/module-currency-symbol](https://developer.adobe.com/commerce/php/module-reference/module-currency-symbol)： 100.4.7
+- [magento/module-customer](https://developer.adobe.com/commerce/php/module-reference/module-customer)： 103.0.9
+- [magento/module-customer-analytics](https://developer.adobe.com/commerce/php/module-reference/module-customer-analytics)： 100.4.6
+- [magento/module-customer-downloadable-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-customer-downloadable-graph-ql)： 100.4.5
+- [magento/module-customer-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-customer-graph-ql)： 100.4.9
+- [magento/module-customer-import-export](https://developer.adobe.com/commerce/php/module-reference/module-customer-import-export)： 100.4.9
+- [magento/module-deploy](https://developer.adobe.com/commerce/php/module-reference/module-deploy)： 100.4.9
+- [magento/module-developer](https://developer.adobe.com/commerce/php/module-reference/module-developer)： 100.4.9
+- [magento/module-dhl](https://developer.adobe.com/commerce/php/module-reference/module-dhl)： 100.4.8
+- [magento/module-directory](https://developer.adobe.com/commerce/php/module-reference/module-directory)： 100.4.9
+- [magento/module-directory-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-directory-graph-ql)： 100.4.7
+- [magento/module-downloadable](https://developer.adobe.com/commerce/php/module-reference/module-downloadable)： 100.4.9
+- [magento/module-downloadable-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-downloadable-graph-ql)： 100.4.9
+- [magento/module-downloadable-import-export](https://developer.adobe.com/commerce/php/module-reference/module-downloadable-import-export)： 100.4.8
+- [magento/module-eav](https://developer.adobe.com/commerce/php/module-reference/module-eav)： 102.1.9
+- [magento/module-eav-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-eav-graph-ql)： 100.4.6
+- [magento/module-elasticsearch](https://developer.adobe.com/commerce/php/module-reference/module-elasticsearch)： 101.0.9
+- [magento/module-elasticsearch-8](https://developer.adobe.com/commerce/php/module-reference/module-elasticsearch-8)： 101.0.1
+- [magento/module-email](https://developer.adobe.com/commerce/php/module-reference/module-email)： 101.1.9
+- [magento/module-encryption-key](https://developer.adobe.com/commerce/php/module-reference/module-encryption-key)： 100.4.7
+- [magento/module-fedex](https://developer.adobe.com/commerce/php/module-reference/module-fedex)： 100.4.7
+- [magento/module-gift-message](https://developer.adobe.com/commerce/php/module-reference/module-gift-message)： 100.4.8
+- [magento/module-gift-message-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-gift-message-graph-ql)： 100.4.7
+- [magento/module-google-adwords](https://developer.adobe.com/commerce/php/module-reference/module-google-adwords)： 100.4.6
+- [magento/module-google-analytics](https://developer.adobe.com/commerce/php/module-reference/module-google-analytics)： 100.4.5
+- [magento/module-google-gtag](https://developer.adobe.com/commerce/php/module-reference/module-google-gtag)： 100.4.4
+- [magento/module-google-optimizer](https://developer.adobe.com/commerce/php/module-reference/module-google-optimizer)： 100.4.8
+- [magento/module-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql)： 100.4.9
+- [magento/module-graph-ql-cache](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql-cache)： 100.4.6
+- [magento/module-graph-ql-new-relic](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql-new-relic)： 100.4.2
+- [magento/module-graph-ql-resolver-cache](https://developer.adobe.com/commerce/php/module-reference/module-graph-ql-resolver-cache)： 100.4.2
+- [magento/module-grouped-catalog-inventory](https://developer.adobe.com/commerce/php/module-reference/module-grouped-catalog-inventory)： 100.4.6
+- [magento/module-grouped-import-export](https://developer.adobe.com/commerce/php/module-reference/module-grouped-import-export)： 100.4.7
+- [magento/module-grouped-product](https://developer.adobe.com/commerce/php/module-reference/module-grouped-product)： 100.4.9
+- [magento/module-grouped-product-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-grouped-product-graph-ql)： 100.4.9
+- [magento/module-import-export](https://developer.adobe.com/commerce/php/module-reference/module-import-export)： 101.0.9
+- [magento/module-indexer](https://developer.adobe.com/commerce/php/module-reference/module-indexer)： 100.4.9
+- [magento/module-instant-purchase](https://developer.adobe.com/commerce/php/module-reference/module-instant-purchase)： 100.4.8
+- [magento/module-integration](https://developer.adobe.com/commerce/php/module-reference/module-integration)： 100.4.9
+- [magento/module-integration-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-integration-graph-ql)： 100.4.2
+- [magento/module-jwt-framework-adapter](https://developer.adobe.com/commerce/php/module-reference/module-jwt-framework-adapter)： 100.4.5
+- [magento/module-jwt-user-token](https://developer.adobe.com/commerce/php/module-reference/module-jwt-user-token)： 100.4.4
+- [magento/module-layered-navigation](https://developer.adobe.com/commerce/php/module-reference/module-layered-navigation)： 100.4.9
+- [magento/module-login-as-customer](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer)： 100.4.9
+- [magento/module-login-as-customer-admin-ui](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-admin-ui)： 100.4.9
+- [magento/module-login-as-customer-api](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-api)： 100.4.8
+- [magento/module-login-as-customer-assistance](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-assistance)： 100.4.8
+- [magento/module-login-as-customer-frontend-ui](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-frontend-ui)： 100.4.8
+- [magento/module-login-as-customer-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-graph-ql)： 100.4.6
+- [magento/module-login-as-customer-log](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-log)： 100.4.7
+- [magento/module-login-as-customer-page-cache](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-page-cache)： 100.4.8
+- [magento/module-login-as-customer-quote](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-quote)： 100.4.7
+- [magento/module-login-as-customer-sales](https://developer.adobe.com/commerce/php/module-reference/module-login-as-customer-sales)： 100.4.8
+- [magento/module-marketplace](https://developer.adobe.com/commerce/php/module-reference/module-marketplace)： 100.4.7
+- [magento/module-media-content](https://developer.adobe.com/commerce/php/module-reference/module-media-content)： 100.4.7
+- [magento/module-media-content-api](https://developer.adobe.com/commerce/php/module-reference/module-media-content-api)： 100.4.8
+- [magento/module-media-content-catalog](https://developer.adobe.com/commerce/php/module-reference/module-media-content-catalog)： 100.4.7
+- [magento/module-media-content-cms](https://developer.adobe.com/commerce/php/module-reference/module-media-content-cms)： 100.4.7
+- [magento/module-media-content-synchronization](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization)： 100.4.8
+- [magento/module-media-content-synchronization-api](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization-api)： 100.4.7
+- [magento/module-media-content-synchronization-catalog](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization-catalog)： 100.4.6
+- [magento/module-media-content-synchronization-cms](https://developer.adobe.com/commerce/php/module-reference/module-media-content-synchronization-cms)： 100.4.6
+- [magento/module-media-gallery](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery)： 100.4.8
+- [magento/module-media-gallery-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-api)： 101.0.8
+- [magento/module-media-gallery-catalog](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-catalog)： 100.4.6
+- [magento/module-media-gallery-catalog-integration](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-catalog-integration)： 100.4.6
+- [magento/module-media-gallery-catalog-ui](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-catalog-ui)： 100.4.6
+- [magento/module-media-gallery-cms-ui](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-cms-ui)： 100.4.6
+- [magento/module-media-gallery-integration](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-integration)： 100.4.8
+- [magento/module-media-gallery-metadata](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-metadata)： 100.4.7
+- [magento/module-media-gallery-metadata-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-metadata-api)： 100.4.6
+- [magento/module-media-gallery-renditions](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-renditions)： 100.4.7
+- [magento/module-media-gallery-renditions-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-renditions-api)： 100.4.6
+- [magento/module-media-gallery-synchronization](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-synchronization)： 100.4.8
+- [magento/module-media-gallery-synchronization-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-synchronization-api)： 100.4.7
+- [magento/module-media-gallery-synchronization-metadata](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-synchronization-metadata)： 100.4.5
+- [magento/module-media-gallery-ui](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-ui)： 100.4.8
+- [magento/module-media-gallery-ui-api](https://developer.adobe.com/commerce/php/module-reference/module-media-gallery-ui-api)： 100.4.7
+- [magento/module-media-storage](https://developer.adobe.com/commerce/php/module-reference/module-media-storage)： 100.4.8
+- [magento/module-message-queue](https://developer.adobe.com/commerce/php/module-reference/module-message-queue)： 100.4.9
+- [magento/module-msrp](https://developer.adobe.com/commerce/php/module-reference/module-msrp)： 100.4.8
+- [magento/module-msrp-configurable-product](https://developer.adobe.com/commerce/php/module-reference/module-msrp-configurable-product)： 100.4.6
+- [magento/module-msrp-grouped-product](https://developer.adobe.com/commerce/php/module-reference/module-msrp-grouped-product)： 100.4.6
+- [magento/module-multishipping](https://developer.adobe.com/commerce/php/module-reference/module-multishipping)： 100.4.9
+- [magento/module-mysql-mq](https://developer.adobe.com/commerce/php/module-reference/module-mysql-mq)： 100.4.7
+- [magento/module-new-relic-reporting](https://developer.adobe.com/commerce/php/module-reference/module-new-relic-reporting)： 100.4.7
+- [magento/module-newsletter](https://developer.adobe.com/commerce/php/module-reference/module-newsletter)： 100.4.9
+- [magento/module-newsletter-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-newsletter-graph-ql)： 100.4.6
+- [magento/module-offline-payments](https://developer.adobe.com/commerce/php/module-reference/module-offline-payments)： 100.4.7
+- [magento/module-offline-shipping](https://developer.adobe.com/commerce/php/module-reference/module-offline-shipping)： 100.4.8
+- [magento/module-open-search](https://developer.adobe.com/commerce/php/module-reference/module-open-search)： 100.4.3
+- [magento/module-order-cancellation](https://developer.adobe.com/commerce/php/module-reference/module-order-cancellation)： 100.4.2
+- [magento/module-order-cancellation-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-order-cancellation-graph-ql)： 100.4.2
+- [magento/module-order-cancellation-ui](https://developer.adobe.com/commerce/php/module-reference/module-order-cancellation-ui)： 100.4.2
+- [magento/module-page-cache](https://developer.adobe.com/commerce/php/module-reference/module-page-cache)： 100.4.9
+- [magento/module-payment](https://developer.adobe.com/commerce/php/module-reference/module-payment)： 100.4.9
+- [magento/module-payment-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-payment-graph-ql)： 100.4.4
+- [magento/module-paypal](https://developer.adobe.com/commerce/php/module-reference/module-paypal)： 101.0.9
+- [magento/module-paypal-captcha](https://developer.adobe.com/commerce/php/module-reference/module-paypal-captcha)： 100.4.6
+- [magento/module-paypal-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-paypal-graph-ql)： 100.4.7
+- [magento/module-persistent](https://developer.adobe.com/commerce/php/module-reference/module-persistent)： 100.4.9
+- [magento/module-product-alert](https://developer.adobe.com/commerce/php/module-reference/module-product-alert)： 100.4.8
+- [magento/module-product-video](https://developer.adobe.com/commerce/php/module-reference/module-product-video)： 100.4.9
+- [magento/module-quote](https://developer.adobe.com/commerce/php/module-reference/module-quote)： 101.2.9
+- [magento/module-quote-analytics](https://developer.adobe.com/commerce/php/module-reference/module-quote-analytics)： 100.4.8
+- [magento/module-quote-bundle-options](https://developer.adobe.com/commerce/php/module-reference/module-quote-bundle-options)： 100.4.5
+- [magento/module-quote-commerce-ce-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-quote-commerce-ce-graph-ql)： 100.4.0
+- [magento/module-quote-configurable-options](https://developer.adobe.com/commerce/php/module-reference/module-quote-configurable-options)： 100.4.5
+- [magento/module-quote-downloadable-links](https://developer.adobe.com/commerce/php/module-reference/module-quote-downloadable-links)： 100.4.5
+- [magento/module-quote-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-quote-graph-ql)： 100.4.9
+- [magento/module-related-product-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-related-product-graph-ql)： 100.4.6
+- [magento/module-release-notification](https://developer.adobe.com/commerce/php/module-reference/module-release-notification)： 100.4.7
+- [magento/module-remote-storage](https://developer.adobe.com/commerce/php/module-reference/module-remote-storage)： 100.4.7
+- [magento/module-reports](https://developer.adobe.com/commerce/php/module-reference/module-reports)： 100.4.9
+- [magento/module-require-js](https://developer.adobe.com/commerce/php/module-reference/module-require-js)： 100.4.5
+- [magento/module-review](https://developer.adobe.com/commerce/php/module-reference/module-review)： 100.4.9
+- [magento/module-review-analytics](https://developer.adobe.com/commerce/php/module-reference/module-review-analytics)： 100.4.6
+- [magento/module-review-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-review-graph-ql)： 100.4.5
+- [magento/module-robots](https://developer.adobe.com/commerce/php/module-reference/module-robots)： 101.1.5
+- [magento/module-rss](https://developer.adobe.com/commerce/php/module-reference/module-rss)： 100.4.7
+- [magento/module-rule](https://developer.adobe.com/commerce/php/module-reference/module-rule)： 100.4.8
+- [magento/module-sales](https://developer.adobe.com/commerce/php/module-reference/module-sales)： 103.0.9
+- [magento/module-sales-analytics](https://developer.adobe.com/commerce/php/module-reference/module-sales-analytics)： 100.4.6
+- [magento/module-sales-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-sales-graph-ql)： 100.4.9
+- [magento/module-sales-inventory](https://developer.adobe.com/commerce/php/module-reference/module-sales-inventory)： 100.4.6
+- [magento/module-sales-rule](https://developer.adobe.com/commerce/php/module-reference/module-sales-rule)： 101.2.9
+- [magento/module-sales-rule-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-sales-rule-graph-ql)： 100.4.2
+- [magento/module-sales-sequence](https://developer.adobe.com/commerce/php/module-reference/module-sales-sequence)： 100.4.6
+- [magento/module-sample-data](https://developer.adobe.com/commerce/php/module-reference/module-sample-data)： 100.4.7
+- [magento/module-search](https://developer.adobe.com/commerce/php/module-reference/module-search)： 101.1.9
+- [magento/module-security](https://developer.adobe.com/commerce/php/module-reference/module-security)： 100.4.9
+- [magento/module-send-friend](https://developer.adobe.com/commerce/php/module-reference/module-send-friend)： 100.4.7
+- [magento/module-send-friend-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-send-friend-graph-ql)： 100.4.5
+- [magento/module-shipping](https://developer.adobe.com/commerce/php/module-reference/module-shipping)： 100.4.9
+- [magento/module-sitemap](https://developer.adobe.com/commerce/php/module-reference/module-sitemap)： 100.4.8
+- [magento/module-stomp](https://developer.adobe.com/commerce/php/module-reference/module-stomp)： 100.4.5
+- [magento/module-store](https://developer.adobe.com/commerce/php/module-reference/module-store)： 101.1.9
+- [magento/module-store-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-store-graph-ql)： 100.4.7
+- [magento/module-swagger](https://developer.adobe.com/commerce/php/module-reference/module-swagger)： 100.4.8
+- [magento/module-swagger-webapi](https://developer.adobe.com/commerce/php/module-reference/module-swagger-webapi)： 100.4.5
+- [magento/module-swagger-webapi-async](https://developer.adobe.com/commerce/php/module-reference/module-swagger-webapi-async)： 100.4.5
+- [magento/module-swatches](https://developer.adobe.com/commerce/php/module-reference/module-swatches)： 100.4.9
+- [magento/module-swatches-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-swatches-graph-ql)： 100.4.7
+- [magento/module-swatches-layered-navigation](https://developer.adobe.com/commerce/php/module-reference/module-swatches-layered-navigation)： 100.4.5
+- [magento/module-tax](https://developer.adobe.com/commerce/php/module-reference/module-tax)： 100.4.9
+- [magento/module-tax-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-tax-graph-ql)： 100.4.5
+- [magento/module-tax-import-export](https://developer.adobe.com/commerce/php/module-reference/module-tax-import-export)： 100.4.8
+- [magento/module-theme](https://developer.adobe.com/commerce/php/module-reference/module-theme)： 101.1.9
+- [magento/module-theme-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-theme-graph-ql)： 100.4.6
+- [magento/module-translation](https://developer.adobe.com/commerce/php/module-reference/module-translation)： 100.4.9
+- [magento/module-ui](https://developer.adobe.com/commerce/php/module-reference/module-ui)： 101.2.9
+- [magento/module-ups](https://developer.adobe.com/commerce/php/module-reference/module-ups)： 100.4.9
+- [magento/module-url-rewrite](https://developer.adobe.com/commerce/php/module-reference/module-url-rewrite)： 102.0.8
+- [magento/module-url-rewrite-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-url-rewrite-graph-ql)： 100.4.8
+- [magento/module-user](https://developer.adobe.com/commerce/php/module-reference/module-user)： 101.2.9
+- [magento/module-usps](https://developer.adobe.com/commerce/php/module-reference/module-usps)： 100.4.8
+- [magento/module-variable](https://developer.adobe.com/commerce/php/module-reference/module-variable)： 100.4.7
+- [magento/module-vault](https://developer.adobe.com/commerce/php/module-reference/module-vault)： 101.2.9
+- [magento/module-vault-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-vault-graph-ql)： 100.4.5
+- [magento/module-version](https://developer.adobe.com/commerce/php/module-reference/module-version)： 100.4.6
+- [magento/module-webapi](https://developer.adobe.com/commerce/php/module-reference/module-webapi)： 100.4.8
+- [magento/module-webapi-async](https://developer.adobe.com/commerce/php/module-reference/module-webapi-async)： 100.4.7
+- [magento/module-webapi-security](https://developer.adobe.com/commerce/php/module-reference/module-webapi-security)： 100.4.6
+- [magento/module-weee](https://developer.adobe.com/commerce/php/module-reference/module-weee)： 100.4.9
+- [magento/module-weee-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-weee-graph-ql)： 100.4.6
+- [magento/module-widget](https://developer.adobe.com/commerce/php/module-reference/module-widget)： 101.2.9
+- [magento/module-wishlist](https://developer.adobe.com/commerce/php/module-reference/module-wishlist)： 101.2.9
+- [magento/module-wishlist-analytics](https://developer.adobe.com/commerce/php/module-reference/module-wishlist-analytics)： 100.4.7
+- [magento/module-wishlist-graph-ql](https://developer.adobe.com/commerce/php/module-reference/module-wishlist-graph-ql)： 100.4.9
+- magento/page-builder： 1.7.6
+- magento/security-package： 1.1.8
+- magento/theme-adminhtml-backend： 100.4.9
+- magento/theme-frontend-blank： 100.4.9
+- magento/theme-frontend-luma： 100.4.9
 - magento/zend-cache： ^1.16
 - magento/zend-db： ^1.16
 - magento/zend-pdf： ^1.16
 - 独白/独白： ^3.6
 - opensearch-project/opensearch-php： ^2.3
-- pelago/表情符号： ^7.0
-- php： ~8.2.0||~8.3.0||~8.4.0
+- pelago/表情符号： ^8.1
+- php：约8.3.0||~8.4.0||~8.5.0
 - php-amqplib/php-amqplib： ^3.2
+- php-db/phpdb： ^0.4
 - phpseclib/mcrypt_compat： ^2.0
 - phpseclib/phpseclib： ^3.0
+- predis/predis： ^2.0
 - psr/日志： ^2 || ^3
 - ramsey/uuid： ^4.2
-- 交响曲/控制台： ^6.4
-- symfony/intl： ^6.4
-- 交响曲/邮件程序： ^6.4
-- symfony/mime： ^6.4
-- 交响曲/处理： ^6.4
-- symfony/字符串： ^6.4
+- spomky-labs/aes-key-wrap： ^7.0
+- stomp-php/stomp-php： ^5.1
+- 交响曲/缓存： ^7.4
+- 交响曲/控制台： ^7.4
+- symfony/intl： ^7.4
+- 交响曲/邮件程序： ^7.4
+- symfony/mime： ^7.4
+- 交响曲/处理： ^7.4
+- symfony/字符串： ^7.4
 - tedivm/jshrink： ^1.4
 - tubalmartin/cssmin： ^4.1
-- web-token/jwt-framework： ^3.4
+- web-token/jwt-framework： ^4.0
 - webonyx/graphql-php： ^15.0
-- wikimedia/less.php： ^5.0
+- wikimedia/less.php： ^5.5
 
 ## 第三方许可证
 
@@ -396,6 +406,13 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/giggsey/libphonenumber-for-php">gigsey/libphonenumber-for-php</a>
+    </td>
+    <td>库</td>
+    <td>用于解析、格式化、存储和验证国际电话号码的库，Google的libphonenumber的PHP端口。</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/opentelemetry-php/api">开放遥测/api</a>
     </td>
     <td>库</td>
@@ -414,6 +431,13 @@ Magento Open Source使用编辑器管理PHP包。
     </td>
     <td>中继包</td>
     <td>Braintree Magento</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/stomp-php/stomp-php">stomp-php/stomp-php</a>
+    </td>
+    <td>库</td>
+    <td>对PHP的stomp支持</td>
   </tr>
   <tr>
     <td>
@@ -494,7 +518,7 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/firebase/php-jwt">firebase/php-jwt</a>
+      <a href="https://github.com/googleapis/php-jwt">firebase/php-jwt</a>
     </td>
     <td>库</td>
     <td>在PHP中编码和解码JSON Web令牌(JWT)的简单库。 应符合当前规范。</td>
@@ -592,13 +616,6 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mvc">laminas/laminas-mvc</a>
-    </td>
-    <td>库</td>
-    <td>Laminas的事件驱动MVC层，包括MVC应用程序、控制器和插件</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-permissions-acl">laminas/laminas-permissions-acl</a>
     </td>
     <td>库</td>
@@ -610,13 +627,6 @@ Magento Open Source使用编辑器管理PHP包。
     </td>
     <td>库</td>
     <td>ReCaptcha Web服务的OOP包装器</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-router">laminas/laminas路由器</a>
-    </td>
-    <td>库</td>
-    <td>适用于HTTP和控制台应用程序的灵活路由系统</td>
   </tr>
   <tr>
     <td>
@@ -704,6 +714,13 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/php-db/phpdb">php-db/phpdb</a>
+    </td>
+    <td>库</td>
+    <td>数据库抽象层、SQL抽象、结果集抽象，以及RowDataGateway和TableDataGateway实现</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/phpfui/recaptcha">phpfui/recaptcha</a>
     </td>
     <td>库</td>
@@ -743,27 +760,6 @@ Magento Open Source使用编辑器管理PHP包。
     </td>
     <td>Magento-module</td>
     <td>使用Redis的Zend_Cache后端，完全支持标记。</td>
-  </tr>
-  </tbody>
-</table>
-
-### ISC
-
-<table>
-  <thead>
-    <tr>
-      <th>名称</th>
-      <th>类型</th>
-      <th>描述</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>
-      <a href="https://github.com/paragonie/sodium_compat">paragonie/na_compat</a>
-    </td>
-    <td>库</td>
-    <td>纯PHP的libna实现；使用PHP扩展（如果存在）</td>
   </tr>
   </tbody>
 </table>
@@ -820,6 +816,13 @@ Magento Open Source使用编辑器管理PHP包。
     </td>
     <td>库</td>
     <td>任意精度算术库</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/brick/phonenumber">程序块/电话号码</a>
+    </td>
+    <td>库</td>
+    <td>电话号码库</td>
   </tr>
   <tr>
     <td>
@@ -949,6 +952,13 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/giggsey/Locale">千兆位/区域设置</a>
+    </td>
+    <td>库</td>
+    <td>libphonenumber-for-php所需的区域设置函数</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/guzzle/guzzle">guzzlehttp/guzzle</a>
     </td>
     <td>库</td>
@@ -1061,14 +1071,14 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PhpGt/CssXPath">phpgt/cssxpath</a>
+      <a href="https://github.com/phpgt/CssXPath">phpgt/cssxpath</a>
     </td>
     <td>库</td>
     <td>将CSS选择器转换为XPath查询。</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PhpGt/Dom">phpgt/dom</a>
+      <a href="https://github.com/phpgt/Dom">phpgt/dom</a>
     </td>
     <td>库</td>
     <td>新版DOM API。</td>
@@ -1093,6 +1103,13 @@ Magento Open Source使用编辑器管理PHP包。
     </td>
     <td>库</td>
     <td>PHP安全通信库 — RSA、AES、SSH2、SFTP、X.509等的纯PHP实现。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/predis/predis">predis/predis</a>
+    </td>
+    <td>库</td>
+    <td>一种灵活且功能完备的PHP Redis/Valkey客户端。</td>
   </tr>
   <tr>
     <td>
@@ -1229,6 +1246,20 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/cache">symfony/缓存</a>
+    </td>
+    <td>库</td>
+    <td>提供扩展的PSR-6、PSR-16（和标记）实施</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/cache-contracts">symfony/缓存合约</a>
+    </td>
+    <td>库</td>
+    <td>与缓存相关的一般抽象</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/config">symfony/config</a>
     </td>
     <td>库</td>
@@ -1296,13 +1327,6 @@ Magento Open Source使用编辑器管理PHP包。
     </td>
     <td>库</td>
     <td>通过直观的流畅界面查找文件和目录</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/symfony/http-client">symfony/http-client</a>
-    </td>
-    <td>库</td>
-    <td>提供功能强大的方法来同步或异步获取HTTP资源</td>
   </tr>
   <tr>
     <td>
@@ -1411,10 +1435,17 @@ Magento Open Source使用编辑器管理PHP包。
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-php83">symfony/polyfill-php83</a>
+      <a href="https://github.com/symfony/polyfill-php84">symfony/polyfill-php84</a>
     </td>
     <td>库</td>
-    <td>Symfony polyfill将一些PHP 8.3+功能回移植到较低的PHP版本</td>
+    <td>Symfony polyfill将一些PHP 8.4+功能回移植到较低的PHP版本</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-php85">symfony/polyfill-php85</a>
+    </td>
+    <td>库</td>
+    <td>Symfony polyfill将一些PHP 8.5及更高版本功能回移植到较低的PHP版本</td>
   </tr>
   <tr>
     <td>
@@ -1457,6 +1488,13 @@ Magento Open Source使用编辑器管理PHP包。
     </td>
     <td>库</td>
     <td>加载和转储YAML文件</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/thecodingmachine/safe">thecodingmachine/safe</a>
+    </td>
+    <td>库</td>
+    <td>引发异常而不是出错时返回FALSE的PHP核心函数</td>
   </tr>
   <tr>
     <td>

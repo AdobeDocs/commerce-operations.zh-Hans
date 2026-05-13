@@ -3,14 +3,14 @@ title: 配置和使用清漆
 description: 了解如何为Adobe Commerce配置和使用Varnish缓存。 探索HTTP加速、文件存储和性能优化技术。
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1089'
 ht-degree: 0%
 
 ---
 
-# 配置清漆
+# 配置和使用清漆
 
 [清漆缓存](https://www.varnish.org/)是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
 

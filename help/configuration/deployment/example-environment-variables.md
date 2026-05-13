@@ -2,9 +2,9 @@
 title: 使用环境变量的示例
 description: 请参阅有关如何使用环境变量在开发系统中设置共享、系统特定的敏感值的示例。
 exl-id: 98438674-e7f8-4143-9a76-3cc8bf0a73dc
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 87302734f3ff91f0403beac283ff21925d89318d
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
@@ -198,4 +198,4 @@ $_ENV['VARIABLE'] = 'value';
 
    ![检查生产系统中的设置](../../assets/configuration/split-default-domain.png)
 
-<!-- Last updated from includes: 2024-07-18 15:50:54 -->
+<!-- Last updated from includes: 2026-04-17 13:49:36 -->

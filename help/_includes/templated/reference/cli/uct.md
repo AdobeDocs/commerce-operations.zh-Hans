@@ -1,7 +1,7 @@
 ---
-source-git-commit: ef3abc83e2c699ebfbb53ad367aaceb9ecb92491
+source-git-commit: 9d438725593fff02a1af8fd484b9df9b06357ca7
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 
 <!-- The template to render with above values -->
-**版本**： 3.0.26
+**版本**： 3.0.27
 
 此引用包含通过`bin/uct`命令行工具提供的9个命令。
 初始列表是在Adobe Commerce中使用`bin/uct list`命令自动生成的。
@@ -140,11 +140,11 @@ Static installation
 
 Dump the script to a global completion file and restart your shell:
 
-    ./uct/bin/uct completion  | sudo tee /etc/bash_completion.d/uct
+    uct/bin/uct completion  | sudo tee /etc/bash_completion.d/uct
 
 Or dump the script to a local file and source it:
 
-    ./uct/bin/uct completion  > completion.sh
+    uct/bin/uct completion  > completion.sh
 
     # source the file whenever you use the project
     source completion.sh
@@ -157,7 +157,7 @@ Dynamic installation
 
 Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 
-    eval "$(/apps/uct/bin/uct completion )"
+    eval "$(/path/to/uct/bin/uct completion)"
 ```
 
 ### 参数
@@ -189,11 +189,11 @@ bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
 ```text
 The help command displays help for a given command:
 
-  ./uct/bin/uct help list
+  uct/bin/uct help list
 
 You can also output the help in other formats by using the --format option:
 
-  ./uct/bin/uct help --format=xml list
+  uct/bin/uct help --format=xml list
 
 To display the list of available commands, please use the list command.
 ```
@@ -236,19 +236,19 @@ bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```text
 The list command lists all commands:
 
-  ./uct/bin/uct list
+  uct/bin/uct list
 
 You can also display the commands for a specific namespace:
 
-  ./uct/bin/uct list test
+  uct/bin/uct list test
 
 You can also output the information in other formats by using the --format option:
 
-  ./uct/bin/uct list --format=xml
+  uct/bin/uct list --format=xml
 
 It's also possible to get raw list of commands (useful for embedding command runner):
 
-  ./uct/bin/uct list --raw
+  uct/bin/uct list --raw
 ```
 
 ### 参数
@@ -342,7 +342,7 @@ Adobe Commerce vanilla安装目录。
 bin/uct dbschema:diff <current-version> <target-version>
 ```
 
-允许列出两个选定版本之间的Adobe Commerce DB架构差异。 可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2 - p2 | 2.3.3 | 2.3.3 - p1 | 2.3.4 | 2.3.4 - p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5 - p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7 - p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7 - p4 | 2.4.0 | 2.4.0 - p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2 - p2 | 2.4.3 | 2.4.3-p1 | 2.4.3 - p2 | 2.4.3 - p3 | 2.4.4 | 2.4.4 - p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.4 - p4 | 2.4.4 - p5 | 2.4.5 - p2 | 2.4.5 - p3 | 2.4.5 - p4 | 2.4.6 | 2.4.6-p1 | 2.4.6 - p2 | 2.4.7-beta1 | 2.4.4 - p6 | 2.4.5 - p5 | 2.4.6 - p3 | 2.4.7-beta2 | 2.4.4 - p7 | 2.4.5 - p6 | 2.4.6 - p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6 - p5 | 2.4.5-p7 | 2.4.4 - p8 | 2.4.4 - p9 | 2.4.5 - p8 | 2.4.6 - p6 | 2.4.7 - p1 | 2.4.4-p10 | 2.4.5 - p9 | 2.4.6 - p7 | 2.4.7 - p2 | 2.4.4-p11 | 2.4.5-p10 | 2.4.6 - p8 | 2.4.7 - p3 | 2.4.8-beta1 | 2.4.4-p12 | 2.4.5-p11 | 2.4.6 - p9 | 2.4.7 - p4 | 2.4.8-beta2 | 2.4.4-p13 | 2.4.5-p12 | 2.4.6-p10 | 2.4.7 - p5 | 2.4.8 | 2.4.9-alpha2 | 2.4.8 - p2 | 2.4.7 - p7 | 2.4.6-p12 | 2.4.5-p14 | 2.4.4-p15 | 2.4.9-alpha1 | 2.4.8-p1 | 2.4.7 - p6 | 2.4.6-p11 | 2.4.5-p13 | 2.4.4-p14 | 2.4.9-alpha3 | 2.4.8 - p3 | 2.4.7 - p8 | 2.4.6-p13 | 2.4.5-p15 | 2.4.4-p16 | 2.4.9-beta1 | 2.4.8 - p4 | 2.4.7 - p9 | 2.4.6-p14 | 2.4.5-p16 | 2.4.4-p17
+允许列出两个选定版本之间的Adobe Commerce DB架构差异。 可用版本： 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2 - p2 | 2.3.3 | 2.3.3 - p1 | 2.3.4 | 2.3.4 - p1 | 2.3.4 - p2 | 2.3.5 | 2.3.5 - p1 | 2.3.5 - p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7 - p1 | 2.3.7 - p2 | 2.3.7 - p3 | 2.3.7 - p4 | 2.4.0 | 2.4.0 - p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2 - p2 | 2.4.3 | 2.4.3-p1 | 2.4.3 - p2 | 2.4.3 - p3 | 2.4.4 | 2.4.4 - p1 | 2.4.5 | 2.4.4 - p2 | 2.4.5-p1 | 2.4.4 - p3 | 2.4.4 - p4 | 2.4.4 - p5 | 2.4.5 - p2 | 2.4.5 - p3 | 2.4.5 - p4 | 2.4.6 | 2.4.6-p1 | 2.4.6 - p2 | 2.4.7-beta1 | 2.4.4 - p6 | 2.4.5 - p5 | 2.4.6 - p3 | 2.4.7-beta2 | 2.4.4 - p7 | 2.4.5 - p6 | 2.4.6 - p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6 - p5 | 2.4.5-p7 | 2.4.4 - p8 | 2.4.4 - p9 | 2.4.5 - p8 | 2.4.6 - p6 | 2.4.7 - p1 | 2.4.4-p10 | 2.4.5 - p9 | 2.4.6 - p7 | 2.4.7 - p2 | 2.4.4-p11 | 2.4.5-p10 | 2.4.6 - p8 | 2.4.7 - p3 | 2.4.8-beta1 | 2.4.4-p12 | 2.4.5-p11 | 2.4.6 - p9 | 2.4.7 - p4 | 2.4.8-beta2 | 2.4.4-p13 | 2.4.5-p12 | 2.4.6-p10 | 2.4.7 - p5 | 2.4.8 | 2.4.9-alpha2 | 2.4.8 - p2 | 2.4.7 - p7 | 2.4.6-p12 | 2.4.5-p14 | 2.4.4-p15 | 2.4.9-alpha1 | 2.4.8-p1 | 2.4.7 - p6 | 2.4.6-p11 | 2.4.5-p13 | 2.4.4-p14 | 2.4.9-alpha3 | 2.4.8 - p3 | 2.4.7 - p8 | 2.4.6-p13 | 2.4.5-p15 | 2.4.4-p16 | 2.4.9-beta1 | 2.4.8 - p4 | 2.4.7 - p9 | 2.4.6-p14 | 2.4.5-p16 | 2.4.4-p17 | 2.4.9 | 2.4.8 - p5 | 2.4.7-p10 | 2.4.6-p15 | 2.4.5-p17 | 2.4.4-p18
 
 ### 参数
 
@@ -426,7 +426,7 @@ Adobe Commerce安装目录。
 
 #### `--coming-version`, `-c`
 
-定位Adobe Commerce版本。 如果忽略，将使用最新发布的稳定版Adobe Commerce。 可用的Adobe Commerce版本： 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2-p2 \| 2.3.3 \| 2.3.3 - p1 \| 2.3.4 \| 2.3.4 - p1 \| 2.3.4 - p2 \| 2.3.5 \| 2.3.5 - p2 \| 2.3.6 \| 2.3.6 - p1 \| 2.3.7 \| 2.3.7 - p1 \| 2.3.7 - p2 \| 2.3.7 - p3 \| 2.3.7-p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.4-p1 \| 2.4.4-p3 \| 2.4.4-p3 \| 2.4.4-p4 \| 2.4.4-p5 \| 2.4.4-p6 \| 2.4.4-p7 \| 2.4.4-p8 \| 2.4.4-p10 \| 2.4.4-p11 \| 2.4.4-p12 \| 2.4.4-p13 \| 2.4.4-p14 \| 2.4.4-p15 \| 2.4.4-p16 \| 2.4.4-p17 \| 2.4.5 2.4.5-p1 \| 2.4.5-p2 \| 2.4.5-p3 \| 2.4.5-p4 \| 2.4.5-p5 \| 2.4.5-p6 \| 2.4.5-p7 \| 2.4.5-p8 \| 2.4.5-p9 \| 2.4.5-p10 \| 2.4.5-p11 \| 2.4.5-p12 \| 2.4.5-p13 \| 2.4.5-p14 \| 2.4.5-p15 \| 2.4.5-p16 \| 2.4.6 \| 2.4.6-p1 \| 2.4.6-p2 \| 2.4.6-p3 \| 2.4.6-p4 \| 2.4.6-p5 \| 2.4.6-p6 \| 2.4.6-p7 \| 2.4.6-p8 \| 2.4.6-p9 \| 2.4.6-p11 \| 2.4.6-p11 \| 2.6.6 2.4.6-p13 \| 2.4.6-p14 \| 2.4.7-beta1 \| 2.4.7-beta2 \| 2.4.7-beta3 \| 2.4.7 \| 2.4.7-p1 \| 2.4.7-p2 \| 2.4.7-p3 \| 2.4.7-p5 \| 2.4.7-p6 \| 2.4.7-p6 \| 2.4.7-p9 \| 2.4.8 2.4.8-beta2 \| 2.4.8 \| 2.4.8-p1 \| 2.4.8-p2 \| 2.4.8-p3 \| 2.4.8-p4 \| 2.4.9-alpha1 \| 2.4.9-alpha2 \| 2.4.9-alpha3 \| 2.4.9-beta1
+定位Adobe Commerce版本。 如果忽略，将使用最新发布的稳定版Adobe Commerce。 可用的Adobe Commerce版本： 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2-p2 \| 2.3.3 \| 2.3.3 - p1 \| 2.3.4 \| 2.3.4 - p1 \| 2.3.4 - p2 \| 2.3.5 \| 2.3.5 - p2 \| 2.3.6 \| 2.3.6 - p1 \| 2.3.7 \| 2.3.7 - p1 \| 2.3.7 - p2 \| 2.3.7 - p3 \| 2.3.7-p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.4-p1 \| 2.4.4-p3 \| 2.4.4-p3 \| 2.4.4-p4 \| 2.4.4-p5 \| 2.4.4-p6 \| 2.4.4-p7 \| 2.4.4-p8 \| 2.4.4-p9 \| 2.4.4-p10 \| 2.4.4-p11 \| 2.4.4-p12 \| 2.4.4-p13 \| 2.4.4-p14 \| 2.4.4-p15 \| 2.4.4-p16 \| 2.4.4-p17 \| 2.4.4-p18 \| 2.4.5 \| 2.4.5-p1 \| 2.4.5-p2 \| 2.4.5-p3 \| 2.4.5-p4 \| 2.4.5-p5 \| 2.4.5-p6 \| 2.4.5-p7 \| 2.4.5-p9 \| 2.4.5-p10 \| 2.4.5-p11 \| 2.4.5-p12 \| 2.4.5-p13 2.4.5-p14 \| 2.4.5-p15 \| 2.4.5-p16 \| 2.4.5-p17 \| 2.4.6 \| 2.4.6-p1 \| 2.4.6-p2 \| 2.4.6-p3 \| 2.4.6-p5 \| 2.4.6-p6 \| 2.4.6-p6 \| 2.4.6-p8 \| 2.4.6-p9 \| 2.4.6-p10 2.4.6-p11 \| 2.4.6-p12 \| 2.4.6-p13 \| 2.4.6-p14 \| 2.4.6-p15 \| 2.4.7-beta1 \| 2.4.7-beta2 \| 2.4.7-beta3 \| 2.4.7 \| 2.4.7-p1 \| 2.4.7-p2 \| 2.4.7-p4 \| 2.4.7-p5 \| 2.4.7-p6 2.4.7-p7 \| 2.4.7-p8 \| 2.4.7-p9 \| 2.4.7-p10 \| 2.4.8-beta1 \| 2.4.8-beta2 \| 2.4.8 \| 2.4.8-p2 \| 2.4.8-p2 \| 2.4.8-p4 \| 2.4.8-p5 \| 2.4.9-alpha1 \| 2.4.9-alpha2 \| 2.4.9-alpha3 \| 2.4.9-beta1 \| 2.4.9
 
 - 接受值
 

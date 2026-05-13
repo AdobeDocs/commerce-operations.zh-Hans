@@ -1,16 +1,16 @@
 ---
-title: 配置Web服务器
+title: 为清漆缓存配置Web服务器
 description: 了解如何配置Web服务器以使用Adobe Commerce的Varnish缓存。 了解端口配置和设置要求。
 feature: Configuration, Cache, Install, Logs
 exl-id: b31179ef-3c0e-4a6b-a118-d3be1830ba4e
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
 
-# 配置Web服务器
+# 配置Web服务器以进行清漆缓存
 
 将Web服务器配置为在默认端口80以外的端口上侦听，因为Varnish直接响应传入的HTTP请求，而不是Web服务器。
 

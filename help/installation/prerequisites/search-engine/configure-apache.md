@@ -3,7 +3,7 @@ title: 为搜索引擎配置Apache
 description: 按照以下步骤使用Apache Web Server配置搜索引擎，以进行Adobe Commerce的内部安装。
 feature: Install, Search
 exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 87302734f3ff91f0403beac283ff21925d89318d
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 0%
@@ -211,4 +211,4 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
 
 {{$include /help/_includes/verify-secure-communication.md}}
 
-<!-- Last updated from includes: 2024-07-18 15:50:54 -->
+<!-- Last updated from includes: 2026-04-17 13:49:36 -->

@@ -1,18 +1,18 @@
 ---
-title: 配置Valkey
-description: 了解如何配置Valkey缓存以优化Adobe Commerce性能。 了解功能、设置步骤和配置最佳实践。
+title: 安装和设置Valkey
+description: 了解如何使用Adobe Commerce安装和配置Valkey以进行缓存和会话存储。 发现优化和性能调整的选项。
 feature: Configuration, Cache
 exl-id: 12dbc171-3df6-4413-869b-a3450b5647b4
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: de613310ad701dd594a6ee8fcd973aa2c3769870
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
 
-# 配置Valkey
+# 安装和设置Valkey
 
-Valkey功能包括：
+Valkey是一个开源、与Redis兼容的内存中数据存储，可用作缓存后端和会话存储。 主要功能包括：
 
 - PHP会话存储
 - 无`foreach`循环的基于标记的缓存清理
@@ -22,9 +22,9 @@ Valkey功能包括：
 
 要安装和配置Valkey软件，请查阅以下资源：
 
-- [下载Valkey页](https://valkey.io/download/)
-- [Valkey快速入门](https://valkey.io/topics/quickstart/)
-- [Valkey文档页](https://valkey.io/docs)
+- [下载Valkey页面](https://valkey.io/download/){target="_blank"}
+- [Valkey快速入门](https://valkey.io/topics/quickstart/){target="_blank"}
+- [Valkey文档页面](https://valkey.io/docs){target="_blank"}
 
 ## 设置Valkey配置
 
@@ -34,7 +34,7 @@ Valkey功能包括：
 
 Adobe建议为会话启用持久性以将Valkey数据复制到磁盘。 可以使用Valkey数据库备份(RDB)快照或仅附加文件(AOF)持久性日志。
 
-- **RDB** （Valkey数据库）快照在给定时间后将完整数据库存储在转储文件中，该时间自上次保存以来已更改最小数量的键。 使用`save`文件中的`valkey.conf`设置配置此设置。
+- **RDB** （Valkey数据库）快照在给定时间后将完整数据库存储在转储文件中，该时间自上次保存以来已更改最小数量的键。 使用`valkey.conf`文件中的`save`设置配置此设置。
 
 - **仅附加文件** (AOF)将发送到Valkey的每个写入操作存储在日志文件中。 Valkey仅在重新启动时读取此文件，并使用它恢复原始数据集。
 

@@ -2,7 +2,7 @@
 title: 设置操作模式
 description: 了解如何在开发人员和生产人员之间设置Adobe Commerce操作模式。 了解模式切换命令和安全含义。
 exl-id: 62d183fa-d4ff-441d-b8bd-64ef5ae10978
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
@@ -161,6 +161,6 @@ Enabled default mode.
 
 ### 从任何位置运行CLI命令
 
-[从任何位置运行CLI命令](../cli/config-cli.md#config-install-cli-first)。
+[从任何位置运行CLI命令](../cli/config-cli.md#prerequisites)。
 
 如果尚未将`<Commerce-install-directory>/bin`添加到系统`PATH`，则单独运行该命令时可能会出错。

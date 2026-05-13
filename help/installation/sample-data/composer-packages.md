@@ -3,7 +3,7 @@ title: 下载示例数据编辑器包
 description: 按照以下步骤使用编辑器PHP包管理器安装Adobe Commerce示例数据。
 feature: Install, Deploy
 exl-id: 735591af-a152-4476-9fa6-e31c4bab3ba8
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 87302734f3ff91f0403beac283ff21925d89318d
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 0%
@@ -66,4 +66,4 @@ You must be using the interactive console to authenticate
 
 {{$include /help/_includes/sample-data-complete.md}}
 
-<!-- Last updated from includes: 2022-09-08 11:33:05 -->
+<!-- Last updated from includes: 2026-04-17 13:49:36 -->

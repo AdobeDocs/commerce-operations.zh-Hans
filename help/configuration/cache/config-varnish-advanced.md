@@ -3,7 +3,7 @@ title: 高级清漆配置
 description: 了解如何为Adobe Commerce配置高级清漆功能，包括运行状况检查、宽限和saint模式。 了解VCL优化技术。
 feature: Configuration, Cache
 exl-id: 178bd675-6ed0-40cc-9455-08a11b32c054
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 0%
