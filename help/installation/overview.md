@@ -1,11 +1,11 @@
 ---
 title: 内部部署安装概述
-description: 了解Adobe Commerce的内部安装过程。 了解服务器要求、设置步骤和部署最佳实践。
+description: 了解 Adobe Commerce 的内部部署安装流程。 了解服务器要求、设置步骤以及部署最佳做法。
 exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: ee1041f3f7ea0ce7cdda2ce7a405d65a24352b4f
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 0%
+source-wordcount: '540'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >要成功继续，您应该具有中级技术知识和服务器访问权限。
 
-安装程序将创建一个功能齐全的Adobe Commerce商店，该商店具有面向客户的店面[和](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/storefront/storefront)管理面板[。 &#x200B;](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/admin/admin)在开始该过程之前，必须准备好数据库凭据、域信息和验证密钥。
+安装程序将创建一个功能齐全的Adobe Commerce商店，该商店具有面向客户的店面[和[管理面板](https://experienceleague.adobe.com/en/docs/commerce-admin/start/admin/admin)。 ](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront)在开始该过程之前，必须准备好数据库凭据、域信息和验证密钥。
 
 ## 商户责任
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 下图说明了为内部部署环境安装Adobe Commerce时涉及的主要步骤：
 
-![安装的工作原理](../assets/installation/on-premises-install.drawio.svg)
+![安装的工作原理](../assets/installation/on-premises-install.png)
 
 ### 设置服务器环境
 
