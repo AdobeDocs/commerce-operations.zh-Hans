@@ -73,7 +73,7 @@ _AC-1608 - [GitHub问题](https://github.com/magento/magento2/issues/34342) - [G
 
 _AC-6419 - [GitHub问题](https://github.com/magento/magento2/issues/35934) - [GitHub代码贡献](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### `/V1/order/{orderId}/ship` API终结点中的内部服务器错误
+#### `/V1/order/&lbrace;orderId&rbrace;/ship` API终结点中的内部服务器错误
 
 系统现在修复了`/V1/order/{orderId}/ship` API端点中的内部服务器错误，并返回400错误，因为请求格式不正确。
 
