@@ -1,7 +1,7 @@
 ---
-source-git-commit: 726f78414fa49a9d5d2ee4f1b43e718107039530
+source-git-commit: 8b631aabebcc37a793d8dda60af0c9194c269e36
 workflow-type: tm+mt
-source-wordcount: '2622'
+source-wordcount: '2623'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
       <td><p>添加了早期Commerce版本的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>可折叠部分，其中包含参考表以及针对较旧Adobe Commerce版本的MySQL 8.0 / Elasticsearch 7.17支持终止指南。</p>
 </td>
       <td>
-        技术
+        技术，反馈
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/07e7c6904ead0c730597bc6d0899f4c988b7725b">提交</a></td>
     </tr>
