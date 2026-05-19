@@ -13,11 +13,12 @@ role: Admin, Developer
 solution: Commerce
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+usetq: true
 solution-title: Commerce
 topic: Administration, Commerce, Development
 type: Documentation
 badgePaas: label="仅限PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
-source-git-commit: 7cc8aed1a128e22fc588e9c8fb8ff6fa4a4b75b1
+source-git-commit: 1c6e6ee398f55823cbbcd7aa8a69507f769a15d2
 workflow-type: tm+mt
 source-wordcount: 176
 ht-degree: 0%
