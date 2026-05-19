@@ -1,7 +1,7 @@
 ---
-source-git-commit: d70c7f4ea201e0073588f879d19a29ea11962244
+source-git-commit: 04ed1df1fa8601e121811661b81a86672422b639
 workflow-type: tm+mt
-source-wordcount: '36744'
+source-wordcount: '36741'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ _AC-1608 - [GitHub问题](https://github.com/magento/magento2/issues/34342) - [G
 
 _AC-6419 - [GitHub问题](https://github.com/magento/magento2/issues/35934) - [GitHub代码贡献](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### `/V1/order/&lbrace;orderId&rbrace;/ship` API终结点中的内部服务器错误
+#### `/V1/order/{orderId}/ship` API终结点中的内部服务器错误
 
 系统现在修复了`/V1/order/{orderId}/ship` API端点中的内部服务器错误，并返回400错误，因为请求格式不正确。
 
@@ -707,7 +707,7 @@ _ACP2E-4675 - [GitHub代码贡献](https://github.com/magento/magento2/commit/c5
 
 #### [云]图像路径在Pagebuilder中第二次编辑时为绝对路径
 
-修复了页面生成器文本内联编辑在再次编辑图像后可能会保存绝对媒体图像URL，而不是保留便携的{{media url=...}}指令的问题。
+修复了页面生成器文本内联编辑在再次编辑图像后可能会保存绝对媒体图像URL，而不是保留便携的`{{media url=...}}`指令的问题。
 
 _ACP2E-4698 - [GitHub代码贡献](https://github.com/magento/magento2-page-builder/commit/5fd20dbb)_
 
@@ -2077,7 +2077,7 @@ _AC-11511 - [GitHub代码贡献](https://github.com/magento/magento2/commit/528a
 
 _AC-13535 - [GitHub代码贡献](https://github.com/magento/magento2/commit/68a45d0a)_
 
-#### 客户管理员上的[管理员][Customer]密码重置失败
+#### 客户管理员上的`[Admin][Customer]`密码重置失败
 
 修复了从管理面板重置客户密码导致系统错误和页面崩溃的问题。 密码重置现在可以正常工作并发送重置链接，而不会出现错误，即使在涉及存储更改的边缘情况下也是如此。
 
@@ -3609,7 +3609,7 @@ _ACP2E-4324 - [GitHub代码贡献](https://github.com/magento/magento2/commit/26
 
 _ACP2E-4345 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0a3b7032)_
 
-#### [CLOUD][CLOUD] [Mainline] sales_clean_quotes getSize()瓶颈
+#### `[CLOUD][B2B]` `[Mainline]` sales_clean_quotes getSize()瓶颈
 
 提高sales_clean_quotes cron作业的性能。
 
@@ -4167,7 +4167,7 @@ _ACP2E-4226_
 
 #### 无法在计划更新预览中的网站之间导航
 
-在此修复之前，当尝试预览具有自定义域的商店的内容时，计划的更新预览将中断。 进行此修复后，可以按原样预览自定义存储域，并在预览iframe中导航。 该修复涵盖了产品、类别、CMS页面和CMS块，并支持使用[Adobe Commerce变量和标记标记](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/variables/markup-tags)中记录的`{{store url}}`标记标记的导航链接。
+在此修复之前，当尝试预览具有自定义域的商店的内容时，计划的更新预览将中断。 进行此修复后，可以按原样预览自定义存储域，并在预览iframe中导航。 该修复涵盖了产品、类别、CMS页面和CMS块，并支持使用[Adobe Commerce变量和标记标记](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags)中记录的`{{store url}}`标记标记的导航链接。
 
 _ACP2E-4308 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0a3b7032)_
 
