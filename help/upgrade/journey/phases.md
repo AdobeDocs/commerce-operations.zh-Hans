@@ -2,7 +2,7 @@
 title: 升级历程阶段
 description: 了解Adobe Commerce项目升级历程的各个阶段。
 exl-id: c0e39102-5f37-47cb-9792-9eeb50707ec8
-source-git-commit: 4c84710da62fbb31214a0de2adc8adbd68880a76
+source-git-commit: ee1041f3f7ea0ce7cdda2ce7a405d65a24352b4f
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -17,4 +17,4 @@ ht-degree: 0%
 - [年度计划](annual-planning.md)
 - [实现](implementation.md)
 
-![升级历程阶段](../../assets/upgrade-guide/upgrade-journey-phases.svg)
+![升级历程阶段](../../assets/upgrade-guide/upgrade-journey-phases.png)

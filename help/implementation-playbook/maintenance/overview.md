@@ -3,9 +3,9 @@ title: 维护和支持概述
 description: 正确维护和支持您新启动的Adobe Commerce实施。
 exl-id: 5a104148-74f1-469b-84ca-9bce740a7865
 feature: Deploy
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: ee1041f3f7ea0ce7cdda2ce7a405d65a24352b4f
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 下图显示了成功过渡结果中将包含的阶段和活动：
 
-![显示过渡过程各个阶段的图表](../../assets/playbooks/transition-diagram.svg)
+![显示过渡过程各个阶段的图表](../../assets/playbooks/transition-diagram.png)
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: 客户个人信息参考（版本1.x）
 description: 了解Magento 1.x中客户个人信息的数据流和数据库实体映射。
 exl-id: 8b01418d-8ca1-48fc-9577-a324ed3109d1
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ee1041f3f7ea0ce7cdda2ce7a405d65a24352b4f
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 客户登录并查看多个不同的页面或结帐时，Commerce会加载客户信息。
 
-![前端数据访问点](../../assets/security-compliance/frontend-data-access-points.svg)
+![前端数据访问点](../../assets/security-compliance/frontend-data-access-points.png)
 
 ### 后端数据入口点
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 当商家查看多种类型的网格、单击网格查看详细信息和执行各种其他任务时，Commerce会加载客户信息。
 
-![后端数据访问点](../../assets/security-compliance/backend-data-access-points.svg)
+![后端数据访问点](../../assets/security-compliance/backend-data-access-points.png)
 
 ## 数据库实体
 
