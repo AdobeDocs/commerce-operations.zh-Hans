@@ -3,9 +3,9 @@ title: 为默认缓存和页面缓存配置Redis
 description: 了解如何将Redis配置为Adobe Commerce的默认和页面缓存后端。 发现CLI命令、 env.php设置和连接验证。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+source-git-commit: d82061ad2fa4676bd8fa71a9d34a954444eb0f54
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -66,8 +66,19 @@ bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-<parame
 | `cache-backend-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
 | `cache-backend-redis-db` | 数据库 | 如果默认缓存和全页缓存都使用Redis，则此为必填字段。 指定其中一个高速缓存的数据库编号；另一个高速缓存默认使用0。<br><br>**重要提示**：如果对多种高速缓存类型使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
 | `cache-backend-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一： `auth`命令，该命令要求客户端进行身份验证以访问数据库。 密码直接在Redis的配置文件中配置： `/etc/redis/redis.conf` | |
-| `cache-backend-redis-use-lua` | use_lua | 启用或禁用Lua。 <br><br>**Lua**： Lua允许在Redis内运行部分应用程序逻辑，从而提高性能并通过原子执行确保数据一致性。 | `0` |
-| `cache-backend-redis-use-lua-on-gc` | use_lua_on_gc | 为垃圾收集启用或禁用Lua。 <br><br>**Lua**： Lua允许在Redis内运行部分应用程序逻辑，从而提高性能并通过原子执行确保数据一致性。 | `1` |
+| `cache-backend-redis-use-lua` | use_lua | 为所有redis操作启用或禁用Lua脚本。 <br><br>**默认值：保留在`0`。** 默认情况下，Lua模式处于禁用状态，以防止在启用Lua时捆绑的Redis库(1.17.x)出现的已知性能衰退和GraphQL缓存缺失问题。 | `0` |
+| `cache-backend-redis-use-lua-on-gc` | use_lua_on_gc | 启用或禁用垃圾回收的Lua脚本（`backend_clean_cache` cron作业）。 <br><br>**默认值：保留在`1`。** 特意启用以确保在GC期间对原子标记集进行清理。 如果没有它，当`backend_clean_cache` cron与缓存保存操作同时运行时，可能会发生争用情况，使缓存条目在缓存标记索引中没有相应的记录。 这会导致基于标记的失效静默地失败 — 例如，更新产品价格可能不会使产品缓存失效，而是需要完全缓存刷新。 | `1` |
+
+### Lua模式
+
+启用后，Lua模式将多个Redis操作（缓存写入、标记更新、垃圾回收）捆绑到通过`EVALSHA`在服务器端执行的单个原子脚本中。 这样可防止并发请求中的交错，例如，确保将缓存条目及其标记成员资格写入在一起。
+
+>[!WARNING]
+>
+>如果不了解Adobe Commerce版本的影响，请勿更改`use_lua`和`use_lua_on_gc`的默认值：
+>
+>- **`use_lua`**：在Adobe Commerce 2.4.7或2.4.8（库`colinmollenhour/cache-backend-redis` 1.17.1）中启用此项可能会导致缓存损坏和GraphQL缓存丢失问题。
+>- **`use_lua_on_gc`**：在Adobe Commerce 2.4.8上禁用此项将删除垃圾收集期间的原子保护，并且可能导致基于标记的缓存失效静默失败，需要完全缓存刷新才能恢复。
 
 ## 示例命令（默认缓存）
 
