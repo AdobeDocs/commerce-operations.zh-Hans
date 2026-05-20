@@ -3,7 +3,8 @@ user-guide-title: 发行信息
 user-guide-description: 在一个位置访问Adobe Commerce修补程序和服务的所有发行信息。
 feature: Release Notes
 recommendations: noDisplay, noCatalog
-source-git-commit: 2b794767cf1901eb9dfedd8bf3977848d1851a70
+nudge: true
+source-git-commit: c8fa72ef4b5bb6f9a2d82e4e9840f683afb8ca54
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 34%
@@ -60,4 +61,4 @@ ht-degree: 34%
 - 包 {#packages}
    - [Adobe Commerce](packages/adobe-commerce.md)
    - [Magento Open Source](packages/magento-open-source.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
