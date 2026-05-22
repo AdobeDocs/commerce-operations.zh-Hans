@@ -1,7 +1,7 @@
 ---
-source-git-commit: 04ed1df1fa8601e121811661b81a86672422b639
+source-git-commit: 0d07af38e1af9331924c109356126a1bfa96156b
 workflow-type: tm+mt
-source-wordcount: '36741'
+source-wordcount: '36655'
 ht-degree: 0%
 
 ---
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ## 修复了v2.4.9中的问题
 
-我们已在Adobe Commerce 2.4.9核心代码中修复了667个问题。 此版本中包含的已修复问题的子集如下所述。
+我们已在Adobe Commerce 2.4.9核心代码中修复了666个问题。 此版本中包含的已修复问题的子集如下所述。
 
 ### API
 
@@ -2095,7 +2095,7 @@ _AC-15336 - [GitHub代码贡献](https://github.com/magento/magento2/commit/68a4
 
 #### 编译已禁用模块的代码
 
-此拉取请求转义在代码编译之前禁用了模块。
+已更改`setup:di:compile`的行为以不再编译已禁用模块的代码。
 
 _AC-10933 - [GitHub问题](https://github.com/magento/magento2/issues/38241) - [GitHub代码贡献](https://github.com/magento/magento2/pull/39723)_
 
@@ -2214,15 +2214,6 @@ _AC-14312 - [GitHub问题](https://github.com/magento/magento2/issues/39593) - [
 AC-14424
 
 _AC-14424 - [GitHub代码贡献](https://github.com/magento/magento2/commit/7bdafaa2)_
-
-#### Magento 2.4.8使用不遵循语义版本控制的开发包
-
-Magento 2.4.8需要开发版本的pdeat/pdepend和phpmd/phpmd (3.x-dev)才能兼容PHP 8.4。
-这些开发版本与第三方工具冲突，这些工具需要符合SemVer的包，从而阻止某些升级。
-临时解决方法是为composer.json中的开发版本别名（例如，“3.x-dev as 3.99.0”），以便在满足语义版本控制的同时允许兼容性。
-这可确保PHP 8.4的支持并避免冲突，直到稳定发行版可用。
-
-_AC-14519 - [GitHub问题](https://github.com/magento/magento2/issues/39796)_
 
 #### 下载配送标签后，发现发现部分配送数量与运费和包装费不符。
 
