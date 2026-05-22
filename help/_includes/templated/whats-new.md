@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8b631aabebcc37a793d8dda60af0c9194c269e36
+source-git-commit: d90419967a22835efff29ff609caea342a86a438
 workflow-type: tm+mt
-source-wordcount: '2623'
+source-wordcount: '2686'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,66 @@ ht-degree: 0%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年5月22日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/adobe-commerce/2-4-9">Adobe Commerce 2.4.9发行说明</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/magento-open-source/2-4-9">Magento Open Source 2.4.9发行说明</a>：阐明了AC-10933 <code class="language-plaintext highlighter-rouge">setup:di:compile</code>修复，删除了已取消的修复AC-14519，并调整了修复问题计数。<br /><em>点数： <a href="https://github.com/hostep">hostep</a></em></p>
+</td>
+      <td>
+        反馈，技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0e5a69a282839a393d6eb873af9938208706af50">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737">AC-10737的QPT 1.1.79修复的详细说明： Bin/magento安装程序:db:状态命令无法识别JSON数据类型</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9aad978f42697f74ebd7c8f401e45b4780bd5038">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年5月20日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4601">ACP2E-4601的QPT 1.1.79修复的详细说明：重新保存付款授权交易自引用parent_id并触发无限循环/OOM</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3fe9730b1954a07d9ef4a405ee75fcde9511e09d">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy">软件生命周期策略</a>，其中包含Cloud版本升级实施日期、支持期定义（包括仅限安全的过渡期）、适用于2.4.4-2.4.9的扩展支持终止表、PHP PCI指南，以及迁移到Adobe Commerce as a Cloud Service或在PaaS上升级的路径。</p>
+</td>
+      <td>
+        重大更新
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/cd0f27ae6a8dcec9b25af15386d8350c22d2fb95">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年5月13日
 
@@ -497,72 +557,6 @@ ht-degree: 0%
         技术，反馈
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c96e5b397a2ffee8fadaf638e721799b40d320d3">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年3月19日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69319">ACSD-69319的QPT 1.1.76修复的详细说明：当子产品在自定义源</a>下有库存时，捆绑价格未正确索引。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7646d46e37385cf0a2bfbee6de82410ca54629a1">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年3月18日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69086">ACSD-69086的QPT 1.1.76修复的详细说明：由于不支持的数据库版本检查</a>，在MariaDB 10.11上安装失败。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/016d24d990492d009677c218b253ae88c21634e6">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年3月17日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69331">ACSD-69331的QPT 1.1.76修复程序的详细说明：媒体集中的内容创建者无法创建仅具有<code class="language-plaintext highlighter-rouge">create_folder</code>权限的文件夹。 修复后，他们可以按预期创建文件夹</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/40a14de0a67a0c373dcbb497f1893a98322435b3">提交</a></td>
     </tr>
   </tbody>
 </table>
