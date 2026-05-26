@@ -3,7 +3,7 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: 5b81bd7baa4b00a9100c3e01a20a2b0189b85f92
+source-git-commit: 26f4a5c5a23e3df9448898b57495e60e2e51133a
 workflow-type: tm+mt
 source-wordcount: '30379'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
@@ -63,7 +63,7 @@ ht-degree: 0%
 * **ACP2E-4732**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了当changelog表中的version_id列达到最大值时，具有大量更新的客户停止部分索引的问题。
 * **ACP2E-4763**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了以下问题：当目录价格设置为“含税”时，由于应用了两次税，GraphQL客户订单查询会返回夸大的original_price_include_tax和original_row_total_include_tax值。
 * **ACSD-60989**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过声明性架构修改带有外键的列会在MariaDB上导致错误的问题。
-* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050&lbrace;37**
+* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050{37**
 * 已替换的修补程序： **ACSD-58446**、**ACSD-67904**
 
 ## v1.1.77 {#v1-1-77}
@@ -745,7 +745,7 @@ ht-degree: 0%
 * **ACSD-51792**（适用于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.6） — 修复了在启用[!DNL Google Tag Manager] 4时页面没有展示事件的问题。
 * **ACSD-51471**（对于Adobe Commerce >=2.4.3 &lt;2.4.7） — 修复了以下问题：对于使用简单产品的捆绑产品，管理员用户无法为其保存计划更新，而该产品本身具有计划更新。
 * **ACSD-51700**（适用于Adobe Commerce和Magento Open Source >=2.4.3 &lt;2.4.7） — 修复了在管理员的可下载产品编辑页面上切换商店视图时发生的错误。
-* **ACSD-51120**（对于Adobe Commerce >=2.3.7 &lt;2.4.3） — 修复了以下问题：对于包含通过暂存更新更新更新的GraphQL块的GET页面，未清除CMSCMS请求缓存。
+* **ACSD-51120**（对于Adobe Commerce >=2.3.7 &lt;2.4.3） — 修复了以下问题：对于包含通过暂存更新更新更新的GraphQL块的CMS页面，未清除CMS GET请求缓存。
 * **ACSD-51240**（对于Adobe Commerce >=2.4.4 &lt;2.4.6） — 修复了通过公司注册表进行注册时上传文件缺失的问题。
 * **ACSD-51907**（对于Adobe Commerce >=2.4.2 &lt;2.4.3） — 修复了受限管理员用户无法创建包含离线退款的贷项通知单的问题。
 * **ACSD-52148**（对于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.4） — 修复了[!DNL Google V3 reCAPTCHA]管理员登录偶尔失败的问题。
@@ -991,7 +991,7 @@ ht-degree: 0%
 * **MDVA-40961** （适用于Adobe Commerce和Magento Open Source的&#x200B;*>=2.4.3 &lt;2.4.4*） — 修复了当购物车中已有最小数量的项目时，无法将其他项目添加到购物车的问题。
 * **MDVA-44887** （*用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.5*） — 修复了“管理”面板中的&#x200B;*未捕获的语法错误：意外的令牌“const”*&#x200B;错误。
 * **MDVA-43718** （*用于Adobe Commerce和Magento Open Source >=2.3.0 &lt;2.4.5*） — 修复&#x200B;*使用者无权访问%资源。* 从自定义集成访问共享目录时出错。
-* **MDVA-44660** （*用于Adobe Commerce和Magento Open Source >=2.4.2-p1 &lt;2.4.5*） — 修复了无法将``` ` ```重音符号用于客户名字和姓氏的问题。
+* **MDVA-44660** （*用于Adobe Commerce和Magento Open Source >=2.4.2-p1 &lt;2.4.5*） — 修复了无法对客户的名字和姓氏使用重音符号字符(\&#39;)的问题。
 * **MDVA-40896** （*用于Adobe Commerce和Magento Open Source >=2.4.3 &lt;2.4.4*） — 修复了异步产品批量API中的&#x200B;*错误：类型错误：传递到Magento的参数3*&#x200B;错误。
 * **MDVA-38559** （*用于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.3*） — 修复了具有多个订阅的客户的&#x200B;*/V1/customers/search API*&#x200B;错误。
 * **MDVA-44533** （*适用于Adobe Commerce和Magento Open Source >=2.3.1 &lt;2.4.4*） — 修复了将折扣错误地应用于捆绑包子产品的问题。
@@ -1373,7 +1373,7 @@ ht-degree: 0%
 * **MDVA-31242** （*适用于Adobe Commerce >=2.3.0 &lt;2.4.1，带有B2B扩展*） — 修复了贷项通知单网格中显示错误货币符号的问题。
 * **MDVA-31295** （*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*） — 修复了完成部分订单并对项目征税时未计算奖励点数的问题。
 * **MDVA-30112** （*适用于Adobe Commerce >=2.3.4 &lt;2.4.2*） — 修复了订单数超过&#x200B;*bunch-size*&#x200B;值的问题，Adobe Commerce将状态为&#x200B;*待处理*&#x200B;的订单视为不一致。
-* **MDVA-31150** （*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*） — 修复了GET发票Rest API调用未返回商店信用卡和礼品卡余额的问题，当时，发票是通过Rest API调用过帐的，并且订单部分由商店信用卡和礼品卡帐户支付。
+* **MDVA-31150** （*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*） — 修复了使用Rest API调用过帐发票，并且使用商店信用卡和礼品卡帐户支付部分订单时，GET Invoice Rest API调用未返回商店信用卡和礼品卡余额的问题。
 * **MDVA-30963** （*适用于Adobe Commerce >=2.3.2 &lt;2.4.2*） — 修复了以下问题：产品筛选结果设置为仅包含为Admin中的&#x200B;*所有商店视图*&#x200B;范围指定的值，其中包括在商店视图级别上覆盖了值的产品。
 * **MDVA-29954** (*用于Adobe Commerce >=2.3.0 &lt;2.3.6 || 2.4.0 || 2.4.2，带有B2B扩展*) — 修复了&#x200B;*新的公司注册请求*&#x200B;和&#x200B;*您已链接到公司*&#x200B;电子邮件从错误地址发送的问题。
 * **MDVA-28357** (*用于Adobe Commerce >=2.3.2 &lt;2.3.6 || >=2.4.0 &lt;2.4.1*) — 将标准分析器替换为[!DNL ElasticSearch]索引中SKU字段的自定义分析器，并使用关键字tokenizer ，以使通配符搜索查询适用于包含连字符(“ — ”)的SKU。
