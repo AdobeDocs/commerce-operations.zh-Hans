@@ -2,7 +2,7 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 891f738f4a3db4e361984d11585f3679068c8ced
+source-git-commit: 091df8b7f71edd862cbee9583fb379e29adbb8f2
 workflow-type: tm+mt
 source-wordcount: '9978'
 ht-degree: 0%
@@ -700,7 +700,7 @@ ht-degree: 0%
          - [ACSD-58471：计划目录价格规则时，无法在产品详细信息页面上加载动态内容](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page.md)
          - [ACSD-58383：通过 [!DNL REST API]同步退款请求中的重复贷项通知单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58383-duplicate-credit-memos-from-simultaneous-refund-requests-via-rest-api.md)
          - [ACSD-58735：受限管理员无法查看相关网站客户帐户上放弃的购物车](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58735-restricted-admin-cant-view-abandoned-shopping-carts.md)
-         - [ACSD-62793：导出中的日期时间属性缺少时间组件。 此外，如果启用[!UICONTROL Fields Enclosure]，属性值将用双引号括起来](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62793-datetime-attributes-exports-missing-time-component-and-fields-enclosure-enabled-attribute-values-enclosed-within-double-quotes.md)
+         - [ACSD-62793：导出中的日期时间属性缺少时间组件。 此外，如果启用[!UICONTROL Fields Enclosure]，属性值将用双引号括起来](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62793.md)
          - [ACSD-60344：有关使用自动审批[!UICONTROL Purchase Order]的重复订单确认电子邮件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-60344-duplicate-order-confirmation-emails-for-purchase-order-with-auto-approval.md)
          - [ACSD-62332：产品列表GraphQL查询限制为10,000个产品， [!DNL Live Search] 将当前页设置为1](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md)
          - [ACSD-62591：配置[!UICONTROL User Agent Rules]时主题未正确切换](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62591-fixes-theme-doesnt-switch.md)
