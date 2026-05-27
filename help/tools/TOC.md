@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 09abc74b48c1ac07a3553aed37fcb0c80e3bbefe
+source-git-commit: 8283039b88ea574e929684482fbcd534b5d949c0
 workflow-type: tm+mt
-source-wordcount: '10033'
+source-wordcount: '10048'
 ht-degree: 0%
 
 ---
@@ -994,6 +994,7 @@ ht-degree: 0%
          - [ACP2E-4419：在店面成功进行reCAPTCHA v2验证后，礼品卡在结账时无法正确应用](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4419.md)
       - v1.1.79 {#v1-1-79}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.79](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/overview.md)
+         - [ACP2E-4475：按价格排序或过滤对缺货的捆绑产品无效](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4475.md)
          - [ACP2E-4411：在多货币设置中，捆绑产品价格在产品详细信息页面和购物车之间显示不正确的税和货币值](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4411.md)
          - [ACP2E-4110：捆绑产品价格（带&#x200B;**[!UICONTROL Special Price]**）在PDP/PLP和购物车之间以非默认货币不同](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4110.md)
          - [ACP2E-4603：目录权限产品重新索引留下过时的权限索引行和MySQL死锁](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4603.md)
