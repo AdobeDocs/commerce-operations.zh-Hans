@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 36e8242f67e80504118e36574cfe4d3b799b849c
+source-git-commit: b5c120d34b84229c006fbeb9ba8d0f93f558aec1
 workflow-type: tm+mt
-source-wordcount: '10059'
+source-wordcount: '10074'
 ht-degree: 0%
 
 ---
@@ -972,6 +972,7 @@ ht-degree: 0%
          - [ACSD-68341：在PDP加载时出现多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
       - v1.1.78 {#v1-1-78}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
+         - [ACP2E-4528：客户地址城市验证错误地处理正斜杠(/)和无效字符，如！、&#39;、#和？](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4528.md)
          - [ACP2E-4628：当“帐户共享”设置为“全局”时，导入具有大写电子邮件地址的客户会触发未定义的数组键错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4628.md)
          - [ACSD-60989：通过声明性架构修改带有外键的列会在 [!DNL MariaDB]上导致错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acsd-60989.md)
          - [ACP2E-4763： GraphQL customerOrders查询返回夸大的original_price_include_tax和original_row_total_include_tax](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4763.md)
