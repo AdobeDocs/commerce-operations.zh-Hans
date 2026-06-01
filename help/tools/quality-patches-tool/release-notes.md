@@ -3,9 +3,18 @@ title: 发行说明
 description: 了解Adobe Commerce可用的修补程序以及它们解决的问题。
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: 26f4a5c5a23e3df9448898b57495e60e2e51133a
+autotag-review: '2026-05-29T17:40:45.034Z'
+TQID: 'https://experienceleague.adobe.com/HHiR-UPHRK-dZCKE9L6H1bfm4hykrOgYsBm-XJv8zyE'
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+source-git-commit: c7b05a4b636b1d4f67e1d3db40dce7fab1cb1b6b
 workflow-type: tm+mt
-source-wordcount: '30379'
+source-wordcount: 30977
 ht-degree: 0%
 
 ---
@@ -21,6 +30,27 @@ ht-degree: 0%
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.80 {#v1-1-80}
+
+* **ACP2E-4239**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9） — 修复了由于所选日期、存储的UTC值和配置的存储区时区之间的时区差异，使用日期属性的管理网格筛选器返回错误结果的问题。
+* **ACP2E-4472**（适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9） — 修复了在“以客户身份登录”流程中创建null引号的问题。
+* **ACP2E-4481**（适用于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9） — 修复了在取消订单后无法正确重新计算捆绑产品可销售性的问题。
+* **ACP2E-4488**（适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9） — 修复了在管理员中保存或编辑具有大型属性集的产品的速度缓慢的问题。
+* **ACP2E-4493**（对于Adobe Commerce >=2.4.4 &lt;2.4.9） — 修复了在启用异步索引时，销售订单存档网格显示错误订单状态的问题。
+* **ACP2E-4496**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了Analytics cron作业在执行期间导致性能下降，进而导致整体系统性能提高的问题。
+* **ACP2E-4533**（适用于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8） — 修复了URL中包含商店代码时，店面未加载占位符图像的问题。
+* **ACP2E-4552**（对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3） — 修复了GraphQL响应中未返回公司状态的问题。
+* **ACP2E-4610**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9） — 修复了sales_clean_quotes cron作业出现性能问题的问题。
+* **ACP2E-4615**（对于Adobe Commerce >=2.4.4-p13 &lt;2.4.4-p17） || >=2.4.4-p18 &lt;2.4.5 || >=2.4.5-p12 &lt;2.4.6 || >=2.4.6-p10 &lt;2.4.7 || >=2.4.7-p5 &lt;2.4.9) — 修复了在线订单退款失败并出现PayPal错误（显示“PayPal网关拒绝请求）的问题。 内部错误。”
+* **ACP2E-4626**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9） — 修复了某些店面JavaScript文件被请求并执行两次，从而导致间歇性重复加载和不稳定的问题。
+* **ACP2E-4653**（适用于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了在通过REST API检索或更新规则时，未显示“类别（仅限父项）”和“类别（仅限子项）”的购物车价格规则条件属性范围的问题。
+* **ACP2E-4808**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.10） — 修复了店面产品页面上的“重量”属性在“其他信息”或“更多信息”部分中只显示原始数值而没有配置度量单位（lbs或kgs）的问题。
+* **ACP2E-4156**（适用于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了REST API中的送货地址验证不符合Admin中定义的属性配置的问题。
+* **ACP2E-4813**（对于Adobe Commerce和Magento Open Source >=2.4.6-p3 &lt;2.4.6-p15） || >=2.4.7 &lt;2.4.7-p10 || >=2.4.8 &lt;2.4.8-p5) — 修复了以下问题：在结账时USPS配送方式不可用，并且某些产品的配送估计不正确，包括拆分为多个套件的订单。
+* **ACSD-53502**（适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.6） — 修复了以下问题：在iOS Safari中，由于递归调用New Relic监控脚本，导致添加到购物车在店面间歇性失败，进而导致页面重新加载。
+* 已更新的版本： **AC-15210**、**MDVA-12304**、**ACSD-46520**、**ACSD-48627**、**ACSD-49898**、**ACSD-51291**、**ACSD-51358**、**ACSD-50815**、**ACSD-54106**、**ACSD-53636**、**acsd-55100**、**ACSD-58008**、**ACSD-61133**、**ACSD-63286**、**ACSD-67941**、**ACSD-64546**、**ACSD-64118**、**ACSD-65822**、**ACSD-57477**、**ACSD ACSD-58108**，**ACSD-66149**，**ACSD-66404**，**ACSD-67250**，**ACSD-67686**，**ACSD-68925**，**ACP2E-4402**，**ACP2E-4505**，**ACP2A e-4603**，**ACP2E-4706**
+* 已替换的修补程序： **AC-15210**、**ACSD-58108**
 
 ## v1.1.79 {#v1-1-79}
 

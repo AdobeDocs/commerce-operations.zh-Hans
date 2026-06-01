@@ -2,9 +2,9 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: f5d0b6943b1b5ca41967c61842b73734ed41f26f
+source-git-commit: dc0a70a11f332dabf8f09e528c355f2bcb7910bc
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,9 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 
 {{$include /help/_includes/templated/cloud-requirements-table.md}}
 
+**<sup>1</sup>MariaDB 12.3与Adobe Commerce 2.4.9之间的兼容性**
+MariaDB 12.3正式发布后，MariaDB 12.3与Adobe Commerce 2.4.9之间的兼容性将得到确认，预计将在5-6月时间范围内发布。
+
 对于默认配置，服务和版本定义在[的`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中。
 有关更多详细信息，请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
@@ -47,7 +50,7 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 
 **MySQL 8.0于2026年4月30日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.7、2.4.6、2.4.5和2.4.4将不再提供兼容性或
-支持在MySQL 8.0之后发布的任何MySQL版本。 Adobe不会
+支持在MySQL 8.0之后发布的任何MySQL版本。Adobe不会
 在此Adobe上验证或提供对较新MySQL主要版本的支持
 Commerce版本行。
 运行版本2.4.7、2.4.6、2.4.5、2.4.4的所有Adobe Commerce内部部署客户都非常强
@@ -55,17 +58,13 @@ Commerce版本行。
 
 **Elasticsearch 7.17于2026年1月15日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.6、2.4.5和2.4.4将不提供兼容性或
-支持在Elasticsearch 7之后发布的任何Elasticsearch版本。 Adobe不会
+支持在Elasticsearch 7之后发布的任何Elasticsearch版本。Adobe不会
 在此Adobe上验证或提供对较新Elasticsearch主要版本的支持
 Commerce版本行。
 运行版本2.4.6、2.4.5、2.4.4的所有Adobe Commerce本地客户都属于强客户
 建议将其搜索基础结构迁移到兼容的OpenSearch版本。
 
 >[!ENDTABS]
-
->[!AVAILABILITY]
->
-><sup>1</sup> MariaDB 12.3与Adobe Commerce 2.4.9之间的兼容性将在MariaDB 12.3正式发布后确认，预计将在5-6月时间范围内发布。
 
 ## 早期Commerce版本的系统要求
 
@@ -94,7 +93,7 @@ Commerce版本行。
 
 **MySQL 8.0于2026年4月30日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.7、2.4.6、2.4.5和2.4.4将不再提供兼容性或
-支持在MySQL 8.0之后发布的任何MySQL版本。 Adobe不会
+支持在MySQL 8.0之后发布的任何MySQL版本。Adobe不会
 在此Adobe上验证或提供对较新MySQL主要版本的支持
 Commerce版本行。
 运行版本2.4.7、2.4.6、2.4.5、2.4.4的所有Adobe Commerce内部部署客户都非常强
@@ -102,7 +101,7 @@ Commerce版本行。
 
 **Elasticsearch 7.17于2026年1月15日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.6、2.4.5和2.4.4将不提供兼容性或
-支持在Elasticsearch 7之后发布的任何Elasticsearch版本。 Adobe不会
+支持在Elasticsearch 7之后发布的任何Elasticsearch版本。Adobe不会
 在此Adobe上验证或提供对较新Elasticsearch主要版本的支持
 Commerce版本行。
 运行版本2.4.6、2.4.5、2.4.4的所有Adobe Commerce本地客户都属于强客户
@@ -225,4 +224,4 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 >
 >`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
 
-<!-- Last updated from includes: 2026-05-13 16:20:40 -->
+<!-- Last updated from includes: 2026-06-01 11:19:57 -->

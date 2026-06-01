@@ -1,8 +1,8 @@
 ---
-source-git-commit: 951b3852c0942205b63ee01089c8cb40adfb0614
+source-git-commit: 86faae28aa65f46e54a4f842c53acfda12542b86
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 36%
+source-wordcount: '323'
+ht-degree: 39%
 
 ---
 # 系统要求
@@ -30,7 +30,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL MariaDB]</span></td>
       <td>
-          11.8, 12.3<sup>1</sup>
+          12.3
       </td>
     </tr>
     <tr>
@@ -72,7 +72,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL nginx]</span></td>
       <td>
-          1.28
+          1.30
       </td>
     </tr>
     <tr>
@@ -96,7 +96,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL AWS ElastiCache]</span></td>
       <td>
-          适用于Redis OSS的ElastiCache 7.1（增强型）。 Valkey 8可供使用。
+          适用于Redis OSS的ElastiCache 7.1（增强型）。Valkey 8可供使用。
       </td>
     </tr>
     <tr>
@@ -210,7 +210,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL nginx]</span></td>
       <td>
-          1.28
+          1.30
       </td>
       <td>
           1.28
@@ -246,10 +246,10 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL AWS ElastiCache]</span></td>
       <td>
-          适用于Redis OSS的ElastiCache 7.1（增强型）。 Valkey 8可供使用。
+          适用于Redis OSS的ElastiCache 7.1（增强型）。Valkey 8可供使用。
       </td>
       <td>
-          适用于Redis OSS的ElastiCache 7.1（增强型）。 Valkey 8可供使用。
+          适用于Redis OSS的ElastiCache 7.1（增强型）。Valkey 8可供使用。
       </td>
     </tr>
     <tr>
@@ -375,7 +375,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL nginx]</span></td>
       <td>
-          1.28
+          1.30
       </td>
       <td>
           1.28
@@ -411,10 +411,10 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL AWS ElastiCache]</span></td>
       <td>
-          适用于Redis OSS的ElastiCache 7.1（增强型）。 Valkey 8可供使用。
+          适用于Redis OSS的ElastiCache 7.1（增强型）。Valkey 8可供使用。
       </td>
       <td>
-          适用于Redis OSS的ElastiCache 7.1（增强型）。 Valkey 8可供使用。
+          适用于Redis OSS的ElastiCache 7.1（增强型）。Valkey 8可供使用。
       </td>
     </tr>
     <tr>
@@ -540,7 +540,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL nginx]</span></td>
       <td>
-          1.28
+          1.30
       </td>
       <td>
           1.28
@@ -576,10 +576,10 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL AWS ElastiCache]</span></td>
       <td>
-          适用于Redis OSS的ElastiCache 7.1（增强型）。 Valkey 8可供使用。
+          适用于Redis OSS的ElastiCache 7.1（增强型）。Valkey 8可供使用。
       </td>
       <td>
-          适用于Redis OSS的ElastiCache 7.1（增强型）。 Valkey 8可供使用。
+          适用于Redis OSS的ElastiCache 7.1（增强型）。Valkey 8可供使用。
       </td>
     </tr>
     <tr>
@@ -705,7 +705,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL nginx]</span></td>
       <td>
-          1.28
+          1.30
       </td>
       <td>
           1.28
@@ -807,7 +807,7 @@ ht-degree: 36%
     <tr>
       <td><span class="uicontrol">[!DNL nginx]</span></td>
       <td>
-          1.28
+          1.30
       </td>
       <td>
           1.28

@@ -2,9 +2,9 @@
 title: 升级实施
 description: 了解Adobe Commerce项目升级实施的各个阶段。
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 3c54a3c429a3dadc826bffcb91f99a5a3a31b42c
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '856'
 ht-degree: 1%
 
 ---
@@ -42,13 +42,13 @@ ht-degree: 1%
 
   | 服务 | 当前版本 | 升级到 | 注释 |
   |-----------------|-----------------|------------|----------------------------------------------------------|
-  | PHP | 7.4 | 8.1 |                                                          |
-  | Redis | 6.0 | 6.2 |                                                          |
-  | [!DNL RabbitMQ] | 3.8 | 3.9 | 当前未使用，但我们应考虑使用 |
-  | MariaDB (Cloud) | 10.4 | 10.6 |                                                          |
-  | MySQL | 8.0 | -/-/ |                                                          |
-  | Composer | 1.9.2 | 2.2 |                                                          |
-  | Elasticsearch | 7.10 | 7.17 |                                                          |
+  | PHP | 7.4 | 8.5 |                                                          |
+  | Valkey | 8.0 | 9 |                                                          |
+  | [!DNL RabbitMQ] | 3.8 | 4.3 | 当前未使用，但我们应考虑使用 |
+  | MariaDB (Cloud) | 10.4 | 12.3 |                                                          |
+  | MySQL | 8.0 | 不适用 |                                                          |
+  | Composer | 1.9.2 | 2.9 |                                                          |
+  | OpenSearch | 1 | 3 |                                                          |
 
 - **扩展和第三方模块** — 使用此表模板可以帮助您了解扩展和自定义的状态，以便做出战略决策并定义操作。 利用这个机会，可替换Adobe Commerce中可能原生的任何扩展，以最大程度地降低项目的复杂性。 使用`bin/magento module:status`命令查看模块和扩展的列表。
 
