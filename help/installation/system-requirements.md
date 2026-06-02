@@ -2,7 +2,7 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: dc0a70a11f332dabf8f09e528c355f2bcb7910bc
+source-git-commit: e77a19ce01fb0dd650aee3e8ec5f86375b429451
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 0%
@@ -224,4 +224,4 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 >
 >`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
 
-<!-- Last updated from includes: 2026-06-01 11:19:57 -->
+<!-- Last updated from includes: 2026-06-01 15:26:19 -->

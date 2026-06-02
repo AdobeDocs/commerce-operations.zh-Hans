@@ -1,7 +1,7 @@
 ---
-source-git-commit: 96a30744d05e5220b60a6a56a9d64d92e1dfd9ce
+source-git-commit: e77a19ce01fb0dd650aee3e8ec5f86375b429451
 workflow-type: tm+mt
-source-wordcount: '2070'
+source-wordcount: '2046'
 ht-degree: 3%
 
 ---
@@ -275,6 +275,7 @@ ht-degree: 3%
 
 对2.4.5版本线的定期支持于2025年8月12日终止。
 对2.4.5版本线的扩展支持将于2026年8月11日终止。
+针对2.4.5版本线的其他安全修复配置将于2027年5月结束。
 
 <table>
   <thead>
@@ -399,6 +400,7 @@ ht-degree: 3%
 
 对2.4.4版本线的定期支持于2025年4月12日终止。
 对2.4.4版本线的扩展支持于2026年4月14日终止。
+针对2.4.4发行行的其他安全修复配置将于2027年5月结束。
 
 <table>
   <thead>

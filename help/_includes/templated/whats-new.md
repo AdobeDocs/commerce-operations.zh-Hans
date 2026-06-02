@@ -1,7 +1,7 @@
 ---
-source-git-commit: eca5c109548e0d92435b3dca90a905ef2efaa504
+source-git-commit: e77a19ce01fb0dd650aee3e8ec5f86375b429451
 workflow-type: tm+mt
-source-wordcount: '3357'
+source-wordcount: '3282'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4513">ACP2E-4513的QPT 1.1.78修复的详细说明：未从系统</a>中删除过期的验证码映像。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4513">ACP2E-4513的QPT 1.1.78修复的详细说明：未从系统</a>中删除过期的验证码映像。</p>
 </td>
       <td>
         新主题qpt
@@ -39,7 +39,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0a726754a6e171a60a07ccedf76db7505f19706a">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4505">ACP2E-4505的QPT 1.1.79修复的详细说明：在重复的浏览器选项卡</a>中保存包含过时数据的类别会产生循环类别依赖关系。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4505">ACP2E-4505的QPT 1.1.79修复的详细说明：在重复的浏览器选项卡</a>中保存包含过时数据的类别会产生循环类别依赖关系。</p>
 </td>
       <td>
         新主题qpt
@@ -77,7 +77,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4720">ACP2E-4720的QPT 1.1.79修复程序的详细说明：对于单独发送物料的固定价格捆绑产品，免运费购物车价格规则不会重置</a>。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4720">ACP2E-4720的QPT 1.1.79修复程序的详细说明：对于单独发送物料的固定价格捆绑产品，免运费购物车价格规则不会重置</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -265,7 +265,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>在<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-5-patches#valkey-81-lts-support">2.4.5安全修补程序版本</a>、<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-6-patches#valkey-81-lts-support">2.4.6安全修补程序版本</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-8-patches#valkey-81-lts-support">2.4.8安全修补程序版本</a>主题中更正了Valkey LTS与8.1的兼容性，以使缓存后端指南与Adobe Commerce上支持的云基础架构上的Valkey相匹配。<br /><em>解决问题<a href="https://github.com/AdobeDocs/commerce-operations.zh-Hans/issues/177">#177</a>.</em></p>
+      <td><p>在<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-5-patches#valkey-81-lts-support">2.4.5安全修补程序版本</a>、<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-6-patches#valkey-81-lts-support">2.4.6安全修补程序版本</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-8-patches#valkey-81-lts-support">2.4.8安全修补程序版本</a>主题中更正了Valkey LTS与8.1的兼容性，以使缓存后端指南与Adobe Commerce上支持的云基础架构上的Valkey相匹配。<br /><em>解决问题<a href="https://github.com/AdobeDocs/commerce-operations.en/issues/177">#177</a>.</em></p>
 </td>
       <td>
         技术、反馈、发行说明
@@ -687,28 +687,6 @@ ht-degree: 0%
         重大更新
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a9f3594a0ccf4326b0541a4f2b07fdf49cde7148">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月3日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了正确覆盖<code>env.php</code>中Adobe Commerce的默认L2缓存目录的说明，以确保缓存文件存储在预期的位置，并防止拆分缓存目录和GlusterFS分段错误。 请参阅<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration">Redis和Valkey服务配置</a>的最佳实践中的更新指南。</p>
-</td>
-      <td>
-        技术，反馈
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c3030226d7832b17c82be375431795cba44d72f9">提交</a></td>
     </tr>
   </tbody>
 </table>
