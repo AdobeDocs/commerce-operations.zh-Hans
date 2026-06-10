@@ -151,7 +151,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4528">ACP2E-4528的QPT 1.1.78修复程序的详细说明：客户地址城市验证错误地处理正斜杠(/)和无效字符，如！、''、#和？</a>。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4528">ACP2E-4528的QPT 1.1.78修复程序的详细说明：客户地址城市验证错误地处理正斜杠(/)和无效字符，如！、''、#和？</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -189,7 +189,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0133d7598293f529b285737c6ef51613dc5bd826">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4475">ACP2E-4475的QPT 1.1.79修复的详细说明：按价格排序或过滤不适用于缺货的捆绑包产品</a>。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4475">ACP2E-4475的QPT 1.1.79修复的详细说明：按价格排序或过滤不适用于缺货的捆绑包产品</a>。</p>
 </td>
       <td>
         新主题qpt
@@ -205,7 +205,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/e8f56414b758832c77e7f2f93009df527f506c5b">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10698">AC-10698的QPT 1.1.79修复的详细说明：交易价格和总额不会发送到Google标记</a>。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10698">AC-10698的QPT 1.1.79修复的详细说明：交易价格和总额不会发送到Google标记</a>。</p>
 </td>
       <td>
         新主题qpt
