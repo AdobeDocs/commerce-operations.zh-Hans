@@ -4,9 +4,9 @@ description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
 badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
 badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
-source-git-commit: 300ed6b9123701244042abccf70ff774ac05b0fa
+source-git-commit: 41e4aa725848fd7fa4910eaea09a802326fa3995
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -31,68 +31,26 @@ ht-degree: 0%
 
 请参阅以下部分，了解活动Beta程序的列表。
 
-### 全局和每个目录视图的促销规则（公共Beta）
+### 搜索匹配和排名(Private Beta)
 
 仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
 
-Adobe Commerce Optimizer引入了一种通过灵活范围定义促销规则的功能，允许商家跨所有目录视图应用规则，或将其范围限定到特定的目录视图。 此功能简化了针对经营多个店面、品牌或语言的商家的促销规则管理。 目录视图特定的规则允许商家在需要本地化或品牌特定的体验时，为各个渠道定制搜索结果和促销逻辑。 如果存在特定于目录视图的规则，则这些规则将覆盖该视图的全局规则，从而提供精确控制，同时保持高效的配置管理。
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
+
+Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Search]和[!DNL Adobe Commerce Optimizer]的搜索结果进行排名。 更新会优先处理&#x200B;**精确和接近短语匹配项**，然后匹配，其中&#x200B;**所有查询词都出现在同一可搜索属性**&#x200B;中，最后&#x200B;**跨字段**&#x200B;匹配（包括支持自动完成样式建议的行为）。 该分层模型可帮助高意图查询首先显示最相关的产品，同时仍会返回有用的替代项。
+
+同一相关性模型与&#x200B;**搜索权重**、**智能排名**、**同义词**&#x200B;和&#x200B;**促销规则**(pin、boost、bury)交互。 德语店面可以将&#x200B;**分解**&#x200B;用于复合单词，其总体优先级方法相同。
 
 **主要优势**
 
-- 在所有目录视图中全局定义促销规则。
-- 当需要本地化体验时，覆盖特定目录视图的规则。
-- 减少跨店面的配置重复。
-- 提高多品牌和多语言商务实施的可扩展性。
+- 更强地促进精确和接近短语匹配（包括规范化形式，如单数和复数）。
+- 当所有查询词一起出现在一个可搜索字段中时排名较高。
+- 更明确地期望在查询时权重、智能排名和手动规则如何组合。
+- 有关验证高值查询和在更改后调整Boost规则的指南。
 
-此功能提高了促销灵活性和运营效率，帮助商家大规模提供更相关的产品发现体验。 若要了解更多信息，请参阅[促销规则](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/rules/add)。
+在[Adobe Commerce Optimizer (SaaS)](https://experienceleague.adobe.com/en/docs/commerce/optimizer/search-relevance-matching)和[实时搜索(PaaS)](https://experienceleague.adobe.com/en/docs/commerce/live-search/search-relevance-matching)中了解有关搜索匹配和排名策略的更多信息。
 
->[!NOTE]
->
->Beta参与者需要重新创建任何现有的促销规则，以利用新的目录视图范围。
-
-若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
-
-### 全局和按目录查看产品推荐（公共Beta）
-
-仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
-
-Adobe Commerce Optimizer引入了对产品推荐配置的增强控制，使商家能够在所有目录视图间全局定义推荐单位，或者专门针对各个目录视图定义推荐单位。
-
-此功能简化了针对经营多个店面、品牌、地区或语言的企业的推荐管理。 商家可以全局创建推荐单元一次，该单元将应用于所有目录视图，从而确保跨渠道的一致产品发现策略。 同时，特定于目录视图的推荐单元允许商家在需要时为特定店面定制体验。
-
-店面参与事件和推荐量度在目录视图级别进行跟踪，从而更准确地了解不同店面的购物者行为。
-
-**主要优势**
-
-- 在所有目录视图中全局配置产品推荐单元。
-- 为本地化的店面体验创建特定于目录视图的建议。
-- 减少跨多品牌或多语言商店的重复配置。
-- 通过目录视图跟踪的量度和事件获得更准确的见解。
-
-此增强功能可帮助商家提供更相关的产品发现体验，同时简化复杂商业环境中的推荐管理。 若要了解更多信息，请参阅[推荐](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/manage-results/recommendation-performance)
-
->[!NOTE]
->
->Beta参与者需要重新创建任何现有的推荐单元，以利用新的目录视图范围。
-
-若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
-
-### 类别促销（公共Beta）
-
-仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
-
-Adobe Commerce Optimizer类别促销可帮助商家控制如何在类别页面上订购产品。 商家在促销规则工作流中将行为配置为&#x200B;**类别规则**，以及[搜索规则和默认产品列表规则](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/rules/overview)。 每个规则都可以组合&#x200B;**智能排名**（适用的行为信号和AI）、可选的&#x200B;**基于价格的排序**&#x200B;和&#x200B;**手动**&#x200B;操作（例如pin、boost和bury），以便团队可以在没有外部工具的情况下策划发现、运行促销活动并将类别页面与策略保持一致。
-
-**主要优势**
-
-- 使用用于搜索和默认列表的相同基于规则的工作流定位一个或多个类别。
-- 使用智能排名策略（例如，查看次数最多、购买次数最多、添加到购物车、个性化推荐、趋势）以及可选价格排序的订单类别列表。
-- 在需要精确放置时，将手动图钉、提升和隐藏操作叠加在智能排名之上。
-- 当您的设置使用多个目录视图时，按目录视图范围规则。
-
-要了解更多信息，请参阅[类别推销](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/rules/add)。
-
-若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
+若要请求此私人测试版的邀请，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。 Adobe团队将通过后续步骤和资格要求做出响应。
 
 ### 推荐价格过滤器（公共Beta） {#recommendation-price-filters-public-beta}
 
