@@ -1,8 +1,8 @@
 ---
-source-git-commit: ca0f11a6e174934680fa18da3331b9af9273f297
+source-git-commit: 0b88e022198dc85fb7e81f5d4218c4f2b53af74a
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 0%
+source-wordcount: '116'
+ht-degree: 17%
 
 ---
 # Commerce服务的产品可用性
@@ -29,8 +29,8 @@ ht-degree: 0%
           <td>3.0.3</td>
           <td>3.0.3</td>
           <td>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/catalog-service/guide-overview">概述</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/catalog-service/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/catalog-service/guide-overview">概述</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/catalog-service/release-notes">发行说明</a><br/>
           </td>
       </tr>
       <tr>
@@ -42,19 +42,19 @@ ht-degree: 0%
           <td>4.7.0</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-live-search.html">市场</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/live-search/release-notes">发行说明</a><br/>
           </td>
       </tr>
       <tr>
           <td>支付服务</td>
-          <td>2.13.0 (PHP 8.3)</td>
-          <td>2.10.0 (PHP 8.3)</td>
-          <td>2.5.0 (PHP 8.2)</td>
-          <td>2.4.0 (PHP 8.1)</td>
-          <td>2.4.0 (PHP 8.1)</td>
+          <td>2.15.0 (PHP 8.4)</td>
+          <td>2.15.0 (PHP 8.4)</td>
+          <td>2.15.0 (PHP 8.4)</td>
+          <td>2.15.0 (PHP 8.4)</td>
+          <td>2.15.0 (PHP 8.4)</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-payment-services.html">市场</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/payment-services/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/payment-services/release-notes">发行说明</a><br/>
           </td>
       </tr>
       <tr>
@@ -66,7 +66,7 @@ ht-degree: 0%
           <td>6.7.0</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-product-recommendations.html">市场</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/product-recommendations/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/release-notes">发行说明</a><br/>
           </td>
       </tr>
   </tbody>
