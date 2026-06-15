@@ -2,9 +2,9 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: e77a19ce01fb0dd650aee3e8ec5f86375b429451
+source-git-commit: 4ffbd0ab5109fb242d3d83c8f6c19c58d1bcb822
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1253'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 
 >[!TAB 云端上的 Commerce]
 
-[Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
+[Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与每个版本行的最新Commerce版本兼容的服务提供了默认配置。
 
 {{$include /help/_includes/templated/cloud-requirements-table.md}}
 
