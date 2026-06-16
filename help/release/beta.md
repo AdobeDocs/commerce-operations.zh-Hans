@@ -2,8 +2,8 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
-badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
+badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
+badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
 source-git-commit: bf0f269900468870a1da7b5360548d49e009097c
 workflow-type: tm+mt
 source-wordcount: '1400'
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Adobe Commerce测试版
 
-适用于[Adobe Commerce产品解决方案](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)的Beta程序是商家访问预发行版功能和代码、提供反馈以及引导Adobe Commerce未来的一种方式。 有两种类型的测试版计划：
+适用于[Adobe Commerce产品解决方案](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions)的Beta程序是商家访问预发行版功能和代码、提供反馈以及引导Adobe Commerce未来的一种方式。 有两种类型的测试版计划：
 
 - 公共Beta：公共Beta计划可供所有Adobe Commerce客户和合作伙伴使用
 - Private Beta：私人测试版计划可能需要根据参与资格标准进行审批
@@ -50,7 +50,7 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 
 ### 推荐价格过滤器（公共Beta） {#recommendation-price-filters-public-beta}
 
-仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
+仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
 
 [!DNL Adobe Commerce Optimizer]将&#x200B;**价格筛选器**&#x200B;添加到产品推荐中，以便在创建或编辑推荐单位时，您可以根据价格包含或排除推荐的产品。 筛选器使用店面的&#x200B;**有效价格手册**&#x200B;中每个产品的&#x200B;**最终计算价格**，包括来自该价格手册的折扣和促销活动（不限于标价）。 价格规则可优化候选集；它们不会重新对产品进行排名。
 
@@ -63,17 +63,17 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 - 使用产品详细信息页面上的动态价格规则，可显示相对于所查看产品的可比价格范围内的替代产品。
 - 将筛选与购物者看到的价格保持一致，这是用于筛选和显示的活动价格手册中的相同最终价格。
 
-若要了解更多信息，请参阅商家指南中的[推荐过滤器 — 价格](https://experienceleague.adobe.com/en/docs/commerce/optimizer/merchandising/recommendations/filters#price)和店面放置指南中的[产品推荐设置](https://experienceleague.adobe.com/developer/commerce/storefront/merchants/content-customizations/product-recommendations/)。
+若要了解更多信息，请参阅商家指南中的[推荐过滤器 — 价格](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/recommendations/filters#price)和店面放置指南中的[产品推荐设置](https://experienceleague.adobe.com/developer/commerce/storefront/merchants/content-customizations/product-recommendations/?lang=zh-Hans)。
 
 若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
 
 ### Cloud Automation修补服务(Private Beta)
 
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
 
-[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)环境上的Adobe Commerce。
+[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)环境上的Adobe Commerce。
 
-2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
+2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
 
 - 自动安装修补程序
 - 回滚恢复
@@ -88,7 +88,7 @@ Beta版包括以下功能：
 
 >[!NOTE]
 >
->由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
+>由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
 
 要参与此测试版，请完成并提交[Cloud Automation Patching Service - Beta注册表单](https://forms.office.com/r/3Wfxj5nPdB)。
 
@@ -107,7 +107,7 @@ Beta版包括以下功能：
 
 ### Adobe Commerce基础（公共Alpha/Beta）
 
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
 
 每个Adobe Commerce Foundation Alpha和测试版都包含在计划发布日期前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能区域：
 
@@ -116,7 +116,7 @@ Beta版包括以下功能：
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/home)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
