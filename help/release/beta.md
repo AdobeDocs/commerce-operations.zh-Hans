@@ -71,7 +71,7 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 
 仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
 
-[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)环境上的[Adobe Commerce。
+[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)环境上的Adobe Commerce。
 
 2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
 
