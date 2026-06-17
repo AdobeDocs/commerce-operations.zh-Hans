@@ -1,7 +1,7 @@
 ---
-source-git-commit: b552c5e9aa33c33efe962f5f3661ca26b29ef0b6
+source-git-commit: b8c97f7a7d92a75ce54d323344460e2e71e8f548
 workflow-type: tm+mt
-source-wordcount: '3380'
+source-wordcount: '3441'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,58 @@ ht-degree: 0%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年6月12日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/overview">Overview： Quality Patches Tool (QPT) v1.1.80</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6e585cb2150ca7dc2ae6ae883339ef9b894741f0">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>已将搜索匹配和排名(Private Beta)程序添加到<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/beta#search-matching-and-ranking-private-beta">Beta版本</a>，包括分层匹配模型、与权重和促销规则的交互以及邀请说明。</p>
+</td>
+      <td>
+        重大更新
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b364a26b6ad3e36652b8309dcb87268d522fa31c">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年6月8日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4706">ACP2E-4706的QPT 1.1.79修复程序的详细说明： Target规则索引器cron不选取仅在商店视图范围</a>启用的产品。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f1f9890a2a2b7dbe501037ca8dbe919865012b6f">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年6月5日
 
@@ -701,36 +753,6 @@ ht-degree: 0%
         技术、重大更新
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0bc6807d7f4bfd84ac698de81f8cf6f56d849af7">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月8日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新了New Relic (APM)支持的Commerce on Cloud版本的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>。</p>
-</td>
-      <td>
-        技术，反馈
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f82d05cf0f7d2749b313ef5f7e89e1e36248bf30">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/beta">Beta版本</a>，其中包含SaaS项目的类别促销（公共Beta）计划，包括指向<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/rules/add">类别促销</a>和相关促销规则主题的链接。</p>
-</td>
-      <td>
-        重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a9f3594a0ccf4326b0541a4f2b07fdf49cde7148">提交</a></td>
     </tr>
   </tbody>
 </table>
