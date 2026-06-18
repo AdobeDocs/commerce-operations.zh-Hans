@@ -3,7 +3,7 @@ title: 企业参考体系结构
 description: 了解如何使用Adobe的最新可组合商务技术实施Adobe Commerce。
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
 exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
-source-git-commit: 0d0922b23bfe9152ef7f8b942b0e839a189e5abf
+source-git-commit: dc4747d96e6f226e90ed95c93512c3e879d408ab
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Commerce已经过演变，可满足企业对性能、规模和安全性的要求
 
 以下架构图说明了Adobe Commerce与所有Adobe Experience Cloud解决方案之间的数据流。
 
-![显示Adobe Commerce如何连接到Experience Cloud解决方案的架构图](../../assets/playbooks/commerce-architecture-v3.png){width="800" zoomable="yes"}
+![显示Adobe Commerce如何连接到Experience Cloud解决方案的架构图](../../assets/playbooks/commerce-architecture.png){width="800" zoomable="yes"}
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: Adobe Commerce发行说明
 description: 了解在何处查找特定 Adobe Commerce 版本的信息。
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 54aef3d7db7b8333721fb56db0ba8f098aea030b
+source-git-commit: 8be75548a939008057fb5fdf37ba5b5a0345f6d4
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 3%
+source-wordcount: '462'
+ht-degree: 2%
 
 ---
 
@@ -28,6 +28,8 @@ ht-degree: 3%
             <li><a href="https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/">向后不兼容的更改</a></li>
             <li><a href="commerce/overview.md">Adobe Commerce</a></li>
             <li><a href="security/overview.md">安全修补程序</a></li>
+            <li><a href="../../lifecycle-policy.md">软件生命周期政策</a></li>
+            <li><a href="../../version-upgrade-enforcement-policy.md">云版本升级实施策略</a></li>
             <li><a href="https://helpx.adobe.com/cn/security/products/magento.html">Adobe安全公告</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html?lang=zh-Hans">适用于Adobe Commerce的B2B</a></li>
           </ul>
@@ -51,7 +53,7 @@ ht-degree: 3%
             <li><a href="https://experienceleague.adobe.com/docs/commerce/catalog-service/release-notes.html?lang=zh-Hans">目录服务</a></li>
             <li><a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/data-connection/release-notes">Experience Platform连接器</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce/live-search/release-notes.html?lang=zh-Hans">实时搜索</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce/payment-services/release-notes.html?lang=zh-Hans">支付服务</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/payment-services/release-notes.html">支付服务</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce/product-recommendations/release-notes.html?lang=zh-Hans">产品推荐</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=zh-Hans">服务连接器</a></li>
           </ul>
@@ -73,7 +75,7 @@ ht-degree: 3%
         <p>了解店面技术的最新改进，您可以使用这些改进为客户打造独特的体验。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/developer/commerce/storefront/?lang=zh-Hans">Adobe Commerce店面</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html?lang=zh-Hans">页面生成器</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html">页面生成器</a></li>
             <li><a href="https://github.com/magento/pwa-studio/releases/latest">PWA Studio</a></li>
           </ul>
       </td>

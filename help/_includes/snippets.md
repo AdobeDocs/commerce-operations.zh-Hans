@@ -1,7 +1,7 @@
 ---
-source-git-commit: d22f1c660ba2b6bdc507fa8ba728e0a4269bef8d
+source-git-commit: 8be75548a939008057fb5fdf37ba5b5a0345f6d4
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,7 @@ ht-degree: 0%
 
 ## 用于扩展支持的安全修补程序 {#extended-support}
 
->[!NOTE]
->
->2.4.5的扩展支持安全修补程序仅向Adobe Commerce客户提供。 这些修补程序不适用于Magento Open Source代码库。 请参阅[扩展支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
+{{$include /help/_includes/release-notes/extended-support-policy-note.md}}
 
 ## 仅限Commerce {#commerce-only}
 

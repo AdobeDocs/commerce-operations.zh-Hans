@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.4安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.4的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 136d7090-6bf2-41e3-8445-b07bdc67f12b
-source-git-commit: 16f70659db62f72df534561c174fde523ed5a434
+source-git-commit: eacee993ec38cce7763d4c99b1bbb67a319d8c1a
 workflow-type: tm+mt
-source-wordcount: '2222'
+source-wordcount: '2182'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 {{$include /help/_includes/release-notes/security-patch-intro.md}}
 
-## 2.4.4-p18
-
 {{extended-support}}
 
-Adobe Commerce 2.4.4-p18是一个扩展支持安全版本，为以前版本的2.4.4中标识的漏洞提供了安全错误修复。 它仅适用于Adobe Commerce客户。
+## 2.4.4-p18
+
+Adobe Commerce 2.4.4-p18是一个[扩展支持安全版本](../../lifecycle-policy.md#security-only-transitional-period)，为以前版本的2.4.4中发现的漏洞提供安全错误修复。 它仅适用于Adobe Commerce客户。
 
 有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-49](https://helpx.adobe.com/cn/security/products/magento/apsb26-49.html)。
 
@@ -26,9 +26,7 @@ Adobe Commerce 2.4.4-p18是一个扩展支持安全版本，为以前版本的2.
 
 ## 2.4.4-p17
 
-{{extended-support}}
-
-Adobe Commerce 2.4.4-p17是一个扩展支持安全版本，为以前版本的2.4.4中标识的漏洞提供了安全错误修复。 它仅适用于Adobe Commerce客户。
+Adobe Commerce 2.4.4-p17是一个[扩展支持安全版本](../../lifecycle-policy.md#security-only-transitional-period)，为以前版本的2.4.4中发现的漏洞提供安全错误修复。 它仅适用于Adobe Commerce客户。
 
 有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-05](https://helpx.adobe.com/cn/security/products/magento/apsb26-05.html)。
 
@@ -36,9 +34,7 @@ Adobe Commerce 2.4.4-p17是一个扩展支持安全版本，为以前版本的2.
 
 ## 2.4.4-p16
 
-{{extended-support}}
-
-Adobe Commerce 2.4.4-p16是一个扩展支持安全版本，为以前版本的2.4.4中标识的漏洞提供了安全错误修复。 它仅适用于Adobe Commerce客户。
+Adobe Commerce 2.4.4-p16是一个[扩展支持安全版本](../../lifecycle-policy.md#security-only-transitional-period)，为以前版本的2.4.4中发现的漏洞提供安全错误修复。 它仅适用于Adobe Commerce客户。
 
 有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/cn/security/products/magento/apsb25-94.html)。
 
@@ -48,10 +44,6 @@ Adobe Commerce 2.4.4-p16是一个扩展支持安全版本，为以前版本的2.
 
 {{$include /help/_includes/release-notes/highlights/security-2025-10.md}}
 
->[!NOTE]
->
->2.4.4的扩展支持安全修补程序仅向Adobe Commerce客户提供。 这些修补程序不适用于Magento Open Source代码库。 请参阅[扩展支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy#extended-support)。
-
 ### 已知问题
 
 #### 签出页面无法加载static.min.js和mixins.min.js
@@ -60,9 +52,7 @@ Adobe Commerce 2.4.4-p16是一个扩展支持安全版本，为以前版本的2.
 
 ## 2.4.4-p15
 
-{{extended-support}}
-
-Adobe Commerce 2.4.4-p15是一个扩展支持安全版本，为以前版本的2.4.4中标识的漏洞提供了安全错误修复。 它仅适用于Adobe Commerce客户。
+Adobe Commerce 2.4.4-p15是一个[扩展支持安全版本](../../lifecycle-policy.md#security-only-transitional-period)，为以前版本的2.4.4中发现的漏洞提供安全错误修复。 它仅适用于Adobe Commerce客户。
 
 有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/cn/security/products/magento/apsb25-71.html)。
 
@@ -70,9 +60,7 @@ Adobe Commerce 2.4.4-p15是一个扩展支持安全版本，为以前版本的2.
 
 ## 2.4.4-p14
 
-{{extended-support}}
-
-Adobe Commerce 2.4.4-p14是一个扩展支持安全版本，为以前版本的2.4.4中标识的漏洞提供了安全错误修复。 它仅适用于Adobe Commerce客户。
+Adobe Commerce 2.4.4-p14是一个[扩展支持安全版本](../../lifecycle-policy.md#security-only-transitional-period)，为以前版本的2.4.4中发现的漏洞提供安全错误修复。 它仅适用于Adobe Commerce客户。
 
 有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/cn/security/products/magento/apsb25-50.html)。
 
@@ -93,8 +81,6 @@ Adobe Commerce 2.4.4-p14是一个扩展支持安全版本，为以前版本的2.
 * **异步操作** — 用于覆盖先前客户订单的异步操作受限。<!-- AC-13917 -->
 
 ## 2.4.4-p13
-
-{{extended-support}}
 
 Adobe Commerce 2.4.4-p13安全版本为2.4.4以前版本中发现的漏洞提供了安全错误修复。
 
