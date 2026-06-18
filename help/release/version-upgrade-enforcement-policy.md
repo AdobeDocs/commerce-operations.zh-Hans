@@ -1,8 +1,8 @@
 ---
 title: 云版本升级实施策略
 description: 了解Adobe Commerce在云中的版本升级实施 — Adobe为何实施升级、实施日期、停用和所需操作。 请参阅生命周期政策，以了解过渡性规定和迁移路径。
-nudge: true
-source-git-commit: eacee993ec38cce7763d4c99b1bbb67a319d8c1a
+nudge: false
+source-git-commit: 797f067de451c8b1b4d735e82de66a3fd9b56563
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
