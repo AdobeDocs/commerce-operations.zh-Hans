@@ -2,9 +2,9 @@
 title: 使用Adobe Commerce实现平台现代化
 description: 查看有关规划Adobe Commerce升级的建议。
 exl-id: f776b000-0085-4b77-860f-623837c3c902
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8be75548a939008057fb5fdf37ba5b5a0345f6d4
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,6 @@ ht-degree: 0%
 - 显着提高了性能和可扩展性
 - 更好的开发人员体验和工具
 - 能够与其他Adobe Experience Cloud应用程序更深入地集成
-
-为了给我们的商家在规划升级时提供更大的灵活性，我们最近更新了Adobe Commerce [发布计划](../../release/schedule.md)，延长了2.3支持终止(EOS)日期，并宣布为我们的软件选定版本提供新的扩展支持选项。 有关这些更新的详细信息，请参阅[扩展的Adobe Commerce支持](https://business.adobe.com/cn/blog/the-latest/adobe-announces-expanded-support)。
 
 以下是Adobe Commerce推荐的升级路径，可在升级到最新版本之一时确保站点的安全性和性能。
 

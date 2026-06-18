@@ -2,9 +2,9 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 4ffbd0ab5109fb242d3d83c8f6c19c58d1bcb822
+source-git-commit: eacee993ec38cce7763d4c99b1bbb67a319d8c1a
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 
 >[!BEGINTABS]
 
->[!TAB 云端上的 Commerce]
+>云端上的[!TAB Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与每个版本行的最新Commerce版本兼容的服务提供了默认配置。
 
@@ -42,7 +42,7 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 MariaDB 12.3正式发布后，MariaDB 12.3与Adobe Commerce 2.4.9之间的兼容性将得到确认，预计将在5-6月时间范围内发布。
 
 对于默认配置，服务和版本定义在[的`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中。
-有关更多详细信息，请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
+有关更多详细信息，请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
 >[!TAB Commerce内部部署]
 
@@ -55,6 +55,8 @@ MariaDB 12.3正式发布后，MariaDB 12.3与Adobe Commerce 2.4.9之间的兼容
 Commerce版本行。
 运行版本2.4.7、2.4.6、2.4.5、2.4.4的所有Adobe Commerce内部部署客户都非常强
 建议将其数据库服务器迁移到兼容的MariaDB版本。
+
+云上的Adobe Commerce客户必须在支持的版本上保持平台依赖性。 请参阅生命周期策略中的[平台依赖项](../release/lifecycle-policy.md#platform-dependencies)。
 
 **Elasticsearch 7.17于2026年1月15日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.6、2.4.5和2.4.4将不提供兼容性或
@@ -72,20 +74,24 @@ Commerce版本行。
 
 >[!NOTE]
 >
+>Adobe Commerce 2.4.6处于[扩展支持](../release/lifecycle-policy.md#extended-support)到&#x200B;**2027年8月30日**&#x200B;的过渡期，其后是[仅限安全的过渡期](../release/lifecycle-policy.md#security-only-transitional-period)到&#x200B;**2028年5月31日**。 这些规定仅适用于Adobe Commerce客户。 它们不扩展对第三方依赖项（如MySQL）的支持。
+>
+>如果您在云上运行Adobe Commerce，则必须在&#x200B;**2028年6月1日** [版本升级实施日期](../release/version-upgrade-enforcement-policy.md)之前升级到支持的版本或迁移到[!DNL Adobe Commerce as a Cloud Service]。 有关完整生命周期日期，请参阅[支持结束日期](../release/lifecycle-policy.md#end-of-support-dates)表。
+>
 >该表将折叠以最小化此文章的长度。 选择标题可将其展开。
 
 +++早期版本的要求
 
 >[!BEGINTABS]
 
->[!TAB 云端上的 Commerce]
+>云端上的[!TAB Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
 {{$include /help/_includes/templated/cloud-requirements-table-old-releases.md}}
 
 对于默认配置，服务和版本定义在[的`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中。
-有关更多详细信息，请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
+有关更多详细信息，请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
 >[!TAB Commerce内部部署]
 
@@ -98,6 +104,8 @@ Commerce版本行。
 Commerce版本行。
 运行版本2.4.7、2.4.6、2.4.5、2.4.4的所有Adobe Commerce内部部署客户都非常强
 建议将其数据库服务器迁移到兼容的MariaDB版本。
+
+云上的Adobe Commerce客户必须在支持的版本上保持平台依赖性。 请参阅生命周期策略中的[平台依赖项](../release/lifecycle-policy.md#platform-dependencies)。
 
 **Elasticsearch 7.17于2026年1月15日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.6、2.4.5和2.4.4将不提供兼容性或
@@ -115,14 +123,14 @@ Commerce版本行。
 
 有特定的PHP配置设置，如`memory_limit`设置，可帮助您在使用Adobe Commerce时避免常见问题。 请参阅[必需的PHP设置](prerequisites/php-settings.md)。
 
-有关云配置指南，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
+有关云配置指南，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
 
 ### PHP OPcache
 
 Adobe建议您验证是否出于性能原因启用了[PHP OPcache](https://www.php.net/manual/en/book.opcache.php)。 OPcache在许多PHP分发中启用。
 
 - **对于云基础架构部署上的Adobe Commerce**，默认情况下会安装`opcache`扩展。
-- 对于Adobe Commerce内部部署：**&#x200B;**
+- 对于Adobe Commerce内部部署：****
    - [验证是否已安装PHP OPcache扩展](prerequisites/php-settings.md#verify-php-is-installed)。
    - 有关性能设置的特定指导，请参阅&#x200B;*性能最佳实践*&#x200B;指南中的[PHP设置](../performance/software.md#php-settings)的软件建议。
 
@@ -143,11 +151,11 @@ Adobe建议您验证是否出于性能原因启用了[PHP OPcache](https://www.p
 
 >[!TIP]
 >
->有关云基础架构中的PHP扩展，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[启用PHP扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。
+>有关云基础架构中的PHP扩展，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[启用PHP扩展](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。
 
 >[!BEGINTABS]
 
->[!TAB 云端上的 Commerce]
+>云端上的[!TAB Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
@@ -182,11 +190,11 @@ Adobe建议您验证是否出于性能原因启用了[PHP OPcache](https://www.p
 
 ### 邮件服务器
 
-邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/sendgrid)。
+邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/sendgrid)。
 
 ### 内存
 
-升级从Commerce Marketplace和其他来源获得的应用程序和扩展最多可能需要2 GB的RAM。 如果您使用的系统RAM小于2 GB，请创建[交换文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/installation-and-upgrade/out-of-memory-error-during-install-or-upgrade)。 否则，升级可能会失败。
+升级从Commerce Marketplace和其他来源获得的应用程序和扩展最多可能需要2 GB的RAM。 如果您使用的系统RAM小于2 GB，请创建[交换文件](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/installation-and-upgrade/out-of-memory-error-during-install-or-upgrade)。 否则，升级可能会失败。
 
 ### 操作系统(Linux x86-64)
 
@@ -212,16 +220,16 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 - 不支持自签名SSL证书。
 - 传输层安全性(TLS)要求 — PayPal和`repo.magento.com`都需要TLS 1.2或更高版本。
 
-有关云基础架构上的Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[Fastly配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)。
+有关云基础架构上的Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[Fastly配置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)。
 
 ### Xdebug
 
 对于Adobe Commerce，请使用[php_xdebug 2.5.x](https://xdebug.org/download)或更高版本（仅适用于开发环境；可能会对性能产生不利影响）。
 
-有关云上的Adobe Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置Xdebug](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/test/debug)。
+有关云上的Adobe Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置Xdebug](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/debug)。
 
 >[!NOTE]
 >
->`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
+>`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的[已知问题。
 
 <!-- Last updated from includes: 2026-06-01 15:26:19 -->

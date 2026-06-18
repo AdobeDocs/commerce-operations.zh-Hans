@@ -2,9 +2,9 @@
 title: 共享责任安全和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 4e5477a247b272dc17863a84bd3b9a55bf36d688
+source-git-commit: 7dcd7f79417df28402a29e1e52d99eb288e8c6b9
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3253'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,14 @@ Adobe负责以下工作：
 * 确保安全的应用程序开发
 * 如果商户的支付处理器要求，则获取PCI认证
 * 响应和响应安全事件
-* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability)。
+* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability)。
+
+>[!NOTE]
+>
+>另请参阅：
+>
+>* [软件生命周期策略](../release/lifecycle-policy.md) — 支持终止日期、扩展支持以及仅限安全的过渡条款
+>* [云版本升级实施策略](../release/version-upgrade-enforcement-policy.md) — 实施日期和所需操作
 
 {{supported-versions-only}}
 
@@ -96,7 +103,7 @@ Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
    * Adobe Commerce Services扩展
    * 所有第三方扩展和自定义集成
 
-  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability)。
+  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability)。
 
 ## 云服务提供商责任
 
@@ -813,8 +820,6 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 配置MBI数据同步到Adobe Commerce Cloud Pro<br>（Adobe Commerce Cloud数据库配置） | R |   |
 
 {style="table-layout:auto"}
-
-{{supported-versions-only}}
 
 #### 产品推荐
 
