@@ -4,10 +4,10 @@ user-guide-description: 在一个位置访问Adobe Commerce修补程序和服务
 feature: Release Notes
 recommendations: noDisplay, noCatalog
 nudge: true
-source-git-commit: c8fa72ef4b5bb6f9a2d82e4e9840f683afb8ca54
+source-git-commit: 34c15beb4ddf0f6624295b0ec835de013dd36315
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 34%
+source-wordcount: '101'
+ht-degree: 32%
 
 ---
 
@@ -54,6 +54,7 @@ ht-degree: 34%
 - [Beta版本](beta.md)
 - 规划和策略 {#planning}
    - [生命周期政策](lifecycle-policy.md)
+   - [版本升级实施策略](version-upgrade-enforcement-policy.md)
    - [版本控制策略](versioning-policy.md)
    - [发布计划](schedule.md)
 - [按版本显示的功能](features.md)
@@ -61,4 +62,4 @@ ht-degree: 34%
 - 包 {#packages}
    - [Adobe Commerce](packages/adobe-commerce.md)
    - [Magento Open Source](packages/magento-open-source.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
