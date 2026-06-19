@@ -1,7 +1,7 @@
 ---
-source-git-commit: b8c97f7a7d92a75ce54d323344460e2e71e8f548
+source-git-commit: 4b59c6bdce39314fd188c8c811c4d9e3f46d6067
 workflow-type: tm+mt
-source-wordcount: '3441'
+source-wordcount: '3538'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,80 @@ ht-degree: 0%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年6月18日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy">软件生命周期策略</a>，其中包含Cloud版本升级实施日期、支持期定义（包括仅限安全的过渡期）、适用于2.4.4-2.4.9的扩展支持终止表、PHP PCI指南，以及迁移到Adobe Commerce as a Cloud Service或在PaaS上升级的路径。</p>
+</td>
+      <td>
+        重大更新
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/dc8326755ceee435f9980d7ea8003a6692ba1e92">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年6月16日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已将Cloud的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>表格中的Composer版本更新为2.10，并为Adobe Commerce 2.4.9、2.4.8和2.4.7提供本地部署。</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/23f2234eb2b9e11e36e49607b21c3c092266fec4">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年6月15日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已使用最新的Payment Services v2.15.0版本更新<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability#commerce-services">产品可用性</a>表。</p>
+</td>
+      <td>
+        重大更新，发行说明
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a47aff5b5ae138748584cb5dbd646ca7b69e294a">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">Commerce系统要求</a>，以明确说明Commerce on Cloud模板现在提供了默认服务配置，该配置与每个版本行的最新Commerce版本兼容。</p>
+</td>
+      <td>
+        反馈，技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aaa05baf7a213a2f949e2eadbf72bc13e1ed247a">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年6月12日
 
@@ -729,30 +803,6 @@ ht-degree: 0%
         新主题qpt
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3f14416d89140ee75ec437a42fbebae804282b72">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月20日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><ul>
-  <li>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy">生命周期策略</a>，修订了终止支持表、扩展的支持范围以及有关2.4.4和2.4.5的其他安全修补程序设置的新部分。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/versioning-policy">版本策略</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/schedule">版本计划</a>，内容涉及隔离的安全修补程序先决条件和修补程序/通过质量修补程序工具进行的单独修补程序交付；将隔离的安全修补程序详细信息移入共享安全修补程序概述中。<br /> — 更新了2026版日历以符合当前计划。</li>
-</ul>
-</td>
-      <td>
-        技术、重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0bc6807d7f4bfd84ac698de81f8cf6f56d849af7">提交</a></td>
     </tr>
   </tbody>
 </table>
