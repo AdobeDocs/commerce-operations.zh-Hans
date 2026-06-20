@@ -53,7 +53,7 @@ ht-degree: 2%
             <li><a href="https://experienceleague.adobe.com/docs/commerce/catalog-service/release-notes.html?lang=zh-Hans">目录服务</a></li>
             <li><a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/data-connection/release-notes">Experience Platform连接器</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce/live-search/release-notes.html?lang=zh-Hans">实时搜索</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce/payment-services/release-notes.html">支付服务</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce/payment-services/release-notes.html?lang=zh-Hans">支付服务</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce/product-recommendations/release-notes.html?lang=zh-Hans">产品推荐</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=zh-Hans">服务连接器</a></li>
           </ul>
@@ -75,7 +75,7 @@ ht-degree: 2%
         <p>了解店面技术的最新改进，您可以使用这些改进为客户打造独特的体验。</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/developer/commerce/storefront/?lang=zh-Hans">Adobe Commerce店面</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html">页面生成器</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html?lang=zh-Hans">页面生成器</a></li>
             <li><a href="https://github.com/magento/pwa-studio/releases/latest">PWA Studio</a></li>
           </ul>
       </td>

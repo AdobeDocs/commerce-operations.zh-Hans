@@ -44,7 +44,7 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 - 更明确地期望在查询时权重、智能排名和手动规则如何组合。
 - 有关验证高值查询和在更改后调整Boost规则的指南。
 
-在[Adobe Commerce Optimizer (SaaS)](https://experienceleague.adobe.com/en/docs/commerce/optimizer/manage-results/search-relevance-matching)和[实时搜索(PaaS)](https://experienceleague.adobe.com/en/docs/commerce/live-search/live-search-admin/search-relevance-matching)中了解有关搜索匹配和排名策略的更多信息。
+在[Adobe Commerce Optimizer (SaaS)](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/manage-results/search-relevance-matching)和[实时搜索(PaaS)](https://experienceleague.adobe.com/en/docs/commerce/live-search/live-search-admin/search-relevance-matching)中了解有关搜索匹配和排名策略的更多信息。
 
 若要请求此私人测试版的邀请，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。 Adobe团队将通过后续步骤和资格要求做出响应。
 

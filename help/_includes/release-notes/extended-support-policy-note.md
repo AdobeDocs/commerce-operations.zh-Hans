@@ -16,4 +16,4 @@ ht-degree: 0%
 >另请参阅：
 >
 >- [软件生命周期策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy) — 支持终止日期、扩展支持以及仅限安全的过渡条款
->- [云版本升级实施策略](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/version-upgrade-enforcement-policy) — 实施日期和所需操作
+>- [云版本升级实施策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/version-upgrade-enforcement-policy) — 实施日期和所需操作
