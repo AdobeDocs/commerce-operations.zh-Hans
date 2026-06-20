@@ -31,7 +31,7 @@ Adobe已对支持的版本进行了全面测试。 Adobe客户支持部门可提
 
 ## Commerce服务
 
-[Commerce Services](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html)是一套由Adobe托管的功能，可与您的Commerce实例相结合，提供强大的功能和快速的响应时间。
+[Commerce Services](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html?lang=zh-Hans)是一套由Adobe托管的功能，可与您的Commerce实例相结合，提供强大的功能和快速的响应时间。
 
 建议商家使用最新版本的服务，以确保最高的稳定性和功能。 本文档介绍了当前发布的版本。
 
