@@ -4,14 +4,24 @@ description: 了解Varnish Edge Side Include (ESI)以及如何嵌入Adobe Commer
 badge: label="由Konstantin G提供。" type="Informative" url="https://github.com/goivvy" tooltip="康斯坦丁G."
 feature: Configuration, Cache
 exl-id: 7dccafa5-df79-4690-be5c-ff774c66bb2a
-source-git-commit: 605b2e59d200bc8eeab43e91006a3f95e6a6c138
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+autotag-review: '2026-06-22T22:02:08.706Z'
+TQID: 'https://experienceleague.adobe.com/hzsfaZyHuUhzfb86anO43PfP-62WRPOoMbYOh-H1vqo'
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: 159
 ht-degree: 0%
 
 ---
 
 # 配置清漆ESI块 {#varnish-esi-block}
+
+{{varnish-config-cloud}}
 
 Edge Side Include (ESI)是特殊指令，可用于将网页包含在其他网页中。
 

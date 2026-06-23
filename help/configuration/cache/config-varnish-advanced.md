@@ -3,14 +3,22 @@ title: 高级清漆配置
 description: 了解如何为Adobe Commerce配置高级清漆功能，包括运行状况检查、宽限和saint模式。 了解VCL优化技术。
 feature: Configuration, Cache
 exl-id: 178bd675-6ed0-40cc-9455-08a11b32c054
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: 927
 ht-degree: 0%
 
 ---
 
 # 高级清漆配置
+
+{{varnish-config-cloud}}
 
 Varnish提供了多项功能，可在Commerce服务器无法正常运行时防止客户遇到长时间延迟和超时。 可在`default.vcl`文件中配置这些功能。 本主题介绍Commerce在您从管理员下载的VCL（清漆配置语言）文件中提供的附加内容。
 
