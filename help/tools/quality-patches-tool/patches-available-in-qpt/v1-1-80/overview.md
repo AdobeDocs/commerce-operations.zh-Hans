@@ -6,15 +6,10 @@ role: Admin, Developer
 type: Troubleshooting
 autotag-review: '2026-06-11T01:10:37.916Z'
 TQID: 'https://experienceleague.adobe.com/q2sNWUJQCm4eRUP8RusytBAqQoscU4F9qDtDIeNmm6E'
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 393900188a9b3c08184a84665d32890f09703d35
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 3eff1670dd536175d4905d386027674431831ae8
 workflow-type: tm+mt
 source-wordcount: 409
 ht-degree: 0%
@@ -40,7 +35,7 @@ QPT v1.1.80包含以下修补程序：
 1. **ACP2E-4626**：修复了某些Storefront JavaScript文件被请求和执行两次，从而导致间歇性重复加载和不稳定的问题。
 1. **ACP2E-4653**：修复了在通过REST API检索或更新规则时未公开&#x200B;**[!UICONTROL Category (Parent Only)]**&#x200B;和&#x200B;**[!UICONTROL Category (Children Only)]**&#x200B;的&#x200B;**[!UICONTROL Cart Price Rule]**&#x200B;条件属性范围的问题。
 1. **ACP2E-4808**：修复了storefront产品页面上的Weight属性在&#x200B;**[!UICONTROL Additional Information]**&#x200B;或&#x200B;**[!UICONTROL More Information]**&#x200B;部分中只显示原始数值而没有配置的度量单位（lbs或kgs）的问题。
-1. **ACP2E-4156**：修复了REST API中的送货地址验证不遵循[!UICONTROL Admin]中定义的属性配置的问题。
+1. **[ACP2E-4156](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4156.md)**：修复了[!DNL REST] API中的送货地址验证不符合管理员中定义的属性配置的问题。
 1. **ACP2E-4813**：修复了以下问题：在结账时无法使用USPS配送方式，并且某些产品的配送估计不正确，包括拆分为多个套件的订单。
 1. **ACSD-53502**：修复了以下问题：由于递归调用New Relic监视脚本，导致&#x200B;**[!UICONTROL Add to Cart]**&#x200B;在iOS [!DNL Safari]中的店面间歇性地失败，进而导致页面重新加载。
 
