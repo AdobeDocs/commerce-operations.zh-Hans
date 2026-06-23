@@ -1,11 +1,23 @@
 ---
-source-git-commit: 8be75548a939008057fb5fdf37ba5b5a0345f6d4
+source-git-commit: f08c48c7e39c506a71bf9e13d0adc06315013d69
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
 # 代码片段
+
+## 云缓存上的Commerce配置说明（参考） {#cloud-cache-config}
+
+>[!NOTE]
+>
+>对于云项目上的Adobe Commerce，有关缓存配置说明，请参阅[Redis和Valkey服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+
+## Commerce on Cloud清漆配置说明（参考） {#varnish-config-cloud}
+
+>[!NOTE]
+>
+>如果您的Commerce项目部署在云上，则全页缓存将使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/fastly)而不是Varnish。 本节中的主题仅适用于内部安装。
 
 ## Adobe服务版本支持 {#supported-versions-only}
 

@@ -1,56 +1,92 @@
 ---
-title: 为清漆缓存配置Web服务器
+title: 为清漆缓存配置nginx
 description: 了解如何配置Web服务器以使用Adobe Commerce的Varnish缓存。 了解端口配置和设置要求。
 feature: Configuration, Cache, Install, Logs
 exl-id: b31179ef-3c0e-4a6b-a118-d3be1830ba4e
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+autotag-review: '2026-06-22T21:49:41.837Z'
+TQID: 'https://experienceleague.adobe.com/0vOg86gRkST8CZGhdIESzhld63HQ5IUlO4go-Hgw9Xs'
+product_v2:
+  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: c8faa589c9e9d1dbc01863d90aad5f91b11c0140
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: 806
 ht-degree: 0%
 
 ---
 
-# 配置Web服务器以进行清漆缓存
+# 为Varnish缓存配置nginx {#configure-web-server-for-varnish-caching}
 
-将Web服务器配置为在默认端口80以外的端口上侦听，因为Varnish直接响应传入的HTTP请求，而不是Web服务器。
+当Varnish用作Adobe Commerce前面的全页缓存时，Varnish通常侦听公共HTTP端口并将请求转发到非默认后端端口（如8080）上的nginx。 更新Commerce源服务器的nginx站点配置，以便在Varnish将使用的后端端口上进行侦听。
+
+{{varnish-config-cloud}}
 
 以下部分使用端口8080作为示例。
 
-**要更改Apache 2.4侦听端口**：
+**更改Commerce原始服务器的nginx侦听端口**：
 
-1. 在文本编辑器中打开`/etc/httpd/conf/httpd.conf`。
-1. 找到`Listen`指令。
-1. 将侦听端口的值更改为`8080`。 （可以使用任何可用的侦听端口。）
-1. 将更改保存到`httpd.conf`并退出文本编辑器。
+1. 在文本编辑器中打开Adobe Commerce源服务器的nginx站点配置。
+
+位置取决于您的操作系统和nginx布局。 例如，Ubuntu通常使用`/etc/nginx/sites-available/`下的文件。
+
+1. 在Commerce站点的`server`块中，将`listen`指令从公共HTTP端口更改为Varnish用于访问nginx的后端端口。
+
+   例如，更改
+
+   ```conf
+   server {
+       listen 80;
+       server_name example.com;
+       root /var/www/html/magento2;
+       include /var/www/html/magento2/nginx.conf.sample;
+   }
+   ```
+
+   至：
+
+   ```conf
+   server {
+       listen 8080;
+       server_name example.com;
+       root /var/www/html/magento2;
+       include /var/www/html/magento2/nginx.conf.sample;
+   }
+   ```
+
+1. 保存文件。
+
+1. 验证nginx配置：
+
+   ```shell
+   nginx -t
+   ```
+
+1. 重新启动nginx：
+
+   ```shell
+   systemctl restart nginx
+   ```
 
 ## 修改Varnish系统配置
 
-要修改Varnish系统配置：
+更新nginx以侦听后端端口后，将Varnish配置为将请求转发到该主机和端口。 例如：
 
-1. 作为具有`root`权限的用户，在文本编辑器中打开“消失”配置文件：
-
-   - CentOS 6： `/etc/sysconfig/varnish`
-   - CentOS 7： `/etc/varnish/varnish.params`
-   - Debian： `/etc/default/varnish`
-   - Ubuntu： `/etc/default/varnish`
-
-1. 将Varnish侦听端口设置为80：
-
-   ```conf
-   VARNISH_LISTEN_PORT=80
-   ```
-
-   对于Varnish 4.x，请确保DAEMON_OPTS包含`-a`参数的正确侦听端口（即使VARNISH_LISTEN_PORT设置为正确的值）：
-
-   ```conf
-   DAEMON_OPTS="-a :80 \
-      -T localhost:6082 \
-      -f /etc/varnish/default.vcl \
-      -S /etc/varnish/secret \
-      -s malloc,256m"
-   ```
-
-1. 将更改保存到Varnish配置文件并退出文本编辑器。
+```conf
+backend default {
+    .host = "192.0.2.55";
+    .port = "8080";
+}
+```
 
 ### 修改缺省VCL
 
@@ -80,7 +116,7 @@ ht-degree: 0%
 
 1. 将`.port`的值替换为Web服务器的侦听端口（在此示例中为8080）。
 
-   示例： Apache安装在主机192.0.2.55上，Apache正在端口8080上侦听：
+   示例： nginx安装在主机192.0.2.55上并在端口8080上侦听：
 
    ```conf
    backend default {
@@ -91,7 +127,7 @@ ht-degree: 0%
 
    >[!INFO]
    >
-   >如果Varnish和Apache在同一主机上运行，Adobe建议您使用IP地址或主机名，而不是`localhost`。
+   >如果Varnish和nginx在同一主机上运行，Adobe建议您使用IP地址或主机名，而不是`localhost`。
 
 1. 将更改保存到`default.vcl`并退出文本编辑器。
 
@@ -162,11 +198,11 @@ netstat -tulpn
 ```text
 tcp        0      0 0.0.0.0:80                  0.0.0.0:*                   LISTEN      32614/varnishd
 tcp        0      0 127.0.0.1:58484             0.0.0.0:*                   LISTEN      32604/varnishd
-tcp        0      0 :::8080                     :::*                        LISTEN      26822/httpd
+tcp        0      0 :::8080                     :::*                        LISTEN      26822/nginx
 tcp        0      0 ::1:48509                   :::*                        LISTEN      32604/varnishd
 ```
 
-前文显示了在端口80上运行的Varnish和在端口8080上运行的Apache。
+前文显示了在端口80上运行的Varnish和在端口8080上运行的nginx。
 
 如果未看到`varnishd`的输出，请确保Varnish正在运行。
 

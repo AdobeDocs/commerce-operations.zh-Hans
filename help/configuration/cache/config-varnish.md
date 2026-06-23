@@ -3,16 +3,31 @@ title: 配置和使用清漆
 description: 了解如何为Adobe Commerce配置和使用Varnish缓存。 探索HTTP加速、文件存储和性能优化技术。
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+autotag-review: '2026-06-22T21:50:49.341Z'
+TQID: 'https://experienceleague.adobe.com/BsUTkhb2QhntUOT3EC181zdsQjqk8Dw0T5Iac0LS318'
+product_v2:
+  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 8cbff72c3b765c6ff85a34a3ec3d2f58b52bb9c3
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: 1077
 ht-degree: 0%
 
 ---
 
 # 配置和使用清漆
 
-[清漆缓存](https://www.varnish.org/)是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与Apache和nginx等Web服务器不同，Varnish专为HTTP协议而设计。
+[清漆缓存](https://www.varnish.org/)是开源Web应用程序加速器（也称为&#x200B;_HTTP加速器_&#x200B;或&#x200B;_缓存HTTP反向代理_）。 Varnish在内存中存储（或缓存）文件或文件片段，从而使Varnish能够减少未来对等请求的响应时间和网络带宽消耗。 与nginx等Web服务器不同，Varnish专为HTTP协议而设计。
 
 [系统要求](../../installation/system-requirements.md)列出了支持的Varnish版本。
 
@@ -53,9 +68,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->- 除了上面提到的以外，您必须以具有`root`权限的用户身份输入本主题中讨论的所有命令。
->
->- 本主题为CentOS和Apache 2.4上的Varnish编写。 如果在不同的环境中设置“清漆”，某些命令可能会不同。 有关更多信息，请参阅Varnish文档。
+>除了上面提到的以外，您必须以具有`root`权限的用户身份输入本主题中讨论的所有命令。
 
 ## 已知问题
 
@@ -88,11 +101,10 @@ ht-degree: 0%
 
 ## 清漆缓存概述
 
-清漆缓存可使用以下方式与Commerce配合使用：
+在典型的基于nginx的部署中，Varnish在端口80上接受传入的HTTP通信并将请求转发到后端端口（如8080）上的nginx。 Adobe Commerce为源Web服务器提供`nginx.conf.sample`，并从管理员生成Varnish `default.vcl`。
 
-- Magento 2 GitHub存储库中的[`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)
-- Commerce提供的Apache的`.htaccess`分布式配置文件
-- 使用[管理员](../cache/configure-varnish-commerce.md)生成的清漆的`default.vcl`配置
+- [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)随Adobe Commerce一起提供
+- 从[管理员](../cache/configure-varnish-commerce.md)生成的`default.vcl`
 
 >[!INFO]
 >
@@ -114,7 +126,7 @@ ht-degree: 0%
 
 下图显示了使用浏览器检查器的示例：
 
-![首次请求可缓存对象时，Varnish会将其提供给浏览器](../../assets/configuration/varnish-apache-first-visit.png)
+![首次请求可缓存对象时，Varnish会将其提供给浏览器](../../assets/configuration/varnish-webserver-first-visit.png)
 
 上例显示了storefront主页面(`m2_ce_my`)的请求。 CSS和JavaScript资源缓存在客户端浏览器中。
 
@@ -126,7 +138,7 @@ ht-degree: 0%
 
 如果同一浏览器再次请求同一页面，则这些资产将从本地浏览器缓存中交付，如下图所示。
 
-![下次请求同一对象时，从本地浏览器缓存加载资源](../../assets/configuration/varnish-apache-second-visit.png)
+![下次请求同一对象时，从本地浏览器缓存加载资源](../../assets/configuration/varnish-webserver-second-visit.png)
 
 请注意第一个请求和第二个请求之间的响应时间差异。 同样，静态资产具有200 (OK)响应代码，因为它们是首次从本地缓存中交付。
 
