@@ -5,16 +5,12 @@ exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
 autotag-review: '2026-05-29T17:40:45.034Z'
 TQID: 'https://experienceleague.adobe.com/HHiR-UPHRK-dZCKE9L6H1bfm4hykrOgYsBm-XJv8zyE'
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-source-git-commit: c7b05a4b636b1d4f67e1d3db40dce7fab1cb1b6b
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+source-git-commit: f1cae5b4ad3d75dbc7f83b7687a4614f678263cd
 workflow-type: tm+mt
-source-wordcount: 30977
+source-wordcount: 31322
 ht-degree: 0%
 
 ---
@@ -25,11 +21,26 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.81 {#v1-1-81}
+
+* **ACP2E-4300**（适用于Adobe Commerce >=2.4.5 &lt;2.4.9） — 修复了在管理员中更改客户组时不会更新店面目录权限，从而导致目录和购物车反映过期权限的问题。
+* **ACP2E-4401**（适用于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了带有可配置产品的主页链接的计划更新预览重定向到维护页面而不是显示产品列表的问题。
+* **ACP2E-4395**（对于Adobe Commerce >=2.4.5 &lt;2.4.9） — 修复了在全局范围未指定任何金额时，礼品卡API产品创建不显示错误的问题。
+* **ACP2E-4468**（适用于Adobe Commerce >=2.4.8 &lt;2.4.9） — 修复了具有网站范围权限的管理员用户无法编辑横幅内容的问题。
+* **ACP2E-4630**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9） — 修复了具有自定义选项的长产品名称在分页后与多页“发票”、“发运”、“贷项通知单”和“退货”PDF中的相邻列或项目重叠，从而导致行项目无法阅读的问题。
+* **ACP2E-4680**（对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3） — 修复了不可销售或删除的产品从最终可协商报价中消失的问题。
+* **ACP2E-4709**（适用于Adobe Commerce >=2.4.7 &lt;2.4.9） — 修复了使用Page Builder时CMS页面无法保存的问题。
+* **ACP2E-4786**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了在配置AWS S3远程存储时，由于存储驱动程序中的路径解析不正确而导致导出产品无法写入文件的问题。
+* **ACP2E-4801**（对于Adobe Commerce，B2B >=1.4.2 &lt;1.5.3） — 修复了以下问题：通过管理员提供的可转让报价中的“配置”按钮更新捆绑产品选件数量未应用，并且更改被丢弃。
+* **ACP2E-4815**（对于Adobe Commerce和Magento Open Source >=2.4.6-p15 &lt;2.4.7） || >=2.4.7-p1 &lt;2.4.9) — 修复了导致日志中出现PHP异常的多个GraphQL问题，修复了通过GraphQL在订单后创建的订单与客户帐户之间的正确关联，以及通过HTTP规范将响应与GraphQL保持一致。
+* 已更新的版本： **ACSD-64212**、**ACSD-64523**、**ACSD-67347**
+* 已替换的修补程序： **ACSD-67941**、**ACSD-64212**、**ACSD-68925**
 
 ## v1.1.80 {#v1-1-80}
 
@@ -93,7 +104,7 @@ ht-degree: 0%
 * **ACP2E-4732**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了当changelog表中的version_id列达到最大值时，具有大量更新的客户停止部分索引的问题。
 * **ACP2E-4763**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了以下问题：当目录价格设置为“含税”时，由于应用了两次税，GraphQL客户订单查询会返回夸大的original_price_include_tax和original_row_total_include_tax值。
 * **ACSD-60989**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过声明性架构修改带有外键的列会在MariaDB上导致错误的问题。
-* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050&lbrace;37**
+* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050{37**
 * 已替换的修补程序： **ACSD-58446**、**ACSD-67904**
 
 ## v1.1.77 {#v1-1-77}
