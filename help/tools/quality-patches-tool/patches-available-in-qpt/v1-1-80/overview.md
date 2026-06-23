@@ -14,9 +14,9 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 3eff1670dd536175d4905d386027674431831ae8
+source-git-commit: dace5fedf8e247c3391a8ffae1b2050f3e37367e
 workflow-type: tm+mt
-source-wordcount: 409
+source-wordcount: 410
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ QPT v1.1.80包含以下修补程序：
 1. **ACP2E-4488**：修复了属性集大的产品在[!UICONTROL Admin]中保存或编辑产品速度缓慢的问题。
 1. **ACP2E-4493**：修复了在启用异步索引时，销售订单存档网格显示错误订单状态的问题。
 1. **ACP2E-4496**：修复了Analytics cron作业在执行期间导致性能下降，从而改善整体系统性能的问题。
-1. **ACP2E-4533**：修复了URL中包含商店代码时，店面未加载占位符图像的问题。
+1. **[ACP2E-4533](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4533.md)**：修复了URL中包含商店代码时，店面未加载占位符图像的问题。
 1. **ACP2E-4552**：修复了GraphQL响应中未返回公司状态的问题。
 1. **ACP2E-4610**：修复了`sales_clean_quotes` cron作业存在性能问题的问题。
 1. **ACP2E-4615**：修复了在线订单退款失败并出现PayPal错误的问题，即&#x200B;*PayPal网关拒绝请求。 内部错误。*。

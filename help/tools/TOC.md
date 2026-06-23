@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: bcdc7ec2789358b58f137d622ddbf250acf28c2c
+source-git-commit: dace5fedf8e247c3391a8ffae1b2050f3e37367e
 workflow-type: tm+mt
-source-wordcount: '10160'
+source-wordcount: '10174'
 ht-degree: 0%
 
 ---
@@ -1009,6 +1009,7 @@ ht-degree: 0%
          - [ACP2E-4601：重新保存付款授权事务处理自引用parent_id并触发无限循环/OOM](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4601.md)
       - v1.1.80 {#v1-1-80}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.80](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/overview.md)
+         - [ACP2E-4533：当URL包含存储代码时，无法在店面中加载占位符图像](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4533.md)
          - [ACP2E-4156： [!DNL REST] API送货地址验证忽略管理员属性配置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4156.md)
    - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - 命令行工具引用 {#cli-reference}
@@ -1060,4 +1061,4 @@ ht-degree: 0%
    - 资源 {#resources}
       - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
