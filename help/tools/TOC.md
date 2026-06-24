@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 08101f36665d77f807386f261d39dee1e379a8b1
+source-git-commit: 016a56af24e8e4ff127c54713e5fa45ab9fca826
 workflow-type: tm+mt
-source-wordcount: '10185'
+source-wordcount: '10196'
 ht-degree: 0%
 
 ---
@@ -1009,6 +1009,7 @@ ht-degree: 0%
          - [ACP2E-4601：重新保存付款授权事务处理自引用parent_id并触发无限循环/OOM](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4601.md)
       - v1.1.80 {#v1-1-80}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.80](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/overview.md)
+         - [ACP2E-4472：使用Login as Customer流程创建的Null报价](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4472.md)
          - [ACP2E-4808：店面无度量单位的产品重量显示](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4808.md)
          - [ACP2E-4533：当URL包含存储代码时，无法在店面中加载占位符图像](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4533.md)
          - [ACP2E-4156： [!DNL REST] API送货地址验证忽略管理员属性配置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4156.md)
@@ -1060,6 +1061,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
