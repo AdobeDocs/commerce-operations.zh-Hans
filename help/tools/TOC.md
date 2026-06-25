@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: 9a970dd17c8ce444df4af965b0e3340dde05450f
+source-git-commit: 1816dfaa5145de416decf64482ed81ee82c7448d
 workflow-type: tm+mt
-source-wordcount: '10226'
+source-wordcount: '10235'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
    - [Adobe Commerce的受管警报： CPU警告警报](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Quality Patches工具 {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+   - [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [使用情况](quality-patches-tool/usage.md)
    - [发行说明](quality-patches-tool/release-notes.md)
    - Quality Patches Tool中提供的修补程序 {#patches-available-in-qpt}
@@ -895,8 +895,8 @@ ht-degree: 0%
          - [ACSD-67603：启用图像包含功能的产品，其Sitemap生成过程将需要较长的处理时间](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67603.md)
          - [ACSD-67093：使用日期范围筛选器通过GraphQL检索订单时，会返回错误结果](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67093.md)
          - [ACSD-67652：在GraphQL调用中将捆绑产品状态返回为缺货，并且子产品和父产品有库存](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67652.md)
-         - [ACSD-60624：上传 [!DNL Page Builder]中图像、横幅和滑块部分中的空内容图像失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-60624.md)
-         - [ACSD-67904：如果城市名称包含数字(0-9)、&amp;符号(&amp;)、句点(.)或圆括号()，则无法下达订单](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67904.md)
+         - [ACSD-60624：上传 [!DNL Page Builder]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-60624.md)中图像、横幅和滑块部分中的空内容图像失败
+         - [ACSD-67904：如果城市名称包含数字(0-9)、&amp;符号(&amp;)、句点(.)或圆括号()](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67904.md)，则无法下达订单
          - [ACSD-67459：无法导入描述长度超过65,536个字符的产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-71/acsd-67459.md)
       - v1.1.72 {#v1-1-72}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.72](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/overview.md)
@@ -1005,10 +1005,11 @@ ht-degree: 0%
          - [ACP2E-4411：在多货币设置中，捆绑产品价格在产品详细信息页面和购物车之间显示不正确的税和货币值](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4411.md)
          - [ACP2E-4110：捆绑产品价格（带&#x200B;**[!UICONTROL Special Price]**）在PDP/PLP和购物车之间以非默认货币不同](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4110.md)
          - [ACP2E-4603：目录权限产品重新索引留下过时的权限索引行和MySQL死锁](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4603.md)
-         - [AC-10737： `/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737.md/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737.md/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737.md1`命令无法识别JSON数据类型](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737.md)
+         - [AC-10737： `bin/magento setup:db:status`命令无法识别JSON数据类型](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737.md)
          - [ACP2E-4601：重新保存付款授权事务处理自引用parent_id并触发无限循环/OOM](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4601.md)
       - v1.1.80 {#v1-1-80}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.80](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/overview.md)
+         - [ACP2E-4552： GraphQL响应不返回公司状态](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4552.md)
          - [ACP2E-4496：Analytics cron作业在执行期间降低性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4496.md)
          - [ACP2E-4488：大型属性集的管理员产品保存/编辑速度较慢](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4488.md)
          - [ACP2E-4653： [!DNL REST] API中缺少购物车价格规则类别范围条件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4653.md)
@@ -1036,7 +1037,7 @@ ht-degree: 0%
    - [“警报”选项卡](observation-for-adobe-commerce/alerts-tab.md)
    - [WAF选项卡](observation-for-adobe-commerce/waf-tab.md)
    - [CDN选项卡](observation-for-adobe-commerce/cdn-tab.md)
-   - [&#x200B; [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [ [!DNL RabbitMQ] 选项卡](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Cron选项卡](observation-for-adobe-commerce/cron-tab.md)
    - [索引选项卡](observation-for-adobe-commerce/indexing-tab.md)
    - [QuickView选项卡](observation-for-adobe-commerce/oac-quickview-tab.md)
@@ -1064,6 +1065,6 @@ ht-degree: 0%
       - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
       - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
    - 资源 {#resources}
-      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=zh-Hans)
+      - [故障排除](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
+- [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
