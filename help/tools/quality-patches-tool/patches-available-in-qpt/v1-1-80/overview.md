@@ -14,9 +14,9 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 54099d0e9607799ea1ea17d8b5b0ea3c38c2d513
+source-git-commit: 9a970dd17c8ce444df4af965b0e3340dde05450f
 workflow-type: tm+mt
-source-wordcount: 418
+source-wordcount: 419
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ QPT v1.1.80包含以下修补程序：
 1. **ACP2E-4239**：修复了由于所选日期、存储的UTC值和配置的存储区时区之间的时区差异，使用日期属性的管理网格筛选器返回错误结果的问题。
 1. **[ACP2E-4472](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4472.md)**：修复了在&#x200B;**[!UICONTROL Login as Customer]**&#x200B;流程期间`quote`数据库表中创建null引用记录的问题。
 1. **ACP2E-4481**：修复了在取消订单后无法正确重新计算捆绑产品可销售性的问题。
-1. **ACP2E-4488**：修复了属性集大的产品在[!UICONTROL Admin]中保存或编辑产品速度缓慢的问题。
+1. **[ACP2E-4488](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4488.md)**：修复了在管理员中保存或编辑具有大型属性集的产品的速度缓慢的问题。
 1. **ACP2E-4493**：修复了在启用异步索引时，销售订单存档网格显示错误订单状态的问题。
-1. **ACP2E-4496**：修复了Analytics cron作业在执行期间导致性能下降，从而改善整体系统性能的问题。
+1. **[ACP2E-4496](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4496.md)**：修复了Analytics cron作业在执行期间导致性能下降，从而改善整体系统性能的问题。
 1. **[ACP2E-4533](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4533.md)**：修复了URL中包含商店代码时，店面未加载占位符图像的问题。
 1. **ACP2E-4552**：修复了GraphQL响应中未返回公司状态的问题。
 1. **ACP2E-4610**：修复了`sales_clean_quotes` cron作业存在性能问题的问题。

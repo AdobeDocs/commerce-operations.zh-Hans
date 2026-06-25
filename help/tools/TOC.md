@@ -2,9 +2,9 @@
 user-guide-title: 工具
 user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、其用途、安装过程以及如何获取访问权限。
 feature: Configuration
-source-git-commit: f1c04fe69abdcdbb425d4488e3095baa2debc274
+source-git-commit: 9a970dd17c8ce444df4af965b0e3340dde05450f
 workflow-type: tm+mt
-source-wordcount: '10206'
+source-wordcount: '10226'
 ht-degree: 0%
 
 ---
@@ -1009,6 +1009,8 @@ ht-degree: 0%
          - [ACP2E-4601：重新保存付款授权事务处理自引用parent_id并触发无限循环/OOM](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4601.md)
       - v1.1.80 {#v1-1-80}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.80](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/overview.md)
+         - [ACP2E-4496：Analytics cron作业在执行期间降低性能](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4496.md)
+         - [ACP2E-4488：大型属性集的管理员产品保存/编辑速度较慢](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4488.md)
          - [ACP2E-4653： [!DNL REST] API中缺少购物车价格规则类别范围条件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4653.md)
          - [ACP2E-4472：使用Login as Customer流程创建的Null报价](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4472.md)
          - [ACP2E-4808：店面无度量单位的产品重量显示](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4808.md)
