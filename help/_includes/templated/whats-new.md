@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4b59c6bdce39314fd188c8c811c4d9e3f46d6067
+source-git-commit: d0924a41a4ea7813699eaefadb024881862ff7b4
 workflow-type: tm+mt
-source-wordcount: '3538'
+source-wordcount: '4004'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,174 @@ ht-degree: 0%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年6月26日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4615">ACP2E-4615的QPT 1.1.80修复的详细说明： PayPal在线订单退款失败并出现错误“PayPal网关拒绝请求”。 内部错误。“</a>”。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/056f30558d8d9f3e218f589e2819ec5d8d6274e3">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acsd-53502">ACSD-53502的QPT 1.1.80修复的详细说明：由于New Relic脚本递归</a>，在iOS Safari上添加到购物车时断时续失败。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/95cfe4554c4501fa9526e0c8b0c039cf99228207">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4626">ACP2E-4626的QPT 1.1.80修复程序的详细说明：Storefront JavaScript文件加载两次，导致重复加载和不稳定的行为</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/55fad95c3110f8150097f410115d89299b9e681b">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4813">ACP2E-4813的QPT 1.1.80修复程序的详细说明： USPS配送方式对于多包订单</a>不可用或不正确。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/94b45f953d8a91814fa7359369f976e0cbd94a36">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4610">ACP2E-4610： sales_clean_quotes cron</a>执行缓慢QPT 1.1.80修复程序的详细说明。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a7e34f7858dd74cf1c4702dfc877a793094ad042">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年6月25日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4488">ACP2E-4488的QPT 1.1.80修复的详细说明：针对大型属性集</a>的慢速管理员产品保存/编辑。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ac57acc5c527f1c7cc7dbd3198f23e75f08fe207">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4496">ACP2E-4496的QPT 1.1.80修复的详细说明：Analytics cron作业在执行期间</a>会降低性能。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0b7826459c116ef03a34f0a01e5db235294c3cb1">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4552">ACP2E-4552的QPT 1.1.80修复的详细说明： GraphQL响应不返回公司状态</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6988b8b17bd1f2161e8fd8c7dd128a75c0023de8">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年6月24日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4808">ACP2E-4808的QPT 1.1.80修复的详细说明：店面</a>上显示不带测量单位的产品重量。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/538221930434b21b92d587fd889e556564a0a45c">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4472">ACP2E-4472的QPT 1.1.80修复的详细说明：使用“以客户身份登录”流程</a>创建的Null报价。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/49b49560901525aa9e635eb0ea6542339270cabf">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4653">ACP2E-4653的QPT 1.1.80修复的详细说明： REST API</a>中缺少购物车价格规则类别范围条件。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f6f4ed205def1cc5f9932857d75222015683fd08">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年6月23日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>在<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/caching-overview">配置指南</a>中阐明了跨缓存配置主题的云与本地范围，并更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration">适用于Commerce云部署上的Redis和Valkey服务配置</a>的最佳实践。</p>
+</td>
+      <td>
+        反馈
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/5d8876789a01e0e27cedfb67e0dd8b3dbc4543f7">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4156">ACP2E-4156的QPT 1.1.80修复的详细说明： REST API送货地址验证忽略管理员属性配置</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/897bbc5b6624dfe17deac6ca878669a5245c34ea">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4533">ACP2E-4533的QPT 1.1.80修复的详细说明：当URL包含存储代码</a>时，无法在店面加载占位符图像。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/eb7012dd29323ae70a19c7b37ab82dac5215c705">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年6月18日
 
@@ -735,74 +903,6 @@ ht-degree: 0%
         新主题qpt
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/bfab19dc07ecc1c314c530d053b82e3408478c41">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月27日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4522">ACP2E-4522的QPT 1.1.78修复的详细说明：当同时运行多个购物车合并或报价保存请求时，quote_coupons表上会发生间歇性的重复键错误</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/13abccbeb79cdb3377dcea9528ffcb13b491a8d8">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4565">ACP2E-4565的QPT 1.1.78修复程序的详细说明：使用X-Adobe-Company标头时，GraphQL公司查询返回“当前客户未获得授权”</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0ee08b94a3b56febff5d2126af71d2b964846f7a">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4419">ACP2E-4419的QPT 1.1.78修复的详细说明：在店面</a>上成功进行reCAPTCHA v2验证后，礼品卡在结账时无法正确应用。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7c7052efdd8b10be705959c854064eaed484d796">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4555">ACP2E-4555的QPT 1.1.78修复程序的详细说明：包含句点或正斜杠的电话号码无法正确验证</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ee63f4566c476877588dde5ff002ac105f2e4764">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月23日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview">Overview： Quality Patches Tool (QPT) v1.1.78</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3f14416d89140ee75ec437a42fbebae804282b72">提交</a></td>
     </tr>
   </tbody>
 </table>
