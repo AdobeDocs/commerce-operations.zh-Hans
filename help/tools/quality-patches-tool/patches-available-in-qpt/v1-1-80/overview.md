@@ -14,9 +14,9 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 1816dfaa5145de416decf64482ed81ee82c7448d
+source-git-commit: 9c0c1b7124793e2f8b9b9e4296ba42315557ac61
 workflow-type: tm+mt
-source-wordcount: 463
+source-wordcount: 541
 ht-degree: 0%
 
 ---
@@ -39,6 +39,9 @@ QPT v1.1.80包含以下修补程序：
 1. **[ACP2E-4533](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4533.md)**：修复了URL中包含商店代码时，店面未加载占位符图像的问题。
 1. **ACP2E-4610**：修复了`sales_clean_quotes` cron作业存在性能问题的问题。
 1. **ACP2E-4615**：修复了在线订单退款失败并出现PayPal错误的问题，即&#x200B;*PayPal网关拒绝请求。 内部错误。*。
+1. **[ACP2E-4626](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4626.md)**：修复了某些Storefront JavaScript文件被请求和执行两次，从而导致间歇性重复加载和不稳定的问题。
+1. **ACP2E-4653**：修复了在通过REST API检索或更新规则时未公开&#x200B;**[!UICONTROL Category (Parent Only)]**&#x200B;和&#x200B;**[!UICONTROL Category (Children Only)]**&#x200B;的&#x200B;**[!UICONTROL Cart Price Rule]**&#x200B;条件属性范围的问题。
+1. **ACP2E-4808**：修复了storefront产品页面上的Weight属性在&#x200B;**[!UICONTROL Additional Information]**&#x200B;或&#x200B;**[!UICONTROL More Information]**&#x200B;部分中只显示原始数值而没有配置的度量单位（lbs或kgs）的问题。
 1. **ACP2E-4626**：修复了某些Storefront JavaScript文件被请求和执行两次，从而导致间歇性重复加载和不稳定的问题。
 1. **[ACP2E-4653](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4653.md)**：修复了在通过[!DNL REST] API检索或更新规则时未公开&#x200B;**[!UICONTROL Category (Parent Only)]**&#x200B;和&#x200B;**[!UICONTROL Category (Children Only)]**&#x200B;的购物车价格规则条件属性范围的问题。
 1. **[ACP2E-4808](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4808.md)**：修复了storefront产品页面上的Weight属性在&#x200B;**[!UICONTROL Additional Information]**&#x200B;或&#x200B;**[!UICONTROL More Information]**&#x200B;部分中只显示原始数值而没有配置的度量单位（lbs或kgs）的问题。
