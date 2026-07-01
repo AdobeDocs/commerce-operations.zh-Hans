@@ -33,7 +33,7 @@ ht-degree: 0%
 
 1. **安全修补程序**&#x200B;是Adobe Commerce版本的静态代码库的一部分。
 1. 通过`composer install`和`composer update`插件（如[cweagans/composer-patches](https://packagist.org/packages/cweagans/composer-patches)），**Composer修补程序**。
-1. Commerce[&#128279;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html)程序包的Cloud修补程序中包含所有&#x200B;**必需的修补程序**。
+1. Commerce[&#128279;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html?lang=zh-Hans)程序包的Cloud修补程序中包含所有&#x200B;**必需的修补程序**。
 1. 已选择[[!DNL [Quality Patches Tool]]](../../../tools/quality-patches-tool/usage.md)中包含的&#x200B;**质量修补程序**。
 1. **自定义修补程序**&#x200B;以及`/m2-hotfixes`目录中的Adobe Commerce支持修补程序，按修补程序名称的字母顺序排列。
 
@@ -148,7 +148,7 @@ ht-degree: 0%
    ```
 
 
-上述代码示例中的`quality-patches`属性包含[完整修补程序列表](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中的两个修补程序示例。  使用`vendor/bin/magento-patches apply`命令在需要`centralized-patcher`软件包的每个项目中安装这些质量修补程序。
+上述代码示例中的`quality-patches`属性包含[完整修补程序列表](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)中的两个修补程序示例。  使用`vendor/bin/magento-patches apply`命令在需要`centralized-patcher`软件包的每个项目中安装这些质量修补程序。
 
 出于测试目的，您可以创建示例修补程序(`/m2-hotfixes/EXAMPLE-PATCH_2.4.6.patch`)。
 
@@ -365,7 +365,7 @@ index 03a3bf9..681e0b0 100644
 
 这样，您就可以集中管理所有安装的所有修补程序，并且可以更好地保证Adobe Commerce存储的安全性和稳定性。 请使用以下方法检查修补程序状态：
 
-- [云基础架构项目](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html#view-available-patches-and-status)
+- [云基础架构项目](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans#view-available-patches-and-status)
 - [内部部署项目](../../../tools/quality-patches-tool/usage.md#view-individual-patches)
 
 ## 代码示例
