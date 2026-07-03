@@ -20,7 +20,7 @@ level_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7f3767864abdc38fcc0978f174f16632190112cf
+source-git-commit: efeccc00d057a7e7115f1b156c3d9202ab476ded
 workflow-type: tm+mt
 source-wordcount: 764
 ht-degree: 0%
@@ -188,7 +188,7 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 >[!NOTE]
 >
->此功能目前仅适用于Adobe Commerce On Premises 2.4.9客户。 并将在2026年7月晚些时候为Adobe Commerce On Cloud启用此功能。”
+>此功能目前仅适用于Adobe Commerce内部部署2.4.9的客户。 它将于2026年7月晚些时候在Adobe Commerce on cloud中启用。
 
 ### Symfony二级缓存的优势
 
