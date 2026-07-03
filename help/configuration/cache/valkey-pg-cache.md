@@ -21,9 +21,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
+source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
 workflow-type: tm+mt
-source-wordcount: 1281
+source-wordcount: 1315
 ht-degree: 0%
 
 ---
@@ -32,6 +32,10 @@ ht-degree: 0%
 # 为默认缓存和页面缓存配置Valkey
 
 Commerce提供了命令行选项来配置Valkey默认值和页面缓存。 虽然可以通过编辑`<Commerce-install-dir>app/etc/env.php`文件来配置缓存，但建议使用命令行来配置缓存，尤其是对于初始配置。 命令行提供验证，确保配置语法正确。
+
+>[!IMPORTANT]
+>
+>对于2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4以后的Adobe Commerce 2.4.9和修补程序版本，需要使用Valkey进行缓存配置。 按版本查看支持的缓存服务的[系统要求](../../installation/system-requirements.md)。
 
 {{cloud-cache-config}}
 

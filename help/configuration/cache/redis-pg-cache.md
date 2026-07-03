@@ -21,9 +21,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
+source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
 workflow-type: tm+mt
-source-wordcount: 1485
+source-wordcount: 1261
 ht-degree: 0%
 
 ---
@@ -42,29 +42,13 @@ Commerce提供了命令行选项来配置Redis页面和默认缓存。 虽然可
 >
 >对于在EC2上托管的Commerce实例，您可以使用AWS ElastiCache代替本地Redis实例。 请参阅[为EC2实例配置Elasticache](redis-elasticache-for-ec2.md)。
 
-## 支持的框架
+## Redis缓存实施
 
->[!BEGINTABS]
+Adobe Commerce已使用这些Redis缓存后端实施：
 
->[!TAB Zend缓存（2.4.8及更早版本）]
-
-- **Zend缓存（2.4.8及更早版本）** — Commerce 2.4.8及更早版本的旧版Redis后端：
-   - **旧版Redis后端** — 使用完整的类路径(`Magento\Framework\Cache\Backend\Redis`)
-   - **预加载密钥** — 支持预加载常用的缓存密钥
-   - **Lua脚本** — 用于垃圾回收的Lua
-   - **压缩** — 支持数据压缩
-
->[!TAB Symfony缓存(2.4.9+)]
-
-- **Symfony缓存(2.4.9+)** — 从Commerce 2.4.9开始，Symfony缓存为Redis提供符合PSR 6的现代化缓存实现，显着提高了性能：
-   - **自动Redis流水线** — 将多个操作批处理为单个请求，减少延迟
-   - **PSR-6 TagAwareAdapter** — 利用原子操作使基于标记的缓存有效失效
-   - **Igbinary序列化** — 二进制序列化将缓存条目大小减少45%，速度提高5-10%
-   - **增强的持久连接** — 连接池更稳定，分叉进程处理更好
-   - **优化的Lua脚本** — 服务器端执行与流水线结合使用以实现最高效率
-
->[!ENDTABS]
-
+- **旧版Redis后端** (`Cm_Cache_Backend_Redis`) — 在旧版Redis配置中使用的已弃用实现。
+- **Redis后端** (`Magento\Framework\Cache\Backend\Redis`) — 此主题中的命令行配置用于默认缓存和页面缓存的后端。
+- **二级缓存后端** (`Magento\Framework\Cache\Backend\RemoteSynchronizedCache`) — 两级缓存实现，使用Redis作为远程后端和本地文件缓存存储，以跨节点同步缓存数据。 请参阅[二级缓存配置](level-two-cache.md)。
 
 ## 配置Redis默认缓存
 
@@ -74,19 +58,21 @@ Commerce提供了命令行选项来配置Redis页面和默认缓存。 虽然可
 bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-<parameter>=<value>...
 ```
 
-并使用以下参数：
+常见参数包括：
 
 - `--cache-backend=redis`启用Redis默认缓存。 如果已启用此功能，请忽略此参数。
 
 - `--cache-backend-redis-<parameter>=<value>`是配置默认缓存的键值对列表：
 
 | 命令行参数 | 值 | 含义 | 默认值 |
-| ------------------------------ | --------- | ------- | ------------- |
+| --- | --- | --- | --- |
 | `cache-backend-redis-server` | 服务器 | 完全限定的主机名、IP地址或UNIX套接字的绝对路径。 默认值127.0.0.1表示Commerce服务器上安装了Redis。 | `127.0.0.1` |
 | `cache-backend-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
 | `cache-backend-redis-db` | 数据库 | 如果默认缓存和全页缓存都使用Redis，则此为必填字段。 指定其中一个高速缓存的数据库编号；另一个高速缓存默认使用0。<br><br>**重要提示**：如果对多种高速缓存类型使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
 | `cache-backend-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一： `auth`命令，该命令要求客户端进行身份验证以访问数据库。 密码直接在Redis的配置文件中配置： `/etc/redis/redis.conf` | |
-| `cache-backend-redis-use-lua` | use_lua | 为所有redis操作启用或禁用Lua脚本。 <br><br>**默认值：保留在`0`。** 默认情况下，Lua模式处于禁用状态，以防止在启用Lua时捆绑的Redis库(1.17.x)出现的已知性能衰退和GraphQL缓存缺失问题。 | `0` |
+| `cache-backend-redis-compress-data` | compress_data | 设置为`0`可禁用压缩。 | `1` |
+| `cache-backend-redis-compression-lib` | compress_lib | 要使用的压缩库。 支持的值包括`snappy`、`lzf`、`l4z`、`zstd`和`gzip`。 留空将自动确定。 | |
+| `cache-backend-redis-use-lua` | use_lua | 为所有Redis操作启用或禁用Lua脚本。 <br><br>**默认值：保留在`0`。** 默认情况下，Lua模式处于禁用状态，以防止在启用Lua时捆绑的Redis库(1.17.x)出现的已知性能衰退和GraphQL缓存缺失问题。 | `0` |
 | `cache-backend-redis-use-lua-on-gc` | use_lua_on_gc | 启用或禁用垃圾回收的Lua脚本（`backend_clean_cache` cron作业）。 <br><br>**默认值：保留在`1`。** 特意启用以确保在GC期间对原子标记集进行清理。 如果没有它，当`backend_clean_cache` cron与缓存保存操作同时运行时，可能会发生争用情况，使缓存条目在缓存标记索引中没有相应的记录。 这会导致基于标记的失效静默地失败 — 例如，更新产品价格可能不会使产品缓存失效，而是需要完全缓存刷新。 | `1` |
 
 ### Lua模式
@@ -116,18 +102,20 @@ bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-<parameter>=<value>...
 ```
 
-并使用以下参数：
+常见参数包括：
 
 - `--page-cache=redis`启用Redis页面缓存。 如果已启用此功能，请忽略此参数。
 
 - `--page-cache-redis-<parameter>=<value>`是配置页面缓存的键值对列表：
 
 | 命令行参数 | 值 | 含义 | 默认值 |
-| ------------------------------ | --------- | ------- | ------------- |
+| --- | --- | --- | --- |
 | `page-cache-redis-server` | 服务器 | 完全限定的主机名、IP地址或UNIX套接字的绝对路径。 默认值127.0.0.1表示Commerce服务器上安装了Redis。 | `127.0.0.1` |
 | `page-cache-redis-port` | 端口 | Redis服务器侦听端口 | `6379` |
 | `page-cache-redis-db` | 数据库 | 如果默认缓存和全页缓存都使用Redis，则此为必填字段。 指定其中一个高速缓存的数据库编号；另一个高速缓存默认使用0。<br/>**重要提示**：如果对多种高速缓存类型使用Redis，则数据库编号必须不同。 建议将默认高速缓存数据库编号指定为0，将页高速缓存数据库编号指定为1，将会话存储数据库编号指定为2。 | `0` |
 | `page-cache-redis-password` | 密码 | 配置Redis密码可启用其内置安全功能之一： `auth`命令，该命令要求客户端进行身份验证以访问数据库。 在Redis配置文件中配置密码： `/etc/redis/redis.conf` | |
+| `page-cache-redis-compress-data` | compress_data | 设置为`1`以压缩全页缓存。 使用`0`禁用压缩。 | `0` |
+| `page-cache-redis-compression-lib` | compress_lib | 要使用的压缩库。 支持的值包括`snappy`、`lzf`、`l4z`、`zstd`和`gzip`。 留空将自动确定。 | |
 
 以下示例启用Redis页缓存，将主机设置为`127.0.0.1`，并将数据库编号分配给`1`。 所有其他参数均设置为默认值。
 
@@ -141,10 +129,6 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
 
 运行配置Redis缓存的命令可更新Commerce环境配置(`<Commerce-install-dir>app/etc/env.php`)：
 
->[!BEGINTABS]
-
->[!TAB Zend缓存（2.4.8及更早版本）]
-
 ```php
 'cache' => [
     'frontend' => [
@@ -168,38 +152,6 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
     ]
 ],
 ```
-
->[!TAB Symfony缓存(2.4.9+)]
-
-```php
-'cache' => [
-    'frontend' => [
-        'default' => [
-            'backend' => 'redis',
-            'backend_options' => [
-                'server' => '127.0.0.1',
-                'database' => '0',
-                'port' => '6379'
-            ],
-        ],
-        'page_cache' => [
-            'backend' => 'redis',
-            'backend_options' => [
-                'server' => '127.0.0.1',
-                'port' => '6379',
-                'database' => '1',
-                'compress_data' => '0'
-            ]
-        ]
-    ]
-],
-```
-
->[!NOTE]
->
->从Commerce 2.4.9开始，使用简化的后端类型`'backend' => 'redis'`而不是完整的类路径。 当指定简化名称时，将自动使用Symfony缓存。
-
->[!ENDTABS]
 
 ## 配置其他缓存选项
 
@@ -209,10 +161,6 @@ bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.
 
 Redis使用`pipeline`复合加载请求。 密钥应包含数据库前缀；例如，如果数据库前缀为`061_`，则预加载密钥将如下所示： `061_SYSTEM_DEFAULT`
 
->[!BEGINTABS]
-
->[!TAB Zend缓存]
-
 ```php
 'cache' => [
     'frontend' => [
@@ -240,38 +188,6 @@ Redis使用`pipeline`复合加载请求。 密钥应包含数据库前缀；例�
     ]
 ]
 ```
-
->[!TAB Symfony缓存]
-
-```php
-'cache' => [
-    'frontend' => [
-        'default' => [
-            'id_prefix' => '061_',
-            'backend' => 'redis',
-            'backend_options' => [
-                'server' => 'redis',
-                'database' => '0',
-                'port' => '6379',
-                'password' => '',
-                'compress_data' => '1',
-                'compression_lib' => '',
-                'preload_keys' => [
-                    '061_EAV_ENTITY_TYPES',
-                    '061_GLOBAL_PLUGIN_LIST',
-                    '061_DB_IS_UP_TO_DATE',
-                    '061_SYSTEM_DEFAULT',
-                ],
-            ]
-        ],
-        'page_cache' => [
-            'id_prefix' => '061_'
-        ]
-    ]
-]
-```
-
->[!ENDTABS]
 
 将预加载功能与L2缓存结合使用时，必须将`:hash`后缀添加到您的密钥中。 L2缓存只传输数据的散列，而不传输实际数据。
 
@@ -296,10 +212,6 @@ bin/magento setup:config:set --allow-parallel-generation
 
 由于它是一个标志，因此不能用命令禁用它。 手动将配置值设置为`false`：
 
->[!BEGINTABS]
-
->[!TAB Zend缓存]
-
 ```php
     'cache' => [
         'frontend' => [
@@ -323,92 +235,13 @@ bin/magento setup:config:set --allow-parallel-generation
     ],
 ```
 
->[!TAB Symfony缓存]
+### PHP Redis扩展
 
-```php
-    'cache' => [
-        'frontend' => [
-            'default' => [
-                'id_prefix' => 'b0b_',
-                'backend' => 'redis',
-                'backend_options' => [
-                    'server' => 'redis',
-                    'database' => '0',
-                    'port' => '6379',
-                    'serializer' => 'igbinary',
-                    'compress_data' => '1',
-                    'compression_lib' => 'gzip'
-                ]
-            ],
-            'page_cache' => [
-                'id_prefix' => 'b0b_'
-            ]
-        ],
-        'allow_parallel_generation' => false
-    ],
-```
+当您的环境支持本机PHP Redis扩展(`phpredis`)时，请使用该扩展：
 
->[!ENDTABS]
+#### 使用apt
 
-
-## Symfony缓存性能优化
-
-如果使用Symfony缓存，则可以通过配置Igbinary序列化程序、安装igbinary PHP扩展和phpredis扩展以及启用永久连接来进一步优化性能。
-
-### Igbinary序列化程序
-
-与PHP的默认序列化相比，Igbinary序列化程序提供了显着的性能改进。 必须在`app/etc/env.php`中手动配置它：
-
-```php
-'cache' => [
-    'frontend' => [
-        'default' => [
-            'backend_options' => [
-                'server' => 'redis',
-                'database' => '0',
-                'port' => '6379',
-                'serializer' => 'igbinary',  // Enable Igbinary serialization
-            ]
-        ],
-        'page_cache' => [
-            'backend_options' => [
-                'server' => 'redis',
-                'database' => '1',
-                'port' => '6379',
-                'serializer' => 'igbinary',  // Enable Igbinary for page cache too
-            ]
-        ]
-    ]
-]
-```
-
-### 安装PHP Igbinary扩展
-
-要使用igbinary序列化，必须安装PHP Igbinary扩展。
-
-**使用apt（建议用于Debian/Ubuntu）**：
-
-```bash
-sudo apt-get install php-igbinary
-sudo systemctl restart php-fpm
-php -m | grep igbinary
-```
-
-**使用pecl（替代方法）**：
-
-```bash
-sudo pecl install igbinary
-echo "extension=igbinary.so" | sudo tee /etc/php/8.3/mods-available/igbinary.ini
-sudo phpenmod igbinary
-sudo systemctl restart php-fpm
-php -m | grep igbinary
-```
-
-### PHP Redis扩展：phpredis与Predis
-
-Commerce 2.4.9+包括在phpredis（原生C扩展）和Predis（纯PHP库）之间的自动回退。 为获得最佳性能，请安装phpredis ：
-
-**使用apt（建议用于Debian/Ubuntu）**：
+对于Debian或Ubuntu，请使用`apt`：
 
 ```bash
 sudo apt-get install php-redis
@@ -416,106 +249,16 @@ sudo systemctl restart php-fpm
 php -m | grep redis
 ```
 
-**使用pecl（替代方法）**：
+#### 使用pecl
+
+作为替代方法，请使用`pecl`：
 
 ```bash
 sudo pecl install redis
-echo "extension=redis.so" | sudo tee /etc/php/8.3/mods-available/redis.ini
+echo "extension=redis.so" | sudo tee /etc/php/<version>/mods-available/redis.ini
 sudo phpenmod redis
 sudo systemctl restart php-fpm
 php -m | grep redis
-```
-
-**性能比较**：
-
-| 操作 | Predis | phpredis | 改进 |
-|-----------|--------|----------|-------------|
-| 缓存获取 | 1-5毫秒 | 0.5-2毫秒 | 速度提高2-3倍 |
-| 缓存集 | 2-6毫秒 | 0.8-2.5毫秒 | 速度提高2-3倍 |
-| 标记操作 | 10-30毫秒 | 3-10毫秒 | 速度提高3至4倍 |
-
-### 持久连接
-
-持久连接跨请求重复使用现有Redis连接，使缓存操作速度提高5-15%。 在`app/etc/env.php`中配置：
-
-```php
-'cache' => [
-    'frontend' => [
-        'default' => [
-            'backend_options' => [
-                'server' => 'redis',
-                'database' => '0',
-                'port' => '6379',
-                'persistent' => '1',
-                'persistent_id' => 'cache_default',
-                'timeout' => '2.5',
-                'read_timeout' => '2.0',
-            ]
-        ],
-        'page_cache' => [
-            'backend_options' => [
-                'server' => 'redis',
-                'database' => '1',
-                'port' => '6379',
-                'persistent' => '1',
-                'persistent_id' => 'cache_fpc',
-            ]
-        ]
-    ]
-]
-```
-
->[!IMPORTANT]
->
->为每种缓存类型使用唯一的`persistent_id`以防止连接冲突。
-
-### 完成优化的配置
-
-以下是结合所有性能优化的可用于生产环境的Symfony配置：
-
-```php
-'cache' => [
-    'frontend' => [
-        'default' => [
-            'id_prefix' => 'b0b_',
-            'backend' => 'redis',
-            'backend_options' => [
-                'server' => 'redis',
-                'database' => '0',
-                'port' => '6379',
-                'serializer' => 'igbinary',
-                'compress_data' => '1',
-                'compression_lib' => 'gzip',
-                'persistent' => '1',
-                'persistent_id' => 'cache_default',
-                'timeout' => '2.5',
-                'read_timeout' => '2.0',
-                'use_lua' => '1',
-                'use_lua_on_gc' => '1',
-                'preload_keys' => [
-                    'b0b_EAV_ENTITY_TYPES',
-                    'b0b_GLOBAL_PLUGIN_LIST',
-                    'b0b_DB_IS_UP_TO_DATE',
-                    'b0b_SYSTEM_DEFAULT',
-                ],
-            ]
-        ],
-        'page_cache' => [
-            'id_prefix' => 'b0b_',
-            'backend' => 'redis',
-            'backend_options' => [
-                'server' => 'redis',
-                'database' => '1',
-                'port' => '6379',
-                'serializer' => 'igbinary',
-                'compress_data' => '0',
-                'persistent' => '1',
-                'persistent_id' => 'cache_fpc',
-            ]
-        ]
-    ],
-    'allow_parallel_generation' => false
-]
 ```
 
 ## 验证Redis连接

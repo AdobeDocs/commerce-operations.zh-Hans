@@ -17,9 +17,9 @@ level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: dbc1f6d0edff87130604d4762477ee5892a7aafc
+source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
 workflow-type: tm+mt
-source-wordcount: 589
+source-wordcount: 593
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Adobe Commerce依靠多层缓存体系结构来减少数据库负载，最大程
 
 ## 缓存前端
 
-缓存前端是Commerce和缓存存储后端之间的接口。 您可以定义多个前端，每个前端具有不同的后端设置，然后为每个前端分配特定的[缓存类型](../cli/manage-cache.md#clean-and-flush-cache-types)。  有关配置详细信息，请参阅[配置缓存前端](cache-types.md)。
+缓存前端是Commerce和缓存存储后端之间的接口。 您可以定义多个前端，每个前端具有不同的后端设置，然后为每个前端分配特定的[缓存类型](../cli/manage-cache.md#clean-and-flush-cache-types)。 有关配置详细信息，请参阅[配置缓存前端和类型](cache-types.md)。
 
 ## 缓存后端
 
@@ -74,7 +74,7 @@ Adobe Commerce依靠多层缓存体系结构来减少数据库负载，最大程
 
 有关详细信息，请参阅：
 
-- [配置缓存前端](cache-types.md) — 将缓存前端与特定缓存类型关联
+- [配置缓存前端和类型](cache-types.md) — 将缓存前端与特定缓存类型相关联
 - [缓存后端选项](cache-options.md) — 后端选项引用
 
 云端上的&#x200B;**Adobe Commerce** — 使用`.magento.env.yaml`中的`CACHE_CONFIGURATION`配置缓存。 查看[Redis和Valkey服务配置的最佳实践](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md)。
