@@ -40,7 +40,7 @@ Adobe Commerce依靠多层缓存体系结构来减少数据库负载，最大程
 
 ## 使用Varnish的全页缓存
 
-[Varnish缓存](config-varnish.md)是一个HTTP加速器，在内存中缓存完整的页。 对于本地生产环境，Adobe强烈建议使用Varnish，因为它比内置全页缓存快得多。 云环境上的Commerce使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly)而不是Varnish进行全页缓存。
+[Varnish缓存](config-varnish.md)是一个HTTP加速器，在内存中缓存完整的页。 对于本地生产环境，Adobe强烈建议使用Varnish，因为它比内置全页缓存快得多。 云环境上的Commerce使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/fastly)而不是Varnish进行全页缓存。
 
 >[!NOTE]
 >
