@@ -5,21 +5,14 @@ feature: Configuration, Cache
 exl-id: 6effa069-c043-411a-b161-01210be17391
 autotag-review: '2026-06-22T20:28:12.484Z'
 TQID: 'https://experienceleague.adobe.com/oDoZ1o2IWXsDTo84XQygWZYVmfVHWbk-CuqaU47laU4'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: dbc1f6d0edff87130604d4762477ee5892a7aafc
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
 workflow-type: tm+mt
-source-wordcount: 589
+source-wordcount: 593
 ht-degree: 0%
 
 ---
@@ -32,7 +25,7 @@ Adobe Commerce依靠多层缓存体系结构来减少数据库负载，最大程
 
 ## 缓存前端
 
-缓存前端是Commerce和缓存存储后端之间的接口。 您可以定义多个前端，每个前端具有不同的后端设置，然后为每个前端分配特定的[缓存类型](../cli/manage-cache.md#clean-and-flush-cache-types)。  有关配置详细信息，请参阅[配置缓存前端](cache-types.md)。
+缓存前端是Commerce和缓存存储后端之间的接口。 您可以定义多个前端，每个前端具有不同的后端设置，然后为每个前端分配特定的[缓存类型](../cli/manage-cache.md#clean-and-flush-cache-types)。 有关配置详细信息，请参阅[配置缓存前端和类型](cache-types.md)。
 
 ## 缓存后端
 
@@ -40,7 +33,7 @@ Adobe Commerce依靠多层缓存体系结构来减少数据库负载，最大程
 
 ## 使用Varnish的全页缓存
 
-[Varnish缓存](config-varnish.md)是一个HTTP加速器，在内存中缓存完整的页。 对于本地生产环境，Adobe强烈建议使用Varnish，因为它比内置全页缓存快得多。 云环境上的Commerce使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/fastly)而不是Varnish进行全页缓存。
+[Varnish缓存](config-varnish.md)是一个HTTP加速器，在内存中缓存完整的页。 对于本地生产环境，Adobe强烈建议使用Varnish，因为它比内置全页缓存快得多。 云环境上的Commerce使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly)而不是Varnish进行全页缓存。
 
 >[!NOTE]
 >
@@ -74,7 +67,7 @@ Adobe Commerce依靠多层缓存体系结构来减少数据库负载，最大程
 
 有关详细信息，请参阅：
 
-- [配置缓存前端](cache-types.md) — 将缓存前端与特定缓存类型关联
+- [配置缓存前端和类型](cache-types.md) — 将缓存前端与特定缓存类型相关联
 - [缓存后端选项](cache-options.md) — 后端选项引用
 
 云端上的&#x200B;**Adobe Commerce** — 使用`.magento.env.yaml`中的`CACHE_CONFIGURATION`配置缓存。 查看[Redis和Valkey服务配置的最佳实践](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md)。

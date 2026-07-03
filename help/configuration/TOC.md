@@ -2,10 +2,10 @@
 user-guide-title: 配置指南
 user-guide-description: 配置Adobe Commerce应用程序功能和服务。
 feature: Configuration
-source-git-commit: 605b2e59d200bc8eeab43e91006a3f95e6a6c138
+source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 1%
+source-wordcount: '401'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 1%
       + [使用环境变量](deployment/example-environment-variables.md)
 + 缓存 {#cache}
    + [缓存概述](cache/caching-overview.md)
-   + [配置缓存前端](cache/cache-types.md)
+   + [配置缓存前端和类型](cache/cache-types.md)
    + [缓存后端选项](cache/cache-options.md)
    + [二级缓存配置](cache/level-two-cache.md)
    + Redis {#redis}
@@ -151,4 +151,4 @@ ht-degree: 1%
       + [验证拆分数据库](storage/multi-master-verify.md)
       + [数据库复制](storage/multi-master-replication.md)
       + [还原到单个数据库](storage/revert-split-database.md)
-+ [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
++ [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
