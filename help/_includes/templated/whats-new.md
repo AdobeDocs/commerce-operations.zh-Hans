@@ -23,7 +23,7 @@ ht-degree: 0%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4615">ACP2E-4615的QPT 1.1.80修复的详细说明： PayPal在线订单退款失败并出现错误“PayPal网关拒绝请求”。 内部错误。“</a>”。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4615">ACP2E-4615的QPT 1.1.80修复的详细说明： PayPal在线订单退款失败并出现错误“PayPal网关拒绝请求”。 内部错误。“</a>”。</p>
 </td>
       <td>
         新主题qpt
@@ -47,7 +47,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/55fad95c3110f8150097f410115d89299b9e681b">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4813">ACP2E-4813的QPT 1.1.80修复程序的详细说明： USPS配送方式对于多包订单</a>不可用或不正确。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4813">ACP2E-4813的QPT 1.1.80修复程序的详细说明： USPS配送方式对于多包订单</a>不可用或不正确。</p>
 </td>
       <td>
         新主题qpt
@@ -55,7 +55,7 @@ ht-degree: 0%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/94b45f953d8a91814fa7359369f976e0cbd94a36">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4610">ACP2E-4610： sales_clean_quotes cron</a>执行缓慢QPT 1.1.80修复程序的详细说明。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4610">ACP2E-4610： sales_clean_quotes cron</a>执行缓慢QPT 1.1.80修复程序的详细说明。</p>
 </td>
       <td>
         新主题qpt
