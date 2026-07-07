@@ -12,9 +12,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-source-git-commit: f1cae5b4ad3d75dbc7f83b7687a4614f678263cd
+source-git-commit: 09557adb586946f1a7c4f94cb7675dc2aa83551d
 workflow-type: tm+mt
-source-wordcount: 31322
+source-wordcount: 31872
 ht-degree: 0%
 
 ---
@@ -25,11 +25,32 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.82 {#v1-1-82}
+
+* **ACP2E-4194**（对于Adobe Commerce和Magento Open Source >=2.4.7-p10 &lt;2.4.8） || >=2.4.8-p5 &lt;2.4.9) — 修复了GraphQL响应针对无效、未授权或格式错误的请求返回错误的HTTP状态代码的问题。
+* **ACP2E-4547**（对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3） — 修复了以下问题：管理员用户无法在管理员中使用“按SKU添加产品”将产品从标准目录添加到分配给未链接到共享目录的客户组的公司的可协商报价中。
+* **ACP2E-4593**（对于Adobe Commerce >=2.4.5 &lt;2.4.10） — 修复了在多网站部署中，为网站限制显示的CMS页面可能在辅助网站上不正确的问题。
+* **ACP2E-4682**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了在每次加载页面时，访问检查报价的店面页面`isActive`状态会创建空报价记录的问题。
+* **ACP2E-4695**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8） — 修复了目录规则索引器占用过多内存且无法完成从而导致不稳定和内存不足错误的问题。
+* **ACP2E-4698**（对于Adobe Commerce和Magento Open Source >=2.4.7-p9 &lt;2.4.8） || >=2.4.8-p4 &lt;2.4.9) — 修复了在页面生成器文本内容中再次编辑图像时，可能会保存绝对媒体URL而不是保留可移植媒体指令的问题。
+* **ACP2E-4748**（适用于Adobe Commerce >=2.4.7 &lt;2.4.9） — 修复了在具有大量奖励点历史记录的商店中，奖励点过期处理缓慢，导致奖励点过期延迟的问题。
+* **ACP2E-4797**（适用于Adobe Commerce >=2.4.8 &lt;2.4.9） — 修复了以下问题：即使将数据库配置为支持utf8mb4，在WYSIWYG编辑器或管理员中的Page Builder内容中输入4字节Unicode字符也会被错误阻止。
+* **ACP2E-4799**（对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3） — 修复了以下问题：`requisition_lists` GraphQL查询返回一个“total_count”值，该值仅反映当前页面上的项目数，而不是反映符合查询条件的申请列表的总数。
+* **ACP2E-4805**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了当第一个可销售子产品出现在列表中的较晚时，带许多子产品的可配置产品的签出API请求会显着变慢的问题。
+* **ACP2E-4840**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了GraphQL查询“products”中请求的数量值返回null的问题。
+* **ACP2E-4870**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了产品警报电子邮件通知忽略商店视图电子邮件设置的问题。
+* **ACP2E-4875**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了在管理员中查看具有大量通讯簿的客户帐户时可能会意外注销管理员用户的问题。
+* **ACP2E-4894**（适用于Adobe Commerce >=2.4.7 &lt;2.4.9） — 修复了在大容量存储上启用异步索引时，管理订单管理网格中新订单出现延迟的问题。
+* **ACP2E-4981**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了以下问题：页面生成器产品轮盘以错误的类别位置顺序显示产品，并且在匹配子产品单独可见时包含可配置产品。
+* 已更新的版本： **ACSD-45255**、**ACSD-50849**
+* 已替换的修补程序： **ACSD-49970-V3**、**ACSD-50260-V2**、**ACSD-54966**、**ACSD-63325**、**ACSD-64212**、**ACSD-66865**、**ACSD-69237**
+* 已弃用的修补程序： **ACP2E-4815**
 
 ## v1.1.81 {#v1-1-81}
 
@@ -58,7 +79,7 @@ ht-degree: 0%
 * **ACP2E-4552**（对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3） — 修复了GraphQL响应中未返回公司状态的问题。
 * **ACP2E-4610**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.9） — 修复了sales_clean_quotes cron作业出现性能问题的问题。
 * **ACP2E-4615**（对于Adobe Commerce >=2.4.4-p13 &lt;2.4.4-p17） || >=2.4.4-p18 &lt;2.4.5 || >=2.4.5-p12 &lt;2.4.6 || >=2.4.6-p10 &lt;2.4.7 || >=2.4.7-p5 &lt;2.4.9) — 修复了在线订单退款失败并出现PayPal错误（显示“PayPal网关拒绝请求）的问题。 内部错误。”
-* **ACP2E-4626**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9） — 修复了某些店面JavaScript文件被请求并执行两次，从而导致间歇性重复加载和不稳定的问题。
+* **ACP2E-4626**（适用于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9） — 修复了某些店面JavaScript文件被请求并执行两次，从而导致间歇性重复加载和不稳定的问题。
 * **ACP2E-4653**（适用于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了在通过REST API检索或更新规则时，未显示“类别（仅限父项）”和“类别（仅限子项）”的购物车价格规则条件属性范围的问题。
 * **ACP2E-4808**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.10） — 修复了店面产品页面上的“重量”属性在“其他信息”或“更多信息”部分中只显示原始数值而没有配置度量单位（lbs或kgs）的问题。
 * **ACP2E-4156**（适用于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了REST API中的送货地址验证不符合Admin中定义的属性配置的问题。
@@ -435,8 +456,7 @@ ht-degree: 0%
 * **ACSD-61805**（适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过[!DNL REST API]更新延交订单状态后，店面产品缺货的问题。
 * **ACSD-60811**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8） — 修复了以下问题：仅当当前状态为&#x200B;*正在处理*&#x200B;或&#x200B;*欺诈*&#x200B;时，才可能使用自定义值或注释更新订单状态。
 * **ACSD-62952**（对于Adobe Commerce >=2.4.4 &lt;2.4.8） — 修复了在店面不准确地显示[!UICONTROL Gift Registry]日期的问题。
-* **ACSD-55339**（对于Adobe Commerce >=2.4.4 &lt;2.4.8） — 修复了以下问题：以“0”（零）开头的产品[!DNL SKU]会删除“0”，从而阻止报价更新。
-**
+* **ACSD-55339**（对于Adobe Commerce >=2.4.4 &lt;2.4.8） — 修复了以下问题：以“0”（零）开头的产品[!DNL SKU]会删除“0”，从而阻止报价更新。**
 * 更新的修补程序： **ACSD-59514**
 * 更新的版本： **ACSD-60816**
 * 已替换的修补程序： **ACSD-59967**
