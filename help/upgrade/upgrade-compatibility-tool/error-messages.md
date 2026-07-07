@@ -4,7 +4,7 @@ description: 了解有关在您的Adobe Commerce项目上使用 [!DNL Upgrade Co
 exl-id: fe4a17a9-a807-4315-b3cd-e35f34e39f6d
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4151'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 此错误消息引用提供有关执行[!DNL Upgrade Compatibility Tool]时可能发生错误的信息。
 
-错误消息按级别（严重问题、错误和警告）和类型(核心代码、自定义代码和GraphQL架构)进行分类。 每种类型都包含以下信息：
+错误消息按级别（严重问题、错误和警告）和类型（核心代码、自定义代码和GraphQL架构）进行分类。 每种类型都包含以下信息：
 
 - **错误代码**： Adobe Commerce为错误消息分配的标识符。
 - **错误描述**：总结错误原因的描述。
@@ -194,7 +194,7 @@ ht-degree: 4%
 | 5088 | 在必需参数之后发现的可选参数 | 将所需参数移到可选参数之后。 |
 | 5089 | 找到方法可见性`final private` | 将方法可见性从`final private`更改为仅`private`。 |
 | 5090 | 魔术方法`__set_state`未定义为`static` | 必须将魔术方法`__set_state`定义为`static`。 |
-| 5091 | 具有`__toString()`方法的类不从`Stringable`接口继承 | 使用`Stringable`方法将`__toString()`接口添加到类。 |
+| 5091 | 具有`__toString()`方法的类不从`Stringable`接口继承 | 使用`__toString()`方法将`Stringable`接口添加到类。 |
 | 5092 | `is_resource()`方法用于现在返回对象的函数 | 将`is_resource()`更改为`instanceof`对象。 |
 | 6001 | `jQuery.andSelf()`已删除 | 使用`jQuery.addBack()`。 |
 | 6002 | jQuery `$.bind`和`$.unbind`已弃用 | 请改用`$.on`和`$.off`。 |

@@ -1,11 +1,11 @@
 ---
 title: '[!UICONTROL bots]选项卡'
-description: 了解[!UICONTROL bots]的 [!DNL Observation for Adobe Commerce]选项卡。
+description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL bots]选项卡。
 exl-id: 741310ca-28fb-4b08-95c7-e8d1fb952018
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## [!DNL bots]的高级概述：
 
-* [!DNL bot]是运行重复自动任务的软件。 随着人工智能和机器学习的发展，[!DNL bots]的任务、方法和交互正在发生变化。 有&#x200B;*个好的* [!DNL bots]通过爬网并将其添加到互联网搜索引擎而有益于站点。 这会导致通过搜索引擎结果引导互联网用户访问网站。 *良好* [!DNL bot]通常遵循搜索引擎控制台中的[!DNL bot]文件或设置放置在`robots.txt`上的边界。 边界可以限制对站点或部分站点的访问。
+* [!DNL bot]是运行重复自动任务的软件。 随着人工智能和机器学习的发展，[!DNL bots]的任务、方法和交互正在发生变化。 有&#x200B;*个好的* [!DNL bots]通过抓取网站并将其添加到互联网搜索引擎而使其受益。 这会导致通过搜索引擎结果引导互联网用户访问网站。 *良好* [!DNL bot]通常遵循搜索引擎控制台中的`robots.txt`文件或设置放置在[!DNL bot]上的边界。 边界可以限制对站点或部分站点的访问。
 * 恶意[!DNL bots]忽略`robots.txt`文件，或者他们可能通过HTTP请求数据的请求用户代理字段欺骗完好的[!DNL bot]。 恶意[!DNL bots]执行的某些操作：
    * 向站点添加负载以拒绝合法用户访问该站点。
    * 未经允许擦除并重用内容。
@@ -29,7 +29,7 @@ ht-degree: 0%
       * 它显示正在生成错误的[!DNL bots]。 通常，如果[!DNL bot]正在添加导致站点问题的负载，则[!DNL bot]或IP地址具有最高的错误频率。
       * 它显示要通过管理的[!DNL bot]名称（请求用户代理字段值）和IP地址：
          * [!DNL Fastly] （速率限制或[!DNL VCLs]，按名称值阻止IP地址、范围或[!DNL bots]）。
-         * 向[!DNL bot]添加完好的`robots.txt field`信息以限制或限制网站访问速率。
+         * 向`robots.txt field`添加完好的[!DNL bot]信息以限制或限制网站访问速率。
          * 通过搜索引擎控制台管理[!DNL Bing]或[!DNL Google bots]。
 
 ## [!UICONTROL Experimental Potential Malicious Bots frame]
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 **[!UICONTROL Rate of HTTP request per second (top 25) during requested time period]**&#x200B;帧显示在所选时间范围内每秒的最大IP地址请求数。 如果这些地址也包含在上表中，请确保它们不是CDN地址和恶意地址，并通过[!DNL Fastly]阻止它们。
 
-## [!UICONTROL Total Bot traffic by bot name]：
+## [!UICONTROL Total Bot traffic by bot name]:
 
 ![选定时间段内按机器人名称划分的机器人总流量：](../../assets/tools/observation-for-adobe-commerce/total-bot-traffic-bot-name.png)
 
@@ -140,13 +140,13 @@ ht-degree: 0%
 
 ![在选定时间段内阻止非机器人名称/IP地址(Fastly)。 此图形显示返回了403禁止的HTTP状态代码](../../assets/tools/observation-for-adobe-commerce/blocked-non-bot-name-ip-addresses.png)的非机器人流量和IP
 
-**[!UICONTROL Blocked non-Bot name / IP addresses (in Fastly) during selected time period graph displays non-bot traffic and IPs that were returned a 403 Forbidden HTTP Status code]**&#x200B;帧显示未标识为已通过[!DNL bot]阻止的[!DNL Fastly]的IP地址。
+**[!UICONTROL Blocked non-Bot name / IP addresses (in Fastly) during selected time period graph displays non-bot traffic and IPs that were returned a 403 Forbidden HTTP Status code]**&#x200B;帧显示未标识为已通过[!DNL Fastly]阻止的[!DNL bot]的IP地址。
 
 ## [!UICONTROL This table shows the number of user agents per IP address, number of successful, unsuccessful and blocked requests:]
 
 ![此表显示每个IP地址的用户代理数、成功、失败和阻止的请求数：](../../assets/tools/observation-for-adobe-commerce/unsuccessful-attempts.png)
 
-恶意[!DNL bots]经常通过[!DNL bots]字段的值欺骗其他[!UICONTROL Request User Agent]。 此表显示IP地址在该字段中有多少个唯一值。 [!UICONTROL Request User Agent]字段中的值越高，IP地址就越可疑。
+恶意[!DNL bots]经常通过[!UICONTROL Request User Agent]字段的值欺骗其他[!DNL bots]。 此表显示IP地址在该字段中有多少个唯一值。 [!UICONTROL Request User Agent]字段中的值越高，IP地址就越可疑。
 
 ## [!UICONTROL IP with non-200 status errors]
 
