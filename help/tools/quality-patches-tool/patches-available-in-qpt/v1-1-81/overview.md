@@ -6,17 +6,12 @@ role: Admin, Developer
 type: Troubleshooting
 autotag-review: '2026-07-10T16:37:59.584Z'
 TQID: 'https://experienceleague.adobe.com/M-ltaMCaVfRfc3vrobfkBCte-P4K2CELj7r3bD-cfxA'
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: f73ca9edd0af3cfb0975eb4b13eabc78c20c340e
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: aeb532d2e065787e1b23781a50808031e5a5d4ce
 workflow-type: tm+mt
-source-wordcount: 304
+source-wordcount: 271
 ht-degree: 0%
 
 ---
@@ -36,6 +31,5 @@ QPT v1.1.81包含以下修补程序：
 1. **ACP2E-4709**：修复了使用Page Builder时CMS页面无法保存的问题。
 1. **ACP2E-4786**：修复了在配置AWS S3远程存储时，由于存储驱动程序中的路径解析不正确而导致导出产品无法写入文件的问题。
 1. **ACP2E-4801**：修复了以下问题：通过[!UICONTROL Admin]中可转让报价的[!UICONTROL Configure]按钮更新捆绑产品选件数量时未应用，且已放弃更改。
-1. **ACP2E-4815**：修复了导致日志中出现PHP异常的多个GraphQL问题，更正了订单与通过GraphQL在订单后创建的客户帐户的关联，并通过HTTP规范将响应与GraphQL保持一致。
 
 使用左侧的菜单导航到特定的修补程序页面。
