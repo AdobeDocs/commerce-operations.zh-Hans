@@ -5,7 +5,7 @@ feature: Best Practices
 exl-id: 77275d37-4f1d-462d-ba11-29432791da6a
 source-git-commit: e63f68dd469564e70269154810cbfbd95d2b2e57
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1287'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 0%
 
   操作日志报告显示所有启用日志记录的管理员操作的详细记录。 每个记录都加盖时间戳，并注册用户的IP地址和名称。 日志详细信息包括管理员用户数据以及在操作期间所做的相关更改。
 
-- 使用Adobe Commerce工具[的](../../../tools/observation-for-adobe-commerce/intro.md)观察分析事件。
+- 使用Adobe Commerce工具[&#128279;](../../../tools/observation-for-adobe-commerce/intro.md)的观察分析事件。
 
   Adobe Commerce观察工具允许您分析复杂的问题，帮助确定根本原因。 您可以花时间来关联事件和错误，而不是跟踪不同的数据，以便更深入地了解性能瓶颈的原因。
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 ### 审核代码
 
-- 从管理员中，查看所有范围级别（包括[和](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html?lang=zh-Hans)）的`website`HTML页眉和页脚配置`store view`。 从脚本和样式表中删除任何未知的JavaScript代码，以及其他HTML设置。 仅保留已识别的代码，例如跟踪片段。
+- 从管理员中，查看所有范围级别（包括`website`和`store view`）的[HTML页眉和页脚配置](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html?lang=zh-Hans)。 从脚本和样式表中删除任何未知的JavaScript代码，以及其他HTML设置。 仅保留已识别的代码，例如跟踪片段。
 
 - 将当前的生产代码库与版本控制系统(VCS)中存储的代码库进行比较。
 

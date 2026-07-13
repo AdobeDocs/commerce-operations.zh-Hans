@@ -6,7 +6,7 @@ role: Admin
 exl-id: 0910a431-bf2c-469e-81e2-92c8d9be3249
 source-git-commit: 18c8e466bf15957b73cd3cddda8ff078ebeb23b0
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 ## 问题
 
-如果您已为Adobe Commerce[!DNL New Relic]注册了[托管警报，并且一个或多个警报阈值已超出，则将在](managed-alerts-for-magento-commerce.md)中收到警报。 这些警报由Adobe Commerce开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe Commerce开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 <u>**做！**</u>：
 
@@ -56,4 +56,4 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 1. 如果上述方法不能帮助您在合理的时间内找到原因和/或解决方案，请请求升级站点，或者将站点置于维护模式（如果尚未这样做）。 有关步骤，请参阅Commerce支持知识库中的[如何请求临时调整大小](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize)以及《Commerce安装指南》中的[启用或禁用维护模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/tutorials/maintenance-mode)。
 
-1. 如果升级使站点恢复正常运营，请考虑请求永久升级(联系您的Adobe客户团队)，或尝试通过运行负载测试和优化查询或在专用暂存中重现问题，或运行降低服务压力的代码。 请参阅Commerce on Cloud指南中的[负载和压力测试](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/test/staging-and-production#load-and-stress-testing)。
+1. 如果升级使站点恢复正常运营，请考虑请求永久升级（联系您的Adobe客户团队），或尝试通过运行负载测试和优化查询或在专用暂存中重现问题，或运行降低服务压力的代码。 请参阅Commerce on Cloud指南中的[负载和压力测试](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/test/staging-and-production#load-and-stress-testing)。

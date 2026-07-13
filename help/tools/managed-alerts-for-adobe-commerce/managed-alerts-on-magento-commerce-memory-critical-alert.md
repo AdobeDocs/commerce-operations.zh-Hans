@@ -6,7 +6,7 @@ role: Admin
 exl-id: 90047f6e-d90a-4980-9700-84c44f2b8494
 source-git-commit: 18c8e466bf15957b73cd3cddda8ff078ebeb23b0
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '1149'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 问题
 
-如果您已为Adobe Commerce[!DNL New Relic]注册了[个托管警报，并且一个或多个警报阈值已超出，则您将在](managed-alerts-for-magento-commerce.md)中收到托管警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了个托管警报，并且一个或多个警报阈值已超出，则您将在[!DNL New Relic]中收到托管警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 <u> **做！** </u>
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 * 启动其他营销活动，这可能会给您的网站带来其他页面查看次数。
 * 运行索引器或其他cron，这可能会在CPU或磁盘上造成额外的压力。
-* 执行任何主要管理任务(即Commerce管理、数据导入/导出)。
+* 执行任何主要管理任务（即Commerce管理、数据导入/导出）。
 * 清除缓存。
 
 如果您在调查并解决警报原因之前执行了任何“不响应”操作，则您的网站可能会变得无响应（如果您尚未经历网站中断）。
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 1. 使用[[!DNL New Relic] APM的“基础架构”页](https://docs.newrelic.com/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/)识别占用大量内存的顶级进程。 有关步骤，请参阅[[!DNL New Relic] 基础结构监视主机页面：进程选项卡](https://docs.newrelic.com/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#processes)：
    * 如果[!DNL Redis]、MySQL或PHP等服务是内存消耗的主要来源，请尝试以下操作：
-1.检查您是否使用最新版本。 较新版本有时可以修复内存泄漏。 如果您不是最新版本，请考虑升级。 有关步骤，请参阅Commerce on Cloud指南中的[更改服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html?lang=zh-Hans)。
+1. 检查您是否使用最新版本。 较新版本有时可以修复内存泄漏。 如果您不是最新版本，请考虑升级。 有关步骤，请参阅Commerce on Cloud指南中的[更改服务](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html?lang=zh-Hans)。
 1. 如果服务问题与版本无关，请尝试以下操作：
 1. **MySQL**：检查长时间运行的查询、未定义主键以及重复索引等问题。 有关步骤，请参阅Adobe Commerce实施行动手册中的[Commerce上最常见的数据库问题](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=zh-Hans)。
 1. **[!DNL Redis]**：如果[!DNL Redis]是内存消耗的顶级源，则[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)。
@@ -64,4 +64,4 @@ ht-degree: 0%
    * 按最高吞吐量、最慢的平均响应时间、最耗时的阈值和其他阈值对事务进行排序。 有关步骤，请参阅[[!DNL New Relic] [查找具体性能问题]](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/transactions-page-find-specific-performance-problems)。 如果您仍在努力识别问题，请使用[[!DNL New Relic] APM的基础结构页面](https://docs.newrelic.com/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/)。
 1. 如果您无法确定内存消耗增加的原因，请查看近期趋势以确定近期代码部署或配置更改（例如，新客户组和目录的大幅更改）中存在的问题。 建议您查看过去7天的活动，以了解代码部署或更改中的任何关联。
 1. 如果上述方法不能帮助您在合理的时间内找到原因和/或解决方案，请请求升级站点，或将站点置于维护模式（如果尚未这样做）。 有关步骤，请参阅Commerce支持知识库中的[如何请求调整临时大小](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize)，以及《Commerce安装指南》中的[启用或禁用维护模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/tutorials/maintenance-mode)。
-1. 如果升级使站点恢复正常运营，请考虑请求永久升级(联系您的Adobe客户团队)，或尝试通过运行负载测试和优化查询或在专用暂存中重现问题，或运行降低服务压力的代码。 请参阅Commerce on Cloud指南中的[负载和压力测试](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/test/staging-and-production#load-and-stress-testing)。
+1. 如果升级使站点恢复正常运营，请考虑请求永久升级（联系您的Adobe客户团队），或尝试通过运行负载测试和优化查询或在专用暂存中重现问题，或运行降低服务压力的代码。 请参阅Commerce on Cloud指南中的[负载和压力测试](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/test/staging-and-production#load-and-stress-testing)。

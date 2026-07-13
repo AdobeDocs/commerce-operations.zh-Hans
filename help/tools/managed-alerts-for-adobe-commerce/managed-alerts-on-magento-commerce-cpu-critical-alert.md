@@ -6,7 +6,7 @@ role: Admin
 exl-id: 8629ab18-5eef-4d76-9cf8-88fe2d3439df
 source-git-commit: 18c8e466bf15957b73cd3cddda8ff078ebeb23b0
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 ## 问题
 
-如果您已为Adobe Commerce[!DNL New Relic]注册了[个托管警报，并且一个或多个警报阈值已超出，则您将在](managed-alerts-for-magento-commerce.md)中收到托管警报。 这些警报由Adobe Commerce开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了个托管警报，并且一个或多个警报阈值已超出，则您将在[!DNL New Relic]中收到托管警报。 这些警报由Adobe Commerce开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 <u>**做！**</u>：
 
@@ -34,7 +34,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 * 启动其他营销活动，这可能会给您的网站带来其他页面查看次数。
 * 运行索引器或其他cron，这可能会在CPU或磁盘上造成额外的压力。
-* 执行任何主要管理任务(即Commerce管理员、数据导入/导出)。
+* 执行任何主要管理任务（即Commerce管理员、数据导入/导出）。
 * 清除缓存。
 
 如果您在调查并解决警报原因之前执行了任何“不响应”操作，则您的网站可能会变得无响应（如果您尚未经历网站中断）。
@@ -61,4 +61,4 @@ Adobe Commerce on cloud infrastructure Pro计划架构
    * 查看最近的趋势，以确定最近的代码部署或配置更改（例如，新客户组和目录的大幅更改）中存在的问题。 建议您查看过去七天的活动，以了解代码部署或更改中的任何关联。
    * 考虑检查和禁用平面目录。 有关步骤，请参阅Commerce支持知识库中的[性能缓慢、运行缓慢且长时间的crons](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/slow-performance-slow-and-long-running-crons)。
    * 如果您怀疑正在遭受DDoS攻击，请尝试阻止机器人流量。 有关步骤，请参阅Commerce支持知识库中的[如何阻止Adobe Commerce在Fastly级别](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)上的云基础架构上的恶意流量。
-1. 如果问题看起来是暂时性的，请执行缓解步骤（如升级）或将站点置于维护模式。 有关步骤，请参阅Commerce支持知识库中的[如何请求临时调整大小](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize)以及《Commerce安装指南》中的[启用或禁用维护模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/tutorials/maintenance-mode)。 如果升级使站点恢复正常运营，请考虑请求永久升级(联系您的Adobe客户团队)，或尝试通过运行负载测试并优化查询或降低服务压力的代码在专用暂存中重现问题。 有关步骤，请参阅Commerce on Cloud指南中的[负载和压力测试](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/test/staging-and-production#load-and-stress-testing)。
+1. 如果问题看起来是暂时性的，请执行缓解步骤（如升级）或将站点置于维护模式。 有关步骤，请参阅Commerce支持知识库中的[如何请求临时调整大小](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize)以及《Commerce安装指南》中的[启用或禁用维护模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/tutorials/maintenance-mode)。 如果升级使站点恢复正常运营，请考虑请求永久升级（联系您的Adobe客户团队），或尝试通过运行负载测试并优化查询或降低服务压力的代码在专用暂存中重现问题。 有关步骤，请参阅Commerce on Cloud指南中的[负载和压力测试](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/test/staging-and-production#load-and-stress-testing)。
