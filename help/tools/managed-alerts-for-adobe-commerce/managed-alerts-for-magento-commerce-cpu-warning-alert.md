@@ -23,7 +23,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 ## 问题
 
-如果您已为Adobe Commerce](managed-alerts-for-magento-commerce.md)注册了[托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 <u> **做！** </u>
 
@@ -42,7 +42,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 按照以下步骤确定原因并排除故障。
 
 1. 使用[[!DNL New Relic] APM的“事务”页](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/transactions-page-find-specific-performance-problems)识别具有性能问题的事务：
-   * 按升序[!DNL Apdex]分数对事务排序。 [[!DNL Apdex]](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction)指用户对Web应用程序和服务的响应时间的满意度。 [低 [!DNL Apdex] 分数](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce)可能表示瓶颈（响应时间较长的事务）。 通常是数据库[!DNL Redis]或PHP。 有关步骤，请参阅[!DNL New Relic] [查看满意度最高的事务 [!DNL Apdex] 3}。](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/#apdex-dissat)
+   * 按升序[!DNL Apdex]分数对事务排序。 [[!DNL Apdex]](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction)指用户对Web应用程序和服务的响应时间的满意度。 [低 [!DNL Apdex] 分数](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce)可能表示瓶颈（响应时间较长的事务）。 通常是数据库[!DNL Redis]或PHP。 有关步骤，请参阅[!DNL New Relic] [查看满意度最高的事务 [!DNL Apdex] 3&rbrace;。](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/#apdex-dissat)
    * 按最高吞吐量、最慢的平均响应时间、最耗时的阈值和其他阈值对事务进行排序。 有关步骤，请参阅[[!DNL New Relic] 查找具体性能问题](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/transactions-page-find-specific-performance-problems)。
 1. 如果您仍在努力识别源，请使用[[!DNL New Relic] APM的“基础架构”页](https://docs.newrelic.com/docs/infrastructure/infrastructure-data/infrastructure-ui-pages/infra-hosts-ui-page/)来识别资源密集型服务。 有关步骤，请参阅[!DNL New Relic] [基础架构监视主机页面： [!UICONTROL Processes tab]](https://docs.newrelic.com/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#processes)。
 1. 如果标识了源，请通过SSH连接到环境以进一步调查。 有关步骤，请参阅Commerce on Cloud指南中的[SSH到您的环境](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/secure-connections#ssh)。
