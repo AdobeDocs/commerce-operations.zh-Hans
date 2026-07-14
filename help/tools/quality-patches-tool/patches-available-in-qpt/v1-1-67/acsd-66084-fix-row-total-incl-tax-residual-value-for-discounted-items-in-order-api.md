@@ -7,7 +7,7 @@ type: Troubleshooting
 exl-id: 421c6fe6-b6b1-4f33-acb6-fbd4306bcc4c
 source-git-commit: 951738a4c671ed6fcc47b2a928d2110c78763d26
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,8 @@ ACSD-66084修补程序修复了在订单API响应中将`row_total_incl_tax`作�
 
 <u>重现步骤</u>：
 
-1. 创建具有价格和特价的产品。 转到&#x200B;**[!UICONTROL Catalog]** > **[!UICONTROL Products]** >单击&#x200B;**[!UICONTROL Add Product]** >在&#x200B;**[!UICONTROL Price]**&#x200B;下将&#x200B;**[!UICONTROL Special Price]**&#x200B;设置为$25并将&#x200B;**[!UICONTROL Advanced Pricing]**&#x200B;设置为$16.99。
-1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Taxes]** > **[!UICONTROL Tax Zones and Rates]**&#x200B;并添加20%的费率。 然后转到&#x200B;**[!UICONTROL Tax Rules]**&#x200B;并创建一个规则并分配
-   **[!UICONTROL Taxable Goods]**&#x200B;作为产品税类。
+1. 创建具有价格和特价的产品。 转到&#x200B;**[!UICONTROL Catalog]** > **[!UICONTROL Products]** >单击&#x200B;**[!UICONTROL Add Product]** >在&#x200B;**[!UICONTROL Advanced Pricing]**&#x200B;下将&#x200B;**[!UICONTROL Price]**&#x200B;设置为$25并将&#x200B;**[!UICONTROL Special Price]**&#x200B;设置为$16.99。
+1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Taxes]** > **[!UICONTROL Tax Zones and Rates]**&#x200B;并添加20%的费率。 然后转到&#x200B;**[!UICONTROL Tax Rules]**&#x200B;并创建一个规则并分配   **[!UICONTROL Taxable Goods]**&#x200B;作为产品税类。
 1. 创建带100%折扣和优惠券的销售规则。 转到&#x200B;**[!UICONTROL Marketing]** > **[!UICONTROL Promotions]** > **[!UICONTROL Cart Price Rules]**&#x200B;并添加100%折扣的规则，然后使用&#x200B;**[!UICONTROL Specific Coupon]**&#x200B;并输入您的代码。
 1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Tax]** >并配置税务设置。
 1. 启用免费送货。 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Delivery Methods]** > **[!UICONTROL Free Shipping]**。 将&#x200B;**[!UICONTROL Enabled]**&#x200B;设置为&#x200B;**[!UICONTROL Yes]**&#x200B;并调整设置。
@@ -60,7 +59,7 @@ ACSD-66084修补程序修复了在订单API响应中将`row_total_incl_tax`作�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读
