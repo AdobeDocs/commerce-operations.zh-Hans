@@ -1,24 +1,24 @@
 ---
 title: '[!UICONTROL Summary]选项卡'
-description: 了解[!UICONTROL Summary]的 [!DNL Observation for Adobe Commerce]选项卡。
+description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL Summary]选项卡。
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
 source-git-commit: 5a0455b61824cb1946e29dba3ff7bfd9d225b110
 workflow-type: tm+mt
-source-wordcount: '2494'
+source-wordcount: '2632'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Summary]选项卡
 
-[!UICONTROL Summary]的[!DNL Observation for Adobe Commerce]选项卡用于快速查看站点遇到的一些问题，以帮助您自动解决或识别站点问题的潜在根本原因。 其他选项卡提供有关组件服务、数据库、基础架构和流程状态的更深入的信息。
+[!DNL Observation for Adobe Commerce]的[!UICONTROL Summary]选项卡用于快速查看站点遇到的一些问题，以帮助您自动解决或识别站点问题的潜在根本原因。 其他选项卡提供有关组件服务、数据库、基础架构和流程状态的更深入的信息。
 
 ## [!UICONTROL Transaction Overview]
 
 ![事务概述](../../assets/tools/transaction-overview.jpg)
 
-### [什么是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-，什么%20is%20a%20transaction%3F，工作%20in%20a%20software%20application。&text=For%20APM%2C%20it%20will%20overly，当%20the%20response%20is%20sent)
+### [什么是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-,What%20is%20a%20transaction%3F,work%20in%20a%20software%20application.&text=For%20APM%2C%20it%20will%20often,when%20the%20response%20is%20sent)
 
 “在[!DNL New Relic]，事务被定义为软件应用程序中的一个逻辑工作单元。 具体来说，它是指构成该工作单元的函数调用和方法调用。 它通常指的是Web交易，代表一种活动，从应用程序收到Web请求时到响应发送时发生的活动。”
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ## [!UICONTROL CPU % by host]
 
-按主机![显示的](../../assets/tools/cpu-percent-by-host.jpg)CPU百分比
+按主机![&#128279;](../../assets/tools/cpu-percent-by-host.jpg)显示的CPU百分比
 
 所有环境和节点的聚合会显示在&#x200B;**[!UICONTROL CPU % by host]**&#x200B;框架中。 您应该取消选择非生产环境。 另请注意生产环境的所有节点都不存在的任何实例。 有关高CPU利用率的更多提示，请参阅[在Adobe Commerce上使用New Relic进行性能故障诊断](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=zh-Hans)。
 
@@ -115,7 +115,7 @@ ht-degree: 0%
 * &#39;%Set flag： .static_content_deploy%&#39;)设置为&#39;SCD&#39;
 * &#39;%NOTICE： Generate command completed%&#39;)作为&#39;gen_compl&#39;
 * “%NOTICE： Deployment completed%”)作为“deploy_compl”
-* &#39;%NOTICE：正在启动后期部署。%&#39;)作为“start_pdeploy”
+* &#39;%NOTICE：正在启动后部署。%&#39;)作为&#39;start_pdeploy&#39;
 * &#39;%NOTICE： Post-deploy已完成%&#39;)作为&#39;pdeploy&#39;
 * “%deploy-complete%”)作为“cl_deploy_compl”
 
@@ -184,7 +184,7 @@ ht-degree: 0%
 * “%members = 2/3 （已加入/总计）%”)作为“2of3”
 * “%members = 2/2%”)，作为“2of2”*“%members = 1/2%”)，作为“1of2”*“%members = 1/3%”)，作为“1of3”
 * “%members = 1/1%”)作为“1of1”
-* “%\[注意\] /usr/sbin/mysqld (mysqld 10.%&#39;)作为&#39;sql_restart&#39;
+* “%\[注意\] /usr/sbin/mysqld (mysqld 10.%&#39;)作为“sql_restart”
 * “%Quorum：没有具有完整状态：%”的节点)为“no_node_count”
 * “%WSREP：成员0%”)作为“mem_0”
 * “%WSREP：成员1.0%”)作为“mem_1”
@@ -245,7 +245,7 @@ ht-degree: 0%
 
 ![数据库跟踪](../../assets/tools/database-traces.jpg)
 
-**[!UICONTROL Database traces]**&#x200B;框架查看来自[的](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/)sql跟踪[!DNL New Relic]实体的数据并返回跟踪的路径。
+**[!UICONTROL Database traces]**&#x200B;框架查看来自[!DNL New Relic]的[sql跟踪](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/)实体的数据并返回跟踪的路径。
 
 ## [!UICONTROL Database mysql-slow.log]
 
@@ -264,7 +264,7 @@ ht-degree: 0%
 * “%SLAVE同步：设备%”上没有剩余空间)，如“space”
 * “%Server已启动，Redis版本%”)作为“serv_start”
 * &#39;%服务器现在已准备好接受连接%&#39;)为“就绪”
-* 与主的“%Connection”丢失。%&#39;)作为“mstr_lost”
+* &#39;%Connection with master lost.%&#39;)作为&#39;mstr_lost&#39;
 * “%+sdown sentinel%”)作为“+sentinal”
 * “%-sdown sentinel%”)作为“ — sentinal”
 * “%-sdown slave%”)，作为“ — slave”，作为“%+sdown slave%”)
@@ -295,7 +295,7 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 **PHP错误和消息：**
 
 * “%worker_connections不足%”)
-* &#39;%PHP严重错误：允许的内存大小！%&#39;)作为“mem_size”
+* “%PHP严重错误：允许的内存大小！%”)为“mem_size”
 * &#39;%exited on signal 11 (SIGSEGV)%&#39;)为&#39;sig_11&#39;
 * &#39;%exited on signal 7 (SIGBUS)%&#39;)为&#39;sig_7&#39;
 * &#39;%increase pm.start_servers%&#39;)作为&#39;pmstart_serv&#39;
@@ -310,7 +310,7 @@ PHP进程的行为方式取决于[配置](https://www.php.net/manual/en/install.
 
 ![php进程](../../assets/tools/php-processes.jpg)
 
-[PHP-FPM](https://php-fpm.org/)是[!UICONTROL FastCGI Process Manager]使用的[!DNL Nginx]。 要了解系统要求，请参阅映射到Adobe Commerce版本的[PHP版本要求](../../installation/system-requirements.md)。 **[!UICONTROL PHP processes]**&#x200B;帧显示在所选时间线中的特定时间运行的PHP进程数。
+[PHP-FPM](https://php-fpm.org/)是[!DNL Nginx]使用的[!UICONTROL FastCGI Process Manager]。 要了解系统要求，请参阅映射到Adobe Commerce版本的[PHP版本要求](../../installation/system-requirements.md)。 **[!UICONTROL PHP processes]**&#x200B;帧显示在所选时间线中的特定时间运行的PHP进程数。
 
 ## [!UICONTROL Secondary processes]
 

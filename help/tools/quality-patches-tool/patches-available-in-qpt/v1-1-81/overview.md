@@ -14,9 +14,9 @@ feature_v2:
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 11f63d811ab907de5e93c121ef8fdf0de294b25f
+source-git-commit: 3f7c0db0da082e2cc83bb18d943c3e50aa99d2dc
 workflow-type: tm+mt
-source-wordcount: 272
+source-wordcount: 273
 ht-degree: 0%
 
 ---
@@ -35,6 +35,6 @@ QPT v1.1.81包含以下修补程序：
 1. **[ACP2E-4680](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4680.md)**：修复了不可销售或删除的产品从最终可协商报价中消失的问题。
 1. **ACP2E-4709**：修复了使用Page Builder时CMS页面无法保存的问题。
 1. **ACP2E-4786**：修复了在配置AWS S3远程存储时，由于存储驱动程序中的路径解析不正确而导致导出产品无法写入文件的问题。
-1. **ACP2E-4801**：修复了以下问题：通过[!UICONTROL Admin]中可转让报价的[!UICONTROL Configure]按钮更新捆绑产品选件数量时未应用，且已放弃更改。
+1. **[ACP2E-4801](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4801.md)**：修复了以下问题：无法应用通过Admin可转让报价中的&#x200B;**[!UICONTROL Configure]**&#x200B;按钮更新捆绑产品选项数量，并且会放弃更改。
 
 使用左侧的菜单导航到特定的修补程序页面。

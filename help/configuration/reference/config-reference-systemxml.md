@@ -6,7 +6,7 @@ badge: label="作者：David Lambauer" type="Informative" url="https://github.co
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
 source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '2717'
+source-wordcount: '2748'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 0%
 ```
 
 上面的代码片段将创建一个标识符为`A_UNIQUE_ID`的新选项卡。 由于`translate`属性已定义并引用了标签，因此`label`节点是可翻译的。 在渲染过程中，CSS类`a-custom-css-class-to-style-this-tab`将应用于为此选项卡创建的HTML元素。
-值为`sortOrder`的`10`属性定义呈现时选项卡在所有选项卡列表中的位置。
+值为`10`的`sortOrder`属性定义呈现时选项卡在所有选项卡列表中的位置。
 
 ## 区域
 
@@ -248,7 +248,7 @@ ht-degree: 0%
 | `select` | 普通下拉列表，可能需要自定义`source_model`。 也用于`Yes/No`选择。 有关示例，请参阅`Magento\Search\Model\Adminhtml\System\Config\Source\Engine`。 |
 | `multiselect` | 类似`select`，但多个选项有效。 |
 | `button` | 触发即时事件的按钮。 需要自定义前端模型来定义按钮文本和操作。 有关示例，请参阅`Magento\ScheduledImportExport\Block\Adminhtml\System\Config\Clean`。 |
-| `obscure` | 一个文本字段，其值已加密并显示为`**&#x200B;**`。 在浏览器中使用“检查元素”更改类型不会显示值。 |
+| `obscure` | 一个文本字段，其值已加密并显示为`****`。 在浏览器中使用“检查元素”更改类型不会显示值。 |
 | `password` | 与`obscure`类似，只是隐藏值未加密，在浏览器中使用“Inspect Element”强制更改类型确实会显示该值。 |
 | `file` | 允许上传文件以供处理。 |
 | `label` | 显示标签而不是可编辑字段。 当字段仅在特定范围上可编辑时（例如，仅存储视图级别），使用此类型。 |
@@ -348,7 +348,7 @@ ht-degree: 0%
 ```
 
 上面的示例创建了两个字段，它们在默认视图和存储视图中均可见/可配置。 这两个字段均具有注释和工具提示以向用户描述其用途。 `label`节点是可翻译的。
-全局启用`ANOTHER_UNIQUE_FIELD_ID`中的给定模块时，标识符为`if_module_enabled`的字段可见。 该字段还根据规则`required-entry`和`no-whitespace`验证其值。
+全局启用`if_module_enabled`中的给定模块时，标识符为`ANOTHER_UNIQUE_FIELD_ID`的字段可见。 该字段还根据规则`required-entry`和`no-whitespace`验证其值。
 标识符为`A_UNIQUE_FIELD_ID`的字段定义了一个不同的源模型，它提供该值`Yes`和`No`。
 
 ### 通用源模型
@@ -391,19 +391,19 @@ Commerce 2 Core提供了以下源模型。 一般来说，源模型要多得多�
 | `no-whitespace` | 不允许使用空格。 |
 | `phoneUK` | 允许（英国）电话号码。 |
 | `phoneUS` | 允许（美国）电话号码。 |
-| `required-entry` | 不允许空值（等效验证为`validate-no-empty`）。<br>验证失败消息：“这是必填字段。” |
+| `required-entry` | 不允许空值（等效于`validate-no-empty`的验证）。<br>验证失败消息：“这是必填字段。” |
 | `time` | 允许以24小时格式显示有效时间，介于00:00和23:59之间。 例如`15`、`15:05`或`15:05:48`。 |
 | `time12h` | 允许以12小时格式显示有效时间，介于上午12:00到晚上11:59:59之间。 例如`3 am`、`11:30 pm`、`02:15:00 pm`。 |
 | `validate-admin-password` | 允许7个或更多字符，同时使用数字和字母。 |
 | `validate-alphanum-with-spaces` | 仅允许使用字母（a-z或A-Z）、数字(0-9)或空格。 |
 | `validate-clean-url` | 允许有效的URL。 例如，`https://www.example.com`或`www.example.com`。 |
 | `validate-currency-dollar` | 允许有效的（美元）金额。 例如，$100.00。 |
-| `validate-data` | 仅允许使用字母（a-z或A-Z）、数字(0-9)或下划线(\_)。<br>第一个字符必须是字母。<br>（必须匹配表达式： `/^[A-Za-z]+[A-Za-z0-9_]+$/`）<br>验证失败消息：“请仅在此字段中使用字母（a-z或A-Z）、数字(0-9)或下划线(\_)，第一个字符应为字母。” |
+| `validate-data` | 仅允许使用字母（a-z或A-Z）、数字(0-9)或下划线(\_)。<br>第一个字符必须是字母。<br>（必须符合表达式： `/^[A-Za-z]+[A-Za-z0-9_]+$/`）<br>验证失败消息：“请仅在此字段中使用字母（a-z或A-Z）、数字(0-9)或下划线(\_)，第一个字符应为字母。” |
 | `validate-date-au` | 强制采用以下日期格式：dd/mm/yyyy。 例如，2006年3月17日的17/03/2006。 |
 | `validate-email` | 允许有效的电子邮件地址。 例如，johndoe@domain.com。 |
 | `validate-emailSender` | 允许有效的电子邮件地址。 例如，johndoe@domain.com。 |
 | `validate-fax` | 允许使用有效的传真号码。 例如，123-456-7890。 |
-| `validate-no-empty` | 不允许空值（等效验证为`requried-entry`）。<br>验证失败消息：“空值。” |
+| `validate-no-empty` | 不允许空值（等效验证为`requried-entry`）。<br>验证失败消息：“空值”。 |
 | `validate-no-html-tags` | 禁止使用HTML标记。 |
 | `validate-password` | 允许6个或更多字符。 将忽略前导空格和尾随空格。 |
 | `validate-phoneLax` | 允许使用有效的电话号码。 例如，(123) 456-7890或123-456-7890。 |
@@ -411,14 +411,14 @@ Commerce 2 Core提供了以下源模型。 一般来说，源模型要多得多�
 | `validate-select` | 强制选择的选择选项不具有`null`值、字符串值`none`或字符串长度0。 |
 | `validate-ssn` | 允许有效的（美国）社会保险号。 例如，123-45-6789。 |
 | `validate-street` | 仅允许使用字母（a-z或A-Z）、数字(0-9)、空格和“#”。 |
-| `validate-url` | 允许有效的URL。 协议是必需的(http://、https://或ftp://)。 |
+| `validate-url` | 允许有效的URL。 协议是必需的（http://、https://或ftp://）。 |
 | `validate-xml-identifier` | 允许使用有效的XML标识符。 例如，something_1、block5、id-4。 |
 | `validate-zip-us` | 允许有效的（美国）邮政编码。 例如，90602或90602-1234。 |
 | `vinUS` | 允许（美国）车辆识别号(VIN)值。 |
 
 ### 默认值
 
-可以通过在`etc/config.xml`节点中指定默认值，在模块的`section/group/field_ID`文件中设置字段的默认值。
+可以通过在`section/group/field_ID`节点中指定默认值，在模块的`etc/config.xml`文件中设置字段的默认值。
 
 #### 示例：设置`ANOTHER_UNIQUE_FIELD_ID`的默认值（默认范围）
 

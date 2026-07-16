@@ -4,7 +4,7 @@ description: 在Commerce管理中配置其他网站、商店和商店视图。
 exl-id: e6b4d14d-7504-48f9-a2e1-7e9a1bc76ab9
 source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 1. 在右窗格中，展开&#x200B;**基本URL**。
 1. 在&#x200B;_基本URL_&#x200B;部分中，清除&#x200B;**使用系统值**。
-1. 在`http://french.magento.mg`基本URL **和**&#x200B;基本链接URL **字段中输入** URL。
+1. 在&#x200B;**基本URL**&#x200B;和&#x200B;**基本链接URL**&#x200B;字段中输入`http://french.magento.mg` URL。
 
 1. 在&#x200B;_基本URL（安全）_&#x200B;部分中重复上一步骤。
 
@@ -141,7 +141,7 @@ Commerce为您提供了将商店代码添加到站点基本URL的选项，这简
    ![选择默认配置范围](../../assets/configuration/multi-site-default.png)
 
 1. 在右窗格中，展开&#x200B;**Url选项**。
-1. 清除&#x200B;**将存储代码添加到Url**&#x200B;旁边的&#x200B;_使用系统值_&#x200B;复选框。
+1. 清除&#x200B;_将存储代码添加到Url_&#x200B;旁边的&#x200B;**使用系统值**&#x200B;复选框。
 1. 从&#x200B;_将存储代码添加到Url_&#x200B;列表中，单击&#x200B;**是**。
 
    ![将商店代码添加到商店基本URL](../../assets/configuration/multi-site-add-store-url.png)
@@ -163,7 +163,7 @@ Commerce为您提供了将商店代码添加到站点基本URL的选项，这简
 
 1. 在右窗格中，展开&#x200B;**基本URL**。
 1. 在&#x200B;_基本URL_&#x200B;部分中，清除&#x200B;**使用系统值**。
-1. 在`http://magento.mg`基本URL **和**&#x200B;基本链接URL **字段中输入** URL。
+1. 在&#x200B;**基本URL**&#x200B;和&#x200B;**基本链接URL**&#x200B;字段中输入`http://magento.mg` URL。
 
 1. 在&#x200B;**基本URL（安全）**&#x200B;部分中重复上一步骤。
 
