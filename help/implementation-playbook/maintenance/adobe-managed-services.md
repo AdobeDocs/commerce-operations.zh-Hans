@@ -5,7 +5,7 @@ exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
 source-git-commit: 486e789787c9c08b27b4aae8e601680138956b88
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1181'
 ht-degree: 0%
 
 ---
@@ -388,7 +388,7 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
 
 适用于Managed Services的Adobe安全栈栈使用自动化和一致性在中的每个级别构建安全性，以减少人为错误。 开发和操作团队自动从栈栈的不同级别继承安全控制。
 
-平台合作伙伴(如Amazon Web Services和Microsoft Azure)在应用平台自定义设置时可确保最大程度的安全保护，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 有关详细信息，请参阅[Adobe Commerce安全性](https://business.adobe.com/cn/products/magento/secure-ecommerce.html)。
+平台合作伙伴（如Amazon Web Services和Microsoft Azure）在应用平台自定义设置时可确保最大程度的安全保护，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 有关详细信息，请参阅[Adobe Commerce安全性](https://business.adobe.com/products/magento/secure-ecommerce.html)。
 
 下图显示了Adobe Managed Services安全技术栈栈：
 
@@ -396,7 +396,7 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
 
 ## 升级帮助
 
-Managed Services团队在帮助规划和协助升级过程中将发挥积极作用。 您的客户成功工程师(CSE)与升级项目团队合作，包括项目经理和开发人员(内部主题专家、Adobe认证合作伙伴或Adobe Consulting的专业人员)，帮助您的团队在升级期间确保进行适当规划并遵守最佳实践。
+Managed Services团队在帮助规划和协助升级过程中将发挥积极作用。 您的客户成功工程师(CSE)与升级项目团队合作，包括项目经理和开发人员（内部主题专家、Adobe认证合作伙伴或Adobe Consulting的专业人员），帮助您的团队在升级期间确保进行适当规划并遵守最佳实践。
 
 Managed Services CSE已与Adobe Commerce客户合作，在大型环境中执行升级。 您的CSE可以帮助您利用专家知识最大限度地提高升级成功率，同时最大限度地减少停机时间并降低总体风险。 此外，Managed Services CSE可与您的专用暂存环境一起进行升级，因此在验证升级时，现有生产流程不会受到影响。
 
@@ -437,7 +437,7 @@ Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了�
     <td>升级基础架构服务<br />[MariaDB、Redis、Open Search和Rabbit MQ]（暂存和生产）</td>
     <td></td>
     <td></td>
-    <td>所有者<br />CSE协调基础设施服务升级。<br />CSE计划会议事件以进行升级。<br />CSE有助于将数据从生产环境迁移到暂存环境。</td>
+    <td>Owner<br />CSE协调基础设施服务升级。<br />CSE安排会议会议事件以进行升级。<br />CSE协助将数据从生产环境迁移到暂存环境。</td>
   </tr>
   <tr>
     <td>更新Commerce代码库和自定义项；代码重新编译和代码重构</td>
@@ -456,7 +456,7 @@ Adobe围绕Managed Services系统的配置、开发、暂存和生产提供了�
     <td>运行性能和安全性测试</td>
     <td>投稿人</td>
     <td>所有者</td>
-    <td>参与者<br />CSE通过监控应用程序和基础结构的性能来协助负载测试。<br />CSE协助配置Commerce安全扫描工具。</td>
+    <td>参与者<br />CSE通过监视应用程序和基础结构的性能来协助负载测试。<br />CSE协助配置Commerce安全扫描工具。</td>
   </tr>
   <tr>
     <td>暂存时的用户验收测试</td>
