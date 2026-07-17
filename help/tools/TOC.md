@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 3f7c0db0da082e2cc83bb18d943c3e50aa99d2dc
+source-git-commit: af9c1cd1091aa70aa247064f076817895286c4b8
 workflow-type: tm+mt
-source-wordcount: '10396'
+source-wordcount: '10408'
 ht-degree: 0%
 
 ---
@@ -1033,6 +1033,7 @@ ht-degree: 0%
          - [ACP2E-4156： [!DNL REST] API送货地址验证忽略管理员属性配置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4156.md)
       - v1.1.81 {#v1-1-81}
          - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.81](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/overview.md)
+         - [ACP2E-4786：配置AWS S3远程存储时，产品导出失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4786.md)
          - [ACP2E-4801：在Admin中重新配置可转让报价时，捆绑产品选件数量不会更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4801.md)
          - [ACP2E-4630：长产品名称与多页销售PDF中分页后的相邻列重叠](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4630.md)
          - [ACP2E-4680：不可销售产品从最终可协商报价中消失](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4680.md)

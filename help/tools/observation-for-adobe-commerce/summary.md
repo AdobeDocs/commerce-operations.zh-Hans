@@ -3,9 +3,9 @@ title: '[!UICONTROL Summary]选项卡'
 description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL Summary]选项卡。
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
-source-git-commit: 5a0455b61824cb1946e29dba3ff7bfd9d225b110
+source-git-commit: 818c25db0442f5288191ee414b7e2ab07c4cbedf
 workflow-type: tm+mt
-source-wordcount: '2632'
+source-wordcount: '2636'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 ![事务概述](../../assets/tools/transaction-overview.jpg)
 
-### [什么是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-,What%20is%20a%20transaction%3F,work%20in%20a%20software%20application.&text=For%20APM%2C%20it%20will%20often,when%20the%20response%20is%20sent)
+### 什么是交易？
+
+[什么是交易？](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-,What%20is%20a%20transaction%3F,work%20in%20a%20software%20application.&text=For%20APM%2C%20it%20will%20often,when%20the%20response%20is%20sent)
 
 “在[!DNL New Relic]，事务被定义为软件应用程序中的一个逻辑工作单元。 具体来说，它是指构成该工作单元的函数调用和方法调用。 它通常指的是Web交易，代表一种活动，从应用程序收到Web请求时到响应发送时发生的活动。”
 
