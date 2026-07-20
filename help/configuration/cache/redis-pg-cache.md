@@ -3,7 +3,7 @@ title: 为默认缓存和页面缓存配置Redis
 description: 了解如何将Redis配置为Adobe Commerce的默认和页面缓存后端。 发现CLI命令、 env.php设置和连接验证。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T21:55:53.227Z'
 TQID: 'https://experienceleague.adobe.com/2KjWE19ud32PUdvJQWNWkK338ysaa5vt0mA4EyyP66I'
 product_v2:
