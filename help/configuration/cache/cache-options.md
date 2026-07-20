@@ -3,24 +3,17 @@ title: 缓存后端选项和存储参考
 description: 了解Adobe Commerce中的缓存后端选项，包括文件系统、Redis、Valkey和数据库存储。 探索传统和现代方法。
 feature: Configuration, Cache
 exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T18:37:32.504Z'
 TQID: 'https://experienceleague.adobe.com/m7eUBNrt8UF43iJq9Tpl0Y1WcmR-dlt7Z4PoHvXVNnA'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: a7e44e5b4ddeda89b9fee08aa29b1a31f521e90a
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 3d64249bf778a5aa73db22a532a454bb37d6dd37
 workflow-type: tm+mt
-source-wordcount: 362
+source-wordcount: 309
 ht-degree: 0%
 
 ---
@@ -42,11 +35,13 @@ Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的
 | 后端 | 描述 | 配置指南 |
 | ------- | ----------- | ------------------- |
 | 文件系统 | 默认。 将缓存数据存储在`var/cache/`下的文件中。 无需配置。 | 不适用 |
-| [红色](config-redis.md) | 用于高性能缓存的内存中数据存储。 | [默认缓存使用Redis](redis-pg-cache.md)<br>**注意：对于Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5的补丁程序，不支持Redis缓存。 在不支持Redis的缓存配置中使用Valkey。 按版本查看支持的缓存服务的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。 |
+| [红色](config-redis.md) | 用于高性能缓存的内存中数据存储。 | [对默认缓存使用Redis](redis-pg-cache.md) |
 | [Valkey](config-valkey.md) | 开源、与Redis兼容的替代方案。 | [对默认缓存使用Valkey](valkey-pg-cache.md) |
 | [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/) | 数据库支持的缓存。 | [创建自定义缓存引擎](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/){target="_blank"} （Adobe开发人员文档） |
 
-{{redis-cache-support}}
+>[!IMPORTANT]
+>
+>{{redis-cache-support}}
 
 ## 实施方法
 
