@@ -3,27 +3,17 @@ title: 为默认缓存和页面缓存配置Redis
 description: 了解如何将Redis配置为Adobe Commerce的默认和页面缓存后端。 发现CLI命令、 env.php设置和连接验证。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T21:55:53.227Z'
 TQID: 'https://experienceleague.adobe.com/2KjWE19ud32PUdvJQWNWkK338ysaa5vt0mA4EyyP66I'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: ec95c99d060f3c45095236d41729648abf389dd1
 workflow-type: tm+mt
-source-wordcount: 1261
+source-wordcount: 1411
 ht-degree: 0%
 
 ---
@@ -235,6 +225,59 @@ bin/magento setup:config:set --allow-parallel-generation
     ],
 ```
 
+## 性能优化
+
+如果使用Symfony缓存，则可以通过配置Igbinary序列化程序、安装igbinary PHP扩展和phpredis扩展以及启用永久连接来进一步优化性能。
+
+### Igbinary序列化程序
+
+与PHP的默认序列化相比，Igbinary序列化程序提供了显着的性能改进。 必须在`app/etc/env.php`中手动配置它：
+
+```php
+'cache' => [
+    'frontend' => [
+        'default' => [
+            'backend_options' => [
+                'server' => 'redis',
+                'database' => '0',
+                'port' => '6379',
+                'serializer' => 'igbinary',  // Enable Igbinary serialization
+            ]
+        ],
+        'page_cache' => [
+            'backend_options' => [
+                'server' => 'redis',
+                'database' => '1',
+                'port' => '6379',
+                'serializer' => 'igbinary',  // Enable Igbinary for page cache too
+            ]
+        ]
+    ]
+]
+```
+
+### 安装PHP Igbinary扩展
+
+要使用igbinary序列化，必须安装PHP Igbinary扩展。
+
+**使用apt（建议用于Debian/Ubuntu）**：
+
+```bash
+sudo apt-get install php-igbinary
+sudo systemctl restart php-fpm
+php -m | grep igbinary
+```
+
+**使用pecl（替代方法）**：
+
+```bash
+sudo pecl install igbinary
+echo "extension=igbinary.so" | sudo tee /etc/php/8.3/mods-available/igbinary.ini
+sudo phpenmod igbinary
+sudo systemctl restart php-fpm
+php -m | grep igbinary
+```
+
 ### PHP Redis扩展
 
 当您的环境支持本机PHP Redis扩展(`phpredis`)时，请使用该扩展：
@@ -259,6 +302,98 @@ echo "extension=redis.so" | sudo tee /etc/php/<version>/mods-available/redis.ini
 sudo phpenmod redis
 sudo systemctl restart php-fpm
 php -m | grep redis
+```
+
+**性能比较**：
+
+| 操作 | Predis | phpredis | 改进 |
+|-----------|--------|----------|-------------|
+| 缓存获取 | 1-5毫秒 | 0.5-2毫秒 | 速度提高2-3倍 |
+| 缓存集 | 2-6毫秒 | 0.8-2.5毫秒 | 速度提高2-3倍 |
+| 标记操作 | 10-30毫秒 | 3-10毫秒 | 速度提高3至4倍 |
+
+### 持久连接
+
+持久连接跨请求重复使用现有Redis连接，使缓存操作速度提高5-15%。 在`app/etc/env.php`中配置：
+
+```php
+'cache' => [
+    'frontend' => [
+        'default' => [
+            'backend_options' => [
+                'server' => 'redis',
+                'database' => '0',
+                'port' => '6379',
+                'persistent' => '1',
+                'persistent_id' => 'cache_default',
+                'timeout' => '2.5',
+                'read_timeout' => '2.0',
+            ]
+        ],
+        'page_cache' => [
+            'backend_options' => [
+                'server' => 'redis',
+                'database' => '1',
+                'port' => '6379',
+                'persistent' => '1',
+                'persistent_id' => 'cache_fpc',
+            ]
+        ]
+    ]
+]
+```
+
+>[!IMPORTANT]
+>
+>为每种缓存类型使用唯一的`persistent_id`以防止连接冲突。
+
+### 完成优化的配置
+
+以下是一种结合所有性能优化的生产就绪型Redis配置：
+
+```php
+'cache' => [
+    'frontend' => [
+        'default' => [
+            'id_prefix' => 'b0b_',
+            'backend' => 'redis',
+            'backend_options' => [
+                'server' => 'redis',
+                'database' => '0',
+                'port' => '6379',
+                'serializer' => 'igbinary',
+                'compress_data' => '1',
+                'compression_lib' => 'gzip',
+                'persistent' => '1',
+                'persistent_id' => 'cache_default',
+                'timeout' => '2.5',
+                'read_timeout' => '2.0',
+                'use_lua' => '1',
+                'use_lua_on_gc' => '1',
+                'preload_keys' => [
+                    'b0b_EAV_ENTITY_TYPES',
+                    'b0b_GLOBAL_PLUGIN_LIST',
+                    'b0b_DB_IS_UP_TO_DATE',
+                    'b0b_SYSTEM_DEFAULT',
+                ],
+            ]
+        ],
+        'page_cache' => [
+            'id_prefix' => 'b0b_',
+            'backend' => 'redis',
+            'backend_options' => [
+                'server' => 'redis',
+                'database' => '1',
+                'port' => '6379',
+                'serializer' => 'igbinary',
+                'compress_data' => '0',
+                'persistent' => '1',
+                'persistent_id' => 'cache_fpc',
+            ]
+        ]
+    ],
+    'allow_parallel_generation' => false
+]
 ```
 
 ## 验证Redis连接
