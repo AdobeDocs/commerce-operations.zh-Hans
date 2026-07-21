@@ -1,7 +1,7 @@
 ---
-source-git-commit: 44c3c7eaf57d858b5810e6ba6f510e9fea4e1a1a
+source-git-commit: 73d9b59320fac5ad73e893e87aea1edb4bb72a06
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ### Adobe员工做出的主要更改
 
-如果您是来自Adobe Experience Cloud解决方案产品团队的技术文档撰稿人、项目经理或开发人员，并且您的工作就是撰写或创作技术文章，那么您应当使用位于`https://github.com/Adobe-Enterprise-Docs`的专用存储库。
+如果您是产品团队中负责提供Adobe Experience Cloud解决方案的技术作家、项目经理或开发人员，并且您的工作是撰写或创作技术文章，则应使用位于`https://github.com/Adobe-Enterprise-Docs`的专用存储库。
 
 ## 工具和设置
 
@@ -76,11 +76,14 @@ ht-degree: 0%
 
 ## 可用的Rake任务
 
-此存储库使用`adobe-comdox-exl-rake-tasks` gem提供的Rake任务。 要查看所有可用任务，请运行：
+此存储库使用
+[`adobe-comdox-exl-rake-tasks`](https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks)
+宝石。要查看所有可用任务，请运行：
 
 ```bash
 cd _jekyll
 bundle exec rake --tasks
 ```
 
-
+对于特定于存储库的任务，包括关系文件格式和设置
+详细信息，请参阅[`_jekyll/ReadMe.md`](_jekyll/ReadMe.md)。
