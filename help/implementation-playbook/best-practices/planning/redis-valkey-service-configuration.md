@@ -9,9 +9,10 @@ feature-set: Commerce
 topic: Performance
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
 badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
-source-git-commit: e8e8471313a4e9f7a595b1222d7a246bce63f097
+nudge: true
+source-git-commit: 78f8259a686402045614210efe6488c5cf5cc6bd
 workflow-type: tm+mt
-source-wordcount: '2311'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---
@@ -41,7 +42,6 @@ ht-degree: 0%
 
 有关实施详细信息、配置示例和特定于部署的指南，请参阅用于性能优化的[二级缓存配置](../../../configuration/cache/level-two-cache.md)。
 
-
 >[!IMPORTANT]
 >
 >Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 在不支持Redis的缓存配置中使用Valkey。 按版本查看支持的缓存服务的[系统要求](../../../installation/system-requirements.md)。
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 >[!TAB Valkey配置]
 
-对于Valkey，请使用：
+对于使用旧版缓存实现的Valkey，请使用：
 
 ```yaml
 stage:
@@ -58,7 +58,7 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关环境配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)配置变量_。
+有关具有现代Symfony二级缓存实现的Valkey，请参阅[配置Symfony二级缓存](#configure-symfony-l2-cache)。
 
 >[!TAB Redis配置]
 
@@ -76,92 +76,29 @@ stage:
 
 ### 配置[!DNL Symfony]二级缓存
 
-Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 在云基础架构上的Adobe Commerce上，仅在您的项目使用`.magento.env.yaml`中支持`symfony_l2`的`ece-tools`版本后配置此后端。
-
-`symfony_l2`后端是Adobe Commerce用来管理L1和L2缓存行为的缓存实现。 它不会替换Redis或Valkey作为远程缓存服务。 对于Adobe Commerce 2.4.9，请将`symfony_l2`配置为将Valkey作为远程后端。
+Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2`后端是Adobe Commerce用来管理L1和L2缓存行为的缓存实现。 它不会替换Redis或Valkey作为远程缓存服务。
 
 >[!IMPORTANT]
 >
->在项目获得`ece-tools`支持之前，请勿在`app/etc/env.php`中手动将`symfony_l2`配置为Adobe Commerce在云基础架构上的永久配置。 部署可以覆盖手动`env.php`更改。 如果`ece-tools`不应用`symfony_l2`，则Commerce可以回退到基于文件的缓存。 这种回退可能会增加磁盘I/O，增加多节点环境中的文件系统复制开销，并降低性能。
+>请勿在`app/etc/env.php`中手动将`symfony_l2`配置为Adobe Commerce在云基础架构上的永久配置。 部署可以覆盖手动`env.php`更改。 如果`ece-tools`不应用`symfony_l2`，则Commerce可以回退到基于文件的缓存。 这种回退可能会增加磁盘I/O，增加多节点环境中的文件系统复制开销，并降低性能。
 
-当`ece-tools`支持可用时，将Valkey后端变量设置为`symfony_l2`并在`CACHE_CONFIGURATION`中定义L2后端选项。
+要将`symfony_l2`缓存用于Adobe Commerce 2.4.9，请完成以下步骤：
 
-```yaml
-stage:
-  deploy:
-    VALKEY_BACKEND: symfony_l2
-    CACHE_CONFIGURATION:
-      _merge: true
-      frontend:
-        default:
-          backend_options:
-            remote_backend: valkey
-            remote_backend_options:
-              server: localhost
-              database: 1
-              port: 6370
-              serializer: igbinary
-              compression_lib: gzip
-              persistent_id: magento_l2_default
-            local_backend: file
-            local_backend_options:
-              cache_dir: /dev/shm/magento_l1
-```
+- 确保云项目使用[ECE工具包v2002.1.12](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)或更高版本。
 
-要为具有`symfony_l2`的所选缓存类型启用过时缓存，请使用`use_stale_cache: true`定义第二个前端，然后将所选缓存类型映射到该前端。 为每个前端使用不同的本地缓存目录和永久ID。
+- 在`.magento.env.yaml`文件中设置部署变量： `VALKEY_BACKEND`=`symfony_l2`。
 
-```yaml
-stage:
-  deploy:
-    VALKEY_BACKEND: symfony_l2
-    CACHE_CONFIGURATION:
-      _merge: true
-      frontend:
-        default:
-          backend_options:
-            remote_backend: valkey
-            remote_backend_options:
-              server: localhost
-              database: 0
-              port: 6370
-              serializer: igbinary
-              compression_lib: gzip
-              persistent_id: magento_l2_default
-            local_backend: file
-            local_backend_options:
-              cache_dir: /dev/shm/magento_l1
-        stale_cache_enabled:
-          backend: symfony_l2
-          backend_options:
-            remote_backend: valkey
-            remote_backend_options:
-              server: localhost
-              database: 0
-              port: 6370
-              serializer: igbinary
-              compression_lib: gzip
-              persistent_id: magento_l2_stale
-            local_backend: file
-            local_backend_options:
-              cache_dir: /dev/shm/magento_l1_stale
-            use_stale_cache: true
-      type:
-        default:
-          frontend: default
-        layout:
-          frontend: stale_cache_enabled
-        block_html:
-          frontend: stale_cache_enabled
-        reflection:
-          frontend: stale_cache_enabled
-        config_integration:
-          frontend: stale_cache_enabled
-        config_integration_api:
-          frontend: stale_cache_enabled
-        translate:
-          frontend: stale_cache_enabled
-```
+  ```yaml
+  stage:
+    deploy:
+      VALKEY_BACKEND: symfony_l2
+  ```
 
+将`VALKEY_BACKEND`部署变量设置为`symfony_l2`将自动根据Valkey服务连接详细信息构建完整的二级缓存配置，包括`default`前端和`stale_cache_enabled`前端，可缓存的类型（例如`layout`、`block_html`、`full_page`和`translate`）已映射到已启用过时的前端。 您无需定义`CACHE_CONFIGURATION`即可使用`symfony_l2`。
+
+>[!CAUTION]
+>
+>更新`.magento.env.yaml`配置时，请勿覆盖`server`或`port`，除非您有意指向项目的Valkey服务以外的缓存终结点。 ECE工具包会自动从您的Valkey服务关系中派生这些值。 使用不正确的值覆盖这些参数会导致部署失败，并出现缓存连接错误。
 
 ### Adobe Commerce Cloud的二级缓存内存大小
 
@@ -170,7 +107,8 @@ stage:
 根据您的项目要求调整最大L2高速缓存内存使用率。 使用以下方法之一：
 
 - 创建支持票证以调整`/dev/shm`装载大小。 对于这种情况，Adobe建议将`/dev/shm`装载大小设置为15 GB。
-- 在应用程序级别调整`cleanup_percentage`属性，以限制存储使用量，并释放可用于其他服务的内存。您可以在缓存配置组`cache/frontend/default/backend_options/cleanup_percentage`下的部署配置中调整配置。
+- 在应用程序级别调整`cleanup_percentage`属性，以限制存储使用量，并释放可用于其他服务的内存。
+您可以在缓存配置组`cache/frontend/default/backend_options/cleanup_percentage`下的部署配置中调整配置。
 
 >[!NOTE]
 >

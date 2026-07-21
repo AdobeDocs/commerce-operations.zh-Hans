@@ -20,9 +20,9 @@ level_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 5f20ef1b6e40728e38d06f5c9f90f72ba1eb43e0
+source-git-commit: d92082d5311d8cfccc1299d0014c238cbaf102e3
 workflow-type: tm+mt
-source-wordcount: 764
+source-wordcount: 826
 ht-degree: 0%
 
 ---
@@ -45,13 +45,17 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
 | [旧版(`RemoteSynchronizedCache`)](#legacy-l2-cache-configuration-remotesynchronizedcache) | 2.4.x | 基于Zend的二级缓存，具有`Cm_Cache_Backend_File`用于本地存储 |
 | [现代(`symfony_l2`)](#modern-symfony-l2-cache-implementation) | 2.4.9+ | 基于Symfony缓存的L2具有PSR-6合规性和增强的性能 |
 
->[!NOTE]
->
->对于Adobe Commerce on Cloud，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
-
 ## 旧版L2缓存配置(RemoteSynchronizedCache)
 
-使用以下示例修改或替换`app/etc/env.php`文件中的现有缓存部分。
+>[!NOTE]
+>
+>旧版二级缓存配置说明适用于旧版Adobe Commerce。 如果您使用Adobe Commerce 2.4.9或更高版本，Adobe建议将[Symfony 2用于L2缓存](#modern-symfony-l2-cache-implementation)。
+
+缓存配置说明取决于您的部署类型：
+
+- **对于Cloud**&#x200B;上的Adobe Commerce，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
+
+- **对于支持Redis**&#x200B;的Adobe Commerce本地版本，请使用以下示例修改或替换`app/etc/env.php`文件中的现有缓存部分。
 
 ```php
 'cache' => [
@@ -81,7 +85,7 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
     'type' => [
         'default' => ['frontend' => 'default'],
     ],
-],
+]
 ```
 
 其中：
@@ -94,7 +98,7 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
   - `local_backend_options`是本地缓存配置。
   - `cache_dir`是用于存储本地缓存的目录的文件缓存特定选项。
 
-Adobe建议使用Redis进行远程缓存(`\Magento\Framework\Cache\Backend\Redis`)，使用`Cm_Cache_Backend_File`进行共享内存中数据的本地缓存，使用： `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
+对于Adobe Commerce Adobe，建议使用Redis进行远程缓存(`\Magento\Framework\Cache\Backend\Redis`)，使用`Cm_Cache_Backend_File`进行共享内存中数据的本地缓存，使用： `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
 
 Adobe建议使用[`cache preload`](redis-pg-cache.md#redis-preload-feature)功能，因为它可显着降低Redis上的压力。 不要忘记为预加载密钥添加后缀“:hash”。
 
@@ -184,11 +188,11 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 ## 现代Symfony L2缓存实施
 
-从Commerce 2.4.9开始，您可以使用基于Symfony缓存的二级缓存实现（`symfony_l2`后端），该实现提供了新型、符合PSR-6的缓存实现，其性能比传统`RemoteSynchronizedCache`有显着改进。
+在Commerce版本2.4.9+中，使用基于Symfony缓存的二级缓存实现（`symfony_l2`后端），而不是旧的二级缓存。  Symfony L2缓存提供了符合PSR-6标准的现代化缓存实现，与传统`RemoteSynchronizedCache`相比，性能有了显着改进。
 
 >[!NOTE]
 >
->此功能目前仅适用于Adobe Commerce On Premises 2.4.9客户。 它将于2026年7月晚些时候在Adobe Commerce on Cloud中启用。
+>对于Adobe Commerce on Cloud，ECE工具包(`ece-tools`)会自动管理此配置。 不要直接编辑`app/etc/env.php` — 部署将覆盖手动更改。 有关云配置，请参阅[改为配置Symfony L2缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-symfony-l2-cache)。
 
 ### Symfony二级缓存的优势
 

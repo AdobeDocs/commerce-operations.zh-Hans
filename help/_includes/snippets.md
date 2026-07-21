@@ -1,7 +1,7 @@
 ---
-source-git-commit: 15314bbcb5c2bdccf92901235f7d07e1770955d9
+source-git-commit: d8197ca0e1028cb50fae0415843c80ac68e49566
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->对于云项目上的Adobe Commerce，有关缓存配置说明，请参阅[Redis和Valkey服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。 Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5修补程序不支持Redis缓存。 在不支持Redis的缓存配置中使用Valkey。 按版本查看支持的缓存服务的[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。
+>对于云项目上的Adobe Commerce，有关缓存配置说明，请参阅[Redis和Valkey服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)。
+
+## Redis缓存支持 {#redis-cache-support}
+
+Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5修补程序不支持Redis缓存。 如果要升级到不支持Redis的版本，则必须设置Valkey并更新缓存配置以使用它。 有关内部部署，请参阅[设置Valkey](/help/configuration/cache/config-valkey.md)。
 
 ## Commerce on Cloud清漆配置说明（参考） {#varnish-config-cloud}
 

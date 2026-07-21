@@ -18,7 +18,7 @@ level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
+source-git-commit: 3d64249bf778a5aa73db22a532a454bb37d6dd37
 workflow-type: tm+mt
 source-wordcount: 309
 ht-degree: 0%
@@ -31,6 +31,10 @@ ht-degree: 0%
 
 Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的访问。 Commerce支持多种缓存后端和策略，每种后端和策略都适用于不同的用例。 本页介绍可用的后端及其差异。
 
+>[!NOTE]
+>
+>[Varnish](config-varnish.md)在HTTP级别处理全页缓存，不使用低级缓存后端。
+
 ## 后端缓存选项
 
 下表汇总了可用的后端缓存：
@@ -42,9 +46,9 @@ Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的
 | [Valkey](config-valkey.md) | 开源、与Redis兼容的替代方案。 | [对默认缓存使用Valkey](valkey-pg-cache.md) |
 | [数据库](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/) | 数据库支持的缓存。 | [创建自定义缓存引擎](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/){target="_blank"} （Adobe开发人员文档） |
 
->[!NOTE]
+>[!IMPORTANT]
 >
->[Varnish](config-varnish.md)在HTTP级别处理全页缓存，不使用低级缓存后端。
+>{{redis-cache-support}}
 
 ## 实施方法
 
