@@ -14,9 +14,9 @@ feature_v2:
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: db5e09759abee078ed36e097b397f2dacbc2fef7
+source-git-commit: f28140efde87efac04d64121ecbc603dbe87e6b6
 workflow-type: tm+mt
-source-wordcount: 270
+source-wordcount: 311
 ht-degree: 0%
 
 ---
@@ -30,11 +30,13 @@ QPT v1.1.81包含以下修补程序：
 
 1. **[ACP2E-4401](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4401.md)**：修复了包含可配置产品的[!UICONTROL Home Page]链接的[!UICONTROL Scheduled Update Preview]重定向到[!UICONTROL maintenance page]而不是显示产品列表的问题。
 1. **[ACP2E-4300](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4300.md)**：修复了在管理员中更改客户组时不会更新店面目录权限，从而导致目录和购物车反映过期权限的问题。
-1. **ACP2E-4395**：如果没有为全局范围指定任何金额，Giftcard API产品创建现在将显示错误。
+1. **ACP2E-4401**：修复了带有可配置产品的主页链接的[!UICONTROL Scheduled Update Preview]重定向到维护页面而不是显示产品列表的问题。
+1. **[ACP2E-4395](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4395.md)**：如果没有为全局范围指定任何金额，Giftcard API产品创建现在将显示错误。
+1. **ACP2E-4468**：修复了具有网站范围权限的[!UICONTROL Admin]用户无法编辑横幅内容的问题。
 1. **[ACP2E-4468](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4468.md)**：修复了具有网站范围权限的管理员用户无法编辑横幅内容的问题。
 1. **[ACP2E-4630](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4630.md)**：修复了具有自定义选项的长产品名称在分页后与多页“发票”、“发运”、“贷项通知单”和“退货”PDF中的相邻列或项目重叠，从而使行项目不可读的问题。
 1. **[ACP2E-4680](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4680.md)**：修复了不可销售或删除的产品从最终可协商报价中消失的问题。
-1. **ACP2E-4709**：修复了使用Page Builder时CMS页面无法保存的问题。
+1. **[ACP2E-4709](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4709.md)**：修复了使用Page Builder时CMS页面无法保存的问题。
 1. **[ACP2E-4786](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4786.md)**：修复了在配置AWS S3远程存储时，由于存储驱动程序中的路径解析不正确而导致导出产品无法写入文件的问题。
 1. **[ACP2E-4801](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4801.md)**：修复了以下问题：无法应用通过Admin可转让报价中的&#x200B;**[!UICONTROL Configure]**&#x200B;按钮更新捆绑产品选项数量，并且会放弃更改。
 

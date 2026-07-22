@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: db5e09759abee078ed36e097b397f2dacbc2fef7
+source-git-commit: f28140efde87efac04d64121ecbc603dbe87e6b6
 workflow-type: tm+mt
-source-wordcount: '10433'
+source-wordcount: '10465'
 ht-degree: 0%
 
 ---
@@ -1033,6 +1033,7 @@ ht-degree: 0%
       - [ACP2E-4156： [!DNL REST] API送货地址验证忽略管理员属性配置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/acp2e-4156.md)
     - v1.1.81 {#v1-1-81}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.81](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/overview.md)
+      - [ACP2E-4395：可以通过API创建礼品卡产品，而无需在全球范围内添加金额](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4395.md)
       - [ACP2E-4401：具有可配置产品的[!UICONTROL Home Page]的[!UICONTROL Scheduled Update Preview]重定向到[!UICONTROL maintenance page]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4401.md)
       - [ACP2E-4468：网站范围内的管理员用户无法在页面生成器中保存动态块](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4468.md)
       - [ACP2E-4786：配置AWS S3远程存储时，产品导出失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4786.md)
@@ -1040,6 +1041,7 @@ ht-degree: 0%
       - [ACP2E-4630：长产品名称与多页销售PDF中分页后的相邻列重叠](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4630.md)
       - [ACP2E-4680：不可销售产品从最终可协商报价中消失](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4680.md)
       - [ACP2E-4300：管理员客户组更改后Storefront目录权限未更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4300.md)
+      - [ACP2E-4709：当页面层次结构包含双引号时，CMS页面不会保存在页面生成器中](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4709.md)
   - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - 命令行工具引用 {#cli-reference}
   - [Adobe Commerce（内部部署）](reference/commerce-on-premises.md)
