@@ -2,7 +2,7 @@
 title: 操作指南主页
 description: 了解Adobe Commerce系统管理和操作概念。 浏览有关规划、配置和维护Commerce部署的综合指南。
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 34c1e3ed0ed46fc17bf4492036a8f43658b24bda
+source-git-commit: 06df92107c98f188a5dcb4b56aa6d61d3c594a7e
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 7%
@@ -102,4 +102,4 @@ ht-degree: 7%
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2026-06-12 20:39:58 -->
+<!-- Last updated from includes: 2026-07-17 20:40:17 -->
