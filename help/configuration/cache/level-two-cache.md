@@ -3,26 +3,16 @@ title: 用于性能优化的二级缓存配置
 description: 了解如何在Adobe Commerce中配置二级缓存以减少网络流量并提高性能。 了解旧版和Symfony实施选项。
 feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
 TQID: 'https://experienceleague.adobe.com/7vswBqyn9UZLmaeirgPRZ4xEQH5F66XUEtY5hPkz9NY'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d92082d5311d8cfccc1299d0014c238cbaf102e3
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: a816ed6fff5e2573b93712069bc7b1524dcad403
 workflow-type: tm+mt
-source-wordcount: 826
+source-wordcount: 1166
 ht-degree: 0%
 
 ---
@@ -42,18 +32,18 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
 
 | 实现 | 版本 | 描述 |
 | -------------- | ------- | ----------- |
-| [旧版(`RemoteSynchronizedCache`)](#legacy-l2-cache-configuration-remotesynchronizedcache) | 2.4.x | 基于Zend的二级缓存，具有`Cm_Cache_Backend_File`用于本地存储 |
-| [现代(`symfony_l2`)](#modern-symfony-l2-cache-implementation) | 2.4.9+ | 基于Symfony缓存的L2具有PSR-6合规性和增强的性能 |
+| [旧版(`RemoteSynchronizedCache`)](#legacy-l2-cache-configuration-remotesynchronizedcache) | &lt;2.4.9 | 基于Zend的二级缓存，具有`Cm_Cache_Backend_File`用于本地存储 |
+| [现代(`symfony_l2`)](#modern-symfony-l2-cache-implementation) | 2.4.9+ | 基于Symfony缓存的L2具有PSR-6合规性和增强的性能。 仅支持Valkey。 |
 
 ## 旧版L2缓存配置(RemoteSynchronizedCache)
 
 >[!NOTE]
 >
->旧版二级缓存配置说明适用于旧版Adobe Commerce。 如果您使用Adobe Commerce 2.4.9或更高版本，Adobe建议将[Symfony 2用于L2缓存](#modern-symfony-l2-cache-implementation)。
+>旧版二级缓存配置说明适用于旧版Adobe Commerce。 如果您使用的是Adobe Commerce版本2.4.9或更高版本，请将Valkey与[Symfony 2结合使用，用于L2缓存](#modern-symfony-l2-cache-implementation)。
 
 缓存配置说明取决于您的部署类型：
 
-- **对于Cloud**&#x200B;上的Adobe Commerce，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
+- **对于Cloud**&#x200B;上的Adobe Commerce，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
 
 - **对于支持Redis**&#x200B;的Adobe Commerce本地版本，请使用以下示例修改或替换`app/etc/env.php`文件中的现有缓存部分。
 
@@ -188,20 +178,26 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 ## 现代Symfony L2缓存实施
 
-在Commerce版本2.4.9+中，使用基于Symfony缓存的二级缓存实现（`symfony_l2`后端），而不是旧的二级缓存。  Symfony L2缓存提供了符合PSR-6标准的现代化缓存实现，与传统`RemoteSynchronizedCache`相比，性能有了显着改进。
+在Commerce版本2.4.9+中，使用基于Symfony缓存的二级缓存实现（`symfony_l2`后端），而不是旧的二级缓存。 Symfony L2缓存提供了符合PSR-6标准的现代化缓存实现，与传统`RemoteSynchronizedCache`相比，性能有了显着改进。
 
 >[!NOTE]
 >
 >对于Adobe Commerce on Cloud，ECE工具包(`ece-tools`)会自动管理此配置。 不要直接编辑`app/etc/env.php` — 部署将覆盖手动更改。 有关云配置，请参阅[改为配置Symfony L2缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-symfony-l2-cache)。
 
+>[!IMPORTANT]
+>
+>{{redis-cache-support}}
+>
+>由于`symfony_l2`仅在Adobe Commerce 2.4.9及更高版本中可用，因此请使用Valkey将其配置为远程后端。 Redis不是官方支持的`symfony_l2`远程后端。 按版本查看支持的缓存服务的[系统要求](../../installation/system-requirements.md)。
+
 ### Symfony二级缓存的优势
 
 - **现代体系结构**：基于Symfony缓存组件构建（符合PSR-6）
 - **更好的性能**：对Igbinary序列化、gzip压缩和Lua脚本的本机支持
-- **永久连接**：通过连接池减少Redis或Valkey连接开销
+- **永久连接**：减少连接池的Valkey连接开销
 - **预加载密钥**：支持为关键数据预加载缓存密钥
 - **过时缓存支持**：与`use_stale_cache`选项完全兼容
-- **简化的配置**：清理器后端类型名称(`redis`、`valkey`、`file`)
+- **简化的配置**：清理器后端类型名称(`valkey`， `file`)
 
 ### Symfony L2缓存的配置示例
 
@@ -213,8 +209,8 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
         'default' => [
             'backend' => 'symfony_l2',
             'backend_options' => [
-                // L2 (Remote): Redis with Symfony Cache
-                'remote_backend' => 'redis',
+                // L2 (Remote): Valkey with Symfony Cache
+                'remote_backend' => 'valkey',
                 'remote_backend_options' => [
                     'server' => 'localhost',
                     'database' => '0',
@@ -259,7 +255,7 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
         'default' => [
             'backend' => 'symfony_l2',
             'backend_options' => [
-                'remote_backend' => 'redis',
+                'remote_backend' => 'valkey',
                 'remote_backend_options' => [
                     'server' => 'localhost',
                     'database' => '0',
@@ -278,7 +274,7 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
         'stale_cache_enabled' => [
             'backend' => 'symfony_l2',
             'backend_options' => [
-                'remote_backend' => 'redis',
+                'remote_backend' => 'valkey',
                 'remote_backend_options' => [
                     'server' => 'localhost',
                     'database' => '0',
@@ -312,31 +308,47 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 | 选项 | 类型 | 默认 | 描述 |
 |--------|------|---------|-------------------------------------------------------------------|
-| `remote_backend` | 字符串 | `'redis'` | 远程后端类型： `redis`、`valkey`或`file` |
-| `remote_backend_options` | 数组 | `[]` | 远程后端配置（请参阅Redis/Valkey文档） |
+| `remote_backend` | 字符串 | `'valkey'` | 远程后端类型： `valkey`或`file`。 将`valkey`用于L2缓存。 |
+| `remote_backend_options` | 数组 | `[]` | 远程后端配置（请参阅Valkey文档） |
 | `local_backend` | 字符串 | `'file'` | 本地后端类型： `file`或`apcu` |
 | `local_backend_options` | 数组 | `[]` | 本地后端配置 |
-| `cleanup_percentage` | 整数 | `90` | 一级缓存清理阈值(1-100) |
+| `cleanup_percentage` | 整数 | `95` | 一级缓存清理阈值(1-100) |
 | `use_stale_cache` | 布尔型 | `false` | 启用过时缓存以实现高可用性 |
 
-### Valkey支持
+>[!NOTE]
+>
+>`remote_backend`选项也接受值`redis`。 但是，Redis不是官方支持的Adobe Commerce 2.4.9及更高版本的缓存服务。 Adobe建议仅使用`valkey`配置`symfony_l2`。 按版本查看支持的缓存服务的[系统要求](../../installation/system-requirements.md)。
 
-`symfony_l2`后端还支持将Valkey作为远程后端：
+### 增强的Symfony L2缓存性能和可靠性
 
-```php
-'backend_options' => [
-    'remote_backend' => 'valkey',  // Use Valkey instead of Redis
-    'remote_backend_options' => [
-        'server' => 'localhost',
-        'database' => '0',
-        'port' => '6379',
-        'serializer' => 'igbinary',
-        'compression_lib' => 'gzip',
-    ],
-    // ... rest of configuration
-]
-```
+>[!NOTE]
+>
+>这些改进适用于使用`symfony_l2`的Adobe Commerce 2.4.9部署，并随修补程序ACP2E-5132一起提供。 有关最新的修补程序发行说明，请参阅[Commerce云修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches#latest)。
+
+#### 优化的Symfony L2缓存标记存储
+
+通过消除冗余的文件系统标记索引写入，优化了Symfony L2缓存行为，以便进行Valkey支持的部署。 缓存标记现在专门存储在Valkey中，与Symfony L2缓存行为与旧版缓存实施一致。 这减少了不必要的磁盘I/O，提高了缓存写入性能，并防止了`var/cache/symfony/tags/`目录的增长。
+
+#### 改进了基于文件的缓存行为
+
+对于使用基于文件的缓存（没有Valkey）的部署，将继续维护本地标记索引以支持缓存失效。 标记索引现在写入配置的`cache_dir`而不是以前硬编码的`var/cache`位置，从而确保一致的缓存目录使用率并改进对自定义缓存配置的支持。
+
+#### 改进了缓存失效功能
+
+缓存失效现在使用基于TTL的再生锁定和适当的L1标记清理，从而消除在标记失效后可能持续存在的陈旧缓存条目。
+
+#### 默认启用压缩
+
+Symfony L2缓存现在默认启用Redis/Valkey压缩(`compress_data`)，从而减少内存消耗和网络流量，并与旧版缓存实施的默认行为保持一致。
+
+#### 影响
+
+- 消除了Valkey支持的Symfony L2缓存部署中的冗余文件系统标记索引写入。
+- 减少磁盘I/O并提高缓存写入性能。
+- 防止`var/cache/symfony/tags/`目录出现不必要的增长。
+- 确保基于文件的缓存部署始终使用配置的`cache_dir`，同时保留缓存失效行为。
+- 通过基于TTL的重新生成锁定和适当的L1标记清理，消除过时的缓存条目。
+- 在默认启用`compress_data`的情况下减少内存消耗和网络流量。
 
 有关详细的配置选项，请参阅：
-- [使用Symfony缓存配置Redis缓存](redis-pg-cache.md)
 - [使用Symfony缓存配置Valkey缓存](valkey-pg-cache.md)
