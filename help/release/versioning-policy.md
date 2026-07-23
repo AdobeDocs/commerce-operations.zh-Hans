@@ -2,7 +2,7 @@
 title: 发布策略
 description: 了解Adobe Commerce版本类型、营销与模块版本控制、补丁和安全版本、测试版、修补程序和整体发布策略。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: 8be75548a939008057fb5fdf37ba5b5a0345f6d4
+source-git-commit: 48fc318078cbf1800522aeb43d8927b72727e7ed
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 0%
@@ -16,9 +16,9 @@ Adobe Commerce在单个模块级别（例如`magento/framework 101.1.1`）使用
 - **主要版本**—2
 - **次要版本** - 2.4
 - **PATCH版本** - 2.4.8
-   - **安全修补程序版本**—2.4.8-p1
-      - 安全错误修复
-      - 安全性增强
+  - **安全修补程序版本**—2.4.8-p1
+    - 安全错误修复
+    - 安全性增强
 - **ALPHA修补程序版本**—2.4.8-alpha1
 - **BETA修补程序版本**—2.4.8-beta1
 - **可扩展性、基础架构和服务版本**
@@ -81,4 +81,4 @@ Beta版本可能包含缺陷，并“按原样”提供，无任何类型的担�
 
 由非Adobe人员创建，用于修复问题或由于各种原因修改Adobe Commerce代码。
 
-<!-- Last updated from includes: 2026-04-20 10:12:04 -->
+<!-- Last updated from includes: 2026-06-16 17:36:23 -->

@@ -1,7 +1,7 @@
 ---
-source-git-commit: 970dcea74edf889a6cb5abf1449d63dfe2d7d654
+source-git-commit: 06df92107c98f188a5dcb4b56aa6d61d3c594a7e
 workflow-type: tm+mt
-source-wordcount: '2772'
+source-wordcount: '2460'
 ht-degree: 0%
 
 ---
@@ -683,88 +683,6 @@ ht-degree: 0%
         新主题qpt
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21979ca7c9dd21a871c22271603bcd09b9dfd29a">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年5月23日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了针对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-30/b2b-2598-add-caching-capability">B2B-2598的QPT 1.1.30修复的拼写错误和URL修复：添加了缓存功能以storeConfig、货币、国家/地区、国家/地区、availableStores GraphQl查询</a>。</p>
-</td>
-      <td>
-        Qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/07202bf339331adb7b4103cdd123b0a194b72bf4">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年5月22日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/adobe-commerce/2-4-9">Adobe Commerce 2.4.9发行说明</a>和<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/magento-open-source/2-4-9">Magento Open Source 2.4.9发行说明</a>：阐明了AC-10933 <code>setup:di:compile</code>修复，删除了已取消的修复AC-14519，并调整了修复问题计数。<br /><em>点数： <a href="https://github.com/hostep">hostep</a></em></p>
-</td>
-      <td>
-        反馈，技术
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0e5a69a282839a393d6eb873af9938208706af50">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737">AC-10737的QPT 1.1.79修复的详细说明： Bin/magento <code>setup:db:status</code>命令无法识别JSON数据类型</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9aad978f42697f74ebd7c8f401e45b4780bd5038">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年5月20日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4601">ACP2E-4601的QPT 1.1.79修复的详细说明：重新保存付款授权交易自引用parent_id并触发无限循环/OOM</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3fe9730b1954a07d9ef4a405ee75fcde9511e09d">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy">软件生命周期策略</a>，其中包含Cloud版本升级实施日期、支持期定义（包括仅限安全的过渡期）、适用于2.4.4-2.4.9的扩展支持终止表、PHP PCI指南，以及迁移到Adobe Commerce as a Cloud Service或在PaaS上升级的路径。</p>
-</td>
-      <td>
-        重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/cd0f27ae6a8dcec9b25af15386d8350c22d2fb95">提交</a></td>
     </tr>
   </tbody>
 </table>

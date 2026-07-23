@@ -2,9 +2,9 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: eacee993ec38cce7763d4c99b1bbb67a319d8c1a
+source-git-commit: 7c944faaf6f9769ee6aba1e811aa93a5263f13cf
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,6 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与每个版本行的最新Commerce版本兼容的服务提供了默认配置。
 
 {{$include /help/_includes/templated/cloud-requirements-table.md}}
-
-**<sup>1</sup>MariaDB 12.3与Adobe Commerce 2.4.9之间的兼容性**
-MariaDB 12.3正式发布后，MariaDB 12.3与Adobe Commerce 2.4.9之间的兼容性将得到确认，预计将在5-6月时间范围内发布。
 
 对于默认配置，服务和版本定义在[的`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)中。
 有关更多详细信息，请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
@@ -131,8 +128,8 @@ Adobe建议您验证是否出于性能原因启用了[PHP OPcache](https://www.p
 
 - **对于云基础架构部署上的Adobe Commerce**，默认情况下会安装`opcache`扩展。
 - 对于Adobe Commerce内部部署：**&#x200B;**
-   - [验证是否已安装PHP OPcache扩展](prerequisites/php-settings.md#verify-php-is-installed)。
-   - 有关性能设置的特定指导，请参阅&#x200B;*性能最佳实践*&#x200B;指南中的[PHP设置](../performance/software.md#php-settings)的软件建议。
+  - [验证是否已安装PHP OPcache扩展](prerequisites/php-settings.md#verify-php-is-installed)。
+  - 有关性能设置的特定指导，请参阅&#x200B;*性能最佳实践*&#x200B;指南中的[PHP设置](../performance/software.md#php-settings)的软件建议。
 
 
 如果必须单独安装OPcache，请参阅[PHP OPcache文档](https://www.php.net/manual/en/opcache.setup.php)。
@@ -232,4 +229,4 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 >
 >`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
 
-<!-- Last updated from includes: 2026-06-01 15:26:19 -->
+<!-- Last updated from includes: 2026-06-16 11:15:50 -->
