@@ -3,24 +3,14 @@ title: 用于性能优化的二级缓存配置
 description: 了解如何在Adobe Commerce中配置二级缓存以减少网络流量并提高性能。 了解旧版和Symfony实施选项。
 feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
 TQID: 'https://experienceleague.adobe.com/7vswBqyn9UZLmaeirgPRZ4xEQH5F66XUEtY5hPkz9NY'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: a816ed6fff5e2573b93712069bc7b1524dcad403
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: d9152906a6fbbd765a60e3aeacdbf7cc7527529d
 workflow-type: tm+mt
 source-wordcount: 1166
 ht-degree: 0%
@@ -53,7 +43,7 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
 
 缓存配置说明取决于您的部署类型：
 
-- **对于Cloud**&#x200B;上的Adobe Commerce，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
+- **对于Cloud**&#x200B;上的Adobe Commerce，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
 
 - **对于支持Redis**&#x200B;的Adobe Commerce本地版本，请使用以下示例修改或替换`app/etc/env.php`文件中的现有缓存部分。
 
@@ -333,7 +323,7 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 >[!NOTE]
 >
->这些改进适用于使用`symfony_l2`的Adobe Commerce 2.4.9部署，并随修补程序ACP2E-5132一起提供。 有关最新的修补程序发行说明，请参阅[Commerce云修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches#latest)。
+>这些改进适用于使用`symfony_l2`的Adobe Commerce 2.4.9部署，并随修补程序ACP2E-5132一起提供。 有关最新的修补程序发行说明，请参阅[Commerce云修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches#latest)。
 
 #### 优化的Symfony L2缓存标记存储
 
@@ -362,3 +352,4 @@ Symfony L2缓存现在默认启用Redis/Valkey压缩(`compress_data`)，从而�
 
 有关详细的配置选项，请参阅：
 - [使用Symfony缓存配置Valkey缓存](valkey-pg-cache.md)
+
