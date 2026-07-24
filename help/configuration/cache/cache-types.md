@@ -16,10 +16,10 @@ level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
+source-git-commit: d3c3e48c7627b932d1e46a7d2a99fa77b8b75b4c
 workflow-type: tm+mt
-source-wordcount: 507
-ht-degree: 1%
+source-wordcount: 486
+ht-degree: 0%
 
 ---
 
@@ -99,13 +99,14 @@ Commerce提供了一个适用于所有缓存类型的`default`缓存前端。 �
 
 其中：
 
-- `<frontend_type>` — 低级前端缓存类型。 指定与`Zend\Cache\Core`兼容的类名。如果省略，则使用[Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php)。
+- `<frontend_type>` — 低级前端缓存类型。指定与`Zend\Cache\Core`兼容的类名。
+如果省略，则使用[Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php)。
 
 - `<frontend_option>`， `<frontend_option_value>` — Commerce框架在创建时作为关联数组传递给前端缓存的选项的名称和值。
 
 - `<backend_type>` — 低级后端缓存类型。 您可以指定：
-   - **现代Symfony缓存（2.4.9+，推荐）**：简化名称，如`redis`、`valkey`或`file`
-   - **旧版（基于Zend）**：与实现`Zend_Cache_Backend_Interface`的`Zend_Cache_Backend`兼容的完整类名
+  - **现代Symfony缓存（2.4.9+，推荐）**：简化名称，如`valkey`或`file`
+  - **旧版（基于Zend）**：与实现`Zend_Cache_Backend_Interface`的`Zend_Cache_Backend`兼容的完整类名
 
 - `<backend_option>`， `<backend_option_value>` — Commerce框架在创建时作为关联数组传递给后端缓存的选项的名称和值。
 

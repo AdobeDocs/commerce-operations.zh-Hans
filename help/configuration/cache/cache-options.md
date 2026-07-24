@@ -18,9 +18,9 @@ level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 3d64249bf778a5aa73db22a532a454bb37d6dd37
+source-git-commit: d9152906a6fbbd765a60e3aeacdbf7cc7527529d
 workflow-type: tm+mt
-source-wordcount: 309
+source-wordcount: 331
 ht-degree: 0%
 
 ---
@@ -88,14 +88,17 @@ Commerce支持两种后端实施方法。 您选择的方法取决于您的Comme
 
 | 后端 | 键入名称 |
 | ------- | --------- |
-| Redis | `redis` |
 | Valkey | `valkey` |
 | 文件系统 | `file` |
+
+>[!NOTE]
+>
+>也接受`redis`类型名称，但Redis不是官方支持的Adobe Commerce 2.4.9及更高版本的缓存服务。 请改用`valkey`。
 
 **示例配置：**
 
 ```php?start_inline=1
-'backend' => 'redis',
+'backend' => 'valkey',
 'backend_options' => [
     'server' => '127.0.0.1',
     'database' => '0',
@@ -114,3 +117,4 @@ Commerce支持两种后端实施方法。 您选择的方法取决于您的Comme
 - [二级缓存配置](level-two-cache.md)
 
 有关基于Zend的旧版选项，请参阅[Laminas文档](https://docs.laminas.dev/)。
+

@@ -10,9 +10,9 @@ topic: Performance
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
 badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
 nudge: true
-source-git-commit: 78f8259a686402045614210efe6488c5cf5cc6bd
+source-git-commit: d9152906a6fbbd765a60e3aeacdbf7cc7527529d
 workflow-type: tm+mt
-source-wordcount: '2337'
+source-wordcount: '2454'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
 
 要将`symfony_l2`缓存用于Adobe Commerce 2.4.9，请完成以下步骤：
 
-- 确保云项目使用[ECE工具包v2002.1.12](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)或更高版本。
+- 确保云项目使用[ECE工具包v2002.2.12](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)或更高版本。
 
 - 在`.magento.env.yaml`文件中设置部署变量： `VALKEY_BACKEND`=`symfony_l2`。
 
@@ -94,11 +94,44 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
       VALKEY_BACKEND: symfony_l2
   ```
 
-将`VALKEY_BACKEND`部署变量设置为`symfony_l2`将自动根据Valkey服务连接详细信息构建完整的二级缓存配置，包括`default`前端和`stale_cache_enabled`前端，可缓存的类型（例如`layout`、`block_html`、`full_page`和`translate`）已映射到已启用过时的前端。 您无需定义`CACHE_CONFIGURATION`即可使用`symfony_l2`。
+将`VALKEY_BACKEND`部署变量设置为`symfony_l2`将自动根据Valkey服务连接详细信息构建完整的二级缓存配置，包括`default`前端和`stale_cache_enabled`前端，可缓存的类型（例如`layout`、`block_html`、`full_page`和`translate`）已映射到已启用过时的前端。 定义`CACHE_CONFIGURATION`是可选的，仅在要自定义特定的后端选项时才需要。
+
+>[!NOTE]
+>
+>Adobe Commerce 2.4.9包括Symfony L2缓存改进（包括缓存标记存储、失效和压缩），该改进包括使用修补程序ACP2E-5132，减少磁盘I/O，消除过时的缓存条目，以及减少内存和网络开销。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](../../../configuration/cache/level-two-cache.md#enhanced-symfony-l2-cache-performance-and-reliability)。
+
+#### 自定义Symfony L2缓存配置
+
+`ece-tools`自动派生`default`和`stale_cache_enabled`前端的Valkey连接详细信息(`server`、`port`、`database`、`serializer`、`compression_lib`、`persistent_id`)。 要自定义其他后端选项（如本地缓存目录），请将`CACHE_CONFIGURATION`与`VALKEY_BACKEND: symfony_l2`一起定义为`_merge: true`。 您在此处定义的值将覆盖相应的自动生成的默认值；任何忽略的选项将继续使用`ece-tools`自动导出的值。
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: symfony_l2
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          backend_options:
+            remote_backend: valkey
+            local_backend: file
+            local_backend_options:
+              cache_dir: /dev/shm/magento_l1
+        stale_cache_enabled:
+          backend: symfony_l2
+          backend_options:
+            remote_backend: valkey
+            local_backend: file
+            local_backend_options:
+              cache_dir: /dev/shm/magento_l1_stale
+            use_stale_cache: true
+```
 
 >[!CAUTION]
 >
->更新`.magento.env.yaml`配置时，请勿覆盖`server`或`port`，除非您有意指向项目的Valkey服务以外的缓存终结点。 ECE工具包会自动从您的Valkey服务关系中派生这些值。 使用不正确的值覆盖这些参数会导致部署失败，并出现缓存连接错误。
+>为`symfony_l2`定义`CACHE_CONFIGURATION`时，请勿覆盖`server`或`port`，除非您有意指向项目的Valkey服务以外的缓存终结点。 ECE工具包会自动从您的Valkey服务关系中派生这些值。
+>
+>如果您覆盖`server`，则在连接到项目的Valkey服务时，其值必须为`localhost`。 提供不正确的`server`或`port`值会导致部署失败，并出现缓存连接错误。
 
 ### Adobe Commerce Cloud的二级缓存内存大小
 
@@ -1022,4 +1055,5 @@ stage:
 - [设置Valkey服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/valkey)
 - [设置Redis服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/redis)
 - [部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)
+
 
