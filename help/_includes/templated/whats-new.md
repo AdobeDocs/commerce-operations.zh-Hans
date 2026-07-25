@@ -1,8 +1,8 @@
 ---
-source-git-commit: 06df92107c98f188a5dcb4b56aa6d61d3c594a7e
+source-git-commit: 462c3bcd5e4359d2be1a8f112c2dc50d3b8825bd
 workflow-type: tm+mt
-source-wordcount: '2460'
-ht-degree: 0%
+source-wordcount: '2666'
+ht-degree: 1%
 
 ---
 # 新增功能模板
@@ -10,6 +10,80 @@ ht-degree: 0%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年7月23日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了Adobe Commerce 2.4.9的MariaDB Cloud版本支持详细信息中的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>（建议使用12.3，支持使用11.8）。</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/eaf47339d87d296799367f699f9322c14e6ee780">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年7月22日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>使用最新的Commerce on Cloud Service版本（包括RabbitMQ 4.3更新并确认与MariaDB 12.3的兼容性）更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>主题。</p>
+</td>
+      <td>
+        重大更新
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6607852ba3221a1120f3c88007c106ed9704dcec">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年7月21日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4401">ACP2E-4401的QPT 1.1.81修复程序的详细说明：可配置产品的主页的计划更新预览重定向到维护页</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/41aac13f73ff0836f93b8ec30a709bd89fa34a94">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4468">ACP2E-4468的QPT 1.1.81修复程序的详细说明：网站范围内的管理员用户无法在页面生成器</a>中保存动态块。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f5fbe594284c05aaa9b2461e3628a3444229efb6">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年7月16日
 
