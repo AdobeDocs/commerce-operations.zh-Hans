@@ -1,7 +1,7 @@
 ---
-source-git-commit: 73d9b59320fac5ad73e893e87aea1edb4bb72a06
+source-git-commit: 33d2ca6bac7fb0108ff6f236d82f6d97c3ad95c8
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -60,10 +60,11 @@ ht-degree: 0%
 
 ### 钩子做什么
 
-- 自动检测暂存的图像文件(PNG、JPG、JPEG、GIF、SVG)
-- 运行`image_optim`以压缩和优化图像
+- 自动检测暂存的图像文件(`.png`、`.jpeg`、`.jpg`、`.gif`、`.svg`)
+- 运行`image_optim`以压缩和优化光栅图像(`.png`， `.jpeg`， `.jpg`， `.gif`)
 - 自动重新存放优化的图像
-- 确保所有提交的映像都得到了正确优化
+- 确保所有已提交的光栅图像都已正确优化
+- 根据大小限制检查暂存的SVG，如果从`help/`引用了超大的SVG，则中止提交（否则仅警告）
 
 ### 优点
 
