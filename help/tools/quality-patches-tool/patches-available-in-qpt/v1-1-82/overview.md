@@ -14,7 +14,7 @@ feature_v2:
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 97460ce784a4c97f42b6c60ba390b2260f60b5e6
+source-git-commit: e52becee703b046f5ffb00b01ca780311d711ec8
 workflow-type: tm+mt
 source-wordcount: 485
 ht-degree: 0%
@@ -34,13 +34,13 @@ QPT v1.1.82包含以下修补程序：
 1. **ACP2E-4682**：修复了在每次加载页面时，访问检查报价单`isActive`状态的Storefront页面会创建空报价记录的问题。
 1. **ACP2E-4695**：修复了目录规则索引器占用过多内存且无法完成而导致不稳定和内存不足错误的问题。
 1. **ACP2E-4698**：修复了在页面生成器文本内容中再次编辑图像时，会保存绝对媒体URL而不是保留可移植媒体指令的问题。
-1. **ACP2E-4748**：修复了在具有大量奖励点历史记录的商店中奖励点过期处理缓慢，从而导致奖励点过期延迟的问题。
+1. **[ACP2E-4748](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4748.md)**：修复了在具有大量奖励积分历史记录的商店中奖励积分过期时间较慢而导致奖励积分过期时间延迟的问题。
 1. **ACP2E-4797**：修复了以下问题：即使将数据库配置为支持`utf8mb4`，在WYSIWYG编辑器或管理员中的页面生成器内容中输入4字节Unicode字符也会被错误阻止。
 1. **ACP2E-4799**：修复了`requisition_lists` GraphQL查询返回的`total_count`值的问题，该值仅反映当前页面上的项目数，而不反映符合查询条件的申请列表的总数。
-1. **ACP2E-4805**：修复了当第一个可销售子产品出现在列表中的较晚时，带许多子产品的可配置产品的签出API请求明显变慢的问题。
+1. **[ACP2E-4805](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4805.md)**：修复了当第一个可销售子产品出现在列表中的较晚时，带许多子产品的可配置产品的签出API请求明显变慢的问题。
 1. **ACP2E-4840**：修复了`products` GraphQL查询中请求的数量值返回&#x200B;*null*&#x200B;的问题。
 1. **ACP2E-4870**：修复了&#x200B;**[!UICONTROL Product Alerts]**&#x200B;电子邮件通知忽略商店查看电子邮件设置的问题。
-1. **ACP2E-4875**：修复了在管理员中查看带有大型通讯簿的客户帐户时意外注销管理员用户的问题。
+1. **[ACP2E-4875](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875.md)**：修复了在管理员中查看带有大型通讯簿的客户帐户时意外注销管理员用户的问题。
 1. **ACP2E-4894**：修复了在大容量存储上启用&#x200B;**[!UICONTROL Asynchronous Indexing]**&#x200B;时，管理订单管理网格中新订单出现延迟的问题。
 1. **ACP2E-4981**：修复了以下问题：页面生成器产品轮播显示产品的顺序不反映管理员中设置的位置，并且当匹配的子产品单独可见时包含可配置产品。
 

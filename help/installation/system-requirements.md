@@ -2,7 +2,8 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: d9152906a6fbbd765a60e3aeacdbf7cc7527529d
+last-update: 2026-07-23T00:00:00Z
+source-git-commit: 6da5a8645b46807eed654f6958f19f10d0095945
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 0%
