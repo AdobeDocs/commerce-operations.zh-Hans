@@ -18,9 +18,9 @@ level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d9152906a6fbbd765a60e3aeacdbf7cc7527529d
+source-git-commit: 37196b2d34951dd2df4d1e459cc9e29480f4f6e1
 workflow-type: tm+mt
-source-wordcount: 331
+source-wordcount: 395
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的
 
 >[!IMPORTANT]
 >
->{{redis-cache-support}}
+>Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5修补程序不支持Redis缓存。 如果要升级到不支持Redis的版本，则必须设置Valkey并更新缓存配置以使用它。 有关本地Commerce，请参阅[设置Valkey](config-valkey.md)。 对于云上的Commerce，请参阅[设置Valkey](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md){target="_blank"}。
 
 ## 实施方法
 

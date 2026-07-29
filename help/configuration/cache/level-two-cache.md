@@ -20,9 +20,9 @@ level_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d9152906a6fbbd765a60e3aeacdbf7cc7527529d
+source-git-commit: 37196b2d34951dd2df4d1e459cc9e29480f4f6e1
 workflow-type: tm+mt
-source-wordcount: 1166
+source-wordcount: 1221
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
   - `local_backend_options`是本地缓存配置。
   - `cache_dir`是用于存储本地缓存的目录的文件缓存特定选项。
 
-对于Adobe Commerce Adobe，建议使用Redis进行远程缓存(`\Magento\Framework\Cache\Backend\Redis`)，使用`Cm_Cache_Backend_File`进行共享内存中数据的本地缓存，使用： `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
+对于Adobe Commerce，Adobe建议使用Redis进行远程缓存(`\Magento\Framework\Cache\Backend\Redis`)，使用`Cm_Cache_Backend_File`进行共享内存中数据的本地缓存，使用： `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
 
 Adobe建议使用[`cache preload`](redis-pg-cache.md#redis-preload-feature)功能，因为它可显着降低Redis上的压力。 不要忘记为预加载密钥添加后缀“:hash”。
 
@@ -190,15 +190,11 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 在Commerce版本2.4.9+中，使用基于Symfony缓存的二级缓存实现（`symfony_l2`后端），而不是旧的二级缓存。 Symfony L2缓存提供了符合PSR-6标准的现代化缓存实现，与传统`RemoteSynchronizedCache`相比，性能有了显着改进。
 
->[!NOTE]
->
->对于Adobe Commerce on Cloud，ECE工具包(`ece-tools`)会自动管理此配置。 不要直接编辑`app/etc/env.php` — 部署将覆盖手动更改。 有关云配置，请参阅[改为配置Symfony L2缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-symfony-l2-cache)。
-
 >[!IMPORTANT]
 >
->{{redis-cache-support}}
+>Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5修补程序不支持Redis缓存。 如果要升级到不支持Redis的版本，则必须设置Valkey并更新缓存配置以使用`symfony_l2`。 有关本地Commerce，请参阅[设置Valkey](config-valkey.md)。 对于云上的Commerce，请参阅[设置Valkey](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md){target="_blank"}
 >
->由于`symfony_l2`仅在Adobe Commerce 2.4.9及更高版本中可用，因此请使用Valkey将其配置为远程后端。 Redis不是官方支持的`symfony_l2`远程后端。 按版本查看支持的缓存服务的[系统要求](../../installation/system-requirements.md)。
+>Redis不是官方支持的`symfony_l2`远程后端。 如果您使用的版本支持`symfony_l2`，则必须使用Valkey进行缓存。 请参阅[系统要求](../../installation/system-requirements.md)
 
 ### Symfony二级缓存的优势
 
@@ -210,6 +206,10 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 - **简化的配置**：清理器后端类型名称(`valkey`， `file`)
 
 ### Symfony L2缓存的配置示例
+
+>[!NOTE]
+>
+>对于Adobe Commerce on Cloud，ECE工具包(`ece-tools`)会自动管理缓存配置。 不要直接编辑`app/etc/env.php` — 部署将覆盖手动更改。 有关云配置，请参阅[改为配置Symfony L2缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-symfony-l2-cache)。
 
 为L2缓存使用简化的`symfony_l2`后端类型：
 
