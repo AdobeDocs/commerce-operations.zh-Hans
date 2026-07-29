@@ -2,12 +2,25 @@
 title: 安全实施策略：所需操作和截止日期
 description: 了解云版本和软件依赖项上不支持的Adobe Commerce的安全实施，包括截止日期、所需操作和风险。
 TQID: 'https://experienceleague.adobe.com/0JX-Z-dRjsiQk5jO-LLRi-J4GWdylTh4pOfXRPOabxs'
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047id: cdf0c6dd-1717-4e20-9530-a24eee57088b
-feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: cc250cf1-34eb-4863-80d0-d170d45ea067id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-subfeature_v2: id: f2261633-201d-46c5-8a66-999e70527a83
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: d378ca77-2da1-4f39-ad92-1917fe974a38
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+  - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: cc250cf1-34eb-4863-80d0-d170d45ea067
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2:
+  - id: f2261633-201d-46c5-8a66-999e70527a83
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
 badgePaas: label="仅限Adobe Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
 hide: true
 source-git-commit: 93446d5be993e53e94f714a592d519a945dfbebd
@@ -43,7 +56,7 @@ Adobe公司安全策略要求，适用于Adobe Commerce on Cloud的所有Adobe�
 
 **表1：版本**&#x200B;必需的操作和截止日期
 
-| **您的版本** | **[操作1：<br>升级第三方软件依赖项](#action-1-upgrade-third-party-software-dependencies)** | **操作2：<br>[升级或迁移您的Adobe Commerce版本](#action-2-upgrade-to-a-supported-adobe-commerce-version)** |
+| **您的版本** | **[操作1：<br>升级第三方软件依赖项](#action-1-upgrade-third-party-software-dependencies)**&#x200B; | &#x200B;** 操作2：<br>[升级或迁移您的Adobe Commerce版本](#action-2-upgrade-to-a-supported-adobe-commerce-version)** |
 | --- | --- | --- |
 | 2.4.4或2.4.5 | 要求在2026年10月30日之前采取行动。 | 要求在2027年6月1日之前采取行动 |
 | 2.4.6或2.4.7 | 要求在2026年10月30日或2027年5月31日之前执行操作，具体取决于软件。 | 要求在2028年6月1日之前采取行动 |
