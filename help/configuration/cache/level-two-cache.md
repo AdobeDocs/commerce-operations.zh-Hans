@@ -3,26 +3,16 @@ title: 用于性能优化的二级缓存配置
 description: 了解如何在Adobe Commerce中配置二级缓存以减少网络流量并提高性能。 了解旧版和Symfony实施选项。
 feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
 TQID: 'https://experienceleague.adobe.com/7vswBqyn9UZLmaeirgPRZ4xEQH5F66XUEtY5hPkz9NY'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 37196b2d34951dd2df4d1e459cc9e29480f4f6e1
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7fdc2a2c19eccf36940d9b4545b443eabbab4220
 workflow-type: tm+mt
-source-wordcount: 1221
+source-wordcount: 1378
 ht-degree: 0%
 
 ---
@@ -53,7 +43,7 @@ Commerce会将经过哈希处理的数据版本存储在远程缓存中，并将
 
 缓存配置说明取决于您的部署类型：
 
-- **对于Cloud**&#x200B;上的Adobe Commerce，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
+- **对于Cloud**&#x200B;上的Adobe Commerce，可通过在`.magento.env.yaml`中设置[`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend)或[`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend)部署变量来配置二级缓存。 有关配置示例，请参阅[配置二级缓存](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md#configure-l2-cache)。
 
 - **对于支持Redis**&#x200B;的Adobe Commerce本地版本，请使用以下示例修改或替换`app/etc/env.php`文件中的现有缓存部分。
 
@@ -333,7 +323,9 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 >[!NOTE]
 >
->这些改进适用于使用`symfony_l2`的Adobe Commerce 2.4.9部署，并随修补程序ACP2E-5132一起提供。 有关最新的修补程序发行说明，请参阅[Commerce云修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches#latest)。
+>这些改进适用于使用`symfony_l2`的Adobe Commerce 2.4.9部署，并随修补程序ACP2E-5132一起提供。 有关最新的修补程序发行说明，请参阅[Commerce云修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches#latest)。
+
+最新的更新提高了Symfony L2缓存的可扩展性，减少了不必要的文件系统I/O，并增强了缓存一致性和可靠性。
 
 #### 优化的Symfony L2缓存标记存储
 
@@ -343,22 +335,30 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 对于使用基于文件的缓存（没有Valkey）的部署，将继续维护本地标记索引以支持缓存失效。 标记索引现在写入配置的`cache_dir`而不是以前硬编码的`var/cache`位置，从而确保一致的缓存目录使用率并改进对自定义缓存配置的支持。
 
-#### 改进了缓存失效功能
+#### 修复了重新标记后过时的标记成员身份
 
-缓存失效现在使用基于TTL的再生锁定和适当的L1标记清理，从而消除在标记失效后可能持续存在的陈旧缓存条目。
+重新标记缓存条目可能会使其与不再属于它的标记相关联。 过时的标记成员身份现在会在重新标记时清除，因此缓存条目仅由当前分配给它们的标记失效。
 
-#### 默认启用压缩
+#### 固定冗余远程写操作（在保存不变时）
 
-Symfony L2缓存现在默认启用Redis/Valkey压缩(`compress_data`)，从而减少内存消耗和网络流量，并与旧版缓存实施的默认行为保持一致。
+保存包含未更改内容的缓存条目仍会触发对远程(Valkey)后端的写入。 现在，当内容未更改时会跳过保存，从而减少不必要的远程写入。
+
+#### 基于L1大小的固定逐出(cleanup_percentage)
+
+用于基于L1大小的逐出的`cleanup_percentage`阈值并非始终触发清理。 L1缓存逐出现在正确遵循配置的`cleanup_percentage`。
+
+#### 为过时的缓存添加了再生锁定
+
+启用`use_stale_cache`且某个条目的远程副本暂时不可用时，现在只有一个进程会获得一个短期锁定以重新生成该条目。 对同一条目的其他并发请求将继续提供现有的局部值，而不是自己重新生成它，从而减少重新生成踩踏次数和冗余后端负载。
 
 #### 影响
 
-- 消除了Valkey支持的Symfony L2缓存部署中的冗余文件系统标记索引写入。
-- 减少磁盘I/O并提高缓存写入性能。
-- 防止`var/cache/symfony/tags/`目录出现不必要的增长。
-- 确保基于文件的缓存部署始终使用配置的`cache_dir`，同时保留缓存失效行为。
-- 通过基于TTL的重新生成锁定和适当的L1标记清理，消除过时的缓存条目。
-- 在默认启用`compress_data`的情况下减少内存消耗和网络流量。
+- 消除了Valkey支持的Symfony L2缓存部署中的冗余文件系统标记索引写入，减少了磁盘I/O并防止了`var/cache/symfony/tags/`目录的不必要增长。
+- 确保基于文件的缓存部署始终使用为本地标记索引配置的`cache_dir`，同时保留缓存失效行为。
+- 防止因重新标记后遗留的标记成员资格过时而导致的错误缓存失效。
+- 减少未更改缓存保存不必要的远程写入，从而降低网络和后端负载。
+- 确保在配置的`cleanup_percentage`阈值下可靠触发一级缓存逐出。
+- 通过为每个键选择单个再生器而不是每个并发请求重建它，减少`use_stale_cache`条条目的再生次数。
 
 有关详细的配置选项，请参阅：
 - [使用Symfony缓存配置Valkey缓存](valkey-pg-cache.md)
