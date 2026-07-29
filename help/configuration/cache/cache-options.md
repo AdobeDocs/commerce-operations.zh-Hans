@@ -3,24 +3,17 @@ title: 缓存后端选项和存储参考
 description: 了解Adobe Commerce中的缓存后端选项，包括文件系统、Redis、Valkey和数据库存储。 探索传统和现代方法。
 feature: Configuration, Cache
 exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T18:37:32.504Z'
 TQID: 'https://experienceleague.adobe.com/m7eUBNrt8UF43iJq9Tpl0Y1WcmR-dlt7Z4PoHvXVNnA'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d9152906a6fbbd765a60e3aeacdbf7cc7527529d
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 37196b2d34951dd2df4d1e459cc9e29480f4f6e1
 workflow-type: tm+mt
-source-wordcount: 331
+source-wordcount: 395
 ht-degree: 0%
 
 ---
@@ -48,7 +41,7 @@ Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的
 
 >[!IMPORTANT]
 >
->{{redis-cache-support}}
+>Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p5修补程序不支持Redis缓存。 如果要升级到不支持Redis的版本，则必须设置Valkey并更新缓存配置以使用它。 有关本地Commerce，请参阅[设置Valkey](config-valkey.md)。 对于云上的Commerce，请参阅[设置Valkey](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md){target="_blank"}。
 
 ## 实施方法
 
