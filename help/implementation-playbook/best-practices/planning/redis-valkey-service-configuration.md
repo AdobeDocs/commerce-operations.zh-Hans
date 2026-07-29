@@ -8,7 +8,7 @@ feature: Best Practices, Cache
 feature-set: Commerce
 topic: Performance
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
+badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
 nudge: true
 source-git-commit: 5f0b6f7a04ee96b2aa650ee242e31d383bd7512b
 workflow-type: tm+mt
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
+>验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
 
 ## 配置L2缓存
 
@@ -70,7 +70,7 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关环境配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[`REDIS_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)_。
+有关环境配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[`REDIS_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)_。
 
 >[!ENDTABS]
 
@@ -84,7 +84,7 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
 
 要将`symfony_l2`缓存用于Adobe Commerce 2.4.9，请完成以下步骤：
 
-- 确保云项目使用[ECE工具包v2002.2.12](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)或更高版本。
+- 确保云项目使用[ECE工具包v2002.2.12](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)或更高版本。
 
 - 在`.magento.env.yaml`文件中设置部署变量： `VALKEY_BACKEND`=`symfony_l2`。
 
@@ -209,7 +209,7 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[VALKEY_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection)
+有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[VALKEY_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#valkey_use_slave_connection)
 
 >[!TAB Redis配置]
 
@@ -221,7 +221,7 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[REDIS_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection)
+有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[REDIS_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=zh-Hans#redis_use_slave_connection)
 
 >[!ENDTABS]
 
@@ -362,7 +362,7 @@ stage:
 
 >[!NOTE]
 >
->`full_page`缓存类型与Cloud基础结构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly)。
+>`full_page`缓存类型与Cloud基础结构项目上的Adobe Commerce无关，因为它们使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/fastly)。
 
 >[!WARNING]
 >
@@ -546,7 +546,7 @@ stage:
 
 1. 请求一个专用于生产和暂存环境会话的新Valkey实例。
 
-   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
+   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
 
    此更新不会导致任何停机时间，但需要部署才能激活新服务。
 
@@ -621,7 +621,7 @@ stage:
 
 1. 请求专用于生产和暂存环境会话的新Redis实例。
 
-   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
+   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
 
    此更新不会导致任何停机时间，但需要部署才能激活新服务。
 
@@ -681,7 +681,7 @@ stage:
 
 ## 启用异步释放
 
-要在云基础架构上的Adobe Commerce上启用`lazyfree`，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)，请求将以下Redis或Valkey配置应用于您的环境：
+要在云基础架构上的Adobe Commerce上启用`lazyfree`，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)，请求将以下Redis或Valkey配置应用于您的环境：
 
 ```text
 lazyfree-lazy-eviction yes
@@ -703,7 +703,7 @@ lazyfree-lazy-user-del yes
 
 ## 启用多线程I/O
 
-要在云基础架构上的Adobe Commerce上启用Redis I/O线程，请提交请求以下I/O线程配置的[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)。 此配置可以通过从主线程卸载套接字读取和写入以及命令解析来提高吞吐量，但代价是较高的CPU使用率。 在加载下验证并监视主机。
+要在云基础架构上的Adobe Commerce上启用Redis I/O线程，请提交请求以下I/O线程配置的[Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。 此配置可以通过从主线程卸载套接字读取和写入以及命令解析来提高吞吐量，但代价是较高的CPU使用率。 在加载下验证并监视主机。
 
 >[!BEGINTABS]
 
@@ -1052,8 +1052,8 @@ stage:
 
 请参阅以下相关主题：
 
-- [设置Valkey服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey)
-- [设置Redis服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis)
-- [部署变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)
+- [设置Valkey服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/valkey)
+- [设置Redis服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/redis)
+- [部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)
 
 
