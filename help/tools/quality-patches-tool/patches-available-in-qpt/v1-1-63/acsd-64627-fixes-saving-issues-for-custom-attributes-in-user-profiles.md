@@ -7,7 +7,7 @@ exl-id: 8e7dd72e-c21e-46cf-8e2b-9dccedfd8b04
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -47,8 +47,8 @@ ACSD-64627修补程序修复了在&#x200B;**[!UICONTROL Company Structure]**&#x2
 1. 以公司管理员身份登录到店面。
 1. 导航到&#x200B;**[!UICONTROL Customer Account]** > **[!UICONTROL Company Structure]**&#x200B;或&#x200B;**[!UICONTROL Customer Account]** > **[!UICONTROL Company Users]**。
 1. 单击&#x200B;**[!UICONTROL Add New User]**。
-1. 单击&#x200B;**[!UICONTROL Upload]** custom_upload *属性的*。
-1. 单击&#x200B;**[!UICONTROL Select file]** image_attachment *属性的*。
+1. 单击&#x200B;*custom_upload*&#x200B;属性的&#x200B;**[!UICONTROL Upload]**。
+1. 单击&#x200B;*image_attachment*&#x200B;属性的&#x200B;**[!UICONTROL Select file]**。
 
 <u>预期的结果</u>：
 
@@ -62,7 +62,7 @@ ACSD-64627修补程序修复了在&#x200B;**[!UICONTROL Company Structure]**&#x2
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读

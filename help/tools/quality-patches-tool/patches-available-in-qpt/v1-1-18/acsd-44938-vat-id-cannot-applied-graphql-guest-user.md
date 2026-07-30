@@ -7,14 +7,14 @@ exl-id: 62d36c27-545a-4c32-be69-a92e4b3ca2ca
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 # ACSD-44938：无法在[!DNL GraphQL]访客用户的请求中应用VAT_ID
 
-ACSD-44938修补程序修复了无法在访客用户的`VAT_ID`请求中应用[!DNL GraphQL]的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.18时，此修补程序可用。 修补程序ID为ACSD-44938。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+ACSD-44938修补程序修复了无法在访客用户的[!DNL GraphQL]请求中应用`VAT_ID`的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.18时，此修补程序可用。 修补程序ID为ACSD-44938。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 
 ## 受影响的产品和版本
 
@@ -37,7 +37,7 @@ ACSD-44938修补程序修复了无法在访客用户的`VAT_ID`请求中应用[!
 <u>重现步骤</u>：
 
 1. 按照开发人员文档的[[!DNL GraphQL] 教程](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/)中所述的步骤创建访客购物车。
-1. 尝试使用`VAT_ID`为来宾用户应用[!DNL GraphQL]。
+1. 尝试使用[!DNL GraphQL]为来宾用户应用`VAT_ID`。
 
 <u>预期的结果</u>：
 
@@ -45,13 +45,13 @@ ACSD-44938修补程序修复了无法在访客用户的`VAT_ID`请求中应用[!
 
 <u>实际结果</u>：
 
-无法使用`VAT_ID`将[!DNL GraphQL]应用于来宾用户。
+无法使用[!DNL GraphQL]将`VAT_ID`应用于来宾用户。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读
@@ -59,6 +59,6 @@ ACSD-44938修补程序修复了无法在访客用户的`VAT_ID`请求中应用[!
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)的新工具。
-* [使用](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的Quality Patches Tool[!DNL Quality Patches Tool]，检查修补程序是否可用于Adobe Commerce问题。
+* [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

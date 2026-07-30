@@ -5,8 +5,8 @@ feature: Configuration, Catalog Management
 exl-id: 19451443-228e-437d-a3eb-7dc968b9fb0d
 source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 0%
+source-wordcount: '900'
+ht-degree: 1%
 
 ---
 
@@ -151,7 +151,7 @@ ht-degree: 0%
 
 ## 可视化促销路径
 
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目(Adobe管理的PaaS基础架构)和内部部署项目上的Adobe Commerce 。"}
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
 
 这些配置值在&#x200B;**存储** >设置> **配置** > **目录** > **可视推销**&#x200B;中的管理员中可用。
 

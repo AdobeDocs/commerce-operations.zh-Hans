@@ -7,7 +7,7 @@ exl-id: eae9a6ad-0999-4581-b3c0-7667ee7beb54
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Google reCAPTCHA v3 Invisible在签出时不起作用，无法下订单。 未�
 
 <u>重现步骤</u>
 
-1. 从&#x200B;**[!UICONTROL reCAPTCHA v3 Invisible]** > **[!UICONTROL Store]** > **[!UICONTROL Configuration]**&#x200B;配置&#x200B;**[!UICONTROL Security]**。
+1. 从&#x200B;**[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL Security]**&#x200B;配置&#x200B;**[!UICONTROL reCAPTCHA v3 Invisible]**。
 1. 启用&#x200B;**[!UICONTROL reCAPTCHA v3 Invisible]**&#x200B;以在&#x200B;**[!UICONTROL Storefront]**&#x200B;选项卡下签出/下订单。
 1. 尝试使用[!UICONTROL Check/Money order]付款方式下订单。
 
@@ -73,7 +73,7 @@ Google reCAPTCHA v3 Invisible在签出时不起作用，无法下订单。 未�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读
@@ -81,7 +81,7 @@ Google reCAPTCHA v3 Invisible在签出时不起作用，无法下订单。 未�
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

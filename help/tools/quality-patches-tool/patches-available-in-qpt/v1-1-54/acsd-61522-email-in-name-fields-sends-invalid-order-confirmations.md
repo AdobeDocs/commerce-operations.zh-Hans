@@ -7,7 +7,7 @@ exl-id: e1ed7a57-4054-44db-bc17-9b9056096fce
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -38,9 +38,9 @@ ACSD-61522修补程序修复了在来宾客户的&#x200B;*[!UICONTROL First Name
 
 1. 将任何产品作为来宾客户添加到购物车。
 1. 转到&#x200B;**[!UICONTROL Checkout]**。
-1. 使用&#x200B;*[!UICONTROL Email Address]* test1@example.com *填充*&#x200B;字段。
-1. 使用&#x200B;*[!UICONTROL First Name]*&#x200B;填充&#x200B;*<test2@example.com>*&#x200B;字段。
-1. 用&#x200B;*[!UICONTROL Last Name]*&#x200B;填充&#x200B;*<test3@example.com>*。
+1. 使用&#x200B;*test1@example.com*&#x200B;填充&#x200B;*[!UICONTROL Email Address]*&#x200B;字段。
+1. 使用&#x200B;*<test2@example.com>*&#x200B;填充&#x200B;*[!UICONTROL First Name]*&#x200B;字段。
+1. 用&#x200B;*<test3@example.com>*&#x200B;填充&#x200B;*[!UICONTROL Last Name]*。
 1. 填写其他必填字段。
 1. 下订单。
 
@@ -58,7 +58,7 @@ ACSD-61522修补程序修复了在来宾客户的&#x200B;*[!UICONTROL First Name
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读

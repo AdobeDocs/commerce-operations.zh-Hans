@@ -7,7 +7,7 @@ type: Troubleshooting
 exl-id: 10aaf898-feca-4485-90f6-6b3a9ea013b2
 source-git-commit: dc5df9e918adffe8d6901478a676d9da36b33bcc
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -36,18 +36,18 @@ ACSD-65331修补程序修复了在用户反复返回签出页面时，清除&#x2
 
 <u>重现步骤</u>：
 
-1. 导航到&#x200B;**[!UICONTROL In-Store Delivery]** > **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Delivery Methods]**&#x200B;以启用&#x200B;**[!UICONTROL In-Store Delivery]**。
-1. 导航到[!DNL Google] > [!UICONTROL Google Distance Provider] > **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]**，为&#x200B;**[!UICONTROL Inventory]**&#x200B;配置有效的&#x200B;**[!UICONTROL Google Distance Provider]** API密钥。
+1. 导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Delivery Methods]** > **[!UICONTROL In-Store Delivery]**&#x200B;以启用&#x200B;**[!UICONTROL In-Store Delivery]**。
+1. 导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Inventory]** > **[!UICONTROL Google Distance Provider]**，为[!UICONTROL Google Distance Provider]配置有效的[!DNL Google] API密钥。
 1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Sources]** > **[!UICONTROL Add New Source]**&#x200B;以添加包含以下详细信息的新源：
 
-   * **[!UICONTROL Latitude]**： *41.917344*
-   * **[!UICONTROL Longitude]**： *-88.102569*
+   * **[!UICONTROL Latitude]**: *41.917344*
+   * **[!UICONTROL Longitude]**: *-88.102569*
    * **[!UICONTROL Use as Pickup Location]**： *是*
    * **[!UICONTROL Country]**： *美国*
    * **[!UICONTROL State]**： *伊利诺伊州*
    * **[!UICONTROL City]**： *Carol流*
    * **[!UICONTROL Street]**： *E. Fullerton Ave.*
-   * **[!UICONTROL Postcode]**： *60188*
+   * **[!UICONTROL Postcode]**: *60188*
 
 1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Stocks]** > **[!UICONTROL Add New Stock]**&#x200B;以创建新库存。
 
@@ -78,7 +78,7 @@ ACSD-65331修补程序修复了在用户反复返回签出页面时，清除&#x2
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读

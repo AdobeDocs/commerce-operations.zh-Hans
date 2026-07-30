@@ -7,7 +7,7 @@ exl-id: 6c19773d-cb75-409f-bbd7-78d285a0252a
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ ACSD-58828修补程序修复了以下问题：如果任何必填字段留空，�
 
 实际结果：
 
-需要错误&#x200B;*地址。 请输入并重试。显示*。
+需要错误&#x200B;*地址。 请输入并重试。* 显示。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读

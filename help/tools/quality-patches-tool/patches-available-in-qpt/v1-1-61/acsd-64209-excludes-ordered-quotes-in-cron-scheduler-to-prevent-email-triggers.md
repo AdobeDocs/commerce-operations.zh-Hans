@@ -7,7 +7,7 @@ exl-id: 51ba0edc-ad0c-4e32-acd7-2337a62bff53
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ cron计划程序检索所有可协商的报价单，但不排除状态为&#x200B
 
 
 1. 在&#x200B;*管理员*&#x200B;侧边栏中，转到&#x200B;**[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL B2B Features]**&#x200B;并启用公司和B2B报价。
-1. 在&#x200B;**[!UICONTROL Default Expiration Period]**&#x200B;管理员&#x200B;*>* > *>* > **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]**&#x200B;中将&#x200B;**[!UICONTROL Sales]**&#x200B;设置为&#x200B;**[!UICONTROL Quotes]** 1 **[!UICONTROL General]**。
+1. 在&#x200B;*管理员* > **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Quotes]** > **[!UICONTROL General]**&#x200B;中将&#x200B;**[!UICONTROL Default Expiration Period]**&#x200B;设置为&#x200B;*1*。
 1. 创建并激活公司，然后以公司管理员身份登录。
 1. 将产品添加到购物车。
 1. 请求报价。
@@ -62,7 +62,7 @@ cron计划程序检索所有可协商的报价单，但不排除状态为&#x200B
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读

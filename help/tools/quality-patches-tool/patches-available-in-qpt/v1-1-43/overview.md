@@ -7,7 +7,7 @@ exl-id: 4cb6fcec-c9b9-4ef5-973f-a9ee7fac611e
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,6 @@ QPT v1.1.43包含以下修补程序：
 1. **ACSD-56090**：修复了GraphQL请求响应所有存储的数据而非专门请求的存储数据的问题。
 1. **ACSD-54983**：修复了当用户状态设置为&#x200B;*[!UICONTROL Inactive]*&#x200B;时，无法通过GraphQL请求获取公司用户ID的问题。
 1. **ACSD-53309**：修复了在选择可自定义选项时，*[!UICONTROL Regular Price]*&#x200B;标签中未完全应用税的问题。
-1. **ACSD-55305**：修复了&#x200B;*[!UICONTROL Edit Company User]* > **[!UICONTROL myAccount]**&#x200B;页面上的&#x200B;**[!UICONTROL Company Structure]**&#x200B;弹出窗口因屏幕上的加载器而冻结的问题。
+1. **ACSD-55305**：修复了&#x200B;**[!UICONTROL myAccount]** > **[!UICONTROL Company Structure]**&#x200B;页面上的&#x200B;*[!UICONTROL Edit Company User]*&#x200B;弹出窗口因屏幕上的加载器而冻结的问题。
 
 使用左侧的菜单导航到特定的修补程序页面。

@@ -6,7 +6,7 @@ role: Developer
 exl-id: 0bff4c7a-1082-4b3e-b19c-bc8ad529b131
 source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 0%
 | GRA合成中的灵活性 | ![无图标](../../../assets/no.svg) | ![是图标](../../../assets/yes.svg) |
 | 模块依赖关系管理 | ![是图标](../../../assets/yes.svg)仅通过`module.xml`，功能有限 | ![是图标](../../../assets/yes.svg)通过`composer.json`进行完全依赖关系管理 |
 | 模块版本控制 | ![是](../../../assets/yes.svg)您可以定义版本，但无法安装特定版本 | ![是](../../../assets/yes.svg)图标完整版本支持 |
-| 需要付费服务 | Git存储库 | Git存储库、私人打包员(每年600±元) |
+| 需要付费服务 | Git存储库 | Git存储库、私人打包员（每年600±元） |
 | 可能与Jira集成Bitbucket | ![是图标](../../../assets/yes.svg) | ![是图标](../../../assets/yes.svg) |
 | 对可立即安装的代码的更改 | ![是图标](../../../assets/yes.svg) | ![是图标](../../../assets/yes.svg) |
 

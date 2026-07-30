@@ -7,7 +7,7 @@ exl-id: 699d09fe-872f-44d3-88bb-b5b585e15067
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ACSD-53378修补程序修复了由于大量客户地址卷而导致性能问题�
 
 如果客户拥有大量地址，Adobe Commerce的性能会变得非常缓慢。
 
-如果激活&#x200B;*[!UICONTROL Enable search address]* > **[!UICONTROL Sales]** > **[!UICONTROL Checkout]**&#x200B;下的配置选项&#x200B;**[!UICONTROL Checkout Options]**，则不再对完整的客户通讯簿进行完全处理。 处理的客户地址数由&#x200B;*[!UICONTROL Customer Addresses Limit]* > **[!UICONTROL Sales]** > **[!UICONTROL Checkout]**&#x200B;下的设置&#x200B;**[!UICONTROL Checkout Options]**&#x200B;决定。
+如果激活&#x200B;**[!UICONTROL Sales]** > **[!UICONTROL Checkout]** > **[!UICONTROL Checkout Options]**&#x200B;下的配置选项&#x200B;*[!UICONTROL Enable search address]*，则不再对完整的客户通讯簿进行完全处理。 处理的客户地址数由&#x200B;**[!UICONTROL Sales]** > **[!UICONTROL Checkout]** > **[!UICONTROL Checkout Options]**&#x200B;下的设置&#x200B;*[!UICONTROL Customer Addresses Limit]*&#x200B;决定。
 
 <u>重现步骤</u>：
 
@@ -55,7 +55,7 @@ ACSD-53378修补程序修复了由于大量客户地址卷而导致性能问题�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
 
 ## 相关阅读
@@ -63,7 +63,7 @@ ACSD-53378修补程序修复了由于大量客户地址卷而导致性能问题�
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
