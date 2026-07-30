@@ -10,9 +10,9 @@ topic: Performance
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
 badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
 nudge: true
-source-git-commit: 5f0b6f7a04ee96b2aa650ee242e31d383bd7512b
+source-git-commit: 0c69ccdfcb3592a717b8b3a5a59762c8daeceec7
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2524'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,9 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
 
 >[!NOTE]
 >
->Adobe Commerce 2.4.9包括Symfony L2缓存改进（包括缓存标记存储、失效和压缩），该改进包括使用修补程序ACP2E-5132，减少磁盘I/O，消除过时的缓存条目，以及减少内存和网络开销。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](../../../configuration/cache/level-two-cache.md#enhanced-symfony-l2-cache-performance-and-reliability.md)。 Cloud Patches修补程序中包含修补程序ACP2E-5132，可通过ece-tools自动应用该修补程序。
+>适用于Adobe Commerce 2.4.9的修补程序ACP2E-5132提高了Symfony L2缓存的性能和可靠性 — 优化了标签存储，提供了一个过时的缓存重新生成锁，修复了重新标记后过时的标签成员资格，在未更改的存储上实现了冗余的远程写入，以及基于L1大小的逐出(`cleanup_percentage`)。 这减少了磁盘I/O和后端负载，同时提高了缓存一致性。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](../../../configuration/cache/level-two-cache.md#enhanced-symfony-l2-cache-performance-and-reliability)。
+>
+>该修补程序包含在Commerce包[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)的Cloud修补程序中（依赖于`ece-tools`），并在您更新到最新的`ece-tools`版本时在部署期间自动应用。 更新到`ece-tools`的最新版本以接收修补程序。
 
 #### 自定义Symfony L2缓存配置
 
