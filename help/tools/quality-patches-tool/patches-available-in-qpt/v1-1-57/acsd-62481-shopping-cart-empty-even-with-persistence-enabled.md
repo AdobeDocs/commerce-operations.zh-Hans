@@ -7,7 +7,7 @@ exl-id: 79fb3161-f56e-45f3-9933-cf95703f1554
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ACSD-62481修补程序修复了在签出期间使用登录弹出窗口时永久�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -40,12 +40,12 @@ ACSD-62481修补程序修复了在签出期间使用登录弹出窗口时永久�
 
    * 导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Checkout]** > **[!UICONTROL Checkout Options]**，并将&#x200B;*[!UICONTROL Allow Guest Checkout]*&#x200B;设置为&#x200B;*否*。
 
-      * 单击&#x200B;**[!UICONTROL Save Config]**。
+     * 单击&#x200B;**[!UICONTROL Save Config]**。
 
    * 导航到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Customers]** > **[!UICONTROL Persistent Shopping Cart]** > **[!UICONTROL General Options]**，并将&#x200B;*[!UICONTROL Enable Persistence]*&#x200B;设置为&#x200B;*是*。
    * 将所有其他设置保留为默认设置，但将&#x200B;*[!UICONTROL Clear Persistence on Sign Out]*&#x200B;更改为&#x200B;*否*。
 
-      * 单击&#x200B;**[!UICONTROL Save Config]**。
+     * 单击&#x200B;**[!UICONTROL Save Config]**。
 
 1. 转到&#x200B;**[!UICONTROL Catalog]** > **[!UICONTROL Products]** > **[!UICONTROL Add product]**&#x200B;将简单产品添加到目录。
 
@@ -70,7 +70,7 @@ ACSD-62481修补程序修复了在签出期间使用登录弹出窗口时永久�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的升级和修补程序>应用修补程序。
 
 ## 相关阅读
