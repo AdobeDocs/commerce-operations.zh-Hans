@@ -2,9 +2,10 @@
 title: MySQL准则
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置MySQL和MariaDB。
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1129'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Adobe _强烈_&#x200B;建议您在设置数据库时遵循以下标准：
 * Adobe Commerce使用[MySQL数据库触发器](https://dev.mysql.com/doc/refman/8.4/en/triggers.html)来改进重新索引期间的数据库访问。 当索引器模式设置为[计划](../../../configuration/cli/manage-indexers.md#configure-indexers)时，将创建这些项。 应用程序不支持数据库中的任何自定义触发器，因为自定义触发器可能会与将来的Adobe Commerce版本不兼容。
 * 在继续之前，请熟悉[这些潜在的MySQL触发器限制](https://dev.mysql.com/doc/refman/8.4/en/stored-program-restrictions.html)。
 * 要增强数据库的安全状态，请启用[`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/8.4/en/sql-mode.html#sqlmode_strict_all_tables) SQL模式以防止存储无效的数据值，这可能会导致不必要的数据库交互。
-* Adobe Commerce _不_&#x200B;支持基于MySQL语句的复制。 确保仅使用&#x200B;_1&rbrace; [基于行的复制](https://dev.mysql.com/doc/refman/8.4/en/replication-formats.html)。_
+* Adobe Commerce _不_&#x200B;支持基于MySQL语句的复制。 确保仅使用&#x200B;_1} [基于行的复制](https://dev.mysql.com/doc/refman/8.4/en/replication-formats.html)。_
 
 >[!WARNING]
 >
@@ -83,7 +84,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ### 默认ORDER BY行为
 
-在8.0之前，条目按外键排序。 默认排序顺序取决于使用的引擎。
+在8.0之前，条目按外键排序。默认排序顺序取决于使用的引擎。
 如果您的代码依赖于特定排序，请始终指定排序顺序。
 
 ### GROUP BY的已弃用ASC和DESC限定符

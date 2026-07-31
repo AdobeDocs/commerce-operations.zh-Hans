@@ -2,7 +2,8 @@
 title: Adobe Commerce 2.4.2安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.2的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: e6058e96-b810-4a78-8804-15783afef951
-source-git-commit: 87302734f3ff91f0403beac283ff21925d89318d
+last-update: 2026-05-12T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.2-p2安全版本为以前版本的2.4.2中发现的漏洞提供了安全错误修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-64](https://helpx.adobe.com/cn/security/products/magento/apsb21-64.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-64](https://helpx.adobe.com/security/products/magento/apsb21-64.html)。
 
 ## 应用AC-3022.patch以继续将DHL作为运输运营商
 

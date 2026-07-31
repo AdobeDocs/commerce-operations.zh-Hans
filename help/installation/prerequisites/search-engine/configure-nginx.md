@@ -3,7 +3,8 @@ title: 为搜索引擎配置Nginx
 description: 按照以下步骤使用Nginx Web服务器配置搜索引擎，用于Adobe Commerce的内部安装。
 feature: Install, Search
 exl-id: 8d2f8695-e30a-4acc-bba3-d122212b0a53
-source-git-commit: 87302734f3ff91f0403beac283ff21925d89318d
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -20,7 +21,7 @@ ht-degree: 0%
 >
 >2.4.4中添加了OpenSearch支持。 OpenSearch是Elasticsearch的一个兼容分支。 有关详细信息，请参阅[将Elasticsearch迁移到OpenSearch](../../../upgrade/prepare/opensearch-migration.md)。
 
-本节讨论如何将nginx配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与nginx[&#128279;](#secure-communication-with-nginx)的安全通信中讨论。
+本节讨论如何将nginx配置为&#x200B;*不安全*&#x200B;代理，以便Adobe Commerce能够使用在此服务器上运行的搜索引擎。 本节不讨论设置HTTP基本身份验证；这将在与nginx](#secure-communication-with-nginx)的[安全通信中讨论。
 
 >[!NOTE]
 >

@@ -2,9 +2,10 @@
 title: 安装Adobe Commerce
 description: 按照以下步骤在您拥有的基础架构上安装Adobe Commerce。
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2282'
 ht-degree: 0%
 
 ---
@@ -93,7 +94,7 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 |--- |--- |--- |
 | `--base-url` | 用于以下列任何格式访问管理员和店面的基本URL： <br><br>`http[s]://<host or ip>/<your install dir>/`。<br><br>**注意：**&#x200B;方案（http://或https://）和尾随斜杠都是必需的。<br><br>`<your install dir>` 是用来安装应用程序的docroot相对路径。 根据您设置Web服务器和虚拟主机的方式，路径可能是magento2或为空。<br><br>要访问本地主机上的应用程序，可以使用`http://127.0.0.1/<your install dir>/`或`http://127.0.0.1/<your install dir>/`.<br><br>- `{{base_url}}`，它表示由虚拟主机设置或Docker等虚拟化环境定义的基本URL。 例如，如果您使用主机名commerce.example.com设置虚拟主机，则可以使用`--base-url={{base_url}}`安装应用程序，并使用类似`http://commerce.example.com/admin`的URL访问管理员。 | 是 |
 | `--backend-frontname` | 用于访问管理员的统一资源标识符(URI)。 您可以忽略此参数，以便应用程序使用以下模式为您生成随机URI <code>admin_jkhgdfq</code>.<br><br>出于安全考虑，我们建议使用随机URI。 黑客或恶意软件更难利用随机URI。<br><br>URI显示在安装结束时。 您可以稍后随时使用`magento info:adminuri`命令显示它。<br><br>如果您选择输入值，我们建议您不要使用诸如admin、backend之类的常用词。 管理员URI只能包含字母数字值和下划线字符(`_`)。 | 否 |
-| `--db-host` | 使用以下任一项： <br><br> — 数据库服务器的完全限定的主机名或IP地址。<br><br>- `localhost` （默认）或者`127.0.0.1`（如果数据库服务器与Web服务器位于同一主机上）。localhost表示MySQL客户端库使用UNIX套接字连接到数据库。 `127.0.0.1`导致客户端库使用TCP协议。 有关套接字的详细信息，请参阅[PHP PDO_MYSQL文档](https://www.php.net/manual/en/ref.pdo-mysql.php)。<br><br>**注意：**&#x200B;可以选择在其主机名中指定数据库服务器端口，如www.example.com:9000 | 是 |
+| `--db-host` | 使用以下任一项： <br><br> — 数据库服务器的完全限定的主机名或IP地址。<br><br>- `localhost` （默认）或者`127.0.0.1`（如果数据库服务器与Web服务器位于同一主机上）。localhost表示MySQL客户端库使用UNIX套接字连接到数据库。 `127.0.0.1`导致客户端库使用TCP协议。 有关套接字的详细信息，请参阅[PHP PDO_MYSQL文档](https://www.php.net/manual/en/ref.pdo-mysql.php)。<br><br>**注：**&#x200B;可以选择在其主机名中指定数据库服务器端口，如www.example.com:9000 | 是 |
 | `--db-name` | 要在其中安装数据库表的数据库实例的名称。<br><br>默认值为`magento2`。 | 是 |
 | `--db-user` | 数据库实例所有者的用户名。<br><br>默认值为`root`。 | 是 |
 | `--db-password` | 数据库实例所有者的密码。 | 是 |
@@ -212,9 +213,9 @@ magento setup:install --<option>=<value> ... --<option>=<value>
 
 * 管理员具有以下属性：
 
-   * 名字和姓氏是`Commerce User`
-   * 用户名是`admin`，密码是`admin123`
-   * 电子邮件地址为`user@example.com`
+  * 名字和姓氏是`Commerce User`
+  * 用户名是`admin`，密码是`admin123`
+  * 电子邮件地址为`user@example.com`
 
 * 默认语言为`en_US` （美国英语）
 * 默认货币为美元
@@ -280,9 +281,9 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 
 * 管理员具有以下属性：
 
-   * 名字和姓氏是`Commerce User`
-   * 用户名是`admin`，密码是`admin123`
-   * 电子邮件地址为`user@example.com`
+  * 名字和姓氏是`Commerce User`
+  * 用户名是`admin`，密码是`admin123`
+  * 电子邮件地址为`user@example.com`
 
 * 默认语言为`en_US` （美国英语）
 * 默认货币为美元

@@ -3,7 +3,8 @@ title: 为搜索引擎配置Apache
 description: 按照以下步骤使用Apache Web Server配置搜索引擎，以进行Adobe Commerce的内部安装。
 feature: Install, Search
 exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
-source-git-commit: 87302734f3ff91f0403beac283ff21925d89318d
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 0%
@@ -130,11 +131,11 @@ htpasswd -c /usr/local/apache/password/.<password file name> <username>
 
 * `<username>`可以是：
 
-   * 设置cron：Web服务器用户或其他用户。
+  * 设置cron：Web服务器用户或其他用户。
 
   在本例中，我们使用Web服务器用户，但用户的选择取决于您。
 
-   * 设置Elasticsearch：在此示例中，用户名为`magento_elasticsearch`
+  * 设置Elasticsearch：在此示例中，用户名为`magento_elasticsearch`
 
 * `<password file name>`必须为隐藏文件（以`.`开头），且应反映用户的名称。 有关详细信息，请参阅此部分后面的示例。
 
