@@ -5,16 +5,12 @@ exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
 autotag-review: '2026-05-29T17:40:45.034Z'
 TQID: 'https://experienceleague.adobe.com/HHiR-UPHRK-dZCKE9L6H1bfm4hykrOgYsBm-XJv8zyE'
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-source-git-commit: 09557adb586946f1a7c4f94cb7675dc2aa83551d
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+source-git-commit: 7e9ebf390ec8fa458b3f55dcc5bd17b962702900
 workflow-type: tm+mt
-source-wordcount: 31872
+source-wordcount: 31874
 ht-degree: 0%
 
 ---
@@ -25,7 +21,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
@@ -34,7 +30,7 @@ ht-degree: 0%
 ## v1.1.82 {#v1-1-82}
 
 * **ACP2E-4194**（对于Adobe Commerce和Magento Open Source >=2.4.7-p10 &lt;2.4.8） || >=2.4.8-p5 &lt;2.4.9) — 修复了GraphQL响应针对无效、未授权或格式错误的请求返回错误的HTTP状态代码的问题。
-* **ACP2E-4547**（对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3） — 修复了以下问题：管理员用户无法在管理员中使用“按SKU添加产品”将产品从标准目录添加到分配给未链接到共享目录的客户组的公司的可协商报价中。
+* **ACP2E-4547**（对于Adobe Commerce，B2B >=1.5.0 &lt;1.5.3） — 修复了以下问题：管理员用户无法在管理员中使用“按SKU添加产品”将产品从默认目录添加到已分配给未链接到共享目录的客户组的公司的订单。
 * **ACP2E-4593**（对于Adobe Commerce >=2.4.5 &lt;2.4.10） — 修复了在多网站部署中，为网站限制显示的CMS页面可能在辅助网站上不正确的问题。
 * **ACP2E-4682**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了在每次加载页面时，访问检查报价的店面页面`isActive`状态会创建空报价记录的问题。
 * **ACP2E-4695**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8） — 修复了目录规则索引器占用过多内存且无法完成从而导致不稳定和内存不足错误的问题。
@@ -129,7 +125,7 @@ ht-degree: 0%
 * **ACP2E-4732**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了当changelog表中的version_id列达到最大值时，具有大量更新的客户停止部分索引的问题。
 * **ACP2E-4763**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了以下问题：当目录价格设置为“含税”时，由于应用了两次税，GraphQL客户订单查询会返回夸大的original_price_include_tax和original_row_total_include_tax值。
 * **ACSD-60989**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过声明性架构修改带有外键的列会在MariaDB上导致错误的问题。
-* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050&lbrace;37**
+* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050{37**
 * 已替换的修补程序： **ACSD-58446**、**ACSD-67904**
 
 ## v1.1.77 {#v1-1-77}
@@ -456,7 +452,8 @@ ht-degree: 0%
 * **ACSD-61805**（适用于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过[!DNL REST API]更新延交订单状态后，店面产品缺货的问题。
 * **ACSD-60811**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8） — 修复了以下问题：仅当当前状态为&#x200B;*正在处理*&#x200B;或&#x200B;*欺诈*&#x200B;时，才可能使用自定义值或注释更新订单状态。
 * **ACSD-62952**（对于Adobe Commerce >=2.4.4 &lt;2.4.8） — 修复了在店面不准确地显示[!UICONTROL Gift Registry]日期的问题。
-* **ACSD-55339**（对于Adobe Commerce >=2.4.4 &lt;2.4.8） — 修复了以下问题：以“0”（零）开头的产品[!DNL SKU]会删除“0”，从而阻止报价更新。**
+* **ACSD-55339**（对于Adobe Commerce >=2.4.4 &lt;2.4.8） — 修复了以下问题：以“0”（零）开头的产品[!DNL SKU]会删除“0”，从而阻止报价更新。
+**
 * 更新的修补程序： **ACSD-59514**
 * 更新的版本： **ACSD-60816**
 * 已替换的修补程序： **ACSD-59967**
@@ -976,7 +973,7 @@ ht-degree: 0%
 ## v1.1.22 {#v1-1-22}
 
 * **ACSD-47444**（适用于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.3） — 修复了在访问PHP 7.4上已知产品的某些不存在类别路径时，出现&#x200B;_尝试访问bool_&#x200B;类型值上的数组偏移量错误。
-* **ACSD-47332**（对于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.6） — 修复了cron失败并出现错误的问题，该错误仅当运行在00:00到00:59 UTC之间时报告。
+* **ACSD-47332**（对于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.6） — 修复了cron失败并出现错误的问题，该错误仅在00:00 UTC到00:59 UTC之间运行时报告。
 * **ACSD-47280**（对于Adobe Commerce和Magento Open Source >=2.4.0 &lt;2.4.6） — 修复了在特定范围上禁用共享目录功能无法正常工作的问题。
 * **ACSD-47106**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.6） — 修复了无法在公司创建页面上的新自定义属性中保存值的问题。
 * 更新了修补程序：ACSD-45143。
@@ -1457,7 +1454,7 @@ ht-degree: 0%
 * **MDVA-30782** （*适用于Adobe Commerce >=2.3.5 &lt;2.4.2*） — 修复了在不考虑购物车规则的情况下显示动态块的问题。
 * **MDVA-31021** （*用于Adobe Commerce >=2.3.0 &lt;2.4.2*） — 修复了`module-catalog-import-export/Model/Import/Product/Option.php`中存在性能问题的情况。 如果`catalog_product_option`表中的记录数超过~100,000条，则验证单个产品的新CSV所花费的时间将少于10秒。
 * **MDVA-31007** （*适用于Adobe Commerce >=2.4.0 &lt;2.4.1*） — 修复了自定义地址属性在“我的帐户”区域和后端的订单详细信息页面中无法正确显示的问题。
-* **MDVA-29389** （*用于Adobe Commerce >=2.3.0 &lt;2.4.2*） — 修复了高级报表的问题，其中`analytics_collect_data` cronjob指示： *端口必须在主机参数（如localhost:3306）中配置*。
+* **MDVA-29389** （*用于Adobe Commerce >=2.3.0 &lt;2.4.2*） — 修复了高级报表的问题，其中`analytics_collect_data` cronjob指示： *端口必须在主机参数中配置（如localhost：3306）*。
 * **MDVA-31343** （*适用于Adobe Commerce >=2.3.4 &lt;2.3.6*） — 修复了在计划类别时已删除的正文类`page-layout-category-full-width`存在的问题。
 * **MDVA-30945** （*适用于Adobe Commerce >=2.3.0 &lt;2.4.2*） — 修复了在更新购物车`Call to a member function getValue() on null in module-configurable-product CartItemProcessor.php`时收到严重错误消息的问题。
 
