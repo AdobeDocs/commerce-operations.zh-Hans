@@ -23,9 +23,9 @@ level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
 badgePaas: label="仅限Adobe Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce on Cloud版本2.4.4 - 2.4.9"
 nudge: true
-source-git-commit: 7512d5cd3fa1917c87b53e25ca69a3dc3c813727
+source-git-commit: 6ecb6002982432b8d67c122569043da55939d915
 workflow-type: tm+mt
-source-wordcount: 1985
+source-wordcount: 1981
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Adobe公司安全策略要求Adobe上为Adobe Commerce托管的所有Cloud环境
 
 ### 操作1：升级第三方软件依赖项
 
-根据软件的不同，所有不支持的软件依赖项都必须按照下表共享的时间表进行升级。 您可以在[Cloud Console](https://console.adobecommerce.com/)中查看环境，并使用这些[说明](#check-software-dependency-versions)检查运行的依赖项版本。 软件依赖项升级适用于Cloud版本2.4.4到2.4.9上的所有Adobe Commerce。
+根据软件的不同，所有不支持的软件依赖项都必须按照下表共享的时间表进行升级。 您可以在[Cloud Console](https://console.adobecommerce.com/)中查看环境，并使用这些[说明](#how-to-check-the-versions-you-are-running)检查运行的依赖项版本。 软件依赖项升级适用于Cloud版本2.4.4到2.4.9上的所有Adobe Commerce。
 
 | 依赖关系 | 版本 | 必须升级到 | 执行日期 |
 | --- | --- | --- | --- |
@@ -136,7 +136,7 @@ Adobe公司安全策略要求Adobe上为Adobe Commerce托管的所有Cloud环境
 
 Adobe将帮助您直接升级这些软件依赖项。
 
-* **快速入门：**&#x200B;打开[支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)，其中列出需要升级的环境和涉及的依赖项。 在执行日期之前至少打开30天工单，以便我们的团队可以安排工作。
+* **快速入门：**&#x200B;打开[支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)，其中列出需要升级的环境和涉及的依赖项。 在执行日期之前至少打开30天工单，以便我们的团队可以安排工作。
 
 * **停机时间：** Adobe将在计划时与您确认预期的窗口。
 
@@ -187,7 +187,7 @@ Adobe将帮助您直接升级这些软件依赖项。
 
 * **升级兼容性报告：** Adobe提供了一个详细的报告，该报告准确识别了升级到Adobe Commerce版本2.4.9所需的内容，包括时间和成本范围。 [生成升级兼容性报告](https://supportinsights.adobe.com/commerce/tab/main)。
 
-* **软件依赖项升级：**&#x200B;由于您无法直接升级软件依赖项，因此[为Adobe打开支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket){target="_blank"}为您处理升级。 有关详细信息，请参阅[配置服务](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/configuration/overview){target="_blank"}。
+* **软件依赖项升级：**&#x200B;由于您无法直接升级软件依赖项，因此[为Adobe打开支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide){target="_blank"}为您处理升级。 有关详细信息，请参阅[配置服务](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/configuration/overview){target="_blank"}。
 
 **如果您选择迁移到Adobe Commerce as a Cloud Service**
 

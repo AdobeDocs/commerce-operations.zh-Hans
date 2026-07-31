@@ -2,7 +2,8 @@
 title: Adobe Commerce 2.4.2安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.2的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: e6058e96-b810-4a78-8804-15783afef951
-source-git-commit: 87302734f3ff91f0403beac283ff21925d89318d
+last-update: 2026-05-12T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%

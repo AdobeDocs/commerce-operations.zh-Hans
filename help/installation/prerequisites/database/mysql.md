@@ -2,9 +2,10 @@
 title: MySQL准则
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置MySQL和MariaDB。
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1129'
 ht-degree: 0%
 
 ---
@@ -83,7 +84,7 @@ SHOW VARIABLES LIKE 'max_allowed_packet';
 
 ### 默认ORDER BY行为
 
-在8.0之前，条目按外键排序。 默认排序顺序取决于使用的引擎。
+在8.0之前，条目按外键排序。默认排序顺序取决于使用的引擎。
 如果您的代码依赖于特定排序，请始终指定排序顺序。
 
 ### GROUP BY的已弃用ASC和DESC限定符

@@ -2,9 +2,10 @@
 title: Adobe Commerce 2.4.7安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.7的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 38e5632b-c795-47d8-89dd-26bbaeb34e67
-source-git-commit: f731debd7e0734d1bb1b8c821149ffafea735337
+last-update: 2026-05-12T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1352'
 ht-degree: 0%
 
 ---
@@ -18,9 +19,9 @@ ht-degree: 0%
 >
 >MySQL 8.0将从2026年4月30日起终止支持(EOS)。
 >
->在此日期之后，Adobe Commerce 2.4.7将不再提供兼容性或>支持在MySQL 8.0之后发布的任何MySQL版本。 Adobe不会>在此Adobe上验证或提供对较新MySQL主要版本的支持>Commerce版本行。
+>在此日期之后，Adobe Commerce 2.4.7将不再为MySQL 8.0之后发布的任何MySQL版本提供兼容性或>支持。Adobe在此Adobe>Commerce发行行中不会>验证或支持较新的MySQL主要版本。
 >
->运行版本2.4.7的所有Adobe Commerce内部部署客户都强烈支持>建议将其数据库服务器迁移到兼容的MariaDB版本。
+>强烈建议所有运行版本2.4.7的Adobe Commerce本地客户将其数据库服务器迁移到兼容的MariaDB版本。>
 
 ## 2.4.7-p10
 

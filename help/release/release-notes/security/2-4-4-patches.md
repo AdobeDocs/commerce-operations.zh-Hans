@@ -2,7 +2,8 @@
 title: Adobe Commerce 2.4.4安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.4的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 136d7090-6bf2-41e3-8445-b07bdc67f12b
-source-git-commit: eacee993ec38cce7763d4c99b1bbb67a319d8c1a
+last-update: 2026-06-18T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '2182'
 ht-degree: 0%
@@ -166,8 +167,8 @@ Adobe Commerce 2.4.4-p7安全版本为以前版本中发现的漏洞提供了安
 
 * **更改未生成的缓存键的行为**：
 
-   * 块的非生成缓存键现在包含与自动生成的键的前缀不同的前缀。 （未生成的缓存键是通过template指令语法或`setCacheKey`或`setData`方法设置的键。）
-   * 块的非生成缓存键现在只能包含字母、数字、连字符(-)和下划线字符(_)。<!-- AC-9831 -->
+  * 块的非生成缓存键现在包含与自动生成的键的前缀不同的前缀。 （未生成的缓存键是通过template指令语法或`setCacheKey`或`setData`方法设置的键。）
+  * 块的非生成缓存键现在只能包含字母、数字、连字符(-)和下划线字符(_)。<!-- AC-9831 -->
 
 * **自动生成的优惠券代码数量的限制**。 Commerce现在限制自动生成的优惠券代码数量。 默认最大值为250,000。 商家可以使用新的&#x200B;**[!UICONTROL Code Quantity Limit]**&#x200B;配置选项(**[!UICONTROL Stores]** > **[!UICONTROL Settings:Configuration]** > **[!UICONTROL Customers]** > **[!UICONTROL Promotions]**)来控制此新限制。<!-- AC-8753 -->
 

@@ -2,7 +2,8 @@
 title: 高级内部部署安装
 description: 了解Adobe Commerce内部部署的高级安装方案。 发现复杂的配置和自定义设置选项。
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '2527'
 ht-degree: 0%
@@ -246,9 +247,9 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 * 管理员具有以下属性：
 
-   * 名字和姓氏是`Magento User`
-   * 用户名是`admin`，密码是`admin123`
-   * 电子邮件地址为`user@example.com`
+  * 名字和姓氏是`Magento User`
+  * 用户名是`admin`，密码是`admin123`
+  * 电子邮件地址为`user@example.com`
 
 * 默认语言为`en_US` （美国英语）
 * 默认货币为美元
@@ -314,9 +315,9 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 
 * 管理员具有以下属性：
 
-   * 名字和姓氏是`Magento User`
-   * 用户名是`admin`，密码是`admin123`
-   * 电子邮件地址为`user@example.com`
+  * 名字和姓氏是`Magento User`
+  * 用户名是`admin`，密码是`admin123`
+  * 电子邮件地址为`user@example.com`
 
 * 默认语言为`en_US` （美国英语）
 * 默认货币为美元

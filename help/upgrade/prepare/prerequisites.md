@@ -2,9 +2,10 @@
 title: 完成先决条件
 description: 通过完成这些先决条件步骤，准备Adobe Commerce项目以进行升级。
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---

@@ -7,7 +7,7 @@ exl-id: 03fdaafe-5566-4b75-a0eb-e0cba3dad3e7
 type: Troubleshooting
 source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ACSD-49286修补程序修复了当页面上存在多个产品小组件时，将�
 <u>重现步骤</u>：
 
 1. 登录到管理员并转到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Content]** > **[!UICONTROL Page]** > **[!UICONTROL Home Page]**
-1. 在内容部分中，使用&#x200B;**[!UICONTROL Edit]**&#x200B;单击[!DNL Page Builder]。
+1. 在内容部分中，使用[!DNL Page Builder]单击&#x200B;**[!UICONTROL Edit]**。
 1. 向&#x200B;**[!UICONTROL Content]**&#x200B;添加两个行元素。
 1. 将产品添加到这两个行元素中。
 1. 在第一行中，将产品外观设置为[!UICONTROL Product Grid]并选择要显示的任何类别。
@@ -57,7 +57,7 @@ ACSD-49286修补程序修复了当页面上存在多个产品小组件时，将�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
 * 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。 
 
 ## 相关阅读
@@ -65,7 +65,7 @@ ACSD-49286修补程序修复了当页面上存在多个产品小组件时，将�
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
 * [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

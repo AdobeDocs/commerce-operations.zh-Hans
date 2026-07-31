@@ -2,7 +2,8 @@
 title: Adobe Commerce 2.4.8安全补丁发行说明
 description: 了解Adobe Commerce版本2.4.8的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 5f8866ed-9215-4b2e-9c77-b2d474f6c1f9
-source-git-commit: 95333e271e6f7a8e782d6a40b754fe29ac280414
+last-update: 2026-05-13T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '815'
 ht-degree: 0%

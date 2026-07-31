@@ -2,7 +2,8 @@
 title: 配置锁定提供程序
 description: 执行以下步骤，防止重复的cron作业和cron组在Adobe Commerce部署上运行。
 exl-id: c54e05b7-38fd-4731-bc77-a873b44d0ae8
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+last-update: 2026-04-28T00:00:00Z
+source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
