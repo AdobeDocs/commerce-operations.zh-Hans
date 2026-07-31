@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.7-p10安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-49](https://helpx.adobe.com/security/products/magento/apsb26-49.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-49](https://helpx.adobe.com/cn/security/products/magento/apsb26-49.html)。
 
 {{b2b-patches}}
 
@@ -63,7 +63,7 @@ Adobe Commerce 2.4.7现在与RabbitMQ 4.2兼容，后者将RabbitMQ 4.1支持终
 
 Adobe Commerce 2.4.7-p9安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-05](https://helpx.adobe.com/security/products/magento/apsb26-05.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-05](https://helpx.adobe.com/cn/security/products/magento/apsb26-05.html)。
 
 {{b2b-patches}}
 
@@ -83,7 +83,7 @@ Adobe Commerce 2.4.7已更新，以支持编辑器2.9.x，同时保持与编辑�
 
 Adobe Commerce 2.4.7-p8安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/cn/security/products/magento/apsb25-94.html)。
 
 {{b2b-patches}}
 
@@ -103,7 +103,7 @@ Adobe Commerce 2.4.7-p8安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p7安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/security/products/magento/apsb25-71.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/cn/security/products/magento/apsb25-71.html)。
 
 {{b2b-patches}}
 
@@ -111,7 +111,7 @@ Adobe Commerce 2.4.7-p7安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p6安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/cn/security/products/magento/apsb25-50.html)。
 
 {{b2b-patches}}
 
@@ -135,7 +135,7 @@ Adobe Commerce 2.4.7-p6安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p5安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-26](https://helpx.adobe.com/security/products/magento/apsb25-26.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-26](https://helpx.adobe.com/cn/security/products/magento/apsb25-26.html)。
 
 {{b2b-patches}}
 
@@ -145,7 +145,7 @@ Adobe Commerce 2.4.7-p5安全版本为2.4.7早期版本中发现的漏洞修复�
 
 >[!BEGINSHADEBOX]
 
-此版本还引入了对Adobe Commerce [HIPAA就绪扩展](https://experienceleague.adobe.com/en/docs/commerce-admin/start/compliance/hipaa-ready-service/overview)的支持。
+此版本还引入了对Adobe Commerce [HIPAA就绪扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/compliance/hipaa-ready-service/overview)的支持。
 
 >[!ENDSHADEBOX]
 
@@ -161,7 +161,7 @@ Adobe Commerce 2.4.7-p5安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p4安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-08](https://helpx.adobe.com/cn/security/products/magento/apsb25-08.html)。
 
 {{b2b-patches}}
 
@@ -173,7 +173,7 @@ Adobe Commerce 2.4.7-p4安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p3安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/security/products/magento/apsb24-73.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/cn/security/products/magento/apsb24-73.html)。
 
 {{b2b-patches}}
 
@@ -189,7 +189,7 @@ Adobe Commerce 2.4.7-p3安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p2安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-61](https://helpx.adobe.com/security/products/magento/apsb24-61.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-61](https://helpx.adobe.com/cn/security/products/magento/apsb24-61.html)。
 
 ### 高亮
 
@@ -203,7 +203,7 @@ Adobe Commerce 2.4.7-p2安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-40](https://helpx.adobe.com/cn/security/products/magento/apsb24-40.html)。
 
 ### 应用适用于CVE-2024-34102的修补程序
 
@@ -213,12 +213,12 @@ Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞�
 
 此版本包括以下功能亮点：
 
-* **更新Google Authenticator的[一次性密码(OTP)设置](https://experienceleague.adobe.com/en/docs/commerce-admin/config/security/2fa)** — 需要此更新才能解决2.4.7中[向后不兼容的更改](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/#new-system-configuration-validation-for-two-factor-authentication-otp_window-value)导致的错误。 **[!UICONTROL OTP Window]**&#x200B;字段的描述现在提供了设置的准确说明，默认值已从`1`更改为`29`。
+* **更新Google Authenticator的[一次性密码(OTP)设置](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/security/2fa)** — 需要此更新才能解决2.4.7中[向后不兼容的更改](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/#new-system-configuration-validation-for-two-factor-authentication-otp_window-value)导致的错误。 **[!UICONTROL OTP Window]**&#x200B;字段的描述现在提供了设置的准确说明，默认值已从`1`更改为`29`。
 
-* **B2B版本兼容性** — 要与Commerce版本2.4.7-p1兼容，具有Adobe Commerce B2B扩展的商家必须升级到[B2B版本1.4.2-p1](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes#b2b-v142-p1)。
+* **B2B版本兼容性** — 要与Commerce版本2.4.7-p1兼容，具有Adobe Commerce B2B扩展的商家必须升级到[B2B版本1.4.2-p1](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes#b2b-v142-p1)。
 
 ### 此版本中包含的修补程序
 
-Adobe Commerce 2.4.7-p1解决了从SOAP迁移到REST API的UPS集成过程中引入的问题。 此问题会影响从美国境外发运的客户，并阻止他们使用公制系统/SI测量值（即包装的公斤和厘米）来创建与UPS的发运。 有关详细信息，请参阅[UPS配送方式集成从SOAP迁移到RESTful API](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/ups-shipping-method-integration-migration-from-soap-to-restful-api)知识库文章。
+Adobe Commerce 2.4.7-p1解决了从SOAP迁移到REST API的UPS集成过程中引入的问题。 此问题会影响从美国境外发运的客户，并阻止他们使用公制系统/SI测量值（即包装的公斤和厘米）来创建与UPS的发运。 有关详细信息，请参阅[UPS配送方式集成从SOAP迁移到RESTful API](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/ups-shipping-method-integration-migration-from-soap-to-restful-api)知识库文章。
 
 <!-- Last updated from includes: 2026-04-08 15:01:38 -->

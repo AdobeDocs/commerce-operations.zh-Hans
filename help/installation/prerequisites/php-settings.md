@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >支持的PHP版本因Adobe Commerce发行版本而异。 有关要安装的发行版所支持的精确PHP版本，请参阅[系统要求](../system-requirements.md)。
 
-有关云配置指南，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
+有关云配置指南，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
 
 ## PHP进程控制
 
@@ -207,8 +207,8 @@ PHP OPcache设置通常位于`php.ini`或`opcache.ini`中。 该位置可能取�
 有关解决PHP问题的帮助，请参阅以下Adobe Commerce支持文章：
 
 - [在浏览器中访问Adobe Commerce时，出现PHP版本错误或404错误](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
-- [PHP设置错误](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-settings-errors)
-- [PHP版本准备情况检查问题](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-readiness-check-issues)
-- [常见PHP致命错误和解决方案](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/common-php-fatal-errors-and-solutions)
+- [PHP设置错误](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-settings-errors)
+- [PHP版本准备情况检查问题](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-readiness-check-issues)
+- [常见PHP致命错误和解决方案](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/common-php-fatal-errors-and-solutions)
 
 <!-- Last updated from includes: 2026-05-11 20:38:54 -->
