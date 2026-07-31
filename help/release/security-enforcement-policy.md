@@ -23,9 +23,9 @@ level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
 badgePaas: label="仅限Adobe Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce on Cloud版本2.4.4 - 2.4.9"
 nudge: true
-source-git-commit: 85ff49e8a7dbf4ee8c2eef801bd44f45db0a21a5
+source-git-commit: 7512d5cd3fa1917c87b53e25ca69a3dc3c813727
 workflow-type: tm+mt
-source-wordcount: 1983
+source-wordcount: 1985
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ Adobe提供了一些工具，可降低迁移到Adobe Commerce as a Cloud Service
 
 * **迁移评估：**&#x200B;对自定义设置的迁移复杂性进行评级。 请参阅[迁移评估工具概述](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/migration/migration-tools/assessment)。
 
-* **数据迁移：** [批量与增量数据迁移工具](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/migration/migration-tools/bulk-data)可将您的数据移动到新的Adobe Commerce as a Cloud Service环境。
+* **数据迁移：** [批量与增量数据迁移工具](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/migration/migration-tools/bulk-data/migration-tool)可将您的数据移动到新的Adobe Commerce as a Cloud Service环境。
 
 * Adobe的[AI辅助迁移和开发人员工具](https://developer.adobe.com/commerce/extensibility/developer-agent/)（包括&#x200B;**[!DNL Adobe Developer App Builder]**&#x200B;和&#x200B;**[!DNL Commerce Storefront powered by Edge Delivery Services]**）有助于加快店面现代化和扩展重新平台。
 

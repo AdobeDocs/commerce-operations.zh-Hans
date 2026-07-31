@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: e52becee703b046f5ffb00b01ca780311d711ec8
+source-git-commit: d8ad9344c866eeffeda81e45ebe7de9376905638
 workflow-type: tm+mt
-source-wordcount: '10517'
+source-wordcount: '10538'
 ht-degree: 0%
 
 ---
@@ -1044,6 +1044,7 @@ ht-degree: 0%
       - [ACP2E-4709：当页面层次结构包含双引号时，CMS页面不会保存在页面生成器中](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4709.md)
     - v1.1.82 {#v1-1-82}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.82](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/overview.md)
+      - [ACP2E-4547：如果未将默认目录产品分配给用户的共享目录，则管理员无法将其添加到报价中](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4547.md)
       - [ACP2E-4805：当第一个可销售子项稍后显示在列表中时，可配置产品的签出请求速度变慢](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4805.md)
       - [ACP2E-4748：奖励积分过期时间在拥有大量奖励积分历史记录的商店中运行缓慢](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4748.md)
       - [ACP2E-4875：打开具有大地址簿的客户帐户时管理员用户注销](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875.md)
