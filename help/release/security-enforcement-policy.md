@@ -22,10 +22,10 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
 badgePaas: label="仅限Adobe Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce on Cloud版本2.4.4 - 2.4.9"
-nudge: true
-source-git-commit: 6ecb6002982432b8d67c122569043da55939d915
+color: blue
+source-git-commit: 7cd1bf694234196313373dea6620bdf67e08e82c
 workflow-type: tm+mt
-source-wordcount: 1981
+source-wordcount: 2017
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ Adobe公司安全策略要求Adobe上为Adobe Commerce托管的所有Cloud环境
 | 2.4.8或2.4.9 | 在2026年10月30日或2027年5月31日之前需要，具体取决于软件。 | 当前非必需 |
 
 **表1：版本**&#x200B;必需的操作和截止日期
+
+如果您需要截止日期扩展，请联系您的帐户团队或[Adobe支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
 
 ## 谁也不需要采取行动
 
