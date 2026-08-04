@@ -3,11 +3,10 @@ user-guide-title: 发行信息
 user-guide-description: 在一个位置访问Adobe Commerce修补程序和服务的所有发行信息。
 feature: Release Notes
 recommendations: noDisplay, noCatalog
-nudge: true
-source-git-commit: b620d433a896d576e0f61edce0f6b4b8bb816706
+source-git-commit: d6db4e5dc61b126f8f5ed44c4683aa4dd367b37e
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 30%
+source-wordcount: '105'
+ht-degree: 31%
 
 ---
 
@@ -54,7 +53,7 @@ ht-degree: 30%
 - [Beta版本](beta.md)
 - 规划和策略 {#planning}
   - [生命周期政策](lifecycle-policy.md)
-  - [安全策略：必需的操作和截止日期](security-enforcement-policy.md)
+  - [安全性和合规性声明](security-enforcement-policy.md)
   - [版本升级实施策略](version-upgrade-enforcement-policy.md)
   - [版本控制策略](versioning-policy.md)
   - [发布计划](schedule.md)

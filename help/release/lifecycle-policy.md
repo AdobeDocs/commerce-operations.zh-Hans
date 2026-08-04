@@ -3,9 +3,9 @@ title: 软件生命周期政策
 description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
 nudge: true
-source-git-commit: ed2757282c079ea7399d4df92000f346aecfbdd8
+source-git-commit: 79afa4fa95c425dfd4bc0fd894abc24db2d1b33b
 workflow-type: tm+mt
-source-wordcount: '1376'
+source-wordcount: '1390'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Adobe Commerce生命周期政策
 
-为了简化Adobe Commerce生命周期政策并支持客户的关键需求，Adobe从正式发布(GA)之日起为每个版本提供三年标准支持期，并在此期间发布质量修复。 有关每个版本的软件支持终止的日期和详细信息，请参阅[软件支持终止](#end-of-software-support)表。
+为了简化Adobe Commerce生命周期政策并支持客户的关键需求，Adobe从正式发布(GA)之日起为每个版本提供三年标准支持期，并在此期间发布质量修复。 有关每个版本的软件支持终止的日期和详细信息，请参阅[支持终止日期](#end-of-support-dates)表。
 
 Adobe不提供对第三方服务和软件依赖项（例如PHP和MySQL）的安全性和质量修复，这些服务和软件依赖项可能会在客户处于Adobe Commerce的三年支持期或延长支持期时终止。 有关经过测试和受支持的第三方技术的完整列表，请参阅[系统要求](../installation/system-requirements.md)。
 
@@ -33,15 +33,15 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 
 >[!NOTE]
 >
->Adobe为Adobe Commerce on Cloud引入了强制版本升级策略。 从&#x200B;**2027年6月1日**&#x200B;开始，Adobe将不再维护运行不支持的Commerce版本的Cloud环境，并保留停用这些版本的权利。 如果您在Cloud上运行，则必须移至支持的Adobe Commerce版本，或在发布行的[终止扩展支持](lifecycle-policy.md#end-of-support-dates)日期之前迁移到[!DNL Adobe Commerce as a Cloud Service]。 请参阅[云版本升级实施策略](version-upgrade-enforcement-policy.md)，了解实施日期、受影响的版本以及如果保留在不支持的版本上将会发生什么情况。
+>Adobe为Adobe Commerce on Cloud引入强制版本升级策略，以帮助每位客户停留在一个安全、受支持的平台上。 从&#x200B;**2027年6月1日**&#x200B;开始，Adobe将不再维护运行不支持的Commerce版本的Cloud环境，并保留停用这些版本的权利。 如果您在Cloud上运行，则必须移至支持的Adobe Commerce版本，或在发布行的[终止扩展支持](lifecycle-policy.md#end-of-support-dates)日期之前迁移到[!DNL Adobe Commerce as a Cloud Service]。 如果您使用的是版本2.4.4到2.4.9，请参阅[安全和合规性声明](security-enforcement-policy.md)，以了解适用于您的环境的特定操作和截止日期。
 
 ## 仅限安全的过渡期
 
-一次性有限过渡期仅适用于2.4.4、2.4.5和2.4.6版，其长期支持于2025年或2026年结束。 仅安全过渡期仅提供有限的隔离安全修复。 未提供Adobe Commerce质量修复。 此期限不等于标准支持或扩展支持，并且不会进一步延长。 将其视为迁移阶段，而不是长期支持层。
+一次性有限过渡期仅适用于2.4.4、2.4.5和2.4.6版，其长期支持于2025年或2026年结束。 仅安全过渡期仅提供有限的隔离安全修复（无质量修复）。
 
 >[!IMPORTANT]
 >
->仅限安全的过渡期是一次性例外。 它不会在发布日期之后扩展。 将仅限安全的时间段视为迁移时间，而不是长期支持层。
+>仅限安全的过渡期是一次性例外。 它不会在发布日期之后扩展。 将仅限安全的时间段视为迁移时间，而不是长期支持层。 如果您希望帮助制定迁移计划，请与您的客户团队联系。
 
 ## 支持结束日期
 
@@ -173,7 +173,7 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 
 >[!IMPORTANT]
 >
->运行不支持的依赖项版本可能会导致您的Cloud实例上出现Adobe无法解决的安全漏洞。 在这种情况下，Adobe保留强制升级受影响的软件依赖项的权利，或在无法升级的情况下停用实例的权利，而不管您的Adobe Commerce版本支持状态如何。
+>运行不支持的依赖项版本可能会导致您的Cloud实例上出现Adobe无法解决的安全漏洞。 在这种情况下，Adobe保留强制升级受影响的软件依赖项的权利，或在无法升级的情况下停用实例的权利，而不管您的Adobe Commerce版本支持状态如何。 请参阅[安全和合规性声明](security-enforcement-policy.md)，了解这些升级的计划方式以及在整个过程中可供您使用的支持。
 
 ## PHP生命周期结束和PCI法规遵从性
 

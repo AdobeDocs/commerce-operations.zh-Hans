@@ -2,9 +2,9 @@
 title: Adobe Commerce发行说明
 description: 了解在何处查找特定 Adobe Commerce 版本的信息。
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 3373f83b5c03e9e81c26376f299014e8bf63a6e9
+source-git-commit: 3e0d993078c73a191809c85c1a0ef03ff29a78a6
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '497'
 ht-degree: 2%
 
 ---
@@ -37,8 +37,9 @@ ht-degree: 2%
             <li><a href="https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/">向后不兼容的更改</a></li>
             <li><a href="commerce/overview.md">Adobe Commerce</a></li>
             <li><a href="security/overview.md">安全修补程序</a></li>
-            <li><a href="../../lifecycle-policy.md">软件生命周期政策</a></li>
-            <li><a href="../../version-upgrade-enforcement-policy.md">云版本升级实施策略</a></li>
+            <li><a href="../lifecycle-policy.md">软件生命周期政策</a></li>
+            <li><a href="../version-upgrade-enforcement-policy.md">云版本升级实施策略</a></li>
+            <li><a href="../security-enforcement-policy.md">安全性和合规性声明</a></li>
             <li><a href="https://helpx.adobe.com/cn/security/products/magento.html">Adobe安全公告</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html?lang=zh-Hans">适用于Adobe Commerce的B2B</a></li>
           </ul>

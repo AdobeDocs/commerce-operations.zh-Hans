@@ -1,11 +1,11 @@
 ---
 title: 升级过程概述
-description: 了解升级Adobe Commerce项目如何确保店面安全高效。 探索规划和执行成功升级的最佳实践。
+description: 了解升级您的 Adobe Commerce 项目如何保障店面安全并提升运营效率。 了解规划和实施成功升级的最佳做法。
 exl-id: 40bd97ca-6648-40d4-9c61-7d159391976a
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 3e0d993078c73a191809c85c1a0ef03ff29a78a6
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 0%
+source-wordcount: '960'
+ht-degree: 2%
 
 ---
 
@@ -43,6 +43,8 @@ _那么……为什么要升级？_
 
 - **修补程序版本** — 包括安全性、性能、质量和高优先级错误修复。
 - **安全修补程序版本** — 包含修复和增强功能，以保持网站安全并更容易实施。
+
+如果您使用的是Cloud版本2.4.4到2.4.9上的Adobe Commerce，请参阅[安全和合规性声明](../release/security-enforcement-policy.md)，了解确保环境安全和合规所需的操作和截止日期。
 
 ### 性能
 
