@@ -3,9 +3,9 @@ title: 软件生命周期政策
 description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
 nudge: true
-source-git-commit: ab694358487537670cd0e4527d88548fe024ba66
+source-git-commit: e40305c77d2900a7741f1d97e022a28c04c0630c
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1469'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Adobe不提供对第三方服务和软件依赖项（例如PHP和MySQL）的安�
 
 从正式发布(GA)日期开始的标准三年支持期。 标准支持包括质量修复、安全补丁和完整的Adobe Commerce电话支持。
 
-- **质量修复** — 客户可以通过联系[Adobe Commerce支持](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)或通过自助服务[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)访问质量修复。
+- **质量修复** — 客户可以通过联系[Adobe Commerce支持](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)或通过自助服务[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)访问质量修复。
 
 - **安全修复** - Adobe通过累积的安全修补程序和非累积的[隔离的安全修补程序文件](versioning-policy.md#isolated-security-patch-file)提供三年支持期的安全修复。
 
@@ -33,7 +33,7 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 
 >[!NOTE]
 >
->Adobe为Adobe Commerce on Cloud引入强制版本升级策略，以帮助每位客户停留在一个安全、受支持的平台上。 自2027年6月1日&#x200B;**起**，Adobe将不再维护运行不支持的Commerce版本的Cloud环境，并将被迫采取适当措施保障Adobe Commerce平台及其客户的安全。 这包括暂停到受影响的基础架构的流量。 因此，您的电子商务店面将离线。 如果您在Cloud上运行，则必须移至支持的Adobe Commerce版本，或在发布行的[终止扩展支持](lifecycle-policy.md#end-of-support-dates)日期之前迁移到[!DNL Adobe Commerce as a Cloud Service]。 如果您使用的是版本2.4.4到2.4.9，请参阅[安全和合规性声明](security-enforcement-policy.md)，以了解适用于您的环境的特定操作和截止日期。
+>Adobe为Adobe Commerce on Cloud引入强制版本升级策略，以帮助每位客户停留在一个安全、受支持的平台上。 自2027年6月1日&#x200B;**起**，Adobe将不再维护运行不支持的Commerce版本的Cloud环境，并将被迫采取适当措施保障Adobe Commerce平台及其客户的安全。 这包括暂停到受影响的基础架构的流量。 因此，您的电子商务店面将脱机。 如果您在Cloud上运行，则必须移至支持的Adobe Commerce版本，或在发布行的[终止扩展支持](lifecycle-policy.md#end-of-support-dates)日期之前迁移到[!DNL Adobe Commerce as a Cloud Service]。 如果您使用的是版本2.4.4到2.4.9，请参阅[安全和合规性声明](security-enforcement-policy.md)，以了解适用于您的环境的特定操作和截止日期。
 
 ## 仅限安全的过渡期
 
@@ -173,9 +173,9 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 
 >[!IMPORTANT]
 >
->运行不支持的依赖项版本可能会导致您的Cloud实例上出现Adobe无法解决的安全漏洞。 在这种情况下，Adobe将被迫采取适当行动，保障Adobe Commerce平台及其客户的安全。 这包括暂停到受影响的基础架构的流量。 因此，您的电子商务店面将离线。
-
-如果环境在流量暂停后继续保持不合规状态，Adobe可以终止云服务，启动停用过程。 由于停用，托管电子商务环境中的所有数据和资产（包括所有实例、环境和分支）将被永久删除且无法恢复。 请参阅[保护Commerce环境所需的操作和截止日期](security-enforcement-policy.md)，了解这些升级的计划方式以及在整个过程中可供您使用的支持。
+>运行不支持的依赖项版本可能会导致您的Cloud实例上出现Adobe无法解决的安全漏洞。 在这种情况下，Adobe将被迫采取适当行动维护Adobe Commerce平台及其客户的安全。 这包括暂停到受影响的基础架构的流量。 因此，您的电子商务店面将脱机。
+>
+>如果环境在流量暂停后继续保持不合规状态，Adobe可以终止云服务，启动停用过程。 由于停用，托管电子商务环境中的所有数据和资产（包括所有实例、环境和分支）将被永久删除且无法恢复。 请参阅[保护Commerce环境所需的操作和截止日期](security-enforcement-policy.md)，了解这些升级的计划方式以及在整个过程中可供您使用的支持。
 
 ## PHP生命周期结束和PCI法规遵从性
 
@@ -207,7 +207,7 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 - 您可以访问Adobe的最新功能：AI支持的促销、可组合的店面架构和本机Adobe Experience Cloud集成。
 - 您可以消除循环升级周期。
 
-请联系您的Adobe客户团队以开始迁移评估。 有关产品概述，请参阅[Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/overview)。
+请联系您的Adobe客户团队以开始迁移评估。 有关产品概述，请参阅[Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview)。
 
 ### 替代路径：升级到支持的Adobe Commerce云版或内部部署版
 
