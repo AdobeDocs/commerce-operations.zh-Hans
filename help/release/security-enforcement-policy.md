@@ -1,36 +1,23 @@
 ---
-title: 安全性和合规性：必需的操作和截止日期
+title: 确保安全和合规所需的行动和截止日期
 description: 了解云版本和软件依赖项上不支持的Adobe Commerce的安全实施，包括截止日期、所需操作和风险。
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-  - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c32adafa-ed01-4b31-997e-2413013911b0
-  - id: cc250cf1-34eb-4863-80d0-d170d45ea067
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-subfeature_v2:
-  - id: f2261633-201d-46c5-8a66-999e70527a83
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
-badgePaas: label="仅限Adobe Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Cloud 2.4.4到2.4.9版本的Adobe Commerce"
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: cc250cf1-34eb-4863-80d0-d170d45ea067id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2: id: f2261633-201d-46c5-8a66-999e70527a83
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: d378ca77-2da1-4f39-ad92-1917fe974a38
+badgePaas: label="仅限Adobe Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Cloud 2.4.4到2.4.9版本的Adobe Commerce"
 nudge: true
-source-git-commit: 582016bc43802ed71563eaf033167e0a4bb0191b
+source-git-commit: 9e4142150097f7d1109929c3785e3448288bb8ff
 workflow-type: tm+mt
-source-wordcount: 2108
+source-wordcount: 2144
 ht-degree: 0%
 
 ---
 
 
-# 安全和合规性通知：必需的操作和截止日期
+# 确保安全和合规所需的行动和截止日期
 
 >[!NOTE]
 >
@@ -57,15 +44,15 @@ ht-degree: 0%
 
 本页概述了Adobe Commerce（版本2.4.4到2.4.9）上所有客户为确保其电子商务环境的安全而需要采取的操作，以及实施日期和不满足安全要求时的预期情况。
 
-## 维护安全、合规的环境所需的操作
+## 维护安全和合规的环境所需的操作
 
 要确保电子商务环境的安全并减轻风险，Adobe Commerce on Cloud（版本2.4.4到2.4.9）上的所有客户都需要使用：
 
 1. 所有第三方软件依赖项(PHP、MariaDB、Elasticsearch、OpenSearch、Redis、RabbitMQ)的支持版本
 
-1. 云上受支持的安全版本的Adobe Commerce。 完全支持的版本包括2.4.8、2.4.9或最新发布的版本。 请在[此处](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy)查看生命周期策略。
+1. 云上受支持的安全版本的Adobe Commerce。 完全支持的版本包括2.4.8、2.4.9或最新发布的版本。 请在[此处](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy)查看生命周期策略。
 
-遵循以下准则以检查您是否需要采取措施来保护云环境上的Adobe Commerce。 如果在表1中列出的截止日期前未满足安全要求的环境，将会暂停入站流量，从而使店面离线。 如果您担心难以在截止日期前完成迁移，需要延长一点时间，请联系您的客户团队或Adobe支持人员。
+遵循以下准则以检查您是否需要采取措施来保护云环境上的Adobe Commerce。 如果在表1中列出的截止日期前未满足安全要求的环境，将会暂停入站流量，从而使店面离线。 如果您担心难以在截止日期前完成工作，需要延长有效期，请联系您的客户团队或[Adobe支持](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
 
 **表1：安全要求和截止日期**
 
@@ -85,10 +72,10 @@ ht-degree: 0%
 
 #### 步骤1：检查您的第三方软件依赖项版本
 
-1. 登录到[云控制台](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/cloud-console)。
+1. 登录到[云控制台](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/cloud-console)。 您可以在Cloud Console中查看所有环境。
 2. 打开相关项目，然后选择要查看的环境。
 3. 在`.magento/services.yaml`文件中检查该环境的服务配置，该文件定义了Adobe Commerce on Cloud支持的服务名称和版本。
-4. 使用[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)中的说明检查每个环境正在运行的依赖项版本。
+4. 使用[配置服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)中的说明检查每个环境正在运行的依赖项版本。
 
 所有不支持的软件依赖项都必须升级到下表2中共享的时间表所列的版本。
 
@@ -109,7 +96,7 @@ ht-degree: 0%
 
 Adobe将帮助您直接升级这些软件依赖项。
 
-* **开始：**&#x200B;打开[支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，其中列出需要升级的环境和涉及的依赖项。 在执行日期之前至少打开30天工单，以便Adobe能够安排工作。
+* **开始：**&#x200B;打开[支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)，其中列出需要升级的环境和涉及的依赖项。 在执行日期之前至少打开30天工单，以便Adobe能够安排工作。
 
 * **停机时间：** Adobe将在计划时与您确认预期的窗口。
 
@@ -142,8 +129,8 @@ Adobe将帮助您直接升级这些软件依赖项。
 
 | 云上的Adobe Commerce的当前版本 | 必需操作 | 截止日期 |
 | --- |--- |--- |
-| 版本2.4.4或2.4.5 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因： v2.4.4和2.4.5在2027年5月31日之前将仅接收核心应用程序的有限且独立的安全修复 — 这不包括质量修复、对应用程序依赖项（例如PHP）的兼容性支持或平台依赖项更新。 请参阅Adobe的[生命周期策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy)。 | 2027年6月1日 |
-| 版本2.4.6或2.4.7 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因：在2027年8月30日之前，版本2.4.6将获得扩展支持，并且在2028年5月31日之前，将仅获得核心应用程序的有限且独立的安全修复。 版本2.4.7将在2027年5月31日之前获得标准支持，并在2028年5月31日之前获得扩展支持。 请参阅Adobe的[生命周期策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy)。 | 2028年6月1日 |
+| 版本2.4.4或2.4.5 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因： v2.4.4和2.4.5在2027年5月31日之前将仅接收核心应用程序的有限且独立的安全修复 — 这不包括质量修复、对应用程序依赖项（例如PHP）的兼容性支持或平台依赖项更新。 请参阅Adobe的[生命周期策略](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy)。 | 2027年6月1日 |
+| 版本2.4.6或2.4.7 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因：在2027年8月30日之前，版本2.4.6将获得扩展支持，并且在2028年5月31日之前，将仅获得核心应用程序的有限且独立的安全修复。 版本2.4.7将在2027年5月31日之前获得标准支持，并在2028年5月31日之前获得扩展支持。 请参阅Adobe的[生命周期策略](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy)。 | 2028年6月1日 |
 | 版本2.4.8或2.4.9 | 无需Adobe Commerce on Cloud版本升级操作。 操作1中的第三方软件依赖项截止日期仍然适用。<br>原因：未设置截止日期。 | 不适用 |
 
 #### 步骤2：确定升级或迁移路径
@@ -159,13 +146,13 @@ Adobe将帮助您直接升级这些软件依赖项。
 
 | | Cloud上的Adobe Commerce版本2.4.9 | [!DNL Adobe Commerce as a Cloud Service] |
 |---|---|---|
-| **它是什么** | 最新的Adobe Commerce版本，包含全面的安全保护、质量修复和平台依赖关系更新。 | Adobe完全托管的commerce平台，为持续创新而构建，无需升级开销。 [了解详情](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/overview)。 |
+| **它是什么** | 最新的Adobe Commerce版本，包含全面的安全保护、质量修复和平台依赖关系更新。 | Adobe完全托管的commerce平台，为持续创新而构建，无需升级开销。 [了解详情](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview)。 |
 | **如果您愿意** | 您希望继续管理自己的基础架构、升级和修补程序。 | 您想要永久推迟升级周期，降低总拥有成本，并自动获得Adobe的最新功能，而无需额外付费。 |
 | **关键优势** | 满足安全要求，同时保留现有设置。 | 闪电般快速的边缘交付店面、高度可扩展的目录、原生数字资产管理以及内置的创意AI，所有这些都基于Adobe管理的基础架构。 |
 
 ## 如果在截止日期前没有采取任何操作，会发生什么情况？
 
-Adobe将一如既往地支持您执行必要的步骤，以便采用受支持的第三方软件版本、升级到Adobe Commerce on Cloud的最新版本或迁移到Adobe Commerce as a Cloud Service。  如果您担心难以在截止日期前完成任务，需要缩短时间，请联系您的客户团队或[Adobe支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
+Adobe将一如既往地支持您执行必要的步骤，以便采用受支持的第三方软件版本、升级到Adobe Commerce on Cloud的最新版本或迁移到Adobe Commerce as a Cloud Service。  如果您担心难以在截止日期前完成任务，需要缩短时间，请联系您的客户团队或[Adobe支持](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
 
 如果到上述共享的执行日期时环境尚未满足安全要求，Adobe将强制采取适当的措施来保障Adobe Commerce平台及其客户的安全。 这包括暂停流向受影响的基础结构的流量，因此，您的电子商务店面将脱机。
 
@@ -177,19 +164,19 @@ Adobe将一如既往地支持您执行必要的步骤，以便采用受支持的
 
 * **升级兼容性报告：** Adobe提供了一个详细的报告，该报告准确地识别了升级到Adobe Commerce版本2.4.9所需的内容，包括识别哪些模块和文件需要更新、严重问题的数量等。 [生成升级兼容性报告](https://supportinsights.adobe.com/commerce/tab/main)。
 
-* **软件依赖项升级：**&#x200B;由于您无法直接升级软件依赖项，请为Adobe打开[支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)为您处理升级。 有关详细信息，请参阅[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
+* **软件依赖项升级：**&#x200B;由于您无法直接升级软件依赖项，请为Adobe打开[支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)为您处理升级。 有关详细信息，请参阅[配置服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
 **如果您选择迁移到[!DNL Adobe Commerce as a Cloud Service]：**
 
-Adobe提供的工具减少了迁移到[!DNL Adobe Commerce as a Cloud Service]的成本和时间。 您无需支付任何费用即可获得它们。 这些工具仅适用于迁移。 它们不用于Adobe Commerce on Cloud版本升级。 有关完整的迁移指南（包括迁移路径和阶段），请参阅[迁移概述](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/migration/overview)。
+Adobe提供的工具减少了迁移到[!DNL Adobe Commerce as a Cloud Service]的成本和时间。 您无需支付任何费用即可获得它们。 这些工具仅适用于迁移。 它们不用于Adobe Commerce on Cloud版本升级。 有关完整的迁移指南（包括迁移路径和阶段），请参阅[迁移概述](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/migration/overview)。
 
-* **迁移评估：**&#x200B;对自定义设置的迁移复杂性进行评级。 请参阅[迁移评估工具概述](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/migration/migration-tools/assessment)。
+* **迁移评估：**&#x200B;对自定义设置的迁移复杂性进行评级。 请参阅[迁移评估工具概述](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/migration/migration-tools/assessment)。
 
-* **数据迁移：** [批量与增量数据迁移工具](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/migration/migration-tools/bulk-data/migration-tool)可将您的数据移动到新的[!DNL Adobe Commerce as a Cloud Service]环境。
+* **数据迁移：** [批量与增量数据迁移工具](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/migration/migration-tools/bulk-data/migration-tool)可将您的数据移动到新的[!DNL Adobe Commerce as a Cloud Service]环境。
 
 * **AI辅助迁移和开发人员工具：**&#x200B;由Edge Delivery Services提供支持的Adobe Developer App Builder和Commerce店面可帮助加快店面现代化和扩展重新平台。
 
-如果您有任何问题，请与帐户团队联系或联系[支持服务](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
+如果您有任何问题，请与帐户团队联系或联系[支持服务](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
 
 >[!MORELIKETHIS]
 >
