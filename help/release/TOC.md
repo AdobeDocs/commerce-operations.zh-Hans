@@ -4,9 +4,9 @@ user-guide-description: 在一个位置访问Adobe Commerce修补程序和服务
 feature: Release Notes
 recommendations: noDisplay, noCatalog
 nudge: true
-source-git-commit: 9e4142150097f7d1109929c3785e3448288bb8ff
+source-git-commit: 5e0e4b0dc59aa2d8bd08d2d4af1176d14577f063
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '109'
 ht-degree: 30%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 30%
 - [Beta版本](beta.md)
 - 规划和策略 {#planning}
   - [生命周期政策](lifecycle-policy.md)
-  - [确保安全和合规所需的行动和截止日期](security-enforcement-policy.md)
+  - [保护Commerce环境所需的操作和截止日期](security-enforcement-policy.md)
   - [版本升级实施策略](version-upgrade-enforcement-policy.md)
   - [版本控制策略](versioning-policy.md)
   - [发布计划](schedule.md)
