@@ -1,7 +1,7 @@
 ---
-source-git-commit: 05769de0613c19ab0b0a008db523a380d0b62d5b
+source-git-commit: e62cb90ac4362a72f5608f30a6c919a5c36b9963
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2220'
 ht-degree: 1%
 
 ---
@@ -657,28 +657,6 @@ ht-degree: 1%
         新主题qpt
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f1f9890a2a2b7dbe501037ca8dbe919865012b6f">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年6月5日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4402">ACP2E-4402的QPT 1.1.79修复的详细说明：目标规则增量索引器不选取禁用的产品</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/e5aa6a001b0c96b2d0489a444c227a8f0d406675">提交</a></td>
     </tr>
   </tbody>
 </table>

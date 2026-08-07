@@ -3,9 +3,9 @@ title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
 last-update: 2026-07-23T00:00:00Z
-source-git-commit: 6da5a8645b46807eed654f6958f19f10d0095945
+source-git-commit: e62cb90ac4362a72f5608f30a6c919a5c36b9963
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1651'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 
 **MySQL 8.0于2026年4月30日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.7、2.4.6、2.4.5和2.4.4将不再提供兼容性或
-支持在MySQL 8.0之后发布的任何MySQL版本。Adobe不会
+支持在MySQL 8.0之后发布的任何MySQL版本。 Adobe不会
 在此Adobe上验证或提供对较新MySQL主要版本的支持
 Commerce版本行。
 运行版本2.4.7、2.4.6、2.4.5、2.4.4的所有Adobe Commerce内部部署客户都非常强
@@ -58,7 +58,7 @@ Commerce版本行。
 
 **Elasticsearch 7.17于2026年1月15日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.6、2.4.5和2.4.4将不提供兼容性或
-支持在Elasticsearch 7之后发布的任何Elasticsearch版本。Adobe不会
+支持在Elasticsearch 7之后发布的任何Elasticsearch版本。 Adobe不会
 在此Adobe上验证或提供对较新Elasticsearch主要版本的支持
 Commerce版本行。
 运行版本2.4.6、2.4.5、2.4.4的所有Adobe Commerce本地客户都属于强客户
@@ -97,7 +97,7 @@ Commerce版本行。
 
 **MySQL 8.0于2026年4月30日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.7、2.4.6、2.4.5和2.4.4将不再提供兼容性或
-支持在MySQL 8.0之后发布的任何MySQL版本。Adobe不会
+支持在MySQL 8.0之后发布的任何MySQL版本。 Adobe不会
 在此Adobe上验证或提供对较新MySQL主要版本的支持
 Commerce版本行。
 运行版本2.4.7、2.4.6、2.4.5、2.4.4的所有Adobe Commerce内部部署客户都非常强
@@ -107,7 +107,7 @@ Commerce版本行。
 
 **Elasticsearch 7.17于2026年1月15日停止支持(EOS)。**
 在此日期之后，Adobe Commerce 2.4.6、2.4.5和2.4.4将不提供兼容性或
-支持在Elasticsearch 7之后发布的任何Elasticsearch版本。Adobe不会
+支持在Elasticsearch 7之后发布的任何Elasticsearch版本。 Adobe不会
 在此Adobe上验证或提供对较新Elasticsearch主要版本的支持
 Commerce版本行。
 运行版本2.4.6、2.4.5、2.4.4的所有Adobe Commerce本地客户都属于强客户
@@ -230,5 +230,4 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 >
 >`xdebug`存在已知问题，该问题可能会影响Adobe Commerce安装或安装后对店面或管理员的访问。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
 
-<!-- Last updated from includes: 2026-07-22 16:57:39 -->
-
+<!-- Last updated from includes: 2026-07-23 16:17:19 -->
