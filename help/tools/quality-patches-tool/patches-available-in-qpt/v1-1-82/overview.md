@@ -6,17 +6,12 @@ role: Admin, Developer
 type: Troubleshooting
 autotag-review: '2026-07-24T20:44:59.025Z'
 TQID: 'https://experienceleague.adobe.com/Qoz-3w1ddXeHyDsyfsM0gD1kwi-Z6dc-C6P9Q-nYrUo'
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 35bad8e2071ee36c0bafccf542035564aeeebc59
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9d633a740669926896517108dad44f48a6c4e503
 workflow-type: tm+mt
-source-wordcount: 487
+source-wordcount: 486
 ht-degree: 0%
 
 ---
@@ -36,7 +31,7 @@ QPT v1.1.82包含以下修补程序：
 1. **ACP2E-4698**：修复了在页面生成器文本内容中再次编辑图像时，会保存绝对媒体URL而不是保留可移植媒体指令的问题。
 1. **[ACP2E-4797](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4797.md)**：修复了以下问题：即使将数据库配置为支持utf8mb4，在WYSIWYG编辑器或管理员中的页面生成器内容中输入4字节Unicode字符也会被错误阻止。
 1. **[ACP2E-4748](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4748.md)**：修复了在具有大量奖励积分历史记录的商店中奖励积分过期时间较慢而导致奖励积分过期时间延迟的问题。
-1. **ACP2E-4799**：修复了`requisition_lists` GraphQL查询返回的`total_count`值的问题，该值仅反映当前页面上的项目数，而不反映符合查询条件的申请列表的总数。
+1. **[ACP2E-4799](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4799.md)**：修复了`requisition_lists GraphQL`查询返回的`total_count`值的问题，该值仅反映当前页面上的项目数，而不反映符合查询条件的申请列表的总数。
 1. **[ACP2E-4805](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4805.md)**：修复了当第一个可销售子产品出现在列表中的较晚时，带许多子产品的可配置产品的签出API请求明显变慢的问题。
 1. **ACP2E-4840**：修复了`products` GraphQL查询中请求的数量值返回&#x200B;*null*&#x200B;的问题。
 1. **ACP2E-4870**：修复了&#x200B;**[!UICONTROL Product Alerts]**&#x200B;电子邮件通知忽略商店查看电子邮件设置的问题。
