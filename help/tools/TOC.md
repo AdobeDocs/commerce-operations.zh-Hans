@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: f9962ead84372461e69df158f17456d5cdf0d89e
+source-git-commit: 324a61ed4f6ea349e1e30095452e5311f688c931
 workflow-type: tm+mt
-source-wordcount: '10549'
+source-wordcount: '10588'
 ht-degree: 0%
 
 ---
@@ -1044,6 +1044,9 @@ ht-degree: 0%
       - [ACP2E-4709：当页面层次结构包含双引号时，CMS页面不会保存在页面生成器中](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4709.md)
     - v1.1.82 {#v1-1-82}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.82](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/overview.md)
+      - [ACP2E-4799： GraphQL查询requisition_lists返回错误的total_count（按分页）](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4799.md)
+      - [ACP2E-4797：支持utf8mb4时，管理员WYSIWYG编辑器和页面生成器阻止4字节Unicode字符](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4797.md)
+      - [ACP2E-4682：检查quote isActive的Storefront页创建空报价记录](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4682.md)
       - [ACP2E-4593：错误的网站限制CMS页面在多网站店面的辅助网站上提供](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4593.md)
       - [ACP2E-4547：如果未将默认目录产品分配给用户的共享目录，则管理员无法将其添加到报价中](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4547.md)
       - [ACP2E-4805：当第一个可销售子项稍后显示在列表中时，可配置产品的签出请求速度变慢](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4805.md)

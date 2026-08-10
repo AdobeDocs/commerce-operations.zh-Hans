@@ -1,7 +1,7 @@
 ---
 source-git-commit: 0d07af38e1af9331924c109356126a1bfa96156b
 workflow-type: tm+mt
-source-wordcount: '32399'
+source-wordcount: '32815'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ _AC-1608 - [GitHub问题](https://github.com/magento/magento2/issues/34342) - [G
 
 _AC-6419 - [GitHub问题](https://github.com/magento/magento2/issues/35934) - [GitHub代码贡献](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### `/V1/order/&lbrace;orderId&rbrace;/ship` API终结点中的内部服务器错误
+#### `/V1/order/{orderId}/ship` API终结点中的内部服务器错误
 
 系统现在修复了`/V1/order/{orderId}/ship` API端点中的内部服务器错误，并返回400错误，因为请求格式不正确。
 
@@ -3467,7 +3467,7 @@ _AC-15547 - [GitHub问题](https://github.com/magento/magento2/issues/40185) - [
 
 #### 没有为GET请求呈现错误消息
 
-修复了无法立即显示无效GET请求的错误消息的问题。 现在，错误消息可正确显示，而无需用户执行其他操作，从而改善用户反馈和一致性。
+修复了无效GET请求无法立即显示错误消息的问题。 现在，错误消息可正确显示，而无需用户执行其他操作，从而改善用户反馈和一致性。
 
 _AC-16296 - [GitHub问题](https://github.com/magento/magento2/issues/40411) - [GitHub代码贡献](https://github.com/magento/magento2/commit/8391dbcc)_
 
@@ -3529,7 +3529,7 @@ _ACP2E-4285 - [GitHub代码贡献](https://github.com/magento/magento2/commit/cb
 
 #### 内部服务器错误
 
-现在，当使用异步REST端点POST /rest/default/async/V1/carts/mine/items时，Magento可成功将产品添加到客户的购物车。 以前，此异步“添加到购物车”请求导致内部服务器错误，Magento记录以下错误：错误：在app/code/Magento/Quote/Model/Quote/Item/AbstractItem.php:162中的null上调用成员函数setFinalPrice()。
+现在，当使用异步REST端点POST /rest/default/async/V1/carts/mine/items时，Magento可成功将产品添加到客户的购物车。 以前，此异步“添加到购物车”请求导致内部服务器错误，Magento记录以下错误：错误：在app/code/Magento/Quote/Model/Quote/Item/AbstractItem.php：162中调用空上的成员函数setFinalPrice()。
 
 _AC-16344 - [GitHub代码贡献](https://github.com/magento/magento2/commit/8670a2b4)_
 
