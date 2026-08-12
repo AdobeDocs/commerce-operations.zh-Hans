@@ -4,7 +4,7 @@ description: 了解特定版本的Adobe Commerce的发布时间。
 recommendations: noCatalog
 exl-id: 9b03900c-39ba-4757-ab7e-8bc832277192
 last-update: 2026-06-02T00:00:00Z
-source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
+source-git-commit: 90f54aef167dd29ec6bdc0639cf3eb6c5d7244ce
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 已发布版本
 
-本页列出了Adobe Commerce的发行版本。 它包含每个次要、补丁和安全版本的发行日期，以及&#x200B;**_常规_**&#x200B;支持的结束日期。 它不列出&#x200B;**_扩展_**&#x200B;支持的结束日期。
+本页列出了Adobe Commerce的发行版本。 它包含每个次版本、修补程序版本和安全版本的发布日期，以及&#x200B;**_常规_**&#x200B;支持的结束日期。 它不列出&#x200B;**_扩展_**&#x200B;支持的结束日期。
 
 >[!BEGINSHADEBOX]
 
@@ -24,9 +24,9 @@ ht-degree: 0%
 >[!NOTE]
 >
 >- Adobe建议将Adobe Commerce安装或升级到每个版本提供的最新安全修补程序。
->- 有关其他安全更新，请参阅[Magento/Adobe Commerce的安全更新](https://helpx.adobe.com/cn/security/products/magento.html)。
->- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/cn/products/magento/pricing.html)。
+>- 有关其他安全更新，请参阅[Magento/Adobe Commerce的安全更新](https://helpx.adobe.com/security/products/magento.html)。
+>- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/products/magento/pricing.html)。
 
 {{$include /help/_includes/templated/release/core-releases.md}}
 
-<!-- Last updated from includes: 2026-06-02 11:13:39 -->
+<!-- Last updated from includes: 2026-08-12 14:19:05 -->
