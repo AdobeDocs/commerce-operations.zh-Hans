@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2c9dd65bbfff402767450508d3760d0281cb3296
+source-git-commit: 81442a33c3dabcaa3b9eda56a2132bf7b7432ba2
 workflow-type: tm+mt
-source-wordcount: '2201'
+source-wordcount: '2109'
 ht-degree: 1%
 
 ---
@@ -627,36 +627,6 @@ ht-degree: 1%
         反馈，技术
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aaa05baf7a213a2f949e2eadbf72bc13e1ed247a">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年6月12日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-80/overview">Overview： Quality Patches Tool (QPT) v1.1.80</a>。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6e585cb2150ca7dc2ae6ae883339ef9b894741f0">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>已将搜索匹配和排名(Private Beta)程序添加到<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/beta#search-matching-and-ranking-private-beta">Beta版本</a>，包括分层匹配模型、与权重和促销规则的交互以及邀请说明。</p>
-</td>
-      <td>
-        重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b364a26b6ad3e36652b8309dcb87268d522fa31c">提交</a></td>
     </tr>
   </tbody>
 </table>
