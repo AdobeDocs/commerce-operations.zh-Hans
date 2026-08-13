@@ -6,17 +6,12 @@ role: Admin, Developer
 type: Troubleshooting
 autotag-review: '2026-07-24T20:44:59.025Z'
 TQID: 'https://experienceleague.adobe.com/Qoz-3w1ddXeHyDsyfsM0gD1kwi-Z6dc-C6P9Q-nYrUo'
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 2864bda142df307248f5e29524eaf42441538f5b
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: cf07addd3fd0bf3288f5f576acd68be159261d87
 workflow-type: tm+mt
-source-wordcount: 489
+source-wordcount: 637
 ht-degree: 0%
 
 ---
@@ -28,7 +23,12 @@ ht-degree: 0%
 QPT v1.1.82包含以下修补程序：
 
 1. **ACP2E-4815**：修复了导致日志中出现PHP异常的多个GraphQL问题，修复了通过GraphQL在订单后创建的订单与客户帐户之间的正确关联，以及通过HTTP规范将响应与GraphQL保持一致。
-1. **ACP2E-4194**：修复了GraphQL响应针对无效、未授权或格式错误的请求返回错误的HTTP状态代码的问题。
+1. **[ACP2E-4194](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4194.md)**：修复了GraphQL响应针对无效、未授权或格式错误的请求返回错误的HTTP状态代码的问题。
+1. **ACP2E-4547**：修复了以下问题：对于分配给未链接到共享目录的客户组的公司，管理员用户无法使用“管理员”中的&#x200B;**[!UICONTROL Add Products by SKU]**&#x200B;将标准目录中的产品添加到可协商报价中。
+1. **ACP2E-4593**：修复了在多网站部署中，为网站限制而显示的CMS页面在多网站辅助网站上不正确的问题。
+1. **[ACP2E-4547](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4547.md)**：修复了以下问题：管理员用户无法在管理员中使用&#x200B;**[!UICONTROL Add Products By SKU]**&#x200B;将默认目录中的产品添加到分配给未链接到共享目录的客户组的公司的订单中。
+1. **ACP2E-4593**：修复了在多网站部署中，为网站限制而显示的CMS页面在多网站辅助网站上不正确的问题。
+1. **ACP2E-4682**：修复了在每次加载页面时，访问检查报价单`isActive`状态的Storefront页面会创建空报价记录的问题。
 1. **[ACP2E-4682](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4682.md)**：修复了在每次加载页面时，访问检查报价为isActive状态的店面页面会创建空报价记录的问题。
 1. **[ACP2E-4547](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4547.md)**：修复了以下问题：管理员用户无法在管理员中使用&#x200B;**[!UICONTROL Add Products By SKU]**&#x200B;将默认目录中的产品添加到分配给未链接到共享目录的客户组的公司的订单中。
 1. **[ACP2E-4593](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4593.md)**：修复了在多网站部署中，为网站限制显示的CMS页面可能在辅助网站上不正确的问题。
