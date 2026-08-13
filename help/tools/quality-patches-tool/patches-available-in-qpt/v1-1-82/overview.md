@@ -14,9 +14,9 @@ feature_v2:
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: e8b1a5c1161eab0a0e76e1cca6a4b8b528124b45
+source-git-commit: 2864bda142df307248f5e29524eaf42441538f5b
 workflow-type: tm+mt
-source-wordcount: 488
+source-wordcount: 489
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ QPT v1.1.82包含以下修补程序：
 1. **[ACP2E-4547](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4547.md)**：修复了以下问题：管理员用户无法在管理员中使用&#x200B;**[!UICONTROL Add Products By SKU]**&#x200B;将默认目录中的产品添加到分配给未链接到共享目录的客户组的公司的订单中。
 1. **[ACP2E-4593](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4593.md)**：修复了在多网站部署中，为网站限制显示的CMS页面可能在辅助网站上不正确的问题。
 1. **ACP2E-4695**：修复了目录规则索引器占用过多内存且无法完成而导致不稳定和内存不足错误的问题。
-1. **ACP2E-4698**：修复了在页面生成器文本内容中再次编辑图像时，会保存绝对媒体URL而不是保留可移植媒体指令的问题。
+1. **[ACP2E-4698](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4698.md)**：修复了在页面生成器文本内容中再次编辑图像时，可能会保存绝对媒体URL而不是保留可移植媒体指令的问题。
 1. **[ACP2E-4797](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4797.md)**：修复了以下问题：即使将数据库配置为支持utf8mb4，在WYSIWYG编辑器或管理员中的页面生成器内容中输入4字节Unicode字符也会被错误阻止。
 1. **[ACP2E-4748](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4748.md)**：修复了在具有大量奖励积分历史记录的商店中奖励积分过期时间较慢而导致奖励积分过期时间延迟的问题。
 1. **[ACP2E-4799](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4799.md)**：修复了`requisition_lists GraphQL`查询返回的`total_count`值的问题，该值仅反映当前页面上的项目数，而不反映符合查询条件的申请列表的总数。

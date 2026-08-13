@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: e8b1a5c1161eab0a0e76e1cca6a4b8b528124b45
+source-git-commit: 2864bda142df307248f5e29524eaf42441538f5b
 workflow-type: tm+mt
-source-wordcount: '10616'
+source-wordcount: '10632'
 ht-degree: 0%
 
 ---
@@ -1044,6 +1044,7 @@ ht-degree: 0%
       - [ACP2E-4709：当页面层次结构包含双引号时，CMS页面不会保存在页面生成器中](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-81/acp2e-4709.md)
     - v1.1.82 {#v1-1-82}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.82](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/overview.md)
+      - [ACP2E-4698：页面生成器文本内联编辑保存绝对媒体URL而不是可移植指令](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4698.md)
       - [ACP2E-4894：启用异步索引后，新订单显示在“管理订单”网格中，并出现延迟](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4894.md)
       - [ACP2E-4870：产品警报电子邮件忽略商店视图电子邮件设置](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4870.md)
       - [ACP2E-4799： GraphQL查询requisition_lists返回错误的total_count（按分页）](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4799.md)
