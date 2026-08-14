@@ -22,9 +22,9 @@ level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
 badgePaas: label="Adobe Commerce on Cloud 2.4.4 — 仅限2.4.9" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Cloud 2.4.4到2.4.9版本的Adobe Commerce"
 nudge: true
-source-git-commit: c3ea400087a14aa1021ab6998b9de48c33787cc9
+source-git-commit: e2b86c349bdd085717f732532f68e3fae8455d13
 workflow-type: tm+mt
-source-wordcount: 2174
+source-wordcount: 2200
 ht-degree: 0%
 
 ---
@@ -87,10 +87,11 @@ ht-degree: 0%
 
 #### 步骤1：检查您的第三方软件依赖项版本
 
-1. 登录到[Cloud Console](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/cloud-console)，您可以在其中查看所有环境。
+1. 登录到[Cloud Console](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/start/cloud-console)，您可以在其中查看所有云项目。
 2. 打开相关项目，然后选择要查看的环境。
-3. 在`.magento/services.yaml`文件中检查该环境的服务配置，该文件定义了Adobe Commerce on Cloud支持的服务名称和版本。
-4. 使用[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)中的说明检查每个环境正在运行的依赖项版本。
+3. 打开“容器”选项卡，您可以在其中查看选定环境中当前使用的所有服务的列表。
+4. 单击每个服务链接可检查环境中当前运行的确切版本。
+有关更多详细信息，请参阅[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)中的说明。
 
 所有不支持的软件依赖项都必须升级到下表2中共享的时间表所列的版本。
 
@@ -177,7 +178,7 @@ Adobe将一如既往地支持您执行必要的步骤，以便采用受支持的
 
 **如果您选择升级到Cloud版本2.4.9上的Adobe Commerce：**
 
-* **升级兼容性报告：** Adobe提供了一个详细的报告，该报告准确地识别了升级到Adobe Commerce版本2.4.9所需的内容，包括识别哪些模块和文件需要更新、严重问题的数量等。 [生成升级兼容性报告](https://supportinsights.adobe.com/commerce/tab/main)。
+* **升级兼容性报告：** Adobe提供了一个详细的报告，该报告准确地识别了升级到Adobe Commerce版本2.4.9所需的内容，包括识别哪些模块和文件需要更新、严重问题的数量等。 有关如何生成升级兼容性报告的详细信息，请参阅[全站点分析工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/access)文档。
 
 * **软件依赖项升级：**&#x200B;由于您无法直接升级软件依赖项，请为Adobe打开[支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)为您处理升级。 有关详细信息，请参阅[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
