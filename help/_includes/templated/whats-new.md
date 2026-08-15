@@ -1,7 +1,7 @@
 ---
-source-git-commit: 81442a33c3dabcaa3b9eda56a2132bf7b7432ba2
+source-git-commit: b14e0f2c4656ec9afa79545a9e8db83cc2e0d4d4
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2809'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,210 @@ ht-degree: 1%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年8月14日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了客户如何在Cloud UI中检查其服务依赖项版本的步骤，并更新了指南的链接，该指南介绍了客户如何在<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/security-enforcement-policy#action-1-verify-and-upgrade-third-party-software-dependencies">验证和升级第三方软件依赖项</a>中为他们的存储生成升级兼容性报告。</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/54ac98c35e1f161f390587601484db4e3294b6af">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年8月13日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4194">ACP2E-4194的QPT 1.1.82修复的详细说明：具有未知筛选器名称的GraphQL请求会导致PHP异常日志</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d4202395c5b7bb5e8c4a95d8fb353ec0fc523fcb">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4695">ACP2E-4695的QPT 1.1.82修复的详细说明：由于内存使用量过高而导致目录规则索引器内存不足故障</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/dc891435d573c4c333e58e25b2dbe003ffa08f27">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>修复了Adobe Commerce 2.4.5和2.4.6版本的EOS日期中的拼写错误。</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8de65d309dcd4158627910ce5c0b87966db5c948">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年8月12日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>已将PHP 8.4作为<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/adobe-commerce/2-4-9#php-and-composer">2.4.9发行说明</a>中支持的PHP版本删除，因为不建议将其用于生产环境，并且仅用于升级兼容性。</p>
+</td>
+      <td>
+        发行说明，技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/603bb70012a2f92ceeaad644d5252c4677a1a47c">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4894">ACP2E-4894的QPT 1.1.82修复程序的详细说明：启用异步索引时，“管理订单”网格中会显示新订单，并且存在延迟</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ad40d94c1618f7e423fd6a773185b8fba48c2c72">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4698">ACP2E-4698的QPT 1.1.82修复的详细说明：页面生成器文本内联编辑保存了绝对媒体URL，而不是可移植指令</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/68e5e99ac0717b0e358acd6acf9934044a917a82">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>更正并完成<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/versions">已发布版本</a>页面上多个Adobe Commerce发行行的支持终止、扩展支持和其他安全修复配置日期。</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fc5a7f7a466e6419a3e712bcbec4224f98f8c480">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年8月11日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>以将RabbitMQ 3.13添加为Adobe Commerce 2.4.4-p18（最新）的支持版本，从而解决Debian OS升级路径的阻止程序。</p>
+</td>
+      <td>
+        技术
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/046d641dc45b269c6495bef0c06c53bdc500227b">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年8月10日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4797">ACP2E-4797的QPT 1.1.82修复程序的详细说明：当支持utf8mb4时，管理员WYSIWYG编辑器和页面生成器会阻止4字节的Unicode字符</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c97bb9c77eb0ec4bbc92d042cfa9fd440e970ca7">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了针对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4682">ACP2E-4682的QPT 1.1.82修复的详细说明：检查报价为isActive的店面页面创建空报价记录</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ceac870e3ccb9eeee64e3b574aaccd33c6ab69d0">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4799">ACP2E-4799的QPT 1.1.82修复的详细说明： GraphQL查询requisition_lists返回错误的total_count，分页</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/19f854db1a0ff78d0a6dca070b4b6db09d3de83e">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4870">ACP2E-4870的QPT 1.1.82修复的详细说明：产品警报电子邮件忽略商店视图电子邮件设置</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/907df07e641ab7124353f89ca799f92d097aa54f">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>更新了支持Adobe Commerce 2.4.9的<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability">产品可用性</a>表，并删除了Page Builder条目，该条目自2.4.3以来一直是核心产品的一部分。</p>
+</td>
+      <td>
+        重大更新
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a5120adab9f624677447889722359951e775c3f3">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年8月9日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4593">ACP2E-4593的QPT 1.1.82修复程序的详细说明：在多网站店面</a>的辅助网站上提供了错误的网站限制CMS页面。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/86c85db0098192092241b680d38b882f1a52b578">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年8月6日
 
@@ -597,36 +801,6 @@ ht-degree: 1%
         技术
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/23f2234eb2b9e11e36e49607b21c3c092266fec4">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年6月15日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>已使用最新的Payment Services v2.15.0版本更新<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability#commerce-services">产品可用性</a>表。</p>
-</td>
-      <td>
-        重大更新，发行说明
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a47aff5b5ae138748584cb5dbd646ca7b69e294a">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">Commerce系统要求</a>，以明确说明Commerce on Cloud模板现在提供了默认服务配置，该配置与每个版本行的最新Commerce版本兼容。</p>
-</td>
-      <td>
-        反馈，技术
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aaa05baf7a213a2f949e2eadbf72bc13e1ed247a">提交</a></td>
     </tr>
   </tbody>
 </table>
