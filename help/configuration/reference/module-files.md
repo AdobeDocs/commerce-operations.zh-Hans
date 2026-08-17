@@ -2,9 +2,9 @@
 title: 模块配置文件
 description: 了解如何使用Adobe Commerce中的配置类型自定义模块。 了解配置文件管理和模块自定义最佳实践。
 exl-id: 87433c28-8e3d-43d0-b77e-3ff9a680af5f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '2121'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 ### Commerce如何加载配置文件
 
-Commerce按以下顺序加载配置文件(所有路径均相对于Commerce安装目录)：
+Commerce按以下顺序加载配置文件（所有路径均相对于Commerce安装目录）：
 
 - 主配置([app/etc/di.xml](https://github.com/magento/magento2/blob/2.4/app/etc/di.xml))。 此文件用于引导Commerce。
 - 来自模块(`<your component base dir>/<vendorname>/<component-type>-<component-name>/etc/*.xml`)的全局配置。 从所有模块中收集特定配置文件并将它们合并在一起。
@@ -43,9 +43,9 @@ Commerce按以下顺序加载配置文件(所有路径均相对于Commerce安装
 - `<vendorname>`是组件的供应商名称；例如，Commerce的供应商名称为`magento`。
 - `<component-type>`是以下之一：
 
-   - `module-`：扩展或模块。
-   - `theme-`：主题。
-   - `language-`：语言包。
+  - `module-`：扩展或模块。
+  - `theme-`：主题。
+  - `language-`：语言包。
 
 >[!INFO]
 >
