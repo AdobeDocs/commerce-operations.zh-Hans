@@ -3,9 +3,10 @@ title: 软件生命周期政策
 description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
 nudge: true
-source-git-commit: bde0fd61b02eaf5a962cc9b79cf39a08199e83c8
+last-update: 2026-08-13T00:00:00Z
+source-git-commit: dd6d284c1761248515bae5324a90e330b6aabf9b
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1350'
 ht-degree: 1%
 
 ---
@@ -47,16 +48,7 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 
 下表显示了每个Adobe Commerce版本的完整生命周期，包括Adobe Commerce on Cloud环境的新版本升级实施日期。
 
-| 版本 | 正式发布 | 停止标准支持 | 终止扩展支持 | 仅安全期限结束 | [版本升级实施日期（仅限云）](version-upgrade-enforcement-policy.md) |
-| --------- | ---------------------- | ------------------------ | ------------------------- |-----------------------------| ----------------------------------------------- |
-| Adobe Commerce 2.4.9 | 2026年5月12日 | 2029年5月31日 | 待定 | 不适用 | 待定 |
-| Adobe Commerce 2.4.8 | 2025年4月8日 | 2028年5月31日 | 待定 | 不适用 | 待定 |
-| Adobe Commerce 2.4.7 | 2024年4月9日 | 2027年5月31日 | 2028年5月31日 | 不适用 | 2028年6月1日 |
-| Adobe Commerce 2.4.6 | 2023年3月14日 | 2026年8月11日 | 2027年8月31日 | 2028年5月31日 | 2028年6月1日 |
-| Adobe Commerce 2.4.5 | 2022年8月9日 | 2025年8月12日 | 2026年8月11日 | 2027年5月31日 | 2027年6月1日 |
-| Adobe Commerce 2.4.4 | 2022年4月12日 | 2025年4月12日 | 2026年4月14日 | 2027年5月31日 | 2027年6月1日 |
-
-{style="table-layout:auto"}
+{{$include /help/_includes/templated/release/end-of-support-dates.md}}
 
 ## 支持时间表
 
