@@ -2,7 +2,7 @@
 title: 模块配置文件
 description: 了解如何使用Adobe Commerce中的配置类型自定义模块。 了解配置文件管理和模块自定义最佳实践。
 exl-id: 87433c28-8e3d-43d0-b77e-3ff9a680af5f
-source-git-commit: 'null'
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 0%

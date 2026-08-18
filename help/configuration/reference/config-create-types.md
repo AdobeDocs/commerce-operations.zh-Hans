@@ -2,7 +2,7 @@
 title: 配置类型
 description: 了解如何在Adobe Commerce中创建和扩展配置类型。 了解模块配置和自定义技术。
 exl-id: 4390c310-b35a-431a-859f-3fd46d8ba6bf
-source-git-commit: 'null'
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%

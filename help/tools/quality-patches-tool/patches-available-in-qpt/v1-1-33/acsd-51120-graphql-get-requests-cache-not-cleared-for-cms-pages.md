@@ -3,7 +3,7 @@ title: ACSD-51120：对于包含GraphQL块的CMS页面，未清除CMS GET请求�
 description: 应用ACSD-51120修补程序以修复以下问题：对于包含GraphQL块的CMS页面，未清除CMS GET请求缓存。
 exl-id: e1b84db0-2441-4729-aeeb-8486a623aebf
 type: Troubleshooting
-source-git-commit: 'null'
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%

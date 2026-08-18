@@ -2,9 +2,9 @@
 title: '[!DNL Cloud Automation Patching Service (CAPS)]'
 description: 了解 [!DNL Cloud Automation Patching Service (CAPS)]、其用途、如何访问它以及自动修补的最佳实践
 hide: true
-source-git-commit: de77f68f9ca6f2d4c4d4abed317210d5121a5497
+source-git-commit: baa10442a07aa4280fad6213a82d632760f8e1d2
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -18,31 +18,32 @@ ht-degree: 0%
 ## [!DNL CAPS]主题
 
 * **[如何访问](access.md)**
-* **[工作流](workflow.md)**
+* **[工作流概述](workflow.md)**
+* **[GitHub集成](github-integration.md)**
 * **[最佳实践](best-practices.md)**
 * **[疑难解答](troubleshooting.md)**
 
 ## 工具概述
 
 * **UI界面**
-   * 实时显示特定项目和环境组合的修补程序可用性和状态
-   * 显示进度、错误和任何其他相关消息的综合修补程序状态信息
-   * [!UICONTROL Patch Management Dashboard]用于：
-      * 查看可用的修补程序
-      * 通过一键操作应用修补程序
-      * 还原以前应用的修补程序
-      * 监视修补程序操作状态和结果
+  * 实时显示特定项目和环境组合的修补程序可用性和状态
+  * 显示进度、错误和任何其他相关消息的综合修补程序状态信息
+  * [!UICONTROL Patch Management Dashboard]用于：
+    * 查看可用的修补程序
+    * 通过一键操作应用修补程序
+    * 还原以前应用的修补程序
+    * 监视修补程序操作状态和结果
 
 * **使用结构化工作流自动修补服务**
-   * **初步检查** — 验证修补程序兼容性和环境就绪性
-   * **修补** — 在集成环境中自动应用或还原修补程序
-   * **验证** — 执行运行状况检查并确保关键功能不受影响
+  * **初步检查** — 验证修补程序兼容性和环境就绪性
+  * **修补** — 在集成环境中自动应用或还原修补程序
+  * **验证** — 执行运行状况检查并确保关键功能不受影响
 
 * **安全功能**
-   * 创建用于测试的临时集成环境
-   * 在应用程序之前验证修补程序兼容性
-   * 在验证失败时提供自动回滚
-   * 将修补程序应用到`m2-hotfixes`文件夹，并在还原期间自动删除
+  * 创建用于测试的临时集成环境
+  * 在应用程序之前验证修补程序兼容性
+  * 保持目标环境不变，直到修补程序在临时环境中通过验证
+  * 将修补程序应用到`m2-hotfixes`文件夹，并在还原期间自动删除
 
 ## 与Adobe Commerce Cloud集成
 

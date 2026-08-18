@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 3bb6679e2a5e254ef066b47816e527123ca8dcb3
+source-git-commit: 2fce4e7794a3defe46c03b3795df3e62f96dbf73
 workflow-type: tm+mt
-source-wordcount: '10658'
+source-wordcount: '10661'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,8 @@ ht-degree: 0%
 - 大写 {#caps-tool}
   - {hide-from-toc}[简介](caps-tool/intro.md)
   - {hide-from-toc}[访问](caps-tool/access.md)
-  - {hide-from-toc}[工作流](caps-tool/workflow.md)
+  - {hide-from-toc}[工作流概述](caps-tool/workflow.md)
+  - {hide-from-toc}[GitHub集成](caps-tool/github-integration.md)
   - {hide-from-toc}[最佳实践](caps-tool/best-practices.md)
   - {hide-from-toc}[疑难解答](caps-tool/troubleshooting.md)
 - Adobe Commerce上的受管警报 {#managed-alerts-for-adobe-commerce}
