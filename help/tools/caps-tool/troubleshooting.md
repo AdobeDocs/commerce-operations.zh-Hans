@@ -172,7 +172,7 @@ ht-degree: 0%
 
 **原因：**&#x200B;临时问题导致[!DNL CAPS]无法连接到GitHub
 
-**解决方案：**&#x200B;请等待几分钟，然后重试该操作。 如果错误仍然存在，请联系[Adobe Commerce云支持](https://experienceleague.adobe.com/home#support)
+**解决方案：**&#x200B;请等待几分钟，然后重试该操作。 如果错误仍然存在，请联系[Adobe Commerce云支持](https://experienceleague.adobe.com/home?lang=zh-Hans#support)
 
 #### “未在超时内创建环境”（与GitHub连接的项目）
 
@@ -180,7 +180,7 @@ ht-degree: 0%
 
 **原因：**&#x200B;项目的GitHub集成禁用了`fetch-branches`选项，因此临时分支[!DNL CAPS]推送未同步，并且从未创建集成环境。
 
-**解决方案：**&#x200B;启用集成的[`fetch-branches`选项](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)，然后重试该操作。 请参阅[为 [!DNL CAPS]](github-integration.md)设置GitHub集成。
+**解决方案：**&#x200B;启用集成的[`fetch-branches`选项](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)，然后重试该操作。 请参阅[为 [!DNL CAPS]](github-integration.md)设置GitHub集成。
 
 ### 资源和配额错误
 
@@ -243,8 +243,8 @@ ht-degree: 0%
 
 ### 相关主题
 
-* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview)
-* [Adobe Commerce安装指南](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview)
+* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/overview)
+* [Adobe Commerce安装指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/overview)
 * [CAPS介绍](intro.md)
 * [如何访问](access.md)
 * [工作流概述](workflow.md)
