@@ -2,9 +2,9 @@
 title: 如何访问 [!DNL Cloud Automation Patching Service (CAPS)]
 description: 了解如何访问和使用 [!DNL Cloud Automation Patching Service (CAPS)]
 hide: true
-source-git-commit: de77f68f9ca6f2d4c4d4abed317210d5121a5497
+source-git-commit: a11f18cf9736be873c84327d1a74e6eec6773ec2
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 1%
 
 ---
@@ -58,6 +58,7 @@ CAPS工具可从站点范围分析工具仪表板中获取，网址为[https://s
 ## 相关主题
 
 * [CAPS介绍](intro.md)
-* [工作流](workflow.md)
+* [工作流概述](workflow.md)
+* [GitHub集成](github-integration.md)
 * [最佳实践](best-practices.md)
 * [故障排除](troubleshooting.md)

@@ -1,27 +1,27 @@
 ---
-title: ' [!DNL Cloud Automation Patching Service (CAPS)] 工作流程的工作方式'
+title: '[!DNL Cloud Automation Patching Service (CAPS)]工作流概述'
 description: 了解 [!DNL Cloud Automation Patching Service (CAPS)] 工作流过程，包括术语、工作流阶段以及自动化修补程序管理的操作。
 hide: true
-source-git-commit: de77f68f9ca6f2d4c4d4abed317210d5121a5497
+source-git-commit: a11f18cf9736be873c84327d1a74e6eec6773ec2
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
 
-# [!DNL Cloud Automation Patching Service (CAPS)]工作流的工作方式
+# [!DNL Cloud Automation Patching Service (CAPS)]工作流概述
 
 本主题提供了有关如何使用[!DNL CAPS (Cloud Automation Patching Service)]执行修补程序操作的高级概述。
 
 ## 术语
 
 * **操作** - [!DNL CAPS]执行的主要操作：
-   * 应用
-   * 还原
+  * 应用
+  * 还原
 * **阶段** — 工作流的三个阶段：
-   * 初步检查
-   * 修补
-   * 验证
+  * 初步检查
+  * 修补
+  * 验证
 * **环境** — 应用修补程序的Adobe Commerce云环境。
 
 ## 操作
@@ -53,10 +53,10 @@ ht-degree: 0%
 **发生的情况：**
 
 * **生产环境保护** （仅限生产环境）：
-   * 检查存储是否处于维护模式
-   * 验证cron作业是否已禁用
-   * 在不满足条件时阻止修补
-   * 满足条件时显示确认对话框
+  * 检查存储是否处于维护模式
+  * 验证cron作业是否已禁用
+  * 在不满足条件时阻止修补
+  * 满足条件时显示确认对话框
 * **修补程序验证** — 验证修补程序文件有效且兼容
 * **环境评估** — 检查环境准备情况和资源
 * **冲突检测** — 标识与现有代码的潜在冲突
@@ -92,6 +92,10 @@ ht-degree: 0%
 **Git操作** — 已提交更改并将其推送到集成环境分支
 
 **环境激活** — 激活集成环境以部署修补的代码
+
+>[!NOTE]
+>
+>如果您的项目使用外部GitHub存储库，[!DNL CAPS]将使用[[!DNL CAPS] GitHub应用程序](github-integration.md)自动处理身份验证。 无需其他凭据。
 
 #### 阶段2c：合并回目标环境
 
@@ -159,5 +163,6 @@ ht-degree: 0%
 
 * [CAPS介绍](intro.md)
 * [如何访问](access.md)
+* [GitHub集成](github-integration.md)
 * [最佳实践](best-practices.md)
 * [故障排除](troubleshooting.md)
