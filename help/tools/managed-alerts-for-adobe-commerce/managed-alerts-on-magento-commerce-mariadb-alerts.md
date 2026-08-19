@@ -6,7 +6,7 @@ role: Admin
 exl-id: d85af2e1-090c-4ad7-a898-3a3c4a5efe3b
 source-git-commit: 18c8e466bf15957b73cd3cddda8ff078ebeb23b0
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 ## 问题
 
-如果您已为Adobe Commerce[!DNL New Relic]注册了[个托管警报，并且一个或多个警报阈值已超出，则您将在](managed-alerts-for-magento-commerce.md)中收到托管警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了个托管警报，并且一个或多个警报阈值已超出，则您将在[!DNL New Relic]中收到托管警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 **做！**
 
@@ -35,12 +35,12 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 **不要！**
 
 * 运行索引器或其他cron，这可能会对MariaDB造成额外压力。
-* 执行任何主要管理任务(即Commerce管理、数据导入/导出)。
+* 执行任何主要管理任务（即Commerce管理、数据导入/导出）。
 * 清除缓存。
 
 ## 解决方案
 
-**DML查询(使用UPDATE、INSERT和DELETE修改数据库的查询)**
+**DML查询（使用UPDATE、INSERT和DELETE修改数据库的查询）**
 
 如果您收到“DML查询严重”警报，请从步骤1开始。 如果您收到“DML查询警告”警报，请从第二步开始。
 

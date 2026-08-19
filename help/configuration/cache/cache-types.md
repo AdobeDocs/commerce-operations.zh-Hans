@@ -1,6 +1,6 @@
 ---
 title: 配置缓存前端和类型
-description: 了解如何在Adobe Commerce中定义缓存前端并将它们与缓存类型相关联。 发现env.php和di.xml的配置语法。
+description: 了解如何在Adobe Commerce中定义缓存前端并将它们与缓存类型相关联。 探索env.php的配置语法。
 feature: Configuration, Cache
 exl-id: 67d4ba06-b48b-4e1a-a7a8-9830490dfe3d
 product_v2:
@@ -16,52 +16,58 @@ level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d3c3e48c7627b932d1e46a7d2a99fa77b8b75b4c
+source-git-commit: 3652976a8db3d0bb19ff9cd06adb3a7736c89539
 workflow-type: tm+mt
-source-wordcount: 486
+source-wordcount: 398
 ht-degree: 0%
 
 ---
 
 # 配置缓存前端和类型
 
-缓存前端是Commerce缓存类型和缓存存储后端之间的接口。 您可以定义多个前端，每个前端具有不同的后端设置，然后为每个前端分配特定的[缓存类型](../cli/manage-cache.md#clean-and-flush-cache-types)。
+缓存前端将Commerce缓存类型连接到缓存存储。 您可以定义多个前端，并为每个前端分配特定的缓存类型。
 
-使用此关系来确定每个缓存类型存储数据的位置：
+>[!BEGINSHADEBOX]
 
-`cache type` -> `cache frontend` -> `cache backend`
+使用以下关系来确定缓存类型存储其数据的位置：
 
-当您希望对不同类型的缓存数据使用不同的缓存后端或配置时，这将很有用。 例如，您可以将`full_page`缓存类型分配给使用专用Valkey数据库的`page_cache`前端，而其他缓存类型使用`default`前端。
+缓存类型→缓存前端→缓存后端
 
-{{cloud-cache-config}}
+>[!ENDSHADEBOX]
+
+有关Commerce缓存体系结构的概述，请参阅[缓存概述和配置选项](caching-overview.md)。
+
+>[!NOTE]
+>
+>对于云基础架构上的Adobe Commerce，请使用云指南中描述的[云部署配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml)。 不要直接编辑`app/etc/env.php`。 部署工具会生成此文件并会覆盖手动更改。
 
 ## 使用默认前端
 
-Commerce提供了一个适用于所有缓存类型的`default`缓存前端。 它通过实现[Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php)前端缓存来扩展[Zend_Cache_Core](https://framework.zend.com/manual/1.12/en/zend.cache.frontends.html)。
+Commerce提供了一个可供所有缓存类型使用的默认前端。
 
-在大多数情况下，您无需自定义前端。 您只需要配置后端。 请参阅[缓存后端选项](cache-options.md)。
+在大多数情况下，您无需定义自定义前端。 如果所有缓存类型都可以使用相同的后端和后端选项，请使用默认前端并配置其后端。 有关特定于后端的配置，请参阅[缓存后端选项](cache-options.md)。
 
-## 定义自定义缓存前端
+对于2.4.9之前的Adobe Commerce版本，默认前端使用旧版基于Zend的缓存实施。 `Magento\Framework\Cache\Core`前端扩展`Zend_Cache_Core`。 Adobe Commerce 2.4.9及更高版本使用现代化的Symfony实施。 有关特定于版本的指导，请参阅[缓存后端选项](cache-options.md)。
 
-以下步骤逐步说明如何将缓存前端与缓存类型相关联。
+## 定义自定义前端
 
-### 步骤1：定义缓存前端并分配缓存类型
+当一个或多个缓存类型需要与默认前端不同的后端设置时，请使用自定义缓存前端。
 
-要定义自定义缓存前端，请将配置添加到`app/etc/env.php`（覆盖`di.xml`）：
+对于内部部署，请在`app/etc/env.php`中定义前端。 然后为其分配一个或多个缓存类型：
 
 ```php?start_inline=1
 'cache' => [
     'frontend' => [
-        '<unique frontend id>' => [
-             <cache options>
+        '<frontend-id>' => [
+            'backend' => '<backend-type>',
+            'backend_options' => [
+                // Backend-specific options
+            ],
         ],
     ],
     'type' => [
-         <cache type 1> => [
-             'frontend' => '<unique frontend id>'
-        ],
-         <cache type 2> => [
-             'frontend' => '<unique frontend id>'
+        '<cache-type-id>' => [
+            'frontend' => '<frontend-id>',
         ],
     ],
 ],
@@ -69,54 +75,33 @@ Commerce提供了一个适用于所有缓存类型的`default`缓存前端。 �
 
 其中：
 
-- `<unique frontend id>` — 用于标识前端的唯一名称（例如，`default`、`page_cache`、`stale_cache_enabled`）
-- `<cache options>` — 此前端的后端类型和选项（请参阅[缓存选项](cache-options.md)）
-- `<cache type>` — 要分配给此前端的Commerce缓存类型（例如，`config`、`layout`、`block_html`、`full_page`）
-
->[!TIP]
->
->Adobe Commerce 2.4.9及更高版本在Symfony缓存实现中使用简化的后端类型名称，如`valkey`或`file`。 有关后端示例和特定于版本的指南，请参阅[缓存后端选项](cache-options.md)。
+- `<frontend-id>`是前端的唯一标识符，如`default`或`page_cache`。
+- `<backend-type>`标识前端使用的后端。 支持的值取决于Adobe Commerce版本和选定的后端。
+- `backend_options`包含选定后端的选项。
+- `<cache-type-id>`是Commerce缓存类型，如`config`、`layout`、`block_html`或`full_page`。
 
 
-### 步骤2：配置前端和后端选项
+有关后端类型、支持的选项和特定于发行版的配置示例，请参阅[缓存后端选项](cache-options.md)。
 
-您可以在`env.php`或`di.xml`中指定前端和后端缓存配置选项。 此任务是可选的。 如果不指定选项，Commerce将使用默认的前端和后端设置。
+## 将缓存类型分配给前端
 
-`env.php`示例：
+`type`配置将缓存类型映射到前端：
 
 ```php?start_inline=1
-'frontend' => <frontend_type>,
-'frontend_options' => [
-    <frontend_option> => <frontend_option_value>,
-    ...
-],
-'backend' => <backend_type>,
-'backend_options' => [
-    <backend_option> => <backend_option_value>,
-    ...
+'type' => [
+    'full_page' => [
+        'frontend' => 'page_cache',
+    ],
 ],
 ```
 
-其中：
-
-- `<frontend_type>` — 低级前端缓存类型。指定与`Zend\Cache\Core`兼容的类名。
-如果省略，则使用[Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php)。
-
-- `<frontend_option>`， `<frontend_option_value>` — Commerce框架在创建时作为关联数组传递给前端缓存的选项的名称和值。
-
-- `<backend_type>` — 低级后端缓存类型。 您可以指定：
-  - **现代Symfony缓存（2.4.9+，推荐）**：简化名称，如`valkey`或`file`
-  - **旧版（基于Zend）**：与实现`Zend_Cache_Backend_Interface`的`Zend_Cache_Backend`兼容的完整类名
-
-- `<backend_option>`， `<backend_option_value>` — Commerce框架在创建时作为关联数组传递给后端缓存的选项的名称和值。
+在此示例中，Commerce将`full_page`缓存类型分配给`page_cache`前端。 前端确定存储该缓存类型的后端配置。
 
 >[!NOTE]
 >
->**旧版与新版实施：**
->
->- **旧版（基于Zend）**： `'backend' => 'Magento\\Framework\\Cache\\Backend\\Redis'`
->- **新版（Symfony缓存）**： `'backend' => 'valkey'`适用于Commerce版本2.4.9+以及2.4.5至2.4.8发行行的当前修补程序版本，其中Valkey是受支持的缓存后端。
->
->现代Symfony缓存实现通过PSR-6合规性、Igbinary序列化、gzip压缩、Lua脚本和永久连接提供了更好的性能。
+>`full_page`键表示Commerce应用程序缓存类型。 通过Varnish或Fastly的HTTP全页缓存是一个单独的缓存层。 请参阅[缓存概述和配置选项](caching-overview.md)。
 
-有关基于Zend的选项，请参阅[Laminas文档](https://docs.laminas.dev/)。 有关Symfony缓存配置，请参阅本文档中的[Redis](redis-pg-cache.md)和[Valkey](valkey-pg-cache.md)文章。
+>[!MORELIKETHIS]
+>
+>- 用于性能优化的[二级缓存配置](level-two-cache.md)
+>- [管理缓存](../cli/manage-cache.md)
