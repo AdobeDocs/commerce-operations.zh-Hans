@@ -5,76 +5,77 @@ feature: Configuration, Cache
 exl-id: 6effa069-c043-411a-b161-01210be17391
 autotag-review: '2026-06-22T20:28:12.484Z'
 TQID: 'https://experienceleague.adobe.com/oDoZ1o2IWXsDTo84XQygWZYVmfVHWbk-CuqaU47laU4'
-product_v2:
-  - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
-  - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
+product_v2: id: b974b164-8a4e-43b8-a9e2-8e67ec131677id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 8c5dc151b00fd73e939c32fdc083fb0e8fc41dc8
 workflow-type: tm+mt
-source-wordcount: 593
+source-wordcount: 536
 ht-degree: 0%
 
 ---
 
 # 缓存概述和配置选项
 
-Adobe Commerce依靠多层缓存体系结构来减少数据库负载，最大程度地减少冗余处理，并加快页面交付。 在应用程序级别，Commerce维护十几种[缓存类型](../cli/manage-cache.md#clean-and-flush-cache-types)，如配置、布局、块HTML和集合，每种类型都可以路由到专用存储后端，如[Redis](config-redis.md)或[Valkey](config-valkey.md)。 对于内部部署中的全页缓存，Adobe强烈建议[Varnish](config-varnish.md)。 Commerce on Cloud部署使用Fastly。 其他层（如[L2缓存](level-two-cache.md)和[静态内容签名](static-content-signing.md)）可进一步提高高流量、多节点部署的性能。
+Adobe Commerce使用多个缓存层来减少重复处理，降低数据库负载，并缩短响应时间。 这些层在请求和资产投放的不同时间点运行：
 
-本指南将介绍每个缓存层的工作方式，并展示如何配置前端、后端和高级选项以满足您的部署要求。
+- **应用程序缓存**&#x200B;存储使用Commerce缓存类型生成或处理的数据。
+- **HTTP全页缓存**&#x200B;在到达Commerce应用程序之前存储完整的HTTP响应。
+- **二级缓存**&#x200B;可以在共享远程缓存存储之前的每个Web节点上添加本地缓存。
+- **静态内容缓存**&#x200B;允许浏览器重用CSS、JavaScript、图像和其他静态资源。
 
-## 缓存前端
+本页提供了这些层的概念性概述以及指向其配置指导的链接。 有关后端选项、实施详细信息和特定于版本的设置，请参阅[缓存后端选项和存储引用](cache-options.md)。
 
-缓存前端是Commerce和缓存存储后端之间的接口。 您可以定义多个前端，每个前端具有不同的后端设置，然后为每个前端分配特定的[缓存类型](../cli/manage-cache.md#clean-and-flush-cache-types)。 有关配置详细信息，请参阅[配置缓存前端和类型](cache-types.md)。
+## 缓存层
 
-## 缓存后端
+### 应用程序缓存
 
-缓存后端是缓存数据的底层存储机制。 Commerce提供默认的文件系统后端，但您可以配置其他后端，如Redis或Valkey，以提高性能和可扩展性。 有关可用选项的详细信息，请参阅[缓存后端选项](cache-options.md)。
+Commerce应用程序缓存的组织方式如下：
 
-## 使用Varnish的全页缓存
+>[!BEGINSHADEBOX]
 
-[Varnish缓存](config-varnish.md)是一个HTTP加速器，在内存中缓存完整的页。 对于本地生产环境，Adobe强烈建议使用Varnish，因为它比内置全页缓存快得多。 云环境上的Commerce使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/fastly)而不是Varnish进行全页缓存。
+缓存类型→缓存前端→缓存后端
+
+>[!ENDSHADEBOX]
+
+**缓存类型**&#x200B;标识要缓存的数据类型，如配置、布局、块HTML或全页内容。 **缓存前端**&#x200B;将一个或多个缓存类型连接到存储。 **缓存后端**&#x200B;提供存储实现。
+
+当需要单独的缓存设置或存储时，可以将不同的缓存类型分配给不同的前端。 有关配置详细信息，请参阅[配置缓存前端和类型](cache-types.md)。
+
+### 整页HTTP缓存
+
+HTTP全页缓存会在HTTP或CDN层存储完整的响应。 对于生产部署：
+
+- **Adobe Commerce本地**—Adobe建议使用[Varnish](config-varnish.md)进行全页缓存。 Varnish在Web服务器前面充当反向代理。
+- 云基础架构上的&#x200B;**Adobe Commerce**&#x200B;使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly){target="_blank"}作为边缘缓存层和全页缓存层。 云基础架构不使用单独管理的清漆服务。
 
 >[!NOTE]
 >
->清漆作为Web服务器前面的反向代理运行，不需要更改Commerce缓存后端配置。
+>更改Commerce应用程序缓存后端不会配置Varnish或Fastly。 全页HTTP缓存与低级应用程序缓存分开配置和管理。
 
-## L2（两级）缓存
+### L2缓存
 
-[二级缓存](level-two-cache.md)使用远程缓存（Redis或Valkey）作为真实来源时，将缓存数据本地存储在每个Web节点上。 这可以减少Web节点与远程缓存之间的网络流量，从而提高高流量站点的性能。
+二级缓存（即两级缓存）在每个Commerce Web节点上添加一个本地缓存，同时保留共享的远程缓存存储。 频繁访问的数据可以在本地提供，从而减少在多节点部署中与远程缓存的通信。
 
-## 静态内容缓存
+L2配置和支持的实施因Commerce版本和部署类型而异。 有关详细信息，请参阅[二级缓存配置](level-two-cache.md)。
 
-[静态内容签名](static-content-signing.md)通过在文件URL中嵌入部署版本，使静态资源（CSS、JavaScript、图像）的浏览器缓存失效。
+### 静态内容缓存
 
-## 缓存术语
+Commerce可以通过向静态资源（如CSS、JavaScript和图像）的URL添加部署版本来改进其浏览器缓存。 内容更改时，URL会发生变化，导致浏览器请求新资源，而不是使用旧版缓存副本。
 
-[!DNL Commerce]使用以下缓存术语：
+## 特定于部署的配置
 
-- **前端** — 缓存存储的接口或网关，由[Magento\Framework\Cache\Frontend](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Cache/Frontend)实现。
-- **缓存类型** — 随[!DNL Commerce]提供的内置类型之一（如`config`、`layout`、`block_html`、`full_page`）或[自定义类型](https://developer.adobe.com/commerce/php/development/cache/partial/cache-type/)。
-- **后端** — 指定由[Magento\Framework\Cache\Backend](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Cache/Backend)实现的[缓存存储](https://framework.zend.com/manual/1.12/en/zend.cache.backends.html)的详细信息。
-- **二级后端** — 将缓存记录存储在两个后端中：本地（快速）缓存和远程（共享）缓存。 请参阅[二级缓存配置](level-two-cache.md)。
+以下配置任务因部署类型而异。
 
-## 配置选项
+| 任务 | 内部部署 | 云基础架构 |
+| --- | --- | --- |
+| 应用程序缓存后端 | [缓存后端选项和存储引用](cache-options.md) | [Valkey和Redis服务配置的最佳实践](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md) |
+| HTTP全页缓存 | [配置清漆](config-varnish.md) | [Fastly服务概述](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly) |
 
-对于前端到类型的映射和缓存配置语法：
+以下任务适用于所有部署类型：
 
-**本地** — 缓存配置存储在两个文件中：
-
-- `<magento_root>/app/etc/di.xml` — 全局依赖项注入配置。 修改此文件以更改提供的`default`缓存前端。
-- `<magento_root>/app/etc/env.php` — 特定于环境的配置。 修改此文件以配置自定义缓存前端。 此文件覆盖`di.xml`中的等效配置。
-
-有关详细信息，请参阅：
-
-- [配置缓存前端和类型](cache-types.md) — 将缓存前端与特定缓存类型相关联
-- [缓存后端选项](cache-options.md) — 后端选项引用
-
-云端上的&#x200B;**Adobe Commerce** — 使用`.magento.env.yaml`中的`CACHE_CONFIGURATION`配置缓存。 查看[Redis和Valkey服务配置的最佳实践](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md)。
+- **配置缓存类型和前端** [配置缓存前端和类型](cache-types.md)以将缓存类型与缓存前端相关联。
+- **配置二级缓存**—[二级缓存配置](level-two-cache.md)。
+- **为静态内容配置浏览器缓存失效**—[静态内容签名和浏览器缓存失效](static-content-signing.md)。
