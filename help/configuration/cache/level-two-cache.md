@@ -3,7 +3,7 @@ title: 用于性能优化的二级缓存配置
 description: 了解如何在Adobe Commerce中配置二级缓存以减少网络流量并提高性能。 了解旧版和Symfony实施选项。
 feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce内部部署项目。"
 TQID: 'https://experienceleague.adobe.com/7vswBqyn9UZLmaeirgPRZ4xEQH5F66XUEtY5hPkz9NY'
 product_v2:
   - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
@@ -361,7 +361,7 @@ Adobe不建议为`default`缓存类型启用`use_stale_cache`选项。
 
 >[!NOTE]
 >
->这些改进适用于使用`symfony_l2`的Adobe Commerce 2.4.9部署，并可在修补程序ACP2E-5132中找到。 对于本地Adobe Commerce，请使用Quality Patches Tool (QPT)应用此修补程序。 对于Adobe Commerce on Cloud，此修补程序通过[Commerce云修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches#latest)自动交付。
+>这些改进适用于使用`symfony_l2`的Adobe Commerce 2.4.9部署，并可在修补程序ACP2E-5132中找到。 对于本地Adobe Commerce，请使用Quality Patches Tool (QPT)应用此修补程序。 对于Adobe Commerce on Cloud，此修补程序通过[Commerce云修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches#latest)自动交付。
 
 最新的更新提高了Symfony L2缓存的可扩展性，减少了不必要的文件系统I/O，并增强了缓存一致性和可靠性。
 

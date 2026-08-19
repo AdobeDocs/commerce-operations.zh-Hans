@@ -3,7 +3,7 @@ title: 缓存后端选项和存储参考
 description: 了解Adobe Commerce中的缓存后端选项，包括文件系统、Redis、Valkey和数据库存储。 探索传统和现代方法。
 feature: Configuration, Cache
 exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T18:37:32.504Z'
 TQID: 'https://experienceleague.adobe.com/m7eUBNrt8UF43iJq9Tpl0Y1WcmR-dlt7Z4PoHvXVNnA'
 product_v2:
@@ -31,13 +31,13 @@ ht-degree: 0%
 >
 >此页面记录本地`app/etc/env.php`配置。
 >
->对于[!DNL Adobe Commerce on Cloud]项目，`ece-tools`包在部署期间根据`.magento.env.yaml`中的部署变量配置生成结果`app/etc/env.php`配置。 您不编辑`env.php`文件。  查看[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)和[部署变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)。
+>对于[!DNL Adobe Commerce on Cloud]项目，`ece-tools`包在部署期间根据`.magento.env.yaml`中的部署变量配置生成结果`app/etc/env.php`配置。 您不编辑`env.php`文件。  查看[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)和[部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)。
 
 Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的访问。 Commerce支持多种缓存后端和策略，每种后端和策略都适用于不同的用例。 本页介绍可用的后端及其差异。
 
 >[!NOTE]
 >
->[Varnish](config-varnish-install.md)在HTTP级别处理内部部署的整页缓存。 [Fastly服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)为云部署处理它。 这两种解决方案都未使用低级缓存后端。
+>[Varnish](config-varnish-install.md)在HTTP级别处理内部部署的整页缓存。 [Fastly服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly)为云部署处理它。 这两种解决方案都未使用低级缓存后端。
 
 ## 后端缓存选项
 
@@ -158,10 +158,10 @@ Commerce支持直接缓存后端和L2缓存。 直接后端选择缓存存储。
 
 有关内部部署配置，请参阅[二级缓存配置](level-two-cache.md)。
 
-对于云项目，请通过[部署变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy){target="_blank"}中描述的部署变量配置L2缓存。
+对于云项目，请通过[部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy){target="_blank"}中描述的部署变量配置L2缓存。
 
 #### 二级缓存配置
 
 - 有关&#x200B;**[!DNL Adobe Commerce on-premises]**&#x200B;配置详细信息，请参阅[二级缓存配置](level-two-cache.md)。
 
-- 对于&#x200B;**[!DNL Adobe Commerce on Cloud]**，请通过相应的部署变量配置L2缓存，而不是直接编辑`app/etc/env.php`。 请参阅&#x200B;_云上的Adobe Commerce_&#x200B;文档中的[部署变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy){target="_blank"}。
+- 对于&#x200B;**[!DNL Adobe Commerce on Cloud]**，请通过相应的部署变量配置L2缓存，而不是直接编辑`app/etc/env.php`。 请参阅&#x200B;_云上的Adobe Commerce_&#x200B;文档中的[部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy){target="_blank"}。

@@ -56,7 +56,7 @@ Commerce应用程序缓存的组织方式如下：
 HTTP全页缓存会在HTTP或CDN层存储完整的响应。 对于生产部署：
 
 - **Adobe Commerce本地**—Adobe建议使用[Varnish](config-varnish.md)进行全页缓存。 Varnish在Web服务器前面充当反向代理。
-- 云基础架构上的&#x200B;**Adobe Commerce**&#x200B;使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly){target="_blank"}作为边缘缓存层和全页缓存层。 云基础架构不使用单独管理的清漆服务。
+- 云基础架构上的&#x200B;**Adobe Commerce**&#x200B;使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly){target="_blank"}作为边缘缓存层和全页缓存层。 云基础架构不使用单独管理的清漆服务。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Commerce可以通过向静态资源（如CSS、JavaScript和图像）的URL添�
 | 任务 | 内部部署 | 云基础架构 |
 | --- | --- | --- |
 | 应用程序缓存后端 | [缓存后端选项和存储引用](cache-options.md) | [Valkey和Redis服务配置的最佳实践](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md) |
-| HTTP全页缓存 | [配置清漆](config-varnish.md) | [Fastly服务概述](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly) |
+| HTTP全页缓存 | [配置清漆](config-varnish.md) | [Fastly服务概述](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly) |
 
 以下任务适用于所有部署类型：
 
