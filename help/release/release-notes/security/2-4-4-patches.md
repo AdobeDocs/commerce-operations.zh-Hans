@@ -203,7 +203,7 @@ Adobe Commerce 2.4.4-p5安全版本为以前版本中发现的漏洞提供了安
 
 ### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本[&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
 
 ## 2.4.4-p4
 
@@ -213,7 +213,7 @@ Adobe Commerce 2.4.4-p4安全版本为以前版本中发现的漏洞提供了安
 
 ### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本[&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
 
 ### 高亮
 

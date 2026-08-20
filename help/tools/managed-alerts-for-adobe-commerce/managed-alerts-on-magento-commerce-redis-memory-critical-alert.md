@@ -43,13 +43,13 @@ ht-degree: 0%
 
 **由于这是一个严重警报，强烈建议您在尝试解决问题之前完成步骤1（从步骤2开始）。**
 
-1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅Commerce支持知识库中的[跟踪您的支持工单](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已经收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
+1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅Commerce支持知识库中的[跟踪您的支持工单](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已经收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
 
    * 联系原因：选择&#x200B;**[!UICONTROL New Relic CRITICAL alert received]**。
    * 警报的说明。
    * [[!DNL New Relic] 事件链接](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/view-violation-event-details-incidents/)。 这包含在您的[Adobe Commerce托管警报](managed-alerts-for-magento-commerce.md)中。
 
-1. 如果不存在支持票证，请转到[one.newrelic.com](https://login.newrelic.com) > **[!UICONTROL Infrastructure]** > **[!UICONTROL Third-party services]**&#x200B;页面检查[!DNL Redis]已用内存是否正在增加或减少，然后选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
+1. 如果不存在支持票证，请转到[one.newrelic.com](https://login.newrelic.com) > **[!UICONTROL Infrastructure]** > **[!UICONTROL Third-party services]**&#x200B;页面检查[!DNL Redis]已用内存是否正在增加或减少，然后选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
 1. 如果您无法确定[!DNL Redis]内存消耗增加的原因，请查看近期趋势以确定近期代码部署或配置更改（例如，新客户组和目录的大幅更改）中存在的问题。 建议您查看过去七天的活动，以了解代码部署或更改中的任何关联。
 1. 检查第三方扩展是否存在行为不端：
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 1. 如果上述步骤不能帮助您识别或排除问题的根源，请考虑启用L2缓存以减少应用程序与[!DNL Redis]之间的网络流量。 有关什么是L2缓存的一般信息，请参阅《Commerce配置指南》中的[Adobe Commerce应用程序中的L2缓存](/help/configuration/cache/level-two-cache.md)。 要为云基础架构启用二级缓存，请尝试以下操作：
 
    * 如果版本低于2002.1.2，请升级ECE工具。
-   * 使用[使用REDIS\_BACKEND变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)并更新`.magento.env.yaml`文件来配置二级缓存：
+   * 使用[使用REDIS\_BACKEND变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)并更新`.magento.env.yaml`文件来配置二级缓存：
 
    ```yaml
    stage:

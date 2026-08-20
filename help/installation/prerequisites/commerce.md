@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >由于策略更改，Adobe Commerce代码库现在只能通过Composer分发。 使用编辑器下载列出的任何Adobe Commerce版本，因为代码库在下载部分中不再可用。
 >
->有关详细信息，请参阅[无法访问云基础架构上的Adobe Commerce上的帐单和下载代码库](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26611)
+>有关详细信息，请参阅[无法访问云基础架构上的Adobe Commerce上的帐单和下载代码库](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-26611)
 
 请参阅下表，了解如何开始安装Adobe Commerce。
 

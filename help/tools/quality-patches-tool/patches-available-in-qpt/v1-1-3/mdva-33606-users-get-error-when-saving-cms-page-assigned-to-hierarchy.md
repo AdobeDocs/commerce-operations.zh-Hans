@@ -1,6 +1,6 @@
 ---
 title: MDVA-33606：保存分配给层次结构的CMS页面时，用户收到错误
-description: MDVA-33606修补程序解决了在保存分配给层次结构树的CMS页面时，用户收到*发现唯一约束冲突*错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-33606。 请注意，Adobe Commerce 2.4.3中已修复此问题。
+description: MDVA-33606修补程序解决了在保存分配给层次结构树的CMS页面时，用户收到*发现唯一约束冲突*错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-33606。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: CMS
 role: Admin
 exl-id: 19aaa13f-7ee6-49bc-b1d9-c288dc93b951
@@ -64,7 +64,7 @@ MDVA-33606修补程序解决了在保存分配给层次结构树的CMS页面时�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

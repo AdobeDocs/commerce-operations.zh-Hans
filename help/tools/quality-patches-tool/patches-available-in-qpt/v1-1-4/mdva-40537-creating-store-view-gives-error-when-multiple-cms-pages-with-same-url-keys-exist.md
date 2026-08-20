@@ -1,6 +1,6 @@
 ---
 title: MDVA-40537：当多个CMS页面具有相同的URL键时，创建存储视图会出错。
-description: MDVA-40537修补程序修复了以下问题：如果多个CMS页面具有相同的URL密钥，则用户在创建商店视图时会收到错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40537。 请注意，Adobe Commerce 2.4.1中已修复此问题。
+description: MDVA-40537修补程序修复了以下问题：如果多个CMS页面具有相同的URL密钥，则用户在创建商店视图时会收到错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40537。 请注意，Adobe Commerce 2.4.1中已修复此问题。
 feature: CMS
 role: Admin
 exl-id: 10c3d935-dbc9-4033-85a1-041b8af74d78
@@ -90,7 +90,7 @@ Exception message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplica
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
@@ -99,4 +99,4 @@ Exception message: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplica
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅QPT[&#128279;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中可用的修补程序部分。
+有关QPT中其他可用修补程序的信息，请参阅QPT[&#128279;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)中可用的修补程序部分。

@@ -42,11 +42,11 @@ ht-degree: 1%
     <td>配置站点、商店和存储视图以最大限度地提高站点性能。</td>
   </tr>
   <tr>
-    <td><a href="https://business.adobe.com/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">常见配置问题</a></td>
+    <td><a href="https://business.adobe.com/cn/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">常见配置问题</a></td>
     <td>修复和防止Adobe Commerce站点最常见的五个配置问题。</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html">缓存</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html?lang=zh-Hans">缓存</a></td>
     <td>使用缓存管理工具提高站点的性能。</td>
   </tr>
   <tr>
@@ -76,7 +76,7 @@ ht-degree: 1%
     <td colspan="2"><em>服务配置</em></td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration">设置Fastly</a></td>
+    <td><a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration">设置Fastly</a></td>
     <td>在云基础架构项目中为Adobe Commerce配置Fastly服务。</td>
   </tr>
   <tr>

@@ -1,6 +1,6 @@
 ---
 title: MDVA-41399：如果客户将产品添加到愿望清单，则无法访问管理购物车
-description: MDVA-41399修补程序解决了当客户将产品添加到愿望清单时，管理员用户无法访问“管理购物车”页面的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-41399。 请注意，Adobe Commerce 2.4.2中已修复此问题。
+description: MDVA-41399修补程序解决了当客户将产品添加到愿望清单时，管理员用户无法访问“管理购物车”页面的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-41399。 请注意，Adobe Commerce 2.4.2中已修复此问题。
 feature: Orders, Products, Shopping Cart
 role: Admin
 exl-id: 81a128b5-0c38-4f8f-b297-1f264952d431
@@ -59,7 +59,7 @@ MDVA-41399修补程序解决了当客户将产品添加到愿望清单时，管�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

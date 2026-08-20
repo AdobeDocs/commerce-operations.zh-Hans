@@ -1,6 +1,6 @@
 ---
 title: MDVA-42410：优惠券报表仅显示默认基本货币
-description: MDVA-42410修补程序修复了优惠券报表仅显示基础货币的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.12后，即可使用此修补程序。 修补程序ID为MDVA-42410。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
+description: MDVA-42410修补程序修复了优惠券报表仅显示基础货币的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.12后，即可使用此修补程序。 修补程序ID为MDVA-42410。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Orders
 role: Admin
 exl-id: 97b4d9cf-12fd-4659-ad71-914c8422da37
@@ -67,4 +67,4 @@ MDVA-42410修补程序修复了优惠券报表仅显示基础货币的问题。 
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

@@ -21,7 +21,7 @@ Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p
 
 >[!NOTE]
 >
->如果您的Commerce项目部署在云上，则全页缓存将使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)而不是Varnish。 本节中的主题仅适用于内部安装。
+>如果您的Commerce项目部署在云上，则全页缓存将使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly)而不是Varnish。 本节中的主题仅适用于内部安装。
 
 ## Adobe服务版本支持 {#supported-versions-only}
 
@@ -29,7 +29,7 @@ Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p
 >
 >Adobe仅支持运行所有依赖项和服务的受支持版本的部署。 这适用于：
 >
->* **Platform services**（包括但不限于PHP、MariaDB/MySQL、Redis、Elasticsearch/OpenSearch、RabbitMQ和Nginx） — 商家必须保持与其部署的Adobe Commerce版本兼容的版本。 请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
+>* **Platform services**（包括但不限于PHP、MariaDB/MySQL、Redis、Elasticsearch/OpenSearch、RabbitMQ和Nginx） — 商家必须保持与其部署的Adobe Commerce版本兼容的版本。 请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)。
 >* **Commerce Services扩展**（包括但不限于Live Search、产品推荐和支付服务） — 仅支持最新发布的版本。
 >* **自定义扩展和第三方集成** — 商家负责确保这些集成保留在供应商支持的版本上。
 >
@@ -65,7 +65,7 @@ Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p
 
 >[!NOTE]
 >
->安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)。
+>安装此安全修补程序后，Adobe Commerce B2B商家还必须更新到最新的兼容B2B安全修补程序版本。 请参阅[B2B发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes)。
 
 ## 仅限Adobe Commerce {#ee-only}
 
@@ -119,7 +119,7 @@ Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p
 
 >[!IMPORTANT]
 >
->Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
+>Adobe不支持使用此方法应用Adobe提供的官方修补程序。 使用以下方法，您将自行承担相关风险。 要应用官方修补程序，请使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}。 在部署任何自定义修补程序之前，请始终执行全面的测试。
 
 ## 2025年10月安全补丁补丁补丁补丁补丁补丁补丁补丁补丁包 {#oct-2025-backports}
 
@@ -150,7 +150,7 @@ Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p
 
 **修补程序**：
 
-提供了修补程序。 请参阅知识库中的[启用JS缩小和捆绑时，签出失败](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997)以了解修补程序详细信息。
+提供了修补程序。 请参阅知识库中的[启用JS缩小和捆绑时，签出失败](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27997)以了解修补程序详细信息。
 
 ## Valkey Redis CLI说明 {#valkey-redis-cli-note}
 

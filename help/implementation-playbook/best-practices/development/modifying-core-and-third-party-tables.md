@@ -73,7 +73,7 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 
    例如： `app/code/YourCompany/Customer`
 
-1. 创建相应的文件以启用模块（请参阅[创建模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}）。
+1. 创建相应的文件以启用模块（请参阅[创建模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=zh-Hans){target="_blank"}）。
 
 1. 在`etc`文件夹中创建名为`db_schema.xml`的文件，并进行适当的更改。
 
@@ -155,7 +155,7 @@ MariaDB [magento]> SELECT DISTINCT TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WH
 
 ## 查找大型MySQL表
 
-要识别大型表，请按照[连接到数据库](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/mysql#connect-to-the-database)文章中的说明连接到数据库，然后运行以下命令。 将`project_id`用于生产环境。 对于暂存环境，请使用`[project_id]_stg`，`[project_id]_stg2`。
+要识别大型表，请按照[连接到数据库](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/mysql#connect-to-the-database)文章中的说明连接到数据库，然后运行以下命令。 将`project_id`用于生产环境。 对于暂存环境，请使用`[project_id]_stg`，`[project_id]_stg2`。
 
 ```sql
 SELECT TABLE_NAME AS `Table`,

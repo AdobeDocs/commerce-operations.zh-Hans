@@ -32,9 +32,9 @@ ht-degree: 0%
 
 ## 启用和配置Fastly图像优化
 
-为Adobe Commerce Cloud项目设置Fastly服务后，请参阅[Fastly图像优化](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly-image-optimization)以获取有关启用和配置图像优化的说明。
+为Adobe Commerce Cloud项目设置Fastly服务后，请参阅[Fastly图像优化](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly-image-optimization)以获取有关启用和配置图像优化的说明。
 
 ## 其他信息
 
-- [设置Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)
-- [优化不佳的图像可能导致性能问题](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow)
+- [设置Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)
+- [优化不佳的图像可能导致性能问题](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow)
