@@ -81,7 +81,7 @@ ht-degree: 0%
 
 高流量网站经常面临数据库瓶颈，主要原因是依赖单个MySQL服务器。 通过实施数据库群集，您可以解决这些瓶颈问题。数据库群集是一种分布式体系结构，可提高性能并确保高可用性。
 
-通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在云基础架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-architecture)上部署的[Adobe Commerce项目中。
+通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在云基础架构[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-architecture)上部署的Adobe Commerce项目中。
 
 #### 优化MySQL查询
 
@@ -113,4 +113,4 @@ Cron作业在处理站点后台任务（如报告生成和产品索引）时起�
 - _Commerce Admin Systems用户指南_&#x200B;中的[Cron（计划任务）](https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cron.html)
 - [应用程序配置 — crons属性](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property) （云基础架构）
 - [配置并运行crons](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)（本地）
-- Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html)的[观察结果（请参阅[!UICONTROL Cron]和[!UICONTROL MySQL]选项卡。）
+- Adobe Commerce[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html)的观察结果（请参阅[!UICONTROL Cron]和[!UICONTROL MySQL]选项卡。）
