@@ -4,10 +4,10 @@ description: 了解优化图像的步骤，并使用Fastly图像优化来优化A
 role: Developer, Admin
 feature: Best Practices
 exl-id: ada8b987-97ed-4232-9e1b-7e0a791a0807
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 1%
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
@@ -32,9 +32,9 @@ ht-degree: 1%
 
 ## 启用和配置Fastly图像优化
 
-为Adobe Commerce Cloud项目设置Fastly服务后，请参阅[Fastly图像优化](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization)以获取有关启用和配置图像优化的说明。
+为Adobe Commerce Cloud项目设置Fastly服务后，请参阅[Fastly图像优化](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly-image-optimization)以获取有关启用和配置图像优化的说明。
 
 ## 其他信息
 
-- [设置Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration)
-- [优化不佳的图像可能导致性能问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html?lang=zh-Hans)
+- [设置Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)
+- [优化不佳的图像可能导致性能问题](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow)

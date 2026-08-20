@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8be75548a939008057fb5fdf37ba5b5a0345f6d4
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
@@ -15,5 +15,5 @@ ht-degree: 0%
 >
 >另请参阅：
 >
->- [软件生命周期策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy) — 支持终止日期、扩展支持以及仅限安全的过渡条款
->- [云版本升级实施策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/version-upgrade-enforcement-policy) — 实施日期和所需操作
+>- [软件生命周期策略](/help/release/lifecycle-policy.md) — 支持终止日期、扩展支持以及仅限安全的过渡条款
+>- [云版本升级实施策略](/help/release/version-upgrade-enforcement-policy.md) — 实施日期和所需操作

@@ -4,7 +4,7 @@ description: 了解如何在云基础架构上部署Adobe Commerce时配置数�
 role: Developer, Admin
 feature: Best Practices
 exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 0%
@@ -37,7 +37,7 @@ SELECT table_schema, CONCAT(ROUND((index_length+data_length)/1024/1024),'MB')
 
 ### 将存储引擎更改为InnoDB
 
-在声明表的`db_schema.xml`文件中，将相应`table`节点的`engine`属性值设置为`innodb`。 有关参考，请参阅我们的开发人员文档中的[配置声明性架构>表节点](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/)。
+在声明表的`db_schema.xml`文件中，将相应`table`节点的`engine`属性值设置为`innodb`。 有关参考，请参阅我们的开发人员文档中的[配置声明性架构>表节点](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration)。
 
 声明性方案在Adobe Commerce中引入，用于云基础架构版本2.3。
 
@@ -59,9 +59,9 @@ Adobe建议您在云基础架构项目中始终为您的Adobe Commerce设置Elas
 
 有关配置说明，请参阅云上Adobe Commerce的《开发人员指南》 ：
 
-- [设置OpenSearch服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/opensearch)
+- [设置OpenSearch服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch)
 
-- [设置Elasticsearch服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/elasticsearch)
+- [设置Elasticsearch服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/elasticsearch)
 
 ## 避免自定义触发器
 
@@ -76,14 +76,14 @@ Adobe建议您在云基础架构项目中始终为您的Adobe Commerce设置Elas
 
 ## 将[!DNL ECE-Tools]升级到版本2002.0.21或更高版本 {#ece-tools-version}
 
-要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅我们的开发人员文档中的[更新`ece-tools`版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package)。
+要避免cron死锁的潜在问题，请将ECE-Tools升级到2002.0.21或更高版本。 有关说明，请参阅我们的开发人员文档中的[更新`ece-tools`版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。
 
 ## 安全切换索引器模式
 
 <!--This best practice might belong in the Maintenance phase. Database lock prevention might be consolidated under a single heading-->
 
 切换索引器将生成[!DNL data definition language] (DDL)语句以创建可能导致数据库锁定的触发器。 您可以在更改配置之前，通过将网站置于维护模式并禁用cron作业来防止出现此问题。
-有关说明，请参阅*Adobe Commerce配置指南*&#x200B;中的[配置索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hans#configure-indexers-1)。
+有关说明，请参阅*Adobe Commerce配置指南*&#x200B;中的[配置索引器](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1)。
 
 ## 不要在生产环境中运行DDL语句
 
@@ -95,7 +95,7 @@ Adobe建议您在云基础架构项目中始终为您的Adobe Commerce设置Elas
 
 从管理员处启用订单存档，以随着订单数据的增长而减少销售表所需的空间。 存档可节省MySQL磁盘空间并提高签出性能。
 
-请参阅Adobe Commerce商家文档中的[启用存档](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html?lang=zh-Hans)。
+请参阅Adobe Commerce商家文档中的[启用存档](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html)。
 
 ## 其他信息
 

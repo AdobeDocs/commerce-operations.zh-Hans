@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目规划阶段的实施最佳实践。
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: 28ca422543728123edcaa41dedca6e3cc53536b6
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '465'
 ht-degree: 1%
 
 ---
@@ -42,15 +42,15 @@ ht-degree: 1%
     <td>配置站点、商店和存储视图以最大限度地提高站点性能。</td>
   </tr>
   <tr>
-    <td><a href="https://business.adobe.com/cn/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">常见配置问题</a></td>
+    <td><a href="https://business.adobe.com/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">常见配置问题</a></td>
     <td>修复和防止Adobe Commerce站点最常见的五个配置问题。</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html?lang=zh-Hans">缓存</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html">缓存</a></td>
     <td>使用缓存管理工具提高站点的性能。</td>
   </tr>
   <tr>
-    <td><a href="https://developer.adobe.com/commerce/php/development/cache/page/public-content/">全页缓存</a></td>
+    <td><a href="https://developer.adobe.com/commerce/php/development/cache/page/public-content">全页缓存</a></td>
     <td>了解在Adobe Commerce扩展中实施缓存时如何使用公共数据。</td>
   </tr>
   <tr>
@@ -76,11 +76,11 @@ ht-degree: 1%
     <td colspan="2"><em>服务配置</em></td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=zh-Hans">设置Fastly</a></td>
+    <td><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration">设置Fastly</a></td>
     <td>在云基础架构项目中为Adobe Commerce配置Fastly服务。</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html?lang=zh-Hans">为New Relic配置通知渠道</a></td>
+    <td><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic">为New Relic配置通知渠道</a></td>
     <td>访问您的New Relic功能板并分析来自Adobe Commerce的云基础架构项目数据。</td>
   </tr>
   <tr>

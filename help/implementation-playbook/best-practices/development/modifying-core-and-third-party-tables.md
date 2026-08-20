@@ -5,9 +5,9 @@ role: Developer
 feature: Best Practices
 last-substantial-update: 2022-11-15T00:00:00Z
 exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1591'
 ht-degree: 0%
 
 ---
@@ -38,11 +38,11 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 
 例如，您可以`stitch`将外部数据库（可能已停用的旧Magento 1站点）中的旧订单合并起来。 然后使用GraphQL网格，将它们显示为客户订单历史记录的一部分。 这些旧订单可以与当前[!DNL Adobe Commerce]环境中的订单合并。
 
-有关将API网格用于GraphQL的更多信息，请参阅[什么是API网格](https://developer.adobe.com/graphql-mesh-gateway/gateway/overview/){target="_blank"})和[GraphQL网格网关](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}。
+有关将API网格用于GraphQL的更多信息，请参阅[什么是API网格](https://developer.adobe.com/graphql-mesh-gateway/mesh/){target="_blank"})和[GraphQL网格网关](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}。
 
 ## 使用扩展属性迁移旧数据
 
-如果您确定旧数据需要迁移，或者新数据需要保存在[!DNL Adobe Commerce]中，Adobe建议使用[扩展属性](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target="_blank"}。 使用扩展属性保存其他数据具有以下优势：
+如果您确定旧数据需要迁移，或者新数据需要保存在[!DNL Adobe Commerce]中，Adobe建议使用[扩展属性](https://developer.adobe.com/commerce/php/development/components/add-attributes){target="_blank"}。 使用扩展属性保存其他数据具有以下优势：
 
 - 您可以控制保留的数据和数据库结构，从而确保以正确的列类型和正确的索引保存数据。
 - [!DNL Adobe Commerce]中的大多数实体都支持使用扩展属性。
@@ -54,7 +54,7 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 
 作为开发人员，务必考虑使用[!DNL Adobe Commerce]环境之外的工具，例如GraphQL mesh和Adobe App Builder。 这些工具可以帮助您保留对数据的访问权限，但对核心商务应用程序或其底层数据库表没有影响。 通过这种方法，您可以通过API公开数据。 然后，向App Builder配置添加数据源。 使用GraphQL Mesh，您可以合并这些数据源并生成单个响应，如[旧数据](#legacy-data)中所述。
 
-有关GraphQL Mesh的其他详细信息，请参阅[GraphQL Mesh网关](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}。 有关Adobe App Builder的信息，请参阅[App Builder简介](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=zh-Hans){target="_blank"}。
+有关GraphQL Mesh的其他详细信息，请参阅[GraphQL Mesh网关](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}。 有关Adobe App Builder的信息，请参阅[App Builder简介](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html){target="_blank"}。
 
 ## 修改核心表或第三方表
 
@@ -73,11 +73,11 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 
    例如： `app/code/YourCompany/Customer`
 
-1. 创建相应的文件以启用模块（请参阅[创建模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=zh-Hans){target="_blank"}）。
+1. 创建相应的文件以启用模块（请参阅[创建模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}）。
 
-1. 在`db_schema.xml`文件夹中创建名为`etc`的文件，并进行适当的更改。
+1. 在`etc`文件夹中创建名为`db_schema.xml`的文件，并进行适当的更改。
 
-   如果适用，请生成`db_schema_whitelist.json`文件。 有关详细信息，请参阅[声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/){target="_blank"}。
+   如果适用，请生成`db_schema_whitelist.json`文件。 有关详细信息，请参阅[声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration){target="_blank"}。
 
 ### 潜在影响
 
@@ -97,19 +97,19 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 
 - 使用`additional_data`字段的优势
 
-   - 无需其他字段，这样可保持列数最小。 这在销售流程中很有用，因为销售流程中已涉及许多表。 最好不要给这个本已复杂的过程增加更多的复杂性。 该方法能满足多种使用场合，但不是全部。
+  - 无需其他字段，这样可保持列数最小。 这在销售流程中很有用，因为销售流程中已涉及许多表。 最好不要给这个本已复杂的过程增加更多的复杂性。 该方法能满足多种使用场合，但不是全部。
 
 - 缺点
 
-   - 此方法仅适用于存储只读数据。 出现此问题是因为需要取消序列化我们的代码才能修改和构建对象以添加依赖项或数据库关系。
+  - 此方法仅适用于存储只读数据。 出现此问题是因为需要取消序列化我们的代码才能修改和构建对象以添加依赖项或数据库关系。
 
-   - 使用数据库操作查找这些字段很困难。 使用此方法搜索时速度较慢。
+  - 使用数据库操作查找这些字段很困难。 使用此方法搜索时速度较慢。
 
-   - 在`additional_data`列中存储数据时必须格外小心，以免触发序列化或取消序列化操作，这些操作可能会通过创建无效的JSON来中断代码，或在运行时导致读取错误。
+  - 在`additional_data`列中存储数据时必须格外小心，以免触发序列化或取消序列化操作，这些操作可能会通过创建无效的JSON来中断代码，或在运行时导致读取错误。
 
-   - 这些字段必须在代码中明确声明，以便开发人员可以轻松找到它们。
+  - 这些字段必须在代码中明确声明，以便开发人员可以轻松找到它们。
 
-   - 其他可能发生且很难诊断的问题。 例如，对于某些本机PHP函数，如果您不使用核心应用程序提供的[!DNL Adobe Commerce]包装器方法，则转换数据的结束结果可能与预期格式不同。 应始终使用包装器函数以确保保存或检索的数据的一致性和可预测性。
+  - 其他可能发生且很难诊断的问题。 例如，对于某些本机PHP函数，如果您不使用核心应用程序提供的[!DNL Adobe Commerce]包装器方法，则转换数据的结束结果可能与预期格式不同。 应始终使用包装器函数以确保保存或检索的数据的一致性和可预测性。
 
 以下是具有`additional_data`列的列和结构的表的示例。
 
@@ -155,7 +155,7 @@ MariaDB [magento]> SELECT DISTINCT TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WH
 
 ## 查找大型MySQL表
 
-要识别大型表，请按照[连接到数据库](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/mysql#connect-to-the-database)文章中的说明连接到数据库，然后运行以下命令。 将`project_id`用于生产环境。 对于暂存环境，请使用`[project_id]_stg`，`[project_id]_stg2`。
+要识别大型表，请按照[连接到数据库](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/mysql#connect-to-the-database)文章中的说明连接到数据库，然后运行以下命令。 将`project_id`用于生产环境。 对于暂存环境，请使用`[project_id]_stg`，`[project_id]_stg2`。
 
 ```sql
 SELECT TABLE_NAME AS `Table`,

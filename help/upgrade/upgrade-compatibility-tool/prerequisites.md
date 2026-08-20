@@ -2,9 +2,9 @@
 title: '[!DNL Upgrade Compatibility Tool]要求'
 description: 验证系统是否满足在Adobe Commerce项目的命令行界面中运行 [!DNL Upgrade Compatibility Tool] 的必要要求。
 exl-id: b8af2e07-3d28-4937-bb88-b0a1c88a2938
-source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -80,4 +80,4 @@ Adobe Commerce仅在Linux操作系统上受支持。 您可以在Linux操作系�
 
 如果您针对具有大型模块和文件的Adobe Commerce实例运行[!DNL Upgrade Compatibility Tool]，则该工具可能需要大量RAM（至少2GB）。
 
-在云基础架构[&#128279;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=zh-Hans){target=_blank}项目中为Adobe Commerce运行[[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html?lang=zh-Hans)中的[!DNL Upgrade Compatibility Tool]。
+在云基础架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/overview){target=_blank}项目中为[Adobe Commerce运行[[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html)中的[!DNL Upgrade Compatibility Tool]。

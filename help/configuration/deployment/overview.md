@@ -3,9 +3,9 @@ title: 部署概述
 description: 了解Commerce应用程序的部署策略。
 feature: Configuration, Deploy
 exl-id: d5ed6fb3-2dd2-49df-802b-6d712ecd9ccf
-source-git-commit: dcc283b901917e3681863370516771763ae87462
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 - **暂存系统**—_可选_。 您可以选择设置一个暂存系统，用于所有集成代码的最终测试，包括用户验收测试(UAT)。 使用与设置生产系统相同的方法设置暂存系统。 除了暂存不是您的实时商店并且不处理客户订单这一事实之外，它与生产环境完全相同。
 
-- **生产系统** — 您的实时商店。 您应该在这里进行最小的直接配置更改，当然没有在暂存实例上测试过的任何内容。 如果可能，请使用已在暂存/开发实例上测试的[数据修补程序](https://developer.adobe.com/commerce/php/development/components/declarative-schema/patches/)进行配置更改。
+- **生产系统** — 您的实时商店。 您应该在这里进行最小的直接配置更改，当然没有在暂存实例上测试过的任何内容。 如果可能，请使用已在暂存/开发实例上测试的[数据修补程序](https://developer.adobe.com/commerce/php/development/components/declarative-schema/patches)进行配置更改。
 
 ## 其他部署方法
 
@@ -56,13 +56,13 @@ ht-degree: 0%
 
 ## 管理配置
 
-在12因素应用程序设计[中的](https://12factor.net/config)因素3之后进行建模，Commerce现在将每个系统的配置存储在系统本身。 （开发配置设置存储在开发系统中，生产设置存储在生产系统中。）
+在12因素应用程序设计](https://12factor.net/config)中的[因素3之后进行建模，Commerce现在将每个系统的配置存储在系统本身。 （开发配置设置存储在开发系统中，生产设置存储在生产系统中。）
 
 我们提供一种同步系统配置的方法：
 
 - **共享配置** — 非特定于系统或不敏感的设置。
 
-  共享设置是您希望开发系统和生产系统一致的设置。 在开发(或Adobe Commerce on cloud infrastructure _集成_)系统的管理员中设置共享配置。
+  共享设置是您希望开发系统和生产系统一致的设置。 在开发（或Adobe Commerce on cloud infrastructure _集成_）系统的管理员中设置共享配置。
 
   共享配置文件`app/etc/config.php`应包含在源代码管理中，以便在开发、生成和生产系统之间共享。
 
@@ -76,6 +76,6 @@ ht-degree: 0%
 >
 >这些用于管理配置的新方法是可选的。 您无需这样做，但强烈建议您使用它们。
 
-大多数情况下，在共享、系统特定或敏感配置中设置的配置选项无法在Admin中进行编辑。 这有助于使您的设置在所有系统中保持一致。 （您可以选择使用不带[`magento config:set`选项的](../cli/set-configuration-values.md)命令`--lock`来配置可在管理员中编辑的设置。）
+大多数情况下，在共享、系统特定或敏感配置中设置的配置选项无法在Admin中进行编辑。 这有助于使您的设置在所有系统中保持一致。 （您可以选择使用不带`--lock`选项的[`magento config:set`命令](../cli/set-configuration-values.md)来配置可在管理员中编辑的设置。）
 
 每个Commerce配置选项都有一个唯一的&#x200B;_配置路径_。 要设置配置选项的值，可以使用CLI命令或环境变量在特定系统上设置该配置路径的值。

@@ -1,13 +1,13 @@
 ---
 title: ACP2E-3977：[!UICONTROL Cap Reward Points Balance At]字段不能留空
-description: 应用ACP2E-3977修补程序以修复Adobe Commerce问题，该问题导致设置**[!UICONTROL Cap Reward Points Balance At]**字段时无法将**[!UICONTROL Rewards Points Balance Redemption Threshold]**字段留空，从而导致验证错误。
+description: 应用ACP2E-3977修补程序以修复Adobe Commerce问题，该问题导致设置**[!UICONTROL Rewards Points Balance Redemption Threshold]**字段时无法将**[!UICONTROL Cap Reward Points Balance At]**字段留空，从而导致验证错误。
 feature: Configuration, Rewards
 role: Admin, Developer
 type: Troubleshooting
 exl-id: 5275911f-4f8c-4b37-af11-24ceb69406c9
-source-git-commit: 83ce590c5078d70f0414276e2f03a71bdcdad321
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ACP2E-3977修补程序修复了&#x200B;**[!UICONTROL Cap Reward Points Balance A
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -47,14 +47,14 @@ ACP2E-3977修补程序修复了&#x200B;**[!UICONTROL Cap Reward Points Balance A
 
 <u>实际结果</u>：
 
-*上限奖励积分余额无效。 余额必须为正数或留空。 验证并重试。显示*&#x200B;错误。
+*上限奖励积分余额无效。 余额必须为正数或留空。 验证并重试。* 将显示错误。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
