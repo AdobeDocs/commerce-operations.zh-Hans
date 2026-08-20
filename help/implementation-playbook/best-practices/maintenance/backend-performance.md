@@ -40,8 +40,8 @@ ht-degree: 0%
 详细了解如何为高流量时期准备Commerce项目：
 
 - [假日准备工作](https://experienceleague.adobe.com/docs/events/commerce-intelligence-webinar-recordings/2021/holiday-readiness.html)
-- [假日购物分析](https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/performance/holiday-season-perf.html)
-- [激增容量增加](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/holiday-surge-capacity-requests-for-magento-commerce-cloud)
+- [假日购物分析](https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/performance/holiday-season-perf.html?lang=zh-Hans)
+- [激增容量增加](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/holiday-surge-capacity-requests-for-magento-commerce-cloud)
 
 ### 负载测试
 
@@ -51,12 +51,12 @@ ht-degree: 0%
 
 了解有关测试Adobe Commerce项目的更多信息：
 
-- [测试指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/guidance) （云基础架构）
+- [测试指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/test/guidance) （云基础架构）
 - [应用程序测试](https://developer.adobe.com/commerce/testing/guide/)
 
 ### 识别并解决性能问题
 
-通过使用New Relic和Observation for Adobe Commerce等各种工具来检测瓶颈并有效优化Commerce站点，从而解决性能问题。 云基础架构上的Adobe Commerce中包括[New Relic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)，云和内部部署中包括Adobe Commerce的[观察](/help/tools/observation-for-adobe-commerce/intro.md)。
+通过使用New Relic和Observation for Adobe Commerce等各种工具来检测瓶颈并有效优化Commerce站点，从而解决性能问题。 云基础架构上的Adobe Commerce中包括[New Relic](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)，云和内部部署中包括Adobe Commerce的[观察](/help/tools/observation-for-adobe-commerce/intro.md)。
 
 使用这些工具分析网站性能并识别与以下内容相关的性能问题：
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 了解有关管理站点性能的更多信息：
 
-- [性能监控](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/performance) （云基础架构）
+- [性能监控](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/performance) （云基础架构）
 - [配置最佳实践](/help/performance/configuration.md)
 - [Adobe Commerce观察](/help/tools/observation-for-adobe-commerce/intro.md)
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
 高流量网站经常面临数据库瓶颈，主要原因是依赖单个MySQL服务器。 通过实施数据库群集，您可以解决这些瓶颈问题。数据库群集是一种分布式体系结构，可提高性能并确保高可用性。
 
-通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在云基础架构[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-architecture)上部署的Adobe Commerce项目中。
+通过使多个Web节点连接到多个MySQL服务器，数据库群集最大程度地减少了与数据库相关问题在流量高峰期的影响。 使用Galera Cluster等工具为Commerce站点设置数据库群集。 Galera群集包含在云基础架构[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-architecture)上部署的Adobe Commerce项目中。
 
 #### 优化MySQL查询
 
@@ -93,10 +93,10 @@ ht-degree: 0%
 
 了解有关配置和优化MySQL的详细信息：
 
-- [数据库配置的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/database-on-cloud.html)
-- [Galera DB复制复制速度慢](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/galera-db-slow-replication.html)
+- [数据库配置的最佳实践](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/database-on-cloud.html?lang=zh-Hans)
+- [Galera DB复制复制速度慢](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/galera-db-slow-replication.html?lang=zh-Hans)
 - [一般MySQL准则](/help/installation/prerequisites/database/mysql.md)
-- [MySQL查询缓存](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/mysql-query-cache.html)
+- [MySQL查询缓存](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/mysql-query-cache.html?lang=zh-Hans)
 
 ## 有效地管理cron作业：性能和时间
 
@@ -110,7 +110,7 @@ Cron作业在处理站点后台任务（如报告生成和产品索引）时起�
 
 了解有关Adobe Commerce cron实施的更多信息：
 
-- _Commerce Admin Systems用户指南_&#x200B;中的[Cron（计划任务）](https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cron.html)
-- [应用程序配置 — crons属性](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property) （云基础架构）
-- [配置并运行crons](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)（本地）
-- Adobe Commerce[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html)的观察结果（请参阅[!UICONTROL Cron]和[!UICONTROL MySQL]选项卡。）
+- _Commerce Admin Systems用户指南_&#x200B;中的[Cron（计划任务）](https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cron.html?lang=zh-Hans)
+- [应用程序配置 — crons属性](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property) （云基础架构）
+- [配置并运行crons](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)（本地）
+- Adobe Commerce[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html?lang=zh-Hans)的观察结果（请参阅[!UICONTROL Cron]和[!UICONTROL MySQL]选项卡。）
