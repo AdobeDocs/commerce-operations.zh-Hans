@@ -1,24 +1,24 @@
 ---
-title: 配置Web爬网程序的最佳实践
-description: 了解如何使用“robots.txt”和“sitemap.xml”文件，将有关Adobe Commerce网站的说明传递给Web爬网程序。
+title: 配置Web爬虫的最佳实践
+description: 了解如何使用“robots.txt”和“sitemap.xml”文件，将有关Adobe Commerce网站的说明传递给Web爬虫。
 role: Developer
 feature: Best Practices
 exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
 
 
-# 配置Web爬网程序的最佳实践
+# 配置Web爬虫的最佳实践
 
-本文提供了在Adobe Commerce中使用`robots.txt`和`sitemap.xml`文件的最佳实践，包括配置和安全性。 这些文件指示Web爬网程序（通常是搜索引擎机器人）如何爬网网站上的页面。 配置这些文件可以提高网站性能和优化搜索引擎。
+本文提供了在Adobe Commerce中使用`robots.txt`和`sitemap.xml`文件的最佳实践，包括配置和安全性。 这些文件指示Web爬虫（通常是搜索引擎机器人）如何抓取网站上的页面。 配置这些文件可以提高网站性能和优化搜索引擎。
 
 >[!NOTE]
 >
->这些最佳实践仅适用于使用本机Adobe Commerce店面的项目。 它们不适用于使用其他店面解决方案(例如，Adobe Experience Manager、headless)的Adobe Commerce项目。
+>这些最佳实践仅适用于使用本机Adobe Commerce店面的项目。 它们不适用于使用其他店面解决方案（例如，Adobe Experience Manager、headless）的Adobe Commerce项目。
 
 ## 受影响的产品和版本
 
@@ -35,12 +35,12 @@ ht-degree: 0%
 
 为单站点店面配置`robots.txt`和`sitemap.xml`文件时，请遵循以下最佳实践：
 
-- 确保您的项目使用的是[`ece-tools`](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package)版本2002.0.12或更高版本。
+- 确保您的项目使用的是[`ece-tools`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/ece-tools-package)版本2002.0.12或更高版本。
 - 使用Admin应用程序将内容添加到`robots.txt`文件。
 
   >[!TIP]
   >
-  >在`robots.txt`上查看为您的商店自动生成的`<domain.your.project>/robots.txt`文件。
+  >在`<domain.your.project>/robots.txt`上查看为您的商店自动生成的`robots.txt`文件。
 
 - 使用管理员应用程序生成`sitemap.xml`文件。
 
@@ -64,20 +64,20 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关详细说明，请参阅[添加站点地图和搜索引擎机器人](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/robots-sitemap)。
+>有关详细说明，请参阅[添加站点地图和搜索引擎机器人](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure-store/robots-sitemap)。
 
 
 ### 多站点店面
 
-您可以在云基础架构上通过一次实施Adobe Commerce来设置和运行多个商店。 请参阅[设置多个网站或商店](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)。
+您可以在云基础架构上通过一次实施Adobe Commerce来设置和运行多个商店。 请参阅[设置多个网站或商店](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure-store/multiple-sites)。
 
-为`robots.txt`单站点店面`sitemap.xml`配置[和](#single-site-storefronts)文件的相同最佳实践适用于具有两个重要区别的多站点店面：
+为[单站点店面](#single-site-storefronts)配置`robots.txt`和`sitemap.xml`文件的相同最佳实践适用于具有两个重要区别的多站点店面：
 
 - 确保`robots.txt`和`sitemap.xml`文件名包含相应站点的名称。 例如：
-   - `domaineone_robots.txt`
-   - `domaintwo_robots.txt`
-   - `domainone_sitemap.xml`
-   - `domaintwo_sitemap.xml`
+  - `domaineone_robots.txt`
+  - `domaintwo_robots.txt`
+  - `domainone_sitemap.xml`
+  - `domaintwo_sitemap.xml`
 
 - 使用稍作修改的自定义Fastly VCL代码片段将两个文件从站点的根重定向到站点中的`pub/media`位置：
 
@@ -107,11 +107,11 @@ ht-degree: 0%
 
 >[!TIP]
 >
->如果需要帮助，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=zh-Hans#submit-ticket)。
+>如果需要帮助，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 ## 其他信息
 
-- [了解网站、商店和商店视图](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
+- [了解网站、商店和商店视图](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure-store/best-practices)
 - [添加网站](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
-- [使用Fastly阻止Adobe Commerce网站的恶意流量](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
-- [robots.txt在云基础架构2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html?lang=zh-Hans)上的Adobe Commerce中出现404错误
+- [使用Fastly阻止Adobe Commerce网站的恶意流量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
+- [robots.txt在Adobe Commerce on cloud infrastructure 2.3.x中出现404错误](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-26885)

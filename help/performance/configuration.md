@@ -3,9 +3,9 @@ title: 配置最佳实践
 description: 了解用于优化Adobe Commerce性能的配置最佳实践。 发现设置和工具以改进响应时间和吞吐量。
 feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Commerce中的所有异步操作均使用Linux `cron`命令执行。 请参阅[�
 
 >[!WARNING]
 >
->**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)不支持`Developer`模式。
+>**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/overview#cloud-req-test)不支持`Developer`模式。
 
 ## 异步配置保存
 
@@ -69,7 +69,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 ## 延期库存更新
 
-在密集销售期间，Commerce可以延迟与订单相关的库存更新。 这样可最大限度地减少操作次数，并加快下单流程。 但是，此选项有风险，并且只能在商店中激活延交订单时使用，因为此选项可能导致存货数量为负。 对于可轻松按需重新补充库存的商店，此选项可显着提升结账流的性能。 要在您的网站上激活延期库存更新，请转到&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**。 有关详细信息，请参阅&#x200B;_Adobe Commerce用户指南_&#x200B;中的[管理库存](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud)。
+在密集销售期间，Commerce可以延迟与订单相关的库存更新。 这样可最大限度地减少操作次数，并加快下单流程。 但是，此选项有风险，并且只能在商店中激活延交订单时使用，因为此选项可能导致存货数量为负。 对于可轻松按需重新补充库存的商店，此选项可显着提升结账流的性能。 要在您的网站上激活延期库存更新，请转到&#x200B;**[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**。 有关详细信息，请参阅&#x200B;_Adobe Commerce用户指南_&#x200B;中的[管理库存](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud)。
 
 >[!INFO]
 >
@@ -95,19 +95,19 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 >[!INFO]
 >
->**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test)不支持`Developer`模式。
+>**[!UICONTROL Developer]**&#x200B;选项卡和选项仅在[开发人员模式](../configuration/cli/set-mode.md)下可用。 云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/overview#cloud-req-test)不支持`Developer`模式。
 
 激活&#x200B;**[!UICONTROL Enable [!DNL JavaScript] Bundling]**&#x200B;选项后，您允许Commerce将所有JS资源合并到一个或一组加载到店面页面中的捆绑包中。 捆绑JS可减少向服务器发出的请求，从而改善页面性能。 它还有助于浏览器在首次调用时缓存JS资源，并在所有进一步浏览中重复使用它们。 此选项还会带来延迟评估，因为所有JS都作为文本加载。 它仅在页面上触发特定操作后才启动代码分析和评估。 但是，对于首次页面加载时间极其关键的存储区，不建议使用此设置，因为所有JS内容都将在首次调用时加载。
 
 >[!INFO]
 >
->有关优化CSS和Javascript的更多信息，请参阅[优化资源文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/development/optimize-css-js-files)。
+>有关优化CSS和Javascript的更多信息，请参阅[优化资源文件](/help/implementation-playbook/best-practices/development/optimize-css-js-files.md)。
 
 ### 捆绑提示 {#bundling-tips}
 
 * 我们建议您使用第三方工具进行缩小和捆绑（如[r.js](https://requirejs.org/)）。 Commerce内置机制并非最佳方案，而是作为替代方案提供。
 * 激活HTTP/2协议可能是使用JS捆绑包的良好替代方法。 该协议提供了许多相同的好处。 默认情况下，在云基础架构项目上的Adobe Commerce中会启用此功能。
-* 我们不建议使用已弃用的设置，例如合并JS和CSS文件，因为它们仅为页面的HEAD部分中的同步加载JS而设计。 使用此技术可能会导致捆绑销售，并要求JS逻辑无法正常工作。
+* 我们不建议使用已弃用的设置，例如合并JS和CSS文件，因为它们仅针对页面的HEAD部分中的同步加载JS而设计。 使用此技术可能会导致捆绑销售，并要求JS逻辑无法正常工作。
 
 ## 客户区段验证
 

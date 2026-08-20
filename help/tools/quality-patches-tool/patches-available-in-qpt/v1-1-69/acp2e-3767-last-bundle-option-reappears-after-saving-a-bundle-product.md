@@ -4,13 +4,13 @@ description: 应用ACP2E-3767修补程序以修复无法删除捆绑产品中的
 feature: Products, Catalog Management
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: f39442925d9cc82087af9e84d91137a0fcd0ec14
+exl-id: 8c0645e3-47ab-4604-a9db-b070c3779e78
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
-
 
 # ACP2E-3767：保存捆绑产品后，将重新显示最后一个捆绑选项
 
@@ -62,8 +62,8 @@ ACP2E-3767修补程序修复了在保存捆绑产品后重新显示最后一个�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

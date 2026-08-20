@@ -5,16 +5,16 @@ feature: Admin Workspace, Invoices, Orders, Returns, Shipping/Delivery
 role: Admin
 exl-id: 09115cf3-62c3-425e-bc99-e8971398dd20
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
 # ACSD-47910：各个实体网格中缺少订单、发票、装运和贷项通知单
 
-ACSD-47910修补程序修复了各实体网格中缺少订单、发票、装运和贷项通知单的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.25时，此修补程序可用。 修补程序ID为ACSD-47910。 将修复此问题的版本尚不可用。
+ACSD-47910修补程序修复了各实体网格中缺少订单、发票、装运和贷项通知单的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.25时，此修补程序可用。 修补程序ID为ACSD-47910。 将修复此问题的版本尚不可用。
 
 ## 受影响的产品和版本
 
@@ -34,12 +34,12 @@ ACSD-47910修补程序修复了各实体网格中缺少订单、发票、装运�
 
 <u>重现步骤</u>：
 
-1. 在&#x200B;**[!UICONTROL Asynchronous indexing]** > **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]**&#x200B;处启用&#x200B;**[!UICONTROL Grid Settings]**。
+1. 在&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]** > **[!UICONTROL Grid Settings]**&#x200B;处启用&#x200B;**[!UICONTROL Asynchronous indexing]**。
 1. 下两份订单。
 1. 运行cron将这些订单同步到网格。
 1. 打开其中一个订单，使其准备开票。 不要提交发票。
 1. 做好新订单的准备工作，准备在前端投放。 不要单击“下单”按钮。
-1. 在`sleep(30)`的`foreach`处添加`NotSyncedDataProvider::L43`。
+1. 在`foreach`的`NotSyncedDataProvider::L43`处添加`sleep(30)`。
 1. 运行`bin/magento cron:run`。
 1. 现在下新订单。
 1. 为上一订单开票。
@@ -58,15 +58,15 @@ ACSD-47910修补程序修复了各实体网格中缺少订单、发票、装运�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

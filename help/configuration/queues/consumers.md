@@ -2,7 +2,7 @@
 title: 消息队列使用者
 description: 了解Adobe Commerce消息队列使用者，包括与其关联的功能和系统配置设置。
 exl-id: 7fd7ab3f-581f-493c-956c-731f111d1b14
-source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 | 使用者和描述 | Adobe Commerce | 带有B2B的Adobe Commerce | Magento Open Source |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|-------------------------|---------------------|
 | `async.operations.all` | + | + | + |
-| 为[批量操作](https://developer.adobe.com/commerce/php/development/components/message-queues/bulk-operations/)的每个单独任务创建消息，如导入或导出物料、批量更改价格以及将产品分配给仓库。 在管理员系统配置设置中将&#x200B;[**[!UICONTROL Admin bulk operations]**](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/catalog/inventory#admin-bulk-operations)选项设置为&#x200B;**[!UICONTROL Run asynchronously]**&#x200B;时需要。 |                |                         |                     |
+| 为[批量操作](https://developer.adobe.com/commerce/php/development/components/message-queues/bulk-operations)的每个单独任务创建消息，如导入或导出物料、批量更改价格以及将产品分配给仓库。 在管理员系统配置设置中将&#x200B;[**[!UICONTROL Admin bulk operations]**](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/catalog/inventory#admin-bulk-operations)选项设置为&#x200B;**[!UICONTROL Run asynchronously]**&#x200B;时需要。 |                |                         |                     |
 | `codegeneratorProcessor` | + | + | + |
 | 在后台异步生成优惠券。 需要使用[批次优惠券生成](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon.html?lang=zh-Hans#method-2%3A-generate-a-batch-of-coupons)功能。 |                |                         |                     |
 | `commerce.eventing.event.publish` | + | + |                     |
@@ -52,7 +52,7 @@ ht-degree: 0%
 | `negotiableQuotePriceUpdate` |                | + |                     |
 | 更新可协商报价的价格。 在管理员系统配置设置中启用&#x200B;[**[!UICONTROL Quotes]**](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/quotes/quotes)选项时必需。 |                |                         |                     |
 | `placeOrderProcessor` | + | + |                     |
-| 异步[处理订单](https://developer.adobe.com/commerce/php/module-reference/module-async-order/)，它将订单标记为已接收，将它们放入消息队列中，并以先进先出方式处理它们。 已考虑使用[最佳实践](../../implementation-playbook/best-practices/maintenance/order-processing-configuration.md)来改进可处理的订单数，因为客户无需等待后端流程完成即可看到成功消息。 |                |                         |                     |
+| 异步[处理订单](https://developer.adobe.com/commerce/php/module-reference/module-async-order)，它将订单标记为已接收，将它们放入消息队列中，并以先进先出方式处理它们。 已考虑使用[最佳实践](../../implementation-playbook/best-practices/maintenance/order-processing-configuration.md)来改进可处理的订单数，因为客户无需等待后端流程完成即可看到成功消息。 |                |                         |                     |
 | `product_action_attribute.update` | + | + | + |
 | 使用Admin进行更新[后，将更改异步写入数据库中的产品属性](https://experienceleague.adobe.com/docs/commerce-admin/catalog/product-attributes/create/bulk-product-attribute-update.html?lang=zh-Hans)。 |                |                         |                     |
 | `product_action_attribute.website.update` | + | + | + |

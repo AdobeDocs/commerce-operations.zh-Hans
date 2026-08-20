@@ -1,12 +1,13 @@
 ---
 title: ACSD-64111：修复了在 [!DNL Page Builder]中设置产品组件的嵌套条件时出现*InvalidArgumentException：类不存在*错误
+description: 应用ACSD-64111修补程序以修复Adobe Commerce问题，该问题导致在Page Builder中将条件组合添加到产品小部件条件会引发InvalidArgumentException，因为vendor/magento/module-rule/Model/ConditionFactory.php中不存在该类。
 feature: Products, Page Builder
 role: Admin, Developer
 exl-id: dc39c65b-fb78-4105-b0e8-92a78b49adaf
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ ACSD-64111修补程序修复了以下问题： *InvalidArgumentException：类�
 
 **为Adobe Commerce版本创建了修补程序：**
 
-* Adobe Commerce（所有部署方法）  2.4.6-p8
+* Adobe Commerce（所有部署方法） 2.4.6-p8
 
 **与Adobe Commerce版本兼容：**
 
@@ -31,7 +32,7 @@ ACSD-64111修补程序修复了以下问题： *InvalidArgumentException：类�
 
 ## 问题
 
-在[!DNL Page Builder]产品构件条件中添加&#x200B;*[!UICONTROL Conditions Combination]*&#x200B;时，引发错误&#x200B;*InvalidArgumentException：类在/app/&lt;project id\>/vendor/magento/module-rule/Model/ConditionFactory.php*&#x200B;中不存在。
+在[!DNL Page Builder]产品小部件条件中添加&#x200B;*[!UICONTROL Conditions Combination]*&#x200B;时，引发错误&#x200B;*InvalidArgumentException：类在/app/&lt;项目ID\>/vendor/magento/module-rule/Model/ConditionFactory.php*&#x200B;中不存在。
 
 <u>重现步骤</u>：
 
@@ -52,14 +53,14 @@ ACSD-64111修补程序修复了以下问题： *InvalidArgumentException：类�
 
 日志中记录了以下异常：
 
-*report.CRITICAL： InvalidArgumentException：类在vendor/magento/module-rule/Model/ConditionFactory.php:50*&#x200B;中不存在
+*report.CRITICAL： InvalidArgumentException：类在vendor/magento/module-rule/Model/ConditionFactory.php：50*&#x200B;中不存在
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 
 ## 相关阅读

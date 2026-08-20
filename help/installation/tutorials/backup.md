@@ -2,7 +2,7 @@
 title: 备份和回滚文件系统、介质和数据库
 description: 请按照以下步骤备份和恢复Adobe Commerce应用程序。
 exl-id: b9925198-37b4-4456-aa82-7c55d060c9eb
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关云基础架构项目上的Adobe Commerce，请参阅&#x200B;_云指南_&#x200B;中的[快照和备份管理](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/storage/snapshots)。
+>有关云基础架构项目上的Adobe Commerce，请参阅&#x200B;_云指南_&#x200B;中的[快照和备份管理](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/storage/snapshots)。
 
 ## 启用备份
 

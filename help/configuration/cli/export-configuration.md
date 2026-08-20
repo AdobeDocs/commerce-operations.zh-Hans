@@ -2,7 +2,7 @@
 title: 导出配置设置
 description: 了解如何使用配置转储将Adobe Commerce配置设置导出到文件。 发现管道部署和配置管理。
 exl-id: db680f5e-547a-48f3-b017-d77b8cb07bfd
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
@@ -30,14 +30,14 @@ bin/magento app:config:dump scopes themes
 - `app/etc/config.php`
 
   这是所有Commerce实例的共享配置文件。
-将此包括在源代码管理中，以便在开发、构建和生产系统之间共享。
+  将此包括在源代码管理中，以便在开发、构建和生产系统之间共享。
 
   请参阅[config.php引用](../reference/config-reference-configphp.md)。
 
 - `app/etc/env.php`
 
   这是特定于环境的配置文件。
-它包含适用于各个环境的敏感和特定于系统的设置。
+  它包含适用于各个环境的敏感和特定于系统的设置。
 
   请&#x200B;_不_&#x200B;将此文件包含在源代码管理中。
 
@@ -47,6 +47,6 @@ bin/magento app:config:dump scopes themes
 
 若要设置写入`env.php`的敏感设置，请使用[`bin/magento config:sensitive:set`](set-configuration-values.md#set-values)命令。
 
-通过引用模块[`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/#how-to-specify-values-as-sensitive-or-system-specific)文件中的[`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php)，将配置值指定为敏感值或系统特定值。
+通过引用模块[`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings#how-to-specify-values-as-sensitive-or-system-specific)文件中的[`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php)，将配置值指定为敏感值或系统特定值。
 
 要在使用`config_types`时导出其他系统设置，请考虑使用[`bin/magento config:set`](set-configuration-values.md#set-values)命令。

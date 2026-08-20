@@ -4,9 +4,9 @@ description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
 badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
 badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
-source-git-commit: bf0f269900468870a1da7b5360548d49e009097c
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1509'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**法律免责声明**<br/>
->Beta版本包括预发行版功能和代码，这些功能和代码可能包含缺陷，并“按原样”提供，不提供任何形式的担保。Adobe自行决定是否公开发布Beta版本。Adobe没有义务维护、更正、更新、更改、修改、支持（通过Adobe支持服务或其他方式），或在任何特定日期之前交付此类Beta版本。如果测试版正式发布，则可能需要遵守其他条款和条件，包括适用的费用。Beta版本如有更改，恕不另行通知，包括停止使用。建议客户谨慎使用，并且不要以任何方式依赖测试版的不中断或无错误功能或性能。 因此，使用测试版完全由客户自行承担风险。
+>**法律声明**<br/>
+>Beta版本包括预发行版功能和代码，这些功能和代码可能包含缺陷，并“按原样”提供，不提供任何类型的担保。 Adobe自行决定是否公开发布Beta版本。 Adobe没有义务维护、更正、更新、更改、修改、支持（通过Adobe支持服务或其他方式），或在任何特定日期之前交付此类Beta版本。 如果测试版正式发布，则可能需要遵守其他条款和条件，包括适用的费用。 Beta版本如有更改，恕不另行通知，包括停止使用。 建议客户谨慎使用，并且不要以任何方式依赖测试版的不中断或无错误功能或性能。  因此，使用测试版完全由客户自行承担风险。
 
 ## 参与的优势
 
@@ -73,7 +73,7 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 
 [Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)环境上的Adobe Commerce。
 
-2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
+2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](/help/tools/site-wide-analysis-tool/dashboard.md)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
 
 - 自动安装修补程序
 - 回滚恢复

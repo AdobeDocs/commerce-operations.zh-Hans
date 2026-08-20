@@ -4,13 +4,13 @@ description: 应用ACSD-66404修补程序以修复Adobe Commerce问题，该问�
 feature: System
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 42bd5934782ca65b891a36f61102083356c92e59
+exl-id: d7ad3b11-aee6-4a26-8892-369fbfe6932e
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66404：由于[!DNL Galera Cluster]事务大小限制，Cron作业无法清除changelog表
 
@@ -52,8 +52,8 @@ Cron作业未清除changelog表，并在这些表中出现大量数据时导致[
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]
-* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)
+* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)
 
 ## 相关阅读
 

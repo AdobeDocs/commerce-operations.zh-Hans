@@ -2,9 +2,9 @@
 title: '[!DNL Site-Wide Analysis Tool]'
 description: 了解 [!DNL Site-Wide Analysis] 工具、其用途、安装过程以及如何获取访问权限
 exl-id: 32774040-d322-43d6-9c26-c340a0ab58a9
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -34,20 +34,20 @@ ht-degree: 0%
 ## 工具概述
 
 - **仪表板**
-   - 显示系统的整体运行状况，包括检测到的问题的通知以及按优先级列出的特定建议。<br>
-它还包含一个历史图表，用于跟踪网站运行状况随时间的变化。
-   - 显示提供指向以下资源的链接的&#x200B;**[!UICONTROL Security Center Widget]**：
-      - [符合 [!DNL end of life (EOL)]的技术 [!DNL Stack] 版本合规性](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)
-      - [Adobe安全公告](https://helpx.adobe.com/cn/security/security-bulletin.html)
-      - [来自 [!DNL Security Scan Tool]的建议](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan)
-      - [[!DNL Site-Wide Analysis Tool]最佳实践安全建议](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations)
+  - 显示系统的整体运行状况，包括检测到的问题的通知以及按优先级列出的特定建议。<br>
+    它还包含一个历史图表，用于跟踪网站运行状况随时间的变化。
+  - 显示提供指向以下资源的链接的&#x200B;**[!UICONTROL Security Center Widget]**：
+    - [符合 [!DNL end of life (EOL)]的技术 [!DNL Stack] 版本合规性](/help/installation/system-requirements.md)
+    - [Adobe安全公告](https://helpx.adobe.com/cn/security/security-bulletin.html)
+    - [来自 [!DNL Security Scan Tool]的建议](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan)
+    - [[!DNL Site-Wide Analysis Tool]最佳实践安全建议](/help/tools/site-wide-analysis-tool/recommendations.md)
 
 - **信息** — 提供客户联系信息和当前票证的摘要，以及有关每个已安装的Adobe Commerce产品的详细信息。
 
 - **建议** — 提供[SWAT健康指数分数](swat-health-index.md)以跟踪网站健康状况，并根据最佳实践列出建议，以解决在您的网站上检测到的问题：
-   - 对于需要更新基础结构的更改，请提交支持请求。
-   - 对于需要更新应用程序的更改，请自行进行更改。
-   - 对于需要手动干预的更改（如[代码部署](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)），请向系统管理员或开发人员寻求帮助。
+  - 对于需要更新基础结构的更改，请提交支持请求。
+  - 对于需要更新应用程序的更改，请自行进行更改。
+  - 对于需要手动干预的更改（如[代码部署](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)），请向系统管理员或开发人员寻求帮助。
 
 - **异常** — 列出由异常条件引起的应用程序引发的错误，并且没有错误处理程序。
 
@@ -60,13 +60,13 @@ ht-degree: 0%
 在一个位置查看有关您网站的重要见解。 [!DNL Site-Wide Analysis Tool]允许您从[!UICONTROL Security Center Widget]、[!DNL Upgrade Compatibility Tool]和[!DNL Managed Alerts]直接访问和获取信息。
 
 - **[!UICONTROL Security Center Widget]** — 显示网站的安全分析。<br>
-安全信息包括[技术 [!DNL Stack] 版本符合性 [!DNL end of life (EOL)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements), [Adobe Security Bulletin](https://helpx.adobe.com/cn/security/security-bulletin.html), [Recommendations from the [!DNL Security Scan Tool]](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan), and [[!DNL Site-Wide Analysis Tool] 最佳实践安全建议](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations)。
+安全信息包括[技术 [!DNL Stack] 版本符合性 [!DNL end of life (EOL)]](/help/installation/system-requirements.md), [Adobe Security Bulletin](https://helpx.adobe.com/cn/security/security-bulletin.html), [Recommendations from the [!DNL Security Scan Tool]](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan), and [[!DNL Site-Wide Analysis Tool] 最佳实践安全建议](/help/tools/site-wide-analysis-tool/recommendations.md)。
 
   [[!DNL Security Scan Tool]](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-scan)通过主动检测恶意软件并在其存储遭到破坏时向其发出警报，为Adobe Commerce和Magento Open-Source客户提供了对其存储安全状态的实时洞察。
 
 - **[[!DNL Upgrade Compatibility Tool]](../../upgrade/upgrade-compatibility-tool/overview.md)** — 针对升级版本检查Adobe Commerce实例，并标记在升级之前要修复的关键问题、错误和警告。 解决这些问题可以简化升级过程。”
 
-- **[[!DNL Managed Alerts]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)** — 监视关键量度（CPU、应用程序性能、磁盘、内存和数据库运行状况），并提供明确的故障排除步骤以帮助商家提前解决问题并避免停机。
+- **[[!DNL Managed Alerts]](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce.md)** — 监视关键指标（CPU、应用程序性能、磁盘、内存和数据库运行状况），并提供明确的故障排除步骤以帮助商家提前发现问题并避免停机。
 
 ## 本指南面向谁？
 

@@ -20,9 +20,9 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: 405
+source-wordcount: 392
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ ht-degree: 0%
 
   例如，您在管理员中执行的任何操作：
 
-   - **存储** > **设置** > **配置** >常规> **常规**
-   - **存储** > **设置** > **配置** >常规> **货币设置**
-   - **存储** > **设置** > **配置** >常规> **存储电子邮件地址**
+  - **存储** > **设置** > **配置** >常规> **常规**
+  - **存储** > **设置** > **配置** >常规> **货币设置**
+  - **存储** > **设置** > **配置** >常规> **存储电子邮件地址**
 
   当Commerce检测到此类更改时，将显示一条消息，通知您刷新缓存。
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 ## 配置Commerce以清除清漆
 
-在使用[`magento setup:config:set`](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset)命令配置清漆主机后，Commerce会清除清漆主机。
+在使用[`magento setup:config:set`](/help/tools/reference/commerce-on-premises.md#setupconfigset)命令配置清漆主机后，Commerce会清除清漆主机。
 
 您可以使用可选参数`--http-cache-hosts`参数指定以逗号分隔的Varnish主机和侦听端口列表。 配置所有Varnish主机，无论您拥有一个还是多个。 （不要使用空格字符分隔主机。）
 

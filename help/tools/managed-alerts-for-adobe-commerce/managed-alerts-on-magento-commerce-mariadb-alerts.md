@@ -4,9 +4,9 @@ description: 本文提供了在 [!DNL New Relic]中收到Adobe Commerce的MariaD
 feature: Cache, Observability, Support, Tools and External Services
 role: Admin
 exl-id: d85af2e1-090c-4ad7-a898-3a3c4a5efe3b
-source-git-commit: 18c8e466bf15957b73cd3cddda8ff078ebeb23b0
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 **做！**
 
 * 中止任何计划的部署，直到清除此警报。
-* 如果您的网站处于或完全无响应，请立即将网站置于维护模式。 有关步骤，请参阅《Commerce安装指南》中的[启用或禁用维护模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/tutorials/maintenance-mode)。 确保将您的IP添加到免除IP地址列表，以确保您仍然能够访问站点进行故障排除。 有关步骤，请参阅[维护免除IP地址列表](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/tutorials/maintenance-mode#maintain-the-list-of-exempt-ip-addresses)。
+* 如果您的网站处于或完全无响应，请立即将网站置于维护模式。 有关步骤，请参阅《Commerce安装指南》中的[启用或禁用维护模式](/help/installation/tutorials/maintenance-mode.md)。 确保将您的IP添加到免除IP地址列表，以确保您仍然能够访问站点进行故障排除。 有关步骤，请参阅[维护免除IP地址列表](/help/installation/tutorials/maintenance-mode.md#maintain-the-list-of-exempt-ip-addresses)。
 * 结束任何脚本，例如导入，如果网站性能受到影响，则这些脚本可能会导致警报。
 
 **不要！**
@@ -44,7 +44,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 如果您收到“DML查询严重”警报，请从步骤1开始。 如果您收到“DML查询警告”警报，请从第二步开始。
 
-1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅我们的知识库[跟踪您的支持工单](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#track-support-case)。 支持人员可能已收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
+1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅我们的知识库[跟踪您的支持工单](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
    * 联系原因：选择&#x200B;**[!UICONTROL New Relic MariaDB alert received]**。
    * 警报的说明。
    * [[!DNL New Relic] 事件链接](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/view-violation-event-details-incidents)。 这包含在您的[Adobe Commerce托管警报](managed-alerts-for-magento-commerce.md)中。

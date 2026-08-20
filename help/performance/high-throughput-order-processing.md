@@ -3,7 +3,7 @@ title: 签出性能最佳实践
 description: 了解Adobe Commerce中的签出性能最佳实践。 了解实施指导和优化策略。
 feature: Best Practices, Orders
 exl-id: dc2d0399-0d7f-42d8-a6cf-ce126e0b052d
-source-git-commit: 5d94ecbe32b94acf9604db9618a9ae6eb1ae04f9
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
 source-wordcount: '1299'
 ht-degree: 0%
@@ -56,7 +56,7 @@ bin/magento setup:config:set --checkout-async 1
    ]
 ```
 
-请参阅&#x200B;_模块参考指南_&#x200B;中的[异步订单](https://developer.adobe.com/commerce/php/module-reference/module-async-order/)。
+请参阅&#x200B;_模块参考指南_&#x200B;中的[异步订单](https://developer.adobe.com/commerce/php/module-reference/module-async-order)。
 
 **禁用AsyncOrder**：
 
@@ -162,7 +162,7 @@ bin/magento setup:config:set --deferred-total-calculating 0
    ]
 ```
 
-请参阅&#x200B;_模块参考指南_&#x200B;中的[DeferredTotalCalculating](https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/)。
+请参阅&#x200B;_模块参考指南_&#x200B;中的[DeferredTotalCalculating](https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating)。
 
 ### 固定产品税
 
@@ -180,7 +180,7 @@ _在购物车加载时启用库存_&#x200B;全局设置确定在购物车中加�
 
 通过为MySQL数据库和Redis实例启用辅助连接，您可以帮助平衡不同节点的负载。
 
-Adobe Commerce可以异步读取多个数据库或Redis实例。 如果在云基础架构上使用Commerce，则可通过编辑`.magento.env.yaml`文件中的[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)和[REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)值来配置辅助连接。 只有一个节点需要处理读写通信，因此将变量设置为`true`会导致为只读通信创建辅助连接。 将值设置为`false`以从`env.php`文件中删除任何现有的只读连接数组。
+Adobe Commerce可以异步读取多个数据库或Redis实例。 如果在云基础架构上使用Commerce，则可通过编辑`.magento.env.yaml`文件中的[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)和[REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)值来配置辅助连接。 只有一个节点需要处理读写通信，因此将变量设置为`true`会导致为只读通信创建辅助连接。 将值设置为`false`以从`env.php`文件中删除任何现有的只读连接数组。
 
 `.magento.env.yaml`文件示例：
 

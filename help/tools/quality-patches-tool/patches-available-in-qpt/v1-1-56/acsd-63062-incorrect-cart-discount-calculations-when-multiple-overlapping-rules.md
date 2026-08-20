@@ -5,10 +5,10 @@ feature: Price Rules
 role: Admin, Developer
 exl-id: c4a93063-b640-444e-ba0e-552dd8d1895b
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 0%
+source-wordcount: '406'
+ht-degree: 1%
 
 ---
 
@@ -47,29 +47,29 @@ Adobe Commerce（所有部署方法） 2.4.7 - 2.4.7-p3
 
    * 规则1：
 
-      * *[!UICONTROL Priority]*： 100
-      * *[!UICONTROL Conditions]*&#x200B;选项卡：如果总数量等于或大于3，则使用简单2 ($280)产品
-      * *[!UICONTROL Actions]*&#x200B;选项卡： SKU很简单2
-      * *[!UICONTROL Fixed Amount Discount]*： $80
+     * *[!UICONTROL Priority]*: 100
+     * *[!UICONTROL Conditions]*&#x200B;选项卡：如果总数量等于或大于3，则使用简单2 ($280)产品
+     * *[!UICONTROL Actions]*&#x200B;选项卡： SKU很简单2
+     * *[!UICONTROL Fixed Amount Discount]*: $80
 
    * 规则2：
 
-      * *[!UICONTROL Priority]*： 200
-      * *[!UICONTROL Actions]*&#x200B;选项卡： SKU很简单2
-      * *[!UICONTROL Percentage of Product Price Discount]*： 20%
+     * *[!UICONTROL Priority]*: 200
+     * *[!UICONTROL Actions]*&#x200B;选项卡： SKU很简单2
+     * *[!UICONTROL Percentage of Product Price Discount]*: 20%
 
    * 第3条：
 
-      * *[!UICONTROL Priority]*： 300
-      * *[!UICONTROL Conditions]*&#x200B;选项卡：小计等于或大于$1000
-      * 整个购物车的&#x200B;*[!UICONTROL Fixed Amount Discount]*： $100
+     * *[!UICONTROL Priority]*: 300
+     * *[!UICONTROL Conditions]*&#x200B;选项卡：小计等于或大于$1000
+     * 整个购物车的&#x200B;*[!UICONTROL Fixed Amount Discount]*： $100
 
    * 第4条：
 
-      * *[!UICONTROL Priority]*： 400
-      * *[!UICONTROL Conditions]*&#x200B;选项卡：如果总数量等于或大于2，则使用简单1 ($1080)产品
-      * *[!UICONTROL Actions]*&#x200B;选项卡： SKU很简单1
-      * 整个购物车的&#x200B;*[!UICONTROL Fixed Amount Discount]*： $960
+     * *[!UICONTROL Priority]*: 400
+     * *[!UICONTROL Conditions]*&#x200B;选项卡：如果总数量等于或大于2，则使用简单1 ($1080)产品
+     * *[!UICONTROL Actions]*&#x200B;选项卡： SKU很简单1
+     * 整个购物车的&#x200B;*[!UICONTROL Fixed Amount Discount]*： $960
 
 1. 转到店面，将以下具有给定数量的产品添加到购物车：
 
@@ -91,8 +91,8 @@ Adobe Commerce（所有部署方法） 2.4.7 - 2.4.7-p3
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 
 ## 相关阅读

@@ -5,9 +5,9 @@ feature: Data Import/Export
 role: Admin, Developer
 exl-id: 785907dc-aa3f-49e2-bd52-c3afe4393456
 type: Troubleshooting
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ACSD-63139修补程序修复了当产品属性包含数千个选项值时产品�
    bin/magento cron:install
    ```
 
-1. 按照[[!DNL RabbitMQ] 先决条件](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/prerequisites/message-brokers/rabbitmq)中的说明配置[!DNL RabbitMQ]。
+1. 按照[[!DNL RabbitMQ] 先决条件](/help/installation/prerequisites/rabbitmq.md)中的说明配置[!DNL RabbitMQ]。
 1. 打开`php.ini`文件，将内存限制设置为4G，然后重新启动PHP服务。
 1. 在管理面板中，转到&#x200B;**[!UICONTROL System]** > *[!UICONTROL Data Transfer]* > **[!UICONTROL Export]**。
 1. 在&#x200B;*[!UICONTROL Export Settings]*&#x200B;部分中，将&#x200B;**[!UICONTROL Entity Type]**&#x200B;设置为&#x200B;*产品*，滚动到底部并单击&#x200B;**[!UICONTROL Continue]**。
@@ -74,7 +74,7 @@ Fatal error: Allowed memory size of 4294967296 bytes exhausted (tried to allocat
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

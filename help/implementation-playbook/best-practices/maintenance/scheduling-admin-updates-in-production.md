@@ -4,9 +4,9 @@ description: 了解为Adobe Commerce安排关键更新以防止性能缓慢和�
 role: Admin, User
 feature: Best Practices
 exl-id: 41c0cb87-3371-48a7-9913-264f3eea8d8d
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '161'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,6 @@ ht-degree: 1%
 ## 其他信息
 
 - [缓存最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/cache-management#best-practices-for-caching)
-- [私有内容：使私有内容无效](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
+- [私有内容：使私有内容无效](https://developer.adobe.com/commerce/php/development/cache/page/private-content#invalidate-private-content)
 - [硬件建议：缓存](../../../performance/hardware.md#caches)
 - [高级设置：设置Redis](../../../performance/advanced-setup.md#set-up-redis)

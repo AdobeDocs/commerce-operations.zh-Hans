@@ -1,20 +1,20 @@
 ---
 title: ACSD-49970：GraphQL错误的处理不正确
-description: Adobe Commerce应用ACSD-49970修补程序以修复以下问题：打开[!UICONTROL New Relic Reporting]时，GraphQL错误的处理不正确。
+description: 应用ACSD-49970修补程序以修复以下问题：打开[!UICONTROL New Relic Reporting]时，GraphQL错误的处理不正确。
 feature: GraphQL, Observability
 role: Admin
 exl-id: f06f6cbf-ea85-406a-850d-f63e1001ff82
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
 # ACSD-49970：GraphQL错误的处理不正确
 
-ACSD-49970修补程序修复了在打开&#x200B;*[!UICONTROL New Relic Reporting]*&#x200B;时无法正确处理GraphQL错误的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.29时，此修补程序可用。 修补程序ID为ACSD-49970。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
+ACSD-49970修补程序修复了在打开&#x200B;*[!UICONTROL New Relic Reporting]*&#x200B;时无法正确处理GraphQL错误的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.29时，此修补程序可用。 修补程序ID为ACSD-49970。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
 ## 受影响的产品和版本
 
@@ -32,15 +32,15 @@ ACSD-49970修补程序修复了在打开&#x200B;*[!UICONTROL New Relic Reporting
 
 ## 问题
 
-无论`GraphQLOperationNames`是否包含此密钥，`logDataHelper`密钥都未正确处理。
+无论`logDataHelper`是否包含此密钥，`GraphQLOperationNames`密钥都未正确处理。
 
 <u>重现步骤</u>：
 
 1. 运行`bin/magento deploy:mode:set developer`。
 1. 登录到管理员。
-1. 从&#x200B;**[!UICONTROL New Relic Integration]** > **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]**&#x200B;启用&#x200B;**[!UICONTROL New Relic Reporting]**
+1. 从&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]**&#x200B;启用&#x200B;**[!UICONTROL New Relic Integration]** **[!UICONTROL New Relic Reporting]**
 （注意：即使显示错误消息，称[!DNL New Relic]扩展不可用，配置也会保存）。
-1. 从&#x200B;*客户端或任何其他客户端或通过cURL运行此* GraphQL`http://yourMagentoDomain/graphql`突变到&#x200B;*[!DNL Altair]*。
+1. 从&#x200B;*[!DNL Altair]*&#x200B;客户端或任何其他客户端或通过cURL运行此&#x200B;*GraphQL*&#x200B;突变到`http://yourMagentoDomain/graphql`。
 
    ```GraphQL
    mutation {
@@ -66,15 +66,15 @@ ACSD-49970修补程序修复了在打开&#x200B;*[!UICONTROL New Relic Reporting
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

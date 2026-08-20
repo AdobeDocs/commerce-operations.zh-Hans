@@ -1,10 +1,10 @@
 ---
 title: 集成 [!DNL Site-Wide Analysis Tool]
-description: 按照以下步骤从Adobe Commerce项目的 [!DNL Upgrade Compatibility Tool] 仪表板中检索 [!DNL Site-Wide Analysis Tool] 报告。
+description: 按照以下步骤从Adobe Commerce项目的 [!DNL Site-Wide Analysis Tool] 仪表板中检索 [!DNL Upgrade Compatibility Tool] 报告。
 exl-id: 1ef37294-a837-47a4-841c-4027087acf12
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 [!DNL Upgrade Compatibility Tool]现在与[!DNL Site-Wide Analysis Tool]集成，以便非技术人员能够运行[!DNL Upgrade Compatibility Tool]并获得包含每个文件问题列表的[报告](../upgrade-compatibility-tool/reports.md)。
 
-有关详细信息，请参阅[[!DNL Site-Wide Analysis Tool] 用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/access)。
+有关详细信息，请参阅[[!DNL Site-Wide Analysis Tool] 用户指南](/help/tools/site-wide-analysis-tool/access.md)。
 
-## 从[!DNL Upgrade Compatibility Tool]运行[!DNL Site-Wide Analysis Tool]
+## 从[!DNL Site-Wide Analysis Tool]运行[!DNL Upgrade Compatibility Tool]
 
 导航到项目的[!DNL Site-Wide Analysis Tool]仪表板并找到[!DNL Upgrade Compatibility Tool]小组件。
 
@@ -36,4 +36,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 通过[!DNL Upgrade Compatibility Tool]运行[!DNL Site-Wide Analysis Tool]可优化您的结果，并帮助您关注目标升级中新的和关键的问题。 它使用[`--ignore-current-version-compatibility-errors`](run.md#optimize-your-results)选项，并始终显示将您的项目版本与最新发布版本进行比较的结果。
+> 通过[!DNL Site-Wide Analysis Tool]运行[!DNL Upgrade Compatibility Tool]可优化您的结果，并帮助您关注目标升级中新的和关键的问题。 它使用[`--ignore-current-version-compatibility-errors`](run.md#optimize-your-results)选项，并始终显示将您的项目版本与最新发布版本进行比较的结果。

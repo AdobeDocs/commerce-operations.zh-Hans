@@ -4,9 +4,9 @@ description: 如果您是Adobe Commerce on cloud infrastructure Pro规划架构�
 feature: Observability, Support, Tools and External Services
 role: Admin
 exl-id: 3fc4b07f-4e27-4833-97a9-cf9741ae5648
-source-git-commit: 4560e7d000ad8333c3089b8b5e8ffd25f5d31b67
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果Adobe Commerce警报策略的托管警报不可用，可能是由于新创建的此帐户或最近配置了[!DNL New Relic]。 在每个星期二运行一个进程，将警报策略添加到这些帐户。 警报策略应在下一个进程运行后的第二天可供您使用。 如果策略仍然缺失，请[提交Adobe Commerce支持请求](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)并包含您的项目ID。
+>如果Adobe Commerce警报策略的托管警报不可用，可能是由于新创建的此帐户或最近配置了[!DNL New Relic]。 在每个星期二运行一个进程，将警报策略添加到这些帐户。 警报策略应在下一个进程运行后的第二天可供您使用。 如果策略仍然缺失，请[提交Adobe Commerce支持请求](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)并包含您的项目ID。
 
 请参阅下表中的链接，这些链接指向提供这些警报的故障诊断步骤的知识库文章：
 

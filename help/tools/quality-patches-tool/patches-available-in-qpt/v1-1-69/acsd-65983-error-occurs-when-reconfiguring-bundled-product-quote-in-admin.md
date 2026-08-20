@@ -1,16 +1,16 @@
 ---
 title: ACSD-65983：在Admin中重新配置捆绑的产品报价时出错
-description: Adobe Commerce应用ACSD-65983修补程序以修复以下问题：尝试在后端的[!UICONTROL Sales] > [!UICONTROL Quotes] > [!UICONTROL Edit]屏幕中配置捆绑产品时出现错误。
+description: 应用ACSD-65983修补程序以修复以下问题：尝试在后端的[!UICONTROL Sales] &gt； [!UICONTROL Quotes] &gt； [!UICONTROL Edit]屏幕中配置捆绑包产品时出现错误。
 feature: B2B, Quotes
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 8a8f2b273bcbcf135677ad7ca289398bf660e02e
+exl-id: d03d09bc-a444-486f-ad6b-fddbbf795d8a
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65983：在Admin中重新配置捆绑的产品报价时出错
 
@@ -37,7 +37,7 @@ ACSD-65983修补程序修复了在Admin后端重新配置捆绑的产品报价�
 <u>重现步骤</u>：
 
 1. 转到“管理”面板并启用&#x200B;**[!UICONTROL B2B Feature]**： **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL B2B Feature]**。
-1. 创建固定数量的捆绑产品（例如： *$10*），并在&#x200B;*选项1*&#x200B;中添加&#x200B;*2*&#x200B;个数量为&#x200B;**0**&#x200B;的简单产品，在&#x200B;*选项2*&#x200B;中添加&#x200B;**other**&#x200B;个数量为2的简单产品。
+1. 创建固定数量的捆绑产品（例如： *$10*），并在&#x200B;**选项1**&#x200B;中添加&#x200B;*2*&#x200B;个数量为&#x200B;*0*&#x200B;的简单产品，在&#x200B;**选项2**&#x200B;中添加&#x200B;*other*&#x200B;个数量为2的简单产品。
 1. 从前端创建公司帐户。
 1. 转到&#x200B;**[!UICONTROL Catalog]** > **[!UICONTROL Shared Catalogs]**，将创建的公司和产品分配给新/自定义共享目录。
 1. 在前端以&#x200B;**公司用户**&#x200B;身份登录，并从捆绑包中添加一个简单的产品到购物车。
@@ -61,8 +61,8 @@ ACSD-65983修补程序修复了在Admin后端重新配置捆绑的产品报价�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]
-* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)
+* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)
 
 ## 相关阅读
 

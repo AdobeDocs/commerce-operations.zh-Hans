@@ -2,9 +2,9 @@
 title: 升级模块和扩展
 description: 使用命令行界面和编辑器升级Adobe Commerce模块和扩展。
 exl-id: 017d75df-fd21-4fb4-abc9-80a35fc47d0f
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 供应商捆绑扩展(VBE)
 
-Adobe在2.4.4中删除了所有[VBE](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/upgrade-guide/modules/upgrade)。 供应商将继续在Adobe Commerce Marketplace上支持这些扩展。
+Adobe在2.4.4中删除了所有[VBE](/help/upgrade/modules/upgrade.md)。 供应商将继续在Adobe Commerce Marketplace上支持这些扩展。
 
 如果要继续在Adobe Commerce 2.4.4及更高版本中使用这些扩展，则必须在&#x200B;_升级到2.4.4之前，更新`composer.json`文件_&#x200B;中相应的包依赖项。 有关要使用的包名称和版本，请与供应商联系。
 

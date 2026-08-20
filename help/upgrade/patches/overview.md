@@ -2,9 +2,9 @@
 title: 修补程序的工作方式
 description: 了解Adobe Commerce的各种类型的修补程序及其工作方式。
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 0%
 要创建自定义修补程序，请执行以下操作：
 
 1. 在本地项目中创建一个`patches/composer`目录。
-1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)的[#64741&rbrace;承诺。](https://github.com/magento/magento2/issues/6474)
+1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[&#128279;](https://github.com/magento/magento2/issues/6474)的[`2d31571`#64741&rbrace;承诺。](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)
 1. 将`.patch`或`.diff`扩展附加到提交URL。 对较小的文件大小使用`.diff`。 例如：[https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
 1. 将页面另存为`patches/composer`目录中的文件。 例如，`github-issue-6474.diff`。
 1. 编辑文件并从所有路径中删除`app/code/<VENDOR>/<PACKAGE>`，使其相对于`vendor/<VENDOR>/<PACKAGE>`目录。
@@ -98,4 +98,4 @@ index c8a6fef58d31..7d01c195791e 100644
 
 >[!NOTE]
 >
->要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅[Commerce on Cloud指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)中的&#x200B;_应用修补程序_。
+>要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅&#x200B;_Commerce on Cloud指南_&#x200B;中的[应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。

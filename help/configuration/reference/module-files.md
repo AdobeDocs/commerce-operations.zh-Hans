@@ -2,7 +2,7 @@
 title: 模块配置文件
 description: 了解如何使用Adobe Commerce中的配置类型自定义模块。 了解配置文件管理和模块自定义最佳实践。
 exl-id: 87433c28-8e3d-43d0-b77e-3ff9a680af5f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 - **配置阶段** — 阶段定义为&#x200B;_主_、_全局_&#x200B;和&#x200B;_区域_。 每个阶段确定何时加载配置类型并与同名配置类型合并。 例如，`module.xml`文件与其他`module.xml`文件合并。
 
-- **配置作用域** — 作用域是配置阶段的补充，它定义了配置类型模型。 例如，`adminhtml`是一个区域作用域，该作用域与其他模块的`adminhtml`配置一起在阶段加载。 有关详细信息，请参阅[模块和区域](https://developer.adobe.com/commerce/php/architecture/modules/areas/)。
+- **配置作用域** — 作用域是配置阶段的补充，它定义了配置类型模型。 例如，`adminhtml`是一个区域作用域，该作用域与其他模块的`adminhtml`配置一起在阶段加载。 有关详细信息，请参阅[模块和区域](https://developer.adobe.com/commerce/php/architecture/modules/areas)。
 
 ## 配置加载和合并
 
@@ -81,39 +81,39 @@ Commerce应用程序合并算法：
 | --- | --- | --- | --- |
 | `address_formats.xml` | 地址格式声明 | 主要，全局 | [\Magento\Customer\Model\Address\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/Model/Address/Config.php) |
 | `acl.xml` | [访问控制列表](https://developer.adobe.com/commerce/webapi/get-started/authentication/#relationship-between-aclxml-and-webapixml) | 全局 | [\Magento\Framework\Acl\AclResource\Provider](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Acl/AclResource/Provider.php) |
-| `analytics.xml` | [高级报告](https://developer.adobe.com/commerce/php/development/advanced-reporting/data-collection/) | 主要，全局 | [\Magento\Analytics\Model\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/Model/Config/Reader.php) |
+| `analytics.xml` | [高级报告](https://developer.adobe.com/commerce/php/development/advanced-reporting/data-collection) | 主要，全局 | [\Magento\Analytics\Model\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/Model/Config/Reader.php) |
 | `cache.xml` | 缓存类型声明 | 主要，全局 | [\Magento\Framework\Cache\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Config/Data.php) |
 | `catalog_attributes.xml` | 目录属性配置 | 全局 | [\Magento\Catalog\Model\Attribute\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Catalog/Model/Attribute/Config/Data.php) |
 | `config.php`和`env.php` | [部署配置](../reference/deployment-files.md) | 这些文件可由内部配置处理器读取/写入。 | 没有对象，无法自定义 |
 | `config.xml` | 系统配置 | 主要，全局 | [\Magento\Framework\App\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config.php) |
-| `communication.xml` | [定义消息队列系统的方面](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#communicationxml) | 全局 | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Communication](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Communication.php) |
+| `communication.xml` | [定义消息队列系统的方面](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration#communicationxml) | 全局 | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Communication](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Communication.php) |
 | `crontab.xml` | [配置cron组](../cron/custom-cron-reference.md#configure-cron-groups) | 全局 | [\Magento\Cron\Model\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Cron/Model/Config/Data.php) |
 | `cron_groups.xml` | [指定cron组选项](../cron/custom-cron-reference.md) | 全局 | [\Magento\Cron\Model\Groups\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Cron/Model/Groups/Config/Data.php) |
-| `db_schema.xml` | [声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) | 全局 | [Magento\Framework\Setup\Declaration\Schema](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/Declaration/Schema/SchemaConfig.php) |
-| `di.xml` | [依赖项注入](https://developer.adobe.com/commerce/php/development/components/dependency-injection/)配置 | 主要、全局、区域 | [\Magento\Framework\ObjectManager\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/ObjectManager/Config/Config.php) |
+| `db_schema.xml` | [声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration) | 全局 | [Magento\Framework\Setup\Declaration\Schema](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/Declaration/Schema/SchemaConfig.php) |
+| `di.xml` | [依赖项注入](https://developer.adobe.com/commerce/php/development/components/dependency-injection)配置 | 主要、全局、区域 | [\Magento\Framework\ObjectManager\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/ObjectManager/Config/Config.php) |
 | `eav_attributes.xml` | 提供EAV属性配置 | 全局 | [\Magento\Eav\Model\Entity\Attribute\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Eav/Model/Entity/Attribute/Config.php) |
 | `email_templates.xml` | 电子邮件模板配置 | 全局 | [\Magento\Email\Model\Template\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Email/Model/Template/Config/Data.php) |
 | `esconfig.xml` | [搜索引擎区域设置停用词配置](../search/search-stopwords.md#create-stopwords-for-a-new-locale) | 全局 | [\Magento\Elasticsearch\Model\Adapter\Index\Config\EsConfig](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Elasticsearch/Model/Adapter/Index/Config/EsConfig.php) |
 | `events.xml` | 事件/观察者配置 | 全局，区域 | [\Magento\Framework\Event](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Event.php) |
 | `export.xml` | 导出实体配置 | 全局 | [\Magento\ImportExport\Model\Export\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/ImportExport/Model/Export/Config.php) |
-| `extension_attributes.xml` | [扩展属性](https://developer.adobe.com/commerce/php/development/components/attributes/#extension-attributes) | 全局 | [\Magento\Framework\Api\ExtensionAttribute\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Api/ExtensionAttribute/Config.php) |
+| `extension_attributes.xml` | [扩展属性](https://developer.adobe.com/commerce/php/development/components/attributes#extension-attributes) | 全局 | [\Magento\Framework\Api\ExtensionAttribute\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Api/ExtensionAttribute/Config.php) |
 | `fieldset.xml` | 定义字段集 | 全局 | [\Magento\Framework\DataObject\Copy\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/DataObject/Copy/Config/Reader.php) |
-| `indexer.xml` | [声明索引器](https://developer.adobe.com/commerce/php/development/components/indexing/custom-indexer/) | 全局 | [\Magento\Framework\Indexer\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Indexer/Config/Reader.php) |
+| `indexer.xml` | [声明索引器](https://developer.adobe.com/commerce/php/development/components/indexing/custom-indexer) | 全局 | [\Magento\Framework\Indexer\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Indexer/Config/Reader.php) |
 | `import.xml` | 声明导入实体 | 全局 | [\Magento\ImportExport\Model\Import\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/ImportExport/Model/Import/Config.php) |
 | `menu.xml` | 定义管理员的菜单项 | adminhtml | [\Magento\Backend\Model\Menu\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Backend/Model/Menu/Config/Reader.php) |
 | `module.xml` | 定义模块配置数据和软依赖关系 | 主要，全局 | [\Magento\Framework\Module\ModuleList\Loader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Module/ModuleList/Loader.php) |
-| `mview.xml` | [MView配置](https://developer.adobe.com/commerce/php/development/components/indexing/custom-indexer/#mview-configuration) | 主要，全局 | [\Magento\Framework\Mview\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Mview/Config/Data.php) |
+| `mview.xml` | [MView配置](https://developer.adobe.com/commerce/php/development/components/indexing/custom-indexer#mview-configuration) | 主要，全局 | [\Magento\Framework\Mview\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Mview/Config/Data.php) |
 | `payment.xml` | 支付模块配置 | 主要，全局 | [\Magento\Payment\Model\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Payment/Model/Config.php) |
-| `persistent.xml` | [Magento_Persistent](https://developer.adobe.com/commerce/php/module-reference/module-persistent/)配置文件 | 全局 | [\Magento\Persistent\Helper\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Persistent/Helper/Data.php) |
+| `persistent.xml` | [Magento_Persistent](https://developer.adobe.com/commerce/php/module-reference/module-persistent)配置文件 | 全局 | [\Magento\Persistent\Helper\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Persistent/Helper/Data.php) |
 | `pdf.xml` | PDF设置 | 全局 | [\Magento\Sales\Model\Order\Pdf\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/Model/Order/Pdf/Config/Reader.php) |
 | `product_options.xml` | 提供产品选项配置 | 全局 | [\Magento\Catalog\Model\ProductOptions\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Catalog/Model/ProductOptions/Config.php) |
 | `product_types.xml` | 定义产品类型 | 全局 | [\Magento\Catalog\Model\ProductTypes\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Catalog/Model/ProductTypes/Config.php) |
-| `queue_consumer.xml` | [定义现有队列与其使用者之间的关系](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#queue_consumerxml) | 全局 | [\Magento\Framework\MessageQueue\Consumer\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Consumer/Config/Xml/Reader.php) |
-| `queue_publisher.xml` | [定义发布主题的Exchange。](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#queue_publisherxml) | 全局 | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Publisher](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Publisher.php) |
-| `queue_topology.xml` | [定义邮件路由规则，声明队列和交换](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#queue_topologyxml) | 全局 | [\Magento\Framework\MessageQueue\Topology\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Topology/Config/Xml/Reader.php) |
-| `reports.xml` | [高级报告](https://developer.adobe.com/commerce/php/development/advanced-reporting/report-xml/) | 全局 | [\Magento\Analytics\ReportXml\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/ReportXml/Config.php) |
+| `queue_consumer.xml` | [定义现有队列与其使用者之间的关系](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration#queue_consumerxml) | 全局 | [\Magento\Framework\MessageQueue\Consumer\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Consumer/Config/Xml/Reader.php) |
+| `queue_publisher.xml` | [定义发布主题的Exchange。](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration#queue_publisherxml) | 全局 | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Publisher](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Publisher.php) |
+| `queue_topology.xml` | [定义邮件路由规则，声明队列和交换](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration#queue_topologyxml) | 全局 | [\Magento\Framework\MessageQueue\Topology\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Topology/Config/Xml/Reader.php) |
+| `reports.xml` | [高级报告](https://developer.adobe.com/commerce/php/development/advanced-reporting/report-xml) | 全局 | [\Magento\Analytics\ReportXml\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/ReportXml/Config.php) |
 | `resources.xml` | 定义模块资源 | 全局 | [\Magento\Framework\App\ResourceConnection\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/ResourceConnection/Config/Reader.php) |
-| `routes.xml` | [路由](https://developer.adobe.com/commerce/php/development/components/routing/)配置 | 区域 | [Magento\Framework\App\Route\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Route/Config.php) |
+| `routes.xml` | [路由](https://developer.adobe.com/commerce/php/development/components/routing)配置 | 区域 | [Magento\Framework\App\Route\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Route/Config.php) |
 | `sales.xml` | 定义销售总额配置 | 全局 | [\Magento\Sales\Model\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/Model/Config/Data.php) |
 | `search_engine.xml` | 提供搜索引擎配置 | 全局 | [Magento\Search\Model\SearchEngine\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Search/Model/SearchEngine/Config.php) |
 | `search_request.xml` | 定义目录搜索配置 | 全局 | [\Magento\Framework\Search\Request\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Search/Request/Config.php) |
@@ -121,8 +121,8 @@ Commerce应用程序合并算法：
 | `system.xml` | 定义系统配置页面的选项 | adminhtml | [\Magento\Framework\App\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config.php) |
 | `validation.xml` | 模块验证配置文件 | 全局 | [\Magento\Framework\Validator\Factory](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Validator/Factory.php) |
 | `view.xml` | 定义Vendor_Module视图配置值 | 全局 | [\Magento\Framework\View\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Config.php) |
-| `webapi.xml` | [配置Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/) | 全局 | [\Magento\Webapi\Model\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Webapi/Model/Config.php) |
-| `webapi_async.xml` | [定义REST自定义路由](https://developer.adobe.com/commerce/php/development/components/web-api/custom-routes/) | 全局 | [\Magento\WebapiAsync\Model\ServiceConfig](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Model/ServiceConfig.php) |
+| `webapi.xml` | [配置Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services) | 全局 | [\Magento\Webapi\Model\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Webapi/Model/Config.php) |
+| `webapi_async.xml` | [定义REST自定义路由](https://developer.adobe.com/commerce/php/development/components/web-api/custom-routes) | 全局 | [\Magento\WebapiAsync\Model\ServiceConfig](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Model/ServiceConfig.php) |
 | `widget.xml` | 定义构件 | 全局 | [\Magento\Widget\Model\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Widget/Model/Config/Reader.php) |
 | `zip_codes.xml` | 定义每个国家/地区的邮政编码格式 | 全局 | [\Magento\Directory\Model\Country\Postcode\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Directory/Model/Country/Postcode/Config/Data.php) |
 

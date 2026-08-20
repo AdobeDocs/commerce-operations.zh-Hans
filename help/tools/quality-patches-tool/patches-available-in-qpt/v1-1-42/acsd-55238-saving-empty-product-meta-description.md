@@ -5,16 +5,16 @@ feature: Products, Page Builder, Page Content
 role: Admin, Developer
 exl-id: 39ccf1bb-a71a-47a0-b252-e6331e2df9b0
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
 # ACSD-55238：保存空的产品元描述
 
-ACSD-55238修补程序修复了元描述中始终显示包含HTML编辑器生成的HTML代码的产品描述的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.42时，此修补程序可用。 修补程序ID为ACSD-55238。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
+ACSD-55238修补程序修复了元描述中始终显示包含HTML编辑器生成的HTML代码的产品描述的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.42时，此修补程序可用。 修补程序ID为ACSD-55238。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
 ## 受影响的产品和版本
 
@@ -38,7 +38,7 @@ ACSD-55238修补程序修复了元描述中始终显示包含HTML编辑器生成
 
 1. 转到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Content]** > **[!UICONTROL Block]**&#x200B;并创建包含任何内容的新块。
 1. 转到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Catalog]** > **[!UICONTROL Product]**&#x200B;并创建新产品。 将元描述设置为空。
-1. 在&#x200B;*[!DNL Page Builder]*&#x200B;选项卡中添加上面使用&#x200B;*[!UICONTROL Content]*&#x200B;创建的块并保存产品。
+1. 在&#x200B;*[!UICONTROL Content]*&#x200B;选项卡中添加上面使用&#x200B;*[!DNL Page Builder]*&#x200B;创建的块并保存产品。
 1. 打开店面上的产品并检查其文档元素`meta name = "description"`。
 
 <u>预期的结果</u>：
@@ -53,15 +53,15 @@ ACSD-55238修补程序修复了元描述中始终显示包含HTML编辑器生成
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
