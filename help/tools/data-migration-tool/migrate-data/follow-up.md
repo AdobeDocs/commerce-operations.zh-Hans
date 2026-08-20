@@ -5,7 +5,7 @@ exl-id: a55f357b-6c95-49d6-b2f1-c2e403a8c85f
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Magento 1的某些行为和逻辑在Magento 2中的实施方式有所不同。 [
 
 1. 将`map-customer.xml.dist`配置文件从[!DNL Data Migration Tool] (`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>`)的相应目录复制到`<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/map-customer.xml`文件中。
 
-1. 更新`<customer_map_file>`中的`config.xml`节点并从`.dist`中删除`map-customer.xml.dist`扩展
+1. 更新`config.xml`中的`<customer_map_file>`节点并从`map-customer.xml.dist`中删除`.dist`扩展
 
 1. 将以下规则添加到`map-customer.xml`文件：
 
