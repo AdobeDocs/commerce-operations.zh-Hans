@@ -32,7 +32,7 @@ ACSD-51114修补程序修复了在启用异步索引后，随机产品从大型�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`程序包更新到最新版本，并在[[!DNL Quality Patches Tool]:Search修补程序页面上进行兼容性检查。将修补程序ID用作搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`程序包更新到最新版本，并在&lbrack;[!DNL Quality Patches Tool]:Search修补程序页面上进行兼容性检查。将修补程序ID用作搜索关键字来查找修补程序。
 
 ## 问题
 

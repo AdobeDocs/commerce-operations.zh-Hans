@@ -12,11 +12,20 @@ badgePaas: label="Commerce on Cloud" type="Informative" url="https://experiencel
 nudge: true
 autotag-review: '2026-08-18T23:34:12.845Z'
 TQID: 'https://experienceleague.adobe.com/kYuQylZb2r7ElWP1oRJbyIt9jsZMhoO9yFpBMDlf1tw'
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047id: cdf0c6dd-1717-4e20-9530-a24eee57088b
-feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+  - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
 source-wordcount: 3304
@@ -317,7 +326,7 @@ io-threads-do-reads yes
 io-threads 8 # Choose a value lower than the number of CPU cores (check with nproc), and then tune under load.
 ```
 
->[!TAB 为Valkey]配置I/O线程
+>[!TAB 为Valkey配置I/O线程]
 
 对于Valkey：
 
@@ -614,7 +623,7 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
 >
 >适用于Adobe Commerce 2.4.9的修补程序ACP2E-5132通过优化标记存储、添加过时的缓存重新生成锁定，以及修复过时的标记成员资格、冗余远程写入和基于一级大小的逐出(`cleanup_percentage`)等问题而提高了[!DNL Symfony]二级缓存的性能和可靠性。 这减少了磁盘I/O和后端负载，同时提高了缓存一致性。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](/help/configuration/cache/level-two-cache.md#enhanced-symfony-l2-cache-performance-and-reliability)。
 >
->该修补程序包含在Commerce包](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)的[Cloud修补程序中（依赖于`ece-tools`），并在您更新到最新的`ece-tools`版本时在部署期间自动应用。 更新到`ece-tools`的最新版本以接收修补程序。
+>该修补程序包含在Commerce包[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)的Cloud修补程序中（依赖于`ece-tools`），并在您更新到最新的`ece-tools`版本时在部署期间自动应用。 更新到`ece-tools`的最新版本以接收修补程序。
 
 #### 自定义[!DNL Symfony]二级缓存配置
 

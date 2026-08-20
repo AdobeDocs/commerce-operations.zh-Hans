@@ -38,7 +38,7 @@ ACSD-63299修补程序修复了特殊价格属性不再影响可配置产品的�
 
 1. 转到&#x200B;**[!UICONTROL Stores]** > *[!UICONTROL Attributes]* > **[!UICONTROL Products]**。
 1. 查找&#x200B;***[!UICONTROL special_price]***&#x200B;属性并导航到&#x200B;**[!UICONTROL Storefront Properties]**。
-1. 将&#x200B;***[!UICONTROL Used in Product Listing]***&#x200B;更改为***[!UICONTROL No]***。
+1. 将&#x200B;***[!UICONTROL Used in Product Listing]***&#x200B;更改为&#x200B;***[!UICONTROL No]***。
 1. 创建一个带有一个子项的可配置产品：
    * 名称和SKU：测试
    * 价格：159.00美元
