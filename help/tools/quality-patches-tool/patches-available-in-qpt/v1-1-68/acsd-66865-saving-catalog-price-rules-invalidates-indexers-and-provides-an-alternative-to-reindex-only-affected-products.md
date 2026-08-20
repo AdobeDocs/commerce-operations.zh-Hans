@@ -1,16 +1,16 @@
 ---
 title: ACSD-66865：保存[!UICONTROL Catalog Price Rule]将使索引器失效，并且提供替代方法，以仅对受影响的产品重新索引
-description: 应用ACSD-66865修补程序以修复Adobe Commerce问题，其中  保存[!UICONTROL Catalog Price Rules]将使索引器失效，并且提供了替代方法，可仅对受影响的产品重新编制索引。
+description: 应用ACSD-66865修补程序以修复保存[!UICONTROL Catalog Price Rules]使索引器失效的Adobe Commerce问题，并提供替代方法，以仅重新索引受影响的产品。
 feature: Price Rules, Price Indexer
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: fe36522b99ec3fe7189d164cfca6127c9119e06e
+exl-id: 68baf176-ee6e-4ba8-8a34-8adb8d1e16fe
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66865：保存&#x200B;**[!UICONTROL Catalog Price Rule]**&#x200B;将使索引器失效，并且提供替代方法，以仅对受影响的产品重新索引
 
@@ -28,7 +28,7 @@ ACSD-66865修补程序修复了保存&#x200B;**[!UICONTROL Catalog Price Rule]**
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -38,7 +38,7 @@ ACSD-66865修补程序修复了保存&#x200B;**[!UICONTROL Catalog Price Rule]**
 
 1. 确保cron未运行，并且所有索引器都设置为按计划更新（除了可以在保存时更新的`customer_grid`）。
 2. 使用以下命令运行完全手动重新索引： `php bin/magento indexer:reindex`。
-3. 验证所有索引是否显示积压中具有&#x200B;*[!UICONTROL Ready]* 0 *个项目的状态*。
+3. 验证所有索引是否显示积压中具有&#x200B;*0*&#x200B;个项目的状态&#x200B;*[!UICONTROL Ready]*。
 4. 在管理员侧边栏上，转到&#x200B;**[!UICONTROL Marketing]** > *[!UICONTROL Promotions]* > **[!UICONTROL Catalog Price Rule]**。 为单个产品创建有效的目录价格规则（例如，使用&#x200B;*SKU*&#x200B;条件）。
 5. 运行命令： `php bin/magento indexer:status`以检查索引器状态。
 6. 请注意，即使只有一个产品受到影响，多个索引仍标记为&#x200B;**[!UICONTROL Reindex Required]**。
@@ -55,8 +55,8 @@ ACSD-66865修补程序修复了保存&#x200B;**[!UICONTROL Catalog Price Rule]**
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

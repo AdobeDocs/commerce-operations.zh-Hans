@@ -3,10 +3,10 @@ title: 实施维护阶段
 description: 了解Adobe Commerce项目维护阶段的实施最佳实践。
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
 feature: Best Practices
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 3%
+source-wordcount: '429'
+ht-degree: 2%
 
 ---
 
@@ -71,9 +71,9 @@ ht-degree: 3%
 | 最佳实践 | 描述 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | [审核前端性能](frontend-performance.md) | 使用Web性能工具识别并解决对网站性能产生负面影响的问题。 |
-| [就绪，设置，维护](https://business.adobe.com/cn/blog/basics/ready-set-maintain) | 关于维护Adobe Commerce站点以最大限度地提高业务价值和正常运行时间的提示。 |
+| [就绪，设置，维护](https://business.adobe.com/blog/basics/ready-set-maintain) | 关于维护Adobe Commerce站点以最大限度地提高业务价值和正常运行时间的提示。 |
 | [使用 [!DNL Site-Wide Analysis Tool]](../../../tools/site-wide-analysis-tool/intro.md#integrations-with-other-adobe-commerce-support-tools) | 在一个位置查看有关Adobe Commerce站点的重要见解。 |
-| [监视性能、磁盘空间和日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html?lang=zh-Hans) | 使用New Relic在云基础架构网站上监控有关Adobe Commerce的关键性能分析。 |
+| [监视性能、磁盘空间和日志](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/performance) | 使用New Relic在云基础架构网站上监控有关Adobe Commerce的关键性能分析。 |
 | [响应安全事件](respond-to-security-incident.md) | 使用New Relic在云基础架构网站上监控有关Adobe Commerce的关键性能分析。 |
 
 ### 升级

@@ -2,9 +2,9 @@
 title: env.php参考
 description: 了解Adobe Commerce中的env.php文件配置值和部分。 发现环境设置和配置选项。
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 后端
 
-使用env.php中的&#x200B;**节点为Commerce管理员URL配置** frontName`backend`。
+使用env.php中的`backend`节点为Commerce管理员URL配置&#x200B;**frontName**。
 
 ```conf
 'backend' => [
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ## 缓存
 
-使用`cache`文件中的`env.php`节点配置redis页面和默认缓存。
+使用`env.php`文件中的`cache`节点配置redis页面和默认缓存。
 
 ```conf
 'cache' => [
@@ -112,11 +112,11 @@ ht-degree: 0%
 
 可以使用以下选项：
 
-- `1` — 使用者继续处理来自消息队列的消息，直到达到`max_messages`文件中指定的`env.php`值为止，然后关闭TCP连接并终止使用者进程。 如果队列在达到`max_messages`值之前清空，则使用者将等待更多消息到达。
+- `1` — 使用者继续处理来自消息队列的消息，直到达到`env.php`文件中指定的`max_messages`值为止，然后关闭TCP连接并终止使用者进程。 如果队列在达到`max_messages`值之前清空，则使用者将等待更多消息到达。
 
   我们建议大型商家使用此设置，因为预计消息流量会持续不变，并且不希望出现处理延迟。
 
-- `0` — 使用者处理队列中的可用消息，关闭TCP连接并终止。 即使已处理的消息数小于`max_messages`文件中指定的`env.php`值，使用者也不会等待其他消息进入队列。 这有助于防止由于消息队列处理长时间延迟而导致cron作业出现问题。
+- `0` — 使用者处理队列中的可用消息，关闭TCP连接并终止。 即使已处理的消息数小于`env.php`文件中指定的`max_messages`值，使用者也不会等待其他消息进入队列。 这有助于防止由于消息队列处理长时间延迟而导致cron作业出现问题。
 
   我们建议将此设置用于小型商家，他们不希望持续发送消息流，并且更愿意节省计算资源以换取在连续几天没有消息的情况下出现的轻微处理延迟。
 
@@ -146,7 +146,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-在[Commerce用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)中了解有关&#x200B;_加密密钥_&#x200B;的更多信息。
+在&#x200B;_Commerce用户指南_&#x200B;中了解有关[加密密钥](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)的更多信息。
 
 ## db
 
@@ -188,8 +188,8 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-如果在系统`queue/default_connection`文件中指定了`env.php`，则此连接用于通过系统的所有消息队列，除非在`queue_topology.xml`、`queue_publisher.xml`或`queue_consumer.xml`文件中定义了特定连接。
-例如，如果`queue/default_connection`在`amqp`中为`env.php`，但在模块的队列配置XML文件中指定了`db`连接，则模块将使用MySQL作为消息代理。
+如果在系统`env.php`文件中指定了`queue/default_connection`，则此连接用于通过系统的所有消息队列，除非在`queue_topology.xml`、`queue_publisher.xml`或`queue_consumer.xml`文件中定义了特定连接。
+例如，如果`queue/default_connection`在`env.php`中为`amqp`，但在模块的队列配置XML文件中指定了`db`连接，则模块将使用MySQL作为消息代理。
 
 ## 目录
 
@@ -211,7 +211,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-了解有关[可下载域](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd)的更多信息。
+了解有关[可下载域](/help/tools/reference/commerce-on-premises.md#downloadabledomainsadd)的更多信息。
 
 ## 安装
 
@@ -371,7 +371,7 @@ export MAGENTO_DC_X-FRAME-OPTIONS=SAMEORIGIN
 ```
 
 上述数组的JSON编码文本将为
-`{"session":{"save":"files"},"x-frame-options":"SAMEORIGIN"}`。
+`{"session":{"save":"files"},"x-frame-options":"SAMEORIGIN"}`.
 
 现在，将它设置为`MAGENTO_DC__OVERRIDE`操作系统变量的值。
 

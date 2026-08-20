@@ -5,9 +5,9 @@ feature: Catalog Management
 Role: Admin, Developer
 exl-id: cd1775c5-783e-4ed5-a148-1dae0b7542f8
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ACSD-63299修补程序修复了特殊价格属性不再影响可配置产品的�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -38,7 +38,7 @@ ACSD-63299修补程序修复了特殊价格属性不再影响可配置产品的�
 
 1. 转到&#x200B;**[!UICONTROL Stores]** > *[!UICONTROL Attributes]* > **[!UICONTROL Products]**。
 1. 查找&#x200B;***[!UICONTROL special_price]***&#x200B;属性并导航到&#x200B;**[!UICONTROL Storefront Properties]**。
-1. 将&#x200B;***[!UICONTROL Used in Product Listing]***&#x200B;更改为&#x200B;***[!UICONTROL No]***。
+1. 将&#x200B;***[!UICONTROL Used in Product Listing]***&#x200B;更改为***[!UICONTROL No]***。
 1. 创建一个带有一个子项的可配置产品：
    * 名称和SKU：测试
    * 价格：159.00美元
@@ -64,8 +64,8 @@ ACSD-63299修补程序修复了特殊价格属性不再影响可配置产品的�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

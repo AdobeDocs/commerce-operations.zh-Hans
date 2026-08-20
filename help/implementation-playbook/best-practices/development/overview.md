@@ -4,9 +4,9 @@ description: 了解Adobe Commerce项目开发阶段的实施最佳实践。
 exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
 feature: Best Practices
 role: Developer
-source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '364'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 | 最佳实践 | 描述 |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [生成和部署](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html?lang=zh-Hans){target="_blank"} | 描述Adobe Commerce在云基础架构项目上的构建和部署阶段的最佳实践 |
+| [生成和部署](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices){target="_blank"} | 描述Adobe Commerce在云基础架构项目上的构建和部署阶段的最佳实践 |
 | 调试 | 系统地高效地调试Adobe Commerce框架 |
 | [静态内容部署](static-content-deployment.md) | 避免店面未显示静态内容的问题 |
 | [疑难解答](troubleshooting.md) | Adobe Commerce实施常见问题疑难解答 |

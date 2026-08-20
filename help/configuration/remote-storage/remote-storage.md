@@ -3,9 +3,9 @@ title: 配置远程存储
 description: 了解如何为本地Commerce应用程序配置远程存储模块。
 feature: Configuration, Storage
 exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 >[!INFO]
 >
->- 远程存储仅适用于Commerce版本2.4.2及更高版本。 请参阅[2.4.2发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/magento-open-source/2-4-2)。
+>- 远程存储仅适用于Commerce版本2.4.2及更高版本。 请参阅[2.4.2发行说明](/help/release/release-notes/open-source/2-4-2.md)。
 >
 >- 在云基础架构上的Adobe Commerce上，远程存储模块具有&#x200B;_有限的_&#x200B;支持。 Adobe无法完全排除第三方存储适配器服务的故障。 有关为云项目实施远程存储的指导，请参阅[在云基础架构上为Commerce配置远程存储](cloud-support.md)。
 
@@ -91,5 +91,5 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 >[!INFO]
 >
->同步命令只迁移`pub/media`目录中的文件，_而不是_&#x200B;目录`var`中的导入/导出文件。 请参阅&#x200B;_Commerce 2.4用户指南_&#x200B;中的[计划导入/导出](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html?lang=zh-Hans)。
+>同步命令只迁移`pub/media`目录中的文件，_而不是_&#x200B;目录`var`中的导入/导出文件。 请参阅&#x200B;_Commerce 2.4用户指南_&#x200B;中的[计划导入/导出](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html)。
 

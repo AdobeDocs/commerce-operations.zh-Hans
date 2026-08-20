@@ -3,9 +3,9 @@ title: 应用程序初始化和引导
 description: 阅读Commerce应用程序的初始化和引导逻辑。
 feature: Configuration, Install, Media
 exl-id: 46d1ffc0-7870-4dd1-beec-0a9ff858ab62
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -67,13 +67,13 @@ bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下
 
 ## 入口点应用程序
 
-我们有以下入口点应用程序(即Commerce定义的应用程序，由Web服务器用作目录索引)：
+我们有以下入口点应用程序（即Commerce定义的应用程序，由Web服务器用作目录索引）：
 
 ### HTTP入口点
 
 [\Magento\Framework\App\Http](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/Http)的工作方式如下：
 
-1. 确定[应用程序区域](https://developer.adobe.com/commerce/php/architecture/modules/areas/)。
+1. 确定[应用程序区域](https://developer.adobe.com/commerce/php/architecture/modules/areas)。
 1. 启动前端控制器和路由系统，以便查找并执行控制器操作。
 1. 使用HTTP响应对象返回从控制器操作获得的结果。
 1. 错误处理（按以下优先级顺序）：
@@ -89,7 +89,7 @@ bootstrap对象指定Commerce应用程序如何处理未捕获的异常，如下
 
 ### 静态资源入口点
 
-[\Magento\Framework\App\StaticResource](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/StaticResource.php)是用于检索静态资源(例如，CSS、JavaScript和图像)的应用程序。 它会延迟对静态资源执行任何操作，直到请求该资源为止。
+[\Magento\Framework\App\StaticResource](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/StaticResource.php)是用于检索静态资源（例如，CSS、JavaScript和图像）的应用程序。 它会延迟对静态资源执行任何操作，直到请求该资源为止。
 
 >[!INFO]
 >

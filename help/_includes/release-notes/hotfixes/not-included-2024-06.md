@@ -1,7 +1,7 @@
 ---
-source-git-commit: b63fa9a8b2b59f6e8dfd7003e75c66caf99d5e81
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -17,30 +17,30 @@ ht-degree: 0%
 
 1. 应用2024年6月11日发布的其中一个安全修补程序：
 
-   * [2.4.7-p1](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-7-patches#adobe-commerce-247-p1)
+   * [2.4.7 - p1](/help/release/release-notes/security/2-4-7-patches.md#adobe-commerce-247-p1)
 
-   * [2.4.6-p6](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-6-patches#adobe-commerce-246-p6)
+   * [2.4.6-p6](/help/release/release-notes/security/2-4-6-patches.md#adobe-commerce-246-p6)
 
-   * [2.4.5-p8](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-5-patches#adobe-commerce-245-p8)
+   * [2.4.5-p8](/help/release/release-notes/security/2-4-5-patches.md#adobe-commerce-245-p8)
 
-   * [2.4.4-p9](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/security-patches/2-4-4-patches#adobe-commerce-244-p9)
+   * [2.4.4 - p9](/help/release/release-notes/security/2-4-4-patches.md#adobe-commerce-244-p9)
 
-1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102)。
+1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。
 
-1. [旋转](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)加密密钥。
+1. [旋转](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)加密密钥。
 
 选项2：
 
-1. 应用[隔离的修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102)。
+1. 应用[隔离的修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。
 
-1. [旋转](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)加密密钥。
+1. [旋转](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)加密密钥。
 
 **对于已经应用了2024年6月11日发布的安全修补程序或2024年6月28日发布的独立修补程序的客户：**
 
-1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102)。
+1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。
 
-1. [旋转](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)加密密钥。
+1. [旋转](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)加密密钥。
 
 **对于已经应用了1)2024年6月11日发布的安全补丁程序的客户，或2)2024年6月28日发布的独立补丁程序的客户，以及3)轮换其加密密钥的客户：**
  
-1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102)。
+1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。

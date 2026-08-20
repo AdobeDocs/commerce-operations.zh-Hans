@@ -4,9 +4,9 @@ description: 了解源代码管理的不同分支策略。
 feature: Best Practices
 role: Developer
 exl-id: 7d7736e8-7023-4315-9965-71866b0be5c3
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Source代码在开发过程中会经历多个稳定性阶段：
 
 >[!TIP]
 >
->云基础架构项目上的Adobe Commerce包含对应于不同环境的特定分支。 请参阅[云指南](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=zh-Hans)中的[Pro项目工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/starter-develop-deploy-workflow.html?lang=zh-Hans)和&#x200B;_入门项目工作流_。
+>云基础架构项目上的Adobe Commerce包含对应于不同环境的特定分支。 请参阅&#x200B;_云指南_&#x200B;中的[Pro项目工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow)和[入门项目工作流](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)。
 
 ## 分支策略
 
@@ -50,7 +50,7 @@ Source代码在开发过程中会经历多个稳定性阶段：
 
 - [分支工作流](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 - [分布式工作流](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows)
-- 用于管理源代码分支的[模式](https://martinfowler.com/articles/branching-patterns.html)
+- [用于管理源代码分支的模式](https://martinfowler.com/articles/branching-patterns.html)
 - [成功的Git分支模型](https://nvie.com/posts/a-successful-git-branching-model/)
 - [GitHub流](https://docs.github.com/en/get-started/quickstart/github-flow)
 - [GitLab流程](https://about.gitlab.com/blog/2023/07/27/gitlab-flow-duo/)

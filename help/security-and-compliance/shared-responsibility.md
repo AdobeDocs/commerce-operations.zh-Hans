@@ -2,9 +2,9 @@
 title: 共享责任安全和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 3e0d993078c73a191809c85c1a0ef03ff29a78a6
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '3270'
+source-wordcount: '3252'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Adobe负责以下工作：
 * 确保安全的应用程序开发
 * 如果商户的支付处理器要求，则获取PCI认证
 * 响应和响应安全事件
-* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability)。
+* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
   * Adobe Commerce Services扩展
   * 所有第三方扩展和自定义集成
 
-  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/product-availability)。
+  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 ## 云服务提供商责任
 
