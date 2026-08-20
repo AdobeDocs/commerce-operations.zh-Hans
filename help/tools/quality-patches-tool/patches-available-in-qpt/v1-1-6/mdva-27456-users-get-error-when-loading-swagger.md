@@ -1,6 +1,6 @@
 ---
 title: MDVA-27456：用户加载Swagger时遇到错误
-description: MDVA-27456修补程序修复了用户在尝试加载Swagger时出现错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-27456。 请注意，Adobe Commerce 2.3.7中已修复此问题。
+description: MDVA-27456修补程序修复了用户在尝试加载Swagger时出现错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-27456。 请注意，Adobe Commerce 2.3.7中已修复此问题。
 feature: Tools and External Services
 role: Admin
 exl-id: a7d5dc7d-b916-4a09-9068-646f8474bba4

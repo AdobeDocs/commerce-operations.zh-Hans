@@ -1,6 +1,6 @@
 ---
 title: MDVA-37115：产品页面上显示“仅剩下0个”通知
-description: MDVA-37115修补程序解决了在可配置产品页面上显示不必要的*仅剩下0*注意事项的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-37115。 请注意，Adobe Commerce 2.4.3中已修复此问题。
+description: MDVA-37115修补程序解决了在可配置产品页面上显示不必要的*仅剩下0*注意事项的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-37115。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: Configuration, Products, Orders
 role: Admin
 exl-id: ba94b2fd-6a7d-4194-afd8-798854431b57
@@ -57,7 +57,7 @@ MDVA-37115修补程序解决了可配置产品页面上显示不必要的&#x200B
 要应用单个修补程序，请根据您的部署类型使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

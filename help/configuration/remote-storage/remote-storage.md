@@ -91,5 +91,5 @@ bin/magento config:set system/media_storage_configuration/media_database 0
 
 >[!INFO]
 >
->同步命令只迁移`pub/media`目录中的文件，_而不是_&#x200B;目录`var`中的导入/导出文件。 请参阅&#x200B;_Commerce 2.4用户指南_&#x200B;中的[计划导入/导出](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html)。
+>同步命令只迁移`pub/media`目录中的文件，_而不是_&#x200B;目录`var`中的导入/导出文件。 请参阅&#x200B;_Commerce 2.4用户指南_&#x200B;中的[计划导入/导出](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html?lang=zh-Hans)。
 

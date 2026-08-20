@@ -1,6 +1,6 @@
 ---
 title: MDVA-29400：使用PayPal Express结帐下达的订单重复
-description: MDVA-29400修补程序解决了客户通过PayPal Express结帐下订单时创建重复订单的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-29400。 请注意，Adobe Commerce 2.4.1中已修复此问题。
+description: MDVA-29400修补程序解决了客户通过PayPal Express结帐下订单时创建重复订单的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-29400。 请注意，Adobe Commerce 2.4.1中已修复此问题。
 feature: Checkout, Orders, Payments
 role: Admin
 exl-id: 6f7291d3-d554-4e4e-a55d-89ea2b9dea33

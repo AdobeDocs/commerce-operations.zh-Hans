@@ -1,6 +1,6 @@
 ---
 title: MDVA-40435：未通过GraphQL正确应用捆绑产品折扣
-description: MDVA-40435修补程序解决了无法通过GraphQL正确应用捆绑产品折扣的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40435。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: MDVA-40435修补程序解决了无法通过GraphQL正确应用捆绑产品折扣的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40435。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: GraphQL, Orders, Personalization, Products
 role: Admin
 exl-id: 001be138-5d09-455d-a597-57115cd21a25

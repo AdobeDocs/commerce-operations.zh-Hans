@@ -31,7 +31,7 @@ Adobe负责以下工作：
 * 确保安全的应用程序开发
 * 如果商户的支付处理器要求，则获取PCI认证
 * 响应和响应安全事件
-* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
+* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
   * Adobe Commerce Services扩展
   * 所有第三方扩展和自定义集成
 
-  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
+  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 ## 云服务提供商责任
 

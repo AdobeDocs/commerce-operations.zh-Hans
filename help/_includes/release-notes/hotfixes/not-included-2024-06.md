@@ -25,22 +25,22 @@ ht-degree: 0%
 
    * [2.4.4 - p9](/help/release/release-notes/security/2-4-4-patches.md#adobe-commerce-244-p9)
 
-1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。
+1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27136)。
 
-1. [旋转](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)加密密钥。
+1. [旋转](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)加密密钥。
 
 选项2：
 
-1. 应用[隔离的修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。
+1. 应用[隔离的修补程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27136)。
 
-1. [旋转](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)加密密钥。
+1. [旋转](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)加密密钥。
 
 **对于已经应用了2024年6月11日发布的安全修补程序或2024年6月28日发布的独立修补程序的客户：**
 
-1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。
+1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27136)。
 
-1. [旋转](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)加密密钥。
+1. [旋转](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)加密密钥。
 
 **对于已经应用了1)2024年6月11日发布的安全补丁程序的客户，或2)2024年6月28日发布的独立补丁程序的客户，以及3)轮换其加密密钥的客户：**
  
-1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)。
+1. 应用2024年7月17日发布的[修补程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27136)。

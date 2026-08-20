@@ -23,6 +23,6 @@ ht-degree: 0%
 
 现在，以下指南中同时包含了几个安全相关主题：
 
-- _扩展指南_&#x200B;中的[Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/captcha/security-google-recaptcha)。
+- _扩展指南_&#x200B;中的[Google reCAPTCHA](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/captcha/security-google-recaptcha)。
 - _扩展指南_&#x200B;中的[双重身份验证](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication)。
 - _安全和合规性指南_&#x200B;中的[通用数据保护条例(GDPR)合规性](/help/security-and-compliance/privacy/gdpr.md)。

@@ -23,6 +23,6 @@ ht-degree: 0%
 
 >[!BEGINSHADEBOX]
 
-CVE-2025-47110的修补程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27181)。
+CVE-2025-47110的修补程序也作为独立修补程序提供。 有关详细信息，请参阅[知识库文章](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27181)。
 
 >[!ENDSHADEBOX]

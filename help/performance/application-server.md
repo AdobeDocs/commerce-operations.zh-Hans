@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Commerce GraphQL Application Server使Adobe Commerce能够维护Commerce GraphQL API请求中的状态。 GraphQL Application Server基于Swoole扩展构建，作为具有工作线程的进程运行，这些工作线程处理请求。 GraphQL Application Server通过在GraphQL API请求中保留引导的应用程序状态，来增强请求处理和整体产品性能。 API请求变得非常高效。
 
-GraphQL Application Server仅适用于Adobe Commerce。 它不适用于Magento Open Source。 对于Cloud Pro项目，您必须[提交Adobe Commerce支持](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)票证以启用GraphQL应用程序服务器。
+GraphQL Application Server仅适用于Adobe Commerce。 它不适用于Magento Open Source。 对于Cloud Pro项目，您必须[提交Adobe Commerce支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)票证以启用GraphQL应用程序服务器。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ GraphQL Application Server允许Adobe Commerce在连续的Commerce GraphQL API�
 
 ### 云项目
 
-默认情况下，云基础架构项目上的Adobe Commerce包含Swoole扩展。 您可以在`.magento.app.yaml`文件的`runtime`属性中[启用](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。 例如：
+默认情况下，云基础架构项目上的Adobe Commerce包含Swoole扩展。 您可以在`.magento.app.yaml`文件的`runtime`属性中[启用](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。 例如：
 
 ```yaml
 runtime:
@@ -273,7 +273,7 @@ git push
 
 >[!NOTE]
 >
->确保将根`.magento.app.yaml`文件中的所有自定义设置正确迁移到`application-server/.magento/.magento.app.yaml`文件中。 将`application-server/.magento/.magento.app.yaml`文件添加到您的项目后，除了根`.magento.app.yaml`文件之外，您还应维护它。 例如，如果您需要[配置RabbitMQ服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq)或[管理Web属性](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property)，则还应该将相同的配置添加到`application-server/.magento/.magento.app.yaml`。
+>确保将根`.magento.app.yaml`文件中的所有自定义设置正确迁移到`application-server/.magento/.magento.app.yaml`文件中。 将`application-server/.magento/.magento.app.yaml`文件添加到您的项目后，除了根`.magento.app.yaml`文件之外，您还应维护它。 例如，如果您需要[配置RabbitMQ服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq)或[管理Web属性](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property)，则还应该将相同的配置添加到`application-server/.magento/.magento.app.yaml`。
 
 ### 验证云项目上的启用情况
 

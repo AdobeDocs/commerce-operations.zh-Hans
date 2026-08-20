@@ -1,6 +1,6 @@
 ---
 title: MDVA-40101：下单后商品仍为迷你购物车PayPal Express结帐
-description: MDVA-40101修补程序修复了在使用PayPal Express结帐成功下订单后无法从微型购物车中删除项目的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40101。 请注意，Adobe Commerce 2.4.0中已修复此问题。
+description: MDVA-40101修补程序修复了在使用PayPal Express结帐成功下订单后无法从微型购物车中删除项目的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-40101。 请注意，Adobe Commerce 2.4.0中已修复此问题。
 feature: Checkout, Orders, Payments, Shopping Cart
 role: Admin
 exl-id: 8d3fa92e-39ed-4d8f-8dbe-9c08f787c6f1

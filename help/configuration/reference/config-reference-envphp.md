@@ -146,7 +146,7 @@ Commerce使用加密密钥保护密码和其他敏感数据。 此密钥在安�
 ]
 ```
 
-在&#x200B;_Commerce用户指南_&#x200B;中了解有关[加密密钥](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key)的更多信息。
+在&#x200B;_Commerce用户指南_&#x200B;中了解有关[加密密钥](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/encryption-key)的更多信息。
 
 ## db
 

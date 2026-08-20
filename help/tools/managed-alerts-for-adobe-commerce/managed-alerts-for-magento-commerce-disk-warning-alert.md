@@ -43,10 +43,10 @@ ht-degree: 0%
 
 1. 在[!DNL New Relic]中，查看磁盘的最高使用率。 有关步骤，请参阅[[!DNL New Relic] 基础结构监视主机页面上的&#x200B;**[!UICONTROL Storage]**&#x200B;选项卡： [!UICONTROL Storage]选项卡](https://docs.newrelic.com/docs/infrastructure/infrastructure-data/infrastructure-ui-pages/infra-hosts-ui-page/#storage)：
    * 如果您在[!DNL New Relic]中看到磁盘使用率增长缓慢，请尝试以下选项：
-     * 通过调整空间分配优化磁盘空间。 有关步骤，请参阅Commerce on Cloud指南中的[管理磁盘空间](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 您可能还需要请求更多磁盘空间（请联系您的Adobe客户团队）。
-     * 清除MySQL的磁盘空间。 有关步骤，请参阅[MySQL磁盘空间不足](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27806)。
+     * 通过调整空间分配优化磁盘空间。 有关步骤，请参阅Commerce on Cloud指南中的[管理磁盘空间](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 您可能还需要请求更多磁盘空间（请联系您的Adobe客户团队）。
+     * 清除MySQL的磁盘空间。 有关步骤，请参阅[MySQL磁盘空间不足](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27806)。
      * 如果[!DNL New Relic]显示磁盘使用率快速增加，这可能表示存在导致目录中文件快速增加的问题。 执行以下检查：
        1. 通过在CLI/终端中运行以下命令检查整体磁盘空间以识别问题： `df -h`
        1. 在发现目录异常大且磁盘使用量不断增加后，您需要检查受影响的文件系统。 以下示例说明如何检查文件目录`pub/media/`。 这是Adobe Commerce用于存储日志和大型媒体文件的目录。 但是，您应该对任何显示意外磁盘使用的目录运行此命令： `du -sch ~/pub/media/*`。
 
-如果终端的输出显示其中某个目录中的文件在磁盘使用量中迅速增加，并且您知道不需要该文件内容，请考虑删除该文件。 如果不想执行这项操作，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。
+如果终端的输出显示其中某个目录中的文件在磁盘使用量中迅速增加，并且您知道不需要该文件内容，请考虑删除该文件。 如果不想执行这项操作，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。

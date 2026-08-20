@@ -44,7 +44,7 @@ Adobe Commerce on cloud infrastructure Pro计划架构
 
 如果您收到“DML查询严重”警报，请从步骤1开始。 如果您收到“DML查询警告”警报，请从第二步开始。
 
-1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅我们的知识库[跟踪您的支持工单](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
+1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅我们的知识库[跟踪您的支持工单](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
    * 联系原因：选择&#x200B;**[!UICONTROL New Relic MariaDB alert received]**。
    * 警报的说明。
    * [[!DNL New Relic] 事件链接](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/view-violation-event-details-incidents)。 这包含在您的[Adobe Commerce托管警报](managed-alerts-for-magento-commerce.md)中。
@@ -56,4 +56,4 @@ Adobe Commerce on cloud infrastructure Pro计划架构
    1. 寻找代码优化或操作优化：
       * 代码优化：寻求通过批量插入/更新、最大程度地减少索引使用或限制代码来优化查询。
       * 操作优化：卸载资源密集型数据修改以缩短通信时间。
-      * 其他优化：确保您使用的是最新版本的ECE-Tools。 有关步骤，请参阅Commerce on Cloud指南中的[更新ece-tools版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。
+      * 其他优化：确保您使用的是最新版本的ECE-Tools。 有关步骤，请参阅Commerce on Cloud指南中的[更新ece-tools版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。

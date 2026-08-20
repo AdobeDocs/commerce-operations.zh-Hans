@@ -1,6 +1,6 @@
 ---
 title: MDVA-42790：无法通过REST API为特定网站更新产品价格属性
-description: MDVA-42790修补程序修复了用户无法通过REST API更新特定网站的产品价格属性的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11后，即可使用此修补程序。 修补程序ID为MDVA-42790。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
+description: MDVA-42790修补程序修复了用户无法通过REST API更新特定网站的产品价格属性的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11后，即可使用此修补程序。 修补程序ID为MDVA-42790。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: REST, Attributes, Orders, Products
 role: Admin
 exl-id: bb8dc764-d2d5-4e00-884a-2b4c1a567f58
@@ -74,7 +74,7 @@ MDVA-42790修补程序修复了用户无法通过REST API更新特定网站的�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
@@ -83,4 +83,4 @@ MDVA-42790修补程序修复了用户无法通过REST API更新特定网站的�
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
