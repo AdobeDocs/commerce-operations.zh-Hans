@@ -38,16 +38,16 @@ ht-degree: 6%
 
 1. 转到Adobe Commerce Admin > **[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Minimum Order Amount]**&#x200B;并设置以下内容：
    * [!UICONTROL Enable]: *[!UICONTROL Yes]*
-   * 
-     [!UICONTROL Minimum Amount]: *2*
+   * &#x200B;
+     [!UICONTROL Minimum Amount]&#x200B;: *2*
 
 1. 创建一个[!UICONTROL Cart Price Rule]。
    * [!UICONTROL Coupon Code]: *[!UICONTROL TEST (optional)]*
    * [!UICONTROL Conditions]: *[!UICONTROL Keep empty]*
    * [!UICONTROL Actions]:
      * [!UICONTROL Apply]: *[!UICONTROL Percent of product price discount]*
-     * 
-       [!UICONTROL Discount Amount]: *92*
+     * &#x200B;
+       [!UICONTROL Discount Amount]&#x200B;: *92*
      * [!UICONTROL Apply to Shipping Amount]: *[!UICONTROL Yes]*
 1. 创建价格为$25的产品。
 1. 将产品添加到购物车。

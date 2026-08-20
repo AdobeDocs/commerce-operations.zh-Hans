@@ -67,7 +67,7 @@ ht-degree: 0%
 
   操作日志报告显示所有启用日志记录的管理员操作的详细记录。 每个记录都加盖时间戳，并注册用户的IP地址和名称。 日志详细信息包括管理员用户数据以及在操作期间所做的相关更改。
 
-- 使用Adobe Commerce工具](../../../tools/observation-for-adobe-commerce/intro.md)的[观察分析事件。
+- 使用Adobe Commerce工具[&#128279;](../../../tools/observation-for-adobe-commerce/intro.md)的观察分析事件。
 
   Adobe Commerce观察工具允许您分析复杂的问题，帮助确定根本原因。 您可以花时间来关联事件和错误，而不是跟踪不同的数据，以便更深入地了解性能瓶颈的原因。
 

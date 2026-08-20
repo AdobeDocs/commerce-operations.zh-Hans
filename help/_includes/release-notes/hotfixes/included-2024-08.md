@@ -18,7 +18,7 @@ ACP2E-3158
 ACP2E-3159
 -->
 
-* 修复了与CVE-2024-34102相关的JSON Web令牌(JWT)验证问题。 有关详细信息，请参阅Adobe Commerce-APSB24-40](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)知识库文章中提供的[安全更新。
+* 修复了与CVE-2024-34102相关的JSON Web令牌(JWT)验证问题。 有关详细信息，请参阅Adobe Commerce-APSB24-40[&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27136)知识库文章中提供的安全更新。
 
 <!--
 AC-12486

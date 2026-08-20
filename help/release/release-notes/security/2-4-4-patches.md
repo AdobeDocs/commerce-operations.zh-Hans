@@ -203,7 +203,7 @@ Adobe Commerce 2.4.4-p5安全版本为以前版本中发现的漏洞提供了安
 
 ### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的[jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本[&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
 
 ## 2.4.4-p4
 
@@ -213,7 +213,7 @@ Adobe Commerce 2.4.4-p4安全版本为以前版本中发现的漏洞提供了安
 
 ### 应用适用于CVE-2022-31160的修补程序
 
-`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的[jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
+`jQuery-UI`库版本1.13.1具有已知的安全漏洞(CVE-2022-31160)，该漏洞会影响Adobe Commerce和Magento Open Source的多个版本。 此库依赖于Adobe Commerce和Magento Open Source 2.4.4、2.4.5以及2.4.6。 运行受影响部署的商户应应用针对2.4.4、2.4.5和2.4.6版本[&#128279;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27176)知识库文章的jQuery UI安全漏洞CVE-2022-31160修复中指定的修补程序。
 
 ### 高亮
 
@@ -266,6 +266,6 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 **问题**：在2.4.4-p1包上运行时，Web API和集成测试显示此错误： `[2022-06-14T16:58:23.694Z] PHP Fatal error:  Declaration of Magento\TestFramework\ErrorLog\Logger::addRecord(int $level, string $message, array $context = []): bool must be compatible with Monolog\Logger::addRecord(int $level, string $message, array $context = [], ?Monolog\DateTimeImmutable $datetime = null): bool in /var/www/html/dev/tests/integration/framework/Magento/TestFramework/ErrorLog/Logger.php on line 69`。 **解决方法**：通过运行`require monolog/monolog:2.6.0`命令安装早期版本的Monolog。<!-- AC-3651-->
 
-**问题**：商家在从Adobe Commerce 2.4.4升级到Adobe Commerce 2.4.4-p1的过程中可能会注意到包版本降级通知。 可以忽略这些消息。 包版本中的差异是由于包生成期间出现异常造成的。 没有产品功能受到影响。 有关受影响的方案和变通方法的讨论，请参阅从2.4.4升级到2.4.4-p1](https://support.magento.com/hc/en-us/articles/8214752983949)知识库文章后降级的[包。
+**问题**：商家在从Adobe Commerce 2.4.4升级到Adobe Commerce 2.4.4-p1的过程中可能会注意到包版本降级通知。 可以忽略这些消息。 包版本中的差异是由于包生成期间出现异常造成的。 没有产品功能受到影响。 有关受影响的方案和变通方法的讨论，请参阅从2.4.4升级到2.4.4-p1[&#128279;](https://support.magento.com/hc/en-us/articles/8214752983949)知识库文章后降级的包。
 
 <!-- Last updated from includes: 2026-04-08 15:01:38 -->

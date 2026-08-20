@@ -50,30 +50,30 @@ GraphQL响应中返回“不可见”可单独配置的子产品，并且使用�
   $search：字符串
   $pageSize： Int！
   $currentPage： Int！
-) {
+) &lbrace;
   products(
     过滤器：$filter
     排序：$sort
     搜索：$search
     pageSize：$pageSize
     currentPage：$currentPage
-  ) {
+  ) &lbrace;
     total_count
-    page_info {
+    page_info &lbrace;
       total_pages
       current_page
       page_size
-    }
-    项目{
+    &rbrace;
+    项目&lbrace;
       name
       sku
-    }
-  }
-}</pre>
+    &rbrace;
+  &rbrace;
+&rbrace;</pre>
 
 变量：
 
-<pre>{"filter"：{"user_group"：{"eq"："}}，"search"："config-100"，"sort"：{}，"pageSize"：200，"currentPage"：1}
+<pre>{"filter"：{"user_group"：{"eq"："}&#x200B;}，"search"："config-100"，"sort"：{}，"pageSize"：200，"currentPage"：1}
 </pre>
 
 <u>预期的结果</u>：
@@ -98,4 +98,4 @@ GraphQL响应中返回“不可见”可单独配置的子产品，并且使用�
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中可用的[修补程序部分。
+有关QPT中其他可用修补程序的信息，请参阅QPT[&#128279;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中可用的修补程序部分。
