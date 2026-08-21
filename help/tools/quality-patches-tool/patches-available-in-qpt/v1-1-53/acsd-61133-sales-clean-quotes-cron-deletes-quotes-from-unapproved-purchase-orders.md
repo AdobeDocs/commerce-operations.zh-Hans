@@ -5,9 +5,9 @@ feature: B2B, Purchase Orders
 role: Admin, Developer
 exl-id: 06979d4b-08ea-40fe-a211-3d950c9afb47
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Adobe Commerce（所有部署方法） 2.4.4-p5 - 2.4.4-p11、2.4.5-p4 - 2.4.5-p
 1. 创建公司。
 1. 创建一个&#x200B;*[!UICONTROL Purchase Order]*。
 1. 等待报价过期并被cron删除。 可以使用&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Quotes]** > **[!UICONTROL General]** > **[!UICONTROL Default Expiration Period configuration]**&#x200B;设置报价过期时间。
-1. 通过&#x200B;*[!UICONTROL Purchase Order]*&#x200B;或通过&#x200B;*[!UICONTROL My Purchase Order in Customer Dashboard]* [!DNL GraphQL]突变将`placeOrderForPurchaseOrder`转换为订单。
+1. 通过&#x200B;*[!UICONTROL My Purchase Order in Customer Dashboard]*&#x200B;或通过[!DNL GraphQL] `placeOrderForPurchaseOrder`突变将&#x200B;*[!UICONTROL Purchase Order]*&#x200B;转换为订单。
 
 <u>预期的结果</u>：
 
@@ -58,8 +58,8 @@ Adobe Commerce（所有部署方法） 2.4.4-p5 - 2.4.4-p11、2.4.5-p4 - 2.4.5-p
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

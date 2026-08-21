@@ -5,9 +5,9 @@ feature: Admin Workspace
 role: Admin, Developer
 exl-id: cd934aa9-901a-4f03-ab83-716131e6bd85
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,8 @@ ht-degree: 0%
 
 1. 创建使用新创建属性的可配置产品：
    * 使用以下配置添加一个子产品：
-      * 使用“属性1”中的最后一个选项，以及“属性2”到“属性9”中的第一个选项。
-      * 这将生成1个可配置产品和1个子产品。
+     * 使用“属性1”中的最后一个选项，以及“属性2”到“属性9”中的第一个选项。
+     * 这将生成1个可配置产品和1个子产品。
 1. 转到可配置产品的&#x200B;**[!UICONTROL Configurations]**&#x200B;选项卡。
 1. 手动单击&#x200B;**[!UICONTROL Add Products]**&#x200B;并开始逐一添加以前创建的简单产品。
 1. 每次添加后保存更改。
@@ -76,8 +76,8 @@ ht-degree: 0%
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

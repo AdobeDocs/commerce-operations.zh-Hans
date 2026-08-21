@@ -2,7 +2,7 @@
 title: 翻译词典和语言包
 description: 了解如何为Adobe Commerce生成翻译词典和构建语言包。 了解本地化和多语言商店设置。
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 0%
@@ -117,7 +117,7 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
 
 - 所需的许可证文件
 - `composer.json`
-- [注册](https://developer.adobe.com/commerce/php/development/build/component-registration/)语言包的`registration.php`
+- [注册](https://developer.adobe.com/commerce/php/development/build/component-registration)语言包的`registration.php`
 - [`language.xml`](#language-package-languagexml)元信息文件
 
 >[!INFO]
@@ -131,8 +131,8 @@ bin/magento i18n:pack [-m|--mode={merge|replace}] [-d|--allow-duplicates] <sourc
    例如，Commerce语言包位于`app/i18n/magento`中
 
 1. 添加所需的许可证文件。
-1. 添加指定语言包依赖项的[`composer.json`](https://developer.adobe.com/commerce/php/development/build/composer-integration/)。
-1. 向[`registration.php`](https://developer.adobe.com/commerce/php/development/build/component-registration/)注册语言包
+1. 添加指定语言包依赖项的[`composer.json`](https://developer.adobe.com/commerce/php/development/build/composer-integration)。
+1. 向[`registration.php`](https://developer.adobe.com/commerce/php/development/build/component-registration)注册语言包
 1. 按照下一节中所述添加`language.xml`元信息文件。
 
 #### 语言包语言.xml

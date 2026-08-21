@@ -2,10 +2,10 @@
 title: 高级内部部署安装
 description: 了解Adobe Commerce内部部署的高级安装方案。 发现复杂的配置和自定义设置选项。
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-last-update: 2026-04-28T00:00:00Z
-source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
+last-update: 2026-08-19T00:00:00Z
+source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
 workflow-type: tm+mt
-source-wordcount: '2527'
+source-wordcount: '2515'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ bin/magento setup:install --<option>=<value> ... --<option>=<value>
 
 您可以在安装期间或安装后创建管理员用户。 如果在安装期间创建用户，则需要所有管理员凭据变量。 请参阅[本地主机安装示例](#sample-localhost-installations)。
 
-下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/commerce-on-premises)。
+下表提供了许多而非所有可用的安装参数。 有关完整列表，请参阅[命令行工具引用](/help/tools/reference/commerce-on-premises.md)。
 
 | 名称 | 值 | 必需？ |
 |--- |--- |--- |

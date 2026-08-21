@@ -2,9 +2,9 @@
 title: '[!DNL Cloud Automation Patching Service (CAPS)]疑难解答指南'
 description: 对 [!DNL Cloud Automation Patching Service (CAPS)]中的常见问题和错误消息进行故障诊断
 hide: true
-source-git-commit: baa10442a07aa4280fad6213a82d632760f8e1d2
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
@@ -243,8 +243,8 @@ ht-degree: 0%
 
 ### 相关主题
 
-* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/overview)
-* [Adobe Commerce安装指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/overview)
+* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
+* [Adobe Commerce安装指南](/help/installation/overview.md)
 * [CAPS介绍](intro.md)
 * [如何访问](access.md)
 * [工作流概述](workflow.md)

@@ -2,9 +2,9 @@
 title: 升级实施
 description: 了解Adobe Commerce项目升级实施的各个阶段。
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: 3c54a3c429a3dadc826bffcb91f99a5a3a31b42c
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 1%
 
 ---
@@ -29,9 +29,9 @@ ht-degree: 1%
 
 - **[!DNL Upgrade Compatibility Tool]个结果** — 此工具通过将当前代码与目标版本的代码进行比较，并生成需要解决的所有问题的报告，使任何升级变得更快速更轻松。 查看[[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md)。 该报告的主要详细信息包括：
 
-   - 当前安装的版本
-   - 升级目标版本
-   - 发现的严重错误的数量和详细信息
+  - 当前安装的版本
+  - 升级目标版本
+  - 发现的严重错误的数量和详细信息
 
   >[!TIP]
   >
@@ -88,4 +88,4 @@ UAT是升级的最后阶段之一，需要查看和验证站点。 您还必须�
 
 在网站启动后，请确保检查您的分析数据、Google Search Console和其他资源，以确保没有意外问题并且一切按预期运行。
 
-通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用[New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=zh-Hans)等服务来监控网站性能。
+通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用[New Relic](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)等服务来监控网站性能。

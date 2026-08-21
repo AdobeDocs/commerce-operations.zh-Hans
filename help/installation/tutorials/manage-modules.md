@@ -2,9 +2,9 @@
 title: 启用或禁用模块
 description: 了解如何使用模块状态和相关选项，从命令行启用、禁用和检查Adobe Commerce模块的状态。
 exl-id: 7155950a-a66a-4254-a71c-1a9aeab47606
-source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ bin/magento module:status [--enabled] [--disabled] <module-list>
 
 >[!NOTE]
 >
->不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=zh-Hans#deployment-workflow)。
+>不能直接在云项目上启用或禁用模块。 您必须在本地运行这些命令，然后将更改推送到环境的`app/etc/config.php`文件。 请参阅[专业项目工作流：部署工作流](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)。
 
 ## 模块启用、禁用
 

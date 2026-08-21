@@ -2,8 +2,8 @@
 title: Adobe Commerce 2.4.3安全修补程序的发行说明
 description: 了解Adobe Commerce版本2.4.3的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 72d343cd-83d7-48ce-976a-e26ba1b8db27
-last-update: 2026-05-12T00:00:00Z
-source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
+last-update: 2026-08-19T00:00:00Z
+source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.3-p3安全版本为以前版本的2.4.3中发现的漏洞提供了安全修复。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-38](https://helpx.adobe.com/cn/security/products/magento/apsb22-38.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-38](https://helpx.adobe.com/security/products/magento/apsb22-38.html)。
 
 ### 应用AC-3022.patch以继续将DHL作为运输运营商
 
@@ -36,7 +36,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 Adobe Commerce 2.4.3-p2安全版本为以前版本中发现的漏洞提供了安全错误修复。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-13](https://helpx.adobe.com/cn/security/products/magento/apsb22-13.html)。  修补程序版本还解决了由`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch`和`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch`解决的漏洞。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB22-13](https://helpx.adobe.com/security/products/magento/apsb22-13.html)。  修补程序版本还解决了由`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch.zip`、`MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch`和`MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch`解决的漏洞。
 
 
 ### 应用AC-3022.patch以继续将DHL作为运输运营商
@@ -55,9 +55,9 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 * 当Adobe Commerce处于生产模式时，Swagger现在默认处于禁用状态。<!-- AC-1450-->
 
-* 开发人员现在可以按端点配置Adobe Commerce RESTful端点接受的阵列大小限制。 查看[API安全性](https://developer.adobe.com/commerce/webapi/get-started/api-security/)。<!-- AC-465-->
+* 开发人员现在可以按端点配置Adobe Commerce RESTful端点接受的阵列大小限制。 查看[API安全性](https://developer.adobe.com/commerce/webapi/get-started/api-security)。<!-- AC-465-->
 
-* 添加了以下机制：限制用户可在系统范围内通过Web API请求的资源大小和数量，以及覆盖单个模块的默认值。 此增强功能解决了`MC-43048__set_rate_limits__2.4.3.patch`解决的问题。 查看[API安全性](https://developer.adobe.com/commerce/webapi/get-started/api-security/)。<!-- AC-1120-->
+* 添加了以下机制：限制用户可在系统范围内通过Web API请求的资源大小和数量，以及覆盖单个模块的默认值。 此增强功能解决了`MC-43048__set_rate_limits__2.4.3.patch`解决的问题。 查看[API安全性](https://developer.adobe.com/commerce/webapi/get-started/api-security)。<!-- AC-1120-->
 
 
 ## 2.4.3-p1
@@ -65,7 +65,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 Adobe Commerce 2.4.3-p1安全版本为先前版本（Adobe Commerce 2.4.3和Magento Open Source 2.4.3）中发现的漏洞修复了安全错误。 此版本还包括可提高对最新安全最佳实践合规性的安全增强功能。
 
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-86](https://helpx.adobe.com/cn/security/products/magento/apsb21-86.html)。 此补丁发行版本还为[Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html?lang=zh-Hans)、[Klarna](https://commercemarketplace.adobe.com//klarna-m2-klarna.html)和[Vertex](https://commercemarketplace.adobe.com//vertexinc-vertex-tax-module.html)供应商开发的扩展提供了错误修复。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB21-86](https://helpx.adobe.com/security/products/magento/apsb21-86.html)。 此补丁发行版本还为[Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html?lang=zh-Hans)、[Klarna](https://commercemarketplace.adobe.com//klarna-m2-klarna.html)和[Vertex](https://commercemarketplace.adobe.com//vertexinc-vertex-tax-module.html)供应商开发的扩展提供了错误修复。
 
 ### 应用AC-3022.patch以继续将DHL作为运输运营商
 
@@ -81,7 +81,7 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 **会话ID已从数据库**&#x200B;中删除。 如果商家具有使用存储在数据库中的原始会话ID的自定义设置或安装的扩展，则此代码更改可能会导致重大更改。<!-- MC-40976-->
 
-**限制管理员访问媒体集文件夹**。 默认媒体集权限现在只允许配置明确允许的目录操作（查看、上传、删除和创建）。 管理员用户无法再通过在`catalog/category`或`wysiwyg`目录之外上传的媒体集访问媒体资产。 管理员如果想要访问介质资源，必须将其移至明确允许的文件夹或调整其配置设置。 请参阅[修改媒体库文件夹权限](https://developer.adobe.com/commerce/php/tutorials/backend/modify-image-library-permissions/)。<!-- B2B-1897-->
+**限制管理员访问媒体集文件夹**。 默认媒体集权限现在只允许配置明确允许的目录操作（查看、上传、删除和创建）。 管理员用户无法再通过在`catalog/category`或`wysiwyg`目录之外上传的媒体集访问媒体资产。 管理员如果想要访问介质资源，必须将其移至明确允许的文件夹或调整其配置设置。 请参阅[修改媒体库文件夹权限](https://developer.adobe.com/commerce/php/tutorials/backend/modify-image-library-permissions)。<!-- B2B-1897-->
 
 **降低了对GraphQL查询复杂性的限制**。 GraphQL允许的最大查询复杂性已降低，以防止拒绝服务(DOS)攻击。 查看[GraphQL安全配置](https://developer.adobe.com/commerce/webapi/graphql/usage/security-configuration/)。<!-- PWA-1700-->
 

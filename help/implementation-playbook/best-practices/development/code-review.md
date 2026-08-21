@@ -4,7 +4,7 @@ description: 了解Adobe Commerce项目开发阶段的代码审查最佳实践�
 feature: Best Practices
 role: Developer
 exl-id: 1ef78bce-2e69-4c95-a26e-1bf7196ce546
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
 source-wordcount: '1180'
 ht-degree: 0%
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 通过运行PhpStorm检查，可以自动测试样式（见下文）。
 
-确保配置[PHPMD和PHPCS](https://developer.adobe.com/commerce/php/best-practices/phpstorm/code-inspection/)，并从CLI运行[Coding Standard](https://github.com/magento/magento-coding-standard)工具（也在下面）。 虽然有一些重叠，但两者都有独特的测试。
+确保配置[PHPMD和PHPCS](https://developer.adobe.com/commerce/php/best-practices/phpstorm/code-inspection)，并从CLI运行[Coding Standard](https://github.com/magento/magento-coding-standard)工具（也在下面）。 虽然有一些重叠，但两者都有独特的测试。
 
 ### 惯例和结构
 

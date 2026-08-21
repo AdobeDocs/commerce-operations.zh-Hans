@@ -4,13 +4,13 @@ description: 应用ACSD-58108修补程序以修复Adobe Commerce问题，该问�
 feature: Orders, System
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 26009fee51fb81e2517ad09319bac1190d127564
+exl-id: 1195e1c3-575c-48d6-8a10-c300f9bbb84a
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-58108：由于缺少联接表名称，导致网格自定义模块扩展顺序出现SQL错误
 
@@ -32,7 +32,7 @@ ACSD-58108修补程序修复了在筛选某些列时，顺序网格自定义模�
 
 ## 问题
 
-使用自定义模块扩展时，原始提取表中缺少联接表名称会导致顺序网格出现SQL错误。 出现此问题的原因是，在加入`addFilterToMap`表后，**[!UICONTROL sales_order_item]**&#x200B;函数对某些列不起作用，导致筛选时出错。
+使用自定义模块扩展时，原始提取表中缺少联接表名称会导致顺序网格出现SQL错误。 出现此问题的原因是，在加入&#x200B;**[!UICONTROL sales_order_item]**&#x200B;表后，`addFilterToMap`函数对某些列不起作用，导致筛选时出错。
 
 <u>重现步骤</u>：
 
@@ -55,8 +55,8 @@ ACSD-58108修补程序修复了在筛选某些列时，顺序网格自定义模�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

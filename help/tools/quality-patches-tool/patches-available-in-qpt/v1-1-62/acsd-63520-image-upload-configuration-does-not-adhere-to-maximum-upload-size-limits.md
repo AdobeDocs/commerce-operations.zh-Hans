@@ -5,16 +5,16 @@ feature: Media, Products
 role: Admin, Developer
 exl-id: 5132bfa9-813a-4623-8e02-a8801f6396e8
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
 # ACSD-63520：通过[!UICONTROL Image Upload Configuration]上传的映像超出了配置的大小限制
 
-ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上传的图像不符合配置的最大上传大小限制的问题。 要解决此问题，请在[!UICONTROL Images Upload Configuration]面板中配置[!UICONTROL Admin]设置。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.62时，此修补程序可用。 修补程序ID为ACSD-63520。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上传的图像不符合配置的最大上传大小限制的问题。 要解决此问题，请在[!UICONTROL Admin]面板中配置[!UICONTROL Images Upload Configuration]设置。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.62时，此修补程序可用。 修补程序ID为ACSD-63520。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 
@@ -30,7 +30,7 @@ ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上
 
 ## 问题
 
-通过[!UICONTROL Images Upload Configuration]面板中的[!UICONTROL Admin]上传的图像不符合最大上传大小限制。
+通过[!UICONTROL Admin]面板中的[!UICONTROL Images Upload Configuration]上传的图像不符合最大上传大小限制。
 
 <u>重现步骤</u>：
 
@@ -65,8 +65,8 @@ ACSD-63520修补程序解决了通过[!UICONTROL Images Upload Configuration]上
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 

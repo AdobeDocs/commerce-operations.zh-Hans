@@ -4,7 +4,7 @@ description: 了解配置购物车限制和产品属性，以及列出分页、�
 role: Developer
 feature: Best Practices, Catalog Management
 exl-id: 9a672017-9122-4841-a67b-a183224b67dc
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
 source-wordcount: '1444'
 ht-degree: 0%
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 #### 查看属性集配置
 
-1. [连接到站点数据库](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/mysql#connect-to-the-database)。
+1. [连接到站点数据库](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/mysql#connect-to-the-database)。
 
 1. 使用MySQL查找属性集数
 

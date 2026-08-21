@@ -5,10 +5,10 @@ feature: Shopping Cart, Quotes
 role: Admin, Developer
 exl-id: fc97c3c0-dc1b-4546-aad0-ef3b4b6a3415
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 0%
+source-wordcount: '412'
+ht-degree: 1%
 
 ---
 
@@ -37,8 +37,8 @@ ACSD-62475修补程序修复了包含不同详细信息的礼品卡产品被错�
 <u>重现步骤</u>：
 
 1. 使用以下设置创建[!UICONTROL Gift Card]产品：
-   * **[!UICONTROL Card Type]**： [!UICONTROL Virtual]
-   * **[!UICONTROL Amount]**： 10
+   * **[!UICONTROL Card Type]**: [!UICONTROL Virtual]
+   * **[!UICONTROL Amount]**: 10
 
 1. 在店面，创建新用户并登录。
 
@@ -71,8 +71,8 @@ ACSD-62475修补程序修复了包含不同详细信息的礼品卡产品被错�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

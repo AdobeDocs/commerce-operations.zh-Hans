@@ -1,20 +1,20 @@
 ---
-title: ACSD-56790：对[!UICONTROL move out of stock to bottom]中的产品进行排序时，** [!DNL Visual Merchandiser]**选项不起作用
+title: ACSD-56790：对 [!DNL Visual Merchandiser]中的产品进行排序时，**[!UICONTROL move out of stock to bottom]**选项不起作用
 description: 应用ACSD-56790补丁程序，以修复在可视化促销器中对产品进行分类时，无法正常使用“从缺货到底部”选项的Adobe Commerce问题。
 feature: Products, Categories
 role: Admin, Developer
 exl-id: a5e5f208-793d-45a5-a000-f8ff1c31d049
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
-# 对&#x200B;**[!UICONTROL move out of stock to bottom]**&#x200B;中的产品进行排序时，ACSD-56790： [!DNL Visual Merchandiser]选项不起作用
+# 对[!DNL Visual Merchandiser]中的产品进行排序时，ACSD-56790： **[!UICONTROL move out of stock to bottom]**&#x200B;选项不起作用
 
-ACSD-56790修补程序修复了在对[!DNL Visual Merchandiser]中的产品进行排序时，“从库存移至底部”选项不起作用的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.44时，此修补程序可用。 修补程序ID为ACSD-56790。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
+ACSD-56790修补程序修复了在对[!DNL Visual Merchandiser]中的产品进行排序时，“从库存移至底部”选项不起作用的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.44时，此修补程序可用。 修补程序ID为ACSD-56790。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
 
 ## 受影响的产品和版本
 
@@ -32,7 +32,7 @@ ACSD-56790修补程序修复了在对[!DNL Visual Merchandiser]中的产品进�
 
 ## 问题
 
-对&#x200B;**[!UICONTROL move out of stock to bottom]**&#x200B;中的产品进行排序时，[!DNL Visual Merchandiser]选项不起作用
+对[!DNL Visual Merchandiser]中的产品进行排序时，**[!UICONTROL move out of stock to bottom]**&#x200B;选项不起作用
 
 <u>重现步骤</u>：
 
@@ -76,15 +76,15 @@ ACSD-56790修补程序修复了在对[!DNL Visual Merchandiser]中的产品进�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
