@@ -36,12 +36,12 @@ ACSD-58108修补程序修复了在筛选某些列时，顺序网格自定义模�
 
 <u>重现步骤</u>：
 
-01. 安装2.4版本的开发实例。
-02. 创建新订单。
-03. 安装带有SQL扩展的自定义模块。
-04. 导航到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Sales]** > **[!UICONTROL Orders]**。
-05. 应用&#x200B;**[!UICONTROL Purchase Date]**&#x200B;筛选器并等待结果。
-06. 应用&#x200B;**[!UICONTROL Product SKU]**&#x200B;筛选器。
+&#x200B;01. 安装2.4版本的开发实例。
+&#x200B;02. 创建新订单。
+&#x200B;03. 安装带有SQL扩展的自定义模块。
+&#x200B;04. 导航到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Sales]** > **[!UICONTROL Orders]**。
+&#x200B;05. 应用&#x200B;**[!UICONTROL Purchase Date]**&#x200B;筛选器并等待结果。
+&#x200B;06. 应用&#x200B;**[!UICONTROL Product SKU]**&#x200B;筛选器。
 
 <u>预期的结果</u>：
 
