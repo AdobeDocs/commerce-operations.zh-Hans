@@ -2,23 +2,23 @@
 title: 了解升级范围
 description: 了解版本中可能影响Adobe Commerce自定义模块或第三方扩展的向后不兼容更改。
 exl-id: dab2a14f-dbf0-422e-afb4-642e2220ec7a
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
 
 # 了解升级的范围
 
-查看[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/overview)了解发行范围，包括增强功能、错误修复以及可能影响第三方和自定义模块的已知问题。
+查看[发行说明](/help/release/release-notes/overview.md)了解发行范围，包括增强功能、错误修复以及可能影响第三方和自定义模块的已知问题。
 
 ## 向后不兼容的更改
 
 Adobe Commerce版本可能包含与向后不兼容的更改。 请查看我们向后不兼容的更改文档，请参阅以下内容：
 
 - **[主要更改亮点](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/)** — 具有主要影响并需要详细说明和特殊说明以确保第三方模块继续工作的更改。
-- **[次要更改引用](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/)** — 引用从代码库生成的文档，其中介绍了对类、API成员资格、数据库、依赖项注入、接口、布局、系统和XSD的次要更改。
+- **[次要更改引用](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference)** — 引用从代码库生成的文档，其中介绍了对类、API成员资格、数据库、依赖项注入、接口、布局、系统和XSD的次要更改。
 
 ## 第三方扩展
 
@@ -26,7 +26,7 @@ Adobe Commerce Marketplace的新兼容性策略可确保&#x200B;_所有_&#x200B;
 
 ## 自定义模块
 
-所有自定义模块都应针对您要升级到的目标版本进行检查。 这是最耗时、最耗资源的升级过程。 在评估自定义模块时，必须查找与向后不兼容的更改并了解新实践，如控制器分解。 您可以在[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/overview)中了解有关此内容的更多信息。 此外，请确保遵循模块开发的[最佳实践](https://developer.adobe.com/commerce/php/best-practices/extensions/)。
+所有自定义模块都应针对您要升级到的目标版本进行检查。 这是最耗时、最耗资源的升级过程。 在评估自定义模块时，必须查找与向后不兼容的更改并了解新实践，如控制器分解。 您可以在[发行说明](/help/release/release-notes/overview.md)中了解有关此内容的更多信息。 此外，请确保遵循模块开发的[最佳实践](https://developer.adobe.com/commerce/php/best-practices/extensions/)。
 
 ## [!DNL Upgrade Compatibility Tool]
 

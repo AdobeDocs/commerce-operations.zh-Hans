@@ -4,13 +4,13 @@ description: 应用ACSD-58108修补程序以修复Adobe Commerce问题，该问�
 feature: Orders, System
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 26009fee51fb81e2517ad09319bac1190d127564
+exl-id: 1195e1c3-575c-48d6-8a10-c300f9bbb84a
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-58108：由于缺少联接表名称，导致网格自定义模块扩展顺序出现SQL错误
 
@@ -28,20 +28,20 @@ ACSD-58108修补程序修复了在筛选某些列时，顺序网格自定义模�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-使用自定义模块扩展时，原始提取表中缺少联接表名称会导致顺序网格出现SQL错误。 出现此问题的原因是，在加入`addFilterToMap`表后，**[!UICONTROL sales_order_item]**&#x200B;函数对某些列不起作用，导致筛选时出错。
+使用自定义模块扩展时，原始提取表中缺少联接表名称会导致顺序网格出现SQL错误。 出现此问题的原因是，在加入&#x200B;**[!UICONTROL sales_order_item]**&#x200B;表后，`addFilterToMap`函数对某些列不起作用，导致筛选时出错。
 
 <u>重现步骤</u>：
 
-&#x200B;01. 安装2.4版本的开发实例。
-&#x200B;02. 创建新订单。
-&#x200B;03. 安装带有SQL扩展的自定义模块。
-&#x200B;04. 导航到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Sales]** > **[!UICONTROL Orders]**。
-&#x200B;05. 应用&#x200B;**[!UICONTROL Purchase Date]**&#x200B;筛选器并等待结果。
-&#x200B;06. 应用&#x200B;**[!UICONTROL Product SKU]**&#x200B;筛选器。
+01. 安装2.4版本的开发实例。
+02. 创建新订单。
+03. 安装带有SQL扩展的自定义模块。
+04. 导航到&#x200B;**[!UICONTROL Admin]** > **[!UICONTROL Sales]** > **[!UICONTROL Orders]**。
+05. 应用&#x200B;**[!UICONTROL Purchase Date]**&#x200B;筛选器并等待结果。
+06. 应用&#x200B;**[!UICONTROL Product SKU]**&#x200B;筛选器。
 
 <u>预期的结果</u>：
 
@@ -55,8 +55,8 @@ ACSD-58108修补程序修复了在筛选某些列时，顺序网格自定义模�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

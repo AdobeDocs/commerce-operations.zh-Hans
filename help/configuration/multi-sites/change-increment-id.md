@@ -2,9 +2,9 @@
 title: 更改增量ID
 description: 了解如何在合并或恢复站点时使用SQL更改订单、发票、贷项通知单和其他Commerce数据库实体的增量ID。
 exl-id: 039fc34c-d9cf-42f4-af5d-16a26a3e8171
-source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 查看[PayPal网关拒绝的请求 — _知识库_&#x200B;中的重复发票问题](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/payments/paypal-gateway-rejected-request-duplicate-invoice-issue.html?lang=zh-Hans)。
+>您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 查看[PayPal网关拒绝的请求 — _知识库_&#x200B;中的重复发票问题](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26838)。
 
 ## 必备步骤
 

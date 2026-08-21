@@ -4,7 +4,7 @@ description: 了解配置购物车限制和产品属性，以及列出分页、�
 role: Developer
 feature: Best Practices, Catalog Management
 exl-id: 9a672017-9122-4841-a67b-a183224b67dc
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
 source-wordcount: '1444'
 ht-degree: 0%
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 #### 查看属性集配置
 
-1. [连接到站点数据库](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/service/mysql#connect-to-the-database)。
+1. [连接到站点数据库](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/mysql#connect-to-the-database)。
 
 1. 使用MySQL查找属性集数
 
@@ -179,7 +179,7 @@ ht-degree: 0%
 
 如果类别中有太多产品，请更新storefront目录配置以禁用选项&#x200B;**允许每页所有产品**。
 
-禁用此选项后，Adobe Commerce使用产品列表店面分页控件来管理店面组件中显示的产品数量。 有关说明，请参阅[配置分页控件](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html?lang=zh-Hans#configure-the-pagination-controls)。
+禁用此选项后，Adobe Commerce使用产品列表店面分页控件来管理店面组件中显示的产品数量。 有关说明，请参阅[配置分页控件](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls)。
 
 ## 产品SKU限制
 
