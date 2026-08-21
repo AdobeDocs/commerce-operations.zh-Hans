@@ -35,7 +35,7 @@ ht-degree: 0%
 
 1. 您可以将翻译字典打包到一个语言包中，并将该包提供给Commerce商店管理员。
 
-1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize)。
+1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-localize)。
 
 命令选项：
 

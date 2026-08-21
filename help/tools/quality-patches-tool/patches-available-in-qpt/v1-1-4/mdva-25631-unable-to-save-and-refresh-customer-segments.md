@@ -1,6 +1,6 @@
 ---
 title: MDVA-25631：无法保存和刷新客户区段
-description: MDVA-25631修补程序解决了用户无法保存和刷新包含大量客户的客户区段的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-25631。 请注意，Adobe Commerce 2.4.2中已修复此问题。
+description: MDVA-25631修补程序解决了用户无法保存和刷新包含大量客户的客户区段的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.4后，即可使用此修补程序。 修补程序ID为MDVA-25631。 请注意，Adobe Commerce 2.4.2中已修复此问题。
 feature: Customer Service
 role: Admin
 exl-id: 3cf40538-822a-4d3e-b8fa-20f9ef9228ae
@@ -55,7 +55,7 @@ MDVA-25631修补程序解决了用户无法保存和刷新包含大量客户的�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

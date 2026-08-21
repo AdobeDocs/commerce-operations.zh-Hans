@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 查看[PayPal网关拒绝的请求 — _知识库_&#x200B;中的重复发票问题](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26838)。
+>您还可以通过在PayPal的“付款接收首选项”中允许每个发票ID多次付款，修复PayPal的付款网关问题。 查看[PayPal网关拒绝的请求 — _知识库_&#x200B;中的重复发票问题](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-26838)。
 
 ## 必备步骤
 

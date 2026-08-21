@@ -1,6 +1,6 @@
 ---
 title: MDVA-40609： cataloginventory_stock_status表中缺少已禁用的产品数据
-description: MDVA-40609修补程序解决了禁用产品数据未显示在“cataloginventory_stock_status”索引表中，从而导致显示错误产品数量的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-40609。 请注意，Adobe Commerce 2.4.3中已修复此问题。
+description: MDVA-40609修补程序解决了禁用产品数据未显示在“cataloginventory_stock_status”索引表中，从而导致显示错误产品数量的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-40609。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: Catalog Management, Inventory, Orders, Products
 role: Admin
 exl-id: e207ee55-b6ce-4065-bae1-2be89dcf5092
@@ -61,7 +61,7 @@ MDVA-40609修补程序解决了`cataloginventory_stock_status`索引表中未显
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
