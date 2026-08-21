@@ -3,7 +3,7 @@ title: 企业参考体系结构
 description: 了解如何使用Adobe的最新可组合商务技术实施Adobe Commerce。
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
 exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
-source-git-commit: dc4747d96e6f226e90ed95c93512c3e879d408ab
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -26,15 +26,15 @@ Commerce已经过演变，可满足企业对性能、规模和安全性的要求
 
 ## 云基础
 
-云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/overview)是Commerce实施的基础。 它提供了一个[安全](../../security-and-compliance/shared-responsibility.md)自动托管平台，以及用于在云原生环境中构建、部署、监视和管理Commerce应用程序的自助方法。
+云基础架构上的[Adobe Commerce](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)是Commerce实施的基础。 它提供了一个[安全](../../security-and-compliance/shared-responsibility.md)自动托管平台，以及用于在云原生环境中构建、部署、监视和管理Commerce应用程序的自助方法。
 
 请参阅以下Cloud Foundation技术详细信息：
 
-- [**扩展的体系结构**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture) — 自动调整容量以保持稳定、可预测的性能
-- [**多个环境**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/pro-architecture) — 预配置了PHP、MySQL (MariaDB)、Redis、RabbitMQ和受支持的搜索引擎技术，以开发、测试和部署您的站点
-- [**配置管理**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/configure/overview) — 可自定义的环境配置文件和命令行界面(CLI)，用于管理应用程序设置、路由、生成和部署操作以及通知。
-- [**基于Git的工作流**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow) — 在推送代码更改以进行快速开发和连续部署后自动构建和部署
-- [**内置可观察性**](https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/monitor/performance) — 可组合来自多个源的日志数据的工具，帮助您管理网站性能和诊断问题
+- [**扩展的体系结构**](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture) — 自动调整容量以保持稳定、可预测的性能
+- [**多个环境**](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-architecture) — 预配置了PHP、MySQL (MariaDB)、Redis、RabbitMQ和受支持的搜索引擎技术，以开发、测试和部署您的站点
+- [**配置管理**](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/overview) — 可自定义的环境配置文件和命令行界面(CLI)，用于管理应用程序设置、路由、生成和部署操作以及通知。
+- [**基于Git的工作流**](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow) — 在推送代码更改以进行快速开发和连续部署后自动构建和部署
+- [**内置可观察性**](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/performance) — 可组合来自多个源的日志数据的工具，帮助您管理网站性能和诊断问题
 - [**全面的API覆盖**](https://developer.adobe.com/commerce/webapi/get-started/)—[GraphQL](https://developer.adobe.com/commerce/webapi/graphql/)和[REST](https://developer.adobe.com/commerce/webapi/rest) API，用于集成核心Commerce应用程序与第三方系统并扩展Commerce功能
 
 ## 与Experience Cloud集成
@@ -48,7 +48,7 @@ Adobe Commerce与所有Experience Cloud解决方案集成，可大规模提供[�
 >有关更多信息，请参阅以下资源：
 >
 >- [数字体验Blueprint](https://experienceleague.adobe.com/zh-hans/docs/blueprints-learn/architecture/overview)，了解更多技术详细信息。
->- 请参阅[个性化客户体验](https://experienceleague.adobe.com/zh-hans/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization)。
+>- 请参阅[个性化客户体验](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization)。
 
 
 ## 与第三方系统集成
@@ -70,7 +70,7 @@ Adobe提供了以下开发人员工具来构建集成和自定义：
 
 >[!NOTE]
 >
->请参阅[现代方法：Adobe Commerce中的有效可扩展性](https://experienceleague.adobe.com/zh-hans/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility)。
+>请参阅[现代方法：Adobe Commerce中的有效可扩展性](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility)。
 
 ## 店面服务
 

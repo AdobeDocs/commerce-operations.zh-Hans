@@ -3,9 +3,9 @@ title: 实施启动阶段
 description: 了解Adobe Commerce项目启动阶段的实施最佳实践。
 exl-id: 2e85346c-2063-49c9-9b8d-1b5fdd3f1cef
 feature: Best Practices
-source-git-commit: e63f68dd469564e70269154810cbfbd95d2b2e57
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 | [保护您的Commerce站点和基础架构](security-best-practices.md) | 强化Commerce安装的安全状态，以保护Commerce的店面、管理员、基础设施和数据免受未经授权的访问和网络攻击。 |
 | [Google reCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html?lang=zh-Hans) | 配置Google reCAPTCHA以进行管理员访问和注册客户启动的各种店面操作。 |
 | [配置Web爬虫](robots-txt.md) | 向Web爬虫传递有关Adobe Commerce站点的说明。 |
-| [验证安全配置](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/launch/checklist.html?lang=zh-Hans) | 在云基础架构网站上启动Adobe Commerce之前，请查看清单项目。 |
+| [验证安全配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/launch/checklist) | 在云基础架构网站上启动Adobe Commerce之前，请查看清单项目。 |
 
 ## 性能监控
 

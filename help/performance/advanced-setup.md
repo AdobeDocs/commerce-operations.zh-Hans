@@ -2,7 +2,7 @@
 title: 高级设置
 description: 了解如何为Adobe Commerce进行高级设置。 了解分步说明和配置要求。
 exl-id: eb9ca9fa-b099-4e77-ab33-16cd0f382ffe
-source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 大量产品SKU、网站、客户组或共享目录将影响产品价格和目录规则索引器的运行时间。 这是因为默认情况下，所有网站都会分配给所有客户组（共享目录）。
 
-若要缩短索引时间，您可以[从客户组（共享目录）中排除某些网站](https://developer.adobe.com/commerce/php/development/components/indexing/optimization/#customer-group-limitations-by-websites)。
+若要缩短索引时间，您可以[从客户组（共享目录）中排除某些网站](https://developer.adobe.com/commerce/php/development/components/indexing/optimization#customer-group-limitations-by-websites)。
 
 ## 设置Redis
 

@@ -3,7 +3,7 @@ title: 配置搜索停用词
 description: 了解如何使用CSV文件管理Adobe Commerce的停用词。
 feature: Configuration, Search
 exl-id: 75320868-9939-4a6e-8dbb-73ca68c9f0ee
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -126,7 +126,7 @@ ht-degree: 0%
 
 ## 从模块中更改目录
 
-1. [创建模块](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
+1. [创建模块](https://developer.adobe.com/commerce/php/development/build/component-file-structure)
 1. 在模块`etc/di.xml`中添加说明：
 
    ```xml

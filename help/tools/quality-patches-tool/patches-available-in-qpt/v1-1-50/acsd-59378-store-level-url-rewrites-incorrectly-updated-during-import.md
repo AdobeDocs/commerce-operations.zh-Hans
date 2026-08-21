@@ -5,16 +5,16 @@ feature: Data Import/Export
 role: Admin, Developer
 exl-id: dc54d810-dcc6-42c6-a877-d00d3cf4f9a5
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
 # ACSD-59378：导入期间错误地更新了存储级别[!DNL URL]重写
 
-ACSD-59378修补程序修复了在导入期间存储级别[!DNL URL]重写错误更新的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.50时，此修补程序可用。 修补程序ID为ACSD-59378。 请注意，此问题已在Adobe Commerce 2.4.7中修复。
+ACSD-59378修补程序修复了在导入期间存储级别[!DNL URL]重写错误更新的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.50时，此修补程序可用。 修补程序ID为ACSD-59378。 请注意，此问题已在Adobe Commerce 2.4.7中修复。
 
 ## 受影响的产品和版本
 
@@ -36,8 +36,8 @@ Adobe Commerce（所有部署方法）2.4.5x（2.4.5的所有版本）
 
 <u>重现步骤</u>：
 
-1. 在`url_key = key_default`所有存储视图&#x200B;**范围中创建具有**&#x200B;的产品。
-1. 在`url_key = key_store`默认存储视图&#x200B;**作用域中设置**。
+1. 在&#x200B;**所有存储视图**&#x200B;范围中创建具有`url_key = key_default`的产品。
+1. 在&#x200B;**默认存储视图**&#x200B;作用域中设置`url_key = key_store`。
 1. 导出产品。
 1. 为此产品导入包含以下数据的[!DNL CSV]文件：
    * 将`store_view_code`列设置为&#x200B;*empty*，以使其适用于&#x200B;**所有存储视图**&#x200B;范围。
@@ -45,25 +45,25 @@ Adobe Commerce（所有部署方法）2.4.5x（2.4.5的所有版本）
 
 <u>预期结果</u>：
 
-仅为没有已覆盖[!DNL URL]的存储视图（适用默认`url_key`）重新生成`url_key`重写。
+仅为没有已覆盖`url_key`的存储视图（适用默认`url_key`）重新生成[!DNL URL]重写。
 
 <u>实际结果</u>：
 
-`key_store` [!DNL URL]重写已删除，但是在产品的[!DNL URL]默认存储视图&#x200B;**级别上的**&#x200B;重写仍设置为&#x200B;*`key_store`*。
+`key_store` [!DNL URL]重写已删除，但是在产品的&#x200B;**默认存储视图**&#x200B;级别上的[!DNL URL]重写仍设置为&#x200B;*`key_store`*。
 
 ## 应用修补程序
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

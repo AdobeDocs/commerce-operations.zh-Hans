@@ -5,9 +5,9 @@ feature: Themes
 role: Admin, Developer
 exl-id: 7b206b25-8918-40a6-a956-d38d5058d38f
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ACSD-62591修补程序修复了在配置&#x200B;**[!UICONTROL User Agent Rules]*
 
 1. 打开Commerce **[!UICONTROL Admin]** > **[!UICONTROL Content]** > **[!UICONTROL Design]** > **[!UICONTROL Configuration]**。
 1. 编辑商店视图主题。
-1. 在`/iPhone|iPod|BlackBerry|Palm|Googlebot-Mobile|Mobile|mobile|mobi|Windows Mobile|Safari Mobile|Android|Opera Mini/i`中设置&#x200B;**[!UICONTROL User Agent Rules]**&#x200B;并选择其他主题。
+1. 在&#x200B;**[!UICONTROL User Agent Rules]**&#x200B;中设置`/iPhone|iPod|BlackBerry|Palm|Googlebot-Mobile|Mobile|mobile|mobi|Windows Mobile|Safari Mobile|Android|Opera Mini/i`并选择其他主题。
 1. 保存更改并清除缓存。
 1. 在移动设备上打开店面页面。
 1. 从桌面浏览器中打开同一页面。
@@ -53,8 +53,8 @@ ACSD-62591修补程序修复了在配置&#x200B;**[!UICONTROL User Agent Rules]*
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 
 ## 相关阅读

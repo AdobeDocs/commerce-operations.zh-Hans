@@ -22,9 +22,9 @@ level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
 badgePaas: label="Adobe Commerce on Cloud 2.4.4 — 仅限2.4.9" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Cloud 2.4.4到2.4.9版本的Adobe Commerce"
 nudge: true
-source-git-commit: e2b86c349bdd085717f732532f68e3fae8455d13
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: 2200
+source-wordcount: 2158
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 1. 所有第三方软件依赖项(PHP、MariaDB、Elasticsearch、OpenSearch、Redis、RabbitMQ)的支持版本
 
-1. 云上受支持的安全版本的Adobe Commerce。 完全支持的版本包括2.4.8、2.4.9或最新发布的版本。 请参阅[生命周期策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy)文档。
+1. 云上受支持的安全版本的Adobe Commerce。 完全支持的版本包括2.4.8、2.4.9或最新发布的版本。 请参阅[生命周期策略](/help/release/lifecycle-policy.md)文档。
 
 遵循以下准则以检查您是否需要采取措施来保护云环境上的Adobe Commerce。 如果在表1中列出的截止日期前未满足安全要求的环境，将会暂停入站流量，从而使店面离线。 如果您担心要达到截止日期，请尽快联系您的帐户团队或[Adobe支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
 
@@ -145,8 +145,8 @@ Adobe将帮助您直接升级这些软件依赖项。
 
 | 云上的Adobe Commerce的当前版本 | 必需操作 | 截止日期 |
 | --- |--- |--- |
-| 版本2.4.4或2.4.5 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因：在2027年5月31日之前，版本2.4.4和2.4.5将仅接收核心应用程序的有限且独立的安全修复。 这不包括质量修复、对应用程序依赖项（例如，PHP）的兼容性支持或平台依赖项更新。 请参阅Adobe的[生命周期策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy)。 | 2027年6月1日 |
-| 版本2.4.6或2.4.7 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因：在2027年8月30日之前，版本2.4.6将获得扩展支持，并且在2028年5月31日之前，将仅获得核心应用程序的有限且独立的安全修复。 版本2.4.7将在2027年5月31日之前获得标准支持，并在2028年5月31日之前获得扩展支持。 请参阅Adobe的[生命周期策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/lifecycle-policy)。 | 2028年6月1日 |
+| 版本2.4.4或2.4.5 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因：在2027年5月31日之前，版本2.4.4和2.4.5将仅接收核心应用程序的有限且独立的安全修复。 这不包括质量修复、对应用程序依赖项（例如，PHP）的兼容性支持或平台依赖项更新。 请参阅Adobe的[生命周期策略](/help/release/lifecycle-policy.md)。 | 2027年6月1日 |
+| 版本2.4.6或2.4.7 | 升级到Cloud上的Adobe Commerce版本2.4.9（或最新版本）或迁移到[!DNL Adobe Commerce as a Cloud Service]。<br>原因：在2027年8月30日之前，版本2.4.6将获得扩展支持，并且在2028年5月31日之前，将仅获得核心应用程序的有限且独立的安全修复。 版本2.4.7将在2027年5月31日之前获得标准支持，并在2028年5月31日之前获得扩展支持。 请参阅Adobe的[生命周期策略](/help/release/lifecycle-policy.md)。 | 2028年6月1日 |
 | 版本2.4.8或2.4.9 | 无需Adobe Commerce on Cloud版本升级操作。 操作1中的第三方软件依赖项截止日期仍然适用。<br>原因：未设置截止日期。 | 不适用 |
 
 #### 步骤2：确定升级或迁移路径
@@ -178,7 +178,7 @@ Adobe将一如既往地支持您执行必要的步骤，以便采用受支持的
 
 **如果您选择升级到Cloud版本2.4.9上的Adobe Commerce：**
 
-* **升级兼容性报告：** Adobe提供了一个详细的报告，该报告准确地识别了升级到Adobe Commerce版本2.4.9所需的内容，包括识别哪些模块和文件需要更新、严重问题的数量等。 有关如何生成升级兼容性报告的详细信息，请参阅[全站点分析工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/access)文档。
+* **升级兼容性报告：** Adobe提供了一个详细的报告，该报告准确地识别了升级到Adobe Commerce版本2.4.9所需的内容，包括识别哪些模块和文件需要更新、严重问题的数量等。 有关如何生成升级兼容性报告的详细信息，请参阅[全站点分析工具](/help/tools/site-wide-analysis-tool/access.md)文档。
 
 * **软件依赖项升级：**&#x200B;由于您无法直接升级软件依赖项，请为Adobe打开[支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)为您处理升级。 有关详细信息，请参阅[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 

@@ -5,9 +5,9 @@ feature: Security, User Account
 role: Admin, Developer
 exl-id: 049a82ff-80e3-46a1-8472-ac74de0e365f
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ACSD-48570修补程序，用于修复启用&#x200B;*[!UICONTROL Add Store Code t
 
 <u>重现步骤</u>：
 
-1. 在&#x200B;**[!UICONTROL Add Store Code to URLs]** > **[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]**&#x200B;处启用&#x200B;**[!UICONTROL URL Options]**&#x200B;配置。
+1. 在&#x200B;**[!UICONTROL Store]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]** > **[!UICONTROL URL Options]**&#x200B;处启用&#x200B;**[!UICONTROL Add Store Code to URLs]**&#x200B;配置。
 1. 从管理员面板注销，然后单击管理员登录页面上的&#x200B;**[!UICONTROL Forgot your password?]**&#x200B;链接。
 1. 输入管理员用户的电子邮件，传递验证码，然后单击&#x200B;**[!UICONTROL Retrieve Password]**。
 1. 打开密码重置电子邮件并单击密码恢复链接。
@@ -54,8 +54,8 @@ ACSD-48570修补程序，用于修复启用&#x200B;*[!UICONTROL Add Store Code t
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

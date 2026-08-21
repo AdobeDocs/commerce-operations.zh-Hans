@@ -3,9 +3,9 @@ title: 响应安全事件
 description: 通过遵循最佳实践处理安全事件，以响应和修复影响站点可用性和性能的安全问题。
 feature: Best Practices
 exl-id: 77275d37-4f1d-462d-ba11-29432791da6a
-source-git-commit: e63f68dd469564e70269154810cbfbd95d2b2e57
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -46,18 +46,18 @@ ht-degree: 0%
 - 请您的系统集成商和适当的安全人员参与调查和补救工作。
 
 - 确定攻击的范围：
-   - 是否访问过信用卡信息？
-   - 哪些信息被盗？
-   - 妥协后已经过了多少时间？
-   - 信息是否加密？
+  - 是否访问过信用卡信息？
+  - 哪些信息被盗？
+  - 妥协后已经过了多少时间？
+  - 信息是否加密？
 
 - 通过查看服务器日志文件和文件更改，尝试查找攻击向量，以确定网站何时遭到破坏，以及如何遭到破坏。
 
-   - 在某些情况下，建议擦除并重新安装所有内容，或者在虚拟托管的情况下创建一个新实例。 恶意软件可能隐藏在不受怀疑的位置，只是等待自我恢复。
+  - 在某些情况下，建议擦除并重新安装所有内容，或者在虚拟托管的情况下创建一个新实例。 恶意软件可能隐藏在不受怀疑的位置，只是等待自我恢复。
 
-   - 删除所有不必要的文件。 然后，从已知干净的来源重新安装所需的文件。 例如，您可以使用版本控制系统中的文件或Adobe中的原始分发文件来重新安装。
+  - 删除所有不必要的文件。 然后，从已知干净的来源重新安装所需的文件。 例如，您可以使用版本控制系统中的文件或Adobe中的原始分发文件来重新安装。
 
-   - 重置所有凭据，包括数据库、文件访问、付款和送货集成、Web服务以及管理员登录。 同时重置所有可能用于攻击系统的集成和API密钥和帐户。
+  - 重置所有凭据，包括数据库、文件访问、付款和送货集成、Web服务以及管理员登录。 同时重置所有可能用于攻击系统的集成和API密钥和帐户。
 
 ## 分析事件
 
@@ -73,13 +73,13 @@ ht-degree: 0%
 
   使用工具中的&#x200B;**安全性**&#x200B;选项卡可清楚地了解潜在的安全问题，从而帮助确定根本原因并保持网站性能处于最佳状态。
 
-- 使用[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=zh-Hans)分析日志
+- 使用[New Relic日志](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)分析日志
 
-  云基础架构Pro项目上的Adobe Commerce包括[New Relic日志](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html?lang=zh-Hans)服务。 该服务已预配置为汇总暂存和生产环境中的所有日志数据，以便在集中式日志管理功能板中显示这些数据，您可以在其中搜索和可视化汇总的数据。
+  云基础架构Pro项目上的Adobe Commerce包括[New Relic日志](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/log-management)服务。 该服务已预配置为汇总暂存和生产环境中的所有日志数据，以便在集中式日志管理功能板中显示这些数据，您可以在其中搜索和可视化汇总的数据。
 
   对于其他Commerce项目，您可以设置并使用[New Relic日志](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/)服务来完成以下任务：
-   - 使用[New Relic查询](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs)搜索聚合日志数据。
-   - 通过New Relic日志应用程序可视化日志数据。
+  - 使用[New Relic查询](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs)搜索聚合日志数据。
+  - 通过New Relic日志应用程序可视化日志数据。
 
 ## 审核帐户、代码和数据库
 
@@ -93,9 +93,9 @@ ht-degree: 0%
 
 - [查看管理员安全设置](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html?lang=zh-Hans) — 验证管理员安全设置是否遵循安全最佳实践。
 
-- [在云基础架构项目中检查Adobe Commerce的用户帐户](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html?lang=zh-Hans) — 删除旧的、未使用的或可疑的帐户，并为所有云项目管理员用户轮换密码。 确保正确配置帐户安全设置。
+- [在云基础架构项目中检查Adobe Commerce的用户帐户](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/user-access) — 删除旧的、未使用的或可疑的帐户，并为所有云项目管理员用户轮换密码。 确保正确配置帐户安全设置。
 
-- 在云基础架构上[审核Adobe Commerce的SSH密钥](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html?lang=zh-Hans) — 审核、删除和轮换SSH密钥。
+- 在云基础架构上[审核Adobe Commerce的SSH密钥](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/secure-connections) — 审核、删除和轮换SSH密钥。
 
 ### 审核代码
 

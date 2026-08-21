@@ -4,9 +4,9 @@ description: 了解如何修复在云基础架构上部署的Adobe Commerce站�
 role: Developer, Admin
 feature: Best Practices
 exl-id: e40e0564-a4eb-43a8-89dd-9f6c5cedb4a7
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 如果您的Adobe Commerce项目部署在Pro体系结构上，则可以使用Percona工具包来分析查询。
 
 1. 对MySQL慢查询日志运行`pt-query-digest --type=slowlog`命令。
-   * 要查找慢查询日志的位置，请参阅我们的开发人员文档中的&#x200B;**[!UICONTROL Log locations > Service Logs]**(https://experienceleague.adobe.com/zh-hans/docs/commerce-cloud-service/user-guide/develop/test/log-locations#service-logs)。
+   * 要查找慢查询日志的位置，请参阅我们的开发人员文档中的&#x200B;**[!UICONTROL Log locations > Service Logs]**(https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/test/log-locations#service-logs)。
    * 请参阅[Percona工具包> pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest)文档。
 1. 根据发现的问题，采取措施修复查询，使其更快地运行。
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
    添加节点时，请将`referenceID`和`column name`变量替换为自定义自定义值。
 
-有关详细信息，请参阅我们的开发人员文档中的[配置声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/)。
+有关详细信息，请参阅我们的开发人员文档中的[配置声明性架构](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration)。
 
 ## 识别并删除重复索引
 

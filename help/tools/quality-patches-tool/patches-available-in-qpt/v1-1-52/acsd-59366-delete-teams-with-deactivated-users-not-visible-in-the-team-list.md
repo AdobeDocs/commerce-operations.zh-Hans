@@ -1,13 +1,13 @@
 ---
 title: ACSD-59366：删除其已停用用户的团队在团队列表中不可见
-description: Adobe Commerce应用ACSD-59366修补程序以修复以下问题：当您尝试删除团队时，如果团队包含未在团队列表中显示的已停用用户，则会出现错误。
+description: 应用ACSD-59366修补程序以修复以下问题：当您尝试删除团队时，如果团队包含未在团队列表中显示的已停用用户，则会出现错误。
 feature: GraphQL, Companies
 role: Admin, Developer
 exl-id: 406d2242-38f9-4852-b311-0ee57c4a7c26
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -58,8 +58,8 @@ Adobe Commerce（所有部署方法） 2.4.6 - 2.4.7-p3
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

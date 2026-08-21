@@ -2,9 +2,9 @@
 title: 管理索引器
 description: 了解如何使用命令行工具查看和管理Adobe Commerce索引器。 了解索引器命令、状态检查和重新索引技术。
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: 2c221ccf793a0b469fc6984b443699c30a6064ce
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,7 @@ Stores Feed:                                       Update by Schedule
 >
 >- **2.4.8及更高版本**： [!DNL Customer Grid]索引器同时支持[!UICONTROL Update on Save]和[!UICONTROL Update by Schedule]模式，并且默认为[!UICONTROL Update by Schedule]。
 >
->请参阅&#x200B;_实施行动手册_&#x200B;中的[索引器配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration)。
+>请参阅&#x200B;_实施行动手册_&#x200B;中的[索引器配置的最佳实践](/help/implementation-playbook/best-practices/maintenance/indexer-configuration.md)。
 
 >[!INFO]
 >

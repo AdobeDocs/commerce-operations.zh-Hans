@@ -4,9 +4,9 @@ description: 了解如何使用Quality Patches Tool来应用和管理Adobe Comme
 exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
 feature: Configuration, Install
 type: Troubleshooting
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -62,18 +62,18 @@ Adobe Commerce 2.3.5。
 状态表包括：
 
 - **类型**：
-   - `Optional` — [!DNL Quality Patches Tool]和[Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)包中的所有修补程序对于Adobe Commerce安装都是可选的。
-   - `Deprecated` — Adobe已弃用单个修补程序。 如果您已应用修补程序，我们建议您恢复它。 还原操作还会从状态表中删除修补程序。
+  - `Optional` — [!DNL Quality Patches Tool]和[Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)包中的所有修补程序对于Adobe Commerce安装都是可选的。
+  - `Deprecated` — Adobe已弃用单个修补程序。 如果您已应用修补程序，我们建议您恢复它。 还原操作还会从状态表中删除修补程序。
 
 - **状态**：
-   - `Applied` — 已应用修补程序。
-   - `Not applied` — 尚未应用修补程序。
-   - `N/A` — 由于存在冲突，无法定义修补程序的状态。
+  - `Applied` — 已应用修补程序。
+  - `Not applied` — 尚未应用修补程序。
+  - `N/A` — 由于存在冲突，无法定义修补程序的状态。
 
 - **详细信息**：
-   - `Affected components` — 受影响的模块列表。
-   - `Required patches` — 必须应用的修补程序列表才能使指定的修补程序正常工作（依赖关系）。
-   - `Recommended replacement` — 建议替换已弃用修补程序的修补程序。
+  - `Affected components` — 受影响的模块列表。
+  - `Required patches` — 必须应用的修补程序列表才能使指定的修补程序正常工作（依赖关系）。
+  - `Recommended replacement` — 建议替换已弃用修补程序的修补程序。
 
 >[!INFO]
 >

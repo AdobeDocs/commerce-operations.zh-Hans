@@ -3,9 +3,9 @@ title: 保护您的Commerce站点和基础架构
 description: 通过在设置、配置和更新Adobe Commerce安装时实施安全最佳实践来维护安全性。
 feature: Best Practices
 exl-id: 50d8a464-6496-4e9a-b642-0c6d0eb51ba0
-source-git-commit: 3e0d993078c73a191809c85c1a0ef03ff29a78a6
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->有关在云基础架构上保护和维护Adobe Commerce项目的角色和责任的信息，请参阅&#x200B;_Adobe Commerce安全和合规性指南_&#x200B;中的[共享责任模型](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/security-and-compliance/shared-responsibility#security-responsibilities-chart)。
+>有关在云基础架构上保护和维护Adobe Commerce项目的角色和责任的信息，请参阅&#x200B;_Adobe Commerce安全和合规性指南_&#x200B;中的[共享责任模型](/help/security-and-compliance/shared-responsibility.md#security-responsibilities-chart)。
 
 [所有受支持的版本](../../../release/versions.md)，共：
 

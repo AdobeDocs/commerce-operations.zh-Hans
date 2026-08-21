@@ -5,9 +5,9 @@ feature: GraphQL, B2B, Companies, Roles/Permissions
 role: Admin, Developer
 exl-id: 81d78746-e723-4b18-860c-d973158b469c
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Adobe Commerce（所有部署方法） 2.4.6 - 2.4.7-p3
    }
    ```
 
-1. 将生成的令牌作为&#x200B;**令牌添加到** Authorization`Bearer`请求标头中，并在GraphQL查询下运行：
+1. 将生成的令牌作为`Bearer`令牌添加到&#x200B;**Authorization**&#x200B;请求标头中，并在GraphQL查询下运行：
 
    ```GraphQL
       {
@@ -77,8 +77,8 @@ GraphQL查询返回角色。
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

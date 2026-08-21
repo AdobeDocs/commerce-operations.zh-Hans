@@ -1,13 +1,13 @@
 ---
 title: ACSD-63406：运行persistent_clear_expired cron作业时未清除过期的持久引号
-description: Adobe Commerce应用ACSD-63406修补程序以修复以下问题：当“persistent_clear_expired”cron作业运行时，任何cron作业都不会清除过期的永久性引号。
+description: 应用ACSD-63406修补程序以修复以下问题：当“persistent_clear_expired”cron作业运行时，任何cron作业都不会清除过期的永久性引号。
 feature: Quotes, Shopping Cart
 role: Admin, Developer
 exl-id: 795d1ddf-0d5b-406c-870b-36cb92cf07fa
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,8 @@ ACSD-63406修补程序修复了`persistent_clear_expired` cron作业运行时任
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 
 ## 相关阅读

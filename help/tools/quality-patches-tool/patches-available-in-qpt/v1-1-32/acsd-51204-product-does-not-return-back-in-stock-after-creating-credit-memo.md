@@ -5,16 +5,16 @@ feature: Orders, Products, Returns
 role: Admin
 exl-id: a4dba28c-c239-4812-8b3a-ce0493f9b1aa
 type: Troubleshooting
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
 
 # ACSD-51204：创建贷项通知单后，产品未返回库存
 
-ACSD-51204修补程序修复了在创建贷项通知单后产品未重新上架的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.32时，此修补程序可用。 修补程序ID为ACSD-51204。 请注意，Adobe Commerce 2.4.7中已修复此问题。
+ACSD-51204修补程序修复了在创建贷项通知单后产品未重新上架的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.32时，此修补程序可用。 修补程序ID为ACSD-51204。 请注意，Adobe Commerce 2.4.7中已修复此问题。
 
 ## 受影响的产品和版本
 
@@ -36,12 +36,12 @@ ACSD-51204修补程序修复了在创建贷项通知单后产品未重新上架�
 
 <u>重现步骤</u>：
 
-1. 安装&#x200B;**[!UICONTROL Adobe Commerce]**&#x200B;并仅使用默认的&#x200B;**[!UICONTROL Inventory Management Module]**&#x200B;源&#x200B;*和* stock *启用*。
-1. 添加数量为&#x200B;**[!UICONTROL new product]** 10 *的*。
+1. 安装&#x200B;**[!UICONTROL Adobe Commerce]**&#x200B;并仅使用默认的&#x200B;*源*&#x200B;和&#x200B;*stock*&#x200B;启用&#x200B;**[!UICONTROL Inventory Management Module]**。
+1. 添加数量为&#x200B;*10*&#x200B;的&#x200B;**[!UICONTROL new product]**。
 1. 将产品分配给&#x200B;**[!UICONTROL default stock]**。
 1. 在店面，将产品添加到购物车中，并下达整个可用数量10的订单。
 1. 在管理面板中，为订单生成&#x200B;*发票*&#x200B;和&#x200B;*装运*。
-1. 创建针对所有项目选中了&#x200B;**[!UICONTROL Credit Memo]**&#x200B;返回库存&#x200B;*复选框的*。
+1. 创建针对所有项目选中了&#x200B;*返回库存*&#x200B;复选框的&#x200B;**[!UICONTROL Credit Memo]**。
 1. 在管理员中检查产品的&#x200B;**[!UICONTROL Salable Quantity]**。
 
 <u>预期的结果</u>：
@@ -56,15 +56,15 @@ ACSD-51204修补程序修复了在创建贷项通知单后产品未重新上架�
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
 要了解有关[!DNL Quality Patches Tool]的更多信息，请参阅：
 
-* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches)。
-* [使用 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)指南中的[!UICONTROL Quality Patches Tool]检查修补程序是否可用于您的Adobe Commerce问题。
+* [[!DNL Quality Patches Tool] 已发布：支持知识库中用于自助提供高质量修补程序的新工具](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)。
+* [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题。
 
 
-有关QPT中其他可用修补程序的信息，请参阅[[!DNL Quality Patches Tool]指南中的](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)：搜索修补程序[!DNL Quality Patches Tool]。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。

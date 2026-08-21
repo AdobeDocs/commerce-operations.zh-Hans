@@ -4,16 +4,16 @@ description: 应用ACSD-65822修补程序以修复在添加捆绑产品时，管
 feature: Admin Workspace, Checkout, Orders
 role: Admin, Developer
 exl-id: 6740b5a6-8710-458c-abe4-03d2a8a694c5
-source-git-commit: 7e9598e3ac0558706ef98ca81c19d27c37f7e860
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
 # ACSD-65822： [!UICONTROL Shopping Cart]中未正确反映捆绑包和可配置产品数量
 
-ACSD-65822修补程序修复了捆绑包和可配置产品数量在&#x200B;**[!UICONTROL Shopping Cart]**&#x200B;下的&#x200B;*[!UICONTROL Customer's Activities]*&#x200B;部分中无法正确显示的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.65时，此修补程序可用。 修补程序ID为ACSD-65822。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
+ACSD-65822修补程序修复了捆绑包和可配置产品数量在&#x200B;*[!UICONTROL Customer's Activities]*&#x200B;下的&#x200B;**[!UICONTROL Shopping Cart]**&#x200B;部分中无法正确显示的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.65时，此修补程序可用。 修补程序ID为ACSD-65822。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
 
 ## 受影响的产品和版本
 
@@ -31,7 +31,7 @@ ACSD-65822修补程序修复了捆绑包和可配置产品数量在&#x200B;**[!U
 
 ## 问题
 
-捆绑包和可配置产品数量未正确显示在&#x200B;**[!UICONTROL Shopping Cart]**&#x200B;下的&#x200B;*[!UICONTROL Customer's Activities]*&#x200B;部分中。
+捆绑包和可配置产品数量未正确显示在&#x200B;*[!UICONTROL Customer's Activities]*&#x200B;下的&#x200B;**[!UICONTROL Shopping Cart]**&#x200B;部分中。
 
 <u>重现步骤</u>：
 
@@ -54,8 +54,8 @@ ACSD-65822修补程序修复了捆绑包和可配置产品数量在&#x200B;**[!U
 
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
-* Adobe Commerce或Magento Open Source内部部署： [[!DNL Quality Patches Tool] 指南中的](/help/tools/quality-patches-tool/usage.md)>使用情况[!DNL Quality Patches Tool]。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

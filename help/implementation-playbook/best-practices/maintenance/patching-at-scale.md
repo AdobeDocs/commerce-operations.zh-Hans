@@ -5,9 +5,9 @@ role: Developer
 feature: Best Practices
 badge: label="由Adobe高级技术架构师Tony Evers提供" type="Informative" url="https://www.linkedin.com/in/evers-tony/" tooltip="托尼·埃弗斯撰稿"
 exl-id: 08c38dc5-3dc2-49ee-b56f-59e1718e12b5
-source-git-commit: 2c9f827326315bc4ef77d511dddce81e059a1092
+source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 1. **安全修补程序**&#x200B;是Adobe Commerce版本的静态代码库的一部分。
 1. 通过`composer install`和`composer update`插件（如[cweagans/composer-patches](https://packagist.org/packages/cweagans/composer-patches)），**Composer修补程序**。
-1. Commerce[&#128279;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html?lang=zh-Hans)程序包的Cloud修补程序中包含所有&#x200B;**必需的修补程序**。
+1. Commerce[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)程序包的Cloud修补程序中包含所有&#x200B;**必需的修补程序**。
 1. 已选择[[!DNL [Quality Patches Tool]]](../../../tools/quality-patches-tool/usage.md)中包含的&#x200B;**质量修补程序**。
 1. **自定义修补程序**&#x200B;以及`/m2-hotfixes`目录中的Adobe Commerce支持修补程序，按修补程序名称的字母顺序排列。
 
@@ -61,13 +61,13 @@ ht-degree: 0%
 
 - **组件包：** `centralized-patcher`
 
-   - 定义要安装的质量修补程序和`m2-hotfixes`的列表
-   - 需要`centralized-patcher-composer-plugin`程序包，该程序包在`composer install`操作后运行`vendor/bin/magento-patches apply`命令
+  - 定义要安装的质量修补程序和`m2-hotfixes`的列表
+  - 需要`centralized-patcher-composer-plugin`程序包，该程序包在`composer install`操作后运行`vendor/bin/magento-patches apply`命令
 
 - **插件包：** `centralized-patcher-composer-plugin`
 
-   - 定义从`centralized-patcher`包读取质量修补程序列表的`CentralizedPatcher` PHP类
-   - 运行`vendor/bin/magento-patches apply`命令以在`composer install`操作后安装质量修补程序列表
+  - 定义从`centralized-patcher`包读取质量修补程序列表的`CentralizedPatcher` PHP类
+  - 运行`vendor/bin/magento-patches apply`命令以在`composer install`操作后安装质量修补程序列表
 
 ### `centralized-patcher`
 
@@ -365,7 +365,7 @@ index 03a3bf9..681e0b0 100644
 
 这样，您就可以集中管理所有安装的所有修补程序，并且可以更好地保证Adobe Commerce存储的安全性和稳定性。 请使用以下方法检查修补程序状态：
 
-- [云基础架构项目](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=zh-Hans#view-available-patches-and-status)
+- [云基础架构项目](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 - [内部部署项目](../../../tools/quality-patches-tool/usage.md#view-individual-patches)
 
 ## 代码示例
