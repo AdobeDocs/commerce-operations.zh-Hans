@@ -1,6 +1,6 @@
 ---
 title: MDVA-41164：无法保存或编辑具有自定义客户属性的公司
-description: MDVA-41164修补程序解决了管理员用户无法保存或编辑具有任何类型的文件或图像的自定义客户属性的公司的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.5后，即可使用此修补程序。 修补程序ID为MDVA-41164。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: MDVA-41164修补程序解决了管理员用户无法保存或编辑具有任何类型的文件或图像的自定义客户属性的公司的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.5后，即可使用此修补程序。 修补程序ID为MDVA-41164。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Admin Workspace, Attributes, B2B, Companies
 role: Developer
 exl-id: 9d1792e0-ba7b-444b-b1b1-771fd0e328eb

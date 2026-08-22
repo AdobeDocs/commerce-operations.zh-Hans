@@ -1,6 +1,6 @@
 ---
 title: MDVA-40262：GraphQL查询不会显示在管理员的常用搜索词中
-description: 40262于MDVA的Adobe Commerce质量修补程序修复了GraphQL搜索查询无法在管理员的常用搜索词中显示的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-40262。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: 40262于MDVA的Adobe Commerce质量修补程序修复了GraphQL搜索查询无法在管理员的常用搜索词中显示的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-40262。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Admin Workspace, GraphQL, Search
 role: Admin
 exl-id: 9442ac86-e632-4ab3-8cb3-d29487a1ecbe
