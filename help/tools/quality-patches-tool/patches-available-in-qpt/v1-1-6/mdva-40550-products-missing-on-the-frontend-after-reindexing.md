@@ -1,6 +1,6 @@
 ---
 title: MDVA-40550：重新索引后前端上缺少产品
-description: MDVA-40550修补程序解决了重新索引导致部分或所有店面类别缺少产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-40550。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: MDVA-40550修补程序解决了重新索引导致部分或所有店面类别缺少产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-40550。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Categories, Console, Products
 role: Admin
 exl-id: 5ce7e341-e165-4668-9de7-8e9ca3a70c70

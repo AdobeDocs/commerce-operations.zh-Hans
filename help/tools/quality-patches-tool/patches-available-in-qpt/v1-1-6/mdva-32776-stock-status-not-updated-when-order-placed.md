@@ -1,6 +1,6 @@
 ---
 title: MDVA-32776：库存状态未随订单投放更新
-description: MDVA-32776修补程序修复了在下订单但未发送时，库存状态未更新的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-32776。 请注意，Adobe Commerce 2.4.2中已修复此问题。
+description: MDVA-32776修补程序修复了在下订单但未发送时，库存状态未更新的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-32776。 请注意，Adobe Commerce 2.4.2中已修复此问题。
 feature: Orders
 role: Admin
 exl-id: 6f872c72-c96f-4c23-b6df-44e3da3a81c2

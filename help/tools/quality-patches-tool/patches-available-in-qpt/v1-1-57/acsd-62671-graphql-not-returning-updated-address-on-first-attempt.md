@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # ACSD-62671： [!DNL GraphQL]在第一次尝试时未返回更新的地址
 
-ACSD-62671修补程序修复了[!DNL GraphQL]请求在第一次尝试时未返回最新地址信息的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62671。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
+ACSD-62671修补程序修复了[!DNL GraphQL]请求在第一次尝试时未返回最新地址信息的问题。 安装[[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62671。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
 
 ## 受影响的产品和版本
 

@@ -1,6 +1,6 @@
 ---
 title: MDVA-41236：无法为产品创建新的或编辑现有的计划更新
-description: MDVA-41236修补程序修复了以下问题：如果之前删除了“结束日期”，则用户无法为产品创建新的计划更新或编辑现有的计划更新。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.5后，即可使用此修补程序。 修补程序ID为MDVA-41236。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
+description: MDVA-41236修补程序修复了以下问题：如果之前删除了“结束日期”，则用户无法为产品创建新的计划更新或编辑现有的计划更新。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.5后，即可使用此修补程序。 修补程序ID为MDVA-41236。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Products, Staging
 role: Admin
 exl-id: 82192778-4f25-40a0-882e-d52d32c433c2
@@ -72,4 +72,4 @@ Adobe Commerce（所有部署方法） 2.3.0 - 2.4.3-p1
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅QPT[&#128279;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中可用的修补程序部分。
+有关QPT中其他可用修补程序的信息，请参阅QPT[&#128279;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)中可用的修补程序部分。

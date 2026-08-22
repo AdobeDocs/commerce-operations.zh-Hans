@@ -1,6 +1,6 @@
 ---
 title: MDVA-41597：将多个可配置产品添加到购物车时出错
-description: MDVA-41597修补程序修复了在使用GraphQL将多个可配置产品添加到购物车时用户收到错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-41597。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: MDVA-41597修补程序修复了在使用GraphQL将多个可配置产品添加到购物车时用户收到错误的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.6后，即可使用此修补程序。 修补程序ID为MDVA-41597。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Configuration, Orders, Products, Shopping Cart
 role: Admin
 exl-id: a4bb2aea-c477-40f0-a016-50886dc2cd4b
