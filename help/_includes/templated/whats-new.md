@@ -1,8 +1,8 @@
 ---
-source-git-commit: 0537a7cf89e2c427c5c525f2d510d29eb8bb8aa6
+source-git-commit: 9f9c38163d91b655bf44cac81875dab59ee2c77d
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 1%
+source-wordcount: '2845'
+ht-degree: 0%
 
 ---
 # 新增功能模板
@@ -10,6 +10,28 @@ ht-degree: 1%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年8月19日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>更新了Commerce缓存文档，更新了本地与Cloud指南以及迁移到Valkey with Symfony L2缓存的新迁移指南：<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/caching-overview">缓存概述和配置选项</a>。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/cache-types">配置缓存前端和类型</a>。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/cache-options">缓存后端选项和存储引用</a>。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache">L2缓存配置以进行性能优化</a>，并提供了从<code>RemoteSynchronizedCache</code>迁移到Symfony L2缓存的指南。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration">最佳实践Valkey和Redis服务配置</a>，带有云特定的迁移步骤，可迁移到Valkey和Symfony L2缓存。</p>
+</td>
+      <td>
+        重大更新
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3a840b544de95a4bb17ef49d0325b16d461aecaa">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年8月14日
 
