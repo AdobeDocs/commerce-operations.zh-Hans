@@ -82,7 +82,7 @@ ht-degree: 0%
 
 **无数据克隆** — 集成环境不接收目标环境数据（数据库、媒体或其他存储内容）的副本 — 仅使用代码库来应用和验证修补程序
 
-**资源要求** — 您的云项目的总存储容量已在合同中定义。 （通过您的帐户页面或`magento-cloud subscription:info`查看。） 每个环境的磁盘分配是通过`.magento.app.yaml`/`.magento/services.yaml`中的`disk`属性单独配置的。 有关详细信息，请参阅[管理磁盘空间](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 如果修补操作因存储限制而失败，请检查集成环境的磁盘使用情况(`magento-cloud db:size` / `magento-cloud mount:size`)是否与其配置的分配一致。
+**资源要求** — 您的云项目的总存储容量已在合同中定义。 （通过您的帐户页面或`magento-cloud subscription:info`查看。） 每个环境的磁盘分配是通过`.magento.app.yaml`/`.magento/services.yaml`中的`disk`属性单独配置的。 有关详细信息，请参阅[管理磁盘空间](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 如果修补操作因存储限制而失败，请检查集成环境的磁盘使用情况(`magento-cloud db:size` / `magento-cloud mount:size`)是否与其配置的分配一致。
 
 #### 暂存2b：集成环境中的修补程序应用程序
 

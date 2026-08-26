@@ -17,7 +17,7 @@ ht-degree: 0%
 ## 先决条件
 
 * 有效的Adobe Commerce Cloud订阅
-* 已为您的Adobe Commerce Cloud项目配置[GitHub集成](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github)，并启用了其[`fetch-branches`选项](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)。 [!DNL Patching Automation]创建并推送临时集成环境分支，因此，在禁用此选项时，修补程序操作无法创建环境。
+* 已为您的Adobe Commerce Cloud项目配置[GitHub集成](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github)，并启用了其[`fetch-branches`选项](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)。 [!DNL Patching Automation]创建并推送临时集成环境分支，因此，在禁用此选项时，修补程序操作无法创建环境。
 * 托管在[!DNL github.com]上的存储库。 不支持使用自定义域配置的GitHub集成。
 * 对GitHub组织或存储库的所有者或管理员访问权限
 

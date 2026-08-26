@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 正在访问[!DNL Patching Automation]
 
-[!DNL Patching Automation]在[!DNL Site-Wide Analysis Tool]仪表板中作为选项卡提供。 您可以在管理员侧边栏中转到&#x200B;**报告** > **系统分析** > **网站范围分析工具**，从管理员面板访问该工具。 请参阅[如何访问全站点分析工具](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access)，了解先决条件和权限设置。
+[!DNL Patching Automation]在[!DNL Site-Wide Analysis Tool]仪表板中作为选项卡提供。 您可以在管理员侧边栏中转到&#x200B;**报告** > **系统分析** > **网站范围分析工具**，从管理员面板访问该工具。 请参阅[如何访问全站点分析工具](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/site-wide-analysis-tool/access)，了解先决条件和权限设置。
 
 进入仪表板后：
 
