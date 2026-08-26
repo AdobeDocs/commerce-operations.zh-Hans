@@ -1,17 +1,17 @@
 ---
-title: '[!DNL Cloud Automation Patching Service (CAPS)]最佳实践指南'
-description: 了解安全有效地使用 [!DNL Cloud Automation Patching Service (CAPS)] 的最佳实践
+title: '[!DNL Adobe Commerce Patching Automation]最佳实践指南'
+description: 了解如何使用 [!DNL Adobe Commerce Patching Automation] 安全地规划、验证和应用修补程序，从而最大限度地降低部署风险和服务中断。
 hide: true
-source-git-commit: a11f18cf9736be873c84327d1a74e6eec6773ec2
+source-git-commit: 1f92a1542c77954f10aa4c14de54f090581f9330
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
 
-# [!DNL Cloud Automation Patching Service (CAPS)]最佳实践指南
+# [!DNL Adobe Commerce Patching Automation]最佳实践指南
 
-对于[!DNL Cloud Automation Patching Service] ([!DNL CAPS])的成功和安全修补程序操作，以下最佳实践至关重要。 本指南为有效的修补程序操作、环境管理和卓越运营提供了全面的最佳实践。
+对于[!DNL Adobe Commerce Patching Automation]的成功和安全修补程序操作，遵循最佳实践至关重要。 本指南为有效的修补程序操作、环境管理和卓越运营提供了全面的最佳实践。
 
 ## 补丁前最佳实践
 
@@ -24,21 +24,21 @@ ht-degree: 0%
 * **Adobe Commerce云帐户**
   * 活动的Adobe Commerce Cloud订阅
   * 有效的Adobe Commerce许可证
-  * 已配置存储库访问凭据
+  * [配置为访问Adobe Commerce存储库的Composer身份验证密钥](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/authentication-keys)
   * 项目和环境权限
 
 * **环境资源**
-  * 可用于临时测试的环境版块
+  * 项目具有为修补操作创建其他活动集成环境的能力 — 有关活动环境限制的信息，请参阅[使用Cloud Console管理分支](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/console-branches)
   * 足够的存储、CPU和内存资源
   * 对Adobe存储库的网络访问权限
   * 用于同步的稳定的父环境
 
 * **生产环境准备**（用于生产修补）
-  * 可以启用维护模式
-  * 可以禁用Cron作业
-  * 已建立维护窗口程序
-  * 回滚过程已记录
-  * 利益相关者沟通计划就绪
+  * 启用维护模式
+  * 禁用Cron作业
+  * 建立维护窗口程序
+  * 文档回滚过程
+  * 制定利益相关者沟通计划
 
 ## 修补程序应用程序最佳实践
 
@@ -141,7 +141,7 @@ ht-degree: 0%
 
 ## 关键最佳实践摘要
 
-### 成功[!DNL CAPS]的关键最佳实践
+### 成功[!DNL Patching Automation]的关键最佳实践
 
 * 始终先在预生产环境中测试，然后再将修补程序应用到生产环境
 * 启用维护模式并禁用生产修补程序操作的cron作业
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 ## 相关主题
 
-* [CAPS介绍](intro.md)
+* [修补自动化简介](intro.md)
 * [如何访问](access.md)
 * [工作流概述](workflow.md)
 * [GitHub集成](github-integration.md)
