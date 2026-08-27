@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: e1ac67f8533c6a9f7948e982c3ddbd79f4e02855
+source-git-commit: c1fe8b4c04514603b6625f4b3cae5a9fac039cb1
 workflow-type: tm+mt
-source-wordcount: '10694'
+source-wordcount: '10695'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
   - [生成修补程序状态报告](commerce-version-tool/generate-report.md)
   - [故障排除](commerce-version-tool/troubleshooting.md)
   - [发行说明](commerce-version-tool/release-notes.md)
-- 大写 {#caps-tool}
+- 自动修补 {#caps-tool}
   - {hide-from-toc}[简介](caps-tool/intro.md)
   - {hide-from-toc}[访问](caps-tool/access.md)
   - {hide-from-toc}[工作流概述](caps-tool/workflow.md)
@@ -1107,6 +1107,6 @@ ht-degree: 0%
     - [需要手动迁移的数据](data-migration-tool/migrate-data/manual.md)
     - [数据迁移后的步骤](data-migration-tool/migrate-data/post-migration.md)
   - 资源 {#resources}
-    - [故障排除](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting)
+    - [故障排除](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting)
     - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
 - [返回到操作指南](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=zh-Hans)
