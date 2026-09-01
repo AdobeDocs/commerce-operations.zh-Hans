@@ -1,5 +1,5 @@
 ---
-source-git-commit: 9d4cd97d654a4837068876bb539559979a4a10e8
+source-git-commit: 7c7431efa9d808c4d5839dea7fa1ee3bfc629696
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 24%
@@ -24,20 +24,20 @@ ht-degree: 24%
   <tbody>
       <tr>
           <td>目录服务</td>
-          <td>3.5.0</td>
+          <td>3.6.0</td>
           <td>3.5.0</td>
           <td>3.5.0</td>
           <td>3.5.0</td>
           <td>3.5.0</td>
           <td>3.5.0</td>
           <td>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/catalog-service/guide-overview">概述</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/catalog-service/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/catalog-service/guide-overview">概述</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/catalog-service/release-notes">发行说明</a><br/>
           </td>
       </tr>
       <tr>
           <td>实时搜索</td>
-          <td>4.7.2</td>
+          <td>4.7.3</td>
           <td>4.7.2</td>
           <td>4.7.2</td>
           <td>4.7.2</td>
@@ -45,7 +45,7 @@ ht-degree: 24%
           <td>4.7.2</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-live-search.html">市场</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/live-search/release-notes">发行说明</a><br/>
           </td>
       </tr>
       <tr>
@@ -58,7 +58,7 @@ ht-degree: 24%
           <td>2.16.1</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-payment-services.html">市场</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/payment-services/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/payment-services/release-notes">发行说明</a><br/>
           </td>
       </tr>
       <tr>
@@ -71,7 +71,7 @@ ht-degree: 24%
           <td>6.7.0</td>
           <td>
               <a href="https://commercemarketplace.adobe.com/magento-product-recommendations.html">市场</a><br/>
-              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce/product-recommendations/release-notes">发行说明</a><br/>
+              <a href="https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/release-notes">发行说明</a><br/>
           </td>
       </tr>
   </tbody>
