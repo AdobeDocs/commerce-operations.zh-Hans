@@ -1,5 +1,5 @@
 ---
-source-git-commit: 9d4cd97d654a4837068876bb539559979a4a10e8
+source-git-commit: 7c7431efa9d808c4d5839dea7fa1ee3bfc629696
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 24%
@@ -24,7 +24,7 @@ ht-degree: 24%
   <tbody>
       <tr>
           <td>目录服务</td>
-          <td>3.5.0</td>
+          <td>3.6.0</td>
           <td>3.5.0</td>
           <td>3.5.0</td>
           <td>3.5.0</td>
@@ -37,7 +37,7 @@ ht-degree: 24%
       </tr>
       <tr>
           <td>实时搜索</td>
-          <td>4.7.2</td>
+          <td>4.7.3</td>
           <td>4.7.2</td>
           <td>4.7.2</td>
           <td>4.7.2</td>
