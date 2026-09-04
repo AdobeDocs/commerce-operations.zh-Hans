@@ -4,9 +4,9 @@ description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
 badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
 badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+source-git-commit: ba69e06096892027bd50485eaf69cef94b40d6ce
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,23 @@ ht-degree: 0%
 ## 当前的Beta项目
 
 请参阅以下部分，了解活动Beta程序的列表。
+
+### 属性排名（公共Beta） {#attribute-ranking-public-beta}
+
+仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
+
+[!DNL Adobe Commerce Optimizer]促销规则现在支持&#x200B;**属性排名**，该规则自动将&#x200B;**提升**、**隐藏**&#x200B;或&#x200B;**隐藏**&#x200B;操作应用于匹配一个或多个属性条件的产品，例如品牌、类别或制造商，而无需单独选择SKU。 属性排名与智能排名和手动排名一起显示在规则编辑器中。 将其用于&#x200B;**所有产品列表**、**类别规则**&#x200B;和&#x200B;**搜索规则**。
+
+**主要优势**
+
+- 通过定位属性值而不是单个SKU，在大型目录中缩放促销。
+- 使用单个规则提升、隐藏或隐藏每个匹配的产品，例如，提升整个品牌或抑制停用的颜色。
+- 将属性条件与智能排名相结合：匹配的产品优先，不匹配的产品继续按排名策略排序。
+- 设置每个条件的提升或隐藏强度，以微调规则对匹配产品的影响程度。
+
+要了解更多信息，请参阅促销规则指南中的[属性排名](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/rules/add#attribute-ranking)。
+
+若要分享有关此测试版功能的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
 
 ### 搜索匹配和排名(Private Beta)
 
