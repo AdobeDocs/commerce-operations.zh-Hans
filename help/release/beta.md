@@ -2,18 +2,18 @@
 title: Beta版本
 description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
-badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
+badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
+source-git-commit: ba69e06096892027bd50485eaf69cef94b40d6ce
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
 
 # Adobe Commerce测试版
 
-适用于[Adobe Commerce产品解决方案](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions)的Beta程序是商家访问预发行版功能和代码、提供反馈以及引导Adobe Commerce未来的一种方式。 有两种类型的测试版计划：
+适用于[Adobe Commerce产品解决方案](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)的Beta程序是商家访问预发行版功能和代码、提供反馈以及引导Adobe Commerce未来的一种方式。 有两种类型的测试版计划：
 
 - 公共Beta：公共Beta计划可供所有Adobe Commerce客户和合作伙伴使用
 - Private Beta：私人测试版计划可能需要根据参与资格标准进行审批
@@ -31,6 +31,23 @@ ht-degree: 0%
 
 请参阅以下部分，了解活动Beta程序的列表。
 
+### 属性排名（公共Beta） {#attribute-ranking-public-beta}
+
+仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
+
+[!DNL Adobe Commerce Optimizer]促销规则现在支持&#x200B;**属性排名**，该规则自动将&#x200B;**提升**、**隐藏**&#x200B;或&#x200B;**隐藏**&#x200B;操作应用于匹配一个或多个属性条件的产品，例如品牌、类别或制造商，而无需单独选择SKU。 属性排名与智能排名和手动排名一起显示在规则编辑器中。 将其用于&#x200B;**所有产品列表**、**类别规则**&#x200B;和&#x200B;**搜索规则**。
+
+**主要优势**
+
+- 通过定位属性值而不是单个SKU，在大型目录中缩放促销。
+- 使用单个规则提升、隐藏或隐藏每个匹配的产品，例如，提升整个品牌或抑制停用的颜色。
+- 将属性条件与智能排名相结合：匹配的产品优先，不匹配的产品继续按排名策略排序。
+- 设置每个条件的提升或隐藏强度，以微调规则对匹配产品的影响程度。
+
+要了解更多信息，请参阅促销规则指南中的[属性排名](https://experienceleague.adobe.com/en/docs/commerce/optimizer/merchandising/rules/add#attribute-ranking)。
+
+若要分享有关此测试版功能的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
+
 ### 搜索匹配和排名(Private Beta)
 
 Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Search]和[!DNL Adobe Commerce Optimizer]的搜索结果进行排名。 更新会优先处理&#x200B;**精确和接近短语匹配项**，然后匹配，其中&#x200B;**所有查询词都出现在同一可搜索属性**&#x200B;中，最后&#x200B;**跨字段**&#x200B;匹配（包括支持自动完成样式建议的行为）。 该分层模型可帮助高意图查询首先显示最相关的产品，同时仍会返回有用的替代项。
@@ -44,13 +61,13 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 - 更明确地期望在查询时权重、智能排名和手动规则如何组合。
 - 有关验证高值查询和在更改后调整Boost规则的指南。
 
-在[Adobe Commerce Optimizer (SaaS)](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/manage-results/search-relevance-matching)和[实时搜索(PaaS)](https://experienceleague.adobe.com/zh-hans/docs/commerce/live-search/live-search-admin/search-relevance-matching)中了解有关搜索匹配和排名策略的更多信息。
+在[Adobe Commerce Optimizer (SaaS)](https://experienceleague.adobe.com/en/docs/commerce/optimizer/manage-results/search-relevance-matching)和[实时搜索(PaaS)](https://experienceleague.adobe.com/en/docs/commerce/live-search/live-search-admin/search-relevance-matching)中了解有关搜索匹配和排名策略的更多信息。
 
 若要请求此私人测试版的邀请，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。 Adobe团队将通过后续步骤和资格要求做出响应。
 
 ### 推荐价格过滤器（公共Beta） {#recommendation-price-filters-public-beta}
 
-仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
+仅[!BADGE SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"}
 
 [!DNL Adobe Commerce Optimizer]将&#x200B;**价格筛选器**&#x200B;添加到产品推荐中，以便在创建或编辑推荐单位时，您可以根据价格包含或排除推荐的产品。 筛选器使用店面的&#x200B;**有效价格手册**&#x200B;中每个产品的&#x200B;**最终计算价格**，包括来自该价格手册的折扣和促销活动（不限于标价）。 价格规则可优化候选集；它们不会重新对产品进行排名。
 
@@ -63,15 +80,15 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 - 使用产品详细信息页面上的动态价格规则，可显示相对于所查看产品的可比价格范围内的替代产品。
 - 将筛选与购物者看到的价格保持一致，这是用于筛选和显示的活动价格手册中的相同最终价格。
 
-若要了解更多信息，请参阅商家指南中的[推荐过滤器 — 价格](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/recommendations/filters#price)和店面放置指南中的[产品推荐设置](https://experienceleague.adobe.com/developer/commerce/storefront/merchants/content-customizations/product-recommendations/?lang=zh-Hans)。
+若要了解更多信息，请参阅商家指南中的[推荐过滤器 — 价格](https://experienceleague.adobe.com/en/docs/commerce/optimizer/merchandising/recommendations/filters#price)和店面放置指南中的[产品推荐设置](https://experienceleague.adobe.com/developer/commerce/storefront/merchants/content-customizations/product-recommendations/)。
 
 若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
 
 ### Cloud Automation修补服务(Private Beta)
 
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
 
-[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)环境上的Adobe Commerce。
+[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)环境上的[Adobe Commerce。
 
 2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](/help/tools/site-wide-analysis-tool/dashboard.md)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
 
@@ -88,7 +105,7 @@ Beta版包括以下功能：
 
 >[!NOTE]
 >
->由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
+>由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
 
 要参与此测试版，请完成并提交[Cloud Automation Patching Service - Beta注册表单](https://forms.office.com/r/3Wfxj5nPdB)。
 
@@ -107,7 +124,7 @@ Beta版包括以下功能：
 
 ### Adobe Commerce基础（公共Alpha/Beta）
 
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
+仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
 
 每个Adobe Commerce Foundation Alpha和测试版都包含在计划发布日期前交付给Adobe Commerce核心代码的所有更改，包括但不限于以下功能区域：
 
@@ -116,7 +133,7 @@ Beta版包括以下功能：
 - GraphQL改进
 - 常规质量错误修复
 - 社区贡献
-- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/home)的兼容性所需的更改
+- 支持与[Adobe Commerce服务](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)的兼容性所需的更改
 
 #### 命名惯例和时间表
 
