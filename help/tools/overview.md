@@ -23,7 +23,7 @@ ht-degree: 0%
 * [[!DNL Commerce Version Tool]](../tools/commerce-version-tool/intro.md)
 * [[!DNL Patching Automation]](../tools/caps-tool/workflow.md)
 * [[!DNL Managed alerts for Adobe Commerce]](../tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce.md)
-* [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
+* [[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
 * [`bin/magento`命令行工具](reference/commerce-on-premises.md)
 * [`bin/uct`命令行工具](reference/commerce-on-premises.md)
 * [[!DNL Observation for Adobe Commerce]](../tools/observation-for-adobe-commerce/intro.md)
