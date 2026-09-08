@@ -1,8 +1,7 @@
 ---
 title: 为 [!DNL Adobe Commerce Patching Automation]设置GitHub集成
 description: 了解如何安装 [!DNL Adobe Commerce Patching Automation] GitHub应用程序以便为连接到GitHub的Adobe Commerce Cloud项目启用修补程序操作。
-hide: true
-source-git-commit: 1f92a1542c77954f10aa4c14de54f090581f9330
+source-git-commit: d9f6fc714332638ae1dcfa92ac8abe274efe8a0b
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 title: '[!DNL Adobe Commerce Patching Automation]疑难解答指南'
 description: 对 [!DNL Adobe Commerce Patching Automation]中的常见问题和错误消息进行故障诊断
-hide: true
-source-git-commit: 1f92a1542c77954f10aa4c14de54f090581f9330
+source-git-commit: d9f6fc714332638ae1dcfa92ac8abe274efe8a0b
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 0%

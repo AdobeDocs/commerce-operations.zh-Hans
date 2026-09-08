@@ -4,9 +4,9 @@ description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
 badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
 badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
-source-git-commit: ba69e06096892027bd50485eaf69cef94b40d6ce
+source-git-commit: 041a0c42c83cbab28eac6562c67ce9169c07aa02
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
@@ -83,31 +83,6 @@ Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Sear
 若要了解更多信息，请参阅商家指南中的[推荐过滤器 — 价格](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/recommendations/filters#price)和店面放置指南中的[产品推荐设置](https://experienceleague.adobe.com/developer/commerce/storefront/merchants/content-customizations/product-recommendations/?lang=zh-Hans)。
 
 若要在使用此测试版功能时分享您的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
-
-### Cloud Automation修补服务(Private Beta)
-
-仅[!BADGE PaaS]{type=Informative url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"}
-
-[Cloud Automation Patching Service](../tools/caps-tool/intro.md)自动将隔离的安全修补程序应用到Cloud Infrastructure[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)环境上的Adobe Commerce。
-
-2025年10月，Cloud Automation Patching Service的Beta版本将添加到[全站点分析工具仪表板](/help/tools/site-wide-analysis-tool/dashboard.md)。 此服务通过简化的修补工作流为Commerce项目管理员提供支持，包括：
-
-- 自动安装修补程序
-- 回滚恢复
-- 部署后验证。
-
-该服务确保您能够以最小的手动操作和风险维护安全、稳定和更新的环境。
-
-Beta版包括以下功能：
-
-- **自动安装修补程序**：简化并自动执行跨环境修补关键漏洞的过程。
-- **将风险降至最低**：使用部署后运行状况检查和回滚功能防止站点中断。
-
->[!NOTE]
->
->由于Cloud Automation Patching Service自动应用独立的安全修补程序，因此您必须具有[参与者或项目管理员角色](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/user-access)才能使用它。
-
-要参与此测试版，请完成并提交[Cloud Automation Patching Service - Beta注册表单](https://forms.office.com/r/3Wfxj5nPdB)。
 
 ### 商家生产率人工智能助理（公共Beta）
 
