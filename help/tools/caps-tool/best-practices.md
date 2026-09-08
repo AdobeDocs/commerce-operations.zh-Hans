@@ -1,8 +1,7 @@
 ---
 title: '[!DNL Adobe Commerce Patching Automation]最佳实践指南'
 description: 了解如何使用 [!DNL Adobe Commerce Patching Automation] 安全地规划、验证和应用修补程序，从而最大限度地降低部署风险和服务中断。
-hide: true
-source-git-commit: 1f92a1542c77954f10aa4c14de54f090581f9330
+source-git-commit: d9f6fc714332638ae1dcfa92ac8abe274efe8a0b
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
@@ -24,11 +23,11 @@ ht-degree: 0%
 * **Adobe Commerce云帐户**
   * 活动的Adobe Commerce Cloud订阅
   * 有效的Adobe Commerce许可证
-  * [配置为访问Adobe Commerce存储库的Composer身份验证密钥](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/authentication-keys)
+  * [配置为访问Adobe Commerce存储库的Composer身份验证密钥](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/authentication-keys)
   * 项目和环境权限
 
 * **环境资源**
-  * 项目具有为修补操作创建其他活动集成环境的能力 — 有关活动环境限制的信息，请参阅[使用Cloud Console管理分支](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/console-branches)
+  * 项目具有为修补操作创建其他活动集成环境的能力 — 有关活动环境限制的信息，请参阅[使用Cloud Console管理分支](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/console-branches)
   * 足够的存储、CPU和内存资源
   * 对Adobe存储库的网络访问权限
   * 用于同步的稳定的父环境
