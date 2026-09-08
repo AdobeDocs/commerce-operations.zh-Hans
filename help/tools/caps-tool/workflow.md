@@ -1,7 +1,7 @@
 ---
 title: '[!DNL Adobe Commerce Patching Automation]工作流概述'
 description: 了解 [!DNL Adobe Commerce Patching Automation] 工作流过程，包括术语、工作流阶段以及自动化修补程序管理的操作。
-source-git-commit: d9f6fc714332638ae1dcfa92ac8abe274efe8a0b
+source-git-commit: a56211744d35006924bd4ffd35c76ddb77118ed4
 workflow-type: tm+mt
 source-wordcount: '1127'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ### 阶段2：修补
 
-修补阶段在临时集成环境中应用或还原修补程序。 在此阶段，服务会创建一个临时集成环境以安全地应用修补程序，确认其成功部署，并验证它是否通过了运行状况检查 — 然后再对实际环境进行任何更改。
+修补阶段在临时集成环境中应用或还原修补程序。 在此阶段中，服务会创建一个临时集成环境以安全地应用修补程序，确认其成功部署，并验证它是否通过了运行状况检查，然后再对实际环境进行任何更改。
 
 此方法提供：
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 #### 阶段2a：集成环境创建
 
-**分支创建** - [!DNL Patching Automation]将创建一个名为`{target-environment}-CAPS-{patch-id}`的临时集成环境分支
+**分支创建** — [!DNL Patching Automation]创建名为`{target-environment}-CAPS-{patch-id}`的临时集成环境分支
 
 **环境设置** — 集成环境是作为目标环境的子项创建的
 
@@ -81,11 +81,11 @@ ht-degree: 0%
 
 **无数据克隆** — 集成环境不接收目标环境数据（数据库、媒体或其他存储内容）的副本 — 仅使用代码库来应用和验证修补程序
 
-**资源要求** — 您的云项目的总存储容量已在合同中定义。 （通过您的帐户页面或`magento-cloud subscription:info`查看。） 每个环境的磁盘分配是通过`.magento.app.yaml`/`.magento/services.yaml`中的`disk`属性单独配置的。 有关详细信息，请参阅[管理磁盘空间](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 如果修补操作因存储限制而失败，请检查集成环境的磁盘使用情况(`magento-cloud db:size` / `magento-cloud mount:size`)是否与其配置的分配一致。
+**资源要求** — 您的云项目的总存储容量在合同中定义。 （通过您的帐户页面或`magento-cloud subscription:info`查看。） 每个环境的磁盘分配是通过`.magento.app.yaml`/`.magento/services.yaml`中的`disk`属性单独配置的。 有关详细信息，请参阅[管理磁盘空间](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 如果修补操作因存储限制而失败，请检查集成环境的磁盘使用情况(`magento-cloud db:size` / `magento-cloud mount:size`)是否与其配置的分配一致。
 
 #### 暂存2b：集成环境中的修补程序应用程序
 
-**安全测试** — 该修补程序应用于集成环境，而不是直接应用于您的目标环境
+**安全测试** — 将修补程序应用于集成环境，而不是直接应用于目标环境
 
 **文件管理** — 修补程序文件放在`m2-hotfixes`文件夹中
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 **合并操作** — 集成环境分支已合并到目标环境中
 
-**冲突处理** — 如果发生合并冲突，则该操作将失败并报告为错误 — 它不会自动解决
+**冲突处理** — 如果发生合并冲突，则该操作将失败并报告为错误 — 不会自动解决它
 
 **部署** — 将合并的更改部署到目标环境
 

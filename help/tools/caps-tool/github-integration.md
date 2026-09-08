@@ -1,9 +1,9 @@
 ---
 title: 为 [!DNL Adobe Commerce Patching Automation]设置GitHub集成
 description: 了解如何安装 [!DNL Adobe Commerce Patching Automation] GitHub应用程序以便为连接到GitHub的Adobe Commerce Cloud项目启用修补程序操作。
-source-git-commit: d9f6fc714332638ae1dcfa92ac8abe274efe8a0b
+source-git-commit: bc614967131d4458e004a06baa94bbe9261c4cee
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -11,12 +11,12 @@ ht-degree: 0%
 
 # 为[!DNL Patching Automation]设置GitHub集成
 
-如果您的Adobe Commerce云项目已连接到GitHub存储库，则必须安装[!DNL Patching Automation] GitHub应用程序，然后才能使用该服务来应用或还原修补程序。 应用程序会授予该服务代表您对存储库进行更改所需的访问权限。
+如果您的Adobe Commerce云项目已连接到GitHub存储库，则必须安装[!DNL Patching Automation] GitHub应用程序，然后才能使用该服务来应用或还原修补程序。 应用程序会授予服务对存储库进行更改所需的访问权限。
 
 ## 先决条件
 
 * 有效的Adobe Commerce Cloud订阅
-* 已为您的Adobe Commerce Cloud项目配置[GitHub集成](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github)，并启用了其[`fetch-branches`选项](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)。 [!DNL Patching Automation]创建并推送临时集成环境分支，因此，在禁用此选项时，修补程序操作无法创建环境。
+* 已为您的Adobe Commerce Cloud项目配置[GitHub集成](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github)，并启用了其[`fetch-branches`选项](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)。 [!DNL Patching Automation]创建并推送临时集成环境分支，因此，在禁用此选项时，修补程序操作无法创建环境。
 * 托管在[!DNL github.com]上的存储库。 不支持使用自定义域配置的GitHub集成。
 * 对GitHub组织或存储库的所有者或管理员访问权限
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 * **[!UICONTROL Refresh]** / **[!UICONTROL Refresh status]** — 重新检查连接状态而不进行任何更改。
 * **[!UICONTROL Reinstall]** — 在安装不再有效时显示（例如，安装已暂停或连接到您的云项目的存储库已更改）。 启动上述相同的安装流程。
-* **[!UICONTROL Unlink GitHub App]** — 删除[!DNL Patching Automation]与GitHub应用程序的已保存连接。 这&#x200B;**不会**&#x200B;从GitHub存储库中卸载应用程序 — 要完全删除访问权限，请参阅下面的“卸载”部分。
+* **[!UICONTROL Unlink GitHub App]** — 删除[!DNL Patching Automation]与GitHub应用程序的已保存连接。 此操作&#x200B;**不会**&#x200B;从GitHub存储库中卸载应用程序 — 要完全删除访问权限，请参阅下面的“卸载”部分。
 
 ## 卸载[!DNL Patching Automation] GitHub应用程序
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->卸载GitHub应用程序后，如果任何应用或还原操作仍在进行中，则这些操作可能会失败。 卸载应用程序后，用户也无法启动新操作，因为操作按钮已停用。
+>卸载GitHub应用程序后，如果任何应用或还原操作仍在进行中，则这些操作可能会失败。 卸载应用程序后，用户无法启动新操作，因为操作按钮已停用。
 
 ## 相关主题
 
