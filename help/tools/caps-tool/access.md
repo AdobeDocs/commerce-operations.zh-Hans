@@ -1,9 +1,9 @@
 ---
 title: 如何访问 [!DNL Adobe Commerce Patching Automation]
 description: 了解如何访问和使用 [!DNL Adobe Commerce Patching Automation]
-source-git-commit: d9f6fc714332638ae1dcfa92ac8abe274efe8a0b
+source-git-commit: e7e2cb120377e73f2a6f80edcacfcf644b48be84
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '335'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 如果您在[!DNL Patching Automation]用户界面中未看到任何项目，请向相应的人员请求访问权限：
 
 * 联系项目的帐户所有者或项目管理员
-* 他们将通过Cloud Console授予您适当的角色
+* 他们可以通过Cloud Console授予您适当的角色
 * 授予访问权限后，您可以登录到Cloud Console以使用服务
 
 >[!NOTE]
