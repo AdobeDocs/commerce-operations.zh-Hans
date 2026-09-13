@@ -31,7 +31,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.7-p10安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-49](https://helpx.adobe.com/security/products/magento/apsb26-49.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-49](https://helpx.adobe.com/cn/security/products/magento/apsb26-49.html)。
 
 {{b2b-patches}}
 
@@ -67,7 +67,7 @@ Adobe Commerce 2.4.7现在与RabbitMQ 4.2兼容，后者将RabbitMQ 4.1支持终
 
 Adobe Commerce 2.4.7-p9安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-05](https://helpx.adobe.com/security/products/magento/apsb26-05.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-05](https://helpx.adobe.com/cn/security/products/magento/apsb26-05.html)。
 
 {{b2b-patches}}
 
@@ -87,7 +87,7 @@ Adobe Commerce 2.4.7已更新，以支持编辑器2.9.x，同时保持与编辑�
 
 Adobe Commerce 2.4.7-p8安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-94](https://helpx.adobe.com/cn/security/products/magento/apsb25-94.html)。
 
 {{b2b-patches}}
 
@@ -107,7 +107,7 @@ Adobe Commerce 2.4.7-p8安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p7安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/security/products/magento/apsb25-71.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-71](https://helpx.adobe.com/cn/security/products/magento/apsb25-71.html)。
 
 {{b2b-patches}}
 
@@ -115,7 +115,7 @@ Adobe Commerce 2.4.7-p7安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p6安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-50](https://helpx.adobe.com/cn/security/products/magento/apsb25-50.html)。
 
 {{b2b-patches}}
 
@@ -139,7 +139,7 @@ Adobe Commerce 2.4.7-p6安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p5安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-26](https://helpx.adobe.com/security/products/magento/apsb25-26.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-26](https://helpx.adobe.com/cn/security/products/magento/apsb25-26.html)。
 
 {{b2b-patches}}
 
@@ -165,7 +165,7 @@ Adobe Commerce 2.4.7-p5安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p4安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB25-08](https://helpx.adobe.com/cn/security/products/magento/apsb25-08.html)。
 
 {{b2b-patches}}
 
@@ -177,7 +177,7 @@ Adobe Commerce 2.4.7-p4安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p3安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/security/products/magento/apsb24-73.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-73](https://helpx.adobe.com/cn/security/products/magento/apsb24-73.html)。
 
 {{b2b-patches}}
 
@@ -193,7 +193,7 @@ Adobe Commerce 2.4.7-p3安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p2安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-61](https://helpx.adobe.com/security/products/magento/apsb24-61.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-61](https://helpx.adobe.com/cn/security/products/magento/apsb24-61.html)。
 
 ### 高亮
 
@@ -207,7 +207,7 @@ Adobe Commerce 2.4.7-p2安全版本为2.4.7早期版本中发现的漏洞修复�
 
 Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-40](https://helpx.adobe.com/cn/security/products/magento/apsb24-40.html)。
 
 ### 应用适用于CVE-2024-34102的修补程序
 

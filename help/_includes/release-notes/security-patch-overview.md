@@ -27,5 +27,5 @@ ht-degree: 0%
 
 要应用独立的安全修补程序文件，客户必须在其受支持的发行版中安装最新的仅安全修补程序发行版（最新的 — p版本），因为独立的安全修补程序文件将专门针对该版本进行测试。
 
-请参阅[安全中心](https://helpx.adobe.com/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
+请参阅[安全中心](https://helpx.adobe.com/cn/security/products/magento.html)以查找Adobe Commerce的最新安全更新。
 
