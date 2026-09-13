@@ -48,7 +48,7 @@ Adobe Commerce与所有Experience Cloud解决方案集成，可大规模提供[�
 >有关更多信息，请参阅以下资源：
 >
 >- [数字体验Blueprint](https://experienceleague.adobe.com/zh-hans/docs/blueprints-learn/architecture/overview)，了解更多技术详细信息。
->- 请参阅[个性化客户体验](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization)。
+>- 请参阅[个性化客户体验](https://experienceleague.adobe.com/zh-hans/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization)。
 
 
 ## 与第三方系统集成
@@ -70,7 +70,7 @@ Adobe提供了以下开发人员工具来构建集成和自定义：
 
 >[!NOTE]
 >
->请参阅[现代方法：Adobe Commerce中的有效可扩展性](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility)。
+>请参阅[现代方法：Adobe Commerce中的有效可扩展性](https://experienceleague.adobe.com/zh-hans/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility)。
 
 ## 店面服务
 

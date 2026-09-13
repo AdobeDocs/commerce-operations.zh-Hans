@@ -54,7 +54,7 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 
 作为开发人员，务必考虑使用[!DNL Adobe Commerce]环境之外的工具，例如GraphQL mesh和Adobe App Builder。 这些工具可以帮助您保留对数据的访问权限，但对核心商务应用程序或其底层数据库表没有影响。 通过这种方法，您可以通过API公开数据。 然后，向App Builder配置添加数据源。 使用GraphQL Mesh，您可以合并这些数据源并生成单个响应，如[旧数据](#legacy-data)中所述。
 
-有关GraphQL Mesh的其他详细信息，请参阅[GraphQL Mesh网关](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}。 有关Adobe App Builder的信息，请参阅[App Builder简介](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html){target="_blank"}。
+有关GraphQL Mesh的其他详细信息，请参阅[GraphQL Mesh网关](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}。 有关Adobe App Builder的信息，请参阅[App Builder简介](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=zh-Hans){target="_blank"}。
 
 ## 修改核心表或第三方表
 
