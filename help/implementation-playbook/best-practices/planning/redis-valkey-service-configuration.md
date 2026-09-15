@@ -713,7 +713,7 @@ io-threads-do-reads yes
 io-threads 8 # Choose a value lower than the number of CPU cores (check with nproc), and then tune under load.
 ```
 
->[!TAB 为Valkey]配置I/O线程
+>[!TAB 为Valkey配置I/O线程]
 
 对于Valkey：
 
@@ -1009,7 +1009,7 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
 >
 >为Adobe Commerce 2.4.9修补ACP2E-5132提高了[!DNL Symfony]二级缓存的性能和可靠性。 它优化标记存储，添加一个过时的缓存重新生成锁，并修复过时的标记成员资格、冗余远程写入和基于一级大小的逐出(`cleanup_percentage`)的问题。 这减少了磁盘I/O和后端负载，同时提高了缓存一致性。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](/help/configuration/cache/level-two-cache.md#enhanced-symfony-l2-cache-performance-and-reliability)。
 >
->该修补程序包含在Commerce包](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)的[Cloud修补程序中（依赖于`ece-tools`），并在您更新到最新的`ece-tools`版本时在部署期间自动应用。 更新到`ece-tools`的最新版本以接收修补程序。
+>该修补程序包含在Commerce包[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)的Cloud修补程序中（依赖于`ece-tools`），并在您更新到最新的`ece-tools`版本时在部署期间自动应用。 更新到`ece-tools`的最新版本以接收修补程序。
 
 #### 自定义[!DNL Symfony]二级缓存配置
 
