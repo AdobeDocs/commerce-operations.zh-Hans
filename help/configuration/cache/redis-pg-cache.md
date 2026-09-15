@@ -3,31 +3,39 @@ title: 为默认缓存和页面缓存配置Redis
 description: 了解如何将Redis配置为Adobe Commerce的默认和页面缓存后端。 发现CLI命令、 env.php设置和连接验证。
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T21:55:53.227Z'
 TQID: 'https://experienceleague.adobe.com/2KjWE19ud32PUdvJQWNWkK338ysaa5vt0mA4EyyP66I'
 product_v2:
   - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
+    internal-label: Commerce on Prem
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: ec95c99d060f3c45095236d41729648abf389dd1
+    internal-label: Security
+source-git-commit: 23f63c896760992da9b0d30b756a37de2117f6b8
 workflow-type: tm+mt
-source-wordcount: 1411
+source-wordcount: '1407'
 ht-degree: 0%
-
 ---
-
 # 为默认缓存和页面缓存配置Redis
 
 {{cloud-cache-config}}
@@ -46,7 +54,7 @@ Commerce提供了命令行选项来配置Redis页面和默认缓存。 虽然可
 
 Adobe Commerce已使用这些Redis缓存后端实施：
 
-- **旧版Redis后端** (`Cm_Cache_Backend_Redis`) — 在旧版Redis配置中使用的已弃用实现。
+- **已弃用的Redis后端** (`Cm_Cache_Backend_Redis`) — 已在较旧的Redis配置中使用；不再推荐。
 - **Redis后端** (`Magento\Framework\Cache\Backend\Redis`) — 此主题中的命令行配置用于默认缓存和页面缓存的后端。
 - **二级缓存后端** (`Magento\Framework\Cache\Backend\RemoteSynchronizedCache`) — 两级缓存实现，使用Redis作为远程后端和本地文件缓存存储，以跨节点同步缓存数据。 请参阅[二级缓存配置](level-two-cache.md)。
 
@@ -202,7 +210,7 @@ Redis使用`pipeline`复合加载请求。 密钥应包含数据库前缀；例�
 
 ### 并行生成
 
-从Commerce 2.4.0版本开始，Adobe为希望消除等待锁定的用户引入了`allow_parallel_generation`选项。 默认情况下，该选项处于禁用状态，Adobe建议禁用该选项，直到您拥有过多的配置和/或块。
+Adobe Commerce为想要消除等待锁定的用户提供了`allow_parallel_generation`选项。 默认情况下，该选项处于禁用状态，Adobe建议禁用该选项，直到您拥有过多的配置和/或块。
 
 **要启用并行生成**：
 

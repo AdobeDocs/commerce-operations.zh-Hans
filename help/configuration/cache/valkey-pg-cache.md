@@ -3,31 +3,39 @@ title: 为默认缓存和页面缓存配置Valkey
 description: 了解如何将Valkey配置为Adobe Commerce的默认和页面缓存后端。 发现CLI命令、 env.php设置和连接验证。
 feature: Configuration, Cache
 exl-id: d0baa2a6-8aa8-4f3f-9edf-102d621430e0
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T22:00:55.389Z'
 TQID: 'https://experienceleague.adobe.com/AjJ86dYGRVFuY1T73ct1Gpcf6iDbb4ewP8OiGX8otQs'
 product_v2:
   - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
+    internal-label: Commerce on Prem
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 7171e5abfad69ad0f2d3f4c4b5eb57c13d07feb4
+    internal-label: Security
+source-git-commit: 23f63c896760992da9b0d30b756a37de2117f6b8
 workflow-type: tm+mt
-source-wordcount: 1315
+source-wordcount: '1309'
 ht-degree: 0%
-
 ---
-
 
 # 为默认缓存和页面缓存配置Valkey
 
@@ -49,15 +57,15 @@ Commerce提供了命令行选项来配置Valkey默认值和页面缓存。 虽�
 
 >[!TAB Zend缓存（2.4.8及更早版本）]
 
-- **Zend缓存（2.4.8及更早版本）** — Commerce 2.4.8及更早版本的旧版Valkey后端：
-  - **旧版Valkey后端** — 使用完整的类路径(`Magento\Framework\Cache\Backend\Valkey`)
+- **Zend缓存（2.4.8及更早版本）** — Commerce 2.4.8及更早版本的Valkey后端：
+  - **基于Zend的Valkey后端** — 使用完整的类路径(`Magento\Framework\Cache\Backend\Valkey`)
   - **预加载密钥** — 支持预加载常用的缓存密钥
   - **Lua脚本** — 用于垃圾回收的Lua
   - **压缩** — 支持数据压缩
 
 >[!TAB Symfony缓存(2.4.9+)]
 
-- **Symfony缓存(2.4.9+)** — 从Commerce 2.4.9开始，Symfony缓存为Valkey提供了一个符合PSR 6的现代化缓存实现，并显着提高了性能：
+- **Symfony缓存(2.4.9+)** — 从Commerce 2.4.9开始，Symfony缓存为Valkey提供了符合PSR-6的缓存实现，并显着提高了性能：
   - **自动Valkey流水线** — 将多个操作批处理为单个请求，减少延迟
   - **PSR-6 TagAwareAdapter** — 利用原子操作使基于标记的缓存有效失效
   - **Igbinary序列化** — 二进制序列化将缓存条目大小减少45%，速度提高5-10%
@@ -279,7 +287,7 @@ Valkey使用`pipeline`复合加载请求。 密钥应包含数据库前缀；例
 
 ### 并行生成
 
-从Commerce 2.4.0版本开始，Adobe为希望消除等待锁定的用户引入了`allow_parallel_generation`选项。 默认情况下，该选项处于禁用状态，Adobe建议禁用该选项，直到您拥有过多的配置和/或块。
+Adobe Commerce为想要消除等待锁定的用户提供了`allow_parallel_generation`选项。 默认情况下，该选项处于禁用状态，Adobe建议禁用该选项，直到您拥有过多的配置和/或块。
 
 **要启用并行生成**：
 

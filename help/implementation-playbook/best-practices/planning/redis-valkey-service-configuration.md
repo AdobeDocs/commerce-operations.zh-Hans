@@ -8,37 +8,114 @@ feature: Best Practices, Cache
 feature-set: Commerce
 topic: Performance
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
+badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
 nudge: true
 autotag-review: '2026-08-18T23:34:12.845Z'
 TQID: 'https://experienceleague.adobe.com/kYuQylZb2r7ElWP1oRJbyIt9jsZMhoO9yFpBMDlf1tw'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
   - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+    internal-label: Commerce on Cloud
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+    internal-label: Implementation
+source-git-commit: ea07c4a7e42988b2ede3511273261fa7d560b652
 workflow-type: tm+mt
-source-wordcount: 3304
+source-wordcount: '4255'
 ht-degree: 0%
-
 ---
-
 
 # Valkey和Redis服务配置的最佳实践
 
 在云部署上为Adobe Commerce配置Redis或Valkey以进行Adobe Commerce应用程序缓存、会话存储和L2缓存时，请使用这些建议。
 
-有关Adobe Commerce本地缓存配置，请参阅用于性能优化的[二级缓存配置](/help/configuration/cache/level-two-cache.md)。
+- 配置二级缓存，包括Symfony二级缓存
+- 在Cloud Pro环境中，启用只读副本（从属）连接。 此功能在入门版环境中不可用。
+- 预加载键
+- 启用过时的缓存
+- 将缓存和会话分开
+- 压缩缓存
+- 查看配置示例
+
+>[!NOTE]
+>
+>验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
+
+## 配置L2缓存
+
+通过在`.magento.env.yaml`配置文件中设置`VALKEY_BACKEND`或`REDIS_BACKEND`部署变量来配置L2缓存。
+
+>[!IMPORTANT]
+>
+>本页中的Redis配置示例仅适用于使用Redis的受支持Adobe Commerce版本。 按版本查看支持的缓存服务的[系统要求](../../../installation/system-requirements.md)。 Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p4修补程序不支持Redis缓存。 在不支持Redis的缓存配置中使用Valkey。 按版本查看支持的缓存服务的[系统要求](../../../installation/system-requirements.md)。
+
+设置`VALKEY_BACKEND`或`REDIS_BACKEND`可配置二级缓存后端，但不会确定Adobe Commerce是使用Redis还是Valkey作为远程缓存服务。 您分配的类值（例如，`\Magento\Framework\Cache\Backend\Redis`或`symfony_l2`）也不选择服务。 Adobe Commerce使用您的环境中提供的任何服务（Redis或Valkey），如果两者均可用，则Redis优先。 例如，`VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\Redis'`在可用时使用Redis，仅在Redis不可用时回退到Valkey。
+
+>[!BEGINTABS]
+
+>[!TAB 使用VALKEY_BACKEND]
+
+对于具有`RemoteSynchronizedCache`实现的Valkey，请使用：
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+```
+
+有关Symfony L2缓存实现的Valkey，请参阅[配置Symfony L2缓存](#configure-symfony-l2-cache)。
+
+>[!TAB 使用REDIS_BACKEND]
+
+对于Redis ，使用：
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+```
+
+有关环境配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[`REDIS_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)_。
+
+>[!ENDTABS]
+
+### 配置Symfony L2缓存
+
+Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2`后端是Adobe Commerce用来管理L1和L2缓存行为的缓存实现。 它不会替换Redis或Valkey作为远程缓存服务。
+
+>[!IMPORTANT]
+>
+>请勿在`app/etc/env.php`中手动将`symfony_l2`配置为Adobe Commerce在云基础架构上的永久配置。 部署可以覆盖手动`env.php`更改。 如果`ece-tools`不应用`symfony_l2`，则Commerce可以回退到基于文件的缓存。 这种回退可能会增加磁盘I/O，增加多节点环境中的文件系统复制开销，并降低性能。
+
+要将`symfony_l2`缓存用于Adobe Commerce 2.4.9，请完成以下步骤：
+
+- 确保云项目使用[ECE工具包v2002.2.12](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)或更高版本。
+
+- 在`.magento.env.yaml`文件中设置部署变量： `VALKEY_BACKEND`=`symfony_l2`。
+
+  ```yaml
+  stage:
+    deploy:
+      VALKEY_BACKEND: symfony_l2
+  ```
+
+将`VALKEY_BACKEND`设置为`symfony_l2`将根据您的Valkey服务详细信息（包括`default`和`stale_cache_enabled`前端）构建完整的二级缓存配置，可缓存的类型（如`layout`、`block_html`、`full_page`和`translate`）映射到已启用过时的前端。 定义`CACHE_CONFIGURATION`是可选的，仅在要自定义特定的后端选项时才需要。
 
 >[!NOTE]
 >
@@ -63,25 +140,69 @@ ht-degree: 0%
 | 2.4.8及更早版本（当受确切版本支持时） | Redis或Valkey | remotesynchronizedcache |
 | 2.4.9及更高版本 | Valkey | symfony_l2 |
 
-在Adobe Commerce 2.4.9以及系统要求指定了Valkey的修补程序版本中，缓存配置不支持Redis。 始终验证[缓存后端选项和存储引用](/help/configuration/cache/cache-options.md)和[系统要求](/help/installation/system-requirements.md)中的确切Commerce版本、修补程序级别和服务版本。
+在Adobe Commerce 2.4.9以及系统要求指定Valkey的修补程序版本中，缓存配置不支持Redis。 始终验证[缓存后端选项和存储引用](/help/configuration/cache/cache-options.md)和[系统要求](/help/installation/system-requirements.md)中的确切Commerce版本、修补程序级别和服务版本。
 
->[!NOTE]
+以下示例显示了`.magento.env.yaml`文件中的配置代码：
+
+>[!BEGINTABS]
+
+>[!TAB 使用VALKEY_BACKEND]
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          backend_options:
+            cleanup_percentage: 90
+```
+
+>[!TAB 使用REDIS_BACKEND]
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          backend_options:
+            cleanup_percentage: 90
+```
+
+>[!ENDTABS]
+
+缓存要求因您的项目配置和自定义第三方代码而异。 设置二级高速缓存内存的大小，使高速缓存能够在没有频繁阈值命中的情况下运行。
+
+理想情况下，二级缓存内存的使用量稳定在阈值以下，以避免频繁的存储清除。
+
+通过运行以下CLI命令并查看`/dev/shm`行，可以检查群集的每个节点上的L2缓存存储内存使用情况。
+
+```shell
+df -h /dev/shm
+```
+
+使用情况因节点而异，但会收敛到类似的值。
+
+## 启用只读副本连接 {#enable-slave-connection}
+
+在`.magento.env.yaml`文件中启用只读副本连接。 这使得Adobe Commerce可以在继续使用主端点进行写入的同时，使用额外的缓存连接进行读取。 此配置可以减少主缓存服务的读取负载，并更有效地分配读取流量。
+
+>[!IMPORTANT]
 >
->验证您使用的是最新版本的`ece-tools`包。 如果不能，[请升级到最新版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)。 您可以使用`composer show magento/ece-tools` CLI命令检查本地环境中安装的版本。
-
-## 启用复制副本连接
-
-在`.magento.env.yaml`文件中启用副本连接。 此更改允许Adobe Commerce在继续使用主端点进行写入的同时，使用额外的缓存连接进行读取。 此配置可以减少主缓存服务的读取负载，并更有效地分配读取流量。
+>与`VALKEY_BACKEND`和`REDIS_BACKEND`不同，`VALKEY_USE_SLAVE_CONNECTION`和`REDIS_USE_SLAVE_CONNECTION`变量绑定到特定服务。 设置与环境中可用的缓存服务匹配的变量。 不必使用您用来配置L2缓存的`*_BACKEND`变量所隐含的相同服务。
 
 >[!NOTE]
 >
 >副本连接是否可用取决于项目的拓扑（例如，单节点与拆分或HA体系结构）和`ece-tools`版本。 在依赖此设置之前，通过运行`echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp`并检查`USE_SLAVE_CONNECTION`条目来确认您的服务存在副本关系。 要确认您的拓扑是否设置副本终结点，请升级`ece-tools`并重新部署，如果没有`USE_SLAVE_CONNECTION`条目，请联系Adobe Commerce支持。
->
->对于`symfony_l2`，通过`ece-tools`和云修补程序更新提供副本连接支持。 除了更改`VALKEY_USE_SLAVE_CONNECTION: true`之外，不需要其他缓存配置。 更新到最新的`ece-tools`版本以接收修复。
 
 >[!BEGINTABS]
 
->[!TAB Valkey配置]
+>[!TAB 使用VALKEY_USE_SLAVE_CONNECTION]
 
 对于Valkey，请使用：
 
@@ -91,9 +212,9 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[VALKEY_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection)
+有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[VALKEY_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection)
 
->[!TAB Redis配置]
+>[!TAB 使用REDIS_USE_SLAVE_CONNECTION]
 
 对于Redis ，使用：
 
@@ -103,9 +224,275 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[REDIS_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)
+有关环境变量配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[REDIS_ USE_SLAVE_CONNECTION_。](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection)
 
 >[!ENDTABS]
+
+## 预加载键
+
+Adobe Commerce通常一次从Redis或Valkey加载一个键的缓存条目。 预载功能允许您提供Adobe Commerce在请求期间首次访问时在单个管道中获取的常用键列表。 然后，Adobe Commerce会将获取的值保留在PHP内存中，以供该请求的其余部分使用，这减少了到Redis或Valkey的重复往返次数，并且可以提高这些键的请求引导性能。
+
+您可以通过监控Redis或Valkey上的活动命令来识别常用键：
+
+>[!BEGINTABS]
+
+>[!TAB 使用VALKEY_BACKEND预加载密钥]
+
+预加载密钥在`.magento.env.yaml`配置文件中配置。
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          id_prefix: '061_' # Prefix for keys to be preloaded, it can be any random string
+          backend_options:
+            preload_keys: # List the keys to be preloaded
+              - '061_EAV_ENTITY_TYPES:hash' # The key name must start with the id_prefix set above
+              - '061_GLOBAL_PLUGIN_LIST:hash'
+              - '061_DB_IS_UP_TO_DATE:hash'
+              - '061_SYSTEM_DEFAULT:hash'
+```
+
+要列出这些键，请运行以下命令：
+
+```terminal
+valkey-cli -p 6370 -n 1 MONITOR > /tmp/list.keys
+```
+
+10秒后，按&#x200B;**[!UICONTROL Ctrl+C]**。 然后运行以下命令：
+
+```terminal
+cat /tmp/list.keys | grep "HGET" | awk '{print $5}' | sort | uniq -c | sort -nr | head -n 50
+```
+
+此日志列出了可以预加载的键。 要查看键的内容，请运行以下命令：
+
+```terminal
+valkey-cli -p 6370 -n 1 hgetall "<key_name>"
+```
+
+>[!TAB 使用REDIS_BACKEND预加载密钥]
+
+预加载密钥在`.magento.env.yaml`配置文件中配置。
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          id_prefix: '061_' # Prefix for keys to be preloaded, it can be any random string
+          backend_options:
+            preload_keys: # List the keys to be preloaded
+              - '061_EAV_ENTITY_TYPES:hash' # The key name must start with the id_prefix set above
+              - '061_GLOBAL_PLUGIN_LIST:hash'
+              - '061_DB_IS_UP_TO_DATE:hash'
+              - '061_SYSTEM_DEFAULT:hash'
+```
+
+要列出这些键，请运行以下命令：
+
+```terminal
+redis-cli -p 6370 -n 1 MONITOR > /tmp/list.keys
+```
+
+10秒后，按&#x200B;**[!UICONTROL Ctrl+C]**。 然后运行以下命令：
+
+```terminal
+cat /tmp/list.keys | grep "HGET" | awk '{print $5}' | sort | uniq -c | sort -nr | head -n 50
+```
+
+此日志列出了可以预加载的键。 要查看键的内容，请运行以下命令：
+
+```terminal
+redis-cli -p 6370 -n 1 hgetall "<key_name>"
+```
+
+>[!ENDTABS]
+
+## 启用过时的缓存
+
+陈旧缓存是`RemoteSynchronizedCache`和`symfony_l2`实施都支持的二级缓存功能。 启用后，Adobe Commerce可以在另一个请求已重新生成同一条目时从`/dev/shm`提供现有的本地缓存值，而不是让每个并发请求等待。 这减少了在重新生成昂贵的高速缓存条目期间出现的高速缓存踩踏和锁争用。
+
+### 工作原理
+
+二级缓存保留每个缓存条目的两个副本：`/dev/shm`中的本地副本和Redis或Valkey中的远程副本。 当远程副本不可用且已存在该键的重新生成锁定时，并发请求可以接收先前的本地值，而不是等到写入新值时再接收。
+
+要启用过时的缓存，请在`.magento.env.yaml`文件中对其进行配置。
+
+>[!BEGINTABS]
+
+>[!TAB 使用VALKEY_BACKEND配置过时缓存]
+
+对于Valkey：
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          backend_options:
+            use_stale_cache: true
+```
+
+>[!TAB 使用REDIS_BACKEND配置过时缓存]
+
+对于Redis：
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          backend_options:
+            use_stale_cache: true
+```
+
+>[!ENDTABS]
+
+>[!WARNING]
+>
+>如果这会导致自定义设置中出现意外行为，请将`default`前端上的过时缓存保留为禁用状态，并只为选定的缓存类型启用它，就像通常的[内部部署](../../../configuration/cache/level-two-cache.md#stale-cache-options)一样。
+
+### 逐个启用每种缓存类型的过时缓存
+
+您只能通过在`.magento.env.yaml`中定义专用缓存前端并将所选缓存类型映射到所选缓存类型来启用过时缓存。
+
+要正常工作，必须将自定义前端定义为`CACHE_CONFIGURATION.frontend`下的完整前端。 仅为新前端名称定义`use_stale_cache: true`是不够的。
+
+**配置示例**
+
+>[!BEGINTABS]
+
+>[!TAB 使用VALKEY_BACKEND配置过时缓存]
+
+对于Valkey：
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default: # In this frontend, we keep stale cache set to false.
+          id_prefix: '001_'
+          backend_options:
+            use_stale_cache: false
+
+        # Now, create a new frontend called 'stale_cache_enabled'.
+        # It must contain the same backend connection settings as the frontend 'default':
+
+        stale_cache_enabled:
+          id_prefix: '001_'
+          backend: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+          backend_options:
+            remote_backend: '\Magento\Framework\Cache\Backend\Valkey'
+            remote_backend_options:
+              server: localhost
+              port: 6370 # Use the same port used by the frontend 'default' in env.php
+              database: 1
+              load_from_slave:
+                server: localhost
+                port: 26370 # Use the same port used by the frontend 'default' in env.php
+              retry_reads_on_master: 1
+              read_timeout: 10
+            local_backend: 'Cm_Cache_Backend_File'
+            local_backend_options:
+              cache_dir: /dev/shm/
+            use_stale_cache: true # stale cache here is enabled
+
+      # Now select which cache types you want to enable (stale_cache_enabled), or disable (default)
+
+      type:
+        default:
+          frontend: default
+        layout:
+          frontend: stale_cache_enabled
+        reflection:
+          frontend: stale_cache_enabled
+        config_integration:
+          frontend: stale_cache_enabled
+        config_integration_api:
+          frontend: stale_cache_enabled
+        translate:
+          frontend: stale_cache_enabled
+        # add other cache types as needed...
+```
+
+>[!TAB 使用REDIS_BACKEND配置过时缓存]
+
+对于Redis：
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default: # In this frontend, we keep stale cache set to false.
+          id_prefix: '001_'
+          backend_options:
+            use_stale_cache: false
+
+        # Now, create a new frontend called 'stale_cache_enabled'.
+        # It must contain the same backend connection settings as the frontend 'default':
+
+        stale_cache_enabled:
+          id_prefix: '001_'
+          backend: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+          backend_options:
+            remote_backend: '\Magento\Framework\Cache\Backend\Redis'
+            remote_backend_options:
+              server: localhost
+              port: 6370 # Use the same port used by the frontend 'default' in env.php
+              database: 1
+              load_from_slave:
+                server: localhost
+                port: 26370 # Use the same port used by the frontend 'default' in env.php
+              retry_reads_on_master: 1
+              read_timeout: 10
+            local_backend: 'Cm_Cache_Backend_File'
+            local_backend_options:
+              cache_dir: /dev/shm/
+            use_stale_cache: true # stale cache here is enabled
+
+      # Now select which cache types you want to enable (stale_cache_enabled), or disable (default)
+
+      type:
+        default:
+          frontend: default
+        layout:
+          frontend: stale_cache_enabled
+        reflection:
+          frontend: stale_cache_enabled
+        config_integration:
+          frontend: stale_cache_enabled
+        config_integration_api:
+          frontend: stale_cache_enabled
+        translate:
+          frontend: stale_cache_enabled
+        # add other cache types as needed...
+```
+
+>[!ENDTABS]
+
+>[!NOTE]
+>
+>如果为源前端配置了其他后端选项（如压缩、重试、预加载密钥或其他优化值），请将这些选项复制到`stale_cache_enabled`，以便新前端保持相同的行为。
 
 ## 单独的缓存和会话实例
 
@@ -113,7 +500,7 @@ stage:
 
 >[!IMPORTANT]
 >
->在生产环境和暂存环境中预配专用会话实例并不是自助式的。 它需要提交包含您更新的`.magento/services.yaml`和`.magento.app.yaml`文件的[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)，如下面的步骤3中所述。
+>要在生产和暂存环境中配置专用会话实例，您必须提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/help-and-support/create-a-support-ticket)以及更新的`.magento/services.yaml`和`.magento.app.yaml`文件，如以下步骤3中所述。
 
 要为会话配置专用实例，请执行以下步骤：
 
@@ -156,7 +543,7 @@ stage:
 
 1. 请求一个专用于生产和暂存环境会话的新Valkey实例。
 
-   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
+   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/help-and-support/create-a-support-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
 
    此更新不会导致任何停机时间，但需要部署才能激活新服务。
 
@@ -188,7 +575,7 @@ stage:
        min_lifetime: 60
    ```
 
-1. 从Valkey缓存实例上的[默认数据库](/help/configuration/cache/redis-pg-cache.md) (`db 0`)中删除会话。
+1. 从Valkey缓存实例的默认数据库(`db 0`)中删除会话。
 
    ```terminal
    valkey-cli -h 127.0.0.1 -p 6370 -n 0 FLUSHDB
@@ -221,17 +608,17 @@ stage:
 1. 更新`.magento.app.yaml`配置文件。
 
    ```yaml
-      relationships:
-        database: "mysql:mysql"
-        redis: "redis:redis"
-        redis-session: "redis-session:redis"   # Relationship of the new Redis instance
-        search: "search:elasticsearch"
-        rabbitmq: "rabbitmq:rabbitmq"
+   relationships:
+     database: "mysql:mysql"
+     redis: "redis:redis"
+     redis-session: "redis-session:redis"   # Relationship of the new Redis instance
+     search: "search:elasticsearch"
+     rabbitmq: "rabbitmq:rabbitmq"
    ```
 
 1. 请求专用于生产和暂存环境会话的新Redis实例。
 
-   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
+   提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/help-and-support/create-a-support-ticket)。 包括更新的`.magento/services.yaml`和`.magento.app.yaml`配置文件。
 
    此更新不会导致任何停机时间，但需要部署才能激活新服务。
 
@@ -263,7 +650,7 @@ stage:
        min_lifetime: 60
    ```
 
-1. 从Redis缓存实例上的[默认数据库](/help/configuration/cache/redis-pg-cache.md) (`db 0`)中删除会话。
+1. 从Redis缓存实例的默认数据库(`db 0`)中删除会话。
 
    ```terminal
    redis-cli -h 127.0.0.1 -p 6370 -n 0 FLUSHDB
@@ -291,7 +678,7 @@ stage:
 
 ## 启用异步释放
 
-要在Adobe Commerce云基础架构上启用`lazyfree`，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)，请求将以下Redis或Valkey配置应用于您的环境：
+要在Adobe Commerce云基础架构上启用`lazyfree`，请提交[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/help-and-support/create-a-support-ticket)，请求将以下Redis或Valkey配置应用于您的环境：
 
 ```text
 lazyfree-lazy-eviction yes
@@ -313,7 +700,7 @@ lazyfree-lazy-user-del yes
 
 ## 启用多线程I/O
 
-要在Adobe Commerce云基础架构上启用Redis I/O线程，请提交请求以下I/O线程配置的[Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket)。 此配置可以通过从主线程卸载套接字读取、写入和命令解析来提高吞吐量，但代价是较高的CPU使用率。 在加载下验证并监视主机。
+要在Adobe Commerce云基础架构上启用Redis I/O线程，请提交请求以下I/O线程配置的[Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/help-and-support/create-a-support-ticket)。 此配置可以通过从主线程卸载套接字读取、写入和命令解析来提高吞吐量，但代价是较高的CPU使用率。 在加载下验证并监视主机。
 
 >[!BEGINTABS]
 
@@ -326,14 +713,13 @@ io-threads-do-reads yes
 io-threads 8 # Choose a value lower than the number of CPU cores (check with nproc), and then tune under load.
 ```
 
->[!TAB 为Valkey配置I/O线程]
+>[!TAB 为Valkey]配置I/O线程
 
 对于Valkey：
 
 ```text
 io-threads-do-reads yes
 io-threads 8 # choose a value lower than the number of CPU cores (check with nproc), then tune under load
-events-per-io-thread 2
 ```
 
 >[!ENDTABS]
@@ -375,12 +761,12 @@ stage:
 
 在云基础架构上，有两个L2缓存实施可用于Adobe Commerce。
 
-- 旧版实施使用`RemoteSynchronizedCache`和`Cm_Cache_Backend_File`作为本地存储
-- 新式实施使用`symfony_l2`，遵循PSR-6并提高了性能。 现代实施仅支持Valkey。
+- `RemoteSynchronizedCache`将`Cm_Cache_Backend_File`用于本地存储。
+- `symfony_l2`与PSR-6兼容，并且仅支持Valkey。
 
 | Commerce版本 | 使用Valkey的RemoteSynchronizedCache | 推荐的配置 |
 | -------------- | ----------------------------------- | ------------------------- |
-| 2.4.8及更早版本<br>（如果支持Valkey） | 支持的旧版L2路径 | `VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'` |
+| 2.4.8及更早版本<br>（如果支持Valkey） | 支持 | `VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'` |
 | 2.4.9及更高版本 | 不支持 | `VALKEY_BACKEND: 'symfony_l2'` |
 
 >[!IMPORTANT]
@@ -417,7 +803,7 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-有关环境配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[`REDIS_BACKEND`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)_。
+有关环境配置详细信息，请参阅《云基础架构上的Commerce指南》_中的[`REDIS_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)_。
 
 >[!ENDTABS]
 
@@ -433,7 +819,7 @@ stage:
 
 - **压缩需要一个显式标志。** 如果您通过`CACHE_CONFIGURATION`自定义`symfony_l2`压缩，仅设置`compression_lib`不会启用压缩 — 还必须设置`compress_data`。 请参阅[缓存压缩](#cache-compression)。
 
-- **Redis不是`symfony_l2`支持的远程后端。** 作为此更改的一部分，请迁移到Valkey。 请参阅[设置Valkey服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/valkey)。
+- **Redis不是`symfony_l2`支持的远程后端。** 作为此更改的一部分，请迁移到Valkey。 请参阅[设置Valkey服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey)。
 
 - **会话配置不受此迁移的影响。** `SESSION_CONFIGURATION`独立于缓存后端，在迁移到`symfony_l2`时不需要更改。 请参阅[单独的缓存和会话实例](#separate-cache-and-session-instances)。
 
@@ -445,7 +831,7 @@ stage:
 
 如果您使用正确的位置（`backend_options`或`remote_backend_options`下），可以将预加载键应用于`symfony_l2`配置。 但是，Adobe不建议将预加载密钥与`symfony_l2`一起使用。 `symfony_l2`预加载实现一次提取一个键，因此它不会像对`RemoteSynchronizedCache`那样减少往返次数，并且它可以增加Valkey上的负载而不会影响性能。
 
-预载功能允许您提供Magento在请求期间首次访问时在单个管道中获取的常用键列表。 然后，Magento会将获取的值保留在PHP内存中，以供该请求的其余部分使用，这减少了到Redis或Valkey的重复往返次数，并且可以提高这些键的请求引导性能。
+预载功能允许您提供Adobe Commerce在请求期间首次访问时在单个管道中获取的常用键列表。 然后，Adobe Commerce会将获取的值保留在PHP内存中，以供该请求的其余部分使用，这减少了到Redis或Valkey的重复往返次数，并且可以提高这些键的请求引导性能。
 
 您可以通过监控Redis或Valkey上的活动命令来识别常用键：
 
@@ -504,11 +890,11 @@ stage:
 >
 >`full_page`缓存类型与Cloud基础架构项目上的Adobe Commerce无关，因为它们使用Fastly进行全页缓存。 因此，此部分中的手动配置示例省略了`full_page`，即使`ece-tools`将其包含在默认`symfony_l2`映射中。
 
-以下旧版配置适用于Adobe Commerce 2.4.8及更早版本，这些版本使用`RemoteSynchronizedCache`，需要手动进行过时缓存和前端配置。 这里也适用同样的“选择而非全局”建议。
+以下配置适用于Adobe Commerce 2.4.8及更早版本，这些版本使用`RemoteSynchronizedCache`，需要手动进行过时缓存和前端配置。 这里也适用同样的“选择而非全局”建议。
 
-#### 旧版RemoteSynchronizedCache后端的工作方式
+#### RemoteSynchronizedCache后端的工作方式
 
-使用`RemoteSynchronizedCache`，Magento维护每个缓存条目的两个副本： `/dev/shm`中的本地副本以及Redis或Valkey中的远程副本。 当远程副本不可用且已存在该键的重新生成锁定时，并发请求可以接收先前的本地值，而不是等到写入新值时再接收。
+使用`RemoteSynchronizedCache`，Adobe Commerce维护每个缓存条目的两个副本： `/dev/shm`中的本地副本以及Redis或Valkey中的远程副本。 当远程副本不可用且已存在该键的重新生成锁定时，并发请求可以接收先前的本地值，而不是等到写入新值时再接收。
 
 要为2.4.8及更早版本启用过时缓存，请在`.magento.env.yaml`文件中对其进行配置。
 
@@ -526,14 +912,14 @@ stage:
 
 >[!WARNING]
 >
->上述配置在`default`缓存前端上启用过时的缓存，这会将过时的缓存行为应用于使用该前端的所有缓存条目。 使用此设置，Magento核心缓存类型可按预期工作。 但是，如果您的项目包含自定义代码或扩展，这些代码或扩展通过通用`\Magento\Framework\App\Cache` API（例如`$this->cache->save()`）写入缓存而没有专用缓存前端，则这些条目也可以在重新生成期间提供过时的值。
+>上述配置在`default`缓存前端上启用过时的缓存，这会将过时的缓存行为应用于使用该前端的所有缓存条目。 使用此设置，Adobe Commerce核心缓存类型可按预期工作。 但是，如果您的项目包含自定义代码或扩展，这些代码或扩展通过通用`\Magento\Framework\App\Cache` API（例如`$this->cache->save()`）写入缓存而没有专用缓存前端，则这些条目也可以在重新生成期间提供过时的值。
 >
 >
 >如果这会导致自定义设置中出现意外行为，请将`default`前端上的过时缓存保留为禁用状态，并仅对选定的缓存类型启用它，如下所示。
 
-#### 分别为每个缓存类型启用过时缓存（旧版）
+#### 分别为每个缓存类型启用过时缓存(RemoteSynchronizedCache)
 
-您只能通过在`.magento.env.yaml`中定义专用缓存前端并将所选缓存类型映射到所选缓存类型来启用过时缓存。 此手动方法适用于旧版`RemoteSynchronizedCache`后端；`symfony_l2`自动执行此映射，如上所述。
+您只能通过在`.magento.env.yaml`中定义专用缓存前端并将所选缓存类型映射到所选缓存类型来启用过时缓存。 此手动方法适用于`RemoteSynchronizedCache`后端；`symfony_l2`自动执行此映射，如上所述。
 
 要正常工作，必须将自定义前端定义为`CACHE_CONFIGURATION.frontend`下的完整前端。 仅为新前端名称定义`use_stale_cache: true`是不够的。
 
@@ -607,7 +993,7 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
 
 要将`symfony_l2`缓存用于Adobe Commerce 2.4.9，请完成以下步骤：
 
-- 确保云项目使用[`ece-tools`包v2002.2.12](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)或更高版本。
+- 更新到[`ece-tools`包](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package)的最新版本。 您必须使用ECE工具包v2002.2.13或更高版本。
 
 - 在`.magento.env.yaml`文件中设置部署变量： `VALKEY_BACKEND`=`symfony_l2`。
 
@@ -621,9 +1007,9 @@ Adobe Commerce 2.4.9及更高版本支持`symfony_l2`缓存后端。 `symfony_l2
 
 >[!NOTE]
 >
->适用于Adobe Commerce 2.4.9的修补程序ACP2E-5132通过优化标记存储、添加过时的缓存重新生成锁定，以及修复过时的标记成员资格、冗余远程写入和基于一级大小的逐出(`cleanup_percentage`)等问题而提高了[!DNL Symfony]二级缓存的性能和可靠性。 这减少了磁盘I/O和后端负载，同时提高了缓存一致性。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](/help/configuration/cache/level-two-cache.md#enhanced-symfony-l2-cache-performance-and-reliability)。
+>为Adobe Commerce 2.4.9修补ACP2E-5132提高了[!DNL Symfony]二级缓存的性能和可靠性。 它优化标记存储，添加一个过时的缓存重新生成锁，并修复过时的标记成员资格、冗余远程写入和基于一级大小的逐出(`cleanup_percentage`)的问题。 这减少了磁盘I/O和后端负载，同时提高了缓存一致性。 请参阅&#x200B;_Adobe Commerce配置指南_&#x200B;中的[增强的Symfony L2缓存性能和可靠性](/help/configuration/cache/level-two-cache.md#enhanced-symfony-l2-cache-performance-and-reliability)。
 >
->该修补程序包含在Commerce包[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)的Cloud修补程序中（依赖于`ece-tools`），并在您更新到最新的`ece-tools`版本时在部署期间自动应用。 更新到`ece-tools`的最新版本以接收修补程序。
+>该修补程序包含在Commerce包](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)的[Cloud修补程序中（依赖于`ece-tools`），并在您更新到最新的`ece-tools`版本时在部署期间自动应用。 更新到`ece-tools`的最新版本以接收修补程序。
 
 #### 自定义[!DNL Symfony]二级缓存配置
 
@@ -731,7 +1117,7 @@ df -h /dev/shm
 
 >[!BEGINTABS]
 
->[!TAB Valkey配置示例]
+>[!TAB 使用VALKEY_BACKEND的示例]
 
 对于`VALKEY_BACKEND: symfony_l2`，让`ece-tools`生成`default`和`stale_cache_enabled`前端及其缓存类型映射。 不要在广泛`default`前端上设置`use_stale_cache`。 下面的`CACHE_CONFIGURATION`块仅包含显式后端选项覆盖。
 
@@ -769,9 +1155,7 @@ stage:
         min_lifetime: 60
 ```
 
->[!TAB Redis配置示例]
-
-对Adobe Commerce 2.4.8及更早版本上的Redis使用以下配置：
+>[!TAB 使用REDIS_BACKEND的示例]
 
 ```yaml
 stage:
@@ -822,7 +1206,7 @@ stage:
 
 >[!BEGINTABS]
 
->[!TAB Valkey]
+>[!TAB 使用VALKEY_BACKEND的示例]
 
 ```yaml
 stage:
@@ -900,7 +1284,7 @@ stage:
         min_lifetime: 60
 ```
 
->[!TAB 红色]
+>[!TAB 使用REDIS_BACKEND的示例]
 
 ```yaml
 stage:
@@ -993,8 +1377,10 @@ stage:
 
 >[!ENDTABS]
 
->[!MORELIKETHIS]
->
->- [设置Valkey服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/valkey)
->- [设置Redis服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/redis)
->- [部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)
+## 其他信息
+
+请参阅以下相关主题：
+
+- [设置Valkey服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey)
+- [设置Redis服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis)
+- [部署变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)
