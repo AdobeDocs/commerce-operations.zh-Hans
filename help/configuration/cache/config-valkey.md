@@ -7,23 +7,28 @@ badgePaas: label="内部部署" type="Informative" url="https://experienceleague
 TQID: 'https://experienceleague.adobe.com/Ef4WREy0eq0ChsrI5-0FtrjMZWNjwr7l71Pm-RHD1GI'
 product_v2:
   - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
+    internal-label: Commerce on Prem
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
+    internal-label: Implementation
+source-git-commit: c17dcd295b7a27ac1732a700b97af26316a98b7d
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: '428'
 ht-degree: 0%
-
 ---
-
 # 安装和设置Valkey
 
 Valkey是一个开源、与Redis兼容的内存中数据存储，可用作缓存后端和会话存储。 主要功能包括：
@@ -56,7 +61,15 @@ Adobe建议为会话启用持久性以将Valkey数据复制到磁盘。 可以�
 
 您还可以同时启用RDB和AOF选项。 有关包括持久性选项的优缺点的其他详细信息，请参阅[Valkey持久性文档](https://valkey.io/topics/persistence/)。
 
-对于缓存实例，请设置该实例，使其足够大，用于存储整个Commerce缓存。 大小要求取决于不同的因素，如产品数量和商店查看次数。 作为起点，您可以使用文件系统中缓存文件夹的大小。 例如，如果文件系统上的`var/cache`文件夹为5 GB，请将Valkey实例设置为至少5 GB以启动。 缓存实例不需要持久性，因为可以恢复Commerce缓存。
+对于缓存实例，请设置该实例，使其足够大，用于存储整个Commerce缓存。
+
+- 大小要求取决于不同的因素，如产品数量和商店查看次数。
+
+  作为起点，您可以使用文件系统中缓存文件夹的大小。 例如，如果文件系统上的`var/cache`文件夹为5 GB，请将Valkey实例设置为至少5 GB以启动。
+
+- 缓存实例不需要持久性，因为可以恢复Commerce缓存。
+
+  有关详细信息，请参阅[Valkey缓存指南](https://valkey.io/docs/latest/develop/use/)。
 
 对于性能优化，可以为异步删除启用以下设置。 这些设置不会更改Valkey的行为。
 

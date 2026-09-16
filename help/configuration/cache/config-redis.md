@@ -8,23 +8,28 @@ autotag-review: '2026-06-22T20:26:29.348Z'
 TQID: 'https://experienceleague.adobe.com/N61AAy4ihSIlhEjdvpji2XVOdZuHWhytp9zgoAU41K4'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
   - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
+    internal-label: Commerce on Prem
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: ab2a9ef6d4c3ed692f4a6a66323ab5e3d5c6673a
+    internal-label: Implementation
+source-git-commit: c17dcd295b7a27ac1732a700b97af26316a98b7d
 workflow-type: tm+mt
-source-wordcount: 456
+source-wordcount: '460'
 ht-degree: 0%
-
 ---
-
 # 安装和设置Redis
 
 Redis是内存中的数据存储，可用作缓存后端和会话存储。 主要功能包括：
@@ -48,7 +53,7 @@ Redis是内存中的数据存储，可用作缓存后端和会话存储。 主�
 
 根据您的安装，您通常可以在以下文件中找到Redis配置： `/etc/redis/redis.conf`或`/etc/redis/<port>.conf`
 
-为了根据您的要求优化Redis实例，您可以为每个会话使用一个专用实例、Commerce缓存和FPC，以获得最佳结果。
+为了根据您的要求优化Redis实例，您可以为每个会话使用一个专用实例、Commerce缓存和全页缓存(FPC)，以获得最佳结果。
 
 对于会话，Adobe建议启用持久性以使用以下任一持久性选项将Redis数据复制到磁盘：常规Redis数据库备份(RDB)快照或仅附加文件(AOF)持久性日志。
 
@@ -56,9 +61,17 @@ Redis是内存中的数据存储，可用作缓存后端和会话存储。 主�
 
 - **仅附加文件** (AOF)将发送到Redis的每个写入操作存储在日志文件中。 Redis仅在重新启动时读取此文件，并使用它恢复原始数据集。
 
-您还可以同时启用RDB和AOF选项。 有关包括持久性选项的优缺点的其他详细信息，请参阅[Redis持久性文档](https://redis.io/topics/persistence)。
+您还可以同时启用RDB和AOF选项。 有关包括持久性选项的优缺点的其他详细信息，请参阅[Redis持久性文档](https://redis.io/docs/latest/operate/rs/databases/configure/database-persistence/)。
 
-对于缓存实例，请设置该实例，使其足够大，用于存储整个Commerce缓存。 大小要求取决于不同的因素，如产品数量和商店查看次数。 作为起点，您可以使用文件系统中缓存文件夹的大小。 例如，如果文件系统上的`var/cache`文件夹为5 GB，请将Redis实例设置为至少5 GB以启动。 缓存实例不需要持久性，因为可以恢复Commerce缓存。 请参阅[Redis缓存指南](https://redis.io/docs/latest/develop/use/)。
+对于缓存实例，请设置该实例，使其足够大，用于存储整个Commerce缓存。
+
+- 大小要求取决于不同的因素，如产品数量和商店查看次数。
+
+  首先，使用文件系统上`var/cache`文件夹的大小。 例如，如果`var/cache`为5 GB，请将Redis实例设置为至少5 GB以开始。
+
+- 缓存实例不需要持久性，因为可以恢复Commerce缓存。
+
+  有关详细信息，请参阅[Redis缓存指南](https://redis.io/docs/latest/develop/use/)。
 
 对于性能优化，可以为异步删除启用以下设置。 这些设置不会更改Redis的行为。
 
