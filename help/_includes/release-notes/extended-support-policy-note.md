@@ -1,9 +1,8 @@
 ---
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+source-git-commit: 9021cff48fa6f0557da6ecd5077cffa5cb14e1e7
 workflow-type: tm+mt
-source-wordcount: '83'
+source-wordcount: '86'
 ht-degree: 0%
-
 ---
 # 扩展支持政策说明
 
@@ -16,4 +15,4 @@ ht-degree: 0%
 >另请参阅：
 >
 >- [软件生命周期策略](/help/release/lifecycle-policy.md) — 支持终止日期、扩展支持以及仅限安全的过渡条款
->- [云版本升级实施策略](/help/release/version-upgrade-enforcement-policy.md) — 实施日期和所需操作
+>- [保护Commerce环境所需的操作和截止日期](/help/release/security-enforcement-policy.md) — 实施日期和所需的操作

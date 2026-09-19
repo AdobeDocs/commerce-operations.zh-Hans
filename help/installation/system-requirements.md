@@ -2,14 +2,12 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-last-update: 2026-08-11T00:00:00Z
-source-git-commit: 81442a33c3dabcaa3b9eda56a2132bf7b7432ba2
+last-update: 2026-08-11
+source-git-commit: 0e218207eb48d6c93139bd05215f5804b21ee216
 workflow-type: tm+mt
 source-wordcount: '1651'
 ht-degree: 0%
-
 ---
-
 # 系统要求
 
 以下信息总结了为Adobe Commerce测试的软件依赖项和服务。
@@ -74,7 +72,7 @@ Commerce版本行。
 >
 >Adobe Commerce 2.4.6处于[扩展支持](../release/lifecycle-policy.md#extended-support)到&#x200B;**2027年8月30日**&#x200B;的过渡期，其后是[仅限安全的过渡期](../release/lifecycle-policy.md#security-only-transitional-period)到&#x200B;**2028年5月31日**。 这些规定仅适用于Adobe Commerce客户。 它们不扩展对第三方依赖项（如MySQL）的支持。
 >
->如果您在云上运行Adobe Commerce，则必须在&#x200B;**2028年6月1日** [版本升级实施日期](../release/version-upgrade-enforcement-policy.md)之前升级到支持的版本或迁移到[!DNL Adobe Commerce as a Cloud Service]。 有关完整生命周期日期，请参阅[支持结束日期](../release/lifecycle-policy.md#end-of-support-dates)表。
+>如果您在云上运行Adobe Commerce，则必须在&#x200B;**2028年6月1日** [安全要求和截止日期](../release/security-enforcement-policy.md)之前升级到支持的版本或迁移到[!DNL Adobe Commerce as a Cloud Service]。 有关完整生命周期日期，请参阅[支持结束日期](../release/lifecycle-policy.md#end-of-support-dates)表。
 >
 >该表将折叠以最小化此文章的长度。 选择标题可将其展开。
 

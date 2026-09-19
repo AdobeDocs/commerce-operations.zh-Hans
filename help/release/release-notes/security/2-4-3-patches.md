@@ -2,14 +2,12 @@
 title: Adobe Commerce 2.4.3安全修补程序的发行说明
 description: 了解Adobe Commerce版本2.4.3的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 72d343cd-83d7-48ce-976a-e26ba1b8db27
-last-update: 2026-08-19T00:00:00Z
-source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
+last-update: 2026-08-19
+source-git-commit: 0a3db740cc40376664128121a462e0c93c70e746
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
-
 ---
-
 
 # Adobe Commerce 2.4.3安全修补程序的发行说明
 
@@ -89,4 +87,4 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 已从内容安全策略`frame-ancestors`指令中删除不受支持的源表达式`unsafe-inline`。 [GitHub-33101](https://github.com/magento/magento2/issues/33101)<!-- MC-42632-->
 
-<!-- Last updated from includes: 2026-04-08 15:01:38 -->
+<!-- Last updated from includes: 2026-08-19 13:31:55 -->

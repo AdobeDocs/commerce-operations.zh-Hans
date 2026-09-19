@@ -2,14 +2,12 @@
 title: Adobe Commerce 2.4.5安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.5的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-last-update: 2026-08-19T00:00:00Z
-source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
+last-update: 2026-08-19
+source-git-commit: 0a3db740cc40376664128121a462e0c93c70e746
 workflow-type: tm+mt
 source-wordcount: '2007'
 ht-degree: 0%
-
 ---
-
 
 # Adobe Commerce 2.4.5安全修补程序的发行说明
 
@@ -285,4 +283,4 @@ Adobe Commerce 2.4.5-p1安全版本为以前版本的2.4.5中发现的漏洞提�
 
 其中一项安全错误修复包括创建新的配置设置。 如果电子邮件已更改，[!UICONTROL **需要电子邮件确认**]&#x200B;配置设置允许管理员用户在更改其电子邮件地址时要求电子邮件确认。<!-- AC-6292-->
 
-<!-- Last updated from includes: 2026-04-08 15:01:38 -->
+<!-- Last updated from includes: 2026-08-19 13:47:15 -->

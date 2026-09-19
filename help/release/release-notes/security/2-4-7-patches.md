@@ -2,14 +2,12 @@
 title: Adobe Commerce 2.4.7安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.7的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 38e5632b-c795-47d8-89dd-26bbaeb34e67
-last-update: 2026-08-19T00:00:00Z
-source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
+last-update: 2026-08-19
+source-git-commit: 0a3db740cc40376664128121a462e0c93c70e746
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 0%
-
 ---
-
 
 # Adobe Commerce 2.4.7安全修补程序的发行说明
 
@@ -225,4 +223,4 @@ Adobe Commerce 2.4.7-p1安全版本修复了2.4.7早期版本中发现的漏洞�
 
 Adobe Commerce 2.4.7-p1解决了从SOAP迁移到REST API的UPS集成过程中引入的问题。 此问题会影响从美国境外发运的客户，并阻止他们使用公制系统/SI测量值（即包装的公斤和厘米）来创建与UPS的发运。 有关详细信息，请参阅[UPS配送方式集成从SOAP迁移到RESTful API](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27146)知识库文章。
 
-<!-- Last updated from includes: 2026-04-08 15:01:38 -->
+<!-- Last updated from includes: 2026-08-19 13:47:15 -->

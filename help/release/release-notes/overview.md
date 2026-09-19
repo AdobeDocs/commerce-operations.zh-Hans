@@ -2,13 +2,11 @@
 title: Adobe Commerce发行说明
 description: 了解在何处查找特定 Adobe Commerce 版本的信息。
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+source-git-commit: 9021cff48fa6f0557da6ecd5077cffa5cb14e1e7
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '492'
 ht-degree: 2%
-
 ---
-
 
 # Adobe Commerce发行说明
 
@@ -38,7 +36,6 @@ ht-degree: 2%
             <li><a href="commerce/overview.md">Adobe Commerce</a></li>
             <li><a href="security/overview.md">安全修补程序</a></li>
             <li><a href="../lifecycle-policy.md">软件生命周期政策</a></li>
-            <li><a href="../version-upgrade-enforcement-policy.md">云版本升级实施策略</a></li>
             <li><a href="../security-enforcement-policy.md">安全性和合规性声明</a></li>
             <li><a href="https://helpx.adobe.com/cn/security/products/magento.html">Adobe安全公告</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html?lang=zh-Hans">适用于Adobe Commerce的B2B</a></li>

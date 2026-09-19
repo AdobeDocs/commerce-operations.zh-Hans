@@ -3,14 +3,12 @@ title: 软件生命周期政策
 description: 了解 Adobe Commerce 版本的软件支持终止关键日期。
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
 nudge: true
-last-update: 2026-08-19T00:00:00Z
-source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
+last-update: 2026-08-19
+source-git-commit: 0a3db740cc40376664128121a462e0c93c70e746
 workflow-type: tm+mt
 source-wordcount: '1353'
 ht-degree: 1%
-
 ---
-
 
 # Adobe Commerce生命周期政策
 
@@ -206,3 +204,5 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 如果您无法立即迁移到[!DNL Adobe Commerce as a Cloud Service]，则可以升级到当前支持的Adobe Commerce云版本的最新版本。 这会将您转移到完全支持的现代化基础架构栈栈，同时保留云上现有的Commerce部署模型。
 
 请注意，此路径不会消除未来的升级义务。 在版本行到达版本升级实施日期时，具有Adobe Commerce on Cloud部署的客户必须继续升级。
+
+<!-- Last updated from includes: 2026-09-17 13:05:40 -->

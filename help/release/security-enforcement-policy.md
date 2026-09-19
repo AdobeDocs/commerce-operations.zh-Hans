@@ -3,32 +3,43 @@ title: 保护Commerce环境所需的操作和截止日期
 description: 了解云版本和软件依赖项上不支持的Adobe Commerce的安全实施，包括截止日期、所需操作和风险。
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
   - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+    internal-label: Commerce on Cloud
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: c32adafa-ed01-4b31-997e-2413013911b0
+    internal-label: Integrations
   - id: cc250cf1-34eb-4863-80d0-d170d45ea067
+    internal-label: Developer tools
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 subfeature_v2:
   - id: f2261633-201d-46c5-8a66-999e70527a83
+    internal-label: PCI
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 badgePaas: label="Adobe Commerce on Cloud 2.4.4 — 仅限2.4.9" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Cloud 2.4.4到2.4.9版本的Adobe Commerce"
 nudge: true
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+source-git-commit: 9021cff48fa6f0557da6ecd5077cffa5cb14e1e7
 workflow-type: tm+mt
-source-wordcount: 2158
+source-wordcount: '2149'
 ht-degree: 0%
-
 ---
-
 
 # 保护Commerce环境所需的操作和截止日期
 
@@ -197,5 +208,4 @@ Adobe提供的工具减少了迁移到[!DNL Adobe Commerce as a Cloud Service]�
 >[!MORELIKETHIS]
 >
 >* [生命周期策略](lifecycle-policy.md)
->* 云中Adobe Commerce的[版本升级实施策略](version-upgrade-enforcement-policy.md)
 >* [共享责任安全和运营模型](../security-and-compliance/shared-responsibility.md)

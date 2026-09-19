@@ -2,14 +2,12 @@
 title: Adobe Commerce 2.4.4安全修补程序发行说明
 description: 了解Adobe Commerce版本2.4.4的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: 136d7090-6bf2-41e3-8445-b07bdc67f12b
-last-update: 2026-08-19T00:00:00Z
-source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
+last-update: 2026-08-19
+source-git-commit: 0a3db740cc40376664128121a462e0c93c70e746
 workflow-type: tm+mt
 source-wordcount: '2160'
 ht-degree: 0%
-
 ---
-
 
 # Adobe Commerce 2.4.4安全修补程序的发行说明
 
@@ -268,4 +266,4 @@ DHL已引入架构版本6.2，并且将在不久的将来弃用架构版本6.0�
 
 **问题**：商家在从Adobe Commerce 2.4.4升级到Adobe Commerce 2.4.4-p1的过程中可能会注意到包版本降级通知。 可以忽略这些消息。 包版本中的差异是由于包生成期间出现异常造成的。 没有产品功能受到影响。 有关受影响的方案和变通方法的讨论，请参阅从2.4.4升级到2.4.4-p1[&#128279;](https://support.magento.com/hc/en-us/articles/8214752983949)知识库文章后降级的包。
 
-<!-- Last updated from includes: 2026-04-08 15:01:38 -->
+<!-- Last updated from includes: 2026-08-19 13:47:15 -->
