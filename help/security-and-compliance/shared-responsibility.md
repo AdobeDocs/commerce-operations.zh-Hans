@@ -2,13 +2,11 @@
 title: 共享责任安全和运营模式
 description: 了解Adobe Commerce中涉及的每个云基础架构项目的安全责任。
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+source-git-commit: 9021cff48fa6f0557da6ecd5077cffa5cb14e1e7
 workflow-type: tm+mt
-source-wordcount: '3252'
+source-wordcount: '3242'
 ht-degree: 0%
-
 ---
-
 # 分担责任的安全性和运营模式
 
 云基础架构上的Adobe Commerce是一项基于平台即服务(PaaS)的服务，它依赖于分担责任的安全性和运营模式。 Adobe、商家、云服务提供商和内容交付网络(CDN)提供商共同承担这些责任。 各方对保护和运行Adobe Commerce应用程序以及部署在云基础架构上的特定于商家的代码和扩展承担不同的责任。
@@ -31,14 +29,13 @@ Adobe负责以下工作：
 * 确保安全的应用程序开发
 * 如果商户的支付处理器要求，则获取PCI认证
 * 响应和响应安全事件
-* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](/help/release/product-availability.md)。
+* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 >[!NOTE]
 >
 >另请参阅：
 >
 >* [软件生命周期策略](../release/lifecycle-policy.md) — 支持终止日期、扩展支持以及仅限安全的过渡条款
->* [云版本升级实施策略](../release/version-upgrade-enforcement-policy.md) — 实施日期和所需操作
 >* [安全和合规性声明](../release/security-enforcement-policy.md) — Adobe Commerce在Cloud 2.4.4到2.4.9版本上的所需操作和截止日期
 
 {{supported-versions-only}}
@@ -104,7 +101,7 @@ Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
   * Adobe Commerce Services扩展
   * 所有第三方扩展和自定义集成
 
-  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](/help/release/product-availability.md)。
+  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 ## 云服务提供商责任
 
