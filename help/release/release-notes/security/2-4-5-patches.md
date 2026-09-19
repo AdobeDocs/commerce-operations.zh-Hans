@@ -195,7 +195,7 @@ Adobe Commerce 2.4.5-p8安全版本为以前版本的2.4.5中发现的漏洞提�
 
 Adobe Commerce 2.4.5-p7安全版本为以前版本的2.4.5中发现的漏洞提供了安全错误修复。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-18](https://helpx.adobe.com/security/products/magento/apsb24-18.html)。
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB24-18](https://helpx.adobe.com/cn/security/products/magento/apsb24-18.html)。
 
 ## 2.4.5-p6
 

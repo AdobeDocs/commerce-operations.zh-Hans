@@ -225,7 +225,7 @@ Adobe Commerce 2.4.6-p6安全版本为以前版本的2.4.6中发现的漏洞提�
 
 Adobe Commerce 2.4.6-p5安全版本为以前版本的2.4.6中发现的漏洞提供了安全错误修复。
 
-有关这些修复的最新信息，请参阅[Adobe安全公告APSB24-18](https://helpx.adobe.com/security/products/magento/apsb24-18.html)。
+有关这些修复的最新信息，请参阅[Adobe安全公告APSB24-18](https://helpx.adobe.com/cn/security/products/magento/apsb24-18.html)。
 
 ## 2.4.6-p4
 
