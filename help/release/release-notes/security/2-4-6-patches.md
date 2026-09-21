@@ -2,8 +2,8 @@
 title: Adobe Commerce 2.4.6安全补丁发行说明
 description: 了解Adobe Commerce版本2.4.6的安全修补程序版本中包含的安全错误修复、安全增强和其他安全相关更新。
 exl-id: cde096ac-d192-490d-873a-475996c474ff
-last-update: 2026-08-19
-source-git-commit: 0a3db740cc40376664128121a462e0c93c70e746
+last-update: 2026-09-18
+source-git-commit: 7e982102bc8c3b13a67a0ca4b0a8b21ada1a5825
 workflow-type: tm+mt
 source-wordcount: '2365'
 ht-degree: 0%

@@ -2,8 +2,8 @@
 title: 发布策略
 description: 了解Adobe Commerce版本类型、营销与模块版本控制、补丁和安全版本、测试版、修补程序和整体发布策略。
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-last-update: 2026-08-19
-source-git-commit: 0a3db740cc40376664128121a462e0c93c70e746
+last-update: 2026-09-18
+source-git-commit: 7e982102bc8c3b13a67a0ca4b0a8b21ada1a5825
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 0%
