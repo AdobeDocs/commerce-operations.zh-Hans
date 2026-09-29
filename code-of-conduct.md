@@ -1,9 +1,8 @@
 ---
 source-git-commit: 9a48202be234cabb5a3ccf336c8f6d6216657050
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '443'
 ht-degree: 0%
-
 ---
 # Adobe行为准则
 
@@ -72,7 +71,7 @@ ht-degree: 0%
 信仰可能面临其他方面决定的暂时或永久影响
 项目领导成员。
 
-## 属性
+## 归因
 
 本行为准则改编自[参与者公约](https://contributor-covenant.org)版本1.4，
 可在[https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/)中获取
