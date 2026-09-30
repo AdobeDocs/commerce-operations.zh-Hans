@@ -2,14 +2,12 @@
 title: 使用共享配置的示例
 description: 请参阅有关如何使用共享配置文件更改开发系统中的设置的示例。
 exl-id: c980ec01-ca2d-43db-b68d-8e9435e07e6a
-last-update: 2026-04-28T00:00:00Z
-source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
+last-update: 2026-04-28
+source-git-commit: 2465ecf45a0990ac40c3ba8c243381ce5484adaa
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
-
 ---
-
 # 使用共享配置的示例
 
 此示例说明如何在开发系统中更改以下设置，在生成系统中更新共享配置文件`config.php`，以及在生产系统中实施相同的设置：
@@ -87,8 +85,8 @@ ht-degree: 0%
 
    ![配置选项在管理员中不可编辑](../../assets/configuration/split-deploy-not-editable.png)
 
->[!INFO]
->
->要更改管理员中锁定的设置，请使用[`magento config:set --lock`命令](../cli/set-configuration-values.md)。
+   >[!INFO]
+   >
+   >要更改管理员中锁定的设置，请使用[`magento config:set --lock`命令](../cli/set-configuration-values.md)。
 
 <!-- Last updated from includes: 2026-04-17 13:49:36 -->
