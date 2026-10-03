@@ -1,7 +1,7 @@
 ---
-source-git-commit: 076f76112159204c0f23d3ddfbb606e274c406eb
+source-git-commit: 206f502c41b53c822cca42957d7705184f18c0ab
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1282'
 ht-degree: 1%
 ---
 # 新增功能模板
@@ -9,6 +9,28 @@ ht-degree: 1%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年10月2
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview">Overview： Quality Patches Tool (QPT) v1.1.83</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/266c8529352dac198568dca4676aebd88ce50fc1">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年9月18日
 
@@ -342,88 +364,6 @@ ht-degree: 1%
         技术
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/50fb71aa968abf1302e86ffeb3d3b3a66b3c33d5">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年7月31日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4547">ACP2E-4547的QPT 1.1.82修复的详细说明：如果未将默认目录产品分配给用户的共享目录</a>，则管理员无法将它添加到报价中。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6d0313c01e979d3d4bd3e781e2f0e9c336bbd8c5">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年7月30日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>为Adobe Commerce on Cloud客户添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/security-enforcement-policy">安全策略： </a>必需的操作和截止日期，以说明在运行不支持的版本或第三方软件依赖项的云部署上升级Adobe Commerce的要求、时间表和说明。</p>
-</td>
-      <td>
-        新主题
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b7649aae1f8cab020c1081db2b2363bca22adfed">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年7月28日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4805">ACP2E-4805的QPT 1.1.82修复程序的详细说明：当第一个可销售子项稍后出现在列表</a>中时，可配置产品的签出请求速度会变慢。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1b5fb4826f6599d7b7609dedfeb545f29454ba4d">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4748">ACP2E-4748的QPT 1.1.82修复的详细说明：奖励点过期时间在具有大量奖励点历史记录</a>的商店上运行缓慢。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/30fe149f9743ceca7f40374246b4fc9b9503c590">提交</a></td>
-    </tr>
-    <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875">ACP2E-4875的QPT 1.1.82修复程序的详细说明：打开具有大量通讯簿的客户帐户</a>时，管理员用户注销。</p>
-</td>
-      <td>
-        新主题qpt
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3174f84e0a8c64aaed50cc075a9287bc011778ef">提交</a></td>
     </tr>
   </tbody>
 </table>
