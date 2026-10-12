@@ -3,14 +3,26 @@ title: 实施阶段
 description: 了解 Adobe Commerce 项目实施阶段的最佳实践。
 exl-id: c5272f79-7315-46dc-a191-a40004aaa812
 feature: Best Practices
-last-update: 2026-01-20T00:00:00Z
-source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
+last-update: 2026-01-20
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: a3c0eba7bdcd8017e88bdb4df1f45d77fe4bb351
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 7%
-
 ---
-
 # 实施最佳实践
 
 实施Adobe Commerce项目的方法多种多样。 此部分提供的最佳实践介绍了Adobe期望客户和合作伙伴实施特定用例的方式。 这些建议旨在帮助防止与站点配置和自定义、部署、操作、性能和升级相关的常见问题和潜在问题。

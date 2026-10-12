@@ -2,13 +2,22 @@
 title: 验证安装
 description: 执行以下步骤，确认本地Adobe Commerce安装成功。
 exl-id: 0bd7ec01-c616-4384-ae26-db2ce3668caf
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '264'
 ht-degree: 0%
-
 ---
-
 # 验证安装
 
 在Web浏览器中转到店面。 例如，如果您的安装基础URL是`http://www.example.com`，请在浏览器的地址栏或位置栏中输入它。
@@ -41,6 +50,6 @@ ht-degree: 0%
 
 如果页面不显示样式，请参阅[疑难解答](https://support.magento.com/hc/en-us/articles/360032994352)。
 
-如果出现与以下内容类似的404（未找到）错误，请参阅在浏览器[中访问Adobe Commerce时出现](https://support.magento.com/hc/en-us/articles/360033117152)PHP版本错误或404。
+如果出现与以下内容类似的404（未找到）错误，请参阅在浏览器[&#128279;](https://support.magento.com/hc/en-us/articles/360033117152)中访问Adobe Commerce时出现PHP版本错误或404。
 
 `The requested URL /magento2index.php/admin/admin/dashboard/index/key/0c81957145a968b697c32a846598dc2e/ was not found on this server.`

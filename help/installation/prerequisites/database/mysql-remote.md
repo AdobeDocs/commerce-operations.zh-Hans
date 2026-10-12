@@ -2,13 +2,22 @@
 title: 设置远程MySQL数据库连接
 description: 按照以下步骤为Adobe Commerce的内部安装配置远程数据库连接。
 exl-id: 5fe304bd-ff38-4066-a1fd-8937575e4de4
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 0%
-
 ---
-
 # 设置远程MySQL数据库连接
 
 有时，您可能希望将数据库托管在单独的服务器上，而不是在同一台计算机上运行数据库服务器和Web服务器。

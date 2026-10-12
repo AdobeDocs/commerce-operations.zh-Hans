@@ -1,17 +1,26 @@
 ---
 title: '[!DNL Patches]'
-description: 了解[!UICONTROL Patches]中的 [!DNL Site-Wide Analysis Tool]选项卡、使用时间和优点。
+description: 了解[!DNL Site-Wide Analysis Tool]中的[!UICONTROL Patches]选项卡、使用时间和优点。
 exl-id: 40bc9b38-2a70-40ec-8278-231c78193248
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '124'
 ht-degree: 0%
-
 ---
-
 # [!DNL Patches]
 
-[!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches]页面显示Adobe Commerce存储区可用的所有修补程序。 这些修补程序可帮助解决您在Adobe Commerce中可能遇到的问题。 请参阅我们[中的](https://support.magento.com/hc/en-us/articles/360047139492)Quality Patches Tool released： new tool to self-serve quality patches[!DNL support knowledge base]文章。
+[!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches]页面显示Adobe Commerce存储区可用的所有修补程序。 这些修补程序可帮助解决您在Adobe Commerce中可能遇到的问题。 请参阅我们[!DNL support knowledge base]中的[Quality Patches Tool released： new tool to self-serve quality patches](https://support.magento.com/hc/en-us/articles/360047139492)文章。
 
 >[!NOTE]
 >

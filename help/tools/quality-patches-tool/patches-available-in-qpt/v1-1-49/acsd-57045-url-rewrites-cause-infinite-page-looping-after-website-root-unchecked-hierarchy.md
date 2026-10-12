@@ -5,13 +5,25 @@ feature: CMS
 role: Admin, Developer
 exl-id: 7beaee40-a392-4644-917e-c507e79bddcc
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: ddbd0f6e-b569-5a04-8a70-55058777c373
+    internal-label: CMS
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 0%
-
 ---
-
 # ACSD-57045： URL重写导致在取消选中[!UICONTROL Hierarchy]中的[!UICONTROL Website Root]后出现无限的页面循环
 
 ACSD-57045修补程序修复了URL重写导致在&#x200B;**[!UICONTROL Hierarchy]**&#x200B;取消选中&#x200B;**[!UICONTROL Website Root]**&#x200B;后出现无限页面循环的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.49时，此修补程序可用。 修补程序ID为ACSD-57045。 请注意，该问题计划在Adobe Commerce 2.5.0中修复。

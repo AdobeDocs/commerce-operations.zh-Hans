@@ -1,15 +1,29 @@
 ---
-title: ' [!DNL Infra] 选项卡'
-description: ' [!DNL Infra] 选项卡可隔离基础架构问题的问题和原因。'
+title: '[!DNL Infra]选项卡'
+description: '[!DNL Infra]选项卡可隔离基础架构问题的问题和原因。'
 exl-id: 45f24177-3264-4848-99bc-951be32c1f7b
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '258'
 ht-degree: 0%
-
 ---
-
 # [!DNL Infra]选项卡
 
 **[!DNL Infra]**&#x200B;选项卡可隔离基础架构问题的问题和原因。 对您可在选项卡上看到的帧进行了进一步的描述。
@@ -40,7 +54,7 @@ ht-degree: 0%
 
 ## [!UICONTROL vCPU tier view over timeline BY NODE]
 
-按节点![在时间线上查看](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)vCPU层
+按节点![&#128279;](../../assets/tools/observation-for-adobe-commerce/infra_by_node.png)在时间线上查看vCPU层
 
 **[!UICONTROL vCPU tier view over timeline BY NODE]**&#x200B;帧按节点显示选定时间范围内的vCPU层视图。 此帧有助于检测节点丢失情况或节点放大或缩小情况。 vCPU层按节点查看时间线，应查看不到24小时的时间线。
 

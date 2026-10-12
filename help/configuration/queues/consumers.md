@@ -2,13 +2,22 @@
 title: 消息队列使用者
 description: 了解Adobe Commerce消息队列使用者，包括与其关联的功能和系统配置设置。
 exl-id: 7fd7ab3f-581f-493c-956c-731f111d1b14
-source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
-
 ---
-
 # 消息队列使用者
 
 下表标识了所有消息队列使用者，描述了他们的操作，并标识了与他们关联的管理员系统配置设置：

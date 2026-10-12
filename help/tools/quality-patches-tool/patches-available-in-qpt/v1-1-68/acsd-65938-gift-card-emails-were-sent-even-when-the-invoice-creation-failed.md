@@ -5,13 +5,27 @@ feature: Orders, Checkout
 role: Admin, Developer
 type: Troubleshooting
 exl-id: a6e85c9a-cbf6-4b4a-927b-43ec2ce827fc
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 4820f335-ec9f-5611-8fe3-f5b7e3e56967
+    internal-label: Orders
+  - id: 8cd50456-5eb0-5364-922a-f14161feb828
+    internal-label: Checkout
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
-
 ---
-
 # ACSD-65938：即使发票创建失败，也发送礼品卡电子邮件
 
 ACSD-65938修补程序解决了在成功保存和提交发票之前发送礼品卡电子邮件的问题。 通过此修复，现在仅在成功保存发票后触发电子邮件。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.68时，此修补程序可用。 修补程序ID为ACSD-65938。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。

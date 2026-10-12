@@ -4,13 +4,27 @@ description: 了解如何为本地Adobe Commerce部署安装和配置Apache。 �
 feature: Install, Configuration
 badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 0%
-
 ---
-
 # 安装Apache以进行内部部署 {#apache}
 
 本指南将指导您完成为Adobe Commerce内部部署安装Apache以及配置Commerce所需的Apache设置。 它包括共享的Apache要求以及Ubuntu和CentOS特定于操作系统的过程。 Adobe建议遵循本指南中提供的配置说明，以保留Commerce应用程序的功能和安全性。
@@ -103,8 +117,8 @@ Server built: <build-date>
 ```
 
 - 如果Apache是&#x200B;*未安装*，请参阅：
-   - [在Ubuntu上安装或升级Apache](#installing-or-upgrading-apache-on-ubuntu)
-   - [在CentOS上安装Apache](#installing-apache-on-centos)
+  - [在Ubuntu上安装或升级Apache](#installing-or-upgrading-apache-on-ubuntu)
+  - [在CentOS上安装Apache](#installing-apache-on-centos)
 
 ## 在Ubuntu上安装或升级Apache {#installing-or-upgrading-apache-on-ubuntu}
 

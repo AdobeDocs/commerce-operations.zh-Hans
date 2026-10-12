@@ -3,13 +3,25 @@ title: 维护和支持概述
 description: 正确维护和支持您新启动的Adobe Commerce实施。
 exl-id: 5a104148-74f1-469b-84ca-9bce740a7865
 feature: Deploy
-source-git-commit: ee1041f3f7ea0ce7cdda2ce7a405d65a24352b4f
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '531'
 ht-degree: 0%
-
 ---
-
 # 维护和支持概述
 
 消费者已经拥有了比以往更多的选择。 不乏品牌在争相吸引注意力，因此你不能给消费者任何理由去关注你的竞争对手。 正如我们所看到的，对消费者的忠诚和耐心是微乎其微的。 他们无需花费太多时间就会放弃你的品牌，对他们来说，在电子商务方面表现不佳是很容易放弃的方式。
@@ -34,4 +46,4 @@ ht-degree: 0%
 
 在部署Adobe Commerce时，考虑将哪些内容包含在维护和支持策略中至关重要。
 Adobe Commerce许可证中包含专家支持。 有关专家支持和Adobe支持计划的详细信息，请参阅[Adobe支持计划](https://business.adobe.com/cn/customers/consulting-services/premier-support.html)。
-除了Adobe支持计划之外，还有旧版Magento支持术语。 要了解哪些支持服务适用于您，请参阅您的合同以了解您拥有哪些支持协议，或者与您的Adobe客户团队交谈。
+除了Adobe支持计划之外，还有旧版Magento支持条款。 要了解哪些支持服务适用于您，请参阅您的合同以了解您拥有哪些支持协议，或者与您的Adobe客户团队交谈。

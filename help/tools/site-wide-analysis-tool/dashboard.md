@@ -1,14 +1,23 @@
 ---
 title: '[!DNL Dashboard]'
-description: 了解 [!DNL Site-Wide Analysis Tool]元素中的 [!DNL Dashboard] 选项卡、使用时间、优势和最佳实践。
+description: 了解[!DNL Site-Wide Analysis Tool]元素中的[!DNL Dashboard]选项卡、使用时间、好处和最佳实践。
 exl-id: 37d848ff-2cff-48b1-8391-520531300bbc
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '867'
 ht-degree: 0%
-
 ---
-
 # [!UICONTROL Dashboard]
 
 [!UICONTROL Dashboard]页面显示概览[!DNL widgets]，它提供了Adobe Commerce网站的运行状况和当前状态的“单一窗格”。 每个[!DNL widget]都包含一个访问链接，指向每个功能的页面、每个工具本身或报告（具体取决于[!DNL widget]）。

@@ -3,13 +3,30 @@ title: 当前搜索引擎不受支持
 description: 在遇到有关不受支持的搜索引擎的错误后，对Adobe Commerce升级进行故障排除。
 feature: Upgrade, Search
 exl-id: 11479d23-53a5-4086-9f9a-c3420ccad073
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: a8ae7a5a-6cdc-5922-bd0d-6feb44b04984
+    internal-label: Upgrade
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+subfeature_v2:
+  - id: a1d22079-48b9-5e69-9ee6-eb236068ef34
+    internal-label: Search
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
-
 ---
-
 # 当前搜索引擎不受支持
 
 以下错误消息指示您要升级的Adobe Commerce版本配置为使用目录搜索引擎，而您要升级到的版本不支持该目录搜索引擎：
@@ -43,7 +60,7 @@ bin/magento config:show catalog/search/engine
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->其中，`<version>`是您在升级&#x200B;**之前运行的**&#x200B;的Magento版本。 例如，`2.3.5`。
+>其中`<version>`是您在升级&#x200B;**之前运行的**&#x200B;的Magento版本。 例如，`2.3.5`。
 
 请遵循以下各节中所述的准则，从不一致状态中恢复。
 

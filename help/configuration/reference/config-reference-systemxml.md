@@ -4,13 +4,27 @@ description: 了解system.xml文件如何管理Adobe Commerce应用程序配置�
 feature: Configuration, System
 badge: label="作者：David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="大卫·兰鲍尔"
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 8d0b446f-5b16-5a10-b272-01143504a11c
+    internal-label: System
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2751'
 ht-degree: 0%
-
 ---
-
 # system.xml引用
 
 `system.xml`文件允许您管理Commerce系统配置。 使用此主题作为`system.xml`文件的常规引用。 `system.xml`文件位于给定Commerce 2扩展名中的`etc/adminhtml/system.xml`下。
@@ -392,7 +406,7 @@ Commerce 2 Core提供了以下源模型。 一般来说，源模型要多得多�
 | `phoneUK` | 允许（英国）电话号码。 |
 | `phoneUS` | 允许（美国）电话号码。 |
 | `required-entry` | 不允许空值（等效于`validate-no-empty`的验证）。<br>验证失败消息：“这是必填字段。” |
-| `time` | 允许以24小时格式显示有效时间，介于00:00和23:59之间。 例如`15`、`15:05`或`15:05:48`。 |
+| `time` | 允许以24小时格式显示有效时间，在00:00到23:59之间。 例如`15`、`15:05`或`15:05:48`。 |
 | `time12h` | 允许以12小时格式显示有效时间，介于上午12:00到晚上11:59:59之间。 例如`3 am`、`11:30 pm`、`02:15:00 pm`。 |
 | `validate-admin-password` | 允许7个或更多字符，同时使用数字和字母。 |
 | `validate-alphanum-with-spaces` | 仅允许使用字母（a-z或A-Z）、数字(0-9)或空格。 |

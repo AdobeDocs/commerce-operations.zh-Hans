@@ -5,13 +5,25 @@ feature: Price Rules
 role: Admin, Developer
 exl-id: 5838a740-018d-44c2-8135-54426ea08627
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: a507b1ed-4937-53da-97ae-57d36bd5b9e0
+    internal-label: Price Rules
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
-
 ---
-
 # ACSD-59865：由于产品数量不足，[!UICONTROL Cart Price Rule]无法取消以前的规则
 
 ACSD-59865修补程序修复了&#x200B;*[!UICONTROL Fixed amount discount]、* *[!UICONTROL Percent of product price discount]、*&#x200B;和&#x200B;*[!UICONTROL Buy X get Y]* [!UICONTROL Cart Price Rules]中的&#x200B;*[!UICONTROL Discount quantity step]*&#x200B;值不再取消以前规则的操作的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.52时，此修补程序可用。 修补程序ID为ACSD-59865。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。

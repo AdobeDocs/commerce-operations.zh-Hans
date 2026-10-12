@@ -2,13 +2,22 @@
 title: 生产系统设置
 description: 了解如何为Commerce应用程序设置生产系统。
 exl-id: e678e97e-d9f2-4f24-bb6b-1994a2a1167c
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
-
 ---
-
 # 生产系统设置
 
 您可以有一个生产系统。 以下所有条件都必须为true：
@@ -16,11 +25,11 @@ ht-degree: 0%
 - 所有Commerce代码与开发和构建系统位于同一存储库中的源代码控制中
 - 确保源代码管理中包括&#x200B;_以下所有项_：
 
-   - `app/etc/config.php`
-   - `generated`目录（和子目录）
-   - `pub/media`目录
-   - `pub/media/wysiwyg`目录（和子目录）
-   - `pub/static`目录（和子目录）
+  - `app/etc/config.php`
+  - `generated`目录（和子目录）
+  - `pub/media`目录
+  - `pub/media/wysiwyg`目录（和子目录）
+  - `pub/static`目录（和子目录）
 
 - 必须为[生产模式](../bootstrap/application-modes.md#production-mode)安装和设置Commerce 2.2或更高版本
 - 它具有文件系统所有权和权限集，如[开发、生成和生产系统的先决条件](../deployment/prerequisites.md)中所述。

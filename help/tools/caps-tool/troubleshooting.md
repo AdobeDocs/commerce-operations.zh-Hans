@@ -1,13 +1,22 @@
 ---
 title: '[!DNL Adobe Commerce Patching Automation]疑难解答指南'
-description: 对 [!DNL Adobe Commerce Patching Automation]中的常见问题和错误消息进行故障诊断
-source-git-commit: f2b9ba118bfe4982a67ec5041141e5ee7548fc4d
+description: 对[!DNL Adobe Commerce Patching Automation]中的常见问题和错误消息进行故障诊断
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 0%
-
 ---
-
 # [!DNL Adobe Commerce Patching Automation]疑难解答指南
 
 使用[!DNL Patching Automation]进行修补程序操作时，可能会遇到错误消息和问题，这些消息和问题可能会阻止修补程序应用程序成功或进行反向。 本指南为最常见的问题提供了解决方案。

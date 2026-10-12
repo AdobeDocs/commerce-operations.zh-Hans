@@ -2,13 +2,22 @@
 title: 自定义cron作业和cron组引用
 description: 了解如何使用Adobe Commerce中的cron组和crontab自定义cron。 发现自定义模块设置和计划任务配置。
 exl-id: 16e342ff-aa94-4e31-8c75-dfea1ef02706
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '549'
 ht-degree: 0%
-
 ---
-
 # 自定义crons引用
 
 本主题可帮助您为自定义模块设置crontab和（可选）cron组。 如果您的自定义模块需要定期计划任务，则必须为该模块设置crontab。 _crontab_&#x200B;是cron作业配置。
@@ -123,9 +132,9 @@ _cron组_&#x200B;是一个逻辑组，可让您一次轻松运行多个进程的
 
 ## 禁用cron作业
 
-Cron作业没有我们为`disable`观察者[提供的](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers)功能。 但是，可以使用以下技术禁用cron作业： `schedule`一次包含永远不会发生的日期的时间。
+Cron作业没有我们为[观察者](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers)提供的`disable`功能。 但是，可以使用以下技术禁用cron作业： `schedule`一次包含永远不会发生的日期的时间。
 
-例如，禁用在`visitor_clean`模块中定义的`Magento_Customer` cron作业：
+例如，禁用在`Magento_Customer`模块中定义的`visitor_clean` cron作业：
 
 ```xml
 ...
@@ -149,4 +158,4 @@ Cron作业没有我们为`disable`观察者[提供的](https://developer.adobe.c
 ...
 ```
 
-现在，`visitor_clean` cron作业已设置为在2月30日的00:00运行 — 该日期永远不会发生。
+现在，`visitor_clean` cron作业已设置为在2月30日00:00运行 — 该日期永远不会发生。

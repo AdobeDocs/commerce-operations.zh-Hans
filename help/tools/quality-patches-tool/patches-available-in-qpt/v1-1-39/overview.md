@@ -1,17 +1,32 @@
 ---
-title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.39
-description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.39中提供的修补程序所修复的问题。
+title: 概述：[!DNL Quality Patches Tool] (QPT) v1.1.39
+description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.39中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 6116f566-2ff8-4148-ab60-cec65f9b7a6f
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+subfeature_v2:
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '274'
 ht-degree: 0%
-
 ---
-
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.39
 
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.39中提供的修补程序所修复的问题。
@@ -26,8 +41,8 @@ QPT v1.1.39包含以下修补程序：
 1. **ACSD-54342**：修复了不正确的错误消息&#x200B;*数据结构中的错误：导入没有有效数据的CSV文件时，值会混合*。
 1. **ACSD-54660**：添加了新的输入属性&#x200B;*sort*，以便按`sort_field`和`sort_direction`对GraphQL中的客户订单进行排序。
 1. **ACSD-54776**：修复了为第二个网站、商店和商店视图保存未选中&#x200B;*[!UICONTROL Use Default Value]*&#x200B;和非默认产品字段值的问题。
-1. **ACSD-53998**：修复了从客户帐户注销后，基于&#x200B;**[!UICONTROL Dynamic Block]**&#x200B;的&#x200B;**[!UICONTROL Customer Segment]**&#x200B;无法正常工作的问题。
-1. **ACSD-53204**：修复&#x200B;*无法保存产品。使用*&#x200B;端点向产品库添加图像的并发请求时出现`rest/V1/products/<sku>/media`错误。
+1. **ACSD-53998**：修复了从客户帐户注销后，基于&#x200B;**[!UICONTROL Customer Segment]**&#x200B;的&#x200B;**[!UICONTROL Dynamic Block]**&#x200B;无法正常工作的问题。
+1. **ACSD-53204**：修复&#x200B;*无法保存产品。* 使用`rest/V1/products/<sku>/media`端点向产品库添加图像的并发请求时出错。
 1. **ACSD-47657**：添加了AWS凭据的缓存机制。 凭据提供程序现在使用Magento缓存来缓存从AWS检索到的凭据以进行EC2配置。
 
 使用左侧的菜单导航到特定的修补程序页面。

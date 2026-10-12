@@ -2,13 +2,22 @@
 title: 高级设置
 description: 了解如何为Adobe Commerce进行高级设置。 了解分步说明和配置要求。
 exl-id: eb9ca9fa-b099-4e77-ab33-16cd0f382ffe
-source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
-
 ---
-
 # 高级设置
 
 [!DNL Commerce]是一种高度灵活且可伸缩的产品，包含适用于各种规模的商家的解决方案。 本节介绍有关配置[!DNL Commerce]以处理大量数据、极端负载和其他企业案例的最佳实践和建议。
@@ -42,7 +51,7 @@ ht-degree: 0%
 
 有时，一个Redis实例不足以处理传入的请求。 要解决这种情况，我们可以建议采用几种解决方案。
 
-首先，[!DNL Commerce]允许您为每个缓存类型配置单独的缓存存储。 这样，您可以安装与在Magento中注册的缓存类型数量相同数量的单独Redis实例。 实际上，您可能希望最常用缓存的Redis实例，例如配置、布局和块。
+首先，[!DNL Commerce]允许您为每个缓存类型配置单独的缓存存储。 这样，您就可以安装与在Magento中注册的缓存类型数量相同数量的单独Redis实例。 实际上，您可能希望最常用缓存的Redis实例，例如配置、布局和块。
 
 另一种解决方案是将配置缓存放在文件系统上，并将其他缓存移动到Redis服务器。 使用此解决方案，您需要一个单独的工具来集中使所有Web节点上的配置缓存失效。
 
@@ -99,7 +108,7 @@ bin/magento setup:db-schema:add-slave
 
 ## 提供媒体内容
 
-Magento不提供任何特定的集成来服务和交付媒体内容。 可在Magento中一起使用所有常用方法。
+Magento不提供任何特定的集成来服务和交付媒体内容。 在Magento中，可以一起使用所有常用方法。
 
 提供媒体内容的最简单方法是在[!DNL Varnish]服务器上交付和缓存媒体内容。 此方法假定使用共享文件系统来存储媒体内容，或者使用专用服务器指向[!DNL Varnish]。
 

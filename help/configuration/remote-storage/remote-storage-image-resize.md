@@ -3,13 +3,27 @@ title: 为远程存储配置图像大小调整
 description: 通过配置服务器端映像调整大小来优化磁盘资源。
 feature: Configuration, Storage
 exl-id: 51c2b9b3-0f5f-4868-9191-911d5df341ec
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '255'
 ht-degree: 0%
-
 ---
-
 # 为远程存储配置图像大小调整
 
 默认情况下，Adobe Commerce支持在应用程序端调整图像大小。 但是，通过启用“远程存储”模块，您可以使用Nginx将调整映像大小的功能卸载到服务器端，从而节省磁盘资源并优化磁盘使用。
@@ -34,7 +48,7 @@ ht-degree: 0%
 
 1. 在&#x200B;_目录媒体URL格式_&#x200B;部分中，清除&#x200B;**[!UICONTROL Use system value]**。
 
-1. 在`Image optimization based on query parameters`目录媒体URL格式&#x200B;**_字段中选择_** URL。
+1. 在&#x200B;**_目录媒体URL格式_**&#x200B;字段中选择`Image optimization based on query parameters` URL。
 
 1. 单击&#x200B;**[!UICONTROL Save Config]**。
 
@@ -52,7 +66,7 @@ ht-degree: 0%
    load_module /etc/nginx/modules/ngx_http_image_filter_module.so;
    ```
 
-1. 基于包含的模板`nginx.conf`文件创建一个`nginx.conf.sample`文件。 例如：
+1. 基于包含的模板`nginx.conf.sample`文件创建一个`nginx.conf`文件。 例如：
 
    ```conf
    location ~* \.(jpg|jpeg|png|gif|webp)$ {

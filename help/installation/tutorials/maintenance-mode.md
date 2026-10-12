@@ -2,13 +2,22 @@
 title: 启用或禁用维护模式
 description: 按照以下步骤自定义客户在Adobe Commerce部署因维护而停止时看到的内容。
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '547'
 ht-degree: 0%
-
 ---
-
 # 启用或禁用维护模式
 
 以下指南参考了标准维护模式页面。 如果需要使用自定义维护页面，请参阅[创建自定义维护页面](../../upgrade/troubleshooting/maintenance-mode-options.md)主题。

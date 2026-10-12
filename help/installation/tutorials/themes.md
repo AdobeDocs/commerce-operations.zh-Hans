@@ -3,13 +3,27 @@ title: 卸载主题
 description: 了解如何在进行更改之前从命令行卸载Adobe Commerce主题，包括编辑器包、代码删除和备份。
 feature: Install, Themes
 exl-id: 73150e8c-2d83-4479-b96b-75f41fd9c842
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+  - id: 8b440f30-6794-5ed6-981f-391de4e9b0cc
+    internal-label: Themes
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
-
 ---
-
 # 卸载主题
 
 使用此命令之前，必须知道主题的相对路径。 主题位于`<magento_root>/app/design/<area name>`的子目录中。 您必须指定以区域开头的主题路径，即`frontend`（对于店面主题）或`adminhtml`（对于管理主题）。

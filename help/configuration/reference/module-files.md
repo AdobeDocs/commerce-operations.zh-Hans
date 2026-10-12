@@ -2,13 +2,22 @@
 title: 模块配置文件
 description: 了解如何使用Adobe Commerce中的配置类型自定义模块。 了解配置文件管理和模块自定义最佳实践。
 exl-id: 87433c28-8e3d-43d0-b77e-3ff9a680af5f
-source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 0%
-
 ---
-
 # 模块配置文件概述
 
 在Commerce早期版本中使用的`config.xml`配置文件的职责现在由位于各种模块目录中的多个文件分担。 仅当模块请求特定配置类型时，才会按需加载Commerce的多个配置文件。
@@ -128,7 +137,7 @@ Commerce应用程序合并算法：
 
 ### 配置界面
 
-您可以使用[Magento\Framework\Config](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Config)下的接口与配置文件进行交互。
+可以使用[Magento\Framework\Config](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Config)下的接口与配置文件进行交互。
 
 如果您[创建配置类型](../reference/config-create-types.md#create-configuration-types)，则可以使用这些接口。
 

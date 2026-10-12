@@ -5,13 +5,25 @@ feature: Storefront
 role: Admin, Developer
 exl-id: 86ea64aa-10fc-4fa3-9902-918fb8983ca0
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
-
 ---
-
 # ACSD-58442：修复了宽度为768px的设备被视为移动设备的问题，该问题会导致菜单和标题在移动设备视图而非桌面中加载
 
 ACSD-58442修补程序修复了Adobe Commerce的问题：宽度为768px的设备被视为移动设备，导致菜单和标题加载到移动视图而不是桌面中。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.50时，此修补程序可用。 修补程序ID为ACSD-58442。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。

@@ -4,19 +4,28 @@ description: 了解Adobe Commerce测试版以及如何参与。
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
 badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目（Adobe管理的PaaS基础架构）和内部部署项目上的Adobe Commerce 。"
 badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce as a Cloud Service和Adobe Commerce Optimizer项目（Adobe管理的SaaS基础架构）。"
-source-git-commit: efdc4734b5c0db8efc0c83bef41e7ccaafd9b6af
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1490'
 ht-degree: 0%
-
 ---
-
 # Adobe Commerce测试版
 
 适用于[Adobe Commerce产品解决方案](https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions)的Beta程序是商家访问预发行版功能和代码、提供反馈以及引导Adobe Commerce未来的一种方式。 有两种类型的测试版计划：
 
 - 公共Beta：公共Beta计划可供所有Adobe Commerce客户和合作伙伴使用
-- Private Beta：私人测试版计划需要根据参与资格标准进行审批
+- Private beta：私人测试版计划需要根据参与资格标准进行审批
 
 >[!IMPORTANT]
 >
@@ -48,7 +57,7 @@ ht-degree: 0%
 
 若要分享有关此测试版功能的反馈，请发送电子邮件至[commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com)。
 
-### 搜索匹配和排名(Private Beta)
+### 搜索匹配和排名(Private beta)
 
 Adobe正在改进产品发现如何对[!DNL Adobe Commerce]上的[!DNL Live Search]和[!DNL Adobe Commerce Optimizer]的搜索结果进行排名。 更新会优先处理&#x200B;**精确和接近短语匹配项**，然后匹配，其中&#x200B;**所有查询词都出现在同一可搜索属性**&#x200B;中，最后&#x200B;**跨字段**&#x200B;匹配（包括支持自动完成样式建议的行为）。 该分层模型可帮助高意图查询首先显示最相关的产品，同时仍会返回有用的替代产品。
 

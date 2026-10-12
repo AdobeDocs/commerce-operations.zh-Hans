@@ -5,13 +5,27 @@ feature: Catalog Management, Orders, Products
 role: Admin
 exl-id: b9580806-ac35-4c86-8eee-c9f16d654171
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: c18ed297-2187-4aec-affb-9d9654eca6fc
+    internal-label: Catalog management
+  - id: 4820f335-ec9f-5611-8fe3-f5b7e3e56967
+    internal-label: Orders
+  - id: 4067ab89-2e97-5de1-8d98-de8318461a8d
+    internal-label: Products
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
-
 ---
-
 # MDVA-43601：完全重新索引后，从“catalogrule_product_price”表中删除触发器
 
 MDVA-43601修补程序修复了在完全重新索引`catalogrule_rule`或`catalogrule_product`之后从`catalogrule_product_price`表中删除触发器的问题。 安装[Quality Patches Tool (QPT)](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.13后，即可使用此修补程序。 修补程序ID为MDVA-43601。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。

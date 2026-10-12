@@ -1,22 +1,34 @@
 ---
 title: ACSD-46192：异步/bulk/V1/configurable-products/bySku/options端点问题
-description: ACSD-46192修补程序修复了“async/bulk/V1/configurable-products/bySku/options”端点的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
+description: ACSD-46192修补程序修复了“async/bulk/V1/configurable-products/bySku/options”端点的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
 feature: Configuration, Products
 role: Admin
 exl-id: 5a54f4b5-8467-40de-9d8f-ba46880ed5ad
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 4067ab89-2e97-5de1-8d98-de8318461a8d
+    internal-label: Products
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
-
 ---
-
 # ACSD-46192：异步/bulk/V1/configurable-products/bySku/options端点问题
 
 >[!NOTE]
 >
->部分弃用ACSD-46192修补程序，因为强制安全修补程序[APSB25-08](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27149)已解决此问题。
+>部分弃用ACSD-46192修补程序，因为强制安全修补程序[APSB25-08](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)已解决此问题。
 
 ACSD-46192修补程序修复了`async/bulk/V1/configurable-products/bySku/options`终结点的问题。 安装[Quality Patches Tool (QPT)](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
 

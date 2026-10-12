@@ -3,15 +3,25 @@ title: 修改数据库表的最佳实践
 description: 了解如何以及何时修改Adobe Commerce和第三方数据库表。
 role: Developer
 feature: Best Practices
-last-substantial-update: 2022-11-15T00:00:00Z
+last-substantial-update: 2022-11-15T00:00:00.000Z
 exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1591'
 ht-degree: 0%
-
 ---
-
 # 修改数据库表的最佳实践
 
 本文提供了修改[!DNL Adobe Commerce]或第三方模块创建的数据库表的最佳实践。 了解何时以及如何有效修改表有助于确保商务平台的长期可行性和稳定性。
@@ -36,7 +46,7 @@ Adobe建议您首先确定是否需要保存此数据。 如果您从旧系统�
 
 另一个让数据保留在商业外部但允许您实时使用的相关选项是利用其他工具，例如GraphQL mesh。 此选项将不同的数据源组合在一起，并将它们作为单个响应返回。
 
-例如，您可以`stitch`将外部数据库（可能已停用的旧Magento 1站点）中的旧订单合并起来。 然后使用GraphQL网格，将它们显示为客户订单历史记录的一部分。 这些旧订单可以与当前[!DNL Adobe Commerce]环境中的订单合并。
+例如，您可以`stitch`将来自外部数据库的旧订单合并在一起，可能是已停用的旧Magento 1站点。 然后使用GraphQL网格，将它们显示为客户订单历史记录的一部分。 这些旧订单可以与当前[!DNL Adobe Commerce]环境中的订单合并。
 
 有关将API网格用于GraphQL的更多信息，请参阅[什么是API网格](https://developer.adobe.com/graphql-mesh-gateway/mesh/){target="_blank"})和[GraphQL网格网关](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}。
 

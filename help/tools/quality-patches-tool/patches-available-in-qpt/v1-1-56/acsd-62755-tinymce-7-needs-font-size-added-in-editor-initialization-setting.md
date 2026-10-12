@@ -1,17 +1,38 @@
 ---
 title: ACSD-62755： [!DNL TinyMCE] 7需要在编辑器初始化设置中添加字体大小和字体
-description: 应用ACSD-62755修补程序以修复Adobe Commerce问题，该问题导致 [!DNL TinyMCE] 7要求在编辑器初始化设置中专门添加*font size*和*font family*。
+description: 应用ACSD-62755修补程序以修复Adobe Commerce问题，该问题导致[!DNL TinyMCE] 7需要在编辑器初始化设置中专门添加*font size*和*font family*。
 feature: Page Content, Page Builder, Admin Workspace
 role: Admin, Developer
 exl-id: f61dc7b6-ac6b-45eb-a0a2-f3f0bff4422b
 type: Troubleshooting
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 17d326fa-534a-55a5-b46f-8ae1de1e2f75
+    internal-label: Page Content
+  - id: cc250cf1-34eb-4863-80d0-d170d45ea067
+    internal-label: Developer tools
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: ed510963-0b8c-4764-86f6-f3c7735bc334
+    internal-label: Page Builder
+  - id: bb2df8be-afdd-4818-b6b5-95ca1dd3bc3a
+    internal-label: Admin workspace
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 0%
-
 ---
-
 # ACSD-62755： [!DNL TinyMCE] 7需要在编辑器初始化设置中添加字体大小和字体
 
 ACSD-62755修补程序修复了[!DNL TinyMCE] 7要求在编辑器初始化设置中专门添加&#x200B;*字体大小*&#x200B;和&#x200B;*字体系列*&#x200B;选择器的问题。 此修补程序在安装了[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.56时可用。 修补程序ID为ACSD-62755。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。

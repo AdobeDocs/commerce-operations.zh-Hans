@@ -1,13 +1,22 @@
 ---
 title: 消息代理(ActiveMQ Artemis)
 description: 按照以下步骤为Adobe Commerce的内部安装安装和配置Apache ActiveMQ Artemis消息代理。
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '938'
 ht-degree: 0%
-
 ---
-
 # 消息代理(ActiveMQ Artemis)
 
 Adobe Commerce还通过简单文本导向消息协议(STOMP)支持ActiveMQ Artemis开源消息代理。 它提供了可靠且可扩展的报文传送系统，为基于STOMP的集成提供了灵活性。
@@ -98,8 +107,8 @@ docker rm artemis
 
 运行Docker容器后，您可以访问：
 
-- **Web控制台**： http://localhost:8161/控制台（默认凭据： artemis/artemis）
-- **STOMP端口**： localhost:61613 （用于Adobe Commerce连接）
+- **Web控制台**： http://localhost:8161/console （默认凭据： artemis/artemis）
+- **STOMP端口**： localhost：61613（用于Adobe Commerce连接）
 
 >[!NOTE]
 >

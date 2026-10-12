@@ -2,13 +2,22 @@
 title: 多个网站或商店
 description: 了解如何启动多个网站或使用不同的选项、域和内容实施商店视图。
 exl-id: 724d75d9-13fc-40f9-951a-69aa407adb6f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
-
 ---
-
 # 多个网站或商店
 
 通过单个Adobe Commerce软件实例，您可以启动多个使用不同属性和内容的网站或商店视图，例如：
@@ -43,8 +52,8 @@ ht-degree: 0%
 
 - `MAGE_RUN_TYPE`可以是`store`或`website`
 
-   - 使用`website`在店面中加载网站。
-   - 使用`store`加载店面中的任何商店视图。
+  - 使用`website`在店面中加载网站。
+  - 使用`store`加载店面中的任何商店视图。
 
 - `MAGE_RUN_CODE`是与`MAGE_RUN_TYPE`对应的唯一网站或商店视图代码
 

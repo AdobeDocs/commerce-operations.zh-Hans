@@ -3,16 +3,25 @@ title: 数据迁移跟进
 description: 了解如何验证Magento 1到Magento 2的数据迁移是否成功，以及所有功能是否均可按预期运行。
 exl-id: a55f357b-6c95-49d6-b2f1-c2e403a8c85f
 topic: Commerce, Migration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
-
 ---
-
 # 数据迁移跟进
 
-Magento 1的某些行为和逻辑在Magento 2中的实施方式有所不同。 [!DNL Data Migration Tool]会处理此工作。 有一些迁移方面是您应当了解的，有时，您必须执行一些次要步骤，以便某些功能在迁移之后能够顺利工作。
+Magento 1的某些行为和逻辑在Magento 2中的实施有所不同。 [!DNL Data Migration Tool]会处理此工作。 有一些迁移方面是您应当了解的，有时，您必须执行一些次要步骤，以便某些功能在迁移之后能够顺利工作。
 
 ## 信息
 

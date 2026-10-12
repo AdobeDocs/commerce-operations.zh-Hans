@@ -5,13 +5,27 @@ feature: Shopping Cart, Checkout
 role: Admin, Developer
 exl-id: 79fb3161-f56e-45f3-9933-cf95703f1554
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: df8eaa0e-dd74-553a-8ad5-28129f8e8d3d
+    internal-label: Shopping Cart
+  - id: 8cd50456-5eb0-5364-922a-f14161feb828
+    internal-label: Checkout
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
-
 ---
-
 # ACSD-62481：即使在启用&#x200B;*[!UICONTROL Persistence]*&#x200B;的情况下，购物车仍保持空白
 
 ACSD-62481修补程序修复了在签出期间使用登录弹出窗口时永久性购物车功能失败（因为它缺少&#x200B;*[!UICONTROL Remember Me]*&#x200B;复选框）导致产品在注销后从购物车中消失的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57时，此修补程序可用。 修补程序ID为ACSD-62481。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。

@@ -1,17 +1,34 @@
 ---
-title: ACSD-65254：通过updateCustomerEmail [!DNL GraphQL] 突变更新客户电子邮件后未发送电子邮件通知
-description: 应用ACSD-65254修补程序以修复以下问题：使用updateCustomerEmail [!DNL GraphQL] 突变成功更新客户帐户上的电子邮件地址后，未向客户发送电子邮件通知。
+title: ACSD-65254：通过updateCustomerEmail [!DNL GraphQL]突变更新客户电子邮件后未发送电子邮件通知
+description: 应用ACSD-65254修补程序以修复Adobe Commerce问题，该问题导致在使用updateCustomerEmail [!DNL GraphQL]突变成功更新客户帐户上的电子邮件地址后，未向客户发送电子邮件通知。
 feature: GraphQL, User Account
 role: Admin, Developer
 type: Troubleshooting
 exl-id: a97daceb-98f6-4bb8-9847-692af700c0fd
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 4560f5f5-d00c-5b5d-b61b-369d85ef7a26
+    internal-label: User Account
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+    internal-label: Integrations
+subfeature_v2:
+  - id: e396cff5-f586-484c-89f0-7f1da3308f92
+    internal-label: GraphQL
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '372'
 ht-degree: 0%
-
 ---
-
 # ACSD-65254：通过`updateCustomerEmail` [!DNL GraphQL]突变更新客户电子邮件后未发送电子邮件通知
 
 ACSD-65254修补程序修复了使用`updateCustomerEmail` [!DNL GraphQL]突变更新客户帐户上的电子邮件地址后未向客户发送电子邮件通知的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.65时，此修补程序可用。 修补程序ID为ACSD-65254。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。

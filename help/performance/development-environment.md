@@ -2,13 +2,22 @@
 title: 开发环境建议
 description: 了解Adobe Commerce中的开发环境建议。 了解实施指导和优化策略。
 exl-id: f57396c0-86be-4933-8066-eb51c42fb9e4
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
-
 ---
-
 # 开发环境建议
 
 本页提供了有关Commerce开发环境的建议。
@@ -39,8 +48,8 @@ ht-degree: 0%
   bin/magento setup:static-content:deploy
   ```
 
-  在开发模式下，Magento会按需执行；您无需运行它。
+  在开发模式下，Magento可按需执行；您无需运行它。
 
 ## 虚拟机上的正常页面加载时间
 
-如果您在虚拟机上进行开发，并且加载Magento页面所需的时间超过2秒，请检查您的环境设置。
+如果您在虚拟机上进行开发，并且加载Magento页面所需的时间超过2秒，请查看您的环境设置。

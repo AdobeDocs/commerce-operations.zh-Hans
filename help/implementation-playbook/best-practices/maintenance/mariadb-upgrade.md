@@ -4,13 +4,23 @@ description: 了解如何准备Adobe Commerce数据库以从以前的版本升�
 role: Developer
 feature: Best Practices
 exl-id: b86e471f-e81f-416b-a321-7aa1ac73d27c
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '863'
 ht-degree: 0%
-
 ---
-
 
 # 升级MariaDB的先决条件
 
@@ -21,7 +31,7 @@ ht-degree: 0%
 
 ## Adobe Commerce 2.4.6
 
-从MariaDB 10.5.1开始，在`/* mariadb-5.3 */`、`SHOW CREATE TABLE`、`SHOW COLUMNS`语句的输出以及`DESCRIBE`表的`COLUMN_TYPE`列中，具有旧临时格式的列使用`INFORMATION_SCHEMA.COLUMNS`注释进行标记。 [请参阅MariaDB文档](https://mariadb.com/kb/en/datetime/#internal-format)。
+从MariaDB 10.5.1开始，在`SHOW CREATE TABLE`、`SHOW COLUMNS`、`DESCRIBE`语句的输出以及`INFORMATION_SCHEMA.COLUMNS`表的`COLUMN_TYPE`列中，具有旧临时格式的列使用`/* mariadb-5.3 */`注释进行标记。 [请参阅MariaDB文档](https://mariadb.com/kb/en/datetime/#internal-format)。
 
 由于MariaDB注释，Adobe Commerce无法将日期列映射到正确的数据类型，这可能会导致自定义代码中出现意外行为。
 
@@ -29,7 +39,7 @@ ht-degree: 0%
 
 ### 默认配置
 
-在MariaDB 10.1.2中，从MySQL 5.6引入了一种新的临时格式。`mysql56_temporal_format`系统变量允许数据库在执行更改表或导入数据库时将旧日期格式自动转换为新日期格式。 云基础架构上的Adobe Commerce始终启用`mysql56_temporal_format`的默认配置。
+在MariaDB 10.1.2中，从MySQL 5.6引入了一种新的临时格式。 `mysql56_temporal_format`系统变量允许数据库在执行更改表或导入数据库时将旧日期格式自动转换为新日期格式。 云基础架构上的Adobe Commerce始终启用`mysql56_temporal_format`的默认配置。
 
 ### 迁移日期列
 
@@ -51,7 +61,7 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
 
 ## Adobe Commerce 2.3.5
 
-将云基础架构上的MariaDB服务从版本10.0或10.2升级到版本10.3、10.4或10.5。MariaDB版本10.3及更高版本要求数据库使用动态表行格式，而Adobe Commerce要求为表使用InnoDB存储引擎。 本文介绍如何更新数据库以符合这些MariaDB要求。
+将云基础架构上的MariaDB服务从版本10.0或10.2升级到版本10.3、10.4或10.5。 MariaDB版本10.3及更高版本要求数据库使用动态表行格式，而Adobe Commerce要求为表使用InnoDB存储引擎。 本文介绍如何更新数据库以符合这些MariaDB要求。
 
 准备数据库后，请提交Adobe Commerce支持工单以更新云基础架构上的MariaDB服务版本，然后再继续Adobe Commerce升级过程。
 

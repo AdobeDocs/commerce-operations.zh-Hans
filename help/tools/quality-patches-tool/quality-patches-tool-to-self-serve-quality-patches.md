@@ -4,13 +4,26 @@ description: '[!DNL Quality Patches Tool]允许您应用、还原和查看有关
 feature: Tools and External Services
 role: Admin
 exl-id: a83d3834-841d-4b90-b40a-fda985a85452
-source-git-commit: 81c78439f7c243437b7b76dc80560c847af95ace
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+subfeature_v2:
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '222'
 ht-degree: 0%
-
 ---
-
 # [!DNL Quality Patches Tool]：用于高质量修补程序的自助服务工具
 
 [!DNL Quality Patches Tool]允许您应用、还原和查看有关已安装Adobe Commerce版本（本地和云基础架构）或Magento Open Source可用的质量修补程序的一般信息。

@@ -2,14 +2,23 @@
 title: 使用环境变量的示例
 description: 请参阅有关如何使用环境变量在开发系统中设置共享、系统特定的敏感值的示例。
 exl-id: 98438674-e7f8-4143-9a76-3cc8bf0a73dc
-last-update: 2026-04-28T00:00:00Z
-source-git-commit: 1166b8fbfeef21a51ad6e4e695aed2b25006230e
+last-update: 2026-04-28
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: a3c0eba7bdcd8017e88bdb4df1f45d77fe4bb351
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 0%
-
 ---
-
 # 使用环境变量的示例
 
 此示例说明如何在开发系统中设置共享、系统特定的敏感值，然后使用共享配置、`config.php`和PHP环境变量的组合设置生产系统中的所有值。

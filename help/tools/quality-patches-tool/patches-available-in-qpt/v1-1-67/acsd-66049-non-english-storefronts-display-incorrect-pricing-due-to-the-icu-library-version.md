@@ -5,13 +5,25 @@ feature: Products
 role: Admin, Developer
 type: Troubleshooting
 exl-id: e667d462-87f6-4db5-bf3f-3213edac2f09
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 4067ab89-2e97-5de1-8d98-de8318461a8d
+    internal-label: Products
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
-
 ---
-
 # ACSD-66049：由于ICU库版本，非英语店面显示的定价不正确
 
 ACSD-66049修补程序修复了在旧版PHP环境中（版本63.1到74.1）由于ICU库版本不匹配而导致非英语店面显示错误定价的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.67时，此修补程序可用。 修补程序ID为ACSD-66049。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。

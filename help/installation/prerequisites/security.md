@@ -3,13 +3,27 @@ title: 内部部署安装安全
 description: 了解改进Adobe Commerce本地安装的安全状态的方法。
 feature: Install, Security
 exl-id: 56724a72-c64d-44d4-a886-90d97ae5fb6d
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
-
 ---
-
 # 内部部署安装安全
 
 [Security Enhanced Linux (SELinux)](https://selinuxproject.org/page/Main_Page)使CentOS和Ubuntu管理员能够更好地控制其服务器。 如果您使用的是SELinux *和* Apache必须启动与另一台主机的连接，则必须运行本节中讨论的命令。

@@ -1,22 +1,33 @@
 ---
 title: '[!DNL Commerce Version Tool]疑难解答'
-description: 了解如何对 [!DNL Commerce Version Tool] Composer检测、内部模拟运行检查、注册表缓存、JSON输出和审核日志问题进行故障诊断。
+description: 了解如何对[!DNL Commerce Version Tool]编辑器检测、内部模拟运行检查、注册表缓存、JSON输出和审核日志问题进行故障诊断。
 TQID: 'https://experienceleague.adobe.com/JwRSy7pfM89WoifYUzTVPhR-WrDIvj2A2B8SaEnmyWM'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: eafe79321da03f4778dd9e1b290141ef082a5eaf
+    internal-label: Security
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: 1222
+source-wordcount: '1223'
 ht-degree: 0%
-
 ---
-
 # [!DNL Commerce Version Tool]疑难解答
 
 使用此页面可解决以下常见的[!DNL Commerce Version Tool] ([!DNL CVT])问题：编辑器检测、注册表加载、内部模拟运行修补程序检测、输出生成和审核日志记录。

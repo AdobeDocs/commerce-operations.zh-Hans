@@ -3,13 +3,22 @@ title: 数据迁移的工作方式
 description: 了解Magento 1和Magento 2之间的数据迁移过程，包括术语、工作流图和步骤。
 exl-id: 821492dc-ee5b-4c4a-9479-680ee8c5756d
 topic: Commerce, Migration
-source-git-commit: 65ee7e84800c781577b1e210971a62b430d6300a
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 0%
-
 ---
-
 # 数据迁移的工作方式
 
 本主题简要介绍如何使用[!DNL Data Migration Tool]将数据从Magento 1迁移到Magento 2。
@@ -44,7 +53,7 @@ ht-degree: 0%
 每个步骤中始终执行三个&#x200B;*阶段*，以确保正确迁移数据：
 
 1. **完整性检查**：比较表字段名称、类型和其他信息，以验证Magento 1和2数据结构之间的兼容性。
-1. **数据传输**：从Magento 1和2中按表传输数据表。
+1. **数据传输**：从Magento 1和2逐表传输数据表。
 1. **卷检查**：比较表之间的记录数，以验证传输是否成功。
 
 ![迁移阶段](../../assets/data-migration/MigrationSteps2.png)
@@ -65,7 +74,7 @@ ht-degree: 0%
 
 [[!DNL Data Migration Tool]技术规范](technical-specification.md)
 
-我们很高兴您考虑从世界上最#1的商业平台Magento 1.x迁移到未来的平台Magento 2。 我们非常高兴与大家分享有关该过程（我们称之为迁移）的详细信息。
+我们很高兴您考虑从全球的#1商业平台Magento 1.x迁移到未来的平台Magento 2。 我们非常高兴与大家分享有关该过程（我们称之为迁移）的详细信息。
 
 ## 迁移组件
 
@@ -83,8 +92,9 @@ Magento 2迁移包含四个组件：数据、扩展和自定义代码、主题�
 
 ### 主题和自定义
 
-Magento 2使用新的方法和技术，为商家提供无与伦比的能力，以创造创新的购物体验并扩展到新的水平。 为了充分利用这些优势，开发人员必须对其主题和自定义进行更改。 联机提供了有关创建Magento 2 [主题](https://developer.adobe.com/commerce/frontend-core/guide/themes/)、[布局](https://developer.adobe.com/commerce/frontend-core/guide/layouts/)和[自定义项](https://developer.adobe.com/commerce/frontend-core/guide/layouts/xml-manage)的文档。
+Magento 2使用新的方法和技术，为商家提供了无与伦比的能力，以创造创新的购物体验并扩展到新的水平。 为了充分利用这些优势，开发人员必须对其主题和自定义进行更改。 联机提供了有关创建Magento 2 [主题](https://developer.adobe.com/commerce/frontend-core/guide/themes/)、[布局](https://developer.adobe.com/commerce/frontend-core/guide/layouts/)和[自定义项](https://developer.adobe.com/commerce/frontend-core/guide/layouts/xml-manage)的文档。
 
 ## 迁移工作
 
-与1.x版本（例如，从v1.12到v1.14）之间的升级一样，从Magento 1迁移到Magento 2所需的工作量级别取决于您构建网站的方式及其自定义级别。但是，我们正在不断改进[!DNL Data Migration Tool]（有关更多详细信息，请参阅[更改日志](https://github.com/magento/data-migration-tool/blob/2.3/CHANGELOG.md)）；因此，迁移工作将不断减少。
+与1.x版本（例如，从v1.12到v1.14）之间的升级一样，从Magento 1迁移到Magento 2的工作量级别取决于您构建网站的方式及其自定义级别。
+但是，我们正在不断改进[!DNL Data Migration Tool]（有关更多详细信息，请参阅[更改日志](https://github.com/magento/data-migration-tool/blob/2.3/CHANGELOG.md)）；因此，迁移工作将不断减少。
