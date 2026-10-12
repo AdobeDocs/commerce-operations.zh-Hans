@@ -1,15 +1,29 @@
 ---
 title: '[!UICONTROL bots]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL bots]选项卡。
+description: 了解[!DNL Observation for Adobe Commerce]的[!UICONTROL bots]选项卡。
 exl-id: 741310ca-28fb-4b08-95c7-e8d1fb952018
 feature: Configuration, Observability
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 0%
-
 ---
-
 # [!UICONTROL bots]选项卡
 
 此选项卡包含的信息说明如何识别[!DNL bots]是否以及哪些原因导致站点问题。
@@ -38,7 +52,7 @@ ht-degree: 0%
 
 **[!UICONTROL Experimental Potential Malicious Bots frame]**&#x200B;帧通过12个单独的复杂查询运行。 它检测恶意IP请求签名，然后聚合结果，按降序对结果求和排序。 查询中包含大量的CVE攻击和其他恶意请求的数据签名。 即使这些漏洞被安全修补程序/补丁阻止，并且不会威胁到网站，该请求仍必须由网站处理。 请求量可能会在短时间内变得非常大。 此帧不显示来自IP地址的总请求，而是显示具有指示请求具有可疑意图的信号的请求。
 
-请确保验证该通信是否可疑，并且不是来自可能也在传递有效请求的[!DNL Content Distributed Network] (CDN)地址。 如果确定请求来自CDN IP地址，请与服务提供商联系，帮助阻止可疑流量通过他们的网络。 如果需要阻止地址或请求URL，请参阅Adobe Commerce支持知识库中的[阻止Adobe Commerce在 [!DNL Fastly] 级别](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)上的恶意流量。
+请确保验证该通信是否可疑，并且不是来自可能也在传递有效请求的[!DNL Content Distributed Network] (CDN)地址。 如果确定请求来自CDN IP地址，请与服务提供商联系，帮助阻止可疑流量通过他们的网络。 如果需要阻止地址或请求URL，请参阅Adobe Commerce支持知识库中的[阻止Adobe Commerce在 [!DNL Fastly] 级别](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)上的恶意流量。
 
 ## [!UICONTROL Rate of HTTP request per second (top 25) during requested time period]
 
