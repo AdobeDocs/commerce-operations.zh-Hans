@@ -56,30 +56,30 @@ ACSD-46213修补程序修复了类别树请求仅限于20个类别的问题。 �
 
    <pre>
     <code class="language-graphql">
-    {
-      categoryList(filters: { parent_id: { in: ["3"] } }) {
+    &lbrace;
+      categoryList(filters: { parent_id: { in: ["3"] } }) &lbrace;
         name
         level
         path
         url_path
-        children {
+        children &lbrace;
           id
           level
           name
           path
           url_path
           url_key
-          children {
+          children &lbrace;
             uid
             level
             name
             path
             url_path
             url_key
-          }
-        }
-      }
-    }
+          &rbrace;
+        &rbrace;
+      &rbrace;
+    &rbrace;
     </code>
     </pre>
 

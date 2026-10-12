@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ## [!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]
 
-按队列](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-5.jpeg)列出的![[!DNL RabbitMQ]消息高级摘要状态
+按队列![&#128279;](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-5.jpeg)列出的[!DNL RabbitMQ]消息高级摘要状态
 
 **[!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]**&#x200B;图形显示所选时间范围内[!DNL RabbitMQ]队列已发布的消息数。
 

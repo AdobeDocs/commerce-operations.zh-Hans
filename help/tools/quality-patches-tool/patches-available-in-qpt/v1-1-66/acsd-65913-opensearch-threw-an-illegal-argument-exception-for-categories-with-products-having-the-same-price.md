@@ -47,7 +47,7 @@ ACSD-65913修补程序修复了以下问题：[!DNL OpenSearch]为具有相同�
 
 ## 问题
 
-加载所有产品共享相同价格的类别时，[!DNL OpenSearch]会引发`illegal_argument_exception` （]中的&#x200B;*[参数不能为负*）。
+加载所有产品共享相同价格的类别时，[!DNL OpenSearch]会引发`illegal_argument_exception` （&rbrack;中的&#x200B;*&lbrack;参数不能为负*）。
 
 <u>重现步骤</u>：
 
