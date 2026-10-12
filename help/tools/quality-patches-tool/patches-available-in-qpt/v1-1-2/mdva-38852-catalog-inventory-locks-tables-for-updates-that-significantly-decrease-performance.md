@@ -1,6 +1,6 @@
 ---
 title: MDVA-38852：目录清单锁定了降低性能的表
-description: MDVA-38852修补程序解决了目录清单为更新锁定表的问题，该问题会在发出多个并行订单时显着降低性能。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-38852。 请注意，Adobe Commerce 2.3.6中已修复此问题。
+description: MDVA-38852修补程序解决了目录清单为更新锁定表的问题，该问题会在发出多个并行订单时显着降低性能。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-38852。 请注意，Adobe Commerce 2.3.6中已修复此问题。
 feature: Catalog Management, Inventory, Orders
 role: Admin
 exl-id: ce93130b-8d96-47b8-96c6-da5988b34ae0
@@ -73,7 +73,7 @@ INSERT INTO `quote_payment` (`quote_id`, `method`, `additional_information`) VAL
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

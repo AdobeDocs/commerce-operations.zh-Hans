@@ -43,7 +43,7 @@ ht-degree: 2%
 ]
 ```
 
-了解有关[模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html)的详细信息。
+了解有关[模块](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=zh-Hans)的详细信息。
 
 ## 范围
 
@@ -91,7 +91,7 @@ ht-degree: 2%
 ]
 ```
 
-了解有关[Commerce作用域](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings)的更多信息。
+了解有关[Commerce作用域](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=zh-Hans#scope-settings)的更多信息。
 
 ## 系统
 

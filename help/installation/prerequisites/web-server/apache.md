@@ -2,7 +2,7 @@
 title: 为内部部署安装Apache
 description: 了解如何为本地Adobe Commerce部署安装和配置Apache。 启用所需的模块、重写和“.htaccess”设置。
 feature: Install, Configuration
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047

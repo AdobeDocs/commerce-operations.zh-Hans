@@ -1,6 +1,6 @@
 ---
 title: MDVA-40134：启用共享目录后，GraphQL未返回相关产品
-description: MDVA-40134修补程序修复了在启用共享目录后，GraphQL未返回相关产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-40134。 请注意，Adobe Commerce 2.4.3中已修复此问题。
+description: MDVA-40134修补程序修复了在启用共享目录后，GraphQL未返回相关产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-40134。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: B2B, Catalog Management, GraphQL, Products
 role: Admin
 exl-id: 5d31e042-4396-40ce-8bf1-63ad9a55214d

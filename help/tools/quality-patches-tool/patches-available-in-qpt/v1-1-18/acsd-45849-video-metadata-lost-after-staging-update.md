@@ -1,6 +1,6 @@
 ---
 title: ACSD-45849：暂存更新后视频元数据丢失
-description: ACSD-45849修补程序修复了在应用暂存更新后视频元数据丢失的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.18后，即可使用此修补程序。 修补程序ID为ACSD-45849。 请注意，Adobe Commerce 2.4.4中已修复此问题。
+description: ACSD-45849修补程序修复了在应用暂存更新后视频元数据丢失的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.18后，即可使用此修补程序。 修补程序ID为ACSD-45849。 请注意，Adobe Commerce 2.4.4中已修复此问题。
 feature: Staging, Page Content
 role: Admin
 exl-id: cbab0120-585a-47ef-8ed9-abb2da1ec3d6

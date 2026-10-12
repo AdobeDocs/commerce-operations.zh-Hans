@@ -23,7 +23,7 @@ ht-degree: 0%
 
 <!-- TODO: Remove hide metadata when the library has been integrated with Commerce. -->
 
-[Adobe隐私JavaScript库](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html)是一组工具，可帮助创建访问和删除私有数据的流程。
+[Adobe隐私JavaScript库](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=zh-Hans)是一组工具，可帮助创建访问和删除私有数据的流程。
 
 Adobe Commerce数据跟踪服务可以存储适用于隐私法规的隐私信息，例如[通用数据保护条例(GDPR)](gdpr.md)和[加州消费者隐私法案(CCPA)](ccpa.md)。
 
@@ -51,7 +51,7 @@ AdobePrivacy JS库提供了多种功能，用于管理存储在浏览器中的�
 `retrieveThenRemoveIdentities()`
 ：此函数与`removeIdentities()`类似，因为它检索一组标识并从浏览器中删除它们。
 
-有关使用这些函数的更多信息和示例，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html)。
+有关使用这些函数的更多信息和示例，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=zh-Hans)。
 
 ### 初始化
 
@@ -62,4 +62,4 @@ var adobePrivacy = new AdobePrivacy({});
 ```
 
 构造函数在实例化期间接受带有参数的配置对象。
-有关这些配置参数的列表，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html)。
+有关这些配置参数的列表，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=zh-Hans)。

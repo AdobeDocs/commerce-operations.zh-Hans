@@ -1,6 +1,6 @@
 ---
 title: ACSD-45781：移动设备上不显示商店前端搜索字段
-description: MDVA-45781修补程序解决了在移动设备上不显示商店前端搜索字段的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为MDVA-45781。 请注意，Adobe Commerce 2.4.3中已修复此问题。
+description: MDVA-45781修补程序解决了在移动设备上不显示商店前端搜索字段的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为MDVA-45781。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: Cache, Native Luma Frontend Development, Search
 role: Admin
 exl-id: f761461b-2dd0-45d2-b80d-57793f6f0924

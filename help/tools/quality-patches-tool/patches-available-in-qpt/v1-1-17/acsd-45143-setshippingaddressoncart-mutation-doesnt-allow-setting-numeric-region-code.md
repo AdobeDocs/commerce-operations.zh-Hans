@@ -1,6 +1,6 @@
 ---
 title: ACSD-45143：setShippingAddressesOnCart突变未将数字区域代码设置为“region”
-description: ACSD-45143修补程序修复了setShippingAddressesOnCart突变不允许将数字区域代码设置为“region”的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.17后，即可使用此修补程序。 修补程序ID为ACSD-45143。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+description: ACSD-45143修补程序修复了setShippingAddressesOnCart突变不允许将数字区域代码设置为“region”的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.17后，即可使用此修补程序。 修补程序ID为ACSD-45143。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Orders, Shipping/Delivery, Shopping Cart
 role: Admin
 exl-id: c7d9d1f2-4731-406f-93bd-036f0fe75b1d
