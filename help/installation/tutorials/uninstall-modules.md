@@ -2,13 +2,22 @@
 title: 卸载模块
 description: 了解如何通过可选删除代码、架构和数据来卸载Adobe Commerce模块，以及何时禁用模块而不是卸载它们。
 exl-id: 66879ef5-47c7-4b61-8c7e-78b60441980a
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '754'
 ht-degree: 0%
-
 ---
-
 # 卸载模块
 
 本节讨论如何卸载一个或多个模块。 在卸载过程中，可以选择删除模块的代码、数据库架构和数据库数据。 您可以先创建备份，以便以后恢复数据。
@@ -32,7 +41,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
 
 1. 验证指定的模块是否存在于代码库中，以及是否由Composer安装的包。
 
-   此命令只对定义为Composer包的模块起作用&#x200B;_1&rbrace;。_
+   此命令只对定义为Composer包的模块起作用&#x200B;_1}。_
 
 1. 检查与其他模块的依赖关系，如果存在任何未满足的依赖关系，则终止该命令。
 

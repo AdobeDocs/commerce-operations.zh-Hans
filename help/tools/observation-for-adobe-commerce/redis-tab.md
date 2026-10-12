@@ -1,15 +1,29 @@
 ---
 title: '[!UICONTROL Redis]选项卡'
-description: 了解[!UICONTROL Redis]的 [!DNL Observation for Adobe Commerce]选项卡。
+description: 了解[!DNL Observation for Adobe Commerce]的[!UICONTROL Redis]选项卡。
 exl-id: 9c52350d-45a7-4afe-9dd7-c3968bd84d71
 feature: Configuration, Observability
-source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '256'
 ht-degree: 0%
-
 ---
-
 # [!DNL Redis]选项卡
 
 ## [!UICONTROL Redis Node summary]
@@ -38,7 +52,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Commands per second by node]
 
-节点![每秒的](../../assets/tools/observation-for-adobe-commerce/redis-tab-5.jpg)个命令
+节点](../../assets/tools/observation-for-adobe-commerce/redis-tab-5.jpg)每秒的![个命令
 
 **[!UICONTROL Commands per second by node]**&#x200B;帧显示在所选时间范围内按节点每秒显示的[!DNL Redis]命令。
 
@@ -58,7 +72,7 @@ ht-degree: 0%
 
 自上次数据库保存后的![Redis更改](../../assets/tools/observation-for-adobe-commerce/redis-tab-8.jpg)
 
-[!DNL Redis]驻留在内存中并将信息保存到存储中。 **[!UICONTROL Redis changes since last db save]**&#x200B;帧指示自上次数据库保存到存储后发生的内存更改次数。 有关[持久性的详细说明，请参阅](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)Redis持久性[!DNL Redis's]。
+[!DNL Redis]驻留在内存中并将信息保存到存储中。 **[!UICONTROL Redis changes since last db save]**&#x200B;帧指示自上次数据库保存到存储后发生的内存更改次数。 有关[!DNL Redis's]持久性的详细说明，请参阅[Redis持久性](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)。
 
 ## [!UICONTROL Redis synchronization from Log]
 

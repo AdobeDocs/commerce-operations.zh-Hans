@@ -4,13 +4,25 @@ description: 了解如何修复在云基础架构上部署的Adobe Commerce站�
 role: Developer, Admin
 feature: Best Practices
 exl-id: e40e0564-a4eb-43a8-89dd-9f6c5cedb4a7
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
-
 ---
-
 <!--Consider moving this topic to the Maintenance section-->
 
 # 解决数据库性能问题的最佳实践
@@ -38,7 +50,7 @@ ht-degree: 0%
 如果您的Adobe Commerce项目部署在Pro体系结构上，则可以使用Percona工具包来分析查询。
 
 1. 对MySQL慢查询日志运行`pt-query-digest --type=slowlog`命令。
-   * 要查找慢查询日志的位置，请参阅我们的开发人员文档中的&#x200B;**[!UICONTROL Log locations > Service Logs]**(https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/test/log-locations#service-logs)。
+   * 要查找慢查询日志的位置，请参阅我们的开发人员文档中的&#x200B;**[!UICONTROL Log locations > Service Logs]**(https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations#service-logs)。
    * 请参阅[Percona工具包> pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest)文档。
 1. 根据发现的问题，采取措施修复查询，使其更快地运行。
 

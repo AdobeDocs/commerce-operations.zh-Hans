@@ -3,13 +3,27 @@ title: 部署概述
 description: 了解Commerce应用程序的部署策略。
 feature: Configuration, Deploy
 exl-id: d5ed6fb3-2dd2-49df-802b-6d712ecd9ccf
-source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 0%
-
 ---
-
 # 部署概述
 
 以下主题将讨论将Commerce应用程序部署到Adobe Commerce版本2.2及更高版本的生产站点的过程。 对于拥有大型站点、不想在部署期间经历停机时间的用户，Adobe建议采用此部署方法。
@@ -56,7 +70,7 @@ ht-degree: 0%
 
 ## 管理配置
 
-在12因素应用程序设计[&#128279;](https://12factor.net/config)中的因素3之后进行建模，Commerce现在将每个系统的配置存储在系统本身。 （开发配置设置存储在开发系统中，生产设置存储在生产系统中。）
+在12因素应用程序设计](https://12factor.net/config)中的[因素3之后进行建模，Commerce现在将每个系统的配置存储在系统本身。 （开发配置设置存储在开发系统中，生产设置存储在生产系统中。）
 
 我们提供一种同步系统配置的方法：
 

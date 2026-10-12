@@ -4,13 +4,27 @@ description: 通过使用Web性能工具审核Adobe Commerce店面操作，发�
 role: Admin, User, Developer
 feature: Best Practices
 exl-id: bafae565-9d09-4cc0-8507-e89a11dbd915
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
-
 ---
-
 # 前端性能最佳实践
 
 使用Web性能工具检查Adobe Commerce存储的前端性能。
@@ -37,5 +51,5 @@ ht-degree: 0%
 ## 其他信息
 
 - [管理员用户的索引管理](../../../configuration/cli/manage-indexers.md#configure-indexers)
-- [使用CLI进行索引管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=zh-Hans)
+- [使用CLI进行索引管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
 - [适用于开发人员的索引概述](https://developer.adobe.com/commerce/php/development/components/indexing/)

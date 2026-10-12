@@ -2,13 +2,22 @@
 title: 《加州消费者隐私法案》(CCPA)
 description: 了解加州消费者隐私法案(CCPA) ，该法案扩展了加州消费者决定如何收集、存储和使用其个人信息的权利。
 exl-id: 5df0e745-fb2c-438e-aedd-17fb72be1350
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '421'
 ht-degree: 0%
-
 ---
-
 # 《加州消费者隐私法案》(CCPA)
 
 >[!NOTE]
@@ -26,7 +35,7 @@ CCPA授予消费者以下新权利：
 
 ## CCPA合规性
 
-制定和实施CCPA合规计划需要协调一致的努力。 我们鼓励商家组建一个跨职能团队，并遵循[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html?lang=zh-Hans)中概述的路线图，使他们的公司遵守法规。 作为开发人员，您可能会被邀请作为利益相关者参加，重点是该过程的步骤2到5。 有关详细信息，请参阅[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html?lang=zh-Hans)。
+制定和实施CCPA合规计划需要协调一致的努力。 我们鼓励商家组建一个跨职能团队，并遵循[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html)中概述的路线图，使他们的公司遵守法规。 作为开发人员，您可能会被邀请作为利益相关者参加，重点是该过程的步骤2到5。 有关详细信息，请参阅[CCPA合规性指南](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html)。
 
 1. 组建一个跨职能团队以解决CCPA合规性问题。
 

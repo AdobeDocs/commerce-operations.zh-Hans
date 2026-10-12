@@ -3,13 +3,27 @@ title: 会话存储位置
 description: 了解Adobe Commerce中的会话存储位置和文件管理。 发现存储逻辑和配置选项。
 feature: Configuration, Storage
 exl-id: 43cab98a-5b68-492e-b891-8db4cc99184e
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '279'
 ht-degree: 0%
-
 ---
-
 # 会话存储位置
 
 本主题讨论如何定位会话文件的存储位置。 系统使用以下逻辑来存储会话文件：
@@ -18,9 +32,9 @@ ht-degree: 0%
 - 如果配置了Redis，则会话存储在Redis服务器上；请参阅[将Redis用于会话存储](../cache/redis-session.md)。
 - 如果您使用的是默认的基于文件的会话存储，则会按照显示的顺序将会话存储在以下位置：
 
-   1. 在[`env.php`](#example-in-envphp)中定义的目录
-   1. 在[`php.ini`](#example-in-phpini)中定义的目录
-   1. `<magento_root>/var/session`目录
+  1. 在[`env.php`](#example-in-envphp)中定义的目录
+  1. 在[`php.ini`](#example-in-phpini)中定义的目录
+  1. `<magento_root>/var/session`目录
 
 ## `env.php`中的示例
 
@@ -41,17 +55,17 @@ ht-degree: 0%
 
 ## 管理会话大小
 
-请参阅[用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security-session-management)中的&#x200B;_会话管理_。
+请参阅&#x200B;_用户指南_&#x200B;中的[会话管理](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-session-management)。
 
 ## 垃圾收集配置
 
-为了清理过期的会话，系统根据`gc`指令计算的概率随机调用&#x200B;_（_&#x200B;垃圾回收`gc_probability / gc_divisor`）处理程序。 例如，如果分别将这些指令设置为`1/100`，则表示`1%`的概率（每100个请求一个垃圾收集调用的概率&#x200B;__）。
+为了清理过期的会话，系统根据`gc_probability / gc_divisor`指令计算的概率随机调用`gc` （_垃圾回收_）处理程序。 例如，如果分别将这些指令设置为`1/100`，则表示`1%`的概率（每100个请求一个垃圾收集调用的概率&#x200B;__）。
 
 垃圾收集处理程序使用`gc_maxlifetime`指令，即会话被视为&#x200B;_垃圾桶_&#x200B;并可能被清理的秒数。
 
 在某些操作系统(Debian/Ubuntu)上，默认`session.gc_probability`指令为`0`，该指令可阻止垃圾收集处理程序运行。
 
-您可以覆盖`session.gc_`文件中`php.ini`文件中的`<magento_root>/app/etc/env.php`指令：
+您可以覆盖`<magento_root>/app/etc/env.php`文件中`php.ini`文件中的`session.gc_`指令：
 
 ```php
  'session' => [

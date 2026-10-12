@@ -1,26 +1,40 @@
 ---
 title: '[!UICONTROL MySQL]选项卡'
-description: 了解 [!DNL Observation for Adobe Commerce]的[!UICONTROL MySQL]选项卡。
+description: 了解[!DNL Observation for Adobe Commerce]的[!UICONTROL MySQL]选项卡。
 exl-id: 1d8dd07c-15fd-4ffd-ad10-0d886bf1579e
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1640'
 ht-degree: 0%
-
 ---
-
 # [!UICONTROL MySQL]选项卡
 
 ## [!UICONTROL MySQL% free storage by node]
 
-按节点![&#128279;](../../assets/tools/observation-for-adobe-commerce/mysql-tab-1.jpg)列出的MySQL%可用存储
+按节点](../../assets/tools/observation-for-adobe-commerce/mysql-tab-1.jpg)列出的![MySQL%可用存储
 
 许多问题是由于MySQL存储空间不足(分配给MySQL （`datadir` MySQL配置设置，默认值为`/data/mysql`）或`tmpdir`空间不足。 默认`tmpdir` （MySQL设置）为`/tmp`。 **[!UICONTROL MySQL% free storage by node]**&#x200B;帧查看`/, /tmp`（如果定义为单独的装载）和`/data/mysql`可用存储空间百分比。 从MySQL版本5.7（MariaDB版本10.2）开始，未压缩的`tmp`表将写入文件(ibtmp1)中`/data/mysql`目录的`tmp`表空间中。 默认情况下，此文件将自动展开，无限制。 由于它是一个表空间，因此其大小不会减少，并且在MySQL重新启动时会重置为12 MB。
 
 ## [!UICONTROL MySQL Connections by Node]
 
-按节点![&#128279;](../../assets/tools/observation-for-adobe-commerce/mysql-tab-2.jpg)进行的MySQL连接
+按节点](../../assets/tools/observation-for-adobe-commerce/mysql-tab-2.jpg)进行的![MySQL连接
 
 **[!UICONTROL MySQL Connections by Node]**&#x200B;帧表示数据库节点停机或连接量大的时间段。
 
@@ -70,7 +84,7 @@ ht-degree: 0%
 
 ## [!UICONTROL Galera Log by Host]
 
-按主机![&#128279;](../../assets/tools/observation-for-adobe-commerce/mysql-tab-7.jpg)的galera日志
+按主机](../../assets/tools/observation-for-adobe-commerce/mysql-tab-7.jpg)的![galera日志
 
 **[!UICONTROL Galera Log by Host]**&#x200B;帧与&#x200B;**[!UICONTROL Galera log]**&#x200B;帧相同，不同之处在于它按节点划分，以帮助进行故障排除。
 

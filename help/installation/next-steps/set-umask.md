@@ -3,13 +3,27 @@ title: 设置umask（可选）
 description: 通过限制文件系统权限来改进Adobe Commerce本地安装的安全状态。
 feature: Install, Configuration
 exl-id: 18d65d75-7be0-4488-bf35-4b058e4ae5ea
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
-
 ---
-
 # 设置umask（可选）
 
 Web服务器组必须具有对文件系统中特定目录的写入权限；但是，您可能希望加强安全性，特别是在生产环境中。 我们为您提供了灵活性，让您能够使用[umask](https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html)进一步限制这些权限。

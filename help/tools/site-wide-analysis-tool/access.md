@@ -1,19 +1,28 @@
 ---
-title: 如何访问 [!DNL Site-Wide Analysis Tool]
+title: 如何访问[!DNL Site-Wide Analysis Tool]
 description: 了解如何从Adobe Commerce管理面板访问网站范围的分析工具仪表板。 了解用户权限和角色要求。
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
-
 ---
-
 # 如何访问[!DNL Site-Wide Analysis Tool]
 
 您可以从商店的[!UICONTROL Admin Panel]访问[!DNL Site-Wide Analysis Tool]仪表板。
 
-[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[角色资源](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/user-accounts/permissions-user-roles)的[!UICONTROL Admin]用户使用。
+[!DNL Site-Wide Analysis Tool]服务可在[生产模式](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes)下供有权访问用户[角色资源](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)的[!UICONTROL Admin]用户使用。
 
 >[!NOTE]
 >
@@ -31,7 +40,7 @@ ht-degree: 0%
 
 ### 步骤1：验证权限
 
-验证[!UICONTROL Admin]用户帐户是否有权通过其[分配的用户角色](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/user-accounts/permissions-user-roles)访问[!DNL Site-Wide Analysis Tool]。
+验证[!UICONTROL Admin]用户帐户是否有权通过其[分配的用户角色](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles)访问[!DNL Site-Wide Analysis Tool]。
 
 >[!IMPORTANT]
 >
@@ -50,7 +59,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!UICONTROL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-26852)。
+>如果您已验证用户帐户具有访问[!DNL Site-Wide Analysis Tool]的权限，并且用户在尝试从[!UICONTROL Admin]访问该工具时收到403错误，则云基础架构上的Adobe Commerce实例可能已启用HTTP访问控制。 如果您启用了HTTP身份验证，则不支持[!DNL Site-Wide Analysis Tool]仪表板。 有关解决此问题的更多信息，请参阅我们的[支持文章](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26852)。
 
 ### 步骤2：访问[!DNL Site-Wide Analysis Tool]
 

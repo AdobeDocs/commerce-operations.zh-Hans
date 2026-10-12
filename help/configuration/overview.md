@@ -2,13 +2,22 @@
 title: 配置指南概述
 description: 了解您的 Adobe Commerce 应用程序中可配置的功能与服务。 了解如何管理部署、缓存、安全性以及其他重要设置。
 exl-id: c4997792-5a47-4ae5-903a-7e5d7235e42e
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 12%
-
 ---
-
 # 配置指南
 
 _配置_&#x200B;指南为管理可配置的Commerce应用程序功能和服务提供了参考资料和有限的指导。 负责配置Commerce应用程序的技术用户可以找到以下方面的指导：
@@ -25,8 +34,8 @@ _配置_&#x200B;指南为管理可配置的Commerce应用程序功能和服务�
 
 ## Commerce管理配置
 
-[Commerce用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/config/guide-overview)中有相应的主题，可以帮助您了解Commerce管理中每个配置设置的字段描述。
+[Commerce用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/config/guide-overview)中有相应的主题，可以帮助您了解Commerce管理中每个配置设置的字段描述。
 
 ## 云配置
 
-[!DNL Commerce on cloud infrastructure]使用[配置文件集](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/overview)更新托管环境中的Commerce应用程序功能和服务。 由于Adobe云托管环境的独特性质，您应始终查看[云指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)以了解其他配置要求。
+[!DNL Commerce on cloud infrastructure]使用[配置文件集](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/overview)更新托管环境中的Commerce应用程序功能和服务。 由于Adobe云托管环境的独特性质，您应始终查看[云指南](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)以了解其他配置要求。

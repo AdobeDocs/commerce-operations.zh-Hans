@@ -2,13 +2,22 @@
 title: 管理第三方扩展
 description: 按照以下步骤安装、启用、升级和卸载Adobe Commerce扩展。
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 0%
-
 ---
-
 
 # 管理第三方扩展
 
@@ -20,7 +29,7 @@ ht-degree: 0%
 - 主题（更改店面和管理员的外观）
 - 语言包（将店面和管理员本地化）
 
-本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure-store/extensions)。
+本主题介绍如何使用命令行界面管理您从Commerce Marketplace为&#x200B;_内部部署_&#x200B;项目购买的第三方扩展。 有关云基础架构项目，请参阅[管理扩展](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/extensions)。
 
 您可以使用相同的过程安装&#x200B;_any_&#x200B;扩展；您只需要该扩展的编辑器名称和版本。 要找到它，请打开扩展名的`composer.json`文件并记下`"name"`和`"version"`的值。
 
@@ -156,7 +165,7 @@ bin/magento module:status
    bin/magento setup:upgrade
    ```
 
-1. 重新编译项目：在生产模式下，您可能会收到一条消息，显示“请重新运行Magento编译命令”。 应用程序不会提示您以开发人员模式运行compile命令。
+1. 重新编译项目：在生产模式下，您可能会收到一条消息“请重新运行Magento编译命令”。 应用程序不会提示您以开发人员模式运行compile命令。
 
    ```shell
    bin/magento setup:di:compile

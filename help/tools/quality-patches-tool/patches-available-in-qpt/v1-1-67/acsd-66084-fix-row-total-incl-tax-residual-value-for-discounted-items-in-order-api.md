@@ -5,13 +5,36 @@ feature: Orders, REST, Taxes, Payments, Checkout
 role: Admin, Developer
 type: Troubleshooting
 exl-id: 421c6fe6-b6b1-4f33-acb6-fbd4306bcc4c
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 4820f335-ec9f-5611-8fe3-f5b7e3e56967
+    internal-label: Orders
+  - id: 42e094d8-211b-5acf-b52f-d8979151ab30
+    internal-label: Taxes
+  - id: 3dcbfa9e-51f8-569c-a0e4-7f59098f730f
+    internal-label: Payments
+  - id: 8cd50456-5eb0-5364-922a-f14161feb828
+    internal-label: Checkout
+  - id: c4f010fa-1478-4300-a88d-706fbc036a7a
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: e0ca0e7a-9738-48d1-b98b-615468ab4aaf
+    internal-label: REST API
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
-
 ---
-
 # ACSD-66084：对于订单API中的完全折扣项目，`row_total_incl_tax`返回接近于零而不是0.00
 
 ACSD-66084修补程序修复了在订单API响应中将`row_total_incl_tax`作为近零残值返回，而不是完全折扣项目的0.00返回的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.67时，此修补程序可用。 修补程序ID为ACSD-66084。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
@@ -28,7 +51,7 @@ ACSD-66084修补程序修复了在订单API响应中将`row_total_incl_tax`作�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -37,7 +60,7 @@ ACSD-66084修补程序修复了在订单API响应中将`row_total_incl_tax`作�
 <u>重现步骤</u>：
 
 1. 创建具有价格和特价的产品。 转到&#x200B;**[!UICONTROL Catalog]** > **[!UICONTROL Products]** >单击&#x200B;**[!UICONTROL Add Product]** >在&#x200B;**[!UICONTROL Advanced Pricing]**&#x200B;下将&#x200B;**[!UICONTROL Price]**&#x200B;设置为$25并将&#x200B;**[!UICONTROL Special Price]**&#x200B;设置为$16.99。
-1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Taxes]** > **[!UICONTROL Tax Zones and Rates]**&#x200B;并添加20%的费率。 然后转到&#x200B;**[!UICONTROL Tax Rules]**&#x200B;并创建一个规则并分配
+1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Taxes]** > **[!UICONTROL Tax Zones and Rates]**&#x200B;并添加20%的费率。 然后转到&#x200B;**[!UICONTROL Tax Rules]**并创建一个规则并分配
    **[!UICONTROL Taxable Goods]**&#x200B;作为产品税类。
 1. 创建带100%折扣和优惠券的销售规则。 转到&#x200B;**[!UICONTROL Marketing]** > **[!UICONTROL Promotions]** > **[!UICONTROL Cart Price Rules]**&#x200B;并添加100%折扣的规则，然后使用&#x200B;**[!UICONTROL Specific Coupon]**&#x200B;并输入您的代码。
 1. 转到&#x200B;**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Tax]** >并配置税务设置。
@@ -61,7 +84,7 @@ ACSD-66084修补程序修复了在订单API响应中将`row_total_incl_tax`作�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

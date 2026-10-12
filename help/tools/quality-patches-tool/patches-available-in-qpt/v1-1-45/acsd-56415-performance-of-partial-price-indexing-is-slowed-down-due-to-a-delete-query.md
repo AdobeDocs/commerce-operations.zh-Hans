@@ -5,13 +5,25 @@ feature: Catalog Service
 role: Admin, Developer
 exl-id: c877844e-79d3-4756-97a5-de44e6fb5170
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 4273989f-0bf2-5361-a17a-6909488d18ab
+    internal-label: Catalog Service
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%
-
 ---
-
 # ACSD-56415：由于`DELETE`查询，[!UICONTROL Partial Price Indexing]的性能变慢
 
 ACSD-56415修补程序修复了在数据库具有大量部分价格数据索引时，[!UICONTROL Partial Price Indexing]的性能因`DELETE`查询而减慢的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.45时，此修补程序可用。 修补程序ID为ACSD-56023。 请注意，该问题计划在Adobe Commerce 2.4.7中修复。
@@ -28,7 +40,7 @@ ACSD-56415修补程序修复了在数据库具有大量部分价格数据索引�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -41,15 +53,15 @@ ACSD-56415修补程序修复了在数据库具有大量部分价格数据索引�
 1. 创建&#x200B;*10个客户组*。
 1. 执行以下查询以将产品添加到`_cl`表：
 
-   &grave;&grave;
+   ``
     insert into catalog_product_price_cl (entity_id) select entity_id from catalog_product_entity
- &grave;&grave;
+ ``
 
 1. 执行以下命令以触发部分价格索引过程：
 
-   &grave;&grave;
+   ``
     bin/magento cron:run --group=index --bootstrap=standaloneProcessStarted=1
- &grave;&grave;
+ ``
 
 <u>预期的结果</u>：
 
@@ -64,7 +76,7 @@ ACSD-56415修补程序修复了在数据库具有大量部分价格数据索引�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)
-* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)
+* 云基础架构上的Adobe Commerce： Commerce on Cloud Infrastructure指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)
 
 ## 相关阅读
 
@@ -72,4 +84,4 @@ ACSD-56415修补程序修复了在数据库具有大量部分价格数据索引�
 * [使用[!UICONTROL Quality Patches Tool]指南中的 [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)检查修补程序是否可用于您的Adobe Commerce问题
 * [在Commerce实施行动手册中修改数据库表的最佳实践](/help/implementation-playbook/best-practices/development/modifying-core-and-third-party-tables.md#why-adobe-recommends-avoiding-modifications)
 
-有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。

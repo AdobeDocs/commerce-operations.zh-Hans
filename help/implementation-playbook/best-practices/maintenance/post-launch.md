@@ -4,13 +4,27 @@ description: 通过我们全面的启动后支持和维护最佳实践，确保A
 role: Admin, User, Developer
 feature: Best Practices
 exl-id: f02a13ca-c851-4508-a2bd-e5bc196a330c
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '2297'
 ht-degree: 0%
-
 ---
-
 # Adobe Commerce的启动后支持和维护
 
 上市后支持和维护对于确保Adobe Commerce商店平稳运行、性能良好、安全无虞并继续实现您的业务目标至关重要。 此阶段涉及持续监控、优化、错误修复、更新和用户支持。 以下部分将&#x200B;**启动后支持**&#x200B;划分为关键类别：
@@ -35,7 +49,7 @@ ht-degree: 0%
 
   >[!TIP]
   >
-  >请参阅&#x200B;_云指南_&#x200B;中的[性能监视](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/performance)。
+  >请参阅&#x200B;_云指南_&#x200B;中的[性能监视](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/performance)。
 
 
 - **优化数据库性能**：要在Adobe Commerce Cloud中优化数据库性能，请实施以下操作：
@@ -66,7 +80,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->请参阅&#x200B;_云指南_&#x200B;中的[Fastly服务概述](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly)。
+>请参阅&#x200B;_云指南_&#x200B;中的[Fastly服务概述](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)。
 
 #### 定期安全监控
 
@@ -86,7 +100,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->请参阅&#x200B;_管理员系统指南_&#x200B;中的[安全性](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security)。
+>请参阅&#x200B;_管理员系统指南_&#x200B;中的[安全性](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security)。
 
 #### 错误日志记录和监控
 
@@ -102,7 +116,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关Adobe Commerce Cloud中的日志记录和错误跟踪实践的更多详细信息，请参阅[New Relic日志管理](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/log-management)和[异常监控](/help/tools/site-wide-analysis-tool/exceptions.md)。
+>有关Adobe Commerce Cloud中的日志记录和错误跟踪实践的更多详细信息，请参阅[New Relic日志管理](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/log-management)和[异常监控](/help/tools/site-wide-analysis-tool/exceptions.md)。
 
 ### 安全和更新
 
@@ -110,7 +124,7 @@ ht-degree: 0%
 
 为了保持更新并确保Adobe Commerce Cloud系统的安全性，以下是监控安全补丁和更新的一些关键实践：
 
-- **订阅Adobe Commerce安全警报**：通过[注册来自Adobe的通知](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/systems/security/security)，随时了解安全漏洞。
+- **订阅Adobe Commerce安全警报**：通过[注册来自Adobe的通知](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security)，随时了解安全漏洞。
 
 - **检查发行说明**：定期查看[安全修补程序发行说明](/help/release/release-notes/security/overview.md)，这些发行说明在版本（如2.3.5-p1）中标记为“ — pN”，并包含关键修复和改进。
 
@@ -122,7 +136,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关应用修补程序和维护安全性的更多详细信息和分步说明，请参阅[安全修补程序发行说明](../../../release/release-notes/security/overview.md)和[如何应用安全修补程序](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-obtain-and-apply-security-patches)。 您还应查看[全站点分析工具](/help/tools/site-wide-analysis-tool/access.md)报告。
+>有关应用修补程序和维护安全性的更多详细信息和分步说明，请参阅[安全修补程序发行说明](../../../release/release-notes/security/overview.md)和[如何应用安全修补程序](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-obtain-and-apply-security-patches)。 您还应查看[全站点分析工具](/help/tools/site-wide-analysis-tool/access.md)报告。
 
 #### PCI合规性
 
@@ -132,7 +146,7 @@ ht-degree: 0%
 
 - **使用安全传输协议**：始终通过诸如TLS之类的安全协议传输付款数据，同时进行加密和适当的密钥管理。
 
-- **利用Web应用程序防火墙(WAF)**： Fastly-powered WAF服务可在恶意流量到达您的网站之前阻止恶意流量，从而帮助满足PCI DSS 6.6要求并抵御常见漏洞。 在[此处](/help/implementation-playbook/best-practices/planning/payment-processing-storage.md)和[此处](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly-waf-service)查看更多信息。
+- **利用Web应用程序防火墙(WAF)**： Fastly-powered WAF服务可在恶意流量到达您的网站之前阻止恶意流量，从而帮助满足PCI DSS 6.6要求并抵御常见漏洞。 在[此处](/help/implementation-playbook/best-practices/planning/payment-processing-storage.md)和[此处](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly-waf-service)查看更多信息。
 
 - **限制访问**：确保只有授权人员才能访问敏感付款数据，并[应用访问控制以降低暴露风险](/help/implementation-playbook/best-practices/planning/payment-processing-storage.md)。
 
@@ -202,9 +216,9 @@ ht-degree: 0%
 
 - **自动缩放流量处理**：
 
-  - Adobe Commerce Cloud支持自动缩放，以根据实时流量需求动态调整服务器资源（例如Web节点），从而确保您的商店无需手动干预即可处理高访客量。 请参阅&#x200B;_云指南_&#x200B;中的[自动缩放](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/autoscaling)。
+  - Adobe Commerce Cloud支持自动缩放，以根据实时流量需求动态调整服务器资源（例如Web节点），从而确保您的商店无需手动干预即可处理高访客量。 请参阅&#x200B;_云指南_&#x200B;中的[自动缩放](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling)。
 
-  - Web层和服务层可以独立扩展，添加更多Web节点以增加流量，并扩展数据库或服务节点以在高峰期实现后端性能。 请参阅&#x200B;_云指南_&#x200B;中的[缩放架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)。
+  - Web层和服务层可以独立扩展，添加更多Web节点以增加流量，并扩展数据库或服务节点以在高峰期实现后端性能。 请参阅&#x200B;_云指南_&#x200B;中的[缩放架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture)。
 
 - **性能监视**：
 
@@ -226,17 +240,17 @@ ht-degree: 0%
 
 >[!TIP]
 >
->有关详细指导，请参阅[维护最佳实践](overview.md)、[个性化](https://business.adobe.com/cn/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)和[功能开发](https://business.adobe.com/cn/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)。
+>有关详细指导，请参阅[维护最佳实践](overview.md)、[个性化](https://business.adobe.com/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)和[功能开发](https://business.adobe.com/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization)。
 
 ### 报告和分析
 
-- **Adobe Commerce Intelligence：** Commerce Intelligence是Adobe Commerce的一项核心功能，可提供跨多个数据源的最佳实践见解，从而允许商家做出科学的数据驱动型决策并采取清晰、知情的操作。 请参阅&#x200B;[_Commerce Intelligence用户指南_](https://experienceleague.adobe.com/zh-hans/docs/commerce-business-intelligence/mbi/getting-started)。
+- **Adobe Commerce Intelligence：** Commerce Intelligence是Adobe Commerce的一项核心功能，可提供跨多个数据源的最佳实践见解，从而允许商家做出科学的数据驱动型决策并采取清晰、知情的操作。 请参阅&#x200B;[_Commerce Intelligence用户指南_](https://experienceleague.adobe.com/en/docs/commerce-business-intelligence/mbi/getting-started)。
 
 - **Adobe Analytics：** Adobe Analytics提供了一个强大的解决方案，用于跟踪、分析和优化您的在线商店的性能。 Adobe Analytics帮助电子商务企业更深入地了解客户行为、产品表现、转化率和其他关键指标，从而实现数据驱动型决策。
 
 - **Google Analytics：**&#x200B;使用Google Analytics跟踪客户行为、流量源和转化率。
 
-- **其他Commerce Intelligence工具：** Adobe Commerce包含高级报告。 此功能允许您访问基于您的产品、订单和客户数据的一组动态报告，以及针对您的业务需求定制的个性化仪表板。有关详细信息，请参阅&#x200B;_管理员用户指南_&#x200B;中的[高级报告](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/start/reporting/business-intelligence#advanced-reporting)。
+- **其他Commerce Intelligence工具：** Adobe Commerce包含高级报告。 此功能允许您访问基于您的产品、订单和客户数据的一组动态报告，以及针对您的业务需求定制的个性化仪表板。有关详细信息，请参阅&#x200B;_管理员用户指南_&#x200B;中的[高级报告](https://experienceleague.adobe.com/en/docs/commerce-admin/start/reporting/business-intelligence#advanced-reporting)。
 
 ### 结论
 

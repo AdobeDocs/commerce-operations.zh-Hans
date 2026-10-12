@@ -1,17 +1,27 @@
 ---
 title: MDVA-41631：检索没有可选“电话”值的订单信息时出错
-description: MDVA-41631修补程序修复了以下问题：用户通过 [!DNL GraphQL]检索订单信息时出现错误，且没有可选的“电话”值。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.7后，即可使用此修补程序。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: MDVA-41631修补程序修复了以下问题：用户通过[!DNL GraphQL]检索订单信息时出现错误，且没有可选的“电话”值。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.7后，即可使用此修补程序。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Orders
 role: Admin
 exl-id: e56cea59-ffc1-4520-85ca-136cda613884
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 4820f335-ec9f-5611-8fe3-f5b7e3e56967
+    internal-label: Orders
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
-
 ---
-
 # MDVA-41631：检索没有可选“电话”值的订单信息时出错
 
 MDVA-41631修补程序修复了以下问题：用户通过[!DNL GraphQL]检索订单信息时出现错误，且没有可选的“电话”值。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.7时，此修补程序可用。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
@@ -43,16 +53,16 @@ Adobe Commerce（所有部署方法） 2.4.1 - 2.4.3-p1
 
 <pre>
 <code class="language-graphql">
-&lbrace;
-  customer &lbrace;
+{
+  customer {
     firstname
     lastname
     suffix
     email
 
-    orders(filter:{number:{eq:"000000001"}&#x200B;})&lbrace;
-        items&lbrace;
-          billing_address &lbrace;
+    orders(filter:{number:{eq:"000000001"}}){
+        items{
+          billing_address {
 firstname
 lastname
 street
@@ -62,8 +72,8 @@ region_id
 postcode
 telephone
 country_code
-&rbrace;
-shipping_address &lbrace;
+}
+shipping_address {
 firstname
 lastname
 street
@@ -73,11 +83,11 @@ region_id
 postcode
 telephone
 country_code
-&rbrace;
-        &rbrace;
-    &rbrace;
-  &rbrace;
-&rbrace;
+}
+        }
+    }
+  }
+}
 </code>
 </pre>
 
@@ -94,7 +104,7 @@ country_code
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
@@ -103,4 +113,4 @@ country_code
 * 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
 * [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
+有关QPT中其他可用修补程序的信息，请参阅[!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。

@@ -5,13 +5,26 @@ feature: Tools and External Services
 role: Admin
 exl-id: 4d651c3c-95ad-4b53-bf77-92758acb795d
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+subfeature_v2:
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
-
 ---
-
 # 使用Quality Patches Tool检查Adobe Commerce问题的修补程序
 
 本文概述了Quality Patches Tool (QPT) ，并提供了资源链接，这些资源说明了如何使用QPT。
@@ -39,11 +52,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->QPT仅适用于高质量的修补程序。 [Magento安全中心](/help/release/release-notes/overview.md)提供了安全修补程序。
+>QPT仅适用于高质量的修补程序。 [Magento安全中心](/help/release/release-notes/overview.md)中有安全修补程序。
 
 ## Quality Patches Tool中提供的修补程序
 
-有关可用修补程序的列表，请参阅开发人员文档中的[Quality Patches Tool](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)。
+有关可用修补程序的列表，请参阅开发人员文档中的[Quality Patches Tool](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)。
 
 ## 如何安装和使用Quality Patches工具
 
@@ -55,9 +68,9 @@ ht-degree: 0%
 
 ### 如何在云基础架构上安装和使用QPT for Adobe Commerce
 
-请参阅我们的开发人员文档中的[Cloud for Adobe Commerce >应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)，了解有关如何在Adobe Commerce上安装和使用QPT来应用和还原修补程序的详细信息。
+请参阅我们的开发人员文档中的[Cloud for Adobe Commerce >应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)，了解有关如何在Adobe Commerce上安装和使用QPT来应用和还原修补程序的详细信息。
 
 ## 相关阅读
 
 * 开发人员文档中的[Quality Patches Tool发行说明](/help/tools/quality-patches-tool/release-notes.md)。
-* [如何在支持知识库中应用Adobe](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-apply-a-composer-patch-provided-by-magento)提供的编辑器修补程序。
+* [如何在支持知识库中应用Adobe](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-apply-a-composer-patch-provided-by-magento)提供的编辑器修补程序。

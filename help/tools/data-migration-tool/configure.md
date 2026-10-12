@@ -1,25 +1,34 @@
 ---
-title: 配置 [!DNL Data Migration Tool]
-description: 了解配置 [!DNL Data Migration Tool] 在Magento 1和Magento 2之间传输数据的两种方法。
+title: 配置[!DNL Data Migration Tool]
+description: 了解配置[!DNL Data Migration Tool]在Magento 1和Magento 2之间传输数据的两种方法。
 exl-id: 273be997-8085-4488-a455-f6005a85b406
 topic: Commerce, Migration
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '826'
 ht-degree: 0%
-
 ---
-
 # 配置[!DNL Data Migration Tool]
 
 安装[!DNL Data Migration Tool]后，以下目录包含映射和配置文件：
 
 * Magento Open Source：
-   * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-opensource`：从Magento Open Source 1迁移到Magento Open Source 2的配置和脚本
+  * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-opensource`：从Magento Open Source 1迁移到Magento Open Source 2的配置和脚本
 
 * Adobe Commerce：
-   * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-commerce`：从Magento Open Source 1迁移到Adobe Commerce 2的配置和脚本
-   * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/commerce-to-commerce`：从Adobe Commerce 1迁移到Adobe Commerce 2的配置和脚本
+  * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-commerce`：从Magento Open Source 1迁移到Adobe Commerce 2的配置和脚本
+  * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/commerce-to-commerce`：从Adobe Commerce 1迁移到Adobe Commerce 2的配置和脚本
 
 上述目录包含每个受支持版本的子目录。
 
@@ -198,7 +207,7 @@ ht-degree: 0%
 
 * 忽略表或字段
 
-* 将字段的传输数据调整为Magento 2格式
+* 将传输字段数据改为Magento 2格式
 
 支持的Magento版本的映射文件位于`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc`的子目录中
 
@@ -210,7 +219,7 @@ ht-degree: 0%
 
    1. 绝对文件路径，如 g. `/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. magento/data-migration-tool模块相对文件路径： `etc/opensource-to-opensource/1.9.4.1/map.xml`
-   1. Magento根目录相对文件路径： `app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
+   1. Magento根的相对文件路径： `app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
 
 `<Magento 2 dir>/vendor/magento/data-migration-tool/etc`和`<Magento 2 dir>/vendor/magento/data-migration-tool/etc/<ce version>`目录包含以下配置文件：
 
@@ -219,7 +228,7 @@ ht-degree: 0%
 | 映射文件名 | 描述 |
 | --- | --- |
 | `class-map.xml.dist` | Magento 1和Magento 2之间类映射的字典 |
-| `config.xml.dist` | 指定Magento 1和Magento 2数据库配置、步骤配置以及映射到文件的链接的主配置文件 |
+| `config.xml.dist` | 主配置文件，它指定Magento 1和Magento 2数据库配置、步骤配置以及到映射文件的链接 |
 | *仅限Adobe Commerce*。`customer-attr-document-groups.xml.dist` | 自定义客户属性步骤中使用的表的列表。 |
 | *仅限Adobe Commerce*。`customer-attr-map.xml.dist` | 在自定义客户属性步骤中使用的映射文件。 |
 | `deltalog.xml.dist` | 包含数据库例程设置所需的表列表。 |

@@ -1,17 +1,32 @@
 ---
-title: ACSD-65913： [!DNL OpenSearch] 为具有相同价格的产品的类别抛出illegal_argument_exception
-description: 应用ACSD-65913修补程序以修复Adobe Commerce问题，该问题导致 [!DNL Opensearch] 在包含具有相同价格的所有产品的类别上抛出illegal_argument_exception（“[from]参数不能为负”）。
+title: ACSD-65913： [!DNL OpenSearch]为具有相同价格的产品的类别抛出illegal_argument_exception
+description: 应用ACSD-65913修补程序以修复Adobe Commerce问题，该问题导致[!DNL Opensearch]在包含具有相同价格的所有产品的类别上抛出illegal_argument_exception（“[from]参数不能为负”）。
 feature: Search
 role: Admin, Developer
 type: Troubleshooting
 exl-id: 984db32e-1a0d-4e0a-a83b-7fe909226ed3
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+subfeature_v2:
+  - id: a1d22079-48b9-5e69-9ee6-eb236068ef34
+    internal-label: Search
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '443'
 ht-degree: 0%
-
 ---
-
 # ACSD-65913： [!DNL OpenSearch]为具有相同价格的产品的类别抛出`illegal_argument_exception`
 
 ACSD-65913修补程序修复了以下问题：[!DNL OpenSearch]为具有相同价格的产品的类别抛出`illegal_argument_exception`。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.66时，此修补程序可用。 修补程序ID为ACSD-65913。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
@@ -28,11 +43,11 @@ ACSD-65913修补程序修复了以下问题：[!DNL OpenSearch]为具有相同�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
-加载所有产品共享相同价格的类别时，[!DNL OpenSearch]会引发`illegal_argument_exception` （&rbrack;中的&#x200B;*&lbrack;参数不能为负*）。
+加载所有产品共享相同价格的类别时，[!DNL OpenSearch]会引发`illegal_argument_exception` （]中的&#x200B;*[参数不能为负*）。
 
 <u>重现步骤</u>：
 
@@ -74,7 +89,7 @@ ACSD-65913修补程序修复了以下问题：[!DNL OpenSearch]为具有相同�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

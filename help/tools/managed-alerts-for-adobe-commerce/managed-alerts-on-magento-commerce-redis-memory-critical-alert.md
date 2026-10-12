@@ -1,16 +1,47 @@
 ---
-title: Adobe Commerce上的托管警报： [!DNL Redis] 内存严重警报
-description: 本文提供了在 [!DNL New Relic]中收到Adobe Commerce的 [!DNL Redis] 内存严重警报时的故障排除步骤。 需要立即采取措施来解决问题。
+title: Adobe Commerce上的托管警报： [!DNL Redis]内存严重警报
+description: 本文提供当您在[!DNL New Relic]中收到Adobe Commerce的[!DNL Redis]内存严重警报时的故障排除步骤。 需要立即采取措施来解决问题。
 feature: Cache, Categories, Observability, Services, Support, Tools and External Services, Variables
 role: Admin
 exl-id: 1233889e-8c02-4ad6-b12c-683010b7bf35
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+  - id: c18ed297-2187-4aec-affb-9d9654eca6fc
+    internal-label: Catalog management
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+  - id: 8d0b446f-5b16-5a10-b272-01143504a11c
+    internal-label: System
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
+  - id: e91a50b1-0b31-436e-9033-00e4776e94cb
+    internal-label: Categories
+  - id: a59f76dc-e003-5617-951e-dffa5bd3de81
+    internal-label: Support
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+  - id: 2191e157-828a-5358-ad69-ebcaa8402915
+    internal-label: Variables
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '703'
 ht-degree: 0%
-
 ---
-
 # Adobe Commerce上的托管警报： [!DNL Redis]内存严重警报
 
 本文提供当您在[!DNL New Relic]中收到Adobe Commerce的[!DNL Redis]内存严重警报时的故障排除步骤。 需要立即采取措施来解决问题。 根据您选择的警报通知渠道，警报将类似于以下内容。
@@ -23,7 +54,7 @@ ht-degree: 0%
 
 ## 问题
 
-如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，用于通过支持和工程部门的分析为商家提供一组标准警报。
+如果您已为Adobe Commerce](managed-alerts-for-magento-commerce.md)注册了[托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，用于通过支持和工程部门的分析为商家提供一组标准警报。
 
 **<u>做！</u>**
 
@@ -43,13 +74,13 @@ ht-degree: 0%
 
 **由于这是一个严重警报，强烈建议您在尝试解决问题之前完成步骤1（从步骤2开始）。**
 
-1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅Commerce支持知识库中的[跟踪您的支持工单](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已经收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
+1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅Commerce支持知识库中的[跟踪您的支持工单](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已经收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
 
    * 联系原因：选择&#x200B;**[!UICONTROL New Relic CRITICAL alert received]**。
    * 警报的说明。
    * [[!DNL New Relic] 事件链接](https://docs.newrelic.com/docs/alerts-applied-intelligence/new-relic-alerts/alert-incidents/view-violation-event-details-incidents/)。 这包含在您的[Adobe Commerce托管警报](managed-alerts-for-magento-commerce.md)中。
 
-1. 如果不存在支持票证，请转到[one.newrelic.com](https://login.newrelic.com) > **[!UICONTROL Infrastructure]** > **[!UICONTROL Third-party services]**&#x200B;页面检查[!DNL Redis]已用内存是否正在增加或减少，然后选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
+1. 如果不存在支持票证，请转到[one.newrelic.com](https://login.newrelic.com) > **[!UICONTROL Infrastructure]** > **[!UICONTROL Third-party services]**&#x200B;页面检查[!DNL Redis]已用内存是否正在增加或减少，然后选择[!DNL Redis]仪表板。 如果它稳定或增大，请[提交支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)以升级群集，或将`maxmemory`限制提高到下一级别。
 1. 如果您无法确定[!DNL Redis]内存消耗增加的原因，请查看近期趋势以确定近期代码部署或配置更改（例如，新客户组和目录的大幅更改）中存在的问题。 建议您查看过去七天的活动，以了解代码部署或更改中的任何关联。
 1. 检查第三方扩展是否存在行为不端：
 
@@ -59,7 +90,7 @@ ht-degree: 0%
 1. 如果上述步骤不能帮助您识别或排除问题的根源，请考虑启用L2缓存以减少应用程序与[!DNL Redis]之间的网络流量。 有关什么是L2缓存的一般信息，请参阅《Commerce配置指南》中的[Adobe Commerce应用程序中的L2缓存](/help/configuration/cache/level-two-cache.md)。 要为云基础架构启用二级缓存，请尝试以下操作：
 
    * 如果版本低于2002.1.2，请升级ECE工具。
-   * 使用[使用REDIS\_BACKEND变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)并更新`.magento.env.yaml`文件来配置二级缓存：
+   * 使用[使用REDIS\_BACKEND变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#redis_backend)并更新`.magento.env.yaml`文件来配置二级缓存：
 
    ```yaml
    stage:

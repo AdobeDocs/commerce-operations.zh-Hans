@@ -3,13 +3,27 @@ title: 文件系统访问权限
 description: 请参阅如何为开发和生产系统设置Commerce应用程序文件系统的所有者或所有者。
 feature: Configuration, Roles/Permissions
 exl-id: 95b27db9-5247-4f58-a9af-1590897d73db
-source-git-commit: f9a135fc63574ccbecd3f564a87fc5c4ac03f009
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: e439352c-5b67-587d-b34e-d2a0aa5a0242
+    internal-label: Roles/Permissions
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '887'
 ht-degree: 0%
-
 ---
-
 # 文件系统访问权限
 
 本节讨论如何为开发和生产系统设置Commerce文件系统的所有者或所有者。 在继续之前，请查看[文件系统所有权和权限概述](../../installation/prerequisites/file-system/overview.md)中讨论的概念。
@@ -24,9 +38,9 @@ ht-degree: 0%
 
   相反，您拥有单独的用户：
 
-   - 运行Admin和storefront的Web服务器用户。
+  - 运行Admin和storefront的Web服务器用户。
 
-   - _命令行用户_，这是可用于登录到服务器的本地用户帐户。 此用户运行Commerce cron作业和命令行实用程序。
+  - _命令行用户_，这是可用于登录到服务器的本地用户帐户。 此用户运行Commerce cron作业和命令行实用程序。
 
 ## 共享托管的生产文件系统所有权（一个用户）
 

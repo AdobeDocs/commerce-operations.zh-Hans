@@ -2,14 +2,23 @@
 title: 配置锁定提供程序
 description: 执行以下步骤，防止重复的cron作业和cron组在Adobe Commerce部署上运行。
 exl-id: c54e05b7-38fd-4731-bc77-a873b44d0ae8
-last-update: 2026-08-19T00:00:00Z
-source-git-commit: 3c67ddaf060b11e58a101b2d45417f3779a5312b
+last-update: 2026-08-19
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: a3c0eba7bdcd8017e88bdb4df1f45d77fe4bb351
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
-
 ---
-
 # 配置锁定提供程序
 
 运行此命令之前，必须执行以下&#x200B;*或*&#x200B;操作，必须[安装应用程序](../advanced.md)：
@@ -27,7 +36,7 @@ ht-degree: 0%
 
 默认情况下，Adobe Commerce使用数据库保存锁定。 如果您的服务器上有多个节点，我们建议使用Zookeeper作为锁定提供程序。
 
-如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud)。
+如果您在云基础架构上运行Adobe Commerce，则无需配置锁定提供程序设置。 应用程序在预配过程中为Pro项目配置文件锁定提供程序。 查看[云变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud)。
 
 ### 命令用法
 

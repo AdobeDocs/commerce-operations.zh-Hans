@@ -2,13 +2,22 @@
 title: 高级JavaScript捆绑
 description: 了解Adobe Commerce中的高级JavaScript捆绑包。 了解实施指导和优化策略。
 exl-id: 81a313f8-e541-4da6-801b-8bbd892d6252
-source-git-commit: 319f3232d1ba5f5ed7cdd10ce85b9d7ffbeec89a
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2301'
 ht-degree: 0%
-
 ---
-
 # 高级JavaScript捆绑
 
 捆绑JavaScript模块以获得更好的性能，需要减少两个方面：
@@ -48,7 +57,7 @@ Commerce捆绑包可减少每个页面的连接数，但对于每个页面请求
 
 >[!NOTE]
 >
->我们不建议使用&#x200B;**[!UICONTROL Merge JavaScript Files]**。 此设置仅针对页面中HEAD部分同步加载的JavaScript而设计，可能会导致捆绑和[!DNL RequireJS]逻辑无法正常工作。 它仅供向后兼容性使用，启用HTTP/2时性能不会受到影响。
+>我们不建议使用&#x200B;**[!UICONTROL Merge JavaScript Files]**。 此设置仅针对页面的HEAD部分中同步加载的JavaScript而设计，可能会导致捆绑和[!DNL RequireJS]逻辑无法正常工作。 它仅供向后兼容性使用，启用HTTP/2时性能不会受到影响。
 >如果您已启用&#x200B;**[!UICONTROL Merge JavaScript Files]**&#x200B;并遇到问题，请尝试在应用任何修补程序之前禁用它。 如果无法禁用合并，请参阅[ACSD-67908](../tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-67908.md)。
 
 要从命令行启用内置合并，请执行以下操作：
@@ -183,7 +192,7 @@ php -f bin/magento config:set dev/js/merge_files 1
 
 #### 要使用[!DNL PhantomJS]：
 
-在Commerce根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[!DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
+在Commerce根目录中，创建一个名为`deps.js`的新文件并复制下面的代码。 此代码使用[！DNL [!DNL PhantomJS]]打开一个页面，并等待浏览器加载所有页面资产。 然后，它输出给定页面的所有[!DNL RequireJS]依赖项。
 
 ```javascript
 "use strict";

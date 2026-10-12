@@ -4,13 +4,23 @@ description: 了解MySQL触发器和从属连接如何影响Commerce站点性能
 role: Developer
 feature: Best Practices
 exl-id: 7c2f51fd-9333-4954-bd35-79c2de3cb2ff
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
-
 ---
-
 # MySQL配置最佳实践
 
 >[!NOTE]
@@ -48,7 +58,7 @@ ht-degree: 0%
 
 - 如果您有在执行触发器时写入某些数据的自定义触发器，请将此逻辑移动到直接写入审计表。 例如，通过在应用程序代码中添加其他查询，在要为其创建触发器的查询之后。
 - 查看现有的自定义触发器，并考虑删除它们并直接从应用程序端写入表。 使用[`SHOW TRIGGERS` SQL语句](https://dev.mysql.com/doc/refman/8.0/en/show-triggers.html)检查数据库中的现有触发器。
-- 如需其他帮助、问题或顾虑，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
+- 如需其他帮助、问题或顾虑，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 ## 从属连接
 
@@ -62,7 +72,7 @@ Adobe Commerce可以异步读取多个数据库。 如果您预计部署在云�
 
 ### 配置
 
-在云基础架构上的Adobe Commerce中，您可以通过设置[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)变量来覆盖MYSQL从属连接的默认配置。 将此变量设置为`true`可自动使用到数据库的只读连接。
+在云基础架构上的Adobe Commerce中，您可以通过设置[MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection)变量来覆盖MYSQL从属连接的默认配置。 将此变量设置为`true`可自动使用到数据库的只读连接。
 
 **启用MySQL从属连接**：
 

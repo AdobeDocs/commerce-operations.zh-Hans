@@ -2,13 +2,22 @@
 title: 使用Nginx设置多个网站
 description: 按照本教程使用Nginx设置多个网站。
 exl-id: f13926a2-182c-4ce2-b091-19c5f978f267
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 0%
-
 ---
-
 # 使用Nginx设置多个网站
 
 我们假定：
@@ -17,7 +26,7 @@ ht-degree: 0%
 
   在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
 
-  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[设置多个网站或商店](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure-store/multiple-sites)。
+  在云基础架构上设置Adobe Commerce需要执行其他任务。 完成本主题中讨论的任务后，请参阅&#x200B;_Commerce on Cloud Infrastructure指南_&#x200B;中的[设置多个网站或商店](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/multiple-sites)。
 
 - 在一个虚拟主机文件中接受多个域或为每个网站使用一个虚拟主机；虚拟主机配置文件位于`/etc/nginx/sites-available`中。
 - 您仅对本教程中讨论的修改使用了Commerce提供的`nginx.conf.sample`。
@@ -105,7 +114,7 @@ ht-degree: 0%
    ln -s /etc/nginx/sites-available/magento magento
    ```
 
-有关map指令的更多详细信息，请参阅有关map指令[&#128279;](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)的nginx文档。
+有关map指令的更多详细信息，请参阅有关map指令](http://nginx.org/en/docs/http/ngx_http_map_module.html#map)的[nginx文档。
 
 
 **要创建多个虚拟主机**：
@@ -280,7 +289,7 @@ bin/magento cache:clean config full_page
 >[!INFO]
 >
 >- 在托管环境中部署多个网站可能需要执行其他任务；有关更多信息，请咨询您的托管提供商。
->- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅&#x200B;_云基础架构上的Commerce指南_&#x200B;中的[设置多个云网站或商店](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure-store/multiple-sites)。
+>- 在云基础架构上设置Adobe Commerce需要执行其他任务；请参阅&#x200B;_云基础架构上的Commerce指南_&#x200B;中的[设置多个云网站或商店](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/multiple-sites)。
 
 ### 故障排除
 

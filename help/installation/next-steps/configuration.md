@@ -3,13 +3,27 @@ title: 配置应用程序
 description: 了解Adobe Commerce内部部署所需的安装后配置。
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '819'
 ht-degree: 0%
-
 ---
-
 # 配置应用程序
 
 现在您已安装Adobe Commerce，您需要对其进行配置。 本主题提供了一些推荐的配置设置。
@@ -26,7 +40,7 @@ UNIX任务计划程序cron对应用程序的日常操作至关重要。 它计�
 
 安装后，我们建议执行以下操作：
 
-* 确保正确设置您的文件所有权和权限[&#128279;](../prerequisites/file-system/configure-permissions.md)
+* 确保正确设置您的文件所有权和权限[](../prerequisites/file-system/configure-permissions.md)
 * 我们强烈建议[将默认管理员URI](../tutorials/admin-uri.md)从`admin`更改为其他内容
 * 确保正确设置[`X-Frame-Option` HTTP标头](../../configuration/security/xframe-options.md)。
 * 通过[保护您的模板](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting)，采取防范措施以防止跨站点脚本(XSS)
@@ -56,7 +70,7 @@ UNIX `logrotate`实用程序使您能够管理生成大量日志文件的系统�
 有关更多信息，请参阅以下内容之一：
 
 * [HowTo：包含十个示例的终极日志旋转命令教程](https://www.thegeekstuff.com/2010/07/logrotate-examples)
-* [栈叠Exchange](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
+* [栈栈交换](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
 * [`logrotate`手册页](https://linuxconfig.org/logrotate-8-manual-page)
 
 >[!AVAILABILITY]
@@ -65,7 +79,7 @@ UNIX `logrotate`实用程序使您能够管理生成大量日志文件的系统�
 >
 >* 入门级环境没有日志轮换。
 >
->* 无法在Pro集成环境中配置日志轮换。 您必须实施自定义解决方案/脚本，并[配置cron](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)以根据需要运行脚本。
+>* 无法在Pro集成环境中配置日志轮换。 您必须实施自定义解决方案/脚本，并[配置cron](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property)以根据需要运行脚本。
 
 ### 设置iptables规则以启用各种服务进行通信
 

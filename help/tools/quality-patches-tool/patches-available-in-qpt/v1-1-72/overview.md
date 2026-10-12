@@ -1,16 +1,31 @@
 ---
-title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.72
-description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.72中提供的修补程序所修复的问题。
+title: 概述：[!DNL Quality Patches Tool] (QPT) v1.1.72
+description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.72中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: ac3f3b37b5c5705722b411f92be0ba21c6155449
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+subfeature_v2:
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '276'
 ht-degree: 0%
-
 ---
-
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.72
 
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.72中提供的修补程序所修复的问题。
@@ -18,9 +33,9 @@ ht-degree: 0%
 QPT v1.1.72包含以下修补程序：
 
 1. **ACSD-66807**： `report_viewed_product_index`表显示的产品页面查看次数不正确。
-1. **ACSD-67187**：限制到非默认网站的管理员用户看到此错误，*“*”请至少创建一个公共共享目录以继续*，并且无法访问公司网格上的&#x200B;**[!UICONTROL Add New Company]**&#x200B;按钮。
+1. **ACSD-67187**：限制到非默认网站的管理员用户看到错误，*“*&#x200B;请至少创建一个公共共享目录以继续*，并且无法访问公司网格上的&#x200B;**[!UICONTROL Add New Company]**&#x200B;按钮。
 1. **ACSD-67383**：以具有两个公司管理员帐户的客户的身份在同一会话中登录时出错。
-1. **ACSD-67424**： `updated_at` `GET /carts/search` API响应中的[!DNL REST]值与使用可协商引号时&#x200B;**[!UICONTROL Admin panel]**&#x200B;中显示的值不匹配。
+1. **ACSD-67424**： `GET /carts/search` [!DNL REST] API响应中的`updated_at`值与使用可协商引号时&#x200B;**[!UICONTROL Admin panel]**&#x200B;中显示的值不匹配。
 1. **ACSD-67518**：当行数超过批次大小时，高级报表会生成重复的标题行。
 1. **ACSD-67639**：为&#x200B;**[!UICONTROL Dynamic Price]**&#x200B;设置为&#x200B;*No*&#x200B;的捆绑产品创建贷项通知单失败。
 1. **ACSD-67696**：缓存刷新后，`media_gallery`条目未返回到Cart GraphQL产品节点中。

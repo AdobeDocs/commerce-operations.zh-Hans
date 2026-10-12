@@ -2,13 +2,22 @@
 title: 修补程序的工作方式
 description: 了解Adobe Commerce的各种类型的修补程序及其工作方式。
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
-
 ---
-
 # 修补程序的工作方式
 
 >[!WARNING]
@@ -43,7 +52,7 @@ ht-degree: 0%
 
 单个修补程序包含针对特定问题的低影响质量修复。 这些修复适用于最新支持的次要版本（例如2.4.x），但在先前支持的次要版本（例如2.3.x）中可能缺失。 Adobe会根据需要发布各个修补程序。
 
-使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}应用单个修补程序。
+使用[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}应用单个修补程序。
 
 >[!NOTE]
 >
@@ -62,7 +71,7 @@ ht-degree: 0%
 要创建自定义修补程序，请执行以下操作：
 
 1. 在本地项目中创建一个`patches/composer`目录。
-1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[&#128279;](https://github.com/magento/magento2/issues/6474)的[`2d31571`#64741&rbrace;承诺。](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)
+1. 确定要用于修补程序的GitHub提交或拉取请求。 此示例使用链接到GitHub问题[](https://github.com/magento/magento2/issues/6474)的[`2d31571`#64741}承诺。](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede)
 1. 将`.patch`或`.diff`扩展附加到提交URL。 对较小的文件大小使用`.diff`。 例如：[https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
 1. 将页面另存为`patches/composer`目录中的文件。 例如，`github-issue-6474.diff`。
 1. 编辑文件并从所有路径中删除`app/code/<VENDOR>/<PACKAGE>`，使其相对于`vendor/<VENDOR>/<PACKAGE>`目录。
@@ -92,10 +101,10 @@ index c8a6fef58d31..7d01c195791e 100644
 
 可以使用以下任一方法应用修补程序：
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [命令行](/help/upgrade/patches/apply.md#command-line)
 - [Composer](/help/upgrade/patches/apply.md#composer)
 
 >[!NOTE]
 >
->要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅&#x200B;_Commerce on Cloud指南_&#x200B;中的[应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+>要将修补程序应用到Adobe Commerce on Cloud Infrastructure项目，请参阅&#x200B;_Commerce on Cloud指南_&#x200B;中的[应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。

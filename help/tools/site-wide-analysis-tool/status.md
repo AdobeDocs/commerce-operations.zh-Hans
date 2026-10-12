@@ -1,14 +1,23 @@
 ---
 title: 状态属性
-description: 了解 [!DNL Site-Wide Analysis Tool]中的不同状态信息。
+description: 了解[!DNL Site-Wide Analysis Tool]中的不同状态信息。
 exl-id: 3135f5f2-ce09-4118-bfff-30801cc86ec8
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
-
 ---
-
 # 状态属性
 
 以下状态信息将显示在页面顶部的[!DNL Site-Wide Analysis Tool]屏幕中。

@@ -2,15 +2,29 @@
 title: 为内部部署安装Nginx
 description: 了解如何为本地Adobe Commerce部署安装和配置Nginx Web服务器。 设置PHP-FPM和虚拟主机。
 feature: Install, Configuration
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 0%
-
 ---
-
 # 为内部部署安装Nginx {#nginx}
 
 本指南将指导您完成为Adobe Commerce内部部署安装Nginx以及配置Commerce所需的Nginx设置。 其中包括针对Ubuntu和CentOS的特定于操作系统的过程，以及配置PHP-FPM的指南。 Adobe建议遵循本指南中提供的配置说明，以保留Commerce应用程序的功能和安全性。

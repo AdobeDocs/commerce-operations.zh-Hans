@@ -7,23 +7,37 @@ autotag-review: '2026-06-22T20:28:12.484Z'
 TQID: 'https://experienceleague.adobe.com/oDoZ1o2IWXsDTo84XQygWZYVmfVHWbk-CuqaU47laU4'
 product_v2:
   - id: b974b164-8a4e-43b8-a9e2-8e67ec131677
+    internal-label: Commerce on Prem
   - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+    internal-label: Commerce on Cloud
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 8c5dc151b00fd73e939c32fdc083fb0e8fc41dc8
+    internal-label: Implementation
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: 536
+source-wordcount: '536'
 ht-degree: 0%
-
 ---
-
 # 缓存概述和配置选项
 
 Adobe Commerce使用多个缓存层来减少重复处理，降低数据库负载，并缩短响应时间。 这些层在请求和资产投放的不同时间点运行：
@@ -56,7 +70,7 @@ Commerce应用程序缓存的组织方式如下：
 HTTP全页缓存会在HTTP或CDN层存储完整的响应。 对于生产部署：
 
 - **Adobe Commerce本地**—Adobe建议使用[Varnish](config-varnish.md)进行全页缓存。 Varnish在Web服务器前面充当反向代理。
-- 云基础架构上的&#x200B;**Adobe Commerce**&#x200B;使用[Fastly](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly){target="_blank"}作为边缘缓存层和全页缓存层。 云基础架构不使用单独管理的清漆服务。
+- 云基础架构上的&#x200B;**Adobe Commerce**&#x200B;使用[Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly){target="_blank"}作为边缘缓存层和全页缓存层。 云基础架构不使用单独管理的清漆服务。
 
 >[!NOTE]
 >
@@ -79,7 +93,7 @@ Commerce可以通过向静态资源（如CSS、JavaScript和图像）的URL添�
 | 任务 | 内部部署 | 云基础架构 |
 | --- | --- | --- |
 | 应用程序缓存后端 | [缓存后端选项和存储引用](cache-options.md) | [Valkey和Redis服务配置的最佳实践](../../implementation-playbook/best-practices/planning/redis-valkey-service-configuration.md) |
-| HTTP全页缓存 | [配置清漆](config-varnish.md) | [Fastly服务概述](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly) |
+| HTTP全页缓存 | [配置清漆](config-varnish.md) | [Fastly服务概述](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly) |
 
 以下任务适用于所有部署类型：
 

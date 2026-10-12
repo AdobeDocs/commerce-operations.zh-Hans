@@ -2,13 +2,22 @@
 title: 技术详细信息
 description: 阅读有关管道部署、配置类型和推荐的工作流的技术详细信息。
 exl-id: a396d241-f895-4414-92af-3abf3511e62a
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1282'
 ht-degree: 0%
-
 ---
-
 # 技术详细信息
 
 本主题讨论有关Commerce 2.2及更高版本中管道部署的技术实施详细信息。 改进可以分为以下几个方面：
@@ -69,16 +78,16 @@ ht-degree: 0%
 - 您不能在“管理员”中启用或禁用缓存类型
 - 开发人员设置不可用（**商店** >设置> **配置** >高级> **开发人员**），包括：
 
-   - 简化CSS、JavaScript和HTML
-   - 合并CSS和JavaScript
-   - 服务器端或客户端LESS编译
-   - 内联翻译
-   - 如前所述，`config.php`或`env.php`中的任何配置设置均被锁定，无法在管理员中编辑。
-   - 您只能将管理员区域设置更改为已部署主题使用的语言
+  - 简化CSS、JavaScript和HTML
+  - 合并CSS和JavaScript
+  - 服务器端或客户端LESS编译
+  - 内联翻译
+  - 如前所述，`config.php`或`env.php`中的任何配置设置均被锁定，无法在管理员中编辑。
+  - 您只能将管理员区域设置更改为已部署主题使用的语言
 
-     下图显示了Admin中的&#x200B;**帐户设置** > **界面区域设置**&#x200B;列表的一个示例，该列表只显示两个已部署的区域设置：
+    下图显示了Admin中的&#x200B;**帐户设置** > **界面区域设置**&#x200B;列表的一个示例，该列表只显示两个已部署的区域设置：
 
-     ![您只能将管理员区域设置更改为已部署的区域设置](../../assets/configuration/split-deploy-admin-locale.png)
+    ![您只能将管理员区域设置更改为已部署的区域设置](../../assets/configuration/split-deploy-admin-locale.png)
 
 - 无法使用“管理员”更改任何范围的区域设置配置。
 

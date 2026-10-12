@@ -3,13 +3,27 @@ title: 软件建议
 description: 了解Adobe Commerce的软件要求和建议。 探索生产支持的版本和配置最佳实践。
 feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
-source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1488'
 ht-degree: 0%
-
 ---
-
 # 软件推荐
 
 我们需要以下软件用于[!DNL Commerce]的生产实例：
@@ -132,7 +146,7 @@ memory_limit=1G
 
 #### Realpath_cache配置
 
-要提高[!DNL Commerce]性能，请在`realpath_cache`文件中添加或更新以下推荐的`php.ini`设置。 此配置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找它们。 请参阅PHP文档中的[性能调整](https://www.php.net/manual/en/ini.core.php)。
+要提高[!DNL Commerce]性能，请在`php.ini`文件中添加或更新以下推荐的`realpath_cache`设置。 此配置允许PHP进程缓存文件的路径，而不是在每次加载页面时查找它们。 请参阅PHP文档中的[性能调整](https://www.php.net/manual/en/ini.core.php)。
 
 ```text
 realpath_cache_size=10M
@@ -151,7 +165,7 @@ opcache.validate_timestamps=0
 opcache.enable_cli=1
 ```
 
-在微调opcache的内存分配时，请考虑Magento代码库和您的所有扩展的大小。 Magento的性能团队使用前面的示例中的值进行测试，因为它在opcache中提供了足够的空间来容纳平均已安装的扩展数。
+在微调opcache的内存分配时，请考虑Magento代码库的大小以及您的所有扩展。 Magento的性能团队使用前面的示例中的值进行测试，因为它在opcache中提供了足够的空间来容纳平均已安装的扩展数。
 
 如果您的计算机内存不足，但未安装许多扩展或自定义设置，请使用以下设置获得类似结果：
 
@@ -202,7 +216,7 @@ Magento完全支持Nginx和Apache Web服务器。 [!DNL Commerce]在`<magento_ho
 
 ## [!DNL Varnish]
 
-Magento强烈建议使用[!DNL Varnish]作为商店的整页缓存服务器。 PageCache模块仍存在于代码库中，但应仅将其用于开发目的。 它不应与[!DNL Varnish]一起使用，也不应替代。
+Magento强烈建议使用[!DNL Varnish]作为存储区的全页缓存服务器。 PageCache模块仍存在于代码库中，但应仅将其用于开发目的。 它不应与[!DNL Varnish]一起使用，也不应替代。
 
 在Web层前面的单独服务器上安装[!DNL Varnish]。 它应接受所有传入请求并提供缓存的页面副本。 为了允许[!DNL Varnish]有效地处理安全页面，可以将SSL终止代理置于[!DNL Varnish]之前。 Nginx可用于此目的。
 
@@ -220,9 +234,9 @@ Magento强烈建议使用[!DNL Varnish]作为商店的整页缓存服务器。 P
 
 如果您的网站不需要部署大量区域设置，并且您的服务器与大多数客户位于同一区域，则通过将资产存储在[!DNL Varnish]中而不是使用CDN，您可能会发现以较低的成本获得了显着的性能提升。
 
-要将您的资产存储在[!DNL Varnish]中，请在`default.vcl`生成的[!DNL Commerce]文件中添加以下VCL条目。
+要将您的资产存储在[!DNL Varnish]中，请在[!DNL Commerce]生成的`default.vcl`文件中添加以下VCL条目。
 
-在`if`子例程中PURGE请求的`vcl_recv`语句的末尾，添加：
+在`vcl_recv`子例程中PURGE请求的`if`语句的末尾，添加：
 
 ```javascript
 # static files are cacheable. remove SSL flag and cookie
@@ -234,7 +248,7 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 }
 ```
 
-在`vcl_backend_response`子例程中，查找用于为`if`或`GET`请求取消设置Cookie的`HEAD`语句。
+在`vcl_backend_response`子例程中，查找用于为`GET`或`HEAD`请求取消设置Cookie的`if`语句。
 更新的`if`块应如下所示：
 
 ```javascript

@@ -2,13 +2,22 @@
 title: 升级实施
 description: 了解Adobe Commerce项目升级实施的各个阶段。
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%
-
 ---
-
 # 升级实施
 
 升级实施包括五个阶段：
@@ -88,4 +97,4 @@ UAT是升级的最后阶段之一，需要查看和验证站点。 您还必须�
 
 在网站启动后，请确保检查您的分析数据、Google Search Console和其他资源，以确保没有意外问题并且一切按预期运行。
 
-通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用[New Relic](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)等服务来监控网站性能。
+通过精心设计的监控工具来监控性能始终是很好的做法。 监控网站性能的工具和方法有很多，因此请务必选择一种与您的组织相得益彰的工具和方法。 我们建议使用我们的云基础架构管理系统的Adobe Commerce客户利用[New Relic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)等服务来监控网站性能。

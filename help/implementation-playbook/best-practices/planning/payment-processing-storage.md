@@ -4,16 +4,26 @@ description: 了解如何在Adobe Commerce中安全地处理和存储付款详�
 role: Developer
 feature: Best Practices
 exl-id: 635f38d3-0199-4d96-ba75-9edd0cb94b5c
-source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%
-
 ---
-
 # 支付处理和存储的最佳做法
 
-维护[PCI合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html?lang=zh-Hans)的关键原则之一就是要有策略正确处理和存储信用卡付款。
+维护[PCI合规性](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html)的关键原则之一就是要有策略正确处理和存储信用卡付款。
 
 在Adobe Commerce中存储持卡人数据是&#x200B;**严格禁止的**，这样做可能会违反您作为商家在支付卡行业数据安全标准(PCI-DSS)下的义务。 有关商户责任的分担责任模型和准则的更多信息，请参阅Adobe信任中心上的[Adobe Commerce分担责任模型指南](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf)。
 
@@ -53,4 +63,4 @@ ht-degree: 0%
 
 ## 其他信息
 
-如果您正在寻找Adobe推荐的付款解决方案，请考虑[Adobe付款服务](https://experienceleague.adobe.com/docs/commerce/payment-services/overview.html?lang=zh-Hans)。
+如果您正在寻找Adobe推荐的付款解决方案，请考虑[Adobe付款服务](https://experienceleague.adobe.com/docs/commerce/payment-services/overview.html)。

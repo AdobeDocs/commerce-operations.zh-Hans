@@ -1,18 +1,32 @@
 ---
 title: '[!UICONTROL Elasticsearch]选项卡'
-description: 了解[!UICONTROL Elasticsearch]的 [!DNL Observation for Adobe Commerce]选项卡。
+description: 了解[!DNL Observation for Adobe Commerce]的[!UICONTROL Elasticsearch]选项卡。
 exl-id: e98d351d-b3b1-47bc-bc0d-f96ba9ec2b80
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 0%
-
+source-wordcount: '548'
+ht-degree: 1%
 ---
-
 # [!UICONTROL Elasticsearch]选项卡
 
-## [!UICONTROL Cluster Status Summary]：
+## [!UICONTROL Cluster Status Summary]:
 
 ![群集状态摘要](../../assets/tools/cluster-status-summary.jpg)
 
@@ -22,7 +36,7 @@ ht-degree: 0%
 
 ![活动主分片](../../assets/tools/active-primary-shards.jpg)
 
-根据所选帐户的&#x200B;**[!UICONTROL Active Primary Shards]**&#x200B;服务的活动主分片的数量，[!DNL Elasticsearch]框架显示不同的数字。
+根据所选帐户的[!DNL Elasticsearch]服务的活动主分片的数量，**[!UICONTROL Active Primary Shards]**&#x200B;框架显示不同的数字。
 
 从[!DNL Elasticsearch]：最终指南[2.x]：
 
@@ -84,7 +98,7 @@ ht-degree: 0%
 
 **[!UICONTROL Elasticsearch Errors]**&#x200B;框架显示带有[!DNL Elasticsearch]的错误，如空间不足、状态从黄色切换到红色、所有分区失败、搜索出现参数问题、版本错误以及所有节点均不可用等。
 
-## [!UICONTROL Elasticsearch Unassigned Shards]：
+## [!UICONTROL Elasticsearch Unassigned Shards]:
 
 ![Elasticsearch未分配分片](../../assets/tools/elasticsearch-unassigned-shards.jpg)
 

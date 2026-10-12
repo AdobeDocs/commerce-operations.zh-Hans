@@ -2,13 +2,22 @@
 title: 消息队列概述
 description: 阅读有关消息队列框架及其如何与Adobe Commerce应用程序配合使用的信息。
 exl-id: 21e7bc3e-6265-4399-9d47-d3b9f03dfef6
-source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '594'
 ht-degree: 0%
-
 ---
-
 # 消息队列概述
 
 Message Queue Framework (MQF)是一个允许模块将消息发布到队列的系统。 它还定义了将异步接收消息的[消费者](consumers.md)。 MQF支持多个报文传送代理：

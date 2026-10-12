@@ -4,13 +4,23 @@ description: 了解如何在Adobe Commerce网站生产启动之前防止性能�
 feature: Best Practices
 role: Developer
 exl-id: 591b1a62-bdba-4301-858a-77620ee657a9
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
-
 ---
-
 # 目录图像大小调整最佳实践
 
 在商店投入生产之前，应调整所有目录图像的大小。 在生产之前无法调整图像大小会在页面加载期间强制调整图像大小，这会显着降低网站速度并在启动后的前几天到几周内增加服务器负载。
@@ -116,5 +126,5 @@ find ./media/catalog/product -path ./media/catalog/product/cache -prune -o -type
 
 >[!NOTE]
 >
->- 云基础架构项目上的Adobe Commerce可以将产品图像大小调整卸载到Fastly服务。 请参阅&#x200B;_云指南_&#x200B;中的[深度图像优化](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly-image-optimization#deep-image-optimization)。
->- 如果使用远程存储模块，还可以尝试将图像大小调整卸载到nginx。 请参阅&#x200B;_配置指南_&#x200B;中的[为远程存储配置映像大小](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html?lang=zh-Hans)。
+>- 云基础架构项目上的Adobe Commerce可以将产品图像大小调整卸载到Fastly服务。 请参阅&#x200B;_云指南_&#x200B;中的[深度图像优化](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly-image-optimization#deep-image-optimization)。
+>- 如果使用远程存储模块，还可以尝试将图像大小调整卸载到nginx。 请参阅&#x200B;_配置指南_&#x200B;中的[为远程存储配置映像大小](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html)。

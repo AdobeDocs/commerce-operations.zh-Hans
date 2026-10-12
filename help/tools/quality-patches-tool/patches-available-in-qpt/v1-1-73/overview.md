@@ -1,16 +1,31 @@
 ---
-title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.73
-description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.73中提供的修补程序所修复的问题。
+title: 概述：[!DNL Quality Patches Tool] (QPT) v1.1.73
+description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.73中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: ac3f3b37b5c5705722b411f92be0ba21c6155449
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+subfeature_v2:
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '180'
 ht-degree: 0%
-
 ---
-
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.73
 
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.73中提供的修补程序所修复的问题。
@@ -20,7 +35,7 @@ QPT v1.1.73包含以下修补程序：
 1. **ACSD-67171**：修复了[!DNL B2B]用户在其会话过期或在签出期间被移除时看到“访问被拒绝”页面的问题。
 1. **ACSD-67908**：修复了JS文件在多存储设置中无法正确合并的问题。
 1. **ACSD-68190**：修复了以下问题：折扣不适用，应用的折扣在GraphQL购物车查看响应中无法正确显示，删除优惠券折扣时删除了非优惠券折扣。
-1. **ACSD-68206**：修复了在安装PHP **[!UICONTROL Rate Limiting]**&#x200B;扩展的情况下将GraphQL应用程序服务器与[!DNL Redis]功能结合使用时出现的错误。
+1. **ACSD-68206**：修复了在安装PHP [!DNL Redis]扩展的情况下将GraphQL应用程序服务器与&#x200B;**[!UICONTROL Rate Limiting]**&#x200B;功能结合使用时出现的错误。
 1. **ACSD-68356**： [!DNL GraphQL]购物车查询为虚拟报价返回不正确的折扣金额。
 1. **ACSD-68391**： **[!UICONTROL Quick Order]**&#x200B;和&#x200B;**[!UICONTROL Requisition Lists]**&#x200B;中未应用与类别相关的权限。
 1. **ACSD-68400**：虚拟礼品卡数量未准确地反映在&#x200B;**[!UICONTROL Inventory reservation table]**&#x200B;中。

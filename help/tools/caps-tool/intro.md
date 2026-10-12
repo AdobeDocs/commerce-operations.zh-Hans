@@ -1,13 +1,22 @@
 ---
 title: '[!DNL Adobe Commerce Patching Automation]'
-description: 了解 [!DNL Adobe Commerce Patching Automation]、其用途、如何访问它以及自动修补的最佳实践
-source-git-commit: d9f6fc714332638ae1dcfa92ac8abe274efe8a0b
+description: 了解[!DNL Adobe Commerce Patching Automation]、其用途、如何访问它以及自动修补的最佳实践
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%
-
 ---
-
 # [!DNL Adobe Commerce Patching Automation]
 
 [!DNL Adobe Commerce Patching Automation]是一个工具，可自动在Cloud环境中应用和还原Adobe Commerce的修补程序。 它为Commerce项目管理员提供了一个简化的工作流程，以便应用和还原修补程序。 内置的验证和运行状况检查有助于确保云环境保持稳定和安全。
@@ -51,7 +60,7 @@ ht-degree: 0%
 
 了解[!DNL Adobe Commerce Patching Automation]以及此工具如何帮助用户快速查找和应用安全修补程序。 以下视频介绍如何通过站点范围分析工具(SWAT)仪表板访问它，选择您的项目和环境，以及单击一下即可应用修补程序。
 
->[!VIDEO](https://video.tv.adobe.com/v/3476257/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476247/?learn=on&enablevpops)
 
 ## 常见用例
 

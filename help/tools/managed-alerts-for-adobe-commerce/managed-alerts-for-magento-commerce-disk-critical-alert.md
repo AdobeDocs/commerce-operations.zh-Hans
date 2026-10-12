@@ -1,16 +1,37 @@
 ---
 title: Adobe Commerce的托管警报：磁盘严重警报
-description: 本文提供了当您在 [!DNL New Relic]中收到Adobe Commerce的关键磁盘警报时的故障排除步骤。 需要立即采取措施来解决问题。
+description: 本文提供了在[!DNL New Relic]中收到Adobe Commerce的关键磁盘警报时的故障排除步骤。 需要立即采取措施来解决问题。
 feature: Cache, Marketing Tools, Observability, Support, Tools and External Services
 role: Admin
 exl-id: 1378dcfd-cf7c-4234-82bb-6697e23d54ca
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
+  - id: a59f76dc-e003-5617-951e-dffa5bd3de81
+    internal-label: Support
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
-
 ---
-
 # Adobe Commerce的托管警报：磁盘严重警报
 
 本文提供了在[!DNL New Relic]中收到Adobe Commerce的关键磁盘警报时的故障排除步骤。 需要立即采取措施来解决问题。 根据您选择的警报通知渠道，警报将类似于以下内容。
@@ -23,7 +44,7 @@ ht-degree: 0%
 
 ## 问题
 
-如果您已为Adobe Commerce[&#128279;](managed-alerts-for-magento-commerce.md)注册了托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
+如果您已为Adobe Commerce](managed-alerts-for-magento-commerce.md)注册了[托管警报，并且一个或多个警报阈值已超出，则将在[!DNL New Relic]中收到警报。 这些警报由Adobe开发，旨在通过支持和工程部门的分析为客户提供一组标准。
 
 <u> **做！** </u>
 
@@ -47,16 +68,16 @@ ht-degree: 0%
 >
 >由于这是一个严重警报，强烈建议您在尝试排查问题（从步骤2开始）之前完成&#x200B;**步骤1**。
 
-1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅Commerce支持知识库中的[跟踪您的支持工单](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
+1. 检查Adobe Commerce支持票证是否存在。 有关步骤，请参阅Commerce支持知识库中的[跟踪您的支持工单](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#track-support-case)。 支持人员可能已收到[!DNL New Relic]阈值警报，已创建票证并开始处理此问题。 如果不存在票证，请创建一个。 票证应包含以下信息：
    * 联系原因：选择&#x200B;**[!UICONTROL New Relic CRITICAL alert received]**。
    * 警报的说明。
    * [[!DNL New Relic] 事件链接](https://docs.newrelic.com/docs/alerts/incident-management/view-event-details-incidents/)。 这包含在您的[Adobe Commerce托管警报](managed-alerts-for-magento-commerce.md)中。
 1. 在[!DNL New Relic]中，查看磁盘的最高使用率。 有关步骤，请参阅[[!DNL New Relic] 基础结构监视主机页面上的&#x200B;**[!UICONTROL Storage]**&#x200B;选项卡： [!UICONTROL Storage]选项卡](https://docs.newrelic.com/docs/infrastructure/infrastructure-ui-pages/infra-hosts-ui-page/#storage)：
    * 如果您在[!DNL New Relic]中看到磁盘使用率增长缓慢，请尝试以下选项：
-     * 通过调整空间分配优化磁盘空间。 有关步骤，请参阅Commerce on Cloud指南中的[管理磁盘空间](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 您可能还需要请求更多磁盘空间（请联系您的Adobe客户团队）。
-     * 清除MySQL的磁盘空间。 请参阅Commerce支持知识库中的[MySQL磁盘空间不足](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27806)以了解相关步骤。
+     * 通过调整空间分配优化磁盘空间。 有关步骤，请参阅Commerce on Cloud指南中的[管理磁盘空间](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 您可能还需要请求更多磁盘空间（请联系您的Adobe客户团队）。
+     * 清除MySQL的磁盘空间。 请参阅Commerce支持知识库中的[MySQL磁盘空间不足](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27806)以了解相关步骤。
      * 如果[!DNL New Relic]显示磁盘使用率快速增加，这可能表示存在导致目录中文件快速增加的问题。 执行以下检查：
        1. 通过在CLI/终端中运行以下命令检查整体磁盘空间以识别问题： `df -h`
        1. 在发现目录异常大且磁盘使用量不断增加后，您需要检查受影响的文件系统。 以下示例说明如何检查文件目录`pub/media/`。 这是Commerce用于存储日志和大型媒体文件的目录。 但是，您应该对任何显示意外磁盘使用的目录运行此命令： `du -sch ~/pub/media/*`
 
-如果终端的输出显示其中某个目录中的文件在磁盘使用量中迅速增加，并且您知道不需要该文件内容，请考虑删除该文件。 如果不想执行这项操作，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。
+如果终端的输出显示其中某个目录中的文件在磁盘使用量中迅速增加，并且您知道不需要该文件内容，请考虑删除该文件。 如果不想执行这项操作，请[提交Adobe Commerce支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)。

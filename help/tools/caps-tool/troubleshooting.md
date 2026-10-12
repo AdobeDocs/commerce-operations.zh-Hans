@@ -1,13 +1,22 @@
 ---
 title: '[!DNL Adobe Commerce Patching Automation]疑难解答指南'
-description: 对 [!DNL Adobe Commerce Patching Automation]中的常见问题和错误消息进行故障诊断
-source-git-commit: f2b9ba118bfe4982a67ec5041141e5ee7548fc4d
+description: 对[!DNL Adobe Commerce Patching Automation]中的常见问题和错误消息进行故障诊断
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 0%
-
 ---
-
 # [!DNL Adobe Commerce Patching Automation]疑难解答指南
 
 使用[!DNL Patching Automation]进行修补程序操作时，可能会遇到错误消息和问题，这些消息和问题可能会阻止修补程序应用程序成功或进行反向。 本指南为最常见的问题提供了解决方案。
@@ -178,7 +187,7 @@ ht-degree: 0%
 
 **原因：**&#x200B;临时问题导致服务无法连接到GitHub
 
-**解决方案：**&#x200B;请等待几分钟，然后重试该操作。 如果错误仍然存在，请联系[Adobe Commerce云支持](https://experienceleague.adobe.com/home?lang=zh-Hans#support)
+**解决方案：**&#x200B;请等待几分钟，然后重试该操作。 如果错误仍然存在，请联系[Adobe Commerce云支持](https://experienceleague.adobe.com/home#support)
 
 #### “未在超时内创建环境”（与GitHub连接的项目）
 
@@ -186,7 +195,7 @@ ht-degree: 0%
 
 **原因：**&#x200B;项目的GitHub集成禁用了`fetch-branches`选项。 因此，服务推送的临时分支不会同步，并且永远不会创建集成环境。
 
-**解决方案：**&#x200B;启用集成的[`fetch-branches`选项](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)，然后重试该操作。 请参阅[为 [!DNL Patching Automation]](github-integration.md)设置GitHub集成。
+**解决方案：**&#x200B;启用集成的[`fetch-branches`选项](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/integrations/github#enable-the-github-integration)，然后重试该操作。 请参阅[为 [!DNL Patching Automation]](github-integration.md)设置GitHub集成。
 
 ### 环境激活错误
 
@@ -199,8 +208,8 @@ ht-degree: 0%
 **如果详细信息提及编辑器或Adobe Commerce包：**
 
 * 登录到[https://account.magento.com/customer/account/login](https://account.magento.com/customer/account/login)（或者让您的帐户所有者执行此操作），并确认您的帐户有权访问Commerce Enterprise代码库。
-* 验证项目的编辑器公共身份验证密钥和专用身份验证密钥是否正确。 请参阅[身份验证密钥](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/authentication-keys)。
-* 确认错误消息中名为的包适用于您的Commerce版本。 查看[Adobe Commerce包](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/packages/adobe-commerce)。
+* 验证项目的编辑器公共身份验证密钥和专用身份验证密钥是否正确。 请参阅[身份验证密钥](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/authentication-keys)。
+* 确认错误消息中名为的包适用于您的Commerce版本。 查看[Adobe Commerce包](https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce)。
 
 **如果详细信息提及环境插槽或资源：**
 
@@ -246,7 +255,7 @@ ht-degree: 0%
 
 ### 相关主题
 
-* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/overview)
+* [Adobe Commerce Cloud文档](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
 * [Adobe Commerce安装指南](/help/installation/overview.md)
 * [修补自动化简介](intro.md)
 * [如何访问](access.md)

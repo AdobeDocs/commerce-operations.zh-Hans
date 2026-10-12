@@ -3,23 +3,38 @@ title: 搜索引擎配置
 description: 为Adobe Commerce的内部部署配置搜索引擎。
 feature: Configuration, Search
 exl-id: 61fbe0c2-bdd5-4f57-a518-23e180401804
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+subfeature_v2:
+  - id: a1d22079-48b9-5e69-9ee6-eb236068ef34
+    internal-label: Search
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
-
 ---
-
 # 搜索引擎配置
 
 此部分讨论使用Adobe Commerce的内部部署测试Elasticsearch或OpenSearch时必须选择的最低设置。
 
 >[!TIP]
 >
->在版本2.4.4和2.4.3-p2中，标记为&#x200B;**Elasticsearch**&#x200B;的所有字段也适用于OpenSearch。
+>在版本2.4.4和2.4.3-p2中，标记为&#x200B;**Elasticsearch**的所有字段也适用于OpenSearch。
 >当版本2.4.6中引入对Elasticsearch 8.x的支持时，创建了新标签以区分Elasticsearch和OpenSearch配置。
 
-有关配置搜索引擎的其他详细信息，请参阅[用户指南](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html?lang=zh-Hans)。
+有关配置搜索引擎的其他详细信息，请参阅[用户指南](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html)。
 
 ## 从管理员配置搜索引擎
 

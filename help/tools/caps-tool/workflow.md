@@ -1,13 +1,22 @@
 ---
 title: '[!DNL Adobe Commerce Patching Automation]工作流概述'
-description: 了解 [!DNL Adobe Commerce Patching Automation] 工作流过程，包括术语、工作流阶段以及自动化修补程序管理的操作。
-source-git-commit: a56211744d35006924bd4ffd35c76ddb77118ed4
+description: 了解[!DNL Adobe Commerce Patching Automation]工作流过程，包括术语、工作流阶段以及自动化修补程序管理的操作。
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1128'
 ht-degree: 0%
-
 ---
-
 # [!DNL Adobe Commerce Patching Automation]工作流概述
 
 本主题提供了有关如何使用[!DNL Adobe Commerce Patching Automation]执行修补程序操作的高级概述。
@@ -81,7 +90,7 @@ ht-degree: 0%
 
 **无数据克隆** — 集成环境不接收目标环境数据（数据库、媒体或其他存储内容）的副本 — 仅使用代码库来应用和验证修补程序
 
-**资源要求** — 您的云项目的总存储容量在合同中定义。 （通过您的帐户页面或`magento-cloud subscription:info`查看。） 每个环境的磁盘分配是通过`.magento.app.yaml`/`.magento/services.yaml`中的`disk`属性单独配置的。 有关详细信息，请参阅[管理磁盘空间](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 如果修补操作因存储限制而失败，请检查集成环境的磁盘使用情况(`magento-cloud db:size` / `magento-cloud mount:size`)是否与其配置的分配一致。
+**资源要求** — 您的云项目的总存储容量在合同中定义。 （通过您的帐户页面或`magento-cloud subscription:info`查看。） 每个环境的磁盘分配是通过`.magento.app.yaml`/`.magento/services.yaml`中的`disk`属性单独配置的。 有关详细信息，请参阅[管理磁盘空间](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space)。 如果修补操作因存储限制而失败，请检查集成环境的磁盘使用情况(`magento-cloud db:size` / `magento-cloud mount:size`)是否与其配置的分配一致。
 
 #### 暂存2b：集成环境中的修补程序应用程序
 

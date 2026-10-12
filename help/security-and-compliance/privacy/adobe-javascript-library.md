@@ -3,18 +3,27 @@ title: Adobe隐私JavaScript库
 description: 了解如何使用自定义工具访问和删除Adobe Commerce收集的客户个人信息。
 hide: true
 exl-id: 5080e03b-0a83-405c-a232-b93311e284a3
-source-git-commit: de77f68f9ca6f2d4c4d4abed317210d5121a5497
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '341'
 ht-degree: 0%
-
 ---
-
 # Adobe隐私JavaScript库
 
 <!-- TODO: Remove hide metadata when the library has been integrated with Commerce. -->
 
-[Adobe隐私JavaScript库](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=zh-Hans)是一组工具，可帮助创建访问和删除私有数据的流程。
+[Adobe隐私JavaScript库](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html)是一组工具，可帮助创建访问和删除私有数据的流程。
 
 Adobe Commerce数据跟踪服务可以存储适用于隐私法规的隐私信息，例如[通用数据保护条例(GDPR)](gdpr.md)和[加州消费者隐私法案(CCPA)](ccpa.md)。
 
@@ -42,7 +51,7 @@ AdobePrivacy JS库提供了多种功能，用于管理存储在浏览器中的�
 `retrieveThenRemoveIdentities()`
 ：此函数与`removeIdentities()`类似，因为它检索一组标识并从浏览器中删除它们。
 
-有关使用这些函数的更多信息和示例，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=zh-Hans)。
+有关使用这些函数的更多信息和示例，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html)。
 
 ### 初始化
 
@@ -53,4 +62,4 @@ var adobePrivacy = new AdobePrivacy({});
 ```
 
 构造函数在实例化期间接受带有参数的配置对象。
-有关这些配置参数的列表，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=zh-Hans)。
+有关这些配置参数的列表，请参阅[官方库文档](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html)。

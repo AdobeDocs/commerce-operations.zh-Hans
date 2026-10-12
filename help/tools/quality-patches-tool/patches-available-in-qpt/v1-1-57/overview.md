@@ -1,17 +1,32 @@
 ---
-title: 概述： [!DNL Quality Patches Tool] (QPT) v1.1.57
-description: 此子部分详细描述了 [!DNL Quality Patches Tool] (QPT) v1.1.57中提供的修补程序所修复的问题。
+title: 概述：[!DNL Quality Patches Tool] (QPT) v1.1.57
+description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.57中提供的修补程序所修复的问题。
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 3e252a71-f35f-4046-9353-169060451ffe
 type: Troubleshooting
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
+subfeature_v2:
+  - id: 618ab558-d6ad-5352-99d6-d5702c6fdf80
+    internal-label: Tools and External Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
-
 ---
-
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.57
 
 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.57中提供的修补程序所修复的问题。
@@ -21,7 +36,7 @@ QPT v1.1.57包含以下修补程序：
 1. **ACSD-57570**：修复了以下问题：具有特定商店访问权限的受限管理员用户无法始终查看产品所分配的所有共享目录，或无法查看客户，从而导致系统中出现不一致的情况。
 1. **ACSD-58325**：修复了[!UICONTROL Import]按钮在验证错误后仍可用的问题。
 1. **ACSD-59083**：修复了某些数据库更新操作导致&#x200B;_未找到基表或视图的问题_&#x200B;错误（如果[!DNL mview]更新同时运行）。
-1. **ACSD-61622**：修复了响应中缺少[!DNL FedEx]帐户特定费率的问题。 ACSD-61622取代了从 [!DNL SOAP] 迁移到 [!DNL RESTful API]&#x200B;[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27131)的[!DNL FedEx] 送货方法集成中记录的修复。
+1. **ACSD-61622**：修复了响应中缺少[!DNL FedEx]帐户特定费率的问题。 ACSD-61622取代了从 [!DNL SOAP] 迁移到 [!DNL RESTful API]](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27131)的[[!DNL FedEx] 送货方法集成中记录的修复。
 1. **ACSD-61895**：修复了类别[!DNL GraphQL]查询返回具有&#x200B;*允许*&#x200B;权限的类别的问题，即使根类别没有&#x200B;*允许*&#x200B;权限。
 1. **ACSD-62212**：修复了[!UICONTROL Forgot Password]电子邮件内容未翻译为商店视图语言的问题。
 1. **ACSD-62481**：修复了即使启用了[!UICONTROL Persistence]，客户的购物车也变空的问题。

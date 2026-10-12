@@ -2,21 +2,30 @@
 title: 在“管理员”中设置多个网站、商店和商店视图
 description: 在Commerce管理中配置其他网站、商店和商店视图。
 exl-id: e6b4d14d-7504-48f9-a2e1-7e9a1bc76ab9
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 0%
-
 ---
-
 # 在管理员中设置多个视图
 
 此任务要求您为每个存储创建一个根类别（如果需要，还要创建其他类别）。 本主题中讨论的任务提供了一种设置多个商店的方法。 有关更多信息，请参阅《Commerce用户指南》中的以下资源：
 
-- [类别](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/catalog/categories/categories)
-- [添加网站](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
-- [存储URL](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls)
-- [内容](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/content-design/content-menu)
+- [类别](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/categories)
+- [添加网站](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [存储URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
+- [内容](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu)
 
 >[!INFO]
 >
@@ -34,7 +43,7 @@ ht-degree: 0%
 1. 在&#x200B;**类别名称**&#x200B;字段中，输入唯一名称以标识该类别。
 1. 确保将“启用类别”设置为&#x200B;**是**。
 
-   有关此页面上其他选项的信息，请参阅[根类别](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/catalog/categories/category-root)。
+   有关此页面上其他选项的信息，请参阅[根类别](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/category-root)。
 
    下图显示了一个示例。
 
@@ -131,7 +140,7 @@ Commerce为您提供了将商店代码添加到站点基本URL的选项，这简
 
 这样可防止`index.php`和`.htaccess`在将来升级时与Commerce代码库不同步。
 
-请参阅[Commerce用户指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-urls)。
+请参阅[Commerce用户指南](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)。
 
 要将存储代码添加到基本URL，请执行以下操作：
 

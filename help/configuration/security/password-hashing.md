@@ -3,13 +3,27 @@ title: 密码散列
 description: 了解Adobe Commerce中的密码哈希处理、受支持的算法（如Argon2和SHA256），以及旧版哈希处理如何升级而不更改密码。
 feature: Configuration, Security
 exl-id: 2865d041-950a-4d96-869c-b4b35f5c4120
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
-
 ---
-
 # 密码散列
 
 目前，Commerce基于不同的本机PHP哈希算法，采用自己的密码哈希处理策略。 Commerce支持多种算法，如`MD5`、`SHA256`或`Argon 2ID13`。 如果安装了Na扩展（默认安装在PHP 7.3中），则选择`Argon 2ID13`作为默认散列算法。 否则，`SHA256`为默认值。 Commerce可以使用支持Argon 2i算法的本机PHP `password_hash`函数。

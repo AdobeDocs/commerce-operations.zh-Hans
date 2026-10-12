@@ -4,13 +4,23 @@ description: 了解如何使您的Adobe Commerce on cloud infrastructure技术�
 role: Developer
 feature: Best Practices
 exl-id: 62aeffe3-b5a6-49f8-a39b-3219b46cd486
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
-
 ---
-
 # 更新服务最佳实践
 
 本文提供了有关保持Adobe Commerce on cloud infrastructure技术栈栈更新的建议，并提供有用资源的链接。
@@ -23,9 +33,9 @@ ht-degree: 0%
 
 在Adobe Commerce使用的服务和组件达到或接近生命周期结束日期之前升级它们。 这有助于遵守PCI法规并减少安全漏洞。
 
-入门计划客户可自助服务升级。 有关如何更改服务的详细信息，请参阅[更改服务版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
+入门计划客户可自助服务升级。 有关如何更改服务的详细信息，请参阅[更改服务版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)。
 
-专业计划客户只能在其[集成环境](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27242)中自助服务升级。 对于在生产环境中升级服务，您必须[提交支持票证](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求升级。
+专业计划客户只能在其[集成环境](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27242)中自助服务升级。 对于在生产环境中升级服务，您必须[提交支持票证](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)以请求升级。
 
 >[!WARNING]
 >

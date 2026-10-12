@@ -2,13 +2,22 @@
 title: 执行升级
 description: 按照以下步骤升级Adobe Commerce的内部部署。
 exl-id: 9183f1d2-a8dd-4232-bdee-7c431e0133df
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 0%
-
 ---
-
 
 # 执行升级
 
@@ -19,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version)。
+>- 有关云基础架构项目上的Adobe Commerce，请参阅云指南中的[升级Commerce版本](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version)。
 >- 如果您克隆GitHub存储库，请勿使用此方法进行升级。 请参阅[升级基于Git的安装](../developer/git-installs.md)。
 
 以下说明说明了如何使用编辑器包管理器进行升级。 Adobe Commerce 2.4.2引入了对Composer 2的支持。 如果您尝试从&lt;2.4.1升级，则必须先使用编辑器1 _升级到与编辑器2（例如2.4.2）兼容的版本，然后再将_&#x200B;升级到编辑器2，以进行>2.4.2升级。 此外，您必须运行[支持的PHP版本](../../installation/system-requirements.md)。

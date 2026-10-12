@@ -2,18 +2,27 @@
 title: 参考架构
 description: 了解Adobe Commerce中的参考架构。 了解实施指导和优化策略。
 exl-id: 85a6d3d6-f47f-4806-97bd-fa7a73605f4c
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
-
 ---
-
 # 参考架构
 
 本主题介绍了一般性建议设置，适用于Adobe Commerce实例，这些实例使用在数据中心（非虚拟化）物理托管的普通服务器，其中资源不与其他用户共享。 您的托管提供商（尤其是专门从事Commerce高性能托管业务的提供商）可能会建议您采用对您的要求同样有效或更加有效的其他设置。
 
-有关云基础架构环境上的Adobe Commerce，请参阅[入门架构](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/architecture/starter-architecture)。
+有关云基础架构环境上的Adobe Commerce，请参阅[入门架构](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-architecture)。
 
 ## [!DNL Commerce]参考体系结构图
 
@@ -64,7 +73,7 @@ ht-degree: 0%
 
 ### 推荐的[!DNL Varnish]参考体系结构
 
-Magento支持多个开箱即用的全页缓存引擎(File、Memcache、Redis、[!DNL Varnish])，并通过扩展扩展扩展了覆盖范围。 [!DNL Varnish]是推荐的完整页面缓存引擎。 [!DNL Commerce]支持许多不同的[!DNL Varnish]配置。
+Magento支持多个开箱即用的全页缓存引擎(File、Memcache、Redis、[!DNL Varnish])，以及通过扩展扩展扩展的服务范围。 [!DNL Varnish]是推荐的完整页面缓存引擎。 [!DNL Commerce]支持许多不同的[!DNL Varnish]配置。
 
 对于不需要高可用性的网站，我们建议使用带有Nginx SSL终止的简单[!DNL Varnish]设置。
 

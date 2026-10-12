@@ -3,7 +3,7 @@ title: 缓存后端选项和存储参考
 description: 了解Adobe Commerce中的缓存后端选项，包括文件系统、Redis、Valkey和数据库存储。 发现基于Zend的(RemoteSynchronizedCache)和Symfony缓存选项。
 feature: Configuration, Cache
 exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
-badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
+badgePaas: label="内部部署" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Adobe Commerce本地项目。"
 autotag-review: '2026-06-22T18:37:32.504Z'
 TQID: 'https://experienceleague.adobe.com/m7eUBNrt8UF43iJq9Tpl0Y1WcmR-dlt7Z4PoHvXVNnA'
 product_v2:
@@ -14,6 +14,11 @@ product_v2:
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
     internal-label: Configuration
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
@@ -22,10 +27,12 @@ role_v2:
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
     internal-label: Intermediate
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
     internal-label: Implementation
-source-git-commit: 23f63c896760992da9b0d30b756a37de2117f6b8
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
@@ -36,13 +43,13 @@ ht-degree: 0%
 >
 >此页面记录本地`app/etc/env.php`配置。
 >
->对于[!DNL Adobe Commerce on Cloud]项目，`ece-tools`包在部署期间根据`.magento.env.yaml`中的部署变量配置生成结果`app/etc/env.php`配置。 您不编辑`env.php`文件。  查看[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)和[部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)。
+>对于[!DNL Adobe Commerce on Cloud]项目，`ece-tools`包在部署期间根据`.magento.env.yaml`中的部署变量配置生成结果`app/etc/env.php`配置。 您不编辑`env.php`文件。  查看[Valkey和Redis服务配置的最佳实践](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)和[部署变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy)。
 
 Commerce应用程序使用低级缓存前端和后端来提供对缓存存储的访问。 Commerce支持多种缓存后端和策略，每种后端和策略都适用于不同的用例。 本页介绍可用的后端及其差异。
 
 >[!NOTE]
 >
->[Varnish](config-varnish-install.md)在HTTP级别处理内部部署的整页缓存。 [Fastly服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/fastly)为云部署处理它。 这两种解决方案都未使用低级缓存后端。
+>[Varnish](config-varnish-install.md)在HTTP级别处理内部部署的整页缓存。 [Fastly服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)为云部署处理它。 这两种解决方案都未使用低级缓存后端。
 
 ## 后端缓存选项
 
@@ -127,7 +134,7 @@ Commerce支持直接缓存后端和L2缓存。 直接后端选择缓存存储。
 
 二级缓存(L2)在共享远程缓存存储前面的每个Web节点上添加了一个本地缓存层，从而减少了Commerce和远程缓存之间的网络流量。 有关实施选项、版本支持和配置步骤，请参阅[二级缓存配置](level-two-cache.md)。
 
-对于云项目，请通过[部署变量](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy){target="_blank"}中描述的部署变量配置L2缓存。
+对于云项目，请通过[部署变量](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy){target="_blank"}中描述的部署变量配置L2缓存。
 
 - [将Redis用于默认缓存](redis-pg-cache.md)
 - [将Valkey用于默认缓存](valkey-pg-cache.md)

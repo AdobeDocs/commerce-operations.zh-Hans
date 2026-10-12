@@ -1,14 +1,23 @@
 ---
 title: '[!DNL Upgrade Compatibility Tool]条错误消息'
-description: 了解有关在您的Adobe Commerce项目上使用 [!DNL Upgrade Compatibility Tool] 时遇到的错误消息的更多信息。
+description: 进一步了解在您的Adobe Commerce项目上使用[!DNL Upgrade Compatibility Tool]时遇到的错误消息。
 exl-id: fe4a17a9-a807-4315-b3cd-e35f34e39f6d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '4151'
+source-wordcount: '4152'
 ht-degree: 4%
-
 ---
-
 # [!DNL Upgrade Compatibility Tool]条错误消息
 
 {{commerce-only}}
@@ -61,7 +70,7 @@ ht-degree: 4%
 | 5002 | 开始PHP标记必须是文件中的第一个内容 | 在PHP开始标记之前，请确保文件中没有内容。 |
 | 5003 | 函数已被弃用 | 使用错误消息中建议的替换。 如果消息未建议进行替换，则需要仔细审查以选择替代功能或实施。 |
 | 5005 | PHP语法错误 | 必须更新代码以符合PHP语法标准。 |
-| 5072 | 可能违反了Magento 2设计。 检测到典型的Magento 1.x结构 | 将构建更新为Magento 2标准。 |
+| 5072 | 可能违反Magento 2设计。 检测到典型的Magento 1.x结构 | 将构建更新为Magento 2标准。 |
 | 5076 | 无法在命名空间中使用，因为命名空间是自PHP 7以来保留的 | 将命名空间中的保留字替换为非保留关键字。 |
 | 5077 | 不能用作类名，因为它是自PHP 7以来保留的 | 将保留的类名替换为非保留名称。 |
 

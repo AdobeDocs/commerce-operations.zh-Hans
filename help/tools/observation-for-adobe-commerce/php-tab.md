@@ -1,15 +1,29 @@
 ---
 title: '[!UICONTROL PHP]选项卡'
-description: 了解[!UICONTROL PHP]的 [!DNL Observation for Adobe Commerce]选项卡。
+description: 了解[!DNL Observation for Adobe Commerce]的[!UICONTROL PHP]选项卡。
 exl-id: 0989a7f5-75b0-4fb5-ac5e-2618603bf548
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '560'
 ht-degree: 0%
-
 ---
-
 # [!UICONTROL PHP]选项卡
 
 **PHP**&#x200B;选项卡显示PHP进程问题，以便对PHP问题进行更深入的分析。
@@ -45,7 +59,7 @@ ht-degree: 0%
 **[!UICONTROL PHP Process states]**&#x200B;帧显示选定时间范围内的PHP进程状态。 它在PHP进程终止和重新启动时显示。 请注意未显示重新启动的已终止PHP进程。
 
 * &#39;%NOTICE：正在终止……%&#39;)为&#39;php_term&#39;
-* &#39;%注意：正在退出，再见！%&#39;)作为“php_exit”
+* &#39;%注意：正在退出，bye-bye！%&#39;)作为&#39;php_exit&#39;
 * “%注意： fpm正在运行，pid%”)，为“fpm_start”
 * &#39;%NOTICE：已准备好处理连接%&#39;)作为&#39;php_ready&#39;
 
@@ -56,7 +70,7 @@ ht-degree: 0%
 **[!UICONTROL PHP Errors]**&#x200B;帧显示选定时间范围内的PHP Worker错误数。 解析和显示的错误消息包括：
 
 * “%worker_connections不足%”)
-* &#39;%PHP严重错误：允许的内存大小！%&#39;)作为“mem_size”
+* “%PHP严重错误：允许的内存大小！%”)为“mem_size”
 * &#39;%exited on signal 11 (SIGSEGV)%&#39;)为&#39;sig_11&#39;
 * &#39;%exited on signal 7 (SIGBUS)%&#39;)为&#39;sig_7&#39;
 * &#39;%increase pm.start_servers%&#39;)作为&#39;pmstart_serv&#39;

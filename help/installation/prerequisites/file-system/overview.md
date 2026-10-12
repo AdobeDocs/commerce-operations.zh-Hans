@@ -2,13 +2,22 @@
 title: 文件所有权和权限
 description: 了解在使用Adobe Commerce的内部安装时文件系统权限的重要性。
 exl-id: a84784bf-afd6-4dba-9745-3fefc0ecafcb
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '448'
 ht-degree: 0%
-
 ---
-
 # 文件所有权和权限
 
 在开发环境中保护您的Adobe Commerce安装非常重要，这样有助于防止出现与未经授权的人员或流程访问（并可能损害）您的系统相关的问题。 使用以下文件系统所有权和权限指南来保护您的安装。
@@ -27,9 +36,9 @@ ht-degree: 0%
 
   如果管理应用程序服务器，则专用托管会很有用。 每个用户都有特定的责任：
 
-   - _Web服务器用户_&#x200B;运行管理员和店面。
+  - _Web服务器用户_&#x200B;运行管理员和店面。
 
-   - _命令行用户_&#x200B;运行cron作业和命令行实用工具。
+  - _命令行用户_&#x200B;运行cron作业和命令行实用工具。
 
   两个用户都需要对文件系统具有相同的权限，因此最好使用[共享组](configure-permissions.md#set-ownership-and-permissions-for-two-users)并设置[`umask`](#restrict-access-with-a-umask)。
 
@@ -59,9 +68,9 @@ Adobe Commerce使用三位默认掩码： `002`。 从UNIX缺省值666（文件�
 - 开发人员
 - 生产
 
-请参阅[配置指南](../../../configuration/bootstrap/application-modes.md)中的&#x200B;_关于模式_。
+请参阅&#x200B;_配置指南_&#x200B;中的[关于模式](../../../configuration/bootstrap/application-modes.md)。
 
-我们在[配置指南](../../../configuration/deployment/file-system-permissions.md)的&#x200B;_文件系统访问权限_&#x200B;中进一步讨论权限建议。
+我们在&#x200B;_配置指南_&#x200B;的[文件系统访问权限](../../../configuration/deployment/file-system-permissions.md)中进一步讨论权限建议。
 
 >[!TIP]
 >

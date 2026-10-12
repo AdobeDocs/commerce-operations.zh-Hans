@@ -2,13 +2,22 @@
 title: 示例数据概述
 description: 了解如何安装Adobe Commerce示例数据以进行演示和培训，了解基于Luma的店面的行为方式，以及生产开发的限制。
 exl-id: 828b009d-a6ff-4db2-aa1a-838f6f55a194
-source-git-commit: 41b8d77793f1c24f08ff7e6a2d35826a62477534
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
-
 ---
-
 # 示例数据概述
 
 示例数据提供一个基于Luma主题的店面，配有产品、类别、客户注册等。 它的功能与Commerce店面类似，您可以使用管理员操纵价格、库存和促销定价规则。

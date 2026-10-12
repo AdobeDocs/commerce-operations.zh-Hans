@@ -3,13 +3,25 @@ title: Adobe Managed Services
 description: 了解Adobe Managed Services如何帮助支持和维护Adobe Commerce实施。
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
-source-git-commit: 486e789787c9c08b27b4aae8e601680138956b88
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 0%
-
 ---
-
 
 # Adobe Managed Services
 
@@ -28,12 +40,12 @@ Adobe Managed Services与内部部署和非托管云实施相比具有关键优�
 - **增强的服务级别目标(SLT)** — 响应时间比标准Adobe Commerce支持快。
 - **增强的服务水平协议(SLA)** — 在云基础架构方面，常规Adobe Commerce客户在99.99%的基础架构级别之上，有99.9%的应用程序级别。
 - **指定的云专业知识**—Managed Services为客户提供一个指定的客户成功工程师(CSE)，作为应用程序和云基础架构专家。 CSE与客户及其合作伙伴合作，为他们提供最佳做法和指导，以加快产品上市速度，其中包括：
-   - 指导和支持入门流程
-   - 管理配置和平台设置
-   - 就集成和自定义的架构原则提供建议
-   - 推动事件管理和业务连续性
-   - 通过规划、执行和监控提供事件支持
-   - 云支持和专业知识（主动优化、报告和最佳实践）
+  - 指导和支持入门流程
+  - 管理配置和平台设置
+  - 就集成和自定义的架构原则提供建议
+  - 推动事件管理和业务连续性
+  - 通过规划、执行和监控提供事件支持
+  - 云支持和专业知识（主动优化、报告和最佳实践）
 
 有关主要Managed Services优势的更详细比较，请查看下表：
 
@@ -388,7 +400,7 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
 
 适用于Managed Services的Adobe安全栈栈使用自动化和一致性在中的每个级别构建安全性，以减少人为错误。 开发和操作团队自动从栈栈的不同级别继承安全控制。
 
-平台合作伙伴（如Amazon Web Services和Microsoft Azure）在应用平台自定义设置时可确保最大程度的安全保护，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 有关详细信息，请参阅[Adobe Commerce安全性](https://business.adobe.com/cn/products/magento/secure-ecommerce.html)。
+平台合作伙伴（如Amazon Web Services和Microsoft Azure）在应用平台自定义设置时可确保最大程度的安全保护，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 有关详细信息，请参阅[Adobe Commerce安全性](https://business.adobe.com/products/magento/secure-ecommerce.html)。
 
 下图显示了Adobe Managed Services安全技术栈栈：
 

@@ -5,13 +5,23 @@ role: Developer
 feature: Best Practices
 last-substantial-update: 2023-12-8
 exl-id: 32b3137d-fc00-4be8-ba02-5d8d48a51fe1
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1767'
 ht-degree: 0%
-
 ---
-
 # 修改或覆盖核心和第三方PHP代码的最佳实践
 
 本文档描述了在需要修改您未创作或未直接控制的任何代码的功能、结果或输入时的最佳实践。 换言之，核心代码和第三方代码。 本文档主要介绍后端PHP代码。
@@ -104,7 +114,7 @@ class AlgoliaElasticSearchAdapter extends \Magento\Elasticsearch7\SearchAdapter\
 
 ### 观察者
 
-观察者是一种事件侦听器的概念，在许多应用程序、平台、库和编码语言中都存在。 这个概念并不是Adobe Commerce平台特有的。 从Magento 1时代起，观察者就被植入平台，并被视为如何修改核心代码和第三方代码的主要选择。 
+观察者是一种事件侦听器的概念，在许多应用程序、平台、库和编码语言中都存在。 这个概念并不是Adobe Commerce平台特有的。 从Magento 1时代起，观察者就被植入该平台，并被视为如何修改核心代码和第三方代码的主要选择。 
 
 核心代码库和任何第三方模块都可以在代码中的选定位置发送事件。 观察程序在`events.xml`文件中声明并正在按名称侦听已调度的事件，该观察程序可以在全局级别工作，或约束到任何Adobe Commerce“区域”，如`frontend`、`adminhtml`、`graphql`、`webapi_rest`和`crontab`。
 

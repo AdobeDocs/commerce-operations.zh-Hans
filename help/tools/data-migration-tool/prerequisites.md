@@ -1,22 +1,31 @@
 ---
 title: '[!DNL Data Migration Tool]先决条件'
-description: 了解在开始使用 [!DNL Data Migration Tool] 在Magento 1和Magento 2之间传输数据之前需要做什么。
+description: 了解在开始使用[!DNL Data Migration Tool]在Magento 1和Magento 2之间传输数据之前需要做什么。
 exl-id: 42dfa1ca-41ed-453d-a3e4-41ff36817ca3
 topic: Commerce, Migration
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '266'
 ht-degree: 0%
-
 ---
-
 # [!DNL Data Migration Tool]先决条件
 
 在开始迁移之前，请确保满足以下要求。
 
-## Magento 2 system
+## Magento 2系统
 
-* 设置您的Magento 2系统，使其满足[系统要求](../../installation/system-requirements.md)。
+* 设置您的Magento 2系统，使其符合[系统要求](../../installation/system-requirements.md)。
 
   使用至少与现有Magento 1系统匹配的拓扑和设计。
 
@@ -24,13 +33,13 @@ ht-degree: 0%
 
 ## Cron
 
-请勿启动Magento 2 cron作业。
+不要启动Magento 2 cron作业。
 
 ## 数据库
 
 * 安装后，请尽快备份或[转储](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)您的Magento 2数据库。 这样可在迁移不成功时还原初始数据库状态。
 
-* 验证[!DNL Data Migration Tool]是否具有连接Magento 1和Magento 2数据库的网络访问权限。
+* 验证[!DNL Data Migration Tool]是否具有用于连接Magento 1和Magento 2数据库的网络访问权限。
 
   打开防火墙中的端口，以便迁移工具可以与数据库通信。
 
@@ -44,6 +53,6 @@ ht-degree: 0%
 
 将Magento 1扩展代码迁移到Magento 2。
 
-要查找最新的扩展版本，请访问[[!DNL [Commerce Marketplace]]](https://commercemarketplace.adobe.com//)或与扩展提供商联系。
+要查找最新的扩展版本，请访问[!DNL [Commerce Marketplace]](https://commercemarketplace.adobe.com//)或与扩展提供商联系。
 
-您也可以使用[[!DNL [Code Migration Tool]]](https://github.com/magento-commerce/code-migration/blob/develop/README.md)。
+您也可以使用[!DNL [Code Migration Tool]](https://github.com/magento-commerce/code-migration/blob/develop/README.md)。

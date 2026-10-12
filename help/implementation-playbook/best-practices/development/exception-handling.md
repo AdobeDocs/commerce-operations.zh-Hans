@@ -4,13 +4,23 @@ description: 了解在开发Adobe Commerce项目时记录异常的推荐方法�
 feature: Best Practices
 role: Developer
 exl-id: e7ad685b-3eaf-485b-8ab1-702f2e7ab89e
-source-git-commit: 4bf8dd5c5320cc9a34cfaa552ec5e91d517d3617
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '589'
 ht-degree: 0%
-
 ---
-
 # 例外处理最佳实践
 
 如果异常未写入到`exception.log`文件，并且异常模型作为上下文，则无法在New Relic或其他与PSR-3单色兼容的日志存储中正确识别和分析异常。 如果忽略异常，则仅记录部分异常（或将其记录到错误的文件）会导致生产中出现错误。
@@ -31,7 +41,7 @@ try {
 }
 ```
 
-此方法按照`$e->getMessage`PSR-3上下文标准`$e`，自动将[保存到日志消息，将](https://www.php-fig.org/psr/psr-3/#13-context)对象保存到上下文。 此操作在`\Magento\Framework\Logger\Monolog::addRecord`内完成。
+此方法按照[PSR-3上下文标准](https://www.php-fig.org/psr/psr-3/#13-context)，自动将`$e->getMessage`保存到日志消息，将`$e`对象保存到上下文。 此操作在`\Magento\Framework\Logger\Monolog::addRecord`内完成。
 
 ### ![正确](../../../assets/yes.svg)静音信号
 
@@ -153,7 +163,7 @@ try {
 
 ### ![不正确](../../../assets/no.svg)仅将消息记录到异常日志
 
-只传递`$e`，而不是传递对象`$e->getMessage()`。 这会导致跟踪丢失，应被显示为[写入异常日志](#write-to-the-exception-log)或[降级异常](#downgrade-exceptions)的正确示例替换。
+只传递`$e->getMessage()`，而不是传递对象`$e`。 这会导致跟踪丢失，应被显示为[写入异常日志](#write-to-the-exception-log)或[降级异常](#downgrade-exceptions)的正确示例替换。
 
 ```php
 try {

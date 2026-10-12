@@ -1,16 +1,30 @@
 ---
-title: 安装 [!DNL Data Migration Tool]
-description: 了解如何安装 [!DNL Data Migration Tool] 以在Magento 1和Magento 2之间传输数据。
+title: 安装[!DNL Data Migration Tool]
+description: 了解如何安装[!DNL Data Migration Tool]以在Magento 1和Magento 2之间传输数据。
 exl-id: 5f57067b-3ce8-4b51-b9ae-f60ae089c4ba
 topic: Commerce, Migration
 feature: Configuration, Install
-source-git-commit: 48624d70761117ed0b9f8a7be913fce0572577b6
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 0%
-
 ---
-
 # 安装[!DNL Data Migration Tool]
 
 >[!INFO]
@@ -18,7 +32,7 @@ ht-degree: 0%
 >Magento和[!DNL Data Migration Tool]的版本必须匹配。
 
 
-确保您同时使用Magento 2和[!DNL Data Migration Tool]的&#x200B;*相同发布版本*。 例如，对于Magento版本2.2.0，还必须使用[!DNL Data Migration Tool]版本2.2.0。
+确保您同时使用Magento 2和[!DNL Data Migration Tool]的&#x200B;*相同发行版本*。 例如，对于Magento版本2.2.0，还必须使用[!DNL Data Migration Tool]版本2.2.0。
 
 ## 检查您的版本
 
@@ -29,7 +43,7 @@ ht-degree: 0%
 
 ### Composer中继包
 
-如果您使用Composer元包下载了Magento软件，请输入以下命令：
+如果使用Composer元包下载Magento软件，请输入以下命令：
 
 ```shell
 php <magento_root>/bin/magento --version
@@ -70,7 +84,7 @@ git branch
 
 ### 从`repo.magento.com`安装
 
-要安装[!DNL Data Migration Tool]，您必须在Magento根安装目录中更新`composer.json`以提供[!DNL Data Migration Tool]包的位置。
+要安装[!DNL Data Migration Tool]，必须在Magento根安装目录中更新`composer.json`以提供[!DNL Data Migration Tool]包的位置。
 
 1. 以[文件系统所有者](../../installation/prerequisites/file-system/overview.md)的身份登录或切换到您的应用程序服务器。
 1. 切换到应用程序根目录。
@@ -84,7 +98,7 @@ git branch
    composer require magento/data-migration-tool:<version>
    ```
 
-   其中`<version>`必须与Magento 2代码库的版本匹配。
+   其中`<version>`必须匹配Magento 2代码库的版本。
 
    例如，对于版本2.2.0，输入：
 
@@ -114,7 +128,7 @@ git branch
    composer require magento/data-migration-tool:<version>
    ```
 
-   其中`<version>`必须与Magento 2代码库的版本匹配。
+   其中`<version>`必须匹配Magento 2代码库的版本。
 
    例如，对于版本2.2.0，输入：
 

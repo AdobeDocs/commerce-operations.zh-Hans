@@ -1,17 +1,34 @@
 ---
 title: MDVA-40601：无法检索有关通过GraphQL的计划更新更改的类别的数据
-description: MDVA-40601 Adobe Commerce质量修补程序修复了以下问题：用户通过GraphQL获取有关按计划更新更改的类别的信息时出现错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-40601。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
+description: MDVA-40601 Adobe Commerce质量修补程序修复了以下问题：用户通过GraphQL获取有关按计划更新更改的类别的信息时出现错误。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3后，即可使用此修补程序。 修补程序ID为MDVA-40601。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
 feature: Categories, GraphQL
 role: Admin
 exl-id: c50e9f77-66eb-4c4c-b0b5-b77db84a4a0b
 type: Troubleshooting
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: c18ed297-2187-4aec-affb-9d9654eca6fc
+    internal-label: Catalog management
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+    internal-label: Integrations
+subfeature_v2:
+  - id: e91a50b1-0b31-436e-9033-00e4776e94cb
+    internal-label: Categories
+  - id: e396cff5-f586-484c-89f0-7f1da3308f92
+    internal-label: GraphQL
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
-
 ---
-
 # MDVA-40601：无法检索有关通过GraphQL的计划更新更改的类别的数据
 
 MDVA-40601 Adobe Commerce质量修补程序修复了以下问题：用户通过GraphQL获取有关按计划更新更改的类别的信息时出现错误。 安装[Quality Patches Tool (QPT)](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.3时，此修补程序可用。 修补程序ID为MDVA-40601。 请注意，该问题计划在Adobe Commerce 2.4.4中修复。
@@ -50,14 +67,14 @@ Adobe Commerce（所有部署方法） 2.3.1 - 2.4.2-p2
 
    <pre>
     <code class="language-graphql">
-    query &lbrace;
-     category(id: 49) &lbrace;
+    query {
+     category(id: 49) {
       name
-      children &lbrace;
+      children {
         name
-       &rbrace;
-     &rbrace;
-   &rbrace;
+       }
+     }
+   }
    </code>
    </pre>
 
@@ -65,18 +82,18 @@ Adobe Commerce（所有部署方法） 2.3.1 - 2.4.2-p2
 
    <pre>
     <code class="language-graphql">
-    &lbrace;
-      "data": &lbrace;
-        "category": &lbrace;
+    {
+      "data": {
+        "category": {
           "name": "Some category",
-          "children": &lbrack;
-            &lbrace;
+          "children": [
+            {
               "name": "Some child category"
-            &rbrace;
-          &rbrack;
-        &rbrace;
-      &rbrace;
-    &rbrace;
+            }
+          ]
+        }
+      }
+    }
     </code>
     </pre>
 
@@ -94,29 +111,29 @@ Adobe Commerce（所有部署方法） 2.3.1 - 2.4.2-p2
 
 <pre>
 <code class="language-graphql">
-&lbrace;
-  "errors": &lbrack;
-    &lbrace;
+{
+  "errors": [
+    {
       "debugMessage": "uasort() expects parameter 1 to be array, string given",
       "message": "Internal server error",
-      "extensions": &lbrace;
+      "extensions": {
         "category": "internal"
-      &rbrace;,
-      "locations": &lbrack;
-        &lbrace;
+      },
+      "locations": [
+        {
           "line": 2,
           "column": 3
-        &rbrace;
-      &rbrack;,
-      "path": &lbrack;
+        }
+      ],
+      "path": [
         "category"
-      &rbrack;
-    &rbrace;
-  &rbrack;,
-  "data": &lbrace;
+      ]
+    }
+  ],
+  "data": {
     "category": null
-  &rbrace;
-&rbrace;
+  }
+}
 </code>
 </pre>
 
@@ -124,14 +141,14 @@ Adobe Commerce（所有部署方法） 2.3.1 - 2.4.2-p2
 
 要应用单个修补程序，请根据您的部署类型使用以下链接：
 
-&#x200B;* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-&#x200B;* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
 要了解有关Adobe Commerce质量修补程序的更多信息，请参阅：
 
-&#x200B;* 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
-&#x200B;* [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
+* 已发布[质量修补程序工具：支持知识库中用于自助提供质量修补程序](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)的新工具。
+* [使用[!DNL Quality Patches Tool]指南中的Quality Patches Tool](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)，检查修补程序是否可用于Adobe Commerce问题。
 
-有关QPT中其他可用修补程序的信息，请参阅QPT[&#128279;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)中可用的修补程序部分。
+有关QPT中其他可用修补程序的信息，请参阅QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)中可用的[修补程序部分。

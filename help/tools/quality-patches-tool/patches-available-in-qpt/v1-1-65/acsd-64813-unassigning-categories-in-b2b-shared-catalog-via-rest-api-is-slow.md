@@ -1,17 +1,40 @@
 ---
-title: ACSD-64813：通过REST API取消分配 [!DNL B2B] 共享目录中的类别缓慢
-description: 应用ACSD-64813修补程序以修复通过REST API在 [!DNL B2B] 共享目录中取消分配类别速度缓慢的Adobe Commerce问题。
+title: ACSD-64813：通过REST API取消分配[!DNL B2B]共享目录中的类别缓慢
+description: 应用ACSD-64813修补程序以修复通过REST API在[!DNL B2B]共享目录中取消分配类别缓慢的Adobe Commerce问题。
 feature: B2B, REST, Categories
 role: Admin, Developer
 type: Troubleshooting
 exl-id: e6fd89c2-d3c0-462f-b328-7a80b456d96d
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
+  - id: c4f010fa-1478-4300-a88d-706fbc036a7a
+    internal-label: APIs and SDKs
+  - id: c18ed297-2187-4aec-affb-9d9654eca6fc
+    internal-label: Catalog management
+subfeature_v2:
+  - id: f56d26ed-050b-4fb7-b29b-8e6e994e80a2
+    internal-label: B2B
+  - id: e0ca0e7a-9738-48d1-b98b-615468ab4aaf
+    internal-label: REST API
+  - id: e91a50b1-0b31-436e-9033-00e4776e94cb
+    internal-label: Categories
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '398'
 ht-degree: 0%
-
 ---
-
 # ACSD-64813：通过REST API取消分配[!DNL B2B]共享目录中的类别缓慢
 
 ACSD-64813修补程序修复了通过REST API取消分配[!DNL B2B]共享目录中的类别速度缓慢的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.65时，此修补程序可用。 修补程序ID为ACSD-64813。 请注意，此问题计划在Adobe Commerce 2.4.9中修复。
@@ -28,7 +51,7 @@ ACSD-64813修补程序修复了通过REST API取消分配[!DNL B2B]共享目录�
 
 >[!NOTE]
 >
->该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
+>该修补程序可能适用于具有新[!DNL Quality Patches Tool]发行版本的其他版本。 要检查修补程序是否与您的Adobe Commerce版本兼容，请将`magento/quality-patches`包更新到最新版本，并在[[!DNL Quality Patches Tool]：搜索修补程序页面](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)上检查兼容性。 使用修补程序ID作为搜索关键字来查找修补程序。
 
 ## 问题
 
@@ -38,7 +61,7 @@ ACSD-64813修补程序修复了通过REST API取消分配[!DNL B2B]共享目录�
 
 1. 启用&#x200B;**[!UICONTROL B2B]**、**[!UICONTROL Company]**&#x200B;和&#x200B;**[!UICONTROL Shared Catalog]**。
 1. 生成30,000个现成库存产品。
-1. 创建[自定义共享目录](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/shared-catalogs/catalog-shared#actions-controls)并为其分配所有产品。
+1. 创建[自定义共享目录](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/shared-catalogs/catalog-shared#actions-controls)并为其分配所有产品。
 1. 在默认根类别下创建一个新类别，并为其分配几个产品。
 1. 使用管理令牌以使用新类别ID调用REST API端点`rest/all/V1/sharedCatalog/<shared_catalog_id>/assignCategories`。
 
@@ -75,7 +98,7 @@ ACSD-64813修补程序修复了通过REST API取消分配[!DNL B2B]共享目录�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

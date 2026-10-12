@@ -1,15 +1,24 @@
 ---
 title: 创建数据迁移计划
-description: 了解如何创建从Magento 1升级到Magento 2的数据迁移计划。 规划和测试您的迁移以避免出现问题。
+description: 了解如何制定从Magento 1升级到Magento 2的数据迁移计划。 规划和测试您的迁移以避免出现问题。
 exl-id: a14237f3-c5fe-4f5f-86eb-ed4c39507bff
 topic: Commerce, Migration
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 0%
-
 ---
-
 # 创建数据迁移计划
 
 要成功迁移并避免出现问题，您需要彻底规划和测试迁移。
@@ -32,9 +41,9 @@ ht-degree: 0%
 
 * 使用至少与现有Magento 1系统匹配的拓扑和设计来设置Magento 2硬件系统
 
-* 在符合[!DNL Data Migration Tool]系统要求[的系统上安装Magento 2（包含此版本的所有模块）和](../../installation/system-requirements.md)
+* 在符合[系统要求](../../installation/system-requirements.md)的系统上安装Magento 2（此版本的所有模块均适用）和[!DNL Data Migration Tool]
 
-* 自定义[!DNL Data Migration Tool]代码以跳过某些数据(如CMS页面、销售规则)，或在迁移期间转换自定义设置。 阅读[!DNL Data Migration Tool]的[技术规范](technical-specification.md)以了解有关迁移工作方式的更多信息
+* 自定义[!DNL Data Migration Tool]代码以跳过某些数据（如CMS页面、销售规则），或在迁移期间转换自定义设置。 阅读[!DNL Data Migration Tool]的[技术规范](technical-specification.md)以了解有关迁移工作方式的更多信息
 
 ## 步骤3：练习
 
@@ -42,7 +51,7 @@ ht-degree: 0%
 
 在此类迁移测试中，请执行以下步骤：
 
-* 将Magento 1商店复制到暂存服务器
+* 将Magento 1存储复制到暂存服务器
 
 * 将复制的Magento 1存储完全迁移到Magento 2
 
@@ -52,11 +61,11 @@ ht-degree: 0%
 
 1. 确保[!DNL Data Migration Tool]具有连接到Magento 1和Magento 2数据库的网络访问权限。 在防火墙中打开相应的端口。
 
-1. 停止Magento 1管理面板中的所有活动(Order Management除外)，例如送货、创建发票和贷项通知单。 可以通过调整[!DNL Data Migration Tool]中Delta模式的设置来扩展允许的活动列表。
+1. 停止Magento 1管理面板中的所有活动（Order Management除外），例如运送、创建发票和贷项通知单。 可以通过调整[!DNL Data Migration Tool]中Delta模式的设置来扩展允许的活动列表。
 
    >[!NOTE]
    >
-   >在Magento 2应用商店上线之前，请勿恢复这些活动。
+   >在Magento 2商店上线之前，请勿恢复这些活动。
 
 1. 我们建议停止所有Magento 1 cron作业。
 
@@ -72,21 +81,21 @@ ht-degree: 0%
 
 1. 使用[!DNL Data Migration Tool]将数据从Magento 1数据库批量复制到Magento 2数据库。
 
-   如果您的某些扩展包含要迁移的数据，则可能需要安装这些适用于Magento 2的扩展。 如果扩展名在Magento 2数据库中具有不同的结构，请使用随[!DNL Data Migration Tool]提供的映射文件。
+   如果某些扩展包含要迁移的数据，您可能需要安装适用于Magento 2的扩展。 如果Magento 2数据库中的扩展具有不同的结构，请使用随[!DNL Data Migration Tool]提供的映射文件。
 
-1. 重新索引所有Magento 2索引器。 有关详细信息，请参阅[配置指南](../../configuration/cli/manage-indexers.md)中的&#x200B;_管理索引器_。
+1. 重新索引所有Magento 2索引器。 有关详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[管理索引器](../../configuration/cli/manage-indexers.md)。
 
 ## 步骤5：根据需要更改迁移的数据
 
-有时，您可能希望在迁移后让Magento 2商店具有不同的目录结构、销售规则和CMS页面。
+有时，您可能希望在迁移后使用具有不同目录结构、销售规则和CMS页面的Magento 2商店。
 
 在进行手动数据更改时，务必要谨慎。 错误会在后续的增量数据迁移步骤中创建错误。
 
-例如，从Magento 2中删除的产品：已在您的Magento 1实时商店中购买且在您的Magento 2商店中不再可用的产品。 在增量模式下运行[!DNL Data Migration Tool]时，传输有关此类购买的数据可能会导致错误。
+例如，从Magento 2中删除的产品：已在实时Magento 1商店中购买且在您的Magento 2商店中不再可用的产品。 在增量模式下运行[!DNL Data Migration Tool]时，传输有关此类购买的数据可能会导致错误。
 
 ## 步骤6：更新增量数据
 
-在迁移数据之后，使用增量模式捕获增量更新，并将其从Magento 1传输到Magento 2（例如新订单、审查和客户配置文件更改）。
+迁移数据后，使用增量模式捕获增量更新，并将其从Magento 1传输到Magento 2（例如新订单、审查和客户配置文件更改）。
 
 * 开始增量迁移；更新将持续运行。 您可以随时按`Ctrl+C`来停止传输更新。
 
@@ -94,11 +103,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您同时对Magento 2站点执行测试并运行迁移过程，则可能会显示卷检查警告。 发生这种情况的原因是，在Magento 2中，您创建的实体在Magento 1实例中不存在。
+>如果您同时对Magento 2站点执行测试并运行迁移过程，则可能会显示卷检查警告。 发生这种情况是因为在Magento 2中，您创建的实体在Magento 1实例中不存在。
 
 ## 步骤7：上线
 
-完全迁移Magento 2站点并正常运行后，请完成以下转换：
+完全迁移Magento 2站点并正常运行后，完成切换：
 
 1. 将Magento 1系统置于维护模式（停机时间开始）。
 
@@ -106,9 +115,9 @@ ht-degree: 0%
 
 1. 启动Magento 2 cron作业。
 
-1. 在您的Magento 2系统中，重新索引股票索引器。 有关详细信息，请参阅[配置指南](../../configuration/cli/manage-indexers.md)中的&#x200B;_管理索引器_。
+1. 在Magento 2系统中，重新索引股票索引器。 有关详细信息，请参阅&#x200B;_配置指南_&#x200B;中的[管理索引器](../../configuration/cli/manage-indexers.md)。
 
-1. 使用您选择的工具，在Magento 2系统中点击页面，以便在客户使用您的店面之前缓存页面。
+1. 使用您选择的工具，先点击您Magento 2系统中的页面以缓存页面，然后再缓存使用您店面的客户。
 
 1. 对您的Magento 2站点执行任何最终验证。
 

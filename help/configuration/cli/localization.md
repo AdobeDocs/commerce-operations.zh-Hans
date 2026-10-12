@@ -2,13 +2,22 @@
 title: 翻译词典和语言包
 description: 了解如何为Adobe Commerce生成翻译词典和构建语言包。 了解本地化和多语言商店设置。
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: b378f6da50e40b1868ae759cc7f3523a7e3ced4b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 0%
-
 ---
-
 # 本地化
 
 {{file-system-owner}}
@@ -35,7 +44,7 @@ ht-degree: 0%
 
 1. 您可以将翻译字典打包到一个语言包中，并将该包提供给Commerce商店管理员。
 
-1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/stores-sales/site-store/store-localize)。
+1. 在管理员中，商店管理员[配置翻译](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize)。
 
 命令选项：
 
