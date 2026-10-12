@@ -1,15 +1,24 @@
 ---
 title: '[!DNL Data Migration Tool]技术规范'
-description: 了解 [!DNL Data Migration Tool] 的实施详细信息以及在Magento 1和Magento 2之间传输数据时如何扩展。
+description: 了解[!DNL Data Migration Tool]的实施详细信息以及在Magento 1和Magento 2之间传输数据时如何扩展。
 exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
 topic: Commerce, Migration
-source-git-commit: d20f9d38a06fcd0eed872fe6f7ef1f3ee015a00f
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2114'
 ht-degree: 0%
-
 ---
-
 # [!DNL Data Migration Tool]技术规范
 
 本节介绍[!DNL Data Migration Tool]实现详细信息以及如何扩展其功能。
@@ -162,7 +171,7 @@ ht-degree: 0%
 
 * 选项 — 参数列表。 包含必需(map_file、settings_map_file、bulk_size)和可选(custom_option、resource_adapter_class_name、prefix_source、prefix_dest、log_file)参数
 
-在数据库表中安装了带有前缀的Magento的情况下更改前缀选项。 可以为Magento 1和Magento 2数据库设置此值。 请相应地使用“source_prefix”和“dest_prefix”配置选项。
+如果数据库表中安装了Magento且带有前缀，请更改前缀选项。 可以为Magento 1和Magento 2数据库设置此值。 请相应地使用“source_prefix”和“dest_prefix”配置选项。
 
 可使用`\Migration\Config`类访问配置数据。
 
@@ -172,7 +181,7 @@ ht-degree: 0%
 |---|---|
 | `step` | Steps节点中的第二级节点。 必须在`title`属性中指定相关步骤的描述。 |
 | `integrity` | 指定负责完整性检查的PHP类。 比较表字段名称、类型和其他信息，以验证Magento 1和2数据结构之间的兼容性。 |
-| `data` | 指定负责数据检查的PHP类。 将数据逐表从Magento 1传输到Magento 2。 |
+| `data` | 指定负责数据检查的PHP类。 逐表将数据从Magento 1传输到Magento 2。 |
 | `volume` | 指定负责卷检查的PHP类。 比较表之间的记录数以验证传输是否成功。 |
 | `delta` | 指定负责增量检查的PHP类。 在完全数据迁移后，将增量从Magento 1传输到Magento 2。 |
 
@@ -279,11 +288,11 @@ $this->progress->finish();
 
 ### 完整性检查
 
-每个步骤都必须检查数据源的结构（默认为Magento 1）和数据目标的结构(Magento 2)是否兼容。 如果不兼容 — 对于不兼容的实体会显示错误。 如果字段具有不同的数据类型（同一字段在Magento 1中具有十进制数据类型，在Magento 2中具有整数），则会显示警告消息（除非该类型包含在映射文件中）。
+每个步骤都必须检查数据源的结构（默认为Magento 1）和数据目标的结构（默认为Magento 2）是否兼容。 如果不兼容 — 对于不兼容的实体会显示错误。 如果字段具有不同的数据类型（同一字段在Magento 1中具有十进制数据类型，在Magento 2中具有整数），则会显示警告消息（除非该类型包含在Map文件中）。
 
 ### 数据传输
 
-如果完整性检查通过，则正在传输数据。 如果出现错误，则会运行回滚以恢复Magento 2以前的状态。 如果步骤类实现`RollbackInterface`接口，则在出现错误时执行回滚方法。
+如果完整性检查通过，则正在传输数据。 如果出现错误，则回滚运行以恢复Magento 2的上一个状态。 如果步骤类实现`RollbackInterface`接口，则在出现错误时执行回滚方法。
 
 ### 音量检查
 
@@ -335,7 +344,7 @@ $this->progress->finish();
 
 在节点`<key>`下，有一些规则可与`core_config_data`表中的“path”列一起使用。 `<ignore>`规则阻止工具传输某些设置。 可在此节点中使用通配符。 `<ignore>`节点中未列出的所有其他设置都将迁移。 如果设置的路径在Magento 2中发生更改，则应将其添加到`//key/rename`节点，其中旧路径在`//key/rename/path`节点中指示，新路径在`//key/rename/to`节点中指示。
 
-在节点`<value>`下，有一些规则可与`core_config_data`表中的“value”列一起使用。 这些规则旨在通过处理程序（实现`Migration\Handler\HandlerInterface`的类）转换设置的值，并针对Magento 2对其进行调整。
+在节点`<value>`下，有一些规则可与`core_config_data`表中的“value”列一起使用。 这些规则旨在通过处理程序（实现`Migration\Handler\HandlerInterface`的类）转换设置的值，并将其适用于Magento 2。
 
 ### 数据迁移模式
 
@@ -343,7 +352,7 @@ $this->progress->finish();
 
 #### 映射步骤
 
-映射步骤负责将大部分数据从Magento 1传输到Magento 2。 此步骤从map.xml文件（位于`etc/`目录）中读取说明。 文件介绍了源(Magento 1)和目标(Magento 2)的数据结构之间的差异。 如果Magento 1包含属于Magento 2中不存在的某个扩展的表或字段，则可以将这些实体放置在此处，以按映射步骤忽略它们。 否则，它将显示错误消息。
+映射步骤负责将大部分数据从Magento 1传输到Magento 2。 此步骤从map.xml文件（位于`etc/`目录）中读取说明。 文件介绍了源(Magento 1)和目标(Magento 2)的数据结构之间的差异。 如果Magento 1包含属于Magento 2中不存在的某个扩展的表或字段，则可以在此处放置这些实体，以按映射步骤忽略它们。 否则，它将显示错误消息。
 
 映射文件的格式如下：
 
@@ -435,7 +444,7 @@ $this->progress->finish();
 
 #### URL重写步骤
 
-此步骤非常复杂，因为在Magento 1中开发的许多算法与Magento 2不兼容。 对于Magento 1的不同版本，可以有不同的算法。 因此，在Step/UrlRewrite文件夹下，有一些为某些特定版本的Magento开发的类，Migration\Step\UrlRewrite\Version191to2000就是其中之一。 它可以将URL重写数据从Magento 1.9.1传输到Magento 2。
+此步骤比较复杂，因为在Magento 1中开发的许多不同算法与Magento 2不兼容。 对于Magento 1的不同版本，可以有不同的算法。 因此，在Step/UrlRewrite文件夹下，有一些为某些特定版本的Magento开发的类，Migration\Step\UrlRewrite\Version191to2000就是其中之一。 它可以将URL重写数据从Magento 1.9.1传输到Magento 2。
 
 #### EAV步骤
 
@@ -465,7 +474,7 @@ $this->progress->finish();
 
 ## 记录
 
-为了实现迁移过程的输出并控制所有可能的级别，在Magento中使用了PSR记录器。 已实现`\Migration\Logger\Logger`类以提供日志记录功能。 要使用记录器，应通过构造函数依赖项注入来注入记录器。
+为了实现移植过程的输出并控制所有可能的级别，采用了Magento中的PSR记录器。 已实现`\Migration\Logger\Logger`类以提供日志记录功能。 要使用记录器，应通过构造函数依赖项注入来注入记录器。
 
 ```php
 class SomeClass

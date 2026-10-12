@@ -5,13 +5,27 @@ feature: Customers, Shipping/Delivery
 role: Admin, Developer
 exl-id: 47682daf-9117-45f1-ab09-a66c13132ff3
 type: Troubleshooting
-source-git-commit: 4266dbeca837bc62e5a76b2ef22b065a3452e088
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+feature_v2:
+  - id: 22bad240-8308-569b-a9d5-578f1ff890ca
+    internal-label: Customers
+  - id: 04d3134c-2afb-5bd7-ac14-e19fa935e848
+    internal-label: Shipping/Delivery
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # ACSD-61667：提高库存性能以创建发运
 
 ACSD-61667修补程序修复了在为多个来源启用[[!DNL Inventory Management for Commerce]](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/inventory/introduction)（以前为MSI）接收存储时商家无法发送订单的问题。 安装[[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.53时，此修补程序可用。 修补程序ID为ACSD-61667。 请注意，该问题计划在Adobe Commerce 2.4.8中修复。
