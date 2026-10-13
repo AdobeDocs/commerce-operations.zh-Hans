@@ -19,10 +19,10 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 06034766e0c2e09e414e1ebc7a5b388a07593406
 workflow-type: tm+mt
 source-wordcount: '4570'
-ht-degree: 0%
+ht-degree: 1%
 ---
 # 敏感和特定于系统的设置
 
@@ -185,9 +185,9 @@ ht-degree: 0%
 
 这些配置值在&#x200B;**存储** >设置> **配置** > **目录** > **清单**&#x200B;中的管理员中可用。
 
-|名称 |配置路径 | Commerce版本支持|是否加密？ |系统特定？ |敏感？ | |
-|--------------|--------------|--------------|--------------|--------------|--------------| |
-| Google API密钥 | `cataloginventory/source_selection_distance_based_google/api_key` |  |已加密 | |敏感 |
+| 名称 | 配置路径 | Commerce版本支持 | 是否加密？ | 特定于系统？ | 敏感？ |
+|--------------|--------------|--------------|--------------|--------------|--------------|
+| Google API密钥 | `cataloginventory/source_selection_distance_based_google/api_key` |  | 已加密 | | 敏感 |
 
 ### XML Sitemap敏感路径和系统特定路径
 
