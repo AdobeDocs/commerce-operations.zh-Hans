@@ -15,7 +15,7 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: a3c0eba7bdcd8017e88bdb4df1f45d77fe4bb351
+source-git-commit: 78a34dc069a30b72a1e0baff36085a2458a05983
 workflow-type: tm+mt
 source-wordcount: '1353'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Adobe不提供对第三方服务和软件依赖项（例如PHP和MySQL）的安�
 
 从正式发布(GA)日期开始的标准三年支持期。 标准支持包括质量修复、安全补丁和完整的Adobe Commerce电话支持。
 
-- **质量修复** — 客户可以通过联系[Adobe Commerce支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)或通过自助服务[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)访问质量修复。
+- **质量修复** — 客户可以通过联系[Adobe Commerce支持](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)或通过自助服务[[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)访问质量修复。
 
 - **安全修复** - Adobe通过累积的安全修补程序和非累积的[隔离的安全修补程序文件](versioning-policy.md#isolated-security-patch-file)提供三年支持期的安全修复。
 
@@ -208,7 +208,7 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 - 您可以访问Adobe的最新功能：AI支持的促销、可组合的店面架构和本机Adobe Experience Cloud集成。
 - 您可以消除循环升级周期。
 
-请联系您的Adobe客户团队以开始迁移评估。 有关产品概述，请参阅[Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/overview)。
+请联系您的Adobe客户团队以开始迁移评估。 有关产品概述，请参阅[Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview)。
 
 ### 替代路径：升级到支持的Adobe Commerce云版或内部部署版
 
@@ -216,4 +216,4 @@ Adobe鼓励客户尽快升级。 但是，为了提供更大的灵活性以符�
 
 请注意，此路径不会消除未来的升级义务。 在版本行到达版本升级实施日期时，具有Adobe Commerce on Cloud部署的客户必须继续升级。
 
-<!-- Last updated from includes: 2026-09-17 13:05:40 -->
+<!-- Last updated from includes: 2026-09-17 14:58:18 -->
