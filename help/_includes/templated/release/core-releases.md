@@ -1,11 +1,31 @@
 ---
-source-git-commit: 420e4af6778d3f493e9ad4fcc4ae175446d31243
+source-git-commit: a412b5ff5dd9267c9078f9847e466bec90dcde50
 workflow-type: tm+mt
-source-wordcount: '2131'
+source-wordcount: '2169'
 ht-degree: 3%
-
 ---
 # 已发布版本
+
+## 2.4.10
+
+尚未设置对2.4.10版本行支持的终止日期。
+
+<table>
+  <thead>
+    <tr>
+      <th>修补程序版本</th>
+      <th>发行日期</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-10">2.4.10-alpha1</a>
+        </td>
+        <td>2026年10月13</td>
+    </tr><!-- patch_releases -->
+  </tbody>
+</table>
 
 ## 2.4.9
 

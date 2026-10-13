@@ -1,27 +1,26 @@
 ---
-source-git-commit: 1dcfbd53f79c83dbf6c44ffce952de101f7e01f1
+source-git-commit: 78a34dc069a30b72a1e0baff36085a2458a05983
 workflow-type: tm+mt
-source-wordcount: '27999'
+source-wordcount: '31312'
 ht-degree: 0%
-
 ---
 # Adobe Commerce修复了问题(v2.4.8)
 
 ## 修复了v2.4.8中的问题
 
-我们已在Adobe Commerce 2.4.8核心代码中修复了581个问题。此版本中包含的已修复问题的子集如下所述。
+我们已在Adobe Commerce 2.4.8核心代码中修复了581个问题。 此版本中包含的已修复问题的子集如下所述。
 
 ### API
 
 #### /V1/事务REST API在parent_txn_id = txn_id时返回错误
 
-现在，系统可正确处理父事务ID与事务ID相同的父概念事务和子概念事务，从而防止在查询/V1/事务REST API端点时发生无限循环。以前，由于超出最大执行时间，此方案会导致致命错误。
+现在，系统可正确处理父事务ID与事务ID相同的父概念事务和子概念事务，从而防止在查询/V1/事务REST API端点时发生无限循环。 以前，由于超出最大执行时间，此方案会导致致命错误。
 
 _AC-10042 - [GitHub代码贡献](https://github.com/magento/magento2/commit/1bafc571)_
 
 #### 2.4.7中的[Graphql]类型问题
 
-现在，系统在执行GraphQL查询时可正确处理GetCustomSelectedOptionAttributes函数中的整数值，从而防止出现任何与类型相关的错误。以前，启动使用具有整数参数的GetCustomSelectedOptionAttributes的GraphQL查询会导致类型错误。
+现在，系统在执行GraphQL查询时可正确处理GetCustomSelectedOptionAttributes函数中的整数值，从而防止出现任何与类型相关的错误。 以前，启动使用具有整数参数的GetCustomSelectedOptionAttributes的GraphQL查询会导致类型错误。
 
 _AC-11878 - [GitHub问题](https://github.com/magento/magento2/issues/38662) - [GitHub代码贡献](https://github.com/magento/magento2/pull/38663)_
 
@@ -33,7 +32,7 @@ _AC-3223 - [GitHub问题](https://github.com/magento/magento2/issues/35577) - [G
 
 #### 显示来自其他网站的订单的REST API。 
 
-系统现在支持REST API管理员令牌和Magento_Sales端点的范围授权访问，确保REST API仅显示管理员有权访问的订单。以前，REST API会显示所有网站的订单，而不管管理员用户分配的网站是什么。
+系统现在支持REST API管理员令牌和Magento_Sales端点的范围授权访问，确保REST API仅显示管理员有权访问的订单。 以前，REST API会显示所有网站的订单，而不管管理员用户分配的网站是什么。
 
 _ACP2E-2703_
 
@@ -45,13 +44,13 @@ _ACP2E-2755 - [GitHub代码贡献](https://github.com/magento/security-package/c
 
 #### [REST API]：为可配置产品添加配置后，在存储视图中使用默认值不会保持选中状态
 
-通过确保非默认存储的可自定义选项的正确数据库条目，该问题已得到修复。由于数据库条目不准确，因此以前在“管理员>目录>产品编辑>可自定义选项”部分中针对自定义商店的复选框处于未选中状态，即使自定义商店的选项标题与默认商店的标题保持相同也是如此。
+通过确保非默认存储的可自定义选项的正确数据库条目，该问题已得到修复。 由于数据库条目不准确，因此以前在“管理员>目录>产品编辑>可自定义选项”部分中针对自定义商店的复选框处于未选中状态，即使自定义商店的选项标题与默认商店的标题保持相同也是如此。
 
 _ACP2E-2927 - [GitHub代码贡献](https://github.com/magento/magento2/commit/3056e9cb)_
 
 #### 使用Oauth1时，REST API无法在SKU中使用斜杠(/)发出请求
 
-在修复之前，您无法为SKU中具有“/”的产品成功进行API调用。现在，即使其SKU中存在正斜杠，您仍可以成功发出API GET请求以获取产品详细信息。
+在修复之前，您无法为SKU中具有“/”的产品成功进行API调用。 现在，即使其SKU中存在正斜杠，您仍可以成功发出API GET请求以获取产品详细信息。
 
 _ACP2E-2969 - [GitHub代码贡献](https://github.com/magento/magento2/commit/b21e5d91)_
 
@@ -63,13 +62,14 @@ _ACP2E-3079 - [GitHub代码贡献](https://github.com/magento/magento2/commit/9a
 
 #### [Cloud]在层价格Api中创建重复的网站组价格客户组。
 
-现在，Tier Price Rest Api不允许创建重复的网站组价格客户组。以前，可以在层价格Api中创建重复的网站组价格客户组，以免在产品保存期间通过管理员验证。
+现在，Tier Price Rest Api不允许创建重复的网站组价格客户组。
+以前，可以在层价格Api中创建重复的网站组价格客户组，以免在产品保存期间通过管理员验证。
 
 _ACP2E-3091 - [GitHub代码贡献](https://github.com/magento/magento2/commit/148c3ead)_
 
 #### 无法通过REST API添加具有状态的订单评论
 
-通过允许更改顺序状态（如果该状态仅来自当前状态），该问题已得到解决。以前，它不会遵循订单状态并阻止任何订单状态中的更改，即使订单状态来自同一状态也是如此。
+通过允许更改顺序状态（如果该状态仅来自当前状态），该问题已得到解决。 以前，它不会遵循订单状态并阻止任何订单状态中的更改，即使订单状态来自同一状态也是如此。
 
 _ACP2E-3130 - [GitHub代码贡献](https://github.com/magento/magento2/commit/93d50f8d)_
 
@@ -81,13 +81,13 @@ _ACP2E-3236 - [GitHub代码贡献](https://github.com/magento/magento2/commit/66
 
 #### [CLOUD]无法使用REST API更新基本价格（“catalog_product_entity_decimal”中“value_id”的值未正确递增。）
 
-在此修复之前，调用rest api /rest/default/V1/products/base-prices时，增量id错误地增加，从而会在值之间留下间隙。修复后，增量ID将按预期递增。此外， value_id字段范围也增加了。
+在此修复之前，调用rest api /rest/default/V1/products/base-prices时，增量id错误地增加，从而会在值之间留下间隙。 修复后，增量ID将按预期递增。 此外， value_id字段范围也增加了。
 
 _ACP2E-3376 - [GitHub代码贡献](https://github.com/magento/magento2/commit/d50f6b5d)_
 
 #### 在API POST V1/order/:orderId/refute的贷项通知单电子邮件中看不到订单项目
 
-以前，在本次修复之前，当客户通过通知send_email的API请求创建贷项通知单时，它不包含产品详细信息网格。进行此修复后，客户发送了贷项通知单API请求，并将发现电子邮件中显示了产品项目详细信息。
+以前，在本次修复之前，当客户通过通知send_email的API请求创建贷项通知单时，它不包含产品详细信息网格。 进行此修复后，客户发送了贷项通知单API请求，并将发现电子邮件中显示了产品项目详细信息。
 
 _ACP2E-3460 - [GitHub代码贡献](https://github.com/magento/magento2/commit/3f12d152)_
 
@@ -264,7 +264,7 @@ _AC-11427 - [GitHub问题](https://github.com/magento/magento2/issues/31232) - [
 
 _AC-11588 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0574ac23)_
 
-#### [错误] Magento 2.4.7不允许使用大写字母文件扩展名的产品照片。
+#### [错误] Magento 2.4.7不允许产品照片具有大写字母文件扩展名。
 
 现在，系统接受使用大写字母文件扩展名的产品图像上传，以确保平稳的产品创建过程。 以前，使用大写字母文件扩展名的图像上传被拒绝，从而迫使用户将文件扩展名更改为小写。
 
@@ -302,7 +302,7 @@ _AC-13768_
 
 #### 必填电话号码字段没有红色星号
 
-早期的红色星号未显示电话号码，但是  电话号码为必填项。 现在修复的红色星号可在电话号码上显示为必填字段。
+早期的红色星号未显示电话号码，但电话号码是必需的。 现在修复的红色星号可在电话号码上显示为必填字段。
 
 _AC-13850 - [GitHub代码贡献](https://github.com/magento/magento2/commit/c699c206)_
 
@@ -312,13 +312,13 @@ _AC-13850 - [GitHub代码贡献](https://github.com/magento/magento2/commit/c699
 
 _AC-14300_
 
-#### [问题]将默认索引器模式设置为“schedule”
+#### [问题]将默认索引器模式设置为“计划”
 
-默认情况下，所有新索引器都处于&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;模式。以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
+默认情况下，所有新索引器都处于&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;模式。  以前，默认模式为&#x200B;**[!UICONTROL Update on Save]**。 现有的索引器不受影响。 [GitHub-36419](https://github.com/magento/magento2/issues/36419)
 
 _AC-6975 - [GitHub问题](https://github.com/magento/magento2/issues/36419) - [GitHub代码贡献](https://github.com/magento/magento2/commit/0b410856)_
 
-#### [问题]在mview取消订阅上删除索引器更改日志表
+#### [问题]在mview取消订阅时删除索引器更改日志表
 
 现在，当索引从“按计划更新”切换到“保存时更新”时，系统自动删除未使用的更改日志表，将索引标记为无效，以确保没有丢失任何条目。 以前，将索引切换为“保存时更新”会在系统中保留未使用的changelog表，并将所有更改的索引标记为“有效”。
 
@@ -338,7 +338,7 @@ _AC-8109 - [GitHub问题](https://github.com/magento/magento2/issues/36947) - [G
 
 #### i18n:collect-phrases破坏了翻译完整性
 
-`bin/magento i18n:collect-phrases -o`命令现在可以从.phtml文件中正确收集和添加新短语，确保翻译文件能够准确反映翻译。以前，系统无法在翻译文件中包含来自JavaScript文件的多行翻译短语以及来自.phtml文件的短语，从而导致翻译不完整或不正确。
+`bin/magento i18n:collect-phrases -o`命令现在可以从html文件中正确收集和添加新短语，确保翻译文件能够准确反映翻译。 以前，系统无法在翻译文件中包含来自JavaScript文件的多行翻译短语以及来自.phtml文件的短语，从而导致翻译不完整或不正确。
 
 _AC-9843 - [GitHub代码贡献](https://github.com/magento/magento2/commit/0c53bbf7)_
 
@@ -374,7 +374,7 @@ _ACP2E-2978 - [GitHub代码贡献](https://github.com/magento/magento2/commit/30
 
 #### 无法导出200个以上的订单
 
-已忽略先前提交的选定ID的请求大小的服务器限制，方法是将GET中的HTTP请求更改为POST以修复此问题。 以前，由于GET请求大小的服务器限制，遇到问题。
+为了解决此问题，通过将HTTP请求从GET更改为POST，忽略了先前提交的选定ID的请求大小的服务器限制。 以前，由于GET请求大小的服务器限制，遇到问题。
 
 _ACP2E-3033 - [GitHub代码贡献](https://github.com/magento/magento2/commit/93d50f8d)_
 
@@ -398,7 +398,7 @@ _ACP2E-3149 - [GitHub代码贡献](https://github.com/magento/magento2/commit/84
 
 #### COD不适用于允许的特定国家/地区
 
-现在，特定国家/地区在需要时可以使用“货到付款”，并且   AC-3216按预期工作。
+现在，特定允许国家/地区在需要时可以使用货到付款，并且AC-3216可按预期工作。
 
 _ACP2E-3171 - [GitHub代码贡献](https://github.com/magento/magento2/commit/6f4805f8)_
 
@@ -428,7 +428,7 @@ _ACP2E-3373 - [GitHub问题](https://github.com/magento/magento2/issues/37663) -
 
 #### “购物车中允许的最大数量”的验证已损坏
 
-以前，当我们将`Maximum Qty Allowed in Shopping Cart`设置为空时，它不会引发任何异常，尽管此处不接受空值。进行此修复后，输入空字符串将会引发异常，并且不允许保存产品。
+以前，当我们将`Maximum Qty Allowed in Shopping Cart`设置为空时，它不会引发任何异常，尽管此处不接受空值。 进行此修复后，输入空字符串将会引发异常，并且不允许保存产品。
 
 _ACP2E-3392 - [GitHub代码贡献](https://github.com/magento/magento2/commit/d50f6b5d)_
 
@@ -484,7 +484,7 @@ _ACP2E-3559 - [GitHub代码贡献](https://github.com/magento/magento2/commit/34
 
 #### 作为客户标题的B2B登录仍具有Magento品牌
 
-早些时候，店面标题显示“您现在作为&lt;store name>上的&lt;customer name>连接”与Magento品牌化。 现已修复，并且标题会显示为ADOBE品牌。
+之前，店面标题显示“您现在作为&lt;store name>上的&lt;customer name>连接”与Magento品牌推广。 现已修复，并且标题会显示为ADOBE品牌。
 
 _AC-13628 - [GitHub代码贡献](https://github.com/magento/magento2/commit/96dec499)_
 
@@ -514,7 +514,7 @@ _ACP2E-3169 - [GitHub代码贡献](https://github.com/magento/magento2/commit/b2
 
 ### 管理员UI，配送
 
-#### 优惠券代码计数不会在   如果订单是多次发运的，则“管理优惠券代码”选项卡中的“已用时间”列。
+#### 如果订购的是多发订单，则在“管理优惠券代码”选项卡的“使用时间”列中，优惠券代码计数不会更新。
 
 以前，在多次发运订单时，在“管理优惠券代码”选项卡的“使用时间”列中，优惠券代码计数不会更新。 现在，正确计数会同时显示在“使用时间”中，以反映多次配送的所需值。
 
@@ -550,7 +550,7 @@ _ACP2E-3080 - [GitHub代码贡献](https://github.com/magento/magento2/commit/6f
 
 #### Curl标头不正确，导致`newrelic:create:deploy-marker`无法正常工作
 
-系统现在可以正确设置curl标头的格式，从而允许`newrelic:create:deploy-marker`命令在New Relic中成功创建部署标记。以前，错误的curl标头会阻止在New Relic中创建部署标记。
+系统现在可以正确设置curl标头的格式，从而允许`newrelic:create:deploy-marker`命令在New Relic中成功创建部署标记。 以前，错误的curl标头会阻止在New Relic中创建部署标记。
 
 _ACP2E-3096 - [GitHub问题](https://github.com/magento/magento2/issues/37641) - [GitHub代码贡献](https://github.com/magento/magento2/commit/6a185204)_
 
@@ -753,7 +753,7 @@ _AC-10826 - [GitHub代码贡献](https://github.com/magento/magento2/commit/3ea2
 
 #### 在某些与顺序相关的测试用例中抛出Magento异常
 
-现在，系统可以在各种测试用例中正确处理“sendGuestPaymentInformation”步骤，从而防止引发Magento异常。 以前，这些例外是由于空的支付方法而发生的，导致在几种测试情况下发生故障。
+系统现在可以在各种测试用例中正确处理“sendGuestPaymentInformation”步骤，从而防止引发Magento异常。 以前，这些例外是由于空的支付方法而发生的，导致在几种测试情况下发生故障。
 
 _AC-13321_
 
@@ -777,7 +777,7 @@ _AC-10698 - [GitHub问题](https://github.com/magento/magento2/issues/37348) - [
 
 _AC-11641 - [GitHub问题](https://github.com/magento/magento2/issues/32781) - [GitHub代码贡献](https://github.com/magento/magento2/pull/32511)_
 
-#### Magento 2与现有客户一起在签出内登录时，在Firefox浏览器中引发控制台错误
+#### 与现有客户一起在签出内登录的Magento 2在Firefox浏览器中给出控制台错误
 
 现在，系统允许用户在结账过程中登录，而不会在Firefox浏览器中遇到任何控制台错误。 以前，在签出期间尝试以现有客户身份登录会导致Firefox中出现控制台错误。
 
@@ -801,7 +801,7 @@ _AC-11914 - [GitHub问题](https://github.com/magento/magento2/issues/38694) - [
 
 _AC-11993 - [GitHub问题](https://github.com/magento/magento2/issues/38742) - [GitHub代码贡献](https://github.com/magento/magento2/commit/1bafc571)_
 
-#### 优惠券代码功能在Magento 2.4.7上的签出页面中无法正常工作
+#### 在Magento 2.4.7的签出页面中，优惠券代码功能无法正常工作
 
 系统现在为虚拟和可下载产品在结账页面上启用折扣代码/优惠券输入字段，使用户能够按预期应用折扣代码。 以前，折扣代码/优惠券输入被禁用，并且按钮标题文本显示为“取消优惠券”，阻止用户应用折扣代码。
 
@@ -957,7 +957,7 @@ _ACP2E-3402 - [GitHub代码贡献](https://github.com/magento/magento2/commit/07
 
 _ACP2E-3405_
 
-#### 礼品卡产品|购物车合并正在合并礼品卡
+#### 礼品卡产品 |购物车合并正在合并礼品卡
 
 Giftcard产品现已正确合并到购物车中
 
@@ -1224,7 +1224,7 @@ _ACP2E-2888_
 
 _ACP2E-2905 - [GitHub问题](https://github.com/magento/magento2/issues/38506) - [GitHub代码贡献](https://github.com/magento/magento2/commit/a4fbf702)_
 
-#### dynamic-rows.js:658编辑捆绑产品时未捕获的TypeError： dataRecord.slice
+#### dynamic-rows.js：658编辑捆绑产品时未捕获的TypeError： dataRecord.slice
 
 从捆绑产品中删除选项时，浏览器控制台中没有javascript错误。
 
@@ -1496,7 +1496,7 @@ _ACP2E-3053 - [GitHub代码贡献](https://github.com/magento/magento2/commit/c8
 
 _ACP2E-3345 - [GitHub代码贡献](https://github.com/magento/magento2/commit/1366ae5e)_
 
-#### 在Magento Admin中保存后，产品的[CLOUD]问题在前端不可见
+#### 在Magento Admin中保存后，产品的[云]问题在前端不可见
 
 在修复了具有长名称子产品的可配置产品之后，店面中将不会丢失这些产品。
 
@@ -1546,7 +1546,7 @@ _AC-10845 - [GitHub代码贡献](https://github.com/magento/magento2/commit/c8f8
 
 #### 更新到2.4.5-p8后，出现“区码未设置”
 
-现在，在启用Magento_CSP模块并将“dev/js/translate_strategy”设置为“embedded”时，系统可成功完成静态内容部署过程，而不会触发“未设置区码”错误。 以前，在这些情况下，静态内容部署过程会失败，并出现“未设置区码”错误。
+现在，在启用Magento_CSP模块且“dev/js/translate_strategy”设置为“embedded”时，系统可成功完成静态内容部署过程，而不会触发“未设置区码”错误。 以前，在这些情况下，静态内容部署过程会失败，并出现“未设置区码”错误。
 
 _AC-12283 - [GitHub问题](https://github.com/magento/magento2/issues/38845) - [GitHub代码贡献](https://github.com/magento/magento2/pull/38922)_
 
@@ -1804,7 +1804,7 @@ _AC-11489 - [GitHub问题](https://github.com/magento/magento2/issues/38485) - [
 
 _AC-11592 - [GitHub问题](https://github.com/magento/magento2/issues/38517) - [GitHub代码贡献](https://github.com/magento/magento2/pull/33161)_
 
-#### Magento尝试在LoggerProxy的__wakeUp方法中修改只读属性
+#### Magento尝试修改LoggerProxy的__wakeUp方法中的只读属性
 
 现在，该系统允许修改LoggerProxy的__唤醒方法中以前为只读的属性，从而确保顺利操作而不强制用户采用解决方法。 以前，尝试在LoggerProxy的__wakeUp方法中重新分配只读属性的值会导致出现问题。
 
@@ -1950,7 +1950,7 @@ _AC-13345 - [GitHub问题](https://github.com/magento/magento2/issues/39246) - [
 
 #### [问题]删除我们不再支持的PHP版本的一些代码。
 
-删除了Magento不再支持的PHP版本的代码
+删除Magento不再支持的PHP版本的代码
 
 _AC-13348 - [GitHub问题](https://github.com/magento/magento2/issues/39361) - [GitHub代码贡献](https://github.com/magento/magento2/pull/39202)_
 
@@ -1990,13 +1990,13 @@ _AC-6754 - [GitHub问题](https://github.com/magento/magento2/issues/36163) - [G
 
 _AC-8353 - [GitHub问题](https://github.com/magento/magento2/issues/37253) - [GitHub代码贡献](https://github.com/magento/magento2/pull/37003)_
 
-#### [问题]从`@author`中删除禁止的`Magento_Customer`标记（第2部分）
+#### [问题]从`Magento_Customer`中删除禁止的`@author`标记（第2部分）
 
 系统现在通过从某些模块中删除禁止的`@author`标记来遵守编码标准，确保代码更干净和标准化。 以前，`@author`标记存在于某些模块中，这违反了既定的编码标准。
 
 _AC-8356 - [GitHub问题](https://github.com/magento/magento2/issues/37250) - [GitHub代码贡献](https://github.com/magento/magento2/pull/37000)_
 
-#### editorconfig语法中的空格中断`[&lbrace;composer,auth&rbrace;.json]`的规则
+#### editorconfig语法中的空格中断`[{composer,auth}.json]`的规则
 
 在修复了editorconfig中的语法错误后，系统现在可以正确将4空格缩进应用于composer和auth.json文件。 以前，由于editorconfig语法中存在空格，因此这些文件使用2空格缩进的格式不正确。
 
@@ -2014,7 +2014,7 @@ _AC-8662 - [GitHub问题](https://github.com/magento/magento2/issues/37453) - [G
 
 _AC-8984 - [GitHub问题](https://github.com/magento/magento2/issues/29335) - [GitHub代码贡献](https://github.com/magento/magento2/pull/29298)_
 
-#### 当添加具有所需州/地区的新国家/地区时，升级Magento会重置general/region/state_required。
+#### 当添加具有所需州/区域的新国家/地区时，升级Magento会重置常规/区域/州_required 。
 
 现在，系统仅在添加具有所需状态的新国家/地区时，才会将修改后的国家/地区添加到“general/region/state_required”配置，以防止假定地区已禁用的自定义代码出现任何中断。 以前，添加具有所需状态的新国家/地区会将“general/region/state_required”配置重置为具有所需状态的默认国家/地区，这可能会中断业务。
 
@@ -2080,7 +2080,7 @@ _ACP2E-3361 - [GitHub代码贡献](https://github.com/magento/magento2/commit/13
 
 _ACP2E-3375 - [GitHub代码贡献](https://github.com/magento/magento2/commit/d75cff27)_
 
-#### [Cloud] Magento：已删除队列消息
+#### [Cloud] Magento：队列消息已被删除
 
 现在可以正确清除队列消息。 在修复之前，假定正在使用SQL队列系统，如果清除队列消息同时运行，则可能会删除新消息。
 
@@ -2092,7 +2092,7 @@ Redis缓存垃圾回收器现在默认启用LUA模式以防止出现争用情况
 
 _ACP2E-3537 - [GitHub代码贡献](https://github.com/magento/magento2/commit/a52ff98f)_
 
-#### Magento_DC_INDEXER__USE_APPLICATION_LOCK值将被忽略
+#### 已忽略MAGENTO_DC_INDEXER__USE_APPLICATION_LOCK值
 
 修复后，设置为“false”的ENV变量将被视为bool false，而不是字符串“false”。
 
@@ -2154,7 +2154,7 @@ _ACP2E-2642 - [GitHub代码贡献](https://github.com/magento/magento2/commit/ba
 
 _ACP2E-2653 - [GitHub代码贡献](https://github.com/magento/magento2/commit/12e071c3)_
 
-#### 包含价格过滤器`&lbrace;from:"0"&rbrace;`的GraphQL产品调用未返回任何结果
+#### 包含价格过滤器`{from:"0"}`的GraphQL产品调用未返回任何结果
 
 以前，使用零价格过滤器的graphql产品搜索由于抛出异常，根本没有返回任何结果。 现在，搜索会按预期返回结果。
 
@@ -2277,7 +2277,7 @@ _LYNX-486_
 
 _LYNX-488_
 
-#### 应根据配置显示已分组的产品缩略图     .
+#### 应根据配置显示分组的产品缩略图。
 
 解决了确保根据配置设置显示分组产品缩略图的问题
 
@@ -2493,7 +2493,7 @@ _ACP2E-3476 - [GitHub代码贡献](https://github.com/magento/magento2/commit/87
 
 ### 安装和管理
 
-#### Magento在MariaDB 11.4 + 2.4.8-beta1上升级失败
+#### Magento升级在MariaDB 11.4 + 2.4.8-beta1上失败
 
 升级应该没有发生任何错误。
 
@@ -3102,7 +3102,7 @@ _AC-12000 - [GitHub问题](https://github.com/magento/magento2/issues/38748) - [
 
 _AC-12176 - [GitHub问题](https://github.com/magento/magento2/issues/38799) - [GitHub代码贡献](https://github.com/magento/magento2/pull/38842)_
 
-#### 在Magento CLI中支持Symfony的CommandLoaderInterface
+#### 支持Magento CLI中的Symfony CommandLoaderInterface
 
 此项更改允许延迟初始化命令，直到需要这些命令为止，从而缩短了Magento CLI应用程序的初始化时间。
 
@@ -3261,7 +3261,7 @@ _ACP2E-3332 - [GitHub代码贡献](https://github.com/magento/magento2/commit/58
 
 _ACP2E-3342_
 
-#### 购物车规则“整个购物车的固定金额折扣”  操作错误地应用折扣
+#### 购物车规则“整个购物车的固定金额折扣”操作错误地应用折扣
 
 在从管理区域创建订单时使用优惠券代码时，无论使用大写还是小写，都会正确进行验证。 以前，如果优惠券代码与配置的购物车规则代码的字母大小写不符，则不会验证优惠券代码。
 
@@ -3668,7 +3668,7 @@ _ACP2E-2729 - [GitHub代码贡献](https://github.com/magento/magento2/commit/57
 
 _ACP2E-3061 - [GitHub代码贡献](https://github.com/magento/magento2/commit/35b1b1da)_
 
-#### 站点标题|特殊字符破坏了客户欢迎部分
+#### 网站页眉 |特殊字符破坏了客户欢迎部分
 
 修复后，特殊字符会在客户欢迎部分中正确显示。
 
