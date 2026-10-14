@@ -21,7 +21,7 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 6a3ffddee54d8f9f04e8f72a0d2708baa5c1f37a
+source-git-commit: 42ccea80dbbf503f58ba7d63d4731687b3c310a8
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -35,8 +35,8 @@ QPT v1.1.83包含以下修补程序：
 1. **AC-17975**：修复了在某些PHP环境中影响管理工作流、签出身份验证、验证码处理、类别管理、配置页面和命令行操作的多个PHP 8.5兼容性问题。
 1. **AC-18128**：修复了GraphQL返回的订单日期和订单评论时间戳在非英语区域设置中显示错误日历日期的问题。
 1. **AC-18096**：通过将日期格式从斜杠分隔(`/`)恢复到短划线分隔(`-`)，修复了Sales GraphQL日期字段返回日期时格式与以前版本不同的问题。
+1. **[ACP2E-4838](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4838.md)**：修复了具有受限权限的管理员用户无法从客户网格中删除客户的问题。
 1. **[ACP2E-4639](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4639.md)**：修复了GraphQL架构中申请列表项类型拼写错误的问题。 较旧的`items`字段和`RequistionListItems`类型仍然可用，但已弃用。
-1. **ACP2E-4838**：修复了具有受限权限的管理员用户无法从客户网格中删除客户的问题。
 1. **ACP2E-4877**：修复了使用&#x200B;**[!UICONTROL Payment on Account]**&#x200B;下达的订单在&#x200B;*挂起*&#x200B;状态下无法在Admin中进行编辑的问题。
 1. **ACP2E-4908**：修复了大型目录导致Redis或Valkey中的内存使用过多的问题，这是因为在每个商店视图中为每个产品创建了单独的布局缓存条目。
 1. **[AC-12854](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854.md)**：修复了在管理员中为订单重新排序时，会创建一个带有`-1`后缀的新订单编号，而不是分配下一个顺序编号的问题。
