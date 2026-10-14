@@ -1,9 +1,8 @@
 ---
-source-git-commit: 14c28ca8eec3348b2289b0fce2f30b563c7debe0
+source-git-commit: 2afe4bc1ae92dcb0d682ee88ade79560bcb2c35f
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1188'
 ht-degree: 0%
-
 ---
 # 代码片段
 
@@ -39,7 +38,20 @@ Adobe Commerce 2.4.9或更高版本的2.4.5-p16、2.4.6-p14、2.4.7-p9和2.4.8-p
 
 ## 用于扩展支持的安全修补程序 {#extended-support}
 
-{{$include /help/_includes/release-notes/extended-support-policy-note.md}}
+>[!NOTE]
+>
+>**扩展支持**&#x200B;安全修补程序仅向Adobe Commerce客户提供。 它们不可用于Magento Open Source代码库。
+>
+>**云上的Adobe Commerce （版本行2.4.4-2.4.6）** — 在版本升级实施日期之前升级到支持的版本或迁移到[!DNL Adobe Commerce as a Cloud Service]。 过渡性支持规定不会取代云升级强制实施。
+>
+>另请参阅：
+>
+>- [软件生命周期策略](/help/release/lifecycle-policy.md) — 支持终止日期、扩展支持以及仅限安全的过渡条款
+>- [保护Commerce环境所需的操作和截止日期](/help/release/security-enforcement-policy.md) — 实施日期和所需的操作
+
+## Adobe安全公告APSB26-49 {#security-bulletin-apsb26-49}
+
+有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-49](https://www.adobe.com/trust/security/products/commerce/apsb26-49.html)。
 
 ## 仅限Commerce {#commerce-only}
 

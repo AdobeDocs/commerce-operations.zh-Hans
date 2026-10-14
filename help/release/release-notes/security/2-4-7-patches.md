@@ -14,9 +14,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: a3c0eba7bdcd8017e88bdb4df1f45d77fe4bb351
+source-git-commit: 2afe4bc1ae92dcb0d682ee88ade79560bcb2c35f
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1351'
 ht-degree: 0%
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.7-p10安全版本为2.4.7早期版本中发现的漏洞修复了安全错误。
 
-有关安全错误修复的最新信息，请参阅[Adobe安全公告APSB26-49](https://helpx.adobe.com/cn/security/products/magento/apsb26-49.html)。
+{{security-bulletin-apsb26-49}}
 
 {{b2b-patches}}
 

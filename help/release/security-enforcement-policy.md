@@ -35,9 +35,9 @@ level_v2:
     internal-label: Experienced
 badgePaas: label="Adobe Commerce on Cloud 2.4.4 — 仅限2.4.9" type="Informative" url="https://experienceleague.adobe.com/zh-hans/docs/commerce/user-guides/product-solutions" tooltip="仅适用于Cloud 2.4.4到2.4.9版本的Adobe Commerce"
 nudge: true
-source-git-commit: 9021cff48fa6f0557da6ecd5077cffa5cb14e1e7
+source-git-commit: 5cfbac0f93bc8f82c1af04057c0d9ac3b1f3abb4
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2181'
 ht-degree: 0%
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 1. 云上受支持的安全版本的Adobe Commerce。 完全支持的版本包括2.4.8、2.4.9或最新发布的版本。 请参阅[生命周期策略](/help/release/lifecycle-policy.md)文档。
 
-遵循以下准则以检查您是否需要采取措施来保护云环境上的Adobe Commerce。 如果在表1中列出的截止日期前未满足安全要求的环境，将会暂停入站流量，从而使店面离线。 如果您担心要达到截止日期，请尽快联系您的帐户团队或[Adobe支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
+遵循以下准则以检查您是否需要采取措施来保护云环境上的Adobe Commerce。 如果在下面的表1中列出的截止日期前未满足安全要求的环境，管理员访问权限可能会挂起，而店面仍在线和/或入站流量已挂起，从而使店面离线。 如果您担心要达到截止日期，请尽快联系您的帐户团队或[Adobe支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
 
 >[!NOTE]
 >
@@ -181,7 +181,7 @@ Adobe将帮助您直接升级这些软件依赖项。
 
 Adobe将一如既往地支持您执行必要的步骤，以便采用受支持的第三方软件版本、升级到Adobe Commerce on Cloud的最新版本或迁移到Adobe Commerce as a Cloud Service。  如果您担心难以在截止日期前完成任务并需要短期延期，请尽快联系您的客户团队或[Adobe支持](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide?lang=en#submit-ticket)。
 
-如果到上述共享的实施日期时环境尚未满足安全要求，Adobe将强制采取适当的措施来维护Adobe Commerce平台及其客户的安全。 这包括暂停流向受影响的基础结构的流量，因此，您的Commerce店面将脱机。
+如果到上述共享的实施日期时环境尚未满足安全要求，Adobe将强制采取适当的措施来维护Adobe Commerce平台及其客户的安全。 这可能包括当店面保持在线时，暂停受影响环境中所有用户对Adobe Commerce管理员的访问，和/或暂停流向受影响基础设施的流量，这将导致Commerce店面离线。
 
 如果环境在流量暂停后继续保持不合规状态，Adobe可以终止云服务，启动停用过程。 由于停用，托管商业环境中的所有数据和资产（包括所有实例、环境和分支）都将永久删除并且无法恢复。
 

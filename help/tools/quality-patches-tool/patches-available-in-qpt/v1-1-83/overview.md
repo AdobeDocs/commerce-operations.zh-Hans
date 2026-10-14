@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 09eedab06d326baa0d4155274266dc3ef5356589
+source-git-commit: e7d4ea592892d77cea7891773645a8381870f80a
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '514'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.83
@@ -33,17 +33,17 @@ ht-degree: 0%
 QPT v1.1.83包含以下修补程序：
 
 1. **AC-17975**：修复了在某些PHP环境中影响管理工作流、签出身份验证、验证码处理、类别管理、配置页面和命令行操作的多个PHP 8.5兼容性问题。
-1. **AC-18128**：修复了GraphQL返回的订单日期和订单评论时间戳在非英语区域设置中显示错误日历日期的问题。
+1. **[AC-18128](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-18128.md)**：修复了GraphQL返回的订单日期和订单评论时间戳在非英语区域设置中显示错误日历日期的问题。
 1. **AC-18096**：通过将日期格式从斜杠分隔(`/`)恢复到短划线分隔(`-`)，修复了Sales GraphQL日期字段返回日期时格式与以前版本不同的问题。
+1. **[ACP2E-4838](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4838.md)**：修复了具有受限权限的管理员用户无法从客户网格中删除客户的问题。
 1. **[ACP2E-4639](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4639.md)**：修复了GraphQL架构中申请列表项类型拼写错误的问题。 较旧的`items`字段和`RequistionListItems`类型仍然可用，但已弃用。
-1. **ACP2E-4838**：修复了具有受限权限的管理员用户无法从客户网格中删除客户的问题。
 1. **ACP2E-4877**：修复了使用&#x200B;**[!UICONTROL Payment on Account]**&#x200B;下达的订单在&#x200B;*挂起*&#x200B;状态下无法在Admin中进行编辑的问题。
 1. **ACP2E-4908**：修复了大型目录导致Redis或Valkey中的内存使用过多的问题，这是因为在每个商店视图中为每个产品创建了单独的布局缓存条目。
 1. **[AC-12854](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854.md)**：修复了在管理员中为订单重新排序时，会创建一个带有`-1`后缀的新订单编号，而不是分配下一个顺序编号的问题。
 1. **ACP2E-4977**：修复了可配置产品的发票和贷项通知单总计不包含&#x200B;**[!UICONTROL Fixed Product Tax]** (FPT)，从而导致总计低于订单总计的问题。
 1. **AC-16530**：修复了购物车未始终反映对目录价格规则的计划更新的问题。
 1. **AC-11389**：修复了在某些舍入方案中折扣、税费和订单总额计算不正确的问题。
-1. **ACP2E-4998**：修复了在有效负载中不存在一个SKU时，对整个请求的`POST /V1/products/tier-prices` REST API请求失败的问题，从而阻止更新有效的SKU。
+1. **[ACP2E-4998](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4998.md)**：修复了有效负载中不存在一个SKU时，`POST /V1/products/tier-prices` REST API请求完全失败的问题，从而阻止更新有效的SKU。
 1. **ACP2E-5015**：修复了在所需目录数据不可用时，将共享目录保存到“管理员”中可能会无意中删除已分配产品和定价的问题。
 1. **AC-14940**：修复了在某些与商店相关的案例中，在管理员中单击客户帐户的&#x200B;**[!UICONTROL Reset Password]**&#x200B;未发送密码重置电子邮件的问题。
 1. **[ACP2E-5101](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5101.md)**：修复了在索引器设置为&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;时安装B2B模块失败的问题。

@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 09eedab06d326baa0d4155274266dc3ef5356589
+source-git-commit: 42ccea80dbbf503f58ba7d63d4731687b3c310a8
 workflow-type: tm+mt
-source-wordcount: '10752'
+source-wordcount: '10776'
 ht-degree: 0%
 ---
 
@@ -1060,6 +1060,8 @@ ht-degree: 0%
       - [ACP2E-4875：打开具有大地址簿的客户帐户时管理员用户注销](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875.md)
     - v1.1.83 {#v1-1-83}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.83](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview.md)
+      - [ACP2E-4838：受限管理员用户无法从允许的网站删除客户](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4838.md)
+      - [ACP2E-4998：缺少SKU导致无法对有效产品进行批量层价格更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4998.md)
       - [ACP2E-4639：申购单列表项类型在Adobe Commerce GraphQL架构中拼写错误](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4639.md)
       - [ACP2E-5223：目录权限索引包含从客户组排除的网站](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5223.md)
       - [ACP2E-5101：当索引器使用按计划更新时，Adobe Commerce B2B安装失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5101.md)
