@@ -2,7 +2,7 @@
 title: 系统要求
 description: 了解Adobe Commerce的软件依赖项和系统要求。 查看经过测试的配置以了解与部署环境的兼容性。
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-last-update: 2026-09-18
+last-update: 2026-10-13
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
     internal-label: Commerce
@@ -14,7 +14,7 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 2456f0e28fa24e23eb7692a905c708007a00bd96
+source-git-commit: 37a993a1f9b187dcfa74ecde581cf705eb66570d
 workflow-type: tm+mt
 source-wordcount: '1614'
 ht-degree: 0%
@@ -42,14 +42,14 @@ Adobe仅支持下表列出的系统要求组合。 Adobe不验证或支持与列
 
 >[!BEGINTABS]
 
->[!TAB 云端上的 Commerce]
+>云端上的[!TAB Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与每个版本行的最新Commerce版本兼容的服务提供了默认配置。
 
 {{$include /help/_includes/templated/cloud-requirements-table.md}}
 
 [`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)定义了默认服务和版本。
-请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
+请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
 >[!TAB Commerce内部部署]
 
@@ -73,7 +73,7 @@ Adobe不验证或支持这些Commerce版本的较新Elasticsearch主要版本。
 
 >[!BEGINTABS]
 
->[!TAB 云端上的 Commerce]
+>云端上的[!TAB Commerce]
 
 {{$include /help/_includes/templated/cloud-requirements-table-alpha.md}}
 
@@ -99,14 +99,14 @@ Adobe不验证或支持这些Commerce版本的较新Elasticsearch主要版本。
 
 >[!BEGINTABS]
 
->[!TAB 云端上的 Commerce]
+>云端上的[!TAB Commerce]
 
 [Commerce on Cloud模板](https://github.com/magento/magento-cloud)为与特定Commerce版本兼容的服务提供了默认配置。
 
 {{$include /help/_includes/templated/cloud-requirements-table-old-releases.md}}
 
 [`services.yaml`文件](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)定义了默认服务和版本。
-请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
+请参阅*云基础架构上的Commerce*&#x200B;指南中的[配置服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。
 
 >[!TAB Commerce内部部署]
 
@@ -132,14 +132,14 @@ Adobe不验证或支持这些Commerce版本的较新Elasticsearch主要版本。
 
 配置PHP设置（如`memory_limit`），以帮助避免在使用Adobe Commerce时常见的问题。 请参阅[必需的PHP设置](prerequisites/php-settings.md)。
 
-有关云配置指南，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
+有关云配置指南，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[PHP设置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)。
 
 ### PHP OPcache
 
 Adobe建议验证是否已启用[PHP OPcache](https://www.php.net/manual/en/book.opcache.php)以提高性能。 许多PHP分发都启用OPcache。
 
 - **对于云基础架构部署上的Adobe Commerce**，默认情况下会安装`opcache`扩展。
-- 对于Adobe Commerce内部部署：**&#x200B;**
+- 对于Adobe Commerce内部部署：****
   - [验证是否已安装PHP OPcache扩展](prerequisites/php-settings.md#verify-php-is-installed)。
   - 有关性能设置的特定指导，请参阅&#x200B;*性能最佳实践*&#x200B;指南中的[PHP设置](../performance/software.md#php-settings)的软件建议。
 
@@ -160,11 +160,11 @@ Adobe建议验证是否已启用[PHP OPcache](https://www.php.net/manual/en/book
 
 >[!TIP]
 >
->有关云基础架构中的PHP扩展，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[启用PHP扩展](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。
+>有关云基础架构中的PHP扩展，请参阅&#x200B;_云基础架构上的Commerce_&#x200B;指南中的[启用PHP扩展](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions)。
 
 >[!BEGINTABS]
 
->[!TAB 云端上的 Commerce]
+>云端上的[!TAB Commerce]
 
 下表显示了在Cloud平台上部署Adobe Commerce时支持的PHP扩展。
 
@@ -199,11 +199,11 @@ Adobe Commerce支持以下店面和管理员浏览器的最新和先前主要版
 
 ### 邮件服务器
 
-邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/project/sendgrid)。
+邮件传输代理(MTA)或SMTP服务器。 云基础架构上的Commerce使用[SendGrid电子邮件服务](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/sendgrid)。
 
 ### 内存
 
-从Commerce Marketplace和其他源升级应用程序和扩展最多可能需要2 GB的RAM。 如果系统的RAM小于2 GB，请创建[交换文件](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/installation-and-upgrade/out-of-memory-error-during-install-or-upgrade)。 如果没有交换文件，升级可能会失败。
+从Commerce Marketplace和其他源升级应用程序和扩展最多可能需要2 GB的RAM。 如果系统的RAM小于2 GB，请创建[交换文件](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/installation-and-upgrade/out-of-memory-error-during-install-or-upgrade)。 如果没有交换文件，升级可能会失败。
 
 ### 操作系统(Linux x86-64)
 
@@ -229,16 +229,16 @@ Adobe Commerce需要以下系统工具才能进行某些操作：
 - 不支持自签名SSL证书。
 - 传输层安全性(TLS)要求 — PayPal和`repo.magento.com`都需要TLS 1.2或更高版本。
 
-有关云基础架构上的Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[Fastly配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)。
+有关云基础架构上的Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[Fastly配置](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration)。
 
 ### Xdebug
 
 仅对于Adobe Commerce开发环境，请使用[php_xdebug 2.5.x](https://xdebug.org/download)或更高版本。 Xdebug可能会对性能产生负面影响。
 
-有关云上的Adobe Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置Xdebug](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/test/debug)。
+有关云上的Adobe Commerce，请参阅&#x200B;*云基础架构上的Commerce*&#x200B;指南中的[配置Xdebug](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/debug)。
 
 >[!NOTE]
 >
->Xdebug存在的已知问题可能会影响Adobe Commerce的安装或者对店面或管理员的安装访问权限。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的已知问题。
+>Xdebug存在的已知问题可能会影响Adobe Commerce的安装或者对店面或管理员的安装访问权限。 在&#x200B;_Commerce支持知识库_&#x200B;中查看影响`xdebug`安装](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation)的[已知问题。
 
 <!-- Last updated from includes: 2026-10-13 09:11:06 -->
