@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 4fcf88b6e7e67204ac07a82d756c068ac715d120
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '553'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.84
@@ -46,7 +46,7 @@ QPT v1.1.84包含以下修补程序：
 1. **ACP2E-5242**：修复了在将项目添加到购物车时检查产品可用性显示错误（指示无法找到网站）的问题。
 1. **ACP2E-5263**：修复了在包含所有产品之前可以停止将产品导出到CSV文件，从而导致文件不完整的问题。
 1. **ACP2E-5034**：修复了在选择配送方式后重新计算报价时，可转让报价管理错误地将合计重置为&#x200B;*零*，丢弃通过Admin中的&#x200B;**[!UICONTROL Configure]**&#x200B;操作进行的捆绑产品选件数量的更新，并且未在报价小计中正确反映应用于动态捆绑价格产品的物料级折扣的问题。
-1. **ACP2E-4741**：修复了在使用非默认库存和来源时，保存作为[!UICONTROL Related Product]、[!UICONTROL Up-Sell]或交叉销售链接的产品后，产品从店面消失的问题。
+1. **[ACP2E-4741](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4741.md)**：修复了在使用非默认库存和来源时，保存作为相关产品、追加销售或交叉销售链接的产品后，该产品从店面消失的问题。
 1. **ACP2E-5079**：修复了在全局共享客户帐户的情况下，对分配给多个网站的客户区段进行评估时，仅返回来自第一个网站的匹配客户的问题。
 1. **ACP2E-5127**：修复了在具有非默认区域设置的“管理员”面板中编辑公司帐户时，其&#x200B;**[!UICONTROL Credit Limit]**&#x200B;重置为&#x200B;*零*&#x200B;的问题。
 1. **AC-15494**：修复了products查询返回带有HTML转义特殊字符而不是其原始字符的产品名称的问题。
