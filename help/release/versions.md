@@ -15,9 +15,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 37a993a1f9b187dcfa74ecde581cf705eb66570d
+source-git-commit: 2afe4bc1ae92dcb0d682ee88ade79560bcb2c35f
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '133'
 ht-degree: 0%
 ---
 # 已发布版本
@@ -33,8 +33,8 @@ ht-degree: 0%
 >[!NOTE]
 >
 >- Adobe建议将Adobe Commerce安装或升级到每个版本提供的最新安全修补程序。
->- 有关其他安全更新，请参阅[Magento/Adobe Commerce的安全更新](https://helpx.adobe.com/cn/security/products/magento.html)。
->- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/cn/products/magento/pricing.html)。
+>- 有关其他安全更新，请参阅信任中心中的[Adobe安全公告和通知](https://www.adobe.com/trust/security/bulletins-and-advisories.html)。
+>- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/products/magento/pricing.html)。
 
 {{$include /help/_includes/templated/release/core-releases.md}}
 
