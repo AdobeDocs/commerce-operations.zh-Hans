@@ -34,7 +34,7 @@ ht-degree: 0%
 >
 >- Adobe建议将Adobe Commerce安装或升级到每个版本提供的最新安全修补程序。
 >- 有关其他安全更新，请参阅信任中心中的[Adobe安全公告和通知](https://www.adobe.com/trust/security/bulletins-and-advisories.html)。
->- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/products/magento/pricing.html)。
+>- 有关定价，请参阅[Adobe Commerce定价](https://business.adobe.com/cn/products/magento/pricing.html)。
 
 {{$include /help/_includes/templated/release/core-releases.md}}
 
