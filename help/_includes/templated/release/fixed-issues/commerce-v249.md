@@ -3,7 +3,6 @@ source-git-commit: 0d07af38e1af9331924c109356126a1bfa96156b
 workflow-type: tm+mt
 source-wordcount: '37133'
 ht-degree: 0%
-
 ---
 # Adobe Commerce已修复问题(v2.4.9)
 
@@ -715,7 +714,7 @@ _ACP2E-4698 - [GitHub代码贡献](https://github.com/magento/magento2-page-buil
 
 #### 作为客户标题的B2B登录仍具有Magento品牌
 
-早些时候，店面标题显示“您现在作为&lt;store name>上的&lt;customer name>连接”与Magento品牌化。 现已修复，并且标题会显示为ADOBE品牌。
+之前，店面标题显示“您现在作为&lt;store name>上的&lt;customer name>连接”与Magento品牌推广。 现已修复，并且标题会显示为ADOBE品牌。
 
 _AC-14361 - [GitHub代码贡献](https://github.com/magento/magento2/commit/fadcfa8b)_
 
@@ -3397,7 +3396,7 @@ _ACP2E-4525_
 
 #### 管理员在创建退货时显示的货币符号不正确
 
-在使用不同货币（欧元/美元/英镑）的多网站设置中，管理员的退货产品选择页面现在显示正确的货币符号。 以前，它显示默认货币符号。
+在使用各种货币（欧元/USD/英镑）进行多网站设置中，管理员的退货产品选择页面现在显示正确的货币符号。 以前，它显示默认货币符号。
 
 _ACP2E-3658 - [GitHub代码贡献](https://github.com/magento/magento2/commit/df92debe)_
 
