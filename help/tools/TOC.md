@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: b3e370d4d133d52fd97a4cd82ea9243cbd679c0e
+source-git-commit: 9c67720bcc00fe0b3e783e6c5cc77dea59ee007a
 workflow-type: tm+mt
-source-wordcount: '10826'
+source-wordcount: '10855'
 ht-degree: 0%
 ---
 
@@ -1060,6 +1060,8 @@ ht-degree: 0%
       - [ACP2E-4875：打开具有大地址簿的客户帐户时管理员用户注销](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875.md)
     - v1.1.83 {#v1-1-83}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.83](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview.md)
+      - [ACP2E-3211：并行添加到购物车请求为同一SKU创建单独的项目](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-3211.md)
+      - [ACP2E-5015：共享目录保存会在会话读取错误后删除产品分配和定价](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5015.md)
       - [AC-18096：销售GraphQL日期字段返回错误的本地化格式](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-18096.md)
       - [AC-18128：非英语区域设置的GraphQL订单日期和评论时间戳不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-18128.md)
       - [ACP2E-4838：受限管理员用户无法从允许的网站删除客户](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4838.md)

@@ -1,6 +1,6 @@
 ---
 title: ACSD-46192：异步/bulk/V1/configurable-products/bySku/options端点问题
-description: ACSD-46192修补程序修复了“async/bulk/V1/configurable-products/bySku/options”端点的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
+description: ACSD-46192修补程序修复了“async/bulk/V1/configurable-products/bySku/options”端点的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
 feature: Configuration, Products
 role: Admin
 exl-id: 5a54f4b5-8467-40de-9d8f-ba46880ed5ad
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->部分弃用ACSD-46192修补程序，因为强制安全修补程序[APSB25-08](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27149)已解决此问题。
+>部分弃用ACSD-46192修补程序，因为强制安全修补程序[APSB25-08](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-27149)已解决此问题。
 
 ACSD-46192修补程序修复了`async/bulk/V1/configurable-products/bySku/options`终结点的问题。 安装[Quality Patches Tool (QPT)](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46192。 请注意，Adobe Commerce 2.4.5中已修复此问题。
 

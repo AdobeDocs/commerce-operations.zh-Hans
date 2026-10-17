@@ -1,6 +1,6 @@
 ---
 title: MDVA-43167：管理订单网格批量操作不适用于多页
-description: MDVA-43167修补程序修复了以下问题：当管理员用户选择所有订单时，管理员订单网格批量操作不适用于多页。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.16后，即可使用此修补程序。 修补程序ID为MDVA-43167。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+description: MDVA-43167修补程序修复了以下问题：当管理员用户选择所有订单时，管理员订单网格批量操作不适用于多页。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.16后，即可使用此修补程序。 修补程序ID为MDVA-43167。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Admin Workspace, Orders
 role: Admin
 exl-id: 992f8a90-300e-41aa-b03d-b8a647dddd51
@@ -70,7 +70,7 @@ MDVA-43167修补程序修复了以下问题：当管理员用户选择所有订�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

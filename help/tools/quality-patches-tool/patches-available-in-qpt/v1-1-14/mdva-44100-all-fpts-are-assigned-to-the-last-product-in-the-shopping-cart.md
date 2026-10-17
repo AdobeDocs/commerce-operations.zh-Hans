@@ -1,6 +1,6 @@
 ---
 title: MDVA-44100：所有FPT均已分配给购物车中的最后一个产品
-description: MDVA-44100修补程序解决了将所有FPT分配给购物车中最后一个产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.14后，即可使用此修补程序。 修补程序ID为MDVA-44100。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
+description: MDVA-44100修补程序解决了将所有FPT分配给购物车中最后一个产品的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.14后，即可使用此修补程序。 修补程序ID为MDVA-44100。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Orders, Products, Shopping Cart
 role: Admin
 exl-id: b370dcbb-cbe9-4f5d-9b8f-1722ab521fcb

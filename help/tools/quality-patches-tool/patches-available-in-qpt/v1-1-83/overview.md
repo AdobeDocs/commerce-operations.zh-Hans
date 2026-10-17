@@ -21,7 +21,7 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0e4d8845da584cd8a58b49d1adf892df80155734
+source-git-commit: 9c67720bcc00fe0b3e783e6c5cc77dea59ee007a
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -43,12 +43,12 @@ QPT v1.1.83包含以下修补程序：
 1. **ACP2E-4977**：修复了可配置产品的发票和贷项通知单总计不包含&#x200B;**[!UICONTROL Fixed Product Tax]** (FPT)，从而导致总计低于订单总计的问题。
 1. **AC-16530**：修复了购物车未始终反映对目录价格规则的计划更新的问题。
 1. **AC-11389**：修复了在某些舍入方案中折扣、税费和订单总额计算不正确的问题。
+1. **[ACP2E-5015](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5015.md)**：修复了在所需目录数据不可用时，将共享目录保存到“管理员”中可能会无意中删除已分配产品和定价的问题。
 1. **[ACP2E-4998](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4998.md)**：修复了有效负载中不存在一个SKU时，`POST /V1/products/tier-prices` REST API请求完全失败的问题，从而阻止更新有效的SKU。
-1. **ACP2E-5015**：修复了在所需目录数据不可用时，将共享目录保存到“管理员”中可能会无意中删除已分配产品和定价的问题。
 1. **AC-14940**：修复了在某些与商店相关的案例中，在管理员中单击客户帐户的&#x200B;**[!UICONTROL Reset Password]**&#x200B;未发送密码重置电子邮件的问题。
 1. **[ACP2E-5101](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5101.md)**：修复了在索引器设置为&#x200B;**[!UICONTROL Update by Schedule]**&#x200B;时安装B2B模块失败的问题。
 1. **ACP2E-5205**：修复了在涉及大量类别和产品时类别加载耗时长或导致超时的问题。 此外，现在还可以正确显示每个类别叶的产品计数。
-1. **ACP2E-3211**：修复了在店面中同时向购物车中添加相同产品会在购物车中为同一SKU创建单独的项目而不是将它们组合为单个项目的问题。
+1. **[ACP2E-3211](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-3211.md)**：修复了在店面中同时向购物车中添加相同产品会在购物车中为同一SKU创建单独的项目而不是将它们组合为单个项目的问题。
 1. **[ACP2E-5223](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5223.md)**：修复了&#x200B;**[!UICONTROL Catalog Permissions]**&#x200B;索引包含从客户组中排除的网站的问题。
 
 使用左侧的菜单导航到特定的修补程序页面。
