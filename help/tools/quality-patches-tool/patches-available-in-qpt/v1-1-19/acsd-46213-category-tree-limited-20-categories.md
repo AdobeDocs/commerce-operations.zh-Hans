@@ -1,6 +1,6 @@
 ---
 title: ACSD-46213：类别树请求仅限于20个类别
-description: 'ACSD-46213修补程序修复了类别树请求仅限于20个类别的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46213。 '
+description: 'ACSD-46213修补程序修复了类别树请求仅限于20个类别的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.19后，即可使用此修补程序。 修补程序ID为ACSD-46213。 '
 feature: Categories
 role: Admin
 exl-id: 2cd4b102-db52-424f-9a7f-d775cb2b2c49

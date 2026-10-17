@@ -1,6 +1,6 @@
 ---
 title: MDVA-44562：由默认存储ID覆盖的报价单项目的存储ID
-description: MDVA-44562修补程序修复了以下问题：对于GraphQL请求，默认商店ID将覆盖报价项的商店ID。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.16后，即可使用此修补程序。 修补程序ID为MDVA-44562。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+description: MDVA-44562修补程序修复了以下问题：对于GraphQL请求，默认商店ID将覆盖报价项的商店ID。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.16后，即可使用此修补程序。 修补程序ID为MDVA-44562。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Quotes
 role: Admin
 exl-id: 007a82f7-4bc9-4a51-8b18-05f6c0867ea7

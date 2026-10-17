@@ -1,6 +1,6 @@
 ---
 title: MDVA-43824：订单取消操作失败，错误为“尚未取消项目”
-description: MDVA-43824修补程序解决了订单取消操作失败的问题，并出现错误：*您尚未取消项目*。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.13后，即可使用此修补程序。 修补程序ID为MDVA-43824。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
+description: MDVA-43824修补程序解决了订单取消操作失败的问题，并出现错误：*您尚未取消项目*。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.13后，即可使用此修补程序。 修补程序ID为MDVA-43824。 请注意，该问题计划在Adobe Commerce 2.4.5中修复。
 feature: Orders
 role: Admin
 exl-id: 8c2d15a0-2f53-4583-bdf2-86746f61160f

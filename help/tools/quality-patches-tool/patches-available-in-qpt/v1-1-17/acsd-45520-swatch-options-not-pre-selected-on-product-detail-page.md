@@ -1,6 +1,6 @@
 ---
 title: ACSD-45520：在产品详细信息页面上未选择样本选项
-description: ACSD-45520修补程序修复了以下问题：当用户从购物车编辑可配置产品时，产品详细信息页面上未预先选择样本选项。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.17后，即可使用此修补程序。 修补程序ID为ACSD-45520。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+description: ACSD-45520修补程序修复了以下问题：当用户从购物车编辑可配置产品时，产品详细信息页面上未预先选择样本选项。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.17后，即可使用此修补程序。 修补程序ID为ACSD-45520。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Products
 role: Admin
 exl-id: a8b37dba-5a02-45a9-8e43-5288352a9d75
@@ -65,7 +65,7 @@ ACSD-45520修补程序修复了以下问题：当用户从购物车编辑可配�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 

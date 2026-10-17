@@ -1,6 +1,6 @@
 ---
 title: MDVA-39986：无法在macOS上Safari浏览器的管理员中下达订单
-description: MDVA-39986修补程序修复了用户无法使用macOS上的Safari浏览器在管理员中下达订单的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-39986。 请注意，Adobe Commerce 2.4.3中已修复此问题。
+description: MDVA-39986修补程序修复了用户无法使用macOS上的Safari浏览器在管理员中下达订单的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.2后，即可使用此修补程序。 修补程序ID为MDVA-39986。 请注意，Adobe Commerce 2.4.3中已修复此问题。
 feature: Admin Workspace, Orders
 role: Admin
 exl-id: bd4e72fe-278d-40ae-98d3-1eeca0a0e70c

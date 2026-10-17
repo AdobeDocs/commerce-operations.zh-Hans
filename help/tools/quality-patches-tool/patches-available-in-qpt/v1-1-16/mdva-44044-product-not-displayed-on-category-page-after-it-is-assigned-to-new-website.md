@@ -1,6 +1,6 @@
 ---
 title: MDVA-44044：将产品分配给新网站后，该产品不会显示在类别页面上
-description: MDVA-44044修补程序解决了将产品分配给新网站后，该产品未显示在类别页面上的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.16后，即可使用此修补程序。 修补程序ID为MDVA-44044。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
+description: MDVA-44044修补程序解决了将产品分配给新网站后，该产品未显示在类别页面上的问题。 安装[Quality Patches Tool (QPT)](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.16后，即可使用此修补程序。 修补程序ID为MDVA-44044。 请注意，该问题计划在Adobe Commerce 2.4.6中修复。
 feature: Categories, Products
 role: Admin
 exl-id: ae797cdc-5977-40b8-82da-ccf364466bdf
@@ -80,7 +80,7 @@ MDVA-44044修补程序解决了将产品分配给新网站后，该产品未显�
 要应用单独的修补程序，请根据您的部署方法使用以下链接：
 
 * Adobe Commerce或Magento Open Source内部部署： [!DNL Quality Patches Tool]指南中的[[!DNL Quality Patches Tool] >使用情况](/help/tools/quality-patches-tool/usage.md)。
-* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
+* 云基础架构上的Adobe Commerce：云基础架构上的Commerce指南中的[升级和修补程序>应用修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches)。
 
 ## 相关阅读
 
