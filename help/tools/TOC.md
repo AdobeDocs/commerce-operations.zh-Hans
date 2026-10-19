@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 9c67720bcc00fe0b3e783e6c5cc77dea59ee007a
+source-git-commit: a844e4f16c931370aa77a3b92ac770f6221b60d0
 workflow-type: tm+mt
-source-wordcount: '10855'
+source-wordcount: '10898'
 ht-degree: 0%
 ---
 
@@ -1060,6 +1060,9 @@ ht-degree: 0%
       - [ACP2E-4875：打开具有大地址簿的客户帐户时管理员用户注销](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875.md)
     - v1.1.83 {#v1-1-83}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.83](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview.md)
+      - [AC-11389：订单总额会因添加到购物车的订单产品而异](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-11389.md)
+      - [ACP2E-4877：管理员中挂起的帐户付款订单的“编辑”按钮缺失](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4877.md)
+      - [AC-14940：删除客户的商店视图后，不会发送密码重置电子邮件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-14940.md)
       - [ACP2E-3211：并行添加到购物车请求为同一SKU创建单独的项目](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-3211.md)
       - [ACP2E-5015：共享目录保存会在会话读取错误后删除产品分配和定价](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5015.md)
       - [AC-18096：销售GraphQL日期字段返回错误的本地化格式](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-18096.md)
