@@ -22,7 +22,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了对<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5015">ACP2E-5015的QPT 1.1.83修复的详细说明：共享目录保存会在会话读取错误</a>后删除产品分配和定价。</p>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5015">ACP2E-5015的QPT 1.1.83修复的详细说明：共享目录保存会在会话读取错误</a>后删除产品分配和定价。</p>
 </td>
       <td>
         新主题qpt
@@ -30,7 +30,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/5277785149087405dfe01a3e059d7f617869fbf2">提交</a></td>
     </tr>
     <tr>
-      <td><p>添加了有关<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-3211">ACP2E-3211的QPT 1.1.83修复的详细说明：并行添加到购物车请求为同一SKU</a>创建单独的项目。</p>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-3211">ACP2E-3211的QPT 1.1.83修复的详细说明：并行添加到购物车请求为同一SKU</a>创建单独的项目。</p>
 </td>
       <td>
         新主题qpt
