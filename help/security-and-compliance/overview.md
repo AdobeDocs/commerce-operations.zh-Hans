@@ -25,7 +25,7 @@ ht-degree: 0%
 ## 安全性
 
 - [Adobe产品安全](https://helpx.adobe.com/cn/security.html)：了解Adobe Commerce的最新修补程序、安全更新和最佳实践。
-- [Adobe信任中心](https://www.adobe.com/trust.html)：访问有关所有Adobe云服务的运行状况、安全性、隐私和合规性的最新可用信息。
+- [Adobe信任中心](https://www.adobe.com/cn/trust.html)：访问有关所有Adobe云服务的运行状况、安全性、隐私和合规性的最新可用信息。
 - [全站点分析工具](../tools/site-wide-analysis-tool/dashboard.md)：查看有关您的Adobe Commerce站点的简化安全见解，包括安全扫描、服务终止和安全建议。
 - [安全和合规性声明](../release/security-enforcement-policy.md)：了解Adobe Commerce在Cloud 2.4.4到2.4.9版本上要保持安全和合规性所需的操作和截止日期。
 
