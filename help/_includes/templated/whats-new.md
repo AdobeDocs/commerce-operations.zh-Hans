@@ -114,7 +114,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>添加了2.4.10-alpha1版本的文档：<br /> — 添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-10">Adobe Commerce发行说明</a>，其中提供了发行亮点并修复了问题。<br /> — 添加了<a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/2-4-10">Magento Open Source发行说明</a>，其中提供了发行亮点并修复了问题。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>，其中针对2.4.10-alpha更新了单独的云和本地依赖关系表。<br /> — 将<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/uct">UCT CLI引用</a>更新到版本3.0.28。</p>
+      <td><p>添加了2.4.10-alpha1版本的文档：<br /> — 添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/adobe-commerce/2-4-10">Adobe Commerce发行说明</a>，其中提供了发行亮点并修复了问题。<br /> — 添加了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/notes/magento-open-source/2-4-10">Magento Open Source发行说明</a>，其中提供了发行亮点并修复了问题。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements">系统要求</a>，其中针对2.4.10-alpha更新了单独的云和本地依赖关系表。<br /> — 将<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/cli-reference/uct">UCT CLI引用</a>更新到版本3.0.28。</p>
 </td>
       <td>
         重大更新、新主题、发行说明
