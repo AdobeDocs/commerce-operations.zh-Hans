@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 422a6e38f4e2298baa02090ee71d4f0fdfc95e3b
+source-git-commit: ea739d12f02672cf585925b90860bca3b44de02a
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '555'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.84
@@ -32,8 +32,8 @@ ht-degree: 0%
 
 QPT v1.1.84包含以下修补程序：
 
+1. **[ACP2E-5005](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5005.md)**：修复了在管理员中重新配置捆绑产品并编辑数量时，可转让报价中的捆绑产品选项的数量恢复到其以前值的问题。
 1. **[ACP2E-4913](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4913.md)**：修复了数据库死锁后REST API装运和发票创建永久失败的问题。
-1. **ACP2E-5005**：修复了在管理员中重新配置捆绑产品并编辑数量时，可转让报价中的捆绑产品选项的数量恢复到其以前值的问题。
 1. **ACP2E-5009**：修复了将数据从Magento Open Source迁移到Adobe Commerce时无法正确迁移类别计划设计更改和产品&#x200B;**[!UICONTROL Special Price]**&#x200B;计划更新，从而导致迁移期间缺少或跳过某些计划更新的问题，并提高了迁移性能。
 1. **[ACP2E-5017](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5017.md)**：修复了在客户未分配给公司时通过GraphQL查询客户`role`返回&#x200B;*内部服务器错误*&#x200B;的问题。
 1. **ACP2E-5027**：修复了在启用文件锁定时，索引器停滞在循环中并且重新索引未完成的问题。
@@ -48,7 +48,6 @@ QPT v1.1.84包含以下修补程序：
 1. **ACP2E-5034**：修复了在选择配送方式后重新计算报价时，可转让报价管理错误地将合计重置为&#x200B;*零*，丢弃通过Admin中的&#x200B;**[!UICONTROL Configure]**&#x200B;操作进行的捆绑产品选件数量的更新，并且未在报价小计中正确反映应用于动态捆绑价格产品的物料级折扣的问题。
 1. **[ACP2E-4741](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4741.md)**：修复了在使用非默认库存和来源时，保存作为相关产品、追加销售或交叉销售链接的产品后，该产品从店面消失的问题。
 1. **[ACP2E-5127](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5127.md)**：修复了在管理员中使用非默认区域设置编辑公司帐户时，其&#x200B;**[!UICONTROL Credit Limit]**&#x200B;重置为`0`的问题。
-1. **[ACP2E-4741](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4741.md)**：修复了在使用非默认库存和来源时，保存作为[!UICONTROL Related Product]、[!UICONTROL Up-Sell]或[!UICONTROL Cross-Sell]链接的产品后，产品从店面消失的问题。
 1. **[ACP2E-5079](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5079.md)**：修复了当客户帐户在全球共享时，分配给多个网站的客户区段仅返回第一个网站的匹配客户的问题。
 1. **AC-15494**：修复了products查询返回带有HTML转义特殊字符而不是其原始字符的产品名称的问题。
 
