@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 9d7a2fd125245848466442b66f53fd9b0476da4e
+source-git-commit: b9ce2de42db0056d16d8df5e650231ae2b013653
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '558'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.84
@@ -44,7 +44,7 @@ QPT v1.1.84包含以下修补程序：
 1. **[ACP2E-5143](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5143.md)**：修复了在仅请求路由元数据时GraphQL `route`查询呈现完整的CMS页面内容的问题，从而增加包含页面生成器小组件的CMS页面的数据库查询次数。
 1. **ACP2E-5183**：修复了在编译使用`@magento_import`指令的`LESS`文件时，静态内容部署在PHP 8.5上失败的问题。
 1. **ACP2E-5242**：修复了在将项目添加到购物车时检查产品可用性显示错误（指示无法找到网站）的问题。
-1. **ACP2E-5263**：修复了在包含所有产品之前可以停止将产品导出到CSV文件，从而导致文件不完整的问题。
+1. **[ACP2E-5263](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5263.md)**：修复了产品导出CSV中缺少产品的问题，导出过程因数据不一致导致的错误而中断。
 1. **ACP2E-5034**：修复了在选择配送方式后重新计算报价时，可转让报价管理错误地将合计重置为&#x200B;*零*，丢弃通过Admin中的&#x200B;**[!UICONTROL Configure]**&#x200B;操作进行的捆绑产品选件数量的更新，并且未在报价小计中正确反映应用于动态捆绑价格产品的物料级折扣的问题。
 1. **[ACP2E-4741](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4741.md)**：修复了在使用非默认库存和来源时，保存作为相关产品、追加销售或交叉销售链接的产品后，该产品从店面消失的问题。
 1. **[ACP2E-5127](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5127.md)**：修复了在管理员中使用非默认区域设置编辑公司帐户时，其&#x200B;**[!UICONTROL Credit Limit]**&#x200B;重置为`0`的问题。
