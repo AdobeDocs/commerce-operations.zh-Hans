@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: b9ce2de42db0056d16d8df5e650231ae2b013653
+source-git-commit: e3fec5eba866e1d0ae4c7285667f41b289edf21b
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '567'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.84
@@ -36,7 +36,7 @@ QPT v1.1.84包含以下修补程序：
 1. **[ACP2E-4913](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4913.md)**：修复了数据库死锁后REST API装运和发票创建永久失败的问题。
 1. **[ACP2E-5009](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5009.md)**：修复了将数据从Magento Open Source迁移到Adobe Commerce时无法正确迁移类别计划设计更改和产品&#x200B;**[!UICONTROL Special Price]**&#x200B;计划更新，从而导致迁移期间缺少或跳过某些计划更新的问题，并提高了迁移性能。
 1. **[ACP2E-5017](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5017.md)**：修复了在客户未分配给公司时通过GraphQL查询客户`role`返回&#x200B;*内部服务器错误*&#x200B;的问题。
-1. **ACP2E-5027**：修复了在启用文件锁定时，索引器停滞在循环中并且重新索引未完成的问题。
+1. **[ACP2E-5027](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5027.md)**：修复了在启用应用程序锁定并配置文件锁定提供程序时，索引器始终尝试获取自己的锁定，因而永不完成的问题。
 1. **ACP2E-5029**：修复了在执行手动重新同步之前&#x200B;**[!DNL Live Search]**&#x200B;中未显示目录价格规则更改的问题。
 1. **ACP2E-5041**：修复了在计划更新期间保存产品导致店面在更新结束后显示正常价格而不是&#x200B;**[!UICONTROL Special Price]**&#x200B;的问题。
 1. **[ACP2E-5059](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5059.md)**：修复了客户收到同一订单的重复订单确认电子邮件的问题。
