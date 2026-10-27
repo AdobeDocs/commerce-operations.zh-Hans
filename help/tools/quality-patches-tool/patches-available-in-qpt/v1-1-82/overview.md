@@ -32,9 +32,9 @@ level_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 889cab9f0f353242319e1feaa090e74819f53027
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '704'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.82
@@ -61,7 +61,7 @@ QPT v1.1.82包含以下修补程序：
 1. **[ACP2E-4797](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4797.md)**：修复了以下问题：即使将数据库配置为支持utf8mb4，在WYSIWYG编辑器或管理员中的页面生成器内容中输入4字节Unicode字符也会被错误阻止。
 1. **[ACP2E-4748](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4748.md)**：修复了在具有大量奖励积分历史记录的商店中奖励积分过期时间较慢而导致奖励积分过期时间延迟的问题。
 1. **[ACP2E-4840](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4840.md)**：修复了`products` GraphQL查询中请求的数量值返回null的问题。
-1. **[ACP2E-4799](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4799.md)**：修复了`requisition_lists GraphQL`查询返回的`total_count`值的问题，该值仅反映当前页面上的项目数，而不反映符合查询条件的申请列表的总数。
+1. **[ACP2E-4799](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4799.md)**：修复了`requisition_lists` GraphQL查询返回的`total_count`值的问题，该值仅反映当前页面上的项目数，而不反映符合查询条件的申请列表的总数。
 1. **[ACP2E-4805](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4805.md)**：修复了当第一个可销售子产品出现在列表中的较晚时，带许多子产品的可配置产品的签出API请求明显变慢的问题。
 1. **[ACP2E-4870](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4870.md)**：修复了产品警报电子邮件通知忽略商店查看电子邮件设置的问题。
 1. **[ACP2E-4875](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875.md)**：修复了在管理员中查看带有大型通讯簿的客户帐户时意外注销管理员用户的问题。

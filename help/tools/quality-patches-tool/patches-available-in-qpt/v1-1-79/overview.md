@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 5c33cd529bff9208d640cec3c4068f578a9e376c
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '335'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.79
@@ -39,7 +39,7 @@ QPT v1.1.79包含以下修补程序：
 1. **[ACP2E-4706](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4706.md)**：修复了[!UICONTROL Target Rule]索引器跳过管理范围中未启用的产品的问题。
 1. **[ACP2E-4720](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4720.md)**：修复了针对具有购物车折扣规则的捆绑产品未正确应用或删除免费配送的问题。
 1. **[ACP2E-4475](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4475.md)**：修复了在启用[!UICONTROL Display Out of Stock Products]选项时，产品列表页面错误地按价格过滤和排序缺货捆绑产品的问题。
-1. **[AC-10698](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10698.md)**：修复了系统在所有订单级别发送货币而不是将其与单个订单关联的问题。
+1. **[AC-10698](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10698.md)**：修复了系统在所有订单级别发送货币而不是将其与单个订单关联的问题。 现在，每个订单的交易价格和交易总数都会发送到[!DNL Google Tag]，从而提高电子商务数据跟踪的准确性。
 1. **[ACP2E-4411](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4411.md)**：修复了在购物车页面和多货币商店的迷你购物车中，捆绑产品显示不正确价格的问题。
 1. **[ACP2E-4110](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/acp2e-4110.md)**：修复了&#x200B;**[!UICONTROL Special Price]**&#x200B;捆绑产品在PDP和PLP上以非默认货币显示不正确金额的问题。
 1. **[AC-10737](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-79/ac-10737.md)**：修复了`bin/magento setup:db:status`命令无法识别JSON数据类型的问题。
