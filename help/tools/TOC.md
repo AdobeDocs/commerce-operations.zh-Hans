@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: e3fec5eba866e1d0ae4c7285667f41b289edf21b
+source-git-commit: d83b72ab0780e56af7cf7732de2bfe8de7d7b9c5
 workflow-type: tm+mt
-source-wordcount: '11035'
+source-wordcount: '11051'
 ht-degree: 0%
 ---
 
@@ -1076,6 +1076,7 @@ ht-degree: 0%
       - [AC-12854：管理员重新排序使用带–1后缀的原始订单编号](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854.md)
     - v1.1.84 {#v1-1-84}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.84](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/overview.md)
+      - [ACP2E-5242：在添加到购物车请求期间，GraphQL使用商店ID作为网站ID](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5242.md)
       - [ACP2E-5027：当应用程序锁定使用文件锁定提供程序时，索引器未完成](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5027.md)
       - [ACP2E-5263：产品CSV导出提前停止并省略产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5263.md)
       - [ACP2E-5009：内容暂存迁移会创建无效的更新并减慢设置:upgrade](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5009.md)
