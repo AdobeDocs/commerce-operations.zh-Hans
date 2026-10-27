@@ -1,7 +1,7 @@
 ---
-source-git-commit: 42acba2c908566207c9cbdd3b1c5b849366f9d32
+source-git-commit: e402a703aa2b493618d866ba001273d4f3b21bc6
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1830'
 ht-degree: 1%
 ---
 # 新增功能模板
@@ -9,6 +9,180 @@ ht-degree: 1%
 ## 新增功能
 
 本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+
+### 2026年10月23日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5263">ACP2E-5263的QPT 1.1.84修复程序的详细说明：产品CSV导出提前停止并忽略产品</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b9382dc0f240bcebddcb833940f6074854949964">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年10月22日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5127">ACP2E-5127的QPT 1.1.84修复程序的详细说明：保存非英语管理员区域设置的公司会将信用额度重置为零</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/67377f54c43f6dc50cb33aafbd003d4b365cbaf5">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5005">ACP2E-5005的QPT 1.1.84修复的详细说明：捆绑产品数量不会在管理员可转让报价</a>中更新。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d6fa3a2ebb8591baad26251a7e0adde24b7adab6">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5009">ACP2E-5009的QPT 1.1.84修复程序的详细说明：内容暂存迁移会创建无效的更新并减慢安装：升级</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9ee0ee2a0dd1f55f4b49b6023d69f61065387d49">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年10月21日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5079">ACP2E-5079的QPT 1.1.84修复程序的详细说明：客户区段仅匹配具有全局帐户共享</a>的第一个网站。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b243d218091c48dc97f2ff7ffa3e79325aa889c5">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年10月20日
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4913">ACP2E-4913的QPT 1.1.84修复的详细说明：在数据库死锁</a>后，不会重试REST API装运和发票创建。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/bf4c32b6c0780b2f6f8dbccd27f4d7bba3579520">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5017">ACP2E-5017的QPT 1.1.84修复的详细说明：对于没有公司的客户，GraphQL客户角色查询失败</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a5cc23e2d9c50215402b7454267cfe7a3c3201cd">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5122">ACP2E-5122的QPT 1.1.84修复的详细说明：已处理的GraphQL购物车错误被错误地写入异常日志</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ba9e8ab95a6e8f079953f6de8906512f64ade22f">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5059">ACP2E-5059的QPT 1.1.84修复的详细说明：并发cron作业发送重复的订单确认电子邮件</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7e234cf6acf7fa74f7f5eff0e39f606123dcc485">提交</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2026年10月19
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>描述</th>
+      <th>类型</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-14940">AC-14940的QPT 1.1.83修复的详细说明：删除客户的商店视图后，不会发送密码重置电子邮件</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7ab75a56bd8ca9bc9bcc96dc21678c99711b6ef3">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了有关<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-11389">AC-11389的QPT 1.1.83修复的详细说明：订单总额会因添加到购物车</a>中的订单产品而异。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3e45719183a23e37a98a94aca955b902f5e795ed">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4877">ACP2E-4877的QPT 1.1.83修复的详细说明：管理员</a>中的帐户订单的待定付款缺少编辑按钮。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/620de17746347e5cb352b2c9f6a345bd5b41accb">提交</a></td>
+    </tr>
+    <tr>
+      <td><p>添加了对<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4977">ACP2E-4977的QPT 1.1.83修复的详细说明：可配置产品发票和贷项通知单合计不包括固定产品税</a>。</p>
+</td>
+      <td>
+        新主题qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fd42ed03b4661e13c24dd3ce8df29375ae1c9e32">提交</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年10月16日
 
@@ -320,28 +494,6 @@ ht-degree: 1%
         新主题qpt
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/edfc38af34925749c5acb36d2c0bcfc5d16a577a">提交</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年8月19日
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>描述</th>
-      <th>类型</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>更新了Commerce缓存文档，更新了本地与Cloud指南以及迁移到Valkey with Symfony L2缓存的新迁移指南：<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/caching-overview">缓存概述和配置选项</a>。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/cache-types">配置缓存前端和类型</a>。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/cache-options">缓存后端选项和存储引用</a>。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/configuration-guide/cache/level-two-cache">L2缓存配置以进行性能优化</a>，并提供了从<code>RemoteSynchronizedCache</code>迁移到Symfony L2缓存的指南。<br /> — 更新了<a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration">最佳实践Valkey和Redis服务配置</a>，带有云特定的迁移步骤，可迁移到Valkey和Symfony L2缓存。</p>
-</td>
-      <td>
-        重大更新
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3a840b544de95a4bb17ef49d0325b16d461aecaa">提交</a></td>
     </tr>
   </tbody>
 </table>
