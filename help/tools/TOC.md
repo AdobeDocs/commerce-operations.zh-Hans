@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: d83b72ab0780e56af7cf7732de2bfe8de7d7b9c5
+source-git-commit: 04e36db108c59bd9be2431a5b1a9ee86891b6268
 workflow-type: tm+mt
-source-wordcount: '11051'
+source-wordcount: '11061'
 ht-degree: 0%
 ---
 
@@ -975,7 +975,7 @@ ht-degree: 0%
       - [ACSD-69494：使用“is_online”的异步退款请求不会触发联机退款](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)
       - [ACSD-68537：签出性能因许多客户区段而降低](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537.md)
       - [ACSD-69311：从发票中部分退款后，贷项通知单中的计税不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311.md)
-      - [ACSD-68341：在PDP加载时出现多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
+      - [ACSD-68341：在PDP加载时进行多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
     - v1.1.78 {#v1-1-78}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
       - [ACP2E-4513：系统不会删除过期的验证码图像](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4513.md)
@@ -1076,6 +1076,7 @@ ht-degree: 0%
       - [AC-12854：管理员重新排序使用带–1后缀的原始订单编号](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854.md)
     - v1.1.84 {#v1-1-84}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.84](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/overview.md)
+      - [AC-15494：GraphQL产品查询返回HTML转义的产品名称](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/ac-15494.md)
       - [ACP2E-5242：在添加到购物车请求期间，GraphQL使用商店ID作为网站ID](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5242.md)
       - [ACP2E-5027：当应用程序锁定使用文件锁定提供程序时，索引器未完成](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5027.md)
       - [ACP2E-5263：产品CSV导出提前停止并省略产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5263.md)
