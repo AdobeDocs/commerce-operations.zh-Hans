@@ -18,9 +18,9 @@ level_v2:
     internal-label: Intermediate
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 244ff697888c6feed99861b3e7b63c8cccc3676c
 workflow-type: tm+mt
-source-wordcount: '33143'
+source-wordcount: '33534'
 ht-degree: 0%
 ---
 # 发行说明
@@ -29,11 +29,28 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.85 {#v1-1-85}
+
+* **ACP2E-4929**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了[!UICONTROL Compare Products]页面上的属性标签显示其他商店视图而非当前商店视图的翻译的问题。
+* **ACP2E-5075**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.10） — 修复了以下问题：当固定金额购物车价格规则具有类别条件时，该规则仅与捆绑包父产品匹配时，它会将折扣错误地应用于动态价格捆绑包产品的所有子项。
+* **ACP2E-5077**（对于Adobe Commerce和Magento Open Source >=2.4.7-p7 &lt;2.4.10） — 修复了以下问题：并发的`customerCart`GraphQL查询或`POST /V1/carts/mine REST`请求为尚未拥有活动购物车的客户创建重复的活动购物车。
+* **ACP2E-5088**（适用于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.10） — 修复了会话过期时客户永久购物车被清空的问题。
+* **ACP2E-3991**（对于Adobe Commerce >=2.4.7 &lt;2.4.9） — 修复了无法正确确定客户端IP地址的问题。
+* **ACP2E-5092**（对于Adobe Commerce，B2B >=1.3.4 &lt;1.5.4） — 修复了以下问题：[!UICONTROL Company Profile]页面和管理员[!UICONTROL Customer Edit]页面在保存公司地址时没有地区，然后又向其国家/地区添加了地区，从而显示错误。
+* **ACP2E-5124**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了当[!UICONTROL Validation Strategy]设置为&#x200B;*因错误*&#x200B;而停止，验证失败后[!UICONTROL Import]按钮在验证结果中保持可用的问题。
+* **AC-17456**（对于Adobe Commerce和Magento Open Source >=2.4.9 &lt;2.4.10） — 修复了在管理面板的[!UICONTROL Design Configuration]页面上编辑&#x200B;*[!UICONTROL Global]*&#x200B;作用域时，在PHP 8.4和8.5上返回&#x200B;*HTTP 500*&#x200B;错误的问题。
+* **ACP2E-5212**（对于Adobe Commerce，B2B >=1.3.4 &lt;1.5.4） — 修复了[!UICONTROL Quick Order]接受重命名为`.csv`扩展名的非CSV文件的问题。
+* **ACP2E-5300**（对于Adobe Commerce和Magento Open Source >=2.4.9 &lt;2.4.10） — 修复了关键词在管理面板[!UICONTROL Orders]网格中搜索多个以空格分隔或逗号分隔的订单编号时未返回匹配订单的问题。
+* **ACP2E-5354**（对于Adobe Commerce，B2B >=1.5.3 &lt;1.5.4） — 修复了通过REST API更新客户导致与公司帐户关联的客户在管理员[!UICONTROL Customers]网格中出现多次的问题。
+* **ACP2E-5208**（对于Adobe Commerce，B2B >=1.5.1 &lt;1.5.4） — 修复了在每个Storefront页面导航中重新加载[!UICONTROL Requisition List]部分的问题，即使未进行任何更改也是如此。
+* 已更新的版本：**ACP2E-4894**
+* 已替换的修补程序： **ACP2E-4626**
 
 ## v1.1.84 {#v1-1-84}
 
@@ -180,7 +197,7 @@ ht-degree: 0%
 * **ACP2E-4732**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了当changelog表中的version_id列达到最大值时，具有大量更新的客户停止部分索引的问题。
 * **ACP2E-4763**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了以下问题：当目录价格设置为“含税”时，由于应用了两次税，GraphQL客户订单查询会返回夸大的original_price_include_tax和original_row_total_include_tax值。
 * **ACSD-60989**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过声明性架构修改带有外键的列会在MariaDB上导致错误的问题。
-* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050&lbrace;37**
+* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050{37**
 * 已替换的修补程序： **ACSD-58446**、**ACSD-67904**
 
 ## v1.1.77 {#v1-1-77}
