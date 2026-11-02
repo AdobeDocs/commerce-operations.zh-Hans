@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: cbba2086ee177da6a26da84984153b54c725e1a8
+source-git-commit: a376b03617703097396bef92f8174bfe1da34c52
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '524'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.83
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 QPT v1.1.83包含以下修补程序：
 
+1. **[ACP2E-4908](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4908.md)**：修复了大型目录可能导致[!DNL Valkey]（或[!DNL Redis]）中的内存使用过量的问题，因为在每个商店视图中为每个产品创建了单独的布局缓存条目。
 1. **[AC-17975](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-17975.md)**：修复了使用PHP 8.5时，Adobe Commerce 2.4.9中的CLI命令、类别编辑、设计配置和AJAX客户登录失败的问题。
 1. **[ACP2E-4877](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4877.md)**：修复了在&#x200B;*挂起*&#x200B;状态下，无法在Admin中编辑使用“帐户付款”下达的订单的问题。
 1. **[AC-18096](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-18096.md)**：通过将日期格式从斜杠分隔(/)恢复到短划线分隔(-)，修复了Sales GraphQL日期字段返回日期时格式与以前版本不同的问题。
 1. **[AC-18128](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-18128.md)**：修复了GraphQL返回的订单日期和订单评论时间戳在非英语区域设置中显示错误日历日期的问题。
 1. **[ACP2E-4838](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4838.md)**：修复了具有受限权限的管理员用户无法从客户网格中删除客户的问题。
 1. **[ACP2E-4639](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4639.md)**：修复了GraphQL架构中申请列表项类型拼写错误的问题。 较旧的`items`字段和`RequistionListItems`类型仍然可用，但已弃用。
-1. **ACP2E-4908**：修复了大型目录导致Redis或Valkey中的内存使用过多的问题，这是因为在每个商店视图中为每个产品创建了单独的布局缓存条目。
 1. **[AC-16530](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-16530.md)**：修复了购物车未始终反映对目录价格规则的计划更新的问题。
 1. **[ACP2E-4977](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4977.md)**：修复了可配置产品的发票和贷项通知单总计不包含固定产品税(FPT)，从而导致总计低于订单总计的问题。
 1. **[AC-12854](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854.md)**：修复了在管理员中为订单重新排序时，会创建一个带有`-1`后缀的新订单编号，而不是分配下一个顺序编号的问题。

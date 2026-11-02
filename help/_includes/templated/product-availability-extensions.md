@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0aa197a16770ea134d7e0dcf46bd79738340fdf7
+source-git-commit: 20f6d0f674fed8844b8d3160cea705648003845c
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 20%
@@ -62,7 +62,7 @@ ht-degree: 20%
       </tr>
       <tr>
           <td>适用于Commerce的Adobe Experience Manager Assets集成</td>
-          <td>1.4.9</td>
+          <td>1.4.12</td>
           <td>1.0.20+</td>
           <td>1.0.20+</td>
           <td>1.0.20+</td>
