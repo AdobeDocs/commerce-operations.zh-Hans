@@ -6,6 +6,8 @@ feature: Services
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
     internal-label: Commerce
+  - id: cdf0c6dd-1717-4e20-9530-a24eee57088b
+    internal-label: Commerce on Cloud
 feature_v2:
   - id: da76473c-f99b-5ad0-9b14-896aed473f8a
     internal-label: Services
@@ -17,9 +19,10 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+badgePaas: label="Commerce on Cloud" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="仅适用于云项目上的Adobe Commerce 。"
+source-git-commit: f1894f3a95e38f64affff0769e80557fe0b4a4d7
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1201'
 ht-degree: 0%
 ---
 
@@ -400,7 +403,7 @@ Adobe围绕Managed Services系统上的Adobe Commerce的配置、开发、暂存
 
 适用于Managed Services的Adobe安全栈栈使用自动化和一致性在中的每个级别构建安全性，以减少人为错误。 开发和操作团队自动从栈栈的不同级别继承安全控制。
 
-平台合作伙伴（如Amazon Web Services和Microsoft Azure）在应用平台自定义设置时可确保最大程度的安全保护，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 有关详细信息，请参阅[Adobe Commerce安全性](https://business.adobe.com/cn/products/magento/secure-ecommerce.html)。
+平台合作伙伴（如Amazon Web Services和Microsoft Azure）在应用平台自定义设置时可确保最大程度的安全保护，而Adobe的Managed Services团队则提供核心安全服务（如合规性、日志记录、身份验证、扫描和监控）以及服务器安全和安全应用程序配置。 有关详细信息，请参阅[Adobe Commerce安全性](https://business.adobe.com/products/magento/secure-ecommerce.html)。
 
 下图显示了Adobe Managed Services安全技术栈栈：
 
