@@ -13,9 +13,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: a6400a85be93c8576f5bb2866f4f5107acb5ec1d
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '420'
 ht-degree: 0%
 ---
 # 设置操作模式
@@ -135,6 +135,10 @@ Enabled production mode.
 ```
 
 ### 更改为开发人员模式
+
+>[!NOTE]
+>
+>Adobe Commerce Cloud环境不支持开发人员模式，并且Adobe Commerce支持部门无法促进更改应用程序模式。
 
 从生产模式更改为开发人员模式时，应清除生成的类和Object Manager实体（如代理）以防止意外错误。 完成此操作后，您可以更改模式。 请使用以下步骤：
 
