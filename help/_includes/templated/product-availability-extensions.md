@@ -1,8 +1,8 @@
 ---
-source-git-commit: 20f6d0f674fed8844b8d3160cea705648003845c
+source-git-commit: 5fdb263426174cb95808b21ec3dc527367ba3b31
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 20%
+source-wordcount: '259'
+ht-degree: 18%
 ---
 # Adobe创作扩展的产品可用性
 
@@ -97,6 +97,19 @@ ht-degree: 20%
           <td>
               <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/install">作者</a><br/>
               <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/b2b/release-notes">发行说明</a><br/>
+          </td>
+      </tr>
+      <tr>
+          <td>目录扩充</td>
+          <td>2.1.2</td>
+          <td>2.1.2</td>
+          <td>2.1.2</td>
+          <td>不支持</td>
+          <td>不支持</td>
+          <td>不支持</td>
+          <td>
+              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/catalog/products/catalog-enrichment#enable-catalog-enrichment">作者</a><br/>
+              <a href="https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/catalog/products/catalog-enrichment#release-notes">发行说明</a><br/>
           </td>
       </tr>
       <tr>
