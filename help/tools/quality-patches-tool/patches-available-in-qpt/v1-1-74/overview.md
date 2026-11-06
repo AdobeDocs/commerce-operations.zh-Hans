@@ -21,9 +21,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 49785473e0154e72e675b54f9d8119460c53bd8c
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '154'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.74
@@ -34,7 +34,7 @@ QPT v1.1.74包含以下修补程序：
 
 1. **ACSD-68636**：修复了从其他商店生成的发票的礼品卡电子邮件标头中未正确显示商店所有者的名称的问题。
 1. **ACSD-68430**：修复了当数据包含属性配置中的已删除属性选项时，保存客户或地址失败的问题。
-1. **ACSD-68499**： GraphQL `updateCartItems`突变对于超出可用库存的数量返回&#x200B;*成功*。
+1. **ACSD-68499**：修复了GraphQL `updateCartItems`突变在更新数量超过可用库存量时返回成功响应，从而导致数量和总数虚增的问题。
 1. **ACSD-68810**：修复了订单分配给其他网站上新创建的客户的问题，该问题不受&#x200B;**[!UICONTROL Customer Account Sharing]**&#x200B;配置的影响。
 
 使用左侧的菜单导航到特定的修补程序页面。
