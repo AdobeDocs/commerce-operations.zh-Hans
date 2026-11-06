@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: c97df849a9fba077fc75b194298ab759e3129ad5
+source-git-commit: ea5f12bca7e8a3969ffa775d6a675a224f08155f
 workflow-type: tm+mt
-source-wordcount: '11112'
+source-wordcount: '11124'
 ht-degree: 0%
 ---
 
@@ -975,7 +975,7 @@ ht-degree: 0%
       - [ACSD-69494：使用“is_online”的异步退款请求不会触发联机退款](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)
       - [ACSD-68537：签出性能因许多客户区段而降低](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537.md)
       - [ACSD-69311：从发票中部分退款后，贷项通知单中的计税不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311.md)
-      - [ACSD-68341：在PDP加载时进行多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
+      - [ACSD-68341：在PDP加载时出现多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
     - v1.1.78 {#v1-1-78}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
       - [ACP2E-4513：系统不会删除过期的验证码图像](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4513.md)
@@ -1060,6 +1060,7 @@ ht-degree: 0%
       - [ACP2E-4875：打开具有大地址簿的客户帐户时管理员用户注销](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-82/acp2e-4875.md)
     - v1.1.83 {#v1-1-83}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.83](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview.md)
+      - [ACP2E-5205：大型目录导致管理员中的类别加载缓慢和超时](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5205.md)
       - [ACP2E-4908：大型目录导致Redis或Valkey内存使用率过高](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4908.md)
       - [AC-17975：PHP 8.5兼容性问题影响CLI命令、类别编辑、设计配置和客户登录](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-17975.md)
       - [AC-16530：在计划的目录价格规则更新后，购物车显示不一致的价格](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-16530.md)
