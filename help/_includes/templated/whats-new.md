@@ -1,17 +1,20 @@
 ---
-source-git-commit: f805a1d27c2237ed7f9885524d01c6bd0df1b85c
+source-git-commit: 114e203ce1226139cf2d31b758329ccd8a00205c
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '2082'
 ht-degree: 0%
 ---
 # 新增功能模板
 
 ## 新增功能
 
-本页包含最近60天所做的更改。 我们将从此列表中排除所有次要更新，例如副本编辑。
+本页包含最近60天所做的更改。 将从此列表中排除次要更新，例如副本编辑。
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 添加了有关[ACP2E-5205的QPT 1.1.83修复程序的详细说明：大型目录导致管理员](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5205)中的类别加载缓慢和超时。 | 新主题qpt | [2026年11月5日](https://github.com/AdobeDocs/commerce-operations.en/commit/39e85100b07e742c5d21708af62fd1da3462226b) |
+| 添加了对[ACP2E-4908的QPT 1.1.83修复的详细说明：大型目录导致Redis或Valkey内存使用量过高](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4908)。 | 新主题qpt | [2026年11月2日](https://github.com/AdobeDocs/commerce-operations.en/commit/a0924456f529fcc4378c65e81eacfdd6711ae1ca) |
+| 添加了对[ACP2E-5183的QPT 1.1.84修复的详细说明：静态内容部署在具有@magento_import](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5183)的PHP 8.5上失败。 | 新主题qpt | [2026年11月2日](https://github.com/AdobeDocs/commerce-operations.en/commit/3a5e0c4cc2f879416a8e8bc544cc709ef4db3c32) |
 | 添加了有关[AC-16530的QPT 1.1.83修复的详细说明：在计划的目录价格规则更新](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-16530)后，购物车显示不一致的价格。 | 新主题qpt | [2026年10月29日](https://github.com/AdobeDocs/commerce-operations.en/commit/87bb58152a37d84e7ca9c4a882b014bf45224981) |
 | 添加了有关[AC-15494的QPT 1.1.84修复程序的详细说明： GraphQL产品查询返回HTML转义的产品名称](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/ac-15494)。 | 新主题qpt | [2026年10月28日](https://github.com/AdobeDocs/commerce-operations.en/commit/d8d3bfc8adf81046abf9d46ff2dba43c742e2945) |
 | 添加了有关[ACP2E-5242的QPT 1.1.84修复的详细说明： GraphQL在添加到购物车请求期间，使用商店ID作为网站ID](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5242)。 | 新主题qpt | [2026年10月27日](https://github.com/AdobeDocs/commerce-operations.en/commit/9b84a4c224d31afe6452fd609f6202bc9ac7c1c8) |
@@ -47,4 +50,3 @@ ht-degree: 0%
 | 添加了[Overview： Quality Patches Tool (QPT) v1.1.83](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview)。 | 新主题qpt | [2026年10月2日](https://github.com/AdobeDocs/commerce-operations.en/commit/266c8529352dac198568dca4676aebd88ce50fc1) |
 | 添加了[每月隔离的安全修补程序策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/monthly-isolated-security-patches)，说明了Adobe Commerce如何在修补程序星期二的完整安全修补程序发行版本之间提供针对性的独立CVE修补程序，以及如何应用和验证它们。 | 新主题 | [2026年9月18日](https://github.com/AdobeDocs/commerce-operations.en/commit/681f7f0589aed8787aaf165d36ac00f670d751ce) |
 | 更正了[Redis/Valkey服务配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)指南，以阐明`VALKEY_BACKEND`和`REDIS_BACKEND`部署变量不能确定Adobe Commerce实际使用的缓存服务，并且`VALKEY_USE_SLAVE_CONNECTION`/`REDIS_USE_SLAVE_CONNECTION`必须与环境中实际可用的服务相匹配。 | 技术 | [2026年9月15日](https://github.com/AdobeDocs/commerce-operations.en/commit/49781ad38a266fffa1be080b5a093327a28cf6a6) |
-| Adobe Commerce Patching Automation现已正式可用。 请参阅[文档](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/caps-tool/intro)以了解详情。 | 重大更新，新主题 | [2026年9月8日](https://github.com/AdobeDocs/commerce-operations.en/commit/a88bfea449616c0b79c5bd3380bec74c68687052) |
