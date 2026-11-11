@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: ea5f12bca7e8a3969ffa775d6a675a224f08155f
+source-git-commit: 25d545e300a0a32f982a41c7d3d82b3ed5daf5ef
 workflow-type: tm+mt
-source-wordcount: '11124'
+source-wordcount: '11153'
 ht-degree: 0%
 ---
 
@@ -975,7 +975,7 @@ ht-degree: 0%
       - [ACSD-69494：使用“is_online”的异步退款请求不会触发联机退款](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)
       - [ACSD-68537：签出性能因许多客户区段而降低](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537.md)
       - [ACSD-69311：从发票中部分退款后，贷项通知单中的计税不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311.md)
-      - [ACSD-68341：在PDP加载时出现多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
+      - [ACSD-68341：在PDP加载时进行多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
     - v1.1.78 {#v1-1-78}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
       - [ACP2E-4513：系统不会删除过期的验证码图像](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4513.md)
@@ -1080,6 +1080,8 @@ ht-degree: 0%
       - [AC-12854：管理员重新排序使用带–1后缀的原始订单编号](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854.md)
     - v1.1.84 {#v1-1-84}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.84](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/overview.md)
+      - [ACP2E-5034：B2B物料折扣不会减少可转让报价中的动态价格捆绑小计](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5034.md)
+      - [ACP2E-5041：保存过时的产品表单将在计划的更新后使特价过期](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5041.md)
       - [ACP2E-5183：静态内容部署在具有`@magento_import`的PHP 8.5上失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5183.md)
       - [AC-15494：GraphQL产品查询返回HTML转义的产品名称](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/ac-15494.md)
       - [ACP2E-5242：在添加到购物车请求期间，GraphQL使用商店ID作为网站ID](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5242.md)
