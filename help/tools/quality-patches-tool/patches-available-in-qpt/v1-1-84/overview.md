@@ -21,7 +21,7 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: c97df849a9fba077fc75b194298ab759e3129ad5
+source-git-commit: 1904bb69074eca0a679ec41b4a3817d954f8f488
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -38,7 +38,7 @@ QPT v1.1.84包含以下修补程序：
 1. **[ACP2E-5017](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5017.md)**：修复了在客户未分配给公司时通过GraphQL查询客户`role`返回&#x200B;*内部服务器错误*&#x200B;的问题。
 1. **[ACP2E-5027](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5027.md)**：修复了在启用文件锁定时，索引器停滞在循环中并且重新索引未完成的问题。
 1. **ACP2E-5029**：修复了在执行手动重新同步之前&#x200B;**[!DNL Live Search]**&#x200B;中未显示目录价格规则更改的问题。
-1. **ACP2E-5041**：修复了在计划更新期间保存产品导致店面在更新结束后显示正常价格而不是&#x200B;**[!UICONTROL Special Price]**&#x200B;的问题。
+1. **[ACP2E-5041](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5041.md)**：修复了在计划更新期间保存产品导致店面在更新结束后显示正常价格而不是&#x200B;**[!UICONTROL Special Price]**&#x200B;的问题。
 1. **[ACP2E-5183](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5183.md)**：修复了在编译使用`@magento_import`指令的`LESS`文件时，静态内容部署在PHP 8.5上失败的问题。
 1. **[ACP2E-5059](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5059.md)**：修复了客户收到同一订单的重复订单确认电子邮件的问题。
 1. **[ACP2E-5122](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5122.md)**：修复了GraphQL购物车请求中处理的错误作为应用程序错误错误错误错误错误记录在异常日志中的问题。
