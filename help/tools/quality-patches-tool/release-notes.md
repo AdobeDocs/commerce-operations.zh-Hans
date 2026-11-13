@@ -18,9 +18,9 @@ level_v2:
     internal-label: Intermediate
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 244ff697888c6feed99861b3e7b63c8cccc3676c
+source-git-commit: b386ae4fb7b26db8498fb78d1a354c3267a862ca
 workflow-type: tm+mt
-source-wordcount: '33534'
+source-wordcount: '34333'
 ht-degree: 0%
 ---
 # 发行说明
@@ -29,11 +29,40 @@ ht-degree: 0%
 
 >[!INFO]
 >
->有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=zh-Hans#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=zh-Hans)，以查看已发布修补程序的完整列表。
+>有关将修补程序应用于Adobe Commerce项目的说明，请参阅[应用修补程序](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches)。 请参阅“软件更新指南”中的[[!DNL Quality Patches Tool]：搜索修补程序](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html)，以查看已发布修补程序的完整列表。
 
 >[!INFO]
 >
 >有关社区为Magento Open Source创建的[!DNL quality patches]的信息，请参阅[发行说明](https://github.com/magento/quality-patches/blob/master/community-release-notes.md)。
+
+## v1.1.86 {#v1-1-86}
+
+* **ACP2E-3094**（对于Adobe Commerce >=2.4.5 &lt;2.4.8） — 修复了以下问题：查看或编辑具有许多权限的类别的[!UICONTROL Category Permissions]时，可能会导致浏览器无响应。
+* **ACP2E-5046**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了在管理员中创建订单时刷新页面并多次添加相同SKU的问题。
+* **ACP2E-5050**（对于Adobe Commerce >=2.4.6 &lt;2.4.10） — 修复了在管理员中查看或保存RMA时未在[!UICONTROL Action Logs]报表中显示RMA编号的问题。
+* **ACP2E-5057**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.8） — 修复了当[!UICONTROL Catalog Price Scope]设置为&#x200B;*网站*&#x200B;时，GraphQL对捆绑产品的查询返回全局捆绑包选项价格而不是网站特定价格的问题。
+* **ACP2E-5061**（对于Adobe Commerce >=2.4.5 &lt;2.4.10） — 修复了类别促销规则无法将`AND`条件与匹配多个值中任意值的条件结合的问题。
+* **ACP2E-5071**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.10） — 修复了以下问题：当购物者的购物车已包含全部可用量时，产品页面上不始终显示库存不可用消息。
+* **ACP2E-5094**（对于Adobe Commerce和Magento Open Source >=2.4.6-p3 &lt;2.4.7） || >=2.4.8 &lt;2.4.10) — 修复了在设置`MAGENTO_DC_*`环境变量时页面加载速度明显变慢的问题。
+* **ACP2E-5118**（适用于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了禁用[!UICONTROL Translations]缓存时，页面生成器预览无法呈现的问题。
+* **ACP2E-5134**（适用于Adobe Commerce >=2.4.6 &lt;2.4.10） — 修复了以下问题：从公司的[!UICONTROL Shared Catalog]中删除捆绑包中包含的产品时，会让捆绑包产品留在购物车中，并在购物车和结帐期间导致错误。
+* **ACP2E-5146**（对于Adobe Commerce，B2B >=1.3.4 &lt;1.5.4） — 修复了以下问题：当其他网站上的客户与管理员用户具有相同的ID时，仅限特定网站的管理员用户无法删除客户。
+* **ACP2E-5176**（对于Adobe Commerce >=2.4.7 &lt;2.4.10） — 修复了通过[!DNL Google Tag Manager]发送到[!DNL Google Analytics] 4的电子商务事件使用[!DNL Universal Analytics]格式并忽略多个签出事件的问题。
+* **ACP2E-5185**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了在类别树中移动类别时出现错误&#x200B;*类别移动错误*&#x200B;的问题，或者，当存储区发生多次URL重写时，需要几分钟才能完成。
+* **ACP2E-4191**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.9） — 修复了在禁用EAV类型和属性缓存时，某些REST API请求进入无限循环的问题。
+* **ACP2E-4973**（对于Adobe Commerce和Magento Open Source >=2.4.8-p1 &lt;2.4.9） — 修复了从[!UICONTROL In-Store Delivery]切换到另一种交付方法时无法从购物车中清除关联的商店地址的问题。
+* **ACP2E-5221**（对于Adobe Commerce，B2B >=1.5.3 &lt;1.5.4） — 修复了在安装许多商店和客户组时启用[!UICONTROL Quick Order]后，[!UICONTROL Catalog Product Permissions]索引器需要花费较长时间的问题。
+* **ACP2E-5245**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了在首次订购时使用相同地址进行配送和计费的新注册客户在下次结帐时看到该地址被列出两次的问题。
+* **ACP2E-5248**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了以下问题：在PHP 8.5上打开[!UICONTROL Add Product]页面时，没有[!UICONTROL Edit Product Status]权限的Admin用户会看到&#x200B;*null作为数组偏移*&#x200B;弃用错误。
+* **ACP2E-5254**（对于Adobe Commerce，B2B >=1.5.2 &lt;1.5.4） — 修复了在清除缓存之前，当客户打开申购单列表时，添加到申购单中的产品未显示的问题。
+* **ACP2E-5268**（对于Adobe Commerce和Magento Open Source >=2.4.9 &lt;2.4.10） — 修复了将[!UICONTROL Enable Frontend Resize]设置为&#x200B;*No*&#x200B;时，创建可配置产品失败的问题。
+* **ACP2E-3752**（对于Adobe Commerce和Magento Open Source >=2.4.7 &lt;2.4.9） — 修复了在创建许多产品导入操作时，产品导入处理引发错误&#x200B;*未定义数组键“apply_to”*&#x200B;的问题。
+* **ACP2E-5280**（适用于Adobe Commerce >=2.4.9 &lt;2.4.10） — 修复了在启用[!UICONTROL Category Permissions]的情况下客户登录时遇到错误的问题。
+* **ACP2E-5295**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.10） — 修复了在同一流程中的[!UICONTROL Inventory]索引器之后运行时，并行产品价格重新索引失败并在子流程&#x200B;*中返回错误*&#x200B;失败的问题。
+* **ACP2E-5298**（适用于Adobe Commerce >=2.4.5 &lt;2.4.10） — 修复了仅具有购物车价格规则查看权限的管理用户可生成或删除优惠券代码的问题。
+* **ACP2E-5333**（对于Adobe Commerce >=2.4.5 &lt;2.4.10） — 修复了以下问题：刷新具有使用`is not`运算符的[!UICONTROL Total Number of Orders]条件的客户区段时，如果指定的运算符为&#x200B;*未知，则刷新该客户区段会失败并出现错误。*。
+* **ACP2E-5425**（对于Adobe Commerce和Magento Open Source >=2.4.5 &lt;2.4.8） — 修复了客户收到同一订单的重复订单确认电子邮件的问题。
+* 更新的版本： **ACSD-63578**
 
 ## v1.1.85 {#v1-1-85}
 
@@ -197,7 +226,7 @@ ht-degree: 0%
 * **ACP2E-4732**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了当changelog表中的version_id列达到最大值时，具有大量更新的客户停止部分索引的问题。
 * **ACP2E-4763**（对于Adobe Commerce和Magento Open Source >=2.4.8 &lt;2.4.9） — 修复了以下问题：当目录价格设置为“含税”时，由于应用了两次税，GraphQL客户订单查询会返回夸大的original_price_include_tax和original_row_total_include_tax值。
 * **ACSD-60989**（对于Adobe Commerce和Magento Open Source >=2.4.4 &lt;2.4.8） — 修复了通过声明性架构修改带有外键的列会在MariaDB上导致错误的问题。
-* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050&lbrace;37**
+* 已更新的版本： **ACSD-59280**、**ACSD-45255**、**ACSD-50336**、**ACSD-49737**、**ACSD-50849**、**ACSD-53750**、**ACSD-55031**、**ACSD-51819**、**ACSD-55628**、**ACSD-54965-V2**， **ACSD-56546**、**ACSD-61756**、**ACSD-68040**、**ACSD-62708**、**ACSD-63283**、**ACSD-64732**、**ACSD-65775**、**ACSD-66965**、**ACP2E-4050{37**
 * 已替换的修补程序： **ACSD-58446**、**ACSD-67904**
 
 ## v1.1.77 {#v1-1-77}
