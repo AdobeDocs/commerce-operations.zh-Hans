@@ -1,7 +1,7 @@
 ---
-source-git-commit: 114e203ce1226139cf2d31b758329ccd8a00205c
+source-git-commit: 9e7338e0be69b83b92210b6299d92cc688681f8d
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2227'
 ht-degree: 0%
 ---
 # 新增功能模板
@@ -12,6 +12,9 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 已发布1.1.86 Quality Patches Tool (QPT)包版本的[发行说明](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=zh-Hans)。 | Qpt | [2026年11月13日](https://github.com/AdobeDocs/commerce-operations.en/commit/6a84f2ebcbbf8041bbe783b53eab5500a4b0acc2) |
+| 添加了对[ACP2E-5041的QPT 1.1.84修复的详细说明：保存过时的产品表单会在计划更新](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5041)后使特价过期。 | 新主题qpt | [2026年11月11日](https://github.com/AdobeDocs/commerce-operations.en/commit/d2b8ba35c866be25a0fbbebceeb9a7c68ba37293) |
+| 添加了对[ACP2E-5034的QPT 1.1.84修复的详细说明： B2B项目折扣不会减少报价单](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5034)中的动态价格捆绑包小计。 | 新主题qpt | [2026年11月11日](https://github.com/AdobeDocs/commerce-operations.en/commit/974c6238c0e0008eaa36851449de97218bfca949) |
 | 添加了有关[ACP2E-5205的QPT 1.1.83修复程序的详细说明：大型目录导致管理员](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-5205)中的类别加载缓慢和超时。 | 新主题qpt | [2026年11月5日](https://github.com/AdobeDocs/commerce-operations.en/commit/39e85100b07e742c5d21708af62fd1da3462226b) |
 | 添加了对[ACP2E-4908的QPT 1.1.83修复的详细说明：大型目录导致Redis或Valkey内存使用量过高](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/acp2e-4908)。 | 新主题qpt | [2026年11月2日](https://github.com/AdobeDocs/commerce-operations.en/commit/a0924456f529fcc4378c65e81eacfdd6711ae1ca) |
 | 添加了对[ACP2E-5183的QPT 1.1.84修复的详细说明：静态内容部署在具有@magento_import](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5183)的PHP 8.5上失败。 | 新主题qpt | [2026年11月2日](https://github.com/AdobeDocs/commerce-operations.en/commit/3a5e0c4cc2f879416a8e8bc544cc709ef4db3c32) |
