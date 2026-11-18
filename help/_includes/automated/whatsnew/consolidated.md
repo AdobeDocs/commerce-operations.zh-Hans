@@ -127,7 +127,7 @@ ht-degree: 0%
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
 | 管理UI SDK 5.2.0为[返回视图按钮](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/rma/view-button)和[贷项通知单自定义属性网格列](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/credit-memo/custom-attribute-grid-columns)添加了V2扩展点，为“新返回”表单添加了[原生UI表单替换](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/native-ui#supported-targets)，并添加了[失败请求保留](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/configuration#failed-request-retention)设置。 有关详细信息，请参阅[发行说明](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes)。 | 新主题、发行说明 | [2026年11月16日](https://github.com/AdobeDocs/commerce-extensibility/pull/626) |
-| 已发布适用于Adobe Commerce 1.24.0](https://developer.adobe.com/commerce/extensibility/events/release-notes)的[Adobe Commerce Webhooks 1.21.0](https://developer.adobe.com/commerce/extensibility/webhooks/release-notes)和[Adobe I/O Events。 | 重大更新，发行说明 | [2026年11月12日](https://github.com/AdobeDocs/commerce-extensibility/pull/629) |
+| 已发布适用于Adobe Commerce 1.24.0[&#128279;](https://developer.adobe.com/commerce/extensibility/events/release-notes)的[Adobe Commerce Webhooks 1.21.0](https://developer.adobe.com/commerce/extensibility/webhooks/release-notes)和Adobe I/O Events。 | 重大更新，发行说明 | [2026年11月12日](https://github.com/AdobeDocs/commerce-extensibility/pull/629) |
 | 添加了对以下[V2扩展点](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/)的支持：发票和信用视图按钮、新闻稿订阅者网格列以及原生UI表单替换。 | 重大更新、新主题、发行说明 | [2026年11月3日](https://github.com/AdobeDocs/commerce-extensibility/pull/617) |
 | 更新了[应用程序提交指南](https://developer.adobe.com/commerce/extensibility/app-development/app-submission-guidelines)以包含Adobe Commerce Optimizer环境。 | 技术 | [2026年9月22日](https://github.com/AdobeDocs/commerce-extensibility/pull/610) |
 | 修订了扩展性[登陆页面](https://developer.adobe.com/commerce/extensibility)以包含今天的开发工作流。 | 重大更新 | [2026年9月21日](https://github.com/AdobeDocs/commerce-extensibility/pull/607) |
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 ## 适用于Adobe Developer App Builder的API Mesh
 
-这些更新来自Adobe Developer App Builder的[API Mesh ](https://developer.adobe.com/graphql-mesh-gateway/)主页的&#x200B;*新增功能*&#x200B;部分。
+这些更新来自Adobe Developer App Builder的[API Mesh &#x200B;](https://developer.adobe.com/graphql-mesh-gateway/)主页的&#x200B;*新增功能*&#x200B;部分。
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
