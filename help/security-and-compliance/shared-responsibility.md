@@ -13,9 +13,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 16e16980e1b3b021aaaa8c3f1265162f87d5c951
 workflow-type: tm+mt
-source-wordcount: '3242'
+source-wordcount: '3286'
 ht-degree: 0%
 ---
 # 分担责任的安全性和运营模式
@@ -40,7 +40,7 @@ Adobe负责以下工作：
 * 确保安全的应用程序开发
 * 如果商户的支付处理器要求，则获取PCI认证
 * 响应和响应安全事件
-* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](/help/release/product-availability.md)。
+* 在积极支持的版本上维护所有第三方依赖项、平台服务和Adobe Commerce服务扩展。 Adobe不为运行不支持的依赖项版本的部署提供安全支持或帮助。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
 该商家负责为其自定义的Adobe Commerce on cloud infrastructure解决方案实例遵循以下安全最佳实践：
 
 * 将云基础架构配置文件上必需的Adobe Commerce添加到存储库
-* 在Adobe发布其自定义云基础架构Adobe Commerce解决方案后，立即将其安全修补程序和其他修补程序应用到这些解决方案
+* 在Adobe发布其自定义云基础架构Adobe Commerce解决方案后，立即将其安全修补程序和其他修补程序应用到这些解决方案。 有关个别安全修补程序文件，请参阅&#x200B;_Adobe支持和工具指南_&#x200B;中的[如何应用Adobe提供的编辑器修补程序](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-apply-a-composer-patch-provided-by-magento)。
 * 供应商发布安全修补程序和其他修补程序后，立即将其应用到所有自定义扩展和代码
 * 创建、部署和测试自定义清漆VCL文件
 * 在云基础架构解决方案上设计、设置主题、安装、集成和保护自定义的Adobe Commerce，包括所有自定义扩展和代码
@@ -112,7 +112,7 @@ Adobe还可确保在适用的SLA中商定的商家基础设施的可用性。
   * Adobe Commerce Services扩展
   * 所有第三方扩展和自定义集成
 
-  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=zh-Hans)和[产品可用性矩阵](/help/release/product-availability.md)。
+  Adobe不支持运行不支持版本的部署。 有关支持的版本，请参阅[系统要求](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)和[产品可用性矩阵](/help/release/product-availability.md)。
 
 ## 云服务提供商责任
 
@@ -979,4 +979,3 @@ Adobe Commerce on cloud infrastructure解决方案使用CDN提供商来加快页
 | 根据限制监控vCPU使用情况 | R |   |
 
 {style="table-layout:auto"}
-
