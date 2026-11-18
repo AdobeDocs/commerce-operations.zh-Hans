@@ -57,13 +57,13 @@ whatsnew_consolidated:
   projects:
     - repo: commerce-operations.en
       title: Adobe Commerce operational guides
-      website: https://experienceleague.adobe.com/en/docs/commerce-operations/operational-guides/home
+      website: https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/operational-guides/home
     - repo: commerce-webapi
       title: Adobe Commerce web APIs
       website: https://developer.adobe.com/commerce/webapi/
     - repo: commerce.en
       title: Adobe Commerce
-      website: https://experienceleague.adobe.com/en/docs/commerce
+      website: https://experienceleague.adobe.com/zh-hans/docs/commerce
 ```
 
 移动条目以更改节顺序。 您可以从两个平台自由地交错项目。 以`.en`结尾的存储库名称使用ExL源路径`help/_includes/templated/whats-new.md`。 所有其他存储库都使用DevSite源路径`src/pages/_includes/templated/whats-new.md`。
