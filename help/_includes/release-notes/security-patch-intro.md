@@ -18,8 +18,8 @@ ht-degree: 0%
 
 * [Adobe Commerce安全修补程序版本概述](/help/release/release-notes/security/overview.md#about-security-patch-releases)
 * 有关升级到安全修补程序版本的说明，请参阅[安全修补程序升级示例](/help/upgrade/implementation/perform-upgrade.md#example---security-patch)。
-* 要应用单独的安全修补程序文件，请参阅&#x200B;_Adobe支持和工具指南_&#x200B;中的[如何应用Adobe提供的编辑器修补程序](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-apply-a-composer-patch-provided-by-magento)。
+* 要应用单独的安全修补程序文件，请参阅&#x200B;_Adobe支持和工具指南_&#x200B;中的[如何应用Adobe提供的编辑器修补程序](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-apply-a-composer-patch-provided-by-magento)。
 
 >[!NOTE]
 >
->有关与第三方依赖项兼容的信息，请参阅[系统要求](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)。
+>有关与第三方依赖项兼容的信息，请参阅[系统要求](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/installation-guide/system-requirements)。
