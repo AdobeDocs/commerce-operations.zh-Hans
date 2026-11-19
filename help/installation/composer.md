@@ -13,9 +13,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 22c0b3cac685762f9c0d36f225a418a07ed5e1db
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1015'
 ht-degree: 0%
 ---
 # 快速启动内部部署
@@ -102,7 +102,7 @@ Adobe使用[Composer](https://getcomposer.org/)管理Adobe Commerce组件及其�
 
    >[!NOTE]
    >
-   > 如果使用使用Commerce身份验证密钥配置的编辑器`[auth.json](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/authentication-keys)`文件或环境变量，则不会提示您输入身份验证密钥。
+   > 如果您使用使用Commerce身份验证密钥配置的编辑器[`auth.json`](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/develop/authentication-keys)文件或环境变量，则不会提示您输入身份验证密钥。
 
    如果遇到错误（如`Could not find package...`或`...no matching package found`），请确保命令中没有拼写错误。 如果仍遇到错误，则可能无权下载Adobe Commerce。 请联系[Adobe Commerce支持](https://support.magento.com/hc/en-us)以获取帮助。
 
