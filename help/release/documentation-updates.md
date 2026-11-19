@@ -5,7 +5,8 @@ TQID: 'https://experienceleague.adobe.com/ZPz09-WXfFBUHpCGlYefQbg60BrE0rhV2bYbw8
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
     internal-label: Commerce
-source-git-commit: e95fc5795ff0ba97cfad210428444b0d6bcf6467
+last-update: 2026-11-18
+source-git-commit: cc7d3343d4a08e46235eb0c3ef42631907510a1b
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
@@ -13,15 +14,15 @@ ht-degree: 0%
 
 # 文档更新
 
-本页汇集了Adobe Commerce技术文档中有关[Experience League](https://experienceleague.adobe.com/zh-hans/docs/commerce)和[Adobe Developer](https://developer.adobe.com/commerce/docs/)的更新。 使用这些列表查找新主题、修订的指南，以及根据读者反馈所做的改进。
+本页汇集了Adobe Commerce技术文档中有关[Experience League](https://experienceleague.adobe.com/en/docs/commerce)和[Adobe Developer](https://developer.adobe.com/commerce/docs/)的更新。 使用这些列表查找新主题、修订的指南，以及根据读者反馈所做的改进。
 
-反馈驱动的更改用于处理读者提出的建议或问题，例如说明不明确、缺少详细信息或不准确的信息。 例如，反馈导致[产品推荐文档](https://experienceleague.adobe.com/zh-hans/docs/commerce/product-recommendations/boundaries-limits)中更正了对捆绑产品和分组产品的支持。
+反馈驱动的更改用于处理读者提出的建议或问题，例如说明不明确、缺少详细信息或不准确的信息。 例如，反馈导致[产品推荐文档](https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/boundaries-limits)中更正了对捆绑产品和分组产品的支持。
 
 ## 提供反馈
 
 您的反馈有助于改进文档。 您可以通过以下方式贡献内容：
 
-* 在Experience League上，使用主题底部的反馈区域对其有用性进行评级并发表评论。 有关报告问题和建议编辑的说明，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
+* 在Experience League上，使用主题底部的反馈区域对其有用性进行评级并发表评论。 有关报告问题和建议编辑的说明，请参阅[Adobe Docs参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 * 在Adobe Developer上，使用从主题链接的公共GitHub存储库来报告文档问题或建议编辑。
 
 包含主题URL并描述不清楚、缺失或不正确的内容，以便文档团队能够了解您的建议。
