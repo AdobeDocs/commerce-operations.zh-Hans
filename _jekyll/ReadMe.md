@@ -10,9 +10,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 63e52c8451f368e2d2a36096fc11c7ead62ee94e
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '704'
 ht-degree: 0%
 ---
 
@@ -41,6 +41,66 @@ bundle exec rake whatsnew_bp
 ```sh
 bundle exec rake whatsnew_bp since="jul 4"
 ```
+
+### `whatsnew_consolidated`
+
+将已发布的Commerce文档项目中的新增功能表整合到`help/_includes/automated/whatsnew/consolidated.md`中。
+
+```sh
+bundle exec rake whatsnew_consolidated
+```
+
+在[`_config.yml`](_config.yml)中配置`whatsnew_consolidated.projects`下的项目。 每个条目都需要存储库名称、项目标题和绝对HTTP网站URL：
+
+```yaml
+whatsnew_consolidated:
+  projects:
+    - repo: commerce-operations.en
+      title: Adobe Commerce operational guides
+      website: https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/operational-guides/home
+    - repo: commerce-webapi
+      title: Adobe Commerce web APIs
+      website: https://developer.adobe.com/commerce/webapi/
+    - repo: commerce.en
+      title: Adobe Commerce
+      website: https://experienceleague.adobe.com/zh-hans/docs/commerce
+```
+
+移动条目以更改节顺序。 您可以从两个平台自由地交错项目。 以`.en`结尾的存储库名称使用ExL源路径`help/_includes/templated/whats-new.md`。 所有其他存储库都使用DevSite源路径`src/pages/_includes/templated/whats-new.md`。
+
+该任务从`AdobeDocs` GitHub组织中提取公共`main`文件。 它将每个项目标题显示为纯文本标题，并在每个表中引入一个句子，该句子将项目标题链接到`website`中配置的文档主页，作为“新增功能”更新的源。 它在整个过程中使用`Description | Type | Date/source`表头。 仅对于DevSite项目，转义的`\<br/\>`标记将变为`<br/>`。 否则，正文行、重复项、链接和源行顺序将保持不变。 每个源定义自己的时间段。
+
+将忽略具有已识别的no-updates消息的项目。 如果每个项目都没有条目，则“包含”包含一条总体上的不更新消息。 配置、获取、解析或写入失败会导致任务失败，而不会替换现有的include。
+
+该任务不会计划生成或更新使用页面。
+
+重点测试套件包括加载`_jekyll` Rakefile并通过Bundler运行的Rake入口点测试。 首先安装捆绑包和`_jekyll`捆绑包：
+
+```sh
+cd _jekyll && bundle install
+```
+
+然后，从存储库根目录运行测试：
+
+```sh
+ruby _jekyll/test/consolidated_whatsnew_test.rb
+```
+
+### `whatsnew_feedback`
+
+通过筛选现有的本地`help/_includes/automated/whatsnew/consolidated.md`包含来创建`help/_includes/automated/whatsnew/consolidated-feedback.md`。
+
+```sh
+bundle exec rake whatsnew_feedback
+```
+
+任务匹配`Feedback`作为完整的逗号分隔类型值，忽略大小写和周围的空格。 已包括`Feedback, technical`等组合类型。 描述、源链接或部分类型名称中的提及不符合条件。
+
+匹配行、重复项、纯文本项目标题、源句子（如果存在）以及项目和行顺序保持不变。 省略没有匹配条目的项目。 如果没有任何匹配，输出将包含一个总体无反馈消息。
+
+输入必须已存在。 当您要刷新`bundle exec rake whatsnew_consolidated`时，请单独运行它。 反馈任务不会获取远程内容、读取项目配置或重新生成其输入。
+
+缺少输入或输入格式错误会导致任务失败，而不会替换现有的已过滤包含。 输入文件永远不会被修改，过滤的输出会自动发布。
 
 ### `get_released_versions`
 

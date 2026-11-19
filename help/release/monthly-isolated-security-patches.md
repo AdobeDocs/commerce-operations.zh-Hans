@@ -33,9 +33,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 66d7c9fd19785e791635d8e8bdf3d6ff3aa27a20
+source-git-commit: 16e16980e1b3b021aaaa8c3f1265162f87d5c951
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1570'
 ht-degree: 0%
 ---
 # 每月隔离的安全修补策略
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 1. **确认您的基线版本。**
 
-   隔离的修补程序仅针对您的产品系列的最新仅安全版本`-p`进行测试。 如果落后于该基线，请首先应用它。
+   隔离的修补程序仅针对您的产品系列的最新仅安全版本`-p`进行测试。 如果落后于该基线，请首先应用它。 有关在升级期间指定安全修补程序版本的说明，请参阅[安全修补程序升级示例](../upgrade/implementation/perform-upgrade.md#example---security-patch)。
 
 1. **按顺序应用所有缺失的修补程序。**
 

@@ -20,9 +20,9 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: 0c13885f16ac339066198329f38d5c5e2d4a06d1
+source-git-commit: 28065887dc2539b1e594792cbbff3bfff146163a
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '445'
 ht-degree: 0%
 ---
 # 使用Quality Patches Tool检查Adobe Commerce问题的修补程序
@@ -73,4 +73,4 @@ ht-degree: 0%
 ## 相关阅读
 
 * 开发人员文档中的[Quality Patches Tool发行说明](/help/tools/quality-patches-tool/release-notes.md)。
-* [如何在支持知识库中应用Adobe](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-apply-a-composer-patch-provided-by-magento)提供的编辑器修补程序。
+* [如何应用Adobe](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-apply-a-composer-patch-provided-by-magento)在&#x200B;_Adobe支持和工具指南_&#x200B;中提供的编辑器修补程序。

@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2afe4bc1ae92dcb0d682ee88ade79560bcb2c35f
+source-git-commit: 28065887dc2539b1e594792cbbff3bfff146163a
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '338'
 ht-degree: 0%
 ---
 # 关于Adobe Commerce安全修补程序版本
@@ -16,7 +16,6 @@ ht-degree: 0%
 
 每个安全补丁发行版本都基于以前的完整补丁发行版本。 它包含先前修补程序版本的质量和安全修复，以及在先前完整修补程序版本和安全修补程序版本之间创建的安全修复。
 
-有关下载和应用安全修补程序的说明，请参阅&#x200B;_Adobe Commerce知识库_&#x200B;中的[如何获取和应用安全修补程序](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-obtain-and-apply-security-patches)。
 
 {{$include /help/_includes/release-notes/extended-support-policy-note.md}}
 

@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 8e93fbc0f771dd2b4ca1a5049ef8dd15f947cd82
+source-git-commit: 73b32dcbf7f306d5b98277ff757e8e9b2eb4f0fa
 workflow-type: tm+mt
-source-wordcount: '11157'
+source-wordcount: '11161'
 ht-degree: 0%
 ---
 
@@ -975,7 +975,7 @@ ht-degree: 0%
       - [ACSD-69494：使用“is_online”的异步退款请求不会触发联机退款](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)
       - [ACSD-68537：签出性能因许多客户区段而降低](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537.md)
       - [ACSD-69311：从发票中部分退款后，贷项通知单中的计税不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311.md)
-      - [ACSD-68341：在PDP加载时进行多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
+      - [ACSD-68341：在PDP加载时出现多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
     - v1.1.78 {#v1-1-78}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
       - [ACP2E-4513：系统不会删除过期的验证码图像](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4513.md)
@@ -1099,6 +1099,8 @@ ht-degree: 0%
       - [ACP2E-4741：保存链接的产品会使用自定义库存隐藏店面中的其他产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-4741.md)
     - v1.1.85 {#v1-1-85}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.85](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/overview.md)
+    - v1.1.86 {#v1-1-86}
+      - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.86](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/overview.md)
   - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - 命令行工具引用 {#cli-reference}
   - [Adobe Commerce（内部部署）](reference/commerce-on-premises.md)
