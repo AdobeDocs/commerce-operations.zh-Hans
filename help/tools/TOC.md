@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 73b32dcbf7f306d5b98277ff757e8e9b2eb4f0fa
+source-git-commit: d8a15da2f255c5cac40003ea677e49c5d288d36d
 workflow-type: tm+mt
-source-wordcount: '11161'
+source-wordcount: '11174'
 ht-degree: 0%
 ---
 
@@ -1089,6 +1089,7 @@ ht-degree: 0%
       - [ACP2E-5263：产品CSV导出提前停止并省略产品](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5263.md)
       - [ACP2E-5009：内容暂存迁移会创建无效的更新并减慢设置:upgrade](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5009.md)
       - [ACP2E-5005：捆绑产品数量不会在管理员可协商报价中更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5005.md)
+      - [ACP2E-5029：目录价格规则更改不会同步到Live Search价格馈送](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5029.md)
       - [ACP2E-5127：保存非英语管理员区域设置的公司会将信用额度重置为零](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5127.md)
       - [ACP2E-5079：客户区段仅匹配具有全局帐户共享的第一个网站](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5079.md)
       - [ACP2E-5059：并发cron作业发送重复的订单确认电子邮件](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5059.md)
