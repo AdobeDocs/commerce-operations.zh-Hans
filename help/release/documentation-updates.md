@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # 文档更新
 
-本页列出了有关[Adobe Experience League](https://experienceleague.adobe.com/en/docs/commerce)和[Adobe Developer](https://developer.adobe.com/commerce/docs/)的Adobe Commerce技术文档更新。 使用这些列表查找新主题、修订的指南，以及根据读者反馈所做的改进。
+本页列出了有关[Adobe Experience League](https://experienceleague.adobe.com/zh-hans/docs/commerce)和[Adobe Developer](https://developer.adobe.com/commerce/docs/)的Adobe Commerce技术文档更新。 使用这些列表查找新主题、修订的指南，以及根据读者反馈所做的改进。
 
-反馈驱动的更改用于处理读者提出的建议或问题，例如说明不明确、缺少详细信息或不准确的信息。 例如，反馈导致[产品推荐文档](https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/boundaries-limits)中更正了对捆绑产品和分组产品的支持。
+反馈驱动的更改用于处理读者提出的建议或问题，例如说明不明确、缺少详细信息或不准确的信息。 例如，反馈导致[产品推荐文档](https://experienceleague.adobe.com/zh-hans/docs/commerce/product-recommendations/boundaries-limits)中更正了对捆绑产品和分组产品的支持。
 
 ## 提供反馈
 
 您的反馈有助于改进文档。 您可以通过以下方式贡献内容：
 
-* 在Adobe Experience League上，使用右侧边栏中的反馈区域或窄屏幕上的页面底部的反馈区域。 单击向上或向下缩略图按钮对主题进行评级并显示可选评论字段。 若要发表评论，请输入您的反馈并单击&#x200B;**[!UICONTROL Submit]**。 有关报表问题和建议编辑的说明，请参阅Adobe Experience League上的[Adobe文档参与者指南](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
+* 在Adobe Experience League上，使用右侧边栏中的反馈区域或窄屏幕上的页面底部的反馈区域。 单击向上或向下缩略图按钮对主题进行评级并显示可选评论字段。 若要发表评论，请输入您的反馈并单击&#x200B;**[!UICONTROL Submit]**。 有关报表问题和建议编辑的说明，请参阅Adobe Experience League上的[Adobe文档参与者指南](https://experienceleague.adobe.com/zh-hans/docs/contributor/contributor-guide/introduction)。
 * 在Adobe Developer上，使用从主题链接的公共GitHub存储库来报告文档问题或建议编辑。 有关说明，请参阅Adobe Developer[&#128279;](https://developer.adobe.com/commerce/contributor/guides/doc-contributions/)上的文档投稿。
 
 包含主题URL并描述不清楚、缺失或不正确的内容，以便文档团队能够了解您的建议。
