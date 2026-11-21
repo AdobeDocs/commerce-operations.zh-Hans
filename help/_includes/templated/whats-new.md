@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9e7338e0be69b83b92210b6299d92cc688681f8d
+source-git-commit: 7096b5f4fa4f40ac33aab5c5cf2bd09c1d25539c
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2293'
 ht-degree: 0%
 ---
 # 新增功能模板
@@ -12,6 +12,10 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 更新了[文档反馈指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/documentation-updates#provide-feedback)，以解释在何处查找Experience League在宽屏幕和窄屏幕上的反馈控件、如何发表评论，以及在何处查找Experience League和Adobe Developer的贡献说明。 | 反馈，技术 | [2026年11月20日](https://github.com/AdobeDocs/commerce-operations.en/commit/def568dccb1ef329d82f8e7ea82c2611fbcc36f1) |
+| 添加了[文档更新](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/documentation-updates)，以汇总Experience League和Adobe Developer的更新，并提供有关提交文档反馈的仅反馈视图和指导。 | 新主题 | [2026年11月18日](https://github.com/AdobeDocs/commerce-operations.en/commit/bf4c4051a3aafc67c71c8fc6d87f7862d1905204) |
+| 添加了[Overview： Quality Patches Tool (QPT) v1.1.86](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/overview)。 | 新主题qpt | [2026年11月18日](https://github.com/AdobeDocs/commerce-operations.en/commit/f9f1054293854bd3423eed5166527640360afc0f) |
+| 添加了[Overview： Quality Patches Tool (QPT) v1.1.85](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/overview)。 | 新主题qpt | [2026年11月17日](https://github.com/AdobeDocs/commerce-operations.en/commit/01b82c10845afcd16db6c22563d65df24f48d340) |
 | 已发布1.1.86 Quality Patches Tool (QPT)包版本的[发行说明](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=zh-Hans)。 | Qpt | [2026年11月13日](https://github.com/AdobeDocs/commerce-operations.en/commit/6a84f2ebcbbf8041bbe783b53eab5500a4b0acc2) |
 | 添加了对[ACP2E-5041的QPT 1.1.84修复的详细说明：保存过时的产品表单会在计划更新](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5041)后使特价过期。 | 新主题qpt | [2026年11月11日](https://github.com/AdobeDocs/commerce-operations.en/commit/d2b8ba35c866be25a0fbbebceeb9a7c68ba37293) |
 | 添加了对[ACP2E-5034的QPT 1.1.84修复的详细说明： B2B项目折扣不会减少报价单](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5034)中的动态价格捆绑包小计。 | 新主题qpt | [2026年11月11日](https://github.com/AdobeDocs/commerce-operations.en/commit/974c6238c0e0008eaa36851449de97218bfca949) |
@@ -51,5 +55,3 @@ ht-degree: 0%
 | 添加了有关[AC-12854的QPT 1.1.83修复程序的详细说明：管理员重新排序使用带有–1后缀](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854)的原始订单编号。 | 新主题qpt | [2026年10月8日](https://github.com/AdobeDocs/commerce-operations.en/commit/087b7f48c2864837d394c6a9a72f9b30d6db3d90) |
 | 添加了[Overview： Quality Patches Tool (QPT) v1.1.84](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/overview)。 | 新主题qpt | [2026年10月5日](https://github.com/AdobeDocs/commerce-operations.en/commit/7550eaff7dfabecaf2d5ace52e4f28d8da9ff45a) |
 | 添加了[Overview： Quality Patches Tool (QPT) v1.1.83](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview)。 | 新主题qpt | [2026年10月2日](https://github.com/AdobeDocs/commerce-operations.en/commit/266c8529352dac198568dca4676aebd88ce50fc1) |
-| 添加了[每月隔离的安全修补程序策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/monthly-isolated-security-patches)，说明了Adobe Commerce如何在修补程序星期二的完整安全修补程序发行版本之间提供针对性的独立CVE修补程序，以及如何应用和验证它们。 | 新主题 | [2026年9月18日](https://github.com/AdobeDocs/commerce-operations.en/commit/681f7f0589aed8787aaf165d36ac00f670d751ce) |
-| 更正了[Redis/Valkey服务配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)指南，以阐明`VALKEY_BACKEND`和`REDIS_BACKEND`部署变量不能确定Adobe Commerce实际使用的缓存服务，并且`VALKEY_USE_SLAVE_CONNECTION`/`REDIS_USE_SLAVE_CONNECTION`必须与环境中实际可用的服务相匹配。 | 技术 | [2026年9月15日](https://github.com/AdobeDocs/commerce-operations.en/commit/49781ad38a266fffa1be080b5a093327a28cf6a6) |
