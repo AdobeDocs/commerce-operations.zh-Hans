@@ -4,9 +4,9 @@ description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.8
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: f7162ccff3f6011af51e0b32eec4bf405633050b
+source-git-commit: 86872648c372158143f5bbe707ba7a3f15552bc3
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.86
@@ -20,7 +20,7 @@ QPT v1.1.86包含以下修补程序：
 1. **[ACP2E-3094](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-3094.md)**：修复了查看或编辑具有许多权限的类别的&#x200B;**[!UICONTROL Category Permissions]**&#x200B;时可能导致浏览器无响应的问题。
 1. **[ACP2E-5050](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5050.md)**：修复了在管理员中查看或保存RMA时未在&#x200B;**[!UICONTROL Action Logs]**&#x200B;报表中显示RMA编号的问题。
 1. **ACP2E-5057**：修复了当&#x200B;**[!UICONTROL Catalog Price Scope]**&#x200B;设置为&#x200B;**[!UICONTROL Website]**&#x200B;时，捆绑产品的[!DNL GraphQL]查询返回全局捆绑选项价格而不是网站特定价格的问题。
-1. **ACP2E-5061**：修复了类别促销规则无法将`AND`条件与匹配多个值中任意值的条件结合的问题。
+1. **[ACP2E-5061](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5061.md)**：修复了类别促销规则无法将AND条件与匹配多个值中任意值的条件结合的问题。
 1. **ACP2E-5071**：修复了在购物者的购物车已包含全部可用量时，产品页面上不始终显示库存不可用消息的问题。
 1. **ACP2E-5094**：修复了在设置`MAGENTO_DC_*`环境变量时页面加载明显变慢的问题。
 1. **ACP2E-5118**：修复了禁用&#x200B;**[!UICONTROL Translations]**&#x200B;缓存时[!DNL Page Builder]预览未呈现的问题。
