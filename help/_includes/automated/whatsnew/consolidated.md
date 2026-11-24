@@ -1,7 +1,7 @@
 ---
-source-git-commit: 63e52c8451f368e2d2a36096fc11c7ead62ee94e
+source-git-commit: 0a511094b4520c95e47992f33c1add8f990dd80b
 workflow-type: tm+mt
-source-wordcount: '6511'
+source-wordcount: '7445'
 ht-degree: 0%
 ---
 # 整合的新增功能
@@ -14,6 +14,13 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 更新了&#x200B;_Adobe Commerce as a Cloud Service指南_，以通知客户现在已将2026年11月18日之后加入的客户项目配置为使用具有可组合目录数据模型的促销服务。 | 技术 | [2026年11月23日](https://github.com/AdobeDocs/commerce.en/commit/a3c7e121397281fae0b8e9fd05697d71243eeb9d) |
+| 添加了Adobe Commerce as a Cloud Service的生产[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/release-notes)。 | 发行说明 | [2026年11月20日](https://github.com/AdobeDocs/commerce.en/commit/740feb6b01d0acc7c99fcbef5d91029d1a3cb15a) |
+| 更新了[AEM Assets集成设置指南](https://experienceleague.adobe.com/zh-hans/docs/commerce/aem-assets-integration/get-started/setup-synchronization)，提供了更明确的配置说明、SKU匹配指南和端到端验证步骤。 阐明了[产品可视化权利边界](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/boundaries-limits#product-visuals-limits)，包括作者API访问、API驱动的元数据集成，以及受支持的批量操作和基于API的自动化之间的区别。 | 重大更新 | [2026年11月20日](https://github.com/AdobeDocs/commerce.en/commit/5e9c42e5c93ac81604aa38bf3e55c5df729650a0) |
+| 您现在可以[禁止符合指定条件的搜索查询](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/rules/add)的店面结果，而无需配置产品级排名操作。 当查询匹配时，店面会显示一个搜索结果页面，其中没有产品。 | 重大更新，技术 | [2026年11月18日](https://github.com/AdobeDocs/commerce.en/commit/c3d0ecebd6c2bcad189435bcddb7765c487e39ab) |
+| 添加了[限制和边界](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/boundaries-limits)主题，其中列出了Adobe Commerce as a Cloud Service的许可证限制和系统边界。 | 新主题 | [2026年11月18日](https://github.com/AdobeDocs/commerce.en/commit/e0897ddc675f0281bec971e505585683b7ac7ed8) |
+| 添加了[角色疑难解答](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/user-management#troubleshooting-roles)信息，以帮助用户在Adobe Commerce as a Cloud Service中访问“管理员”时出现问题。 | 反馈 | [2026年11月17日](https://github.com/AdobeDocs/commerce.en/commit/b019c35fcb86c4c2b346c368234657981ae37a1e) |
+| 添加了[SaaS Data Export Extension版本103.6.1](https://experienceleague.adobe.com/zh-hans/docs/commerce/saas-data-export/release-notes)的发行说明。 | 发行说明 | [2026年11月16日](https://github.com/AdobeDocs/commerce.en/commit/3e18a278391e4352c7482557fa76f8bb9b3451c7) |
 | 更新了[Facet限制和边界](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/boundaries-limits)，以反映通过支持请求可以增加配置的最大Facet数。 | 技术 | [2026年11月16日](https://github.com/AdobeDocs/commerce.en/commit/d21c7401d0111c3e6b8dd1d65b26d4b480008011) |
 | 在2027年添加了[代理商务：商业领袖的五个优先级](https://experienceleague.adobe.com/zh-hans/docs/commerce/information-center/insights-and-guidance/five-priorities-commerce-leaders-2027)文章，通过专注于产品数据准备情况、可发现性、代理就绪的商业基础架构、测量和实验，帮助商业领袖准备人工智能辅助购物。 | 新主题 | [2026年11月16日](https://github.com/AdobeDocs/commerce.en/commit/b16b6868cabf8bfe6682c4e512c192713a408cfa) |
 | 为Adobe Commerce as a Cloud Service添加了沙盒[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/release-notes)。 | 发行说明 | [2026年11月13日](https://github.com/AdobeDocs/commerce.en/commit/c109643e7791468bfae958025144c968e8595f95) |
@@ -44,8 +51,6 @@ ht-degree: 0%
 | 为Adobe Commerce as a Cloud Service添加了沙盒[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/release-notes)。 | 重大更新 | [2026年9月29日](https://github.com/AdobeDocs/commerce.en/commit/b1524825387c1d5fe061bdadf76f27b2f614879d) |
 | 添加了在同步期间保留[自定义AEM映像角色](https://experienceleague.adobe.com/zh-hans/docs/commerce/aem-assets-integration/synchronize/custom-match)的功能。 此外，还为Adobe Commerce添加了以下功能：[异步检查AEM Assets集成扩展更新](https://experienceleague.adobe.com/zh-hans/docs/commerce/aem-assets-integration/get-started/check-for-updates)。 | 重大更新 | [2026年9月28日](https://github.com/AdobeDocs/commerce.en/commit/44272d96ca697d54cbbfbb9ed5a045da94652d75) |
 | 修复了[PaaS](https://experienceleague.adobe.com/zh-hans/docs/commerce/product-recommendations/boundaries-limits)和[Commerce Optimizer](https://experienceleague.adobe.com/zh-hans/docs/commerce/optimizer/merchandising/recommendations/create)的产品推荐文档，该文档错误地指出不支持捆绑的产品和分组的产品。 | 反馈 | [2026年9月25日](https://github.com/AdobeDocs/commerce.en/commit/55b17947196acfa459934e4ee373469b84e16ea1) |
-| 更新了[迁移概述](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/migration/overview)，以说明Commerce Developer Agent如何协助迁移过程。 | 重大更新 | [2026年9月24日](https://github.com/AdobeDocs/commerce.en/commit/739eabe6f43412610862ab00516687ad5aeeac53) |
-| 添加了Adobe Commerce as a Cloud Service的生产[发行说明](https://experienceleague.adobe.com/zh-hans/docs/commerce/cloud-service/release-notes)。 | 重大更新 | [2026年9月23日](https://github.com/AdobeDocs/commerce.en/commit/d879d372a199c24d266abdfb79d1ff0af164d75b) |
 
 ## Adobe Commerce商户指南
 
@@ -53,6 +58,8 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 在&#x200B;_具有可组合目录数据模型(CCDM) Commerce管理指南的“促销服务”中添加了搜索禁止显示规则的文档_。<br/> — 在促销规则概述中增加了[搜索禁止显示规则](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/merchandising-with-ccdm/merchandising/rules/overview)，包括支持的查询条件以及禁止显示如何与其他促销功能交互。<br/> — 在[创建和管理促销规则](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/merchandising-with-ccdm/merchandising/rules/add)中添加了创建、计划、编辑、启用和禁用搜索禁止显示规则的步骤。<br/> — 在[促销规则最佳实践](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/merchandising-with-ccdm/merchandising/rules/best-practice)中添加了搜索禁止显示的使用案例和最佳实践。 | 技术 | [2026年11月20日](https://github.com/AdobeDocs/commerce-admin.en/commit/91364e6ae9a7b01bba983483f493a53648cf7f45) |
+| 已更新[产品审核](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/marketing/merchandising/product-reviews/product-reviews)以添加Adobe Commerce as a Cloud Service的产品审核配置信息。 | 重大更新 | [2026年11月20日](https://github.com/AdobeDocs/commerce-admin.en/commit/4f318e6901379b7afec8c1cca8f98a5f90e20e9d) |
 | 添加了有关Adobe Commerce as a Cloud Service的可组合目录数据模型(CCDM)的促销服务的文档：<br/> — 添加了[促销服务概述](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/merchandising-with-ccdm/overview)和[按角色列出的促销服务任务](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/merchandising-with-ccdm/get-started-merchandising-ccdm)参考。<br/> — 添加了[目录视图](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/merchandising-with-ccdm/setup/catalog-view)和[价格手册](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/merchandising-with-ccdm/setup/pricebooks)主题。<br/> — 添加了将CCDM用户定向到促销服务的搜索、推荐、目录同步和连接器主题的注释。 | 重大更新，新主题 | [2026年11月11日](https://github.com/AdobeDocs/commerce-admin.en/commit/f31ba4b981fb70f10cb0e1438dbd445550e6253b) |
 | 更新了[目录扩充](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/catalog/products/catalog-enrichment)以包含发行说明、新的菜单导航和安装步骤。 | 发行说明 | [2026年11月2日](https://github.com/AdobeDocs/commerce-admin.en/commit/6809e8121b81b0565ce9767e3fcf444ad3342f8f) |
 | 添加了[存储信用角色资源](https://experienceleague.adobe.com/zh-hans/docs/commerce-admin/customers/customer-accounts/store-credit/store-credit-using#store-credit-role-resources)，以控制哪些管理员用户可以管理存储信用。 | 重大更新 | [2026年10月29日](https://github.com/AdobeDocs/commerce-admin.en/commit/72b270ab3fd062fab4268bd4667d61ccab4d8676) |
@@ -70,6 +77,10 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 更新了[文档反馈指南](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/documentation-updates#provide-feedback)，以解释在何处查找Experience League在宽屏幕和窄屏幕上的反馈控件、如何发表评论，以及在何处查找Experience League和Adobe Developer的贡献说明。 | 反馈，技术 | [2026年11月20日](https://github.com/AdobeDocs/commerce-operations.en/commit/def568dccb1ef329d82f8e7ea82c2611fbcc36f1) |
+| 添加了[文档更新](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/documentation-updates)，以汇总Experience League和Adobe Developer的更新，并提供有关提交文档反馈的仅反馈视图和指导。 | 新主题 | [2026年11月18日](https://github.com/AdobeDocs/commerce-operations.en/commit/bf4c4051a3aafc67c71c8fc6d87f7862d1905204) |
+| 添加了[Overview： Quality Patches Tool (QPT) v1.1.86](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/overview)。 | 新主题qpt | [2026年11月18日](https://github.com/AdobeDocs/commerce-operations.en/commit/f9f1054293854bd3423eed5166527640360afc0f) |
+| 添加了[Overview： Quality Patches Tool (QPT) v1.1.85](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/overview)。 | 新主题qpt | [2026年11月17日](https://github.com/AdobeDocs/commerce-operations.en/commit/01b82c10845afcd16db6c22563d65df24f48d340) |
 | 已发布1.1.86 Quality Patches Tool (QPT)包版本的[发行说明](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=zh-Hans)。 | Qpt | [2026年11月13日](https://github.com/AdobeDocs/commerce-operations.en/commit/6a84f2ebcbbf8041bbe783b53eab5500a4b0acc2) |
 | 添加了对[ACP2E-5041的QPT 1.1.84修复的详细说明：保存过时的产品表单会在计划更新](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5041)后使特价过期。 | 新主题qpt | [2026年11月11日](https://github.com/AdobeDocs/commerce-operations.en/commit/d2b8ba35c866be25a0fbbebceeb9a7c68ba37293) |
 | 添加了对[ACP2E-5034的QPT 1.1.84修复的详细说明： B2B项目折扣不会减少报价单](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/acp2e-5034)中的动态价格捆绑包小计。 | 新主题qpt | [2026年11月11日](https://github.com/AdobeDocs/commerce-operations.en/commit/974c6238c0e0008eaa36851449de97218bfca949) |
@@ -109,8 +120,6 @@ ht-degree: 0%
 | 添加了有关[AC-12854的QPT 1.1.83修复程序的详细说明：管理员重新排序使用带有–1后缀](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/ac-12854)的原始订单编号。 | 新主题qpt | [2026年10月8日](https://github.com/AdobeDocs/commerce-operations.en/commit/087b7f48c2864837d394c6a9a72f9b30d6db3d90) |
 | 添加了[Overview： Quality Patches Tool (QPT) v1.1.84](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-84/overview)。 | 新主题qpt | [2026年10月5日](https://github.com/AdobeDocs/commerce-operations.en/commit/7550eaff7dfabecaf2d5ace52e4f28d8da9ff45a) |
 | 添加了[Overview： Quality Patches Tool (QPT) v1.1.83](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-83/overview)。 | 新主题qpt | [2026年10月2日](https://github.com/AdobeDocs/commerce-operations.en/commit/266c8529352dac198568dca4676aebd88ce50fc1) |
-| 添加了[每月隔离的安全修补程序策略](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/release/planning/monthly-isolated-security-patches)，说明了Adobe Commerce如何在修补程序星期二的完整安全修补程序发行版本之间提供针对性的独立CVE修补程序，以及如何应用和验证它们。 | 新主题 | [2026年9月18日](https://github.com/AdobeDocs/commerce-operations.en/commit/681f7f0589aed8787aaf165d36ac00f670d751ce) |
-| 更正了[Redis/Valkey服务配置](https://experienceleague.adobe.com/zh-hans/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)指南，以阐明`VALKEY_BACKEND`和`REDIS_BACKEND`部署变量不能确定Adobe Commerce实际使用的缓存服务，并且`VALKEY_USE_SLAVE_CONNECTION`/`REDIS_USE_SLAVE_CONNECTION`必须与环境中实际可用的服务相匹配。 | 技术 | [2026年9月15日](https://github.com/AdobeDocs/commerce-operations.en/commit/49781ad38a266fffa1be080b5a093327a28cf6a6) |
 
 ## 云基础架构上的Commerce
 
@@ -118,7 +127,10 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 更新了以下发行文档：<br/>- [适用于Commerce的Cloud Docker &#x200B;](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-docker#latest)：添加了v1.4.11发行说明，其中涵盖了nginx v1.30.7、将PHP 8.1 FPM基础映像更新到PHP 8.1.34，以及跨云工具进行Java安全强化。<br/>- [Cloud Tools Suite](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite)：已将Cloud Docker版本和源标记链接更新到v1.4.11。 | 发行说明 | [2026年11月20日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d8b1e9b099c1c42094dc223248485b94d1c6a260) |
+| 更新了Commerce发行说明的[云修补程序](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)，以包含[Adobe Commerce安全更新APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html)中引用的安全改进。 | 发行说明 | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/287bd80401c6f3a3f0a0adc6d9d9019795207a56) |
 | 在ECE-Tools v2002.2.15版本之后更新了[CLI引用](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)和[错误消息](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)。 | 技术 | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5) |
+| 更新了[ece-tools](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/ece-tools-package) 2002.2.15和[Cloud Docker](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-docker) 1.4.10：<br/> — 为OpenSearch添加了生命周期结束(EOL)条目。<br/> — 记录了ActiveMQ Artemis、OpenSearch、RabbitMQ、MariaDB和Valkey的Magento 2.4.10功能测试涵盖范围。<br/> — 更新了[Cloud Tools Suite Suite的版本表](https://experienceleague.adobe.com/zh-hans/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite)以反映新的功能ece-tools和Cloud Docker版本。 | 发行说明 | [2026年10月8日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ea6667f993821b605931d4be0cdd89cd3c8d0d30) |
 
 ## Adobe Commerce可扩展性
 
@@ -126,11 +138,13 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
+| 已发布Adobe Commerce [webhooks版本1.22.0](https://developer.adobe.com/commerce/extensibility/webhooks/release-notes)。 | 重大更新，发行说明 | [2026年11月19日](https://github.com/AdobeDocs/commerce-extensibility/pull/640) |
+| 对[Admin UI SDK](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/)的常规改进。 | 重大更新，反馈 | [2026年11月18日](https://github.com/AdobeDocs/commerce-extensibility/pull/487) |
+| 记录了`commerce-app-api-mesh` [应用程序管理人工智能技能](https://developer.adobe.com/commerce/extensibility/app-management/working-with-ai)，该技能将应用程序的运行时操作集成到Adobe Commerce GraphQL架构中。 | 技术 | [2026年11月18日](https://github.com/AdobeDocs/commerce-extensibility/pull/605) |
 | 管理UI SDK 5.2.0为[返回视图按钮](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/rma/view-button)和[贷项通知单自定义属性网格列](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/credit-memo/custom-attribute-grid-columns)添加了V2扩展点，为“新返回”表单添加了[原生UI表单替换](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/native-ui#supported-targets)，并添加了[失败请求保留](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/configuration#failed-request-retention)设置。 有关详细信息，请参阅[发行说明](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes)。 | 新主题、发行说明 | [2026年11月16日](https://github.com/AdobeDocs/commerce-extensibility/pull/626) |
 | 已发布适用于Adobe Commerce 1.24.0[&#128279;](https://developer.adobe.com/commerce/extensibility/events/release-notes)的[Adobe Commerce Webhooks 1.21.0](https://developer.adobe.com/commerce/extensibility/webhooks/release-notes)和Adobe I/O Events。 | 重大更新，发行说明 | [2026年11月12日](https://github.com/AdobeDocs/commerce-extensibility/pull/629) |
 | 添加了对以下[V2扩展点](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/)的支持：发票和信用视图按钮、新闻稿订阅者网格列以及原生UI表单替换。 | 重大更新、新主题、发行说明 | [2026年11月3日](https://github.com/AdobeDocs/commerce-extensibility/pull/617) |
 | 更新了[应用程序提交指南](https://developer.adobe.com/commerce/extensibility/app-development/app-submission-guidelines)以包含Adobe Commerce Optimizer环境。 | 技术 | [2026年9月22日](https://github.com/AdobeDocs/commerce-extensibility/pull/610) |
-| 修订了扩展性[登陆页面](https://developer.adobe.com/commerce/extensibility)以包含今天的开发工作流。 | 重大更新 | [2026年9月21日](https://github.com/AdobeDocs/commerce-extensibility/pull/607) |
 
 ## Adobe Commerce Web API
 
@@ -157,6 +171,15 @@ ht-degree: 0%
 | 添加了对具有[publicRequisitionList](https://developer.adobe.com/commerce/webapi/graphql/schema/b2b/requisition-list/queries/public-requisition-list)查询、[addPublicRequisitionListItemsToCart](https://developer.adobe.com/commerce/webapi/graphql/schema/b2b/requisition-list/mutations/add-public-requisition-list-items-to-cart)突变和[sharePublicRequisitionList](https://developer.adobe.com/commerce/webapi/graphql/schema/b2b/requisition-list/mutations/share-public-requisition-list)突变的公开申请列表的支持。 | 重大更新，新主题 | [2026年9月29日](https://github.com/AdobeDocs/commerce-webapi/pull/617) |
 | 通过店面[requestReturn](https://developer.adobe.com/commerce/webapi/graphql/schema/orders/mutations/request-return#request-a-return-with-an-image-attachment) GraphQL突变提交退货请求时，客户现在可以上传文件和图像。 | 重大更新 | [2026年9月23日](https://github.com/AdobeDocs/commerce-webapi/pull/613) |
 | 已更新Adobe Commerce as a Cloud Service的[REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)和[GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)架构。 | 重大更新 | [2026年9月23日](https://github.com/AdobeDocs/commerce-webapi/pull/616) |
+
+## Adobe Commerce促销服务
+
+这些更新来自[Adobe Commerce促销服务](https://developer.adobe.com/commerce/services/)主页的&#x200B;*新增功能*&#x200B;部分。
+
+| 描述 | 类型 | 日期/来源 |
+| --- | --- | --- |
+| [引入架构](https://developer.adobe.com/commerce/services/reference/rest/#tag/ProductMetadata)中的产品元数据`visibleIn`字段现在支持`MISC`角色。 使用此角色可保持属性可用于后端和集成，而无需在产品详细信息页面或产品列表页面上显示属性。 | 技术 | [2026年11月20日](https://github.com/AdobeDocs/commerce-services/pull/373) |
+| 向Adobe Commerce Optimizer [数据摄取REST API引用](https://developer.adobe.com/commerce/services/reference/rest/)添加了GET操作，用于检索产品、类别、属性元数据、产品层、价格手册和价格。 为架构添加了视频、sortOrder和OBJECT数据类型。 | 重大更新 | [2026年11月17日](https://github.com/AdobeDocs/commerce-services/pull/372) |
 
 ## 适用于Adobe Developer App Builder的API Mesh
 
