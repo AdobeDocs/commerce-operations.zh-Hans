@@ -127,7 +127,7 @@ ht-degree: 0%
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
-| 更新了以下发行文档：<br/>- [适用于Commerce的Cloud Docker ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-docker#latest)：添加了v1.4.11发行说明，其中涵盖了nginx v1.30.7、将PHP 8.1 FPM基础映像更新到PHP 8.1.34，以及跨云工具进行Java安全强化。<br/>- [Cloud Tools Suite](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite)：已将Cloud Docker版本和源标记链接更新到v1.4.11。 | 发行说明 | [2026年11月20日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d8b1e9b099c1c42094dc223248485b94d1c6a260) |
+| 更新了以下发行文档：<br/>- [适用于Commerce的Cloud Docker &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-docker#latest)：添加了v1.4.11发行说明，其中涵盖了nginx v1.30.7、将PHP 8.1 FPM基础映像更新到PHP 8.1.34，以及跨云工具进行Java安全强化。<br/>- [Cloud Tools Suite](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite)：已将Cloud Docker版本和源标记链接更新到v1.4.11。 | 发行说明 | [2026年11月20日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d8b1e9b099c1c42094dc223248485b94d1c6a260) |
 | 更新了Commerce发行说明的[云修补程序](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches)，以包含[Adobe Commerce安全更新APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html)中引用的安全改进。 | 发行说明 | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/287bd80401c6f3a3f0a0adc6d9d9019795207a56) |
 | 在ECE-Tools v2002.2.15版本之后更新了[CLI引用](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)和[错误消息](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)。 | 技术 | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5) |
 | 更新了[ece-tools](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/ece-tools-package) 2002.2.15和[Cloud Docker](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-docker) 1.4.10：<br/> — 为OpenSearch添加了生命周期结束(EOL)条目。<br/> — 记录了ActiveMQ Artemis、OpenSearch、RabbitMQ、MariaDB和Valkey的Magento 2.4.10功能测试涵盖范围。<br/> — 更新了[Cloud Tools Suite Suite的版本表](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite)以反映新的功能ece-tools和Cloud Docker版本。 | 发行说明 | [2026年10月8日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ea6667f993821b605931d4be0cdd89cd3c8d0d30) |
@@ -142,7 +142,7 @@ ht-degree: 0%
 | 对[Admin UI SDK](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/)的常规改进。 | 重大更新，反馈 | [2026年11月18日](https://github.com/AdobeDocs/commerce-extensibility/pull/487) |
 | 记录了`commerce-app-api-mesh` [应用程序管理人工智能技能](https://developer.adobe.com/commerce/extensibility/app-management/working-with-ai)，该技能将应用程序的运行时操作集成到Adobe Commerce GraphQL架构中。 | 技术 | [2026年11月18日](https://github.com/AdobeDocs/commerce-extensibility/pull/605) |
 | 管理UI SDK 5.2.0为[返回视图按钮](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/rma/view-button)和[贷项通知单自定义属性网格列](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/credit-memo/custom-attribute-grid-columns)添加了V2扩展点，为“新返回”表单添加了[原生UI表单替换](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/native-ui#supported-targets)，并添加了[失败请求保留](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/configuration#failed-request-retention)设置。 有关详细信息，请参阅[发行说明](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes)。 | 新主题、发行说明 | [2026年11月16日](https://github.com/AdobeDocs/commerce-extensibility/pull/626) |
-| 已发布适用于Adobe Commerce 1.24.0](https://developer.adobe.com/commerce/extensibility/events/release-notes)的[Adobe Commerce Webhooks 1.21.0](https://developer.adobe.com/commerce/extensibility/webhooks/release-notes)和[Adobe I/O Events。 | 重大更新，发行说明 | [2026年11月12日](https://github.com/AdobeDocs/commerce-extensibility/pull/629) |
+| 已发布适用于Adobe Commerce 1.24.0[&#128279;](https://developer.adobe.com/commerce/extensibility/events/release-notes)的[Adobe Commerce Webhooks 1.21.0](https://developer.adobe.com/commerce/extensibility/webhooks/release-notes)和Adobe I/O Events。 | 重大更新，发行说明 | [2026年11月12日](https://github.com/AdobeDocs/commerce-extensibility/pull/629) |
 | 添加了对以下[V2扩展点](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/extension-points/v2/)的支持：发票和信用视图按钮、新闻稿订阅者网格列以及原生UI表单替换。 | 重大更新、新主题、发行说明 | [2026年11月3日](https://github.com/AdobeDocs/commerce-extensibility/pull/617) |
 | 更新了[应用程序提交指南](https://developer.adobe.com/commerce/extensibility/app-development/app-submission-guidelines)以包含Adobe Commerce Optimizer环境。 | 技术 | [2026年9月22日](https://github.com/AdobeDocs/commerce-extensibility/pull/610) |
 
@@ -183,7 +183,7 @@ ht-degree: 0%
 
 ## 适用于Adobe Developer App Builder的API Mesh
 
-这些更新来自Adobe Developer App Builder的[API Mesh ](https://developer.adobe.com/graphql-mesh-gateway/)主页的&#x200B;*新增功能*&#x200B;部分。
+这些更新来自Adobe Developer App Builder的[API Mesh &#x200B;](https://developer.adobe.com/graphql-mesh-gateway/)主页的&#x200B;*新增功能*&#x200B;部分。
 
 | 描述 | 类型 | 日期/来源 |
 | --- | --- | --- |
