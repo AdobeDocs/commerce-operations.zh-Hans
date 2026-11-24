@@ -13,7 +13,7 @@ role_v2:
 level_v2:
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
     internal-label: Experienced
-source-git-commit: bce83371e9d510552b871005d591981b1d099f80
+source-git-commit: 0266f36925944eeb0e05b1d778b9a32560e16d7f
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 1%
@@ -96,7 +96,7 @@ ht-degree: 1%
        <td><strong>店面体验</strong>
         <p>了解店面技术的最新改进，您可以使用这些改进为客户打造独特的体验。</p>
           <ul>
-            <li><a href="https://experienceleague.adobe.com/en/tools/commerce-storefront/releases/”">Adobe Commerce店面</a></li>
+            <li><a href="https://experienceleague.adobe.com/en/tools/commerce-storefront/releases/">Adobe Commerce店面</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html?lang=zh-Hans">页面生成器</a></li>
             <li><a href="https://github.com/magento/pwa-studio/releases/latest">PWA Studio</a></li>
           </ul>
