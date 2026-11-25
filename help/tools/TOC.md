@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 50215e62371db397c96f9dbd2ff2b9a26ef3a131
+source-git-commit: 86872648c372158143f5bbe707ba7a3f15552bc3
 workflow-type: tm+mt
-source-wordcount: '11205'
+source-wordcount: '11234'
 ht-degree: 0%
 ---
 
@@ -1102,6 +1102,8 @@ ht-degree: 0%
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.85](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/overview.md)
     - v1.1.86 {#v1-1-86}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.86](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/overview.md)
+      - [ACP2E-5061：类别促销规则无法将AND条件与匹配多个值的条件组合在一起](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5061.md)
+      - [ACP2E-5046：在管理员中创建订单时刷新页面会多次添加相同的SKU](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5046.md)
       - [ACP2E-3094：查看或编辑具有许多权限的类别的类别权限导致浏览器无响应](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-3094.md)
       - [ACP2E-5050：在“管理员”中查看或保存RMA时，不会在操作日志报告中显示RMA编号](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5050.md)
   - [使用Quality Patches Tool检查Adobe Commerce问题的修补程序](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
