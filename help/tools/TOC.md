@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 8070923142c6b28c5e34d47200d2f8995aae5dcb
+source-git-commit: 7becdaa615e1ee4cd31454e65a6076de31717fd2
 workflow-type: tm+mt
-source-wordcount: '11245'
+source-wordcount: '11262'
 ht-degree: 0%
 ---
 
@@ -1102,6 +1102,7 @@ ht-degree: 0%
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.85](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/overview.md)
     - v1.1.86 {#v1-1-86}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.86](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/overview.md)
+      - [ACP2E-5134：从共享目录中删除捆绑产品会留下购物车中的捆绑产品并导致结账时出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5134.md)
       - [ACP2E-5118：禁用翻译缓存时，不呈现页面生成器预览](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5118.md)
       - [ACP2E-5061：类别促销规则无法将AND条件与匹配多个值的条件组合在一起](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5061.md)
       - [ACP2E-5046：在管理员中创建订单时刷新页面会多次添加相同的SKU](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5046.md)
