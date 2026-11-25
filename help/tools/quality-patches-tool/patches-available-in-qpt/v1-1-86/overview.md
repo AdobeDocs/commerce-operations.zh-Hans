@@ -4,9 +4,9 @@ description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.8
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 8070923142c6b28c5e34d47200d2f8995aae5dcb
+source-git-commit: 7becdaa615e1ee4cd31454e65a6076de31717fd2
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '631'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.86
@@ -23,8 +23,8 @@ QPT v1.1.86包含以下修补程序：
 1. **[ACP2E-5061](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5061.md)**：修复了类别促销规则无法将AND条件与匹配多个值中任意值的条件结合的问题。
 1. **ACP2E-5071**：修复了在购物者的购物车已包含全部可用量时，产品页面上不始终显示库存不可用消息的问题。
 1. **ACP2E-5094**：修复了在设置`MAGENTO_DC_*`环境变量时页面加载明显变慢的问题。
+1. **[ACP2E-5134](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5134.md)**：修复了以下问题：从公司的共享目录中删除捆绑包中包含的产品会使该捆绑包产品留在购物车中，并在购物车和结帐期间导致错误。
 1. **[ACP2E-5118](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5118.md)**：修复了禁用&#x200B;**[!UICONTROL Translations]**&#x200B;缓存时[!DNL Page Builder]预览未呈现的问题。
-1. **ACP2E-5134**：修复了从公司的[!UICONTROL Shared Catalog]中删除捆绑包的组件产品后，该捆绑包产品会留在购物车中，从而导致购物车和结帐期间出现错误的问题。
 1. **ACP2E-5146**：修复了当其他网站上的客户与管理员用户具有相同的ID时，仅限特定网站的管理员用户无法删除客户的问题。
 1. **ACP2E-5176**：修复了通过[!DNL Google Tag Manager]发送给[!DNL Google Analytics 4]的电子商务事件使用[!DNL Universal Analytics]格式并忽略多个签出事件的问题。
 1. **ACP2E-5185**：修复了在类别树中移动类别时显示错误`There was a category move error`的问题，或者当存储有多个URL重写时，需要几分钟才能完成移动的问题。
