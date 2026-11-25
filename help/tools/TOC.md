@@ -4,9 +4,9 @@ user-guide-description: 了解可与Adobe Commerce一起使用的各种工具、
 feature: Configuration
 nduge: true
 color: red
-source-git-commit: 86872648c372158143f5bbe707ba7a3f15552bc3
+source-git-commit: 8070923142c6b28c5e34d47200d2f8995aae5dcb
 workflow-type: tm+mt
-source-wordcount: '11234'
+source-wordcount: '11245'
 ht-degree: 0%
 ---
 
@@ -764,7 +764,7 @@ ht-degree: 0%
     - v1.1.59 {#v1-1-59}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.59](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/overview.md)
       - [ACSD-64112：在设置MAGE_INDEXER_THREADS_COUNT时，indexer_update_all_views cron执行失败](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64112-indexer-update-all-views-cron-execution-fails.md)
-      - [ACSD-63454：下拉列表和多选属性的默认值未正确保存在数据库中](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63454-default-value-for-a-dropdown.md)
+      - [ACSD-63454：下拉列表和多个Select属性的默认值未在数据库中正确保存](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63454-default-value-for-a-dropdown.md)
       - [ACSD-63870：客户在公司状态更改期间未正确注销](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63870-customer-not-logged-out-properly-during-company-status-change.md)
       - [ACSD-63469：多个规则未正确应用固定金额购物车折扣](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63469-whole-carts-fixed-amount-discount-not-applied-correctly.md)
       - [ACSD-64113：通过 [!DNL Media Gallery]上载宽度小于高度的图像时，管理员出错](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64113-errors-in-the-admin-when-uploading-images.md)
@@ -975,7 +975,7 @@ ht-degree: 0%
       - [ACSD-69494：使用“is_online”的异步退款请求不会触发联机退款](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)
       - [ACSD-68537：签出性能因许多客户区段而降低](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537.md)
       - [ACSD-69311：从发票中部分退款后，贷项通知单中的计税不正确](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311.md)
-      - [ACSD-68341：在PDP加载时进行多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
+      - [ACSD-68341：在PDP加载时出现多个X-Magento-Vary Cookie更新](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
     - v1.1.78 {#v1-1-78}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
       - [ACP2E-4513：系统不会删除过期的验证码图像](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/acp2e-4513.md)
@@ -1102,6 +1102,7 @@ ht-degree: 0%
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.85](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/overview.md)
     - v1.1.86 {#v1-1-86}
       - [概述： [!DNL Quality Patches Tool] (QPT) v1.1.86](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/overview.md)
+      - [ACP2E-5118：禁用翻译缓存时，不呈现页面生成器预览](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5118.md)
       - [ACP2E-5061：类别促销规则无法将AND条件与匹配多个值的条件组合在一起](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5061.md)
       - [ACP2E-5046：在管理员中创建订单时刷新页面会多次添加相同的SKU](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5046.md)
       - [ACP2E-3094：查看或编辑具有许多权限的类别的类别权限导致浏览器无响应](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-3094.md)
