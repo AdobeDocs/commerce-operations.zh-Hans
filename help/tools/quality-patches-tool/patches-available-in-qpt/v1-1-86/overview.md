@@ -4,9 +4,9 @@ description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.8
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 7becdaa615e1ee4cd31454e65a6076de31717fd2
+source-git-commit: 22769f702de10db88f28a5d4218a4f4c5d91cf0a
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '639'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.86
@@ -29,13 +29,13 @@ QPT v1.1.86包含以下修补程序：
 1. **ACP2E-5176**：修复了通过[!DNL Google Tag Manager]发送给[!DNL Google Analytics 4]的电子商务事件使用[!DNL Universal Analytics]格式并忽略多个签出事件的问题。
 1. **ACP2E-5185**：修复了在类别树中移动类别时显示错误`There was a category move error`的问题，或者当存储有多个URL重写时，需要几分钟才能完成移动的问题。
 1. **ACP2E-4191**：修复了禁用&#x200B;**[!UICONTROL EAV types and attributes]**&#x200B;缓存时，某些REST API请求进入无限循环的问题。
-1. **ACP2E-4973**：修复了从&#x200B;**[!UICONTROL In-Store Delivery]**&#x200B;切换到其他传递方法时无法从购物车中清除关联商店地址的问题。
+1. **[ACP2E-4973](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-4973.md)**：修复了从店内投放切换到其他投放方法时无法从购物车中清除关联商店地址的问题。
 1. **ACP2E-5221**：修复了在多个商店和客户组的安装中启用&#x200B;**[!UICONTROL Quick Order]**&#x200B;时，**[!UICONTROL Catalog Product Permissions]**&#x200B;索引器的时间显着较长的问题。
-1. **ACP2E-5245**：修复了在首次订购时使用相同地址进行配送和计费的新注册客户在下次结帐期间看到该地址被列出两次的问题。
+1. **[ACP2E-5245](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5245.md)**：修复了在首次订购时使用相同地址进行配送和计费的新注册客户在下次结帐期间看到该地址被列出两次的问题。
 1. **ACP2E-5248**：修复了以下问题：在[!DNL PHP] 8.5上打开&#x200B;**[!UICONTROL Add Product]**&#x200B;页面时，没有&#x200B;**[!UICONTROL Edit Product Status]**&#x200B;权限的Admin用户会看到`null as array offset`弃用错误。
 1. **ACP2E-5254**：修复了在清除缓存之前，当客户打开申购单列表时，添加到申购单中的产品未显示的问题。
 1. **ACP2E-5268**：修复了将&#x200B;**[!UICONTROL Enable Frontend Resize]**&#x200B;设置为&#x200B;**[!UICONTROL No]**&#x200B;时创建可配置产品失败的问题。
-1. **ACP2E-3752**：修复了在创建多个产品导入操作时，产品导入处理引发错误`Undefined array key "apply_to"`的问题。
+1. **[ACP2E-3752](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-3752.md)**：修复了在创建多个产品导入操作时，产品导入处理引发错误&#x200B;*警告：未定义数组键“apply_to”*&#x200B;的问题。
 1. **ACP2E-5280**：修复了在启用&#x200B;**[!UICONTROL Category Permissions]**&#x200B;的情况下客户登录时遇到错误的问题。
 1. **ACP2E-5295**：修复了在同一进程中的&#x200B;**[!UICONTROL Inventory]**&#x200B;索引器之后运行时，并行产品价格重新索引失败并出现错误`Fail in child process`的问题。
 1. **ACP2E-5298**：修复了对购物车价格规则具有仅查看访问权限的管理员用户可以生成或删除优惠券代码的问题。
