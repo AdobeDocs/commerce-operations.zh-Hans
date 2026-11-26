@@ -49,9 +49,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
     internal-label: Troubleshooting
-source-git-commit: 4d61208c23f1d1fe38664a838149ba51958eddac
+source-git-commit: a1cc81ee1a8d0bbcbea322558da75a31e65d66a4
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '353'
 ht-degree: 0%
 ---
 
@@ -61,11 +61,11 @@ ht-degree: 0%
 
 QPT v1.1.85包含以下修补程序：
 
-1. **ACP2E-4929**：修复了&#x200B;**[!UICONTROL Compare Products]**&#x200B;页面上的属性标签显示来自其他商店视图（而非当前商店视图）的翻译的问题。
+1. **[ACP2E-4929](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/acp2e-4929.md)**：修复了“比较产品”页面上的属性标签显示来自其他商店视图（而非当前商店视图）的翻译的问题。
 1. **ACP2E-5075**：修复了类别条件为的固定金额购物车价格规则在规则仅与捆绑包父产品匹配时将折扣错误地应用于动态价格捆绑包产品的所有子项的问题。
 1. **ACP2E-5077**：修复了并发的`customerCart`个GraphQL查询或`POST /V1/carts/mine`个REST请求为尚未拥有有效购物车的客户创建重复的活动购物车的问题。
 1. **ACP2E-5088**：修复了会话过期时客户永久购物车被清除的问题。
-1. **ACP2E-3991**：修复了未正确确定客户端IP地址的问题。
+1. **[ACP2E-3991](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-85/acp2e-3991.md)**：修复了未正确确定客户端IP地址的问题。
 1. **ACP2E-5092**：修复了以下问题：**[!UICONTROL Company Profile]**&#x200B;页面和“管理员客户编辑”页面在保存的公司地址之后没有区域时显示错误时，将区域添加到其国家/地区。
 1. **ACP2E-5124**：修复了当&#x200B;**[!UICONTROL Validation Strategy]**&#x200B;设置为&#x200B;**[!UICONTROL Stop on Error]**&#x200B;时，验证失败后，**[!UICONTROL Import]**&#x200B;按钮在验证结果中保持可用的问题。
 1. **AC-17456**：修复了在管理面板的&#x200B;**[!UICONTROL Design Configuration]**&#x200B;页面上编辑&#x200B;**[!UICONTROL Global]**&#x200B;作用域时，在PHP 8.4和8.5上返回&#x200B;*HTTP 500*&#x200B;错误的问题。
