@@ -4,9 +4,9 @@ description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.8
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 22769f702de10db88f28a5d4218a4f4c5d91cf0a
+source-git-commit: 29214be03aa7633cacaec058f65b7cc1d7adc4ea
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '684'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.86
@@ -28,6 +28,8 @@ QPT v1.1.86包含以下修补程序：
 1. **ACP2E-5146**：修复了当其他网站上的客户与管理员用户具有相同的ID时，仅限特定网站的管理员用户无法删除客户的问题。
 1. **ACP2E-5176**：修复了通过[!DNL Google Tag Manager]发送给[!DNL Google Analytics 4]的电子商务事件使用[!DNL Universal Analytics]格式并忽略多个签出事件的问题。
 1. **ACP2E-5185**：修复了在类别树中移动类别时显示错误`There was a category move error`的问题，或者当存储有多个URL重写时，需要几分钟才能完成移动的问题。
+1. **[ACP2E-4191](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-4191.md)**：修复了在禁用EAV类型和属性缓存时，某些REST API请求进入无限循环的问题。
+1. **ACP2E-4973**：修复了从&#x200B;**[!UICONTROL In-Store Delivery]**&#x200B;切换到其他传递方法时无法从购物车中清除关联商店地址的问题。
 1. **ACP2E-4191**：修复了禁用&#x200B;**[!UICONTROL EAV types and attributes]**&#x200B;缓存时，某些REST API请求进入无限循环的问题。
 1. **[ACP2E-4973](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-4973.md)**：修复了从店内投放切换到其他投放方法时无法从购物车中清除关联商店地址的问题。
 1. **ACP2E-5221**：修复了在多个商店和客户组的安装中启用&#x200B;**[!UICONTROL Quick Order]**&#x200B;时，**[!UICONTROL Catalog Product Permissions]**&#x200B;索引器的时间显着较长的问题。
