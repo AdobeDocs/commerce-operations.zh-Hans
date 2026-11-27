@@ -4,9 +4,9 @@ description: 此子部分详细描述了[!DNL Quality Patches Tool] (QPT) v1.1.8
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 29214be03aa7633cacaec058f65b7cc1d7adc4ea
+source-git-commit: 69ae2a93791211a4bde29de919694cef61c764a4
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '742'
 ht-degree: 0%
 ---
 # 概述：[!DNL Quality Patches Tool] (QPT) v1.1.86
@@ -20,13 +20,15 @@ QPT v1.1.86包含以下修补程序：
 1. **[ACP2E-3094](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-3094.md)**：修复了查看或编辑具有许多权限的类别的&#x200B;**[!UICONTROL Category Permissions]**&#x200B;时可能导致浏览器无响应的问题。
 1. **[ACP2E-5050](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5050.md)**：修复了在管理员中查看或保存RMA时未在&#x200B;**[!UICONTROL Action Logs]**&#x200B;报表中显示RMA编号的问题。
 1. **ACP2E-5057**：修复了当&#x200B;**[!UICONTROL Catalog Price Scope]**&#x200B;设置为&#x200B;**[!UICONTROL Website]**&#x200B;时，捆绑产品的[!DNL GraphQL]查询返回全局捆绑选项价格而不是网站特定价格的问题。
+1. **ACP2E-5061**：修复了类别促销规则无法将`AND`条件与匹配多个值中任意值的条件结合的问题。
+1. **[ACP2E-5071](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5071.md)**：修复了在购物者的购物车已包含全部可用量时，产品页面上不始终显示库存不可用消息的问题。
 1. **[ACP2E-5061](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5061.md)**：修复了类别促销规则无法将AND条件与匹配多个值中任意值的条件结合的问题。
 1. **ACP2E-5071**：修复了在购物者的购物车已包含全部可用量时，产品页面上不始终显示库存不可用消息的问题。
 1. **ACP2E-5094**：修复了在设置`MAGENTO_DC_*`环境变量时页面加载明显变慢的问题。
 1. **[ACP2E-5134](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5134.md)**：修复了以下问题：从公司的共享目录中删除捆绑包中包含的产品会使该捆绑包产品留在购物车中，并在购物车和结帐期间导致错误。
 1. **[ACP2E-5118](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5118.md)**：修复了禁用&#x200B;**[!UICONTROL Translations]**&#x200B;缓存时[!DNL Page Builder]预览未呈现的问题。
 1. **ACP2E-5146**：修复了当其他网站上的客户与管理员用户具有相同的ID时，仅限特定网站的管理员用户无法删除客户的问题。
-1. **ACP2E-5176**：修复了通过[!DNL Google Tag Manager]发送给[!DNL Google Analytics 4]的电子商务事件使用[!DNL Universal Analytics]格式并忽略多个签出事件的问题。
+1. **[ACP2E-5176](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-5176.md)**：修复了通过Google Tag Manager发送到Google Analytics 4的电子商务事件使用Universal Analytics格式并忽略多个签出事件的问题。
 1. **ACP2E-5185**：修复了在类别树中移动类别时显示错误`There was a category move error`的问题，或者当存储有多个URL重写时，需要几分钟才能完成移动的问题。
 1. **[ACP2E-4191](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-86/acp2e-4191.md)**：修复了在禁用EAV类型和属性缓存时，某些REST API请求进入无限循环的问题。
 1. **ACP2E-4973**：修复了从&#x200B;**[!UICONTROL In-Store Delivery]**&#x200B;切换到其他传递方法时无法从购物车中清除关联商店地址的问题。
